@@ -440,6 +440,29 @@ def tally_marks(m, c):
     if not meta_is(c, "tally"): return NOT_ME
     return c["meta"]["n"]
 
+
+# ---- sharing from a picture, ordinals (Primary 1)
+@R(r"How many dots in each box\? " + B)
+def dots_each(m, c):
+    if not meta_is(c, "groups"): return NOT_ME
+    return c["meta"]["per"]
+ORD = r"(\d+)(?:st|nd|rd|th)"
+@R(r"From the (left|right), the black one is " + B + "th")
+def queue_pos(m, c):
+    if not meta_is(c, "queue"): return NOT_ME
+    k, n = c["meta"]["k"], c["meta"]["n"]
+    return k if m[1] == "left" else n + 1 - k
+@R(r"(\d+) children are in front of Mia\. Mia is " + B + "th\\.")
+def in_front(m, c): return I(m[1]) + 1
+@R(r"Ann is " + ORD + r"\. Bo is (\d+) places after Ann\. Bo is " + B + r"th\.")
+def places_after(m, c): return I(m[1]) + I(m[2])
+@R(r"Sam is " + ORD + r"\. Jo is (\d+) places before Sam\. Jo is " + B + r"th\.")
+def places_before(m, c): return I(m[1]) - I(m[2])
+@R(ORD + ", " + ORD + ", " + B + "th")
+def ord_seq(m, c): return I(m[2]) + 1 if I(m[2]) == I(m[1]) + 1 else None
+@R(r"Between " + ORD + " and " + ORD + " is " + B + "th")
+def ord_between(m, c): return I(m[1]) + 1 if I(m[2]) - I(m[1]) == 2 else None
+
 # ---- pictures that carry the whole question (the text is only a blank or a caption)
 @R(r"(?:What time is it\?|What number\?|How much\?|How much money\?|How long\?|How many dots\?|How many dots in all\?|Tally marks:)? ?(?:\$)?" + B + "?" + CENT + "?(?: cm)?")
 def picture_only(m, c):

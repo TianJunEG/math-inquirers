@@ -1,0 +1,734 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 9,
+ "id": "L1U09",
+ "title": "How long is it?",
+ "topic": "Length",
+ "holiday_lesson": 9,
+ "goal": "I can compare and measure lengths. I can use a ruler, also when the object does not start at 0.",
+ "learn": {
+  "intro": "To measure, use equal units with no gaps. A cube, a clip and a centimetre (cm) are units. On a ruler, count the spaces, not the marks.",
+  "example": {
+   "problem": "A crayon lies on a ruler. It starts at the 4 cm mark and ends at the 11 cm mark. How long is the crayon?",
+   "figure": {
+    "type": "ruler",
+    "max": 12,
+    "objects": [
+     {
+      "label": "crayon",
+      "start": 4,
+      "end": 11,
+      "hops": true
+     }
+    ]
+   },
+   "steps": [
+    "Find where the crayon starts: the 4 mark. It does not start at 0.",
+    "Find where it ends: the 11 mark.",
+    "Count the spaces from 4 to 11. Hop once for each space: 7 hops.",
+    "Check by subtracting: 11 - 4 = 7."
+   ],
+   "answer": "The crayon is 7 cm long."
+  },
+  "howto": {
+   "title": "How to measure with a ruler",
+   "steps": [
+    "Find the mark where the object starts.",
+    "Find the mark where it ends.",
+    "Count the spaces, or subtract: end mark - start mark."
+   ]
+  },
+  "try": {
+   "id": "L1U09-L01",
+   "text": "A ribbon is 11 cubes long. A string is 7 cubes long. The ribbon is {b} cubes longer than the string.",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4"
+   },
+   "explanation": "11 - 7 = 4. Check: 7 + 4 = 11."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U09-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the 3 strips of cubes.",
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "A",
+      "segs": [
+       {
+        "n": 5
+       }
+      ]
+     },
+     {
+      "label": "B",
+      "segs": [
+       {
+        "n": 8
+       }
+      ]
+     },
+     {
+      "label": "C",
+      "segs": [
+       {
+        "n": 3
+       }
+      ]
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The longest strip is   {circ:A|B|C}",
+     "answer": {
+      "value": [
+       "B"
+      ],
+      "text": "B"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The shortest strip is   {circ:A|B|C}",
+     "answer": {
+      "value": [
+       "C"
+      ],
+      "text": "C"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Strip B is {b} cubes longer than strip A.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "Count the cubes: A has 5, B has 8, C has 3. B is longest and C is shortest. 8 - 5 = 3, so B is 3 cubes longer than A."
+  },
+  {
+   "id": "L1U09-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "A tape is 13 cubes long. A strip is 8 cubes long. Fill in the blank. The tape is {b} cubes longer.",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5 cubes"
+   },
+   "explanation": "\"How many longer\" asks for the gap. 13 - 8 = 5. Check: 8 + 5 = 13."
+  },
+  {
+   "id": "L1U09-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Arrange the lengths in order. Begin with the shortest.\n14 cubes, 9 cubes, 12 cubes, 6 cubes\n{l}",
+   "answer": {
+    "value": [
+     "6",
+     "9",
+     "12",
+     "14"
+    ],
+    "text": "6, 9, 12, 14",
+    "list": true
+   },
+   "explanation": "Find the smallest number first (6), then 9, 12 and 14. The shortest length has the fewest cubes."
+  },
+  {
+   "id": "L1U09-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "A rope is 15 cubes long. Ali cuts off 6 cubes. How long is the piece that is left? {b} cubes",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9 cubes"
+   },
+   "explanation": "Cutting off takes away. 15 - 6 = 9. Check: 9 + 6 = 15."
+  },
+  {
+   "id": "L1U09-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Mei and Ben measure a pencil with cubes.",
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "Mei",
+      "segs": [
+       {
+        "n": 4
+       },
+       {
+        "n": 3,
+        "gap": 1
+       }
+      ]
+     },
+     {
+      "label": "Ben",
+      "segs": [
+       {
+        "n": 7
+       }
+      ]
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Who measured fairly?   {circ:Mei|Ben}",
+     "answer": {
+      "value": [
+       "Ben"
+      ],
+      "text": "Ben"
+     }
+    },
+    {
+     "label": "b",
+     "text": "What is wrong in the other row?   {circ:a gap|cubes overlap}",
+     "answer": {
+      "value": [
+       "a gap"
+      ],
+      "text": "a gap"
+     }
+    }
+   ],
+   "explanation": "Ben's cubes touch with no gaps, so his row is fair. Mei's row has a gap. A gap makes the pencil look longer than it is, or hides cubes."
+  },
+  {
+   "id": "L1U09-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A tape is 8 cubes long. A strip is 5 cubes longer than the tape. How long is the strip? {b} cubes",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 cubes"
+   },
+   "explanation": "\"Longer than\" means add. 8 + 5 = 13. Check: 13 - 8 = 5."
+  },
+  {
+   "id": "L1U09-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the ruler. How long is the crayon? {b} cm",
+   "figure": {
+    "type": "ruler",
+    "max": 10,
+    "objects": [
+     {
+      "label": "crayon",
+      "start": 0,
+      "end": 7
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "7"
+    ],
+    "text": "7 cm"
+   },
+   "explanation": "The crayon starts at the 0 mark and ends at the 7 mark. It is 7 cm long."
+  },
+  {
+   "id": "L1U09-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the ruler. How long is the pencil? {b} cm",
+   "figure": {
+    "type": "ruler",
+    "max": 12,
+    "objects": [
+     {
+      "label": "pencil",
+      "start": 4,
+      "end": 9
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5 cm"
+   },
+   "explanation": "The pencil starts at 4, not at 0. Count the spaces from 4 to 9: 5 spaces. Or subtract: 9 - 4 = 5."
+  },
+  {
+   "id": "L1U09-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the ruler. How long is the ribbon? {b} cm",
+   "figure": {
+    "type": "ruler",
+    "max": 14,
+    "objects": [
+     {
+      "label": "ribbon",
+      "start": 3,
+      "end": 12
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9 cm"
+   },
+   "explanation": "Start at the 3 mark and end at the 12 mark. 12 - 3 = 9. Check: count 9 spaces."
+  },
+  {
+   "id": "L1U09-S10",
+   "tier": "start",
+   "page": 2,
+   "text": "A leaf lies between the 9 cm and 15 cm marks of a ruler. Write its length. {b} cm",
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6 cm"
+   },
+   "explanation": "Subtract the start from the end: 15 - 9 = 6. Check: from 9, hop 6 spaces to reach 15."
+  },
+  {
+   "id": "L1U09-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the ruler.",
+   "figure": {
+    "type": "ruler",
+    "max": 10,
+    "objects": [
+     {
+      "label": "red tape",
+      "start": 1,
+      "end": 8
+     },
+     {
+      "label": "blue tape",
+      "start": 3,
+      "end": 9
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The red tape is {b} cm long.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The blue tape is {b} cm long.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The   {circ:red|blue}   tape is longer.",
+     "answer": {
+      "value": [
+       "red"
+      ],
+      "text": "red"
+     }
+    }
+   ],
+   "explanation": "Red goes from 1 to 8: 8 - 1 = 7 cm. Blue goes from 3 to 9: 9 - 3 = 6 cm. 7 is more than 6, so the red tape is longer."
+  },
+  {
+   "id": "L1U09-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "A straw is 6 cm long. Its start is at the 4 cm mark of a ruler. Where is its end? The {b} cm mark",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "The 10 cm mark"
+   },
+   "explanation": "Start at 4 and add the length: 4 + 6 = 10. The straw ends at the 10 cm mark."
+  },
+  {
+   "id": "L1U09-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "1 stick is as long as 5 cubes. Fill in the blanks.",
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "stick",
+      "segs": [
+       {
+        "n": 1,
+        "w": 5
+       }
+      ]
+     },
+     {
+      "label": "cubes",
+      "segs": [
+       {
+        "n": 5
+       }
+      ]
+     }
+    ],
+    "width_mm": 60
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 sticks are as long as {b} cubes.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "20 cubes are as long as {b} sticks.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "2 sticks and 3 cubes are as long as {b} cubes.",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    }
+   ],
+   "explanation": "(a) 3 sticks are 5 + 5 + 5 = 15 cubes. (b) 20 cubes make 4 groups of 5, so 4 sticks. (c) 2 sticks are 10 cubes, and 3 more cubes make 13."
+  },
+  {
+   "id": "L1U09-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "A table is 6 pencils long. The same table is 9 rubbers long. Which is longer, a pencil or a rubber?   {circ:a pencil|a rubber}",
+   "answer": {
+    "value": [
+     "a pencil"
+    ],
+    "text": "a pencil"
+   },
+   "explanation": "The table is the same. The table needs fewer pencils, so each pencil is longer. A pencil is longer than a rubber. More pieces does not mean a longer piece."
+  },
+  {
+   "id": "L1U09-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A ribbon is 24 cubes long. Ravi cuts it into 4 pieces of equal length.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each piece is {b} cubes long.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ravi makes {b} cuts.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Draw the ribbon:"
+    ]
+   },
+   "hint": "Draw the ribbon as one bar. Mark 4 equal pieces. Count the places you cut.",
+   "explanation": "4 equal pieces: 6 + 6 + 6 + 6 = 24, so each piece is 6 cubes. Cut between the pieces: 3 cuts make 4 pieces. The last piece needs no cut."
+  },
+  {
+   "id": "L1U09-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A clip is the same length as 2 cubes. A pen is 5 clips long. A bag is 2 pens long.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The pen is {b} cubes long.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The bag is {b} cubes long.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Pen:",
+     "Bag:"
+    ]
+   },
+   "hint": "First change clips into cubes. Then use the pen to find the bag.",
+   "explanation": "The pen is 5 clips, and each clip is 2 cubes: 2 + 2 + 2 + 2 + 2 = 10 cubes. The bag is 2 pens: 10 + 10 = 20 cubes."
+  },
+  {
+   "id": "L1U09-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Ali's tape is 10 cubes long. Mei's tape is 4 cubes shorter than Ali's. Ben's tape is 3 cubes longer than Mei's.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Mei's tape is {b} cubes long.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben's tape is {b} cubes long.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The longest tape is   {circ:Ali's|Mei's|Ben's}",
+     "answer": {
+      "value": [
+       "Ali's"
+      ],
+      "text": "Ali's"
+     }
+    }
+   ],
+   "hint": "Find Mei's tape first. Then use Mei's tape to find Ben's.",
+   "explanation": "Mei's tape is 10 - 4 = 6 cubes. Ben's tape is 6 + 3 = 9 cubes. 10 is the greatest, so Ali has the longest tape."
+  },
+  {
+   "id": "L1U09-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "A fence has 6 posts in a row. Each gap between 2 posts is 3 cubes wide. Ignore how wide a post is.",
+   "beyond": "Posts and gaps",
+   "figure": {
+    "type": "fence",
+    "posts": 6,
+    "label": "3 cubes",
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The fence has {b} gaps.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "From the first post to the last post is {b} cubes.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A fence with 10 posts has {b} gaps.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
+   "hint": "Count the gaps in the picture, not the posts. How many gaps are there for 2 posts?",
+   "explanation": "(a) Posts and gaps alternate. The first post has no gap before it, so 6 posts have 5 gaps. (b) 5 gaps of 3 cubes: 3 + 3 + 3 + 3 + 3 = 15. (c) 10 posts have 10 - 1 = 9 gaps. There is always 1 gap fewer than posts."
+  },
+  {
+   "id": "L1U09-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "1 rod is as long as 4 cubes. Ali's rope is 3 rods and 2 cubes long. Mei's rope is 14 cubes long.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali's rope is {b} cubes long.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which rope is longer?   {circ:Ali's|Mei's|They are the same}",
+     "answer": {
+      "value": [
+       "They are the same"
+      ],
+      "text": "They are the same"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Ali's rope:"
+    ]
+   },
+   "hint": "Change the rods into cubes first. Then compare the ropes.",
+   "explanation": "Ali's rope: 3 rods are 4 + 4 + 4 = 12 cubes, and 2 more cubes make 14. Mei's rope is also 14 cubes. The ropes are the same length."
+  },
+  {
+   "id": "L1U09-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A rope is 14 cubes long. Ben cuts it into pieces of 3 cubes or 4 cubes. Nothing is left over. How many pieces of each?",
+   "answer": {
+    "value": [
+     "2",
+     "2"
+    ],
+    "text": "Two 4-cube pieces and two 3-cube pieces",
+    "list": true
+   },
+   "space": {
+    "rows": [
+     "{b} pieces of 4 cubes and {b} pieces of 3 cubes."
+    ]
+   },
+   "hint": "Try one piece of 4 cubes. Can 3-cube pieces fill what is left? Then try two.",
+   "explanation": "Try the number of 4-cube pieces: one 4 leaves 10 (not a 3 count), two 4s leave 6 = 3 + 3. So 4 + 4 + 3 + 3 = 14. Three 4s leave 2, which a 3 cannot fill."
+  },
+  {
+   "id": "L1U09-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A stick lies from 5 cm to 13 cm. How long is it? {b} cm",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 cm"
+   },
+   "explanation": "The stick starts at 5 and ends at 13. 13 - 5 = 8."
+  },
+  {
+   "id": "L1U09-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Ravi's string is 14 cubes. Lily's is 9. Ravi's is {b} cubes longer.",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5 cubes"
+   },
+   "explanation": "14 - 9 = 5. Check: 9 + 5 = 14."
+  },
+  {
+   "id": "L1U09-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "1 bar is as long as 3 cubes. 5 bars are as long as {b} cubes.",
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15 cubes"
+   },
+   "explanation": "5 bars: 3 + 3 + 3 + 3 + 3 = 15 cubes."
+  },
+  {
+   "id": "L1U09-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Tape A is 8 cubes. B is 3 cubes longer than A. C is 2 cubes shorter than A.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Which tape is longest?   {circ:A|B|C}",
+     "answer": {
+      "value": [
+       "B"
+      ],
+      "text": "B"
+     }
+    }
+   ],
+   "explanation": "B is 8 + 3 = 11 cubes. C is 8 - 2 = 6 cubes. A is 8 cubes. 11 is the greatest, so B is longest."
+  }
+ ]
+}

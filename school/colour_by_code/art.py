@@ -175,10 +175,10 @@ def _face(cx, cy, r=1.8):
             f'<circle cx="{cx - r * 0.38:.2f}" cy="{cy - r * 0.22:.2f}" r="0.28" fill="#000"/><circle cx="{cx + r * 0.38:.2f}" cy="{cy - r * 0.22:.2f}" r="0.28" fill="#000"/>'
             f'<path d="M{cx - r * 0.5:.2f},{cy + r * 0.25:.2f} Q{cx:.2f},{cy + r * 0.85:.2f} {cx + r * 0.5:.2f},{cy + r * 0.25:.2f}" fill="none" stroke="#000" stroke-width="0.3" stroke-linecap="round"/>')
 
-def picgraph(rows, key, blank=False):
+def picgraph(rows, key, blank=False, pitch=4.3, font=None):
     """picture graph: rows = [(label, icons)]; every face stands for `key`. Labels and key are 3.8 mm; one row is 5.4 mm high."""
     import metrics
-    RH, PITCH, F = 5.4, 4.3, GRAPH_FONT
+    RH, PITCH, F = 5.4, pitch, (font or GRAPH_FONT)
     LW = max(metrics.width(lab, F, 600) for lab, _ in rows) + 1.6
     mx = max(c for _, c in rows)
     w = LW + mx * PITCH + 0.8
@@ -195,6 +195,14 @@ def picgraph(rows, key, blank=False):
     yk = 0.5 + len(rows) * RH + 3.2
     s.append(_face(2.4, yk) + _text(5.2, yk, f"= {key}", F, 700, "start"))
     return Art("".join(s), w, len(rows) * RH + 6.4, 1.0, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank, font=F))
+
+def queue(n, k):
+    """a row of n children (small squares with a round head), the k-th from the left drawn black: ordinal position"""
+    s = []
+    for i in range(n):
+        x = 0.5 + i * 3.9; fill = "#000" if i + 1 == k else "#fff"
+        s.append(f'<circle cx="{x + 1.6:.2f}" cy="1.5" r="1.2" fill="{fill}" {_ST}/><rect x="{x:.2f}" y="3.0" width="3.2" height="3.6" rx="0.5" fill="{fill}" {_ST}/>')
+    return Art("".join(s), n * 3.9 + 0.1, 7.2, 0.85, dict(kind="queue", n=n, k=k))
 
 def tally(n):
     """tally marks in fives (four strokes and a slash)"""

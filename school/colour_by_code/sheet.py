@@ -70,7 +70,7 @@ def make_sheet(spec, school=""):
         ref = (cen.x, cen.y) if reg.geom.contains(cen) else (lambda p: (p.x, p.y))(reg.geom.representative_point())
         cands = []
         for allow_dup in (False, True):
-            forms = sorted(tier.forms, key=lambda f: (use[f.__name__], rng.random()))
+            forms = sorted(tier.forms, key=lambda f: (-getattr(f, 'pref', 0), use[f.__name__], rng.random()))
             for form in forms:
                 for attempt in range(6):
                     q = form(a, rng)
@@ -96,7 +96,7 @@ def make_sheet(spec, school=""):
                 if len(cands) >= 8 or (cands and max(c[0] for c in cands) >= 4.8 and len(cands) >= 3): break
             if cands: break
         if not cands: raise BuildError(f"{spec['id']}: no question fits region {reg.id} (boxes {boxes})")
-        best = max(cands, key=lambda c: (c[0], c[1]))
+        best = max(cands, key=lambda c: (getattr(c[2], 'pref', 0), c[0], c[1]))
         _, _, form, q, content, p, tc, tp, sig, short, dup = best
         use[form.__name__] += 1; seen.add(sig)
         items[reg.id] = dict(id=reg.id, answer=a, colour=COLOURS[idx[reg.id]], q=q, form=form.__name__, content=content, place=p, tcontent=tc, tplace=tp, teacher_short=short, dup=dup)

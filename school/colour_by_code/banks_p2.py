@@ -648,6 +648,7 @@ def _graph(tier):
         q = SEM([], lambda v, t_=a: v == t_, str(a), art=art, form="one row with answer box")
         q.sol = [f"⟦{a}⟧"]
         q.extra = lambda ans, art=art: art.meta["rows"][0][1] * art.meta["key"] == ans; return q
+    for f_ in (read, read2, read4, more, two, total): f_.pref = 1          # real multi-row graphs are preferred wherever one fits
     return [read, read2, read4, more, two, total, tallyf, tally1, row1]
 
 # ------------------------------------------------------------------ shapes, solids and patterns
@@ -805,7 +806,7 @@ GALLERY = [
     dict(id="CBC-P2-07", picture="dinosaur", bank="money", tier=2, seed=307),
     dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=1, seed=308),
     dict(id="CBC-P2-09", picture="sailboat", bank="measure", tier=1, seed=309),
-    dict(id="CBC-P2-10", picture="car", bank="graph", tier=2, seed=310),
+    dict(id="CBC-P2-10", picture="butterfly", bank="graph", tier=2, seed=310),
     dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=1, seed=311),
     dict(id="CBC-P2-12", picture="icecream", bank="oddeven", tier=2, seed=312),
 ]

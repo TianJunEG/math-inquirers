@@ -1,0 +1,1333 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 7,
+ "id": "L1U07",
+ "title": "Shape detective",
+ "topic": "2D shapes",
+ "holiday_lesson": 7,
+ "goal": "I can name shapes by their sides and corners. I can count shapes, squares and triangles in a picture.",
+ "learn": {
+  "intro": "Shapes have straight sides and corners. A triangle has 3 sides and 3 corners. A circle has none. A square and a rectangle have 4 of each.",
+  "example": {
+   "problem": "Look at the shapes. How many shapes have 4 corners?",
+   "figure": {
+    "type": "shapes",
+    "items": [
+     "triangle",
+     "square",
+     "circle",
+     "rectangle",
+     "hexagon",
+     "triangle",
+     "square"
+    ],
+    "per_row": 7,
+    "labels": false,
+    "width_mm": 125
+   },
+   "steps": [
+    "A shape with 4 corners has 4 straight sides.",
+    "Check each shape. A square has 4 corners. A rectangle has 4 corners.",
+    "There are 2 squares and 1 rectangle.",
+    "The triangles, the circle and the hexagon do not have 4 corners."
+   ],
+   "answer": "3 shapes."
+  },
+  "howto": {
+   "title": "How to count shapes",
+   "steps": [
+    "Pick one kind of shape.",
+    "Touch each one once. Make a small mark on it.",
+    "Write down how many.",
+    "Do the next kind. Add all the counts to check."
+   ]
+  },
+  "try": {
+   "id": "L1U07-L01",
+   "text": "How many pentagons are in the picture? A pentagon has 5 sides. {b}",
+   "figure": {
+    "type": "shapes",
+    "items": [
+     "pentagon",
+     "circle",
+     "triangle",
+     "pentagon",
+     "square",
+     "pentagon"
+    ],
+    "per_row": 6,
+    "labels": false,
+    "width_mm": 105
+   },
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3"
+   },
+   "explanation": "Touch each pentagon once. There are 3 of them. The circle, the triangle and the square do not have 5 sides."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U07-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the 4 shapes. Circle the right name for each shape.",
+   "figure": {
+    "type": "shapes",
+    "items": [
+     {
+      "name": "pentagon",
+      "label": "A"
+     },
+     {
+      "name": "hexagon",
+      "label": "B"
+     },
+     {
+      "name": "octagon",
+      "label": "C"
+     },
+     {
+      "name": "triangle",
+      "label": "D"
+     }
+    ],
+    "per_row": 4,
+    "width_mm": 70
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Shape A is a   {circ:pentagon|hexagon|octagon}",
+     "answer": {
+      "value": [
+       "pentagon"
+      ],
+      "text": "pentagon"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Shape B is a   {circ:pentagon|hexagon|octagon}",
+     "answer": {
+      "value": [
+       "hexagon"
+      ],
+      "text": "hexagon"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Shape C is an   {circ:pentagon|hexagon|octagon}",
+     "answer": {
+      "value": [
+       "octagon"
+      ],
+      "text": "octagon"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Shape D is a   {circ:triangle|square|circle}",
+     "answer": {
+      "value": [
+       "triangle"
+      ],
+      "text": "triangle"
+     }
+    }
+   ],
+   "explanation": "Count the sides. A has 5 sides: pentagon. B has 6: hexagon. C has 8: octagon. D has 3: triangle."
+  },
+  {
+   "id": "L1U07-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the blanks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A pentagon has {b} corners.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A shape with 7 sides has {b} corners.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A circle has {b} straight sides.",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    },
+    {
+     "label": "d",
+     "text": "A shape with 8 corners has {b} sides.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) A pentagon has 5 sides and 5 corners. (b) The number of corners is the same as the number of sides: 7. (c) A circle has no straight sides: 0. (d) 8 corners means 8 sides."
+  },
+  {
+   "id": "L1U07-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Count each kind of shape. Write how many.",
+   "figure": {
+    "type": "shapes",
+    "items": [
+     "circle",
+     "square",
+     "triangle",
+     "circle",
+     "square",
+     "circle",
+     "triangle",
+     "hexagon",
+     "square",
+     "circle",
+     "triangle",
+     "square"
+    ],
+    "per_row": 6,
+    "labels": false,
+    "width_mm": 92
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} circles.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} triangles.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "There are {b} shapes altogether.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "explanation": "Count one kind at a time. Circles: 4. Triangles: 3. Squares: 4. The hexagon is 1 more. 4 + 3 + 4 + 1 = 12."
+  },
+  {
+   "id": "L1U07-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Read each riddle. Circle the shape.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "I have 5 corners. All my sides are straight.   {circ:triangle|pentagon|hexagon}",
+     "answer": {
+      "value": [
+       "pentagon"
+      ],
+      "text": "pentagon"
+     }
+    },
+    {
+     "label": "b",
+     "text": "I have 4 corners. All my sides are the same length.   {circ:square|triangle|circle}",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    },
+    {
+     "label": "c",
+     "text": "I have 8 straight sides.   {circ:hexagon|octagon|pentagon}",
+     "answer": {
+      "value": [
+       "octagon"
+      ],
+      "text": "octagon"
+     }
+    }
+   ],
+   "explanation": "(a) 5 corners: pentagon. (b) 4 equal sides: square. (c) 8 straight sides: octagon."
+  },
+  {
+   "id": "L1U07-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the shapes. Which shapes have 4 corners?",
+   "figure": {
+    "type": "shapes",
+    "items": [
+     "triangle",
+     "rectangle",
+     "circle",
+     "square",
+     "hexagon",
+     "tall_rectangle",
+     "pentagon",
+     "square"
+    ],
+    "per_row": 4,
+    "width_mm": 84
+   },
+   "parts": [
+    {
+     "label": "",
+     "text": "Write their numbers: {l}",
+     "answer": {
+      "value": [
+       "2",
+       "4",
+       "6",
+       "8"
+      ],
+      "text": "2, 4, 6 and 8",
+      "list": true,
+      "unordered": true
+     }
+    }
+   ],
+   "explanation": "Shapes 2, 4, 6 and 8 are squares and rectangles. They have 4 corners. The others have 3, 0, 6 or 5 corners."
+  },
+  {
+   "id": "L1U07-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the 2 grids. Count the small squares.",
+   "figure": {
+    "type": "grids",
+    "grids": [
+     {
+      "cols": 5,
+      "rows": 2,
+      "label": "Grid A"
+     },
+     {
+      "cols": 3,
+      "rows": 3,
+      "label": "Grid B"
+     }
+    ],
+    "width_mm": 85
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Grid A has {b} small squares.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Grid B has {b} small squares.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which grid has more small squares?   {circ:A|B}",
+     "answer": {
+      "value": [
+       "A"
+      ],
+      "text": "A"
+     }
+    }
+   ],
+   "explanation": "(a) 5 in each of 2 rows: 5 + 5 = 10. (b) 3 in each of 3 rows: 3 + 3 + 3 = 9. (c) 10 is more than 9, so Grid A."
+  },
+  {
+   "id": "L1U07-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "A square of paper is cut along the dashed line.",
+   "figure": {
+    "type": "draw",
+    "w": 170,
+    "h": 150,
+    "scale": 0.22,
+    "label": "a square cut along a dashed line",
+    "elements": [
+     {
+      "poly": [
+       [
+        25,
+        15
+       ],
+       [
+        145,
+        15
+       ],
+       [
+        145,
+        135
+       ],
+       [
+        25,
+        135
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "line": [
+       85,
+       5,
+       85,
+       145
+      ],
+      "dash": true
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each piece is a   {circ:triangle|square|rectangle}",
+     "answer": {
+      "value": [
+       "rectangle"
+      ],
+      "text": "rectangle"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each piece has {b} corners.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "The cut goes from the middle of the top to the middle of the bottom. Each piece is long and thin with 4 square corners: a rectangle."
+  },
+  {
+   "id": "L1U07-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Small squares are joined side to side to make Shape A and Shape B.",
+   "figure": {
+    "type": "draw",
+    "w": 350,
+    "h": 190,
+    "scale": 0.2,
+    "label": "shapes made from small squares",
+    "elements": [
+     {
+      "poly": [
+       [
+        20,
+        68
+       ],
+       [
+        76,
+        68
+       ],
+       [
+        76,
+        124
+       ],
+       [
+        20,
+        124
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        76,
+        68
+       ],
+       [
+        132,
+        68
+       ],
+       [
+        132,
+        124
+       ],
+       [
+        76,
+        124
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       76,
+       168,
+       "A",
+       30
+      ]
+     },
+     {
+      "poly": [
+       [
+        210,
+        12
+       ],
+       [
+        266,
+        12
+       ],
+       [
+        266,
+        68
+       ],
+       [
+        210,
+        68
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        266,
+        12
+       ],
+       [
+        322,
+        12
+       ],
+       [
+        322,
+        68
+       ],
+       [
+        266,
+        68
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        210,
+        68
+       ],
+       [
+        266,
+        68
+       ],
+       [
+        266,
+        124
+       ],
+       [
+        210,
+        124
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        266,
+        68
+       ],
+       [
+        322,
+        68
+       ],
+       [
+        322,
+        124
+       ],
+       [
+        266,
+        124
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       266,
+       168,
+       "B",
+       30
+      ]
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Shape A is a   {circ:square|rectangle|triangle}",
+     "answer": {
+      "value": [
+       "rectangle"
+      ],
+      "text": "rectangle"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Shape B is a   {circ:square|triangle|circle}",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    }
+   ],
+   "explanation": "(a) 2 squares in a row make a long shape with 4 corners: a rectangle. (b) 2 rows of 2 squares make a shape with 4 equal sides: a square."
+  },
+  {
+   "id": "L1U07-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Count the triangles. Count the small ones.",
+   "figure": {
+    "type": "draw",
+    "w": 440,
+    "h": 190,
+    "scale": 0.2,
+    "label": "triangle-counting pictures",
+    "elements": [
+     {
+      "poly": [
+       [
+        20,
+        20
+       ],
+       [
+        120,
+        20
+       ],
+       [
+        120,
+        120
+       ],
+       [
+        20,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "line": [
+       20,
+       20,
+       120,
+       120
+      ]
+     },
+     {
+      "text": [
+       70,
+       168,
+       "A",
+       30
+      ]
+     },
+     {
+      "poly": [
+       [
+        190,
+        50
+       ],
+       [
+        260,
+        50
+       ],
+       [
+        260,
+        120
+       ],
+       [
+        190,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        260,
+        50
+       ],
+       [
+        330,
+        50
+       ],
+       [
+        330,
+        120
+       ],
+       [
+        260,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        330,
+        50
+       ],
+       [
+        400,
+        50
+       ],
+       [
+        400,
+        120
+       ],
+       [
+        330,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "line": [
+       190,
+       50,
+       260,
+       120
+      ]
+     },
+     {
+      "line": [
+       260,
+       50,
+       330,
+       120
+      ]
+     },
+     {
+      "line": [
+       330,
+       50,
+       400,
+       120
+      ]
+     },
+     {
+      "text": [
+       295,
+       168,
+       "B",
+       30
+      ]
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Picture A has {b} triangles.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Picture B has {b} triangles.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "(a) The line cuts the square into 2 triangles. (b) Each square is cut into 2 triangles. 3 squares make 3 x 2 = 6 triangles. The lines are side by side, so there are no bigger triangles."
+  },
+  {
+   "id": "L1U07-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "This strip has 4 squares in a row. Count the rectangles in it. A square counts as a rectangle.",
+   "figure": {
+    "type": "grids",
+    "grids": [
+     {
+      "cols": 4,
+      "rows": 1
+     }
+    ],
+    "width_mm": 44
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Rectangles that are 1 square long: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Rectangles that are 2 squares long: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "All the rectangles in the strip: {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "hint": "Slide a 2 square rectangle along. Then try 3 long and 4 long.",
+   "explanation": "1 square long: 4. 2 squares long: 3. 3 squares long: 2. 4 squares long: 1. Altogether 4 + 3 + 2 + 1 = 10."
+  },
+  {
+   "id": "L1U07-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A strip of 3 squares has 3 lines drawn in it. Count the triangles. Small ones first.",
+   "figure": {
+    "type": "draw",
+    "w": 280,
+    "h": 125,
+    "scale": 0.2,
+    "label": "a strip of 3 squares with 3 lines",
+    "elements": [
+     {
+      "poly": [
+       [
+        20,
+        20
+       ],
+       [
+        100,
+        20
+       ],
+       [
+        100,
+        100
+       ],
+       [
+        20,
+        100
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        100,
+        20
+       ],
+       [
+        180,
+        20
+       ],
+       [
+        180,
+        100
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        180,
+        20
+       ],
+       [
+        260,
+        20
+       ],
+       [
+        260,
+        100
+       ],
+       [
+        180,
+        100
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "line": [
+       20,
+       20,
+       100,
+       100
+      ]
+     },
+     {
+      "line": [
+       180,
+       20,
+       100,
+       100
+      ]
+     },
+     {
+      "line": [
+       180,
+       20,
+       260,
+       100
+      ]
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Small triangles: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "All the triangles: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "hint": "Do 2 lines that meet make a bigger triangle?",
+   "explanation": "There are 6 small triangles. The first 2 lines meet at the bottom and make a bigger triangle with the top of the strip. The last 2 lines meet at the top and make another. 6 + 2 = 8 triangles."
+  },
+  {
+   "id": "L1U07-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Add the sides or the corners.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2 shapes have 11 straight sides altogether. One is a pentagon. The other is a   {circ:square|hexagon|octagon}",
+     "answer": {
+      "value": [
+       "hexagon"
+      ],
+      "text": "hexagon"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A triangle, a square and 1 more shape have 15 corners altogether. The last shape has {b} corners.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "hint": "Add the sides you know. How many are left?",
+   "explanation": "(a) 11 - 5 = 6 sides: a hexagon. (b) 3 + 4 = 7 corners are known. 15 - 7 = 8 corners."
+  },
+  {
+   "id": "L1U07-G01",
+   "tier": "go",
+   "beyond": "Fold lines",
+   "page": 5,
+   "text": "Fold a shape so that both halves match exactly. Each way to fold is a fold line. Draw them.",
+   "figure": {
+    "type": "draw",
+    "w": 510,
+    "h": 170,
+    "scale": 0.14,
+    "label": "a square, a rectangle and a triangle",
+    "elements": [
+     {
+      "poly": [
+       [
+        20,
+        20
+       ],
+       [
+        110,
+        20
+       ],
+       [
+        110,
+        110
+       ],
+       [
+        20,
+        110
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       65,
+       150,
+       "A",
+       30
+      ]
+     },
+     {
+      "poly": [
+       [
+        160,
+        35
+       ],
+       [
+        300,
+        35
+       ],
+       [
+        300,
+        115
+       ],
+       [
+        160,
+        115
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       230,
+       150,
+       "B",
+       30
+      ]
+     },
+     {
+      "poly": [
+       [
+        410,
+        16.1
+       ],
+       [
+        470,
+        120
+       ],
+       [
+        350,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       410,
+       150,
+       "C",
+       30
+      ]
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Square A has {b} fold lines.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Rectangle B has {b} fold lines.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Triangle C has 3 sides of the same length. It has {b} fold lines.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "hint": "Imagine a mirror on the line. Both sides must match.",
+   "explanation": "(a) A square folds across, up and down, and along both corner-to-corner lines: 4. (b) A rectangle folds across and up and down: 2. A corner-to-corner fold does not match. (c) A triangle with 3 equal sides folds from each corner to the middle of the opposite side: 3."
+  },
+  {
+   "id": "L1U07-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Jenny uses all her square tiles to make a rectangle. A turned rectangle is the same one. A square counts as a rectangle.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "With 12 tiles she can make {b} different rectangles.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With 9 tiles she can make {b} different rectangles.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "hint": "Try rows of 1, then 2, then 3. Does each row fit exactly?",
+   "explanation": "(a) 12 tiles: 12 by 1, 6 by 2 and 4 by 3. That is 3 rectangles. (b) 9 tiles: 9 by 1 and 3 by 3. That is 2 rectangles, and one is a square."
+  },
+  {
+   "id": "L1U07-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Count the squares in this grid. Squares of every size count.",
+   "figure": {
+    "type": "grids",
+    "grids": [
+     {
+      "cols": 5,
+      "rows": 2
+     }
+    ],
+    "width_mm": 50
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Squares made of 4 small squares: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "All the squares: {b}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "hint": "Slide a 2 by 2 square along. How many places can it sit?",
+   "explanation": "There are 5 + 5 = 10 small squares. (a) A square made of 4 small squares can sit in 4 places along the grid. (b) 10 + 4 = 14. No bigger square fits, because the grid is only 2 high."
+  },
+  {
+   "id": "L1U07-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A shape has 5 straight sides. It is a   {circ:square|pentagon|hexagon}",
+   "answer": {
+    "value": [
+     "pentagon"
+    ],
+    "text": "pentagon"
+   },
+   "explanation": "A shape with 5 sides is a pentagon."
+  },
+  {
+   "id": "L1U07-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "How many corners do 3 squares have altogether? {b}",
+   "answer": {
+    "value": [
+     "12"
+    ],
+    "text": "12"
+   },
+   "explanation": "A square has 4 corners. 4 + 4 + 4 = 12."
+  },
+  {
+   "id": "L1U07-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "How many triangles are in the picture? {b}",
+   "figure": {
+    "type": "draw",
+    "w": 150,
+    "h": 100,
+    "scale": 0.18,
+    "label": "2 squares with a line in each",
+    "elements": [
+     {
+      "poly": [
+       [
+        15,
+        15
+       ],
+       [
+        75,
+        15
+       ],
+       [
+        75,
+        75
+       ],
+       [
+        15,
+        75
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        75,
+        15
+       ],
+       [
+        135,
+        15
+       ],
+       [
+        135,
+        75
+       ],
+       [
+        75,
+        75
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "line": [
+       15,
+       15,
+       75,
+       75
+      ]
+     },
+     {
+      "line": [
+       75,
+       15,
+       135,
+       75
+      ]
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4"
+   },
+   "explanation": "Each square is cut into 2 triangles. 2 + 2 = 4. The 2 lines are side by side, so there is no bigger triangle."
+  },
+  {
+   "id": "L1U07-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A shape has 3 more sides than a triangle. It has {b} sides.",
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6"
+   },
+   "explanation": "A triangle has 3 sides. 3 + 3 = 6 sides. It is a hexagon."
+  }
+ ]
+}

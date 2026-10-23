@@ -1,0 +1,653 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 10,
+ "id": "L1U10",
+ "title": "Mix and solve",
+ "topic": "Mixed puzzles",
+ "holiday_lesson": 10,
+ "goal": "I can pick a way to start a puzzle: draw it, list it or make a table. I can check and explain my answer.",
+ "learn": {
+  "intro": "Puzzles mix what you learned. Do not rush. Read it twice. Then draw it, list it or make a table.",
+  "example": {
+   "problem": "Siti's plant is 4 cm tall. It grows 3 cm every week. How tall is the plant after 6 weeks?",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     4,
+     7,
+     10,
+     13,
+     16,
+     19,
+     22
+    ],
+    "gaps": [
+     "+3",
+     "+3",
+     "+3",
+     "+3",
+     "+3",
+     "+3"
+    ]
+   },
+   "steps": [
+    "Say what we know. It starts at 4 cm and grows 3 cm a week.",
+    "List it. Write 4 first. Then add 3 for each week.",
+    "The list is 4, 7, 10, 13, 16, 19, 22. Week 6 is the last number.",
+    "Check: 6 weeks of 3 cm is 3 + 3 + 3 + 3 + 3 + 3 = 18. Then 4 + 18 = 22."
+   ],
+   "answer": "After 6 weeks the plant is 22 cm tall."
+  },
+  "howto": {
+   "title": "How to start a puzzle",
+   "steps": [
+    "Read it twice. What do I know? What must I find?",
+    "Draw it, list it or make a table.",
+    "Try. Then check your answer.",
+    "Say how you know."
+   ]
+  },
+  "try": {
+   "id": "L1U10-L01",
+   "text": "Count in 4s. Fill in the blanks. 4, 8, 12, {b}, {b}",
+   "answer": {
+    "value": [
+     "16",
+     "20"
+    ],
+    "text": "16, 20"
+   },
+   "explanation": "Each number is 4 more. 12 + 4 = 16 and 16 + 4 = 20."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U10-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the rule. Write the missing number in the tile.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     7,
+     12,
+     17,
+     null,
+     27
+    ]
+   },
+   "answer": {
+    "value": [
+     "22"
+    ],
+    "text": "22"
+   },
+   "explanation": "Each tile is 5 more than the one before: 7, 12, 17. So the missing tile is 17 + 5 = 22. Check: 22 + 5 = 27."
+  },
+  {
+   "id": "L1U10-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "This pattern adds the same number each time. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     3,
+     7,
+     null,
+     15,
+     null
+    ]
+   },
+   "answer": {
+    "value": [
+     "11",
+     "19"
+    ],
+    "text": "11, 19"
+   },
+   "explanation": "From 3 to 7 is 4 more, so the rule is add 4. After 7 comes 11. After 11 comes 15. After 15 comes 19."
+  },
+  {
+   "id": "L1U10-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the missing numbers in the bonds.",
+   "figure": {
+    "type": "bonds",
+    "items": [
+     {
+      "whole": 20,
+      "a": 13,
+      "b": null,
+      "label": "20 = 13 + ?"
+     },
+     {
+      "whole": 10,
+      "a": null,
+      "b": 6,
+      "label": "10 = ? + 6"
+     }
+    ],
+    "width_mm": 100
+   },
+   "answer": {
+    "value": [
+     "7",
+     "4"
+    ],
+    "text": "7 and 4"
+   },
+   "explanation": "13 and 7 make 20, because 3 and 7 make 10. 6 and 4 make 10."
+  },
+  {
+   "id": "L1U10-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the missing numbers. Both sides must be equal.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "7 + 6 = 8 + {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "9 + 5 = 7 + {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) 7 + 6 = 13. 8 and 5 make 13. (b) 9 + 5 = 14. 7 and 7 make 14."
+  },
+  {
+   "id": "L1U10-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Ravi has 70¢. He buys a drink for 45¢. How much money is left? {b}¢",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25¢"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "70¢ - 45¢ = 25¢. Check: 45¢ + 25¢ = 70¢."
+  },
+  {
+   "id": "L1U10-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the graph. Fill in the blanks.",
+   "figure": {
+    "type": "picture_graph",
+    "title": "Cookies sold",
+    "icon": "cookie",
+    "key": "= 1 cookie",
+    "rows": [
+     {
+      "label": "Monday",
+      "n": 6
+     },
+     {
+      "label": "Tuesday",
+      "n": 9
+     },
+     {
+      "label": "Wednesday",
+      "n": 4
+     },
+     {
+      "label": "Thursday",
+      "n": 7
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Tuesday had {b} more cookies than Wednesday.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Monday and Thursday had {b} cookies altogether.",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    }
+   ],
+   "explanation": "Tuesday has 9 cookies and Wednesday has 4. 9 - 4 = 5 more. Monday has 6 and Thursday has 7. 6 + 7 = 13."
+  },
+  {
+   "id": "L1U10-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Count the sides of all the shapes. How many sides are there altogether? {b} sides",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "triangle",
+     "square",
+     "triangle"
+    ],
+    "numbers": false
+   },
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10 sides"
+   },
+   "explanation": "A triangle has 3 sides and a square has 4 sides. 3 + 4 + 3 = 10."
+  },
+  {
+   "id": "L1U10-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Lily is older than Ray. Jamie is younger than Ray. Amelia is older than Lily. Write the names, oldest first.\n{l}",
+   "answer": {
+    "value": [
+     "Amelia",
+     "Lily",
+     "Ray",
+     "Jamie"
+    ],
+    "text": "Amelia, Lily, Ray, Jamie",
+    "list": true
+   },
+   "space": {
+    "rows": [
+     "Draw it:"
+    ]
+   },
+   "explanation": "Amelia is older than Lily, Lily is older than Ray, and Ray is older than Jamie. The order is Amelia, Lily, Ray, Jamie."
+  },
+  {
+   "id": "L1U10-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Circle the even numbers.   {circ:13|16|18|21|24}",
+   "answer": {
+    "value": [
+     "16",
+     "18",
+     "24"
+    ],
+    "text": "16, 18, 24",
+    "list": true
+   },
+   "explanation": "An even number can be shared into 2 equal groups with none left. 16, 18 and 24 are even. 13 and 21 are odd."
+  },
+  {
+   "id": "L1U10-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Make 40¢ with exactly 3 coins. Use 5¢, 10¢, 20¢ or 50¢ coins.\n{b}¢ + {b}¢ + {b}¢",
+   "answer": {
+    "value": [
+     "20",
+     "10",
+     "10"
+    ],
+    "text": "20¢ + 10¢ + 10¢",
+    "unordered": true
+   },
+   "explanation": "20¢ + 10¢ + 10¢ = 40¢. This is the only way: 50¢ is too big, and 5¢ coins would need 35¢ from 2 coins, which no 2 coins make."
+  },
+  {
+   "id": "L1U10-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Mei picks a secret number. She adds 7. She gets 15. What number did Mei pick? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Go backwards. Undo adding 7 by taking away 7: 15 - 7 = 8. Check: 8 + 7 = 15."
+  },
+  {
+   "id": "L1U10-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Ben picks a secret number. He takes away 3. Then he adds 8. He gets 14. What number did Ben pick? {b}",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9"
+   },
+   "space": {
+    "rows": [
+     "Undo +8:",
+     "Undo -3:"
+    ]
+   },
+   "explanation": "Go backwards. Undo the last step: 14 - 8 = 6. Undo the first step: 6 + 3 = 9. Check: 9 - 3 = 6 and 6 + 8 = 14."
+  },
+  {
+   "id": "L1U10-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "A ribbon is 13 cubes long. A string is 5 cubes shorter than the ribbon. How long is the string? {b} cubes",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 cubes"
+   },
+   "explanation": "\"Shorter than\" means take away. 13 - 5 = 8. Check: 8 + 5 = 13."
+  },
+  {
+   "id": "L1U10-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the ruler. How long is the pencil? {b} cm",
+   "figure": {
+    "type": "ruler",
+    "max": 12,
+    "objects": [
+     {
+      "label": "pencil",
+      "start": 2,
+      "end": 11
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9 cm"
+   },
+   "explanation": "The pencil starts at 2 and ends at 11. 11 - 2 = 9. Check: count 9 spaces."
+  },
+  {
+   "id": "L1U10-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei saves 5¢ on day 1, 10¢ on day 2 and 15¢ on day 3. The pattern keeps going.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "On day 4 she saves {b}¢.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After 4 days she has saved {b}¢ altogether.",
+     "answer": {
+      "value": [
+       "50"
+      ],
+      "text": "50"
+     }
+    }
+   ],
+   "space": {
+    "table": {
+     "cols": [
+      "Day",
+      "Saves",
+      "Total so far"
+     ],
+     "rows": 4
+    }
+   },
+   "hint": "Fill in the table. Add each new amount to the total so far.",
+   "explanation": "The amount grows by 5¢ each day: 5, 10, 15, 20. On day 4 she saves 20¢. Add each day to the total: 5 + 10 = 15, 15 + 15 = 30, 30 + 20 = 50."
+  },
+  {
+   "id": "L1U10-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Ray, Lily, Jason and Siti sit on chairs 1 to 4. Ray is on chair 4 and Lily is next to Ray. Jason has a lower chair number than Siti. Write the names from chair 1 to chair 4.\n{l}",
+   "answer": {
+    "value": [
+     "Jason",
+     "Siti",
+     "Lily",
+     "Ray"
+    ],
+    "text": "Jason, Siti, Lily, Ray",
+    "list": true
+   },
+   "hint": "Put Ray on chair 4 first. Then place Lily. Two names are left.",
+   "explanation": "Ray is on chair 4, so Lily is on chair 3. Jason and Siti have chairs 1 and 2. Jason has the lower number, so Jason is on chair 1 and Siti on chair 2."
+  },
+  {
+   "id": "L1U10-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Ali cuts 4 cubes off a rope, then 3 more cubes. He adds 2 cubes. The rope is now 11 cubes long. How long was it at first? {b} cubes",
+   "answer": {
+    "value": [
+     "16"
+    ],
+    "text": "16 cubes"
+   },
+   "space": {
+    "rows": [
+     "Undo +2:",
+     "Undo -3:",
+     "Undo -4:"
+    ]
+   },
+   "hint": "Start at 11 and undo the steps. Begin with the last step.",
+   "explanation": "Go backwards. Undo adding 2: 11 - 2 = 9. Undo cutting off 3: 9 + 3 = 12. Undo cutting off 4: 12 + 4 = 16. Check: 16 - 4 = 12, 12 - 3 = 9, 9 + 2 = 11."
+  },
+  {
+   "id": "L1U10-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Mei folds a paper strip in half. 1 fold makes 2 equal parts. She folds again and again. Each new fold makes twice as many parts.",
+   "beyond": "Doubling",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 folds make {b} parts.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 folds make {b} parts.",
+     "answer": {
+      "value": [
+       "32"
+      ],
+      "text": "32"
+     }
+    },
+    {
+     "label": "c",
+     "text": "16 parts need {b} folds.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "hint": "Write the parts after each fold. Double the last number each time.",
+   "explanation": "Parts after each fold: 2, 4, 8, 16, 32. (a) 3 folds make 8 parts. (b) 5 folds make 32 parts. (c) 16 parts need 4 folds."
+  },
+  {
+   "id": "L1U10-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Aisha, Ben and Mei have 24 stickers altogether. Ben has 4 more than Aisha. Mei has 2 fewer than Ben.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Aisha has {b} stickers.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has {b} stickers.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Mei has {b} stickers.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Guess:"
+    ]
+   },
+   "hint": "Guess Aisha's number. Find Ben's and Mei's. Add all 3. Change your guess.",
+   "explanation": "Try 6 for Aisha. Ben has 6 + 4 = 10. Mei has 10 - 2 = 8. Together 6 + 10 + 8 = 24. A smaller guess gives less than 24 and a greater guess gives more than 24."
+  },
+  {
+   "id": "L1U10-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Ravi has 3 triangles and some squares. He counts 17 sides altogether.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 3 triangles have {b} sides.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The squares have {b} sides.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ravi has {b} squares.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "hint": "Count the sides of the triangles first. How many sides are left for squares?",
+   "explanation": "A triangle has 3 sides: 3 + 3 + 3 = 9. The squares have 17 - 9 = 8 sides. A square has 4 sides, and 4 + 4 = 8, so there are 2 squares."
+  },
+  {
+   "id": "L1U10-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "What are the next 2 numbers? 8, 13, 18, 23, {b}, {b}",
+   "answer": {
+    "value": [
+     "28",
+     "33"
+    ],
+    "text": "28, 33"
+   },
+   "explanation": "The rule is add 5. 23 + 5 = 28 and 28 + 5 = 33."
+  },
+  {
+   "id": "L1U10-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Fill in the missing number. 20 = 8 + {b}",
+   "answer": {
+    "value": [
+     "12"
+    ],
+    "text": "12"
+   },
+   "explanation": "8 and 2 make 10, and 10 and 10 make 20. So 8 and 12 make 20."
+  },
+  {
+   "id": "L1U10-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A pen costs 35¢. Ali pays with a 50¢ coin. How much change? {b}¢",
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15¢"
+   },
+   "explanation": "50¢ - 35¢ = 15¢. Check: 35¢ + 15¢ = 50¢."
+  },
+  {
+   "id": "L1U10-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Wei is taller than Siti. Ben is shorter than Siti. Who is the tallest?   {circ:Wei|Siti|Ben}",
+   "answer": {
+    "value": [
+     "Wei"
+    ],
+    "text": "Wei"
+   },
+   "explanation": "Wei is taller than Siti, and Siti is taller than Ben. So Wei is the tallest."
+  }
+ ]
+}

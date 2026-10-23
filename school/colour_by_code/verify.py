@@ -16,6 +16,7 @@ from PIL import Image
 from shapely.geometry import box as sbox
 import zlib
 import sheet as S, build as B, layout as L
+import textcheck as TC
 from banks import banks, gallery, levels, rules, BOX
 from pictures import PICTURES
 
@@ -48,7 +49,13 @@ for bid, bank in BANKS.items():
                     sol = [v for v in tier.domain if q.holds(v)]
                     if sol != [ans]: bad.append((f.__name__, q.lines, sol))
                     solved = " ".join(q.sol)
-                    if q.a_text is not None and BOX in " ".join(q.lines) and L.ANS_L + q.a_text + L.ANS_R not in solved: bad.append((f.__name__, "answer not in teacher lines", q.sol))
+                    if q.a_text is not None and BOX in " ".join(q.lines):
+                        want = __import__("qcore").AFRAC(*q.a_text.split("/")) if ("\u27e8" in solved and "/" in q.a_text) else L.ANS_L + q.a_text + L.ANS_R
+                        if want not in solved: bad.append((f.__name__, "answer not in teacher lines", q.sol))
+                    try:                  # independent evaluator: solve the PRINTED text (and the decoded picture) without the bank's own holds() or answer
+                        v_, rule_ = TC.solve(q.lines, q.art.meta if q.art is not None else None, tier.instr or bank.instr, tier.kind)
+                        if not TC.matches(v_, ans): bad.append((f.__name__, "independent evaluator disagrees", q.lines, v_, ans, rule_))
+                    except TC.Unparsed: bad.append((f.__name__, "independent evaluator cannot parse", q.lines))
                     for e in q.eq:        # re-evaluate the printed equation with the intended answer substituted
                         if not __import__("qcore").eq_eval(e, ans, q.eq_money): bad.append((f.__name__, "equation", e))
                     if q.extra is not None and not q.extra(ans): bad.append((f.__name__, "bank-specific picture or text check", q.lines))
@@ -69,6 +76,13 @@ for bid, bank in BANKS.items():
         rec(f"{tag}: {made} sample questions each have exactly one answer in the domain, equal to the intended one ({len(forms)} forms)", not bad and made > 200, str(bad[:2])[:150])
         report[tag] = dict(questions=made, forms=sorted(forms), bad=len(bad))
 
+# the evaluator must be able to fail: a wrong answer, and a wrong question text, must both be rejected
+_v, _ = TC.solve(["10 less than 71,", f"then 1 more: {BOX}"]); rec("evaluator self-test: '10 less than 71, then 1 more' is 62, not 60", _v == 62 and not TC.matches(_v, 60))
+_v, _ = TC.solve(["10 more than 54,", f"then 1 more: {BOX}"]); rec("evaluator self-test: '10 more than 54, then 1 more' is 65", _v == 65)
+_v, _ = TC.solve(["35\u00a2 + $1.20 = " + BOX + "\u00a2"]); rec("evaluator self-test: money equation", _v == 155)
+try: TC.solve(["Colour the owl's left wing: " + BOX]); rec("evaluator self-test: an unknown question is refused", False)
+except TC.Unparsed: rec("evaluator self-test: an unknown question is refused", True)
+
 # ---------------------------------------------------------------------------------------------- 2. pictures
 for pid, fn in PICTURES.items():
     pic = fn(); n = len(pic.regions); tag = f"picture {pid}"
@@ -86,7 +100,7 @@ for pid, fn in PICTURES.items():
         w12 = max([b[2] for b in pic.boxes(r.id) if b[3] <= 12.0] or [0])
         if w12 < 28.0: narrow.append((r.id, w12))
     rec(f"{tag}: a label box at least 28 mm wide and 12 mm high fits every region", not narrow, str(narrow))
-    report[tag] = dict(regions=n, pairs=len(pic.mirror_pairs), groups=len(pic.groups), subsets=len(pic.subsets))
+    report[tag] = dict(regions=n, pairs=len(pic.mirror_pairs), twins=len(pic.twins))
 
 # ---------------------------------------------------------------------------------------------- 3. worksheets
 def pdftext(path): return subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True).stdout
@@ -97,16 +111,7 @@ def slip_stats(sh):
     truth = {r.id: key.index(sh["items"][r.id]["answer"]) for r in pic.regions}
     assert truth == idx
     base = {k: sum(1 for v in truth.values() if v == k) for k in range(5)}
-    pairs = list(pic.mirror_pairs); groups = [g[0] for g in pic.groups]
-    subs = [(s[2], s[3], s[4]) for s in sh["checks"] if s[0] == "subset"]
-    def failed_checks(col):
-        out = []
-        cnt = {k: sum(1 for v in col.values() if v == k) for k in range(5)}
-        if cnt != base: out.append("tally")
-        if any(col[l] != col[r] for l, r in pairs): out.append("mirror")
-        if any(len({col[i] for i in g}) != 1 for g in groups): out.append("group")
-        if any(sum(col[i] == k for i in ids) != c for ids, k, c in subs): out.append("subset")
-        return out
+    def failed_checks(col): return S.flags(sh, col)
     assert not failed_checks(dict(truth)), "right answers must pass every check"
     tot = in_key = det_all = det_key = det_structure = 0
     for r in pic.regions:
@@ -119,7 +124,25 @@ def slip_stats(sh):
             f = failed_checks(col)
             if f: det_all += 1; det_key += 1
             if any(x != "tally" for x in f): det_structure += 1
-    return dict(wrong_values=tot, in_key=in_key, detected_all=det_all, rate_all=round(det_all / tot, 4), detected_in_key=det_key,
+    # double slips by full enumeration: every pair of regions, each coloured with any wrong colour (4 x 4 cases per pair); a swap is the case
+    # where the two regions exchange their colours (the tally does not change), which only the mirror or twin-mark checks can catch
+    ids = [r.id for r in pic.regions]; d_tot = d_det = sw_tot = sw_det = 0; d_tally_only = 0
+    for i in range(len(ids)):
+        for j in range(i + 1, len(ids)):
+            a_, b_ = ids[i], ids[j]
+            for ca in range(5):
+                if ca == truth[a_]: continue
+                for cb in range(5):
+                    if cb == truth[b_]: continue
+                    col = dict(truth); col[a_] = ca; col[b_] = cb
+                    f = failed_checks(col); d_tot += 1
+                    if f: d_det += 1
+                    if f == ["tally"]: d_tally_only += 1
+                    if ca == truth[b_] and cb == truth[a_]:
+                        sw_tot += 1
+                        if f: sw_det += 1
+    return dict(double_cases=d_tot, double_detected=d_det, double_rate=round(d_det / d_tot, 4), swap_cases=sw_tot, swap_detected=sw_det,
+                swap_rate=round(sw_det / max(sw_tot, 1), 4)) | dict(wrong_values=tot, in_key=in_key, detected_all=det_all, rate_all=round(det_all / tot, 4), detected_in_key=det_key,
                 rate_in_key=round(det_key / max(in_key, 1), 4), caught_by_structure_checks=round(det_structure / max(in_key, 1), 4))
 
 def tally_from_pdf(txt):
@@ -143,9 +166,22 @@ for sh in sheets:
         if sol != [it["answer"]]: probs.append((rid, it["q"].lines, sol))
         if it["answer"] not in sh["key"]: probs.append((rid, "answer not in key"))
     rec(f"{wid}: every question has exactly one answer and it is one of the five key values", not probs, str(probs[:2]))
-    # dedupe
-    sigs = [" / ".join(it["q"].lines) + str(getattr(it["q"].art, "meta", "")) for it in items.values()]
-    rec(f"{wid}: no two regions have the same question", len(set(sigs)) == len(sigs), f"{len(sigs) - len(set(sigs))} repeated")
+    # independent evaluator on every printed question of this worksheet (the page as printed, not the bank's answers)
+    ev_bad = []; ev_rules = set()
+    for rid, it in items.items():
+        q = it["q"]
+        try:
+            v_, rule_ = TC.solve(q.lines, q.art.meta if q.art is not None else None, tier.instr or bank.instr, tier.kind); ev_rules.add(rule_)
+            if not TC.matches(v_, it["answer"]) or it["answer"] not in sh["key"]: ev_bad.append((rid, q.lines, v_, it["answer"]))
+        except TC.Unparsed: ev_bad.append((rid, q.lines, "unparsed"))
+    rec(f"{wid}: independent evaluator re-solves all {len(items)} printed questions from their text and picture; each equals the answer coloured and that answer is a key value", not ev_bad, str(ev_bad[:2]))
+    # dedupe by what a question IS (sorted numbers, wording without line breaks, decoded picture), not by its text
+    sigs = [S.canon(it["q"]) for it in items.values()]
+    rec(f"{wid}: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)", len(set(sigs)) == len(sigs), f"{len(sigs) - len(set(sigs))} repeated")
+    texts = [" ".join(it["q"].lines).replace("\u27e6", "").replace("\u27e7", "") for it in items.values()]
+    faces = [S.canon(it["q"])[2] for it in items.values() if it["q"].art is not None and it["q"].art.meta.get("kind") == "clock"]
+    digital = [" ".join(it["q"].lines) for it in items.values() if re.fullmatch(r"(?:[A-Za-z ]+: )?\d{1,2}:\d\d(?:[^\d].*)?", " ".join(it["q"].lines)) and it["q"].art is None]
+    rec(f"{wid}: no clock face is drawn twice and no digital time is printed twice", len(set(faces)) == len(faces) and len(set(digital)) == len(digital))
     # key coverage and tally
     colours_used = [sh["key"].index(it["answer"]) for it in items.values()]
     cnt = [colours_used.count(k) for k in range(5)]
@@ -155,7 +191,7 @@ for sh in sheets:
     rec(f"{wid}: tally printed on the teacher page equals the tally of the answers", tt == cnt, f"printed {tt}")
     ans = {r.id: items[r.id]["answer"] for r in pic.regions}
     rec(f"{wid}: mirror pairs share one colour ({len(pic.mirror_pairs)} pairs)", all(ans[l] == ans[r] for l, r in pic.mirror_pairs))
-    rec(f"{wid}: must-match groups share one colour ({len(pic.groups)} groups)", all(len({ans[i] for i in g[0]}) == 1 for g in pic.groups))
+    rec(f"{wid}: twin-mark sets share one colour ({len(pic.twins)} sets)", all(len({ans[i] for i in ids_}) == 1 for ids_, _ in pic.twins))
     for s in [c for c in sh["checks"] if c[0] == "subset"]:
         ids, k, c = s[2], s[3], s[4]
         real = sum(1 for i in ids if ans[i] == sh["key"][k])
@@ -165,6 +201,8 @@ for sh in sheets:
     st = slip_stats(sh); R["single_slip"] = st
     rec(f"{wid}: single-slip detection {st['detected_all']}/{st['wrong_values']} = {st['rate_all']:.1%} (every wrong value of every region; needs >= 95%)", st["rate_all"] >= THRESH)
     rec(f"{wid}: single-slip detection for wrong values that do have a crayon colour {st['detected_in_key']}/{st['in_key']} = {st['rate_in_key']:.1%} (needs >= 95%)", st["rate_in_key"] >= THRESH)
+    rec(f"{wid}: double-slip detection by enumeration {st['double_detected']}/{st['double_cases']} = {st['double_rate']:.1%} (every pair of regions, every pair of wrong colours; needs >= 95%)", st["double_rate"] >= THRESH)
+    rec(f"{wid}: swap detection {st['swap_detected']}/{st['swap_cases']} = {st['swap_rate']:.1%} (two regions exchange their colours, tally unchanged; needs >= 95%)", st["swap_rate"] >= THRESH)
     # geometric fit of every label (conservative metrics) with margin to the outline
     prob = []
     minf = 99; tmin = 99; short = 0
@@ -300,19 +338,20 @@ for sh in sheets:
 rec("all PDFs together are under 20 MB", total_bytes < 20e6, f"{total_bytes / 1e6:.2f} MB")
 cs = os.path.join(OUT, "contact_sheet.pdf")
 rec("contact sheet PDF exists with 2 pages", os.path.exists(cs) and re.search(r"Pages:\s+2\b", subprocess.run(["pdfinfo", cs], capture_output=True, text=True).stdout) is not None)
-rec(f"Primary {LEVEL} gallery has 10 to 12 worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids",
-    10 <= len(GALLERY) <= 12 and len({g["picture"] for g in GALLERY}) >= 5 and len({g["bank"] for g in GALLERY}) >= 6 and {g["tier"] for g in GALLERY} == {1, 2} and len({g["id"] for g in GALLERY}) == len(GALLERY),
+LO_HI = {1: (12, 14), 2: (14, 16)}.get(LEVEL, (10, 16))
+rec(f"Primary {LEVEL} gallery has {LO_HI[0]} to {LO_HI[1]} worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids",
+    LO_HI[0] <= len(GALLERY) <= LO_HI[1] and len({g["picture"] for g in GALLERY}) >= 5 and len({g["bank"] for g in GALLERY}) >= 6 and {g["tier"] for g in GALLERY} == {1, 2} and len({g["id"] for g in GALLERY}) == len(GALLERY),
     f"{len(GALLERY)} worksheets, {len({g['picture'] for g in GALLERY})} pictures, {len({g['bank'] for g in GALLERY})} topics")
 rec("library has at least 5 pictures and 6 topic banks", len(PICTURES) >= 5 and len(BANKS) >= 6, f"{len(PICTURES)} pictures, {len(BANKS)} banks")
 
 # ---------------------------------------------------------------------------------------------- report
 open(os.path.join(OUT, "verification.txt"), "w").write("\n".join(log) + f"\n\n{len(log) - len(fails)} passed, {len(fails)} failed\n")
-inv = ["| id | picture | topic | stars | key (answers, in colour order yellow, red, blue, green, orange) | regions | checks printed on the page | single-slip detection | min text | verification |", "|---|---|---|---|---|---|---|---|---|---|"]
+inv = ["| id | picture | topic | stars | key (answers, in colour order yellow, red, blue, green, orange) | regions | checks printed on the page | single-slip detection | double-slip / swap detection | min text | verification |", "|---|---|---|---|---|---|---|---|---|---|---|"]
 for sh in sheets:
     sp = sh["spec"]; R = ws_report.get(sp["id"], {}); st = R.get("single_slip", {})
-    chk = ["tally"] + (["mirror pairs"] if sh["pic"].mirror_pairs else []) + (["same-colour groups"] if sh["pic"].groups else []) + [s[1].split(":")[0].split(".")[0].replace("The ", "").lower() + " count" for s in sh["checks"] if s[0] == "subset"]
+    chk = ["tally"] + (["mirror pairs"] if sh["pic"].mirror_pairs else []) + (["small marks (parts with the same mark share a colour)"] if sh["pic"].twins else []) + [s[1].split(":")[0].split(".")[0].replace("The ", "").lower() + " count" for s in sh["checks"] if s[0] == "subset"]
     mine = [l for l in log if l.startswith("FAIL") and sp["id"] in l]
-    inv.append(f"| {sp['id']} | {sh['pic'].title} | {sh['bank'].topic_for(sp['tier'])} | {sp['tier']} | {', '.join(sh['tier'].disp(k) for k in sh['key'])} | {len(sh['pic'].regions)} | {', '.join(chk)} | {st.get('detected_all', 0)}/{st.get('wrong_values', 0)} = {st.get('rate_all', 0):.1%} | {R.get('min_pupil_font_mm', 0)} mm | {'PASS' if not mine else 'FAIL'} |")
+    inv.append(f"| {sp['id']} | {sh['pic'].title} | {sh['bank'].topic_for(sp['tier'])} | {sp['tier']} | {', '.join(sh['tier'].disp(k) for k in sh['key'])} | {len(sh['pic'].regions)} | {', '.join(chk)} | {st.get('detected_all', 0)}/{st.get('wrong_values', 0)} = {st.get('rate_all', 0):.1%} | {st.get('double_rate', 0):.1%} / {st.get('swap_rate', 0):.1%} | {R.get('min_pupil_font_mm', 0)} mm | {'PASS' if not mine else 'FAIL'} |")
 open(os.path.join(OUT, "inventory.md"), "w").write("\n".join(inv) + "\n")
 json.dump(dict(passed=len(log) - len(fails), failed=len(fails), failures=fails, worksheets=ws_report, banks_and_pictures=report), open(os.path.join(OUT, "verification.json"), "w"), indent=1)
 print("\n".join(l for l in log if l.startswith("FAIL")) or "no failures")

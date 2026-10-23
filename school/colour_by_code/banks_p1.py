@@ -359,6 +359,142 @@ def _shapes(tier):
         f = mk(words, layout); f.__name__ = f"{words.__name__}_{layout}"; forms.append(f)
     return forms
 
+# ------------------------------------------------------------------ multiplication within 40 (equal groups, repeated addition, tables of 2, 3, 4, 5, 10)
+def _ch(r, seq): return r.choice(list(seq))
+def _pairs(n): return [(x, n // x) for x in (2, 3, 4, 5, 10) if n % x == 0 and 1 <= n // x <= 10]
+def _mult1(tier):
+    def pr(a, r):
+        p = _pairs(a); return r.choice(p) if p else None
+    def times(a, r):
+        p = pr(a, r)
+        if not p: return None
+        x, y = p if r.random() < 0.5 else p[::-1]
+        return EQ([f"{x} {TIMES} {y} = {BOX}"], a, form="times")
+    def grp(a, r):
+        p = pr(a, r)
+        if not p: return None
+        return SEM([f"{p[0]} groups of {p[1]}", f"is {BOX}"], lambda v, t_=a: v == t_, str(a), form="groups of")
+    def rep(a, r):
+        p = [q for q in _pairs(a) if q[0] <= 5] or None
+        if not p: return None
+        x, y = r.choice(p)
+        q = SEM([" + ".join([str(y)] * x), f"= {BOX}"], lambda v, t_=a: v == t_, str(a), form="repeated addition")
+        q.extra = lambda ans, x=x, y=y: x * y == ans
+        return q
+    def bags(a, r):
+        p = pr(a, r)
+        if not p: return None
+        return SEM([f"{p[0]} bags, {p[1]} in each.", f"Altogether {BOX}"], lambda v, t_=a: v == t_, str(a), form="bags")
+    def arr(a, r):
+        c = [(x, y) for x, y in _pairs(a) if x <= 5 and y <= 10] + [(y, x) for x, y in _pairs(a) if y <= 5 and x <= 10]
+        if not c: return None
+        rows, cols = r.choice(c)
+        q = SEM(["How many dots?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
+        q.extra = lambda ans, rows=rows, cols=cols: rows * cols == ans
+        return q
+    def grpart(a, r):
+        c = [(x, y) for x, y in _pairs(a) if x <= 5 and y <= 10]
+        if not c: return None
+        n, per = r.choice(c); art = A.groups(n, per)
+        q = SEM(["How many dots", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
+        q.extra = lambda ans, n=n, per=per: n * per == ans
+        return q
+    def grp_short(a, r):
+        q = grpart(a, r)
+        if q: q.layout = "row"; q.lines = [f"{BOX}"]; q.sol = [f"\u27e6{a}\u27e7"]; q.form = "equal groups, answer only"
+        return q
+    return [times, grp, rep, bags, arr, grpart, grp_short]
+
+# ------------------------------------------------------------------ sharing and grouping within 20 (no division sign at Primary 1)
+def _share1(tier):
+    ds = (2, 3, 4, 5)
+    def mk(a, r, f_):
+        d = _ch(r, ds); n = a * d
+        return f_(a, d, n, r) if n <= 20 else None
+    def share(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Share {n} sweets equally", f"among {d} children. Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="share"))
+    def group(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} pencils, {d} in a box.", f"Boxes: {BOX}"], lambda v, t_=q: v == t_, str(q), form="group"))
+    def into(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Divide {n} apples into", f"{d} equal groups: {BOX}"], lambda v, t_=q: v == t_, str(q), form="divide into"))
+    def sharer(a, r):
+        d = _ch(r, (3, 4, 5)); n = a * d
+        return SEM([f"Mia shares {n} stickers", f"with her {d - 1} friends.", f"Each person: {BOX}"], lambda v, t_=a: v == t_, str(a), form="sharer counted") if n <= 20 else None
+    def most(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} cookies, {d} each.", f"Most friends: {BOX}"], lambda v, t_=q: v == t_, str(q), form="most friends"))
+    def gart(a, r):
+        d = _ch(r, (2, 3, 4, 5)); n = a * d
+        if n > 20: return None
+        art = A.groups(d, a)
+        q = SEM(["How many dots", f"in each box? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="dots in each box")
+        q.extra = lambda ans, art=art: art.meta["per"] == ans
+        return q
+    return [share, group, into, sharer, most, gart]
+
+# ------------------------------------------------------------------ picture graphs (one face is one child, pet or thing), read and compare
+P1_GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
+def _pgraph(tier):
+    PG = dict(pitch=3.9, font=3.6)
+    def pick(r, n):
+        labs = list(_ch(r, P1_GRAPH_SETS)); r.shuffle(labs); return labs[:n]
+    def G(rows): return A.picgraph(rows, 1, **PG)
+    def read(a, r, n=3):
+        labs = pick(r, n); i = r.randrange(n)
+        rows = [(l, a if j == i else r.randint(1, 7)) for j, l in enumerate(labs)]
+        q = SEM([f"How many {labs[i].lower()}?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=G(rows), form="read one row")
+        q.extra = lambda ans, rows=rows, i=i: rows[i][1] == ans; return q
+    def read2(a, r):
+        if a > 6: return None
+        labs = pick(r, 2); i = r.randrange(2)
+        rows = [(l, a if j == i else r.randint(1, 6)) for j, l in enumerate(labs)]
+        q = SEM([f"How many {labs[i].lower()}?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=G(rows), form="read one row of two")
+        q.extra = lambda ans, rows=rows, i=i: rows[i][1] == ans; return q
+    def more(a, r):
+        if a > 5: return None
+        labs = pick(r, 3); cb = r.randint(1, 7 - a); ca = cb + a; i, j = r.sample(range(3), 2)
+        rows = [(l, r.randint(1, 7)) for l in labs]; rows[i] = (labs[i], ca); rows[j] = (labs[j], cb)
+        q = SEM([f"How many more {labs[i].lower()}", f"than {labs[j].lower()}? {BOX}"], lambda v, t_=a: v == t_, str(a), art=G(rows), form="how many more")
+        q.extra = lambda ans, rows=rows, i=i, j=j: rows[i][1] - rows[j][1] == ans; return q
+    def two(a, r):
+        if a < 2 or a > 12: return None
+        labs = pick(r, 3); c1 = r.randint(max(1, a - 7), min(7, a - 1)); c2 = a - c1
+        if not (1 <= c2 <= 7): return None
+        i, j = r.sample(range(3), 2)
+        rows = [(l, r.randint(1, 7)) for l in labs]; rows[i] = (labs[i], c1); rows[j] = (labs[j], c2)
+        q = SEM([f"How many {labs[i].lower()}", f"and {labs[j].lower()}? {BOX}"], lambda v, t_=a: v == t_, str(a), art=G(rows), form="two rows")
+        q.extra = lambda ans, rows=rows, i=i, j=j: rows[i][1] + rows[j][1] == ans; return q
+    def row1(a, r):
+        if a > 6: return None
+        lab = _ch(r, [x for g in P1_GRAPH_SETS for x in g]); art = G([(lab, a)])
+        q = SEM([f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="one row, answer below")
+        q.sol = [f"\u27e6{a}\u27e7"]
+        q.extra = lambda ans, art=art: art.meta["rows"][0][1] == ans; return q
+    def row1b(a, r):
+        q = row1(a, r)
+        if q: q.layout = "row"; q.form = "one row, answer beside"
+        return q
+    for f_ in (read, read2, more, two): f_.pref = 1
+    return [read, read2, more, two, row1, row1b]
+
+# ------------------------------------------------------------------ ordinals: first to tenth (1st, 2nd, 3rd, 4th ...)
+def ordw(n): return f"{n}" + ("th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th"))
+def _ord(tier):
+    def row_l(a, r):
+        if a > 8: return None
+        n = r.randint(a, 8); q = SEM([f"From the left,", f"the black one is {BOX}th"], lambda v, t_=a: v == t_, str(a), art=A.queue(n, a), form="from the left")
+        q.extra = lambda ans, n=n, a=a: a == ans; q.layout = "stack"; return q
+    def row_r(a, r):
+        if a > 8: return None
+        n = r.randint(a, 8); k = n + 1 - a
+        q = SEM([f"From the right,", f"the black one is {BOX}th"], lambda v, t_=a: v == t_, str(a), art=A.queue(n, k), form="from the right")
+        q.extra = lambda ans, n=n, k=k: n + 1 - k == ans; return q
+    def before(a, r): return SEM([f"{a - 1} children are in", f"front of Mia. Mia is {BOX}th."], lambda v, t_=a: v == t_, str(a), form="children in front")
+    def after(a, r):
+        s_ = r.randint(1, a - 1); d = a - s_
+        return SEM([f"Ann is {ordw(s_)}. Bo is {d}", f"places after Ann. Bo is {BOX}th."], lambda v, t_=a: v == t_, str(a), form="places after")
+    def beforek(a, r):
+        d = r.randint(1, 4); t = a + d
+        return SEM([f"Sam is {ordw(t)}. Jo is {d}", f"places before Sam. Jo is {BOX}th."], lambda v, t_=a: v == t_, str(a), form="places before") if t <= 10 else None
+    def seq(a, r): return SEM([f"{ordw(a - 2)}, {ordw(a - 1)},", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), form="ordinal sequence")
+    def between(a, r): return SEM([f"Between {ordw(a - 1)} and {ordw(a + 1)}", f"is {BOX}th"], lambda v, t_=a: v == t_, str(a), form="between") if a + 1 <= 10 else None
+    return [row_l, row_r, before, after, beforek, seq, between]
+
 def build_banks():
     B = {}
     B["add"] = Bank("add", "Addition", "Addition within 20", "Add. Find the answer in the key. Colour the part with that colour.",
@@ -385,6 +521,14 @@ def build_banks():
     B["shapes"] = Bank("shapes", "Shapes", "Shapes: corners and straight sides", "Count the corners.",
         {1: T([3, 4, 6, 7, 8], range(0, 13), _shapes(1), instr="Count the corners of the shapes in each part. Find the answer in the key. Colour the part with that colour."),
          2: T([6, 8, 12, 14, 16], range(0, 21), _shapes(2), instr="Count the corners and the straight sides of the shapes in each part. Add them. Find the answer in the key. Colour the part with that colour.")})
+    B["mult"] = Bank("mult", "Multiplication", "Multiplication within 40", "Multiply. Find the answer in the key. Colour the part with that colour.",
+        {1: T([4, 6, 8, 10, 12], range(0, 41), _mult1(1)), 2: T([12, 15, 20, 30, 40], range(0, 41), _mult1(2))}, {1: "Multiplication within 40: equal groups", 2: "Multiplication within 40"})
+    B["share"] = Bank("share", "Sharing", "Sharing and grouping within 20", "Share or group equally. Find the answer in the key. Colour the part with that colour.",
+        {1: T([2, 3, 4, 5, 6], range(0, 21), _share1(1)), 2: T([4, 5, 6, 7, 8], range(0, 21), _share1(2))})
+    B["pgraph"] = Bank("pgraph", "Picture Graphs", "Picture graphs", "Read the picture graph. Find the answer in the key. Colour the part with that colour.",
+        {1: T([2, 3, 4, 5, 6], range(0, 21), _pgraph(1)), 2: T([3, 4, 5, 6, 7], range(0, 21), _pgraph(2))})
+    B["ordinal"] = Bank("ordinal", "Ordinal Numbers", "Ordinal numbers: first to tenth", "Write the missing number. Find it in the key. Colour the part with that colour.",
+        {1: T([4, 5, 6, 7, 8], range(0, 11), _ord(1), lambda v: ordw(v)), 2: T([6, 7, 8, 9, 10], range(0, 11), _ord(2), lambda v: ordw(v))})
     return B
 
 BANKS = build_banks()
