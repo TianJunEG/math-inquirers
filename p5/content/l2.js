@@ -20,22 +20,22 @@ const boxfr = () => `<span style="display:inline-flex;flex-direction:column;alig
 // bar model for Q3: 240 stickers, a bar cut into 4 equal parts
 const stickerBar = () => {
   const x0 = 60, w = 480, y = 46, h = 50;
-  let g = `<path d="M${x0} ${y - 8} V${y - 20} H${x0 + w} V${y - 8}" fill="none" stroke="${N}" stroke-width="2.5"/>` + txt(x0 + w / 2, y - 28, '240 stickers', 17);
+  let g = `<path d="M${x0} ${y - 8} V${y - 20} H${x0 + w} V${y - 8}" fill="none" stroke="${N}" stroke-width="2.5"/>` + txt(x0 + w / 2, y - 28, '240 stickers', 18);
   for (let i = 0; i < 4; i++) g += `<rect x="${x0 + i * w / 4}" y="${y}" width="${w / 4}" height="${h}" fill="${i === 0 ? SKY : WH}" stroke="${N}" stroke-width="2.5"/>`;
-  g += txt(x0 + w / 8, y + h + 24, 'Ben', 16, TEAL) + txt(x0 + w * 5 / 8, y + h + 24, 'the remainder: draw the rest!', 16, TEAL);
-  return `<svg aria-label="A bar for 240 stickers cut into 4 equal parts; the first part is for Ben" viewBox="0 0 600 126" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:62%">${g}</svg>`;
+  g += txt(x0 + w / 8, y + h + 24, 'Ben', 18, TEAL) + txt(x0 + w * 5 / 8, y + h + 24, 'the remainder: draw the rest!', 18, TEAL);
+  return `<svg aria-label="A bar for 240 stickers cut into 4 equal parts; the first part is for Ben" viewBox="0 0 600 126" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
-// Q1(c): Group A's share (2/3) and Group B's share (3/5) drawn as bars of the same length (drawn shapes, no glyphs)
+// Q1(b): two unshaded bars of the same length, cut in 3 and in 5 equal parts, drawn as bars of the same length (drawn shapes, no glyphs)
 const shareBars = () => {
-  const x0 = 90, w = 360; let g = '';
+  const x0 = 100, w = 340; let g = '';
   [['Group A', 3, 2], ['Group B', 5, 3]].forEach(([lab, parts, shaded], r) => {
     const y = 12 + r * 52;
-    g += txt(x0 - 10, y + 27, lab, 16, N, 'end');
-    for (let i = 0; i < parts; i++) g += `<rect x="${x0 + i * w / parts}" y="${y}" width="${w / parts}" height="38" fill="${i < shaded ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
+    g += txt(x0 - 10, y + 27, lab, 18, N, 'end');
+    for (let i = 0; i < parts; i++) g += `<rect x="${x0 + i * w / parts}" y="${y}" width="${w / parts}" height="38" fill="${WH}" stroke="${N}" stroke-width="2.5"/>`;
   });
-  g += txt(x0 + w + 12, 40, 'one child\u2019s share is shaded', 15, TEAL, 'start', 600);
-  return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts with 2 shaded. Group B is cut in 5 equal parts with 3 shaded." viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:56%">${g}</svg>`;
+  g += txt(x0 + w + 12, 40, 'same whole, cut in equal parts', 18, TEAL, 'start', 600);
+  return `<svg aria-label="Two bars of the same length. Group A is cut in 3 equal parts and Group B in 5 equal parts. Nothing is shaded." viewBox="0 0 600 120" width="600" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 module.exports = {

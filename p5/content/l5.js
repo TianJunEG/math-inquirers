@@ -50,7 +50,7 @@ function box(P, L, B, H, o = {}) {
     const [x1, y1] = P(L * 0.12, 0, 0), [, y2] = P(L * 0.12, o.water, 0);
     s += `<line x1="${x1.toFixed(1)}" y1="${(y1 - 3).toFixed(1)}" x2="${x1.toFixed(1)}" y2="${(y2 + 3).toFixed(1)}" stroke="${TEAL}" stroke-width="2.5"/>`;
     s += `<polygon points="${x1 - 6},${(y2 + 12).toFixed(1)} ${x1 + 6},${(y2 + 12).toFixed(1)} ${x1},${(y2 + 2).toFixed(1)}" fill="${TEAL}"/><polygon points="${x1 - 6},${(y1 - 12).toFixed(1)} ${x1 + 6},${(y1 - 12).toFixed(1)} ${x1},${(y1 - 2).toFixed(1)}" fill="${TEAL}"/>`;
-    s += tx(x1 + 10, (y1 + y2) / 2 + 6, o.wlabel, { a: 'start', fill: TEAL });
+    s += tx(x1 + 10, (y1 + y2) / 2 + 6, o.wlabel, { a: 'start', fill: TEAL, size: o.lsize || 16 });
   }
   return s;
 }
@@ -58,8 +58,8 @@ const svg = (w, h, label, inner, dw, vb) => `<svg aria-label="${esc(label)}" vie
 
 const figQ1 = () => svg(300, 150, 'A solid cuboid built from 1-centimetre cubes: 4 cubes long, 3 cubes deep and 2 cubes high',
   box(OB(40, 130, 44), 4, 3, 2, { grid: true, fill: [YEL, '#FFE08A', '#F2B92E'] }));
-const figQ3 = () => svg(440, 300, 'A glass tank 50 cm long, 30 cm wide and 40 cm high with water 18 cm deep, drawn to scale',
-  box(OB(80, 260, 5), 50, 30, 40, { water: 18, wlabel: '18 cm', labels: ['50 cm', '40 cm', '30 cm'] }));
+const figQ3 = () => svg(500, 300, 'A glass tank 50 cm long, 30 cm wide and 40 cm high with water 18 cm deep, drawn to scale',
+  box(OB(80, 260, 5), 50, 30, 40, { water: 18, wlabel: '18 cm', labels: ['50 cm', '40 cm', '30 cm'], lsize: 22 }));
 const figQ4 = () => {
   let s = box(OB(70, 230, 5), 40, 25, 30, { water: 15, wlabel: '15 cm', labels: ['40 cm', '30 cm', '25 cm'], lsize: 24 });
   const cubeAt = (x0, y0) => box(OB(x0, y0, 5), 10, 10, 10, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'] });
@@ -214,8 +214,8 @@ module.exports = {
   module.exports.qbank.stretch[3].fig = cub();
   module.exports.qbank.challenge[module.exports.qbank.challenge.length - 2].fig = cub();
   // B3: tank 30 x 20 with water 10 cm deep and a block 10 x 10 x 15 standing on the bottom
-  let g = box(OB(30, 200, 5), 30, 20, 25, { water: 10, wlabel: '10 cm', labels: ['30 cm', '', '20 cm'], lsize: 17 });
-  g += box(OB(30 + 5 * 10, 200, 5), 10, 10, 15, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'], labels: ['10 cm', '15 cm', ''], lsize: 15 });
-  g += tx(285, 80, 'block 10 × 10 × 15', { size: 15, a: 'start' });
-  module.exports.qbank.challenge[module.exports.qbank.challenge.length - 1].fig = svg(400, 230, 'A tank with base 30 cm by 20 cm and water 10 cm deep. A block 10 cm by 10 cm by 15 cm stands upright on the bottom.', g, 260);
+  let g = box(OB(30, 200, 5), 30, 20, 25, { water: 10, wlabel: '10 cm', labels: ['30 cm', '', '20 cm'], lsize: 18 });
+  g += box(OB(30 + 5 * 10, 200, 5), 10, 10, 15, { fill: ['#C9CED8', '#E3E6EC', '#AEB4C2'] });
+  g += tx(250, 70, 'block: 10 cm by 10 cm', { size: 18, a: 'start' }) + tx(250, 94, 'by 15 cm high', { size: 18, a: 'start' });
+  module.exports.qbank.challenge[module.exports.qbank.challenge.length - 1].fig = svg(460, 240, 'A tank with base 30 cm by 20 cm and water 10 cm deep. A block 10 cm by 10 cm by 15 cm stands upright on the bottom.', g, 330);
 }
