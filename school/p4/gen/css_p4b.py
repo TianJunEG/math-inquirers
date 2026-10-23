@@ -89,3 +89,4 @@ CSS_P4B = CSS_P4B + """.afig.mir>svg{width:44mm;height:32.5mm;margin-left:5mm}.a
 CSS_P4B = CSS_P4B + """.qg.work .qc{min-height:23mm}.vcards.vc3 .vcard .vans{margin-top:9mm}
 """
 CSS_P4B = CSS_P4B + """.qc.fgq2 .fgc{padding:5mm 0 0 0}\n"""
+CSS_P4B = CSS_P4B + """.codetable[style*="repeat(8"] .ct{padding:0.6mm 0.8mm;gap:0.8mm;font-size:12.5pt}.codetable[style*="repeat(8"] .ct b{padding-left:0.8mm;font-size:15pt}\n"""
