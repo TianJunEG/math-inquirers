@@ -29,7 +29,7 @@ h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.0
 .check .ct2 b{font-family:'Fredoka';font-weight:600;font-size:15pt}
 .check .lb{display:flex;gap:1.5mm;align-items:center;flex-wrap:nowrap}
 .check .ab{width:12mm;height:12mm;flex:none}
-footer.pf{display:flex;justify-content:space-between;gap:6mm;font-size:8pt;padding-top:2mm;line-height:1.2}
+footer.pf{display:flex;justify-content:space-between;gap:6mm;font-size:8pt;font-weight:700;padding-top:2mm;line-height:1.2}
 footer.pf b{font-weight:800}
 footer.pf .fl{display:flex;gap:1.2mm;flex:1;min-width:0}footer.pf .fx{white-space:nowrap;flex:none}footer.pf .sn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:800}footer.pf .pc{flex:none}
 p.lead{margin:0 0 2mm;font-size:13pt;font-weight:700}

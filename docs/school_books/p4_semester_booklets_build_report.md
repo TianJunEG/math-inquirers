@@ -130,3 +130,13 @@ The audit found no High and agreed with the key on 40 of 40 pages. The Medium an
 - Not changed: P4-18 letter a (kept, see weak point 2); P4-09, P4-19 wording and P4-34 item types echo own-content frames in kind; the wording is different and the numbers are new, and a full reframe was not cheap.
 
 Re-check: `validate.py` once at the end, 735 checks, 0 failed. Every changed page was solved again by hand from the render of the final build and gave the key's word or colour counts: P4-04 (route unchanged), P4-05, P4-08, P4-09, P4-11, P4-12, P4-19 (FAMILY), P4-20, P4-26 (TURKEY), P4-27, P4-30 (BOTANY), P4-31 (DEVOUR), P4-32 (BOUNTY), P4-33, P4-34 (CANOPY), P4-36 (CAMPUS), P4-37 (COUSIN), P4-38 (FLIGHT), P4-40. Changed picture pages were viewed in colour and as a 1-bit copy. The words of several pages changed because the build gives each page a word no other page uses; the key and the hand-solve are of the final build.
+
+## After the round-2 audit
+
+- Instruction sentences: P4-04 now prints 4 ("Each box says: number, about, rounded number." / "Start at START and move up, down, left or right." / "Step only on true statements, once each." / "A number half way rounds up."); P4-05, 11 and 40 print 3 ("Work out each part and find it in the key." / "Colour the part, or write Y, R, B, G or O." / "A number half way rounds up."). `validate.py` now counts sentences (split at . ? ! ;), not lines, for the 4-sentence limit. The half-way rule is therefore printed on P4-05 too.
+- Working space: P4-10 has a "Working" line under each sum; P4-12 has a "Working" line in each card.
+- P4-30 item 5 reframed: "Two 10 cm by 5 cm tiles touch along their long sides. Find the perimeter of both together." (answer unchanged, BOTANY).
+- Footer text is bold (700) at 8 pt so it survives a 1-bit copy better; a larger size overflowed P4-16.
+- Colour boxes widened to 15.8 mm by 11 mm ("20 000" no longer tight).
+- Code words are not changed across levels; they remain distinct within P4.
+- Re-check: `validate.py` once, 735 checks, 0 failed. P4-05 and P4-11 changed content when rebuilt (the picture layout picks questions) and were solved again by hand from the render (counts and marks match the key); P4-40, P4-04 and P4-30 were re-read and agree. P4-05 was viewed as a 1-bit copy; P4-10 and P4-12 in colour.

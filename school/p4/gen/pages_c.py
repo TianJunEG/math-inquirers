@@ -635,7 +635,7 @@ def page30():
           f"A card is {A2} cm by {B2} cm. A corner piece, a square of side {C2} cm, is cut off. Find the perimeter of the card left.",
           f"A square has perimeter {P3} cm. It is cut into 4 identical small squares. Find the perimeter of one small square.",
           f"A pool is {A4} m long and {B4} m wide. Tiles 2 m wide surround it. Find the area of the tiles.",
-          f"Two {L5} cm by {W5} cm cards are joined along their long sides. Find the perimeter of the new rectangle.",
+          f"Two {L5} cm by {W5} cm tiles touch along their long sides. Find the perimeter of both together.",
           f"The length of a rectangle is 3 times its width. Its perimeter is {P6} cm. Find its area."]
     units = [f"cm{SQ}", "cm", "cm", f"m{SQ}", "cm", f"cm{SQ}"]
     cards = [qcard(i + 1, f'<div class="ptxt2">{q}</div>', ABX + " " + units[i], cls="span2 inl") for i, q in enumerate(qs)]

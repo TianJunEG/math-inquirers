@@ -90,3 +90,4 @@ CSS_P4B = CSS_P4B + """.qg.work .qc{min-height:23mm}.vcards.vc3 .vcard .vans{mar
 """
 CSS_P4B = CSS_P4B + """.qc.fgq2 .fgc{padding:5mm 0 0 0}\n"""
 CSS_P4B = CSS_P4B + """.codetable[style*="repeat(8"] .ct{padding:0.6mm 0.8mm;gap:0.8mm;font-size:12.5pt}.codetable[style*="repeat(8"] .ct b{padding-left:0.8mm;font-size:15pt}\n"""
+CSS_P4B = CSS_P4B + """.vcards.vc3 .vcard .vans{position:relative}.vcards.vc3 .vcard .vans:before{content:"Working";position:absolute;left:0;right:0;top:-7.5mm;border-top:0.3mm solid #000;font-size:8pt;font-weight:600;text-align:left;padding-top:0.3mm}.qg.work .qc:after{content:"Working";position:absolute;left:3mm;bottom:1.5mm;width:55%;border-top:0.3mm solid #000;font-size:8pt;font-weight:600;padding-top:0.3mm}.qg.work .qc{padding-bottom:6mm}"""

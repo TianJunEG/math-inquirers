@@ -290,7 +290,7 @@ def page04():
     key = " -> ".join(f"({r+1},{c+1}) {Ntxt(data[(r, c)][0])} = {Ntxt(data[(r, c)][2])} to {data[(r, c)][1]}" for r, c in path)
     P = route_page(4, 4404, "Round It", 1, "Rounding numbers to the nearest 10, 100 or 1000; the sign for about", STRAND_NU,
         "1.5, 1.6 (rounding numbers to the nearest 10, 100 or 1000; use of the sign for about)", ["NU1.5", "NU1.6"], "Maze / path (rounding, true statements)",
-        ["Each box says: number, about, rounded number.", "Start at START. Move up, down, left or right.", "Step only on true statements. A number half way rounds up.", "Do not step on a box twice."],
+        ["Each box says: number, about, rounded number.", "Start at START and move up, down, left or right.", "Step only on true statements, once each.", "A number half way rounds up."],
         n, texts, start, finish, path, ok, "Route (row, column from top-left): " + key,
         f"Does your line reach FINISH? Are there {len(path)} boxes? Is every box a true statement?",
         f"A 5 by 5 grid of boxes, each with a number, the sign for about, a rounded number and the place it is rounded to (10, 100 or 1000). On the route every statement is true. Boxes off the route are false: they give the number rounded down when it should round up, up when it should round down, or one step too far. {dead} extra boxes with true statements are dead ends. Counting the boxes shows a line that takes a shortcut. Pupils round half way numbers up. The pupil reads the sign for about as is about.",

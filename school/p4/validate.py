@@ -98,7 +98,7 @@ for p in pages:
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 20: bad.append((p["no"], cl))
-    if len(p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction sentences (P4 limit)"))
+    if sum(len(re.split(r"(?<=[.?!;])\s+", x.strip())) for x in p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction sentences (P4 limit; sentences, not lines)"))
     if not p.get("cbc"):
         txt_ = re.sub(r"<svg.*?</svg>", "\n", p["body"], flags=re.S)
         txt_ = re.sub(r'<span class="fr">.*?</i></span>', " F ", txt_, flags=re.S)        # a fraction counts as one word

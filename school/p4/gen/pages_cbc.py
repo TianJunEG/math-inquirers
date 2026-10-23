@@ -81,7 +81,7 @@ def mirror_truth(pic):
 
 def cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     old = (L.BOX_SIDE, L.BOX_W)
-    L.BOX_W = 15.6
+    L.BOX_W = 17.5
     L.BOX_SIDE = 12.3                       # larger answer boxes (audit M4 and round 2: three-digit answers)
     try: return _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc)
     finally: L.BOX_SIDE, L.BOX_W = old
@@ -140,21 +140,21 @@ def _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
 
 def page05():
     return cbc_page(5, dict(id="CBC-P4-01", picture="bus", bank="numbers4", tier=2, seed=401, level=4), "Colour the Bus",
-        ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
+        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O.", "A number half way rounds up."],
         "Number and Algebra - Whole Numbers", "1.1, 1.2, 1.3, 1.4, 1.5 (place value, numbers in words, comparing, patterns and rounding; numbers up to 100 000)",
         "Every part asks a question about numbers up to 100 000: the value of a digit, a number in words, 10, 100, 1000 or 10 000 more or less, the greatest or smallest of three close numbers, a number pattern or rounding to the nearest 10, 100 or 1000.",
         oc=["NU1.1", "NU1.2", "NU1.3", "NU1.4", "NU1.5"])
 
 def page11():
     return cbc_page(11, dict(id="CBC-P4-02", picture="lorry", bank="mult4", tier=2, seed=402, level=4), "Colour the Lorry",
-        ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
+        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O.", "A number half way rounds up."],
         "Number and Algebra - Whole Numbers", "3.1, 3.2 (multiplication algorithm up to 4 digits by 1 digit and 3 digits by 2 digits; division algorithm up to 4 digits by 1 digit)",
         "Every part asks a multiplication or division with larger numbers: 4 digits by 1 digit, 3 digits by 2 digits, a missing factor, a division of a 4-digit number by a 1-digit number, a short story or a multiplication followed by a subtraction.",
         oc=["FO3.1", "FO3.2"])
 
 def page40():
     return cbc_page(40, dict(id="CBC-P4-03", picture="ferry", bank="dec4", tier=2, seed=403, level=4), "Colour the Ferry",
-        ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
+        ["Work out each part and find it in the key.", "Colour the part, or write Y, R, B, G or O.", "A number half way rounds up."],
         "Number and Algebra - Decimals", "1.2, 1.4, 1.5, 2.1, 3.1, 3.2 (comparing decimals, fractions as decimals, rounding, adding and subtracting, multiplying and dividing decimals)",
         "Every part works with decimals up to 2 decimal places: adding or subtracting, multiplying or dividing by a 1-digit number, a whole number divided by a whole number, rounding to a whole number, 1 or 2 decimal places, a fraction written as a decimal, the greatest of three decimals or 0.1 or 0.01 more or less.",
         oc=["DP1.2", "DP1.4", "DP1.5", "DA2.1", "DM3.1", "DM3.2"])
