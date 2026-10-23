@@ -18,8 +18,7 @@ class Picture:
     title: str
     regions: list
     decor: list = field(default_factory=list)        # (svg fragment, shapely geometry used as an obstacle for labels)
-    groups: list = field(default_factory=list)       # (ids, sentence): regions that must share one colour
-    subsets: list = field(default_factory=list)      # (ids, "the N scales"): a counted subset check, e.g. exactly 2 red scales
+    twins: list = field(default_factory=list)        # (ids, symbol): regions that carry the same small black mark and must share one colour
     symmetric: bool = False
     blurb: str = ""
     mirror_pairs: list = field(default_factory=list)
@@ -28,6 +27,48 @@ class Picture:
     def obstacles(self): return [g for _, g in self.decor if g is not None]
     def boxes(self, rid):
         return labelbox.find_boxes(self.by_id()[rid].geom, self.obstacles())
+
+# ---------------------------------------------------------------- twin marks
+# A twin set is two to four regions that carry the same small solid-black mark and must be coloured alike. It is the second
+# self-check of a picture that is not symmetric (and of the loose parts of a symmetric one): a pupil who swaps the colours of
+# two parts breaks the match of both marks. Marks are placed by the library (never by hand) away from the label.
+SYMBOLS = ["triangle", "square", "diamond", "star", "cross", "hexagon"]
+def symbol_points(name, cx=0.0, cy=0.0, s=1.0):
+    """polygon points of a mark of half-size s centred on (cx, cy)"""
+    if name == "triangle": pts = [(0, -1.15), (-1.05, 0.8), (1.05, 0.8)]
+    elif name == "square": pts = [(-0.85, -0.85), (0.85, -0.85), (0.85, 0.85), (-0.85, 0.85)]
+    elif name == "diamond": pts = [(0, -1.25), (1.0, 0), (0, 1.25), (-1.0, 0)]
+    elif name == "star":
+        import math
+        pts = [((1.2 if i % 2 == 0 else 0.5) * math.cos(-math.pi / 2 + i * math.pi / 5), (1.2 if i % 2 == 0 else 0.5) * math.sin(-math.pi / 2 + i * math.pi / 5)) for i in range(10)]
+    elif name == "cross": pts = [(-0.38, -1.1), (0.38, -1.1), (0.38, -0.38), (1.1, -0.38), (1.1, 0.38), (0.38, 0.38), (0.38, 1.1), (-0.38, 1.1), (-0.38, 0.38), (-1.1, 0.38), (-1.1, -0.38), (-0.38, -0.38)]
+    elif name == "hexagon":
+        import math
+        pts = [(1.1 * math.cos(i * math.pi / 3), 1.1 * math.sin(i * math.pi / 3)) for i in range(6)]
+    else: raise KeyError(name)
+    return [(cx + x * s, cy + y * s) for x, y in pts]
+def symbol_svg(name, cx, cy, s=1.9):
+    return '<polygon points="%s" fill="#000"/>' % " ".join(f"{x:.2f},{y:.2f}" for x, y in symbol_points(name, cx, cy, s))
+
+def place_marker(geom, obstacles, s=1.9):
+    """a point inside `geom` for a mark of half-size s: clear of the outline, and where it takes the least room from the label boxes
+    the region could hold (every box height counts, so tall pictures such as a clock still fit); ties go to the point nearest the outline"""
+    import numpy as np
+    from shapely.geometry import Point
+    boxes = labelbox.find_boxes(geom, obstacles)
+    pad = s * 1.25 + 0.4
+    inner = geom.buffer(-(s * 1.25 + 1.6))
+    if inner.is_empty: inner = geom.buffer(-(s * 1.25 + 0.6))
+    minx, miny, maxx, maxy = inner.bounds
+    cands = [(x, y) for x in np.arange(minx, maxx + 0.01, 1.0) for y in np.arange(miny, maxy + 0.01, 1.0) if inner.contains(Point(x, y))]
+    for o in obstacles: cands = [c for c in cands if o.distance(Point(*c)) > s * 1.25 + 1.0]
+    if not cands: raise ValueError("no room for a mark")
+    def penalty(c):
+        p = 0.0
+        for cx, cy, w, h in boxes:
+            if abs(c[0] - cx) < w / 2 + pad and abs(c[1] - cy) < h / 2 + pad: p += (h / 12.0) * (1.0 if h >= 12 else 0.5)
+        return p
+    return min(cands, key=lambda c: (round(penalty(c), 2), round(geom.boundary.distance(Point(*c)) / 2.0), -c[1]))
 
 PICTURES = {}
 def picture(fn):
@@ -48,9 +89,17 @@ class Builder:
         return self
     def decor(self, svg, geom=None):
         self.pic.decor.append((svg, geom)); return self
-    def group(self, ids, sentence): self.pic.groups.append((ids, sentence)); return self
-    def subset(self, ids, template): self.pic.subsets.append((ids, template)); return self
-    def done(self): return self.pic
+    def twin(self, ids):
+        """the regions in `ids` get the same small mark and must be coloured alike"""
+        self.pic.twins.append((list(ids), SYMBOLS[len(self.pic.twins)])); return self
+    def done(self):
+        pic = self.pic; by = pic.by_id()
+        for ids, name in pic.twins:
+            for rid in ids:
+                obs = pic.obstacles()
+                x, y = place_marker(by[rid].geom, obs)
+                pic.decor.append((symbol_svg(name, x, y), Point(x, y).buffer(1.9 * 1.25)))
+        return pic
 
 # ---------------------------------------------------------------- rocket
 @picture
@@ -66,8 +115,7 @@ def rocket():
     b.pair("fin", P((36, 92), (2, 126), (2, 168), (36, 140)))
     b.add("base", P((52, 135), (128, 135), (122, 152), (58, 152)))
     b.add("flame", P((58, 152), (122, 152), (90, 200)))
-    b.add("planet", C(18.5, 34, 17))
-    b.add("moon", C(161.5, 34, 17))
+    b.pair("planet", C(18.5, 34, 17))                 # planet and moon are mirror images of each other
     return b.done()
 
 # ---------------------------------------------------------------- fish (not symmetric)
@@ -90,9 +138,8 @@ def fish():
     for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
         b.add(f"sand_{i + 1}", R(x0, 183, x1, 200))
     b.decor('<circle cx="25" cy="82" r="3.2" fill="#000"/>', C(25, 82, 3.2))
-    b.group(["tail_up", "tail_dn"], "the two parts of the tail")
-    b.group(["fin_top", "fin_bot"], "the two fins")
-    b.subset(scales, "The fish has {n} scales. Exactly {c} of them {are} {colour}.")
+    b.twin(["tail_up", "tail_dn"]).twin(["fin_top", "fin_bot"]).twin(["bubble_1", "bubble_2", "bubble_3"]).twin(["sand_1", "sand_2", "sand_3"])
+    b.twin(["scale_1a", "scale_3b"]).twin(["scale_1b", "scale_3a"])
     return b.done()
 
 # ---------------------------------------------------------------- house with tree (not symmetric)
@@ -116,10 +163,8 @@ def house():
     b.add("trunk", R(131, 99, 165, 176))
     for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
         b.add(f"grass_{i + 1}", R(x0, 176, x1, 200))
-    b.group(["roof_l", "roof_r"], "the two sides of the roof")
-    b.group(["window_l", "window_r"], "the two windows")
-    b.group(["crown_top", "crown_bot"], "the top and bottom of the tree top")
-    b.subset(["wall_ll", "wall_mid", "wall_rr", "door", "window_l", "window_r"], "The house has {n} wall and window parts. Exactly {c} {are} {colour}.")
+    b.twin(["roof_l", "roof_r"]).twin(["window_l", "window_r"]).twin(["crown_top", "crown_bot"]).twin(["grass_1", "grass_2", "grass_3"])
+    b.twin(["wall_ll", "wall_mid", "wall_rr"]).twin(["sun", "cloud"])
     b.decor('<circle cx="69" cy="152" r="2.2" fill="#000"/>', C(69, 152, 2.2))
     return b.done()
 
@@ -180,6 +225,7 @@ def owl():
     b.add("belly_2", belly & R(0, 150, 200, 200))
     b.pair("branch", R(0, 178, 60, 200))
     b.add("branch_m", R(60, 178, 120, 200))
+    b.twin(["belly_1", "belly_2"])
     return b.done()
 
 # ---------------------------------------------------------------- sailboat (not symmetric)
@@ -202,6 +248,85 @@ def sailboat():
     b.add("wave_2", water & R(64, 0, 122, 200))
     b.add("wave_3", water & R(122, 0, 180, 200))
     b.decor('<path d="M100,6 L100,130" stroke="#000" stroke-width="0.9" fill="none"/><path d="M100,6 L122,13 L100,20 Z" fill="#000"/>', None)
-    b.group(["hull_1", "hull_2", "hull_3"], "the three parts of the boat")
-    b.subset(["sail_a", "sail_b", "jib_top", "jib_bot"], "The boat has {n} sails. Exactly {c} {are} {colour}.")
+    b.twin(["hull_1", "hull_2", "hull_3"]).twin(["wave_1", "wave_3"]).twin(["cloud_1", "cloud_2"]).twin(["jib_top", "jib_bot"]).twin(["sail_a", "sail_b"])
+    return b.done()
+
+# ---------------------------------------------------------------- castle (symmetric)
+@picture
+def castle():
+    b = Builder("castle", "Castle", symmetric=True, blurb="castle with two towers, a keep with a flag, double doors, clouds and a lawn")
+    b.pair("cloud", E(24, 18, 22, 12))
+    b.pair("tower_roof", P((0, 80), (52, 80), (26, 40)))
+    b.pair("tower_a", R(0, 80, 52, 112))
+    b.pair("tower_b", R(0, 112, 52, 144))
+    b.pair("tower_c", R(0, 144, 52, 176))
+    b.add("keep_roof", P((56, 80), (124, 80), (90, 32)))
+    b.pair("keep_a", R(52, 80, AXIS, 112))
+    b.add("keep_b", R(52, 112, 128, 140))
+    b.pair("door", R(52, 140, AXIS, 176))
+    b.add("lawn", R(0, 176, 180, 200))
+    b.decor('<path d="M90,32 L90,10" stroke="#000" stroke-width="0.9" fill="none"/><path d="M90,10 L110,16 L90,22 Z" fill="#000"/>', R(88, 8, 112, 32))
+    b.decor('<circle cx="84" cy="158" r="2.2" fill="#000"/><circle cx="96" cy="158" r="2.2" fill="#000"/>', C(84, 158, 2.2).union(C(96, 158, 2.2)))
+    return b.done()
+
+# ---------------------------------------------------------------- car (not symmetric)
+@picture
+def car():
+    b = Builder("car", "Car", blurb="car with two windows, three body parts, two wheels, sun, clouds and a road")
+    wheels = C(46, 146, 24).union(C(134, 146, 24))
+    b.add("sun", C(24, 24, 18.5))
+    b.add("cloud_1", E(84, 20, 24, 13))
+    b.add("cloud_2", E(150, 24, 24, 13))
+    b.add("window_1", P((46, 96), (91, 96), (91, 50), (68, 50)))
+    b.add("window_2", P((91, 96), (138, 96), (116, 50), (91, 50)))
+    body = R(8, 96, 172, 148) - wheels
+    b.add("body_a", body & R(0, 0, 62, 200))
+    b.add("body_b", body & R(62, 0, 118, 200))
+    b.add("body_c", body & R(118, 0, 200, 200))
+    b.add("wheel_1", C(46, 146, 24))
+    b.add("wheel_2", C(134, 146, 24))
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"road_{i + 1}", R(x0, 174, x1, 200) - wheels)
+    b.twin(["wheel_1", "wheel_2"]).twin(["window_1", "window_2"]).twin(["cloud_1", "cloud_2"]).twin(["road_1", "road_2", "road_3"]).twin(["body_a", "body_c"])
+    return b.done()
+
+# ---------------------------------------------------------------- elephant, front view (symmetric)
+@picture
+def elephant():
+    b = Builder("elephant", "Elephant", symmetric=True, blurb="elephant face with two big ears, a trunk, two eyes, clouds and ground")
+    head = E(90, 80, 46, 50)
+    trunk = P((68, 124), (112, 124), (106, 170), (74, 170))
+    ear = E(26, 88, 26, 50) - head
+    b.pair("ear", ear)
+    b.pair("head_up", head & R(0, 0, AXIS, 62))
+    b.pair("head_mid", head & R(0, 62, AXIS, 100))
+    b.pair("head_low", (head & R(0, 100, AXIS, 200)) - trunk)
+    b.add("trunk", trunk - head)
+    b.pair("cloud", E(22, 16, 20, 11))
+    b.pair("ground", R(0, 174, 60, 200))
+    b.add("ground_m", R(60, 174, 120, 200))
+    b.decor('<circle cx="70" cy="70" r="3" fill="#000"/><circle cx="110" cy="70" r="3" fill="#000"/>', None)
+    return b.done()
+
+# ---------------------------------------------------------------- dinosaur (not symmetric)
+@picture
+def dinosaur():
+    b = Builder("dinosaur", "Dinosaur", blurb="long-necked dinosaur with a four-part body, two legs, a tail, sun, cloud and ground")
+    body = E(96, 118, 52, 34)
+    b.add("head", C(28, 38, 22))
+    b.add("neck_up", P((4, 60), (52, 60), (58, 90), (12, 90)))
+    b.add("neck_low", P((12, 90), (58, 90), (70, 118), (16, 118)) - body)
+    b.add("body_ul", body & R(0, 0, 96, 118))
+    b.add("body_ur", body & R(96, 0, 200, 118))
+    b.add("body_ll", body & R(0, 118, 96, 200))
+    b.add("body_lr", body & R(96, 118, 200, 200))
+    b.add("tail", P((140, 110), (180, 90), (180, 160), (140, 150)) - body)
+    b.add("leg_1", R(52, 100, 90, 178) - body)
+    b.add("leg_2", R(102, 100, 140, 178) - body)
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"ground_{i + 1}", R(x0, 180, x1, 200))
+    b.add("sun", C(150, 28, 20))
+    b.add("cloud", E(92, 26, 26, 14))
+    b.decor('<circle cx="38" cy="28" r="2.8" fill="#000"/>', C(38, 28, 2.8))
+    b.twin(["leg_1", "leg_2"]).twin(["neck_up", "neck_low"]).twin(["ground_1", "ground_2", "ground_3"]).twin(["body_ul", "body_lr"]).twin(["body_ur", "body_ll"]).twin(["sun", "cloud"])
     return b.done()

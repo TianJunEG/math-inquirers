@@ -4,7 +4,7 @@ Status: planning only, written 23 Oct 2026. No lesson, tool, template or output 
 
 Sources read: `docs/terms/owner_decisions.md` (all entries), `docs/terms/level_2_year_plan.md` (all four terms, the revision blocks, the "Non-routine assignments" section, the type-by-lesson matrix and the paper notes), `docs/books/p2_school_paper_patterns.md` (wording, ranges, pictures, marks, fit/gap table), `docs/books/p2_non_routine_catalogue.md` (types, original examples with scripted answers), `docs/moe/syllabus_by_level.md` (P2 pp. 33 to 34, P1 pp. 31 to 32, P3 pp. 35 to 36, P4 and P6 flags), `docs/sasmo/g2_analysis.md` (catalogue, verdicts, mapping), the holiday program of the same level (`p2/SPEC.md`, `p2/content/l1.js` to `l10.js`: every Start here, Think harder and Go further question of the ten holiday lessons was extracted and read), `docs/terms/l1_term2_preflight.md`, `docs/terms/l1_term3_term4_preflight.md`, `term/l1/AUTHORING.md` (all passes, Terms 3 and 4 section), `term/l1/WORDING_GUIDE.md`, `term/l1/audit/TERM_WIDE_AUDIT.md`, `CUTOUT_AUDIT.md`, `FINAL_AUDIT_T1.md`, `FINAL_AUDIT_T2.md`, the Level 1 tools (`term/l1/tools/figs2.py`, `figs3.py`, `svg.py`, `validate.py`, `common.py`, `b_*.py`) and `print/make_term_books.py`. Not re-read in full: the word-problem book analysis (`docs/books/word_problems_g1_g2_analysis.md`), cited through the plan.
 
-Numbers marked "verified" were recomputed by brute-force scripts during this pre-flight (a scratch script, not committed). The lesson authors must still write their own `verify/lNN_checks.py`; nothing here replaces it.
+Numbers marked "verified" were recomputed by brute force in `verify_l2_preflight.py`, printed in the appendix at the end of this document (97 checks, all passed; check ids such as `L7.2` are quoted where a figure is new). The lesson authors must still write their own `verify/lNN_checks.py`; nothing here replaces it.
 
 ## 0. Headline findings
 
@@ -15,7 +15,7 @@ Numbers marked "verified" were recomputed by brute-force scripts during this pre
 5. **Black-and-white print is now a design constraint for Level 2 from the first figure.** Fractions, picture graphs, balance objects, coins, tile patterns, mirror pictures and bar models are all colour-coded in the colour PDFs; the printed books are 1-bit. Every Level 2 figure must be specified with a hatch pattern, label or shape per category, and each lesson's "shade" instruction must say "shade or hatch" (children use pencils). Section 3.1 (M18).
 6. **Five lessons have no school-paper evidence at all** (30 Robot Recipes, 31 Chance and Fair Games, 36 Grid Treasure Hunt, 38 Problem Posers, 39 Look Again) and two more are "Above" (32 Tables Bridge, 34 Big Numbers Expedition). They are the right lessons to make up first in an exam period (the plan already says so) and the right place to trial wording.
 7. **The plan treats some school work as a preview.** Time to the minute, durations, start-from-end (Lesson 15) and money in decimal notation with conversions (Lesson 5) are school work by 2022 to 2025 papers, but decimal addition is P3 on the syllabus (p. 35). The pre-flight keeps both truths: conversions and cents arithmetic at Start here and Think harder, decimal addition only at Go further (decision D2).
-8. **Estimate:** about 330 agent-hours for the 40 lessons including wording review, independent audit, fix pass, four term-wide audits and a consistency sweep, plus about 125 hours of template engineering (about 109 if optional items are deferred). Level 1 Terms 3 and 4 were estimated at 172 + 112 to 135 for 20 lessons; Level 2 is about twice that scale plus a Level 2 parametrisation. With the Level 1 process (8 to 10 writing agents, 3 engineers) that is about 8 to 10 working days from the start of Sprint A to four audited terms (section 11).
+8. **Estimate:** about 330 agent-hours for the 40 lessons including wording review, independent audit, fix pass, four term-wide audits and a consistency sweep, plus about 125 hours of template engineering (about 109 if optional items are deferred), of which about 88 hours are items that Levels 3 to 5 also list and that are charged to Level 2 only (section 3.4). Level 1 Terms 3 and 4 were estimated at 172 + 112 to 135 for 20 lessons; Level 2 is about twice that scale plus a Level 2 parametrisation. With the Level 1 process (8 to 10 writing agents, 3 engineers) that is about 8 to 10 working days from the start of Sprint A to four audited terms (section 11).
 
 ## 0.1 Assumptions made (change them if wrong)
 
@@ -60,10 +60,10 @@ Cold joining: yes. Safest to skip: Lesson 10 (a new context of ideas taught else
 
 - **Big idea.** A number has a place on a line, and its digits tell you where.
 - **Strand.** MOE P2 Whole Numbers 1.1 to 1.4 (count in tens and hundreds, place value to hundreds, words, compare and order, p. 33). Contest tag (tutor only): number sense, riddles with digits (SASMO number sense, 10 of 110 problems).
-- **Objective.** Place a 3-digit number on a line marked in 100s or 10s; read and write numbers to 999 in words; compare and order. Think harder: an unmarked line and its midpoint; a number riddle; every number from three cards. Go further: halfway numbers; a number built from regrouped parts.
+- **Objective.** Place a 3-digit number on a line with a tick for every 100 or every 10; read and write numbers to 999 in words; compare and order. Think harder: a line with only two numbers labelled and its midpoint; a number riddle; every number from three cards. Go further: halfway numbers; a number built from regrouped parts.
 - **Remember (6 min).** (1) Count on in tens and hundreds from a 3-digit number along a strip (holiday Lesson 1 chart, re-taught). (2) Build a number from hundreds, tens and ones cards. (3) Which is greater, 273 or 237? Compare the hundreds first. New numbers only: the holiday examples 538, 914, 409 and 490 are not reused.
-- **Start here (6).** Put 270 on a line from 200 to 300 marked in tens; read the number an arrow points to; write 407 and 560 in words (one written, one multiple choice); write "six hundred and five" in digits (the zero holds the tens place); "Arrange the numbers. Begin with the smallest." (three numbers, 100 apart in the hundreds only); name the number between two marked numbers. Words are accepted with or without "and" and with or without a hyphen.
-- **Think harder (4).** **NR (plan):** LOG (find the number from clues), LIST (every number from three cards), with the plan's digit-sum idea replaced (see overlap). (i) An unmarked line with 300 and 500 marked: halfway is 400, then place 450. (ii) "I am a number from 300 to 399. My tens digit is twice my ones digit and my ones digit is not 0. I am odd. My digits add up to 12." Answer 363; the first two clues alone leave 321, 342, 363 and 384; odd leaves 321 and 363; the digit sum leaves 363 only (verified). (iii) "Use the cards 0, 2 and 5 once each. List every 3-digit number you can make (0 cannot be first)": 205, 250, 502, 520; which are greater than 300: 502 and 520 (verified; the holiday sets were 4, 4, 7 and 0, 3, 8). (iv) A line marked every 50 from 0 to 1000: place 650 and read the number an arrow points to (a scale of 50, new to the child).
+- **Start here (6).** Put 270 on a line from 200 to 300 with a tick for every 10; read the number an arrow points to; write 407 and 560 in words (one written, one multiple choice); write "six hundred and five" in digits (the zero holds the tens place); "Arrange the numbers. Begin with the smallest." (three numbers, 100 apart in the hundreds only); name the number between two marked numbers. Words are accepted with or without "and" and with or without a hyphen.
+- **Think harder (4).** **NR (plan):** LOG (find the number from clues), LIST (every number from three cards), with the plan's digit-sum idea replaced (see overlap). (i) A line with only 300 and 500 labelled: halfway is 400, then place 450. (ii) "I am a number from 300 to 399. My tens digit is twice my ones digit and my ones digit is not 0. I am odd. My digits add up to 12." Answer 363; the first two clues alone leave 321, 342, 363 and 384; odd leaves 321 and 363; the digit sum leaves 363 only (verified). (iii) "Use the cards 0, 2 and 5 once each. List every 3-digit number you can make (0 cannot be first)": 205, 250, 502, 520; which are greater than 300: 502 and 520 (verified; the holiday sets were 4, 4, 7 and 0, 3, 8). (iv) A line with a tick every 50 from 0 to 1000: place 650 and read the number an arrow points to (a scale of 50, new to the child).
 - **Go further (3).** G1 **Beyond (named): "Halfway Numbers".** The halfway number of 240 and 480 is 360; of 130 and 570 it is 350 (verified); find the halfway number of two numbers whose sum is odd and say why it is not a whole number (e.g. 250 and 455: the halfway point sits exactly between 352 and 353 on the line; no decimal is written). Level note: the midpoint is not a P2 outcome (averages start at P4 and midpoint as halving is a P3 mental-calculation habit); say "halfway" never "average". G2 CTX: 4 hundreds, 13 tens and 25 ones make 555 (verified; the holiday item was tens alone). G3 Make up a three-clue riddle for 363 so that no other number fits.
 - **Holiday overlap: HIGH.** Holiday Lesson 1 already did digit cards (3, 6, 1; 2, 6, 9; 4, 4, 7; 5, 1, 9; 2, 5, 9), digit sums 4, 5 and 6, the digit 3 from 300 to 399 (120), pages 1 to 120 (252), 46 ten-blocks, and 700 to 790. Do not reuse any of these. The plan's Think harder (digit sum 5 and the digit 3) is replaced here; if the owner wants one digit-sum item it must use a new setting, for example "digits all different and no zero, sum 9" (decision D1).
 - **Numbers.** 100 to 1000; words to 999.
@@ -100,7 +100,7 @@ Cold joining: yes. Safest to skip: Lesson 10 (a new context of ideas taught else
 - **Remember (6 min).** (1) Skip count in 3s, 4s and 5s on a line (holiday Lesson 3/4 spiral). (2) Deal 12 counters onto 3 plates. (3) Draw 4 groups of 5.
 - **Start here (6).** Share 12 counters among 3; make groups of 4 from 20 and write the sentence; "Write a division equation for the picture" (circled groups); write two multiplication and two division sentences for an array (4 rows of 5; do not use the holiday's 2 rows of 10); one picture with the sharer counted ("Mei shares 8 stickers with 1 friend": 2 people), required at Start here by the papers (14 papers use it); one fill-in "n groups of m".
 - **Think harder (4).** **NR (plan):** CTX (the sharer counts), EXP (true or false). (i) "Mei shares 24 stickers equally with her 3 cousins. How many stickers does each person get?" 6 (4 people; verified). (ii) True or false: (a) 6 groups of 4 is the same as 4 groups of 6 (true); (b) 20 sweets can be shared equally among 6 friends with none left (false, 2 are left over); (c) 20 sweets packed 5 to a bag fill 4 bags with none left (true). (iii) 20 cookies, 3 each: the most number of friends she can give to is 6 with 2 left over (paper wording "the most number of friends"). (iv) Buses or tables for N children with M seats: "one more is needed". Context is not boats or buses (the holiday item was 27 children and boats of 4).
-- **Go further (3).** G1 **Beyond (named): "Always One Left".** The smallest number over 1 that leaves 1 when put in groups of 3, of 4 and of 5 is 61 (verified). Level note: remainders and common multiples are P3 and P4; the child checks by listing and the word remainder is not used. G2 MULTI (EX-MULTI-1 pattern): 7 bags of 6 sweets, 12 given away, the rest shared among 5 friends: 6 each (verified: 42, 30, 6). G3 find one first: "5 books cost $20; how much do 3 books cost?" ($12).
+- **Go further (3).** G1 **Beyond (named): "Fair for Everyone".** A teacher wants a pile of cookies that can be shared with none left over whether 2, 3 or 4 children turn up: the smallest pile (more than 0) is 12; if 5 children might come as well it is 60 (verified, `L3.2`). Level note: common multiples are P4; the child lists the 4s table and checks the others, and the word "multiple" is not used. The earlier item (smallest number leaving 1 in groups of 3, 4 and 5) was the remainder-system type of the holiday Mr Lim sweets and was replaced (audit L7). G2 MULTI (EX-MULTI-1 pattern): 7 bags of 6 sweets, 12 given away, the rest shared among 5 friends: 6 each (verified: 42, 30, 6). G3 find one first: "5 books cost $20; how much do 3 books cost?" ($12).
 - **Holiday overlap: HIGH.** Holiday Lesson 3 did arrays with two multiplication and two division sentences, legs and wheels (all the "how many of each" puzzles), leftovers with boats and cupcake boxes, "numbers in two tables", and a 27-sweet leftover riddle (CRT). The term lesson is the division concept lesson; it must not reuse legs and wheels, boats, Mr Lim's sweets, or Ali's "every number from 4 to 30 makes an array".
 - **Numbers.** Dividends to 50; divisors 2, 3, 4, 5, 10; left over at Think harder only.
 - **Home materials.** 30 counters (buttons, beans or pasta, not sweets), five plates or cups.
@@ -152,7 +152,7 @@ Cold joining: yes. Safest to skip: Lesson 10 (a new context of ideas taught else
 - **Strand.** MOE P2 Fractions 1.1 to 1.3 (part of a whole, notation, compare unit and like fractions with denominators up to 12, p. 33). Equivalent fractions are P3 (p. 35): bars and folding only. Contest tags: perception and counting parts.
 - **Objective.** Tell equal from unequal parts, name halves, thirds, quarters, sixths, eighths; write the fraction shown; the same fraction in different shapes; shade or hatch parts; Think harder: how many more parts to shade; three like fractions that make 1 whole; Go further: equal parts of an L shape.
 - **Remember (6 min).** (1) Fold a strip in half and in half again (holiday Lesson 7 spiral). (2) Count equal parts in a rectangle drawn in 8 parts. (3) 4 quarters make a whole.
-- **Start here (6).** "Is it cut into equal parts? Circle Yes or No" (three pictures including a square cut in unequal strips); name the fraction shaded in a bar cut into 6, 8, 10 or 12 equal parts; shade or hatch 3 of 8 parts; "Which does not show one half shaded?" (papers); fold and shade a quarter of a square; a fraction fill-in "[n/d] of the pizza is left" (6 slices, 4 eaten).
+- **Start here (6).** "Is it cut into equal parts? Circle Yes or No" (three pictures including a square cut in unequal strips); name the fraction shaded in a bar cut into 6, 8, 10 or 12 equal parts; shade or hatch 3 of 8 parts; "Which does not show one half shaded?" (papers); fold and shade a quarter of a square; a fraction fill-in "[n/d] of the tray of fudge is left" (a tray of 8 equal squares, 3 eaten: 5/8, `L6.2`). The holiday pizza of 6 slices with 4 eaten (`p2` H7 core 6) is not reused (audit H1).
 - **Think harder (4).** **NR (plan):** LIST (three like fractions that make 1 whole), EXP (which picture is not a half or a third and why). (i) With denominator 8 and tops from 1 to 6, the sets of three different tops that sum to 8 are {1, 2, 5} and {1, 3, 4} (verified). (ii) 2 of 8 parts are shaded; how many more parts to shade so that 5/8 is shaded? 3. (iii) A quarter of a square shown as a rectangle and as a triangle (same area). (iv) Half is two quarters, shown by folding.
 - **Go further (3).** G1 **Beyond (named): "Quarter the L".** The L-shaped garden made of three 2 by 2 blocks (12 squares) is cut along grid lines into 4 equal parts of the same size and shape: there is exactly one way using L-shaped parts (verified; 7 ways if the parts may be any connected 3 squares). Level note: dissecting a shape into congruent copies of itself (rep-tiles) is beyond the syllabus. G2 EQ: shade parts so that 7/12 is shaded when 4 are already; G3 "Make a whole strip from three different kinds of pieces" (plan).
 - **Holiday overlap: HIGH.** Holiday Lesson 7 did fractions with bottoms to 12, comparing unit fractions, adding like fractions, bars of equal length, cutting 3 squares into 4 equal parts in different ways (the exact "different ways" item), two fractions with bottom 9 that make 1, three children sharing a cake of 10 with different pieces (tops 1,2,7; 1,3,6; 1,4,5; 2,3,5), halving a strip 3 times, and Siti's "bigger bottom number" claim. Avoid those; the term lesson is about equal parts in any shape and the notation, not fraction arithmetic. The three-fractions item uses denominator 8 (and Lesson 22 uses 12).
@@ -171,7 +171,7 @@ Cold joining: yes. Safest to skip: Lesson 10 (a new context of ideas taught else
 - **Objective.** Name the pieces when a rectangle is cut by one line; count sides and corners of pieces; rejoin pieces to make a new shape; Think harder: count the shapes of a figure into a table; Go further: tilted squares on a dot grid.
 - **Remember (6 min).** (1) Name square, rectangle, triangle, semicircle, quarter circle. (2) Count the squares in a 2 by 2 grid by size (5; holiday spiral). (3) Fold a square along a diagonal and name the pieces.
 - **Start here (6).** One line splits a 2 by 4 rectangle into two shapes and the child names them; sides and corners of the pieces; join two right triangles into a rectangle; copy a figure on a square grid; name the shapes that make a house; hatch all the triangles in it.
-- **Think harder (4).** **NR (plan):** DIAG (draw the cuts and count the pieces), TAB (count each shape in a figure into a table). (i) A table of how many triangles, squares and rectangles in a figure made of 5 pieces. (ii) Count the squares of all sizes in a 3 by 3 grid: 9 + 4 + 1 = 14 (verified; the holiday grids were 2 by 2, 4 by 3 and 5 by 5, so 3 by 3 is new). (iii) Draw 2 lines to cut a square into 4 triangles.
+- **Think harder (4).** **NR (plan):** DIAG (draw the cuts and count the pieces), TAB (count each shape in a figure into a table). (i) A table of how many triangles, squares and rectangles in a figure made of 5 pieces. (ii) Count the squares of all sizes in a 3 by 5 grid: 15 + 8 + 3 = 26 (verified, `L7.1`; the holiday grids were 2 by 2, 4 by 3 and 5 by 5 and Level 4 Lesson 9 uses 3 by 3, so 3 by 5 is new in every course). (iii) Draw 2 lines to cut a square into 4 triangles.
 - **Go further (3).** G1 **Beyond (named): "Tilted Squares".** On a 3 by 3 array of dots there are 6 squares (5 upright and 1 tilted); on a 4 by 4 array there are 20 (14 upright and 6 tilted); on a 5 by 5 array there are 50 (all verified by brute force). Level note: tilted squares are not a syllabus idea; children find them by looking for squares whose corners are all dots. G2 LIST: rectangles in a figure listed by size; G3 triangles in a figure with overlapping lines (new figure, not the holiday X or the 3-line triangle).
 - **Holiday overlap: HIGH.** Holiday Lesson 8 did squares of all sizes in 2 by 2, 4 by 3 and 5 by 5 grids (5, 20, 55), rectangles in 2 by 2 and a row of 3 (9, 6), triangles in a square with both diagonals (8) and a triangle with 3 lines (20), cube stacks, nets, and painted cubes. This lesson is composing and decomposing, with counting as a second visit on new figures only.
 - **Numbers.** Grids to 4 by 4; dot arrays to 5 by 5 at Go further.
@@ -190,7 +190,7 @@ Cold joining: yes. Safest to skip: Lesson 10 (a new context of ideas taught else
 - **Remember (6 min).** (1) Measure a pencil in cm on a ruler (P1 spiral). (2) Count in 50s and 100s along a strip. (3) 1 kg is 1000 g (informal).
 - **Start here (6).** Read a ruler where the object starts at 3; read a kitchen scale 0 to 1000 g labelled every 100; read a jug in litres; compare two readings (heavier, lighter, as heavy as); "Draw a line 8 cm long"; one scale where every other tick is labelled.
 - **Think harder (4).** **NR (plan):** DIAG (a balance: 3 melons weigh 12 kg, so 2 melons), CMP (how much heavier or more water, in two units that match). (i) Only the 0 and 100 g ticks are labelled on a scale with 4 ticks between: each tick is 20 g, so the pointer at the third tick is 60 g. (ii) 3 identical melons balance 12 kg: 2 melons weigh 8 kg (verified). (iii) 1 jug holds 3 cups; 4 jugs hold how many cups? (iv) Compare a mass in kg with one in g (convert one: informal).
-- **Go further (3).** G1 DIAG: a tank, jugs and bottles. G2 **Beyond (named): "Between the Ticks".** A scale marked every 50 g from 0 to 1000 g; the pointer sits halfway between 650 and 700; the mass is 675 g, so estimate to the nearest 25 g (verified arithmetic). Level note: reading between ticks and estimating is a measurement habit, taught as estimating only. G3 a pool fills with 3 buckets, a bucket holds 4 jugs, a jug holds 5 litres: 60 litres (verified); the holiday tank was 4 jugs of 3 bottles of 2 litres.
+- **Go further (3).** G1 DIAG: a tank, jugs and bottles. G2 **Beyond (named): "Between the Ticks".** A scale with a tick every 50 g from 0 to 1000 g; the pointer sits halfway between 650 and 700; the mass is 675 g, so estimate to the nearest 25 g (verified arithmetic). Level note: reading between ticks and estimating is a measurement habit, taught as estimating only. G3 a pool fills with 3 buckets, a bucket holds 4 jugs, a jug holds 5 litres: 60 litres (verified); the holiday tank was 4 jugs of 3 bottles of 2 litres.
 - **Holiday overlap: MEDIUM.** Holiday Lesson 9 did balance puzzles with fruit, jug pouring (2 and 7 litres), ribbons and cuts, and time. Read-the-scale is not in the holiday course; the balance item must not use the melon/apple/pomelo set or the cube/ball scale.
 - **Numbers.** Mass to 1 kg and to 10 kg; volume to 10 litres; ml appears once at Go further (papers from 2020).
 - **Home materials.** A cm ruler (assumed; owner decision for Level 1 was no printed ruler, see D14), a kitchen scale and a jug if there is one, a cup.
@@ -224,12 +224,12 @@ Cold joining: yes. Safest to skip: Lesson 10 (a new context of ideas taught else
 - **Strand.** Beyond MOE (SASMO fence-post and cuts, 5 problems; the word-problem book traps G2-Q26, Q89, Q21). School evidence: some (4 tests: rods apart, queue, odd numbers between).
 - **Objective.** Count posts and gaps along a line; find a queue position from the back; count the corners of a plot; Think harder: posts at equal gaps and queue positions; Go further: a circular track and a fence with a gate.
 - **Remember (6 min).** (1) Jumps along a number line from 20 to 50 in tens: how many stops, how many jumps. (2) Count the gaps between the 5 fingers of one hand (4). (3) A queue: you are 3rd; say your place from the back if there are 8.
-- **Start here (5, a shorter lesson body because of the Quest).** Jumps along a line (6 stops, 5 jumps); posts every 5 m along 20 m from 0 (5 posts, verified 20/5 + 1); a queue where Ali is 4th from the front of 15: 12th from the back (verified: 15 - 4 + 1); one picture of corners; "how many cuts make 4 pieces".
-- **Think harder (3).** **NR (plan):** DIAG (posts every 3 m from 0 to 21), LOG (queue positions). (i) Posts every 4 m along 32 m from 0 m: 9 posts (verified). (ii) Third from the back in a queue of 11 is 9th from the front. (iii) Count yourself: "7 children between the first and the last" means 9 children.
-- **Go further (3).** G1 **Beyond (named): "Circle of Posts".** On a circular track of 60 m with posts every 5 m there are 12 posts (verified; the gaps equal the posts on a circle, not one more). G2 CTX: a fence with a gate and posts both sides. G3 a ribbon with overlaps (second visit).
+- **Start here (5, a shorter lesson body because of the Quest).** Counting from a picture only; no gaps-and-posts reasoning (owner decision 6; audit H2): count the jumps a frog makes along a drawn line from 15 to 40 in fives (5) and the stops it makes (6); "Ali is 4th in the queue: how many children are in front of him" (3); point to Mei, 3rd from the front, in a picture of a queue; count the corners of a drawn plot; say the place of the child at the back of a queue of 8 (8th). Everything that needs the plus-one or minus-one idea moves to Think harder.
+- **Think harder (3).** **NR (plan):** DIAG (posts every 3 m from 0 to 21), LOG (queue positions). (i) (a) Posts every 5 m along a 20 m fence from 0 m: 5 posts; (b) posts every 4 m along 32 m from 0 m: 9 posts (verified, `L10.1`; gaps and posts moved here from Start here). (ii) (a) Ali is 4th from the front of a queue of 15: 12th from the back; (b) third from the back in a queue of 11 is 9th from the front. (iii) Count yourself: "7 children between the first and the last" means 9 children.
+- **Go further (3).** G1 **Beyond (named): "Circle of Posts".** On a circular track of 60 m with posts every 5 m there are 12 posts (verified; the gaps equal the posts on a circle, not one more). G2 CTX: a fence with a gate and posts both sides. G3 a ribbon of 36 cm cut into pieces of 9 cm: 3 cuts (verified, `L10.1`); a ribbon with overlaps (second visit).
 - **Holiday overlap: MEDIUM.** Holiday Lessons 9 and 10 did "rope cut into pieces (3 cuts)", "rope 30 m in 5 m pieces (6 pieces, 5 cuts)" and ribbons with overlaps. The term lesson's new ground is posts along a line, queue positions, corners and circles; cuts and pieces are a second visit with new lengths only.
 - **Numbers.** Lengths to 100 m; queues to 20.
-- **Home materials.** Ten counters or coins to act out posts and a strip of paper.
+- **Home materials.** Twelve counters or coins to act out posts and a strip of paper.
 - **Kit.** None (line mat printed). Cut 0.
 - **Figures.** `line_up` (exists), `number_line`, `grid` (corners), `objects`.
 - **Misconceptions.** Posts = gaps; counting yourself twice; forgetting the post at 0; circles with one more post.
@@ -270,7 +270,7 @@ Cold joining: yes. Safest to skip: Lesson 20 (a spiral with no new idea) then Le
 - **Start here (6).** Pair counters to decide odd or even for 1 to 20; hatch the 2s on a chart and say the last digits; odd or even for a number to 100 by the last digit; the number before and after; one picture with a left-over; a fair-share story with 2 people.
 - **Think harder (4).** **NR (plan):** EQ (give some to make two shares equal), EXP (always, sometimes, never), LOG (riddle with odd, even and between). (i) Ali has 27 and Ben 13; Ali gives Ben 7 and both have 20 (verified). (ii) "Odd + odd is even": always, sometimes or never, with three tests. (iii) How many odd numbers from 201 to 213, counting both ends? 7 (verified). (iv) A riddle: odd, between 40 and 50, digits add to 9: 45.
 - **Go further (3).** G1 **Beyond (named): "Odd Staircase".** 1 + 3 + 5 + 7 = 16 and 1 + 3 + 5 + 7 + 9 = 25: the sum of the first n odd numbers is n times n (verified for n = 4 and 5); explain with a staircase picture. Level note: square numbers are not in the syllabus; no formula is taught, the picture is. G2 EXP: why odd + odd is always even (two left-over singles pair up). G3 "odd x odd" test.
-- **Holiday overlap: NONE** (odd and even is not in the holiday course).
+- **Holiday overlap: LOW to MEDIUM** (audit M9). The holiday course has no odd and even lesson, but it argues parity in four places: Lesson 3 ("the total is always an even number" for hens and goats, and 21 as an odd leg count), Lesson 5 (the challenge "x 2 is always even, +1 is odd"), Lesson 1 (an odd-number riddle) and Lesson 4 ("every even place is blue"). Do not reuse the hens-and-goats leg totals, the "x 2 always even, +1 odd" machine, the odd-number riddle or the colour of every even place. The Think harder test of "odd + odd" is a second visit with new numbers and three tests; Lesson 29 and the Quest gate lean on it.
 - **Numbers.** Counters to 20; last-digit rule to 1000.
 - **Home materials.** 20 counters, two plates.
 - **Kit.** Number cards 1 to 20 (20 cards, cut 20) and a pairs mat (not cut). Contract: supplied 20, max used 20.
@@ -305,7 +305,7 @@ Cold joining: yes. Safest to skip: Lesson 20 (a spiral with no new idea) then Le
 - **Remember (6 min).** (1) Draw two bars and the gap for "Ali has 8, Mei has 3" (teach from nothing). (2) 3-digit add and subtract. (3) Read "more than" and "fewer than".
 - **Start here (6).** Draw the bar for one fact; fill in the blanks in a given model; find the total with part-whole; "how many more" with a compare model; pick the model that matches the story (papers: "Look at the model below"); complete and label a half-drawn model.
 - **Think harder (4).** **NR (plan):** CMP (one bar for a sum and a difference), DIAG (complete and label a half-drawn model). (i) Total 200 and difference 36: 118 and 82 (verified). (ii) Two bars before and after a transfer. (iii) Fill in the blanks of a model. (iv) Hint: "Draw a model."
-- **Go further (3).** G1 **Beyond (named): "Share the Gap".** Ali has 52 and Mei has 28; to make them equal Ali gives Mei 12, and both have 40 (verified); say why the gap of 24 is shared as 12. Level note: transfers with sum-and-difference are ordinary Book 2 school work (plan open question 7); here the named item is the picture of why half the gap moves. G2 CMP: three bars in a chain (more than, then fewer than; EX-CMP-2). G3 EQ: change a number and redraw.
+- **Go further (3).** G1 **Beyond (named): "Doubling Bars".** Ben has some stickers, Mei has twice as many as Ben and Ali has twice as many as Mei; together they have 70, so Ben has 10, Mei 20 and Ali 40 (verified, `L14.2`). Level note: "times as many" bars with a total are P3 and P4 work; the child draws seven equal cells and finds the size of one cell. G2 CMP: three bars in a chain (more than, then fewer than; EX-CMP-2). G3 EQ: Ali has 52 and Mei has 28; to make them equal Ali gives Mei 12 and both have 40 (verified, `L14.3`); say why the gap of 24 is shared as 12 (this was the plan's beyond item "Share the Gap"; it is ordinary Book 2 school work, so it is now an ordinary Go further item, audit L5).
 - **Holiday overlap: HIGH.** Holiday Lessons 5 and 6 did bar models for before-and-after, three-children-with-extras, pen/pencil sum-and-difference ($11, $3 more) and three friends sharing a $15 present with $2 steps. This is not new ground in content; the term lesson is the bar as a general tool. Avoid $11/$3, the $15 present, the 40-marbles trio and the 42-stickers trio.
 - **Numbers.** Totals to 1000; bars of at most 10 cells in drawings.
 - **Home materials.** Paper strips, squared paper.
@@ -357,8 +357,8 @@ Cold joining: yes. Safest to skip: Lesson 20 (a spiral with no new idea) then Le
 - **Strand.** Beyond MOE (counting ways; SASMO counting ways, and worst case 2 problems, a real gap). Papers: some (outfits 3 x 4, coin combos, digit cards).
 - **Objective.** List all outfits from two choices; use a table; Think harder: act out "how many must I take to be sure" with a counter bag; Go further: three colours and a larger case without listing.
 - **Remember (6 min).** (1) List every pair from {A, B, C}. (2) Count the cells of a 3 by 4 table. (3) Skip count in 5s.
-- **Start here (6).** List 6 outfits from 2 shirts and 3 shorts; a table of outfits; "how many ways to choose a drink and a snack"; list the coins that make 30¢ with 10¢ and 20¢ (new frame: order by 20¢ count); one picture list; check a list for a missing way.
-- **Think harder (4).** **NR (plan):** WAYS (outfits and two-stage choices), LIST (pairs from a list with a given total). (i) 3 shirts and 4 shorts make 12 outfits (verified). (ii) Pairs from a list that add to 100. (iii) A bag with 2 red and 3 blue counters: how many must I take to be sure of 2 of the same colour? 3. (iv) Hint: "Make a table."
+- **Start here (6).** Read, do not build (making a complete list is a non-routine move and sits at Think harder; owner decision 6, audit H2): read one outfit from a finished table of 2 shirts and 3 shorts; count the cells of that table (6); join each shirt to each pair of shorts in a drawn picture and count the lines; complete one row of a part-filled table of coins that make 30¢ ("one 20¢ and ___ 10¢"); read a tally of how many children chose each snack; say how many outfits a picture list shows.
+- **Think harder (4).** **NR (plan):** WAYS (outfits and two-stage choices), LIST (pairs from a list with a given total). (i) The child lists every outfit from 3 shirts and 4 shorts unaided: 12 outfits (verified, `L17.1`); and every way to make 30¢ from 10¢ and 20¢ coins: 2 ways (`L17.4`). (ii) Pairs from a list that add to 100. (iii) A bag with 2 red and 3 blue counters: how many must I take to be sure of 2 of the same colour? 3. (iv) Hint: "Make a table."
 - **Go further (3).** G1 **Beyond (named): "Be Sure".** A bag holds 5 red, 4 blue and 3 green counters. To be sure of 3 of one colour you must take 7 (worst case 2 + 2 + 2 + 1; verified); to be sure of 2 of one colour from 3 colours: 4 (verified). Level note: the pigeonhole idea is contest-only. G2 WAYS: every way to pay exactly $17 with $2 and $5 notes: 2 ways (one $5 and six $2; three $5 and one $2; verified). G3 how many for a larger case without listing.
 - **Holiday overlap: MEDIUM.** Holiday Lessons 1, 3, 6 listed digit-card numbers, hens and goats, and ways to pay ($10 with $5, $2, $1: 10 ways). Avoid those frames; outfits and worst case are new.
 - **Numbers.** Up to 4 by 4 products; counts to 12.
@@ -399,7 +399,7 @@ Cold joining: yes. Safest to skip: Lesson 20 (a spiral with no new idea) then Le
 - **Holiday overlap: LOW.** Holiday Lesson 5 had Ben and Ali "5 marbles" and three boxes "30 pens"; transfers were a backwards item. Avoid those numbers.
 - **Numbers.** Totals to 100.
 - **Home materials.** Three cups, 60 beans or buttons.
-- **Kit.** Four hat cards R, R, B, B marked R and B in letters and a pattern (cut 4). Cut 4.
+- **Kit.** Four hat cards R, R, B, B labelled R and B in letters and a pattern (cut 4). Cut 4.
 - **Figures.** `round_table`, `table`, `bar_model` (transfer).
 - **Misconceptions.** Updating one child's count and not the other; doubling the transfer; mixing "I know" with "I guessed".
 - **Needs.** none new.
@@ -510,7 +510,7 @@ Cold joining: yes (a June holiday graduate enters at Lesson 21). Safest to skip:
 - **Remember (6 min).** (1) Name a cube, a ball and a tin. (2) Count the faces of a box. (3) Count the cubes in a stack of 2 layers.
 - **Start here (6).** Sort pictures of solids; "How many flat surfaces does it have?"; "I am a solid" with two clues; name the solid a tin of beans looks like; the top view of a stack; count the cubes in a stack.
 - **Think harder (4).** **NR (plan):** LOG (I am a solid: clues about faces and rolling), TAB (a table of solids and their faces). (i) A table of faces. (ii) The top view of a stack with numbers. (iii) A room-corner stack: count the cubes seen from two walls and the floor. (iv) Which solids can roll, and why (a curved surface).
-- **Go further (3).** G1 **Beyond (named): "Most and Fewest".** A stack on a 3 by 3 base has a front view of heights 3, 2, 1 and a side view of heights 3, 1, 2: at least 6 cubes and at most 14 (verified, 275 possible stacks). Level note: views are a P4 idea. G2 LIST: every solid that fits the clues. G3 build from two views.
+- **Go further (3).** G1 **Beyond (named): "Most and Fewest".** A stack on a 3 by 3 base has a front view of heights 1, 1, 3 and a side view of heights 3, 2, 1 (Level 4 Lesson 27 and Level 5 Lesson 11 use other views and bases; audit M3): at least 7 cubes and at most 12 (verified, `L25.1`: 89 possible stacks). Level note: views are a P4 idea. G2 LIST: every solid that fits the clues. G3 build from two views.
 - **Holiday overlap: HIGH.** Holiday Lesson 8 did cube stacks by layers (19, 16, 8, 20), the pyramid of 30, painted-cube sorting, nets and naming solids. Avoid the layered counts; the term lesson is names and views.
 - **Numbers.** Bases to 3 by 3, heights to 3 (Go further to 4).
 - **Home materials.** 14 same-size blocks or boxes (fallback: drawn stacks); a tin, a ball, a box.
@@ -659,7 +659,7 @@ Cold joining: yes. Safest to skip: Lesson 40 (no new content; make it up recorde
 - **Strand.** MOE P2 Fractions 1.1, 2.1; fraction of a set is P4 (p. 37): Go further only. Papers: strong ("quarters in 3 wholes", pizza left).
 - **Objective.** Fold and cut halves and quarters; fraction of a bar; half of an amount; Go further: part of a pile.
 - **Remember (6 min).** (1) Fold a strip in half. (2) 4 quarters make 1. (3) Half of 8.
-- **Start here (6).** Fold and cut; halves and quarters of a bar; the pizza left; quarters in 3 wholes (12); half of a number; shade a bar.
+- **Start here (6).** Fold and cut; halves and quarters of a bar; the part of a loaf left (not the pizza of the holiday course); quarters in 3 wholes (12); half of a number; shade a bar.
 - **Think harder (4).** **NR (plan):** CTX (sharing with friends and cousins: the sharer counts), EQ (make three shares equal). (i) A cake shared among Mei and 3 friends: quarters. (ii) Three boxes with 15, 9 and 6 sweets are made equal: 10 each, so the first box gives away 5 (verified: 30 in all). (iii) Quarters in 3 wholes: 12. (iv) Half of a half.
 - **Go further (3).** G1 **Beyond (named): "Half Then a Third".** Ali spends half of $48, then a third of what is left; he has $16 left (verified). Level note: fractions of an amount are P4. G2 CMP: Mei eats half of a cake and Ali a quarter of the same cake; a quarter is left (verified). G3 2/3 of 24 is 16 (verified).
 - **Holiday overlap: MEDIUM.** Holiday Lesson 7 did the pizza and cake. Avoid cutting 3 squares in 4 ways (a Lesson 6 holiday item).
@@ -750,7 +750,7 @@ Cold joining: yes. Safest to skip: Lesson 40 (no new content; make it up recorde
 - **Objective.** Add a question to a picture; change numbers to change the answer; write a puzzle with one answer.
 - **Remember (6 min).** (1) A story from a number sentence. (2) The three words that signal an operation. (3) Check a puzzle by listing.
 - **Start here (6).** Add a question to a picture; change one number; a question that needs two steps.
-- **Think harder (4).** **NR (plan):** CMP (change the numbers so the answer changes). (i) Change one number in a story so that the answer changes from 12 to 15. (ii) Choose the questions that can be answered from the picture graph (a question that cannot is marked). (iii) Write a story for 7 x 4. (iv) Hint: "Check by listing."
+- **Think harder (4).** **NR (plan):** CMP (change the numbers so the answer changes). (i) Change one number in a story so that the answer changes from 12 to 15. (ii) Choose the questions that can be answered from the picture graph (a question that cannot is crossed out). (iii) Write a story for 7 x 4. (iv) Hint: "Check by listing."
 - **Go further (3).** G1 **Beyond (named): "Puzzle Doctor".** Two numbers add to 15 and differ by 4: impossible, since a sum and a difference must both be odd or both even (verified); fix the puzzle by changing the difference to 3 (answer 6 and 9; verified). G2 CHAL: write a graph problem from a picture, with a check. G3 MULTI: pose a two-step problem whose answer is 24 (the author's key checks the child's example by hand).
 - **Holiday overlap: LOW.**
 - **Numbers.** Mixed.
@@ -817,7 +817,7 @@ Cold joining: yes. Safest to skip: Lesson 40 (no new content; make it up recorde
 | 9 | Story Detectives | High | none | A | No |
 | 10 | Posts, Gaps and Queues | Med | Quest (section 6) | D | Yes, safest of T1 (Quest sits here) |
 | 11 | Graphs That Talk | Med | M9 | C | No |
-| 12 | Odd, Even, Fair | None | none (number cards) | A | Yes |
+| 12 | Odd, Even, Fair | Low | none (number cards) | A | Yes |
 | 13 | Jumps, Gaps and Columns | High | M4, M5 | B | No |
 | 14 | Bar Model Stories | High | none (KG) | A | No |
 | 15 | Clock Detectives | High | KH, time fields (exist) | A | No |
@@ -861,6 +861,8 @@ Codes: **M** shared tool, figure or runner item; **K** kit page; hours are templ
 
 **M15. Validator and authoring updates (about 6 h).** Level 2 banned and allowed lists: the words remainder, equivalent, decimal point and letters for unknowns are banned on child and parent pages; "Hint:" stems allowed at Think harder only; a required tutor-only field `nonroutine: [{type, tier, item_id}]` (type from the 14 codes, tier T or G, never Start here) with the `contest_moves` plain-words line; `beyond` required (never Start here); a **holiday-copy check**: extract the 237 holiday question-bank items and the workbook questions to a text file at build time and warn on any 5-word overlap with a term question (the Level 1 7-word check already runs against the books and the catalogue; the holiday program is not in its source list); the `÷`, `×` and `¢` glyphs survive in every PDF; question forms for the P2 paper style ("Choose the correct answer and write its number in the brackets", options (1) to (4)); kit contract and `next_materials` checks as in Level 1.
 
+**Numbering note.** There is no M16: the numbering follows an earlier draft in which two items were merged into M15; Levels 3 to 5 cite M1, M2, M3, M15 and M17 to M21 only.
+
 **M17. Quest adaptation (about 3 h).** `b_quest.py` already takes gates naming one lesson, a list or "beyond", and `scope: "year"`; Level 2 needs four Quest definitions (section 6) and figures in gates (fractions, scales, solids), which depend on M3, M7, M8.
 
 **M18. Black-and-white compliance (about 4 h).** Define hatch patterns for fraction shading, picture-graph rows, balance objects, tiles, bar-model segments and mirror pictures so nothing depends on colour (owner decision of 23 Oct); run `print/check_bw.py` on every Level 2 workbook, key and home sheet; every "colour" instruction in the lessons becomes "shade or hatch"; a coloured-pencil note on the kit pages. Stylised money and clock hands already differ by size, label and shape.
@@ -895,7 +897,10 @@ The new figures build on the existing ones in `figs2.py` and `figs3.py` (objects
 | Code | Kit | Lessons | Hours |
 |---|---|---|---|
 | KA | `place_value_cards`: arrow cards, ones, tens, hundreds (27); thousands (9) | 1, 2, 13, 34 | 3 |
-| KD | `play_money` (reuse; confirm the $100 note and 5¢ to $1 coins; PLAY MONEY mark) | 5, 28, 40 | 1 |
+| KD | `play_money` (reuse through the `counts` override; PLAY MONEY mark) | 5, 28, 40 | 1 |
+
+The Level 1 default `play_money` page has no $1 coin and carries 5 notes of $2 and 4 of $5; the Level 2 page (coins 5¢ x 4, 10¢ x 6, 20¢ x 4, 50¢ x 4, $1 x 4; notes $2 x 3, $5 x 3, $10 x 3, $50 x 1) is reachable only through `counts`. `figs3.NOTE_SIZE` already holds the $100 note (audit M8).
+
 | KE | `fraction_wall` plus folding strips and squares | 6, 22, 33 | 3 |
 | KF | `dissection_pieces` (4 L-trominoes, 4 dominoes, 4 unit squares) | 7 | 2 |
 | KG | `unit_strips` (exists) | 14, 27 | 0.5 |
@@ -907,6 +912,8 @@ The new figures build on the existing ones in `figs2.py` and `figs3.py` (objects
 ### 3.4 Totals
 
 M1 6 + M2 8 + M3 10 + M4 6 + M5 5 + M6 6 + M7 8 + M8 9 + M9 5 + M10 6 + M11 4 + M12 4 + M13 3 + M14 8 + M15 6 + kits 15 + M17 3 + M18 4 + M19 2 + M20 4 + M21 3 = **125 hours** if everything is built. **Deferrable without blocking a lesson (about 16 hours):** M11 (Lesson 39 can use drawn sticks), the hexagon grid inside M10 (2), M12 (Lesson 26 can use `panel` and `table`, 3), the net part of M8 (3; Lesson 39 G1 can show nets as `grid` polygons), M20 (4), and the `cube_stack` room-corner mode (Lesson 25 can use views). That leaves about **109 hours**.
+
+**Shared items (audit M7).** 88 of the 125 hours (M1 6, M2 8, M3 10, M4 6, M5 5, M6 6, M7 8, M8 9, M14 8, M15 6, M17 3, M18 4, M19 2, M20 4, M21 3) are items that the Level 3, 4 and 5 pre-flights list again (column, fraction renderer, balance, dial and jug, solids, validator, Quest, books, rewind, authoring briefs). They are charged here, to the first level to be built, and netted out of the other three documents. The Level 2-only items (M9 5, M10 6, M11 4, M12 4, M13 3, kits 15) are 37 hours. Programme total for Levels 2 to 5: 125 here, about 91 for Level 3, 136 for Level 4 (already net of M1, M2, M3, M5, M8, M15) and about 93 for Level 5 (84 with deferrals), so **about 445 hours (about 388 with deferrals)**, not the 604 (501) that adding the four headline figures gives.
 
 ### 3.5 What the engine already does for Level 2 (do not rebuild)
 
@@ -933,7 +940,7 @@ The Level 1 cut-out audit found two Reworks (strips and shape cards) because pie
 | 12 | number cards 1 to 20 + pairs mat (mat not cut) | 20 | 20 | 20 |  |
 | 13 | reuse KA | 0 | 9 | 0 |  |
 | 14 | KG unit strips (8 strips of 10 cells) | 8 | 6 | 8 | keep for 27 |
-| 15 | KH clock kit (2 faces, 3 + 3 hands) | 6 | 4 | 6 | keep for 35, 39 |
+| 15 | KH clock kit (2 faces not cut, 3 + 3 hands) | 6 hands | 4 hands and 2 faces | 6 | keep for 35, 39 |
 | 16 | array mat 5 by 8 (printed, not cut) | 1 | 1 | 0 |  |
 | 17 | outfit cards (3 shirts, 4 shorts) | 7 | 7 | 7 |  |
 | 18 | number tiles 1 to 8 + weight cards P, Q, R, S | 12 | 12 | 12 | keep tiles for 20 |
@@ -982,7 +989,7 @@ The Level 1 audits found 7 of 9 "pencil and paper only" lines false, and a misse
 | 8 to 9 | Paper strips for bars; counters | |  |
 | 9 to 10 | 12 counters or coins for posts; a quest partner; the Quest Log stays closed in Book 2 |  | Same rule as Level 1 Lesson 19 to 20: the Quest Log is never opened before the lesson |
 | 10 to 11 (term and book) | Book 3; pencil; a tally from a home survey is optional; nothing to cut | The arrow cards (Lesson 13), the play money | Term break; new book |
-| 11 to 12 | The 20 number cards cut; two plates |  |  |
+| 11 to 12 | The 20 number cards cut; two plates; 20 counters |  |  |
 | 12 to 13 | Nothing new; squared paper | The arrow cards from Lesson 1 (must be found) | Likeliest lost kit of Term 2 |
 | 13 to 14 | 8 unit strips cut (a grown-up cuts a week before); paper strips |  |  |
 | 14 to 15 | The clock kit cut (2 faces are not cut; 6 hands cut); a real clock if there is one | The unit strips (Lesson 27) | Hands are loose, no fastener |
@@ -1013,11 +1020,13 @@ The Level 1 audits found 7 of 9 "pencil and paper only" lines false, and a misse
 | 39 to 40 | The Quest Log stays closed in Book 8; a quest partner; a favourite page from the year; plain paper |  |  |
 | 40 to next | The tutor sends the Level 3 or next-term placement note; no list is printed here |  | Not a lesson-file concern |
 
+**Kit kept across a term break (flagged, as in Level 4; audit L2).** The array mat of Lesson 16 (Term 2) is needed again in Lesson 32 (Term 4); the fraction wall and folding strips of Lesson 6 (Term 1) return in Lessons 22 and 33 (Terms 3 and 4); the play money of Lesson 5 returns in Lessons 28 and 40; the arrow cards of Lesson 1 return in Lesson 34. The hand-offs 10 to 11, 20 to 21 and 30 to 31 therefore repeat the "keep from before" list, and the first lesson of each later term repeats it on its parent page.
+
 ## 6. Mi's Challenge Quest in lessons 10, 20, 30 and 40
 
 The Level 1 Quest (Lesson 20) is the model: 20 minutes at minutes 35 to 55 straight after the brain break; 8 short gates and one optional secret cave; a quest partner (a sibling, a grown-up or a friend; the tutor pairs a solo child with the tutor's example); private paper; no score, no mark, no ranking, no visible timer, no "test" or "exam" on any child or parent page; the tutor keeps private notes only (for one parent line and next-term group advice); the Quest is never the part that shrinks in a slow class; the cave is the only place for a puzzle the children have not met; a child may pass any gate. Timing: Opening 2, Remember 6, Sneak-peek 4, Explore 10, Mini-lesson 9, Break 4, Quest 20, Workbook 25 (Start here only, about 16 minutes for a middle child; pages 3 to 5 for home), Talk 4, Look-back 2, Flex 4. The exit ticket is an optional item at home. Three files per Quest: `LNN_Quest_Log.pdf` (3 pages, in Books 2, 4, 6 and 8), `LNN_Quest_Tutor_Notes.pdf` (key book), `LNN_Quest_Parent_Note.pdf` (home pack). Recording is paused for the Quest and the make-up child does the Quest before watching the recording (`rec_pause_say`).
 
-Every lesson of the term is visited by exactly one gate; two gates per Quest cover two lessons each (one short item from each, written as parts (a) and (b)), so ten lessons fit eight gates. The pairing differs by term as the tables show (Term 1: lessons 1 and 2, 8 and 9; Term 2: 11 and 12, 18 and 19; Term 3: 21 and 22, 27 and 28; Term 4: 31 and 32, 37 and 38). Every gate item is at Start here level for its own lesson; every answer below was recomputed. The Quest Log may carry figures (clock, fraction, scale) once M3, M7 and M8 exist; until then the gate states the picture in words and the author checks `b_quest.py` draws it.
+Every lesson of the term is visited by exactly one gate; two gates per Quest cover two lessons each (one short item from each, written as parts (a) and (b)), so ten lessons fit eight gates. The pairing differs by term as the tables show (Term 1: lessons 1 and 2, 8 and 9; Term 2: 11 and 12, 18 and 19; Term 3: 21 and 22, 27 and 28; Term 4: 31 and 32, 37 and 38). Every gate item is at Start here level for its own lesson (no gaps and posts, chance words, pairing sums or other contest moves; owner decision 6; audit H2); every answer below was recomputed. Gate numbers differ from the numbers in the lesson's Remember, Start here and Think harder (audit M1), and gate wording avoids the Quest ban words "marked", "score", "out of" and "grade" (audit M2). The Quest Log may carry figures (clock, fraction, scale) once M3, M7 and M8 exist; until then the gate states the picture in words and the author checks `b_quest.py` draws it.
 
 **Gates for the Term 1 Quest (Lesson 10).**
 
@@ -1025,12 +1034,12 @@ Every lesson of the term is visited by exactly one gate; two gates per Quest cov
 |---|---|---|---|
 | 1 | 1, 2 | Write 508 in words (choose (1) to (4)); 76 + 49 (125) | none |
 | 2 | 3 | Ben shares 20 stickers equally with his 4 cousins: how many does each person get (4: 5 people) | `groups` |
-| 3 | 4 | Counting in 5s from 5: will 60 be said (yes); will 62 (no) | `hundred` |
-| 4 | 5 | A pen costs 240¢ and a ruler 85¢: total in cents 325¢, write $3.25; change from $5 is $1.75 | `money` |
-| 5 | 6 | A bar is cut into 8 equal parts and 5 are hatched: write the fraction (5/8); hatch 2 more (7/8) | `fraction` |
+| 3 | 4 | Counting in 10s from 4: will 74 be said (yes); will 80 (no) | `hundred` |
+| 4 | 5 | A pen costs 160¢ and a ruler 95¢: total in cents 255¢, write $2.55; change from $5 is $2.45 | `money` |
+| 5 | 6 | A bar is cut into 6 equal parts and 4 are hatched: write the fraction (4/6); hatch 1 more (5/6) | `fraction` |
 | 6 | 7 | Cut a 2 by 3 rectangle into two equal parts along grid lines: how many squares in each (3) | `grid` |
-| 7 | 8, 9 | A scale marked every 100 g to 1000 g, the pointer at the 7th tick (700 g); Ali has 250 stickers and Mei has 80 more than Ali (330) | `scale_dial` |
-| 8 | 10 | Posts 5 m apart along a 20 m fence from 0 m: how many posts (5) | `number_line` |
+| 7 | 8, 9 | A scale with a tick every 50 g, the pointer at the 6th tick after 0 (300 g); Ali has 250 stickers and Mei has 80 more than Ali (330) | `scale_dial` |
+| 8 | 10 | Siti is 6th in a line: how many children are in front of her (5) | `line_up` |
 | Cave | beyond | I am a number from 400 to 499. My ones digit is 3 more than my hundreds digit and my digits add up to 13 (427; unique, verified) | none |
 
 **Gates for the Term 2 Quest (Lesson 20).**
@@ -1042,7 +1051,7 @@ Every lesson of the term is visited by exactly one gate; two gates per Quest cov
 | 3 | 14 | Ali has 45 stickers and Mei has 28 more: draw the bars and find Mei's (73) | `bar_model` |
 | 4 | 15 | A film starts at 5:35 pm and lasts 1 h 50 min: when does it end (7:25 pm; verified) | `clock` |
 | 5 | 16 | True or false: 5 groups of 3 is the same as 3 groups of 5 (true); 4 x 7 is double 2 x 7 (28) | `array` |
-| 6 | 17 | 2 drinks and 4 snacks: how many different meals of one drink and one snack (8) | `table` |
+| 6 | 17 | A finished table has 4 rows of shirts and 2 columns of shorts: how many cells, so how many outfits (8) | `table` |
 | 7 | 18, 19 | Box A is heavier than B and C is lighter than B: the lightest (C); Ali gives Mei 6 marbles and now both have 20: Ali had 26, Mei 14 | `table`, `bar_model` |
 | 8 | 20 | Pair the numbers to make tens: 16 + 4 + 13 + 7 + 8 + 2 (50) | none |
 | Cave | beyond | Seven children each have an odd number of sweets: is the total odd or even (odd; seven odd numbers add to an odd number, checked for random sets) | none |
@@ -1056,24 +1065,24 @@ Every lesson of the term is visited by exactly one gate; two gates per Quest cov
 | 3 | 24 | Which is about right for the mass of a pencil case: 5 g, 500 g or 50 kg (500 g) | `scale_dial` |
 | 4 | 25 | A ball is which solid (sphere); how many faces does a cuboid have (6) | `solid` |
 | 5 | 26 | Circle, triangle, triangle repeated: the 14th shape (triangle; 14 is 4 laps of 3 and 2 more) | `pattern_row` |
-| 6 | 27, 28 | Siti has 60 stamps and Ali has twice as many: together 180; 5 books cost $30, so 2 books cost $12 | `bar_model` |
+| 6 | 27, 28 | Siti has 60 stamps and Ali has 25 fewer: together 95; 6 pens cost $30, so 2 pens cost $10 | `bar_model` |
 | 7 | 29 | Always, sometimes or never: even + even is even (always) | none |
 | 8 | 30 | The robot faces north: forward 2, turn right, forward 3: it ends 2 squares north and 3 squares east | `grid` |
-| Cave | beyond | Mei is 8 and Dad is 38: in how many years will their ages total 66 (10; the total is 46 now and grows by 2 a year) | none |
+| Cave | beyond | Ben is 7 and his aunt is 31: in how many years will their ages total 62 (12; the total is 38 now and grows by 2 a year; `QC.5`) | none |
 
 **Gates for the Year Quest (Lesson 40; `scope: "year"`).**
 
 | Gate | Lessons | Item (answer) | Figure |
 |---|---|---|---|
-| 1 | 31, 32 | A spinner has 4 equal parts, 3 red and 1 blue: is blue likely, unlikely or certain (unlikely); 4 x 6 (24) | `spinner` |
+| 1 | 31, 32 | A tally of 10 coin tosses shows 6 heads and 4 tails: which came most (heads) and by how many (2); 8 x 5 (40) | `table` |
 | 2 | 33 | A bar of 8 equal parts: hatch a quarter (2 parts) | `fraction` |
 | 3 | 34 | How many hundreds make 1000 (10) | `place_value` |
 | 4 | 35 | Today is Wednesday: what day is it 12 days later (Monday; verified) | `calendar` |
 | 5 | 36 | A counter starts at A and moves 2 right and 1 up: which square (the author sets the grid) | `grid` |
 | 6 | 37, 38 | 45 + 38 = 73: right or wrong (wrong; 83); write one question for a picture graph | `picture_graph` |
 | 7 | 39 | Which capital letter looks the same in a mirror held beside it: A, B, C or D (A) | none |
-| 8 | 40 | 3 boxes with 4 pens in each box and 5 loose pens: how many pens in all (17) | none |
-| Cave | beyond | The largest number made with exactly 8 matchsticks (1111; verified: 7111 uses 9) | `matchstick` |
+| 8 | 40 | 4 bags with 3 pens in each bag and 6 loose pens: how many pens in all (18) | none |
+| Cave | beyond | The largest number made with exactly 15 matchsticks (7111111; verified, `L39.2`: a 7 costs 3 sticks and each 1 costs 2; Lesson 39 used 11 sticks) | `matchstick` |
 
 Quest rules for authors: wording from `BAN_FAMILY` in `b_quest.py`; "pass is always allowed"; the paired gates are two-part gates (a, b), so the Quest Log stays at 8 gates; the cave never repeats a lesson item; Lessons 10, 20, 30 and 40 each lose 20 minutes, so Explore and Mini-lesson are shortened to 10 and 9 and the Start here workbook becomes 25 minutes (5 Start here questions, 3 Think harder); the Quest and the Look-back never both run live in a slow class (Look-back is dropped first, then the optional slide, never the Quest); a child who joins at Lesson 10, 20, 30 or 40 has not met earlier gates, so every gate is Start here level for its own lesson and "pass" is always allowed (Level 1 Lesson 20 wording).
 
@@ -1134,6 +1143,7 @@ Read from `TERM_WIDE_AUDIT`, `CUTOUT_AUDIT`, `FINAL_AUDIT_T1`, `FINAL_AUDIT_T2` 
 21. **New at Level 2: the holiday overlap** (section 13). Run the holiday-copy check (M15) before the audit, not after.
 22. **New at Level 2: scope of notation.** Fractions stacked (M2); $ and ¢ both; no decimal addition before Go further; no "remainder", "equivalent", "decimal point", "average", "ratio" on child pages.
 23. **New at Level 2: uniqueness claims.** Any "exactly one answer" or "exactly N ways" statement in a key must be checked by brute force in `verify/lNN_checks.py` (several in this document: 5 ways to make 110¢ with 7 coins, 7 sets of three tops that sum to 12, 11 nets of a cube, 1 ring).
+24. **New at Level 2: classic puzzles are not ours.** The 495 trick (Kaprekar's routine), casting out nines, the hat puzzles, the pigeonhole worst case, route counting and the number ring are well-known ideas; the items use new numbers and settings, but the tutor guide says "a well-known puzzle" where that is true and never "we invented" (audit L6).
 
 
 ## 9. Risks
@@ -1156,7 +1166,7 @@ Read from `TERM_WIDE_AUDIT`, `CUTOUT_AUDIT`, `FINAL_AUDIT_T1`, `FINAL_AUDIT_T2` 
 16. **Parallel agents on shared files.** Same rule as Level 1: only the template owner edits `figs*.py`, `validate.py`, `common.py`, `b_*.py`; lesson agents write only their own files.
 17. **Authoring documents are Level 1 specific.** `AUTHORING.md` and the lesson briefs name Level 1; M21.
 18. **Level 1 Term 4 is still being written** by other agents; Level 2 reuses the same tools, so any Level 1 Term 4 tool change (a new figure) lands in the same files. Coordinate through the template owner and rebase Level 2 template work onto it.
-19. **The 90-minute slot problem is not a Level 2 matter but it blocks the launch.** The 2027 grid has 75-minute slots; the owner said 90 minutes and the slots must be recomputed (owner decisions of 23 Oct). A 7-to-9-year-old after school for 90 minutes is longer than a 6-year-old's: the break is 4 minutes; consider 5 for Level 2 (D17).
+19. **The 90-minute slots are derived and no longer block the launch (audit M5).** `docs/schedule/term_2027_t1_availability.md` section 7 holds the 90-minute grid with a 15-minute buffer before and after every other commitment (8 slots; the draft default for Level 2 is Sunday 3:45 to 5:15 pm); the 75-minute grid of the earlier sections is superseded. The owner still chooses the slot (D26). A 7-to-9-year-old after school for 90 minutes is longer than a 6-year-old's: the break is 4 minutes; consider 5 for Level 2 (D17).
 
 
 ## 10. Decisions the owner must make (defaults I chose are marked [Default])
@@ -1187,6 +1197,7 @@ None is irreversible. Changing a default after the build costs time, as noted.
 - **D22. Mi poses.** [Default] Use the current poses in the same places as Level 1; the owner supplies more poses later (decision of 23 Oct).
 - **D23. Who builds and when.** [Default] After Level 1 Term 4 passes its fix pass (the shared tools settle), build M1 and the tool items, then Term 1 first (holiday graduates start there), then Terms 2, 3 and 4 as in section 11. Changing the order costs rework of figures only.
 - **D24. Term price and start dates.** Not decided in `owner_decisions.md` (the website still shows S$65 a lesson); nothing in Level 2 depends on it except the payment note and prorating.
+- **D26. Weekly slot.** [Default] Sunday 3:45 to 5:15 pm, the Level 2 default of `docs/schedule/term_2027_t1_availability.md` section 7 (the 90-minute grid, 15-minute buffers). Lessons do not depend on it; the owner changes it there.
 - **D25. Level 2 books on the website shop.** Not part of this document; the extension workbook (Level 2) is a separate product built from the holiday question types and must not reuse term items (section 13).
 
 
@@ -1264,7 +1275,9 @@ Per-lesson figures include write (data, checks, build, view every page), wording
 | | **Term 4** | | | | | **73.6** | |
 | | **Year** | | | | | **299.3** | plus about 30 for four term-wide second-round audits (4 each), the holiday-overlap pass (6) and the 40-lesson consistency sweep (8): about **330** |
 
-Template engineering (section 3): **125 hours** if everything is built, about **109** with the deferrals. Not in these numbers: the tutor trials (one per term and a cold-joiner trial), the legal check on play money (D15), the owner's re-supply of the 2019 and 2021 papers (D21), and the Level 1 Term 4 tool changes that Level 2 must absorb.
+Estimate basis (audit M7): the 299.3 hours average 7.5 hours a lesson, below the 8.6 hours a lesson of Level 1 Terms 3 and 4 (172 hours for 20 lessons, the only data point); at the Level 1 rate the 40 lessons would be about 344 hours, so treat 299 to 344 as the range. The Quest lessons are budgeted at 11.3 to 12.0 hours; the Level 1 Quest lessons took 12.5 to 13.5. Nothing here was measured.
+
+Template engineering (section 3): **125 hours** if everything is built, about **109** with the deferrals; 88 of those hours are shared with Levels 3 to 5 (section 3.4). Not in these numbers: the tutor trials (one per term and a cold-joiner trial), the legal check on play money (D15), the owner's re-supply of the 2019 and 2021 papers (D21), and the Level 1 Term 4 tool changes that Level 2 must absorb.
 
 **Cost to the owner in practical terms.** About 330 plus 109 to 125, so 440 to 455 agent-hours. At the Level 1 pace (eight to ten writing agents and three engineers in parallel) that is about 8 to 10 working days from the start of Sprint A to four audited terms, of which about 1.5 days is template engineering before the first Wave B lesson can be built. If template work is done serially before any lesson starts, add about 1.5 days. Printing is unchanged in kind from Level 1: eight 5-lesson books of about 36 to 40 pages, four Quest Logs, and 48 to 81 pieces a term for a grown-up to cut.
 
@@ -1277,7 +1290,7 @@ Template engineering (section 3): **125 hours** if everything is built, about **
 - MOE placements come from `docs/moe/syllabus_by_level.md` (P2 pp. 33 to 34), not re-read against the PDF; the plan itself says the new Term 1 lessons were not re-read page by page (plan, "Not yet re-checked"). Whether "1 m = 100 cm", comparing unlike fractions as a beyond item, and the order of school topics are inside P2 or P3 needs the owner's or a tutor's check.
 - The 2019 and 2021 P2 paper zips were not opened by the paper analysis; the four rendered scans were read at about 45 dpi; school mark schemes were not seen.
 - The holiday overlap was found from the holiday question banks (`qbank`) and lesson objectives in `p2/content/l1.js` to `l10.js`, not from the holiday slides, scripts or workbook pages one by one; section 13 is the register to confirm against those pages in the first audit.
-- Items marked "verified" were recomputed by brute-force scripts (not committed): midpoints, riddles, cards, arithmetic series sums, letter sums, the 7-coin count, three-top sets, tilings and partitions, tilted-square counts, Kaprekar steps, worst case, number rings, hats, sequences, scales, views, mirror clocks, matchsticks, nets, routes, nine-check detection. Figures that depend on a font (the mirror-letter sets) are listed as definitions, not as facts about the world.
+- Items marked "verified" are recomputed by `verify_l2_preflight.py` (appendix, 97 checks): midpoints, riddles, cards, arithmetic series sums, letter sums, the 7-coin count, three-top sets, tilings and partitions, tilted-square counts, Kaprekar steps, worst case, number rings, hats, sequences, scales, views, mirror clocks, matchsticks, nets, routes, nine-check detection. Figures that depend on a font (the mirror-letter sets) are listed as definitions, not as facts about the world.
 - Wording of Lessons 30, 31, 36, 38 and 39 is unverified against any school paper (no evidence exists).
 - Singapore rules on reproducing banknotes and coins in play money were not checked.
 - No child was observed; no timing was measured (the Level 1 trial has not reported yet).
@@ -1293,13 +1306,13 @@ Source: the 237 question-bank items (60 core, 87 stretch, 90 challenge) in `p2/c
 | 3 | 3 Legs, Wheels and Arrays | Bicycles and tricycles (17 wheels); hens and goats (25, 26 legs; 22 legs); boats of 4 for 27; cupcake boxes 24; 34 marbles among 4; tables and stools 17 legs; 21 to 49 in two tables; Mr Lim 20 to 30 sweets; "every number 4 to 30 makes an array" | Second visit (division wording, leftovers); New (sharer counted, true or false, "most friends") |
 | 4 | 4 Pattern Machines | Beads red-red-blue-green; houses 5, 9, 13 sticks; 2, 7, 8, 13, 14 alternating; frog 1, 5, 9; frogs A and B; towers 2, 5, 8; counting in 3s and 4s (12, 24); 5-shape star pattern 13, 23, 30, 48 | Second visit (two counts: use 5 and 4); New (2 by 2 and 3 by 3 move grids) |
 | 5 | 6 Market Day; 5 Machines | 275¢ = $2.75; 65¢ fewest coins; $17 fewest notes; ways to pay $10 ($5, $2, $1); ways to pay 40¢ and 90¢; 4 coins $1.25; 5 coins $1.60; pen and pencil $11 and $3 more; half-of-money backwards; Mei $1 at the snack stall; 15 amounts from four notes | Second visit (change, enough money); New (the receipt, two-notation habit, best buy) |
-| 6 | 7 Fair Shares | Bottoms to 12; 1/3 vs 1/6; 3/10 + 4/10; 3/8 vs 3/5; Siti 3/8 + 2/8; Ali pizza halves; 3 squares cut into 4 equal parts; two fractions with bottom 9 making 1; three children sharing 10 pieces (1,2,7; 1,3,6; 1,4,5; 2,3,5); folding a strip three times; 1/5 and 1/6 between 1/4 and 1/7 | Change (three-that-make-1 uses denominator 8, then 12 in Lesson 22); New (equal parts in any shape, parts to shade, Quarter the L) |
+| 6 | 7 Fair Shares | Bottoms to 12; 1/3 vs 1/6; 3/10 + 4/10; 3/8 vs 3/5; Siti 3/8 + 2/8; Ali pizza halves; a pizza of 6 slices with 4 eaten (what fraction is left); 3 squares cut into 4 equal parts; two fractions with bottom 9 making 1; three children sharing 10 pieces (1,2,7; 1,3,6; 1,4,5; 2,3,5); folding a strip three times; 1/5 and 1/6 between 1/4 and 1/7 | Change (three-that-make-1 uses denominator 8, then 12 in Lesson 22); New (equal parts in any shape, parts to shade, Quarter the L) |
 | 7 | 8 Shape Builders | Squares in 2 by 2, 4 by 3, 5 by 5 grids (5, 20, 55); rectangles in 2 by 2 and 3 in a row (9, 6); triangles in a diagonal square (8); 3-line triangle (20); half circles and quarter circles; cube stacks 19, 16, 8, 20, 30; 3 x 3 x 3 painted; nets E and F; six in a line | Change (counting grids are a second visit on new figures only); New (dissection, tilted squares) |
 | 8 | 9 Measure Masters | Apple, lemon and pomelo balances; cube and ball scales; basket 700 g and 500 g; box 1000 g with 4 books; ribbons with overlaps (86 cm); 90 cm ribbon; jugs 2 and 7 (3 l, 5 l); bucket of 10 l | New (reading a scale, ticks, a ruler not from 0); Second visit (balance, with different objects) |
 | 9 | 5 Machines; 2 Missing Digits | At first / gave away: 41 stickers; $36 Ben; 36 beads; bus with 35; Ali, Ben, Siti 40 marbles (9, 14, 17); 42 stickers (10, 12, 20); eggs 905; "add 199 take away 99" | Second visit (BACK with new structure); New (reversal "58 more than", hidden first step) |
 | 10 | 9 Measure Masters; 10 Puzzle Day | Rope 40 cm in 10 cm pieces (6 min); rope 30 m in 5 m pieces (6 pieces, 5 cuts); three ribbons with overlaps | Second visit (cuts and pieces); New (posts, queue positions, corners, circular track) |
 | 11 | 10 Puzzle Day | Keys of 2, 5 and 10; mango row from a total of 30 (5 children each); lost key (football 6, swimming 4, 10 more: 30 and 20); each picture 2 children | Second visit (keys 2, 5, 10); New (keys 3 and 4, tally, from clues) |
-| 12 | (none) |  | New |
+| 12 | 3 Legs, Wheels and Arrays; 5 Machines; 1 Digit Detectives; 4 Pattern Machines | Hens and goats totals "always even" (25, 26 legs); "x 2 always even, +1 odd"; the odd-number riddle; "every even place is blue" | Second visit (parity by testing, new numbers); New (pairing, last-digit rule, Odd Staircase) |
 | 13 | 2 Missing Digit Mysteries | 3[ ]5 + 214 = 579; 6[ ]8 - 205 = 433; [ ] - 150 = 600; 5[ ] + [ ]7 + 38 = 132; Mei 523 - 267 = 266 and the adding-back check; [ ][ ]7 + 4[ ][ ] = 1000 (10 ways) | Second visit (missing digit with new numbers); New (jumps, the 495 trick) |
 | 14 | 5 Machines; 6 Market Day; 7 Fair Shares | Before-and-after bars; three children with extras (40 marbles; 42 stickers); pen and pencil $11, $3 more; $15 present with $2 steps (3, 5, 7); cake 12 slices Mei Ali Ben; Ali 150 Ben 100 Box C 250 (sum of pairs) | Second visit (bar as a general tool); New (transfers with a picture, half the gap) |
 | 15 | 9 Measure Masters | Cartoon 5:40 pm + 30 min; lunch 12:30 pm; minute hand on 7; 10:45 am to 12:10 pm; piano lesson ends 4:15 pm lasted 45 min; film 1 h 40 ends 12:20 pm; buses every 15 min; tap 5 l every 10 min; 3 lessons of 35 min with 10 min breaks from 8:15; clock 10 minutes fast; watch loses 5 minutes an hour | Second visit (start-from-end with a timeline); New (to the minute, conversions, past midnight) |
@@ -1329,8 +1342,306 @@ Source: the 237 question-bank items (60 core, 87 stretch, 90 challenge) in `p2/c
 | 39 | 8 Shape Builders | Nets E and F; six in a line cannot fold | Second visit (nets); New (mirror clocks, matchsticks, shadows) |
 | 40 | 10 Puzzle Day | Mixed puzzle day: graphs, logic grids, hens and cows, chicken rice | Second visit by design; New (Showcase Puzzle) |
 
-**Count.** Verdict "Change": Lessons 1, 6, 7 and 23 (4 lessons where the plan's own item collides). "Second visit": 26 lessons (2, 3, 4, 5, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 20, 21, 22, 25, 27, 28, 33, 34, 35, 37, 39, 40). "New": 10 lessons (12, 19, 24, 26, 29, 30, 31, 32, 36, 38). The plan's section "Non-routine assignments" is not reduced by this register: every type and tier in it is kept; only the instance changes.
+**Count.** Verdict "Change": Lessons 1, 6, 7 and 23 (4 lessons where the plan's own item collides). "Second visit": 27 lessons (2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 25, 27, 28, 33, 34, 35, 37, 39, 40). "New": 9 lessons (19, 24, 26, 29, 30, 31, 32, 36, 38). The plan's section "Non-routine assignments" is not reduced by this register: every type and tier in it is kept; only the instance changes.
 
 **Rule for the extension workbook (owner decision 23 Oct).** The Level 2 extension workbook is built from the holiday question types and extends the holiday program. It must not reuse term-lesson items either: the holiday-copy check (M15) should also run against `term/l2/lessons` when the workbook is written.
 
 **Non-routine check added to every audit.** (a) Every lesson 1 to 40 names at least one catalogue type in `contest_moves` and in the `nonroutine` field with its tier. (b) No non-routine item sits at Start here. (c) No sentence overlaps a school or contest question by 7 words and no holiday question by 5 words. (d) Items needing a picture (290 of the 556 school items depend on one) have the picture in the workbook. (e) Every "exactly one answer" or "exactly N ways" claim is brute-forced in `verify/lNN_checks.py`. (f) The four types the papers use most (CTX 107, CMP 97, BACK 74, MULTI 58) are not dropped when time is short; the first cuts are the Go further parts of Lessons 30, 31, 36 and 38.
+
+## Revision after audit (23 Oct 2026)
+
+Fixes from `docs/audit_final/preflights_l2_l5.md`. Only this document changed; nothing needing an owner decision was decided (the marked defaults stand).
+
+- **High, holiday reuse (H1).** Lesson 6 Start here: the holiday pizza (6 slices, 4 eaten) is replaced by a tray of 8 fudge squares with 3 eaten (5/8); the pizza is added to the section 13 register for Lesson 6; Lesson 33 no longer uses "the pizza left".
+- **High, contest items at Start here (H2).** Lesson 10: Start here is now counting from a picture (jumps and stops of a frog, "how many in front", corners); posts every 5 m along 20 m, the queue 4th of 15 and the cut count moved to Think harder and Go further. Quest Term 1 gate 8 is a plain place-in-the-line item. Lesson 17: Start here reads finished tables and completes one row; complete listing is Think harder (i). Year Quest gate 1 no longer uses likely, unlikely or certain (a tally and 8 x 5).
+- **Medium.** Quest gates with the same numbers as lesson items (Term 1 gates 3, 4, 5, 7; Term 2 gate 6; Term 3 gate 6 and the cave; Year gates 1 and 8 and the cave) now use new numbers; banned word "marked" removed from the gates and from child-visible item descriptions (Lessons 1, 8, 19, 38); cross-level duplicates: Lesson 25 uses other views (7 to 12 cubes, 89 stacks), Lesson 7 counts squares in a 3 by 5 grid (26); stale slot text replaced by `docs/schedule/term_2027_t1_availability.md` section 7 and a new D26; Lesson 12 holiday overlap corrected (Low to Medium, with the four holiday places); shared template hours netted (section 3.4: 88 shared hours, programme total about 445, about 388 with deferrals) and the estimate basis stated; the Level 2 play-money page is documented as a `counts` override (M8); the unverified "scratch script" is now `verify_l2_preflight.py` in the appendix (97 checks).
+- **Low.** Lesson 10 counters (12) and the hand-off 11 to 12 (20 counters) made consistent; the Lesson 15 clock-kit contract stated as hands and faces; the missing M16 explained; kit kept across term breaks flagged; Lesson 3 Go further "Always One Left" (a remainder system like the holiday Mr Lim item) replaced by "Fair for Everyone"; Lesson 14 beyond item "Share the Gap" (ordinary school work) replaced by "Doubling Bars"; a note that classic puzzles are not presented as invented (failure pattern 24).
+- **Unchanged because an owner decision is needed:** whether the sharer-counts item stays at Start here (decision 11 in `owner_decisions.md` says yes; Risk 2 still calls it a likely slip), break length (D17), the weekly slot (D26), and the different rewind rule per level (Level 2 uses n - 10 and n - 4, see section 7).
+
+## Appendix: the check script
+
+`verify_l2_preflight.py`, run with `python3 -I verify_l2_preflight.py`. On 23 Oct 2026 it printed `verify_l2_preflight: 97 checks, 97 passed`. Checks are brute force (all digit combinations, all permutations of the eight ring numbers, an exact-cover search for the dissection pieces, all 35 hexominoes folded by a rolling-cube simulation, a rolling search of hat worlds); they use no formula from the lessons.
+
+```python
+#!/usr/bin/env python3
+"""Brute-force checks for the numbers quoted in docs/terms/l2_preflight.md (run: python3 -I verify_l2_preflight.py)."""
+import itertools, math
+from fractions import Fraction as F
+
+R = []
+def ck(i, got, exp):
+    ok = got == exp
+    R.append((i, ok))
+    if not ok: print("FAIL", i, "got", got, "expected", exp)
+
+tm = lambda h, m: h * 60 + m
+dsum = lambda n: sum(map(int, str(n)))
+
+# ---------------- Term 1
+ck("L1.1", [n for n in range(300, 400) if n // 10 % 10 == 2 * (n % 10) and n % 10], [321, 342, 363, 384])
+ck("L1.2", [n for n in range(300, 400) if n // 10 % 10 == 2 * (n % 10) and n % 10 and n % 2 and dsum(n) == 12], [363])
+ck("L1.2b", [n for n in range(300, 400) if n // 10 % 10 == 2 * (n % 10) and n % 10 and n % 2], [321, 363])
+c = sorted(int("".join(p)) for p in itertools.permutations("025") if p[0] != "0")
+ck("L1.3", (c, [x for x in c if x > 300]), ([205, 250, 502, 520], [502, 520]))
+ck("L1.4", ((240 + 480) // 2, (130 + 570) // 2, (250 + 455) / 2), (360, 350, 352.5))
+ck("L1.5", 4 * 100 + 13 * 10 + 25, 555)
+ck("L2.1", (503 - 478, 68 + 32 + 15, 76 + 38 - 15, 746 - 298 == 748 - 300 == 448), (25, 115, 99, True))
+ck("L2.2", (sum(range(3, 31, 3)), len(range(3, 31, 3)), sum(range(1, 21)), sum(range(5, 51, 5))), (165, 10, 210, 275))
+ck("L2.3", [(a, b, c2) for a in range(1, 10) for b in range(1, 10) for c2 in range(1, 10)
+            if len({a, b, c2}) == 3 and 11 * a + 11 * b == 100 * c2 + 10 * a + c2], [(2, 9, 1)])
+ck("L2.4", [(a, b, c2) for a in range(1, 10) for b in range(0, 10) for c2 in range(0, 10)
+            if len({a, b, c2}) == 3 and (10 * a + b) + (10 * a + c2) == 100 * b + 10 * c2 + a], [(9, 1, 8)])
+ck("L3.1", (24 // (3 + 1), 7 * 6 - 12, (7 * 6 - 12) // 5, 20 // 3, 20 % 3, 20 % 6, 20 % 5), (6, 30, 6, 6, 2, 2, 0))
+ck("L3.2", ([n for n in range(1, 13) if all(n % k == 0 for k in (2, 3, 4))],
+            [n for n in range(1, 13) if all(n % k == 0 for k in (2, 3, 4, 6))],
+            [n for n in range(1, 61) if all(n % k == 0 for k in (2, 3, 4, 5))]), ([12], [12], [60]))
+ck("L3.3", (20 // 5 * 3, 60 // 5 * 3), (12, 36))
+ck("L4.1", (30 % 4, 30 // 9, 30 % 9), (2, 3, 3))
+s = [100]
+for k in range(8): s.append(s[-1] + (100 if k % 2 == 0 else -20))
+ck("L4.2", (s[8], s), (420, [100, 200, 180, 280, 260, 360, 340, 440, 420]))
+ck("L4.3", ([n for n in range(302, 313) if n % 2], [n for n in range(1, 101) if n % 5 == 0 and n % 4 == 0]), ([303, 305, 307, 309, 311], [20, 40, 60, 80, 100]))
+coins = [5, 10, 20, 50]
+w = [t for t in itertools.combinations_with_replacement(coins, 7) if sum(t) == 110]
+ck("L5.1", len(w), 5)
+ck("L5.2", (240 + 85 + 135, 1000 - 460, (20 - 5) // 3), (460, 540, 5))
+pr = [230, 320, 175, 410, 325]
+ck("L5.3", [p for p in itertools.combinations(pr, 2) if sum(p) == 550], [(230, 320)])
+ck("L5.4", (15 // 3 * 12, 15 // 5 * 18, 15 // 3 * 4, 3 * 5), (60, 54, 20, 15))
+ck("L5.5", round(2.40 + 1.35 + 0.85, 2), 4.6)
+ck("L6.1", [t for t in itertools.combinations(range(1, 7), 3) if sum(t) == 8], [(1, 2, 5), (1, 3, 4)])
+ck("L6.2", (8 - 3, 8 - 2 - 3, 12 - 5, 12 - 4), (5, 3, 7, 8))
+# the L-shaped garden: three 2 by 2 blocks, 12 squares, cut into 4 connected parts of 3 squares
+cells = frozenset((r, c) for r in range(4) for c in range(4) if not (r < 2 and c >= 2))
+def trominoes_with(first, rem):
+    out = set()
+    def grow(cur):
+        if len(cur) == 3: out.add(frozenset(cur)); return
+        for (r, c) in list(cur):
+            for d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                n = (r + d[0], c + d[1])
+                if n in rem and n not in cur: grow(cur | {n})
+    grow(frozenset([first]))
+    return out
+def partitions(rem):
+    if not rem: yield []; return
+    first = min(rem)
+    for p in trominoes_with(first, rem):
+        for rest in partitions(rem - p): yield [p] + rest
+parts = list(partitions(cells))
+is_L = lambda p: len({r for r, c in p}) == 2 and len({c for r, c in p}) == 2
+ck("L6.3", (len(parts), sum(1 for pt in parts if all(is_L(p) for p in pt))), (7, 1))
+ck("L7.1", (sum((3 - k + 1) ** 2 for k in range(1, 4)), sum((3 - k + 1) * (5 - k + 1) for k in range(1, 4))), (14, 26))
+def squares_dots(n):
+    S = {(x, y) for x in range(n) for y in range(n)}; cnt = 0
+    for p in S:
+        for q in S:
+            if p == q: continue
+            vx, vy = q[0] - p[0], q[1] - p[1]
+            if (p[0] - vy, p[1] + vx) in S and (q[0] - vy, q[1] + vx) in S: cnt += 1
+    return cnt // 4
+ck("L7.2", (squares_dots(3), squares_dots(4), squares_dots(5)), (6, 20, 50))
+# 4 L-trominoes, 4 dominoes and 4 unit squares tile a 4 by 6 rectangle (area 24)
+G = {(r, c) for r in range(4) for c in range(6)}
+def orient(cs):
+    out = set(); cur = cs
+    for _ in range(4):
+        cur = [(c, -r) for r, c in cur]
+        for fl in (cur, [(r, -c) for r, c in cur]):
+            mr = min(r for r, c in fl); mc = min(c for r, c in fl)
+            out.add(frozenset((r - mr, c - mc) for r, c in fl))
+    return out
+orients = {k: orient(v) for k, v in {"L": [(0, 0), (1, 0), (1, 1)], "D": [(0, 0), (0, 1)], "S": [(0, 0)]}.items()}
+def tile(filled, left):
+    if len(filled) == 24: return True
+    cell = min(G - filled)
+    for k in "LDS":
+        if not left[k]: continue
+        for o in orients[k]:
+            pl = [(cell[0] + r - min(o)[0], cell[1] + c - min(o)[1]) for r, c in o]
+            if all(p in G and p not in filled for p in pl):
+                left[k] -= 1
+                ok = tile(filled | set(pl), left)
+                left[k] += 1
+                if ok: return True
+    return False
+ck("L7.3", (4 * 3 + 4 * 2 + 4, tile(frozenset(), {"L": 4, "D": 4, "S": 4})), (24, True))
+ck("L8.1", (12 // 3 * 2, 3 * 20, (650 + 700) / 2, 3 * 4 * 5), (8, 60, 675.0, 60))
+ck("L9.1", (405 - 68, 123 + 345), (337, 468))
+ck("L9.2", [(m, m + 24, m + 24 - 15) for m in range(1, 100) if m + (m + 24) + (m + 24 - 15) == 210], [(59, 83, 68)])
+ck("L10.1", ((40 - 15) // 5, (40 - 15) // 5 + 1, 4 - 1, 20 // 5 + 1, 15 - 4 + 1, 32 // 4 + 1, 11 - 3 + 1, 7 + 2, 60 // 5, 36 // 9 - 1), (5, 6, 3, 5, 12, 9, 9, 9, 12, 3))
+ck("L10.3", [n for n in range(400, 500) if n % 10 == n // 100 + 3 and dsum(n) == 13], [427])
+sol = [(f, s_, t, 1) for f in range(1, 11) for s_ in range(1, 11) for t in range(1, 11) if f == 2 * s_ and t == s_ + 1 and f + s_ + t + 1 == 10]
+ck("L11.1", (sol, 10 * 4), ([(4, 2, 3, 1)], 40))
+ck("L12.1", (27 - 7, 13 + 7, len([n for n in range(201, 214) if n % 2]), 1 + 3 + 5 + 7, 1 + 3 + 5 + 7 + 9), (20, 20, 7, 16, 25))
+ck("L12.2", [n for n in range(40, 51) if n % 2 and dsum(n) == 9], [45])
+def kap(n):
+    st = 0
+    while n != 495:
+        d = sorted(str(n).zfill(3)); n = int("".join(reversed(d))) - int("".join(d)); st += 1
+        if st > 20: return 99
+    return st
+nums = [n for n in range(100, 1000) if len(set(str(n))) > 1]
+ck("L13.1", (len(nums), max(kap(n) for n in nums), kap(742), 742 - 247), (891, 6, 1, 495))
+ck("L13.2", [d for d in range(10) if int(f"3{d}8") + 144 == 482], [3])
+ck("L14.1", [(a, 200 - a) for a in range(0, 101) if (200 - a) - a == 36], [(82, 118)])
+ck("L14.2", [(b, 2 * b, 4 * b) for b in range(1, 40) if b + 2 * b + 4 * b == 70], [(10, 20, 40)])
+ck("L14.3", ((52 - 28) // 2, 52 - 12, 28 + 12), (12, 40, 40))
+ck("L15.1", (tm(4, 20) + tm(1, 45) == tm(6, 5), tm(16, 39) - tm(15, 7), tm(17, 50) - tm(2, 25) == tm(15, 25), 2 * 60 + 15, tm(1, 15) + 24 * 60 - tm(22, 50)), (True, 92, True, 135, 145))
+ck("L16.1", (12 * 4 // 3, 2 * 6 * 2, 7 * 2 * 2 * 2, 7 * 5 + 7 * 3), (16, 24, 56, 56))
+ck("L17.1", len(list(itertools.product(range(3), range(4)))), 12)
+def worst(bag, need): return sum(min(n, need - 1) for n in bag) + 1
+ck("L17.2", (worst([2, 3], 2), worst([5, 4, 3], 3), worst([9, 9, 9], 2)), (3, 7, 4))
+ck("L17.3", [(f, t) for f in range(4) for t in range(9) if 5 * f + 2 * t == 17], [(1, 6), (3, 1)])
+ck("L17.4", [(a, b) for a in range(0, 3) for b in range(0, 4) if 20 * a + 10 * b == 30], [(0, 3), (1, 1)])
+ck("L17.5", (2 * 3, 3 * 2), (6, 6))
+rings = []
+for p in itertools.permutations(range(1, 9)):
+    cs = [p[0], p[2], p[4], p[6]]; ms = [p[1], p[3], p[5], p[7]]
+    if all(cs[i] + ms[i] + cs[(i + 1) % 4] == 12 for i in range(4)): rings.append(p)
+ck("L18.1", (len(rings), [r for r in rings if r[0] == 1 and r[1] == 5]), (8, [(1, 5, 6, 4, 2, 7, 3, 8)]))
+ck("L19.1", (20 + 5 - 2, 20 - 5 + 3, 20 - 3 + 2, 23 + 18 + 19), (23, 18, 19, 60))
+# three hats (2 red, 1 blue) shared by Ali and Mei; each sees the other's hat
+w2 = sorted(set(itertools.permutations(["R", "R", "B"], 2)))
+ali_knows = lambda hm: len({a for a, m in w2 if m == hm}) == 1
+ck("L19.2", ([hm for hm in "RB" if not ali_knows(hm)], ali_knows("B")), (["R"], True))
+# four hats (2 red, 2 blue), Ali Ben Mei in a line
+worlds4 = sorted(set(itertools.permutations(["R", "R", "B", "B"], 3)))
+ali4 = lambda w: len({x[0] for x in worlds4 if x[1:] == w[1:]}) == 1
+after = [w for w in worlds4 if not ali4(w)]
+ck("L19.3", (all(len({x[1] for x in after if x[2] == w[2]}) == 1 for w in after), all(w[1] != w[2] for w in after)), (True, True))
+ck("L20.1", [(a, b) for a in range(1, 10) for b in range(a + 1, 10) if a + b == 13 and b - a == 3], [(5, 8)])
+g = [90]
+for d in (1, 2, 3, 4, 5): g.append(g[-1] - d)
+ck("L21.1", (g, 3 * 8 + 1, (46 - 1) // 3), ([90, 89, 87, 84, 80, 75], 25, 15))
+fib = [1, 1]
+while len(fib) < 10: fib.append(fib[-1] + fib[-2])
+tri = [n * (n + 1) // 2 for n in range(1, 21)]
+ck("L21.2", (fib[9], tri[19], sum(tri[:10])), (55, 210, 220))
+ck("L22.1", len([t for t in itertools.combinations(range(1, 12), 3) if sum(t) == 12]), 7)
+ck("L22.2", min([F(3, 8), F(5, 12), F(4, 10), F(2, 6)], key=lambda x: abs(x - F(1, 2))), F(5, 12))
+ck("L23.1", [(c2, t) for c2 in range(1, 20) for t in range(1, 20) if 2 * c2 + t == 17 and c2 + t == 11], [(6, 5)])
+ck("L23.2", [(a, b, c2) for a in range(1, 30) for b in range(1, 30) for c2 in range(1, 30) if 2 * a + b == 21 and a + 2 * b == 18 and b + c2 == 12], [(8, 5, 7)])
+ck("L24.1", 300 // 5 * 10, 600)
+def stats(front, side, hmax=3):
+    n = len(front); m = len(side); res = []
+    for h in itertools.product(range(hmax + 1), repeat=n * m):
+        gg = [h[i * n:(i + 1) * n] for i in range(m)]
+        if all(max(gg[r][c] for r in range(m)) == front[c] for c in range(n)) and all(max(gg[r]) == side[r] for r in range(m)):
+            res.append(sum(h))
+    return (min(res), max(res), len(res))
+ck("L25.1", stats((1, 1, 3), (3, 2, 1)), (7, 12, 89))
+ck("L27.1", [(m, m + 30) for m in range(1, 60) if (m + 5) + (m + 30 + 5) == 56], [(8, 38)])
+ck("L28.1", (9 * 4, 36 - 12, 24 // 3, 8 * 2, 20 // 4 * 3), (36, 24, 8, 16, 15))
+ck("L28.2", (8 * 6, 48 - 15, 33 // 3, 33 // 3 * 2, (50 - 12 - 5) // 3), (48, 33, 11, 22, 11))
+ck("L29.1", all((a * b) % 2 == (1 if a % 2 and b % 2 else 0) for a in range(1, 51) for b in range(1, 51)), True)
+def run(prog, reps, x=0, y=0, d=0):
+    dirs = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    for _ in range(reps):
+        for cmd in prog:
+            if cmd[0] == "F": x += dirs[d][0] * cmd[1]; y += dirs[d][1] * cmd[1]
+            elif cmd == "R": d = (d + 1) % 4
+            else: d = (d - 1) % 4
+    return x, y
+ck("L30.1", (run([("F", 3), "R"], 4), run([("F", 2), "R"], 4), run([("F", 2), "R", ("F", 1), "L"], 3)), ((0, 0), (0, 0), (3, 6)))
+tot = {}
+for a in range(1, 5):
+    for b in range(1, 5): tot[a + b] = tot.get(a + b, 0) + 1
+ck("L31.1", (len(list(itertools.product("HT", repeat=2))), [tot[k] for k in range(2, 9)], sum(1 for a in range(1, 7) for b in range(1, 7) if a + b == 7)), (4, [1, 2, 3, 4, 3, 2, 1], 6))
+ck("L32.1", ([n for n in range(1, 51) if n % 4 == 0 and n % 6 == 0], [dsum(9 * k) for k in range(1, 11)], dsum(99), 35 + 21), ([12, 24, 36, 48], [9] * 10, 18, 56))
+ck("L33.1", ((15 + 9 + 6) // 3, 15 - 10, 48 - 48 // 2 - (48 // 2) // 3, 24 // 3 * 2, 3 * 4), (10, 5, 16, 16, 12))
+ck("L33.2", F(1) - F(1, 2) - F(1, 4), F(1, 4))
+d4 = sorted({int("".join(p)) for p in itertools.permutations("0358") if p[0] != "0"})
+ck("L34.1", (d4[-1], d4[0], len(d4)), (8530, 3058, 18))
+ck("L34.2", [n for n in range(4000, 5000) if n // 100 % 10 == 2 and n // 10 % 10 == 5 and n % 2 == 0 and dsum(n) == 15], [4254])
+d1 = [int("".join(p)) for p in itertools.permutations("1234")]
+ck("L34.3", (len(d1), sum(1 for n in d1 if n > 3000), sum(1 for n in d1 if n % 2 == 0)), (24, 12, 12))
+D = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+ck("L35.1", (3 * 6, D[(1 + 30) % 7], 365 % 7, 366 % 7, D[(2 + 12) % 7]), (18, "Thu", 1, 2, "Mon"))
+ck("L35.2", max(b for b in (tm(7, 5) + 20 * k for k in range(10)) if b + 25 <= tm(8, 0)), tm(7, 25))
+def routes(n, blocked=()):
+    ways = {(0, 0): 1}
+    for x in range(n + 1):
+        for y in range(n + 1):
+            if (x, y) == (0, 0): continue
+            ways[(x, y)] = 0 if (x, y) in blocked else ways.get((x - 1, y), 0) + ways.get((x, y - 1), 0)
+    return ways[(n, n)]
+ck("L36.1", (routes(2), routes(3), routes(2, ((1, 1),))), (6, 20, 2))
+def dr(n):
+    while n > 9: n = dsum(n)
+    return n
+ck("L37.1", (478 + 256, 603 - 278, 387 + 295, 435 + 278, dr(478) + dr(356) == dr(834) + 0 or dr(dr(478) + dr(356)) == dr(834), 734 - 478), (734, 325, 682, 713, True, 256))
+swap_missed = all(dr(n) == dr(int(str(n)[::-1])) for n in range(100, 1000))
+missed = set()
+for n in range(100, 1000):
+    for pos in range(3):
+        for dg in range(10):
+            m = int(str(n)[:pos] + str(dg) + str(n)[pos + 1:])
+            if m != n and len(str(m)) == 3 and dr(m) == dr(n): missed.add(tuple(sorted((int(str(n)[pos]), dg))))
+ck("L37.2", (swap_missed, sorted(missed)), (True, [(0, 9)]))
+ck("L38.1", ([a for a in range(0, 16) if (15 - a) - a == 4], [(a, 15 - a) for a in range(0, 8) if (15 - a) - a == 3]), ([], [(6, 9)]))
+ck("L39.1", tm(12, 0) - tm(4, 10) == tm(7, 50), True)
+cost = {0: 6, 1: 2, 2: 5, 3: 5, 4: 4, 5: 5, 6: 6, 7: 3, 8: 7, 9: 6}
+from functools import lru_cache
+@lru_cache(None)
+def anyd(s, big):
+    if s == 0: return ""
+    c = [str(d) + r for d in range(10) if cost[d] <= s and (r := anyd(s - cost[d], big)) is not None]
+    return (max if big else min)(c, key=lambda x: (len(x), x) if big else (len(x), x)) if c else None
+def best(sticks, big=True):
+    c = [str(d) + r for d in range(1, 10) if cost[d] <= sticks and (r := anyd(sticks - cost[d], big)) is not None]
+    return int((max if big else min)(c, key=lambda x: (len(x), x)))
+ck("L39.2", (best(11), best(11, False), best(15), best(8), sum(cost[int(c)] for c in "7111")), (71111, 20, 7111111, 1111, 9))
+def norm(cs):
+    best_ = None; cur = list(cs)
+    for _ in range(4):
+        cur = [(c, -r) for r, c in cur]
+        for fl in (cur, [(r, -c) for r, c in cur]):
+            mr = min(r for r, c in fl); mc = min(c for r, c in fl)
+            t = tuple(sorted((r - mr, c - mc) for r, c in fl))
+            if best_ is None or t < best_: best_ = t
+    return best_
+polys = {((0, 0),)}
+for _ in range(5):
+    nxt = set()
+    for p in polys:
+        for (r, c) in p:
+            for d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                n = (r + d[0], c + d[1])
+                if n not in p: nxt.add(norm(list(p) + [n]))
+    polys = nxt
+def roll(f, d):
+    t, b, n, s_, e, w_ = f
+    if d == (0, 1): return (w_, e, n, s_, t, b)
+    if d == (0, -1): return (e, w_, n, s_, b, t)
+    if d == (1, 0): return (n, s_, b, t, e, w_)
+    return (s_, n, t, b, e, w_)
+def folds(p):
+    cs = set(p); start = min(cs); vis = {start}; stack = [(start, (0, 1, 2, 3, 4, 5))]; faces = []
+    while stack:
+        cell, f = stack.pop(); faces.append(f[1])
+        for d in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+            n = (cell[0] + d[0], cell[1] + d[1])
+            if n in cs and n not in vis: vis.add(n); stack.append((n, roll(f, d)))
+    return len(set(faces)) == 6
+ck("L39.3", (len(polys), sum(1 for p in polys if folds(p))), (35, 11))
+
+# ---------------- Quest gates
+ck("QA.1", (76 + 49, 20 // (4 + 1)), (125, 4))
+ck("QA.2", (74 in range(4, 100, 10), 80 in range(4, 100, 10)), (True, False))
+ck("QA.3", (160 + 95, 500 - 255), (255, 245))
+ck("QA.4", (6 - 4, 4 + 1), (2, 5))
+ck("QA.5", (6 // 2, 250 + 80, 6 - 1, 7 * 100), (3, 330, 5, 700))
+ck("QA.6", [n for n in range(400, 500) if n % 10 == n // 100 + 3 and dsum(n) == 13], [427])
+ck("QB.1", (4 * 6, (7 + 9) % 2, 437 + 235, 45 + 28), (24, 0, 672, 73))
+ck("QB.2", (tm(17, 35) + tm(1, 50) == tm(19, 25), 5 * 3 == 3 * 5, 4 * 7 == 2 * (2 * 7), 2 * 3 + 2), (True, True, True, 8))
+ck("QB.3", (16 + 4 + 13 + 7 + 8 + 2, 26 - 6, 14 + 6), (50, 20, 20))
+ck("QB.4", all(sum(2 * k + 1 for k in range(s0, s0 + 7)) % 2 == 1 for s0 in range(30)), True)
+ck("QC.1", ([4, 6, 9, 13, 18][-1] + 6, F(5, 12) < F(7, 12)), (24, True))
+ck("QC.2", ([(c2, t) for c2 in range(1, 20) for t in range(1, 20) if 2 * c2 == 14 and c2 + t == 11], 14 % 3), ([(7, 4)], 2))
+ck("QC.3", (60 + (60 - 25), 30 // 6 * 2), (95, 10))
+ck("QC.4", run([("F", 2), "R", ("F", 3)], 1), (3, 2))
+ck("QC.5", [y for y in range(1, 40) if (7 + y) + (31 + y) == 62], [12])
+ck("QD.1", (8 * 5, 4 * 3 + 6, D[(2 + 12) % 7], F(1, 4) * 8, 1000 // 100), (40, 18, "Mon", 2, 10))
+print("verify_l2_preflight: %d checks, %d passed" % (len(R), sum(1 for r in R if r[1])))
+```

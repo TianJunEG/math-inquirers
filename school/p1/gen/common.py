@@ -26,19 +26,34 @@ tennis ticket tomato basket button butter bubble candy comet drawer dinner docto
 house train jacket basket
 """.split())
 
+# ---- large word lists (written by the audit-2 pass): BIG = every English word of 2 to 8 letters from two public word lists plus the
+# 80 000 most frequent words (about 129 000 words); a wrong answer that spells ANY of them is counted as a wrong answer that the
+# pupil's "do the letters spell a word?" check would accept. COMMON = the 20 000 most frequent of them (words a P1 teacher
+# might know): used for the guess-resistance test (V4).
+import gzip, os
+_HERE = os.path.dirname(os.path.abspath(__file__))
+def _load(name):
+    return set(gzip.open(os.path.join(_HERE, name), "rt").read().split())
+BIG = _load("words_en.txt.gz") | set(WORDS)
+COMMON = _load("words_common.txt.gz") | set(WORDS)
+
 def ordinal(n):
     return {1:"1st",2:"2nd",3:"3rd"}.get(n, f"{n}th")
 
 # ---------------- code tables (K1) ----------------
 JUNK = "QXZJVKWYBFGHMDUC"
+ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def build_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2)):
+def build_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), letters=None, weighted=False):
+    """code table: the answers (in order) get the letters of `word`; n_decoy near-miss values get decoy letters."""
     assert len(answers) == len(word), (answers, word)
     assert len(set(answers)) == len(answers), "answers must be distinct"
     assert len(set(word)) == len(word), "code word letters must be distinct"
     table = dict(zip(answers, word))
-    junk = [c for c in JUNK if c not in word]
+    bad = bad_letters(word)
+    junk = [c for c in (letters or ALPHA) if c not in word and c not in bad]
     rng.shuffle(junk)
+    if weighted: junk = weighted_letters(word, len(junk), rng, junk)
     cands = []
     for a in answers:
         for d in near:
@@ -50,10 +65,40 @@ def build_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2)):
         table[v] = junk.pop()
     return dict(sorted(table.items()))
 
+def _mask(w):
+    m = 0
+    for c in w.upper(): m |= 1 << (ord(c) - 65)
+    return m
+_CAND = {}
+def candidates(letters, n):
+    """common words of n letters that can be spelt with the given distinct letters (each used once): what a pupil could guess"""
+    if n not in _CAND:
+        _CAND[n] = [(_mask(w), w) for w in sorted(COMMON) if len(w) == n and len(set(w)) == n]
+    tm = _mask("".join(letters))
+    return [w for m, w in _CAND[n] if m & ~tm == 0]
+
+def bad_letters(word):
+    """letters that, put in place of one letter of `word`, make another word of the large list (a decoy must not be one of them)"""
+    bad = set()
+    for i in range(len(word)):
+        for c in ALPHA:
+            if c != word[i] and (word[:i] + c + word[i+1:]).lower() in BIG: bad.add(c)
+    return bad
+
+LETTER_WEIGHT = dict(E=12, T=9, A=8, O=8, I=7, N=7, S=6, H=6, R=6, D=4, L=4, U=3, C=3, M=3, W=2, F=2, G=2, Y=2, P=2, B=2, V=1, K=1, J=0.3, X=0.2, Q=0.2, Z=0.2)
+def weighted_letters(word, k, rng, pool=None):
+    pool = [c for c in (pool or ALPHA) if c not in word]
+    out = []
+    while len(out) < k and pool:
+        w = [LETTER_WEIGHT[c] for c in pool]
+        c = rng.choices(pool, w)[0]; pool.remove(c); out.append(c)
+    return out
+
 def code_verify(answers, table, word, lo, hi):
-    """V2 check passes; V3 single-slip detection over every value lo..hi; V4 guess resistance."""
+    """V2 the right answers spell the word; V3 single-slip detection over every value lo..hi against the LARGE word list
+    (a slip that makes another real word counts as not detected); V4 guess resistance: how many common words fit the table letters."""
     spelled = "".join(table[a] for a in answers)
-    ok2 = spelled == word and word.lower() in WORDS
+    ok2 = spelled == word and word.lower() in COMMON
     tot = det = 0
     undetected = []
     for i in range(len(answers)):
@@ -65,17 +110,24 @@ def code_verify(answers, table, word, lo, hi):
             if L is None:
                 det += 1; continue
             m = word[:i] + L + word[i+1:]
-            if m != word and m.lower() not in WORDS:
+            if m != word and m.lower() not in BIG:
                 det += 1
             else:
                 undetected.append((i, v, m))
     n = len(word)
-    k = max(1, math.ceil(n / 2) - 1)
-    same = [w for w in WORDS if len(w) == n]
-    pre = [w for w in same if w[:k].upper() == word[:k]]
-    guess_ok = len(pre) >= 2 or True  # small list cannot prove this; recorded as informational
+    cand = candidates(table.values(), n)
     return dict(spelled_ok=ok2, single_total=tot, single_detected=det,
-                rate=det / tot, undetected=undetected[:5], prefix_matches=len(pre), k=k)
+                rate=det / tot, undetected=undetected, candidates=cand, n_candidates=len(cand))
+
+def make_code_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), tries=1500, min_cand=3):
+    """a code table with NO undetected single slip (large word list) and at least `min_cand` common words that fit its letters
+    (so the word cannot be guessed from the letter count). Returns None when no table is found (the caller picks other answers)."""
+    for _ in range(tries):
+        t = build_table(answers, word, rng, lo, hi, n_decoy, near, weighted=True)
+        cv = code_verify(answers, t, word, lo, hi)
+        if cv["spelled_ok"] and not cv["undetected"] and cv["n_candidates"] >= min_cand:
+            return t
+    return None
 
 def code_table_html(table, cols=None):
     items = "".join(f'<div class="ct"><span class="n">{k}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in table.items())
@@ -149,7 +201,7 @@ def code_check(table):
     """Pupil's check for a code-word page: every letter is found and the letters spell a real word."""
     def chk(ans):
         if any(a not in table for a in ans): return False
-        return "".join(table[a] for a in ans).lower() in WORDS
+        return "".join(table[a] for a in ans).lower() in BIG
     return chk
 
 def code_model(answers, table, lo, hi):
@@ -157,7 +209,7 @@ def code_model(answers, table, lo, hi):
 
 def letters_check():
     def chk(ans):
-        return "".join(ans).lower() in WORDS
+        return "".join(ans).lower() in BIG
     return chk
 
 # ---------------- small HTML pictures for the teacher key ----------------
