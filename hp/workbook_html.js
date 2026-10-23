@@ -147,7 +147,7 @@ W.push(...coreEnd(3));
 W.push(...extra(3));
 W.push(...hdr(4, 'Patterns', 'PATTERN INQUIRY')); W.push(fast());
 W.push(q(1, 'Look at the shape pattern. Draw the missing shapes in places 8 and 9.', { before: 60 }));
-W.push(img('shapes.png', 640, 92));
+W.push(FG.p1());
 W.push(q(2, 'The pattern is circle, square, triangle, circle, square, triangle, circle … What is the 10th one? (Keep writing the pattern until you get there.)', { before: 100, keepNext: true }));
 W.push(FG.p2());
 W.push(ans('Answer:', 560));
@@ -160,7 +160,7 @@ W.push(sub('a', 'What shape will be in place 10?   ____________________'));
 W.push(sub('b', 'What shape will be in place 12?   ____________________'));
 W.push(sub('c', 'What shape will be in place 30? (Keep drawing, or look for a shortcut.)   ____________'));
 W.push(sub('d', 'How do you know?'));
-W.push(...lines(2));
+W.push(...lines(1));
 W.push(q(5, 'The pattern is cat, dog, dog, cat, dog, dog, cat … What is the 12th one?', { pb: true, before: 0, keepNext: true }));
 W.push(FG.p5());
 W.push(ans('Answer:', 560));
@@ -168,7 +168,7 @@ W.push(q(6, 'The pattern is A, B, C, D, A, B, C … What is the 11th one? (Write
 W.push(FG.p6());
 W.push(ans('Answer:', 560));
 W.push(q(7, 'Ben makes a row of triangles with sticks.', { keepNext: true }));
-W.push(img('sticks.png', 620, 127));
+W.push(img('sticks.png', 470, 96));
 W.push(sub('a', 'Count the sticks. Fill in the table. Keep going until you reach 10 triangles.'));
 { const ws = [CW - 7600, ...Array(10).fill(760)]; const vals = { 1: '3', 2: '5', 3: '7' };
   W.push(tbl(ws, [row([cell('Triangles', ws[0], { bold: true, fill: 'EDEDED', size: 22 }), ...Array.from({ length: 10 }, (_, i) => cell(String(i + 1), 760, { bold: true, fill: 'EDEDED' }))]),

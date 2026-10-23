@@ -101,7 +101,7 @@ def page09():
             f'<div class="diag">{diag_icon(False)}<span class="ab sm"></span> {diag_icon(True)}<span class="ab sm"></span></div>'
             f'<div class="blk"><p class="lead">Numbers to use. Cross out each one you use.</p><div class="ovals">{nums}</div></div>')
     P = Page(no=9, title="Magic Square", tier=2, topic="Adding three 1-digit numbers",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.7 (adding more than two 1-digit numbers)",
+             strand="Number and Algebra - Addition and Subtraction", syll="2.4 (adding more than two 1-digit numbers)",
              ptype="Magic square", mech="K3 every line makes 15 (8 line totals)",
              instr=["Use the numbers 1 to 9 once.", "Every line across and down makes 15.", "Both lines from corner to corner make 15."],
              body=body, check="Write each line total in the small boxes. Are all eight totals 15?", check_boxes=None,
@@ -223,7 +223,7 @@ def page11():
     rows = "".join(f'<div class="sumrow"><span class="no">{i+1}</span>{t.replace(BOX, ABOX)}</div>' for i, (t, _) in enumerate(items))
     body = f'<div class="sumrows two tall">{rows}</div>{code_block(table)}'
     P = Page(no=11, title="Big Number Sums", tier=2, topic="Add and subtract within 100",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.7 (add and subtract within 100: 2-digit and ones, 2-digit and tens, missing number)",
+             strand="Number and Algebra - Addition and Subtraction", syll="2.5, 2.7 (add and subtract within 100: 2-digit and ones, 2-digit and tens, missing number)",
              ptype="Code-breaker", mech="K1 code word (6 letters) + K7 put the number back",
              instr=["Find the missing numbers.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
@@ -268,13 +268,13 @@ def page13():
         rows += (f'<div class="grow"><span class="no">{i+1}</span><div class="gsvg">{s}</div>'
                  f'<div class="geq"><span class="lbx"><span class="ab"></span><small>bags</small></span> <span class="op">&times;</span> <span class="lbx"><span class="ab"></span><small>things</small></span> <span class="op">=</span> <span class="lbx"><span class="ab"></span><small>total</small></span></div></div>')
     body = f'<div class="grows">{rows}</div>{code_block(table)}'
-    P = Page(no=13, title="Equal Groups", tier=1, topic="Multiplication: equal groups",
+    P = Page(no=13, title="Equal Groups", tier=1, topic="Multiplication: equal groups and repeated addition",
              strand="Number and Algebra - Multiplication and Division", syll="3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
              instr=["Each bag has the same number of things.", "Write the bags, the things and the total.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {g} bags of {m} = {g*m}" for i, (g, m) in enumerate(items)), check_result=f"Code word: {word}"),
-             note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 40.",
+             note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 40. Repeated addition (4 bags of 3 is 3 + 3 + 3 + 3) is the bridge to the sharing pages in the other semester.",
              seed=1313)
     ok = True
     for s, (g, m) in zip(svgs, items):
@@ -350,7 +350,7 @@ def page03():
             t1 = f"Put {n} {nm} in groups of {per}."; t2 = "How many groups?"
         texts.append((t1, t2))
         rows += (f'<div class="shrow"><span class="no">{i+1}</span><div class="shmid"><p class="shtxt">{t1} {t2}</p><div class="shsvg">{s_}</div></div><span class="ab"></span></div>')
-    body = f'<div class="shrows">{rows}</div>{code_block(table)}'
+    body = f'<p class="lead" style="margin:0 0 1mm">Share equally: each plate, box, bowl or bag gets the same.</p><div class="shrows">{rows}</div>{code_block(table)}'
     solved = []; drawn = []
     for (t1, t2), s_, (kind, n, g, per) in zip(texts, svgs, items):
         n_obj, n_cont, inside = read_share(s_, kind)
@@ -362,12 +362,12 @@ def page03():
         ok = int(m[1]) == n_obj and inside == int(m[2]) and n_obj % int(m[2]) == 0
         solved.append(n_obj // int(m[2]) if ok else None); drawn.append((n_obj, inside))
     P = Page(no=3, title="Fair Shares", tier=1, topic="Sharing equally and making equal groups (within 20)",
-             strand="Number and Algebra - Multiplication and Division", syll="3.4 (dividing within 20: sharing and grouping, no division sign)",
+             strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.4 (dividing within 20: sharing and grouping, no division sign)",
              ptype="Code-breaker", mech="K1 code word (6 letters) + K7 put the number back",
              instr=["Look at the pictures.", "Write how many.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Pictures of apples, stars, fish and balloons, with empty plates, boxes, bowls and bags. Three items share the objects equally among the containers drawn; three put the objects into groups of a stated size (a dashed loop shows the first group). Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: containers times each one's share is the number of objects.",
+             note="Pictures of apples, stars, fish and balloons, with empty plates, boxes, bowls and bags. Three items share the objects equally among the containers drawn; three put the objects into groups of a stated size (a dashed loop shows the first group). Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: containers times each one's share is the number of objects. A printed line says each container gets the same number (the sharer rule).",
              seed=303)
     P.v("V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key", solved == ans, solved)
     cv = code_verify(ans, table, word, 1, 20)

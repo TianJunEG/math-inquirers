@@ -150,7 +150,7 @@ const pictureRowF = (o, y0) => {
   return out;
 };
 const pictureRow = (o) => {
-  const s = o.size || 42, pitch = o.pitch || s + 12, W = (o.x0 === undefined ? 12 : o.x0) * 2 + pitch * o.items.length, H = s + 8 + (o.numbers === false ? 8 : 30);
+  const s = o.size || 42, pitch = o.pitch || s + 12, W = (o.x0 === undefined ? 12 : o.x0) * 2 + pitch * o.items.length, H = s + 6 + (o.numbers === false ? 6 : 26);
   return svg(W, H, pictureRowF(o, 2), o.label || 'picture row', W);
 };
 

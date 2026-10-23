@@ -39,7 +39,7 @@ const fit = (s, level, opt = {}) => {
   const m = s.match(/<svg[^>]*>/);
   if (!m) return s;
   const tag = m[0];
-  const vb = tag.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
+  const vb = tag.match(/viewBox="[\d.-]+ [\d.-]+ ([\d.]+) ([\d.]+)"/);
   if (!vb) return s;
   const vw = +vb[1];
   const wm = tag.match(/ width="([\d.]+)"/);

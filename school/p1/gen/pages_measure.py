@@ -45,7 +45,7 @@ def page15():
     rows = "".join(f'<div class="crow"><span class="no">{i+1}</span><div class="csvg">{s}</div><div class="cans"><span class="ab wide"></span> <b>&cent;</b></div></div>' for i, s in enumerate(svgs))
     body = f'<div class="crows">{rows}</div>{code_block(table)}'
     P = Page(no=15, title="Coin Purses", tier=1, topic="Money: counting coins in cents (up to $1)",
-             strand="Number and Algebra - Money", syll="Money (count money in cents up to $1)",
+             strand="Number and Algebra - Money", syll="Money 1.1 (count money in cents up to $1)",
              ptype="Code-breaker", mech="K1 code word (5 letters)",
              instr=["Add the coins in each purse.", "Write the total in cents.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=5,
@@ -132,7 +132,7 @@ def page16():
             f'<div class="twocol"><div>{grid_table(items, ["$%d" % p for p in prices])}</div><div>{ans}</div></div>{q}')
     diffs = [c for c in cl if c[0] == "diff"]
     P = Page(no=16, title="Shop Prices", tier=2, topic="Money: dollars, more and less",
-             strand="Number and Algebra - Money", syll="Money (dollars up to $100) with 2.1 to 2.7 (add, subtract)",
+             strand="Number and Algebra - Money", syll="Money 1.1 (dollars up to $100), 2.7 (add, subtract); guess and check, problem solving",
              ptype="Logic grid + total", mech="K4 grid + K1 letter beside each price + code letter for the total (6 letters)",
              mech_plain="Letters beside the prices, then a code letter for the total, spell a word (6 letters)",
              instr=["Read the clues.", "Use the grid to cross and tick.", "Write each price, then its letter."],
@@ -541,7 +541,7 @@ def page20():
     chk_lines = [f"Count all the faces. Is the total {total}?",
                  f"Add the faces in your a) row to your b) answer. Is the sum {comb}?"]
     P = Page(no=20, title="Fruit Graph", tier=2, topic="Picture graphs: read, complete and answer",
-             strand="Statistics - Data Analysis", syll="Picture graphs (read and interpret picture graphs)",
+             strand="Statistics - Data Representation and Interpretation", syll="Statistics 1.1 (read and interpret picture graphs)",
              ptype="Graph detective", mech="K3 the total of all faces, and a second sum that uses the answers to a) and b) (neither is a clue)",
              mech_plain="Two sums: the total of all the faces, and the row chosen in a) plus the answer to b) (neither is used to find any row)",
              instr=["Two rows are done.", "Draw one face for each child.", "Use the clues. Answer a and b."],
