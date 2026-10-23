@@ -48,4 +48,5 @@ CSS_P2 = """
 .fans{display:flex;flex-direction:column;align-items:center;gap:0}.fans .ab.w2{width:15mm;height:12mm}.fans .fline{width:17mm;border-top:0.7mm solid #000;height:0;margin:0.6mm 0}
 .ffig{display:flex;justify-content:center;align-items:center;min-height:30mm}.ffig svg{max-width:none}
 .ct .fr{font-size:11pt;margin-right:0.5mm}
+.qg .span2{grid-column:1 / -1}
 """

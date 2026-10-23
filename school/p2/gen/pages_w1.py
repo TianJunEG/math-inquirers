@@ -251,7 +251,7 @@ def page04():
     for i, it in enumerate(items):
         if it["k"] == "array":
             s = A.array_svg(it["kind"], it["r"], it["c"]); svgs.append(s)
-            cards.append(qcard(i + 1, f'<p>How many {OBJN[it["kind"]][1]} in all?</p>' + s, '<span class="ab w3"></span>', cls="inl"))
+            cards.append(qcard(i + 1, f'<p>How many {OBJN[it["kind"]][1]} in all?</p>' + s, '<span class="ab w3"></span>', cls="inl span2"))
             texts.append(None)
         else:
             if it["k"] == "times": t = f"{it['a']} \u00d7 {it['b']} = ?"
@@ -262,7 +262,7 @@ def page04():
     P = code_items_page(4, 5404, "Equal Groups", 1, "Multiplication: tables of 2, 3, 4, 5 and 10", STRAND_MD,
         "3.1, 3.4 (multiplication tables of 2, 3, 4, 5 and 10; multiplying within the tables)", ["MD3.1", "MD3.4"], "Code-breaker (equal groups)",
         ["Find how many in all.", "Write the answer in the box.", INSTR_CODE],
-        qgrid(cards, 1), ans, table, word, 1, 50,
+        qgrid(cards, 2), ans, table, word, 1, 50,
         "; ".join(f"{i+1}) {x}" for i, x in enumerate(ans)),
         "Two arrays of objects (count rows and columns or count all), a bare multiplication, a groups-of story, a missing factor and a table-top story. Every product uses a table of 2, 3, 4, 5 or 10 and stays within 50. The decoy letters stand for adding the two numbers instead of multiplying. A box left blank gives no letter and the check cannot see it.")
     def solve(i, it):

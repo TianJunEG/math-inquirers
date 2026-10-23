@@ -64,7 +64,18 @@
    1.0,
    5994,
    5994
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    72,
+    72
+   ],
+   "all_other_values_rejected": [
+    5994,
+    5994
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 2,
@@ -126,7 +137,18 @@
    1.0,
    5994,
    5994
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    72,
+    72
+   ],
+   "all_other_values_rejected": [
+    5994,
+    5994
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 3,
@@ -173,7 +195,18 @@
    1.0,
    2,
    2
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 4,
@@ -236,7 +269,18 @@
    1.0,
    294,
    294
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    69,
+    69
+   ],
+   "all_other_values_rejected": [
+    294,
+    294
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 5,
@@ -294,7 +338,18 @@
    1.0,
    294,
    294
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    61,
+    61
+   ],
+   "all_other_values_rejected": [
+    294,
+    294
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 6,
@@ -352,7 +407,18 @@
    1.0,
    2994,
    2994
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    2994,
+    2994
+   ],
+   "all_other_values_rejected": [
+    2994,
+    2994
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 7,
@@ -414,7 +480,18 @@
    1.0,
    4314,
    4314
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    4314,
+    4314
+   ],
+   "all_other_values_rejected": [
+    4314,
+    4314
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 8,
@@ -472,7 +549,18 @@
    1.0,
    100,
    100
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    52,
+    52
+   ],
+   "all_other_values_rejected": [
+    100,
+    100
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 9,
@@ -519,7 +607,18 @@
    1.0,
    2,
    2
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 10,
@@ -583,7 +682,18 @@
    1.0,
    5394,
    5394
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    72,
+    72
+   ],
+   "all_other_values_rejected": [
+    5394,
+    5394
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 11,
@@ -651,7 +761,18 @@
    1.0,
    6000,
    6000
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    72,
+    72
+   ],
+   "all_other_values_rejected": [
+    6000,
+    6000
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 12,
@@ -693,7 +814,18 @@
    1.0,
    2,
    2
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 13,
@@ -750,7 +882,18 @@
    1.0,
    54,
    54
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    44,
+    44
+   ],
+   "all_other_values_rejected": [
+    54,
+    54
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 14,
@@ -799,7 +942,18 @@
    1.0,
    2,
    2
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    105,
+    105
+   ],
+   "all_other_values_rejected": [
+    105,
+    105
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 15,
@@ -862,7 +1016,18 @@
    1.0,
    390,
    390
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    390,
+    390
+   ],
+   "all_other_values_rejected": [
+    390,
+    390
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 16,
@@ -920,6 +1085,17 @@
    1.0,
    5988,
    5988
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    5988,
+    5988
+   ],
+   "all_other_values_rejected": [
+    5988,
+    5988
+   ],
+   "wrong_arrangements_rejected": null
+  }
  }
 ]
