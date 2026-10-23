@@ -1,0 +1,1383 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 9,
+ "id": "L5U09",
+ "title": "Pattern generalisers",
+ "topic": "Patterns and number sense",
+ "holiday_lesson": 9,
+ "goal": "I can find the rule of a growing pattern and say it in words. I can use the rule for a far figure and backwards.",
+ "learn": {
+  "intro": "Look at what stays the same and what grows each time. Make a table. Say the rule in words. Use the rule for any figure, and backwards from a total.",
+  "example": {
+   "problem": "Tiles make a plus sign. Figure 1 has 5 tiles and figure 2 has 9 tiles. Figure 3 has arms of 3 tiles. How many tiles are in figure 10? Which figure has 81 tiles?",
+   "steps": [
+    "Each figure has 4 arms and 1 middle tile. In figure n each arm has n tiles.",
+    "Rule: tiles = 4 × figure number + 1.",
+    "Figure 10: 4 × 10 + 1 = 41 tiles.",
+    "Backwards: 81 - 1 = 80, and 80 ÷ 4 = 20. Figure 20 has 81 tiles."
+   ],
+   "answer": "Figure 10 has 41 tiles. Figure 20 has 81 tiles.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        0
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        2,
+        0
+       ]
+      ]
+     }
+    ],
+    "alt": "plus patterns of tiles"
+   }
+  },
+  "howto": {
+   "title": "How to",
+   "steps": [
+    "Count the figures. Make a table.",
+    "See what each new figure adds, and why.",
+    "Say the rule in words. Use it forwards and backwards."
+   ]
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U09-L01",
+   "text": "Matchstick hexagons are joined in a row. Each new hexagon shares one side with the hexagon before it. How many sticks do 12 hexagons need? {b}",
+   "answer": {
+    "value": [
+     "61"
+    ],
+    "text": "61 sticks"
+   },
+   "explanation": "The first hexagon needs 6 sticks. Each new hexagon shares a side, so it adds 5 sticks. Rule: sticks = 5 × hexagons + 1. For 12 hexagons: 5 × 12 + 1 = 61 sticks.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "segs": [
+       [
+        0.0,
+        1.0,
+        -0.866,
+        0.5
+       ],
+       [
+        -0.866,
+        0.5,
+        -0.866,
+        -0.5
+       ],
+       [
+        -0.866,
+        -0.5,
+        -0.0,
+        -1.0
+       ],
+       [
+        -0.0,
+        -1.0,
+        0.866,
+        -0.5
+       ],
+       [
+        0.866,
+        -0.5,
+        0.866,
+        0.5
+       ],
+       [
+        0.866,
+        0.5,
+        0.0,
+        1.0
+       ]
+      ]
+     },
+     {
+      "segs": [
+       [
+        0.0,
+        1.0,
+        -0.866,
+        0.5
+       ],
+       [
+        -0.866,
+        0.5,
+        -0.866,
+        -0.5
+       ],
+       [
+        -0.866,
+        -0.5,
+        -0.0,
+        -1.0
+       ],
+       [
+        -0.0,
+        -1.0,
+        0.866,
+        -0.5
+       ],
+       [
+        0.866,
+        -0.5,
+        0.866,
+        0.5
+       ],
+       [
+        0.866,
+        0.5,
+        0.0,
+        1.0
+       ],
+       [
+        1.732,
+        1.0,
+        0.866,
+        0.5
+       ],
+       [
+        0.866,
+        -0.5,
+        1.732,
+        -1.0
+       ],
+       [
+        1.732,
+        -1.0,
+        2.598,
+        -0.5
+       ],
+       [
+        2.598,
+        -0.5,
+        2.598,
+        0.5
+       ],
+       [
+        2.598,
+        0.5,
+        1.732,
+        1.0
+       ]
+      ]
+     }
+    ],
+    "alt": "hexagons in a row"
+   },
+   "figright": true
+  }
+ },
+ "items": [
+  {
+   "id": "L5U09-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Matchstick hexagons are joined in a row. Each new hexagon shares one side with the hexagon before it. Figure 1 has 6 sticks. Figure 2 has 11 sticks.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "segs": [
+       [
+        0.0,
+        1.0,
+        -0.866,
+        0.5
+       ],
+       [
+        -0.866,
+        0.5,
+        -0.866,
+        -0.5
+       ],
+       [
+        -0.866,
+        -0.5,
+        -0.0,
+        -1.0
+       ],
+       [
+        -0.0,
+        -1.0,
+        0.866,
+        -0.5
+       ],
+       [
+        0.866,
+        -0.5,
+        0.866,
+        0.5
+       ],
+       [
+        0.866,
+        0.5,
+        0.0,
+        1.0
+       ]
+      ]
+     },
+     {
+      "segs": [
+       [
+        0.0,
+        1.0,
+        -0.866,
+        0.5
+       ],
+       [
+        -0.866,
+        0.5,
+        -0.866,
+        -0.5
+       ],
+       [
+        -0.866,
+        -0.5,
+        -0.0,
+        -1.0
+       ],
+       [
+        -0.0,
+        -1.0,
+        0.866,
+        -0.5
+       ],
+       [
+        0.866,
+        -0.5,
+        0.866,
+        0.5
+       ],
+       [
+        0.866,
+        0.5,
+        0.0,
+        1.0
+       ],
+       [
+        1.732,
+        1.0,
+        0.866,
+        0.5
+       ],
+       [
+        0.866,
+        -0.5,
+        1.732,
+        -1.0
+       ],
+       [
+        1.732,
+        -1.0,
+        2.598,
+        -0.5
+       ],
+       [
+        2.598,
+        -0.5,
+        2.598,
+        0.5
+       ],
+       [
+        2.598,
+        0.5,
+        1.732,
+        1.0
+       ]
+      ]
+     }
+    ],
+    "alt": "matchstick hexagons in a row"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "4 hexagons need {b} sticks.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 hexagons need {b} sticks.",
+     "answer": {
+      "value": [
+       "26"
+      ],
+      "text": "26"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Each new hexagon adds {b} sticks.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "explanation": "Figure 1 has 6 sticks and figure 2 has 11 sticks (figure 3 has 16). Each new hexagon adds 5 sticks because 1 side is shared. (a) 16 + 5 = 21. (b) 21 + 5 = 26. (c) 5.",
+   "figside": true
+  },
+  {
+   "id": "L5U09-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Use the hexagon pattern. Complete the rule and use it.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "sticks = {b} × hexagons + {b}",
+     "answer": {
+      "value": [
+       "5",
+       "1"
+      ],
+      "text": "5, 1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "20 hexagons need {b} sticks.",
+     "answer": {
+      "value": [
+       "101"
+      ],
+      "text": "101"
+     }
+    }
+   ],
+   "explanation": "(a) The first hexagon has 6 sticks, which is 5 + 1. Each new one adds 5. So sticks = 5 × hexagons + 1. (b) 5 × 20 + 1 = 101. (Not 2 × 51: doubling counts the starting stick twice.)"
+  },
+  {
+   "id": "L5U09-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Mei has some matchsticks. She makes hexagons in a row, as in the pattern.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "96 sticks make {b} hexagons.",
+     "answer": {
+      "value": [
+       "19"
+      ],
+      "text": "19"
+     }
+    },
+    {
+     "label": "b",
+     "text": "100 sticks make at most {b} hexagons, with {b} sticks left over.",
+     "answer": {
+      "value": [
+       "19",
+       "4"
+      ],
+      "text": "19, 4"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) 96 - 1 = 95, and 95 ÷ 5 = 19 hexagons. (b) 100 - 1 = 99, and 99 ÷ 5 = 19 with 4 left over. So 19 hexagons use 96 sticks and 4 sticks are left."
+  },
+  {
+   "id": "L5U09-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the pattern: 7, 12, 17, 22, ...",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The next 2 numbers are {b} and {b}.",
+     "answer": {
+      "value": [
+       "27",
+       "32"
+      ],
+      "text": "27, 32"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 10th number is {b}.",
+     "answer": {
+      "value": [
+       "52"
+      ],
+      "text": "52"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Is 100 in the pattern?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Each number is 5 more than the one before. (a) 27 and 32. (b) There are 9 jumps of 5 from the 1st to the 10th: 7 + 9 × 5 = 52. (c) 100 - 7 = 93, and 93 is not a multiple of 5, so 100 is not in the pattern. (Every number ends in 2 or 7.)"
+  },
+  {
+   "id": "L5U09-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Tiles make a plus sign. Figure n has a middle tile and 4 arms of n tiles each.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        0
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        2,
+        0
+       ]
+      ]
+     }
+    ],
+    "alt": "plus patterns"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Figure 4 has {b} tiles.",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Figure 15 has {b} tiles.",
+     "answer": {
+      "value": [
+       "61"
+      ],
+      "text": "61"
+     }
+    },
+    {
+     "label": "c",
+     "text": "tiles = {b} × figure number + {b}",
+     "answer": {
+      "value": [
+       "4",
+       "1"
+      ],
+      "text": "4, 1"
+     }
+    },
+    {
+     "label": "d",
+     "text": "The figure with 81 tiles is figure {b}.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    }
+   ],
+   "explanation": "Each figure has 4 arms of n tiles and 1 middle tile. (a) 4 × 4 + 1 = 17. (b) 4 × 15 + 1 = 61. (c) The rule is tiles = 4 × figure number + 1. (d) 81 - 1 = 80, and 80 ÷ 4 = 20.",
+   "figside": true
+  },
+  {
+   "id": "L5U09-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Adult tickets cost $9 each. Child tickets cost $5 each. A group buys 15 tickets and pays $107 altogether. Make a table to guess and check.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Adult tickets: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Child tickets: {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Try 10 adults and 5 children: $90 + $25 = $115, too much. Try 8 adults and 7 children: $72 + $35 = $107. Right. (Another way: all 15 child tickets cost $75. Each adult ticket instead of a child ticket adds $4. $107 - $75 = $32, and 32 ÷ 4 = 8 adult tickets.)"
+  },
+  {
+   "id": "L5U09-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "A shop has 17 stools and chairs. A stool has 3 legs and a chair has 4 legs. There are 61 legs altogether.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} chairs.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} stools.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Suppose all 17 are stools: 17 × 3 = 51 legs. That is 61 - 51 = 10 legs short. Each chair instead of a stool adds 1 leg, so there are 10 chairs. Then 17 - 10 = 7 stools. Check: 40 + 21 = 61."
+  },
+  {
+   "id": "L5U09-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "A quiz has 12 questions. A correct answer scores 5 marks. A wrong answer loses 2 marks. Siti answers every question and scores 39 marks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "She gets {b} answers wrong.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "She gets {b} answers right.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "All 12 right would score 12 × 5 = 60 marks. Each wrong answer costs 5 marks and also loses 2 marks: 7 marks. 60 - 39 = 21, and 21 ÷ 7 = 3 wrong. Then 12 - 3 = 9 right. Check: 45 - 6 = 39."
+  },
+  {
+   "id": "L5U09-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Long tables are joined end to end in a row. Each table has 2 chairs on each long side. 1 chair sits at each end.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "segs": [
+       [
+        0,
+        0,
+        2,
+        0
+       ],
+       [
+        0,
+        1,
+        2,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        1
+       ],
+       [
+        2,
+        0,
+        2,
+        1
+       ]
+      ],
+      "chairs": [
+       [
+        0.5,
+        1.6
+       ],
+       [
+        1.5,
+        1.6
+       ],
+       [
+        0.5,
+        -0.6
+       ],
+       [
+        1.5,
+        -0.6
+       ],
+       [
+        -0.6,
+        0.5
+       ],
+       [
+        2.6,
+        0.5
+       ]
+      ]
+     },
+     {
+      "segs": [
+       [
+        0,
+        0,
+        2,
+        0
+       ],
+       [
+        0,
+        1,
+        2,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        1
+       ],
+       [
+        2,
+        0,
+        2,
+        1
+       ],
+       [
+        2,
+        0,
+        4,
+        0
+       ],
+       [
+        2,
+        1,
+        4,
+        1
+       ],
+       [
+        2,
+        0,
+        2,
+        1
+       ],
+       [
+        4,
+        0,
+        4,
+        1
+       ]
+      ],
+      "chairs": [
+       [
+        0.5,
+        1.6
+       ],
+       [
+        1.5,
+        1.6
+       ],
+       [
+        0.5,
+        -0.6
+       ],
+       [
+        1.5,
+        -0.6
+       ],
+       [
+        2.5,
+        1.6
+       ],
+       [
+        3.5,
+        1.6
+       ],
+       [
+        2.5,
+        -0.6
+       ],
+       [
+        3.5,
+        -0.6
+       ],
+       [
+        -0.6,
+        0.5
+       ],
+       [
+        4.6,
+        0.5
+       ]
+      ]
+     }
+    ],
+    "alt": "tables in a row with chairs"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "5 tables have {b} chairs.",
+     "answer": {
+      "value": [
+       "22"
+      ],
+      "text": "22"
+     }
+    },
+    {
+     "label": "b",
+     "text": "chairs = {b} × tables + {b}",
+     "answer": {
+      "value": [
+       "4",
+       "2"
+      ],
+      "text": "4, 2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "50 chairs belong to {b} tables.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "explanation": "1 table has 6 chairs and 2 tables have 10. Each new table adds 4 chairs (2 on each side). (a) 4 × 5 + 2 = 22. (b) chairs = 4 × tables + 2. (c) 50 - 2 = 48, and 48 ÷ 4 = 12 tables.",
+   "figside": true
+  },
+  {
+   "id": "L5U09-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "The table shows a pattern.",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "Figure",
+     "Sticks"
+    ],
+    "rows": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      10
+     ],
+     [
+      3,
+      13
+     ],
+     [
+      4,
+      16
+     ]
+    ],
+    "width_mm": 56,
+    "rowh": 36,
+    "size": 20,
+    "alt": "pattern table"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "sticks = {b} × figure number + {b}",
+     "answer": {
+      "value": [
+       "3",
+       "4"
+      ],
+      "text": "3, 4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Figure 12 has {b} sticks.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The figure with 100 sticks is figure {b}.",
+     "answer": {
+      "value": [
+       "32"
+      ],
+      "text": "32"
+     }
+    }
+   ],
+   "explanation": "Each figure adds 3 sticks. Figure 1 has 7 = 3 + 4. (a) sticks = 3 × figure number + 4. (b) 3 × 12 + 4 = 40. (c) 100 - 4 = 96, and 96 ÷ 3 = 32."
+  },
+  {
+   "id": "L5U09-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The numbers 5, 9, 13, 17, ... include 101.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "10 hexagons need 51 sticks, so 20 hexagons need 102 sticks.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "No number in the pattern 6, 11, 16, 21, ... ends in 3.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) 101 - 5 = 96 and 96 ÷ 4 = 24, so it is the 25th number: true. (b) 20 hexagons need 5 × 20 + 1 = 101 sticks, not 102: false. (c) The numbers end in 6, 1, 6, 1, ... so none ends in 3: true."
+  },
+  {
+   "id": "L5U09-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A purse has 24 coins. Some are 20¢ coins and the rest are 50¢ coins. The coins are worth $9.60 altogether. How many 50¢ coins are there? {b}",
+   "answer": {
+    "value": [
+     "16"
+    ],
+    "text": "16 coins"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Suppose all are 20¢ coins. How many cents short is that?",
+   "explanation": "Suppose all 24 coins are 20¢ coins: 24 × 20¢ = $4.80. That is $9.60 - $4.80 = $4.80 short. Each 50¢ coin instead of a 20¢ coin adds 30¢. $4.80 ÷ 30¢ = 16 coins. So 16 fifty-cent coins and 8 twenty-cent coins. Check: $8.00 + $1.60 = $9.60."
+  },
+  {
+   "id": "L5U09-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Tiles make staircases. Figure 1 has 1 tile, figure 2 has 3 tiles, figure 3 has 6 tiles and figure 4 has 10 tiles.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ]
+     }
+    ],
+    "alt": "staircases of tiles"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Figure 10 has {b} tiles.",
+     "answer": {
+      "value": [
+       "55"
+      ],
+      "text": "55"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The figure with 105 tiles is figure {b}.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Figure n adds a column of n tiles. Two staircases make a rectangle.",
+   "explanation": "Figure 10 is 1 + 2 + 3 + ... + 10. Two copies of the staircase fit together as a rectangle 10 by 11 = 110 tiles. So one staircase has 55. (b) For figure 14: 14 × 15 = 210 and 210 ÷ 2 = 105. Figure 13 has 91 tiles and figure 15 has 120, so only figure 14 has 105.",
+   "figside": true
+  },
+  {
+   "id": "L5U09-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Look at the squares. Each new square adds an L-shaped layer of tiles (shaded). Find 1 + 3 + 5 + 7 + ... + 49. The numbers go up by 2 each time. {b}",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "panels": [
+     {
+      "cells": [
+       [
+        0,
+        0,
+        "s"
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1,
+        "s"
+       ],
+       [
+        1,
+        0,
+        "s"
+       ],
+       [
+        1,
+        1,
+        "s"
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2,
+        "s"
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2,
+        "s"
+       ],
+       [
+        2,
+        0,
+        "s"
+       ],
+       [
+        2,
+        1,
+        "s"
+       ],
+       [
+        2,
+        2,
+        "s"
+       ]
+      ]
+     }
+    ],
+    "alt": "squares built from L-shaped layers"
+   },
+   "answer": {
+    "value": [
+     "625"
+    ],
+    "text": "625"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "1, 1 + 3, 1 + 3 + 5: what kind of numbers are they?",
+   "explanation": "1 = 1 × 1, 1 + 3 = 4 = 2 × 2, 1 + 3 + 5 = 9 = 3 × 3. Each new odd number adds an L-shaped layer to make the next square. The odd numbers up to 49 are 25 numbers (49 = 2 × 25 - 1). So the total is 25 × 25 = 625.",
+   "figright": true
+  },
+  {
+   "id": "L5U09-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 5: Adding a pattern\nAdd 4 + 7 + 10 + 13 + ... + 100. The numbers go up by 3 each time. {b}",
+   "answer": {
+    "value": [
+     "1716"
+    ],
+    "text": "1716"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "How many numbers are there? Pair the first with the last.",
+   "explanation": "From 4 to 100 there are (100 - 4) ÷ 3 = 32 jumps, so 33 numbers. Pair them: 4 + 100 = 104, 7 + 97 = 104, and so on. Each pair makes 104. There are 33 numbers, which is 16 pairs and a middle number 52. 16 × 104 + 52 = 1716. (Or: 33 × 104 ÷ 2 = 1716.)"
+  },
+  {
+   "id": "L5U09-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 5: Handshakes\nEvery person in a group shakes hands once with every other person.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "5 people make {b} handshakes.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "12 people make {b} handshakes.",
+     "answer": {
+      "value": [
+       "66"
+      ],
+      "text": "66"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "n people each shake n - 1 hands. Each handshake counts twice.",
+   "explanation": "(a) Each of the 5 people shakes 4 hands: 5 × 4 = 20. Each handshake is counted twice (once for each person), so 20 ÷ 2 = 10. (b) 12 × 11 = 132, and 132 ÷ 2 = 66 handshakes."
+  },
+  {
+   "id": "L5U09-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A quiz has 30 questions. Each right answer scores 4 marks. A wrong answer loses 1 mark. A blank scores 0. Ali leaves 3 questions blank and scores 73 marks. How many questions does he get right? {b}",
+   "answer": {
+    "value": [
+     "20"
+    ],
+    "text": "20 right"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Only answered questions count. Suppose all of them are right.",
+   "explanation": "Ali answers 30 - 3 = 27 questions. All 27 right would score 108 marks. Each wrong answer loses 4 marks and has 1 mark taken away: 5 marks. 108 - 73 = 35, and 35 ÷ 5 = 7 wrong. Right: 27 - 7 = 20. Check: 80 - 7 = 73."
+  },
+  {
+   "id": "L5U09-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "The numbers go 6, 11, 16, 21, ... What is the 15th number? {b}",
+   "answer": {
+    "value": [
+     "76"
+    ],
+    "text": "76"
+   },
+   "explanation": "Each number is 5 more. There are 14 jumps of 5 from the 1st to the 15th: 6 + 14 × 5 = 76."
+  },
+  {
+   "id": "L5U09-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "The rule for a pattern is: dots = 3 × figure number + 2. Which figure has 41 dots? {b}",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "Figure 13"
+   },
+   "explanation": "41 - 2 = 39, and 39 ÷ 3 = 13. Check: 3 × 13 + 2 = 41."
+  },
+  {
+   "id": "L5U09-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A box holds 20 stools and chairs. A stool has 3 legs and a chair has 4 legs. There are 70 legs altogether. How many chairs are there? {b}",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10 chairs"
+   },
+   "explanation": "Suppose all 20 are stools: 60 legs. That is 70 - 60 = 10 legs short. Each chair adds 1 leg, so there are 10 chairs (and 10 stools)."
+  },
+  {
+   "id": "L5U09-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Matchstick hexagons are joined in a row. The rule is sticks = 5 × hexagons + 1. Mei has 130 sticks. What is the most hexagons she can make? {b}",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25 hexagons"
+   },
+   "explanation": "130 - 1 = 129, and 129 ÷ 5 = 25 with 4 left over. So 25 hexagons use 126 sticks, and 4 sticks are left."
+  }
+ ]
+}

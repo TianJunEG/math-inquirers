@@ -15,7 +15,7 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 6 | Rate racers | yes | yes | yes | yes |
 | 7 | Percentage puzzles | yes | yes | yes | yes |
 | 8 | Angle chasers | yes | yes | yes | yes |
-| 9 | Pattern generalisers | | | | |
+| 9 | Pattern generalisers | yes | yes | yes | yes |
 | 10 | Challenge day | | | | |
 
-Resume: next unit is 9.
+Resume: next unit is 10.
