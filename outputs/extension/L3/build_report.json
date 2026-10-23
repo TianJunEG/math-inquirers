@@ -1,0 +1,374 @@
+{
+ "level": 3,
+ "units": [
+  1
+ ],
+ "pages": [
+  {
+   "no": 1,
+   "kind": "cover",
+   "label": "Cover",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 2,
+   "kind": "front",
+   "label": "About this book",
+   "exempt": true,
+   "fill": 0.7936566683831102,
+   "over": false,
+   "excess_mm": -53,
+   "edition": "soft"
+  },
+  {
+   "no": 3,
+   "kind": "front",
+   "label": "Welcome",
+   "exempt": true,
+   "fill": 0.9773912203913491,
+   "over": false,
+   "excess_mm": -5.8,
+   "edition": "soft"
+  },
+  {
+   "no": 4,
+   "kind": "front",
+   "label": "Contents",
+   "exempt": true,
+   "fill": 0.9436470133882595,
+   "over": false,
+   "excess_mm": -14.5,
+   "edition": "soft"
+  },
+  {
+   "no": 5,
+   "kind": "front",
+   "label": "Pace plan",
+   "exempt": true,
+   "fill": 0.7694869979402678,
+   "over": false,
+   "excess_mm": -59.2,
+   "edition": "soft"
+  },
+  {
+   "no": 6,
+   "kind": "learn",
+   "label": "Unit 1 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9502767765190525,
+   "over": false,
+   "excess_mm": -12.8,
+   "edition": "soft"
+  },
+  {
+   "no": 7,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9575019309989702,
+   "over": false,
+   "excess_mm": -10.9,
+   "edition": "soft"
+  },
+  {
+   "no": 8,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 1.3149620236869206,
+   "over": true,
+   "excess_mm": 80.9,
+   "edition": "soft"
+  },
+  {
+   "no": 9,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9305162203913491,
+   "over": false,
+   "excess_mm": -17.9,
+   "edition": "soft"
+  },
+  {
+   "no": 10,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.7512712409886715,
+   "over": false,
+   "excess_mm": -63.9,
+   "edition": "soft"
+  },
+  {
+   "no": 11,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Go further",
+   "exempt": false,
+   "fill": 1.0055998970133884,
+   "over": true,
+   "excess_mm": 1.4,
+   "edition": "soft"
+  },
+  {
+   "no": 12,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 1.0071929711637486,
+   "over": true,
+   "excess_mm": 1.8,
+   "edition": "soft"
+  },
+  {
+   "no": 13,
+   "kind": "front",
+   "label": "My progress",
+   "exempt": true,
+   "fill": 0.8826435375901133,
+   "over": false,
+   "excess_mm": -30.2,
+   "edition": "soft"
+  },
+  {
+   "no": 14,
+   "kind": "cert",
+   "label": "Certificate",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 15,
+   "kind": "divider",
+   "label": "Answers",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 16,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9418447476828012,
+   "over": false,
+   "excess_mm": -14.9,
+   "edition": "soft"
+  },
+  {
+   "no": 17,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.8607266992790937,
+   "over": false,
+   "excess_mm": -35.8,
+   "edition": "soft"
+  },
+  {
+   "no": 18,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.5157054582904222,
+   "over": false,
+   "excess_mm": -124.4,
+   "edition": "soft"
+  },
+  {
+   "no": 1,
+   "kind": "cover",
+   "label": "Cover",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 2,
+   "kind": "front",
+   "label": "About this book",
+   "exempt": true,
+   "fill": 0.7936566683831102,
+   "over": false,
+   "excess_mm": -53,
+   "edition": "print"
+  },
+  {
+   "no": 3,
+   "kind": "front",
+   "label": "Welcome",
+   "exempt": true,
+   "fill": 0.9773912203913491,
+   "over": false,
+   "excess_mm": -5.8,
+   "edition": "print"
+  },
+  {
+   "no": 4,
+   "kind": "front",
+   "label": "Contents",
+   "exempt": true,
+   "fill": 0.9436470133882595,
+   "over": false,
+   "excess_mm": -14.5,
+   "edition": "print"
+  },
+  {
+   "no": 5,
+   "kind": "front",
+   "label": "Pace plan",
+   "exempt": true,
+   "fill": 0.7715467301750772,
+   "over": false,
+   "excess_mm": -58.7,
+   "edition": "print"
+  },
+  {
+   "no": 6,
+   "kind": "learn",
+   "label": "Unit 1 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9543962409886715,
+   "over": false,
+   "excess_mm": -11.7,
+   "edition": "print"
+  },
+  {
+   "no": 7,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9575019309989702,
+   "over": false,
+   "excess_mm": -10.9,
+   "edition": "print"
+  },
+  {
+   "no": 8,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 1.3149620236869206,
+   "over": true,
+   "excess_mm": 80.9,
+   "edition": "print"
+  },
+  {
+   "no": 9,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9305162203913491,
+   "over": false,
+   "excess_mm": -17.9,
+   "edition": "print"
+  },
+  {
+   "no": 10,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.7574504376930999,
+   "over": false,
+   "excess_mm": -62.3,
+   "edition": "print"
+  },
+  {
+   "no": 11,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Go further",
+   "exempt": false,
+   "fill": 1.0055998970133884,
+   "over": true,
+   "excess_mm": 1.4,
+   "edition": "print"
+  },
+  {
+   "no": 12,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 1.0071929711637486,
+   "over": true,
+   "excess_mm": 1.8,
+   "edition": "print"
+  },
+  {
+   "no": 13,
+   "kind": "front",
+   "label": "My progress",
+   "exempt": true,
+   "fill": 0.8847032698249228,
+   "over": false,
+   "excess_mm": -29.6,
+   "edition": "print"
+  },
+  {
+   "no": 14,
+   "kind": "cert",
+   "label": "Certificate",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 15,
+   "kind": "divider",
+   "label": "Answers",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 16,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9418447476828012,
+   "over": false,
+   "excess_mm": -14.9,
+   "edition": "print"
+  },
+  {
+   "no": 17,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.8607266992790937,
+   "over": false,
+   "excess_mm": -35.8,
+   "edition": "print"
+  },
+  {
+   "no": 18,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.5157054582904222,
+   "over": false,
+   "excess_mm": -124.4,
+   "edition": "print"
+  }
+ ],
+ "problems": [
+  "soft page 8 (Unit 1 \u00b7 Start here 2): content overflows the page (natural height minus body 80.9 mm)",
+  "soft page 10 (Unit 1 \u00b7 Think harder): natural fill 0.75 < 0.85",
+  "soft page 11 (Unit 1 \u00b7 Go further): content overflows the page (natural height minus body 1.4 mm)",
+  "soft page 12 (Unit 1 \u00b7 Check yourself): content overflows the page (natural height minus body 1.8 mm)",
+  "print page 8 (Unit 1 \u00b7 Start here 2): content overflows the page (natural height minus body 80.9 mm)",
+  "print page 10 (Unit 1 \u00b7 Think harder): natural fill 0.76 < 0.85",
+  "print page 11 (Unit 1 \u00b7 Go further): content overflows the page (natural height minus body 1.4 mm)",
+  "print page 12 (Unit 1 \u00b7 Check yourself): content overflows the page (natural height minus body 1.8 mm)"
+ ],
+ "soft_pages": 18,
+ "print_pages": 18
+}

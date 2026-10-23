@@ -83,7 +83,7 @@ class _Code:
         w = 0
         for s in _tok(text):
             if s[0] == '<':
-                w += self.seg_w(s[1:-1]) + 2 * self.cw * 0.9
+                w += self.seg_w(s[1:-1]) + 3.2 * self.cw
             elif s[0] == '(':
                 inner = _signs(s[1:-1])
                 w += max(len(inner) * self.cw + 1.2 * self.cw, 2.4 * self.cw) if inner.strip() else 3.4 * self.cw
@@ -99,12 +99,12 @@ class _Code:
         for s in _tok(text):
             if s[0] == '<':
                 inner = s[1:-1]
-                w = self.seg_w(inner) + 2 * cw * 0.9
+                w = self.seg_w(inner) + 3.2 * cw
                 hh = h * 0.8
                 y0 = cy - hh / 2
                 pts = [(x + hh / 2, y0), (x + w - hh / 2, y0), (x + w, cy), (x + w - hh / 2, y0 + hh), (x + hh / 2, y0 + hh), (x, cy)]
                 self.out.append('<polygon points="' + ' '.join(f'{a:.1f},{b:.1f}' for a, b in pts) + f'" fill="#fff" stroke="{NAVY}" stroke-width="2.2" stroke-linejoin="round"/>')
-                self.seg_draw(inner, x + cw * 0.9, y, h)
+                self.seg_draw(inner, x + 1.6 * cw, y, h)
                 x += w
             elif s[0] == '(':
                 inner = _signs(s[1:-1])
@@ -118,7 +118,7 @@ class _Code:
                 x += w
             else:
                 t = _signs(s)
-                self.out.append(T(x, cy + fs * 0.36, t, fs, 'start', 700))
+                self.out.append(T(x, cy + fs * 0.36, t.replace(' ', '\u00a0'), fs, 'start', 700))
                 x += len(t) * cw
         return x
 
@@ -218,7 +218,7 @@ class _Code:
 
 
 def code(spec, w=None):
-    fs = spec.get('fs', FS)
+    fs = spec.get('fs', 16)
     c = _Code(fs)
     c.nums = bool(spec.get('nums'))
     c.gaps = set(spec.get('gaps', []))
@@ -299,7 +299,7 @@ def nline(spec, w=None):
             if j.get('lab'):
                 P.append(T((a + b) / 2, yb + 32 + 17, j['lab'], 17))
         else:
-            yt = ay - 18
+            yt = ay - (46 if any(m.get('lab') for m in spec.get('marks', [])) else 18)
             P.append(f'<path d="M{a:.1f} {yt} Q{(a + b) / 2:.1f} {yt - 44} {b:.1f} {yt}" fill="none" stroke="{NAVY}" stroke-width="3.2"/>')
             P.append(f'<path d="M{b:.1f} {yt} l{-9 if b > a else 9} -12 M{b:.1f} {yt} l{-14 if b > a else 14} -5" stroke="{NAVY}" stroke-width="3" fill="none"/>')
             if j.get('lab'):
@@ -388,13 +388,17 @@ def machine(spec, w=None):
     P.append(T(xs[-1][0] + xs[-1][1] / 2, 18, 'OUT', 15, weight=800))
     H = top + vh + 14
     if spec.get('undo'):
-        # dashed return arrows under the chain (the child undoes the steps from OUT back to IN)
-        for i in range(0, len(ch) - 1):
-            a = xs[i + 1][0] + xs[i + 1][1] / 2
+        # dashed return arrows under the chain: from each value back to the one before it, with the opposite step written under (spec undo = list of labels)
+        labs = spec['undo']
+        yb = top + vh + 6
+        for k, i in enumerate(range(0, len(ch) - 2, 2)):
+            a = xs[i + 2][0] + xs[i + 2][1] / 2
             b = xs[i][0] + xs[i][1] / 2
-            yb = top + vh + 6
-            P.append(f'<path d="M{a:.1f} {yb} Q{(a + b) / 2:.1f} {yb + 30} {b:.1f} {yb}" fill="none" stroke="{NAVY}" stroke-width="2.4" stroke-dasharray="7 5"/>')
-        H += 36
+            P.append(f'<path d="M{a:.1f} {yb} Q{(a + b) / 2:.1f} {yb + 44} {b:.1f} {yb}" fill="none" stroke="{NAVY}" stroke-width="2.6" stroke-dasharray="7 5"/>')
+            P.append(f'<path d="M{b:.1f} {yb} l10 12 M{b:.1f} {yb} l15 -3" stroke="{NAVY}" stroke-width="2.8" fill="none"/>')
+            if k < len(labs) and labs[k]:
+                P.append(T((a + b) / 2, yb + 52, _signs(labs[k]), 17, weight=800))
+        H += 62
     return wrap(''.join(P), W, H, spec.get('label', 'number machine'), w)
 
 

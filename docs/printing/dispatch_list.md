@@ -7,7 +7,7 @@ Used by the owner's staff. One row per parcel. Template: `docs/printing/dispatch
 |---|---|
 | date | Date the row is sent to the printer (YYYY-MM-DD). One batch per day, before the printer's cutoff time. |
 | child_level | 1 to 6 (ages 6-8 ... 11-13), as registered. |
-| workbook_file | `outputs/print/Math_Inquirers_P<level>_Workbook_PRINT.pdf` (P1 = Level 1 ... P6 = Level 6). |
+| workbook_file | `outputs/print/bw/Math_Inquirers_P<level>_Workbook_PRINT.pdf` (P1 = Level 1 ... P6 = Level 6). |
 | quantity | Copies in this parcel (1 per child; 2 for siblings only if in one parcel). |
 | parcel_name | Recipient name on the parcel (the "Parcel name" field if given, otherwise the parent's name). |
 | address | Block/house number, street, unit. Singapore only. |

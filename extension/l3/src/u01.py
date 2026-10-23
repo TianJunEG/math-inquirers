@@ -45,10 +45,10 @@ u.S(2, 'Use the cards once each in every number.', parts=[
     P('c', 'The greatest odd number {b}', A('8725')), P('d', 'The smallest odd number {b}', A('2587'))],
     why='(a) Biggest digits first: 8752. (b) Smallest digits first, no 0 here: 2578. (c) The ones digit must be 7 or 5. With 5 last, 8725 beats 8527. (d) With 7 last, 2587 beats 2785.',
     figure=cards(2, 7, 5, 8))
-u.S(2, 'Use the cards 3, 0, 0 and 5 once each. Write ALL the 4-digit numbers you can make. Begin with the smallest.\n{ll}',
+u.S(2, 'Use the cards 3, 0, 0 and 5 once each. Write ALL the 4-digit numbers you can make. Begin with the smallest.',
     A(['3005', '3050', '3500', '5003', '5030', '5300'], '3005, 3050, 3500, 5003, 5030, 5300', list=True),
     why='The first digit is 3 or 5, never 0. After 3, the 5 can go in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same way: 5003, 5030, 5300. That is 6 numbers.',
-    figure=cards(3, 0, 0, 5))
+    figure=cards(3, 0, 0, 5), space={'rows': ['{ll}']})
 u.S(2, 'Write the next two numbers in each pattern.', parts=[
     P('a', '2300, 2600, 2900, {b}, {b}', A(['3200', '3500'], '3200, 3500 (add 300)', list=True)),
     P('b', '9000, 8750, 8500, {b}, {b}', A(['8250', '8000'], '8250, 8000 (subtract 250)', list=True)),
@@ -58,7 +58,7 @@ u.S(2, 'A pattern starts at 4000 and goes up by 500 each time.', parts=[
     P('a', 'Is 6800 in the pattern?   {circ:Yes|No}', A('No')),
     P('b', 'The first number above 6800 in the pattern is {b}.', A('7000'))],
     why='The pattern goes 4000, 4500, 5000, 5500, 6000, 6500, 7000. It jumps over 6800 and lands on 7000.')
-u.S(2, 'Look at the number line.', parts=[
+u.S(3, 'Look at the number line.', parts=[
     P('a', 'Arrow A points to {b}.', A('6150')), P('b', 'Arrow B points to {b}.', A('6450')), P('c', 'Arrow C points to {b}.', A('6350'))],
     why='Each small mark is 50. A is halfway from 6100 to 6200: 6150. B is halfway from 6400 to 6500: 6450. C is halfway from 6300 to 6400: 6350.',
     figure={'type': 'l3_nline', 'lo': 6000, 'hi': 6500, 'step': 50, 'lab': 100, 'W': 760, 'width_mm': 152,
@@ -76,8 +76,6 @@ u.S(3, 'Look at the number 5737.', parts=[
     P('a', 'The first 7 is worth {b}.', A('700')), P('b', 'The second 7 is worth {b}.', A('7')),
     P('c', 'The first 7 is worth {b} more than the second 7.', A('693'))],
     why='The first 7 is in the hundreds place: 700. The second 7 is in the ones place: 7. 700 - 7 = 693.')
-u.S(3, 'A school has 2 boxes of 1000 stickers, 18 packs of 100 stickers and 5 packs of 10 stickers. How many stickers are there? {b}',
-    A('3850'), why='2 boxes are 2000. 18 packs of 100 are 1800. 5 packs of 10 are 50. 2000 + 1800 + 50 = 3850.')
 u.S(3, 'Write the missing digits so that each number is correct.', parts=[
     P('a', '4900 + 70 + 3 = 49{b}{b}', A(['7', '3'], '4973', list=True)),
     P('b', '5000 + 1300 = {b}{b}00', A(['6', '3'], '6300', list=True)),
@@ -89,16 +87,16 @@ u.T('A 4-digit number has all different digits. Its digits add up to 8. It is an
     P('a', 'The greatest it can be is {b}.', A('5210')), P('b', 'The smallest it can be is {b}.', A('1034'))],
     hint='Find the sets of 4 different digits that add up to 8 first.',
     why='Only two sets of 4 different digits add up to 8: 0, 1, 2, 5 and 0, 1, 3, 4. Even numbers need an even last digit. The greatest even number is 5210. The smallest is 1034.',
-    space={'rows': ['Sets of digits:', 'Numbers:']})
+    space={'rows': ['Sets of digits:', 'Numbers I tried:', '', '']})
 u.T('Ali writes every number from 1 to 200. How many times does he write the digit 7? {b}', A('40'),
     hint='Count 1 to 99 first. Then count 100 to 200.',
     why='From 1 to 99: the digit 7 is in the ones place 10 times (7, 17, ... 97) and in the tens place 10 times (70 to 79). That is 20. From 100 to 200 it is 20 again. Total 40.',
-    space={'rows': ['1 to 99:', '100 to 200:']})
+    space={'rows': ['1 to 99:', '100 to 200:', 'Total:', '']})
 u.T('Mei uses only the digits 1 and 2 to make 4-digit numbers. A digit can be used more than once. She lists all the numbers from smallest to greatest. What is the 10th number in her list? {b}',
     A('2112'),
     hint='Begin with 1111. Change the ones digit first. Keep a list.',
     why='The list goes 1111, 1112, 1121, 1122, 1211, 1212, 1221, 1222. That is 8 numbers, all starting with 1. Next are 2111 (9th) and 2112 (10th).',
-    space={'rows': ['My list:']})
+    space={'rows': ['My list:', '', '']})
 
 # ---------------- Go further
 u.G('Beyond Level 3: Counting digit sums.\nHow many 3-digit numbers have digits that add up to 4? List them by first digit.', parts=[
@@ -112,7 +110,7 @@ u.G('Beyond Level 3: Growing jumps.\nLook at the jumps between the numbers. Writ
     hint='Write the jumps between the numbers. What do you see?',
     why='The jumps are 3, 6, 9, 12. Each jump is 3 more than the one before. The next jumps are 15 and 18: 35 + 15 = 50 and 50 + 18 = 68.',
     space={'rows': ['Jumps:']})
-u.G('Make up your own What number am I? puzzle. Choose a secret 4-digit number. Write 3 clues about its digits. Check that only ONE number fits all your clues. Swap with a grown-up.\n{ll}',
+u.G('Make up your own What number am I? puzzle. Choose a secret 4-digit number. Write 3 clues about its digits. Check that only ONE number fits all your clues. Swap with a grown-up.',
     A('7423', 'Answers vary. Example: I am between 7000 and 8000. My hundreds digit is double my tens digit. My ones digit is 1 more than my tens digit. My digits add up to 16. The only number is 7423.'),
     hint='Pick the number first. Then write clues about its digits.',
     why='Check that every clue is true for your secret number. Then list the numbers that fit clue 1, and cross out those that fail clue 2, and so on. In the example, the tens digit t gives 7 + 2t + t + (t + 1) = 16, so t = 2 and the number is 7423.',
@@ -125,7 +123,7 @@ u.G('I am a 4-digit number between 3000 and 4000. All my digits are different. M
 u.C('In 7258, the digit 2 is worth {b}.', A('200'), why='The 2 is in the hundreds place, so it is worth 200.')
 u.C('Write the next two numbers. 6500, 6000, 5500, {b}, {b}', A(['5000', '4500'], '5000, 4500', list=True), why='Subtract 500 each time: 5500 - 500 = 5000 and 5000 - 500 = 4500.')
 u.C('Use the cards 6, 1, 0 and 5 once each. Write the smallest 4-digit number. {b}', A('1056'),
-    why='The first digit cannot be 0, so use 1. Then the rest in order: 0, 5, 6. The number is 1056.', figure=cards(6, 1, 0, 5))
+    why='The first digit cannot be 0, so use 1. Then the rest in order: 0, 5, 6. The number is 1056.', figure=cards(6, 1, 0, 5), figright=True)
 u.C('Ali has 5 boxes of 1000 beads, 12 bags of 100 beads and 8 loose beads. How many beads does he have? {b}', A('6208'),
     why='5 boxes are 5000. 12 bags are 1200. 5000 + 1200 + 8 = 6208.')
 u.save()

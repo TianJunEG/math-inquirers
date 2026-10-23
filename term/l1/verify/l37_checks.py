@@ -129,11 +129,11 @@ def _t3(e):
 
 
 def _r1(e):
-    return len([(r, c) for r in range(e['n']) for c in range(e['n'])])          # boxes in an n by n grid
+    return 7 * e['w']                                                             # days in w weeks (Term 3 Lesson 7 c2, copied)
 
 
 def _r2(e):
-    return len([r for r in range(e['n'])])                                        # one circle in every row
+    return e['s'] + 21                                                            # next number counting in 7s (Term 3 Lesson 7 c5, copied)
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c4': _c4, 'c5': _c5, 't1': _t1, 't3': _t3, 'r1': _r1, 'r2': _r2}
@@ -265,8 +265,8 @@ def run(d):
     eq(items['t3']['answer'], _t3(dict(n=3)), 't3'); eq(items['g1']['answer'], 3 * 2 + 1, 'g1'); eq(items['g1']['fig']['rows'][0]['n'] * items['g1']['fig']['each'], 7, 'g1 fig')
     ben = 5; kumar = ben + 3; aisha = kumar - 2; eq(items['g2']['answer'], aisha, 'g2'); eq(items['g2']['answer'], 6, 'g2 value')
     l27 = {i['id']: i for i in json.load(open(os.path.join(L1, 'lessons', 'l27.json')))['online_practice']['items']}
-    eq((items['r1']['q'], items['r1']['answer']), (l27['c4']['q'], l27['c4']['answer']), 'r1 is Term 3 Lesson 7 c4'); eq((items['r2']['q'], items['r2']['answer']), (l27['c5']['q'], l27['c5']['answer']), 'r2 is Term 3 Lesson 7 c5')
-    eq((items['r1']['rewind_of'], items['r2']['rewind_of']), ('Term 3 Lesson 7', 'Term 3 Lesson 7'), 'rewind tags'); eq(_r1(dict(n=3)), 9, 'r1 3 by 3 grid'); eq(_r2(dict(n=3)), 3, 'r2 3 by 3 grid')
+    eq((items['r1']['q'], items['r1']['answer']), (l27['c2']['q'], l27['c2']['answer']), 'r1 is Term 3 Lesson 7 c2'); eq((items['r2']['q'], items['r2']['answer']), (l27['c5']['q'], l27['c5']['answer']), 'r2 is Term 3 Lesson 7 c5')
+    eq((items['r1']['rewind_of'], items['r2']['rewind_of']), ('Term 3 Lesson 7', 'Term 3 Lesson 7'), 'rewind tags'); eq(_r1(dict(w=2)), 14, 'r1 2 weeks'); eq(_r2(dict(s=3)), 24, 'r2 3, 10, 17, 24')
     # ---------------------------------------------------------------- kit contract and hand-offs
     k = d['workbook']['kits'][0]; eq((k['type'], k['cols'], k['rows']), ('graph_mat', 8, 5), 'kit page: the graph mat is 5 rows of 8 squares (one row for each kind)')
     kc = {r['piece'].split(' (')[0]: r for r in d['materials']['kit_contract']}; eq(kc['graph mat page']['supplied'], 1, 'one mat'); eq(kc['graph mat page']['max_used'], 1, 'Explore uses the mat once')

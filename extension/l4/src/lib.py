@@ -38,6 +38,19 @@ def item(id_, tier, page, text, ans=None, parts=None, why='', fig=None, hint=Non
 
 
 def write(n, unit):
+    import re
+    last = {}
+    for it in unit['items']:
+        t = it['id'].split('-')[-1]
+        k = t[0]
+        nn = int(t[1:])
+        assert nn == last.get(k, 0) + 1, f'id order: {it["id"]}'
+        last[k] = nn
+    pg = {}
+    for it in unit['items']:
+        if it.get('page'):
+            assert it['page'] >= pg.get(it['tier'], 0), f'page order: {it["id"]}'
+            pg[it['tier']] = it['page']
     path = os.path.join(DATA, f'l4_u{n:02d}.json')
     # ids for items are written as L4U<nn>-<tier letter><nn> by the caller
     json.dump(unit, open(path, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)

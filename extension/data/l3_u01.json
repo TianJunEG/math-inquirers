@@ -288,7 +288,7 @@
    "id": "L3U01-S07",
    "tier": "start",
    "page": 2,
-   "text": "Use the cards 3, 0, 0 and 5 once each. Write ALL the 4-digit numbers you can make. Begin with the smallest.\n{ll}",
+   "text": "Use the cards 3, 0, 0 and 5 once each. Write ALL the 4-digit numbers you can make. Begin with the smallest.",
    "answer": {
     "value": [
      "3005",
@@ -309,6 +309,11 @@
      0,
      0,
      5
+    ]
+   },
+   "space": {
+    "rows": [
+     "{ll}"
     ]
    }
   },
@@ -389,7 +394,7 @@
   {
    "id": "L3U01-S10",
    "tier": "start",
-   "page": 2,
+   "page": 3,
    "text": "Look at the number line.",
    "parts": [
     {
@@ -542,19 +547,6 @@
    "id": "L3U01-S14",
    "tier": "start",
    "page": 3,
-   "text": "A school has 2 boxes of 1000 stickers, 18 packs of 100 stickers and 5 packs of 10 stickers. How many stickers are there? {b}",
-   "answer": {
-    "value": [
-     "3850"
-    ],
-    "text": "3850"
-   },
-   "explanation": "2 boxes are 2000. 18 packs of 100 are 1800. 5 packs of 10 are 50. 2000 + 1800 + 50 = 3850."
-  },
-  {
-   "id": "L3U01-S15",
-   "tier": "start",
-   "page": 3,
    "text": "Write the missing digits so that each number is correct.",
    "parts": [
     {
@@ -626,7 +618,9 @@
    "space": {
     "rows": [
      "Sets of digits:",
-     "Numbers:"
+     "Numbers I tried:",
+     "",
+     ""
     ]
    }
   },
@@ -646,7 +640,9 @@
    "space": {
     "rows": [
      "1 to 99:",
-     "100 to 200:"
+     "100 to 200:",
+     "Total:",
+     ""
     ]
    }
   },
@@ -665,7 +661,9 @@
    "hint": "Begin with 1111. Change the ones digit first. Keep a list.",
    "space": {
     "rows": [
-     "My list:"
+     "My list:",
+     "",
+     ""
     ]
    }
   },
@@ -730,7 +728,7 @@
    "id": "L3U01-G03",
    "tier": "go",
    "page": 5,
-   "text": "Make up your own What number am I? puzzle. Choose a secret 4-digit number. Write 3 clues about its digits. Check that only ONE number fits all your clues. Swap with a grown-up.\n{ll}",
+   "text": "Make up your own What number am I? puzzle. Choose a secret 4-digit number. Write 3 clues about its digits. Check that only ONE number fits all your clues. Swap with a grown-up.",
    "answer": {
     "value": [
      "7423"
@@ -809,7 +807,8 @@
      0,
      5
     ]
-   }
+   },
+   "figright": true
   },
   {
    "id": "L3U01-C04",

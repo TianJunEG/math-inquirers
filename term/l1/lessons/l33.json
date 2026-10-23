@@ -3221,11 +3221,11 @@
   {
    "id": "H5",
    "tier": "start",
-   "rewind_of": "Term 2 Lesson 3",
-   "text": "Mei has 7 red marbles and 7 blue marbles. How many marbles does she have altogether? She has ___ marbles.",
-   "answer": "14",
-   "val": 14,
-   "solution": "7 + 7 = 14. Two of the same number is a double."
+   "text": "A cup hides some counters. The cup and 5 loose counters make 14 counters in all. How many counters are in the cup? ___",
+   "answer": "9",
+   "val": 9,
+   "solution": "14 - 5 = 9, so the cup holds 9 counters.",
+   "rewind_of": "Term 2 Lesson 3"
   }
  ],
  "online_practice": {

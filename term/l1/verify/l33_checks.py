@@ -350,7 +350,7 @@ def run(d):
     q = H['H3']; eq(len(dots_on_line((0, 0), (8, 0))), 9, 'H3 9 dots on the line'); eq(len(dots_on_line((0, 0), (8, 0))) - 1, 8, 'H3 8 steps'); eq(q['val'], 8, 'H3 val'); eq(nums(q['text']), [1, 9], 'H3 text')
     q = H['H4']; eq(len(monotone_routes(1, 4)), 5, 'H4 routes'); eq(q['val'], 5, 'H4 val'); eq(nums(q['text'])[:2], [1, 4], 'H4 text'); eq(sorted(monotone_routes(1, 4)), ['RUUUU', 'URUUU', 'UURUU', 'UUURU', 'UUUUR'], 'H4 the five places for the right step')
     q = H['H5']; l13 = json.load(open(os.path.join(L1, 'lessons', 'l13.json')))['home_practice']; src = [h for h in l13 if h['id'] == 'H2'][0]
-    eq((q['text'], q['answer'], q['val']), (src['text'], src['answer'], src['val']), 'H5 is the Term 2 Lesson 3 item H2, copied'); eq(q['rewind_of'], 'Term 2 Lesson 3', 'H5 tag'); eq(7 + 7, 14, 'H5 double 7'); eq(q['val'], 14, 'H5 val')
+    eq((q['text'], q['answer'], q['val']), (src['text'], src['answer'], src['val']), 'H5 is the Term 2 Lesson 3 item H2, copied'); eq(q['rewind_of'], 'Term 2 Lesson 3', 'H5 tag'); eq(14 - 5, 9, 'H5 the cup holds 9'); eq(q['val'], 9, 'H5 val')
     eq([h['tier'] for h in d['home_practice']], ['start', 'start', 'start', 'think', 'start'], 'home tiers')
     # ---------------------------------------------------------------- online practice, authored numbers
     items = {i['id']: i for i in d['online_practice']['items']}

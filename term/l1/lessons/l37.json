@@ -3437,41 +3437,38 @@
     "id": "r1",
     "tier": "core",
     "type": "number",
-    "q": "A grid has 3 rows and 3 columns. How many boxes are in the grid?",
-    "hint": "Count the boxes in one row. Then count the rows.",
+    "q": "How many days are in 2 weeks?",
+    "hint": "One week is 7 days. Count in 7s.",
     "steps": [
-     "Each row has 3 boxes.",
-     "There are 3 rows.",
-     "3 rows of 3 boxes make 9 boxes."
+     "One week is 7 days.",
+     "7 and 7 make 14.",
+     "2 weeks is 14 days."
     ],
-    "answer": 9,
+    "answer": 14,
     "slips": [
      {
       "a": [
-       3,
-       6
+       2
       ],
-      "say": "That is only one row, or one row and one column. Count every box."
+      "say": "2 is the number of weeks. Count the days: 7 for each week."
      }
     ],
     "tpl": {
      "vars": {
-      "n": [
+      "w": [
+       2,
        3,
-       4,
-       5
+       4
       ]
      },
-     "derive": {
-      "t": "n*n"
-     },
-     "q": "A grid has {n} rows and {n} columns. How many boxes are in the grid?",
-     "answer": "t",
-     "hint": "Count the boxes in one row. Then count the rows.",
+     "derive": {},
+     "q": "How many days are in {w} weeks?",
+     "answer": "7*w",
+     "hint": "One week is 7 days. Count in 7s.",
      "steps": [
-      "Each row has {n} boxes.",
-      "There are {n} rows.",
-      "{n} rows of {n} boxes make {t} boxes."
+      "One week is 7 days.",
+      "Count in 7s, {w} times.",
+      "{w} weeks is {ans} days."
      ]
     },
     "rewind_of": "Term 3 Lesson 7"
@@ -3480,40 +3477,43 @@
     "id": "r2",
     "tier": "core",
     "type": "number",
-    "q": "A 3 by 3 grid has one circle in every row and one circle in every column. How many circles are in the grid?",
-    "hint": "How many rows are there? Each row has one circle.",
+    "q": "Count in 7s: 3, 10, 17, ___. What is the next number?",
+    "hint": "Add 7 each time.",
     "steps": [
-     "There are 3 rows.",
-     "Each row has one circle.",
-     "So there are 3 circles."
+     "Add 7 each time.",
+     "17 and 7 make 24.",
+     "The next number is 24."
     ],
-    "answer": 3,
+    "answer": 24,
     "slips": [
      {
       "a": [
-       1,
-       9
+       20
       ],
-      "say": "Each row has one circle. Count the rows."
+      "say": "20 adds 3. Add 7 to the last number."
      }
     ],
     "tpl": {
      "vars": {
-      "n": [
+      "s": [
+       2,
        3,
        4,
        5,
-       6,
-       7
+       6
       ]
      },
-     "q": "A {n} by {n} grid has one circle in every row and one circle in every column. How many circles are in the grid?",
-     "answer": "n",
-     "hint": "How many rows are there? Each row has one circle.",
+     "derive": {
+      "t": "s+7",
+      "u": "s+14"
+     },
+     "q": "Count in 7s: {s}, {t}, {u}, ___. What is the next number?",
+     "answer": "s+21",
+     "hint": "Add 7 each time.",
      "steps": [
-      "There are {n} rows.",
-      "Each row has one circle.",
-      "So there are {n} circles."
+      "Add 7 each time.",
+      "{u} and 7 make {ans}.",
+      "The next number is {ans}."
      ]
     },
     "rewind_of": "Term 3 Lesson 7"

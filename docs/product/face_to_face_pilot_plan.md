@@ -24,7 +24,7 @@ No claim of MOE, GEP or SASMO affiliation, approval or outcome is made or implie
 
 | Choice | Default | Why | Alternative |
 |---|---|---|---|
-| Level | Level 1, ages 6-8 | The most complete holiday and term materials (readiness file: "the most mature level"; 58-page designed workbook, 64 print pages, 93-page guide, K2 pack, readiness tracker). Six-year-olds are also where paper and hand-raising matter most. | Level 2 (ages 7-9) is the next most complete. Older levels read and write more on paper but have no stronger materials. |
+| Level | Level 1, ages 6-8 | The most complete holiday and term materials (readiness file: "the most mature level"; 61-page designed workbook, 68 print pages, 93-page guide, K2 pack, readiness tracker). Six-year-olds are also where paper and hand-raising matter most. | Level 2 (ages 7-9) is the next most complete. Older levels read and write more on paper but have no stronger materials. |
 | Group size | One group, at most 8 children | Stays under the 10-person line (section 2.1). | Fewer is fine. 5 or 6 is enough to learn from. |
 | Who | Children new to Math Inquirers, not the online beta Level 1 families | Gives a clean comparison with the online pilot (section 4.5). A child in both would see each lesson twice. | Allow a sibling pair if the owner wants. |
 | Tutor | The owner teaches; a second adult assists | See sections 2.4 and 3.5. | Another tutor only after the tutor agreement and screening are settled. |

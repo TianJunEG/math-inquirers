@@ -49,9 +49,8 @@
     ],
     "cell_h": 50,
     "font": 28,
-    "width_mm": 60
+    "width_mm": 66
    },
-   "side": true,
    "steps": [
     "Try 1, 2, 3 in order. Write a pair each time the number goes in.",
     "4 and 5 do not go into 54. 6 × 9 = 54 is a pair.",
@@ -191,6 +190,11 @@
     ],
     "text": "2, 4, 8, 16"
    },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "Team sizes are factors of 32 other than 1 and 32: 2, 4, 8 and 16. For example, 4 children in a team gives 8 teams."
   },
   {
@@ -245,7 +249,7 @@
   {
    "id": "L4U01-S05",
    "tier": "start",
-   "page": 2,
+   "page": 1,
    "text": "Write the first six multiples of each number. Then find the least number that is a multiple of both 9 and 12.",
    "parts": [
     {
@@ -431,6 +435,19 @@
    "id": "L4U01-S09",
    "tier": "start",
    "page": 2,
+   "text": "I am a number between 40 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.",
+   "answer": {
+    "value": [
+     "84"
+    ],
+    "text": "84"
+   },
+   "explanation": "A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 40 and 100."
+  },
+  {
+   "id": "L4U01-S10",
+   "tier": "start",
+   "page": 3,
    "text": "Count the factors of each number.",
    "figure": {
     "type": "l4_table",
@@ -496,19 +513,6 @@
     }
    ],
    "explanation": "8: 1, 2, 4, 8. 14: 1, 2, 7, 14. 18: 1, 2, 3, 6, 9, 18. 27: 1, 3, 9, 27. 32: 1, 2, 4, 8, 16, 32. 49: 1, 7, 49. Only 49 has 3 factors."
-  },
-  {
-   "id": "L4U01-S10",
-   "tier": "start",
-   "page": 3,
-   "text": "I am a number between 40 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.",
-   "answer": {
-    "value": [
-     "84"
-    ],
-    "text": "84"
-   },
-   "explanation": "A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 40 and 100."
   },
   {
    "id": "L4U01-S11",
@@ -611,6 +615,12 @@
     ],
     "text": "72"
    },
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
    "hint": "List the multiples of 24. Then use the two digit clues.",
    "explanation": "A multiple of 3 and 8 is a multiple of 24: 24, 48, 72, 96. The digits add to 9 only for 72 (7 + 2). 7 is greater than 2."
   },
@@ -624,6 +634,13 @@
      "63"
     ],
     "text": "63"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
    },
    "hint": "Take 3 away. What number is in the 4, 5 and 6 times tables?",
    "explanation": "Without the 3 left over, the number is in the 4, 5 and 6 times tables, so it is a multiple of 60. 60 + 3 = 63 is between 50 and 100. The next one, 123, is too big."
@@ -656,6 +673,13 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
    "hint": "The number of teeth is a multiple of both 12 and 18.",
    "explanation": "The least common multiple of 12 and 18 is 36. Gear A: 36 ÷ 12 = 3 turns. Gear B: 36 ÷ 18 = 2 turns."
   },

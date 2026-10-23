@@ -789,6 +789,9 @@ def check_foreign(d):
                 if o.get('term') == d['term']: others[n] = o['title']      # only lessons of the same term are compared
             except Exception: pass
     own = json.dumps({k: v for k, v in d.items() if not k.startswith('_')}, ensure_ascii=False, default=str).lower()
+    try:    # a lesson title that is also a tool name of the toolbox card (Lesson 28 'Make a Table') is not a leak when the tool is named
+        tool_names = {t['name'].lower() for t in json.load(open(os.path.join(L1, '..', '..', 'levels', 'spine.json'), encoding='utf-8'))['tools']}
+    except Exception: tool_names = set()
     texts = []
     for f in glob.glob(os.path.join(od, '*.html')) + glob.glob(os.path.join(od, 'html', '*.html')):
         texts.append((f, re.sub(r'<style.*?</style>|<[^>]+>', ' ', open(f, encoding='utf-8').read(), flags=re.S)))
@@ -800,7 +803,7 @@ def check_foreign(d):
         t1 = re.sub(r'\s+', ' ', t)
         for n, title in others.items():
             for m in re.finditer(re.escape(title.lower()), t1.lower()):
-                if title.lower() == d['title'].lower() or title.lower() in own: continue    # a phrase this lesson uses itself (e.g. 'equal groups') is not a leak
+                if title.lower() == d['title'].lower() or title.lower() in own or title.lower() in tool_names: continue    # a phrase this lesson uses itself (e.g. 'equal groups') is not a leak
                 before = t1[max(0, m.start() - 45):m.start()].lower()
                 if re.search(r'next lesson|lesson \d+:?\s*$|lessons? \d+', before): continue   # a pointer to the next lesson is allowed
                 bad.append(f"{os.path.basename(f)} mentions lesson {n} title '{title}'"); break
