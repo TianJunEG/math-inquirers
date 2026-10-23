@@ -49,7 +49,7 @@ Learn it pages: one worked example (with figure), a how-to box, and a Your turn 
 - `python3 extension/tools/build.py --level 6`, then `extension/verify_all.sh 6` (run_checks, dup_check, wording_lint, build, bw_check, print/check_bw, fill_check). Last result: see the end of `PROGRESS.md`.
 - Every unit page is at least 85 percent full before the leftover space is shared out (measured by the build); no page overflows. Start here pages were fitted with `measure.py` (it also reorders items between pages when needed, so item numbers on a page follow the printed order, not the id order).
 - Print edition is black and white (1-bit 600 dpi after conversion); code blocks are black text on white, no hatching behind text. Soft copy uses pale yellow and blue fills only.
-- Long answers: the answer section of this level is 22 pages, so the whole book is 100 pages. To keep it at 100 or below, 30 of the longest Why lines were shortened (`whys.py`). The plan's fallback (6 pages per unit) was not needed and is a shared-config change.
+- Long answers: the answer section is 21 pages (80 to 100) and the whole book is 100 pages in both editions (answers start on page 80, divider on 79, one blank page 78 in print). To keep it at 100, about 60 of the longest Why lines were shortened (`whys.py`). The plan's fallback (6 pages per unit) was not needed and is a shared-config change.
 
 ## Decisions and open points (for the owner and the audit)
 1. Items per unit: 22 (11 + 3 + 3 + 4 + the Your turn item), 25 in unit 10. The plan said about 24; code and figure items are tall (a six-block program is about 70 mm), so more items would not fit the 7-page grid at 86 percent fill.

@@ -9,3 +9,5 @@ None of these blocks the Level 6 build; each has a workaround in the Level 6 fil
    Not worked around (a build.py text). Suggest making the bullet conditional on the level (only Level 1 has rulers) or on a config key.
 3. `build.py` welcome(): "Every unit has 7 pages" and the pace plan assume the Level 1 session split; they are correct for Level 6. The sentence "practice for the same ideas as the Holiday Program" is correct for Level 6 too.
 4. `build.py` cover(): "Self-study" tag and "Level 6" fine. No change needed.
+
+5. Coordinator note (23 Oct): build.py and render.py will read the Welcome/equipment text and the Beyond label from levels.json. Not landed when Level 6 finished. Level 6 needs: no ruler sentence on the Welcome page. After the change, rebuild Level 6 and check page 3.
