@@ -16,7 +16,7 @@ Script 68:21 of 90, slow class 80:51, last 5 minutes untouched buffer: realistic
 
 ## Slide audit (30 slides)
 
-Clean: 1 to 12, 14 to 16, 18, 20 to 29 (title, warm-up, sneak-peek, explore, mini-lesson, break, check slides, choice, talk, exit, look-back, end, optional). Mi appears on the title, two small bubbles (slides 2 and 27) and the end slide (28); speech bubbles carry no numbers or answers ("Take your time!", "Great thinking today!"). Every slide has a speaker note. Minute tags match the guide's part table. Maths on every slide is right. Concerns:
+Clean: 3 to 12, 14 to 16, 18, 20, 21, 23 to 26, 29 (warm-up, sneak-peek, explore, mini-lesson, break, check slides, talk, exit, optional); slides 1, 2, 27, 28 are clean except for the calculator Mi. Mi appears on the title, two small bubbles (slides 2 and 27) and the end slide (28); speech bubbles carry no numbers or answers ("Take your time!", "Great thinking today!"). Every slide has a speaker note. Minute tags match the guide's part table. Maths on every slide is right. Concerns:
 
 - Slides 13 ("How long?"), 17 and 19 (workbook pages 1 and 2 as slides): clocks are drawn 8 to 11% of the slide width (about 165 to 210 px at 1920 wide) and the four clocks of `s-m4` leave the lower 60% of the slide empty. The guide's own prep line says "the figures on the slides are small". Finding 2.
 - Slide 22 ("Choose your next page") and slide 30 (spare-time menu): "Quarter times" and "why the hour changes at half past" (findings 3 and 5).
@@ -49,4 +49,4 @@ The warm-up re-teaches o'clock and half past from pictures, with a plain "joinin
 
 ## Scores
 
-AUTHORING delivery items: 5 of 5 PASS (item 7 passes on word count; the order of recording versus notice is finding 7). Instrument A (delivery): 17 / 24. Slide audit: 30 slides, 24 clean, 3 with a figure too small (13, 17, 19), 1 with a wrong idea in the optional menu (30), 1 with a quarter word (22), 4 with the calculator Mi (1, 2, 27, 28; overlaps with the others).
+AUTHORING delivery items: 5 of 5 PASS (item 7 passes on word count; the order of recording versus notice is finding 7). Instrument A (delivery): 17 / 24. Slide audit: 30 slides, 21 clean, 3 with a figure too small (13, 17, 19), 1 with a wrong idea in the optional menu (30), 1 with a quarter word (22), 4 with only the calculator Mi (1, 2, 27, 28).
