@@ -72,19 +72,20 @@ def dial_svg(value, vmax, major, minor, unit):
     """a weighing dial: 270 degree sweep, numerals outside the ring, a needle; value read back by read_dial"""
     cx = cy = 24.0; R = 16.5
     ang = lambda v: math.radians(-135 + 270 * v / vmax)
-    p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
+    p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.8"/>']
     v = 0
     while v <= vmax + 1e-9:
         a = ang(v); L = 3.0 if v % major == 0 else 1.6
-        p.append(f'<line class="dt" x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.5 if v % major == 0 else 0.3}"/>')
+        p.append(f'<line class="dt" x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.7 if v % major == 0 else 0.5}"/>')
         if v % major == 0:
-            p.append(f'<text x="{cx+20.6*math.sin(a):.2f}" y="{cy-20.6*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{int(v)}</text>')
+            n_ = len(str(int(v))); rr = R + 1.4 + 1.2 * n_ * abs(math.sin(a)) + 1.4 * abs(math.cos(a))   # numeral box clears the ring (audit M3)
+            p.append(f'<text x="{cx+rr*math.sin(a):.2f}" y="{cy-rr*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{int(v)}</text>')
         v += minor
     a = ang(value)
     p.append(f'<line class="needle" x1="24" y1="24" x2="{cx+14.2*math.sin(a):.3f}" y2="{cy-14.2*math.cos(a):.3f}" stroke="#000" stroke-width="1.0" stroke-linecap="round"/>')
     p.append(f'<circle cx="{cx}" cy="{cy}" r="1.6" fill="#000"/>')
     p.append(f'<text class="dunit" x="{cx}" y="{cy+9.5}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="4.4" fill="#000">{unit}</text>')
-    return svg(48, 48, "".join(p), extra=f'data-max="{vmax}"')
+    return svg(56, 48, '<g transform="translate(4,0)">' + "".join(p) + '</g>', extra=f'data-max="{vmax}"')
 
 def read_dial(s):
     vmax = int(re.search(r'data-max="(\d+)"', s).group(1))
@@ -101,12 +102,12 @@ def beaker_svg(level, vmax, step, label_step, unit="m\u2113"):
     p = [f'<rect class="tankbody" x="{x0}" y="{top}" width="{x1-x0}" height="{bot-top}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     yy = bot - 0.7
     while yy > y(level):
-        p.append(f'<line x1="{x0+0.4}" y1="{yy:.2f}" x2="{x1-0.4}" y2="{yy:.2f}" stroke="#000" stroke-width="0.3"/>'); yy -= 1.5
+        p.append(f'<line x1="{x0+0.4}" y1="{yy:.2f}" x2="{x1-0.4}" y2="{yy:.2f}" stroke="#000" stroke-width="0.5"/>'); yy -= 2.4
     p.append(f'<line class="level" x1="{x0}" y1="{y(level):.2f}" x2="{x1}" y2="{y(level):.2f}" stroke="#000" stroke-width="0.9"/>')
     v = 0
     while v <= vmax:
         major = v % label_step == 0
-        p.append(f'<line class="lt" x1="{x0-(3.2 if major else 1.8):.1f}" y1="{y(v):.2f}" x2="{x0}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.45 if major else 0.3}"/>')
+        p.append(f'<line class="lt" x1="{x0-(3.2 if major else 1.8):.1f}" y1="{y(v):.2f}" x2="{x0}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.6 if major else 0.5}"/>')
         if major:
             p.append(f'<text x="{x0-3.8}" y="{y(v)+0.1:.2f}" text-anchor="end" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.4" fill="#000">{v}</text>')
         v += step
@@ -125,7 +126,7 @@ def stopwatch_svg(sec):
     p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     for k in range(60):
         a = math.radians(k * 6); L = 3.0 if k % 5 == 0 else 1.5
-        p.append(f'<line x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.5 if k % 5 == 0 else 0.3}"/>')
+        p.append(f'<line x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.7 if k % 5 == 0 else 0.5}"/>')
     for k in range(5, 61, 5):
         a = math.radians(k * 6)
         p.append(f'<text x="{cx+20.6*math.sin(a):.2f}" y="{cy-20.6*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{k}</text>')
@@ -148,7 +149,7 @@ def grid_fig(cells, cell=CELL, name=None):
     cols = max(c for c, r in cells) + 1; rows = max(r for c, r in cells) + 1
     p = []
     for c, r in sorted(cells, key=lambda t: (t[1], t[0])):
-        p.append(f'<rect class="cell" x="{c * cell + 1:.1f}" y="{r * cell + 1:.1f}" width="{cell}" height="{cell}" fill="#fff" stroke="#000" stroke-width="0.35"/>')
+        p.append(f'<rect class="cell" x="{c * cell + 1:.1f}" y="{r * cell + 1:.1f}" width="{cell}" height="{cell}" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     edges = []
     for c, r in cells:
         if (c, r - 1) not in cells: edges.append((c, r, c + 1, r))
@@ -280,6 +281,15 @@ def seg_cross(p1, p2, p3, p4):
     d1, d2, d3, d4 = o(p3, p4, p1), o(p3, p4, p2), o(p1, p2, p3), o(p1, p2, p4)
     return (d1 * d2 < 0) and (d3 * d4 < 0)
 
+def pt_seg_dist(p, s):
+    (x1, y1), (x2, y2) = s; dx, dy = x2 - x1, y2 - y1
+    t = max(0.0, min(1.0, ((p[0] - x1) * dx + (p[1] - y1) * dy) / (dx * dx + dy * dy)))
+    return math.hypot(p[0] - (x1 + t * dx), p[1] - (y1 + t * dy))
+
+def seg_dist(s1, s2):
+    """shortest distance between two segments that do not cross"""
+    return min(pt_seg_dist(s1[0], s2), pt_seg_dist(s1[1], s2), pt_seg_dist(s2[0], s1), pt_seg_dist(s2[1], s1))
+
 def read_lines(s):
     ref = re.search(r'class="ref" x1="([-\d.]+)" y1="([-\d.]+)" x2="([-\d.]+)" y2="([-\d.]+)"', s)
     ref = tuple(float(v) for v in ref.groups())
@@ -305,7 +315,7 @@ def bar_svg(names, values, vmax, step, label_step, w=86.0, h=52.0, title=None, u
     v = 0
     while v <= vmax:
         maj = v % label_step == 0
-        p.append(f'<line class="axt" data-v="{v}" x1="{left}" y1="{y(v):.2f}" x2="{right}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.5 if v == 0 else (0.3 if maj else 0.22)}"/>')
+        p.append(f'<line class="axt" data-v="{v}" x1="{left}" y1="{y(v):.2f}" x2="{right}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.8 if v == 0 else (0.6 if maj else 0.5)}"/>')
         if maj: p.append(f'<text class="axl" data-v="{v}" x="{left - 1.6}" y="{y(v):.2f}" text-anchor="end" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.4" fill="#000">{v}</text>')
         v += step
     p.append(f'<line x1="{left}" y1="{top}" x2="{left}" y2="{bot}" stroke="#000" stroke-width="0.6"/>')

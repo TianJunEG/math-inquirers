@@ -47,7 +47,7 @@ def perp_to(d, e): return d[0] * e[0] + d[1] * e[1] == 0
 
 def page35():
     rng = random.Random(5535)
-    L = 7.5                       # half length of a line (mm)
+    L = 6.5                       # half length of a line (mm)
     kinds = ["parallel", "perpendicular", "parallel", "perpendicular", rng.choice(["parallel", "perpendicular"])]
     rng.shuffle(kinds)
     specs = []; truth = []
@@ -61,10 +61,10 @@ def page35():
             dirs = [right_dir] + others
             perm = list(range(3)); rng.shuffle(perm)
             letters = ["P", "Q", "R"]
-            cx = [34.0, 46.0, 58.0]
+            cx = [31.0, 43.5, 56.0]
             def seg(c, d):
                 n = math.hypot(*d); return ((c[0] - L * d[0] / n, c[1] - L * d[1] / n), (c[0] + L * d[0] / n, c[1] + L * d[1] / n))
-            ref_c = (11.0, 12.0 + rng.choice([-2, 0, 2]))
+            ref_c = (11.5, 12.0 + rng.choice([-2, 0, 2]))
             refseg = seg(ref_c, r)
             cands = []
             for slot in range(3):
@@ -74,12 +74,26 @@ def page35():
             allsegs = [("ref", refseg)] + [(l, s) for l, i, s in cands]
             for (n1, s1), (n2, s2) in itertools.combinations(allsegs, 2):
                 if A3.seg_cross(s1[0], s1[1], s2[0], s2[1]): ok = False
+                if A3.seg_dist(s1, s2) < 3.0: ok = False          # no two lines touch or nearly touch (audit M1)
             if any(not (0 < p[0] < 66 and 0 < p[1] < 23) for n, s in allsegs for p in s): ok = False
+            # labels: P, Q, R below their line; A and B beyond the two ends of AB. Each label centre stays 3.5 mm clear of every other line
+            labpos = []
+            for l, i, s in cands:
+                labpos.append((l, (s[0][0] + s[1][0]) / 2, max(s[0][1], s[1][1]) + 3.4, 4.6, s))
+            ux, uy = refseg[1][0] - refseg[0][0], refseg[1][1] - refseg[0][1]; un = math.hypot(ux, uy); ux, uy = ux / un, uy / un
+            labpos.append(("A", refseg[0][0] - 4.0 * ux, refseg[0][1] - 4.0 * uy + 0.3, 4.0, refseg))
+            labpos.append(("B", refseg[1][0] + 4.0 * ux, refseg[1][1] + 4.0 * uy + 0.3, 4.0, refseg))
+            for l, lx, ly, fs, own in labpos:
+                if not (2.2 < lx < 63.8 and 2.2 < ly < 26.5): ok = False
+                for n, s2 in allsegs:
+                    if s2 is own and l in "PQR": continue
+                    if A3.pt_seg_dist((lx, ly), s2) < 3.4 and not (s2 is own): ok = False
+                    if s2 is own and l in "AB" and A3.pt_seg_dist((lx, ly), s2) < 3.4: ok = False
             if ok: break
+        else: raise RuntimeError('P3-35: no clear layout')
         parts = A3.lines_svg(refseg, [(l, s[0], s[1]) for l, i, s in cands])
-        labs = "".join(f'<text x="{(s[0][0] + s[1][0]) / 2:.1f}" y="{max(s[0][1], s[1][1]) + 4.6:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.6" fill="#000">{l}</text>' for l, i, s in cands)
-        rl = f'<text x="{refseg[0][0]:.1f}" y="{refseg[0][1] + 5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4" fill="#000">A</text><text x="{refseg[1][0]:.1f}" y="{refseg[1][1] + 5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4" fill="#000">B</text>'
-        fig = svg(66, 28, "".join(parts) + labs + rl)
+        labs = "".join(f'<text x="{lx:.1f}" y="{ly + fs * 0.35:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="{fs}" fill="#000">{l}</text>' for l, lx, ly, fs, own in labpos)
+        fig = svg(66, 28, "".join(parts) + labs)
         right_letter = [l for l, i, s in cands if i == 0][0]
         specs.append(dict(q=f'<div class="lnfig">{fig}</div><p class="qs2">Which line is {kd} to line AB?</p>', opts=[f'<b class="on">{l}</b>' for l in letters], ri=letters.index(right_letter), fixed=True, kd=kd))
     P = lettered_choice_page(35, 5535, "Line Detective", 1, "Perpendicular and parallel lines: identifying them", STRAND_GE,
@@ -149,7 +163,7 @@ def page36():
         u = 6.5; ox, oy = 8.0, 9.0
         g = []
         for k in range(7):
-            g.append(f'<line x1="{ox + k * u:.1f}" y1="{oy}" x2="{ox + k * u:.1f}" y2="{oy + 6 * u:.1f}" stroke="#000" stroke-width="0.25"/><line x1="{ox}" y1="{oy + k * u:.1f}" x2="{ox + 6 * u:.1f}" y2="{oy + k * u:.1f}" stroke="#000" stroke-width="0.25"/>')
+            g.append(f'<line x1="{ox + k * u:.1f}" y1="{oy}" x2="{ox + k * u:.1f}" y2="{oy + 6 * u:.1f}" stroke="#000" stroke-width="0.5"/><line x1="{ox}" y1="{oy + k * u:.1f}" x2="{ox + 6 * u:.1f}" y2="{oy + k * u:.1f}" stroke="#000" stroke-width="0.5"/>')
         g.append(f'<rect x="{ox}" y="{oy}" width="{6 * u}" height="{6 * u}" fill="none" stroke="#000" stroke-width="0.7"/>')
         g.append(f'<line class="abl" x1="{ox + A_[0] * u:.1f}" y1="{oy + A_[1] * u:.1f}" x2="{ox + B_[0] * u:.1f}" y2="{oy + B_[1] * u:.1f}" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>')
         g.append(f'<text x="{ox + A_[0] * u - 2.4:.1f}" y="{oy + A_[1] * u + 4.4:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">A</text><text x="{ox + B_[0] * u + 1.2:.1f}" y="{oy + B_[1] * u - 1.2:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">B</text>')

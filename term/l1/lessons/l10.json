@@ -2044,7 +2044,20 @@
           "Using 30 again in Step 2 instead of the 10 left after Step 1."
         ],
         "mins": 2,
-        "lines": 0
+        "lines": 0,
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "30",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "gives away|20",
+            "gets|6 more"
+          ],
+          "px": 480
+        }
       },
       {
         "id": "S2",
@@ -2083,7 +2096,20 @@
           "Adding both numbers (42 + 7 + 10)."
         ],
         "mins": 3,
-        "lines": 0
+        "lines": 0,
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "42",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "gets|7 more",
+            "gives|10 to Ali"
+          ],
+          "px": 480
+        }
       },
       {
         "id": "S3",
@@ -2134,7 +2160,20 @@
           "Circling a sentence with the wrong sign."
         ],
         "mins": 2.5,
-        "lines": 0
+        "lines": 0,
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "25",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "buys|10 more",
+            "loses|3"
+          ],
+          "px": 480
+        }
       },
       {
         "id": "S4",
@@ -2242,7 +2281,20 @@
           "Adding both numbers to 30 (30 + 10 + 4 = 44)."
         ],
         "mins": 3,
-        "lines": 3
+        "lines": 3,
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "30",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "get off|10",
+            "get on|4"
+          ],
+          "px": 480
+        }
       }
     ],
     "think": [
@@ -2404,7 +2456,20 @@
           "Circling Yes without checking step 2."
         ],
         "mins": 4,
-        "lines": 1
+        "lines": 1,
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "12",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "gives|7 to Mei",
+            "gives|8 to Ben"
+          ],
+          "px": 480
+        }
       },
       {
         "id": "T5",
@@ -2486,7 +2551,22 @@
           "Starting each step from 60 again."
         ],
         "mins": 6,
-        "lines": 0
+        "lines": 0,
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "60",
+            "?",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "sells|24",
+            "sells|15",
+            "a box of|30 comes in"
+          ],
+          "px": 600
+        }
       },
       {
         "id": "G2",

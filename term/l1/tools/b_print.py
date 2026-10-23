@@ -77,7 +77,7 @@ def _vis_html(v):
     if v.get('type') == 'ruler':   # true 1:1 scale on paper
         return f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True, broken=v.get("broken"))}</div>'
     wide = v.get('type') in ('table', 'bar_model', 'line_up', 'picture_graph', 'money', 'balance', 'combos')
-    xw = v.get('type') in ('number_line', 'seq', 'jump_lines')
+    xw = v.get('type') in ('number_line', 'seq', 'jump_lines', 'story_steps')
     arr = v.get('type') == 'array'
     gw = v.get('type') == 'groups'
     if v.get('type') == 'objects' and v.get('n', 0) > 12 and v.get('size') == 'l' and not v.get('items'): wide = True
@@ -86,7 +86,7 @@ def _vis_html(v):
     sm = v.get('type') in ('clock', 'price_tag', 'fold_punch', 'network', 'shapes2d')
     md = v.get('type') in ('cube_stack', 'grid', 'calendar')
     if v.get('mm') and not v.get('px'):      # base unit in millimetres on the printed page: a grid cell, a cube edge, a tile cell
-        v = dict(v); t = v.get('type'); unit = {'grid': v.get('cell', 64), 'panel': v.get('cell', 130), 'cube_stack': 40 if v.get('mode') == 'top' else 46}.get(t)
+        v = dict(v); t = v.get('type'); unit = {'grid': v.get('cell', 64), 'panel': v.get('cell', 130), 'cube_stack': 40 if v.get('mode') == 'top' else 46, 'digit_cards': v.get('card', 96)}.get(t)
         m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg.render_visual({k: x for k, x in v.items() if k not in ('size', 'mm', 'px')}))
         if unit and m: v['px'] = int(round(float(m.group(1)) / unit * v['mm'] * 3.78)); v.pop('size', None)
     return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" sm" if sm else ""}{" md" if md else ""}{" arr" if arr else ""}{" gw" if gw else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}"{(" style=" + chr(34) + "width:%dpx!important;max-width:%dpx!important" % (v["px"], v["px"]) + chr(34)) if v.get("px") else ""}>{svg.render_visual(v)}</div>'

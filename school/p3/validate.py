@@ -93,7 +93,7 @@ rec("every page has outcome numbers from the 34 syllabus lines", all(OC.PAGE_OC[
 bad = []
 for p in pages:
     for s_ in p["instr"]:
-        if max_words(s_) > 18: bad.append((p["no"], s_))
+        if max_words(s_) > 12: bad.append((p["no"], s_))
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 18 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 22: bad.append((p["no"], cl))
@@ -101,8 +101,8 @@ for p in pages:
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]) + re.findall(r'class="(?:st|ptxt)">(.*?)</(?:div|p)>', p["body"]):
         sent = re.sub(r"<[^>]+>", " ", sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):
-            if len(one.split()) > 18: bad.append((p["no"], one))
-rec("V8 reading level (Primary 3, plan: 18 words a sentence): instruction and clue sentences <= 18 words, <= 3 lines", not bad, str(bad[:4]))
+            if max_words(one) > 12: bad.append((p["no"], one))
+rec("V8 reading level (Primary 3, plan table: 12 words a sentence; owner decision): instruction, stem and clue sentences <= 12 words, check strips <= 18, <= 3 lines", not bad, str(bad[:4]))
 chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > (34 if p.get("check_lines") else 18) and not p.get("cbc")]
 rec("check strip text <= 18 words (pages with several check lines: 34)", not chk, str(chk))
 hint = [(p["no"], p["check"]) for p in pages if re.search(r"\bIs it\b|\bDoes it\b|\bYou (live|can|carry)|garden|music|river|\bsky\b|\bspace\b|\bking\b|\ban animal|\bseason|used for writing|shopping|count the time", p["check"]) and not p.get("cbc")]

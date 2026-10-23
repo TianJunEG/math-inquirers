@@ -2104,7 +2104,20 @@
             "ans": "9",
             "val": 9
           }
-        ]
+        ],
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "30",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "sells|12",
+            "sells|9"
+          ],
+          "px": 480
+        }
       },
       {
         "id": "S3",
@@ -2192,7 +2205,18 @@
             "ans": "17",
             "val": 17
           }
-        ]
+        ],
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "?",
+            "17"
+          ],
+          "steps": [
+            "takes|away 8"
+          ],
+          "px": 380
+        }
       },
       {
         "id": "S5",

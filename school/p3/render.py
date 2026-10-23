@@ -98,10 +98,10 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .ccell .ex.sh{font-size:12.5pt;line-height:1.1;text-align:center;font-weight:600}
 .ccell .ln{display:inline-block;width:17mm;border-bottom:0.5mm solid #000;height:7mm}
 .sumrows{display:grid;gap:5mm 6mm}.sumrows.two{grid-template-columns:1fr 1fr}
-.sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.3mm solid #000}
+.sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.5mm solid #000}
 .sumrows.tall .sumrow{height:31mm}
 .shrows{display:flex;flex-direction:column;gap:1.2mm}
-.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding:0.8mm 0 2mm}
+.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.5mm solid #000;padding:0.8mm 0 2mm}
 .shmid{flex:1}.shtxt{font-size:12pt;line-height:1.25;margin:0 0 1.5mm}.shsvg svg{display:block}
 .shrow .ab{width:19mm;height:14mm;margin-left:2mm;flex:none}
 .maze.tall .mcell{height:38mm}
@@ -113,7 +113,7 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .shans{display:flex;align-items:center;gap:2mm}
 .shans .ab{width:15mm;height:12mm}
 .grows,.crows,.lrows{display:flex;flex-direction:column;gap:1.2mm}
-.grow,.crow,.lrow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.grow,.crow,.lrow{display:flex;align-items:center;gap:3mm;border-bottom:0.5mm solid #000;padding-bottom:2mm}
 .gsvg{width:100mm;flex:none}.geq{margin-left:auto;display:flex;align-items:center;gap:2mm}.geq .ab{width:14mm}
 .lbx{display:inline-flex;flex-direction:column;align-items:center;gap:0.3mm}.lbx small{font-size:8.5pt;font-weight:700;line-height:1}
 .csvg{flex:1}.cans{display:flex;align-items:center;gap:2mm;font-size:16pt}

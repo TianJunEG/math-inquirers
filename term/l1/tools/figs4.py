@@ -281,11 +281,78 @@ def combos(tops=4, bottoms=2, top_icon='shirt', bottom_icon='shorts', size=58):
     return _svg(x + 10, size + 16, ''.join(P), f'{tops} tops and {bottoms} pairs of shorts')
 
 
+# ------------------------------------------------------------------ story steps (card piles joined by arrows)
+
+def _pile(x, y, label, w=120, h=84, known=True):
+    """A pile of cards (three offset cards); the front card shows a number, or a dashed '?' when the child finds it."""
+    P = [f'<rect x="{x + 14}" y="{y - 12}" width="{w}" height="{h}" rx="10" {_o("#fff")}/>', f'<rect x="{x + 7}" y="{y - 6}" width="{w}" height="{h}" rx="10" {_o("#fff")}/>']
+    if known:
+        P.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" {_o(YEL)}/>')
+        P.append(f'<text x="{x + w / 2}" y="{y + h * 0.69:.1f}" font-size="{50 if len(str(label)) <= 2 else 40}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(str(label))}</text>')
+    else:
+        P.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="{SW}" stroke-dasharray="10 7"/>')
+        P.append(f'<text x="{x + w / 2}" y="{y + h * 0.72:.1f}" font-size="54" font-weight="800" text-anchor="middle" fill="#8A94AD" font-family="{FONT}">?</text>')
+    return ''.join(P)
+
+
+def story_steps(piles=None, steps=None, title=None):
+    """The steps of a story as card piles joined by arrows. piles = ['30', '?', '?'] (a '?' is a pile the child works out, shown dashed);
+    steps = ['gives away|20', 'gets|6 more'] (the words above each arrow, '|' starts a new line). Only the story's own words are on the arrows,
+    never a plus or minus sign and never the result, so the child still chooses the operation and finds the number."""
+    piles = piles or ['?', '?']; steps = steps or []
+    pw, gap = 120, 180
+    top = 62 if title else 32
+    W = 40 + len(piles) * pw + (len(piles) - 1) * gap; H = top + 84 + 14
+    P = []
+    if title: P.append(f'<text x="14" y="34" font-size="32" font-weight="800" fill="{TEAL}" font-family="{FONT}">{_esc(title)}</text>')
+    my = top + 42
+    for i, lab in enumerate(piles):
+        x = 20 + i * (pw + gap)
+        P.append(_pile(x, top, lab, pw, 84, lab != '?'))
+        if i < len(piles) - 1:
+            ax1, ax2 = x + pw + 26, x + pw + gap - 8
+            P.append(f'<line x1="{ax1}" y1="{my}" x2="{ax2 - 14}" y2="{my}" stroke="{NAVY}" stroke-width="6" stroke-linecap="round"/><polygon points="{ax2},{my} {ax2 - 20},{my - 13} {ax2 - 20},{my + 13}" fill="{NAVY}"/>')
+            words = (steps[i] if i < len(steps) else '').split('|')
+            cx = (ax1 + ax2) / 2
+            for k, wd in enumerate(words):
+                P.append(f'<text x="{cx:.1f}" y="{my - 14 - (len(words) - 1 - k) * 28}" font-size="25" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(wd)}</text>')
+    return _svg(W, H, ''.join(P), 'card piles joined by arrows: ' + ', '.join(piles))
+
+
+# ------------------------------------------------------------------ digit cards (big number cards)
+
+def digit_cards(cards=None, hide=(), size=96, labels=None, gap=18, per_row=None, group=0):
+    """Big digit cards in a row (0 is a card too). cards=['3', '5'], hide=[index] draws a dashed empty place; labels=['Tens', 'Ones'] puts a small word above each place."""
+    cards = [str(c) for c in (cards or [])]
+    n = len(cards); per_row = per_row or n
+    rows = -(-n // per_row)
+    cw, ch = size, int(size * 1.3)
+    top = 38 if labels else 8
+    gx = (lambda k: (k // group) * 34 if group else 0)
+    W = 20 + per_row * (cw + gap) - gap + 10 + gx(per_row - 1); H = top + rows * (ch + 14) + 6
+    P = []
+    for i, c in enumerate(cards):
+        r, k = divmod(i, per_row); x = 12 + k * (cw + gap) + gx(k); y = top + r * (ch + 14)
+        if labels and i < len(labels):
+            P.append(f'<text x="{x + cw / 2}" y="{y - 10}" font-size="26" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">{_esc(labels[i])}</text>')
+        if i in hide:
+            P.append(f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="{SW}" stroke-dasharray="10 7"/>')
+        else:
+            P.append(f'<rect x="{x + 4}" y="{y + 4}" width="{cw}" height="{ch}" rx="12" fill="{GREYF}"/><rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="12" {_o("#fff")}/>')
+            P.append(f'<text x="{x + cw / 2}" y="{y + ch * 0.72:.1f}" font-size="{size * 0.95:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(c)}</text>')
+    return _svg(W, H, ''.join(P), 'digit cards ' + ' '.join(cards))
+
+
+
 def render(v):
     """Dispatch for the new figure types; None if v['type'] is not one of them (called first from figs2.render)."""
     t = v['type']
     if t == 'jump_lines':
         return jump_lines(v.get('start', 0), v.get('end', 100), v.get('step', 1), v.get('label_every', 10), v.get('rows'), v.get('room', True))
+    if t == 'story_steps':
+        return story_steps(v.get('piles'), v.get('steps'), v.get('title'))
+    if t == 'digit_cards':
+        return digit_cards(v.get('cards'), tuple(v.get('hide', ())), v.get('card', 96), v.get('labels'), per_row=v.get('per_row'), group=v.get('group', 0))
     if t == 'combos':
         return combos(v.get('tops', 4), v.get('bottoms', 2), v.get('top_icon', 'shirt'), v.get('bottom_icon', 'shorts'))
     if t == 'shelf':

@@ -19,14 +19,14 @@ CSS_P3 = """
 .vcard{border:0.4mm solid #000;border-radius:2mm;padding:2mm 3mm 3mm;display:flex;flex-direction:column;align-items:center;gap:1mm}.vcard .no{align-self:flex-start}
 .pvc{display:flex;flex-direction:column;gap:2mm}
 .pvt{display:grid;grid-template-columns:repeat(3,1fr);border:0.4mm solid #000;border-radius:1.5mm}
-.pvt>div{padding:0.8mm 1.5mm 1mm;border-left:0.3mm solid #000;display:flex;flex-direction:column;align-items:center}.pvt>div:first-child{border-left:none}
-.pvt small{font-size:9.5pt;font-weight:800;display:block;border-bottom:0.3mm solid #000;width:100%;text-align:center;margin-bottom:1mm}
+.pvt>div{padding:0.8mm 1.5mm 1mm;border-left:0.5mm solid #000;display:flex;flex-direction:column;align-items:center}.pvt>div:first-child{border-left:none}
+.pvt small{font-size:9.5pt;font-weight:800;display:block;border-bottom:0.5mm solid #000;width:100%;text-align:center;margin-bottom:1mm}
 .pvt svg{display:block;max-width:none}
 .qc .dl{font-family:'Fredoka';font-weight:600;font-size:20pt}
 .qg.c1{gap:2.4mm}
 .clk{display:flex;justify-content:center}.qg.clocks .qc{align-items:center}.qg.clocks .qa{justify-content:center}
 .trows{display:flex;flex-direction:column;gap:3mm}
-.trow{display:flex;align-items:center;gap:2.5mm;border-bottom:0.3mm solid #000;padding-bottom:1.5mm}.trow .tl{width:17mm;font-size:12pt;font-weight:700}
+.trow{display:flex;align-items:center;gap:2.5mm;border-bottom:0.5mm solid #000;padding-bottom:1.5mm}.trow .tl{width:17mm;font-size:12pt;font-weight:700}
 .trow .ts{flex:1}.trow .ts svg{max-width:none;display:block}.trow .ta{display:flex;align-items:center;gap:1.5mm;font-size:14pt;font-weight:700;flex:none}
 .qc{position:relative}.qc.pos .no{position:absolute;left:2mm;top:2mm}.qc.pos .qh{justify-content:center}
 .clk svg{width:47mm;height:47mm}
@@ -41,7 +41,7 @@ CSS_P3 = """
 .dcard{width:11.5mm;height:17mm;border:0.6mm solid #000;border-radius:1.5mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:24pt}
 /* number sequences */
 .sqrows{display:flex;flex-direction:column;gap:3.2mm}
-.sqrows .srow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.sqrows .srow{display:flex;align-items:center;gap:3mm;border-bottom:0.5mm solid #000;padding-bottom:2mm}
 .seq{display:flex;gap:2mm;align-items:center}.seq .sq{width:20mm;height:13mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:18pt}
 .seq .ab.w3{width:20mm;height:13mm}
 /* fractions */
@@ -52,7 +52,7 @@ CSS_P3 = """
 /* wave 3 */
 .ansgrid2{display:flex;gap:6mm;justify-content:center;margin-top:1mm}
 .tfrows{display:flex;flex-direction:column;gap:2mm}
-.qrow{display:flex;align-items:center;gap:3mm;font-size:14.5pt;padding:1.5mm 0;border-bottom:0.3mm solid #000;line-height:1.2}.qrow .qt{flex:1}
+.qrow{display:flex;align-items:center;gap:3mm;font-size:14.5pt;padding:1.5mm 0;border-bottom:0.5mm solid #000;line-height:1.2}.qrow .qt{flex:1}
 .tfrow{padding:6.5mm 0}.tfrow .qt{font-size:16pt}
 .tfo{display:flex;align-items:center;gap:2mm;font-size:15pt;font-weight:800;margin-left:4mm}
 i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;font-weight:700;flex:none}
@@ -71,19 +71,19 @@ i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:ce
 .riddles{display:flex;flex-direction:column;gap:1mm}
 .howto{margin-bottom:2mm}
 /* wave 4 */
-.dial svg,.tank svg{width:44mm;height:44mm;display:block}.tank svg{width:30mm;height:44mm}
+.dial svg,.tank svg{width:44mm;height:44mm;display:block}.dial svg{width:51.3mm}.tank svg{width:30mm;height:44mm}
 .dial,.tank{display:flex;justify-content:center}
 .qg.dials .qa,.qg.tanks .qa{justify-content:center;font-size:14pt}
 .mcards{display:flex;gap:6mm;justify-content:center}.mcard{position:relative;border:0.5mm solid #000;border-radius:2mm;padding:2mm 3mm;display:flex;align-items:center;gap:2mm}
 .mcard svg{max-width:none;width:34mm;height:34mm}.mcard i.cl{position:absolute;left:1.5mm;top:1.5mm}
 .hrows{display:flex;flex-direction:column;gap:2.5mm}
-.hrow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.hrow{display:flex;align-items:center;gap:3mm;border-bottom:0.5mm solid #000;padding-bottom:2mm}
 .ckp{display:flex;align-items:center;gap:3mm;flex:1}.clk30 svg{width:30mm;height:30mm;max-width:none}.arr{font-size:20pt;font-weight:800}
 .dgt{flex:1;font-size:15pt;font-weight:700;line-height:1.3}
 .hans{display:flex;align-items:center;gap:1.5mm;font-size:13pt;font-weight:700;flex:none}
 table.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid #000;height:9mm;font-size:13pt;text-align:center;padding:0 5mm}.tt th{font-weight:800;font-size:11pt}.tt td:first-child{text-align:left;font-weight:700}
 .prows{display:flex;flex-direction:column;gap:3.5mm}
-.prow{display:flex;align-items:center;gap:2.5mm;border-bottom:0.3mm solid #000;padding-bottom:2.5mm}
+.prow{display:flex;align-items:center;gap:2.5mm;border-bottom:0.5mm solid #000;padding-bottom:2.5mm}
 .pcells{display:flex;gap:0.5mm;align-items:center}.pcell{width:13mm;height:13mm;display:flex;align-items:center;justify-content:center}.pcell svg{width:13mm;height:13mm;max-width:none}
 .pcell.q{border:0.5mm dashed #000;border-radius:1.5mm;font-family:'Fredoka';font-weight:700;font-size:16pt}
 .popts{display:flex;gap:3mm;margin-left:auto}.popt{display:flex;flex-direction:column;align-items:center;gap:0.5mm}.popt svg{width:13mm;height:13mm;max-width:none}
@@ -91,7 +91,7 @@ table.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid
 .tt th,.tt td{height:7.4mm;font-size:12pt}.qc.tq .qt{font-size:12pt}.qc.tq{padding:1.2mm 2.5mm}.qc.tq .ab{height:12.5mm;width:20mm}
 /* wave 5 */
 .srows3{display:flex;flex-direction:column;gap:2.5mm}
-.srow3{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.srow3{display:flex;align-items:center;gap:3mm;border-bottom:0.5mm solid #000;padding-bottom:2mm}
 .sol{width:34mm;display:flex;justify-content:center}.sol svg{max-width:none;height:24mm;width:auto}
 .sopts{display:flex;gap:2mm;margin-left:auto}
 .sgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5mm;border:0.4mm solid #000;border-radius:2mm;padding:2mm}
@@ -99,7 +99,7 @@ table.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid
 .trows2{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm}
 .trow2{display:flex;flex-direction:column;align-items:center;gap:1mm;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm}.trow2 b{font-size:12pt}.ticon svg{max-width:none;height:13mm;width:auto}
 .pgraph3{display:flex;flex-direction:column;gap:1.2mm;border:0.4mm solid #000;border-radius:2mm;padding:2mm 3mm}
-.grow3{display:flex;align-items:center;gap:3mm;height:11.5mm;border-bottom:0.25mm solid #000}.gname{width:26mm;font-size:13pt;font-weight:700}
+.grow3{display:flex;align-items:center;gap:3mm;height:11.5mm;border-bottom:0.5mm solid #000}.gname{width:26mm;font-size:13pt;font-weight:700}
 .gcells{display:flex;gap:0.8mm}.gcell svg{display:block;max-width:none;width:10.5mm;height:10.5mm}.hid{font-size:11pt;font-weight:700;border:0.4mm dashed #000;padding:1mm 6mm;border-radius:1mm}
 .gkey{font-size:13pt;font-weight:800;display:flex;align-items:center;gap:2mm;padding-top:1mm}.gkey svg{max-width:none;width:10.5mm;height:10.5mm}
 ul.clues{font-size:13.5pt;margin:1mm 0;padding-left:6mm}
@@ -119,7 +119,7 @@ CSS_P3 += """
 .sqm{width:19mm;height:13mm;border:0.6mm solid #000;border-radius:1.5mm;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:20pt}
 .seq{gap:1.2mm}.seq .sq{width:17.5mm;height:13mm;font-size:15pt;padding:0}.sqm{width:17.5mm}
 .crows2{display:flex;flex-direction:column;gap:3mm}
-.crow2{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding:1mm 0 3mm}
+.crow2{display:flex;align-items:center;gap:3mm;border-bottom:0.5mm solid #000;padding:1mm 0 3mm}
 .cq2{flex:1;min-width:0;font-size:14pt;line-height:1.25}.cq2 p{margin:0}
 .copts{display:flex;gap:3mm;flex:none}
 .opt{display:inline-flex;align-items:center;gap:1.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1mm 1.5mm 1mm 2.5mm}
@@ -157,7 +157,7 @@ CSS_P3 += """
 .fgs{display:inline-flex;align-items:center;gap:1.5mm}.fgs b{font-family:'Fredoka';font-size:15pt}.sqa{font-size:11.5pt;gap:1mm}
 """
 CSS_P3 += """
-.crow2.cmp .opt{padding:0.5mm 1mm 0.5mm 2mm;border-width:0.3mm}.crow2.cmp .copts{gap:2mm}.crow2.cmp .opt b.on{font-size:14pt}.crow2.cmp .qs2{font-size:12pt;line-height:1.15}.ab2{flex:none}.crow2.cmp .cq2{min-width:26mm}
+.crow2.cmp .opt{padding:0.5mm 1mm 0.5mm 2mm;border-width:0.5mm}.crow2.cmp .copts{gap:2mm}.crow2.cmp .opt b.on{font-size:14pt}.crow2.cmp .qs2{font-size:12pt;line-height:1.15}.ab2{flex:none}.crow2.cmp .cq2{min-width:26mm}
 """
 CSS_P3 += """
 .angfig svg,.lnfig svg{max-width:none;display:block}.angfig svg{width:30mm;height:30mm}.crow2.angrow,.crow2.lnrow{padding:1mm 0 2mm}.crow2.lnrow .cq2{display:flex;align-items:center;gap:3mm}.crow2.lnrow .qs2{font-size:11.5pt;max-width:42mm}
