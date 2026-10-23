@@ -126,7 +126,8 @@ def contents_page(W, H, lvl, term, kind, bookno, rows, kitnote):
             c.setFont('Helvetica', 11)
             for i, t in enumerate(['Some lessons end with a kit page: tens bars, number lines, cards and so on.',
                                    'Each kit page has a blank back, so you can cut or tear it out without losing any work.',
-                                   'Tear along the dashed line in the left margin. If the page says cut out, a grown-up cuts the pieces; keep them in an envelope.']):
+                                   'Tear along the dashed line in the left margin. If the page says cut out, a grown-up',
+                                   'cuts the pieces; keep them in an envelope.']):
                 c.drawString(70, 132 - 15 * i, t)
     return overlay(W, H, draw)
 
