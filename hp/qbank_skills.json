@@ -1,0 +1,294 @@
+{
+ "1": {
+  "skills": [
+   {
+    "id": "L1-SEQ1",
+    "slot": "slide",
+    "skill": "Sequences: each number is made from the two before",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Mei writes a pattern: 1, 2, 3, 5, 8, __, __ a) Fill in the gap row. What do you notice? b) Write the next two numbers.",
+    "a": "a) The gaps are 1, 1, 2, 3, 5: they are the pattern numbers again. Each number is the two numbers before it added together (3 + 5 = 8). b) 13 and 21.",
+    "say": "Some patterns do not add the same number each time. Look at the gaps.",
+    "ask": "What is the gap between 1 and 2? Between 2 and 3? Does the gap stay the same? What do you notice about the gaps and the numbers?",
+    "listen": "\"The gaps are the numbers again\" or \"5 is 2 + 3\". Accept \"add the last two\". Children who only say \"it goes up more\" need the gap row filled in first."
+   },
+   {
+    "id": "L1-SEQ2",
+    "slot": "bank",
+    "skill": "Sequences: two rules take turns",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Start at 2. Add 3, then add 1, then add 3, then add 1, and keep going. a) Write the first 7 numbers. b) Is 20 in the pattern? Tick Yes or No.",
+    "a": "a) 2, 5, 6, 9, 10, 13, 14. b) No: the pattern goes ..., 18, 21, 22 and jumps over 20.",
+    "say": "Two rules take turns. Say the rules in order as you write: add 3, add 1, add 3.",
+    "ask": "After 14, what comes next? How do you know 20 will not be there?",
+    "listen": "Notice that every 2 steps the number goes up by 4, so the pattern climbs 2, 6, 10, 14, 18, 22 on its own."
+   },
+   {
+    "id": "L1-SEQ3",
+    "slot": "bank",
+    "skill": "Sequences: gaps get smaller",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ravi counts down: 50, 40, 31, 23, 16, __, __ a) Write the next two numbers. b) How much does the number go down each time?",
+    "a": "a) 10 and 5. b) It goes down 10, then 9, then 8, then 7, then 6, then 5: one less each time.",
+    "say": "Make a table with a gap row. Write how far each number falls.",
+    "ask": "What are the gaps? What will the next gap be?",
+    "listen": "\"The gap goes down by 1 each time.\""
+   }
+  ]
+ },
+ "2": {
+  "skills": [
+   {
+    "id": "L1-PV1",
+    "slot": "slide",
+    "skill": "Place value: tens and ones",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Ben packs 10 pencils in each box. He has 4 full boxes and 6 loose pencils. a) Find the total number of pencils. b) Siti has 52 pencils packed the same way. Fill in: ___ full boxes and ___ loose pencils.",
+    "a": "a) 46 pencils (4 tens and 6 ones). b) 5 full boxes and 2 loose pencils.",
+    "say": "Use bundles of 10 sticks and single sticks, or draw a stick for a ten and a dot for a one.",
+    "ask": "How many tens in 46? How many ones? Where do you see the 4 and the 6 in the number?",
+    "listen": "\"4 tens and 6 ones is 46\", \"the 5 in 52 means 5 boxes of ten\". A child who says 52 is \"5 and 2\" should count the sticks."
+   },
+   {
+    "id": "L1-PV2",
+    "slot": "slide",
+    "skill": "Place value: digit cards",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Ali lays two digit cards side by side: 3 and 8. The two cards show a 2-digit number. a) Write every number the cards can show. b) Circle the greater number. c) Which number is closer to 50?",
+    "a": "a) 38 and 83. b) 83 is greater (8 tens is more than 3 tens). c) 38 (it is 12 away from 50; 83 is 33 away).",
+    "say": "Put the cards on the table and swap them. Write each number you make.",
+    "ask": "How many different numbers? How do you know you have found them all? Which digit is the tens digit in 38?",
+    "listen": "\"Swap the cards and I get a new number.\" The tens card matters most when comparing."
+   },
+   {
+    "id": "L1-PV3",
+    "slot": "bank",
+    "skill": "Place value: three digit cards",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Aisha has three digit cards: 2, 5 and 7. She picks two of the cards and lays them side by side. a) Count the different 2-digit numbers she can lay down. b) Write them from the smallest to the greatest. c) Which of them is closest to 60?",
+    "a": "a) 6 numbers. b) 25, 27, 52, 57, 72, 75. c) 57 (3 away; 52 is 8 away and 72 is 12 away).",
+    "say": "Fix one card as the tens card, then list the numbers. Then fix the next card.",
+    "ask": "What do you notice about the list when the tens card stays the same?",
+    "listen": "A systematic list: 25, 27 / 52, 57 / 72, 75."
+   },
+   {
+    "id": "L1-PV4",
+    "slot": "bank",
+    "skill": "Place value: odd and even digits, clues",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Read each clue. Many answers may be right. a) I am a 2-digit number. My tens digit is 3. My ones digit is odd and greater than 5. What numbers can I be? b) I am a 2-digit number. My two digits are the same. My digits make a total of 12. What is my number?",
+    "a": "a) 37 and 39. b) 66.",
+    "say": "Cross out the numbers that break a clue.",
+    "ask": "Which clue helps most? Why did you stop at 39?",
+    "listen": "Children check each clue in turn."
+   },
+   {
+    "id": "L1-PV5",
+    "slot": "bank",
+    "skill": "Place value: compare by tens",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Siti has 3 tens and 9 ones. Kumar has 4 tens and 2 ones. a) Who has the greater number? b) Write Kumar's number with a digit in each box: [ ][ ].",
+    "a": "a) Kumar (42 is greater than 39). b) 4 and 2.",
+    "say": "Compare the tens first.",
+    "ask": "Why does 1 more ten beat 9 ones?",
+    "listen": "\"Tens are worth more than ones, so look at the tens first.\""
+   },
+   {
+    "id": "L1-MA1",
+    "slot": "slide",
+    "skill": "Mental addition: pair numbers to make 10",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Add in your head. Look for numbers that make 10. a) Four jars hold 8, 3, 2 and 7 marbles. Find the total number of marbles. b) 9 + 6 + 1 + 4 + 10 = [ ]",
+    "a": "a) 8 + 2 = 10 and 3 + 7 = 10, so 20 marbles. b) 9 + 1 = 10 and 6 + 4 = 10, so 10 + 10 + 10 = 30.",
+    "say": "Do not add from left to right. Hunt for two numbers that make 10.",
+    "ask": "Which two numbers did you join first? Is there another pair?",
+    "listen": "\"8 and 2 make 10.\" Accept any order that works."
+   },
+   {
+    "id": "L1-MA2",
+    "slot": "slide",
+    "skill": "Mental addition: add 9 by adding 10",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Mei has 35 stickers. She gets 9 more. a) 35 + 10 = [ ] b) So 35 + 9 = [ ] c) Find 52 + 19.",
+    "a": "a) 45. b) 44 (10 is 1 too many, so take 1 away). c) 52 + 20 = 72, then take away 1: 71.",
+    "say": "Adding 10 is easy. Then fix it.",
+    "ask": "Why do we take 1 away? What is 19 close to?",
+    "listen": "\"9 is 1 less than 10\" and \"19 is 1 less than 20\"."
+   },
+   {
+    "id": "L1-MA3",
+    "slot": "bank",
+    "skill": "Mental addition: make the next ten",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Fill in the missing number. a) 8 + 7 = 10 + [ ] b) 38 + 5 = 40 + [ ] c) 46 + 8 = 50 + [ ]",
+    "a": "a) 5. b) 3. c) 4.",
+    "say": "Both sides of the equals sign must be the same.",
+    "ask": "How many did you give to the first number to reach the next ten?",
+    "listen": "\"Take 2 from the 5 to make 40, 3 are left.\""
+   },
+   {
+    "id": "L1-SYM1",
+    "slot": "slide",
+    "skill": "Picture equations with two symbols",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each shape stands for a number. The same shape is the same number. a) Take line 2 away from line 1. What number is the triangle? b) What number is the circle?",
+    "a": "a) Line 1 has one more triangle than line 2, and 11 is 3 more than 8, so triangle = 3. b) 3 + circle = 8, so circle = 5. Check: 3 + 3 + 5 = 11.",
+    "say": "Look for what is the same in both lines and what is different.",
+    "ask": "What is the extra thing in line 1? How much extra is the total?",
+    "listen": "\"One more triangle, 3 more\". Guess-and-check is fine: ask them to check both lines."
+   },
+   {
+    "id": "L1-SYM2",
+    "slot": "bank",
+    "skill": "Picture equations with three symbols",
+    "tool": "backwards",
+    "tool_name": "Work backwards",
+    "q": "Each shape stands for a number. Circle, square and star are three different numbers. Line 1: circle + circle + square = 12 Line 2: circle + square = 7 Line 3: square + star = 5 a) circle = [ ]  b) square = [ ]  c) star = [ ]",
+    "a": "a) 5 (12 minus 7). b) 2 (5 + square = 7). c) 3 (2 + star = 5).",
+    "say": "Start with the two lines that look almost the same.",
+    "ask": "Which line do you use first? Why?",
+    "listen": "Line 1 minus line 2 gives the circle."
+   }
+  ]
+ },
+ "3": {
+  "skills": [
+   {
+    "id": "L1-TWICE1",
+    "slot": "slide",
+    "skill": "Bar model: twice as many",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Mei has 4 stickers. Ben has twice as many stickers as Mei. a) How many stickers does Ben have? b) How many stickers do Mei and Ben have in all? c) Kumar has 3 more than Ben. How many does Kumar have?",
+    "a": "a) 8 stickers. b) 12 stickers. c) 11 stickers.",
+    "say": "Draw one block for each sticker. Ben has two rows of Mei's blocks.",
+    "ask": "How did you show \"twice as many\" in your drawing?",
+    "listen": "Two equal groups of 4. Ask for the number sentence: 4 + 4 = 8."
+   }
+  ]
+ },
+ "4": {
+  "skills": [
+   {
+    "id": "L1-CAL1",
+    "slot": "slide",
+    "skill": "Calendar: the week repeats every 7 days",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Today is Wednesday. a) What day will it be in 2 days? b) What day will it be in 7 days? c) What day will it be in 9 days?",
+    "a": "a) Friday. b) Wednesday (a whole week later). c) Friday (7 days brings you back to Wednesday, then 2 more days).",
+    "say": "The days of the week are a repeating pattern, like our colour patterns. The core has 7 days.",
+    "ask": "What happens after Sunday? What does 7 days later always give?",
+    "listen": "\"It comes back to the same day.\" Children who count 9 one by one are fine; then ask them to find a shortcut."
+   },
+   {
+    "id": "L1-CAL2",
+    "slot": "bank",
+    "skill": "Calendar: days later and days before",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Mei goes to the library on Saturday. a) How many days is it from one Saturday to the next Saturday? b) Her friend goes 4 days after Mei. Which day is that? c) Which day is 5 days before Sunday?",
+    "a": "a) 7 days. b) Wednesday. c) Tuesday.",
+    "say": "Say the days as you count: Sunday, Monday, Tuesday, Wednesday.",
+    "ask": "How do you count days before? Which way do you go?",
+    "listen": "Counting backwards along the week."
+   }
+  ]
+ },
+ "5": {
+  "skills": [
+   {
+    "id": "L1-AGE1",
+    "slot": "slide",
+    "skill": "Ages: the gap between ages stays the same",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Ali is 6 years old. His sister is 9 years old. a) How many years older is his sister? b) In 3 years, Ali will be ___ years old. His sister will be ___ years old. c) How many years older is his sister then?",
+    "a": "a) 3 years. b) Ali 9 years, sister 12 years. c) 3 years. The gap between their ages never changes.",
+    "say": "Draw two bars for their ages. Both bars grow by the same amount.",
+    "ask": "What stayed the same? What changed?",
+    "listen": "\"They both get 3 years older, so the gap stays 3.\""
+   },
+   {
+    "id": "L1-AGE2",
+    "slot": "bank",
+    "skill": "Ages: work out an age from a gap",
+    "tool": "backwards",
+    "tool_name": "Work backwards",
+    "q": "Siti is 5 years old. Her mum is 30 years old. a) How old will Mum be when Siti is 8 years old? b) How old was Mum when Siti was born?",
+    "a": "a) 33 years old (Siti is 3 years older, so Mum is too). b) 25 years old (Siti was 0, 5 years ago).",
+    "say": "Siti gets older by some years. So does Mum.",
+    "ask": "How many years until Siti is 8? What happens to Mum's age in those years?",
+    "listen": "Same number of years added to both."
+   }
+  ]
+ },
+ "7": {
+  "skills": [
+   {
+    "id": "L1-CUBE1",
+    "slot": "slide",
+    "skill": "Counting cubes in stacks, including hidden ones",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Cubes are stacked on a mat in two rows. There are no gaps under any stack. a) How many cubes are in the back row? b) How many cubes are in the front row? c) How many cubes are there in all, including the ones you cannot see?",
+    "a": "Back row: stacks of 3, 2 and 1 = 6 cubes. Front row: stacks of 2, 1 and 1 = 4 cubes. In all: 10 cubes.",
+    "say": "Build it with real cubes if you can: stack by stack.",
+    "ask": "Which cubes can you not see? How do you know they are there?",
+    "listen": "\"The stack at the back is 3 high, so there are cubes under the top one.\""
+   },
+   {
+    "id": "L1-CUBE2",
+    "slot": "bank",
+    "skill": "Counting cubes: a staircase",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Ravi builds a staircase with cubes. The first step is 1 cube high, the next step is 2 cubes high, then 3, then 4. a) Count the cubes in the staircase. b) He builds a fifth step that is 5 cubes tall. How many extra cubes does he need?",
+    "a": "a) 10 cubes (1 + 2 + 3 + 4). b) 5 more cubes (15 in all).",
+    "say": "Draw the steps and count by columns.",
+    "ask": "How can you add 1, 2, 3 and 4 quickly? Which pairs make 5?",
+    "listen": "\"1 + 4 and 2 + 3 both make 5.\""
+   }
+  ]
+ },
+ "9": {
+  "skills": [
+   {
+    "id": "L1-CLK1",
+    "slot": "slide",
+    "skill": "Time: o'clock, half past and minutes in fives",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Look at the clock. a) Write the time. b) What time is it 1 hour later? c) The minute hand moves from the 12 to the 4. Count in 5s. How many minutes pass?",
+    "a": "a) 7:30 (half past 7). b) 8:30. c) 20 minutes (5, 10, 15, 20).",
+    "say": "Use a paper clock. Move the minute hand and count in fives.",
+    "ask": "Where is the minute hand at half past? How many minutes from the 12 to the 6?",
+    "listen": "Each number on the clock is 5 minutes."
+   },
+   {
+    "id": "L1-CLK2",
+    "slot": "bank",
+    "skill": "Time: how long and when it ends",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Read each question. Write the times like this: 2:45. a) PE starts at 2:00 and lasts 45 minutes. When does it end? b) Art starts at 9:30 and lasts 1 hour. When does it end? c) Mei starts reading at 4:00 and stops at half past 4. How many minutes does she read?",
+    "a": "a) 2:45. b) 10:30. c) 30 minutes.",
+    "say": "Draw a time line with the start and the end.",
+    "ask": "Where is the hour hand at half past?",
+    "listen": "Counting on from the start in chunks (30 minutes, then 15)."
+   }
+  ]
+ }
+}

@@ -32,19 +32,19 @@ def fig_html(spec):
     if name == 'seq':
         return K.seq_table(**kw)
     if name == 'sym':
-        return '<div style="display:flex;flex-direction:column;gap:14px">' + ''.join(K.sym_line(l) for l in kw['lines']) + '</div>'
+        return '<div style="display:flex;flex-direction:column;gap:14px">' + ''.join(K.sym_line(l, 72, 60) for l in kw['lines']) + '</div>'
     if name == 'letters': return K.letter_sum(**kw)
-    if name == 'cards': return K.cards(**kw)
-    if name == 'bars': return K.bars(**kw)
+    if name == 'cards': return K.cards(w=110, h=150, **kw)
+    if name == 'bars': return K.bars(unit=84, **kw)
     if name == 'week': return K.week_strip(**kw)
-    if name == 'iso': return K.iso(**kw)
-    if name == 'clock': return K.clock(**kw)
-    if name == 'heights': return K.height_grid(**kw)
-    if name == 'window': return K.window(**kw)
+    if name == 'iso': return K.iso(**{'s': 64, **kw})
+    if name == 'clock': return K.clock(size=400, **kw)
+    if name == 'heights': return K.height_grid(cell=120, **kw)
+    if name == 'window': return K.window(cell=130, **kw)
     if name == 'path': return K.path_posts(**kw)
     if name == 'faces':
         seq = [('open', 'smile'), ('closed', 'flat'), ('open', 'open'), ('closed', 'smile'), ('open', 'flat'), ('closed', 'open')][:kw['n']]
-        return K.face_row(seq, 120)
+        return K.face_row(seq, 150)
     raise KeyError(name)
 
 
@@ -74,7 +74,7 @@ def build_slide(level, n, g, items):
     key = key_of(level, n); sid = f'{key}-skill{g[1:]}'
     title = GROUPS[(level, n, g)]
     total = sum(len(i['stem']) + sum(len(x) for x in i['parts']) for i in items)
-    size = 36 if total < 260 else 32 if total < 420 else 30 if total < 560 else 28
+    size = 46 if total < 200 else 42 if total < 300 else 38 if total < 420 else 34 if total < 560 else 30
     body = h2(title, 60)
     for k, it in enumerate(items, 1):
         body += item_card(k, it, size)

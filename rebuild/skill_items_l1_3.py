@@ -74,30 +74,30 @@ add(id='L1-SEQ3', level=1, lesson=1, slot='bank', skill='Sequences: gaps get sma
 
 add(id='L1-PV1', level=1, lesson=2, slot='slide', group='g1', skill='Place value: tens and ones', tool='actout',
     stem='Ben packs 10 pencils in each box. He has 4 full boxes and 6 loose pencils.',
-    parts=['a) How many pencils does Ben have?', 'b) Siti has 52 pencils packed the same way. Fill in: ___ full boxes and ___ loose pencils.'],
+    parts=['a) Find the total number of pencils.', 'b) Siti has 52 pencils packed the same way. Fill in: ___ full boxes and ___ loose pencils.'],
     a='a) 46 pencils (4 tens and 6 ones). b) 5 full boxes and 2 loose pencils.',
     p=dict(tens=4, ones=6, n=52), ans=[46, 5, 2],
     say='Use bundles of 10 sticks and single sticks, or draw a stick for a ten and a dot for a one.',
     ask='How many tens in 46? How many ones? Where do you see the 4 and the 6 in the number?', listen='"4 tens and 6 ones is 46", "the 5 in 52 means 5 boxes of ten". A child who says 52 is "5 and 2" should count the sticks.')
 add(id='L1-PV2', level=1, lesson=2, slot='slide', group='g1', skill='Place value: digit cards', tool='list',
-    stem='Ali has two digit cards, 3 and 8. He uses both cards to make a 2-digit number.',
-    parts=['a) Write every number he can make.', 'b) Circle the greater number.', 'c) Which number is closer to 50?'],
+    stem='Ali lays two digit cards side by side: 3 and 8. The two cards show a 2-digit number.',
+    parts=['a) Write every number the cards can show.', 'b) Circle the greater number.', 'c) Which number is closer to 50?'],
     fig=('cards', dict(nums=[3, 8])),
     a='a) 38 and 83. b) 83 is greater (8 tens is more than 3 tens). c) 38 (it is 12 away from 50; 83 is 33 away).',
     p=dict(cards=[3, 8], target=50), ans=['38 83', 83, 38],
     say='Put the cards on the table and swap them. Write each number you make.', ask='How many different numbers? How do you know you have found them all? Which digit is the tens digit in 38?',
     listen='"Swap the cards and I get a new number." The tens card matters most when comparing.')
 add(id='L1-PV3', level=1, lesson=2, slot='bank', skill='Place value: three digit cards', tool='list',
-    stem='Aisha has three digit cards: 2, 5 and 7. She uses two different cards to make a 2-digit number.',
-    parts=['a) How many different numbers can she make?', 'b) Write them from the smallest to the greatest.', 'c) Which number is closest to 60?'],
+    stem='Aisha has three digit cards: 2, 5 and 7. She picks two of the cards and lays them side by side.',
+    parts=['a) Count the different 2-digit numbers she can lay down.', 'b) Write them from the smallest to the greatest.', 'c) Which of them is closest to 60?'],
     a='a) 6 numbers. b) 25, 27, 52, 57, 72, 75. c) 57 (3 away; 52 is 8 away and 72 is 12 away).',
     p=dict(cards=[2, 5, 7], target=60), ans=[6, '25 27 52 57 72 75', 57],
     say='Fix one card as the tens card, then list the numbers. Then fix the next card.', ask='What do you notice about the list when the tens card stays the same?', listen='A systematic list: 25, 27 / 52, 57 / 72, 75.')
 add(id='L1-PV4', level=1, lesson=2, slot='bank', skill='Place value: odd and even digits, clues', tool='list',
     stem='Read each clue. Many answers may be right.',
-    parts=['a) I am a 2-digit number. My tens digit is 4. My ones digit is odd and greater than 6. What numbers can I be?', 'b) I am a 2-digit number. My two digits are the same and they add up to 12. What number am I?'],
-    a='a) 47 and 49. b) 66.', p=dict(tens=4, lo=6, total=12), ans=['47 49', 66],
-    say='Cross out the numbers that break a clue.', ask='Which clue helps most? Why did you stop at 49?', listen='Children check each clue in turn.')
+    parts=['a) I am a 2-digit number. My tens digit is 3. My ones digit is odd and greater than 5. What numbers can I be?', 'b) I am a 2-digit number. My two digits are the same. My digits make a total of 12. What is my number?'],
+    a='a) 37 and 39. b) 66.', p=dict(tens=3, lo=5, total=12), ans=['37 39', 66],
+    say='Cross out the numbers that break a clue.', ask='Which clue helps most? Why did you stop at 39?', listen='Children check each clue in turn.')
 add(id='L1-PV5', level=1, lesson=2, slot='bank', skill='Place value: compare by tens', tool='table',
     stem='Siti has 3 tens and 9 ones. Kumar has 4 tens and 2 ones.',
     parts=['a) Who has the greater number?', 'b) Write Kumar\'s number with a digit in each box: [ ][ ].'],
@@ -106,7 +106,7 @@ add(id='L1-PV5', level=1, lesson=2, slot='bank', skill='Place value: compare by 
 
 add(id='L1-MA1', level=1, lesson=2, slot='slide', group='g2', skill='Mental addition: pair numbers to make 10', tool='simpler',
     stem='Add in your head. Look for numbers that make 10.',
-    parts=['a) Four jars have 8, 3, 2 and 7 marbles. How many marbles are there in all?', 'b) 9 + 6 + 1 + 4 + 10 = [ ]'],
+    parts=['a) Four jars hold 8, 3, 2 and 7 marbles. Find the total number of marbles.', 'b) 9 + 6 + 1 + 4 + 10 = [ ]'],
     a='a) 8 + 2 = 10 and 3 + 7 = 10, so 20 marbles. b) 9 + 1 = 10 and 6 + 4 = 10, so 10 + 10 + 10 = 30.',
     p=dict(a=[8, 3, 2, 7], b=[9, 6, 1, 4, 10]), ans=[20, 30],
     say='Do not add from left to right. Hunt for two numbers that make 10.', ask='Which two numbers did you join first? Is there another pair?', listen='"8 and 2 make 10." Accept any order that works.')
@@ -156,7 +156,7 @@ add(id='L1-CAL2', level=1, lesson=4, slot='bank', skill='Calendar: days later an
 
 add(id='L1-AGE1', level=1, lesson=5, slot='slide', group='g1', skill='Ages: the gap between ages stays the same', tool='draw',
     stem='Ali is 6 years old. His sister is 9 years old.',
-    parts=['a) How many years older is his sister?', 'b) How old will each of them be in 3 years? Ali: ___ years. Sister: ___ years.', 'c) How many years older is his sister then?'],
+    parts=['a) How many years older is his sister?', 'b) In 3 years, Ali will be ___ years old. His sister will be ___ years old.', 'c) How many years older is his sister then?'],
     a='a) 3 years. b) Ali 9 years, sister 12 years. c) 3 years. The gap between their ages never changes.', p=dict(ali=6, sis=9, years=3), ans=[3, 9, 12, 3],
     say='Draw two bars for their ages. Both bars grow by the same amount.', ask='What stayed the same? What changed?', listen='"They both get 3 years older, so the gap stays 3."')
 add(id='L1-AGE2', level=1, lesson=5, slot='bank', skill='Ages: work out an age from a gap', tool='backwards',
@@ -173,7 +173,7 @@ add(id='L1-CUBE1', level=1, lesson=7, slot='slide', group='g1', skill='Counting 
     say='Build it with real cubes if you can: stack by stack.', ask='Which cubes can you not see? How do you know they are there?', listen='"The stack at the back is 3 high, so there are cubes under the top one."')
 add(id='L1-CUBE2', level=1, lesson=7, slot='bank', skill='Counting cubes: a staircase', tool='draw',
     stem='Ravi builds a staircase with cubes. The first step is 1 cube high, the next step is 2 cubes high, then 3, then 4.',
-    parts=['a) How many cubes are in the staircase?', 'b) He adds a fifth step, 5 cubes high. How many more cubes does he need?'],
+    parts=['a) Count the cubes in the staircase.', 'b) He builds a fifth step that is 5 cubes tall. How many extra cubes does he need?'],
     a='a) 10 cubes (1 + 2 + 3 + 4). b) 5 more cubes (15 in all).', p=dict(steps=4), ans=[10, 5],
     say='Draw the steps and count by columns.', ask='How can you add 1, 2, 3 and 4 quickly? Which pairs make 5?', listen='"1 + 4 and 2 + 3 both make 5."')
 
@@ -192,9 +192,9 @@ add(id='L1-CLK2', level=1, lesson=9, slot='bank', skill='Time: how long and when
 # =====================================================================  LEVEL 2
 add(id='L2-PAIR1', level=2, lesson=2, slot='slide', group='g1', skill='Pairing sums: first and last make the same total', tool='simpler',
     stem='Add these numbers. Look for pairs that make the same total.',
-    parts=['a) 3 + 6 + 9 + 12 + 15 + 18 + 21 + 24 = [ ]', 'b) 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 = [ ]'],
-    a='a) 3 + 24 = 27, 6 + 21 = 27, 9 + 18 = 27, 12 + 15 = 27: four pairs of 27 = 108. b) 11 + 20 = 31, and there are 5 pairs: 155.',
-    p=dict(a=dict(start=3, step=3, n=8), b=dict(start=11, step=1, n=10)), ans=[108, 155],
+    parts=['a) 4 + 9 + 14 + 19 + 24 + 29 + 34 + 39 = [ ]', 'b) Add all the whole numbers from 11 to 20.'],
+    a='a) 4 + 39 = 43, 9 + 34 = 43, 14 + 29 = 43, 19 + 24 = 43: four pairs of 43 = 172. b) 11 + 20 = 31, and there are 5 pairs: 155.',
+    p=dict(a=dict(start=4, step=5, n=8), b=dict(start=11, step=1, n=10)), ans=[172, 155],
     say='Write the list forwards, then write it again backwards underneath. Add the two numbers that sit on top of each other.', ask='What do you notice about the first and the last? And the second and the second last? How many pairs are there?', listen='"Every pair makes the same total." Check that they count the pairs, not the numbers.')
 add(id='L2-PAIR2', level=2, lesson=2, slot='bank', skill='Pairing sums: save every day', tool='simpler',
     stem='Add the numbers.',
@@ -237,14 +237,14 @@ add(id='L2-AGE1', level=2, lesson=5, slot='slide', group='g1', skill='Ages: the 
     say='For part a, take away the extra years first, then share what is left. The same take-away-the-extra idea as the worksheet.', ask='Which person is older? By how many years? What do you do with the extra 4?', listen='"Both get older at the same speed, so the gap stays." For a), a Guess and check that tests both clues is also fine.')
 add(id='L2-AGE2', level=2, lesson=5, slot='bank', skill='Ages: when will it happen?', tool='table',
     stem='Ravi is 9 years old. Mei is 5 years old.',
-    parts=['a) In how many years will Ravi be 12 years old?', 'b) How old will Mei be then?', 'c) How old was Ravi when Mei was born?'],
+    parts=['a) Ravi will be 12 years old in ___ years.', 'b) Mei will be ___ years old then.', 'c) Ravi was ___ years old when Mei was born.'],
     a='a) 3 years. b) 8 years old. c) 4 years old.', p=dict(ravi=9, mei=5, ravi_later=12), ans=[3, 8, 4],
     say='Make a small table: year, Ravi, Mei.', ask='What number stays the same in every row?', listen='The gap of 4.')
 
 add(id='L2-CORNER1', level=2, lesson=8, slot='slide', group='g1', skill='Cubes in the corner of a room', tool='actout',
     stem='Cubes are stacked in the corner of a room, touching both walls. The bottom layer is 3 rows of 3. The next layer is 2 rows of 2. The top layer is 1 cube.',
-    parts=['a) How many cubes are in the bottom layer?', 'b) How many cubes are there in all?', 'c) How many cubes touch the left wall?'],
-    fig=('iso', dict(heights=[[3, 2, 1], [2, 2, 1], [1, 1, 1]], walls=True, label='Cubes stacked in the corner of a room')),
+    parts=['a) The bottom layer has ___ cubes.', 'b) The whole stack has ___ cubes.', 'c) ___ cubes touch the left wall.'],
+    fig=('iso', dict(s=52, heights=[[3, 2, 1], [2, 2, 1], [1, 1, 1]], walls=True, label='Cubes stacked in the corner of a room')),
     a='a) 9. b) 14 (9 + 4 + 1). c) 6 (3 in the bottom layer, 2 in the next and 1 on top).', p=dict(layers=[3, 2, 1]), ans=[9, 14, 6],
     say='Build it layer by layer with cubes, then look at one wall.', ask='Which cubes touch the wall in the bottom layer? In the next layer?', listen='"3, then 2, then 1."')
 add(id='L2-CORNER2', level=2, lesson=8, slot='bank', skill='Cubes in a corner: bigger', tool='table',
@@ -282,8 +282,8 @@ add(id='L2-POST1', level=2, lesson=10, slot='slide', group='g1', skill='Posts an
     a='a) 5 posts (4 gaps of 5 m). b) 18 m (6 gaps of 3 m).', p=dict(length=20, step=5, posts=7, step2=3), ans=[5, 18],
     say='Draw a dot for each post and a line for each gap.', ask='Are there more posts or more gaps? Why?', listen='"One more post than gaps" in a line.')
 add(id='L2-QUEUE1', level=2, lesson=10, slot='slide', group='g1', skill='Places in a queue', tool='draw',
-    stem='Ravi is 5th from the front of a queue. He is 4th from the back.',
-    parts=['How many children are in the queue?'],
+    stem='Counting from the front of a queue, Ravi is number 5. Counting from the back, he is number 4.',
+    parts=['Find the number of children in the queue.'],
     a='8 children. Ravi is counted twice (5 + 4 = 9), so take 1 away.', p=dict(front=5, back=4), ans=[8],
     say='Draw the queue and mark Ravi.', ask='Who is in front of Ravi? Behind him? Did you count Ravi twice?', listen='"Ravi is counted in both numbers."')
 add(id='L2-POST2', level=2, lesson=10, slot='bank', skill='Posts and gaps: round a pond', tool='draw',
@@ -309,17 +309,17 @@ add(id='L3-PAIR1', level=3, lesson=2, slot='slide', group='g1', skill='Pairing: 
     a='a) 8 + 2, 7 + 3, 6 + 4 and 9 + 1 each make 10, so 40. b) 260 + 140 = 400, 380 + 120 = 500, 410 + 90 = 500, so 1400.', p=dict(a=[8, 7, 2, 3, 6, 4, 9, 1], b=[260, 140, 380, 120, 410, 90]), ans=[40, 1400],
     say='Do not add left to right. Hunt for partners.', ask='Which numbers are partners? How did you find the partner of 260?', listen='"260 + 140 = 400, because 60 + 40 = 100."')
 add(id='L3-SERIES1', level=3, lesson=2, slot='slide', group='g1', skill='Series sums: first plus last', tool='pattern',
-    stem='Ali adds a list of numbers that go up by the same step: 5 + 8 + 11 + 14 + 17 + 20 + 23 + 26',
+    stem='Ali adds a list of numbers that go up by the same step: 3 + 10 + 17 + 24 + 31 + 38 + 45 + 52',
     parts=['a) What is the first number plus the last number?', 'b) How many pairs are there?', 'c) What is the total?'],
-    a='a) 5 + 26 = 31. b) 4 pairs (8 numbers). c) 4 x 31 = 124.', p=dict(start=5, step=3, n=8), ans=[31, 4, 124],
-    say='Write the list twice: forwards, then backwards underneath.', ask='What is the second number plus the second last? What do you notice?', listen='"Every pair makes 31."')
+    a='a) 3 + 52 = 55. b) 4 pairs (8 numbers). c) 4 x 55 = 220.', p=dict(start=3, step=7, n=8), ans=[55, 4, 220],
+    say='Write the list twice: forwards, then backwards underneath.', ask='What is the second number plus the second last? What do you notice?', listen='"Every pair makes 55."')
 add(id='L3-PAIR2', level=3, lesson=2, slot='bank', skill='Series sums: a long list', tool='simpler',
     stem='Add the numbers.',
     parts=['a) 1 + 2 + 3 + ... + 40 = [ ]', 'b) Kumar reads 4 pages on day 1, then 3 more pages each day than the day before: 4, 7, 10 and so on. How many pages has he read after 7 days?'],
     a='a) 1 + 40 = 41, 20 pairs, 820. b) The days read 4, 7, 10, 13, 16, 19, 22. First plus last is 26; 3 pairs and a middle number 13: 78 + 13 = 91.', p=dict(a=dict(start=1, step=1, n=40), b=dict(start=4, step=3, n=7)), ans=[820, 91],
     say='If there is an odd number of numbers, one number is left in the middle.', ask='How many pairs? What is left over?', listen='The middle number is half of first plus last.')
 add(id='L3-DIV3', level=3, lesson=3, slot='slide', group='g1', skill='Divisibility: the digit sum test for 3', tool='pattern',
-    stem='Look at the numbers in the 3 table: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30',
+    stem='Write the first ten numbers in the 3 table, from 3 up to 30.',
     parts=['a) Add the digits of each number. What do you notice?', 'b) Is 483 in the 3 table? Is 725?'],
     a='a) The digit sums are 3, 6, 9, 3, 6, 9, 3, 6, 9, 3: always a number from the 3 table. b) 483: 4 + 8 + 3 = 15, which is in the 3 table, so yes (3 x 161). 725: 7 + 2 + 5 = 14, which is not, so no.', p=dict(tests=[483, 725]), ans=['yes', 'no'],
     say='Last lesson we looked at the digit sums of the 9 table. Do the same for the 3 table.', ask='What do the digit sums have in common? Does the test work for 30? For 483?', listen='"The digit sum is in the 3 table". Check by dividing: 483 / 3.')
@@ -335,7 +335,7 @@ add(id='L3-RANGE1', level=3, lesson=3, slot='slide', group='g2', skill='Counting
     say='Count to the top, then take away the ones that come too early.', ask='How do you find how many 4s fit into 150? Which numbers did you take away?', listen='"Divide by 4, ignore the remainder".')
 add(id='L3-RANGE2', level=3, lesson=3, slot='bank', skill='Counting multiples in a range', tool='simpler',
     stem='Answer each question.',
-    parts=['a) How many numbers from 100 to 200 are in the 3 table?', 'b) How many numbers from 1 to 100 are in the 6 table?', 'c) How many numbers from 1 to 60 are in both the 2 table and the 5 table?'],
+    parts=['a) Count the numbers in the 3 table from 100 to 200.', 'b) Count the numbers in the 6 table up to 100.', 'c) Up to 60, count the numbers that are in both the 2 table and the 5 table.'],
     a='a) 33 (102 to 198). b) 16. c) 6 (10, 20, 30, 40, 50, 60: the 10 table).', p=dict(q=[(3, 100, 200), (6, 1, 100), (10, 1, 60)]), ans=[33, 16, 6],
     say='Count up to the top, then take away.', ask='Why is c the 10 table?', listen='2 and 5 together make 10.')
 
@@ -376,7 +376,7 @@ add(id='L3-CHAIN1', level=3, lesson=4, slot='bank', skill='Balance chains', tool
     say='Draw a balance for each sentence.', ask='How many plums for 3 pears?', listen='Multiply along the chain.')
 add(id='L3-SHARE1', level=3, lesson=2, slot='bank', skill='Shape sums: a shared centre', tool='guess',
     stem='Draw 3 lines that cross in the middle. Each line has 3 circles: one at each end and one in the centre. The centre circle is shared by all 3 lines (7 circles in all).',
-    parts=['Put 1, 2, 3, 4, 5, 6 and 7 in the circles, once each, so that each line adds up to 12. 4 goes in the centre. 7 is at one end of a line. What number is at the other end of that line?'],
+    parts=['Use the numbers 1 to 7 once each so that each line adds up to 12. 4 goes in the centre. 7 is at one end of a line. What number is at the other end of that line?'],
     a='1 (7 + 4 + 1 = 12). The other lines use 2 and 6, and 3 and 5.', p=dict(centre=4, total=12, end=7), ans=[1],
     say='The centre counts for every line. How much is left for the two ends of each line?', ask='What do the two ends of a line add up to?', listen='"8 for the ends": the pairs are 1 and 7, 2 and 6, 3 and 5.')
 add(id='L3-OP1', level=3, lesson=10, slot='bank', skill='Number patterns: find a secret rule', tool='table',
@@ -386,11 +386,11 @@ add(id='L3-OP1', level=3, lesson=10, slot='bank', skill='Number patterns: find a
     say='Make a table of the numbers going in and the number coming out.', ask='What do you try first? Does your rule work for every row?', listen='Test the rule on all four examples.')
 add(id='L3-BOUND1', level=3, lesson=10, slot='bank', skill='Smallest and greatest possible; impossible totals', tool='list',
     stem='Mei picks 3 different number cards from 1 to 9 and adds them.',
-    parts=['a) What is the smallest total she can make?', 'b) What is the greatest total she can make?', 'c) Can she make a total of 25? How do you know?'],
+    parts=['a) Find her smallest possible total.', 'b) Find her greatest possible total.', 'c) Can she make a total of 25? How do you know?'],
     a='a) 6 (1 + 2 + 3). b) 24 (7 + 8 + 9). c) No, 25 is greater than the greatest total, 24.', p=dict(lo=1, hi=9, k=3, test=25), ans=[6, 24, 'no'],
     say='Think about the smallest cards and then the greatest cards.', ask='How do you know you cannot go higher than 24?', listen='Reasoning with the greatest three cards.')
 add(id='L3-STICK1', level=3, lesson=10, slot='bank', skill='Most digits from a fixed number of sticks', tool='list',
-    stem='Digits are made with sticks: 1 uses 2 sticks, 7 uses 3, 4 uses 4, 2, 3 and 5 use 5, 0, 6 and 9 use 6, and 8 uses 7. Ravi has exactly 7 sticks.',
+    stem='Ravi makes digits from sticks. Sticks needed for each digit: 1 needs 2; 7 needs 3; 4 needs 4; 2, 3 and 5 need 5 each; 0, 6 and 9 need 6 each; 8 needs 7. Ravi has exactly 7 sticks.',
     parts=['a) What is the most digits he can make?', 'b) What is the greatest number he can make with that many digits?'],
     a='a) 3 digits (each digit needs at least 2 sticks, and 4 digits need at least 8). b) 711 (the only way to use exactly 7 sticks with 3 digits is 2 + 2 + 3: the digits 1, 1 and 7).', p=dict(sticks=7, cost={'1': 2, '7': 3, '4': 4, '2': 5, '3': 5, '5': 5, '0': 6, '6': 6, '9': 6, '8': 7}), ans=[3, 711],
     say='Which digit costs the least? Start there.', ask='Why can he not make 4 digits? Which digits fit in 7 sticks with 3 digits?', listen='A systematic check of costs.')

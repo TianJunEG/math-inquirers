@@ -145,11 +145,11 @@ def cards(nums, w=84, h=116):
 # ---------------------------------------------------------------- html table for sequences with a gap row
 def seq_table(terms, gaps, blanks_from):
     """terms: list; entries from index blanks_from on are shown as empty boxes. gaps: list shown under the terms (None = empty box)."""
-    box = f'<span style="display:inline-block;width:56px;height:46px;border:4px solid {NAVY};border-radius:8px;background:{YEL};vertical-align:middle"></span>'
+    box = f'<span style="display:inline-block;width:64px;height:56px;border:4px solid {NAVY};border-radius:8px;background:{YEL};vertical-align:middle"></span>'
     def cell(v, bold=True, bg=WHITE):
-        return f'<td style="border:3px solid {NAVY};background:{bg};padding:6px 10px;min-width:64px;text-align:center;font-size:36px;font-weight:{800 if bold else 600}">{v}</td>'
-    r1 = f'<td style="padding:6px 12px;font-size:28px;font-weight:800;color:{TEAL}">Number</td>' + ''.join(cell(box if i >= blanks_from else t) for i, t in enumerate(terms))
-    r2 = f'<td style="padding:6px 12px;font-size:28px;font-weight:800;color:{TEAL}">Gap</td><td></td>' + ''.join(cell(box if g is None else f'+{g}', False, SKY) for g in gaps)
+        return f'<td style="border:3px solid {NAVY};background:{bg};padding:6px 10px;min-width:84px;text-align:center;font-size:46px;font-weight:{800 if bold else 600}">{v}</td>'
+    r1 = f'<td style="padding:6px 12px;font-size:32px;font-weight:800;color:{TEAL}">Number</td>' + ''.join(cell(box if i >= blanks_from else t) for i, t in enumerate(terms))
+    r2 = f'<td style="padding:6px 12px;font-size:32px;font-weight:800;color:{TEAL}">Gap</td><td></td>' + ''.join(cell(box if g is None else f'+{g}', False, SKY) for g in gaps)
     return f'<table style="border-collapse:separate;border-spacing:6px"><tr>{r1}</tr><tr>{r2}</tr></table>'
 
 
@@ -180,7 +180,7 @@ def face_row(seq, size=130, start=1):
 
 
 # ---------------------------------------------------------------- path with lamp posts (both sides)
-def path_posts(length_label='24 m', gap_label='3 m', w=900):
+def path_posts(length_label='24 m', gap_label='3 m', w=1100):
     h = 230; out = ''
     out += f'<rect x="40" y="80" width="{w-80}" height="70" fill="#E9E1CF" stroke="{NAVY}" stroke-width="3"/>'
     def post(x, y):
