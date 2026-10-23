@@ -816,7 +816,7 @@
    "id": "L2U05-G01",
    "tier": "go",
    "page": 5,
-   "text": "A letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.",
+   "text": "A letter can stand for a mystery number. Let n be that number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.",
    "parts": [
     {
      "label": "a",
@@ -857,7 +857,7 @@
    "id": "L2U05-G02",
    "tier": "go",
    "page": 5,
-   "text": "Three jars have 36 beans altogether. 4 beans move from jar A to jar B. Then 6 beans move from jar B to jar C. Now every jar has the same number.",
+   "text": "Three jars have 36 beans altogether. 4 beans move from jar A to jar B. Then 6 move from jar B to jar C. Now every jar has the same number.",
    "parts": [
     {
      "label": "a",
@@ -919,7 +919,7 @@
      "× 3",
      "36"
     ],
-    "width_mm": 120
+    "width_mm": 100
    },
    "parts": [
     {

@@ -75,11 +75,11 @@ items = [
    hint='Write the first OUT numbers. What do you see?',
    why='IN 1, 2, 3, 4 give 5, 9, 13, 17: always 1 more than the 4 times table. 29 = 28 + 1: yes. 30 is skipped (29, 33): no. 33 = 32 + 1: yes. 42 is skipped (41, 45): no.'),
  # Go further
- I('go', 5, 'A letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.', beyond='Letters for numbers', parts=[
+ I('go', 5, 'A letter can stand for a mystery number. Let n be that number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.', beyond='Letters for numbers', parts=[
    P('a', '3 × n + 4 = 25. n = {b}', '7'), P('b', '5 × n - 3 = 27. n = {b}', '6'), P('c', 'n ÷ 2 + 8 = 13. n = {b}', '10')],
    hint='Work backwards, just like a machine.',
    why='(a) 25 - 4 = 21, 21 ÷ 3 = 7. (b) 27 + 3 = 30, 30 ÷ 5 = 6. (c) 13 - 8 = 5, 5 × 2 = 10.'),
- I('go', 5, 'Three jars have 36 beans altogether. 4 beans move from jar A to jar B. Then 6 beans move from jar B to jar C. Now every jar has the same number.', parts=[
+ I('go', 5, 'Three jars have 36 beans altogether. 4 beans move from jar A to jar B. Then 6 move from jar B to jar C. Now every jar has the same number.', parts=[
    P('a', 'Now each jar has {b} beans.', '12'), P('b', 'At first: jar A {b}, jar B {b}, jar C {b}', ['16', '14', '6'], '16, 14 and 6')],
    hint='Undo the last move first. Jar C gave nothing, it got 6.',
    why='(a) 36 ÷ 3 = 12. (b) Undo B to C: jar C had 12 - 6 = 6 and jar B had 12 + 6 = 18. Undo A to B: jar B had 18 - 4 = 14 and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.'),
@@ -88,7 +88,7 @@ items = [
    space={'rows': ['My riddle:']}, hint='Start at 12 and go forwards.',
    why='Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.'),
  I('go', 5, 'Machine A does × 2, then + 3. Machine B does - 5, then × 3. The OUT of A goes into B. The final OUT is 36.',
-   figure=mach('?', '× 2', '+ 3', '- 5', '× 3', '36', width_mm=120), figside=False,
+   figure=mach('?', '× 2', '+ 3', '- 5', '× 3', '36', width_mm=100), figside=False,
    partsrow=True, parts=[P('a', 'The OUT of machine A was {b}', '17'), P('b', 'The number that went into A was {b}', '7')],
    hint='Undo machine B first. Then undo machine A.',
    why='Undo B: 36 ÷ 3 = 12, then 12 + 5 = 17. That is the OUT of A. Undo A: 17 - 3 = 14, then 14 ÷ 2 = 7. Check: 7 → 14 → 17 → 12 → 36.'),

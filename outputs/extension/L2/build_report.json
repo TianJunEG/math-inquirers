@@ -397,9 +397,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9815750514933058,
+   "fill": 0.9836347837281153,
    "over": false,
-   "excess_mm": -4.7,
+   "excess_mm": -4.2,
    "edition": "soft"
   },
   {
@@ -1393,9 +1393,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9815750514933058,
+   "fill": 0.9836347837281153,
    "over": false,
-   "excess_mm": -4.7,
+   "excess_mm": -4.2,
    "edition": "print"
   },
   {
@@ -2012,7 +2012,7 @@
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 13.14,
+  "mb": 13.13,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }
