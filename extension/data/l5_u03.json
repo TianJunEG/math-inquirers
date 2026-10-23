@@ -1,0 +1,812 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 3,
+ "id": "L5U03",
+ "title": "Before and after",
+ "topic": "Fraction word problems",
+ "holiday_lesson": 3,
+ "goal": "I can use bar models for before and after. I ask what stays the same: the total, the difference or one amount.",
+ "learn": {
+  "intro": "Draw a model for the Before and a model for the After. Ask first: what stays the same?",
+  "example": {
+   "problem": "Kumar has 60 cards. Wei has 30 cards. Kumar gives some cards to Wei. Then Kumar has 2/3 as many cards as Wei. How many cards does Kumar give?",
+   "steps": [
+    "Kumar gives cards to Wei, so the total stays the same: 60 + 30 = 90.",
+    "After: Kumar has 2 units and Wei has 3 units. That is 5 units in all.",
+    "5 units = 90, so 1 unit = 18. Kumar now has 2 × 18 = 36.",
+    "Kumar gives 60 - 36 = 24 cards."
+   ],
+   "answer": "Kumar gives 24 cards.",
+   "figure": {
+    "type": "l5_bars",
+    "rows": [
+     {
+      "label": "Before: Kumar",
+      "cells": [
+       {
+        "n": 3.3333333333333335,
+        "text": "60"
+       }
+      ]
+     },
+     {
+      "label": "Before: Wei",
+      "cells": [
+       {
+        "n": 1.6666666666666667,
+        "text": "30"
+       }
+      ],
+      "note": "total 90"
+     },
+     {
+      "label": "After: Kumar",
+      "cells": [
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       }
+      ],
+      "note": "2 units"
+     },
+     {
+      "label": "After: Wei",
+      "cells": [
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       }
+      ],
+      "note": "3 units"
+     }
+    ],
+    "width_mm": 125,
+    "bh": 34,
+    "gap": 10,
+    "alt": "before and after bars"
+   }
+  },
+  "howto": {
+   "title": "How to",
+   "steps": [
+    "Draw the Before bars. Draw the After bars.",
+    "Ask what stays the same. Make that part match.",
+    "Find 1 unit. Then answer the question."
+   ]
+  },
+  "facts": {
+   "title": "What stays the same?",
+   "lines": [
+    "A gives to B: the total.",
+    "Both get or lose the same: the difference.",
+    "Only one thing changes: the other amount."
+   ]
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U03-L01",
+   "text": "Jason has 70 stickers. Amelia has 50 stickers. Jason gives some stickers to Amelia. Then Jason has 3/5 as many stickers as Amelia. How many stickers does Jason give? {b}",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25 stickers"
+   },
+   "explanation": "The total stays the same: 70 + 50 = 120. After, Jason has 3 units and Amelia has 5 units. 8 units = 120, so 1 unit = 15. Jason now has 3 × 15 = 45. Jason gives 70 - 45 = 25 stickers. Check: Amelia has 50 + 25 = 75 = 5 × 15."
+  }
+ },
+ "items": [
+  {
+   "id": "L5U03-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Aisha has $80. A book takes 1/4 of her money. A pen takes 1/3 of the money that is then left.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The book costs $ {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The pen costs $ {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Aisha has $ {b} left.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "explanation": "(a) 1/4 of 80 = 20. (b) 80 - 20 = 60 is left. 1/3 of 60 = 20. (c) 60 - 20 = 40 is left."
+  },
+  {
+   "id": "L5U03-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Lily has 22 counters. Ravi has 14 counters. Lily gives 5 counters to Ravi.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Lily has {b} counters now.",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ravi has {b} counters now.",
+     "answer": {
+      "value": [
+       "19"
+      ],
+      "text": "19"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The total is {b} before and after.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    }
+   ],
+   "explanation": "(a) 22 - 5 = 17. (b) 14 + 5 = 19. (c) 22 + 14 = 36, and 17 + 19 = 36. Giving does not change the total."
+  },
+  {
+   "id": "L5U03-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Ben is 12 years old. His aunt is 41 years old.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "In 6 years Ben will be {b} and his aunt will be {b}.",
+     "answer": {
+      "value": [
+       "18",
+       "47"
+      ],
+      "text": "18, 47"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Now the aunt is {b} years older than Ben. In 6 years she is {b} years older.",
+     "answer": {
+      "value": [
+       "29",
+       "29"
+      ],
+      "text": "29, 29"
+     }
+    }
+   ],
+   "explanation": "(a) 12 + 6 = 18 and 41 + 6 = 47. (b) 41 - 12 = 29 and 47 - 18 = 29. When both get older by the same number of years, the difference stays the same."
+  },
+  {
+   "id": "L5U03-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Ali has 38 stamps. Mei has 24 stamps. Ali gives some stamps to Mei. Then each child has an equal number of stamps. How many stamps does Ali give? {b}",
+   "answer": {
+    "value": [
+     "7"
+    ],
+    "text": "7 stamps"
+   },
+   "explanation": "The total stays 38 + 24 = 62. Each has 62 ÷ 2 = 31. Ali has 38 - 31 = 7 stamps too many, so he gives 7. Check: Mei has 24 + 7 = 31."
+  },
+  {
+   "id": "L5U03-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "There are 48 children. 5/12 of them wear glasses. How many more children do not wear glasses than wear glasses? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 children"
+   },
+   "explanation": "1/12 of 48 = 4. 5/12 of 48 = 20 wear glasses. 48 - 20 = 28 do not. 28 - 20 = 8 more."
+  },
+  {
+   "id": "L5U03-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A bag has 15 green beads and 9 yellow beads. Then 6 more yellow beads are put in.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The beads that did not change are   {circ:green|yellow}",
+     "answer": {
+      "value": [
+       "green"
+      ],
+      "text": "green"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At first, green beads are {b} of the beads.  (simplest form)",
+     "answer": {
+      "value": [
+       "5/8"
+      ],
+      "text": "5/8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Now, green beads are {b} of the beads.  (simplest form)",
+     "answer": {
+      "value": [
+       "1/2"
+      ],
+      "text": "1/2"
+     }
+    }
+   ],
+   "explanation": "(a) Only yellow beads were added, so the 15 green beads did not change. (b) At first there are 24 beads: 15/24 = 5/8. (c) Now there are 30 beads: 15/30 = 1/2. The green beads stay the same but they are a smaller part of the bag."
+  },
+  {
+   "id": "L5U03-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Ray spent 2/5 of his money on a bag. He has $45 left. Use the bar model.",
+   "figure": {
+    "type": "l5_bars",
+    "rows": [
+     {
+      "cells": [
+       {
+        "n": 1,
+        "text": "bag",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "bag",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "left",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "left",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "left",
+        "shade": false
+       }
+      ],
+      "brace": {
+       "a": 0,
+       "b": 5,
+       "text": "? at first"
+      }
+     }
+    ],
+    "width_mm": 110,
+    "alt": "bar of 5 equal parts"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "One part is $ {b}",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ray had $ {b} at first.",
+     "answer": {
+      "value": [
+       "75"
+      ],
+      "text": "75"
+     }
+    }
+   ],
+   "explanation": "The bag takes 2 of the 5 parts. The other 3 parts are $45, so 1 part = 45 ÷ 3 = 15. All 5 parts = 5 × 15 = 75."
+  },
+  {
+   "id": "L5U03-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "A pen costs 1/3 as much as a book. The pen and the book cost $28 together.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The book costs $ {b}",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The pen costs $ {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "The book is 3 units and the pen is 1 unit. 4 units = 28, so 1 unit = 7. The pen costs 7. The book costs 3 × 7 = 21."
+  },
+  {
+   "id": "L5U03-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Mei has 3/4 as many stickers as Siti. They have 56 stickers altogether.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Siti has {b} stickers.",
+     "answer": {
+      "value": [
+       "32"
+      ],
+      "text": "32"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei has {b} stickers.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    }
+   ],
+   "explanation": "Siti has 4 units and Mei has 3 units. 7 units = 56, so 1 unit = 8. Siti has 4 × 8 = 32. Mei has 3 × 8 = 24."
+  },
+  {
+   "id": "L5U03-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "What stays the same? Circle one choice for each.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali gives some marbles to Ben.   {circ:the total|the difference}",
+     "answer": {
+      "value": [
+       "the total"
+      ],
+      "text": "the total"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ravi and Ali are each given $5.   {circ:the total|the difference}",
+     "answer": {
+      "value": [
+       "the difference"
+      ],
+      "text": "the difference"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Red beads are added to a jar of red and blue beads.   {circ:the red beads|the blue beads}",
+     "answer": {
+      "value": [
+       "the blue beads"
+      ],
+      "text": "the blue beads"
+     }
+    }
+   ],
+   "explanation": "(a) Ben gains what Ali loses, so the total is the same. (b) Both gain $5, so the gap between them is the same, but the total goes up by $10. (c) Only red beads are put in, so the number of blue beads does not change."
+  },
+  {
+   "id": "L5U03-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Ravi has $45. Ben has $21. Their mother gives each boy $15.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ravi has $ {b} now.",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has $ {b} now.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ravi has $ {b} more than Ben now.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    }
+   ],
+   "explanation": "(a) 45 + 15 = 60. (b) 21 + 15 = 36. (c) 60 - 36 = 24. Before the gift 45 - 21 = 24 too. The difference did not change."
+  },
+  {
+   "id": "L5U03-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Siti buys a shirt with 1/4 of her money. Shoes take 1/3 of the rest. She keeps $30. How much money did Siti start with? $ {b}",
+   "answer": {
+    "value": [
+     "60"
+    ],
+    "text": "$60"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "The shirt is 1 unit and the rest is 3 units. The shoes are 1/3 of the rest, which is 1 unit. So 4 - 1 - 1 = 2 units are left. 2 units = $30, so 1 unit = $15. At first she had 4 × 15 = $60."
+  },
+  {
+   "id": "L5U03-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "A jug was 5/6 full of juice. After 250 ml was poured out, it was 1/2 full. How much juice does the jug hold when it is full? {b} ml",
+   "answer": {
+    "value": [
+     "750"
+    ],
+    "text": "750 ml"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "5/6 - 1/2 = 5/6 - 3/6 = 2/6 = 1/3 of the jug was poured out. 1/3 is 250 ml, so a full jug is 3 × 250 = 750 ml."
+  },
+  {
+   "id": "L5U03-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "When Ali gives Ben some stickers, the total number of stickers changes.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "b",
+     "text": "When 2 children are each given $5, the difference between their money stays the same.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "c",
+     "text": "If Mei has 1/2 as many cards as Ali, then Ali has 2 times as many cards as Mei.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) False: what Ali loses Ben gains. (b) True: both amounts go up by 5. (c) True: if Mei has 1 unit, Ali has 2 units."
+  },
+  {
+   "id": "L5U03-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "On Monday Siti uses 2/5 of her money. On Tuesday she uses 1/3 of what is left. In all she uses $90. How much money did Siti start with? $ {b}",
+   "answer": {
+    "value": [
+     "150"
+    ],
+    "text": "$150"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Cut the whole into 15 equal units. Count the units spent.",
+   "explanation": "2/5 = 6/15, so Monday takes 6 of 15 units. The rest is 9 units. Tuesday is 1/3 of 9 = 3 units. In all 6 + 3 = 9 units are spent. 9 units = $90, so 1 unit = $10. At first Siti had 15 × 10 = $150."
+  },
+  {
+   "id": "L5U03-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Siti and Mei have 120 beads altogether. Siti gives 10 beads to Mei. Then Siti has 3/5 as many beads as Mei. How many beads did Siti have at first? {b}",
+   "answer": {
+    "value": [
+     "55"
+    ],
+    "text": "55 beads"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "The total stays the same. Find each child's beads after.",
+   "explanation": "After: Siti 3 units, Mei 5 units. 8 units = 120, so 1 unit = 15. Siti has 45 now. She gave away 10, so at first she had 45 + 10 = 55. Check: Mei had 75 - 10 = 65 and 55 + 65 = 120."
+  },
+  {
+   "id": "L5U03-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Ravi is 38 years old. His son is 10 years old. In how many years will the son be 1/3 of his father's age? {b} years",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4 years"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "The difference in their ages never changes. How many units is it?",
+   "explanation": "The difference is 38 - 10 = 28 years, and it stays 28. When the son is 1 unit the father is 3 units, so the difference is 2 units. 2 units = 28, so 1 unit = 14. The son is 14, which is 4 years from now. Check: father 42 = 3 × 14."
+  },
+  {
+   "id": "L5U03-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali, Ben and Cara have 150 stickers altogether. Ali has twice as many stickers as Ben. Ben has 10 more than Cara.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Cara has {b} stickers.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has {b} stickers.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ali has {b} stickers.",
+     "answer": {
+      "value": [
+       "80"
+      ],
+      "text": "80"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Call Cara's stickers 1 unit. Draw bars for Ben and for Ali.",
+   "explanation": "Let Cara have 1 unit. Ben has 1 unit + 10. Ali has twice Ben: 2 units + 20. Altogether: 4 units + 30 = 150. So 4 units = 120 and 1 unit = 30. Cara 30, Ben 40, Ali 80. Check: 30 + 40 + 80 = 150."
+  },
+  {
+   "id": "L5U03-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "In a hall, 2/5 of the people are children. Then 15 adults leave and 15 children come in. Now 1/2 of the people are children. How many people are in the hall? {b}",
+   "answer": {
+    "value": [
+     "150"
+    ],
+    "text": "150 people"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "The total stays the same. How much more of the total is children?",
+   "explanation": "The number of people stays the same. At first children are 2/5 of the total. Now they are 1/2. 1/2 - 2/5 = 1/10 of the total is 15 children. So the total is 10 × 15 = 150. Check: children 60 at first, 75 now = half of 150."
+  },
+  {
+   "id": "L5U03-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A jar holds red beads and white beads. Red beads make up 2/7 of the jar. Then 24 red beads are taken out. Now red beads make up 1/6 of the jar. How many beads were in the jar at first? {b}",
+   "answer": {
+    "value": [
+     "168"
+    ],
+    "text": "168 beads"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "The white beads do not change. What fraction of each total is white?",
+   "explanation": "The white beads did not change. At first white is 5/7 of the beads. Now white is 5/6 of the beads. Let the white beads be 5 parts: at first the total is 7 parts, now it is 6 parts. 1 part = 24 beads, because 24 red beads were taken out. At first 7 × 24 = 168 beads. Check: red 48, then 24 of 144 beads is 1/6."
+  },
+  {
+   "id": "L5U03-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali and Ben have 120 marbles altogether. Ali gives 1/3 of his marbles to Ben. Then Ben has 3 times as many marbles as Ali. How many marbles did Ali have at first? {b}",
+   "answer": {
+    "value": [
+     "45"
+    ],
+    "text": "45 marbles"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "After giving, Ali has 2/3 of his marbles. Ben has 3 times that.",
+   "explanation": "Let Ali have 3 units at first. He gives 1 unit and keeps 2 units. Now Ben has 3 times as many: 6 units. After, the total is 2 + 6 = 8 units = 120, so 1 unit = 15. Ali had 3 × 15 = 45. Ben had 6 units - 1 unit = 5 units = 75 at first. Check: 45 + 75 = 120."
+  },
+  {
+   "id": "L5U03-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Jenny pays 1/5 of her money for a book. A bag takes 1/2 of the rest. She keeps $24. How much money did Jenny start with? $ {b}",
+   "answer": {
+    "value": [
+     "60"
+    ],
+    "text": "$60"
+   },
+   "explanation": "The book is 1 unit and the rest is 4 units. The bag is 1/2 of 4 = 2 units. 5 - 1 - 2 = 2 units are left. 2 units = $24, so 1 unit = $12. At first Jenny had 5 × 12 = $60."
+  },
+  {
+   "id": "L5U03-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Jamie has 46 cards. Jason has 30 cards. Jamie gives some cards to Jason. Then they have equal numbers. How many cards does Jamie give? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 cards"
+   },
+   "explanation": "The total is 76, so each has 38. Jamie has 46 - 38 = 8 too many. Jamie gives 8 cards."
+  },
+  {
+   "id": "L5U03-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Amelia has $50. Ray has $30. They are each given the same amount. Then Ray has 3/4 as much as Amelia. How much is each given? $ {b}",
+   "answer": {
+    "value": [
+     "30"
+    ],
+    "text": "$30"
+   },
+   "explanation": "The difference stays $20. After the gift Ray has 3 units and Amelia has 4 units, so the difference is 1 unit. 1 unit = $20. Amelia has $80 now, so the gift is 80 - 50 = $30. Check: Ray $60 = 3/4 of $80."
+  },
+  {
+   "id": "L5U03-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A jar has 18 blue beads and 12 yellow beads. Then 20 yellow beads are put in.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The beads that did not change are   {circ:blue|yellow}",
+     "answer": {
+      "value": [
+       "blue"
+      ],
+      "text": "blue"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The fraction of beads that are blue is now {b}",
+     "answer": {
+      "value": [
+       "9/25"
+      ],
+      "text": "9/25"
+     }
+    }
+   ],
+   "explanation": "(a) Only yellow beads were added, so the 18 blue beads did not change. (b) Now there are 18 + 32 = 50 beads. 18/50 = 9/25."
+  }
+ ]
+}
