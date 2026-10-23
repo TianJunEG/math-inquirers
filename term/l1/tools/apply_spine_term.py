@@ -264,6 +264,7 @@ TOOL_EDITS = [
     TE('b_print.py', 'import spine_term as SPT', "import svg\n\nWB_CSS", "import svg\nimport spine_term as SPT      # tool of the day + common look-back (term/l1/SPINE_TERM_DESIGN.md)\n\nWB_CSS"),
     TE('b_print.py', 'SPT.wb_chip', "+ head[i:] + f'</div>{img}</div>'", "+ head[i:] + SPT.wb_chip(d, (d.get('spine') or {}).get('chip') == 'compact') + f'</div>{img}</div>'"),
     TE('b_print.py', 'SPT.wb_lookback', "    if wb(d, 'exit_page', False):      # opt-in", "    look = SPT.wb_lookback(d) or look      # spine: the common look-back box replaces the old one when the lesson has a `spine` object\n    if wb(d, 'exit_page', False):      # opt-in"),
+    TE('b_print.py', 'SPT.CSS', "{EXTRA}</style></head><body>{body}</body></html>'", "{EXTRA}{SPT.CSS}</style></head><body>{body}</body></html>'"),
     TE('b_print.py', 'SPT.home_line', '{E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read', '{E(wb(d, "home_hint", "Use real things or draw it."))} {E(SPT.home_line(d))} A grown-up may read'),
     # ---- b_guide.py (tutor guide)
     TE('b_guide.py', 'import spine_term as SPT', "import svg\n\nCSS", "import svg\nimport spine_term as SPT\n\nCSS"),
