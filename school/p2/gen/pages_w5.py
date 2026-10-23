@@ -128,7 +128,7 @@ def page35():
         ["Count each kind of solid.", "Write the number in its box.", INSTR_CODE],
         body, "Counts: " + ", ".join(f"{k} {c}" for k, c in zip(NAMES5, counts)), f"Total 15; code word: {word}",
         "Fifteen drawn solids to sort into the five kinds. The five counts are different and add to 15, which the page prints: a pupil who misses one or counts one twice no longer gets 15. The counts are also looked up in the code table (five letters). The two checks together catch a miss in one kind balanced by an extra in another, except for a swap of two counts that happen to keep the letters spelling a word. A box left blank gives no letter and the check cannot see it.",
-        check="Do the five counts add to 15? Do the letters spell a word?", check_boxes=5, mk=("code", "total"),
+        check="Write the letters in order. Do they spell a word? Do the counts add to 15?", check_boxes=5, mk=("code", "total"),
         mech_plain="Total 15 and code word (5 letters)")
     P["instr"] = ["Count each kind of solid.", "Write the number in its box.", INSTR_CODE]
     cnt_read = {k: 0 for k in NAMES5}
@@ -203,10 +203,10 @@ def page36():
     def qtext(q):
         k = q[0]
         if k == "one": return f"How many children chose {q[1]}?"
-        if k == "more": return f"How many more children chose {q[1]} than {q[2]}?"
-        if k == "fewer": return f"How many fewer children chose {q[1]} than {q[2]}?"
+        if k == "more": return f"How many more chose {q[1]} than {q[2]}?"
+        if k == "fewer": return f"How many fewer chose {q[1]} than {q[2]}?"
         if k == "two": return f"How many children chose {q[1]} or {q[2]}?"
-        return "How many children are there in all?"
+        return "How many children in all?"
     qt = [qtext(q) for q in qs]
     cards = [qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span>', cls="inl tq") for i, t in enumerate(qt)]
     graph = graph_html(rows, kind, scale, None)
@@ -220,7 +220,7 @@ def page36():
     def solve(t):
         m = re.fullmatch(r"How many children chose (\w+)\?", t)
         if m: return rd[m.group(1)] * sc
-        m = re.fullmatch(r"How many (more|fewer) children chose (\w+) than (\w+)\?", t)
+        m = re.fullmatch(r"How many (more|fewer) chose (\w+) than (\w+)\?", t)
         if m: return abs(rd[m.group(2)] - rd[m.group(3)]) * sc
         m = re.fullmatch(r"How many children chose (\w+) or (\w+)\?", t)
         if m: return (rd[m.group(1)] + rd[m.group(2)]) * sc
@@ -254,9 +254,9 @@ def page37():
     clues = [f"There are {k5} pictures for {e} (covered).", f"The graph shows {total} children in all."]
     q1 = f"How many pictures for {d}?"
     qs = [q1, f"How many children chose {d}?", f"How many children chose {e}?",
-          (f"How many more children chose {a} than {d}?" if k1 > k4 else f"How many fewer children chose {a} than {d}?"),
-          (f"How many more children chose {b} than {e}?" if k2 > k5 else f"How many fewer children chose {b} than {e}?"),
-          "How many children are there in all?"]
+          (f"How many more chose {a} than {d}?" if k1 > k4 else f"How many fewer chose {a} than {d}?"),
+          (f"How many more chose {b} than {e}?" if k2 > k5 else f"How many fewer chose {b} than {e}?"),
+          "How many children in all?"]
     cards = [qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span>', cls="inl tq") for i, t in enumerate(qs)]
     body = (graph + '<ul class="clues">' + "".join(f"<li>{c}</li>" for c in clues) + '</ul>' + qgrid(cards, 2))
     P = code_items_page(37, 9437, "Graph Detective Two", 2, "Picture graphs with scales: two rows are covered", "Statistics - Data Representation and Interpretation",
@@ -265,8 +265,8 @@ def page37():
         body, ans, table, word, 0, 300,
         "; ".join(f"{i+1}) {t} {a}" for i, (t, a) in enumerate(zip(qs, ans))),
         f"A picture graph where one picture stands for {scale} children and two rows are covered. One covered row is given in pictures, the total number of children is given, so the other covered row is found by taking the pictures of the other rows away from the total (in pictures: the total divided by the scale). The pupil can check that all five rows make the printed total. The decoy letters stand for pictures read as children, or one picture out. A box left blank gives no letter and the check cannot see it.",
-        ps=True)
-    P["check"] = "Write the letters in order. Do they spell a word? Do the five rows make the total?"
+        ps=True, cols=4)
+    P["check"] = "Write the letters in order. Do they spell a word? Do the rows add to the total?"
     P["instr"] = ["Two rows are covered.", "Use the clues. Answer each question.", INSTR_CODE]
     P["check_boxes"] = 6
     P["mk"] = ("code", "total")

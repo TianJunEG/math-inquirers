@@ -1,0 +1,860 @@
+{
+ "schema_version": 1,
+ "level": 3,
+ "unit": 9,
+ "id": "L3U09",
+ "title": "Measure and money masters",
+ "topic": "Length, mass, volume, money and time",
+ "holiday_lesson": 9,
+ "goal": "I can change units to add and take away. I can solve money problems. I can find how long something lasts.",
+ "learn": {
+  "intro": "Change to one unit before you add or take away. 1 m = 100 cm. 1 kg = 1000 g. 1 ℓ = 1000 ml. $1 = 100¢. For time, jump on a time line.",
+  "example": {
+   "problem": "A ribbon is 2 m 35 cm long. Mei cuts off 80 cm. How long is the ribbon now?",
+   "figure": {
+    "type": "l3_bars",
+    "rows": [
+     {
+      "segs": [
+       {
+        "w": 3.5,
+        "t": "?",
+        "style": "q"
+       },
+       {
+        "w": 1.5,
+        "t": "80 cm",
+        "style": "ghost"
+       }
+      ],
+      "braces": [
+       {
+        "a": 0,
+        "b": 1,
+        "t": "2 m 35 cm"
+       }
+      ]
+     }
+    ],
+    "width_mm": 100,
+    "u": 60,
+    "lab": 20
+   },
+   "steps": [
+    "Change to one unit: 2 m 35 cm = 235 cm.",
+    "Take away: 235 - 80 = 155 cm.",
+    "Change back: 155 cm = 1 m 55 cm."
+   ],
+   "answer": "The ribbon is 1 m 55 cm long."
+  },
+  "howto": {
+   "title": "Tips",
+   "steps": [
+    "Write both amounts in the small unit first.",
+    "On a time line, jump to the next o’clock.",
+    "Check money with an add: change + cost = money paid."
+   ]
+  },
+  "try": {
+   "text": "A jug holds 2 ℓ 350 ml. Ali pours out 800 ml. The jug now holds {b} ℓ {b} ml.",
+   "answer": {
+    "value": [
+     "1",
+     "550"
+    ],
+    "text": "1 ℓ 550 ml",
+    "list": true
+   },
+   "explanation": "2 ℓ 350 ml = 2350 ml. Then 2350 - 800 = 1550 ml = 1 ℓ 550 ml. Check: 1550 + 800 = 2350.",
+   "id": "L3U09-L01"
+  },
+  "example2": {
+   "problem": "A film starts at 2:50 pm and ends at 4:20 pm. How long is the film?",
+   "figure": {
+    "type": "l3_timeline",
+    "points": [
+     {
+      "t": "2:50"
+     },
+     {
+      "t": "3:00"
+     },
+     {
+      "t": "4:00"
+     },
+     {
+      "t": "4:20"
+     }
+    ],
+    "arcs": [
+     {
+      "a": 0,
+      "b": 1,
+      "text": "10 min"
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "text": "1 h"
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "text": "20 min"
+     }
+    ],
+    "width_mm": 110
+   },
+   "steps": [
+    "Jump to the next o’clock: 2:50 to 3:00 is 10 min.",
+    "Jump to 4:00: 1 h.",
+    "Jump to 4:20: 20 min. Add: 10 min + 1 h + 20 min = 1 h 30 min."
+   ],
+   "answer": "The film is 1 h 30 min long."
+  },
+  "tight": true,
+  "pair": true
+ },
+ "items": [
+  {
+   "id": "L3U09-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Change the units.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 m = {b} cm",
+     "answer": {
+      "value": [
+       "300"
+      ],
+      "text": "300"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 kg 50 g = {b} g",
+     "answer": {
+      "value": [
+       "4050"
+      ],
+      "text": "4050"
+     }
+    },
+    {
+     "label": "c",
+     "text": "5 ℓ 300 ml = {b} ml",
+     "answer": {
+      "value": [
+       "5300"
+      ],
+      "text": "5300"
+     }
+    },
+    {
+     "label": "d",
+     "text": "2750 g = {b} kg {b} g",
+     "answer": {
+      "value": [
+       "2",
+       "750"
+      ],
+      "text": "2 kg 750 g",
+      "list": true
+     }
+    },
+    {
+     "label": "e",
+     "text": "365 cm = {b} m {b} cm",
+     "answer": {
+      "value": [
+       "3",
+       "65"
+      ],
+      "text": "3 m 65 cm",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "(a) 3 × 100 = 300. (b) 4 kg = 4000 g, and 4000 + 50 = 4050. (c) 5 ℓ = 5000 ml, and 5000 + 300 = 5300. (d) 2000 g is 2 kg, and 750 g is left. (e) 300 cm is 3 m, and 65 cm is left.",
+   "partsrow": true
+  },
+  {
+   "id": "L3U09-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "The ruler is shown at real size. Read the length of each object.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The pencil is {b} cm long.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The crayon is {b} cm long.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The pencil is {b} cm longer than the crayon.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "explanation": "The pencil starts at 3 and ends at 11: 11 - 3 = 8 cm. The crayon starts at 6 and ends at 13: 13 - 6 = 7 cm. The pencil is 8 - 7 = 1 cm longer.",
+   "figure": {
+    "type": "l3_ruler",
+    "max": 14,
+    "objects": [
+     {
+      "label": "pencil",
+      "start": 3,
+      "end": 11
+     },
+     {
+      "label": "crayon",
+      "start": 6,
+      "end": 13
+     }
+    ]
+   }
+  },
+  {
+   "id": "L3U09-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "The parcels weigh: A 1 kg 80 g, B 1900 g, C 1 kg 8 g, D 1 kg 90 g. Write the letters in order. Begin with the lightest.\n{b}  {b}  {b}  {b}",
+   "answer": {
+    "value": [
+     "C",
+     "A",
+     "D",
+     "B"
+    ],
+    "text": "C, A, D, B",
+    "list": true
+   },
+   "explanation": "Write each in grams: A is 1080 g, B is 1900 g, C is 1008 g and D is 1090 g. In order: 1008, 1080, 1090, 1900. That is C, A, D, B."
+  },
+  {
+   "id": "L3U09-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "A jug has 2 ℓ 500 ml of juice. Ali pours it into cups of 400 ml.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "He fills {b} cups.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} ml of juice are left over.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    }
+   ],
+   "explanation": "2 ℓ 500 ml = 2500 ml. 2500 ÷ 400 = 6 remainder 100. He fills 6 cups, and 100 ml are left over."
+  },
+  {
+   "id": "L3U09-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Read the water level in each jug.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Jug A holds {b} ml.",
+     "answer": {
+      "value": [
+       "350"
+      ],
+      "text": "350"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Jug B holds {b} ml.",
+     "answer": {
+      "value": [
+       "600"
+      ],
+      "text": "600"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Jug C holds {b} ml.",
+     "answer": {
+      "value": [
+       "850"
+      ],
+      "text": "850"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Jug C holds {b} ml more than jug A.",
+     "answer": {
+      "value": [
+       "500"
+      ],
+      "text": "500"
+     }
+    }
+   ],
+   "explanation": "Each small mark is 50 ml. A is 1 mark above 300: 350 ml. B is at 600 ml. C is 1 mark above 800: 850 ml. 850 - 350 = 500 ml.",
+   "figure": {
+    "type": "l3_jug",
+    "jugs": [
+     {
+      "level": 350,
+      "label": "A"
+     },
+     {
+      "level": 600,
+      "label": "B"
+     },
+     {
+      "level": 850,
+      "label": "C"
+     }
+    ],
+    "major": 200,
+    "minor": 50,
+    "width_mm": 106
+   }
+  },
+  {
+   "id": "L3U09-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "They cost ${b} in all.",
+     "answer": {
+      "value": [
+       "4.05"
+      ],
+      "text": "4.05"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Her change is ${b}.",
+     "answer": {
+      "value": [
+       "0.95"
+      ],
+      "text": "0.95"
+     }
+    }
+   ],
+   "explanation": "(a) 2.65 + 1.40 = 4.05. (b) 5.00 - 4.05 = 0.95. Check: 4.05 + 0.95 = 5.00."
+  },
+  {
+   "id": "L3U09-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Siti has $20 and buys the first 3 things on the price list.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "They cost ${b} in all.",
+     "answer": {
+      "value": [
+       "14.45"
+      ],
+      "text": "14.45"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Her change is ${b}.",
+     "answer": {
+      "value": [
+       "5.55"
+      ],
+      "text": "5.55"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Can she buy all 4 things on the list?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    }
+   ],
+   "explanation": "(a) 6.20 + 4.85 = 11.05, and 11.05 + 3.40 = 14.45. (b) 20.00 - 14.45 = 5.55. (c) All 4 things cost 14.45 + 1.75 = 16.20, which is less than $20. So she can.",
+   "figure": {
+    "type": "l3_grid",
+    "head_row": true,
+    "cw": 118,
+    "ch": 42,
+    "fs": 26,
+    "width_mm": 92,
+    "rows": [
+     [
+      "Book",
+      "Puzzle",
+      "Bottle",
+      "Stickers"
+     ],
+     [
+      "$6.20",
+      "$4.85",
+      "$3.40",
+      "$1.75"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "L3U09-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "A box with 6 books weighs 2 kg 250 g. The empty box weighs 450 g. All the books have the same mass. One book weighs {b} g.",
+   "answer": {
+    "value": [
+     "300"
+    ],
+    "text": "300"
+   },
+   "explanation": "2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g."
+  },
+  {
+   "id": "L3U09-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Write the time in the other kind of time.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6:15 am = {b}",
+     "answer": {
+      "value": [
+       "06:15"
+      ],
+      "text": "06:15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "1:40 pm = {b}",
+     "answer": {
+      "value": [
+       "13:40"
+      ],
+      "text": "13:40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "9:05 pm = {b}",
+     "answer": {
+      "value": [
+       "21:05"
+      ],
+      "text": "21:05"
+     }
+    },
+    {
+     "label": "d",
+     "text": "16:50 = {b} pm",
+     "answer": {
+      "value": [
+       "4:50"
+      ],
+      "text": "4:50"
+     }
+    },
+    {
+     "label": "e",
+     "text": "20:25 = {b} pm",
+     "answer": {
+      "value": [
+       "8:25"
+      ],
+      "text": "8:25"
+     }
+    }
+   ],
+   "explanation": "After 12 noon, add 12 to the hour for 24-hour time. (b) 1 + 12 = 13. (c) 9 + 12 = 21. For (d) and (e), take away 12: 16 - 12 = 4 and 20 - 12 = 8.",
+   "partsrow": true
+  },
+  {
+   "id": "L3U09-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "How long does each take? Use a time line to help.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Aisha’s class starts at 5:25 pm and ends at 6:40 pm. It lasts {b} h {b} min.",
+     "answer": {
+      "value": [
+       "1",
+       "15"
+      ],
+      "text": "1 h 15 min",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben’s class starts at 3:40 pm and lasts 55 minutes. It ends at {b}.",
+     "answer": {
+      "value": [
+       "4:35 pm"
+      ],
+      "text": "4:35 pm"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A show ends at 8:15 pm and lasts 1 h 45 min. It starts at {b}.",
+     "answer": {
+      "value": [
+       "6:30 pm"
+      ],
+      "text": "6:30 pm"
+     }
+    }
+   ],
+   "explanation": "(a) 5:25 to 6:00 is 35 min, then 6:00 to 6:40 is 40 min. 35 + 40 = 75 min = 1 h 15 min. (b) 3:40 + 20 min = 4:00, then 35 more min = 4:35 pm. (c) 8:15 pm - 1 h = 7:15 pm, then 45 min back = 6:30 pm.",
+   "space": {
+    "rows": [
+     "Time line:"
+    ]
+   }
+  },
+  {
+   "id": "L3U09-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Write the time shown on each clock.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A: {b}",
+     "answer": {
+      "value": [
+       "4:10"
+      ],
+      "text": "4:10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B: {b}",
+     "answer": {
+      "value": [
+       "7:45"
+      ],
+      "text": "7:45"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C: {b}",
+     "answer": {
+      "value": [
+       "11:25"
+      ],
+      "text": "11:25"
+     }
+    }
+   ],
+   "explanation": "The short hand shows the hour and the long hand shows the minutes. A: the long hand points at 2, which is 10 minutes, and the short hand is just past 4. B: the long hand points at 9, which is 45 minutes. C: the long hand points at 5, which is 25 minutes.",
+   "partsrow": true,
+   "figure": {
+    "type": "l3_clock",
+    "clocks": [
+     {
+      "h": 4,
+      "m": 10,
+      "label": "A"
+     },
+     {
+      "h": 7,
+      "m": 45,
+      "label": "B"
+     },
+     {
+      "h": 11,
+      "m": 25,
+      "label": "C"
+     }
+    ],
+    "cols": 3,
+    "width_mm": 134
+   }
+  },
+  {
+   "id": "L3U09-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Buses leave the interchange every 20 minutes. The first bus leaves at 06:50. The ride takes 25 minutes. Mei must reach school by 08:15. When does the latest bus she can take leave? {b}",
+   "answer": {
+    "value": [
+     "07:50"
+    ],
+    "text": "07:50"
+   },
+   "explanation": "Mei must leave by 08:15 - 25 min = 07:50. The buses leave at 06:50, 07:10, 07:30, 07:50, 08:10. The latest bus that gets her to school in time is the 07:50 bus.",
+   "hint": "Find the latest leaving time first: 08:15 minus 25 minutes.",
+   "space": {
+    "rows": [
+     "Bus times: 06:50,",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U09-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A night bus leaves at 22:50 and arrives at 02:10 the next day. How long is the trip? {b} h {b} min",
+   "answer": {
+    "value": [
+     "3",
+     "20"
+    ],
+    "text": "3 h 20 min",
+    "list": true
+   },
+   "explanation": "From 22:50 to 24:00 (midnight) is 1 h 10 min. From midnight to 02:10 is 2 h 10 min. 1 h 10 min + 2 h 10 min = 3 h 20 min.",
+   "hint": "Jump to midnight first. Then jump to 02:10.",
+   "space": {
+    "rows": [
+     "Time line:",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U09-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "2 notebooks and 3 pens cost $9. A notebook costs $1.50 more than a pen.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A pen costs ${b}.",
+     "answer": {
+      "value": [
+       "1.20"
+      ],
+      "text": "1.20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A notebook costs ${b}.",
+     "answer": {
+      "value": [
+       "2.70"
+      ],
+      "text": "2.70"
+     }
+    }
+   ],
+   "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. One pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70. Check: 2 × 2.70 + 3 × 1.20 = 5.40 + 3.60 = 9.00.",
+   "hint": "Take away the extra $1.50 for each notebook first.",
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U09-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 3: A water puzzle.\nYou have a 3 ℓ jug, a 5 ℓ jug and a tap. The jugs have no marks. You want exactly 4 ℓ.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Fill the 5 ℓ jug. Pour from it into the 3 ℓ jug until full. The 5 ℓ jug has {b} ℓ left.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Empty the 3 ℓ jug. Pour the 2 ℓ into it. Fill the 5 ℓ jug. Pour from it into the 3 ℓ jug until full. The 5 ℓ jug has {b} ℓ left.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "(a) The 3 ℓ jug takes 3 ℓ, so 5 - 3 = 2 ℓ are left in the 5 ℓ jug. (b) The 3 ℓ jug holds 2 ℓ and has room for 1 ℓ more. The full 5 ℓ jug gives 1 ℓ, so 5 - 1 = 4 ℓ are left. That is exactly 4 ℓ.",
+   "hint": "Follow each step. The jug is full when it holds 3 ℓ."
+  },
+  {
+   "id": "L3U09-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Mei’s watch is 8 minutes slow.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Her watch shows 4:20 pm. The real time is {b}.",
+     "answer": {
+      "value": [
+       "4:28 pm"
+      ],
+      "text": "4:28 pm"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A film starts at 4:45 pm. When it starts, her watch shows {b}.",
+     "answer": {
+      "value": [
+       "4:37 pm"
+      ],
+      "text": "4:37 pm"
+     }
+    }
+   ],
+   "explanation": "(a) A slow watch is behind: the real time is 8 minutes later: 4:20 pm + 8 min = 4:28 pm. (b) At the real time 4:45 pm her watch shows 8 minutes earlier: 4:37 pm.",
+   "hint": "A slow watch shows an earlier time than the real time."
+  },
+  {
+   "id": "L3U09-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Write a shopping story that uses $6.40 and $2.15. The answer to your story must be $4.25.",
+   "answer": {
+    "value": [
+     "4.25"
+    ],
+    "text": "Answers vary. Example: A book costs $6.40 and a pen costs $2.15. How much more does the book cost than the pen? The answer is $4.25."
+   },
+   "explanation": "Check that your story uses both amounts and gives $4.25. The only way is the difference: 6.40 - 2.15 = 4.25. A sum of the two would be $8.55.",
+   "hint": "Which sum or take-away of $6.40 and $2.15 gives $4.25?",
+   "space": {
+    "rows": [
+     "My story:",
+     "",
+     "My answer:"
+    ]
+   }
+  },
+  {
+   "id": "L3U09-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "A film lasts 1 h 55 min. It ends at 00:20, just after midnight. At what time did it start? Write it in 24-hour time. {b}",
+   "answer": {
+    "value": [
+     "22:25"
+    ],
+    "text": "22:25"
+   },
+   "explanation": "From 00:20 go back 20 min to midnight (24:00). 1 h 55 min - 20 min = 1 h 35 min is left. 24:00 - 1 h 35 min = 22:25. Check: 22:25 + 1 h 55 min = 00:20.",
+   "hint": "Go back to midnight first. Then go back the rest.",
+   "space": {
+    "rows": [
+     "Time line:"
+    ]
+   }
+  },
+  {
+   "id": "L3U09-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "2 m 40 cm = {b} cm",
+   "answer": {
+    "value": [
+     "240"
+    ],
+    "text": "240"
+   },
+   "explanation": "2 m = 200 cm, and 200 + 40 = 240 cm."
+  },
+  {
+   "id": "L3U09-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A bottle holds 1 ℓ 200 ml. A child drinks 700 ml. The bottle then holds {b} ml.",
+   "answer": {
+    "value": [
+     "500"
+    ],
+    "text": "500"
+   },
+   "explanation": "1 ℓ 200 ml = 1200 ml. Then 1200 - 700 = 500 ml."
+  },
+  {
+   "id": "L3U09-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A film starts at 6:45 pm and ends at 8:10 pm. It lasts {b} h {b} min.",
+   "answer": {
+    "value": [
+     "1",
+     "25"
+    ],
+    "text": "1 h 25 min",
+    "list": true
+   },
+   "explanation": "6:45 to 7:00 is 15 min. 7:00 to 8:00 is 1 h. 8:00 to 8:10 is 10 min. In all: 1 h 25 min."
+  },
+  {
+   "id": "L3U09-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Kumar buys a snack for $2.35. He pays with a $5 note. His change is ${b}.",
+   "answer": {
+    "value": [
+     "2.65"
+    ],
+    "text": "2.65"
+   },
+   "explanation": "5.00 - 2.35 = 2.65. Check: 2.35 + 2.65 = 5.00."
+  }
+ ]
+}

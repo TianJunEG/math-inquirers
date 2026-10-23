@@ -104,4 +104,5 @@ table.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid
 .gkey{font-size:13pt;font-weight:800;display:flex;align-items:center;gap:2mm;padding-top:1mm}.gkey svg{max-width:none;width:10.5mm;height:10.5mm}
 ul.clues{font-size:13.5pt;margin:1mm 0;padding-left:6mm}
 .grow3{height:10.2mm}
+ul.clues{margin:0.5mm 0;font-size:12.5pt}.grow3{height:9.6mm}.gkey{font-size:12pt}.qc.tq{padding:1mm 2.5mm}
 """

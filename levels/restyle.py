@@ -67,4 +67,7 @@ for d in sys.argv[1:]:
     try:
         sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import mi_deco; n+=mi_deco.apply(d)   # Mi the dolphin (levels 1-3), idempotent
     except ImportError: pass
+    try:
+        sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import gap_slides; n+=gap_slides.apply(d,fix)   # optional skill-gap slides, Levels 4-6 (levels/gap_items.py); idempotent, GAPS-SLIDES-NOW
+    except ImportError: pass
     print(d,n)

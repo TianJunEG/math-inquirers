@@ -29,6 +29,10 @@
   "p6l5-challenge",
   "p6l5-chdiag",
   "p6l5-chwalk",
+  "p6l5-gap-votes",
+  "p6l5-gap-socks",
+  "p6l5-gap-size",
+  "p6l5-gap-derange",
   "p6l5-talk",
   "p6l5-exit",
   "p6l5-reflect"

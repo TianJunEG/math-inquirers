@@ -64,18 +64,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -137,18 +126,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -195,18 +173,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -269,18 +236,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    69,
-    69
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 5,
@@ -338,18 +294,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    61,
-    61
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -407,18 +352,7 @@
    1.0,
    2994,
    2994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2994,
-    2994
-   ],
-   "all_other_values_rejected": [
-    2994,
-    2994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -480,18 +414,7 @@
    1.0,
    4314,
    4314
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    4314,
-    4314
-   ],
-   "all_other_values_rejected": [
-    4314,
-    4314
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -549,18 +472,7 @@
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    52,
-    52
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -607,18 +519,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -682,18 +583,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -761,18 +651,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -814,18 +693,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -882,18 +750,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    44,
-    44
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -942,18 +799,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    105,
-    105
-   ],
-   "all_other_values_rejected": [
-    105,
-    105
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1016,18 +862,7 @@
    1.0,
    390,
    390
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    390,
-    390
-   ],
-   "all_other_values_rejected": [
-    390,
-    390
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1085,18 +920,7 @@
    1.0,
    5988,
    5988
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    5988,
-    5988
-   ],
-   "all_other_values_rejected": [
-    5988,
-    5988
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
@@ -1160,18 +984,7 @@
    1.0,
    4495,
    4495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    4495,
-    4495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1234,18 +1047,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1294,18 +1096,7 @@
    1.0,
    360,
    360
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    360,
-    360
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1360,18 +1151,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1414,21 +1194,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 22,
@@ -1485,18 +1251,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    49,
-    49
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1539,21 +1294,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 24,
@@ -1596,21 +1337,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 25,
@@ -1673,18 +1400,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6000,
-    6000
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1742,18 +1458,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    53,
-    53
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1795,18 +1500,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -1844,21 +1538,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 29,
@@ -1916,18 +1596,7 @@
    1.0,
    2095,
    2095
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2095,
-    2095
-   ],
-   "all_other_values_rejected": [
-    2095,
-    2095
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 30,
@@ -1984,18 +1653,7 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    68,
-    68
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 31,
@@ -2054,18 +1712,7 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 32,
@@ -2098,7 +1745,7 @@
     "detail": ""
    },
    {
-    "name": "V7 every row shows at least two full turns of the repeat (six shapes, repeat of 2 or 3)",
+    "name": "V7 the three options of every row look different from each other",
     "ok": true,
     "detail": ""
    },
@@ -2112,17 +1759,516 @@
    1.0,
    12,
    12
+  ]
+ },
+ {
+  "no": 33,
+  "code": "S2-15 (P2-33)",
+  "title": "Pattern Rules",
+  "tier": 2,
+  "topic": "2D shape patterns: what comes next?",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "1.1 (making/completing patterns with 2D shapes by size, shape, colour or orientation)",
+  "outcomes": [
+   "GE1.1"
   ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  "ptype": "Choice table (shape patterns)",
+  "mech": "K1 the letter of the shape that comes next spells a word (6 letters, two decoy letters in each row)",
+  "seed": 9033,
+  "checks": [
+   {
+    "name": "V1 independent solver (shapes read back from the drawing, the repeat found, the next shape matched to exactly one option) gets the letters",
+    "ok": true,
+    "detail": "[['B'], ['O'], ['T'], ['A'], ['N'], ['Y']]"
+   },
+   {
+    "name": "V3 no other way of choosing spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 the three options of every row look different from each other",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V8 shapes are at least 8 mm across",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ]
+ },
+ {
+  "no": 34,
+  "code": "S2-16 (P2-34)",
+  "title": "Meet the Solids",
+  "tier": 1,
+  "topic": "3D shapes: cube, cuboid, cone, cylinder and sphere",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "2.1 (identifying and naming 3D shapes: cube, cuboid, cone, cylinder, sphere)",
+  "outcomes": [
+   "GE2.1"
+  ],
+  "ptype": "Choice table (solids)",
+  "mech": "K1 the letter of the right name in each row spells a word (6 letters, two decoy letters in each row)",
+  "seed": 9134,
+  "checks": [
+   {
+    "name": "V1 independent solver (each drawing classified from its faces, ellipses and apex) gets the solid in every row",
+    "ok": true,
+    "detail": "['sphere', 'cuboid', 'sphere', 'cylinder', 'cone', 'cube']"
+   },
+   {
+    "name": "V3 no other way of choosing spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 all five solids of the syllabus list appear",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ]
+ },
+ {
+  "no": 35,
+  "code": "S2-17 (P2-35)",
+  "title": "Solid Sort",
+  "tier": 2,
+  "topic": "3D shapes: sorting and counting solids",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "2.1 (identifying, naming and classifying 3D shapes)",
+  "outcomes": [
+   "GE2.1"
+  ],
+  "ptype": "Sorting table (solids)",
+  "mech": "K3 the five counts add to 15 + K1 code word (5 letters)",
+  "seed": 9235,
+  "checks": [
+   {
+    "name": "V1 independent solver classifies each of the 15 drawings and the counts equal the key",
+    "ok": true,
+    "detail": "[5, 2, 1, 4, 3]"
+   },
+   {
+    "name": "V1b the five counts are different and add to 15",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells THIEF",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "75/75"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['thief']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['eight', 'fight', 'thief']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   75,
+   75
+  ]
+ },
+ {
+  "no": 36,
+  "code": "S2-18 (P2-36)",
+  "title": "Picture Graph Scales",
+  "tier": 1,
+  "topic": "Picture graphs with scales: one picture stands for more than one",
+  "strand": "Statistics - Data Representation and Interpretation",
+  "syll": "1.1 (reading and interpreting data from picture graphs with scales)",
+  "outcomes": [
+   "ST1.1"
+  ],
+  "ptype": "Code-breaker (picture graph)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 9336,
+  "checks": [
+   {
+    "name": "V2 code word spells COUSIN",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "1200/1200"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['cousin']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['coitus', 'cousin', 'squint']"
+   },
+   {
+    "name": "V1 independent solver (symbols counted in each printed row, key read back) equals the key",
+    "ok": true,
+    "detail": "[14, 10, 8, 20, 52, 6]"
+   },
+   {
+    "name": "V8 symbols are at least 8 mm and at most 8 in a row",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 scale 2, 5 or 10",
+    "ok": true,
+    "detail": "2"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   1200,
+   1200
+  ]
+ },
+ {
+  "no": 37,
+  "code": "S2-19 (P2-37)",
+  "title": "Graph Detective Two",
+  "tier": 2,
+  "topic": "Picture graphs with scales: two rows are covered",
+  "strand": "Statistics - Data Representation and Interpretation",
+  "syll": "1.1 (reading and interpreting data from picture graphs with scales)",
+  "outcomes": [
+   "ST1.1"
+  ],
+  "ptype": "Code-breaker (picture graph with covered rows)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 9437,
+  "checks": [
+   {
+    "name": "V2 code word spells FIGURE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "1800/1800"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['figure']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['fergus', 'figure', 'furies']"
+   },
+   {
+    "name": "V1 independent solver (visible rows counted, key and clues read back) equals the key",
+    "ok": true,
+    "detail": "[6, 30, 20, 5, 10, 110]"
+   },
+   {
+    "name": "V1b the covered rows are two and the pictures of all five rows make the printed total",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 scale 5 or 10, at most 8 pictures in a row",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   1800,
+   1800
+  ]
+ },
+ {
+  "no": 38,
+  "code": "S1-02 (P2-38)",
+  "title": "Colour the Rocket",
+  "tier": 1,
+  "topic": "Numbers to 1000: place value, order",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.2, 1.3, 1.4 (place values, numbers in words, comparing and ordering numbers to 1000)",
+  "outcomes": [
+   "WN1.1",
+   "WN1.2",
+   "WN1.3",
+   "WN1.4"
+  ],
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 301,
+  "checks": [
+   {
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 15 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c all five colours used at least twice",
+    "ok": true,
+    "detail": "{'yellow': 2, 'red': 2, 'blue': 3, 'green': 4, 'orange': 4}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "15000/15000"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1678/1680"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "86/88"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   15000,
+   15000
+  ]
+ },
+ {
+  "no": 39,
+  "code": "S1-17 (P2-39)",
+  "title": "Colour the Dinosaur",
+  "tier": 2,
+  "topic": "Multiplication: tables of 2, 3, 4, 5 and 10",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.2, 3.3, 3.4, 3.5 (tables of 2, 3, 4, 5, 10; \u00f7; relationship between multiplication and division)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.2",
+   "MD3.3",
+   "MD3.4",
+   "MD3.5"
+  ],
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 1,
+  "checks": [
+   {
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 15 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c all five colours used at least twice",
+    "ok": true,
+    "detail": "{'yellow': 3, 'red': 4, 'blue': 3, 'green': 3, 'orange': 2}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[('ground_1', 'ground_3')]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "1500/1500"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1679/1680"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "88/89"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   1500,
+   1500
+  ]
+ },
+ {
+  "no": 40,
+  "code": "S2-20 (P2-40)",
+  "title": "Colour the Sailboat",
+  "tier": 2,
+  "topic": "Length, mass and volume",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "1.1, 1.2, 1.3 (measuring and comparing length in m, mass in kg and g, volume in \u2113)",
+  "outcomes": [
+   "ME1.1",
+   "ME1.2",
+   "ME1.3"
+  ],
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 309,
+  "checks": [
+   {
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 13 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c all five colours used at least twice",
+    "ok": true,
+    "detail": "{'yellow': 3, 'red': 2, 'blue': 2, 'green': 3, 'orange': 3}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "13"
+   },
+   {
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[('hull_1', 'hull_3'), ('wave_1', 'wave_3')]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "65052/65052"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1247/1248"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "66/67"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   65052,
+   65052
+  ]
  }
 ]

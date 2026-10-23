@@ -32,6 +32,11 @@
   "p5l9-challenge",
   "p5l9-chdiag",
   "p5l9-chwalk",
+  "p5l9-gap-last",
+  "p5l9-gap-range",
+  "p5l9-gap-gaps",
+  "p5l9-gap-woven",
+  "p5l9-gap-op",
   "p5l9-talk",
   "p5l9-exit",
   "p5l9-reflect"

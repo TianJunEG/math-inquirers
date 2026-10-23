@@ -14,36 +14,36 @@ The PDF has 30 numbered lines (counting each of fractions 1.1 to 1.3 and 2.1, an
 
 | Outcome (PDF wording, short) | Pages | Coverage |
 |---|---|---|
-| WN 1.1 counting in tens/hundreds | P2-11, P2-02(cbc P2-38) | Full |
-| WN 1.2 notation, representations, place values (hundreds, tens, ones) | P2-01, P2-10, P2-17, P2-38 | Full (place-value discs, digit value, regrouped forms) |
-| WN 1.3 reading and writing numbers in numerals and in words | P2-09, P2-17 | Part: reading and matching words and numerals; the pupil writes numerals, not number words (a written word cannot be checked) |
-| WN 1.4 comparing and ordering numbers | P2-10, P2-17 | Full |
-| WN 1.5 patterns in number sequences | P2-11 | Full |
-| WN 1.6 odd and even numbers | P2-12, P2-17 | Full |
-| AS 2.1 algorithms (up to 3 digits) | P2-02, P2-13, P2-18 | Full (with and without renaming) |
-| AS 2.2 mental calculation, 3-digit number and ones/tens/hundreds | P2-03, P2-18 | Full |
-| MD 3.1 tables of 2, 3, 4, 5, 10 | P2-04, P2-14, P2-20, P2-39 | Full |
-| MD 3.2 use of ÷ | P2-05, P2-19, P2-20 | Full |
-| MD 3.3 relationship between x and ÷ | P2-19 | Full |
-| MD 3.4 multiplying and dividing within the tables | P2-04, P2-05, P2-20, P2-39 | Full |
-| MD 3.5 mental calculation within the tables | P2-14, P2-20 | Full |
-| FR 1.1 fraction as part of a whole | P2-15 | Full |
-| FR 1.2 notation and representations of fractions | P2-15, P2-21 | Full |
-| FR 1.3 comparing and ordering (unit fractions, like fractions) | P2-21 | Full (denominators up to 12) |
-| FR 2.1 adding and subtracting like fractions within one whole | P2-22 | Full |
-| MO 1.1 counting money in dollars and cents | P2-06, P2-24 | Full (pictured coins and notes) |
-| MO 1.2 reading and writing money in decimal notation | P2-06, P2-16 | Full |
-| MO 1.3 comparing two or three amounts | P2-23 | Full |
-| MO 1.4 converting decimal notation to cents only, and back | P2-16 | Full |
-| ME 1.1 measuring: length in m, mass in kg/g, volume in litres | P2-08, P2-25, P2-26 | Part: reading pictured scales and containers; the pupil cannot handle a real instrument on a printed page |
-| ME 1.2 appropriate units and abbreviations m, g, kg, ℓ | P2-27, P2-08, P2-25, P2-26 | Full |
-| ME 1.3 comparing and ordering lengths, masses, volumes | P2-28 | Full (one unit at a time: kg to g and m to cm conversions are Primary 3) |
-| TI 2.1 telling time to the minute | P2-07, P2-31(cbc P2-40) | Full |
-| TI 2.2 measuring time in hours and minutes | P2-29, P2-31 | Full |
-| TI 2.3 converting hours and minutes to minutes, and back | P2-30 | Full |
-| GE 1.1 making/completing patterns with 2D shapes by attributes | P2-32, P2-33 | Part: completing and choosing; the pupil's own drawn pattern cannot be checked, so patterns are completed by picking the lettered next shapes |
-| GE 2.1 identifying, naming, describing, classifying 3D shapes | P2-34, P2-35 | Full by picture (cube, cuboid, cone, cylinder, sphere); no real solids to handle |
-| ST 1.1 picture graphs with scales | P2-36, P2-37 | Full (scales 2, 5 and 10) |
+| Whole Numbers 1.1 counting in tens/hundreds | P2-11, P2-38 | Full |
+| Whole Numbers 1.2 number notation, representations and place values (hundreds, tens, one... | P2-01, P2-10, P2-17, P2-38 | Full |
+| Whole Numbers 1.3 reading and writing numbers in numerals and in words | P2-09, P2-38 | Part: reading and matching words and numerals; the pupil writes numerals, not number words (a written word cannot be checked) |
+| Whole Numbers 1.4 comparing and ordering numbers | P2-10, P2-17, P2-38 | Full |
+| Whole Numbers 1.5 patterns in number sequences | P2-11 | Full |
+| Whole Numbers 1.6 odd and even numbers | P2-10, P2-12, P2-17 | Full |
+| Addition and Subtraction 2.1 addition and subtraction algorithms (up to 3 digits) | P2-02, P2-13, P2-18 | Full |
+| Addition and Subtraction 2.2 mental calculation involving addition and subtraction of a 3-digit num... | P2-03, P2-18 | Full |
+| Multiplication and Division 3.1 multiplication tables of 2, 3, 4, 5 and 10 | P2-04, P2-14, P2-20, P2-39 | Full |
+| Multiplication and Division 3.2 use of ÷ | P2-05, P2-14, P2-19, P2-39 | Full |
+| Multiplication and Division 3.3 relationship between multiplication and division | P2-19, P2-20, P2-39 | Full |
+| Multiplication and Division 3.4 multiplying and dividing within the multiplication tables | P2-04, P2-05, P2-19, P2-20, P2-39 | Full |
+| Multiplication and Division 3.5 mental calculation involving multiplication and division within multip... | P2-14, P2-20, P2-39 | Full |
+| Fractions 1.1 fraction as part of a whole | P2-15 | Full |
+| Fractions 1.2 notation and representations of fractions | P2-15, P2-21 | Full |
+| Fractions 1.3 comparing and ordering fractions with denominators of given fractions ... | P2-21 | Full |
+| Fractions 2.1 adding and subtracting like fractions within one whole with denominato... | P2-22 | Full |
+| Money 1.1 counting amount of money in dollars and cents | P2-06, P2-24 | Full (pictured coins and notes) |
+| Money 1.2 reading and writing money in decimal notation | P2-06, P2-16, P2-23, P2-24 | Full |
+| Money 1.3 comparing two or three amounts of money | P2-23 | Full |
+| Money 1.4 converting an amount of money in decimal notation to cents only, and v... | P2-16 | Full |
+| Length, Mass and Volume 1.1 measuring (length in metres; mass in kilograms/grams; volume of liquid... | P2-08, P2-25, P2-26, P2-28 | Part: reading pictured scales, tapes and containers; a printed page cannot hold a real instrument |
+| Length, Mass and Volume 1.2 using appropriate units of measurement and their abbreviations m, g, k... | P2-08, P2-25, P2-26, P2-27 | Full |
+| Length, Mass and Volume 1.3 comparing and ordering (lengths; masses; volumes) | P2-28 | Full (one unit at a time: kg to g and m to cm conversions are Primary 3) |
+| Time 2.1 telling time to the minute | P2-07, P2-29, P2-31 | Full |
+| Time 2.2 measuring time in hours and minutes | P2-29, P2-31 | Full |
+| Time 2.3 converting time in hours and minutes to minutes only, and vice versa | P2-30, P2-31 | Full |
+| 2D Shapes 1.1 making/completing patterns with 2D shapes according to one or two of t... | P2-32, P2-33, P2-40 | Part: completing patterns by choosing the next shape; the pupil's own drawn pattern cannot be checked |
+| 3D Shapes 2.1 identifying, naming, describing and classifying 3D shapes (cube, cuboi... | P2-34, P2-35, P2-40 | Full by picture (cube, cuboid, cone, cylinder, sphere); no real solids to handle |
+| Picture Graphs with Scales 1.1 reading and interpreting data from picture graphs with scales | P2-36, P2-37 | Full (picture graphs with keys of 2, 5 and 10) |
 
 **Not covered, or only in part (for the owner):** writing number words by hand (WN 1.3), taking a real measurement or building a real pattern or solid (ME 1.1, GE 1.1, GE 2.1), and anything that needs the pupil to draw. These are the verbs a printed self-checking page cannot see; the teacher notes say so. **Excluded as above Primary 2** (and never used): decimals beyond dollars-and-cents notation, adding or subtracting decimal money (Primary 3), conversions kg to g, m to cm, ℓ to mℓ, tables of 6 to 9, division with remainder, equivalent fractions, unlike fractions, mixed numbers, bar graphs, tally charts as a taught skill, 24-hour time, angles, area and perimeter.
 
@@ -57,53 +57,53 @@ Page ids P2-01 to P2-40 are in build order; "Pos" is the position in the booklet
 
 | Pos | Page | Title | Outcomes | Stars | Mechanic |
 |---|---|---|---|---|---|
-| S1-01 | P2-01 | Hundreds, Tens, Ones | WN 1.2 | 1 | K1 code word; place-value discs in a chart, one question about the value of a digit |
-| S1-02 | P2-38 | Colour the Rocket (CBC) | WN 1.1 to 1.3 (bank-dependent) | 1 | colour by code, tally and matching parts |
-| S1-03 | P2-09 | Words and Numbers | WN 1.3 | 1 | K6 route: number words and numerals that match |
-| S1-04 | P2-12 | Odd or Even | WN 1.6 | 1 | K6 route over odd or even numbers |
-| S1-05 | P2-10 | Digit Cards | WN 1.2, 1.4 | 2 | K1 code word: greatest, smallest and in-between numbers from three digit cards |
-| S1-06 | P2-11 | Number Patterns | WN 1.1, 1.5 | 2 | K1 code word: missing terms, steps of 2, 3, 5, 10, 100 |
-| S1-07 | P2-17 | Mystery Numbers | WN 1.2, 1.3, 1.4, 1.6 | 2 | K1 code word + clue test, 3-digit riddles |
-| S1-08 | P2-02 | Column Sums | AS 2.1 | 1 | K1 code word: vertical sums, up to 3 digits |
-| S1-09 | P2-03 | Mental Jumps | AS 2.2 | 1 | K6 route: 3-digit number plus or minus ones, tens, hundreds |
-| S1-10 | P2-13 | Missing Digits | AS 2.1 | 2 | K1 code word: the missing digits of vertical sums |
-| S1-11 | P2-18 | Story Sums to 1000 | AS 2.1, 2.2 | 2 | K1 code word: two-step stories (problem solving) |
-| S1-12 | P2-04 | Equal Groups | MD 3.1, 3.4 | 1 | K1 code word: groups and arrays, tables of 2, 5, 10 |
-| S1-13 | P2-05 | Share It Out | MD 3.2, 3.4 | 1 | K1 code word: sharing and grouping stories with ÷ |
-| S1-14 | P2-14 | Times Table Maze | MD 3.1, 3.5 | 1 | K6 route over correct facts from tables of 2, 3, 4, 5, 10 |
-| S1-15 | P2-19 | Fact Families | MD 3.3, 3.2 | 2 | K8 loop closes: x and ÷ facts linked round a loop |
-| S1-16 | P2-20 | True or False Tables | MD 3.1, 3.4, 3.5 | 2 | TF letters spell a word |
-| S1-17 | P2-39 | Colour the Castle (CBC) | MD 3.1, 3.4 | 2 | colour by code, tables and ÷ |
-| S1-18 | P2-15 | Parts of a Whole | FR 1.1, 1.2 | 1 | K1 code word from shaded fractions |
-| S1-19 | P2-21 | Fraction Order | FR 1.2, 1.3 | 2 | K1 letters of the fractions, smallest first |
-| S1-20 | P2-22 | Fraction Sums | FR 2.1 | 2 | K1 code word: like fractions within one whole |
+| S1-01 | P2-01 | Hundreds, Tens, Ones | Whole Numbers 1.2 | 1 | K1 code word |
+| S1-02 | P2-38 | Colour the Rocket | Whole Numbers 1.1, Whole Numbers 1.2, Whole Numbers 1.3, Whole Numbers 1.4 | 1 | colour by code, tally and matching parts |
+| S1-03 | P2-09 | Words and Numbers | Whole Numbers 1.3 | 1 | K6 route closes at FINISH |
+| S1-04 | P2-12 | Odd or Even | Whole Numbers 1.6 | 1 | K6 route closes at FINISH |
+| S1-05 | P2-10 | Digit Cards | Whole Numbers 1.2, Whole Numbers 1.4, Whole Numbers 1.6 | 2 | K1 code word |
+| S1-06 | P2-11 | Number Patterns | Whole Numbers 1.1, Whole Numbers 1.5 | 2 | K1 code word |
+| S1-07 | P2-17 | Mystery Numbers | Whole Numbers 1.2, Whole Numbers 1.4, Whole Numbers 1.6 | 2 | K1 code word |
+| S1-08 | P2-02 | Column Sums | Addition and Subtraction 2.1 | 1 | K1 code word |
+| S1-09 | P2-03 | Mental Jumps | Addition and Subtraction 2.2 | 1 | K6 route closes at FINISH |
+| S1-10 | P2-13 | Missing Digits | Addition and Subtraction 2.1 | 2 | K1 code word |
+| S1-11 | P2-18 | Story Sums to 1000 | Addition and Subtraction 2.1, Addition and Subtraction 2.2 | 2 | K1 code word |
+| S1-12 | P2-04 | Equal Groups | Multiplication and Division 3.1, Multiplication and Division 3.4 | 1 | K1 code word |
+| S1-13 | P2-05 | Share It Out | Multiplication and Division 3.2, Multiplication and Division 3.4 | 1 | K1 code word |
+| S1-14 | P2-14 | Times Table Maze | Multiplication and Division 3.1, Multiplication and Division 3.2, Multiplication and Division 3.5 | 1 | K6 route closes at FINISH |
+| S1-15 | P2-19 | Fact Families | Multiplication and Division 3.2, Multiplication and Division 3.3, Multiplication and Division 3.4 | 2 | K8 loop closes |
+| S1-16 | P2-20 | True or False Tables | Multiplication and Division 3.1, Multiplication and Division 3.3, Multiplication and Division 3.4, Multiplication and Division 3.5 | 2 | K1 letters spell a word |
+| S1-17 | P2-39 | Colour the Dinosaur | Multiplication and Division 3.1, Multiplication and Division 3.2, Multiplication and Division 3.3, Multiplication and Division 3.4, Multiplication and Division 3.5 | 2 | colour by code, tally and matching parts |
+| S1-18 | P2-15 | Parts of a Whole | Fractions 1.1, Fractions 1.2 | 1 | K1 code word |
+| S1-19 | P2-21 | Fraction Order | Fractions 1.2, Fractions 1.3 | 2 | K1 letters spell a word |
+| S1-20 | P2-22 | Fraction Sums | Fractions 2.1 | 2 | K1 code word |
 
 ### 2b. Semester 2 (Terms 3 and 4): 10 one-star, 10 two-star
 
 | Pos | Page | Title | Outcomes | Stars | Mechanic |
 |---|---|---|---|---|---|
-| S2-01 | P2-06 | Dollars and Cents | MO 1.1, 1.2 | 1 | K1 code word: pictured coins and notes, $ amounts written in decimal notation |
-| S2-02 | P2-16 | Writing Money | MO 1.2, 1.4 | 2 | K1 code word: decimal notation to cents and back |
-| S2-03 | P2-23 | Which Costs More? | MO 1.3 | 2 | K1 letters in order of price (two and three amounts) |
-| S2-04 | P2-24 | Purse Match | MO 1.1 | 2 | K1 letters: which purse holds which amount |
-| S2-05 | P2-08 | Metres | ME 1.1, 1.2 | 1 | K1 code word: reading a pictured metre scale |
-| S2-06 | P2-25 | Kilograms and Grams | ME 1.1, 1.2 | 1 | K1 code word: reading pictured scales |
-| S2-07 | P2-26 | Litres | ME 1.1, 1.2 | 1 | K1 code word: reading pictured containers |
-| S2-08 | P2-27 | Which Unit? | ME 1.2 | 1 | TF letters of the sensible unit spell a word |
-| S2-09 | P2-28 | Order the Measures | ME 1.3 | 2 | K1 letters of the longest, heaviest, fullest |
-| S2-10 | P2-07 | Time to the Minute | TI 2.1 | 1 | K1 code word from clock faces |
-| S2-11 | P2-30 | Hours and Minutes | TI 2.3 | 1 | K1 code word: conversions |
-| S2-12 | P2-29 | How Long Did It Take? | TI 2.1, 2.2 | 2 | K1 code word: start and end clock times |
-| S2-13 | P2-31 | Time Detective | TI 2.1, 2.2, 2.3 | 2 | K1 code word: a timetable (problem solving) |
-| S2-14 | P2-32 | Shape Patterns | GE 1.1 | 1 | K1 letters of the shape that comes next |
-| S2-15 | P2-33 | Pattern Rules | GE 1.1 | 2 | K1 letters: two attributes change together |
-| S2-16 | P2-34 | Meet the Solids | GE 2.1 | 1 | K1 letters of the name of each solid |
-| S2-17 | P2-35 | Solid Sort | GE 2.1 | 2 | K3 totals in a sorting table |
-| S2-18 | P2-36 | Picture Graph Scales | ST 1.1 | 1 | K1 code word from a scaled picture graph |
-| S2-19 | P2-37 | Graph Detective Two | ST 1.1 | 2 | K3 totals and a second sum |
-| S2-20 | P2-40 | Colour the Boat (CBC) | TI 2.1, ME 1.1 (bank-dependent) | 2 | colour by code, tally |
+| S2-01 | P2-06 | Dollars and Cents | Money 1.1, Money 1.2 | 1 | K1 code word |
+| S2-02 | P2-16 | Writing Money | Money 1.2, Money 1.4 | 2 | K1 code word |
+| S2-03 | P2-23 | Which Costs More? | Money 1.2, Money 1.3 | 2 | K1 letters spell a word |
+| S2-04 | P2-24 | Purse Match | Money 1.1, Money 1.2 | 2 | K1 letters spell a word |
+| S2-05 | P2-08 | Metres | Length, Mass and Volume 1.1, Length, Mass and Volume 1.2 | 1 | K1 code word |
+| S2-06 | P2-25 | Kilograms and Grams | Length, Mass and Volume 1.1, Length, Mass and Volume 1.2 | 1 | K1 code word |
+| S2-07 | P2-26 | Litres | Length, Mass and Volume 1.1, Length, Mass and Volume 1.2 | 1 | K1 code word |
+| S2-08 | P2-27 | Which Unit? | Length, Mass and Volume 1.2 | 1 | K1 letters spell a word |
+| S2-09 | P2-28 | Order the Measures | Length, Mass and Volume 1.1, Length, Mass and Volume 1.3 | 2 | K1 letters spell a word |
+| S2-10 | P2-07 | Time to the Minute | Time 2.1 | 1 | K1 code word |
+| S2-11 | P2-30 | Hours and Minutes | Time 2.3 | 1 | K1 code word |
+| S2-12 | P2-29 | Time Taken | Time 2.1, Time 2.2 | 2 | K1 code word |
+| S2-13 | P2-31 | Time Detective | Time 2.1, Time 2.2, Time 2.3 | 2 | K1 code word |
+| S2-14 | P2-32 | Shape Patterns | 2D Shapes 1.1 | 1 | K1 letters spell a word |
+| S2-15 | P2-33 | Pattern Rules | 2D Shapes 1.1 | 2 | K1 letters spell a word |
+| S2-16 | P2-34 | Meet the Solids | 3D Shapes 2.1 | 1 | K1 letters spell a word |
+| S2-17 | P2-35 | Solid Sort | 3D Shapes 2.1 | 2 | K3 total 15 + K1 code word |
+| S2-18 | P2-36 | Picture Graph Scales | Picture Graphs with Scales 1.1 | 1 | K1 code word |
+| S2-19 | P2-37 | Graph Detective Two | Picture Graphs with Scales 1.1 | 2 | K1 code word |
+| S2-20 | P2-40 | Colour the Butterfly | 2D Shapes 1.1, 3D Shapes 2.1 | 2 | colour by code, tally and matching parts |
 
-(Final page titles, outcomes and mechanics are those in `school/p2/gen/` and in the build report; this table was written before the build and the report records every difference.)
+(These tables were regenerated from the built pages after the build; the page titles, outcomes and mechanics are those in `school/p2/gen/`. Differences from the first draft of this plan are listed in the build report.)
 
 ## 3. Ranges and wording
 

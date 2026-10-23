@@ -369,6 +369,7 @@ def shape_cell(el, size=None):
     fl = "#000" if fill == "b" else "#fff"
     if kind == "rect":
         w, h = (14.0, 8.5) if big else (10.0, 6.0)
+        if rot in (90, 270): w, h = h, w
         inner = f'<rect x="{8.5-w/2:.2f}" y="{8.5-h/2:.2f}" width="{w}" height="{h}" fill="{fl}" stroke="#000" stroke-width="0.6" stroke-linejoin="round"/>'
     else:
         inner = shape_svg(kind, 8.5, 8.5, s, rot, fl, sw=0.6)
@@ -419,12 +420,18 @@ def make_pattern(rng, attrs):
         seq = [el(cycs[i % period][0], True, cycs[i % period][1]) for i in range(7)]
     return seq
 
+def vsig(el):
+    """what a pupil can SEE: circles and squares look the same turned"""
+    k, b, f, r = el
+    return (k, b, f, r if k in ("tri", "half") else (r % 180 if k == "rect" else 0))
+
 def wrong_options(rng, seq, right):
     k, b, f, r = right
-    cands = [(k, b, "b" if f == "w" else "w", r), (k, not b, f, r), ("circle" if k != "circle" else "square", b, f, r), (k, b, f, (r + 90) % 360), seq[-1], seq[len(seq) - 2]]
+    cands = [(k, b, "b" if f == "w" else "w", r), (k, not b, f, r), ("circle" if k != "circle" else "square", b, f, r), seq[-1], seq[len(seq) - 2]]
+    if k in ("tri", "half", "rect"): cands.append((k, b, f, (r + 90) % 360))
     out = []
     for c in cands:
-        if c != right and c not in out: out.append(c)
+        if vsig(c) != vsig(right) and all(vsig(c) != vsig(o) for o in out): out.append(c)
     return out
 
 def page32(no=32, attrs_list=("shape", "colour", "size", "turn", "shape", "colour"), seed=8932, title="Shape Patterns", tier=1, two=False):
@@ -459,12 +466,12 @@ def page32(no=32, attrs_list=("shape", "colour", "size", "turn", "shape", "colou
         shown_p = [parse_cell(h) for h in re.findall(r'<div class="pcell"><svg.*?</svg></div>', r_h)]
         want = next_of(shown_p)
         opt_p = [(parse_cell(h), l) for h, l in re.findall(r'<div class="popt">(<svg.*?</svg>)<i class="cl">(\w)</i></div>', r_h)]
-        solved.append([l for e, l in opt_p if e == want])
+        solved.append([l for e, l in opt_p if vsig(e) == vsig(want)])
     P.v("V1 independent solver (shapes read back from the drawing, the repeat found, the next shape matched to exactly one option) gets the letters", [s[0] if len(s) == 1 else s for s in solved] == list(word), solved)
     other = choice_other_words(word, letters)
     P.v("V3 no other way of choosing spells a word (large word list)", not other, other[:3])
     P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()])
-    P.v("V7 every row shows at least two full turns of the repeat (six shapes, repeat of 2 or 3)", True)
+    P.v("V7 the three options of every row look different from each other", all(len({vsig(e) for e, l in r[3]}) == 3 for r in rows))
     P.v("V8 shapes are at least 8 mm across", True)
     P["cv"] = dict(rate=1.0, single_total=12, single_detected=12)
     P["model"] = dict(truth=list(word), domains=[list(l) for l in letters], check=letters_check(), numeric=False)

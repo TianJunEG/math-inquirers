@@ -96,7 +96,7 @@ I('spin', 4, 9, TH, 'Spinners with unequal parts', 'Draw it',
   '1/2 = 3/6 and 1/3 = 2/6, so blue is 1/6. Yellow has the biggest part. 1/2 of 60 = 30, 1/3 of 60 = 20, 1/6 of 60 = 10.',
   fig=('pie', [(0.5, '#FFC93C'), (1 / 3, '#7FC8A9'), (1 / 6, '#8EC5F0')], 'A circle split into three parts: half, a third and a sixth'))
 
-I('time', 4, 10, TH, 'A timetable: try both orders', 'List every way',
+I('time', 4, 10, TH, 'Timetables, trying both orders', 'List every way',
   ['Kumar leaves home at 2:40 pm. He must go to the post office and the library, in either order, and then walk home. He stays 10 minutes at each place.',
    'The post office closes at 3:30 pm. The library opens at 3:10 pm. Walking times: home to post office 20 minutes, home to library 30 minutes, post office to library 15 minutes (each way).',
    '(a) Which place should he visit first?', '(b) At what time does he get home?'],
@@ -175,7 +175,7 @@ I('r4', 5, 2, TH, 'Ratio and fractions', 'Draw it',
   '3 + 5 = 8 units, red is 3 of the 8, so 3/8. 40 / 8 = 5 counters per unit, 3 x 5 = 15. Listen for the bar model and for the total as 8 units.',
   'The ratio 3 : 5 gives 8 equal units. Red is 3/8 of the bag and blue is 5/8. 40 / 8 = 5, so red is 3 x 5 = 15 and blue is 5 x 5 = 25.',
   var=('A jug has orange juice and water in the ratio 2 : 7. What fraction of the jug is juice? There are 45 cups of liquid altogether: how many are juice?', '2/9; 10 cups.'),
-  fig=('bars', [('Red', [(3, '#F2A0A0', '3')]), ('Blue', [(5, '#8EC5F0', '5')])], 'Bars: red 3 units, blue 5 units'), preview=True)
+  fig=('bars', [('Red', [(3, '#F2A0A0', '')]), ('Blue', [(5, '#8EC5F0', '')])], 'Bars: red 3 units, blue 5 units'), preview=True)
 
 I('r1', 5, 3, 'Preview', 'What is a ratio?', 'Draw it',
   ['Ali mixes paint. For every 2 tins of blue he uses 3 tins of white. We write blue : white = 2 : 3 and say "2 to 3".',
@@ -349,7 +349,7 @@ I('bounds', 5, 10, TH, 'Counting numbers in bounds', 'List every way',
   'First digit 3: 03, 12, 21, 30, so 303, 312, 321, 330. First digit 4: 02, 11, 20. First digit 5: 01, 10. A total of 4 + 3 + 2 = 9.',
   var=('How many whole numbers between 200 and 500 have a digit sum of 5?', '9.'))
 
-I('pile', 5, 10, GF, 'Least possible: the fullest bag', 'Guess and check',
+I('pile', 5, 10, GF, 'Least possible, the fullest bag', 'Guess and check',
   ['Ravi puts 23 marbles into 4 bags. No two bags hold the same number of marbles, and no bag is empty.',
    'What is the smallest number of marbles that the fullest bag can hold?'],
   ['8 marbles.'],
@@ -454,7 +454,7 @@ I('short', 6, 4, TH, 'Shortcuts before calculating', 'Try something simpler',
   '(a) 5 x 5 - 4 x 6 = 1 and 6 x 6 - 5 x 7 = 1, so 83 x 83 - 82 x 84 = 1 (the product of the neighbours is always 1 less than the square). (b) 0.65 x (27 + 73) = 0.65 x 100 = 65.',
   var=('Find 46 x 46 - 45 x 47 and 2.4 x 35 + 2.4 x 65.', '1 and 240.'))
 
-I('votes', 6, 5, GF, 'Worst case: the runner-up', 'Act it out',
+I('votes', 6, 5, GF, 'Worst case, the runner-up', 'Act it out',
   ['Ali, Mei and Ravi stand for class captain. The child with the most votes wins. There are 31 votes in all. After 20 votes are counted, Ali has 9, Mei has 7 and Ravi has 4.',
    'How many more of the remaining 11 votes must Ali get to be sure of winning, whatever happens to the other votes?'],
   ['5 more votes.'],
@@ -464,7 +464,7 @@ I('votes', 6, 5, GF, 'Worst case: the runner-up', 'Act it out',
   'Ali ends with 9 + x. In the worst case all the other 11 - x votes go to Mei, who ends with 7 + 11 - x = 18 - x. Ali wins for sure when 9 + x is greater than 18 - x, so x = 5 (14 against 13). With x = 4 it is 13 against 14.',
   var=('Ali 12, Mei 9 and Ravi 5 after 26 votes out of 40. How many more of the 14 remaining votes must Ali get to be sure of winning?', '6 more votes (Ali 18 against Mei at most 17).'))
 
-I('socks', 6, 5, TH, 'Worst case: how many to be sure', 'Act it out',
+I('socks', 6, 5, TH, 'Worst case, how many to be sure', 'Act it out',
   ['A drawer has 8 red socks, 6 blue socks and 5 green socks. Aisha takes socks out without looking.',
    '(a) How many socks must she take to be sure of a pair of the same colour?', '(b) How many socks must she take to be sure of 3 socks of the same colour?', '(c) How many socks must she take to be sure of 2 blue socks?'],
   ['(a) 4 socks.', '(b) 7 socks.', '(c) 15 socks.'],

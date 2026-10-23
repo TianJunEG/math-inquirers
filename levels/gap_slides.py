@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, '..
 sys.path.insert(0, HERE); sys.path.insert(0, os.path.join(ROOT, 'rebuild'))
 import slidekit
 from slidekit import NAVY, CREAM, TEAL, YEL, WHITE, MUTED, SOFT, SKY, GREY, HF, BF, E, sec, h2, p, card, pin
-RENDER_VERSION = 'r4'
+RENDER_VERSION = 'r7'
 PILL = 'Optional, if you finish early'
 RED = '#D64545'
 BEFORE = ('talk', 'showcase', 'exit', 'reflect', 'end')
@@ -100,7 +100,7 @@ def fig_bars(rows, label, unit=70):
         y = 14 + i * 84; x = 170
         s += _t(150, y + 46, nm, 30, NAVY, 'end')
         for u, fillc, tx in segs:
-            s += f'<rect x="{x}" y="{y}" width="{u*unit}" height="64" fill="{fillc}" stroke="{NAVY}" stroke-width="4"/>'
+            for k in range(u): s += f'<rect x="{x+k*unit}" y="{y}" width="{unit}" height="64" fill="{fillc}" stroke="{NAVY}" stroke-width="4"/>'
             if tx: s += _t(x + u * unit / 2, y + 43, tx, 28)
             x += u * unit
     return _svg(label, W, H, s)
@@ -108,14 +108,22 @@ def fig_bars(rows, label, unit=70):
 def fig_table(head, rows, label, colw=None):
     colw = colw or [190] * len(head)
     def row(cells, bg, wt):
-        return '<div style="display:flex;background:%s;border:3px solid %s;border-radius:10px;margin-top:6px">%s</div>' % (bg, NAVY, ''.join(f'<div style="width:{w}px;padding:8px 6px;font-size:30px;font-weight:{wt};text-align:center">{E(str(c))}</div>' for c, w in zip(cells, colw)))
+        return '<div style="display:flex;background:%s;border:3px solid %s;border-radius:10px;margin-top:6px">%s</div>' % (bg, NAVY, ''.join(f'<div style="width:{w}px;padding:5px 6px;font-size:28px;font-weight:{wt};text-align:center">{E(str(c))}</div>' for c, w in zip(cells, colw)))
     return f'<div aria-label="{E(label)}">' + row(head, YEL, 800) + ''.join(row(r, WHITE, 600) for r in rows) + '</div>'
 
 FIGS = {'sum': fig_sum, 'pie': fig_pie, 'fan': fig_fan, 'tri12': fig_tri12, 'grid': fig_grid, 'stairs': fig_stairs, 'quarter': fig_quarter,
         'dice': fig_dice, 'bars': fig_bars, 'table': fig_table}
 
 # ---------------------------------------------------------------- slide
+def M(t):
+    """typographic signs for display: digit x digit -> times, digit - digit -> minus, digit / digit with spaces -> divide"""
+    t = re.sub(r'(?<=[\d)]) x (?=[\d(])', ' \u00d7 ', t)
+    t = re.sub(r'(?<=[\d)]) - (?=[\d(])', ' \u2212 ', t)
+    return re.sub(r'(?<=[\d)]) / (?=[\d(])', ' \u00f7 ', t)
 def render(it, deckkey, lv):
+    it = dict(it); it['q'] = [M(x) for x in it['q']]; it['ans'] = [M(x) for x in it['ans']]
+    for k in ('say', 'ask', 'listen', 'why'): it[k] = M(it[k])
+    if it.get('var'): it['var'] = (M(it['var'][0]), M(it['var'][1]))
     slidekit.FOOT = f'Math Inquirers P{lv} Holiday Program  •  Notice it. Test it. Explain why.'
     ql = sum(len(x) for x in it['q'])
     size = 34 if ql < 330 else 31 if ql < 460 else 28
@@ -128,12 +136,12 @@ def render(it, deckkey, lv):
     if it.get('fig'):
         f = it['fig']; fn = FIGS[f[0]]; html_fig = fn(*f[1:])
         fig = f'<div style="flex:none;background:{WHITE};border-radius:24px;padding:20px 24px;display:flex;align-items:center;justify-content:center">{html_fig}</div>'
-    qcard = f'<div style="flex:1;min-width:0;background:{WHITE};border-radius:24px;padding:28px 40px;display:flex;flex-direction:column;gap:12px">{qs}</div>'
+    qcard = f'<div style="flex:1;min-width:0;background:{WHITE};border-radius:24px;padding:24px 40px;display:flex;flex-direction:column;gap:10px">{qs}</div>'
     row = f'<div style="display:flex;gap:28px;align-items:stretch">{qcard}{fig}</div>'
     tool = f'<p style="align-self:flex-start;background:{SOFT};border:3px solid {YEL};border-radius:30px;padding:6px 22px;font-size:26px;font-weight:800;color:{NAVY}">Tool: {E(it["tool"])}</p>'
     pre = ''
     if it.get('preview'):
-        pre = f'<p style="align-self:flex-start;background:{NAVY};color:{CREAM};border-radius:30px;padding:6px 22px;font-size:26px;font-weight:800">PREVIEW: a Primary 6 topic, beyond Level 5. A first taste, not a test.</p>'
+        pre = f'<p style="align-self:flex-start;background:{NAVY};color:{CREAM};border-radius:30px;padding:6px 22px;font-size:26px;font-weight:800">PREVIEW: a Primary 6 topic, beyond Level 5. A taste, not a test.</p>'
     ans = '<div data-build-in="pop" style="background:%s;border-radius:20px;padding:16px 28px;display:flex;flex-direction:column;gap:6px">%s</div>' % (YEL, ''.join(f'<p style="font-size:{30 if size>=31 else 28}px;font-weight:800;line-height:1.25">{E(a)}</p>' for a in it['ans']))
     title = f"{it['kind']}: {it['skill']}"
     body = h2(title, 60) + f'<div style="display:flex;gap:16px;flex-wrap:wrap">{tool}{pre}</div>' + row + ans
