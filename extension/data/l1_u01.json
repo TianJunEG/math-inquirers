@@ -10,7 +10,7 @@
  "learn": {
   "intro": "A number pattern follows a rule. The rule tells you how to get from one number to the next. A frog hopping along a number strip makes a pattern.",
   "example": {
-   "problem": "Kumar's frog starts on 6. It hops 4 each time. Write the first six numbers.",
+   "problem": "Kumar's frog starts on 6. It hops 4 each time. Write the first 6 numbers.",
    "figure": {
     "type": "tiles",
     "items": [
@@ -40,8 +40,8 @@
   "howto": {
    "title": "How to find a rule",
    "steps": [
-    "Look at the first two numbers. How far is it from one to the other?",
-    "Check the next two numbers. Is the hop the same?",
+    "Look at the first 2 numbers. How far is it from one to the other?",
+    "Check the next 2 numbers. Is the hop the same?",
     "Going up? The rule is add. Going down? The rule is take away.",
     "Use the rule to write the next numbers."
    ]
@@ -172,7 +172,7 @@
     ],
     "text": "37, 47"
    },
-   "explanation": "Each hop is 10, so the tens digit goes up by 1 and the ones digit stays 7."
+   "explanation": "Each hop is 10. The tens digit goes up by 1 and the ones digit stays 7."
   },
   {
    "id": "L1U01-S04",
@@ -290,11 +290,11 @@
    "id": "L1U01-S08",
    "tier": "start",
    "page": 2,
-   "text": "Siti puts 3 stickers in her 1st box, 6 stickers in her 2nd box and 9 stickers in her 3rd box. She keeps going.",
+   "text": "Siti puts 3 stickers in box 1, 6 stickers in box 2 and 9 stickers in box 3. She keeps going.",
    "parts": [
     {
      "label": "a",
-     "text": "How many stickers go in her 5th box? {b} stickers",
+     "text": "How many stickers go in box 5? {b} stickers",
      "answer": {
       "value": [
        "15"
@@ -304,7 +304,7 @@
     },
     {
      "label": "b",
-     "text": "How many stickers go in her 6th box? {b} stickers",
+     "text": "How many stickers go in box 6? {b} stickers",
      "answer": {
       "value": [
        "18"
@@ -318,7 +318,7 @@
      "Write the numbers:"
     ]
    },
-   "hint": "Each box has 3 more stickers than the box before.",
+   "hint": "Each box has 3 more than the one before.",
    "explanation": "3, 6, 9, 12, 15, 18. The 4th box has 12, the 5th has 15 and the 6th has 18."
   },
   {
@@ -444,7 +444,8 @@
      "27",
      "31"
     ],
-    "text": "3, 7, 11, 15, 19, 23, 27, 31"
+    "text": "3, 7, 11, 15, 19, 23, 27, 31",
+    "list": true
    },
    "explanation": "Start on 3 and count on 4 each time: 3, 7, 11, 15, 19, 23, 27, 31."
   },
@@ -530,7 +531,8 @@
        "20",
        "40"
       ],
-      "text": "20 and 40"
+      "text": "20 and 40",
+      "list": true
      }
     },
     {
@@ -561,7 +563,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "How many hops are there from the 2nd number to the 5th number? {b}",
+     "text": "How many hops from the 2nd number to the 5th number? {b}",
      "answer": {
       "value": [
        "3"
@@ -646,14 +648,15 @@
    "id": "L1U01-G02",
    "tier": "go",
    "page": 5,
-   "text": "Mei starts on 1 and adds 3 each time. Ali starts on 2 and adds 5 each time. Both stop at 40. Which numbers do both of them say?",
+   "text": "Mei starts on 1 and adds 3 each time. Ali starts on 2 and adds 5 each time. Both stop at 40. Write the numbers that Mei and Ali both say.",
    "answer": {
     "value": [
      "7",
      "22",
      "37"
     ],
-    "text": "7, 22 and 37"
+    "text": "7, 22 and 37",
+    "list": true
    },
    "space": {
     "rows": [
@@ -662,7 +665,7 @@
      "Both:"
     ]
    },
-   "hint": "Write each pattern on its own line, then look for the same number in both lines.",
+   "hint": "Write each pattern on its own line. Then look for the same number in both lines.",
    "explanation": "Mei says 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40. Ali says 2, 7, 12, 17, 22, 27, 32, 37. The same numbers are 7, 22 and 37, and each is 15 more than the one before."
   },
   {
@@ -679,7 +682,8 @@
      "9",
      "18"
     ],
-    "text": "1, 2, 3, 6, 9, 18"
+    "text": "1, 2, 3, 6, 9, 18",
+    "list": true
    },
    "space": {
     "rows": [

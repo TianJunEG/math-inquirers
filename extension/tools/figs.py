@@ -20,6 +20,7 @@ def recolour(s):
     """Colour svg -> black and white svg (patterns instead of colour)."""
     n = next(_ids)
     pid = f'ht{n}'
+    s = re.sub(r'(<circle[^>]*?)fill="' + YEL + '"', r'\1fill="#000"', s)   # small dots: solid
     s = s.replace(f'fill="{YEL}"', f'fill="url(#{pid})"')
     for c in (SKY, SOFT):
         s = s.replace(f'fill="{c}"', 'fill="#fff"')
@@ -130,7 +131,8 @@ def bonds(items, width_mm=None):
 
 
 def tiles(items, gaps=None, hl=(), width_mm=None):
-    return legacy.seq(items, gaps, hl)
+    s = legacy.seq(items, gaps, hl)
+    return re.sub(r'<text[^>]*>\?</text>', '', s)   # empty tiles stay empty: the child writes the number
 
 
 def ten_frame(filled, extra=0, width_mm=None):

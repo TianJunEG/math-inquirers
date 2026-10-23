@@ -19,9 +19,9 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 .folio{font:700 11pt Fredoka,sans-serif;border:0.4mm solid var(--ink);border-radius:50%;min-width:8mm;height:8mm;display:inline-flex;align-items:center;justify-content:center;padding:0 1.5mm}
 .gutterline{position:absolute;top:6mm;bottom:6mm;border-left:0.3mm dashed #000;width:0}
 .print .recto .gutterline{left:9mm}.print .verso .gutterline{right:9mm}
-.gutternote{position:absolute;top:50%;font:600 7pt 'Nunito Sans',sans-serif;white-space:nowrap;transform-origin:left top}
-.print .recto .gutternote{left:6mm;transform:rotate(90deg) translate(-50%,0)}
-.print .verso .gutternote{right:6mm;transform:rotate(-90deg) translate(50%,0)}
+.gutternote{position:absolute;top:40mm;writing-mode:vertical-rl;font:700 8pt 'Nunito Sans',sans-serif;white-space:nowrap}
+.print .recto .gutternote{left:2.5mm}
+.print .verso .gutternote{right:2.5mm;transform:rotate(180deg)}
 /* page head */
 .ph{display:flex;align-items:center;gap:3mm;border-bottom:0.7mm solid var(--ink);padding-bottom:1.6mm;margin-bottom:3mm;flex:none}
 .ph .lv{background:var(--accent);color:var(--onaccent);font-weight:700;padding:1mm 3.5mm;border-radius:1mm;font-size:12pt}
@@ -155,3 +155,6 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 .tickl .tick{display:inline-block;width:6.4mm;height:6.4mm;border:0.45mm solid var(--ink);border-radius:1.2mm}
 .adv{margin:0;padding-left:5mm;font:600 10.5pt/1.35 'Nunito Sans',sans-serif}
 .box.grow{flex:1 1 auto}
+
+.legend svg{color:var(--ink)}
+.legend svg *{fill:inherit;stroke:inherit}

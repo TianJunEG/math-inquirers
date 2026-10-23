@@ -9,7 +9,7 @@ Table from the validator results of the final build (`python3 term/l1/tools/vali
 | Schema valid (JSON Schema + key checks) | PASS | schema: all top-level keys present; passes `schema/lesson.schema.json` |
 | Every answer verified independently (verify/lNN_checks.py) | PASS | verify: 200 answer checks by independent script passed (times recomputed in minutes since midnight, clock pictures and time lines read back from the lesson data) |
 | Online practice variants verified (expression, oracle, runner JS) | PASS | practice: 91 template variants verified three ways (expression, brute-force oracle that steps the clock on minute by minute, runner JavaScript calc) |
-| Timing: parts sum to 90, no part OVER, buffer, slow-class | PASS | 2+6+4+11+11+4+32+6+6+3+5 = 90; scripted need 68:21, slow-class 80:51; no part OVER in either model (tightest: mini 10:00 of 11:00, workbook 31:13 of 32:00 slow-class) |
+| Timing: parts sum to 90, no part OVER, buffer, slow-class | PASS | 2+6+4+11+11+4+32+6+6+3+5 = 90; scripted need 68:54, slow-class 81:30; no part OVER in either model (tightest: mini 10:00 of 11:00, workbook 31:13 of 32:00 slow-class) |
 | Slides and script linked (each slide once, in its part) | PASS | link: 30 slides each shown exactly once, all question ids resolve (S6 is shown big on its own slide `s-ws2b` and on the answer slide) |
 | Tier counts and completeness (answer, hint, solution, mistakes) | PASS | Start here 6, Think harder 4, Go further 3, exit 3, home 5 |
 | Neutral labels, no overclaims, no private chat | PASS | wording: no banned labels or claims in child and parent text |
@@ -19,10 +19,10 @@ Table from the validator results of the final build (`python3 term/l1/tools/vali
 | Mascot used modestly | PASS | Mi on 4 slides (title, warm-up, look-back, end), short lines, no numbers |
 | Beyond item named and not at Start here | PASS | `beyond`: Find the Start at G1 and G2 |
 | Kit contract and hand-off | PASS | no new kit page; the clock (2 faces, 3 + 3 hands) is supplied by Term 3 Lesson 1 and the most this lesson uses is 2 faces and 2 + 2 hands; `parent.next_materials` names the 29 play-money pieces, the $1 tokens and the clock |
-| Real PDF page count and fill | PASS | outputs: Workbook 5 pages, fill 97%, 97%, 89%, 100%, 99% (measured on the PDF); home sheet 1 page (99%), home answers 1 page, parent page 1 page (89%) |
+| Real PDF page count and fill | PASS | outputs: Workbook 5 pages, fill 97%, 92%, 92%, 90%, 99% (measured on the PDF); home sheet 1 page (99%), home answers 1 page, parent page 1 page (89%) |
 | No template leak (other lesson titles, Lesson 1 text) | PASS | template leak: none |
 
-Validator: 0 FAIL, 0 WARN. Timing: script 68.4 min of 90, slow-class 80.9 min. Workbook fill measured on the PDF: 97%, 97%, 89%, 100%, 99% (no kit page).
+Validator: 0 FAIL, 0 WARN (28 checks, built files included). Timing: script 68.9 min of 90, slow-class 81.5 min. Workbook fill measured on the PDF: 97%, 92%, 92%, 90%, 99% (no kit page).
 
 ## Judgement lines (author)
 
@@ -57,3 +57,7 @@ Total: 18 / 24
 - The Term 3 Quest gate for this lesson (film at 2:30 for half an hour; 1 hour after 5:15) uses a quarter-time start, which the Primary 1 paper patterns place at Think harder or beyond; this lesson keeps 5:15 and the pair 2:30 + half an hour out of its own pages. Suggest 5:30 for the gate.
 - The hand-off from Term 3 Lesson 2 (Five Minutes at a Time) is written by another author: it must say "keep your clock". The hand-off from Term 2 Lesson 10 to Term 3 Lesson 1 in `l20.json` still says "print it a week before" and "a toy or real clock (optional)"; it must now say the Term 3 book, the 6 clock hands cut out, and keep the $1 tokens (pre-flight section 5).
 - Online practice: g1 (the bus trip) has no picture; every other time item shows its clock for each variant.
+
+## Fix pass (Term 3, 23 Oct 2026)
+
+After the three independent audits (`audit/WORKBOOK_AUDIT_L23.md`, `GUIDE_DECK_AUDIT_L23.md`, `HOME_PARENT_PRACTICE_AUDIT_L23.md`) every Medium finding that sits in lesson data was fixed and the Low ones that were cheap; see `audit/FIXES_T3_L23.md` (finding by finding). Changes that matter for the scores above: exit ticket E1 and E3 now use numbers that the Talk time slide does not touch (the old model answer for Talk time said "8:30 is a whole hour after 7:30", which was the answer to E1); the opening, the camera and microphone lines and the tutor_prep greeting follow the final Term 1 wording; the larger clocks on the How long? and question 4 and 5 slides (question 5 has its own slide); the optional slide no longer repeats G3's structure; slide wording no longer says "quarter" to children or "the hour changes at half past". Instrument A is unchanged by design (16 to 18): no new problem-posing or generalising item was added in a fix pass. Still open and not in lesson data: clock-hand drawing in the shared figure (see `FINAL_FIXES_T3.md`).

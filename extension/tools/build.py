@@ -63,10 +63,10 @@ def cover(book, theme):
 
 def legend():
     return ('<div class="legend">'
-            f'<div>{ICON["start"].replace("<svg", "<svg fill=\"#1B2A49\" stroke=\"#1B2A49\"")}<span><b>Start here.</b> The main path. Do these first.</span></div>'
-            f'<div>{ICON["think"].replace("<svg", "<svg fill=\"#1B2A49\" stroke=\"#1B2A49\"")}<span><b>Think harder.</b> Longer problems. Hints are upside down.</span></div>'
-            f'<div>{ICON["go"].replace("<svg", "<svg fill=\"#1B2A49\" stroke=\"#1B2A49\"")}<span><b>Go further.</b> Big challenges, just for fun.</span></div>'
-            f'<div>{ICON["quiz"].replace("<svg", "<svg fill=\"none\" stroke=\"#1B2A49\"")}<span><b>Check yourself.</b> Four quick questions at the end.</span></div></div>')
+            f'<div>{ICON["start"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Start here.</b> The main path. Do these first.</span></div>'
+            f'<div>{ICON["think"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Think harder.</b> Longer problems. Hints are upside down.</span></div>'
+            f'<div>{ICON["go"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Go further.</b> Big challenges, just for fun.</span></div>'
+            f'<div>{ICON["quiz"].replace("<svg", "<svg fill=\"none\" stroke=\"currentColor\"")}<span><b>Check yourself.</b> Four quick questions at the end.</span></div></div>')
 
 
 def welcome(book, theme, ctx):
@@ -174,11 +174,11 @@ def section(kind, body, no, edition, gutter_note=False, blank=False, exempt=Fals
     par = 'recto' if no % 2 == 1 else 'verso'
     gl = ''
     if edition == 'print' and gutter_note:
-        gl = '<div class="gutterline"></div><div class="gutternote">cut or tear along the dashed line to take the answers out</div>'
+        gl = '<div class="gutterline"></div>' + ('<div class="gutternote">Answer pages: tear or cut along the dashed line to take them out</div>' if kind == 'divider' else '')
     if blank:
         return f'<section class="page {par} blank" data-kind="blank" data-no="{no}" data-exempt="1"></section>'
     foot = f'<div class="pf"><span class="folio">{no}</span><span>Math Inquirers &middot; Extension Workbook &middot; {esc(label)}</span></div>' if kind not in ('cover', 'cert', 'divider') else ''
-    return (f'<section class="page {par} {kind}" data-kind="{kind}" data-no="{no}" data-exempt="{1 if exempt else 0}" data-label="{esc(label)}">'
+    return (f'<section class="page {par} k-{kind}" data-kind="{kind}" data-no="{no}" data-exempt="{1 if exempt else 0}" data-label="{esc(label)}">'
             f'{gl}<div class="pg">{body}</div>{foot}</section>')
 
 

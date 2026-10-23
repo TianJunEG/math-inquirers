@@ -9,7 +9,7 @@ Rubric: `docs/audit/reaudit_p1.md` instruments A and tier compliance, `AUTHORING
 | Schema valid (JSON Schema + key checks) | PASS | schema: passes term/l1/schema/lesson.schema.json |
 | Every answer verified independently (verify/l22_checks.py) | PASS | clocks read back from hand angles; durations found by stepping the clock one minute at a time; am and pm from a 24-hour hour; the timetable answer by scanning the start times |
 | Online practice variants verified (expression, oracle, runner JS) | PASS | all template variants verified three ways (c1, c2, c5, t1, t2, t3, g1, r2) |
-| Timing: parts sum to 90, no part OVER, buffer, slow-class | PASS | script about 67 min, slow-class about 80 min, no OVER, no LOOSE |
+| Timing: parts sum to 90, no part OVER, buffer, slow-class | PASS | script 68:02, slow-class 80:37 after the fix pass (the opening is exactly full in the slow-class model, 2:00 of 2:00; the standing buffer absorbs it), no LOOSE |
 | Slides and script linked (each slide once, in its part) | PASS | reveal slides are written by hand so the script controls them |
 | Tier counts and completeness | PASS | Start here 6, Think harder 4, Go further 3, exit 3, home 5 |
 | Neutral labels, no overclaims, no private chat | PASS | wording check clean |
@@ -17,7 +17,7 @@ Rubric: `docs/audit/reaudit_p1.md` instruments A and tier compliance, `AUTHORING
 | Spare-time menu present | PASS | 3 activities |
 | No copied contest text | PASS | no 7-word overlap |
 | Mascot used modestly | PASS | Mi on 4 slides |
-| Real PDF page count and fill | PASS with note | workbook 6 pages: 99%, 89%, 97%, 87%, 100%; kit page 75% |
+| Real PDF page count and fill | PASS with note | workbook 6 pages: 99%, 89%, 97%, 90%, 99% (final build); kit page 75% |
 | Beyond item named, not at Start here | PASS | Chunk the Gap at G1 to G3 |
 | Kit contract | PASS | 8 event cards supplied and used; the clock from the first lesson of Term 3 is reused |
 | No template leak | PASS | |
@@ -53,7 +53,13 @@ Total: 18 / 24.
 ## Known limits
 
 - Never trialled with children; times and difficulty are modelled.
-- Shared template items found: the event-card mat prints "a.m. (night" and "p.m. (aftern" because the label is cut at 12 characters (`figs3.event_cards`, `lab[:12]`), and prints a.m. and p.m. with full stops while the Primary 1 papers use am and pm; the labelled number line shrinks custom labels so 4:00 and 4:05 sit close together in G1; the deck builder ignores `size` on clocks inside `qs` rows.
+- Shared template items found: the event-card mat prints "a.m. (night" and "p.m. (aftern" because the label is cut at 12 characters (`figs3.event_cards`, `lab[:12]`), and prints a.m. and p.m. with full stops while the Primary 1 papers use am and pm; the deck builder ignores `size` on clocks inside `qs` rows.
 - Online rewind: one static item from Lesson 12 and one templated item (Lesson 12 c4) are copied as r1 and r2; a rewind set is not built in the runner.
 - The lesson is a new topic in the plan: a tutor should confirm the strand label (flagged in `moe.note`).
 - Wording for durations (Chunk the Gap) has no Primary 1 paper behind it; half-hour and 1-hour durations are Primary 1, general durations are Primary 3, so the puzzle stays beyond-syllabus.
+
+## Fix pass (23 Oct 2026, independent audits of 23 Oct)
+
+`audit/FIXES_T3_L22.md` lists every finding and the action. Summary: the false "the short hand waits at the hour" is gone from the objective, titles, script, deck notes, parent summary and parent quote (the short hand creeps; the hour stays the same until the long hand has been all the way round); Explore round 2 has a tutor demonstration because loose paper hands do not creep; event cards now carry times and the sort has a clear answer; the hour-hand trap was moved out of Start here and the exit ticket (S1c 11:10, S6 Ben 6:20, E1 10:15); class, exit, home and online base numbers no longer repeat each other; G1 number line labels are all times; S4 clock changed to 8:25 so the hands are far apart; recording notice said before recording starts; one term-wide rule for "ten past" and "quarter" words. Validator 0 FAIL, 242 answer checks.
+
+Still open, not mine (listed in `audit/FINAL_FIXES_T3.md`): the event-card mat and card gaps, time answer boxes, the half-page exit ticket, deck footers and small exit clocks, runner messages, the "papers to the camera" timing line in `b_guide.py`.

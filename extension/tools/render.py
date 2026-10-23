@@ -47,7 +47,7 @@ def badge(tier, n, theme):
     }[tier]
     fill = '#FFC93C' if theme == 'colour' else '#fff'
     return (f'<div class="badge"><svg viewBox="0 0 24 24"><g fill="{fill}" stroke="#{"1B2A49" if theme == "colour" else "000"}" stroke-width="1.5" stroke-linejoin="round">{shape}</g></svg>'
-            f'<span>{n}</span></div>')
+            f'<span style="{"font-size:8.5pt" if str(n) == "Try" else ""}">{n}</span></div>')
 
 
 def fig_html(spec, theme):

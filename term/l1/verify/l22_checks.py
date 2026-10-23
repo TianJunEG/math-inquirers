@@ -69,10 +69,11 @@ ORACLES = {
     'g1': lambda e: step_minutes((3, e['a']), (4, e['b'])),
     'r2': lambda e: e['a'] + (e['a'] + e['d']),
 }
-BASE_ENV = {'c2': {'n': 3}, 't3': {'a': 10, 'b': 55}, 'g1': {'a': 10, 'b': 5}}
+BASE_ENV = {'c2': {'n': 3}, 't3': {'a': 15, 'b': 50}, 'g1': {'a': 40, 'b': 15}}
 
 # every time shown or said in the warm-up, sneak-peek, Explore, mini-lesson, Talk and the optional slide
-CLASS_TIMES = {(9, 0), (2, 30), (3, 15), (11, 50), (4, 10), (7, 25), (9, 50), (1, 5), (6, 35), (10, 5), (8, 55), (2, 20), (5, 40), (5, 50), (4, 0), (7, 0)}
+CLASS_TIMES = {(9, 0), (2, 30), (3, 15), (11, 50), (4, 10), (7, 25), (9, 50), (1, 5), (6, 35), (10, 5), (8, 55), (2, 20), (5, 40), (5, 50), (4, 0), (7, 0),
+               (6, 10), (6, 50), (7, 20), (10, 40), (1, 15), (4, 45), (7, 5), (8, 5), (6, 45), (7, 15), (12, 45)}   # plus the event-card times and the spoken am/pm examples
 
 
 def run(d):
@@ -100,7 +101,8 @@ def run(d):
     # ---- Start here (digits to 5 minutes; no quarter words; am and pm without full stops)
     eq([fmt(*clk(v)) for v in T['S1']['visuals']], T['S1']['val'], 'S1')
     eq([clk(v)[1] % 5 for v in T['S1']['visuals']], [0, 0, 0], 'S1 five-minute times')
-    eq([clk(v)[1] for v in T['S1']['visuals']], [35, 5, 55], 'S1 minutes: the 7 is 35, the 1 is 5, the 11 is 55')
+    eq([clk(v)[1] for v in T['S1']['visuals']], [35, 5, 10], 'S1 minutes: the 7 is 35, the 1 is 5, the 2 is 10 (no :45, :50 or :55 trap at Start here)')
+    eq(all(clk(v)[1] <= 35 for v in T['S1']['visuals']), True, 'S1 short hand is clearly past a number (the hour trap is Think harder)')
     f2 = T['S2']['visual']
     eq(clk(f2)[1], sum(5 for _ in range(8)), 'S2 the long hand on the 8 is 40 minutes'); eq(T['S2']['val'], [40], 'S2 val')
     f3 = T['S3']['visual']
@@ -108,14 +110,15 @@ def run(d):
     opts4 = [tuple(int(x) for x in o.split(':')) for o in T['S4']['mcq']['options']]
     eq([i + 1 for i, t in enumerate(opts4) if t == clk(T['S4']['visual'])], [2], 'S4 one correct option'); eq(T['S4']['val'], [2], 'S4 val')
     eq(len(set(opts4)), 4, 'S4 options differ')
-    eq(opts4[0], (5, 5), 'S4 distractor: the 5 read as 5 minutes'); eq(opts4[3], (5, 52), 'S4 distractor: digits swapped')
+    eq(opts4[0], (8, 5), 'S4 distractor: the 5 read as 5 minutes'); eq(opts4[2], (9, 25), 'S4 distractor: the next hour'); eq(opts4[3], (8, 30), 'S4 distractor: half past')
+    eq(abs(hands(*(T['S4']['visual']['h'], T['S4']['visual']['m']))[0] - hands(T['S4']['visual']['h'], T['S4']['visual']['m'])[1]) > 60, True, 'S4 the two hands are well apart, so the short hand is easy to find')
     # S5: am or pm from the 24-hour time of the event
     day = {'wake up 6:30': 6.5, 'bed 8:30': 20.5}
     eq([ampm(int(day['wake up 6:30'])), ampm(int(day['bed 8:30']))], T['S5']['val'], 'S5')
     # S6: the earlier of two times in the same hour is the one with fewer minutes (checked by stepping the clock)
     names = {v['digital']: clk(v) for v in T['S6']['visuals']}
-    eq(names, {'Ben': (6, 50), 'Mei': (6, 15)}, 'S6 times')
-    eq(step_minutes(names['Mei'], names['Ben']), 35, 'S6 Ben leaves 35 minutes after Mei'); eq(T['S6']['val'], ['Mei'], 'S6 val')
+    eq(names, {'Ben': (6, 20), 'Mei': (6, 15)}, 'S6 times')
+    eq(step_minutes(names['Mei'], names['Ben']), 5, 'S6 Ben leaves 5 minutes after Mei'); eq(T['S6']['val'], ['Mei'], 'S6 val')
     eq(len(d['tiers']['start']), 6, 'six Start here questions'); eq(sum(q['mins'] for q in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes')
     allq = json_text(d['tiers']['start'] + d['exit'])
     eq(bool(re.search(r'quarter|ten past|twenty to|a\.m\.|p\.m\.', allq)), False, 'no quarter words, ten past or a.m. in Start here and the exit ticket')
@@ -142,19 +145,20 @@ def run(d):
     eq((ali, mei, 'Mei' if mei > ali else 'Ali', abs(mei - ali)), (45, 50, 'Mei', 5), 'G3'); eq(T['G3']['val'], ['Mei', 5], 'G3 val')
     eq(max(ali, mei) < 55, True, 'G3 neither duration passes 90 minutes')
     g1l = T['G1']['visual']
-    eq((g1l['labels'], g1l['marks']), ({'10': '3:10', '60': '4:00', '65': '4:05'}, [10, 60, 65]), 'G1 line: 10 minutes after 3:00 is 3:10, 60 is 4:00, 65 is 4:05')
+    eq(g1l['labels'], {str(k): f'{3 + k // 60}:{k % 60:02d}' for k in range(0, 61, 10)} | {'65': ''}, 'G1 line: every label is a time, 0 is 3:00, 10 is 3:10, 60 is 4:00, the 65 tick (4:05) is unlabelled')
+    eq((g1l['marks'], g1l['end']), ([10, 60, 65], 65), 'G1 line marks 3:10, 4:00, 4:05')
     eq((10 + 50, 60 + 5), (60, 65), 'G1 line jumps')
 
     # ---- Investigation
     eq(len([m for m in range(5, 61, 5)]), 12, 'I1 12 steps of 5 minutes make 60'); eq(sum(5 for _ in range(12)), 60, 'I1 12 fives'); eq(len([m for m in range(5, 16, 5)]), 3, 'I1 12 to 3 is 3 steps')
 
     # ---- exit ticket
-    eq(fmt(*clk(X['E1']['visual'])), X['E1']['val'][0], 'E1'); eq(ampm(20), X['E2']['val'][0], 'E2 8:30 at night is 20:30 so pm')
+    eq(fmt(*clk(X['E1']['visual'])), X['E1']['val'][0], 'E1'); eq(X['E1']['val'], ['10:15'], 'E1 val'); eq(ampm(13), X['E2']['val'][0], 'E2 1:20 in the afternoon is 13:20 so pm'); eq('1:20' in X['E2']['text'], True, 'E2 text')
     e3 = X['E3']['visual']; eq((e3['h'], e3['m'], e3['digital']), (9, 25, '9:25'), 'E3'); eq(hands(9, 25)[1] / 30, 5.0, 'E3 long hand on the 5'); eq(hands(9, 25)[0] > 270, True, 'E3 short hand a little past the 9')
 
     # ---- home practice
-    eq(sum(5 for _ in range(4)), H['H1']['val'], 'H1'); eq(fmt(*read(*hands(7, 25))), H['H2']['val'], 'H2')
-    eq('9:05', f'{9}:{5:02d}', 'H3'); eq(H['H3']['val'], '9:05', 'H3 val'); eq(ampm(12), H['H4']['val'], 'H4')
+    eq(sum(5 for _ in range(4)), H['H1']['val'], 'H1'); eq(fmt(*read(*hands(8, 35))), H['H2']['val'], 'H2 the long hand on the 7 is 35 minutes, the short hand has passed the 8')
+    eq('3:05', f'{3}:{5:02d}', 'H3'); eq(H['H3']['val'], '3:05', 'H3 val'); eq(ampm(12), H['H4']['val'], 'H4')
     eq([46 + 2, 46 + 4], H['H5']['val'], 'H5 rewind: 46 47 48 49 50'); eq(H['H5'].get('rewind_of'), 'Term 1 Lesson 2', 'H5 tag')
 
     # ---- sneak-peek
@@ -197,9 +201,15 @@ def run(d):
     eq((chunks((5, 50), (6, 0))), (10, 0), 'optional slide 5:50 to 6:00 is 10 minutes')
     eq((60 - 50, 60 - 40, 60 - 55), (10, 20, 5), 'remember pairs that make 60'); eq([sum(5 for _ in range(k)) for k in (12, 6)], [60, 30], 'remember claps')
     eq((read(*hands(1, 5)), read(*hands(6, 35)), read(*hands(8, 55)), read(*hands(2, 20)), read(*hands(5, 40))), ((1, 5), (6, 35), (8, 55), (2, 20), (5, 40)), 'mini times')
-    am = {'wake up', 'have breakfast', 'go to school', 'morning break'}; pm = {'come home', 'play ball', 'have a bath', 'go to bed'}
     ev = d['workbook']['kits'][0]['events']
-    eq(len(ev), 8, 'eight event cards'); eq({e[1] for e in ev}, am | pm, 'event card names'); eq(len(am), len(pm), 'four am and four pm')
+    # each event card carries a time; its am or pm comes from the 24-hour time of the event (a bath at 19:05 is pm, school at 7:20 is am)
+    day24 = {'wake up': (6, 10), 'breakfast': (6, 50), 'school': (7, 20), 'break': (10, 40), 'come home': (13, 15), 'play ball': (16, 45), 'night bath': (19, 5), 'go to bed': (20, 5)}
+    eq(len(ev), 8, 'eight event cards')
+    for (ic, lab) in ev:
+        name, tm = lab.rsplit(' ', 1)
+        hh, mm = (int(x) for x in tm.split(':'))
+        eq((hh, mm), (day24[name][0] % 12 or 12, day24[name][1]), 'card time ' + lab)
+    eq([ampm(day24[l.rsplit(' ', 1)[0]][0]) for _, l in ev], ['am'] * 4 + ['pm'] * 4, 'four am cards then four pm cards')
 
     # ---- kit contract
     kc = {r['piece']: r for r in d['materials']['kit_contract']}
@@ -207,7 +217,7 @@ def run(d):
 
     # ---- online practice static items
     items = {it['id']: it for it in d['online_practice']['items']}
-    eq((ampm(7), ampm(20)), ('am', 'pm'), 'c3 c4'); eq((items['c3']['answer'], items['c4']['answer']), ('am', 'pm'), 'c3 c4 answers')
+    eq((ampm(7), ampm(18)), ('am', 'pm'), 'c3 c4 (breakfast 7:30, tea 6:20 in the evening)'); eq((items['c3']['answer'], items['c4']['answer']), ('am', 'pm'), 'c3 c4 answers')
     eq(step_minutes((6, 15), (6, 40)), 25, 'c6 Mei (6:15) before Ben (6:40)'); eq(items['c6']['answer'], 'Mei', 'c6')
     eq(items['g2']['answer'], 5, 'g2 Mei reads 5 minutes longer'); eq(items['r1']['answer'], '9 - 5', 'r1 rewind'); eq(items['r2']['tier'], 'core', 'r2 rewind')
     b = d['beyond']

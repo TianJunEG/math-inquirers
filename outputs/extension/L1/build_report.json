@@ -82,7 +82,7 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8986064624098867,
+   "fill": 0.874822991761071,
    "over": false,
    "edition": "soft"
   },
@@ -145,8 +145,8 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Think harder",
    "exempt": false,
-   "fill": 1.0061791967044285,
-   "over": true,
+   "fill": 0.968106333676622,
+   "over": false,
    "edition": "soft"
   },
   {
@@ -307,7 +307,7 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9047856591143152,
+   "fill": 0.8810021884654995,
    "over": false,
    "edition": "print"
   },
@@ -370,8 +370,8 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Think harder",
    "exempt": false,
-   "fill": 1.012358393408857,
-   "over": true,
+   "fill": 0.9742855303810505,
+   "over": false,
    "edition": "print"
   },
   {
@@ -465,16 +465,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 1 (Cover): content overflows the page",
-  "soft page 16 (Unit 2 \u00b7 Think harder): content overflows the page",
-  "soft page 20 (Certificate): content overflows the page",
-  "soft page 21 (Answers): content overflows the page",
-  "print page 1 (Cover): content overflows the page",
-  "print page 16 (Unit 2 \u00b7 Think harder): content overflows the page",
-  "print page 20 (Certificate): content overflows the page",
-  "print page 21 (Answers): content overflows the page"
- ],
+ "problems": [],
  "soft_pages": 25,
  "print_pages": 26
 }

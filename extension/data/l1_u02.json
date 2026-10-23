@@ -6,9 +6,9 @@
  "title": "Make 10 and 20",
  "topic": "Number bonds",
  "holiday_lesson": 2,
- "goal": "I can find the missing partner of a number bond to 10 and to 20, and I can tell when two sides are equal.",
+ "goal": "I can find the missing partner in a bond to 10 and to 20. I can tell when the 2 sides are equal.",
  "learn": {
-  "intro": "A number bond is two numbers that make a whole. 6 and 4 make 10. So 6 + 4 = 10 and 10 = 6 + 4. Bonds to 10 help us find bonds to 20.",
+  "intro": "A number bond is 2 numbers that make a whole. 6 and 4 make 10. So 6 + 4 = 10 and 10 = 6 + 4. Bonds to 10 help us find bonds to 20.",
   "example": {
    "problem": "Aisha has 20 beads. 14 beads are blue and the rest are white. How many beads are white?",
    "figure": {
@@ -34,7 +34,7 @@
   "howto": {
    "title": "How to find the missing partner",
    "steps": [
-    "Find the whole (the biggest number).",
+    "Find the whole (the greatest number).",
     "Look at the ones digit of the part you know. What makes 10 with it?",
     "Add the partners. Do they make the whole?"
    ]
@@ -437,7 +437,7 @@
    "id": "L1U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Ravi puts 14 marbles into two bags. The first bag has fewer marbles than the second bag. Each bag has at least 1 marble. Write every way in the table.",
+   "text": "Ravi puts 14 marbles into 2 bags. The first bag has fewer marbles than the second bag. Each bag has at least 1 marble. Write every way in the table.",
    "parts": [
     {
      "label": "",
@@ -459,7 +459,7 @@
      "rows": 6
     }
    },
-   "hint": "Start with 1 marble in the first bag. Then 2. Keep going until the first bag is not fewer than the second.",
+   "hint": "Try 1 marble in the first bag, then 2. Stop when the first bag is not fewer.",
    "explanation": "The ways are 1 and 13, 2 and 12, 3 and 11, 4 and 10, 5 and 9, 6 and 8. 7 and 7 is not allowed because the first bag must have fewer."
   },
   {
@@ -489,7 +489,7 @@
      }
     }
    ],
-   "hint": "Take 5 away from 17 first. Then share what is left between the two stars.",
+   "hint": "Take 5 away from 17 first. Then share what is left between the 2 stars.",
    "explanation": "(a) 17 - 5 = 12, and 6 + 6 = 12, so ★ = 6. (b) Three equal numbers make 21: 7 + 7 + 7 = 21, so ● = 7."
   },
   {
@@ -503,7 +503,8 @@
      "1,3,5",
      "2,3,4"
     ],
-    "text": "1 + 2 + 6, 1 + 3 + 5 and 2 + 3 + 4"
+    "text": "1 + 2 + 6, 1 + 3 + 5 and 2 + 3 + 4",
+    "list": true
    },
    "space": {
     "rows": [
@@ -512,14 +513,14 @@
      "{b} + {b} + {b} = 9"
     ]
    },
-   "hint": "Write the numbers from smallest to biggest. Start with 1 as the smallest number.",
+   "hint": "Write the numbers from smallest to greatest. Start with 1 as the smallest number.",
    "explanation": "With 1 as the smallest: 1 + 2 + 6 and 1 + 3 + 5. With 2 as the smallest: 2 + 3 + 4. The smallest number cannot be 3 or more, because 3 + 4 + 5 = 12."
   },
   {
    "id": "L1U02-G01",
    "tier": "go",
    "page": 5,
-   "text": "Ali has 16 stickers. Mei has 8 stickers. Ali gives some stickers to Mei. Then they have the same number.",
+   "text": "Ali has 16 stickers. Mei has 8 stickers. Ali gives some of his stickers to Mei. Now each child has an equal number of stickers.",
    "parts": [
     {
      "label": "a",
@@ -542,14 +543,14 @@
      }
     }
    ],
-   "hint": "Put all the stickers together. Share them equally between two children.",
+   "hint": "Put all the stickers together. Share them equally between the 2 children.",
    "explanation": "16 + 8 = 24 stickers. Shared equally, each child has 12. Ali goes from 16 to 12, so he gives 4."
   },
   {
    "id": "L1U02-G02",
    "tier": "go",
    "page": 5,
-   "text": "Mei puts 17 sweets in two jars. Jar A has 5 more sweets than Jar B.",
+   "text": "Mei puts 17 sweets in 2 jars. Jar A has 5 more sweets than Jar B.",
    "parts": [
     {
      "label": "a",
@@ -572,21 +573,22 @@
      }
     }
    ],
-   "hint": "Take away the 5 extra sweets. Share what is left between the two jars.",
+   "hint": "Take away the 5 extra sweets. Share what is left between the 2 jars.",
    "explanation": "17 - 5 = 12. Shared equally, each jar gets 6. Jar A also has the 5 extra: 6 + 5 = 11. Check: 11 + 6 = 17."
   },
   {
    "id": "L1U02-G03",
    "tier": "go",
    "page": 5,
-   "text": "I am a number. Add 7 to me. The answer ends in 0 and is between 15 and 45. What can I be? Find them all.",
+   "text": "I am a number. When I add 7, the answer ends in 0 and is between 15 and 45. What can I be? Find them all.",
    "answer": {
     "value": [
      "13",
      "23",
      "33"
     ],
-    "text": "13, 23 and 33"
+    "text": "13, 23 and 33",
+    "list": true
    },
    "space": {
     "rows": [
@@ -601,11 +603,11 @@
    "id": "L1U02-G04",
    "tier": "go",
    "page": 5,
-   "text": "Pick two different numbers from 1, 2, 3, 4, 5 and add them.",
+   "text": "Pick 2 different numbers from 1, 2, 3, 4, 5 and add them.",
    "parts": [
     {
      "label": "a",
-     "text": "Write every total you can make, from smallest to biggest. {l}",
+     "text": "Write every total you can make. Begin with the smallest. {l}",
      "answer": {
       "value": [
        "3",
@@ -616,7 +618,8 @@
        "8",
        "9"
       ],
-      "text": "3, 4, 5, 6, 7, 8, 9"
+      "text": "3, 4, 5, 6, 7, 8, 9",
+      "list": true
      }
     },
     {
@@ -629,7 +632,8 @@
        "8",
        "9"
       ],
-      "text": "3, 4, 8 and 9"
+      "text": "3, 4, 8 and 9",
+      "list": true
      }
     }
    ],

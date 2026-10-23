@@ -2545,14 +2545,14 @@
      "h": 6,
      "m": 0,
      "digital": "[]",
-     "size": 54
+     "size": 50
     },
     {
      "type": "clock",
      "h": 6,
      "m": 30,
      "digital": "[]",
-     "size": 54
+     "size": 50
     }
    ]
   },
@@ -2582,7 +2582,7 @@
     "m": 30,
     "hide_hands": true,
     "digital": "5:30",
-    "size": 48
+    "size": 46
    }
   },
   {
@@ -3377,7 +3377,7 @@
    "quarter past, quarter to: 15 minutes past, 15 minutes before the next hour"
   ],
   "try_home": [
-   "Set the clock: put the clock hands on your child's cut-out face. Call a time such as 4 o'clock or half past 6 and let your child set it. Swap roles and make a mistake on purpose for them to find.",
+   "Set the clock: call a time such as 4 o'clock or half past 6 and let your child set the cut-out clock. Swap roles and make a mistake on purpose for them to find.",
    "Real clock: when you pass a clock, ask: which hand names the hour? Where is the long hand? What time is it?",
    "Count in 5s: point the long hand at each number and count 5, 10, 15 together. How many minutes is it at the 6?"
   ],
@@ -3387,7 +3387,7 @@
    "How do you know?"
   ],
   "when_stuck": "Let your child move the hands and watch, and wait 10 seconds before helping. Please do not teach a rule such as clockwise or hurry them: the clock hands are the teacher. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson, Term 3 Lesson 2: Five Minutes at a Time. Online practice: your tutor shares the link, which is private to your group's families: please do not share it. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off.",
+  "next": "Next lesson, Term 3 Lesson 2: Five Minutes at a Time. Online practice: your tutor shares the link (please do not share it). The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off.",
   "quote": "The short hand names the hour. The long hand counts the minutes.",
   "report_line": "Your child is learning to read a clock to the half hour and to count minutes in 5s. This week: o'clock and half past.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
@@ -3419,7 +3419,7 @@
   "header": "Reading a scale: the clock",
   "hint_p1": "Use your clock. Say the time out loud, then write it with digits.",
   "hint_p2": "Look at both hands. Read the time on every clock before you compare.",
-  "hint_p3": "Count in 5s from the 12. Quarter past means 15 minutes past. Use your clock or draw.",
+  "hint_p3": "Count in 5s from the 12. Quarter past means 15 minutes past.",
   "hint_p4": "A mirror swaps left and right. Use your two clock faces. Choose any question.",
   "choice_after": 3,
   "inv_intro": "",
