@@ -14,7 +14,10 @@ def _py(expr):
 
 
 def ev(expr, env):
-    v = eval(_py(expr), {'__builtins__': {}}, dict(env, abs=abs, max=max, min=min, round=round, len=len, sum=sum, int=int))
+    try:
+        v = eval(_py(expr), {'__builtins__': {}}, dict(env, abs=abs, max=max, min=min, round=round, len=len, sum=sum, int=int))
+    except (NameError, SyntaxError):
+        return expr.strip()          # a word such as "hi" or "A" is text, not a variable
     if isinstance(v, float) and v == int(v):
         v = int(v)
     return v

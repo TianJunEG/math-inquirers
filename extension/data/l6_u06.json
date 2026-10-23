@@ -1,0 +1,1078 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 6,
+ "id": "L6U06",
+ "title": "Fair or unfair?",
+ "topic": "Probability",
+ "holiday_lesson": 6,
+ "goal": "I can write a probability as a fraction, decide whether a game is fair, and say what to expect from many tries.",
+ "learn": {
+  "intro": "A probability is the number of ways you want, out of all the equally likely outcomes. A game is fair when every player has the same probability of winning. In many tries we expect about probability × tries, but a real run varies.",
+  "example": {
+   "problem": "A bag has 12 counters: 5 red (R), 4 blue (B) and 3 green (G). One is picked without looking. What is the probability of blue? About how many blues in 600 picks, if the counter goes back each time?",
+   "figure": {
+    "type": "l6_bag",
+    "counters": [
+     "R",
+     "R",
+     "R",
+     "R",
+     "R",
+     "B",
+     "B",
+     "B",
+     "B",
+     "G",
+     "G",
+     "G"
+    ],
+    "cols": 6
+   },
+   "steps": [
+    "All 12 counters are equally likely to be picked.",
+    "4 of the 12 are blue, so P(blue) = 4/12 = 1/3.",
+    "In 600 picks we expect 1/3 × 600 = 200 blues.",
+    "A real run gives a number near 200, not exactly 200. Each pick is random."
+   ],
+   "answer": "P(blue) = 1/3. About 200 blues in 600 picks."
+  },
+  "howto": {
+   "title": "How to find a probability",
+   "steps": [
+    "Count all the equally likely outcomes.",
+    "Count the outcomes you want.",
+    "Write wanted/all as a fraction and simplify it.",
+    "Expected number = probability × number of tries. A real run is close, not exact."
+   ]
+  },
+  "try": {
+   "id": "L6U06-L01",
+   "tier": "start",
+   "text": "A bag has 6 yellow and 9 blue counters. One is picked without looking.\nP(yellow) = {b}/{b} in simplest form.",
+   "answer": {
+    "value": [
+     "2",
+     "5"
+    ],
+    "text": "2/5"
+   },
+   "explanation": "15 counters in all and 6 are yellow: 6/15. Divide the top and bottom by 3: 2/5."
+  }
+ },
+ "items": [
+  {
+   "id": "L6U06-S01",
+   "tier": "start",
+   "text": "The spinner has 10 equal parts. R is red, B is blue and G is green. Give fractions in simplest form.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "P(green) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "5"
+      ],
+      "text": "1/5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(not red) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "2"
+      ],
+      "text": "1/2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "In 500 spins, about {b} are blue.",
+     "answer": {
+      "value": [
+       "150"
+      ],
+      "text": "150"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_spinner",
+    "parts": [
+     "R",
+     "B",
+     "R",
+     "G",
+     "B",
+     "R",
+     "B",
+     "G",
+     "R",
+     "R"
+    ],
+    "r": 19
+   },
+   "explanation": "There are 10 equally likely parts. Green: 2 parts, so 2/10 = 1/5. Not red: 3 blue + 2 green = 5 parts, so 5/10 = 1/2. Blue is 3/10, and 3/10 × 500 = 150.",
+   "figside": true
+  },
+  {
+   "id": "L6U06-S03",
+   "tier": "start",
+   "text": "A coin is flipped and a spinner with 3 equal parts A, B and C is spun. A result looks like HB. Use the table to list the results. Give fractions in simplest form.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} different results.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(heads and A) = 1/{b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "P(tails and not A) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "3"
+      ],
+      "text": "1/3"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "",
+      "A",
+      "B",
+      "C"
+     ],
+     [
+      "H",
+      "",
+      "",
+      ""
+     ],
+     [
+      "T",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cw": [
+     14,
+     20,
+     20,
+     20
+    ],
+    "rowhead": true,
+    "ch": 9
+   },
+   "explanation": "The coin has 2 results and the spinner has 3, so 2 × 3 = 6 equally likely results, one for each cell. HA is 1 of the 6, so 1/6. Tails with B or C: TB and TC, so 2/6 = 1/3.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U06-S07",
+   "tier": "start",
+   "text": "This code rolls a dice 100 times and counts the sixes. Predict what happens.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The chance of a 6 on one roll is {b}/{b}.",
+     "answer": {
+      "value": [
+       "1",
+       "6"
+      ],
+      "text": "1/6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The code says about {b}.",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "c",
+     "text": "5 runs give 14, 19, 17, 21, 15. Why?   {circ:random rolls|broken code}",
+     "answer": {
+      "value": [
+       "random rolls"
+      ],
+      "text": "random rolls"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set hits to (0)"
+     ],
+     [
+      "ctl",
+      "repeat (100)",
+      [
+       [
+        "ctl",
+        "if <(pick random 1 to 6) = (6)> then",
+        [
+         [
+          "var",
+          "change hits by (1)"
+         ]
+        ]
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (hits)"
+     ]
+    ]
+   },
+   "explanation": "One roll is 6 with probability 1/6. In 100 rolls we expect 1/6 × 100 = 16.7, so about 17. The answers differ because every roll is random, so each run gives a slightly different count.",
+   "figside": true
+  },
+  {
+   "id": "L6U06-S02",
+   "tier": "start",
+   "text": "One counter is picked from the bag. R is red, B is blue and G is green. Give fractions in simplest form.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "P(blue) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "3"
+      ],
+      "text": "1/3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(red or green) = {b}/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "3"
+      ],
+      "text": "2/3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "5 more red counters are put in. Now P(red) = {b}/{b}.",
+     "answer": {
+      "value": [
+       "9",
+       "20"
+      ],
+      "text": "9/20"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_bag",
+    "counters": [
+     "R",
+     "R",
+     "R",
+     "R",
+     "B",
+     "B",
+     "B",
+     "B",
+     "B",
+     "G",
+     "G",
+     "G",
+     "G",
+     "G",
+     "G"
+    ],
+    "cols": 5
+   },
+   "explanation": "The bag has 4 + 5 + 6 = 15 counters. Blue: 5/15 = 1/3. Red or green: 4 + 6 = 10, so 10/15 = 2/3. With 5 more red counters there are 9 red out of 20: 9/20.",
+   "figside": true
+  },
+  {
+   "id": "L6U06-S05",
+   "tier": "start",
+   "text": "Ali and Ben spin this spinner with the numbers 1 to 10. Ali wins on a prime number. Ben wins on any other number.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "P(Ali wins) = {b}/10",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(Ben wins) = {b}/10",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Is the game fair?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_spinner",
+    "parts": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "r": 19
+   },
+   "explanation": "The primes from 1 to 10 are 2, 3, 5 and 7, so Ali wins on 4 of the 10 numbers. Ben wins on the other 6 (1, 4, 6, 8, 9, 10). 4 is not equal to 6, so the game is not fair: Ben is more likely to win.",
+   "figside": true
+  },
+  {
+   "id": "L6U06-S06",
+   "tier": "start",
+   "text": "A dice is rolled 300 times and a coin is flipped 90 times. Give the number you expect.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "About {b} fives.",
+     "answer": {
+      "value": [
+       "50"
+      ],
+      "text": "50"
+     }
+    },
+    {
+     "label": "b",
+     "text": "About {b} numbers greater than 4.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "c",
+     "text": "About {b} heads in 90 flips.",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    },
+    {
+     "label": "d",
+     "text": "A run gives 54 fives. Is that surprising?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "(a) 1/6 × 300 = 50. (b) 5 or 6 is 2 out of 6, so 1/3 × 300 = 100. (c) 1/2 × 90 = 45. (d) 54 is close to 50, so it is not surprising. A random run is rarely exactly the expected number.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U06-S09",
+   "tier": "start",
+   "text": "Bag A has 3 red and 5 blue counters. Bag B has 4 red and 7 blue counters. You want to pick a red counter.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "In Bag A, P(red) = {b}/{b}.",
+     "answer": {
+      "value": [
+       "3",
+       "8"
+      ],
+      "text": "3/8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In Bag B, P(red) = {b}/{b}.",
+     "answer": {
+      "value": [
+       "4",
+       "11"
+      ],
+      "text": "4/11"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which bag gives the better chance of red?   {circ:Bag A|Bag B}",
+     "answer": {
+      "value": [
+       "Bag A"
+      ],
+      "text": "Bag A"
+     }
+    }
+   ],
+   "explanation": "Bag A: 3 red out of 8, so 3/8. Bag B: 4 red out of 11, so 4/11. Compare with a common bottom number, 88: 3/8 = 33/88 and 4/11 = 32/88. 33 is greater than 32, so Bag A gives the better chance."
+  },
+  {
+   "id": "L6U06-S04",
+   "tier": "start",
+   "text": "Two dice, red and blue, are rolled and added. The table shows all 36 equally likely totals. Give fractions in simplest form.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} of the 36 totals are 4.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} of the 36 totals are less than 5.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "P(total is 4) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "12"
+      ],
+      "text": "1/12"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "+",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ]
+    ],
+    "cw": [
+     12,
+     12,
+     12,
+     12,
+     12,
+     12,
+     12
+    ],
+    "rowhead": true,
+    "ch": 7.5
+   },
+   "explanation": "Count in the table. Total 4 is 1+3, 2+2 and 3+1: 3 totals. Totals less than 5 are 2, 3 and 4: 1 + 2 + 3 = 6 totals. 3 out of 36 is 1/12.",
+   "figside": true
+  },
+  {
+   "id": "L6U06-S08",
+   "tier": "start",
+   "text": "Cards are numbered 1 to 30. One card is drawn without looking. Give fractions in simplest form.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "P(multiple of 7) = {b}/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "15"
+      ],
+      "text": "2/15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(prime) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "3"
+      ],
+      "text": "1/3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "P(square number) = {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "6"
+      ],
+      "text": "1/6"
+     }
+    }
+   ],
+   "explanation": "There are 30 equally likely numbers. Multiples of 7: 7, 14, 21, 28 is 4, so 4/30 = 2/15. Primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 is 10, so 10/30 = 1/3. Squares: 1, 4, 9, 16, 25 is 5, so 5/30 = 1/6."
+  },
+  {
+   "id": "L6U06-S10",
+   "tier": "start",
+   "text": "Ravi flips a fair coin 200 times and gets 112 heads.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "About {b} heads are expected.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The difference from the expected number is {b}.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Could the coin still be fair?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    }
+   ],
+   "explanation": "(a) 1/2 × 200 = 100. (b) 112 − 100 = 12. (c) A random run is not exactly 100 each time. 112 is not far from 100, so the coin could still be fair."
+  },
+  {
+   "id": "L6U06-S11",
+   "tier": "start",
+   "text": "Two dice are rolled and added. The totals 2 to 12 are not equally likely.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The most likely total is {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(total is 6 or 8) = {b}/36",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "P(total is 2 or 12) = {b}/36",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "explanation": "The totals 2 to 12 are not equally likely. 7 happens 6 ways, which is the most. 6 happens 5 ways and 8 happens 5 ways: 10/36. 2 (1+1) and 12 (6+6) happen 1 way each: 2/36."
+  },
+  {
+   "id": "L6U06-T01",
+   "tier": "think",
+   "text": "Two dice are rolled and added. In Game 1, Ali wins on an even total and Ben wins on an odd total.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Game 1: Ali wins on {b} of the 36 totals.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is Game 1 fair?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Game 2: Ali wins on a total of 7. Ben wins on every other total and scores 1 point for a win. For a fair game Ali must score {b} points for a win.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "hint": "Fair means the winning points are equal over many games.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "An even total needs both dice odd (3 × 3 = 9 ways) or both dice even (3 × 3 = 9 ways): 18 of the 36. So 18/36 each: fair. Game 2: Ali wins on 7, which is 6/36, and Ben on the other 30/36. If Ali scores 5 points a win and Ben scores 1, then 6 × 5 = 30 and 30 × 1 = 30: fair."
+  },
+  {
+   "id": "L6U06-T02",
+   "tier": "think",
+   "text": "A bag has 3 red counters (R1, R2, R3) and 2 blue counters (B1, B2). Two counters are taken out one after another. The first is not put back. Give fractions in simplest form.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} equally likely ordered pairs.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} of them are both red.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "P(both red) = {b}/{b}",
+     "answer": {
+      "value": [
+       "3",
+       "10"
+      ],
+      "text": "3/10"
+     }
+    }
+   ],
+   "hint": "List the pairs: R1R2, R1R3, R1B1, ... Is R2R1 different?",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "The first counter has 5 choices and the second has 4: 5 × 4 = 20 equally likely ordered pairs. Both red: 3 choices, then 2: 6 pairs. 6/20 = 3/10.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U06-T03",
+   "tier": "think",
+   "text": "A program rolls a dice 600 times and counts the 3s. Five runs give 93, 108, 97, 114 and 102.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The expected number of 3s is {b}.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The mean of the 5 runs is {b}.",
+     "answer": {
+      "value": [
+       "102.8"
+      ],
+      "text": "102.8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Does the dice look fair?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    }
+   ],
+   "hint": "Add the 5 numbers, then divide by 5.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) 1/6 × 600 = 100. (b) 93 + 108 + 97 + 114 + 102 = 514, and 514 ÷ 5 = 102.8. (c) Every run is near 100 and the mean is very close to 100, so the dice looks fair.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U06-G01",
+   "tier": "go",
+   "text": "Beyond Level 6: Probability of at least one.\nA coin is flipped 4 times.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} equally likely outcomes.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(exactly 2 heads) = {b}/16",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "P(at least one tail) = {b}/16",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "hint": "Which single outcome has no tails? Take it from all 16.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Each flip has 2 results, so 2 × 2 × 2 × 2 = 16 equally likely outcomes. Exactly 2 heads: HHTT, HTHT, HTTH, THHT, THTH, TTHH is 6, so 6/16. At least one tail is every outcome except HHHH: 15/16.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U06-G02",
+   "tier": "go",
+   "text": "This code rolls 2 dice 600 times. Predict what it says.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "For a given a, b matches it in {b} out of 6 ways.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It says about {b}.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Change a = b to a + b = 4. It says about {b}.",
+     "answer": {
+      "value": [
+       "50"
+      ],
+      "text": "50"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set doubles to (0)"
+     ],
+     [
+      "ctl",
+      "repeat (600)",
+      [
+       [
+        "var",
+        "set a to (pick random 1 to 6)"
+       ],
+       [
+        "var",
+        "set b to (pick random 1 to 6)"
+       ],
+       [
+        "ctl",
+        "if <(a) = (b)> then",
+        [
+         [
+          "var",
+          "change doubles by (1)"
+         ]
+        ]
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (doubles)"
+     ]
+    ]
+   },
+   "hint": "List the pairs (a, b) that add to 4.",
+   "explanation": "For any a, only 1 of the 6 values of b matches it: 1 out of 6. So we expect 1/6 × 600 = 100 doubles. The pairs that add to 4 are 1+3, 2+2 and 3+1: 3 of 36, which is 1/12. 1/12 × 600 = 50.",
+   "figside": true
+  },
+  {
+   "id": "L6U06-G03",
+   "tier": "go",
+   "text": "Beyond Level 6: Expected winnings.\nA game costs 2 dollars to play. You roll a dice and win a prize if you roll a 6. You play 600 times.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "You win about {b} times.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "b",
+     "text": "You pay {b} dollars. With a 5-dollar prize you win about {b} dollars.",
+     "answer": {
+      "value": [
+       "1200",
+       "500"
+      ],
+      "text": "1200, 500"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The game is fair when the prize for a 6 is {b} dollars.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "hint": "Fair means the money won equals the money paid.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "A 6 comes up about 1/6 × 600 = 100 times. You pay 600 × 2 = 1200 dollars. If the prize is 5 dollars you win about 100 × 5 = 500 dollars, so you lose money. The game is fair when the winnings equal what you paid: 100 × prize = 1200, so the prize is 12 dollars."
+  },
+  {
+   "id": "L6U06-C01",
+   "tier": "quiz",
+   "text": "A bag has 7 red and 3 blue counters. P(blue) = {b}/{b}.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "3",
+     "10"
+    ],
+    "text": "3/10"
+   },
+   "explanation": "10 counters in all and 3 are blue: 3/10. It cannot be simplified."
+  },
+  {
+   "id": "L6U06-C02",
+   "tier": "quiz",
+   "text": "A dice is rolled 240 times. About {b} of the rolls are even numbers.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "120"
+    ],
+    "text": "120"
+   },
+   "explanation": "Even numbers are 2, 4 and 6, so the probability is 3/6 = 1/2. 1/2 × 240 = 120."
+  },
+  {
+   "id": "L6U06-C03",
+   "tier": "quiz",
+   "text": "Two coins are flipped. P(2 tails) = {b}/{b}.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "1",
+     "4"
+    ],
+    "text": "1/4"
+   },
+   "explanation": "The outcomes are HH, HT, TH and TT, which are equally likely. Only TT has 2 tails: 1/4."
+  },
+  {
+   "id": "L6U06-C04",
+   "tier": "quiz",
+   "text": "A spinner has 8 equal parts and 2 are green. In 400 spins about {b} are green.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "100"
+    ],
+    "text": "100"
+   },
+   "explanation": "P(green) = 2/8 = 1/4. 1/4 × 400 = 100."
+  }
+ ]
+}
