@@ -33,6 +33,9 @@ class Unit:
 
     def add(self, letter, page, text, ans=None, why='', parts=None, **kw):
         self.cnt[letter] += 1
+        if letter == 'S':
+            assert page >= getattr(self, 'lastpg', 1), 'Start here items must be written in page order (answers are numbered in list order)'
+            self.lastpg = page
         tier = {'S': 'start', 'T': 'think', 'G': 'go', 'C': 'quiz'}[letter]
         it = {'id': f'L3U{self.n:02d}-{letter}{self.cnt[letter]:02d}', 'tier': tier}
         if letter != 'C':

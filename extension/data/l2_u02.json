@@ -8,7 +8,7 @@
  "holiday_lesson": 2,
  "goal": "I can find missing digits in 3-digit sums. I can balance number sentences and solve magic squares and triangles.",
  "learn": {
-  "intro": "A missing digit is a mystery to solve. Start at the ones column and ask: was a ten carried? The = sign means \"is the same as\".",
+  "intro": "A missing digit is a mystery to solve. Start at the ones column and ask: did I carry? The = sign means \"is the same as\".",
   "example": {
    "problem": "Find the missing digits in this sum.",
    "figure": {
@@ -34,7 +34,7 @@
    "title": "How to find a missing digit",
    "steps": [
     "Start at the ones column.",
-    "Ask: was a ten carried?",
+    "Ask: did I carry?",
     "Move left, one column at a time.",
     "Check by adding the whole numbers."
    ]
@@ -142,7 +142,7 @@
    "id": "L2U02-S02",
    "tier": "start",
    "page": 1,
-   "text": "Find the missing digits in these subtractions. Try a digit and check it. Check: answer + the number taken away = the start number.",
+   "text": "Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away.",
    "figure": {
     "type": "l2_vsum",
     "sums": [
@@ -199,7 +199,7 @@
    "id": "L2U02-S03",
    "tier": "start",
    "page": 1,
-   "text": "The = sign means \"is the same as\". Fill in the boxes.",
+   "text": "Both sides must have the same value. Fill in the boxes.",
    "parts": [
     {
      "label": "a",
@@ -849,7 +849,7 @@
    "id": "L2U02-G02",
    "tier": "go",
    "page": 5,
-   "text": "Swap the hundreds digit and the ones digit of a number. Then subtract the smaller number from the greater.",
+   "text": "Reverse a 3-digit number by swapping its first digit and last digit. Then take the smaller number from the greater.",
    "parts": [
     {
      "label": "a",
@@ -893,14 +893,14 @@
     }
    ],
    "explanation": "(a) 742 - 247 = 495. (b) 831 - 138 = 693. (c) Both answers have 9 in the middle. (d) The answer to a reverse-and-subtract is always a multiple of 99. 954 - 459 = 495. The hundreds digits 9 and 4 differ by 5, and 5 x 99 = 495.",
-   "hint": "Look at the middle digit and the digit sum of each answer.",
+   "hint": "Look at the middle digit. Add the digits of each answer.",
    "beyond": "Patterns in subtraction"
   },
   {
    "id": "L2U02-G03",
    "tier": "go",
    "page": 5,
-   "text": "Make your own missing-digit sum. Write 2 missing digits in an addition of two 3-digit numbers, so that only ONE pair of digits works. Many answers are right.",
+   "text": "Make your own missing-digit sum. Add two 3-digit numbers and hide 2 digits. Only ONE pair of digits may work. Many answers are right.",
    "answer": {
     "value": [
      "open"
@@ -949,7 +949,7 @@
   {
    "id": "L2U02-C01",
    "tier": "quiz",
-   "text": "Find the missing digits. Write them in the boxes.",
+   "text": "Write the 2 missing digits.",
    "figure": {
     "type": "l2_vsum",
     "op": "+",

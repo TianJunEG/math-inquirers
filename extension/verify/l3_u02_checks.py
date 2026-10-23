@@ -71,7 +71,7 @@ def magic_ok(g):
     return all(sum(l) == tot for l in lines)
 
 
-@check('L3U02-S06')
+@check('L3U02-S07')
 def _():
     sols = []
     for A in range(0, 1200, 10):
@@ -91,7 +91,7 @@ def pyramid_ok(bottom_to_top):
     return True
 
 
-@check('L3U02-S07')
+@check('L3U02-S08')
 def _():
     sols = []
     for P_ in range(0, 1600):
@@ -103,14 +103,14 @@ def _():
     return {'a': s([P_]), 'b': s([Q])}
 
 
-@check('L3U02-S08')
+@check('L3U02-S09')
 def _():
     sols = [(a, b) for a in range(10) for b in range(10) if num(3, a, 5, 2) + num(2, 4, b, 6) == 6148]
     a, b = only(sols)
     return {'a': s([a]), 'b': s([b])}
 
 
-@check('L3U02-S09')
+@check('L3U02-S11')
 def _():
     sols = [(a, b) for a in range(10) for b in range(10) if num(6, a, 0, 2) - num(2, 8, b, 5) == 3657]
     a, b = only(sols)
@@ -124,7 +124,7 @@ def _():
     return {'a': s([a]), 'b': s([c])}
 
 
-@check('L3U02-S11')
+@check('L3U02-S06')
 def _():
     x = 2641
     partner = int(''.join(str(9 - int(ch)) for ch in str(x)))

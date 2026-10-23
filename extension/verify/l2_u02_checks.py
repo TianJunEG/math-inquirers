@@ -99,11 +99,11 @@ def _():
 
 @check('S08')
 def _():
-    opts = {'(1)': lambda x: 345 + x == 128, '(2)': lambda x: 345 - x == 128, '(3)': lambda x: x - 345 == 128, '(4)': lambda x: 128 - x == 345}
-    # the story: start 345, some taken away, 128 left -> the unknown (taken away) is positive and 345 - x = 128 describes it
-    valid = [k for k, f in opts.items() if any(f(x) for x in range(1, 345)) and k == '(2)']
-    assert valid == ['(2)']
-    return {'a': valid, 'b': s([x for x in range(0, 345) if 345 - x == 128])}
+    taken = [x for x in range(0, 345) if 345 - x == 128][0]     # the story: 345 start, some taken away, 128 left
+    opts = {'(1)': 345 + taken == 128, '(2)': 345 - taken == 128, '(3)': taken - 345 == 128, '(4)': 128 - taken == 345}
+    good = [k for k, v in opts.items() if v]
+    assert len(good) == 1
+    return {'a': good, 'b': s([taken])}
 
 
 @check('S09')

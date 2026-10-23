@@ -3,7 +3,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import *
 
 learn = {
- 'intro': 'A missing digit is a mystery to solve. Start at the ones column and ask: was a ten carried? The = sign means "is the same as".',
+ 'intro': 'A missing digit is a mystery to solve. Start at the ones column and ask: did I carry? The = sign means "is the same as".',
  'example': {
   'problem': 'Find the missing digits in this sum.',
   'figure': {'type': 'l2_vsum', 'op': '+', 'rows': ['3?5', '24?', '617'], 'width_mm': 56}, 'side': True,
@@ -12,7 +12,7 @@ learn = {
             'Hundreds: 3 + 2 + 1 carried = 6. It matches.',
             'Check: 375 + 242 = 617.'],
   'answer': 'The missing digits are 7 and 2.'},
- 'howto': {'title': 'How to find a missing digit', 'steps': ['Start at the ones column.', 'Ask: was a ten carried?', 'Move left, one column at a time.', 'Check by adding the whole numbers.']},
+ 'howto': {'title': 'How to find a missing digit', 'steps': ['Start at the ones column.', 'Ask: did I carry?', 'Move left, one column at a time.', 'Check by adding the whole numbers.']},
  'facts': {'title': 'Balance', 'lines': ['= means "is the same as".', '260 + 150 = 410, so 300 + [ ] must be 410.', 'The box is 110.']},
  'try': {'text': 'Find the missing digit.   5?4 + 337 = 891   The digit is {b}', 'answer': A('5'), 'explanation': 'Ones: 4 + 7 = 11, write 1 and carry 1. Tens: 5 + 3 + 1 = 9, so the missing digit is 5. Check: 554 + 337 = 891.'}}
 
@@ -29,11 +29,11 @@ items = [
           P('b', 'Sum (b): write the missing digits, top number first.', ['4', '4'], '4 and 4', lst=True),
           P('c', 'Sum (c): write the missing digits, top number first.', ['4', '3'], '4 and 3', lst=True)],
    why='(a) Ones: 4 + 9 = 13, carry 1. Tens: 4 + 5 + 1 = 10, carry 1. Hundreds: 2 + 3 + 1 = 6. So 244 + 359 = 603. (b) Ones: 8 + 6 = 14, carry 1. Tens: 4 + 2 + 1 = 7. Hundreds: 4 + 4 = 8. So 448 + 426 = 874. (c) Ones: 5 + 8 = 13, carry 1. Tens: 6 + 3 + 1 = 10, carry 1. Hundreds: 4 + 2 + 1 = 7. So 465 + 238 = 703.'),
- I('start', 1, 'Find the missing digits in these subtractions. Try a digit and check it. Check: answer + the number taken away = the start number.',
+ I('start', 1, 'Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away.',
    figure={'type': 'l2_vsum', 'sums': [vs('-', ['8?5', '26?', '568'], '(a)'), vs('-', ['5?2', '?47', '265'], '(b)')], 'width_mm': 110},
    parts=[P('a', 'Sum (a): write the missing digits, top number first.', ['3', '7'], '3 and 7', lst=True), P('b', 'Sum (b): write the missing digits, top number first.', ['1', '2'], '1 and 2', lst=True)],
    why='Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265.'),
- I('start', 1, 'The = sign means "is the same as". Fill in the boxes.', partsrow=True, parts=[
+ I('start', 1, 'Both sides must have the same value. Fill in the boxes.', partsrow=True, parts=[
    P('a', '270 + 140 = 300 + {b}', '110'), P('b', '840 - 300 = {b} - 200', '740'), P('c', '360 + {b} = 400 + 150', '190'),
    P('d', '199 + 250 = 200 + 249   {circ:True|False}', 'True')],
    why='(a) 270 + 140 = 410, and 410 - 300 = 110. (b) 840 - 300 = 540, and 540 + 200 = 740. (c) 400 + 150 = 550, and 550 - 360 = 190. (d) 199 is 1 less than 200 and 250 is 1 more than 249, so both sides are 449.'),
@@ -84,11 +84,11 @@ items = [
    P('a', 'Ali has {b}', '190'), P('b', 'Mei has {b}', '350'), P('c', 'Ravi has {b}', '260')],
    space={'rows': ['Working:']}, hint='Add the 3 totals, then halve. That is all 3 children together.',
    why='Add the 3 totals: 540 + 610 + 450 = 1600. Each child is counted twice, so all 3 together have 800. Ravi = 800 - 540 = 260. Ali = 800 - 610 = 190. Mei = 800 - 450 = 350. Check: 190 + 350 = 540, 350 + 260 = 610, 190 + 260 = 450.'),
- I('go', 5, 'Swap the hundreds digit and the ones digit of a number. Then subtract the smaller number from the greater.', beyond='Patterns in subtraction', parts=[
+ I('go', 5, 'Reverse a 3-digit number by swapping its first digit and last digit. Then take the smaller number from the greater.', beyond='Patterns in subtraction', parts=[
    P('a', '742 and 247:  742 - 247 = {b}', '495'), P('b', '831 and 138:  831 - 138 = {b}', '693'), P('c', 'What is the middle digit of both answers? {b}', '9'), P('d', 'Use the pattern: 954 - 459 = {b}', '495')],
-   hint='Look at the middle digit and the digit sum of each answer.',
+   hint='Look at the middle digit. Add the digits of each answer.',
    why='(a) 742 - 247 = 495. (b) 831 - 138 = 693. (c) Both answers have 9 in the middle. (d) The answer to a reverse-and-subtract is always a multiple of 99. 954 - 459 = 495. The hundreds digits 9 and 4 differ by 5, and 5 x 99 = 495.'),
- I('go', 5, 'Make your own missing-digit sum. Write 2 missing digits in an addition of two 3-digit numbers, so that only ONE pair of digits works. Many answers are right.', value='open',
+ I('go', 5, 'Make your own missing-digit sum. Add two 3-digit numbers and hide 2 digits. Only ONE pair of digits may work. Many answers are right.', value='open',
    atext='Open. Example: 4?6 + 37? = 801 (426 + 375). Test every digit for each box: only 2 and 5 work.',
    space={'rows': ['My sum:', 'My answer:']}, hint='Start with a full sum. Then hide a digit in each number.',
    why='Example: 426 + 375 = 801. Ones: 6 + ? must end in 1, so the ones box is 5. That carries 1. Tens: ? + 7 + 1 must end in 0, so the tens box is 2. Check that no other digit fits in each box.'),
@@ -97,7 +97,7 @@ items = [
    hint='Both sides must be equal. Try a number and check it.',
    why='(a) Move the box: 2 boxes = 625 - 175 = 450, so one box is 225. Check: 225 + 175 = 400 and 625 - 225 = 400. (b) 2 boxes = 800 - 240 = 560, so one box is 280. Check: 280 + 240 = 520 and 800 - 280 = 520.'),
  # Check yourself
- I('quiz', 0, 'Find the missing digits. Write them in the boxes.', figure={'type': 'l2_vsum', 'op': '+', 'rows': ['2?6', '43?', '689'], 'width_mm': 56}, value=['5', '3'], atext='5 and 3', lst=True,
+ I('quiz', 0, 'Write the 2 missing digits.', figure={'type': 'l2_vsum', 'op': '+', 'rows': ['2?6', '43?', '689'], 'width_mm': 56}, value=['5', '3'], atext='5 and 3', lst=True,
    why='Ones: 6 + 3 = 9, so the bottom box is 3. Tens: 5 + 3 = 8, so the top box is 5. Check: 256 + 433 = 689.'),
  I('quiz', 0, '530 + 160 = 600 + {b}', value='90', why='530 + 160 = 690, and 690 - 600 = 90.'),
  I('quiz', 0, 'Ravi had 800 stickers. He gave 175 to Mei and some to Ben. He had 350 left. How many stickers did he give to Ben? {b}', value='275', why='800 - 175 = 625. 625 - 350 = 275. Check: 175 + 275 + 350 = 800.'),

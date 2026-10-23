@@ -25,7 +25,7 @@ u.learn(
     {'text': 'Find the missing digit. {b}\n3?48 + 2517 = 5965', 'answer': A('4'),
      'explanation': 'Ones: 8 + 7 = 15, write 5 and carry 1. Tens: 4 + 1 + 1 = 6. Hundreds: ? + 5 makes 9, so ? is 4. Thousands: 3 + 2 = 5.'})
 
-# ---------------- page 1
+# ---------------- Start here (pages 1 to 3)
 u.S(1, 'Find the missing digit in each sum.', parts=[
     P('a', '3?46 + 1251 = 4597    The missing digit is {b}.', A('3')),
     P('b', '26?9 + 1435 = 4104    The missing digit is {b}.', A('6'))],
@@ -44,8 +44,9 @@ u.S(1, 'Siti works out 5000 - 1768 = 3342.', parts=[
     P('b', 'Is Siti right?   {circ:Yes|No}', A('No')),
     P('c', 'The correct answer is {b}.', A('3232'))],
     why='The check should give back 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232. Check: 3232 + 1768 = 5000.')
-
-# ---------------- page 2
+u.S(1, 'Look for a pattern.', parts=[
+    P('a', '2641 + {b} = 9999', A('7358')), P('b', '10 000 - 2641 = {b}', A('7359'))],
+    why='(a) Each digit and its partner add up to 9: 2 and 7, 6 and 3, 4 and 5, 1 and 8. That gives 7358. (b) 10 000 is 1 more than 9999, so the answer is 1 more than 7358.')
 u.S(2, 'Every row, column and diagonal has the same total.', parts=[
     P('a', 'The magic total is {b}.', A('1050')),
     P('b', 'A = {b}   B = {b}   C = {b}', A(['400', '250', '500'], 'A = 400, B = 250, C = 500', list=True))],
@@ -61,20 +62,15 @@ u.S(2, 'Find the 2 missing digits.', parts=[
     P('b', 'The digit in the tens place of the number being added is {b}.', A('9'))],
     why='Ones: 2 + 6 = 8. Tens: 5 + ? ends in 4, so ? is 9 and 1 is carried. Hundreds: ? + 4 + 1 ends in 1, so ? is 6 and 1 is carried. Thousands: 3 + 2 + 1 = 6. Check: 3652 + 2496 = 6148.',
     figure=vs([3, None, 5, 2], '+', [2, 4, None, 6], [6, 1, 4, 8], 60), figside=True)
+u.S(2, 'Each letter stands for a digit. The same letter always means the same digit. Find the digit.', parts=[
+    P('a', 'A3 + 2A = 56    A = {b}', A('3')),
+    P('b', 'C5 + C5 = 90    C = {b}', A('4'))],
+    why='(a) Try A = 3: 33 + 23 = 56. It works. (b) Two equal numbers add up to 90, so each is 45. Then C = 4.')
 u.S(3, 'Find the 2 missing digits.', parts=[
     P('a', 'The digit in the hundreds place of the top number is {b}.', A('5')),
     P('b', 'The digit in the tens place of the number taken away is {b}.', A('4'))],
     why='Turn it round: 3657 + 2845 = 6502 (the missing digit of the number taken away is its tens digit 4). Or subtract by columns: 12 - 5 = 7, then 10 - 1 - 4 = 5, then 15 - 1 - 8 = 6, then 6 - 1 - 2 = 3. The top number is 6502.',
     figure=vs([6, None, 0, 2], '-', [2, 8, None, 5], [3, 6, 5, 7], 60), figside=True)
-
-# ---------------- page 3
-u.S(2, 'Each letter stands for a digit. The same letter always means the same digit. Find the digit.', parts=[
-    P('a', 'A3 + 2A = 56    A = {b}', A('3')),
-    P('b', 'C5 + C5 = 90    C = {b}', A('4'))],
-    why='(a) Try A = 3: 33 + 23 = 56. It works. (b) Two equal numbers add up to 90, so each is 45. Then C = 4.')
-u.S(1, 'Look for a pattern.', parts=[
-    P('a', '2641 + {b} = 9999', A('7358')), P('b', '10 000 - 2641 = {b}', A('7359'))],
-    why='(a) Each digit and its partner add up to 9: 2 and 7, 6 and 3, 4 and 5, 1 and 8. That gives 7358. (b) 10 000 is 1 more than 9999, so the answer is 1 more than 7358.')
 u.S(3, 'The sum of 2 numbers is 9000. One number is 3475. What is the other number? {b}', A('5525'),
     why='9000 - 3475 = 5525. Check: 3475 + 5525 = 9000.')
 u.S(3, 'Use the cards once each to make two 3-digit numbers.', parts=[
