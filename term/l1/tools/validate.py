@@ -220,7 +220,7 @@ def check_workbook_items(d):
         cw = b_print.choice_words(q['text'], q.get('choices')) or any(b_print.choice_words(p['text'], p.get('choices')) for p in q.get('parts', []))
         vis = q.get('visual') or {}
         vj = json.dumps([q.get('visual'), q.get('visuals')])
-        on_picture = bool(vis.get('hide')) or vis.get('labels') == 'box' or any((x or {}).get('labels') == 'box' or (x or {}).get('hide') for x in (q.get('visuals') or [])) or bool(re.search(r'"(\[\]|\(\)|\[\d\]|\[ \])"', vj))   # empty boxes, circles or hidden cells drawn in a picture are answer slots
+        on_picture = bool(vis.get('hide')) or vis.get('labels') == 'box' or any((x or {}).get('labels') == 'box' or (x or {}).get('hide') for x in (q.get('visuals') or [])) or bool(re.search(r'"(\[\]|\(\)|\[\d\]|\[ \])"', vj)) or '"hide": [' in vj or '"hide_price": true' in vj   # empty boxes, circles or hidden cells drawn in a picture are answer slots
         if q.get('tf') or q.get('mcq') or q.get('steps'): on_picture = True
         if not (q.get('parts') or q.get('lines', 0) > 0 or q.get('draw') or cw or on_picture):
             fail(f"workbook: {q['id']} has no answer slot (add parts with ___ or [], lines, draw, or choices)")
@@ -366,8 +366,9 @@ def check_outputs(d):
         got = pdfcheck.pdf_pages(path); fills = pdfcheck.pdf_fill(path, *mg)
         txt = ', '.join(f'{f:.0%}' for f in fills)
         if got != n: fail(f'outputs: {name} PDF has {got} pages but {n} are designed (a question block spilled onto an orphan page); fill {txt}')
+        nk = len(kits(d)) if name == 'Workbook' else 0          # a kit page may be short (play money coins, sticks): only question pages must be full
         for i, f in enumerate(fills, 1):
-            if f < 0.40: fail(f'outputs: {name} page {i} is only {f:.0%} full (orphan or near-empty page)')
+            if f < 0.40 and not (nk and i > len(fills) - nk and got == n): fail(f'outputs: {name} page {i} is only {f:.0%} full (orphan or near-empty page)')
             elif f < 0.80 and name != 'Home_Answers': warn(f'outputs: {name} page {i} is {f:.0%} full (target at least 85%)')
         if name == 'Workbook':
             import subprocess
@@ -377,7 +378,7 @@ def check_outputs(d):
                 lines = [l for l in lines if not re.fullmatch(r'Page\s*\d+', l)]
                 if lines and re.fullmatch(r'No\.?\s*[A-Z]?\d+', lines[-1]): fail(f'outputs: Workbook page {pgno} ends with a question tab ({lines[-1]}) and its body is on the next page')
         if name == 'Parent_Summary': pass
-        if got == n and all(f >= 0.40 for f in fills): ok(f'outputs: {name} PDF {got} pages, fill (measured on the PDF) {txt}')
+        if got == n and all(f >= 0.40 for f in (fills[:len(fills) - nk] if nk else fills)): ok(f'outputs: {name} PDF {got} pages, fill (measured on the PDF) {txt}')
 
 
 def check_rec(d):
@@ -484,7 +485,7 @@ def check_answers(d):
                 js_cases.append((it['id'], tp['answer'], full, a))
             texts = [tp.get('q', ''), tp.get('hint', '')] + list(tp.get('steps', [])) + list(tp.get('options') or []) + [tp.get('frame', '')]
             for txt in texts:
-                miss = [x for x in re.findall(r'\{(\w+)(?:\|\w+)?\}', txt) if x not in full and x != 'ans']
+                miss = [x for x in re.findall(r'\{(\w+)(?:\|\w+)?\}', txt) if x not in full and x != 'ans' and x not in (tp.get('answers') or {})]
                 if miss: fail(f"practice: {it['id']} placeholder {miss} not defined")
             total += 1
         base = oracles[it['id']]
@@ -507,7 +508,7 @@ def check_answers(d):
             if stray: warn(f"practice: {it['id']} fields item: frame has {{{stray[0]}}} which is not a field (write the number in the frame, or add a field)")
         if it.get('fig'):
             import svg
-            try: svg.render_visual(it['fig'] if '{' not in json.dumps(it['fig']) else it['fig_base'])
+            try: svg.render_visual(it['fig'] if not has_placeholder(it['fig']) else it['fig_base'])
             except Exception as e: fail(f"practice: {it['id']} fig does not render: {e}")
     # cross-check with the runner's JavaScript calc() (same helpers as the python oracle)
     js = os.path.join(L1, 'runner', 'practice.js')
@@ -599,6 +600,75 @@ def check_quest(d):
     if not [f for f in FAILS if f.startswith('quest')]: ok(f"quest: Quest Log {n} pages, tutor notes {pdfcheck.pdf_pages(notes)}, grown-up note 1 page, no test/exam/score wording")
 
 
+def check_beyond(d):
+    """Terms 3 and 4: the tutor-only `beyond` field names what goes past Primary 1: {"name", "where": [ids in Think harder or Go further], "text", optional "parent"}.
+    It is never in Start here and never in the Explore or Quest-style class numbers. Required from Term 3 (a warning for Terms 1 and 2)."""
+    b = d.get('beyond')
+    if not b:
+        if d['term'] >= 3: fail('beyond: Terms 3 and 4 lessons need a `beyond` field (name, where, text)')
+        return
+    for k in ('name', 'where', 'text'):
+        if not b.get(k): fail(f'beyond: missing {k}')
+    qm = {q['id']: t for t in ('start', 'think', 'go') for q in d['tiers'][t]}
+    for i in b.get('where', []):
+        if i not in qm: fail(f'beyond: {i} is not a workbook question')
+        elif qm[i] == 'start': fail(f'beyond: {i} is a Start here question; beyond-P1 material belongs in Think harder or Go further')
+    for t in ('name', 'text', 'parent'):
+        if re.search(r'\b(early finisher|gifted|genius|GEP|SASMO|olympiad|aligned)\b', str(b.get(t, '')), re.I): fail(f'beyond: banned label in {t}')
+    if not [f for f in FAILS if f.startswith('beyond')]: ok(f"beyond: {b['name']!r} sits at {', '.join(b['where'])}, not in Start here")
+
+
+def check_kit_contract(d):
+    """materials.kit_contract = [{piece, supplied, max_used, used_by: [ids]}]: what the kit page prints against the most any task uses (the cut-out audit's two Reworks)."""
+    kc = d.get('materials', {}).get('kit_contract')
+    if not kc:
+        if kits(d) and d['term'] >= 3 and any(k.get('type') not in ('hundred', 'hundred_square', 'groups_mat', 'array_mat', 'grid_mat', 'graph_mat') for k in kits(d)):
+            warn('kit contract: materials.kit_contract is missing (piece, supplied, max_used, used_by); needed so the kit page matches the tasks')
+        return
+    ids = {q['id'] for q in all_questions(d) + d['exit']}
+    for r in kc:
+        for k in ('piece', 'supplied', 'max_used'):
+            if k not in r: fail(f"kit contract: {r.get('piece', '?')} missing {k}")
+        if r.get('supplied', 0) < r.get('max_used', 0): fail(f"kit contract: {r['piece']}: the page supplies {r['supplied']} but a task uses {r['max_used']}")
+        for i in r.get('used_by', []):
+            if i not in ids and not str(i).startswith(('explore', 'mini', 'script')): fail(f"kit contract: {r['piece']} used_by {i} is not a question id")
+    if not [f for f in FAILS if f.startswith('kit contract')]: ok(f'kit contract: {len(kc)} pieces, supplied is never less than the most any task uses')
+
+
+def check_handoff(d):
+    """The previous lesson's parent.next_materials must tell the family to cut or prepare this lesson's kit pages (cut-out audit F21)."""
+    n = int(d['_num'])
+    if n < 2: return
+    pp = os.path.join(L1, 'lessons', f'l{n - 1:02d}.json')
+    if not os.path.exists(pp): return
+    try: prev = json.load(open(pp, encoding='utf-8'))
+    except Exception: return
+    cutkits = [k for k in kits(d) if k.get('type') not in ('hundred', 'hundred_square', 'groups_mat', 'array_mat', 'grid_mat', 'graph_mat', 'number_line')]
+    nm = ' '.join(prev.get('parent', {}).get('next_materials', []))
+    if cutkits and not re.search(r'\b(cut|kit|page|envelope|cards?|pieces)\b', nm, re.I): warn(f"hand-off: lesson {n - 1} next_materials does not mention this lesson's cut-out kit page")
+
+
+def check_plural_guard(d):
+    """Online practice variants must never print '1 hours', '1 stickers' and the like."""
+    bad = []
+    pat = re.compile(r'\b1 (hours|minutes|stickers|marbles|sweets|dollars|cents|children|cousins|plates|cookies|apples|pencils|books|coins|notes|sticks|days|tags|tokens|cups|bags|rows|groups)\b')
+    for it in d['online_practice']['items']:
+        tp = it.get('tpl')
+        if not tp: continue
+        names = list(tp['vars'])
+        for combo in itertools.product(*[tp['vars'][n] for n in names]):
+            env = dict(zip(names, combo)); full = dict(env)
+            try:
+                for k, ex in tp.get('derive', {}).items(): full[k] = py_eval(ex, full)
+            except Exception: continue
+            txt = ' '.join([tp.get('q', ''), tp.get('hint', ''), tp.get('frame', '')] + list(tp.get('steps', [])))
+            txt = re.sub(r'\{(\w+)(?:\|(\w+))?\}', lambda m: str(full.get(m.group(1), m.group(0))), txt)
+            m = pat.search(txt)
+            if m: bad.append(f"{it['id']} {env}: '{m.group(0)}'")
+            if re.search(r'(?<![.\s])\.\.(?!\.)', txt): bad.append(f"{it['id']} {env}: double full stop")
+    if bad: (fail if d['term'] >= 3 else warn)('practice: plural or punctuation slips in variants: ' + '; '.join(bad[:5]))
+
+
 def check_cover(d):
     import b_guide
     from playwright.sync_api import sync_playwright
@@ -636,7 +706,7 @@ def check_figures(d):
     for q in all_questions(d) + d['exit']: walk(q)
     walk(d['tiers']['investigation'])
     for it in d['online_practice']['items']:
-        if it.get('fig') and not any('{' in json.dumps(it['fig']) for _ in [0]): specs.append(it['fig'])
+        if it.get('fig') and not has_placeholder(it['fig']): specs.append(it['fig'])
     n = 0
     for sp in specs:
         if not isinstance(sp, dict) or 'type' not in sp: continue
@@ -645,15 +715,21 @@ def check_figures(d):
     if not [f for f in FAILS if f.startswith('figures')]: ok(f'figures: {n} figure specs render')
 
 
+def has_placeholder(x):
+    """True if a figure spec holds a template placeholder such as "{n}" or "{=n+1}" (a plain JSON object does not count)."""
+    return bool(re.search(r'"[^"]*\{=?\w[^"]*\}[^"]*"', json.dumps(x)))
+
+
 FIGURE_TYPES = {'bundles', 'scatter', 'ten_frame', 'ten_to_bundle', 'hundred_square', 'hundred', 'seq', 'number_line', 'ruler', 'plates', 'objects', 'groups', 'array', 'line_up',
-                'round_table', 'bar_model', 'table', 'picture_equation', 'domino'}
+                'round_table', 'bar_model', 'table', 'picture_equation', 'domino',
+                'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
 
 
 def check_glyphs(d):
     """x and division signs used in the lesson must survive into the built PDFs (text extraction) and the font files must be the latin subset."""
     import subprocess
     allt = json.dumps(d, ensure_ascii=False, default=str)
-    used = [g for g in ('\u00d7', '\u00f7', '\u2212') if g in allt]
+    used = [g for g in ('\u00d7', '\u00f7', '\u2212', '\u00a2') if g in allt]
     if not used: return
     od = os.path.join(OUT, f"l{d['_num']}")
     css = font_css()
@@ -719,7 +795,7 @@ def check_foreign(d):
 
 def check_all(num, built=True):
     d = load(num)
-    for fn in (check_schema, check_identity, check_figures, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers):
+    for fn in (check_schema, check_identity, check_figures, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers, check_beyond, check_kit_contract, check_handoff, check_plural_guard):
         try:
             fn(d)
         except Exception as e:

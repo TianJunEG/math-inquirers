@@ -39,7 +39,7 @@
   var WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'], TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
   function numWord(n) { n = +n; if (n < 20) return WORDS[n]; if (n < 100) return TENS[Math.floor(n / 10)] + (n % 10 ? '-' + WORDS[n % 10] : ''); return String(n); }
   function ordinal(n) { n = +n; var r = n % 100, s = (r >= 11 && r <= 13) ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th'); return n + s; }
-  function fill(str, env, keep) { return String(str).replace(/\{(\w+)(?:\|(\w+))?\}/g, function (m, k, f) { if (env[k] == null || (keep && keep.indexOf(k) > -1)) return m; var v = env[k]; if (Array.isArray(v)) v = v.join(', '); return f === 'ord' ? ordinal(v) : f === 'word' ? numWord(v) : v; }); }
+  function fill(str, env, keep) { return String(str).replace(/\{(\w+)(?:\|(\w+))?\}/g, function (m, k, f) { if (env[k] == null || (keep && keep.indexOf(k) > -1)) return m; var v = env[k]; if (Array.isArray(v)) v = v.join(', '); return f === 'ord' ? ordinal(v) : f === 'word' ? numWord(v) : f === 'usd' ? '$' + v : f === 'c' ? v + '\u00a2' : f === 'cents' ? v + (+v === 1 ? ' cent' : ' cents') : f === 'dollars' ? v + (+v === 1 ? ' dollar' : ' dollars') : f === 'hour' ? v + (+v === 1 ? ' hour' : ' hours') : f === 'min' ? v + (+v === 1 ? ' minute' : ' minutes') : f === 'mm' ? (+v < 10 ? '0' + (+v) : String(v)) : v; }); }
   function variantOf(item, avoid) {
     var t = item.tpl, names = Object.keys(t.vars), env, tries = 0;
     do { env = {}; names.forEach(function (n) { var a = t.vars[n]; env[n] = a[Math.floor(Math.random() * a.length)]; }); tries++; } while (avoid && JSON.stringify(env) === avoid && tries < 12);
@@ -47,7 +47,7 @@
     var v = { id: item.id, tier: item.tier, q: fill(t.q, all), hint: fill(t.hint, all), slips: [], easier: item.easier, variantKey: JSON.stringify(env), isVariant: true, base: item };
     if (t.answers) {                                    // several ordered boxes
       v.type = 'fields'; v.frame = fill(t.frame, all, Object.keys(t.answers));     // box names stay as boxes even when a number has the same name
-      v.fields = Object.keys(t.answers).map(function (k) { return { id: k, answer: calc(t.answers[k], all) }; });
+      v.fields = Object.keys(t.answers).map(function (k) { return { id: k, answer: calc(t.answers[k], all), pad: t.pad && t.pad[k] ? t.pad[k] : 0 }; });
       all.ans = v.fields.map(function (f) { return f.answer; }).join(', ');
     } else if (t.options) {                             // templated choice
       v.type = 'choice'; v.options = t.options.map(function (o) { return fill(o, all); }); v.answer = v.options[calc(t.answer_index, all)]; all.ans = v.answer;
@@ -88,7 +88,7 @@
     });
     return out;
   }
-  function show(a, item) { if (item && item.type === 'fields') return item.frame.replace(/\{(\w+)\}/g, function (m, k) { var f = item.fields.filter(function (f) { return f.id === k; })[0]; return f ? f.answer : m; }); return Array.isArray(a) ? a.join(', ') : String(a); }
+  function show(a, item) { if (item && item.type === 'fields') return item.frame.replace(/\{(\w+)\}/g, function (m, k) { var f = item.fields.filter(function (f) { return f.id === k; })[0]; return f ? (f.pad && String(f.answer).length < f.pad ? ('0000'.slice(0, f.pad - String(f.answer).length) + f.answer) : f.answer) : m; }); return Array.isArray(a) ? a.join(', ') : String(a); }
 
   function items() { return L.items.filter(function (i) { return i.tier === tier; }); }
   function current() { var it = items()[idx]; return st[it.id] && st[it.id].variant ? st[it.id].variant : it; }

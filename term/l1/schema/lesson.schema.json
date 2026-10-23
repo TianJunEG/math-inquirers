@@ -179,6 +179,35 @@
         },
         "notes": {
           "type": "string"
+        },
+        "kit_contract": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "piece",
+              "supplied",
+              "max_used"
+            ],
+            "properties": {
+              "piece": {
+                "type": "string"
+              },
+              "supplied": {
+                "type": "integer"
+              },
+              "max_used": {
+                "type": "integer"
+              },
+              "used_by": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "description": "kit pieces printed against the most any task uses; the validator fails when supplied < max_used"
         }
       }
     },
@@ -479,7 +508,7 @@
     },
     "workbook": {
       "type": "object",
-      "description": "optional. header (strand line at the top of every page; default '<strand>: <big idea>'), hint_p1, hint_p3, hint_p4 (intro lines; generic defaults), kits: [] for no kit page or a list of kit pages {type: base_ten|hundred_square|number_strip|cards|shapes|number_line, title, intro, width (% of page), plus type fields: number_strip {start,end}; cards {labels:[..],cols,w,h,round}; shapes {shapes:[{kind:circle|square|rect|triangle,color,n}],size}; number_line {start,end,step,...}}. If kits is absent the legacy tens-bars page is printed. | hint_p2: intro line on page 2 | kits types added in Term 2: ten_frame, groups_mat, unit_strips, array_mat, people (see AUTHORING.md)"
+      "description": "optional. header (strand line at the top of every page; default '<strand>: <big idea>'), hint_p1, hint_p3, hint_p4 (intro lines; generic defaults), kits: [] for no kit page or a list of kit pages {type: base_ten|hundred_square|number_strip|cards|shapes|number_line, title, intro, width (% of page), plus type fields: number_strip {start,end}; cards {labels:[..],cols,w,h,round}; shapes {shapes:[{kind:circle|square|rect|triangle,color,n}],size}; number_line {start,end,step,...}}. If kits is absent the legacy tens-bars page is printed. | hint_p2: intro line on page 2 | kits types added in Term 2: ten_frame, groups_mat, unit_strips, array_mat, people (see AUTHORING.md) | kits types added in Terms 3-4: clock_kit, play_money {page:1|2}, price_tags, grid_tiles, mistake_cards, fold_shapes, shape_pieces, pair_cards, grid_mat, graph_mat, tool_cards, event_cards, stick_strips, calendar_cards"
     },
     "limits": {
       "type": "object",
@@ -488,6 +517,36 @@
     "stub": {
       "type": "boolean",
       "description": "true for a lesson file that only exercises the template (not a real lesson)"
+    },
+    "beyond": {
+      "type": "object",
+      "required": [
+        "name",
+        "where",
+        "text"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "where": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "workbook question ids at Think harder or Go further"
+        },
+        "text": {
+          "type": "string",
+          "description": "tutor-only: what goes past Primary 1 and why it is original"
+        },
+        "parent": {
+          "type": "string",
+          "description": "optional sentence for the parent page"
+        }
+      },
+      "description": "Terms 3 and 4 (any lesson may carry it): the tutor-only beyond-P1 field. Never in Start here."
     }
   },
   "$defs": {
@@ -640,7 +699,7 @@
       }
     },
     "visual": {
-      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight} | ruler {start:0,end:15,objects:[{label,from,to,color}],mark} (cm ruler strip, TRUE 1:1 scale on paper: 10 cm = 100 mm; 0 at the start; an object whose from is not 0 is a shifted start; not a cut-out) | Term 2: objects, groups, array, line_up, round_table, bar_model, table, picture_equation, ten_frame with filled:[red,yellow], domino"
+      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight} | ruler {start:0,end:15,objects:[{label,from,to,color}],mark} (cm ruler strip, TRUE 1:1 scale on paper: 10 cm = 100 mm; 0 at the start; an object whose from is not 0 is a shifted start; not a cut-out) | Term 2: objects, groups, array, line_up, round_table, bar_model, table, picture_equation, ten_frame with filled:[red,yellow], domino | Terms 3-4: clock {h,m,hide_hands,labels:all|quarters|none,digital,ampm,sector:[from_min,to_min],mirror}, money {items:[{v:'5c|10c|20c|50c|$1|$2|$5|$10|$50',n}],total,label,per_row}, price_tag {item,price,hide_price}, calendar {start,days,highlight,hide,mark,week}, stick_pattern {shape:triangle|square,n,hide_last,label_each}, shapes2d {shape:circle|half_circle|quarter_circle|square|rectangle|triangle,parts:1|2|4,shade,fold:v|h,compose:house|boat,label}, grid {rows,cols,kind:dots|squares,poly,route,start,end,squares,counts,mirror,mark}, cube_stack {heights,mode:iso|top|views}, fold_punch {stage:paper|folded|unfolded,fold:v|h|quarter,holes}, panel {tiles:[{shape,n,size,colour,pattern,turn}],cols,hide,labels}, network {n,lines|all,labels,count}, picture_graph {rows:[{label,n,hide}],icon,each,title,orient:rows|cols,tally,key}; number_line also takes labels {tick:text}, prefix, suffix; all take size s|m|l|percent; icons batch 2: sun moon bed bus house school shop bath rubber ruler glue shell spoon sock shoe button t_strip t_table t_list t_draw t_back t_find t_steps"
     }
   }
 }

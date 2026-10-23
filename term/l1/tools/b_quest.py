@@ -27,6 +27,12 @@ import pdfcheck                                 # noqa: E402
 from common import E, mi_uri, font_css          # noqa: E402
 
 NAME = "Mi's Challenge Quest"
+
+
+def lesson_lab(x):
+    """Lesson label for a gate: 21, [21, 22] (gate covers two lessons) or 'beyond' (the cave: an unseen puzzle)."""
+    if isinstance(x, (list, tuple)): return 'L' + ', '.join(str(i) for i in x)
+    return 'unseen' if str(x) == 'beyond' else f'L{x}'
 # words that must never appear in the text of the child or parent PDFs (the tutor notes may say "no scores" etc.)
 BAN_FAMILY = [r'\btests?\b', r'\bexams?\b', r'check[- ]?sheet', r'\bend-of-term check\b', r'\btimer\b', r'\bpass(ed)? or fail', r'\branked?\b|\branking\b',
               r'\bscored?\b|\bscores\b', r'\bmarked\b|\bmarks\b|\bmarking\b', r'\bout of\b', r'\bgrades?\b']
@@ -81,13 +87,13 @@ def tutor_notes_html(d):
     H = []
     H.append(f'<div class="cover"><img alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;right:18px;top:12px;width:90px">'
              f'<div class="k">TUTOR NOTES • LEVEL {d["level"]} • TERM {d["term"]} • {NAME.upper()}</div><h1>{E(c["title"])}</h1>'
-             f'<p>{len(qs)} gates, one from each lesson of the term, all at Start here level, plus one optional secret cave item. {c["minutes"]} minutes after the break, played in pairs or as a group quest with Mi, working on private paper. '
+             f'<p>{len(qs)} gates, one from each lesson of the {'year' if c.get('scope') == 'year' else 'term'}, all at Start here level, plus one optional secret cave item. {c["minutes"]} minutes after the break, played in pairs or as a group quest with Mi, working on private paper. '
              f'It is a game: no score or mark is shown to the child, no ranking, no visible timer. You keep private notes only. For the tutor: do not hand these notes to families.</p></div>')
     H.append(f'<div class="box t"><b>Where it sits.</b> {E(c["where"])}. <span class="small">{E(c["plan_note"])}</span></div>')
     H.append('<h2>1. The gates at a glance</h2><table><tr><th>Gate</th><th>From</th><th>Area (tutor label)</th><th>What it uses (Start here level)</th><th>Answer</th></tr>')
     for q in qs:
-        H.append(f'<tr><td><b>{q["id"][1:]}</b></td><td>L{q["lesson"]}</td><td>{E(smap[q["strand"]]["moe_label"])}</td><td>{E(q["skill"])}</td><td class="ans">{E(q["answer"])}</td></tr>')
-    H.append(f'<tr><td><b>Secret cave</b></td><td>L{o["lesson"]}</td><td>{E(smap[o["strand"]]["moe_label"])}</td><td>{E(o["skill"])} (optional)</td><td class="ans">{E(o["answer"])}</td></tr></table>')
+        H.append(f'<tr><td><b>{q["id"][1:]}</b></td><td>{lesson_lab(q["lesson"])}</td><td>{E(smap[q["strand"]]["moe_label"])}</td><td>{E(q["skill"])}</td><td class="ans">{E(q["answer"])}</td></tr>')
+    H.append(f'<tr><td><b>Secret cave</b></td><td>{lesson_lab(o["lesson"])}</td><td>{E(smap.get(o["strand"], {'moe_label': 'unseen puzzle'})["moe_label"])}</td><td>{E(o["skill"])} (optional)</td><td class="ans">{E(o["answer"])}</td></tr></table>')
     H.append('<p class="small">The area labels are for the tutor only and never appear on a child or parent page. Each gate is a fresh example of the Start here idea of its lesson (numbers chosen so that they do not repeat a lesson page), so a child who followed the lesson can open it. '
              'Before first use, read each gate against what the lesson actually taught.</p>')
     H.append('<h2>2. Playing it: before and during</h2><ol>' + ''.join(f'<li>{E(x)}</li>' for x in c['give']) + '</ol>')
@@ -100,7 +106,7 @@ def tutor_notes_html(d):
         lab = 'Secret cave (optional)' if q['id'] == 'Optional' else 'Gate ' + q['id'][1:]
         parts = '; '.join(f'({p["l"]}) {bc.keyclean(bc.minus(p["text"].replace("___", "__")))} = {p["ans"]}' if p['l'] else f'{bc.keyclean(bc.minus(p["text"].replace("___", "__")))} = {p["ans"]}' for p in q['parts'])
         right = q.get('right', 'The answer is as above.'); partly = q.get('partly', '-')
-        H.append(f'<div class="box k1"><b>{lab}</b> (L{q["lesson"]}) {E(bc.keyclean(bc.minus(q["text"])))}<div class="ans">Answer: {E(bc.minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
+        H.append(f'<div class="box k1"><b>{lab}</b> ({lesson_lab(q["lesson"])}) {E(bc.keyclean(bc.minus(q["text"])))}<div class="ans">Answer: {E(bc.minus(q["answer"]))}</div><div class="small">{E(parts)}</div>'
                  f'<div class="small"><b>A secure answer looks like:</b> {E(right)} <b>Half way there:</b> {E(partly)}</div><div class="small"><b>Worked:</b> {E(bc.minus(q["solution"]))}</div>'
                  f'<div class="small"><b>Watch for:</b> {E("; ".join(q["mistakes"]))}</div></div>')
     if c.get('measure_note'):
@@ -112,7 +118,7 @@ def tutor_notes_html(d):
     H.append(f'<p>Child (first name only): {line % "230px"} &nbsp; Date: {line % "110px"} &nbsp; Quest partner: {line % "150px"}</p>')
     H.append('<p class="small">' + E(ns['how']) + '</p>')
     H.append('<table class="rec"><tr><th style="width:56px">Gate</th><th style="width:40px">From</th><th>What I saw (words used, counters or drawing, how the partner helped, anything the child said)</th></tr>' + ''.join(
-        f'<tr><td><b>{q["id"][1:]}</b></td><td>L{q["lesson"]}</td><td style="height:34px"></td></tr>' for q in qs) + f'<tr><td><b>Cave</b></td><td>L{o["lesson"]}</td><td style="height:34px"></td></tr></table>')
+        f'<tr><td><b>{q["id"][1:]}</b></td><td>{lesson_lab(q["lesson"])}</td><td style="height:34px"></td></tr>' for q in qs) + f'<tr><td><b>Cave</b></td><td>{lesson_lab(o["lesson"])}</td><td style="height:34px"></td></tr></table>')
     H.append('<table><tr><th>Prompt</th><th>My notes</th></tr>' + ''.join(f'<tr><td style="width:36%">{E(p)}</td><td style="height:44px"></td></tr>' for p in ns['prompts']) + '</table>')
     H.append(f'<p>The one line for the grown-up (section 7), written from these notes:</p><div class="wl">&nbsp;</div><div class="wl">&nbsp;</div>')
     H.append('<h2 class="pb">6. Group advice for next term (tutor only; one sheet per class; no names)</h2>')

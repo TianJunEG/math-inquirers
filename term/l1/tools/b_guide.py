@@ -110,6 +110,7 @@ def build_html(d):
             ('Child materials', '<ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['materials']['child']) + '</ul>'),
             ('Tutor materials', '<ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['materials']['tutor']) + '</ul><div class="small">' + E(d['materials']['notes']) + '</div>'),
             ('Tiers', 'Start here (' + str(len(d['tiers']['start'])) + ' questions, pages 1 and 2), Think harder (' + str(len(d['tiers']['think'])) + ', page 3), Go further (' + str(len(d['tiers']['go'])) + ', page 4), Investigation and look-back (page 5)' + (f', kit page{"s" if len(kits(d)) > 1 else ""} (page{"s" if len(kits(d)) > 1 else ""} 6' + (f'-{5 + len(kits(d))}' if len(kits(d)) > 1 else '') + ')' if kits(d) else '') + '. Labels are neutral; nobody is told which page they are on.'),
+            *([('Beyond Primary 1 (tutor only)', E(d['beyond']['name']) + ' at ' + ', '.join(E(x) for x in d['beyond']['where']) + ': ' + E(d['beyond']['text']) + ' Never in Start here, never advertised to children.')] if d.get('beyond') else []),
             ('Contest-style move', 'Used at ' + E(d.get('contest_where') or 'Think harder only') + ': ' + '; '.join(E(x) for x in d['contest_moves']) + '. Never advertised to children or parents.')]
     for a, b in rows: H.append(f'<tr><th style="width:110px">{a}</th><td>{b}</td></tr>')
     H.append('</table>')

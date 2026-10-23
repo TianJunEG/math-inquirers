@@ -84,7 +84,8 @@ def _icon_body(name):
         return f'<circle cx="32" cy="32" r="22" {_o(NAVY)}/>'
     if n == 'square':
         return f'<rect x="8" y="8" width="48" height="48" rx="4" {_o(SKY)}/>'
-    raise ValueError('unknown icon ' + name)
+    import figs3
+    return figs3.icon_body(name)
 
 
 ICON_NAMES = ['child1', 'child2', 'child3', 'child4', 'child5', 'child6', 'apple', 'cookie', 'sweet', 'sticker', 'ball', 'marble', 'pencil', 'pen', 'book', 'cup', 'plate',
@@ -555,8 +556,10 @@ def people_strip(n=10):
 
 
 def render(v):
-    """Dispatch for figure types added in Term 2; returns None if v['type'] is not one of them."""
+    """Dispatch for figure types added in Term 2 (and, through figs3, Terms 3 and 4); returns None if v['type'] is not one of them."""
     t = v['type']
+    import figs3
+    if t in figs3.FIGURES3: return figs3.render(v)
     if t == 'objects':
         return objects(v.get('icon'), v.get('n', 0), v.get('per_row', 5), v.get('size', 'm'), tuple(v.get('cross', ())), tuple(v.get('hide', ())), v.get('label'), v.get('items'))
     if t == 'groups':
@@ -580,6 +583,8 @@ def render(v):
 
 def render_kit(spec):
     t = spec['type']
+    import figs3
+    if t in figs3.KITS3: return figs3.render_kit(spec)
     if t == 'groups_mat': return groups_mat(spec.get('n', 6), spec.get('container', 'plate'))
     if t == 'unit_strips': return unit_strips(spec.get('rows', 8), spec.get('cells', 10))
     if t == 'array_mat': return array_mat(spec.get('rows', 5), spec.get('cols', 8))

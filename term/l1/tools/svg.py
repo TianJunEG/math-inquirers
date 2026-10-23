@@ -119,10 +119,12 @@ def ten_to_bundle():
     return f'<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ten single sticks tied into one bundle" style="width:100%;height:auto;display:block">{"".join(parts)}</svg>'
 
 
-def number_line(start, end, step=1, label_every=None, marks=None, hide=None, jumps=None, highlight=None, width=1000, big=True):
+def number_line(start, end, step=1, label_every=None, marks=None, hide=None, jumps=None, highlight=None, width=1000, big=True, labels=None, prefix='', suffix=''):
     """Clean number line for ages 6-8.  start/end inclusive; a tick every `step`; a number under every `label_every`-th tick
     (default: about 11 labels); `marks` = numbers always labelled; `hide` = numbers shown as an empty box (for 'fill the gap');
-    `jumps` = [(from, to, '+10'), ...] curved arrows above the line (labels in teal); `highlight` = numbers shown as yellow tiles."""
+    `jumps` = [(from, to, '+10'), ...] curved arrows above the line (labels in teal); `highlight` = numbers shown as yellow tiles.
+    `labels` = {tick: text} replaces a tick's label (e.g. {"3": "3:00"}); `prefix`/`suffix` wrap every number ('$', 'c')."""
+    labels = {str(k): v for k, v in (labels or {}).items()}
     n = (end - start) // step
     if label_every is None:
         label_every = step * max(1, -(-n // 10))
@@ -143,7 +145,8 @@ def number_line(start, end, step=1, label_every=None, marks=None, hide=None, jum
         elif major:
             if v in hl:
                 p.append(f'<rect x="{x(v) - 30:.1f}" y="{base + 28}" width="60" height="52" rx="12" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>')
-            p.append(f'<text x="{x(v):.1f}" y="{base + 68}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>')
+            lt = labels.get(str(v), f'{prefix}{v}{suffix}')
+            p.append(f'<text x="{x(v):.1f}" y="{base + 68}" font-size="{fs if len(lt) <= 3 else fs * 0.78:.0f}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{lt}</text>')
         v += step
     for (a, b, lab) in (jumps or []):
         xa, xb = x(a), x(b); mid = (xa + xb) / 2; hg = min(80, 24 + abs(xb - xa) * 0.25)
@@ -393,7 +396,7 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False):
             f'style="{size}display:block">{"".join(p)}</svg>')
 
 
-SIZE_TYPES = {'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation'}
+SIZE_TYPES = {'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation', 'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
 SIZE_PCT = {'s': 55, 'm': 78, 'l': 100}
 
 
@@ -423,7 +426,7 @@ def _render_visual(v):
     if t == 'ten_frame':
         return ten_frame(v['filled'], v.get('extra', 0))
     if t == 'number_line':
-        return number_line(**{k: (([tuple(j) for j in x]) if k == 'jumps' else x) for k, x in v.items() if k in ('start', 'end', 'step', 'label_every', 'marks', 'hide', 'jumps', 'highlight', 'width', 'big')})
+        return number_line(**{k: (([tuple(j) for j in x]) if k == 'jumps' else x) for k, x in v.items() if k in ('start', 'end', 'step', 'label_every', 'marks', 'hide', 'jumps', 'highlight', 'width', 'big', 'labels', 'prefix', 'suffix')})
     if t == 'hundred_square':
         return hundred_square(v.get('blank', False))
     if t == 'ruler':

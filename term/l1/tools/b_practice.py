@@ -25,6 +25,11 @@ def _subst(obj, env):
     return obj
 
 
+def _ph(x):
+    import json as _j
+    return bool(re.search(r'"[^"]*\{=?\w[^"]*\}[^"]*"', _j.dumps(x)))
+
+
 def _prepare_items(items):
     """Render item.fig to inline SVG at build time (item.svg); a figure with {vars} is drawn for every variant (tpl.svgs, up to 80 combinations)."""
     import copy, itertools, json as _j, svg
@@ -34,10 +39,10 @@ def _prepare_items(items):
         fig = it.pop('fig', None); base = it.pop('fig_base', None)
         if not fig: continue
         tp0 = it.get('tpl')
-        if '{' in _j.dumps(fig) and not (tp0 and tp0.get('vars')):      # no variants: draw the figure as written (or its base)
+        if _ph(fig) and not (tp0 and tp0.get('vars')):      # no variants: draw the figure as written (or its base)
             it['svg'] = svg.render_visual(base or fig)
             continue
-        if '{' not in _j.dumps(fig):
+        if not _ph(fig):
             it['svg'] = svg.render_visual(fig)
             if it.get('tpl'): warns.append(f"{it['id']}: the picture is shown only for the authored numbers (variants have no picture); use fig with {{vars}} and fig_base")
         else:

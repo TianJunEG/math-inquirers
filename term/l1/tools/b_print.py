@@ -34,7 +34,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .banner{break-after:avoid;display:block;width:fit-content}
-.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
 .visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
 .tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
@@ -75,11 +75,13 @@ def choice_html(words):
 def _vis_html(v):
     if v.get('type') == 'ruler':   # true 1:1 scale on paper
         return f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True)}</div>'
-    wide = v.get('type') in ('table', 'bar_model', 'line_up')
+    wide = v.get('type') in ('table', 'bar_model', 'line_up', 'picture_graph', 'money')
     xw = v.get('type') in ('number_line', 'seq')
     arr = v.get('type') == 'array'
     nar = v.get('type') in ('round_table', 'domino')
-    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" arr" if arr else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
+    sm = v.get('type') in ('clock', 'price_tag', 'fold_punch', 'network', 'shapes2d')
+    md = v.get('type') in ('cube_stack', 'grid', 'calendar')
+    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" sm" if sm else ""}{" md" if md else ""}{" arr" if arr else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
 
 
 def inv_draw(inv):
@@ -125,7 +127,7 @@ def qbox(q, label=None, draw=False):
     return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{blanks(q["text"])}</span></div>{vis}{parts}{ln}</div>'
 
 
-NONCUT_KITS = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates'}
+NONCUT_KITS = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates', 'grid_mat', 'graph_mat'}
 
 
 def kit_note(k):
@@ -197,7 +199,7 @@ def home_html(d, answers=False):
     qs = ''
     for h in H:
         tag = {'start': 'Start here', 'think': 'Think harder', 'go': 'Go further'}[h['tier']]
-        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{part_breaks(blanks(h["text"]))}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
+        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}{(" \u2022 Practice from earlier: " + E(h["rewind_of"])) if h.get("rewind_of") else ""}</span><br>{part_breaks(blanks(h["text"]))}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     if answers:
         page = (f'<div class="page">{hdr(d, "Answers", d["title"] + ": home practice answers")}<p style="font-size:13px">For grown-ups. Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
@@ -213,7 +215,7 @@ def parent_html(d):
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{PARENT_CSS}'
             '@page{size:A4;margin:12mm 15mm}body{font-size:%spx;line-height:%s}' % (('13.2', '1.38'), ('12.6', '1.3'), ('12', '1.25'))[min(d.get('_parent_tight', 0), 2)] + '.side h3{font-size:15px}.panel{padding:10px 14px;margin-bottom:10px}.panel h3{font-size:16px}.tips li{margin-bottom:6px}.hd{margin:0 0 10px}.big{font-size:60px}'
             f'</style></head><body><div class="hd"><img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto"><div class="big">{d["lesson_in_term"]}</div><div><div class="tp">Level {d["level"]} • Term {d["term"]} • Lesson {d["lesson_in_term"]} • For parents</div><h1>{E(d["title"])}</h1></div></div>'
-            f'<div class="cols"><div><div class="kick">What we did</div><p style="margin:3px 0 8px">{E(p["summary"])}</p>'
+            f'<div class="cols"><div><div class="kick">What we did</div><p style="margin:3px 0 8px">{E(p["summary"] + ((" " + d["beyond"]["parent"]) if d.get("beyond", {}).get("parent") else ""))}</p>'
             f'<div class="quote">{E(p.get("quote") or d["big_idea"] + ".")}</div>'
             f'<div class="kick">Try at home (5 minutes)</div><ol class="tips">{li(p["try_home"])}</ol>'
             f'<div class="panel"><h3>When your child is stuck</h3><p style="margin:0">{E(p["when_stuck"])}</p></div></div>'

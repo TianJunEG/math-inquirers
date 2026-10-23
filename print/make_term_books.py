@@ -41,7 +41,7 @@ def text_of(path, p):
 
 
 EXTRAS = {'workbook': ['Quest_Log'], 'key': ['Home_Answers', 'Quest_Tutor_Notes'], 'home': ['Quest_Parent_Note']}
-NONCUT = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates'}
+NONCUT = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates', 'grid_mat', 'graph_mat'}
 
 
 def lesson_info(level, ln):
@@ -230,12 +230,21 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--level', type=int, default=1)
     ap.add_argument('--first', type=int, default=1)
-    ap.add_argument('--last', type=int, default=20)
+    ap.add_argument('--last', type=int, default=0, help='default: the last built lesson that is not a stub (up to 40)')
     ap.add_argument('--size', type=int, default=5, help='lessons per book')
     ap.add_argument('--per-term', type=int, default=10, help='lessons per term (term number = (lesson-1)//per_term + 1)')
     ap.add_argument('--ages', default=' (ages 6-8)')
     ap.add_argument('--kinds', default='workbook,key,home')
     a = ap.parse_args()
+    if not a.last:                       # Terms 3 and 4: stop at the last real built lesson, skipping stubs (data `stub: true`)
+        last = 0
+        for n in range(a.first, 41):
+            lp = os.path.join(ROOT, 'term', f'l{a.level}', 'lessons', f'l{n:02d}.json')
+            op = os.path.join(ROOT, 'term', f'l{a.level}', 'out', f'l{n:02d}', f'L{n:02d}_Workbook.pdf')
+            if not (os.path.exists(lp) and os.path.exists(op)): break
+            if json.load(open(lp, encoding='utf-8')).get('stub'): break
+            last = n
+        a.last = last or 20
     rows = []
     for k, start in enumerate(range(a.first, a.last + 1, a.size), start=1):
         ls = list(range(start, min(start + a.size, a.last + 1)))
