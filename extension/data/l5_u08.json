@@ -470,7 +470,7 @@
     ],
     "vlab": false,
     "alt": "angles on a straight line and angles at a point",
-    "mm": 2.5
+    "mm": 2.21
    },
    "parts": [
     {
@@ -1082,7 +1082,7 @@
      "D": "tl"
     },
     "alt": "trapezium ABCD",
-    "mm": 4.52
+    "mm": 4.45
    },
    "parts": [
     {
@@ -1227,7 +1227,7 @@
      "C": "br"
     },
     "alt": "triangle ABC with D on BC",
-    "mm": 4.31
+    "mm": 3.82
    },
    "parts": [
     {
