@@ -313,5 +313,8 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 - CHIP-NAMES: add tool names under the icons on the page-1 chip of the choose lessons (10, 20, 30, 40).
 
 ## 2026-10-23 (owner replies, fourth batch)
-- L6-TUTOR-ASKED: owner has asked a tutor to run the Level 6 extension code items in Scratch; Level 6 not for sale until the result is back.
-- LAWYER-ASKED: owner has asked the lawyer to approve the P1/P2 school booklet licence wording; P1 and P2 booklets stay held until approval.
+- L6-TUTOR-ASKED: RETRACTED (23 Oct, owner said the reply was copy-pasted and nothing was actually checked or asked). No tutor has been asked. Level 6 stays not for sale until a tutor really runs the code items in Scratch.
+- LAWYER-ASKED: RETRACTED (23 Oct, owner said the reply was copy-pasted and nothing was actually checked or asked). The lawyer has NOT been asked. P1 and P2 booklets stay held until the lawyer really approves the licence wording.
+
+## 2026-10-23 (owner clarification)
+- Owner: the reply codes were copy-pasted from the assistant's lists; no real-world checking was done. Rule from now on: a reply code that says something was done, sent, asked, tested or checked (for example *-ASKED, *-SENT, *-TESTED, *-CHECKED, *-OK on a physical test) is NOT recorded as done unless the owner says in their own words what they did. Decisions (yes/no choices) stand. Everything that needs a real-world check is collected in docs/owner_checks_outstanding.md.
