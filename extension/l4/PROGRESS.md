@@ -7,6 +7,7 @@ Pipeline: unit sources are `extension/l4/src/uNN.py` (helpers in `lib.py`); `pyt
 | 1 Factor Hunters | written, checked, gates ok, viewed |
 | 2 Big Number Puzzles | written, checked, gates ok, viewed |
 | 3 Operation Detectives | written, checked, gates ok, viewed |
-| 4-10 | not started |
+| 4 Fraction Frontier | written, checked, gates ok, viewed |
+| 5-10 | not started |
 
-Resume: next unit is 4 (Fraction Frontier).
+Resume: next unit is 5 (Decimal Detectives).

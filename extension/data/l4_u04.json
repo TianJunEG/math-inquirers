@@ -1,0 +1,1129 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 4,
+ "id": "L4U04",
+ "title": "Fraction Frontier",
+ "topic": "Fractions",
+ "holiday_lesson": 4,
+ "goal": "I can change between improper fractions and mixed numbers. I can find a fraction of a set and compare fractions with different denominators.",
+ "learn": {
+  "intro": "A fraction bar shows equal parts of one whole. A fraction of a set uses a bar model: divide the total by the denominator to find 1 unit.",
+  "example": {
+   "problem": "Write 17/5 as a mixed number.",
+   "figure": {
+    "type": "l4_bars",
+    "rows": [
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       }
+      ]
+     },
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       }
+      ]
+     },
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       }
+      ]
+     },
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "p"
+       },
+       {
+        "u": 1,
+        "k": "p"
+       },
+       {
+        "u": 1,
+        "k": "p"
+       }
+      ]
+     }
+    ],
+    "width_mm": 70,
+    "unit": 40,
+    "gap": 14,
+    "row_h": 40
+   },
+   "steps": [
+    "5 fifths make 1 whole. Divide: 17 ÷ 5 = 3 with 2 left.",
+    "There are 3 wholes and 2 fifths."
+   ],
+   "answer": "17/5 = 3 2/5."
+  },
+  "example2": {
+   "problem": "There are 48 stickers. 5/6 of them are gold. How many are gold?",
+   "figure": {
+    "type": "l4_bars",
+    "rows": [
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1
+       }
+      ],
+      "brace": {
+       "a": 0,
+       "b": 6,
+       "text": "48"
+      }
+     }
+    ],
+    "width_mm": 82,
+    "unit": 44,
+    "gap": 14,
+    "row_h": 40
+   },
+   "steps": [
+    "6 units = 48, so 1 unit = 48 ÷ 6 = 8.",
+    "Gold is 5 units: 5 × 8 = 40."
+   ],
+   "answer": "40 stickers are gold."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to do it",
+   "steps": [
+    "Improper to mixed: divide the top by the bottom.",
+    "Mixed to improper: whole × bottom + top, over the bottom.",
+    "Fraction of a set: 1 unit is the total ÷ the bottom number."
+   ]
+  },
+  "facts": {
+   "title": "Comparing",
+   "lines": [
+    "Same bottom: the greater top is more.",
+    "Same top: the smaller bottom is more.",
+    "Or compare with 1/2."
+   ]
+  },
+  "try": {
+   "id": "L4U04-L01",
+   "text": "Write 3 4/5 as an improper fraction. {b} / {b}",
+   "answer": {
+    "value": [
+     "19",
+     "5"
+    ],
+    "text": "19/5"
+   },
+   "explanation": "3 wholes are 3 × 5 = 15 fifths. 15 fifths and 4 more fifths make 19 fifths: 19/5."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U04-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Each bar is 1 whole cut into sixths. Look at the shaded parts.",
+   "figure": {
+    "type": "l4_bars",
+    "rows": [
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       }
+      ]
+     },
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       }
+      ]
+     },
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "p"
+       }
+      ]
+     }
+    ],
+    "width_mm": 70,
+    "unit": 44,
+    "gap": 10,
+    "row_h": 34
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many sixths are shaded? {b} sixths",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Write it as a mixed number. {b} {b}/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "5",
+       "6"
+      ],
+      "text": "2 5/6"
+     }
+    }
+   ],
+   "explanation": "There are 6 + 6 + 5 = 17 sixths shaded. 2 whole bars are shaded and 5 of the 6 parts of the third bar: 2 5/6."
+  },
+  {
+   "id": "L4U04-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Write each as a mixed number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "19/4 = {b} {b}/{b}",
+     "answer": {
+      "value": [
+       "4",
+       "3",
+       "4"
+      ],
+      "text": "4 3/4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "23/6 = {b} {b}/{b}",
+     "answer": {
+      "value": [
+       "3",
+       "5",
+       "6"
+      ],
+      "text": "3 5/6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "31/8 = {b} {b}/{b}",
+     "answer": {
+      "value": [
+       "3",
+       "7",
+       "8"
+      ],
+      "text": "3 7/8"
+     }
+    },
+    {
+     "label": "d",
+     "text": "40/5 = {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) 19 ÷ 4 = 4 remainder 3. (b) 23 ÷ 6 = 3 remainder 5. (c) 31 ÷ 8 = 3 remainder 7. (d) 40 ÷ 5 = 8 with nothing left, so it is exactly 8.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U04-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Write each as an improper fraction.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 2/5 = {b}/{b}",
+     "answer": {
+      "value": [
+       "17",
+       "5"
+      ],
+      "text": "17/5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 1/3 = {b}/{b}",
+     "answer": {
+      "value": [
+       "16",
+       "3"
+      ],
+      "text": "16/3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "2 7/8 = {b}/{b}",
+     "answer": {
+      "value": [
+       "23",
+       "8"
+      ],
+      "text": "23/8"
+     }
+    }
+   ],
+   "explanation": "(a) 3 × 5 + 2 = 17 fifths. (b) 5 × 3 + 1 = 16 thirds. (c) 2 × 8 + 7 = 23 eighths.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U04-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "A box has 36 pencils. 5/9 of them are red.",
+   "figure": {
+    "type": "l4_bars",
+    "rows": [
+     {
+      "label": "",
+      "segs": [
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1,
+        "k": "h"
+       },
+       {
+        "u": 1
+       },
+       {
+        "u": 1
+       },
+       {
+        "u": 1
+       },
+       {
+        "u": 1
+       }
+      ],
+      "brace": {
+       "a": 0,
+       "b": 9,
+       "text": "36 pencils"
+      }
+     }
+    ],
+    "width_mm": 120,
+    "unit": 40,
+    "gap": 14,
+    "row_h": 40
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many pencils are red? {b} pencils",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many are not red? {b} pencils",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "explanation": "9 units = 36, so 1 unit = 36 ÷ 9 = 4. Red is 5 units: 5 × 4 = 20 pencils. Not red is 4 units: 4 × 4 = 16 pencils."
+  },
+  {
+   "id": "L4U04-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "The number line is marked in thirds. Write the number each arrow shows.",
+   "figure": {
+    "type": "l4_numline",
+    "min": 0,
+    "max": 3,
+    "minor": 0.3333333333333333,
+    "major": 1,
+    "labels": {
+     "0": "0",
+     "1": "1",
+     "2": "2",
+     "3": "3"
+    },
+    "labels_only": true,
+    "marks": [
+     {
+      "v": 0.6666666666666666,
+      "kind": "arrow",
+      "text": "A"
+     },
+     {
+      "v": 1.3333333333333333,
+      "kind": "arrow",
+      "text": "B"
+     },
+     {
+      "v": 2.6666666666666665,
+      "kind": "arrow",
+      "text": "C"
+     }
+    ],
+    "width_mm": 150,
+    "W": 700
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A = {b}/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "3"
+      ],
+      "text": "2/3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B = {b} {b}/{b}",
+     "answer": {
+      "value": [
+       "1",
+       "1",
+       "3"
+      ],
+      "text": "1 1/3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C as an improper fraction = {b}/{b}",
+     "answer": {
+      "value": [
+       "8",
+       "3"
+      ],
+      "text": "8/3"
+     }
+    }
+   ],
+   "explanation": "Each step is 1/3. A is 2 steps from 0: 2/3. B is 1 whole and 1 more step: 1 1/3. C is 8 steps from 0, so 8/3, which is 2 2/3.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U04-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Mei has read 3/7 of her book. She has read 36 pages.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Pages in the whole book: {b}",
+     "answer": {
+      "value": [
+       "84"
+      ],
+      "text": "84"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many pages are left to read? {b} pages",
+     "answer": {
+      "value": [
+       "48"
+      ],
+      "text": "48"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     ""
+    ]
+   },
+   "explanation": "3 units = 36 pages, so 1 unit = 12 pages. The whole book is 7 units: 7 × 12 = 84 pages. Left is 4 units: 4 × 12 = 48 pages."
+  },
+  {
+   "id": "L4U04-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Circle the correct sign.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3/4  {circ:>|<}  5/8",
+     "answer": {
+      "value": [
+       ">"
+      ],
+      "text": ">"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4/6  {circ:>|<}  7/12",
+     "answer": {
+      "value": [
+       ">"
+      ],
+      "text": ">"
+     }
+    },
+    {
+     "label": "c",
+     "text": "3/8  {circ:>|<}  5/9",
+     "answer": {
+      "value": [
+       "<"
+      ],
+      "text": "<"
+     }
+    },
+    {
+     "label": "d",
+     "text": "5/6  {circ:>|<}  5/8",
+     "answer": {
+      "value": [
+       ">"
+      ],
+      "text": ">"
+     }
+    }
+   ],
+   "explanation": "(a) 3/4 = 6/8, and 6/8 is more than 5/8. (b) 4/6 = 8/12, and 8/12 is more than 7/12. (c) 3/8 is less than 1/2 and 5/9 is more than 1/2. (d) Both have 5 parts, and sixths are larger than eighths.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U04-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Write the fractions in order. Begin with the smallest.\n3/4   2/3   5/12   1/2\n{ll}",
+   "answer": {
+    "value": [
+     "5/12",
+     "1/2",
+     "2/3",
+     "3/4"
+    ],
+    "text": "5/12, 1/2, 2/3, 3/4",
+    "list": true
+   },
+   "explanation": "Write each as twelfths: 3/4 = 9/12, 2/3 = 8/12, 5/12, 1/2 = 6/12. In order: 5/12, 6/12, 8/12, 9/12."
+  },
+  {
+   "id": "L4U04-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Fill in the missing numbers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2/3 = {b}/12",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "15/20 = 3/{b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "9/12 = {b}/4",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "d",
+     "text": "4/5 = 12/{b}",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "explanation": "(a) 3 × 4 = 12, so 2 × 4 = 8. (b) 15 ÷ 5 = 3, so 20 ÷ 5 = 4. (c) 12 ÷ 3 = 4, so 9 ÷ 3 = 3. (d) 4 × 3 = 12, so 5 × 3 = 15.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U04-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Each pizza is cut into 8 slices. The children eat 27 slices.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many pizzas is that? {b} {b}/{b} pizzas",
+     "answer": {
+      "value": [
+       "3",
+       "3",
+       "8"
+      ],
+      "text": "3 3/8 pizzas"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many slices are in 5 whole pizzas? {b} slices",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "How many more slices make 4 whole pizzas? {b} slices",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "explanation": "(a) 27 ÷ 8 = 3 remainder 3, so 3 3/8 pizzas. (b) 5 × 8 = 40. (c) 4 pizzas are 32 slices, and 32 − 27 = 5."
+  },
+  {
+   "id": "L4U04-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "A rope is 2 2/3 m long. It is cut into pieces that are each 1/3 m long.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many pieces are there? {b} pieces",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Siti uses 5 pieces. How much rope is left? {b} m",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Each metre has 3 thirds. 2 2/3 m is 8 thirds, so there are 8 pieces. After 5 pieces, 3 pieces are left, and 3 thirds make 1 m."
+  },
+  {
+   "id": "L4U04-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha has 48 stickers. Mei gets 1/4 of the stickers. Ben gets 1/3 of the stickers that are left. How many stickers does Aisha keep? {b}",
+   "answer": {
+    "value": [
+     "24"
+    ],
+    "text": "24"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "1/4 of 48 is 12, so she has 48 − 12 = 36 left. 1/3 of 36 is 12. Then 36 − 12 = 24 stickers."
+  },
+  {
+   "id": "L4U04-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "How many?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "quarters in 5 wholes: {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "sixths in 3 wholes: {b}",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "c",
+     "text": "halves in 2 1/2: {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "explanation": "(a) 5 × 4 = 20. (b) 3 × 6 = 18. (c) 2 wholes make 4 halves, and 1/2 makes 1 more half: 5 halves."
+  },
+  {
+   "id": "L4U04-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Find the fraction. It has 7 on the bottom. It lies between 3 and 4, closer to 4 than to 3. Its top number is even.\n{b}/{b}",
+   "answer": {
+    "value": [
+     "26",
+     "7"
+    ],
+    "text": "26/7"
+   },
+   "space": {
+    "rows": [
+     "List:",
+     "",
+     ""
+    ]
+   },
+   "hint": "List the fractions between 3 and 4. Cross out those that do not fit.",
+   "explanation": "Between 3 and 4 with denominator 7: 22/7, 23/7, 24/7, 25/7, 26/7, 27/7. Even numerators: 22, 24, 26. 3 1/2 is 24.5/7, so closer to 4 means 25/7 or more. Only 26/7 fits."
+  },
+  {
+   "id": "L4U04-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A book took 2/5 of Mei's money and a toy took 1/3 of it. She has $24 left. How much money did Mei start with? ${b}",
+   "answer": {
+    "value": [
+     "90"
+    ],
+    "text": "90"
+   },
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Use 15 units. Book and toy are fractions of the same whole.",
+   "explanation": "2/5 = 6/15 and 1/3 = 5/15, so she spent 11/15. 4/15 is left. 4 units = $24, so 1 unit = $6 and 15 units = $90."
+  },
+  {
+   "id": "L4U04-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Siti reads 1/3 of a book on Monday, then 3/4 of the pages that remain on Tuesday. 20 pages are still unread. How long is the book? {b} pages",
+   "answer": {
+    "value": [
+     "120"
+    ],
+    "text": "120"
+   },
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     "",
+     ""
+    ]
+   },
+   "hint": "After Monday, 2/3 of the book is left. 1/4 of that is 20 pages.",
+   "explanation": "After Monday, 2/3 of the book is left. On Tuesday she reads 3/4 of that, so 1/4 of it is left. 1/4 of 2/3 is 1/6 of the book. 1/6 = 20 pages, so the book has 6 × 20 = 120 pages."
+  },
+  {
+   "id": "L4U04-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Think about fractions with denominator 20 that are greater than 1/4 and less than 3/5.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many are there? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which one is equal to 1/2? {b}/20",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "hint": "Write 1/4 and 3/5 as twentieths. List the ones in between.",
+   "explanation": "1/4 = 5/20 and 3/5 = 12/20. The fractions in between are 6/20, 7/20, 8/20, 9/20, 10/20 and 11/20: 6 fractions. 10/20 = 1/2."
+  },
+  {
+   "id": "L4U04-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 4: Unit fractions\nWrite each fraction as the sum of 2 different unit fractions (fractions with 1 on top).",
+   "parts": [
+    {
+     "label": "a",
+     "text": "5/6 = 1/{b} + 1/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "3"
+      ],
+      "text": "1/2 + 1/3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3/4 = 1/{b} + 1/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "4"
+      ],
+      "text": "1/2 + 1/4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "7/10 = 1/{b} + 1/{b}",
+     "answer": {
+      "value": [
+       "2",
+       "5"
+      ],
+      "text": "1/2 + 1/5"
+     }
+    }
+   ],
+   "hint": "Try 1/2 first. What is left?",
+   "explanation": "(a) 5/6 − 1/2 = 5/6 − 3/6 = 2/6 = 1/3. (b) 3/4 − 1/2 = 1/4. (c) 7/10 − 1/2 = 7/10 − 5/10 = 2/10 = 1/5."
+  },
+  {
+   "id": "L4U04-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "In a class, 2/5 of the children are girls. 1/3 of the girls wear glasses. 6 girls wear glasses. How many children are in the class? {b}",
+   "answer": {
+    "value": [
+     "45"
+    ],
+    "text": "45"
+   },
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     ""
+    ]
+   },
+   "hint": "6 girls is 1 unit of the girls. How many girls are there?",
+   "explanation": "6 girls are 1/3 of the girls, so there are 18 girls. 18 girls are 2/5 of the class, so 1/5 is 9 children and the class has 5 × 9 = 45 children."
+  },
+  {
+   "id": "L4U04-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Compare each pair. Circle the correct sign.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "7/9  {circ:>|<}  8/10",
+     "answer": {
+      "value": [
+       "<"
+      ],
+      "text": "<"
+     }
+    },
+    {
+     "label": "b",
+     "text": "11/12  {circ:>|<}  9/10",
+     "answer": {
+      "value": [
+       ">"
+      ],
+      "text": ">"
+     }
+    },
+    {
+     "label": "c",
+     "text": "14/15  {circ:>|<}  19/20",
+     "answer": {
+      "value": [
+       "<"
+      ],
+      "text": "<"
+     }
+    }
+   ],
+   "hint": "How far is each fraction from 1?",
+   "explanation": "(a) 7/9 is 2/9 short of 1 and 8/10 is 2/10 short of 1. Ninths are larger pieces than tenths, so 2/9 is more than 2/10 and 7/9 is less. (b) 1/12 is less than 1/10, so 11/12 is closer to 1: greater. (c) 1/15 is more than 1/20, so 14/15 is less than 19/20."
+  },
+  {
+   "id": "L4U04-C01",
+   "tier": "quiz",
+   "text": "Write 29/6 as a mixed number. {b} {b}/{b}",
+   "answer": {
+    "value": [
+     "4",
+     "5",
+     "6"
+    ],
+    "text": "4 5/6"
+   },
+   "explanation": "29 ÷ 6 = 4 remainder 5. That is 4 wholes and 5 sixths: 4 5/6."
+  },
+  {
+   "id": "L4U04-C02",
+   "tier": "quiz",
+   "text": "Write 5 3/8 as an improper fraction. {b}/{b}",
+   "answer": {
+    "value": [
+     "43",
+     "8"
+    ],
+    "text": "43/8"
+   },
+   "explanation": "5 × 8 + 3 = 43, so 5 3/8 = 43/8."
+  },
+  {
+   "id": "L4U04-C03",
+   "tier": "quiz",
+   "text": "Which is greater, 5/8 or 7/12? Circle it. {circ:5/8|7/12}",
+   "answer": {
+    "value": [
+     "5/8"
+    ],
+    "text": "5/8"
+   },
+   "explanation": "In twenty-fourths, 5/8 = 15/24 and 7/12 = 14/24. 15/24 is greater, so 5/8 is greater."
+  },
+  {
+   "id": "L4U04-C04",
+   "tier": "quiz",
+   "text": "4/9 of the beads in a bag are blue. There are 28 blue beads. How many beads are in the bag? {b}",
+   "answer": {
+    "value": [
+     "63"
+    ],
+    "text": "63"
+   },
+   "explanation": "4 units = 28, so 1 unit = 7. The bag is 9 units: 9 × 7 = 63 beads."
+  }
+ ]
+}
