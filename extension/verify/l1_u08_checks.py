@@ -72,11 +72,18 @@ def _():
 
 @check('L1U08-S04')
 def _():
+    o = only(orders(['Ali', 'Mei', 'Ravi'], lambda p: p['Ali'] < p['Mei'] < p['Ravi']))   # tallest first
+    tf = lambda b: 'True' if b else 'False'
+    return {'a': [tf(o[-1] == 'Ravi')], 'b': [tf(o.index('Ali') < o.index('Ravi'))], 'c': [tf(o[0] == 'Mei')]}
+
+
+@check('L1U08-S05')
+def _():
     nums = [4, 7, 10, 13, 16, 9]
     return {'a': s([n for n in nums if n % 2 == 1]), 'b': s([n for n in nums if n % 2 == 0])}
 
 
-@check('L1U08-S05')
+@check('L1U08-S06')
 def _():
     nums = range(5, 15)
     both = [n for n in nums if n > 8 and n % 2 == 1]
@@ -84,9 +91,9 @@ def _():
     return {'a': s([len(both)]), 'b': s(out)}
 
 
-@check('L1U08-S06')
+@check('L1U08-S07')
 def _():
-    f = ITEM['L1U08-S06']['figure']
+    f = ITEM['L1U08-S07']['figure']
     rule_a = lambda n: n % 2 == 1
     rule_b = lambda n: n > 10
     where = lambda n: ('ab' if rule_a(n) and rule_b(n) else 'a' if rule_a(n) else 'b' if rule_b(n) else 'out')
@@ -94,14 +101,22 @@ def _():
     return s([only(wrong)])
 
 
-@check('L1U08-S07')
+@check('L1U08-S08')
+def _():
+    nums = range(1, 25)
+    both = [n for n in nums if say(n, 3) and say(n, 4)]
+    only4 = [n for n in nums if say(n, 4) and not say(n, 3)]
+    return {'a': s(both), 'b': s([len(only4)])}
+
+
+@check('L1U08-S09')
 def _():
     sol = only(assign(['Ravi', 'Jenny', 'Wei'], ['apple', 'bun', 'pear'],
                       lambda a: a['Wei'] not in ('bun', 'pear') and a['Jenny'] != 'apple' and a['Ravi'] != 'pear'))
     return {'a': [sol['Ravi']], 'b': [sol['Jenny']], 'c': [sol['Wei']]}
 
 
-@check('L1U08-S08')
+@check('L1U08-S10')
 def _():
     opts = [8, 12, 14, 16, 20]
     a = only([n for n in opts if not say(n, 4)])
@@ -110,7 +125,7 @@ def _():
     return {'a': s([a]), 'b': [b]}
 
 
-@check('L1U08-S09')
+@check('L1U08-S11')
 def _():
     a = only([n for n in range(11, 20) if n % 2 == 1 and say(n, 5)])
     b = only([n for n in range(21, 30) if n % 2 == 0 and say(n, 3) and say(n, 4)])
@@ -123,16 +138,16 @@ def _():
     sol = only(assign(names, ['drum', 'flute', 'piano', 'bell'],
                       lambda a: a['Lily'] not in ('drum', 'flute', 'piano') and a['Jason'] != 'piano' and a['Aisha'] != 'piano'
                       and a['Jason'] not in ('bell', 'drum')))
-    return {'a': [sol['Lily']], 'b': [sol['Jason']], 'c': [sol['Kumar']], 'd': [sol['Aisha']]}
+    assert (sol['Lily'], sol['Jason']) == ('bell', 'flute')
+    return {'a': [sol['Kumar']], 'b': [sol['Aisha']]}
 
 
 @check('L1U08-T02')
 def _():
     nums = range(1, 21)
     both = [n for n in nums if say(n, 2) and say(n, 5)]
-    only5 = [n for n in nums if say(n, 5) and not say(n, 2)]
     out = [n for n in nums if not say(n, 2) and not say(n, 5)]
-    return {'a': s([len(both)]), 'b': s([len(only5)]), 'c': s([len(out)])}
+    return {'a': s([len(both)]), 'b': s([len(out)])}
 
 
 @check('L1U08-T03')

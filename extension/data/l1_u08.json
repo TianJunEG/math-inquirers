@@ -6,9 +6,9 @@
  "title": "Clues and sorting",
  "topic": "Logic and sorting",
  "holiday_lesson": 8,
- "goal": "I can use clues to find the answer. I can sort things into groups and fill in a logic grid.",
+ "goal": "I can use clues to find answers. I can sort things and fill in a logic grid.",
  "learn": {
-  "intro": "Clues help us find an answer without guessing. In a logic grid a tick means yes and a cross means no. Each row and each column gets one tick.",
+  "intro": "Clues help us find an answer without guessing. In a logic grid, a tick means yes and a cross means no.",
   "example": {
    "problem": "Ravi, Jenny and Wei each pick a different drink: milk, juice or tea. Ravi picks tea. Jenny does not pick milk. Who picks what?",
    "figure": {
@@ -23,7 +23,7 @@
      "juice",
      "tea"
     ],
-    "width_mm": 50,
+    "width_mm": 42,
     "marks": {
      "0,0": "no",
      "0,1": "no",
@@ -39,15 +39,13 @@
    "steps": [
     "Ravi picks tea. Tick it. Cross out the rest of that row and column.",
     "Jenny does not pick milk. Cross out that box.",
-    "Jenny's row has 1 empty box left: juice. Tick it.",
-    "Wei gets the drink that is left: milk."
+    "Jenny's row has 1 empty box left: juice. Wei gets milk."
    ],
    "answer": "Ravi picks tea, Jenny picks juice and Wei picks milk."
   },
   "howto": {
    "title": "How to use a logic grid",
    "steps": [
-    "Draw the grid. Put the names down the side.",
     "Read one clue at a time. Tick or cross the boxes.",
     "When a row or column has 1 empty box left, tick it.",
     "Check every clue at the end."
@@ -68,7 +66,7 @@
      "kite",
      "drum"
     ],
-    "width_mm": 50
+    "width_mm": 44
    },
    "answer": {
     "value": [
@@ -488,7 +486,7 @@
      "piano",
      "bell"
     ],
-    "width_mm": 56
+    "width_mm": 52
    },
    "parts": [
     {
@@ -519,13 +517,7 @@
    "id": "L1U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Sort the numbers 1 to 20 into the loops.",
-   "figure": {
-    "type": "loops",
-    "a": "said in 2s",
-    "b": "said in 5s",
-    "width_mm": 64
-   },
+   "text": "Imagine 2 loops. Loop A holds the numbers said counting in 2s. Loop B holds the numbers said counting in 5s. Use the numbers 1 to 20.",
    "parts": [
     {
      "label": "a",
@@ -539,7 +531,7 @@
     },
     {
      "label": "b",
-     "text": "Numbers outside both loops: {b}",
+     "text": "Numbers in no loop: {b}",
      "answer": {
       "value": [
        "8"
