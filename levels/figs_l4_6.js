@@ -269,6 +269,7 @@ const dotPlot = (sp) => {
   }
   Object.keys(counts).forEach(k => { for (let i = 0; i < counts[k]; i++) s += C(x0 + (k - sp.min) * step, y - 14 - rr - i * (rr * 2 + 4), rr, { fill: Y, w: 2.5 }); });
   if (sp.meanLine !== undefined) { const xm = x0 + (sp.meanLine - sp.min) * step; s += L(xm, 14, xm, y + 4, { w: 3, dash: '8 5', c: RED }) + T(xm, 12, sp.meanText || 'mean', { size: 17, fill: RED }); }
+  if (sp.extra) s += sp.extra(x0, x1, y);
   if (sp.axis) s += T(w / 2, y + 66, sp.axis, { size: 17, fill: GR });
   return svg(w, y + (sp.axis ? 76 : 50), s, sp.label || 'A dot plot', sp.width);
 };

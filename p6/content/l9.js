@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 (post-PSLE maths + coding bridge) — Lesson 9: Data Detectives (averages and data; lists, adding up, mean)
 // Every answer below was worked out by hand and checked (means computed exactly; Python programs run).
 
@@ -177,22 +178,17 @@ module.exports = {
     const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     return [
       H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9', { before: 0, keepNext: true }),
-      H.sub('a', 'What is the total?   ________          (b)  The average (mean)?   ________'),
-      H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }),
-      H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____'),
+      side(FG.dotPlot({ min: 0, max: 10, data: [4, 7, 2, 8, 9], w: 420, axis: 'books read', label: 'A dot plot of books read: one dot each at 2, 4, 7, 8 and 9 on a scale from 0 to 10.' }), [H.sub('a', 'What is the total?   ________          (b)  The average (mean)?   ________'), H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }), H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____')].join('')),
       H.q(2, 'Siti played 4 games. Her mean score was 17. Her first three scores were 15, 20 and 14.', { keepNext: true }),
-      H.sub('a', 'Her total for the 4 games?  ______          (b)  Her 4th score?  ______'),
-      H.sub('c', 'She plays a 5th game. What must she score to make her mean exactly 18?   ______'),
+      H.sub('a', 'Her total for the 4 games?  ______      (b)  Her 4th score?  ______      (c)  A 5th game: what score makes her mean exactly 18?  ______'),
       H.q(3, 'The data 6, 8, 10, 12, 14 has a mean of 10. Predict first: up, down or the same? Then work out the new mean.', { keepNext: true }),
       H.tbl(w3, [
         H.row(['Change', 'Up, down or the same?', 'New mean'].map((s, i) => H.cell(s, w3[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 45 }), H.cell('', w3[1], { h: 45 }), H.cell('', w3[2], { h: 45 })]))
+        ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 30 }), H.cell('', w3[1], { h: 30 }), H.cell('', w3[2], { h: 30 })]))
       ]),
       H.q(4, 'Seven P6 pupils get this pocket money each week:   $10,  $12,  $12,  $15,  $16,  $20,  $69', { keepNext: true }),
-      H.sub('a', 'Mean (total $154)  ____     (b)  Median  ____     (c)  Mode  ____'),
-      H.sub('d', 'How many of the pupils get less than the mean?   ________'),
-      H.sub('e', 'Jun says, “A typical pupil gets $22 a week.” Is that fair? Which average describes a typical pupil better? Explain.'),
-      ...H.lines(2),
+      side(FG.dotPlot({ min: 8, max: 22, data: [10, 12, 12, 15, 16, 20], w: 460, axis: 'dollars a week', fmt: v => '$' + v, tick: 2, extra: (x0, x1, y) => FG.T(x1 + 24, y - 20, '$69 →', { size: 18, anchor: 'end', fill: FG.RED }), label: 'A dot plot of pocket money from $8 to $22: dots at 10, 12 (two), 15, 16 and 20. The seventh pupil, $69, is off the scale to the right.' }), [H.sub('a', 'Mean (total $154)  ____     (b)  Median  ____     (c)  Mode  ____'), H.sub('d', 'How many of the pupils get less than the mean?   ________'), H.sub('e', 'Jun says, “A typical pupil gets $22 a week.” Is that fair? Which average describes a typical pupil better? Explain.')].join('')),
+            ...H.lines(1),
 
       H.q(5, 'Trace the code. The list called scores holds 5, 9, 6 and 12 (item 1 is 5, item 2 is 9, and so on). Fill in the trace table, one row for each time round the loop.', { pb: true, before: 0, keepNext: true }),
       side(codeSvg(meanProg, 'Code blocks: when green flag clicked, set total to 0, set i to 1, repeat 4 (change total by item i of scores, change i by 1), say total divided by 4.'),
