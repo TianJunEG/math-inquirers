@@ -45,7 +45,7 @@ def page02():
         rows += f'<div class="riddle"><span class="no">{i+1}</span><div class="rtext">{"<br>".join(clue_text(c) for c in cl)}</div><span class="ab"></span></div>'
     body = f'<div class="riddles">{rows}</div>{code_block(table)}'
     P = Page(no=2, title="Mystery Numbers", tier=2, topic="Numbers to 100: tens digit, ones digit, more and less",
-             strand="Number and Algebra - Whole Numbers", syll="1.1 to 1.5 (numbers to 100, compare)",
+             strand="Number and Algebra - Whole Numbers", syll="1.2, 1.5 (tens and ones, compare and order numbers)",
              ptype="Number riddles", mech="K1 code word + K7 test the clues (5 letters)",
              instr=["Find each mystery number.", "Write it in the box.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=5,
@@ -134,14 +134,16 @@ def page04():
     body = (f'<div class="blk"><p class="lead">The numbers of stickers are:</p><div class="chips">{chips}</div></div>'
             f'<div class="twocol"><ul class="clues">{clues}</ul>{howto_grid()}</div>'
             f'<div class="twocol"><div>{grid_table(names, nums)}</div><div>{ans}</div></div>')
+    wrong_ = [pp for pp in itertools.permutations(nums) if list(pp) != perm]
+    other_words = sorted({"".join(letter_of[v] for v in pp) for pp in wrong_ if "".join(letter_of[v] for v in pp).lower() in BIG})      # wrong placements that happen to spell a word
     P = Page(no=4, title="Sticker Grid", tier=2, topic="Comparing numbers to 100 (more, fewer, greatest, smallest)",
-             strand="Number and Algebra - Whole Numbers", syll="1.4, 1.5 (compare and order numbers)",
+             strand="Number and Algebra - Whole Numbers", syll="1.5 (compare and order numbers)",
              ptype="Logic grid", mech="K4 grid + K1 letter beside each number spells a word (5 letters)",
              mech_plain="Letters beside the numbers, read down the list, spell a word (5 letters)",
              instr=["Read the clues.", "Use the grid to cross and tick.", "Write each number, then its letter."],
              body=body, check="Read the five letters down your list. Do they spell a word?", check_boxes=5,
              key=dict(answers=", ".join(f"{n}: {truth[n]} ({letter_of[truth[n]]})" for n in names), check_result=f"Letters down the list: {word}"),
-             note="Five children, five numbers, and each number has a letter. A wrong placement puts the letters in the wrong order, so the word does not appear. The page shows a worked example of crosses and ticks. Clues on this page: " + ", ".join(w for k, w in (("gt", "more than"), ("lt", "fewer than"), ("max", "greatest"), ("min", "smallest"), ("second", "second greatest")) if any(c[0] == k for c in cl)) + ".",
+             note="Five children, five numbers, and each number has a letter. Almost every wrong placement puts the letters in an order that is not a word (" + str(len(wrong_) - len(other_words)) + " of the " + str(len(wrong_)) + " wrong placements). " + ("The letters can also be arranged into " + " and ".join(other_words) + ", which are words too, so a pupil who gets one of those must be sent back to the clues; this is kept on purpose, because it stops a pupil from guessing the word from the letters. " if other_words else "") + "The page shows a worked example of crosses and ticks. Clues on this page: " + ", ".join(w for k, w in (("gt", "more than"), ("lt", "fewer than"), ("max", "greatest"), ("min", "smallest"), ("second", "second greatest")) if any(c[0] == k for c in cl)) + ".",
              seed=404)
     sols = solve_compare(names, nums, cl)
     P.v("V1 exactly one assignment satisfies all clues", len(sols) == 1 and sols[0] == truth, f"{len(sols)} solution(s)")
@@ -151,6 +153,9 @@ def page04():
     wrong = [pp for pp in itertools.permutations(nums) if list(pp) != perm]
     real = sum("".join(letter_of[v] for v in pp).lower() in BIG for pp in wrong)
     P.v("V3 wrong placements that still spell a word <= 5% (large word list)", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
+    sw_words = [1 for i in range(5) for j in range(i + 1, 5) if (lambda q: "".join(letter_of[v] for v in q).lower() in BIG)(tuple(perm[:i] + [perm[j]] + perm[i + 1:j] + [perm[i]] + perm[j + 1:]))]
+    P.v("V3b no swap of two children's numbers spells a word (all 10 swaps)", not sw_words, len(sw_words))
+    P.v("V3c the arrangements that do spell a word are listed in the teacher note (the note does not claim there are none)", all(w in P["note"] for w in other_words), other_words)
     P.v("V4 guess resistance: the five letters can be arranged into at least 2 common words", real >= 1 and sum("".join(letter_of[v] for v in pp).lower() in COMMON for pp in wrong) >= 1, f"{real} other words")
     P["cv"] = dict(rate=1 - real / len(wrong), single_total=len(wrong), single_detected=len(wrong) - real)
     P["model"] = dict(truth=list(word), domains=[list(word)] * 5, check=letters_check(), perm=list(range(5)))
@@ -253,14 +258,17 @@ def page07():
     slots = "".join(f'<div class="qslot"><span class="qn">{ordinal(i+1)}</span><span class="ab wide"></span></div>' for i in range(5))
     body = (f'<div class="kids">{kids}</div>'
             f'<div class="twocol"><div class="blk"><p class="lead">The queue. The front is 1st.</p><div class="qslots">{slots}</div></div><ul class="clues">{clues}</ul></div>')
-    P = Page(no=7, title="The Queue", tier=2, topic="Ordinal numbers: 1st to 5th, in front of and behind",
+    kinds_ = {c[0] for c in cl}
+    rel_words = [w for k, w in (("front", "in front of"), ("behind", "behind"), ("next", "next to")) if k in kinds_]
+    ord_used = sorted({c[2] for c in cl if c[0] == "pos"})
+    P = Page(no=7, title="The Queue", tier=2, topic="Ordinal numbers: 1st to 5th, " + (" and ".join(rel_words) if rel_words else "positions"),
              strand="Number and Algebra - Whole Numbers", syll="1.7 (ordinal numbers first to tenth)",
              ptype="Logic (queue)", mech="K1 shirt letters read 1st to 5th spell a word + K4 each child used once",
              instr=["The children stand in a queue.", "Read the clues.", "Write each name in its place."],
              mech_plain="Shirt letters read from 1st to 5th spell a word (5 letters)",
              body=body, check="Read the shirt letters from 1st to 5th. Do they spell a word?", check_boxes=5,
              key=dict(answers=", ".join(f"{ordinal(i+1)} {n}" for i, n in enumerate(order)), check_result=f"Word: {word}"),
-             note="The children in the top row are not in queue order. Clues on this page: " + ", ".join(w for k, w in (("pos", "ordinal numbers (2nd, 3rd)"), ("first", "first"), ("last", "last"), ("front", "in front of"), ("behind", "behind"), ("next", "next to")) if any(c[0] == k for c in cl)) + ". Two or more clues compare two children, so the pupil must combine them. Syllabus ordinals go to 10th; this page uses 1st to 5th.",
+             note="The children in the top row are not in queue order. Clues on this page: " + ", ".join(w for k, w in (("pos", "ordinal numbers (" + ", ".join(ordinal(n) for n in ord_used) + ")"), ("first", "first"), ("last", "last"), ("front", "in front of"), ("behind", "behind"), ("next", "next to")) if any(c[0] == k for c in cl)) + ". Two or more clues compare two children, so the pupil must combine them. Syllabus ordinals go to 10th; this page uses 1st to 5th.",
              seed=707)
     sol = solve_queue(names, cl)
     P.v("V1 exactly one queue order satisfies the clues", len(sol) == 1 and list(sol[0]) == order, len(sol))

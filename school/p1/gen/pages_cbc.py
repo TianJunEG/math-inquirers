@@ -134,7 +134,7 @@ def cbc_page(no, spec, title, instr, strand, syll, topic_note):
 def page01():
     return cbc_page(1, dict(id="CBC-11", picture="rocket", bank="place", tier=1, seed=201), "Colour the Rocket",
         ["Find the missing number in each part.", "Find it in the key.", "Colour the part with that colour."],
-        "Number and Algebra - Whole Numbers", "1.1 to 1.3 (count a set, tens and ones)",
+        "Number and Algebra - Whole Numbers", "1.1, 1.2 (count a set, tens and ones)",
         "Every part asks a tens-and-ones question: how many ones or tens a number has, or the missing part of a number made of tens and ones. The answers are 1 to 5.")
 
 def page12():

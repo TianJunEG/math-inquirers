@@ -194,7 +194,7 @@ def _w100(kind, rng):
         t = rng.randint(1, 6) * 10; a = rng.randint(1, 3) * 10 + rng.randint(1, 9)
         return f"{BOX} + {t} = {a + t}", a
     if kind == "miss-":                                  # total - [] = result  (the number taken away is missing)
-        a = rng.randint(4, 9) * 10 + rng.randint(5, 9); b = rng.randint(2, 4) * 10 + rng.randint(1, 4)
+        a = rng.randint(4, 9) * 10 + rng.randint(5, 9); b = rng.randint(2, 4) * 10        # the number taken away is a whole ten (2-digit and tens)
         return f"{a} &minus; {BOX} = {a - b}", b
 
 def solve_w100(text):

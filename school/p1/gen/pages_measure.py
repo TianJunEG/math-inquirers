@@ -172,7 +172,7 @@ def page17():
     rows = "".join(f'<div class="lrow"><span class="no">{i+1}</span><div class="lsvg">{s}</div><span class="ab"></span> <span class="unit">cm</span></div>' for i, s in enumerate(svgs))
     body = f'<div class="lrows">{rows}</div>{code_block(table)}'
     P = Page(no=17, title="How Long?", tier=1, topic="Length: measure in centimetres",
-             strand="Measurement and Geometry - Measurement", syll="Length 1.1 to 1.3 (measure in cm, abbreviation cm)",
+             strand="Measurement and Geometry - Measurement", syll="Length 1.1, 1.2 (measure in cm, abbreviation cm)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
              instr=["Each strip starts at 0 on its ruler.", "Write how long it is in cm.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
@@ -432,11 +432,32 @@ def reversed_clues(cl):
         for sub in itertools.combinations(range(len(cl)), r):
             yield sub
 
+def misreadings(known, cl):
+    """every way a pupil can misread the clues, as the rows they would draw: each of the three clues has its more/fewer exchanged or not, and its
+    starting fruit exchanged (Apple for Banana and the other way round) or not; the correct reading (no change at all) is left out"""
+    other = {"Apple": "Banana", "Banana": "Apple"}
+    for flips in itertools.product((0, 1), repeat=len(cl)):
+        for swaps in itertools.product((0, 1), repeat=len(cl)):
+            if not any(flips) and not any(swaps): continue
+            alt = dict(known)
+            for i, c in enumerate(cl):
+                base = other[c[2]] if swaps[i] else c[2]
+                d = c[3] if c[0] == "more" else -c[3]
+                alt[c[1]] = alt[base] + (-d if flips[i] else d)
+            yield flips, swaps, alt
+
+def passes_checks(alt, total, comb, xb, yb):
+    """does a pupil who drew `alt` and answers a) and b) from it pass both checks of the strip? (any of the fruits tied for most may be named)"""
+    if min(alt.values()) < 0 or sum(alt.values()) != total: return False
+    top = max(alt.values()); bans = alt[xb] - alt[yb]
+    return any(alt[f] + bans == comb for f in alt if alt[f] == top)
+
 def page20():
     rng = random.Random(2020)
     while True:
         a = rng.randint(2, 5); b = rng.randint(3, 5)
         d1 = rng.randint(2, 4); d2 = rng.randint(1, 2); d3 = rng.randint(1, 2)
+        if d1 == d2: continue                              # the first two clues must add different amounts, or Apple and Banana can be exchanged unseen
         if d2 == d3: continue                              # Grape = Banana + d2 and Pear = Banana - d3 must not be mirror images
         cnt = {"Apple": a, "Banana": b, "Orange": a + d1, "Grape": b + d2, "Pear": b - d3}
         if min(cnt.values()) < 1 or max(cnt.values()) > 9: continue
@@ -463,6 +484,7 @@ def page20():
                 alt[c[1]] = base + sgn * (c[3] if c[0] == "more" else -c[3])
             if min(alt.values()) < 0: continue                              # cannot be drawn: the pupil notices at once
             if sum(alt.values()) == total: ok = False
+        if ok and any(passes_checks(alt, total, comb, xb, yb) for fl, sw, alt in misreadings(known, cl)): ok = False       # no misreading of more/fewer or of the starting fruit gets through
         if ok: break
     rows = ""
     for f in FRUIT:
@@ -474,7 +496,7 @@ def page20():
             f'<div class="ansline">a) Most children chose <span class="ab wide"></span>.</div>'
             f'<div class="ansline">b) <b>{xb}</b> has <span class="ab"></span> more than <b>{yb}</b>.</div>')
     chk_lines = [f"Count all the circles. Is the total {total}?",
-                 f"Count the circles in the row you chose in a). Add your answer to b). Is the sum {comb}?"]
+                 f"Add the circles in your a) row to your b) answer. Is it {comb}?"]
     P = Page(no=20, title="Fruit Graph", tier=2, topic="Picture graphs: read, complete and answer",
              strand="Statistics - Data Analysis", syll="Picture graphs (read and interpret picture graphs)",
              ptype="Graph detective", mech="K3 the total of all circles, and a second sum that uses the answers to a) and b) (neither is a clue)",
@@ -482,7 +504,7 @@ def page20():
              instr=["Two rows are done.", "Use the clues to draw the other rows.", "Then answer a and b."],
              body=body, check=" ".join(chk_lines), check_lines=chk_lines, check_boxes=None,
              key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {bans}", check_result=f"Total {total} circles; second sum {cnt[most]} + {bans} = {comb}"),
-             note=f"Each circle stands for one child (a scale of 1). The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total. The second sum tests a) and b): it is {comb} only when the right row is chosen and b) is right. Question b) names two other fruits, so it does not give away the answer to a). More and fewer are not mirror images here (the Grape clue is {d2} and the Pear clue is {d3}), so a pupil who swaps the two words gets a different total.",
+             note=f"Each circle stands for one child (a scale of 1). The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total. The second sum tests a) and b): it is {comb} only when the right row is chosen and b) is right. The three clues start from Apple or Banana; a pupil who starts a clue from the wrong one of the two, or who reads more as fewer, also gets a wrong total or a wrong second sum (every such mix was tried). Question b) names two other fruits, so it does not give away the answer to a). More and fewer are not mirror images here (the Grape clue is {d2} and the Pear clue is {d3}), and the first two clues add different amounts ({d1} and {d2}), so a pupil who swaps the two words or swaps Apple and Banana gets a different total or a different second sum.",
              seed=2020)
     sols = solve_graph(known, cl)
     P.v("V1 exactly one set of row counts satisfies the clues (total not used; all combinations tested)", len(sols) == 1 and sols[0] == cnt, len(sols))
@@ -509,6 +531,12 @@ def page20():
             alt[c[1]] = alt[c[2]] + sgn * (c[3] if c[0] == "more" else -c[3])
         rev_ok.append(min(alt.values()) < 0 or sum(alt.values()) != total)
     P.v("V3e reading more as fewer (or fewer as more) on any set of clues never passes the total", all(rev_ok), rev_ok)
+    mis = [(fl, sw) for fl, sw, alt in misreadings(known, cl) if passes_checks(alt, total, comb, xb, yb)]
+    n_mis = sum(1 for _ in misreadings(known, cl))
+    P.v("V3f every misreading of the three clues (more/fewer exchanged, Apple and Banana exchanged, any mix: %d readings) fails the total or the second sum" % n_mis, not mis, mis[:3])
+    sw12 = {k: v for k, v in known.items()}
+    alt12 = dict(known); alt12["Orange"] = known["Banana"] + d1; alt12["Grape"] = known["Apple"] + d2; alt12["Pear"] = known["Banana"] - d3
+    P.v("V3g the first two clues read with Apple and Banana exchanged do not pass both checks (the +%d and +%d clues differ)" % (d1, d2), not passes_checks(alt12, total, comb, xb, yb) and d1 != d2)
     P["cv"] = dict(rate=det / tot, single_total=tot, single_detected=det)
     P["counts"] = cnt
     unk = ["Orange", "Grape", "Pear"]

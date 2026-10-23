@@ -231,7 +231,9 @@ def _sub(tier):
 
 # ------------------------------------------------------------------ multiplication tables 2, 3, 4, 5, 10
 def pairs_for(n):
-    return [(x, n // x) for x in (2, 3, 4, 5, 10) if n % x == 0 and 1 <= n // x <= 10]
+    """every way to write n as x times y with x and y from 2 to 10 and at least one of them in the tables of 2, 3, 4, 5 and 10; (3, 4) and (4, 3) are two facts"""
+    T_ = (2, 3, 4, 5, 10)
+    return [(x, n // x) for x in range(2, 11) if n % x == 0 and 2 <= n // x <= 10 and (x in T_ or n // x in T_)]
 def _mult(tier):
     def pr(a, r):
         p = pairs_for(a); return r.choice(p) if p else None
@@ -239,28 +241,30 @@ def _mult(tier):
         p = pr(a, r)
         if not p: return None
         x, y = p if r.random() < 0.5 else p[::-1]
-        return EQ([f"{x} {X} {y} = {BOX}"], a, form="times")
+        q = EQ([f"{x} {X} {y} = {BOX}"], a, form="times"); q.sig = ("mult", x, y); return q
     def grp(a, r):
         p = pr(a, r)
         if not p: return None
-        return SEM([f"{p[0]} groups of {p[1]}", f"is {BOX}"], lambda v, t_=a: v == t_, str(a), form="groups of")
+        q = SEM([f"{p[0]} groups of {p[1]}", f"is {BOX}"], lambda v, t_=a: v == t_, str(a), form="groups of"); q.sig = ("mult", p[0], p[1]); return q
     def rep(a, r):
         p = [q for q in pairs_for(a) if q[0] <= 5] or None
         if not p: return None
         x, y = r.choice(p)
         q = SEM([" + ".join([str(y)] * x), f"= {BOX}"], lambda v, t_=a: v == t_, str(a), form="repeated addition")
         q.extra = lambda ans, x=x, y=y: x * y == ans
+        q.sig = ("mult", x, y)
         return q
     def multiply(a, r):
         p = pr(a, r)
         if not p: return None
-        return SEM([f"Multiply {p[1]} by {p[0]}.", f"{BOX}"], lambda v, t_=a: v == t_, str(a), form="multiply")
+        q = SEM([f"Multiply {p[1]} by {p[0]}.", f"{BOX}"], lambda v, t_=a: v == t_, str(a), form="multiply"); q.sig = ("mult", p[1], p[0]); return q
     def arr(a, r):
         c = [(x, y) for x, y in pairs_for(a) if x <= 5 and y <= 10] + [(y, x) for x, y in pairs_for(a) if y <= 5 and x <= 10]
         if not c: return None
         rows, cols = r.choice(c)
         q = SEM(["How many dots?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
         q.extra = lambda ans, rows=rows, cols=cols: rows * cols == ans
+        q.sig = ("mult", rows, cols)
         return q
     def grpart(a, r):
         c = [(x, y) for x, y in pairs_for(a) if x <= 5 and y <= 10]
@@ -268,6 +272,7 @@ def _mult(tier):
         n, per = r.choice(c); art = A.groups(n, per)
         q = SEM(["How many dots", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
         q.extra = lambda ans, n=n, per=per: n * per == ans
+        q.sig = ("mult", n, per)
         return q
     def grp_short(a, r):
         q = grpart(a, r)
@@ -276,18 +281,18 @@ def _mult(tier):
     def bags(a, r):
         p = pr(a, r)
         if not p: return None
-        return SEM([f"{p[0]} bags, {p[1]} in each.", f"Altogether {BOX}"], lambda v, t_=a: v == t_, str(a), form="bags")
+        q = SEM([f"{p[0]} bags, {p[1]} in each.", f"Altogether {BOX}"], lambda v, t_=a: v == t_, str(a), form="bags"); q.sig = ("mult", p[0], p[1]); return q
     forms = [times, grp, rep, multiply, arr, grpart, grp_short, bags]
     if tier == 2:
         def plus(a, r):
             for _ in range(30):
                 z = r.randint(1, 9); p = pairs_for(a - z)
-                if p: x, y = r.choice(p); return EQ([f"{x} {X} {y} + {z} = {BOX}"], a, form="times plus")
+                if p: x, y = r.choice(p); q = EQ([f"{x} {X} {y} + {z} = {BOX}"], a, form="times plus"); q.sig = ("multplus", x, y, z); return q
             return None
         def times_as(a, r):
             p = pr(a, r)
             if not p or p[0] == 10: return None
-            return SEM([f"A has {p[1]}. B has {p[0]}", f"times as many. B: {BOX}"], lambda v, t_=a: v == t_, str(a), form="times as many")
+            q = SEM([f"A has {p[1]}. B has {p[0]}", f"times as many. B: {BOX}"], lambda v, t_=a: v == t_, str(a), form="times as many"); q.sig = ("timesas", p[1], p[0]); return q
         forms += [plus, times_as]
     return forms
 
@@ -296,7 +301,8 @@ def _div(tier):
     ds = (2, 3, 4, 5, 10)
     def mk(a, r, f_):
         d = ch(r, ds); n = a * d
-        return f_(a, d, n, r) if n <= 100 else None
+        if n > 100: return None
+        q = f_(a, d, n, r); q.sig = ("div", n, d); return q
     def div(a, r): return mk(a, r, lambda q, d, n, r: EQ([f"{n} {D} {d} = {BOX}"], q, form="divide"))
     def share(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Share {n} sweets equally", f"among {d} children. Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="share"))
     def group(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} pencils, {d} in a box.", f"Boxes: {BOX}"], lambda v, t_=q: v == t_, str(q), form="group"))
@@ -304,7 +310,7 @@ def _div(tier):
     def mfac(a, r): return mk(a, r, lambda q, d, n, r: EQ([f"{BOX} {X} {d} = {n}"], q, form="missing factor"))
     def sharer(a, r):
         d = ch(r, (3, 4, 5)); n = a * d
-        return SEM([f"Mia shares {n} stickers", f"with her {d - 1} friends.", f"Each person: {BOX}"], lambda v, t_=a: v == t_, str(a), form="sharer counted") if n <= 100 else None
+        q = SEM([f"Mia shares {n} stickers", f"with her {d - 1} friends.", f"Each person: {BOX}"], lambda v, t_=a: v == t_, str(a), form="sharer counted"); q.sig = ("div", n, d); return q if n <= 100 else None
     def related(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{d} {X} {q} = {n}", f"so {n} {D} {d} = {BOX}"], lambda v, t_=q: v == t_, str(q), form="related facts"))
     def short(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} {D} {d}", f"= {BOX}"], lambda v, t_=q: v == t_, str(q), form="divide, two lines"))
     forms = [div, share, group, into, mfac, sharer, related, short]
@@ -453,7 +459,7 @@ def _time(tier):
                 q = f(a, r)
                 if q is None: return None
                 q.extra = lambda ans: __import__("art").decode_clock(q.art.meta) == ans; return q
-            g.__name__ = f.__name__; return g
+            g.__name__ = f.__name__; g.pref = 1; return g          # a clock sheet shows clock faces wherever one fits (one face per time)
         def pastto(a, r):
             h, m = a
             if m == 0: return None
@@ -468,9 +474,12 @@ def _time(tier):
             d = ch(r, [5, 10, 15, 20, 25]); s = addm(a, d)
             return SEM([f"It is {hm(s)}.", f"{d} minutes before: {BOX}"], lambda v, t_=a: v == t_, hm(a), form="minutes before")
         def hour(a, r):
-            k = ch(r, [1, 2]); s = addm(a, -60 * k)
+            k = ch(r, [1, 2, 3]); s = addm(a, -60 * k)
             return SEM([f"It is {hm(s)}.", f"{k} hour{'s' if k > 1 else ''} later: {BOX}"], lambda v, t_=a: v == t_, hm(a), form="hours later")
-        return [wrap(clock_stack), wrap(clock_row), wrap(clock_short), pastto, later, before, hour]
+        def hmlater(a, r):
+            k = ch(r, [1, 2]); d = ch(r, [5, 10, 15, 20, 25, 30, 40, 45]); s = addm(a, -(60 * k + d))
+            return SEM([f"It is {hm(s)}.", f"{k} h {d} min later: {BOX}"], lambda v, t_=a: v == t_, hm(a), form="hours and minutes later")
+        return [wrap(clock_stack), wrap(clock_row), wrap(clock_short), pastto, later, before, hour, hmlater]
     def conv(a, r):
         h, m = divmod(a, 60)
         if h == 0: return None
@@ -768,7 +777,7 @@ def build_banks():
     B["sub"] = Bank("sub", "Subtraction", "Subtraction within 1000, with renaming", "Subtract. Find the answer in the key. Colour the part with that colour.",
         {1: T([125, 237, 346, 458, 569], range(0, 1001), _sub(1)), 2: T([158, 247, 364, 475, 586], range(0, 1001), _sub(2))})
     B["mult"] = Bank("mult", "Multiplication", "Multiplication: tables of 2, 3, 4, 5 and 10", "Multiply. Find the answer in the key. Colour the part with that colour.",
-        {1: T([6, 12, 15, 20, 30], range(0, 101), _mult(1)), 2: T([24, 28, 35, 40, 45], range(0, 101), _mult(2))})
+        {1: T([12, 15, 18, 20, 30], range(0, 101), _mult(1), maxuse={15: 2}), 2: T([24, 28, 35, 40, 45], range(0, 101), _mult(2))})   # 15 = 3 x 5 or 5 x 3 only
     B["div"] = Bank("div", "Sharing", "Division: sharing and grouping", "Share or group. Find the answer in the key. Colour the part with that colour.",
         {1: T([2, 3, 4, 5, 6], range(0, 101), _div(1)), 2: T([6, 7, 8, 9, 10], range(0, 101), _div(2))})
     fr_dom = [(a, b) for b in range(2, 13) for a in range(1, b)]

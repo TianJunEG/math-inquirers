@@ -34,11 +34,34 @@ def rec(name, ok, detail=""):
 THRESH = 0.95
 
 # ---------------------------------------------------------------------------------------------- 1. banks
+def _amount(tok):
+    """a printed amount in a choose-one-of-three line: 245, $2.45 or 35¢ -> the value as the key stores it (cents for money)"""
+    m = re.fullmatch(r"\$(\d+)\.(\d\d)", tok)
+    if m: return int(m[1]) * 100 + int(m[2])
+    return int(tok.rstrip("\u00a2"))
+def design_rules(q, tier, bank):
+    """rules from the third audit that every question of every bank must keep (checked on the printed text and the art)"""
+    out = []; text = " ".join(q.lines)
+    head = q.lines[0] if q.lines else ""
+    if len(q.lines) == 2 and (head in ("Greatest:", "Smallest:", "Middle number:") or re.fullmatch(r"Which is (odd|even)\?", head)):
+        offered = [_amount(t) for t in q.lines[1].split()]
+        if len(offered) != 3 or any(v not in tier.key for v in offered): out.append(("choose-one-of-three has a number that is not on the key (the key alone would answer it)", q.lines))
+    if q.art is not None and q.art.meta.get("kind") == "clock":
+        import art as A
+        h_, m_ = A.decode_clock(q.art.meta)
+        if A.hand_gap(h_, m_) < 40.0 - 1e-6: out.append(("clock hands less than 40 degrees apart", (h_, m_)))
+    if q.art is not None and q.art.meta.get("kind") == "ruler" and q.art.meta["start"] != 0: out.append(("ruler strip does not start at 0", q.art.meta))
+    if LEVEL == 2:
+        if re.search(r"\$\d+\.\d\d\s*[+\u2212-]|[+\u2212-]\s*\$\d+\.\d\d", text) or re.search(r"Change|Paid", text): out.append(("add or subtract with decimal money (Primary 3)", q.lines))
+        if re.search(r"\b1 (kg|m) \u2212", text) or re.search(r"\d+ kg [+\u2212] \d+ g|\d+ g [+\u2212] \d+ kg", text): out.append(("kg to g or m to cm conversion (Primary 3)", q.lines))
+    return out
+
 for bid, bank in BANKS.items():
     for t, tier in bank.tiers.items():
         tag = f"bank {bid} tier {t}"
         rec(f"{tag}: key has five distinct values inside the domain", len(set(tier.key)) == 5 and all(k in tier.domain for k in tier.key))
         bad, made, forms, nonum = [], 0, set(), 0
+        rule_bad = []
         for ai, ans in enumerate(tier.key):
             for f in tier.forms:
                 for k in range(25):
@@ -46,6 +69,7 @@ for bid, bank in BANKS.items():
                     q = f(ans, rng)
                     if q is None: continue
                     made += 1; forms.add(f.__name__)
+                    rule_bad += design_rules(q, tier, bank)
                     sol = [v for v in tier.domain if q.holds(v)]
                     if sol != [ans]: bad.append((f.__name__, q.lines, sol))
                     solved = " ".join(q.sol)
@@ -74,6 +98,7 @@ for bid, bank in BANKS.items():
                         terms, blank = q.seq
                         if terms[blank] != ans: bad.append((f.__name__, "sequence", q.seq))
         rec(f"{tag}: {made} sample questions each have exactly one answer in the domain, equal to the intended one ({len(forms)} forms)", not bad and made > 200, str(bad[:2])[:150])
+        rec(f"{tag}: {len(rule_bad)} design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers from 0, no decimal-money sums or kg/g conversions at Primary 2)", not rule_bad, str(rule_bad[:2])[:200])
         report[tag] = dict(questions=made, forms=sorted(forms), bad=len(bad))
 
 # the evaluator must be able to fail: a wrong answer, and a wrong question text, must both be rejected
@@ -175,6 +200,8 @@ for sh in sheets:
             if not TC.matches(v_, it["answer"]) or it["answer"] not in sh["key"]: ev_bad.append((rid, q.lines, v_, it["answer"]))
         except TC.Unparsed: ev_bad.append((rid, q.lines, "unparsed"))
     rec(f"{wid}: independent evaluator re-solves all {len(items)} printed questions from their text and picture; each equals the answer coloured and that answer is a key value", not ev_bad, str(ev_bad[:2]))
+    rb = [x for it in items.values() for x in design_rules(it["q"], tier, bank)]
+    rec(f"{wid}: design rules hold on every printed question (choose-one-of-three numbers all on the key, clocks >= 40 degrees, rulers from 0, no Primary 3 money or mass items)", not rb, str(rb[:2])[:200])
     # dedupe by what a question IS (sorted numbers, wording without line breaks, decoded picture), not by its text
     sigs = [S.canon(it["q"]) for it in items.values()]
     rec(f"{wid}: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)", len(set(sigs)) == len(sigs), f"{len(sigs) - len(set(sigs))} repeated")
@@ -301,6 +328,8 @@ for sh in sheets:
         body = h[h.index("<body>"):]
         cols = set(c.lower() for c in re.findall(r"#[0-9a-fA-F]{3,6}\b", h))
         rec(f"{wid} {kind}: html uses only black and white (#000, #fff)", cols <= {"#000", "#fff", "#000000", "#ffffff"} and not re.search(r"(?:fill|stroke|color|background)\s*[:=]\s*[\"']?(red|blue|green|gray|grey|orange|yellow)", h, re.I), str(sorted(cols))[:60])
+        bxw = [float(x) for x in re.findall(r'<rect class="bx" data-l="\d+" data-t="\u25a1"[^>]*? width="([\d.]+)"', h)]
+        if kind == "pupil": rec(f"{wid} pupil: every blank box a pupil writes in is at least 5 mm wide ({len(bxw)} boxes, smallest {min(bxw) if bxw else '-'} mm)", all(w >= 5.0 for w in bxw))
         sw = [float(x) for x in re.findall(r'stroke-width[=:]\s*"?([\d.]+)', h)]
         rec(f"{wid} {kind}: outline width 0.9 mm and no line thinner than 0.3 mm", "stroke-width:0.9" in h and min(sw) >= 0.3, f"min {min(sw)}")
         # 1-bit legibility at 150 dpi

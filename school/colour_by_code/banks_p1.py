@@ -145,6 +145,7 @@ def _count(tier):
         q = Q(lines, ap((terms, blank, "")), form=("back " if back else "") + f"{s}s" + (", rule shown" if rule else ""))
         q.sol = [mark(l, str(a)) for l in lines]
         q.seq = (terms, blank)
+        q.sig = ("seq", tuple(terms), blank)                 # the same four numbers with the same gap is the same exercise, with or without the rule line
         return q
     def f_rule(a, r): return mk(a, r, True, False, r.choice([1, 2, 3]))
     def f_norule(a, r): return mk(a, r, False, False, r.choice([0, 2, 3]))
@@ -154,7 +155,7 @@ def _count(tier):
         steps = [5] + ([10] if a % 10 == 0 else [])
         s = r.choice(steps); start = a - 4 * s
         if start < 0: return None
-        return SEM([f"Start at {start}.", f"Count on 4 times in {s}s:", f"{BOX}"], lambda v, t=a: v == t, str(a), form="start and count on")
+        q = SEM([f"Start at {start}.", f"Count on 4 times in {s}s:", f"{BOX}"], lambda v, t=a: v == t, str(a), form="start and count on"); q.sig = ("start", start, s); return q
     forms = [f_rule, f_norule, f_back, f_back2]
     if tier == 2: forms.append(f_steps)
     return forms
@@ -278,7 +279,12 @@ def _time(tier):
     def clock_short(a, r):
         if A.hand_gap(*a) < A.CLOCK_MIN_GAP: return None
         return SEM([f"{BOX}"], lambda v, t=a: v == t, tword(a), art=A.clock(*a), form="clock face, answer only")
-    forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1]
+    def earlier(a, r):
+        h, m = a
+        if m == 0: return SEM([f"It is {cyc(h + 1)} o'clock.", f"1 hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="1 hour before")
+        return SEM([f"It is half past {cyc(h + 1)}.", f"1 hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="1 hour before, half past")
+    for f_ in (clock_stack, clock_row, clock_alone, clock_short): f_.pref = 1          # a clock sheet shows clock faces wherever one fits (one face per time)
+    forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1, earlier]
     if tier == 2:
         def later2(a, r):
             h, m = a
@@ -376,28 +382,30 @@ def _mult1(tier):
         p = pr(a, r)
         if not p: return None
         x, y = p if r.random() < 0.5 else p[::-1]
-        return EQ([f"{x} {TIMES} {y} = {BOX}"], a, form="times")
+        q = EQ([f"{x} {TIMES} {y} = {BOX}"], a, form="times"); q.sig = ("mult", x, y); return q
     def grp(a, r):
         p = pr(a, r)
         if not p: return None
-        return SEM([f"{p[0]} groups of {p[1]}", f"is {BOX}"], lambda v, t_=a: v == t_, str(a), form="groups of")
+        q = SEM([f"{p[0]} groups of {p[1]}", f"is {BOX}"], lambda v, t_=a: v == t_, str(a), form="groups of"); q.sig = ("mult", p[0], p[1]); return q
     def rep(a, r):
         p = [q for q in _pairs(a) if q[0] <= 5] or None
         if not p: return None
         x, y = r.choice(p)
         q = SEM([" + ".join([str(y)] * x), f"= {BOX}"], lambda v, t_=a: v == t_, str(a), form="repeated addition")
         q.extra = lambda ans, x=x, y=y: x * y == ans
+        q.sig = ("mult", x, y)
         return q
     def bags(a, r):
         p = pr(a, r)
         if not p: return None
-        return SEM([f"{p[0]} bags, {p[1]} in each.", f"Altogether {BOX}"], lambda v, t_=a: v == t_, str(a), form="bags")
+        q = SEM([f"{p[0]} bags, {p[1]} in each.", f"Altogether {BOX}"], lambda v, t_=a: v == t_, str(a), form="bags"); q.sig = ("mult", p[0], p[1]); return q
     def arr(a, r):
         c = [(x, y) for x, y in _pairs(a) if x <= 5 and y <= 10] + [(y, x) for x, y in _pairs(a) if y <= 5 and x <= 10]
         if not c: return None
         rows, cols = r.choice(c)
         q = SEM(["How many dots?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.array(rows, cols), form="array")
         q.extra = lambda ans, rows=rows, cols=cols: rows * cols == ans
+        q.sig = ("mult", rows, cols)
         return q
     def grpart(a, r):
         c = [(x, y) for x, y in _pairs(a) if x <= 5 and y <= 10]
@@ -405,6 +413,7 @@ def _mult1(tier):
         n, per = r.choice(c); art = A.groups(n, per)
         q = SEM(["How many dots", f"in all? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="equal groups")
         q.extra = lambda ans, n=n, per=per: n * per == ans
+        q.sig = ("mult", n, per)
         return q
     def grp_short(a, r):
         q = grpart(a, r)
@@ -417,13 +426,14 @@ def _share1(tier):
     ds = (2, 3, 4, 5)
     def mk(a, r, f_):
         d = _ch(r, ds); n = a * d
-        return f_(a, d, n, r) if n <= 20 else None
+        if n > 20: return None
+        q = f_(a, d, n, r); q.sig = ("div", n, d); return q
     def share(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Share {n} sweets equally", f"among {d} children. Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="share"))
     def group(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} pencils, {d} in a box.", f"Boxes: {BOX}"], lambda v, t_=q: v == t_, str(q), form="group"))
     def into(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Divide {n} apples into", f"{d} equal groups: {BOX}"], lambda v, t_=q: v == t_, str(q), form="divide into"))
     def sharer(a, r):
         d = _ch(r, (3, 4, 5)); n = a * d
-        return SEM([f"Mia shares {n} stickers", f"with her {d - 1} friends.", f"Each person: {BOX}"], lambda v, t_=a: v == t_, str(a), form="sharer counted") if n <= 20 else None
+        q = SEM([f"Mia shares {n} stickers", f"with her {d - 1} friends.", f"Each person: {BOX}"], lambda v, t_=a: v == t_, str(a), form="sharer counted"); q.sig = ("div", n, d); return q if n <= 20 else None
     def most(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} cookies, {d} each.", f"Most friends: {BOX}"], lambda v, t_=q: v == t_, str(q), form="most friends"))
     def gart(a, r):
         d = _ch(r, (2, 3, 4, 5)); n = a * d
@@ -431,6 +441,7 @@ def _share1(tier):
         art = A.groups(d, a)
         q = SEM(["How many dots", f"in each box? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="dots in each box")
         q.extra = lambda ans, art=art: art.meta["per"] == ans
+        q.sig = ("div", n, d)
         return q
     def share_s(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Share {n} by {d}.", f"Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="share, short"))
     def into_s(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} in {d} equal", f"groups. Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="equal groups, short"))
@@ -538,7 +549,8 @@ def build_banks():
     B["mult"] = Bank("mult", "Multiplication", "Multiplication within 40", "Multiply. Find the answer in the key. Colour the part with that colour.",
         {1: T([4, 6, 8, 10, 12], range(0, 41), _mult1(1)), 2: T([12, 15, 20, 30, 40], range(0, 41), _mult1(2))}, {1: "Multiplication within 40: equal groups", 2: "Multiplication within 40"})
     B["share"] = Bank("share", "Sharing", "Sharing and grouping within 20", "Share or group equally. Find the answer in the key. Colour the part with that colour.",
-        {1: T([2, 3, 4, 5, 6], range(0, 21), _share1(1)), 2: T([4, 5, 6, 7, 8], range(0, 21), _share1(2))})
+        {1: T([2, 3, 4, 5, 6], range(0, 21), _share1(1), maxuse={5: 3, 6: 2}),         # 12 / 2 and 18 / 3 are the only two sharings with 6 in each; 10, 15 and 20 the only three with 5
+         2: T([4, 5, 6, 7, 8], range(0, 21), _share1(2))})
     B["pgraph"] = Bank("pgraph", "Picture Graphs", "Picture graphs", "Read the picture graph. Find the answer in the key. Colour the part with that colour.",
         {1: T([1, 2, 3, 4, 5], range(0, 21), _pgraph(1)), 2: T([4, 5, 6, 7, 8], range(0, 21), _pgraph(2))})
     B["ordinal"] = Bank("ordinal", "Ordinal Numbers", "Ordinal numbers: first to tenth", "Write the missing number. Find it in the key. Colour the part with that colour.",
