@@ -211,14 +211,14 @@ for k in BK:
     fm_flat = re.sub(r"\s+", " ", fm)
     fm_wo = fm_flat.replace("Not affiliated with or endorsed by the Ministry of Education, Singapore.", "").replace("The mathematics syllabus is published by the Ministry of Education, Singapore.", "")
     rec(f"{k}: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)", not re.search(r"\bMi\b|MOE|Ministry|aligned|affiliat|endorse", pt + fm_wo, re.I) and ("Not affiliated with or endorsed by the Ministry of Education, Singapore." in fm_flat) == render.DRAFT or not render.DRAFT)
-    rec(f"{k}: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and a registered-office placeholder (until built with --final)", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "[registered office address" in fm and "to be confirmed by the owner" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
+    rec(f"{k}: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "66 Tannery Ln, Singapore 347805" in fm and "to be confirmed by the owner" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
     rec(f"{k}: front matter has the 'typical order, schools vary' sentence and the booklet's terms", "Schools vary" in fm_flat and OC.BOOKLETS[k]["terms"] in fm_flat)
     rec(f"{k}: pupil pages carry no DRAFT stamp", "DRAFT" not in pt)
     kt = alltxt[f"P1_{k}_Answer_Key.pdf"]
     rec(f"{k}: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)", ("DRAFT" in kt and "pypteltd@gmail.com" in kt) or not render.DRAFT)
     rec(f"{k}: the cover does not claim that every puzzle checks itself", "Every puzzle checks itself" not in fm_flat and "Almost every puzzle checks itself" in fm_flat)
     rec(f"{k}: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)", pt.count("2026 Preciouslyours Pte Ltd.") == NP[k])
-    rec(f"{k}: the licence page no longer calls the entity or year unconfirmed, and still marks the registered office as a placeholder", "owner to confirm" not in fm_flat and "[registered office address" in fm_flat)
+    rec(f"{k}: the licence page no longer calls the entity or year unconfirmed, and prints the registered office address", "owner to confirm" not in fm_flat and "[registered office address" not in fm_flat and "66 Tannery Ln, Singapore 347805" in fm_flat)
 if not ARGS.partial or 6 in [p["no"] for p in BK["S2"]]:
     rec("o'clock and half past used for clock times in the Semester 2 key", "o'clock" in alltxt["P1_S2_Answer_Key.pdf"] and "half past" in alltxt["P1_S2_Answer_Key.pdf"])
 # ---- 4c. a 68-character school name must not wrap the footer or split the page code

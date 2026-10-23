@@ -235,7 +235,7 @@ from gen.outcomes import OUTCOMES, PAGE_OC, BOOKLETS, oc_label
 
 DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
 CONTACT = "pypteltd@gmail.com (business email for now, to be changed later)"
-REG_OFFICE = "[registered office address: to be added by the owner]"
+REG_OFFICE = "66 Tannery Ln, Singapore 347805"
 NOT_AFFILIATED = "Not affiliated with or endorsed by the Ministry of Education, Singapore."      # plan section 12; on the licence page only
 
 def draft_banner(what):
@@ -257,7 +257,7 @@ def cover(school, bk):
 def licence(school, bk):
     s = html.escape(school) if school.strip() else "____________________________"
     return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the term of the licence and the registered office address below must be filled in, before any school receives this booklet.")
+            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the term of the licence must be filled in, before any school receives this booklet. The publisher line on the cover is also still to be confirmed.")
             + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
@@ -265,8 +265,8 @@ def licence(school, bk):
             '<h3>You may not</h3><ul><li>Sell, lend or give the pages or the file to another school, tuition centre or person.</li>'
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
-            '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ". Registered office: " + REG_OFFICE) if DRAFT else "") + '</p>'
-            '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line marked School name (write here) at the foot of each page, by hand or when the booklet is made. '
+            '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + html.escape(("Contact: " + CONTACT + ". " if DRAFT else "") + "Registered office: " + REG_OFFICE) + '</p>'
+            '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line marked School (write name) at the foot of each page, by hand or when the booklet is made. '
             f'This licence covers {html.escape(bk["name"])} only; the other semester booklet is licensed separately.</p>'
             f'<p>{NOT_AFFILIATED} The mathematics syllabus is published by the Ministry of Education, Singapore.</p>'
             '<p style="margin-top:10mm">&copy; 2026 Preciouslyours Pte Ltd.' + ("" if DRAFT else " All rights reserved.") + '</p></section>')

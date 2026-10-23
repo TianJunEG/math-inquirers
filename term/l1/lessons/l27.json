@@ -1,126 +1,111 @@
 {
  "schema_version": 1,
- "id": "l1-t3-07",
  "level": 1,
+ "ages": "6-8",
+ "look_back": {
+  "hardest": [
+   "counting on",
+   "the day before",
+   "dates on the month page",
+   "something else"
+  ],
+  "helped": [
+   "the day cards",
+   "the month page",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "counting on from tomorrow",
+   "using the month page",
+   "explaining why",
+   "asking a question"
+  ]
+ },
+ "spare_time_rules": [
+  "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+  "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+  "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+ ],
+ "id": "l1-t3-07",
  "term": 3,
  "lesson": 27,
  "lesson_in_term": 7,
- "title": "Fill the Grid",
- "big_idea": "Each row and each column has one of each, so every empty box has a reason",
- "child_idea": "In a grid puzzle each picture is used once in every row and once in every column. Look along the row and down the column to find what is missing.",
- "skill": "Reasoning by elimination",
- "ages": "6-8",
+ "title": "Calendar Detective",
+ "big_idea": "Days and weeks go round in a cycle of 7",
+ "child_idea": "After Sunday comes Monday again. A week is 7 days, so the same day comes back every 7 days, and we can count on to find a day or a date.",
+ "skill": "Cycles and counting on",
  "moe": {
-  "strand": "Logic puzzle (not a Primary 1 syllabus topic)",
+  "strand": "Time: days of the week, weeks and dates (Primary 1 time and the process skills)",
   "topics": [
-   "Missing one in a row, and ordering by a rule (Primary 1 patterns, p. 31) are the nearest syllabus ideas",
-   "A grid in which every row and every column holds each picture once is a logic puzzle (a Latin square), not a syllabus topic",
-   "Elimination, the move used here, is in the Primary heuristics list (p. 13 to 14) as \"make a systematic list and cross out\""
+   "Time: days of the week and a week as 7 days (Primary 1 Time; days of the week are not a listed outcome in the syllabus pages for Primary 1: flagged for tutor review)",
+   "Counting on within a cycle and on a month page (number patterns, Primary 1, p. 31)",
+   "Choosing between counting on from tomorrow and the month page, and saying why (process skills, Primary 1)"
   ],
-  "note": "Strand label for the tutor only. NEW TOPIC, no Primary 1 school-paper evidence (the 23 Oct paper study found no grid item), so every word of the wording is marked unverified and this is the lesson that is safest to skip or swap (decision D13). BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only. Start here is approachable: one empty box in a row or a column with three pictures, a grid with one empty box in each row, and recognising a grid that follows the rule. Think harder (elimination in a 3 by 3 grid with only two clues, spotting a repeat, counting which shapes could go in a box, and what keeps a correct grid correct) is a logic move that the syllabus does not name. Go further is the beyond-syllabus item Four by Four: a 4 by 4 grid of the digits 1 to 4 solved by the same row-and-column reasoning, and what the rule says about a larger grid. The contest tag for the tutor is constraint grids (3 of 100 SASMO items, Section B). Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type (here LOG: elimination in a 3 by 3 grid with clues). Do not describe the lesson as MOE-aligned."
+  "note": "Strand label for the tutor only. This is an added lesson (gap: time and calendar). Days of the week and dates are not a listed Primary 1 outcome (Primary 1 Time items are clock items), so the lesson is flagged for tutor review; no Primary 1 school paper in the sample tests the calendar. Start here is approachable: the days in order, the day before and after, three days later (no wrap), the number of days in a week and a week after a date on a month page. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: 'two days after the day before yesterday', the 10th day from Monday, 3 weeks, a fortnight, the date of a day on a month page, every Wednesday of a month (the same weekday every 7 days), and 'Hundred Days Later' (100 days is 14 weeks and 2 days, so Monday plus 100 days is Wednesday; dividing by 7 with a left-over is a Primary 3 outcome, so the lesson says 14 weeks and 2 days over). Every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. This lesson moved here from Lesson 30 (owner decision X10-BEFORE, 23 Oct 2026); it replaces Fill the Grid, which is retired. Lesson 30 has a calendar gate in Mi's Challenge Quest that reuses the Start here idea (days later, and a week on the month page). Contest tag (tutor only): day-of-the-week cycles; counting on; a week as a unit. Non-routine types (tutor only): a context fact (a week, a fortnight), a pattern (the cycle of 7), a logic puzzle (two days after the day before yesterday)."
  },
  "contest_moves": [
-  "logic: elimination in a 3 by 3 grid with clues",
-  "if it is not this and not that, it must be the other one",
-  "check every row and every column before saying the grid is finished",
-  "how many different grids fit the clues"
+  "day-of-the-week cycles: counting on round a cycle of 7, and a left-over after whole weeks",
+  "a logic puzzle with days: two days after the day before yesterday",
+  "a pattern on a month page: the same weekday every 7 days, every Wednesday of a month",
+  "a context fact as a unit: a week is 7 days and a fortnight is 14 days"
  ],
  "contest_where": "Think harder, Go further and the Investigation",
  "objectives": [
-  "Say the rule of a grid puzzle: one of each picture in every row and one of each in every column.",
-  "Find the one missing picture in a row or in a column, and say whether the row or the column told us.",
-  "Use both the row and the column to find a box when neither one alone is enough.",
-  "Think harder: finish a grid from two clues, spot a repeat, say how many shapes could go in a box, and test what keeps a correct grid correct.",
-  "Go further: solve a 4 by 4 grid of the digits 1 to 4, and say how many of each digit a larger grid holds."
+  "Put the days of the week in order, say the day before and the day after, and say that after Sunday comes Monday again.",
+  "Say the day 3 days later or 4 days later by counting on from tomorrow (not from today).",
+  "Read dates on a month page and say the date a week after, and use a week as a unit of 7 days.",
+  "Think harder: two days after the day before yesterday, the 10th day from Monday, 3 weeks and a fortnight, and the day of a date on a month page.",
+  "Go further: Hundred Days Later (a left-over after whole weeks), every Wednesday of a month, and the date 3 weeks later."
  ],
  "joining_cold": {
   "remember": [
-   "A row holds a circle, a square and a triangle once each: which one is missing from a row of two (spiral: Term 2 Lesson 1, find the missing one in a row, taught again with the tiles)",
-   "Digits 1 to 4: which is missing from 1, 3 and 4 (counting to 4, taught again with a number row)",
-   "One of each: which of two rows has a circle, a square and a triangle once each (the rule of the lesson, said aloud)"
+   "Count in 7s along a row of the calendar from 3 (Term 2 Lesson 16, taught again with a calendar row)",
+   "1st to 10th (Term 2 Lesson 11, taught again with a picture)",
+   "The day cards in order, Monday to Sunday (taught again with 7 cards)"
   ],
-  "assumes": "Only counting to 4 and the names circle, square and triangle. Nothing from the lessons before is needed: the warm-up shows a row with one picture missing, a row of digits with one missing, and a pair of rows to compare. The words row, column and grid are taught in Explore and the Mini-lesson.",
+  "assumes": "Only counting to 31. Nothing from earlier lessons is needed: the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order. The words week, fortnight, day before and days later are taught in Explore and the Mini-lesson.",
   "holiday_topics_revisited": [
-   "Logic Lab grid puzzles (spiral only)",
-   "Naming circle, square and triangle"
+   "Counting on in equal jumps (Count with the Frog)"
   ],
   "safe_to_miss": true,
-  "note": "The safest lesson of Term 3 to miss or swap: no later lesson needs it, and Mi's Challenge Quest has a gate on it that uses only Start here ideas (a 3 by 3 grid with five boxes filled). A child who misses it watches the recording, does workbook pages 1 and 2 and cuts out the tiles if they want to play. A child who joins here cold can follow: the warm-up re-teaches a missing one in a row, Explore is hands-on, and Start here keeps to three pictures and one empty box per row."
+  "note": "Fairly safe to miss: no later lesson needs it, but Mi's Challenge Quest in Lesson 30 has a gate on counting on from tomorrow and a week on the month page. A child who misses it watches the recording and does workbook pages 1 and 2 before the Quest. A child who joins here cold can follow: the lesson needs only counting to 31, and the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order."
  },
  "materials": {
   "child": [
-   "Your Term 3 book (Book 6), workbook pages 1 to 5, and the grid-tile page (page 6) with the 16 tiles already cut out by a grown-up. The two mats on that page are not cut",
-   "No printer or no cutting? Nine small things of three kinds (for example 3 buttons, 3 coins and 3 pasta shapes) on a 3 by 3 grid you draw on paper",
-   "Coloured pencils are optional",
+   "Your Term 3 book: the calendar page, torn out along the dashed line, with the 7 day cards cut out by a grown-up beforehand (the month page is not cut)",
+   "No cutting? Write the 7 days on 7 small pieces of paper. A calendar from the house works instead of the month page",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
    "The slide deck",
-   "Your own set of tiles to show on camera, if you wish",
+   "Your own day cards and a month page to show on camera, if you wish",
    "A visible clock"
   ],
   "kit_pages": [
-   "Grid tiles and mats (page 6): 16 tiles, 4 circles, 4 squares, 4 triangles and 4 stars, each tile with a digit 1 to 4, cut out by a grown-up. Mat 1 (3 by 3) and mat 2 (4 by 4) are not cut. Keep the tiles in an envelope."
+   "Calendar page (page 6): a month page with 31 days that starts on a Wednesday (not cut) and 7 day cards, Monday to Sunday, for a grown-up to cut out. No year and no public holidays are printed"
   ],
   "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought. The tiles are small: they stay on the table, nothing goes in the mouth or ears, and they are kept away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: a grown-up cuts the tiles beforehand. In class we use 9 tiles (3 circles, 3 squares and 3 triangles) on mat 1; the digits on the tiles are for Go further.",
+  "notes": "No ruler is needed. Nothing needs to be bought. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cut the cards beforehand. The month is made up: it is not a real month of a real year.",
   "kit_contract": [
    {
-    "piece": "circle tiles",
-    "supplied": 4,
-    "max_used": 3,
+    "piece": "day cards (Monday to Sunday)",
+    "supplied": 7,
+    "max_used": 7,
     "used_by": [
-     "explore"
+     "explore",
+     "mini"
     ]
    },
    {
-    "piece": "square tiles",
-    "supplied": 4,
-    "max_used": 3,
-    "used_by": [
-     "explore"
-    ]
-   },
-   {
-    "piece": "triangle tiles",
-    "supplied": 4,
-    "max_used": 3,
-    "used_by": [
-     "explore"
-    ]
-   },
-   {
-    "piece": "star tiles",
-    "supplied": 4,
-    "max_used": 4,
-    "used_by": [
-     "G1",
-     "G2"
-    ]
-   },
-   {
-    "piece": "tiles with each digit 1 to 4 (one on each symbol)",
-    "supplied": 4,
-    "max_used": 4,
-    "used_by": [
-     "G1",
-     "G2"
-    ]
-   },
-   {
-    "piece": "mat 1 (3 by 3)",
+    "piece": "month page (not cut)",
     "supplied": 1,
     "max_used": 1,
     "used_by": [
-     "explore"
-    ]
-   },
-   {
-    "piece": "mat 2 (4 by 4)",
-    "supplied": 1,
-    "max_used": 1,
-    "used_by": [
-     "G1",
+     "explore",
+     "mini",
+     "S5",
+     "T4",
      "G2"
     ]
    }
@@ -150,12 +135,12 @@
     "id": "explore",
     "title": "Explore",
     "start": 12,
-    "end": 23
+    "end": 24
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 23,
+    "start": 24,
     "end": 34
    },
    {
@@ -186,38 +171,38 @@
     "id": "look",
     "title": "Look-back",
     "start": 82,
-    "end": 85
+    "end": 84
    },
    {
     "id": "flex",
     "title": "Flex time and goodbye",
-    "start": 85,
+    "start": 84,
     "end": 90
    }
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the tiles: one of each in every row, then in every column, then how many grids start with the same top row. The mini-lesson has 11: the rule, the missing one in a row and in a column, using both, and checking a finished grid. The workbook has 32 minutes: Start here takes a middle child about 15 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes. Explore has 12 minutes: the day cards in order, counting on round the cycle, a week on the month page, and what we noticed. The mini-lesson has 10: days later, the day before, a week and a fortnight on the month page. The workbook has 32 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children. The exit ticket is done live (E1 to E3). The last 6 minutes are the standing buffer; nothing new is started in it.",
   "skip_order": [
-   "Start with: shorten Explore round 3 (how many grids) to a quick look and carry it to the Mini-lesson",
-   "Then: cut the second item of the Your turn slide (s-m5)",
-   "Then: take the extra minutes from the flex time"
+   "In a slow class the workbook part runs over: take the time from the 5-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
+   "the optional slide and the Spare-time menu",
+   "the fortnight slide in the Mini-lesson"
   ]
  },
  "sneak_peek": {
-  "q1": "A row needs a circle, a square and a triangle, one of each. This row has a square and a triangle. Which shape goes in the empty box? Write its name.",
-  "q2": "Every row and every column has a circle, a square and a triangle, one of each. Which shape goes in the first ? box of the bottom row? I know because ___.",
-  "a1": "circle",
-  "a2": "A square. The first box in the bottom row has a triangle and a circle above it in its column, so it must be a square. The row has only a triangle, so the column decides.",
-  "val1": "circle"
+  "q1": "Today is Monday. What day is it tomorrow?",
+  "q2": "Today is Thursday. What day is it 5 days later? I know because ___.",
+  "a1": "Tuesday.",
+  "a2": "Tuesday. Count on from tomorrow: Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5. After Sunday the days start again.",
+  "val1": "Tuesday"
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your grid tiles. Pause or rewind any time.",
-   "action": "Gather your workbook, tiles, pencil and paper. Press play when ready."
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your day cards. Pause or rewind any time.",
+   "action": "Gather your workbook, day cards, pencil, paper. Press play when ready."
   },
   "remember": {
-   "say": "Recording: join in! Find the missing shape and the missing digit, and say which row has one of each. Pause if you need longer.",
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
    "action": "Play along. Say each answer out loud before the video does."
   },
   "sneak": {
@@ -225,36 +210,36 @@
    "action": "Pause. Try both puzzles on your own paper. A guess is fine."
   },
   "explore": {
-   "say": "Recording: pause now. Put one of each in every row, then in every column, with your tiles. Press play when you have tried.",
-   "action": "Pause. Fill mat 1 so every row and every column has one of each. Then try again with the same top row."
+   "say": "Recording: pause now. Put your day cards in order, then count on round the week and find a date on the month page.",
+   "action": "Pause. Put the 7 day cards in order. Count on to find a day and a date."
   },
   "mini": {
-   "say": "Recording: keep watching and copy the examples with your tiles. Rewind if you miss a step.",
-   "action": "Watch and copy the examples with your tiles. Rewind any step you missed."
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
   },
   "break": {
-   "say": "Recording: stand up and join in! Make the shapes with your body as I call them.",
-   "action": "Stand up. Make each shape with your arms as it is called."
+   "say": "Recording: stand up and join in! Say the days of the week and stamp once for each day.",
+   "action": "Stand up. Stamp softly for each day of the week, then sit down."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
   },
   "work": {
    "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
    "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
   },
   "talk": {
-   "say": "Recording: pause. Tell a grown-up whether the child is right, and test it with your tiles.",
-   "action": "Pause. Explain your answer to someone at home, and test it with your tiles."
-  },
-  "exit": {
-   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
-   "action": "Pause. Do the exit ticket alone, then play to check it."
+   "say": "Recording: pause. Tell a grown-up how you can tell what day it is 10 days later.",
+   "action": "Pause. Explain your answer to someone at home and show how you know."
   },
   "look": {
    "say": "Recording: pause and fill in your look-back box. You can pass.",
    "action": "Pause. Fill in the look-back box, or pass."
   },
   "flex": {
-   "say": "Recording: well done for finishing! Show a grown-up one grid you filled.",
-   "action": "Show a grown-up your workbook and one grid you filled."
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
   }
  },
  "slides": [
@@ -262,18 +247,19 @@
    "id": "s-title",
    "part": "opening",
    "kind": "title",
-   "title": "Fill the Grid",
+   "title": "Calendar Detective",
    "blocks": [
     {
      "t": "card",
      "head": "TODAY WE WILL",
      "items": [
-      "Fill a grid so every row and column has one of each."
+      "Find days and dates on a calendar.",
+      "Say what day it is, days later."
      ]
     }
    ],
-   "note": "Lesson 7 of Term 3, 90 minutes. Objective: say the rule of a grid puzzle (one of each in every row and every column), find a missing picture from its row or its column, and use both together. Plain statement for families: finding the missing one in a row is early Primary 1 work; solving a whole grid by elimination, the 4 by 4 grid of digits and what a larger grid holds go past the school Primary 1 syllabus on purpose. This is a new topic with no school-paper evidence, so it is the safest lesson of the term to miss. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
-   "subtitle": "One of each, in every row and column",
+   "note": "Lesson 7 of Term 3, 90 minutes. Objective: put the days in order, count on to find a day, and find a date a week later on a month page. Plain statement for families: days of the week are not a listed Primary 1 outcome; the days, the day before and after and a week as 7 days are approachable, and two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 84, flex time and goodbye 84 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Days and weeks go round",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -283,148 +269,86 @@
    "id": "s-rem1",
    "part": "remember",
    "kind": "light",
-   "title": "Warm-up: which is missing?",
+   "title": "Count in 7s",
    "blocks": [
     {
-     "t": "chip",
-     "text": "A row has one of each: a circle, a square and a triangle."
-    },
-    {
      "t": "visual",
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
+     "type": "seq",
+     "items": [
+      3,
+      10,
+      17,
+      null
      ],
-     "cols": 3,
-     "cell": 140,
-     "hide": [
-      2
-     ],
-     "size": "m"
+     "gaps": [
+      "+7",
+      "+7",
+      "+7"
+     ]
     },
     {
-     "t": "p",
-     "text": "A circle and a square are here. Which shape is missing?"
+     "t": "chip",
+     "text": "3, 10, 17, ... Count on 7 each time."
     }
    ],
-   "note": "A row with a circle and a square and a ? mark. Children say which shape is missing (triangle) and touch the tile of that shape in their kit if they have one. This is the missing-one idea taught again with pictures: three kinds, one of each. Ask: how do you know? (a circle and a square are here, so the triangle is missing). The slide never shows the answer. A child who is unsure counts the three kinds on their fingers. No writing, no marks.",
+   "note": "Counting in 7s (Term 2 Lesson 16, taught again). Say: 3, then 7 more is 10, then 7 more is 17. Ask: what comes next (24). A child who is unsure adds 10 and takes away 3: 17 and 10 is 27, take away 3 is 24. On a calendar, going down one row is 7 days. Children answer aloud. No writing.",
    "mascot": {
     "size": "s",
-    "say": "Look along the row!"
+    "say": "Take your time!"
    }
   },
   {
    "id": "s-rem2",
    "part": "remember",
    "kind": "light",
-   "title": "Which digit is missing?",
+   "title": "1st to 10th",
    "blocks": [
     {
-     "t": "chip",
-     "text": "The digits 1, 2, 3 and 4 are used once each."
-    },
-    {
-     "t": "numrow",
-     "items": [
-      1,
-      3,
-      4,
-      "?"
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
+     "labels": "ordinal",
+     "highlight": [
+      3
      ]
     },
     {
-     "t": "p",
-     "text": "Which digit is missing?"
+     "t": "chip",
+     "text": "Count the places. Which place is the child with a ring round them?"
     }
    ],
-   "note": "A row of digits 1, 3, 4 and a ? mark. The digits 1 to 4 are used once each, so the missing digit is 2. Children whisper or show fingers. This is the same idea with numbers, and it is the first look at the 4 by 4 grid that comes at Go further. A child who is unsure counts 1, 2, 3, 4 aloud and notices which number was skipped. Do not ask for a written answer."
+   "note": "Places in a line (Term 2 Lesson 11, taught again). Dates use the same words: the 1st, 2nd, 3rd, 4th ... 10th. Ask: which place is the highlighted child (3rd). Say: the 3rd of the month is the third day. A child who is unsure counts from the front. Children answer aloud. No writing."
   },
   {
    "id": "s-rem3",
    "part": "remember",
    "kind": "light",
-   "title": "Which row has one of each?",
+   "title": "The days in order",
    "blocks": [
     {
-     "t": "chip",
-     "text": "One of each means a circle, a square and a triangle, once each."
-    },
-    {
-     "t": "cols",
-     "cols": [
+     "t": "table",
+     "header": false,
+     "rows": [
       [
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         }
-        ],
-        "cols": 3,
-        "cell": 100,
-        "labels": [
-         "A",
-         "",
-         ""
-        ]
-       }
+       "Monday",
+       "Tuesday",
+       "Wednesday",
+       "Thursday"
       ],
       [
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         }
-        ],
-        "cols": 3,
-        "cell": 100,
-        "labels": [
-         "B",
-         "",
-         ""
-        ]
-       }
+       "Friday",
+       "Saturday",
+       "Sunday",
+       "?"
       ]
      ]
     },
     {
-     "t": "p",
-     "text": "Which row has one of each?"
+     "t": "chip",
+     "text": "Seven days make a week. What comes after Sunday?"
     }
    ],
-   "note": "Row A is circle, square, triangle: one of each. Row B is square, triangle, square: two squares and no circle. Ask: which row has one of each (row A); what is wrong with row B (two squares, no circle). Say the rule in your own words: one of each, no repeats, nothing missing. Children answer with a thumb or by naming the row. Nobody writes. Joining cold: all a new child needs is the names of the three shapes."
+   "note": "The days in order (taught again with the 7 day cards). Say them together: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Ask: what comes after Sunday (Monday: the week starts again). Do not chant the days in a song; say them calmly. A child who is unsure points along the cards. Children answer aloud. No writing."
   },
   {
    "id": "s-sneak",
@@ -433,6 +357,10 @@
    "title": "Sneak-peek puzzles",
    "blocks": [
     {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Your paper is not collected."
+    },
+    {
      "t": "cols",
      "cols": [
       [
@@ -440,32 +368,9 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "Each row has one of each. Which shape goes in the empty box?"
+         "Today is Monday.",
+         "What day is it tomorrow?"
         ]
-       },
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         }
-        ],
-        "cols": 3,
-        "cell": 110,
-        "hide": [
-         1
-        ],
-        "size": "m"
        }
       ],
       [
@@ -473,564 +378,348 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "Which shape goes in the first ? of the bottom row? I know because ___."
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         }
-        ],
-        "cols": 3,
-        "cell": 70,
-        "hide": [
-         6,
-         7
+         "Today is Thursday.",
+         "What day is it 5 days later?",
+         "I know because ___."
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Puzzle 1 (a row with a square and a triangle: the circle is missing) is an access question: any child can see which of three is missing. Puzzle 2 is a thinking question on the lesson idea: the first ? in the bottom row is the box we ask about; its column holds a triangle and a circle, so it must be a square, while its row shows only a triangle, so the row alone cannot decide. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: circle; square. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 (Tuesday) is an access question. Puzzle 2 is a thinking question on the lesson idea: 5 days later than Thursday is Tuesday, counting on from tomorrow (Friday is day 1) and going round past Sunday to Monday and Tuesday. A child who counts Thursday as day 1 gets Monday: say nothing yet. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; your paper is not collected. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: Tuesday; Tuesday. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: one of each in every row",
+   "title": "Explore: the days in a row",
    "blocks": [
     {
      "t": "list",
+     "ordered": true,
      "items": [
-      "Put mat 1 in front of you.",
-      "Take 3 circles, 3 squares and 3 triangles.",
-      "Fill the mat. Every row has a circle, a square and a triangle."
-     ],
-     "ordered": true
+      "Take your 7 day cards.",
+      "Put them in a row. Start with Monday.",
+      "What comes after Sunday?"
+     ]
+    }
+   ],
+   "note": "Round 1, about 2 minutes. Each child puts the 7 day cards in order from Monday. Ask: what comes after Sunday. Children answer aloud: Monday. Then ask them to move the Monday card to the end of the row and say: the days go round, like a clock. A child with no cards writes the 7 days on small papers. The row is on the next slide."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "The week goes round",
+   "blocks": [
+    {
+     "t": "table",
+     "header": false,
+     "rows": [
+      [
+       "Mon",
+       "Tue",
+       "Wed",
+       "Thu",
+       "Fri",
+       "Sat",
+       "Sun",
+       "Mon"
+      ],
+      [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "1"
+      ]
+     ]
     },
     {
      "t": "chip",
-     "text": "Rows only, for now."
+     "text": "After Sunday, the week starts again."
     }
    ],
-   "note": "Round 1, about 3 minutes. Children use mat 1 and 9 tiles (3 circles, 3 squares, 3 triangles; the stars and the digits are not used today). Say the words: a row goes across, like a line of children in a queue. Every row must have a circle, a square and a triangle. Most children will make three rows that are the same: that is fine, it follows the rule so far. Take volunteers: what is in your top row. Do not say the column rule yet. A child with no tiles draws three rows on paper, writing C, S and T. Do not name a child with a wrong answer."
+   "note": "The days in order and the week starting again: after Sunday comes Monday. Say: seven days make a week. Children check their row and tick. Nobody holds cards up to the camera."
   },
   {
    "id": "s-explore2",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: one of each in every column",
+   "title": "Explore: count on",
    "blocks": [
     {
      "t": "list",
+     "ordered": true,
      "items": [
-      "A column goes down.",
-      "Look down each column. Is there one of each?",
-      "Move tiles until every row and every column has one of each."
-     ],
-     "ordered": true
+      "Put your finger on Tuesday.",
+      "Jump 5 days later. Do not count Tuesday.",
+      "Which day do you land on?"
+     ]
+    }
+   ],
+   "note": "Round 2, about 3 minutes. Children put a finger on the Tuesday card, then count on 5 days: Wednesday 1, Thursday 2, Friday 3, Saturday 4, Sunday 5. They land on Sunday. Say: we start counting from tomorrow, so we do not count today. Then try Sunday to Wednesday: 3 days later (Monday 1, Tuesday 2, Wednesday 3). Children say the day aloud and show a thumb when they agree. The answer is on the next slide. A child who counts today as 1 lands one day early: ask them to start from tomorrow."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Counting on",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Today",
+       "Days later",
+       "Day"
+      ],
+      [
+       "Tuesday",
+       "5",
+       "Sunday"
+      ],
+      [
+       "Sunday",
+       "3",
+       "Wednesday"
+      ]
+     ]
     },
     {
      "t": "chip",
-     "text": "Take your time. Many ways are right."
+     "text": "Start counting from tomorrow."
     }
    ],
-   "note": "Round 2, about 4 minutes, main room. Now the same rule goes down: a column is a line of boxes from the top to the bottom. Children check each column, find a repeat (two circles in one column), and swap tiles. Give one hint only when asked: leave the top row as it is and look at where the circle can go in the middle row. Take volunteers: how did you fix it. Several grids are right. Children say the rule in their own words before moving on: one of each in every row and every column. A child with no tiles uses the three letters on paper."
+   "note": "The answers for round 2: Tuesday and 5 days later is Sunday; Sunday and 3 days later is Wednesday. Say: we do not count today; tomorrow is day 1. Children tick their own work."
   },
   {
    "id": "s-explore3",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: the same top row",
+   "title": "Explore: a month page",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         }
-        ],
-        "cols": 3,
-        "cell": 110,
-        "size": "m"
-       }
-      ],
-      [
-       {
-        "t": "list",
-        "items": [
-         "Keep this top row.",
-         "Fill the other two rows. Every row and every column has one of each.",
-         "How many different grids can you make?"
-        ],
-        "ordered": true
-       }
-      ]
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      5
+     ],
+     "size": 68,
+     "mark": [
+      5
      ]
     },
     {
      "t": "chip",
-     "text": "Make one. Then make a different one."
+     "text": "The day with a ring round it is the 5th. Count on 7 days. Which date do you land on?"
     }
    ],
-   "note": "Round 3, about 3 minutes. Everyone keeps the top row circle, square, triangle on mat 1. How many different grids can they fill? There are exactly 2: the middle row can start with a square (square, triangle, circle) or with a triangle (triangle, circle, square), and then the bottom row is fixed. Children find one, then look for another. Ask: how many different grids did you find; how do you know there is not a third. The answer 2 is not on the slide and is confirmed on the next slide. A child who finds a grid that breaks the rule is asked to check each column."
+   "note": "Round 3, about 3 minutes. The month page is not a real month: it starts on a Wednesday and has 31 days. The 5th has a ring round it, a Sunday. Count on 7 days: the 6th is 1, the 7th is 2 ... the 12th is 7. Children count along the page with a finger and say the date. Ask: which day of the week is the 12th (Sunday too). The answer is on the next slide. A child with no month page uses a calendar from the house or writes the numbers in rows of 7."
+  },
+  {
+   "id": "s-explore3-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "A week later is the 12th",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      5,
+      12
+     ],
+     "size": 68,
+     "mark": [
+      5,
+      12
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The 5th and the 12th are both Sundays. A week is 7 days."
+    }
+   ],
+   "note": "The answer for round 3: 7 days after the 5th is the 12th, and both are Sundays. Say: go down one row, and you are a week later. Children tick their own work."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Why is the 12th a Sunday too?",
+      "What happens to the day when we count on 7?",
+      "Which dates in a column are the same day?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: after 7 days we are back on the same day, so a week later is the same day of the week; the dates in one column of the month page are all the same day and go up by 7 (5, 12, 19, 26 are Sundays). Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it."
   },
   {
    "id": "s-m1",
    "part": "mini",
    "kind": "light",
-   "title": "The rule",
+   "title": "Days later",
    "blocks": [
     {
-     "t": "card",
-     "head": "THE RULE",
-     "items": [
-      "One of each in every row.",
-      "One of each in every column."
-     ]
-    },
-    {
-     "t": "visual",
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      }
-     ],
-     "cols": 3,
-     "cell": 100,
-     "size": "s"
+     "t": "chip",
+     "text": "Today is Thursday. What day is it 4 days later?"
     }
    ],
-   "note": "Name the rule and show a finished grid. A row goes across, a column goes down. Read each row of the grid on the slide: square, circle, triangle; triangle, square, circle; circle, triangle, square. Then each column: square, triangle, circle; circle, square, triangle; triangle, circle, square. Every one has one of each. Also confirm the answer to Explore round 3: with the top row circle, square, triangle there were 2 grids. This grid has a different top row, so it is a new one. Say: a grid like this is a puzzle square, and every empty box in a puzzle has a reason."
+   "note": "Worked example. Today is Thursday. Count 4 days later from tomorrow: Friday is 1, Saturday 2, Sunday 3, Monday 4. Children count with the cards and say the day. Ask: what day (Monday). Say: we never count today, and after Sunday comes Monday. A child who says Sunday counted Thursday as day 1. The answer is on the next slide."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Monday, counting on from tomorrow",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Friday 1, Saturday 2, Sunday 3, Monday 4. It is Monday. We start from tomorrow."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Friday 1, Saturday 2, Sunday 3, Monday 4. It is Monday. We start from tomorrow. Read it aloud so that children can tick their own work, and say what the example showed."
   },
   {
    "id": "s-m2",
    "part": "mini",
    "kind": "light",
-   "title": "Look along the row. Look down the column.",
+   "title": "The day before",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "card",
-        "head": "ALONG THE ROW",
-        "items": [
-         "What is missing?"
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         }
-        ],
-        "cols": 3,
-        "cell": 110,
-        "hide": [
-         1
-        ],
-        "size": "m"
-       }
-      ],
-      [
-       {
-        "t": "card",
-        "head": "DOWN THE COLUMN",
-        "items": [
-         "What is missing?"
-        ]
-       },
-       {
-        "t": "list",
-        "items": [
-         "top box: ?",
-         "middle box: circle",
-         "bottom box: triangle"
-        ],
-        "ordered": false
-       }
-      ]
-     ]
+     "t": "chip",
+     "text": "What is the day before Monday?"
     }
    ],
-   "note": "Two quick worked examples. Along the row: triangle, ?, square, so the circle is missing. Down the column: a mark at the top, then a circle, then a triangle, so the square is missing. Ask each question first; children answer aloud or touch the tile. Then say: a column is just a row turned to stand up. Say the sentence frame: the row has a triangle and a square, so the box must be a circle. Children say the frame with you. The slide never shows the answers."
+   "note": "Worked example. The day before Monday is Sunday, because the week goes round backwards too. Ask: what is the day before Monday (Sunday); what is the day after Saturday (Sunday). Say: yesterday is the day before today and tomorrow is the day after. Children answer aloud. The answer is on the next slide."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Sunday",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "The day before Monday is Sunday. Going back, the week goes round too."
+    }
+   ],
+   "note": "The answer for the example on the slide before. The day before Monday is Sunday. Going back, the week goes round too. Read it aloud so that children can tick their own work, and say what the example showed."
   },
   {
    "id": "s-m3",
    "part": "mini",
    "kind": "light",
-   "title": "Use the row and the column",
+   "title": "A week on the month page",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         }
-        ],
-        "cols": 3,
-        "cell": 100,
-        "hide": [
-         4,
-         5,
-         7
-        ],
-        "labels": [
-         "",
-         "",
-         "",
-         "",
-         "a",
-         "",
-         "",
-         "",
-         ""
-        ],
-        "size": "s"
-       }
-      ],
-      [
-       {
-        "t": "card",
-        "head": "BOX a IS THE MIDDLE BOX",
-        "items": [
-         "Its row has a square.",
-         "Its column has a circle."
-        ]
-       }
-      ]
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      9
+     ],
+     "size": 68,
+     "mark": [
+      9
      ]
+    },
+    {
+     "t": "chip",
+     "text": "The day with a ring round it is the 9th. What date is a week later?"
     }
    ],
-   "note": "The worked elimination. Box a is in the middle of the grid. Its row has a square, so box a is not a square. Its column has a circle, so box a is not a circle. It cannot be a circle or a square, so it must be a triangle. Say the move slowly: if it is not this and not that, it must be the other one. Ask: could it be a square (no, the row has a square); a circle (no, the column has a circle); so what is left (triangle). Children test with their tiles on mat 1 if they set up the same grid. The slide does not show the answer."
+   "note": "Worked example. A week after the 9th is 7 days later: the 16th, the date straight below the 9th on the month page. Ask: what date (16). Check: 9 and 7 make 16. Say: a week later is the same day of the week. Children answer aloud. The answer is on the next slide."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "The 16th",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "A week is 7 days. 9 and 7 make 16. The 16th is a week after the 9th."
+    }
+   ],
+   "note": "The answer for the example on the slide before. A week is 7 days. 9 and 7 make 16. The 16th is a week after the 9th. Read it aloud so that children can tick their own work, and say what the example showed."
   },
   {
    "id": "s-m4",
    "part": "mini",
    "kind": "light",
-   "title": "Is the grid finished?",
+   "title": "A fortnight",
    "blocks": [
     {
      "t": "visual",
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      }
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      4
      ],
-     "cols": 3,
-     "cell": 100,
-     "size": "s"
+     "size": 68,
+     "mark": [
+      4
+     ]
     },
     {
-     "t": "p",
-     "text": "Check every row. Check every column. Is it correct?"
+     "t": "chip",
+     "text": "A fortnight is 2 weeks. The day with a ring round it is the 4th. What date is a fortnight later?"
     }
    ],
-   "note": "The check move: a grid is not finished until every row and every column has one of each. Rows: circle, square, triangle (yes); square, triangle, circle (yes); circle, triangle, square (yes). Columns: circle, square, circle (no: two circles); square, triangle, triangle (no); triangle, circle, square (yes). So the grid is not correct. Ask: do all the rows follow the rule (yes), so are we done (no, we must check the columns too). Children say which columns have a repeat (the first and the second). Never check only the rows."
+   "note": "Worked example. A fortnight is 2 weeks, which is 14 days. A fortnight after the 4th: one week is the 11th, two weeks is the 18th. Check: 4 and 14 make 18. Ask: what date (18). Say: a fortnight is 2 weeks or 14 days. Children answer aloud. The answer is on the next slide. A child who adds 2 gave the number of weeks, not days."
   },
   {
-   "id": "s-m5",
+   "id": "s-m4-ans",
    "part": "mini",
    "kind": "light",
-   "title": "Your turn",
-   "blocks": [
-    {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "card",
-        "head": "ROW",
-        "items": [
-         "Which shape goes in the ? box?"
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         }
-        ],
-        "cols": 3,
-        "cell": 100,
-        "hide": [
-         1
-        ],
-        "size": "s"
-       }
-      ],
-      [
-       {
-        "t": "card",
-        "head": "GRID",
-        "items": [
-         "Is the grid correct? Circle Yes or No."
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "circle",
-          "colour": 0
-         },
-         {
-          "shape": "square",
-          "colour": 1
-         },
-         {
-          "shape": "triangle",
-          "colour": 2
-         }
-        ],
-        "cols": 3,
-        "cell": 70
-       }
-      ]
-     ]
-    }
-   ],
-   "note": "Two quick items, answered on the children's own paper (say so aloud): a row with a square and a circle (the triangle is missing), and a finished grid to check (it is correct: every row and every column has one of each). Walk the cameras and wait 10 seconds before helping. Nobody holds paper up. The next slide shows the answers and children tick their own work. Answers: triangle; Yes."
-  },
-  {
-   "id": "s-m5a",
-   "part": "mini",
-   "kind": "light",
-   "title": "Check: your turn",
+   "title": "The 18th",
    "blocks": [
     {
      "t": "answer",
-     "text": "Row: a triangle. Grid: Yes, it is correct."
+     "text": "2 weeks is 14 days. 4 and 14 make 18. A fortnight after the 4th is the 18th."
     }
    ],
-   "note": "Read both answers aloud so a child watching the recording can tick their own work. The row has a square and a circle, so the triangle is missing. The grid: rows are square, triangle, circle; triangle, circle, square; circle, square, triangle, and the columns are square, triangle, circle; triangle, circle, square; circle, square, triangle, so every row and every column has one of each. Never ask a child to show a wrong answer to the group. A child who says No is asked to check the columns with a finger."
+   "note": "The answer for the example on the slide before. 2 weeks is 14 days. 4 and 14 make 18. A fortnight after the 4th is the 18th. Read it aloud so that children can tick their own work, and say what the example showed."
   },
   {
    "id": "s-break",
    "part": "break",
    "kind": "dark",
-   "title": "Be the shapes",
+   "title": "Say the days",
    "blocks": [
     {
      "t": "p",
-     "text": "Stand up. I call a shape."
+     "text": "Stand up. Say the days of the week, and stamp softly for each day."
     },
     {
      "t": "p",
-     "text": "Make it with your arms or your body."
+     "text": "Then start on Thursday. Say 7 days."
     },
     {
      "t": "p",
      "text": "Sip some water."
     }
    ],
-   "note": "Four minutes. Stand up on camera with a little clear space. Call the shapes one at a time: a circle (arms in a big ring above the head), a square (arms out to the sides and elbows bent at right angles), a triangle (hands together above the head like a roof). Then call a row of three, for example circle, square, triangle, and children make the three shapes one after another. Call one more row with a different order. No equipment, no running; a child may stay seated and make the shapes with their hands. Do not give prizes or compare children."
+   "note": "Four minutes. Stand up on camera with a little clear space. Say the days from Monday to Sunday slowly together and stamp softly once for each day. Then start on a different day (Thursday) and go round to Wednesday: the days never stop. Then count in 7s with a soft clap: 7, 14, 21, 28. No equipment, no running. A child may stay seated and tap the desk softly. Do not give prizes or compare children. Then ask everyone to sit down with a pencil and their day cards ready."
   },
   {
    "id": "s-ws1",
@@ -1040,18 +729,20 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 1 and 2. Take your time."
+     "text": "Questions 1 to 4. Take your time."
     },
     {
      "t": "qs",
      "ids": [
       "S1",
-      "S2"
+      "S2",
+      "S3",
+      "S4"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 1 and 2 aloud. Children work on their own with their tiles; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder. Question 1: the missing shape in three rows. Question 2: tick True or False for three rows."
+   "note": "Read questions 1 to 4 aloud. Children work on their own with the day cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 4 any child may choose to carry on or try Think harder. Question 1: two missing days in the week. Question 2: the day before and the day after. Question 3: 3 days later and 4 days later. Question 4: 2 days later than Saturday."
   },
   {
    "id": "s-ws1ans",
@@ -1063,11 +754,13 @@
      "t": "answers",
      "ids": [
       "S1",
-      "S2"
+      "S2",
+      "S3",
+      "S4"
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 circle, triangle, square; Q2 row A true, row B false, row C true."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 Wednesday and Saturday. Q2 Tuesday and Sunday. Q3 Friday, then Saturday. Q4 Monday."
   },
   {
    "id": "s-ws2",
@@ -1077,38 +770,18 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 3 and 4. Take your time."
+     "text": "Questions 5 and 6. Take your time."
     },
     {
      "t": "qs",
      "ids": [
-      "S3",
-      "S4"
+      "S5",
+      "S6"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 3 and 4 aloud, then show the next slide for question 5. Question 3: the bottom left box, and the reason that tells us (the column has the clue). Question 4: a grid in a picture, every row correct, is it correct (the columns). Children may use their tiles to check. Wait 10 seconds before helping."
-  },
-  {
-   "id": "s-ws2b",
-   "part": "work",
-   "kind": "light",
-   "title": "Workbook page 2: Start here",
-   "blocks": [
-    {
-     "t": "chip",
-     "text": "Question 5. Take your time."
-    },
-    {
-     "t": "qs",
-     "ids": [
-      "S5"
-     ],
-     "short": true
-    }
-   ],
-   "note": "Question 5: how many circles in a whole 3 by 3 grid. Children may use their tiles to check. Wait 10 seconds before helping. Keep this slide up while children finish page 2."
+   "note": "Read questions 5 and 6 aloud. Question 5: a week, and a week after the date with a ring round it, on the month page. Question 6: tick True or False for four statements. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -1119,13 +792,12 @@
     {
      "t": "answers",
      "ids": [
-      "S3",
-      "S4",
-      "S5"
+      "S5",
+      "S6"
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q3 a triangle, because the column has a circle and a square; Q4 No, the first column has two circles; Q5 3 circles."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q5 7 days; the 13th. Q6 True, False, True, True."
   },
   {
    "id": "s-choice",
@@ -1143,15 +815,15 @@
       ],
       [
        "Think harder (page 3)",
-       "Two clues, how many shapes, what stays correct"
+       "Two days after the day before yesterday, day 10, weeks"
       ],
       [
        "Go further (page 4)",
-       "Four by Four, and bigger grids"
+       "Hundred Days Later, every Wednesday, 3 weeks"
       ],
       [
        "Investigation (page 5)",
-       "Grid builder"
+       "Which days come 5 times?"
       ],
       [
        "Check",
@@ -1164,7 +836,7 @@
      "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
     }
    ],
-   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
   },
   {
    "id": "s-talk",
@@ -1174,21 +846,23 @@
    "blocks": [
     {
      "t": "card",
-     "head": "A CHILD SAYS",
+     "head": "TWO CHILDREN SAY",
      "items": [
-      "I can fill every empty box by looking along the row. I never need the column."
+      "Today is Monday.",
+      "One child: 10 days later is Thursday.",
+      "Another child: 10 days later is Tuesday."
      ]
     },
     {
      "t": "p",
-     "text": "Is the child right? Test it with your tiles."
+     "text": "Who is right? How do you know?"
     },
     {
      "t": "chip",
      "text": "I think ... because ..."
     }
    ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test it with their tiles, using the grid from the sneak-peek: look at the bottom row, which has two empty boxes. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: not always. If a row has only one empty box, the row tells us. If a row has two empty boxes, the row cannot decide alone, so we must look down the column too. Repeat each child answer in your own words for the recording. The child who is wrong is a child in another class: no cast name is given the wrong answer."
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: the first child is right. 7 days later is Monday again, a whole week changes nothing. Then 3 more days: Tuesday, Wednesday, Thursday. The second child counted only 8 days. Children may also count on 10 days one at a time with the cards. Link to Explore: a week later is the same day. Repeat each child answer in your own words for the recording. The two children are in another class: no cast name is given the wrong answer."
   },
   {
    "id": "s-sneakans",
@@ -1198,10 +872,10 @@
    "blocks": [
     {
      "t": "answer",
-     "text": "Puzzle 1: circle. Puzzle 2: a square. The column has a triangle and a circle, and the row alone could not tell us."
+     "text": "Puzzle 1: Tuesday. Puzzle 2: Tuesday. Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5."
     }
    ],
-   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: the row has a square and a triangle, so the circle is missing. Puzzle 2: the first box of the bottom row has a triangle and a circle above it, so it is a square; its row shows only a triangle, so the row could not decide alone. It was the same idea as the child in the talk question."
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: Tuesday. Puzzle 2: 5 days after Thursday is Tuesday: count on from tomorrow. It was the same idea as Explore: start counting from tomorrow, and after Sunday the days start again."
   },
   {
    "id": "s-exit",
@@ -1240,7 +914,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: triangle; option 2, square, triangle, circle; triangle. Do not read out any child result."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 Tuesday; E2 option 2, the 18th; E3 the 11th."
   },
   {
    "id": "s-look",
@@ -1252,7 +926,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session at the start of next term. Never a direct message to a child. The Next time I will try row is optional.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1266,7 +940,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "Show a grown-up one grid you filled today."
+     "text": "Show a grown-up how you counted on to find a day."
     },
     {
      "t": "card",
@@ -1287,38 +961,18 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "title": "Go further: three in a row",
+   "title": "Go further: the 15th",
    "blocks": [
     {
      "t": "p",
-     "text": "Mei has a 3 by 3 grid with the digits 1, 2 and 3."
-    },
-    {
-     "t": "visual",
-     "type": "grid",
-     "rows": 3,
-     "cols": 3,
-     "kind": "squares",
-     "counts": {
-      "0,0": "1",
-      "0,1": "[]",
-      "0,2": "[]",
-      "1,0": "[]",
-      "1,1": "2",
-      "1,2": "[]",
-      "2,0": "[]",
-      "2,1": "[]",
-      "2,2": "3"
-     },
-     "cell": 64,
-     "size": "s"
+     "text": "A month has 31 days. The 1st is a Wednesday."
     },
     {
      "t": "p",
-     "text": "Every row and every column has 1, 2 and 3 once. Can you fill it?"
+     "text": "What day is the 15th?"
     }
    ],
-   "note": "Optional, only if you are on time. A 3 by 3 grid of the digits 1, 2 and 3 with 1, 2 and 3 on the long line from the top left to the bottom right. There is exactly one way to fill it: the top row must be 1, 3, 2 (a 2 in the top row would sit above the 2 in the middle), then 3, 2, 1 and 2, 1, 3. Take two answers: children say the first row, then check the rows and the columns together. Ask: how do you know the top row cannot be 1, 2, 3? Take the idea, not the speed.",
+   "note": "Optional, only if you are on time. The 15th is 14 days after the 1st, which is 2 weeks, so it is a Wednesday too. Take two answers and move on. This links to the fortnight in the Mini-lesson and to the month page questions on page 4.",
    "optional": true
   },
   {
@@ -1337,15 +991,15 @@
       ],
       [
        "Is it always true?",
-       "Row right, column right? Test it with the same row three times."
+       "Does a week later always give the same day? Test it."
       ],
       [
        "Make a puzzle",
-       "Cover three boxes. Ask a grown-up to find them."
+       "Write a days-later puzzle for your grown-up."
       ],
       [
        "Teach it back",
-       "Show a toy how to find a missing box."
+       "Show a toy how to count on to find a day."
       ]
      ]
     },
@@ -1373,37 +1027,33 @@
       "text": "@rec"
      },
      {
-      "k": "SAY",
-      "text": "Hello, inquirers! Pencil ready, and your grid tiles and mat on the table. Cameras can be on or off, as you like."
-     },
-     {
-      "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
-     },
-     {
-      "k": "SAY",
-      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
-     },
-     {
-      "k": "SAY",
-      "text": "Today we play with a grid. A grid is a square of boxes. We fill it so that every box has a reason."
-     },
-     {
       "k": "DO",
-      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
       "s": 12
      },
      {
-      "k": "NOTE",
-      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your day cards on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are calendar detectives. We put the days in order and count on to find a day and a date. If you are not sure, a guess is a great start."
      },
      {
       "k": "NOTE",
-      "text": "Plain statement for families when it comes up: finding the missing one in a row is early Primary 1 work; solving a whole grid by elimination, the 4 by 4 grid of digits and what a bigger grid holds go beyond Primary 1 on purpose, always with the tiles in hand. This is a new topic with no school-paper evidence, so the wording is unverified."
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
      },
      {
       "k": "NOTE",
-      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without the tiles draws a 3 by 3 grid on paper and writes C for circle, S for square and T for triangle."
+      "text": "Plain statement for families when it comes up: days of the week are not a listed Primary 1 outcome; two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go beyond Primary 1 on purpose."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
      }
     ]
    },
@@ -1412,7 +1062,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-rem1"
+      "slide": "s-rem1",
+      "s": 15
      },
      {
       "k": "REC",
@@ -1420,70 +1071,58 @@
      },
      {
       "k": "SAY",
-      "text": "A row has one of each: a circle, a square and a triangle. Here is a row with a circle and a square. One shape is missing."
+      "text": "Counting in sevens. Three, then ten, then seventeen. We add seven each time."
      },
      {
       "k": "ASK",
-      "text": "Which shape is missing from the row?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "How do you know?",
-      "resp": 20
+      "text": "What comes next after seventeen?",
+      "resp": 30
      },
      {
       "k": "WORK",
-      "text": "Children put the circle tile and the square tile in a row, then add the missing tile.",
-      "s": 30
+      "text": "Your turn. Start at five and count on in sevens: five, twelve, nineteen. Say it with me.",
+      "s": 40
      },
      {
       "k": "SLIDE",
-      "slide": "s-rem2"
+      "slide": "s-rem2",
+      "s": 15
      },
      {
       "k": "SAY",
-      "text": "Now numbers. The digits one, two, three and four are used once each in a row. Here are one, three and four, and a mark."
+      "text": "Dates use the same words as places in a line: the first, the second, the third, up to the tenth."
      },
      {
       "k": "ASK",
-      "text": "Which digit is missing?",
-      "resp": 15
+      "text": "Which place is the child with a ring round them?",
+      "resp": 25
      },
      {
       "k": "SLIDE",
-      "slide": "s-rem3"
+      "slide": "s-rem3",
+      "s": 15
      },
      {
       "k": "SAY",
-      "text": "One of each means a circle, a square and a triangle, once each. Look at row A and row B."
+      "text": "Seven days make a week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Say them with me, slowly."
      },
      {
       "k": "ASK",
-      "text": "Which row has one of each?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "What is wrong with the other row?",
-      "resp": 20
+      "text": "What comes after Sunday?",
+      "resp": 25
      },
      {
       "k": "WORK",
-      "text": "Children put three tiles in a row with one of each, then a row with a repeat, and say which is which.",
-      "s": 35
-     },
-     {
-      "k": "SAY",
-      "text": "Remember those three words: one of each. We use them all lesson."
+      "text": "Put your seven day cards in a row, from Monday to Sunday. Then say the days with your finger on each card.",
+      "s": 70
      },
      {
       "k": "STUCK",
-      "text": "If a child is unsure of a shape name, point to the tile or the picture and say its name. For the digits, count one, two, three, four aloud and notice the skipped number. For one of each, count the three kinds on fingers."
+      "text": "If a child is unsure how to count in 7s, add 10 and take away 3. For places, count from the front. For the days, point along the cards."
      },
      {
       "k": "NOTE",
-      "text": "Answers: triangle (the row has a circle and a square); 2; row A (row B has two squares and no circle). Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 4 and the three shape names."
+      "text": "Answers: 24; third; Monday. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 31 and the pictures."
      }
     ]
    },
@@ -1492,7 +1131,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-sneak"
+      "slide": "s-sneak",
+      "s": 12
      },
      {
       "k": "REC",
@@ -1500,25 +1140,25 @@
      },
      {
       "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Your paper is not collected."
      },
      {
       "k": "READ",
-      "text": "Puzzle one. Each row has a circle, a square and a triangle, one of each. This row has a square and a triangle. Which shape goes in the empty box? Write its name."
+      "text": "Puzzle one. Today is Monday. What day is it tomorrow?"
      },
      {
       "k": "WORK",
-      "text": "Children write the shape name on their own paper. Tiles are fine to use.",
-      "s": 40
+      "text": "Children write on their own paper.",
+      "s": 30
      },
      {
       "k": "READ",
-      "text": "Puzzle two. Every row and every column has a circle, a square and a triangle, one of each. Which shape goes in the first box with a question mark in the bottom row? I know because blank."
+      "text": "Puzzle two. Today is Thursday. What day is it 5 days later? I know because blank."
      },
      {
       "k": "WORK",
       "text": "Children write or draw their answer.",
-      "s": 70
+      "s": 85
      },
      {
       "k": "SAY",
@@ -1526,7 +1166,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: circle. Puzzle 2 answer: a square (the column of box a has a triangle and a circle; the row shows only a triangle). Look for good ideas to praise later (a child who looked down the column, or who said it cannot be a triangle or a circle). Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: Tuesday. Puzzle 2 answer: Tuesday (Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5). A child who counts Thursday as day 1 gets Monday: say nothing yet. Look for good ideas to praise later. Do not write scores or keep a list."
      }
     ]
    },
@@ -1535,7 +1175,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-explore1"
+      "slide": "s-explore1",
+      "s": 15
      },
      {
       "k": "REC",
@@ -1543,70 +1184,104 @@
      },
      {
       "k": "SAY",
-      "text": "Today your tiles are the teacher. Put mat one in front of you. Take three circles, three squares and three triangles. Put the stars and the digits away."
-     },
-     {
-      "k": "SAY",
-      "text": "A row goes across, like children in a queue. Fill the mat so that every row has a circle, a square and a triangle. Only the rows, for now."
+      "text": "The day cards are the teachers today. Take your seven day cards and put them in a row. Start with Monday."
      },
      {
       "k": "WORK",
-      "text": "Children fill mat 1 so every row has a circle, a square and a triangle. Tutor scans the cameras and the tables.",
-      "s": 70
+      "text": "Children put the cards in order. Tutor scans the cameras.",
+      "s": 55
      },
      {
       "k": "ASK",
-      "text": "What is in your top row? Tell me the three shapes.",
+      "text": "What comes after Sunday?",
       "resp": 25
      },
      {
       "k": "SLIDE",
-      "slide": "s-explore2"
+      "slide": "s-explore1-ans",
+      "s": 8
      },
      {
       "k": "SAY",
-      "text": "Round two. A column goes down, from the top to the bottom. Now look down each column. Is there one of each? If not, move your tiles until every row and every column has one of each."
-     },
-     {
-      "k": "WORK",
-      "text": "Children fix their grid. Many different grids are right.",
-      "s": 110
-     },
-     {
-      "k": "ASK",
-      "text": "How did you fix a column that was wrong?",
-      "resp": 25
+      "text": "After Sunday, the week starts again with Monday. The days go round like a clock."
      },
      {
       "k": "SLIDE",
-      "slide": "s-explore3"
+      "slide": "s-explore2",
+      "s": 15
      },
      {
       "k": "SAY",
-      "text": "Round three. Keep this top row: circle, square, triangle. Fill the other two rows. Every row and every column has one of each. How many different grids can you make?"
+      "text": "Round two. Put your finger on Tuesday. Jump five days later. Do not count Tuesday: start from tomorrow."
      },
      {
       "k": "WORK",
-      "text": "Children make one grid, then look for a different one with the same top row.",
-      "s": 80
+      "text": "Children count on with the cards and say the day.",
+      "s": 65
      },
      {
       "k": "ASK",
-      "text": "How many different grids did you find?",
-      "resp": 15
+      "text": "Which day do you land on? Now start on Sunday and jump three days.",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Tuesday and five days later is Sunday. Sunday and three days later is Wednesday. We start counting from tomorrow."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. This month page starts on a Wednesday. The fifth has a ring round it. Count on seven days. Which date do you land on?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children count on along the month page with a finger.",
+      "s": 60
      },
      {
       "k": "ASK",
-      "text": "How do you know there is not another one?",
-      "resp": 25
+      "text": "Which date? Which day of the week is it?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The twelfth. A week later, and it is a Sunday too."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "Why is the twelfth a Sunday too? What happens to the day when we count on seven?",
+      "resp": 55
+     },
+     {
+      "k": "SAY",
+      "text": "After seven days we are back on the same day. In one column of the month page, every date is the same day, and the dates go up by seven."
      },
      {
       "k": "STUCK",
-      "text": "A child who has two of a shape in a column: ask them to read down the column aloud. A child who is stuck on round two: keep the top row as it is and ask where the circle can go in the middle row. A child with too few tiles uses the letters C, S and T on paper."
+      "text": "A child who counts today as day 1 lands one day early: ask them to start from tomorrow. A child who loses the place on the cards: slide a finger along. A child with no cards writes the seven days on paper."
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say what they have made. Tilting the camera to the table is allowed; a face need not be in view; nothing is held up to the camera. The answer to round three is 2 grids: circle square triangle then square triangle circle then triangle circle square; or circle square triangle then triangle circle square then square triangle circle. Do not say the rule before the children do. Do not confirm the number 2 until the next slide."
+      "text": "Main room only. Answers: Monday; Sunday; Wednesday; the 12th, a Sunday. Do not say the rule before the children do."
      }
     ]
    },
@@ -1615,7 +1290,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-m1"
+      "slide": "s-m1",
+      "s": 8
      },
      {
       "k": "REC",
@@ -1623,125 +1299,133 @@
      },
      {
       "k": "SAY",
-      "text": "Here is the rule. One of each in every row. One of each in every column. This grid follows the rule. Read the top row with me: square, circle, triangle."
+      "text": "Today is Thursday. We want the day four days later. Count on from tomorrow."
      },
      {
       "k": "ASK",
-      "text": "Is there one of each in the first column, going down?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "With the top row circle, square, triangle there were exactly two grids. This one has a different top row, so it is a new grid."
+      "text": "What day is it four days later?",
+      "resp": 35
      },
      {
       "k": "SLIDE",
-      "slide": "s-m2"
+      "slide": "s-m1-ans",
+      "s": 8
      },
      {
       "k": "SAY",
-      "text": "Look along the row. Then look down the column. A column is just a row that stands up."
-     },
-     {
-      "k": "ASK",
-      "text": "The row has a triangle, then a mark, then a square. Which shape is missing?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "The column has a mark, then a circle, then a triangle. Which shape is missing?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "Say it with me: the row has a triangle and a square, so the box must be a circle."
+      "text": "Friday is one, Saturday two, Sunday three, Monday four. It is Monday. We never count today."
      },
      {
       "k": "SLIDE",
-      "slide": "s-m3"
-     },
-     {
-      "k": "SAY",
-      "text": "Now a box that needs both. Look at box a, in the middle. Its row has a square. Its column has a circle."
+      "slide": "s-m2",
+      "s": 8
      },
      {
       "k": "ASK",
-      "text": "Could box a be a square?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Could box a be a circle?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "So what shape is left for box a?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "If it is not this and not that, it must be the other one. A triangle, because the row stops a square and the column stops a circle."
-     },
-     {
-      "k": "WORK",
-      "text": "Children may copy the grid onto mat 1 with their tiles and check.",
-      "s": 30
+      "text": "What is the day before Monday?",
+      "resp": 30
      },
      {
       "k": "SLIDE",
-      "slide": "s-m4"
+      "slide": "s-m2-ans",
+      "s": 8
      },
      {
       "k": "SAY",
-      "text": "A grid is not finished until we check every row and every column. Look at the rows first."
-     },
-     {
-      "k": "ASK",
-      "text": "Does every row have one of each?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "Now the columns. Run a finger down each one."
-     },
-     {
-      "k": "ASK",
-      "text": "Which columns have two of the same?",
-      "resp": 20
-     },
-     {
-      "k": "SAY",
-      "text": "So this grid is not correct. We never check only the rows."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m5"
-     },
-     {
-      "k": "SAY",
-      "text": "Your turn. On your paper: which shape goes in the row? And is the grid correct, yes or no? Check the rows and the columns."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write the two answers on their own paper. Wait 10 seconds before helping.",
-      "s": 55
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m5a"
+      "text": "Sunday. The week goes round backwards too. Yesterday is the day before today, and tomorrow is the day after."
      },
      {
       "k": "READ",
-      "text": "Row: a triangle. Grid: yes, it is correct. Tick your own work with a tick."
+      "text": "Your turn. What is the day after Friday? What is the day before Thursday? Write them."
      },
      {
-      "k": "NOTE",
-      "text": "Key words to use every time: row, column, one of each, grid, check. Say it the same way each time: the row has ... and ..., so the box must be .... Do not use the word wrong for a child, only for a grid or a row."
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 35
+     },
+     {
+      "k": "SAY",
+      "text": "The day after Friday is Saturday. The day before Thursday is Wednesday."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A week on the month page. The day with a ring round it is the ninth."
+     },
+     {
+      "k": "ASK",
+      "text": "What date is a week later?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A week is seven days. Nine and seven make sixteen. It is the date straight below."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. The day with a ring round it is the 2nd. What date is a week later? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 40
+     },
+     {
+      "k": "SAY",
+      "text": "Two and seven make nine. A week after the second is the ninth."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A fortnight is two weeks. That is fourteen days. The day with a ring round it is the fourth."
+     },
+     {
+      "k": "ASK",
+      "text": "What date is a fortnight later?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two weeks is fourteen days. Four and fourteen make eighteen. The eighteenth is a fortnight after the fourth."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A holiday lasts one week. How many days is that? And a fortnight? Write the two numbers."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 30
+     },
+     {
+      "k": "SAY",
+      "text": "A week is seven days. A fortnight is fourteen days."
      },
      {
       "k": "STUCK",
-      "text": "If a child checks only the rows, ask them to touch the first column from the top. If a child is unsure which shape is missing, put the three tiles in a line and remove the two that are there."
+      "text": "If a child counts today as day 1, ask them to start from tomorrow. If a child says a week after the 9th is the 17th, ask them to count the 7 days one at a time. If a child cannot go before Monday, show the cards in a ring."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: day, week, fortnight, tomorrow, yesterday, days later, date. Say 1st, 2nd, 3rd for dates. The slides keep the answers off the screen while you ask: read every question aloud."
      }
     ]
    },
@@ -1750,7 +1434,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-break"
+      "slide": "s-break",
+      "s": 8
      },
      {
       "k": "REC",
@@ -1758,12 +1443,16 @@
      },
      {
       "k": "SAY",
-      "text": "Stand up and get a sip of water. I call a shape and you make it with your arms or your body. A circle: a big ring. A square: elbows out. A triangle: a roof above your head."
+      "text": "Stand up and get a sip of water. Say the days of the week slowly with me, and stamp softly for each day. Then we start on Thursday and go round."
      },
      {
       "k": "WORK",
-      "text": "Call circle, square and triangle one at a time, then a row of three (circle, square, triangle), then a different row. Children make each shape; a child who sits makes the shapes with their hands.",
-      "s": 150
+      "text": "Say Monday to Sunday with a soft stamp for each. Then start on Thursday and go round to Wednesday. Then count in 7s with a soft clap: 7, 14, 21, 28. Children may stay seated and tap the table.",
+      "s": 145
+     },
+     {
+      "k": "NOTE",
+      "text": "Quiet movement only. After the break say: please sit down, put your day cards in front of you, and have a pencil ready."
      }
     ]
    },
@@ -1772,7 +1461,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-ws1"
+      "slide": "s-ws1",
+      "s": 8
      },
      {
       "k": "REC",
@@ -1780,57 +1470,53 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: each row has a circle, a square and a triangle. Which shape goes in the box with the mark in rows A, B and C? Circle one for each. Question 2: here are three rows. Tick true or false for each statement: this row has one of each."
+      "text": "Page 1, Start here. Question 1: write the missing days of the week. Question 2: part a: the day before Wednesday is blank. Part b: the day after Saturday is blank. Question 3: today is Tuesday. Part a: 3 days later it is blank. Part b: 4 days later it is blank. Question 4: today is Saturday. What day is it 2 days later? Write the day."
      },
      {
       "k": "WORK",
-      "text": "Page 1, questions 1 and 2. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 450
+      "text": "Page 1, questions 1 to 4. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 570
      },
      {
       "k": "SLIDE",
-      "slide": "s-ws1ans"
+      "slide": "s-ws1ans",
+      "s": 8
      },
      {
       "k": "READ",
-      "text": "Question 1: row A, circle; row B, triangle; row C, square. Question 2: row A true, row B false, row C true. Tick your own page with a tick."
+      "text": "Question 1: Wednesday and Saturday. Question 2: Tuesday, then Sunday. Question 3: Friday, then Saturday. Question 4: Monday. Tick your own page with a tick."
      },
      {
       "k": "SAY",
-      "text": "After question 2 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+      "text": "After question 4 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
      },
      {
       "k": "SLIDE",
-      "slide": "s-ws2"
+      "slide": "s-ws2",
+      "s": 8
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 3: look at the grid. Circle the shape for the bottom left box. Then circle the reason that tells us. Question 4: look at the grid in the picture. Every row has one of each. Is the grid correct? Circle Yes or No."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2b"
-     },
-     {
-      "k": "READ",
-      "text": "Question 5: every row of a 3 by 3 grid has one circle, and every column has one circle. How many circles are in the whole grid?"
+      "text": "Page 2. Question 5: look at the month page. The day with a ring round it is the 6th. Part a: a week has blank days. Part b: a week after the 6th is the blank th. Question 6: tick True or False for each statement."
      },
      {
       "k": "WORK",
-      "text": "Page 2, questions 3 to 5.",
-      "s": 540
+      "text": "Page 2, questions 5 and 6.",
+      "s": 360
      },
      {
       "k": "SLIDE",
-      "slide": "s-ws2ans"
+      "slide": "s-ws2ans",
+      "s": 8
      },
      {
       "k": "READ",
-      "text": "Question 3: a triangle, because the column has a circle and a square. Question 4: look at the grid in the picture. Every row has one of each. Is the grid correct? Circle Yes or No. Question 5: every row of a 3 by 3 grid has one circle, and every column has one circle. How many circles are in the whole grid?"
+      "text": "Question 5: 7 days, and the 13th. Question 6: True, False, True, True. Tick your own page."
      },
      {
       "k": "SLIDE",
-      "slide": "s-choice"
+      "slide": "s-choice",
+      "s": 8
      },
      {
       "k": "SAY",
@@ -1838,25 +1524,25 @@
      },
      {
       "k": "MOVE",
-      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
       "s": 30
      },
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 240
+      "s": 420
      },
      {
       "k": "STUCK",
-      "text": "Q1: which two shapes are in the row? Q2: touch each shape in the row and check there is a circle, a square and a triangle. Q3: look down the column of the bottom left box, then at its row. Q4: build the grid with tiles, then read down each column. Q5: how many rows? one circle in each."
+      "text": "Q1: say the days from Monday with the cards. Q2: the day before is one step back, the day after one step on. Q3: count on from tomorrow, three steps. Q4: Sunday is 1, then Monday. Q5: a week is 7 days; go down one row on the month page. Q6: say each statement with the cards."
      },
      {
       "k": "STUCK",
-      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session at the start of next term. Never a private message to a child."
      },
      {
       "k": "NOTE",
-      "text": "Think harder has two clues, how many shapes could go in a box and what keeps a correct grid correct. Go further has Four by Four, a digit grid, and a bigger grid (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 15 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder has two days after the day before yesterday, the 10th day from Monday, weeks and a fortnight, and the day of a date on the month page (beyond Primary 1 on purpose). Go further has Hundred Days Later, every Wednesday of a month and 3 weeks later. Do not announce who is on which page. Start here takes a middle child about 16 minutes: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -1865,7 +1551,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-talk"
+      "slide": "s-talk",
+      "s": 8
      },
      {
       "k": "REC",
@@ -1873,39 +1560,40 @@
      },
      {
       "k": "READ",
-      "text": "A child says: I can fill every empty box by looking along the row. I never need the column. Is the child right? Test it with your tiles."
+      "text": "Today is Monday. One child in another class says: 10 days later is Thursday. Another child says: 10 days later is Tuesday. Who is right? How do you know?"
      },
      {
       "k": "WORK",
-      "text": "Test it with your tiles: set up the grid from the sneak-peek and look at the bottom row, which has two empty boxes.",
-      "s": 45
+      "text": "Think about it with your day cards: count on 10 days, one at a time, or use a whole week.",
+      "s": 60
      },
      {
       "k": "WORK",
       "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-      "s": 40
+      "s": 60
      },
      {
       "k": "ASK",
       "text": "Who would like to share? Volunteers first. A pass is always fine.",
-      "resp": 70
+      "resp": 85
      },
      {
       "k": "SLIDE",
-      "slide": "s-sneakans"
+      "slide": "s-sneakans",
+      "s": 8
      },
      {
       "k": "SAY",
-      "text": "Remember the sneak-peek? Puzzle one: a circle. Puzzle two: a square, because the column has a triangle and a circle. The row could not tell us alone."
+      "text": "Remember the sneak-peek? Puzzle one: Tuesday. Puzzle two: Tuesday. Count on from tomorrow, and after Sunday the days start again."
      },
      {
       "k": "ASK",
       "text": "Did anyone change their mind while we worked? You can just nod.",
-      "resp": 12
+      "resp": 10
      },
      {
       "k": "NOTE",
-      "text": "Model answer: not always. If a row has only one empty box, the row tells us. If a row has two empty boxes, the row cannot decide alone, so we look down the column too. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+      "text": "Model answer: the first child is right; 7 days later is Monday again, then 3 more days is Thursday. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
     ]
    },
@@ -1914,7 +1602,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-exit"
+      "slide": "s-exit",
+      "s": 8
      },
      {
       "k": "REC",
@@ -1926,21 +1615,22 @@
      },
      {
       "k": "READ",
-      "text": "E1. A row has a circle and a square. Which shape is missing from the row? Circle one. E2. Which row has one of each? Choose the correct answer. Option 1: circle, circle, square. Option 2: square, triangle, circle. Option 3: triangle, triangle, circle. Option 4: circle, square, square. Write its number in the bracket. E3. A box has a circle in its row and a square in its column. Which shape goes in the box? Circle one.",
+      "text": "E1. Today is Sunday. What day is it 2 days later? E2. A week after the eleventh is which date? Choose the correct answer. Option 1: the seventeenth. Option 2: the eighteenth. Option 3: the nineteenth. Option 4: the twenty-fifth. Write its number in the bracket. E3. Ben swims every 7 days. He swims on the fourth. The next time he swims is the blank th.",
       "s": 75
      },
      {
       "k": "WORK",
       "text": "Children answer E1 to E3 on their own.",
-      "s": 165
+      "s": 190
      },
      {
       "k": "SLIDE",
-      "slide": "s-exitans"
+      "slide": "s-exitans",
+      "s": 8
      },
      {
       "k": "READ",
-      "text": "E1: triangle. E2: option 2. E3: triangle."
+      "text": "E1: Tuesday. E2: option 2, the eighteenth. E3: the eleventh."
      },
      {
       "k": "SAY",
@@ -1957,7 +1647,8 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-look"
+      "slide": "s-look",
+      "s": 8
      },
      {
       "k": "REC",
@@ -1970,7 +1661,7 @@
      {
       "k": "WORK",
       "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "s": 50
      }
     ]
    },
@@ -1979,20 +1670,22 @@
     "lines": [
      {
       "k": "SLIDE",
-      "slide": "s-end"
+      "slide": "s-end",
+      "s": 8
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Make a Table. Please have the strip page cut out by a grown-up, fourteen paper strips, and a pencil. No matches or toothpicks, please. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Make a Table. Please have the strip page cut out by a grown-up, fourteen paper strips. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
       "slide": "s-opt",
+      "s": 8,
       "optional": true
      },
      {
       "k": "SAY",
-      "text": "Optional, only if you are on time: a grid of one, two and three with one, two and three on the long line from the top left to the bottom right. Fill it so every row and every column has one, two and three once.",
+      "text": "Optional, only if you are on time: a month has 31 days, and the first is a Wednesday. What day is the fifteenth?",
       "optional": true
      },
      {
@@ -2004,6 +1697,7 @@
      {
       "k": "SLIDE",
       "slide": "s-menu",
+      "s": 8,
       "optional": true
      },
      {
@@ -2013,7 +1707,7 @@
      },
      {
       "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: top row 1, 3, 2; then 3, 2, 1; then 2, 1, 3. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: Wednesday (14 days is 2 weeks after the 1st). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
      }
     ]
    }
@@ -2025,428 +1719,239 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Each row has a circle, a square and a triangle. Which shape goes in the box with the ? mark in rows A, B and C?",
+    "text": "Write the missing days of the week.",
     "parts": [
      {
       "l": "a",
-      "text": "Row A. Circle one.",
-      "ans": "circle",
-      "val": "circle",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
-      ]
-     },
-     {
-      "l": "b",
-      "text": "Row B. Circle one.",
-      "ans": "triangle",
-      "val": "triangle",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
-      ]
-     },
-     {
-      "l": "c",
-      "text": "Row C. Circle one.",
-      "ans": "square",
-      "val": "square",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
+      "text": "The missing days are ______ and ______ .",
+      "ans": "Wednesday; Saturday",
+      "val": [
+       "Wednesday",
+       "Saturday"
       ]
      }
     ],
-    "answer": "circle; triangle; square",
+    "answer": "Wednesday; Saturday",
     "val": [
-     "circle",
-     "triangle",
-     "square"
+     "Wednesday",
+     "Saturday"
     ],
-    "hint": "Which two shapes are in the row already? Which one is not there?",
-    "solution": "Row A has a triangle and a square, so the circle is missing. Row B has a circle and a square, so the triangle is missing. Row C has a triangle and a circle, so the square is missing.",
+    "hint": "Say the days from Monday. Which two are missing?",
+    "solution": "The days in order are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. The missing days are Wednesday and Saturday.",
     "mistakes": [
-     "Choosing a shape that is already in the row.",
-     "Circling without looking at the other two shapes."
+     "Writing a day twice.",
+     "Writing Sunday before Saturday."
     ],
-    "mins": 3,
-    "visuals": [
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "triangle",
-        "colour": 2
-       },
-       {
-        "shape": "square",
-        "colour": 1
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       }
+    "mins": 2,
+    "visual": {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "Monday",
+       "Tuesday",
+       "[]",
+       "Thursday"
       ],
-      "cols": 3,
-      "cell": 84,
-      "hide": [
-       2
-      ],
-      "labels": [
-       "A",
-       "",
+      [
+       "Friday",
+       "[]",
+       "Sunday",
        ""
       ]
-     },
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "circle",
-        "colour": 0
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       },
-       {
-        "shape": "square",
-        "colour": 1
-       }
-      ],
-      "cols": 3,
-      "cell": 84,
-      "hide": [
-       0
-      ],
-      "labels": [
-       "B",
-       "",
-       ""
-      ]
-     },
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "triangle",
-        "colour": 2
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       }
-      ],
-      "cols": 3,
-      "cell": 84,
-      "hide": [
-       1
-      ],
-      "labels": [
-       "C",
-       "",
-       ""
-      ]
-     }
-    ]
+     ]
+    }
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Look at the three rows. Tick True or False for each statement.",
-    "parts": [],
-    "answer": "A true; B false; C true",
-    "val": [
-     "True",
-     "False",
-     "True"
-    ],
-    "hint": "One of each means a circle, a square and a triangle, once each. Touch the shapes one at a time.",
-    "solution": "Row A has a square, a triangle and a circle: one of each, so True. Row B has two circles and no square, so False. Row C has a triangle, a circle and a square: one of each, so True.",
-    "mistakes": [
-     "Saying True when a shape is used twice.",
-     "Looking at only the first two shapes."
-    ],
-    "mins": 3,
-    "tf": [
-     {
-      "s": "Row A has one of each."
-     },
-     {
-      "s": "Row B has one of each."
-     },
-     {
-      "s": "Row C has one of each."
-     }
-    ],
-    "visuals": [
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "square",
-        "colour": 1
-       },
-       {
-        "shape": "triangle",
-        "colour": 2
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       }
-      ],
-      "cols": 3,
-      "cell": 64,
-      "labels": [
-       "A",
-       "",
-       ""
-      ]
-     },
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "circle",
-        "colour": 0
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       },
-       {
-        "shape": "triangle",
-        "colour": 2
-       }
-      ],
-      "cols": 3,
-      "cell": 64,
-      "labels": [
-       "B",
-       "",
-       ""
-      ]
-     },
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "triangle",
-        "colour": 2
-       },
-       {
-        "shape": "circle",
-        "colour": 0
-       },
-       {
-        "shape": "square",
-        "colour": 1
-       }
-      ],
-      "cols": 3,
-      "cell": 64,
-      "labels": [
-       "C",
-       "",
-       ""
-      ]
-     }
-    ]
-   },
-   {
-    "id": "S3",
-    "page": 2,
-    "tier": "start",
-    "text": "Every row and every column has a circle, a square and a triangle. Look at the bottom left box.",
+    "text": "Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "Which shape goes in the bottom left box? Circle one.",
-      "ans": "triangle",
-      "val": "triangle",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
-      ]
+      "text": "The day before Wednesday is ____ .",
+      "ans": "Tuesday",
+      "val": "Tuesday"
      },
      {
       "l": "b",
-      "text": "Which reason tells us? Circle one.",
-      "ans": "The column has a circle and a square.",
-      "val": "column",
-      "choices": [
-       "The column has a circle and a square.",
-       "The row has a circle and a square."
-      ]
+      "text": "The day after Saturday is ____ .",
+      "ans": "Sunday",
+      "val": "Sunday"
      }
     ],
-    "answer": "triangle; the column has a circle and a square",
+    "answer": "Tuesday; Sunday",
     "val": [
-     "triangle",
-     "column"
+     "Tuesday",
+     "Sunday"
     ],
-    "hint": "Look down the column of the bottom left box. Then look along its row. Which one has two different shapes?",
-    "solution": "The column of the bottom left box has a circle at the top and a square in the middle, so the triangle is missing. The row has only a circle, so the row could not tell us.",
+    "hint": "Before means one step back. After means one step on.",
+    "solution": "One step back from Wednesday is Tuesday. One step on from Saturday is Sunday.",
     "mistakes": [
-     "Choosing the row reason: the row has only one shape.",
-     "Choosing a shape that is already in the column."
+     "Writing Thursday for before.",
+     "Writing Monday after Saturday."
     ],
-    "mins": 3.5,
+    "mins": 3
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Today is Tuesday. Count on from tomorrow.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 days later it is ____ .",
+      "ans": "Friday",
+      "val": "Friday"
+     },
+     {
+      "l": "b",
+      "text": "4 days later it is ____ .",
+      "ans": "Saturday",
+      "val": "Saturday"
+     }
+    ],
+    "answer": "Friday; Saturday",
+    "val": [
+     "Friday",
+     "Saturday"
+    ],
+    "hint": "Count on from tomorrow. Wednesday is 1.",
+    "solution": "Wednesday is 1, Thursday is 2, Friday is 3. It is Friday. Four days later: Saturday is 4. It is Saturday.",
+    "mistakes": [
+     "Counting Tuesday as day 1 and writing Thursday.",
+     "Writing Wednesday.",
+     "(b) Writing Friday (counting Tuesday as day 1)."
+    ],
+    "mins": 3,
     "visual": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
+     "type": "table",
+     "head": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
      ],
-     "cols": 3,
-     "cell": 100,
-     "hide": [
-      6,
-      7
+     "rows": [
+      [
+       "",
+       "today",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
      ]
     }
    },
    {
     "id": "S4",
-    "page": 2,
+    "page": 1,
     "tier": "start",
-    "text": "A child fills the grid in the picture. Every row has one of each. Is the grid correct?",
+    "text": "Today is Saturday. What day is it 2 days later?",
     "parts": [
      {
-      "l": "",
-      "text": "Circle Yes or No.",
-      "ans": "No",
-      "val": "No",
-      "choices": [
-       "Yes",
-       "No"
-      ]
+      "l": "a",
+      "text": "2 days later it is ____ .",
+      "ans": "Monday",
+      "val": "Monday"
      }
     ],
-    "answer": "No",
+    "answer": "Monday",
     "val": [
-     "No"
+     "Monday"
     ],
-    "hint": "Check the columns too. Run a finger down the first column. Use your tiles to build the grid.",
-    "solution": "The first column is circle, triangle, circle: two circles. So the grid is not correct, even though every row has one of each.",
+    "hint": "Sunday is 1. What comes after Sunday?",
+    "solution": "Sunday is 1. After Sunday the week starts again, so Monday is 2. It is Monday.",
     "mistakes": [
-     "Saying Yes after checking only the rows.",
-     "Not building the grid to look at the columns."
+     "Writing Sunday.",
+     "Writing Tuesday."
     ],
-    "mins": 3,
-    "visual": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      }
-     ],
-     "cols": 3,
-     "cell": 72
-    }
+    "mins": 2.5
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Every row of a 3 by 3 grid has one circle, and every column has one circle. How many circles are in the whole grid?",
+    "text": "Look at the month page. The day with a ring round it is the 6th.",
     "parts": [
      {
-      "l": "",
-      "text": "There are ____ circles in the grid.",
-      "ans": "3",
-      "val": 3
+      "l": "a",
+      "text": "A week has ____ days.",
+      "ans": "7",
+      "val": 7
+     },
+     {
+      "l": "b",
+      "text": "A week after the 6th is the ____ th.",
+      "ans": "13",
+      "val": 13
      }
     ],
-    "answer": "3",
+    "answer": "7; 13",
     "val": [
-     3
+     7,
+     13
     ],
-    "hint": "How many rows are there? Each row has one circle.",
-    "solution": "There are 3 rows and each row has one circle, so there are 3 circles. (There are 3 columns with one circle each, which is the same 3 circles.)",
+    "hint": "A week later is the date straight below on the month page.",
+    "solution": "A week has 7 days. 6 and 7 make 13. The 13th is a week after the 6th, straight below it.",
     "mistakes": [
-     "Writing 9, the number of boxes.",
-     "Writing 1, the circles in one row."
+     "Writing 12 or 14.",
+     "Writing 7 for part b."
     ],
-    "mins": 2
+    "mins": 3.5,
+    "visual": {
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      6
+     ],
+     "mark": [
+      6
+     ]
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Tick True or False for each statement.",
+    "parts": [],
+    "answer": "True; False; True; True",
+    "val": [
+     "True",
+     "False",
+     "True",
+     "True"
+    ],
+    "hint": "Say the days in order with your cards. Which comes first?",
+    "solution": "Monday comes after Sunday: true. Friday is the day after Thursday, so Friday is not the day before Thursday: false. Wednesday is between Tuesday and Thursday: true. Saturday is the day before Sunday: true.",
+    "mistakes": [
+     "Ticking True for every statement.",
+     "Mixing up before and after."
+    ],
+    "mins": 3,
+    "tf": [
+     {
+      "s": "Monday is the day after Sunday."
+     },
+     {
+      "s": "Friday is the day before Thursday."
+     },
+     {
+      "s": "Wednesday is between Tuesday and Thursday."
+     },
+     {
+      "s": "Saturday is the day before Sunday."
+     }
+    ]
    }
   ],
   "think": [
@@ -2454,166 +1959,135 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Mi has a grid with only two shapes in it. Every row and every column has one of each. Which shape goes in each box?",
+    "text": "Today is Thursday.",
     "parts": [
      {
       "l": "a",
-      "text": "Top middle box.",
-      "ans": "triangle",
-      "val": "triangle",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
-      ]
+      "text": "Two days after the day before yesterday is ____ .",
+      "ans": "Thursday",
+      "val": "Thursday"
      },
      {
       "l": "b",
-      "text": "Middle right box.",
-      "ans": "circle",
-      "val": "circle",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
-      ]
-     },
-     {
-      "l": "c",
-      "text": "Bottom right box.",
-      "ans": "triangle",
-      "val": "triangle",
-      "choices": [
-       "circle",
-       "square",
-       "triangle"
-      ]
+      "text": "Two days before tomorrow is ____ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
      }
     ],
-    "answer": "triangle; circle; triangle",
+    "answer": "Thursday; Wednesday",
     "val": [
-     "triangle",
-     "circle",
-     "triangle"
+     "Thursday",
+     "Wednesday"
     ],
-    "hint": "Start with the top middle box. Its row has a circle. Its column has a square. What is left?",
-    "solution": "The top middle box is in the top row with a circle and above the square, so it cannot be a circle or a square: it is a triangle. Then the top row is circle, triangle, so the top right is a square. The middle row has a square, and its right box sits under a square, so the middle row is triangle, square, circle: the middle right box is a circle. The bottom row is square, circle, triangle, so the bottom right box is a triangle.",
+    "hint": "Find yesterday first. Then the day before that.",
+    "solution": "Yesterday was Wednesday, so the day before yesterday was Tuesday. Two days after Tuesday is Thursday, which is today. Tomorrow is Friday. Two days before Friday is Wednesday.",
     "mistakes": [
-     "Guessing a shape that is already in the row or the column.",
-     "Looking only along the row: the top middle box has two empty boxes in its row."
+     "Counting forward from today only.",
+     "Writing Friday for part b."
     ],
-    "mins": 5,
-    "visual": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
-     ],
-     "cols": 3,
-     "cell": 96,
-     "hide": [
-      1,
-      2,
-      3,
-      5,
-      6,
-      7,
-      8
-     ]
-    }
+    "mins": 5
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Every row and every column of a grid has a circle, a square and a triangle. How many different shapes could go in each box?",
+    "text": "Mei starts a swimming course on Monday. Monday is day 1.",
     "parts": [
      {
       "l": "a",
-      "text": "Circle in its row, circle in its column: [] shapes.",
-      "ans": "2",
-      "val": 2
+      "text": "Day 7 is ____ .",
+      "ans": "Sunday",
+      "val": "Sunday"
      },
      {
       "l": "b",
-      "text": "Triangle in its row, square in its column: [] shape.",
-      "ans": "1",
-      "val": 1
+      "text": "Day 10 is ____ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
      }
     ],
-    "answer": "2; 1",
+    "answer": "Sunday; Wednesday",
     "val": [
-     2,
-     1
+     "Sunday",
+     "Wednesday"
     ],
-    "hint": "Cross out the shapes that are already in the row or in the column. Use your tiles to see it.",
-    "solution": "First box: the circle is crossed out, so a square or a triangle could go in: 2. Second box: the triangle is crossed out by the row and the square by the column, so only the circle is left: 1.",
+    "hint": "Day 8 is back on Monday. Then count on.",
+    "solution": "Day 1 Monday to day 7 Sunday. Day 8 is Monday again, day 9 is Tuesday and day 10 is Wednesday.",
     "mistakes": [
-     "Counting the shapes that are already there instead of the shapes that could go in.",
-     "Forgetting that the row and the column can show the same shape."
+     "Writing Tuesday for day 10 by counting Monday as day 0.",
+     "Writing Thursday."
     ],
-    "mins": 3.5
+    "mins": 5
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "A grid is correct: every row and every column has one of each. A child changes it. Test each change with your tiles. Tick True or False.",
-    "parts": [],
-    "answer": "first true; second false",
-    "val": [
-     "True",
-     "False"
-    ],
-    "hint": "Try it with your tiles. After a swap, check the rows and then the columns.",
-    "solution": "Swapping two whole rows keeps one of each in every row, and every column still holds the same three shapes, so True. Swapping two boxes inside one row keeps that row correct, but the columns change and one column then has a repeat, so False.",
-    "mistakes": [
-     "Checking only the rows after a swap.",
-     "Thinking that any swap breaks the grid."
-    ],
-    "mins": 4,
-    "tf": [
+    "text": "A holiday lasts 3 weeks. A fortnight is 2 weeks.",
+    "parts": [
      {
-      "s": "Swap the top row and the bottom row. The new grid is still correct."
+      "l": "a",
+      "text": "A holiday of 3 weeks is ____ days.",
+      "ans": "21",
+      "val": 21
      },
      {
-      "s": "Swap two boxes in the middle row. The new grid is still correct."
+      "l": "b",
+      "text": "A fortnight is ____ days.",
+      "ans": "14",
+      "val": 14
      }
-    ]
+    ],
+    "answer": "21; 14",
+    "val": [
+     21,
+     14
+    ],
+    "hint": "One week is 7 days. Count in 7s.",
+    "solution": "3 weeks is 7 + 7 + 7, which is 21 days. A fortnight is 2 weeks: 7 + 7, which is 14 days.",
+    "mistakes": [
+     "Writing 3 times 3 = 9.",
+     "Writing 14 for 3 weeks."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Look at the first week of a month with 31 days. Mei's party is on the 18th.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The 18th is a ____ .",
+      "ans": "Saturday",
+      "val": "Saturday"
+     },
+     {
+      "l": "b",
+      "text": "One week later is the ____ th.",
+      "ans": "25",
+      "val": 25
+     }
+    ],
+    "answer": "Saturday; 25",
+    "val": [
+     "Saturday",
+     25
+    ],
+    "hint": "The 1st is a Wednesday. Which dates are Wednesdays?",
+    "solution": "Wednesdays are the 1st, 8th and 15th. The 18th is 3 days after the 15th: Thursday 16th, Friday 17th, Saturday 18th. A week later is 18 and 7, which is the 25th.",
+    "mistakes": [
+     "Writing Wednesday for the 18th.",
+     "Writing 24 or 26."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "week": 0
+    }
    }
   ],
   "go": [
@@ -2621,531 +2095,573 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Four by Four. Every row and every column has the digits 1, 2, 3 and 4 once each. Write the digits in the empty boxes.",
-    "parts": [],
-    "answer": "4, 1, 2, 1, 4, 3, 1 (reading the empty boxes row by row)",
-    "val": [
-     4,
-     1,
-     2,
-     1,
-     4,
-     3,
-     1
+    "text": "Today is Monday.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "100 days is ____ weeks and ____ days over.",
+      "ans": "14 weeks and 2 days",
+      "val": [
+       14,
+       2
+      ]
+     },
+     {
+      "l": "b",
+      "text": "100 days later it is ____ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
+     }
     ],
-    "hint": "Find a row or a column with only one empty box. Fill it. Then look for the next one.",
-    "solution": "The grid is 1 4 2 3, 3 1 4 2, 2 3 1 4 and 4 2 3 1. For example, the third box of the bottom row: its column has 2, 4 and 1, so it is 3. The first box in the bottom row: its row has 2 and 3 and 1, so it is 4.",
+    "answer": "14 weeks and 2 days; Wednesday",
+    "val": [
+     14,
+     2,
+     "Wednesday"
+    ],
+    "hint": "Whole weeks bring us back to Monday. How many days are left over?",
+    "solution": "14 weeks is 14 times 7, which is 98 days. 98 days later it is Monday again. 100 is 2 more days, so it is Wednesday.",
     "mistakes": [
-     "Repeating a digit in a column.",
-     "Filling a box by looking only at the row when it has two empty boxes."
+     "Writing Monday (forgetting the 2 days over).",
+     "Counting 100 days one at a time."
     ],
     "mins": 6,
-    "visual": {
-     "type": "grid",
-     "rows": 4,
-     "cols": 4,
-     "kind": "squares",
-     "counts": {
-      "0,0": "1",
-      "0,1": "[]",
-      "0,2": "2",
-      "0,3": "3",
-      "1,0": "3",
-      "1,1": "[]",
-      "1,2": "4",
-      "1,3": "2",
-      "2,0": "[]",
-      "2,1": "3",
-      "2,2": "[]",
-      "2,3": "4",
-      "3,0": "[]",
-      "3,1": "2",
-      "3,2": "[]",
-      "3,3": "[]"
-     },
-     "cell": 70,
-     "size": "m"
-    }
+    "lines": 3
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Four by Four, with fewer clues. Only six digits are given. Every row and every column has 1, 2, 3 and 4 once each. Which digit goes in each box marked a, b and c? The other empty boxes are not asked.",
+    "text": "A month has 31 days. Look at its first week.",
     "parts": [
      {
-      "l": "",
-      "text": "Box a is ____ . Box b is ____ . Box c is ____ .",
-      "ans": "3, 4, 2",
+      "l": "a",
+      "text": "The Wednesdays are 1, [2], [2], [2], [2].",
+      "ans": "8, 15, 22, 29",
       "val": [
-       3,
-       4,
-       2
+       8,
+       15,
+       22,
+       29
       ]
+     },
+     {
+      "l": "b",
+      "text": "The 31st is a ____ .",
+      "ans": "Friday",
+      "val": "Friday"
      }
     ],
-    "answer": "3; 4; 2",
+    "answer": "8, 15, 22, 29; Friday",
     "val": [
-     3,
-     4,
-     2
+     8,
+     15,
+     22,
+     29,
+     "Friday"
     ],
-    "hint": "Find a box with only one digit that can go in. Fill it, then use the new digit.",
-    "solution": "The grid is 2 1 4 3, 3 4 2 1, 4 3 1 2 and 1 2 3 4. For example, the first box of the third row: its row has 3 and 1, so it is 2 or 4; its column has 2 and 3 and 1 after we find them, so it is 4.",
+    "hint": "Each Wednesday is 7 more than the one before.",
+    "solution": "1 + 7 = 8, 8 + 7 = 15, 15 + 7 = 22, 22 + 7 = 29. After the 29th, Wednesday, the 30th is Thursday and the 31st is Friday.",
     "mistakes": [
-     "Guessing a digit that is already in the row.",
-     "Stopping at the first digit that fits without checking the column."
+     "Counting in 6s or 8s.",
+     "Writing Wednesday for the 31st."
     ],
     "mins": 6,
     "visual": {
-     "type": "grid",
-     "rows": 4,
-     "cols": 4,
-     "kind": "squares",
-     "counts": {
-      "0,0": "2",
-      "0,1": "1",
-      "0,2": "",
-      "0,3": "a",
-      "1,0": "",
-      "1,1": "4",
-      "1,2": "",
-      "1,3": "",
-      "2,0": "b",
-      "2,1": "3",
-      "2,2": "1",
-      "2,3": "",
-      "3,0": "",
-      "3,1": "c",
-      "3,2": "3",
-      "3,3": ""
-     },
-     "cell": 70,
-     "size": "m"
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "week": 0,
+     "highlight": [
+      1
+     ],
+     "mark": [
+      1
+     ]
     }
    },
    {
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "A 5 by 5 grid uses the digits 1, 2, 3, 4 and 5. Every row and every column has each digit once.",
+    "text": "Today is the 6th. It is a Monday. Mei's trip is 3 weeks later.",
     "parts": [
      {
       "l": "a",
-      "text": "How many boxes are in the grid? ____",
-      "ans": "25",
-      "val": 25
+      "text": "3 weeks is ____ days.",
+      "ans": "21",
+      "val": 21
      },
      {
       "l": "b",
-      "text": "How many boxes hold a 4 or a 5? ____",
-      "ans": "10",
-      "val": 10
+      "text": "The trip is on the ____ th.",
+      "ans": "27",
+      "val": 27
+     },
+     {
+      "l": "c",
+      "text": "It is a ____ .",
+      "ans": "Monday",
+      "val": "Monday"
      }
     ],
-    "answer": "25; 10",
+    "answer": "21; 27; Monday",
     "val": [
-     25,
-     10
+     21,
+     27,
+     "Monday"
     ],
-    "hint": "A row has 5 boxes. How many rows are there? For part b: each row has one 4 and one 5.",
-    "solution": "There are 5 rows of 5 boxes: 5, 10, 15, 20, 25, so 25 boxes. Each row has one 4 and one 5, so 2 boxes in each row: 5 rows of 2 make 10 boxes that hold a 4 or a 5.",
+    "hint": "Count 7, 14, 21 days on from the 6th.",
+    "solution": "3 weeks is 21 days. 6 and 21 make 27. Whole weeks later is the same day, so the 27th is a Monday.",
     "mistakes": [
-     "Writing 5 for the boxes in all (one row).",
-     "Writing 5 or 2 for the boxes that hold a 4 or a 5."
+     "Writing 9 (6 + 3).",
+     "Writing Tuesday."
     ],
-    "mins": 4
+    "mins": 5,
+    "lines": 1
    }
   ],
   "investigation": {
    "id": "I1",
    "page": 5,
    "tier": "investigation",
-   "title": "Grid builder",
-   "first": "Row 1 is 1 3 2. Row 2 is 3 2 1. Write row 3: ____  ____  ____",
-   "text": "Put a 2 in the middle of a 3 by 3 grid. Every row and column has 1, 2 and 3 once. Write each grid you can make on its own line, row by row. The first one is 132 321 213. A turned grid is a different grid. How many are there?",
+   "title": "Which days come 5 times?",
+   "first": "A month has 31 days. The 1st is a Wednesday. Write the dates of every Wednesday. How many Wednesdays are there?",
+   "text": "Which other days of the week come 5 times in this month? Write them.",
    "lines": 4,
-   "draw": false,
-   "answer": "First: row 3 is 2, 1, 3. With a 2 in the middle there are exactly 4 grids: 1 3 2 / 3 2 1 / 2 1 3; 2 1 3 / 3 2 1 / 1 3 2; 2 3 1 / 1 2 3 / 3 1 2; and 3 1 2 / 1 2 3 / 2 3 1. The task says a turned grid is a different grid (any box different), so a grid turned upside down or swapped left to right counts again, and the answer is 4. A child who finds 2 can often find the other 2 by turning one upside down or swapping it left to right.",
+   "answer": "First: 1, 8, 15, 22 and 29, which is 5 Wednesdays. Thursdays are 2, 9, 16, 23 and 30, and Fridays are 3, 10, 17, 24 and 31, so Wednesday, Thursday and Friday come 5 times. The other days (Saturday, Sunday, Monday and Tuesday) come 4 times. 31 days is 4 weeks and 3 days over, and the 3 days over are the first 3 days of the month.",
    "val": [
-    "4"
+    "5",
+    "Thursday",
+    "Friday"
    ],
-   "look_for": "A child who tries a corner, checks each row and each column, and then swaps or turns a grid to get a new one; a child who notices that the three 2s always run along one of the two diagonals (two choices) and that each choice gives two grids; a child who says why there cannot be a fifth. Credit any clear reason. Do not mark a child down for stopping at one or two grids.",
+   "look_for": "A child who writes the dates of each day in rows of 7 and counts them, or who says that the 3 days over are Wednesday, Thursday and Friday. Credit any clear method. A child who finds Thursday only is partly there: ask about Friday.",
    "mistakes": [
-    "Repeating a digit in a column.",
-    "Writing the same grid twice."
+    "Saying only Wednesday comes 5 times.",
+    "Counting Saturday or Tuesday 5 times."
    ],
    "mins": 8
   }
  },
  "talk": {
-  "question": "A child says: I can fill every empty box by looking along the row. I never need the column. Is the child right? Test it with your tiles.",
+  "question": "Today is Monday. One child in another class says: 10 days later is Thursday. Another child says: 10 days later is Tuesday. Who is right? How do you know?",
   "starter": "I think ... because ...",
-  "answer": "Not always. If a row has only one empty box, the row tells us the missing shape. If a row has two empty boxes, the row cannot decide alone, so we look down the column too. We can test it with the bottom row of the sneak-peek grid.",
-  "look_for": "A child who tests it with the tiles, or says the row has two empty boxes so the row cannot decide, or says we need the column when a row has more than one empty box. Not just yes or no."
+  "answer": "The first child is right. 7 days later is Monday again, because a week changes nothing. Then 3 more days is Tuesday, Wednesday, Thursday. The other child counted only 8 days.",
+  "look_for": "A child who uses a whole week, or who counts on 10 days with the cards. Not just a name."
  },
  "exit": [
   {
    "id": "E1",
-   "text": "A row has a circle and a square. Which shape is missing from the row? Circle one.",
-   "parts": [],
-   "answer": "triangle",
+   "text": "Today is Sunday. What day is it 2 days later?",
+   "parts": [
+    {
+     "l": "",
+     "text": "2 days later it is ____ .",
+     "ans": "Tuesday",
+     "val": "Tuesday"
+    }
+   ],
+   "answer": "Tuesday",
    "val": [
-    "triangle"
+    "Tuesday"
    ],
-   "choices": [
-    "circle",
-    "square",
-    "triangle"
-   ],
-   "solution": "The row has a circle and a square. The triangle is missing, so the triangle goes in the box.",
+   "solution": "Monday is 1 and Tuesday is 2. After Sunday the week starts again.",
    "mistakes": [
-    "Choosing a shape that is already in the row.",
-    "Circling without looking at the row."
+    "Writing Monday.",
+    "Counting Sunday as day 1."
    ]
   },
   {
    "id": "E2",
-   "text": "Which row has one of each? Choose the correct answer. Write its number in the bracket.",
+   "text": "Look at the month page. A week after the 11th is which date? Write its number in the bracket.",
    "parts": [],
-   "answer": "(2) square, triangle, circle",
+   "answer": "(2) the 18th",
    "val": [
     2
    ],
-   "solution": "Row (2) has a square, a triangle and a circle: one of each. Row (1) has two circles, row (3) has two triangles and row (4) has two squares.",
+   "solution": "A week is 7 days. 11 and 7 make 18.",
    "mistakes": [
-    "Choosing (1) because it starts with a circle.",
-    "Not checking every shape in the row."
+    "Choosing (1) the 17th.",
+    "Choosing (4) the 25th (two weeks)."
    ],
    "mcq": {
     "options": [
-     "circle, circle, square",
-     "square, triangle, circle",
-     "triangle, triangle, circle",
-     "circle, square, square"
+     "the 17th",
+     "the 18th",
+     "the 19th",
+     "the 25th"
     ],
     "bracket": true
    }
   },
   {
    "id": "E3",
-   "text": "A box has a circle in its row and a square in its column. Which shape goes in the box? Circle one.",
-   "parts": [],
-   "answer": "triangle",
+   "text": "Ben swims every 7 days. He swims on the 4th.",
+   "parts": [
+    {
+     "l": "",
+     "text": "The next time he swims is the ____ th.",
+     "ans": "11",
+     "val": 11
+    }
+   ],
+   "answer": "11",
    "val": [
-    "triangle"
+    11
    ],
-   "choices": [
-    "circle",
-    "square",
-    "triangle"
-   ],
-   "solution": "Box a cannot be a circle, because the row has a circle. It cannot be a square, because the column has a square. The triangle is left.",
+   "solution": "Every 7 days means a week later. 4 and 7 make 11.",
    "mistakes": [
-    "Choosing the circle or the square.",
-    "Looking at the row only."
+    "Writing 5 or 7.",
+    "Writing 14."
    ]
   }
  ],
- "look_back": {
-  "hardest": [
-   "finding the missing shape",
-   "using the row and the column",
-   "checking the whole grid",
-   "something else"
-  ],
-  "helped": [
-   "my tiles",
-   "looking along and down",
-   "checking my answer",
-   "I was not stuck"
-  ],
-  "next": [
-   "using my tiles",
-   "checking every column",
-   "checking my answer",
-   "asking a question"
-  ]
- },
  "home_practice": [
   {
    "id": "H1",
    "tier": "start",
-   "text": "A row has a circle and a triangle. The row must have one of each: a circle, a square and a triangle. Which shape is missing? ____",
-   "answer": "square",
-   "val": "square",
-   "solution": "The circle and the triangle are in the row, so the square is missing."
+   "text": "Today is Wednesday. What day is it 4 days later? It is ____ .",
+   "answer": "Sunday",
+   "val": "Sunday",
+   "solution": "Count on from tomorrow: Thursday 1, Friday 2, Saturday 3, Sunday 4."
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "In a column the digits 1, 2 and 3 are used once each. Going down, the column shows 3, ?, 1. What is the ? ____",
-   "answer": "2",
-   "val": 2,
-   "solution": "The column has 3 and 1. The digit 2 is missing, so the ? is 2."
+   "text": "Look at the month page in your book. The 10th is a ____ .",
+   "answer": "Friday",
+   "val": "Friday",
+   "solution": "The 1st is a Wednesday and the 8th is a Wednesday. The 10th is 2 days later: Thursday 9th, Friday 10th."
   },
   {
    "id": "H3",
-   "tier": "think",
-   "text": "A 3 by 3 grid uses 1, 2 and 3. Draw a 3 by 3 grid of boxes. Row 1 is 1, 2, 3. Row 2 starts with 2. Write rows 2 and 3. Row 2: ___ ___ ___ Row 3: ___ ___ ___",
-   "answer": "row 2: 2 3 1; row 3: 3 1 2",
+   "tier": "start",
+   "text": "A week after the 14th is the ____ th. Then a fortnight after the 14th is the ____ th.",
+   "answer": "21 and 28",
    "val": [
-    [
-     2,
-     3,
-     1
-    ],
-    [
-     3,
-     1,
-     2
-    ]
+    21,
+    28
    ],
-   "solution": "Row 2 starts with 2. The middle box cannot be 2 (the column has 2), so it is 3 or 1. If it were 1, the last box would be 3, but the last column already has 3. So row 2 is 2, 3, 1. Row 3 is the digits left in each column: 3, 1, 2."
+   "solution": "A week is 7 days: 14 and 7 make 21. A fortnight is 14 days: 14 and 14 make 28."
   },
   {
    "id": "H4",
-   "tier": "go",
-   "text": "A 4 by 4 grid uses 1, 2, 3 and 4. Draw a 4 by 4 grid of boxes. Row 1 is 1, 2, 3, 4. Row 2 is 2, 1, 4, 3. Row 3 starts with 3. What is the second box of row 3? ____",
-   "answer": "4",
-   "val": 4,
-   "solution": "The second column already has 2 and 1, so the second box of row 3 is 3 or 4. Row 3 already has a 3 at the start, so the second box is 4."
+   "tier": "think",
+   "text": "Today is Saturday. What day is it 9 days later? It is ____ . I know because ___.",
+   "answer": "Monday",
+   "val": "Monday",
+   "solution": "7 days later is Saturday again. 2 more days: Sunday, Monday."
   },
   {
    "id": "H5",
    "tier": "start",
-   "rewind_of": "Term 1 Lesson 7",
-   "text": "Count up from 46 to 52. How many steps is that? ____",
-   "answer": "6",
-   "val": 6,
-   "solution": "Count up: 47, 48, 49, 50, 51, 52. That is 6 steps."
+   "rewind_of": "Term 1 Lesson 10",
+   "text": "Mei has 36 stickers. She gets 10 more. Then she gives 4 away. Mei has ____ stickers now.",
+   "answer": "42",
+   "val": 42,
+   "solution": "Step 1: 36 and 10 make 46. Step 2: 46 take away 4 is 42."
   }
  ],
  "online_practice": {
   "key": "t3l27",
-  "title": "Fill the Grid",
-  "topic": "Grid puzzles: one of each",
+  "title": "Calendar Detective",
+  "topic": "Days, weeks and dates",
   "items": [
    {
     "id": "c1",
     "tier": "core",
-    "type": "choice",
-    "q": "Each row has a circle, a square and a triangle. Which shape goes in the ? box?",
-    "hint": "Which two shapes are in the row? Which one is not?",
+    "type": "number",
+    "q": "A week after the 5th is which date? Write the number.",
+    "hint": "A week is 7 days. Add 7.",
     "steps": [
-     "The row has a circle and a triangle.",
-     "The shape that is not there is the square.",
-     "The square goes in the box."
+     "A week is 7 days.",
+     "5 and 7 make 12.",
+     "A week after the 5th is the 12th."
     ],
-    "options": [
-     "circle",
-     "square",
-     "triangle"
-    ],
-    "answer": "square",
+    "answer": 12,
     "slips": [
      {
       "a": [
-       "circle"
+       7
       ],
-      "say": "The circle is already in the row. Which shape is missing?"
-     },
-     {
-      "a": [
-       "triangle"
-      ],
-      "say": "The triangle is already in the row. Which shape is missing?"
+      "say": "7 is the days in a week. Add them to the date."
      }
     ],
-    "fig": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
-     ],
-     "cols": 3,
-     "cell": 90,
-     "hide": [
-      2
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       5,
+       8,
+       9,
+       11,
+       14,
+       16,
+       20
+      ]
+     },
+     "derive": {},
+     "q": "A week after the {a|ord} is which date? Write the number.",
+     "answer": "a+7",
+     "hint": "A week is 7 days. Add 7.",
+     "steps": [
+      "A week is 7 days.",
+      "{a} and 7 make {ans}.",
+      "A week after the {a|ord} is the {ans|ord}."
      ]
     }
    },
    {
     "id": "c2",
     "tier": "core",
-    "type": "choice",
-    "q": "Each row has a circle, a square and a triangle. Which shape goes in the ? box?",
-    "hint": "Which two shapes are in the row? Which one is not?",
+    "type": "number",
+    "q": "How many days are in 2 weeks?",
+    "hint": "One week is 7 days. Count in 7s.",
     "steps": [
-     "The row has a square and a circle.",
-     "The triangle is missing.",
-     "The triangle goes in the box."
+     "One week is 7 days.",
+     "7 and 7 make 14.",
+     "2 weeks is 14 days."
     ],
-    "options": [
-     "circle",
-     "square",
-     "triangle"
-    ],
-    "answer": "triangle",
+    "answer": 14,
     "slips": [
      {
       "a": [
-       "square"
+       2
       ],
-      "say": "The square is already in the row."
-     },
-     {
-      "a": [
-       "circle"
-      ],
-      "say": "The circle is already in the row."
+      "say": "2 is the number of weeks. Count the days: 7 for each week."
      }
     ],
-    "fig": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
-     ],
-     "cols": 3,
-     "cell": 90,
-     "hide": [
-      1
+    "tpl": {
+     "vars": {
+      "w": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "How many days are in {w} weeks?",
+     "answer": "7*w",
+     "hint": "One week is 7 days. Count in 7s.",
+     "steps": [
+      "One week is 7 days.",
+      "Count in 7s, {w} times.",
+      "{w} weeks is {ans} days."
      ]
     }
    },
    {
     "id": "c3",
     "tier": "core",
-    "type": "number",
-    "q": "A row of a grid has the digits 1, 3 and 4 and one more. The digits 1, 2, 3 and 4 are used once each. What is the missing digit?",
-    "hint": "Which of 1, 2, 3 and 4 is not in the row?",
+    "type": "choice",
+    "q": "Today is Thursday. What day is it 2 days later?",
+    "hint": "Count on from tomorrow.",
     "steps": [
-     "The row has 1, 3 and 4.",
-     "The digit that is not there is 2.",
-     "The missing digit is 2."
+     "Friday is 1.",
+     "Saturday is 2.",
+     "It is Saturday."
     ],
-    "answer": 2,
-    "slips": [
-     {
-      "a": [
-       1,
-       3,
-       4
-      ],
-      "say": "That digit is already in the row. Which digit is not?"
-     }
+    "options": [
+     "Friday",
+     "Saturday",
+     "Sunday"
     ],
-    "tpl": {
-     "vars": {
-      "m": [
-       1,
-       2,
-       3,
-       4
-      ]
-     },
-     "derive": {
-      "x": "2-(m+2)//4",
-      "y": "3-m//3",
-      "z": "4-m//4"
-     },
-     "q": "A row of a grid has the digits {x}, {y} and {z} and one more. The digits 1, 2, 3 and 4 are used once each. What is the missing digit?",
-     "answer": "m",
-     "hint": "Which of 1, 2, 3 and 4 is not in the row?",
-     "steps": [
-      "The row has {x}, {y} and {z}.",
-      "The digit that is not there is {m}.",
-      "The missing digit is {m}."
-     ]
-    }
+    "answer": "Saturday",
+    "slips": []
    },
    {
     "id": "c4",
     "tier": "core",
-    "type": "number",
-    "q": "A grid has 3 rows and 3 columns. How many boxes are in the grid?",
-    "hint": "Count the boxes in one row. Then count the rows.",
+    "type": "choice",
+    "q": "What day comes after Sunday?",
+    "hint": "After Sunday the week starts again.",
     "steps": [
-     "Each row has 3 boxes.",
-     "There are 3 rows.",
-     "3 rows of 3 boxes make 9 boxes."
+     "The days go round.",
+     "After Sunday comes Monday.",
+     "Monday."
     ],
-    "answer": 9,
-    "slips": [
-     {
-      "a": [
-       3,
-       6
-      ],
-      "say": "That is only one row, or one row and one column. Count every box."
-     }
+    "options": [
+     "Saturday",
+     "Monday",
+     "Wednesday"
     ],
-    "tpl": {
-     "vars": {
-      "n": [
-       3,
-       4,
-       5
-      ]
-     },
-     "derive": {
-      "t": "n*n"
-     },
-     "q": "A grid has {n} rows and {n} columns. How many boxes are in the grid?",
-     "answer": "t",
-     "hint": "Count the boxes in one row. Then count the rows.",
-     "steps": [
-      "Each row has {n} boxes.",
-      "There are {n} rows.",
-      "{n} rows of {n} boxes make {t} boxes."
-     ]
-    }
+    "answer": "Monday",
+    "slips": []
    },
    {
     "id": "c5",
     "tier": "core",
     "type": "number",
-    "q": "A 3 by 3 grid has one circle in every row and one circle in every column. How many circles are in the grid?",
-    "hint": "How many rows are there? Each row has one circle.",
+    "q": "Count in 7s: 3, 10, 17, ___. What is the next number?",
+    "hint": "Add 7 each time.",
     "steps": [
-     "There are 3 rows.",
-     "Each row has one circle.",
-     "So there are 3 circles."
+     "Add 7 each time.",
+     "17 and 7 make 24.",
+     "The next number is 24."
     ],
-    "answer": 3,
+    "answer": 24,
     "slips": [
      {
       "a": [
-       1,
-       9
+       20
       ],
-      "say": "Each row has one circle. Count the rows."
+      "say": "20 adds 3. Add 7 to the last number."
      }
     ],
     "tpl": {
      "vars": {
-      "n": [
+      "s": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {
+      "t": "s+7",
+      "u": "s+14"
+     },
+     "q": "Count in 7s: {s}, {t}, {u}, ___. What is the next number?",
+     "answer": "s+21",
+     "hint": "Add 7 each time.",
+     "steps": [
+      "Add 7 each time.",
+      "{u} and 7 make {ans}.",
+      "The next number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ben swims every 7 days. He swims on the 4th. What date is his 3rd swim?",
+    "hint": "Add 7 for each swim after the first.",
+    "steps": [
+     "The 2nd swim is the 4th and 7 more, the 11th.",
+     "The 3rd swim is 7 more, the 18th.",
+     "His 3rd swim is on the 18th."
+    ],
+    "answer": 18,
+    "slips": [
+     {
+      "a": [
+       11
+      ],
+      "say": "11 is the 2nd swim. Add 7 once more."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "Ben swims every 7 days. He swims on the {a|ord}. What date is his 3rd swim?",
+     "answer": "a+14",
+     "hint": "Add 7 for each swim after the first.",
+     "steps": [
+      "The 2nd swim is {a} and 7 more.",
+      "The 3rd swim is 7 more again.",
+      "His 3rd swim is on the {ans|ord}."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Today is Tuesday. One day after the day before yesterday is which day?",
+    "hint": "Find yesterday first.",
+    "steps": [
+     "Yesterday was Monday.",
+     "The day before yesterday was Sunday.",
+     "One day after Sunday is Monday."
+    ],
+    "options": [
+     "Sunday",
+     "Monday",
+     "Tuesday"
+    ],
+    "answer": "Monday",
+    "slips": [],
+    "easier": "c3"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A fortnight is 14 days. A trip lasts 2 fortnights. How many days is the trip?",
+    "hint": "Count in 14s.",
+    "steps": [
+     "A fortnight is 14 days.",
+     "14 and 14 make 28.",
+     "The trip lasts 28 days."
+    ],
+    "answer": 28,
+    "slips": [
+     {
+      "a": [
+       14
+      ],
+      "say": "14 is one fortnight. The trip is 2 fortnights."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "w": [
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "A fortnight is 14 days. A trip lasts {w} fortnights. How many days is the trip?",
+     "answer": "14*w",
+     "hint": "Count in 14s.",
+     "steps": [
+      "A fortnight is 14 days.",
+      "Add 14, {w} times.",
+      "The trip lasts {ans} days."
+     ]
+    },
+    "easier": "c2"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A month has 31 days. The 2nd is a Monday. How many Mondays are in the month?",
+    "hint": "List the Mondays. Each is 7 more than the one before.",
+    "steps": [
+     "The Mondays are the 2nd, 9th, 16th, 23rd and 30th.",
+     "The next Monday would be the 37th, which is too late.",
+     "There are 5 Mondays."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "Count the Mondays one by one: 2, 9, 16, 23, 30."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
        3,
        4,
        5,
@@ -3153,385 +2669,98 @@
        7
       ]
      },
-     "q": "A {n} by {n} grid has one circle in every row and one circle in every column. How many circles are in the grid?",
-     "answer": "n",
-     "hint": "How many rows are there? Each row has one circle.",
+     "derive": {},
+     "q": "A month has 31 days. The {a|ord} is a Monday. How many Mondays are in the month?",
+     "answer": "(31-a)//7+1",
+     "hint": "List the Mondays. Each is 7 more than the one before.",
      "steps": [
-      "There are {n} rows.",
-      "Each row has one circle.",
-      "So there are {n} circles."
+      "List the Mondays, adding 7 each time.",
+      "Stop before 31 is passed.",
+      "There are {ans} Mondays."
      ]
-    }
-   },
-   {
-    "id": "t1",
-    "tier": "stretch",
-    "type": "choice",
-    "q": "Every row and every column has a circle, a square and a triangle. Which shape goes in box a?",
-    "hint": "Box a is in a row with a triangle and in a column with a circle.",
-    "steps": [
-     "Box a is in the top row, and the top row has a triangle.",
-     "Its column has a circle in the middle.",
-     "It cannot be a triangle or a circle, so it is a square."
-    ],
-    "options": [
-     "circle",
-     "square",
-     "triangle"
-    ],
-    "answer": "square",
-    "easier": "c1",
-    "slips": [
-     {
-      "a": [
-       "triangle"
-      ],
-      "say": "The triangle is already in the top row."
-     },
-     {
-      "a": [
-       "circle"
-      ],
-      "say": "The circle is already in the column of box a."
-     }
-    ],
-    "fig": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
-     ],
-     "cols": 3,
-     "cell": 88,
-     "hide": [
-      0,
-      1,
-      3,
-      5,
-      6,
-      7,
-      8
-     ],
-     "labels": [
-      "",
-      "a",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-     ]
-    }
-   },
-   {
-    "id": "t2",
-    "tier": "stretch",
-    "type": "number",
-    "q": "Every row and every column has a circle, a square and a triangle. How many different shapes could go in box a?",
-    "hint": "Cross out the shapes that are in the row and in the column of box a.",
-    "steps": [
-     "The row of box a has a circle. The column of box a has a circle.",
-     "So box a is not a circle.",
-     "It could be a square or a triangle: 2 shapes."
-    ],
-    "answer": 2,
-    "easier": "c2",
-    "slips": [
-     {
-      "a": [
-       1
-      ],
-      "say": "The row and the column both have a circle, so only one shape is crossed out. Count the shapes left."
-     },
-     {
-      "a": [
-       3
-      ],
-      "say": "Cross out the circle first. How many shapes are left?"
-     }
-    ],
-    "fig": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      }
-     ],
-     "cols": 3,
-     "cell": 88,
-     "hide": [
-      0,
-      2,
-      4,
-      5,
-      6,
-      7,
-      8
-     ],
-     "labels": [
-      "",
-      "",
-      "",
-      "",
-      "a",
-      "",
-      "",
-      "",
-      ""
-     ]
-    }
-   },
-   {
-    "id": "t3",
-    "tier": "stretch",
-    "type": "choice",
-    "q": "Every row and every column should have one of each. Is this grid correct?",
-    "hint": "Check the rows, then run a finger down each column.",
-    "steps": [
-     "Each row has one of each.",
-     "The first column is circle, triangle, circle: two circles.",
-     "So the grid is not correct."
-    ],
-    "options": [
-     "Yes",
-     "No"
-    ],
-    "answer": "No",
-    "easier": "c1",
-    "slips": [
-     {
-      "a": [
-       "Yes"
-      ],
-      "say": "Check the columns too. Look at the first column."
-     }
-    ],
-    "fig": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      }
-     ],
-     "cols": 3,
-     "cell": 80
-    }
-   },
-   {
-    "id": "g1",
-    "tier": "challenge",
-    "type": "number",
-    "q": "Every row and every column has the digits 1, 2, 3 and 4 once. Which digit goes in box a?",
-    "hint": "Look for a row with only one empty box. Fill it first.",
-    "steps": [
-     "Row 3 has 3, 4 and 1, so its empty first box is 2.",
-     "Row 2 is a, ?, ?, 4. The row has a 4, so box a cannot be 4.",
-     "Column 1 has 3 and 2, so box a is 1 or 4. It is not 4, so box a is 1."
-    ],
-    "answer": 1,
-    "easier": "t1",
-    "slips": [
-     {
-      "a": [
-       3
-      ],
-      "say": "There is already a 3 at the top of that column."
-     },
-     {
-      "a": [
-       2
-      ],
-      "say": "There is already a 2 in that column. Which digit is not there?"
-     }
-    ],
-    "fig": {
-     "type": "grid",
-     "rows": 4,
-     "cols": 4,
-     "kind": "squares",
-     "counts": {
-      "0,0": "3",
-      "0,1": "4",
-      "0,2": "1",
-      "0,3": "2",
-      "1,0": "a",
-      "1,1": "?",
-      "1,2": "?",
-      "1,3": "4",
-      "2,0": "?",
-      "2,1": "3",
-      "2,2": "4",
-      "2,3": "1",
-      "3,0": "?",
-      "3,1": "?",
-      "3,2": "?",
-      "3,3": "3"
-     },
-     "cell": 64
-    }
+    },
+    "easier": "t1"
    },
    {
     "id": "g2",
     "tier": "challenge",
-    "type": "number",
-    "q": "This grid has 5 rows and 5 columns. It uses the digits 1 to 5. Every row and every column has each digit once. How many boxes hold a 1, a 2 or a 3?",
-    "hint": "Each row has one 1, one 2 and one 3. How many boxes is that in a row?",
+    "type": "choice",
+    "q": "Today is Tuesday. What day is it 50 days later?",
+    "hint": "50 days is 7 weeks and 1 day over.",
     "steps": [
-     "Each row has one 1, one 2 and one 3: 3 boxes.",
-     "There are 5 rows.",
-     "5 rows of 3 boxes make 15 boxes."
+     "7 weeks is 49 days.",
+     "49 days later is Tuesday again.",
+     "1 more day is Wednesday."
     ],
-    "answer": 15,
-    "easier": "c5",
-    "slips": [
-     {
-      "a": [
-       3,
-       5
-      ],
-      "say": "That is only one row, or the number of rows. Each row has 3 boxes that hold a 1, a 2 or a 3. Count all the rows."
-     }
+    "options": [
+     "Tuesday",
+     "Wednesday",
+     "Thursday"
     ],
-    "tpl": {
-     "vars": {
-      "n": [
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "derive": {
-      "t": "3*n"
-     },
-     "q": "This grid has {n} rows and {n} columns. It uses the digits 1 to {n}. Every row and every column has each digit once. How many boxes hold a 1, a 2 or a 3?",
-     "answer": "t",
-     "hint": "Each row has one 1, one 2 and one 3. How many boxes is that in a row?",
-     "steps": [
-      "Each row has one 1, one 2 and one 3: 3 boxes.",
-      "There are {n} rows.",
-      "{n} rows of 3 boxes make {t} boxes."
-     ]
-    }
+    "answer": "Wednesday",
+    "slips": [],
+    "easier": "t2"
    },
    {
     "id": "g3",
     "tier": "challenge",
     "type": "selfcheck",
-    "q": "Make a grid puzzle for a grown-up. Fill a 3 by 3 grid with the digits 1, 2 and 3. Cover three boxes. Ask them to find the covered digits and say why.",
-    "hint": "Fill the grid first, then cover the boxes.",
+    "q": "Make your own days-later puzzle. Write a day and a number of days later. Ask a grown-up to find the day, then check by counting on.",
+    "hint": "Pick a day first, then count on from tomorrow.",
     "steps": [
-     "Fill a 3 by 3 grid so every row and every column has 1, 2 and 3.",
-     "Cover three boxes with paper.",
-     "Ask a grown-up what is hidden and how they know. Check together."
+     "Pick a day.",
+     "Pick a number of days.",
+     "Count on from tomorrow to check."
     ],
     "easier": "c3"
    }
   ]
  },
+ "parent": {
+  "summary": "We found days and dates on a calendar. Your child put the days in order, counted on to find the day 3 or 4 days later, and found the date a week and a fortnight later on a month page.",
+  "words": [
+   "week: 7 days",
+   "fortnight: 2 weeks, or 14 days",
+   "days later: count on from tomorrow, not from today",
+   "date: the number of the day in the month",
+   "the day before: one step back"
+  ],
+  "try_home": [
+   "Look at a calendar. Ask: what day is it 3 days later? Count on from tomorrow.",
+   "Pick a date. Ask: what date is a week later? Look straight down one row.",
+   "Ask: today is Monday. What day is it 10 days later? Use a whole week first."
+  ],
+  "ask": [
+   "Do we count today?",
+   "What happens after Sunday?",
+   "How many days make a week?"
+  ],
+  "when_stuck": "Let your child use the day cards and the month page and wait 10 seconds before helping. Asking 'What is tomorrow?' works better than giving the answer. Please do not chant the days; say them calmly. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Make a Table. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "After Sunday comes Monday again. A week later is the same day.",
+  "report_line": "Your child is learning to count on round the days of the week and to find a date on a month page. This week: days later, a week and a fortnight.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your Term 3 book (Book 6): tear out the strip page along the dashed line, then a grown-up cuts out the 14 paper strips (no matches or toothpicks)",
+   "A pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The day cards and the month page are paper or card. Small pieces stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the cards beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a card up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Stamping is soft; a child may stay seated and tap the table.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next term. No private messages to children.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 Wednesday, Saturday; S2 Tuesday, Sunday; S3 Friday, Saturday; S4 Monday; S5 7, the 13th; S6 True, False, True, True; T1 Thursday, Wednesday; T2 Sunday, Wednesday; T3 21, 14; T4 Saturday, the 25th; G1 14 weeks and 2 days, Wednesday; G2 8, 15, 22, 29 and Friday; G3 21, the 27th, Monday; I1 Wednesday, Thursday and Friday.",
+  "Tell parents a week before: the calendar page torn out along the dashed line, with the 7 day cards cut out by a grown-up (the month page is not cut). The next lesson needs the strip page, with the 14 strips cut out (no matches or toothpicks).",
+  "Have the slides open. Practise the stamp-and-count break. Have your own day cards and a month page to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. The business WhatsApp number is never said or shown on a slide.",
+  "Be plain with families: days of the week are not a listed Primary 1 outcome (flagged for tutor review); the days, day before and after and a week as 7 days are approachable, and two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go beyond the Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. The month is made up: no year, no public holidays."
+ ],
  "spare_time": {
   "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
   "rules": [
@@ -3542,103 +2771,57 @@
   "menu": [
    {
     "id": "M1",
-    "title": "Is it always true?",
+    "title": "Does a week later always match?",
     "minutes": 4,
-    "tutor": "A child says: if every row has one of each, then every column has one of each too. Is that always true? Test it with your tiles: put the same row three times.",
-    "rec": "Recording: pause. Is one of each in every row always one of each in every column? Test it with three tiles in the same order.",
-    "answer": "No. Three rows that are all circle, square, triangle have one of each in every row, but every column has three of the same shape. We must check the columns too."
+    "tutor": "A child says: a week later is always the same day of the week. Is that always true? Test it with Monday, then with Friday, then with 14 days.",
+    "rec": "Recording: pause. Test whether a week later is always the same day. Try Monday, then Friday, then 14 days.",
+    "answer": "Yes. 7 days is a whole week, so we are back on the same day. 14 days is 2 weeks, so it is the same day too."
    },
    {
     "id": "M2",
     "title": "Make a puzzle for your grown-up",
     "minutes": 4,
-    "tutor": "Fill mat 1 with a correct grid. Cover three boxes with small pieces of paper. Ask a grown-up to say what is hidden and how they know. Check with the tiles.",
-    "rec": "Recording: pause. Fill a grid. Cover three boxes with paper. Ask a grown-up to find the hidden shapes and say why.",
-    "answer": "No single answer. A puzzle works when every covered box has a reason from its row or its column. If too many boxes are covered, two different grids may fit, and the puzzle has no one answer."
+    "tutor": "Pick a day and a number of days later. Ask your grown-up what day it is, then check together by counting on from tomorrow.",
+    "rec": "Recording: pause. Pick a day and a number of days later. Ask a grown-up to find the day, then check.",
+    "answer": "No single answer. Check by counting on from tomorrow, and use whole weeks first for big numbers."
    },
    {
     "id": "M3",
     "title": "Teach it back",
     "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never seen a grid puzzle. Teach them how to find a missing shape: look along the row, then look down the column.",
-    "rec": "Recording: pause. Teach a grown-up how to find a missing shape by looking along the row and down the column.",
-    "answer": "Look along the row to see which shapes are there. Look down the column to see which shapes are there. The shape that is in neither is the one that goes in the box."
+    "tutor": "Pretend your grown-up or a toy has never counted on round a week. Show how 10 days after Monday is Thursday, using a whole week first.",
+    "rec": "Recording: pause. Show a grown-up how 10 days after Monday is Thursday, using a whole week first.",
+    "answer": "7 days after Monday is Monday again. 3 more days is Tuesday, Wednesday, Thursday."
    }
   ]
  },
- "parent": {
-  "summary": "We played with a grid. Your child filled a 3 by 3 grid with circles, squares and triangles so that every row and every column has one of each, found a missing shape from its row or its column, and used both together for a box that needed them. Finding the missing one in a row is early Primary 1 work.",
-  "words": [
-   "row: boxes going across",
-   "column: boxes going down",
-   "grid: a square of boxes in rows and columns",
-   "one of each: every shape once, none twice, none missing"
-  ],
-  "try_home": [
-   "Grid game: use mat 1 from your kit page, or draw a 3 by 3 grid. Put 9 small things of 3 kinds (buttons, coins, pasta) on it. Every row and every column has one of each.",
-   "Cover and find: cover two boxes of a finished grid. Ask your child what is hidden and how they know.",
-   "Ask: how do you know? Which one told you, the row or the column?"
-  ],
-  "ask": [
-   "What is in this row already?",
-   "What is in this column?",
-   "Why can it not be a circle?"
-  ],
-  "when_stuck": "Let your child use the tiles and wait 10 seconds before helping. Asking \"what is in the row?\" works better than giving the shape. Please do not teach a rule such as always start in a corner: the reason for each box is the lesson. If the look-back page says \"I am still stuck\", photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Make a Table. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
-  "quote": "Look along the row. Look down the column. If it is not this and not that, it must be the other one.",
-  "report_line": "Your child is learning to use clues to work out what must go in an empty box. This week: filling grids so every row and every column has one of each.",
-  "term_line": "Your child is learning to give a reason for each step.",
-  "next_materials": [
-   "Your Term 3 book (Book 6): tear out the strip page along the dashed line, then a grown-up cuts out the 14 paper strips (no matches or toothpicks)",
-   "The grid tiles are not needed again: keep them for puzzles at home",
-   "A pencil, a rubber and paper"
-  ]
- },
- "safeguarding": [
-  "The tiles are small: they stay on the table, nothing goes in the mouth or ears, and they are kept away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cuts the tiles beforehand.",
-  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
-  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
-  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Making shapes with the arms is quiet and small; a child may stay seated and make the shapes with their hands.",
-  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
-  "The look-back is never collected in front of the group or read out. A pass is always allowed."
- ],
- "tutor_prep": [
-  "Solve every workbook question yourself first, with your own tiles. Check: S1 circle, triangle, square; S2 true, false, true; S3 triangle and the column; S4 No; S5 3; T1 triangle, circle, triangle; T2 2 and 1; T3 true, false; G1 4, 1, 2, 1, 4, 3, 1; G2 3, 4, 2; G3 25 and 10.",
-  "Tell parents a week before: the strip page for Lesson 8 of Term 3 is the next one to cut. For this lesson, tear out the grid-tile page (page 6) along the dashed line; a grown-up cuts out the 16 tiles and keeps them in an envelope; the two mats are not cut. With no printer: nine small things of three kinds on a 3 by 3 grid drawn on paper.",
-  "Have the slides open. Have your own tiles to show on camera if you wish. Say the words row and column the same way every time, and keep the sentence frame: the row has ... and ..., so the box must be .... Do not teach a corner-first rule.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly without first names, then say the recording notice; do not use first names while the recording runs. Nobody holds paper up to the camera.",
-  "Be plain with families: finding the missing one in a row is early Primary 1 work; solving a whole grid by elimination, the 4 by 4 grid of digits and what a bigger grid holds go beyond Primary 1 on purpose. This is a new topic with no Primary 1 school-paper evidence: the wording is unverified, and this is the lesson the tutor may swap or skip. Do not call the lesson MOE-aligned.",
-  "Slides s-m3 and s-m5 keep the answers off the screen while you ask: the answer slide follows. Read every question, every option of E2 and the box labels aloud: the shapes on the slides are small."
- ],
  "workbook": {
-  "header": "Grid puzzles: one of each",
-  "hint_p1": "Use your tiles on mat 1 to check. Look along the row and down the column.",
-  "hint_p2": "Check the rows. Then check the columns.",
-  "hint_p3": "Use your tiles or draw it. Choose any question, in any order.",
-  "hint_p4": "Choose any question. You do not have to finish them all.",
-  "choice_after": 2,
+  "header": "Time: days, weeks and dates",
+  "hint_p1": "Use your day cards. Say the days in order. Count on from tomorrow.",
+  "hint_p2": "A week is 7 days. A week later is the same day. Use the month page.",
+  "hint_p3": "Use your day cards and the month page. Count in 7s for weeks. Choose any question.",
+  "hint_p4": "Whole weeks bring us back to the same day. Choose any question. You do not have to finish them all.",
+  "choice_after": 4,
   "inv_intro": "",
   "inv_first_label": "First:",
   "inv_then_label": "Next:",
-  "home_hint": "Use your tiles or draw it. Small pieces stay on the table, away from little brothers and sisters.",
+  "home_hint": "Use your day cards and the month page, or a calendar from the house. Small pieces stay on the table, away from little brothers and sisters.",
   "kits": [
    {
-    "type": "grid_tiles",
-    "title": "Kit page: grid tiles and mats",
-    "intro": "A grown-up cuts out all 16 tiles before the lesson: 4 circles, 4 squares, 4 triangles and 4 stars, each with a digit 1 to 4. The two mats are not cut. We use 9 tiles on mat 1 in class and all 16 tiles for Go further. No printer or no cutting? Use nine small things of three kinds on a 3 by 3 grid you draw. Keep the tiles in an envelope."
+    "type": "calendar_cards",
+    "start": "Wed",
+    "days": 31,
+    "title": "Kit page: calendar and day cards",
+    "intro": "The month page is not cut: keep it flat. A grown-up cuts out the 7 day cards before the lesson. The month is made up: it starts on a Wednesday and has 31 days. No cards? Write the 7 days on 7 small pieces of paper."
    }
   ]
  },
  "beyond": {
-  "name": "Four by Four",
+  "name": "Hundred Days Later",
   "where": [
-   "G1",
-   "G2",
-   "G3"
+   "G1"
   ],
-  "text": "A 4 by 4 grid of the digits 1 to 4 solved by row-and-column elimination (G1 with nine clues, G2 with six), and what the rule says about a larger grid: a 5 by 5 grid holds five of each digit (G3). Not a syllabus topic; a logic puzzle. Named puzzle: Four by Four. T1 (two clues in a 3 by 3 grid) is the non-routine elimination item.",
-  "parent": "Solving a 4 by 4 grid of digits, finding a box from only two clues, and saying how many of each digit a bigger grid holds go past the school Primary 1 syllabus on purpose."
+  "text": "Finding the day 100 days later (14 weeks and 2 days over, so Monday plus 100 days is Wednesday) by using whole weeks and the left-over days. Dividing by 7 with a left-over is a Primary 3 outcome (remainders), so the lesson says weeks and days over and never writes a division. The other Think harder and Go further items (two days after the day before yesterday, the 10th day from Monday, a fortnight, every Wednesday of a month, 3 weeks later) go past the Primary 1 time outcomes too. Named puzzle: Hundred Days Later.",
+  "parent": "Finding the day 100 days later (using whole weeks and the days left over), a fortnight and every Wednesday of a month go past the school Primary 1 syllabus on purpose; days of the week are not a listed Primary 1 topic."
  }
 }

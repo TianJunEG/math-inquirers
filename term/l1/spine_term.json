@@ -12,9 +12,45 @@
  "choose_lessons_extra": [
   39
  ],
- "choose_note": "Lessons 10, 20, 30 and 40 are choose-the-tool lessons (owner decision 2, consolidation). Lesson 39 (The Problem-Solving Toolbox) is also marked choose because its whole job is picking the tool; the owner may set it to a single tool instead. Until the consolidation plan moves the new ideas out of 10, 20 and 30, those lessons still teach Story Steps, Find One First and Calendar Detective; the tool chip says 'Choose one' and lean_now tells the tutor which tools the content leans on.",
+ "choose_note": "Lessons 10, 20, 30 and 40 are choose-the-tool lessons (owner decision 2; docs/pedagogy/lesson_x10_consolidation_plan.md). Lesson 39 (The Problem-Solving Toolbox) is also marked choose because its whole job is picking the tool; the owner may set it to a single tool instead. The tool chip says Choose one and shows the tools met so far.",
+ "tools_met": {
+  "1": [
+   "draw",
+   "actout",
+   "pattern",
+   "list"
+  ],
+  "2": [
+   "draw",
+   "actout",
+   "pattern",
+   "list",
+   "table",
+   "backwards"
+  ],
+  "3": [
+   "draw",
+   "actout",
+   "pattern",
+   "list",
+   "table",
+   "backwards",
+   "guess"
+  ],
+  "4": [
+   "draw",
+   "actout",
+   "pattern",
+   "list",
+   "table",
+   "backwards",
+   "guess",
+   "simpler"
+  ]
+ },
+ "tools_met_note": "Tools shown in the chip row and the Tool I used row, by term (consolidation plan, tool row per term; term review 2.2). A lesson's main and also tools must be in its term's set. Order on the page follows levels/spine.json.",
  "look_back": {
-  "say": "Pick one problem from today. Question 1: did I answer the question? Question 2: does my answer make sense? Question 3: can I check it another way? Tick, write one word, or pass. Still stuck? Tick the box and ask your grown-up to photograph this page.",
+  "say": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
   "do": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
   "note_check_together": "",
   "timer_label": ""
@@ -53,10 +89,10 @@
    "title": "Digit Cards",
    "main": "list",
    "also": [
-    "simpler"
+    "actout"
    ],
    "role": "I",
-   "reason": "Children make every number from two cards in order, then from three cards, then from four."
+   "reason": "Children make every number from two cards in order, then three cards, then four, moving the kit cards."
   },
   "4": {
    "title": "The 100 Square Explorer",
@@ -65,34 +101,34 @@
     "actout"
    ],
    "role": "I",
-   "reason": "Colouring 10s, 5s and 2s and moving a counter down the square shows what repeats and what grows."
+   "reason": "Colouring 10s, 5s and 2s shows what repeats and what grows; a counter moves down the square."
   },
   "5": {
    "title": "Make-a-Ten Adding",
    "main": "actout",
    "also": [
-    "simpler"
+    "draw"
    ],
    "role": "P",
-   "reason": "Counters move on ten-frames to fill a ten; 8 + 6 comes before 28 + 6."
+   "reason": "Counters move on ten-frames to fill a ten; children draw the dots and ring the ten."
   },
   "6": {
    "title": "Tens Jump, Ones Hop",
-   "main": "draw",
-   "also": [
-    "backwards"
-   ],
-   "role": "P",
-   "reason": "Every sum is drawn as jumps and hops on a number line; Think harder asks where Ali started."
-  },
-  "7": {
-   "title": "Take Away, Count Up",
-   "main": "backwards",
+   "main": "pattern",
    "also": [
     "draw"
    ],
-   "role": "I",
-   "reason": "Counting up and adding back undo a take-away, and this is where children first check an answer another way."
+   "role": "P",
+   "reason": "Each jump of ten changes the tens digit and keeps the ones; the Investigation asks if the jumps land on 50."
+  },
+  "7": {
+   "title": "Take Away, Count Up",
+   "main": "draw",
+   "also": [
+    "actout"
+   ],
+   "role": "P",
+   "reason": "Bars and a number line show the gap; children also take away and count up with real bars and squares."
   },
   "8": {
    "title": "Balance and Swap",
@@ -117,11 +153,7 @@
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson. For now the content leans on counters (Act it out) and drawing each step.",
-   "lean_now": [
-    "actout",
-    "draw"
-   ]
+   "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the four tools met in Term 1 for each story."
   },
   "11": {
    "title": "Who Is Where?",
@@ -198,23 +230,19 @@
   },
   "19": {
    "title": "Picture Equations",
-   "main": "guess",
+   "main": "backwards",
    "also": [
     "list"
    ],
    "role": "I",
-   "reason": "Try a number for each shape, then check it in every line; the Investigation lists the pairs that fit."
+   "reason": "Start from the total and undo to find each shape; the Investigation lists the pairs that fit a line."
   },
   "20": {
    "title": "Find One First",
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson. For now the content leans on a strip (Draw it) and a table of prices.",
-   "lean_now": [
-    "draw",
-    "table"
-   ]
+   "reason": "Choose-the-tool lesson (consolidation plan, Tool Market): the child picks one of the six tools met by Term 2."
   },
   "21": {
    "title": "What Time Is It?",
@@ -259,7 +287,7 @@
    "also": [
     "draw"
    ],
-   "role": "A",
+   "role": "I",
    "reason": "Try two tags, check the total or the gap, then try again; strips show how much more."
   },
   "26": {
@@ -293,22 +321,16 @@
   "29": {
    "title": "Spot the Mistake",
    "main": "backwards",
-   "also": [
-    "simpler"
-   ],
+   "also": [],
    "role": "A",
-   "reason": "Add back, or take away, to check a sum; a rough sum with friendly numbers shows if the answer is about right."
+   "reason": "Add back, or take away, to check a sum; the wrong step is found by undoing the working."
   },
   "30": {
    "title": "Calendar Detective",
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson. For now the content leans on the cycle of 7 (Spot the pattern) and counting on.",
-   "lean_now": [
-    "pattern",
-    "actout"
-   ]
+   "reason": "Choose-the-tool lesson (consolidation plan, Tool Detectives): the child picks one of the seven tools met by Term 3."
   },
   "31": {
    "title": "Half and Quarter",
@@ -388,19 +410,14 @@
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson. Its tool cards still use the lesson's own seven names; see the design note.",
-   "lean_now": []
+   "reason": "Teaches how to choose a tool. Its tool cards still use the lesson's own seven names; the plan rebalances them to the eight card names."
   },
   "40": {
    "title": "Inquirers' Showcase",
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson. Children teach their favourite idea and pick the tool that fits.",
-   "lean_now": [
-    "list",
-    "backwards"
-   ]
+   "reason": "Choose-the-tool lesson with the Showcase and the Quest: children teach their favourite idea and pick the tool that fits."
   }
  },
  "chip_compact_lessons": [

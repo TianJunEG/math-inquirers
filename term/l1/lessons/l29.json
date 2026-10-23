@@ -1048,12 +1048,12 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Calendar Detective, and Mi's Challenge Quest",
-      "Have ready: the Quest Log, closed. A quest partner. The 7 day cards, cut out by a grown-up."
+      "Tool Detectives, and Mi's Challenge Quest",
+      "Have ready: the Quest Log, closed. A quest partner. The 7 tool cards, cut out by a grown-up."
      ]
     }
    ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson is the last of Term 3 and holds Mi's Challenge Quest, a game with Mi: they need the Quest Log closed in its envelope, a quest partner (a grown-up or a brother or sister), and the calendar page with the 7 day cards cut out by a grown-up. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson is the last of Term 3 and holds Mi's Challenge Quest, a game with Mi: they need the Quest Log closed in its envelope, a quest partner (a grown-up or a brother or sister), and the tool-card page with its 7 tool cards cut out by a grown-up. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
    "mascot": {
     "size": "l",
     "say": "Great thinking today!"
@@ -1768,7 +1768,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Calendar Detective, the last lesson of Term 3, and we play Mi's Challenge Quest, a game with Mi. Please have the Quest Log closed in its envelope, a quest partner, and the calendar page torn out with the seven day cards cut out by a grown-up. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Tool Detectives, the last lesson of Term 3, and we play Mi's Challenge Quest, a game with Mi. Please have the Quest Log closed in its envelope, a quest partner, and the seven tool cards cut out by a grown-up. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -3086,12 +3086,12 @@
    "How far is it from the right answer?"
   ],
   "when_stuck": "Let your child use the cards, a number line or a clock and wait 10 seconds before helping. Asking 'What do you get if you add it back?' works better than giving the answer. Please say 'the sum has a mistake', not 'you made a mistake'. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Calendar Detective, the last lesson of Term 3. It also holds Mi's Challenge Quest, a game with Mi. Online practice: your tutor will share the link. The recording link is private: please do not share it.",
+  "next": "Next lesson: Tool Detectives, the last lesson of Term 3. It also holds Mi's Challenge Quest, a game with Mi. Online practice: your tutor will share the link. The recording link is private: please do not share it.",
   "quote": "A wrong answer leaves a clue. Check it a different way.",
   "report_line": "Your child is learning to check an answer a second way and to find the one step that went wrong. This week: right and wrong sums, a wrong time and a wrong total.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
   "next_materials": [
-   "Your Term 3 book: the calendar page torn out, with its 7 day cards cut out by a grown-up",
+   "Your Term 3 book: the tool-card page torn out, with its 7 tool cards cut out by a grown-up",
    "Mi's Challenge Quest Log (4 pages, in your book), closed in an envelope",
    "A quest partner: a grown-up, brother or sister",
    "Pencil, rubber and paper"
@@ -3108,7 +3108,7 @@
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first. Check the answers: S1 41, Yes; S2 60, No, 27; S3 step 2, 64; S4 No, 3:30; S5 No, $12; S6 True, False, True, False; T1 step 2, 45; T2 48, 58, 85; T3 No, 34; T4 B, 8:00; G1 about 90, No, 91; G2 Tens, 85; G3 any sum with one mistake; I1 no (44), forgets the ten.",
-  "Tell parents a week before: the mistake-card page (page 6 of the book) needs 8 cards cut out by a grown-up, and the mat is not cut. The next lesson, Calendar Detective, holds Mi's Challenge Quest: the Quest Log stays closed in its envelope, each child needs a quest partner, and a grown-up tears out the calendar page and cuts out its 7 day cards.",
+  "Tell parents a week before: the mistake-card page (page 6 of the book) needs 8 cards cut out by a grown-up, and the mat is not cut. The next lesson, Tool Detectives, holds Mi's Challenge Quest: the Quest Log stays closed in its envelope, each child needs a quest partner, and a grown-up tears out the tool-card page and cuts out its 7 tool cards.",
   "Have the slides open. Have your own mistake cards to show on camera if you wish. Practise the arm-swing break.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
   "Be plain with families: checking by adding back, finding a wrong step and wrong times and totals in stories are Primary 1 work with help; telling that an answer cannot be right by thinking about how big it must be (estimating, with the words about and near, never round) and spotting the wrong digit in a column sum are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",

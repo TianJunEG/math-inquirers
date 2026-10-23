@@ -296,7 +296,7 @@ CMAP = {"apple": "apple", "star": "star", "ball": "fish", "cat": "balloon", "dru
 
 def share_svg(kind, n, g, per, mode):
     """objects in rows on the left (drawn at least 8 mm); for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
-    size = _osz(kind); pitch = size + 0.8; prow = int(96 / pitch); rows = (n + prow - 1) // prow; rh = size + 1.6; H = rows * rh + 1.6
+    size = _osz(kind); pitch = size + 0.8; prow = int(86 / pitch); rows = (n + prow - 1) // prow; rh = size + 1.6; H = rows * rh + 1.6
     inner = []
     for i in range(n):
         inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * rh, size))
@@ -333,12 +333,13 @@ def page03():
         items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
-            lim = 20 if k == big else 12
-            g = rng.randint(2, 6 if kind == "group" else 3); per = rng.randint(2, 9 if kind == "group" else 10)
-            if g * per > lim: continue
+            lim = 16 if k == big else 12
+            g = rng.randint(2, 6 if kind == "group" else 3)
+            if lim // g < 2: continue
+            per = rng.randint(2, min(8 if kind == "group" else 10, lim // g))
             items.append((kind, g * per, g, per))
         if len(items) != 6: continue
-        if sum((n + int(96 / (_osz(ok_) + 0.8)) - 1) // int(96 / (_osz(ok_) + 0.8)) for (kd, n, g_, p_), ok_ in zip(items, objk)) > 9: continue
+        if sum((n + int(86 / (_osz(ok_) + 0.8)) - 1) // int(86 / (_osz(ok_) + 0.8)) for (kd, n, g_, p_), ok_ in zip(items, objk)) > 9: continue
         ans = [per if kind == "share" else g for kind, n, g, per in items]
         if len(set(ans)) != 6 or len({(n, g if kind == "share" else per) for kind, n, g, per in items}) != 6: continue
         table = make_code_table(ans, word, rng, 1, 20, n_decoy=3, near=(1, -1, 2, -2, 3, -3), tries=80)

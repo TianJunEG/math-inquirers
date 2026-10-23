@@ -14,7 +14,7 @@ IDEMPOTENT: every inserted script line carries the key "spine", every tool edit 
 overwritten from term/l1/spine_term.json.  A second --apply changes 0 files (it prints "0 files would change" in dry-run).
 
 What it does to a lesson file
-  1. adds   "spine": {main, also, role, reason[, lean_now][, chip]}              (copied from spine_term.json; the only source of the choice)
+  1. adds   "spine": {main, also, role, reason[, chip]}              (copied from spine_term.json; the only source of the choice)
   2. adds   Opening SAY + DO (or, if the opening is full, the same two lines at the start of Remember), and a Talk ASK (or a NOTE), all marked "spine"
   3. replaces the text of the look-back SAY and WORK lines with the common look-back words, and the s-look speaker note
   4. Lesson 1 only: a tutor_prep line about the Toolbox card
@@ -73,8 +73,6 @@ def fill(s, t):
 def spine_obj(n):
     r = TERM['lessons'][str(n)]
     o = {'main': r['main'], 'also': list(r['also']), 'role': r['role'], 'reason': r['reason']}
-    if r.get('lean_now'):
-        o['lean_now'] = list(r['lean_now'])
     if n in TERM.get('chip_compact_lessons', []):
         o['chip'] = 'compact'
     return o
@@ -96,7 +94,7 @@ def look_text(d):
             old = s['note']
             new = re.sub(r'Children tick or write the look-back box on page 5\.',
                          'Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes.', old)
-            new = re.sub(r'\s*The Next time I will try row is optional;[^.]*\.', '', new)
+            new = re.sub(r'\s*The Next time I will try row is optional(?:;[^.]*)?\.', '', new)
             new = re.sub(r'\s*At the start of the next lesson you may say[^.]*\.', '', new)
             if new != old:
                 s['note'] = new; notes.append('note')
@@ -274,7 +272,7 @@ TOOL_EDITS = [
     # ---- b_deck.py (slides)
     TE('b_deck.py', 'import spine_term as SPT', "import svg\n\nBF = ", "import svg\nimport spine_term as SPT\n\nBF = "),
     TE('b_deck.py', 'SPT.deck_lookback', "def lookback(d):\n    lb = d['look_back']\n", "def lookback(d):\n    _sp = SPT.deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip)      # spine: three common prompts, Tool I used row, stuck and pass\n    if _sp: return _sp\n    lb = d['look_back']\n"),
-    TE('b_deck.py', 'SPT.deck_chip', "        body = (f'<p style=\"font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}\">LESSON {d[\"lesson_in_term\"]}  \u2022  TERM {d[\"term\"]}  \u2022  LEVEL {d[\"level\"]}</p>'", "        body = (f'<div style=\"display:flex;align-items:center;gap:44px\"><p style=\"font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}\">LESSON {d[\"lesson_in_term\"]}  \u2022  TERM {d[\"term\"]}  \u2022  LEVEL {d[\"level\"]}</p>{SPT.deck_chip(d)}</div>'"),
+    TE('b_deck.py', 'SPT.deck_chip', "for b in s['blocks'] if b['t'] == 'card'))\n        style = ", "for b in s['blocks'] if b['t'] == 'card') + SPT.deck_chip(d))      # spine: TODAY'S TOOL chip (absolute, bottom left)\n        style = "),
     # ---- validate.py
     TE('validate.py', 'def check_spine', "def check_all(num, built=True):", '''def check_spine(d):
     """A lesson with a `spine` object: valid tool ids, at most 2 'also', the same row as spine_term.json, the Opening and look-back words present."""
@@ -285,6 +283,8 @@ TOOL_EDITS = [
     tr = SPT._TERM['lessons'].get(str(d['lesson']))
     if sp.get('main') not in ids | {'choose'}: fail(f"spine: unknown main tool {sp.get('main')!r}")
     if any(a not in ids for a in sp.get('also', [])) or len(sp.get('also', [])) > 2 or sp.get('main') in sp.get('also', []): fail('spine: also must be 0-2 other tool ids')
+    mt = set(SPT._TERM['tools_met'][str(d['term'])])
+    if (sp.get('main') != 'choose' and sp.get('main') not in mt) or any(a not in mt for a in sp.get('also', [])): fail(f"spine: tools must be among those met in Term {d['term']}: {sorted(mt)}")
     if tr and (tr['main'] != sp.get('main') or tr['also'] != sp.get('also')): fail('spine: differs from term/l1/spine_term.json (rerun tools/apply_spine_term.py)')
     marks = {ln.get('spine') for seg in d['script']['segments'] for ln in seg['lines'] if 'spine' in ln}
     if 'look' not in marks: fail('spine: the common look-back words are missing from the look-back script')
@@ -306,7 +306,7 @@ Every lesson file carries a `spine` object (`main`, `also`, `role`, `reason`; co
 
 SCHEMA_PATH = os.path.join(L1, 'schema', 'lesson.schema.json')
 SCHEMA_PROP = {'type': 'object', 'required': ['main'], 'properties': {'main': {'type': 'string'}, 'also': {'type': 'array', 'items': {'type': 'string'}, 'maxItems': 2},
-               'role': {'type': 'string', 'enum': ['I', 'P', 'A', 'C']}, 'reason': {'type': 'string'}, 'lean_now': {'type': 'array', 'items': {'type': 'string'}}, 'chip': {'type': 'string', 'enum': ['compact']}}}
+               'role': {'type': 'string', 'enum': ['I', 'P', 'A', 'C']}, 'reason': {'type': 'string'}, 'chip': {'type': 'string', 'enum': ['compact']}}}
 
 
 def plan_tools():
@@ -375,6 +375,13 @@ def main():
     print('\nlesson   status      variant           placed     used min (before>after)  slow min (before>after)')
     for r in rows:
         print(f"L{r['n']:<6} {r.get('status', '?')[:10]:<11} {r.get('variant', '-'):<17} {r.get('place', '-'):<10} {r.get('used_before', '-')}>{r.get('used_after', '-')}".ljust(76) + f"{r.get('slow_before', '-')}>{r.get('slow_after', '-')}" + ('   NEW WARNS ' + ','.join(r['new_warns']) if r.get('new_warns') else '') + ('   tried: ' + '; '.join(r['tried']) if r.get('tried') else ''))
+    hits = {}
+    for n in range(1, 41):    # the word "tool" is now the program's word for the eight strategies: lessons that use it for something else need a wording pass by hand
+        t = open(os.path.join(L1, 'lessons', f'l{n:02d}.json'), encoding='utf-8').read()
+        t = re.sub(r'Choose Your Tool|[Cc]hoose[- ]the[- ]tool|[Cc]hoose a tool|tool cards?|tool-and-problem|Tool Market|Tool Detectives|"spine"[^}]*\}', '', t)
+        k = len(re.findall(r'(?<![\w-])tools?(?![\w-])', t, re.I))
+        if k and n not in (39, 40): hits[n] = k
+    if hits: print('\nWORDING BY HAND ("tool" used for another meaning; not changed by this script):', ', '.join(f'L{n} ({k}x)' for n, k in hits.items()))
     need = [r['n'] for r in rows if r.get('variant') == 'NEEDS HUMAN' or str(r.get('status', '')).startswith('SKIPPED')]
     if need: print('\nNEEDS HUMAN (timing too full or format changed):', need)
     print(f'\n{changed} files {"changed" if a.apply else "would change"}' + ('' if a.apply else '   (run with --apply in Phase B)'))

@@ -5,64 +5,57 @@
  "term": 2,
  "lesson": 19,
  "lesson_in_term": 9,
- "title": "Picture Equations",
- "big_idea": "A shape is a hidden number, and the same shape is always the same number",
- "child_idea": "In a picture equation each shape is a number. The same shape is always the same number. We find the number, then check it in every line.",
- "skill": "Reasoning about equality",
+ "title": "Find One First",
+ "big_idea": "Find one, then find many",
+ "child_idea": "When we know what a group costs, we can find what one costs by sharing equally. Then we can find what any number of them cost.",
+ "skill": "Unit method",
  "ages": "6-8",
  "moe": {
-  "strand": "Addition and Subtraction; Multiplication and Division (reasoning about equality)",
+  "strand": "Multiplication and Division; Money",
   "topics": [
-   "A number sentence with a missing number and \"=\" as the same amount on both sides (Primary 1, Addition and Subtraction, p. 31)",
-   "Multiplication within 40 (Primary 1, Multiplication and Division, p. 31)",
-   "A symbol that stands for an unknown number, and taking one line from another (letters for unknowns are Primary 6, p. 43)"
+   "Multiplication and division word problems: divide within 20, multiply within 40 (Primary 1, Multiplication and Division, p. 31)",
+   "Count money in dollars (Primary 1, Money, p. 31): whole dollars only, no notes, coins or cents until Term 3"
   ],
-  "note": "Strand label for the tutor only. BEYOND PRIMARY 1 ON PURPOSE. One line with one hidden number (like 4 + box = 10) is Primary 1 work and fills Start here. Using the same shape in two lines, taking one line away from another, checking an answer in every line and a times line are not taught at school at this age (letters for unknowns are Primary 6, p. 43): this lesson uses drawn shapes and boxes only, never letters, always with counters or cups to hold the numbers. Think harder (two shapes, two lines) and Go further (three shapes, a times line, a sum and a product) go past the school Primary 1 syllabus. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order for a times line: heart × circle is heart groups of circle; either order is accepted. Contest tag (tutor only): symbol equations and substitution; taking one line from another."
+  "note": "Strand label for the tutor only. This is an added lesson (gap from the word-problem books analysis: the price or size of one from a group). Start here is Primary 1 content: share a total equally to find one (within 20), then multiply to find many (within 40), in whole dollars. BEYOND PRIMARY 1 ON PURPOSE: Think harder and Go further chain the two steps with different numbers (the price of 7 from the price of 3), use the words a dozen and such, ask how many can be bought, and compare the price of one in two shops. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Money is only whole dollars and $1 tokens (counters): no notes, coins or cents until Term 3. Vocabulary taught here: each, a dozen, such. Contest tag (tutor only): price of one first, then many; how many can be bought; compare the price of one."
  },
  "contest_moves": [
-  "a symbol stands for one number in every line",
-  "take one line from another to find a shape",
-  "check the answer in every line",
-  "a sum and a product together"
+  "find the price of one first, then the price of many",
+  "how many can be bought with a given amount",
+  "compare the price of one in two shops"
  ],
  "objectives": [
-  "Say that a shape in a picture equation is a hidden number, and that the same shape is the same number in every line.",
-  "Find one hidden number in a line such as circle + square = 10 when the square is known, and in a line such as heart + heart = 14.",
-  "Check an answer by putting the number back into the line.",
-  "Think harder: use two lines about the same shapes (take one line from the other) and check the answer in both lines.",
-  "Go further: a times line, three shapes at once, and a sum and a product together."
+  "Find the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\") and the cost of many from the cost of one (\"1 pen costs $3, so 4 pens cost $12\").",
+  "Draw a strip of equal parts for the story and write both steps: find one first, then find many.",
+  "Use the words each, a dozen and such.",
+  "Think harder: find the price of 7 from the price of 3, use a dozen and such, and say how many can be bought.",
+  "Go further: one price from each of two groups, money left over, and which shop sells one for less."
  ],
  "joining_cold": {
   "remember": [
-   "A box in a number sentence hides a number: 6 + box = 10 (Term 1, taught again with a ten-frame)",
-   "The same number twice: box + box = 12 (taught again with two equal plates)",
-   "4 groups of 5 as 4 × 5 (Term 2 Lesson 5, taught again with a picture)"
+   "12 counters shared equally onto 3 plates (Term 2 Lesson 7, taught again with plates)",
+   "Each and in all: 3 bags with 4 counters in each bag (Term 2 Lessons 5 and 8, taught again with a picture)",
+   "A strip of 4 equal parts with the whole strip 20 (Term 2 Lesson 8, taught again with a picture)"
   ],
-  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up shows the ten-frame, two equal plates and four bags with a picture, and the × sign is said again as groups of. The word shape stands for a number is taught in Explore.",
-  "holiday_topics_revisited": [
-   "Number bonds to 10 (Number Bond Inquiry)"
-  ],
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up deals counters onto plates, shows bags with the same number in each bag and shows a strip cut into equal parts. The words each, a dozen and such, and the idea of a price, are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [],
   "safe_to_miss": true,
-  "note": "Fairly safe to miss, with one exception: Mi's Challenge Quest in Term 2 Lesson 10 has one picture-equation gate (a heart + heart total and a friend's number to check). A child who misses this lesson watches the recording and does workbook pages 1 and 2 before the quest. A child who joins here without Term 2 Lessons 5 and 6 can follow, because the warm-up shows groups of and the times sign again, and the times lines are in Think harder and Go further only."
+  "note": "Fairly safe to miss: it builds on Term 2 Lessons 5 to 8 (groups, tables, sharing, stories), and a child who joins here without them can follow the warm-up and the first workbook page. A child who misses it watches the recording and does workbook pages 1 and 2 before Term 2 Lesson 10 (Choose Your Tool), which has one gate about finding the cost of one first."
  },
  "materials": {
   "child": [
-   "The printed workbook with the ten-frames and counters kit page (page 6) and the shape cards kit page (page 7): a grown-up cuts out the 20 counters and the 15 shape cards beforehand",
-   "About 30 small things of one kind (counters, buttons, dry beans or pasta) in case more counters are needed",
-   "2 small cups, mugs or bowls",
-   "The 15 shape cards from page 7 (three each of circle, square, triangle, heart and star). With no printer, draw the shapes on 15 small pieces of paper, or use up to 3 pieces of paper for each shape",
+   "The printed workbook with the $1 tokens kit page (page 6): a grown-up cuts out the 30 tokens beforehand (or use about 30 counters, beans or buttons as $1 tokens; the lesson needs at most 28)",
+   "3 to 6 small things to be the shop items (pencils, rubbers, cups or toys)",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
    "The slide deck",
-   "A set of paper shape cards (three each of circle, square, triangle, heart and star), a cup and some counters to show on camera if you wish",
-   "A visible clock"
+   "A few shop items and some tokens to show on camera if you wish"
   ],
   "kit_pages": [
-   "Ten-frames and counters (page 6): 20 counters to cut out, 10 red and 10 yellow, and four ten-frames to lay counters on. Shape cards (page 7): 15 drawn shapes, three each of circle, square, triangle, heart and star, each big enough to hold 3 counters"
+   "$1 tokens (page 6): 30 round tokens to cut out (the most any question needs is 28). Money in this lesson is whole dollars only, so a token stands for $1"
   ],
   "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. Cups stay on the table."
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home, and the tokens can be counters, beans or buttons. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. No real money is needed and no notes or coins are shown."
  },
  "timing": {
   "parts": [
@@ -135,24 +128,24 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes: a shape and a pile of counters, the same shape twice, then two lines about the same shapes. The mini-lesson has 12 because it states the three rules, finds a shape, takes one line from another, checks in both lines and shows one times line. The workbook has 30 minutes because Start here takes a middle child about 18 minutes: pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes: find one, find many, find one then many with tokens and a strip. The mini-lesson has 12: the two steps, writing them, the words each, a dozen and such, and a turn of their own. The workbook has 30 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are mostly for choice and for home. The exit ticket is live (6 minutes). The last 5 minutes are the standing buffer; nothing new is started in it.",
   "skip_order": [
-   "Start with: cut the times line slide (s-m4) in the Mini-lesson to one question",
-   "Then: shorten Explore round 3 to the circle only",
+   "Start with: cut the dozen slide (s-m3b) in the Mini-lesson",
+   "Then: shorten Explore round 3 to the pens only",
    "Then: take the extra minutes from the flex time"
   ]
  },
  "sneak_peek": {
-  "q1": "A cup hides some counters. The cup and 4 loose counters make 9 counters in all. How many counters are in the cup?",
-  "q2": "Each shape is a number. The star + the star = 14. The heart + the star = 10. Find the number for the heart. Write it.",
-  "a1": "5",
-  "a2": "3. The two stars make 14, so one star is 7. The heart and 7 make 10, so the heart is 3.",
-  "val1": 5
+  "q1": "4 pencils cost $8. How much does 1 pencil cost?",
+  "q2": "3 apples cost $6. How much do 5 apples cost?",
+  "a1": "$2",
+  "a2": "$10. 3 apples cost $6, so 1 apple costs $2. 5 apples cost 5 groups of $2, which is $10.",
+  "val1": 2
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, shape cards, counters and two cups. Pause or rewind any time.",
-   "action": "Gather your workbook, shape cards, counters, two cups, pencil and paper. Press play when ready."
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your tokens. Pause or rewind any time.",
+   "action": "Gather your workbook, tokens, pencil and paper. Press play when ready."
   },
   "remember": {
    "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
@@ -163,28 +156,28 @@
    "action": "Pause. Try both puzzles on your own paper. A guess is fine."
   },
   "explore": {
-   "say": "Recording: pause now. Use counters and your shape cards to find each hidden number. Press play when you have tried.",
-   "action": "Pause. Put counters on the shape cards to find each hidden number, then check it."
+   "say": "Recording: pause now. Use your tokens to find the cost of one, then of many. Press play when you have tried.",
+   "action": "Pause. Share the tokens to find 1, then count tokens to find many."
   },
   "mini": {
    "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
    "action": "Watch and copy the examples. Rewind any step you missed."
   },
   "break": {
-   "say": "Recording: stand up and join in! Count to 20, clap on 5, 10, 15 and 20, and whisper the rest.",
-   "action": "Stand up. Clap on 5, 10, 15 and 20 and whisper the numbers in between."
+   "say": "Recording: stand up and join in! Count in twos and fives with the moves.",
+   "action": "Stand up. Count in twos and fives with the moves, then sit down."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
   },
   "work": {
    "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
    "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
   },
   "talk": {
-   "say": "Recording: pause. Tell a grown-up if Aisha is right, and test it with counters.",
-   "action": "Pause. Explain your answer to someone at home, and test it with counters."
-  },
-  "exit": {
-   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
-   "action": "Pause. Do the exit ticket alone, then play to check it."
+   "say": "Recording: pause. Tell a grown-up if Aisha is right, and test it with tokens.",
+   "action": "Pause. Explain your answer to someone at home, and test it with tokens."
   },
   "look": {
    "say": "Recording: pause and fill in your look-back box. You can pass.",
@@ -200,18 +193,19 @@
    "id": "s-title",
    "part": "opening",
    "kind": "title",
-   "title": "Picture Equations",
+   "title": "Find One First",
    "blocks": [
     {
      "t": "card",
      "head": "TODAY WE WILL",
      "items": [
-      "Find the number a shape is hiding."
+      "Find the cost of one, then of many.",
+      "Use the words each, a dozen and such."
      ]
     }
    ],
-   "note": "Term 2 Lesson 9, 90 minutes. Objective: find a hidden number behind a shape in a picture equation, know that the same shape is always the same number, check the answer in every line, and take one line away from another. Plain statement for families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. Shapes and boxes only, never letters. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
-   "subtitle": "A shape hides a number",
+   "note": "Term 2 Lesson 9, 90 minutes. Objective: find the cost of one by sharing a total equally, then the cost of many; use each, a dozen and such. Plain statement for families: dividing within 20 and multiplying within 40 in whole dollars is Primary 1 work; finding the price of 7 from the price of 3, a dozen, such and how-many-can-be-bought go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Find one, then find many",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -221,141 +215,117 @@
    "id": "s-rem1",
    "part": "remember",
    "kind": "light",
-   "title": "Warm-up: a box hides a number",
+   "title": "Warm-up: share equally",
    "blocks": [
     {
      "t": "chip",
-     "text": "Touch the counters. Say the number in the box."
+     "text": "Deal the counters one at a time. Same number on each plate."
     },
     {
      "t": "visual",
-     "type": "ten_frame",
-     "filled": 6
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 0,
+     "icon": "counter_red",
+     "empty": true,
+     "per_row": 3
     },
     {
      "t": "visual",
      "type": "table",
      "rows": [
       [
-       "6",
-       "+",
-       "[]",
-       "=",
-       "10"
-      ],
-      [
-       "[]",
-       "+",
+       "12",
+       "counters",
        "3",
-       "=",
-       "8"
-      ],
-      [
-       "9",
-       "=",
-       "5",
-       "+",
-       "[]"
+       "plates"
       ]
      ],
      "col_w": [
       1,
+      2,
       1,
-      1,
-      1,
-      1
+      2
      ]
     }
    ],
-   "note": "Six counters sit in a ten-frame that holds ten. The box hides how many more fill it. Ask: how many more fill the frame (4); the box in the second line (5); the box in the third line (4). Children answer aloud or with fingers. No writing, no marks. A child who is unsure touches each counter, counts the empty places (children may lay counters on a ten-frame of the kit page), or holds up fingers for the first number and counts on.",
+   "note": "Twelve counters are shared equally onto 3 plates. Children deal counters one at a time (or imagine it). Ask: how many on each plate (4); 6 counters shared between 2 plates (3); 15 counters shared among 3 plates (5). Children answer aloud or with fingers. No writing, no marks. A child who is unsure deals real counters or small things onto three plates or three pieces of paper.",
    "mascot": {
     "size": "s",
-    "say": "A box can hide a number!"
+    "say": "Sharing is fun!"
    }
   },
   {
    "id": "s-rem2",
    "part": "remember",
    "kind": "light",
-   "title": "The same number twice",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "groups",
-     "container": "plate",
-     "n": 2,
-     "each": 6,
-     "icon": "counter_yellow",
-     "per_row": 2
-    },
-    {
-     "t": "visual",
-     "type": "table",
-     "rows": [
-      [
-       "[]",
-       "+",
-       "[]",
-       "=",
-       "12"
-      ]
-     ],
-     "col_w": [
-      1,
-      1,
-      1,
-      1,
-      1
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Two plates with the same number of counters."
-    }
-   ],
-   "note": "Two plates with the same number of counters. Twelve counters in all. Ask: what is 5 + 5 (10); box + box = 8, the same number twice (4); 7 + 7 (14). Children answer aloud. A child who is unsure deals counters one at a time onto two plates, or uses fingers on two hands. The same number twice is a double: it comes back with the hearts in Explore."
-  },
-  {
-   "id": "s-rem3",
-   "part": "remember",
-   "kind": "light",
-   "title": "4 groups of 5",
+   "title": "Each and in all",
    "blocks": [
     {
      "t": "visual",
      "type": "groups",
      "container": "bag",
-     "n": 4,
-     "each": 5,
+     "n": 3,
+     "each": 4,
      "icon": "counter_red",
-     "per_row": 4
+     "per_row": 3
     },
     {
      "t": "visual",
      "type": "table",
      "rows": [
       [
+       "3",
+       "bags",
        "4",
-       "×",
-       "5",
-       "=",
-       "[]"
+       "in each bag"
       ]
      ],
      "col_w": [
       1,
+      2,
       1,
-      1,
-      1,
-      1
+      3
      ]
     },
     {
      "t": "p",
-     "text": "4 × 5 means 4 groups of 5."
+     "text": "Each bag has the same number."
     }
    ],
-   "note": "Four bags with five counters in each bag. We add one bag at a time: 5, 10, 15, 20. Ask: how many counters in 4 bags of 5 (20); 3 groups of 4 (12); 2 groups of 10 (20). This is Term 2 Lesson 5 taught again: the × sign says groups of. A child who is unsure counts the counters one bag at a time, saying the total each time."
+   "note": "Three bags with 4 counters in each bag. We say each bag has 4, and in all means every bag together. Ask: how many counters in all (12); 5 bags with 2 in each bag (10); 4 groups of 5 (20). This is Term 2 Lessons 5 and 8 taught again. A child who is unsure adds one bag at a time and says the total each time."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "A strip of equal parts",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "whole strip",
+       "len": 4
+      }
+     ],
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "20",
+      "over": "all"
+     }
+    },
+    {
+     "t": "p",
+     "text": "4 equal parts. The whole strip is 20."
+    }
+   ],
+   "note": "A strip is cut into 4 equal parts, and the whole strip is 20. Ask: how big is each part (5); 3 parts of 5 (15); 6 shared into 2 equal parts (3). This is Term 2 Lesson 8 taught again: a strip shows equal groups. A child who is unsure counts 5, 10, 15, 20 on fingers and counts the fingers."
   },
   {
    "id": "s-sneak",
@@ -365,7 +335,7 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is judged."
     },
     {
      "t": "cols",
@@ -375,9 +345,9 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "A cup hides some counters.",
-         "The cup and 4 loose counters make 9 in all.",
-         "How many counters are in the cup?"
+         "4 pencils cost $8.",
+         "How much does 1 pencil cost?",
+         "You may use counters."
         ]
        }
       ],
@@ -386,418 +356,359 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "Each shape is a number.",
-         "How many is the heart?"
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "picture_equation",
-        "rows": [
-         {
-          "items": [
-           {
-            "sym": "star",
-            "n": 2
-           }
-          ],
-          "op": "+",
-          "total": "14"
-         },
-         {
-          "items": [
-           {
-            "sym": "heart",
-            "n": 1
-           },
-           {
-            "sym": "star",
-            "n": 1
-           }
-          ],
-          "op": "+",
-          "total": "10"
-         }
+         "3 apples cost $6.",
+         "How much do 5 apples cost?"
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Puzzle 1 (a cup and 4 counters make 9; the cup holds 5) is an access question: any child can count out 9 and take 4 away. Puzzle 2 is a thinking question on the lesson idea: two stars make 14, so a star is 7, and the heart and a star make 10, so the heart is 3. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 5; 3. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 (4 pencils for $8; 1 pencil is $2) is an access question: any child can share 8 counters onto 4 pencils. Puzzle 2 is a thinking question on the lesson idea: find one first. 1 apple costs $2 and 5 apples cost $10. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: $2; $10. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: a shape and a pile",
+   "title": "Explore: find one",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
+     "type": "table",
      "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "10"
-      }
+      [
+       {
+        "icon": "pen",
+        "n": 4
+       },
+       "20"
+      ],
+      [
+       {
+        "icon": "pen",
+        "n": 1
+       },
+       "[]"
+      ]
      ],
-     "values": {
-      "square": "4",
-      "circle": "[]"
-     }
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
     },
     {
      "t": "list",
      "ordered": true,
      "items": [
-      "Count out 10 counters.",
-      "Put 4 on the square card.",
-      "The rest go on the circle card. How many?"
+      "4 pens cost $20. Count out 20 tokens.",
+      "Share the tokens equally onto 4 pens.",
+      "How much does 1 pen cost?"
      ]
     }
    ],
-   "note": "Round 1, about 5 minutes. Children use their shape cards (the cut-out kit cards: circle, square, triangle, heart and star, up to three of each) and counters (the kit page counters or small things). The picture says circle + square = 10, and the square is 4. They count out 10 counters, put 4 on the square card and the rest on the circle card, then count the circle card (6). Say: the circle is 6. Write circle = 6 on the screen, then check: 6 + 4 = 10. If a family has no cut-out cards, a cup or a piece of paper with the shape drawn on it works. Answer: 6. Do not name a child with a wrong answer."
+   "note": "Round 1, about 4 minutes. Children use their $1 tokens (the kit page or counters) and 4 small things as the pens. 4 pens cost $20: they count out 20 tokens and deal them one at a time onto the 4 pens until every pen has the same. Ask: how much does 1 pen cost (5). Say: 1 pen costs $5, because $20 shared equally among 4 pens is $5 each. Money is whole dollars only, and a token stands for $1. If a family has no shop items, 4 pieces of paper are fine. Answer: $5."
   },
   {
    "id": "s-explore2",
    "part": "explore",
    "kind": "light",
-   "title": "The same shape twice",
+   "title": "Find many",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
+     "type": "table",
      "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "12"
-      }
+      [
+       {
+        "icon": "pen",
+        "n": 1
+       },
+       "3"
+      ],
+      [
+       {
+        "icon": "pen",
+        "n": 4
+       },
+       "[]"
+      ]
      ],
-     "values": {
-      "heart": "[]"
-     }
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
     },
     {
      "t": "list",
      "ordered": true,
      "items": [
-      "Count out 12 counters.",
-      "Share them onto 2 heart cards, one at a time.",
-      "The piles must match. How many on one heart?"
+      "1 pen costs $3. Put 3 tokens by each pen.",
+      "Do this for 4 pens.",
+      "Count all the tokens."
      ]
     }
    ],
-   "note": "Round 2, about 5 minutes. Heart + heart = 12. Both hearts are the same number, so the piles must match. Children deal 12 counters one at a time onto two heart cards. Ask: how many counters are on one heart card (6). Say: both hearts are 6, because the same shape is always the same number. Then check: put the piles together and count (12). Answer: 6. A child who deals unevenly is asked: are the piles the same?"
+   "note": "Round 2, about 3.5 minutes. Now we know the cost of one: 1 pen costs $3. For 4 pens children put 3 tokens by each pen and count all the tokens (12). Ask: how much do 4 pens cost (12). Say: 4 groups of $3 is $12. Link to Term 2 Lesson 5: groups of. Answer: $12. A child who loses count puts the tokens in a row of 3 and counts in 3s."
   },
   {
    "id": "s-explore3",
    "part": "explore",
    "kind": "light",
-   "title": "Two lines, same shapes",
+   "title": "Find one, then many",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "6"
-      },
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "9"
+       "name": "4 pens",
+       "len": 4
       }
      ],
-     "values": {
-      "circle": "[]",
-      "triangle": "[]"
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$20",
+      "over": "all"
      }
     },
     {
      "t": "list",
      "ordered": false,
      "items": [
-      "Line 1 tells you the circle.",
-      "The circle is the same number in line 2."
+      "4 pens cost $20.",
+      "How much do 3 pens cost?"
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Find 1 pen first: share $20 into 4 equal parts.",
+      "Then take 3 parts."
      ],
      "reveal": true
     }
    ],
-   "note": "Round 3, about 4 minutes. Two lines: circle + circle = 6 and circle + triangle = 9. Children use the first line to find the circle (3), then the same circle in the second line to find the triangle (6). They may use counters: 6 on two circle cards, then 9 on one circle card and one triangle card. Ask: what number is the circle (3), the triangle (6). Say: the circle is 3 in both lines. The two lines on the slide are shown first; the two sentences about the circle appear after the children have tried (the next slide). Answers: circle 3, triangle 6. A child who gets a different circle in line 2 is asked: is it the same shape? The numbers are not the sneak-peek numbers: do not tell the sneak-peek answers here."
+   "note": "Round 3, about 3.5 minutes. 4 pens cost $20. How much do 3 pens cost? Children share 20 tokens onto 4 pens (5 each) and then take 3 pens (15). The strip shows 4 equal parts for the 4 pens, and 3 parts are the 3 pens. Ask: how much does 1 pen cost (5); how much do 3 pens cost (15). Say: find one first, then find many. Answers: $5 and $15. The steps (find 1 pen first, then take 3 parts) appear on the next slide, after the children have tried."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "Find one, then many: your turn",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "2 balls",
+       "len": 2
+      }
+     ],
+     "units": {
+      "n": 2,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$8",
+      "over": "all"
+     }
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "2 balls cost $8.",
+      "How much do 5 balls cost?"
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Find 1 ball first: share $8 into 2 equal parts.",
+      "Then take 5 parts."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "Round 4, about 2.5 minutes. 2 balls cost $8. How much do 5 balls cost? Children share 8 tokens onto 2 balls (4 each), then put 4 tokens by each of 5 balls and count them (20). Ask: how much does 1 ball cost (4); how much do 5 balls cost (20). Say: find one first, then find many. Answers: $4 and $20. The steps appear on the next slide, after the children have tried."
   },
   {
    "id": "s-m1",
    "part": "mini",
    "kind": "light",
-   "title": "Three rules",
-   "blocks": [
-    {
-     "t": "list",
-     "ordered": true,
-     "items": [
-      "Each shape is a number.",
-      "The same shape is the same number every time.",
-      "In our puzzles, different shapes are different numbers."
-     ]
-    }
-   ],
-   "note": "Say the three rules once, slowly. Rule 3 is a rule of our puzzles only (in other maths two shapes can be the same number), so that each puzzle has one answer. Ask: can a circle be 6 in one line and 4 in another line of the same puzzle (no, rule 2). Children answer with a thumb. Never use letters; the shapes are the unknown numbers."
-  },
-  {
-   "id": "s-m2",
-   "part": "mini",
-   "kind": "light",
-   "title": "Find it, then check it",
+   "title": "Find one first",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "16"
+       "name": "5 cups",
+       "len": 5
       }
      ],
-     "values": {
-      "square": "4"
+     "units": {
+      "n": 5,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$15",
+      "over": "all"
      }
     },
     {
      "t": "card",
      "head": "STEPS",
      "items": [
-      "Take the square away from the total.",
-      "Share what is left between the 2 equal circles.",
-      "Check: put the number back into the line."
+      "Step 1: find 1. Share the cost equally.",
+      "Step 2: find many. Count that many ones."
      ],
      "reveal": true
     }
    ],
-   "note": "Circle + circle + square = 16 and the square is 4. Take the square away: 16 - 4 = 12 for the two circles. The two circles are equal, so each is 6. Check by putting 6 back into the line: 6 + 6 + 4 = 16. The steps card appears after the questions (next slide); children say each number first. Ask: what is left for the two circles (12); what is one circle (6). Always end with the check."
+   "note": "5 cups cost $15. How much do 2 cups cost? Step 1 finds 1 cup: $15 shared equally among 5 cups. Step 2 finds 2 cups: 2 groups of that. Ask: how much does 1 cup cost (3); how much do 2 cups cost (6). The steps card appears on the next slide, after the children have answered. Children say each number first. Always say find one first."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Write the two steps",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       "Step 1",
+       "1 cup: $15 shared equally among 5 cups",
+       "[]"
+      ],
+      [
+       "Step 2",
+       "2 cups: 2 groups of the cost of 1 cup",
+       "[]"
+      ]
+     ],
+     "head": [
+      "Step",
+      "What we do",
+      "Cost in $"
+     ],
+     "col_w": [
+      1,
+      4,
+      1
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Check: 5 cups at $3 each make $15."
+    }
+   ],
+   "note": "Write the two steps: Step 1 is 15 shared equally among 5, which is 3. Step 2 is 2 groups of 3, which is 6. Check by putting the cost of one back: 5 groups of $3 is $15. Say each step as a short sentence. Either reading order of a groups line is accepted in a child answer. Answers: $3 and $6."
   },
   {
    "id": "s-m3",
    "part": "mini",
    "kind": "light",
-   "title": "Take one line from another",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 2
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "17"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "12"
-      }
-     ]
-    },
-    {
-     "t": "card",
-     "head": "STEPS",
-     "items": [
-      "Line 1 has one more star than line 2.",
-      "The totals show how much that extra star is.",
-      "Then put the star into line 2 to find the triangle."
-     ],
-     "reveal": true
-    }
-   ],
-   "note": "Two lines about the same shapes: star + star + triangle = 17 and star + triangle = 12. Line 1 has one more star than line 2, and 17 is 5 more than 12, so one star is 5. Then star + triangle = 12, so 5 + triangle = 12 and the triangle is 7. Ask: how much more is 17 than 12 (5); what is the triangle (7). The steps appear on the next slide, after the children have answered. This is the new idea of the lesson and goes beyond Primary 1: say it was found by taking one line from the other."
-  },
-  {
-   "id": "s-m3b",
-   "part": "mini",
-   "kind": "light",
-   "title": "Check in both lines",
+   "title": "Three words",
    "blocks": [
     {
      "t": "table",
      "header": true,
      "rows": [
       [
-       "Line",
-       "Check",
-       "Does it match?"
+       "Word",
+       "What it means",
+       "Example"
       ],
       [
-       "Line 1",
-       "5 + 5 + 7 = 17",
-       "Yes"
+       "each",
+       "for one",
+       "$2 each: 1 pen costs $2"
       ],
       [
-       "Line 2",
-       "5 + 7 = 12",
-       "Yes"
+       "a dozen",
+       "12",
+       "a dozen eggs: 12 eggs"
+      ],
+      [
+       "such",
+       "of the same kind",
+       "3 such cups: 3 cups the same"
       ]
      ]
-    },
-    {
-     "t": "chip",
-     "text": "Check in every line, not just one."
     }
    ],
-   "note": "A number that works in one line may not work in another, so we check every line. Line 1: 5 + 5 + 7 = 17. Line 2: 5 + 7 = 12. Both match. Ask: what would we think if line 1 did not match (the numbers are wrong, try again). Link to the Think harder question where a friend gives numbers that work in only one line."
+   "note": "Three words for word problems. Each means for one. A dozen is 12. Such means of the same kind, so 6 such cups are 6 cups the same, with the same price. Ask: what is a dozen (12); a dozen eggs is how many eggs (12); if 3 such cups cost $6, does each cup cost the same (yes). A dozen and such are used in Think harder."
   },
   {
-   "id": "s-m4",
+   "id": "s-m3b",
    "part": "mini",
    "kind": "light",
-   "title": "A times line",
+   "title": "A dozen",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "×",
-       "total": "12"
-      }
-     ],
-     "values": {
-      "circle": "3"
-     }
+     "type": "objects",
+     "icon": "cookie",
+     "n": 12,
+     "per_row": 6
     },
     {
-     "t": "card",
-     "head": "STEPS",
-     "items": [
-      "heart × circle means heart groups of the circle.",
-      "How many groups of the circle make the total?",
-      "Check: put the number back into the line."
-     ]
+     "t": "p",
+     "text": "A dozen cookies is 12 cookies."
     }
    ],
-   "note": "A times line: heart × circle = 12 and the circle is 3. Read it as heart groups of 3 make 12. Ask: how many groups of 3 make 12 (4). Children may count in 3s on fingers or put counters in groups of 3. Check: 4 × 3 = 12. Either reading order is accepted in a child answer. Times lines come back in Think harder and Go further."
+   "note": "Count the cookies together: 12. A dozen is 12, whatever it is 12 of. A dozen eggs, a dozen pens. Ask: how many pens are in a dozen (12). This slide is optional to shorten: cut it first if the Mini-lesson runs over."
   },
   {
-   "id": "s-m5",
+   "id": "s-m4",
    "part": "mini",
    "kind": "light",
    "title": "Your turn",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "11"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 2
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "16"
+       "name": "6 pencils",
+       "len": 6
       }
      ],
-     "values": {
-      "star": "[]",
-      "heart": "[]"
+     "units": {
+      "n": 6,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$18",
+      "over": "all"
      }
     },
     {
      "t": "chip",
-     "text": "Find the star and the heart. Then check both lines."
+     "text": "How much does 1 pencil cost? How much do 4 pencils cost?"
     }
    ],
-   "note": "Each child works on their own paper with counters if they like. Star + heart = 11 and star + star + heart = 16. Line 2 has one more star than line 1, and 16 is 5 more than 11, so the star is 5 and the heart is 6. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: star 5, heart 6."
+   "note": "Each child works on their own paper with tokens if they like. 6 pencils cost $18. Step 1: 1 pencil costs $3. Step 2: 4 pencils cost 4 groups of $3, which is $12. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: $3 and $12."
   },
   {
-   "id": "s-m5a",
+   "id": "s-m4a",
    "part": "mini",
    "kind": "light",
    "title": "Check: your turn",
@@ -807,45 +718,94 @@
      "header": true,
      "rows": [
       [
-       "Shape",
-       "Number",
-       "Check"
+       "Step",
+       "What we do",
+       "Cost"
       ],
       [
-       "Star",
-       "5",
-       "Line 1: 5 + 6 = 11"
+       "Step 1",
+       "1 pencil: $18 shared among 6 pencils",
+       "$3"
       ],
       [
-       "Heart",
-       "6",
-       "Line 2: 5 + 5 + 6 = 16"
+       "Step 2",
+       "4 pencils: 4 groups of $3",
+       "$12"
       ]
      ]
     }
    ],
-   "note": "Answers: star 5, heart 6. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
+   "note": "Answers: 1 pencil costs $3 and 4 pencils cost $12. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check it: is it sensible?",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "RAVI SAYS",
+     "items": [
+      "4 toys cost $24.",
+      "So 1 toy costs $96."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "4 toys",
+       "len": 4
+      }
+     ],
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$24",
+      "over": "all"
+     }
+    },
+    {
+     "t": "p",
+     "text": "Is Ravi right? How could we check?"
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "1 toy cannot cost more than 4 toys.",
+      "$24 shared among 4 toys is $6 each.",
+      "Check: 4 groups of $6 is $24."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "About 3 minutes. Ravi multiplied 24 by 4 instead of sharing. Children use tokens: put 96 tokens? No: ask first whether 1 toy can cost more than 4 toys (no). Then share 24 tokens onto 4 toys: 6 each. Check by putting the price back: 4 groups of 6 is 24. Answers: no; 1 toy costs $6. The ideas appear on the next slide, after the children have tried. Do not name a child."
   },
   {
    "id": "s-break",
    "part": "break",
    "kind": "dark",
-   "title": "Clap and whisper",
+   "title": "Move and count",
    "blocks": [
     {
      "t": "p",
-     "text": "Count to 20 with me. Clap on 5, 10, 15 and 20."
+     "text": "Count in twos. Stamp for each one."
     },
     {
      "t": "p",
-     "text": "Whisper the numbers in between."
+     "text": "Count in fives. Clap for each one."
     },
     {
      "t": "p",
      "text": "Stand up. Sip some water."
     }
    ],
-   "note": "Four minutes. Stand up on camera. Count from 1 to 20 together: children whisper every number and clap loudly on 5, 10, 15 and 20. Then count back from 20 in fives if there is time. No equipment, no running, a little clear space. A child may stay seated. Do not give prizes or compare children."
+   "note": "Four minutes. Stand up on camera. Count in twos to 20 and stamp softly on each number, then count in fives to 40 and clap on each number. No equipment, no running, a little clear space. A child may stay seated and tap the table. Do not give prizes or compare children. Then everyone sits down with a pencil, ready for the workbook."
   },
   {
    "id": "s-ws1",
@@ -855,20 +815,19 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 1 to 4. Take your time."
+     "text": "Questions 1 to 3. Take your time."
     },
     {
      "t": "qs",
      "ids": [
       "S1",
       "S2",
-      "S3",
-      "S4"
+      "S3"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 1 to 4 aloud. Children work on their own with counters and shape cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 4 any child may choose to carry on or try Think harder. Question 1: a cup hides counters; 11 in all and 3 are loose. Question 2: circle + square = 10 and the square is 4. Question 3: heart + heart = 16. Question 4: three stars make 15."
+   "note": "Read questions 1 to 3 aloud. Children work on their own with tokens; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: 4 pens cost $16. Question 2: 1 pen costs $2 and we want 7 pens. Question 3: a strip of 6 buns for $12."
   },
   {
    "id": "s-ws1ans",
@@ -881,12 +840,11 @@
      "ids": [
       "S1",
       "S2",
-      "S3",
-      "S4"
+      "S3"
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 8; Q2 6; Q3 8; Q4 5."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 $4; Q2 $14; Q3 $2."
   },
   {
    "id": "s-ws2",
@@ -896,19 +854,19 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 5 to 7. Take your time."
+     "text": "Questions 4 to 6. Take your time."
     },
     {
      "t": "qs",
      "ids": [
+      "S4",
       "S5",
-      "S6",
-      "S7"
+      "S6"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 5 to 7 aloud. Question 5: two triangles and a square make 14, and the square is 4. Question 6: Ben says the circle is 7; circle + circle = 12. Question 7: 2 bags and 3 loose sweets make 13."
+   "note": "Read questions 4 to 6 aloud. Question 4: 3 books cost $15; find 1 book, then 2 books. Question 5: 5 pens cost $15 and Lily says 1 pen costs $4; is she correct? Question 6: each book costs $4 and Kumar buys 3 books."
   },
   {
    "id": "s-ws2ans",
@@ -919,13 +877,13 @@
     {
      "t": "answers",
      "ids": [
+      "S4",
       "S5",
-      "S6",
-      "S7"
+      "S6"
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q5 10 and 5; Q6 No, the circle is 6; Q7 10 and 5."
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 $5 and $10; Q5 No, 1 pen costs $3; Q6 $12."
   },
   {
    "id": "s-choice",
@@ -943,15 +901,15 @@
       ],
       [
        "Think harder (page 3)",
-       "Two lines and a times line"
+       "7 from 3, a dozen, such"
       ],
       [
        "Go further (page 4)",
-       "Three shapes at once"
+       "Two kinds, and which shop?"
       ],
       [
        "Investigation (page 5)",
-       "One line or two?"
+       "Which pack costs less?"
       ],
       [
        "Check",
@@ -976,25 +934,27 @@
      "t": "card",
      "head": "AISHA SAYS",
      "items": [
-      "Circle + circle = 12.",
-      "So circle + circle + circle = 18."
+      "3 books cost $12.",
+      "So 6 books cost $24."
      ]
     },
     {
      "t": "visual",
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "12"
+       "name": "3 books",
+       "len": 3
       }
-     ]
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
     },
     {
      "t": "p",
@@ -1005,7 +965,7 @@
      "text": "I think ... because ..."
     }
    ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test Aisha with counters: 12 counters on two circle cards is 6 each, and three circle cards of 6 make 18. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes. The same shape is the same number, so each circle is 6, and three sixes are 18. Repeat each child answer in your own words for the recording."
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test Aisha with tokens: 12 tokens on 3 books is 4 each, and 6 books at 4 each is 24; or 6 books are 2 lots of 3 books, so 2 lots of $12. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Repeat each child answer in your own words for the recording."
   },
   {
    "id": "s-sneakans",
@@ -1015,44 +975,66 @@
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
+     "type": "table",
      "rows": [
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "14"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "star",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "10"
-      }
+      [
+       {
+        "icon": "pencil",
+        "n": 4
+       },
+       "8"
+      ],
+      [
+       {
+        "icon": "pencil",
+        "n": 1
+       },
+       "2"
+      ]
      ],
-     "values": {
-      "star": "7",
-      "heart": "3"
-     }
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       {
+        "icon": "apple",
+        "n": 3
+       },
+       "6"
+      ],
+      [
+       {
+        "icon": "apple",
+        "n": 5
+       },
+       "10"
+      ]
+     ],
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
     },
     {
      "t": "answer",
-     "text": "The star is 7. The heart is 3. The cup holds 5."
+     "text": "1 pencil costs $2. 5 apples cost $10."
     }
    ],
-   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Two stars make 14, so one star is 7; the heart and 7 make 10, so the heart is 3. Puzzle 1: 9 counters in all and 4 loose, so the cup holds 5. It was the same idea: a hidden number."
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. 4 pencils cost $8, so 1 pencil costs $2. 3 apples cost $6, so 1 apple costs $2, and 5 apples cost 5 groups of $2, which is $10. It was the same idea: find one first."
   },
   {
    "id": "s-exit",
@@ -1074,7 +1056,7 @@
      "short": false
     }
    ],
-   "note": "Children answer on page 5. Read E1, E2 and E3 aloud with their totals, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud with their numbers, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
   },
   {
    "id": "s-exitans",
@@ -1091,7 +1073,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: triangle 9; option 4, the heart is 8; each circle is 7."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: $3; option 2, $15; $2 and $8."
   },
   {
    "id": "s-look",
@@ -1103,7 +1085,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide); open the next lesson with one catch-up question for the whole group; never a direct message.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1123,8 +1105,8 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Find One First, and Mi's Chal\u00adlenge Quest",
-      "Have ready: the Term 2 Lesson 10 workbook with its tokens page cut out (30 tokens), 3 to 6 small things, the Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper."
+      "Choose Your Tool, and Mi's Chal­lenge Quest",
+      "Have ready: your Term 2 Lesson 10 workbook with its tool cards page cut out, the Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper."
      ]
     }
    ],
@@ -1138,58 +1120,36 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "title": "Go further: one line or two?",
+   "title": "Go further: do we always find one first?",
    "blocks": [
     {
      "t": "visual",
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "8"
+       "name": "2 pens",
+       "len": 2
       }
-     ]
+     ],
+     "units": {
+      "n": 2,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$6",
+      "over": "all"
+     }
     },
     {
      "t": "p",
-     "text": "Could the circle be 2? Could it be 3?"
-    },
-    {
-     "t": "visual",
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "11"
-      }
-     ]
+     "text": "2 pens cost $6. How much do 4 pens cost?"
     },
     {
      "t": "p",
-     "text": "What does the second line tell us?"
+     "text": "Do we need to find 1 pen first?"
     }
    ],
-   "note": "Optional, only if you are on time. Line 1 alone has many answers: circle 2 and square 6, circle 3 and square 5, circle 1 and square 7 and more. Line 2 (circle + circle + square = 11) has only one pair that fits both: circle 3 and square 5. Check: 3 + 5 = 8 and 3 + 3 + 5 = 11. Take two answers and move on. This links to the Investigation.",
+   "note": "Optional, only if you are on time. 2 pens cost $6. 4 pens are 2 lots of 2 pens, so 4 pens cost 2 lots of $6, which is $12. We do not need to find 1 pen first when the new number is a whole number of lots. Finding one first always works; doubling is a quick way here. Take two answers and move on.",
    "optional": true
   },
   {
@@ -1207,16 +1167,16 @@
        "What we do"
       ],
       [
-       "Can a shape change?",
-       "Ali says the heart is 5 in one line and 6 in another."
+       "Does 1 cost more?",
+       "Mei says 1 pen costs $6 at 4 pens for $12. Is she right?"
       ],
       [
-       "Make a puzzle",
-       "Pick two numbers. Write two lines for your grown-up."
+       "Make a shop puzzle",
+       "Write a price puzzle for your grown-up"
       ],
       [
        "Teach it back",
-       "Show a toy how a cup hides a number"
+       "Show a toy how to find 1 first"
       ]
      ]
     },
@@ -1246,7 +1206,7 @@
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Pencil ready, and your shape cards, counters and two cups on the table. Cameras can be on or off, as you like."
+      "text": "Hello, inquirers! Pencil ready, and your tokens on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
@@ -1267,7 +1227,7 @@
      },
      {
       "k": "SAY",
-      "text": "Today a shape is a hidden number. The same shape is always the same number. We find it, then we check it."
+      "text": "Today we find one first, and then we find many. We use tokens: one token is one dollar."
      },
      {
       "k": "NOTE",
@@ -1275,7 +1235,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Plain statement for families when it comes up: a box with a hidden number in one line is Primary 1 work, but using the same shape in two lines and taking one line from another go beyond Primary 1 on purpose, always with counters and shape cards."
+      "text": "Plain statement for families when it comes up: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the two steps with different numbers, a dozen, such and how many can be bought go beyond Primary 1 on purpose."
      },
      {
       "k": "NOTE",
@@ -1296,21 +1256,21 @@
      },
      {
       "k": "SAY",
-      "text": "A box can hide a number. Look at the ten-frame: six counters, and the frame holds ten."
+      "text": "Twelve counters, three plates. Deal the counters one at a time, so every plate has the same."
      },
      {
       "k": "ASK",
-      "text": "How many more counters fill the frame? Six plus box equals ten.",
+      "text": "How many counters are on each plate?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Box plus three equals eight. What is in the box?",
+      "text": "Six counters shared between two plates. How many on each plate?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Nine equals five plus box. What is in the box?",
+      "text": "Fifteen counters shared among three plates. How many on each plate?",
       "resp": 12
      },
      {
@@ -1319,21 +1279,21 @@
      },
      {
       "k": "SAY",
-      "text": "Two plates with the same number of counters. Twelve counters in all."
+      "text": "Three bags with four counters in each bag. Each bag has four. In all means all the bags together."
      },
      {
       "k": "ASK",
-      "text": "What is five plus five?",
+      "text": "How many counters are there in all?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Box plus box equals eight, the same number twice. What is in the box?",
+      "text": "Five bags with two in each bag. How many in all?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Seven plus seven?",
+      "text": "Four groups of five?",
       "resp": 12
      },
      {
@@ -1342,30 +1302,30 @@
      },
      {
       "k": "SAY",
-      "text": "Four bags with five counters in each bag. Four times five means four groups of five."
+      "text": "A strip cut into four equal parts. The whole strip is twenty."
      },
      {
       "k": "ASK",
-      "text": "How many counters are in four bags of five?",
+      "text": "How big is each part?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Three groups of four?",
+      "text": "Three parts of five?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Two groups of ten?",
+      "text": "Six shared into two equal parts?",
       "resp": 12
      },
      {
       "k": "STUCK",
-      "text": "If a child is unsure about the box, touch the empty places in the ten-frame and count them. For the same number twice, deal counters one at a time onto two plates. For the bags, add one bag at a time and say the total each time."
+      "text": "If a child is unsure about sharing, deal real counters one at a time onto plates or pieces of paper. For the bags, add one bag at a time and say the total each time. For the strip, count on in fives on fingers and count the parts."
      },
      {
       "k": "NOTE",
-      "text": "Answers: 4, 5, 4; 10, 4, 14; 20, 12, 20. Children answer with a whisper, fingers or hands. Nobody writes. Do not say picture equation yet. Joining cold: all you need is counting to 20 and adding small numbers."
+      "text": "Answers: 4, 3, 5; 12, 10, 20; 5, 15, 3. Children answer with a whisper, fingers or hands. Nobody writes. Do not say price or cost yet. Joining cold: all you need is counting to 20 and adding small numbers."
      }
     ]
    },
@@ -1382,20 +1342,20 @@
      },
      {
       "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is judged."
      },
      {
       "k": "READ",
-      "text": "Puzzle one. A cup hides some counters. The cup and 4 loose counters make 9 counters in all. How many counters are in the cup? You may use counters."
+      "text": "Puzzle one. 4 pencils cost 8 dollars. How much does 1 pencil cost? You may use counters."
      },
      {
       "k": "WORK",
-      "text": "Children count out 9 counters or draw, and write the number on their own paper.",
+      "text": "Children share counters or draw, and write the number on their own paper.",
       "s": 40
      },
      {
       "k": "READ",
-      "text": "Puzzle two. Each shape is a number. Two stars make 14. The heart and a star make 10. How many is the heart? Write it."
+      "text": "Puzzle two. 3 apples cost 6 dollars. How much do 5 apples cost?"
      },
      {
       "k": "WORK",
@@ -1408,7 +1368,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: 5. Puzzle 2 answer: the star is 7, so the heart is 3. Look for good ideas to praise later (a child who found the star first). Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: $2. Puzzle 2 answer: $10 (1 apple costs $2, so 5 apples cost $10). Look for good ideas to praise later (a child who found 1 apple first). Do not write scores or keep a list."
      }
     ]
    },
@@ -1425,21 +1385,21 @@
      },
      {
       "k": "SAY",
-      "text": "Your hands are the teachers. Find your circle card and your square card. Count out ten counters. The picture says: circle plus square equals ten. The square is four."
+      "text": "Your hands are the teachers. Today a token is one dollar. Four pens cost twenty dollars. Count out twenty tokens, and put out four small things for the pens."
      },
      {
       "k": "WORK",
-      "text": "Children count out 10 counters, put 4 on the square card and the rest on the circle card.",
-      "s": 100
+      "text": "Children count out 20 tokens and deal them one at a time onto 4 pens until every pen has the same.",
+      "s": 90
      },
      {
       "k": "ASK",
-      "text": "How many counters are on the circle card?",
+      "text": "How much does 1 pen cost?",
       "resp": 15
      },
      {
       "k": "SAY",
-      "text": "The circle is six. We check: six plus four is ten. It matches."
+      "text": "One pen costs five dollars. Twenty dollars shared equally among four pens is five dollars each."
      },
      {
       "k": "SLIDE",
@@ -1447,26 +1407,21 @@
      },
      {
       "k": "SAY",
-      "text": "Round two. Heart plus heart equals twelve. Two hearts, so the same number on each."
+      "text": "Round two. Now we know one pen costs three dollars. How much do four pens cost? Put three tokens by each pen."
      },
      {
       "k": "WORK",
-      "text": "Children count out 12 counters and deal them one at a time onto two heart cards until the piles match.",
-      "s": 100
+      "text": "Children put 3 tokens by each of 4 pens and count all the tokens.",
+      "s": 70
      },
      {
       "k": "ASK",
-      "text": "How many counters are on one heart card?",
+      "text": "How much do 4 pens cost?",
       "resp": 15
      },
      {
       "k": "SAY",
-      "text": "Both hearts are six. The same shape is always the same number."
-     },
-     {
-      "k": "ASK",
-      "text": "Check it. Put the two piles together. How many counters?",
-      "resp": 15
+      "text": "Four groups of three dollars is twelve dollars."
      },
      {
       "k": "SLIDE",
@@ -1474,34 +1429,61 @@
      },
      {
       "k": "SAY",
-      "text": "Round three. Two lines. Circle plus circle equals six. Circle plus triangle equals nine. Use line one to find the circle."
+      "text": "Round three. Four pens cost twenty dollars. How much do three pens cost? First find one pen, then take three pens."
      },
      {
       "k": "WORK",
-      "text": "Children find the circle from line one, then use the same circle in line two to find the triangle. Counters are fine.",
-      "s": 130
+      "text": "Children share 20 tokens onto 4 pens, then take 3 pens and count their tokens.",
+      "s": 100
      },
      {
       "k": "ASK",
-      "text": "What number is the circle?",
+      "text": "How much does 1 pen cost?",
       "resp": 15
      },
      {
       "k": "ASK",
-      "text": "What number is the triangle?",
+      "text": "How much do 3 pens cost?",
       "resp": 15
      },
      {
       "k": "SAY",
-      "text": "The circle was three in both lines. That is our idea for today."
+      "text": "Find one first, then find many. That is our idea for today."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "SAY",
+      "text": "Round four, your turn. Two balls cost eight dollars. How much do five balls cost? First find one ball, then find many."
+     },
+     {
+      "k": "WORK",
+      "text": "Children share 8 tokens onto 2 balls, then put that many tokens by each of 5 balls and count them.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How much does 1 ball cost?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How much do 5 balls cost?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "One ball costs four dollars. Five balls cost five groups of four dollars, which is twenty dollars."
      },
      {
       "k": "STUCK",
-      "text": "A child who puts a different number for the circle in line 2: ask, is it the same shape? A child who adds all the numbers in a line: ask, what is the total of the line? A child with no shape cards uses a cup or a piece of paper marked with the shape."
+      "text": "A child who adds 20 and 4: ask, what are we sharing? A child who stops after finding 1: ask, how many pens do we want? A child with no tokens uses counters, beans or drawn circles. Money is only whole dollars; do not use coins or notes."
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say their answers aloud and show fingers; you cannot see counters on small tiles. Answers: circle 6; heart 6 and 12 together; circle 3, triangle 6. Accept any child who finds the numbers by counters or by adding. Do not say equation for every line, say line."
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see tokens on small tiles. Answers: 1 pen $5; 4 pens at $3 is $12; 1 pen $5 and 3 pens $15. A token stands for one dollar. Do not teach cents, coins or notes. Round 4: 1 ball $4 and 5 balls $20."
      }
     ]
    },
@@ -1518,12 +1500,17 @@
      },
      {
       "k": "SAY",
-      "text": "Three rules for picture equations. One: each shape is a number. Two: the same shape is the same number every time. Three: in our puzzles, different shapes are different numbers."
+      "text": "Five cups cost fifteen dollars. How much do two cups cost? Step one: find one cup, by sharing the cost equally. Step two: find many, by counting that many ones."
      },
      {
       "k": "ASK",
-      "text": "Can a circle be six in one line and four in another line of the same puzzle? Thumb up or down.",
-      "resp": 20
+      "text": "How much does 1 cup cost?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How much do 2 cups cost?",
+      "resp": 15
      },
      {
       "k": "SLIDE",
@@ -1531,21 +1518,7 @@
      },
      {
       "k": "SAY",
-      "text": "Find it, then check it. Circle plus circle plus square equals sixteen. The square is four."
-     },
-     {
-      "k": "ASK",
-      "text": "Take the square away from sixteen. What is left for the two circles?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "Two equal circles make twelve. What is one circle?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "Now we check. Six plus six plus four equals sixteen. It matches."
+      "text": "We write two steps. Step one: fifteen shared equally among five cups is three dollars. Step two: two groups of three dollars is six dollars. We check: five cups at three dollars each make fifteen dollars."
      },
      {
       "k": "SLIDE",
@@ -1553,20 +1526,11 @@
      },
      {
       "k": "SAY",
-      "text": "Two lines at once. Star plus star plus triangle equals seventeen. Star plus triangle equals twelve. Line one has one more star than line two."
+      "text": "Three words. Each means for one. A dozen is twelve. Such means of the same kind: three such cups are three cups the same."
      },
      {
       "k": "ASK",
-      "text": "How much more is seventeen than twelve?",
-      "resp": 15
-     },
-     {
-      "k": "SAY",
-      "text": "So that one extra star is five."
-     },
-     {
-      "k": "ASK",
-      "text": "Five plus the triangle makes twelve. What is the triangle?",
+      "text": "How many eggs are in a dozen eggs?",
       "resp": 15
      },
      {
@@ -1575,53 +1539,58 @@
      },
      {
       "k": "SAY",
-      "text": "We always check in both lines. Five plus five plus seven is seventeen. Five plus seven is twelve. Both lines match."
+      "text": "A dozen cookies is twelve cookies. A dozen is twelve, whatever there are twelve of."
      },
      {
       "k": "SLIDE",
       "slide": "s-m4"
      },
      {
-      "k": "SAY",
-      "text": "A times line. Heart times circle equals twelve. The circle is three. That means heart groups of three make twelve."
+      "k": "READ",
+      "text": "Your turn. 6 pencils cost 18 dollars. How much does 1 pencil cost? How much do 4 pencils cost?"
      },
      {
-      "k": "ASK",
-      "text": "How many groups of three make twelve?",
-      "resp": 20
+      "k": "WORK",
+      "text": "Children work on their own paper, with tokens if they like. Wait 10 seconds before helping.",
+      "s": 140
      },
      {
-      "k": "SAY",
-      "text": "The heart is four. Check: four times three is twelve."
+      "k": "SLIDE",
+      "slide": "s-m4a"
+     },
+     {
+      "k": "READ",
+      "text": "One pencil costs 3 dollars. Four pencils cost 12 dollars. Tick your own work with a tick."
      },
      {
       "k": "SLIDE",
       "slide": "s-m5"
      },
      {
-      "k": "READ",
-      "text": "Your turn. Star plus heart equals eleven. Star plus star plus heart equals sixteen. Find the star and the heart. Then check both lines."
+      "k": "SAY",
+      "text": "Ravi says four toys cost twenty-four dollars, so one toy costs ninety-six dollars. Is Ravi right? Think about it first: can one toy cost more than four toys?"
      },
      {
       "k": "WORK",
-      "text": "Children work on their own paper, with counters if they like. Wait 10 seconds before helping.",
-      "s": 140
+      "text": "Children think, then test with tokens: share 24 tokens onto 4 toys.",
+      "s": 60
      },
      {
-      "k": "SLIDE",
-      "slide": "s-m5a"
+      "k": "ASK",
+      "text": "How much does 1 toy cost?",
+      "resp": 15
      },
      {
-      "k": "READ",
-      "text": "The star is five. The heart is six. Tick your own work with a tick."
+      "k": "SAY",
+      "text": "One toy costs six dollars. Check: four groups of six dollars is twenty-four dollars. Ravi multiplied. We share to find one."
      },
      {
       "k": "NOTE",
-      "text": "Key words to use every time: shape, line, the same number, check. Say take one line from the other. Never use letters. Beyond Primary 1 on purpose: using the same shape in two lines, taking one line from another and the times line. Do not teach a rule to recite; the counters are the method."
+      "text": "Key words to use every time: find one first, find many, each, in all, cost. Step 1 shares, step 2 counts groups. The ÷ sign is not needed: say shared equally. Do not teach a rule to recite; the tokens and the strip are the method. Beyond Primary 1 on purpose: a dozen, such and the price of many from a different number are in Think harder."
      },
      {
       "k": "STUCK",
-      "text": "If a child adds every number they see, ask: which numbers does the line really give us? If a child cannot start with two lines, make the second line smaller with counters: 11 counters, then 16 counters, and ask what is extra."
+      "text": "If a child multiplies 15 and 5, ask: what do we know, the cost of 1 or the cost of 5? If a child stops after step 1, ask: how many do we want? If a child cannot share 18 among 6, deal 18 tokens onto 6 pencils one at a time."
      }
     ]
    },
@@ -1638,12 +1607,16 @@
      },
      {
       "k": "SAY",
-      "text": "Stand up and get a sip of water. I count from one. Whisper every number, and clap loudly on five, ten, fifteen and twenty."
+      "text": "Stand up and get a sip of water. We count in twos and stamp softly on each number. Then we count in fives and clap on each number."
      },
      {
       "k": "WORK",
-      "text": "Count 1 to 20 together: whisper the numbers and clap on 5, 10, 15 and 20. Then count back from 20 in fives. Children may stay seated.",
-      "s": 150
+      "text": "Quiet movement only. After the break say: please sit down and have your workbook and a pencil ready.",
+      "s": 145
+     },
+     {
+      "k": "NOTE",
+      "text": "Quiet movement only. After the break say: please sit down, put the closed Quest Log flat on your table, and have a pencil ready."
      }
     ]
    },
@@ -1660,12 +1633,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: a cup hides some counters. 3 counters are outside the cup. There are 11 counters in all. How many counters are in the cup? Question 2: each shape is a number. Circle plus square equals 10. The square is 4. Find the number for the circle. Question 3: heart plus heart equals 16. Find the number for the heart. Question 4: star plus star plus star equals 15. Find the number for the star."
+      "text": "Page 1, Start here. Question 1: 4 pens cost 16 dollars. How much does 1 pen cost? Question 2: 1 pen costs 2 dollars. How much do 7 pens cost? Fill in the blanks. Question 3: 6 buns cost 12 dollars. How much does 1 bun cost? Look at the strip."
      },
      {
       "k": "WORK",
-      "text": "Page 1, questions 1 to 4. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 530
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 450
      },
      {
       "k": "SLIDE",
@@ -1673,11 +1646,11 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 8. Question 2: 6. Question 3: 8. Question 4: 5. Tick your own page with a tick."
+      "text": "Question 1: 4 dollars. Question 2: 14 dollars. Question 3: 2 dollars. Tick your own page with a tick."
      },
      {
       "k": "SAY",
-      "text": "After question 4 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
      },
      {
       "k": "SLIDE",
@@ -1685,12 +1658,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 5: two triangles and a square make 14. The square is 4. Fill in the blanks. Question 6: circle plus circle equals 12. Ben says the circle is 7. Is Ben correct? Circle Yes or No, then fill in the circle. Question 7: each bag has the same number of sweets. 3 sweets are outside the bags. There are 13 sweets in all."
+      "text": "Page 2. Question 4: 3 books cost 15 dollars. Fill in the blanks. Look at the strip. Question 5: 5 pens cost 15 dollars. Lily says 1 pen costs 4 dollars. Is Lily correct? Question 6: each book costs 4 dollars. Kumar buys 3 books. How much do the 3 books cost?"
      },
      {
       "k": "WORK",
-      "text": "Page 2, questions 5 to 7.",
-      "s": 530
+      "text": "Page 2, questions 4 to 6.",
+      "s": 510
      },
      {
       "k": "SLIDE",
@@ -1698,7 +1671,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 5: 10 and 5. Question 6: no, the circle is 6. Question 7: 10 and 5."
+      "text": "Question 4: 5 dollars and 10 dollars. Question 5: no, 1 pen costs 3 dollars. Question 6: 12 dollars."
      },
      {
       "k": "SLIDE",
@@ -1716,11 +1689,11 @@
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 150
+      "s": 230
      },
      {
       "k": "STUCK",
-      "text": "Q1: take the loose counters away from 11. Q2: take the square away from the total. Q3: share the total between two hearts. Q4: share 15 between three stars. Q5: take the square away, then share. Q6: put 7 into both circles and add. Q7: take the loose sweets away, then share between two bags."
+      "text": "Q1: share 16 between 4 pens. Q2: put 2 by each of 7 pens. Q3: count the parts of the strip, then share 12. Q4: find 1 book first, then 2 books. Q5: put Lily's number into the story: 5 groups of 4 is 20. Q6: 3 groups of 4."
      },
      {
       "k": "STUCK",
@@ -1728,7 +1701,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder uses two lines and a times line (beyond Primary 1 on purpose). Go further has three shapes and a sum and a product. Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder chains the two steps with different numbers and uses a dozen, such and how many can be bought (beyond Primary 1 on purpose). Go further has two kinds of item, money left over and a comparison of two shops. Do not announce who is on which page. Start here takes a middle child about 16 minutes, so there is some choice time: for most children pages 4 and 5 are partly for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -1745,22 +1718,22 @@
      },
      {
       "k": "READ",
-      "text": "Aisha says: circle plus circle equals twelve, so circle plus circle plus circle equals eighteen. Is Aisha right? How could we check?"
+      "text": "Aisha says: 3 books cost 12 dollars, so 6 books cost 24 dollars. Is Aisha right? How could we check?"
      },
      {
       "k": "WORK",
-      "text": "Test Aisha with counters: 12 on two circle cards, then three circle cards.",
-      "s": 60
+      "text": "Test Aisha with tokens: 12 on 3 books, then 6 books.",
+      "s": 35
      },
      {
       "k": "WORK",
       "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-      "s": 40
+      "s": 20
      },
      {
       "k": "ASK",
       "text": "Who would like to share? Volunteers first. A pass is always fine.",
-      "resp": 80
+      "resp": 35
      },
      {
       "k": "SLIDE",
@@ -1768,7 +1741,7 @@
      },
      {
       "k": "SAY",
-      "text": "Remember the sneak-peek? Two stars make fourteen, so the star is seven. The heart and seven make ten, so the heart is three. The cup held five."
+      "text": "Remember the sneak-peek? Four pencils cost eight dollars, so one pencil costs two dollars. Three apples cost six dollars, so one apple costs two dollars, and five apples cost ten dollars."
      },
      {
       "k": "ASK",
@@ -1776,8 +1749,18 @@
       "resp": 15
      },
      {
+      "k": "ASK",
+      "text": "What do we find first, the cost of one or the cost of many?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "How can we check our answer?",
+      "resp": 25
+     },
+     {
       "k": "NOTE",
-      "text": "Model answer: yes. The same shape is the same number, so each circle is 6 (12 shared between two), and three circles are 3 sixes: 18. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+      "text": "Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Or 6 books are 2 lots of 3 books, so 2 lots of $12. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
     ]
    },
@@ -1798,7 +1781,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Each shape is a number. The triangle plus the triangle equals 18. Find the number for the triangle. E2. The heart plus the square equals 13. The square is 5. Find the number for the heart. Choose the correct answer. Option 1: 5. Option 2: 6. Option 3: 7. Option 4: 8. Write its number in the bracket. E3. Each shape is a number. Circle plus circle plus star equals 19. The star is 5. Find the number for each circle.",
+      "text": "E1. 3 pencils cost 9 dollars. How much does 1 pencil cost? E2. Each sticker costs 5 dollars. How much do 3 stickers cost? Choose the correct answer. Option 1: 8 dollars. Option 2: 15 dollars. Option 3: 2 dollars. Option 4: 53 dollars. Write its number in the bracket. E3. 5 cakes cost 10 dollars. Fill in the blanks: 1 cake costs blank dollars; 4 cakes cost blank dollars.",
       "s": 55
      },
      {
@@ -1812,7 +1795,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: 9. E2: option 4, the heart is 8. E3: each circle is 7."
+      "text": "E1: 3 dollars. E2: option 2, 15 dollars. E3: 2 dollars and 8 dollars."
      },
      {
       "k": "SAY",
@@ -1855,7 +1838,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Find One First, and it holds Mi's Challenge Quest, a game with Mi. Please have your Term 2 Lesson 10 workbook with its tokens page cut out, three to six small things for a shop, your Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Choose Your Tool, and it holds Mi's Challenge Quest, a game with Mi. Please have your Term 2 Lesson 10 workbook with its tool cards page cut out, your Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -1864,7 +1847,7 @@
      },
      {
       "k": "SAY",
-      "text": "Optional, only if you are on time: circle plus square equals eight. Could the circle be two? Could it be three? What does the second line tell us?",
+      "text": "Optional, only if you are on time: 2 pens cost 6 dollars. How much do 4 pens cost? Do we need to find 1 pen first?",
       "optional": true
      },
      {
@@ -1885,7 +1868,7 @@
      },
      {
       "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: line 1 alone has many answers; line 2 makes only circle 3 and square 5 fit both. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 pens are 2 lots of 2 pens, so $12; finding one first always works and doubling is a quick way here. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
      }
     ]
    }
@@ -1897,218 +1880,175 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "A cup hides some counters. 3 counters are outside the cup. There are 11 counters in all. Fill in the blank.",
+    "text": "4 pens cost $16. How much does 1 pen cost? Use tokens or draw.",
     "parts": [
      {
       "l": "",
-      "text": "The cup holds [] counters.",
-      "ans": "8",
-      "val": 8
+      "text": "1 pen costs $[].",
+      "ans": "4",
+      "val": 4
      }
     ],
-    "answer": "8",
+    "answer": "$4",
     "val": [
-     8
+     4
     ],
-    "hint": "Take the 3 loose counters away from 11.",
-    "solution": "11 - 3 = 8, so the cup holds 8 counters. Check: 8 + 3 = 11.",
+    "hint": "Share $16 equally among 4 pens. Use tokens.",
+    "solution": "$16 shared equally among 4 pens is $4 each. Check: 4 groups of $4 make $16.",
     "mistakes": [
-     "Writing 14 (11 + 3).",
-     "Writing 11 (the total)."
+     "Writing 20 (adding 16 and 4).",
+     "Writing 64 (multiplying).",
+     "Writing 16 (the total)."
     ],
-    "mins": 2,
+    "mins": 2.5,
     "visual": {
      "type": "objects",
-     "items": [
-      {
-       "icon": "cup",
-       "n": 1
-      },
-      {
-       "icon": "counter_yellow",
-       "n": 3
-      }
-     ],
+     "icon": "pen",
+     "n": 4,
      "per_row": 4
-    }
+    },
+    "draw": true,
+    "draw_strokes": 16
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Each shape is a number. Find the number for the circle.",
-    "parts": [],
-    "answer": "6",
-    "val": [
-     6
-    ],
-    "hint": "Take the square away from the total: 10 - 4.",
-    "solution": "The total is 10 and the square is 4. 10 - 4 = 6, so the circle is 6. Check: 6 + 4 = 10.",
-    "mistakes": [
-     "Writing 14 (adding 10 and 4).",
-     "Writing 10 (the total)."
-    ],
-    "mins": 2,
-    "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "10"
-      }
-     ],
-     "values": {
-      "square": "4",
-      "circle": "[]"
+    "text": "1 pen costs $2. How much do 7 pens cost? Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "7 × 2 = [2]",
+      "ans": "14",
+      "val": 14
      },
-     "sym": 80
+     {
+      "l": "b",
+      "text": "7 pens cost $[2].",
+      "ans": "14",
+      "val": 14
+     }
+    ],
+    "answer": "14; $14",
+    "val": [
+     14,
+     14
+    ],
+    "hint": "Put 2 tokens by each pen and count them all.",
+    "solution": "7 groups of $2 is 2 + 2 + 2 + 2 + 2 + 2 + 2 = 14, so 7 pens cost $14.",
+    "mistakes": [
+     "Writing 9 (adding 2 and 7).",
+     "Writing 2 (the cost of 1 pen)."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 7,
+     "per_row": 4
     }
    },
    {
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Each shape is a number. Find the number for the heart.",
-    "parts": [],
-    "answer": "8",
+    "text": "6 buns cost $12. How much does 1 bun cost? Look at the strip.",
+    "parts": [
+     {
+      "l": "",
+      "text": "1 bun costs $[].",
+      "ans": "2",
+      "val": 2
+     }
+    ],
+    "answer": "$2",
     "val": [
-     8
+     2
     ],
-    "hint": "Two hearts are the same number. Share 16 between the two hearts.",
-    "solution": "8 + 8 = 16, so each heart is 8.",
+    "hint": "The strip has 6 equal parts. Share $12 into 6 parts.",
+    "solution": "$12 shared equally among 6 buns is $2 each. Check: 6 groups of $2 make $12.",
     "mistakes": [
-     "Writing 16 (the total).",
-     "Writing 32 (adding the total twice)."
+     "Writing 6 (the number of buns).",
+     "Writing 72 (multiplying)."
     ],
-    "mins": 2,
+    "mins": 2.5,
     "visual": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "16"
+       "name": "6 buns",
+       "len": 6
       }
      ],
-     "values": {
-      "heart": "[]"
+     "units": {
+      "n": 6,
+      "text": "?"
      },
-     "sym": 80
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
     }
    },
    {
     "id": "S4",
-    "page": 1,
+    "page": 2,
     "tier": "start",
-    "text": "Each shape is a number. Find the number for the star.",
-    "parts": [],
-    "answer": "5",
+    "text": "3 books cost $15. Fill in the blanks. Look at the strip.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 book costs $[].",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "2 books cost $[2].",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "$5; $10",
     "val": [
-     5
+     5,
+     10
     ],
-    "hint": "The 3 stars are the same number. Share 15 between 3 stars.",
-    "solution": "5 + 5 + 5 = 15, so each star is 5.",
+    "hint": "Find 1 book first. Then find 2 books.",
+    "solution": "$15 shared equally among 3 books is $5 each. 2 books cost 2 groups of $5, which is $10. Check: 3 groups of $5 make $15.",
     "mistakes": [
-     "Writing 3 (counting the stars).",
-     "Writing 12 (15 - 3)."
+     "Writing 15 for 2 books.",
+     "Writing 7 (adding 5 and 2).",
+     "Stopping after the first part."
     ],
-    "mins": 2,
+    "mins": 3,
     "visual": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "star",
-         "n": 3
-        }
-       ],
-       "op": "+",
-       "total": "15"
+       "name": "3 books",
+       "len": 3
       }
      ],
-     "values": {
-      "star": "[]"
+     "units": {
+      "n": 3,
+      "text": "?"
      },
-     "sym": 80
+     "brace": {
+      "text": "$15",
+      "over": "all"
+     }
     }
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Each shape is a number. The square is 4. Fill in the blanks.",
+    "text": "5 pens cost $15. Lily says 1 pen costs $4. Look at the picture.",
     "parts": [
      {
       "l": "a",
-      "text": "The 2 triangles make [2].",
-      "ans": "10",
-      "val": 10
-     },
-     {
-      "l": "b",
-      "text": "Each triangle is [].",
-      "ans": "5",
-      "val": 5
-     }
-    ],
-    "answer": "10; 5",
-    "val": [
-     10,
-     5
-    ],
-    "hint": "Take the square away from 14 first.",
-    "solution": "14 - 4 = 10, so the 2 triangles make 10. The triangles are the same, so each is 5. Check: 5 + 5 + 4 = 14.",
-    "mistakes": [
-     "Writing 14 for each triangle.",
-     "Writing 10 for each triangle."
-    ],
-    "mins": 3,
-    "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "triangle",
-         "n": 2
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "14"
-      }
-     ],
-     "sym": 80
-    }
-   },
-   {
-    "id": "S6",
-    "page": 2,
-    "tier": "start",
-    "text": "Ben says the circle is 7. Look at the picture.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Is Ben correct? Circle Yes or No.",
+      "text": "Is Lily correct? Circle Yes or No.",
       "ans": "No",
       "val": "No",
       "choices": [
@@ -2118,85 +2058,62 @@
      },
      {
       "l": "b",
-      "text": "The circle is [].",
-      "ans": "6",
-      "val": 6
+      "text": "1 pen costs $[].",
+      "ans": "3",
+      "val": 3
      }
     ],
-    "answer": "No; 6",
+    "answer": "No; $3",
     "val": [
      "No",
-     6
+     3
     ],
-    "hint": "Put 7 into both circles. What is the total?",
-    "solution": "7 + 7 = 14, but the line says 12. So Ben is not correct. 6 + 6 = 12, so the circle is 6.",
+    "hint": "Put Lily's number back: 5 groups of $4.",
+    "solution": "5 groups of $4 make $20, not $15. So Lily is not correct. $15 shared equally among 5 pens is $3 each. Check: 5 groups of $3 make $15.",
     "mistakes": [
-     "Saying Yes because 7 is close to 6.",
-     "Writing 12 for the circle."
+     "Saying Yes because 4 is close to 3.",
+     "Writing 15 for 1 pen."
     ],
     "mins": 3,
     "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "12"
-      }
-     ],
-     "sym": 80
+     "type": "objects",
+     "icon": "pen",
+     "n": 5,
+     "per_row": 5
     }
    },
    {
-    "id": "S7",
+    "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Each bag has the same number of sweets. 3 sweets are outside the bags. There are 13 sweets in all. Fill in the blanks.",
+    "text": "Each book costs $4. Kumar buys 3 books. How much do the 3 books cost? Use tokens or draw.",
     "parts": [
      {
-      "l": "a",
-      "text": "The 2 bags have [2] sweets in all.",
-      "ans": "10",
-      "val": 10
-     },
-     {
-      "l": "b",
-      "text": "Each bag has [] sweets.",
-      "ans": "5",
-      "val": 5
+      "l": "",
+      "text": "The 3 books cost $[2].",
+      "ans": "12",
+      "val": 12
      }
     ],
-    "answer": "10; 5",
+    "answer": "$12",
     "val": [
-     10,
-     5
+     12
     ],
-    "hint": "Take the 3 loose sweets away from 13.",
-    "solution": "13 - 3 = 10 sweets are in the 2 bags. 5 + 5 = 10, so each bag has 5 sweets. Check: 5 + 5 + 3 = 13.",
+    "hint": "Each means for one. Count 3 groups of $4.",
+    "solution": "3 groups of $4: 4 + 4 + 4 = 12, so the 3 books cost $12.",
     "mistakes": [
-     "Writing 13 for each bag.",
-     "Writing 6 (13 shared between 2 bags, ignoring the loose sweets)."
+     "Writing 7 (adding 4 and 3).",
+     "Writing 4."
     ],
-    "mins": 3.5,
+    "mins": 2.5,
     "visual": {
      "type": "objects",
-     "items": [
-      {
-       "icon": "bag",
-       "n": 2
-      },
-      {
-       "icon": "sweet",
-       "n": 3
-      }
-     ],
-     "per_row": 5
-    }
+     "icon": "book",
+     "n": 3,
+     "per_row": 3
+    },
+    "draw": true,
+    "draw_strokes": 12
    }
   ],
   "think": [
@@ -2204,173 +2121,147 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Each shape is a number. Find the number for each shape. Show your working.",
-    "parts": [],
-    "answer": "square 6; heart 7",
-    "val": [
-     6,
-     7
+    "text": "4 cups cost $12. Fill in the blanks. Look at the strip.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 cup costs $[].",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "7 cups cost $[2].",
+      "ans": "21",
+      "val": 21
+     }
     ],
-    "hint": "Line 1 has one more square than line 2. How much more is 19 than 13?",
-    "solution": "Line 1 has one more square than line 2, and 19 is 6 more than 13, so the square is 6. Then 6 + heart = 13, so the heart is 7. Check: 6 + 6 + 7 = 19.",
+    "answer": "$3; $21",
+    "val": [
+     3,
+     21
+    ],
+    "hint": "Find 1 cup first. Then find 7 cups.",
+    "solution": "$12 shared equally among 4 cups is $3 each. 7 cups cost 7 groups of $3, which is $21. Check: 4 groups of $3 make $12.",
     "mistakes": [
-     "Writing 19 and 13 as the answers.",
-     "Finding the square but forgetting the heart."
+     "Writing 84 (12 × 7).",
+     "Writing 19 (12 + 7).",
+     "Stopping after the first part."
     ],
     "mins": 4,
     "visual": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "square",
-         "n": 2
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "19"
-      },
-      {
-       "items": [
-        {
-         "sym": "square",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "13"
+       "name": "4 cups",
+       "len": 4
       }
      ],
-     "values": {
-      "square": "[]",
-      "heart": "[]"
+     "units": {
+      "n": 4,
+      "text": "?"
      },
-     "sym": 80
-    },
-    "lines": 2
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
+    }
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Kumar says the heart is 8 and the star is 7. Look at the picture. Decide if each statement is True or False.",
-    "parts": [],
-    "answer": "True; False",
-    "val": [
-     "T",
-     "F"
-    ],
-    "hint": "Put 8 and 7 into each line and add.",
-    "solution": "Line 1: 8 + 7 = 15, which matches. Line 2: 8 + 8 + 7 = 23, but the line says 21. Kumar's numbers work in line 1 only.",
-    "mistakes": [
-     "Checking only line 1.",
-     "Saying line 2 is true because 23 is close to 21."
-    ],
-    "mins": 3,
-    "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "star",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "15"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 2
-        },
-        {
-         "sym": "star",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "21"
-      }
-     ],
-     "sym": 80
-    },
-    "tf": [
+    "text": "A dozen buns cost $24. Fill in the blanks.",
+    "parts": [
      {
-      "s": "Line 1 is true with Kumar's numbers."
+      "l": "a",
+      "text": "1 bun costs $[].",
+      "ans": "2",
+      "val": 2
      },
      {
-      "s": "Line 2 is true with Kumar's numbers."
+      "l": "b",
+      "text": "3 buns cost $[].",
+      "ans": "6",
+      "val": 6
      }
-    ]
+    ],
+    "answer": "$2; $6",
+    "val": [
+     2,
+     6
+    ],
+    "hint": "A dozen is 12. Share $24 equally among 12 buns.",
+    "solution": "A dozen is 12, so 12 buns cost $24. $24 shared equally among 12 buns is $2 each. 3 buns cost 3 groups of $2, which is $6.",
+    "mistakes": [
+     "Using 24 shared among 2 buns.",
+     "Writing 24 for 3 buns."
+    ],
+    "mins": 3.5
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Each shape is a number. Find the number for each shape.",
-    "parts": [],
-    "answer": "heart 3; circle 5",
+    "text": "Wei pays $24 for 6 such cups. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 cup costs $[].",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "4 such cups cost $[2].",
+      "ans": "16",
+      "val": 16
+     }
+    ],
+    "answer": "$4; $16",
     "val": [
-     3,
+     4,
+     16
+    ],
+    "hint": "Such means the cups are the same, so each costs the same.",
+    "solution": "$24 shared equally among 6 cups is $4 each. 4 such cups cost 4 groups of $4, which is $16.",
+    "mistakes": [
+     "Writing 24 for 4 cups.",
+     "Writing 8 (4 + 4)."
+    ],
+    "mins": 3.5
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "4 pens cost $8. Ben has $10. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 pen costs $[].",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "Ben can buy [] pens.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "$2; 5 pens",
+    "val": [
+     2,
      5
     ],
-    "hint": "Line 1 gives the heart. Then use the heart in line 2.",
-    "solution": "The 2 hearts make 6, so the heart is 3. Then 3 × circle = 15 means 3 groups of 5 make 15, so the circle is 5. Check: 3 × 5 = 15.",
+    "hint": "Find 1 pen first. Then count how many groups of $2 fit in $10.",
+    "solution": "$8 shared equally among 4 pens is $2 each. $10 holds 5 groups of $2, so Ben can buy 5 pens.",
     "mistakes": [
-     "Writing 6 for the heart.",
-     "Writing 15 for the circle."
+     "Writing 4 pens (the number in the story).",
+     "Writing 20 (10 × 2)."
     ],
-    "mins": 4,
-    "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "6"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "×",
-       "total": "15"
-      }
-     ],
-     "values": {
-      "heart": "[]",
-      "circle": "[]"
-     },
-     "sym": 80
-    }
+    "mins": 4
    }
   ],
   "go": [
@@ -2378,222 +2269,152 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Each shape is a number. Find the number for each shape.",
+    "text": "2 hats cost $10. 3 scarves cost $18. Jenny buys 1 hat and 2 scarves. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "The circle is [].",
+      "text": "1 hat costs $[].",
       "ans": "5",
       "val": 5
      },
      {
       "l": "b",
-      "text": "The heart is [].",
-      "ans": "7",
-      "val": 7
+      "text": "1 scarf costs $[].",
+      "ans": "6",
+      "val": 6
      },
      {
       "l": "c",
-      "text": "The star is [].",
-      "ans": "11",
-      "val": 11
+      "text": "Jenny pays $[2].",
+      "ans": "17",
+      "val": 17
      }
     ],
-    "answer": "circle 5; heart 7; star 11",
+    "answer": "$5; $6; $17",
     "val": [
      5,
-     7,
-     11
+     6,
+     17
     ],
-    "hint": "Start with the line that has only one kind of shape.",
-    "solution": "Circle × circle = 25, so the circle is 5 (5 groups of 5). Then heart + 5 = 12, so the heart is 7. Then star - 7 = 4, so the star is 11. Check: 11 - 7 = 4.",
+    "hint": "Find 1 hat and 1 scarf first.",
+    "solution": "$10 shared equally among 2 hats is $5 each. $18 shared equally among 3 scarves is $6 each. 2 scarves cost $12. 1 hat and 2 scarves cost $5 + $12 = $17.",
     "mistakes": [
-     "Writing 12 for the heart.",
-     "Taking 4 away from 7 and writing 3 for the star."
+     "Adding 10 and 18.",
+     "Counting 1 scarf instead of 2."
     ],
-    "mins": 5,
-    "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        }
-       ],
-       "op": "×",
-       "total": "25"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "12"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "-",
-       "total": "4"
-      }
-     ],
-     "sym": 80
-    }
+    "mins": 5
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Each shape is a number. Fill in the blanks.",
+    "text": "8 pens cost $24. Mei has $30. She buys 5 pens. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "One star and one heart make [2].",
-      "ans": "14",
-      "val": 14
+      "text": "1 pen costs $[].",
+      "ans": "3",
+      "val": 3
      },
      {
       "l": "b",
-      "text": "The star is [].",
-      "ans": "8",
-      "val": 8
+      "text": "5 pens cost $[2].",
+      "ans": "15",
+      "val": 15
      },
      {
       "l": "c",
-      "text": "The heart is [].",
-      "ans": "6",
-      "val": 6
+      "text": "Mei has $[2] left.",
+      "ans": "15",
+      "val": 15
      }
     ],
-    "answer": "14; star 8; heart 6",
+    "answer": "$3; $15; $15",
     "val": [
-     14,
-     8,
-     6
+     3,
+     15,
+     15
     ],
-    "hint": "Put the two lines together. How many stars and hearts are there?",
-    "solution": "Both lines together have 3 stars and 3 hearts, and 22 + 20 = 42. 3 stars and 3 hearts make 42, so one star and one heart make 14. Then 22 - 14 = 8 is a star, and 14 - 8 = 6 is a heart.",
+    "hint": "Find 1 pen first, then 4 pens, then what is left from $20.",
+    "solution": "$24 shared equally among 8 pens is $3 each. 5 pens cost $15. $30 - $15 = $15 is left.",
     "mistakes": [
-     "Writing 22 and 20 as the answers.",
-     "Writing 7 for both shapes."
+     "Taking 24 away from 30.",
+     "Forgetting to take the cost away from $30."
     ],
-    "mins": 5,
-    "visual": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 2
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "22"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "20"
-      }
-     ],
-     "sym": 80
-    }
+    "mins": 5
    },
    {
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Each shape is a number. The heart is greater than the triangle. Find the number for each shape.",
+    "text": "Shop A sells 4 pens for $12. Shop B sells 5 pens for $20. Which shop sells 1 pen for less?",
     "parts": [
      {
       "l": "a",
-      "text": "The heart is [].",
-      "ans": "5",
-      "val": 5
+      "text": "At Shop A, 1 pen costs $[].",
+      "ans": "3",
+      "val": 3
      },
      {
       "l": "b",
-      "text": "The triangle is [].",
+      "text": "At Shop B, 1 pen costs $[].",
       "ans": "4",
       "val": 4
+     },
+     {
+      "l": "c",
+      "text": "Circle Shop A or Shop B.",
+      "ans": "Shop A",
+      "val": "Shop A",
+      "choices": [
+       "Shop A",
+       "Shop B"
+      ]
      }
     ],
-    "answer": "heart 5; triangle 4",
+    "answer": "$3; $4; Shop A",
     "val": [
-     5,
-     4
+     3,
+     4,
+     "Shop A"
     ],
-    "hint": "Which two numbers add to 9? Try pairs and multiply each pair.",
-    "solution": "The pairs that add to 9 are 1 and 8, 2 and 7, 3 and 6, 4 and 5. Only 4 and 5 multiply to 20. The heart is greater, so the heart is 5 and the triangle is 4.",
+    "hint": "Find the cost of 1 pen in each shop first.",
+    "solution": "Shop A: $12 shared among 4 pens is $3. Shop B: $20 shared among 5 pens is $4. $3 is less than $4, so Shop A sells 1 pen for less.",
     "mistakes": [
-     "Writing 4 for the heart.",
-     "Using 3 and 6 (they add to 9 but multiply to 18)."
+     "Choosing Shop B because 20 is more.",
+     "Comparing $12 and $20 without finding 1 pen."
     ],
     "mins": 5,
     "visual": {
-     "type": "picture_equation",
+     "type": "table",
      "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "9"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "×",
-       "total": "20"
-      }
+      [
+       "A",
+       {
+        "icon": "pen",
+        "n": 4
+       },
+       "12"
+      ],
+      [
+       "B",
+       {
+        "icon": "pen",
+        "n": 5
+       },
+       "20"
+      ]
      ],
-     "sym": 80
+     "head": [
+      "Shop",
+      "Pens",
+      "Cost in $"
+     ],
+     "col_w": [
+      1,
+      3,
+      1
+     ]
     }
    }
   ],
@@ -2601,18 +2422,19 @@
    "id": "I1",
    "page": 5,
    "tier": "investigation",
-   "title": "One line or two?",
-   "first": "The circle + the triangle = 10. One pair: circle 2, triangle 8. Write 2 more.",
-   "text": "The circle + the circle + the triangle = 14. Do any pairs fit both lines? Why?",
-   "answer": "Only circle 4 and triangle 6 fit both lines. One line alone has many pairs that fit (1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5 and more; accept 5 and 5 for line 1). 5 and 5 fails line 2 (5 + 5 + 5 = 15, not 14). The second line is the same as the first with one more circle, and 14 is 4 more than 10, so the circle is 4.",
+   "title": "Which pack costs less?",
+   "first": "A pack of 2 pens costs $8. How much does 1 pen cost?",
+   "text": "A pack of 5 pens costs $20. Does 1 pen cost less in this pack? Why?",
+   "lines": 4,
+   "answer": "No. In both packs 1 pen costs $4 ($8 shared between 2 pens, and $20 shared among 5 pens), so 1 pen does not cost less in the bigger pack. Finding the price of one lets us compare packs of different sizes.",
    "val": [
     "4",
-    "6"
+    "4"
    ],
-   "look_for": "A child who tries pairs for both lines, finds that only one pair works, or says one line is not enough to find two numbers. Credit any clear reason. Do not mark a child down for stopping at one pair.",
+   "look_for": "A child who finds $3 for both packs, or who says 1 pen costs the same in both. Credit any clear reason. A child who says the bigger pack costs more is right about the total but has not compared one pen.",
    "mistakes": [
-    "Choosing a pair that fits line 1 only, such as 5 and 5 (it makes 15 in line 2).",
-    "Stopping after line 1."
+    "Saying 1 pen costs less in the pack of 5 because it has more pens.",
+    "Comparing $6 and $15 without finding 1 pen."
    ],
    "mins": 8
   }
@@ -2620,112 +2442,100 @@
  "exit": [
   {
    "id": "E1",
-   "text": "Each shape is a number. The triangle + the triangle = 18. Find the number for the triangle.",
+   "text": "3 pencils cost $9. How much does 1 pencil cost?",
    "parts": [
     {
      "l": "",
-     "text": "The triangle is [].",
-     "ans": "9",
-     "val": 9
+     "text": "1 pencil costs $[].",
+     "ans": "3",
+     "val": 3
     }
    ],
-   "answer": "9",
+   "answer": "$3",
    "val": [
-    9
+    3
    ],
-   "solution": "9 + 9 = 18, so each triangle is 9.",
+   "solution": "$9 shared equally among 3 pencils is $3 each.",
    "mistakes": [
-    "Writing 18 (the total).",
-    "Writing 2 (counting the triangles)."
+    "Writing 12 (adding 9 and 3).",
+    "Writing 27 (multiplying)."
    ]
   },
   {
    "id": "E2",
-   "text": "The heart + the square = 13. The square is 5. Find the number for the heart. Choose the correct answer. Write its number in the bracket.",
+   "text": "Each sticker costs $5. How much do 3 stickers cost? Write its number in the bracket.",
    "parts": [],
-   "answer": "(4) 8",
+   "answer": "(2) $15",
    "val": [
-    4
+    2
    ],
-   "solution": "13 - 5 = 8, so the heart is 8. Check: 8 + 5 = 13.",
+   "solution": "Each sticker costs $5, so 3 stickers cost 3 groups of $5, which is $15.",
    "mistakes": [
-    "Choosing (1) 5, the number of the square.",
-    "Choosing (2) 6 or (3) 7 after a counting slip."
+    "Choosing (1) $8 by adding 5 and 3.",
+    "Choosing (3) $2 by taking 3 from 5."
    ],
    "mcq": {
     "options": [
-     "5",
-     "6",
-     "7",
-     "8"
+     "$8",
+     "$15",
+     "$2",
+     "$53"
     ],
     "bracket": true
    }
   },
   {
    "id": "E3",
-   "text": "Each shape is a number. The star is 5. Find the number for each circle.",
+   "text": "5 cakes cost $10. Fill in the blanks.",
    "parts": [
     {
-     "l": "",
-     "text": "Each circle is [].",
-     "ans": "7",
-     "val": 7
+     "l": "a",
+     "text": "1 cake costs $[].",
+     "ans": "2",
+     "val": 2
+    },
+    {
+     "l": "b",
+     "text": "4 cakes cost $[].",
+     "ans": "8",
+     "val": 8
     }
    ],
-   "answer": "7",
+   "answer": "$2; $8",
    "val": [
-    7
+    2,
+    8
    ],
-   "solution": "19 - 5 = 14, so the 2 circles make 14. 7 + 7 = 14, so each circle is 7. Check: 7 + 7 + 5 = 19.",
+   "solution": "$10 shared equally among 5 cakes is $2 each. 4 cakes cost 4 groups of $2, which is $8.",
    "mistakes": [
-    "Writing 14 for each circle.",
-    "Writing 19 for each circle."
-   ],
-   "visual": {
-    "type": "picture_equation",
-    "rows": [
-     {
-      "items": [
-       {
-        "sym": "circle",
-        "n": 2
-       },
-       {
-        "sym": "star",
-        "n": 1
-       }
-      ],
-      "op": "+",
-      "total": "19"
-     }
-    ]
-   }
+    "Writing 10 for 4 cakes.",
+    "Writing 9 (5 + 4)."
+   ]
   }
  ],
  "talk": {
-  "question": "Aisha says: circle + circle = 12, so circle + circle + circle = 18. Is Aisha right? How could we check?",
+  "question": "Aisha says: 3 books cost $12, so 6 books cost $24. Is Aisha right? How could we check?",
   "starter": "I think ... because ...",
-  "answer": "Yes. The same shape is the same number, so each circle is 6 (12 shared between two). Three circles are 6 + 6 + 6 = 18. We can check with counters: 12 on two cards is 6 on each, then add a third card of 6.",
-  "look_for": "A child who finds the circle first, or who uses counters or a picture. Not just yes or no."
+  "answer": "Yes. Find 1 book first: $12 shared equally among 3 books is $4. 6 books cost 6 groups of $4, which is $24. We can also see that 6 books are 2 lots of 3 books, and 2 lots of $12 is $24. We can check with tokens.",
+  "look_for": "A child who finds the cost of 1 book first, or who sees that 6 books are 2 lots of 3 books. Not just yes or no."
  },
  "look_back": {
   "hardest": [
-   "finding the number for one shape",
-   "using two lines",
-   "checking in every line",
+   "sharing to find one",
+   "finding many from one",
+   "using the strip",
    "something else"
   ],
   "helped": [
-   "counters and shape cards",
-   "drawing it",
+   "tokens",
+   "drawing a strip",
    "checking my answer",
    "I was not stuck"
   ],
   "next": [
-   "using counters",
+   "using tokens",
+   "drawing a strip",
    "checking my answer",
-   "drawing it",
    "asking a question"
   ]
  },
@@ -2733,138 +2543,110 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Each shape is a number. The star + the star = 8. Find the number for the star. ___",
-   "answer": "4",
-   "val": 4,
-   "solution": "4 + 4 = 8, so the star is 4."
+   "text": "5 pens cost $10. How much does 1 pen cost? $___",
+   "answer": "$2",
+   "val": 2,
+   "solution": "$10 shared equally among 5 pens is $2 each."
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "A cup hides some counters. The cup and 5 loose counters make 14 counters in all. How many counters are in the cup? ___",
-   "answer": "9",
-   "val": 9,
-   "solution": "14 - 5 = 9, so the cup holds 9 counters."
+   "text": "Each cup costs $3. Fill in the blanks. 6 × 3 = ___ . 6 cups cost $___ (× means groups of)",
+   "answer": "18; $18",
+   "val": [
+    18,
+    18
+   ],
+   "solution": "6 groups of $3: 3 + 3 + 3 + 3 + 3 + 3 = 18."
   },
   {
    "id": "H3",
    "tier": "start",
-   "text": "The heart is 4. What is the heart + the heart + the heart? ___",
-   "answer": "12",
-   "val": 12,
-   "solution": "4 + 4 + 4 = 12."
+   "text": "4 rubbers cost $12. How much do 2 rubbers cost? $___",
+   "answer": "$6",
+   "val": 6,
+   "solution": "$12 shared equally among 4 rubbers is $3 each. 2 rubbers cost 2 groups of $3, which is $6."
   },
   {
    "id": "H4",
    "tier": "think",
-   "text": "Line 1: the circle + the circle + the triangle = 15. Line 2: the circle + the triangle = 9. Find the number for the triangle. ___",
-   "answer": "3",
-   "val": 3,
-   "solution": "Line 1 has one more circle than line 2, and 15 - 9 = 6, so the circle is 6. Then 6 + triangle = 9, so the triangle is 3."
+   "text": "A dozen eggs cost $36. How much do 4 eggs cost? $___",
+   "answer": "$12",
+   "val": 12,
+   "solution": "A dozen is 12 eggs. $36 shared equally among 12 eggs is $3 each. 4 eggs cost 4 groups of $3, which is $12."
   },
   {
    "id": "H5",
    "tier": "go",
-   "text": "Line 1: the circle × the circle = 16. Line 2: the heart + the circle = 9. (× means groups of.) Find the number for the heart. ___",
-   "answer": "5",
-   "val": 5,
-   "solution": "Line 1: 4 × 4 = 16 (4 groups of 4), so the circle is 4. Line 2: heart + 4 = 9, so the heart is 5."
+   "text": "3 mugs cost $12. 2 plates cost $10. Siti buys 1 mug and 1 plate. How much does Siti pay? $___",
+   "answer": "$9",
+   "val": 9,
+   "solution": "1 mug costs $12 shared among 3 mugs, which is $4. 1 plate costs $10 shared between 2 plates, which is $5. 1 mug and 1 plate cost $4 + $5 = $9."
   }
  ],
  "online_practice": {
   "key": "t2l19",
-  "title": "Picture Equations",
-  "topic": "Shapes as hidden numbers",
+  "title": "Find One First",
+  "topic": "Find one, then find many",
   "items": [
    {
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "Each shape is a number. The square is 4. Find the number for the circle.",
-    "answer": 6,
-    "hint": "Take the square away from the total.",
+    "q": "4 pens cost $20. How much does 1 pen cost?",
+    "answer": 5,
+    "hint": "Share the cost equally among the pens.",
     "steps": [
-     "The total is 10.",
-     "10 - 4 = 6.",
-     "The circle is 6."
+     "$20 is shared equally among 4 pens.",
+     "5 + 5 + 5 + 5 = 20.",
+     "1 pen costs $5."
     ],
     "slips": [
      {
       "a": [
-       14
+       24
       ],
-      "say": "14 adds the square to the total. The total is already the circle and the square together."
+      "say": "24 adds the cost and the number of pens. Share the cost equally among the pens."
      }
     ],
     "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{t}"
-      }
-     ],
-     "values": {
-      "square": "{x}"
-     }
+     "type": "objects",
+     "icon": "pen",
+     "n": "{n}",
+     "per_row": 5
     },
     "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "10"
-      }
-     ],
-     "values": {
-      "square": 4
-     }
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 5
     },
     "tpl": {
      "vars": {
-      "x": [
+      "n": [
        2,
        3,
        4,
        5
       ],
-      "y": [
-       6,
-       7,
-       8,
-       9
+      "u": [
+       2,
+       3,
+       4,
+       5,
+       6
       ]
      },
      "derive": {
-      "t": "x+y"
+      "t": "n*u"
      },
-     "q": "Each shape is a number. The square is {x}. Find the number for the circle.",
-     "answer": "y",
-     "hint": "Take the square away from the total.",
+     "q": "{n} pens cost ${t}. How much does 1 pen cost?",
+     "answer": "u",
+     "hint": "Share the cost equally among the pens.",
      "steps": [
-      "The total is {t}.",
-      "{t} - {x} = {ans}.",
-      "The circle is {ans}."
+      "${t} is shared equally among {n} pens.",
+      "{n} groups of ${u} make ${t}.",
+      "1 pen costs ${u}."
      ]
     }
    },
@@ -2872,150 +2654,143 @@
     "id": "c2",
     "tier": "core",
     "type": "number",
-    "q": "Each shape is a number. Find the number for the heart.",
-    "answer": 7,
-    "hint": "Two hearts are the same number. Share the total.",
+    "q": "1 cup costs $3. How much do 4 cups cost?",
+    "answer": 12,
+    "hint": "Count groups of the cost of 1 cup.",
     "steps": [
-     "The 2 hearts make 14.",
-     "7 + 7 = 14.",
-     "The heart is 7."
+     "4 groups of $3.",
+     "3 + 3 + 3 + 3 = 12.",
+     "4 cups cost $12."
     ],
     "slips": [
      {
       "a": [
-       14
+       7
       ],
-      "say": "14 is the total of both hearts. What is one heart?"
+      "say": "7 adds 3 and 4. Count 4 groups of $3."
      }
     ],
     "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "{t}"
-      }
-     ]
+     "type": "objects",
+     "icon": "cup",
+     "n": "{n}",
+     "per_row": 6
     },
     "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "14"
-      }
-     ]
+     "type": "objects",
+     "icon": "cup",
+     "n": 4,
+     "per_row": 6
     },
     "tpl": {
      "vars": {
-      "a": [
+      "n": [
        3,
        4,
        5,
-       6,
-       7,
-       8,
-       9,
-       10
+       6
+      ],
+      "u": [
+       2,
+       3,
+       4,
+       5
       ]
      },
-     "derive": {
-      "t": "a+a"
-     },
-     "q": "Each shape is a number. Find the number for the heart.",
-     "answer": "a",
-     "hint": "Two hearts are the same number. Share the total.",
+     "q": "1 cup costs ${u}. How much do {n} cups cost?",
+     "answer": "n*u",
+     "hint": "Count groups of the cost of 1 cup.",
      "steps": [
-      "The 2 hearts make {t}.",
-      "{a} + {a} = {t}.",
-      "The heart is {ans}."
+      "{n} groups of ${u}.",
+      "{n} × {u} = {ans}.",
+      "{n} cups cost ${ans}."
      ]
     }
    },
    {
     "id": "c3",
     "tier": "core",
-    "type": "number",
-    "q": "Each shape is a number. Find the number for the star.",
-    "answer": 5,
-    "hint": "The 3 stars are the same number. Share the total.",
+    "type": "fields",
+    "q": "3 books cost $15. Look at the strip. Fill in the boxes.",
+    "hint": "Find 1 book first. Then find 2 books.",
     "steps": [
-     "The 3 stars make 15.",
-     "5 + 5 + 5 = 15.",
-     "The star is 5."
+     "$15 shared equally among 3 books is $5.",
+     "2 groups of $5 make $10."
     ],
-    "slips": [
+    "slips": [],
+    "frame": "1 book costs ${u}. 2 books cost ${v}.",
+    "fields": [
      {
-      "a": [
-       3
-      ],
-      "say": "3 is how many stars there are. What number is one star?"
+      "id": "u",
+      "answer": 5
+     },
+     {
+      "id": "v",
+      "answer": 10
      }
     ],
     "fig": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "star",
-         "n": 3
-        }
-       ],
-       "op": "+",
-       "total": "{t}"
+       "name": "{n} books",
+       "len": "{n}"
       }
-     ]
+     ],
+     "units": {
+      "n": "{n}",
+      "text": "?"
+     },
+     "brace": {
+      "text": "${t}",
+      "over": "all"
+     }
     },
     "fig_base": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "star",
-         "n": 3
-        }
-       ],
-       "op": "+",
-       "total": "15"
+       "name": "3 books",
+       "len": 3
       }
-     ]
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$15",
+      "over": "all"
+     }
     },
     "tpl": {
      "vars": {
-      "a": [
+      "n": [
+       3,
+       4,
+       5
+      ],
+      "u": [
        2,
        3,
        4,
-       5,
-       6,
-       7,
-       8
+       5
       ]
      },
      "derive": {
-      "t": "a+a+a"
+      "t": "n*u",
+      "v": "u+u"
      },
-     "q": "Each shape is a number. Find the number for the star.",
-     "answer": "a",
-     "hint": "The 3 stars are the same number. Share the total.",
+     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
+     "frame": "1 book costs ${u}. 2 books cost ${v}.",
+     "answers": {
+      "u": "u",
+      "v": "v"
+     },
+     "hint": "Find 1 book first. Then find 2 books.",
      "steps": [
-      "The 3 stars make {t}.",
-      "{a} + {a} + {a} = {t}.",
-      "The star is {ans}."
+      "${t} shared equally among {n} books is ${u}.",
+      "2 groups of ${u} make ${v}."
      ]
     }
    },
@@ -3023,64 +2798,45 @@
     "id": "c4",
     "tier": "core",
     "type": "choice",
-    "q": "Ben says the square is 6. Is Ben correct?",
+    "q": "4 pens cost $12. Lily says 1 pen costs $4. Is Lily correct?",
     "options": [
      "yes",
      "no"
     ],
     "answer": "no",
-    "hint": "Put Ben's number into the line and add.",
+    "hint": "Put Lily's number back: 4 groups of her number.",
     "steps": [
-     "6 + 6 = 12.",
-     "The line says 14.",
-     "So Ben is not correct."
+     "4 groups of $4 make $16.",
+     "The pens cost $12.",
+     "So Lily is not correct."
     ],
     "slips": [
      {
       "a": [
        "yes"
       ],
-      "say": "Put Ben's number into both squares and add. Is it the total on the line?"
+      "say": "Put Lily's number back: 4 groups of it. Do they make the total?"
      }
     ],
     "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "square",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "{t}"
-      }
-     ]
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 4
     },
     "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "square",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "14"
-      }
-     ]
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 4
     },
     "tpl": {
      "vars": {
-      "a": [
+      "u": [
+       2,
+       3,
        4,
-       5,
-       6,
-       7,
-       8
+       5
       ],
       "k": [
        0,
@@ -3088,20 +2844,19 @@
       ]
      },
      "derive": {
-      "n": "a+k",
-      "t": "a+a",
-      "m": "n+n"
+      "t": "4*u",
+      "c": "u+k"
      },
-     "q": "Ben says the square is {n}. Is Ben correct?",
+     "q": "4 pens cost ${t}. Lily says 1 pen costs ${c}. Is Lily correct?",
      "options": [
       "yes",
       "no"
      ],
      "answer_index": "k",
-     "hint": "Put Ben's number into the line and add.",
+     "hint": "Put Lily's number back: 4 groups of her number.",
      "steps": [
-      "{n} + {n} = {m}.",
-      "The line says {t}.",
+      "4 groups of ${c} make 4 × {c}.",
+      "The pens cost ${t}.",
       "The answer is {ans}."
      ]
     }
@@ -3109,175 +2864,77 @@
    {
     "id": "c5",
     "tier": "core",
-    "type": "fields",
-    "q": "Each shape is a number. The square is 3. Fill in the boxes.",
-    "hint": "Take the square away first.",
-    "steps": [
-     "17 - 3 = 14, so the 2 circles make 14.",
-     "7 + 7 = 14, so each circle is 7."
-    ],
-    "slips": [],
-    "frame": "The 2 circles make {s}. Each circle is {b}.",
-    "fields": [
-     {
-      "id": "s",
-      "answer": 14
-     },
-     {
-      "id": "b",
-      "answer": 7
-     }
-    ],
-    "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{t}"
-      }
-     ],
-     "values": {
-      "square": "{x}"
-     }
-    },
-    "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "square",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "17"
-      }
-     ],
-     "values": {
-      "square": 3
-     }
-    },
-    "tpl": {
-     "vars": {
-      "b": [
-       5,
-       6,
-       7,
-       8
-      ],
-      "x": [
-       2,
-       3,
-       4
-      ]
-     },
-     "derive": {
-      "s": "b+b",
-      "t": "b+b+x"
-     },
-     "q": "Each shape is a number. The square is {x}. Fill in the boxes.",
-     "frame": "The 2 circles make {s}. Each circle is {b}.",
-     "answers": {
-      "s": "s",
-      "b": "b"
-     },
-     "hint": "Take the square away first.",
-     "steps": [
-      "{t} - {x} = {s}.",
-      "{b} + {b} = {s}.",
-      "Each circle is {b}."
-     ]
-    }
-   },
-   {
-    "id": "c6",
-    "tier": "core",
     "type": "number",
-    "q": "Each bag has the same number of sweets. 3 sweets are outside the bags. There are 13 sweets in all. How many sweets are in one bag?",
-    "answer": 5,
-    "hint": "Take the loose sweets away first.",
+    "q": "How many eggs are in a dozen eggs?",
+    "answer": 12,
+    "hint": "A dozen is a special number.",
     "steps": [
-     "13 - 3 = 10 sweets are in the bags.",
-     "5 + 5 = 10.",
-     "Each bag has 5 sweets."
+     "A dozen is 12.",
+     "So a dozen eggs is 12 eggs."
     ],
     "slips": [
      {
       "a": [
        10
       ],
-      "say": "10 is the sweets in both bags. How many in one bag?"
+      "say": "A dozen is 12, not 10."
+     }
+    ]
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "number",
+    "q": "Each book costs $3. Kumar buys 5 books. How much do the 5 books cost?",
+    "answer": 15,
+    "hint": "Each means for one. Count groups.",
+    "steps": [
+     "5 groups of $3.",
+     "3 + 3 + 3 + 3 + 3 = 15.",
+     "The 5 books cost $15."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 adds 3 and 5. Count 5 groups of $3."
      }
     ],
     "fig": {
      "type": "objects",
-     "items": [
-      {
-       "icon": "bag",
-       "n": 2
-      },
-      {
-       "icon": "sweet",
-       "n": "{y}"
-      }
-     ],
-     "per_row": 5
+     "icon": "book",
+     "n": "{n}",
+     "per_row": 6
     },
     "fig_base": {
      "type": "objects",
-     "items": [
-      {
-       "icon": "bag",
-       "n": 2
-      },
-      {
-       "icon": "sweet",
-       "n": 3
-      }
-     ],
-     "per_row": 5
+     "icon": "book",
+     "n": 5,
+     "per_row": 6
     },
     "tpl": {
      "vars": {
-      "b": [
+      "n": [
        3,
        4,
        5,
-       6,
-       7,
-       8
+       6
       ],
-      "y": [
+      "u": [
        2,
-       3
+       3,
+       4,
+       5
       ]
      },
-     "derive": {
-      "t": "b+b+y",
-      "s": "b+b"
-     },
-     "q": "Each bag has the same number of sweets. {y} sweets are outside the bags. There are {t} sweets in all. How many sweets are in one bag?",
-     "answer": "b",
-     "hint": "Take the loose sweets away first.",
+     "q": "Each book costs ${u}. Kumar buys {n} books. How much do the {n} books cost?",
+     "answer": "n*u",
+     "hint": "Each means for one. Count groups.",
      "steps": [
-      "{t} - {y} = {s} sweets are in the 2 bags.",
-      "Share {s} between the 2 bags.",
-      "Each bag has {ans} sweets."
+      "{n} groups of ${u}.",
+      "{n} × {u} = {ans}.",
+      "The {n} books cost ${ans}."
      ]
     }
    },
@@ -3285,120 +2942,91 @@
     "id": "t1",
     "tier": "stretch",
     "type": "fields",
-    "q": "Each shape is a number. Fill in the boxes.",
-    "easier": "c5",
-    "hint": "Line 1 has one more circle than line 2.",
+    "q": "3 books cost $12. Look at the strip. Fill in the boxes.",
+    "easier": "c3",
+    "hint": "Find 1 book first. Then find the cost of many.",
     "steps": [
-     "17 - 12 = 5, so the circle is 5.",
-     "5 + triangle = 12, so the triangle is 7."
+     "$12 shared equally among 3 books is $4.",
+     "7 groups of $4 make $28."
     ],
     "slips": [],
-    "frame": "The circle is {a}. The triangle is {b}.",
+    "frame": "1 book costs ${u}. 7 books cost ${w}.",
     "fields": [
      {
-      "id": "a",
-      "answer": 5
+      "id": "u",
+      "answer": 4
      },
      {
-      "id": "b",
-      "answer": 7
+      "id": "w",
+      "answer": 28
      }
     ],
     "fig": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{u}"
-      },
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{w}"
+       "name": "{n} books",
+       "len": "{n}"
       }
-     ]
+     ],
+     "units": {
+      "n": "{n}",
+      "text": "?"
+     },
+     "brace": {
+      "text": "${t}",
+      "over": "all"
+     }
     },
     "fig_base": {
-     "type": "picture_equation",
-     "rows": [
+     "type": "bar_model",
+     "bars": [
       {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "17"
-      },
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "12"
+       "name": "3 books",
+       "len": 3
       }
-     ]
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
     },
     "tpl": {
      "vars": {
-      "a": [
+      "n": [
        3,
        4,
-       5,
-       6
+       5
       ],
-      "b": [
+      "u": [
+       2,
+       3,
+       4
+      ],
+      "m": [
+       6,
        7,
-       8,
-       9
+       8
       ]
      },
      "derive": {
-      "u": "a+a+b",
-      "w": "a+b"
+      "t": "n*u",
+      "w": "m*u"
      },
-     "q": "Each shape is a number. Fill in the boxes.",
-     "frame": "The circle is {a}. The triangle is {b}.",
+     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
+     "frame": "1 book costs ${u}. {m} books cost ${w}.",
      "answers": {
-      "a": "a",
-      "b": "b"
+      "u": "u",
+      "w": "w"
      },
-     "hint": "Line 1 has one more circle than line 2.",
+     "hint": "Find 1 book first. Then find the cost of many.",
      "steps": [
-      "{u} - {w} = {a}. The circle is {a}.",
-      "{a} + triangle = {w}.",
-      "The triangle is {b}."
+      "${t} shared equally among {n} books is ${u}.",
+      "{m} groups of ${u} make ${w}."
      ]
     }
    },
@@ -3406,337 +3034,124 @@
     "id": "t2",
     "tier": "stretch",
     "type": "number",
-    "q": "Each shape is a number. The circle is 3. Find the number for the heart.",
-    "answer": 4,
-    "easier": "c3",
-    "hint": "How many groups of the circle make the total?",
+    "q": "A dozen buns cost $24. How much do 3 buns cost?",
+    "answer": 6,
+    "easier": "c5",
+    "hint": "A dozen is 12. Find 1 bun first.",
     "steps": [
-     "Heart groups of 3 make 12.",
-     "3, 6, 9, 12 is 4 groups.",
-     "The heart is 4."
+     "12 buns cost $24, so 1 bun costs $2.",
+     "3 groups of $2.",
+     "3 buns cost $6."
     ],
     "slips": [
      {
       "a": [
-       12
+       2
       ],
-      "say": "12 is the total. How many groups of 3 make 12?"
+      "say": "2 is the cost of 1 bun. How much do 3 buns cost?"
      }
     ],
-    "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "×",
-       "total": "{t}"
-      }
-     ],
-     "values": {
-      "circle": "{c}"
-     }
-    },
-    "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "×",
-       "total": "12"
-      }
-     ],
-     "values": {
-      "circle": 3
-     }
-    },
     "tpl": {
      "vars": {
-      "c": [
+      "u": [
+       2,
+       3
+      ],
+      "k": [
        2,
        3,
        4,
        5
-      ],
-      "h": [
-       6,
-       7,
-       8
       ]
      },
      "derive": {
-      "t": "h*c"
+      "t": "12*u"
      },
-     "q": "Each shape is a number. The circle is {c}. Find the number for the heart.",
-     "answer": "h",
-     "hint": "How many groups of the circle make the total?",
+     "q": "A dozen buns cost ${t}. How much do {k} buns cost?",
+     "answer": "u*k",
+     "hint": "A dozen is 12. Find 1 bun first.",
      "steps": [
-      "Heart groups of {c} make {t}.",
-      "Count in {c}s to {t}.",
-      "The heart is {ans}."
+      "12 buns cost ${t}, so 1 bun costs ${u}.",
+      "{k} groups of ${u}.",
+      "{k} buns cost ${ans}."
      ]
     }
    },
    {
     "id": "t3",
     "tier": "stretch",
-    "type": "choice",
-    "q": "Kumar says the circle is 5 and the triangle is 6. Do both lines work?",
-    "easier": "c4",
-    "options": [
-     "yes",
-     "no"
-    ],
-    "answer": "yes",
-    "hint": "Put the numbers into line 1, then into line 2.",
+    "type": "number",
+    "q": "3 pens cost $9. Ben has $12. How many pens can Ben buy?",
+    "answer": 4,
+    "easier": "c1",
+    "hint": "Find 1 pen first. How many groups fit?",
     "steps": [
-     "Line 1: 5 + 6 = 11. The line says 11. It matches.",
-     "Line 2: 5 + 5 + 6 = 16. The line says 16. It matches.",
-     "Both lines work."
+     "$9 shared among 3 pens is $3.",
+     "How many groups of $3 fit in $12?",
+     "Ben can buy 4 pens."
     ],
     "slips": [
      {
       "a": [
-       "no"
+       3
       ],
-      "say": "Put 5 and 6 into line 1, then into line 2. Do both match?"
+      "say": "3 is the number of pens in the story. How many $3 pens can Ben buy with $12?"
      }
     ],
-    "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{s1}"
-      },
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{s2}"
-      }
-     ]
-    },
-    "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 1
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "11"
-      },
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        },
-        {
-         "sym": "triangle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "16"
-      }
-     ]
-    },
     "tpl": {
      "vars": {
-      "a": [
+      "n": [
        3,
        4,
        5
       ],
-      "b": [
-       8,
-       9,
-       10
+      "u": [
+       2,
+       3,
+       4
       ],
-      "k": [
-       0,
-       1
+      "j": [
+       2,
+       3,
+       4,
+       5
       ]
      },
      "derive": {
-      "s1": "a+b",
-      "s2": "a+a+b",
-      "p": "a+k",
-      "q": "b-k",
-      "u": "p+p+q"
+      "t": "n*u",
+      "m": "j*u"
      },
-     "q": "Kumar says the circle is {p} and the triangle is {q}. Do both lines work?",
-     "options": [
-      "yes",
-      "no"
-     ],
-     "answer_index": "k",
-     "hint": "Put the numbers into line 1, then into line 2.",
+     "q": "{n} pens cost ${t}. Ben has ${m}. How many pens can Ben buy?",
+     "answer": "j",
+     "hint": "Find 1 pen first. How many groups fit?",
      "steps": [
-      "Line 1: {p} + {q} = {s1}. The line says {s1}. It matches.",
-      "Line 2: {p} + {p} + {q} = {u}. The line says {s2}.",
-      "The answer is {ans}."
+      "${t} shared among {n} pens is ${u}.",
+      "How many groups of ${u} fit in ${m}?",
+      "Ben can buy {ans} pens."
      ]
     }
    },
    {
     "id": "g1",
     "tier": "challenge",
-    "type": "fields",
-    "q": "Each shape is a number. Fill in the boxes.",
-    "easier": "t1",
-    "hint": "Start with the line that has only one kind of shape.",
+    "type": "number",
+    "q": "2 hats cost $10. 3 scarves cost $18. Jenny buys 1 hat and 2 scarves. How much does Jenny pay?",
+    "answer": 17,
+    "easier": "t2",
+    "hint": "Find the cost of 1 hat and of 1 scarf first.",
     "steps": [
-     "Circle × circle = 25, so the circle is 5.",
-     "Heart + 5 = 12, so the heart is 7.",
-     "Star - 7 = 4, so the star is 11."
+     "1 hat costs $5.",
+     "1 scarf costs $6, so 2 scarves cost $12.",
+     "$5 + $12 = $17."
     ],
-    "slips": [],
-    "frame": "The circle is {a}. The heart is {b}. The star is {c}.",
-    "fields": [
+    "slips": [
      {
-      "id": "a",
-      "answer": 5
-     },
-     {
-      "id": "b",
-      "answer": 7
-     },
-     {
-      "id": "c",
-      "answer": 11
+      "a": [
+       28
+      ],
+      "say": "28 adds the two totals. Find 1 hat and 1 scarf first."
      }
     ],
-    "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        }
-       ],
-       "op": "×",
-       "total": "{p}"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{q}"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "-",
-       "total": "{d}"
-      }
-     ]
-    },
-    "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "circle",
-         "n": 2
-        }
-       ],
-       "op": "×",
-       "total": "25"
-      },
-      {
-       "items": [
-        {
-         "sym": "heart",
-         "n": 1
-        },
-        {
-         "sym": "circle",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "12"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "-",
-       "total": "4"
-      }
-     ]
-    },
     "tpl": {
      "vars": {
       "a": [
@@ -3745,32 +3160,22 @@
        5
       ],
       "b": [
-       6,
-       7,
-       8
-      ],
-      "d": [
+       2,
        3,
        4
       ]
      },
      "derive": {
-      "p": "a*a",
-      "q": "a+b",
-      "c": "b+d"
+      "h": "2*a",
+      "s": "3*b"
      },
-     "q": "Each shape is a number. Fill in the boxes.",
-     "frame": "The circle is {a}. The heart is {b}. The star is {c}.",
-     "answers": {
-      "a": "a",
-      "b": "b",
-      "c": "c"
-     },
-     "hint": "Start with the line that has only one kind of shape.",
+     "q": "2 hats cost ${h}. 3 scarves cost ${s}. Jenny buys 1 hat and 2 scarves. How much does Jenny pay?",
+     "answer": "a+b+b",
+     "hint": "Find the cost of 1 hat and of 1 scarf first.",
      "steps": [
-      "Circle × circle = {p}, so the circle is {a}.",
-      "Heart + {a} = {q}, so the heart is {b}.",
-      "Star - {b} = {d}, so the star is {c}."
+      "1 hat costs ${a}.",
+      "1 scarf costs ${b}, so 2 scarves cost {b}+{b}.",
+      "Jenny pays ${ans}."
      ]
     }
    },
@@ -3778,115 +3183,53 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "Each shape is a number. Find the number for the star.",
+    "q": "6 pens cost $18. Mei has $20. She buys 4 pens. How much money does Mei have left?",
     "answer": 8,
-    "easier": "t1",
-    "hint": "Put the two lines together. How many stars and hearts are there?",
+    "easier": "t3",
+    "hint": "Find 1 pen, then 4 pens, then what is left.",
     "steps": [
-     "Together there are 3 stars and 3 hearts.",
-     "One star and one heart make 14.",
-     "The star is 8."
+     "1 pen costs $3.",
+     "4 pens cost $12.",
+     "$20 - $12 = $8."
     ],
     "slips": [
      {
       "a": [
-       14
+       12
       ],
-      "say": "14 is a star and a heart together. Which part is the star?"
+      "say": "12 is the cost of the 4 pens. How much money is left from $20?"
      }
     ],
-    "fig": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 2
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "{u}"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "{w}"
-      }
-     ]
-    },
-    "fig_base": {
-     "type": "picture_equation",
-     "rows": [
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 2
-        },
-        {
-         "sym": "heart",
-         "n": 1
-        }
-       ],
-       "op": "+",
-       "total": "22"
-      },
-      {
-       "items": [
-        {
-         "sym": "star",
-         "n": 1
-        },
-        {
-         "sym": "heart",
-         "n": 2
-        }
-       ],
-       "op": "+",
-       "total": "20"
-      }
-     ]
-    },
     "tpl": {
      "vars": {
-      "a": [
-       6,
-       7,
-       8,
-       9
-      ],
-      "b": [
+      "u": [
+       2,
        3,
-       4,
-       5
+       4
+      ],
+      "n": [
+       3,
+       6
+      ],
+      "k": [
+       2,
+       4
+      ],
+      "m": [
+       20,
+       30
       ]
      },
      "derive": {
-      "u": "a+a+b",
-      "w": "a+b+b",
-      "p": "a+b"
+      "t": "n*u"
      },
-     "q": "Each shape is a number. Find the number for the star.",
-     "answer": "a",
-     "hint": "Put the two lines together. How many stars and hearts are there?",
+     "q": "{n} pens cost ${t}. Mei has ${m}. She buys {k} pens. How much money does Mei have left?",
+     "answer": "m-k*u",
+     "hint": "Find 1 pen, then {k} pens, then what is left.",
      "steps": [
-      "The 2 lines together have 3 stars and 3 hearts.",
-      "One star and one heart make {p}.",
-      "{u} - {p} = {ans}. The star is {ans}."
+      "1 pen costs ${u}.",
+      "{k} pens cost {k} × {u}.",
+      "${m} take away the cost is ${ans}."
      ]
     }
    },
@@ -3894,13 +3237,13 @@
     "id": "g3",
     "tier": "challenge",
     "type": "selfcheck",
-    "q": "Make your own picture equation. Choose a number for the circle and a different number for the triangle. Write two lines for a grown-up to solve. Many answers are right.",
-    "hint": "Start with the numbers, then write the totals.",
+    "q": "Make your own shop puzzle. Choose a price for 1 pen and a number of pens. Write how much the pens cost in all, and ask a grown-up to find the price of 1 pen. Many answers are right.",
+    "hint": "Start with the price of 1 pen, then multiply.",
     "steps": [
-     "Choose the circle and a different number for the triangle.",
-     "Write circle + triangle = a total.",
-     "Write circle + circle + triangle = another total.",
-     "Ask a grown-up to find your numbers."
+     "Choose the price of 1 pen.",
+     "Choose how many pens.",
+     "Write how much they cost in all.",
+     "Ask a grown-up to find 1 pen."
     ],
     "slips": [],
     "easier": "c1"
@@ -3917,132 +3260,133 @@
   "menu": [
    {
     "id": "M1",
-    "title": "Can a shape change?",
+    "title": "Does 1 cost more if we buy more?",
     "minutes": 4,
-    "tutor": "Ali says: the heart is 5 in line 1 and 6 in line 2, and both lines are fine. Is that allowed? Test it with counters: put the same heart card into both lines.",
-    "rec": "Recording: pause. Ali says the heart is 5 in one line and 6 in another. Is that allowed? Test it with counters.",
-    "answer": "No. The same shape is the same number in every line. If the heart is 5 in line 1 it must be 5 in line 2 too. If the numbers do not fit, one of them is wrong, so check again."
+    "tutor": "Mei says: 2 pens cost $6, so 1 pen costs $3. At 4 pens for $12, 1 pen costs $6. Is Mei right? Test it with tokens.",
+    "rec": "Recording: pause. Mei says 1 pen costs $3 for 2 pens at $6, but $6 for 4 pens at $12. Is she right?",
+    "answer": "No. $12 shared equally among 4 pens is $3 each, the same as before. 1 pen costs the same when each pen costs the same, so we say such pens or each."
    },
    {
     "id": "M2",
-    "title": "Make a puzzle for your grown-up",
+    "title": "Make a shop puzzle for your grown-up",
     "minutes": 4,
-    "tutor": "Pick a number for the circle and a different number for the star. Write two lines, such as circle + star = a total and circle + circle + star = a total. Ask your grown-up to find your numbers.",
-    "rec": "Recording: pause. Pick two numbers. Write two lines for a grown-up to solve, then check their answer.",
-    "answer": "No single answer. Check the totals: with circle 4 and star 6, line 1 is 10 and line 2 is 14. The grown-up takes one line from the other."
+    "tutor": "Choose a price for 1 pen and a number of pens. Write how much they cost in all. Ask your grown-up to find the price of 1 pen, then check with tokens.",
+    "rec": "Recording: pause. Choose a price for 1 pen. Write the total for some pens. Ask a grown-up to find the price of 1.",
+    "answer": "No single answer. Check by sharing: with 4 pens at $5 each the total is $20, and $20 shared among 4 pens is $5."
    },
    {
     "id": "M3",
     "title": "Teach it back",
     "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never met a picture equation. Use a cup and counters to show how a shape can hide a number.",
-    "rec": "Recording: pause. Show a grown-up how a cup can hide a number and how to find it.",
-    "answer": "A cup and 4 loose counters make 9 in all. Count out 9, take the 4 away, and the rest is what the cup holds: 5."
+    "tutor": "Pretend your grown-up or a toy has never found the price of one. Use tokens to show how 3 books cost $12, so 1 book costs $4.",
+    "rec": "Recording: pause. Show a grown-up how to share 12 tokens among 3 books to find the cost of 1 book.",
+    "answer": "12 tokens shared equally among 3 books is 4 tokens each, so 1 book costs $4."
    }
   ]
  },
  "parent": {
-  "summary": "We met picture equations: a shape is a hidden number, and the same shape is always the same number. We found hidden numbers with counters, checked them, and took one line from another to find two shapes. One hidden number in a line, like 4 + box = 10, is Primary 1 work; using one shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. We use shapes, never letters.",
+  "summary": "We found the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\"), then the cost of many, with tokens and a strip. We met the words each, a dozen and such. Money is whole dollars only. Sharing within 20 and multiplying within 40 is Primary 1 work; chaining the steps, a dozen, such and how many can be bought go past the Primary 1 syllabus on purpose.",
   "words": [
-   "shape: a hidden number",
-   "line: one picture equation",
-   "check: put the number back into the line",
-   "take one line from another: find the extra shape",
-   "×: groups of (4 × 4 is 4 groups of 4)"
+   "each: for one",
+   "a dozen: 12",
+   "such: of the same kind",
+   "find one first: share the total equally to find the price of 1",
+   "×: groups of (6 × 3 is 6 groups of 3)"
   ],
   "try_home": [
-   "Hidden cup: put 5 counters in a cup, add 4 loose ones, and say the total is 9. How many are in the cup?",
-   "Two cups: put the same number of counters in two cups and say the total is 12. How many in each cup?",
-   "Your turn to hide: your child hides counters in a cup and tells you the total. Can you find the number?"
+   "Shop: put 3 small things on the table and a price of $6 for the three. Ask your child to find the price of 1, then of 2, using tokens.",
+   "A dozen: look for a dozen of something (12 spoons, 12 buttons). Ask: if a dozen costs $24, how much does 1 cost?",
+   "Check it: ask your child to put the price of 1 back into the story. 4 pens at $3 each: do they make $12?"
   ],
   "ask": [
-   "What does the shape hide?",
-   "How can you check your number in the line?"
+   "What do we find first?",
+   "How do you know your answer is right?"
   ],
-  "when_stuck": "Let your child use counters and two cups, and wait 10 seconds before helping. Asking ‘what is the total?’ works better than giving the answer. Please do not teach a rule or letters: counters and a cup are enough. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Term 2 Lesson 10: Find One First, with Mi's Chal\u00adlenge Quest (one picture-equation question: if your child missed this lesson, do workbook pages 1 and 2 first). Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
-  "quote": "A shape is a hidden number, and the same shape is always the same number.",
-  "report_line": "Your child is learning that a shape can stand for a hidden number and that the same shape is always the same number. This week: finding one shape, then two shapes from two lines.",
-  "term_line": "This term: strips and stories so far; now picture equations; next, prices and Mi's Challenge Quest.",
+  "when_stuck": "Let your child share tokens or counters one at a time, and wait 10 seconds before helping. Asking ‘how many do we want?’ works better than giving the answer. Please do not teach a rule or the division sign: tokens and ‘share equally’ are enough. Money is whole dollars only. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Term 2 Lesson 10: Choose Your Tool, with Mi's Chal­lenge Quest (keep the Quest Log closed until your tutor says). Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
+  "quote": "Find one, then find many.",
+  "report_line": "Your child is learning to find the cost of one by sharing equally, and then the cost of many. This week: pens, buns and books in whole dollars.",
+  "term_line": "This term: strips, odd and even, groups, tables, sharing and stories so far; now prices and finding one first; next, Choose Your Tool and Mi's Challenge Quest.",
   "next_materials": [
-   "Your Term 2 Lesson 10 workbook, with its $1 tokens page (cut out 30 tokens)",
-   "3 to 6 small things for a shop",
+   "Your Term 2 Lesson 10 workbook, with its tool cards page cut out (6 tool cards and 6 problem cards)",
+   "Keep the $1 tokens from this lesson: they are needed again in Term 3 Lesson 4, Dollars and Change",
    "The Quest Log (3 pages, printed at 100%), kept closed in its envelope; a quest partner"
   ]
  },
  "safeguarding": [
-  "Counters, cups and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Cups stay on the table so that nothing is spilled.",
+  "Tokens, counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Money is whole dollars only: no real money, notes or coins are needed.",
   "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
   "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
   "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
   "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Counting aloud is quiet; a child may stay seated.",
-  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children.",
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check that each shape in a puzzle is a different number (T1: 6 and 7; T2: 6 and 9; T3: 3 and 5; G1: 5, 7 and 11; G2: 8 and 6; G3: 5 and 4) so you can answer a child who asks.",
-  "Tell parents a week before: use the workbook pages and both kit pages from the printed term book (send a PDF only if a page is missing, to print at 100%) (a grown-up cuts out the 20 counters and the 15 shape cards: three each of circle, square, triangle, heart and star), and find about 30 counters or buttons and two cups. Keep the cards in an envelope. Small things stay away from mouths and younger children. Next lesson is Mi's Challenge Quest: with this lesson's materials, send the Quest Log (in a closed envelope) and the grown-up note.",
-  "Have the slides open. Have your own shape cards, a cup and counters to show on camera if you wish.",
+  "Solve every workbook question yourself first. Money is whole dollars only; do not bring notes or coins into the lesson. Next lesson holds Mi's Challenge Quest: read the Quest tutor notes (L20_Quest_Tutor_Notes.pdf) before then.",
+  "A week before the next lesson, send the families the grown-up note (L20_Quest_Parent_Note.pdf), the Quest Log (L20_Quest_Log.pdf, 3 pages, print at 100%) and the materials for Term 2 Lesson 10: the workbook with its tool cards kit page (a grown-up cuts out the 6 tool cards and 6 problem cards) and a closed envelope for the Quest Log. A family with no printer tells you: arrange the make-up slot.",
+  "For this lesson: the workbook with the tokens kit page (a grown-up cuts out the 30 tokens), 3 to 6 small shop items, a pencil and spare paper. Remind families to keep the $1 tokens: Term 3 Lesson 4 uses them.",
+  "Have the slides open. Have a few shop items and some tokens to show on camera if you wish.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
-  "Be plain with families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and the times line are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Never use letters for unknowns; shapes and boxes only. The counters are the method, not a rule to recite.",
-  "Slides s-explore3, s-m2 and s-m3 keep the method off the screen while you ask: the steps appear on the slide after. Read every question with its totals and the four options of E2 aloud: the figures on the slides are small."
+  "Be plain with families: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the steps with different numbers, a dozen, such and how many can be bought go beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Use the words shared equally, not a division sign. The tokens and the strip are the method, not a rule to recite."
  ],
  "workbook": {
-  "header": "Reasoning about equality: picture equations",
-  "hint_p1": "Each shape is a number. Use counters. Check your answer in the line.",
-  "hint_p2": "The same shape is always the same number. In our puzzles, different shapes are different numbers.",
-  "hint_p3": "Use counters or draw. Check your answer in every line. × means groups of. Choose any question.",
-  "hint_p4": "× means groups of. Choose any question. You do not have to finish them all.",
-  "choice_after": 4,
+  "header": "Division and money: find one first",
+  "hint_p1": "A token is $1. Share the tokens to find 1. Count groups to find many.",
+  "hint_p2": "Find 1 first. Then find many. Each means for one.",
+  "hint_p3": "Use tokens or draw a strip. Find 1 first. A dozen is 12. Such cups are cups the same. Choose any question.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",
   "inv_then_label": "Next:",
-  "home_hint": "Use counters and a cup. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "home_hint": "Use tokens or counters. Small things stay on the table, away from mouths and little brothers and sisters.",
   "kits": [
    {
-    "type": "ten_frame",
-    "width": 100,
-    "title": "Kit page: ten-frames and counters",
-    "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Red counters can hide in a cup; yellow counters can be the loose ones. The ten-frames stay on the page."
-   },
-   {
-    "type": "shapes",
-    "size": 96,
-    "shapes": [
-     {
-      "kind": "circle",
-      "color": "#FFE08A",
-      "n": 3
-     },
-     {
-      "kind": "square",
-      "color": "#BFE3F5",
-      "n": 3
-     },
-     {
-      "kind": "triangle",
-      "color": "#C8E6B0",
-      "n": 3
-     },
-     {
-      "kind": "heart",
-      "color": "#F7B6C2",
-      "n": 3
-     },
-     {
-      "kind": "star",
-      "color": "#FFD27A",
-      "n": 3
-     }
+    "type": "cards",
+    "labels": [
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1"
     ],
+    "cols": 6,
+    "w": 90,
+    "h": 90,
+    "round": true,
     "width": 100,
-    "title": "Kit page: shape cards",
-    "intro": "A grown-up cuts out the 15 shapes before the lesson: three each of circle, square, triangle, heart and star. Each shape is drawn, so a child matches pictures, not words. A shape is big enough to hold 3 counters. Keep the shapes in an envelope."
+    "title": "Kit page: $1 tokens",
+    "intro": "A grown-up cuts out the 30 round tokens before the lesson (the lesson needs at most 28). A token stands for one dollar. Whole dollars only: there are no coins or notes in this lesson. Keep the tokens in an envelope."
    }
   ]
  },
- "contest_where": "Think harder, Go further and the Investigation",
  "limits": {
-  "max_parent_words": 120
+  "max_parent_words": 110
  }
 }

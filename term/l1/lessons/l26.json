@@ -1057,12 +1057,12 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Fill the Grid",
-      "Have ready: the 16 grid tiles, cut out by a grown-up. A coloured pencil is optional."
+      "Calendar Detective",
+      "Have ready: the calendar page, torn out along the dashed line, with the 7 day cards cut out by a grown-up. The month page is not cut."
      ]
     }
    ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs the grid-tile page cut out by a grown-up (16 tiles), and that the price tags and the play money stay in their envelope for the Quest. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs the calendar page torn out and its 7 day cards cut out by a grown-up (the month page is not cut), and that the price tags and the play money stay in their envelope for Mi's Challenge Quest in the last lesson of the term. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
    "mascot": {
     "size": "l",
     "say": "Great thinking today!"
@@ -1753,7 +1753,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Fill the Grid. Please have the sixteen grid tiles cut out by a grown-up. A coloured pencil is optional. Keep your price tags and play money in their envelope. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Calendar Detective. Please have the calendar page torn out, with the seven day cards cut out by a grown-up. Keep your price tags and play money in their envelope for Mi's Challenge Quest. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -2645,14 +2645,13 @@
    "Is the money enough?"
   ],
   "when_stuck": "Let your child use the tags and play money and wait 10 seconds before helping. Asking 'What partner does this price need?' works better than giving the answer. Please do not teach a rule; going in order is the method. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Fill the Grid. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. Please keep the link private.",
+  "next": "Next lesson: Calendar Detective. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. Please keep the link private.",
   "quote": "Go in order, so that no way is missed. The same things in a different order are the same way.",
   "report_line": "Your child is learning to plan within a budget and to list every way in order. This week: two items for an exact amount, total and change, and listing every way to pay $12.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
   "next_materials": [
-   "16 grid tiles: the last page of your Lesson 27 workbook, cut out by a grown-up",
-   "Your price tags and play money, kept in their envelope for the Quest",
-   "A coloured pencil is optional",
+   "Your Term 3 book: the calendar page torn out along the dashed line, with its 7 day cards cut out by a grown-up (the month page is not cut)",
+   "Your price tags and play money, kept in their envelope for Mi's Challenge Quest",
    "Pencil, rubber and paper"
   ]
  },
@@ -2667,7 +2666,7 @@
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first. Check the answers: S1 $3 and $7; S2 $15; S3 $6; S4 No and $2; S5 $21; S6 8, 9, 17; T1 10, X, 3 and 2 ways; T2 No, 2 five-dollar and 3 two-dollar notes; T3 $15 and $35; T4 True, True, False, False; G1 six ways; G2 5 stickers and 2 pads; I1 $1 and $3.",
-  "Tell parents a week before: no new cutting this lesson. The price tags and the play money from the two lessons before must be in their envelope (a way that needs more than five $2 notes is written, not laid out). The next lesson needs the 16 grid tiles cut out.",
+  "Tell parents a week before: no new cutting this lesson. The price tags and the play money from the two lessons before must be in their envelope (a way that needs more than five $2 notes is written, not laid out). The next lesson, Calendar Detective, needs the calendar page torn out and its 7 day cards cut out by a grown-up (the month page is not cut).",
   "Have the slides open. Have your own tags and notes to show on camera if you wish. Practise the clap-and-stamp break.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
   "Be plain with families: which two items cost exactly an amount, the total, the change and equal items are Primary 1 work; listing every way to make an amount and paying with three kinds of note are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. Whole dollars only. There is no $20 note: a $20 payment is two ten-dollar notes.",

@@ -304,7 +304,7 @@ def run(d):
     for r in kc.values(): eq(r['supplied'] >= r['max_used'], True, 'kit contract ' + r['piece'])
     eq((kc['mistake cards']['supplied'], kc['mistake cards']['max_used']), (8, 8), 'the cards: 8 supplied, 8 used')
     nm = ' '.join(d['parent']['next_materials']).lower()
-    eq(all(w in nm for w in ('quest log', 'quest partner', 'calendar', '7 day cards')), True, 'hand-off to Lesson 30 names the Quest Log, a quest partner, the calendar page and 7 day cards')
+    eq(all(w in nm for w in ('quest log', 'quest partner', 'tool-card page', '7 tool cards')), True, 'hand-off to Lesson 30 names the Quest Log, a quest partner, the tool-card page and 7 tool cards')
     prev = os.path.join(L1, 'lessons', 'l28.json')
     if os.path.exists(prev):
         p28 = json.load(open(prev, encoding='utf-8'))
@@ -314,5 +314,5 @@ def run(d):
     if os.path.exists(nxt):
         p30 = json.load(open(nxt, encoding='utf-8'))
         mk = ' '.join(p30['materials']['child']).lower()
-        eq(('quest log' in mk and 'day cards' in mk), True, 'Lesson 30 materials match the hand-off')
+        eq(('quest log' in mk and 'tool cards' in mk and 'quest partner' in mk), True, 'Lesson 30 materials match the hand-off')
     return n

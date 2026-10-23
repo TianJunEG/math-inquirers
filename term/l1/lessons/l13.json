@@ -5,60 +5,65 @@
  "term": 2,
  "lesson": 13,
  "lesson_in_term": 3,
- "title": "Doubles and Near Doubles",
- "big_idea": "Double, then adjust by one",
- "child_idea": "A double is two of the same number added. If two numbers are next to each other, use a double and then add 1 or take away 1.",
- "skill": "Strategy choice",
+ "title": "Picture Equations",
+ "big_idea": "A shape is a hidden number, and the same shape is always the same number",
+ "child_idea": "In a picture equation each shape is a number. The same shape is always the same number. We find the number, then check it in every line.",
+ "skill": "Reasoning about equality",
  "ages": "6-8",
  "moe": {
-  "strand": "Addition and Subtraction",
+  "strand": "Addition and Subtraction; Multiplication and Division (reasoning about equality)",
   "topics": [
-   "Mental addition within 20 using doubles (1 + 1 to 10 + 10)",
-   "Adding tens numbers within 100 (30 + 30)",
-   "Near doubles as a mental strategy (7 + 8 is double 7 and 1 more)",
-   "Adding more than two numbers (Go further only)"
+   "Doubles within 20 and a double with 1 more, e.g. 7 + 8 as double 7 and 1 (Primary 1, Addition and Subtraction, p. 31)",
+   "A number sentence with a missing number and \"=\" as the same amount on both sides (Primary 1, Addition and Subtraction, p. 31)",
+   "Multiplication within 40 (Primary 1, Multiplication and Division, p. 31)",
+   "A symbol that stands for an unknown number, and taking one line from another (letters for unknowns are Primary 6, p. 43)"
   ],
-  "note": "Strand label for the tutor only. The plan marked this lesson as a new topic for an owner or tutor syllabus check. A desk check against docs/moe/syllabus_by_level.md (23 Oct 2026) finds doubles within 20 inside the Primary 1 addition range; the owner may still confirm. Doubles to 10 + 10, tens doubles (30 + 30) and 'a double and 1 more' sit within the school Primary 1 idea of adding within 20 and 100. Beyond Primary 1 on purpose and only at Go further: doubling a two-digit number that is not a tens number (double 35, which needs renaming) and adding five numbers that are almost the same. Say this plainly to families. Do not describe the lesson as MOE-aligned or syllabus-aligned. Every Start here item is reached with ten-frames, dominoes or tens bars and counters after Explore."
+  "note": "Strand label for the tutor only. BEYOND PRIMARY 1 ON PURPOSE. One line with one hidden number (like 4 + box = 10) is Primary 1 work and fills Start here. Using the same shape in two lines, taking one line away from another, checking an answer in every line and a times line are not taught at school at this age (letters for unknowns are Primary 6, p. 43): this lesson uses drawn shapes and boxes only, never letters, always with counters or cups to hold the numbers. Think harder (two shapes, two lines) and Go further (three shapes, a times line, a sum and a product) go past the school Primary 1 syllabus. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order for a times line: heart × circle is heart groups of circle; either order is accepted. Two Start here items (Q3 part b and Q6) come from the retired Doubles and Near Doubles lesson: doubles within 20 and a double with 1 more are inside the school Primary 1 addition range (desk check against docs/moe/syllabus_by_level.md, 23 Oct 2026; the owner may still confirm). Contest tag (tutor only): symbol equations and substitution; taking one line from another."
  },
  "contest_moves": [
-  "double and adjust by one (near doubles)",
-  "find the middle number of several almost-equal numbers"
+  "a symbol stands for one number in every line",
+  "take one line from another to find a shape",
+  "check the answer in every line",
+  "a sum and a product together"
  ],
  "objectives": [
-  "Say and write the double of any number from 1 to 10 (4 + 4 = 8, double 7 is 14) using counters, ten-frames or a domino, and the double of a tens number (3 tens and 3 tens make 6 tens).",
-  "Add two numbers that are next to each other (7 + 8, 8 + 9) by using a double and then 1 more or 1 less, and say why the answer is 1 away from the double.",
-  "Choose which double to use for a near double (7 + 8 is double 7 and 1 more, or double 8 and 1 less) and spot when two numbers are not next to each other.",
-  "Go further: add numbers that are almost the same (8 + 9 + 8 + 7 + 8) by thinking of the number in the middle."
+  "Say that a shape in a picture equation is a hidden number, and that the same shape is the same number in every line.",
+  "Find one hidden number in a line such as circle + square = 10 when the square is known, and in a line such as heart + heart = 14.",
+  "Check an answer by putting the number back into the line.",
+  "Think harder: use two lines about the same shapes (take one line from the other) and check the answer in both lines.",
+  "Go further: a times line, three shapes at once, and a sum and a product together."
  ],
  "joining_cold": {
   "remember": [
-   "How many more make 10 on a ten-frame, shown with fingers (7 needs 3)",
-   "Tens add: 3 tens and 3 tens make 6 tens (counted with tens bars)",
-   "Same amount on both sides: 5 + 3 = 4 + 4 (move 1 counter from one plate to the other)"
+   "A box in a number sentence hides a number: 6 + box = 10 (Term 1, taught again with a ten-frame)",
+   "The same number twice, and one more: box + box = 12, and 7 + 8 is 1 more than 7 + 7 (taught again with two equal plates)",
+   "4 groups of 5 as 4 × 5 (shown with a picture; Term 2 Lesson 5 teaches it in full)"
   ],
-  "assumes": "Only counting to 20 and ten ones making a ten. Nothing from an earlier lesson is needed: the warm-up builds a ten-frame, tens bars and two plates with counters, and the double idea itself is taught in Explore with objects.",
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up shows the ten-frame, two equal plates and four bags with a picture, and the × sign is said as groups of. The word shape stands for a number is taught in Explore.",
   "holiday_topics_revisited": [
    "Number bonds to 10 (Number Bond Inquiry)"
   ],
   "safe_to_miss": true,
-  "note": "Term 2 Lesson 3 is fairly safe to miss: it stands alone after the warm-up. A child who misses it watches the recording and does workbook pages 1 and 2 before Term 2 Lesson 4. Doubles help later (Term 2 Lesson 6 uses the 2 table), but nothing in Term 2 Lessons 4 or 5 needs them."
+  "note": "Fairly safe to miss, with one exception: Mi's Challenge Quest in Term 2 Lesson 10 (Choose Your Tool) has one picture-equation gate (a heart + heart total and a friend's number to check). A child who misses this lesson watches the recording and does workbook pages 1 and 2 before the quest. The times lines are in Think harder and Go further only, and the warm-up shows groups of and the times sign, so a child who has not yet met Term 2 Lesson 5 can follow."
  },
  "materials": {
   "child": [
-   "The printed workbook and the kit page (page 6), with the 20 counters (10 red, 10 yellow) cut out by a grown-up beforehand",
-   "If no printer is available: about 20 small things of two kinds (for example 10 buttons and 10 coins)",
-   "A pencil, a rubber and spare paper",
-   "Optional: a clean empty egg carton (a double of 6) and a set of dominoes"
+   "The printed workbook with the ten-frames and counters kit page (page 6) and the shape cards kit page (page 7): a grown-up cuts out the 20 counters and the 15 shape cards beforehand",
+   "About 30 small things of one kind (counters, buttons, dry beans or pasta) in case more counters are needed",
+   "2 small cups, mugs or bowls",
+   "The 15 shape cards from page 7 (three each of circle, square, triangle, heart and star). With no printer, draw the shapes on 15 small pieces of paper, or use up to 3 pieces of paper for each shape",
+   "A pencil, a rubber and spare paper"
   ],
   "tutor": [
-   "A slide deck and a paper copy of the kit page with red and yellow counters to show on camera if you wish",
+   "The slide deck",
+   "A set of paper shape cards (three each of circle, square, triangle, heart and star), a cup and some counters to show on camera if you wish",
    "A visible clock"
   ],
   "kit_pages": [
-   "Four ten-frames and 20 counters (10 red, 10 yellow), printed on page 6 of the workbook. The counters are cut out before the lesson. This lesson uses up to 10 red and 10 yellow counters at a time"
+   "Ten-frames and counters (page 6): 20 counters to cut out, 10 red and 10 yellow, and four ten-frames to lay counters on. Shape cards (page 7): 15 drawn shapes, three each of circle, square, triangle, heart and star, each big enough to hold 3 counters"
   ],
   "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. Cups stay on the table."
  },
  "timing": {
   "parts": [
@@ -84,88 +89,99 @@
     "id": "explore",
     "title": "Explore",
     "start": 12,
-    "end": 27
+    "end": 24
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 27,
-    "end": 39
+    "start": 24,
+    "end": 36
    },
    {
     "id": "break",
     "title": "Brain break",
-    "start": 39,
-    "end": 43
+    "start": 36,
+    "end": 40
    },
    {
     "id": "work",
     "title": "Workbook",
-    "start": 43,
-    "end": 71
+    "start": 40,
+    "end": 70
    },
    {
     "id": "talk",
     "title": "Talk time",
-    "start": 71,
-    "end": 77
+    "start": 70,
+    "end": 76
    },
    {
     "id": "exit",
     "title": "Exit ticket",
-    "start": 77,
-    "end": 83
+    "start": 76,
+    "end": 82
    },
    {
     "id": "look",
     "title": "Look-back",
-    "start": 83,
-    "end": 86
+    "start": 82,
+    "end": 85
    },
    {
     "id": "flex",
     "title": "Flex time and goodbye",
-    "start": 86,
+    "start": 85,
     "end": 90
    }
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 15 minutes because the lesson is hands-on and the mini-lesson has 12 because it carries three worked examples (near doubles, next to each other, almost the same). The last 4 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes: a shape and a pile of counters, the same shape twice, then two lines about the same shapes. The mini-lesson has 12 because it states the three rules, finds a shape, takes one line from another, checks in both lines and shows one times line. The workbook has 30 minutes because Start here takes a middle child about 15 minutes: pages 3 to 5 are mostly for choice and for home. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
   "skip_order": [
-   "Start with: drop the Mini-lesson slide 'Almost the same' (only Go further needs it)",
-   "Then: shorten Explore round 3 to one build (7 + 8)",
-   "Then: shorten the Mini-lesson check slide to two questions",
+   "Start with: cut the times line slide (s-m4) in the Mini-lesson to one question",
+   "Then: shorten Explore round 3 to the circle only",
    "Then: take the extra minutes from the flex time"
   ]
  },
  "sneak_peek": {
-  "q1": "Mei puts 4 red counters in one frame and 4 yellow counters in another frame. How many counters are there altogether? You may draw to help.",
-  "q2": "Ben knows that 6 + 6 = 12. He says that 6 + 7 is 1 more than 12. Is Ben right? Circle Yes or No. Then write or draw how you know.",
-  "a1": "8",
-  "a2": "Yes. 6 + 7 is 6 + 6 with one more counter, so 12 + 1 = 13.",
-  "val1": 8
+  "q1": "A cup hides some counters. The cup and 4 loose counters make 9 counters in all. How many counters are in the cup?",
+  "q2": "Each shape is a number. The star + the star = 14. The heart + the star = 10. Find the number for the heart. Write it.",
+  "a1": "5",
+  "a2": "3. The two stars make 14, so one star is 7. The heart and 7 make 10, so the heart is 3.",
+  "val1": 5
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your kit page and counters. Pause or rewind any time.",
-   "action": "Gather your workbook, pencil, paper, kit pieces and small things. Press play when ready."
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, shape cards, counters and two cups. Pause or rewind any time.",
+   "action": "Gather your workbook, shape cards, counters, two cups, pencil and paper. Press play when ready."
   },
   "remember": {
-   "say": "Recording: join in! Show your answers on your fingers before I say them. Pause if you need longer.",
-   "action": "Play along. Show each answer on your fingers before the video does."
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
   },
   "sneak": {
    "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
    "action": "Pause. Try both puzzles on your own paper. A guess is fine."
   },
+  "explore": {
+   "say": "Recording: pause now. Use counters and your shape cards to find each hidden number. Press play when you have tried.",
+   "action": "Pause. Put counters on the shape cards to find each hidden number, then check it."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
   "break": {
-   "say": "Recording: stand up and join in! Stomp and clap each double with me.",
-   "action": "Stand up. Stomp the number on each foot and say the double."
+   "say": "Recording: stand up and join in! Count to 20, clap on 5, 10, 15 and 20, and whisper the rest.",
+   "action": "Stand up. Clap on 5, 10, 15 and 20 and whisper the numbers in between."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
   },
   "talk": {
-   "say": "Recording: pause. Tell a grown-up who is right, and show them with counters.",
-   "action": "Pause. Explain your answer to someone at home, with counters and a reason."
+   "say": "Recording: pause. Tell a grown-up if Aisha is right, and test it with counters.",
+   "action": "Pause. Explain your answer to someone at home, and test it with counters."
   },
   "exit": {
    "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
@@ -178,772 +194,25 @@
   "flex": {
    "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
    "action": "Show a grown-up your workbook and tell them one thing you found out."
-  },
-  "explore": {
-   "say": "Recording: pause now. Build the doubles with red and yellow counters, then try one more and one less. Press play when you have tried.",
-   "action": "Pause. Build each double with red and yellow counters. Then add 1 more and take 1 away. Say each total."
-  },
-  "mini": {
-   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
-   "action": "Watch and copy the examples. Rewind any step you missed."
-  },
-  "work": {
-   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
-   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
   }
- },
- "script": {
-  "segments": [
-   {
-    "part": "opening",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-title",
-      "s": 15
-     },
-     {
-      "k": "DO",
-      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
-      "s": 12
-     },
-     {
-      "k": "SAY",
-      "text": "Hello, inquirers! Pencil ready, and your counters, the kit page and your workbook on the table. Cameras can be on or off, as you like."
-     },
-     {
-      "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
-     },
-     {
-      "k": "DO",
-      "text": "Start the recording now. Do not use children's first names on the recording.",
-      "s": 5
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
-     },
-     {
-      "k": "SAY",
-      "text": "Today we learn about doubles: two of the same number. Then we use a double to add numbers that are next to each other."
-     },
-     {
-      "k": "NOTE",
-      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
-     },
-     {
-      "k": "NOTE",
-      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
-     }
-    ]
-   },
-   {
-    "part": "remember",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-rem1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Fingers and a ten-frame. A ten-frame has ten spaces. I say how many counters are in the frame. You show me, on your fingers, how many more fill it up."
-     },
-     {
-      "k": "ASK",
-      "text": "Seven counters. How many more to make ten?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Four counters. How many more to make ten?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Nine counters. How many more?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Six counters. How many more?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rem2"
-     },
-     {
-      "k": "SAY",
-      "text": "Now tens. A tens bar is a ten. Three tens and three tens. Count the bars, then say the number."
-     },
-     {
-      "k": "ASK",
-      "text": "Three tens and three tens. How many tens, and what is the number?",
-      "resp": 14
-     },
-     {
-      "k": "ASK",
-      "text": "Two tens and two tens. What number?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Four tens and four tens. What number?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rem3"
-     },
-     {
-      "k": "SAY",
-      "text": "Last one. Two plates. Move one counter from the left plate to the right plate. Nothing is added and nothing is lost, so both sides stay equal. Five and three is the same as four and four."
-     },
-     {
-      "k": "ASK",
-      "text": "Six and two is the same as five and what?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Seven and one is the same as six and what?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Five and three is the same as four and what?",
-      "resp": 12
-     },
-     {
-      "k": "STUCK",
-      "text": "If a child hesitates on how many more make ten, count the empty spaces in the ten-frame slowly with them. For tens, show the bars on the slide and count them in tens: ten, twenty, thirty. For the plates, move a counter on screen or on the child's own kit and count each side again."
-     },
-     {
-      "k": "NOTE",
-      "text": "Answers: 3, 6, 1, 4 (and 2 if you ask eight), then 6 tens (60), 40, 80, then 3, 2, 4. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20 and ten ones making a ten; the pictures do the rest."
-     }
-    ]
-   },
-   {
-    "part": "sneak",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-sneak"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
-     },
-     {
-      "k": "READ",
-      "text": "Puzzle one. Mei puts 4 red counters in one frame and 4 yellow counters in another frame. How many counters are there altogether? You may draw to help."
-     },
-     {
-      "k": "WORK",
-      "text": "Children count the counters and write the number on their own paper.",
-      "s": 40
-     },
-     {
-      "k": "READ",
-      "text": "Puzzle two. Ben knows that 6 plus 6 is 12. He says that 6 plus 7 is 1 more than 12. Is Ben right? Circle Yes or No. Then write or draw how you know."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write or draw their answer.",
-      "s": 55
-     },
-     {
-      "k": "SAY",
-      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
-     },
-     {
-      "k": "NOTE",
-      "text": "Puzzle 1 answer: 8 counters. Puzzle 2 answer: yes; 6 + 7 is the double 6 + 6 with one more counter, so 13. Look for good ideas to praise later (a child who said it is the same and one more). Do not write scores or keep a list."
-     }
-    ]
-   },
-   {
-    "part": "explore",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-explore1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Today your hands are the teachers. Put the ten-frame page in front of you. Take red counters and yellow counters. Put 3 red counters in one frame and 3 yellow counters in the next frame."
-     },
-     {
-      "k": "ASK",
-      "text": "How many counters altogether?",
-      "resp": 14
-     },
-     {
-      "k": "SAY",
-      "text": "Two of the same number. We call that a double. Double 3 is 6. Say it with me: three and three is six."
-     },
-     {
-      "k": "SAY",
-      "text": "Now build double 4. Four red, four yellow."
-     },
-     {
-      "k": "WORK",
-      "text": "Children build 4 red and 4 yellow and count 8.",
-      "s": 35
-     },
-     {
-      "k": "ASK",
-      "text": "What is double 4?",
-      "resp": 10
-     },
-     {
-      "k": "SAY",
-      "text": "Double 5."
-     },
-     {
-      "k": "WORK",
-      "text": "Children build 5 red and 5 yellow: one frame is full.",
-      "s": 35
-     },
-     {
-      "k": "ASK",
-      "text": "What is double 5? What do you notice about the red frame?",
-      "resp": 20
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore2"
-     },
-     {
-      "k": "SAY",
-      "text": "Round two. Bigger doubles. Fill the first frame with red counters. Put the same number of yellow counters in the other frame. Then fill the first frame up to ten and say what is left."
-     },
-     {
-      "k": "WORK",
-      "text": "Build double 6: 6 red, 6 yellow. Move 4 yellow into the first frame: ten and 2.",
-      "s": 45
-     },
-     {
-      "k": "ASK",
-      "text": "Double 6 is ten and what?",
-      "resp": 10
-     },
-     {
-      "k": "WORK",
-      "text": "Build double 7: ten and 4.",
-      "s": 45
-     },
-     {
-      "k": "ASK",
-      "text": "Double 7 is ten and what? What is the number?",
-      "resp": 12
-     },
-     {
-      "k": "WORK",
-      "text": "Build double 8: ten and 6.",
-      "s": 40
-     },
-     {
-      "k": "WORK",
-      "text": "Build double 9: ten and 8.",
-      "s": 30
-     },
-     {
-      "k": "ASK",
-      "text": "Double 8 and double 9. What are the numbers?",
-      "resp": 15
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore3"
-     },
-     {
-      "k": "SAY",
-      "text": "Round three. Build double 7 again: seven red, seven yellow. Now put one more yellow counter in the yellow frame."
-     },
-     {
-      "k": "WORK",
-      "text": "Children add 1 yellow counter: 7 red and 8 yellow.",
-      "s": 25
-     },
-     {
-      "k": "ASK",
-      "text": "Seven and eight. How many now? How do you know?",
-      "resp": 20
-     },
-     {
-      "k": "SAY",
-      "text": "Now take two yellow counters away from the yellow frame. That leaves six yellow."
-     },
-     {
-      "k": "WORK",
-      "text": "Children take away 2 yellow counters: 7 red and 6 yellow.",
-      "s": 25
-     },
-     {
-      "k": "ASK",
-      "text": "Seven and six. How many? Is that more or less than double 7?",
-      "resp": 20
-     },
-     {
-      "k": "SAY",
-      "text": "Your turn. Eight red and nine yellow."
-     },
-     {
-      "k": "WORK",
-      "text": "Children build 8 and 9 (double 8, then 1 more): 17.",
-      "s": 40
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore4"
-     },
-     {
-      "k": "ASK",
-      "text": "What did you notice? What happens to the total when the yellow counters go up by 1? What happens when they go down by 1?",
-      "resp": 45
-     },
-     {
-      "k": "SAY",
-      "text": "A double is easy to know. If the numbers are next to each other, find the double, then move one. That is the whole trick."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who adds all the counters again by counting from 1: ask them to start from the red frame, which they already know is a double, and add on one yellow counter. A child who has few counters: use two kinds of small things from the table, or kit squares and pencil dots."
-     },
-     {
-      "k": "NOTE",
-      "text": "Main room only: no breakout rooms. Children say their totals aloud; you cannot see builds on small tiles. Answers: double 3 is 6, double 4 is 8, double 5 is 10; double 6 is 12 (10 and 2), double 7 is 14 (10 and 4), double 8 is 16, double 9 is 18; 7 + 8 is 15, 7 + 6 is 13, 8 + 9 is 17. Say the word double once as a name and use it the same way every time. Do not teach 'near double' as a rule yet: let children say it."
-     }
-    ]
-   },
-   {
-    "part": "mini",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-m1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Look at the doubles we built. Double 1 is 2, double 2 is 4. The doubles go up by 2 each time. Read them with me up to double 10, which is 20."
-     },
-     {
-      "k": "ASK",
-      "text": "Which doubles do you already know without counting?",
-      "resp": 20
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m2"
-     },
-     {
-      "k": "SAY",
-      "text": "Doubles with tens. Three tens and three tens make six tens. Thirty and thirty is sixty. A double of a tens number works the same way."
-     },
-     {
-      "k": "ASK",
-      "text": "Double 2 tens? Double 4 tens? What are the numbers?",
-      "resp": 20
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3"
-     },
-     {
-      "k": "SAY",
-      "text": "Now seven and eight. The numbers are next to each other. Look at the red frame. It is a double."
-     },
-     {
-      "k": "ASK",
-      "text": "What is double 7? Then what is 7 plus 8?",
-      "resp": 25
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3b"
-     },
-     {
-      "k": "SAY",
-      "text": "Two ways to see seven and eight. Use double 7 and add 1: the ringed counter. Or use double 8 and take 1 away: the dashed counter. Look at both pictures. How could we check the answer a different way?"
-     },
-     {
-      "k": "ASK",
-      "text": "Which double would you choose? Does the answer change?",
-      "resp": 25
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3c"
-     },
-     {
-      "k": "SAY",
-      "text": "Not every sum is a near double. Look at the two numbers. Are they next to each other? Count from the smaller number to the larger one: is it one step?"
-     },
-     {
-      "k": "ASK",
-      "text": "Six and seven. Are they next to each other?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Five and eight. Are they next to each other? How many steps from 5 to 8?",
-      "resp": 18
-     },
-     {
-      "k": "ASK",
-      "text": "Nine and ten?",
-      "resp": 10
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m4"
-     },
-     {
-      "k": "READ",
-      "text": "Your turn. Add. Six plus seven. Eight plus nine. Four plus five. Nine plus ten."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write four answers.",
-      "s": 50
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m4a"
-     },
-     {
-      "k": "READ",
-      "text": "Thirteen, seventeen, nine, nineteen. Tick your own answers with a tick."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m5"
-     },
-     {
-      "k": "SAY",
-      "text": "One more trick. Eight, nine and seven are almost the same. The nine is one more than eight. The seven is one less than eight. They make up for each other, so it is like three eights."
-     },
-     {
-      "k": "ASK",
-      "text": "What is three eights? Which number is in the middle?",
-      "resp": 25
-     },
-     {
-      "k": "NOTE",
-      "text": "Key words to use every time: double, one more, one less, next to each other. A double is two of the same number. A near double is two numbers that are next to each other. Do not say double and add 2: that is a different sum. Do not teach written column addition. Do not teach halving."
-     },
-     {
-      "k": "STUCK",
-      "text": "If a child gets 7 + 8 = 16, ask: which double did you use, and how many more or fewer is the second number? Count the extra yellow counter on the ten-frame picture. If a child adds 1 when they should take 1 away (8 + 9 from double 9), ask which number is the larger one."
-     }
-    ]
-   },
-   {
-    "part": "break",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-break"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Stand up and get a sip of water. I say a number. You stomp that many times with your left foot and the same with your right foot, then you say the double."
-     },
-     {
-      "k": "WORK",
-      "text": "Call 2, 3, 4, 5, 6. Children stomp (or tap, in a small space) both feet and say the double aloud together.",
-      "s": 150
-     }
-    ]
-   },
-   {
-    "part": "work",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-ws1"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "READ",
-      "text": "Page 1, Start here. Question 1: look at the dominoes and fill in the missing numbers. Question 2: Mei has 6 red counters and 6 yellow counters. Fill in the missing numbers. Question 3: fill in the double of 2, 5, 7 and 9."
-     },
-     {
-      "k": "WORK",
-      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 400
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws1ans"
-     },
-     {
-      "k": "READ",
-      "text": "Question 1: six, eight, ten. Question 2: twelve, twelve. Question 3: four, ten, fourteen, eighteen. Tick your own answers with a tick."
-     },
-     {
-      "k": "SAY",
-      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2"
-     },
-     {
-      "k": "READ",
-      "text": "Page 2. Question 4: look at the bars and fill in the missing numbers. Question 5: Ali has 8 stickers and Ben has 8 stickers. How many stickers do they have altogether? Question 6: tick True or False for each statement."
-     },
-     {
-      "k": "WORK",
-      "text": "Page 2, questions 4 to 6.",
-      "s": 420
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2ans"
-     },
-     {
-      "k": "READ",
-      "text": "Question 4: six, sixty, eighty. Question 5: eight plus eight is sixteen; they have sixteen stickers. Question 6: true, false, true, true."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-choice"
-     },
-     {
-      "k": "SAY",
-      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
-     },
-     {
-      "k": "MOVE",
-      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
-      "s": 30
-     },
-     {
-      "k": "WORK",
-      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 300
-     },
-     {
-      "k": "STUCK",
-      "text": "Q1: count the dots on one half, then the other half. Q2: count the red counters, then the yellow counters; the two frames match. Q3: use the kit counters: build the double. Q4: count the bars on one side, then say how many tens in all. Q5: draw 8 and 8, or use counters. Q6: build each double and check."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
-     },
-     {
-      "k": "NOTE",
-      "text": "Think harder is for near doubles, which are new in this setting. Go further is mastery and extension; it goes past the school Primary 1 range on purpose (doubling 35, adding five numbers). Do not announce who is on which page. Slow class: the workbook part needs about 31 minutes against 28, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
-     }
-    ]
-   },
-   {
-    "part": "talk",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-talk"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "READ",
-      "text": "Mei adds 7 plus 8. She says it is 1 more than double 7. Ali says it is 1 less than double 8. Is Mei right? Is Ali right? Use counters to show."
-     },
-     {
-      "k": "WORK",
-      "text": "Build double 7 and double 8 on your frames. What happens when you move one?",
-      "s": 50
-     },
-     {
-      "k": "WORK",
-      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-      "s": 50
-     },
-     {
-      "k": "ASK",
-      "text": "Who would like to share? Volunteers first. A pass is always fine.",
-      "resp": 80
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-sneakans"
-     },
-     {
-      "k": "SAY",
-      "text": "Remember puzzle two? Six and six is twelve. Six and seven has one more counter, so it is thirteen. Yes, Ben is right."
-     },
-     {
-      "k": "ASK",
-      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
-      "resp": 15
-     },
-     {
-      "k": "NOTE",
-      "text": "Model answer: both are right. Double 7 is 14 and 1 more is 15. Double 8 is 16 and 1 less is 15. Both give 15. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
-     }
-    ]
-   },
-   {
-    "part": "exit",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-exit"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
-     },
-     {
-      "k": "READ",
-      "text": "E1. Fill in the missing number. Double 9 is what? E2. Double 30 is what? E3. Add. 9 plus 8.",
-      "s": 30
-     },
-     {
-      "k": "WORK",
-      "text": "Children answer E1 to E3 on their own.",
-      "s": 210
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-exitans"
-     },
-     {
-      "k": "READ",
-      "text": "Eighteen. Sixty. Seventeen."
-     },
-     {
-      "k": "SAY",
-      "text": "Tick your own ticket with a tick. Well done. Put a tick by each one you got right."
-     },
-     {
-      "k": "NOTE",
-      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
-     }
-    ]
-   },
-   {
-    "part": "look",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-look"
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
-     },
-     {
-      "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
-     }
-    ]
-   },
-   {
-    "part": "flex",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-end"
-     },
-     {
-      "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Odd plus Odd. Please have your Term 2 Lesson 4 workbook with the kit page of number cards cut out, 20 counters or small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-opt",
-      "optional": true
-     },
-     {
-      "k": "SAY",
-      "text": "Optional, only if you are on time: Mei says double 9 is the same as 10 and 8. Can you see why? Build it with your counters.",
-      "optional": true
-     },
-     {
-      "k": "WORK",
-      "text": "Short think time, then take two answers.",
-      "s": 90,
-      "optional": true
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-menu",
-      "optional": true
-     },
-     {
-      "k": "SAY",
-      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
-      "optional": true
-     },
-     {
-      "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: double 9 is 18; move 1 counter from one 9 to the other: 10 and 8. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
-     }
-    ]
-   }
-  ]
  },
  "slides": [
   {
    "id": "s-title",
    "part": "opening",
    "kind": "title",
-   "title": "Doubles",
+   "title": "Picture Equations",
    "blocks": [
     {
      "t": "card",
      "head": "TODAY WE WILL",
      "items": [
-      "Find doubles, then use them to add."
+      "Find the number a shape is hiding."
      ]
     }
    ],
-   "note": "Term 2 Lesson 3, 90 minutes. Objective: know the doubles to 10 + 10 and double a tens number, then add numbers that are next to each other (7 + 8) with a double and 1 more or 1 less. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
-   "subtitle": "Doubles and Near Doubles: double, then adjust",
+   "note": "Term 2 Lesson 3, 90 minutes. Objective: find a hidden number behind a shape in a picture equation, know that the same shape is always the same number, check the answer in every line, and take one line away from another. Plain statement for families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. Shapes and boxes only, never letters. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "A shape hides a number",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -953,124 +222,145 @@
    "id": "s-rem1",
    "part": "remember",
    "kind": "light",
-   "title": "Warm-up: fill the ten-frame",
+   "title": "Warm-up: a box hides a number",
    "blocks": [
     {
      "t": "chip",
-     "text": "Show it on your fingers"
+     "text": "Touch the counters. Say the number in the box."
     },
     {
      "t": "visual",
      "type": "ten_frame",
-     "filled": 7,
-     "extra": 0
+     "filled": 6
     },
     {
-     "t": "p",
-     "text": "A ten-frame has 10 spaces. How many more counters make 10?"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      7,
-      4,
-      9,
-      6,
-      8
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       "6",
+       "+",
+       "[]",
+       "=",
+       "10"
+      ],
+      [
+       "[]",
+       "+",
+       "3",
+       "=",
+       "8"
+      ],
+      [
+       "9",
+       "=",
+       "5",
+       "+",
+       "[]"
+      ]
+     ],
+     "col_w": [
+      1,
+      1,
+      1,
+      1,
+      1
      ]
     }
    ],
-   "note": "A ten-frame has ten spaces. Count the empty spaces to see how many more make ten. Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 6 needs 4, 8 needs 2. Hands up on camera is fine. No writing, no marks. A child who is new can count the empty spaces in the picture.",
+   "note": "Six counters sit in a ten-frame that holds ten. The box hides how many more fill it. Ask: how many more fill the frame (4); the box in the second line (5); the box in the third line (4). Children answer aloud or with fingers. No writing, no marks. A child who is unsure touches each counter, counts the empty places (children may lay counters on a ten-frame of the kit page), or holds up fingers for the first number and counts on.",
    "mascot": {
     "size": "s",
-    "say": "Fingers ready? Let us go!"
+    "say": "A box can hide a number!"
    }
   },
   {
    "id": "s-rem2",
    "part": "remember",
    "kind": "light",
-   "title": "Tens and tens",
+   "title": "The same number twice",
    "blocks": [
     {
      "t": "visual",
-     "type": "bundles",
-     "tens": 3,
-     "ones": 0,
-     "style": "kit",
-     "label": "3 tens"
+     "type": "groups",
+     "container": "plate",
+     "n": 2,
+     "each": 6,
+     "icon": "counter_yellow",
+     "per_row": 2
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       "[]",
+       "+",
+       "[]",
+       "=",
+       "12"
+      ]
+     ],
+     "col_w": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
     },
     {
      "t": "p",
-     "text": "3 tens and 3 tens make ___ tens. That is the number ___."
+     "text": "Two plates with the same number of counters."
     },
     {
-     "t": "numrow",
-     "items": [
-      "3 tens + 3 tens",
-      "2 tens + 2 tens",
-      "4 tens + 4 tens"
-     ]
+     "t": "p",
+     "text": "Mei: 7 + 8 is 1 more than 7 + 7."
     }
    ],
-   "note": "A tens bar is a ten. Three bars and three more bars make six bars: sixty. Ask each pair: three tens and three tens (6 tens, 60), two tens and two tens (4 tens, 40), four tens and four tens (8 tens, 80). Say the tens word slowly. A child who has not met tens only needs to hear and say the number words; show the bars on the slide and count them in tens."
+   "note": "Two plates with the same number of counters. Twelve counters in all. Ask: what is 5 + 5 (10); box + box = 8, the same number twice (4); 7 + 7 (14). Then Mei says 7 + 8 is 1 more than 7 + 7: what is 7 + 8 (15)? A child may put one more counter on a plate. Children answer aloud. A child who is unsure deals counters one at a time onto two plates, or uses fingers on two hands. The same number twice is a double: it comes back with the hearts in Explore."
   },
   {
    "id": "s-rem3",
    "part": "remember",
    "kind": "light",
-   "title": "The same on both sides",
+   "title": "4 groups of 5",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
+     "t": "visual",
+     "type": "groups",
+     "container": "bag",
+     "n": 4,
+     "each": 5,
+     "icon": "counter_red",
+     "per_row": 4
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
       [
-       {
-        "t": "visual",
-        "type": "plates",
-        "left": 5,
-        "right": 3,
-        "labels": [
-         "LEFT",
-         "RIGHT"
-        ]
-       },
-       {
-        "t": "p",
-        "text": "5 + 3"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "plates",
-        "left": 4,
-        "right": 4,
-        "labels": [
-         "LEFT",
-         "RIGHT"
-        ]
-       },
-       {
-        "t": "p",
-        "text": "4 + 4"
-       }
+       "4",
+       "×",
+       "5",
+       "=",
+       "[]"
       ]
+     ],
+     "col_w": [
+      1,
+      1,
+      1,
+      1,
+      1
      ]
     },
     {
      "t": "p",
-     "text": "Move 1 counter across. The total stays the same."
-    },
-    {
-     "t": "numrow",
-     "items": [
-      "6 + 2 = 5 + ___",
-      "7 + 1 = 6 + ___"
-     ]
+     "text": "4 × 5 means 4 groups of 5."
     }
    ],
-   "note": "Two plates. Moving one counter from the left plate to the right plate does not change how many counters there are, so 5 + 3 and 4 + 4 are the same total. Ask: 6 + 2 = 5 + 3 (the missing number is 3), 7 + 1 = 6 + 2 (2), then 5 + 3 = 4 + 4 (4). This is the equals-means-the-same idea that near doubles use. Show the plates picture if a child is unsure."
+   "note": "Four bags with five counters in each bag. We add one bag at a time: 5, 10, 15, 20. Ask: how many counters in 4 bags of 5 (20); 3 groups of 4 (12); 2 groups of 10 (20). The × sign says groups of; Term 2 Lesson 5 teaches it in full. A child who is unsure counts the counters one bag at a time, saying the total each time."
   },
   {
    "id": "s-sneak",
@@ -1090,21 +380,9 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "Mei puts 4 red counters in one frame and 4 yellow counters in another frame.",
-         "How many counters are there altogether?",
-         "You may draw to help."
-        ]
-       },
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         4,
-         0
-        ],
-        "extra": [
-         0,
-         4
+         "A cup hides some counters.",
+         "The cup and 4 loose counters make 9 in all.",
+         "How many counters are in the cup?"
         ]
        }
       ],
@@ -1113,488 +391,466 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "Ben knows that 6 + 6 = 12.",
-         "He says that 6 + 7 is 1 more than 12.",
-         "Is Ben right? Circle Yes or No. Then write or draw how you know."
+         "Each shape is a number.",
+         "How many is the heart?"
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "picture_equation",
+        "rows": [
+         {
+          "items": [
+           {
+            "sym": "star",
+            "n": 2
+           }
+          ],
+          "op": "+",
+          "total": "14"
+         },
+         {
+          "items": [
+           {
+            "sym": "heart",
+            "n": 1
+           },
+           {
+            "sym": "star",
+            "n": 1
+           }
+          ],
+          "op": "+",
+          "total": "10"
+         }
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Puzzle 1 (8 counters, 4 red and 4 yellow in two ten-frames) is an access question: any child can try it by counting or drawing. Puzzle 2 is a thinking question on the lesson's key idea: one more counter makes one more in the total. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat. Answers: 8; yes (6 + 7 is 6 + 6 and one more, so 13). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 (a cup and 4 counters make 9; the cup holds 5) is an access question: any child can count out 9 and take 4 away. Puzzle 2 is a thinking question on the lesson idea: two stars make 14, so a star is 7, and the heart and a star make 10, so the heart is 3. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 5; 3. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: build a double",
+   "title": "Explore: a shape and a pile",
    "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "10"
+      }
+     ],
+     "values": {
+      "square": "4",
+      "circle": "[]"
+     }
+    },
     {
      "t": "list",
      "ordered": true,
      "items": [
-      "Lay the ten-frame page in front of you.",
-      "Put 3 red counters in one frame.",
-      "Put 3 yellow counters in the other frame.",
-      "How many altogether? Then try 4 and 4, and 5 and 5."
+      "Count out 10 counters.",
+      "Put 4 on the square card.",
+      "The rest go on the circle card. How many?"
      ]
-    },
-    {
-     "t": "visual",
-     "type": "ten_frame",
-     "filled": [
-      3,
-      0
-     ],
-     "extra": [
-      0,
-      3
-     ]
-    },
-    {
-     "t": "chip",
-     "text": "Two of the same number is a double."
     }
    ],
-   "note": "Round 1, about 4 minutes. Objects first, no writing. Children put 3 red counters in one frame and 3 yellow counters in the other, then count 6. Name the idea once: two of the same number is a double, so double 3 is 6. Then double 4 (8) and double 5 (10; the red frame is full). A child without the kit page uses two kinds of small things on a drawn ten-frame, or kit squares and pencil dots."
+   "note": "Round 1, about 5 minutes. Children use their shape cards (the cut-out kit cards: circle, square, triangle, heart and star, up to three of each) and counters (the kit page counters or small things). The picture says circle + square = 10, and the square is 4. They count out 10 counters, put 4 on the square card and the rest on the circle card, then count the circle card (6). Say: the circle is 6. Write circle = 6 on the screen, then check: 6 + 4 = 10. If a family has no cut-out cards, a cup or a piece of paper with the shape drawn on it works. Answer: 6. Do not name a child with a wrong answer."
   },
   {
    "id": "s-explore2",
    "part": "explore",
    "kind": "light",
-   "title": "Bigger doubles",
+   "title": "The same shape twice",
    "blocks": [
     {
-     "t": "p",
-     "text": "Build double 6, 7, 8 and 9. Fill the first frame up to ten. How many are left?"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      "6 + 6",
-      "7 + 7",
-      "8 + 8",
-      "9 + 9"
-     ]
-    },
-    {
      "t": "visual",
-     "type": "ten_frame",
-     "filled": [
-      7,
-      3
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      }
      ],
-     "extra": [
-      0,
-      4
-     ],
-     "reveal": true
+     "values": {
+      "heart": "[]"
+     }
     },
     {
-     "t": "chip",
-     "text": "I move ..., so it is ten and ..."
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Count out 12 counters.",
+      "Share them onto 2 heart cards, one at a time.",
+      "The piles must match. How many on one heart?"
+     ]
     }
    ],
-   "note": "Round 2, about 4 minutes, main room. Each child builds the double with red and yellow counters, then moves yellow counters into the first frame until it is full. The picture shows double 7: the first frame has 7 red and 3 yellow, and 4 yellow are left, so ten and 4. Answers: double 6 is 12 (ten and 2), double 7 is 14 (ten and 4), double 8 is 16 (ten and 6), double 9 is 18 (ten and 8). This links to making a ten. Do not name children. The picture of the answer is on the next slide, shown after the children have said it."
+   "note": "Round 2, about 5 minutes. Heart + heart = 12. Both hearts are the same number, so the piles must match. Children deal 12 counters one at a time onto two heart cards. Ask: how many counters are on one heart card (6). Say: both hearts are 6, because the same shape is always the same number. Then check: put the piles together and count (12). Answer: 6. A child who deals unevenly is asked: are the piles the same?"
   },
   {
    "id": "s-explore3",
    "part": "explore",
    "kind": "light",
-   "title": "One more, one less",
+   "title": "Two lines, same shapes",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         7,
-         0
-        ],
-        "extra": [
-         0,
-         7
-        ]
-       },
-       {
-        "t": "p",
-        "text": "Double 7"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         7,
-         0
-        ],
-        "extra": [
-         0,
-         8
-        ]
-       },
-       {
-        "t": "p",
-        "text": "1 more yellow counter"
-       }
-      ]
-     ]
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "6"
+      },
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "9"
+      }
+     ],
+     "values": {
+      "circle": "[]",
+      "triangle": "[]"
+     }
     },
-    {
-     "t": "p",
-     "text": "Build 7 + 8, then 7 + 6. Then build 8 + 9."
-    }
-   ],
-   "note": "Round 3, about 5 minutes. Children build double 7, add one yellow counter (7 + 8 = 15), then take two yellow away (7 + 6 = 13) so they see it is one less than the double. Then they build 8 + 9: double 8 is 16 and one more is 17. Ask: is it more or less than the double? How do you know? Children count the extra counter, not the whole frame again."
-  },
-  {
-   "id": "s-explore4",
-   "part": "explore",
-   "kind": "light",
-   "title": "What did we notice?",
-   "blocks": [
     {
      "t": "list",
      "ordered": false,
      "items": [
-      "What is double 7? What is 7 + 8?",
-      "What happens when the yellow counters go up by 1?",
-      "What happens when they go down by 1?"
-     ]
+      "Line 1 tells you the circle.",
+      "The circle is the same number in line 2."
+     ],
+     "reveal": true
     }
    ],
-   "note": "Take one or two answers from volunteers. Key ideas: a double is two of the same number; when one number goes up by 1, the total goes up by 1; when it goes down by 1, the total goes down by 1; so for numbers that are next to each other, find the double and move one. Repeat a child's answer in your own words so the recording picks it up."
+   "note": "Round 3, about 4 minutes. Two lines: circle + circle = 6 and circle + triangle = 9. Children use the first line to find the circle (3), then the same circle in the second line to find the triangle (6). They may use counters: 6 on two circle cards, then 9 on one circle card and one triangle card. Ask: what number is the circle (3), the triangle (6). Say: the circle is 3 in both lines. The two lines on the slide are shown first; the two sentences about the circle appear after the children have tried (the next slide). Answers: circle 3, triangle 6. A child who gets a different circle in line 2 is asked: is it the same shape? The numbers are not the sneak-peek numbers: do not tell the sneak-peek answers here."
   },
   {
    "id": "s-m1",
    "part": "mini",
    "kind": "light",
-   "title": "Doubles to 10 + 10",
+   "title": "Three rules",
    "blocks": [
     {
-     "t": "table",
-     "header": true,
-     "rows": [
-      [
-       "Double",
-       "Number sentence",
-       "Total"
-      ],
-      [
-       "Double 1",
-       "1 + 1",
-       "2"
-      ],
-      [
-       "Double 2",
-       "2 + 2",
-       "4"
-      ],
-      [
-       "Double 3",
-       "3 + 3",
-       "6"
-      ],
-      [
-       "Double 4",
-       "4 + 4",
-       "8"
-      ],
-      [
-       "Double 5",
-       "5 + 5",
-       "10"
-      ]
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Each shape is a number.",
+      "The same shape is the same number every time.",
+      "In our puzzles, different shapes are different numbers."
      ]
-    },
-    {
-     "t": "chip",
-     "text": "Double 6 to 10: 12, 14, 16, 18, 20"
     }
    ],
-   "note": "A summary of what children built. Read the table with them: double 1 is 2, double 2 is 4, double 3 is 6, double 4 is 8, double 5 is 10, and then 12, 14, 16, 18, 20 for double 6 to 10. The totals go up by 2 each time. Ask which doubles they already know without counting; most children know 5 + 5 and 3 + 3. Take volunteers' answers and repeat them for the recording."
+   "note": "Say the three rules once, slowly. Rule 3 is a rule of our puzzles only (in other maths two shapes can be the same number), so that each puzzle has one answer. Ask: can a circle be 6 in one line and 4 in another line of the same puzzle (no, rule 2). Children answer with a thumb. Never use letters; the shapes are the unknown numbers."
   },
   {
    "id": "s-m2",
    "part": "mini",
    "kind": "light",
-   "title": "Double a tens number",
+   "title": "Find it, then check it",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 3,
-        "ones": 0,
-        "style": "kit"
-       },
-       {
-        "t": "p",
-        "text": "3 tens"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 3,
-        "ones": 0,
-        "style": "kit"
-       },
-       {
-        "t": "p",
-        "text": "3 tens"
-       }
-      ]
-     ]
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "16"
+      }
+     ],
+     "values": {
+      "square": "4"
+     }
     },
     {
-     "t": "say",
-     "text": "3 tens + 3 tens = 6 tens. 30 + 30 = 60"
+     "t": "card",
+     "head": "STEPS",
+     "items": [
+      "Take the square away from the total.",
+      "Share what is left between the 2 equal circles.",
+      "Check: put the number back into the line."
+     ],
+     "reveal": true
     }
    ],
-   "note": "Double 3 is 6, so double 3 tens is 6 tens: 30 + 30 = 60. A double of a tens number works the same way as the double of a one-digit number. Ask: double 2 tens (40) and double 4 tens (80). Say the tens word slowly: forty, eighty. Beyond this slide, doubling numbers like 35 is for Go further only."
+   "note": "Circle + circle + square = 16 and the square is 4. Take the square away: 16 - 4 = 12 for the two circles. The two circles are equal, so each is 6. Check by putting 6 back into the line: 6 + 6 + 4 = 16. The steps card appears after the questions (next slide); children say each number first. Ask: what is left for the two circles (12); what is one circle (6). Always end with the check."
   },
   {
    "id": "s-m3",
    "part": "mini",
    "kind": "light",
-   "title": "A near double: 7 + 8",
+   "title": "Take one line from another",
    "blocks": [
     {
      "t": "visual",
-     "type": "ten_frame",
-     "filled": [
-      7,
-      0
-     ],
-     "extra": [
-      0,
-      8
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "17"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      }
      ]
     },
     {
-     "t": "p",
-     "text": "The numbers are next to each other: 7 and 8."
-    },
-    {
-     "t": "say",
-     "text": "7 + 8 = 7 + 7 + 1 = 14 + 1 = 15",
+     "t": "card",
+     "head": "STEPS",
+     "items": [
+      "Line 1 has one more star than line 2.",
+      "The totals show how much that extra star is.",
+      "Then put the star into line 2 to find the triangle."
+     ],
      "reveal": true
     }
    ],
-   "note": "Seven and eight are next to each other. Find the double: double 7 is 14. The yellow frame has one more counter, so add 1: 14 + 1 = 15. Note that 7 + 8 is not a double itself: the numbers are different. We call a sum like this a near double. Answer: 15. Ask first (what is double 7, and so what is 7 + 8?); the working line comes on the answer slide."
+   "note": "Two lines about the same shapes: star + star + triangle = 17 and star + triangle = 12. Line 1 has one more star than line 2, and 17 is 5 more than 12, so one star is 5. Then star + triangle = 12, so 5 + triangle = 12 and the triangle is 7. Ask: how much more is 17 than 12 (5); what is the triangle (7). The steps appear on the next slide, after the children have answered. This is the new idea of the lesson and goes beyond Primary 1: say it was found by taking one line from the other."
   },
   {
    "id": "s-m3b",
    "part": "mini",
    "kind": "light",
-   "title": "Which double do we use?",
+   "title": "Check in both lines",
    "blocks": [
-    {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         7,
-         0
-        ],
-        "extra": [
-         0,
-         8
-        ],
-        "ring": 1
-       },
-       {
-        "t": "p",
-        "text": "Double 7 and 1 more"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         8,
-         0
-        ],
-        "extra": [
-         0,
-         8
-        ],
-        "dash": 1
-       },
-       {
-        "t": "p",
-        "text": "Double 8 and 1 less"
-       }
-      ]
-     ]
-    },
-    {
-     "t": "say",
-     "text": "Both ways: 7 + 8 = 15"
-    }
-   ],
-   "note": "7 + 8 can be found two ways. Use double 7 (14) and add 1, or use double 8 (16) and take 1 away. Both give 15. Ask and listen: which would you choose? Does the answer change? Do not state a rule: some children prefer the smaller double and 1 more. Answer: 15 both ways. The ringed counter is the 1 more; the dashed counter is the 1 taken away."
-  },
-  {
-   "id": "s-m3c",
-   "part": "mini",
-   "kind": "light",
-   "title": "Next to each other?",
-   "blocks": [
-    {
-     "t": "numrow",
-     "items": [
-      "6 + 7",
-      "5 + 8",
-      "9 + 10"
-     ]
-    },
     {
      "t": "table",
      "header": true,
      "rows": [
       [
-       "Sum",
-       "Next to each other?"
+       "Line",
+       "Check",
+       "Does it match?"
       ],
       [
-       "6 + 7",
-       "Yes: 6, 7"
+       "Line 1",
+       "5 + 5 + 7 = 17",
+       "Yes"
       ],
       [
-       "5 + 8",
-       "No: 5, 6, 7, 8"
-      ],
-      [
-       "9 + 10",
-       "Yes: 9, 10"
+       "Line 2",
+       "5 + 7 = 12",
+       "Yes"
       ]
-     ],
-     "reveal": true
+     ]
     },
     {
      "t": "chip",
-     "text": "A near double has two numbers that are next to each other."
+     "text": "Check in every line, not just one."
     }
    ],
-   "note": "A near double has two numbers that are next to each other, one step apart. 6 and 7: yes. 5 and 8: no, it is three steps (5, 6, 7, 8), so it is not a near double. 9 and 10: yes. Ask each pair first; the table with the answers comes on the next slide. Let children count the steps on their fingers. This prepares question T3 on page 3."
+   "note": "A number that works in one line may not work in another, so we check every line. Line 1: 5 + 5 + 7 = 17. Line 2: 5 + 7 = 12. Both match. Ask: what would we think if line 1 did not match (the numbers are wrong, try again). Link to the Think harder question where a friend gives numbers that work in only one line."
   },
   {
    "id": "s-m4",
    "part": "mini",
    "kind": "light",
-   "title": "Your turn: add",
+   "title": "A times line",
    "blocks": [
     {
-     "t": "chip",
-     "text": "Write on your paper. Use a double to help."
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "×",
+       "total": "12"
+      }
+     ],
+     "values": {
+      "circle": "3"
+     }
     },
     {
-     "t": "numrow",
+     "t": "card",
+     "head": "STEPS",
      "items": [
-      "6 + 7",
-      "8 + 9",
-      "4 + 5",
-      "9 + 10"
+      "heart × circle means heart groups of the circle.",
+      "How many groups of the circle make the total?",
+      "Check: put the number back into the line."
      ]
     }
    ],
-   "note": "Each child writes four answers on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Some children may count on: that is fine, ask them to try a double as well. Possible doubles: 6 + 7 is double 6 and 1 (13); 8 + 9 is double 8 and 1 (17); 4 + 5 is double 4 and 1 (9); 9 + 10 is double 9 and 1 (19)."
+   "note": "A times line: heart × circle = 12 and the circle is 3. Read it as heart groups of 3 make 12. Ask: how many groups of 3 make 12 (4). Children may count in 3s on fingers or put counters in groups of 3. Check: 4 × 3 = 12. Either reading order is accepted in a child answer. Times lines come back in Think harder and Go further."
   },
   {
-   "id": "s-m4a",
+   "id": "s-m5",
    "part": "mini",
    "kind": "light",
-   "title": "Check: add",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "11"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "16"
+      }
+     ],
+     "values": {
+      "star": "[]",
+      "heart": "[]"
+     }
+    },
+    {
+     "t": "chip",
+     "text": "Find the star and the heart. Then check both lines."
+    }
+   ],
+   "note": "Each child works on their own paper with counters if they like. Star + heart = 11 and star + star + heart = 16. Line 2 has one more star than line 1, and 16 is 5 more than 11, so the star is 5 and the heart is 6. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: star 5, heart 6."
+  },
+  {
+   "id": "s-m5a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: your turn",
    "blocks": [
     {
      "t": "table",
      "header": true,
      "rows": [
       [
-       "Sum",
-       "How we found it"
+       "Shape",
+       "Number",
+       "Check"
       ],
       [
-       "6 + 7",
-       "Double 6 is 12. 12 + 1 = 13"
+       "Star",
+       "5",
+       "Line 1: 5 + 6 = 11"
       ],
       [
-       "8 + 9",
-       "Double 8 is 16. 16 + 1 = 17"
-      ],
-      [
-       "4 + 5",
-       "Double 4 is 8. 8 + 1 = 9"
-      ],
-      [
-       "9 + 10",
-       "Double 9 is 18. 18 + 1 = 19"
+       "Heart",
+       "6",
+       "Line 2: 5 + 5 + 6 = 16"
       ]
      ]
     }
    ],
-   "note": "Answers: 13, 17, 9, 19. Read each answer and the way we found it aloud so a child watching the recording can mark their own work. A child who used the larger double and took one away (for example 16 - 1 for 8 + 9 is wrong, but 18 - 1 is right) can say which double they used; any correct way is fine."
-  },
-  {
-   "id": "s-m5",
-   "part": "mini",
-   "kind": "light",
-   "title": "Almost the same: 8 + 9 + 7",
-   "blocks": [
-    {
-     "t": "numrow",
-     "items": [
-      8,
-      9,
-      7
-     ]
-    },
-    {
-     "t": "p",
-     "text": "The 9 is 1 more than 8. The 7 is 1 less than 8."
-    },
-    {
-     "t": "say",
-     "text": "8 + 9 + 7 = 8 + 8 + 8 = 24"
-    }
-   ],
-   "note": "A worked example for Go further. The 9 is one more than 8 and the 7 is one less than 8, so they make up for each other: the sum is three 8s, which is 24. Check: 8 + 9 = 17 and 17 + 7 = 24. Keep it to about a minute and do not rush: ask which number is in the middle. Children who are not ready can skip this idea; it is only needed for Go further."
+   "note": "Answers: star 5, heart 6. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-break",
    "part": "break",
    "kind": "dark",
-   "title": "Stomp the double",
+   "title": "Clap and whisper",
    "blocks": [
     {
      "t": "p",
-     "text": "I say a number. Stomp softly that many times on each foot."
+     "text": "Count to 20 with me. Clap on 5, 10, 15 and 20."
     },
     {
      "t": "p",
-     "text": "Then say the double. Try 2, 3, 4, 5, then 6."
+     "text": "Whisper the numbers in between."
     },
     {
      "t": "p",
      "text": "Stand up. Sip some water."
     }
    ],
-   "note": "Four minutes. Stand up on camera. Call 2, 3, 4, 5, 6 (answers 4, 6, 8, 10, 12). Children stomp that many times with the left foot, then the same with the right foot, softly, or tiptoe or tap their fingers in a small space, and say the double aloud together. No equipment."
+   "note": "Four minutes. Stand up on camera. Count from 1 to 20 together: children whisper every number and clap loudly on 5, 10, 15 and 20. Then count back from 20 in fives if there is time. No equipment, no running, a little clear space. A child may stay seated. Do not give prizes or compare children."
   },
   {
    "id": "s-ws1",
@@ -1616,7 +872,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 3: children may use the ten-frame page and the red and yellow counters."
+   "note": "Read questions 1 to 3 aloud. Children work on their own with counters and shape cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: a cup hides counters; 11 in all and 3 are loose. Question 2: circle + square = 10 and the square is 4. Question 3: heart + heart = 16, then Mei's 8 + 9 (one more than 8 + 8)."
   },
   {
    "id": "s-ws1ans",
@@ -1633,7 +889,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own answers with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 6, 8, 10; Q2 12, 12; Q3 4, 10, 14, 18."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 8; Q2 6; Q3 8 and 17."
   },
   {
    "id": "s-ws2",
@@ -1655,7 +911,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4 uses tens bars; question 5 is a story with two groups of 8; question 6 is a True or False table, so children tick one box on each line. Children may use their kit counters to decide."
+   "note": "Read questions 4 to 6 aloud. Question 4: two triangles and a square make 14, and the square is 4. Question 5: Ben says the circle is 7; circle + circle = 12. Question 6: seven red counters, seven yellow counters and one more yellow counter ringed (double 7 and 1 more)."
   },
   {
    "id": "s-ws2ans",
@@ -1672,7 +928,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answers: Double 4 is 8 (true), double 6 is 14 (false: it is 12), 9 + 9 is a double (true), double 30 is 60 (true). Never ask a child to show a wrong answer to the group."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q4 10 and 5; Q5 no, the circle is 6; Q6 14 and 15."
   },
   {
    "id": "s-choice",
@@ -1690,15 +946,15 @@
       ],
       [
        "Think harder (page 3)",
-       "Add numbers that are next to each other"
+       "Two lines and a times line"
       ],
       [
        "Go further (page 4)",
-       "Add more numbers and bigger doubles"
+       "Three shapes at once"
       ],
       [
        "Investigation (page 5)",
-       "Make two groups the same"
+       "One line or two?"
       ],
       [
        "Check",
@@ -1721,22 +977,38 @@
    "blocks": [
     {
      "t": "card",
-     "head": "MEI AND ALI ADD 7 + 8",
+     "head": "AISHA SAYS",
      "items": [
-      "Mei says it is 1 more than double 7.",
-      "Ali says it is 1 less than double 8."
+      "Circle + circle = 12.",
+      "So circle + circle + circle = 18."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      }
      ]
     },
     {
      "t": "p",
-     "text": "Is Mei right? Is Ali right? Use counters to show."
+     "text": "Is Aisha right? How could we check?"
     },
     {
      "t": "chip",
      "text": "I think ... because ..."
     }
    ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: both are right. Double 7 is 14 and 14 + 1 = 15. Double 8 is 16 and 16 - 1 = 15. Both ways give 15 because one counter moves in or out of the double. Repeat each child's answer in your own words for the recording."
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test Aisha with counters: 12 counters on two circle cards is 6 each, and three circle cards of 6 make 18. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes. The same shape is the same number, so each circle is 6, and three sixes are 18. Repeat each child answer in your own words for the recording."
   },
   {
    "id": "s-sneakans",
@@ -1745,52 +1017,45 @@
    "title": "Back to the sneak-peek",
    "blocks": [
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         6,
-         0
-        ],
-        "extra": [
-         0,
-         6
-        ]
-       },
-       {
-        "t": "p",
-        "text": "6 + 6"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "ten_frame",
-        "filled": [
-         6,
-         0
-        ],
-        "extra": [
-         0,
-         7
-        ]
-       },
-       {
-        "t": "p",
-        "text": "6 + 7"
-       }
-      ]
-     ]
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "14"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "star",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "10"
+      }
+     ],
+     "values": {
+      "star": "7",
+      "heart": "3"
+     }
     },
     {
      "t": "answer",
-     "text": "Yes! One more counter makes the total 1 more."
+     "text": "The star is 7. The heart is 3. The cup holds 5."
     }
    ],
-   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. The pictures show 6 + 6 = 12 and 6 + 7 = 13: Ben is right because the second frame has one more counter, so the total is one more."
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Two stars make 14, so one star is 7; the heart and 7 make 10, so the heart is 3. Puzzle 1: 9 counters in all and 4 loose, so the cup holds 5. It was the same idea: a hidden number."
   },
   {
    "id": "s-exit",
@@ -1812,7 +1077,7 @@
      "short": false
     }
    ],
-   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud with their totals, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
   },
   {
    "id": "s-exitans",
@@ -1829,7 +1094,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 18, 60, 17."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: triangle 9; option 4, the heart is 8; each circle is 7."
   },
   {
    "id": "s-look",
@@ -1866,7 +1131,7 @@
      ]
     }
    ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 86 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
    "mascot": {
     "size": "l",
     "say": "Great thinking today!"
@@ -1876,26 +1141,58 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "title": "Go further: what if?",
+   "title": "Go further: one line or two?",
    "blocks": [
     {
+     "t": "visual",
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "8"
+      }
+     ]
+    },
+    {
      "t": "p",
-     "text": "Mei says double 9 is the same as 10 + 8. Can you see why?"
+     "text": "Could the circle be 2? Could it be 3?"
     },
     {
      "t": "visual",
-     "type": "ten_frame",
-     "filled": [
-      9,
-      1
-     ],
-     "extra": [
-      0,
-      8
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "11"
+      }
      ]
+    },
+    {
+     "t": "p",
+     "text": "What does the second line tell us?"
     }
    ],
-   "note": "Optional, only if you are on time. Answer: double 9 is 18; move 1 counter from the second 9 into the first frame and the first frame is full (10) and 8 are left, so 10 + 8 = 18. Take two answers and move on.",
+   "note": "Optional, only if you are on time. Line 1 alone has many answers: circle 2 and square 6, circle 3 and square 5, circle 1 and square 7 and more. Line 2 (circle + circle + square = 11) has only one pair that fits both: circle 3 and square 5. Check: 3 + 5 = 8 and 3 + 3 + 5 = 11. Take two answers and move on. This links to the Investigation.",
    "optional": true
   },
   {
@@ -1913,16 +1210,16 @@
        "What we do"
       ],
       [
-       "Is it always true?",
-       "A near double is 1 more than the smaller double. Test it."
+       "Can a shape change?",
+       "Ali says the heart is 5 in one line and 6 in another."
       ],
       [
        "Make a puzzle",
-       "Write three near doubles for your grown-up"
+       "Pick two numbers. Write two lines for your grown-up."
       ],
       [
        "Teach it back",
-       "Show how to add 7 + 8 with a double"
+       "Show a toy how a cup hides a number"
       ]
      ]
     },
@@ -1935,293 +1232,951 @@
    "optional": true
   }
  ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your shape cards, counters and two cups on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today a shape is a hidden number. The same shape is always the same number. We find it, then we check it."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: a box with a hidden number in one line is Primary 1 work, but using the same shape in two lines and taking one line from another go beyond Primary 1 on purpose, always with counters and shape cards."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "A box can hide a number. Look at the ten-frame: six counters, and the frame holds ten."
+     },
+     {
+      "k": "ASK",
+      "text": "How many more counters fill the frame? Six plus box equals ten.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Box plus three equals eight. What is in the box?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Nine equals five plus box. What is in the box?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Two plates with the same number of counters. Twelve counters in all."
+     },
+     {
+      "k": "ASK",
+      "text": "What is five plus five?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Box plus box equals eight, the same number twice. What is in the box?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Seven plus seven?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Mei says seven plus eight is one more than seven plus seven. What is seven plus eight?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Four bags with five counters in each bag. Four times five means four groups of five."
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are in four bags of five?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Three groups of four?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Two groups of ten?",
+      "resp": 12
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about the box, touch the empty places in the ten-frame and count them. For the same number twice, deal counters one at a time onto two plates. For the bags, add one bag at a time and say the total each time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 4, 5, 4; 10, 4, 14, 15; 20, 12, 20. Children answer with a whisper, fingers or hands. Nobody writes. Do not say picture equation yet. Joining cold: all you need is counting to 20 and adding small numbers."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. A cup hides some counters. The cup and 4 loose counters make 9 counters in all. How many counters are in the cup? You may use counters."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count out 9 counters or draw, and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Each shape is a number. Two stars make 14. The heart and a star make 10. How many is the heart? Write it."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 5. Puzzle 2 answer: the star is 7, so the heart is 3. Look for good ideas to praise later (a child who found the star first). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Find your circle card and your square card. Count out ten counters. The picture says: circle plus square equals ten. The square is four."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count out 10 counters, put 4 on the square card and the rest on the circle card.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are on the circle card?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "The circle is six. We check: six plus four is ten. It matches."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Heart plus heart equals twelve. Two hearts, so the same number on each."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count out 12 counters and deal them one at a time onto two heart cards until the piles match.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are on one heart card?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Both hearts are six. The same shape is always the same number."
+     },
+     {
+      "k": "ASK",
+      "text": "Check it. Put the two piles together. How many counters?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Two lines. Circle plus circle equals six. Circle plus triangle equals nine. Use line one to find the circle."
+     },
+     {
+      "k": "WORK",
+      "text": "Children find the circle from line one, then use the same circle in line two to find the triangle. Counters are fine.",
+      "s": 130
+     },
+     {
+      "k": "ASK",
+      "text": "What number is the circle?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "What number is the triangle?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "The circle was three in both lines. That is our idea for today."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who puts a different number for the circle in line 2: ask, is it the same shape? A child who adds all the numbers in a line: ask, what is the total of the line? A child with no shape cards uses a cup or a piece of paper marked with the shape."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see counters on small tiles. Answers: circle 6; heart 6 and 12 together; circle 3, triangle 6. Accept any child who finds the numbers by counters or by adding. Do not say equation for every line, say line."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Three rules for picture equations. One: each shape is a number. Two: the same shape is the same number every time. Three: in our puzzles, different shapes are different numbers."
+     },
+     {
+      "k": "ASK",
+      "text": "Can a circle be six in one line and four in another line of the same puzzle? Thumb up or down.",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "Find it, then check it. Circle plus circle plus square equals sixteen. The square is four."
+     },
+     {
+      "k": "ASK",
+      "text": "Take the square away from sixteen. What is left for the two circles?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Two equal circles make twelve. What is one circle?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Now we check. Six plus six plus four equals sixteen. It matches."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "Two lines at once. Star plus star plus triangle equals seventeen. Star plus triangle equals twelve. Line one has one more star than line two."
+     },
+     {
+      "k": "ASK",
+      "text": "How much more is seventeen than twelve?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "So that one extra star is five."
+     },
+     {
+      "k": "ASK",
+      "text": "Five plus the triangle makes twelve. What is the triangle?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3b"
+     },
+     {
+      "k": "SAY",
+      "text": "We always check in both lines. Five plus five plus seven is seventeen. Five plus seven is twelve. Both lines match."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "SAY",
+      "text": "A times line. Heart times circle equals twelve. The circle is three. That means heart groups of three make twelve."
+     },
+     {
+      "k": "ASK",
+      "text": "How many groups of three make twelve?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "The heart is four. Check: four times three is twelve."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Star plus heart equals eleven. Star plus star plus heart equals sixteen. Find the star and the heart. Then check both lines."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work on their own paper, with counters if they like. Wait 10 seconds before helping.",
+      "s": 140
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a"
+     },
+     {
+      "k": "READ",
+      "text": "The star is five. The heart is six. Tick your own work with a tick."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: shape, line, the same number, check. Say take one line from the other. Never use letters. Beyond Primary 1 on purpose: using the same shape in two lines, taking one line from another and the times line. Do not teach a rule to recite; the counters are the method."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child adds every number they see, ask: which numbers does the line really give us? If a child cannot start with two lines, make the second line smaller with counters: 11 counters, then 16 counters, and ask what is extra."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I count from one. Whisper every number, and clap loudly on five, ten, fifteen and twenty."
+     },
+     {
+      "k": "WORK",
+      "text": "Count 1 to 20 together: whisper the numbers and clap on 5, 10, 15 and 20. Then count back from 20 in fives. Children may stay seated.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: a cup hides some counters. 3 counters are outside the cup. There are 11 counters in all. How many counters are in the cup? Question 2: each shape is a number. Circle plus square equals 10. The square is 4. Find the number for the circle. Question 3: heart plus heart equals 16. Part a: the heart is what? Part b: Mei says eight plus nine is one more than eight plus eight. Eight plus nine equals what?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 420
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 8. Question 2: 6. Question 3: 8 and 17. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: two triangles and a square make 14. The square is 4. Fill in the blanks. Question 5: circle plus circle equals 12. Ben says the circle is 7. Is Ben correct? Circle Yes or No, then fill in the circle. Question 6: look at the counters. The ringed counter is 1 more. Double 7 is what? Then 7 plus 8 is what?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 480
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: 10 and 5. Question 5: no, the circle is 6. Question 6: 14 and 15."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 150
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: take the loose counters away from 11. Q2: take the square away from the total. Q3: share the total between two hearts, then add 1 to 8 + 8. Q4: take the square away, then share. Q5: put 7 into both circles and add. Q6: count the red counters, double them, then add the ringed one."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder uses two lines and a times line (beyond Primary 1 on purpose). Go further has three shapes and a sum and a product. Do not announce who is on which page. Start here takes a middle child about 15 minutes, so there is some choice time: for most children pages 4 and 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Aisha says: circle plus circle equals twelve, so circle plus circle plus circle equals eighteen. Is Aisha right? How could we check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test Aisha with counters: 12 on two circle cards, then three circle cards.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Two stars make fourteen, so the star is seven. The heart and seven make ten, so the heart is three. The cup held five."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: yes. The same shape is the same number, so each circle is 6 (12 shared between two), and three circles are 3 sixes: 18. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Each shape is a number. The triangle plus the triangle equals 18. Find the number for the triangle. E2. The heart plus the square equals 13. The square is 5. Find the number for the heart. Choose the correct answer. Option 1: 5. Option 2: 6. Option 3: 7. Option 4: 8. Write its number in the bracket. E3. Each shape is a number. Circle plus circle plus star equals 19. The star is 5. Find the number for each circle.",
+      "s": 55
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: 9. E2: option 4, the heart is 8. E3: each circle is 7."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Odd plus Odd. Please have your Term 2 Lesson 4 workbook with the kit page of number cards cut out, 20 counters or small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: circle plus square equals eight. Could the circle be two? Could it be three? What does the second line tell us?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: line 1 alone has many answers; line 2 makes only circle 3 and square 5 fit both. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
  "tiers": {
   "start": [
    {
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Look at the dominoes. Fill in the missing numbers.",
+    "text": "A cup hides some counters. 3 counters are outside the cup. There are 11 counters in all. Fill in the blank.",
     "parts": [
      {
-      "l": "a",
-      "text": "3 + 3 = []",
-      "ans": "6",
-      "val": 6
-     },
-     {
-      "l": "b",
-      "text": "4 + 4 = []",
+      "l": "",
+      "text": "The cup holds [] counters.",
       "ans": "8",
       "val": 8
-     },
-     {
-      "l": "c",
-      "text": "5 + 5 = [2]",
-      "ans": "10",
-      "val": 10
      }
     ],
-    "answer": "6, 8, 10",
+    "answer": "8",
     "val": [
-     6,
-     8,
-     10
+     8
     ],
-    "hint": "Count the dots on one half. The other half has the same number.",
-    "solution": "Each domino has two halves with the same number of dots. 3 + 3 = 6. 4 + 4 = 8. 5 + 5 = 10.",
+    "hint": "Take the 3 loose counters away from 11.",
+    "solution": "11 - 3 = 8, so the cup holds 8 counters. Check: 8 + 3 = 11.",
     "mistakes": [
-     "Counting only one half of the domino.",
-     "Writing 5 + 5 = 55 (joining the digits)."
+     "Writing 14 (11 + 3).",
+     "Writing 11 (the total)."
     ],
-    "mins": 1.5,
-    "visuals": [
-     {
-      "type": "domino",
-      "left": 3,
-      "right": 3
-     },
-     {
-      "type": "domino",
-      "left": 4,
-      "right": 4
-     },
-     {
-      "type": "domino",
-      "left": 5,
-      "right": 5
-     }
-    ]
+    "mins": 2,
+    "visual": {
+     "type": "objects",
+     "items": [
+      {
+       "icon": "cup",
+       "n": 1
+      },
+      {
+       "icon": "counter_yellow",
+       "n": 3
+      }
+     ],
+     "per_row": 4
+    }
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Mei has 6 red counters and 6 yellow counters. Fill in the missing numbers.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "6 + 6 = [2]",
-      "ans": "12",
-      "val": 12
-     },
-     {
-      "l": "b",
-      "text": "Double 6 is [2].",
-      "ans": "12",
-      "val": 12
-     }
-    ],
-    "answer": "6 + 6 = 12; double 6 is 12",
+    "text": "Each shape is a number. Find the number for the circle.",
+    "parts": [],
+    "answer": "6",
     "val": [
-     12,
-     12
+     6
     ],
-    "hint": "Count the red counters, then count on the yellow counters. Or fill the first frame to ten.",
-    "solution": "The first frame has 6 red counters and the second has 6 yellow counters. 6 + 6 = 12, so double 6 is 12.",
+    "hint": "Take the square away from the total: 10 - 4.",
+    "solution": "The total is 10 and the square is 4. 10 - 4 = 6, so the circle is 6. Check: 6 + 4 = 10.",
     "mistakes": [
-     "Counting only one frame (6).",
-     "Writing 66."
+     "Writing 14 (adding 10 and 4).",
+     "Writing 10 (the total)."
     ],
-    "mins": 2,
+    "mins": 1.5,
     "visual": {
-     "type": "ten_frame",
-     "filled": [
-      6,
-      0
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "10"
+      }
      ],
-     "extra": [
-      0,
-      6
-     ]
+     "values": {
+      "square": "4",
+      "circle": "[]"
+     },
+     "sym": 80
     }
    },
    {
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Fill in the missing numbers.",
+    "text": "Each shape is a number. Find the number for the heart.",
     "parts": [
      {
       "l": "a",
-      "text": "Double 2 is [].",
-      "ans": "4",
-      "val": 4
+      "text": "The heart is [].",
+      "ans": "8",
+      "val": 8
      },
      {
       "l": "b",
-      "text": "Double 5 is [2].",
-      "ans": "10",
-      "val": 10
-     },
-     {
-      "l": "c",
-      "text": "Double 7 is [2].",
-      "ans": "14",
-      "val": 14
-     },
-     {
-      "l": "d",
-      "text": "Double 9 is [2].",
-      "ans": "18",
-      "val": 18
+      "text": "Mei says 8 + 9 is 1 more than 8 + 8. 8 + 9 = [2]",
+      "ans": "17",
+      "val": 17
      }
     ],
-    "answer": "double 2 is 4; double 5 is 10; double 7 is 14; double 9 is 18",
+    "answer": "8; 17",
     "val": [
-     4,
-     10,
-     14,
-     18
+     8,
+     17
     ],
-    "hint": "Use your counters or the ten-frame page. A double is two of the same number.",
-    "solution": "Double 2 is 2 + 2 = 4. Double 5 is 5 + 5 = 10. Double 7 is 7 + 7 = 14. Double 9 is 9 + 9 = 18.",
+    "hint": "Two hearts are the same number. Share 16 between the two hearts. For part (b): 8 + 8 is 16, then 1 more.",
+    "solution": "8 + 8 = 16, so each heart is 8. 8 + 9 is 1 more than 8 + 8: 16 + 1 = 17.",
     "mistakes": [
-     "Writing the number again (double 7 is 7).",
-     "Adding 2 to the number (double 7 is 9)."
+     "Writing 16 (the total) for the heart.",
+     "Writing 16 or 18 for 8 + 9 (1 more, not 2 more or none)."
     ],
-    "mins": 3
+    "mins": 2.5,
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "16"
+      }
+     ],
+     "sym": 80
+    }
    },
    {
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Look at the bars. Fill in the missing numbers.",
+    "text": "Each shape is a number. The square is 4. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "3 tens + 3 tens = [] tens",
-      "ans": "6",
-      "val": 6
+      "text": "The 2 triangles make [2].",
+      "ans": "10",
+      "val": 10
      },
      {
       "l": "b",
-      "text": "30 + 30 = [2]",
-      "ans": "60",
-      "val": 60
-     },
-     {
-      "l": "c",
-      "text": "Double 40 is [2].",
-      "ans": "80",
-      "val": 80
+      "text": "Each triangle is [].",
+      "ans": "5",
+      "val": 5
      }
     ],
-    "answer": "3 tens + 3 tens = 6 tens; 30 + 30 = 60; double 40 is 80",
+    "answer": "10; 5",
     "val": [
-     6,
-     60,
-     80
+     10,
+     5
     ],
-    "hint": "Each bar is a ten. Count the bars on both sides.",
-    "solution": "3 tens and 3 tens make 6 tens. 6 tens is 60. Double 4 tens is 8 tens, which is 80.",
+    "hint": "Take the square away from 14 first.",
+    "solution": "14 - 4 = 10, so the 2 triangles make 10. The triangles are the same, so each is 5. Check: 5 + 5 + 4 = 14.",
     "mistakes": [
-     "Writing 6 for 30 + 30.",
-     "Writing 33 or 303."
+     "Writing 14 for each triangle.",
+     "Writing 10 for each triangle."
     ],
-    "mins": 2.5,
-    "visuals": [
-     {
-      "type": "bundles",
-      "tens": 3,
-      "ones": 0,
-      "style": "kit"
-     },
-     {
-      "type": "bundles",
-      "tens": 3,
-      "ones": 0,
-      "style": "kit"
-     }
-    ]
+    "mins": 3,
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "triangle",
+         "n": 2
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "14"
+      }
+     ],
+     "sym": 80
+    }
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Ali has 8 stickers. Ben has 8 stickers. How many stickers do they have altogether?",
+    "text": "Ben says the circle is 7. Look at the picture.",
     "parts": [
      {
       "l": "a",
-      "text": "[] + [] = [2]",
-      "ans": "8, 8, 16",
-      "val": [
-       8,
-       8,
-       16
+      "text": "Is Ben correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
       ]
      },
      {
       "l": "b",
-      "text": "They have ___ stickers altogether.",
-      "ans": "16",
-      "val": 16
+      "text": "The circle is [].",
+      "ans": "6",
+      "val": 6
      }
     ],
-    "answer": "8 + 8 = 16; they have 16 stickers",
+    "answer": "No; 6",
     "val": [
-     8,
-     8,
-     16,
-     16
+     "No",
+     6
     ],
-    "hint": "They have the same number of stickers. This is a double.",
-    "solution": "Ali has 8 and Ben has 8. 8 + 8 = 16. They have 16 stickers altogether.",
+    "hint": "Put 7 into both circles. What is the total?",
+    "solution": "7 + 7 = 14, but the line says 12. So Ben is not correct. 6 + 6 = 12, so the circle is 6.",
     "mistakes": [
-     "Writing 8 (only one child).",
-     "Writing 88."
+     "Saying Yes because 7 is close to 6.",
+     "Writing 12 for the circle."
     ],
-    "mins": 2.5,
+    "mins": 3,
     "visual": {
-     "type": "objects",
-     "items": [
+     "type": "picture_equation",
+     "rows": [
       {
-       "icon": "sticker",
-       "n": 8
-      },
-      {
-       "icon": "sticker",
-       "n": 8
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "12"
       }
      ],
-     "per_row": 8,
-     "size": "s"
+     "sym": 80
     }
    },
    {
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Read each statement. Decide if it is True or False.",
-    "parts": [],
-    "answer": "True, False, True, True",
-    "val": [
-     "T",
-     "F",
-     "T",
-     "T"
+    "text": "Look at the counters. The ringed counter is 1 more. Fill in the missing numbers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Double 7 is [2].",
+      "ans": "14",
+      "val": 14
+     },
+     {
+      "l": "b",
+      "text": "7 + 8 = [2]",
+      "ans": "15",
+      "val": 15
+     }
     ],
-    "hint": "Work out each double first. Then decide if the statement matches.",
-    "solution": "Double 4 is 8: True. Double 6 is 12, not 14: False. 9 + 9 is two of the same number, so it is a double: True. Double 30 is 60: True.",
+    "answer": "double 7 is 14; 7 + 8 = 15",
+    "val": [
+     14,
+     15
+    ],
+    "hint": "Count the red counters. The yellow counters without the ring match them.",
+    "solution": "7 red counters and 7 yellow counters make double 7 = 14. The ringed yellow counter is 1 more, so 7 + 8 = 14 + 1 = 15.",
     "mistakes": [
-     "Marking Double 6 is 14 as true because 6 + 6 is close to 14.",
-     "Saying 9 + 9 is not a double because 9 is a big number."
+     "Writing 14 for both parts.",
+     "Adding 2 instead of 1."
     ],
     "mins": 2.5,
-    "tf": [
-     {
-      "s": "Double 4 is 8."
-     },
-     {
-      "s": "Double 6 is 14."
-     },
-     {
-      "s": "9 + 9 is a double."
-     },
-     {
-      "s": "Double 30 is 60."
-     }
-    ]
+    "visual": {
+     "type": "ten_frame",
+     "filled": [
+      7,
+      0
+     ],
+     "extra": [
+      0,
+      8
+     ],
+     "ring": 1
+    }
    }
   ],
   "think": [
@@ -2229,150 +2184,173 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Look at the counters. The ringed counter is 1 more. Fill in the missing numbers.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Double 5 is [2].",
-      "ans": "10",
-      "val": 10
-     },
-     {
-      "l": "b",
-      "text": "5 + 6 = [2]",
-      "ans": "11",
-      "val": 11
-     }
-    ],
-    "answer": "double 5 is 10; 5 + 6 = 11",
+    "text": "Each shape is a number. Find the number for each shape. Show your working.",
+    "parts": [],
+    "answer": "square 6; heart 7",
     "val": [
-     10,
-     11
+     6,
+     7
     ],
-    "hint": "Count the red counters. The yellow counters without the ring match them.",
-    "solution": "5 red counters and 5 yellow counters make double 5 = 10. The ringed yellow counter is 1 more, so 5 + 6 = 10 + 1 = 11.",
+    "hint": "Line 1 has one more square than line 2. How much more is 19 than 13?",
+    "solution": "Line 1 has one more square than line 2, and 19 is 6 more than 13, so the square is 6. Then 6 + heart = 13, so the heart is 7. Check: 6 + 6 + 7 = 19.",
     "mistakes": [
-     "Writing 10 for both parts.",
-     "Adding 2 instead of 1."
+     "Writing 19 and 13 as the answers.",
+     "Finding the square but forgetting the heart."
     ],
-    "mins": 3,
+    "mins": 4,
     "visual": {
-     "type": "ten_frame",
-     "filled": [
-      5,
-      0
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "square",
+         "n": 2
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "19"
+      },
+      {
+       "items": [
+        {
+         "sym": "square",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "13"
+      }
      ],
-     "extra": [
-      0,
-      6
-     ],
-     "ring": 1
-    }
+     "values": {
+      "square": "[]",
+      "heart": "[]"
+     },
+     "sym": 80
+    },
+    "lines": 2
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Add.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "3 + 4 = []",
-      "ans": "7",
-      "val": 7
-     },
-     {
-      "l": "b",
-      "text": "8 + 7 = [2]",
-      "ans": "15",
-      "val": 15
-     },
-     {
-      "l": "c",
-      "text": "10 + 11 = [2]",
-      "ans": "21",
-      "val": 21
-     },
-     {
-      "l": "d",
-      "text": "2 + 3 = []",
-      "ans": "5",
-      "val": 5
-     }
-    ],
-    "answer": "7, 15, 21, 5",
+    "text": "Kumar says the heart is 8 and the star is 7. Look at the picture. Decide if each statement is True or False.",
+    "parts": [],
+    "answer": "True; False",
     "val": [
-     7,
-     15,
-     21,
-     5
+     "T",
+     "F"
     ],
-    "hint": "Find the double of the smaller number. Then move one.",
-    "solution": "3 + 4: double 3 is 6, and 1 more is 7. 8 + 7: double 7 is 14, and 1 more is 15. 10 + 11: double 10 is 20, and 1 more is 21. 2 + 3: double 2 is 4, and 1 more is 5.",
+    "hint": "Put 8 and 7 into each line and add.",
+    "solution": "Line 1: 8 + 7 = 15, which matches. Line 2: 8 + 8 + 7 = 23, but the line says 21. Kumar's numbers work in line 1 only.",
     "mistakes": [
-     "Taking 1 away instead of adding 1 after the smaller double.",
-     "Writing the double itself (6 for 3 + 4)."
+     "Checking only line 1.",
+     "Saying line 2 is true because 23 is close to 21."
     ],
-    "mins": 4
+    "mins": 3,
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "star",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "15"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 2
+        },
+        {
+         "sym": "star",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "21"
+      }
+     ],
+     "sym": 80
+    },
+    "tf": [
+     {
+      "s": "Line 1 is true with Kumar's numbers."
+     },
+     {
+      "s": "Line 2 is true with Kumar's numbers."
+     }
+    ]
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Which sum is not a near double? Write the number in the bracket.",
+    "text": "Each shape is a number. Find the number for each shape.",
     "parts": [],
-    "answer": "(3) 5 + 8",
+    "answer": "heart 3; circle 5",
     "val": [
-     3
+     3,
+     5
     ],
-    "hint": "A near double has two numbers that are next to each other. Look at each pair.",
-    "solution": "6 and 7 are next to each other. 8 and 9 are next to each other. 9 and 10 are next to each other. 5 and 8 are not next to each other (they are 3 apart), so 5 + 8 is not a near double.",
+    "hint": "Line 1 gives the heart. Then use the heart in line 2.",
+    "solution": "The 2 hearts make 6, so the heart is 3. Then 3 × circle = 15 means 3 groups of 5 make 15, so the circle is 5. Check: 3 × 5 = 15.",
     "mistakes": [
-     "Choosing 9 + 10 because 10 looks different.",
-     "Looking at the total instead of the two numbers."
+     "Writing 6 for the heart.",
+     "Writing 15 for the circle."
     ],
-    "mins": 3,
-    "mcq": {
-     "options": [
-      "6 + 7",
-      "8 + 9",
-      "5 + 8",
-      "9 + 10"
+    "mins": 4,
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "6"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "×",
+       "total": "15"
+      }
      ],
-     "bracket": true
-    }
-   },
-   {
-    "id": "T4",
-    "page": 3,
-    "tier": "think",
-    "text": "Kumar adds 8 + 9. Step 1: 8 + 8 = 16. Step 2: 16 - 1 = 15. Answer (a) and (b).",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Is Kumar correct? Circle Yes or No.",
-      "ans": "No",
-      "val": "No"
+     "values": {
+      "heart": "[]",
+      "circle": "[]"
      },
-     {
-      "l": "b",
-      "text": "8 + 9 = [2]",
-      "ans": "17",
-      "val": 17
-     }
-    ],
-    "answer": "No; 8 + 9 = 17",
-    "val": [
-     "No",
-     17
-    ],
-    "hint": "The second number is greater than 8. Is the total more or less than the double?",
-    "solution": "9 is 1 more than 8, so the total is 1 more than 16: 16 + 1 = 17. Kumar took 1 away instead of adding 1.",
-    "mistakes": [
-     "Saying Yes because 16 - 1 looks like a good step.",
-     "Writing 15 for the right answer."
-    ],
-    "mins": 3
+     "sym": 80
+    }
    }
   ],
   "go": [
@@ -2380,215 +2358,354 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Add 8 + 9 + 8 + 7 + 8. Show your working on the lines.",
+    "text": "Each shape is a number. Find the number for each shape.",
     "parts": [
      {
-      "l": "",
-      "text": "The total is [2].",
-      "ans": "40",
-      "val": 40
+      "l": "a",
+      "text": "The circle is [].",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "The heart is [].",
+      "ans": "7",
+      "val": 7
+     },
+     {
+      "l": "c",
+      "text": "The star is [].",
+      "ans": "11",
+      "val": 11
      }
     ],
-    "answer": "40",
+    "answer": "circle 5; heart 7; star 11",
     "val": [
-     40
+     5,
+     7,
+     11
     ],
-    "hint": "Look at the 9 and the 7. How far is each from 8?",
-    "solution": "The 9 is 1 more than 8 and the 7 is 1 less than 8, so they make up for each other. The five numbers are the same as five 8s: 8 + 8 + 8 + 8 + 8 = 40. Another way: 8 + 8 = 16, 9 + 7 = 16, and 16 + 16 + 8 = 40.",
+    "hint": "Start with the line that has only one kind of shape.",
+    "solution": "Circle × circle = 25, so the circle is 5 (5 groups of 5). Then heart + 5 = 12, so the heart is 7. Then star - 7 = 4, so the star is 11. Check: 11 - 7 = 4.",
     "mistakes": [
-     "Adding from left to right and slipping.",
-     "Leaving one number out."
+     "Writing 12 for the heart.",
+     "Taking 4 away from 7 and writing 3 for the star."
     ],
     "mins": 5,
-    "lines": 3
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        }
+       ],
+       "op": "×",
+       "total": "25"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "-",
+       "total": "4"
+      }
+     ],
+     "sym": 80
+    }
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Ben says 9 + 10 + 11 is the same as 10 + 10 + 10. Answer (a) and (b). Show your working on the lines.",
+    "text": "Each shape is a number. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "Is Ben correct? Circle Yes or No.",
-      "ans": "Yes",
-      "val": "Yes"
+      "text": "One star and one heart make [2].",
+      "ans": "14",
+      "val": 14
      },
      {
       "l": "b",
-      "text": "19 + 20 + 21 = [2]",
-      "ans": "60",
-      "val": 60
+      "text": "The star is [].",
+      "ans": "8",
+      "val": 8
+     },
+     {
+      "l": "c",
+      "text": "The heart is [].",
+      "ans": "6",
+      "val": 6
      }
     ],
-    "answer": "Yes; 19 + 20 + 21 = 60",
+    "answer": "14; star 8; heart 6",
     "val": [
-     "Yes",
-     60
+     14,
+     8,
+     6
     ],
-    "hint": "The 9 is 1 less than 10. The 11 is 1 more than 10.",
-    "solution": "9 is 1 less than 10 and 11 is 1 more than 10, so they make up for each other: 9 + 10 + 11 = 30 = 10 + 10 + 10. In the same way 19 + 20 + 21 is three 20s, which is 60.",
+    "hint": "Put the two lines together. How many stars and hearts are there?",
+    "solution": "Both lines together have 3 stars and 3 hearts, and 22 + 20 = 42. 3 stars and 3 hearts make 42, so one star and one heart make 14. Then 22 - 14 = 8 is a star, and 14 - 8 = 6 is a heart.",
     "mistakes": [
-     "Saying No because the numbers look different.",
-     "Writing 50 for the three numbers."
+     "Writing 22 and 20 as the answers.",
+     "Writing 7 for both shapes."
     ],
     "mins": 5,
-    "lines": 3
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "22"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "20"
+      }
+     ],
+     "sym": 80
+    }
    },
    {
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Find double 35. Fill in the missing numbers. Show your working on the lines.",
+    "text": "Each shape is a number. The heart is greater than the triangle. Find the number for each shape.",
     "parts": [
      {
       "l": "a",
-      "text": "Double 30 is [2].",
-      "ans": "60",
-      "val": 60
+      "text": "The heart is [].",
+      "ans": "5",
+      "val": 5
      },
      {
       "l": "b",
-      "text": "Double 5 is [2].",
-      "ans": "10",
-      "val": 10
-     },
-     {
-      "l": "c",
-      "text": "Double 35 is [2].",
-      "ans": "70",
-      "val": 70
+      "text": "The triangle is [].",
+      "ans": "4",
+      "val": 4
      }
     ],
-    "answer": "60, 10, 70",
+    "answer": "heart 5; triangle 4",
     "val": [
-     60,
-     10,
-     70
+     5,
+     4
     ],
-    "hint": "Split 35 into 30 and 5. Double each part, then put them together.",
-    "solution": "35 is 30 and 5. Double 30 is 60. Double 5 is 10. 60 + 10 = 70. So double 35 is 70.",
+    "hint": "Which two numbers add to 9? Try pairs and multiply each pair.",
+    "solution": "The pairs that add to 9 are 1 and 8, 2 and 7, 3 and 6, 4 and 5. Only 4 and 5 multiply to 20. The heart is greater, so the heart is 5 and the triangle is 4.",
     "mistakes": [
-     "Writing 610 (joining 60 and 10).",
-     "Forgetting to double the 5."
+     "Writing 4 for the heart.",
+     "Using 3 and 6 (they add to 9 but multiply to 18)."
     ],
     "mins": 5,
-    "lines": 2
+    "visual": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "9"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "×",
+       "total": "20"
+      }
+     ],
+     "sym": 80
+    }
    }
   ],
   "investigation": {
    "id": "I1",
    "page": 5,
    "tier": "investigation",
-   "title": "Make two groups the same",
-   "first": "Draw 6 dots and 8 dots. Move 1 dot from the 8 to the 6. What do you see?",
-   "text": "Draw dots for each pair. Try 5 and 9, then 7 and 8. Can you move dots so both groups are the same? When does it work? Write what you notice.",
-   "lines": 4,
-   "answer": "It works for 6 and 8 (both 7), and for 5 and 9 (both 7): the two numbers are 2 apart or 4 apart and the total is a double (14). It does not work for 7 and 8: the total is 15 and one dot is always left over.",
+   "title": "One line or two?",
+   "first": "The circle + the triangle = 10. One pair: circle 2, triangle 8. Write 2 more.",
+   "text": "The circle + the circle + the triangle = 14. Do any pairs fit both lines? Why?",
+   "answer": "Only circle 4 and triangle 6 fit both lines. One line alone has many pairs that fit (1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5 and more; accept 5 and 5 for line 1). 5 and 5 fails line 2 (5 + 5 + 5 = 15, not 14). The second line is the same as the first with one more circle, and 14 is 4 more than 10, so the circle is 4.",
    "val": [
-    "6 and 8 work",
-    "5 and 9 work",
-    "7 and 8 do not work"
+    "4",
+    "6"
    ],
-   "look_for": "A child who tries several pairs, moves dots, and notices that when the total is a double the two groups can be made the same, and that 7 and 8 always leave one dot over. Credit any clear reason. Do not use the words odd or even yet: that is the next lesson.",
+   "look_for": "A child who tries pairs for both lines, finds that only one pair works, or says one line is not enough to find two numbers. Credit any clear reason. Do not mark a child down for stopping at one pair.",
    "mistakes": [
-    "Trying only one pair.",
-    "Moving too many dots across, so the groups swap instead of matching."
+    "Choosing a pair that fits line 1 only, such as 5 and 5 (it makes 15 in line 2).",
+    "Stopping after line 1."
    ],
-   "mins": 8,
-   "draw": true
+   "mins": 8
   }
- },
- "talk": {
-  "question": "Mei adds 7 + 8. She says it is 1 more than double 7. Ali says it is 1 less than double 8. Is Mei right? Is Ali right? Use counters to show.",
-  "starter": "I think ... because ...",
-  "answer": "Both are right. Double 7 is 14 and 1 more is 15. Double 8 is 16 and 1 less is 15. Both ways give 15, because 7 is one less than 8: 7 + 8 is double 7 and 1 more, or double 8 and 1 less.",
-  "look_for": "A reason about moving one counter: one more than the smaller double, or one less than the larger double. Not just both are 15."
  },
  "exit": [
   {
    "id": "E1",
-   "text": "Fill in the missing number.",
+   "text": "Each shape is a number. The triangle + the triangle = 18. Find the number for the triangle.",
    "parts": [
     {
      "l": "",
-     "text": "Double 9 is [2].",
-     "ans": "18",
-     "val": 18
+     "text": "The triangle is [].",
+     "ans": "9",
+     "val": 9
     }
    ],
-   "answer": "18",
+   "answer": "9",
    "val": [
-    18
+    9
    ],
-   "solution": "9 + 9 = 18. Move 1 from one 9 to the other: 10 and 8.",
+   "solution": "9 + 9 = 18, so each triangle is 9.",
    "mistakes": [
-    "Writing 9 or 11.",
-    "Writing 99."
+    "Writing 18 (the total).",
+    "Writing 2 (counting the triangles)."
    ]
   },
   {
    "id": "E2",
-   "text": "Fill in the missing number.",
-   "parts": [
-    {
-     "l": "",
-     "text": "Double 30 is [2].",
-     "ans": "60",
-     "val": 60
-    }
-   ],
-   "answer": "60",
+   "text": "The heart + the square = 13. The square is 5. Find the number for the heart. Choose the correct answer. Write its number in the bracket.",
+   "parts": [],
+   "answer": "(4) 8",
    "val": [
-    60
+    4
    ],
-   "solution": "Double 3 is 6, so double 3 tens is 6 tens: 60.",
+   "solution": "13 - 5 = 8, so the heart is 8. Check: 8 + 5 = 13.",
    "mistakes": [
-    "Writing 6.",
-    "Writing 33 or 303."
-   ]
+    "Choosing (1) 5, the number of the square.",
+    "Choosing (2) 6 or (3) 7 after a counting slip."
+   ],
+   "mcq": {
+    "options": [
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "bracket": true
+   }
   },
   {
    "id": "E3",
-   "text": "Add.",
+   "text": "Each shape is a number. The star is 5. Find the number for each circle.",
    "parts": [
     {
      "l": "",
-     "text": "9 + 8 = [2]",
-     "ans": "17",
-     "val": 17
+     "text": "Each circle is [].",
+     "ans": "7",
+     "val": 7
     }
    ],
-   "answer": "17",
+   "answer": "7",
    "val": [
-    17
+    7
    ],
-   "solution": "Double 8 is 16 and 1 more is 17. Or double 9 is 18 and 1 less is 17.",
+   "solution": "19 - 5 = 14, so the 2 circles make 14. 7 + 7 = 14, so each circle is 7. Check: 7 + 7 + 5 = 19.",
    "mistakes": [
-    "Writing 18 (the double of 9).",
-    "Writing 16."
-   ]
+    "Writing 14 for each circle.",
+    "Writing 19 for each circle."
+   ],
+   "visual": {
+    "type": "picture_equation",
+    "rows": [
+     {
+      "items": [
+       {
+        "sym": "circle",
+        "n": 2
+       },
+       {
+        "sym": "star",
+        "n": 1
+       }
+      ],
+      "op": "+",
+      "total": "19"
+     }
+    ]
+   }
   }
  ],
+ "talk": {
+  "question": "Aisha says: circle + circle = 12, so circle + circle + circle = 18. Is Aisha right? How could we check?",
+  "starter": "I think ... because ...",
+  "answer": "Yes. The same shape is the same number, so each circle is 6 (12 shared between two). Three circles are 6 + 6 + 6 = 18. We can check with counters: 12 on two cards is 6 on each, then add a third card of 6.",
+  "look_for": "A child who finds the circle first, or who uses counters or a picture. Not just yes or no."
+ },
  "look_back": {
   "hardest": [
-   "remembering the doubles",
-   "adding 1 more or 1 less",
-   "doubling tens like 30 + 30",
-   "choosing which double (Think harder)",
+   "finding the number for one shape",
+   "using two lines",
+   "checking in every line",
    "something else"
   ],
   "helped": [
-   "counters or ten-frames",
+   "counters and shape cards",
    "drawing it",
-   "trying again",
-   "I asked for help",
+   "checking my answer",
    "I was not stuck"
   ],
   "next": [
-   "drawing it",
-   "using objects",
+   "using counters",
    "checking my answer",
+   "drawing it",
    "asking a question"
   ]
  },
@@ -2596,121 +2713,138 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Fill in the missing numbers. (a) Double 4 is []. (b) Double 6 is [2]. (c) Double 8 is [2].",
-   "answer": "8, 12, 16",
-   "val": [
-    8,
-    12,
-    16
-   ],
-   "solution": "4 + 4 = 8. 6 + 6 = 12. 8 + 8 = 16."
+   "text": "Each shape is a number. The star + the star = 8. Find the number for the star. ___",
+   "answer": "4",
+   "val": 4,
+   "solution": "4 + 4 = 8, so the star is 4."
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "Mei has 7 red marbles and 7 blue marbles. How many marbles does she have altogether? She has ___ marbles.",
-   "answer": "14",
-   "val": 14,
-   "solution": "7 + 7 = 14. Two of the same number is a double."
+   "text": "A cup hides some counters. The cup and 5 loose counters make 14 counters in all. How many counters are in the cup? ___",
+   "answer": "9",
+   "val": 9,
+   "solution": "14 - 5 = 9, so the cup holds 9 counters."
   },
   {
    "id": "H3",
    "tier": "start",
-   "text": "Fill in the missing numbers. (a) Double 20 is [2]. (b) Double 40 is [2].",
-   "answer": "40, 80",
-   "val": [
-    40,
-    80
-   ],
-   "solution": "Double 2 tens is 4 tens: 40. Double 4 tens is 8 tens: 80."
+   "text": "The heart is 4. What is the heart + the heart + the heart? ___",
+   "answer": "12",
+   "val": 12,
+   "solution": "4 + 4 + 4 = 12."
   },
   {
    "id": "H4",
    "tier": "think",
-   "text": "Add. (a) 6 + 7 = [2] (b) 9 + 10 = [2]",
-   "answer": "13, 19",
-   "val": [
-    13,
-    19
-   ],
-   "solution": "Double 6 is 12 and 1 more is 13. Double 9 is 18 and 1 more is 19."
+   "text": "Line 1: the circle + the circle + the triangle = 15. Line 2: the circle + the triangle = 9. Find the number for the triangle. ___",
+   "answer": "3",
+   "val": 3,
+   "solution": "Line 1 has one more circle than line 2, and 15 - 9 = 6, so the circle is 6. Then 6 + triangle = 9, so the triangle is 3."
   },
   {
    "id": "H5",
    "tier": "go",
-   "text": "Add 7 + 8 + 7 + 6 + 7. The total is ___.",
-   "answer": "35",
-   "val": 35,
-   "solution": "The 8 is 1 more than 7 and the 6 is 1 less, so the sum is five 7s: 35."
+   "text": "Line 1: the circle × the circle = 16. Line 2: the heart + the circle = 9. (× means groups of.) Find the number for the heart. ___",
+   "answer": "5",
+   "val": 5,
+   "solution": "Line 1: 4 × 4 = 16 (4 groups of 4), so the circle is 4. Line 2: heart + 4 = 9, so the heart is 5."
   }
  ],
  "online_practice": {
   "key": "t2l13",
-  "title": "Doubles and Near Doubles",
-  "topic": "Double, then adjust",
+  "title": "Picture Equations",
+  "topic": "Shapes as hidden numbers",
   "items": [
    {
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "How many counters are there altogether?",
-    "answer": 12,
-    "hint": "Count the red counters. Then count on the yellow counters.",
+    "q": "Each shape is a number. The square is 4. Find the number for the circle.",
+    "answer": 6,
+    "hint": "Take the square away from the total.",
     "steps": [
-     "There are 6 red counters.",
-     "There are 6 yellow counters.",
-     "6 + 6 = 12."
+     "The total is 10.",
+     "10 - 4 = 6.",
+     "The circle is 6."
     ],
     "slips": [
      {
       "a": [
-       6
+       14
       ],
-      "say": "6 is only the red counters. Count the yellow counters too."
+      "say": "14 adds the square to the total. The total is already the circle and the square together."
      }
     ],
     "fig": {
-     "type": "ten_frame",
-     "filled": [
-      "{n}",
-      0
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{t}"
+      }
      ],
-     "extra": [
-      0,
-      "{n}"
-     ]
+     "values": {
+      "square": "{x}"
+     }
     },
     "fig_base": {
-     "type": "ten_frame",
-     "filled": [
-      6,
-      0
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "10"
+      }
      ],
-     "extra": [
-      0,
-      6
-     ]
+     "values": {
+      "square": 4
+     }
     },
     "tpl": {
      "vars": {
-      "n": [
+      "x": [
        2,
        3,
        4,
-       5,
+       5
+      ],
+      "y": [
        6,
        7,
        8,
        9
       ]
      },
-     "q": "How many counters are there altogether?",
-     "answer": "n+n",
-     "hint": "Count the red counters. Then count on the yellow counters.",
+     "derive": {
+      "t": "x+y"
+     },
+     "q": "Each shape is a number. The square is {x}. Find the number for the circle.",
+     "answer": "y",
+     "hint": "Take the square away from the total.",
      "steps": [
-      "There are {n} red counters.",
-      "There are {n} yellow counters.",
-      "{n} + {n} = {ans}."
+      "The total is {t}.",
+      "{t} - {x} = {ans}.",
+      "The circle is {ans}."
      ]
     }
    },
@@ -2718,33 +2852,55 @@
     "id": "c2",
     "tier": "core",
     "type": "number",
-    "q": "What is double 7?",
-    "answer": 14,
-    "hint": "Double 7 is 7 + 7. Count on 7 from 7.",
+    "q": "Each shape is a number. Find the number for the heart.",
+    "answer": 7,
+    "hint": "Two hearts are the same number. Share the total.",
     "steps": [
-     "Double 7 means 7 + 7.",
-     "7 and 3 make 10. 4 are left.",
-     "10 + 4 = 14."
+     "The 2 hearts make 14.",
+     "7 + 7 = 14.",
+     "The heart is 7."
     ],
     "slips": [
      {
       "a": [
-       7
+       14
       ],
-      "say": "7 is only one 7. A double is two of the same number."
-     },
-     {
-      "a": [
-       9
-      ],
-      "say": "9 is 7 + 2. A double is 7 + 7."
+      "say": "14 is the total of both hearts. What is one heart?"
      }
     ],
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "{t}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "14"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
-      "n": [
-       1,
-       2,
+      "a": [
        3,
        4,
        5,
@@ -2755,13 +2911,16 @@
        10
       ]
      },
-     "q": "What is double {n}?",
-     "answer": "n+n",
-     "hint": "Double {n} is {n} + {n}. Use counters if you need them.",
+     "derive": {
+      "t": "a+a"
+     },
+     "q": "Each shape is a number. Find the number for the heart.",
+     "answer": "a",
+     "hint": "Two hearts are the same number. Share the total.",
      "steps": [
-      "Double {n} means {n} + {n}.",
-      "Count on {n} from {n}.",
-      "Double {n} is {ans}."
+      "The 2 hearts make {t}.",
+      "{a} + {a} = {t}.",
+      "The heart is {ans}."
      ]
     }
    },
@@ -2769,48 +2928,74 @@
     "id": "c3",
     "tier": "core",
     "type": "number",
-    "q": "What is 20 + 20?",
-    "answer": 40,
-    "hint": "Think of 2 tens and 2 tens. How many tens is that?",
+    "q": "Each shape is a number. Find the number for the star.",
+    "answer": 5,
+    "hint": "The 3 stars are the same number. Share the total.",
     "steps": [
-     "20 is 2 tens.",
-     "2 tens + 2 tens = 4 tens.",
-     "4 tens is 40."
+     "The 3 stars make 15.",
+     "5 + 5 + 5 = 15.",
+     "The star is 5."
     ],
     "slips": [
      {
       "a": [
-       4
+       3
       ],
-      "say": "4 is the number of tens. 4 tens is 40."
-     },
-     {
-      "a": [
-       22
-      ],
-      "say": "22 is not 20 + 20. Add the tens: 2 tens + 2 tens."
+      "say": "3 is how many stars there are. What number is one star?"
      }
     ],
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 3
+        }
+       ],
+       "op": "+",
+       "total": "{t}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 3
+        }
+       ],
+       "op": "+",
+       "total": "15"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
-      "n": [
-       1,
+      "a": [
        2,
        3,
-       4
+       4,
+       5,
+       6,
+       7,
+       8
       ]
      },
      "derive": {
-      "t": "n*10",
-      "m": "n*2"
+      "t": "a+a+a"
      },
-     "q": "What is {t} + {t}?",
-     "answer": "t+t",
-     "hint": "Think of {n} tens and {n} tens. How many tens is that?",
+     "q": "Each shape is a number. Find the number for the star.",
+     "answer": "a",
+     "hint": "The 3 stars are the same number. Share the total.",
      "steps": [
-      "{t} is {n} tens.",
-      "{n} tens + {n} tens = {m} tens.",
-      "{m} tens is {ans}."
+      "The 3 stars make {t}.",
+      "{a} + {a} + {a} = {t}.",
+      "The star is {ans}."
      ]
     }
    },
@@ -2818,188 +3003,382 @@
     "id": "c4",
     "tier": "core",
     "type": "choice",
-    "q": "Which sum is a double?",
-    "answer": "6 + 6",
-    "hint": "A double is two of the same number.",
-    "steps": [
-     "A double adds a number to itself.",
-     "6 + 6 is two sixes.",
-     "The other sums have two different numbers."
-    ],
-    "slips": [
-     {
-      "a": [
-       "6 + 7"
-      ],
-      "say": "6 + 7 has two different numbers. Look for two of the same."
-     }
-    ],
+    "q": "Ben says the square is 6. Is Ben correct?",
     "options": [
-     "6 + 7",
-     "6 + 6",
-     "6 + 8",
-     "6 + 5"
-    ]
-   },
-   {
-    "id": "c5",
-    "tier": "core",
-    "type": "number",
-    "q": "Ali has 8 stickers. Ben has the same number of stickers as Ali. How many stickers do they have altogether?",
-    "answer": 16,
-    "hint": "They have the same number, so 8 + 8.",
+     "yes",
+     "no"
+    ],
+    "answer": "no",
+    "hint": "Put Ben's number into the line and add.",
     "steps": [
-     "Ali has 8 stickers.",
-     "Ben has 8 stickers too.",
-     "8 + 8 = 16."
+     "6 + 6 = 12.",
+     "The line says 14.",
+     "So Ben is not correct."
     ],
     "slips": [
      {
       "a": [
-       8
+       "yes"
       ],
-      "say": "8 is only Ali. Ben has stickers too."
+      "say": "Put Ben's number into both squares and add. Is it the total on the line?"
      }
     ],
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "square",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "{t}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "square",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "14"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
-      "n": [
-       3,
+      "a": [
        4,
        5,
        6,
        7,
-       8,
-       9
+       8
+      ],
+      "k": [
+       0,
+       1
       ]
      },
-     "q": "Ali has {n} stickers. Ben has the same number of stickers as Ali. How many stickers do they have altogether?",
-     "answer": "n+n",
-     "hint": "They have the same number, so {n} + {n}.",
+     "derive": {
+      "n": "a+k",
+      "t": "a+a",
+      "m": "n+n"
+     },
+     "q": "Ben says the square is {n}. Is Ben correct?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "k",
+     "hint": "Put Ben's number into the line and add.",
      "steps": [
-      "Ali has {n} stickers.",
-      "Ben has {n} stickers too.",
-      "{n} + {n} = {ans}."
+      "{n} + {n} = {m}.",
+      "The line says {t}.",
+      "The answer is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "fields",
+    "q": "Each shape is a number. The square is 3. Fill in the boxes.",
+    "hint": "Take the square away first.",
+    "steps": [
+     "17 - 3 = 14, so the 2 circles make 14.",
+     "7 + 7 = 14, so each circle is 7."
+    ],
+    "slips": [],
+    "frame": "The 2 circles make {s}. Each circle is {b}.",
+    "fields": [
+     {
+      "id": "s",
+      "answer": 14
+     },
+     {
+      "id": "b",
+      "answer": 7
+     }
+    ],
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{t}"
+      }
+     ],
+     "values": {
+      "square": "{x}"
+     }
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "square",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "17"
+      }
+     ],
+     "values": {
+      "square": 3
+     }
+    },
+    "tpl": {
+     "vars": {
+      "b": [
+       5,
+       6,
+       7,
+       8
+      ],
+      "x": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "s": "b+b",
+      "t": "b+b+x"
+     },
+     "q": "Each shape is a number. The square is {x}. Fill in the boxes.",
+     "frame": "The 2 circles make {s}. Each circle is {b}.",
+     "answers": {
+      "s": "s",
+      "b": "b"
+     },
+     "hint": "Take the square away first.",
+     "steps": [
+      "{t} - {x} = {s}.",
+      "{b} + {b} = {s}.",
+      "Each circle is {b}."
      ]
     }
    },
    {
     "id": "c6",
     "tier": "core",
-    "type": "fields",
-    "q": "Look at the domino. Fill in the boxes.",
-    "hint": "Count the dots on each half.",
+    "type": "number",
+    "q": "Each bag has the same number of sweets. 3 sweets are outside the bags. There are 13 sweets in all. How many sweets are in one bag?",
+    "answer": 5,
+    "hint": "Take the loose sweets away first.",
     "steps": [
-     "Count the dots on the left half.",
-     "Count the dots on the right half.",
-     "Add them."
+     "13 - 3 = 10 sweets are in the bags.",
+     "5 + 5 = 10.",
+     "Each bag has 5 sweets."
     ],
-    "slips": [],
-    "frame": "{a} + {b} = {c}",
-    "fields": [
+    "slips": [
      {
-      "id": "a",
-      "answer": 4
-     },
-     {
-      "id": "b",
-      "answer": 4
-     },
-     {
-      "id": "c",
-      "answer": 8
+      "a": [
+       10
+      ],
+      "say": "10 is the sweets in both bags. How many in one bag?"
      }
     ],
     "fig": {
-     "type": "domino",
-     "left": "{a}",
-     "right": "{a}"
+     "type": "objects",
+     "items": [
+      {
+       "icon": "bag",
+       "n": 2
+      },
+      {
+       "icon": "sweet",
+       "n": "{y}"
+      }
+     ],
+     "per_row": 5
     },
     "fig_base": {
-     "type": "domino",
-     "left": 4,
-     "right": 4
+     "type": "objects",
+     "items": [
+      {
+       "icon": "bag",
+       "n": 2
+      },
+      {
+       "icon": "sweet",
+       "n": 3
+      }
+     ],
+     "per_row": 5
     },
     "tpl": {
      "vars": {
-      "a": [
-       1,
-       2,
+      "b": [
        3,
        4,
        5,
        6,
        7,
-       8,
-       9
+       8
+      ],
+      "y": [
+       2,
+       3
       ]
      },
-     "q": "Look at the domino. Fill in the boxes.",
-     "frame": "{a} + {b} = {c}",
-     "answers": {
-      "a": "a",
-      "b": "a",
-      "c": "a+a"
-     },
      "derive": {
-      "b": "a",
-      "c": "a+a"
+      "t": "b+b+y",
+      "s": "b+b"
      },
-     "hint": "Count the dots on each half.",
+     "q": "Each bag has the same number of sweets. {y} sweets are outside the bags. There are {t} sweets in all. How many sweets are in one bag?",
+     "answer": "b",
+     "hint": "Take the loose sweets away first.",
      "steps": [
-      "Each half has {a} dots.",
-      "{a} + {a} = {c}."
+      "{t} - {y} = {s} sweets are in the 2 bags.",
+      "Share {s} between the 2 bags.",
+      "Each bag has {ans} sweets."
      ]
     }
    },
    {
     "id": "t1",
     "tier": "stretch",
-    "type": "number",
-    "q": "What is 7 + 8?",
-    "answer": 15,
-    "hint": "The numbers are next to each other. Find the double, then move one.",
+    "type": "fields",
+    "q": "Each shape is a number. Fill in the boxes.",
+    "easier": "c5",
+    "hint": "Line 1 has one more circle than line 2.",
     "steps": [
-     "Double 7 is 14.",
-     "8 is 1 more than 7.",
-     "14 + 1 = 15."
+     "17 - 12 = 5, so the circle is 5.",
+     "5 + triangle = 12, so the triangle is 7."
     ],
-    "slips": [
+    "slips": [],
+    "frame": "The circle is {a}. The triangle is {b}.",
+    "fields": [
      {
-      "a": [
-       14
-      ],
-      "say": "14 is double 7. The second number is 8, one more."
+      "id": "a",
+      "answer": 5
      },
      {
-      "a": [
-       16
-      ],
-      "say": "16 is double 8. 7 is one less than 8, so take 1 away."
+      "id": "b",
+      "answer": 7
      }
     ],
-    "easier": "c2",
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{u}"
+      },
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{w}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "17"
+      },
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
       "a": [
+       3,
        4,
        5,
-       6,
+       6
+      ],
+      "b": [
        7,
        8,
        9
       ]
      },
      "derive": {
-      "b": "a+1"
+      "u": "a+a+b",
+      "w": "a+b"
      },
-     "q": "What is {a} + {b}?",
-     "answer": "a+a+1",
-     "hint": "The numbers are next to each other. Find the double of {a}, then add 1.",
+     "q": "Each shape is a number. Fill in the boxes.",
+     "frame": "The circle is {a}. The triangle is {b}.",
+     "answers": {
+      "a": "a",
+      "b": "b"
+     },
+     "hint": "Line 1 has one more circle than line 2.",
      "steps": [
-      "Double {a} is {a} + {a}.",
-      "{b} is 1 more than {a}.",
-      "Add 1 to the double: {ans}."
+      "{u} - {w} = {a}. The circle is {a}.",
+      "{a} + triangle = {w}.",
+      "The triangle is {b}."
      ]
     }
    },
@@ -3007,50 +3386,91 @@
     "id": "t2",
     "tier": "stretch",
     "type": "number",
-    "q": "What is 9 + 8?",
-    "answer": 17,
-    "hint": "Use double 8 and add 1, or double 9 and take 1 away.",
+    "q": "Each shape is a number. The circle is 3. Find the number for the heart.",
+    "answer": 4,
+    "easier": "c3",
+    "hint": "How many groups of the circle make the total?",
     "steps": [
-     "Double 8 is 16.",
-     "9 is 1 more than 8.",
-     "16 + 1 = 17."
+     "Heart groups of 3 make 12.",
+     "3, 6, 9, 12 is 4 groups.",
+     "The heart is 4."
     ],
     "slips": [
      {
       "a": [
-       18
+       12
       ],
-      "say": "18 is double 9. 8 is one less than 9, so take 1 away."
-     },
-     {
-      "a": [
-       16
-      ],
-      "say": "16 is double 8. 9 is one more than 8, so add 1."
+      "say": "12 is the total. How many groups of 3 make 12?"
      }
     ],
-    "easier": "c5",
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "×",
+       "total": "{t}"
+      }
+     ],
+     "values": {
+      "circle": "{c}"
+     }
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "×",
+       "total": "12"
+      }
+     ],
+     "values": {
+      "circle": 3
+     }
+    },
     "tpl": {
      "vars": {
-      "a": [
-       5,
+      "c": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "h": [
        6,
        7,
-       8,
-       9,
-       10
+       8
       ]
      },
      "derive": {
-      "b": "a-1"
+      "t": "h*c"
      },
-     "q": "What is {a} + {b}?",
-     "answer": "a+a-1",
-     "hint": "Use the double of {a} and take 1 away, or the double of {b} and add 1.",
+     "q": "Each shape is a number. The circle is {c}. Find the number for the heart.",
+     "answer": "h",
+     "hint": "How many groups of the circle make the total?",
      "steps": [
-      "Double {a} is {a} + {a}.",
-      "{b} is 1 less than {a}.",
-      "Take 1 away from the double: {ans}."
+      "Heart groups of {c} make {t}.",
+      "Count in {c}s to {t}.",
+      "The heart is {ans}."
      ]
     }
    },
@@ -3058,118 +3478,279 @@
     "id": "t3",
     "tier": "stretch",
     "type": "choice",
-    "q": "Which sum is not a near double?",
-    "answer": "5 + 8",
-    "hint": "Look at the two numbers. Are they next to each other?",
-    "steps": [
-     "6 and 7 are next to each other.",
-     "8 and 9 are next to each other.",
-     "5 and 8 are not next to each other."
-    ],
-    "slips": [
-     {
-      "a": [
-       "6 + 7"
-      ],
-      "say": "6 and 7 are next to each other. Look again."
-     }
-    ],
+    "q": "Kumar says the circle is 5 and the triangle is 6. Do both lines work?",
     "easier": "c4",
     "options": [
-     "6 + 7",
-     "8 + 9",
-     "5 + 8",
-     "9 + 10"
-    ]
-   },
-   {
-    "id": "t4",
-    "tier": "stretch",
-    "type": "number",
-    "q": "Mei has 6 red pens and 7 blue pens. How many pens does she have altogether?",
-    "answer": 13,
-    "hint": "The numbers are next to each other. Use a double.",
+     "yes",
+     "no"
+    ],
+    "answer": "yes",
+    "hint": "Put the numbers into line 1, then into line 2.",
     "steps": [
-     "Double 6 is 12.",
-     "7 is 1 more than 6.",
-     "12 + 1 = 13."
+     "Line 1: 5 + 6 = 11. The line says 11. It matches.",
+     "Line 2: 5 + 5 + 6 = 16. The line says 16. It matches.",
+     "Both lines work."
     ],
     "slips": [
      {
       "a": [
-       12
+       "no"
       ],
-      "say": "12 is double 6. Add 1 for the extra blue pen."
+      "say": "Put 5 and 6 into line 1, then into line 2. Do both match?"
      }
     ],
-    "easier": "c5",
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{s1}"
+      },
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{s2}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 1
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "11"
+      },
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        },
+        {
+         "sym": "triangle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "16"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
       "a": [
+       3,
        4,
-       5,
-       6,
-       7,
+       5
+      ],
+      "b": [
        8,
-       9
+       9,
+       10
+      ],
+      "k": [
+       0,
+       1
       ]
      },
      "derive": {
-      "b": "a+1"
+      "s1": "a+b",
+      "s2": "a+a+b",
+      "p": "a+k",
+      "q": "b-k",
+      "u": "p+p+q"
      },
-     "q": "Mei has {a} red pens and {b} blue pens. How many pens does she have altogether?",
-     "answer": "a+a+1",
-     "hint": "The numbers are next to each other. Use the double of {a}.",
+     "q": "Kumar says the circle is {p} and the triangle is {q}. Do both lines work?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "k",
+     "hint": "Put the numbers into line 1, then into line 2.",
      "steps": [
-      "Double {a} is {a} + {a}.",
-      "{b} is 1 more than {a}.",
-      "Add 1 to the double: {ans}."
+      "Line 1: {p} + {q} = {s1}. The line says {s1}. It matches.",
+      "Line 2: {p} + {p} + {q} = {u}. The line says {s2}.",
+      "The answer is {ans}."
      ]
     }
    },
    {
     "id": "g1",
     "tier": "challenge",
-    "type": "number",
-    "q": "What is 8 + 9 + 8 + 7 + 8?",
-    "answer": 40,
-    "hint": "The 9 is 1 more than 8 and the 7 is 1 less. They make up for each other.",
+    "type": "fields",
+    "q": "Each shape is a number. Fill in the boxes.",
+    "easier": "t1",
+    "hint": "Start with the line that has only one kind of shape.",
     "steps": [
-     "The 9 is 1 more than 8.",
-     "The 7 is 1 less than 8.",
-     "So the total is five 8s: 40."
+     "Circle × circle = 25, so the circle is 5.",
+     "Heart + 5 = 12, so the heart is 7.",
+     "Star - 7 = 4, so the star is 11."
     ],
-    "slips": [
+    "slips": [],
+    "frame": "The circle is {a}. The heart is {b}. The star is {c}.",
+    "fields": [
      {
-      "a": [
-       41
-      ],
-      "say": "41 is 1 too many. The 7 takes 1 away from the 9."
+      "id": "a",
+      "answer": 5
+     },
+     {
+      "id": "b",
+      "answer": 7
+     },
+     {
+      "id": "c",
+      "answer": 11
      }
     ],
-    "easier": "t2",
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        }
+       ],
+       "op": "×",
+       "total": "{p}"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{q}"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "-",
+       "total": "{d}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "circle",
+         "n": 2
+        }
+       ],
+       "op": "×",
+       "total": "25"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "circle",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "-",
+       "total": "4"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
-      "m": [
+      "a": [
+       3,
        4,
-       5,
+       5
+      ],
+      "b": [
        6,
        7,
-       8,
-       9
+       8
+      ],
+      "d": [
+       3,
+       4
       ]
      },
      "derive": {
-      "p": "m+1",
-      "q": "m-1"
+      "p": "a*a",
+      "q": "a+b",
+      "c": "b+d"
      },
-     "q": "What is {m} + {p} + {m} + {q} + {m}?",
-     "answer": "5*m",
-     "hint": "The {p} is 1 more than {m} and the {q} is 1 less. They make up for each other.",
+     "q": "Each shape is a number. Fill in the boxes.",
+     "frame": "The circle is {a}. The heart is {b}. The star is {c}.",
+     "answers": {
+      "a": "a",
+      "b": "b",
+      "c": "c"
+     },
+     "hint": "Start with the line that has only one kind of shape.",
      "steps": [
-      "The {p} is 1 more than {m}.",
-      "The {q} is 1 less than {m}.",
-      "So the total is five {m}s: {ans}."
+      "Circle × circle = {p}, so the circle is {a}.",
+      "Heart + {a} = {q}, so the heart is {b}.",
+      "Star - {b} = {d}, so the star is {c}."
      ]
     }
    },
@@ -3177,204 +3758,270 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "What is 19 + 20 + 21?",
-    "answer": 60,
-    "hint": "The 19 is 1 less than 20 and the 21 is 1 more.",
+    "q": "Each shape is a number. Find the number for the star.",
+    "answer": 8,
+    "easier": "t1",
+    "hint": "Put the two lines together. How many stars and hearts are there?",
     "steps": [
-     "19 is 1 less than 20.",
-     "21 is 1 more than 20.",
-     "So the total is three 20s: 60."
+     "Together there are 3 stars and 3 hearts.",
+     "One star and one heart make 14.",
+     "The star is 8."
     ],
     "slips": [
      {
       "a": [
-       59
+       14
       ],
-      "say": "59 is 1 too few. The 19 and the 21 make up for each other."
+      "say": "14 is a star and a heart together. Which part is the star?"
      }
     ],
-    "easier": "t1",
+    "fig": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "{u}"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "{w}"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "picture_equation",
+     "rows": [
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        },
+        {
+         "sym": "heart",
+         "n": 1
+        }
+       ],
+       "op": "+",
+       "total": "22"
+      },
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 1
+        },
+        {
+         "sym": "heart",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "20"
+      }
+     ]
+    },
     "tpl": {
      "vars": {
-      "m": [
-       10,
-       20,
-       30,
-       40
+      "a": [
+       6,
+       7,
+       8,
+       9
+      ],
+      "b": [
+       3,
+       4,
+       5
       ]
      },
      "derive": {
-      "p": "m+1",
-      "q": "m-1"
+      "u": "a+a+b",
+      "w": "a+b+b",
+      "p": "a+b"
      },
-     "q": "What is {q} + {m} + {p}?",
-     "answer": "3*m",
-     "hint": "The {q} is 1 less than {m} and the {p} is 1 more.",
+     "q": "Each shape is a number. Find the number for the star.",
+     "answer": "a",
+     "hint": "Put the two lines together. How many stars and hearts are there?",
      "steps": [
-      "{q} is 1 less than {m}.",
-      "{p} is 1 more than {m}.",
-      "So the total is three {m}s: {ans}."
+      "The 2 lines together have 3 stars and 3 hearts.",
+      "One star and one heart make {p}.",
+      "{u} - {p} = {ans}. The star is {ans}."
      ]
     }
    },
    {
     "id": "g3",
     "tier": "challenge",
-    "type": "number",
-    "q": "What is double 35?",
-    "answer": 70,
-    "hint": "Split 35 into 30 and 5. Double each part.",
-    "steps": [
-     "35 is 30 and 5.",
-     "Double 30 is 60. Double 5 is 10.",
-     "60 + 10 = 70."
-    ],
-    "slips": [
-     {
-      "a": [
-       610
-      ],
-      "say": "610 joins 60 and 10. Add them: 60 + 10."
-     }
-    ],
-    "easier": "c3",
-    "tpl": {
-     "vars": {
-      "n": [
-       12,
-       15,
-       16,
-       24,
-       25,
-       35,
-       45
-      ]
-     },
-     "derive": {
-      "t": "n-n%10",
-      "o": "n%10"
-     },
-     "q": "What is double {n}?",
-     "answer": "n+n",
-     "hint": "Split {n} into {t} and {o}. Double each part.",
-     "steps": [
-      "{n} is {t} and {o}.",
-      "Double {t} and double {o}, then add.",
-      "Double {n} is {ans}."
-     ]
-    }
-   },
-   {
-    "id": "g4",
-    "tier": "challenge",
     "type": "selfcheck",
-    "q": "Make up two near doubles for a grown-up. Write the answers. Many answers are right.",
-    "hint": "Pick two numbers that are next to each other. Find the double first.",
+    "q": "Make your own picture equation. Choose a number for the circle and a different number for the triangle. Write two lines for a grown-up to solve. Many answers are right.",
+    "hint": "Start with the numbers, then write the totals.",
     "steps": [
-     "Choose two numbers next to each other, such as 6 and 7.",
-     "Double the smaller one: 12.",
-     "Add 1: 13. Check with counters."
+     "Choose the circle and a different number for the triangle.",
+     "Write circle + triangle = a total.",
+     "Write circle + circle + triangle = another total.",
+     "Ask a grown-up to find your numbers."
     ],
     "slips": [],
-    "easier": "t1"
+    "easier": "c1"
    }
   ]
  },
  "spare_time": {
-  "note": "Optional time, never added to the 90-minute sum. It comes from the 4-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
   "rules": [
    "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
    "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
-   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask ‘How do you know?’ and let children explain, rather than rushing on."
   ],
   "menu": [
    {
     "id": "M1",
-    "title": "Is it always true?",
+    "title": "Can a shape change?",
     "minutes": 4,
-    "tutor": "Mei says: a near double is always 1 more than the double of the smaller number. Test it with 4 + 5, 9 + 10 and 12 + 13. Does it always work?",
-    "rec": "Recording: pause. Test 4 + 5, 9 + 10 and 12 + 13. Is each total one more than the smaller double?",
-    "answer": "Yes. 4 + 5 = 9 (double 4 is 8), 9 + 10 = 19 (double 9 is 18), 12 + 13 = 25 (double 12 is 24). The bigger number is always 1 more than the smaller, so the total is 1 more than its double."
+    "tutor": "Ali says: the heart is 5 in line 1 and 6 in line 2, and both lines are fine. Is that allowed? Test it with counters: put the same heart card into both lines.",
+    "rec": "Recording: pause. Ali says the heart is 5 in one line and 6 in another. Is that allowed? Test it with counters.",
+    "answer": "No. The same shape is the same number in every line. If the heart is 5 in line 1 it must be 5 in line 2 too. If the numbers do not fit, one of them is wrong, so check again."
    },
    {
     "id": "M2",
     "title": "Make a puzzle for your grown-up",
     "minutes": 4,
-    "tutor": "Write three near doubles, such as 6 + 7. Give them to your grown-up. Can they find each total with a double?",
-    "rec": "Recording: pause. Write three near doubles for a grown-up and check their answers with counters.",
-    "answer": "No single answer. Check that the two numbers are next to each other and that each total is right, for example 6 + 7 = 13, 8 + 9 = 17, 5 + 6 = 11."
+    "tutor": "Pick a number for the circle and a different number for the star. Write two lines, such as circle + star = a total and circle + circle + star = a total. Ask your grown-up to find your numbers.",
+    "rec": "Recording: pause. Pick two numbers. Write two lines for a grown-up to solve, then check their answer.",
+    "answer": "No single answer. Check the totals: with circle 4 and star 6, line 1 is 10 and line 2 is 14. The grown-up takes one line from the other."
    },
    {
     "id": "M3",
     "title": "Teach it back",
     "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never seen a double. Teach them how to add 7 + 8 with a double.",
-    "rec": "Recording: pause. Teach a grown-up how to add 7 + 8 with a double.",
-    "answer": "Double 7 is 14. The 8 is 1 more than 7, so add 1: 15. Or double 8 is 16, take 1 away: 15."
+    "tutor": "Pretend your grown-up or a toy has never met a picture equation. Use a cup and counters to show how a shape can hide a number.",
+    "rec": "Recording: pause. Show a grown-up how a cup can hide a number and how to find it.",
+    "answer": "A cup and 4 loose counters make 9 in all. Count out 9, take the 4 away, and the rest is what the cup holds: 5."
    }
   ]
  },
  "parent": {
-  "summary": "We learned doubles (two of the same number, like 6 + 6 = 12) and used them to add numbers that are next to each other (6 + 7 is double 6 and 1 more). We also doubled tens (30 + 30). Doubles to 20 and a double with 1 more or 1 less are close to school Primary 1 work. Doubling a number like 35 and adding five almost-equal numbers go beyond school on purpose, in Go further only.",
+  "summary": "We met picture equations (and a double with 1 more, like 7 + 8): a shape is a hidden number, and the same shape is always the same number. We found hidden numbers with counters, checked them, and took one line from another to find two shapes. One hidden number in a line, like 4 + box = 10, is Primary 1 work; using one shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. We use shapes, never letters.",
   "words": [
-   "double: two of the same number added (double 6 is 6 + 6)",
-   "near double: two numbers next to each other (6 + 7)",
-   "one more, one less: the number just after or before",
-   "total: the answer when we add"
+   "shape: a hidden number",
+   "line: one picture equation",
+   "check: put the number back into the line",
+   "take one line from another: find the extra shape",
+   "×: groups of (4 × 4 is 4 groups of 4)"
   ],
   "try_home": [
-   "Two plates: put 6 buttons on each. Say: double 6 is 12. Take 1 button away: how many now? Keep small things away from mouths.",
-   "Double it: say a number from 1 to 10. Your child says the double. Then try 20 and 30.",
-   "Near double: say 7 + 8. Ask which double helps. Then try 6 + 7 and 9 + 10."
+   "Hidden cup: put 5 counters in a cup, add 4 loose ones, and say the total is 9. How many are in the cup?",
+   "Two cups: put the same number of counters in two cups and say the total is 12. How many in each cup?",
+   "Your turn to hide: your child hides counters in a cup and tells you the total. Can you find the number?"
   ],
   "ask": [
-   "Which double helps here?",
-   "Is the total 1 more or 1 less than the double? How do you know?",
-   "Are the two numbers next to each other?"
+   "What does the shape hide?",
+   "How can you check your number in the line?"
   ],
-  "when_stuck": "Please do not teach 'double and add 2': the trick is 1 more or 1 less. Let your child use counters or a drawing, and wait 10 seconds before helping. Asking 'what is double the smaller number?' works better than giving the answer. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "when_stuck": "Let your child use counters and two cups, and wait 10 seconds before helping. Asking ‘what is the total?’ works better than giving the answer. Please do not teach a rule or letters: counters and a cup are enough. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
   "next": "Term 2 Lesson 4: Odd + Odd: Always, Sometimes, Never. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
-  "quote": "Double, then adjust: find the double, then move one.",
-  "report_line": "Your child is learning to use doubles to add quickly and to say why a near double is 1 more or 1 less. This week: doubles to 10 + 10, tens doubles and near doubles.",
-  "term_line": "This term: places and strips so far; now doubles; then odd and even, equal groups, sharing and stories.",
+  "quote": "A shape is a hidden number, and the same shape is always the same number.",
+  "report_line": "Your child is learning that a shape can stand for a hidden number and that the same shape is always the same number. This week: finding one shape, then two shapes from two lines.",
+  "term_line": "This term: places and strips so far; now picture equations; then odd and even, equal groups, sharing and stories.",
   "next_materials": [
    "20 counters or small things of one kind",
    "Your Term 2 Lesson 4 workbook, with its kit page of number cards 1 to 20 cut out by a grown-up"
   ]
  },
  "safeguarding": [
-  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters.",
+  "Counters, cups and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Cups stay on the table so that nothing is spilled.",
   "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
   "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
-  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child's page is never shown.",
-  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
-  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Counting aloud is quiet; a child may stay seated.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, using a double each time. Check the Go further items (double 35 and the five-number sum) against the key.",
-  "Tell parents a week before: print the workbook pages and the kit page, cut out the kit page and find the things listed. Small things stay away from mouths and younger children.",
-  "Have the slides open and check the kit page is visible on screen share. Have a paper copy of the kit page and counters to show on camera if you wish.",
+  "Solve every workbook question yourself first. Check that each shape in a puzzle is a different number (T1: 6 and 7; T2: 6 and 9; T3: 3 and 5; G1: 5, 7 and 11; G2: 8 and 6; G3: 5 and 4) so you can answer a child who asks.",
+  "Tell parents a week before: use the workbook pages and both kit pages from the printed term book (send a PDF only if a page is missing, to print at 100%) (a grown-up cuts out the 20 counters and the 15 shape cards: three each of circle, square, triangle, heart and star), and find about 30 counters or buttons and two cups. Keep the cards in an envelope. Small things stay away from mouths and younger children. Next lesson (Term 2 Lesson 4, Odd + Odd) needs its number-cards kit page cut out: remind families in the parent summary.",
+  "Have the slides open. Have your own shape cards, a cup and counters to show on camera if you wish.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
-  "Be plain with families: doubles to 20, tens doubles and near doubles sit inside the school Primary 1 idea of adding within 20 and 100. Go further goes beyond school on purpose (double 35, five numbers that are almost the same). Do not call it MOE-aligned."
+  "Be plain with families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and the times line are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Never use letters for unknowns; shapes and boxes only. The counters are the method, not a rule to recite.",
+  "Slides s-explore3, s-m2 and s-m3 keep the method off the screen while you ask: the steps appear on the slide after. Read every question with its totals and the four options of E2 aloud: the figures on the slides are small."
  ],
  "workbook": {
-  "header": "Addition: doubles and near doubles",
-  "hint_p1": "A double is two of the same number, like 2 + 2. Use counters or a drawing. Say your answer out loud, then write it.",
-  "hint_p2": "Use counters or the bars to help. Read each box carefully.",
-  "hint_p3": "Use counters or the ten-frame page. Then fill in the answers. Choose any question, in any order.",
-  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "header": "Reasoning about equality: picture equations",
+  "hint_p1": "Each shape is a number. Use counters. Check your answer in the line.",
+  "hint_p2": "The same shape is always the same number. In our puzzles, different shapes are different numbers.",
+  "hint_p3": "Use counters or draw. Check your answer in every line. × means groups of. Choose any question.",
+  "hint_p4": "× means groups of. Choose any question. You do not have to finish them all.",
   "choice_after": 3,
-  "home_hint": "Use counters or draw. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use counters and a cup. Small things stay on the table, away from mouths and little brothers and sisters.",
   "kits": [
    {
     "type": "ten_frame",
+    "width": 100,
     "title": "Kit page: ten-frames and counters",
-    "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Keep them in an envelope. The frames can stay on the page."
+    "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Red counters can hide in a cup; yellow counters can be the loose ones. The ten-frames stay on the page."
+   },
+   {
+    "type": "shapes",
+    "size": 96,
+    "shapes": [
+     {
+      "kind": "circle",
+      "color": "#FFE08A",
+      "n": 3
+     },
+     {
+      "kind": "square",
+      "color": "#BFE3F5",
+      "n": 3
+     },
+     {
+      "kind": "triangle",
+      "color": "#C8E6B0",
+      "n": 3
+     },
+     {
+      "kind": "heart",
+      "color": "#F7B6C2",
+      "n": 3
+     },
+     {
+      "kind": "star",
+      "color": "#FFD27A",
+      "n": 3
+     }
+    ],
+    "width": 100,
+    "title": "Kit page: shape cards",
+    "intro": "A grown-up cuts out the 15 shapes before the lesson: three each of circle, square, triangle, heart and star. Each shape is drawn, so a child matches pictures, not words. A shape is big enough to hold 3 counters. Keep the shapes in an envelope."
    }
   ]
  },
+ "contest_where": "Think harder, Go further and the Investigation",
  "limits": {
-  "max_parent_words": 100
+  "max_parent_words": 120
  }
 }

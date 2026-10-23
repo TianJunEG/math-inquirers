@@ -227,6 +227,9 @@ def run(d):
     for where, ob in (('slides', d['slides']), ('tiers', d['tiers']), ('exit', d['exit']), ('home', d['home_practice'])):
         for it, pr in tags_of(ob):
             if it in kit: eq(kit[it], pr, f'{where}: the {it} tag shows the Lesson 25 kit price')
-    nm = ' '.join(d['parent']['next_materials']).lower(); eq(('16' in nm, 'tiles' in nm), (True, True), 'hand-off to Lesson 27 names the 16 grid tiles')
+    nm = ' '.join(d['parent']['next_materials']).lower(); eq(('calendar' in nm, '7 day cards' in nm, 'price tags' in nm and 'play money' in nm), (True, True, True), 'hand-off to Lesson 27 names the calendar page, its 7 day cards, and keeps the tags and money for the Quest')
+    nxt27 = os.path.join(L1, 'lessons', 'l27.json')
+    if os.path.exists(nxt27):
+        p27 = json.load(open(nxt27, encoding='utf-8')); eq(p27['title'], 'Calendar Detective', 'Lesson 27 is Calendar Detective (the hand-off names it)'); eq(('calendar' in ' '.join(p27['materials']['child']).lower()), True, 'Lesson 27 materials match the hand-off')
     pm = ' '.join(p25['parent']['next_materials']).lower(); eq(('price tags' in pm and 'play money' in pm and 'nothing new' in pm), True, 'Lesson 25 hands off the tags and the money with nothing new to cut')
     return n

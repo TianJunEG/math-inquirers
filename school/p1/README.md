@@ -2,7 +2,7 @@
 
 Two booklets of 20 single-sided A4 pages each (Semester 1 = Terms 1 and 2, Semester 2 = Terms 3 and 4; the split follows the typical order, schools vary), 40 pages in all, P1-01 to P1-40.
 Every page is self-checking, pure black and white, with the school name and a page code like `S1-07 (P1-08)` in the footer, and each booklet has its own teacher answer key with outcome tags.
-Not for sale as is: a pilot for owner review. Cover, licence and teacher notes carry DRAFT stamps, the business email pypteltd@gmail.com and a registered-office placeholder until the owner and a lawyer approve the wording.
+Not for sale as is: a pilot for owner review. Cover, licence and teacher notes carry DRAFT stamps, the business email pypteltd@gmail.com and the registered office address (66 Tannery Ln, Singapore 347805) until the owner and a lawyer approve the wording; the entity and year in the footer (c) line are confirmed by the owner.
 Plan: `docs/school_books/p1_semester_booklets_plan.md`; build report and open items: `docs/school_books/p1_semester_booklets_build_report.md`; owner decisions: `docs/terms/owner_decisions.md` (23 Oct 2026, evening). Earlier audits of the 20-page pilot: `AUDIT*.md`, `AUDIT_FIXES*.md`.
 
 ## Regenerate

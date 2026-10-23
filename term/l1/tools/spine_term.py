@@ -37,8 +37,14 @@ def icon(i, size, color=INK, unit='mm'):
     return s.replace('<svg ', f'<svg style="color:{color};flex:none;display:block" ', 1)
 
 
+def met(d):
+    """The tools met so far in the lesson's term (consolidation plan: Term 1 four tools, Term 2 six, Term 3 seven, Term 4 eight), in levels/spine.json order."""
+    ids = _TERM['tools_met'][str(d.get('term', 1))]
+    return [t for t in TOOLS if t['id'] in ids]
+
+
 def row(d):
-    """The lesson's `spine` object ({main, also, role, reason[, lean_now]}) or None."""
+    """The lesson's `spine` object ({main, also, role, reason[, chip]}) or None."""
     s = d.get('spine')
     if not s:
         return None
@@ -52,8 +58,7 @@ def info(d):
     ch = s['main'] == 'choose'
     t = None if ch else tool(s['main'])
     return {'row': s, 'choose': ch, 'tool': t, 'name': 'Choose one' if ch else t['name'], 'def': '' if ch else t['def'][BAND],
-            'also': [tool(a) for a in s.get('also', [])], 'reason': s.get('reason', ''), 'role': s.get('role', ''),
-            'lean': [tool(a) for a in s.get('lean_now', [])]}
+            'also': [tool(a) for a in s.get('also', [])], 'reason': s.get('reason', ''), 'role': s.get('role', '')}
 
 
 def _tick(mm):
@@ -71,7 +76,7 @@ def wb_chip(d, compact=False):
     if not x:
         return ''
     if x['choose']:
-        cells = ''.join(f'<span style="display:inline-flex;align-items:center;gap:0.6mm">{icon(t["id"], 7)}{_tick(3.2)}</span>' for t in TOOLS)
+        cells = ''.join(f'<span style="display:inline-flex;align-items:center;gap:0.6mm">{icon(t["id"], 7)}{_tick(3.2)}</span>' for t in met(d))
         return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:1mm 2mm 1.2mm;display:flex;flex-direction:column;gap:0.8mm">'
                 f'<span style="font-size:9pt;font-weight:800;letter-spacing:.05em">{LABELS["tool_of_day"]}: {LABELS["choose_one"]}. Tick the one you chose.</span>'
                 f'<span style="display:flex;justify-content:space-between">{cells}</span></div>')
@@ -113,7 +118,8 @@ def wb_lookback(d):
     def r(n, q, right):
         return f'<div class="spr"><span class="spn">{n}</span><span class="spq">{E(q)}</span><span class="spa{" spa3" if n == 3 else ""}">{right}</span></div>'
     a3 = f'<span style="font-size:9pt;white-space:nowrap">{E(LB["answer3"][BAND])}:</span>{dot}'
-    tools = ''.join(f'<span style="display:inline-flex;align-items:center;gap:0.8mm">{icon(t["id"], 7)}{_tick(3.6)}</span>' for t in TOOLS)
+    mm = 7 if len(met(d)) > 6 else 8
+    tools = ''.join(f'<span style="display:inline-flex;align-items:center;gap:1.2mm">{icon(t["id"], mm)}{_tick(3.6)}</span>' for t in met(d))
     return (f'<div class="spl" data-spine="lookback"><div class="sph"><b>Look back</b><span>{E(LB["intro"])}</span></div>'
             f'{r(1, PROMPTS[0], yn)}{r(2, PROMPTS[1], yn)}{r(3, PROMPTS[2], a3)}'
             f'<div class="spt"><b style="font-size:9pt;white-space:nowrap">{E(LB["footer_tools"])}:</b>{tools}</div>'
@@ -138,8 +144,7 @@ def guide_row(d):
     if not x:
         return None
     if x['choose']:
-        lean = ('; the content for now leans on ' + ' and '.join(t['name'] for t in x['lean'])) if x['lean'] else ''
-        body = (f'<b>Choose one.</b> No single tool of the day: the child picks and ticks the tool they used{E(lean)}. {E(x["reason"])}')
+        body = (f'<b>Choose one.</b> No single tool of the day: the child picks from the {len(met(d))} tools met so far ({E(", ".join(t["name"] for t in met(d)))}) and ticks the one they used. {E(x["reason"])}')
     else:
         also = ('<br>Also useful: ' + ', '.join(E(a['name']) for a in x['also'])) if x['also'] else ''
         body = f'<b>{E(x["name"])}</b> <span class="small">({"introduced" if x["role"] == "I" else ("practised" if x["role"] == "P" else "applied")} in this lesson)</span>: {E(x["def"])}{also}<div class="small">{E(x["reason"])}</div>'
@@ -159,11 +164,12 @@ def guide_toolbox(d):
     x = info(d)
     if not x:
         return ''
-    li = ''.join(f'<li><b>{E(t["name"])}</b>{" (today)" if (not x["choose"] and t["id"] == x["tool"]["id"]) else ""}: {E(t["def"][BAND])}</li>' for t in TOOLS)
+    li = ''.join(f'<li><b>{E(t["name"])}</b>{" (today)" if (not x["choose"] and t["id"] == x["tool"]["id"]) else ""}: {E(t["def"][BAND])}</li>' for t in met(d))
+    later = [t["name"] for t in TOOLS if t not in met(d)]
     qs = ''.join(f'<li>{E(q)}</li>' for q in PROMPTS)
-    return (f'<div class="box t"><b>Toolbox and look-back (the same wording in every lesson)</b><div style="column-count:2;column-gap:18px;font-size:11.5px"><ul style="margin:3px 0 3px 16px">{li}</ul></div>'
+    return (f'<div class="box t"><b>Toolbox so far this term and look-back (the same wording in every lesson)</b><div style="column-count:2;column-gap:18px;font-size:11.5px"><ul style="margin:3px 0 3px 16px">{li}</ul></div>'
             f'<div class="small"><b>Look-back, about 2 minutes, one problem from today:</b></div><ol style="margin:2px 0 2px 18px;font-size:11.5px">{qs}</ol>'
-            f'<div class="small">The child ticks the tool used. Name the tool, not the answer, when you praise. {E(LB["intro"])}</div></div>')
+            f'<div class="small">The child ticks the tool used. Name the tool, not the answer, when you praise. {E(LB["intro"])}' + (f' Later terms add: {E(", ".join(later))}.' if later else '') + '</div></div>')
 
 
 def lookback_lines():
@@ -175,15 +181,16 @@ def lookback_lines():
 # ------------------------------------------------------------------ deck (b_deck.py)
 
 def deck_chip(d):
-    """'TODAY'S TOOL' pill on the title slide's first line (dark background): cream stroke icon and the tool name. One line, so the title block does not grow."""
+    """'TODAY'S TOOL' pill at the bottom left of the title slide (dark background): cream stroke icon and the tool name. Absolutely placed (y 946-1016 px), below the card
+    (the lowest content measured on the 40 title slides ends at y 910) and above the footer line, so the title block does not move."""
     x = info(d)
     if not x:
         return ''
-    pill = 'data-spine="chip" style="background:#26385F;border-radius:999px;padding:8px 30px 8px 18px;display:flex;align-items:center;gap:18px;color:#FFF9EC"'
+    pill = 'data-spine="chip" style="position:absolute;left:128px;bottom:62px;background:#26385F;border-radius:999px;padding:8px 30px 8px 18px;display:flex;align-items:center;gap:18px;color:#FFF9EC"'
     if x['choose']:
-        ics = ''.join(icon(t['id'], 40, CREAM, 'px') for t in TOOLS)
+        ics = ''.join(icon(t['id'], 40, CREAM, 'px') for t in met(d))
         return f'<div {pill}><p style="font-size:26px;font-weight:800;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:34px;font-weight:700">You choose</p><div style="display:flex;gap:8px">{ics}</div></div>'
-    return f'<div {pill}>{icon(x["tool"]["id"], 56, CREAM, "px")}<p style="font-size:26px;font-weight:800;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:40px;font-weight:700">{E(x["name"])}</p></div>'
+    return f'<div {pill}>{icon(x["tool"]["id"], 52, CREAM, "px")}<p style="font-size:26px;font-weight:800;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:38px;font-weight:700">{E(x["name"])}</p></div>'
 
 
 def deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip):
@@ -194,9 +201,9 @@ def deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip):
     rows = ''
     for k, q in enumerate(PROMPTS, 1):
         ans = (f'<span style="white-space:nowrap">{box()}yes &nbsp; {box()}not yet</span>' if k < 3 else f'<span style="color:{MUTED}">{E(LB["answer3"][BAND])}</span>')
-        rows += (f'<div style="display:flex;gap:28px;align-items:center;padding:12px 0;{"border-top:2px solid #DCE4F0;" if k > 1 else ""}"><span style="flex:none;width:64px;height:64px;border-radius:50%;border:3px solid {NAVY};display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:800">{k}</span>'
-                 f'<p style="flex:1;font-size:46px;font-weight:700;line-height:1.2">{E(q)}</p><p style="font-size:32px;font-weight:600">{ans}</p></div>')
-    ics = ''.join(f'<span style="display:inline-flex;align-items:center;gap:8px">{icon(t["id"], 62, NAVY, "px")}{box()}</span>' for t in TOOLS)
-    foot = (f'<div style="display:flex;align-items:center;gap:22px;border-top:2px solid #DCE4F0;padding-top:14px"><p style="font-size:30px;font-weight:800;color:{TEAL};flex:none">{E(LB["footer_tools"])}</p><div style="display:flex;gap:18px;flex-wrap:wrap">{ics}</div></div>'
-            f'<p style="font-size:28px;font-weight:600">{box()}{E(STUCK)} &nbsp;&nbsp; {box()}{E(LB["pass"])}</p>')
-    return chip('Three minutes. ' + LB['intro'], 30) + f'<div style="{CARD}padding:18px 40px;display:flex;flex-direction:column;gap:6px;max-width:1500px">{rows}{foot}</div>'
+        rows += (f'<div style="display:flex;gap:28px;align-items:center;padding:16px 0;{"border-top:2px solid #DCE4F0;" if k > 1 else ""}"><span style="flex:none;width:70px;height:70px;border-radius:50%;border:3px solid {NAVY};display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:800">{k}</span>'
+                 f'<p style="flex:1;font-size:50px;font-weight:700;line-height:1.2">{E(q)}</p><p style="font-size:34px;font-weight:600">{ans}</p></div>')
+    ics = ''.join(f'<span style="display:inline-flex;align-items:center;gap:8px">{icon(t["id"], 78, NAVY, "px")}{box()}</span>' for t in met(d))
+    foot = (f'<div style="display:flex;align-items:center;gap:22px;border-top:2px solid #DCE4F0;padding-top:14px"><p style="font-size:34px;font-weight:800;color:{TEAL};flex:none">{E(LB["footer_tools"])}</p><div style="display:flex;gap:18px;flex-wrap:wrap">{ics}</div></div>'
+            f'<p style="font-size:32px;font-weight:600">{box()}{E(STUCK)} &nbsp;&nbsp; {box()}{E(LB["pass"])}</p>')
+    return chip('Three minutes. ' + LB['intro'], 30) + f'<div style="{CARD}padding:20px 44px;display:flex;flex-direction:column;gap:10px;max-width:1560px">{rows}{foot}</div>'
