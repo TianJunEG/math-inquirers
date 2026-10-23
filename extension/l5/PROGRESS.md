@@ -11,11 +11,11 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 2 | Fraction feats | yes | yes | yes | yes |
 | 3 | Before and after | yes | yes | yes | yes |
 | 4 | Triangle areas | yes | yes | yes | yes |
-| 5 | Volume vault | | | | |
+| 5 | Volume vault | yes | yes | yes | yes |
 | 6 | Rate racers | | | | |
 | 7 | Percentage puzzles | | | | |
 | 8 | Angle chasers | | | | |
 | 9 | Pattern generalisers | | | | |
 | 10 | Challenge day | | | | |
 
-Resume: next unit is 5.
+Resume: next unit is 6.
