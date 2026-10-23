@@ -54,6 +54,8 @@ th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertic
 .scroll{overflow-x:auto}
 .bar{height:10px;border-radius:99px;background:var(--grid);overflow:hidden;min-width:80px}.bar>i{display:block;height:100%;background:var(--teal)}
 .hidden{display:none}
+.nw,td .pill{white-space:nowrap}
+main>.row{margin-bottom:12px}
 form>h3{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
 .row>h1{margin:0}.row>.btn:last-child{margin-left:auto}
 .next{font-weight:700}.next a{font-weight:800}

@@ -163,7 +163,7 @@ with sync_playwright() as pw:
         expect(ap.locator('#enrolments tbody tr')).to_have_count(1)
         expect(ap.locator('#fill tr[data-group="L1A"]')).to_contain_text('1')
         ap.once('dialog', lambda d: d.accept()); ap.locator('[data-mark-paid]').click()
-        expect(ap.locator('.msg.info')).to_contain_text('paid')
+        expect(ap.locator('.msg.ok')).to_contain_text('paid')
         ap.get_by_role('button', name='Paid', exact=True).click(); expect(ap.locator('#enrolments tbody tr')).to_have_count(1)
         expect(ap.locator('#enrolments tbody tr')).to_contain_text('paid')
     check('admin lists enrolments, marks paid, sees group fill', admin_flow)

@@ -1782,7 +1782,7 @@
      {
       "k": "WORK",
       "text": "Children copy the triangle. Tutor scans the cameras.",
-      "s": 60
+      "s": 45
      },
      {
       "k": "SLIDE",
@@ -1832,7 +1832,7 @@
      {
       "k": "WORK",
       "text": "Children draw the line on a route grid. Wait after each direction.",
-      "s": 55
+      "s": 45
      },
      {
       "k": "ASK",
@@ -1860,12 +1860,12 @@
      {
       "k": "ASK",
       "text": "Is there another route? How can we be sure we have found them all?",
-      "resp": 50
+      "resp": 40
      },
      {
       "k": "WORK",
       "text": "Children draw the routes on route grids. They may rub out and use a grid again.",
-      "s": 45
+      "s": 35
      },
      {
       "k": "SLIDE",

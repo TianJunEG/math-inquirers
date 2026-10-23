@@ -8,6 +8,7 @@ For each level it reads the designed student workbook and writes outputs/print/M
     and on the right of back pages, so the same strip of every sheet is the bound edge);
   * the cut-out pages (from the page headed 'Cut-outs' up to the certificate) and the certificate each get a blank
     back, so cutting a piece out never destroys something on the other side;
+  * a blank page is inserted before the first cut-out page if it would otherwise land on the back of a content page;
   * a blank page is added at the end if needed, so the page count is even (a whole number of sheets).
 It also writes outputs/print/print_spec.json (page and sheet counts) used for printer quotes.
 """
@@ -51,6 +52,8 @@ def build(n):
         single_sided.add(cert)
     seq = []  # (source page index or None for blank)
     for p in range(1, total + 1):
+        if p == cut_start and len(seq) % 2:
+            seq.append(None)   # parity pad: first cut-out page must sit on a front (odd) page, never on the back of content
         seq.append(p - 1)
         if p in single_sided:
             seq.append(None)

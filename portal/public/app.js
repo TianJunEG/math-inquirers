@@ -249,7 +249,7 @@
     var t = h('input', { type: 'text', id: 'del-confirm', placeholder: 'Type DELETE', autocomplete: 'off', 'aria-label': 'Type DELETE to confirm' });
     d.appendChild(t);
     d.appendChild(h('p', null, h('button', { class: 'btn danger', type: 'button', id: 'del-btn', text: 'Delete everything', onclick: async function () {
-      if (t.value.trim() !== 'DELETE') return run(async function () { throw M.say('Type the word DELETE in the box to confirm.'); });
+      if (t.value.trim() !== 'DELETE') return run(async function () { throw M.say('Type DELETE in the box to confirm.'); });
       try { await rpc('delete_my_data', {}); await M.sb().auth.signOut(); flash('ok', 'Your data has been deleted.'); } catch (e) { flash('err', M.errText(e)); }
       await refresh();
     } })));

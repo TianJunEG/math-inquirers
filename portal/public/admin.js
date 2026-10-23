@@ -55,8 +55,8 @@
         return h('tr', { 'data-enrolment': r.enrolment_id },
           h('td', { text: r.payment_reference }), h('td', { text: r.child_name || '(removed)' }),
           h('td', null, r.parent_name || '', h('br'), h('span', { class: 'small muted', text: (r.parent_email || '') + (r.parent_phone ? ' ' + r.parent_phone : '') })),
-          h('td', { text: r.group_id }), h('td', { text: r.payment_method }), h('td', { text: M.money(r.amount_cents) }),
-          h('td', null, h('span', { class: 'pill ' + r.payment_status, text: r.payment_status }), ' ', h('span', { class: 'pill ' + r.enrolment_status, text: r.enrolment_status.replace('_', ' ') })),
+          h('td', { class: 'nw', text: r.group_id }), h('td', { text: r.payment_method === 'paynow_manual' ? 'PayNow' : r.payment_method }), h('td', { class: 'nw', text: M.money(r.amount_cents) }),
+          h('td', null, h('span', { class: 'pill ' + r.payment_status, text: 'payment ' + r.payment_status }), ' ', h('span', { class: 'pill ' + r.enrolment_status, text: 'place ' + r.enrolment_status.replace('_', ' ') })),
           h('td', null, r.payment_status === 'pending' && r.enrolment_status !== 'cancelled' ? h('button', { class: 'btn sm', type: 'button', 'data-mark-paid': r.payment_reference, text: 'Mark paid', onclick: async function () {
             if (!confirm('Mark ' + r.payment_reference + ' (' + M.money(r.amount_cents) + ') as paid? Check your bank first.')) return;
             var x = await M.sb().rpc('admin_mark_paid', { p_payment: r.payment_id, p_note: 'PayNow ticked by owner' });
