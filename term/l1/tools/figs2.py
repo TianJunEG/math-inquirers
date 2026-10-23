@@ -39,8 +39,9 @@ def _icon_body(name):
     if n == 'sticker':
         pts = ' '.join(f'{32 + (26 if i % 2 == 0 else 11) * math.sin(i * math.pi / 5):.1f},{33 - (26 if i % 2 == 0 else 11) * math.cos(i * math.pi / 5):.1f}' for i in range(10))
         return f'<polygon points="{pts}" {_o(YEL)}/>'
-    if n == 'ball':
-        return (f'<circle cx="32" cy="32" r="25" {_o("#5BA4E6")}/><path d="M7 32 H57" stroke="{NAVY}" stroke-width="2.4" fill="none"/><path d="M32 7 C20 20 20 44 32 57 C44 44 44 20 32 7" stroke="{NAVY}" stroke-width="2.4" fill="none"/>')
+    if n == 'ball':        # a tennis ball: yellow-green with two curved seams (not a globe: no blue, no meridians or equator)
+        return (f'<circle cx="32" cy="32" r="25" {_o("#C9E04A")}/><path d="M11 17 C26 25 26 39 11 47" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>'
+                f'<path d="M53 17 C38 25 38 39 53 47" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="32" r="25" fill="none" stroke="{NAVY}" stroke-width="{SW}"/>')
     if n == 'marble':
         return f'<circle cx="32" cy="32" r="24" {_o("#7B4FB5")}/><path d="M20 24 C22 18 28 15 33 16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>'
     if n == 'pencil':
@@ -381,6 +382,10 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
 
 # ------------------------------------------------------------------ table
 
+ICON_ROW_H = 112      # table rows that hold pictures (viewBox is 900 wide: an icon of 96 units is about 14 mm on a 137 mm wide table)
+ICON_MAX = 96
+
+
 def table(head=None, rows=None, col_w=None, first_col=None, cell_h=64, font=32, width=900):
     """A drawn table. Cells: text, '[]' answer box, '[2]' linked boxes, '()' circle, '[ ]' tick box, or {"icon":"apple","n":3}."""
     head = head or []
@@ -395,6 +400,7 @@ def table(head=None, rows=None, col_w=None, first_col=None, cell_h=64, font=32, 
     allrows = ([('head', head)] if head else []) + [('row', r) for r in rows]
     for kind, r in allrows:
         h = cell_h * (0.85 if kind == 'head' else 1)
+        if kind == 'row' and any(isinstance(c, dict) and 'icon' in c for c in r): h = max(h, ICON_ROW_H)     # picture rows are tall enough for icons of about 14 mm on paper
         for c in range(ncol):
             x0, x1 = xs[c] + 4, xs[c + 1] + 4
             fill = YEL if kind == 'head' else ('#F3F6FB' if (c == 0 and first_col == 'label') else '#fff')
@@ -402,7 +408,7 @@ def table(head=None, rows=None, col_w=None, first_col=None, cell_h=64, font=32, 
             cell = r[c] if c < len(r) else ''
             cx, cy = (x0 + x1) / 2, y + h / 2
             if isinstance(cell, dict) and 'icon' in cell:
-                n = cell.get('n', 1); sz = min(h - 14, (x1 - x0) / max(n, 1) - 4, 44)
+                n = cell.get('n', 1); sz = min(h - 14, (x1 - x0) / max(n, 1) - 4, ICON_MAX)
                 for i in range(n):
                     body.append(icon(cell['icon'], cx - (n - 1) * (sz + 4) / 2 + i * (sz + 4), cy, sz))
             else:

@@ -5,11 +5,11 @@ from .pages_numbers import grid_table, howto_grid
 
 # ---------------------------------------------------------------- P15
 COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7}        # real diameters in mm: only the RATIOS are used (a fact, not a design); the coins are drawn at 0.9 of these, bigger than real
-COIN_D = {v: d * 0.9 for v, d in COIN_REAL.items()}
+COIN_D = {v: d * 0.82 for v, d in COIN_REAL.items()}
 
 def _motif(v, cx, cy, u):
     """an ORIGINAL small picture per value (not any real coin design): leaf (5), star (10), flower (20), sailboat (50); u is the coin radius"""
-    k = u * 0.2; st = 'fill="none" stroke="#000" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"'
+    k = u * 0.15; st = 'fill="none" stroke="#000" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"'
     if v == 5:
         return f'<path d="M{cx-k*1.3:.2f},{cy+k*0.6:.2f} Q{cx-k*0.2:.2f},{cy-k*1.6:.2f} {cx+k*1.3:.2f},{cy-k*0.9:.2f} Q{cx+k*0.6:.2f},{cy+k*1.0:.2f} {cx-k*1.3:.2f},{cy+k*0.6:.2f} Z" {st}/>'
     if v == 10:
@@ -26,9 +26,9 @@ def coins_svg(coins):
         d = COIN_D[v]; r = d / 2; cx = x + r
         p.append(f'<circle class="coin" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
                  f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
-                 + _motif(v, cx, cy - r * 0.50, r) +
-                 f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.12:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{v}</text>'
-                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.62:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.30:.1f}" fill="#000">cents</text>')
+                 + _motif(v, cx, cy - r * 0.60, r) +
+                 f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.22:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{v}</text>'
+                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.68:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.28:.1f}" fill="#000">cents</text>')
         x += d + 2.0
     return svg(x + 1, H + 1, "".join(p))
 
@@ -166,18 +166,18 @@ def ruler_unit(L, start=0):
     """strip of length L cm lying on a ruler 0..12 cm from the arrow at `start`; scale 10 mm per cm. A bold arrow above the left end of the strip and a bold
     tick on the ruler show where it starts. The ruler body extends 4.5 mm past 0 and 12 so the labels 0 and 12 are not crossed by the ruler's border."""
     x0 = 5; p = []; xs = x0 + start * 10
-    p.append(f'<polygon class="arrow" points="{xs-2.2},0.5 {xs+2.2},0.5 {xs},4.4" fill="#000"/>')
-    p.append(f'<rect class="strip" x="{xs}" y="4.8" width="{L*10}" height="5.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    p.append(f'<polygon class="arrow" points="{xs-2.2},0.4 {xs+2.2},0.4 {xs},3.7" fill="#000"/>')
+    p.append(f'<rect class="strip" x="{xs}" y="4.0" width="{L*10}" height="5.0" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(0, L * 10, 3):
-        p.append(f'<line x1="{xs+k}" y1="10.3" x2="{xs+min(k+3, L*10)}" y2="4.8" stroke="#000" stroke-width="0.25"/>')
-    p.append(f'<rect x="0.5" y="11.3" width="{RULER_CM*10 + 2*x0 - 1}" height="8.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+        p.append(f'<line x1="{xs+k}" y1="9.0" x2="{xs+min(k+3, L*10)}" y2="4.0" stroke="#000" stroke-width="0.25"/>')
+    p.append(f'<rect x="0.5" y="9.9" width="{RULER_CM*10 + 2*x0 - 1}" height="8.0" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(RULER_CM * 10 + 1):
         h = 4.2 if k % 10 == 0 else (2.8 if k % 5 == 0 else 1.3)
         bold = k == start * 10
-        p.append(f'<line x1="{x0+k}" y1="11.3" x2="{x0+k}" y2="{11.3+h+(1.5 if bold else 0)}" stroke="#000" stroke-width="{1.1 if bold else (0.45 if k%10==0 else 0.3)}"/>')
+        p.append(f'<line x1="{x0+k}" y1="9.9" x2="{x0+k}" y2="{9.9+h}" stroke="#000" stroke-width="{1.1 if bold else (0.45 if k%10==0 else 0.3)}"/>')
     for k in range(RULER_CM + 1):
-        p.append(f'<text x="{x0+k*10}" y="18.7" text-anchor="middle" font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{k}</text>')
-    return svg(RULER_CM * 10 + 2 * x0, 20.5, "".join(p))
+        p.append(f'<text x="{x0+k*10}" y="16.9" text-anchor="middle" font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{k}</text>')
+    return svg(RULER_CM * 10 + 2 * x0, 18.6, "".join(p))
 
 def page17():
     rng = random.Random(1717)

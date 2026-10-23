@@ -292,21 +292,21 @@ def page13():
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
 def share_svg(kind, n, g, per, mode):
     """objects in rows of 10 on the left; for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
-    pitch = 6.6; prow = 14 if n <= 14 else 10; rows = (n + prow - 1) // prow; H = rows * 8.6 + 2
+    pitch = 7.0; prow = 12 if n <= 12 else 10; rows = (n + prow - 1) // prow; H = rows * 7.8 + 1.6
     inner = []
     for i in range(n):
-        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 1.5 + (i // prow) * 8.6))
+        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 7.8, 6.2))
     W = 1 + min(n, prow) * pitch + 1
     if mode == "share":
-        x0 = W + 6; cw, chh = 15, 10.5
-        per_line = 2 if (n > 8 or g == 4) else 3; lines = (g + per_line - 1) // per_line
+        x0 = W + 5; cw, chh = 14, 9.5
+        per_line = 3; lines = (g + per_line - 1) // per_line
         for j in range(g):
-            inner.append(container_g(kind, x0 + (j % per_line) * (cw + 3), 1 + (j // per_line) * (chh + 2), cw, chh))
-        W = x0 + per_line * (cw + 3)
+            inner.append(container_g(kind, x0 + (j % per_line) * (cw + 2.5), 0.8 + (j // per_line) * (chh + 2), cw, chh))
+        W = x0 + per_line * (cw + 2.5)
         H = max(H, 1 + lines * (chh + 2) + 1)
     else:
         # the example loop: a dashed rounded frame round the first group of `per` objects (first row only, per <= 10)
-        inner.append(f'<rect class="loop" x="0.2" y="0.8" width="{per * pitch + 0.2:.2f}" height="8.4" rx="3.5" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
+        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="7.6" rx="3.4" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
         W = max(W, 76)
     return svg(round(W, 1), round(H, 1), "".join(inner)), (round(W, 1), round(H, 1))
 
@@ -329,8 +329,8 @@ def page03():
         items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
-            lim = 20 if k == big else 14
-            g = rng.randint(2, 7 if kind == "group" else 4); per = rng.randint(2, 9 if kind == "group" else 10)
+            lim = 20 if k == big else 12
+            g = rng.randint(2, 6 if kind == "group" else 3); per = rng.randint(2, 9 if kind == "group" else 10)
             if g * per > lim: continue
             items.append((kind, g * per, g, per))
         if len(items) != 6: continue

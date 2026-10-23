@@ -111,7 +111,7 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .shansw{display:flex;flex-direction:column;gap:2mm;border-left:0.5mm solid #000;padding-left:6mm}
 .shans{display:flex;align-items:center;gap:2mm}
 .shans .ab{width:15mm;height:12mm}
-.grows,.crows,.lrows{display:flex;flex-direction:column;gap:3mm}
+.grows,.crows,.lrows{display:flex;flex-direction:column;gap:2mm}
 .grow,.crow,.lrow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
 .gsvg{width:100mm;flex:none}.geq{margin-left:auto;display:flex;align-items:center;gap:2mm}.geq .ab{width:14mm}
 .lbx{display:inline-flex;flex-direction:column;align-items:center;gap:0.3mm}.lbx small{font-size:8.5pt;font-weight:700;line-height:1}

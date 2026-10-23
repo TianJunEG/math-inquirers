@@ -522,11 +522,16 @@ def network(n=4, lines=None, all_lines=False, labels=None, r=95, count=None, tag
 
 # ------------------------------------------------------------------ picture graph
 
-def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows', key=True, tally=False, cell=54, label_w=150):
+def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows', key=True, tally=False, cell=None, label_w=None):
     """rows=[{'label':'Cats','n':5,'hide':[4]}]; n may end in .5 (half picture). each = how many each picture means (shown in the key). orient 'rows' (bars go right)
-    or 'cols' (bars go up). tally=True draws tally marks (groups of five) instead of pictures. hide=[k] draws an empty dashed place for picture k."""
+    or 'cols' (bars go up). tally=True draws tally marks (groups of five) instead of pictures. hide=[k] draws an empty dashed place for picture k.
+    cell=None picks the largest picture that keeps the figure about 640 units wide (at most 76, so a short graph has big pictures)."""
     rows = rows or []
     body = []; mx = max([math.ceil(r.get('n', 0)) for r in rows] + [1])
+    if label_w is None: label_w = max(100, 15 * max([len(str(r.get('label', ''))) for r in rows] + [4]) + 18) if orient == 'rows' else 0
+    if cell is None:
+        cell = min(76, (640 - label_w) / mx) if orient == 'rows' else min(76, 640 / max(len(rows), 1) - 20)
+        cell = max(cell, 44)
     top = 50 if title else 12
     def pic(i, x, y, r, k):
         if k in r.get('hide', ()):
@@ -534,8 +539,8 @@ def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows
         frac = r['n'] - k
         if 0 < frac < 1:
             cid = f'cl{i}_{k}'
-            return f'<clipPath id="{cid}"><rect x="{x - cell / 2:.1f}" y="{y - cell / 2:.1f}" width="{cell / 2:.1f}" height="{cell:.1f}"/></clipPath><g clip-path="url(#{cid})">{icon(icon_name, x, y, cell * .8)}</g>'
-        return icon(icon_name, x, y, cell * .8)
+            return f'<clipPath id="{cid}"><rect x="{x - cell / 2:.1f}" y="{y - cell / 2:.1f}" width="{cell / 2:.1f}" height="{cell:.1f}"/></clipPath><g clip-path="url(#{cid})">{icon(icon_name, x, y, cell * .9)}</g>'
+        return icon(icon_name, x, y, cell * .9)
     if title: body.append(f'<text x="{(label_w + mx * cell) / 2 + 10:.0f}" y="32" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(title)}</text>')
     if orient == 'rows':
         for i, r in enumerate(rows):
@@ -588,7 +593,7 @@ def render(v):
     if t == 'shapes2d': return _tagged(shapes2d(v.get('shape', 'circle'), v.get('parts', 1), v.get('shade', ()), v.get('fold'), v.get('compose'), _draw_size(v), label=v.get('label')), v.get('tag'))
     if t == 'grid': return grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64))
     if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso')), v.get('tag'))
-    if t == 'fold_punch': return _tagged(fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())], _draw_size(v)), v.get('tag'))
+    if t == 'fold_punch': return _tagged(fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())], v.get('draw') or 150), v.get('tag'))
     if t == 'panel': return _tagged(panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130)), v.get('tag'))
     if t == 'network': return network(v.get('n', 4), v.get('lines'), v.get('all', False), v.get('labels'), count=v.get('count'), tag=v.get('tag'))
     if t == 'picture_graph': return picture_graph(v.get('rows'), v.get('icon', 'apple'), v.get('each', 1), v.get('title'), v.get('orient', 'rows'), v.get('key', True), v.get('tally', False))
