@@ -432,7 +432,7 @@
         ],
         "icon": "counter",
         "title": "Graph A",
-        "size": "m"
+        "size": "l"
        }
       ],
       [
@@ -448,7 +448,7 @@
         "icon": "counter",
         "title": "Graph B",
         "each": 2,
-        "size": "m"
+        "size": "l"
        }
       ]
      ]
@@ -481,7 +481,7 @@
         ],
         "icon": "counter",
         "title": "Graph A",
-        "size": "m"
+        "size": "l"
        }
       ],
       [
@@ -497,7 +497,7 @@
         "icon": "counter",
         "title": "Graph B",
         "each": 2,
-        "size": "m"
+        "size": "l"
        }
       ]
      ]
@@ -1829,7 +1829,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "The most books were read by (circle one).",
+      "text": "Circle the child who read the most books.",
       "ans": "Mei",
       "val": "Mei",
       "choices": [
@@ -1964,7 +1964,7 @@
      },
      {
       "l": "b",
-      "text": "The same number of pears and (circle one).",
+      "text": "Circle the kind with the same number as pears.",
       "ans": "Oranges",
       "val": "Oranges",
       "choices": [
@@ -1997,7 +1997,7 @@
      "icon": "counter",
      "title": "Fruit in a basket",
      "key": false,
-     "size": 56
+     "size": 74
     }
    },
    {
@@ -2058,7 +2058,7 @@
      },
      {
       "l": "b",
-      "text": "There are the most (circle one).",
+      "text": "Circle the kind with the most.",
       "ans": "Apples",
       "val": "Apples",
       "choices": [
@@ -2201,7 +2201,7 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "A child in another class looks at the graph in question T2. She says Coral has 4 shells because there are 4 pictures.",
+    "text": "A child in another class looks at the graph in question T2. She says Coral has 4 shells.",
     "answer": "No; 8 shells",
     "val": [
      "No",
@@ -2328,7 +2328,7 @@
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "The graph shows the books in a library. Which question can the graph not answer? Write its number in the brackets.",
+    "text": "Each picture stands for 1 book. Which question can the graph not answer? Write its number in the brackets.",
     "answer": "(2)",
     "val": [
      2
@@ -2410,7 +2410,7 @@
    "parts": [
     {
      "l": "",
-     "text": "The fewest stickers belong to (circle one).",
+     "text": "Circle the child with the fewest stickers.",
      "ans": "Siti",
      "val": "Siti",
      "choices": [
@@ -2447,7 +2447,7 @@
     ],
     "icon": "sticker",
     "key": false,
-    "size": 34
+    "size": 44
    }
   },
   {
