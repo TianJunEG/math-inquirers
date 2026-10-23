@@ -1,44 +1,44 @@
 [
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
   "pages": 22,
   "sheets": 11,
-  "mb": 2.92,
-  "pale_tint_dropped_max": 0.0251
+  "mb": 3.21,
+  "pale_tint_dropped_max": 0.0248
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_HomePack_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_HomePack_PRINT.pdf",
   "pages": 12,
   "sheets": 6,
-  "mb": 1.07,
-  "pale_tint_dropped_max": 0.0387
+  "mb": 1.11,
+  "pale_tint_dropped_max": 0.0355
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_Workbook_PRINT.pdf",
-  "pages": 42,
-  "sheets": 21,
-  "mb": 4.85,
-  "pale_tint_dropped_max": 0.3005
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
-  "pages": 30,
-  "sheets": 15,
-  "mb": 4.59,
-  "pale_tint_dropped_max": 0.4875
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_HomePack_PRINT.pdf",
-  "pages": 14,
-  "sheets": 7,
-  "mb": 1.34,
-  "pale_tint_dropped_max": 0.0578
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_Workbook_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_Workbook_PRINT.pdf",
   "pages": 46,
   "sheets": 23,
-  "mb": 5.78,
-  "pale_tint_dropped_max": 0.1949
+  "mb": 6.53,
+  "pale_tint_dropped_max": 0.3378
+ },
+ {
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book2_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
+  "pages": 30,
+  "sheets": 15,
+  "mb": 4.66,
+  "pale_tint_dropped_max": 0.5064
+ },
+ {
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book2_Lessons06-10_HomePack_PRINT.pdf",
+  "pages": 14,
+  "sheets": 7,
+  "mb": 1.28,
+  "pale_tint_dropped_max": 0.0699
+ },
+ {
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book2_Lessons06-10_Workbook_PRINT.pdf",
+  "pages": 46,
+  "sheets": 23,
+  "mb": 6.48,
+  "pale_tint_dropped_max": 0.3377
  }
 ]
