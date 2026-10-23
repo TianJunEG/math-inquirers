@@ -236,3 +236,7 @@ Answered and dropped: which cohort and start term, whether terms follow a school
 8. Are some Beyond-MOE lessons (chance, robot recipes, grid hunt, look again) acceptable to parents who want tight school alignment, or should they be labelled optional?
 9. Who reviews the plan against the actual school scheme of work, since the order of school topics was not verified here? This also decides whether the T1.8 "1 m = 100 cm" Go further is inside P2.
 10. **KIV, not Level 2 matters, not resolved:** Level 5 lessons 28 and 29 may merge; Level 5 lesson 32 may be too full; a secondary speed preview in Level 5 lesson 15; hand-drawn figures for Level 3 lessons 22 and 23.
+
+## Non-routine assignment (hook; owner decision 23 Oct 2026)
+
+Non-routine assignment to be added when the level's papers are analysed. The owner decided that the non-routine question types found in school papers are part of every term plan: each lesson will name its non-routine type(s), the tier (Think harder or Go further, never Start here) and original example items, with a type-by-lesson matrix. The Level 1 version is `docs/terms/level_1_year_plan.md` section 8, built on `docs/books/p1_non_routine_catalogue.md`. The Primary 2 test papers are not yet analysed for this; until they are, the contest-style items already in this plan stand. No school or contest question text is copied into a lesson or committed.

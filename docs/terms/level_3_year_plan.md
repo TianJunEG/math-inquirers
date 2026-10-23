@@ -270,3 +270,7 @@ Answered and dropped: cohort and start term for holiday graduates (they start Te
 10. The term price and the group stability across terms (the owner list says the website's S$65 a lesson, S$650 for 10, is out of date), and tutor continuity.
 11. Is the end-of-term check shared with parents as a strand profile, or only used to place children?
 12. Is the T4 synthesis lesson 39 the best use of the added slot, or should a gap lesson (2-digit multipliers, outside the P3 SPEC) go there instead?
+
+## Non-routine assignment (hook; owner decision 23 Oct 2026)
+
+Non-routine assignment to be added when the level's papers are analysed. The owner decided that the non-routine question types found in school papers are part of every term plan: each lesson will name its non-routine type(s), the tier (Think harder or Go further, never Start here) and original example items, with a type-by-lesson matrix. The Level 1 version is `docs/terms/level_1_year_plan.md` section 8, built on `docs/books/p1_non_routine_catalogue.md`. The Primary 3 test papers are not yet analysed for this; until they are, the contest-style items already in this plan stand. No school or contest question text is copied into a lesson or committed.

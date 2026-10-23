@@ -261,3 +261,7 @@ Answered and dropped (22 Oct 2026): cohort and start term (places open every ter
 8. Is a lesson on exam-style multi-step problems (lesson 37) desirable, or does it drift toward exam preparation, which the program says it is not?
 9. Do P5 year-end exams fall in Term 4 and reduce attendance? The plan makes Term 4 lighter in new content, and every term names a lesson that is safest to skip (9, 18, 29, 39); the make-up route (recording, or a holiday class if there is a seat) needs holiday-class capacity.
 10. Is a term-end check acceptable to parents, or should it be a "show what you can do" session with no paper? Is the Term 4 check better placed in lesson 37 or 38 than in the Year Showcase?
+
+## Non-routine assignment (hook; owner decision 23 Oct 2026)
+
+Non-routine assignment to be added when the level's papers are analysed. The owner decided that the non-routine question types found in school papers are part of every term plan: each lesson will name its non-routine type(s), the tier (Think harder or Go further, never Start here) and original example items, with a type-by-lesson matrix. The Level 1 version is `docs/terms/level_1_year_plan.md` section 8, built on `docs/books/p1_non_routine_catalogue.md`. The Primary 5 test papers are not yet analysed for this; until they are, the contest-style items already in this plan stand. No school or contest question text is copied into a lesson or committed.

@@ -259,3 +259,7 @@ Roughly 490 hours in total (+/-40 percent, so about 295 to 685). Term 1 first, b
 10. KIV, not resolved, none affecting Level 4: Level 5 lessons 28 and 29 merge; Level 5 lesson 32 may be too full; a secondary speed preview in Level 5 lesson 15; hand-drawn figures for Level 3 lessons 22 and 23. Speed stays out of primary levels except Level 6 enrichment.
 
 Answered and removed: cohort and start term (holiday graduates follow the term calendar), price and discount (per term, 5% full-term discount), whether Term 1 repeats the holiday lessons (no), and the 8-point compass (the holiday lesson that used it is no longer reused).
+
+## Non-routine assignment (hook; owner decision 23 Oct 2026)
+
+Non-routine assignment to be added when the level's papers are analysed. The owner decided that the non-routine question types found in school papers are part of every term plan: each lesson will name its non-routine type(s), the tier (Think harder or Go further, never Start here) and original example items, with a type-by-lesson matrix. The Level 1 version is `docs/terms/level_1_year_plan.md` section 8, built on `docs/books/p1_non_routine_catalogue.md`. The Primary 4 test papers are not yet analysed for this; until they are, the contest-style items already in this plan stand. No school or contest question text is copied into a lesson or committed.

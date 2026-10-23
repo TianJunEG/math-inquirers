@@ -11,6 +11,7 @@ Reworked to match `docs/terms/owner_decisions.md`. What changed:
 - **Mid-year joiners.** Each term has a "can a new child join cold?" line and a safest-to-skip lesson (section 2). No lesson assumes the previous term except through the warm-up.
 - **Added 10th lessons (the best remaining gaps):** Lesson 10 Story Steps (multi-step stories, reading traps: books gaps 1 and 2); Lesson 20 Find One First (price or size of one: books gap 3); Lesson 30 Calendar Detective (SASMO time and calendar gap); Lesson 35 Spot It (SASMO visual perception gap).
 - **Not changed:** KIV items belong to other levels (Level 5 lessons 28/29 merge, lesson 32 too full, secondary speed preview in lesson 15; Level 3 lessons 22/23 figures); none applies here. No speed work in this primary level.
+- **Non-routine work in every lesson (23 Oct 2026, owner decision).** New section 8 at the end lists, for each of the 40 lessons, the non-routine question types from the school-paper analysis (type, Think harder or Go further, written or new) with original catalogue items, plus a type-by-lesson matrix. Lessons 1 to 20 are unchanged; Lessons 21 to 40 carry the new assignments (`docs/terms/l1_term3_term4_preflight.md`, section 13).
 - Section 3, 4, 5, 6 and 7 were rewritten for these changes (reuse section, coverage matrix, 10-question checks, effort, open questions).
 
 ## Verified against MOE syllabus (Oct 2025)
@@ -198,3 +199,112 @@ Answered and dropped (owner decisions of 22 Oct 2026): which term first and how 
 8. Is the order (numbers and arithmetic in Term 1, shapes and graphs not until Term 4) acceptable for a child whose school teaches shapes and graphs early? A child who joins in Term 4 relies on the warm-up.
 9. Make-up slots: how many holiday-class seats can be offered in exam periods, and is the end-of-term check taken inside the 10th lesson or at a separate time?
 10. Are the thin-evidence lessons 27 (Latin squares) and 35 (Spot It) worth a full lesson, or should they be an optional enrichment lesson that a tutor may swap for a synthesis lesson?
+
+## 8. Non-routine work in every lesson (owner decision, 23 Oct 2026)
+
+The owner asked that the non-routine question types found in the school papers sit inside the term plan. Source: `docs/books/p1_non_routine_catalogue.md` (text-free summary of 268 non-routine questions in 78 Primary 1 tests from 17 schools, 2018 to 2025; the questions themselves are in a private, gitignored file). **Every one of the 40 lessons now names its non-routine work: a heuristic or reasoning type, the tier where it sits (Think harder or Go further, never Start here), and original example items.**
+
+How to read this section.
+
+- Type codes (the 14 types in the catalogue): LOG logical reasoning; CMP comparison (difference or sum); BACK work backwards; CTX unfamiliar context or hidden fact; LIST systematic list or choose numbers; EXP explain, true or false, odd one out; GC guess and check; PAT pattern; DIAG draw a model; MULTI multi-step; TAB table; EQ make equal; WAYS how many ways; CHAL build from clues.
+- **T** = Think harder, **G** = Go further. Status: **W** = already in the written lesson (Lessons 1 to 20; taken from each lesson's `contest_moves` in `term/l1/lessons/`); **F** = in the lesson file that exists now (Lessons 21 and 23; Term 3 writers are working on them); **N** = new assignment for a lesson not yet written. The Beyond (named) item in `docs/terms/l1_term3_term4_preflight.md` is the lesson's contest-style puzzle; the types below are the school-paper question types that sit alongside it.
+- Catalogue items are original examples with scripted answers, written for this project. Authors write their own items of the same kind and checks; they never copy a school or contest question.
+- Lessons 1 to 20 are built and audited and are **not edited here**. Where a type is thin in them, section 8.3 suggests a retrofit for the owner to decide.
+
+### 8.1 Lesson by lesson
+
+| # | Lesson | Non-routine types (tier, status): what | Catalogue items |
+|---|---|---|---|
+| 1 | Bundles and Singles | LOG (T, W): digit-clue puzzle: find the number from two clues; CTX (T, W): opening a bundle: 5 tens 14 ones | EX-LOG-3 |
+| 2 | Number Words and the Number Line | LOG (G, W): clue puzzle using halfway; DIAG (G, W): two frogs hop towards each other | (the written lesson's own items) |
+| 3 | Digit Cards | LIST (T, W): every number that fits two clues; list all cases; LOG (T, W): a number cannot start with 0 | EX-LOG-3, EX-LIST-1 |
+| 4 | The 100 Square Explorer | PAT (T, W): changing-step sequence; sum of the two before; LIST (G, W): numbers in two lists (2s and 5s) | EX-PAT-2 |
+| 5 | Make-a-Ten Adding | LIST (T, W): reorder to find pairs that make a ten | (the written lesson's own items) |
+| 6 | Tens Jump, Ones Hop | GC (G, W): fewest jumps with two jump sizes; BACK (T, W): undo the jumps (light) | (the written lesson's own items) |
+| 7 | Take Away, Count Up | CMP (T, W): difference as a gap; EXP (G, W): the gap stays the same when both numbers move | EX-BACK-1 |
+| 8 | Balance and Swap | EQ (T, W): give and take between two addends; EXP (T, W): say two sums are equal without adding | EX-LIST-3 |
+| 9 | Draw and Measure | DIAG (T, W): a bent path; a ribbon cut into pieces; CMP (T, W): a line that starts at a mark other than 0 | EX-DIAG-3 |
+| 10 | Story Steps: Read It Twice | MULTI (T, W): two-step and three-step stories; CMP (T, W): reversed wording (fewer than, more than); CTX (T, W): reading trap: who is in the group | EX-BACK-1, EX-CMP-1, EX-MULTI-1 |
+| 11 | Who Is Where? | LOG (T, W): seating and ordering clues; a line that faces the other way; DIAG (T, W): count both ends of a line (count the child once) | EX-LOG-1, EX-LOG-2, EX-DIAG-1 |
+| 12 | Bar Strips: More and Fewer | CMP (T, W): sum and difference; a chain of three strips; EQ (T, W): make equal by a transfer; BACK (T, W): an unknown first quantity in a strip story (light) | EX-CMP-2, EX-CMP-3, EX-DIAG-2, EX-EQ-1, EX-EQ-2 |
+| 13 | Doubles and Near Doubles | EQ (G, W): the middle number of several almost-equal numbers | EX-EQ-2 |
+| 14 | Odd + Odd: Always, Sometimes, Never | EXP (T, W): always, sometimes, never: one failing test breaks a claim | EX-EXP-1 |
+| 15 | Equal Groups | WAYS (G, W): list the ways to make equal groups of 24; EXP (T, W): turn an array: 2 x 8 = 8 x 2 | EX-EXP-2, EX-EXP-3, EX-WAYS-1 |
+| 16 | Skip-Count Tables | LIST (T, W): numbers that are in two tables; PAT (T, W): the 4s are the 2s doubled | (the written lesson's own items) |
+| 17 | Sharing and Grouping | CTX (T, W): who is in the group: shares with 3 cousins means 4 people; WAYS (G, W): every number of friends that can share 12 equally | EX-EXP-2, EX-MULTI-2, EX-WAYS-1 |
+| 18 | Times Stories | DIAG (T, W): twice as many is two equal strips; EQ (T, W): a transfer after twice as many; MULTI (G, W): a total with a hidden unit; BACK (T, W): an unknown start in a strip story (light) | EX-EQ-3 |
+| 19 | Picture Equations | CTX (T, W): a symbol stands for one number in every line; EXP (T, W): check the answer in every line | EX-CTX-1 |
+| 20 | Find One First | MULTI (T, W): price of one first, then of many; CMP (G, W): compare the price of one in two shops | EX-CTX-2, EX-MULTI-3 |
+| 21 | What Time Is It? | CTX (G, F): a clock seen in a mirror; the hour-hand trap at half past; LOG (G, F): which times look the same in a mirror | EX-CTX-4 |
+| 22 | Five Minutes at a Time | CMP (G, N): minutes between two times by chunks; CTX (T, N): which show is on at a time between start times | EX-CMP-4, EX-CTX-5 |
+| 23 | Time Passes | BACK (T, F): count back from the end to find the start; MULTI (G, F): a trip in two stages; CTX (T, N): read a timetable of start times | EX-BACK-3, EX-CTX-5 |
+| 24 | Dollars and Change | GC (T, N): coins for an exact amount; the fewest coins; BACK (T, N): paid and change given: find the price | EX-BACK-2, EX-GC-1, EX-GC-3 |
+| 25 | Price Tags: Compare and Choose | CMP (T, N): how much more; three prices, a total and a difference; GC (T, N): which two items cost exactly this much; LIST (T, N): choose numbers that add to a total; CHAL (G, N): find three prices from clues | EX-LIST-2, EX-GC-2 |
+| 26 | The School Shop | WAYS (T, N): every way to spend exactly $20; LIST (T, N): list with a check that no case is missing | EX-LIST-2, EX-GC-2, EX-WAYS-2 |
+| 27 | Fill the Grid | LOG (T, N): elimination in a 3 by 3 grid with clues | EX-LOG-4 |
+| 28 | Make a Table | TAB (T, N): a ratio table and a table for a growing pattern; PAT (T, N): the 10th and 20th term of a growing pattern; BACK (G, N): work back from a total | EX-BACK-3, EX-PAT-1, EX-TAB-1, EX-TAB-2 |
+| 29 | Spot the Mistake | EXP (T, N): find the wrong step and say why; CMP (T, N): catch a wrong "fewer than" sum; LIST (G, N): spot the wrong digit in a column sum | EX-CMP-1, EX-EXP-1 |
+| 30 | Calendar Detective | CTX (T, N): a week has 7 days; a fortnight; PAT (G, N): day-of-the-week cycles; LOG (G, N): two days after the day before yesterday | EX-CTX-2, EX-CTX-3, EX-PAT-3 |
+| 31 | Half and Quarter | DIAG (T, N): cut a shape into halves in several ways; LOG (G, N): guess the shape from its clues | EX-DIAG-3 |
+| 32 | Build the Figure | TAB (T, N): count each shape in a figure into a table; DIAG (T, N): split a figure into its shapes with a ruler; LIST (G, N): which pieces make this figure | EX-TAB-3 |
+| 33 | Copy on the Grid | WAYS (T, N): count the routes in a small grid; PAT (T, N): continue a path from its directions | EX-WAYS-4 |
+| 34 | Cubes and Views | LOG (T, N): fold once, punch once; a view from the top; CTX (G, N): fold twice, punch once | EX-LOG-5 |
+| 35 | Spot It | LOG (T, N): the odd one out; EXP (G, N): say which feature differs and why; PAT (T, N): a repeating pattern: which is the 11th | EX-LOG-2, EX-EXP-4, EX-PAT-3 |
+| 36 | Count Everything | WAYS (T, N): outfits and handshakes; TAB (T, N): a table of pairs that make a total; LIST (T, N): list every pair without repeats | EX-TAB-2, EX-TAB-3, EX-WAYS-3 |
+| 37 | Make Your Own Graph | TAB (T, N): tally and table before the graph; CHAL (G, N): build a graph from clues; BACK (T, N): find the missing bar from a total | EX-CHAL-1 |
+| 38 | Graph Detectives | CMP (T, N): more and fewer from a graph; BACK (T, N): the missing bar given the total; CHAL (G, N): a graph from clues | EX-CMP-2, EX-CMP-3, EX-CHAL-2 |
+| 39 | The Problem-Solving Toolbox | BACK (T, N): tool not named; GC (T, N): guess and check or a table: choose; EQ (G, N): make equal two ways; DIAG (T, N): draw it; TAB (T, N): make a table | EX-BACK-2, EX-CMP-3, EX-EQ-3 |
+| 40 | Inquirers' Showcase | CHAL (G, N): write a puzzle with a rule and check it; EXP (G, N): check a friend's puzzle and say what is wrong | EX-CHAL-3 |
+
+### 8.2 Matrix: type by lesson (the spiral across the year)
+
+`o` = already in a written or in-progress lesson (Lessons 1 to 20, and the files for 21 and 23); `N` = new for lessons not yet written; `.` = not planned.
+
+```
+Lesson        1234567890 1234567890 1234567890 1234567890
+Term          1111111111 2222222222 3333333333 4444444444
+LOG           ooo....... o......... o.....N..N N..NN.....
+CMP           ......o.oo .o.......o .N..N...N. .......N..
+BACK          .....o.... .o.....o.. ..oN...N.. ......NNN.
+CTX           o........o ......o.o. oNN......N ...N......
+LIST          ..ooo..... .....o.... ....NN..N. .N...N....
+EXP           ......oo.. ...oo...o. ........N. ....N....N
+GC            .....o.... .......... ...NN..... ........N.
+PAT           ...o...... .....o.... .......N.N ..N.N.....
+DIAG          .o......o. o......o.. .......... NN......N.
+MULTI         .........o .......o.o ..o....... ..........
+TAB           .......... .......... .......N.. .N...NN.N.
+EQ            .......o.. .oo....o.. .......... ........N.
+WAYS          .......... ....o.o... .....N.... ..N..N....
+CHAL          .......... .......... ....N..... ......NN.N
+```
+
+Count of lessons per type (written or in progress / new / total):
+
+| Type | Written | New | Total | Terms with it |
+|---|---|---|---|---|
+| LOG | 5 | 5 | 10 | T1, T2, T3, T4 |
+| CMP | 5 | 4 | 9 | T1, T2, T3, T4 |
+| BACK | 4 | 5 | 9 | T1, T2, T3, T4 |
+| CTX | 5 | 4 | 9 | T1, T2, T3, T4 |
+| LIST | 4 | 5 | 9 | T1, T2, T3, T4 |
+| EXP | 5 | 3 | 8 | T1, T2, T3, T4 |
+| GC | 1 | 3 | 4 | T1, T3, T4 |
+| PAT | 2 | 4 | 6 | T1, T2, T3, T4 |
+| DIAG | 4 | 3 | 7 | T1, T2, T4 |
+| MULTI | 4 | 0 | 4 | T1, T2, T3 |
+| TAB | 0 | 5 | 5 | T3, T4 |
+| EQ | 4 | 1 | 5 | T1, T2, T4 |
+| WAYS | 2 | 3 | 5 | T2, T3, T4 |
+| CHAL | 0 | 4 | 4 | T3, T4 |
+
+Every type appears in at least two terms. WAYS is absent from Term 1 by design (contest-style, and only 2 school items). BACK, GC, TAB and CHAL are the types the papers use most that the written Terms 1 and 2 use least, and are the main additions in Terms 3 and 4.
+
+### 8.3 Notes and retrofit ideas (not done here)
+
+- **Lessons 21 to 40 are the live assignments.** The Term 3 and 4 authors follow `docs/terms/l1_term3_term4_preflight.md`, section 13. `term/l1/lessons/` and `LESSON3_BRIEF.txt` were not edited.
+- **BACK is thin in Lessons 1 to 20** (a light trace in 6, 12 and 18). Suggested Think harder items, for the owner to approve and an author to write: Lesson 7 (a take-away story with the start unknown) and Lesson 10 (an "at first" story, one operation per step). Catalogue items EX-BACK-1 and EX-BACK-2 are the models.
+- **LIST (equation from three given numbers) has one home today (Lesson 3).** A fact-family Think harder item fits Lesson 8 (model EX-LIST-3).
+- **EXP in multiplication.** True/false statements about packing (a recurring school format) have no lesson item; the models are EX-EXP-2 and EX-EXP-3 for Lessons 15 and 17.
+- **Section 5 (end-of-term Quest) and the parent report lines are unchanged.** A non-routine type may appear in the Quest, but no child's score is shown and no type is tested in isolation.
+- **Open point for the owner.** None of the 78 papers has a separate challenge section, so the plan does not add one. The non-routine items sit at Think harder and Go further, which matches where the schools put them (ordinary Section B and C questions).

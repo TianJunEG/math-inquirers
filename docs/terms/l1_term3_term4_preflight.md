@@ -784,3 +784,45 @@ Template engineering (section 3): figures 70.5, kits 28, runner and term tools 3
 - I did not check Singapore's rules on reproducing banknotes and coins, nor any real Primary 1 paper on time, money, shapes or graphs.
 - The brief's statement that "every lesson should contain something beyond the school syllabus for challenge" is implemented here as the named beyond item (section 1.0); it was not found in `owner_decisions.md` at the time of writing.
 - The Level 2 plan was read only to check overlaps.
+
+## 13. Non-routine assignments (owner decision, 23 Oct 2026)
+
+Added after the Primary 1 school-paper pass. The owner's rule: the non-routine question types found in the school papers are part of every term plan, and every lesson carries named non-routine work. Source of the types: `docs/books/p1_non_routine_catalogue.md` (text-free; original examples with scripted answers). The matrix across all 40 lessons is in `docs/terms/level_1_year_plan.md`, section 8. This section is the short list for the Term 3 and Term 4 authors.
+
+**Rules for the authors (all lessons 21 to 40).**
+
+1. Each lesson below must contain at least one item of each type listed for it, placed at the tier shown (T = Think harder, G = Go further). **Never at Start here.** The lesson's Beyond (named) puzzle (section 1) is separate and stays.
+2. Write your own items. The catalogue ids (EX-...) show the kind of item to model, with its answer checked. Do not copy an EX item word for word, and never copy or lightly reword a school or contest question. The private file of school questions (`docs/books/private_p1_papers/non_routine_questions.md`) is for the owner; do not paste from it.
+3. Verify each item in the lesson's own `verify/lNN_checks.py` by brute force (including that the stated number of answers is exact, as for the two-answer money items).
+4. Put the type name in `contest_moves` in plain words (for example "work backwards: paid and change given, find the price"), so the audit can see it.
+5. Money uses the cent sign (50¢); no $20 note; time uses o'clock and half past at Start here only (D2, D5 in `owner_decisions.md`).
+6. Picture items: 170 of the 268 school items depend on a picture. Where the type needs a drawing (queue, clock, grid, bar), the figure must be in the workbook, not only described.
+
+**What to write, lesson by lesson.**
+
+| # | Lesson | Add (type, tier) | Model from the catalogue |
+|---|---|---|---|
+| 21 | What Time Is It? | CTX G: a clock seen in a mirror; the hour-hand trap at half past; LOG G: which times look the same in a mirror (file exists; check it already has these) | EX-CTX-4 |
+| 22 | Five Minutes at a Time | CMP G: minutes between two times by chunks; CTX T: which show is on at a time between start times | EX-CMP-4, EX-CTX-5 |
+| 23 | Time Passes | BACK T: count back from the end to find the start; MULTI G: a trip in two stages; CTX T: read a timetable of start times (file exists; check it already has these) | EX-BACK-3, EX-CTX-5 |
+| 24 | Dollars and Change | GC T: coins for an exact amount; the fewest coins; BACK T: paid and change given: find the price | EX-BACK-2, EX-GC-1, EX-GC-3 |
+| 25 | Price Tags: Compare and Choose | CMP T: how much more; three prices, a total and a difference; GC T: which two items cost exactly this much; LIST T: choose numbers that add to a total; CHAL G: find three prices from clues | EX-LIST-2, EX-GC-2 |
+| 26 | The School Shop | WAYS T: every way to spend exactly $20; LIST T: list with a check that no case is missing | EX-LIST-2, EX-GC-2, EX-WAYS-2 |
+| 27 | Fill the Grid | LOG T: elimination in a 3 by 3 grid with clues | EX-LOG-4 |
+| 28 | Make a Table | TAB T: a ratio table and a table for a growing pattern; PAT T: the 10th and 20th term of a growing pattern; BACK G: work back from a total | EX-BACK-3, EX-PAT-1, EX-TAB-1, EX-TAB-2 |
+| 29 | Spot the Mistake | EXP T: find the wrong step and say why; CMP T: catch a wrong "fewer than" sum; LIST G: spot the wrong digit in a column sum | EX-CMP-1, EX-EXP-1 |
+| 30 | Calendar Detective | CTX T: a week has 7 days; a fortnight; PAT G: day-of-the-week cycles; LOG G: two days after the day before yesterday | EX-CTX-2, EX-CTX-3, EX-PAT-3 |
+| 31 | Half and Quarter | DIAG T: cut a shape into halves in several ways; LOG G: guess the shape from its clues | EX-DIAG-3 |
+| 32 | Build the Figure | TAB T: count each shape in a figure into a table; DIAG T: split a figure into its shapes with a ruler; LIST G: which pieces make this figure | EX-TAB-3 |
+| 33 | Copy on the Grid | WAYS T: count the routes in a small grid; PAT T: continue a path from its directions | EX-WAYS-4 |
+| 34 | Cubes and Views | LOG T: fold once, punch once; a view from the top; CTX G: fold twice, punch once | EX-LOG-5 |
+| 35 | Spot It | LOG T: the odd one out; EXP G: say which feature differs and why; PAT T: a repeating pattern: which is the 11th | EX-LOG-2, EX-EXP-4, EX-PAT-3 |
+| 36 | Count Everything | WAYS T: outfits and handshakes; TAB T: a table of pairs that make a total; LIST T: list every pair without repeats | EX-TAB-2, EX-TAB-3, EX-WAYS-3 |
+| 37 | Make Your Own Graph | TAB T: tally and table before the graph; CHAL G: build a graph from clues; BACK T: find the missing bar from a total | EX-CHAL-1 |
+| 38 | Graph Detectives | CMP T: more and fewer from a graph; BACK T: the missing bar given the total; CHAL G: a graph from clues | EX-CMP-2, EX-CMP-3, EX-CHAL-2 |
+| 39 | The Problem-Solving Toolbox | BACK T: tool not named; GC T: guess and check or a table: choose; EQ G: make equal two ways; DIAG T: draw it; TAB T: make a table | EX-BACK-2, EX-CMP-3, EX-EQ-3 |
+| 40 | Inquirers' Showcase | CHAL G: write a puzzle with a rule and check it; EXP G: check a friend's puzzle and say what is wrong | EX-CHAL-3 |
+
+**Priority.** BACK, GC, TAB and CHAL are the types the papers use most that Terms 1 and 2 use least. If time is short, keep these four in Lessons 23, 24, 28, 37 and 38 first.
+
+**Checks added to the audit.** (a) Every lesson 21 to 40 names at least one catalogue type in `contest_moves`. (b) No non-routine item sits at Start here. (c) No sentence overlaps a school question by 7 words (the existing overlap check). (d) Items needing a picture have the picture.

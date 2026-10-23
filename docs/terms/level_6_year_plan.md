@@ -295,3 +295,7 @@ Answered by the 22 Oct 2026 decisions and dropped: cohort and start term (places
 12. **Speed preview (lesson 14).** Owner-approved enrichment, labelled secondary-school. Confirm the wording on the parent page, and whether to keep the label when the child is in P6.
 
 **Kept in view (KIV) from other levels, not decided here:** Level 5 lessons 28 and 29 may merge; Level 5 lesson 32 may be too full; a secondary speed preview in Level 5 lesson 15 (Level 6 keeps speed only as the owner-approved enrichment in lesson 14); Level 3 lessons 22 and 23 need hand-drawn figures. They stay listed as open questions and this plan does not resolve them.
+
+## Non-routine assignment (hook; owner decision 23 Oct 2026)
+
+Non-routine assignment to be added when the level's papers are analysed. The owner decided that the non-routine question types found in school papers are part of every term plan: each lesson will name its non-routine type(s), the tier (Think harder or Go further, never Start here) and original example items, with a type-by-lesson matrix. The Level 1 version is `docs/terms/level_1_year_plan.md` section 8, built on `docs/books/p1_non_routine_catalogue.md`. The Primary 6 test papers are not yet analysed for this; until they are, the contest-style items already in this plan stand. No school or contest question text is copied into a lesson or committed.
