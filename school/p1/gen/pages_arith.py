@@ -242,16 +242,15 @@ def page11():
     return P
 
 # ---------------------------------------------------------------- P13
-def groups_svg(g, m):
+def groups_svg(g, m, kind="apple"):
     p = []; x = 0.5
     cols = min(m, 4); rows = (m + cols - 1) // cols
-    bw = cols * 4.4 + 2.4; h = rows * 4.6 + 2.4
+    bw = cols * 6.6 + 2.4; h = rows * 6.6 + 2.4
     for _ in range(g):
         p.append(f'<rect class="bag" x="{x:.1f}" y="0.5" width="{bw:.1f}" height="{h:.1f}" rx="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
         for i in range(m):
-            cx = x + 3 + (i % cols) * 4.4; cy = 3.6 + (i // cols) * 4.6
-            p.append(f'<circle class="dot" cx="{cx:.1f}" cy="{cy:.1f}" r="1.7" fill="#000"/>')
-        x += bw + 2.5
+            p.append(obj_g(kind, x + 1.2 + (i % cols) * 6.6, 1.7 + (i // cols) * 6.6, 6.2))
+        x += bw + 3.0
     return svg(x, h + 1, "".join(p)), h + 1
 
 def page13():
@@ -265,21 +264,21 @@ def page13():
             if table: break
     rows = ""; svgs = []
     for i, (g, m) in enumerate(items):
-        s, h = groups_svg(g, m); svgs.append(s)
+        s, h = groups_svg(g, m, ["apple", "star", "fish", "balloon"][i % 4]); svgs.append(s)
         rows += (f'<div class="grow"><span class="no">{i+1}</span><div class="gsvg">{s}</div>'
-                 f'<div class="geq"><span class="lbx"><span class="ab"></span><small>bags</small></span> <span class="op">&times;</span> <span class="lbx"><span class="ab"></span><small>dots</small></span> <span class="op">=</span> <span class="lbx"><span class="ab"></span><small>total</small></span></div></div>')
+                 f'<div class="geq"><span class="lbx"><span class="ab"></span><small>bags</small></span> <span class="op">&times;</span> <span class="lbx"><span class="ab"></span><small>things</small></span> <span class="op">=</span> <span class="lbx"><span class="ab"></span><small>total</small></span></div></div>')
     body = f'<div class="grows">{rows}</div>{code_block(table)}'
     P = Page(no=13, title="Equal Groups", tier=1, topic="Multiplication: equal groups",
              strand="Number and Algebra - Multiplication and Division", syll="3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
-             instr=["Each bag has the same number of dots.", "Write the bags, the dots and the total.", "Use the code table."],
+             instr=["Each bag has the same number of things.", "Write the bags, the things and the total.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {g} bags of {m} = {g*m}" for i, (g, m) in enumerate(items)), check_result=f"Code word: {word}"),
              note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 40.",
              seed=1313)
     ok = True
     for s, (g, m) in zip(svgs, items):
-        bags = s.count('class="bag"'); dots = s.count('class="dot"')
+        bags = s.count('class="bag"'); dots = s.count('class="obj"')
         ok &= bags == g and dots == g * m
     P.v("V1 counted bags x dots equals the key (from drawn SVG)", ok)
     cv = code_verify(tot, table, word, 1, 40)
@@ -291,61 +290,88 @@ def page13():
     return P
 
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
-def dots_svg(n, per_row=10):
-    p = []
-    rows = (n + per_row - 1) // per_row
+def share_svg(kind, n, g, per, mode):
+    """objects in rows of 10 on the left; for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
+    pitch = 7.4; rows = (n + 9) // 10; H = rows * 8.6 + 2
+    inner = []
     for i in range(n):
-        cx = 3 + (i % per_row) * 4.8; cy = 3 + (i // per_row) * 4.8
-        p.append(f'<circle class="dot" cx="{cx:.1f}" cy="{cy:.1f}" r="1.9" fill="#000"/>')
-    w = 3 + (min(n, per_row) - 1) * 4.8 + 3; h = 3 + (rows - 1) * 4.8 + 3
-    return svg(round(w, 1), round(h, 1), "".join(p))
+        inner.append(obj_g(kind, 1 + (i % 10) * pitch, 1.5 + (i // 10) * 8.6))
+    W = 1 + min(n, 10) * pitch + 1
+    if mode == "share":
+        x0 = W + 6; cw, chh = 15, 10.5
+        per_line = 3 if g <= 3 else (2 if g == 4 else 3); lines = (g + per_line - 1) // per_line
+        for j in range(g):
+            inner.append(container_g(kind, x0 + (j % per_line) * (cw + 3), 1 + (j // per_line) * (chh + 2), cw, chh))
+        W = x0 + per_line * (cw + 3)
+        H = max(H, 1 + lines * (chh + 2) + 1)
+    else:
+        # the example loop: a dashed rounded frame round the first group of `per` objects (first row only, per <= 10)
+        inner.append(f'<rect class="loop" x="0.2" y="0.8" width="{per * pitch + 0.2:.2f}" height="8.4" rx="3.5" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
+        W = max(W, 76)
+    return svg(round(W, 1), round(H, 1), "".join(inner)), (round(W, 1), round(H, 1))
+
+def read_share(s, mode):
+    """independent reader of the drawing: objects, containers and (for grouping) the objects inside the dashed loop"""
+    objs = [(float(m[1]), float(m[2])) for m in re.finditer(r'class="obj"[^>]*translate\(([\d.]+),([\d.]+)\)', s)]
+    conts = s.count('class="cont"')
+    loop = re.search(r'class="loop" x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)"', s)
+    inside = None
+    if loop:
+        lx, ly, lw, lh = (float(v) for v in loop.groups())
+        inside = sum(1 for x, y in objs if lx <= x + 3.3 <= lx + lw and ly <= y + 3.3 <= ly + lh)
+    return len(objs), conts, inside
 
 def page03():
     rng = random.Random(303)
     word = "FRIEND"
+    kinds_ = ["apple", "star", "fish", "balloon"]
     while True:
         items = []
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
-            g = rng.randint(2, 5); per = rng.randint(2, 10)
+            g = rng.randint(2, 5 if kind == "group" else 4); per = rng.randint(2, 9 if kind == "group" else 10)
             if g * per > 20: continue
             items.append((kind, g * per, g, per))
-        if len(items) != 6: continue
-        # share: N dots among g plates -> each gets per.  group: N dots in groups of per -> g groups.
+        if len(items) != 6 or sum(1 for it in items if it[1] > 10) > 1: continue          # at most one item has two rows of objects, so the page can be spaced out
         ans = [per if kind == "share" else g for kind, n, g, per in items]
         if len(set(ans)) != 6 or len({(n, g if kind == "share" else per) for kind, n, g, per in items}) != 6: continue
         table = make_code_table(ans, word, rng, 1, 20, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=60)
         if table: break
+    objk = [kinds_[(i + rng.randrange(4)) % 4] for i in range(6)]
+    if len(set(objk)) < 4: objk = [kinds_[i % 4] for i in range(6)]
     rows = ""; svgs = []; texts = []
-    for i, (kind, n, g, per) in enumerate(items):
-        s_ = dots_svg(n); svgs.append(s_)
+    for i, ((kind, n, g, per), ok_) in enumerate(zip(items, objk)):
+        s_, _ = share_svg(ok_, n, g, per, kind); svgs.append(s_)
+        nm, c1, cs = OBJ_NAMES[ok_]
         if kind == "share":
-            t1 = f"Share {n} dots equally among {g} plates."; t2 = "How many on each plate?"
+            t1 = f"Share {n} {nm} equally among {g} {cs}."; t2 = f"How many on each {c1}?"
         else:
-            t1 = f"Put {n} dots in groups of {per}."; t2 = "How many groups?"
+            t1 = f"Put {n} {nm} in groups of {per}."; t2 = "How many groups?"
         texts.append((t1, t2))
-        rows += (f'<div class="shrow"><span class="no">{i+1}</span><div class="shsvg">{s_}</div>'
-                 f'<div class="shtxt"><p>{t1}</p><p>{t2}</p></div><span class="ab"></span></div>')
+        rows += (f'<div class="shrow"><span class="no">{i+1}</span><div class="shmid"><p class="shtxt">{t1} {t2}</p><div class="shsvg">{s_}</div></div><span class="ab"></span></div>')
     body = f'<div class="shrows">{rows}</div>{code_block(table)}'
-    solved = []
-    for (t1, t2), s_ in zip(texts, svgs):
-        n_dots = s_.count('class="dot"')
-        m = re.match(r"Share (\d+) dots equally among (\d+) plates", t1)
-        if m: solved.append(int(m[1]) // int(m[2]) if int(m[1]) == n_dots and int(m[1]) % int(m[2]) == 0 else None); continue
-        m = re.match(r"Put (\d+) dots in groups of (\d+)", t1)
-        solved.append(int(m[1]) // int(m[2]) if int(m[1]) == n_dots and int(m[1]) % int(m[2]) == 0 else None)
+    solved = []; drawn = []
+    for (t1, t2), s_, (kind, n, g, per) in zip(texts, svgs, items):
+        n_obj, n_cont, inside = read_share(s_, kind)
+        m = re.match(r"Share (\d+) \w+ equally among (\d+) \w+", t1)
+        if m:
+            ok = int(m[1]) == n_obj and int(m[2]) == n_cont and n_obj % n_cont == 0
+            solved.append(n_obj // n_cont if ok else None); drawn.append((n_obj, n_cont)); continue
+        m = re.match(r"Put (\d+) \w+ in groups of (\d+)", t1)
+        ok = int(m[1]) == n_obj and inside == int(m[2]) and n_obj % int(m[2]) == 0
+        solved.append(n_obj // int(m[2]) if ok else None); drawn.append((n_obj, inside))
     P = Page(no=3, title="Fair Shares", tier=1, topic="Sharing equally and making equal groups (within 20)",
              strand="Number and Algebra - Multiplication and Division", syll="3.4 (dividing within 20: sharing and grouping, no division sign)",
              ptype="Code-breaker", mech="K1 code word (6 letters) + K7 put the number back",
-             instr=["Look at the dots.", "Write how many.", "Use the code table."],
+             instr=["Look at the pictures.", "Write how many.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Three items share the dots equally among plates; three put the dots into groups of a stated size. Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: plates times each plate's share is the number of dots.",
+             note="Pictures of apples, stars, fish and balloons, with empty plates, boxes, bowls and bags. Three items share the objects equally among the containers drawn; three put the objects into groups of a stated size (a dashed loop shows the first group). Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: containers times each one's share is the number of objects.",
              seed=303)
-    P.v("V1 dots counted in the drawing divide exactly and the quotient equals the key", solved == ans, solved)
+    P.v("V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key", solved == ans, solved)
     cv = code_verify(ans, table, word, 1, 20)
     code_checks(P, cv, word)
-    P.v("V7 every number of dots is within 20", all(n <= 20 for _, n, _, _ in items))
+    P.v("V7 every number of objects is within 20", all(n <= 20 for _, n, _, _ in items))
     P["cv"] = cv
     P["model"] = code_model(ans, table, 1, 20)
     P["mech_plain"] = "Code word (6 letters) and multiplying back"

@@ -45,27 +45,35 @@ def decode_clock(meta):
     hh = int(round(meta["hour_angle"] - mm * 0.5) / 30) % 12 or 12
     return hh, mm
 
-COIN_R = {5: 4.2, 10: 4.6, 20: 5.0, 50: 5.5, 100: 5.8}
+COIN_R = {5: 4.2, 10: 4.8, 20: 5.6, 50: 6.4, 100: 6.4}      # radii in the real ratio of the diameters (5c 16.2, 10c 18.5, 20c 21.4, 50c 24.7, $1 24.65 mm), drawn much larger than real size
+def _coin(cx, cy, v, r):
+    """an ORIGINAL coin (not a copy of any real coin): a ring, a dashed ridge ring as an edge hint, the value large and a small cents sign under it ($1 has no cents sign)"""
+    s = [f'<circle cx="{cx:.2f}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>',
+         f'<circle cx="{cx:.2f}" cy="{cy}" r="{r - 0.75:.2f}" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="0.7 0.5"/>']
+    if v < 100:
+        s.append(f'<text x="{cx:.2f}" y="{cy - 0.7:.2f}" style="font-size:3.4px;font-weight:700;text-anchor:middle;dominant-baseline:central">{v}</text>')
+        s.append(f'<text x="{cx:.2f}" y="{cy + r * 0.52:.2f}" style="font-size:2.3px;font-weight:700;text-anchor:middle;dominant-baseline:central">¢</text>')
+    else:
+        s.append(f'<text x="{cx:.2f}" y="{cy}" style="font-size:3.8px;font-weight:700;text-anchor:middle;dominant-baseline:central">$1</text>')
+    return "".join(s)
 def coins(values):
-    x = 0.0; s = []; h = 2 * 5.8 + 1
+    x = 0.0; s = []; h = 2 * 6.4 + 1
     for v in values:
         r = COIN_R[v]; x += r
-        label = f"{v}¢" if v < 100 else "$1"
-        s.append(f'<circle cx="{x:.2f}" cy="{h / 2}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-                 f'<text x="{x:.2f}" y="{h / 2}" style="font-size:3.2px;font-weight:700;text-anchor:middle;dominant-baseline:central">{label}</text>')
+        s.append(_coin(x, h / 2, v, r))
         x += r + 1.2
     return Art("".join(s), x - 1.2, h, 0.85, dict(kind="coins", values=list(values)))
 
 def notes(values):
     """dollar notes ($2, $5, $10) drawn as small rectangles; a $1 coin is a circle"""
-    x = 0.0; s = []; h = 8.0
+    x = 0.0; s = []; h = 12.8
     for v in values:
         if v == 1:
-            s.append(f'<circle cx="{x + 4:.2f}" cy="{h / 2}" r="4" fill="#fff" stroke="#000" stroke-width="0.5"/><text x="{x + 4:.2f}" y="{h / 2}" style="font-size:3.2px;font-weight:700;text-anchor:middle;dominant-baseline:central">$1</text>')
-            x += 8 + 1.2
+            s.append(_coin(x + 6.4, 6.4, 100, 6.4))
+            x += 12.8 + 1.2
         else:
-            s.append(f'<rect x="{x:.2f}" y="0.5" width="13" height="7" rx="0.8" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-                     f'<text x="{x + 6.5:.2f}" y="4" style="font-size:3.6px;font-weight:700;text-anchor:middle;dominant-baseline:central">${v}</text>')
+            s.append(f'<rect x="{x:.2f}" y="2.9" width="13" height="7" rx="0.8" fill="#fff" stroke="#000" stroke-width="0.5"/>'
+                     f'<text x="{x + 6.5:.2f}" y="6.4" style="font-size:3.6px;font-weight:700;text-anchor:middle;dominant-baseline:central">${v}</text>')
             x += 13 + 1.2
     return Art("".join(s), x - 1.2, h, 0.85, dict(kind="notes", values=list(values)))
 
@@ -299,11 +307,11 @@ def blocks(h, t, o):
 
 def cash(values):
     """money in cents: coins 5, 10, 20, 50, 100 and notes 200, 500, 1000, drawn as plain labelled shapes"""
-    x = 0.0; s = []; hh = 11.6
+    x = 0.0; s = []; hh = 13.8
     for v in sorted(values, reverse=True):
         if v >= 200:
-            s.append(f'<rect x="{x + 0.5:.2f}" y="2.3" width="13" height="7" rx="0.8" fill="#fff" {_ST}/>' + _text(x + 7, 5.9, f"${v // 100}", 3.6)); x += 14.2
+            s.append(f'<rect x="{x + 0.5:.2f}" y="3.4" width="13" height="7" rx="0.8" fill="#fff" {_ST}/>' + _text(x + 7, 6.9, f"${v // 100}", 3.6)); x += 14.2
         else:
             r = COIN_R[v]; x += r
-            s.append(f'<circle cx="{x:.2f}" cy="{hh / 2}" r="{r}" fill="#fff" {_ST}/>' + _text(x, hh / 2, f"{v}¢" if v < 100 else "$1", 3.1)); x += r + 1.2
+            s.append(_coin(x, hh / 2, v, r)); x += r + 1.2
     return Art("".join(s), x - 1.2, hh, 0.85, dict(kind="cash", values=sorted(values, reverse=True)))

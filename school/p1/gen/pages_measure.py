@@ -4,17 +4,33 @@ from .common import *
 from .pages_numbers import grid_table, howto_grid
 
 # ---------------------------------------------------------------- P15
-COIN_D = {5: 10, 10: 11, 20: 12.5, 50: 14.5}
+COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7}        # real diameters in mm: only the RATIOS are used (a fact, not a design); the coins are drawn at 0.9 of these, bigger than real
+COIN_D = {v: d * 0.9 for v, d in COIN_REAL.items()}
+
+def _motif(v, cx, cy, u):
+    """an ORIGINAL small picture per value (not any real coin design): leaf (5), star (10), flower (20), sailboat (50); u is the coin radius"""
+    k = u * 0.2; st = 'fill="none" stroke="#000" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"'
+    if v == 5:
+        return f'<path d="M{cx-k*1.3:.2f},{cy+k*0.6:.2f} Q{cx-k*0.2:.2f},{cy-k*1.6:.2f} {cx+k*1.3:.2f},{cy-k*0.9:.2f} Q{cx+k*0.6:.2f},{cy+k*1.0:.2f} {cx-k*1.3:.2f},{cy+k*0.6:.2f} Z" {st}/>'
+    if v == 10:
+        pts = " ".join(f"{cx+(k*1.5 if i%2==0 else k*0.65)*math.sin(i*math.pi/5):.2f},{cy-(k*1.5 if i%2==0 else k*0.65)*math.cos(i*math.pi/5):.2f}" for i in range(10))
+        return f'<polygon points="{pts}" {st}/>'
+    if v == 20:
+        petals = "".join(f'<circle cx="{cx+k*1.0*math.sin(i*math.pi*2/5):.2f}" cy="{cy-k*1.0*math.cos(i*math.pi*2/5):.2f}" r="{k*0.7:.2f}" {st}/>' for i in range(5))
+        return petals + f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{k*0.45:.2f}" {st}/>'
+    return (f'<path d="M{cx:.2f},{cy-k*1.5:.2f} L{cx+k*1.2:.2f},{cy+k*0.5:.2f} L{cx:.2f},{cy+k*0.5:.2f} Z M{cx-k*1.5:.2f},{cy+k*0.9:.2f} L{cx+k*1.5:.2f},{cy+k*0.9:.2f} L{cx+k*0.9:.2f},{cy+k*1.6:.2f} L{cx-k*0.9:.2f},{cy+k*1.6:.2f} Z" {st}/>')
 
 def coins_svg(coins):
-    p = []; x = 1
+    p = []; x = 1; H = COIN_D[50] + 2; cy = H / 2
     for v in coins:
-        d = COIN_D[v]; cx = x + d / 2
-        p.append(f'<circle class="coin" cx="{cx:.1f}" cy="8" r="{d/2:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
-                 f'<circle cx="{cx:.1f}" cy="8" r="{d/2-1.1:.1f}" fill="none" stroke="#000" stroke-width="0.25"/>'
-                 f'<text class="coinval" x="{cx:.1f}" y="9.6" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">{v}</text>')
-        x += d + 1.5
-    return svg(x + 1, 16.5, "".join(p))
+        d = COIN_D[v]; r = d / 2; cx = x + r
+        p.append(f'<circle class="coin" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
+                 f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
+                 + _motif(v, cx, cy - r * 0.50, r) +
+                 f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.12:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{v}</text>'
+                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.62:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.30:.1f}" fill="#000">cents</text>')
+        x += d + 2.0
+    return svg(x + 1, H + 1, "".join(p))
 
 def page15():
     rng = random.Random(1515)
@@ -411,6 +427,24 @@ def page19():
 # ---------------------------------------------------------------- P20
 FRUIT = ["Apple", "Banana", "Orange", "Grape", "Pear"]
 
+def face_svg(mm=10.5):
+    """the picture symbol for 1 child: a smiley face (circle, two eyes, a smile)"""
+    return (f'<svg class="face" xmlns="http://www.w3.org/2000/svg" width="{mm}mm" height="{mm}mm" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#fff" stroke="#000" stroke-width="1.1"/>'
+            '<circle cx="7" cy="8" r="1.3" fill="#000"/><circle cx="13" cy="8" r="1.3" fill="#000"/>'
+            '<path d="M5.6,12 Q10,17 14.4,12" fill="none" stroke="#000" stroke-width="1.1" stroke-linecap="round"/></svg>')
+
+def fruit_icon(name, mm=9):
+    """a simple line-art fruit beside a row label"""
+    st = 'fill="#fff" stroke="#000" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"'
+    body = {
+        "Apple": f'<path d="M10,5.5 C4,2.5 1.5,9 4.5,14 C6.5,17.5 8.5,17 10,16.2 C11.5,17 13.5,17.5 15.5,14 C18.5,9 16,2.5 10,5.5 Z" {st}/><path d="M10,5.5 C10,3.5 10.5,2.5 11.5,1.5" {st} fill="none"/><path d="M11,3.5 C13,1.5 15.5,2 15.5,2 C15,4 13,4.5 11,3.5 Z" {st}/>',
+        "Banana": f'<path d="M3,5 C3,13 8,18 17,16 C12,16.5 6.5,12.5 5.5,4.5 Z" {st}/><path d="M3,5 L4,3 L6,4 L5.5,4.5" {st}/>',
+        "Orange": f'<circle cx="10" cy="11" r="7" {st}/><path d="M10,4 C10,2.5 11,1.8 12.5,1.8 C12.5,3.5 11.5,4.2 10,4 Z" {st}/>',
+        "Grape": f'<circle cx="6.5" cy="8" r="2.8" {st}/><circle cx="13.5" cy="8" r="2.8" {st}/><circle cx="10" cy="12.5" r="2.8" {st}/><circle cx="6.8" cy="13.5" r="0" {st}/><circle cx="10" cy="17" r="0" {st}/><path d="M10,5 C10,3 11,2 12.5,1.5" {st} fill="none"/>',
+        "Pear": f'<path d="M10,3.5 C13,3.5 13.5,7 14.5,10 C16.5,13.5 14,17.5 10,17.5 C6,17.5 3.5,13.5 5.5,10 C6.5,7 7,3.5 10,3.5 Z" {st}/><path d="M10,3.5 C10,2.5 10.5,1.8 11.5,1.3" {st} fill="none"/>',
+    }[name]
+    return f'<svg class="fruit" xmlns="http://www.w3.org/2000/svg" width="{mm}mm" height="{mm}mm" viewBox="0 0 20 20">{body}</svg>' 
+
 def graph_clue_ok(cnt, c):
     k = c[0]
     if k == "less": return cnt[c[1]] == cnt[c[2]] - c[3]
@@ -496,23 +530,23 @@ def page20():
         if ok: break
     rows = ""
     for f in FRUIT:
-        cells = "".join(f'<span class="gc">{"<i class=dotc></i>" if f in known and k < known[f] else ""}</span>' for k in range(9))
-        rows += f'<div class="grow2"><b class="gl">{f}</b>{cells}</div>'
+        cells = "".join(f'<span class="gc">{face_svg(10.5) if f in known and k < known[f] else ""}</span>' for k in range(9))
+        rows += f'<div class="grow2"><b class="gl">{fruit_icon(f)}<span>{f}</span></b>{cells}</div>'
     clues = "".join(f"<li>{graph_text(c)}</li>" for c in cl)
-    body = (f'<div class="blk"><p class="lead">Children chose a fruit. <span class="dotc inl"></span> = 1 child.</p><div class="pgraph">{rows}</div></div>'
+    body = (f'<div class="blk"><p class="lead">Children chose a fruit. {face_svg(6)} = 1 child.</p><div class="pgraph">{rows}</div></div>'
             f'<ul class="clues">{clues}</ul>'
             f'<div class="ansline">a) Most children chose <span class="ab wide"></span>.</div>'
             f'<div class="ansline">b) <b>{xb}</b> has <span class="ab"></span> more than <b>{yb}</b>.</div>')
-    chk_lines = [f"Count all the circles. Is the total {total}?",
-                 f"Add the circles in your a) row to your b) answer. Is it {comb}?"]
+    chk_lines = [f"Count all the faces. Is the total {total}?",
+                 f"Add the faces in your a) row to your b) answer. Is it {comb}?"]
     P = Page(no=20, title="Fruit Graph", tier=2, topic="Picture graphs: read, complete and answer",
              strand="Statistics - Data Analysis", syll="Picture graphs (read and interpret picture graphs)",
-             ptype="Graph detective", mech="K3 the total of all circles, and a second sum that uses the answers to a) and b) (neither is a clue)",
-             mech_plain="Two sums: the total of all the circles, and the row chosen in a) plus the answer to b) (neither is used to find any row)",
-             instr=["Two rows are done.", "Use the clues to draw the other rows.", "Then answer a and b."],
+             ptype="Graph detective", mech="K3 the total of all faces, and a second sum that uses the answers to a) and b) (neither is a clue)",
+             mech_plain="Two sums: the total of all the faces, and the row chosen in a) plus the answer to b) (neither is used to find any row)",
+             instr=["Two rows are done.", "Draw a face for each child (a circle is fine).", "Use the clues. Then answer a and b."],
              body=body, check=" ".join(chk_lines), check_lines=chk_lines, check_boxes=None,
-             key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {bans}", check_result=f"Total {total} circles; second sum {cnt[most]} + {bans} = {comb}"),
-             note=f"Each circle stands for one child (a scale of 1). The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total. The second sum tests a) and b): it is {comb} only when the right row is chosen and b) is right. The three clues start from Apple or Banana; a pupil who starts a clue from the wrong one of the two, or who reads more as fewer, also gets a wrong total or a wrong second sum (every such mix was tried). Question b) names two other fruits, so it does not give away the answer to a). More and fewer are not mirror images here (the Grape clue is {d2} and the Pear clue is {d3}), and the first two clues add different amounts ({d1} and {d2}), so a pupil who swaps the two words or swaps Apple and Banana gets a different total or a different second sum.",
+             key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {bans}", check_result=f"Total {total} faces; second sum {cnt[most]} + {bans} = {comb}"),
+             note=f"Each smiley face stands for one child (a scale of 1: one picture symbol for one child). A pupil who draws a plain circle instead of a face counts the same, so the checks do not change. The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total. The second sum tests a) and b): it is {comb} only when the right row is chosen and b) is right. The three clues start from Apple or Banana; a pupil who starts a clue from the wrong one of the two, or who reads more as fewer, also gets a wrong total or a wrong second sum (every such mix was tried). Question b) names two other fruits, so it does not give away the answer to a). More and fewer are not mirror images here (the Grape clue is {d2} and the Pear clue is {d3}), and the first two clues add different amounts ({d1} and {d2}), so a pupil who swaps the two words or swaps Apple and Banana gets a different total or a different second sum.",
              seed=2020)
     sols = solve_graph(known, cl)
     P.v("V1 exactly one set of row counts satisfies the clues (total not used; all combinations tested)", len(sols) == 1 and sols[0] == cnt, len(sols))

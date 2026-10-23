@@ -247,3 +247,29 @@ def mini_graph(rows):
     for name, k in rows:
         out += f'<div class="kg"><span>{name}</span>' + "".join('<b></b>' for _ in range(k)) + "</div>"
     return f'<div class="kgraph">{out}</div>'
+
+
+# ---------------- friendly line-art objects and containers (used instead of bare dots) ----------------
+OBJ_ST = 'fill="#fff" stroke="#000" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"'
+OBJ_PATHS = {
+    "apple": f'<path d="M10,6 C4,3 1.5,9.5 4.5,14.5 C6.5,18 8.5,17.5 10,16.7 C11.5,17.5 13.5,18 15.5,14.5 C18.5,9.5 16,3 10,6 Z" {OBJ_ST}/><path d="M10,6 C10,4 10.5,3 11.5,2" {OBJ_ST} fill="none"/><path d="M11,4 C13,2 15.5,2.5 15.5,2.5 C15,4.5 13,5 11,4 Z" {OBJ_ST}/>',
+    "star": f'<polygon points="10,1.5 12.4,7.4 18.7,7.8 13.8,11.8 15.4,18 10,14.6 4.6,18 6.2,11.8 1.3,7.8 7.6,7.4" {OBJ_ST}/>',
+    "fish": f'<path d="M2,10 C5,3.5 12,3.5 15,10 C12,16.5 5,16.5 2,10 Z" {OBJ_ST}/><path d="M15,10 L19,5.5 L19,14.5 Z" {OBJ_ST}/><circle cx="6" cy="9" r="0.9" fill="#000"/>',
+    "balloon": f'<path d="M10,1.5 C15.5,1.5 16.5,8 13,12 C12,13.2 11,13.6 10,13.8 C9,13.6 8,13.2 7,12 C3.5,8 4.5,1.5 10,1.5 Z" {OBJ_ST}/><path d="M9,13.8 L11,13.8 L10,15.2 Z" {OBJ_ST}/><path d="M10,15.2 C8,16.5 12,17.5 10,19" {OBJ_ST} fill="none"/>',
+}
+OBJ_NAMES = {"apple": ("apples", "plate", "plates"), "star": ("stars", "box", "boxes"), "fish": ("fish", "bowl", "bowls"), "balloon": ("balloons", "bag", "bags")}
+
+def obj_g(kind, x, y, size=6.6):
+    """one countable object (class obj) with its top-left corner at (x, y), `size` mm across"""
+    return f'<g class="obj" data-k="{kind}" transform="translate({x:.2f},{y:.2f}) scale({size/20:.4f})">{OBJ_PATHS[kind]}</g>'
+
+def container_g(kind, x, y, w=15, h=11):
+    """an empty container (class cont) in a box x..x+w, y..y+h: plate, box, bowl or bag, outline only"""
+    st = 'fill="#fff" stroke="#000" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"'
+    if kind == "apple":                       # a plate seen from the side: wide shallow ellipse with a rim
+        return f'<g class="cont"><ellipse cx="{x+w/2:.2f}" cy="{y+h*0.62:.2f}" rx="{w/2:.2f}" ry="{h*0.34:.2f}" {st}/><ellipse cx="{x+w/2:.2f}" cy="{y+h*0.6:.2f}" rx="{w*0.32:.2f}" ry="{h*0.2:.2f}" {st}/></g>'
+    if kind == "star":                        # a box with a lid line
+        return f'<g class="cont"><rect x="{x:.2f}" y="{y+h*0.25:.2f}" width="{w:.2f}" height="{h*0.75:.2f}" rx="0.8" {st}/><line x1="{x:.2f}" y1="{y+h*0.5:.2f}" x2="{x+w:.2f}" y2="{y+h*0.5:.2f}" stroke="#000" stroke-width="0.55"/></g>'
+    if kind == "fish":                        # a bowl
+        return f'<g class="cont"><path d="M{x:.2f},{y+h*0.2:.2f} L{x+w:.2f},{y+h*0.2:.2f} C{x+w:.2f},{y+h*1.0:.2f} {x:.2f},{y+h*1.0:.2f} {x:.2f},{y+h*0.2:.2f} Z" {st}/></g>'
+    return f'<g class="cont"><rect x="{x+w*0.08:.2f}" y="{y+h*0.3:.2f}" width="{w*0.84:.2f}" height="{h*0.7:.2f}" rx="1.5" {st}/><path d="M{x+w*0.3:.2f},{y+h*0.3:.2f} C{x+w*0.3:.2f},{y-h*0.05:.2f} {x+w*0.7:.2f},{y-h*0.05:.2f} {x+w*0.7:.2f},{y+h*0.3:.2f}" {st} fill="none"/></g>'

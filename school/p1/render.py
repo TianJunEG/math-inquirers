@@ -99,9 +99,10 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .sumrows{display:grid;gap:5mm 6mm}.sumrows.two{grid-template-columns:1fr 1fr}
 .sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.3mm solid #000}
 .sumrows.tall .sumrow{height:31mm}
-.shrows{display:flex;flex-direction:column;gap:3mm}
-.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
-.shsvg{width:62mm;flex:none}.shtxt{flex:1;font-size:13pt;line-height:1.25}.shtxt p{margin:0.5mm 0}
+.shrows{display:flex;flex-direction:column;gap:2mm}
+.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding:1.5mm 0 3mm}
+.shmid{flex:1}.shtxt{font-size:12pt;line-height:1.25;margin:0 0 1.5mm}.shsvg svg{display:block}
+.shrow .ab{width:19mm;height:14mm;margin-left:2mm;flex:none}
 .maze.tall .mcell{height:38mm}
 .dicon{vertical-align:middle}
 .shblock{display:flex;gap:8mm;align-items:center;border:0.4mm solid #000;border-radius:2mm;padding:3mm 5mm}
@@ -124,10 +125,9 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .srow{display:flex;align-items:center;gap:1mm}.srow svg{width:11mm}.srow .ab{width:12mm;height:12mm}
 .pgraph{display:flex;flex-direction:column;gap:4mm}
 .grow2{display:flex;align-items:center}
-.gl{width:28mm;font-size:15pt}
-.gc{width:16mm;height:16mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;margin-right:-0.5mm}
-.dotc{display:inline-block;width:10.5mm;height:10.5mm;border-radius:50%;background:#000}
-.dotc.inl{width:4.5mm;height:4.5mm;vertical-align:middle}
+.gl{width:34mm;font-size:15pt;display:flex;align-items:center;gap:1.5mm}.gl svg{flex:none}
+.gc{width:15.5mm;height:15.5mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;margin-right:-0.5mm}
+svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle}
 .kids{display:flex;justify-content:space-between}.kid{display:flex;flex-direction:column;align-items:center;font-size:14pt}
 .qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:68mm;height:12.5mm}
 /* front matter and key */

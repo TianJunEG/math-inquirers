@@ -183,7 +183,7 @@ def build_html(d):
         H.append(f'<tr><td>{p}</td><td>{mmss(a)}</td><td>{mmss(u)}</td><td>{mmss(sl)}</td><td>{fl}</td></tr>')
     H.append(f'<tr><td><b>Total</b></td><td>90:00</td><td>{mmss(used)}</td><td>{mmss(slow)}</td><td></td></tr></table>')
     ci = child_item_table(d)
-    H.append(f'<p class="small">Assumptions as docs/audit/timing_p1.md: speech 120 words a minute, read-aloud 110, slide change 25 s, a group question 10 s thinking plus 20 s answers, papers to the camera 30 s. Workbook: Start here has {ci["n"]} questions; a middle child needs about {ci["p1"]:.1f} min for page 1 and {ci["p2"]:.1f} min for page 2 (a slower child about 1.7 times as long, so may finish page 1 and part of page 2; that is fine, the check-together slides cover every answer). The lesson has no breakout rooms, so no breakout time is counted.</p>')
+    H.append(f'<p class="small">Assumptions as docs/audit/timing_p1.md: speech 120 words a minute, read-aloud 110, slide change 25 s, a group question 10 s thinking plus 20 s answers. Nobody holds paper up to the camera. Workbook: Start here has {ci["n"]} questions; a middle child needs about {ci["p1"]:.1f} min for page 1 and {ci["p2"]:.1f} min for page 2 (a slower child about 1.7 times as long, so may finish page 1 and part of page 2; that is fine, the check-together slides cover every answer). The lesson has no breakout rooms, so no breakout time is counted.</p>')
     body = ''.join(H)
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Tutor guide: Lesson {d["lesson_in_term"]} {E(d["title"])}</title><style>{font_css()}{CSS}</style></head><body>{body}</body></html>'
 
