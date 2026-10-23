@@ -2291,7 +2291,7 @@
                 {
                   "v": 5,
                   "text": "+5",
-                  "colour": "teal"
+                  "colour": "mint"
                 }
               ]
             },
@@ -2306,12 +2306,12 @@
                 {
                   "v": 3,
                   "text": "-3",
-                  "colour": "grey"
+                  "colour": "rose"
                 }
               ]
             }
           ],
-          "size": "m"
+          "size": 90
         }
       },
       {
@@ -2483,7 +2483,7 @@
             "text": "70",
             "over": 0
           },
-          "size": "m"
+          "size": 100
         }
       }
     ],
