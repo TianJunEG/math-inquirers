@@ -42,9 +42,9 @@ u.S(1, 'A jug has 2 ℓ 500 ml of juice. Ali pours it into cups of 400 ml.', par
     P('a', 'He fills {b} cups.', A('6')), P('b', '{b} ml of juice are left over.', A('100'))],
     why='2 ℓ 500 ml = 2500 ml. 2500 ÷ 400 = 6 remainder 100. He fills 6 cups, and 100 ml are left over.')
 u.S(2, 'Read the water level in each jug.', parts=[
-    P('a', 'Jug A holds {b} ml.', A('350')), P('b', 'Jug B holds {b} ml.', A('600')), P('c', 'Jug C holds {b} ml.', A('850')),
-    P('d', 'Jug C holds {b} ml more than jug A.', A('500'))],
-    figure={'type': 'l3_jug', 'jugs': [{'level': 350, 'label': 'A'}, {'level': 600, 'label': 'B'}, {'level': 850, 'label': 'C'}], 'major': 200, 'minor': 50, 'width_mm': 78},
+    P('a', 'A holds {b} ml', A('350')), P('b', 'B holds {b} ml', A('600')), P('c', 'C holds {b} ml', A('850')),
+    P('d', 'C has {b} ml more than A', A('500'))],
+    figure={'type': 'l3_jug', 'jugs': [{'level': 350, 'label': 'A'}, {'level': 600, 'label': 'B'}, {'level': 850, 'label': 'C'}], 'major': 200, 'minor': 50, 'width_mm': 96}, figside=True,
     why='Each small mark is 50 ml. A is 1 mark above 300: 350 ml. B is at 600 ml. C is 1 mark above 800: 850 ml. 850 - 350 = 500 ml.')
 u.S(2, 'A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.', parts=[
     P('a', 'They cost ${b} in all.', A('4.05')), P('b', 'Her change is ${b}.', A('0.95'))],

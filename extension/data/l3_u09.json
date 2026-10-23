@@ -285,7 +285,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Jug A holds {b} ml.",
+     "text": "A holds {b} ml",
      "answer": {
       "value": [
        "350"
@@ -295,7 +295,7 @@
     },
     {
      "label": "b",
-     "text": "Jug B holds {b} ml.",
+     "text": "B holds {b} ml",
      "answer": {
       "value": [
        "600"
@@ -305,7 +305,7 @@
     },
     {
      "label": "c",
-     "text": "Jug C holds {b} ml.",
+     "text": "C holds {b} ml",
      "answer": {
       "value": [
        "850"
@@ -315,7 +315,7 @@
     },
     {
      "label": "d",
-     "text": "Jug C holds {b} ml more than jug A.",
+     "text": "C has {b} ml more than A",
      "answer": {
       "value": [
        "500"
@@ -343,8 +343,9 @@
     ],
     "major": 200,
     "minor": 50,
-    "width_mm": 78
-   }
+    "width_mm": 96
+   },
+   "figside": true
   },
   {
    "id": "L3U09-S06",
