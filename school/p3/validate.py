@@ -149,6 +149,9 @@ for k in BK:
     rec(f"B/W colours only in {f}", cols <= {"#000", "#fff", "#000000", "#ffffff"} and not named, str(sorted(cols))[:80])
     sw = [float(x) for x in re.findall(r'stroke-width[=:]\s*"?([\d.]+)', h)]
     rec(f"stroke widths >= 0.2 mm (0.57 pt) in {f}", min(sw) >= 0.2 if sw else True, f"min {min(sw) if sw else '-'}")
+    if f.endswith("_pupil.html"):
+        thin = [x for x in sw if x < 0.5]
+        rec(f"drawn strokes on pupil pages >= 0.5 mm (audit M3: light photocopier) in {f}", not thin, f"{len(thin)} thinner, min {min(sw) if sw else '-'}")
     bw = [float(x) for x in re.findall(r"border[a-z-]*:\s*(?:[^;{}]*?\s)?([\d.]+)mm", h)]
     rec(f"CSS rule widths >= 0.25 mm (0.7 pt) in {f}", min(bw) >= 0.25 if bw else True, f"min {min(bw) if bw else '-'}")
     abh = [float(x) for sel, x in re.findall(r"(\.(?:ab|slot \.ab|shans \.ab|ctime \.ab|srow \.ab|check \.ab)[^{]*)\{[^}]*?height:([\d.]+)mm", h)]

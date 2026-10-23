@@ -75,9 +75,9 @@ def note_g(v, x, y):
     """an original note design: a frame, the value in two corners, a simple bird in the middle; not a copy of any real note"""
     W, H = NOTE_WH[v]
     if _REAL_ART: return _REAL_ART.note(v, x, y, *NOTE_REAL[v])[0]
-    bird = ('<path d="M-4.5,1.2 C-2.5,-3.5 2.5,-3.5 4.5,-0.5 L7,-1.5 L5.8,1.2 C3,3.8 -2,3.8 -4.5,1.2 Z M-4.5,1.2 L-7.5,3.2 L-4,3" fill="none" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/>')
+    bird = ('<path d="M-4.5,1.2 C-2.5,-3.5 2.5,-3.5 4.5,-0.5 L7,-1.5 L5.8,1.2 C3,3.8 -2,3.8 -4.5,1.2 Z M-4.5,1.2 L-7.5,3.2 L-4,3" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="round"/>')
     return (f'<g class="note" data-v="{v}"><rect x="{x:.1f}" y="{y:.1f}" width="{W:.1f}" height="{H:.1f}" rx="1.2" fill="#fff" stroke="#000" stroke-width="0.7"/>'
-            f'<rect x="{x+1.4:.1f}" y="{y+1.4:.1f}" width="{W-2.8:.1f}" height="{H-2.8:.1f}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
+            f'<rect x="{x+1.4:.1f}" y="{y+1.4:.1f}" width="{W-2.8:.1f}" height="{H-2.8:.1f}" rx="0.8" fill="none" stroke="#000" stroke-width="0.5"/>'
             f'<g transform="translate({x+W/2:.1f},{y+H/2:.1f}) scale({W/33.75:.3f})">{bird}</g>'
             f'<text class="noteval" x="{x+2.8:.1f}" y="{y+5.6:.1f}" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text>'
             f'<text class="noteval2" x="{x+W-2.8:.1f}" y="{y+H-2.8:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text></g>')
@@ -132,7 +132,7 @@ def clock_svg(h, m, size=54):
     p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     for k in range(60):
         a_ = math.radians(k * 6); L = 3.0 if k % 5 == 0 else 1.4
-        p.append(f'<line x1="{cx+R*math.sin(a_):.2f}" y1="{cy-R*math.cos(a_):.2f}" x2="{cx+(R-L)*math.sin(a_):.2f}" y2="{cy-(R-L)*math.cos(a_):.2f}" stroke="#000" stroke-width="{0.5 if k % 5 == 0 else 0.3}"/>')
+        p.append(f'<line x1="{cx+R*math.sin(a_):.2f}" y1="{cy-R*math.cos(a_):.2f}" x2="{cx+(R-L)*math.sin(a_):.2f}" y2="{cy-(R-L)*math.cos(a_):.2f}" stroke="#000" stroke-width="{0.7 if k % 5 == 0 else 0.5}"/>')
     for k in range(1, 13):
         a_ = math.radians(k * 30)
         p.append(f'<text x="{cx+23.4*math.sin(a_):.2f}" y="{cy-23.4*math.cos(a_)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">{k}</text>')
