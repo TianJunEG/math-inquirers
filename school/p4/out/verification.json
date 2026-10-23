@@ -1052,7 +1052,7 @@
   "seed": 5719,
   "checks": [
    {
-    "name": "V2 code word spells TURKEY",
+    "name": "V2 code word spells CAMPUS",
     "ok": true,
     "detail": ""
    },
@@ -1069,20 +1069,20 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['turkey']"
+    "detail": "['campus']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['equity', 'quirky', 'turkey']"
+    "detail": "['asylum', 'campus', 'clumps', 'clumsy']"
    },
    {
     "name": "V1 independent solver (the two arms read from the drawing: the angle between them) equals the key",
     "ok": true,
-    "detail": "[165, 30, 55, 155, 35, 110]"
+    "detail": "[55, 45, 70, 115, 95, 130]"
    },
    {
-    "name": "V7 angles are multiples of 5 (not of 20) between 25 and 165; arms point both to the right and to the left",
+    "name": "V7 angles are multiples of 5 (not of 20) between 35 and 145; arms point both to the right and to the left",
     "ok": true,
     "detail": ""
    },
@@ -1427,7 +1427,7 @@
    {
     "name": "V3 no single slip spells another word (large word list, 241 000 words)",
     "ok": true,
-    "detail": "1296/1296"
+    "detail": "1314/1314"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1442,12 +1442,12 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['family', 'infamy', 'mainly']"
+    "detail": "['fairly', 'family', 'firmly']"
    },
    {
     "name": "V1 independent solver (each printed question worked out exactly, then rounded where asked) equals the key",
     "ok": true,
-    "detail": "['29.26', '8.4', '2.625', '2.45', '1.6', '6.3']"
+    "detail": "['27.04', '6.53', '3.625', '2.56', '11.2', '1.9']"
    },
    {
     "name": "V7 decimals have at most 3 decimal places and every divisor is a 1-digit number",
@@ -1457,8 +1457,8 @@
   ],
   "generator_slip_test": [
    1.0,
-   1296,
-   1296
+   1314,
+   1314
   ]
  },
  {
@@ -1641,14 +1641,14 @@
   "seed": 7030,
   "checks": [
    {
-    "name": "V2 code word spells BOTANY",
+    "name": "V2 code word spells CANOPY",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 241 000 words)",
     "ok": true,
-    "detail": "1128/1128"
+    "detail": "1116/1116"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1658,17 +1658,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['botany']"
+    "detail": "['canopy']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['botany', 'bounty', 'jaunty']"
+    "detail": "['canopy', 'crayon', 'cyrano']"
    },
    {
     "name": "V1 independent solver (each printed story solved with the stated shapes) equals the key",
     "ok": true,
-    "detail": "[400, 64, 32, 156, 40, 48]"
+    "detail": "[192, 68, 24, 128, 32, 48]"
    },
    {
     "name": "V7 every side is a whole number of cm or m and every answer is below 1000",
@@ -1678,8 +1678,8 @@
   ],
   "generator_slip_test": [
    1.0,
-   1128,
-   1128
+   1116,
+   1116
   ]
  },
  {
@@ -1710,12 +1710,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['devour']"
+    "detail": "['botany']"
    },
    {
     "name": "V1 independent solver (each printed statement checked against the properties of a rectangle and a square) gets the word",
     "ok": true,
-    "detail": "['D', 'E', 'V', 'O', 'U', 'R']"
+    "detail": "['B', 'O', 'T', 'A', 'N', 'Y']"
    },
    {
     "name": "V4 between 2 and 4 statements are true",
@@ -1748,7 +1748,7 @@
    {
     "name": "V1 independent solver (the two arms read from the drawing, the fourth corner worked out, the lettered point found) gets the word",
     "ok": true,
-    "detail": "['B', 'O', 'U', 'N', 'T', 'Y']"
+    "detail": "['T', 'U', 'R', 'K', 'E', 'Y']"
    },
    {
     "name": "V3 no other way of choosing one point in every figure spells a word (large word list)",
@@ -1837,7 +1837,7 @@
   "seed": 7434,
   "checks": [
    {
-    "name": "V2 code word spells CANOPY",
+    "name": "V2 code word spells FATHOM",
     "ok": true,
     "detail": ""
    },
@@ -1854,17 +1854,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['canopy']"
+    "detail": "['fathom']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['canopy', 'cupola', 'lunacy']"
+    "detail": "['fathom', 'format', 'thorax']"
    },
    {
     "name": "V1 independent solver (shaded squares and the dashed line read from the drawing, the figure completed by reflection, the counts made) equals the key",
     "ok": true,
-    "detail": "[40, 2, 6, 34, 4, 1]"
+    "detail": "[28, 4, 5, 40, 2, 3]"
    },
    {
     "name": "V7 figure 1 has a vertical line and figure 2 a horizontal line, and the row or column asked about lies on the side that was empty",
@@ -1906,12 +1906,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['fathom']"
+    "detail": "['devour']"
    },
    {
     "name": "V1 independent solver (each drawing classified from its faces, ellipses and apex; the letter of that name read from the card) gets the word",
     "ok": true,
-    "detail": "['F', 'A', 'T', 'H', 'O', 'M']"
+    "detail": "['D', 'E', 'V', 'O', 'U', 'R']"
    },
    {
     "name": "V7 all six solids of the syllabus list appear once",
@@ -1954,12 +1954,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['campus']"
+    "detail": "['bounty']"
    },
    {
     "name": "V1 independent solver (faces counted from the drawing; six squares folded over a cube) gets the word",
     "ok": true,
-    "detail": "['C', 'A', 'M', 'P', 'U', 'S']"
+    "detail": "['B', 'O', 'U', 'N', 'T', 'Y']"
    },
    {
     "name": "V7 the nets are of a cube (twice), a cuboid, a prism, a pyramid and one that is not a net of a solid",
@@ -2017,7 +2017,7 @@
    {
     "name": "V1 independent solver (printed table read back, every blank found from row and column totals) equals the key, in reading order",
     "ok": true,
-    "detail": "[11, 13, 7, 12, 30, 36]"
+    "detail": "[11, 13, 30, 7, 12, 36]"
    },
    {
     "name": "V2 the right answers make every row and column add up",
