@@ -2124,7 +2124,8 @@
      "type": "objects",
      "icon": "sweet",
      "n": 19,
-     "per_row": 10
+     "per_row": 7,
+     "size": "l"
     }
    },
    {

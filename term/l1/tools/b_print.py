@@ -79,6 +79,7 @@ def _vis_html(v):
     xw = v.get('type') in ('number_line', 'seq', 'jump_lines')
     arr = v.get('type') == 'array'
     gw = v.get('type') == 'groups'
+    if v.get('type') == 'objects' and v.get('n', 0) > 12 and v.get('size') == 'l' and not v.get('items'): wide = True
     nar = v.get('type') in ('round_table', 'domino')
     sm = v.get('type') in ('clock', 'price_tag', 'fold_punch', 'network', 'shapes2d')
     md = v.get('type') in ('cube_stack', 'grid', 'calendar')
