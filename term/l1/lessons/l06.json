@@ -2194,7 +2194,7 @@
     "id": "S7",
     "page": 2,
     "tier": "start",
-    "text": "Start at 36. Draw 2 jumps of ten on the number line. Where do you land?",
+    "text": "Show 2 jumps of ten on the number line, beginning at 36. Where do you land?",
     "parts": [
      {
       "l": "",
@@ -2276,22 +2276,7 @@
      "Adding 4 + 5 as 9 tens (93)."
     ],
     "mins": 4,
-    "lines": 0,
-    "visual": {
-     "type": "jump_lines",
-     "start": 20,
-     "end": 70,
-     "step": 1,
-     "label_every": 10,
-     "rows": [
-      {
-       "points": [
-        23
-       ]
-      }
-     ],
-     "size": 100
-    }
+    "lines": 0
    },
    {
     "id": "T2",
@@ -2336,22 +2321,7 @@
      "Hopping forward instead of back."
     ],
     "mins": 3,
-    "lines": 0,
-    "visual": {
-     "type": "jump_lines",
-     "start": 40,
-     "end": 80,
-     "step": 1,
-     "label_every": 10,
-     "rows": [
-      {
-       "points": [
-        79
-       ]
-      }
-     ],
-     "size": 100
-    }
+    "lines": 0
    },
    {
     "id": "T3",
@@ -2435,7 +2405,7 @@
        ]
       }
      ],
-     "size": 100
+     "size": 95
     }
    },
    {
@@ -2462,22 +2432,7 @@
      "Taking away only 3 (75)."
     ],
     "mins": 3,
-    "lines": 1,
-    "visual": {
-     "type": "jump_lines",
-     "start": 40,
-     "end": 80,
-     "step": 1,
-     "label_every": 10,
-     "rows": [
-      {
-       "points": [
-        78
-       ]
-      }
-     ],
-     "size": 100
-    }
+    "lines": 1
    }
   ],
   "go": [
@@ -2534,7 +2489,7 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Now Mei wants the fewest jumps from 7 to 97. She can jump 10 or jump 20. Fill in a and b.",
+    "text": "Now Mei wants the fewest jumps from 7 to 97. She can jump 10 or jump 20. Use the line in G1. Fill in a and b.",
     "parts": [
      {
       "l": "a",
@@ -2560,23 +2515,7 @@
      "Saying 9 (only using jumps of 10)."
     ],
     "mins": 6,
-    "lines": 2,
-    "visual": {
-     "type": "jump_lines",
-     "start": 0,
-     "end": 100,
-     "step": 10,
-     "label_every": 10,
-     "rows": [
-      {
-       "points": [
-        7,
-        97
-       ]
-      }
-     ],
-     "size": 100
-    }
+    "lines": 2
    },
    {
     "id": "G3",
@@ -2616,23 +2555,7 @@
      "Saying 6 tens for (c) (adding 3 + 1 + 2)."
     ],
     "mins": 5,
-    "lines": 2,
-    "visual": {
-     "type": "jump_lines",
-     "start": 20,
-     "end": 70,
-     "step": 1,
-     "label_every": 10,
-     "rows": [
-      {
-       "points": [
-        25,
-        69
-       ]
-      }
-     ],
-     "size": 100
-    }
+    "lines": 2
    }
   ],
   "investigation": {
@@ -2653,22 +2576,7 @@
     "Saying you can land on any number.",
     "Counting hops instead of jumps."
    ],
-   "mins": 8,
-   "visual": {
-    "type": "jump_lines",
-    "start": 0,
-    "end": 60,
-    "step": 1,
-    "label_every": 10,
-    "rows": [
-     {
-      "points": [
-       6
-      ]
-     }
-    ],
-    "size": 100
-   }
+   "mins": 8
   }
  },
  "talk": {

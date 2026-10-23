@@ -294,7 +294,7 @@ def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(
     H = pad * 2 + (r1 - r0 + 1) * cell + (cell * 0.45 if arrows else 0)
     P = []
     if shade2:      # mint cells carry a diagonal hatch, so yellow (solid) and mint (hatched) are different in black and white
-        P.append(f'<defs><pattern id="hm" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="{MINT}"/><line x1="0" y1="0" x2="0" y2="9" stroke="{NAVY}" stroke-width="2.6"/></pattern></defs>')
+        P.append(f'<defs><pattern id="hm" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="{MINT}"/><line x1="0" y1="0" x2="0" y2="9" stroke="#5E8F86" stroke-width="2"/></pattern></defs>')
     centre = {}
     for r in range(r0, r1 + 1):
         for c in range(c0, c1 + 1):
@@ -316,7 +316,7 @@ def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(
                 P.append(f'<circle cx="{x + cell / 2}" cy="{y + cell / 2}" r="{cell * 0.38}" fill="{RED}" stroke="{NAVY}" stroke-width="2.2"/>')
                 P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + fs * 0.35}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="#fff" font-family="{FONT}">{n}</text>')
             else:
-                P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + fs * 0.35}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{n}</text>')
+                P.append(f'<text x="{x + cell / 2}" y="{y + cell / 2 + fs * 0.35}" font-size="{fs}" font-weight="700" text-anchor="middle" fill="{NAVY}"{(" stroke=\"#fff\" stroke-width=\"5\" paint-order=\"stroke\"" if n in shade2 else "")} font-family="{FONT}">{n}</text>')
     for n in outline:
         if n in centre:
             cx, cy = centre[n]

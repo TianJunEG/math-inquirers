@@ -151,7 +151,7 @@ def jump_lines(start=0, end=100, step=1, label_every=10, rows=None, room=True, w
     y = 0
     for ri, row in enumerate(rows):
         jumps = row.get('jumps') or []
-        top = 140 if (jumps or room) else 40
+        top = 120 if (jumps or room) else 40
         base = y + top
         pts = [({'v': q} if not isinstance(q, dict) else q) for q in row.get('points', [])]
         P.append(f'<line x1="{pad - 14}" y1="{base}" x2="{width - 26}" y2="{base}" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>')
