@@ -2308,7 +2308,8 @@
         "v": "10c"
        }
       ],
-      "label": "Set A"
+      "label": "Set A",
+      "size": "s"
      },
      {
       "type": "money",
@@ -2321,7 +2322,8 @@
         "v": "10c"
        }
       ],
-      "label": "Set B"
+      "label": "Set B",
+      "size": "s"
      },
      {
       "type": "money",
@@ -2334,7 +2336,8 @@
         "n": 2
        }
       ],
-      "label": "Set C"
+      "label": "Set C",
+      "size": "s"
      }
     ],
     "stack": true
