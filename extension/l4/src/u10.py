@@ -79,7 +79,7 @@ T.append(item(U+'-T01', 'think', 4, 'A shop sells pens in boxes of 2 and boxes o
   space={'rows': ['Working:', '']}))
 T.append(item(U+'-T02', 'think', 4, 'Ali, Ben, Kumar, Mei and Siti run a race. Nobody ties. Ali finishes before Mei. Mei finishes before Ben. Kumar finishes just after Siti. Ben does not finish last.',
   parts=[P('a', 'Places 1 to 5, in order: {b} {b} {b} {b} {b}', A('Ali', 'Mei', 'Ben', 'Siti', 'Kumar', text='Ali, Mei, Ben, Siti, Kumar'))],
-  hint='Write what you know in 3 groups. Which group can go last?',
+  hint='Join the clues into 2 groups. Which group can go last?',
   why='Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so the pair Siti, Kumar cannot come before Ben and leave Ben last. The pair must be last: Ali, Mei, Ben, Siti, Kumar. Check each clue.',
   space={'rows': ['Try:', '']}))
 T.append(item(U+'-T03', 'think', 4, 'Ravi saves $2 on Day 1, $4 on Day 2, $6 on Day 3 and so on. He saves $2 more each day.',

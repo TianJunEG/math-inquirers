@@ -325,3 +325,4 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 ## 2026-10-23 (owner replies, template and Level 4)
 - L4-REPLACE: replace the Level 4 extension holiday-clone items (new stories and frames).
 - TEMPLATE-LOWS-FIX: fix the shared extension-template Lows in all levels: Contents page prints each unit title twice; cover age line ("Ages 7-9" style) must match the level; certificate plaque has garbled pseudo-text.
+- TEMPLATE-LOWS-FIX applied (23 Oct): Contents no longer repeats a title that equals its topic; the cover age line was checked and is CORRECT (ages follow docs/levels_and_placement.md: L1 6-8, L2 7-9, L3 8-10, L4 9-11, L5 10-12, L6 11-13), no change; the Mi trophy plaque garbled text is blanked in a clean copy (extension/assets/mi_trophy_clean.png; mascot original untouched). Levels 3-6 pick it up at their next rebuild; Levels 1-2 rebuilt by the coordinator.

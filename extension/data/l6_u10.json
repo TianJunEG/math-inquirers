@@ -779,7 +779,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "P(greater than 6) = {b}/8",
+     "text": "P(over 6) = {b}/8",
      "answer": {
       "value": [
        "2"
@@ -789,7 +789,7 @@
     },
     {
      "label": "b",
-     "text": "The program says about {b}.",
+     "text": "It says about {b}.",
      "answer": {
       "value": [
        "200"
@@ -799,7 +799,7 @@
     },
     {
      "label": "c",
-     "text": "If the test were greater than 3, it would say about {b}.",
+     "text": "If the test were over 3: about {b}.",
      "answer": {
       "value": [
        "500"

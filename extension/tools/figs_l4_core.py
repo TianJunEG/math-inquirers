@@ -252,6 +252,8 @@ def l4_grid(spec, w=None):
         if ax['kind'] == 'v':
             x = left + ax['at'] * cs
             P.append(f'<line x1="{x}" y1="{top - 8}" x2="{x}" y2="{top + R * cs + 8}" stroke="{NAVY}" stroke-width="5" stroke-dasharray="14 8"/>')
+        elif ax['kind'] == 'd':
+            P.append(f'<line x1="{left - 8}" y1="{top - 8}" x2="{left + C * cs + 8}" y2="{top + R * cs + 8}" stroke="{NAVY}" stroke-width="5" stroke-dasharray="14 8"/>')
         else:
             y = top + ax['at'] * cs
             P.append(f'<line x1="{left - 8}" y1="{y}" x2="{left + C * cs + 8}" y2="{y}" stroke="{NAVY}" stroke-width="5" stroke-dasharray="14 8"/>')

@@ -97,8 +97,9 @@ def l4_proto(spec, w=None):
         if d % step == 0:
             xo, yo = _pt(cx, cy, R + 34, d)          # outer scale, 0 on the right (printed outside the rim)
             xi, yi = _pt(cx, cy, R - 52, d)          # inner scale, 0 on the left
-            P.append(_halo(xo, yo + 8, str(d), 24, 800))
-            P.append(_halo(xi, yi + 8, str(180 - d), 22, 600))
+            dy = 20 if d in (0, 180) else 0          # the numbers on the baseline sit just under it, so the arm never runs through them
+            P.append(_halo(xo, yo + 8 + dy, str(d), 24, 800))
+            P.append(_halo(xi, yi + 8 + dy, str(180 - d), 22, 600))
     P.append(f'<circle cx="{cx}" cy="{cy}" r="8" fill="{NAVY}"/>')
     # the angle: an arc between the two arms
     lo, hi = sorted((base_deg, arm_deg))

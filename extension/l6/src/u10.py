@@ -14,7 +14,7 @@ learn = {
         'figure': code([['look', 'ask (n?) and wait'], ['var', 'set r to (answer mod 7)'], ['var', 'set pos to (r + 1)'], ['look', 'say (item pos of days)']]),
         'steps': ['Idea: a week is a clock with 7 days, so we need n mod 7.',
                   'By hand: 10 days after Monday. 10 mod 7 = 3, so the day is Thursday.',
-                  'Blocks: a list starts at item 1, so set r to n mod 7, then pos to r + 1.',
+                  'Blocks: lists start at item 1. Set r to n mod 7, then pos to r + 1.',
                   'Test with known values: n = 10 gives Thursday, n = 0 and n = 7 give Monday.'],
         'answer': 'The program says item 4 of days, Thursday, when n = 10.'},
     'howto': {'title': 'How to plan a puzzle program',
@@ -148,7 +148,7 @@ I.append(IT(U, 'G', 1, 5,
             parts=[P('a', f'say (answer {X} {{b}} + {{b}})', [3, 1], '3, 1'),
                    P('b', 'A 20 km ride costs {b} dollars.', [61]),
                    P('c', 'A fare of 49 dollars is a ride of {b} km.', [16])],
-            hint='How many km apart are 2 km and 5 km? How much more is the fare?', figright=True, partsrow=True))
+            hint='How many km apart are 2 km and 5 km? How much more is the fare?', figright=True))
 I.append(IT(U, 'G', 2, 5,
             'A spinner has 8 parts numbered 1 to 8. A program spins it 800 times and counts the numbers greater than 6.',
             f'The numbers greater than 6 are 7 and 8, which is 2 results out of 8, so 1/4. 1/4 {X} 800 = 200. The numbers greater than 3 are 4, 5, 6, 7 and 8, which is 5 out of 8, so the count would be 5/8 {X} 800 = 500. '
