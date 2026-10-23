@@ -108,7 +108,7 @@ def clock(h=12, m=0, hide_hands=False, labels='all', digital=None, sector=None, 
     if numerals:
         for k in range(1, 13):
             if labels == 'quarters' and k % 3: continue
-            body.append(f'<text x="{X(71, k * 30):.1f}" y="{Y(71, k * 30) + 8:.1f}" font-size="23" font-weight="700" text-anchor="middle" fill="{NAVY}" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round" font-family="{FONT}">{k}</text>')
+            body.append(f'<text x="{X(72, k * 30):.1f}" y="{Y(72, k * 30) + 10:.1f}" font-size="29" font-weight="800" text-anchor="middle" fill="{NAVY}" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round" font-family="{FONT}">{k}</text>')
     body.append(f'<circle cx="{cx}" cy="{cy}" r="7" fill="{NAVY}"/>')
     H = 220
     if digital:

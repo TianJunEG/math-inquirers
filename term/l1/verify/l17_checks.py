@@ -80,7 +80,7 @@ def run(d):
     eq(times(4, 3), 12, 'S6'); eq(share_each(12, 4), 3, 'S6 each'); eq(times(4, 3) == 12, True, 'S6 matches'); eq(T['S6']['val'], [4, 3, 12, 'Yes'], 'S6 val')
     eq((deal(12, 3), group_up(12, 6)), ([4, 4, 4], (2, 0)), 'S7 Lily deals 12 to 3 friends (share), Jamie packs boxes of 6 (group)'); eq(T['S7']['val'], ['Share', 'Group'], 'S7 val')
     # ---- Think harder
-    eq(d['tiers']['think'][0]['visual']['n'], 19, 'T1 picture'); eq(group_up(19, 4), (4, 3), 'T1'); eq(T['T1']['val'], [4, 3], 'T1 val'); eq(T['T1']['text'].startswith('Ali has 19 counters'), True, 'T1 text says 19'); eq(19 in (12, 14, 15, 16, 18), False, 'T1 is not a class number (class left-over example is 14 and 15 in groups of 4)')
+    eq(d['tiers']['think'][0]['visual']['n'], 19, 'T1 picture'); eq(group_up(19, 4), (4, 3), 'T1'); eq(T['T1']['val'], [4, 3], 'T1 val'); eq(T['T1']['text'].startswith('Ali has 19 sweets'), True, 'T1 text says 19'); eq(19 in (12, 14, 15, 16, 18), False, 'T1 is not a class number (class left-over example is 14 and 15 in groups of 4)')
     eq(group_up(15, 4), (3, 3), 'm4 question: 15 in groups of 4')
     people = 1 + 3; eq(people, 4, 'T2 people'); eq(deal(20, people), [5, 5, 5, 5], 'T2'); eq(deal(20, 3), [7, 7, 6], 'T2 sharing among 3 would not be equal'); eq(people == 3, False, 'T2 Aisha is wrong'); eq(T['T2']['val'], ['No', 5], 'T2 val')
     eq(group_up(18, 6), (3, 0), 'T3 A bags'); eq(deal(18, 6), [3] * 6, 'T3 B each'); eq(T['T3']['val'], ['Group', 3, 'Share', 3], 'T3 val'); eq(T['T3']['text'].startswith('Mei has 18 sweets'), True, 'T3 text says 18'); eq('bags of 6' in T['T3']['parts'][0]['text'] and 'among 6 bags' in T['T3']['parts'][2]['text'], True, 'T3 stories use 6')

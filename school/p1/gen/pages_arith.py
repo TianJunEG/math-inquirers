@@ -424,7 +424,7 @@ def page05():
              instr=["3 \u00d7 4 means 3 groups of 4.", "Find the missing numbers.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Second multiplication page (the equal groups page uses bags). Every item has an array of objects: the rows are the groups and the objects in a row are the number in each group, so a pupil can count. Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4 and 5 and every product is within 25 (the syllabus limit is 40).",
+             note="Second multiplication page (the equal groups page uses bags). Every item has an array of objects: the rows are the groups and the objects in a row are the number in each group, so a pupil can count. Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4 and 5 and every product is within 25.",
              seed=505)
     sol = [solve_times(t) for t, _, _, _ in items]
     P.v("V1 solver reads the printed items back and equals the key", sol == ans, sol)

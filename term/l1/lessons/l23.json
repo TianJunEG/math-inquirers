@@ -1952,7 +1952,7 @@
       "h": 8,
       "m": 0,
       "digital": "start",
-      "size": 80
+      "size": 100
      },
      {
       "type": "clock",
@@ -1960,7 +1960,7 @@
       "m": 0,
       "hide_hands": true,
       "digital": "end",
-      "size": 80
+      "size": 100
      }
     ]
    },
@@ -1992,7 +1992,7 @@
      "type": "clock",
      "h": 2,
      "m": 0,
-     "size": 75
+     "size": 100
     }
    },
    {
@@ -2055,21 +2055,21 @@
       "h": 7,
       "m": 0,
       "digital": "A",
-      "size": 90
+      "size": 100
      },
      {
       "type": "clock",
       "h": 6,
       "m": 30,
       "digital": "B",
-      "size": 90
+      "size": 100
      },
      {
       "type": "clock",
       "h": 7,
       "m": 30,
       "digital": "C",
-      "size": 90
+      "size": 100
      }
     ]
    },
@@ -2107,14 +2107,14 @@
       "h": 10,
       "m": 30,
       "digital": "start",
-      "size": 80
+      "size": 100
      },
      {
       "type": "clock",
       "h": 11,
       "m": 30,
       "digital": "end",
-      "size": 80
+      "size": 100
      }
     ]
    },

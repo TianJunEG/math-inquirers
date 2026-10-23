@@ -2035,21 +2035,21 @@
       "h": 2,
       "m": 35,
       "digital": "[]",
-      "size": 75
+      "size": 100
      },
      {
       "type": "clock",
       "h": 9,
       "m": 5,
       "digital": "[]",
-      "size": 75
+      "size": 100
      },
      {
       "type": "clock",
       "h": 11,
       "m": 10,
       "digital": "[]",
-      "size": 75
+      "size": 100
      }
     ]
    },
@@ -2081,7 +2081,7 @@
      "type": "clock",
      "h": 3,
      "m": 40,
-     "size": 62
+     "size": 100
     }
    },
    {
@@ -2114,7 +2114,7 @@
      "m": 20,
      "hide_hands": true,
      "digital": "3:20",
-     "size": 80
+     "size": 100
     }
    },
    {
@@ -2219,14 +2219,14 @@
       "h": 6,
       "m": 20,
       "digital": "Ben",
-      "size": 70
+      "size": 100
      },
      {
       "type": "clock",
       "h": 6,
       "m": 15,
       "digital": "Mei",
-      "size": 70
+      "size": 100
      }
     ]
    }
@@ -2373,7 +2373,7 @@
      "type": "clock",
      "h": 3,
      "m": 50,
-     "size": 70
+     "size": 100
     }
    },
    {
@@ -2605,7 +2605,7 @@
     "h": 10,
     "m": 15,
     "digital": "[]",
-    "size": 44
+    "size": 100
    }
   },
   {
@@ -2651,7 +2651,7 @@
     "m": 25,
     "hide_hands": true,
     "digital": "9:25",
-    "size": 40
+    "size": 100
    }
   }
  ],
