@@ -141,31 +141,31 @@
   {
    "id": "L6U10-S03",
    "tier": "start",
-   "text": "A diver is at −18 m. She rises 7 m and then dives 12 m.",
+   "text": "Mei's bank balance is −6 dollars, so she owes the bank. She pays in 15 dollars and then spends 20 dollars.",
    "page": 1,
    "parts": [
     {
      "label": "a",
-     "text": "She is now at {b} m.",
+     "text": "Her balance is now {b} dollars.",
      "answer": {
       "value": [
-       "-23"
+       "-11"
       ],
-      "text": "−23"
+      "text": "−11"
      }
     },
     {
      "label": "b",
-     "text": "The distance from −6 to 9 is {b}.",
+     "text": "Later her balance goes from −6 to 21 dollars. It rises by {b} dollars.",
      "answer": {
       "value": [
-       "15"
+       "27"
       ],
-      "text": "15"
+      "text": "27"
      }
     }
    ],
-   "explanation": "−18 + 7 = −11. Then −11 − 12 = −23. From −6 to 9 is 6 steps to 0 and 9 more: 15."
+   "explanation": "−6 + 15 = 9. Then 9 − 20 = −11. From −6 up to 21 is 6 steps to 0 and 21 more: 27."
   },
   {
    "id": "L6U10-S04",
@@ -312,61 +312,61 @@
    "parts": [
     {
      "label": "a",
-     "text": "The mean of 5 numbers is 14. Four of them are 10, 12, 18 and 20. The 5th is {b}.",
+     "text": "The mean of 4 numbers is 15. Three of them are 11, 19 and 14. The 4th is {b}.",
      "answer": {
       "value": [
-       "10"
+       "16"
       ],
-      "text": "10"
+      "text": "16"
      }
     },
     {
      "label": "b",
-     "text": "The median of 3, 11, 7, 9 is {b}.",
+     "text": "The median of 15, 4, 9, 12 is {b}.",
      "answer": {
       "value": [
-       "8"
+       "10.5"
       ],
-      "text": "8"
+      "text": "10.5"
      }
     }
    ],
-   "explanation": "(a) The total of 5 numbers is 5 × 14 = 70. 10 + 12 + 18 + 20 = 60, so the 5th is 10. (b) In order: 3, 7, 9, 11. The middle two are 7 and 9, so the median is 8."
+   "explanation": "(a) The total of 4 numbers is 4 × 15 = 60. 11 + 19 + 14 = 44, so the 4th is 16. (b) In order: 4, 9, 12, 15. The middle two are 9 and 12, so the median is halfway between them: 10.5."
   },
   {
    "id": "L6U10-S10",
    "tier": "start",
-   "text": "The program chooses a secret number n between 1 and 20 and displays an answer. Read the code.",
+   "text": "A game starts with a score of 50. This code plays 8 rounds. Run it by hand.",
    "page": 2,
    "parts": [
     {
      "label": "a",
-     "text": "It shows 31. The secret n was {b}.",
+     "text": "After round 6 the score is {b}.",
      "answer": {
       "value": [
-       "7"
+       "34"
       ],
-      "text": "7"
+      "text": "34"
      }
     },
     {
      "label": "b",
-     "text": "The smallest number it can show is {b}.",
+     "text": "The score first resets to 50 after round {b}.",
      "answer": {
       "value": [
-       "7"
+       "4"
       ],
-      "text": "7"
+      "text": "4"
      }
     },
     {
      "label": "c",
-     "text": "The largest number it can show is {b}.",
+     "text": "The program says {b}.",
      "answer": {
       "value": [
-       "83"
+       "50"
       ],
-      "text": "83"
+      "text": "50"
      }
     }
    ],
@@ -375,15 +375,35 @@
     "prog": [
      [
       "var",
-      "set n to (pick random 1 to 20)"
+      "set score to (50)"
+     ],
+     [
+      "ctl",
+      "repeat (8)",
+      [
+       [
+        "var",
+        "change score by (−8)"
+       ],
+       [
+        "ctl",
+        "if <(score) {lt} (20)> then",
+        [
+         [
+          "var",
+          "set score to (50)"
+         ]
+        ]
+       ]
+      ]
      ],
      [
       "look",
-      "say (n × 4 + 3)"
+      "say (score)"
      ]
     ]
    },
-   "explanation": "The program shows 4n + 3. If it shows 31, then 4n = 28 and n = 7. The smallest output is 4 × 1 + 3 = 7. The largest is 4 × 20 + 3 = 83.",
+   "explanation": "Each round takes away 8: 42, 34, 26, 18. The score 18 is below 20, so it resets to 50 after round 4. Rounds 5 to 8 repeat the pattern: 42, 34, 26, 18, and the score resets to 50 again after round 8. After round 6 the score is 34.",
    "figside": true
   },
   {
@@ -693,39 +713,48 @@
   {
    "id": "L6U10-G01",
    "tier": "go",
-   "text": "Plan a Mystery Machine. A random n from 1 to 20 goes in, and the machine shows 5n − 2. Fill in the rule.",
+   "text": "Plan a taxi meter. The same rule is used for every ride: the fare is 7 dollars for 2 km and 16 dollars for 5 km. Fill in the code.",
    "page": 5,
    "parts": [
     {
      "label": "a",
-     "text": "say (n × {b} − {b})",
+     "text": "Each extra km costs {b} dollars.",
      "answer": {
       "value": [
-       "5",
-       "2"
+       "3"
       ],
-      "text": "5, 2"
+      "text": "3"
      }
     },
     {
      "label": "b",
-     "text": "The smallest and largest numbers it shows are {b} and {b}.",
+     "text": "say (n × {b} + {b})",
      "answer": {
       "value": [
        "3",
-       "98"
+       "1"
       ],
-      "text": "3 and 98"
+      "text": "3, 1"
      }
     },
     {
      "label": "c",
-     "text": "The player sees 48. The secret n is {b}.",
+     "text": "A 20 km ride costs {b} dollars.",
      "answer": {
       "value": [
-       "10"
+       "61"
       ],
-      "text": "10"
+      "text": "61"
+     }
+    },
+    {
+     "label": "d",
+     "text": "A fare of 49 dollars is a ride of {b} km.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
      }
     }
    ],
@@ -733,39 +762,34 @@
     "type": "l6_code",
     "prog": [
      [
+      "look",
+      "ask (km?) and wait"
+     ],
+     [
       "var",
-      "set n to (pick random 1 to 20)"
+      "set n to (answer)"
      ],
      [
       "look",
-      "say (n × ? − ?)"
+      "say (n × ? + ?)"
      ]
     ]
    },
-   "hint": "Check with n = 1 and n = 20 by hand first.",
-   "explanation": "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. For 48: 5n = 50, so n = 10. (For your twist, test by hand first: n = 4 shows 18.)",
+   "hint": "How many km apart are 2 km and 5 km? How much more is the fare?",
+   "explanation": "From 2 km to 5 km is 3 km more, and the fare rises by 16 − 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 × 2 + 1, so there is a 1 dollar start fee. The rule is n × 3 + 1. A 20 km ride costs 3 × 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, test with a ride you can price by hand first.)",
    "figright": true,
-   "partsrow": true
+   "partsrow": true,
+   "beyond": "Plan a program"
   },
   {
    "id": "L6U10-G02",
    "tier": "go",
-   "text": "Plan a Lucky Number program: repeat 1000 times: roll 2 dice and add them. If the total is 11, add 1 to count. At the end, say count.",
+   "text": "Plan a spin counter. The spinner has 8 equal parts numbered 1 to 8. The program spins it 800 times and counts the spins that are multiples of 3.",
    "page": 5,
    "parts": [
     {
      "label": "a",
-     "text": "The program repeats {b} times.",
-     "answer": {
-      "value": [
-       "1000"
-      ],
-      "text": "1000"
-     }
-    },
-    {
-     "label": "b",
-     "text": "P(total is 11) = {b}/36",
+     "text": "P(multiple of 3) = {b}/8",
      "answer": {
       "value": [
        "2"
@@ -774,53 +798,23 @@
      }
     },
     {
-     "label": "c",
+     "label": "b",
      "text": "The program says about {b}.",
      "answer": {
       "value": [
-       "56"
+       "200"
       ],
-      "text": "56"
-     }
-    }
-   ],
-   "hint": "Which 2 results of the 2 dice make 11?",
-   "explanation": "Two dice have 36 equally likely results. A total of 11 is 5 + 6 or 6 + 5, which is 2 results out of 36. 2/36 × 1000 = 55.6, so about 56. Each run of the program gives a slightly different count, near 56."
-  },
-  {
-   "id": "L6U10-G03",
-   "tier": "go",
-   "text": "This code tests whether n is prime. A final found of 0 means prime. Run it.",
-   "page": 5,
-   "parts": [
-    {
-     "label": "a",
-     "text": "With n = 53 it tests {b} values of d.",
-     "answer": {
-      "value": [
-       "6"
-      ],
-      "text": "6"
-     }
-    },
-    {
-     "label": "b",
-     "text": "With n = 49 it says {b}.",
-     "answer": {
-      "value": [
-       "1"
-      ],
-      "text": "1"
+      "text": "200"
      }
     },
     {
      "label": "c",
-     "text": "With n = 53 it says {b}.",
+     "text": "If the test counted even numbers, it would say about {b}.",
      "answer": {
       "value": [
-       "0"
+       "400"
       ],
-      "text": "0"
+      "text": "400"
      }
     }
    ],
@@ -829,55 +823,132 @@
     "prog": [
      [
       "var",
-      "set d to (2)"
-     ],
-     [
-      "var",
-      "set found to (0)"
+      "set count to (0)"
      ],
      [
       "ctl",
-      "repeat until <(d × d) {gt} (n)>",
+      "repeat (800)",
       [
        [
+        "var",
+        "set spin to (pick random 1 to 8)"
+       ],
+       [
         "ctl",
-        "if <(n mod d) = (0)> then",
+        "if <(spin mod 3) = (0)> then",
         [
          [
           "var",
-          "change found by (1)"
+          "change count by (1)"
          ]
         ]
-       ],
-       [
-        "var",
-        "change d by (1)"
        ]
       ]
      ],
      [
       "look",
-      "say (found)"
+      "say (count)"
      ]
     ]
    },
-   "hint": "Stop when d × d is more than n. Count the values of d.",
-   "explanation": "The loop tests d = 2, 3, ... until d × d is more than n. For n = 53, d = 2 to 7 are tested (8 × 8 = 64 is more than 53): 6 values. None divides 53, so found stays 0. For n = 49 only d = 7 divides it: found = 1.",
+   "hint": "Which numbers from 1 to 8 are multiples of 3?",
+   "explanation": "The multiples of 3 from 1 to 8 are 3 and 6, which is 2 results out of 8, so 1/4. 1/4 × 800 = 200. The even numbers 2, 4, 6 and 8 are 4 out of 8, so the count would be 1/2 × 800 = 400. A real run is near these numbers, not exactly equal.",
    "figside": true
+  },
+  {
+   "id": "L6U10-G03",
+   "tier": "go",
+   "text": "This code starts with a number n and stops when n reaches 1. Run it by hand.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "With n = 6 it says {b}.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With n = 7 it says {b}.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Starting at 7, the largest value n takes is {b}.",
+     "answer": {
+      "value": [
+       "52"
+      ],
+      "text": "52"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set steps to (0)"
+     ],
+     [
+      "ctl",
+      "repeat until <(n) = (1)>",
+      [
+       [
+        "ctl",
+        "if <(n mod 2) = (0)> then",
+        [
+         [
+          "var",
+          "set n to (n ÷ 2)"
+         ]
+        ],
+        [
+         [
+          "var",
+          "set n to (n × 3 + 1)"
+         ]
+        ]
+       ],
+       [
+        "var",
+        "change steps by (1)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (steps)"
+     ]
+    ]
+   },
+   "hint": "Write n after every step. Stop when n is 1.",
+   "explanation": "n = 6: 6, 3, 10, 5, 16, 8, 4, 2, 1. That is 8 steps (halve if even, or 3n + 1 if odd). n = 7: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 is 16 steps. The largest number reached from 7 is 52.",
+   "figside": true,
+   "beyond": "A famous loop"
   },
   {
    "id": "L6U10-C01",
    "tier": "quiz",
-   "text": "3, 8, 13, 18, ... The rule is {b} × n − {b}.",
+   "text": "4, 11, 18, 25, ... The rule is {b} × n − {b}.",
    "page": 6,
    "answer": {
     "value": [
-     "5",
-     "2"
+     "7",
+     "3"
     ],
-    "text": "5, 2"
+    "text": "7, 3"
    },
-   "explanation": "The difference is 5. Each term is 2 less than 5, 10, 15, 20, so the rule is 5n − 2."
+   "explanation": "The difference is 7. Each term is 3 less than 7, 14, 21, 28, so the rule is 7n − 3."
   },
   {
    "id": "L6U10-C02",
@@ -895,16 +966,16 @@
   {
    "id": "L6U10-C03",
    "tier": "quiz",
-   "text": "A bag holds 4 red counters and 6 blue counters. P(red) = {b}/{b} in simplest form.",
+   "text": "A bag holds 7 red counters and 8 blue counters. P(red) = {b}/{b} in simplest form.",
    "page": 6,
    "answer": {
     "value": [
-     "2",
-     "5"
+     "7",
+     "15"
     ],
-    "text": "2/5"
+    "text": "7/15"
    },
-   "explanation": "4 red out of 10 counters is 4/10 = 2/5."
+   "explanation": "7 red out of 15 counters is 7/15, which is already in simplest form."
   },
   {
    "id": "L6U10-C04",

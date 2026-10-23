@@ -102,12 +102,12 @@ def _():
 
 @check('L6U10-S03')
 def _():
-    d = -18
-    for _ in range(7):
+    d = -6
+    for _ in range(15):
         d += 1
-    for _ in range(12):
+    for _ in range(20):
         d -= 1
-    return {'a': [d], 'b': [steps(-6, 9)]}
+    return {'a': [d], 'b': [steps(-6, 21)]}
 
 
 @check('L6U10-S04')
@@ -143,17 +143,18 @@ def _():
 
 @check('L6U10-S09')
 def _():
-    fifth = [x for x in range(0, 100) if mean([10, 12, 18, 20, x]) == 14][0]
-    ys = sorted([3, 11, 7, 9])
-    return {'a': [fifth], 'b': [int((ys[1] + ys[2]) / 2)]}
+    fourth = [x for x in range(0, 100) if mean([11, 19, 14, x]) == 15][0]
+    ys = sorted([15, 4, 9, 12])
+    return {'a': [fourth], 'b': [(ys[1] + ys[2]) / 2]}
 
 
 @check('L6U10-S10')
 def _():
     prog = prog_of('L6U10-S10')
-    out = {n: run(prog[1:], env={'n': n})[1][0] for n in range(1, 21)}
-    secret = [n for n, v in out.items() if v == 31][0]
-    return {'a': [secret], 'b': [min(out.values())], 'c': [max(out.values())]}
+    tr = []
+    env, said = run(prog, trace=tr)
+    first = [i + 1 for i, e in enumerate(tr) if e['score'] == 50][0]
+    return {'a': [tr[5]['score']], 'b': [first], 'c': [said[0]]}
 
 
 @check('L6U10-S11')
@@ -216,31 +217,46 @@ def _():
 
 @check('L6U10-G01')
 def _():
-    out = {n: n * 5 - 2 for n in range(1, 21)}
-    a, b = fit_rule([(1, out[1]), (2, out[2])])
-    secret = [n for n, v in out.items() if v == 48][0]
-    return {'a': [a, -b], 'b': [min(out.values()), max(out.values())], 'c': [secret]}
+    pairs = [(2, 7), (5, 16)]
+    rules = [(a, b) for a in range(0, 20) for b in range(-20, 20) if all(a * n + b == v for n, v in pairs)]
+    assert len(rules) == 1
+    a, b = rules[0]
+    rate = [m for m in range(0, 20) if (16 - 7) == m * (5 - 2)][0]
+    ride = [n for n in range(0, 100) if a * n + b == 49][0]
+    prog = prog_of('L6U10-G01')
+    assert any('?' in blk[1] for blk in prog)            # the printed code has the rule blanked out
+    assert rate == a
+    return {'a': [a, b], 'b': [a * 20 + b], 'c': [ride]}
 
 
 @check('L6U10-G02')
 def _():
-    two = list(itertools.product(range(1, 7), repeat=2))
-    ways = len([1 for a, b in two if a + b == 11])
-    return {'a': [1000], 'b': [ways], 'c': [round(1000 * Fraction(ways, 36))]}
+    prog = prog_of('L6U10-G02')
+    spins = range(1, 9)
+    mult3 = len([n for n in spins if n % 3 == 0])
+    evens = len([n for n in spins if n % 2 == 0])
+    rep = [b for b in prog if b[1].startswith('repeat')][0][1]
+    times = int(rep.split('(')[1].rstrip(')'))
+    return {'a': [mult3], 'b': [round(times * Fraction(mult3, 8))], 'c': [round(times * Fraction(evens, 8))]}
 
 
 @check('L6U10-G03')
 def _():
     prog = prog_of('L6U10-G03')
-    t53, t49 = [], []
-    env53, said53 = run(prog, env={'n': 53}, trace=t53)
-    env49, said49 = run(prog, env={'n': 49}, trace=t49)
-    return {'a': [len(t53)], 'b': [said49[0]], 'c': [said53[0]]}
+    out = {}
+    for n0 in (6, 7):
+        env, said = run(prog, env={'n': n0})
+        out[n0] = said[0]
+    n, top = 7, 7
+    while n != 1:
+        n = n // 2 if n % 2 == 0 else 3 * n + 1
+        top = max(top, n)
+    return {'a': [out[6]], 'b': [out[7]], 'c': [top]}
 
 
 @check('L6U10-C01')
 def _():
-    a, b = fit_rule([(1, 3), (2, 8), (3, 13), (4, 18)])
+    a, b = fit_rule([(1, 4), (2, 11), (3, 18), (4, 25)])
     return s([a, -b])
 
 
@@ -256,7 +272,7 @@ def _():
 
 @check('L6U10-C03')
 def _():
-    f = Fraction(4, 10)
+    f = Fraction(7, 15)
     return s([f.numerator, f.denominator])
 
 

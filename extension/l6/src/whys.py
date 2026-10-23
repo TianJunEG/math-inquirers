@@ -3,11 +3,9 @@ stays within the page budget (the book must not run over 100 pages).  Keys are i
 WHY = {
  'L6U02-G01': "(a) 72 has 12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. A factor uses 0 to 3 twos and 0 to 2 threes: 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5 gives 3 × 3 × 2 = 18. (c) 60 = 2 × 2 × 3 × 5 gives 3 × 2 × 2 = 12, and no smaller number has 12.",
  'L6U04-G02': "(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so n = 31. (b) 5 odd numbers: n + (n + 2) + (n + 4) + (n + 6) + (n + 8) = 5n + 20 = 125, so n = 21. (c) 4n + 6 = 100 gives n = 23.5, not a whole number: No.",
- 'L6U10-G03': "The loop tests d = 2, 3, ... until d × d is more than n. For n = 53, d = 2 to 7 are tested (8 × 8 = 64 is more than 53): 6 values. None divides 53, so found stays 0. For n = 49 only d = 7 divides it: found = 1.",
  'L6U07-G01': "Right 10, down 20, left 30, up 40 ends at x = 10 − 30 = −20, y = −20 + 40 = 20. The next 4 moves (50, 60, 70, 80) end at x = −40, y = 40. Each 4 repeats adds −20 to x and 20 to y, so 12 repeats end at (−60, 60).",
  'L6U04-G01': "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 for every 1 of IN, so the lead is gone in 4 steps, at IN 6. Both give 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.",
  'L6U01-G01': "The extra sticks are 6, 8, then 10 and 12 (they go up by 2): 18 + 10 = 28 and 28 + 12 = 40. Staircase 10: 4 + 6 + 8 + ... + 22 = 130. (The rule is n × n + 3n.)",
- 'L6U10-G01': "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. For 48: 5n = 50, so n = 10. (For your twist, test by hand first: n = 4 shows 18.)",
  'L6U02-T03': "Test 2, 3, 5 and 7 only: 11 × 11 = 121 is above 120. 101, 103, 107, 109 and 113 have no such factor. The odd non-primes are 105, 111, 115, 117 and 119. Differ by 2: 101 and 103, 107 and 109. (c) 105 = 7 × 15 and 119 = 7 × 17.",
  'L6U01-S07': "Each day adds $7, so the rule is 7n + 8. Day 4: 36. Day 30: 7 × 30 + 8 = 218. 7n + 8 > 200 needs 7n > 192: 7 × 27 = 189 is too small and 7 × 28 = 196 works, so Day 28 ($204).",
  'L6U06-T01': "An even total needs 2 odd dice (3 × 3 = 9 ways) or 2 even dice (9 ways): 18 of 36, so it is fair. In Game 2 Ali wins 6/36 and Ben 30/36. If Ali scores 5 points a win and Ben 1, then 6 × 5 = 30 = 30 × 1: fair.",

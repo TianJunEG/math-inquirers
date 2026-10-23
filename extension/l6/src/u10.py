@@ -141,47 +141,48 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Plan a Mystery Machine. A random n from 1 to 20 goes in, and the machine shows 5n \u2212 2. Fill in the rule.',
-            f'The rule is n {X} 5 {M} 2. The smallest output is 5 {X} 1 {M} 2 = 3 and the largest is 5 {X} 20 {M} 2 = 98. If the player sees 48, then 5n = 50 and n = 10. '
-            f'(For your twist, any rule that can be undone is fine. Find a test answer by hand first, for example n = 4 shows 18, then check the program gives it.)',
-            fig=code([['var', 'set n to (pick random 1 to 20)'], ['look', f'say (n {X} ? {M} ?)']]),
-            parts=[P('a', f'say (n {X} {{b}} {M} {{b}})', [5, 2], '5, 2'),
-                   P('b', 'The smallest and largest numbers it shows are {b} and {b}.', [3, 98], '3 and 98'),
-                   P('c', 'The player sees 48. The secret n is {b}.', [10])],
-            hint='Check with n = 1 and n = 20 by hand first.', figright=True, partsrow=True))
+            'Plan a taxi meter. The fare is 7 dollars for 2 km and 16 dollars for 5 km, with the same rule for every ride.',
+            f'From 2 km to 5 km is 3 km more, and the fare rises by 16 {M} 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 {X} 2 + 1, so there is a 1 dollar start fee. The rule is n {X} 3 + 1. '
+            f'A 20 km ride costs 3 {X} 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, test with a ride you can price by hand first.)',
+            fig=code([['look', 'ask (km?) and wait'], ['var', 'set n to (answer)'], ['look', f'say (n {X} ? + ?)']]),
+            parts=[P('a', f'say (n {X} {{b}} + {{b}})', [3, 1], '3, 1'),
+                   P('b', 'A 20 km ride costs {b} dollars.', [61]),
+                   P('c', 'A fare of 49 dollars is a ride of {b} km.', [16])],
+            hint='How many km apart are 2 km and 5 km? How much more is the fare?', figright=True, partsrow=True))
 I.append(IT(U, 'G', 2, 5,
-            'Plan a Lucky Number program: repeat 1000 times: roll 2 dice and add them. If the total is 11, add 1 to count. At the end, say count.',
-            f'Two dice have 36 equally likely results. A total of 11 is 5 + 6 or 6 + 5, which is 2 results out of 36. 2/36 {X} 1000 = 55.6, so about 56. '
-            f'Each run of the program gives a slightly different count, near 56.',
-            parts=[P('a', 'The program repeats {b} times.', [1000]),
-                   P('b', 'P(total is 11) = {b}/36', [2]),
-                   P('c', 'The program says about {b}.', [56])],
-            hint='Which 2 results of the 2 dice make 11?'))
+            'Plan a spin counter. The spinner has 8 equal parts numbered 1 to 8. The program spins it 800 times and counts the spins that are multiples of 3.',
+            f'The multiples of 3 from 1 to 8 are 3 and 6, which is 2 results out of 8, so 1/4. 1/4 {X} 800 = 200. The even numbers 2, 4, 6 and 8 are 4 out of 8, so the count would be 1/2 {X} 800 = 400. '
+            f'A real run is near these numbers, not exactly equal.',
+            fig=code([['var', 'set count to (0)'], ['ctl', 'repeat (800)', [['var', 'set spin to (pick random 1 to 8)'], ['ctl', 'if <(spin mod 3) = (0)> then', [['var', 'change count by (1)']]]]], ['look', 'say (count)']]),
+            parts=[P('a', 'P(multiple of 3) = {b}/8', [2]),
+                   P('b', 'The program says about {b}.', [200]),
+                   P('c', 'If the test counted even numbers, it would say about {b}.', [400])],
+            hint='Which numbers from 1 to 8 are multiples of 3?', figside=True))
 I.append(IT(U, 'G', 3, 5,
-            'This code tests whether n is prime. A final found of 0 means prime. Run it.',
-            f'The loop tests d = 2, 3, 4, ... until d {X} d is more than n. n = 53: 7 {X} 7 = 49 is not more than 53, 8 {X} 8 = 64 is, so d = 2 to 7 are tested: 6 values. None divides 53, so found stays 0. '
-            f'n = 49: d = 2 to 7 are tested, and only 7 divides 49, so found = 1. found = 0 means n is prime.',
-            fig=code([['var', 'set d to (2)'], ['var', 'set found to (0)'],
-                      ['ctl', f'repeat until <(d {X} d) {{gt}} (n)>', [['ctl', 'if <(n mod d) = (0)> then', [['var', 'change found by (1)']]], ['var', 'change d by (1)']]],
-                      ['look', 'say (found)']]),
-            parts=[P('a', 'With n = 53 it tests {b} values of d.', [6]),
-                   P('b', 'With n = 49 it says {b}.', [1]),
-                   P('c', 'With n = 53 it says {b}.', [0])],
-            hint='Stop when d \u00d7 d is more than n. Count the values of d.', figside=True))
+            'This code starts with a number n and stops when n reaches 1. Run it by hand.',
+            f'n = 6: 6, 3, 10, 5, 16, 8, 4, 2, 1. That is 8 steps (halve if even, or 3n + 1 if odd). n = 7: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 is 16 steps. '
+            f'The largest number reached from 7 is 52.',
+            fig=code([['var', 'set steps to (0)'],
+                      ['ctl', 'repeat until <(n) = (1)>', [['ctl', 'if <(n mod 2) = (0)> then', [['var', f'set n to (n ÷ 2)']], [['var', f'set n to (n {X} 3 + 1)']]], ['var', 'change steps by (1)']]],
+                      ['look', 'say (steps)']]),
+            parts=[P('a', 'With n = 6 it says {b}.', [8]),
+                   P('b', 'With n = 7 it says {b}.', [16]),
+                   P('c', 'Starting at 7, the largest value n takes is {b}.', [52])],
+            hint='Write n after every step. Stop when n is 1.', figside=True))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,
-            f'3, 8, 13, 18, ... The rule is {{b}} {X} n {M} {{b}}.',
-            f'The difference is 5. Each term is 2 less than 5, 10, 15, 20, so the rule is 5n {M} 2.',
-            answer=A([5, 2], '5, 2')))
+            f'4, 11, 18, 25, ... The rule is {{b}} {X} n {M} {{b}}.',
+            f'The difference is 7. Each term is 3 less than 7, 14, 21, 28, so the rule is 7n {M} 3.',
+            answer=A([7, 3], '7, 3')))
 I.append(IT(U, 'C', 2, 6,
             f'{M}7 + 12 {M} 9 = {{b}}',
             f'{M}7 + 12 = 5. Then 5 {M} 9 = {M}4.',
             answer=A([-4], f'{M}4')))
 I.append(IT(U, 'C', 3, 6,
-            'A bag holds 4 red counters and 6 blue counters. P(red) = {b}/{b} in simplest form.',
-            '4 red out of 10 counters is 4/10 = 2/5.',
-            answer=A([2, 5], '2/5')))
+            'A bag holds 7 red counters and 8 blue counters. P(red) = {b}/{b} in simplest form.',
+            '7 red out of 15 counters is 7/15, which is already in simplest form.',
+            answer=A([7, 15], '7/15')))
 I.append(IT(U, 'C', 4, 6,
             'It is 3 o\'clock. In 100 hours it will be {b} o\'clock.',
             f'3 + 100 = 103. 103 mod 12 = 7, because 8 {X} 12 = 96. It will be 7 o\'clock.',
