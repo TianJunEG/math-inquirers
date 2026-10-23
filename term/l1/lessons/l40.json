@@ -3177,7 +3177,7 @@
           "type": "shapes2d",
           "shape": "circle",
           "parts": 1,
-          "size": 23
+          "size": 22
         }
       },
       {
@@ -3228,7 +3228,7 @@
             2,
             0
           ],
-          "size": 35
+          "size": 32
         }
       },
       {
@@ -3280,13 +3280,13 @@
               ]
             ],
             "mode": "iso",
-            "size": 23
+            "size": 40
           },
           {
             "type": "fold_punch",
             "stage": "paper",
             "fold": "h",
-            "size": 23,
+            "size": 30,
             "draw": 110
           },
           {
@@ -3299,7 +3299,7 @@
                 0.7
               ]
             ],
-            "size": 23,
+            "size": 30,
             "draw": 110
           }
         ]
@@ -3417,7 +3417,7 @@
             "D",
             "E"
           ],
-          "size": 38
+          "size": 35
         }
       },
       {
@@ -3473,7 +3473,7 @@
           "icon": "flower",
           "title": "Flowers",
           "each": 2,
-          "size": 68
+          "size": 100
         }
       },
       {
