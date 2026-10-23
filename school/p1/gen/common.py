@@ -1,6 +1,6 @@
 """Shared helpers: word list, code tables, SVG snippets, reading-level check.
 Everything is pure black and white (#000 / #fff only)."""
-import math, re, random
+import math, re, random, itertools
 
 # Small child-safe dictionary used to test that a wrong answer does not accidentally
 # spell another real word (V3/V5) and that a partial word is not easily guessed (V4).
@@ -88,6 +88,30 @@ def bad_letters(word):
             if c != word[i] and (word[:i] + c + word[i+1:]).lower() in BIG: bad.add(c)
     return bad
 
+_ANA = {}
+def anagrams(word):
+    """every word of the large list that uses exactly the letters of `word` (the word itself included)"""
+    if not _ANA:
+        for w in BIG: _ANA.setdefault("".join(sorted(w)), set()).add(w)
+    return sorted(_ANA.get("".join(sorted(word.lower())), set()) | {word.lower()})
+
+def decoy_options(word, extra=1):
+    """decoy letters d (not in the word) such that NO ordered pick of len(word) letters from word + d, other than the word itself,
+    spells a word of the large list: a wrong placement of the answers, or the decoy put in place of a real letter, is never a word"""
+    out = []
+    for d in ALPHA:
+        if d in word: continue
+        letters = list(word) + [d]
+        if all("".join(pp).lower() not in BIG for pp in itertools.permutations(letters, len(word)) if "".join(pp) != word):
+            out.append(d)
+    return out
+
+def small_words(letters):
+    """common words of 3 or 4 letters that can be spelt from the given letters (each used once): partial words that make the full word harder to read off"""
+    from collections import Counter
+    have = Counter(c.lower() for c in letters)
+    return sorted(w for w in COMMON if 3 <= len(w) <= 4 and not (Counter(w) - have))
+
 LETTER_WEIGHT = dict(E=12, T=9, A=8, O=8, I=7, N=7, S=6, H=6, R=6, D=4, L=4, U=3, C=3, M=3, W=2, F=2, G=2, Y=2, P=2, B=2, V=1, K=1, J=0.3, X=0.2, Q=0.2, Z=0.2)
 def weighted_letters(word, k, rng, pool=None):
     pool = [c for c in (pool or ALPHA) if c not in word]
@@ -124,7 +148,7 @@ def code_verify(answers, table, word, lo, hi, domain=None):
         for j in range(i + 1, n):
             l = list(word); l[i], l[j] = l[j], l[i]; x = "".join(l)
             if x != word and x.lower() in BIG: swaps.append(x)
-    return dict(spelled_ok=ok2, single_total=tot, single_detected=det,
+    return dict(anagrams=anagrams(word), spelled_ok=ok2, single_total=tot, single_detected=det,
                 rate=det / tot, undetected=undetected, candidates=cand, n_candidates=len(cand), swap_words=swaps)
 
 def make_code_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), tries=1500, min_cand=3, pool=None, domain=None):
@@ -142,6 +166,7 @@ def code_checks(P, cv, word):
     P.v("V2 code word spells " + word, cv["spelled_ok"])
     P.v("V3 no single slip spells another word (large word list, 129 000 words)", not cv["undetected"], f'{cv["single_detected"]}/{cv["single_total"]}')
     P.v("V3c no swap of two answers spells a word", not cv["swap_words"], cv["swap_words"][:3])
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)", cv["anagrams"] == [word.lower()], cv["anagrams"])
     P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
 
 def code_table_html(table, cols=None):

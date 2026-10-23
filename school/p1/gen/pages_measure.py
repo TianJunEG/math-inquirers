@@ -318,7 +318,7 @@ def page06():
 # ---------------------------------------------------------------- P18 (two stars: times to 5 minutes, 1 hour or half an hour later)
 def page18():
     rng = random.Random(1818)
-    word = "FRESH"
+    word = "CLIMB"
     domain = [tstr(h, m) for h in range(1, 13) for m in range(0, 60, 5)]
     while True:
         qs = []
@@ -383,7 +383,7 @@ def page18():
 # ---------------------------------------------------------------- P19
 def page19():
     rng = random.Random(1919)
-    word = "ABOVE"
+    word = "BUILD"
     types = ["rect", "tri", "circle", "half", "quarter"]
     while True:
         counts = [1, 2, 3, 4, 5]; rng.shuffle(counts)

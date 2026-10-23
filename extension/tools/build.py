@@ -90,10 +90,10 @@ def licence(book, theme, ctx):
 
 
 def welcome(book, theme, ctx):
-    steps = ['Open the <b>Learn it</b> page first. Read how the idea works.',
+    steps = ['Read the <b>Learn it</b> page first. It shows how the idea works.',
              'Do the <b>Start here</b> pages. Take your time.',
-             'Stuck? Find the hint. It is printed upside down, so you do not see it by accident.',
-             'Do <b>Check yourself</b>. Then look at the answers at the back. Read the <b>Why</b> if one is wrong.']
+             'Stuck? Find the hint. It is printed upside down.',
+             'Do <b>Check yourself</b>. Check the answers at the back. Wrong? Read the <b>Why</b>.']
     kid = ('<div class="box kid"><h3>How to use this book</h3><ol class="steps">' + ''.join(f'<li><span>{t}</span></li>' for t in steps) + '</ol></div>')
     return (f'<div class="pbody"><div style="display:flex;align-items:flex-end"><div><div class="h1">Welcome!</div>'
             f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You can start on your own. A grown-up can help if you like.</div></div>'

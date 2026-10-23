@@ -67,25 +67,28 @@ def grid_table(rows, cols, cls="lgrid"):
     b = "".join("<tr><th class='rh'>" + r + "</th>" + "".join("<td></td>" for _ in cols) + "</tr>" for r in rows)
     return f'<table class="{cls}">{h}{b}</table>'
 
+def _cmp_ok(val, c, chosen):
+    """one clue of P1-04 for an assignment `val` (name -> number); `chosen` = the numbers some child has"""
+    if c[0] == "none": return c[1] not in chosen
+    if c[0] == "max": return val[c[1]] == max(chosen)
+    if c[0] == "min": return val[c[1]] == min(chosen)
+    if c[0] == "second": return val[c[1]] == sorted(chosen)[-2]
+    if c[0] == "gt": return val[c[1]] > val[c[2]]
+    if c[0] == "lt": return val[c[1]] < val[c[2]]
+
 def solve_compare(names, nums, clues):
+    """every way to give the 5 children 5 different numbers out of the 6 listed that satisfies all the clues"""
     sols = []
-    for perm in itertools.permutations(nums):
-        val = dict(zip(names, perm))
-        ok = True
-        for c in clues:
-            if c[0] == "max": ok &= val[c[1]] == max(nums)
-            elif c[0] == "min": ok &= val[c[1]] == min(nums)
-            elif c[0] == "gt": ok &= val[c[1]] > val[c[2]]
-            elif c[0] == "lt": ok &= val[c[1]] < val[c[2]]
-            elif c[0] == "second": ok &= val[c[1]] == sorted(nums)[-2]
-        if ok: sols.append(val)
+    for perm in itertools.permutations(nums, len(names)):
+        val = dict(zip(names, perm)); chosen = set(perm)
+        if all(_cmp_ok(val, c, chosen) for c in clues): sols.append(val)
     return sols
 
 def compare_text(c):
     c = tuple(c) + ("",)
     return {"max": f"{c[1]} has the greatest number.", "min": f"{c[1]} has the smallest number.",
             "gt": f"{c[1]} has more than {c[2]}.", "lt": f"{c[1]} has fewer than {c[2]}.",
-            "second": f"{c[1]} has the second greatest number."}[c[0]]
+            "second": f"{c[1]} has the second greatest number.", "none": f"Nobody has the number {c[1]}."}[c[0]]
 
 def howto_grid():
     """Small worked example that teaches how to use a logic grid (no content from the real puzzle)."""
@@ -100,66 +103,67 @@ def howto_grid():
 def page04():
     rng = random.Random(404)
     names = ["Ali", "Mei", "Siti", "Ben", "Kumar"]
-    word = "BELOW"
+    word = "FRUIT"
+    assert anagrams(word) == [word.lower()]                       # exactly one arrangement of these letters is a word
     while True:
-        nums = sorted(rng.sample(range(12, 100), 5))
-        if nums[4] - nums[0] > 30: break
-    perm = nums[:]; rng.shuffle(perm)
+        nums = sorted(rng.sample(range(12, 100), 6))                  # six numbers are listed, only five children have one
+        if nums[5] - nums[0] > 30: break
+    unused = nums[rng.choice([1, 2])]                              # never the greatest, second greatest or smallest, so "greatest" means the same with or without it
+    used = [n for n in nums if n != unused]
+    perm = used[:]; rng.shuffle(perm)
     truth = dict(zip(names, perm))
     while True:
-        cl = []
+        cl = [("none", unused)]
         for _ in range(5):
             a, b = rng.sample(names, 2)
             k = rng.choice(["max", "min", "gt", "lt", "second", "gt", "lt"])
             if k in ("max", "min", "second"): c = (k, a)
             else: c = (k, a, b)
-            # clue must be true
-            if k == "max" and truth[a] != max(nums): continue
-            if k == "min" and truth[a] != min(nums): continue
-            if k == "second" and truth[a] != nums[-2]: continue
-            if k == "gt" and not truth[a] > truth[b]: continue
-            if k == "lt" and not truth[a] < truth[b]: continue
+            chosen = set(used)
+            if not _cmp_ok(truth, c, chosen): continue
             if c not in cl: cl.append(c)
-        if len(cl) >= 4 and len(solve_compare(names, nums, cl)) == 1:
-            # drop redundant clues
-            for c in cl[:]:
+        if len(cl) >= 5 and len(solve_compare(names, nums, cl)) == 1:
+            for c in cl[1:]:                                       # drop redundant clues (the first clue, which names the unused number, stays)
                 rest = [x for x in cl if x != c]
                 if len(solve_compare(names, nums, rest)) == 1: cl = rest
-            if len(cl) >= 4: break
+            if 5 <= len(cl) <= 6: break
+    decoys = decoy_options(word)
     letter_of = {truth[n]: word[i] for i, n in enumerate(names)}     # letter printed beside each number
+    best = max(decoys, key=lambda d: (len(small_words(word + d)), rng.random()))
+    letter_of[unused] = best
     chips = "".join(f'<span class="chip">{n} <i class="cl">{letter_of[n]}</i></span>' for n in nums)
     clues = "".join(f'<li>{compare_text(c)}</li>' for c in cl)
     ans = ('<div class="ansgrid"><span></span><b>number</b><b>letter</b>' +
            "".join(f'<span class="nm">{n}</span><span class="ab"></span><span class="ab"></span>' for n in names) + '</div>')
-    body = (f'<div class="blk"><p class="lead">The numbers of stickers are:</p><div class="chips">{chips}</div></div>'
+    body = (f'<div class="blk"><p class="lead">Six numbers of stickers. Five children.</p><div class="chips">{chips}</div></div>'
             f'<div class="twocol"><ul class="clues">{clues}</ul>{howto_grid()}</div>'
             f'<div class="twocol"><div>{grid_table(names, nums)}</div><div>{ans}</div></div>')
-    wrong_ = [pp for pp in itertools.permutations(nums) if list(pp) != perm]
-    other_words = sorted({"".join(letter_of[v] for v in pp) for pp in wrong_ if "".join(letter_of[v] for v in pp).lower() in BIG})      # wrong placements that happen to spell a word
+    # every way the five children can get five of the six numbers: the letters they give must spell a word only for the right way
+    real_others = sorted({"".join(letter_of[v] for v in pp) for pp in itertools.permutations(nums, 5) if list(pp) != perm and "".join(letter_of[v] for v in pp).lower() in BIG})
+    n_wrong = len(list(itertools.permutations(nums, 5))) - 1
     P = Page(no=4, title="Sticker Grid", tier=2, topic="Comparing numbers to 100 (more, fewer, greatest, smallest)",
              strand="Number and Algebra - Whole Numbers", syll="1.5 (compare and order numbers)",
-             ptype="Logic grid", mech="K4 grid + K1 letter beside each number spells a word (5 letters)",
-             mech_plain="Letters beside the numbers, read down the list, spell a word (5 letters)",
+             ptype="Logic grid", mech="K4 grid + K1 letter beside each number spells a word (5 letters, one decoy letter)",
+             mech_plain="Letters beside the numbers, read down the list, spell a word (5 letters; one of the six numbers is not used)",
              instr=["Read the clues.", "Use the grid to cross and tick.", "Write each number, then its letter."],
              body=body, check="Read the five letters down your list. Do they spell a word?", check_boxes=5,
-             key=dict(answers=", ".join(f"{n}: {truth[n]} ({letter_of[truth[n]]})" for n in names), check_result=f"Letters down the list: {word}"),
-             note="Five children, five numbers, and each number has a letter. Almost every wrong placement puts the letters in an order that is not a word (all but " + str(len(other_words)) + " of them). " + ("The letters can also be arranged into " + " and ".join(other_words) + ", which are words too, so a pupil who gets one of those must be sent back to the clues; this is kept on purpose, because it stops a pupil from guessing the word from the letters. " if other_words else "") + "The page shows a worked example of crosses and ticks. Clues on this page: " + ", ".join(w for k, w in (("gt", "more than"), ("lt", "fewer than"), ("max", "greatest"), ("min", "smallest"), ("second", "second greatest")) if any(c[0] == k for c in cl)) + ".",
+             key=dict(answers=", ".join(f"{n}: {truth[n]} ({letter_of[truth[n]]})" for n in names) + f"; nobody has {unused} (letter {best} is the decoy)", check_result=f"Letters down the list: {word}"),
+             note=f"Six numbers are listed but there are only five children: a clue says which number nobody has, and its letter ({best}) is a decoy that is not part of the word. "
+                  f"The five letters of the word have exactly one arrangement that is a word, so no wrong placement of the numbers spells a word: all {n_wrong} wrong ways to give the children five of the six numbers were tested (checked against a list of about 129 000 words). "
+                  "A pupil whose letters are not a word must go back to the clues. The page shows a worked example of crosses and ticks. Clues on this page: " + ", ".join(w for k, w in (("gt", "more than"), ("lt", "fewer than"), ("max", "greatest"), ("min", "smallest"), ("second", "second greatest")) if any(c[0] == k for c in cl)) + ".",
              seed=404)
     sols = solve_compare(names, nums, cl)
     P.v("V1 exactly one assignment satisfies all clues", len(sols) == 1 and sols[0] == truth, f"{len(sols)} solution(s)")
     P.v("V1b every clue needed", all(len(solve_compare(names, nums, [x for x in cl if x != c])) > 1 for c in cl))
+    P.v("V1c greatest, smallest and second greatest mean the same with or without the unused number", unused not in (nums[-1], nums[-2], nums[0]))
     P.v("V2 letters beside the numbers, read in name order, spell " + word, "".join(letter_of[truth[n]] for n in names) == word)
-    # V3: of the 119 wrong placements, count those that spell a real word (must be <=5%)
-    wrong = [pp for pp in itertools.permutations(nums) if list(pp) != perm]
-    real = sum("".join(letter_of[v] for v in pp).lower() in BIG for pp in wrong)
-    P.v("V3 wrong placements that still spell a word <= 5% (large word list)", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
-    sw_words = [1 for i in range(5) for j in range(i + 1, 5) if (lambda q: "".join(letter_of[v] for v in q).lower() in BIG)(tuple(perm[:i] + [perm[j]] + perm[i + 1:j] + [perm[i]] + perm[j + 1:]))]
-    P.v("V3b no swap of two children's numbers spells a word (all 10 swaps)", not sw_words, len(sw_words))
-    P.v("V3c the arrangements that do spell a word are listed in the teacher note (the note does not claim there are none)", all(w in P["note"] for w in other_words), other_words)
-    P.v("V4 guess resistance: the five letters can be arranged into at least 2 common words", real >= 1 and sum("".join(letter_of[v] for v in pp).lower() in COMMON for pp in wrong) >= 1, f"{real} other words")
-    P["cv"] = dict(rate=1 - real / len(wrong), single_total=len(wrong), single_detected=len(wrong) - real)
-    P["model"] = dict(truth=list(word), domains=[list(word)] * 5, check=letters_check(), perm=list(range(5)))
-    P["mini"] = mini_ticks(5, 5, {(i, nums.index(truth[n])) for i, n in enumerate(names)})
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()], anagrams(word))
+    P.v(f"V3 none of the {n_wrong} wrong placements (5 of the 6 numbers) spells a word (large word list)", not real_others, real_others[:3])
+    P.v("V3c the teacher note names no wrong word and says no wrong placement spells one", not real_others and "no wrong placement" in P["note"])
+    P.v("V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them", len(small_words(word + best)) >= 3, small_words(word + best)[:6])
+    P["cv"] = dict(rate=1.0, single_total=n_wrong, single_detected=n_wrong)
+    P["model"] = dict(truth=list(word), domains=[sorted(set(letter_of.values()))] * 5, check=letters_check(), perm=list(range(5)))
+    P["mini"] = mini_ticks(5, 6, {(i, nums.index(truth[n])) for i, n in enumerate(names)})
     return P
 
 # ---------------------------------------------------------------- grid path helpers (P06, P08)

@@ -284,13 +284,31 @@
      }
     }
    ],
-   "explanation": "30 is more than 26, so the numbers go down. 30 - 26 = 4, so take away 4. 18 - 4 = 14."
+   "explanation": "30 is more than 26, so the numbers go down. 30 - 26 = 4, so take away 4. 18 - 4 = 14.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     30,
+     26,
+     22,
+     18,
+     null
+    ],
+    "ops": [
+     "?",
+     "?",
+     "?",
+     "?"
+    ],
+    "width_mm": 120
+   },
+   "figside": false
   },
   {
    "id": "L1U01-S08",
    "tier": "start",
    "page": 2,
-   "text": "Siti puts 3 stickers in box 1, 6 stickers in box 2 and 9 stickers in box 3. She keeps going.",
+   "text": "Siti puts 3 stickers in box 1, 6 stickers in box 2 and 9 stickers in box 3. She keeps going. Draw the stickers in boxes 4 to 6 to help you.",
    "parts": [
     {
      "label": "a",
@@ -313,13 +331,20 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Write the numbers:"
-    ]
-   },
    "hint": "Compare box 1 and box 2. How many more stickers?",
-   "explanation": "3, 6, 9, 12, 15, 18. The 4th box has 12, the 5th has 15 and the 6th has 18."
+   "explanation": "3, 6, 9, 12, 15, 18. The 4th box has 12, the 5th has 15 and the 6th has 18.",
+   "figure": {
+    "type": "sticker_boxes",
+    "counts": [
+     3,
+     6,
+     9,
+     null,
+     null,
+     null
+    ],
+    "width_mm": 150
+   }
   },
   {
    "id": "L1U01-S09",

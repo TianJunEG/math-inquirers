@@ -27,9 +27,9 @@
    "kind": "front",
    "label": "About this book",
    "exempt": true,
-   "fill": 0.7538298146240988,
+   "fill": 0.7936566683831102,
    "over": false,
-   "excess_mm": -63.2,
+   "excess_mm": -53,
    "edition": "soft"
   },
   {
@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9877381565396498,
-   "over": false,
-   "excess_mm": -3.2,
+   "fill": 1.066941297631308,
+   "over": true,
+   "excess_mm": 17.2,
    "edition": "soft"
   },
   {
@@ -67,9 +67,9 @@
    "kind": "learn",
    "label": "Unit 1 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9707775489186405,
-   "over": false,
-   "excess_mm": -7.5,
+   "fill": 1.0078366374871266,
+   "over": true,
+   "excess_mm": 2,
    "edition": "soft"
   },
   {
@@ -137,9 +137,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9668350926879505,
-   "over": false,
-   "excess_mm": -8.5,
+   "fill": 1.0038941812564366,
+   "over": true,
+   "excess_mm": 1,
    "edition": "soft"
   },
   {
@@ -207,9 +207,9 @@
    "kind": "learn",
    "label": "Unit 3 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9947058444902163,
-   "over": false,
-   "excess_mm": -1.4,
+   "fill": 1.0219168383110195,
+   "over": true,
+   "excess_mm": 5.6,
    "edition": "soft"
   },
   {
@@ -347,9 +347,9 @@
    "kind": "learn",
    "label": "Unit 5 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.950727342945417,
+   "fill": 0.9779383367662204,
    "over": false,
-   "excess_mm": -12.7,
+   "excess_mm": -5.7,
    "edition": "soft"
   },
   {
@@ -417,9 +417,9 @@
    "kind": "learn",
    "label": "Unit 6 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9379827497425335,
+   "fill": 0.9750418383110195,
    "over": false,
-   "excess_mm": -15.9,
+   "excess_mm": -6.4,
    "edition": "soft"
   },
   {
@@ -487,9 +487,9 @@
    "kind": "learn",
    "label": "Unit 7 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9660466014418125,
-   "over": false,
-   "excess_mm": -8.7,
+   "fill": 1.0031056900102986,
+   "over": true,
+   "excess_mm": 0.8,
    "edition": "soft"
   },
   {
@@ -627,9 +627,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9927909371781668,
+   "fill": 1.0010298661174046,
    "over": false,
-   "excess_mm": -1.9,
+   "excess_mm": 0.3,
    "edition": "soft"
   },
   {
@@ -697,9 +697,9 @@
    "kind": "learn",
    "label": "Unit 10 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.980609552008239,
-   "over": false,
-   "excess_mm": -5,
+   "fill": 1.017668640576725,
+   "over": true,
+   "excess_mm": 4.5,
    "edition": "soft"
   },
   {
@@ -1003,9 +1003,9 @@
    "kind": "front",
    "label": "About this book",
    "exempt": true,
-   "fill": 0.7538298146240988,
+   "fill": 0.7936566683831102,
    "over": false,
-   "excess_mm": -63.2,
+   "excess_mm": -53,
    "edition": "print"
   },
   {
@@ -1013,9 +1013,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9639546858908342,
-   "over": false,
-   "excess_mm": -9.3,
+   "fill": 1.0431578269824924,
+   "over": true,
+   "excess_mm": 11.1,
    "edition": "print"
   },
   {
@@ -1043,9 +1043,9 @@
    "kind": "learn",
    "label": "Unit 1 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9748970133882595,
-   "over": false,
-   "excess_mm": -6.4,
+   "fill": 1.0119561019567456,
+   "over": true,
+   "excess_mm": 3.1,
    "edition": "print"
   },
   {
@@ -1113,9 +1113,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9709545571575695,
-   "over": false,
-   "excess_mm": -7.5,
+   "fill": 1.0080136457260556,
+   "over": true,
+   "excess_mm": 2.1,
    "edition": "print"
   },
   {
@@ -1183,9 +1183,9 @@
    "kind": "learn",
    "label": "Unit 3 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9988253089598352,
-   "over": false,
-   "excess_mm": -0.3,
+   "fill": 1.0260363027806385,
+   "over": true,
+   "excess_mm": 6.7,
    "edition": "print"
   },
   {
@@ -1323,9 +1323,9 @@
    "kind": "learn",
    "label": "Unit 5 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.954846807415036,
+   "fill": 0.9820578012358393,
    "over": false,
-   "excess_mm": -11.6,
+   "excess_mm": -4.6,
    "edition": "print"
   },
   {
@@ -1393,9 +1393,9 @@
    "kind": "learn",
    "label": "Unit 6 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9421022142121525,
+   "fill": 0.9791613027806385,
    "over": false,
-   "excess_mm": -14.9,
+   "excess_mm": -5.4,
    "edition": "print"
   },
   {
@@ -1463,9 +1463,9 @@
    "kind": "learn",
    "label": "Unit 7 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9701660659114315,
-   "over": false,
-   "excess_mm": -7.7,
+   "fill": 1.0072251544799176,
+   "over": true,
+   "excess_mm": 1.9,
    "edition": "print"
   },
   {
@@ -1603,9 +1603,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9774394953656025,
+   "fill": 0.9856784243048403,
    "over": false,
-   "excess_mm": -5.8,
+   "excess_mm": -3.7,
    "edition": "print"
   },
   {
@@ -1673,9 +1673,9 @@
    "kind": "learn",
    "label": "Unit 10 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9847290164778579,
-   "over": false,
-   "excess_mm": -3.9,
+   "fill": 1.021788105046344,
+   "over": true,
+   "excess_mm": 5.6,
    "edition": "print"
   },
   {
@@ -1966,13 +1966,26 @@
    "edition": "print"
   }
  ],
- "problems": [],
+ "problems": [
+  "soft page 3 (Welcome): content overflows the page (natural height minus body 17.2 mm)",
+  "soft page 6 (Unit 1 \u00b7 Learn it): content overflows the page (natural height minus body 2 mm)",
+  "soft page 13 (Unit 2 \u00b7 Learn it): content overflows the page (natural height minus body 1 mm)",
+  "soft page 20 (Unit 3 \u00b7 Learn it): content overflows the page (natural height minus body 5.6 mm)",
+  "soft page 48 (Unit 7 \u00b7 Learn it): content overflows the page (natural height minus body 0.8 mm)",
+  "soft page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 4.5 mm)",
+  "print page 3 (Welcome): content overflows the page (natural height minus body 11.1 mm)",
+  "print page 6 (Unit 1 \u00b7 Learn it): content overflows the page (natural height minus body 3.1 mm)",
+  "print page 13 (Unit 2 \u00b7 Learn it): content overflows the page (natural height minus body 2.1 mm)",
+  "print page 20 (Unit 3 \u00b7 Learn it): content overflows the page (natural height minus body 6.7 mm)",
+  "print page 48 (Unit 7 \u00b7 Learn it): content overflows the page (natural height minus body 1.9 mm)",
+  "print page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 5.6 mm)"
+ ],
  "soft_pages": 98,
  "print_pages": 98,
  "bw_pipeline": {
   "pages": 98,
   "dpi": 600,
-  "mb": 12.2,
+  "mb": 12.23,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }
