@@ -61,10 +61,10 @@ def teacher_svg(sh):
     from geom import path_d
     pic, spec = sh["pic"], sh["spec"]; parts = []
     for r in pic.regions:
-        parts.append(f'<path class="r" d="{path_d(r.geom)}"/>')
+        parts.append(f'<path class="r" data-r="{r.id}" d="{path_d(r.geom)}"/>')
     for svgf, _ in pic.decor: parts.append(svgf)
     for r in pic.regions:
-        it = sh["items"][r.id]; parts.append(f'<g>{L.render(it["tcontent"], it["tplace"])}</g>')
+        it = sh["items"][r.id]; parts.append(f'<g class="lab" data-r="{r.id}">{L.render(it["tcontent"], it["tplace"])}</g>')
     return f'<svg class="pic" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 181 201">{"".join(parts)}</svg>'
 
 def mirror_truth(pic):
@@ -82,10 +82,10 @@ def mirror_truth(pic):
 def cbc_page(no, spec, title, instr, strand, syll, topic_note):
     sh = S.make_sheet(spec, "")
     pic, bank, tier = sh["pic"], sh["bank"], sh["tier"]
-    parts = [f'<path class="r" d="{__import__("geom").path_d(r.geom)}"/>' for r in pic.regions]
+    parts = [f'<path class="r" data-r="{r.id}" d="{__import__("geom").path_d(r.geom)}"/>' for r in pic.regions]
     for svgf, _ in pic.decor: parts.append(svgf)
     for r in pic.regions:
-        it = sh["items"][r.id]; parts.append(f'<g>{L.render(it["content"], it["place"])}</g>')
+        it = sh["items"][r.id]; parts.append(f'<g class="lab" data-r="{r.id}">{L.render(it["content"], it["place"])}</g>')
     svg = f'<svg class="pic" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 181 201">{"".join(parts)}</svg>'
     keyrow = '<div class="cbckey">' + "".join(f'<div class="k"><b>{S.key_html(tier.disp(v))}</b><i>{COLOURS[i]}</i></div>' for i, v in enumerate(sh["key"])) + "</div>"
     checks = [c[1] for c in sh["checks"]]

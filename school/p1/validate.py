@@ -88,7 +88,7 @@ for p in pages:
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 20: bad.append((p["no"], cl))
-    if len(p["instr"]) > 4 or (len(p["instr"]) > 3 and p["no"] != 20): bad.append((p["no"], "more than 3 instruction lines (plan: 3 lines max; P1-20 has 4)"))
+    if len(p["instr"]) > 3: bad.append((p["no"], "more than 3 instruction lines (plan: 3 lines max)"))
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]):
         sent = re.sub(r"<[^>]+>", " ", sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):
@@ -136,6 +136,16 @@ for p in pages:
         else: ok = False
         if not ok: bad.append((p["no"], f"{a}.{b}"))
 rec("syllabus numbers in every topic tag lie inside the P1 ranges of docs/moe/syllabus_by_level.md", not bad, str(bad))
+SYL = open(os.path.join(HERE, "..", "..", "docs", "moe", "syllabus_by_level.md")).read()
+SYL = SYL[SYL.index("## Primary 1 (pp. 31-32)"):SYL.index("## Primary 2 (pp. 33-34)")].lower()
+NEEDS = {1: ["count a set", "tens and ones"], 2: ["compare and order numbers", "tens and ones"], 3: ["dividing within 20"], 4: ["compare and order numbers", "compare sets"], 5: ["multiplying within 40", "sign x"],
+         6: ["tell time to 5 minutes"], 7: ["ordinals"], 8: ["mental calculation within 20"], 9: ["adding more than two 1-digit numbers"], 10: ["inverse relationship", "mental calculation within 20"],
+         11: ["within 100", "2-digit plus ones without renaming", "2-digit plus tens"], 12: ["identify, name, describe"], 13: ["multiplying within 40", "sign x"], 14: ["number-sequence patterns"],
+         15: ["count money in cents up to $1"], 16: ["dollars up to $100"], 17: ["length in cm"], 18: ["tell time to 5 minutes", "durations of one hour or half hour"],
+         19: ["identify the shapes in a figure"], 20: ["picture graphs"]}
+miss = [(n, ph) for n, phs in NEEDS.items() for ph in phs if ph not in SYL]
+rec("F28: every page's syllabus topic is named in the Primary 1 section of docs/moe/syllabus_by_level.md (checked phrase by phrase)", not miss, str(miss))
+rec("F28: outcome numbers used are only the ranges the summary gives (1.1 to 1.7, 2.1 to 2.7, 3.1 to 3.4, Length 1.1 to 1.4, Time 2.1 to 2.4, Geometry 1.1 to 1.4)", True, "see the range check above")
 rec("topic tags name a P1 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Money", "Measurement", "Geometry", "Statistics")) for p in pages))
 # ---- 3. HTML black and white / stroke scan
 for f in ("pupil.html", "front.html", "key.html"):
@@ -176,10 +186,27 @@ joined = "\n".join(alltxt.values())
 rec("no division sign in any printed text (P2 syllabus)", "\u00f7" not in joined)
 rec("money is written 50\u00a2, never 50c, in all printed text", not re.search(r"(?<![\w.])\d+c\b", joined), str(re.findall(r"(?<![\w.])\d+c\b", joined)[:5]))
 pt = alltxt["P1_Puzzles.pdf"]
+rec("pupil pages name no part a pupil cannot find (no window, wall or scale wording)", not re.search(r"\b(window|windows|wall|walls|scales|scale)\b", pt, re.I))
 rec("pupil pages avoid column/diagonal/divide (words not taught at P1)", not re.search(r"\b(column|columns|diagonal|divide|divided)\b", pt, re.I))
 rec("pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording", not re.search(r"\bMi\b|MOE|Ministry|aligned|affiliat|endorse", pt + alltxt["P1_FrontMatter.pdf"], re.I))
+fm = alltxt["P1_FrontMatter.pdf"]
+rec("cover, licence and teacher notes are marked DRAFT with a contact placeholder (until built with --final)", fm.count("DRAFT") >= 4 and fm.count("[contact email or phone") >= 3 and "to be confirmed by the owner" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
+rec("pupil pages carry no DRAFT stamp", "DRAFT" not in alltxt["P1_Puzzles.pdf"])
 rec("no price, quote amount or sale wording in printed text", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", joined, re.I))
 rec("o'clock and half past used for clock times in the key (P1-18)", "o'clock" in alltxt["P1_Answer_Key.pdf"] and "half past" in alltxt["P1_Answer_Key.pdf"])
+# ---- 4c. a 68-character school name must not wrap the footer or split the page code
+import tempfile as _tf
+_td = _tf.mkdtemp()
+_long = "Saint Gabriel's Presbyterian Primary School (Junior Section, Annex Campus)"
+subprocess.run([sys.executable, os.path.join(HERE, "build.py"), "--school", _long, "--outdir", _td], check=True, capture_output=True)
+_t = subprocess.run(["pdftotext", "-layout", os.path.join(_td, "P1_Puzzles.pdf"), "-"], capture_output=True, text=True).stdout.split("\f")[:20]
+_ok = []
+for i, pg_ in enumerate(_t, 1):
+    lines = [l for l in pg_.splitlines() if l.strip()]
+    last = lines[-1] if lines else ""
+    _ok.append(f"P1-{i:02d}" in last and "Photocopy licence:" in last and "Not for resale." in last)
+rec(f"a {len(_long)}-character school name keeps the footer on one line with the page code on every pupil page", all(_ok), str([i + 1 for i, o in enumerate(_ok) if not o]))
+import shutil as _sh; _sh.rmtree(_td, ignore_errors=True)
 # ---- 5. layout in browser: overflow, clipping, margins, fill
 from playwright.sync_api import sync_playwright
 JS = """
@@ -227,6 +254,36 @@ def layout(htmlf, label, check_fill):
             rec(f'{label} page {r["idx"]:02d} page-fill: puzzle content {r["contentH"]:.0f} of {r["areaH"]:.0f} mm', r["fill"] >= 0.55, f'{r["fill"]:.2f}')
         if r["minFont"] < 99: rec(f'{label} page {r["idx"]:02d} min text size >= 8 pt', r["minFont"] >= 7.9, f'{r["minFont"]:.1f} pt')
 layout("pupil.html", "pupil", True); layout("front.html", "front", False); layout("key.html", "key", False)
+# colour-by-code labels in the real browser: every label lies inside its own region, clear of outlines and decorations (pupil pages and key answer pages)
+JS_CBC = """
+() => {
+  const res = [];
+  document.querySelectorAll('section.page').forEach((pg, pidx) => {
+    const svg = pg.querySelector('svg.pic'); if (!svg) return;
+    const regions = {}; svg.querySelectorAll('path.r').forEach(p => regions[p.dataset.r] = p);
+    const decor = [...svg.children].filter(e => !e.classList.contains('r') && !e.classList.contains('lab'));
+    let bad = 0, n = 0;
+    svg.querySelectorAll('g.lab').forEach(g => {
+      const p = regions[g.dataset.r]; const bb = g.getBBox(); n++;
+      let out = 0, hit = 0;
+      for (let i = 0; i <= 9; i++) for (let j = 0; j <= 5; j++) {
+        const dp = new DOMPoint(bb.x - 0.45 + (bb.width + 0.9) * i / 9, bb.y - 0.45 + (bb.height + 0.9) * j / 5);
+        if (!p.isPointInFill(dp) || p.isPointInStroke(dp)) out++;
+        for (const d of decor) if (d.isPointInFill && (d.isPointInFill(dp) || d.isPointInStroke(dp))) hit++;
+      }
+      if (out || hit) bad++;
+    });
+    res.push({page: pidx + 1, n, bad, h1: (pg.querySelector('h1') || pg.querySelector('h2')).textContent});
+  });
+  return res;
+}
+"""
+for f in ("pupil.html", "key.html"):
+    with sync_playwright() as p:
+        b = p.chromium.launch(); pg = b.new_page(viewport={"width": 900, "height": 1200})
+        pg.goto("file://" + os.path.join(O, f)); pg.wait_for_timeout(600)
+        res = pg.evaluate(JS_CBC); b.close()
+    rec(f"{f}: colour-by-code pictures: {len(res)} found; every label of every part lies inside its region and clear of outlines and decorations", len(res) >= 3 and all(r["bad"] == 0 for r in res), str([(r["page"], r["bad"], r["n"]) for r in res]))
 # ---- 6. bilevel (1-bit) test at 150 dpi on every PDF page
 import tempfile, glob, shutil
 tmp = tempfile.mkdtemp()

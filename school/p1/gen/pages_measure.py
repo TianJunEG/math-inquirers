@@ -265,13 +265,18 @@ def page06():
     keys = list(table.items()); rng.shuffle(keys)
     ct = "".join(f'<div class="ct"><span class="n">{k}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in keys)
     body = f'<div class="items g2">{items}</div><div class="blk"><p class="lead">Code table</p><div class="codetable">{ct}</div></div>'
+    tt = set(table)
+    cats = []
+    if any(tstr(h % 12 + 1, m) in tt for h, m in qs): cats.append("the hour one too late")
+    if any(tstr((h - 2) % 12 + 1, m) in tt for h, m in qs): cats.append("the hour one too early")
+    if any(tstr(h, 30 - m) in tt for h, m in qs): cats.append("o'clock read as half past, or the other way round")
     P = Page(no=6, title="What Time Is It?", tier=1, topic="Time: o'clock and half past",
              strand="Measurement and Geometry - Measurement", syll="Time 2.1 (tell time: o'clock and half past)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
              instr=["Read each clock.", "Write the time in the boxes.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {tkey(h, m)}" for i, (h, m) in enumerate(qs)), check_result=f"Code word: {word}"),
-             note="Three o'clock times and three half past times; the short hand is never close to the long hand. The code table holds the six right times and four wrong readings (the hour one too early or too late, or o'clock read as half past). Times to 5 minutes are on the Clock Time page.",
+             note="Three o'clock times and three half past times; the short hand is never close to the long hand. The code table holds the six right times and four wrong readings (" + ", ".join(cats) + "). Times to 5 minutes are on the Clock Time page.",
              seed=606)
     read = [read_clock(s_) for s_ in svgs]
     P.v("V1 clock hands read back from the drawing equal the intended times", read == [(((h - 1) % 12) + 1, m) for h, m in qs], read)
@@ -474,7 +479,7 @@ def page20():
              strand="Statistics - Data Analysis", syll="Picture graphs (read and interpret picture graphs)",
              ptype="Graph detective", mech="K3 the total of all circles, and a second sum that uses the answers to a) and b) (neither is a clue)",
              mech_plain="Two sums: the total of all the circles, and the row chosen in a) plus the answer to b) (neither is used to find any row)",
-             instr=["Two rows are done.", "Use the clues to draw the other rows.", "Draw one circle for each child.", "Then answer a and b."],
+             instr=["Two rows are done.", "Use the clues to draw the other rows.", "Then answer a and b."],
              body=body, check=" ".join(chk_lines), check_lines=chk_lines, check_boxes=None,
              key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {bans}", check_result=f"Total {total} circles; second sum {cnt[most]} + {bans} = {comb}"),
              note=f"Each circle stands for one child (a scale of 1). The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total. The second sum tests a) and b): it is {comb} only when the right row is chosen and b) is right. Question b) names two other fruits, so it does not give away the answer to a). More and fewer are not mirror images here (the Grape clue is {d2} and the Pear clue is {d3}), so a pupil who swaps the two words gets a different total.",
