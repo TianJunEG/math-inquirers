@@ -60,8 +60,8 @@
  ],
  "joining_cold": {
   "remember": [
-   "Count in 7s along a row of the calendar from 3 (Term 2 Lesson 16, taught again with a calendar row)",
-   "1st to 10th (Term 2 Lesson 11, taught again with a picture)",
+   "Count in 7s along a row of the calendar from 3 (Term 2 Lesson 6, taught again with a calendar row)",
+   "1st to 10th (Term 2 Lesson 1, taught again with a picture)",
    "The day cards in order, Monday to Sunday (taught again with 7 cards)"
   ],
   "assumes": "Only counting to 31. Nothing from earlier lessons is needed: the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order. The words week, fortnight, day before and days later are taught in Explore and the Mini-lesson.",
@@ -291,7 +291,7 @@
      "text": "3, 10, 17, ... Count on 7 each time."
     }
    ],
-   "note": "Counting in 7s (Term 2 Lesson 16, taught again). Say: 3, then 7 more is 10, then 7 more is 17. Ask: what comes next (24). A child who is unsure adds 10 and takes away 3: 17 and 10 is 27, take away 3 is 24. On a calendar, going down one row is 7 days. Children answer aloud. No writing.",
+   "note": "Counting in 7s (Term 2 Lesson 6, taught again). Say: 3, then 7 more is 10, then 7 more is 17. Ask: what comes next (24). A child who is unsure adds 10 and takes away 3: 17 and 10 is 27, take away 3 is 24. On a calendar, going down one row is 7 days. Children answer aloud. No writing.",
    "mascot": {
     "size": "s",
     "say": "Take your time!"
@@ -317,7 +317,7 @@
      "text": "Count the places. Which place is the child with a ring round them?"
     }
    ],
-   "note": "Places in a line (Term 2 Lesson 11, taught again). Dates use the same words: the 1st, 2nd, 3rd, 4th ... 10th. Ask: which place is the highlighted child (3rd). Say: the 3rd of the month is the third day. A child who is unsure counts from the front. Children answer aloud. No writing."
+   "note": "Places in a line (Term 2 Lesson 1, taught again). Dates use the same words: the 1st, 2nd, 3rd, 4th ... 10th. Ask: which place is the highlighted child (3rd). Say: the 3rd of the month is the third day. A child who is unsure counts from the front. Children answer aloud. No writing."
   },
   {
    "id": "s-rem3",

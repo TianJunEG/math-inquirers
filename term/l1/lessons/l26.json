@@ -36,8 +36,8 @@
  "joining_cold": {
   "remember": [
    "What goes with 7 to make 10 (Term 1 Lesson 5, taught again with a ten-frame)",
-   "Three of the same price, by adding again and again (Term 2 Lesson 15, taught again with three tags)",
-   "List every pair that makes 6, starting at 1 (Term 2 Lesson 17, taught again with a table)"
+   "Three of the same price, by adding again and again (Term 2 Lesson 5, taught again with three tags)",
+   "List every pair that makes 6, starting at 1 (Term 2 Lesson 7, taught again with a table)"
   ],
   "assumes": "Only counting to 20 and the price tags and play money from the lessons before. Nothing from the lessons before is needed: the warm-up makes 10 on a ten-frame, adds three equal prices and lists pairs that make 6 in order. The words budget, exactly, total, left and change are taught in Explore and the Mini-lesson.",
   "holiday_topics_revisited": [
@@ -319,7 +319,7 @@
      "text": "3 pens at $4 each. How much do they cost altogether?"
     }
    ],
-   "note": "Three of the same price (Term 2 Lesson 15, taught again as adding again and again): 4 and 4 and 4. Ask: how much do 3 pens cost altogether (12). Add two at a time: 4 and 4 make 8, 8 and 4 make 12. A child who is unsure uses three groups of 4 fingers. Children answer aloud. No writing."
+   "note": "Three of the same price (Term 2 Lesson 5, taught again as adding again and again): 4 and 4 and 4. Ask: how much do 3 pens cost altogether (12). Add two at a time: 4 and 4 make 8, 8 and 4 make 12. A child who is unsure uses three groups of 4 fingers. Children answer aloud. No writing."
   },
   {
    "id": "s-rem3",
@@ -359,7 +359,7 @@
      "text": "Start at 1 and go up. Stop when the numbers swap round."
     }
    ],
-   "note": "Listing in order (Term 2 Lesson 17, taught again). Start at 1: 1 and 5. Then 2 and 4. Then 3 and 3. After that the pairs swap round (4 and 2 is the same pair as 2 and 4), so we stop. Say: starting at the smallest and going up in order means we do not miss one. Ask for the second and third rows. Answers: 4; 3 and 3. A child who is unsure counts on fingers from the first number to 6. Children answer aloud. No writing."
+   "note": "Listing in order (Term 2 Lesson 7, taught again). Start at 1: 1 and 5. Then 2 and 4. Then 3 and 3. After that the pairs swap round (4 and 2 is the same pair as 2 and 4), so we stop. Say: starting at the smallest and going up in order means we do not miss one. Ask for the second and third rows. Answers: 4; 3 and 3. A child who is unsure counts on fingers from the first number to 6. Children answer aloud. No writing."
   },
   {
    "id": "s-sneak",

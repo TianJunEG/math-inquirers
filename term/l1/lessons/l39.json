@@ -38,7 +38,7 @@
   "joining_cold": {
     "remember": [
       "Drawing two strips for two numbers and saying how many more (Term 2 Lesson 2, taught again with a picture): the tool Draw it",
-      "Finding the price of 1 from a group of equal things (Term 2 Lesson 10, taught again with a picture): the tool Try something simpler",
+      "Finding the price of 1 from a group of equal things (Term 2 Lesson 9, taught again with a picture): the tool Try something simpler",
       "Working backwards from the end to the start on a number line (Term 1 Lesson 10, taught again): the tool Work backwards"
     ],
     "assumes": "Only counting to 20 and adding and taking away small numbers. Nothing from the lessons before is needed: the warm-up re-teaches drawing strips, starting with one, and working backwards. The eight tool names are on the toolbox page in Explore and the Mini-lesson.",
@@ -295,7 +295,7 @@
           "text": "3 pens cost $12. All the pens cost the same. How much does 1 pen cost?"
         }
       ],
-      "note": "Try something simpler: find the price of 1 (Term 2 Lesson 10, taught again with a picture). 3 pens cost $12 and all cost the same, so share $12 into 3 equal parts: 1 pen costs $4. A child who is unsure shares 12 counters into 3 piles, one counter at a time. Your turn, no new picture: 1 pen costs $4, so how much do 5 pens cost ($20). Children answer aloud. No writing.",
+      "note": "Try something simpler: find the price of 1 (Term 2 Lesson 9, taught again with a picture). 3 pens cost $12 and all cost the same, so share $12 into 3 equal parts: 1 pen costs $4. A child who is unsure shares 12 counters into 3 piles, one counter at a time. Your turn, no new picture: 1 pen costs $4, so how much do 5 pens cost ($20). Children answer aloud. No writing.",
       "mascot": {
         "size": "s",
         "say": "Take your time!"
@@ -2756,7 +2756,7 @@
       "answer": "9",
       "val": 9,
       "solution": "14 - 5 = 9, so the cup holds 9 counters.",
-      "rewind_of": "Term 2 Lesson 9"
+      "rewind_of": "Term 2 Lesson 3"
     }
   ],
   "online_practice": {

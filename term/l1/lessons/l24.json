@@ -51,7 +51,7 @@
  "materials": {
   "child": [
    "Your Term 3 workbook, pages 1 to 5, and the two play-money pages (pages 6 and 7), already cut out by a grown-up: 16 coins and 13 notes",
-   "The $1 tokens from Term 2 Lesson 10: they are the $1 coins. If the tokens are lost, use 5 counters or buttons",
+   "The $1 tokens from Term 2 Lesson 9: they are the $1 coins. If the tokens are lost, use 5 counters or buttons",
    "No printer or no cutting? Small pieces of paper with the value written on each one",
    "A pencil, a rubber and spare paper"
   ],
@@ -61,7 +61,7 @@
    "A visible clock"
   ],
   "kit_pages": [
-   "Play money, coins (page 6): 4 five-cent, 6 ten-cent, 4 twenty-cent and 2 fifty-cent coins. Play money, notes (page 7): 5 two-dollar, 4 five-dollar, 3 ten-dollar and 1 fifty-dollar note. 29 pieces in all, cut out by a grown-up. The $1 coins are the tokens from Term 2 Lesson 10. Keep the money in an envelope: it comes back in the next two lessons and in Mi's Challenge Quest."
+   "Play money, coins (page 6): 4 five-cent, 6 ten-cent, 4 twenty-cent and 2 fifty-cent coins. Play money, notes (page 7): 5 two-dollar, 4 five-dollar, 3 ten-dollar and 1 fifty-dollar note. 29 pieces in all, cut out by a grown-up. The $1 coins are the tokens from Term 2 Lesson 9. Keep the money in an envelope: it comes back in the next two lessons and in Mi's Challenge Quest."
   ],
   "ruler": false,
   "notes": "No ruler is needed. Nothing needs to be bought. The money is PLAY MONEY, not real: it is stylised and marked, and it is not a copy of any real note or coin. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. Real coins only if a grown-up is present. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: a grown-up cuts the pieces beforehand.",
@@ -3329,7 +3329,7 @@
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first, with your own play money. Check: S1 80¢; S2 $19; S3 5 and 10; S4 50¢ and 5¢ (the 50¢ coin and one 5¢ coin); S5 the $2 note; S6 $2; T1 $9 and $1; T2 3 and 1, 1 and 2; T3 100¢ and 60¢; T4 Set A and 20¢; G1 5 and 3; G2 7 amounts; G3 3 stickers and 10¢.",
-  "Tell parents a week before: this is the heaviest cutting of the term. Tear out the two play-money pages (pages 6 and 7) along the dashed line; a grown-up cuts out all 29 pieces (16 coins and 13 notes) and keeps them in an envelope. The $1 coins are the tokens from Term 2 Lesson 10; with no tokens use 5 counters or buttons. Print on card if you can; paper scraps with a value written on them also work.",
+  "Tell parents a week before: this is the heaviest cutting of the term. Tear out the two play-money pages (pages 6 and 7) along the dashed line; a grown-up cuts out all 29 pieces (16 coins and 13 notes) and keeps them in an envelope. The $1 coins are the tokens from Term 2 Lesson 9; with no tokens use 5 counters or buttons. Print on card if you can; paper scraps with a value written on them also work.",
   "Have the slides open. Have your own play money to show on camera if you wish. Say each amount both ways, never 50c: fifty-cent coin or 50¢; five-dollar note or $5. Never write or say $1.50.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
   "Be plain with families: counting coins and notes and change from $5 or $10 is Primary 1 work; listing every way, the fewest notes and coins for $73 and how many different amounts three pieces can make are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. The money is PLAY MONEY, stylised and not a copy of any real note or coin.",
@@ -3351,7 +3351,7 @@
     "type": "play_money",
     "page": 1,
     "title": "Kit page: play money, coins",
-    "intro": "A grown-up cuts out all 16 coins before the lesson: 4 five-cent, 6 ten-cent, 4 twenty-cent and 2 fifty-cent coins. This is play money, not real money. The $1 coins are the tokens from Term 2 Lesson 10. Keep all the money in an envelope: we use it in the next two lessons and in the Quest."
+    "intro": "A grown-up cuts out all 16 coins before the lesson: 4 five-cent, 6 ten-cent, 4 twenty-cent and 2 fifty-cent coins. This is play money, not real money. The $1 coins are the tokens from Term 2 Lesson 9. Keep all the money in an envelope: we use it in the next two lessons and in the Quest."
    },
    {
     "type": "play_money",

@@ -38,7 +38,7 @@
   "remember": [
    "Which of two numbers is greater (Term 1 Lesson 3, taught again with tens bars)",
    "Count up from one number to another to find the gap (Term 1 Lesson 7, taught again on a number line)",
-   "Two strips and the gap between them (Term 1 Lesson 12, taught again with a picture)"
+   "Two strips and the gap between them (Term 2 Lesson 2, taught again with a picture)"
   ],
   "assumes": "Only counting to 20 and the price tags from the kit. Nothing from the lessons before is needed: the warm-up compares two numbers with tens bars, counts up on a line and shows two strips with a gap. The words costs more, how much more, altogether and change are taught in Explore and the Mini-lesson. The play money from the lesson before is used for one example only.",
   "holiday_topics_revisited": [
@@ -93,7 +93,7 @@
     ]
    },
    {
-    "piece": "$1 tokens (Term 2 Lesson 10)",
+    "piece": "$1 tokens (Term 2 Lesson 9)",
     "supplied": 30,
     "max_used": 0,
     "used_by": []
@@ -397,7 +397,7 @@
      "text": "Ali has 8 stickers. Mei has 3. How many more does Ali have?"
     }
    ],
-   "note": "Two strips drawn to scale (Term 1 Lesson 12, taught again): Ali 8 and Mei 3, with the gap shown and an empty box. Ask: whose strip is longer (Ali's); how many more stickers does Ali have (5). Say: the gap is how many more. Today a price is a strip too: the more it costs, the longer the strip. A child who is unsure counts the squares of the gap or counts up from 3 to 8 on fingers. Answers: Ali; 5. Children answer aloud. No writing."
+   "note": "Two strips drawn to scale (Term 2 Lesson 2, taught again): Ali 8 and Mei 3, with the gap shown and an empty box. Ask: whose strip is longer (Ali's); how many more stickers does Ali have (5). Say: the gap is how many more. Today a price is a strip too: the more it costs, the longer the strip. A child who is unsure counts the squares of the gap or counts up from 3 to 8 on fingers. Answers: Ali; 5. Children answer aloud. No writing."
   },
   {
    "id": "s-sneak",

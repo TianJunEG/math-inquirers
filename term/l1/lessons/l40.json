@@ -38,7 +38,7 @@
   ],
   "joining_cold": {
     "remember": [
-      "A counting pattern: 3, 6, 9, 12 and the next number (Term 1 Lesson 4 and Term 2 Lesson 16, taught again with a picture)",
+      "A counting pattern: 3, 6, 9, 12 and the next number (Term 1 Lesson 4 and Term 2 Lesson 6, taught again with a picture)",
       "A way to add: make a ten first (Term 1 Lesson 5, taught again on a number line)",
       "A short story with two steps (Term 1 Lesson 10, taught again with a picture)"
     ],
@@ -253,7 +253,7 @@
           "text": "Count in 3s. What are the next two numbers?"
         }
       ],
-      "note": "A pattern (Term 1 Lesson 4 and Term 2 Lesson 16, taught again with a picture). The numbers go 3, 6, 9, 12 and then two empty boxes. Ask: what are the next two numbers (15 and 18). Then ask for volunteers: who remembers a pattern from this year? A pass is always fine. A child who is unsure counts on fingers, three at a time. Your turn, no new picture: count in 3s from 18 (21, 24). Children answer aloud. No writing."
+      "note": "A pattern (Term 1 Lesson 4 and Term 2 Lesson 6, taught again with a picture). The numbers go 3, 6, 9, 12 and then two empty boxes. Ask: what are the next two numbers (15 and 18). Then ask for volunteers: who remembers a pattern from this year? A pass is always fine. A child who is unsure counts on fingers, three at a time. Your turn, no new picture: count in 3s from 18 (21, 24). Children answer aloud. No writing."
     },
     {
       "id": "s-rem2",
@@ -2452,7 +2452,7 @@
       "answer": "$2",
       "val": 2,
       "solution": "$10 shared equally among 5 pens is $2 each.",
-      "rewind_of": "Term 2 Lesson 10"
+      "rewind_of": "Term 2 Lesson 9"
     }
   ],
   "online_practice": {

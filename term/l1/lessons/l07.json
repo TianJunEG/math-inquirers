@@ -239,7 +239,7 @@
           },
           {
             "k": "SAY",
-            "text": "Today we learn two tools for that: taking away, and counting up."
+            "text": "Today we learn two ways for that: taking away, and counting up."
           },
           {
             "k": "DO",
@@ -631,11 +631,11 @@
           },
           {
             "k": "SAY",
-            "text": "Two tools. Count up when the two numbers are close together. Take away when you take away a small number or whole tens. Both tools give the same answer."
+            "text": "Two ways. Count up when the two numbers are close together. Take away when you take away a small number or whole tens. Both ways give the same answer."
           },
           {
             "k": "ASK",
-            "text": "Which tool for 62 take away 59, and which for 62 take away 20?",
+            "text": "Which way for 62 take away 59, and which for 62 take away 20?",
             "resp": 25
           },
           {
@@ -738,7 +738,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q1: ask how many bars are left after you cross out 2. Q5: draw bars as tall rectangles and squares as small boxes. Q6: build 59 with the kit, take away 2 bars, and say what is left. Q7: ask, what does empty mean? Which tool will you use?"
+            "text": "Q1: ask how many bars are left after you cross out 2. Q5: draw bars as tall rectangles and squares as small boxes. Q6: build 59 with the kit, take away 2 bars, and say what is left. Q7: ask, what does empty mean? Which way will you use?"
           },
           {
             "k": "STUCK",
@@ -750,7 +750,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Think harder is for count-up in a new setting. Go further asks which tool is quicker, and why. Do not announce who is on which page. Pairs are never split unless both children agree."
+            "text": "Think harder is for count-up in a new setting. Go further asks which way is quicker, and why. Do not announce who is on which page. Pairs are never split unless both children agree."
           }
         ]
       },
@@ -937,7 +937,7 @@
           ]
         }
       ],
-      "note": "Lesson 7 of Term 1, 90 minutes. Objective: take away tens and ones within 100, count up to find the gap between two numbers, and choose the quicker tool. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off.",
+      "note": "Lesson 7 of Term 1, 90 minutes. Objective: take away tens and ones within 100, count up to find the gap between two numbers, and choose the quicker way. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off.",
       "mascot": {
         "size": "l",
         "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -1164,7 +1164,7 @@
           ]
         }
       ],
-      "note": "Take one or two answers from volunteers. Key idea: taking away tells us what is left; counting up tells us how far apart two numbers are, the difference. Repeat a child's answer in your own words so the recording picks it up. Both tools use the same bars and squares."
+      "note": "Take one or two answers from volunteers. Key idea: taking away tells us what is left; counting up tells us how far apart two numbers are, the difference. Repeat a child's answer in your own words so the recording picks it up. Both ways use the same bars and squares."
     },
     {
       "id": "s-m1",
@@ -1354,14 +1354,14 @@
       "id": "s-m6",
       "part": "mini",
       "kind": "light",
-      "title": "Choose your tool",
+      "title": "Choose your way",
       "blocks": [
         {
           "t": "table",
           "header": true,
           "rows": [
             [
-              "Tool",
+              "Way",
               "It is quick when"
             ],
             [
@@ -1376,10 +1376,10 @@
         },
         {
           "t": "chip",
-          "text": "Both tools give the same answer."
+          "text": "Both ways give the same answer."
         }
       ],
-      "note": "Ask: which tool for 62 take away 59, and which for 62 take away 20? Answer: count up for the first (3), take away for the second (42). This is the rule of thumb the Go further page asks children to explain. Both tools give the same answer; choosing is about being quick and being right."
+      "note": "Ask: which way for 62 take away 59, and which for 62 take away 20? Answer: count up for the first (3), take away for the second (42). This is the rule of thumb the Go further page asks children to explain. Both ways give the same answer; choosing is about being quick and being right."
     },
     {
       "id": "s-break",
@@ -1514,7 +1514,7 @@
             ],
             [
               "Go further (page 4)",
-              "Which tool is quicker?"
+              "Which way is quicker?"
             ],
             [
               "Investigation (page 5)",
@@ -2249,8 +2249,8 @@
       ],
       "look_for": "A child who tries several pairs, says what they notice about how far apart the numbers are, and gives a reason. Accept any clear rule that matches examples. A child who also checks by adding is doing well.",
       "mistakes": [
-        "Choosing a tool without looking at how far apart the numbers are.",
-        "Saying one tool is always quicker (it depends on the numbers)."
+        "Choosing a way without looking at how far apart the numbers are.",
+        "Saying one way is always quicker (it depends on the numbers)."
       ],
       "mins": 8
     }
@@ -2342,7 +2342,7 @@
       "taking away tens and ones",
       "hopping to the next ten",
       "counting up in jumps",
-      "choosing a tool",
+      "choosing a way",
       "something else"
     ],
     "helped": [

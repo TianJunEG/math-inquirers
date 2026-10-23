@@ -35,11 +35,11 @@
  ],
  "joining_cold": {
   "remember": [
-   "Count in 2s from 4: 4, 6, 8, 10 (spiral: Term 2 Lesson 16, counting in 2s, taught again with a number row)",
-   "Double a number: 6 and 6, 7 and 7 (spiral: Term 2 Lesson 13, taught again with pictures of two groups)",
+   "Count in 2s from 4: 4, 6, 8, 10 (spiral: Term 2 Lesson 6, counting in 2s, taught again with a number row)",
+   "Double a number: 6 and 6, 7 and 7 (spiral: Term 2 Lesson 3, taught again with pictures of two groups)",
    "Read a table with two rows: fill in a missing number in a row (taught again with a small table)"
   ],
-  "assumes": "Only counting to 20, adding two small numbers and the words odd and even (Term 2 Lesson 14; the Mini-lesson says them once). Nothing from the lessons before is needed: the warm-up counts in 2s with a number row, doubles two numbers and fills a missing number in a table of days and stickers. The words table, picture and more each time are taught in Explore and the Mini-lesson.",
+  "assumes": "Only counting to 20, adding two small numbers and the words odd and even (Term 2 Lesson 4; the Mini-lesson says them once). Nothing from the lessons before is needed: the warm-up counts in 2s with a number row, doubles two numbers and fills a missing number in a table of days and stickers. The words table, picture and more each time are taught in Explore and the Mini-lesson.",
   "holiday_topics_revisited": [
    "Pattern Inquiry: growing stick patterns (spiral only)",
    "Skip counting in 2s"
@@ -253,7 +253,7 @@
      "text": "Count in 2s from 4. What comes next?"
     }
    ],
-   "note": "Count in 2s from 4 with a clap on each number: 4, 6, 8, 10, 12. This is Term 2 Lesson 16 taught again, with the number row so that a child who has not counted in 2s hears it before saying it. Ask: what comes next (12). Then ask: what are we adding each time (2). The slide never shows the answer. No writing, no marks.",
+   "note": "Count in 2s from 4 with a clap on each number: 4, 6, 8, 10, 12. This is Term 2 Lesson 6 taught again, with the number row so that a child who has not counted in 2s hears it before saying it. Ask: what comes next (12). Then ask: what are we adding each time (2). The slide never shows the answer. No writing, no marks.",
    "mascot": {
     "size": "s",
     "say": "Clap along with me!"
@@ -282,7 +282,7 @@
      "text": "What are double 6 and double 7?"
     }
    ],
-   "note": "Term 2 Lesson 13 taught again. Double 6 is 6 and 6, which is 12; double 7 is 7 and 7, which is 14. A child who does not know holds up 6 fingers on each hand for 6 and 6, and counts. Ask: how do you know (6 and 6 is 12). The answers are not on the slide. This is the pairs idea that the rule double and add 1 uses later. No writing."
+   "note": "Term 2 Lesson 3 taught again. Double 6 is 6 and 6, which is 12; double 7 is 7 and 7, which is 14. A child who does not know holds up 6 fingers on each hand for 6 and 6, and counts. Ask: how do you know (6 and 6 is 12). The answers are not on the slide. This is the pairs idea that the rule double and add 1 uses later. No writing."
   },
   {
    "id": "s-rem3",
@@ -527,7 +527,7 @@
      "text": "The same number more each time."
     }
    ],
-   "note": "Look at how the sticks grow: 3 to 5 is 2 more, 5 to 7 is 2 more, 7 to 9 is 2 more, 9 to 11 is 2 more. The sticks grow by 2 each time. Ask: how many more sticks each time (2); why only 2 and not 3 (the new triangle shares one stick with the one before). Children trace the plus 2 arrows with a finger. The number of pictures goes up by 1, and the number of sticks goes up by 2. Say once: 3, 5, 7, 9, 11 are odd numbers, every time (odd and even are from Term 2 Lesson 14); this is used again at Think harder."
+   "note": "Look at how the sticks grow: 3 to 5 is 2 more, 5 to 7 is 2 more, 7 to 9 is 2 more, 9 to 11 is 2 more. The sticks grow by 2 each time. Ask: how many more sticks each time (2); why only 2 and not 3 (the new triangle shares one stick with the one before). Children trace the plus 2 arrows with a finger. The number of pictures goes up by 1, and the number of sticks goes up by 2. Say once: 3, 5, 7, 9, 11 are odd numbers, every time (odd and even are from Term 2 Lesson 4); this is used again at Think harder."
   },
   {
    "id": "s-m3",
