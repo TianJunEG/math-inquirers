@@ -82,7 +82,7 @@ u.S(3, 'A school collects cans for 3 weeks: 1875, 2430 and 1790.', parts=[
     why='(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640. Check: 1790 + 640 = 2430.', space={'rows': ['Working:']})
 
 # ---------------- Think harder
-u.T('Letters hide digits. The same letter is the same digit. Different letters are different digits.\nAB + AC = BBD', parts=[
+u.T('Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nAB + AC = BBD', parts=[
     P('a', 'A = {b}', A('5')), P('b', 'B = {b}', A('1')), P('c', 'C = {b}', A('9')), P('d', 'D = {b}', A('0'))],
     hint='Two 2-digit numbers add up to less than 200. What is B?',
     why='Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: B + C = 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C must be 10, so C = 9 and D = 0. Check: 51 + 59 = 110.',
@@ -101,7 +101,7 @@ u.T('Look at this magic square. Every row, column and diagonal has the same tota
             'cw': 90, 'ch': 64, 'width_mm': 56}, figside=True)
 
 # ---------------- Go further
-u.G('Letters hide digits. The same letter is the same digit. Different letters are different digits.\nABC + BC = CAB', parts=[
+u.G('Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nABC + BC = CAB', parts=[
     P('a', 'A = {b}', A('2')), P('b', 'B = {b}', A('6')), P('c', 'C = {b}', A('3'))],
     hint='Look at the ones: C + C ends in B. List the choices for C.',
     why='Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: then B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. Hundreds: 2 + 1 = 3 = C. Check: 263 + 63 = 326. No other digits work.',

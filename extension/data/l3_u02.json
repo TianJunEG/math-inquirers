@@ -629,7 +629,7 @@
    "id": "L3U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Letters hide digits. The same letter is the same digit. Different letters are different digits.\nAB + AC = BBD",
+   "text": "Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nAB + AC = BBD",
    "parts": [
     {
      "label": "a",
@@ -802,7 +802,7 @@
    "id": "L3U02-G01",
    "tier": "go",
    "page": 5,
-   "text": "Letters hide digits. The same letter is the same digit. Different letters are different digits.\nABC + BC = CAB",
+   "text": "Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nABC + BC = CAB",
    "parts": [
     {
      "label": "a",
