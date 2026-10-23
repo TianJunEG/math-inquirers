@@ -400,16 +400,16 @@
    "id": "L5U07-S09",
    "tier": "start",
    "page": 2,
-   "text": "T-shirts cost $20 each. Shop P says buy 2 and get 1 free. Shop Q says 30% off each T-shirt. Siti needs 3 T-shirts.",
+   "text": "Caps cost $16 each. Shop P takes 15% off each cap. Shop Q sells the second cap at half price. Siti buys 2 caps.",
    "parts": [
     {
      "label": "a",
-     "text": "At Shop P she pays $ {b}",
+     "text": "At Shop P she pays $ {bw}",
      "answer": {
       "value": [
-       "40"
+       "27.20"
       ],
-      "text": "40"
+      "text": "27.20"
      }
     },
     {
@@ -417,9 +417,9 @@
      "text": "At Shop Q she pays $ {b}",
      "answer": {
       "value": [
-       "42"
+       "24"
       ],
-      "text": "42"
+      "text": "24"
      }
     },
     {
@@ -427,13 +427,13 @@
      "text": "The cheaper shop is   {circ:Shop P|Shop Q}",
      "answer": {
       "value": [
-       "Shop P"
+       "Shop Q"
       ],
-      "text": "Shop P"
+      "text": "Shop Q"
      }
     }
    ],
-   "explanation": "(a) She pays for 2: $40. (b) $14 each: $42. (c) Shop P."
+   "explanation": "(a) 2 caps $32, 15% off: $27.20. (b) $16 + $8 = $24. (c) Shop Q."
   },
   {
    "id": "L5U07-S10",
@@ -610,25 +610,25 @@
    "id": "L5U07-S13",
    "tier": "start",
    "page": 3,
-   "text": "Aisha has $200. She spends 40% of it on shoes. She spends 25% of the rest on a gift. How much money does she have left? $ {b}",
+   "text": "Nina has $240. She spends 30% of it on a bag. She spends 25% of the rest on a book. How much money does she have left? $ {b}",
    "answer": {
     "value": [
-     "90"
+     "126"
     ],
-    "text": "$90"
+    "text": "$126"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "40% of $200 = $80 for shoes, so $120 is left. 25% of $120 = $30 for the gift. $120 - $30 = $90."
+   "explanation": "30% of $240 = $72 for the bag, so $168 is left. 25% of $168 = $42 for the book. $168 - $42 = $126."
   },
   {
    "id": "L5U07-S14",
    "tier": "start",
    "page": 3,
-   "text": "Ali pays 9% GST on a $250 sofa. Then he pays $20 to have it delivered. The delivery has no GST. How much does he pay in all? $ {b}",
+   "text": "Ali pays 9% GST on a $250 sofa. Then he pays $20 to have it delivered. The delivery has no GST. How much does he pay in all? $ {bw}",
    "answer": {
     "value": [
      "292.50"
@@ -684,12 +684,12 @@
    "id": "L5U07-T02",
    "tier": "think",
    "page": 4,
-   "text": "After a 20% discount, a bag costs $60. What was the cost before the discount? $ {b}",
+   "text": "After a 25% discount, a bag costs $60. What was the cost before the discount? $ {b}",
    "answer": {
     "value": [
-     "75"
+     "80"
     ],
-    "text": "$75"
+    "text": "$80"
    },
    "space": {
     "rows": [
@@ -699,20 +699,20 @@
      ""
     ]
    },
-   "hint": "$60 is 80% of the old cost. What is 10% of the old cost?",
-   "explanation": "$60 is 80% of the old cost. 10% = $7.50, so 100% = $75.",
+   "hint": "$60 is 75% of the old cost. What is 25% of the old cost?",
+   "explanation": "$60 is 75% of the old cost. 25% = $20, so 100% = $80.",
    "beyond": "Working back from a percentage"
   },
   {
    "id": "L5U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "A table costs $218 with GST. GST is 9% of the cost before GST. How much GST is in $218? $ {b}",
+   "text": "In this question GST is 8% of the cost before GST. A fridge costs $432 with GST. How much GST is in $432? $ {b}",
    "answer": {
     "value": [
-     "18"
+     "32"
     ],
-    "text": "$18"
+    "text": "$32"
    },
    "space": {
     "rows": [
@@ -722,34 +722,34 @@
      ""
     ]
    },
-   "hint": "$218 is 109% of the cost before GST. What is 1%?",
-   "explanation": "$218 is 109% of the cost before GST, so 1% = $2. The GST is 9 × $2 = $18.",
+   "hint": "$432 is 108% of the cost before GST. What is 1%?",
+   "explanation": "$432 is 108% of the cost before GST, so 1% = $4. The GST is 8 × $4 = $32.",
    "beyond": "GST in the cost"
   },
   {
    "id": "L5U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "A cost goes up from $20 to $50, and then it goes back down from $50 to $20. The change is always compared with the amount you start from.",
+   "text": "A cost goes up from $60 to $75. Later it comes back down from $75 to $60. Work each percentage out from the amount that the change starts from.",
    "parts": [
     {
      "label": "a",
-     "text": "The percentage increase from $20 to $50 is {b}%.",
+     "text": "The percentage increase from $60 to $75 is {b}%.",
      "answer": {
       "value": [
-       "150"
+       "25"
       ],
-      "text": "150"
+      "text": "25"
      }
     },
     {
      "label": "b",
-     "text": "The percentage decrease from $50 to $20 is {b}%.",
+     "text": "The percentage decrease from $75 to $60 is {b}%.",
      "answer": {
       "value": [
-       "60"
+       "20"
       ],
-      "text": "60"
+      "text": "20"
      }
     }
    ],
@@ -760,20 +760,20 @@
      ""
     ]
    },
-   "hint": "Increase = change out of the starting amount. Which is the start?",
-   "explanation": "(a) $30 out of the start $20 = 150%. (b) $30 out of the start $50 = 60%. The start amounts differ.",
+   "hint": "Which amount does each change start from?",
+   "explanation": "(a) $15 out of the start $60 = 25%. (b) $15 out of the start $75 = 20%. The start amounts differ.",
    "beyond": "Percentage change"
   },
   {
    "id": "L5U07-G02",
    "tier": "go",
    "page": 5,
-   "text": "In a group of 40 children, 40% are boys. 25% of the boys and 50% of the girls wear glasses. What percentage of the whole group wears glasses? {b}%",
+   "text": "A club has 50 members. 60% of them are girls. 30% of the girls and 20% of the boys wear a badge. What percentage of all the members wear a badge? {b}%",
    "answer": {
     "value": [
-     "40"
+     "26"
     ],
-    "text": "40%"
+    "text": "26%"
    },
    "space": {
     "rows": [
@@ -783,8 +783,8 @@
      ""
     ]
    },
-   "hint": "Find the number of boys and girls first. Then count glasses.",
-   "explanation": "Boys 16, girls 24. Glasses: 4 + 12 = 16 of 40 = 40%."
+   "hint": "Find the number of girls and boys first. Then count badges.",
+   "explanation": "Girls 30, boys 20. Badges: 9 + 4 = 13 of 50 = 26%."
   },
   {
    "id": "L5U07-G03",
