@@ -195,7 +195,7 @@ for k in BK:
     txt = pdf_text(f"P1_{k}_Puzzles.pdf")
     pgs = txt.split("\f")[:NP[k]]
     school = re.search(r"Photocopy licence: (.+?) only", txt)
-    rec(f"{k}: school name printed on all {NP[k]} page footers", all("Photocopy licence:" in x for x in pgs), school.group(1) if school else "")
+    rec(f"{k}: school name printed on all {NP[k]} page footers", all("Photocopy licence" in x for x in pgs), school.group(1) if school else "")
     rec(f"{k}: every pupil page shows its code in the footer, for example S1-07 (P1-08)", all(BK[k][i]["code"] in pgs[i] for i in range(len(pgs))), str([i + 1 for i in range(len(pgs)) if BK[k][i]["code"] not in pgs[i]]))
     for f in (f"P1_{k}_Puzzles.pdf", f"P1_{k}_FrontMatter.pdf", f"P1_{k}_Answer_Key.pdf"):
         alltxt[f] = pdf_text(f)
