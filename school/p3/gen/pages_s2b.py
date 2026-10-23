@@ -107,22 +107,15 @@ def page27():
     for kd, t in zip(kinds, times):
         h, m = divmod(t, 60); pm = h >= 12
         if kd in ("clock", "d12"):
-            right = h24(t)
-            wr = {h24(t + 12 * 60), h24((t % 720) + (0 if pm else 0) + 0) if False else h24(t - 12 * 60), h24(t + 60 * (-1 if h > 1 else 1)) if False else h24(t + 10 if m < 50 else t - 10)}
-            wr = [w for w in sorted(wr) if w != right]
-            # wrong ones: the same time in the other half of the day, and the hour and minute confused
-            alt = h24((12 * 60 + t) if not pm else t - 12 * 60)
-            hm_swap = f"{m:02d}{h:02d} h" if m < 24 and h < 24 else h24(t + 60)
-            opts = [right, alt, hm_swap if hm_swap not in (right, alt) else h24(t + 60)]
+            opts = [h24(t), h24(t - 720 if pm else t + 720), h24(t + 120 if h < 22 else t - 120)]
         else:
-            right = ampm(t); alt = ampm(t + 720 if not pm else t - 720)
-            opts = [right, alt, ampm(t + 120 if h < 22 else t - 120)]
+            opts = [ampm(t), ampm(t - 720 if pm else t + 720), ampm(t + 120 if h < 22 else t - 120)]
         if kd == "clock":
             hh = h % 12 or 12
             q = f'<div class="clk30">{A2.clock_svg(hh, m)}</div><span class="qs">{"in the morning" if not pm else "in the afternoon or evening"}</span>'
         elif kd == "d12": q = f'<p class="qb">{ampm(t)}</p><span class="qs">Write in the 24-hour clock.</span>'
         else: q = f'<p class="qb">{h24(t)}</p><span class="qs">Write in the 12-hour clock.</span>'
-        specs.append(dict(q=q, opts=[f'<b class="on">{o}</b>' for o in opts], kind=kd, t=t, right=right))
+        specs.append(dict(q=q, opts=[f'<b class="on">{o}</b>' for o in opts], kind=kd, t=t, right=opts[0]))
     # the d24 rows: the stem is the 24-hour time, options 12-hour
     P = lettered_choice_page(27, 4727, "The 24-Hour Clock", 1, "Time: the 24-hour clock", STRAND_ME,
         "2.3 (24-hour clock)", ["TI2.3"], "Lettered choice (24-hour clock)",
@@ -163,8 +156,7 @@ def page28():
     for r in rows:
         if r["k"] == "finish":
             q = f"<p>The {r['th']} starts at {ampm(r['t1'])} and lasts {hm_text(r['d'])}. At what time does it end?</p>"
-            right = ampm(r["t2"]); wrongs = [ampm(r["t1"] + r["d"] + 40 if r["d"] % 60 + r["t1"] % 60 >= 60 else r["t1"] + r["d"] + 10), ampm(r["t1"] + (r["d"] // 60) * 60 + r["d"] % 60 + 40) if False else ampm(r["t2"] - 60)]
-            val = right
+            right = ampm(r["t2"]); wrongs = [ampm(r["t2"] + 40 if (r["t1"] % 60 + r["d"] % 60) >= 60 else r["t2"] - 40), ampm(r["t2"] - 60)]
         elif r["k"] == "start":
             q = f"<p>{r['nm']}'s {r['th']} ends at {ampm(r['t2'])}. It lasts {hm_text(r['d'])}. At what time did it start?</p>"
             right = ampm(r["t1"]); wrongs = [ampm(r["t2"] + r["d"]), ampm(r["t1"] + 40 if r["t1"] % 60 < 20 else r["t1"] - 40)]
@@ -188,10 +180,9 @@ def page28():
         o = [re.search(r">([^<]*)<", x).group(1) for x in opts]
         t = re.sub(r"<[^>]+>", "", q)
         times = [unampm(x) for x in re.findall(r"\d+:\d\d (?:am|pm)", t)]
-        dm = re.search(r"(?:lasts|lasts|It lasts) ((?:\d+ h)?(?: ?\d+ min)?)\.", t.replace(". At", ".  At"))
         if "How long" in t:
-            d = times[1] - times[0]; return [x for x in o].index(hm_text(d))
-        d = un_hm(re.search(r"(?:lasts|It lasts) ([0-9 hmin]+?)\.", t.replace(", ", ".")).group(1).strip()) if "lasts" in t else None
+            return o.index(hm_text(times[1] - times[0]))
+        d = un_hm(re.search(r"(?:lasts|It lasts) (.+?)\. At", t).group(1))
         if "At what time does it end" in t: return o.index(ampm(times[0] + d))
         return o.index(ampm(times[0] - d))
     got = solve_letters(solver, P["body"])
@@ -211,19 +202,14 @@ def page29():
         e_d = rng.randrange(22 * 60 + 10, 22 * 60 + 55, 5); e_dur = rng.choice([150, 170, 185, 205]); e_a = (e_d + e_dur) % 1440
         wait = b_d - a_a
         items = [("dur", "A", a_dur, "min"), ("dur", "B", b_dur, "min"), ("arr", "C", c_a, "h"), ("dep", "D", d_d, "h"), ("dur", "E", e_dur, "min"), ("wait", "AB", wait, "min")]
-        ans = [x[2] for x in items]
-        if not distinct(ans) or any(a_ % 5 for a_ in ans if False): continue
-        timeset = {c_a, d_d}
-        if timeset & {a_dur, b_dur, e_dur, wait}: continue
+        tm = lambda m: ((m // 60) % 24) * 100 + m % 60
+        ans = [a_dur, b_dur, tm(c_a), tm(d_d), e_dur, wait]
+        if not distinct(ans) or any(v >= 400 for v in (a_dur, b_dur, e_dur, wait)): continue
+        timeset = {tm(c_a), tm(d_d)}
         pool = set()
-        for kd, nm, v, u in items:
-            if u == "min": pool |= {v + 10, v - 10, v + 40, v - 40, v + 60, v - 60, v - 20, v + 20}
-            else: pool |= {v + 40, v - 40, v + 100, v - 100, v + 60, v - 60}
-        pool = {p for p in pool if 0 < p < 2360 and (p % 100 < 60 if p in {x + y for x in timeset for y in (40, -40, 100, -100, 60, -60)} else True)}
-        pool = sorted(x for x in pool if x not in ans)
-        # decoys that are time-like (hhmm) must be real times; the others are minutes
-        pool = [x for x in pool if x % 100 < 60 or x < 400]
-        timelike = lambda v: v in timeset or v >= 400
+        for v in (a_dur, b_dur, e_dur, wait): pool |= {v + 10, v - 10, v + 40, v - 40, v + 60, v - 60, v - 20, v + 20}
+        for m_ in (c_a, d_d): pool |= {tm(m_ + 40), tm(m_ - 40), tm(m_ + 60), tm(m_ - 60), tm(m_) + 40 if tm(m_) % 100 < 20 else tm(m_) - 40}
+        pool = sorted(x for x in pool if x not in ans and 0 < x < 2360 and (x < 400 or x % 100 < 60))
         res = find_table(29, 6, ans, rng, 0, 2359, pool, n_decoy=3, tries=12)
         if res: word, table = res; break
     fmtv = lambda v: f"{v:04d} h" if (v in timeset or v >= 400) else f"{v} min"
@@ -235,7 +221,7 @@ def page29():
           f"Bus C leaves at {t24(c_d)} h. The journey takes {hm_text(c_dur)}. At what time does it arrive?",
           f"Bus D arrives at {t24(d_a)} h. The journey takes {hm_text(d_dur)}. At what time did it leave?",
           f"How many minutes does Bus E take?", f"Bus B leaves after Bus A arrives. How many minutes is the wait?"]
-    cards = [qcard(i + 1, f"<p>{q}</p>", f'<span class="ab w4"></span> <b>{"h" if items[i][3] == "h" else "min"}</b>') for i, q in enumerate(qs)]
+    cards = [qcard(i + 1, f"<p>{q}</p>", f'<span class="ab w4"></span> <b>{"h" if i in (2, 3) else "min"}</b>') for i, q in enumerate(qs)]
     pre = f'<div class="blk"><p class="lead">The 24-hour clock timetable. Times are four digits, for example 0915 h.</p>{table_html}</div>'
     P = code_items_page(29, 4929, "Time Detective", 2, "Time: the 24-hour clock, start, finish and how long", STRAND_ME,
         "2.2, 2.3 (starting time, finishing time or duration; 24-hour clock)", ["TI2.2", "TI2.3"], "Code-breaker (timetable)",

@@ -123,3 +123,48 @@ def sq_minus_semi_fig(s, tag, unit="cm", box=(36, 36)):
              f'<path class="sqs" d="{shaded}" fill="url(#{_hatch_id(tag)})" stroke="#000" stroke-width="{SW}" stroke-linejoin="round"/>'
              + _t(x0 + a / 2, y0 + a + 3.0, f"{s} {unit}", cls="lab top", size=3.6))
     return _svg(bw, bh + 2, inner, "fig-svg fig-sqs", defs=hatch_def(tag))
+
+# ------------------------------------------------------------------ pie chart
+def pie_fig(sectors, tag="p", W=112.0, H=66.0):
+    """sectors: list of (name, pct, hidden); drawn clockwise from the top. A hidden sector prints ? instead of its percentage.
+    Each sector is a path whose end points give its angle; the name and percentage are text labels outside the pie."""
+    cx, cy, R = W / 2, H / 2 + 0.5, 22.0
+    out = []; a = -math.pi / 2
+    for name, pct, hidden in sectors:
+        span = 2 * math.pi * pct / 100; a0, a1 = a, a + span
+        x1, y1 = cx + R * math.cos(a0), cy + R * math.sin(a0); x2, y2 = cx + R * math.cos(a1), cy + R * math.sin(a1)
+        large = 1 if span > math.pi else 0
+        out.append(f'<path class="sec" data-name="{name}" d="M{cx:.2f},{cy:.2f} L{x1:.3f},{y1:.3f} A{R},{R} 0 {large} 1 {x2:.3f},{y2:.3f} Z" fill="#fff" stroke="#000" stroke-width="{SW}" stroke-linejoin="round"/>')
+        mid = (a0 + a1) / 2; lr = R + 4.5
+        lx, ly = cx + lr * math.cos(mid), cy + lr * math.sin(mid)
+        anchor = "start" if math.cos(mid) > 0.15 else "end" if math.cos(mid) < -0.15 else "middle"
+        dy = -2.0 if math.sin(mid) < -0.5 else 2.0 if math.sin(mid) > 0.5 else 0
+        out.append(f'<text class="slab" data-n="{name}" x="{lx:.2f}" y="{ly + dy - 1.8:.2f}" text-anchor="{anchor}" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{name}</text>')
+        out.append(f'<text class="spc" data-n="{name}" x="{lx:.2f}" y="{ly + dy + 2.3:.2f}" text-anchor="{anchor}" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{"?" if hidden else str(pct) + "%"}</text>')
+        a = a1
+    return _svg(W, H, "".join(out), "fig-svg fig-pie")
+
+def read_pie(s):
+    """name -> (percentage measured from the sector's end points, printed percentage or None when it prints ?)"""
+    cx_cy = {}
+    res = {}
+    for m in re.finditer(r'<path class="sec" data-name="([^"]+)" d="M([\d.]+),([\d.]+) L([\d.]+),([\d.]+) A[\d.]+,[\d.]+ 0 \d 1 ([\d.]+),([\d.]+) Z"', s):
+        n, cx, cy, x1, y1, x2, y2 = m.group(1), *(float(v) for v in m.groups()[1:])
+        a0 = math.atan2(y1 - cy, x1 - cx); a1 = math.atan2(y2 - cy, x2 - cx)
+        d = (a1 - a0) % (2 * math.pi)
+        res[n] = [d / (2 * math.pi) * 100, None]
+    for m in re.finditer(r'<text class="spc" data-n="([^"]+)"[^>]*>(.*?)</text>', s):
+        t = m.group(2).strip()
+        res[m.group(1)][1] = None if t == "?" else int(t.rstrip("%"))
+    return {k: (round(v[0], 2), v[1]) for k, v in res.items()}
+
+# ------------------------------------------------------------------ nets
+def net_fig(cells, size=6.6):
+    rs = [r for r, c in cells]; cs = [c for r, c in cells]
+    r0, c0 = min(rs), min(cs); h = (max(rs) - r0 + 1) * size; w = (max(cs) - c0 + 1) * size
+    pad = 1.0
+    out = "".join(f'<rect class="nc" data-r="{r - r0}" data-c="{c - c0}" x="{pad + (c - c0) * size:.2f}" y="{pad + (r - r0) * size:.2f}" width="{size}" height="{size}" fill="#fff" stroke="#000" stroke-width="{SW}" stroke-linejoin="round"/>' for r, c in sorted(cells))
+    return _svg(w + 2 * pad, h + 2 * pad, out, "fig-svg fig-net")
+
+def read_net(s):
+    return {(int(r), int(c)) for r, c in re.findall(r'<rect class="nc" data-r="(\d+)" data-c="(\d+)"', s)}
