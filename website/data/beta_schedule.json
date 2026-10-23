@@ -6,6 +6,12 @@
   "total": 250,
   "note": "confirmed by Jasmine"
  },
+ "delivery": {
+  "note": "Owner sets register_by ONCE here (ISO date, e.g. 2026-11-09). Empty = the pages show the placeholder [date to confirm]. Default for a 24 Nov start: order about 9 Nov; confirm from the printer lead time.",
+  "register_by": "",
+  "printed_workbook_posted": true,
+  "singapore_addresses_only": true
+ },
  "weeks": 5,
  "start": "2026-11-23",
  "groups": [

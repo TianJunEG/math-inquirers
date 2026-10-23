@@ -117,6 +117,21 @@ def t12(t):
     return '%d:%02d%s' % ((h % 12) or 12, m, 'pm' if h >= 12 else 'am')
 
 
+def register_by(sch):
+    """(label, is_set) for the register-by date, from data/beta_schedule.json delivery.register_by (ISO date). One place to set it."""
+    v = (sch.get('delivery') or {}).get('register_by') or ''
+    if v:
+        return dt.date.fromisoformat(v).strftime('%a %-d %b'), True
+    return '[date to confirm]', False
+
+
+def register_by_line(sch):
+    """The visible register-by line plus the late-registration (PDF) note, shared by the level pages and the home page."""
+    label, _ = register_by(sch)
+    return ('Register by <b>%s</b> so your workbook arrives before the first lesson. If you register later, you get the workbook as a PDF '
+            'to print at home, and we post the printed copy if we can. We post to Singapore addresses only.' % esc(label))
+
+
 def dlabel(iso):
     return dt.date.fromisoformat(iso).strftime('%a %-d %b')
 
@@ -126,6 +141,7 @@ LEVEL_CSS = '''
 .lvgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .lvcard{display:grid;gap:8px;align-content:start;border:2.5px solid var(--ink);border-radius:22px;padding:18px;background:var(--card);box-shadow:5px 5px 0 var(--ink);text-decoration:none;color:var(--fg)}
 .lvcard:hover{background:var(--soft)}
+.regby{border:2px dashed var(--coral);background:var(--peach);border-radius:14px;padding:10px 14px;font-size:15px;margin:6px 0 0}
 .lvcard .k{font:800 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .lvcard h3{font-size:24px}
 .lvcard .go{font-weight:800;font-size:14px}
@@ -188,9 +204,9 @@ def schedule_block(L, sch):
             '<details class="dates"><summary>All 10 lesson dates</summary><div class="tbl" style="margin-top:10px"><table>'
             '<thead><tr><th class="num">Lesson</th><th>Date</th><th>Time (Singapore)</th></tr></thead><tbody>%s</tbody></table></div>'
             '<p class="fine" style="margin-top:8px">No lessons on Fri 25 Dec (Christmas Day).</p></details>'
-            '<p class="small muted">Beta fee: S$%s a lesson, S$%s for all 10 lessons. Nothing to pay when you register: we confirm your place first and then send payment details. If a group fills, we open another.</p>%s</div>'
+            '<p class="small muted">Beta fee: S$%s a lesson, S$%s for all 10 lessons, including the printed workbook posted to your home. Nothing to pay when you register: we confirm your place first and then send payment details. If a group fills, we open another.</p><p class="regby">%s</p>%s</div>'
             % (g['seats'], L['n'], esc(g['ages']), times, esc(g['first']), esc(g['last']), exc,
-               sch['lesson_minutes'], sch['weeks'], reg, L['n'], rows, per, tot,
+               sch['lesson_minutes'], sch['weeks'], reg, L['n'], rows, per, tot, register_by_line(sch),
                interest_ui.other_times_block(L['n'], interest_ui.load_slots())))
 
 
@@ -242,7 +258,7 @@ def page(L, lessons, sch):
 <div class="tile sky"><span class="tag">Think harder</span><h3>Think harder</h3><p class="small">Questions that ask for more than one step, a full list of possibilities, or a reason.</p></div>
 <div class="tile mint"><span class="tag">Go further</span><h3>Go further</h3><p class="small">Open challenges with room to explore, where the aim is to find a way in and explain it.</p></div></div></section>
 
-<section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist">%(kit)s</ul><p class="small muted">Nothing needs to be bought for the kit. We post the printed workbook and kit to your home before the first lesson, and you cut out the pieces and keep them in one envelope.</p></div>
+<section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist">%(kit)s</ul><p class="small muted">Nothing needs to be bought for the kit. The kit is the cut-out pages at the back of your child's workbook. We post the printed workbook to your home before the first lesson (Singapore addresses), and your child cuts out the pieces and keeps them in one envelope.</p></div>
 <div class="tile mint"><span class="tag">At home</span><h3>What your child needs</h3><ul class="klist">%(home)s</ul><p class="small muted">These come from the lesson plans for this level.</p></div></section>
 
 <section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A sample puzzle</h2></div><div class="pzcard"><div class="pzl"><span class="tag">%(ptag)s</span><div class="big">%(pbig)s</div><p style="font-size:18px">%(pq)s</p><details class="ans"><summary>Show the answer</summary><p>%(pa)s</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=%(n)d#register" style="justify-self:start">Register for Level %(n)d</a></div></div></section>
@@ -251,7 +267,7 @@ def page(L, lessons, sch):
 
 <section class="sec" id="times"><div class="shead"><span class="eyebrow">November beta · Singapore time</span><h2>Class times for Level %(n)d</h2></div>%(sched)s</section>
 
-<section class="band yel" id="register"><div class="sec"><span class="eyebrow">Register</span><h2>Hold a seat</h2><p class="muted">Registration is a short form on our home page. Your level and group are already filled in. We reply within 2 working days with your group and payment details.</p></div><div class="row"><a class="btn yel" href="/?level=%(n)d&amp;group=%(gid)s#register">Register for Level %(n)d</a><a class="btn alt" href="/terms/">Terms and refund policy</a><a class="btn alt" href="/privacy/">Privacy and recording notice</a></div></section>
+<section class="band yel" id="register"><div class="sec"><span class="eyebrow">Register</span><h2>Hold a seat</h2><p class="muted">Registration is a short form on our home page. Your level and group are already filled in. You add a delivery address, because we post the printed workbook to your home. We reply within 2 working days with your group and payment details.</p><p class="regby" id="regby">%(regby)s</p></div><div class="row"><a class="btn yel" href="/?level=%(n)d&amp;group=%(gid)s#register">Register for Level %(n)d</a><a class="btn alt" href="/terms/">Terms and refund policy</a><a class="btn alt" href="/privacy/">Privacy and recording notice</a></div></section>
 
 <section class="sec" id="levels"><div class="shead"><span class="eyebrow">All levels</span><h2>The six levels</h2></div><div class="lvgrid">%(index)s</div></section>
 </main>
@@ -263,7 +279,7 @@ def page(L, lessons, sch):
         per=sch['price']['per_lesson'], tot=sch['price']['total'], blurb=esc(L['blurb']), note=note, cards=cards,
         kit=''.join('<li>%s</li>' % esc(k) for k in L['kit']), home=''.join('<li>%s</li>' % esc(k) for k in L['home']),
         ptag=esc(p['tag']), pbig=esc(p['big']), pq=esc(p['q']), pa=esc(p['a']),
-        placement=placement_block(L), sched=schedule_block(L, sch), gid=g['id'], index=level_index_cards(n), syl=syl)
+        placement=placement_block(L), sched=schedule_block(L, sch), gid=g['id'], index=level_index_cards(n), syl=syl, regby=register_by_line(sch))
 
 
 def main():
