@@ -228,7 +228,7 @@ def calendar(start='Wed', days=31, highlight=(), hide=(), mark=(), week=None, la
 
 # ------------------------------------------------------------------ stick patterns
 
-def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side=80, show_count=False):
+def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side=80, show_count=False, handle=False):
     """Triangles (3, 5, 7 sticks) or squares (4, 7, 10 sticks) in a row, drawn with sticks (lines). hide_last draws the next pattern as a dashed ghost with '?'."""
     body = []; k = n + (1 if hide_last else 0)
     def stick(x1, y1, x2, y2, ghost=False):
@@ -242,7 +242,8 @@ def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side
         body.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{col}" stroke-width="7" stroke-linecap="butt"{dash}/>')
         if not ghost:
             body.append(f'<circle cx="{x1:.1f}" cy="{y1:.1f}" r="4" fill="{YEL}" stroke="{NAVY}" stroke-width="1.6"/><circle cx="{x2:.1f}" cy="{y2:.1f}" r="4" fill="{YEL}" stroke="{NAVY}" stroke-width="1.6"/>')
-    x0 = 24; yb = 20 + side * 0.9 + 6
+    x0 = 24 + (side * 0.9 if handle else 0); yb = 20 + side * 0.9 + 6
+    if handle: stick(x0 - side * 0.9, yb, x0, yb)       # one handle stick sticking out on the left
     if shape == 'triangle':
         h = side * 0.866; half = side / 2
         # zigzag row: points alternate bottom (y=yb) and top (y=yb-h) every half side; triangle j uses points j, j+1, j+2
@@ -253,7 +254,7 @@ def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side
             for a, b in ((j, j + 1), (j + 1, j + 2), (j, j + 2)):
                 if (a, b) in drawn: continue
                 drawn.add((a, b)); stick(P[a][0], P[a][1], P[b][0], P[b][1], g)
-        W = x0 * 2 + (k + 1) * half
+        W = x0 * 2 + (k + 1) * half - (side * 0.9 if handle else 0)
         if hide_last: body.append(f'<text x="{P[k][0] + 6:.0f}" y="{yb - h / 2 + 12:.0f}" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">?</text>')
     else:
         s_ = side * 0.9
@@ -262,7 +263,7 @@ def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side
             x = x0 + j * s_
             for (x1, y1, x2, y2) in ((x, yb, x + s_, yb), (x, yb - s_, x + s_, yb - s_), (x + s_, yb, x + s_, yb - s_)) + (((x, yb, x, yb - s_),) if j == 0 else ()):
                 stick(x1, y1, x2, y2, g)
-        W = x0 * 2 + k * s_
+        W = x0 * 2 + k * s_ - (side * 0.9 if handle else 0)
         if hide_last: body.append(f'<text x="{x0 + (k - 0.5) * s_:.0f}" y="{yb - s_ / 2 + 12:.0f}" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">?</text>')
     H = yb + 50
     if label_each:
@@ -608,7 +609,7 @@ def render(v):
     if t == 'money': return money(v.get('items'), v.get('per_row', 6), v.get('total'), v.get('label'))
     if t == 'price_tag': return price_tag(v.get('item', 'pencil'), v.get('price', '$5'), v.get('hide_price', False))
     if t == 'calendar': return calendar(v.get('start', 'Wed'), v.get('days', 31), v.get('highlight', ()), v.get('hide', ()), v.get('mark', ()), v.get('week'))
-    if t == 'stick_pattern': return stick_pattern(v.get('shape', 'triangle'), v.get('n', 3), v.get('hide_last', False), v.get('label_each', False))
+    if t == 'stick_pattern': return stick_pattern(v.get('shape', 'triangle'), v.get('n', 3), v.get('hide_last', False), v.get('label_each', False), handle=v.get('handle', False))
     if t == 'shapes2d': return _tagged(shapes2d(v.get('shape', 'circle'), v.get('parts', 1), v.get('shade', ()), v.get('fold'), v.get('compose'), _draw_size(v), label=v.get('label')), v.get('tag'))
     if t == 'grid': return grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64))
     if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso')), v.get('tag'))
