@@ -6,7 +6,7 @@ const DATA = JSON.parse(fs.readFileSync(path.join(__dirname, 'spine.json'), 'utf
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const svgCache = {};
 const icon = (id, mm) => {
-  if (!svgCache[id]) svgCache[id] = fs.readFileSync(path.join(__dirname, 'spine_icons', id + '.svg'), 'utf8').trim();
+  if (!svgCache[id]) svgCache[id] = fs.readFileSync(path.join(__dirname, 'spine_icons', id + '.svg'), 'utf8').trim().replace(/\s*\n\s*/g, ' ');   // one line: p2-p6 wb_pdf.py groups the body line by line
   return svgCache[id].replace('width="64" height="64"', `width="${mm}mm" height="${mm}mm"`).replace('<svg ', '<svg style="color:#1B2A49;flex:none;display:block" ');
 };
 const tool = id => DATA.tools.find(t => t.id === id);
@@ -18,6 +18,10 @@ const L = DATA.card_labels;
 function card(level, n, compact) {
   const row = DATA.lessons[`${level}.${n}`];
   const box = 'border:0.5mm solid #1B2A49;border-radius:1.5mm;background:#fff;color:#1B2A49;font-family:\'Nunito Sans\',Arial,sans-serif;break-inside:avoid;';
+  if (row.main === 'choose' && compact) {   // compact version for a first page that is too full (Level 4 Lesson 10): sits beside the title; label over eight icons with tick boxes
+    const cs = DATA.tools.map(t => `<span style="display:inline-flex;align-items:center;gap:0.6mm">${icon(t.id, 7)}${tick(3.2)}</span>`).join('');
+    return `<div class="p spcard spchoose" data-spine="card" style="${box}width:104mm;padding:1mm 2mm 1.2mm;display:flex;flex-direction:column;gap:0.8mm;flex:none"><span style="font-size:9pt;font-weight:800;letter-spacing:.05em">${L.tool_of_day}: ${L.choose_one}</span><span style="display:flex;justify-content:space-between">${cs}</span></div>`;
+  }
   if (row.main === 'choose') {
     const cells = DATA.tools.map(t => `<div style="display:flex;flex-direction:column;align-items:center;gap:0.8mm;width:21mm">${icon(t.id, 10)}<div style="display:flex;align-items:center;gap:1mm">${tick(3.6)}<span style="font-size:9pt;font-weight:700">${L.chose}</span></div></div>`).join('');
     return `<div class="p spcard spchoose" data-spine="card" style="${box}padding:1.5mm 2.5mm 1.8mm;margin:1mm 0 3mm"><div style="font-size:9pt;font-weight:800;letter-spacing:.06em;margin-bottom:1mm">${L.tool_of_day}: ${L.choose_one}. Choose one tool and tick it.</div><div style="display:flex;justify-content:space-between">${cells}</div></div>`;
