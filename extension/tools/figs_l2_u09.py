@@ -112,11 +112,11 @@ def clock(spec, w=None):
             P.append(line(cx + r1 * math.cos(a), cy + r1 * math.sin(a), cx + (R - 3) * math.cos(a), cy + (R - 3) * math.sin(a), 3 if m % 5 == 0 else 1.6))
         for hnum in range(1, 13):
             a = math.radians(hnum * 30 - 90)
-            P.append(T(cx + (R - 32) * math.cos(a), cy + (R - 32) * math.sin(a) + 10, hnum, 28))
+            P.append(T(cx + (R - 24) * math.cos(a), cy + (R - 24) * math.sin(a) + 9, hnum, 24))
         ah = math.radians((c['h'] % 12) * 30 + c['m'] * 0.5 - 90)
         am = math.radians(c['m'] * 6 - 90)
-        P.append(line(cx, cy, cx + 44 * math.cos(ah), cy + 44 * math.sin(ah), 8))
-        P.append(line(cx, cy, cx + 70 * math.cos(am), cy + 70 * math.sin(am), 4.6))
+        P.append(line(cx, cy, cx + 38 * math.cos(ah), cy + 38 * math.sin(ah), 8))
+        P.append(line(cx, cy, cx + 52 * math.cos(am), cy + 52 * math.sin(am), 4.6))
         P.append(f'<circle cx="{cx}" cy="{cy}" r="6" fill="{NAVY}"/>')
         if c.get('label'):
             P.append(T(cx, cy + R + 46, c['label'], 32))

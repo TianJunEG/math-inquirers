@@ -143,6 +143,6 @@ def run(d):
     eq(items['g1']['answer'], divisors(12), 'g1 authored'); eq(items['g2']['answer'], 8, 'g2 authored'); eq(items['g3']['answer'], 6, 'g3 authored'); eq(share_each(18, 3), 6, 'g3')
     # Retrofit T4 (was T5; the Ravi sticker item was merged into T1 c) (true or false, 16 marbles shared with none left over)
     eq(T['T4']['val'][:3], ['True' if left_over(16, k) == 0 else 'False' for k in (3, 4, 6)], 'T4 true or false')
-    eq(T['T4']['val'][3], left_over(16, 3), 'T4 left over among 3'); eq(left_over(16, 3), 1, 'T4 1 left over')
+    eq(left_over(16, 3), 1, 'T4 1 left over among 3')
     eq([left_over(16, k) for k in (3, 4, 6)], [1, 0, 4], 'T4 left over')
     return n

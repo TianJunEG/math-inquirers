@@ -90,18 +90,18 @@ def _():
 
 @check('S06')
 def _():
-    dist, par = pour_states(5, 8)
-    # (a): fill the 8, pour into the 5 until full
-    st = (0, 0)
-    st = (0, 8)
-    t = min(st[1], 5 - st[0]); st = (st[0] + t, st[1] - t)
-    a = st[1]
-    # (b): empty the 5 jug, pour the 3 in, fill the 8, pour into the 5 until full
-    st = (0, st[1])
-    t = min(st[1], 5 - st[0]); st = (st[0] + t, st[1] - t)       # pours the 3 into the 5 jug
-    st = (st[0], 8)
-    t = min(st[1], 5 - st[0]); st = (st[0] + t, st[1] - t)
-    return {'a': s([a]), 'b': s([st[1]])}
+    def pour(st, a, b):
+        t = min(st[a], (5, 8)[b] - st[b]) if False else None
+    j5, j8 = 0, 0
+    j8 = 8                                          # fill the 8 jug
+    t = min(j8, 5 - j5); j5, j8 = j5 + t, j8 - t    # pour into the 5 jug until it is full
+    a = j8
+    j5 = 0                                          # empty the 5 jug
+    j5 = a; j8 = 0                                  # pour the 3 into it
+    more = 5 - j5
+    j8 = 8                                          # fill the 8 jug
+    t = min(j8, 5 - j5); j5, j8 = j5 + t, j8 - t
+    return {'a': s([a]), 'b': s([more]), 'c': s([j8])}
 
 
 @check('S07')

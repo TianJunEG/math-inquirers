@@ -8,7 +8,8 @@
  "holiday_lesson": 9,
  "goal": "I can solve balance puzzles and pouring puzzles. I can change units. I can tell the time to 5 minutes and find how long.",
  "learn": {
-  "intro": "A balance that is level has the same mass on both sides. So you can swap a thing for whatever balances it. For time, count on in 5s on the clock. Count to the next hour first.",
+  "tight": true,
+  "intro": "A level balance has the same mass on both sides, so you can swap a thing for what balances it. On a clock the short hand shows the hour and the long hand shows the minutes. Pour jugs one step at a time.",
   "example": {
    "problem": "The scale is level. 1 melon balances 3 plums. 1 plum has a mass of 50 g. Find the mass of the melon.",
    "figure": {
@@ -25,32 +26,51 @@
       ]
      }
     ],
-    "width_mm": 66
+    "width_mm": 50
    },
-   "side": true,
    "steps": [
-    "Level scale: the melon is as heavy as 3 plums.",
-    "1 plum is 50 g. 3 plums are 3 × 50 g = 150 g.",
-    "So the melon is 150 g.",
-    "Check: 50 g + 50 g + 50 g = 150 g."
+    "The melon is as heavy as 3 plums.",
+    "3 plums: 3 × 50 g = 150 g.",
+    "So the melon is 150 g."
    ],
-   "answer": "The melon has a mass of 150 g."
+   "answer": "The melon is 150 g."
   },
-  "howto": {
-   "title": "How to use a balance",
+  "example2": {
+   "problem": "A lesson starts at 8:50 am and lasts 25 minutes. When does it end?",
+   "figure": {
+    "type": "l2_clock",
+    "clocks": [
+     {
+      "h": 8,
+      "m": 50
+     }
+    ],
+    "width_mm": 30
+   },
    "steps": [
-    "A level balance means both sides are equal.",
-    "Swap a thing for what balances it.",
-    "Write the mass of each thing.",
-    "Check both sides."
+    "8:50 to 9:00 is 10 minutes.",
+    "25 - 10 = 15 minutes more.",
+    "So it ends at 9:15 am."
+   ],
+   "answer": "It ends at 9:15 am."
+  },
+  "pair": true,
+  "howto": {
+   "title": "How to start",
+   "steps": [
+    "Balance: both sides are equal. Swap things.",
+    "Time: count on to the next hour first.",
+    "Jugs: write both amounts after each pour.",
+    "Check your answer."
    ]
   },
   "facts": {
-   "title": "Units",
+   "title": "Units and time",
    "lines": [
+    "am: midnight to noon. pm: noon to midnight.",
     "1 kg = 1000 g.   1 m = 100 cm.",
-    "60 minutes = 1 hour.",
-    "Count on in 5s to the next hour first."
+    "The long hand on 7 means 35 minutes.",
+    "60 minutes = 1 hour."
    ]
   },
   "try": {
@@ -225,7 +245,7 @@
    "id": "L2U09-S04",
    "tier": "start",
    "page": 2,
-   "text": "A trip starts at 9:35 am and ends at 11:05 am. How long is the trip? Hint: draw a timeline.",
+   "text": "A trip starts at 9:35 am and ends at 11:05 am. How long is the trip?",
    "parts": [
     {
      "label": "a",
@@ -306,7 +326,7 @@
    "id": "L2U09-S06",
    "tier": "start",
    "page": 2,
-   "text": "You have a 5 ℓ jug and an 8 ℓ jug with no marks. Both jugs are empty.",
+   "text": "A 5 ℓ jug and an 8 ℓ jug have no marks. Both are empty.",
    "figure": {
     "type": "l2_jugs",
     "jugs": [
@@ -322,7 +342,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug now holds {b} ℓ.",
+     "text": "Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug holds {b} ℓ.",
      "answer": {
       "value": [
        "3"
@@ -332,7 +352,17 @@
     },
     {
      "label": "b",
-     "text": "Empty the 5 ℓ jug. Pour the 3 ℓ in. Fill the 8 ℓ jug again. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug now holds {b} ℓ.",
+     "text": "Empty the 5 ℓ jug. Pour the 3 ℓ into it. It needs {b} ℓ more to be full.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug holds {b} ℓ.",
      "answer": {
       "value": [
        "6"
@@ -341,7 +371,7 @@
      }
     }
    ],
-   "explanation": "(a) 8 - 5 = 3 ℓ is left in the 8 ℓ jug. (b) The 5 ℓ jug holds 3 ℓ, so it needs 2 ℓ more. The 8 ℓ jug gives 2 ℓ: 8 - 2 = 6 ℓ is left.",
+   "explanation": "(a) 8 - 5 = 3 ℓ is left in the 8 ℓ jug. (b) The 5 ℓ jug holds 3 ℓ. 5 - 3 = 2 ℓ more fill it. (c) The 8 ℓ jug gives 2 ℓ: 8 - 2 = 6 ℓ is left.",
    "figside": true
   },
   {
@@ -736,7 +766,7 @@
    "id": "L2U09-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond: the 24-hour clock. After noon add 12 to the hour: 1:30 pm is 13:30.",
+   "text": "The 24-hour clock. After noon add 12 to the hour: 1:30 pm is 13:30.",
    "parts": [
     {
      "label": "a",

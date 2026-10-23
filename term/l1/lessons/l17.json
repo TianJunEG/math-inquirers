@@ -2263,15 +2263,8 @@
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "Kumar has 16 marbles. He shares them equally among children, with none left over. Is each sentence true or false?",
-    "parts": [
-     {
-      "l": "",
-      "text": "If Kumar shares 16 marbles among 3 children, ___ marbles are left over.",
-      "ans": "1",
-      "val": 1
-     }
-    ],
+    "text": "Kumar has 16 marbles. He shares them equally, with none left over. True or false?",
+    "parts": [],
     "tf": [
      {
       "s": "He can share them among 3 children."
@@ -2284,12 +2277,11 @@
      }
     ],
     "lines": 0,
-    "answer": "False, True, False; 1 marble is left over when 16 are shared among 3 children",
+    "answer": "False, True, False (among 3 children 1 marble is left over; among 4 each gets 4; among 6 children 4 are left over)",
     "val": [
      "False",
      "True",
-     "False",
-     1
+     "False"
     ],
     "hint": "Deal the marbles out one at a time to the children, or count in jumps: 3, 6, 9 ... Does the count land on 16?",
     "solution": "Among 3 children each gets 5, which uses 15 marbles, and 1 is left over, so false. Among 4 children each gets 4, because 4 groups of 4 is 16, so true. Among 6 children each gets 2, which uses 12 marbles, and 4 are left over, so false.",

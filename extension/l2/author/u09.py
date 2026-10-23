@@ -8,14 +8,21 @@ def scales(*sc, **kw):
     return d
 
 learn = {
- 'intro': 'A balance that is level has the same mass on both sides. So you can swap a thing for whatever balances it. For time, count on in 5s on the clock. Count to the next hour first.',
+ 'tight': True,
+ 'intro': 'A level balance has the same mass on both sides, so you can swap a thing for what balances it. On a clock the short hand shows the hour and the long hand shows the minutes. Pour jugs one step at a time.',
  'example': {
   'problem': 'The scale is level. 1 melon balances 3 plums. 1 plum has a mass of 50 g. Find the mass of the melon.',
-  'figure': scales(('Level', ['pear'], ['plum', 'plum', 'plum']), width_mm=70) if False else {'type': 'l2_scale', 'scales': [{'left': ['melon'], 'right': ['plum', 'plum', 'plum']}], 'width_mm': 66}, 'side': True,
-  'steps': ['Level scale: the melon is as heavy as 3 plums.', '1 plum is 50 g. 3 plums are 3 × 50 g = 150 g.', 'So the melon is 150 g.', 'Check: 50 g + 50 g + 50 g = 150 g.'],
-  'answer': 'The melon has a mass of 150 g.'},
- 'howto': {'title': 'How to use a balance', 'steps': ['A level balance means both sides are equal.', 'Swap a thing for what balances it.', 'Write the mass of each thing.', 'Check both sides.']},
- 'facts': {'title': 'Units', 'lines': ['1 kg = 1000 g.   1 m = 100 cm.', '60 minutes = 1 hour.', 'Count on in 5s to the next hour first.']},
+  'figure': {'type': 'l2_scale', 'scales': [{'left': ['melon'], 'right': ['plum', 'plum', 'plum']}], 'width_mm': 50},
+  'steps': ['The melon is as heavy as 3 plums.', '3 plums: 3 × 50 g = 150 g.', 'So the melon is 150 g.'],
+  'answer': 'The melon is 150 g.'},
+ 'example2': {
+  'problem': 'A lesson starts at 8:50 am and lasts 25 minutes. When does it end?',
+  'figure': {'type': 'l2_clock', 'clocks': [{'h': 8, 'm': 50}], 'width_mm': 30},
+  'steps': ['8:50 to 9:00 is 10 minutes.', '25 - 10 = 15 minutes more.', 'So it ends at 9:15 am.'],
+  'answer': 'It ends at 9:15 am.'},
+ 'pair': True,
+ 'howto': {'title': 'How to start', 'steps': ['Balance: both sides are equal. Swap things.', 'Time: count on to the next hour first.', 'Jugs: write both amounts after each pour.', 'Check your answer.']},
+ 'facts': {'title': 'Units and time', 'lines': ['am: midnight to noon. pm: noon to midnight.', '1 kg = 1000 g.   1 m = 100 cm.', 'The long hand on 7 means 35 minutes.', '60 minutes = 1 hour.']},
  'try': {'text': 'One tin balances 4 pens. One pen has a mass of 25 g. Find the mass of the tin. {b} g', 'answer': A('100'),
          'explanation': 'The tin is as heavy as 4 pens. 4 × 25 g = 100 g. Check: 25 + 25 + 25 + 25 = 100.'}}
 
@@ -31,16 +38,17 @@ items = [
    P('b', 'A class starts at 9:50 am and ends at 10:30 am. It lasts {b} minutes.', '40'),
    P('c', 'A game ends at 5:05 pm. It lasted 25 minutes. It started at {b} : {b} pm.', ['4', '40'])],
    why='(a) 3:40 to 4:00 is 20 minutes. 15 more minutes: 4:15. (b) 9:50 to 10:00 is 10 minutes, and 10:00 to 10:30 is 30 minutes: 40 minutes. (c) Count back 5 minutes to 5:00, then 20 more minutes: 4:40.'),
- I('start', 2, 'A trip starts at 9:35 am and ends at 11:05 am. How long is the trip? Hint: draw a timeline.', parts=[P('a', 'The trip is {b} hour and {b} minutes long.', ['1', '30'], '1 hour 30 minutes')],
+ I('start', 2, 'A trip starts at 9:35 am and ends at 11:05 am. How long is the trip?', parts=[P('a', 'The trip is {b} hour and {b} minutes long.', ['1', '30'], '1 hour 30 minutes')],
    space={'rows': ['Draw a timeline:']},
    why='9:35 to 10:00 is 25 minutes. 10:00 to 11:00 is 1 hour. 11:00 to 11:05 is 5 minutes. 25 + 5 = 30 minutes. The trip is 1 hour 30 minutes.'),
  I('start', 2, 'All the scales are level.', figure={'type': 'l2_scale', 'scales': [{'left': ['apple'], 'right': ['lemon', 'lemon', 'lemon'], 'label': 'Scale 1'}, {'left': ['lemon'], 'right': ['50 g'], 'label': 'Scale 2'}], 'width_mm': 120},
    partsrow=True, parts=[P('a', '1 lemon is {b} g', '50'), P('b', '1 apple is {b} g', '150')],
    why='Scale 2: 1 lemon is 50 g. Scale 1: 1 apple is as heavy as 3 lemons: 3 × 50 = 150 g.'),
- I('start', 2, 'You have a 5 ℓ jug and an 8 ℓ jug with no marks. Both jugs are empty.', figure={'type': 'l2_jugs', 'jugs': [{'cap': 5}, {'cap': 8}], 'width_mm': 40}, figside=True,
-   parts=[P('a', 'Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug now holds {b} ℓ.', '3'),
-          P('b', 'Empty the 5 ℓ jug. Pour the 3 ℓ in. Fill the 8 ℓ jug again. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug now holds {b} ℓ.', '6')],
-   why='(a) 8 - 5 = 3 ℓ is left in the 8 ℓ jug. (b) The 5 ℓ jug holds 3 ℓ, so it needs 2 ℓ more. The 8 ℓ jug gives 2 ℓ: 8 - 2 = 6 ℓ is left.'),
+ I('start', 2, 'A 5 ℓ jug and an 8 ℓ jug have no marks. Both are empty.', figure={'type': 'l2_jugs', 'jugs': [{'cap': 5}, {'cap': 8}], 'width_mm': 40}, figside=True,
+   parts=[P('a', 'Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug holds {b} ℓ.', '3'),
+          P('b', 'Empty the 5 ℓ jug. Pour the 3 ℓ into it. It needs {b} ℓ more to be full.', '2'),
+          P('c', 'Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug holds {b} ℓ.', '6')],
+   why='(a) 8 - 5 = 3 ℓ is left in the 8 ℓ jug. (b) The 5 ℓ jug holds 3 ℓ. 5 - 3 = 2 ℓ more fill it. (c) The 8 ℓ jug gives 2 ℓ: 8 - 2 = 6 ℓ is left.'),
  I('start', 2, 'Circle the better unit.', partsrow=True, parts=[
    P('a', 'The mass of an egg   {circ:g|kg}', 'g'), P('b', 'The length of a pencil   {circ:cm|m}', 'cm'), P('c', 'The mass of a school bag   {circ:g|kg}', 'kg'), P('d', 'Water in a jug   {circ:ℓ|cm}', 'ℓ')],
    why='An egg is light: grams. A pencil is short: centimetres. A school bag is heavy: kilograms. Water in a jug is measured in litres.'),
