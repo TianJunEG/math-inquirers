@@ -75,3 +75,8 @@ Other builds: `python3 taster/gen.py && python3 taster/pdf.py` (run in `taster/`
 ## Open items
 
 See the "To-do list" section in the Math Inquirers: All Documents doc.
+
+## Update 23 Oct 2026 (appended; the text above describes only the original Primary 1 holiday program)
+The repository now also holds: `term/` (new term lessons, Level 1 first), `school/`, `extension/` and `levels/` (other workbooks), `p2/`-`p6/` (higher-level holiday sources), `portal/` (parent portal, Cloudflare Functions in `portal/functions`, Supabase SQL in `portal/supabase`, tests in `portal/tests`), `website/` (all pages; build with `cd website && python3 lp_build.py` then `python3 website/build_site.py`, private-preview by default; `--public` and `--with-portal` only on the owner's go-ahead), `practice/`, `tutor/`, `docs/` (decisions in `docs/terms/owner_decisions.md`, schedule in `docs/schedule/`, audits in `docs/audit_final/`, open owner questions in `docs/audit_final/open_owner_items.md`).
+Private copyrighted reference notes (`docs/sasmo/private_*`, `docs/books/private_*`) are git-ignored and must never be committed. Third-party font licences (SIL OFL) are in `website/licenses/`. Payments: manual PayNow during the beta; Stripe is built but not live.
+

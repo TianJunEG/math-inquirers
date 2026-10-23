@@ -1,0 +1,14 @@
+Third-party notices for the Math Inquirers website
+
+Fonts (self-hosted woff2 files in /fonts/, served from this site; no request goes to Google)
+  Fredoka     - SIL Open Font License 1.1 - licence text: /licenses/OFL-Fredoka.txt
+                Copyright Google Inc. / Fredoka Project Authors. Packaged via @fontsource/fredoka 5.2.8.
+  Nunito Sans - SIL Open Font License 1.1 - licence text: /licenses/OFL-NunitoSans.txt
+                Copyright 2016 The Nunito Sans Project Authors (https://github.com/Fonthausen/NunitoSans). Packaged via @fontsource/nunito-sans 5.2.7.
+  The licence texts above are copied verbatim from the LICENSE files shipped inside those npm packages (fonts/node_modules/@fontsource/*/LICENSE).
+  The fonts are redistributed unmodified (Latin subset woff2 as produced by Fontsource).
+
+TODO (owner/lawyer, not yet done):
+  - Confirm the exact "Copyright" line for Fredoka against upstream (github.com/hafontia-zz/Fredoka-Font); the package LICENSE names only "Google Inc.".
+  - Supabase JS client (MIT) used by the parent portal: attach its MIT notice if the portal is shipped.
+  - Mi the dolphin and other artwork: provenance/licence not recorded in the repo.

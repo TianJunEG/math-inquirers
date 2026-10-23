@@ -143,3 +143,13 @@ Owner: printing and postage are included in the program fees (the S$250 beta fee
 ## 23 Oct 2026: PRINTED workbooks are black and white; SOFT COPIES stay colour (owner decision)
 Owner: the printable (physical, posted) workbooks must be black and white; soft copies (PDF downloads, designed PDFs) stay in colour. Applies to the six holiday workbooks and the Level 1 term books (workbook, answer key, home pack), and to later levels. Printed on cheaper stock (80 to 100 gsm), double-sided. Implementation: `print/make_bw_print.py` turns the colour print PDFs into 1-bit 600 dpi B&W print PDFs in `outputs/print/bw/` (same pages, binding, blank backs, gutter); colour is mapped to patterns by hue family so nothing depends on colour alone; `print/check_bw.py` measures non-grey pixels and light tints. Colour print PDFs stay in `outputs/print/` for soft copies. See `docs/printing/README_bw.md`. Quote request and print spec updated.
 
+## 23 Oct 2026: corrections to stale entries above (appended after the final audit; nothing above was edited)
+- Lesson length: 90 minutes is current. The earlier "75 MINUTES" entry and the 75-minute 2027 slot grid are superseded (see docs/schedule/term_2027_t1_availability.md section 7).
+- Payments: the gateway is Stripe, not HitPay (the "originally HitPay" wording is history). Stripe code is written but the migration is NOT applied to the live database; manual PayNow stays in use for the beta.
+- The "Open" list still names items that are resolved lower down: Term 1 vs holiday course (resolved: Term 1 is new lessons) and discount size (resolved: 5%). Still open: term price (prices are on hold) and the content of the 10th lesson.
+- Lessons per term: 10 (40 per level a year). Phrases about "9 of 10" or "20 written lessons" are stale.
+- End of term: "Mi's Challenge Quest" (no scores, no word test) replaces the 20-minute end-of-term check; the tutor keeps private notes only.
+- Extension workbooks are a separate paid add-on and extend the holiday program (10 units following the 10 holiday lessons, new questions); earlier "original problems only" wording is superseded.
+- Printed workbooks are black and white; soft copies are colour. The beta workbook is POSTED; website/terms.html must match.
+- Address retention is 30 days (not 90). Prices are on hold: no price may appear on any page.
+

@@ -64,5 +64,6 @@ grant execute on function public.service_begin_payment(uuid, uuid)              
 grant execute on function public.service_attach_session(uuid, text)                     to service_role;
 grant execute on function public.service_mark_paid(uuid, text, text, int, text)         to service_role;
 grant execute on function public.service_mark_session_failed(uuid, text)                to service_role;
+grant execute on function public.expire_unpaid_reservations(int)                        to service_role;
 -- _require_parent(), gen_code(), forbid_mutation(), handle_new_user() are internal: not granted to any API role.
 -- service_role bypasses RLS but its table privileges are untouched by the revokes above.

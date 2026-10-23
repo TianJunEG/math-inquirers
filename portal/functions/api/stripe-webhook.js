@@ -43,7 +43,9 @@ export async function onRequestPost({ request, env }) {
       result = await supabaseRpc(env, 'service_mark_paid', { p_payment: paymentId, p_session_id: session.id ? String(session.id) : null, p_payment_intent: pi, p_amount_cents: cents, p_currency: String(session.currency || '') });
     }
   } catch (e) { console.error(String(e)); return json({ error: 'try again' }, 502); }   // non-2xx so Stripe retries
-  if (['amount_mismatch', 'currency_mismatch', 'paid_enrolment_cancelled', 'not_found'].includes(result)) console.error(`stripe-webhook: NEEDS OWNER ATTENTION ${result} payment=${paymentId} event=${event.id}`);
+  // duplicate_payment = already paid (manual PayNow or another PaymentIntent): refund the extra one by hand. paid_enrolment_cancelled = late payment after cancel/expiry.
+  // not_payable:* = event for a refunded/failed payment (never flips back to paid).
+  if (['amount_mismatch', 'currency_mismatch', 'paid_enrolment_cancelled', 'duplicate_payment', 'not_found'].includes(result) || String(result).startsWith('not_payable:')) console.error(`stripe-webhook: NEEDS OWNER ATTENTION ${result} payment=${paymentId} event=${event.id}`);
   return json({ ok: true, result });
 }
 

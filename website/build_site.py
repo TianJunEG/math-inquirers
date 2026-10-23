@@ -107,6 +107,8 @@ def main():
         shutil.copy(os.path.join(HERE, 'shop', f), os.path.join(DIST, 'shop', f))
     # product names only (no prices, no notes): the portal admin 'Shop interest' tab reads this to show names instead of ids
     json.dump({p['id']: p['name'] for p in _SHOP_PRODUCTS}, open(os.path.join(DIST, 'shop-products.json'), 'w', encoding='utf-8'), indent=1)
+    # third-party licence notices (SIL OFL texts for the shipped fonts): must travel with the font files
+    shutil.copytree(os.path.join(HERE, 'licenses'), os.path.join(DIST, 'licenses'))
     # syllabus map is a self-contained full document: copy it, do not wrap it
     os.makedirs(os.path.join(DIST, 'syllabus'), exist_ok=True)
     shutil.copy(os.path.join(HERE, 'syllabus', 'index.html'), os.path.join(DIST, 'syllabus', 'index.html'))

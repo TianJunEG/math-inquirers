@@ -1,6 +1,8 @@
 # 2027 Term 1: Jasmine's availability and usable slots (draft, to confirm)
 
-**UPDATE 23 Oct 2026: term lessons are 90 minutes (owner decision). Sections 1-6 below are the superseded 75-minute history; the current slots are in section 7.**
+**UPDATE 23 Oct 2026: term lessons are 90 minutes (owner decision). Sections 2-6 below are SUPERSEDED 75-minute history, kept only for the record: their slot ids (T27-FRI-1630, T27-SAT-1800, T27-SUN-1630 etc.) are NOT on the site or the form. The CURRENT slots are in section 7 and match `website/data/interest_slots.json`. Section 1 (the grid) is still valid except the Sunday correction below.**
+
+**CORRECTION 23 Oct 2026 (owner_decisions.md): Sunday church plus lunch is blocked from 10:30am to about 2:00pm, so the Sunday 12:30-2:00pm row below is no longer "unknown": it is blocked. MOE 2027 Term 1 (4 Jan-12 Mar, March holidays 13-21 Mar) comes from secondary sources only: verify on moe.gov.sg before fixing dates.**
 
 Written 23 Oct 2026 from Jasmine's weekly availability grid (yellow = free, red = blocked, white = taken) and her 2027 term-time slot grid (`docs/terms/owner_decisions.md`, entry "2027 term-time slot grid"). Everything marked "assumed" is for her to confirm. Singapore time. One tutor, all lessons online.
 
@@ -17,14 +19,14 @@ Written 23 Oct 2026 from Jasmine's weekly availability grid (yellow = free, red 
 
 CONFIRMED by the owner (23 Oct 2026): Sat 12:30-2:00pm is her lunch time, so it is not free (treated as blocked; no class there). Assumed (please confirm): Sun 12:30-2:00pm is unspecified, so treated as unknown / not free. Sun church is taken as 10:30am-12:30pm ("about"). Mon and Wed show no free time. A "free" window is only free if nothing is taken inside it.
 
-## 2. Rules used
+## 2. Rules used  [SUPERSEDED 75-minute content, do not use; see section 7]
 - 75-minute slots from the owner's 2027 term-time grid. Weekday: 3:00-4:15, 4:30-5:45, 6:00-7:15, 7:45-9:00pm. Weekend: 9:00-10:15, 10:30-11:45am, 12:00-1:15, 1:30-2:45, 3:00-4:15, 4:30-5:45, 6:00-7:15, 7:45-9:00pm.
 - At least 15 minutes between consecutive classes, including her private lessons (both before and after the slot).
 - No class past 9:00pm.
 - School-age children are at school on weekdays, so weekday daytime is not usable even though Friday morning is free. Weekday slots start at 3:00pm or later.
 - A slot is usable only if it sits wholly inside a free window and keeps the 15-minute buffer before the next taken commitment. Computed by script (all 4 weekday x 5 days and 8 weekend x 2 days slots checked).
 
-## 3. Usable slots (9)
+## 3. Usable slots (9)  [SUPERSEDED 75-minute content, do not use; see section 7]
 | Slot | Time | Buffer to next commitment | Suggested levels | Notes |
 |---|---|---|---|---|
 | T27-FRI-1500 | Fri 3:00-4:15pm | 105 min (6:00pm lesson) | 1, 2 | weekday after school; young children |
@@ -44,7 +46,7 @@ Levels and ages: 1 = 6-8, 2 = 7-9, 3 = 8-10, 4 = 9-11, 5 = 10-12, 6 = 11-13. You
 - All 7:45pm slots (Thu, Sat, Sun): ends at 9:00pm exactly, late for school-age children; kept for Levels 5-6 only.
 - Excluded because of overlap: every Mon and Wed slot; Tue after 4:15pm; Thu 3:00 and 4:30pm; Fri 6:00pm and 7:45pm; Sat before 5:00pm (taken, Sat lunch 12:30-2:00pm, or orchestra), Sat 4:30pm (orchestra until 5:00pm); Sun before 3:30pm (taken, church, or unknown) and Sun 3:00pm (taken until 3:30pm).
 
-## 4. DEFAULT draft assignment (default chosen, for Jasmine to change)
+## 4. DEFAULT draft assignment (default chosen, for Jasmine to change)  [SUPERSEDED 75-minute content, do not use; see section 7]
 Term lessons are one lesson a week (10 per term), so one weekly slot per level.
 
 | Level | Default weekly slot |
@@ -58,7 +60,7 @@ Term lessons are one lesson a week (10 per term), so one weekly slot per level.
 
 Spare slots for second groups: Sat 6:00-7:15pm (Levels 3-5), Thu 7:45-9:00pm (Levels 5-6), Sun 7:45-9:00pm (Levels 5-6, flagged). There is no spare early slot for a second Level 1-2 group: Fri 4:30-5:45pm (Levels 2-3) is Level 3's default and could be shared if needed.
 
-## 5. Open questions
+## 5. Open questions  [SUPERSEDED 75-minute content, do not use; see section 7]
 1. 75-minute slots vs 90-minute lessons: pending the owner's decision (shorten term lessons to 75 minutes, or use 90-minute lessons in modified slots).
 2. 2027 Term 1 start date and the school term calendar (so first lesson and 10 weeks can be placed; also public holidays).
 3. Confirm the assumptions in section 1: the unspecified Sun 12:30-2:00pm gap (treated not free; Sat 12:30-2:00pm is confirmed as lunch), church end time, and whether Mon and Wed truly have no free time.
@@ -66,7 +68,7 @@ Spare slots for second groups: Sat 6:00-7:15pm (Levels 3-5), Thu 7:45-9:00pm (Le
 5. Is a zero-buffer Tue 3:00pm worth considering, or can the 4:15 private lesson move?
 6. Do the default assignments suit her, especially Level 6 on Sat 7:45pm?
 
-## 6. Website
+## 6. Website  [SUPERSEDED 75-minute content, do not use; see section 7]
 The usable slots are placeholders in `website/data/interest_slots.json` (ids `T27-...`), labelled "2027 term time" and "Not open yet", under each suggested level. No 2027 dates or prices are shown. The 2026 holiday placeholders are unchanged.
 
 ## 7. CURRENT: 90-minute re-derivation (supersedes sections 2-6)

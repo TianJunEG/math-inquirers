@@ -179,3 +179,15 @@ test('webhook: DB outage -> 502 so Stripe retries; missing env -> 500', async ()
   assert.equal((await webhook({ request: hook(raw, fresh(raw)), env: ENV })).status, 502);
   assert.equal((await webhook({ request: hook('{}', 'aa'), env: {} })).status, 500);
 });
+
+test('webhook: duplicate_payment, not_payable and late payments are answered 200 (no Stripe retry loop) and logged for the owner', async () => {
+  const errs = []; const realErr = console.error; console.error = (...a) => errs.push(a.join(' '));
+  try {
+    for (const res of ['duplicate_payment', 'not_payable:refunded', 'paid_enrolment_cancelled']) {
+      rpcReplies = { service_mark_paid: res }; mockFetch();
+      const raw = evt(); const r = await webhook({ request: hook(raw, fresh(raw)), env: ENV });
+      assert.equal(r.status, 200); assert.equal((await r.json()).result, res);
+    }
+  } finally { console.error = realErr; }
+  assert.equal(errs.filter((e) => e.includes('NEEDS OWNER ATTENTION')).length, 3);
+});

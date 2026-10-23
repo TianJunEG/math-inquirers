@@ -174,7 +174,30 @@ do $$ declare e uuid; p uuid; begin
   assert (select status from public.enrolments where id = e) = 'confirmed';
   assert (select provider_payment_ref from public.payments where id = p) = 'pi_1';
   assert public.service_mark_session_failed(p, 'cs_test_2') = 'ignored', 'paid payment is never reset';
+  assert public.service_mark_paid(p, 'cs_test_3', 'pi_OTHER', 25000, 'sgd') = 'duplicate_payment', 'a second, different Stripe payment is flagged';
+  assert public.service_mark_paid(p, 'cs_test_2', 'pi_1', 25000, 'sgd') = 'already_paid', 'same PaymentIntent again is just a repeat';
+  assert (select provider_payment_ref from public.payments where id = p) = 'pi_1', 'duplicate changes nothing';
+  -- refunded can never flip back to paid
+  update public.payments set status = 'refunded' where id = p;
+  assert public.service_mark_paid(p, 'cs_test_2', 'pi_1', 25000, 'sgd') = 'not_payable:refunded';
+  assert (select status from public.payments where id = p) = 'refunded';
+  update public.payments set status = 'paid' where id = p;
   assert public.service_mark_paid(gen_random_uuid(), 'x', 'y', 25000, 'sgd') = 'not_found';
+  -- paid by hand (PayNow), then Stripe also pays: flagged, nothing changed
+  select pay.id into p from public.payments pay where pay.method = 'paynow_manual' and pay.status = 'paid' limit 1;
+  assert p is not null;
+  assert public.service_mark_paid(p, 'cs_dup', 'pi_dup', (select amount_cents from public.payments where id = p), 'sgd') = 'duplicate_payment';
+  assert (select method from public.payments where id = p) = 'paynow_manual', 'duplicate changes nothing';
+  -- unpaid reservations expire: fresh ones stay, old ones are cancelled and their payment too; a late payment is then flagged
+  select pay.id into p from public.payments pay join public.enrolments en on en.id = pay.enrolment_id
+   where pay.status = 'pending' and en.status = 'pending_payment' limit 1;
+  assert p is not null;
+  assert public.expire_unpaid_reservations(7) = 0, 'fresh reservations are not expired';
+  update public.enrolments set created_at = now() - interval '8 days' where id = (select enrolment_id from public.payments where id = p);
+  assert public.expire_unpaid_reservations(7) >= 1;
+  assert (select status from public.payments where id = p) = 'cancelled';
+  assert (select e.status from public.enrolments e join public.payments y on y.enrolment_id = e.id where y.id = p) = 'cancelled';
+  assert public.service_mark_paid(p, 'cs_late', 'pi_late', (select amount_cents from public.payments where id = p), 'sgd') = 'paid_enrolment_cancelled', 'late payment is recorded and flagged';
 end $$;
 reset role;
 set role authenticated; select set_config('request.jwt.claim.sub','bbbbbbbb-0000-0000-0000-000000000002',false);

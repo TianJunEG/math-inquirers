@@ -11,3 +11,15 @@ hp/designed/*.html
 # private copyrighted contest reference notes (never commit)
 docs/sasmo/private_*
 docs/books/private_*
+
+# build junk and local secrets (added after the 23 Oct 2026 repo-hygiene audit; website/dist and term/l1/out stay tracked until the owner decides)
+*.whl
+*.egg-info/
+*.pyc
+.env
+.env.*
+.dev.vars
+*.log
+.DS_Store
+.wrangler/
+docs/audit/scratch_check_*/

@@ -280,3 +280,16 @@ test('admin: resend emails the buyer (link not echoed) or returns the link when 
   assert.equal((await handleAdminDelivery({ request: adm({ action: 'revoke', id: 'bad' }), env: ENV }, opts)).status, 400);
   assert.equal((await (await handleAdminDelivery({ request: adm({ action: 'revoke', id: db.rows[0].id }), env: ENV }, opts)).json()).revoked, true);
 });
+
+test('shop amount check: stub passes while prices are on hold; once priced, wrong amount/currency/unpriced items are held, not granted', async () => {
+  const items = [{ product_id: 'a', format: 'pdf' }, { product_id: 'b', format: 'pdf' }];
+  assert.deepEqual(D.checkShopAmount({ amount_total: 1, currency: 'sgd' }, items), { ok: true, checked: false }, 'empty price table: no check (documented stub)');
+  assert.equal(Object.keys(D.SHOP_PRICES_CENTS).length, 0, 'prices are on hold: the table ships empty');
+  const prices = { a: 1000, b: 500 };
+  assert.equal(D.checkShopAmount({ amount_total: 1500, currency: 'sgd' }, items, prices).ok, true);
+  assert.equal(D.checkShopAmount({ amount_total: 1, currency: 'sgd' }, items, prices).reason, 'amount_mismatch');
+  assert.equal(D.checkShopAmount({ amount_total: 1500, currency: 'usd' }, items, prices).reason, 'currency_mismatch');
+  assert.equal(D.checkShopAmount({ amount_total: 1000, currency: 'sgd' }, [items[0], { product_id: 'c', format: 'pdf' }], prices).reason, 'unpriced_item');
+  const r = await D.maybeHandleShopOrder({ env: ENV, type: 'checkout.session.completed', session: { id: 'cs_test_aaaaaaaaaaaa', payment_status: 'paid', amount_total: 1, currency: 'sgd', metadata: { mi_items: 'a:pdf' } } }, { prices: { a: 1000 } });
+  const j = await r.json(); assert.equal(r.status, 200); assert.equal(j.shop, false); assert.equal(j.result, 'amount_mismatch');
+});

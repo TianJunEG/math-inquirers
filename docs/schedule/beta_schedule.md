@@ -56,3 +56,10 @@ Thursday 24 Dec holds Levels 1-4 then Level 6 at 6:15pm (105 minutes after Level
 - Assumed school holidays from mid-November (weekday daytime slots for children). Confirm against the MOE 2026 calendar.
 - Beta fee confirmed: S$25 a lesson, S$250 for all 10 lessons. Still to write before taking money: the terms and refund page and the consent wording for recording and children's work.
 - Tutors: the schedule assumes one tutor (you) for all 12 weekly sessions, about 18 teaching hours a week, plus a daily lunch hour.
+
+## Corrections and open decisions (appended 23 Oct 2026, after the final audit)
+- OPEN OWNER DECISION: the reserved groups R1, R2 and R3 (Thu 9:00, 10:45 and 1:15) sit at the same times as Levels 1, 2 and 3 on Thu 24 Dec (their published last lesson). If a reserve is released, its week-5 lesson needs its own time (Wed 23 Dec 9:00, 10:45 and 1:15 are free, but this is not decided) . Also R4 (Sun 2:00pm) starts exactly when the owner's church and lunch block ends; a 15-minute buffer (2:15pm) is suggested. Tracked in `docs/audit_final/open_owner_items.md`.
+- Sign-up page wording fixed: "Lessons start in the week of Mon 23 Nov (first lessons Tue 24 to Fri 27 Nov)". No group meets on Monday 23 Nov.
+- School holidays: MOE 2026 Term 4 ends 20 Nov and the year-end holidays run 21 Nov-31 Dec (from search results quoting the MOE press release of 30 Jul 2025; the MOE page itself was not opened). Verify on moe.gov.sg.
+- "20 usable weekly sessions" means 12 published plus 8 reserved weekly sessions.
+- The database stores only the weekly pattern, not the Christmas exceptions: generate reminders or invites from `website/data/beta_schedule.json` lessons[], never from the database pattern.

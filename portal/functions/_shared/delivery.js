@@ -110,12 +110,29 @@ export async function grantEntitlements(env, session, items, opts = {}) {
   return { order_id: orderId, granted, missing, emailed };
 }
 
+// ---------- shop amount check (STUB: prices are on hold, owner decision 23 Oct 2026) ----------
+// SHOP_PRICES_CENTS maps product_id -> expected price in SGD cents. While it is EMPTY nothing is checked (documented gap, audit F6): safety then rests on
+// the owner creating Stripe Payment Links with the right price and metadata. Once prices are decided, fill it in (or load from a price table); then a paid
+// session whose amount_total differs from the sum of its listed products, or whose currency is not SGD, is NOT granted and is logged for the owner.
+// An item with no price entry is not checked individually; if ANY listed item has a price, ALL listed items must have one (otherwise the sum is unknowable and the order is held).
+export const SHOP_PRICES_CENTS = {};
+export function checkShopAmount(session, items, prices = SHOP_PRICES_CENTS) {
+  const priced = (items || []).filter(i => Object.prototype.hasOwnProperty.call(prices, i.product_id));
+  if (!priced.length) return { ok: true, checked: false };
+  if (priced.length !== items.length) return { ok: false, checked: true, reason: 'unpriced_item' };
+  if (String(session.currency || '').toUpperCase() !== 'SGD') return { ok: false, checked: true, reason: 'currency_mismatch' };
+  const expected = items.reduce((s, i) => s + prices[i.product_id], 0);
+  return session.amount_total === expected ? { ok: true, checked: true } : { ok: false, checked: true, reason: 'amount_mismatch', expected };
+}
+
 // Called from the Stripe webhook (one marked line there). Returns a Response when the event was a shop order, else null so the webhook carries on.
 export async function maybeHandleShopOrder({ env, type, session }, opts = {}) {
   const items = itemsFromSession(session);
   if (!items.length) return null;
   if (!['checkout.session.completed', 'checkout.session.async_payment_succeeded'].includes(type)) return json({ ok: true, ignored: 'shop: ' + type });
   if (session.payment_status !== 'paid') return json({ ok: true, ignored: 'shop: awaiting payment' });
+  const amt = checkShopAmount(session, items, opts.prices);
+  if (!amt.ok) { console.error(`delivery: NEEDS OWNER ATTENTION shop ${amt.reason} session=${session.id} amount_total=${session.amount_total} expected=${amt.expected}`); return json({ ok: true, shop: false, result: amt.reason }); }   // 200: a retry would not fix it
   try {
     const r = await grantEntitlements(env, session, items, opts);
     return json({ ok: true, shop: true, order: r.order_id, granted: r.granted.length, missing: r.missing, emailed: r.emailed });
