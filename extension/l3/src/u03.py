@@ -76,7 +76,7 @@ u.S(3, 'Mei buys 6 packs of 8 stickers. Ben buys 7 packs of 7 stickers.', parts=
 u.T('Aisha says the 8 times table from 8 up to 96. How many of the numbers she says have an ODD tens digit? {b}', A('5'),
     hint='Write the table first. Then look at the tens digits.',
     why='The numbers are 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88 and 96. The tens digits are 0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 8, 9. The odd ones are 1, 3, 5, 7, 9: so 16, 32, 56, 72 and 96. That is 5 numbers.',
-    space={'rows': ['The 8 times table:', '', 'Odd tens digit:']})
+    space={'rows': ['The 8 times table:', '', 'Odd tens digit:', '']})
 u.T('The row numbers and column numbers are all from 6 to 9. Find the empty cells A to D. You can write in the heading cells to help you.', parts=[
     P('a', 'A = {b}', A('54')), P('b', 'B = {b}', A('56')), P('c', 'C = {b}', A('56')), P('d', 'D = {b}', A('64'))],
     partsrow=True,

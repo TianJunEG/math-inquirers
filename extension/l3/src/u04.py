@@ -46,11 +46,11 @@ u.S(1, 'Siti has 64 beads. Wei has 29 beads. Each child gets 12 more beads.', pa
     why='Before: 64 - 29 = 35. After: Siti has 76 and Wei has 41, and 76 - 41 = 35. The gap stays the same because both children get the same number of beads.')
 u.S(2, 'Ravi and Aisha have 140 coins in all. Ravi has 3 times as many coins as Aisha.', parts=[
     P('a', 'Aisha has {b} coins.', A('35')), P('b', 'Ravi has {b} coins.', A('105'))],
-    space={'rows': ['Draw your model:', 'Working:']},
+    space={'rows': ['Draw your model:', 'Working:', '']},
     why='There are 4 equal boxes in all. 140 ÷ 4 = 35, so 1 box is 35. Aisha has 1 box: 35 coins. Ravi has 3 boxes: 3 × 35 = 105 coins.')
 u.S(2, 'Kumar and Wei have 90 stickers in all. Kumar has 18 more stickers than Wei.', parts=[
     P('a', 'Wei has {b} stickers.', A('36')), P('b', 'Kumar has {b} stickers.', A('54'))],
-    space={'rows': ['Draw your model:', 'Working:']},
+    space={'rows': ['Draw your model:', 'Working:', '']},
     why='Take away the extra 18 from the total: 90 - 18 = 72. Share the 72 into 2 equal parts: 36 each. Wei has 36. Kumar has 36 + 18 = 54. Check: 36 + 54 = 90.')
 u.S(2, "Ravi's ribbon is 78 cm long. Mei's ribbon is 52 cm long. Ravi cuts a piece off his ribbon and gives it to Mei. Now both ribbons are the same length. How long is the piece? {b} cm", A('13'),
     space={'rows': ['Draw your model:', 'Working:']},

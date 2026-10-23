@@ -81,7 +81,7 @@ u.S(3, 'A stamp costs 65¢. Kumar buys 8 stamps.', parts=[
 # ---------------- Think harder
 u.T('A pool has 4 swimming lessons in a row. Each lesson is 45 minutes. There is a 10 minute break between lessons. The first lesson starts at 07:30. When does the 4th lesson end? {bw}', A('11:00'),
     hint='Write the start and the end of each lesson.',
-    space={'rows': ['Lesson 1:', 'Lesson 2:', '']},
+    space={'rows': ['Lesson 1:', 'Lesson 2:', 'Lesson 3:', '']},
     why='Lesson 1: 07:30 to 08:15. Break. Lesson 2: 08:25 to 09:10. Break. Lesson 3: 09:20 to 10:05. Break. Lesson 4: 10:15 to 11:00. The 4th lesson ends at 11:00.')
 u.T('Ali starts his homework at 18:35 and stops at 20:10. He has a 15 minute break. How long does he work? {b} h {b} min', A(['1', '20'], '1 h 20 min', list=True),
     hint='Find the whole time first. Then take away the break.',

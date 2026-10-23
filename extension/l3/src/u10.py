@@ -85,9 +85,9 @@ u.S(3, 'Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 
 
 # ---------------- Think harder
 u.T('A grid is made of 2 rows of 3 small squares. Count the rectangles of every size, squares included. {b}', A('18'),
-    figure={'type': 'l3_grid', 'rows': [[None, None, None], [None, None, None]], 'cw': 70, 'ch': 60, 'width_mm': 50}, figside=True,
+    figure={'type': 'l3_grid', 'rows': [[None, None, None], [None, None, None]], 'cw': 70, 'ch': 60, 'width_mm': 46}, figside=True,
     hint='Count 1 by 1 first. Then 1 by 2. Make a table.',
-    space={'table': {'cols': ['size', 'how many'], 'rows': 4}},
+    space={'rows': ['1 by 1:  1 by 2:  1 by 3:', '2 by 1:  2 by 2:  2 by 3:']},
     why='1 by 1: 6. 1 by 2 (2 wide, 1 tall): 2 in each row, so 4. 1 by 3: 2. 2 by 1 (1 wide, 2 tall): 3. 2 by 2: 2. 2 by 3: 1. In all: 6 + 4 + 2 + 3 + 2 + 1 = 18.')
 u.T('One of Ben, Aisha and Wei broke a cup. They each say 1 thing: Ben “Wei did it”, Aisha “Not me”, Wei “Ben is lying”. Exactly 1 of them tells the truth. Who broke the cup?   {circ:Ben|Aisha|Wei}', A('Aisha'),
     hint='Pick one child. Are exactly 1 of the 3 sayings true?',
@@ -124,7 +124,7 @@ u.G('Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE
 
 # ---------------- Check yourself
 u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.', A('15'),
-    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 10, 84, minor=5, unit_label='pencils', h=190), figright=True,
+    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 10, 70, minor=5, unit_label='pencils', h=190), figright=True,
     why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
 u.C('In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.', A('8'),
     why='3 + 1 + 4 = 8. Do not forget Ben.')

@@ -629,18 +629,15 @@
     ],
     "cw": 70,
     "ch": 60,
-    "width_mm": 50
+    "width_mm": 46
    },
    "figside": true,
    "hint": "Count 1 by 1 first. Then 1 by 2. Make a table.",
    "space": {
-    "table": {
-     "cols": [
-      "size",
-      "how many"
-     ],
-     "rows": 4
-    }
+    "rows": [
+     "1 by 1:  1 by 2:  1 by 3:",
+     "2 by 1:  2 by 2:  2 by 3:"
+    ]
    }
   },
   {
@@ -890,7 +887,7 @@
     ],
     "max": 40,
     "step": 10,
-    "width_mm": 84,
+    "width_mm": 70,
     "minor": 5,
     "unit_label": "pencils",
     "h": 190

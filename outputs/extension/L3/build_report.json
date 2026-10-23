@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 1.0236064624098866,
-   "over": true,
-   "excess_mm": 6.1,
+   "fill": 0.9773912203913491,
+   "over": false,
+   "excess_mm": -5.8,
    "edition": "soft"
   },
   {
@@ -1053,9 +1053,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 1.0236064624098866,
-   "over": true,
-   "excess_mm": 6.1,
+   "fill": 0.9773912203913491,
+   "over": false,
+   "excess_mm": -5.8,
    "edition": "print"
   },
   {
@@ -2047,7 +2047,6 @@
   }
  ],
  "problems": [
-  "soft page 3 (Welcome): content overflows the page (natural height minus body 6.1 mm)",
   "soft page 24 (Unit 3 \u00b7 Think harder): natural fill 0.85 < 0.85",
   "soft page 29 (Unit 4 \u00b7 Start here 2): natural fill 0.80 < 0.85",
   "soft page 56 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 1.6 mm)",
@@ -2055,7 +2054,6 @@
   "soft page 71 (Unit 10 \u00b7 Start here 2): content overflows the page (natural height minus body 0.9 mm)",
   "soft page 73 (Unit 10 \u00b7 Think harder): content overflows the page (natural height minus body 12.1 mm)",
   "soft page 75 (Unit 10 \u00b7 Check yourself): content overflows the page (natural height minus body 25.2 mm)",
-  "print page 3 (Welcome): content overflows the page (natural height minus body 6.1 mm)",
   "print page 10 (Unit 1 \u00b7 Think harder): content overflows the page (natural height minus body 1.5 mm)",
   "print page 29 (Unit 4 \u00b7 Start here 2): natural fill 0.80 < 0.85",
   "print page 56 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 1.6 mm)",
