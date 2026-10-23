@@ -58,7 +58,7 @@ def digit_grid(fig):
         s = ''
         for c in range(fig['cols']):
             t = fig['counts'].get(f'{r},{c}', '')
-            s += '.' if t == '[]' else t
+            s += '.' if t == '[]' else ('?' if t == '' else t)
         rows.append(s)
     return rows
 
@@ -100,9 +100,13 @@ ORACLES = {
     'c3': lambda e: next(d for d in (1, 2, 3, 4) if d not in _digits_row(e['m'])),
     'c4': lambda e: sum(1 for r in range(e['n']) for c in range(e['n'])),
     'c5': lambda e: sum(1 for row in [[(r + c) % e['n'] for c in range(e['n'])] for r in range(e['n'])] for x in row if x == 0),
-    'g2': lambda e: sum(1 for row in [[(r + c) % e['n'] + 1 for c in range(e['n'])] for r in range(e['n'])] for x in row if x == 3),
+    'g2': lambda e: sum(1 for row in [[(r + c) % e['n'] + 1 for c in range(e['n'])] for r in range(e['n'])] for x in row if x in (1, 2, 3)),
 }
 BASE_ENV = {'c3': {'m': 2}, 'c4': {'n': 3}, 'c5': {'n': 3}, 'g2': {'n': 5}}
+
+
+def mid_all():
+    return fit(latin(3, '123'), {(1, 1): '2'})
 
 
 def run(d):
@@ -147,7 +151,7 @@ def run(d):
     eq(len(L3), 12, 'there are 12 grids in all')
     # ---------------------------------------------------------------- mini-lesson
     g = sg(panels(sl['s-m1']['blocks'])[0]); eq(is_latin(g, 'CST'), (True, True), 's-m1 grid follows the rule'); eq(tuple(tuple(r) for r in g) in set(L3), True, 's-m1 is one of the 12'); shown['m1'] = tuple(g)
-    mr = sg(panels(sl['s-m2']['blocks'])[0]); tb = [[x] for x in [b for b in sl['s-m2']['blocks'][0]['cols'][1] if b.get('t') == 'list'][0]['items']]
+    mr = sg(panels(sl['s-m2']['blocks'])[0]); tb = [[x.split(': ')[1]] for x in [b for b in sl['s-m2']['blocks'][0]['cols'][1] if b.get('t') == 'list'][0]['items']]
     eq(mr, ['T?S'], 's-m2 row'); eq(sorted(set('CST') - set(mr[0])), ['C'], 's-m2 row: circle is missing')
     eq(tb, [['?'], ['circle'], ['triangle']], 's-m2 column'); eq(sorted({'circle', 'square', 'triangle'} - {r[0] for r in tb}), ['square'], 's-m2 column: square is missing')
     g, labs = shape_grid(panels(sl['s-m3']['blocks'])[0]); fits = fit(L3, known_of(g))
@@ -165,8 +169,8 @@ def run(d):
     eq(q['parts'][1]['val'], 'column', 'S3 reason is the column'); eq(q['parts'][1]['choices'][0], 'The column has a circle and a square.', 'S3 first option is the true one'); shown['S3'] = tuple(g)
     q = T['S2']; rows = [sg(f)[0] for f in q['visuals']]; eq(rows, ['STC', 'CCT', 'TCS'], 'S2 rows'); eq([len(set(r)) == 3 for r in rows], [True, False, True], 'S2 one of each'); eq(q['val'], ['True', 'False', 'True'], 'S2 val')
     eq(len(q['tf']), 3, 'S2 three statements')
-    q = T['S4']; rows = ['CST', 'STC', 'CST']; eq(is_latin(rows, 'CST'), (True, False), 'S4 rows fine, a column repeats'); eq([rows[r][0] for r in range(3)], ['C', 'S', 'C'], 'S4 first column has two circles')
-    eq('Row 1 is circle, square, triangle. Row 2 is square, triangle, circle. Row 3 is circle, square, triangle.' in q['text'], True, 'S4 text lists those rows'); eq(q['val'], ['No'], 'S4 val')
+    q = T['S4']; rows = sg(q['visual']); eq(rows, ['CST', 'TCS', 'CTS'], 'S4 rows'); eq(is_latin(rows, 'CST'), (True, False), 'S4 rows fine, a column repeats'); eq([rows[r][0] for r in range(3)], ['C', 'T', 'C'], 'S4 first column has two circles')
+    eq(q['val'], ['No'], 'S4 val'); eq('Every row has one of each' in q['text'], True, 'S4 text says every row has one of each'); shown['S4'] = tuple(rows)
     q = T['S5']; eq((sum(1 for L in L3 for r in range(3) for c in range(3) if L[r][c] == 'C') // 12, q['val']), (3, [3]), 'S5 every grid has 3 circles (counted over all 12 grids)')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes'); eq(len(d['tiers']['start']), 5, 'five Start here questions')
     # ---------------------------------------------------------------- Think harder
@@ -190,11 +194,13 @@ def run(d):
     shown['G2'] = tuple(g)
     q = T['G3']; k = 5
     sq = [[(r + c) % k + 1 for c in range(k)] for r in range(k)]
-    eq(([sum(1 for row in sq for x in row if x == 3), sum(1 for row in sq for x in row if x in (4, 5))]), q['val'], 'G3 on a 5 by 5 grid built by shifting rows')
+    eq(([len(sq) * len(sq[0]), sum(1 for row in sq for x in row if x in (4, 5))]), q['val'], 'G3 on a 5 by 5 grid built by shifting rows: boxes in all, boxes that hold a 4 or a 5')
     eq(all(sorted(row) == list(range(1, k + 1)) for row in sq) and all(sorted(sq[r][c] for r in range(k)) == list(range(1, k + 1)) for c in range(k)), True, 'G3 the 5 by 5 grid exists')
     # ---------------------------------------------------------------- Investigation
-    inv = d['tiers']['investigation']; eq(inv['first'].startswith('Row 1: 1 2 3. Row 2: 2 3 1.'), True, 'I1 first step text')
-    first = fit(latin(3, '123'), {(0, 0): '1', (0, 1): '2', (0, 2): '3', (1, 0): '2', (1, 1): '3', (1, 2): '1'}); eq(len(first), 1, 'I1 first step has one answer'); eq(first[0][2], ('3', '1', '2'), 'I1 last row is 3 1 2')
+    inv = d['tiers']['investigation']; eq(inv['first'].startswith('Row 1 is 1 3 2. Row 2 is 3 2 1. Write row 3:'), True, 'I1 first step text'); eq('The first one is 132 321 213.' in inv['text'], True, 'I1 text gives the first grid, the one the first step builds')
+    first = fit(latin(3, '123'), {(0, 0): '1', (0, 1): '3', (0, 2): '2', (1, 0): '3', (1, 1): '2', (1, 2): '1'}); eq(len(first), 1, 'I1 first step has one answer'); eq(first[0][2], ('2', '1', '3'), 'I1 last row is 2 1 3'); eq('row 3 is 2, 1, 3' in inv['answer'], True, 'I1 answer gives the first step')
+    eq(first[0][1][1], '2', 'I1 the first step grid already has a 2 in the middle (it is one of the 4)')
+    eq(all(((s_[0][0], s_[1][1], s_[2][2]) == ('2',) * 3) != ((s_[0][2], s_[1][1], s_[2][0]) == ('2',) * 3) for s_ in mid_all()), True, 'I1 look-for: the three 2s run along exactly one of the two diagonals in every grid')
     mid = fit(latin(3, '123'), {(1, 1): '2'}); eq(len(mid), 4, 'I1 exactly 4 grids with a 2 in the middle'); eq(inv['val'], ['4'], 'I1 val')
     for s_ in mid: eq(' '.join(s_[0]) + ' / ' + ' '.join(s_[1]) + ' / ' + ' '.join(s_[2]) in inv['answer'], True, 'I1 answer lists ' + str(s_))
     # ---------------------------------------------------------------- talk
@@ -222,7 +228,7 @@ def run(d):
     items = {i['id']: i for i in d['online_practice']['items']}
     eq(items['c1']['answer'], NAME[next(iter(set('CST') - set('CT')))], 'c1'); eq(sg(items['c1']['fig']), ['CT?'], 'c1 fig')
     eq(items['c2']['answer'], 'triangle', 'c2'); eq(sorted(set('CST') - set('SC')), ['T'], 'c2 row S ? C'); eq(sg(items['c2']['fig']), ['S?C'], 'c2 fig')
-    eq(items['c3']['answer'], ORACLES['c3'](BASE_ENV['c3']), 'c3'); eq(items['c4']['answer'], 9, 'c4'); eq(items['c5']['answer'], 3, 'c5'); eq(items['g2']['answer'], 5, 'g2')
+    eq(items['c3']['answer'], ORACLES['c3'](BASE_ENV['c3']), 'c3'); eq(items['c4']['answer'], 9, 'c4'); eq(items['c5']['answer'], 3, 'c5'); eq(items['g2']['answer'], 15, 'g2')
     for m in (1, 2, 3, 4):                                  # the derived digits shown in c3 are the other three, in order
         env = {'m': m}
         for k, ex in items['c3']['tpl']['derive'].items(): env[k] = eval(re.sub(r'\bm\b', str(m), ex))
@@ -233,6 +239,18 @@ def run(d):
     g1 = items['g1']; g = digit_grid(g1['fig']); fits = fit(L4, known_of(g, '?.abc')); eq(len(fits), 1, 'g1 one grid'); pos = [(r, c) for r, row in enumerate(g) for c, ch in enumerate(row) if ch == 'a'][0]
     eq((int(fits[0][pos[0]][pos[1]]), g1['answer']), (1, 1), 'g1 box a is 1')
     for cid, env in BASE_ENV.items(): eq(ORACLES[cid](env), items[cid]['answer'], cid + ' oracle at the authored numbers')
+    for nn in items['g2']['tpl']['vars']['n']: eq(ORACLES['g2']({'n': nn}), 3 * nn, f'g2 variant n={nn}: three digits per row')
+    eq(max(items['c4']['tpl']['vars']['n']) <= 5, True, 'c4 variants stay within 5 by 5 (no picture is shown)')
+    st = ' '.join(g1['steps']); eq((g[2][0], sorted(g[2][1:]), '4' in g[1], sorted([g[0][0], g[2][0]])), ('?', ['1', '3', '4'][0:0] or sorted(g[2][1:]), True, ['3', '?']), 'g1 picture: row 3 is ? 3 4 1, row 2 ends in 4')
+    eq((fits[0][2][0], fits[0][0][0], fits[0][2][0] == '2'), ('2', '3', True), 'g1 step 1: row 3 has 3, 4, 1 so its first box is 2'); eq({fits[0][r][0] for r in (0, 2)}, {'3', '2'}, 'g1 step 3: column 1 has 3 and 2 (so a is 1 or 4)')
+    eq(('a cannot be 4' in st.replace('box a cannot be 4', 'a cannot be 4'), g[1][3]), (True, '4'), 'g1 step 2: the row of a has a 4')
+    op = [x['text'] for x in d['script']['segments'][0]['lines'] if x['k'] in ('SAY', 'DO')]; ot = ' '.join(op)
+    eq(('Nobody holds paper up to the camera' in ot, 'any voice that is not muted' in ot, 'Do not use children' in ot, 'by first name as they arrive' in ot), (True, True, True, False), 'opening carries the Term 1 recording and camera wording')
+    eq(d['script']['segments'][0]['lines'][-3]['k'], 'NOTE', 'opening ends with notes')
+    mt = sl['s-m4']; eq(sum(1 for c in range(3) if len({sg(panels(mt['blocks'])[0])[r][c] for r in range(3)}) < 3), 2, 's-m4: two columns repeat, so the question is plural')
+    eq(any(l.get('text') == 'Which columns have two of the same?' for sg_ in d['script']['segments'] for l in sg_['lines']), True, 's-m4 question is plural')
+    eq(sl['s-menu']['blocks'][0]['rows'][1][1].startswith('Row right, column right?'), True, 'menu slide is the guide M1')
+    eq(d['parent']['term_line'], 'Your child is learning to give a reason for each step.', 'term line fits the lesson')
     for it in items.values():
         for s_ in it.get('slips', []):
             if it['type'] in ('number', 'choice'): eq(it['answer'] in s_['a'], False, it['id'] + ' slip is wrong')

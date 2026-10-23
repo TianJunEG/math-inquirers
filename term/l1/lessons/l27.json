@@ -197,7 +197,7 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the tiles: one of each in every row, then in every column, then how many grids start with the same top row. The mini-lesson has 11: the rule, the missing one in a row and in a column, using both, and checking a finished grid. The workbook has 32 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the tiles: one of each in every row, then in every column, then how many grids start with the same top row. The mini-lesson has 11: the rule, the missing one in a row and in a column, using both, and checking a finished grid. The workbook has 32 minutes: Start here takes a middle child about 15 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
   "skip_order": [
    "Start with: shorten Explore round 3 (how many grids) to a quick look and carry it to the Mini-lesson",
    "Then: cut the second item of the Your turn slide (s-m5)",
@@ -741,9 +741,9 @@
        {
         "t": "list",
         "items": [
-         "?",
-         "circle",
-         "triangle"
+         "top box: ?",
+         "middle box: circle",
+         "bottom box: triangle"
         ],
         "ordered": false
        }
@@ -751,7 +751,7 @@
      ]
     }
    ],
-   "note": "Two quick worked examples. Along the row: triangle, ?, square, so the circle is missing. Down the column: ?, circle, triangle, so the square is missing. Ask each question first; children answer aloud or touch the tile. Then say: a column is just a row turned to stand up. Say the sentence frame: the row has a triangle and a square, so the box must be a circle. Children say the frame with you. The slide never shows the answers."
+   "note": "Two quick worked examples. Along the row: triangle, ?, square, so the circle is missing. Down the column: a mark at the top, then a circle, then a triangle, so the square is missing. Ask each question first; children answer aloud or touch the tile. Then say: a column is just a row turned to stand up. Say the sentence frame: the row has a triangle and a square, so the box must be a circle. Children say the frame with you. The slide never shows the answers."
   },
   {
    "id": "s-m3",
@@ -760,69 +760,82 @@
    "title": "Use the row and the column",
    "blocks": [
     {
-     "t": "visual",
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "triangle",
-       "colour": 2
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "square",
-       "colour": 1
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "circle",
-       "colour": 0
-      },
-      {
-       "shape": "triangle",
-       "colour": 2
-      }
-     ],
-     "cols": 3,
-     "cell": 100,
-     "hide": [
-      4,
-      5,
-      7
-     ],
-     "labels": [
-      "",
-      "",
-      "",
-      "",
-      "a",
-      "",
-      "",
-      "",
-      ""
-     ],
-     "size": "s"
-    },
-    {
-     "t": "chip",
-     "text": "Look at box a. Its row has a square. Its column has a circle."
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "triangle",
+          "colour": 2
+         },
+         {
+          "shape": "circle",
+          "colour": 0
+         },
+         {
+          "shape": "square",
+          "colour": 1
+         },
+         {
+          "shape": "square",
+          "colour": 1
+         },
+         {
+          "shape": "circle",
+          "colour": 0
+         },
+         {
+          "shape": "circle",
+          "colour": 0
+         },
+         {
+          "shape": "circle",
+          "colour": 0
+         },
+         {
+          "shape": "circle",
+          "colour": 0
+         },
+         {
+          "shape": "triangle",
+          "colour": 2
+         }
+        ],
+        "cols": 3,
+        "cell": 100,
+        "hide": [
+         4,
+         5,
+         7
+        ],
+        "labels": [
+         "",
+         "",
+         "",
+         "",
+         "a",
+         "",
+         "",
+         "",
+         ""
+        ],
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "BOX a IS THE MIDDLE BOX",
+        "items": [
+         "Its row has a square.",
+         "Its column has a circle."
+        ]
+       }
+      ]
+     ]
     }
    ],
    "note": "The worked elimination. Box a is in the middle of the grid. Its row has a square, so box a is not a square. Its column has a circle, so box a is not a circle. It cannot be a circle or a square, so it must be a triangle. Say the move slowly: if it is not this and not that, it must be the other one. Ask: could it be a square (no, the row has a square); a circle (no, the column has a circle); so what is left (triangle). Children test with their tiles on mat 1 if they set up the same grid. The slide does not show the answer."
@@ -883,7 +896,7 @@
      "text": "Check every row. Check every column. Is it correct?"
     }
    ],
-   "note": "The check move: a grid is not finished until every row and every column has one of each. Rows: circle, square, triangle (yes); square, triangle, circle (yes); circle, triangle, square (yes). Columns: circle, square, circle (no: two circles); square, triangle, triangle (no); triangle, circle, square (yes). So the grid is not correct. Ask: do all the rows follow the rule (yes), so are we done (no, we must check the columns too). Children say which column has a repeat. Never check only the rows."
+   "note": "The check move: a grid is not finished until every row and every column has one of each. Rows: circle, square, triangle (yes); square, triangle, circle (yes); circle, triangle, square (yes). Columns: circle, square, circle (no: two circles); square, triangle, triangle (no); triangle, circle, square (yes). So the grid is not correct. Ask: do all the rows follow the rule (yes), so are we done (no, we must check the columns too). Children say which columns have a repeat (the first and the second). Never check only the rows."
   },
   {
    "id": "s-m5",
@@ -981,13 +994,9 @@
        }
       ]
      ]
-    },
-    {
-     "t": "chip",
-     "text": "Write both answers on your paper."
     }
    ],
-   "note": "Two quick items on the children's own paper: a row with a square and a circle (the triangle is missing), and a finished grid to check (it is correct: every row and every column has one of each). Walk the cameras and wait 10 seconds before helping. Nobody holds paper up. The next slide shows the answers and children tick their own work. Answers: triangle; Yes."
+   "note": "Two quick items, answered on the children's own paper (say so aloud): a row with a square and a circle (the triangle is missing), and a finished grid to check (it is correct: every row and every column has one of each). Walk the cameras and wait 10 seconds before helping. Nobody holds paper up. The next slide shows the answers and children tick their own work. Answers: triangle; Yes."
   },
   {
    "id": "s-m5a",
@@ -1068,19 +1077,38 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 3 to 5. Take your time."
+     "text": "Questions 3 and 4. Take your time."
     },
     {
      "t": "qs",
      "ids": [
       "S3",
-      "S4",
+      "S4"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 3 and 4 aloud, then show the next slide for question 5. Question 3: the bottom left box, and the reason that tells us (the column has the clue). Question 4: a grid in a picture, every row correct, is it correct (the columns). Children may use their tiles to check. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2b",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 5. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
       "S5"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 3 to 5 aloud. Question 3: the bottom left box, and the reason that tells us (the column has the clue). Question 4: a grid read aloud in words, rows correct but is it correct (the columns). Question 5: how many circles in a whole 3 by 3 grid. Children may use their tiles to check. Wait 10 seconds before helping."
+   "note": "Question 5: how many circles in a whole 3 by 3 grid. Children may use their tiles to check. Wait 10 seconds before helping. Keep this slide up while children finish page 2."
   },
   {
    "id": "s-ws2ans",
@@ -1309,7 +1337,7 @@
       ],
       [
        "Is it always true?",
-       "Two circles can never be next to each other. Test it."
+       "Row right, column right? Test it with the same row three times."
       ],
       [
        "Make a puzzle",
@@ -1345,25 +1373,29 @@
       "text": "@rec"
      },
      {
-      "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
-      "s": 12
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your grid tiles and mat on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your grid tiles and mat on the table."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
       "text": "Today we play with a grid. A grid is a square of boxes. We fill it so that every box has a reason."
      },
      {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1574,7 +1606,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say what they have made and may tilt the camera to the table. The answer to round three is 2 grids: circle square triangle then square triangle circle then triangle circle square; or circle square triangle then triangle circle square then square triangle circle. Do not say the rule before the children do. Do not confirm the number 2 until the next slide."
+      "text": "Main room only; children say what they have made. Tilting the camera to the table is allowed; a face need not be in view; nothing is held up to the camera. The answer to round three is 2 grids: circle square triangle then square triangle circle then triangle circle square; or circle square triangle then triangle circle square then square triangle circle. Do not say the rule before the children do. Do not confirm the number 2 until the next slide."
      }
     ]
    },
@@ -1675,7 +1707,7 @@
      },
      {
       "k": "ASK",
-      "text": "Which column has two of the same?",
+      "text": "Which columns have two of the same?",
       "resp": 20
      },
      {
@@ -1773,7 +1805,15 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 3: look at the grid. Circle the shape for the bottom left box. Then circle the reason that tells us. Question 4: a child fills a grid. Row 1 is circle, square, triangle. Row 2 is square, triangle, circle. Row 3 is circle, square, triangle. Every row has one of each. Is the grid correct? Circle Yes or No. Question 5: every row of a 3 by 3 grid has one circle, and every column has one circle. How many circles are in the whole grid?"
+      "text": "Page 2. Question 3: look at the grid. Circle the shape for the bottom left box. Then circle the reason that tells us. Question 4: look at the grid in the picture. Every row has one of each. Is the grid correct? Circle Yes or No."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2b"
+     },
+     {
+      "k": "READ",
+      "text": "Question 5: every row of a 3 by 3 grid has one circle, and every column has one circle. How many circles are in the whole grid?"
      },
      {
       "k": "WORK",
@@ -1786,7 +1826,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 3: a triangle, because the column has a circle and a square. Question 4: No, the first column has two circles. Question 5: 3 circles."
+      "text": "Question 3: a triangle, because the column has a circle and a square. Question 4: look at the grid in the picture. Every row has one of each. Is the grid correct? Circle Yes or No. Question 5: every row of a 3 by 3 grid has one circle, and every column has one circle. How many circles are in the whole grid?"
      },
      {
       "k": "SLIDE",
@@ -1816,7 +1856,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder has two clues, how many shapes could go in a box and what keeps a correct grid correct. Go further has Four by Four, a digit grid, and a bigger grid (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 16 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder has two clues, how many shapes could go in a box and what keeps a correct grid correct. Go further has Four by Four, a digit grid, and a bigger grid (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 15 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -2315,7 +2355,7 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "A child fills a grid. Row 1 is circle, square, triangle. Row 2 is square, triangle, circle. Row 3 is circle, square, triangle. Every row has one of each. Is the grid correct?",
+    "text": "A child fills the grid in the picture. Every row has one of each. Is the grid correct?",
     "parts": [
      {
       "l": "",
@@ -2332,13 +2372,56 @@
     "val": [
      "No"
     ],
-    "hint": "Check the columns too. Read down the first column. Use your tiles to build the grid.",
-    "solution": "The first column is circle, square, circle: two circles. So the grid is not correct, even though every row has one of each.",
+    "hint": "Check the columns too. Run a finger down the first column. Use your tiles to build the grid.",
+    "solution": "The first column is circle, triangle, circle: two circles. So the grid is not correct, even though every row has one of each.",
     "mistakes": [
      "Saying Yes after checking only the rows.",
      "Not building the grid to look at the columns."
     ],
-    "mins": 3
+    "mins": 3,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "circle",
+       "colour": 0
+      },
+      {
+       "shape": "square",
+       "colour": 1
+      },
+      {
+       "shape": "triangle",
+       "colour": 2
+      },
+      {
+       "shape": "triangle",
+       "colour": 2
+      },
+      {
+       "shape": "circle",
+       "colour": 0
+      },
+      {
+       "shape": "square",
+       "colour": 1
+      },
+      {
+       "shape": "circle",
+       "colour": 0
+      },
+      {
+       "shape": "triangle",
+       "colour": 2
+      },
+      {
+       "shape": "square",
+       "colour": 1
+      }
+     ],
+     "cols": 3,
+     "cell": 72
+    }
    },
    {
     "id": "S5",
@@ -2588,7 +2671,7 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Four by Four, with fewer clues. Only six digits are given. Every row and every column has 1, 2, 3 and 4 once each. Which digit goes in each box marked a, b and c?",
+    "text": "Four by Four, with fewer clues. Only six digits are given. Every row and every column has 1, 2, 3 and 4 once each. Which digit goes in each box marked a, b and c? The other empty boxes are not asked.",
     "parts": [
      {
       "l": "",
@@ -2622,20 +2705,20 @@
      "counts": {
       "0,0": "2",
       "0,1": "1",
-      "0,2": "?",
+      "0,2": "",
       "0,3": "a",
-      "1,0": "?",
+      "1,0": "",
       "1,1": "4",
-      "1,2": "?",
-      "1,3": "?",
+      "1,2": "",
+      "1,3": "",
       "2,0": "b",
       "2,1": "3",
       "2,2": "1",
-      "2,3": "?",
-      "3,0": "?",
+      "2,3": "",
+      "3,0": "",
       "3,1": "c",
       "3,2": "3",
-      "3,3": "?"
+      "3,3": ""
      },
      "cell": 70,
      "size": "m"
@@ -2649,9 +2732,9 @@
     "parts": [
      {
       "l": "a",
-      "text": "How many 3s are in the grid? ____",
-      "ans": "5",
-      "val": 5
+      "text": "How many boxes are in the grid? ____",
+      "ans": "25",
+      "val": 25
      },
      {
       "l": "b",
@@ -2660,16 +2743,16 @@
       "val": 10
      }
     ],
-    "answer": "5; 10",
+    "answer": "25; 10",
     "val": [
-     5,
+     25,
      10
     ],
-    "hint": "Each row has one 3. How many rows are there?",
-    "solution": "There are 5 rows and each row has one 3, so 5 threes. There are 5 fours and 5 fives, so 10 boxes hold a 4 or a 5.",
+    "hint": "A row has 5 boxes. How many rows are there? For part b: each row has one 4 and one 5.",
+    "solution": "There are 5 rows of 5 boxes: 5, 10, 15, 20, 25, so 25 boxes. Each row has one 4 and one 5, so 2 boxes in each row: 5 rows of 2 make 10 boxes that hold a 4 or a 5.",
     "mistakes": [
-     "Writing 1 or 3 for the number of 3s.",
-     "Writing 4 or 5 for the boxes that hold a 4 or a 5."
+     "Writing 5 for the boxes in all (one row).",
+     "Writing 5 or 2 for the boxes that hold a 4 or a 5."
     ],
     "mins": 4
    }
@@ -2679,18 +2762,18 @@
    "page": 5,
    "tier": "investigation",
    "title": "Grid builder",
-   "first": "Row 1: 1 2 3. Row 2: 2 3 1. Fill in row 3: [] [] []",
-   "text": "Put a 2 in the middle of a 3 by 3 grid. Every row and column has 1, 2 and 3 once. Write each grid you can make. How many are there?",
+   "first": "Row 1 is 1 3 2. Row 2 is 3 2 1. Write row 3: ____  ____  ____",
+   "text": "Put a 2 in the middle of a 3 by 3 grid. Every row and column has 1, 2 and 3 once. Write each grid you can make on its own line, row by row. The first one is 132 321 213. A turned grid is a different grid. How many are there?",
    "lines": 4,
    "draw": false,
-   "answer": "First: row 3 is 3, 1, 2. With a 2 in the middle there are exactly 4 grids: 1 3 2 / 3 2 1 / 2 1 3; 2 1 3 / 3 2 1 / 1 3 2; 2 3 1 / 1 2 3 / 3 1 2; and 3 1 2 / 1 2 3 / 2 3 1. Each is the same grid as another one turned upside down or swapped left to right, so a child who finds 2 can often find the other 2 by a swap.",
+   "answer": "First: row 3 is 2, 1, 3. With a 2 in the middle there are exactly 4 grids: 1 3 2 / 3 2 1 / 2 1 3; 2 1 3 / 3 2 1 / 1 3 2; 2 3 1 / 1 2 3 / 3 1 2; and 3 1 2 / 1 2 3 / 2 3 1. The task says a turned grid is a different grid (any box different), so a grid turned upside down or swapped left to right counts again, and the answer is 4. A child who finds 2 can often find the other 2 by turning one upside down or swapping it left to right.",
    "val": [
     "4"
    ],
-   "look_for": "A child who tries a corner, checks each row and column, and then swaps to get a new grid; a child who notices that a 2 must also be in the middle of the top and the bottom row of the corners; a child who says why there cannot be a fifth. Credit any clear reason. Do not mark a child down for stopping at one or two grids.",
+   "look_for": "A child who tries a corner, checks each row and each column, and then swaps or turns a grid to get a new one; a child who notices that the three 2s always run along one of the two diagonals (two choices) and that each choice gives two grids; a child who says why there cannot be a fifth. Credit any clear reason. Do not mark a child down for stopping at one or two grids.",
    "mistakes": [
     "Repeating a digit in a column.",
-    "Counting the same grid twice, turned round."
+    "Writing the same grid twice."
    ],
    "mins": 8
   }
@@ -2804,7 +2887,7 @@
   {
    "id": "H3",
    "tier": "think",
-   "text": "A 3 by 3 grid uses 1, 2 and 3. Row 1 is 1, 2, 3. Row 2 starts with 2. Write rows 2 and 3. Row 2: ___ ___ ___ Row 3: ___ ___ ___",
+   "text": "A 3 by 3 grid uses 1, 2 and 3. Draw a 3 by 3 grid of boxes. Row 1 is 1, 2, 3. Row 2 starts with 2. Write rows 2 and 3. Row 2: ___ ___ ___ Row 3: ___ ___ ___",
    "answer": "row 2: 2 3 1; row 3: 3 1 2",
    "val": [
     [
@@ -2823,7 +2906,7 @@
   {
    "id": "H4",
    "tier": "go",
-   "text": "A 4 by 4 grid uses 1, 2, 3 and 4. Row 1 is 1, 2, 3, 4. Row 2 is 2, 1, 4, 3. Row 3 starts with 3. What is the second box of row 3? ____",
+   "text": "A 4 by 4 grid uses 1, 2, 3 and 4. Draw a 4 by 4 grid of boxes. Row 1 is 1, 2, 3, 4. Row 2 is 2, 1, 4, 3. Row 3 starts with 3. What is the second box of row 3? ____",
    "answer": "4",
    "val": 4,
    "solution": "The second column already has 2 and 1, so the second box of row 3 is 3 or 4. Row 3 already has a 3 at the start, so the second box is 4."
@@ -3023,8 +3106,7 @@
       "n": [
        3,
        4,
-       5,
-       6
+       5
       ]
      },
      "derive": {
@@ -3344,9 +3426,9 @@
     "q": "Every row and every column has the digits 1, 2, 3 and 4 once. Which digit goes in box a?",
     "hint": "Look for a row with only one empty box. Fill it first.",
     "steps": [
-     "The last box in row 3 has a 4 above it in its column, so row 3 is 2, 3, 4, 1.",
-     "Now the first column has 3, a, 2 and the box below is not yet known.",
-     "The first column needs 1, so box a is 1."
+     "Row 3 has 3, 4 and 1, so its empty first box is 2.",
+     "Row 2 is a, ?, ?, 4. The row has a 4, so box a cannot be 4.",
+     "Column 1 has 3 and 2, so box a is 1 or 4. It is not 4, so box a is 1."
     ],
     "answer": 1,
     "easier": "t1",
@@ -3394,22 +3476,22 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "A 5 by 5 grid uses the digits 1, 2, 3, 4 and 5. Every row and every column has each digit once. How many 3s are in the grid?",
-    "hint": "Each row has one 3. Count the rows.",
+    "q": "This grid has 5 rows and 5 columns. It uses the digits 1 to 5. Every row and every column has each digit once. How many boxes hold a 1, a 2 or a 3?",
+    "hint": "Each row has one 1, one 2 and one 3. How many boxes is that in a row?",
     "steps": [
-     "Each row has one 3.",
+     "Each row has one 1, one 2 and one 3: 3 boxes.",
      "There are 5 rows.",
-     "So there are 5 threes."
+     "5 rows of 3 boxes make 15 boxes."
     ],
-    "answer": 5,
+    "answer": 15,
     "easier": "c5",
     "slips": [
      {
       "a": [
-       1,
-       25
+       3,
+       5
       ],
-      "say": "Each row has one 3. How many rows are there?"
+      "say": "That is only one row, or the number of rows. Each row has 3 boxes that hold a 1, a 2 or a 3. Count all the rows."
      }
     ],
     "tpl": {
@@ -3422,13 +3504,16 @@
        9
       ]
      },
-     "q": "A {n} by {n} grid uses the digits 1 to {n}. Every row and every column has each digit once. How many 3s are in the grid?",
-     "answer": "n",
-     "hint": "Each row has one 3. Count the rows.",
+     "derive": {
+      "t": "3*n"
+     },
+     "q": "This grid has {n} rows and {n} columns. It uses the digits 1 to {n}. Every row and every column has each digit once. How many boxes hold a 1, a 2 or a 3?",
+     "answer": "t",
+     "hint": "Each row has one 1, one 2 and one 3. How many boxes is that in a row?",
      "steps": [
-      "Each row has one 3.",
+      "Each row has one 1, one 2 and one 3: 3 boxes.",
       "There are {n} rows.",
-      "So there are {n} threes."
+      "{n} rows of 3 boxes make {t} boxes."
      ]
     }
    },
@@ -3490,7 +3575,7 @@
    "one of each: every shape once, none twice, none missing"
   ],
   "try_home": [
-   "Grid game: put 9 small things of 3 kinds (buttons, coins, pasta) on a 3 by 3 grid you draw. Every row and every column has one of each.",
+   "Grid game: use mat 1 from your kit page, or draw a 3 by 3 grid. Put 9 small things of 3 kinds (buttons, coins, pasta) on it. Every row and every column has one of each.",
    "Cover and find: cover two boxes of a finished grid. Ask your child what is hidden and how they know.",
    "Ask: how do you know? Which one told you, the row or the column?"
   ],
@@ -3500,13 +3585,13 @@
    "Why can it not be a circle?"
   ],
   "when_stuck": "Let your child use the tiles and wait 10 seconds before helping. Asking \"what is in the row?\" works better than giving the shape. Please do not teach a rule such as always start in a corner: the reason for each box is the lesson. If the look-back page says \"I am still stuck\", photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Make a Table. Online practice: your tutor will share the link.",
+  "next": "Next lesson: Make a Table. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
   "quote": "Look along the row. Look down the column. If it is not this and not that, it must be the other one.",
   "report_line": "Your child is learning to use clues to work out what must go in an empty box. This week: filling grids so every row and every column has one of each.",
-  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "term_line": "Your child is learning to give a reason for each step.",
   "next_materials": [
    "Your Term 3 book (Book 6): tear out the strip page along the dashed line, then a grown-up cuts out the 14 paper strips (no matches or toothpicks)",
-   "Keep the grid tiles in their envelope",
+   "The grid tiles are not needed again: keep them for puzzles at home",
    "A pencil, a rubber and paper"
   ]
  },
@@ -3520,10 +3605,10 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, with your own tiles. Check: S1 circle, triangle, square; S2 true, false, true; S3 triangle and the column; S4 No; S5 3; T1 triangle, circle, triangle; T2 2 and 1; T3 true, false; G1 4, 1, 2, 1, 4, 3, 1; G2 3, 4, 2; G3 5 and 10.",
+  "Solve every workbook question yourself first, with your own tiles. Check: S1 circle, triangle, square; S2 true, false, true; S3 triangle and the column; S4 No; S5 3; T1 triangle, circle, triangle; T2 2 and 1; T3 true, false; G1 4, 1, 2, 1, 4, 3, 1; G2 3, 4, 2; G3 25 and 10.",
   "Tell parents a week before: the strip page for Lesson 8 of Term 3 is the next one to cut. For this lesson, tear out the grid-tile page (page 6) along the dashed line; a grown-up cuts out the 16 tiles and keeps them in an envelope; the two mats are not cut. With no printer: nine small things of three kinds on a 3 by 3 grid drawn on paper.",
   "Have the slides open. Have your own tiles to show on camera if you wish. Say the words row and column the same way every time, and keep the sentence frame: the row has ... and ..., so the box must be .... Do not teach a corner-first rule.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly without first names, then say the recording notice; do not use first names while the recording runs. Nobody holds paper up to the camera.",
   "Be plain with families: finding the missing one in a row is early Primary 1 work; solving a whole grid by elimination, the 4 by 4 grid of digits and what a bigger grid holds go beyond Primary 1 on purpose. This is a new topic with no Primary 1 school-paper evidence: the wording is unverified, and this is the lesson the tutor may swap or skip. Do not call the lesson MOE-aligned.",
   "Slides s-m3 and s-m5 keep the answers off the screen while you ask: the answer slide follows. Read every question, every option of E2 and the box labels aloud: the shapes on the slides are small."
  ],
@@ -3542,7 +3627,7 @@
    {
     "type": "grid_tiles",
     "title": "Kit page: grid tiles and mats",
-    "intro": "A grown-up cuts out all 16 tiles before the lesson: 4 circles, 4 squares, 4 triangles and 4 stars, each with a digit 1 to 4. The two mats are not cut. We use 9 tiles on mat 1 in class and all 16 tiles for Go further. Keep the tiles in an envelope."
+    "intro": "A grown-up cuts out all 16 tiles before the lesson: 4 circles, 4 squares, 4 triangles and 4 stars, each with a digit 1 to 4. The two mats are not cut. We use 9 tiles on mat 1 in class and all 16 tiles for Go further. No printer or no cutting? Use nine small things of three kinds on a 3 by 3 grid you draw. Keep the tiles in an envelope."
    }
   ]
  },
