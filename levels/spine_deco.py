@@ -12,7 +12,7 @@ Only the levels in LEVELS_ON are touched (Level 1 pilot; add '2'..'6' to roll ou
 import sys, os, re, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import spine_icons as si
-LEVELS_ON = {'1', '2', '3', '4', '5', '6'} if os.environ.get('SPINE_ALL') else {'1', '2', '3'}   # Level 1 pilot (stage A); SPINE_ALL=1 or edit this set to roll out
+LEVELS_ON = {'1', '2', '3', '4', '5', '6'} if os.environ.get('SPINE_ALL') else {'1', '2', '3', '4', '5', '6'}   # Level 1 pilot (stage A); SPINE_ALL=1 or edit this set to roll out
 ACC = {'1': '#1F7A6F', '2': '#2A7DC9', '3': '#3E8E41', '4': '#7B4FB5', '5': '#D9662B', '6': '#C2386B'}   # same as restyle.ACC
 NAVY, CREAM, YEL = '#1B2A49', '#FFF9EC', '#FFC93C'
 MARK = re.compile(r'<(div|span) data-spine=.*?<!--/spine-->\n?', re.S)
