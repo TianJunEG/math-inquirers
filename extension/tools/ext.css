@@ -134,10 +134,10 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 /* answers */
 .ans-unit{border-bottom:0.7mm solid var(--ink);margin:0 0 1mm;padding-bottom:1mm;font:700 17pt Fredoka,sans-serif;display:flex;justify-content:space-between}
 .ans-grp{font:800 11pt 'Nunito Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;border-bottom:0.35mm solid var(--ink);margin:1.8mm 0 0.6mm}
-.ae{display:flex;gap:3mm;padding:1.4mm 0;border-bottom:0.25mm solid var(--rule);break-inside:avoid;font:500 12pt/1.3 'Nunito Sans',sans-serif}
+.ae{display:flex;gap:3mm;padding:1.4mm 0;border-bottom:0.25mm solid var(--rule);break-inside:avoid;font:500 11.6pt/1.28 'Nunito Sans',sans-serif}
 .ae .k{flex:none;width:24mm;font:800 12pt Fredoka,sans-serif}
 .ae .k small{display:block;font:700 9.5pt 'Nunito Sans',sans-serif}
-.ae .ans{display:block;font-weight:700;font-size:12.5pt}
+.ae .ans{display:block;font-weight:700;font-size:12pt}
 .ae .a b{font-weight:800}
 .ae .why{display:block;font-weight:600}
 .ae .why:before{content:'Why: ';font-weight:800}
@@ -213,3 +213,6 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 
 /* audit 2: the intro line must not touch the tab of the worked example (tab sticks out 4.2 mm above its box) */
 .learn>.lead+.wex,.learn>.lead+.wexpair,.learn>.goal+.wex,.learn>.goal+.wexpair{margin-top:1.8mm}
+
+.rw.draw{height:calc(var(--line,9.5mm) * 1.7)}
+.rw.draw .rln{border:0.3mm dashed var(--rule);border-radius:1.2mm;height:100%}

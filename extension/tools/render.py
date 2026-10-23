@@ -66,6 +66,8 @@ def space_html(sp):
     for r in sp['rows']:
         if '{' in r:
             rows.append(f'<div class="rw free">{mk(r)}</div>')
+        elif r.startswith('Draw'):   # a drawing needs a blank strip, not one rule (audit 2, L5)
+            rows.append(f'<div class="rw draw"><span class="rl">{esc(r)}</span><span class="rln"></span></div>')
         else:
             rows.append(f'<div class="rw"><span class="rl">{esc(r)}</span><span class="rln"></span></div>')
     return '<div class="rows">' + ''.join(rows) + '</div>'

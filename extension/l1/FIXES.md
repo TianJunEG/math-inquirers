@@ -41,3 +41,28 @@ Done 23 Oct 2026. `extension/verify_all.sh 1` passed to the end (402 answers ind
 - No "make your own" item (rubric criteria 5 and 9): content decision, not a defect fix.
 - Learn it intro text overlaps the top of the "Worked example" tab on some pages (existing layout, 1 mm); not touched because the pages have no spare height.
 - Child trial and cold-read re-audit of the changed units still to do. Items now in Think harder are unchecked for difficulty by a child.
+
+
+---
+
+# Fixes after re-audit 2 (AUDIT_2.md), 23 Oct 2026
+
+Rebuilt (colour soft copy, native vector print, 1-bit Print_BW via print/make_bw_print.py). The books are now 98 pages (were 96): the answers are set larger and take 20 pages. `extension/verify_all.sh 1` ran to the end: ALL GATES PASSED (402 answers independently checked, duplicates, wording, build, B&W vector and 1-bit, check_bw, fill and overflow). Pages viewed as images: colour 2, 3, 4, 5, 6, 13, 20, 27, 34, 36, 37, 41, 48, 52, 55, 57, 66, 69, 71, 79, 80, 93, 98; print (1-bit) 3, 48, 55, 57, 79, 80. Not viewed: the other unit pages (only checked by the fill and overflow gates).
+
+## Done
+- **High 1 (page-2 placeholders, draft licence): NOT touched.** Still needs the owner. The only change on p2 is L2 below.
+- **M1 Self-study versus grown-ups.** Answer pages no longer say "for grown-ups" (header now "check your work"; contents line likewise). Divider (p79) is written to the child: try first, check here, read the Why, ask someone to read it with you, cover the answers with a folded sheet while you work (the envelope and "print on their own" sentence is gone, as it cannot be done with a bound copy). Welcome: child box says "look at the answers at the back. Read the Why if you got one wrong"; grown-up box says it is a self-study book and that a helper may read the Why with a slow reader. Every answer now starts with a bold "Answer:" line, then "Why:", and carries the page of its question (for example "page 57"). Answer type raised from 10.8 to 11.6 pt (answer line 12 pt). Check yourself "What next" says "with a helper" instead of "with a grown-up". Not done: there is no detachable or sealed answer section; the cover-with-paper advice is the only way to hide them.
+- **M2 Unit 8 Q8(b).** The question now reads "How many numbers are said in 4s but not in 3s?" and the key stays 4. The Why lists them (4, 8, 16, 20) and then checks 6 - 2 = 4. Re-verified: the item check counts the multiples of 4 up to 24 that are not multiples of 3 (4 of them), and my own brute force gives [12, 24] and [4, 8, 16, 20].
+- **M3 Figure text and Unit 8 density.** `figs.render` now raises every figure font so it prints at 10 pt or more (`MIN_PT`). Measured on the PDF: no text smaller than 10 pt remains in any figure; the only text under 10 pt is the page footer (9 pt) and the "Beyond Level 1" label (9 pt), which are not figures. The "Try" badge is 10 pt (was 8.5). Unit 8 Learn it: the two worked examples are now side by side (`pair`), figures a little larger, grid and loop labels 10 pt or more. The page still holds all of: two worked examples, the two boxes, Try. Unit 7 Learn it: the "Shape names" box is wider so names and "N sides" are 10 pt. Unit 4 Learn it: the growing-pattern table is 74 mm so it is not shrunk. Picture graphs with long row names (for example Wednesday) get a wider label column.
+- **Tab overlap** (pp. 6, 13, 20, 34, 41, 48, 69): fixed in `ext.css` (extra space between the intro line and the Worked example box), checked on pp. 6, 13, 20, 34, 41, 48. Not individually viewed: p69 has the same rule.
+- **L17** answer wording: done under M1 above.
+- **L2** soft-copy wording in the print edition: p2 says "This printed book is licensed to the buyer" in print (soft copy unchanged); p3 print has "The rulers in Unit 9 are printed at real size" in place of "Printing the soft copy? Print at 100 percent".
+- **L3** hints that gave the method rewritten (U1 TH3, U4 GF3, U6 TH1, U7 TH2, U10 TH3); wording lint clean. U6 TH1 hint now covers both sets (with and without 50c).
+- **L5** "Draw ..." answer rows (U5 Q10 and Q11, U9 TH1, U10 Q8) are now a dashed blank strip 16 mm tall instead of one rule. Not done: U3 Q7 drawing boxes (7.5 mm) are unchanged.
+- **L6** U7 TH3(a) reads "The other is:" (no "a octagon").
+- **L7** U3 Q5 Why says "stickers"; U5 Q7(b) key is "IN 13, OUT 13, OUT 19".
+- **L8** Contents lists Welcome (p3) and My pace plan (p5). The print file still has no text layer (the vector file keeps it).
+- **L9** U6 Learn it intro now says notes are $2, $5 and $10 and that every way is found by listing in a table.
+
+## Not changed (needs a decision or is content work)
+- High 1 (owner). L4 tier overlap (U1 TH1, U4 TH3, U10 TH3) and the missing "make your own" item (L10): content decisions. U3 Q7 drawing box size. A child trial and a printer proof are still needed.

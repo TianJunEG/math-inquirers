@@ -988,7 +988,7 @@
      }
     }
    ],
-   "hint": "Look for triangles made of more than one small one.",
+   "hint": "Look for triangles made of small ones joined.",
    "explanation": "There are 6 small triangles. The first 2 lines meet at the bottom and make a larger triangle with the top of the strip. The last 2 lines meet at the top and make another. 6 + 2 = 8 triangles."
   },
   {

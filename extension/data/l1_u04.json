@@ -767,7 +767,7 @@
      }
     }
    ],
-   "hint": "Which places does each pattern use? Make two lists.",
+   "hint": "Which places does each pattern use? Make 2 lists.",
    "explanation": "Stars are in even places. Cs are in places 3, 6, 9, 12, 15, 18, 21, 24. The places in both lists are 6, 12, 18 and 24."
   },
   {
