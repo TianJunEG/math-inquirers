@@ -210,6 +210,39 @@ with sync_playwright() as pw:
         expect(p3.locator('.msg.ok')).to_contain_text('Check your email')
     check('magic link request', magic)
 
+    def forgot():
+        p4 = new_ctx(b).new_page(); p4.goto(BASE + '/portal/')
+        p4.locator('#forgot-link').click(); expect(p4.get_by_role('heading', name='Parent portal')).to_be_visible()
+        assert p4.evaluate('document.activeElement.id') == 'email'
+        assert p4.locator('#password').count() == 0 and p4.locator('#forgot-link').count() == 0
+        p4.get_by_role('button', name='Email me a reset link').click(); expect(p4.locator('.msg.err')).to_contain_text('enter your email')
+        for em in ['two@example.com', 'nobody-at-all@example.com']:       # existing and unknown email: identical message
+            p4.fill('#email', em); p4.get_by_role('button', name='Email me a reset link').click()
+            expect(p4.locator('.msg.ok')).to_have_text('If that email has an account, a reset link is on its way. Check your inbox (and spam), then click the link on this device.')
+        r = p4.evaluate('window.__resets'); assert [x['email'] for x in r] == ['two@example.com', 'nobody-at-all@example.com'] and r[0]['redirectTo'] == BASE + '/portal/', r
+        p4.get_by_role('button', name='Back to log in').click(); expect(p4.locator('#password')).to_be_visible()
+    check('forgot password: request, neutral message for any email, redirectTo is the portal', forgot)
+    def recovery():
+        p5 = ctx.new_page(); p5.goto(BASE + '/portal/')
+        p5.evaluate("window.__recover('two@example.com')")
+        expect(p5.get_by_role('heading', name='Choose a new password')).to_be_focused()
+        p5.get_by_role('button', name='Save new password').click(); expect(p5.locator('.msg.err')).to_contain_text('at least 8'); assert p5.evaluate('document.activeElement.id') == 'newpw'
+        p5.fill('#newpw', 'short'); p5.fill('#newpw2', 'short'); p5.get_by_role('button', name='Save new password').click(); expect(p5.locator('.msg.err')).to_contain_text('at least 8')
+        p5.fill('#newpw', 'brandnewpass1'); p5.fill('#newpw2', 'brandnewpass2'); p5.get_by_role('button', name='Save new password').click()
+        expect(p5.locator('.msg.err')).to_contain_text('not the same'); assert p5.evaluate('document.activeElement.id') == 'newpw2'
+        assert p5.evaluate("document.querySelector('#newpw').type") == 'password'; p5.check('#showpw'); assert p5.evaluate("document.querySelector('#newpw').type + document.querySelector('#newpw2').type") == 'texttext'
+        assert p5.locator('#newpw').bounding_box()['height'] >= 40 and p5.locator('button[type=submit]').bounding_box()['height'] >= 44
+        p5.evaluate('window.__UPDATE_FAIL__=true'); p5.fill('#newpw2', 'brandnewpass1'); p5.get_by_role('button', name='Save new password').click()
+        expect(p5.locator('.msg.err')).to_contain_text('Something went wrong'); assert 'xyz' not in p5.locator('.msg.err').inner_text()
+        p5.evaluate('window.__UPDATE_FAIL__=false'); p5.get_by_role('button', name='Save new password').click()
+        expect(p5.get_by_role('heading', name='Hello, Fam Two')).to_be_visible(); expect(p5.locator('.msg.ok')).to_contain_text('password is changed')
+        assert [u['password'] for u in p5.evaluate('window.__mockDb().users') if u['email'] == 'two@example.com'] == ['brandnewpass1']
+    check('recovery screen: validation, show/hide, safe error, success signs in', recovery)
+    def recovery_stays():
+        p6 = ctx.new_page(); p6.goto(BASE + '/portal/'); p6.evaluate("window.__recover('two@example.com')")
+        p6.wait_for_timeout(300); expect(p6.get_by_role('heading', name='Choose a new password')).to_be_visible()   # later SIGNED_IN must not skip the screen
+    check('recovery screen is not replaced by the later SIGNED_IN event', recovery_stays)
+
     check('no JS errors', lambda: (not errors) or (_ for _ in ()).throw(AssertionError(errors)))
     check('no requests outside the page origin (CSP-friendly, no CDN)', lambda: (not external) or (_ for _ in ()).throw(AssertionError(external)))
     # desktop layout and dark mode

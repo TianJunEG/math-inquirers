@@ -93,10 +93,14 @@
       db.session = mk(u); save(); return Promise.resolve({ data: { session: db.session }, error: null }); },
     signInWithPassword: function (a) { var u = db.users.filter(function (x) { return x.email === a.email && x.password === a.password; })[0];
       if (!u) return Promise.resolve({ data: {}, error: err('Invalid login credentials') }); db.session = mk(u); save(); setTimeout(function () { fire('SIGNED_IN'); }, 0); return Promise.resolve({ data: { session: db.session }, error: null }); },
+    resetPasswordForEmail: function (email, o) { window.__resets = (window.__resets || []).concat([{ email: email, redirectTo: o && o.redirectTo }]); return Promise.resolve({ data: {}, error: null }); },
+    updateUser: function (a) { var u = me(); if (!u) return Promise.resolve({ data: {}, error: err('Auth session missing') }); if (window.__UPDATE_FAIL__) return Promise.resolve({ data: {}, error: err('weird internal db error xyz') }); u.password = a.password; save(); return Promise.resolve({ data: { user: { id: u.id } }, error: null }); },
+    __recover: function (email) { var u = db.users.filter(function (x) { return x.email === email; })[0]; db.session = mk(u); save(); fire('PASSWORD_RECOVERY'); setTimeout(function () { fire('SIGNED_IN'); }, 0); },
     signInWithOtp: function () { return Promise.resolve({ data: {}, error: null }); },
     signOut: function () { db.session = null; save(); setTimeout(function () { fire('SIGNED_OUT'); }, 0); return Promise.resolve({ error: null }); },
     onAuthStateChange: function (cb) { listeners.push(cb); return { data: { subscription: { unsubscribe: function () {} } } }; }
   };
+  window.__recover = auth.__recover;
   window.supabase = { createClient: function () { return {
     auth: auth, from: table,
     rpc: function (name, args) { try { var r = rpcs[name](args || {}); save(); return Promise.resolve({ data: r, error: null }); } catch (e) { return Promise.resolve({ data: null, error: e.message ? e : err(String(e)) }); } }
