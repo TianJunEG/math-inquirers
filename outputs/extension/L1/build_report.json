@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 1.0557897785787849,
-   "over": true,
-   "excess_mm": 14.3,
+   "fill": 0.9861772657054583,
+   "over": false,
+   "excess_mm": -3.6,
    "edition": "soft"
   },
   {
@@ -67,9 +67,9 @@
    "kind": "learn",
    "label": "Unit 1 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0078366374871266,
+   "fill": 1.0032022399588054,
    "over": true,
-   "excess_mm": 2,
+   "excess_mm": 0.8,
    "edition": "soft"
   },
   {
@@ -87,9 +87,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 1.207566297631308,
-   "over": true,
-   "excess_mm": 53.3,
+   "fill": 0.999678166838311,
+   "over": false,
+   "excess_mm": -0.1,
    "edition": "soft"
   },
   {
@@ -137,9 +137,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0038941812564366,
-   "over": true,
-   "excess_mm": 1,
+   "fill": 0.9992597837281153,
+   "over": false,
+   "excess_mm": -0.2,
    "edition": "soft"
   },
   {
@@ -207,9 +207,9 @@
    "kind": "learn",
    "label": "Unit 3 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0219168383110195,
+   "fill": 1.0188272399588054,
    "over": true,
-   "excess_mm": 5.6,
+   "excess_mm": 4.8,
    "edition": "soft"
   },
   {
@@ -347,9 +347,9 @@
    "kind": "learn",
    "label": "Unit 5 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9779383367662204,
+   "fill": 0.9748487384140062,
    "over": false,
-   "excess_mm": -5.7,
+   "excess_mm": -6.5,
    "edition": "soft"
   },
   {
@@ -417,9 +417,9 @@
    "kind": "learn",
    "label": "Unit 6 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9750418383110195,
+   "fill": 0.9704074407826982,
    "over": false,
-   "excess_mm": -6.4,
+   "excess_mm": -7.6,
    "edition": "soft"
   },
   {
@@ -487,9 +487,9 @@
    "kind": "learn",
    "label": "Unit 7 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0031056900102986,
-   "over": true,
-   "excess_mm": 0.8,
+   "fill": 0.9984712924819773,
+   "over": false,
+   "excess_mm": -0.4,
    "edition": "soft"
   },
   {
@@ -697,9 +697,9 @@
    "kind": "learn",
    "label": "Unit 10 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.017668640576725,
+   "fill": 1.0130342430484036,
    "over": true,
-   "excess_mm": 4.5,
+   "excess_mm": 3.3,
    "edition": "soft"
   },
   {
@@ -1013,9 +1013,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 1.032006307929969,
-   "over": true,
-   "excess_mm": 8.2,
+   "fill": 0.9861772657054583,
+   "over": false,
+   "excess_mm": -3.6,
    "edition": "print"
   },
   {
@@ -1043,9 +1043,9 @@
    "kind": "learn",
    "label": "Unit 1 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0119561019567456,
+   "fill": 1.0073217044284244,
    "over": true,
-   "excess_mm": 3.1,
+   "excess_mm": 1.9,
    "edition": "print"
   },
   {
@@ -1063,9 +1063,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 1.207566297631308,
-   "over": true,
-   "excess_mm": 53.3,
+   "fill": 0.999678166838311,
+   "over": false,
+   "excess_mm": -0.1,
    "edition": "print"
   },
   {
@@ -1113,9 +1113,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0080136457260556,
+   "fill": 1.0033792481977344,
    "over": true,
-   "excess_mm": 2.1,
+   "excess_mm": 0.9,
    "edition": "print"
   },
   {
@@ -1183,9 +1183,9 @@
    "kind": "learn",
    "label": "Unit 3 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0260363027806385,
+   "fill": 1.0229467044284244,
    "over": true,
-   "excess_mm": 6.7,
+   "excess_mm": 5.9,
    "edition": "print"
   },
   {
@@ -1323,9 +1323,9 @@
    "kind": "learn",
    "label": "Unit 5 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9820578012358393,
+   "fill": 0.9789682028836252,
    "over": false,
-   "excess_mm": -4.6,
+   "excess_mm": -5.4,
    "edition": "print"
   },
   {
@@ -1393,9 +1393,9 @@
    "kind": "learn",
    "label": "Unit 6 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9791613027806385,
+   "fill": 0.9745269052523172,
    "over": false,
-   "excess_mm": -5.4,
+   "excess_mm": -6.5,
    "edition": "print"
   },
   {
@@ -1463,9 +1463,9 @@
    "kind": "learn",
    "label": "Unit 7 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.0072251544799176,
+   "fill": 1.0025907569515964,
    "over": true,
-   "excess_mm": 1.9,
+   "excess_mm": 0.7,
    "edition": "print"
   },
   {
@@ -1673,9 +1673,9 @@
    "kind": "learn",
    "label": "Unit 10 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.021788105046344,
+   "fill": 1.0171537075180226,
    "over": true,
-   "excess_mm": 5.6,
+   "excess_mm": 4.4,
    "edition": "print"
   },
   {
@@ -1967,27 +1967,21 @@
   }
  ],
  "problems": [
-  "soft page 3 (Welcome): content overflows the page (natural height minus body 14.3 mm)",
-  "soft page 6 (Unit 1 \u00b7 Learn it): content overflows the page (natural height minus body 2 mm)",
-  "soft page 8 (Unit 1 \u00b7 Start here 2): content overflows the page (natural height minus body 53.3 mm)",
-  "soft page 13 (Unit 2 \u00b7 Learn it): content overflows the page (natural height minus body 1 mm)",
-  "soft page 20 (Unit 3 \u00b7 Learn it): content overflows the page (natural height minus body 5.6 mm)",
-  "soft page 48 (Unit 7 \u00b7 Learn it): content overflows the page (natural height minus body 0.8 mm)",
-  "soft page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 4.5 mm)",
-  "print page 3 (Welcome): content overflows the page (natural height minus body 8.2 mm)",
-  "print page 6 (Unit 1 \u00b7 Learn it): content overflows the page (natural height minus body 3.1 mm)",
-  "print page 8 (Unit 1 \u00b7 Start here 2): content overflows the page (natural height minus body 53.3 mm)",
-  "print page 13 (Unit 2 \u00b7 Learn it): content overflows the page (natural height minus body 2.1 mm)",
-  "print page 20 (Unit 3 \u00b7 Learn it): content overflows the page (natural height minus body 6.7 mm)",
-  "print page 48 (Unit 7 \u00b7 Learn it): content overflows the page (natural height minus body 1.9 mm)",
-  "print page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 5.6 mm)"
+  "soft page 6 (Unit 1 \u00b7 Learn it): content overflows the page (natural height minus body 0.8 mm)",
+  "soft page 20 (Unit 3 \u00b7 Learn it): content overflows the page (natural height minus body 4.8 mm)",
+  "soft page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 3.3 mm)",
+  "print page 6 (Unit 1 \u00b7 Learn it): content overflows the page (natural height minus body 1.9 mm)",
+  "print page 13 (Unit 2 \u00b7 Learn it): content overflows the page (natural height minus body 0.9 mm)",
+  "print page 20 (Unit 3 \u00b7 Learn it): content overflows the page (natural height minus body 5.9 mm)",
+  "print page 48 (Unit 7 \u00b7 Learn it): content overflows the page (natural height minus body 0.7 mm)",
+  "print page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 4.4 mm)"
  ],
  "soft_pages": 98,
  "print_pages": 98,
  "bw_pipeline": {
   "pages": 98,
   "dpi": 600,
-  "mb": 12.19,
+  "mb": 12.22,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }

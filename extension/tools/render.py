@@ -81,7 +81,7 @@ def item_html(it, n, theme, hint=True, extra_cls=''):
     out.append(f'<div class="stem">{mk(it["text"])}</div>')
     parts_html = ''
     if it.get('parts'):
-        parts_html = '<div class="parts">' + ''.join(
+        parts_html = '<div class="parts' + (' prow' if it.get('partsrow') else '') + '">' + ''.join(
             f'<div class="part"><span class="plab">{("(" + p["label"] + ")") if p["label"] else ""}</span><span>{mk(p["text"])}</span></div>' for p in it['parts']) + '</div>'
     if it.get('figure') and it.get('figside'):      # figure to the right of the answer parts (saves height)
         out.append(f'<div class="figside">{parts_html}{fig_html(it["figure"], theme)}</div>')

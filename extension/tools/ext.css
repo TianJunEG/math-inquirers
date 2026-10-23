@@ -217,6 +217,7 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 .rw.draw{height:calc(var(--line,9.5mm) * 1.7)}
 .rw.draw .rln{border:0.3mm dashed var(--rule);border-radius:1.2mm;height:100%}
 
-.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:flex;flex-direction:column;gap:2mm}
+.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:flex;flex-direction:column;gap:1.6mm}
 .steps li{counter-increment:st;display:flex;gap:3mm;align-items:center;font-weight:600}
 .steps li::before{content:counter(st);flex:none;width:8mm;height:8mm;border-radius:50%;border:0.6mm solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12pt}
+.parts.prow{flex-direction:row;flex-wrap:wrap;gap:1.2mm 6mm}

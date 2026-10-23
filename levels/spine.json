@@ -188,9 +188,9 @@
    "level": 1,
    "lesson": 4,
    "title": "Pattern Inquiry",
-   "main": "simpler",
+   "main": "pattern",
    "also": [
-    "pattern"
+    "simpler"
    ],
    "hint": "in content (build 1, 2, 3)"
   },
@@ -218,7 +218,7 @@
    "level": 1,
    "lesson": 7,
    "title": "Shape Safari",
-   "main": "actout",
+   "main": "table",
    "also": [
     "list"
    ],
@@ -421,8 +421,10 @@
    "level": 3,
    "lesson": 9,
    "title": "Measure and Money Masters",
-   "main": "draw",
-   "also": [],
+   "main": "table",
+   "also": [
+    "draw"
+   ],
    "hint": ""
   },
   "3.10": {
@@ -527,8 +529,10 @@
    "level": 5,
    "lesson": 1,
    "title": "Million Puzzles",
-   "main": "list",
-   "also": [],
+   "main": "guess",
+   "also": [
+    "list"
+   ],
    "hint": "Y: closest number below 100 000 first"
   },
   "5.2": {
@@ -688,9 +692,9 @@
    "level": 6,
    "lesson": 9,
    "title": "Data Detectives",
-   "main": "draw",
+   "main": "backwards",
    "also": [
-    "backwards"
+    "draw"
    ],
    "hint": ""
   },

@@ -86,30 +86,30 @@ def licence(book, theme, ctx):
             '<li>Printed copies are black and white. The soft copy has the same pages in colour.</li></ul></div>'
             '<div class="box"><h3>Contact</h3><p>Math Inquirers, business WhatsApp +65 9880 5962. Email: pypteltd@gmail.com. Registered office: [address, owner to add].</p></div>'
             '<p class="note">Edition 1, 2026. First printing.</p>'
-            '<p class="note">DRAFT licence text, for owner and lawyer approval. Not final.</p></div>')
+            '<p class="note"><b>DRAFT licence text, for owner and lawyer approval. Not final.</b></p></div>')
 
 
 def welcome(book, theme, ctx):
     steps = ['Read the <b>Learn it</b> page first. It shows how the idea works.',
-             'Do the <b>Start here</b> pages. Take your time.',
+             'Do the <b>Start here</b> pages. Use a pencil. Mistakes help you learn.',
              'Stuck? Find the hint. It is printed upside down.',
-             'Do <b>Check yourself</b>. Check the answers at the back. Wrong? Read the <b>Why</b>.']
+             'Do <b>Check yourself</b>. Check the answers. Wrong? Read the <b>Why</b>.']
     kid = ('<div class="box kid"><h3>How to use this book</h3><ol class="steps">' + ''.join(f'<li><span>{t}</span></li>' for t in steps) + '</ol></div>')
     return (f'<div class="pbody"><div style="display:flex;align-items:flex-end"><div><div class="h1">Welcome!</div>'
             f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You can start on your own. A grown-up can help if you like.</div></div>'
             f'<img class="welcome-mi" alt="Mi the dolphin" src="{mi_uri("mi_writing_desk", theme)}"></div>'
             + kid +
             '<div class="box"><h3>For the grown-up</h3><ul>'
-            '<li>Practice for the same ideas as the Holiday Program (our school-holiday maths course), with new numbers and stories. '
-            'You do not need to have joined it: every unit starts with a worked example.</li>'
-            '<li>3 short sessions a week, 20 to 25 minutes each. <b>Go further</b> is a weekend page: a big challenge for another day (see the pace plan).</li>'
+            '<li>Practice for the same ideas as the Holiday Program (our school-holiday course), with new numbers and stories. '
+            'You do not need to have joined it: every unit starts with an example.</li>'
+            '<li>3 short sessions a week, 20 to 25 minutes each, plus the weekend page <b>Go further</b> (see the pace plan).</li>'
             '<li>This is a self-study book. Your child marks their own work: each answer at the back says the answer first, then a short reason (Why) in plain words, '
-            'and the page of the question. A child who reads slowly may like a helper to read the Why with them.</li>'
-            f'<li>Answers are at the back, from page {ctx["divider_pg"]}. Please ask your child to try first.</li>'
+            'and the page of the question. A child who reads slowly may like a helper to read the Why with them. '
+            f'The answers start on page {ctx["divider_pg"]}: please ask your child to try first.</li>'
             '<li>Check yourself score 2 or less? Read the Learn it page again and redo one Start here page.</li>'
-            + ('<li>Printing the soft copy? Print at 100 percent (actual size) so the rulers are true size.</li>' if theme == 'colour' else '<li>The rulers in Unit 9 are printed at real size.</li>') + '</ul></div>'
+            + ('<li>Printing this soft copy? Print at 100 percent so the rulers are true size.</li>' if theme == 'colour' else '<li>The rulers in Unit 9 are printed at real size.</li>') + '</ul></div>'
             '<div class="box"><h3>The four page names</h3>' + legend() + '</div>'
-            '<p class="note" style="margin:0"><b>Tip:</b> use a pencil. Mistakes help you learn. Read each question twice before you write.</p></div>')
+            '</div>')
 
 
 def contents(book, theme, ctx):

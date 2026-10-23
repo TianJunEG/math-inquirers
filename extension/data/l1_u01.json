@@ -300,9 +300,10 @@
      "?",
      "?"
     ],
-    "width_mm": 120
+    "width_mm": 88
    },
-   "figside": false
+   "figside": false,
+   "partsrow": true
   },
   {
    "id": "L1U01-S08",
@@ -312,7 +313,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "How many stickers go in box 5? {b} stickers",
+     "text": "How many in box 5? {b}",
      "answer": {
       "value": [
        "15"
@@ -322,7 +323,7 @@
     },
     {
      "label": "b",
-     "text": "How many stickers go in box 6? {b} stickers",
+     "text": "How many in box 6? {b}",
      "answer": {
       "value": [
        "18"
@@ -343,8 +344,9 @@
      null,
      null
     ],
-    "width_mm": 150
-   }
+    "width_mm": 132
+   },
+   "partsrow": true
   },
   {
    "id": "L1U01-S09",
@@ -780,5 +782,8 @@
    },
    "explanation": "The pattern adds 5: 11, 16, 21, 26, 31, 36."
   }
+ ],
+ "snug": [
+  "start2"
  ]
 }

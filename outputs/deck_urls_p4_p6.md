@@ -14,3 +14,5 @@ L6 72QFCVitzrebZbPhUbBoeG | L7 FUuPskuuqaDx2ZVzpt5u5u | L8 8kbz6bXBusNwpuycR9RfZ
 ## Update 2026-10-23: Mi the dolphin added to the L1-L3 holiday decks (split/l1-l10, p2l1-p2l10, p3l1-p3l10); URLs unchanged, still private. See docs/audit/mi_in_decks_L1_3.md. P4-P6: see next line.
 
 ## Update 2026-10-23: Mi the dolphin added to the L4-L6 holiday decks (split/p4l1-p6l10); URLs unchanged, still private. See docs/audit/mi_in_decks_L4_6.md.
+
+Update 2026-10-23: 53 of 60 decks republished again from split/ (spine tool/look-back changes), URLs unchanged, still private; p6l4-p6l10 not yet republished (daily publish limit hit), see docs/audit_final/spine_republish.md.
