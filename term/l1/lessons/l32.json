@@ -2961,7 +2961,7 @@
    "title": "2 triangles, many shapes",
    "first": "Put 2 triangles together so whole sides touch. Make a square. Draw it.",
    "text": "Find other shapes you can make with 2 triangles. Draw each one. How many different shapes can you find?",
-   "draw": 2,
+   "draw": 1,
    "answer": "First: a square (the 2 longest sides touch). Then 3 different shapes in all when whole sides touch: a square, a bigger triangle (2 short sides touch, the right-angle corners together) and a slanted four-sided shape (2 short sides touch, turned the other way). A child who finds 2 has the main idea; a child who finds the third has seen that it depends on which sides touch.",
    "val": [
     "3"

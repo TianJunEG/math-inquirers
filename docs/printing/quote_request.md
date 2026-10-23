@@ -13,7 +13,7 @@ Hello, we are a small maths enrichment program in Singapore and would like a quo
 | Workbook | Pages in the file | Sheets (double-sided) |
 |---|---|---|
 | Level 1 (ages 6-8) | 64 | 32 |
-| Level 2 (ages 7-9) | 74 | 37 |
+| Level 2 (ages 7-9) | 70 | 35 |
 | Level 3 (ages 8-10) | 64 | 32 |
 | Level 4 (ages 9-11) | 76 | 38 |
 | Level 5 (ages 10-12) | 62 | 31 |

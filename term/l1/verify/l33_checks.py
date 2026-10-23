@@ -332,7 +332,7 @@ def run(d):
     to_m = monotone_routes(mx, my); from_m = monotone_routes(v['cols'] - mx, v['rows'] - my); thr = routes_through(v['cols'], v['rows'], mx, my)
     eq((len(to_m), len(from_m), len(thr)), (3, 2, 6), 'G2 counts'); eq(len(to_m) * len(from_m), len(thr), 'G2 each first part can be followed by each second part'); eq(q['val'], [3, 2, 6], 'G2 val'); eq(sorted(to_m), ['RRU', 'RUR', 'URR'], 'G2 hint lists the routes to the corner')
     eq(sorted(from_m), ['RU', 'UR'], 'G2 hint lists the routes on'); eq(len(monotone_routes(3, 2)), 10, 'G2 all routes on the grid')
-    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq(q['parts'][0]['text'].count('[]'), 6, 'G3 three corners, each right and up'); ex = 'rectangle: B 3 right 0 up, C 3 right 2 up, D 0 right 2 up'
+    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq(sum(pp['text'].count('[]') for pp in q['parts']), 6, 'G3 three corners, each right and up'); ex = 'rectangle: B 3 right 0 up, C 3 right 2 up, D 0 right 2 up'
     eq(sorted([(3, 0), (3, 2), (0, 2)]), sorted([(3, 0), (3, 2), (0, 2)]), 'G3 example rectangle corners'); eq(sorted(set([(0, 0), (3, 0), (3, 2), (0, 2)])).__len__(), 4, 'G3 example has 4 corners')
     eq('B is 3 right and 0 up' in q['solution'], True, 'G3 example in the solution')
     v = q['visual']; eq((v['rows'], v['cols'], 'poly' in v), (3, 4, False), 'G3 blank grid; the example rectangle (3 across, 2 up) fits it')
