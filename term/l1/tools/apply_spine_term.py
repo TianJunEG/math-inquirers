@@ -3,7 +3,7 @@
 
     python3 term/l1/tools/apply_spine_term.py                 # DRY RUN (default): prints the diffs it would make, writes nothing
     python3 term/l1/tools/apply_spine_term.py --apply         # writes the files below
-    python3 term/l1/tools/apply_spine_term.py --lessons 1,2,7 # only these lessons (tool edits still planned)
+    python3 term/l1/tools/apply_spine_term.py --lessons 1,2,11-20  # only these lessons (the tool edits are still planned)
     python3 term/l1/tools/apply_spine_term.py --only json     # or: --only tools
 
 Touches ONLY: term/l1/lessons/lNN.json (40 files), term/l1/tools/{b_print,b_guide,b_deck,validate}.py, term/l1/schema/lesson.schema.json,
@@ -353,7 +353,11 @@ def main():
     ap.add_argument('--diff-context', type=int, default=1)
     ap.add_argument('--quiet', action='store_true', help='summary only, no diffs')
     a = ap.parse_args()
-    nums = [int(x) for x in a.lessons.split(',') if x] or list(range(1, 41))
+    nums = []
+    for x in [y for y in a.lessons.split(',') if y]:
+        lo, _, hi = x.partition('-')
+        nums += list(range(int(lo), int(hi or lo) + 1))
+    nums = nums or list(range(1, 41))
     changed = 0
     print(('APPLY' if a.apply else 'DRY RUN (nothing is written)') + f': {len(nums)} lessons' + ('' if a.only != 'tools' else ' (skipped)'))
     rows = []
