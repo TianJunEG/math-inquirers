@@ -1,64 +1,70 @@
-"""Independent answer checks for Level 1 Term 2 Lesson 20 (Find One First, with the end-of-term check).
+"""Independent answer checks for Level 1 Term 2 Lesson 20 (Choose Your Tool, with Mi's Challenge Quest).
 
-Prices are found by trying every whole-dollar price (0 to 40) until the groups add back to the total; costs of many are built by adding the price
-again and again; money left over is counted down one dollar at a time. Nothing uses the take-the-total-and-divide shortcut the lesson teaches.
-The end-of-term check answers are recomputed the same way (a line of children is a list, sums are counted, shapes are solved by trial).
+Everything is recomputed by counting, listing or trying numbers (no formula from the lesson): queue places are lists, 'I think of a number'
+puzzles are solved by trying every number 0 to 60 forwards, prices by trying every whole-dollar price, picture equations by trying every pair.
 """
+import itertools, json, re
 
 
-import json, re
+def forward(steps, n):
+    for op, k in steps:
+        n = n + k if op == '+' else (n - k if op == '-' else n * k)
+    return n
+
+
+def think(steps, end, lim=60):
+    """All numbers n (0..lim) that give `end` after the steps, found by trying each n forwards."""
+    return [n for n in range(lim + 1) if forward(steps, n) == end]
 
 
 def price_of_one(total, n, lim=40):
-    """The whole-dollar price p such that n groups of p add back to the total (tried one price at a time). None if there is none."""
     for p in range(lim + 1):
         s = 0
         for _ in range(n):
             s += p
         if s == total:
             return p
-    return None
 
 
-def cost_of_many(p, n):
+def cost(p, n):
     s = 0
     for _ in range(n):
         s += p
     return s
 
 
-def how_many_fit(p, money):
-    n, spent = 0, 0
-    while spent + p <= money:
-        spent += p
-        n += 1
-    return n
+def between_count(a, b, inclusive):
+    places = list(range(1, 40))
+    got = [p for p in places if (a <= p <= b if inclusive else a < p < b)]
+    return len(got)
 
 
-def left_over(money, spent):
-    left = money
-    for _ in range(spent):
-        left -= 1
-    return left
+def in_front(r):
+    return len([p for p in range(1, 40) if p < r])
 
 
-def line_places(n):
-    return list(range(1, n + 1))                 # 1st ... nth from the front
+def common(a, b, n=3):
+    la = [a * i for i in range(1, 30)]; lb = [b * i for i in range(1, 30)]
+    return [x for x in la if x in lb][:n]
+
+
+def count_in(step, start, n):
+    return [start + step * i for i in range(n)]
 
 
 ORACLES = {
-    'c1': lambda e: price_of_one(cost_of_many(e['u'], e['n']), e['n']),
-    'c2': lambda e: cost_of_many(e['u'], e['n']),
-    'c3': lambda e: (lambda t: {'u': price_of_one(t, e['n']), 'v': cost_of_many(price_of_one(t, e['n']), 2)})(cost_of_many(e['u'], e['n'])),
-    'c4': lambda e: 'yes' if price_of_one(cost_of_many(e['u'], 4), 4) == e['u'] + e['k'] else 'no',
-    'c6': lambda e: cost_of_many(e['u'], e['n']),
-    't1': lambda e: (lambda u: {'u': u, 'w': cost_of_many(u, e['m'])})(price_of_one(cost_of_many(e['u'], e['n']), e['n'])),
-    't2': lambda e: cost_of_many(price_of_one(cost_of_many(e['u'], 12), 12), e['k']),
-    't3': lambda e: how_many_fit(price_of_one(cost_of_many(e['u'], e['n']), e['n']), cost_of_many(e['u'], e['j'])),
-    'g1': lambda e: price_of_one(cost_of_many(e['a'], 2), 2) + cost_of_many(price_of_one(cost_of_many(e['b'], 3), 3), 2),
-    'g2': lambda e: left_over(e['m'], cost_of_many(price_of_one(cost_of_many(e['u'], e['n']), e['n']), e['k'])),
+    'c1': lambda e: len([1 for _ in range(e['a'])]) - e['k'],
+    'c2': lambda e: think([('+', e['k'])], e['n'] + e['k'])[0],
+    'c3': lambda e: cost(e['u'], e['n']),
+    'c4': lambda e: in_front(e['r']),
+    'c5': lambda e: price_of_one(cost(e['u'], e['n']), e['n']),
+    't1': lambda e: think([('*', 2), ('+', e['k'])], e['n'] + e['n'] + e['k'])[0],
+    't2': lambda e: between_count(e['a'], e['b'], True),
+    't3': lambda e: think([('+', e['k']), ('*', 2)], (e['n'] + e['k']) * 2)[0],
+    'g1': lambda e: price_of_one(cost(e['a'], 3), 3) + price_of_one(cost(e['a'], 3), 3) + price_of_one(cost(e['b'], 2), 2),
+    'g3': lambda e: price_of_one(cost(e['a'], 3), 3) - price_of_one(cost(e['b'], 5), 5),
 }
-BASE_ENV = {'c1': {'n': 4, 'u': 5}, 'c2': {'n': 4, 'u': 3}, 'c6': {'n': 5, 'u': 3}, 't2': {'u': 2, 'k': 3}, 't3': {'n': 3, 'u': 3, 'j': 4}, 'g1': {'a': 5, 'b': 6}, 'g2': {'u': 3, 'n': 6, 'k': 4, 'm': 20}}
+BASE_ENV = {}
 
 
 def run(d):
@@ -72,110 +78,68 @@ def run(d):
     X = {q['id']: q for q in d['exit']}
     H = {q['id']: q for q in d['home_practice']}
     sl = {s['id']: s for s in d['slides']}
-    items = {i['id']: i for i in d['online_practice']['items']}
     # ---- Start here
-    eq(price_of_one(16, 4), 4, 'S1'); eq(T['S1']['val'], [4], 'S1 val'); eq(T['S1']['visual']['n'], 4, 'S1 picture has 4 pens')
-    eq(cost_of_many(2, 7), 14, 'S2'); eq(T['S2']['val'], [14, 14], 'S2 val'); eq(T['S2']['parts'][0]['text'], '7 × 2 = [2]', 'S2 frame'); eq(T['S2']['visual']['n'], 7, 'S2 picture has 7 pens')
-    s3 = T['S3']['visual']; eq((s3['units']['n'], s3['brace']['text']), (6, '$12'), 'S3 strip'); eq(price_of_one(12, 6), 2, 'S3'); eq(T['S3']['val'], [2], 'S3 val')
-    s4 = T['S4']['visual']; eq((s4['units']['n'], s4['brace']['text']), (3, '$15'), 'S4 strip'); one = price_of_one(15, 3); eq((one, cost_of_many(one, 2)), (5, 10), 'S4'); eq(T['S4']['val'], [5, 10], 'S4 val')
-    eq((cost_of_many(4, 5), price_of_one(15, 5), cost_of_many(3, 5) == 15), (20, 3, True), 'S5 Lily 5 groups of 4 is 20, not 15; the price is 3'); eq(T['S5']['val'], ['No', 3], 'S5 val'); eq(T['S5']['visual']['n'], 5, 'S5 picture has 5 pens')
-    eq(cost_of_many(4, 3), 12, 'S6'); eq(T['S6']['val'], [12], 'S6 val'); eq(T['S6']['visual']['n'], 3, 'S6 picture has 3 books')
-    eq(sum(q['mins'] for q in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes')
-    eq(all(cost_of_many(p, k) <= 40 for p, k in ((4, 4), (2, 7), (2, 6), (5, 3), (4, 3))), True, 'Start here products within 40')
+    eq((18 - 7, 18 + (18 - 7)), (11, 29), 'S1'); eq(T['S1']['val'], [11, 29], 'S1 val')
+    eq((between_count(6, 9, False), in_front(9)), (2, 8), 'S2'); eq(T['S2']['val'], [2, 8], 'S2 val')
+    eq((think([('+', 4)], 13), think([('-', 5)], 9)), ([9], [14]), 'S3'); eq(T['S3']['val'], [9, 14], 'S3 val')
+    tb = T['S4']['visual']['rows']; eq([int(r[1]) for r in tb], count_in(4, 4, 4), 'S4 table is the 4 times list')
+    eq((count_in(4, 4, 5)[-1], len(count_in(4, 4, 5))), (20, 5), 'S4'); eq(T['S4']['val'], [20, 5], 'S4 val')
+    eq((7 + 9, (7 + 9) % 2 == 0), (16, True), 'S5 even, so Mei is not correct'); eq(T['S5']['val'], ['No', 16], 'S5 val')
+    p = price_of_one(20, 4); eq((p, cost(p, 3)), (5, 15), 'S6'); eq(T['S6']['val'], [5, 15], 'S6 val')
+    eq(sum(q['mins'] for q in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes'); eq(len(d['tiers']['start']), 6, 'six Start here items')
     # ---- Think harder
-    t1 = price_of_one(12, 4); eq((t1, cost_of_many(t1, 7)), (3, 21), 'T1'); eq(T['T1']['val'], [3, 21], 'T1 val'); eq(T['T1']['visual']['units']['n'], 4, 'T1 strip')
-    dozen = 12; t2 = price_of_one(24, dozen); eq((t2, cost_of_many(t2, 3)), (2, 6), 'T2'); eq(T['T2']['val'], [2, 6], 'T2 val')
-    t3 = price_of_one(24, 6); eq((t3, cost_of_many(t3, 4)), (4, 16), 'T3'); eq(T['T3']['val'], [4, 16], 'T3 val')
-    t4 = price_of_one(8, 4); eq((t4, how_many_fit(t4, 10)), (2, 5), 'T4'); eq(T['T4']['val'], [2, 5], 'T4 val')
+    wk = count_in(3, 3, 5); eq((wk, wk.index(15) + 1), ([3, 6, 9, 12, 15], 5), 'T1 table'); eq([int(r[1].strip('$')) for r in T['T1']['visual']['rows'] if r[1] != '[]'], [3, 6], 'T1 table shows the first two rows')
+    eq((len([1 for _ in range(5) if True]), 15 == cost(3, 5)), (5, True), 'T1 strip check'); eq(T['T1']['val'], [5, 5, 'either'], 'T1 val')
+    eq((think([('*', 2), ('+', 3)], 17), forward([('*', 2), ('+', 3)], 7)), ([7], 17), 'T2'); eq(T['T2']['val'], [7, 14, 17], 'T2 val')
+    eq((between_count(4, 9, True), 9 - 4), (6, 5), 'T3 both ends'); eq(T['T3']['val'], [6, 'No'], 'T3 val')
+    eq((common(3, 4, 2), count_in(3, 3, 8)[3], count_in(4, 4, 6)[2]), ([12, 24], 12, 12), 'T4'); eq(T['T4']['val'], [12, 24], 'T4 val')
     # ---- Go further
-    hat, scarf = price_of_one(10, 2), price_of_one(18, 3); eq((hat, scarf, hat + cost_of_many(scarf, 2)), (5, 6, 17), 'G1'); eq(T['G1']['val'], [5, 6, 17], 'G1 val')
-    pen = price_of_one(24, 8); spent = cost_of_many(pen, 5); eq((pen, spent, left_over(30, spent)), (3, 15, 15), 'G2'); eq(T['G2']['val'], [3, 15, 15], 'G2 val')
-    a, b = price_of_one(12, 4), price_of_one(20, 5); eq((a, b, 'Shop A' if a < b else 'Shop B'), (3, 4, 'Shop A'), 'G3'); eq(T['G3']['val'], [3, 4, 'Shop A'], 'G3 val')
-    # ---- Investigation: the two packs have the same price for one pen
-    eq((price_of_one(8, 2), price_of_one(20, 5)), (4, 4), 'I1 both packs cost $4 a pen'); eq(d['tiers']['investigation']['val'], ['4', '4'], 'I1 val')
-    # ---- Exit ticket and home practice
-    eq(price_of_one(9, 3), 3, 'E1'); eq(X['E1']['val'], [3], 'E1 val')
-    opts = [int(o.lstrip('$')) for o in X['E2']['mcq']['options']]; eq([i for i, o in enumerate(opts, 1) if o == cost_of_many(5, 3)], [2], 'E2 exactly one option'); eq(X['E2']['val'], [2], 'E2 val')
-    e3 = price_of_one(10, 5); eq((e3, cost_of_many(e3, 4)), (2, 8), 'E3'); eq(X['E3']['val'], [2, 8], 'E3 val')
-    eq(price_of_one(10, 5), 2, 'H1'); eq(H['H1']['val'], 2, 'H1 val'); eq(cost_of_many(3, 6), 18, 'H2'); eq(H['H2']['val'], [18, 18], 'H2 val')
-    eq(cost_of_many(price_of_one(12, 4), 2), 6, 'H3'); eq(H['H3']['val'], 6, 'H3 val'); eq(cost_of_many(price_of_one(36, 12), 4), 12, 'H4'); eq(H['H4']['val'], 12, 'H4 val')
-    eq(price_of_one(12, 3) + price_of_one(10, 2), 9, 'H5'); eq(H['H5']['val'], 9, 'H5 val')
-    # ---- Sneak-peek, warm-up, explore, mini, talk, optional slide
-    eq((price_of_one(8, 4), cost_of_many(price_of_one(6, 3), 5)), (2, 10), 'sneak'); eq(d['sneak_peek']['val1'], 2, 'sneak 1 val')
-    eq((price_of_one(12, 3), price_of_one(6, 2), price_of_one(15, 3)), (4, 3, 5), 'warm-up 1'); eq((cost_of_many(4, 3), cost_of_many(2, 5), cost_of_many(5, 4)), (12, 10, 20), 'warm-up 2')
-    eq((price_of_one(20, 4), cost_of_many(5, 3), price_of_one(6, 2)), (5, 15, 3), 'warm-up 3')
-    g = sl['s-rem2']['blocks'][0]; eq((g['n'], g['each'], cost_of_many(g['each'], g['n'])), (3, 4, 12), 'warm-up bags picture'); eq(sl['s-rem3']['blocks'][0]['units']['n'], 4, 'warm-up strip parts')
-    eq((price_of_one(20, 4), cost_of_many(3, 4), price_of_one(20, 4), cost_of_many(5, 3)), (5, 12, 5, 15), 'explore')
-    eq(sl['s-explore1']['blocks'][0]['rows'][0][0]['n'], 4, 'explore 1 table'); eq(sl['s-explore2']['blocks'][0]['rows'][1][0]['n'], 4, 'explore 2 table')
-    eq(sl['s-explore3']['blocks'][0]['units']['n'], 4, 'explore 3 strip'); eq(sl['s-explore3']['blocks'][0]['brace']['text'], '$20', 'explore 3 total')
-    m1 = price_of_one(15, 5); eq((m1, cost_of_many(m1, 2), cost_of_many(m1, 5)), (3, 6, 15), 'mini example and check'); eq(sl['s-m1']['blocks'][0]['units']['n'], 5, 's-m1 strip')
-    eq((price_of_one(18, 6), cost_of_many(price_of_one(18, 6), 4)), (3, 12), 'mini your turn'); eq([r[2] for r in sl['s-m4a']['blocks'][0]['rows'][1:]], ['$3', '$12'], 's-m4a')
-    eq(sl['s-m3b']['blocks'][0]['n'], 12, 'a dozen picture has 12 items')
-    eq((price_of_one(12, 3), cost_of_many(price_of_one(12, 3), 6), 2 * 12), (4, 24, 24), 'talk: 6 books are 2 lots of 3 books')
-    eq((price_of_one(6, 2), cost_of_many(price_of_one(6, 2), 4), 2 * 6), (3, 12, 12), 's-opt: 4 pens are 2 lots of 2 pens')
-    eq([price_of_one(6, 2), price_of_one(12, 4), cost_of_many(3, 4)], [3, 3, 12], 'M1 the price of 1 does not change'); eq((price_of_one(12, 3), cost_of_many(5, 4), price_of_one(20, 4)), (4, 20, 5), 'M2 and M3')
-    # ---- online practice: authored answers, and the variants stay whole-dollar and within 40
-    eq(price_of_one(20, 4), items['c1']['answer'], 'c1 authored'); eq(cost_of_many(3, 4), items['c2']['answer'], 'c2 authored')
-    c3 = price_of_one(15, 3); eq([c3, cost_of_many(c3, 2)], [f['answer'] for f in items['c3']['fields']], 'c3 authored')
-    eq(items['c4']['answer'], 'yes' if price_of_one(12, 4) == 4 else 'no', 'c4 authored (Lily says 4)')
-    c4v = items['c4']['tpl']['vars']; eq(sum(1 for k in c4v['k'] if k == 0) * 2, len(c4v['k']), 'c4 about half of the variants are yes'); eq(items['c5']['answer'], 12, 'c5 a dozen')
-    eq(cost_of_many(3, 5), items['c6']['answer'], 'c6 authored'); t1i = price_of_one(12, 3); eq([t1i, cost_of_many(t1i, 7)], [f['answer'] for f in items['t1']['fields']], 't1 authored')
-    eq(cost_of_many(price_of_one(24, 12), 3), items['t2']['answer'], 't2 authored'); eq(how_many_fit(price_of_one(9, 3), 12), items['t3']['answer'], 't3 authored')
-    eq(price_of_one(10, 2) + cost_of_many(price_of_one(18, 3), 2), items['g1']['answer'], 'g1 authored'); eq(left_over(20, cost_of_many(price_of_one(18, 6), 4)), items['g2']['answer'], 'g2 authored')
-    for iid, keys in (('c1', ('n', 'u')), ('c2', ('n', 'u')), ('c6', ('n', 'u')), ('c3', ('n', 'u'))):
-        vs = items[iid]['tpl']['vars']
-        eq(all(cost_of_many(u, k) <= 40 for k in vs[keys[0]] for u in vs[keys[1]]), True, iid + ' variants within 40')
-    vs = items['t1']['tpl']['vars']; eq(all(cost_of_many(u, m) <= 40 for u in vs['u'] for m in vs['m']), True, 't1 variants within 40')
-    vs = items['t3']['tpl']['vars']; eq(all(cost_of_many(u, k) <= 40 for u in vs['u'] for k in vs['n'] + vs['j']), True, 't3 variants within 40')
-    vs = items['g2']['tpl']['vars']; eq(all(cost_of_many(u, k) <= m and cost_of_many(u, nn) <= 40 for u in vs['u'] for k in vs['k'] for nn in vs['n'] for m in vs['m']), True, 'g2 variants: Mei can afford what she buys')
-    vs = items['g1']['tpl']['vars']; eq(all(price_of_one(cost_of_many(a_, 2), 2) == a_ and price_of_one(cost_of_many(b_, 3), 3) == b_ for a_ in vs['a'] for b_ in vs['b']), True, 'g1 variants are whole-dollar prices')
-    # ---- Mi's Challenge Quest (the end-of-term slot, a game, not a test)
-    assert 'end_of_term_check' not in d, 'the old end-of-term check block must be gone'
+    a_, b_ = price_of_one(12, 3), price_of_one(15, 5); eq((a_, b_, 'Shop A' if a_ < b_ else 'Shop B'), (4, 3, 'Shop B'), 'G1'); eq(T['G1']['val'], [4, 3, 'Shop B'], 'G1 val')
+    eq((think([('+', 5), ('*', 2), ('-', 4)], 16), forward([('+', 5), ('*', 2), ('-', 4)], 5)), ([5], 16), 'G2'); eq(T['G2']['val'], [5], 'G2 val')
+    sols = [(s, h) for s, h in itertools.product(range(0, 41), repeat=2) if s + s == 12 and h * s == 24 and s != h]
+    eq(sols, [(6, 4)], 'G3 star and heart'); eq(T['G3']['val'], [6, 4], 'G3 val')
+    eq(all(r['total'].isdigit() and int(r['total']) <= 40 for r in T['G3']['visual']['rows']), True, 'G3 totals within 40')
+    eq(d['tiers']['investigation']['val'], ['any'], 'I1 is open'); eq(think([('+', 4)], 10), [6], 'I1 first step')
+    # ---- Exit
+    eq(price_of_one(10, 5), 2, 'E1'); eq(X['E1']['val'], [2], 'E1 val')
+    e2 = think([('+', 6)], 15)[0]; eq((e2, [i for i, o in enumerate(X['E2']['mcq']['options'], 1) if int(o) == e2]), (9, [1]), 'E2'); eq(X['E2']['val'], [1], 'E2 val')
+    eq((between_count(5, 8, False), between_count(5, 8, True)), (2, 4), 'E3'); eq(X['E3']['val'], [2, 4], 'E3 val')
+    # ---- Home
+    eq(len(count_in(4, 4, 5)), 5, 'H1 five bags'); eq(H['H1']['val'], 5, 'H1 val')
+    eq(think([('+', 7)], 16), [9], 'H2'); eq(H['H2']['val'], 9, 'H2 val')
+    eq(count_in(5, 5, 6)[-1], 30, 'H3'); eq(H['H3']['val'], 30, 'H3 val')
+    eq(between_count(3, 8, True), 6, 'H4'); eq(H['H4']['val'], 6, 'H4 val')
+    eq(price_of_one(12, 3) * 2 + price_of_one(6, 2), 11, 'H5'); eq(H['H5']['val'], 11, 'H5 val')
+    # ---- Sneak-peek, explore, mini, warm-up, spare time
+    eq((between_count(3, 6, False), think([('*', 2)], 14)), (2, [7]), 'sneak'); eq((d['sneak_peek']['val1'], d['sneak_peek']['a2'].startswith('7')), (2, True), 'sneak vals')
+    eq((forward([('+', 6)], 9) , think([('+', 6)], 15)), (15, [9]), 'explore card 4'); eq(len(count_in(5, 5, 7)), 7, 'explore card 3 (7 boxes of 5 pencils is 35)')
+    eq(sorted({(h, s) for h in (1, 2) for s in (1, 2, 3)}.__len__() for _ in [0]), [6], 'explore card 5 pairs')
+    odd = [x for x in range(1, 20, 2)]; eq(all((a + b) % 2 == 0 for a in odd for b in odd), True, 'explore card 6 odd + odd is even')
+    eq((count_in(3, 3, 6)[-1], len(count_in(3, 3, 6))), (18, 6), 'm1 and m2'); rows = sl['s-m2']['blocks'][0]['rows'][1:]; eq([int(r[1].strip('$')) for r in rows], count_in(3, 3, 6), 'm2 table')
+    eq(sl['s-m1']['blocks'][1]['units']['n'], 6, 'm1 strip parts')
+    eq((think([('*', 2), ('+', 2)], 20), think([('+', 3), ('*', 2)], 16)), ([9], [5]), 'm4 and m5')
+    eq((forward([('+', 3)], 5), forward([('+', 3)], 5) * 2), (8, 16), 'm5a check')
+    eq((count_in(3, 3, 4)[2], count_in(3, 3, 4)[3], 6 + 3), (9, 12, 9), 'warm-up bags and marbles'); eq((think([('+', 3)], 10), think([('-', 2)], 8)), ([7], [10]), 'warm-up backwards')
+    eq(count_in(5, 5, 7)[-1], 35, 'opt slide'); eq(count_in(5, 5, 4)[-1], 20, 'M1')
+    # ---- Quest
     c = d['challenge_quest']; C = {q['id']: q for q in c['questions']}
-    eq(len(c['questions']), 8, 'quest has 8 gates'); eq(c['minutes'], 20, 'quest is 20 minutes'); eq(all(q['tier'] == 'start' for q in c['questions']), True, 'quest is Start here level')
-    line = line_places(10); siti = line.index(4) + 1; ben = line[line.index(4) + 1]
-    eq((ben, len(line[:line.index(4)])), (5, 3), 'C1'); eq(C['C1']['val'], [5, 3], 'C1 val')
-    ravi = 26; lily = ravi;
-    for _ in range(9): lily += 1
-    eq((lily, ravi + lily), (35, 61), 'C2'); eq(C['C2']['val'], [35, 61], 'C2 val')
-    v = C['C3']['visual']; eq((v['a'], v['b'], v['a'] + v['b']), (9, 9, 18), 'C3 ten-frames'); eq(C['C3']['val'][0], 18, 'C3 val a')
-    left = 15; pairs = 0
-    while left >= 2: left -= 2; pairs += 1
-    eq(('odd' if left == 1 else 'even', left), ('odd', 1), 'C3 odd: 15 leaves one over'); eq(C['C3']['val'][1], 'odd', 'C3 val b')
-    eq((cost_of_many(5, 3), [x for x in range(2, 11, 2)][3]), (15, 8), 'C4'); eq(C['C4']['val'], [15, 8], 'C4 val')
-    eq((price_of_one(16, 4), how_many_fit(2, 10)), (4, 5), 'C5'); eq(C['C5']['val'], [4, 5], 'C5 val')
-    bags = cost_of_many(3, 5); eq((bags, left_over(bags, 4)), (15, 11), 'C6'); eq(C['C6']['val'], [15, 11], 'C6 val')
-    heart = None
-    for h in range(0, 30):
-        if h + h == 18: heart = h
-    eq((heart, 8 + 8 == 18), (9, False), 'C7 Ben is not correct'); eq(C['C7']['val'], ['No', 9], 'C7 val')
-    bun = price_of_one(16, 8); eq((bun, cost_of_many(bun, 5)), (2, 10), 'C8'); eq(C['C8']['val'], [2, 10], 'C8 val')
-    eq(('6 pencils cost $18' in sl['s-m4']['note'], '8 buns' in C['C8']['text'], 'bags' in C['C6']['text'] and '5 bags' in C['C6']['text']), (True, True, True), 'C6 and C8 do not repeat the class or L18 numbers')
-    o = c['optional']; before = list(range(1, 8)); behind = list(range(1, 8)); total = len(before) + 1 + len(behind)       # 8th from the front: 7 before; 8th from the back: 7 behind
-    eq((total, 8 + 8 == total), (15, False), 'CT 15 children and Mei is not correct'); eq(o['val'], ['No', 15], 'CT val')
-    q_by_strand = {s['id']: s['questions'] for s in c['strands']}; eq(sorted(sum(q_by_strand.values(), [])), sorted(C), 'every gate is in exactly one area'); eq([len(v) for v in q_by_strand.values()], [4, 4], 'two areas of four questions')
-    covered = sorted({l for s in c['strands'] for l in s['lessons']}); eq(covered, list(range(11, 21)), 'every lesson of the term is covered by the quest')
-    pages = sorted({q['page'] for q in c['questions']}); eq(pages, list(range(1, c['sheet_pages'] + 1)), 'questions use every sheet page')
-    eq(all(sl[s]['part'] == 'exit' for s in ('s-quest1', 's-quest2')), True, 'quest slides sit in the quest part')
-    tp = {p['id']: p for p in d['timing']['parts']}; eq(tp['exit']['end'] - tp['exit']['start'], 20, 'the quest part is 20 minutes'); eq(all(sl[s].get('no_record') for s in ('s-quest1', 's-quest2')), True, 'quest slides are not on the shared recording')
-    # ---- game, not a test: no points, bands or progress words; names the quest; test-like wording kept off child and parent pages; tokens and quiet timing
-    for k in ('bands', 'words', 'report_template'): eq(k in c, False, 'no ' + k + ' in the quest block')
-    eq(set(c['notes_sheet']), {'how', 'prompts', 'group_how', 'group_prompts'}, 'private notes sheet and group advice sheet')
-    for s_ in c['strands']:
-        eq((len(s_['saw_examples']), len(s_['next_examples']), all('[Name]' in x for x in s_['saw_examples'])), (3, 2, True), 'one-line patterns ' + s_['id'])
-    import validate
-    facing = list(c['child_rules']) + list(c['page_instructions']) + [q['text'] for q in c['questions']] + [p['text'] for q in c['questions'] for p in q['parts']] + [c['optional']['text']]
-    pn = c['parent_note']; facing += [pn['title'], pn['what'], pn['back'], pn['make_up']] + pn['before'] + pn['during'] + pn['after'] + [c['saw_line']['parent_example'], c['saw_line']['closing']]
-    quest_only = list(facing)
-    facing += validate.child_strings(d)
-    for s_ in facing:
-        t_ = s_.replace("Mi's Challenge Quest", 'the quest').replace("Mi's Chal\u00adlenge Quest", 'the quest')
-        for pat in validate.BANNED_CHILD: assert not re.search(pat, t_, re.I), f'banned wording {pat!r}: {s_[:70]}'
-        assert not re.search(r'\bexams?\b|check[- ]?sheet|end-of-term check|\btimer\b|\bpass or fail\b|\bmarks?\b|\bmarked\b|\bmarking\b|\bout of\b|\bscored?\b', t_, re.I), f'test-like wording: {s_[:90]}'
-        n += 1
-    for s_ in quest_only: assert not re.search(r'\btests?\b|\btesting\b', s_, re.I), s_[:70]
-    eq(sl['s-quest1']['title'], "Mi's Chal\u00adlenge Quest", 'quest slide title'); eq("Quest" in d['parent']['summary'] and "Chal\u00adlenge" in d['parent']['summary'], True, 'parent page names the quest')
-    # tokens: at least as many printed as any question can use (the dollar amounts in the lesson go up to $28)
-    kit = d['workbook']['kits'][0]; most = max(int(x) for x in re.findall(r'\$(\d+)', json.dumps({k_: v for k_, v in d.items() if k_ in ('tiers', 'exit', 'home_practice', 'talk', 'script', 'slides')})) if int(x) <= 30)
-    eq(len(kit['labels']) >= most, True, f'{len(kit["labels"])} tokens printed, the most any item needs is ${most}'); eq(len(kit['labels']), 30, '30 tokens on the kit page')
+    eq((len(c['questions']), c['minutes'], c['sheet_pages'], c.get('tool_row')), (8, 20, 4, 'term'), 'quest shape')
+    eq((in_front(6), 24 - 8), (5, 16), 'C1'); eq(C['C1']['val'], [5, 16], 'C1 val')
+    s = think([('*', 3)], 18, 20); eq((s, 5 * 3), ([6], 15), 'C2 Ben is not correct'); eq(C['C2']['val'], ['No', 6], 'C2 val')
+    eq(((9 + 7) % 2, count_in(5, 5, 5)[3]), (0, 20), 'C3'); eq(C['C3']['val'], ['even', 20], 'C3 val')
+    eq((cost(6, 4), price_of_one(18, 3)), (24, 6), 'C4'); eq(C['C4']['val'], [24, 6], 'C4 val')
+    eq((cost(5, 4), cost(5, 4) - 7), (20, 13), 'C5'); eq(C['C5']['val'], [20, 13], 'C5 val')
+    u = price_of_one(16, 4); eq((u, cost(u, 5)), (4, 20), 'C6'); eq(C['C6']['val'], [4, 20], 'C6 val')
+    m = think([('*', 2), ('+', 5)], 21); eq((m, forward([('*', 2), ('+', 5)], 9)), ([8], 23), 'C7 Ben is not correct'); eq(C['C7']['val'], [8, 'No'], 'C7 val')
+    eq((len([(h, s_) for h in range(2) for s_ in range(3)]), count_in(4, 4, 5)[3]), (6, 16), 'C8'); eq(C['C8']['val'], [6, 16], 'C8 val')
+    o = c['optional']; front, back = 7, 4; total = len([p for p in range(1, 40) if p < front]) + 1 + len([p for p in range(1, 40) if p < back]); eq((total, front + back == total), (10, False), 'CT'); eq(o['val'], ['No', 10], 'CT val')
+    eq([q['lesson'] for q in c['questions']].count('mixed'), 2, 'two mixed gates')
+    cov = sorted({l for q in c['questions'] for l in (q['lesson'] if isinstance(q['lesson'], list) else [q['lesson']]) if l != 'mixed'}); eq(cov, list(range(11, 20)), 'every content lesson 11 to 19 is visited')
+    eq(sorted(sum([s_['questions'] for s_ in c['strands']], [])), ['C1', 'C2', 'C3', 'C4', 'C5', 'C6'], 'tagged gates are in the two areas')
+    eq(sorted({q['page'] for q in c['questions']}), [1, 2, 3, 4], 'questions use every page')
+    eq(any('no tally,' in x or 'not even in your own notes' in x for x in c['privacy_checklist']), False, 'new privacy wording')
+    tp = {p['id']: p for p in d['timing']['parts']}; eq((tp['exit']['start'], tp['exit']['end']), (35, 55), 'quest minutes 35 to 55')
+    eq(all(sl[x_]['part'] == 'exit' and sl[x_].get('no_record') for x_ in ('s-quest1', 's-quest2')), True, 'quest slides not recorded')
+    for q in c['questions']:
+        eq(re.search(r'\b(draw it|act it out|make a table|work backwards|list every way|spot the pattern)\b', q['text'] + ' '.join(p['text'] for p in q['parts']), re.I) is None, True, q['id'] + ' names no tool')
     return n

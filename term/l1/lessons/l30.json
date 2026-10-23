@@ -13,7 +13,7 @@
  "lesson_in_term": 10,
  "title": "Tool Detectives",
  "big_idea": "Pick a tool, say why, and check your answer another way",
- "child_idea": "We have seven tools: draw it, act it out, spot the pattern, list every way, make a table, work backwards, and guess and check. Look at a problem, pick the tool you would start with, say why, and check. If one tool gets stuck, try another.",
+ "child_idea": "We have seven tools. Look at a problem, pick the tool you would start with, say why, and check. If one tool gets stuck, try another.",
  "skill": "Choosing a method",
  "moe": {
   "strand": "Processes and heuristics (pp. 13 to 14 of the syllabus pages we hold: problem solving, representing, reasoning and communicating; no list of named heuristics); Mi's Challenge Quest for the term",
@@ -3691,7 +3691,7 @@
      {
       "k": "WORK",
       "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "s": 60
      }
     ]
    },

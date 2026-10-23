@@ -13,7 +13,7 @@ function cards() {
   for (let i = 0; i < 4; i++) faces.push(['.', YEL, 'p']);
   for (let k = 0; k < 2; k++) ['+', '−', '×', '÷'].forEach(s => faces.push([s, '#E3F3EF', 's']));
   for (let k = 0; k < 2; k++) { faces.push(['(', '#FFF0C2', 'b']); faces.push([')', '#FFF0C2', 'b']); }
-  const w = 110, h = 128, gx = 8, gy = 10, cols = 6;
+  const w = 106, h = 128, gx = 6, gy = 10, cols = 6;
   let b = '';
   faces.forEach(([t, fill, kind], i) => {
     const c = i % cols, r = Math.floor(i / cols), x = 14 + c * (w + gx), y = 14 + r * (h + gy);
@@ -41,9 +41,8 @@ function graphGrids() {
     b += `<text x="${ox + cols * s / 2}" y="${oy + rows * s + 36}" font-size="15" font-weight="800" text-anchor="middle" fill="${NAVY}" font-family="Nunito Sans, Arial">what is along the bottom: ____________________</text>`;
   });
   const hh = 60 + 2 * (rows * s + 120);
-  b += note(14, hh - 8, 'Write the scale in the small boxes at the side first (for example 0, 10, 20 ...).');
-  b += note(14, hh + 12, 'Make extra copies if you need them.');
-  return svg(hh + 20, b);
+  b += note(14, hh - 8, 'Write the scale in the small boxes first (for example 0, 10, 20 ...). Copy the page if you need more.');
+  return svg(hh, b);
 }
 
 // paper clock face + hands, pizza circles, bring-from-home box
@@ -75,7 +74,7 @@ function clockPage() {
   // bring from home
   b += `<rect x="14" y="796" width="672" height="150" rx="12" fill="#F3FBF9" stroke="${TEAL}" stroke-width="3"/>`;
   b += `<text x="34" y="830" font-size="20" font-weight="800" fill="${TEAL}" font-family="Nunito Sans, Arial">Bring from home (not printed here)</text>`;
-  ['A clear 180 degree protractor and a 30 cm ruler. Lesson 6 starts with them, so have them ready.',
+  ['A clear 180 degree protractor and a 30 cm ruler. Lesson 6 starts with them.',
     'No protractor? A plastic school one is fine and cheap to buy. Or tell your tutor: there are spares.',
     'A ruler and two coloured pencils (Lessons 7 and 9). Scissors and tape (Lessons 4, 6, 7 and 8).',
     'Squared paper, if you want extra: cut the Square grid page into 1 cm squares.'].forEach((t, i) => {

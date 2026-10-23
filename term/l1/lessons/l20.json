@@ -2729,7 +2729,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Mei puts 20 counters into bags. She puts 4 counters in each bag. How many bags does she need? ___",
+   "text": "Mei has 20 counters. She puts 4 counters in each bag. She fills every bag. How many bags is that? ___",
    "answer": "5",
    "val": 5,
    "solution": "Counting in 4s: 4, 8, 12, 16, 20. That is 5 bags."
@@ -3098,6 +3098,103 @@
       "List the places from {a}th to {b}th.",
       "Count them: {ans} places.",
       "There are {ans} children."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ali thinks of a number. He adds 2 and doubles it. He gets 14. What was his number?",
+    "answer": 5,
+    "hint": "Work backwards. Undo the doubling first.",
+    "steps": [
+     "Half of 14 is 7.",
+     "Take away the 2 that was added: 5.",
+     "Ali's number is 5."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is halfway. Undo the adding too."
+     }
+    ],
+    "easier": "c2",
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ],
+      "k": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "t": "(n+k)*2"
+     },
+     "q": "Ali thinks of a number. He adds {k} and doubles it. He gets {t}. What was his number?",
+     "answer": "n",
+     "hint": "Work backwards. Undo the doubling first.",
+     "steps": [
+      "Half of {t} is {t}/2.",
+      "Take away the {k} that was added.",
+      "Ali's number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "number",
+    "q": "3 pens cost $12 in Shop A. 5 pens cost $15 in Shop B. How much less does 1 pen cost in Shop B?",
+    "answer": 1,
+    "hint": "Find the price of 1 pen in each shop first.",
+    "steps": [
+     "Shop A: 1 pen costs $4.",
+     "Shop B: 1 pen costs $3.",
+     "$4 - $3 = $1 less."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the price in Shop B. How much less is it than Shop A?"
+     }
+    ],
+    "easier": "t1",
+    "tpl": {
+     "vars": {
+      "a": [
+       4,
+       5,
+       6
+      ],
+      "b": [
+       2,
+       3
+      ]
+     },
+     "derive": {
+      "p": "3*a",
+      "r": "5*b"
+     },
+     "q": "3 pens cost ${p} in Shop A. 5 pens cost ${r} in Shop B. How much less does 1 pen cost in Shop B?",
+     "answer": "a-b",
+     "hint": "Find the price of 1 pen in each shop first.",
+     "steps": [
+      "Shop A: 1 pen costs ${a}.",
+      "Shop B: 1 pen costs ${b}.",
+      "{a} - {b} = {ans} dollars less."
      ]
     }
    },
