@@ -21,3 +21,5 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 Resume: nothing outstanding. Final build: print 100 pages, soft 99; all gates pass; final print PDF viewed page by page and fixed (hatched-text halo, angle labels).
 
 23 Oct (audit round): AUDIT.md fixes applied (H1 Whys, H2 twin items replaced or reframed, H3 unit 9 pattern, Learn additions, wide boxes, ambiguity and give-away fixes, figure clean-up). Print 100 pages, soft 99; 416 answers checked, dup 0, wording 0 errors, B&W and fill clean.
+
+23 Oct (audit round 2): R1 to R8 fixed (new frames for about 20 items, figures, Learn, Whys). Print 100 pages, soft 99; all gates pass.
