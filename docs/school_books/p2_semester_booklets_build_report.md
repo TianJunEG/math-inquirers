@@ -99,3 +99,7 @@ Owner decisions applied: **P2-REMOVE-P3**, **P2-LOWS-FIX**, **P2-NOTAFFIL-FRONT*
 | P2-40 unit | Moot: the new sheet prints the cent sign after every box. |
 
 Re-solved by hand from the final render: P2-29 SHADOW (9:32 S, 10:26 H, 4:06 A, 6:12 D, 10:34 O, 7:16 W), P2-31 BANDIT (45, 85, 100, 10, 2, 25), P2-40 (yellow 2, red 4, blue 2, green 2, orange 4; every part solved). 1-bit copies of P2-06, 29, 31, 38 and 40 were viewed: legible, coins clean. All other pages have the same answers as the previous build (compared by key text); P2-33 changed only its key labels.
+
+## Audit round 3: Lows fixed
+
+validate.py: 747 checks, 0 failed. Teacher notes: "durations" in the problem-solving sentence is now "lengths of lessons given in hours and minutes" (L-G); the code-word line now says answers in the wrong boxes never make another word and "one or two wrong answers very rarely do" (L-I); the photocopying note says to use normal toner, not a light setting, on the coin pages. The words "cents" and "dollar" on the coins are 2.9 mm font (was 2.7); viewed at 110 dpi on Dollars and Cents: clear of the rim and the numeral. No page content changed.
