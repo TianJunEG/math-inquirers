@@ -23,7 +23,7 @@ create table if not exists public.interest_requests (
   expires_at       timestamptz not null default (now() + interval '12 months'),   -- DEFAULT retention: 12 months
   level            smallint    not null check (level between 1 and 6),
   age_band         text        not null check (age_band in ('under-6','6-7','8-9','10-11','12-13','14-plus')),
-  slots            text[]      not null default '{}' check (cardinality(slots) <= 12),
+  slots            text[]      not null default '{}' check (cardinality(slots) <= 24),
   windows          text[]      not null default '{}' check (cardinality(windows) <= 8),
   other_time       text        check (other_time is null or char_length(other_time) <= 200),
   parent_first_name text       not null check (char_length(btrim(parent_first_name)) between 1 and 40),
@@ -74,7 +74,7 @@ begin
   if v_other is not null and char_length(v_other) > 200 then raise exception 'invalid_input' using errcode = '22023'; end if;
   if v_note  is not null and char_length(v_note)  > 400 then raise exception 'invalid_input' using errcode = '22023'; end if;
   if char_length(v_ver) not between 1 and 40 then raise exception 'invalid_input' using errcode = '22023'; end if;
-  if cardinality(v_slots) > 12 or cardinality(v_wins) > 8 then raise exception 'invalid_input' using errcode = '22023'; end if;
+  if cardinality(v_slots) > 24 or cardinality(v_wins) > 8 then raise exception 'invalid_input' using errcode = '22023'; end if;
   foreach s in array v_slots loop
     if s is null or s !~ '^[A-Za-z0-9-]{1,16}$' then raise exception 'invalid_input' using errcode = '22023'; end if;
   end loop;
