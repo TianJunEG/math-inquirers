@@ -154,6 +154,18 @@ def guide_lookback(d):
             'Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.')
 
 
+def guide_toolbox(d):
+    """A compact box for the front matter: the eight tools in band A words (today's marked) and the three look-back questions. Same in every lesson."""
+    x = info(d)
+    if not x:
+        return ''
+    li = ''.join(f'<li><b>{E(t["name"])}</b>{" (today)" if (not x["choose"] and t["id"] == x["tool"]["id"]) else ""}: {E(t["def"][BAND])}</li>' for t in TOOLS)
+    qs = ''.join(f'<li>{E(q)}</li>' for q in PROMPTS)
+    return (f'<div class="box t"><b>Toolbox and look-back (the same wording in every lesson)</b><div style="column-count:2;column-gap:18px;font-size:11.5px"><ul style="margin:3px 0 3px 16px">{li}</ul></div>'
+            f'<div class="small"><b>Look-back, about 2 minutes, one problem from today:</b></div><ol style="margin:2px 0 2px 18px;font-size:11.5px">{qs}</ol>'
+            f'<div class="small">The child ticks the tool used. Name the tool, not the answer, when you praise. {E(LB["intro"])}</div></div>')
+
+
 def lookback_lines():
     """Plain text for the look-back script lines and slide note (used by tools/apply_spine_term.py)."""
     T = _TERM

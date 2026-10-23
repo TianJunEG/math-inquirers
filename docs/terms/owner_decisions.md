@@ -218,3 +218,12 @@ Owner replied "Term-all" = accept all recommendations:
 
 ## 23 Oct 2026 (night): ENTITY-OK
 Owner confirmed the copyright line "(c) 2026 Preciouslyours Pte Ltd" (entity and year) for the Primary 1 booklets and school-book products. Still open: registered office address (placeholder), publisher line, licence wording and term (lawyer), and how the school name is set per booklet.
+
+## 23 Oct 2026 (night): decisions on lesson x.10 plan and P1 disclaimer
+Owner replied: RETIRE-YES, X10-BEFORE, T1-REFRAME-NOW, L39-YES, PRIVACY-REWORD, DISCLAIMER-KEEP.
+- RETIRE-YES: Level 1 "Doubles and Near Doubles" (lesson 13) and "Fill the Grid" (lesson 30) stop being lessons; their best items are absorbed elsewhere (docs/pedagogy/lesson_x10_consolidation_plan.md).
+- X10-BEFORE: lessons 20, 30, 40 become choose-the-tool consolidation lessons BEFORE the first release of the term books, inside the lesson 20-40 rebuild already required by WAIT-DIAGRAMS.
+- T1-REFRAME-NOW: Term 1 lesson 10 (Story Steps) is reframed in the same wave (Book 2 prints first).
+- L39-YES: lesson 39 is rebalanced to the eight card names.
+- PRIVACY-REWORD: every Quest privacy checklist is reworded to allow the private three-word independence scale (tutor notes only; no tally to children or parents; no ranking).
+- DISCLAIMER-KEEP: the "Not affiliated with or endorsed by the Ministry of Education, Singapore" sentence stays on the P1 booklet licence pages only (lawyer to confirm wording).

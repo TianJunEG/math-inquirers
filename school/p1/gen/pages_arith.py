@@ -328,6 +328,7 @@ def page03():
     rng = random.Random(303)
     word = "SHADOW"
     kinds_ = ["star", "ball", "cat", "drum"]
+    objk = [kinds_[i % 4] for i in range(6)]; rng.shuffle(objk)
     while True:
         items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
         for k in range(6):
@@ -337,12 +338,11 @@ def page03():
             if g * per > lim: continue
             items.append((kind, g * per, g, per))
         if len(items) != 6: continue
+        if sum((n + int(96 / (_osz(ok_) + 0.8)) - 1) // int(96 / (_osz(ok_) + 0.8)) for (kd, n, g_, p_), ok_ in zip(items, objk)) > 9: continue
         ans = [per if kind == "share" else g for kind, n, g, per in items]
         if len(set(ans)) != 6 or len({(n, g if kind == "share" else per) for kind, n, g, per in items}) != 6: continue
         table = make_code_table(ans, word, rng, 1, 20, n_decoy=3, near=(1, -1, 2, -2, 3, -3), tries=80)
         if table: break
-    objk = [kinds_[(i + rng.randrange(4)) % 4] for i in range(6)]
-    if len(set(objk)) < 4: objk = [kinds_[i % 4] for i in range(6)]
     rows = ""; svgs = []; texts = []
     for i, ((kind, n, g, per), ok_) in enumerate(zip(items, objk)):
         s_, _ = share_svg(ok_, n, g, per, kind); svgs.append(s_)
@@ -353,7 +353,7 @@ def page03():
             t1 = f"Put {n} {nm} in groups of {per}."; t2 = "How many groups?"
         texts.append((t1, t2))
         rows += (f'<div class="shrow"><span class="no">{i+1}</span><div class="shmid"><p class="shtxt">{t1} {t2}</p><div class="shsvg">{s_}</div></div><span class="ab"></span></div>')
-    body = f'<p class="lead" style="margin:0;font-size:11pt">Share equally: each plate, box, bowl or bag gets the same.</p><div class="shrows">{rows}</div><div class="ctc">{code_block(table)}</div>'
+    body = f'<div class="shrows">{rows}</div><div class="ctc">{code_block(table)}</div>'
     solved = []; drawn = []
     for (t1, t2), s_, (kind, n, g, per) in zip(texts, svgs, items):
         n_obj, n_cont, inside = read_share(s_, kind)
@@ -367,7 +367,7 @@ def page03():
     P = Page(no=3, title="Fair Shares", tier=1, topic="Sharing equally and making equal groups (within 20)",
              strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.4 (dividing within 20: sharing and grouping, no division sign)",
              ptype="Code-breaker", mech="K1 code word (6 letters) + K7 put the number back",
-             instr=["Look at the pictures.", "Write how many.", "Use the code table."],
+             instr=["Share equally: each one gets the same.", "Write how many.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
              note="Pictures of apples, stars, fish and balloons, with empty plates, boxes, bowls and bags. Three items share the objects equally among the containers drawn; three put the objects into groups of a stated size (a dashed loop shows the first group). Every share is exact, with nothing left over. No division sign is used. A pupil can check by multiplying back: containers times each one's share is the number of objects. A printed line says each container gets the same number (the sharer rule).",

@@ -270,6 +270,7 @@ TOOL_EDITS = [
     TE('b_guide.py', 'import spine_term as SPT', "import svg\n\nCSS", "import svg\nimport spine_term as SPT\n\nCSS"),
     TE('b_guide.py', 'SPT.guide_row', "    for a, b in rows: H.append(f'<tr><th style=\"width:110px\">{a}</th><td>{b}</td></tr>')", "    _sr = SPT.guide_row(d)\n    if _sr: rows.insert(1, _sr)      # spine: Tool of the day row\n    for a, b in rows: H.append(f'<tr><th style=\"width:110px\">{a}</th><td>{b}</td></tr>')"),
     TE('b_guide.py', 'SPT.guide_lookback', "A child who ticks still stuck gets a check-in in the open session next lesson.</div>')\n", "A child who ticks still stuck gets a check-in in the open session next lesson.</div>')\n    if SPT.row(d): H[-1] = f'<h3>Look-back ({rng(\"look\")})</h3><div class=\"q\">{SPT.guide_lookback(d)}</div>'      # spine: the three common prompts\n"),
+    TE('b_guide.py', 'SPT.guide_toolbox', "    H.append('<div class=\"box t\"><b>Before the lesson</b>", "    if SPT.row(d): H.append(SPT.guide_toolbox(d))      # spine: the eight tools and the three look-back questions\n    H.append('<div class=\"box t\"><b>Before the lesson</b>"),
     # ---- b_deck.py (slides)
     TE('b_deck.py', 'import spine_term as SPT', "import svg\n\nBF = ", "import svg\nimport spine_term as SPT\n\nBF = "),
     TE('b_deck.py', 'SPT.deck_lookback', "def lookback(d):\n    lb = d['look_back']\n", "def lookback(d):\n    _sp = SPT.deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip)      # spine: three common prompts, Tool I used row, stuck and pass\n    if _sp: return _sp\n    lb = d['look_back']\n"),
