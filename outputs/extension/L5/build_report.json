@@ -57,9 +57,9 @@
    "kind": "front",
    "label": "Pace plan",
    "exempt": true,
-   "fill": 0.7470552265705458,
+   "fill": 0.7612802523171988,
    "over": false,
-   "excess_mm": -65,
+   "excess_mm": -61.3,
    "edition": "soft"
   },
   {
@@ -1093,9 +1093,9 @@
    "kind": "front",
    "label": "Pace plan",
    "exempt": true,
-   "fill": 0.7491149588053553,
+   "fill": 0.7633399845520082,
    "over": false,
-   "excess_mm": -64.5,
+   "excess_mm": -60.8,
    "edition": "print"
   },
   {
@@ -2092,7 +2092,7 @@
  "bw_pipeline": {
   "pages": 104,
   "dpi": 600,
-  "mb": 14.46,
+  "mb": 14.45,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }

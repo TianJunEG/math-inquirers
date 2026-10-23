@@ -10,39 +10,41 @@
  "learn": {
   "intro": "To start a puzzle, try one of 3 ways. Draw it, list it, or make a table. Then check every clue.",
   "example": {
-   "problem": "Mei is 4th from the front and 6th from the back of a line. How many children are in the line?",
+   "problem": "Mei is 6th from the front and 3rd from the back of a line. Count the children in the whole line.",
    "figure": {
     "type": "l3_queue",
-    "n": 9,
+    "n": 8,
     "marks": {
-     "4": "Mei"
+     "6": "Mei"
     },
-    "width_mm": 128
+    "width_mm": 120
    },
    "steps": [
-    "Draw the line. Put Mei in 4th place from the front.",
-    "Count from Mei to the back: Mei is 6th from the back, so 5 children are behind her.",
-    "3 children are in front of Mei, then Mei, then 5 behind: 3 + 1 + 5 = 9."
+    "Draw the line. Put Mei in 6th place from the front.",
+    "Mei is 3rd from the back, so 2 children are behind her.",
+    "5 children are in front of Mei, then Mei, then 2 behind: 5 + 1 + 2 = 8.",
+    "Check: 6 + 3 - 1 = 8."
    ],
-   "answer": "There are 9 children in the line."
+   "answer": "There are 8 children in the line."
   },
   "howto": {
    "title": "Three ways to start",
    "steps": [
     "Draw it: make a picture of the puzzle.",
     "List it: write every case in order.",
-    "Table: write what you know in rows and columns."
+    "Table: write what you know in rows and columns.",
+    "Check your answer against every clue."
    ]
   },
   "try": {
-   "text": "Siti is 5th from the front and 3rd from the back. How many children are in the line? {b}",
+   "text": "Siti is 2nd from the front and 7th from the back of a line. The line has {b} children.",
    "answer": {
     "value": [
-     "7"
+     "8"
     ],
-    "text": "7"
+    "text": "8"
    },
-   "explanation": "4 children are in front of Siti and 2 are behind her. 4 + 1 + 2 = 7. Check: 5 + 3 - 1 = 7.",
+   "explanation": "1 child is in front of Siti and 6 are behind her. 1 + 1 + 6 = 8. Check: 2 + 7 - 1 = 8.",
    "id": "L3U10-L01"
   },
   "tight": true
@@ -193,7 +195,36 @@
    "id": "L3U10-S03",
    "tier": "start",
    "page": 1,
-   "text": "Each child has a different fruit. Kumar has neither the apple nor the banana. The child with the orange has a name with 4 letters. Wei does not have the apple. Put a tick or a cross in each box.",
+   "text": "The 3rd of a month is a Tuesday.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 24th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}",
+     "answer": {
+      "value": [
+       "Tue"
+      ],
+      "text": "Tue"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 30th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}",
+     "answer": {
+      "value": [
+       "Mon"
+      ],
+      "text": "Mon"
+     }
+    }
+   ],
+   "explanation": "(a) From the 3rd to the 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) From the 3rd to the 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday."
+  },
+  {
+   "id": "L3U10-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Each child has a different fruit. Kumar has neither the apple nor the banana. The child with the orange has a name with 4 letters. Wei does not have the apple. Use ticks and crosses in the grid.",
    "parts": [
     {
      "label": "a",
@@ -293,14 +324,14 @@
    }
   },
   {
-   "id": "L3U10-S04",
+   "id": "L3U10-S05",
    "tier": "start",
    "page": 2,
    "text": "Draw it. Count the children in each line.",
    "parts": [
     {
      "label": "a",
-     "text": "Ravi is 3rd from the front. Mei is last. 5 children stand between them. There are {b} children in the line.",
+     "text": "Ravi is 3rd from the front. Mei is last. 5 children stand between them. The line has {b} children.",
      "answer": {
       "value": [
        "9"
@@ -310,7 +341,7 @@
     },
     {
      "label": "b",
-     "text": "Aisha is 7th from the front and 3rd from the back. There are {b} children in the line.",
+     "text": "Aisha is 8th from the front and 2nd from the back. The line has {b} children.",
      "answer": {
       "value": [
        "9"
@@ -319,7 +350,7 @@
      }
     }
    ],
-   "explanation": "(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 6 children are in front of Aisha and 2 are behind her: 6 + 1 + 2 = 9.",
+   "explanation": "(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 7 children are in front of Aisha and 1 is behind her: 7 + 1 + 1 = 9.",
    "space": {
     "rows": [
      "Draw (a):",
@@ -328,10 +359,10 @@
    }
   },
   {
-   "id": "L3U10-S05",
+   "id": "L3U10-S06",
    "tier": "start",
    "page": 2,
-   "text": "Use the cards 3, 6 and 9 once each. List ALL the 3-digit numbers you can make. Begin with the smallest.",
+   "text": "Make every 3-digit number from the cards 3, 6 and 9. Use each card once in a number. List them from the smallest.",
    "parts": [
     {
      "label": "a",
@@ -373,9 +404,9 @@
    "explanation": "Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700. The others are much farther away."
   },
   {
-   "id": "L3U10-S06",
+   "id": "L3U10-S07",
    "tier": "start",
-   "page": 2,
+   "page": 3,
    "text": "Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 hexagons need 11 sticks. 3 hexagons need 16 sticks. Make a table.",
    "parts": [
     {
@@ -515,10 +546,10 @@
    }
   },
   {
-   "id": "L3U10-S07",
+   "id": "L3U10-S08",
    "tier": "start",
-   "page": 2,
-   "text": "Find ALL the numbers I could be. I am a 3-digit even number less than 400. My digits add up to 9. None of my digits is 0. My tens digit is greater than my ones digit.\n{ll}",
+   "page": 3,
+   "text": "Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is greater than the ones digit.\n{ll}",
    "answer": {
     "value": [
      "162",
@@ -536,10 +567,10 @@
    }
   },
   {
-   "id": "L3U10-S08",
+   "id": "L3U10-S09",
    "tier": "start",
    "page": 3,
-   "text": "Two numbers add up to 60. One number is 14 more than the other. What are the numbers? {b} and {b}",
+   "text": "Two numbers add up to 60. The greater number is 14 more than the smaller one. Find the 2 numbers. {b} and {b}",
    "answer": {
     "value": [
      "23",
@@ -556,59 +587,7 @@
    }
   },
   {
-   "id": "L3U10-S09",
-   "tier": "start",
-   "page": 3,
-   "text": "A snail climbs a wall 10 m high. Each day it climbs up 4 m. Each night it slides down 1 m. On which day does it reach the top? Day {b}",
-   "answer": {
-    "value": [
-     "3"
-    ],
-    "text": "3"
-   },
-   "explanation": "Day 1: it climbs to 4 m and slides back to 3 m. Day 2: it climbs to 7 m and slides back to 6 m. Day 3: it climbs from 6 m to 10 m. It reaches the top on day 3 and does not slide back.",
-   "space": {
-    "table": {
-     "cols": [
-      "day",
-      "in the morning",
-      "at night"
-     ],
-     "rows": 3
-    }
-   }
-  },
-  {
    "id": "L3U10-S10",
-   "tier": "start",
-   "page": 3,
-   "text": "The 3rd of a month is a Tuesday.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "The 24th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}",
-     "answer": {
-      "value": [
-       "Tue"
-      ],
-      "text": "Tue"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The 30th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}",
-     "answer": {
-      "value": [
-       "Mon"
-      ],
-      "text": "Mon"
-     }
-    }
-   ],
-   "explanation": "(a) From the 3rd to the 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) From the 3rd to the 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday."
-  },
-  {
-   "id": "L3U10-S11",
    "tier": "start",
    "page": 3,
    "text": "Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 2 juices and 1 sandwich. Her change is ${b}.",
@@ -619,37 +598,6 @@
     "text": "2.90"
    },
    "explanation": "2 juices cost 2 × 1.85 = 3.70. With the sandwich: 3.70 + 3.40 = 7.10. Change: 10.00 - 7.10 = 2.90."
-  },
-  {
-   "id": "L3U10-S12",
-   "tier": "start",
-   "page": 3,
-   "text": "I think of a number. I double it and add 5. The answer is 21. My number is {b}.",
-   "answer": {
-    "value": [
-     "8"
-    ],
-    "text": "8"
-   },
-   "explanation": "Work backwards. Take away 5 from 21: 16. Then halve it: 8. Check: 8 × 2 = 16, and 16 + 5 = 21."
-  },
-  {
-   "id": "L3U10-S13",
-   "tier": "start",
-   "page": 3,
-   "text": "Look for a pattern. 2, 7, 12, 17, ... The 12th number is {b}.",
-   "answer": {
-    "value": [
-     "57"
-    ],
-    "text": "57"
-   },
-   "explanation": "The numbers go up by 5 each time. The 12th number is the 1st number plus 11 jumps: 2 + 11 × 5 = 57.",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   }
   },
   {
    "id": "L3U10-T01",
@@ -678,7 +626,7 @@
    "id": "L3U10-T02",
    "tier": "think",
    "page": 4,
-   "text": "One of Ben, Aisha and Wei broke a cup. Ben says, “Wei did it.” Aisha says, “I did not do it.” Wei says, “Ben is telling a lie.” Only ONE of them is telling the truth. Who broke the cup?   {circ:Ben|Aisha|Wei}",
+   "text": "One of Ben, Aisha and Wei broke a cup. They each say 1 thing: Ben “Wei did it”, Aisha “Not me”, Wei “Ben is lying”. Exactly 1 of them tells the truth. Who broke the cup?   {circ:Ben|Aisha|Wei}",
    "answer": {
     "value": [
      "Aisha"
@@ -756,7 +704,7 @@
    "id": "L3U10-G01",
    "tier": "go",
    "page": 5,
-   "text": "How many squares of any size can you find in a 4 by 4 grid of squares? Start with the 1 by 1 squares.",
+   "text": "Count the squares of every size in a 4 by 4 grid. Begin with the small ones.",
    "parts": [
     {
      "label": "a",
@@ -837,7 +785,7 @@
    "id": "L3U10-G03",
    "tier": "go",
    "page": 5,
-   "text": "Ali has 8 coins. They are 10¢ coins and 20¢ coins. They are worth $1.50 in all. How many of each coin does he have?",
+   "text": "Ali has 8 coins. They are 10¢ coins and 20¢ coins, worth $1.50 in all. Find how many coins of each kind.",
    "parts": [
     {
      "label": "a",
@@ -869,7 +817,7 @@
       "20¢ coins",
       "value"
      ],
-     "rows": 3
+     "rows": 2
     }
    }
   },
@@ -920,9 +868,9 @@
     ],
     "max": 40,
     "step": 5,
-    "width_mm": 70,
+    "width_mm": 56,
     "unit_label": "pencils",
-    "h": 220
+    "h": 170
    },
    "figright": true
   },
@@ -930,14 +878,14 @@
    "id": "L3U10-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Mei is 5th from the front and 4th from the back of a line. There are {b} children in the line.",
+   "text": "Ben is 3rd from the front and 6th from the back of a line. The line has {b} children.",
    "answer": {
     "value": [
      "8"
     ],
     "text": "8"
    },
-   "explanation": "4 children are in front of Mei and 3 are behind her. 4 + 1 + 3 = 8."
+   "explanation": "2 children are in front of Ben and 5 are behind him. 2 + 1 + 5 = 8."
   },
   {
    "id": "L3U10-C03",

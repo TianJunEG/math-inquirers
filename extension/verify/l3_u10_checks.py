@@ -21,9 +21,8 @@ def only(xs):
 
 @check('L3U10-L01')
 def _():
-    front, back = 5, 3
+    front, back = 2, 7
     line = [None] * (front + back - 1)
-    assert len(line) == 7 and line.index(None) == 0
     return s([len(line)])
 
 
@@ -41,7 +40,7 @@ def _():
     return {'a': s([v['A']]), 'b': s([v['B']]), 'c': s([v['C']]), 'd': s([sum(v.values())])}
 
 
-@check('L3U10-S03')
+@check('L3U10-S04')
 def _():
     names = ['Kumar', 'Aisha', 'Wei', 'Lily']
     fruits = ['apple', 'banana', 'grapes', 'orange']
@@ -60,22 +59,22 @@ def _():
     return {'a': [h['Kumar']], 'b': [h['Aisha']], 'c': [h['Wei']], 'd': [h['Lily']]}
 
 
-@check('L3U10-S04')
+@check('L3U10-S05')
 def _():
     # (a) positions: Ravi 3rd, 5 between, Mei last
     a = 3 + 5 + 1
-    # (b) 7th from the front and 3rd from the back: build the line and search its length
-    b = only(n for n in range(1, 40) if n - 3 + 1 == 7)
+    # (b) 8th from the front and 2nd from the back: build the line and search its length
+    b = only(n for n in range(1, 40) if n - 2 + 1 == 8)
     return {'a': s([a]), 'b': s([b])}
 
 
-@check('L3U10-S05')
+@check('L3U10-S06')
 def _():
     nums = sorted({int(''.join(p)) for p in itertools.permutations('369')})
     return {'a': s(nums), 'b': s([sum(1 for n in nums if n % 2 == 0)]), 'c': s([min(nums, key=lambda n: abs(n - 700))])}
 
 
-@check('L3U10-S06')
+@check('L3U10-S07')
 def _():
     sticks = {1: 6}
     for n in range(2, 12):
@@ -84,31 +83,19 @@ def _():
     return {'a': s([sticks[6]]), 'b': s([only(n for n, v in sticks.items() if v == 41)])}
 
 
-@check('L3U10-S07')
+@check('L3U10-S08')
 def _():
     out = [n for n in range(100, 400) if n % 2 == 0 and sum(map(int, str(n))) == 9 and '0' not in str(n) and (n // 10) % 10 > n % 10]
     return s(out)
 
 
-@check('L3U10-S08')
+@check('L3U10-S09')
 def _():
     sols = [(a, b) for a in range(0, 61) for b in range(0, 61) if a + b == 60 and b == a + 14]
     return s(only(sols))
 
 
-@check('L3U10-S09')
-def _():
-    height, day = 0, 0
-    while True:
-        day += 1
-        height += 4
-        if height >= 10:
-            break
-        height -= 1
-    return s([day])
-
-
-@check('L3U10-S10')
+@check('L3U10-S03')
 def _():
     days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     def day_of(date):
@@ -119,23 +106,10 @@ def _():
     return {'a': [day_of(24)], 'b': [day_of(30)]}
 
 
-@check('L3U10-S11')
+@check('L3U10-S10')
 def _():
     cents = 1000 - (2 * 185 + 340)
     return [f'{cents // 100}.{cents % 100:02d}']
-
-
-@check('L3U10-S12')
-def _():
-    return s([only(n for n in range(0, 100) if n * 2 + 5 == 21)])
-
-
-@check('L3U10-S13')
-def _():
-    seq = [2]
-    while len(seq) < 12:
-        seq.append(seq[-1] + 5)
-    return s([seq[11]])
 
 
 @check('L3U10-T01')
@@ -224,7 +198,7 @@ def _():
 
 @check('L3U10-C02')
 def _():
-    return s([5 + 4 - 1])
+    return s([3 + 6 - 1])
 
 
 @check('L3U10-C03')

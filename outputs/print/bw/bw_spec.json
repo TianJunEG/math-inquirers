@@ -1,86 +1,23 @@
 [
  {
-  "file": "outputs/print/bw/Math_Inquirers_P1_Workbook_PRINT.pdf",
-  "pages": 68,
-  "sheets": 34,
-  "mb": 14.79,
-  "pale_tint_dropped_max": null
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T4_Book8_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
+  "pages": 32,
+  "sheets": 16,
+  "mb": 5.05,
+  "pale_tint_dropped_max": 0.502
  },
  {
-  "file": "outputs/print/bw/Math_Inquirers_P2_Workbook_PRINT.pdf",
-  "pages": 74,
-  "sheets": 37,
-  "mb": 14.62,
-  "pale_tint_dropped_max": null
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P3_Workbook_PRINT.pdf",
-  "pages": 70,
-  "sheets": 35,
-  "mb": 17.41,
-  "pale_tint_dropped_max": null
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P4_Workbook_PRINT.pdf",
-  "pages": 74,
-  "sheets": 37,
-  "mb": 11.96,
-  "pale_tint_dropped_max": null
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P5_Workbook_PRINT.pdf",
-  "pages": 62,
-  "sheets": 31,
-  "mb": 10.31,
-  "pale_tint_dropped_max": null
- },
- {
-  "file": "outputs/print/bw/Math_Inquirers_P6_Workbook_PRINT.pdf",
-  "pages": 62,
-  "sheets": 31,
-  "mb": 11.05,
-  "pale_tint_dropped_max": null
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
-  "pages": 22,
-  "sheets": 11,
-  "mb": 2.92,
-  "pale_tint_dropped_max": 0.0251
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_HomePack_PRINT.pdf",
-  "pages": 12,
-  "sheets": 6,
-  "mb": 1.11,
-  "pale_tint_dropped_max": 0.0387
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book5_Lessons01-05_Workbook_PRINT.pdf",
-  "pages": 42,
-  "sheets": 21,
-  "mb": 4.83,
-  "pale_tint_dropped_max": 0.3005
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf",
-  "pages": 30,
-  "sheets": 15,
-  "mb": 4.6,
-  "pale_tint_dropped_max": 0.4865
- },
- {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_HomePack_PRINT.pdf",
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T4_Book8_Lessons06-10_HomePack_PRINT.pdf",
   "pages": 14,
   "sheets": 7,
-  "mb": 1.35,
-  "pale_tint_dropped_max": 0.0578
+  "mb": 1.32,
+  "pale_tint_dropped_max": 0.0796
  },
  {
-  "file": "outputs/print/bw/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_Workbook_PRINT.pdf",
-  "pages": 44,
-  "sheets": 22,
-  "mb": 5.76,
-  "pale_tint_dropped_max": 0.1949
+  "file": "outputs/print/bw/term/Math_Inquirers_L1_T4_Book8_Lessons06-10_Workbook_PRINT.pdf",
+  "pages": 42,
+  "sheets": 21,
+  "mb": 5.28,
+  "pale_tint_dropped_max": 0.2747
  }
 ]
