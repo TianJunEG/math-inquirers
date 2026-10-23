@@ -155,3 +155,13 @@ Medium:
 - L1: Venn loops bigger (overlap about 24 mm), house flag and sun bigger (house.png and venn.png redrawn), queue "front" label moved, pet icons spaced.
 - L3: L5 No.1 counters no longer sliced; L9 T3 box segment now 1.25 books wide (to scale); 24-hour strip "pm" label in a white box; L4 No.5 "?" moved off the dashed line; L10 No.3 queue (a) label moved off the connector and (b) ordinals removed; L8 No.2 shapes A-D drawn 1.5x; staircase captions 18 units; L4 bar labels 20 units; L7 No.6 grids 6.9 mm per cell (costs one page).
 Not done (Medium, cost): the nearly empty pages (Level 3 L4 T4, L8 No.3, L9 No.6, L10 No.6; Level 2 L1 No.6, L2 No.6, L5 T4, L9 T4): the questions cannot fold up without cutting figures or lines, and each fix would cost the child writing space. Level 1 L8 No.1 and L6 T5 tags remain as listed above.
+
+## Fourth pass: print-readiness fixes (`holiday_print_readiness.md`)
+
+Page counts unchanged: print 68 / 74 / 70 pages (34 / 37 / 35 sheets), workbooks 61 / 66 / 63. check_bw.py ok on all three B&W files (non-grey 0.00000).
+- L2 p32 counting-up lines: SVG height raised 96 -> 112, tick labels no longer clipped.
+- L2 p48 Scale 3: caption moved right of the stand, no longer crossed.
+- L2 p44 grid: lines 2.4 units wide in dark slate with longer dashes (was 1.5, pale).
+- L3 Investigation tables (p23, 39, 45, 51, 57): header and label cells are now white with black text and 1.6 px navy borders (no tint, so nothing turns into a pattern in 1-bit); rows are taller to write in (the 14-row coins table on p51 has rows about 7 mm).
+- Orange text: the P2 "take-home" marker and star (`#B45F06`, 17 uses in `p2/content/l*.js`) is now navy. A scan of the P1, P2 and P3 designed PDFs for mid-tone text found no other orange; placeholder text in L1 figures ("draw here", purse hint) was darkened from pale slate to dark slate. The Level 1 Word workbook (`hp/workbook.js`) still has the orange and is not updated.
+- Not touched, as asked: bw_spec.json beyond what `print/make_print_l1_3.py` rewrites for rows 1-3, quote_request.md, dispatch lists, old-count docs.
