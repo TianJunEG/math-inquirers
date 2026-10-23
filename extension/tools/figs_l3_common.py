@@ -218,8 +218,8 @@ def vsum(spec, w=None):
     spec: {"heads": [...], "lines": [{"sign": "", "cells": [..]}, {"sign": "+", "cells": [...], "rule": true}, {"sign": "", "cells": [...]}]}"""
     L = spec['lines']
     n = max(len(l['cells']) for l in L)
-    cw, ch = spec.get('cw', 64), spec.get('ch', 64)
-    X0 = 56
+    cw, ch = spec.get('cw', 72), spec.get('ch', 68)
+    X0 = 60
     P = []
     y = 6
     if spec.get('heads'):
@@ -246,7 +246,7 @@ def vsum(spec, w=None):
 
 # ------------------------------------------------------------------------------------------------ pyramid
 def pyramid(spec, w=None):
-    """rows from the top brick down; each row is a list of values (None = empty brick)."""
+    """rows from the top brick down; each row is a list of values (None = empty brick; "@P" = empty brick with the letter P)."""
     rows = spec['rows']
     bw, bh = spec.get('bw', 132), 62
     n = len(rows[-1])
@@ -257,9 +257,10 @@ def pyramid(spec, w=None):
         x0 = 10 + (n - k) * bw / 2
         for c, v in enumerate(row):
             x, y = x0 + c * bw, 8 + r * bh
-            P.append(f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" fill="{"#fff" if v is None else SOFT}" stroke="{NAVY}" stroke-width="{SW}"{" stroke-dasharray=\"8 6\"" if v is None else ""}/>')
+            blank = v is None or (isinstance(v, str) and v.startswith('@'))
+            P.append(f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" fill="{"#fff" if blank else SOFT}" stroke="{NAVY}" stroke-width="{SW}"{" stroke-dasharray=\"8 6\"" if blank else ""}/>')
             if v is not None:
-                P.append(T(x + bw / 2, y + bh / 2 + 11, esc(v), 32))
+                P.append(T(x + bw / 2, y + bh / 2 + 11, esc(v[1:] if blank else v), 34))
     return wrap(P, W, 16 + len(rows) * bh, 'number pyramid', w)
 
 

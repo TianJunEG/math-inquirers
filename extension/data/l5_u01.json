@@ -670,8 +670,7 @@
    ],
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "hint": "Numbers from 195 000 to 199 999 have a digit sum over 4.",
@@ -708,8 +707,7 @@
    ],
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "hint": "The greatest digits go first. Try both ways.",
@@ -826,8 +824,7 @@
      }
     }
    ],
-   "explanation": "(a) The 2 is in the hundred thousands place: 200 000. (b) 5 280 436: the ten thousands digit is 8, so round up to 5 300 000.",
-   "partsrow": true
+   "explanation": "(a) The 2 is in the hundred thousands place: 200 000. (b) 5 280 436: the ten thousands digit is 8, so round up to 5 300 000."
   },
   {
    "id": "L5U01-C02",
@@ -845,7 +842,7 @@
      7,
      9
     ],
-    "width_mm": 100,
+    "width_mm": 80,
     "alt": "digit cards"
    },
    "parts": [
@@ -866,7 +863,7 @@
    "id": "L5U01-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Put ONE pair of brackets to make the line true. Write the new line.\n8 + 12 ÷ 4 × 2 = 10\n{ll}",
+   "text": "Put ONE pair of brackets in 8 + 12 ÷ 4 × 2 = 10 to make it true. Write the new line. {ll}",
    "answer": {
     "value": [
      "(8 + 12) ÷ 4 × 2"

@@ -25,6 +25,8 @@ def P(label, text, vals, ans_text=None, **kw):
 
 def IT(uid, kind, n, page, text, why, answer=None, parts=None, fig=None, hint=None, space=None, **kw):
     tier = {'S': 'start', 'T': 'think', 'G': 'go', 'C': 'quiz', 'L': 'start'}[kind]
+    if kw.get('beyond'):
+        text = 'Beyond Level 6: ' + kw.pop('beyond') + '.\n' + text   # the shared renderer prints 'Beyond Level 1' for the beyond key, so the label is part of the text (see extension/l6/TOOL_REQUESTS.md)
     it = {'id': f'{uid}-{kind}{n:02d}', 'tier': tier, 'text': m(text)}
     if kind != 'L':
         it['page'] = page
