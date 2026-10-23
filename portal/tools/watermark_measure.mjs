@@ -1,3 +1,5 @@
+// Measures what stamping a footer on every page with pdf-lib would cost (CPU, wall time, memory). NOT used by the shop: watermarking is not enabled (docs/shop/delivery_plan.md).
+//   mkdir /tmp/pdfl && cd /tmp/pdfl && npm i pdf-lib@1.17.1 && cp <repo>/portal/tools/watermark_measure.mjs . && node watermark_measure.mjs <repo>/outputs/print/Math_Inquirers_P2_Workbook_PRINT.pdf
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import fs from 'node:fs';
 const f = process.argv[2];
