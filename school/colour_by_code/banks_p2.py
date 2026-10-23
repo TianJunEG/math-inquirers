@@ -577,6 +577,7 @@ def _measure(tier):
         if u == "m": return None
         s_ = r.randint(2, 9) if u != "g" else r.choice([50, 100])
         return SEM([f"{n + s_} {MINUS} {s_} = {BOX} {u}"], lambda v, t_=a: v == t_, str(n), form="subtract, one line")
+    for f_ in (ruler, cm_cut, m_cm, kg_heavier, bal, g_add, kg_g, l_left, l_share): f_.pref = 1      # real units (ruler, balance, m to cm, kg to g, word problems) before bare sums with a unit label
     return [ruler, cm_cut, cm_add, m_cm, kg_add, kg_heavier, bal, g_add, kg_g, l_left, l_add, l_share, short, less, one]
 
 # ------------------------------------------------------------------ picture graphs and tally
@@ -787,8 +788,10 @@ def build_banks():
             instr="Find how many minutes. Find the answer in the key. Colour the part with that colour.")},
         {1: "Time to the minute", 2: "Time: hours, minutes and how long"})
     md = [(n, u) for u in ("cm", "m", "g", "kg", "l") for n in range(0, 1001)]
-    B["measure"] = Bank("measure", "Measures", "Length, mass and volume: cm, m, g, kg and l", "Find the measure. Find it in the key. Colour the part with that colour.",
-        {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}"), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")})
+    B["measure"] = Bank("measure", "Measures", "Length, mass and volume", "Find the measure. Find it in the key. Colour the part with that colour.",
+        {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}"), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")},
+        parts=[("cm", lambda f, a: a[1] == "cm" and f != "m_cm"), ("m", lambda f, a: f == "m_cm"), ("g", lambda f, a: a[1] == "g" and f != "kg_g"), ("kg", lambda f, a: a[1] == "kg" or f == "kg_g"), ("l", lambda f, a: a[1] == "l")],
+        prefix="Length, mass and volume: ")
     B["graph"] = Bank("graph", "Graphs", "Picture graphs and tally marks", "Read the graph. Find the answer in the key. Colour the part with that colour.",
         {1: T([4, 6, 8, 10, 12], range(0, 101), _graph(1)), 2: T([6, 8, 10, 12, 15], range(0, 101), _graph(2))})
     B["shape"] = Bank("shape", "Shapes", "2D and 3D shapes and shape patterns", "Look at the shapes. Find the answer in the key. Colour the part with that colour.",
@@ -802,11 +805,14 @@ GALLERY = [
     dict(id="CBC-P2-03", picture="elephant", bank="sub", tier=2, seed=303),
     dict(id="CBC-P2-04", picture="house", bank="mult", tier=1, seed=304),
     dict(id="CBC-P2-05", picture="castle", bank="div", tier=1, seed=305),
-    dict(id="CBC-P2-06", picture="owl", bank="frac", tier=1, seed=318),
+    dict(id="CBC-P2-06", picture="owl", bank="frac", tier=1, seed=4),
     dict(id="CBC-P2-07", picture="dinosaur", bank="money", tier=2, seed=307),
     dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=1, seed=308),
-    dict(id="CBC-P2-09", picture="sailboat", bank="measure", tier=1, seed=309),
+    dict(id="CBC-P2-09", picture="sailboat", bank="measure", tier=2, seed=309),
     dict(id="CBC-P2-10", picture="butterfly", bank="graph", tier=2, seed=310),
     dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=1, seed=311),
     dict(id="CBC-P2-12", picture="icecream", bank="oddeven", tier=2, seed=312),
+    dict(id="CBC-P2-13", picture="fish", bank="pattern", tier=1, seed=1),
+    dict(id="CBC-P2-14", picture="dinosaur", bank="mult", tier=2, seed=1),
+    dict(id="CBC-P2-15", picture="house", bank="frac", tier=2, seed=1),
 ]

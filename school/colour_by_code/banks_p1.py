@@ -480,12 +480,12 @@ def ordw(n): return f"{n}" + ("th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd"
 def _ord(tier):
     def row_l(a, r):
         if a > 8: return None
-        n = r.randint(a, 8); q = SEM([f"From the left,", f"the black one is {BOX}th"], lambda v, t_=a: v == t_, str(a), art=A.queue(n, a), form="from the left")
-        q.extra = lambda ans, n=n, a=a: a == ans; q.layout = "stack"; return q
+        n = r.randint(a, 8); q = SEM(["From left:", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), art=A.queue(n, a), form="from the left")
+        q.extra = lambda ans, a=a: a == ans; return q
     def row_r(a, r):
         if a > 8: return None
         n = r.randint(a, 8); k = n + 1 - a
-        q = SEM([f"From the right,", f"the black one is {BOX}th"], lambda v, t_=a: v == t_, str(a), art=A.queue(n, k), form="from the right")
+        q = SEM(["From right:", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), art=A.queue(n, k), form="from the right")
         q.extra = lambda ans, n=n, k=k: n + 1 - k == ans; return q
     def before(a, r): return SEM([f"{a - 1} children are in", f"front of Mia. Mia is {BOX}th."], lambda v, t_=a: v == t_, str(a), form="children in front")
     def after(a, r):
@@ -495,8 +495,12 @@ def _ord(tier):
         d = r.randint(1, 4); t = a + d
         return SEM([f"Sam is {ordw(t)}. Jo is {d}", f"places before Sam. Jo is {BOX}th."], lambda v, t_=a: v == t_, str(a), form="places before") if t <= 10 else None
     def seq(a, r): return SEM([f"{ordw(a - 2)}, {ordw(a - 1)},", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), form="ordinal sequence")
+    def seq_down(a, r): return SEM([f"{ordw(a + 2)}, {ordw(a + 1)},", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), form="ordinal sequence down") if a + 2 <= 10 else None
+    def gap(a, r): return SEM([f"{ordw(a - 1)}, {BOX}th,", f"{ordw(a + 1)}"], lambda v, t_=a: v == t_, str(a), form="ordinal gap") if a + 1 <= 10 else None
     def between(a, r): return SEM([f"Between {ordw(a - 1)} and {ordw(a + 1)}", f"is {BOX}th"], lambda v, t_=a: v == t_, str(a), form="between") if a + 1 <= 10 else None
-    return [row_l, row_r, before, after, beforek, seq, between]
+    def next_(a, r): return SEM([f"Just after {ordw(a - 1)}:", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), form="just after")
+    def prev_(a, r): return SEM([f"Just before {ordw(a + 1)}:", f"{BOX}th"], lambda v, t_=a: v == t_, str(a), form="just before") if a + 1 <= 10 else None
+    return [row_l, row_r, before, after, beforek, seq, seq_down, gap, between, next_, prev_]
 
 def build_banks():
     B = {}
@@ -547,4 +551,8 @@ GALLERY = [
     dict(id="CBC-08", picture="butterfly", bank="time",    tier=1, seed=108),
     dict(id="CBC-09", picture="icecream",  bank="length",  tier=1, seed=109),
     dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=114),
+    dict(id="CBC-11", picture="car",       bank="mult",    tier=2, seed=1),
+    dict(id="CBC-12", picture="castle",    bank="share",   tier=1, seed=1),
+    dict(id="CBC-13", picture="icecream",  bank="pgraph",  tier=1, seed=5),
+    dict(id="CBC-14", picture="sailboat",  bank="ordinal", tier=1, seed=1),
 ]

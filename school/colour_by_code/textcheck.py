@@ -453,7 +453,7 @@ def equal_groups_short(m, c): return exact_div(I(m[1]), I(m[2]))
 @R(r"(\d+) pens, (\d+) in a box\. Boxes: " + B)
 def pens_boxes(m, c): return exact_div(I(m[1]), I(m[2]))
 ORD = r"(\d+)(?:st|nd|rd|th)"
-@R(r"From the (left|right), the black one is " + B + "th")
+@R(r"From (left|right): " + B + "th")
 def queue_pos(m, c):
     if not meta_is(c, "queue"): return NOT_ME
     k, n = c["meta"]["k"], c["meta"]["n"]
@@ -465,7 +465,13 @@ def places_after(m, c): return I(m[1]) + I(m[2])
 @R(r"Sam is " + ORD + r"\. Jo is (\d+) places before Sam\. Jo is " + B + r"th\.")
 def places_before(m, c): return I(m[1]) - I(m[2])
 @R(ORD + ", " + ORD + ", " + B + "th")
-def ord_seq(m, c): return I(m[2]) + 1 if I(m[2]) == I(m[1]) + 1 else None
+def ord_seq(m, c): return I(m[2]) + (I(m[2]) - I(m[1])) if abs(I(m[2]) - I(m[1])) == 1 else None
+@R(ORD + ", " + B + "th, " + ORD)
+def ord_gap(m, c): return I(m[1]) + 1 if I(m[2]) - I(m[1]) == 2 else None
+@R(r"Just after " + ORD + ": " + B + "th")
+def just_after(m, c): return I(m[1]) + 1
+@R(r"Just before " + ORD + ": " + B + "th")
+def just_before(m, c): return I(m[1]) - 1
 @R(r"Between " + ORD + " and " + ORD + " is " + B + "th")
 def ord_between(m, c): return I(m[1]) + 1 if I(m[2]) - I(m[1]) == 2 else None
 

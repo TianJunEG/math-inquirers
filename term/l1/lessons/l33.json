@@ -2171,16 +2171,10 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Mei draws an L shape on a grid.",
+    "text": "Mei draws an L shape on a grid. Copy it on the empty grid.",
     "parts": [
      {
-      "l": "a",
-      "text": "Copy the L shape on the empty grid.",
-      "ans": "A copy of the L shape, the same size",
-      "val": "drawn"
-     },
-     {
-      "l": "b",
+      "l": "",
       "text": "The L shape is [] steps across and [] steps up.",
       "ans": "3; 3",
       "val": [
@@ -2233,14 +2227,14 @@
         3
        ]
       ],
-      "size": "m"
+      "size": 70
      },
      {
       "type": "grid",
       "rows": 3,
       "cols": 3,
       "kind": "dots",
-      "size": "m"
+      "size": 70
      }
     ]
    },
@@ -2251,47 +2245,41 @@
     "text": "A counter starts at S. It moves only right and up to reach E.",
     "parts": [
      {
-      "l": "a",
+      "l": "",
       "text": "The counter moves [] right and [] up.",
-      "ans": "2; 3",
+      "ans": "2; 2",
       "val": [
        2,
-       3
+       2
       ]
-     },
-     {
-      "l": "b",
-      "text": "Draw the counter's path from S to E.",
-      "ans": "Any path that goes only right and up",
-      "val": "drawn"
      }
     ],
-    "answer": "2 right, 3 up; any path that goes only right and up",
+    "answer": "2 right, 2 up",
     "val": [
      2,
-     3
+     2
     ],
     "hint": "Count the steps along the bottom, then the steps up.",
-    "solution": "E is 2 steps to the right of S and 3 steps up. One path is 2 right and then 3 up. Any path with 2 right steps and 3 up steps works, in any order.",
+    "solution": "E is 2 steps to the right of S and 2 steps up. One path is 2 right and then 2 up. Count the jumps between the dots, not the dots.",
     "mistakes": [
      "Counting dots, not steps (3 right).",
-     "Swapping right and up (3 right, 2 up)."
+     "Swapping right and up."
     ],
     "mins": 2.5,
     "visual": {
      "type": "grid",
-     "rows": 3,
+     "rows": 2,
      "cols": 3,
      "kind": "dots",
      "start": [
       0,
-      3
+      2
      ],
      "end": [
       2,
       0
      ],
-     "size": "m"
+     "size": 78
     }
    },
    {
@@ -2301,24 +2289,18 @@
     "text": "Start at S. Go 4 steps right. Then go 1 step up.",
     "parts": [
      {
-      "l": "a",
-      "text": "Draw the path.",
-      "ans": "A line 4 steps right and then 1 step up",
-      "val": "drawn"
-     },
-     {
-      "l": "b",
-      "text": "Draw a ring round the dot where you stop.",
-      "ans": "The ring is on the dot 4 right and 1 up from S",
+      "l": "",
+      "text": "Draw the path. Then draw a ring round the dot where you stop.",
+      "ans": "A line 4 steps right and then 1 step up, with a ring on the dot where it stops",
       "val": "drawn"
      }
     ],
-    "answer": "A line 4 right and then 1 up; ring on the dot where it stops",
+    "answer": "A line 4 right and then 1 up; a ring on the dot where it stops",
     "val": [
      "drawn"
     ],
     "hint": "Put your pencil on S. Jump to the next dot 4 times.",
-    "solution": "Start on S. 4 steps right: count 1, 2, 3, 4 jumps along the bottom row. Then 1 step up. The ring goes on the dot 4 right and 1 up from S.",
+    "solution": "Start on S. 4 steps right: count 4 jumps along the bottom row. Then 1 step up. The ring goes on the dot 4 right and 1 up from S.",
     "mistakes": [
      "Counting S as the first step.",
      "Going 4 up and 1 right (swapped)."
@@ -2326,21 +2308,21 @@
     "mins": 3,
     "visual": {
      "type": "grid",
-     "rows": 3,
+     "rows": 2,
      "cols": 4,
      "kind": "dots",
      "start": [
       0,
-      3
+      2
      ],
-     "size": "m"
+     "size": 78
     }
    },
    {
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Which picture is an exact copy of the T shape?",
+    "text": "Look at the first picture. Which picture is an exact copy of it?",
     "parts": [
      {
       "l": "",
@@ -2358,55 +2340,54 @@
     "val": [
      "B"
     ],
-    "hint": "Count the steps across the top bar and down the stem in the T shape. Then count in each picture.",
-    "solution": "The T shape has a top bar 3 steps across and a stem that makes it 3 steps tall. Picture A has a stem 1 step too short. Picture C has a top bar 1 step too wide. Picture B is the same T shape moved 1 step to the right, so B is the exact copy.",
+    "hint": "Count the steps across the top bar and down the stem in the first picture. Then count in each of the other pictures.",
+    "solution": "The first picture is a T shape with a top bar 3 steps across and a stem that makes it 3 steps tall. Picture A has a stem 1 step too short. Picture C has a top bar 1 step too wide. Picture B is the same T shape moved 1 step to the right, so B is the exact copy.",
     "mistakes": [
-     "Choosing the picture that sits in the same place as the T (a copy can be in a different place).",
+     "Choosing the picture that sits in the same place as the first picture (a copy can be in a different place).",
      "Counting dots instead of steps."
     ],
     "mins": 2.5,
-    "visual": {
-     "type": "grid",
-     "rows": 3,
-     "cols": 4,
-     "kind": "dots",
-     "poly": [
-      [
-       0,
-       0
-      ],
-      [
-       3,
-       0
-      ],
-      [
-       3,
-       1
-      ],
-      [
-       2,
-       1
-      ],
-      [
-       2,
-       3
-      ],
-      [
-       1,
-       3
-      ],
-      [
-       1,
-       1
-      ],
-      [
-       0,
-       1
-      ]
-     ],
-     "size": "m"
-    },
     "visuals": [
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 4,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        0,
+        1
+       ]
+      ]
+     },
      {
       "type": "grid",
       "rows": 3,
@@ -2446,7 +2427,6 @@
         1
        ]
       ],
-      "size": "m",
       "counts": {
        "2,0": "A"
       }
@@ -2490,7 +2470,6 @@
         1
        ]
       ],
-      "size": "m",
       "counts": {
        "2,0": "B"
       }
@@ -2534,7 +2513,6 @@
         1
        ]
       ],
-      "size": "m",
       "counts": {
        "2,0": "C"
       }
@@ -2545,11 +2523,11 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Three corners of a rectangle are ringed. Join the dots to finish the rectangle.",
+    "text": "S and the two ringed dots are three corners of a rectangle.",
     "parts": [
      {
       "l": "a",
-      "text": "Draw a ring round the missing corner.",
+      "text": "Draw the missing corner. Join the dots to finish the rectangle.",
       "ans": "The corner 3 right and 2 up from S",
       "val": "drawn"
      },
@@ -2568,8 +2546,8 @@
      3,
      2
     ],
-    "hint": "The missing corner is level with one ringed corner and above another.",
-    "solution": "One ringed corner is 3 steps right of S. The other is 2 steps up from S. The missing corner has both moves: 3 right and 2 up. Join the four corners to make the rectangle.",
+    "hint": "The missing corner is level with one ringed dot and above another.",
+    "solution": "One ringed dot is 3 steps right of S. The other ringed dot is 2 steps up from S. The missing corner has both moves: 3 right and 2 up. Join the four corners to make the rectangle.",
     "mistakes": [
      "Putting the corner in the same row or column as S.",
      "Swapping right and up (2 right, 3 up)."
@@ -2578,86 +2556,60 @@
     "visual": {
      "type": "grid",
      "rows": 3,
-     "cols": 3,
+     "cols": 4,
      "kind": "dots",
      "start": [
-      0,
+      1,
       3
      ],
      "mark": [
       [
-       3,
+       4,
        3
       ],
       [
-       0,
+       1,
        1
       ]
      ],
-     "size": "m"
+     "size": 78
     }
    },
    {
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Look at the path from S to E. Tick True or False for each sentence.",
+    "text": "Look at the row of dots. Tick True or False for each sentence.",
     "parts": [],
-    "answer": "True; False; False; True",
+    "answer": "True; False; True",
     "val": [
      "True",
      "False",
-     "False",
      "True"
     ],
-    "hint": "Count the jumps along the path. Do not count the dots.",
-    "solution": "The path goes 5 steps right and 1 step up. The bottom line touches 6 dots, because a line of 5 steps has 6 dots. So: 5 steps right is true; 2 steps up is false (1); 5 dots is false (6); E is 5 right and 1 up is true.",
+    "hint": "Touch the first dot. Jump to the next dot, again and again.",
+    "solution": "There are 5 dots in the row. From the first dot to the last dot there are 4 steps, because a step is a jump from one dot to the next: one fewer than the dots. So 5 dots is true, 5 steps is false and 4 steps is true.",
     "mistakes": [
-     "Ticking True for the number of dots.",
+     "Ticking True for 5 steps (counting the dots).",
      "Counting the starting dot as a step."
     ],
     "mins": 3,
     "visual": {
      "type": "grid",
-     "rows": 2,
-     "cols": 5,
+     "rows": 0,
+     "cols": 4,
      "kind": "dots",
-     "route": [
-      [
-       0,
-       2
-      ],
-      [
-       5,
-       2
-      ],
-      [
-       5,
-       1
-      ]
-     ],
-     "start": [
-      0,
-      2
-     ],
-     "end": [
-      5,
-      1
-     ],
-     "size": "m"
+     "size": 78
     },
     "tf": [
      {
-      "s": "The path goes 5 steps right."
+      "s": "There are 5 dots in the row."
      },
      {
-      "s": "The path goes 2 steps up."
+      "s": "There are 5 steps from the first dot to the last dot."
      },
      {
-      "s": "The bottom line touches 5 dots."
-     },
-     {
-      "s": "E is 5 right and 1 up from S."
+      "s": "There are 4 steps from the first dot to the last dot."
      }
     ]
    }
@@ -2715,7 +2667,7 @@
       3,
       0
      ],
-     "size": "m"
+     "size": 60
     }
    },
    {
@@ -2770,7 +2722,7 @@
       2,
       0
      ],
-     "size": "m"
+     "size": 50
     }
    },
    {
@@ -2843,53 +2795,7 @@
       0,
       2
      ],
-     "size": "m"
-    }
-   },
-   {
-    "id": "T4",
-    "page": 3,
-    "tier": "think",
-    "text": "Start at S. Go 3 steps right. Go 2 steps up. Then go 1 step left.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Draw the path.",
-      "ans": "A line 3 right, 2 up, then 1 left",
-      "val": "drawn"
-     },
-     {
-      "l": "b",
-      "text": "You stop [] right and [] up from S.",
-      "ans": "2; 2",
-      "val": [
-       2,
-       2
-      ]
-     }
-    ],
-    "answer": "2 right, 2 up",
-    "val": [
-     2,
-     2
-    ],
-    "hint": "Left is the opposite of right. One step left undoes one step right.",
-    "solution": "3 right then 1 left leaves 2 right of S. The 2 up stay. You stop 2 right and 2 up from S.",
-    "mistakes": [
-     "Writing 3 right (forgetting the left step).",
-     "Moving 1 step right instead of left."
-    ],
-    "mins": 4,
-    "visual": {
-     "type": "grid",
-     "rows": 3,
-     "cols": 4,
-     "kind": "dots",
-     "start": [
-      0,
-      3
-     ],
-     "size": "m"
+     "size": 78
     }
    }
   ],
@@ -2903,7 +2809,7 @@
      {
       "l": "a",
       "text": "Fill in the empty boxes.",
-      "ans": "4; 3; 6; 10",
+      "ans": "3; 6; 10; 4",
       "val": [
        4,
        3,
@@ -2934,33 +2840,40 @@
     ],
     "mins": 6,
     "visual": {
-     "type": "grid",
-     "rows": 3,
-     "cols": 4,
-     "kind": "squares",
-     "counts": {
-      "0,0": "1",
-      "0,1": "[]",
-      "0,2": "[]",
-      "0,3": "[]",
-      "1,0": "1",
-      "1,1": "2",
-      "1,2": "3",
-      "1,3": "[]",
-      "2,0": "1",
-      "2,1": "1",
-      "2,2": "1",
-      "2,3": "1"
-     },
-     "cell": 70,
-     "size": "m"
+     "type": "table",
+     "rows": [
+      [
+       "1",
+       "[]",
+       "[]",
+       "[]"
+      ],
+      [
+       "1",
+       "2",
+       "3",
+       "[]"
+      ],
+      [
+       "1",
+       "1",
+       "1",
+       "1"
+      ]
+     ],
+     "col_w": [
+      1,
+      1,
+      1,
+      1
+     ]
     }
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "A counter goes from S to E, moving only right or up. The grid is 3 steps across and 2 steps up. The route must pass the ringed corner.",
+    "text": "A counter goes from S to E, moving only right or up. The route must pass the ringed corner.",
     "parts": [
      {
       "l": "a",
@@ -3013,7 +2926,7 @@
        1
       ]
      ],
-     "size": "m"
+     "size": 50
     }
    },
    {
@@ -3023,20 +2936,8 @@
     "text": "Draw a shape with 4 corners on the grid. A is its bottom left corner. Many answers are right.",
     "parts": [
      {
-      "l": "a",
-      "text": "B is [] right and [] up from A.",
-      "ans": "any moves right and up",
-      "val": "open"
-     },
-     {
-      "l": "b",
-      "text": "C is [] right and [] up from A.",
-      "ans": "any moves right and up",
-      "val": "open"
-     },
-     {
-      "l": "c",
-      "text": "D is [] right and [] up from A.",
+      "l": "",
+      "text": "B is [] right and [] up from A. C is [] right and [] up from A. D is [] right and [] up from A.",
       "ans": "any moves right and up",
       "val": "open"
      }
@@ -3057,7 +2958,7 @@
      "rows": 3,
      "cols": 4,
      "kind": "dots",
-     "size": "m"
+     "size": 78
     }
    }
   ],
@@ -3066,41 +2967,25 @@
    "page": 5,
    "tier": "investigation",
    "title": "Same steps, different routes",
-   "first": "Draw two different routes from S to E, one on each grid. Count the steps in each route: ____ steps and ____ steps.",
+   "first": "Draw two different routes from S to E. Use a different line for each. Count the steps in each route: ____ steps and ____ steps.",
    "text": "Do all the routes from S to E have the same number of steps? Write why.",
-   "visuals": [
-    {
-     "type": "grid",
-     "rows": 2,
-     "cols": 3,
-     "kind": "dots",
-     "start": [
-      0,
-      2
-     ],
-     "end": [
-      3,
-      0
-     ],
-     "size": "m"
-    },
-    {
-     "type": "grid",
-     "rows": 2,
-     "cols": 3,
-     "kind": "dots",
-     "start": [
-      0,
-      2
-     ],
-     "end": [
-      3,
-      0
-     ],
-     "size": "m"
-    }
-   ],
+   "visual": {
+    "type": "grid",
+    "rows": 2,
+    "cols": 3,
+    "kind": "dots",
+    "start": [
+     0,
+     2
+    ],
+    "end": [
+     3,
+     0
+    ],
+    "size": 45
+   },
    "lines": 4,
+   "draw": 0,
    "answer": "Both routes have 5 steps. Every route from S to E needs 3 steps right and 2 steps up, so every route has 5 steps. Only the order of the steps changes. (There are 10 routes on this grid.)",
    "val": [
     5,
@@ -3126,39 +3011,39 @@
    "text": "A counter starts at S and moves only right and up to reach E.",
    "parts": [
     {
-     "l": "a",
+     "l": "",
      "text": "The counter moves [] right and [] up.",
-     "ans": "2; 2",
+     "ans": "4; 1",
      "val": [
-      2,
-      2
+      4,
+      1
      ]
     }
    ],
-   "answer": "2 right, 2 up",
+   "answer": "4 right, 1 up",
    "val": [
-    2,
-    2
+    4,
+    1
    ],
-   "solution": "E is 2 steps right of S and 2 steps up. Count the jumps, not the dots.",
+   "solution": "E is 4 steps right of S and 1 step up. Count the jumps, not the dots.",
    "mistakes": [
-    "Counting dots (3 and 3).",
+    "Counting dots (5 and 2).",
     "Swapping right and up."
    ],
    "visual": {
     "type": "grid",
-    "rows": 2,
-    "cols": 2,
+    "rows": 1,
+    "cols": 4,
     "kind": "dots",
     "start": [
      0,
-     2
+     1
     ],
     "end": [
-     2,
+     4,
      0
     ],
-    "size": "s"
+    "size": 45
    }
   },
   {
@@ -3166,7 +3051,7 @@
    "text": "A counter moves 2 right and 3 up. Then it moves 3 right and 1 up.",
    "parts": [
     {
-     "l": "a",
+     "l": "",
      "text": "In all it moves [] right and [] up.",
      "ans": "5; 4",
      "val": [
@@ -3262,13 +3147,13 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "A line goes from the 1st dot to the 5th dot in a row. Is it 5 steps long? Circle Yes or No. It is ___ steps long.",
-   "answer": "No. 4 steps.",
+   "text": "A line goes from the 1st dot to the 9th dot in a row. Is it 9 steps long? Circle Yes or No. It is ___ steps long.",
+   "answer": "No. 8 steps.",
    "val": [
     "No",
-    4
+    8
    ],
-   "solution": "The 5th dot is 4 jumps after the 1st dot, so the line is 4 steps long."
+   "solution": "The 9th dot is 8 jumps after the 1st dot, so the line is 8 steps long."
   },
   {
    "id": "H4",
