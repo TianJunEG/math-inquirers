@@ -33,7 +33,7 @@
   "list the ways to make equal groups of 24 (G3)",
   "count in jumps instead of one by one",
   "turn an array: 2 × 8 = 8 × 2",
-  "true or false about equal groups: can 15 be put equally onto 3, 4 or 5 plates? (T5)"
+  "true or false about equal groups: 3 groups of 4 is not 3 + 4, and 4 groups of 3 holds the same apples (T3)"
  ],
  "objectives": [
   "Say whether groups are equal (the same number in every group) and add counters to make unequal groups equal.",
@@ -1638,7 +1638,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: count each group aloud. Q2: count the plates, then the cookies on one plate. Q3: add 2 again and again, or count in twos. Q4: draw 4 dots on one plate, then copy. Q5: groups first, then in each. Q6: 4 boxes of 5, add 5 four times. Think harder T5: deal the apples onto the plates, or count in jumps. Is there any left over?"
+      "text": "Q1: count each group aloud. Q2: count the plates, then the cookies on one plate. Q3: add 2 again and again, or count in twos. Q4: draw 4 dots on one plate, then copy. Q5: groups first, then in each. Q6: 4 boxes of 5, add 5 four times. Think harder T3: deal the apples onto the plates, then deal the same apples onto 4 plates."
      },
      {
       "k": "STUCK",
@@ -2204,37 +2204,29 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Kumar has 3 plates with 4 apples on each plate. He says he has 7 apples.",
-    "parts": [
+    "text": "Kumar has 3 plates with 4 apples on each plate. Is each sentence true or false?",
+    "parts": [],
+    "answer": "False, True (3 groups of 4 is 12, not 7; turned round it is 4 groups of 3)",
+    "val": [
+     "False",
+     "True"
+    ],
+    "hint": "Add the apples on the 3 plates: 4 + 4 + 4. Then count in jumps of 3 to 12: do 4 plates of 3 make the same apples?",
+    "solution": "3 groups of 4 apples: 4 + 4 + 4 = 12. 7 is 3 + 4, which is not the same as 3 groups of 4, so the first sentence is false. 4 groups of 3 is 3 + 3 + 3 + 3 = 12, the same apples, so the second sentence is true.",
+    "mistakes": [
+     "Saying true because 3 + 4 = 7.",
+     "Saying false for the second sentence because the numbers are different."
+    ],
+    "mins": 3,
+    "lines": 0,
+    "tf": [
      {
-      "l": "a",
-      "text": "3 groups of 4 = [2]",
-      "ans": "12",
-      "val": 12
+      "s": "Kumar has 3 + 4 = 7 apples."
      },
      {
-      "l": "b",
-      "text": "Is Kumar correct? Circle Yes or No.",
-      "ans": "No",
-      "val": "No",
-      "choices": [
-       "Yes",
-       "No"
-      ]
+      "s": "Kumar can put the same apples on 4 plates, with 3 on each plate."
      }
-    ],
-    "answer": "3 groups of 4 = 12; No",
-    "val": [
-     12,
-     "No"
-    ],
-    "hint": "Add the apples on the 3 plates: 4 + 4 + 4. Then look at 7.",
-    "solution": "3 groups of 4 apples: 4 + 4 + 4 = 12. 7 is 3 + 4, which is not the same as 3 groups of 4. So Kumar is not correct.",
-    "mistakes": [
-     "Saying Yes because 3 + 4 = 7.",
-     "Writing 3 × 4 = 34."
-    ],
-    "mins": 3
+    ]
    },
    {
     "id": "T4",
@@ -2279,34 +2271,6 @@
       ]
      ]
     }
-   },
-   {
-    "id": "T5",
-    "page": 3,
-    "tier": "think",
-    "text": "Mei puts 15 apples equally onto plates, with none left over. True or false?",
-    "parts": [],
-    "tf": [
-     {
-      "s": "She can use 4 plates."
-     },
-     {
-      "s": "She can use 5 plates."
-     }
-    ],
-    "lines": 0,
-    "answer": "False, True (4 plates leave 3 over; 5 plates of 3 apples)",
-    "val": [
-     "False",
-     "True"
-    ],
-    "hint": "Deal the apples out one at a time, or count in jumps. Does the count land on 15?",
-    "solution": "4 plates: 4, 8, 12, 16 jumps over 15 (4 groups of 3 is 12 and 3 are left over), so false. 5 plates: 5 groups of 3 is 15, so true.",
-    "mistakes": [
-     "Saying true for 4 plates because 4 is a small number.",
-     "Not checking that nothing is left over."
-    ],
-    "mins": 4
    }
   ],
   "go": [

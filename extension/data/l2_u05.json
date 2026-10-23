@@ -897,6 +897,7 @@
     "text": "Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)"
    },
    "explanation": "Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.",
+   "hint": "Start at 12 and go forwards.",
    "space": {
     "rows": [
      "My riddle:"

@@ -91,7 +91,7 @@ def run(d):
     eq(array_cells(2, 8) == array_cells(8, 2), True, 'T1 2x8 = 8x2'); eq(all(array_cells(a, b) == array_cells(b, a) for a in range(1, 11) for b in range(1, 11)), True, 'T1 turning an array never changes the total')
     eq(T['T1']['val'], [2, 8, 16, 8, 2, 16, 'Yes'], 'T1 val'); eq(T['T1']['parts'][2]['text'], 'Is 2 × 8 = 8 × 2? Circle Yes or No.', 'T1 (c) names the same numbers')
     c = counts_of(T['T2']['visual']); eq(c, [3, 1, 2], 'T2 picture'); eq(sum(3 - x for x in c), 3, 'T2 more needed'); eq(T['T2']['val'], [3], 'T2 val')
-    c = [4, 4, 4]; eq(sum(c), 12, 'T3 total'); eq(sum(c) == 7, False, 'T3 Kumar is wrong'); eq(3 + 4, 7, 'T3 where 7 comes from'); eq(T['T3']['val'], [12, 'No'], 'T3 val (work first, then judge)'); eq([p['l'] for p in T['T3']['parts']], ['a', 'b'], 'T3 parts'); eq(T['T3']['parts'][0]['val'], 12, 'T3 (a) is the total')
+    c = [4, 4, 4]; eq(sum(c), 12, 'T3 total'); eq(sum(c) == 7, False, 'T3 7 is not the total'); eq(3 + 4, 7, 'T3 where 7 comes from'); eq(T['T3']['val'], ['False', 'True'], 'T3 val'); eq(len(lay_out(4, 3)), len(lay_out(3, 4)), 'T3 4 plates of 3 hold the same apples'); eq(len(lay_out(4, 3)), 12, 'T3 12 apples')
     rows = T['T4']['visual']['rows']; miss = []
     for r in rows:
         for k, cell in enumerate(r):
@@ -146,8 +146,4 @@ def run(d):
     o = items['c5']['options']; eq([x for x in o if total_of_sum(x) == 12], [items['c5']['answer']], 'c5 exactly one option is 4 groups of 3'); eq(items['c5']['answer'], '3 + 3 + 3 + 3', 'c5 is 3 four times')
     eq(sum(3 - x for x in counts_of(items['t1']['fig_base'])), items['t1']['answer'], 't1'); eq(sorted(items['g3']['answer']), [4, 6], 'g3'); eq(repeated_add(4, 6), 24, 'g3 sum')
     eq(items['g3']['answer'], [6, 4], 'g3 groups first')
-    # Retrofit T5 (true or false, 15 apples on plates with none left over)
-    eq(T['T5']['val'], ['True' if left_over(15, k) == 0 else 'False' for k in (4, 5)], 'T5')
-    eq([left_over(15, k) for k in (4, 5)], [3, 0], 'T5 left over')
-    eq([repeated_add(3, 5), repeated_add(3, 4)], [15, 12], 'T5 5 groups of 3, 4 groups of 3')
     return n

@@ -85,7 +85,7 @@ items = [
    why='(a) 36 ÷ 3 = 12. (b) Undo B to C: jar C had 12 - 6 = 6 and jar B had 12 + 6 = 18. Undo A to B: jar B had 18 - 4 = 14 and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.'),
  I('go', 5, 'Make your own riddle. "I think of a number. I ... then I ... I get ..." The mystery number must be 12. Many answers work.', value='open',
    atext='Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)',
-   space={'rows': ['My riddle:']},
+   space={'rows': ['My riddle:']}, hint='Start at 12 and go forwards.',
    why='Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.'),
  I('go', 5, 'Machine A does × 2, then + 3. Machine B does - 5, then × 3. The OUT of A goes into B. The final OUT is 36.',
    figure=mach('?', '× 2', '+ 3', '- 5', '× 3', '36', width_mm=120), figside=False,
