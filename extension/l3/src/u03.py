@@ -62,9 +62,9 @@ u.S(2, 'A row number times a column number makes each product. Write the missing
 u.S(3, 'Write the last digit of each answer. Do not find the whole answer.', parts=[
     P('a', '6 × 13   {b}', A('8')), P('b', '8 × 27   {b}', A('6')), P('c', '9 × 45   {b}', A('5')), P('d', '7 × 68   {b}', A('6'))],
     why='Only the last digits matter. (a) 6 × 3 = 18 ends in 8. (b) 8 × 7 = 56 ends in 6. (c) 9 × 5 = 45 ends in 5. (d) 7 × 8 = 56 ends in 6.')
-u.S(3, 'Mei puts 30 tiles in equal rows. There are at least 2 rows and at least 2 tiles in each row. List ALL the ways.', parts=[
+u.S(3, 'Mei puts 30 tiles in equal rows. There are at least 2 rows and at least 2 tiles in each row. 2 rows of 15 and 15 rows of 2 are different ways. List ALL the ways.', parts=[
     P('', 'There are {b} ways.', A('6'))],
-    space={'table': {'cols': ['rows', 'tiles in each row'], 'rows': 6}},
+    space={'table': {'cols': ['rows', 'tiles in each row'], 'rows': 8}},
     why='Check the number of rows from 2 upwards: 2 rows of 15, 3 rows of 10, 5 rows of 6, 6 rows of 5, 10 rows of 3 and 15 rows of 2. 4 rows does not work because 30 is not in the 4 times table. That is 6 ways.')
 u.S(3, 'Which of these numbers are in the 6 times table?\n24, 38, 42, 56, 60\n{ll}', A(['24', '42', '60'], '24, 42, 60', list=True),
     why='6 × 4 = 24, 6 × 7 = 42 and 6 × 10 = 60. The numbers 38 and 56 are not: 6 × 6 = 36 and 6 × 9 = 54, and the next answer after 54 is 60.')
@@ -73,10 +73,10 @@ u.S(3, 'Mei buys 6 packs of 8 stickers. Ben buys 7 packs of 7 stickers.', parts=
     why='Mei has 6 × 8 = 48 stickers. Ben has 7 × 7 = 49 stickers. Ben has 49 - 48 = 1 more.')
 
 # ---------------- Think harder
-u.T('Ben writes the 7 times table from 7 × 1 to 7 × 30. How many of his answers end in 4? {b}', A('3'),
-    hint='Which number times 7 ends in 4? Then find the next ones.',
-    why='7 × 2 = 14 ends in 4. The last digits of the 7 times table repeat every 10 numbers, so the next ones are 7 × 12 = 84 and 7 × 22 = 154. 7 × 32 is beyond 7 × 30. That makes 3 answers.',
-    space={'rows': ['The 7 times table:', '', 'The answers ending in 4:', '']})
+u.T('Aisha says the 8 times table from 8 up to 96. How many of the numbers she says have an ODD tens digit? {b}', A('5'),
+    hint='Write the table first. Then look at the tens digits.',
+    why='The numbers are 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88 and 96. The tens digits are 0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 8, 9. The odd ones are 1, 3, 5, 7, 9: so 16, 32, 56, 72 and 96. That is 5 numbers.',
+    space={'rows': ['The 8 times table:', '', 'Odd tens digit:']})
 u.T('The row numbers and column numbers are all from 6 to 9. Find the empty cells A to D. You can write in the heading cells to help you.', parts=[
     P('a', 'A = {b}', A('54')), P('b', 'B = {b}', A('56')), P('c', 'C = {b}', A('56')), P('d', 'D = {b}', A('64'))],
     partsrow=True,
@@ -106,15 +106,14 @@ u.G('Make your own 2 by 2 grid puzzle with numbers from 6 to 9. Show 3 products.
     hint='Pick the row and column numbers first. Then multiply.',
     why='Check that each shown product belongs to the numbers you chose. Check that no other row and column numbers from 6 to 9 give the same 3 products. In the example, 42 = 6 × 7 and 48 = 6 × 8 give row 6 and columns 7 and 8. Also 49 = 7 × 7 gives row 7. The hidden product is 7 × 8 = 56.',
     space={'rows': ['{ll}']})
-u.G('Ben multiplies a number by 8.', parts=[
-    P('a', 'His answer ends in 6. The last digit of his number could be {b} or {b}.', A(['2', '7'], '2 or 7', list=True)),
-    P('b', 'His answer ends in 5. The last digit of his number could be {circ:0|2|5|7|none}.', A('none'))],
-    hint='List the last digits of 8 × 1 up to 8 × 10.',
-    why='The last digits of the 8 times table are 8, 6, 4, 2, 0, 8, 6, 4, 2, 0. A last digit of 6 comes from 8 × 2 and 8 × 7. A last digit of 5 never comes: every answer in the 8 times table is even.')
+u.G('Beyond Level 3: Square numbers.\nMultiply a number by itself. For example 7 × 7 = 49, which ends in 9. Which of these digits can NEVER be the last digit of such an answer?\n{circ:2|3|4|6|7|8}', A(['2', '3', '7', '8'], '2, 3, 7 and 8', list=True),
+    hint='Work out 1 × 1, 2 × 2, ... 9 × 9. Write the last digits.',
+    why='The last digits of 1 × 1 up to 9 × 9 are 1, 4, 9, 6, 5, 6, 9, 4, 1. Only the last digit of the number matters, so the last digit can only be 0, 1, 4, 5, 6 or 9. So 2, 3, 7 and 8 can never be the last digit.',
+    space={'rows': ['Last digits of 1 × 1 to 9 × 9:']})
 
 # ---------------- Check yourself
 u.C('A box holds 8 pens. How many pens are in 7 boxes? {b}', A('56'), why='7 × 8 = 56. Check: 8 × 7 = 56.')
-u.C('You know that 5 × 7 = 35. Use it to find 6 × 7. {b}', A('42'), why='6 × 7 is one more 7 than 5 × 7: 35 + 7 = 42.')
-u.C('What is the last digit of 7 × 56? {b}', A('2'), why='Only 7 × 6 matters for the last digit. 7 × 6 = 42 ends in 2. (7 × 56 = 392.)')
+u.C('You know that 10 × 8 = 80. Use it to find 9 × 8. {b}', A('72'), why='9 × 8 is one less 8 than 10 × 8: 80 - 8 = 72.')
+u.C('Is 63 in the 6 times table?   {circ:Yes|No}', A('No'), why='6 × 10 = 60 and 6 × 11 = 66, so 63 is not in the table.')
 u.C('Mei has 54 apples. She puts 6 apples in each bag. How many bags does she need? {b}', A('9'), why='54 ÷ 6 = 9, because 6 × 9 = 54.')
 u.save()

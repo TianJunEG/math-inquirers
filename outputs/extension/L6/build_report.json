@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9378701081359423,
+   "fill": 0.9638903192584964,
    "over": false,
-   "excess_mm": -16,
+   "excess_mm": -9.3,
    "edition": "soft"
   },
   {
@@ -117,9 +117,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9991310504634398,
+   "fill": 0.9773912203913491,
    "over": false,
-   "excess_mm": -0.2,
+   "excess_mm": -5.8,
    "edition": "soft"
   },
   {
@@ -187,9 +187,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9883013645726055,
+   "fill": 0.966561534500515,
    "over": false,
-   "excess_mm": -3,
+   "excess_mm": -8.6,
    "edition": "soft"
   },
   {
@@ -247,9 +247,9 @@
    "kind": "practice",
    "label": "Unit 3 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9228244078269825,
+   "fill": 0.9010845777548918,
    "over": false,
-   "excess_mm": -19.8,
+   "excess_mm": -25.4,
    "edition": "soft"
   },
   {
@@ -257,9 +257,9 @@
    "kind": "practice",
    "label": "Unit 3 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9393505406797117,
+   "fill": 0.917610710607621,
    "over": false,
-   "excess_mm": -15.6,
+   "excess_mm": -21.2,
    "edition": "soft"
   },
   {
@@ -327,9 +327,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9895886972193615,
+   "fill": 0.9678488671472708,
    "over": false,
-   "excess_mm": -2.7,
+   "excess_mm": -8.3,
    "edition": "soft"
   },
   {
@@ -397,9 +397,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9977471678681772,
+   "fill": 0.9542675077239959,
    "over": false,
-   "excess_mm": -0.6,
+   "excess_mm": -11.7,
    "edition": "soft"
   },
   {
@@ -467,9 +467,9 @@
    "kind": "practice",
    "label": "Unit 6 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9850347579814624,
+   "fill": 0.9415550978372812,
    "over": false,
-   "excess_mm": -3.8,
+   "excess_mm": -15,
    "edition": "soft"
   },
   {
@@ -537,9 +537,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9785498197734295,
+   "fill": 0.9133303295571575,
    "over": false,
-   "excess_mm": -5.5,
+   "excess_mm": -22.3,
    "edition": "soft"
   },
   {
@@ -607,9 +607,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9611064624098867,
+   "fill": 0.9176268022657055,
    "over": false,
-   "excess_mm": -10,
+   "excess_mm": -21.2,
    "edition": "soft"
   },
   {
@@ -677,9 +677,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9810118434603502,
+   "fill": 0.9375321833161689,
    "over": false,
-   "excess_mm": -4.9,
+   "excess_mm": -16,
    "edition": "soft"
   },
   {
@@ -1033,9 +1033,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9378701081359423,
+   "fill": 0.9638903192584964,
    "over": false,
-   "excess_mm": -16,
+   "excess_mm": -9.3,
    "edition": "print"
   },
   {
@@ -1113,9 +1113,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9991310504634398,
+   "fill": 0.9773912203913491,
    "over": false,
-   "excess_mm": -0.2,
+   "excess_mm": -5.8,
    "edition": "print"
   },
   {
@@ -1183,9 +1183,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9883013645726055,
+   "fill": 0.966561534500515,
    "over": false,
-   "excess_mm": -3,
+   "excess_mm": -8.6,
    "edition": "print"
   },
   {
@@ -1243,9 +1243,9 @@
    "kind": "practice",
    "label": "Unit 3 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.929003604531411,
+   "fill": 0.9072637744593203,
    "over": false,
-   "excess_mm": -18.2,
+   "excess_mm": -23.8,
    "edition": "print"
   },
   {
@@ -1253,9 +1253,9 @@
    "kind": "practice",
    "label": "Unit 3 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9393505406797117,
+   "fill": 0.917610710607621,
    "over": false,
-   "excess_mm": -15.6,
+   "excess_mm": -21.2,
    "edition": "print"
   },
   {
@@ -1323,9 +1323,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9895886972193615,
+   "fill": 0.9678488671472708,
    "over": false,
-   "excess_mm": -2.7,
+   "excess_mm": -8.3,
    "edition": "print"
   },
   {
@@ -1393,9 +1393,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9977471678681772,
+   "fill": 0.9542675077239959,
    "over": false,
-   "excess_mm": -0.6,
+   "excess_mm": -11.7,
    "edition": "print"
   },
   {
@@ -1463,9 +1463,9 @@
    "kind": "practice",
    "label": "Unit 6 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9850347579814624,
+   "fill": 0.9415550978372812,
    "over": false,
-   "excess_mm": -3.8,
+   "excess_mm": -15,
    "edition": "print"
   },
   {
@@ -1533,9 +1533,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9785498197734295,
+   "fill": 0.9133303295571575,
    "over": false,
-   "excess_mm": -5.5,
+   "excess_mm": -22.3,
    "edition": "print"
   },
   {
@@ -1603,9 +1603,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9611064624098867,
+   "fill": 0.9176268022657055,
    "over": false,
-   "excess_mm": -10,
+   "excess_mm": -21.2,
    "edition": "print"
   },
   {
@@ -1673,9 +1673,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9810118434603502,
+   "fill": 0.9375321833161689,
    "over": false,
-   "excess_mm": -4.9,
+   "excess_mm": -16,
    "edition": "print"
   },
   {
@@ -2012,7 +2012,7 @@
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 12.68,
+  "mb": 12.65,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }

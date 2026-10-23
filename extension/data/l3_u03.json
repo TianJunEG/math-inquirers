@@ -485,7 +485,7 @@
    "id": "L3U03-S10",
    "tier": "start",
    "page": 3,
-   "text": "Mei puts 30 tiles in equal rows. There are at least 2 rows and at least 2 tiles in each row. List ALL the ways.",
+   "text": "Mei puts 30 tiles in equal rows. There are at least 2 rows and at least 2 tiles in each row. 2 rows of 15 and 15 rows of 2 are different ways. List ALL the ways.",
    "parts": [
     {
      "label": "",
@@ -505,7 +505,7 @@
       "rows",
       "tiles in each row"
      ],
-     "rows": 6
+     "rows": 8
     }
    }
   },
@@ -558,21 +558,20 @@
    "id": "L3U03-T01",
    "tier": "think",
    "page": 4,
-   "text": "Ben writes the 7 times table from 7 × 1 to 7 × 30. How many of his answers end in 4? {b}",
+   "text": "Aisha says the 8 times table from 8 up to 96. How many of the numbers she says have an ODD tens digit? {b}",
    "answer": {
     "value": [
-     "3"
+     "5"
     ],
-    "text": "3"
+    "text": "5"
    },
-   "explanation": "7 × 2 = 14 ends in 4. The last digits of the 7 times table repeat every 10 numbers, so the next ones are 7 × 12 = 84 and 7 × 22 = 154. 7 × 32 is beyond 7 × 30. That makes 3 answers.",
-   "hint": "Which number times 7 ends in 4? Then find the next ones.",
+   "explanation": "The numbers are 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88 and 96. The tens digits are 0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 8, 9. The odd ones are 1, 3, 5, 7, 9: so 16, 32, 56, 72 and 96. That is 5 numbers.",
+   "hint": "Write the table first. Then look at the tens digits.",
    "space": {
     "rows": [
-     "The 7 times table:",
+     "The 8 times table:",
      "",
-     "The answers ending in 4:",
-     ""
+     "Odd tens digit:"
     ]
    }
   },
@@ -705,7 +704,8 @@
    "id": "L3U03-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Digit sums and the 9s.\nAdd the digits again and again: 684 gives 6 + 8 + 4 = 18, then 1 + 8 = 9. Numbers in the 9 times table always end at 9. Which of these are in it?\n738, 825, 963, 1089\n{ll}",
+   "beyond": "Digit sums and the 9s",
+   "text": "Add the digits again and again: 684 gives 6 + 8 + 4 = 18, then 1 + 8 = 9. Numbers in the 9 times table always end at 9. Which of these are in it?\n738, 825, 963, 1089\n{ll}",
    "answer": {
     "value": [
      "738",
@@ -722,7 +722,8 @@
    "id": "L3U03-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Adding every row.\nA hall has 8 rows. Row 1 has 7 seats. Each row has 2 more seats than the row before.",
+   "beyond": "Adding every row",
+   "text": "A hall has 8 rows. Row 1 has 7 seats. Each row has 2 more seats than the row before.",
    "parts": [
     {
      "label": "a",
@@ -814,33 +815,25 @@
    "id": "L3U03-G04",
    "tier": "go",
    "page": 5,
-   "text": "Ben multiplies a number by 8.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "His answer ends in 6. The last digit of his number could be {b} or {b}.",
-     "answer": {
-      "value": [
-       "2",
-       "7"
-      ],
-      "text": "2 or 7",
-      "list": true
-     }
-    },
-    {
-     "label": "b",
-     "text": "His answer ends in 5. The last digit of his number could be {circ:0|2|5|7|none}.",
-     "answer": {
-      "value": [
-       "none"
-      ],
-      "text": "none"
-     }
-    }
-   ],
-   "explanation": "The last digits of the 8 times table are 8, 6, 4, 2, 0, 8, 6, 4, 2, 0. A last digit of 6 comes from 8 × 2 and 8 × 7. A last digit of 5 never comes: every answer in the 8 times table is even.",
-   "hint": "List the last digits of 8 × 1 up to 8 × 10."
+   "beyond": "Square numbers",
+   "text": "Multiply a number by itself. For example 7 × 7 = 49, which ends in 9. Which of these digits can NEVER be the last digit of such an answer?\n{circ:2|3|4|6|7|8}",
+   "answer": {
+    "value": [
+     "2",
+     "3",
+     "7",
+     "8"
+    ],
+    "text": "2, 3, 7 and 8",
+    "list": true
+   },
+   "explanation": "The last digits of 1 × 1 up to 9 × 9 are 1, 4, 9, 6, 5, 6, 9, 4, 1. Only the last digit of the number matters, so the last digit can only be 0, 1, 4, 5, 6 or 9. So 2, 3, 7 and 8 can never be the last digit.",
+   "hint": "Work out 1 × 1, 2 × 2, ... 9 × 9. Write the last digits.",
+   "space": {
+    "rows": [
+     "Last digits of 1 × 1 to 9 × 9:"
+    ]
+   }
   },
   {
    "id": "L3U03-C01",
@@ -859,27 +852,27 @@
    "id": "L3U03-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "You know that 5 × 7 = 35. Use it to find 6 × 7. {b}",
+   "text": "You know that 10 × 8 = 80. Use it to find 9 × 8. {b}",
    "answer": {
     "value": [
-     "42"
+     "72"
     ],
-    "text": "42"
+    "text": "72"
    },
-   "explanation": "6 × 7 is one more 7 than 5 × 7: 35 + 7 = 42."
+   "explanation": "9 × 8 is one less 8 than 10 × 8: 80 - 8 = 72."
   },
   {
    "id": "L3U03-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "What is the last digit of 7 × 56? {b}",
+   "text": "Is 63 in the 6 times table?   {circ:Yes|No}",
    "answer": {
     "value": [
-     "2"
+     "No"
     ],
-    "text": "2"
+    "text": "No"
    },
-   "explanation": "Only 7 × 6 matters for the last digit. 7 × 6 = 42 ends in 2. (7 × 56 = 392.)"
+   "explanation": "6 × 10 = 60 and 6 × 11 = 66, so 63 is not in the table."
   },
   {
    "id": "L3U03-C04",
