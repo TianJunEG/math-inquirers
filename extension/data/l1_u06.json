@@ -1,0 +1,841 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 6,
+ "id": "L1U06",
+ "title": "Pay the exact amount",
+ "topic": "Money",
+ "holiday_lesson": 6,
+ "goal": "I can count coins and notes and pay an exact amount. I can find all the ways and the fewest coins.",
+ "learn": {
+  "intro": "Our coins are 5¢, 10¢, 20¢ and 50¢. A $1 coin is worth 100¢. To pay an amount, start with the largest coin that fits.",
+  "example": {
+   "problem": "Ben wants to pay exactly 75¢. He has 5¢, 10¢, 20¢ and 50¢ coins. Which coins use the fewest coins?",
+   "figure": {
+    "type": "coins",
+    "items": [
+     "50¢",
+     "20¢",
+     "5¢"
+    ],
+    "width_mm": 70
+   },
+   "steps": [
+    "Take the largest coin that fits: 50¢. 75¢ - 50¢ = 25¢ is left.",
+    "The largest coin that fits 25¢ is 20¢. 25¢ - 20¢ = 5¢ is left.",
+    "Take a 5¢ coin. Nothing is left.",
+    "Check: 50¢ + 20¢ + 5¢ = 75¢. That is 3 coins."
+   ],
+   "answer": "50¢, 20¢ and 5¢. That is 3 coins."
+  },
+  "howto": {
+   "title": "How to pay an exact amount",
+   "steps": [
+    "Take the largest coin that is not too much.",
+    "Subtract it from the amount. What is left?",
+    "Repeat with what is left. Stop at 0.",
+    "Add your coins to check."
+   ]
+  },
+  "try": {
+   "id": "L1U06-L01",
+   "text": "Pay exactly 80¢ with 3 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Write the coins. {b}¢ + {b}¢ + {b}¢",
+   "answer": {
+    "value": [
+     "50",
+     "20",
+     "10"
+    ],
+    "text": "50¢ + 20¢ + 10¢",
+    "unordered": true
+   },
+   "explanation": "Take 50¢ first. 30¢ is left. 20¢ + 10¢ = 30¢. Check: 50¢ + 20¢ + 10¢ = 80¢."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U06-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Count the money. Write the total. {b}¢",
+   "figure": {
+    "type": "coins",
+    "items": [
+     "50¢",
+     "10¢",
+     "10¢"
+    ],
+    "width_mm": 62
+   },
+   "answer": {
+    "value": [
+     "70"
+    ],
+    "text": "70¢"
+   },
+   "explanation": "50¢ and 10¢ make 60¢. Another 10¢ makes 70¢."
+  },
+  {
+   "id": "L1U06-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Count the money. Write the total. $ {b}",
+   "figure": {
+    "type": "coins",
+    "items": [
+     "$10",
+     "$5",
+     "$2",
+     "$2"
+    ],
+    "width_mm": 85
+   },
+   "answer": {
+    "value": [
+     "19"
+    ],
+    "text": "$19"
+   },
+   "explanation": "$10 and $5 make $15. $2 and $2 make $4. $15 + $4 = $19."
+  },
+  {
+   "id": "L1U06-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in how many coins.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "50¢ can be changed for {b} coins of 10¢.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "20¢ can be changed for {b} coins of 5¢.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "$1 can be changed for {b} coins of 20¢.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "d",
+     "text": "$1 can be changed for {b} coins of 50¢.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "explanation": "(a) 10¢ five times is 50¢. (b) 5¢ four times is 20¢. (c) $1 is worth 100¢, and 20¢ five times is 100¢. (d) 50¢ and 50¢ make 100¢, which is $1."
+  },
+  {
+   "id": "L1U06-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Pay exactly with 2 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Write the 2 coins.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "25¢ = {b}¢ + {b}¢",
+     "answer": {
+      "value": [
+       "20",
+       "5"
+      ],
+      "text": "20¢ + 5¢",
+      "unordered": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "60¢ = {b}¢ + {b}¢",
+     "answer": {
+      "value": [
+       "50",
+       "10"
+      ],
+      "text": "50¢ + 10¢",
+      "unordered": true
+     }
+    },
+    {
+     "label": "c",
+     "text": "30¢ = {b}¢ + {b}¢",
+     "answer": {
+      "value": [
+       "20",
+       "10"
+      ],
+      "text": "20¢ + 10¢",
+      "unordered": true
+     }
+    }
+   ],
+   "explanation": "(a) 20¢ + 5¢ = 25¢. (b) 50¢ + 10¢ = 60¢. (c) 20¢ + 10¢ = 30¢. Try the largest coin that fits first."
+  },
+  {
+   "id": "L1U06-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Two of me make 40¢. Which coin am I?   {circ:5¢|10¢|20¢|50¢}",
+   "answer": {
+    "value": [
+     "20¢"
+    ],
+    "text": "20¢"
+   },
+   "explanation": "20¢ + 20¢ = 40¢. Two 10¢ coins make 20¢. Two 50¢ coins make 100¢."
+  },
+  {
+   "id": "L1U06-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the tags.",
+   "figure": {
+    "type": "tags",
+    "items": [
+     {
+      "name": "Rubber",
+      "amount": "15¢"
+     },
+     {
+      "name": "Pencil",
+      "amount": "25¢"
+     },
+     {
+      "name": "Ruler",
+      "amount": "45¢"
+     },
+     {
+      "name": "Glue",
+      "amount": "30¢"
+     }
+    ],
+    "width_mm": 115
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A rubber and a pencil cost {b}¢ altogether.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which costs more, the ruler or the glue?   {circ:ruler|glue}",
+     "answer": {
+      "value": [
+       "ruler"
+      ],
+      "text": "ruler"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The ruler costs {b}¢ more than the rubber.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "(a) 15¢ + 25¢ = 40¢. (b) 45¢ is more than 30¢, so the ruler costs more. (c) 45¢ - 15¢ = 30¢."
+  },
+  {
+   "id": "L1U06-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Ben pays 50¢ for a 30¢ sticker. How much change does he get? {b}¢",
+   "answer": {
+    "value": [
+     "20"
+    ],
+    "text": "20¢"
+   },
+   "explanation": "Change is what is left: 50¢ - 30¢ = 20¢. Count on to check: 30¢ and 20¢ more make 50¢."
+  },
+  {
+   "id": "L1U06-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Ali buys 2 toys for exactly $12. Which 2 toys? Circle them.",
+   "figure": {
+    "type": "tags",
+    "items": [
+     {
+      "name": "Kite",
+      "amount": "$4"
+     },
+     {
+      "name": "Top",
+      "amount": "$7"
+     },
+     {
+      "name": "Puzzle",
+      "amount": "$8"
+     },
+     {
+      "name": "Bat",
+      "amount": "$11"
+     }
+    ],
+    "width_mm": 115
+   },
+   "answer": {
+    "value": [
+     "Kite",
+     "Puzzle"
+    ],
+    "text": "Kite and Puzzle",
+    "unordered": true
+   },
+   "explanation": "$4 + $8 = $12. Check the others: $7 + $4 = $11, $7 + $8 = $15 and $11 + $4 = $15, so no other pair makes $12."
+  },
+  {
+   "id": "L1U06-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Lily has $8. A book costs $13. How much more does she need? $ {b}",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "$5"
+   },
+   "explanation": "She needs the difference: $13 - $8 = $5. Count on: $8 and $5 more make $13."
+  },
+  {
+   "id": "L1U06-S10",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the 2 purses.",
+   "figure": {
+    "type": "coins",
+    "sets": [
+     {
+      "label": "A",
+      "items": [
+       "20¢",
+       "20¢",
+       "5¢",
+       "5¢"
+      ]
+     },
+     {
+      "label": "B",
+      "items": [
+       "50¢",
+       "5¢"
+      ]
+     }
+    ],
+    "width_mm": 66
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Which purse has more money?   {circ:A|B}",
+     "answer": {
+      "value": [
+       "B"
+      ],
+      "text": "B"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It has {b}¢ more.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "explanation": "Purse A: 20¢ + 20¢ + 5¢ + 5¢ = 50¢. Purse B: 50¢ + 5¢ = 55¢. B has 55¢ - 50¢ = 5¢ more."
+  },
+  {
+   "id": "L1U06-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Make 40¢ with only 20¢ and 10¢ coins. Write every way in the table. Each row is one way.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write the ways in the table.",
+     "answer": {
+      "value": [
+       "2,0",
+       "1,2",
+       "0,4"
+      ],
+      "text": "2 coins of 20¢ and 0 of 10¢;  1 and 2;  0 and 4",
+      "list": true,
+      "unordered": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} ways.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "space": {
+    "table": {
+     "cols": [
+      "20¢ coins",
+      "10¢ coins"
+     ],
+     "rows": 3
+    }
+   },
+   "explanation": "Start with the most 20¢ coins. Two 20¢ coins make 40¢. One 20¢ and two 10¢ coins make 40¢. No 20¢ needs four 10¢ coins. That is 3 ways."
+  },
+  {
+   "id": "L1U06-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Two 20¢ coins and one 10¢ coin make 50¢.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Three 10¢ coins make 40¢.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A $1 coin is worth ten 10¢ coins.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Four 5¢ coins make 25¢.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "(a) 20 + 20 + 10 = 50: True. (b) three 10¢ coins make 30¢: False. (c) ten 10¢ coins make 100¢, which is $1: True. (d) four 5¢ coins make 20¢: False."
+  },
+  {
+   "id": "L1U06-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Pay with the fewest coins. Use 5¢, 10¢, 20¢ or 50¢ coins.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "40¢ needs {b} coins.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "90¢ needs {b} coins.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "(a) 20¢ + 20¢ = 40¢. (b) 50¢ + 20¢ + 20¢ = 90¢. Start with the largest coin each time."
+  },
+  {
+   "id": "L1U06-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle the coins that pay exactly 65¢.",
+   "figure": {
+    "type": "coins",
+    "items": [
+     "50¢",
+     "20¢",
+     "20¢",
+     "10¢",
+     "5¢",
+     "5¢"
+    ],
+    "width_mm": 120
+   },
+   "answer": {
+    "value": [
+     "50¢",
+     "10¢",
+     "5¢"
+    ],
+    "text": "50¢, 10¢ and 5¢",
+    "unordered": true
+   },
+   "explanation": "50¢ + 10¢ + 5¢ = 65¢. Taking a 20¢ coin first leaves 45¢, which these coins cannot make."
+  },
+  {
+   "id": "L1U06-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Make 65¢ with exactly 4 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Find every set.",
+   "answer": {
+    "value": [
+     "50,5,5,5",
+     "20,20,20,5"
+    ],
+    "text": "50¢ + 5¢ + 5¢ + 5¢  and  20¢ + 20¢ + 20¢ + 5¢",
+    "list": true,
+    "unordered": true
+   },
+   "space": {
+    "rows": [
+     "Set 1:",
+     "Set 2:"
+    ]
+   },
+   "hint": "Try the 50¢ coin first. What is left to make with 3 coins?",
+   "explanation": "With 50¢, 15¢ is left, made by 5¢ + 5¢ + 5¢. Without 50¢, try 20¢ + 20¢ + 20¢ = 60¢, then 5¢ makes 65¢. A 10¢ coin makes no more sets."
+  },
+  {
+   "id": "L1U06-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Siti has 7 coins. They are 5¢ coins and 10¢ coins. Together they are worth 50¢.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "She has {b} coins of 5¢.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "She has {b} coins of 10¢.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "space": {
+    "table": {
+     "cols": [
+      "5¢ coins",
+      "10¢ coins",
+      "Total"
+     ],
+     "rows": 3
+    }
+   },
+   "hint": "Guess how many 5¢ coins. The other coins are 10¢. Find the total. Change your guess.",
+   "explanation": "Try 4 coins of 5¢ and 3 coins of 10¢. 4 x 5¢ = 20¢ and 3 x 10¢ = 30¢. 20¢ + 30¢ = 50¢, and 4 + 3 = 7 coins."
+  },
+  {
+   "id": "L1U06-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei buys exactly 2 toys for $15. There are 2 ways.",
+   "figure": {
+    "type": "tags",
+    "items": [
+     {
+      "name": "Car",
+      "amount": "$6"
+     },
+     {
+      "name": "Top",
+      "amount": "$7"
+     },
+     {
+      "name": "Ball",
+      "amount": "$8"
+     },
+     {
+      "name": "Kite",
+      "amount": "$9"
+     },
+     {
+      "name": "Drum",
+      "amount": "$12"
+     }
+    ],
+    "width_mm": 170
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The Car and the   {circ:Top|Ball|Kite|Drum}",
+     "answer": {
+      "value": [
+       "Kite"
+      ],
+      "text": "Kite"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The Top and the   {circ:Car|Ball|Kite|Drum}",
+     "answer": {
+      "value": [
+       "Ball"
+      ],
+      "text": "Ball"
+     }
+    }
+   ],
+   "hint": "Pick one toy. How much money is left for the second toy?",
+   "explanation": "$6 + $9 = $15 and $7 + $8 = $15. The Drum needs $3 more, and no toy costs $3."
+  },
+  {
+   "id": "L1U06-G01",
+   "tier": "go",
+   "beyond": "Sharing money equally",
+   "page": 5,
+   "text": "Friends share money equally.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2 friends share 80¢. Each gets {b}¢.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 friends share 80¢. Each gets {b}¢.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Siti and Wei share 50¢. They have only 20¢ and 10¢ coins. Can each child get the same amount?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Half of 50¢:"
+    ]
+   },
+   "hint": "What is half of 50¢? Can 20¢ and 10¢ coins make that amount?",
+   "explanation": "(a) 40¢ + 40¢ = 80¢. (b) 20¢ four times is 80¢. (c) Each child would get 25¢. Coins of 20¢ and 10¢ only make 10¢, 20¢, 30¢ and so on, never 25¢."
+  },
+  {
+   "id": "L1U06-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Wei pays with a $50 note for a bag and a hat. The hat costs $18. He gets $12 change.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Wei spends $ {b} altogether.",
+     "answer": {
+      "value": [
+       "38"
+      ],
+      "text": "38"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The bag costs $ {b}.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Spent:",
+     "Bag:"
+    ]
+   },
+   "hint": "Change is the money that is left. How much did Wei really spend?",
+   "explanation": "He spends $50 - $12 = $38 altogether. The bag costs the rest: $38 - $18 = $20. Check: $20 + $18 = $38 and $50 - $38 = $12."
+  },
+  {
+   "id": "L1U06-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali pays exactly $38. He has $1 coins and $2, $5 and $10 notes. He uses the fewest notes and coins.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "He uses {b} notes and coins.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "They are: {l}",
+     "answer": {
+      "value": [
+       "10",
+       "10",
+       "10",
+       "5",
+       "2",
+       "1"
+      ],
+      "text": "$10, $10, $10, $5, $2, $1",
+      "list": true,
+      "unordered": true
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Try:"
+    ]
+   },
+   "hint": "Use as many $10 notes as you can. Then look at what is left.",
+   "explanation": "Three $10 notes make $30. $8 is left: $5 + $2 + $1. That is 3 + 3 = 6 pieces. Four $10 notes are too much, and no 5 pieces make $38."
+  },
+  {
+   "id": "L1U06-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Count the money. Write the total. {b}¢",
+   "figure": {
+    "type": "coins",
+    "items": [
+     "20¢",
+     "20¢",
+     "10¢",
+     "5¢",
+     "5¢"
+    ],
+    "width_mm": 72
+   },
+   "answer": {
+    "value": [
+     "60"
+    ],
+    "text": "60¢"
+   },
+   "explanation": "20 + 20 = 40, 40 + 10 = 50, 50 + 5 = 55, 55 + 5 = 60."
+  },
+  {
+   "id": "L1U06-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Pay exactly 70¢ with 3 coins. {b}¢ + {b}¢ + {b}¢",
+   "answer": {
+    "value": [
+     "50",
+     "10",
+     "10"
+    ],
+    "text": "50¢ + 10¢ + 10¢",
+    "unordered": true
+   },
+   "explanation": "50¢ + 10¢ + 10¢ = 70¢. Without a 50¢ coin, 3 coins make 60¢ at most."
+  },
+  {
+   "id": "L1U06-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Ravi has 90¢. A drink costs 65¢. How much is left? {b}¢",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25¢"
+   },
+   "explanation": "90¢ - 65¢ = 25¢. Count on: 65¢ and 25¢ more make 90¢."
+  },
+  {
+   "id": "L1U06-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Which is more money?   {circ:85¢|$1}",
+   "answer": {
+    "value": [
+     "$1"
+    ],
+    "text": "$1"
+   },
+   "explanation": "A $1 coin is worth 100¢. 100¢ is more than 85¢, so $1 is more."
+  }
+ ]
+}

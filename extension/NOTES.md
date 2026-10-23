@@ -2,3 +2,6 @@
 
 - Optional item field `beyond` (short name, e.g. "Triangle numbers"): printed as a small label "Beyond Level 1: <name>" above the stem. Used on Think harder / Go further items only. Level 1 unit 1: G01 Triangle numbers; unit 2: G01 Making two amounts equal. No syllabus claim beyond the word "beyond".
 - Level 1 units 1 and 2 were already written by the planning agent; reviewed (gates, REVIEW skeleton list, page views), not rewritten.
+- Units 5 and 6 (working backwards, money): new figure plug-in `tools/figs_l1_u05_u06.py` with types `chain` (arrows, optional dashed undo arrows), `in_out` (machine table), `coins` (round coins, rectangular notes, value printed on each piece, sizes differ) and `tags` (shop tags). Coins and notes use SOFT/SKY fills so the print edition turns them white.
+- Answers that are unordered sets of coins use `"unordered": true` on the answer; two-answer items (Think harder T01 and T03 of unit 6) list both answers. Answer boxes that live inside a figure (chain, in_out) are not counted by run_checks (the item text carries the answer values with `"list": true` where needed).
+- Wording: "I think of a number" and "from 5¢, 10¢, 20¢ and 50¢" are holiday phrases (7-word gate), so units 5 and 6 say "picks a secret number", "begin with" and "Use 5¢, 10¢, 20¢ or 50¢ coins". Type map: `docs/extension_books/l1_source_notes_u05_u06.md`.
