@@ -66,7 +66,7 @@ def fshapes(spec, w=None):
         shade = set(it.get('shade', []))
         kind = it.get('kind', 'bar')
         if kind == 'bar':
-            bw, bh = 250, 64
+            bw, bh = spec.get('bw', 250), 64
             cuts = it.get('cuts') or [i / it['n'] for i in range(1, it['n'])]
             edges = [0] + list(cuts) + [1]
             for i in range(len(edges) - 1):

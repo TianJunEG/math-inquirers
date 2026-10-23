@@ -11,3 +11,4 @@ Resume: run `python3 extension/l3/src/uNN.py` for any unit to rewrite its json; 
 | 3 | Times table treasure | written, checked, gates ok, pages viewed |
 | 4 | Model makers | written, checked, gates ok, pages viewed |
 | 5 | Remainder riddles | written, checked, gates ok, pages viewed |
+| 6 | Fraction walls | written, checked, gates ok, pages viewed |

@@ -851,8 +851,10 @@
      }
     ],
     "cols": 1,
-    "width_mm": 70,
-    "ch": 84
+    "width_mm": 124,
+    "ch": 84,
+    "bw": 420,
+    "cw": 520
    },
    "hint": "1/2 of 12 parts is 6 parts. How many parts for 1/3?"
   },

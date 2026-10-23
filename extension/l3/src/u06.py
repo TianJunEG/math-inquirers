@@ -106,7 +106,7 @@ u.G('A whole bar is filled with exactly 6 pieces. The pieces are 1/2, 1/4 or 1/8
     space={'rows': ['My tries:']})
 u.G('Colour the bar. Draw lines in 1/2 of the bar. Draw dots in 1/3 of the bar. Leave the rest white.', parts=[
     P('a', '{b} parts are white.', A('2')), P('b', 'That is the same as 1/{b} of the bar.', A('6'))],
-    figure=bars([{'kind': 'bar', 'n': 12}], cols=1, w=70, ch=84),
+    figure=bars([{'kind': 'bar', 'n': 12}], cols=1, w=124, ch=84, bw=420, cw=520),
     hint='1/2 of 12 parts is 6 parts. How many parts for 1/3?',
     why='1/2 of the bar is 6 parts and 1/3 of the bar is 4 parts. 6 + 4 = 10 parts are coloured, so 2 parts are white. 2/12 is the same as 1/6.')
 u.G('Make up a fraction story about a pizza cut into 8 equal slices. The answer to your story must be 5/8.', A('5/8', 'Answers vary. Example: Ali eats 3/8 of a pizza and Mei eats 2/8 of it. Together they eat 5/8 of the pizza.'),
