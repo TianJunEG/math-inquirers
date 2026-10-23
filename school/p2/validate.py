@@ -290,6 +290,32 @@ JS_CBC = """
   return res;
 }
 """
+# the colour pages: the questions printed on the pupil page are the questions printed in the key (a layout change, e.g. a different answer-box size, can silently change which questions are chosen)
+for k in BK:
+    if any(p.get("cbc") for p in BK[k]):
+        _pu = open(os.path.join(O, f"{k}_pupil.html")).read(); _ke = open(os.path.join(O, f"{k}_key.html")).read()
+        _qs = set(re.findall(r'data-t="([^"]{6,})"', _pu))
+        rec(f"{k}: every question printed on a colour page is printed in the key too", all(q in _ke for q in _qs), str([q for q in _qs if q not in _ke][:3]))
+# ... and the sheet the code built (p["sheet"]) prints exactly its own question lines in the PDFs: the pupil page (Puzzles and Complete Pack) and the key entry (Answer Key; the answer stands where the blank box is)
+def _rawpages(f):
+    fp = os.path.join(O, f)
+    return subprocess.run(["pdftotext", "-raw", fp, "-"], capture_output=True, text=True).stdout.split("\f") if os.path.exists(fp) else None
+def _wsq(s): return re.sub(r"[\s\u2009\u202f\u00a0]+", "", s)
+for p in pages:
+    if not p.get("cbc") or "sheet" not in p: continue
+    _lines = [re.sub("[\u27e6\u27e7\u27e8\u27e9|]", "", ln) for it in p["sheet"]["items"].values() for ln in it["q"].lines]
+    for _f, _kind in ((f"P2_{p['bk']}_Puzzles.pdf", "pupil"), (f"P2_{p['bk']}_Complete_Pack.pdf", "pupil"), (f"P2_{p['bk']}_Answer_Key.pdf", "key")):
+        _pg = _rawpages(_f)
+        if _pg is None: continue
+        _T = _wsq("".join(x for x in _pg if p["code"] in x))
+        _miss = []
+        for ln in _lines:
+            m = _wsq(ln)
+            if not m: continue
+            if _kind == "pupil": ok = m in _T
+            else: ok = re.search(".{0,14}?".join(re.escape(x) for x in m.split("\u25a1")), _T, re.S) is not None
+            if not ok: _miss.append(ln)
+        rec(f"{p['code']}: all {len(_lines)} question lines of the colour page's sheet are printed in {_f} ({_kind} page)", bool(_T) and not _miss, str(_miss[:3]))
 for k in BK:
   ncbc = sum(1 for p in BK[k] if p.get("cbc"))
   for f in (f"{k}_pupil.html", f"{k}_key.html"):

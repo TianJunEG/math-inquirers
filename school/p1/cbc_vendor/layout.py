@@ -12,6 +12,7 @@ LH = 1.22                                   # line height in em
 LH_FRAC = 2.2                               # a line that holds a stacked fraction (numerator, bar, denominator)
 FRAC_SCALE = 0.84                           # numerals of a stacked fraction relative to the line font size
 PAD_W, PAD_H = 0.6, 0.2
+# P1: 6.0 is the box size of P1-01 and P1-14; P1-12 (box 8.0) overrides it in gen/pages_cbc.py page12(), the only per-page override
 BOX_SIDE = 6.0                              # the blank box a pupil writes in: a square at least 6 mm wide (audit 3, F-new 14); a blank inside a stacked fraction stays smaller
 BOX_GAP = 0.9                               # space around it in a line
 _TOK = re.compile(f"({FRL}[^{FRR}]*{FRR}|{BOX}|{ANS_L}[^{ANS_R}]*{ANS_R})")

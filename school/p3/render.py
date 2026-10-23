@@ -15,11 +15,11 @@ html,body{margin:0;padding:0;background:#fff;color:#000;font-family:'Nunito Sans
 .page{width:210mm;height:297mm;padding:15mm;display:flex;flex-direction:column;overflow:hidden;position:relative;break-after:page;background:#fff}
 .page:last-child{break-after:auto}
 header.ph{display:flex;align-items:center;gap:4mm;border-bottom:0.8mm solid #000;padding-bottom:2.5mm;height:19mm}
-.code{font-family:'Fredoka';font-weight:600;font-size:10pt;border:0.5mm solid #000;border-radius:2mm;padding:1mm 2mm;white-space:nowrap;text-align:center;line-height:1.15}
+.code{font-family:'Fredoka';font-weight:600;font-size:10pt;border:0.6mm solid #000;border-radius:2mm;padding:1mm 2mm;white-space:nowrap;text-align:center;line-height:1.15}
 h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.05;flex:1;min-width:0}
 .stars svg{vertical-align:middle;margin-left:0.5mm}
 .nameline{font-size:11pt;line-height:1.9;text-align:right;white-space:nowrap}
-.nameline span{display:inline-block;border-bottom:0.4mm solid #000;width:30mm}
+.nameline span{display:inline-block;border-bottom:0.6mm solid #000;width:30mm}
 .topic{font-size:11.5pt;font-weight:700;padding:2mm 0 1mm}
 .instr{font-size:15pt;line-height:1.3;padding:1mm 0 2mm}
 .instr p{margin:0.4mm 0}
@@ -41,14 +41,14 @@ svg{max-width:100%;height:auto}
 .ab{display:inline-block;width:16mm;height:12.5mm;border:0.6mm solid #000;border-radius:1.5mm;vertical-align:middle;background:#fff}
 .ab.sm{width:14mm;height:12mm}
 .ab.wide{width:34mm}
-.no{display:inline-flex;align-items:center;justify-content:center;width:7.5mm;height:7.5mm;border:0.5mm solid #000;border-radius:50%;font-family:'Fredoka';font-weight:600;font-size:12pt;flex:none}
+.no{display:inline-flex;align-items:center;justify-content:center;width:7.5mm;height:7.5mm;border:0.6mm solid #000;border-radius:50%;font-family:'Fredoka';font-weight:600;font-size:12pt;flex:none}
 .op{font-family:'Fredoka';font-weight:600;font-size:18pt}
 .codetable{display:flex;flex-wrap:wrap;gap:2.5mm}
-.ct{border:0.5mm solid #000;border-radius:1.5mm;padding:0.6mm 2.5mm;font-size:15pt;display:flex;gap:2mm;align-items:center;min-width:25mm;justify-content:center}
+.ct{border:0.6mm solid #000;border-radius:1.5mm;padding:0.6mm 2.5mm;font-size:15pt;display:flex;gap:2mm;align-items:center;min-width:25mm;justify-content:center}
 .ctl{font-size:12pt;align-self:center;margin-right:1mm}
-.ct .n{font-weight:800}.ct b{font-family:'Fredoka';font-weight:700;font-size:18pt;border-left:0.4mm solid #000;padding-left:2mm}
+.ct .n{font-weight:800}.ct b{font-family:'Fredoka';font-weight:700;font-size:18pt;border-left:0.6mm solid #000;padding-left:2mm}
 .items{display:grid;gap:5mm 4mm}.items.g3{grid-template-columns:repeat(3,1fr)}
-.item,.citem{display:flex;flex-direction:column;align-items:flex-start;gap:1.5mm;border:0.4mm solid #000;border-radius:2mm;padding:2mm 2.5mm}
+.item,.citem{display:flex;flex-direction:column;align-items:flex-start;gap:1.5mm;border:0.6mm solid #000;border-radius:2mm;padding:2mm 2.5mm}
 .item svg{align-self:center}
 .item .ans{align-self:flex-end}
 .riddle{display:flex;gap:4mm;align-items:center;margin:2mm 0}
@@ -57,7 +57,7 @@ svg{max-width:100%;height:auto}
 .card{width:27mm;height:46mm;border:0.7mm solid #000;border-radius:2.5mm;position:relative;display:flex;align-items:center;justify-content:center}
 .card .shp{display:block}
 .card .cn{font-family:'Fredoka';font-weight:600;font-size:30pt}
-.card .cl{position:absolute;right:1.5mm;bottom:1mm;font-weight:800;font-size:13pt;border:0.4mm solid #000;border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center}
+.card .cl{position:absolute;right:1.5mm;bottom:1mm;font-weight:800;font-size:13pt;border:0.6mm solid #000;border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center}
 .orderrow{display:flex;align-items:center;gap:3mm;font-weight:700;font-size:13pt}
 .arrowline{flex:1;border-top:0.8mm solid #000;position:relative;height:0}
 .arrowline:after{content:'';position:absolute;right:0;top:-2mm;border-left:4mm solid #000;border-top:2mm solid transparent;border-bottom:2mm solid transparent}
@@ -66,54 +66,54 @@ svg{max-width:100%;height:auto}
 .slots .ab{width:22mm;height:24mm}.slots .ab.letter{height:22mm}
 .chips{display:flex;gap:4mm;flex-wrap:wrap}.chip{border:0.6mm solid #000;border-radius:6mm;padding:1mm 4mm 1mm 5mm;font-family:'Fredoka';font-weight:600;font-size:20pt;display:inline-flex;align-items:center}
 .chips.six{gap:2.5mm}.chips.six .chip{padding:1mm 2.5mm 1mm 3.5mm;font-size:18pt}.chips.six .chip i.cl{margin-left:1.5mm}
-.chip i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;margin-left:2.5mm;font-weight:700}
+.chip i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.6mm solid #000;border-radius:50%;font-size:14pt;margin-left:2.5mm;font-weight:700}
 ul.clues{margin:0;padding-left:7mm;font-size:15pt;line-height:1.5}
 ul.clues li{margin:1mm 0}
-table.lgrid{border-collapse:collapse}table.lgrid th,table.lgrid td{border:0.5mm solid #000;font-size:12.5pt;padding:0 2mm}
+table.lgrid{border-collapse:collapse}table.lgrid th,table.lgrid td{border:0.6mm solid #000;font-size:12.5pt;padding:0 2mm}
 table.lgrid td{width:15mm;height:13mm}table.lgrid th{font-weight:800}table.lgrid th.rh{text-align:left;width:22mm}
 .twocol{display:flex;gap:8mm;align-items:flex-start}.twocol>div:last-child{flex:1}
 .ansgrid{display:grid;grid-template-columns:auto 20mm 20mm;gap:1.5mm 3mm;align-items:center;justify-content:start}
 .ansgrid b{font-size:11pt;text-align:center}.ansgrid .nm{font-size:15pt;font-weight:700}.ansgrid .ab{width:20mm}
-.howto{border:0.5mm solid #000;border-radius:2mm;padding:2mm 3mm;font-size:11pt;line-height:1.25}.howto b{font-size:11.5pt}
+.howto{border:0.6mm solid #000;border-radius:2mm;padding:2mm 3mm;font-size:11pt;line-height:1.25}.howto b{font-size:11.5pt}
 .howto .hw{display:flex;gap:3mm;align-items:center;margin-top:1.5mm}.howto p{margin:0.6mm 0}
 table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid.mini th{font-size:10pt;padding:0 1.5mm}table.lgrid.mini th.rh{width:auto}
 .twocol>ul.clues{flex:1;min-width:0}
 .ansline{font-size:15pt;margin:1.5mm 0;line-height:2.1;white-space:nowrap}
 .seqs{display:flex;flex-direction:column;gap:5mm}
 .seq{display:flex;gap:2.5mm;align-items:center}
-.sq{width:21mm;height:13mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:19pt}
+.sq{width:21mm;height:13mm;border:0.6mm solid #000;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:19pt}
 .seq .ab{width:21mm;height:13mm}
 .maze{display:grid;width:170mm;margin:0 auto;border:0.8mm solid #000}
-.mcell{border:0.5mm solid #000;height:31mm;display:flex;align-items:center;justify-content:center;position:relative;font-family:'Fredoka';font-weight:600;font-size:22pt}
+.mcell{border:0.6mm solid #000;height:31mm;display:flex;align-items:center;justify-content:center;position:relative;font-family:'Fredoka';font-weight:600;font-size:22pt}
 .flag{position:absolute;left:0;top:0;background:#000;color:#fff;font-style:normal;font-family:'Nunito Sans';font-weight:800;font-size:8.5pt;padding:0.6mm 2mm;letter-spacing:.3mm}
 .magic{display:grid;grid-template-columns:repeat(3,29mm) 20mm;grid-auto-rows:29mm;gap:0;margin:0 auto;width:max-content}
 .mc{border:0.9mm solid #000;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;font-size:32pt}
 .msum{display:flex;align-items:center;justify-content:center}
 .diag{text-align:center;font-size:14pt}
-.ovals{display:flex;gap:3mm;justify-content:center}.oval{width:13mm;height:13mm;border:0.5mm solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:17pt}
+.ovals{display:flex;gap:3mm;justify-content:center}.oval{width:13mm;height:13mm;border:0.6mm solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:17pt}
 .cgrid{display:grid;width:170mm;margin:0 auto;border:0.8mm solid #000}
-.ccell{border:0.5mm solid #000;height:var(--ch,28mm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5mm;font-size:17pt}
+.ccell{border:0.6mm solid #000;height:var(--ch,28mm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5mm;font-size:17pt}
 .ccell .ex{font-family:'Fredoka';font-weight:600;font-size:18pt}
 .ccell .eqsign{display:none}
 .ccell .ex.sh{font-size:12.5pt;line-height:1.1;text-align:center;font-weight:600}
-.ccell .ln{display:inline-block;width:17mm;border-bottom:0.5mm solid #000;height:7mm}
+.ccell .ln{display:inline-block;width:17mm;border-bottom:0.6mm solid #000;height:7mm}
 .sumrows{display:grid;gap:5mm 6mm}.sumrows.two{grid-template-columns:1fr 1fr}
-.sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.5mm solid #000}
+.sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.6mm solid #000}
 .sumrows.tall .sumrow{height:31mm}
 .shrows{display:flex;flex-direction:column;gap:1.2mm}
-.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.5mm solid #000;padding:0.8mm 0 2mm}
+.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.6mm solid #000;padding:0.8mm 0 2mm}
 .shmid{flex:1}.shtxt{font-size:12pt;line-height:1.25;margin:0 0 1.5mm}.shsvg svg{display:block}
 .shrow .ab{width:19mm;height:14mm;margin-left:2mm;flex:none}
 .maze.tall .mcell{height:38mm}
 .dicon{vertical-align:middle}
-.shblock{display:flex;gap:8mm;align-items:center;border:0.4mm solid #000;border-radius:2mm;padding:3mm 5mm}
+.shblock{display:flex;gap:8mm;align-items:center;border:0.6mm solid #000;border-radius:2mm;padding:3mm 5mm}
 .eqs{flex:1;display:flex;flex-direction:column;gap:3mm}
 .eq{display:flex;align-items:center;gap:2mm;font-family:'Fredoka';font-weight:600;font-size:20pt;height:12mm}
-.shansw{display:flex;flex-direction:column;gap:2mm;border-left:0.5mm solid #000;padding-left:6mm}
+.shansw{display:flex;flex-direction:column;gap:2mm;border-left:0.6mm solid #000;padding-left:6mm}
 .shans{display:flex;align-items:center;gap:2mm}
 .shans .ab{width:15mm;height:12mm}
 .grows,.crows,.lrows{display:flex;flex-direction:column;gap:1.2mm}
-.grow,.crow,.lrow{display:flex;align-items:center;gap:3mm;border-bottom:0.5mm solid #000;padding-bottom:2mm}
+.grow,.crow,.lrow{display:flex;align-items:center;gap:3mm;border-bottom:0.6mm solid #000;padding-bottom:2mm}
 .gsvg{width:100mm;flex:none}.geq{margin-left:auto;display:flex;align-items:center;gap:2mm}.geq .ab{width:14mm}
 .lbx{display:inline-flex;flex-direction:column;align-items:center;gap:0.3mm}.lbx small{font-size:8.5pt;font-weight:700;line-height:1}
 .csvg{flex:1}.cans{display:flex;align-items:center;gap:2mm;font-size:16pt}
@@ -127,13 +127,13 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .pgraph{display:flex;flex-direction:column;gap:4mm}
 .grow2{display:flex;align-items:center}
 .gl{width:34mm;font-size:15pt;display:flex;align-items:center;gap:1.5mm}.gl svg{flex:none}
-.gc{width:15.5mm;height:15.5mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;margin-right:-0.5mm}
+.gc{width:15.5mm;height:15.5mm;border:0.6mm solid #000;display:inline-flex;align-items:center;justify-content:center;margin-right:-0.5mm}
 svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle}
 .kids{display:flex;justify-content:space-between}.kid{display:flex;flex-direction:column;align-items:center;font-size:14pt}
 .qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:68mm;height:12.5mm}
 /* front matter and key */
 .fm{font-size:13pt;line-height:1.4}
-.cov2{column-count:2;column-gap:5mm;font-size:8pt;line-height:1.2}.covi{break-inside:avoid;margin:0 0 1.2mm;border-bottom:0.3mm solid #000;padding-bottom:0.6mm}.covp{font-weight:800;white-space:nowrap}
+.cov2{column-count:2;column-gap:5mm;font-size:8pt;line-height:1.2}.covi{break-inside:avoid;margin:0 0 1.2mm;border-bottom:0.6mm solid #000;padding-bottom:0.6mm}.covp{font-weight:800;white-space:nowrap}
 .fm.notes{font-size:11pt;line-height:1.28}.fm.notes h3{margin:3.5mm 0 1mm}.fm.notes .draft{margin-bottom:2mm}
 .fm h2{font-family:'Fredoka';font-weight:600;font-size:22pt;margin:0 0 4mm;border-bottom:0.8mm solid #000;padding-bottom:2mm}
 .fm h3{font-family:'Fredoka';font-weight:600;font-size:14pt;margin:5mm 0 1.5mm}

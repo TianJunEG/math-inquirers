@@ -129,16 +129,16 @@ CK = 27
 
 def clock_svg(h, m, size=54):
     cx = cy = CK; R = 19.0
-    p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
+    p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="1.0"/>']
     for k in range(60):
         a_ = math.radians(k * 6); L = 3.0 if k % 5 == 0 else 1.4
-        p.append(f'<line x1="{cx+R*math.sin(a_):.2f}" y1="{cy-R*math.cos(a_):.2f}" x2="{cx+(R-L)*math.sin(a_):.2f}" y2="{cy-(R-L)*math.cos(a_):.2f}" stroke="#000" stroke-width="{0.7 if k % 5 == 0 else 0.5}"/>')
+        p.append(f'<line x1="{cx+R*math.sin(a_):.2f}" y1="{cy-R*math.cos(a_):.2f}" x2="{cx+(R-L)*math.sin(a_):.2f}" y2="{cy-(R-L)*math.cos(a_):.2f}" stroke="#000" stroke-width="{1.0 if k % 5 == 0 else 0.85}"/>')   # drawn at 33 mm from a 54 mm box: x0.61, so 0.52 mm and 0.61 mm on the page
     for k in range(1, 13):
         a_ = math.radians(k * 30)
         p.append(f'<text x="{cx+23.4*math.sin(a_):.2f}" y="{cy-23.4*math.cos(a_)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">{k}</text>')
     ha = math.radians(30 * (h % 12) + m * 0.5); ma = math.radians(m * 6)
     p.append(f'<line class="hour" x1="{cx}" y1="{cy}" x2="{cx+10.5*math.sin(ha):.3f}" y2="{cy-10.5*math.cos(ha):.3f}" stroke="#000" stroke-width="2.1" stroke-linecap="round"/>')
-    p.append(f'<line class="minute" x1="{cx}" y1="{cy}" x2="{cx+16.6*math.sin(ma):.3f}" y2="{cy-16.6*math.cos(ma):.3f}" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>')
+    p.append(f'<line class="minute" x1="{cx}" y1="{cy}" x2="{cx+16.6*math.sin(ma):.3f}" y2="{cy-16.6*math.cos(ma):.3f}" stroke="#000" stroke-width="1.2" stroke-linecap="round"/>')
     p.append(f'<circle cx="{cx}" cy="{cy}" r="1.3" fill="#000"/>')
     return svg(54, 54, "".join(p))
 

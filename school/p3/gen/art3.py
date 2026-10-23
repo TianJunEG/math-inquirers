@@ -76,7 +76,7 @@ def dial_svg(value, vmax, major, minor, unit):
     v = 0
     while v <= vmax + 1e-9:
         a = ang(v); L = 3.0 if v % major == 0 else 1.6
-        p.append(f'<line class="dt" x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.7 if v % major == 0 else 0.5}"/>')
+        p.append(f'<line class="dt" x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.8 if v % major == 0 else 0.55}"/>')   # dial drawn at x0.92
         if v % major == 0:
             n_ = len(str(int(v))); rr = R + 1.4 + 1.2 * n_ * abs(math.sin(a)) + 1.4 * abs(math.cos(a))   # numeral box clears the ring (audit M3)
             p.append(f'<text x="{cx+rr*math.sin(a):.2f}" y="{cy-rr*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{int(v)}</text>')
@@ -102,12 +102,12 @@ def beaker_svg(level, vmax, step, label_step, unit="m\u2113"):
     p = [f'<rect class="tankbody" x="{x0}" y="{top}" width="{x1-x0}" height="{bot-top}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     yy = bot - 0.7
     while yy > y(level):
-        p.append(f'<line x1="{x0+0.4}" y1="{yy:.2f}" x2="{x1-0.4}" y2="{yy:.2f}" stroke="#000" stroke-width="0.5"/>'); yy -= 2.4
-    p.append(f'<line class="level" x1="{x0}" y1="{y(level):.2f}" x2="{x1}" y2="{y(level):.2f}" stroke="#000" stroke-width="1.4"/>')
+        p.append(f'<line x1="{x0+0.4}" y1="{yy:.2f}" x2="{x1-0.4}" y2="{yy:.2f}" stroke="#000" stroke-width="0.65"/>'); yy -= 2.6
+    p.append(f'<line class="level" x1="{x0}" y1="{y(level):.2f}" x2="{x1}" y2="{y(level):.2f}" stroke="#000" stroke-width="1.8"/>')
     v = 0
     while v <= vmax:
         major = v % label_step == 0
-        p.append(f'<line class="lt" x1="{x0-(3.2 if major else 1.8):.1f}" y1="{y(v):.2f}" x2="{x0}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.6 if major else 0.5}"/>')
+        p.append(f'<line class="lt" x1="{x0-(3.2 if major else 1.8):.1f}" y1="{y(v):.2f}" x2="{x0}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.8 if major else 0.65}"/>')   # beaker drawn at x0.79
         if major:
             p.append(f'<text x="{x0-3.8}" y="{y(v)+0.1:.2f}" text-anchor="end" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.4" fill="#000">{v}</text>')
         v += step
@@ -126,7 +126,7 @@ def stopwatch_svg(sec):
     p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     for k in range(60):
         a = math.radians(k * 6); L = 3.0 if k % 5 == 0 else 1.5
-        p.append(f'<line x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.7 if k % 5 == 0 else 0.5}"/>')
+        p.append(f'<line x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.85 if k % 5 == 0 else 0.65}"/>')
     for k in range(5, 61, 5):
         a = math.radians(k * 6)
         p.append(f'<text x="{cx+20.6*math.sin(a):.2f}" y="{cy-20.6*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{k}</text>')
@@ -256,9 +256,9 @@ def angle_svg(deg, rot, arm=18.5):
     r = 5.0
     q1 = (vx + r * math.cos(a1), vy - r * math.sin(a1)); q2 = (vx + r * math.cos(a2), vy - r * math.sin(a2))
     large = 1 if deg > 180 else 0
-    inner = (f'<line class="arm" x1="{vx}" y1="{vy}" x2="{p1[0]:.2f}" y2="{p1[1]:.2f}" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>'
-             f'<line class="arm" x1="{vx}" y1="{vy}" x2="{p2[0]:.2f}" y2="{p2[1]:.2f}" stroke="#000" stroke-width="0.8" stroke-linecap="round"/>'
-             f'<path d="M{q1[0]:.2f},{q1[1]:.2f} A{r},{r} 0 {large} 0 {q2[0]:.2f},{q2[1]:.2f}" fill="none" stroke="#000" stroke-width="0.5"/>'
+    inner = (f'<line class="arm" x1="{vx}" y1="{vy}" x2="{p1[0]:.2f}" y2="{p1[1]:.2f}" stroke="#000" stroke-width="1.0" stroke-linecap="round"/>'
+             f'<line class="arm" x1="{vx}" y1="{vy}" x2="{p2[0]:.2f}" y2="{p2[1]:.2f}" stroke="#000" stroke-width="1.0" stroke-linecap="round"/>'
+             f'<path d="M{q1[0]:.2f},{q1[1]:.2f} A{r},{r} 0 {large} 0 {q2[0]:.2f},{q2[1]:.2f}" fill="none" stroke="#000" stroke-width="0.9"/>'
              f'<circle cx="{vx}" cy="{vy}" r="0.9" fill="#000"/>')
     return svg(46, 46, inner, extra=f'data-vx="{vx}" data-vy="{vy}"')
 

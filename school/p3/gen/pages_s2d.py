@@ -138,7 +138,7 @@ def page36():
             if t[1] == 0: continue
             P_ = (rng.randint(1, 5), rng.randint(2, 6))
             ex = exit_x(P_, t if t[1] < 0 else (-t[0], -t[1]))
-            if ex is None: continue
+            if ex is None or ex in (0, 6): continue       # the line leaves through the top edge, never at a corner (audit R2-2)
             k = rng.randint(2, 3)
             A_ = (rng.randint(0, 6 - k * abs(d[0])) if d[0] >= 0 else 0, rng.randint(0, 6));
             B_ = (A_[0] + k * d[0], A_[1] + k * d[1])
@@ -163,10 +163,23 @@ def page36():
         u = 6.5; ox, oy = 8.0, 9.0
         g = []
         for k in range(7):
-            g.append(f'<line x1="{ox + k * u:.1f}" y1="{oy}" x2="{ox + k * u:.1f}" y2="{oy + 6 * u:.1f}" stroke="#000" stroke-width="0.5"/><line x1="{ox}" y1="{oy + k * u:.1f}" x2="{ox + 6 * u:.1f}" y2="{oy + k * u:.1f}" stroke="#000" stroke-width="0.5"/>')
+            g.append(f'<line x1="{ox + k * u:.1f}" y1="{oy}" x2="{ox + k * u:.1f}" y2="{oy + 6 * u:.1f}" stroke="#000" stroke-width="0.6"/><line x1="{ox}" y1="{oy + k * u:.1f}" x2="{ox + 6 * u:.1f}" y2="{oy + k * u:.1f}" stroke="#000" stroke-width="0.6"/>')
         g.append(f'<rect x="{ox}" y="{oy}" width="{6 * u}" height="{6 * u}" fill="none" stroke="#000" stroke-width="0.7"/>')
         g.append(f'<line class="abl" x1="{ox + A_[0] * u:.1f}" y1="{oy + A_[1] * u:.1f}" x2="{ox + B_[0] * u:.1f}" y2="{oy + B_[1] * u:.1f}" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>')
-        g.append(f'<text x="{ox + A_[0] * u - 2.4:.1f}" y="{oy + A_[1] * u + 4.4:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">A</text><text x="{ox + B_[0] * u + 1.2:.1f}" y="{oy + B_[1] * u - 1.2:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">B</text>')
+        # labels A and B: 3.4 mm beyond the end of the line, or to either side of the end, in the first place that is inside the picture,
+        # clear of the thick line (2.6 mm) and of the point P and its letter (audit R2-2)
+        pa = (ox + A_[0] * u, oy + A_[1] * u); pb = (ox + B_[0] * u, oy + B_[1] * u); pp = (ox + P_[0] * u, oy + P_[1] * u)
+        ux_, uy_ = pb[0] - pa[0], pb[1] - pa[1]; un_ = math.hypot(ux_, uy_); ux_, uy_ = ux_ / un_, uy_ / un_
+        def lab_pos(e, sgn):
+            for dx_, dy_ in ((sgn * ux_, sgn * uy_), (-uy_, ux_), (uy_, -ux_), (sgn * ux_ - uy_, sgn * uy_ + ux_), (sgn * ux_ + uy_, sgn * uy_ - ux_)):
+                n_ = math.hypot(dx_, dy_); cx_, cy_ = e[0] + 3.6 * dx_ / n_, e[1] + 3.6 * dy_ / n_
+                if not (2.2 < cx_ < 51.8 and 2.5 < cy_ < 49.5): continue
+                if A3.pt_seg_dist((cx_, cy_), (pa, pb)) < 2.6 and (dx_, dy_) not in ((sgn * ux_, sgn * uy_),): continue
+                if math.hypot(cx_ - pp[0], cy_ - pp[1]) < 4.2 or math.hypot(cx_ - (pp[0] + 2.6), cy_ - (pp[1] + 3.0)) < 3.4: continue
+                return cx_, cy_
+            raise RuntimeError("P3-36 label")
+        la = lab_pos(pa, -1); lb = lab_pos(pb, 1)
+        g.append(f'<text x="{la[0]:.1f}" y="{la[1] + 1.5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">A</text><text x="{lb[0]:.1f}" y="{lb[1] + 1.5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">B</text>')
         g.append(f'<circle class="pt" cx="{ox + P_[0] * u:.1f}" cy="{oy + P_[1] * u:.1f}" r="1.5" fill="#000"/><text x="{ox + P_[0] * u + 1.6:.1f}" y="{oy + P_[1] * u + 4.6:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">P</text>')
         for x, l in lmap.items():
             g.append(f'<text class="tl" data-x="{x}" x="{ox + x * u:.1f}" y="{oy - 2.3:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="5.0" fill="#000">{l}</text>')
