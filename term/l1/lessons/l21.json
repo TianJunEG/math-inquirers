@@ -23,23 +23,23 @@
   "topics": [
    "Telling time to 5 minutes: o'clock and half past, written as 7:00 and 7:30 (Primary 1, Measurement, Time 2.1, p. 32)",
    "Counting the minutes in 5s round the face, quarter past and quarter to as 15 and 45 minutes (a reading of Time 2.1; the quarter words are not used in the Primary 1 school papers we have seen)",
-   "A clock seen in a mirror: reflection (not a Primary 1 outcome; line symmetry is Primary 4, p. 39)"
+   "The long hand's journey counted in 5s and a short hand that has only just passed a number (not a Primary 1 outcome: Primary 1 reads o'clock and half past)"
   ],
-  "note": "Strand label for the tutor only. Start here is school Primary 1 work: read and set o'clock and half past, say which hand names the hour, draw the hands, choose the right clock, put three clocks in order. Think harder reads the long hand by counting in 5s (quarter past is 15 minutes, quarter to is 45), checks a claim about the short hand at half past, and uses the quarter words, which the Primary 1 school papers we have seen do not use. BEYOND PRIMARY 1 ON PURPOSE: the Mirror Clock puzzle (Go further G1 to G3): what time is it really if a clock is seen in a mirror (a mirror swaps left and right; reflection is not a Primary 1 outcome and line symmetry is Primary 4). Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Do not describe the lesson as MOE-aligned or syllabus-aligned. Contest tag (tutor only): clock reading and a clock in a mirror (time and calendar). Wording of time questions follows Primary 1 papers: o'clock and half past, times written as digits, am and pm without full stops from Lesson 22."
+  "note": "Strand label for the tutor only. Start here is school Primary 1 work: read and set o'clock and half past, say which hand names the hour, draw the hands, choose the right clock, put three clocks in order. Think harder reads the long hand by counting in 5s (quarter past is 15 minutes, quarter to is 45), checks a claim about the short hand at half past, and uses the quarter words, which the Primary 1 school papers we have seen do not use. BEYOND PRIMARY 1 ON PURPOSE: the Hands Detective puzzle (Go further G1 to G3): where the long hand lands after moving on some numbers, which hand names the hour, and why both hands move between o'clock and half past (5-minute readings are not a Primary 1 outcome). Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Do not describe the lesson as MOE-aligned or syllabus-aligned. Contest tag (tutor only): clock reading and reasoning about the two hands (time and calendar). Wording of time questions follows Primary 1 papers: o'clock and half past, times written as digits, am and pm without full stops from Lesson 22."
  },
  "contest_moves": [
   "read a clock by counting the minutes in 5s",
   "context: the hour-hand trap at half past (the short hand sits half way between two numbers)",
-  "context: a clock seen in a mirror (a mirror swaps left and right)",
-  "logic: which times look the same in a mirror"
+  "context: the long hand's journey counted in 5s (where does it land, how many minutes past)",
+  "logic: test a claim about the two hands (which hand names the hour, do both hands move)"
  ],
- "contest_where": "Think harder (quarter past and quarter to) and Go further (the Mirror Clock puzzle)",
+ "contest_where": "Think harder (quarter past and quarter to) and Go further (the Hands Detective puzzle)",
  "objectives": [
   "Say that the short hand names the hour and the long hand counts the minutes.",
   "Read and set a clock for o'clock and half past, and write the time as digits (7:00, 7:30).",
   "Count the minutes in 5s round the face: the long hand on the 3 is 15 minutes past the hour, on the 6 it is 30 minutes.",
   "Think harder: read quarter past and quarter to as 15 and 45 minutes, and check a claim about the short hand at half past.",
-  "Go further (Mirror Clock): find the real time when a clock is seen in a mirror, for o'clock and half past."
+  "Go further (Hands Detective): count the long hand on by some numbers, say which hand names the hour when the long hand is on a number, and test a claim about how both hands move."
  ],
  "joining_cold": {
   "remember": [
@@ -72,7 +72,7 @@
    "Clock kit (page 6): 2 clock faces and 6 loose hands (3 short, wide hour hands and 3 long, thin minute hands), all cut out by a grown-up. Keep them in an envelope: we use the clock again in Term 3 Lessons 2, 3 and 10. No pin or fastener: the hands lie flat on the face."
   ],
   "ruler": true,
-  "notes": "Nothing needs to be bought: a real clock is a help, not a need. No pins, no fasteners and no sharp things: the clock hands are loose paper pieces. Nobody cuts during the lesson: a grown-up cuts the kit beforehand. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. A mirror, if used at home, is a small unbreakable one or a bathroom mirror that stays on the wall.",
+  "notes": "Nothing needs to be bought: a real clock is a help, not a need. No pins, no fasteners and no sharp things: the clock hands are loose paper pieces. Nobody cuts during the lesson: a grown-up cuts the kit beforehand. Small things never go near the mouth or ears; keep them away from younger brothers and sisters.",
   "kit_contract": [
    {
     "piece": "clock faces",
@@ -251,7 +251,7 @@
      ]
     }
    ],
-   "note": "Lesson 1 of Term 3, 90 minutes. Objective: name the two hands, read and set o'clock and half past, write the time as digits, count the minutes in 5s, and (Think harder and Go further) read quarter past and quarter to and a clock seen in a mirror. Plain statement for families: o'clock and half past are school Primary 1 work; the Mirror Clock puzzle goes past Primary 1 on purpose. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 26, mini-lesson 26 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice (the tutor, the shared screen and any voice that is not muted are recorded; a child may keep the microphone and camera off) before you start the recording. Think harder, Go further and the Investigation are for every child to choose.",
+   "note": "Lesson 1 of Term 3, 90 minutes. Objective: name the two hands, read and set o'clock and half past, write the time as digits, count the minutes in 5s, and (Think harder and Go further) read quarter past and quarter to and reason about the two hands. Plain statement for families: o'clock and half past are school Primary 1 work; the Hands Detective puzzle goes past Primary 1 on purpose. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 26, mini-lesson 26 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice (the tutor, the shared screen and any voice that is not muted are recorded; a child may keep the microphone and camera off) before you start the recording. Think harder, Go further and the Investigation are for every child to choose.",
    "subtitle": "The clock counts in 5s",
    "mascot": {
     "size": "l",
@@ -999,7 +999,7 @@
       ],
       [
        "Go further (page 4)",
-       "The Mirror Clock"
+       "Hands Detective"
       ],
       [
        "Investigation (page 5)",
@@ -1313,7 +1313,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Plain statement for families when it comes up: o'clock and half past are school Primary 1 work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s. The Mirror Clock puzzle goes beyond Primary 1 on purpose. The cut-out clock has loose hands: no pins, so nothing sharp."
+      "text": "Plain statement for families when it comes up: o'clock and half past are school Primary 1 work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s. The Hands Detective puzzle goes beyond Primary 1 on purpose. The cut-out clock has loose hands: no pins, so nothing sharp."
      }
     ]
    },
@@ -1859,7 +1859,7 @@
      },
      {
       "k": "SAY",
-      "text": "If you choose the Mirror Clock, here is the idea. A mirror swaps left and right. A hand that points to the three, on the right, points to the nine, on the left, in the mirror. Up and down stay the same."
+      "text": "If you choose Hands Detective, here is the idea. The long hand counts the minutes in 5s: on the 4 it is 20 minutes. The short hand names the hour: it is the number the short hand has just passed."
      },
      {
       "k": "MOVE",
@@ -1881,7 +1881,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder reads quarter past and quarter to by counting in 5s and checks a claim about the short hand at half past. Go further is the Mirror Clock (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder reads quarter past and quarter to by counting in 5s and checks a claim about the short hand at half past. Go further is Hands Detective (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -2436,77 +2436,50 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Lily sees a wall clock in the bathroom mirror. In the mirror it shows 4 o'clock. A mirror swaps left and right. What is the real time?",
+    "text": "Mei's clock shows 7:10. The long hand will move forward 3 numbers.",
     "parts": [
      {
-      "l": "",
-      "text": "The real time is [] o'clock.",
-      "ans": "8",
-      "val": 8
+      "l": "a",
+      "text": "The long hand will be on the [] .",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "Then it is [2] minutes past 7.",
+      "ans": "25",
+      "val": 25
      }
     ],
-    "answer": "8",
+    "answer": "5; 25",
     "val": [
-     8
+     5,
+     25
     ],
-    "hint": "Use your two clock faces. Put the hands as they look in the mirror on one face. On the other face swap left and right.",
-    "solution": "In the mirror the short hand points to the 4, on the right of the 12. A mirror swaps left and right, so really the short hand is on the left, the same number of steps from the 12. That is the 8. The real time is 8 o'clock.",
+    "hint": "The long hand is on the 2. Count on 3 numbers: 3, 4, 5. Then count the minutes in 5s: 15, 20, 25.",
+    "solution": "The long hand is on the 2 now (10 minutes). Moving on 3 numbers puts it on the 5. The 5 is 25 minutes past the hour, because 5, 10, 15, 20, 25 are 5 fives. The short hand stays just after the 7, so it is 25 minutes past 7.",
     "mistakes": [
-     "Writing 4 (the time in the mirror).",
-     "Writing 6 or 12 (counting the steps the wrong way)."
+     "Writing 3 for (a) (the number of steps, not the place).",
+     "Writing 15 for (b) (adding 5 minutes to 10 for each number wrongly)."
     ],
     "mins": 5,
     "visual": {
      "type": "clock",
-     "h": 4,
-     "m": 0,
-     "labels": "none",
-     "digital": "mirror"
+     "h": 7,
+     "m": 10
     }
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Later, the mirror shows half past 7. What is the real time?",
-    "parts": [
-     {
-      "l": "",
-      "text": "The real time is half past [].",
-      "ans": "4",
-      "val": 4
-     }
-    ],
-    "answer": "4",
-    "val": [
-     4
-    ],
-    "hint": "The long hand stays on the 6 in a mirror. Swap the short hand left and right.",
-    "solution": "In the mirror the long hand is on the 6, so it is half past. The short hand is half way between the 7 and the 8. Swap left and right: it is half way between the 4 and the 5. The real time is half past 4, 4:30.",
-    "mistakes": [
-     "Writing 7 (the mirror time).",
-     "Writing 5 (the number the short hand is going towards)."
-    ],
-    "mins": 5,
-    "visual": {
-     "type": "clock",
-     "h": 7,
-     "m": 30,
-     "labels": "none",
-     "digital": "mirror"
-    }
-   },
-   {
-    "id": "G3",
-    "page": 4,
-    "tier": "go",
-    "text": "Lily says: at 12 o'clock the clock in the mirror shows 12 o'clock too.",
+    "text": "Ali says this clock shows 4 o'clock, because the long hand is on the 4.",
     "parts": [
      {
       "l": "a",
-      "text": "Is Lily right? Circle Yes or No.",
-      "ans": "Yes",
-      "val": "Yes",
+      "text": "Is Ali right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
       "choices": [
        "Yes",
        "No"
@@ -2514,21 +2487,62 @@
      },
      {
       "l": "b",
-      "text": "There is one more o'clock time that looks the same in a mirror. It is [] o'clock.",
+      "text": "It is 20 minutes past [] .",
       "ans": "6",
       "val": 6
      }
     ],
-    "answer": "Yes; 6",
+    "answer": "No; 6",
     "val": [
-     "Yes",
+     "No",
      6
     ],
-    "hint": "Where are the hands at 12 o'clock? Which other o'clock time has both hands in a straight line?",
-    "solution": "At 12 o'clock both hands point straight up. A mirror swaps left and right, but straight up stays straight up. So Lily is right. At 6 o'clock the short hand points straight down, and the long hand points straight up, so a mirror does not change the clock. The other time is 6 o'clock.",
+    "hint": "Which hand names the hour? Look at the short hand.",
+    "solution": "The short hand names the hour, and it is just after the 6. The long hand on the 4 counts 4 fives, which is 20 minutes. So it is 20 minutes past 6, not 4 o'clock.",
     "mistakes": [
-     "Saying No because the hands are on top of each other.",
-     "Writing 3 or 9 (a mirror swaps these two)."
+     "Saying Yes because the long hand is on the 4.",
+     "Writing 4 for (b)."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "clock",
+     "h": 6,
+     "m": 20
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Lily says: from 5 o'clock to half past 5, only the long hand moves.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is Lily right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "At half past 5 the short hand is half way between the 5 and the [] .",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "No; 6",
+    "val": [
+     "No",
+     6
+    ],
+    "hint": "Look at the short hand at 5 o'clock and at half past 5. Has it moved?",
+    "solution": "From 5 o'clock to half past 5 the long hand goes half way round the clock. The short hand moves too: it goes half way from the 5 to the 6. So both hands move, and Lily is not right.",
+    "mistakes": [
+     "Saying Yes because the short hand looks almost the same.",
+     "Writing 5 for (b)."
     ],
     "mins": 5
    }
@@ -3224,36 +3238,32 @@
     "id": "t3",
     "tier": "stretch",
     "type": "number",
-    "q": "In a mirror a clock shows 4 o'clock. What is the real time? Type the hour.",
+    "q": "The long hand is on the 2. It moves forward 3 numbers. How many minutes past the hour is it now? Type the number.",
     "easier": "c1",
-    "answer": 8,
-    "hint": "A mirror swaps left and right. Count the same number of steps from the 12 on the other side.",
+    "answer": 25,
+    "hint": "Count on 3 numbers, then count the minutes in 5s.",
     "steps": [
-     "In the mirror the short hand is 4 steps right of the 12.",
-     "Really it is 4 steps left of the 12, on the 8.",
-     "The real time is 8 o'clock."
+     "The long hand is on the 2. Count on 3 numbers: 3, 4, 5.",
+     "The long hand is on the 5.",
+     "The 5 is 25 minutes past the hour."
     ],
     "slips": [
      {
       "a": [
-       4
+       5
       ],
-      "say": "4 is the time in the mirror. What is the real time?"
+      "say": "5 is the number the long hand is on. How many minutes is that?"
      }
     ],
     "fig": {
      "type": "clock",
-     "h": "{k}",
-     "m": 0,
-     "labels": "none",
-     "digital": "mirror"
+     "h": 7,
+     "m": "{m}"
     },
     "fig_base": {
      "type": "clock",
-     "h": 4,
-     "m": 0,
-     "labels": "none",
-     "digital": "mirror"
+     "h": 7,
+     "m": 10
     },
     "tpl": {
      "vars": {
@@ -3265,19 +3275,19 @@
        5,
        6,
        7,
-       8,
-       9,
-       10,
-       11
+       8
       ]
      },
-     "q": "In a mirror a clock shows {k} o'clock. What is the real time? Type the hour.",
-     "answer": "12-k",
-     "hint": "A mirror swaps left and right. Count the same number of steps from the 12 on the other side.",
+     "derive": {
+      "m": "5*k"
+     },
+     "q": "The long hand is on the {k}. It moves forward 3 numbers. How many minutes past the hour is it now? Type the number.",
+     "answer": "5*(k+3)",
+     "hint": "Count on 3 numbers, then count the minutes in 5s.",
      "steps": [
-      "In the mirror the short hand is {k} steps from the 12 on one side.",
-      "Really it is {k} steps from the 12 on the other side.",
-      "The real time is {ans} o'clock."
+      "The long hand is on the {k}. Count on 3 numbers.",
+      "Count the minutes in 5s to the new number.",
+      "It is {ans} minutes past the hour."
      ]
     }
    },
@@ -3285,61 +3295,59 @@
     "id": "g1",
     "tier": "challenge",
     "type": "number",
-    "q": "In a mirror a clock shows half past 9. What is the real time? Type the hour.",
+    "q": "Ali says it is 4 o'clock, because the long hand is on the 4. The short hand is just after the 6. What hour is it? Type the hour.",
     "easier": "t3",
-    "answer": 2,
-    "hint": "The long hand stays on the 6. Swap the short hand left and right.",
+    "answer": 6,
+    "hint": "Which hand names the hour? Look at the short hand.",
     "steps": [
-     "In the mirror the short hand is half way between the 9 and the 10.",
-     "Swap left and right: half way between the 2 and the 3.",
-     "The real time is half past 2."
+     "The short hand names the hour.",
+     "It has just passed the 6.",
+     "The hour is 6."
     ],
     "slips": [
      {
       "a": [
-       9
+       4
       ],
-      "say": "9 is the mirror time. What is the real time?"
+      "say": "4 is where the long hand is. Which hand names the hour?"
      }
     ],
     "fig": {
      "type": "clock",
-     "h": "{k}",
-     "m": 30,
-     "labels": "none",
-     "digital": "mirror"
+     "h": "{j}",
+     "m": "{mm}"
     },
     "fig_base": {
      "type": "clock",
-     "h": 9,
-     "m": 30,
-     "labels": "none",
-     "digital": "mirror"
+     "h": 6,
+     "m": 20
     },
     "tpl": {
      "vars": {
-      "k": [
-       1,
-       2,
+      "j": [
        3,
-       4,
        5,
        6,
-       7,
        8,
-       9,
-       10,
-       11,
-       12
+       10
+      ],
+      "k": [
+       2,
+       4,
+       7,
+       9
       ]
      },
-     "q": "In a mirror a clock shows half past {k}. What is the real time? Type the hour.",
-     "answer": "((10-k+12)%12)+1",
-     "hint": "The long hand stays on the 6. Swap the short hand left and right.",
+     "derive": {
+      "mm": "5*k"
+     },
+     "q": "Ali says it is {k} o'clock, because the long hand is on the {k}. The short hand is just after the {j}. What hour is it? Type the hour.",
+     "answer": "j",
+     "hint": "Which hand names the hour? Look at the short hand.",
      "steps": [
-      "In the mirror the short hand is half way between the {k} and the next number.",
-      "Swap left and right.",
-      "The real time is half past {ans}."
+      "The short hand names the hour.",
+      "It has just passed the {j}.",
+      "The hour is {j}."
      ]
     }
    },
@@ -3347,26 +3355,26 @@
     "id": "g2",
     "tier": "challenge",
     "type": "choice",
-    "q": "Which o'clock time looks the same in a mirror?",
+    "q": "Which time has the short hand half way between two numbers?",
     "easier": "t3",
     "options": [
-     "3 o'clock",
-     "6 o'clock",
-     "8 o'clock"
+     "4 o'clock",
+     "half past 4",
+     "6 o'clock"
     ],
-    "answer": "6 o'clock",
-    "hint": "Which time has both hands in a straight line, up and down?",
+    "answer": "half past 4",
+    "hint": "At half past the long hand is on the 6. Where is the short hand?",
     "steps": [
-     "At 6 o'clock the long hand points up and the short hand points down.",
-     "A mirror swaps left and right, but up and down stay the same.",
-     "So 6 o'clock looks the same."
+     "At o'clock the short hand points straight at a number.",
+     "At half past 4 the long hand has gone half way round.",
+     "The short hand has gone half way from the 4 to the 5."
     ],
     "slips": [
      {
       "a": [
-       "3 o'clock"
+       "4 o'clock"
       ],
-      "say": "At 3 o'clock the short hand points right. In a mirror it points left."
+      "say": "At 4 o'clock the short hand points straight at the 4."
      }
     ]
    },
@@ -3374,14 +3382,14 @@
     "id": "g3",
     "tier": "challenge",
     "type": "selfcheck",
-    "q": "Make your own mirror clock puzzle. Choose an o'clock time. Ask a grown-up what time it is really. Many answers are right.",
+    "q": "Make your own clock puzzle. Choose a time and say where the long hand is. Ask a grown-up to say how many minutes past the hour it is. Many answers are right.",
     "easier": "c1",
-    "hint": "Start with a real time, then swap left and right.",
+    "hint": "Start with a time, then find the number the long hand points to.",
     "steps": [
-     "Choose an o'clock time for the real clock.",
-     "Swap left and right to see the mirror time.",
-     "Ask a grown-up to find the real time from the mirror time.",
-     "For example, if the real clock shows 4 o'clock, the mirror shows 8 o'clock."
+     "Choose a time.",
+     "Say which number the long hand is on.",
+     "Ask a grown-up how many minutes past the hour it is.",
+     "For example, if the long hand is on the 4, it is 20 minutes past."
     ],
     "slips": []
    }
@@ -3452,7 +3460,7 @@
   ]
  },
  "safeguarding": [
-  "The clock hands are loose paper pieces with no pin, so nothing is sharp. A grown-up cuts the kit beforehand: nobody cuts during the lesson. Small things (counters, buttons) stay on the table and never go near the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. A mirror, if a family uses one for the Go further page, is small and unbreakable or stays on the wall.",
+  "The clock hands are loose paper pieces with no pin, so nothing is sharp. A grown-up cuts the kit beforehand: nobody cuts during the lesson. Small things (counters, buttons) stay on the table and never go near the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp.",
   "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
   "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
   "Never read out a child’s name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child’s page on the recording.",
@@ -3466,7 +3474,7 @@
   "Lesson 20 now tells families (goodbye, last slide and parent page): the Term 3 book is in the house, a grown-up tears out the clock page and cuts out the 6 clock hands, and the $1 tokens are kept. In the week before this lesson, send one reminder: cut out the 2 clock faces and the 6 hands (3 short, wide, 3 long, thin) and keep them in an envelope; a ruler for drawing the hands; a real clock helps. No printer: a paper plate with 1 to 12 written round the edge and two strips of card.",
   "Have the slides open. Have your own cut-out clock to show on camera if you wish. Draw nothing under the webcam: the recording cannot show it.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive. Say the recording notice, then start the recording; once it is running, avoid first names. Say the recording statement and the microphone routine in the same words every lesson.",
-  "Be plain with families: reading o'clock and half past is Primary 1 school work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s; the Primary 1 school papers we have seen use only o'clock and half past, so every time is also shown as digits. The Mirror Clock puzzle (Go further) is beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",
+  "Be plain with families: reading o'clock and half past is Primary 1 school work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s; the Primary 1 school papers we have seen use only o'clock and half past, so every time is also shown as digits. The Hands Detective puzzle (Go further) is beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",
   "Slides s-explore1, s-explore2, s-explore3, s-m3, s-m4 and s-m5 keep the picture or the answer off the screen while you ask: it appears on the slide after. Read every question with its options aloud (S4): the clocks on the slides are small. Do not say clockwise as a rule."
  ],
  "workbook": {
@@ -3474,7 +3482,7 @@
   "hint_p1": "Use your clock. Say the time out loud, then write it with digits.",
   "hint_p2": "Look at both hands. Read the time on every clock before you compare.",
   "hint_p3": "Count in 5s from the 12. Quarter past means 15 minutes past.",
-  "hint_p4": "A mirror swaps left and right. Use your two clock faces. Choose any question.",
+  "hint_p4": "The long hand counts the minutes in 5s. The short hand names the hour. Use your two clock faces. Choose any question.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",
@@ -3489,13 +3497,13 @@
   ]
  },
  "beyond": {
-  "name": "Mirror Clock",
+  "name": "Hands Detective",
   "where": [
    "G1",
    "G2",
    "G3"
   ],
-  "text": "A clock is seen in a mirror: what is the real time (o'clock 4 shows 8; half past 7 shows half past 4), and which o'clock times look the same in a mirror (12 and 6). Level note: reflection is not a Primary 1 outcome; line symmetry is Primary 4 (p. 39). Level 2 returns to mirror clocks and digits (intended spiral).",
-  "parent": "The Go further page has a Mirror Clock puzzle (what time is it really, if the clock is seen in a mirror?). A mirror is not part of Primary 1; it is on the page for children who enjoy a puzzle."
+  "text": "Where does the long hand land after it moves on some numbers (7:10 and 3 numbers on gives 7:25), which hand names the hour when the long hand is on the 4 (6:20, not 4 o'clock), and do both hands move from 5 o'clock to half past 5 (yes). Level note: 5-minute readings are not a Primary 1 outcome; the school papers we have seen use o'clock and half past only.",
+  "parent": "The Go further page has a Hands Detective puzzle (where does the long hand land, and which hand tells the hour?). Reading a clock to 5 minutes is not part of Primary 1; it is on the page for children who enjoy a puzzle."
  }
 }
