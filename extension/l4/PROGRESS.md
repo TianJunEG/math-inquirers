@@ -15,4 +15,6 @@ Pipeline: unit sources are `extension/l4/src/uNN.py` (helpers in `lib.py`); `pyt
 | 9 Data Detectives | written, checked, gates ok, viewed |
 | 10 Puzzle Day | written, checked, gates ok, viewed |
 
-Resume: next unit is 11 (none (all units written): run the full build and gates).
+Status: all 10 units written, checked, viewed (colour edition, every unit page) and committed. Full build done: both PDFs are 102 pages (even); contents and answer page numbers are right (answers start on page 79 divider, unit 1 answers on page 80). Gates run for Level 4: run_checks (422 answers, 0 mismatches), dup_check (no shared 7-word run; REVIEW list read and accepted), wording_lint (0 errors), build (no overflow, every unit page at least 85 percent full), bw_check and print/check_bw on the Level 4 print PDF (0 colour pixels, 0 flat grey), fill_check OK. `verify_all.sh 4` calls `bw_check.py` without arguments, which scans every level's print PDF; the Level 4 gates were therefore run on the Level 4 file only.
+
+Resume: nothing left to write. If a unit is edited, rerun `python3 extension/l4/src/uNN.py`, then the full build and the gates above. Open items for people: independent audit, child trial, owner review.

@@ -397,9 +397,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9834899588053553,
+   "fill": 0.9617501287332647,
    "over": false,
-   "excess_mm": -4.2,
+   "excess_mm": -9.8,
    "edition": "soft"
   },
   {
@@ -737,9 +737,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8856365859938208,
+   "fill": 0.8638484809474768,
    "over": false,
-   "excess_mm": -29.4,
+   "excess_mm": -35,
    "edition": "soft"
   },
   {
@@ -1014,9 +1014,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8840917868177137,
+   "fill": 0.957855947476828,
    "over": false,
-   "excess_mm": -29.8,
+   "excess_mm": -10.8,
    "edition": "soft"
   },
   {
@@ -1024,9 +1024,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.3997811534500515,
+   "fill": 0.28524073120494337,
    "over": false,
-   "excess_mm": -154.2,
+   "excess_mm": -183.6,
    "edition": "soft"
   },
   {
@@ -1413,9 +1413,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9834899588053553,
+   "fill": 0.9617501287332647,
    "over": false,
-   "excess_mm": -4.2,
+   "excess_mm": -9.8,
    "edition": "print"
   },
   {
@@ -1753,9 +1753,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8918157826982492,
+   "fill": 0.8700276776519053,
    "over": false,
-   "excess_mm": -27.8,
+   "excess_mm": -33.4,
    "edition": "print"
   },
   {
@@ -2030,9 +2030,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8840917868177137,
+   "fill": 0.957855947476828,
    "over": false,
-   "excess_mm": -29.8,
+   "excess_mm": -10.8,
    "edition": "print"
   },
   {
@@ -2040,9 +2040,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.3997811534500515,
+   "fill": 0.28524073120494337,
    "over": false,
-   "excess_mm": -154.2,
+   "excess_mm": -183.6,
    "edition": "print"
   }
  ],
@@ -2052,7 +2052,7 @@
  "bw_pipeline": {
   "pages": 102,
   "dpi": 600,
-  "mb": 13.4,
+  "mb": 13.41,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }
