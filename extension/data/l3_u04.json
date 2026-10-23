@@ -472,7 +472,7 @@
    "tier": "think",
    "page": 4,
    "beyond": "Giving to make them equal",
-   "text": "A library has 84 books on 2 shelves. The top shelf has 3 times as many books as the bottom shelf. The librarian moves some books from the top shelf to the bottom shelf. Now both shelves have the same number of books. How many books does she move? {b}",
+   "text": "A library has 84 books on 2 shelves. The top shelf has 3 times as many books as the bottom shelf. The librarian moves some books from the top shelf to the bottom shelf. Now each shelf holds an equal number. How many does she move? {b}",
    "answer": {
     "value": [
      "21"

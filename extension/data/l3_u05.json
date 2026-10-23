@@ -236,32 +236,40 @@
    "id": "L3U05-S05",
    "tier": "start",
    "page": 2,
-   "text": "Lily thinks of a number. She divides it by 6. The answer is 8 remainder 5.",
+   "text": "Mei writes a list of numbers. She adds 5 each time: 3, 8, 13, 18, 23, ...",
    "parts": [
     {
      "label": "a",
-     "text": "Lily’s number is {b}.",
+     "text": "Each number in her list leaves remainder {b} when divided by 5.",
      "answer": {
       "value": [
-       "53"
+       "3"
       ],
-      "text": "53"
+      "text": "3"
      }
     },
     {
      "label": "b",
-     "text": "She divides the same number by 7. The answer is {b} remainder {b}.",
+     "text": "Is 83 in her list?   {circ:Yes|No}",
      "answer": {
       "value": [
-       "7",
-       "4"
+       "Yes"
       ],
-      "text": "7 remainder 4",
-      "list": true
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 10th number in her list is {b}.",
+     "answer": {
+      "value": [
+       "48"
+      ],
+      "text": "48"
      }
     }
    ],
-   "explanation": "(a) 8 groups of 6 make 48, and 48 + 5 = 53. (b) 53 ÷ 7: 7 × 7 = 49 and 53 - 49 = 4. So 7 remainder 4."
+   "explanation": "(a) 8 ÷ 5 = 1 remainder 3 and 13 ÷ 5 = 2 remainder 3. Adding 5 keeps the remainder. (b) 83 ÷ 5 = 16 remainder 3, so 83 is in the list. (c) The 10th number is 3 + 9 × 5 = 48."
   },
   {
    "id": "L3U05-S06",
@@ -286,16 +294,16 @@
     },
     {
      "label": "b",
-     "text": "The greatest 2-digit number that leaves remainder 5 when divided by 8 is {b}.",
+     "text": "The number from 20 to 40 that is in the 6 times table and leaves remainder 1 when divided by 5 is {b}.",
      "answer": {
       "value": [
-       "93"
+       "36"
       ],
-      "text": "93"
+      "text": "36"
      }
     }
    ],
-   "explanation": "(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) 96 is in the 8 times table, and 96 + 5 = 101 has 3 digits. The next one down: 88 + 5 = 93."
+   "explanation": "(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) The 6 times table from 20 to 40: 24, 30, 36. Their remainders when divided by 5 are 4, 0 and 1. So it is 36."
   },
   {
    "id": "L3U05-S07",
@@ -651,42 +659,32 @@
    "id": "L3U05-T03",
    "tier": "think",
    "page": 4,
-   "beyond": "Same answer and remainder",
-   "text": "Mei divides a number by 9. The whole-number answer and the remainder are the same. Her number is greater than 0 and less than 100.",
+   "beyond": "Going round a wheel",
+   "text": "A wheel at a fair has 8 seats in a circle, numbered 1 to 8. It turns forward 1 seat at a time. After seat 8 comes seat 1 again.",
    "parts": [
     {
      "label": "a",
-     "text": "When both are 4, her number is {b}.",
-     "answer": {
-      "value": [
-       "40"
-      ],
-      "text": "40"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The greatest number that works is {b}.",
-     "answer": {
-      "value": [
-       "80"
-      ],
-      "text": "80"
-     }
-    },
-    {
-     "label": "c",
-     "text": "There are {b} numbers that work.",
+     "text": "Ali sits in seat 3. After 29 moves he is in seat {b}.",
      "answer": {
       "value": [
        "8"
       ],
       "text": "8"
      }
+    },
+    {
+     "label": "b",
+     "text": "Mei sits in seat 5. After 50 moves she is in seat {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
     }
    ],
-   "explanation": "4 groups of 9 and 4 left make 4 × 9 + 4 = 40. The numbers that work are 10, 20, 30, up to 80: 1 × 10, 2 × 10, ... 8 × 10. A remainder must be less than 9, so 9 remainder 9 is not allowed. The greatest is 80 and there are 8 numbers.",
-   "hint": "Try 1 remainder 1, then 2 remainder 2. Look for a pattern.",
+   "explanation": "(a) 29 ÷ 8 = 3 remainder 5. 3 full turns bring Ali back to seat 3. Then 5 more seats: 4, 5, 6, 7, 8. (b) 50 ÷ 8 = 6 remainder 2. Mei ends 2 seats after seat 5: seat 7.",
+   "hint": "After 8 moves a rider is back in the same seat.",
    "space": {
     "rows": [
      "Working:",

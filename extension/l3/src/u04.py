@@ -73,7 +73,7 @@ u.S(3, 'Siti saves $12 each week for 7 weeks. Then she spends $35. How much mone
     why='In 7 weeks she saves 7 × $12 = $84. Then 84 - 35 = 49. She has $49 left.')
 
 # ---------------- Think harder
-u.T('A library has 84 books on 2 shelves. The top shelf has 3 times as many books as the bottom shelf. The librarian moves some books from the top shelf to the bottom shelf. Now both shelves have the same number of books. How many books does she move? {b}', A('21'), beyond='Giving to make them equal',
+u.T('A library has 84 books on 2 shelves. The top shelf has 3 times as many books as the bottom shelf. The librarian moves some books from the top shelf to the bottom shelf. Now each shelf holds an equal number. How many does she move? {b}', A('21'), beyond='Giving to make them equal',
     hint='Find how many each shelf has at first. Then how many later.',
     space={'rows': ['Draw your model:', 'Working:']},
     why='At first there are 4 equal boxes: 84 ÷ 4 = 21, so the bottom shelf has 21 and the top shelf has 63. At the end each has 84 ÷ 2 = 42. She moves 63 - 42 = 21 books.')

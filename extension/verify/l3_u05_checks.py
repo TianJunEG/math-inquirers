@@ -62,16 +62,15 @@ def _():
 
 @check('L3U05-S05')
 def _():
-    sols = [n for n in range(1, 200) if divmod_sub(n, 6) == (8, 5)]
-    n = only(sols)
-    return {'a': s([n]), 'b': s(divmod_sub(n, 7))}
+    lst = [3 + 5 * k for k in range(40)]
+    return {'a': s([only({divmod_sub(n, 5)[1] for n in lst})]), 'b': s(['Yes' if 83 in lst else 'No']), 'c': s([lst[9]])}
 
 
 @check('L3U05-S06')
 def _():
     rems = sorted({divmod_sub(n, 5)[1] for n in range(5, 200)} | {0})
-    big = [n for n in range(10, 100) if divmod_sub(n, 8)[1] == 5]
-    return {'a': s(rems), 'b': s([max(big)])}
+    ok = [n for n in range(20, 41) if divmod_sub(n, 6)[1] == 0 and divmod_sub(n, 5)[1] == 1]
+    return {'a': s(rems), 'b': s([only(ok)])}
 
 
 @check('L3U05-S07')
@@ -141,8 +140,12 @@ def _():
 
 @check('L3U05-T03')
 def _():
-    good = [n for n in range(1, 100) if divmod_sub(n, 9)[0] == divmod_sub(n, 9)[1]]
-    return {'a': s([only(n for n in good if divmod_sub(n, 9)[0] == 4)]), 'b': s([max(good)]), 'c': s([len(good)])}
+    def seat(start, moves):
+        pos = start
+        for _ in range(moves):
+            pos = pos % 8 + 1
+        return pos
+    return {'a': s([seat(3, 29)]), 'b': s([seat(5, 50)])}
 
 
 @check('L3U05-G01')

@@ -693,10 +693,6 @@
        {
         "seg": 0,
         "text": "4 m"
-       },
-       {
-        "seg": 1,
-        "text": "4 m"
        }
       ]
      }
@@ -707,7 +703,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Area of the lawn without the pond: {b} m²",
+     "text": "Area of lawn, not pond: {b} m²",
      "answer": {
       "value": [
        "144"
@@ -717,7 +713,7 @@
     },
     {
      "label": "b",
-     "text": "Length of the 2 edges, round the lawn and round the pond: {b} m",
+     "text": "Edge of lawn plus edge of pond: {b} m",
      "answer": {
       "value": [
        "68"

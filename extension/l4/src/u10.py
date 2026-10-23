@@ -78,7 +78,7 @@ T.append(item(U+'-T01', 'think', 4, 'A shop sells pens in boxes of 2 and boxes o
   why='If all 12 boxes held 2 pens, there would be 24 pens. 45 − 24 = 21 pens are missing. Each box of 5 instead of 2 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 12 − 7 = 5 boxes hold 2. Check: 35 + 10 = 45.',
   space={'rows': ['Working:', '']}))
 T.append(item(U+'-T02', 'think', 4, 'Ali, Ben, Kumar, Mei and Siti run a race. Nobody ties. Ali finishes before Mei. Mei finishes before Ben. Kumar finishes just after Siti. Ben does not finish last.',
-  parts=[P('a', 'Places 1 to 5, in order: {b} {b} {b} {b} {b}', A('Ali', 'Mei', 'Ben', 'Siti', 'Kumar', text='Ali, Mei, Ben, Siti, Kumar'))],
+  parts=[P('a', 'Finishing order: {b} {b} {b} {b} {b}', A('Ali', 'Mei', 'Ben', 'Siti', 'Kumar', text='Ali, Mei, Ben, Siti, Kumar'))],
   hint='Join the clues into 2 groups. Which group can go last?',
   why='Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so the pair Siti, Kumar cannot come before Ben and leave Ben last. The pair must be last: Ali, Mei, Ben, Siti, Kumar. Check each clue.',
   space={'rows': ['Try:', '']}))

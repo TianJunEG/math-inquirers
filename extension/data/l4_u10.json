@@ -599,7 +599,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Places 1 to 5, in order: {b} {b} {b} {b} {bw}",
+     "text": "Finishing order: {b} {b} {b} {b} {bw}",
      "answer": {
       "value": [
        "Ali",

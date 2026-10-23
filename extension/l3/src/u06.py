@@ -83,12 +83,13 @@ u.T('Look at the fractions with bottom number 12. List every one between 1/3 and
     hint='Change 1/3 and 2/3 into twelfths first.',
     why='1/3 = 4/12 and 2/3 = 8/12. The twelfths between 4/12 and 8/12 are 5/12, 6/12 and 7/12. The fractions 4/12 and 8/12 are not between.',
     space={'rows': ['Working:', '', '', '']})
-u.T('Ben writes fractions that are equal to 3/4. He adds the top number and the bottom number.', parts=[
-    P('a', 'The sum is 28 for the fraction {b}/{b}.', A(['12', '16'], '12/16', list=True)),
-    P('b', 'The sum is 42 for the fraction {b}/{b}.', A(['18', '24'], '18/24', list=True))],
-    hint='Write equal fractions of 3/4. Add the top and bottom each time.',
-    why='Equal fractions of 3/4 are 3/4, 6/8, 9/12, 12/16, 15/20, 18/24. Their sums are 7, 14, 21, 28, 35, 42. So 12/16 has sum 28 and 18/24 has sum 42.',
-    space={'rows': ['My list:', '', '']})
+u.T('Put the fractions 2/3, 3/8, 5/6 and 1/2 in order. A common bottom number will help.', parts=[
+    P('a', 'The smallest is   {circ:2/3|3/8|5/6|1/2}', A('3/8')),
+    P('b', 'The greatest is   {circ:2/3|3/8|5/6|1/2}', A('5/6')),
+    P('c', 'The greatest is {b}/24 more than the smallest.', A('11'))],
+    hint='Which bottom number do 3, 8, 6 and 2 all fit into?',
+    why='Use 24 as the bottom number: 2/3 = 16/24, 3/8 = 9/24, 5/6 = 20/24 and 1/2 = 12/24. The order is 3/8, 1/2, 2/3, 5/6. So the smallest is 3/8 and the greatest is 5/6. 20 - 9 = 11, so 11/24 more.',
+    space={'rows': ['Twenty-fourths:', '', '']})
 u.T('A jug is full of juice. Mei drinks 1/4 of the jug. Ali drinks 1/3 of the jug.', parts=[
     P('a', 'Together they drink {b}/12 of the jug.', A('7')), P('b', '{b}/12 of the jug is left.', A('5'))],
     hint='Change quarters and thirds into twelfths first.',

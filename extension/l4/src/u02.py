@@ -119,7 +119,7 @@ G.append(item(U+'-G04', 'go', 5, 'Some numbers round to 7000 to the nearest 1000
   hint='Find the first and last numbers for each rounding.',
   why='To the nearest 1000, the numbers are 6500 to 7499. To the nearest 100, they are 6950 to 7049. For example, 7400 is in the first list but rounds to 7400 to the nearest 100. The numbers in both lists are 6950 to 7049: 100 numbers.'))
 
-C.append(item(U+'-C01', 'quiz', None, 'Round 25 962 to the nearest 10 {b}, 100 {b}, 1000 {b}',
+C.append(item(U+'-C01', 'quiz', None, 'Round 25 962 to the nearest:\n10 {b}   100 {b}   1000 {b}',
   ans=A(25960, 26000, 26000, text='25 960, 26 000, 26 000'),
   why='25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000.'))
 C.append(item(U+'-C02', 'quiz', None, 'To the nearest 100, 8300 people came. Least: {b} Greatest: {b}',

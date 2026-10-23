@@ -2008,5 +2008,12 @@
  ],
  "problems": [],
  "soft_pages": 100,
- "print_pages": 100
+ "print_pages": 100,
+ "bw_pipeline": {
+  "pages": 100,
+  "dpi": 600,
+  "mb": 13.04,
+  "check_bw_failures": 0,
+  "pale_tint_dropped_max": 0.0037
+ }
 }

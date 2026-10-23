@@ -79,7 +79,7 @@ def has_pair(segments, kind):
 LET = {'F': [(0, 0, 0, 4), (0, 4, 3, 4), (0, 2, 2, 2)], 'V': [(0, 4, 1.5, 0), (1.5, 0, 3, 4)],
        'N': [(0, 0, 0, 4), (0, 4, 3, 0), (3, 0, 3, 4)], 'L': [(0, 4, 0, 0), (0, 0, 3, 0)],
        'E': [(0, 0, 0, 4), (0, 4, 3, 4), (0, 2, 2.5, 2), (0, 0, 3, 0)], 'H': [(0, 0, 0, 4), (3, 0, 3, 4), (0, 2, 3, 2)],
-       'T': [(0, 4, 3, 4), (1.5, 4, 1.5, 0)], 'Z': [(0, 4, 3, 4), (3, 4, 0, 0), (0, 0, 3, 0)]}
+       'T': [(0, 4, 3, 4), (1.5, 4, 1.5, 0)], 'Y': [(0, 4, 1.5, 2), (3, 4, 1.5, 2), (1.5, 2, 1.5, 0)], 'Z': [(0, 4, 3, 4), (3, 4, 0, 0), (0, 0, 3, 0)]}
 
 
 @check('L3U08-L01')
@@ -196,14 +196,16 @@ def _():
     return {'a': [only(k for k, d in dots.items() if dot(ab, vec(C, d)) == 0)]}
 
 
-PLUS_POLY = [(1, 0), (2, 0), (2, 1), (3, 1), (3, 2), (2, 2), (2, 3), (1, 3), (1, 2), (0, 2), (0, 1), (1, 1)]
+STEPS_POLY = [(0, 0), (4, 0), (4, 1), (3, 1), (3, 2), (2, 2), (2, 3), (1, 3), (1, 4), (0, 4)]
 
 
 @check('L3U08-T03')
 def _():
-    p = PLUS_POLY
-    n_corners, dents = 10, 3
-    return {'a': s([right_angles(p)]), 'b': s([reflex(p)]), 'c': s([n_corners - dents])}
+    p = STEPS_POLY
+    # (c): an orthogonal shape has (right angles) - (dents) = 4, and right + dents = corners
+    corners, dents = 14, 5
+    right = [r for r in range(corners + 1) if r + dents == corners and r - dents == 4]
+    return {'a': s([reflex(p)]), 'b': s([right_angles(p)]), 'c': s([only(right)])}
 
 
 @check('L3U08-G01')
@@ -239,7 +241,7 @@ def _():
 
 @check('L3U08-C02')
 def _():
-    return [n for n in ['E', 'H', 'V', 'T'] if has_pair(LET[n], 'parallel')]
+    return [n for n in ['E', 'H', 'V', 'Y'] if has_pair(LET[n], 'parallel')]
 
 
 @check('L3U08-C03')

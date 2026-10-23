@@ -689,38 +689,44 @@
    "id": "L3U06-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ben writes fractions that are equal to 3/4. He adds the top number and the bottom number.",
+   "text": "Put the fractions 2/3, 3/8, 5/6 and 1/2 in order. A common bottom number will help.",
    "parts": [
     {
      "label": "a",
-     "text": "The sum is 28 for the fraction {b}/{b}.",
+     "text": "The smallest is   {circ:2/3|3/8|5/6|1/2}",
      "answer": {
       "value": [
-       "12",
-       "16"
+       "3/8"
       ],
-      "text": "12/16",
-      "list": true
+      "text": "3/8"
      }
     },
     {
      "label": "b",
-     "text": "The sum is 42 for the fraction {b}/{b}.",
+     "text": "The greatest is   {circ:2/3|3/8|5/6|1/2}",
      "answer": {
       "value": [
-       "18",
-       "24"
+       "5/6"
       ],
-      "text": "18/24",
-      "list": true
+      "text": "5/6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The greatest is {b}/24 more than the smallest.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
      }
     }
    ],
-   "explanation": "Equal fractions of 3/4 are 3/4, 6/8, 9/12, 12/16, 15/20, 18/24. Their sums are 7, 14, 21, 28, 35, 42. So 12/16 has sum 28 and 18/24 has sum 42.",
-   "hint": "Write equal fractions of 3/4. Add the top and bottom each time.",
+   "explanation": "Use 24 as the bottom number: 2/3 = 16/24, 3/8 = 9/24, 5/6 = 20/24 and 1/2 = 12/24. The order is 3/8, 1/2, 2/3, 5/6. So the smallest is 3/8 and the greatest is 5/6. 20 - 9 = 11, so 11/24 more.",
+   "hint": "Which bottom number do 3, 8, 6 and 2 all fit into?",
    "space": {
     "rows": [
-     "My list:",
+     "Twenty-fourths:",
      "",
      ""
     ]

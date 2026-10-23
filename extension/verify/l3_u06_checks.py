@@ -117,9 +117,10 @@ def _():
 
 @check('L3U06-T02')
 def _():
-    def find(total):
-        return only([(t, bb) for bb in range(1, 100) for t in range(1, bb) if Fr(t, bb) == Fr(3, 4) and t + bb == total])
-    return {'a': s(find(28)), 'b': s(find(42))}
+    fr = {'2/3': Fr(2, 3), '3/8': Fr(3, 8), '5/6': Fr(5, 6), '1/2': Fr(1, 2)}
+    lo = min(fr, key=fr.get)
+    hi = max(fr, key=fr.get)
+    return {'a': s([lo]), 'b': s([hi]), 'c': s([top_over(24, fr[hi] - fr[lo])])}
 
 
 @check('L3U06-T03')

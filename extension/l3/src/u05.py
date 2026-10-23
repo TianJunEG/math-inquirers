@@ -45,14 +45,15 @@ u.S(1, 'Kumar says 59 ÷ 7 = 7 remainder 10.', parts=[
     P('b', 'The right answer is {b} remainder {b}.', A(['8', '3'], '8 remainder 3', list=True))],
     why='A remainder must be smaller than the number we divide by. 10 is greater than 7, so another group of 7 fits. 7 × 8 = 56 and 59 - 56 = 3. So 59 ÷ 7 = 8 remainder 3.')
 
-u.S(2, 'Lily thinks of a number. She divides it by 6. The answer is 8 remainder 5.', parts=[
-    P('a', 'Lily’s number is {b}.', A('53')),
-    P('b', 'She divides the same number by 7. The answer is {b} remainder {b}.', A(['7', '4'], '7 remainder 4', list=True))],
-    why='(a) 8 groups of 6 make 48, and 48 + 5 = 53. (b) 53 ÷ 7: 7 × 7 = 49 and 53 - 49 = 4. So 7 remainder 4.')
+u.S(2, 'Mei writes a list of numbers. She adds 5 each time: 3, 8, 13, 18, 23, ...', parts=[
+    P('a', 'Each number in her list leaves remainder {b} when divided by 5.', A('3')),
+    P('b', 'Is 83 in her list?   {circ:Yes|No}', A('Yes')),
+    P('c', 'The 10th number in her list is {b}.', A('48'))],
+    why='(a) 8 ÷ 5 = 1 remainder 3 and 13 ÷ 5 = 2 remainder 3. Adding 5 keeps the remainder. (b) 83 ÷ 5 = 16 remainder 3, so 83 is in the list. (c) The 10th number is 3 + 9 × 5 = 48.')
 u.S(2, 'Think about remainders.', parts=[
     P('a', 'List every remainder that is possible when a number is divided by 5.\n{ll}', A(['0', '1', '2', '3', '4'], '0, 1, 2, 3, 4', list=True)),
-    P('b', 'The greatest 2-digit number that leaves remainder 5 when divided by 8 is {b}.', A('93'))],
-    why='(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) 96 is in the 8 times table, and 96 + 5 = 101 has 3 digits. The next one down: 88 + 5 = 93.')
+    P('b', 'The number from 20 to 40 that is in the 6 times table and leaves remainder 1 when divided by 5 is {b}.', A('36'))],
+    why='(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) The 6 times table from 20 to 40: 24, 30, 36. Their remainders when divided by 5 are 4, 0 and 1. So it is 36.')
 u.S(2, 'Look for a pattern. Write the remainder when each number is divided by 4.', parts=[
     P('a', 'Fill in the empty cells.', A(['0', '1', '2', '3', '0', '1', '2', '3'], '0, 1, 2, 3, 0, 1, 2, 3', list=True)),
     P('b', 'When 30 is divided by 4 the remainder is {b}.', A('2')),
@@ -95,12 +96,11 @@ u.T('Find the 2-digit number. Dividing it by 5 gives remainder 2. Dividing it by
     hint='Begin with the clue that gives the fewest numbers to list.',
     why='The 2-digit numbers that leave remainder 2 when divided by 5 end in 2 or 7. Test them with 3 and 4. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other number works.',
     space={'rows': ['My list:', 'Tests:', '']})
-u.T('Mei divides a number by 9. The whole-number answer and the remainder are the same. Her number is greater than 0 and less than 100.', beyond='Same answer and remainder', parts=[
-    P('a', 'When both are 4, her number is {b}.', A('40')),
-    P('b', 'The greatest number that works is {b}.', A('80')),
-    P('c', 'There are {b} numbers that work.', A('8'))],
-    hint='Try 1 remainder 1, then 2 remainder 2. Look for a pattern.',
-    why='4 groups of 9 and 4 left make 4 × 9 + 4 = 40. The numbers that work are 10, 20, 30, up to 80: 1 × 10, 2 × 10, ... 8 × 10. A remainder must be less than 9, so 9 remainder 9 is not allowed. The greatest is 80 and there are 8 numbers.',
+u.T('A wheel at a fair has 8 seats in a circle, numbered 1 to 8. It turns forward 1 seat at a time. After seat 8 comes seat 1 again.', beyond='Going round a wheel', parts=[
+    P('a', 'Ali sits in seat 3. After 29 moves he is in seat {b}.', A('8')),
+    P('b', 'Mei sits in seat 5. After 50 moves she is in seat {b}.', A('7'))],
+    hint='After 8 moves a rider is back in the same seat.',
+    why='(a) 29 ÷ 8 = 3 remainder 5. 3 full turns bring Ali back to seat 3. Then 5 more seats: 4, 5, 6, 7, 8. (b) 50 ÷ 8 = 6 remainder 2. Mei ends 2 seats after seat 5: seat 7.',
     space={'rows': ['Working:', '']})
 
 # ---------------- Go further

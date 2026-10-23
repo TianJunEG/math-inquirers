@@ -39,7 +39,7 @@
   },
   "try": {
    "id": "L3U07-L01",
-   "text": "A rectangle is 9 cm long and 4 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.",
+   "text": "The rectangle is 9 cm by 4 cm.\nIts area is {b} cm². Its perimeter is {b} cm.",
    "figure": {
     "type": "l3_poly",
     "pts": [

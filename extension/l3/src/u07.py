@@ -21,11 +21,11 @@ u.learn(
     {'title': 'How to find area and perimeter',
      'steps': ['Area: count the squares, or length × width.', 'Perimeter: add all the sides.',
                'Rectangle: perimeter = 2 × (length + width).', 'Write cm for the perimeter and cm² for the area.']},
-    {'text': 'A rectangle is 9 cm long and 4 cm wide.', 'figure': rect(9, 4, 84), 'figright': True,
+    {'text': 'The rectangle is 9 cm by 4 cm.', 'figure': rect(9, 4, 84), 'figright': True,
      'answer': None, 'explanation': ''})
 tr = u.u['learn']['try']
 tr.pop('answer'); tr.pop('text')
-u.u['learn']['try'] = {'id': 'L3U07-L01', 'text': 'A rectangle is 9 cm long and 4 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.', 'figure': rect(9, 4, 84),
+u.u['learn']['try'] = {'id': 'L3U07-L01', 'text': 'The rectangle is 9 cm by 4 cm.\nIts area is {b} cm². Its perimeter is {b} cm.', 'figure': rect(9, 4, 84),
                        'answer': A(['36', '26'], 'Area 36 cm². Perimeter 26 cm.', list=True),
                        'explanation': 'Area: 9 × 4 = 36 cm². Perimeter: 9 + 4 + 9 + 4 = 26 cm, or 2 × (9 + 4) = 26 cm.'}
 

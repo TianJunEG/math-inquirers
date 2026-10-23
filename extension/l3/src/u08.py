@@ -23,7 +23,7 @@ STAIRS = [[0, 0, 4, 0], [4, 0, 4, 1], [4, 1, 3, 1], [3, 1, 3, 2], [3, 2, 2, 2], 
 LET = {'F': [(0, 0, 0, 4), (0, 4, 3, 4), (0, 2, 2, 2)], 'V': [(0, 4, 1.5, 0), (1.5, 0, 3, 4)],
        'N': [(0, 0, 0, 4), (0, 4, 3, 0), (3, 0, 3, 4)], 'L': [(0, 4, 0, 0), (0, 0, 3, 0)],
        'E': [(0, 0, 0, 4), (0, 4, 3, 4), (0, 2, 2.5, 2), (0, 0, 3, 0)], 'H': [(0, 0, 0, 4), (3, 0, 3, 4), (0, 2, 3, 2)],
-       'T': [(0, 4, 3, 4), (1.5, 4, 1.5, 0)], 'Z': [(0, 4, 3, 4), (3, 4, 0, 0), (0, 0, 3, 0)]}
+       'T': [(0, 4, 3, 4), (1.5, 4, 1.5, 0)], 'Y': [(0, 4, 1.5, 2), (3, 4, 1.5, 2), (1.5, 2, 1.5, 0)], 'Z': [(0, 4, 3, 4), (3, 4, 0, 0), (0, 0, 3, 0)]}
 
 
 def letters(names, wm, gap=1.6):
@@ -127,12 +127,12 @@ u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler. Make it r
     figside=True,
     hint='AB goes 2 across and 1 up. Turn it a quarter turn.',
     why='AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down. From C, keep going 1 across and 2 down until you reach the bottom row: R.')
-u.T('Look at the plus sign. All its corners are square.', parts=[
-    P('a', 'It has {b} right angles inside.', A('8')), P('b', 'It has {b} dents.', A('4')),
-    P('c', 'Another shape with square corners has 10 corners and 3 dents. It has {b} right angles inside.', A('7'))],
-    figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 44, 'segs': PLUS}, figside=True,
+u.T('Look at the steps. All its corners are square.', parts=[
+    P('a', 'It has {b} dents.', A('3')), P('b', 'It has {b} right angles inside.', A('7')),
+    P('c', 'Another shape with square corners has 14 corners and 5 dents. It has {b} right angles inside.', A('9'))],
+    figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 44, 'segs': STAIRS}, figside=True,
     hint='Count the dents first. Which corners are left?',
-    why='The plus has 12 corners. 4 of them dent into the shape: they are greater than a right angle. The other 8 fit a checker. In (c) the 10 corners are right angles or dents. 10 - 3 = 7 right angles.')
+    why='The steps have 10 corners. 3 of them dent into the shape: they are greater than a right angle. The other 7 fit a checker. In (c) the 14 corners are right angles or dents: 14 - 5 = 9 right angles.')
 
 # ---------------- Go further
 u.G('Beyond Level 3: Degrees.\nA right angle is 90 degrees.', parts=[
@@ -158,9 +158,9 @@ u.G('A board has 2 lines across and 2 lines up.', parts=[
 u.C('Use a right angle checker. This angle is   {circ:smaller than|equal to|greater than}   a right angle.', A('greater than'),
     figure={'type': 'l3_angles', 'items': [{'deg': 120, 'rot': 15}], 'cols': 1, 'width_mm': 44}, figright=True,
     why='The second line sticks out past the corner of the checker, so the angle is greater than a right angle.')
-u.C('Circle each letter that has parallel lines.   {circ:E|H|V|T}', A(['E', 'H'], 'E and H', list=True),
-    figure=letters(['E', 'H', 'V', 'T'], 58),
-    why='E has 3 parallel arms. H has 2 parallel upright lines. V has 2 sloping lines that are not parallel. T has no pair of parallel lines.')
+u.C('Circle each letter that has parallel lines.   {circ:E|H|V|Y}', A(['E', 'H'], 'E and H', list=True),
+    figure=letters(['E', 'H', 'V', 'Y'], 58),
+    why='E has 3 parallel arms. H has 2 parallel upright lines. V has 2 sloping lines that are not parallel. Y has no pair of parallel lines.')
 u.C('A rectangle has {b} pairs of parallel sides.', A('2'), why='The 2 long sides are parallel and the 2 short sides are parallel.')
 u.C('Ben faces east. He turns 1 right angle to the left. He faces   {circ:N|E|S|W}', A('N'), why='Turning left from east, the next direction is north.')
 u.save()
