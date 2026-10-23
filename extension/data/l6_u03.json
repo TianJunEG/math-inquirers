@@ -10,41 +10,41 @@
  "learn": {
   "intro": "Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. When a jump crosses 0, split it at 0.",
   "example": {
-   "problem": "It is −6 °C at 6 a.m. By noon it rises 11 degrees. By night it falls 13 degrees. What is the temperature at night?",
+   "problem": "A freezer thermometer reads −8 °C. The door is opened and it rises 5 degrees. Then the door is shut and it falls 9 degrees. What does it read now?",
    "figure": {
     "type": "l6_nline",
-    "lo": -10,
-    "hi": 6,
+    "lo": -14,
+    "hi": 2,
     "mm": 8,
     "every": 2,
     "marks": [
      {
-      "at": -6,
-      "lab": "6 a.m."
+      "at": -8,
+      "lab": "start"
      }
     ],
     "jumps": [
      {
-      "a": -6,
-      "b": 5,
-      "lab": "+11"
+      "a": -8,
+      "b": -3,
+      "lab": "+5"
      },
      {
-      "a": 5,
-      "b": -8,
-      "lab": "−13",
+      "a": -3,
+      "b": -12,
+      "lab": "−9",
       "below": true
      }
     ],
     "unit": "°C"
    },
    "steps": [
-    "Start at −6. Rising moves right. 6 steps reach 0, then 5 more steps: 5 °C at noon.",
-    "Falling moves left. From 5, 5 steps reach 0, then 8 more steps.",
-    "The night temperature is −8 °C.",
-    "Check by adding: −6 + 11 − 13 = −8."
+    "Start at −8. Rising moves right: 5 steps to −3.",
+    "Falling moves left. From −3, 3 steps reach 0, then 6 more steps.",
+    "The thermometer reads −12 °C.",
+    "Check by adding: −8 + 5 − 9 = −12."
    ],
-   "answer": "The temperature at night is −8 °C."
+   "answer": "It reads −12 °C."
   },
   "howto": {
    "title": "How to add and subtract with negative numbers",
@@ -382,10 +382,92 @@
    "partsrow": true
   },
   {
+   "id": "L6U03-S08",
+   "tier": "start",
+   "text": "A sprite starts at x = 100. Fill in the blocks.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It ends at x = 0. change x by {b}",
+     "answer": {
+      "value": [
+       "-25"
+      ],
+      "text": "−25"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With repeat 8 and change x by (−20), it ends at x = {b}.",
+     "answer": {
+      "value": [
+       "-60"
+      ],
+      "text": "−60"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "var",
+      "set x to (100)"
+     ],
+     [
+      "ctl",
+      "repeat (4)",
+      [
+       [
+        "var",
+        "change x by ( )"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "(a) 4 equal moves must go from 100 down to 0. That is 100 left in 4 moves, so each move is −25. (b) 8 moves of −20 make −160, and 100 − 160 = −60.",
+   "figside": true
+  },
+  {
+   "id": "L6U03-S11",
+   "tier": "start",
+   "text": "Think about how far each number is from 0.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Circle the number closest to 0:   −9    5    −3    7    −4",
+     "answer": {
+      "value": [
+       "-3"
+      ],
+      "text": "−3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which is further from 0?   {circ:−8|6}",
+     "answer": {
+      "value": [
+       "-8"
+      ],
+      "text": "−8"
+     }
+    }
+   ],
+   "explanation": "(a) The distances from 0 are 9, 5, 3, 7 and 4. −3 is only 3 steps from 0. (b) −8 is 8 steps from 0 and 6 is 6 steps from 0, so −8 is further."
+  },
+  {
    "id": "L6U03-S07",
    "tier": "start",
    "text": "Trace the code. The sprite changes x, then says it.",
-   "page": 2,
+   "page": 3,
    "parts": [
     {
      "label": "a",
@@ -461,59 +543,6 @@
    "partsrow": true
   },
   {
-   "id": "L6U03-S08",
-   "tier": "start",
-   "text": "A sprite starts at x = 100. Fill in the blocks.",
-   "page": 3,
-   "parts": [
-    {
-     "label": "a",
-     "text": "It ends at x = 0. change x by {b}",
-     "answer": {
-      "value": [
-       "-25"
-      ],
-      "text": "−25"
-     }
-    },
-    {
-     "label": "b",
-     "text": "With repeat 8 and change x by (−20), it ends at x = {b}.",
-     "answer": {
-      "value": [
-       "-60"
-      ],
-      "text": "−60"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_code",
-    "prog": [
-     [
-      "hat",
-      "when green flag clicked"
-     ],
-     [
-      "var",
-      "set x to (100)"
-     ],
-     [
-      "ctl",
-      "repeat (4)",
-      [
-       [
-        "var",
-        "change x by ( )"
-       ]
-      ]
-     ]
-    ]
-   },
-   "explanation": "(a) 4 equal moves must go from 100 down to 0. That is 100 left in 4 moves, so each move is −25. (b) 8 moves of −20 make −160, and 100 − 160 = −60.",
-   "figside": true
-  },
-  {
    "id": "L6U03-S09",
    "tier": "start",
    "text": "A balance of −15 dollars means Ali owes 15 dollars. Ali has 25 dollars.",
@@ -555,93 +584,41 @@
   {
    "id": "L6U03-S10",
    "tier": "start",
-   "text": "In a car park the floors are L3, L2, L1, B1, B2 and B3. There is no floor 0. Count the floors one by one.",
+   "text": "Heights are measured from sea level, 0 m. A cave is at −35 m, a cliff top is at 48 m and a boat is at −6 m.",
    "page": 3,
    "parts": [
     {
      "label": "a",
-     "text": "A car goes down from L3 to B2: {b} floors.",
+     "text": "The cliff top is {b} m above the cave.",
      "answer": {
       "value": [
-       "4"
+       "83"
       ],
-      "text": "4"
+      "text": "83"
      }
     },
     {
      "label": "b",
-     "text": "A car goes up from B3 to L1: {b} floors.",
+     "text": "The boat is {b} m above the cave.",
      "answer": {
       "value": [
-       "3"
+       "29"
       ],
-      "text": "3"
+      "text": "29"
      }
     },
     {
      "label": "c",
-     "text": "A car goes down from L2 to B1: {b} floors.",
+     "text": "A bird is 12 m above the cliff top. It is at {b} m.",
      "answer": {
       "value": [
-       "2"
+       "60"
       ],
-      "text": "2"
+      "text": "60"
      }
     }
    ],
-   "figure": {
-    "type": "l6_grid",
-    "rows": [
-     [
-      "L3",
-      "L2",
-      "L1",
-      "B1",
-      "B2",
-      "B3"
-     ]
-    ],
-    "cw": [
-     17,
-     17,
-     17,
-     17,
-     17,
-     17
-    ],
-    "rowhead": false,
-    "ch": 10
-   },
-   "explanation": "(a) L3, L2, L1, B1, B2: that is 4 moves down. (b) B3, B2, B1, L1: 3 moves up. (c) L2, L1, B1: 2 moves down. A number line with 0 would give one move too many."
-  },
-  {
-   "id": "L6U03-S11",
-   "tier": "start",
-   "text": "Think about how far each number is from 0.",
-   "page": 3,
-   "parts": [
-    {
-     "label": "a",
-     "text": "Circle the number closest to 0:   −9    5    −3    7    −4",
-     "answer": {
-      "value": [
-       "-3"
-      ],
-      "text": "−3"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Which is further from 0?   {circ:−8|6}",
-     "answer": {
-      "value": [
-       "-8"
-      ],
-      "text": "−8"
-     }
-    }
-   ],
-   "explanation": "(a) The distances from 0 are 9, 5, 3, 7 and 4. −3 is only 3 steps from 0. (b) −8 is 8 steps from 0 and 6 is 6 steps from 0, so −8 is further."
+   "explanation": "(a) From −35 up to 0 is 35, then 48 more: 83 m. (b) From −35 up to −6 is 29 m. (c) 48 + 12 = 60 m."
   },
   {
    "id": "L6U03-T01",

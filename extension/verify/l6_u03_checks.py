@@ -105,14 +105,8 @@ def _():
 
 @check('L6U03-S10')
 def _():
-    order = [c for c in ITEM['L6U03-S10']['figure']['rows'][0]]      # L3 L2 L1 B1 B2 B3 from the top floor down
-    def floors(a, b):
-        i, n = order.index(a), 0
-        while order[i] != b:
-            i += 1 if order.index(b) > i else -1
-            n += 1
-        return n
-    return {'a': [floors('L3', 'B2')], 'b': [floors('B3', 'L1')], 'c': [floors('L2', 'B1')]}
+    cave, cliff, boat = -35, 48, -6
+    return {'a': [steps(cave, cliff)], 'b': [steps(cave, boat)], 'c': [move(cliff, 12)]}
 
 
 @check('L6U03-S11')

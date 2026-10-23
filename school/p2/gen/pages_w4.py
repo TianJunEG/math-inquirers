@@ -207,11 +207,11 @@ def page29():
     clocks = "".join(f'<div class="mclk"><i class="cl">{letter_of[j]}</i>{A.clock_svg(*times[j])}</div>' for j in clock_order)
     body = f'<div class="mclks">{clocks}</div><p class="lead" style="margin-top:2mm">Which clock shows each time? Write its letter.</p><div class="tmcs">{tcards}</div>'
     P = new_page(29, 8529, "Match the Times", 2, "Time: matching clocks and times to the minute", "Measurement and Geometry - Measurement",
-        "2.1, 2.2 (telling time to the minute; hours and minutes)", ["TI2.1", "TI2.2"], "Matching (lettered clocks)",
+        "2.1 (telling time to the minute)", ["TI2.1"], "Matching (lettered clocks)",
         "K1 letters of the matching clocks spell a word (6 letters) + K4 each clock used once",
         ["Read each clock.", "Match each time to its clock.", "Write the letter of the clock."],
         body, "; ".join(f"{k+1}) {A.tstr(*times[j])} is clock {letter_of[j]}" for k, j in enumerate(order)), f"Word: {word}",
-        "Six clock faces with a mark for every minute and six digital times that are close to each other (some share an hour or a minute, so the pupil must read the hour hand and the minute hand). Each time belongs to exactly one clock. The letters of the clocks, written in the order of the digital times, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (every wrong matching was tested against a very large word list). Times are read to the minute and written in hours and minutes; no duration is asked. A box left blank gives no letter and the check cannot see it.",
+        "Six clock faces with a mark for every minute and six digital times that are close to each other (some share an hour or a minute, so the pupil must read the hour hand and the minute hand). Each time belongs to exactly one clock. The letters of the clocks, written in the order of the digital times, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (every wrong matching was tested against a very large word list). Times are read to the minute; no duration is asked. A box left blank gives no letter and the check cannot see it.",
         check="Write the letters in order. Do they spell a word?", check_boxes=6, mk=("logic",),
         mech_plain="Letters of the clocks matched to the times, in order, spell a word (6 letters)")
     clock_svgs = re.findall(r'<div class="mclk"><i class="cl">(\w)</i>(<svg.*?</svg>)</div>', clocks)
