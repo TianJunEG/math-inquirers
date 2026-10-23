@@ -1,6 +1,6 @@
 from lib import *
 
-u = Unit(8, 'Angle and line detectives', 'Angles, perpendicular lines and parallel lines',
+u = Unit(8, 'Angle and line detectives', 'Angles and lines',
          'I can compare angles with a right angle. I can find perpendicular and parallel lines. I can count angles in a figure.')
 
 
@@ -116,16 +116,16 @@ u.S(3, 'Siti says angle X is a right angle.', parts=[
 u.T('Lines from a point O make angles. 2 lines give 1 angle, 3 lines give 3 angles and 4 lines give 6 angles.', parts=[
     P('a', 'With 5 lines there are {b} angles.', A('10')), P('b', 'With 7 lines there are {b} angles.', A('21'))],
     hint='Small angles first: 4. Then angles made of 2 small ones: 3.',
-    space={'rows': ['5 lines:', '7 lines:']},
+    space={'rows': ['Working:']},
     why='With 5 lines there are 4 small angles. Then 3 angles made of 2 small angles, 2 made of 3, and 1 made of 4. 4 + 3 + 2 + 1 = 10. With 7 lines the small angles are 6: 6 + 5 + 4 + 3 + 2 + 1 = 21.')
-u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler.', parts=[
-    P('a', 'Your line passes through dot   {circ:P|Q|R|S}', A('Q'))],
-    figure={'type': 'l3_segs', 'k': 40, 'pad': 30, 'width_mm': 60, 'dots': [8, 8], 'segs': [[0, 2, 4, 4]],
-            'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -22, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 24}, {'x': 2, 'y': 6, 't': 'C', 'dx': -22},
-                       {'x': 4, 'y': 3, 't': 'P', 'dx': 20, 'dy': -14}, {'x': 4, 'y': 2, 't': 'Q', 'dx': 22, 'dy': 20}, {'x': 5, 'y': 2, 't': 'R', 'dx': 22, 'dy': 20}, {'x': 3, 'y': 3, 't': 'S', 'dx': -22, 'dy': 20}]},
+u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler. Make it reach the bottom row of dots.', parts=[
+    P('a', 'Your line reaches the bottom row at   {circ:P|Q|R|S}', A('R'))],
+    figure={'type': 'l3_segs', 'k': 44, 'pad': 40, 'width_mm': 64, 'dots': [7, 7], 'segs': [[0, 2, 4, 4]],
+            'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -26, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 26}, {'x': 2, 'y': 6, 't': 'C', 'dx': -26},
+                       {'x': 2, 'y': 0, 't': 'P', 'dy': 40}, {'x': 4, 'y': 0, 't': 'Q', 'dy': 40}, {'x': 5, 'y': 0, 't': 'R', 'dy': 40}, {'x': 6, 'y': 0, 't': 'S', 'dy': 40}]},
     figside=True,
     hint='AB goes 2 across and 1 up. Turn it a quarter turn.',
-    why='AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C: 1 across and 2 down reaches the dot at (3, 4), then 1 across and 2 down again reaches Q.')
+    why='AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C, 1 across and 2 down reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.')
 u.T('A staircase has 4 steps.', parts=[
     P('a', 'It has {b} right angles inside.', A('7')), P('b', 'It has {b} dents.', A('3')),
     P('c', 'A staircase with 8 steps has {b} right angles inside.', A('11'))],

@@ -4,7 +4,7 @@
  "unit": 8,
  "id": "L3U08",
  "title": "Angle and line detectives",
- "topic": "Angles, perpendicular lines and parallel lines",
+ "topic": "Angles and lines",
  "holiday_lesson": 8,
  "goal": "I can compare angles with a right angle. I can find perpendicular and parallel lines. I can count angles in a figure.",
  "learn": {
@@ -969,8 +969,7 @@
    "hint": "Small angles first: 4. Then angles made of 2 small ones: 3.",
    "space": {
     "rows": [
-     "5 lines:",
-     "7 lines:"
+     "Working:"
     ]
    }
   },
@@ -978,28 +977,28 @@
    "id": "L3U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Draw a line from C that is PERPENDICULAR to line AB. Use a ruler.",
+   "text": "Draw a line from C that is PERPENDICULAR to line AB. Use a ruler. Make it reach the bottom row of dots.",
    "parts": [
     {
      "label": "a",
-     "text": "Your line passes through dot   {circ:P|Q|R|S}",
+     "text": "Your line reaches the bottom row at   {circ:P|Q|R|S}",
      "answer": {
       "value": [
-       "Q"
+       "R"
       ],
-      "text": "Q"
+      "text": "R"
      }
     }
    ],
-   "explanation": "AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C: 1 across and 2 down reaches the dot at (3, 4), then 1 across and 2 down again reaches Q.",
+   "explanation": "AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C, 1 across and 2 down reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.",
    "figure": {
     "type": "l3_segs",
-    "k": 40,
-    "pad": 30,
-    "width_mm": 60,
+    "k": 44,
+    "pad": 40,
+    "width_mm": 64,
     "dots": [
-     8,
-     8
+     7,
+     7
     ],
     "segs": [
      [
@@ -1014,48 +1013,44 @@
       "x": 0,
       "y": 2,
       "t": "A",
-      "dx": -22,
+      "dx": -26,
       "dy": 20
      },
      {
       "x": 4,
       "y": 4,
       "t": "B",
-      "dx": 24
+      "dx": 26
      },
      {
       "x": 2,
       "y": 6,
       "t": "C",
-      "dx": -22
+      "dx": -26
      },
      {
-      "x": 4,
-      "y": 3,
+      "x": 2,
+      "y": 0,
       "t": "P",
-      "dx": 20,
-      "dy": -14
+      "dy": 40
      },
      {
       "x": 4,
-      "y": 2,
+      "y": 0,
       "t": "Q",
-      "dx": 22,
-      "dy": 20
+      "dy": 40
      },
      {
       "x": 5,
-      "y": 2,
+      "y": 0,
       "t": "R",
-      "dx": 22,
-      "dy": 20
+      "dy": 40
      },
      {
-      "x": 3,
-      "y": 3,
+      "x": 6,
+      "y": 0,
       "t": "S",
-      "dx": -22,
-      "dy": 20
+      "dy": 40
      }
     ]
    },

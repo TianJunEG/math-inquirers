@@ -13,3 +13,4 @@ Resume: run `python3 extension/l3/src/uNN.py` for any unit to rewrite its json; 
 | 5 | Remainder riddles | written, checked, gates ok, pages viewed |
 | 6 | Fraction walls | written, checked, gates ok, pages viewed |
 | 7 | Area architects | written, checked, gates ok, pages viewed |
+| 8 | Angle and line detectives | written, checked, gates ok, pages viewed |

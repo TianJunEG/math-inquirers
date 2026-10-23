@@ -191,7 +191,7 @@ def _():
 @check('L3U08-T02')
 def _():
     A, B, C = (0, 2), (4, 4), (2, 6)
-    dots = {'P': (4, 3), 'Q': (4, 2), 'R': (5, 2), 'S': (3, 3)}
+    dots = {'P': (2, 0), 'Q': (4, 0), 'R': (5, 0), 'S': (6, 0)}      # the dots on the bottom row
     ab = vec(A, B)
     return {'a': [only(k for k, d in dots.items() if dot(ab, vec(C, d)) == 0)]}
 
