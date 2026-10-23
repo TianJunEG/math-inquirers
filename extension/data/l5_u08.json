@@ -193,7 +193,7 @@
    "id": "L5U08-S01",
    "tier": "start",
    "page": 1,
-   "text": "Two straight lines, AB and CD, meet at O. Angle BOC is twice angle AOC. Find each angle.",
+   "text": "Lines AB and CD meet at O. Angle BOC is twice angle AOC. Find each angle.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
