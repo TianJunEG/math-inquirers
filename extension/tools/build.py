@@ -79,7 +79,7 @@ def licence(book, theme, ctx):
             'You may make copies of single pages for that child only, for example to redo a page.</p>'
             '<p>Please do not share, post, sell, lend out in bulk, upload or copy the book (print or PDF) for other people, other families, '
             'classes, tuition centres or schools. If you would like to use it with a group, please contact us first.</p>'
-            '<p>This soft copy is licensed to the buyer. It is not a transfer of ownership.</p></div>'
+            f'<p>{"This soft copy" if theme == "colour" else "This printed book"} is licensed to the buyer. It is not a transfer of ownership.</p></div>'
             '<div class="box"><h3>Good to know</h3><ul><li>This is a private-enrichment book. It is not an official school or examination book, '
             'and it makes no promise about any test result.</li>'
             '<li>We have checked the answers with care. If you find a mistake, please tell us so we can fix it.</li>'
@@ -93,7 +93,7 @@ def welcome(book, theme, ctx):
     kid = ('<div class="box kid"><h3>For you</h3><div class="legend">'
            f'<div>{ic("start")}<span>Read <b>Learn it</b>. Then do <b>Start here</b>.</span></div>'
            f'<div>{ic("think")}<span>Stuck? Read the hint. It is upside down!</span></div>'
-           f'<div>{ic("quiz")}<span>Do <b>Check yourself</b>. Then look at the answers.</span></div></div></div>')
+           f'<div>{ic("quiz")}<span>Do <b>Check yourself</b>. Then look at the answers at the back. Read the <b>Why</b> if you got one wrong.</span></div></div></div>')
     return (f'<div class="pbody"><div style="display:flex;align-items:flex-end"><div><div class="h1">Welcome!</div>'
             f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You do not need a teacher.</div></div>'
             f'<img class="welcome-mi" alt="Mi the dolphin" src="{mi_uri("mi_writing_desk", theme)}"></div>'
@@ -102,10 +102,11 @@ def welcome(book, theme, ctx):
             '<li>Practice for the same ideas as the Holiday Program (our school-holiday maths course), with new numbers and stories. '
             'You do not need to have joined it: every unit starts with a worked example.</li>'
             '<li>3 short sessions a week, 20 to 25 minutes each. <b>Go further</b> is a weekend page: a big challenge for another day (see the pace plan).</li>'
-            '<li>Let your child try before looking at the answers.</li>'
-            f'<li>Answers are at the back, from page {ctx["divider_pg"]}, with a short reason for each. Read the reason together.</li>'
+            '<li>This is a self-study book. Your child marks their own work: each answer at the back says the answer first, then a short reason (Why) in plain words, '
+            'and the page of the question. A child who reads slowly may like a helper to read the Why with them.</li>'
+            f'<li>Answers are at the back, from page {ctx["divider_pg"]}. Please ask your child to try first.</li>'
             '<li>Check yourself score 2 or less? Repeat Learn it and one Start here page.</li>'
-            '<li>Printing the soft copy? Print at 100 percent (actual size) so the rulers are true size.</li></ul></div>'
+            + ('<li>Printing the soft copy? Print at 100 percent (actual size) so the rulers are true size.</li>' if theme == 'colour' else '<li>The rulers in Unit 9 are printed at real size.</li>') + '</ul></div>'
             '<div class="box"><h3>The four labels</h3>' + legend() + '</div>'
             '<p class="note" style="margin:0"><b>Tip:</b> use a pencil. Mistakes help you learn. Read each question twice before you write.</p></div>')
 
@@ -123,8 +124,10 @@ def contents(book, theme, ctx):
             rows.append(f'<tr class="later"><td class="n">{n}</td><td class="t"><b>{esc(title)}</b><small>Not in this proof edition</small></td><td class="p">&ndash;</td></tr>')
     extra = (f'<tr><td class="n"></td><td class="t"><b>My progress</b></td><td class="p">page {ctx["progress_pg"]}</td></tr>'
              f'<tr><td class="n"></td><td class="t"><b>My certificate</b></td><td class="p">page {ctx["progress_pg"] + 1}</td></tr>'
-             f'<tr><td class="n"></td><td class="t"><b>Answers</b><small>For grown-ups, with short reasons</small></td><td class="p">page {ctx["divider_pg"]}</td></tr>')
-    front = '<tr><td class="n"></td><td class="t"><b>About this book</b><small>Copyright and licence</small></td><td class="p">page 2</td></tr>'
+             f'<tr><td class="n"></td><td class="t"><b>Answers</b><small>Check your work, with short reasons</small></td><td class="p">page {ctx["divider_pg"]}</td></tr>')
+    front = ('<tr><td class="n"></td><td class="t"><b>About this book</b><small>Copyright and licence</small></td><td class="p">page 2</td></tr>'
+             '<tr><td class="n"></td><td class="t"><b>Welcome</b></td><td class="p">page 3</td></tr>'
+             '<tr><td class="n"></td><td class="t"><b>My pace plan</b></td><td class="p">page 5</td></tr>')
     return f'<div class="pbody"><div class="h1">Contents</div><table class="toc">{front}{"".join(rows)}{extra}</table></div>'
 
 
@@ -168,12 +171,14 @@ def certificate(book, theme, ctx):
 
 
 def divider(book, theme, ctx):
-    return ('<div class="divider"><h1>Answers</h1><p>For grown-ups. Please let your child try each question first, then read the short reason together.</p>'
-            '<p>Want to keep the answers out of sight while your child works? Print the answer pages on their own and keep them in an envelope, or cover them with a folded sheet of paper.</p></div>')
+    return ('<div class="divider"><h1>Answers</h1><p>Try each question first. Then check your work here.</p>'
+            '<p>Each answer says <b>Answer</b> first, then <b>Why</b>, and the page of the question. Got one wrong? Read the Why, then try it again. '
+            'Stuck on the Why? Ask someone to read it with you.</p>'
+            '<p>Cover this part of the book with a folded sheet of paper while you work, so you do not see the answers by mistake.</p></div>')
 
 
 def ans_head(book):
-    return f'<div class="ph"><span class="lv">Level {book["level"]}</span><span class="un">Answers</span><span class="nm" style="font-weight:700">for grown-ups</span></div>'
+    return f'<div class="ph"><span class="lv">Level {book["level"]}</span><span class="un">Answers</span><span class="nm" style="font-weight:700">check your work</span></div>'
 
 
 # ---------------------------------------------------------------- pagination of the answers
@@ -221,8 +226,8 @@ def build(level, unit_ids, outdir, bw=True):
         br = p.chromium.launch(); page = br.new_page()
         # ---- answers
         blocks, block_unit = [], []
-        for u in units:
-            bl = render.answer_blocks(u)
+        for ui, u in enumerate(units):
+            bl = render.answer_blocks(u, 5 + 1 + PG['pages_per_unit'] * ui)
             blocks += bl; block_unit += [u['unit']] * len(bl)
         apages = paginate_answers(page, blocks, css, cfg_vars)
         U = len(units)

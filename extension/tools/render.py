@@ -47,7 +47,7 @@ def badge(tier, n, theme):
     }[tier]
     fill = '#FFC93C' if theme == 'colour' else '#fff'
     return (f'<div class="badge"><svg viewBox="0 0 24 24"><g fill="{fill}" stroke="#{"1B2A49" if theme == "colour" else "000"}" stroke-width="1.5" stroke-linejoin="round">{shape}</g></svg>'
-            f'<span style="{"font-size:8.5pt" if str(n) == "Try" else ""}">{n}</span></div>')
+            f'<span style="{"font-size:10pt" if str(n) == "Try" else ""}">{n}</span></div>')
 
 
 def fig_html(spec, theme):
@@ -194,7 +194,7 @@ def unit_pages(unit, theme, cfg):
     body.append('<div class="score"><span>My score:</span><span class="abox"></span><span>out of 4. Check the answers at the back.</span></div>')
     body.append('<div class="box"><h3>What next?</h3><ul class="adv"><li><b>4 or 3:</b> well done! Go on to the next unit.</li>'
                 '<li><b>2:</b> read Learn it again. Then try a Start here page once more.</li>'
-                '<li><b>1 or 0:</b> do Learn it and Start here again with a grown-up. Then try Check yourself again.</li></ul></div>')
+                '<li><b>1 or 0:</b> do Learn it and Start here again, with a helper if you like. Then try Check yourself again.</li></ul></div>')
     body.append('<div class="box grow"><h3>Look back</h3><div class="rows"><div class="rw free">This unit was &nbsp;<span class="tickl"><span class="tick"></span> easy</span><span class="tickl"><span class="tick"></span> just right</span><span class="tickl"><span class="tick"></span> hard</span></div>'
                 '<div class="rw"><span class="rl">The idea I want to remember:</span><span class="rln"></span></div>'
                 '<div class="rw"><span class="rl">Something I want to ask or try:</span><span class="rln"></span></div></div></div>')
@@ -209,15 +209,16 @@ def ans_text(it):
     return esc(it['answer']['text'])
 
 
-def answer_blocks(unit):
+def answer_blocks(unit, start_pg=None):
     """Answer entries for the back of the book: list of html blocks (the unit heading is merged into the first entry)."""
     blocks = []
     head_html = f'<div class="ans-unit"><span>Unit {unit["unit"]} &middot; {esc(unit["title"])}</span></div>'
     L = unit['learn']['try']
-    entries = [('Your turn', ans_text(L), L['explanation'])]
+    entries = [('Your turn', ans_text(L), L['explanation'], 'learn', 0, 0)]
     for tier in ('start', 'think', 'go', 'quiz'):
         for i, it in enumerate(items_of(unit, tier), 1):
-            entries.append((f'{TIER[tier][0]} {i}', ans_text(it), it['explanation'], tier, i))
+            off = {'start': it.get('page', 1), 'think': 4, 'go': 5, 'quiz': 6}[tier]    # page of the item in the unit: Learn it is page 0
+            entries.append((f'{TIER[tier][0]} {i}', ans_text(it), it['explanation'], tier, i, off))
     first = True
     prev_tier = None
     for e in entries:
@@ -227,7 +228,9 @@ def answer_blocks(unit):
             grp = f'<div class="ans-grp">{TIER[tier][0]}</div>'
         prev_tier = tier
         label = e[0] if tier == 'learn' else f'{e[4]}'
-        body = f'<div class="ae"><div class="k">{label}</div><div class="a">{e[1]}<span class="why">{esc(e[2])}</span></div></div>'
+        pg = f'<small>page {start_pg + e[5]}</small>' if start_pg else ''
+        body = (f'<div class="ae"><div class="k">{label}{pg}</div><div class="a"><span class="ans"><b>Answer:</b> {e[1]}</span>'
+                f'<span class="why">{esc(e[2])}</span></div></div>')
         blocks.append((head_html if first else '') + grp + body)
         first = False
     return blocks

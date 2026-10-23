@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:,"><title>Practice | Math Inquirers</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--bg:#FFF8E7;--ink:#1B2A49;--mut:#5b6478;--card:#fff;--line:#8f8872;--yellow:#FFC93C;--teal:#1F7A6F;--tealbg:#e3f3ef;--warm:#B5481F;--warmbg:#fdeee6;--focus:#1B2A49}
+.fig{background:#fff;border-radius:12px;padding:8px}
+@media (prefers-color-scheme:dark){:root{--bg:#101a30;--ink:#f3efe2;--mut:#a8b2cc;--card:#1a2646;--line:#33436b;--tealbg:#16413d;--warm:#ffb08f;--warmbg:#3b2a26;--focus:#ffc93c}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:18px/1.5 'Nunito Sans',Arial,sans-serif;padding-block:max(16px,env(safe-area-inset-top)) max(40px,env(safe-area-inset-bottom));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+main{max-width:46rem;margin:0 auto}
+h1{font:600 clamp(26px,5vw,36px)/1.15 Fredoka,Arial,sans-serif;margin:.2rem 0;text-wrap:balance}
+.sub{color:var(--mut);margin:0 0 1rem}
+.tiers{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem}
+.tiers button{font:inherit;font-weight:700;padding:.55rem 1rem;min-height:44px;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
+.tiers button[aria-pressed=true]{background:var(--yellow);color:#1B2A49}
+.dots{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 1rem}
+.dots button{width:2.75rem;height:2.75rem;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 14px 'Nunito Sans';cursor:pointer;padding:0}
+.dots button.done{background:var(--teal);border-color:var(--teal);color:#fff}
+.dots button[aria-current=true]{outline:3px solid var(--focus);outline-offset:2px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:1.2rem 1.2rem 1.4rem;box-shadow:5px 5px 0 var(--ink)}
+.q{font-size:1.15em;margin:0 0 1rem}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.4rem 0}
+input[type=text],input[type=number],textarea{font:inherit;font-size:1.25em;padding:.6rem .8rem;border-radius:12px;border:2px solid var(--ink);background:var(--bg);color:var(--ink);width:min(100%,16rem)}
+textarea{width:100%;min-height:6rem;font-size:1em}
+label.opt{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .9rem;border:2px solid var(--line);border-radius:12px;cursor:pointer;background:var(--bg)}
+label.opt:has(input:checked){border-color:var(--ink);background:var(--yellow);color:#1B2A49}
+label.opt input{accent-color:var(--ink);width:1.1rem;height:1.1rem}
+button.act{font:inherit;font-weight:800;padding:.7rem 1.2rem;border-radius:14px;border:2px solid var(--ink);background:var(--yellow);color:#1B2A49;cursor:pointer;box-shadow:0 3px 0 var(--ink);min-height:48px}
+button.act.quiet{background:var(--card);color:var(--ink)}
+button.act:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.fb{margin-top:1rem;border-radius:14px;padding:.8rem 1rem}
+.fb.ok{background:var(--tealbg);border:2px solid var(--teal)}
+.fb.try{background:var(--warmbg);border:2px solid var(--warm)}
+.fb.plain{background:var(--bg);border:2px solid var(--line)}
+.fb h2{font:600 18px Fredoka,Arial;margin:0 0 .3rem}
+.fb ol{margin:.3rem 0 .3rem 1.2rem;padding:0}.fb li{margin:.25rem 0}
+.foot{margin-top:1rem;color:var(--mut);font-size:.9em}
+</style></head><body><main>
+<h1 id="title">Practice</h1><p class="sub" id="sub"></p>
+<div class="tiers" id="tiers" role="group" aria-label="Choose a set"></div>
+<div class="dots" id="dots" role="group" aria-label="Questions"></div>
+<section class="card" id="card" aria-live="polite"></section>
+<p class="foot">There is no score and no timer. Try as many as you like, in any order. A grown-up can read along.</p>
+</main><script>window.MI_LESSON="t4l37";</script><script src="practice.js"></script></body></html>

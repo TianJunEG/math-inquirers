@@ -988,7 +988,7 @@
      }
     }
    ],
-   "hint": "Do 2 lines that meet make a larger triangle?",
+   "hint": "Look for triangles made of more than one small one.",
    "explanation": "There are 6 small triangles. The first 2 lines meet at the bottom and make a larger triangle with the top of the strip. The last 2 lines meet at the top and make another. 6 + 2 = 8 triangles."
   },
   {
@@ -999,7 +999,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "2 shapes have 11 straight sides altogether. One is a pentagon. The other is a   {circ:square|hexagon|octagon}",
+     "text": "2 shapes have 11 straight sides altogether. One is a pentagon. The other is:   {circ:square|hexagon|octagon}",
      "answer": {
       "value": [
        "hexagon"

@@ -154,6 +154,19 @@ def _plugin_figs():
     return out
 
 
+MIN_PT = 10.0   # audit 2, M3: no text inside a figure may print smaller than this
+
+
+def min_text(s):
+    """Raise every font-size in an svg so that it prints at MIN_PT or more (the svg has a viewBox and a width in mm)."""
+    m = re.search(r'viewBox="0 0 ([\d.]+) ', s); w = re.search(r'style="[^"]*?width:([\d.]+)mm', s)
+    if not (m and w):
+        return s
+    k = float(w.group(1)) / float(m.group(1)) * 72 / 25.4       # points per drawing unit
+    need = MIN_PT / k
+    return re.sub(r'font-size="([\d.]+)"', lambda g: f'font-size="{max(float(g.group(1)), round(need + 0.05, 2)):g}"', s)
+
+
 def render(spec, theme='colour'):
     t = spec['type']
     w = spec.get('width_mm')
@@ -180,4 +193,5 @@ def render(spec, theme='colour'):
         s = s.replace('style="width:100%', f'style="width:{w}mm', 1)
     if w:
         s = re.sub(r'style="width:100%;', f'style="width:{w}mm;', s, count=1)
+    s = min_text(s)
     return recolour(s) if theme == 'bw' else s

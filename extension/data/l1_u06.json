@@ -8,7 +8,7 @@
  "holiday_lesson": 6,
  "goal": "I can count coins and notes and pay an exact amount. I can find all the ways and the fewest coins.",
  "learn": {
-  "intro": "Our coins are 5¢, 10¢, 20¢ and 50¢. A $1 coin is worth 100¢. To pay an amount, start with the largest coin that fits.",
+  "intro": "Our coins are 5¢, 10¢, 20¢ and 50¢. A $1 coin is worth 100¢. Notes ($2, $5, $10) are worth more. To pay an amount, start with the largest coin that fits. To find every way, list them in a table.",
   "example": {
    "problem": "Ben wants to pay exactly 75¢. He has 5¢, 10¢, 20¢ and 50¢ coins. Which coins use the fewest coins?",
    "figure": {
@@ -566,7 +566,7 @@
      "Set 2:"
     ]
    },
-   "hint": "Try the 50¢ coin first. What is left to pay?",
+   "hint": "Is a 50¢ coin in every set? Try with it, then without.",
    "explanation": "With 50¢, 15¢ is left, made by 5¢ + 5¢ + 5¢. Without 50¢, try 20¢ + 20¢ + 20¢ = 60¢, then 5¢ makes 65¢. A 10¢ coin makes no more sets."
   },
   {

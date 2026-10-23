@@ -392,7 +392,7 @@
     },
     {
      "label": "b",
-     "text": "Numbers said in 4s but not in 3s: {b}",
+     "text": "How many numbers are said in 4s but not in 3s? {b}",
      "answer": {
       "value": [
        "4"
@@ -401,7 +401,7 @@
      }
     }
    ],
-   "explanation": "In 3s: 3, 6, 9, 12, 15, 18, 21, 24. In 4s: 4, 8, 12, 16, 20, 24. Both: 12 and 24. The 4s list has 6 numbers, and 2 of them are also in the 3s list, so 6 - 2 = 4 are in 4s only.",
+   "explanation": "In 3s: 3, 6, 9, 12, 15, 18, 21, 24. In 4s: 4, 8, 12, 16, 20, 24. Both: 12 and 24. Only in 4s: 4, 8, 16 and 20. That is 4 numbers. Check: the 4s list has 6 numbers and 2 of them are also in the 3s list, so 6 - 2 = 4.",
    "space": {
     "rows": [
      "Counting in 3s:",

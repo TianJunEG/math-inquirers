@@ -508,7 +508,7 @@
      "Undo -4:"
     ]
    },
-   "hint": "Start at 11. Undo the last step first.",
+   "hint": "Start at 11 and work back. What was the last step?",
    "explanation": "Go backwards. Undo adding 2: 11 - 2 = 9. Undo cutting off 3: 9 + 3 = 12. Undo cutting off 4: 12 + 4 = 16. Check: 16 - 4 = 12, 12 - 3 = 9, 9 + 2 = 11."
   },
   {

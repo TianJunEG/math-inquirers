@@ -1996,7 +1996,7 @@
      ],
      "icon": "counter",
      "tally": true,
-     "size": 100
+     "size": 55
     }
    },
    {
@@ -2063,7 +2063,7 @@
      ],
      "icon": "counter",
      "title": "Fruit Ali ate",
-     "size": 100
+     "size": 78
     }
    },
    {
@@ -2115,7 +2115,7 @@
      ],
      "icon": "counter",
      "title": "Pets in a shop",
-     "size": 100
+     "size": 58
     }
    },
    {
@@ -2172,7 +2172,7 @@
      ],
      "icon": "counter",
      "title": "Games children play",
-     "size": 100
+     "size": 58
     }
    },
    {
@@ -2226,7 +2226,7 @@
      ],
      "icon": "counter",
      "title": "Stamps",
-     "size": 100
+     "size": 58
     }
    }
   ],
@@ -2359,7 +2359,7 @@
      ],
      "icon": "counter",
      "title": "Mi's beach box",
-     "size": 100
+     "size": 58
     }
    },
    {
@@ -2421,7 +2421,7 @@
      ],
      "icon": "counter",
      "title": "Books on a shelf",
-     "size": 100
+     "size": 62
     }
    },
    {
@@ -2580,7 +2580,7 @@
      "icon": "counter",
      "title": "Mei's sweets",
      "each": 2,
-     "size": 100
+     "size": 64
     }
    },
    {
@@ -2657,7 +2657,7 @@
      ],
      "icon": "counter",
      "title": "Flowers in a garden",
-     "size": 100
+     "size": 55
     }
    }
   ],

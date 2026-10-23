@@ -3533,7 +3533,8 @@
      "B",
      "C",
      "D"
-    ]
+    ],
+    "size": 55
    }
   },
   {
@@ -3581,7 +3582,7 @@
      ],
      "cell": 70,
      "cols": 3,
-     "size": 75
+     "size": 60
     },
     {
      "type": "panel",
@@ -3606,28 +3607,28 @@
      ],
      "cell": 70,
      "cols": 3,
-     "size": 75
+     "size": 60
     }
    ]
   }
  ],
  "look_back": {
   "hardest": [
-   "finding the differences",
-   "the odd one out",
-   "the missing piece",
+   "differences",
+   "odd one out",
+   "missing piece",
    "something else"
   ],
   "helped": [
-   "my pair cards",
-   "looking at one thing at a time",
+   "my cards",
+   "one thing at a time",
    "saying it aloud",
    "I was not stuck"
   ],
   "next": [
-   "checking one thing at a time",
-   "finding the missing piece",
-   "counting the differences",
+   "one thing at a time",
+   "missing pieces",
+   "counting",
    "asking a question"
   ]
  },
@@ -4269,12 +4270,11 @@
   ]
  },
  "parent": {
-  "summary": "We played spot-the-difference with shapes. We looked at one thing at a time: the shape, how many, how big, the pattern and which way it faces. We found the odd one out, a missing piece and the 11th tile of a repeating pattern.",
+  "summary": "We played spot-the-difference with shapes, one thing at a time: shape, how many, how big, pattern and which way it faces. We found the odd one out, a missing piece and the 11th tile of a repeating pattern.",
   "words": [
    "odd one out: the one that is not like the others",
    "pattern: plain, stripes or dots",
-   "turn: which way a shape faces",
-   "feature: one thing you can check, such as size"
+   "turn: which way a shape faces"
   ],
   "try_home": [
    "Line up 4 spoons, cups or toys with one odd one out. Ask: what is different?",
@@ -4283,7 +4283,6 @@
   ],
   "ask": [
    "What is different? Say one thing.",
-   "How many things are different?",
    "What part repeats?"
   ],
   "when_stuck": "Let your child use the cards or draw, and wait 10 seconds before helping. Please do not point to the answer: ask \"What shape? How many? How big? Which pattern? Which way?\" one at a time. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
