@@ -40,7 +40,7 @@ Preciouslyours Pte Ltd (trading as Math Inquirers)
 
 ---
 *Notes for Jasmine (delete before sending):*
-- Check that the file list and questions are what you want; remove question 9 if you prefer to ask separately (see `docs/legal/review.md` for the earlier note on MOE registration).
+- Check that the file list and questions are what you want; remove question 9 (MOE registration) or question 10 (real coin and note images) if you prefer to ask them separately (see `docs/legal/review.md` for the earlier note on MOE registration).
 - I am not a lawyer and have not advised on any of these points. The questions only ask the lawyer to decide.
 - Per `docs/terms/owner_decisions.md` (P2-LAWYER-WAIT), no booklet is printed or sold until the lawyer approves.
 - Contact line: the files carry pypteltd@gmail.com as a stand-in "business email for now".
