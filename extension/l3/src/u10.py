@@ -72,7 +72,7 @@ u.S(3, 'Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 he
     figure={'type': 'l3_segs', 'segs': hexes(3), 'k': 46, 'pad': 14, 'width_mm': 50},
     space={'table': {'cols': ['hexagons', 'sticks'], 'rows': 4}},
     why='Each new hexagon adds 5 sticks. The table goes 1: 6, 2: 11, 3: 16, 4: 21, 5: 26, 6: 31. For 41 sticks, count on: 7 hexagons need 36 and 8 hexagons need 41.')
-u.S(3, 'Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is greater than the ones digit.\n{ll}',
+u.S(3, 'Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit beats the ones digit.\n{ll}',
     A(['162', '252', '342'], '162, 252 and 342', list=True),
     space={'rows': ['My list:']},
     why='The hundreds digit is 1, 2 or 3. The ones digit is even and not 0, so it is 2, 4 or 6, and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: tens + ones = 7, so 5 and 2. With 3: tens + ones = 6, so 4 and 2. The numbers are 162, 252 and 342.')
@@ -122,9 +122,9 @@ u.G('Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE
 
 # ---------------- Check yourself
 u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.', A('15'),
-    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 5, 56, unit_label='pencils', h=170), figright=True,
+    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 5, 50, unit_label='pencils', h=150), figright=True,
     why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
-u.C('Ben is 3rd from the front and 6th from the back of a line. The line has {b} children.', A('8'),
+u.C('Ben stands 3rd from the front and 6th from the back. The line has {b} children.', A('8'),
     why='2 children are in front of Ben and 5 are behind him. 2 + 1 + 5 = 8.')
 u.C('Use the cards 1, 4 and 7 once each to make 3-digit numbers. {b} of the numbers are even.', A('2'),
     why='The numbers are 147, 174, 417, 471, 714 and 741. The even ones end in 4: 174 and 714.')
