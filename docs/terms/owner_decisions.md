@@ -189,3 +189,6 @@ Every item gives (a) the file, (b) my recommendation, (c) a one-word reply the o
 ## 23 Oct 2026 (night): owner replies KEEP and DIAGRAMS
 - P1 code words JUICE, SHADOW, FRUIT, ENJOY, COUSIN, FROZEN, CLIMB, BUILD: KEEP all eight.
 - DIAGRAMS: go on the diagram order of work: shared figure library, then the top items from each audit (holiday workbooks already running; Level 1 term workbooks, P1 pack figures and extension leftovers now).
+
+## 23 Oct 2026 (night): printer order date
+Owner chose FRIDAY: place the holiday-workbook print order on Fri 6 Nov 2026 (not Mon 9 Nov). Proof print of the toolbox card to be requested before then. Working freeze for holiday workbook changes: Mon 2 Nov, leaving 3 working days for final checks and B&W print files before the order.
