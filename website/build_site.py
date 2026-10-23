@@ -17,6 +17,11 @@ DIST = os.path.join(HERE, 'dist')
 FONTS = os.path.join(ROOT, 'fonts', 'node_modules', '@fontsource')
 WITH_PORTAL = '--with-portal' in sys.argv or os.environ.get('MI_PORTAL') == '1'   # opt-in: copies ../portal/public to dist/portal
 PORTAL_SRC = os.path.join(ROOT, 'portal', 'public')
+SB_URL = os.environ.get('SUPABASE_URL', '').rstrip('/')
+SB_KEY = os.environ.get('SUPABASE_ANON_KEY', '')
+# The home page "Request another time" form saves to Supabase only in a --with-portal build that has real (public) values; otherwise it
+# falls back to a prefilled WhatsApp message and the page loads no config and makes no network call.
+INTEREST_PORTAL = WITH_PORTAL and bool(SB_URL and SB_KEY) and re.fullmatch(r'https://[a-z0-9-]+\.supabase\.co', SB_URL) is not None
 BASE = (sys.argv[sys.argv.index('--base') + 1] if '--base' in sys.argv else '').rstrip('/')
 
 PAGES = [  # (source, output path, title, description)
@@ -54,6 +59,7 @@ def fonts_css():
 def wrap(src, title, desc, path):
     s = open(os.path.join(HERE, src), encoding='utf-8').read()
     s = s.replace('<!--STYLE-->', open(os.path.join(HERE, 'legal_style.txt'), encoding='utf-8').read())
+    s = s.replace('<!--PORTAL_CONFIG-->', '<script src="/portal/config.js"></script>' if INTEREST_PORTAL else '')
     s = re.sub(r'<meta name="claude:[^>]*>\s*', '', s)
     s = re.sub(r'<link rel="preconnect"[^>]*>\s*', '', s)
     s = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>\s*', '', s)
@@ -95,6 +101,8 @@ def main():
         '<style>body{font:18px/1.5 "Nunito Sans",sans-serif;background:#FFF8E7;color:#1B2A49;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}'
         'h1{font:600 40px Fredoka,sans-serif}a{color:#1B2A49;font-weight:800}</style></head><body><main><h1>Hmm, that page is missing.</h1>'
         '<p>Notice it. Test it. Explain why.</p><p><a href="/">Back to Math Inquirers</a></p></main></body></html>\n')
+    # placeholder slot labels (public data, no personal data): the portal admin Interest tab reads this to show names instead of ids
+    shutil.copy(os.path.join(HERE, 'data', 'interest_slots.json'), os.path.join(DIST, 'interest-slots.json'))
     open(os.path.join(DIST, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\n' + (f'Sitemap: {BASE}/sitemap.xml\n' if BASE else ''))
     if BASE:
         urls = ''.join(f'<url><loc>{BASE}/{o.replace("index.html", "")}</loc></url>' for _, o, _, _ in PAGES) + f'<url><loc>{BASE}/syllabus/</loc></url>'
@@ -104,6 +112,8 @@ def main():
     sec = ('  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n'
            "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n")
     site_csp = ("  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n")
+    if INTEREST_PORTAL:   # the site pages (not only /portal/*) may POST the interest form to the Supabase origin
+        site_csp = site_csp.replace("connect-src 'self';", "connect-src 'self' %s;" % SB_URL)
     if not WITH_PORTAL:
         hdr = '/*\n' + sec + site_csp + '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
     else:
@@ -135,6 +145,8 @@ def main():
             todo.append(('portal/config.js', 'SUPABASE_URL / ANON_KEY still placeholders (set env SUPABASE_URL and SUPABASE_ANON_KEY for the build)'))
     open(os.path.join(DIST, '_redirects'), 'w').write('/syllabus /syllabus/ 301\n/terms /terms/ 301\n/privacy /privacy/ 301\n/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n'
                                                   + ''.join('/%s /%s/ 301\n' % (L['slug'], L['slug']) for L in LEVELS))
+    todo.append(('index.html', 'Request-another-time form: retention default (12 months) and consent wording are drafts for the owner/lawyer; privacy.html carries the matching [bracket] note. Placeholder slots live in data/interest_slots.json.'))
+    todo.append(('index.html', 'Request-another-time form mode: ' + ('saves to Supabase (submit_interest_request); apply portal/supabase/interest_requests.sql first' if INTEREST_PORTAL else 'WhatsApp fallback only (build with --with-portal and SUPABASE_URL/SUPABASE_ANON_KEY to save requests)')))
     print('built', DIST)
     for p in sorted(os.listdir(DIST)):
         print(' ', p)

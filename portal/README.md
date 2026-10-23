@@ -33,6 +33,16 @@ portal/
    - Test in sandbox with the HitPay test card, confirm the enrolment flips to confirmed, then switch the keys/salt/`HITPAY_ENV=live` and `PORTAL_PAYMENT_MODE=hitpay`.
    - Pages Functions are read from `/functions` in the repo root (the Pages root directory). That folder only re-exports the code in `portal/functions`.
 
+## "Request another time" (timing interest)
+
+The public site has an "Other times" area on each level card (placeholder slots, not open for enrolment, listed in `website/data/interest_slots.json`) and a "Request another time" form on the home page.
+
+- **Apply `portal/supabase/interest_requests.sql`** in the Supabase SQL editor (after schema.sql and policies.sql; idempotent; re-run it after any re-run of policies.sql). It creates `public.interest_requests` (RLS on, no policy: anon and logged-in users cannot select), the anon-callable `submit_interest_request()` (validates lengths, one request per contact per 24 hours, 300 per hour site-wide, honeypot, no input echoed in errors) and admin-only `admin_interest_tally()`, `admin_list_interest_requests()`, `admin_set_interest_status()`, `admin_delete_interest_request()`, `admin_purge_expired_interest_requests()`.
+- **Retention default: 12 months** (`expires_at`). It is a DEFAULT for the owner and a lawyer to confirm; if you change it, change the column default, the form wording (`website/interest_ui.py`) and `website/privacy.html`. Delete expired rows with the "Delete expired requests" button on the admin Interest tab, or schedule it with pg_cron (example in the SQL file).
+- **Admin view:** `/portal/admin/` > Interest tab: tally by level and time, the list, mark contacted, delete. Without the portal, in the SQL editor: `select level, s as slot, count(*) from public.interest_requests, unnest(slots) s group by 1, 2 order by 1, 3 desc;`
+- **Modes:** the form saves to Supabase only in a build made with `--with-portal` and `SUPABASE_URL` / `SUPABASE_ANON_KEY` set (the home page then loads `/portal/config.js`, and the site CSP `connect-src` allows your Supabase origin). Otherwise, or if saving fails, it builds a prefilled WhatsApp message to the business number. The anon key is public by design; nothing secret is in the page.
+- **Tests:** `python3 website/tests/interest_test.py` (Playwright, RPC mocked), `bash portal/supabase/test/run_sql_test.sh` (includes `test/interest_test.sql`).
+
 ## Local tests
 
 ```

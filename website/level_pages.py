@@ -14,6 +14,8 @@ import html
 import json
 import os
 
+import interest_ui
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'level_pages')
 
@@ -153,7 +155,7 @@ details.ans p{margin-top:8px}
 
 
 def css():
-    return open(os.path.join(HERE, 'lp_parts.txt'), encoding='utf-8').read() + LEVEL_CSS + PAGE_CSS
+    return open(os.path.join(HERE, 'lp_parts.txt'), encoding='utf-8').read() + LEVEL_CSS + PAGE_CSS + interest_ui.CSS
 
 
 def level_index_cards(current=None):
@@ -186,9 +188,10 @@ def schedule_block(L, sch):
             '<details class="dates"><summary>All 10 lesson dates</summary><div class="tbl" style="margin-top:10px"><table>'
             '<thead><tr><th class="num">Lesson</th><th>Date</th><th>Time (Singapore)</th></tr></thead><tbody>%s</tbody></table></div>'
             '<p class="fine" style="margin-top:8px">No lessons on Fri 25 Dec (Christmas Day).</p></details>'
-            '<p class="small muted">Beta fee: S$%s a lesson, S$%s for all 10 lessons. Nothing to pay when you register: we confirm your place first and then send payment details. If a group fills, we open another.</p></div>'
+            '<p class="small muted">Beta fee: S$%s a lesson, S$%s for all 10 lessons. Nothing to pay when you register: we confirm your place first and then send payment details. If a group fills, we open another.</p>%s</div>'
             % (g['seats'], L['n'], esc(g['ages']), times, esc(g['first']), esc(g['last']), exc,
-               sch['lesson_minutes'], sch['weeks'], reg, L['n'], rows, per, tot))
+               sch['lesson_minutes'], sch['weeks'], reg, L['n'], rows, per, tot,
+               interest_ui.other_times_block(L['n'], interest_ui.load_slots())))
 
 
 def placement_block(L):

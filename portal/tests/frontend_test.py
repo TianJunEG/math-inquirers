@@ -150,6 +150,18 @@ with sync_playwright() as pw:
         ap.get_by_role('button', name='Paid', exact=True).click(); expect(ap.locator('#enrolments tbody tr')).to_have_count(1)
         expect(ap.locator('#enrolments tbody tr')).to_contain_text('paid')
     check('admin lists enrolments, marks paid, sees group fill', admin_flow)
+    def admin_interest():
+        ap.route('**/interest-slots.json', lambda r: r.fulfill(body=json.dumps({'slots': [{'id': 'R1', 'label': 'Wed & Thu mornings'}]}), content_type='application/json'))
+        ap.locator('[data-view=interest]').click()
+        expect(ap.get_by_role('heading', name='Interest in other times')).to_be_visible()
+        expect(ap.locator('#tally tr[data-level="2"].tot')).to_contain_text('2')
+        expect(ap.locator('#tally tr[data-key="R1"]')).to_contain_text('Wed & Thu mornings (R1)')
+        expect(ap.locator('#tally tr[data-key="R1"]')).to_contain_text('2')
+        expect(ap.locator('#requests tbody tr')).to_have_count(2)
+        expect(ap.locator('#requests')).to_contain_text('sam@example.com')
+        ap.locator('[data-request=i1] [data-set-status]').click(); expect(ap.locator('[data-request=i1] .pill')).to_have_text('contacted')
+        ap.once('dialog', lambda d: d.accept()); ap.locator('[data-delete=i2]').click(); expect(ap.locator('#requests tbody tr')).to_have_count(1)
+    check('admin Interest tab: tally, list, mark contacted, delete', admin_interest)
     ap.click('#signout')
     def parent_sees_paid():
         page.reload(); page.fill('#email', 'parent@example.com'); page.fill('#password', 'longenough1'); page.get_by_role('button', name='Log in', exact=True).last.click()

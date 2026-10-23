@@ -3,7 +3,9 @@
 (function () {
   var M = window.MI, h = M.h, app = document.getElementById('app');
   document.getElementById('top').appendChild(M.header('Owner admin'));
-  var filter = 'pending';
+  var filter = 'pending', view = 'enrol', slotLabels = null;
+  var WINDOWS = { 'wkday-am': 'Weekday mornings', 'wkday-pm': 'Weekday afternoons', 'wkday-eve': 'Weekday evenings', sat: 'Saturday', sun: 'Sunday' };
+  var BANDS = { 'under-6': 'Under 6', '6-7': '6 to 7', '8-9': '8 to 9', '10-11': '10 to 11', '12-13': '12 to 13', '14-plus': '14 or older' };
   if (!M.configured()) { M.mount(app, h('section', { class: 'card' }, h('p', { text: 'Set SUPABASE_URL and ANON_KEY in portal/config.js first.' }))); return; }
 
   async function login() {
@@ -19,6 +21,7 @@
   async function load(msg) {
     var sb = M.sb(), s = await sb.auth.getSession();
     if (!s.data.session) return login();
+    if (view === 'interest') return loadInterest(msg);
     var res = await Promise.all([sb.rpc('admin_list_enrolments'), sb.rpc('group_fill'), sb.from('groups').select('id,name,seats').order('id')]);
     if (res[0].error) {
       var forbidden = /forbidden|42501/.test(res[0].error.message + (res[0].error.code || ''));
@@ -55,10 +58,76 @@
             var x = await M.sb().rpc('admin_mark_paid', { p_payment: r.payment_id, p_note: 'PayNow ticked by owner' });
             load(x.error ? M.errText(x.error) : 'Marked ' + r.payment_reference + ' paid.'); } }) : null));
       }))));
-    M.mount(app, h('div', { class: 'row' }, h('h1', { text: 'Enrolments' }),
+    M.mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Enrolments' }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); login(); } })),
       msg ? h('p', { class: 'msg info', text: msg }) : null, fillCard,
       h('section', { class: 'card' }, h('h2', { text: shown.length + ' shown' }), tabs, table));
+  }
+  function viewTabs() {
+    return h('div', { class: 'tabs', id: 'viewtabs' }, [['enrol', 'Enrolments'], ['interest', 'Interest']].map(function (x) {
+      return h('button', { type: 'button', 'data-view': x[0], 'aria-pressed': String(view === x[0]), text: x[1], onclick: function () { view = x[0]; load(); } });
+    }));
+  }
+
+  /* ---- Interest tab: "Request another time" requests. Reads only through admin_* functions (is_admin() checked in the database). ---- */
+  function slotName(id) { return (slotLabels && slotLabels[id]) ? slotLabels[id] + ' (' + id + ')' : id; }
+  async function loadInterest(msg) {
+    var sb = M.sb();
+    if (slotLabels === null) {   // placeholder slot labels published by the site build (public data); fall back to ids if unavailable
+      slotLabels = {};
+      try { var r = await fetch('/interest-slots.json', { cache: 'no-store' }); if (r.ok) (await r.json()).slots.forEach(function (s) { slotLabels[s.id] = s.label; }); } catch (e) {}
+    }
+    var res = await Promise.all([sb.rpc('admin_interest_tally'), sb.rpc('admin_list_interest_requests')]);
+    var bad = res[0].error || res[1].error;
+    if (bad) {
+      var forbidden = /forbidden|42501/.test(bad.message + (bad.code || ''));
+      var missing = /admin_interest|PGRST202|42883|does not exist|schema cache/.test(bad.message + (bad.code || ''));
+      return M.mount(app, viewTabs(), h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Interest requests unavailable' }),
+        h('p', { text: forbidden ? 'This login is not in the admins table. See portal/README.md.' : missing ? 'Run portal/supabase/interest_requests.sql in the Supabase SQL editor first.' : M.errText(bad) })));
+    }
+    drawInterest(res[0].data || [], res[1].data || [], msg);
+  }
+  function drawInterest(tally, rows, msg) {
+    var sb = M.sb(), levels = {};
+    tally.forEach(function (r) { (levels[r.level] = levels[r.level] || []).push(r); });
+    var kindName = function (r) { return r.kind === 'slot' ? slotName(r.key) : r.kind === 'window' ? (WINDOWS[r.key] || r.key) : 'Free-text time given'; };
+    var tallyRows = [];
+    Object.keys(levels).sort().forEach(function (lv) {
+      var items = levels[lv], total = items.filter(function (r) { return r.kind === 'total'; })[0];
+      tallyRows.push(h('tr', { 'data-level': lv, class: 'tot' }, h('td', { text: 'Level ' + lv }), h('td', null, h('b', { text: 'All requests' })), h('td', { text: String(total ? total.n : 0) })));
+      items.filter(function (r) { return r.kind !== 'total'; }).sort(function (a, b) { return Number(b.n) - Number(a.n); }).forEach(function (r) {
+        tallyRows.push(h('tr', { 'data-level': lv, 'data-key': r.key }, h('td', { text: '' }), h('td', { text: kindName(r) }), h('td', { text: String(r.n) })));
+      });
+    });
+    var tallyCard = h('section', { class: 'card' }, h('h2', { text: 'Tally by level and time' }),
+      h('p', { class: 'small muted', text: 'Each request counts once under every time it ticked, so a level\'s rows can add up to more than its total.' }),
+      tallyRows.length ? h('div', { class: 'scroll' }, h('table', { id: 'tally' }, h('thead', null, h('tr', null, ['Level', 'Time', 'Requests'].map(function (x) { return h('th', { text: x }); }))), h('tbody', null, tallyRows)))
+                       : h('p', { id: 'noInterest', class: 'muted', text: 'No requests yet.' }));
+    function times(r) { return (r.slots || []).map(slotName).concat((r.windows || []).map(function (w) { return WINDOWS[w] || w; })).concat(r.other_time ? ['Other: ' + r.other_time] : []).join('; '); }
+    function act(fn, ok) { return async function () { var x = await fn(); loadInterest(x.error ? M.errText(x.error) : ok); }; }
+    var list = h('div', { class: 'scroll' }, h('table', { id: 'requests' },
+      h('thead', null, h('tr', null, ['Received', 'Level', 'Age', 'Times', 'Parent', 'Contact', 'Note', 'Status', ''].map(function (x) { return h('th', { text: x }); }))),
+      h('tbody', null, rows.map(function (r) {
+        return h('tr', { 'data-request': r.id },
+          h('td', { text: new Date(r.created_at).toLocaleDateString('en-SG') }), h('td', { text: String(r.level) }), h('td', { text: BANDS[r.age_band] || r.age_band }),
+          h('td', { text: times(r) }), h('td', { text: r.parent_first_name }),
+          h('td', { text: [r.contact_whatsapp ? 'WhatsApp ' + r.contact_whatsapp : '', r.contact_email || ''].filter(Boolean).join(' / ') }),
+          h('td', { text: r.note || '' }), h('td', null, h('span', { class: 'pill ' + r.status, text: r.status })),
+          h('td', null,
+            r.status !== 'contacted' ? h('button', { class: 'btn sm', type: 'button', 'data-set-status': 'contacted', text: 'Mark contacted', onclick: act(function () { return sb.rpc('admin_set_interest_status', { p_id: r.id, p_status: 'contacted' }); }, 'Marked contacted.') }) : null, ' ',
+            h('button', { class: 'btn alt sm', type: 'button', 'data-delete': r.id, text: 'Delete', onclick: function () {
+              if (!confirm('Delete this request for good? Do this when the parent asks, or once it is dealt with.')) return;
+              act(function () { return sb.rpc('admin_delete_interest_request', { p_id: r.id }); }, 'Deleted.')(); } })));
+      }))));
+    M.mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Interest in other times' }),
+        h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await sb.auth.signOut(); login(); } })),
+      msg ? h('p', { class: 'msg info', text: msg }) : null, tallyCard,
+      h('section', { class: 'card' }, h('h2', { text: rows.length + ' requests' }),
+        h('p', { class: 'small muted', text: 'Placeholder times only: nothing here is a booking. Contact only about timing. Requests are deleted after 12 months (default).' }),
+        h('button', { class: 'btn alt sm', type: 'button', id: 'purge', text: 'Delete expired requests', onclick: async function () {
+          if (!confirm('Delete every request older than its retention date?')) return;
+          var x = await sb.rpc('admin_purge_expired_interest_requests'); loadInterest(x.error ? M.errText(x.error) : 'Deleted ' + x.data + ' expired request(s).'); } }),
+        rows.length ? list : h('p', { class: 'muted', text: 'No requests yet.' })));
   }
   load();
 })();

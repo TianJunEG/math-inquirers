@@ -14,6 +14,9 @@
   function taken(gid) { return (db.extraTaken[gid] || 0) + db.enrolments.filter(function (e) { return e.group_id === gid && e.status !== 'cancelled'; }).length; }
   var REQ = ['contact', 'terms', 'recording', 'childs_work'];
   function latest(pid) { var m = {}; db.consents.filter(function (c) { return c.parent_id === pid; }).forEach(function (c) { m[c.consent_type] = c; }); return m; }
+  function interest() { if (!db.interest) db.interest = [
+    { id: 'i1', created_at: '2026-10-20T01:00:00Z', expires_at: '2027-10-20T01:00:00Z', level: 2, age_band: '8-9', slots: ['R1', 'MON-PM'], windows: ['sat'], other_time: null, parent_first_name: 'Mei', contact_whatsapp: '91234567', contact_email: null, note: null, status: 'new' },
+    { id: 'i2', created_at: '2026-10-21T01:00:00Z', expires_at: '2027-10-21T01:00:00Z', level: 2, age_band: '6-7', slots: ['R1'], windows: [], other_time: 'Tue 4pm', parent_first_name: 'Sam', contact_whatsapp: null, contact_email: 'sam@example.com', note: 'sibling', status: 'new' }]; return db.interest; }
   window.__mockDb = function () { return db; };
 
   var rpcs = {
@@ -43,6 +46,13 @@
       var c = db.children.filter(function (x) { return x.parent_id === par.id && x.display_name.toLowerCase() === a.p_name.trim().toLowerCase(); })[0]; if (!c) return [];
       if (c.locked) return []; if (c.pin === 'hash:' + a.p_pin) { c.failed = 0; return [{ child_id: c.id, display_name: c.display_name, level: c.level }]; }
       c.failed++; if (c.failed >= 5) c.locked = true; return []; },
+    admin_interest_tally: function () { if (!isAdmin()) throw err('forbidden'); var rows = interest(), out = [], m = {};
+      rows.forEach(function (r) { var k = [r.level, 'total', '*'].join('|'); m[k] = (m[k] || 0) + 1; r.slots.forEach(function (s) { k = [r.level, 'slot', s].join('|'); m[k] = (m[k] || 0) + 1; }); });
+      Object.keys(m).forEach(function (k) { var p = k.split('|'); out.push({ level: +p[0], kind: p[1], key: p[2], n: m[k] }); }); return out; },
+    admin_list_interest_requests: function () { if (!isAdmin()) throw err('forbidden'); return interest(); },
+    admin_set_interest_status: function (a) { if (!isAdmin()) throw err('forbidden'); interest().forEach(function (r) { if (r.id === a.p_id) r.status = a.p_status; }); return null; },
+    admin_delete_interest_request: function (a) { if (!isAdmin()) throw err('forbidden'); db.interest = interest().filter(function (r) { return r.id !== a.p_id; }); return null; },
+    admin_purge_expired_interest_requests: function () { if (!isAdmin()) throw err('forbidden'); return 0; },
     admin_list_enrolments: function () { if (!isAdmin()) throw err('forbidden'); return db.enrolments.map(function (e) { var p = db.payments.filter(function (x) { return x.enrolment_id === e.id; })[0], pa = db.parents.filter(function (x) { return x.id === e.parent_id; })[0];
       return { enrolment_id: e.id, created_at: e.created_at, parent_email: pa.email, parent_name: pa.full_name, parent_phone: pa.phone, child_name: e.child_label, level: 1, group_id: e.group_id, enrolment_status: e.status, payment_id: p.id, payment_method: p.method, payment_status: p.status, payment_reference: p.reference, amount_cents: p.amount_cents, paid_at: p.paid_at }; }); },
     admin_mark_paid: function (a) { if (!isAdmin()) throw err('forbidden'); var p = db.payments.filter(function (x) { return x.id === a.p_payment; })[0]; p.status = 'paid'; p.paid_at = new Date().toISOString();

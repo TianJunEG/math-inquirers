@@ -38,6 +38,8 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,su
 .msg.ok{background:var(--mint)} .msg.err{background:var(--peach);color:var(--fg);border:2px solid var(--red)} .msg.info{background:var(--sky)}
 .pill{display:inline-block;font:800 12.5px var(--body);padding:3px 10px;border-radius:999px;border:2px solid var(--line);background:var(--bg)}
 .pill.paid,.pill.confirmed{background:var(--mint);border-color:var(--green)} .pill.pending,.pill.pending_payment{background:var(--sky)} .pill.cancelled,.pill.failed,.pill.refunded{background:var(--peach)}
+.pill.new{background:var(--sky)} .pill.contacted{background:var(--mint);border-color:var(--green)} .pill.closed{background:var(--bg)}
+tr.tot td{background:var(--bg)}
 .code{font:800 22px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;background:var(--bg);border:2px dashed var(--fg);border-radius:10px;padding:8px 12px;display:inline-block}
 .child{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;border-top:2px solid var(--line);padding:12px 0}
 .child:first-of-type{border-top:0}
