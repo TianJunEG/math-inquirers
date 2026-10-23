@@ -20,7 +20,7 @@ learn = {
                         'Find n mod d. A remainder of 0 means d is a factor.',
                         'Stop when d × d is more than n.',
                         'No remainder was 0? Then n is prime.',
-                        'Quick tests: an even last digit means 2 is a factor, digits adding to a multiple of 3 means 3 is a factor, and a last digit of 0 or 5 means 5 is a factor.',
+                        'Quick tests: an even last digit means 2 is a factor. Digits adding to a multiple of 3 mean 3 is a factor. A last digit of 0 or 5 means 5 is a factor.',
                         'Factor tree: split a number into 2 factors again and again. The ends that cannot split are primes: 60 = 6 × 10 = 2 × 3 × 2 × 5.']},
     'try': IT(U, 'L', 1, 0, 'Is 143 prime?  {circ:Yes|No}   If not, 143 = {b} × {b}.',
               'Test 2, 3, 5 and 7: each leaves a remainder (143 mod 7 = 3). Then test 11, because 11 × 11 = 121 is less than 143: 11 × 13 = 143. '

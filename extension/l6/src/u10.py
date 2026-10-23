@@ -143,7 +143,7 @@ I.append(IT(U, 'T', 3, 4,
 I.append(IT(U, 'G', 1, 5,
             'A taxi fare is 7 dollars for 2 km and 16 dollars for 5 km, by one rule. Plan the meter.',
             f'From 2 km to 5 km is 3 km more, and the fare rises by 16 {M} 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 {X} 2 + 1, so there is a 1 dollar start fee. The rule is n {X} 3 + 1. '
-            f'A 20 km ride costs 3 {X} 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, test with a ride you can price by hand first.)',
+            f'A 20 km ride costs 3 {X} 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, start with a ride you can check by hand.)',
             fig=code([['look', 'ask (km?) and wait'], ['look', f'say (answer {X} ? + ?)']]),
             parts=[P('a', f'say (n {X} {{b}} + {{b}})', [3, 1], '3, 1'),
                    P('b', 'A 20 km ride costs {b} dollars.', [61]),
@@ -157,7 +157,7 @@ I.append(IT(U, 'G', 2, 5,
             parts=[P('a', 'P(greater than 6) = {b}/8', [2]),
                    P('b', 'The program says about {b}.', [200]),
                    P('c', 'If the test were greater than 4, it would say about {b}.', [400])],
-            figside=True))
+            hint='Count the numbers that pass the test.', figside=True))
 I.append(IT(U, 'G', 3, 5,
             'This code stops when n reaches 1. Run it by hand.',
             f'n = 6: 6, 3, 10, 5, 16, 8, 4, 2, 1. That is 8 steps (halve if even, or 3n + 1 if odd). n = 7: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 is 16 steps. '
@@ -168,7 +168,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'With n = 6 it says {b}.', [8]),
                    P('b', 'With n = 7 it says {b}.', [16]),
                    P('c', 'Starting at 7, the largest value n takes is {b}.', [52])],
-            figside=True))
+            hint='Write n after every step.', figside=True))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

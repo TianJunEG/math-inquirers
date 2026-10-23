@@ -1297,7 +1297,7 @@
      }
     }
    ],
-   "hint": "A is 0 and its code letter is E. How far is that?",
+   "hint": "Compare A with its code letter. How far did it move?",
    "space": {
     "rows": [
      "Working:",

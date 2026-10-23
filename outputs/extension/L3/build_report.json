@@ -107,9 +107,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9995816168898043,
+   "fill": 0.93341271884655,
    "over": false,
-   "excess_mm": -0.1,
+   "excess_mm": -17.1,
    "edition": "soft"
   },
   {
@@ -1103,9 +1103,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Think harder",
    "exempt": false,
-   "fill": 1.0057608135942326,
-   "over": true,
-   "excess_mm": 1.5,
+   "fill": 0.9395919155509783,
+   "over": false,
+   "excess_mm": -15.5,
    "edition": "print"
   },
   {
@@ -2006,9 +2006,14 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "print page 10 (Unit 1 \u00b7 Think harder): content overflows the page (natural height minus body 1.5 mm)"
- ],
+ "problems": [],
  "soft_pages": 100,
- "print_pages": 100
+ "print_pages": 100,
+ "bw_pipeline": {
+  "pages": 100,
+  "dpi": 600,
+  "mb": 13.02,
+  "check_bw_failures": 0,
+  "pale_tint_dropped_max": 0.0036
+ }
 }

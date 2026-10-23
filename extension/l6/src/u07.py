@@ -122,7 +122,7 @@ I.append(IT(U, 'S', 11, 3,
 
 # ---------------------------------------------------------------- Think harder
 I.append(IT(U, 'T', 1, 4,
-            f'A turtle repeats [move 40, turn {TURN} 100] again and again until it first faces the start direction again.',
+            f'A turtle repeats [move 40, turn {TURN} 100] over and over. It stops when it first faces the start direction.',
             f'After k repeats the total turned is 100k. It faces the start direction when 100k is a multiple of 360: 100k = 1800 first, at k = 18 (1800 ÷ 100). '
             f'1800 = 5 {X} 360, so it has turned round 5 times and draws an 18-point star.',
             parts=[P('a', 'It first faces the start direction after {b} repeats.', [18]),
@@ -146,7 +146,7 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y gets bigger.',
+            'The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y increases.',
             f'Right 10, down 20, left 30, up 40 gives x = 10 {M} 30 = {M}20 and y = {M}20 + 40 = 20 after 4 repeats. The next 4 moves are right 50, down 60, left 70, up 80: x = {M}20 + 50 {M} 70 = {M}40 and y = 20 {M} 60 + 80 = 40. '
             f'Every 4 repeats adds {M}20 to x and 20 to y, so after 12 repeats it is at ({M}60, 60).',
             fig=code([['var', 'set n to (10)'], ['ctl', 'repeat (4)', [mv('n'), tn(90), ['var', 'change n by (10)']]]]),

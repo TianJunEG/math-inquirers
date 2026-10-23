@@ -616,7 +616,7 @@
   {
    "id": "L6U07-T01",
    "tier": "think",
-   "text": "A turtle repeats [move 40, turn ↻ 100] again and again until it first faces the start direction again.",
+   "text": "A turtle repeats [move 40, turn ↻ 100] over and over. It stops when it first faces the start direction.",
    "page": 4,
    "parts": [
     {
@@ -747,7 +747,7 @@
   {
    "id": "L6U07-G01",
    "tier": "go",
-   "text": "The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y gets bigger.",
+   "text": "The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y increases.",
    "page": 5,
    "parts": [
     {

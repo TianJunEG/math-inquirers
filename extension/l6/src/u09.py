@@ -111,7 +111,7 @@ I.append(IT(U, 'T', 1, 4,
             f'The ages add up to 5 {X} 8 = 40. In order the ages are a, b, 7, d, 12. The mode 5 appears at least twice, and only a and b are below 7, so a = b = 5. '
             f'Then 5 + 5 + 7 + d + 12 = 40, so d = 40 {M} 29 = 11. The ages are 5, 5, 7, 11, 12.',
             parts=[P('a', 'The 5 ages add up to {b}.', [40]),
-                   P('b', 'The two youngest friends are each {b} years old.', [5]),
+                   P('b', 'The 2 youngest friends are each {b} years old.', [5]),
                    P('c', 'The second oldest friend is {b} years old.', [11])],
             hint='Put the ages in order. What does the median tell you?', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 2, 4,

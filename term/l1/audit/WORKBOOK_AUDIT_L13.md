@@ -1,4 +1,4 @@
-> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 9 Picture Equations; the lesson was renumbered and changed. Not a pass for the new file: re-audit pending.
+> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 9 Picture Equations; the lesson was renumbered and changed. Re-audited on 23 Oct 2026 for the new file: workbook, home and wording re-run, see audit/RETROFIT_REPORT.md.
 
 # Independent workbook audit: Level 1 Term 2 Lesson 19 (Picture Equations; lesson 9 of Term 2)
 

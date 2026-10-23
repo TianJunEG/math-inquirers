@@ -119,7 +119,7 @@ I.append(IT(U, 'T', 1, 4,
             fig={'type': 'l6_routes', 'cols': 4, 'rows': 3, 'cell': 10, 'mark': ['2,1']},
             parts=[P('a', 'Routes from Start to X: {b}. Routes from X to End: {b}.', [3, 6], '3, 6'),
                    P('b', 'Routes that go through X: {b}.', [18])],
-            hint='A route through X has two parts. Count each part.', figright=True, partsrow=True))
+            hint='A route through X has 2 parts. Count each part.', figright=True, partsrow=True))
 I.append(IT(U, 'T', 2, 4,
             'You have 4 digit cards: 1, 2, 3, 4. Put all 4 cards in a row to make a 4-digit number.',
             'First digit 4 choices, then 3, then 2, then 1: 24 numbers. Even numbers end in 2 or 4: 2 choices for the last digit and 3 × 2 × 1 for the rest, 12. '

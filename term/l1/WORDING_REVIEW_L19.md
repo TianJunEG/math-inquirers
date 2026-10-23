@@ -1,4 +1,4 @@
-> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 10 Find One First (with the Quest); the lesson was renumbered and changed. Not a pass for the new file: re-audit pending.
+> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 10 Find One First (with the Quest); the lesson was renumbered and changed. Re-audited on 23 Oct 2026 for the new file: workbook, home and wording re-run, see audit/RETROFIT_REPORT.md.
 
 # Wording review, Lesson 20 (Find One First) and the Term 2 end-of-term check
 

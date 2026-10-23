@@ -583,7 +583,7 @@
     },
     {
      "label": "b",
-     "text": "The two youngest friends are each {b} years old.",
+     "text": "The 2 youngest friends are each {b} years old.",
      "answer": {
       "value": [
        "5"

@@ -685,7 +685,7 @@
      "2,1"
     ]
    },
-   "hint": "A route through X has two parts. Count each part.",
+   "hint": "A route through X has 2 parts. Count each part.",
    "explanation": "Routes to X: right 2 and up 1, so 3 routes (RRU, RUR, URR). Routes from X to End: right 2 and up 2, so 6 routes. Every route through X is one of the 3 followed by one of the 6: 3 × 6 = 18.",
    "figright": true,
    "partsrow": true
