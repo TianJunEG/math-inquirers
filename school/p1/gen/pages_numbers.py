@@ -232,11 +232,16 @@ def solve_queue(names, clues, size=5):
     return [o for o in itertools.permutations(names, size) if all(queue_ok(o, c) for c in clues)]
 
 def child_svg(letter):
-    return svg(24, 40,
-        f'<circle cx="12" cy="7.5" r="5.5" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-        f'<rect x="3" y="13" width="18" height="23" rx="3" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-        f'<circle cx="12" cy="25" r="6" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-        f'<text x="12" y="28.5" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="9" fill="#000">{letter}</text>')
+    """a simple person: head with a face, a shirt with the letter, arms and legs (outline only)"""
+    st = 'fill="#fff" stroke="#000" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"'
+    return svg(26, 46,
+        f'<path d="M6,24 L2.5,34" {st} fill="none"/><path d="M20,24 L23.5,34" {st} fill="none"/>'
+        f'<path d="M9.5,36 L8.5,45" {st} fill="none"/><path d="M16.5,36 L17.5,45" {st} fill="none"/>'
+        f'<circle cx="13" cy="8" r="6.5" {st}/><circle cx="10.6" cy="7.2" r="0.8" fill="#000"/><circle cx="15.4" cy="7.2" r="0.8" fill="#000"/>'
+        f'<path d="M10,10.4 Q13,13 16,10.4" {st} fill="none"/>'
+        f'<rect x="5.5" y="15.5" width="15" height="21" rx="3" {st}/>'
+        f'<circle cx="13" cy="26" r="5.2" {st}/>'
+        f'<text x="13" y="26.2" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="700" font-size="7" fill="#000">{letter}</text>')
 
 def page07():
     rng = random.Random(707)
