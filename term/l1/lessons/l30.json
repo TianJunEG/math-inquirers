@@ -726,14 +726,14 @@
      "rows": [
       [
        "15",
-       "− 6",
+       "take away 6",
        "[]",
-       "− 4",
+       "take away 4",
        "[]"
       ]
      ],
      "cell_h": 84,
-     "font": 40,
+     "font": 30,
      "size": 100,
      "t": "visual"
     },
@@ -756,14 +756,14 @@
      "rows": [
       [
        "15",
-       "− 6",
+       "take away 6",
        "9",
-       "− 4",
+       "take away 4",
        "5"
       ]
      ],
      "cell_h": 84,
-     "font": 40,
+     "font": 30,
      "size": 100,
      "t": "visual"
     },
@@ -1283,7 +1283,7 @@
      "type": "clock",
      "h": 7,
      "m": 30,
-     "size": 40
+     "size": 55
     }
    },
    {
@@ -1315,13 +1315,7 @@
      "33 (adding).",
      "13."
     ],
-    "mins": 2,
-    "visual": {
-     "type": "price_tag",
-     "item": "book",
-     "price": "$13",
-     "size": 30
-    }
+    "mins": 2
    },
    {
     "id": "S3",
@@ -1357,32 +1351,19 @@
      "$7 and $12 (19)."
     ],
     "mins": 3.5,
-    "visuals": [
-     {
-      "type": "price_tag",
-      "item": "pen",
-      "price": "$5",
-      "size": 22
-     },
-     {
-      "type": "price_tag",
-      "item": "ruler",
-      "price": "$7",
-      "size": 22
-     },
-     {
-      "type": "price_tag",
-      "item": "cup",
-      "price": "$8",
-      "size": 22
-     },
-     {
-      "type": "price_tag",
-      "item": "book",
-      "price": "$12",
-      "size": 22
-     }
-    ]
+    "visual": {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "pen $5",
+       "ruler $7",
+       "cup $8",
+       "book $12"
+      ]
+     ],
+     "font": 26
+    }
    },
    {
     "id": "S4",
@@ -1463,7 +1444,31 @@
      "Tuesday (counting Thursday as day 1).",
      "Thursday."
     ],
-    "mins": 2.5
+    "mins": 2.5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+     ],
+     "rows": [
+      [
+       "",
+       "",
+       "",
+       "today",
+       "",
+       "",
+       ""
+      ]
+     ],
+     "font": 24
+    }
    },
    {
     "id": "S6",
@@ -2349,10 +2354,8 @@
   "sheet_pages": 4,
   "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
   "child_rules": [
-   "Mi is swimming to the Pearl Cave and needs your help at 8 gates.",
-   "Use your own paper. Talk with your quest partner, then write your own answer.",
-   "It is not a race. Your answers are private. You may skip a gate: Mi swims round it.",
-   "The secret cave at the end is optional, just for fun."
+   "Mi needs your help at 8 gates. Talk with your quest partner, then write your own answer.",
+   "It is not a race. Your answers are private. You may skip a gate: Mi swims round it."
   ],
   "child_footer": "Math Inquirers Term 3 Mi's Challenge Quest.",
   "page_instructions": [
@@ -2413,7 +2416,7 @@
      "type": "clock",
      "h": 4,
      "m": 35,
-     "size": 45
+     "size": 28
     },
     "tools": [
      "draw",
@@ -2470,7 +2473,7 @@
       }
      ],
      "label": "PLAY MONEY",
-     "size": 55
+     "size": 36
     },
     "tools": [
      "actout",
@@ -2532,13 +2535,13 @@
       "type": "price_tag",
       "item": "pen",
       "price": "$6",
-      "size": 35
+      "size": 20
      },
      {
       "type": "price_tag",
       "item": "ruler",
       "price": "$9",
-      "size": 35
+      "size": 20
      }
     ],
     "tools": [
@@ -2588,7 +2591,7 @@
      "highlight": [
       3
      ],
-     "size": 60,
+     "size": 46,
      "mark": [
       3
      ]
@@ -2638,7 +2641,7 @@
      "shape": "triangle",
      "n": 3,
      "label_each": true,
-     "size": 50
+     "size": 28
     },
     "tools": [
      "draw",
@@ -2699,30 +2702,23 @@
     "text": "Mei buys a toy for $6. Now she has $9 left.",
     "parts": [
      {
-      "l": "a",
+      "l": "",
       "text": "Mei had $___ at first.",
       "ans": "15",
       "val": 15
-     },
-     {
-      "l": "b",
-      "text": "Then she buys a pen for $4. She has $___ left.",
-      "ans": "5",
-      "val": 5
      }
     ],
-    "say": "Gate 7. Mei buys a toy for 6 dollars. Now she has 9 dollars left. Part a: Mei had blank dollars at first. Part b: then she buys a pen for 4 dollars. She has blank dollars left.",
-    "answer": "$15; $5",
+    "say": "Gate 7. Mei buys a toy for 6 dollars. Now she has 9 dollars left. Mei had blank dollars at first.",
+    "answer": "$15",
     "val": [
-     15,
-     5
+     15
     ],
-    "solution": "She spent 6 and has 9 left, so she had 9 and 6, which is 15. After the toy she has 9. The pen costs 4, so 9 take away 4 is 5.",
+    "solution": "She spent 6 and has 9 left, so she had 9 and 6, which is 15. Check: 15 take away 6 is 9.",
     "right": "Both correct.",
     "partly": "One of the two correct.",
     "mistakes": [
-     "(a) 3 (taking away).",
-     "(b) 11 (starting from 15)."
+     "3 (taking away).",
+     "14 or 16."
     ]
    },
    {
@@ -3500,7 +3496,7 @@
      },
      {
       "k": "READ",
-      "text": "Gate 7. Mei buys a toy for 6 dollars. Now she has 9 dollars left. Part a: Mei had blank dollars at first. Part b: then she buys a pen for 4 dollars. She has blank dollars left. Gate 8. Ben has 4 coins. They are 5-cent coins and 10-cent coins. They make 25 cents. Write how many five-cent coins and how many ten-cent coins. The secret cave has one more puzzle, and it is optional. You may skip it. Ali pays exactly 14 dollars with 2-dollar notes and 5-dollar notes. Write one way to do it. Then write why you chose your tool."
+      "text": "Gate 7. Mei buys a toy for 6 dollars. Now she has 9 dollars left. Mei had blank dollars at first. Gate 8. Ben has 4 coins. They are 5-cent coins and 10-cent coins. They make 25 cents. Write how many five-cent coins and how many ten-cent coins. The secret cave has one more puzzle, and it is optional. You may skip it. Ali pays exactly 14 dollars with 2-dollar notes and 5-dollar notes. Write one way to do it. Then write why you chose your tool."
      },
      {
       "k": "WORK",

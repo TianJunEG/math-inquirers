@@ -177,7 +177,7 @@ def run(d):
     # ---------------------------------------------------------------- Start here
     q = T['S1']; eq((fmt(add_minutes(7, 30, 60)), fmt(add_minutes(3, 0, 30))), ('8:30', '3:30'), 'S1'); eq((q['visual']['h'], q['visual']['m']), (7, 30), 'S1 clock'); eq(q['val'], ['8:30', '3:30'], 'S1 val')
     q = T['S2']; eq((minus(20, 13), plus(7, 13)), (7, 20), 'S2 and its check'); eq(q['val'], [7], 'S2 val')
-    q = T['S3']; eq(pairs_with_total((5, 7, 8, 12), 15), [(7, 8)], 'S3 exactly one pair'); eq(q['val'], [7, 8], 'S3 val'); eq([v['price'] for v in q['visuals']], ['$5', '$7', '$8', '$12'], 'S3 tags')
+    q = T['S3']; eq(pairs_with_total((5, 7, 8, 12), 15), [(7, 8)], 'S3 exactly one pair'); eq(q['val'], [7, 8], 'S3 val'); eq(q['visual']['rows'][0], ['pen $5', 'ruler $7', 'cup $8', 'book $12'], 'S3 tags')
     q = T['S4']; eq([linear(5, 3, k) for k in (1, 2, 3, 4)], [5, 8, 11, 14], 'S4'); eq(q['visual']['rows'][0], ['Tiles', '5', '8', '11', '[]'], 'S4 table'); eq(q['val'], [14], 'S4 val')
     q = T['S5']; eq([later('Thursday', k) for k in range(1, 7)], ['Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday'], 'S5 stepped'); eq(q['val'], ['Wednesday'], 'S5 val')
     q = T['S6']; eq((plus(45, 28), minus(63, 28), 45 == minus(63, 28), plus(35, 28)), (73, 35, False, 63), 'S6'); eq(q['val'], [73, 'No', 35], 'S6 val')
@@ -213,7 +213,7 @@ def run(d):
     eq(later('Friday', 3), 'Monday', 'C4a'); eq((plus(3, 7), month[3], month[10]), (10, 'Friday', 'Friday'), 'C4b'); eq(q['val'], ['Monday', 10], 'C4 val'); eq(q['visual']['highlight'], [3], 'C4 highlight')
     q = G['C5']; eq([triangle_sticks(k) for k in (1, 2, 3, 4, 5)], [3, 5, 7, 9, 11], 'C5 sticks counted from the drawing'); eq(q['val'], [9, 11], 'C5 val')
     q = G['C6']; eq(plus(49, 38), 87, 'C6'); eq(plus(49, 38) == 77, False, 'C6 77 is wrong'); eq(minus(77, 38), 39, 'C6 check'); eq(q['val'], ['No', 87], 'C6 val')
-    q = G['C7']; eq((plus(9, 6), minus(9, 4)), (15, 5), 'C7'); eq(q['val'], [15, 5], 'C7 val')
+    q = G['C7']; eq((plus(9, 6), minus(15, 6)), (15, 9), 'C7'); eq(q['val'], [15], 'C7 val')
     q = G['C8']; eq(coin_splits(4, 25), [(3, 1)], 'C8 exactly one split'); eq(q['val'], [3, 1], 'C8 val')
     c = cq['optional']; eq(sorted(ways(14, (2, 5))), [(2, 2), (7, 0)], 'cave exactly two ways'); eq(c['val'], [7, 0], 'cave val')
     eq([g['page'] for g in cq['questions']], [1, 1, 2, 2, 3, 3, 4, 4], 'gates per page'); eq(cq['sheet_pages'], 4, 'quest log pages'); eq(cq['tool_row'], 'term', 'Quest v2 tool row')
