@@ -69,3 +69,16 @@ CSS_NEW += """
 .rrows{display:flex;flex-direction:column;gap:2.2mm}
 """
 CSS_NEW += """.srows.s5{gap:3mm}.srow .sn{font-size:9.5pt;line-height:1.15;width:22mm}.srow .sn b{font-size:10.5pt}.srows.s5 .srow svg{width:13mm}"""
+CSS_NEW += """.rt2{display:flex;flex-wrap:wrap;align-items:center;gap:1mm 1.5mm;width:36mm;font-size:11pt}.rt2 small{font-size:9pt;font-weight:700}.rt2 b{width:100%;font-size:11.5pt}
+.ctrow{display:grid;grid-template-columns:repeat(12,1fr);border:0.5mm solid #000}.ctrow div{border-left:0.3mm solid #000;text-align:center;line-height:1.1}.ctrow div:first-child{border-left:none}.ctrow span{display:block;font-weight:800;font-size:11pt;border-bottom:0.3mm solid #000}.ctrow b{font-family:'Fredoka';font-size:17pt;font-weight:700}
+.rr{gap:2mm}"""
+CSS_NEW += """.rt2{flex-wrap:nowrap;width:40mm;justify-content:flex-end}.rr{padding-bottom:0.5mm}.rrows{gap:1.2mm}.rt2 .lbx b{font-size:11.5pt}"""
+CSS_NEW += """
+.frows{display:flex;flex-direction:column;gap:4mm}
+.frow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.fg{display:flex;flex-direction:column;gap:0.8mm;flex:none}.fg small,.fo small{font-size:9pt;font-weight:700}.fg svg,.fo svg{display:block;max-width:none}
+.fo{display:flex;flex-direction:column;gap:0.8mm}.opts{display:flex;gap:4mm}.opt{display:flex;flex-direction:column;align-items:center;gap:1mm}
+.opt i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8mm;height:8mm;border:0.5mm solid #000;border-radius:50%;font-size:13pt;font-weight:700}
+"""
+CSS_NEW += """.pgraph.sm{gap:1.5mm}.pgraph.sm .gc{width:11.5mm;height:11.5mm}.pgraph.sm .gl{width:30mm;font-size:14pt}.pgraph.sm .gl svg{width:8mm;height:8mm}"""
+CSS_NEW += """.srows.s5 .srow{flex-direction:column;width:33mm;text-align:center;gap:1mm}.srows.s5 .srow .sn{width:auto}.srows.s5 .srow .ab{width:14mm}"""
