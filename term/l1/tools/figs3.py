@@ -43,8 +43,8 @@ def icon_body(n):
     if n == 'glue':
         return f'<rect x="20" y="22" width="24" height="34" rx="5" {o("#fff")}/><rect x="25" y="8" width="14" height="14" rx="3" {o(TEAL)}/><rect x="20" y="32" width="24" height="12" {o("#3B6FC9")}/>'
     if n == 'shell':
-        spokes = ''.join(f'<line x1="32" y1="54" x2="{32 + 22 * math.cos(math.radians(a)):.1f}" y2="{54 - 40 * math.sin(math.radians(a)):.1f}" stroke="{NAVY}" stroke-width="2"/>' for a in (45, 70, 90, 110, 135))
-        return f'<path d="M8 50 C8 16 56 16 56 50 Z" {o("#F6C9D0")}/>' + spokes
+        ridges = ''.join(f'<line x1="32" y1="54" x2="{32 + 27 * math.sin(math.radians(a)):.1f}" y2="{54 - 44 * math.cos(math.radians(a)):.1f}" stroke="{NAVY}" stroke-width="2.2" stroke-linecap="round"/>' for a in (-44, -22, 0, 22, 44))
+        return (f'<path d="M32 54 L4 34 C4 16 18 8 32 8 C46 8 60 16 60 34 Z" {o("#F6C9D0")}/>' + ridges + f'<rect x="24" y="52" width="16" height="7" rx="3" {o("#E9A9B5")}/>')
     if n == 'spoon':
         return f'<ellipse cx="32" cy="18" rx="11" ry="14" {o("#DDE3EA")}/><rect x="29" y="30" width="6" height="30" rx="3" {o("#DDE3EA")}/>'
     if n == 'sock':

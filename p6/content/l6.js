@@ -144,9 +144,9 @@ module.exports = {
       { q: 'A game: you win if the dice shows 1 or 2; your friend wins if it shows 3, 4, 5 or 6. Write the six dice results and who wins each one. Is the game fair? Why or why not?', a: 'You win on 2 of the 6 results and your friend on 4 of the 6, so it is not fair (2/6 = 1/3 against 4/6 = 2/3).' }
     ],
     stretch: [
-      { q: 'A spinner has 10 equal parts numbered 1 to 10. What is the probability of spinning a prime number?', a: '4/10 = 2/5 (2, 3, 5, 7)' },
-      { q: 'Roll two dice and add. What is the probability that the total is 9?', a: '4/36 = 1/9 (3+6, 4+5, 5+4, 6+3)' },
-      { q: 'A bag has 5 red counters and some blue counters. The probability of picking red is 1/4. How many blue counters are there?', a: '15 (5 out of 20 is 1/4)' },
+      { q: 'A spinner has 10 equal parts numbered 1 to 10. What is the probability of spinning a prime number?', nl: 1, a: '4/10 = 2/5 (2, 3, 5, 7)' },
+      { q: 'Roll two dice and add. What is the probability that the total is 9?', nl: 1, fig: FG.grid({ rows: [1, 2, 3, 4, 5, 6], cols: [1, 2, 3, 4, 5, 6], rowTitle: 'first dice', colTitle: 'second dice', cell: 26, label: 'An empty 6 by 6 grid for the two dice: first dice down the side, second dice across the top, to fill in each total.' }), a: '4/36 = 1/9 (3+6, 4+5, 5+4, 6+3)' },
+      { q: 'A bag has 5 red counters and some blue counters. The probability of picking red is 1/4. How many blue counters are there?', nl: 1, a: '15 (5 out of 20 is 1/4)' },
       { q: 'Ali flips a coin 3 times. What is the probability that he gets heads all 3 times?', a: '1/8 (8 equally likely outcomes: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT)' },
       { q: 'One letter is picked at random from the word MATHEMATICS. What is the probability that it is M?', a: '2/11' },
       { q: 'A program rolls a dice 1200 times and counts the numbers bigger than 4. About how many should it count? The program says 391. Is something wrong? Explain.', a: 'About 400 (2 of the 6 results are bigger than 4, and 1/3 × 1200 = 400). 391 is close, so nothing is wrong: a random simulation is never exactly the expected number.' },
