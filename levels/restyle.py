@@ -62,6 +62,9 @@ for d in sys.argv[1:]:
         a=open(f).read(); b=fix(a,lv)
         if a!=b: open(f,'w').write(b); n+=1
     try:
+        sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import spine_deco; n+=spine_deco.apply(d)   # strategy of the day + common look-back (idempotent; Level 1 only until rolled out, see spine_deco.LEVELS_ON); must run BEFORE mi_deco
+    except ImportError: pass
+    try:
         sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import mi_deco; n+=mi_deco.apply(d)   # Mi the dolphin (levels 1-3), idempotent
     except ImportError: pass
     print(d,n)

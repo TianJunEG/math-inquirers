@@ -432,7 +432,7 @@
      "text": "What is different about the odd card? Say it in a whole sentence."
     }
    ],
-   "note": "Round 1, about 6 minutes. Each child has the 12 pair cards cut out beforehand; the page has three rows, and each row is one set of 4: three alike and one different. Set 1 (top row): apples and one cookie. Set 2 (middle row): ladybirds and one spider. Set 3 (bottom row): cups and one jar. Children lay a set in a line, find the odd card and say what is different, then do the same for sets 2 and 3. About 2 minutes a set. Do not tell which card is odd. Ask: which card is the odd one; what is different about it. Accept any true thing: it is a different thing, it has more legs, it has a lid. Nobody holds cards up to the camera: children say it aloud and show fingers. A child with no cards draws 4 small pictures on paper. Answers on the next slide."
+   "note": "Round 1, about 6 minutes. Each child has the 12 pair cards cut out beforehand; the page has three rows, and each row is one set of 4: three alike and one different. Set 1 (top row): three cards with 2 suns and one with 5 suns (how many). Set 2 (middle row): three big suns and one small sun (how big). Set 3 (bottom row): three striped suns and one dotted sun (which pattern). Children lay a set in a line, find the odd card and say what is different, then do the same for sets 2 and 3. About 2 minutes a set. Do not tell which card is odd. Ask: which card is the odd one; what is different about it. Accept any true thing, then ask for the one thing that is different: how many, how big, or which pattern. Nobody holds cards up to the camera: children say it aloud and show fingers. A child with no cards draws 4 small pictures on paper. Answers on the next slide."
   },
   {
    "id": "s-explore1-ans",
@@ -451,23 +451,23 @@
       ],
       [
        "Set 1",
-       "the cookie",
-       "it is a different thing, not an apple"
+       "the 5 suns",
+       "a different number"
       ],
       [
        "Set 2",
-       "the spider",
-       "it is a different thing, with more legs"
+       "the small sun",
+       "a different size"
       ],
       [
        "Set 3",
-       "the jar",
-       "it is a different thing, with a lid"
+       "the dotted sun",
+       "a different pattern"
       ]
      ]
     }
    ],
-   "note": "Children check their own sets. Set 1: the cookie, not an apple. Set 2: the spider, with eight legs (the ladybirds have six). Set 3: the jar, with a lid. Say: all of these are different in one thing, what it is. Ticks only. Do not name any child."
+   "note": "Children check their own sets. Set 1: the card with 5 suns, a different number. Set 2: the small sun, a different size. Set 3: the dotted sun, a different pattern. Say: each odd card is different in just one thing; say what it is. Ticks only. Do not name any child."
   },
   {
    "id": "s-explore2",
@@ -1817,7 +1817,7 @@
      },
      {
       "k": "SAY",
-      "text": "Set one, the cookie. Set two, the spider, with more legs. Set three, the jar, with a lid. All different in what they are."
+      "text": "Set one, the card with five suns: a different number. Set two, the small sun: a different size. Set three, the dotted sun: a different pattern. Each is different in just one thing."
      },
      {
       "k": "SLIDE",
@@ -1871,7 +1871,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Main room only; you cannot see small cards, so ask children to say it aloud and show fingers. Answers: set 1 the cookie, set 2 the spider, set 3 the jar; tile 1 size, tile 2 number, tile 3 pattern. Do not say the rule before the children do."
+      "text": "Main room only; you cannot see small cards, so ask children to say it aloud and show fingers. Answers: set 1 the 5 suns (number), set 2 the small sun (size), set 3 the dotted sun (pattern); tile 1 size, tile 2 number, tile 3 pattern. Do not say the rule before the children do."
      }
     ]
    },
@@ -2655,7 +2655,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "There are [] differences.",
+      "text": "[] tiles are different.",
       "ans": "3",
       "val": 3
      },
@@ -2883,7 +2883,7 @@
       }
      ],
      "cell": 100,
-     "cols": 5,
+     "cols": 3,
      "labels": [
       "A",
       "B",
@@ -2923,38 +2923,38 @@
      "Choosing D because it looks neat."
     ],
     "mins": 5,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 3,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m"
+      }
+     ],
+     "cell": 56,
+     "cols": 2,
+     "hide": [
+      3
+     ],
+     "size": 70
+    },
     "visuals": [
-     {
-      "type": "panel",
-      "tiles": [
-       {
-        "shape": "square",
-        "n": 1,
-        "size": "m"
-       },
-       {
-        "shape": "square",
-        "n": 3,
-        "size": "m"
-       },
-       {
-        "shape": "circle",
-        "n": 1,
-        "size": "m"
-       },
-       {
-        "shape": "circle",
-        "n": 3,
-        "size": "m"
-       }
-      ],
-      "cell": 56,
-      "cols": 2,
-      "hide": [
-       3
-      ],
-      "size": 60
-     },
      {
       "type": "panel",
       "tiles": [
@@ -2979,7 +2979,7 @@
         "size": "s"
        }
       ],
-      "cell": 70,
+      "cell": 80,
       "cols": 4,
       "labels": [
        "A",
@@ -3362,7 +3362,7 @@
       }
      ],
      "cell": 100,
-     "cols": 5,
+     "cols": 3,
      "labels": [
       "A",
       "B",
@@ -4005,21 +4005,21 @@
     "steps": [
      "Across, plain becomes stripes.",
      "Down, a star becomes a circle.",
-     "The missing tile is a circle with stripes: B."
+     "The missing tile is a circle with stripes."
     ],
     "options": [
-     "A",
-     "B",
-     "C",
-     "D"
+     "a plain circle",
+     "a striped circle",
+     "a striped star",
+     "a small striped circle"
     ],
-    "answer": "B",
+    "answer": "a striped circle",
     "slips": [
      {
       "a": [
-       "A"
+       "a plain circle"
       ],
-      "say": "A is a circle but it is plain. What changes across?"
+      "say": "That is a circle but it is plain. What changes across?"
      }
     ],
     "fig": {
@@ -4045,12 +4045,6 @@
        "shape": "circle",
        "n": 1,
        "size": "m",
-       "pattern": 1
-      },
-      {
-       "shape": "circle",
-       "n": 1,
-       "size": "s",
        "pattern": 1
       }
      ],
@@ -4349,7 +4343,7 @@
  "workbook": {
   "header": "Spot It: one thing at a time",
   "hint_p1": "Look at one thing at a time: shape, number, size, pattern, turn. Compare tile by tile.",
-  "hint_p2": "Count the differences. Tick each tile that is different.",
+  "hint_p2": "Look at one thing at a time. Count the tiles that are different. Write the tile letters.",
   "hint_p3": "Check one thing at a time. Choose any question, in any order.",
   "hint_p4": "Use your pair cards or a sheet of paper to turn. Choose any question. You do not have to finish them all.",
   "choice_after": 3,
@@ -4361,21 +4355,21 @@
    {
     "type": "pair_cards",
     "labels": [
-     "icon:apple",
-     "icon:apple",
-     "icon:cookie",
-     "icon:apple",
-     "icon:spider",
-     "icon:ladybird",
-     "icon:ladybird",
-     "icon:ladybird",
-     "icon:cup",
-     "icon:cup",
-     "icon:cup",
-     "icon:jar"
+     "icon:sun+2 suns",
+     "icon:sun+2 suns",
+     "icon:sun+2 suns",
+     "icon:sun+5 suns",
+     "icon:sun+big",
+     "icon:sun+big",
+     "icon:sun+big",
+     "icon:sun+small",
+     "icon:sun+striped",
+     "icon:sun+striped",
+     "icon:sun+striped",
+     "icon:sun+dotted"
     ],
     "title": "Kit page: pair cards",
-    "intro": "A grown-up cuts out the 12 cards before the lesson. Each row of 4 is one set: three cards are alike and one is different. Keep each row together in a pile. No cutting? Draw 4 small pictures on paper: 3 the same and 1 different."
+    "intro": "A grown-up cuts out the 12 cards before the lesson. Each row of 4 is one set: three cards are alike and one is different in just one thing. Keep each row together in a pile. No cutting? Draw 4 small suns on paper: 3 the same and 1 different in one thing (how many, how big, or which pattern)."
    }
   ]
  },

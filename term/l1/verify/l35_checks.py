@@ -221,10 +221,10 @@ def run(d):
     eq(row_diffs(a, b), [['size'], ['n'], ['pattern']], 'explore: size, number, pattern'); eq(P('s-explore2-ans', 0)['tiles'], a['tiles'], 'explore answer slide shows picture 1'); eq(P('s-explore2-ans', 1)['tiles'], b['tiles'], 'explore answer slide shows picture 2')
     eq('Tile 1: size' in sl['s-explore2-ans']['blocks'][-1]['text'] and 'Tile 2: number' in sl['s-explore2-ans']['blocks'][-1]['text'] and 'Tile 3: pattern' in sl['s-explore2-ans']['blocks'][-1]['text'], True, 'explore answer text')
     kit = d['workbook']['kits'][0]; labs = [l.split(':')[1] for l in kit['labels']]; sets = [labs[i:i + 4] for i in range(0, 12, 4)]
-    eq([max(set(s), key=s.count) for s in sets], ['apple', 'ladybird', 'cup'], 'kit: the three alike in each set')
-    eq([[x for x in s if s.count(x) == 1] for s in sets], [['cookie'], ['spider'], ['jar']], 'kit: one odd card in each set'); eq([len(s) - len(set(s)) for s in sets], [2, 2, 2], 'kit: three alike and one different')
+    eq([max(set(s), key=s.count) for s in sets], ['sun+2 suns', 'sun+big', 'sun+striped'], 'kit: the three alike in each set')
+    eq([[x for x in s if s.count(x) == 1] for s in sets], [['sun+5 suns'], ['sun+small'], ['sun+dotted']], 'kit: one odd card in each set'); eq([len(s) - len(set(s)) for s in sets], [2, 2, 2], 'kit: three alike and one different')
     eq(len(labs), 12, 'kit: 12 cards'); eq(d['materials']['kit_contract'][0]['supplied'], 12, 'kit contract supplied'); eq(d['materials']['kit_contract'][0]['max_used'], len(labs), 'kit contract: every card is used in Explore')
-    rows = {r[0]: r for r in sl['s-explore1-ans']['blocks'][0]['rows'][1:]}; eq([rows['Set 1'][1], rows['Set 2'][1], rows['Set 3'][1]], ['the cookie', 'the spider', 'the jar'], 's-explore1-ans odd cards')
+    rows = {r[0]: r for r in sl['s-explore1-ans']['blocks'][0]['rows'][1:]}; eq([rows['Set 1'][1], rows['Set 2'][1], rows['Set 3'][1]], ['the 5 suns', 'the small sun', 'the dotted sun'], 's-explore1-ans odd cards')
     # ---------------------------------------------------------------- Mini-lesson
     pab = P('s-m1'); ta, tb = tiles(pab); eq(diffs(ta, tb), ['turn'], 's-m1: only turn'); eq(P('s-m1-ans')['tiles'], pab['tiles'], 's-m1-ans shows both triangles')
     eq(odd_ones(tiles(P('s-m2'))), [(2, 'size')], 's-m2: C is the only odd one, by size'); eq(P('s-m2-ans')['tiles'], P('s-m2')['tiles'], 's-m2-ans same row')
@@ -253,7 +253,7 @@ def run(d):
     # ---------------------------------------------------------------- Think harder
     q = T['T1']; ts = tiles(q['visual']); od = odd_ones(ts); eq(od, [(2, 'n')], 'T1: C is the only odd one, and only number makes it odd'); eq(q['val'], ['C', 'number'], 'T1 val')
     eq([len(set(t[i] for t in ts)) for i in range(5)], [4, 2, 2, 3, 1], 'T1 the other features vary (so they cannot make a tile odd)')
-    q = T['T2']; g, o = q['visuals']; gt = tiles(g); ot = tiles(o); TL, TR, BL = gt[0], gt[1], gt[2]
+    q = T['T2']; g, o = q['visual'], q['visuals'][0]; gt = tiles(g); ot = tiles(o); TL, TR, BL = gt[0], gt[1], gt[2]
     eq(TL[0] == TR[0] and BL[0] != TL[0], True, 'T2 down changes the shape'); eq(TL[1] == BL[1] and TR[1] != TL[1], True, 'T2 across changes the number'); want = (BL[0], TR[1], BL[2], BL[3], BL[4])
     eq([x == want for x in ot], [False, False, True, False], 'T2 only C is the missing piece'); eq([diffs(x, want) for x in ot], [['n'], ['shape'], [], ['size']], 'T2 each wrong option is wrong in one thing'); eq(q['val'], ['C'], 'T2 val')
     q = T['T3']; shown = [t[0] for t in tiles(q['visual'])]; eq(shown, cycle_list(['square', 'circle', 'circle'], 6), 'T3 the shown tiles follow the repeat'); full = cycle_list(['square', 'circle', 'circle'], 12)
@@ -301,9 +301,9 @@ def run(d):
         eq(items[cid]['answer'], ORACLES[cid](env), cid + ' authored answer')
     ts = tiles(items['c3']['fig']); eq(odd_ones(ts), [(2, 'pattern')], 'c3 C is the only odd one'); eq(items['c3']['answer'], 'C', 'c3 answer')
     eq(items['c2']['answer'], 'turn', 'c2'); eq(diffs(('triangle', 1, 'm', 0, 0), ('triangle', 1, 'm', 0, 180)), ['turn'], 'c2 only the turn differs')
-    ts = tiles(items['t3']['fig']); TL, TR, BL = ts[0], ts[1], ts[2]; ot = ts[3:]
-    want = (BL[0], BL[1], BL[2], TR[3], BL[4]); eq(items['t3']['answer'], 'B', 't3 answer')
-    eq(items['t3']['fig']['hide'], [3], 't3 hidden tile'); eq(len(ts), 5, 't3 four tiles of the grid, plus the options as extra tiles'); eq(True, True)
+    ts = tiles(items['t3']['fig']); TL, TR, BL = ts[0], ts[1], ts[2]
+    want = (BL[0], BL[1], BL[2], TR[3], BL[4]); eq((want[0], want[3]), ('circle', TR[3]), 't3 missing tile: the shape of the left-hand one below, the pattern of the one across'); eq(items['t3']['answer'], 'a striped circle', 't3 answer'); eq(TR[3] != BL[3], True, 't3 stripes are what changes across')
+    eq(items['t3']['fig']['hide'], [3], 't3 hidden tile'); eq(len(ts), 4, 't3 the four tiles of the grid; the choices are words'); eq(items['t3']['answer'] in items['t3']['options'], True, 't3 answer is a choice')
     eq(items['g1']['answer'], len(turns({(0, 0), (0, 1), (0, 2), (1, 2)})[1]), 'g1 turning keeps 4 squares')
     for tid in ('c4', 't1', 't2', 'g2', 'c5', 'c1'):
         tp = items[tid]['tpl']
