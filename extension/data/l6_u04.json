@@ -61,12 +61,13 @@
     "repeat until <test>: stop when true",
     "if <test> then / else: choose a part",
     "n mod d: remainder of n ÷ d",
-    "pick random 1 to 6: a random number",
+    "pick random 1 to 6: like a die",
     "item i of list: the i-th item",
     "answer: what the user typed in",
     "↻ turn: turn clockwise"
    ]
-  }
+  },
+  "tight": true
  },
  "items": [
   {

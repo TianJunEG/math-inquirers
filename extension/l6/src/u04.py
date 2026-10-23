@@ -196,9 +196,10 @@ learn['facts'] = {'title': 'Reading the code blocks', 'lines': [
     'repeat until <test>: stop when true',
     'if <test> then / else: choose a part',
     'n mod d: remainder of n ÷ d',
-    'pick random 1 to 6: a random number',
+    'pick random 1 to 6: like a die',
     'item i of list: the i-th item',
     'answer: what the user typed in',
     '↻ turn: turn clockwise']}
+learn['tight'] = True
 write_unit(4, 'Algebra machines', 'Machines and equations',
            'I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.', learn, I)
