@@ -168,7 +168,7 @@ def l4_numline(spec, w=None):
             P.append(f'<rect x="{x - 36:.1f}" y="{base + 26}" width="72" height="50" rx="6" fill="#fff" stroke="{NAVY}" stroke-width="3.2"/>')
         elif abs(key - v) < eps:
             P.append(_t(f'{x:.1f}', base + 62, _esc(labels[key]), fs))
-        elif is_major and not labels.get('only'):
+        elif is_major and not spec.get('labels_only'):
             P.append(_t(f'{x:.1f}', base + 62, _fmt(v, dec) + unit_text, fs))
     for m in marks:
         x = X(m['v'])

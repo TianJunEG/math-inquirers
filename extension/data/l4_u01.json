@@ -1,0 +1,799 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 1,
+ "id": "L4U01",
+ "title": "Factor Hunters",
+ "topic": "Factors and multiples",
+ "holiday_lesson": 1,
+ "goal": "I can list every factor of a number in order. I can find common factors and common multiples and use them to solve sharing and timetable puzzles.",
+ "learn": {
+  "intro": "A factor goes into a number exactly. A multiple is in a times table. Write factors in pairs, in order, and stop when the pairs meet.",
+  "example": {
+   "problem": "Find all the factors of 54.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Try",
+     "Pair"
+    ],
+    "rows": [
+     [
+      "1",
+      "1 × 54"
+     ],
+     [
+      "2",
+      "2 × 27"
+     ],
+     [
+      "3",
+      "3 × 18"
+     ],
+     [
+      "4, 5",
+      "no"
+     ],
+     [
+      "6",
+      "6 × 9"
+     ],
+     [
+      "7, 8",
+      "no"
+     ]
+    ],
+    "widths": [
+     1,
+     2
+    ],
+    "cell_h": 50,
+    "font": 28,
+    "width_mm": 60
+   },
+   "side": true,
+   "steps": [
+    "Try 1, 2, 3 in order. Write a pair each time the number goes in.",
+    "4 and 5 do not go into 54. 6 × 9 = 54 is a pair.",
+    "7 and 8 do not go in, and the next number, 9, is already used. The pairs have met, so stop."
+   ],
+   "answer": "The factors of 54 are 1, 2, 3, 6, 9, 18, 27, 54."
+  },
+  "example2": {
+   "problem": "Lamp A flashes every 4 seconds. Lamp B flashes every 10 seconds. They flash together now. After how many seconds do they next flash together?",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Lamp",
+     "Flashes after these seconds"
+    ],
+    "rows": [
+     [
+      "A",
+      "4, 8, 12, 16, 20"
+     ],
+     [
+      "B",
+      "10, 20"
+     ]
+    ],
+    "widths": [
+     1,
+     3
+    ],
+    "cell_h": 50,
+    "font": 26,
+    "width_mm": 80
+   },
+   "steps": [
+    "List the multiples of each number.",
+    "Find the first number in both lists."
+   ],
+   "answer": "They next flash together after 20 seconds."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to hunt",
+   "steps": [
+    "Factors: try 1, 2, 3 in order. Stop when the pairs meet.",
+    "Common factors: list both numbers, then pick the numbers in both lists.",
+    "Common multiples: list the multiples of both. The first number in both lists is the least."
+   ]
+  },
+  "facts": {
+   "title": "Good to know",
+   "lines": [
+    "A pair like 6 × 6 counts as one factor.",
+    "So 36 has 9 factors, an odd number."
+   ]
+  },
+  "try": {
+   "id": "L4U01-L01",
+   "text": "Write all the factors of 45, in order.\n{ll}",
+   "answer": {
+    "value": [
+     "1",
+     "3",
+     "5",
+     "9",
+     "15",
+     "45"
+    ],
+    "text": "1, 3, 5, 9, 15, 45"
+   },
+   "explanation": "1 × 45, 3 × 15 and 5 × 9 are the pairs. 2 and 4 do not go into 45. After 5 comes 9, which is already used, so stop."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U01-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the factor pairs of 56. Try 1, 2, 3 in order.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "1 × 56   2 × {b}   4 × {b}   7 × {b}",
+     "answer": {
+      "value": [
+       "28",
+       "14",
+       "8"
+      ],
+      "text": "2 × 28, 4 × 14, 7 × 8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many factors does 56 have? {b} factors",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8 factors"
+     }
+    }
+   ],
+   "explanation": "3, 5 and 6 do not go into 56. The pairs 1 × 56, 2 × 28, 4 × 14 and 7 × 8 give 8 factors. The next number, 8, is already used."
+  },
+  {
+   "id": "L4U01-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Write all the factors of 66, in order from the smallest.\n{ll}",
+   "answer": {
+    "value": [
+     "1",
+     "2",
+     "3",
+     "6",
+     "11",
+     "22",
+     "33",
+     "66"
+    ],
+    "text": "1, 2, 3, 6, 11, 22, 33, 66"
+   },
+   "explanation": "1 × 66, 2 × 33, 3 × 22 and 6 × 11. Then 7, 8, 9 and 10 do not go into 66, and 11 is already used."
+  },
+  {
+   "id": "L4U01-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "A class has 32 children. The teacher makes equal teams. Every child is in a team. There is more than 1 team and more than 1 child in a team. List every team size that is possible.\n{ll}",
+   "answer": {
+    "value": [
+     "2",
+     "4",
+     "8",
+     "16"
+    ],
+    "text": "2, 4, 8, 16"
+   },
+   "explanation": "Team sizes are factors of 32 other than 1 and 32: 2, 4, 8 and 16. For example, 4 children in a team gives 8 teams."
+  },
+  {
+   "id": "L4U01-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "7 is a factor of 91. {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "54 is a multiple of 8. {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "9 is a factor of 108. {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "d",
+     "text": "65 is a multiple of 13. {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) 7 × 13 = 91. (b) The multiples of 8 are 48, 56, so 54 is not one. (c) 9 × 12 = 108. (d) 13 × 5 = 65."
+  },
+  {
+   "id": "L4U01-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Write the first six multiples of each number. Then find the least number that is a multiple of both 9 and 12.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Multiples of 9: {ll}",
+     "answer": {
+      "value": [
+       "9",
+       "18",
+       "27",
+       "36",
+       "45",
+       "54"
+      ],
+      "text": "9, 18, 27, 36, 45, 54"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Multiples of 12: {ll}",
+     "answer": {
+      "value": [
+       "12",
+       "24",
+       "36",
+       "48",
+       "60",
+       "72"
+      ],
+      "text": "12, 24, 36, 48, 60, 72"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Least common multiple: {b}",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    }
+   ],
+   "explanation": "Count in 9s and in 12s. The first number in both lists is 36 (4 nines and 3 twelves)."
+  },
+  {
+   "id": "L4U01-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Find the common factors of 28 and 42.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Factors of 28: {ll}",
+     "answer": {
+      "value": [
+       "1",
+       "2",
+       "4",
+       "7",
+       "14",
+       "28"
+      ],
+      "text": "1, 2, 4, 7, 14, 28"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Factors of 42: {ll}",
+     "answer": {
+      "value": [
+       "1",
+       "2",
+       "3",
+       "6",
+       "7",
+       "14",
+       "21",
+       "42"
+      ],
+      "text": "1, 2, 3, 6, 7, 14, 21, 42"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Common factors: {ll}",
+     "answer": {
+      "value": [
+       "1",
+       "2",
+       "7",
+       "14"
+      ],
+      "text": "1, 2, 7, 14"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Greatest common factor: {b}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "explanation": "28 = 1 × 28, 2 × 14, 4 × 7. 42 = 1 × 42, 2 × 21, 3 × 14, 6 × 7. The numbers in both lists are 1, 2, 7 and 14. The greatest is 14."
+  },
+  {
+   "id": "L4U01-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Ravi has 30 red marbles and 45 blue marbles. He packs them into identical bags with none left over. Every bag has the same number of red marbles and the same number of blue marbles.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "What is the greatest number of bags he can make? {b} bags",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15 bags"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Then each bag has {b} red and {b} blue.",
+     "answer": {
+      "value": [
+       "2",
+       "3"
+      ],
+      "text": "2 red and 3 blue"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Factors of 30: {ll}",
+     "Factors of 45: {ll}"
+    ]
+   },
+   "explanation": "The number of bags is a common factor of 30 and 45. The common factors are 1, 3, 5 and 15, so the greatest is 15. Each bag has 30 ÷ 15 = 2 red and 45 ÷ 15 = 3 blue."
+  },
+  {
+   "id": "L4U01-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Bus A leaves a stop every 8 minutes. Bus B leaves every 12 minutes. Both leave at 9:00 am.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "They next leave together at {b} : {b} am.",
+     "answer": {
+      "value": [
+       "9",
+       "24"
+      ],
+      "text": "9:24 am"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many more times do they leave together after 9:00 am and before 11:00 am? {b} times",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4 times"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Bus A: 9:00, 9:08, {l}",
+     "Bus B: 9:00, 9:12, {l}"
+    ]
+   },
+   "explanation": "The least common multiple of 8 and 12 is 24, so they meet at 9:24 am. They meet every 24 minutes: 9:24, 9:48, 10:12 and 10:36. The next, 11:00, is not before 11:00. That is 4 times."
+  },
+  {
+   "id": "L4U01-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Count the factors of each number.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Number",
+     "8",
+     "14",
+     "18",
+     "27",
+     "32",
+     "49"
+    ],
+    "rows": [
+     [
+      "How many factors?",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "widths": [
+     3.4,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "cell_h": 64,
+    "font": 28,
+    "first_col_head": true,
+    "width_mm": 165
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write the number of factors under each number.",
+     "answer": {
+      "value": [
+       "4",
+       "4",
+       "6",
+       "4",
+       "6",
+       "3"
+      ],
+      "text": "8: 4, 14: 4, 18: 6, 27: 4, 32: 6, 49: 3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which number in the table has exactly 3 factors? {b}",
+     "answer": {
+      "value": [
+       "49"
+      ],
+      "text": "49"
+     }
+    }
+   ],
+   "explanation": "8: 1, 2, 4, 8. 14: 1, 2, 7, 14. 18: 1, 2, 3, 6, 9, 18. 27: 1, 3, 9, 27. 32: 1, 2, 4, 8, 16, 32. 49: 1, 7, 49. Only 49 has 3 factors."
+  },
+  {
+   "id": "L4U01-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "I am a number between 40 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.",
+   "answer": {
+    "value": [
+     "84"
+    ],
+    "text": "84"
+   },
+   "explanation": "A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 40 and 100."
+  },
+  {
+   "id": "L4U01-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Mei buys pens in packs of 6 and rubbers in packs of 8. She wants the same number of pens and rubbers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "What is the fewest of each she can buy? {b} of each",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many packs of pens? {b} packs  How many packs of rubbers? {b} packs",
+     "answer": {
+      "value": [
+       "4",
+       "3"
+      ],
+      "text": "4 packs of pens and 3 packs of rubbers"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Multiples of 6: {l}",
+     "Multiples of 8: {l}"
+    ]
+   },
+   "explanation": "The least common multiple of 6 and 8 is 24 (6, 12, 18, 24 and 8, 16, 24). 24 ÷ 6 = 4 packs of pens and 24 ÷ 8 = 3 packs of rubbers."
+  },
+  {
+   "id": "L4U01-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "I am a factor of 60. I am a multiple of 5. I am greater than 10 and less than 30. Write every number that fits.\n{l} {l}",
+   "answer": {
+    "value": [
+     "15",
+     "20"
+    ],
+    "text": "15, 20",
+    "unordered": true
+   },
+   "explanation": "The factors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60. Of these, 15 and 20 are multiples of 5 between 10 and 30."
+  },
+  {
+   "id": "L4U01-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Some numbers have an odd number of factors.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many factors does 64 have? {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many factors does 81 have? {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which has an odd number of factors, 72 or 49? {circ:72|49}",
+     "answer": {
+      "value": [
+       "49"
+      ],
+      "text": "49"
+     }
+    }
+   ],
+   "explanation": "64: 1, 2, 4, 8, 16, 32, 64 is 7 factors. 81: 1, 3, 9, 27, 81 is 5 factors. 49 = 7 × 7 pairs with itself, so it has 3 factors (odd). 72 has 12 factors."
+  },
+  {
+   "id": "L4U01-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A 2-digit number is a multiple of 3 and a multiple of 8. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}",
+   "answer": {
+    "value": [
+     "72"
+    ],
+    "text": "72"
+   },
+   "hint": "List the multiples of 24. Then use the two digit clues.",
+   "explanation": "A multiple of 3 and 8 is a multiple of 24: 24, 48, 72, 96. The digits add to 9 only for 72 (7 + 2). 7 is greater than 2."
+  },
+  {
+   "id": "L4U01-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Ben has more than 50 stickers and fewer than 100. He packs them in 4s and 3 are left over. He packs them in 5s and 3 are left over. He packs them in 6s and 3 are left over. How many stickers does he have?\n{b}",
+   "answer": {
+    "value": [
+     "63"
+    ],
+    "text": "63"
+   },
+   "hint": "Take 3 away. What number is in the 4, 5 and 6 times tables?",
+   "explanation": "Without the 3 left over, the number is in the 4, 5 and 6 times tables, so it is a multiple of 60. 60 + 3 = 63 is between 50 and 100. The next one, 123, is too big."
+  },
+  {
+   "id": "L4U01-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Two gears have marks that touch at the start. Gear A has 12 teeth. Gear B has 18 teeth. They turn together until the marks touch again.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many teeth go past the touching point? {b} teeth",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36 teeth"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Gear A turns {b} times and gear B turns {b} times.",
+     "answer": {
+      "value": [
+       "3",
+       "2"
+      ],
+      "text": "A 3 times and B 2 times"
+     }
+    }
+   ],
+   "hint": "The number of teeth is a multiple of both 12 and 18.",
+   "explanation": "The least common multiple of 12 and 18 is 36. Gear A: 36 ÷ 12 = 3 turns. Gear B: 36 ÷ 18 = 2 turns."
+  },
+  {
+   "id": "L4U01-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "What is the least number that has exactly 10 factors? Show the factors you found.\n{b}",
+   "answer": {
+    "value": [
+     "48"
+    ],
+    "text": "48"
+   },
+   "space": {
+    "rows": [
+     "Factors of 48: {ll}"
+    ]
+   },
+   "hint": "Count factors of numbers that are 24, 30, 36, 40 and 48.",
+   "explanation": "48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Numbers below 48 have fewer: for example 36 has 9, 40 has 8 and 42 has 8."
+  },
+  {
+   "id": "L4U01-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 4: Three common multiples\nThree lighthouses flash at 12:00:00. Lighthouse A flashes every 6 seconds, B every 8 seconds and C every 9 seconds.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "They next flash together after {b} seconds.",
+     "answer": {
+      "value": [
+       "72"
+      ],
+      "text": "72"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many times do they flash together in the next 10 minutes? Do not count 12:00:00. {b} times",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8 times"
+     }
+    }
+   ],
+   "hint": "A common multiple of three numbers is in all three lists.",
+   "explanation": "The least common multiple of 6, 8 and 9 is 72. 10 minutes is 600 seconds. 72 × 8 = 576 is less than 600 and 72 × 9 = 648 is more, so they flash together 8 times."
+  },
+  {
+   "id": "L4U01-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Muffins are sold only in boxes of 4 and boxes of 7. Ali wants exactly 17 muffins. What is the greatest number of muffins that you cannot buy exactly? Then check that 17 cannot be made.\n{b}",
+   "answer": {
+    "value": [
+     "17"
+    ],
+    "text": "17"
+   },
+   "space": {
+    "rows": [
+     "Boxes I can make: {l}"
+    ]
+   },
+   "hint": "Write the numbers 1 to 30 and cross out those you can make.",
+   "explanation": "List the amounts you can make: 4, 7, 8, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23 and every larger number. 17 is not on the list, and 17 − 7 = 10 and 17 − 14 = 3 are not multiples of 4. Every number from 18 up can be made."
+  },
+  {
+   "id": "L4U01-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "A rectangle has an area of 84 cm². Its length and width are whole numbers of centimetres. Its perimeter is 38 cm. Find its length and its width.\nLength {b} cm   Width {b} cm",
+   "answer": {
+    "value": [
+     "12",
+     "7"
+    ],
+    "text": "Length 12 cm, width 7 cm"
+   },
+   "hint": "Write the factor pairs of 84. Find the pair that adds to 19.",
+   "explanation": "Half the perimeter is 19, so length + width = 19. The factor pairs of 84 are 1 and 84, 2 and 42, 3 and 28, 4 and 21, 6 and 14, 7 and 12. Only 7 and 12 add to 19."
+  },
+  {
+   "id": "L4U01-C01",
+   "tier": "quiz",
+   "text": "Write all the factors of 52, in order.\n{ll}",
+   "answer": {
+    "value": [
+     "1",
+     "2",
+     "4",
+     "13",
+     "26",
+     "52"
+    ],
+    "text": "1, 2, 4, 13, 26, 52"
+   },
+   "explanation": "1 × 52, 2 × 26 and 4 × 13. Then 5 to 12 do not go into 52, and 13 is already used."
+  },
+  {
+   "id": "L4U01-C02",
+   "tier": "quiz",
+   "text": "Siti swims every 6 days. Wei swims every 9 days. They both swim today. In how many days will they next swim on the same day? {b} days",
+   "answer": {
+    "value": [
+     "18"
+    ],
+    "text": "18"
+   },
+   "explanation": "Multiples of 6: 6, 12, 18. Multiples of 9: 9, 18. The first number in both lists is 18."
+  },
+  {
+   "id": "L4U01-C03",
+   "tier": "quiz",
+   "text": "Kumar has 40 red pens and 64 blue pens. He makes identical sets with none left over. What is the greatest number of sets he can make? {b} sets",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "The factors of 40 and 64 that are in both lists are 1, 2, 4, 8. The greatest is 8 (5 red and 8 blue in each set)."
+  },
+  {
+   "id": "L4U01-C04",
+   "tier": "quiz",
+   "text": "I am a multiple of 7. I am a factor of 84. I am even. I am greater than 10 and less than 30. Who am I? {b}",
+   "answer": {
+    "value": [
+     "14"
+    ],
+    "text": "14"
+   },
+   "explanation": "Factors of 84 that are multiples of 7 and between 10 and 30: 14 and 21. Only 14 is even."
+  }
+ ]
+}
