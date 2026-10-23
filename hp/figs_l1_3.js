@@ -50,6 +50,7 @@ const ICON = {
   orange: (cx, cy, s) => { const k = s / 40; return C(cx, cy + 1 * k, 17 * k, '#FFC27A') + `<path d="M${f1(cx - 4 * k)} ${f1(cy - 15 * k)} Q${f1(cx + 4 * k)} ${f1(cy - 24 * k)} ${f1(cx + 10 * k)} ${f1(cy - 16 * k)} Q${f1(cx + 2 * k)} ${f1(cy - 12 * k)} ${f1(cx - 4 * k)} ${f1(cy - 15 * k)}" fill="${GR}" stroke="${NAVY}" stroke-width="1.8"/>` + C(cx - 6 * k, cy - 2 * k, 1.2 * k, NAVY, { sw: 1 }) + C(cx + 5 * k, cy + 4 * k, 1.2 * k, NAVY, { sw: 1 }) + C(cx - 2 * k, cy + 9 * k, 1.2 * k, NAVY, { sw: 1 }); },
   grape: (cx, cy, s) => { const k = s / 40, d = [[-9, -8], [0, -8], [9, -8], [-4.5, 0], [4.5, 0], [0, 8]]; return d.map(p => C(cx + p[0] * k, cy + p[1] * k + 1 * k, 5.6 * k, '#D9C2F0', { sw: 1.9 })).join('') + L(cx, cy - 14 * k, cx + 2 * k, cy - 20 * k, { sw: 2.2 }) + `<path d="M${f1(cx + 2 * k)} ${f1(cy - 17 * k)} Q${f1(cx + 11 * k)} ${f1(cy - 22 * k)} ${f1(cx + 13 * k)} ${f1(cy - 15 * k)} Q${f1(cx + 6 * k)} ${f1(cy - 13 * k)} ${f1(cx + 2 * k)} ${f1(cy - 17 * k)}" fill="${GR}" stroke="${NAVY}" stroke-width="1.6"/>`; },
   melon: (cx, cy, s) => { const k = s / 40; return `<path d="M${f1(cx - 21 * k)} ${f1(cy - 6 * k)} A${f1(21 * k)} ${f1(21 * k)} 0 0 0 ${f1(cx + 21 * k)} ${f1(cy - 6 * k)} Z" fill="${RD}" stroke="${NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="M${f1(cx - 18 * k)} ${f1(cy - 6 * k)} A${f1(18 * k)} ${f1(18 * k)} 0 0 0 ${f1(cx + 18 * k)} ${f1(cy - 6 * k)}" fill="none" stroke="${NAVY}" stroke-width="3.2" stroke-dasharray="1 0"/>` + `<path d="M${f1(cx - 21 * k)} ${f1(cy - 6 * k)} A${f1(21 * k)} ${f1(21 * k)} 0 0 0 ${f1(cx + 21 * k)} ${f1(cy - 6 * k)}" fill="none" stroke="${NAVY}" stroke-width="2.4"/>` + [[-8, 1], [0, 4], [8, 1], [-3, 9], [4, 9]].map(p => `<ellipse cx="${f1(cx + p[0] * k)}" cy="${f1(cy + p[1] * k)}" rx="${f1(1.6 * k)}" ry="${f1(2.4 * k)}" fill="${NAVY}"/>`).join(''); },
+  face: (cx, cy, s, v = 0) => { const k = s / 40; const hair = [`<path d="M${f1(cx - 15 * k)} ${f1(cy - 2 * k)} Q${f1(cx - 14 * k)} ${f1(cy - 20 * k)} ${f1(cx)} ${f1(cy - 19 * k)} Q${f1(cx + 14 * k)} ${f1(cy - 20 * k)} ${f1(cx + 15 * k)} ${f1(cy - 2 * k)} Q${f1(cx)} ${f1(cy - 10 * k)} ${f1(cx - 15 * k)} ${f1(cy - 2 * k)}" fill="${NAVY}"/>`, `<path d="M${f1(cx - 16 * k)} ${f1(cy + 4 * k)} L${f1(cx - 17 * k)} ${f1(cy - 8 * k)} Q${f1(cx)} ${f1(cy - 26 * k)} ${f1(cx + 17 * k)} ${f1(cy - 8 * k)} L${f1(cx + 16 * k)} ${f1(cy + 4 * k)} Q${f1(cx)} ${f1(cy - 12 * k)} ${f1(cx - 16 * k)} ${f1(cy + 4 * k)}" fill="${NAVY}"/>`, `<path d="M${f1(cx - 14 * k)} ${f1(cy - 5 * k)} Q${f1(cx)} ${f1(cy - 24 * k)} ${f1(cx + 14 * k)} ${f1(cy - 5 * k)} Q${f1(cx)} ${f1(cy - 12 * k)} ${f1(cx - 14 * k)} ${f1(cy - 5 * k)}" fill="${NAVY}"/>` + C(cx, cy - 22 * k, 5 * k, NAVY, { sw: 1 })][v % 3]; return C(cx, cy, 16 * k, '#fff', { sw: 2.4 }) + hair + C(cx - 6 * k, cy + 1 * k, 1.9 * k, NAVY, { sw: 1 }) + C(cx + 6 * k, cy + 1 * k, 1.9 * k, NAVY, { sw: 1 }) + `<path d="M${f1(cx - 6 * k)} ${f1(cy + 8 * k)} Q${f1(cx)} ${f1(cy + 13 * k)} ${f1(cx + 6 * k)} ${f1(cy + 8 * k)}" fill="none" stroke="${NAVY}" stroke-width="2"/>`; },
   duck: (cx, cy, s) => ICON.bird(cx, cy, s, Y),
   // coloured counters that still read in black and white: a letter inside
   red: (cx, cy, s) => C(cx, cy, s * .44, RD, { sw: 2.6 }) + T(cx, cy + s * .16, 'R', s * .46, { w: 800 }),
@@ -59,7 +60,7 @@ const ICON = {
 // icon by name; "half" draws the left half only (clipped) with a dashed right edge
 const icon = (name, cx, cy, s, o = {}) => {
   const f = ICON[name]; if (!f) throw new Error('no icon ' + name);
-  if (!o.half) return f(cx, cy, s);
+  if (!o.half) return f(cx, cy, s, o.v);
   const id = 'h' + Math.round(cx * 7 + cy * 13 + s);
   return `<clipPath id="${id}"><rect x="${f1(cx - s)}" y="${f1(cy - s)}" width="${f1(s)}" height="${f1(s * 2)}"/></clipPath><g clip-path="url(#${id})">${f(cx, cy, s)}</g>` + L(cx, cy - s * .55, cx, cy + s * .55, { sw: 1.6, dash: true });
 };
@@ -105,9 +106,9 @@ const numberLineF = (o, y0) => {
 const SEGFILL = { a: Y, b: BL, g: GR, h: 'url(#hz)', dt: 'url(#dt)', w: '#fff', d: '#fff' };
 const barModelF = (o, y0) => {
   const unit = o.unit || 40, lw = o.labelW === undefined ? 70 : o.labelW, rh = o.rowH || 44, gap = o.gap || 26, x0 = o.x0 === undefined ? lw + 6 : o.x0;
-  let s = '', y = y0, maxX = 0;
+  let s = '', y = y0, maxX = 0; const tops = [];
   (o.rows || []).forEach(r => {
-    if (r.brace && r.brace.pos === 'top') y += 30;
+    if (r.brace && r.brace.pos === 'top') y += r.brace.t ? 40 : 28;
     const top = y; let x = x0 + (r.indent || 0) * unit;
     if (r.label) s += T(x0 - 8, top + rh / 2 + 6, r.label, 17, { a: 'end' });
     (r.segs || []).forEach(g => {
@@ -124,9 +125,14 @@ const barModelF = (o, y0) => {
       if (b.t) s += T(m, up ? yb + 2 * d - 6 : yb + 2 * d + 19, b.t, 18, { c: b.c || TEAL });
       if (!up) y += b.t ? 52 : 34;
     }
+    tops.push(top);
     y += rh + gap;
   });
-  return { s, y: y - gap, maxX };
+  if (o.vbrace) {
+    const vb = o.vbrace, y0b = tops[vb.from] - 2, y1b = tops[vb.to] + rh + 2, x = (vb.x !== undefined ? vb.x : maxX + 12), m = (y0b + y1b) / 2;
+    s += `<path d="M${f1(x)} ${f1(y0b)} Q${f1(x + 13)} ${f1(y0b)} ${f1(x + 13)} ${f1(y0b + 12)} L${f1(x + 13)} ${f1(m - 12)} Q${f1(x + 13)} ${f1(m)} ${f1(x + 26)} ${f1(m)} Q${f1(x + 13)} ${f1(m)} ${f1(x + 13)} ${f1(m + 12)} L${f1(x + 13)} ${f1(y1b - 12)} Q${f1(x + 13)} ${f1(y1b)} ${f1(x)} ${f1(y1b)}" fill="none" stroke="${NAVY}" stroke-width="2.4"/>` + T(x + 32, m + 6, vb.t, 18, { a: 'start', c: TEAL });
+  }
+  return { s, y: y - gap, maxX, tops };
 };
 // full svg for a bar model
 const barModel = (o) => {

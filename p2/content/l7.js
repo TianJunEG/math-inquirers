@@ -197,7 +197,7 @@ module.exports = {
     out.push(H.sub('c', R('Mei says: “{1/6} is bigger than {1/4}, because 6 is bigger than 4.” Is she right? Explain.'), { after: 20 }));
     out.push(...H.lines(1));
 
-    out.push(H.q(4, [H.t('Add or take away. Colour the bars to help you. Write each answer in the box.  '), H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Parts d and e are done at home.')], { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(4, [H.t('Add or take away. Colour the bars to help you. Write each answer in the box.  '), H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Parts d and e are done at home.')], { before: 40, keepNext: true }));
     out.push(H.fig(q4svg()));
     out.push(H.q(5, 'Mum cuts a cake into 8 equal slices. Ali eats 2 slices. Mei eats 3 slices.', { keepNext: true }));
     out.push(H.fig(q5svg()));

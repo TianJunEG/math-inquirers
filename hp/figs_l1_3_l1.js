@@ -91,9 +91,9 @@ const appleRow = () => { const o = { rows: [{ name: 'Apple', n: 3.5, icon: 'star
 // ---- L9 ----
 // No.4: 1 clip = 2 erasers
 const clipEraser = () => {
-  const o = { unit: 40, labelW: 76, rowH: 34, gap: 14, rows: [
+  const o = { unit: 36, labelW: 76, rowH: 34, gap: 14, rows: [
     { label: '1 clip', segs: [{ u: 2, t: 'clip', k: 'a' }] },
-    { label: 'erasers', segs: [{ u: 1, t: 'eraser', k: 'b', size: 13 }, { u: 1, t: 'eraser', k: 'b', size: 13 }] },
+    { label: '2 erasers', segs: [{ u: 1, t: 'e', k: 'b', size: 14 }, { u: 1, t: 'e', k: 'b', size: 14 }] },
     { label: 'desk', segs: [1, 2, 3, 4, 5].map(() => ({ u: 2, t: 'clip', k: 'a' })), tail: '? erasers' },
     { label: 'pencil', segs: Array.from({ length: 12 }, () => ({ u: 1, t: 'e', k: 'b', size: 14 })), tail: '? clips' }] };
   const r = barModelF(o, 4); return W(svg(600, r.y + 8, r.s, 'One clip is as long as two erasers. A desk of 5 clips. A pencil of 12 erasers.'), 4);

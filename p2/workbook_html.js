@@ -5,6 +5,9 @@ const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
+const FG = require('./figs_l2.js').FX;   // Level 2 figures (shared helper hp/figs_l1_3.js); keys '<lesson>.<q>', '<lesson>.t<n>', '<lesson>.c<n>'
+let CUR = 0;
+H.q = (n, text, o) => C.q(n, text, o) + (FG[CUR + '.' + n] ? '\n' + FG[CUR + '.' + n]() : '');
 const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
 const LEVEL = 2;
 const COMPACT = new Set([4]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
@@ -51,11 +54,11 @@ const extra = (n) => {
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner('Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 90, after: 30, keepNext: true })); if (x.fig) out.push(H.fig(x.fig)); out.push(...lines(x.fig || x.q.length > 200 || [3,4,8].includes(n) ? 2 : 3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 90, after: 30, keepNext: true })); const fx = FG[n + '.t' + (i + 1)]; if (x.fig) out.push(H.fig(x.fig)); if (fx) out.push(fx()); out.push(...lines(fx ? 1 : (x.fig || x.q.length > 200 || [3,4,5,8].includes(n) ? 2 : 3))); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 90, after: 30, keepNext: true })); out.push(...lines([4, 5, 8, 10].includes(n) ? 2 : 3)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 90, after: 30, keepNext: true })); const fx = FG[n + '.c' + (i + 5)]; if (fx) out.push(fx()); out.push(...lines([4, 5, 8, 10].includes(n) || fx ? 2 : 3)); });
   out.push(p([t('Make up your own: ', { bold: true, size: 24, color: '1F7A6F' }), t(POSE[n], { size: 24 })], { before: 120, after: 30, keepNext: true }));
   out.push(...lines(2));
   return out;
@@ -65,6 +68,7 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
+  CUR = l.n;
   W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, fastNote(), true));
   W.push(...c.workbook(H));
   W.push(...coreEnd(l.n));

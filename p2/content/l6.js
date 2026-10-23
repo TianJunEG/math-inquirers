@@ -113,7 +113,7 @@ module.exports = {
       H.p('Coins: 5¢, 10¢, 20¢, 50¢, $1.   Notes: $2, $5, $10, $50, $100.   (There is no $20 note.)   100¢ = $1.   Careful: 50¢ is a coin, $50 is a note.', { after: 40 }),
       H.q(1, 'Pay exactly. Use the FEWEST notes and coins you can.', { before: 60, keepNext: true }),
       H.tbl(w1, [H.row(['Item', 'Price', 'Notes and coins I use', 'Pieces'].map((s, i) => hd(s, w1[i]))),
-        ...items.map(([a, b]) => H.row([H.cell(a === 'Bicycle' ? [a, '★ take-home'] : a, w1[0], { bold: true, h: 130 }), H.cell(b, w1[1], { bold: true, size: 26 }), H.cell('', w1[2]), H.cell('', w1[3])]))]),
+        ...items.map(([a, b]) => H.row([H.cell(['<div style="text-align:center">' + require('../figs_l2.js').itemPic(a) + '</div>', a === 'Bicycle' ? a + ' ★ take-home' : a], w1[0], { bold: true, h: 40 }), H.cell(b, w1[1], { bold: true, size: 26 }), H.cell('', w1[2]), H.cell('', w1[3])]))]),
       H.q(2, 'Find EVERY way to pay exactly $8 using $5 notes, $2 notes and $1 coins. Make a list in order: start with the most $5 notes. You may not need every row.', { keepNext: true }),
       H.tbl(w2, [H.row(['Way', 'Number of $5', 'Number of $2', 'Number of $1', 'Pieces altogether'].map((s, i) => hd(s, w2[i]))),
         ...'ABCDEFGH'.split('').map(l => H.row([H.cell(l, w2[0], { bold: true, h: 60 }), H.cell('', w2[1]), H.cell('', w2[2]), H.cell('', w2[3]), H.cell('', w2[4])]))]),
@@ -121,7 +121,7 @@ module.exports = {
       H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Two ways use exactly 4 pieces of money. What are they?')]),
       H.ans(),
 
-      H.q(3, 'Change.', { pb: true, before: 0, keepNext: true }),
+      H.q(3, 'Change.', { before: 40, keepNext: true }),
       H.sub('a', 'Mei buys an eraser for 65¢. She pays with a $1 coin. How much change does she get?   ________'),
       H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Ali buys a game for $26. He pays with a $50 note. How much change does he get? Which notes give this change with the fewest notes?')]),
       H.ans(),

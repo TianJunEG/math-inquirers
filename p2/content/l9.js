@@ -61,11 +61,11 @@ const clock = (cx, cy, h, m, cap, R = 52) => {
   s += `<line x1="${cx}" y1="${cy}" x2="${(cx + (R - 4) * Math.sin(ma)).toFixed(1)}" y2="${(cy - (R - 4) * Math.cos(ma)).toFixed(1)}" stroke="${RED}" stroke-width="3" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="5" fill="${N}"/>`;
   return s + txt(cx, cy + R + 38, cap, 15, { w: 600 });
 };
-const clocksFig = svg(600, 188,
-  txt(170 - 84, 86, 'A', 22, { c: TEAL }) + clock(170, 80, 7, 25, 'Ali is eating breakfast.') +
-  txt(430 - 84, 86, 'B', 22, { c: TEAL }) + clock(430, 80, 4, 50, 'Ali is at swimming after school.') +
-  txt(300, 184, 'short thick hand = hour     long red hand = minute', 14, { c: TEAL }),
-  'Two clocks. Clock A: Ali is eating breakfast. Clock B: Ali is at swimming after school. The short thick navy hand is the hour hand and the long thin red hand is the minute hand.').replace('width="600"', 'width="450"');
+const clocksFig = svg(600, 262,
+  txt(150 - 100, 100, 'A', 24, { c: TEAL }) + clock(150, 104, 7, 25, 'Ali is eating breakfast.', 70) +
+  txt(450 - 100, 100, 'B', 24, { c: TEAL }) + clock(450, 104, 4, 50, 'Ali is at swimming after school.', 70) +
+  txt(300, 252, 'short thick hand = hour     long thin hand = minute', 14, { c: TEAL }),
+  'Two clocks. Clock A: Ali is eating breakfast. Clock B: Ali is at swimming after school. The short thick navy hand is the hour hand and the long thin red hand is the minute hand.');
 
 /* ---------- module ---------- */
 module.exports = {
