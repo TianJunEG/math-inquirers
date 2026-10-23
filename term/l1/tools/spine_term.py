@@ -174,18 +174,16 @@ def lookback_lines():
 
 # ------------------------------------------------------------------ deck (b_deck.py)
 
-def deck_chip(d, size=44):
-    """'TODAY'S TOOL' chip for the title slide (dark background): cream stroke icon and the tool name."""
+def deck_chip(d):
+    """'TODAY'S TOOL' pill on the title slide's first line (dark background): cream stroke icon and the tool name. One line, so the title block does not grow."""
     x = info(d)
     if not x:
         return ''
+    pill = 'data-spine="chip" style="background:#26385F;border-radius:999px;padding:8px 30px 8px 18px;display:flex;align-items:center;gap:18px;color:#FFF9EC"'
     if x['choose']:
-        ics = ''.join(icon(t['id'], 64, CREAM, 'px') for t in TOOLS)
-        return (f'<div data-spine="chip" style="align-self:flex-start;background:#26385F;border-radius:24px;padding:18px 34px;display:flex;align-items:center;gap:26px">'
-                f'<p style="font-size:26px;font-weight:700;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:{size}px;font-weight:700">You choose</p><div style="display:flex;gap:14px">{ics}</div></div>')
-    ic = icon(x['tool']['id'], 84, CREAM, 'px')
-    return (f'<div data-spine="chip" style="align-self:flex-start;background:#26385F;border-radius:24px;padding:18px 34px;display:flex;align-items:center;gap:26px">'
-            f'{ic}<div><p style="font-size:26px;font-weight:700;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:{size}px;font-weight:700">{E(x["name"])}</p></div></div>')
+        ics = ''.join(icon(t['id'], 40, CREAM, 'px') for t in TOOLS)
+        return f'<div {pill}><p style="font-size:26px;font-weight:800;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:34px;font-weight:700">You choose</p><div style="display:flex;gap:8px">{ics}</div></div>'
+    return f'<div {pill}>{icon(x["tool"]["id"], 56, CREAM, "px")}<p style="font-size:26px;font-weight:800;letter-spacing:3px;color:#FFC93C">TODAY\'S TOOL</p><p style="font-size:40px;font-weight:700">{E(x["name"])}</p></div>'
 
 
 def deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip):

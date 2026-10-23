@@ -274,7 +274,7 @@ TOOL_EDITS = [
     # ---- b_deck.py (slides)
     TE('b_deck.py', 'import spine_term as SPT', "import svg\n\nBF = ", "import svg\nimport spine_term as SPT\n\nBF = "),
     TE('b_deck.py', 'SPT.deck_lookback', "def lookback(d):\n    lb = d['look_back']\n", "def lookback(d):\n    _sp = SPT.deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip)      # spine: three common prompts, Tool I used row, stuck and pass\n    if _sp: return _sp\n    lb = d['look_back']\n"),
-    TE('b_deck.py', 'SPT.deck_chip', "for b in s['blocks'] if b['t'] == 'card'))\n        style = ", "for b in s['blocks'] if b['t'] == 'card') + SPT.deck_chip(d))      # spine: TODAY'S TOOL chip\n        style = "),
+    TE('b_deck.py', 'SPT.deck_chip', "        body = (f'<p style=\"font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}\">LESSON {d[\"lesson_in_term\"]}  \u2022  TERM {d[\"term\"]}  \u2022  LEVEL {d[\"level\"]}</p>'", "        body = (f'<div style=\"display:flex;align-items:center;gap:44px\"><p style=\"font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}\">LESSON {d[\"lesson_in_term\"]}  \u2022  TERM {d[\"term\"]}  \u2022  LEVEL {d[\"level\"]}</p>{SPT.deck_chip(d)}</div>'"),
     # ---- validate.py
     TE('validate.py', 'def check_spine', "def check_all(num, built=True):", '''def check_spine(d):
     """A lesson with a `spine` object: valid tool ids, at most 2 'also', the same row as spine_term.json, the Opening and look-back words present."""

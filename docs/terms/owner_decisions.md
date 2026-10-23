@@ -227,3 +227,6 @@ Owner replied: RETIRE-YES, X10-BEFORE, T1-REFRAME-NOW, L39-YES, PRIVACY-REWORD, 
 - L39-YES: lesson 39 is rebalanced to the eight card names.
 - PRIVACY-REWORD: every Quest privacy checklist is reworded to allow the private three-word independence scale (tutor notes only; no tally to children or parents; no ranking).
 - DISCLAIMER-KEEP: the "Not affiliated with or endorsed by the Ministry of Education, Singapore" sentence stays on the P1 booklet licence pages only (lawyer to confirm wording).
+
+## 23 Oct 2026 (night): CBC-OK
+Owner approved the fixed colour-by-code gallery (CBC-13 picture symbols, bigger coins with cents, rulers not always from 0). Remaining picture additions on CBC-11, CBC-12 and CBC-14 are deferred (not needed for the P1 booklets).
