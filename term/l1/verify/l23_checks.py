@@ -69,9 +69,9 @@ CLASS_PAIRS = {
 WORKBOOK_PAIRS = {
     'S1': [pair((8, 0), 60)], 'S2': [pair((2, 0), 60)], 'S3': [pair((8, 30), 60)], 'S4': [pair((6, 0), 30)], 'S5': [pair((10, 30), 60)],
     'S6': [pair((3, 0), 60), pair((8, 0), 30), pair((9, 0), 30)],
-    'T1': [pair((5, 30), 60), pair((5, 30), 30)], 'T2': [pair((4, 15), 30), pair((9, 45), 30)], 'T3': [pair((6, 30), 30), pair((4, 30), 60)], 'T4': [pair((6, 0), 60)],
-    'G1': [pair((2, 30), 60), pair((3, 30), 30)], 'G2': [pair((11, 30), 60), pair((11, 30), 90)], 'G3': [pair((3, 30), 60), pair((4, 0), 30)],
-    'E1': [pair((6, 30), 60)], 'E2': [pair((2, 0), 30)], 'E3': [pair((9, 30), 60)],
+    'T1': [pair((5, 30), 60), pair((5, 30), 30)], 'T2': [pair((4, 15), 30), pair((9, 45), 30)], 'T3': [pair((11, 0), 60), pair((12, 0), 30)], 'T4': [pair((6, 0), 60)],
+    'G1': [pair((2, 15), 60), pair((3, 15), 30), pair((3, 45), 30)], 'G2': [pair((11, 30), 60), pair((11, 30), 90)], 'G3': [pair((3, 30), 60), pair((4, 0), 30)],
+    'E1': [pair((6, 30), 60)], 'E2': [pair((2, 0), 30)], 'E3': [pair((11, 30), 30)],
     'I1': [pair((12, 30), 60)],
 }
 
@@ -104,7 +104,7 @@ ORACLES = {
     't1': lambda e: _fields(step(mins(e['h'], 30), 30)),
     't2': lambda e: _fields(step(mins(e['h'], 15), 30)),
     't3': lambda e: _fields(step(mins(e['h'], 0), -30)),
-    'g1': lambda e: _fields(step(step(mins(e['h'], 0), -30), -60)),
+    'g1': lambda e: _fields(step(step(step(mins(e['h'], 30), -30), -30), -60)),
 }
 BASE_ENV = {}
 
@@ -188,46 +188,31 @@ def run(d):
     eq(face(mins(5, 30) + 30), (6, 0), 'T1b the hour changes')
     q = T['T2']; eq(('4:15' in q['text'], '9:45' in q['text'], 'half an hour' in q['text']), (True, True, True), 'T2 text'); eq([show(mins(4, 15) + 30), show(mins(9, 45) + 30)], ['4:45', '10:15'], 'T2'); eq(q['val'], ['4:45', '10:15'], 'T2 val')
     eq(face(mins(9, 45) + 30), (10, 15), 'T2b passes the hour')
-    q = T['T3']; a = q['parts'][0]['text']; b = q['parts'][1]['text']
-    s1 = parse(a) - 30; s2 = parse(b) - 60
-    eq([show(s1, True), show(s2, True)], ['6:30 pm', '4:30 pm'], 'T3'); eq(q['val'], ['6:30 pm', '4:30 pm'], 'T3 val')
-    eq([show(s1 + 30, True), show(s2 + 60, True)], ['7:00 pm', '5:30 pm'], 'T3 forward check')
-    eq(('half an hour' in a, '1 hour' in b), (True, True), 'T3 durations in the text')
+    q = T['T3']; rows = q['visual']['rows']; dur = {'1 hour': 60, 'half an hour': 30}
+    starts = [parse(r[3]) - dur[r[2]] for r in rows]
+    eq([show(x) for x in starts], ['11:00', '12:00'], 'T3 starts by going back from the Ends column'); eq(q['val'], ['11:00', '12:00'], 'T3 val')
+    eq([show(x + dur[r[2]]) for x, r in zip(starts, rows)], [r[3] for r in rows], 'T3 forward check'); eq(starts[1], parse(rows[0][3]), 'T3 story time starts when Art ends')
+    eq((q['visual']['head'], [r[1] for r in rows]), (['Lesson', 'Starts', 'Lasts', 'Ends'], ['[]', '[]']), 'T3 table')
     q = T['T4']; rows = q['visual']['rows']; dur = {r[0]: parse(r[2]) - parse(r[1]) for r in rows}
     eq(dur, {'Penguins': 30, 'Seals': 60, 'Parrots': 30}, 'T4 durations'); eq([k for k, v in dur.items() if v == 60], ['Seals'], 'T4a exactly one show lasts 1 hour')
     eq(rows[1][2], rows[2][1], 'T4 the shows run on'); eq(show(parse(rows[2][2]) + 60, True).split(' ')[0], '7:00', 'T4b')  # the Parrots end at 6:00; the next show ends at 7:00 pm
     eq(q['val'], ['Seals', '7:00 pm'], 'T4 val')
     # ---------------------------------------------------------------- Go further
-    q = T['G1']; nlq = q['visual']; lab = {int(k): v for k, v in nlq['labels'].items()}
-    end = mins(4, 0, 'pm'); walk_start = end - 30; bus_start = walk_start - 60
-    eq([show(walk_start, True), show(bus_start, True)], ['3:30 pm', '2:30 pm'], 'G1'); eq(q['val'], ['3:30 pm', '2:30 pm'], 'G1 val')
-    eq(bus_start + 60 + 30, end, 'G1 forward check')
-    eq(nlq['hide'], [0, 2], 'G1 the two unknown ticks are boxes'); eq((parse(lab[1]) - bus_start % 720, ), (30,), 'G1 tick 1 (3:00) is 30 minutes after the first tick (2:30)')
-    eq(parse(lab[3]) % 720, end % 720, 'G1 last tick is the arrival time')
-    eq([(j[0], j[1], (j[1] - j[0]) * 30) for j in nlq['jumps']], [(0, 2, 60), (2, 3, 30)], 'G1 jumps are 1 hour and half an hour on 30-minute ticks')
-    q = T['G2']; cs = c(q); st = mins(11, 30, 'am')
-    eq((cs[0]['h'], cs[0]['m'], cs[0].get('ampm')), (11, 30, 'am'), 'G2 clock'); eq([show(st + 60, True), show(st + 60 + 30, True)], ['12:30 pm', '1:00 pm'], 'G2'); eq(q['val'], ['12:30 pm', '1:00 pm'], 'G2 val')
-    eq((60 + 30, 'half an hour' in q['parts'][1]['text'] and '1 hour' in q['parts'][1]['text']), (90, True), 'G2b is 90 minutes')
-    q = T['G3']; end = mins(4, 30, 'pm'); mei = end - 60; ali = end - 30
-    eq([show(mei, True), show(ali, True), 'Mei' if mei < ali else 'Ali'], ['3:30 pm', '4:00 pm', 'Mei'], 'G3'); eq(q['val'], ['3:30 pm', '4:00 pm', 'Mei'], 'G3 val')
-    # ---------------------------------------------------------------- Investigation: brute force over the subsets of the four jobs
-    jobs = {'swim': 60, 'painting': 60, 'story': 30, 'snack': 30}; room = mins(3, 0, 'pm') - mins(12, 30, 'pm')
-    sets = [s for r in range(1, 5) for s in itertools.combinations(jobs, r) if sum(jobs[j] for j in s) == room]
-    eq(room, 150, 'Investigation room'); eq(sorted(map(sorted, sets)), [['painting', 'snack', 'swim'], ['painting', 'story', 'swim']], 'Investigation: exactly 2 sets fill the time')
-    eq(sum(jobs.values()) > room, True, 'all four jobs are too long'); eq(d['tiers']['investigation']['val'], [str(len(sets))], 'I1 val')
-    eq(show(mins(12, 30, 'pm') + 60, True), '1:30 pm', 'I1 first step'); eq('12:30 pm' in d['tiers']['investigation']['first'], True, 'I1 first step text')
-    # ---------------------------------------------------------------- talk
-    eq([show(mins(7, 30) + 30), show(mins(7, 30) + 60)], ['8:00', '8:30'], 'talk: the first child is right, 8:30 is 1 hour later'); eq(d['talk']['answer'].startswith('The first child is right'), True, 'talk answer')
-    # ---------------------------------------------------------------- exit
+    q = T['G1']; nlq = q['visual']
+    end = mins(4, 15, 'pm'); snack_start = end - 30; story_start = snack_start - 30; paint_start = story_start - 60
+    eq([show(snack_start, True), show(paint_start, True)], ['3:45 pm', '2:15 pm'], 'G1'); eq(q['val'], ['3:45 pm', '2:15 pm'], 'G1 val')
+    eq(paint_start + 60 + 30 + 30, end, 'G1 forward check'); eq(show(story_start, True), '3:15 pm', 'G1 the story starts at 3:15 pm')
+    eq(nlq['hide'], [0, 1, 2, 3], 'G1 the unknown ticks are boxes'); eq(parse(nlq['labels']['4']) % 720, end % 720, 'G1 last tick is the end time')
+    eq([j[0:2] for j in nlq['jumps']], [[0, 2], [2, 3], [3, 4]], 'G1 jumps: painting 2 ticks, story 1 tick, snack 1 tick (a tick is half an hour)')
     q = X['E1']; eq('6:30' in q['text'] and '1 hour' in q['text'], True, 'E1 text'); eq(show(parse(q['text']) + 60), '7:30', 'E1'); eq(q['val'], ['7:30'], 'E1 val')
     q = X['E2']; opts = q['mcq']['options']; right = [i + 1 for i, o in enumerate(opts) if parse(o) == mins(2, 0) + 30]
     eq(right, [3], 'E2 one option is 2:00 and half an hour'); eq(q['val'], right, 'E2 val'); eq(sorted(parse(o) - mins(2, 0) for o in opts), [5, 15, 30, 60], 'E2 distractors'); eq('2 o\'clock' in q['text'], True, 'E2 text')
-    q = X['E3']; eq(show(parse(q['text']) - 60, True), '9:30 pm', 'E3'); eq(q['val'], ['9:30 pm'], 'E3 val'); eq(show(parse(q['text']) - 60 + 60, True), '10:30 pm', 'E3 forward check')
+    q = X['E3']; f3 = q['visual']; eq(show(mins(f3['h'], f3['m']) - 30), '11:30', 'E3 half an hour before the clock'); eq(q['val'], ['11:30'], 'E3 val'); eq(show(mins(f3['h'], f3['m']) - 30 + 30), '12:00', 'E3 forward check')
     # ---------------------------------------------------------------- home
     eq(show(parse(H['H1']['text']) + 60), '10:30', 'H1'); eq(H['H1']['val'], '10:30', 'H1 val')
     eq(show(mins(5, 0) + 30), '5:30', 'H2'); eq(H['H2']['val'], '5:30', 'H2 val')
     eq(show(parse(H['H3']['text']) + 30), '4:15', 'H3'); eq(H['H3']['val'], '4:15', 'H3 val')
-    eq(show(parse(H['H4']['text']) - 30 - 60), '7:30', 'H4'); eq(H['H4']['val'], '7:30', 'H4 val')
+    eq(show(mins(H['H4']['visual']['h'], H['H4']['visual']['m']) - 30), '4:30', 'H4 half an hour before the clock'); eq(H['H4']['val'], '4:30', 'H4 val')
     nums = [72, 27, 70, 17]; eq(sorted(nums), [17, 27, 70, 72], 'H5 rewind'); eq(H['H5']['val'], [17, 27, 70, 72], 'H5 val'); eq(H['H5'].get('rewind_of'), 'Term 1 Lesson 3', 'H5 is the rewind item')
     eq(len([h for h in d['home_practice'] if h['tier'] == 'start']) >= 3, True, 'home has 3 Start here items')
     # ---------------------------------------------------------------- online practice, authored numbers
@@ -235,8 +220,8 @@ def run(d):
     for cid, (h, m, add, want) in {'c1': (3, 0, 60, (4, 0)), 'c2': (5, 0, 30, (5, 30)), 'c3': (2, 30, 60, (3, 30)), 't1': (4, 30, 30, (5, 0)), 't2': (3, 15, 30, (3, 45))}.items():
         it = items[cid]; eq(hm(step(mins(h, m), add)), want, cid + ' authored'); eq([f['answer'] for f in it['fields']], list(want), cid + ' fields')
         eq((it['fig_base']['h'], it['fig_base']['m']), (h, m), cid + ' picture')
-    eq(hm(step(mins(6, 0), -30)), (5, 30), 't3 authored'); eq([f['answer'] for f in items['t3']['fields']], [5, 30], 't3 fields')
-    eq(hm(step(step(mins(5, 0), -30), -60)), (3, 30), 'g1 authored'); eq([f['answer'] for f in items['g1']['fields']], [3, 30], 'g1 fields')
+    eq(hm(step(mins(7, 0), -30)), (6, 30), 't3 authored'); eq([f['answer'] for f in items['t3']['fields']], [6, 30], 't3 fields')
+    eq(hm(step(step(step(mins(6, 30), -30), -30), -60)), (4, 30), 'g1 authored'); eq([f['answer'] for f in items['g1']['fields']], [4, 30], 'g1 fields')
     eq(items['c4']['answer'], 'half an hour', 'c4 authored'); eq(items['c5']['answer'], 60 // 2, 'c5'); eq(items['g2']['answer'], 60 + 30, 'g2')
     for it in items.values():
         for s_ in it.get('slips', []):

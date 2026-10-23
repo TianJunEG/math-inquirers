@@ -82,7 +82,7 @@ ORACLES = {
     'g3': lambda e: [beh for beh in range(0, 101) if len(queue(e['f'], beh)) == e['n']][0],
 }
 BASE_ENV = {'c1': dict(a=24, b=10), 'c2': dict(a=30, b=10, c=4), 'c3': dict(a=15, b=10), 'c5': dict(a=24, b=5), 'c6': dict(a=10, b=5),
-            't1': dict(r=15, b=3), 't2': dict(f=6, k=4), 't3': dict(a=24, b=6), 't4': dict(a=12, b=5, c=3),
+            't1': dict(r=15, b=3), 't2': dict(f=5, k=3), 't3': dict(a=24, b=6), 't4': dict(a=12, b=5, c=3),
             'g1': dict(s=60, a=24, b=15, c=30), 'g2': dict(T=80, m=25, k=10), 'g3': dict(n=15, f=6)}
 
 EQ_RE = re.compile(r'(?<![\d.])(\d+(?: [+\-] \d+)+) = (\d+)(?![\d.]| [+\-] )')
@@ -183,7 +183,7 @@ def run(d):
     # ---- Think harder
     mei = [m for m in range(0, 100) if m + 3 == 15][0]
     eq(T['T1']['val'], [mei, 15 + mei], 'T1'); eq(mei, 12, 'T1 Mei'); eq(15 + mei, 27, 'T1 together')
-    eq(T['T2']['val'], [len(queue(6, 4))], 'T2'); eq(len(queue(6, 4)), 11, 'T2 value'); eq(len(queue(6, 4)) == 6 + 4, False, 'T2 trap: leaving Mei out gives 10')
+    eq(T['T2']['val'], [len(queue(5, 3))], 'T2 (books on a shelf)'); eq(len(queue(5, 3)), 9, 'T2 value'); eq(len(queue(5, 3)) == 5 + 3, False, 'T2 trap: leaving the red book out gives 8')
     mei3 = len(add(pile(12), 5)); siti3 = len(take(pile(mei3), 3))
     eq(T['T3']['val'], [mei3, siti3], 'T3'); eq(siti3, 14, 'T3 value'); eq(12 - 3, 9, 'T3 trap value 9 is wrong'); eq(9 == siti3, False, 'T3 trap')
 

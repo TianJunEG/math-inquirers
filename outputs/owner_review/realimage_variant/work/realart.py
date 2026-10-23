@@ -3,7 +3,7 @@ Loaded only when MONEY_ART=real is set in the environment; the generators' defau
 Coins and notes are the prepared greyscale versions of official MAS images (see prep_assets.py, ../source_mas/SOURCES.md)."""
 import base64, os
 HERE = os.path.dirname(os.path.abspath(__file__))
-NOTE_SCALE = float(os.environ.get("MONEY_NOTE_SCALE", "0.215"))   # printed size of a note as a fraction of the real note (must be <= 0.60)
+NOTE_SCALE = float(os.environ.get("MONEY_NOTE_SCALE", "0.30"))   # printed size of a note as a fraction of the real note (must be <= 0.60)
 COIN_SCALE = 0.80                                                  # same as the booklets: coin drawn at 0.80 of real diameter
 assert NOTE_SCALE <= 0.60
 _cache = {}
@@ -25,5 +25,5 @@ def note(v, x, y, real_w, real_h):
     """note v ($2,$5,$10) with its top-left at x,y; width = real width x NOTE_SCALE, height from the MAS image's own aspect (proportional); returns (svg, w, h)"""
     name = f"note_{v}.png"; pw, ph = _px(name)
     w = real_w * NOTE_SCALE; h = w * ph / pw
-    return (f'<g class="note" data-v="{v}"><image href="{_uri(name)}" x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" preserveAspectRatio="none"/>'
+    return (f'<g class="note" data-v="{v}"><image href="{_uri(name)}" x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" preserveAspectRatio="none"/><rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}" fill="none" stroke="#000" stroke-width="0.3"/>'
             f'<text class="noteval" x="{x:.1f}" y="{y+1:.1f}" opacity="0" font-size="1">${v}</text></g>', w, h)

@@ -2283,24 +2283,24 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "Mei is in a line to buy lunch. There are 6 children in front of her and 4 children behind her. How many children are in the line?",
+        "text": "Mei has a red book on a shelf. There are 5 books on the left of the red book and 3 books on the right of it. How many books are on the shelf?",
         "parts": [
           {
             "l": "",
-            "text": "There are ___ children in the line.",
+            "text": "There are ___ books on the shelf.",
             "ans": "11",
             "val": 11
           }
         ],
         "draw": true,
-        "answer": "11 children (6 + 4 + 1, counting Mei).",
+        "answer": "9 books (5 + 3 + 1, counting the red book).",
         "val": [
-          11
+          9
         ],
-        "hint": "Draw the line of children. Did you draw Mei too?",
-        "solution": "The children in front are 6 and behind are 4: 6 + 4 = 10. Mei is in the line as well, so 10 + 1 = 11 children.",
+        "hint": "Draw the books on the shelf. Did you draw the red book too?",
+        "solution": "The books on the left are 5 and on the right are 3: 5 + 3 = 8. The red book is on the shelf as well, so 8 + 1 = 9 books.",
         "mistakes": [
-          "Answering 10 and leaving Mei out."
+          "Answering 8 and leaving the red book out."
         ],
         "mins": 4,
         "lines": 0
@@ -3169,20 +3169,20 @@
         "id": "t2",
         "tier": "stretch",
         "type": "number",
-        "q": "Mei is in a line. There are 6 children in front of Mei and 4 children behind Mei. How many children are in the line?",
-        "answer": 11,
-        "hint": "Draw the line. Did you draw Mei too?",
+        "q": "A red book is on a shelf. There are 5 books on the left of it and 3 books on the right of it. How many books are on the shelf?",
+        "answer": 9,
+        "hint": "Draw the shelf. Did you draw the red book too?",
         "steps": [
-          "6 in front and 4 behind: 6 + 4 = 10.",
-          "Mei is in the line too: 10 + 1 = 11.",
-          "There are 11 children."
+          "5 on the left and 3 on the right: 5 + 3 = 8.",
+          "The red book is on the shelf too: 8 + 1 = 9.",
+          "There are 9 books."
         ],
         "slips": [
           {
             "a": [
-              10
+              8
             ],
-            "say": "10 leaves out Mei. Count Mei too."
+            "say": "8 leaves out the red book. Count the red book too."
           }
         ],
         "tpl": {
@@ -3203,13 +3203,13 @@
           "derive": {
             "s": "f+k"
           },
-          "q": "Mei is in a line. There are {f} children in front of Mei and {k} children behind Mei. How many children are in the line?",
+          "q": "A red book is on a shelf. There are {f} books on the left of it and {k} books on the right of it. How many books are on the shelf?",
           "answer": "f+k+1",
-          "hint": "Draw the line. Did you draw Mei too?",
+          "hint": "Draw the shelf. Did you draw the red book too?",
           "steps": [
-            "{f} in front and {k} behind: {f} + {k} = {s}.",
-            "Mei is in the line too: {s} + 1 = {ans}.",
-            "There are {ans} children."
+            "{f} on the left and {k} on the right: {f} + {k} = {s}.",
+            "The red book is on the shelf too: {s} + 1 = {ans}.",
+            "There are {ans} books."
           ]
         },
         "easier": "c2"
@@ -3602,7 +3602,7 @@
     ],
     "try_home": [
       "Act it out: tell a story with two steps (I have 12, I win 5, then I give 3 away). Your child does each step with buttons.",
-      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?' Try: 6 children in front of Mei and 4 behind. How many in the line?",
+      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?' Try: 5 books on the left of a red book and 3 on the right. How many books on the shelf?",
       "Make it up: your child makes up a two-step story for you. Solve it together, one step at a time."
     ],
     "ask": [

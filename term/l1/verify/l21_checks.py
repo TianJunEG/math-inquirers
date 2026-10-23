@@ -77,10 +77,10 @@ ORACLES = {
     'c5': lambda e: (lambda r: {'h': r[0], 'mm': r[1]})(read(*hands(e['h'], 30))),
     't1': lambda e: (lambda r: {'h': r[0], 'mm': r[1]})(_o_read(e['h'], e['m'])),
     't2': lambda e: 'yes' if _o_read(e['h'], 30)[0] == e['h'] + e['k'] else 'no',
-    't3': lambda e: real_from_mirror(e['k'], 0)[0],
-    'g1': lambda e: real_from_mirror(e['k'], 30)[0],
+    't3': lambda e: ((e['k'] + 3) % 12) * 5,
+    'g1': lambda e: read(*hands(e['j'], 5 * e['k']))[0],
 }
-BASE_ENV = {'c3': {'n': 3}, 't3': {'k': 4}, 'g1': {'k': 9}}
+BASE_ENV = {'c3': {'n': 3}, 't3': {'k': 2}, 'g1': {'j': 6, 'k': 4}}
 
 # every time shown or said in the sneak-peek, Explore, mini-lesson and Talk: no workbook, exit or Go further answer may repeat one
 CLASS_TIMES = {(9, 0), (2, 30), (3, 0), (10, 0), (12, 0), (12, 30), (11, 0), (11, 30), (5, 15), (5, 45), (10, 30)}
@@ -159,20 +159,15 @@ def run(d):
     eq(ma4 / 30, 3.0, 'T3 long hand on the 3'); eq(r4, (4, 15), 'T3 clock is 4:15'); eq(ha4 > 4 * 30, True, 'T3 short hand is a little past the 4')
     eq(len(d['tiers']['think']), 3, 'three Think harder questions')
 
-    # ---------------- Go further: the Mirror Clock, by reflecting the angles
-    f1 = T['G1']['visual']
-    eq(real_from_mirror(f1['h'], f1['m']), (8, 0), 'G1 mirror 4 -> real 8'); eq(T['G1']['val'], [8], 'G1 val')
-    eq(mirror(8, 0), hands(4, 0), 'G1 reflecting the real clock gives the mirror clock')
-    f2 = T['G2']['visual']
-    eq(real_from_mirror(f2['h'], f2['m']), (4, 30), 'G2 mirror half past 7 -> real half past 4'); eq(T['G2']['val'], [4], 'G2 val')
-    eq(mirror(4, 30), hands(7, 30), 'G2 reflecting the real clock gives the mirror clock')
-    same = [h for h in range(1, 13) if read(*mirror(h, 0)) == (h, 0)]
-    eq(same, [6, 12], "G3 o'clock times that look the same in a mirror"); eq(T['G3']['val'], ['Yes', 6], 'G3 val')
-    # half past times never look the same (the hour hand sits between two numbers: only the straight-up/down hands are fixed)
-    samehalf = [h for h in range(1, 13) if read(*mirror(h, 30)) == (h, 30)]
-    eq(samehalf, [], 'no half past time looks the same')
-    # a mirror swaps 3 and 9
-    eq((real_from_mirror(3, 0), real_from_mirror(9, 0)), ((9, 0), (3, 0)), 'mirror swaps 3 and 9')
+    # ---------------- Go further: Hands Detective, read back from the hand angles
+    f1 = T['G1']['visual']; ha, ma = hands(f1['h'], f1['m'])
+    eq(read(ha, ma), (7, 10), 'G1 the clock shows 7:10'); eq(round(ma / 30), 2, 'G1 the long hand is on the 2')
+    land = (round(ma / 30) + 3) % 12; eq(land, 5, 'G1 three numbers on from the 2 is the 5'); eq(land * 5, 25, 'G1 the 5 is 25 minutes'); eq(T['G1']['val'], [5, 25], 'G1 val')
+    eq(read(*hands(7, 25)), (7, 25), 'G1 the new clock reads 7:25')
+    f2 = T['G2']['visual']; ha, ma = hands(f2['h'], f2['m']); r2 = read(ha, ma)
+    eq(r2, (6, 20), 'G2 the clock shows 6:20'); eq(round(ma / 30), 4, 'G2 the long hand is on the 4'); eq(r2[0] == 4, False, 'G2 it is not 4 o clock'); eq(T['G2']['val'], ['No', 6], 'G2 val')
+    ha5, ha55 = hands(5, 0)[0], hands(5, 30)[0]; eq((hands(5, 0)[1], hands(5, 30)[1]), (0.0, 180.0), 'G3 the long hand moves half way round'); eq(ha55 - ha5, 15.0, 'G3 the short hand moves half way from the 5 to the 6 (15 of 30 degrees)')
+    eq(ha55 == ha5, False, 'G3 the short hand moves too, so Lily is wrong'); eq(read(*hands(5, 30)), (5, 30), 'G3 half past 5'); eq(T['G3']['val'], ['No', 6], 'G3 val')
     eq(len(d['tiers']['go']), 3, 'three Go further questions')
 
     # ---------------- Investigation
@@ -250,7 +245,7 @@ def run(d):
     items = {it['id']: it for it in d['online_practice']['items']}
     eq(items['c4']['answer'], 'the short hand', 'c4')
     eq(minutes(6, 0) < minutes(6, 30), True, 'c6 Ben (6:00) is before Mei (6:30)'); eq(items['c6']['answer'], 'Ben', 'c6')
-    eq(items['g2']['answer'], "6 o'clock", 'g2'); eq([h for h in (3, 6, 8) if read(*mirror(h, 0)) == (h, 0)], [6], 'g2 only 6 looks the same')
+    eq(items['g2']['answer'], 'half past 4', 'g2'); eq([(h, m) for h, m in ((4, 0), (4, 30), (6, 0)) if hands(h, m)[0] % 30 != 0], [(4, 30)], 'g2 only half past 4 has the short hand between two numbers')
     eq(items['r1']['answer'], '3 children are in front of Mei.', 'r1 rewind: 4th has 3 in front')
     eq(items['r2']['type'], 'set', 'r2 rewind set')
 

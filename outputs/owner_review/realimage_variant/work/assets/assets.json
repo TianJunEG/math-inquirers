@@ -67,25 +67,25 @@
  "note_2": {
   "src": "portrait-2-front-polymer.jpg",
   "px": [
-   1006,
-   501
+   3000,
+   1485
   ],
-  "aspect": 2.008
+  "aspect": 2.0202
  },
  "note_5": {
   "src": "portrait-series-5-front.jpg",
   "px": [
-   720,
-   358
+   2142,
+   1056
   ],
-  "aspect": 2.0112
+  "aspect": 2.0284
  },
  "note_10": {
   "src": "portrait-10-front-polymer.jpg",
   "px": [
-   1006,
-   497
+   3000,
+   1473
   ],
-  "aspect": 2.0241
+  "aspect": 2.0367
  }
 }
