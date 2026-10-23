@@ -1,0 +1,117 @@
+from lib import *
+U = 'L4U10'
+
+learn = {
+ 'intro': 'A puzzle needs a way in. Guess and check with a table: use each try to decide whether to go up or down. Suppose all are the same: then see how many swaps you need to fix the total.',
+ 'example': {
+  'problem': 'A shop has stools (3 legs) and chairs (4 legs). There are 11 of them with 38 legs in all. How many chairs are there?',
+  'figure': {'type': 'l4_table', 'head': ['Suppose all 11 are stools', ''], 'rows': [['Legs', '11 × 3 = 33'], ['Legs short', '38 − 33 = 5'], ['1 swap adds', '1 leg']], 'widths': [1.1, 1.5], 'cell_h': 44, 'font': 24, 'first_col_head': True, 'width_mm': 82},
+  'steps': ['Each swap from a stool to a chair adds 1 leg.', '5 legs short needs 5 swaps.'],
+  'answer': '5 chairs and 6 stools. Check: 5 × 4 + 6 × 3 = 38.'},
+ 'example2': {
+  'problem': 'Two next-door numbers multiply to 380. What are they?',
+  'figure': {'type': 'l4_table', 'head': ['Try', 'Product', 'Check'], 'rows': [['18 × 19', '342', 'too small'], ['20 × 21', '420', 'too big'], ['19 × 20', '380', 'right']], 'widths': [1.2, 1, 1.2], 'cell_h': 44, 'font': 24, 'width_mm': 82},
+  'steps': ['Try a pair. Is the product too big or too small?', 'Use each try to choose the next one.'],
+  'answer': 'The numbers are 19 and 20.'},
+ 'pair': True, 'tight': True,
+ 'howto': {'title': 'Ways in',
+           'steps': ['Guess and check: keep a table of tries.',
+                     'Suppose all are the same. Count swaps.',
+                     'Work backwards: undo the last step first.']},
+ 'facts': {'title': 'Good to know', 'lines': ['Draw a queue or a bar model.', 'Check the answer against every clue.']},
+ 'try': {'id': U + '-L01', 'text': 'A box has bees (6 legs) and spiders (8 legs). There are 10 animals with 66 legs. How many spiders are there? {b}',
+         'answer': A(3),
+         'explanation': 'Suppose all 10 are bees: 60 legs. That is 6 short. Each swap to a spider adds 2 legs, so 3 swaps. There are 3 spiders and 7 bees. Check: 3 × 8 + 7 × 6 = 66.'}}
+
+S, T, G, C = [], [], [], []
+S.append(item(U+'-S01', 'start', 1, 'Two next-door numbers multiply to make 506. What are they? Use the table for your tries.',
+  fig={'type': 'l4_table', 'head': ['First number', 'Next number', 'Product', 'Too big or small?'], 'rows': [['', '', '', ''], ['', '', '', ''], ['', '', '', ''], ['', '', '', '']], 'widths': [1.3, 1.3, 1.2, 1.6], 'cell_h': 44, 'font': 22, 'width_mm': 150},
+  ans=A(22, 23, text='22 and 23'), partsrow=False,
+  why='20 × 21 = 420 is too small. 25 × 26 = 650 is too big. 22 × 23 = 506. Use each try to decide the next one: 21 × 22 = 462 is too small, so go up.',
+  space={'rows': ['The numbers are {b} and {b}']}))
+S.append(item(U+'-S02', 'start', 1, 'Mei buys some $3 pens and some $5 notebooks. She buys at least 1 of each. She pays exactly $41.',
+  parts=[P('a', 'How many different ways can she do it? {b}', A(3)), P('b', 'The way with the fewest pens: {b} pens and {b} notebooks', A(2, 7, text='2 pens and 7 notebooks'))],
+  why='Try the number of notebooks: 1 notebook leaves $36, which is 12 pens. 2 leaves $31 (no). 3 leaves $26 (no). 4 leaves $21, which is 7 pens. 5 leaves $16 (no). 6 leaves $11 (no). 7 leaves $6, which is 2 pens. 8 notebooks cost $40 and leave $1 (no). So the ways are 12 pens and 1 notebook, 7 pens and 4 notebooks, and 2 pens and 7 notebooks.',
+  space={'rows': ['Notebooks, money left, pens: {ll}']}))
+S.append(item(U+'-S03', 'start', 1, 'A farm has hens (2 legs) and cows (4 legs). There are 17 animals with 50 legs.',
+  parts=[P('a', 'Suppose all 17 are hens. They have {b} legs.', A(34)), P('b', 'That is {b} legs short.', A(16)),
+         P('c', 'Each swap to a cow adds 2 legs. There are {b} cows.', A(8))],
+  why='(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens. Check: 8 × 4 + 9 × 2 = 32 + 18 = 50.'))
+S.append(item(U+'-S04', 'start', 2, 'A shed has bicycles (2 wheels) and tricycles (3 wheels). There are 13 of them with 33 wheels.',
+  parts=[P('a', 'The number of tricycles is {b}', A(7)), P('b', 'The number of bicycles is {b}', A(6))], partsrow=True,
+  why='Suppose all 13 are bicycles: 26 wheels. That is 7 short. Each swap to a tricycle adds 1 wheel, so 7 tricycles and 13 − 7 = 6 bicycles. Check: 7 × 3 + 6 × 2 = 33.',
+  space={'rows': ['Working:']}))
+S.append(item(U+'-S05', 'start', 2, 'Mei had some stickers. She gave half of them to Ali. Then she bought 12 more. Then she lost 7. Now she has 25 stickers. How many did she have at first? {b}',
+  fig={'type': 'l4_flow', 'items': [None, None, None, 25], 'ops': ['÷ 2', '+ 12', '− 7'], 'width_mm': 130},
+  ans=A(40), why='Work backwards. Undo the loss of 7: 25 + 7 = 32. Undo the 12 she bought: 32 − 12 = 20. Undo giving away half: 20 × 2 = 40. Check: half of 40 is 20, 20 + 12 = 32, 32 − 7 = 25.'))
+S.append(item(U+'-S06', 'start', 2, 'Kumar thinks of a number. He doubles it, adds 14 and then divides by 4. His answer is 10. What is his number? {b}',
+  ans=A(13), why='Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13. Check: 13 × 2 = 26, 26 + 14 = 40, 40 ÷ 4 = 10.',
+  space={'rows': ['Working:', '']}))
+S.append(item(U+'-S07', 'start', 2, 'Ali, Ben, Mei and Siti each have a different pet: a cat, a dog, a fish or a rabbit. Use the grid. Write ✓ for yes and ✗ for no.',
+  fig={'type': 'l4_table', 'head': ['', 'cat', 'dog', 'fish', 'rabbit'], 'rows': [['Ali', '', '', '', ''], ['Ben', '', '', '', ''], ['Mei', '', '', '', ''], ['Siti', '', '', '', '']], 'widths': [1.1, 1, 1, 1, 1.2], 'cell_h': 46, 'font': 26, 'first_col_head': True, 'width_mm': 110},
+  parts=[P('a', 'Clues: Ali\'s pet barks. Ben\'s pet has no fur. Mei\'s pet does not hop. Pets: Ali {b}, Ben {b}, Mei {b}, Siti {b}', A('dog', 'fish', 'cat', 'rabbit', text='Ali dog, Ben fish, Mei cat, Siti rabbit'))],
+  why='Ali\'s pet barks, so it is the dog. The fish is the only pet with no fur, so Ben has the fish. A rabbit hops, so Mei does not have the rabbit. The cat and the rabbit are left. Mei has the cat and Siti has the rabbit.'))
+S.append(item(U+'-S08', 'start', 3, 'Aisha is 9th from the front and 5th from the back of a queue.',
+  parts=[P('a', 'How many people are in the queue? {b}', A(13)), P('b', 'In another queue there are 25 people. Kumar is 8th from the front. He is {b}th from the back.', A(18))],
+  why='(a) There are 8 people in front of Aisha and 4 behind her, and Aisha: 8 + 1 + 4 = 13. (b) There are 7 people in front of Kumar, so 25 − 8 = 17 behind him. He is 17 + 1 = 18th from the back.',
+  space={'rows': ['Draw the queue here.', '']}))
+S.append(item(U+'-S09', 'start', 3, 'Siti and her mother are 44 years old altogether. In 6 years her mother will be 3 times as old as Siti. How old is Siti now? {b}',
+  ans=A(8), why='In 6 years, each is 6 years older, so the total is 44 + 6 + 6 = 56. Siti is 1 unit and her mother is 3 units: 4 units = 56, so 1 unit = 14. In 6 years Siti is 14, so she is 8 now. Her mother is 36 now. Check: 36 + 6 = 42 = 3 × 14.',
+  space={'rows': ['Draw a bar model here.', '', '']}))
+S.append(item(U+'-S10', 'start', 3, 'Ravi has 9 coins. They are 20¢ coins and 50¢ coins. They are worth $3.00 altogether. How many 50¢ coins does he have? {b}',
+  ans=A(4), why='Suppose all 9 are 20¢: 180¢. That is 120¢ short. Each swap to a 50¢ coin adds 30¢. 120 ÷ 30 = 4 swaps. So 4 coins of 50¢ and 5 coins of 20¢. Check: 200¢ + 100¢ = 300¢.',
+  space={'rows': ['Working:']}))
+
+S.append(item(U+'-S11', 'start', 3, 'Three next-door numbers add up to 87. What are they? {b}, {b}, {b}',
+  ans=A(28, 29, 30, text='28, 29, 30'), why='The middle number is the one in the middle of the 3, so 87 ÷ 3 = 29. The numbers are 28, 29 and 30. Check: 28 + 29 + 30 = 87.',
+  space={'rows': ['Working:']}))
+S.append(item(U+'-S12', 'start', 3, 'I am a 2-digit number. My digits add up to 12. If you swap my digits, the new number is 18 more than me. Who am I? {b}',
+  ans=A(57), why='Try pairs of digits that add up to 12: 39, 48, 57, 66, 75, 84, 93. The swapped numbers are 93, 84, 75, 66, 57, 48, 39. The swapped number is 18 more only for 57 and 75: 75 − 57 = 18. The number must be the smaller one, 57.',
+  space={'rows': ['Try:', '']}))
+
+T.append(item(U+'-T01', 'think', 4, 'A hawker centre has 14 tables. Some seat 4 people and some seat 6 people. Together they seat 68 people.',
+  parts=[P('a', 'The number of tables that seat 6 is {b}', A(6)), P('b', 'The fewest and the most people that the 14 tables could seat: {b} and {b}', A(56, 84, text='56 and 84'))],
+  hint='Suppose all 14 tables seat 4 people. How many seats are missing?',
+  why='(a) If all 14 tables seated 4, that would be 56 seats. 68 − 56 = 12 short. Each table that seats 6 adds 2, so 6 tables seat 6 and 8 tables seat 4. Check: 36 + 32 = 68. (b) The fewest is 14 × 4 = 56 and the most is 14 × 6 = 84.',
+  space={'rows': ['Working:', '']}))
+T.append(item(U+'-T02', 'think', 4, 'Five children sit in a row of 5 seats, numbered 1 to 5 from the left. Aisha is in seat 3. Kumar is at one end, not next to Ravi. Mei is to the right of Ravi. Ben is not next to Aisha.',
+  parts=[P('a', 'Seats 1 to 5, in order: {b} {b} {b} {b} {b}', A('Ben', 'Ravi', 'Aisha', 'Mei', 'Kumar', text='Ben, Ravi, Aisha, Mei, Kumar'))],
+  hint='Where can Kumar sit? Try each end and check every clue.',
+  why='Ben cannot sit next to Aisha in seat 3, so Ben is not in seat 2, 3 or 4. Ben is in seat 1 or seat 5. Kumar is also at an end, so Ben and Kumar take seats 1 and 5. Ravi and Mei take seats 2 and 4. Mei is to the right of Ravi, so Ravi is in seat 2 and Mei is in seat 4. Kumar is not next to Ravi, so Kumar is not in seat 1. Kumar is in seat 5 and Ben is in seat 1.',
+  space={'rows': ['Try:', '']}))
+T.append(item(U+'-T03', 'think', 4, 'A grandfather is 7 times as old as his grandson. In 12 years, he will be 3 times as old. How old is the grandson now? {b}',
+  ans=A(6), hint='The age gap stays the same. Make a bar model for now and for 12 years later.',
+  why='The gap between their ages never changes. Now the grandfather is 7 units and the grandson is 1 unit, so the gap is 6 units. In 12 years the grandfather is 3 parts and the grandson is 1 part, so the gap is 2 parts. 6 units = 2 parts, so 1 part = 3 units. In 12 years the grandson is 3 units. He was 1 unit now, so he grows 2 units in 12 years. 1 unit = 6. The grandson is 6 now. Check: 42 and 6 now, 54 and 18 in 12 years, and 54 = 3 × 18.',
+  space={'rows': ['Draw a bar model here.', '', '']}))
+
+G.append(item(U+'-G01', 'go', 5, 'How many whole numbers from 1 to 200 have digits that add up to 5? {b}',
+  ans=A(11), hint='List them in order: 1-digit, 2-digit, then the 100s.',
+  why='1-digit: 5. 2-digit: 14, 23, 32, 41, 50. 3-digit, starting with 1: the other 2 digits add to 4: 104, 113, 122, 131, 140. 200 has a digit sum of 2. In all 1 + 5 + 5 = 11.',
+  space={'rows': ['List: {ll}']}))
+G.append(item(U+'-G02', 'go', 5, 'Ali has 3 times as many 20¢ coins as 50¢ coins. His coins are worth $4.40 altogether. How many coins does he have in all? {b}',
+  ans=A(16), hint='Make groups: 3 twenty-cent coins and 1 fifty-cent coin. What is a group worth?',
+  why='A group of 3 coins of 20¢ and 1 coin of 50¢ is worth 60¢ + 50¢ = 110¢. $4.40 = 440¢ and 440 ÷ 110 = 4 groups. Each group has 4 coins, so he has 16 coins: 12 coins of 20¢ and 4 coins of 50¢.',
+  space={'rows': ['Working:', '']}))
+G.append(item(U+'-G03', 'go', 5, 'In a line of children, Ben is 11th from the left. Mei is 8th from the right. There are 5 children between Ben and Mei. How many children could be in the line? Find both answers.\n{b} or {b}',
+  ans=A(12, 24, text='12 or 24', unordered=True), hint='Mei can be on the right of Ben or on the left of Ben.',
+  why='If Mei is to the right of Ben, she is 6 places after him: 11 + 6 = 17th from the left. She is 8th from the right, so there are 17 + 7 = 24 children. If Mei is to the left of Ben, she is 11 − 6 = 5th from the left, so there are 5 + 7 = 12 children. Both fit: the 5 children in between are places 6 to 10 in the line of 12, or places 12 to 16 in the line of 24.',
+  space={'rows': ['Draw the line here.', '']}))
+G.append(item(U+'-G04', 'go', 5, 'Beyond Level 4: Number cycles\nThe ones digits of 3, 3 × 3, 3 × 3 × 3 and so on go round in a cycle.',
+  parts=[P('a', 'The ones digit of 3 × 3 × 3 × 3 × 3 (five 3s) is {b}', A(3)), P('b', 'The ones digit of 20 threes multiplied together is {b}', A(1))],
+  hint='Write the ones digits of the first 6 products. Look for the cycle.',
+  why='The products are 3, 9, 27, 81, 243, 729, 2187. The ones digits are 3, 9, 7, 1, 3, 9, 7 and go round in a cycle of 4. (a) The 5th product ends in 3. (b) 20 is 5 whole cycles of 4, so the 20th product ends in the last digit of the cycle, which is 1.',
+  space={'rows': ['Ones digits: {ll}']}))
+
+C.append(item(U+'-C01', 'quiz', None, 'A garage has cars (4 wheels) and bikes (2 wheels). There are 10 of them with 28 wheels. How many cars are there? {b}', ans=A(4),
+  why='Suppose all 10 are bikes: 20 wheels, 8 short. Each swap to a car adds 2 wheels, so 4 cars and 6 bikes. Check: 16 + 12 = 28.'))
+C.append(item(U+'-C02', 'quiz', None, 'Ali thinks of a number. He adds 8, doubles it and takes away 6. His answer is 30. What is his number? {b}', ans=A(10),
+  why='Work backwards. 30 + 6 = 36. 36 ÷ 2 = 18. 18 − 8 = 10. Check: 10 + 8 = 18, 18 × 2 = 36, 36 − 6 = 30.'))
+C.append(item(U+'-C03', 'quiz', None, 'Siti is 6th from the front and 9th from the back of a queue. How many people are in the queue? {b}', ans=A(14),
+  why='There are 5 people in front of Siti and 8 behind her. 5 + 1 + 8 = 14.'))
+C.append(item(U+'-C04', 'quiz', None, 'Two next-door numbers multiply to make 272. What are they? {b} and {b}', ans=A(16, 17, text='16 and 17'),
+  why='15 × 16 = 240 is too small and 17 × 18 = 306 is too big. 16 × 17 = 272.'))
+
+unit = {'schema_version': 1, 'level': 4, 'unit': 10, 'id': U, 'title': 'Puzzle Day', 'topic': 'Mixed puzzle heuristics', 'holiday_lesson': 10,
+        'goal': 'I can choose a way in to a puzzle: guess and check, suppose all are the same, work backwards, draw it or use a logic grid.',
+        'learn': learn, 'items': S + T + G + C}
+write(10, unit)

@@ -284,7 +284,7 @@ def page20():
         rows = [tf_statement(k, rng, t) for k, t in zip(kinds, truths)]
         if len({r[0] for r in rows}) < 6: continue
         if any(r[1] != t for r, t in zip(rows, truths)): continue
-        word = word_candidates(20, 6)[rng.randrange(0, 4)]
+        word = word_candidates(20, 6)[rng.randrange(0, 4)]; CLAIMED[20] = word
         pos = [rng.random() < 0.5 for _ in range(6)]            # True: the letter of the right choice is on the T side
         ok = False
         for _t in range(400):
@@ -318,7 +318,8 @@ def page20():
     solved = [solve_tf(t) for t, _ in rows]
     P.v("V1 independent evaluator reads each printed statement and agrees with the key", solved == truths, solved)
     P.v("V2 right choices read down the rows spell the word", "".join(c for c in word) == word)
-    P.v("V3 none of the other 63 ways to choose spells a word (large word list)", True)
+    other = sorted("".join(word[i] if c[i] == 0 else dec[i] for i in range(6)) for c in itertools.product((0, 1), repeat=6) if any(c))
+    P.v("V3 none of the other 63 ways to choose spells a word (large word list)", not any(x.lower() in BIG for x in other), [x for x in other if x.lower() in BIG][:3])
     P.v("V3d the word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()])
     P.v("V4 between 2 and 4 statements are true", 2 <= sum(truths) <= 4)
     P.v("V8 every statement is at most 10 words", all(len(t.split()) <= 10 for t, _ in rows))
@@ -331,7 +332,7 @@ def page20():
 def page21():
     rng = random.Random(7521)
     for _ in range(4000):
-        word = word_candidates(21 + rng.randrange(0, 9), 6)[0]
+        word = word_candidates(21, 6)[0]; CLAIMED[21] = word
         d = rng.choice([5, 6, 7, 8, 9, 10, 11, 12])
         nums = rng.sample(range(1, d), 3)
         units = rng.sample([2, 3, 4, 5, 6, 7, 8, 9, 10, 12], 3)
@@ -438,7 +439,7 @@ THINGS = ["kite", "book", "ruler", "ball", "bag", "bottle", "cap", "pencil case"
 def page23():
     rng = random.Random(7723)
     for _ in range(4000):
-        word = word_candidates(23, 6)[rng.randrange(0, 3)]
+        word = word_candidates(23, 6)[rng.randrange(0, 3)]; CLAIMED[23] = word
         def amount():
             d = rng.randint(1, 9); c = rng.choice([5, 10, 15, 20, 25, 30, 40, 45, 50, 55, 60, 75, 80, 95, 5, 5])
             return 100 * d + c
@@ -496,18 +497,18 @@ def page24():
         tot = [sum(100 * v if t == "n" else v for t, v in p) for p in purses]
         if all(A.money_width(p) <= 66 for p in purses) and len(set(tot)) == 6 and 100 <= min(tot) and max(tot) <= 1200:
             break
-    word = word_candidates(24, 6)[0]
-    lab = dict(zip(range(6), word))
+    word = word_candidates(24, 6)[0]; CLAIMED[24] = word
     order = list(range(6)); rng.shuffle(order)          # printed purse order
-    amounts_order = list(range(6)); rng.shuffle(amounts_order)
-    pcards = "".join(f'<div class="pur"><i class="cl">{word[j]}</i>{A.money_svg(purses[j], gap=1.4)}</div>' for j in order)
+    amounts_order = list(range(6)); rng.shuffle(amounts_order)      # amount k belongs to purse amounts_order[k]; that purse carries letter word[k]
+    letter_of = {j: word[k] for k, j in enumerate(amounts_order)}
+    pcards = "".join(f'<div class="pur"><i class="cl">{letter_of[j]}</i>{A.money_svg(purses[j], gap=1.4)}</div>' for j in order)
     acards = "".join(f'<div class="amt"><span class="no">{k+1}</span><b>{A.dollars(tot[j])}</b><span class="ab"></span></div>' for k, j in enumerate(amounts_order))
     body = f'<div class="purses2">{pcards}</div><p class="lead" style="margin-top:2mm">Which purse holds each amount? Write its letter.</p><div class="amts">{acards}</div>'
     P = new_page(24, 7824, "Purse Match", 2, "Money: counting coins and notes, matching amounts", STRAND_MO,
         "1.1, 1.2 (counting money in dollars and cents; decimal notation)", ["MO1.1", "MO1.2"], "Matching (lettered purses)",
         "K1 letters of the matching purses spell a word (6 letters) + K4 each purse used once",
         ["Count the money in each purse.", "Match each amount to its purse.", "Write the letter of the purse."],
-        body, "; ".join(f"{k+1}) {A.dollars(tot[j])} is purse {word[j]}" for k, j in enumerate(amounts_order)), f"Word: {word}",
+        body, "; ".join(f"{k+1}) {A.dollars(tot[j])} is purse {letter_of[j]}" for k, j in enumerate(amounts_order)), f"Word: {word}",
         "Six purses of coins and notes (original line drawings, inspired by Singapore money but not copies; larger than real) and six amounts. Each purse holds exactly one of the amounts; the amounts are close to each other, so every purse must be counted. The letters of the purses, written in the order of the amounts, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (all 720 matchings were tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=6, mk=("logic",),
         mech_plain="Letters of the purses matched to the amounts, in order, spell a word (6 letters)")
@@ -517,14 +518,13 @@ def page24():
     amounts = [int(round(float(x) * 100)) for x in re.findall(r"<b>\$([\d.]+)</b>", acards)]
     totals = {l: A.read_money(s) for l, s in purse_html}
     solved = "".join(next(l for l, t in totals.items() if t == a) for a in amounts)
-    P.v("V1 independent solver (coins and notes added from the drawings, each amount matched to its purse) gets the word", solved == "".join(word[j] for j in amounts_order), solved)
+    P.v("V1 independent solver (coins and notes added from the drawings, each amount matched to its purse) gets the word", solved == word, solved)
     P.v("V1b every amount matches exactly one purse", len(set(totals.values())) == 6 and all(sum(1 for t in totals.values() if t == a) == 1 for a in amounts))
     P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()])
     bad_orders = sorted(w for w in ("".join(p) for p in itertools.permutations(word)) if w != "".join(word) and w.lower() in BIG)
     P.v("V3 none of the 719 wrong matchings spells a word", not bad_orders, bad_orders[:3])
     P["cv"] = dict(rate=1.0, single_total=719, single_detected=719)
-    truth = [word[j] for j in amounts_order]
-    P["model"] = dict(truth=truth, domains=[sorted(set(word))] * 6, check=letters_check(), perm=list(range(6)))
+    P["model"] = dict(truth=list(word), domains=[sorted(set(word))] * 6, check=letters_check(), perm=list(range(6)))
     return P
 
 PAGES = [page17, page18, page19, page20, page21, page22, page23, page24]

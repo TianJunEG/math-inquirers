@@ -49,4 +49,25 @@ CSS_P2 = """
 .ffig{display:flex;justify-content:center;align-items:center;min-height:30mm}.ffig svg{max-width:none}
 .ct .fr{font-size:11pt;margin-right:0.5mm}
 .qg .span2{grid-column:1 / -1}
+/* wave 3 */
+.ansgrid2{display:flex;gap:6mm;justify-content:center;margin-top:1mm}
+.tfrows{display:flex;flex-direction:column;gap:2mm}
+.qrow{display:flex;align-items:center;gap:3mm;font-size:14.5pt;padding:1.5mm 0;border-bottom:0.3mm solid #000;line-height:1.2}.qrow .qt{flex:1}
+.tfrow{padding:6.5mm 0}.tfrow .qt{font-size:16pt}
+.tfo{display:flex;align-items:center;gap:2mm;font-size:15pt;font-weight:800;margin-left:4mm}
+i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;font-weight:700;flex:none}
+.fcards,.pcards{display:flex;gap:6mm;justify-content:center;padding:1mm 0}
+.fcard,.pcard{border:0.5mm solid #000;border-radius:2mm;padding:2.5mm 3mm;display:flex;flex-direction:column;align-items:center;gap:2mm;min-width:34mm;position:relative}
+.fcard .fnum .fr{font-size:20pt}.fcard .fnum .fr i{padding:0 2mm}
+.pcard{min-width:44mm}.pname{font-size:14pt;font-weight:700}.pprice{font-family:'Fredoka';font-weight:600;font-size:22pt}
+.pur{border:0.4mm solid #000;border-radius:2mm;padding:2mm 2.5mm;display:flex;align-items:center;gap:3mm}.pur svg{max-width:none}
+.purses2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5mm 4mm}
+.amts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5mm 4mm}
+.amt{display:flex;align-items:center;gap:2.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2.5mm}.amt b{font-family:'Fredoka';font-weight:600;font-size:17pt;flex:1}
+.fsum{font-size:15pt;display:flex;align-items:center;gap:2mm;flex-wrap:wrap}.fsum .fr{font-size:16pt}.fsum .fr i{padding:0 1.2mm}.fsum .ptxt{font-size:12.5pt;line-height:1.2;display:block;flex-basis:100%}
+.fb{display:inline-block;width:13mm !important;height:12mm !important;vertical-align:middle}
+.fr i .ab.w2{width:13mm;height:12mm}
+.ab.w2{width:15mm}
+.riddles{display:flex;flex-direction:column;gap:1mm}
+.howto{margin-bottom:2mm}
 """

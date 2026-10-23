@@ -1,0 +1,759 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 10,
+ "id": "L4U10",
+ "title": "Puzzle Day",
+ "topic": "Mixed puzzle heuristics",
+ "holiday_lesson": 10,
+ "goal": "I can choose a way in to a puzzle: guess and check, suppose all are the same, work backwards, draw it or use a logic grid.",
+ "learn": {
+  "intro": "A puzzle needs a way in. Guess and check with a table: use each try to decide whether to go up or down. Suppose all are the same: then see how many swaps you need to fix the total.",
+  "example": {
+   "problem": "A shop has stools (3 legs) and chairs (4 legs). There are 11 of them with 38 legs in all. How many chairs are there?",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Suppose all 11 are stools",
+     ""
+    ],
+    "rows": [
+     [
+      "Legs",
+      "11 × 3 = 33"
+     ],
+     [
+      "Legs short",
+      "38 − 33 = 5"
+     ],
+     [
+      "1 swap adds",
+      "1 leg"
+     ]
+    ],
+    "widths": [
+     1.1,
+     1.5
+    ],
+    "cell_h": 44,
+    "font": 24,
+    "first_col_head": true,
+    "width_mm": 82
+   },
+   "steps": [
+    "Each swap from a stool to a chair adds 1 leg.",
+    "5 legs short needs 5 swaps."
+   ],
+   "answer": "5 chairs and 6 stools. Check: 5 × 4 + 6 × 3 = 38."
+  },
+  "example2": {
+   "problem": "Two next-door numbers multiply to 380. What are they?",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Try",
+     "Product",
+     "Check"
+    ],
+    "rows": [
+     [
+      "18 × 19",
+      "342",
+      "too small"
+     ],
+     [
+      "20 × 21",
+      "420",
+      "too big"
+     ],
+     [
+      "19 × 20",
+      "380",
+      "right"
+     ]
+    ],
+    "widths": [
+     1.2,
+     1,
+     1.2
+    ],
+    "cell_h": 44,
+    "font": 24,
+    "width_mm": 82
+   },
+   "steps": [
+    "Try a pair. Is the product too big or too small?",
+    "Use each try to choose the next one."
+   ],
+   "answer": "The numbers are 19 and 20."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "Ways in",
+   "steps": [
+    "Guess and check: keep a table of tries.",
+    "Suppose all are the same. Count swaps.",
+    "Work backwards: undo the last step first."
+   ]
+  },
+  "facts": {
+   "title": "Good to know",
+   "lines": [
+    "Draw a queue or a bar model.",
+    "Check the answer against every clue."
+   ]
+  },
+  "try": {
+   "id": "L4U10-L01",
+   "text": "A box has bees (6 legs) and spiders (8 legs). There are 10 animals with 66 legs. How many spiders are there? {b}",
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3"
+   },
+   "explanation": "Suppose all 10 are bees: 60 legs. That is 6 short. Each swap to a spider adds 2 legs, so 3 swaps. There are 3 spiders and 7 bees. Check: 3 × 8 + 7 × 6 = 66."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U10-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Two next-door numbers multiply to make 506. What are they? Use the table for your tries.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "First number",
+     "Next number",
+     "Product",
+     "Too big or small?"
+    ],
+    "rows": [
+     [
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "widths": [
+     1.3,
+     1.3,
+     1.2,
+     1.6
+    ],
+    "cell_h": 44,
+    "font": 22,
+    "width_mm": 150
+   },
+   "answer": {
+    "value": [
+     "22",
+     "23"
+    ],
+    "text": "22 and 23"
+   },
+   "space": {
+    "rows": [
+     "The numbers are {b} and {b}"
+    ]
+   },
+   "explanation": "20 × 21 = 420 is too small. 25 × 26 = 650 is too big. 22 × 23 = 506. Use each try to decide the next one: 21 × 22 = 462 is too small, so go up.",
+   "partsrow": false
+  },
+  {
+   "id": "L4U10-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Mei buys some $3 pens and some $5 notebooks. She buys at least 1 of each. She pays exactly $41.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many different ways can she do it? {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The way with the fewest pens: {b} pens and {b} notebooks",
+     "answer": {
+      "value": [
+       "2",
+       "7"
+      ],
+      "text": "2 pens and 7 notebooks"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Notebooks, money left, pens: {ll}"
+    ]
+   },
+   "explanation": "Try the number of notebooks: 1 notebook leaves $36, which is 12 pens. 2 leaves $31 (no). 3 leaves $26 (no). 4 leaves $21, which is 7 pens. 5 leaves $16 (no). 6 leaves $11 (no). 7 leaves $6, which is 2 pens. 8 notebooks cost $40 and leave $1 (no). So the ways are 12 pens and 1 notebook, 7 pens and 4 notebooks, and 2 pens and 7 notebooks."
+  },
+  {
+   "id": "L4U10-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "A farm has hens (2 legs) and cows (4 legs). There are 17 animals with 50 legs.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Suppose all 17 are hens. They have {b} legs.",
+     "answer": {
+      "value": [
+       "34"
+      ],
+      "text": "34"
+     }
+    },
+    {
+     "label": "b",
+     "text": "That is {b} legs short.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Each swap to a cow adds 2 legs. There are {b} cows.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens. Check: 8 × 4 + 9 × 2 = 32 + 18 = 50."
+  },
+  {
+   "id": "L4U10-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "A shed has bicycles (2 wheels) and tricycles (3 wheels). There are 13 of them with 33 wheels.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number of tricycles is {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number of bicycles is {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Suppose all 13 are bicycles: 26 wheels. That is 7 short. Each swap to a tricycle adds 1 wheel, so 7 tricycles and 13 − 7 = 6 bicycles. Check: 7 × 3 + 6 × 2 = 33.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U10-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Mei had some stickers. She gave half of them to Ali. Then she bought 12 more. Then she lost 7. Now she has 25 stickers. How many did she have at first? {b}",
+   "figure": {
+    "type": "l4_flow",
+    "items": [
+     null,
+     null,
+     null,
+     25
+    ],
+    "ops": [
+     "÷ 2",
+     "+ 12",
+     "− 7"
+    ],
+    "width_mm": 130
+   },
+   "answer": {
+    "value": [
+     "40"
+    ],
+    "text": "40"
+   },
+   "explanation": "Work backwards. Undo the loss of 7: 25 + 7 = 32. Undo the 12 she bought: 32 − 12 = 20. Undo giving away half: 20 × 2 = 40. Check: half of 40 is 20, 20 + 12 = 32, 32 − 7 = 25."
+  },
+  {
+   "id": "L4U10-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Kumar thinks of a number. He doubles it, adds 14 and then divides by 4. His answer is 10. What is his number? {b}",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13. Check: 13 × 2 = 26, 26 + 14 = 40, 40 ÷ 4 = 10."
+  },
+  {
+   "id": "L4U10-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Ali, Ben, Mei and Siti each have a different pet: a cat, a dog, a fish or a rabbit. Use the grid. Write ✓ for yes and ✗ for no.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "",
+     "cat",
+     "dog",
+     "fish",
+     "rabbit"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Ben",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Mei",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Siti",
+      "",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "widths": [
+     1.1,
+     1,
+     1,
+     1,
+     1.2
+    ],
+    "cell_h": 46,
+    "font": 26,
+    "first_col_head": true,
+    "width_mm": 110
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Clues: Ali's pet barks. Ben's pet has no fur. Mei's pet does not hop. Pets: Ali {b}, Ben {b}, Mei {b}, Siti {b}",
+     "answer": {
+      "value": [
+       "dog",
+       "fish",
+       "cat",
+       "rabbit"
+      ],
+      "text": "Ali dog, Ben fish, Mei cat, Siti rabbit"
+     }
+    }
+   ],
+   "explanation": "Ali's pet barks, so it is the dog. The fish is the only pet with no fur, so Ben has the fish. A rabbit hops, so Mei does not have the rabbit. The cat and the rabbit are left. Mei has the cat and Siti has the rabbit."
+  },
+  {
+   "id": "L4U10-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha is 9th from the front and 5th from the back of a queue.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many people are in the queue? {b}",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In another queue there are 25 people. Kumar is 8th from the front. He is {b}th from the back.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Draw the queue here.",
+     ""
+    ]
+   },
+   "explanation": "(a) There are 8 people in front of Aisha and 4 behind her, and Aisha: 8 + 1 + 4 = 13. (b) There are 7 people in front of Kumar, so 25 − 8 = 17 behind him. He is 17 + 1 = 18th from the back."
+  },
+  {
+   "id": "L4U10-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Siti and her mother are 44 years old altogether. In 6 years her mother will be 3 times as old as Siti. How old is Siti now? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     "",
+     ""
+    ]
+   },
+   "explanation": "In 6 years, each is 6 years older, so the total is 44 + 6 + 6 = 56. Siti is 1 unit and her mother is 3 units: 4 units = 56, so 1 unit = 14. In 6 years Siti is 14, so she is 8 now. Her mother is 36 now. Check: 36 + 6 = 42 = 3 × 14."
+  },
+  {
+   "id": "L4U10-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Ravi has 9 coins. They are 20¢ coins and 50¢ coins. They are worth $3.00 altogether. How many 50¢ coins does he have? {b}",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Suppose all 9 are 20¢: 180¢. That is 120¢ short. Each swap to a 50¢ coin adds 30¢. 120 ÷ 30 = 4 swaps. So 4 coins of 50¢ and 5 coins of 20¢. Check: 200¢ + 100¢ = 300¢."
+  },
+  {
+   "id": "L4U10-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Three next-door numbers add up to 87. What are they? {b}, {b}, {b}",
+   "answer": {
+    "value": [
+     "28",
+     "29",
+     "30"
+    ],
+    "text": "28, 29, 30"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "The middle number is the one in the middle of the 3, so 87 ÷ 3 = 29. The numbers are 28, 29 and 30. Check: 28 + 29 + 30 = 87."
+  },
+  {
+   "id": "L4U10-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "I am a 2-digit number. My digits add up to 12. If you swap my digits, the new number is 18 more than me. Who am I? {b}",
+   "answer": {
+    "value": [
+     "57"
+    ],
+    "text": "57"
+   },
+   "space": {
+    "rows": [
+     "Try:",
+     ""
+    ]
+   },
+   "explanation": "Try pairs of digits that add up to 12: 39, 48, 57, 66, 75, 84, 93. The swapped numbers are 93, 84, 75, 66, 57, 48, 39. The swapped number is 18 more only for 57 and 75: 75 − 57 = 18. The number must be the smaller one, 57."
+  },
+  {
+   "id": "L4U10-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A hawker centre has 14 tables. Some seat 4 people and some seat 6 people. Together they seat 68 people.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number of tables that seat 6 is {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The fewest and the most people that the 14 tables could seat: {b} and {b}",
+     "answer": {
+      "value": [
+       "56",
+       "84"
+      ],
+      "text": "56 and 84"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Suppose all 14 tables seat 4 people. How many seats are missing?",
+   "explanation": "(a) If all 14 tables seated 4, that would be 56 seats. 68 − 56 = 12 short. Each table that seats 6 adds 2, so 6 tables seat 6 and 8 tables seat 4. Check: 36 + 32 = 68. (b) The fewest is 14 × 4 = 56 and the most is 14 × 6 = 84."
+  },
+  {
+   "id": "L4U10-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Five children sit in a row of 5 seats, numbered 1 to 5 from the left. Aisha is in seat 3. Kumar is at one end, not next to Ravi. Mei is to the right of Ravi. Ben is not next to Aisha.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Seats 1 to 5, in order: {b} {b} {b} {b} {b}",
+     "answer": {
+      "value": [
+       "Ben",
+       "Ravi",
+       "Aisha",
+       "Mei",
+       "Kumar"
+      ],
+      "text": "Ben, Ravi, Aisha, Mei, Kumar"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Try:",
+     ""
+    ]
+   },
+   "hint": "Where can Kumar sit? Try each end and check every clue.",
+   "explanation": "Ben cannot sit next to Aisha in seat 3, so Ben is not in seat 2, 3 or 4. Ben is in seat 1 or seat 5. Kumar is also at an end, so Ben and Kumar take seats 1 and 5. Ravi and Mei take seats 2 and 4. Mei is to the right of Ravi, so Ravi is in seat 2 and Mei is in seat 4. Kumar is not next to Ravi, so Kumar is not in seat 1. Kumar is in seat 5 and Ben is in seat 1."
+  },
+  {
+   "id": "L4U10-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A grandfather is 7 times as old as his grandson. In 12 years, he will be 3 times as old. How old is the grandson now? {b}",
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6"
+   },
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     "",
+     ""
+    ]
+   },
+   "hint": "The age gap stays the same. Make a bar model for now and for 12 years later.",
+   "explanation": "The gap between their ages never changes. Now the grandfather is 7 units and the grandson is 1 unit, so the gap is 6 units. In 12 years the grandfather is 3 parts and the grandson is 1 part, so the gap is 2 parts. 6 units = 2 parts, so 1 part = 3 units. In 12 years the grandson is 3 units. He was 1 unit now, so he grows 2 units in 12 years. 1 unit = 6. The grandson is 6 now. Check: 42 and 6 now, 54 and 18 in 12 years, and 54 = 3 × 18."
+  },
+  {
+   "id": "L4U10-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "How many whole numbers from 1 to 200 have digits that add up to 5? {b}",
+   "answer": {
+    "value": [
+     "11"
+    ],
+    "text": "11"
+   },
+   "space": {
+    "rows": [
+     "List: {ll}"
+    ]
+   },
+   "hint": "List them in order: 1-digit, 2-digit, then the 100s.",
+   "explanation": "1-digit: 5. 2-digit: 14, 23, 32, 41, 50. 3-digit, starting with 1: the other 2 digits add to 4: 104, 113, 122, 131, 140. 200 has a digit sum of 2. In all 1 + 5 + 5 = 11."
+  },
+  {
+   "id": "L4U10-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali has 3 times as many 20¢ coins as 50¢ coins. His coins are worth $4.40 altogether. How many coins does he have in all? {b}",
+   "answer": {
+    "value": [
+     "16"
+    ],
+    "text": "16"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Make groups: 3 twenty-cent coins and 1 fifty-cent coin. What is a group worth?",
+   "explanation": "A group of 3 coins of 20¢ and 1 coin of 50¢ is worth 60¢ + 50¢ = 110¢. $4.40 = 440¢ and 440 ÷ 110 = 4 groups. Each group has 4 coins, so he has 16 coins: 12 coins of 20¢ and 4 coins of 50¢."
+  },
+  {
+   "id": "L4U10-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "In a line of children, Ben is 11th from the left. Mei is 8th from the right. There are 5 children between Ben and Mei. How many children could be in the line? Find both answers.\n{b} or {b}",
+   "answer": {
+    "value": [
+     "12",
+     "24"
+    ],
+    "text": "12 or 24",
+    "unordered": true
+   },
+   "space": {
+    "rows": [
+     "Draw the line here.",
+     ""
+    ]
+   },
+   "hint": "Mei can be on the right of Ben or on the left of Ben.",
+   "explanation": "If Mei is to the right of Ben, she is 6 places after him: 11 + 6 = 17th from the left. She is 8th from the right, so there are 17 + 7 = 24 children. If Mei is to the left of Ben, she is 11 − 6 = 5th from the left, so there are 5 + 7 = 12 children. Both fit: the 5 children in between are places 6 to 10 in the line of 12, or places 12 to 16 in the line of 24."
+  },
+  {
+   "id": "L4U10-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 4: Number cycles\nThe ones digits of 3, 3 × 3, 3 × 3 × 3 and so on go round in a cycle.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The ones digit of 3 × 3 × 3 × 3 × 3 (five 3s) is {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The ones digit of 20 threes multiplied together is {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Ones digits: {ll}"
+    ]
+   },
+   "hint": "Write the ones digits of the first 6 products. Look for the cycle.",
+   "explanation": "The products are 3, 9, 27, 81, 243, 729, 2187. The ones digits are 3, 9, 7, 1, 3, 9, 7 and go round in a cycle of 4. (a) The 5th product ends in 3. (b) 20 is 5 whole cycles of 4, so the 20th product ends in the last digit of the cycle, which is 1."
+  },
+  {
+   "id": "L4U10-C01",
+   "tier": "quiz",
+   "text": "A garage has cars (4 wheels) and bikes (2 wheels). There are 10 of them with 28 wheels. How many cars are there? {b}",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4"
+   },
+   "explanation": "Suppose all 10 are bikes: 20 wheels, 8 short. Each swap to a car adds 2 wheels, so 4 cars and 6 bikes. Check: 16 + 12 = 28."
+  },
+  {
+   "id": "L4U10-C02",
+   "tier": "quiz",
+   "text": "Ali thinks of a number. He adds 8, doubles it and takes away 6. His answer is 30. What is his number? {b}",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10"
+   },
+   "explanation": "Work backwards. 30 + 6 = 36. 36 ÷ 2 = 18. 18 − 8 = 10. Check: 10 + 8 = 18, 18 × 2 = 36, 36 − 6 = 30."
+  },
+  {
+   "id": "L4U10-C03",
+   "tier": "quiz",
+   "text": "Siti is 6th from the front and 9th from the back of a queue. How many people are in the queue? {b}",
+   "answer": {
+    "value": [
+     "14"
+    ],
+    "text": "14"
+   },
+   "explanation": "There are 5 people in front of Siti and 8 behind her. 5 + 1 + 8 = 14."
+  },
+  {
+   "id": "L4U10-C04",
+   "tier": "quiz",
+   "text": "Two next-door numbers multiply to make 272. What are they? {b} and {b}",
+   "answer": {
+    "value": [
+     "16",
+     "17"
+    ],
+    "text": "16 and 17"
+   },
+   "explanation": "15 × 16 = 240 is too small and 17 × 18 = 306 is too big. 16 × 17 = 272."
+  }
+ ]
+}
