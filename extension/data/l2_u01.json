@@ -253,7 +253,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The greatest number is {b} and the smallest is {b}.",
+     "text": "From your list: greatest {b}, smallest {b}.",
      "answer": {
       "value": [
        "851",

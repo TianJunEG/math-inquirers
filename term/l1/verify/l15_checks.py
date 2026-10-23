@@ -147,7 +147,7 @@ def run(d):
     eq(sum(3 - x for x in counts_of(items['t1']['fig_base'])), items['t1']['answer'], 't1'); eq(sorted(items['g3']['answer']), [4, 6], 'g3'); eq(repeated_add(4, 6), 24, 'g3 sum')
     eq(items['g3']['answer'], [6, 4], 'g3 groups first')
     # Retrofit T5 (true or false, 15 apples on plates with none left over)
-    eq(T['T5']['val'], ['True' if left_over(15, k) == 0 else 'False' for k in (3, 4, 5)], 'T5')
-    eq([left_over(15, k) for k in (3, 4, 5)], [0, 3, 0], 'T5 left over')
-    eq([times(3, 5), times(5, 3), times(3, 4)], [15, 15, 12], 'T5 3 groups of 5, 5 groups of 3, 3 groups of 4')
+    eq(T['T5']['val'], ['True' if left_over(15, k) == 0 else 'False' for k in (4, 5)], 'T5')
+    eq([left_over(15, k) for k in (4, 5)], [3, 0], 'T5 left over')
+    eq([repeated_add(3, 5), repeated_add(3, 4)], [15, 12], 'T5 5 groups of 3, 4 groups of 3')
     return n

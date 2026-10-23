@@ -816,7 +816,7 @@
    "id": "L2U05-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond: a letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.",
+   "text": "A letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.",
    "parts": [
     {
      "label": "a",
@@ -889,7 +889,7 @@
    "id": "L2U05-G03",
    "tier": "go",
    "page": 5,
-   "text": "Make your own riddle. \"I think of a number. I ... then I ... I get ...\" The mystery number must be 12. Many answers are right.",
+   "text": "Make your own riddle. \"I think of a number. I ... then I ... I get ...\" The mystery number must be 12. Many answers work.",
    "answer": {
     "value": [
      "open"
@@ -897,11 +897,9 @@
     "text": "Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)"
    },
    "explanation": "Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.",
-   "hint": "Start at 12. Do 2 steps forwards. Then write the riddle.",
    "space": {
     "rows": [
-     "My riddle:",
-     "Check going forwards:"
+     "My riddle:"
     ]
    }
   },
@@ -909,7 +907,7 @@
    "id": "L2U05-G04",
    "tier": "go",
    "page": 5,
-   "text": "Machine A does × 2, then + 3. Machine B does - 5, then × 3. A number goes into A. The OUT of A goes into B. The final OUT is 36.",
+   "text": "Machine A does × 2, then + 3. Machine B does - 5, then × 3. The OUT of A goes into B. The final OUT is 36.",
    "figure": {
     "type": "l2_machine",
     "steps": [
@@ -920,7 +918,7 @@
      "× 3",
      "36"
     ],
-    "width_mm": 150
+    "width_mm": 120
    },
    "parts": [
     {
@@ -946,7 +944,8 @@
    ],
    "explanation": "Undo B: 36 ÷ 3 = 12, then 12 + 5 = 17. That is the OUT of A. Undo A: 17 - 3 = 14, then 14 ÷ 2 = 7. Check: 7 → 14 → 17 → 12 → 36.",
    "hint": "Undo machine B first. Then undo machine A.",
-   "figside": false
+   "figside": false,
+   "partsrow": true
   },
   {
    "id": "L2U05-C01",

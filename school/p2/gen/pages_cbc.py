@@ -138,7 +138,7 @@ def _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     return P
 
 def page38():
-    return cbc_page(38, dict(id="CBC-P2-01", picture="rocket", bank="numbers", tier=1, seed=303, level=2), "Colour the Rocket",
+    return cbc_page(38, dict(id="CBC-P2-01", picture="rocket", bank="numbers", tier=1, seed=306, level=2), "Colour the Rocket",
         ["Find the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Whole Numbers", "1.2, 1.3, 1.4 (place values, numbers in words, comparing and ordering numbers to 1000)",
         "Every part asks a question about numbers to 1000: place value, a number in words or numerals, or the greater or smaller of numbers.", oc=["WN1.1", "WN1.2", "WN1.3", "WN1.4"])

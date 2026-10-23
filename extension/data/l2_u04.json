@@ -88,7 +88,7 @@
    "id": "L2U04-S02",
    "tier": "start",
    "page": 1,
-   "text": "This pattern repeats again and again. Here are places 1 to 10.",
+   "text": "This pattern repeats. Here are places 1 to 10.",
    "figure": {
     "type": "l2_pattern",
     "items": [
@@ -590,7 +590,7 @@
    "id": "L2U04-T01",
    "tier": "think",
    "page": 4,
-   "text": "A frog starts at 0. It hops 3, then 1, then 3, then 1, and so on. It lands on 3, 4, 7, 8, 11 ...",
+   "text": "A frog starts at 0. It hops 3, then 1, then 3, then 1 ... It lands on 3, 4, 7, 8, 11 ...",
    "parts": [
     {
      "label": "a",
@@ -635,7 +635,7 @@
    "id": "L2U04-T02",
    "tier": "think",
    "page": 4,
-   "text": "This pattern repeats again and again. Here are places 1 to 10. Could a star be in this place?",
+   "text": "This pattern repeats. Here are places 1 to 10. Could a star be in this place?",
    "figure": {
     "type": "l2_pattern",
     "items": [
@@ -650,7 +650,7 @@
      "circle",
      "triangle"
     ],
-    "width_mm": 150
+    "width_mm": 140
    },
    "parts": [
     {

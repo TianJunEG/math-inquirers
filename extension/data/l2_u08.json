@@ -963,7 +963,7 @@
    "id": "L2U08-G01",
    "tier": "go",
    "page": 5,
-   "text": "A shop stacks cans in a triangle. The top row has 1 can, the next row has 2 cans, then 3 cans, and so on.",
+   "text": "A shop stacks cans in a triangle. The top row has 1 can. Each row has 1 more can.",
    "parts": [
     {
      "label": "a",

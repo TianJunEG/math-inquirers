@@ -40,7 +40,7 @@ items = [
    P('c', '45 stickers go in packs of 5. How many packs? {b}', '9'), P('d', 'How many wheels do 6 cars have? Each car has 4 wheels. {b}', '24')],
    why='(a) 6 boxes of 4 pencils: 6 × 4 = 24. (b) Share 30 into 5 equal bags: 30 ÷ 5 = 6. (c) How many groups of 5 in 45? 45 ÷ 5 = 9. (d) 6 cars with 4 wheels each: 6 × 4 = 24.'),
  I('start', 3, 'Siti has 37 biscuits. She packs 5 biscuits in each box.', parts=[
-   P('a', 'What is the greatest number of boxes she can fill? {b}', '7'), P('b', 'How many biscuits are left over? {b}', '2'), P('c', 'How many more biscuits does she need to fill 1 more box? {b}', '3')],
+   P('a', 'She fills as many boxes as she can. How many boxes? {b}', '7'), P('b', 'How many biscuits are left over? {b}', '2'), P('c', 'How many more biscuits does she need to fill 1 more box? {b}', '3')],
    why='(a) 7 × 5 = 35 and 8 × 5 = 40 is too many, so 7 boxes. (b) 37 - 35 = 2 left over. (c) 5 - 2 = 3 more biscuits fill another box.'),
  I('start', 3, '47 people go to a farm. Each minibus holds 10 people.', parts=[
    P('a', 'How many minibuses must they use? {b}', '5'), P('b', 'How many seats will be empty? {b}', '3')],

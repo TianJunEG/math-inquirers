@@ -95,7 +95,7 @@ items = [
    why='Example: 426 + 375 = 801. Ones: 6 + ? must end in 1, so the ones box is 5. That carries 1. Tens: ? + 7 + 1 must end in 0, so the tens box is 2. Check that no other digit fits in each box.'),
  I('go', 5, 'Mei adds 198 to her number. Ali takes 102 away from 900. They get the same answer.', parts=[
    P('a', 'Mei\'s number is {b}', '600'), P('b', 'Ravi adds 299 to his number. Siti takes 201 away from 1000. Same answer. Ravi\'s number is {b}', '500')],
-   hint='Work out the answer Ali gets first.',
+   hint='Find the answer Ali gets first.',
    why='(a) Ali gets 900 - 102 = 798. Mei\'s number plus 198 is 798, so it is 798 - 198 = 600. (b) Siti gets 1000 - 201 = 799. Ravi\'s number is 799 - 299 = 500. Check: 500 + 299 = 799.'),
  # Check yourself
  I('quiz', 0, 'Write the 2 missing digits.', figure={'type': 'l2_vsum', 'op': '+', 'rows': ['2?6', '43?', '689'], 'width_mm': 26}, figright=True, value=['5', '3'], atext='5 and 3', lst=True,

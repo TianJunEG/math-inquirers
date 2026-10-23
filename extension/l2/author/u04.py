@@ -23,7 +23,7 @@ TB = lambda cols, rows, w=150, ws=None, **kw: {'type': 'l2_table', 'cols': cols,
 
 items = [
  I('start', 1, 'Count back in 5s. Fill in the next numbers.   60,   55,   50,   {b},   {b},   {b}', value=['45', '40', '35'], atext='45, 40, 35', why='Take away 5 each time: 50 - 5 = 45, 45 - 5 = 40, 40 - 5 = 35. These numbers are in the 5 times table.'),
- I('start', 1, 'This pattern repeats again and again. Here are places 1 to 10.', figure=pat(['star', 'square', 'square', 'circle', 'star', 'square', 'square', 'circle', 'star', 'square'], width_mm=150),
+ I('start', 1, 'This pattern repeats. Here are places 1 to 10.', figure=pat(['star', 'square', 'square', 'circle', 'star', 'square', 'square', 'circle', 'star', 'square'], width_mm=150),
    partsrow=True, parts=[P('a', 'Place 16 is a   {circ:star|square|circle}', 'circle'), P('b', 'Place 22 is a   {circ:star|square|circle}', 'square'), P('c', 'Place 33 is a   {circ:star|square|circle}', 'star')],
    why='One group has 4 shapes. (a) 16 ends a group: a circle. (b) 20 ends a group, so 21 is a star and 22 is a square. (c) 32 ends a group, so 33 is a star.'),
  I('start', 1, 'Ali writes the letters of CHESS again and again.', figure=pat(list('CHESSCHESS'), width_mm=150),
@@ -55,11 +55,11 @@ items = [
    space={'rows': ['Working:']},
    why='Each tower has 2 more cubes: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. Tower 10 has 22 cubes and tower 8 has 18 cubes. Another way: tower n has n × 2 + 2 cubes, so tower 10 has 20 + 2 = 22.'),
  # Think harder
- I('think', 4, 'A frog starts at 0. It hops 3, then 1, then 3, then 1, and so on. It lands on 3, 4, 7, 8, 11 ...', parts=[
+ I('think', 4, 'A frog starts at 0. It hops 3, then 1, then 3, then 1 ... It lands on 3, 4, 7, 8, 11 ...', parts=[
    P('a', 'Will it land on 27? {circ:Yes|No}', 'Yes'), P('b', 'Will it land on 30? {circ:Yes|No}', 'No'), P('c', 'Will it land on 40? {circ:Yes|No}', 'Yes')],
    space={'rows': ['Working:']}, hint='Write the landing places. Look at the 4 times table.',
    why='Every 2 hops the frog goes 4 further: 3, 4, 7, 8, 11, 12, 15, 16 ... It lands on the 4 times table and on the number 3 before each one. 27 = 24 + 3: yes. 30 is between 28 and 31: no. 40 = 4 × 10: yes.'),
- I('think', 4, 'This pattern repeats again and again. Here are places 1 to 10. Could a star be in this place?', figure=pat(['square', 'star', 'circle', 'circle', 'triangle'] * 2, width_mm=150),
+ I('think', 4, 'This pattern repeats. Here are places 1 to 10. Could a star be in this place?', figure=pat(['square', 'star', 'circle', 'circle', 'triangle'] * 2, width_mm=140),
    partsrow=True, parts=[P('a', 'Place 17   {circ:Yes|No}', 'Yes'), P('b', 'Place 22   {circ:Yes|No}', 'Yes'), P('c', 'Place 35   {circ:Yes|No}', 'No'), P('d', 'Place 47   {circ:Yes|No}', 'Yes')],
    hint='Stars are 2 more than a number in the 5 times table.',
    why='The star is the 2nd of 5 shapes: places 2, 7, 12, 17, 22 ... (2 more than the 5 times table). 17 and 22: yes. 35 is the last shape: no. 47 = 45 + 2: yes.'),

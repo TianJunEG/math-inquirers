@@ -34,7 +34,7 @@ def read_pv_chart(s):
 
 # ---------------------------------------------------------------- coins and notes (original line art, inspired by Singapore money; much larger than real)
 COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7, 100: 24.65}          # real diameters (mm): only the RATIOS are used (a fact, not a design)
-COIN_D = {v: d * 0.84 for v, d in COIN_REAL.items()}
+COIN_D = {v: d * 0.78 for v, d in COIN_REAL.items()}
 NOTE_W, NOTE_H = 27.0, 13.5
 
 def _motif(v, cx, cy, u):

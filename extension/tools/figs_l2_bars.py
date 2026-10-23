@@ -32,6 +32,9 @@ def bar(spec, w=None):
             else:
                 P.append(box(x, y, sw, BH, YEL if s.get('hatch') else SKY, sw=3, rx=0))
             if s.get('t'):
+                if s.get('hatch'):
+                    tw = len(str(s['t'])) * 19 + 14
+                    P.append(f'<rect x="{x + sw / 2 - tw / 2}" y="{y + BH / 2 - 20}" width="{tw}" height="40" rx="6" fill="#fff"/>')
                 P.append(T(x + sw / 2, y + BH / 2 + 11, s['t'], 30))
             x += sw
     H = top + len(rows) * RH

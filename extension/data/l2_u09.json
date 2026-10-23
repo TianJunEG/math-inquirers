@@ -295,7 +295,7 @@
       "label": "Scale 2"
      }
     ],
-    "width_mm": 120
+    "width_mm": 100
    },
    "parts": [
     {
@@ -337,7 +337,7 @@
       "cap": 8
      }
     ],
-    "width_mm": 40
+    "width_mm": 34
    },
    "parts": [
     {
@@ -352,7 +352,7 @@
     },
     {
      "label": "b",
-     "text": "Empty the 5 ℓ jug. Pour the 3 ℓ into it. It needs {b} ℓ more to be full.",
+     "text": "Empty the 5 ℓ jug. Pour the 3 ℓ in. It needs {b} ℓ more.",
      "answer": {
       "value": [
        "2"

@@ -436,7 +436,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "What is the greatest number of boxes she can fill? {b}",
+     "text": "She fills as many boxes as she can. How many boxes? {b}",
      "answer": {
       "value": [
        "7"
@@ -775,7 +775,7 @@
    "id": "L2U03-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond: the 6 times table. 6 × 5 = 30, and 6 more is 6 × 6.",
+   "text": "The 6 times table. 6 × 5 = 30, and 6 more is 6 × 6.",
    "parts": [
     {
      "label": "a",

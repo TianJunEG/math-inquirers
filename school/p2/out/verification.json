@@ -390,7 +390,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['sailor', 'savior', 'spiral']"
+    "detail": "['carlos', 'sailor', 'savior', 'slavic', 'social']"
    },
    {
     "name": "V1 independent solver adds the values printed on the drawn coins and notes and equals the key",
@@ -436,7 +436,7 @@
   "seed": 5707,
   "checks": [
    {
-    "name": "V2 code word spells STRING",
+    "name": "V2 code word spells TEACUP",
     "ok": true,
     "detail": ""
    },
@@ -453,12 +453,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['string']"
+    "detail": "['teacup']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['stingy', 'string', 'trying']"
+    "detail": "['carpet', 'curate', 'jacket', 'packer', 'packet', 'pucker']"
    },
    {
     "name": "V1 independent solver reads the hand end points of each drawn clock and equals the key",
@@ -712,7 +712,7 @@
   "seed": 6111,
   "checks": [
    {
-    "name": "V2 code word spells FATHOM",
+    "name": "V2 code word spells ANSWER",
     "ok": true,
     "detail": ""
    },
@@ -729,12 +729,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['fathom']"
+    "detail": "['answer']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fathom', 'format', 'thorax']"
+    "detail": "['angers', 'answer', 'sanger', 'sprang']"
    },
    {
     "name": "V1 independent solver (constant difference from the printed numbers) equals the key",
@@ -870,7 +870,7 @@
    {
     "name": "V1 independent solver (every digit tried in the printed sum) finds exactly one digit and it equals the key",
     "ok": true,
-    "detail": "[0, 3, 4, 1, 5, 2]"
+    "detail": "[2, 6, 5, 8, 4, 1]"
    },
    {
     "name": "V7 every number has 3 digits",
@@ -885,8 +885,8 @@
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    44,
-    44
+    45,
+    45
    ],
    "all_other_values_rejected": [
     54,
@@ -994,7 +994,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['broken', 'bronze', 'frozen']"
+    "detail": "['confer', 'frozen', 'reckon']"
    },
    {
     "name": "V1 independent solver counts the shaded and all parts in each drawing and equals the key",
@@ -1392,7 +1392,7 @@
    {
     "name": "V1 independent solver (fractions read back and sorted by value) gets the word",
     "ok": true,
-    "detail": "BANDIT"
+    "detail": "BOTANY"
    },
    {
     "name": "V1b Set A are like fractions and Set B unit fractions, all denominators within 12",
@@ -1402,7 +1402,7 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['bandit']"
+    "detail": "['botany']"
    },
    {
     "name": "V3 none of the 719 wrong orders of the six letters spells a word",
@@ -1446,7 +1446,7 @@
   "seed": 7622,
   "checks": [
    {
-    "name": "V2 code word spells ANSWER",
+    "name": "V2 code word spells FATHOM",
     "ok": true,
     "detail": ""
    },
@@ -1463,12 +1463,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['answer']"
+    "detail": "['fathom']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['angers', 'answer', 'sanger']"
+    "detail": "['fathom', 'gotcha', 'gotham']"
    },
    {
     "name": "V1 independent solver reads the printed fractions back and equals the key",
@@ -1574,7 +1574,7 @@
    {
     "name": "V1 independent solver (coins and notes added from the drawings, each amount matched to its purse) gets the word",
     "ok": true,
-    "detail": "BUCKLE"
+    "detail": "CAMPUS"
    },
    {
     "name": "V1b every amount matches exactly one purse",
@@ -1629,7 +1629,7 @@
   "seed": 8125,
   "checks": [
    {
-    "name": "V2 code word spells CRAFTY",
+    "name": "V2 code word spells FIGURE",
     "ok": true,
     "detail": ""
    },
@@ -1646,12 +1646,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['crafty']"
+    "detail": "['figure']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['artful', 'crafty', 'faulty']"
+    "detail": "['fergus', 'figure', 'furies']"
    },
    {
     "name": "V1 independent solver reads the needle angle of each dial and equals the key",
@@ -1827,7 +1827,7 @@
    {
     "name": "V1 independent solver (dial needles and container levels read from the drawings, then sorted) gets the word",
     "ok": true,
-    "detail": "MIGHTY"
+    "detail": "PEANUT"
    },
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
@@ -1945,7 +1945,7 @@
   "seed": 8630,
   "checks": [
    {
-    "name": "V2 code word spells SQUARE",
+    "name": "V2 code word spells TONGUE",
     "ok": true,
     "detail": ""
    },
@@ -1962,17 +1962,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['square']"
+    "detail": "['tongue']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['abuser', 'basque', 'square']"
+    "detail": "['bought', 'enough', 'nought', 'tongue']"
    },
    {
     "name": "V1 independent solver reads the printed text and equals the key",
     "ok": true,
-    "detail": "[180, 5, 3, 220, 65, 55]"
+    "detail": "[210, 4, 180, 30, 85, 5]"
    },
    {
     "name": "V7 times under 5 hours, minutes in multiples of 5",
@@ -1987,8 +1987,8 @@
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    68,
-    68
+    69,
+    69
    ],
    "all_other_values_rejected": [
     1800,
@@ -2015,7 +2015,7 @@
   "seed": 8731,
   "checks": [
    {
-    "name": "V2 code word spells TEACUP",
+    "name": "V2 code word spells BANDIT",
     "ok": true,
     "detail": ""
    },
@@ -2032,17 +2032,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['teacup']"
+    "detail": "['bandit']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['packet', 'teacup', 'uptake']"
+    "detail": "['bandit', 'dating', 'fading']"
    },
    {
     "name": "V1 independent solver (timetable and questions read back from the printed page) equals the key",
     "ok": true,
-    "detail": "[25, 30, 15, 100, 165, 50]"
+    "detail": "[55, 35, 5, 80, 90, 15]"
    },
    {
     "name": "V7 six different lessons, all lessons start after 8 am and end before 2 pm",
@@ -2057,8 +2057,8 @@
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    72,
-    72
+    71,
+    71
    ],
    "all_other_values_rejected": [
     1800,
@@ -2085,7 +2085,7 @@
    {
     "name": "V1 independent solver (shapes read back from the drawing, the repeat found, the next shape matched to exactly one option) gets the letters",
     "ok": true,
-    "detail": "[['W'], ['A'], ['L'], ['R'], ['U'], ['S']]"
+    "detail": "[['B'], ['E'], ['H'], ['I'], ['N'], ['D']]"
    },
    {
     "name": "V3 no other way of choosing spells a word (large word list)",
@@ -2143,7 +2143,7 @@
    {
     "name": "V1 independent solver (shapes read back from the drawing, the repeat found, the next shape matched to exactly one option) gets the letters",
     "ok": true,
-    "detail": "[['B'], ['O'], ['T'], ['A'], ['N'], ['Y']]"
+    "detail": "[['C'], ['O'], ['B'], ['A'], ['L'], ['T']]"
    },
    {
     "name": "V3 no other way of choosing spells a word (large word list)",
@@ -2201,7 +2201,7 @@
    {
     "name": "V1 independent solver (each drawing classified from its faces, ellipses and apex) gets the solid in every row",
     "ok": true,
-    "detail": "['sphere', 'cuboid', 'sphere', 'cylinder', 'cone', 'cube']"
+    "detail": "['cylinder', 'cuboid', 'sphere', 'cone', 'cube', 'cuboid']"
    },
    {
     "name": "V3 no other way of choosing spells a word (large word list)",
@@ -2320,7 +2320,7 @@
   "seed": 9336,
   "checks": [
    {
-    "name": "V2 code word spells COUSIN",
+    "name": "V2 code word spells DONKEY",
     "ok": true,
     "detail": ""
    },
@@ -2337,12 +2337,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['cousin']"
+    "detail": "['donkey']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['coitus', 'cousin', 'squint']"
+    "detail": "['beyond', 'bygone', 'donkey']"
    },
    {
     "name": "V1 independent solver (symbols counted in each printed row, key read back) equals the key",
@@ -2393,7 +2393,7 @@
   "seed": 9437,
   "checks": [
    {
-    "name": "V2 code word spells FIGURE",
+    "name": "V2 code word spells FAMILY",
     "ok": true,
     "detail": ""
    },
@@ -2410,17 +2410,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['figure']"
+    "detail": "['family']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fergus', 'figure', 'furies']"
+    "detail": "['family', 'flimsy', 'majlis']"
    },
    {
     "name": "V1 independent solver (visible rows counted, key and clues read back) equals the key",
     "ok": true,
-    "detail": "[6, 30, 20, 5, 10, 110]"
+    "detail": "[4, 40, 20, 10, 30, 200]"
    },
    {
     "name": "V1b the covered rows are two and the pictures of all five rows make the printed total",
@@ -2466,7 +2466,7 @@
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
-  "seed": 301,
+  "seed": 303,
   "checks": [
    {
     "name": "V1 every question has exactly one answer in the bank's domain",
@@ -2486,7 +2486,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 2, 'red': 2, 'blue': 3, 'green': 4, 'orange': 4}"
+    "detail": "{'yellow': 2, 'red': 4, 'blue': 2, 'green': 4, 'orange': 3}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -2544,7 +2544,7 @@
  {
   "no": 39,
   "code": "S1-17 (P2-39)",
-  "title": "Colour the Dinosaur",
+  "title": "Colour the House",
   "tier": 2,
   "topic": "Multiplication: tables of 2, 3, 4, 5 and 10",
   "strand": "Number and Algebra - Multiplication and Division",
@@ -2566,7 +2566,7 @@
     "detail": "[]"
    },
    {
-    "name": "V1a the independent evaluator (textcheck) re-solves all 15 printed questions from their text and picture and gets the coloured answer",
+    "name": "V1a the independent evaluator (textcheck) re-solves all 17 printed questions from their text and picture and gets the coloured answer",
     "ok": true,
     "detail": "[]"
    },
@@ -2578,7 +2578,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 3, 'red': 4, 'blue': 3, 'green': 3, 'orange': 2}"
+    "detail": "{'yellow': 4, 'red': 3, 'blue': 4, 'green': 3, 'orange': 3}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -2593,42 +2593,42 @@
    {
     "name": "V7 regions 12 to 18, every label found a box",
     "ok": true,
-    "detail": "15"
+    "detail": "17"
    },
    {
     "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
     "ok": true,
-    "detail": "[('ground_1', 'ground_3')]"
+    "detail": "[('grass_1', 'grass_3')]"
    },
    {
     "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
-    "detail": "1500/1500"
+    "detail": "1700/1700"
    },
    {
     "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
     "ok": true,
-    "detail": "1679/1680"
+    "detail": "2173/2176"
    },
    {
     "name": "V3c swaps of two parts' colours rejected (>=95%)",
     "ok": true,
-    "detail": "88/89"
+    "detail": "112/115"
    }
   ],
   "generator_slip_test": [
    1.0,
-   1500,
-   1500
+   1700,
+   1700
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    180,
-    180
+    204,
+    204
    ],
    "all_other_values_rejected": [
-    1500,
-    1500
+    1700,
+    1700
    ],
    "wrong_arrangements_rejected": null
   }

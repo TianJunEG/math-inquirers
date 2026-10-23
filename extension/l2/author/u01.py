@@ -38,7 +38,7 @@ items = [
    space={'table': {'cols': ['Start with 1', 'Start with 5', 'Start with 8'], 'rows': 2}},
    why='Start with 1: 158 and 185. Start with 5: 518 and 581. Start with 8: 815 and 851. 3 cards x 2 = 6 numbers.'),
  I('start', 2, 'Use your list from the question before.', parts=[
-   P('a', 'The greatest number is {b} and the smallest is {b}.', ['851', '158'], '851 and 158'),
+   P('a', 'From your list: greatest {b}, smallest {b}.', ['851', '158'], '851 and 158'),
    P('b', 'Which number is closest to 600? {b}', '581'),
    P('c', 'How many of your numbers are odd? {b}', '4')],
    why='(a) The greatest digit first gives 851; the smallest first gives 158. (b) 581 is 19 from 600. (c) Odd numbers end in 1, 3, 5, 7 or 9: 185, 581, 815, 851.'),

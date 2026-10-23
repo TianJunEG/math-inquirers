@@ -2160,7 +2160,8 @@
      "type": "array",
      "rows": 2,
      "cols": 8,
-     "icon": "sticker"
+     "icon": "sticker",
+     "cell": 36
     }
    },
    {
@@ -2283,12 +2284,9 @@
     "id": "T5",
     "page": 3,
     "tier": "think",
-    "text": "Mei has 15 apples. She puts them equally onto plates, with none left over. Is each sentence true or false?",
+    "text": "Mei puts 15 apples equally onto plates, with none left over. True or false?",
     "parts": [],
     "tf": [
-     {
-      "s": "She can use 3 plates."
-     },
      {
       "s": "She can use 4 plates."
      },
@@ -2297,14 +2295,13 @@
      }
     ],
     "lines": 0,
-    "answer": "True, False, True (3 plates of 5, 4 plates leave 3 over, 5 plates of 3)",
+    "answer": "False, True (4 plates leave 3 over; 5 plates of 3 apples)",
     "val": [
-     "True",
      "False",
      "True"
     ],
-    "hint": "Count in jumps of the number of plates, or deal the apples out one at a time. Does the count land on 15?",
-    "solution": "3 plates: 3 groups of 5 is 15, so true. 4 plates: 4, 8, 12, 16 jumps over 15 (3 groups of 4 is 12 and 3 are left over), so false. 5 plates: 5 groups of 3 is 15, so true.",
+    "hint": "Deal the apples out one at a time, or count in jumps. Does the count land on 15?",
+    "solution": "4 plates: 4, 8, 12, 16 jumps over 15 (4 groups of 3 is 12 and 3 are left over), so false. 5 plates: 5 groups of 3 is 15, so true.",
     "mistakes": [
      "Saying true for 4 plates because 4 is a small number.",
      "Not checking that nothing is left over."

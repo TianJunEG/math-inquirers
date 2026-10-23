@@ -80,7 +80,7 @@ items = [
    hint='Count the triangles that sit on each line separately.',
    why='The 2 lines from the top and the 2 sloping sides make 4 lines. Any 2 of them make a triangle on each line across: 6. There are 2 lines across, the base and the middle: 6 + 6 = 12 triangles.'),
  # Go further
- I('go', 5, 'A shop stacks cans in a triangle. The top row has 1 can, the next row has 2 cans, then 3 cans, and so on.', beyond='Triangle numbers', parts=[
+ I('go', 5, 'A shop stacks cans in a triangle. The top row has 1 can. Each row has 1 more can.', beyond='Triangle numbers', parts=[
    P('a', '6 rows: the bottom row has {b} cans.', '6'), P('b', '6 rows: {b} cans in all.', '21'), P('c', '8 rows: {b} cans in all.', '36')],
    hint='Add the rows: 1 + 2 + 3 ...',
    why='(a) Row 6 has 6 cans. (b) 1 + 2 + 3 + 4 + 5 + 6 = 21. (c) 21 + 7 + 8 = 36 (the rows 7 and 8 have 7 and 8 cans).'),
