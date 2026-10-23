@@ -62,7 +62,7 @@ I.append(IT(U, 'S', 4, 1,
                    P('c', 'IN 9 gives OUT {b}.', [31])],
             partsrow=True))
 I.append(IT(U, 'S', 5, 2,
-            'Run each machine backwards to find n. Check by going forwards.',
+            'Find n in each equation by undoing the steps. Then check by going forwards.',
             f'(a) 5n + 8 = 63: 63 {M} 8 = 55, 55 ÷ 5 = 11. (b) 9n {M} 7 = 74: 74 + 7 = 81, 81 ÷ 9 = 9. (c) (n + 4) {X} 6 = 66: 66 ÷ 6 = 11, 11 {M} 4 = 7. '
             f'(d) n ÷ 5 + 3 = 11: 11 {M} 3 = 8, 8 {X} 5 = 40.',
             parts=[P('a', f'5n + 8 = 63      n = {{b}}', [11]),
@@ -79,7 +79,7 @@ I.append(IT(U, 'S', 6, 2,
                    P('c', 'It says 61. You typed {b}.', [16])],
             figside=True))
 I.append(IT(U, 'S', 7, 2,
-            f'Plan a search. Find n when 7n {M} 4 = 73 by trying n = 0, 1, 2, ... Fill in the blanks.',
+            f'This loop hunts for the n that makes 7n {M} 4 equal 73. It tries 0, 1, 2, ... in turn. Complete the blocks.',
             f'The search starts at 0 and adds 1 each time, until 7 {X} n {M} 4 is 73. 7 {X} 10 {M} 4 = 66 is too small and 7 {X} 11 {M} 4 = 73. It says 11. '
             f'Check backwards: 73 + 4 = 77 and 77 ÷ 7 = 11.',
             fig=code([['var', 'set n to ( )'], ['ctl', f'repeat until <(n {X} 7 {M} 4) = ( )>', [['var', 'change n by ( )']]], ['look', 'say (n)']]),
@@ -93,8 +93,8 @@ I.append(IT(U, 'S', 8, 3,
             f'Kumar has n + 5 and Jenny has 3 {X} n. When n = 8: Kumar has 13, Jenny has 24, and all 3 together have 8 + 13 + 24 = 45. '
             f'In general n + (n + 5) + 3n = 5n + 5.',
             parts=[P('a', 'When n = 8, Kumar has {b} and Jenny has {b}.', [13, 24], '13, 24'),
-                   P('b', 'When n = 8, all 3 together have {b} stickers.', [45]),
-                   P('c', f'All 3 together have {{b}} {X} n + {{b}} stickers.', [5, 5], '5, 5')]))
+                   P('b', 'When n = 8, all 3 together have {b} marbles.', [45]),
+                   P('c', f'All 3 together have {{b}} {X} n + {{b}} marbles.', [5, 5], '5, 5')]))
 I.append(IT(U, 'S', 9, 3,
             'A phone plan costs 12 dollars a month, plus 3 dollars for each extra GB. n is the number of extra GB.',
             f'Cost = 3 {X} n + 12. 5 extra GB cost 3 {X} 5 + 12 = 27 dollars. For 60 dollars: 3n + 12 = 60, so 3n = 48 and n = 16.',
@@ -126,7 +126,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', 'IN 5 gives OUT {b}.', [35]),
                    P('b', 'OUT 77 comes from IN {b}.', [12]),
                    P('c', f'Joined, the rule is OUT = {{b}} {X} n + {{b}}.', [6, 5], '6, 5')],
-            hint='For OUT 77, undo Y first, then undo X.', partsrow=True, space={'rows': ['Working:']}))
+            hint='Start from the OUT end of the joined machines.', partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'T', 2, 4,
             'Ali is n years old. His brother is 4 years older. Their mother is 3 times as old as Ali. Together the 3 of them are 64 years old.',
             f'Ali n, brother n + 4, mother 3n. Together: n + (n + 4) + 3n = 5n + 4 = 64. So 5n = 60 and n = 12. Ali is 12, his brother is 16 and their mother is 36. Check: 12 + 16 + 36 = 64.',

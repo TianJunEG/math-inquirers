@@ -99,7 +99,7 @@ u.T('A rectangle has area 36 cm² and perimeter 26 cm.', parts=[
     hint='List pairs that multiply to 36. Then add each pair.',
     space={'rows': ['Pairs that multiply to 36:', '']},
     why='Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36 are 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9. Check: area 9 × 4 = 36 and perimeter 2 × 13 = 26.')
-u.T('A square with sides of 4 cm and a square with sides of 3 cm are joined side by side. Their bottom edges are level, as shown.', parts=[
+u.T('A 4 cm square and a 3 cm square are joined. Their bottom edges are level.', parts=[
     P('a', 'The area of the figure is {b} cm².', A('25')), P('b', 'The perimeter of the figure is {b} cm.', A('22')),
     P('c', 'The 3 cm square is moved on top of the 4 cm square, with their left edges level. The perimeter is then {b} cm.', A('22'))],
     figure={'type': 'l3_poly', 'pts': [[0, 0], [7, 0], [7, 3], [4, 3], [4, 4], [0, 4]], 'k': 34, 'width_mm': 74,

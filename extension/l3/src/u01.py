@@ -66,7 +66,7 @@ u.S(3, 'Look at the number line.', parts=[
             'marks': [{'at': 6150, 'text': 'A'}, {'at': 6450, 'text': 'B'}, {'at': 6350, 'text': 'C'}]})
 
 # ---------------- page 3
-u.S(3, 'I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than my thousands digit. My ones digit is the greatest odd digit. What number am I? {b}',
+u.S(3, 'I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than 6. My ones digit is the greatest odd digit. What number am I? {b}',
     A('6309'), why='The thousands digit is 6. The hundreds digit is 6 - 3 = 3. The tens digit is 0. The greatest odd digit is 9. The number is 6309.')
 u.S(3, 'Ravi says the greatest odd number from the cards 9, 4, 6 and 2 is 9642.', parts=[
     P('a', 'Is he right?   {circ:Yes|No}', A('No')),

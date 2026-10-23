@@ -85,6 +85,45 @@
  },
  "items": [
   {
+   "id": "L6U05-S01",
+   "tier": "start",
+   "text": "A bike shop builds a bike from 1 frame, 1 seat and 1 bell. There are 5 frames, 3 seats and 2 bells.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} different bikes.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The shop adds 1 more frame. Now there are {b} bikes.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Red is one of the 5 frames. {b} bikes have a red frame.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "Choices one after another multiply: 5 × 3 × 2 = 30. With 6 frames: 6 × 3 × 2 = 36. A red frame is 1 frame choice: 1 × 3 × 2 = 6."
+  },
+  {
    "id": "L6U05-S02",
    "tier": "start",
    "text": "Flip a coin and roll a dice. A result looks like H3 (heads and 3). Use the table to list the results.",
@@ -168,24 +207,54 @@
    "partsrow": true
   },
   {
-   "id": "L6U05-S03",
+   "id": "L6U05-S05",
    "tier": "start",
-   "text": "At a party, any 2 friends shake hands exactly once.",
+   "text": "A walker goes only right or up from Start to End. Each number shows how many routes reach that corner. Fill in the empty circles.",
    "page": 1,
    "parts": [
     {
      "label": "a",
-     "text": "With 6 friends there are {b} handshakes.",
+     "text": "There are {b} routes from Start to End.",
      "answer": {
       "value": [
-       "15"
+       "10"
       ],
-      "text": "15"
+      "text": "10"
      }
-    },
+    }
+   ],
+   "figure": {
+    "type": "l6_routes",
+    "cols": 3,
+    "rows": 2,
+    "cell": 15,
+    "nums": {
+     "0,0": 1,
+     "1,0": 1,
+     "2,0": 1,
+     "3,0": 1,
+     "0,1": 1,
+     "0,2": 1,
+     "1,1": null,
+     "2,1": null,
+     "3,1": null,
+     "1,2": null,
+     "2,2": null,
+     "3,2": null
+    }
+   },
+   "explanation": "A corner is reached from the corner on its left or the corner below, so add those 2 numbers. Middle row: 2, 3, 4. Top row: 3, 6, 10. There are 10 routes to End.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S03",
+   "tier": "start",
+   "text": "In a chess club, any 2 players play exactly 1 game against each other.",
+   "page": 2,
+   "parts": [
     {
-     "label": "b",
-     "text": "With 8 friends there are {b} handshakes.",
+     "label": "a",
+     "text": "With 8 players there are {b} games.",
      "answer": {
       "value": [
        "28"
@@ -194,13 +263,23 @@
      }
     },
     {
-     "label": "c",
-     "text": "A party has 36 handshakes. There are {b} friends.",
+     "label": "b",
+     "text": "With 11 players there are {b} games.",
      "answer": {
       "value": [
-       "9"
+       "55"
       ],
-      "text": "9"
+      "text": "55"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A club plays 66 games. It has {b} players.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
      }
     }
    ],
@@ -208,10 +287,10 @@
     "type": "l6_dots",
     "groups": [
      {
-      "n": 5,
+      "n": 4,
       "all": true,
-      "caption": "5 friends: 10 handshakes",
-      "r": 12
+      "caption": "4 players: 6 games",
+      "r": 11
      }
     ]
    },
@@ -222,7 +301,7 @@
    "id": "L6U05-S04",
    "tier": "start",
    "text": "The inner loop does all its repeats each time the outer loop goes round. Predict what the sprite says.",
-   "page": 1,
+   "page": 2,
    "parts": [
     {
      "label": "a",
@@ -284,45 +363,6 @@
    "figside": true
   },
   {
-   "id": "L6U05-S01",
-   "tier": "start",
-   "text": "A lunch box has 1 main, 1 drink and 1 fruit. There are 4 mains, 3 drinks and 2 fruits.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "There are {b} different lunches.",
-     "answer": {
-      "value": [
-       "24"
-      ],
-      "text": "24"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The shop adds 1 more drink. Now there are {b} lunches.",
-     "answer": {
-      "value": [
-       "32"
-      ],
-      "text": "32"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Juice is one of the 3 drinks. {b} lunches have juice.",
-     "answer": {
-      "value": [
-       "8"
-      ],
-      "text": "8"
-     }
-    }
-   ],
-   "explanation": "Choices one after another multiply: 4 × 3 × 2 = 24. With 4 drinks: 4 × 4 × 2 = 32. A lunch with juice has only 1 drink choice: 4 × 1 × 2 = 8."
-  },
-  {
    "id": "L6U05-S06",
    "tier": "start",
    "text": "A password has 3 letters. Each letter is A, B, C or D.",
@@ -362,10 +402,60 @@
    "explanation": "Letters may repeat: 4 × 4 × 4 = 64. No repeats: 4 choices, then 3, then 2: 4 × 3 × 2 = 24. First letter A and repeats allowed: 1 × 4 × 4 = 16."
   },
   {
+   "id": "L6U05-S10",
+   "tier": "start",
+   "text": "An octagon has 8 corners. Join every pair of corners with a straight line.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} lines in all.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Diagonals (lines that are not sides): {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A shape with 10 corners has {b} diagonals.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_dots",
+    "groups": [
+     {
+      "n": 8,
+      "r": 14,
+      "edges": []
+     }
+    ]
+   },
+   "explanation": "Every pair of corners gives a line: 8 × 7 ÷ 2 = 28. 8 of the lines are the sides, so 28 − 8 = 20 are diagonals. 10 corners: 10 × 9 ÷ 2 = 45 lines, 10 are sides, so 35 diagonals.",
+   "figside": true
+  },
+  {
    "id": "L6U05-S07",
    "tier": "start",
    "text": "There are 5 runners in a race. Gold, silver and bronze go to 3 different runners.",
-   "page": 2,
+   "page": 3,
    "parts": [
     {
      "label": "a",
@@ -379,7 +469,7 @@
     },
     {
      "label": "b",
-     "text": "Ali must win gold. Then there are {b} ways.",
+     "text": "Ali is one of the runners and must win gold. Then there are {b} ways.",
      "answer": {
       "value": [
        "12"
@@ -394,7 +484,7 @@
    "id": "L6U05-S08",
    "tier": "start",
    "text": "This code lists pairs. The outer repeat changes a and the inner repeat changes b. Predict what it says.",
-   "page": 2,
+   "page": 3,
    "parts": [
     {
      "label": "a",
@@ -468,46 +558,6 @@
    "figside": true
   },
   {
-   "id": "L6U05-S05",
-   "tier": "start",
-   "text": "A walker goes only right or up from Start to End. Each number shows how many routes reach that corner. Fill in the empty circles.",
-   "page": 3,
-   "parts": [
-    {
-     "label": "a",
-     "text": "There are {b} routes from Start to End.",
-     "answer": {
-      "value": [
-       "10"
-      ],
-      "text": "10"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_routes",
-    "cols": 3,
-    "rows": 2,
-    "cell": 15,
-    "nums": {
-     "0,0": 1,
-     "1,0": 1,
-     "2,0": 1,
-     "3,0": 1,
-     "0,1": 1,
-     "0,2": 1,
-     "1,1": null,
-     "2,1": null,
-     "3,1": null,
-     "1,2": null,
-     "2,2": null,
-     "3,2": null
-    }
-   },
-   "explanation": "A corner is reached from the corner on its left or the corner below, so add those 2 numbers. Middle row: 2, 3, 4. Top row: 3, 6, 10. There are 10 routes to End.",
-   "figside": true
-  },
-  {
    "id": "L6U05-S09",
    "tier": "start",
    "text": "Make 3-digit numbers from the cards, using no card twice. A number cannot start with 0.",
@@ -545,56 +595,6 @@
     "card": 11
    },
    "explanation": "First digit: 3 choices (not 0), second: 3 (0 is allowed), third: 2. 3 × 3 × 2 = 18. Odd numbers end in 1 or 3; then the first digit has 2 choices and the middle digit 2: 2 × 2 × 2 = 8.",
-   "figside": true
-  },
-  {
-   "id": "L6U05-S10",
-   "tier": "start",
-   "text": "An octagon has 8 corners. Join every pair of corners with a straight line.",
-   "page": 3,
-   "parts": [
-    {
-     "label": "a",
-     "text": "There are {b} lines in all.",
-     "answer": {
-      "value": [
-       "28"
-      ],
-      "text": "28"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Diagonals (lines that are not sides): {b}",
-     "answer": {
-      "value": [
-       "20"
-      ],
-      "text": "20"
-     }
-    },
-    {
-     "label": "c",
-     "text": "A shape with 10 corners has {b} diagonals.",
-     "answer": {
-      "value": [
-       "35"
-      ],
-      "text": "35"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_dots",
-    "groups": [
-     {
-      "n": 8,
-      "r": 14,
-      "edges": []
-     }
-    ]
-   },
-   "explanation": "Every pair of corners gives a line: 8 × 7 ÷ 2 = 28. 8 of the lines are the sides, so 28 − 8 = 20 are diagonals. 10 corners: 10 × 9 ÷ 2 = 45 lines, 10 are sides, so 35 diagonals.",
    "figside": true
   },
   {
@@ -685,7 +685,7 @@
      "2,1"
     ]
    },
-   "hint": "Count the routes to X and from X separately. Then multiply.",
+   "hint": "A route through X has two parts. Count each part.",
    "explanation": "Routes to X: right 2 and up 1, so 3 routes (RRU, RUR, URR). Routes from X to End: right 2 and up 2, so 6 routes. Every route through X is one of the 3 followed by one of the 6: 3 × 6 = 18.",
    "figright": true,
    "partsrow": true
@@ -952,8 +952,12 @@
         "repeat (4)",
         [
          [
+          "var",
+          "set p to (a × b)"
+         ],
+         [
           "ctl",
-          "if <(a × b mod 2) = (0)> then",
+          "if <(p mod 2) = (0)> then",
           [
            [
             "var",

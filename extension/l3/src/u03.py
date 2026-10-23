@@ -106,8 +106,8 @@ u.G('Make your own 2 by 2 grid puzzle with numbers from 6 to 9. Show 3 products.
     hint='Pick the row and column numbers first. Then multiply.',
     why='Check that each shown product belongs to the numbers you chose. Check that no other row and column numbers from 6 to 9 give the same 3 products. In the example, 42 = 6 × 7 and 48 = 6 × 8 give row 6 and columns 7 and 8. Also 49 = 7 × 7 gives row 7. The hidden product is 7 × 8 = 56.',
     space={'rows': ['{ll}']})
-u.G('Beyond Level 3: Square numbers.\nMultiply a number by itself. For example 7 × 7 = 49, which ends in 9. Which of these digits can NEVER be the last digit of such an answer?\n{circ:2|3|4|6|7|8}', A(['2', '3', '7', '8'], '2, 3, 7 and 8', list=True),
-    hint='Work out 1 × 1, 2 × 2, ... 9 × 9. Write the last digits.',
+u.G('Beyond Level 3: Square numbers.\nMultiply a number by itself. For example 7 × 7 = 49, which ends in 9. Which of these digits can NEVER end such an answer?\n{circ:2|3|4|6|7|8}', A(['2', '3', '7', '8'], '2, 3, 7 and 8', list=True),
+    hint='Find 1 × 1, 2 × 2, ... 9 × 9. Write the last digits.',
     why='The last digits of 1 × 1 up to 9 × 9 are 1, 4, 9, 6, 5, 6, 9, 4, 1. Only the last digit of the number matters, so the last digit can only be 0, 1, 4, 5, 6 or 9. So 2, 3, 7 and 8 can never be the last digit.',
     space={'rows': ['Last digits of 1 × 1 to 9 × 9:']})
 

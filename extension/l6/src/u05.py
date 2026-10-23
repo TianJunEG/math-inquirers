@@ -29,11 +29,11 @@ learn = {
 
 # ---------------------------------------------------------------- Start here
 I.append(IT(U, 'S', 1, 1,
-            'A lunch box has 1 main, 1 drink and 1 fruit. There are 4 mains, 3 drinks and 2 fruits.',
-            f'Choices one after another multiply: 4 {X} 3 {X} 2 = 24. With 4 drinks: 4 {X} 4 {X} 2 = 32. A lunch with juice has only 1 drink choice: 4 {X} 1 {X} 2 = 8.',
-            parts=[P('a', 'There are {b} different lunches.', [24]),
-                   P('b', 'The shop adds 1 more drink. Now there are {b} lunches.', [32]),
-                   P('c', 'Juice is one of the 3 drinks. {b} lunches have juice.', [8])]))
+            'A bike shop builds a bike from 1 frame, 1 seat and 1 bell. There are 5 frames, 3 seats and 2 bells.',
+            f'Choices one after another multiply: 5 {X} 3 {X} 2 = 30. With 6 frames: 6 {X} 3 {X} 2 = 36. A red frame is 1 frame choice: 1 {X} 3 {X} 2 = 6.',
+            parts=[P('a', 'There are {b} different bikes.', [30]),
+                   P('b', 'The shop adds 1 more frame. Now there are {b} bikes.', [36]),
+                   P('c', 'Red is one of the 5 frames. {b} bikes have a red frame.', [6])]))
 I.append(IT(U, 'S', 2, 1,
             'Flip a coin and roll a dice. A result looks like H3 (heads and 3). Use the table to list the results.',
             'The coin has 2 results and the dice has 6, so 2 × 6 = 12 results, one for each cell. Tails with more than 4: T5 and T6, so 2. '
@@ -44,13 +44,12 @@ I.append(IT(U, 'S', 2, 1,
                    P('c', 'Heads and an even number: {b} results.', [3])],
             partsrow=True))
 I.append(IT(U, 'S', 3, 1,
-            'At a party, any 2 friends shake hands exactly once.',
-            'Each new friend shakes hands with all the friends before. 6 friends: 1 + 2 + 3 + 4 + 5 = 15. 8 friends: 1 + 2 + ... + 7 = 28. '
-            '36 = 1 + 2 + ... + 8, so there are 9 friends. (Another way: 8 × 7 ÷ 2 = 28.)',
-            fig={'type': 'l6_dots', 'groups': [{'n': 5, 'all': True, 'caption': '5 friends: 10 handshakes', 'r': 12}]},
-            parts=[P('a', 'With 6 friends there are {b} handshakes.', [15]),
-                   P('b', 'With 8 friends there are {b} handshakes.', [28]),
-                   P('c', 'A party has 36 handshakes. There are {b} friends.', [9])],
+            'In a chess club, any 2 players play exactly 1 game against each other.',
+            'Each new player plays all the earlier players: 1 + 2 + ... + 7 = 28 for 8 players, and 1 + 2 + ... + 10 = 55 for 11 players. 66 = 1 + 2 + ... + 11, so there are 12 players. (Another way: 8 \u00d7 7 \u00f7 2 = 28.)',
+            fig={'type': 'l6_dots', 'groups': [{'n': 4, 'all': True, 'caption': '4 players: 6 games', 'r': 11}]},
+            parts=[P('a', 'With 8 players there are {b} games.', [28]),
+                   P('b', 'With 11 players there are {b} games.', [55]),
+                   P('c', 'A club plays 66 games. It has {b} players.', [12])],
             figside=True))
 I.append(IT(U, 'S', 4, 2,
             'The inner loop does all its repeats each time the outer loop goes round. Predict what the sprite says.',
@@ -77,7 +76,7 @@ I.append(IT(U, 'S', 7, 2,
             'There are 5 runners in a race. Gold, silver and bronze go to 3 different runners.',
             f'Gold has 5 choices, then silver 4, then bronze 3: 5 {X} 4 {X} 3 = 60. If Ali wins gold, silver has 4 choices and bronze 3: 4 {X} 3 = 12.',
             parts=[P('a', 'The medals can be given in {b} different ways.', [60]),
-                   P('b', 'Ali must win gold. Then there are {b} ways.', [12])]))
+                   P('b', 'Ali is one of the runners and must win gold. Then there are {b} ways.', [12])]))
 I.append(IT(U, 'S', 8, 3,
             'This code lists pairs. The outer repeat changes a and the inner repeat changes b. Predict what it says.',
             'For each a the inner repeat says 2 numbers: 11, 12, then 21, 22, then 31, 32. The 3rd is 21 and it says 6 numbers. '
@@ -120,7 +119,7 @@ I.append(IT(U, 'T', 1, 4,
             fig={'type': 'l6_routes', 'cols': 4, 'rows': 3, 'cell': 10, 'mark': ['2,1']},
             parts=[P('a', 'Routes from Start to X: {b}. Routes from X to End: {b}.', [3, 6], '3, 6'),
                    P('b', 'Routes that go through X: {b}.', [18])],
-            hint='Count the routes to X and from X separately. Then multiply.', figright=True, partsrow=True))
+            hint='A route through X has two parts. Count each part.', figright=True, partsrow=True))
 I.append(IT(U, 'T', 2, 4,
             'You have 4 digit cards: 1, 2, 3, 4. Put all 4 cards in a row to make a 4-digit number.',
             'First digit 4 choices, then 3, then 2, then 1: 24 numbers. Even numbers end in 2 or 4: 2 choices for the last digit and 3 × 2 × 1 for the rest, 12. '
@@ -154,7 +153,7 @@ I.append(IT(U, 'G', 2, 5,
             f'So 16 − 4 = 12 pairs have an even product. With 6 and 6: 36 pairs, 3 {X} 3 = 9 odd, 27 even.',
             fig=code([['var', 'set count to (0)'], ['var', 'set a to (1)'],
                       ['ctl', 'repeat (4)', [['var', 'set b to (1)'],
-                                             ['ctl', 'repeat (4)', [['ctl', f'if <(a {X} b mod 2) = (0)> then', [['var', 'change count by (1)']]], ['var', 'change b by (1)']]],
+                                             ['ctl', 'repeat (4)', [['var', f'set p to (a {X} b)'], ['ctl', 'if <(p mod 2) = (0)> then', [['var', 'change count by (1)']]], ['var', 'change b by (1)']]],
                                              ['var', 'change a by (1)']]],
                       ['look', 'say (count)']]),
             parts=[P('a', 'It checks {b} pairs.', [16]),

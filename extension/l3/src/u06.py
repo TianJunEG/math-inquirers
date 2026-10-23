@@ -94,7 +94,7 @@ u.T('A jug is full of juice. Mei drinks 1/4 of the jug. Ali drinks 1/3 of the ju
     space={'rows': ['Working:', '', '']})
 
 # ---------------- Go further
-u.G('Beyond Level 3: Adding fractions with top number 1.\nWrite each fraction as a sum of 2 fractions that each have top number 1.', parts=[
+u.G('Beyond Level 3: Adding fractions with top number 1.\nWrite each as 2 fractions with top number 1.', parts=[
     P('a', '3/4 = 1/2 + 1/{b}', A('4')), P('b', '5/6 = 1/2 + 1/{b}', A('3')), P('c', '7/12 = 1/3 + 1/{b}', A('4'))],
     hint='Take away the first fraction. What is left over?',
     why='(a) 3/4 - 1/2 = 3/4 - 2/4 = 1/4. (b) 5/6 - 1/2 = 5/6 - 3/6 = 2/6 = 1/3. (c) 7/12 - 1/3 = 7/12 - 4/12 = 3/12 = 1/4.',

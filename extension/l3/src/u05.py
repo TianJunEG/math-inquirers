@@ -109,7 +109,7 @@ u.G('Beyond Level 3: Remainders when you add and double.\nA number leaves remain
     why='(a) 3 + 5 = 8, and 8 ÷ 7 leaves remainder 1. Test: 10 + 5 = 15 and 15 ÷ 7 = 2 remainder 1. (b) 3 + 3 = 6, which is smaller than 7. Test: 20 ÷ 7 = 2 remainder 6. (c) 5 + 5 = 10, and 10 ÷ 8 leaves remainder 2. Test: 13 doubled is 26, and 26 ÷ 8 = 3 remainder 2.',
     space={'rows': ['My test numbers:']})
 u.G('Ali has between 20 and 100 marbles. Counting in 3s leaves 1 over. Counting in 4s leaves 2 over. Counting in 5s leaves 3 over. How many marbles does he have? {b}', A('58'),
-    hint='For each clue, how far is the number from a full group?',
+    hint='Compare each clue with a full group.',
     why='1 left over when counting in 3s is the same as being 2 short of a full group. Counting in 4s with 2 left is 2 short too, and counting in 5s with 3 left is 2 short. So the number is 2 less than a number in the 3, 4 and 5 times tables. The first such number is 60 (and then 120). 60 - 2 = 58. Check: 58 ÷ 3 = 19 r 1, 58 ÷ 4 = 14 r 2, 58 ÷ 5 = 11 r 3.')
 u.G('Make up your own number riddle: a range and 2 remainder clues. Only ONE number may fit. Swap with a grown-up.',
     A('17', 'Answers vary. Example: I am between 10 and 25. When I am divided by 4 the remainder is 1. When I am divided by 3 the remainder is 2. The only number is 17.'),

@@ -750,7 +750,7 @@
    "tier": "go",
    "page": 5,
    "beyond": "Adding fractions with top number 1",
-   "text": "Write each fraction as a sum of 2 fractions that each have top number 1.",
+   "text": "Write each as 2 fractions with top number 1.",
    "parts": [
     {
      "label": "a",

@@ -45,11 +45,11 @@ def _():
 
 @check('L6U05-S01')
 def _():
-    mains, drinks, fruits = range(4), ['tea', 'milk', 'juice'], range(2)
-    n = len(list(itertools.product(mains, drinks, fruits)))
-    n4 = len(list(itertools.product(mains, drinks + ['water'], fruits)))
-    nj = len([x for x in itertools.product(mains, drinks, fruits) if x[1] == 'juice'])
-    return {'a': [n], 'b': [n4], 'c': [nj]}
+    frames, seats, bells = ['red', 'blue', 'green', 'grey', 'black'], range(3), range(2)
+    n = len(list(itertools.product(frames, seats, bells)))
+    n6 = len(list(itertools.product(frames + ['white'], seats, bells)))
+    nj = len([x for x in itertools.product(frames, seats, bells) if x[0] == 'red'])
+    return {'a': [n], 'b': [n6], 'c': [nj]}
 
 
 @check('L6U05-S02')
@@ -60,10 +60,10 @@ def _():
 
 @check('L6U05-S03')
 def _():
-    shakes = lambda n: len(list(itertools.combinations(range(n), 2)))
-    n36 = [n for n in range(2, 40) if shakes(n) == 36][0]
-    assert shakes(4) == 6 and shakes(5) == 10          # the two pictures
-    return {'a': [shakes(6)], 'b': [shakes(8)], 'c': [n36]}
+    games = lambda n: len(list(itertools.combinations(range(n), 2)))
+    n66 = [n for n in range(2, 40) if games(n) == 66][0]
+    assert games(4) == 6                    # the picture
+    return {'a': [games(8)], 'b': [games(11)], 'c': [n66]}
 
 
 @check('L6U05-S04')

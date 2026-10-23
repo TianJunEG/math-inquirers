@@ -205,162 +205,10 @@
    "partsrow": true
   },
   {
-   "id": "L6U04-S04",
-   "tier": "start",
-   "text": "A machine does 2 steps. Look at the first IN and OUT.",
-   "page": 1,
-   "parts": [
-    {
-     "label": "a",
-     "text": "The middle box is {b}.",
-     "answer": {
-      "value": [
-       "15"
-      ],
-      "text": "15"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The last step is add {b}.",
-     "answer": {
-      "value": [
-       "4"
-      ],
-      "text": "4"
-     }
-    },
-    {
-     "label": "c",
-     "text": "IN 9 gives OUT {b}.",
-     "answer": {
-      "value": [
-       "31"
-      ],
-      "text": "31"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_machine",
-    "chain": [
-     "5",
-     "× 3",
-     "",
-     "+ ?",
-     "19"
-    ]
-   },
-   "explanation": "IN 5 times 3 is 15, so the middle box is 15. 15 + 4 = 19, so the last step is add 4. IN 9: 9 × 3 = 27, then 27 + 4 = 31.",
-   "partsrow": true
-  },
-  {
-   "id": "L6U04-S03",
-   "tier": "start",
-   "text": "Machine P does × 2, then + 6. Machine Q does + 6, then × 2. Use the same IN for both.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "IN 7:  P gives {b}  and Q gives {b}.",
-     "answer": {
-      "value": [
-       "20",
-       "26"
-      ],
-      "text": "20, 26"
-     }
-    },
-    {
-     "label": "b",
-     "text": "IN 10:  P gives {b}  and Q gives {b}.",
-     "answer": {
-      "value": [
-       "26",
-       "32"
-      ],
-      "text": "26, 32"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Do P and Q give the same OUT?   {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "No"
-      ],
-      "text": "No"
-     }
-    }
-   ],
-   "explanation": "IN 7: P gives 7 × 2 = 14, then 20. Q gives 7 + 6 = 13, then 26. IN 10: P gives 26 and Q gives 32. The order of the steps matters, so P and Q do not give the same OUT."
-  },
-  {
-   "id": "L6U04-S06",
-   "tier": "start",
-   "text": "The block \"answer\" holds the number you type. In code, × means times. Predict what the sprite says.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "You type 9. It says {b}.",
-     "answer": {
-      "value": [
-       "33"
-      ],
-      "text": "33"
-     }
-    },
-    {
-     "label": "b",
-     "text": "You type 25. It says {b}.",
-     "answer": {
-      "value": [
-       "97"
-      ],
-      "text": "97"
-     }
-    },
-    {
-     "label": "c",
-     "text": "It says 61. You typed {b}.",
-     "answer": {
-      "value": [
-       "16"
-      ],
-      "text": "16"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_code",
-    "prog": [
-     [
-      "hat",
-      "when green flag clicked"
-     ],
-     [
-      "look",
-      "ask (IN?) and wait"
-     ],
-     [
-      "var",
-      "set out to (answer × 4 − 3)"
-     ],
-     [
-      "look",
-      "say (out)"
-     ]
-    ]
-   },
-   "explanation": "out = answer × 4 − 3. Type 9: 36 − 3 = 33. Type 25: 100 − 3 = 97. For 61, run it backwards: 61 + 3 = 64, then 64 ÷ 4 = 16.",
-   "figside": true
-  },
-  {
    "id": "L6U04-S07",
    "tier": "start",
-   "text": "Plan a search. Find n when 7n − 4 = 73 by trying n = 0, 1, 2, ... Fill in the blanks.",
-   "page": 2,
+   "text": "This loop hunts for the n that makes 7n − 4 equal 73. It tries 0, 1, 2, ... in turn. Complete the blocks.",
+   "page": 1,
    "parts": [
     {
      "label": "a",
@@ -430,6 +278,158 @@
    "figside": true
   },
   {
+   "id": "L6U04-S03",
+   "tier": "start",
+   "text": "Machine P does × 2, then + 6. Machine Q does + 6, then × 2. Use the same IN for both.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "IN 7:  P gives {b}  and Q gives {b}.",
+     "answer": {
+      "value": [
+       "20",
+       "26"
+      ],
+      "text": "20, 26"
+     }
+    },
+    {
+     "label": "b",
+     "text": "IN 10:  P gives {b}  and Q gives {b}.",
+     "answer": {
+      "value": [
+       "26",
+       "32"
+      ],
+      "text": "26, 32"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Do P and Q give the same OUT?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "IN 7: P gives 7 × 2 = 14, then 20. Q gives 7 + 6 = 13, then 26. IN 10: P gives 26 and Q gives 32. The order of the steps matters, so P and Q do not give the same OUT."
+  },
+  {
+   "id": "L6U04-S04",
+   "tier": "start",
+   "text": "A machine does 2 steps. Look at the first IN and OUT.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The middle box is {b}.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The last step is add {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "IN 9 gives OUT {b}.",
+     "answer": {
+      "value": [
+       "31"
+      ],
+      "text": "31"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_machine",
+    "chain": [
+     "5",
+     "× 3",
+     "",
+     "+ ?",
+     "19"
+    ]
+   },
+   "explanation": "IN 5 times 3 is 15, so the middle box is 15. 15 + 4 = 19, so the last step is add 4. IN 9: 9 × 3 = 27, then 27 + 4 = 31.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-S06",
+   "tier": "start",
+   "text": "The block \"answer\" holds the number you type. In code, × means times. Predict what the sprite says.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "You type 9. It says {b}.",
+     "answer": {
+      "value": [
+       "33"
+      ],
+      "text": "33"
+     }
+    },
+    {
+     "label": "b",
+     "text": "You type 25. It says {b}.",
+     "answer": {
+      "value": [
+       "97"
+      ],
+      "text": "97"
+     }
+    },
+    {
+     "label": "c",
+     "text": "It says 61. You typed {b}.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "look",
+      "ask (IN?) and wait"
+     ],
+     [
+      "var",
+      "set out to (answer × 4 − 3)"
+     ],
+     [
+      "look",
+      "say (out)"
+     ]
+    ]
+   },
+   "explanation": "out = answer × 4 − 3. Type 9: 36 − 3 = 33. Type 25: 100 − 3 = 97. For 61, run it backwards: 61 + 3 = 64, then 64 ÷ 4 = 16.",
+   "figside": true
+  },
+  {
    "id": "L6U04-S08",
    "tier": "start",
    "text": "Siti has n marbles. Kumar has 5 marbles more. Jenny has 3 times as many marbles as Siti.",
@@ -448,7 +448,7 @@
     },
     {
      "label": "b",
-     "text": "When n = 8, all 3 together have {b} stickers.",
+     "text": "When n = 8, all 3 together have {b} marbles.",
      "answer": {
       "value": [
        "45"
@@ -458,7 +458,7 @@
     },
     {
      "label": "c",
-     "text": "All 3 together have {b} × n + {b} stickers.",
+     "text": "All 3 together have {b} × n + {b} marbles.",
      "answer": {
       "value": [
        "5",
@@ -473,7 +473,7 @@
   {
    "id": "L6U04-S05",
    "tier": "start",
-   "text": "Run each machine backwards to find n. Check by going forwards.",
+   "text": "Find n in each equation by undoing the steps. Then check by going forwards.",
    "page": 3,
    "parts": [
     {
@@ -712,7 +712,7 @@
      }
     }
    ],
-   "hint": "For OUT 77, undo Y first, then undo X.",
+   "hint": "Start from the OUT end of the joined machines.",
    "space": {
     "rows": [
      "Working:"

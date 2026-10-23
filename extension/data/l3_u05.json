@@ -735,7 +735,7 @@
     "text": "58"
    },
    "explanation": "1 left over when counting in 3s is the same as being 2 short of a full group. Counting in 4s with 2 left is 2 short too, and counting in 5s with 3 left is 2 short. So the number is 2 less than a number in the 3, 4 and 5 times tables. The first such number is 60 (and then 120). 60 - 2 = 58. Check: 58 ÷ 3 = 19 r 1, 58 ÷ 4 = 14 r 2, 58 ÷ 5 = 11 r 3.",
-   "hint": "For each clue, how far is the number from a full group?"
+   "hint": "Compare each clue with a full group."
   },
   {
    "id": "L3U05-G03",

@@ -462,7 +462,7 @@
    "id": "L3U01-S11",
    "tier": "start",
    "page": 3,
-   "text": "I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than my thousands digit. My ones digit is the greatest odd digit. What number am I? {b}",
+   "text": "I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than 6. My ones digit is the greatest odd digit. What number am I? {b}",
    "answer": {
     "value": [
      "6309"

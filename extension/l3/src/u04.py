@@ -28,7 +28,7 @@ u.learn(
     {'text': 'Ravi’s plant is 480 mm tall. Mei’s plant is 215 mm shorter. How tall is Mei’s plant? {b} mm', 'answer': A('265'),
      'explanation': 'Mei’s plant is shorter, so subtract: 480 - 215 = 265 mm. Check: 265 + 215 = 480.'})
 
-u.u['learn']['facts'] = {'title': 'More models', 'lines': ['Times as many: draw 1 box, then 3 boxes. Count the boxes.', 'Total and difference: take away the extra, then share the rest.', 'Same after giving: the gap is shared, so half the gap moves.']}
+u.u['learn']['facts'] = {'title': 'More models', 'lines': ['Times as many: draw 1 box, then 3 boxes. Count the boxes.', 'Total and difference: take away the extra, then share the rest.', 'Same after giving: half the gap moves.']}
 
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'A farm has 2400 eggs. 875 of them are brown. The rest are white. How many eggs are white? {b}', A('1525'),

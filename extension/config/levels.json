@@ -148,13 +148,11 @@
     9,
     10
    ],
-   "welcome_notes": [
-    "Beyond Level 3 is ahead of school. You may skip it."
-   ],
-   "welcome_equipment": "a pencil, a rubber, a ruler and a paper corner (Unit 8)",
+   "welcome_notes": [],
+   "welcome_equipment": "a pencil, a rubber, a ruler and a paper corner",
    "welcome_print_note": {
-    "colour": "Printing this soft copy? Print at 100 percent so the ruler in Unit 9 is true size.",
-    "bw": "The ruler in Unit 9 is printed at real size."
+    "colour": "",
+    "bw": ""
    }
   },
   "4": {

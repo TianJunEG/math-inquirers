@@ -297,3 +297,10 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 - L3-REPLACE-ALL: replace all ~15 Level 3 extension items flagged as holiday clones.
 - L3-TRIM: Level 3 extension workbook to 100 pages.
 - L5-TRIM: Level 5 extension workbook to 100 pages (trim Answers section, not practice items).
+
+## 2026-10-23 (owner replies, later)
+- L6-REPLACE-ALL: replace all Level 6 extension items flagged as too close to holiday P6 items (new stories and frames).
+- L6-LEGEND: add a "Reading the code blocks" legend to the Level 6 workbook.
+- P2-NOTAFFIL-FRONT: "not affiliated" sentence on P2 front matter only (not on licence pages).
+- P2-GREY-OK: accept raised flat-grey limit (90 -> 130 blocks, total budget) on P2 answer keys.
+- P2-FRACTIONS-KEEP: keep fractions in P2 Semester 1.

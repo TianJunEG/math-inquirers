@@ -93,7 +93,7 @@ u.T('One of Ben, Aisha and Wei broke a cup. They each say 1 thing: Ben “Wei di
     hint='Pick one child. Are exactly 1 of the 3 sayings true?',
     space={'rows': ['My tests:', '', '']},
     why='If Ben did it: Aisha tells the truth, and Wei tells the truth (Ben’s words are a lie). That is 2 true statements. If Wei did it: Ben and Aisha both tell the truth. If Aisha did it: Ben lies, Aisha lies and Wei tells the truth. That is exactly 1. So Aisha did it.')
-u.T('A shop sold pencils on 4 days. Draw a bar graph if you like. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday. They sold 185 pencils in all.', parts=[
+u.T('A shop sold 185 pencils in 4 days. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday.', parts=[
     P('a', 'Monday: {b}', A('30')), P('b', 'Tuesday: {b}', A('45')), P('c', 'Wednesday: {b}', A('60')), P('d', 'Thursday: {b}', A('50'))],
     partsrow=True,
     hint='Draw Monday as 1 bar. Then draw the other days with it.',
