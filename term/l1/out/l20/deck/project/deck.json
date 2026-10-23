@@ -24,8 +24,8 @@
   "s-m4",
   "s-m4a",
   "s-break",
-  "s-check1",
-  "s-check2",
+  "s-quest1",
+  "s-quest2",
   "s-ws1",
   "s-ws1ans",
   "s-ws2",
@@ -67,8 +67,8 @@
    "start": "s-break"
   },
   "s7": {
-   "description": "End-of-term check",
-   "start": "s-check1"
+   "description": "Mi's Challenge Quest",
+   "start": "s-quest1"
   },
   "s8": {
    "description": "Workbook",
@@ -88,8 +88,8 @@
   }
  },
  "no_record": [
-  "s-check1",
-  "s-check2"
+  "s-quest1",
+  "s-quest2"
  ],
  "faces": {
   "fredoka": {

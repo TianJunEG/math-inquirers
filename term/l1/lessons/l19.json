@@ -43,23 +43,23 @@
    "Number bonds to 10 (Number Bond Inquiry)"
   ],
   "safe_to_miss": true,
-  "note": "Fairly safe to miss, with one exception: the Term 2 Lesson 10 check has one picture-equation question (a heart + heart total and a friend's number to check). A child who misses this lesson watches the recording and does workbook pages 1 and 2 before the check. A child who joins here without Term 2 Lessons 5 and 6 can follow, because the warm-up shows groups of and the times sign again, and the times lines are in Think harder and Go further only."
+  "note": "Fairly safe to miss, with one exception: Mi's Challenge Quest in Term 2 Lesson 10 has one picture-equation gate (a heart + heart total and a friend's number to check). A child who misses this lesson watches the recording and does workbook pages 1 and 2 before the quest. A child who joins here without Term 2 Lessons 5 and 6 can follow, because the warm-up shows groups of and the times sign again, and the times lines are in Think harder and Go further only."
  },
  "materials": {
   "child": [
-   "The printed workbook with the ten-frames and counters kit page (page 6): a grown-up cuts out the 20 counters beforehand",
+   "The printed workbook with the ten-frames and counters kit page (page 6) and the shape cards kit page (page 7): a grown-up cuts out the 20 counters and the 15 shape cards beforehand",
    "About 30 small things of one kind (counters, buttons, dry beans or pasta) in case more counters are needed",
    "2 small cups, mugs or bowls",
-   "4 small pieces of paper (shape cards): a grown-up draws a circle, a square, a triangle and a heart, one on each piece (the star in some questions needs no card)",
+   "The 15 shape cards from page 7 (three each of circle, square, triangle, heart and star). With no printer, draw the shapes on 15 small pieces of paper, or use up to 3 pieces of paper for each shape",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
    "The slide deck",
-   "A set of paper shape cards (a circle, a square, a triangle and a heart), a cup and some counters to show on camera if you wish",
+   "A set of paper shape cards (three each of circle, square, triangle, heart and star), a cup and some counters to show on camera if you wish",
    "A visible clock"
   ],
   "kit_pages": [
-   "Ten-frames and counters (page 6): 20 counters to cut out, 10 red and 10 yellow, and four ten-frames to lay counters on"
+   "Ten-frames and counters (page 6): 20 counters to cut out, 10 red and 10 yellow, and four ten-frames to lay counters on. Shape cards (page 7): 15 cards, three each of circle, square, triangle, heart and star, big enough for 6 counters"
   ],
   "ruler": false,
   "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. Cups stay on the table."
@@ -466,7 +466,7 @@
      ]
     }
    ],
-   "note": "Round 1, about 5 minutes. Children use their shape cards (small papers with a circle, a square, a triangle and a heart drawn on them) and counters (the kit page counters or small things). The picture says circle + square = 10, and the square is 4. They count out 10 counters, put 4 on the square card and the rest on the circle card, then count the circle card (6). Say: the circle is 6. Write circle = 6 on the screen, then check: 6 + 4 = 10. If a family has no cut-out cards, a cup or a piece of paper with the shape drawn on it works. Answer: 6. Do not name a child with a wrong answer."
+   "note": "Round 1, about 5 minutes. Children use their shape cards (the cut-out kit cards: circle, square, triangle, heart and star, up to three of each) and counters (the kit page counters or small things). The picture says circle + square = 10, and the square is 4. They count out 10 counters, put 4 on the square card and the rest on the circle card, then count the circle card (6). Say: the circle is 6. Write circle = 6 on the screen, then check: 6 + 4 = 10. If a family has no cut-out cards, a cup or a piece of paper with the shape drawn on it works. Answer: 6. Do not name a child with a wrong answer."
   },
   {
    "id": "s-explore2",
@@ -1123,12 +1123,12 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Find One First, and the end-of-term check",
-      "Have ready: the Term 2 Lesson 10 workbook with its tokens page cut out, 3 to 6 small things, the check sheet in its envelope (keep it closed), a pencil and paper."
+      "Find One First, and Mi's Chal\u00adlenge Quest",
+      "Have ready: the Term 2 Lesson 10 workbook with its tokens page cut out (30 tokens), 3 to 6 small things, the Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper."
      ]
     }
    ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that next lesson holds the end-of-term check: the sheet and the grown-up note were sent a week before. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that next lesson holds Mi's Challenge Quest, a game with Mi: the Quest Log and the grown-up note were sent a week before. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
    "mascot": {
     "size": "l",
     "say": "Great thinking today!"
@@ -1846,7 +1846,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Find One First, and it holds our end-of-term check. Please have your Term 2 Lesson 10 workbook with its tokens page cut out, three to six small things for a shop, your check sheet in its envelope (keep it closed), a pencil and paper. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Find One First, and it holds Mi's Challenge Quest, a game with Mi. Please have your Term 2 Lesson 10 workbook with its tokens page cut out, three to six small things for a shop, your Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -3952,14 +3952,14 @@
    "How can you check your number in the line?"
   ],
   "when_stuck": "Let your child use counters and two cups, and wait 10 seconds before helping. Asking ‘what is the total?’ works better than giving the answer. Please do not teach a rule or letters: counters and a cup are enough. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Term 2 Lesson 10: Find One First, with the end-of-term check. It has one picture-equation question: if your child missed this lesson, do workbook pages 1 and 2 first. Online practice: your tutor will share the link.",
+  "next": "Term 2 Lesson 10: Find One First, with Mi's Chal\u00adlenge Quest. It has one picture-equation question: if your child missed this lesson, do workbook pages 1 and 2 first. Online practice: your tutor will share the link.",
   "quote": "A shape is a hidden number, and the same shape is always the same number.",
   "report_line": "Your child is learning that a shape can stand for a hidden number and that the same shape is always the same number. This week: finding one shape, then two shapes from two lines.",
   "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The Term 2 Lesson 10 workbook, with its $1 tokens page (cut out 20 tokens)",
+   "The Term 2 Lesson 10 workbook, with its $1 tokens page (cut out 30 tokens)",
    "3 to 6 small things for a shop",
-   "The check sheet (3 pages, printed at 100%), kept closed in its envelope",
+   "The Quest Log (3 pages, printed at 100%), kept closed in its envelope; a quest partner",
    "Pencil, rubber and paper"
   ]
  },
@@ -3974,7 +3974,7 @@
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first. Check that each shape in a puzzle is a different number (T1: 6 and 7; T2: 6 and 9; T3: 3 and 5; G1: 5, 7 and 11; G2: 8 and 6; G3: 5 and 4) so you can answer a child who asks.",
-  "Tell parents a week before: print the workbook pages and the kit page (a grown-up cuts out the 20 counters), draw four shape cards (a circle, a square, a triangle and a heart on four small pieces of paper), and find about 30 counters or buttons and two cups. Small things stay away from mouths and younger children. Next lesson holds the end-of-term check: with this lesson's materials, send the check sheet (in a closed envelope) and the grown-up note.",
+  "Tell parents a week before: print the workbook pages and both kit pages (a grown-up cuts out the 20 counters and the 15 shape cards: three each of circle, square, triangle, heart and star), and find about 30 counters or buttons and two cups. Keep the cards in an envelope. Small things stay away from mouths and younger children. Next lesson is Mi's Challenge Quest: with this lesson's materials, send the Quest Log (in a closed envelope) and the grown-up note.",
   "Have the slides open. Have your own shape cards, a cup and counters to show on camera if you wish.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
   "Be plain with families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and the times line are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Never use letters for unknowns; shapes and boxes only. The counters are the method, not a rule to recite.",
@@ -3997,6 +3997,32 @@
     "width": 100,
     "title": "Kit page: ten-frames and counters",
     "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Red counters can hide in a cup; yellow counters can be the loose ones. The ten-frames stay on the page."
+   },
+   {
+    "type": "cards",
+    "labels": [
+     "circle",
+     "circle",
+     "circle",
+     "square",
+     "square",
+     "square",
+     "triangle",
+     "triangle",
+     "triangle",
+     "heart",
+     "heart",
+     "heart",
+     "star",
+     "star",
+     "star"
+    ],
+    "cols": 3,
+    "w": 250,
+    "h": 110,
+    "width": 100,
+    "title": "Kit page: shape cards",
+    "intro": "A grown-up cuts out the 15 shape cards before the lesson: three each of circle, square, triangle, heart and star. Each card is big enough for 6 counters. Children may draw the shape on its card. Keep the cards in an envelope."
    }
   ]
  },

@@ -17,7 +17,7 @@
       "Two-step stories: one operation per step",
       "Comparing: more than, fewer than"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term check (plan, section 5), built as the block end_of_term_check. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (owner decision, 22 Oct 2026: a game, not a test), built as the block challenge_quest by assets/quest_build.py. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim."
   },
   "contest_moves": [
     "two-step story, one operation per step",
@@ -29,7 +29,7 @@
     "Read a short story twice: first to say what it is about, then to pick out the numbers and the question.",
     "Write one number sentence for each step of a two-step story (add or take away within 100) and answer in a sentence.",
     "Choose add or take away from the words of the story (gets, gives away, more than, fewer than), not from the order of the numbers.",
-    "Take the Term 1 end-of-term check on private paper: 8 short questions that cover the lessons of the term."
+    "Play Mi's Challenge Quest, a game with Mi on private paper: 8 short gates that visit the lessons of the term."
   ],
   "joining_cold": {
     "remember": [
@@ -42,24 +42,24 @@
       "'I think of a number'"
     ],
     "safe_to_miss": false,
-    "note": "Lesson 10 is the last lesson of the term and holds the end-of-term check, so it is hard to miss: the lesson is recorded, the check is taken at the make-up slot (same private procedure, see the check key). A child who joins late is not lost: the warm-up gives what the stories need, the check is optional for the child, and the report line covers only the lessons attended. Lessons 6 and 7 (jumps of ten, take away) help most for the Start here sums."
+    "note": "Lesson 10 is the last lesson of the term and holds Mi's Challenge Quest, so it is hard to miss: the lesson is recorded, but the quest is not on the recording. A child who missed it plays at the make-up slot, before watching the recording (same private procedure, see the quest tutor notes). A child who joins late is not lost: the warm-up gives what the stories need, the quest is optional for the child, and the line for the grown-up covers only what the child met. Lessons 6 and 7 (jumps of ten, take away) help most for the Start here sums."
   },
   "materials": {
     "child": [
       "About 20 counters: buttons, coins, pasta or the kit squares",
       "Workbook, pencil, rubber, spare paper",
-      "Closed check sheet (4 pages) and a ruler with cm"
+      "Closed Quest Log (4 pages), a ruler with cm, and a quest partner (a grown-up or a brother or sister)"
     ],
     "tutor": [
       "A slide deck, and a few counters to act out a story on camera if you wish",
-      "The check key and the private return plan (L10_Check_Tutor_Key.pdf), and a blank record sheet for each child",
-      "A clock or timer on your own device, not on the shared screen during the check"
+      "The quest tutor notes (L10_Quest_Tutor_Notes.pdf): answers, the private notes sheet for each child and the group advice sheet",
+      "Your own watch or clock, out of sight of the camera. No timer or clock is shown during the quest"
     ],
     "kit_pages": [
       "Page 6 of the workbook (tens bars and ones squares): the squares make good counters; cut out before the lesson"
     ],
     "ruler": true,
-    "notes": "A ruler with centimetres is needed for question 7 of the check only; families keep one at home, and there is no printed ruler on the kit page. Nothing needs to be bought: counters can be buttons, coins or pasta. No matches, toothpicks or anything sharp. Print the check sheet at actual size (100%): the bar at the foot of page 4 must measure 10 cm."
+    "notes": "A ruler with centimetres is needed for gate 7 of the quest only; families keep one at home, and there is no printed ruler on the kit page. Nothing needs to be bought: counters can be buttons, coins or pasta. No matches, toothpicks or anything sharp. Print the Quest Log at actual size (100%): the bar at the foot of page 4 must measure 10 cm."
   },
   "timing": {
     "parts": [
@@ -113,7 +113,7 @@
       },
       {
         "id": "exit",
-        "title": "End-of-term check",
+        "title": "Mi's Challenge Quest",
         "start": 63,
         "end": 83
       },
@@ -137,9 +137,9 @@
       "the optional slide",
       "the second explore story",
       "the quick-fire in the mini-lesson",
-      "never shorten the end-of-term check"
+      "never shorten Mi's Challenge Quest"
     ],
-    "notes": "Lesson 10 is the last lesson of the term, so it holds the end-of-term check: the part End-of-term check (minutes 63 to 83) is the check only. The exit ticket (E1 to E3) is not done live: the check ends with the same kind of two-step story, so the 4 minutes go to the workbook (24 minutes, so Start here is finished in class). The check has 8 short questions and one optional Think harder item; a middle child needs about 16 minutes of reading aloud and quiet work, a slower child may use the 5 flex minutes at the end. The last 5 minutes are the standing buffer; nothing new is started in it."
+    "notes": "Lesson 10 is the last lesson of the term, so it holds Mi's Challenge Quest: the part Mi's Challenge Quest (minutes 63 to 83, after the break and the workbook) is the quest only. The exit ticket (E1 to E3) is not done live: the quest ends with the same kind of two-step story, so the 4 minutes go to the workbook (24 minutes, so Start here is finished in class). The quest has 8 short gates and one optional secret cave item; a middle child needs about 16 minutes of reading aloud and quiet work, a slower child may use the 5 flex minutes at the end. The last 5 minutes are the standing buffer; nothing new is started in it."
   },
   "sneak_peek": {
     "q1": "Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles does Ben have? You may draw them.",
@@ -179,8 +179,8 @@
       "action": "Pause. Explain your answer to someone at home, with a reason."
     },
     "exit": {
-      "say": "Recording: the private check is taken live or at the make-up slot. Ask your grown-up how to take it.",
-      "action": "Pause. Ask a grown-up and your tutor how to take the private check."
+      "say": "Recording: Mi's Challenge Quest is not recorded. Skip ahead. Ask your grown-up how to play it live or at the make-up slot.",
+      "action": "Skip ahead. Play Mi's Challenge Quest live with your group, or at the make-up slot your tutor arranges."
     },
     "look": {
       "say": "Recording: pause and fill in your look-back box. You can pass.",
@@ -210,7 +210,7 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Last lesson of the term. Pencil, paper, counters and your workbook on the table, please. Today we read stories twice, and at the end we do our end-of-term check."
+            "text": "Hello, inquirers! Last lesson of the term. Pencil, paper, counters and your workbook on the table, please. Today we read stories twice, and after our break and our workbook we play Mi's Challenge Quest."
           },
           {
             "k": "SAY",
@@ -227,7 +227,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Lesson 10 only: say once that the check is private and not a race. The routine and the four inquirer rules were taught in Lesson 1; for a new child one sentence is enough: notice it, test it, explain why, mistakes help us. Say the recording statement and the microphone routine in the same words every lesson."
+            "text": "Lesson 10 only: say once that Mi's Challenge Quest is a game on private paper, with a quest partner beside you, and not a race. The routine and the four inquirer rules were taught in Lesson 1; for a new child one sentence is enough: notice it, test it, explain why, mistakes help us. Say the recording statement and the microphone routine in the same words every lesson."
           }
         ]
       },
@@ -358,7 +358,7 @@
           },
           {
             "k": "SAY",
-            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start. Nobody is judged."
           },
           {
             "k": "READ",
@@ -769,7 +769,7 @@
         "lines": [
           {
             "k": "SLIDE",
-            "slide": "s-check1"
+            "slide": "s-quest1"
           },
           {
             "k": "REC",
@@ -777,34 +777,42 @@
           },
           {
             "k": "SAY",
-            "text": "Now the end-of-term check. Eight questions and one optional Think harder question. It takes about twenty minutes, on your own paper. It is not a race. You may skip any question. I will not say any answers, and I will not show anyone's paper."
+            "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming to the Pearl Cave, and eight gates are in the way. At each gate there is a puzzle for you. You work on your own paper with your quest partner beside you."
+          },
+          {
+            "k": "SAY",
+            "text": "It is a game, not a race, and nobody gets a score. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
           },
           {
             "k": "DO",
-            "text": "Children take out the closed check sheet, a pencil and a ruler. Grown-ups sit nearby and do not give answers. Paper flat on the table, never held up. Name on page 1.",
+            "text": "Pause the recording. Children take out the closed Quest Log, a pencil and a ruler. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1.",
             "s": 30
           },
           {
             "k": "READ",
-            "text": "Page 1. Question 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Question 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34."
+            "text": "Page 1. Gate 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Gate 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 1 (questions 1 and 2). Look around the gallery; say nothing about right or wrong. If asked, re-read a question to the whole group.",
+            "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
             "s": 100
           },
           {
             "k": "SAY",
-            "text": "Turn to page 2."
+            "text": "Gates one and two are open! Mi swims on. Turn to page 2."
           },
           {
             "k": "READ",
-            "text": "Question 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it. Question 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. Question 5. Part a: write 52 plus 30. Part b: write 74 take away 31."
+            "text": "Gate 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it. Gate 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. Gate 5. Part a: write 52 plus 30. Part b: write 74 take away 31."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 2 (questions 3 to 5).",
+            "text": "Children work quietly on page 2 (gates 3 to 5).",
             "s": 150
+          },
+          {
+            "k": "SAY",
+            "text": "Gates three, four and five are open!"
           },
           {
             "k": "MOVE",
@@ -813,50 +821,50 @@
           },
           {
             "k": "SAY",
-            "text": "Turn to page 3. You need your ruler for question 7."
+            "text": "Turn to page 3. You need your ruler for gate 7."
           },
           {
             "k": "READ",
-            "text": "Question 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box. Question 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is."
+            "text": "Gate 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box. Gate 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is."
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 3 (questions 6 and 7).",
+            "text": "Children work quietly on page 3 (gates 6 and 7).",
             "s": 170
           },
           {
             "k": "SAY",
-            "text": "Turn to page 4."
+            "text": "Gates six and seven are open! The Pearl Cave is just ahead. Turn to page 4."
           },
           {
             "k": "READ",
-            "text": "Question 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now. The last question is a Think harder question, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?"
+            "text": "Gate 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now. The secret cave has one more puzzle, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?"
           },
           {
             "k": "WORK",
-            "text": "Children work quietly on page 4: question 8, then the optional Think harder question if they wish.",
+            "text": "Children work quietly on page 4: gate 8, then the optional secret cave item if they wish.",
             "s": 170
           },
           {
             "k": "SLIDE",
-            "slide": "s-check2"
+            "slide": "s-quest2"
           },
           {
             "k": "SAY",
-            "text": "Pencils down. Check that your name is on page 1 and close your sheet. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. We will send a short note about your learning, never a mark."
+            "text": "You reached the Pearl Cave! Make sure your name is on page 1 and close your Quest Log. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. Mi's tutor will send you one line about what we saw, never a mark."
           },
           {
             "k": "DO",
-            "text": "Say nothing about answers. Remind the group that no score is shown and no answer is read out. Children who did not finish may use the flex time at the end.",
+            "text": "Say nothing about answers. Remind the group that nothing is added up and no answer is read out. Restart the recording. Children who did not finish may use the flex time at the end.",
             "s": 25
           },
           {
             "k": "STUCK",
-            "text": "A child who says they cannot do a question: say to the whole group that skipping is fine and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer."
+            "text": "A child who says they cannot do a gate: say to the whole group that skipping is fine, Mi swims round it, and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer."
           },
           {
             "k": "NOTE",
-            "text": "Check key, private return plan, record sheet and the parent note templates are in L10_Check_Tutor_Key.pdf. Do not collect, look at or mark any paper during the lesson. Photos arrive only on the program's business WhatsApp and the note goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the check takes its place in class."
+            "text": "The answers, your private notes sheet for each child, the group advice sheet and the one-line templates for the grown-up are in L10_Quest_Tutor_Notes.pdf. Do not collect or look at any paper during the lesson. Photos arrive only on the program's business WhatsApp and the line goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the quest takes its place in class."
           }
         ]
       },
@@ -895,7 +903,11 @@
           },
           {
             "k": "SAY",
-            "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 11, Who Is Where? You need about ten counters, a pencil and paper. Your tutor will tell you the start date."
+            "text": "Well done, inquirers, for the whole term. Next term starts with Lesson 11, Who Is Where? Your tutor will tell you the start date."
+          },
+          {
+            "k": "SAY",
+            "text": "Please have your Lesson 11 workbook with its cards page cut out by a grown-up (the place cards and the number cards), ten small things to put in a row (toys, cups or shoes), a coin or button, a small paper that says FRONT, a pencil and paper. Keep the cards in an envelope."
           },
           {
             "k": "SLIDE",
@@ -951,7 +963,7 @@
           },
           {
             "k": "NOTE",
-            "text": "This is the standing buffer. A child who needs more time for the check may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 22 either way; same answer, order does not matter when both orders can be done. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+            "text": "This is the standing buffer. A child who needs more time for the quest may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 22 either way; same answer, order does not matter when both orders can be done. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
           },
           {
             "k": "SAY",
@@ -977,7 +989,7 @@
           ]
         }
       ],
-      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 32, brain break 32 to 35, workbook 35 to 59, talk 59 to 63, end-of-term check 63 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off. Say that the check at the end is on private paper and is not a race.",
+      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 32, brain break 32 to 35, workbook 35 to 59, talk 59 to 63, Mi's Challenge Quest 63 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off. Say that Mi's Challenge Quest, after the break, is a game on private paper with a quest partner and is not a race.",
       "subtitle": "Read it twice: addition and subtraction in stories",
       "mascot": {
         "size": "l",
@@ -1125,7 +1137,7 @@
       "blocks": [
         {
           "t": "chip",
-          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is judged."
         },
         {
           "t": "cols",
@@ -1724,7 +1736,7 @@
           "short": false
         }
       ],
-      "note": "OPTIONAL, only if the whole class has finished the check and you are on time. A short exit ticket: read each question aloud twice, children write on page 5, then check their own ticket on the next slide. Nobody holds the ticket up to the camera. Skip it if you are behind: the check ends with a two-step story, so nothing is lost.",
+      "note": "OPTIONAL, only if the whole class has finished the quest and you are on time. A short exit ticket: read each question aloud twice, children write on page 5, then check their own ticket on the next slide. Nobody holds the ticket up to the camera. Skip it if you are behind: the quest ends with a two-step story, so nothing is lost.",
       "optional": true
     },
     {
@@ -1742,28 +1754,28 @@
           ]
         }
       ],
-      "note": "Read each answer aloud. Children check their own ticket in a different colour and may show fingers for how many they got right. The exit ticket is never the end-of-term check and never shown to the group.",
+      "note": "Read each answer aloud. Children check their own ticket in a different colour and may show fingers for how many they got right. The exit ticket is never part of Mi's Challenge Quest and never shown to the group.",
       "optional": true
     },
     {
-      "id": "s-check1",
+      "id": "s-quest1",
       "part": "exit",
       "kind": "light",
-      "title": "Our end-of-term check",
+      "title": "Mi's Chal\u00adlenge Quest",
       "blocks": [
         {
           "t": "chip",
-          "text": "Your own paper. Nobody sees your answers."
+          "text": "Your own paper. Mi swims with you."
         },
         {
           "t": "list",
           "ordered": true,
           "items": [
-            "Open your check sheet. Name on page 1.",
+            "Open your Quest Log. Name on page 1.",
             "Pencil and ruler ready.",
-            "I read each question. Then you write.",
-            "You may skip a question.",
-            "It is not a race."
+            "Your quest partner sits beside you.",
+            "I read each gate. Then you write.",
+            "You may skip a gate. It is not a race."
           ]
         },
         {
@@ -1775,20 +1787,25 @@
           ]
         }
       ],
-      "note": "Introduce the check for about a minute: 8 questions and one optional Think harder question (about 20 minutes), on your own private paper; not a race; you may skip any question; no answers are said aloud; nothing is shown to the group. Children take out the closed sheet only now. The paper lies flat on the table. Grown-ups sit nearby but do not help with answers. Follow the check key (L10_Check_Tutor_Key.pdf)."
+      "note": "Introduce the quest for about a minute: Mi the dolphin swims to the Pearl Cave through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; no answers are said aloud; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the quest tutor notes (L10_Quest_Tutor_Notes.pdf).",
+      "no_record": true,
+      "mascot": {
+        "size": "s",
+        "say": "Let's swim to the Pearl Cave!"
+      }
     },
     {
-      "id": "s-check2",
+      "id": "s-quest2",
       "part": "exit",
       "kind": "light",
-      "title": "Pencils down",
+      "title": "The Pearl Cave",
       "blocks": [
         {
           "t": "list",
           "ordered": true,
           "items": [
-            "Check your name is on page 1.",
-            "Close the sheet. Put your pencil down.",
+            "Make sure your name is on page 1.",
+            "Close the Quest Log. Put your pencil down.",
             "A grown-up takes one photo of each page, flat and from above.",
             "A grown-up sends the photos to the program's business WhatsApp number in the grown-up note, and nowhere else."
           ]
@@ -1797,11 +1814,12 @@
           "t": "card",
           "head": "WELL DONE",
           "items": [
-            "You tried your best. We share words about your learning, never marks."
+            "You reached the Pearl Cave! Mi will tell your grown-up one thing we saw."
           ]
         }
       ],
-      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never marks in front of the group. Remind the group that no answers will be read out and no scores will be shown. Children who did not finish may use the flex time at the end. The number is in the grown-up note, never on a slide."
+      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use the flex time at the end. Restart the recording for the look-back. The number is in the grown-up note, never on a slide.",
+      "no_record": true
     },
     {
       "id": "s-look",
@@ -1813,7 +1831,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next term with one catch-up question for the whole group; never a direct message.",
+      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next term with one catch-up question for the whole group; never a direct message.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1834,11 +1852,12 @@
           "head": "NEXT TERM",
           "items": [
             "Term 2, Lesson 11: Who Is Where?",
-            "Bring counters, a pencil and paper."
+            "Cut out the cards on the Lesson 11 workbook kit page and keep them in an envelope.",
+            "Bring 10 small things, a coin, a paper that says FRONT, a pencil and paper."
           ]
         }
       ],
-      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. A child who needs longer to finish the check may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide. Remind families that the tutor sends a short note of progress words, never a mark.",
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. A child who needs longer to finish the quest may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide. Remind families that the tutor sends one line about what we saw in Mi's Challenge Quest, never a mark.",
       "mascot": {
         "size": "l",
         "say": "Great thinking this term!"
@@ -3182,7 +3201,7 @@
     ]
   },
   "parent": {
-    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. The end-of-term check is private and optional. Term 1 goes beyond the school Primary 1 syllabus on purpose, always with counters and small steps, so some questions may be new to your child.",
+    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal\u00adlenge Quest, our end-of-term game with Mi, is played on private paper and is optional; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new.",
     "words": [
       "step: one thing that happens",
       "read it twice: story, then numbers",
@@ -3200,35 +3219,35 @@
       "Did we count everyone?"
     ],
     "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962.",
-    "next": "Term 2 starts with Lesson 11: Who Is Where? If your child took the check, send one photo of each page to the business WhatsApp the same day, as in the grown-up note. We keep photos for 90 days after the program ends, then delete them. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
-    "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and the end-of-term check.",
+    "next": "Term 2 starts with Lesson 11: Who Is Where? If your child played Mi's Chal\u00adlenge Quest, send one photo of each Quest Log page to the business WhatsApp the same day, as in the grown-up note. Photos are kept 90 days after the program ends, then deleted. The recording has the tutor, the shared screen and any voice that is not muted. The recording link is private to your family: please do not share it.",
+    "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and Mi's Chal\u00adlenge Quest.",
     "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
     "quote": "One step at a time. Read it twice, then write one number sentence for each step.",
     "next_materials": [
-      "About 10 counters (buttons, coins or pasta), a pencil and paper",
-      "Your tutor will tell you the Term 2 start date"
+      "The Lesson 11 workbook with its cards page (page 6) cut out and kept in an envelope",
+      "Ten small things for a row, a coin, a paper that says FRONT, a pencil and paper. Your tutor will tell you the Term 2 start date"
     ]
   },
   "safeguarding": [
     "Counters stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. The ruler is for drawing lines only.",
     "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
-    "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. The end-of-term check is the same: papers stay flat on the table, are never held up or read out, and no answer is said aloud.",
-    "The check comes back to the program privately: the parent takes one photo of each page and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number; tutors never use a personal phone for it and never receive it in a chat with the child. The photos are kept for 90 days after the program ends, then deleted (as the privacy notice says). The tutor sends the parent a note of progress words only. No score is shown to the group, no ranking, no comparison between children, no private message to a child.",
+    "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. Mi's Challenge Quest is the same: papers stay flat on the table, are never held up or read out, and no answer is said aloud.",
+    "Mi's Challenge Quest comes back to the program privately: the parent takes one photo of each page and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number; tutors never use a personal phone for it and never receive it in a chat with the child. The photos are kept for 90 days after the program ends, then deleted (as the privacy notice says). The tutor keeps private notes and sends the parent one line about what we saw. No score is shown to anyone, no ranking, no timer, no comparison between children, no private message to a child.",
     "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
     "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next term starts with one short catch-up question for the whole group. No private messages to children and no private room.",
     "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Lean, do not step backwards. A child may stay seated and move only their arms.",
-    "The look-back is never collected in front of the group or read out. A pass is always allowed, and so is skipping any check question."
+    "The look-back is never collected in front of the group or read out. A pass is always allowed, and so is skipping any gate of the quest."
   ],
   "tutor_prep": [
-    "Solve every workbook question and every check question yourself first. Read the check key (L10_Check_Tutor_Key.pdf) and the private return plan.",
-    "A week before: send the grown-up note (L10_Check_Parent_Note.pdf) and the check sheet. Families print the sheet at 100%, cut out the kit page, find counters, a pencil and a ruler. A family with no printer tells you; arrange another way. The sheet stays closed until you say.",
-    "Have the slides open and your own clock or timer where you can see it (the deck has no timer slide); do not show a clock on the shared screen during the check.",
+    "Solve every workbook question and every quest gate yourself first. Read the quest tutor notes (L10_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet.",
+    "A week before: send the grown-up note (L10_Quest_Parent_Note.pdf) and the Quest Log (L10_Quest_Log.pdf). Families print the Quest Log at 100%, cut out the kit page, find counters, a pencil, a ruler and a quest partner. A family with no printer tells you; arrange another way. The Quest Log stays closed until you say. Build the quest files with: bash term/l1/build.sh 10 then python3 term/l1/assets/quest_build.py 10.",
+    "Have the slides open and your own watch where only you can see it (the deck has no timer slide). Never show a clock, countdown or timer on the shared screen during the quest. Pause the recording for the whole quest and restart it for the look-back.",
     "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes.",
-    "Check photos arrive only on the program's business WhatsApp, +65 9880 5962; open them there, never on a personal phone. After marking, save them to the program's private file store and delete them from the chat. The program keeps them for 90 days after the program ends, then deletes them. Delete the record sheet once the note is sent.",
+    "Quest photos arrive only on the program's business WhatsApp, +65 9880 5962; open them there, never on a personal phone. Write your private notes from the photos and what you saw on camera, then save the photos to the program's private file store and delete them from the chat. The program keeps them for 90 days after the program ends, then deletes them. Delete each child's notes sheet once the line is sent; keep the group advice sheet for next term's tutor.",
     "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."
   ],
   "spare_time": {
-    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide. In this lesson the buffer may first be needed by children finishing the check.",
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide. In this lesson the buffer may first be needed by children finishing the quest.",
     "rules": [
       "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 59, use one menu activity then.",
       "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
@@ -3274,20 +3293,27 @@
       }
     ]
   },
-  "end_of_term_check": {
-    "title": "Term 1 end-of-term check",
+  "challenge_quest": {
+    "title": "Mi's Challenge Quest",
     "minutes": 20,
-    "where": "Lesson 10 (the last lesson of the term), minutes 63 to 83, the part End-of-term check; or at the make-up slot",
-    "plan_note": "Plan, section 5, and the owner decisions of 22 Oct 2026: the check takes 20 minutes, is privately returned, shows no ranking and no score to the group, and gives a parent report line per term. It is cut to 8 short questions and one optional Think harder item so that it fits 20 minutes by real timing: Lessons 2 and 4 share question 2 and Lessons 6 and 7 share question 5, so every lesson of the term is still checked. All items are Start here level. A middle child needs about 16 minutes of reading aloud and quiet work; a slower child may use the 5 flex minutes at the end.",
+    "where": "Lesson 10 (the last lesson of the term), minutes 63 to 83, after the break and the workbook; or at the make-up slot",
+    "plan_note": "Owner decisions of 22 Oct 2026: the end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 2 and 4 share gate 2 and Lessons 6 and 7 share gate 5, so every lesson of the term is still visited. A middle child needs about 16 minutes of reading aloud and quiet work; a slower child may use the 5 flex minutes at the end.",
     "sheet_pages": 4,
+    "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
     "child_rules": [
-      "This is a check for you and your tutor.",
-      "It is not a race. Nobody else sees your answers.",
-      "Do your best. You may skip any question.",
-      "Question 7 needs your ruler.",
-      "The last question is a Think harder question. It is optional."
+      "Mi is swimming to the Pearl Cave and needs your help at 8 gates.",
+      "Work on your own paper. Your quest partner sits beside you: talk about how, then write your own answer.",
+      "It is not a race and nobody sees your answers. You may skip a gate: Mi swims round it.",
+      "Gate 7 needs your ruler.",
+      "The secret cave at the end is optional, just for fun."
     ],
-    "child_footer": "Math Inquirers Term 1 end-of-term check. Print at 100% (actual size).",
+    "child_footer": "Math Inquirers Term 1 Mi's Challenge Quest. Print at 100% (actual size).",
+    "page_instructions": [
+      "Gates 1 and 2: Mi needs your help. Write your answers in the spaces.",
+      "Gates 3, 4 and 5: keep swimming. Write your answers in the spaces.",
+      "Gates 6 and 7: nearly there. Use your ruler for Gate 7.",
+      "Gate 8 and the secret cave: show your thinking. Write your answers in the spaces."
+    ],
     "questions": [
       {
         "id": "C1",
@@ -3319,7 +3345,7 @@
             "val": 39
           }
         ],
-        "say": "Question 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether.",
+        "say": "Gate 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether.",
         "answer": "3 tens and 9 ones; 39 sticks",
         "val": [
           3,
@@ -3374,7 +3400,7 @@
             "val": 44
           }
         ],
-        "say": "Question 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34.",
+        "say": "Gate 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34.",
         "answer": "67; 44",
         "val": [
           67,
@@ -3415,7 +3441,7 @@
             "val": 83
           }
         ],
-        "say": "Question 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it.",
+        "say": "Gate 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it.",
         "answer": "83",
         "val": [
           83
@@ -3455,7 +3481,7 @@
             "val": 42
           }
         ],
-        "say": "Question 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5.",
+        "say": "Gate 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5.",
         "answer": "12; 42",
         "val": [
           12,
@@ -3491,7 +3517,7 @@
             "val": 43
           }
         ],
-        "say": "Question 5. Part a: write 52 plus 30. Part b: write 74 take away 31.",
+        "say": "Gate 5. Part a: write 52 plus 30. Part b: write 74 take away 31.",
         "answer": "82; 43",
         "val": [
           82,
@@ -3531,7 +3557,7 @@
             "val": 20
           }
         ],
-        "say": "Question 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box.",
+        "say": "Gate 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box.",
         "answer": "6; 20",
         "val": [
           6,
@@ -3572,7 +3598,7 @@
             "val": 10
           }
         ],
-        "say": "Question 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is.",
+        "say": "Gate 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is.",
         "answer": "a line 6 cm long; 10 cm",
         "val": [
           6,
@@ -3609,7 +3635,7 @@
             "val": 42
           }
         ],
-        "say": "Question 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now.",
+        "say": "Gate 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now.",
         "answer": "35 + 10 = 45; 45 - 3 = 42 (Mei has 42 stickers)",
         "val": [
           45,
@@ -3641,7 +3667,7 @@
           "val": 9
         }
       ],
-      "say": "The last question is a Think harder question, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?",
+      "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?",
       "answer": "9 children (5 + 3 + 1, counting Ali)",
       "val": [
         9
@@ -3650,7 +3676,7 @@
       "mistakes": [
         "8 (leaving Ali out)."
       ],
-      "note": "Never scored. Whether the child tried it (right or wrong) adds one neutral line to the note; a skipped item adds nothing."
+      "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing."
     },
     "strands": [
       {
@@ -3669,9 +3695,15 @@
           "C3"
         ],
         "looked_at": "reading and writing numbers to 100 as tens and ones, number lines, comparing numbers and counting in tens",
-        "showing": "[Name] is showing this often: reading numbers as tens and ones, finding numbers on a number line, making the greatest number from two cards and counting on in tens.",
-        "getting": "[Name] is getting there with numbers as tens and ones, number lines, comparing numbers and counting on in tens. A few more rounds with real things will help.",
-        "beginning": "[Name] is just beginning with seeing numbers as tens and ones. Bundling real things in tens, and counting in tens together, are good next steps."
+        "saw_examples": [
+          "[Name] read numbers as tens and ones using bundles and a number line, and made the greatest number from two cards.",
+          "[Name] explained how a number is made of tens and ones, and counted on in tens.",
+          "[Name] found the number the arrow showed on a number line and said how they knew."
+        ],
+        "next_examples": [
+          "Bundle real things in tens (pasta, spoons) and say the tens and ones together.",
+          "Count in tens together on a number line or a hundred square."
+        ]
       },
       {
         "id": "addsub",
@@ -3689,9 +3721,15 @@
           "C6"
         ],
         "looked_at": "adding by making a ten, jumping in tens, taking away tens and ones, and using = as a balance",
-        "showing": "[Name] is showing this often: adding by making a ten, jumping in tens, taking away tens and ones, and using the equals sign as a balance.",
-        "getting": "[Name] is getting there with adding by making a ten, jumping in tens, taking away and using the equals sign as a balance. Counters and a number line will help.",
-        "beginning": "[Name] is just beginning with adding and taking away within 100. Counters, a number line and small steps (add 10, take away 10) are good next steps."
+        "saw_examples": [
+          "[Name] added by making a ten and used a jump of ten on a number line.",
+          "[Name] took away tens and ones and explained each step.",
+          "[Name] used the equals sign as a balance and found the missing number."
+        ],
+        "next_examples": [
+          "Use counters and a number line, with small steps (add 10, take away 10).",
+          "Play balance: 8 + 4 = 6 + what? Check with counters."
+        ]
       },
       {
         "id": "lengthstories",
@@ -3706,118 +3744,95 @@
           "C8"
         ],
         "looked_at": "drawing and reading lengths in centimetres with a ruler, and reading a story twice and writing one step at a time",
-        "showing": "[Name] is showing this often: using a ruler from the 0 mark, and reading a story twice and writing one number sentence for each step.",
-        "getting": "[Name] is getting there with using a ruler from the 0 mark and with writing one step at a time in a story. Measuring things at home and acting stories out with counters will help.",
-        "beginning": "[Name] is just beginning with using a ruler and with story steps. Measuring things at home from the 0 mark, and acting out two-step stories with counters, are good next steps."
+        "saw_examples": [
+          "[Name] used a ruler from the 0 mark and drew a line of the right length.",
+          "[Name] read a story twice and wrote one number sentence for each step.",
+          "[Name] worked out a longer length from a line already drawn."
+        ],
+        "next_examples": [
+          "Measure things at home from the 0 mark.",
+          "Act out two-step stories with counters, one step at a time."
+        ]
       }
     ],
-    "words": {
-      "showing": "Showing this often",
-      "getting": "Getting there",
-      "beginning": "Just beginning"
-    },
-    "bands": {
-      "rule": "Each question counts 1 if right, 0.5 if partly right, 0 if not yet, and is left out if not taught. Strand score = points / questions counted.",
-      "showing_min": 0.75,
-      "getting_min": 0.375,
-      "table": [
-        {
-          "n": 4,
-          "showing": "3 to 4 points",
-          "getting": "1.5 to 2.5 points",
-          "beginning": "0 to 1 point"
-        },
-        {
-          "n": 3,
-          "showing": "2.5 to 3 points",
-          "getting": "1.5 to 2 points",
-          "beginning": "0 to 1 point"
-        },
-        {
-          "n": 2,
-          "showing": "1.5 to 2 points",
-          "getting": "1 point",
-          "beginning": "0 to 0.5 point"
-        },
-        {
-          "n": 1,
-          "showing": "1 point (right)",
-          "getting": "0.5 point (partly right)",
-          "beginning": "0 points (not yet)"
-        }
-      ]
-    },
     "give": [
-      "A week before: send the grown-up note (L10_Check_Parent_Note.pdf) and the check sheet with the lesson materials. Families print the sheet at 100%, fold it or put it in an envelope, and keep it closed. A family with no printer tells you: arrange another way (for example the make-up slot).",
-      "Tell the group in the opening and at s-check1: the check is on your own paper, takes about 20 minutes, is not a race, may be skipped in part, and nothing is shown to the group.",
-      "Start at minute 63 and finish by minute 83. Children open the sheet only when you say. The paper lies flat on the table and is never held up. A grown-up sits nearby and may read a question again, but gives no help with answers. Cameras may be on or off.",
-      "Read each page aloud, one question at a time. Then leave quiet work time: about 2 minutes for page 1, 3 for page 2, 4 for page 3 and 3.5 for page 4. Say nothing about right or wrong, and read no answers. A middle child needs about 16 minutes in all; a slower child may use the 5 flex minutes.",
-      "Allowed: fingers, counters, the kit squares and the ruler for question 7. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the sheet over and draws quietly.",
-      "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, say Pencils down (slide s-check2). Do not collect or look at any sheet. A child still writing may use the flex minutes at the end; nothing new is started there."
+      "A week before: send the grown-up note (L10_Quest_Parent_Note.pdf) and the Quest Log (L10_Quest_Log.pdf) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
+      "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. It is not a race, a gate may be skipped, and nothing is shown to the group.",
+      "Start at minute 63 (after the break and the workbook) and finish by minute 83. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
+      "Read each page aloud, one gate at a time, then leave quiet working time: about 2 minutes for page 1, 3 for page 2, 4 for page 3 and 3.5 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 16 minutes in all; a slower child may use the 5 flex minutes.",
+      "Allowed: fingers, counters, the kit squares, the ruler for gate 7, and talk with the quest partner. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the Quest Log over and draws quietly. Colouring a stone on the quest map means I had a go, never I got it right.",
+      "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. A child still writing may use the flex minutes; nothing new is started there. While children work, notice (do not write on the shared screen) how they start: counters, drawing, number line, talking to the partner."
     ],
     "after": [
       "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view including the 10 cm bar on page 4, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
-      "Within 3 days: the tutor marks from the photos with the key below, opening them only on the program's business WhatsApp (never on a personal phone), and records the result on the tutor record sheet (tutor only). For question 7, the ruler question (the grey note under the answer key says question 9 and 57% to 63%: it means this question), measure the drawn line against the 10 cm bar on page 4 and accept 5.5 to 6.5 cm; if the photo is not clear, count it right when the answer to part (b) is right. Nothing is written on the child's paper and no mark or score goes back to the child or the group.",
-      "The tutor chooses a progress word for each of the three areas from the bands below and writes the parent note from the templates: the term line, three area lines, one named strength and one next step. Sent only to the parent. No marks, no x out of 10, no ranking, no comparison with other children, no prediction.",
-      "Once the note is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete the record sheet when the note is sent (keep only the note in the family file). Never forward the photos or save them to a personal phone or any other device.",
-      "At the start of Term 2 say to the whole group: thank you for taking the check; there is nothing to share and nothing to fear. Never name a child or an answer."
+      "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you. For gate 7, the ruler gate, hold the drawn line against the 10 cm bar on page 4: about 6 cm is what we hope to see. If the photo is not clear, ask the grown-up (not the child) for a clearer one, or rely on the answer to part (b). Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
+      "Write ONE line for each grown-up from your notes (section 7): what we saw, in plain words, and one small next step if it helps. It is sent to the parent only. No marks, no x out of 10, no ranking, no comparison with other children, no prediction.",
+      "Fill in the group advice sheet (section 6): what several children were still working on, with no names, and what you will do in the first lessons of next term. It is kept for next term's tutor and is never shown to families.",
+      "Once the line is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete each child's notes sheet when the line is sent (keep only the line in the family file, and the group advice sheet). Never forward the photos or save them to a personal phone or any other device.",
+      "At the start of Term 2 say to the whole group: thank you for playing Mi's Challenge Quest; there is nothing to share and nothing to fear. Never name a child or an answer."
     ],
     "late": [
-      "A child who was away or whose family prefers another time: take the check at the make-up slot (a small group, a parent beside the child on camera). The tutor never sits alone with one child on a private call.",
-      "A child who joined late: the family may choose to leave out questions for lessons the child did not attend. Mark those questions not taught; they are left out of the strand score, and a strand with no question taught gets no line.",
-      "A family that does not want the check: no problem. The child does the Lesson 10 work as usual and the report line uses the tutor's own notes only.",
-      "A child who is upset or stuck: remind the group (open session) that every question can be skipped. Do not single the child out. The grown-up may stop the check at any time.",
-      "A family with no printer: tell the family to say so a week before and arrange another way (for example the make-up slot with the sheet sent to the family another way). Never ask a child about it in front of the group."
+      "A child who was away or whose family prefers another time: plays the quest at the make-up slot BEFORE watching the recording (the quest is not on the recording, so no gate is given away). It is a small group or a pair with Mi, with a parent beside the child on camera. The tutor never sits alone with one child on a private call.",
+      "A child who joined late: the family may choose to leave out gates for lessons the child did not attend. Write nothing for those gates; if no gate of an area was taught, the line for the grown-up says nothing about that area.",
+      "A family that does not want the quest: no problem. The child does the Lesson 10 work as usual and the line for the grown-up uses your own notes from the lessons only.",
+      "A child who is upset or stuck: remind the group (open session) that every gate can be skipped and Mi swims round it. Do not single the child out. The grown-up may stop the quest at any time.",
+      "A family with no printer: tell the family to say so a week before and arrange another way (for example the make-up slot, with the Quest Log sent to the family another way). Never ask a child about it in front of the group."
     ],
+    "privacy_checklist": [
+      "Quest Logs are never held up to the camera and never read out.",
+      "No answer is said aloud during or after the quest. Gates open for everyone, whatever the answers.",
+      "No clock, countdown or timer is shown; nobody is told who finished first or last.",
+      "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the line goes to the parent only; no private message to any child.",
+      "No score, no x out of 10, no ranking, no tally, no comparison between children, not even in your own notes.",
+      "The recording captures the tutor, the shared screen and any voice that is not muted: pause it for the whole quest. The WhatsApp number is never on a slide."
+    ],
+    "notes_sheet": {
+      "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look.",
+      "prompts": [
+        "Something the child did well (a named strength, for example: explained why 62 is greater than 26 using bundles of ten)",
+        "How they started: counters, drawing, number line, or in their head",
+        "Where they paused or turned to their partner, and what helped",
+        "One next step for home (small and concrete)",
+        "Did they try the secret cave? (a neutral note only)"
+      ],
+      "group_how": "When all the notes are written, look across them without names. Write what several children were still working on and how you will use the first two lessons of next term (a warm-up, a picture, a game). This page never goes to families.",
+      "group_prompts": [
+        "Gates or ideas where several children paused (no names)",
+        "A warm-up or game to bring back in the first lesson of next term",
+        "What worked well about the quest as a game, to keep next time"
+      ]
+    },
+    "saw_line": {
+      "heading": "Mi's Challenge Quest: [Name]",
+      "pattern": "In Mi's Challenge Quest, [Name] [one specific thing you saw, in plain words]. [Optional: one small next step at home.]",
+      "how": "One or two sentences at most. Say what the child did (used bundles, drew a line, explained a step), not how many answers were right. Use the lines below as patterns and always add your own detail from your notes.",
+      "example": "In Mi's Challenge Quest, Mei read the sticks as 3 tens and 9 ones, used her ruler from the 0 mark and wrote one number sentence for each step of a story. A good next step: act out two-step stories with counters at home.",
+      "parent_example": "For example: In Mi's Challenge Quest, Mei used her ruler from the 0 mark and wrote one number sentence for each step of a story.",
+      "closing": "This line describes [Name]'s own thinking in the game. It does not compare children."
+    },
     "parent_note": {
-      "title": "The Term 1 end-of-term check: a note for grown-ups",
-      "what": "In the last lesson of the term your child does a short check on paper: 8 questions and one optional Think harder question. It takes about 20 minutes. It helps us see what each child has learned and what to practise next. It is not a pass or fail test. No mark is shared, there is no league table and nobody is compared with anyone else. Term 1 goes beyond the school Primary 1 syllabus on purpose, so a few questions may be new.",
+      "title": "Mi's Challenge Quest: a note for grown-ups",
+      "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. Term 1 goes beyond the school Primary 1 syllabus on purpose, so a few gates may be new.",
       "before": [
-        "We send you this note and the check sheet a week before. Print the sheet at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler. No printer? Tell us a week before and we will find another way.",
-        "Keep the sheet folded or in an envelope until the tutor says to open it.",
+        "We send you this note and the Quest Log a week before. Print the Quest Log at 100% (actual size, not fit to page). The bar at the foot of page 4 must measure 10 cm with a ruler. No printer? Tell us a week before and we will find another way.",
+        "Keep the Quest Log folded or in an envelope until the tutor says to open it.",
         "Have a pencil, a rubber, a ruler with centimetres and a quiet table. Counters and fingers are fine."
       ],
       "during": [
-        "Sit nearby. You may ask the tutor to read a question again, but please do not give answers or hints.",
-        "Skipping a question is fine. If your child is upset, you may stop at any time.",
+        "Be the quest partner: sit beside your child. You may talk about how to start and ask 'how do you know?', but please do not give answers or hints.",
+        "Skipping a gate is fine; Mi swims round it. If your child is upset, you may stop at any time.",
+        "Your child may colour a stone on the quest map for each gate they have had a go at. It means I had a go, nothing more.",
         "The paper stays flat on the table. Cameras may be on or off."
       ],
       "after": [
-        "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Check your child's name is on each page.",
+        "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
         "Send the photos to the program's business WhatsApp, +65 9880 5962. Please send them to this number only: not to a tutor's own phone, not to the class chat, and never through a child.",
-        "We use the photos only to write your child's note. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
+        "We use the photos only to write one line about your child. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
       ],
-      "back": "Within a few days we send you a short note: the term line, a progress word for each of three areas (Showing this often, Getting there, Just beginning), one thing your child did well and one next step. It is never a mark or a comparison. If you would rather not do the check, tell us: that is fine.",
-      "make_up": "Missed the lesson or need another time? Every lesson is recorded and the check can be taken at the make-up slot."
+      "back": "Within a few days we send you ONE line, written from our private notes, about what we saw your child do in the quest, with a small next step if it helps. It only describes what your child did, and it never compares children. If you would rather not play the quest, tell us: that is fine.",
+      "make_up": "Missed the lesson or need another time? The quest is not on the recording, but your child can play it at the make-up slot, before watching the recording."
     },
-    "report_template": {
-      "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
-      "intro": "Term 1 progress note for [Name]",
-      "strength": "One thing [Name] did well this term: [the tutor adds one named strength from their own notes, for example: explained why 62 is greater than 26 using bundles of ten].",
-      "next_step": "One next step: [the tutor adds one next step, for example: act out two-step stories with counters at home].",
-      "optional": "[Name] also tried the optional Think harder question. (Add this line if the child tried it, whether or not the answer was right; leave it out if the child skipped it.)",
-      "closing": "This note is about [Name]'s own learning this term. It is not a mark and it does not compare children.",
-      "example_words": {
-        "numbers": "showing",
-        "addsub": "getting",
-        "lengthstories": "getting"
-      }
-    },
-    "privacy_checklist": [
-      "Sheets are never held up to the camera and never read out.",
-      "No answer is said aloud during or after the check.",
-      "The tutor never marks in front of the group and never says who finished first or last.",
-      "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the note goes to the parent only; no private message to any child.",
-      "No score, no x out of 10, no ranking, no tally, no comparison between children.",
-      "The recording captures the tutor, the shared screen and any voice that is not muted; pause it during silent work if the platform allows. The WhatsApp number is never on a slide."
-    ],
     "sheet_check_bar_mm": 100,
-    "page_instructions": [
-      "Fill in the correct answers in the spaces provided.",
-      "Fill in the correct answers in the spaces provided.",
-      "Fill in the correct answers in the spaces provided. Use your ruler for Question 7.",
-      "Show your working clearly. Write your answers in the spaces provided."
-    ],
     "line_mm": 100,
     "timing_model": {
       "child_seconds": {
@@ -3833,5 +3848,6 @@
       "stretch_seconds": 40,
       "slow_child_factor": 1.7
     }
-  }
+  },
+  "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the look-back."
 }

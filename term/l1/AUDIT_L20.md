@@ -62,3 +62,7 @@ Total: 19 / 24
 ## Fix pass (independent audits)
 
 See `audit/FIXES_L20.md`. Class, workbook, exit, home and check numbers no longer repeat each other; check slides are `no_record` and the recording is paused for the whole check; Start here time rebalanced; numbering unified; online t1 answerable.
+
+## Third fix pass, 23 Oct 2026 (Mi's Challenge Quest, tokens)
+
+See `audit/FIXES3_L20.md`. The end-of-term check is now Mi's Challenge Quest (a game, no score or mark shown, no ranking, no visible timer), still minutes 35 to 55 straight after the break, not on the recording, make-up before the recording. Files: `L20_Quest_Log.pdf` (3 pages), `L20_Quest_Tutor_Notes.pdf`, `L20_Quest_Parent_Note.pdf`. The kit page now prints 30 tokens (the lesson needs up to $28). Validator 0 FAIL.

@@ -6,6 +6,9 @@ The end-of-term check answers are recomputed the same way (a line of children is
 """
 
 
+import json, re
+
+
 def price_of_one(total, n, lim=40):
     """The whole-dollar price p such that n groups of p add back to the total (tried one price at a time). None if there is none."""
     for p in range(lim + 1):
@@ -126,9 +129,10 @@ def run(d):
     vs = items['t3']['tpl']['vars']; eq(all(cost_of_many(u, k) <= 40 for u in vs['u'] for k in vs['n'] + vs['j']), True, 't3 variants within 40')
     vs = items['g2']['tpl']['vars']; eq(all(cost_of_many(u, k) <= m and cost_of_many(u, nn) <= 40 for u in vs['u'] for k in vs['k'] for nn in vs['n'] for m in vs['m']), True, 'g2 variants: Mei can afford what she buys')
     vs = items['g1']['tpl']['vars']; eq(all(price_of_one(cost_of_many(a_, 2), 2) == a_ and price_of_one(cost_of_many(b_, 3), 3) == b_ for a_ in vs['a'] for b_ in vs['b']), True, 'g1 variants are whole-dollar prices')
-    # ---- end-of-term check
-    c = d['end_of_term_check']; C = {q['id']: q for q in c['questions']}
-    eq(len(c['questions']), 8, 'check has 8 questions'); eq(c['minutes'], 20, 'check is 20 minutes'); eq(all(q['tier'] == 'start' for q in c['questions']), True, 'check is Start here level')
+    # ---- Mi's Challenge Quest (the end-of-term slot, a game, not a test)
+    assert 'end_of_term_check' not in d, 'the old end-of-term check block must be gone'
+    c = d['challenge_quest']; C = {q['id']: q for q in c['questions']}
+    eq(len(c['questions']), 8, 'quest has 8 gates'); eq(c['minutes'], 20, 'quest is 20 minutes'); eq(all(q['tier'] == 'start' for q in c['questions']), True, 'quest is Start here level')
     line = line_places(10); siti = line.index(4) + 1; ben = line[line.index(4) + 1]
     eq((ben, len(line[:line.index(4)])), (5, 3), 'C1'); eq(C['C1']['val'], [5, 3], 'C1 val')
     ravi = 26; lily = ravi;
@@ -149,9 +153,29 @@ def run(d):
     eq(('6 pencils cost $18' in sl['s-m4']['note'], '8 buns' in C['C8']['text'], 'bags' in C['C6']['text'] and '5 bags' in C['C6']['text']), (True, True, True), 'C6 and C8 do not repeat the class or L18 numbers')
     o = c['optional']; before = list(range(1, 8)); behind = list(range(1, 8)); total = len(before) + 1 + len(behind)       # 8th from the front: 7 before; 8th from the back: 7 behind
     eq((total, 8 + 8 == total), (15, False), 'CT 15 children and Mei is not correct'); eq(o['val'], ['No', 15], 'CT val')
-    q_by_strand = {s['id']: s['questions'] for s in c['strands']}; eq(sorted(sum(q_by_strand.values(), [])), sorted(C), 'every check question is in exactly one area'); eq([len(v) for v in q_by_strand.values()], [4, 4], 'two areas of four questions')
-    covered = sorted({l for s in c['strands'] for l in s['lessons']}); eq(covered, list(range(11, 21)), 'every lesson of the term is covered by the check')
+    q_by_strand = {s['id']: s['questions'] for s in c['strands']}; eq(sorted(sum(q_by_strand.values(), [])), sorted(C), 'every gate is in exactly one area'); eq([len(v) for v in q_by_strand.values()], [4, 4], 'two areas of four questions')
+    covered = sorted({l for s in c['strands'] for l in s['lessons']}); eq(covered, list(range(11, 21)), 'every lesson of the term is covered by the quest')
     pages = sorted({q['page'] for q in c['questions']}); eq(pages, list(range(1, c['sheet_pages'] + 1)), 'questions use every sheet page')
-    eq(all(sl[s]['part'] == 'exit' for s in ('s-check1', 's-check2')), True, 'check slides sit in the check part')
-    tp = {p['id']: p for p in d['timing']['parts']}; eq(tp['exit']['end'] - tp['exit']['start'], 20, 'the check part is 20 minutes'); eq(all(sl[s].get('no_record') for s in ('s-check1', 's-check2')), True, 'check slides are not on the shared recording')
+    eq(all(sl[s]['part'] == 'exit' for s in ('s-quest1', 's-quest2')), True, 'quest slides sit in the quest part')
+    tp = {p['id']: p for p in d['timing']['parts']}; eq(tp['exit']['end'] - tp['exit']['start'], 20, 'the quest part is 20 minutes'); eq(all(sl[s].get('no_record') for s in ('s-quest1', 's-quest2')), True, 'quest slides are not on the shared recording')
+    # ---- game, not a test: no points, bands or progress words; names the quest; test-like wording kept off child and parent pages; tokens and quiet timing
+    for k in ('bands', 'words', 'report_template'): eq(k in c, False, 'no ' + k + ' in the quest block')
+    eq(set(c['notes_sheet']), {'how', 'prompts', 'group_how', 'group_prompts'}, 'private notes sheet and group advice sheet')
+    for s_ in c['strands']:
+        eq((len(s_['saw_examples']), len(s_['next_examples']), all('[Name]' in x for x in s_['saw_examples'])), (3, 2, True), 'one-line patterns ' + s_['id'])
+    import validate
+    facing = list(c['child_rules']) + list(c['page_instructions']) + [q['text'] for q in c['questions']] + [p['text'] for q in c['questions'] for p in q['parts']] + [c['optional']['text']]
+    pn = c['parent_note']; facing += [pn['title'], pn['what'], pn['back'], pn['make_up']] + pn['before'] + pn['during'] + pn['after'] + [c['saw_line']['parent_example'], c['saw_line']['closing']]
+    quest_only = list(facing)
+    facing += validate.child_strings(d)
+    for s_ in facing:
+        t_ = s_.replace("Mi's Challenge Quest", 'the quest').replace("Mi's Chal\u00adlenge Quest", 'the quest')
+        for pat in validate.BANNED_CHILD: assert not re.search(pat, t_, re.I), f'banned wording {pat!r}: {s_[:70]}'
+        assert not re.search(r'\bexams?\b|check[- ]?sheet|end-of-term check|\btimer\b|\bpass or fail\b|\bmarks?\b|\bmarked\b|\bmarking\b|\bout of\b|\bscored?\b', t_, re.I), f'test-like wording: {s_[:90]}'
+        n += 1
+    for s_ in quest_only: assert not re.search(r'\btests?\b|\btesting\b', s_, re.I), s_[:70]
+    eq(sl['s-quest1']['title'], "Mi's Chal\u00adlenge Quest", 'quest slide title'); eq("Quest" in d['parent']['summary'] and "Chal\u00adlenge" in d['parent']['summary'], True, 'parent page names the quest')
+    # tokens: at least as many printed as any question can use (the dollar amounts in the lesson go up to $28)
+    kit = d['workbook']['kits'][0]; most = max(int(x) for x in re.findall(r'\$(\d+)', json.dumps({k_: v for k_, v in d.items() if k_ in ('tiers', 'exit', 'home_practice', 'talk', 'script', 'slides')})) if int(x) <= 30)
+    eq(len(kit['labels']) >= most, True, f'{len(kit["labels"])} tokens printed, the most any item needs is ${most}'); eq(len(kit['labels']), 30, '30 tokens on the kit page')
     return n

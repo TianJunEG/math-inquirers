@@ -61,3 +61,7 @@ Total: 18 / 24
 ## Fix pass (independent audits)
 
 See `audit/FIXES_L19.md`. Changed: Think harder and Go further numbers no longer repeat class numbers, Explore round 3 no longer repeats the sneak-peek puzzle, method text hidden until after the questions (reveal), Start here time rebalanced, numbering unified, picture equations printed larger, online c4 and t3 now about half yes. Not changed (template): minus sign weight, thumbnail size on question slides, alt text and runner layout. The Investigation stays words only: a drawn picture made page 5 spill onto a new page.
+
+## Third fix pass, 23 Oct 2026 (cut-out audit)
+
+See `audit/FIXES3_L19.md`. Kit now has a second page of 15 shape cards (three each of circle, square, triangle, heart, star); materials, tutor prep and the hand-off to Lesson 20 (Mi's Challenge Quest, 30 tokens) updated. Validator 0 FAIL.

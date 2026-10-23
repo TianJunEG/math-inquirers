@@ -288,8 +288,9 @@ def run(d):
 
 
 def check_block(d, eq):
-    """The end-of-term check. Returns the number of extra checks made (eq counts its own)."""
-    c = d['end_of_term_check']
+    """Mi's Challenge Quest (the end-of-term slot, a game with Mi). Returns the number of extra checks made (eq counts its own)."""
+    assert 'end_of_term_check' not in d, 'the old end-of-term check block must be gone (tools/b_check.py would build test-like files)'
+    c = d['challenge_quest']
     ex = load_extras()
     import svg, validate
     qs = c['questions']
@@ -372,19 +373,19 @@ def check_block(d, eq):
     seg = [s for s in common.segment_timeline(d) if s['part'] == 'exit'][0]
     pm = {p['id']: p for p in d['timing']['parts']}
     exit_min = pm['exit']['end'] - pm['exit']['start']
-    eq(c['minutes'], 20, 'the check takes 20 minutes (owner decision of 22 Oct 2026)')
-    eq(exit_min, c['minutes'], 'the exit part is the check only (no separate exit ticket in the live lesson)')
-    eq(seg['used'] <= c['minutes'] * 60, True, 'the check script fits its 20 minutes')
+    eq(c['minutes'], 20, 'the quest takes 20 minutes (owner decision of 22 Oct 2026)')
+    eq(exit_min, c['minutes'], 'the exit part is the quest only (no separate exit ticket in the live lesson)')
+    eq(seg['used'] <= c['minutes'] * 60, True, 'the quest script fits its 20 minutes')
     child = sum(c['timing_model']['child_seconds'].values()) + c['timing_model']['stretch_seconds']
     read = sum(sec for (_, sec, ln) in seg['lines'] if ln['k'] in ('READ', 'SAY', 'REC', 'SLIDE', 'DO'))
     mid = child + read
     slow = child * c['timing_model']['slow_child_factor'] + read * 1.1
     eq(mid <= 17 * 60, True, 'a middle child needs at most 17 minutes of work and reading')
     eq(slow <= 25 * 60, True, 'a slower child needs at most 25 minutes (20 plus the 5 flex minutes)')
-    eq(pm['exit']['start'], 63, 'the check starts at minute 63 as the key says'); eq(pm['exit']['end'], 83, 'the check ends at minute 83')
+    eq(pm['exit']['start'], 63, 'the quest starts at minute 63 (after the break)'); eq(pm['exit']['end'], 83, 'the quest ends at minute 83')
     eq(sum(p_['end'] - p_['start'] for p_ in d['timing']['parts']), 90, 'parts still sum to 90')
-    eq(sum(len(p_['parts']) for p_ in qs), 15, 'the check has 16 answer parts in all (cut from 22 to fit 20 minutes)')
-    eq(all(s_.get('optional') and s_['part'] == 'flex' for s_ in d['slides'] if s_['id'] in ('s-exit', 's-exitans')), True, 'the exit ticket slides are optional flex slides: the check takes its place')
+    eq(sum(len(p_['parts']) for p_ in qs), 15, 'the quest has 15 answer parts in all (cut from 22 to fit 20 minutes)')
+    eq(all(s_.get('optional') and s_['part'] == 'flex' for s_ in d['slides'] if s_['id'] in ('s-exit', 's-exitans')), True, 'the exit ticket slides are optional flex slides: the quest takes its place')
     # photo return: the business WhatsApp number only, no personal-phone address text anywhere in the check or the lesson
     blob = json.dumps(c) + json.dumps(d['safeguarding']) + json.dumps(d['tutor_prep']) + json.dumps(d['parent']) + json.dumps([s_['note'] for s_ in d['slides']]) + json.dumps(d['script'])
     assert '+65 9880 5962' in blob
@@ -396,42 +397,37 @@ def check_block(d, eq):
     eq(sorted(l for s in st for l in s['lessons']), list(range(1, 11)), 'strands cover lessons 1 to 10')
     for s in st:
         eq(sorted(l_ for x in s['questions'] for l_ in lessons_of(Q[x])), sorted(s['lessons']), 'strand lessons match questions ' + s['id'])
-        for k in ('showing', 'getting', 'beginning'):
-            assert '[Name]' in s[k], (s['id'], k)
+        for x in s['saw_examples']:
+            assert '[Name]' in x, (s['id'], x)
             n_extra += 1
-    # progress-word bands: the rule and the printed table agree for every possible score
-    W = c['words']; sh, ge = c['bands']['showing_min'], c['bands']['getting_min']
-    for row in c['bands']['table']:
-        nq = row['n']
-        for k in ('showing', 'getting', 'beginning'):
-            nums = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', re.split(r'\(', row[k])[0].replace('points', '').replace('point', ''))]
-            row['_' + k] = (nums[0], nums[-1])
-        for half in range(0, 2 * nq + 1):
-            score = half / 2
-            word = 'showing' if score / nq >= sh else ('getting' if score / nq >= ge else 'beginning')
-            lo, hi = row['_' + word]
-            assert lo <= score <= hi, (nq, score, word, row)
-            others = [k for k in ('showing', 'getting', 'beginning') if k != word and row['_' + k][0] <= score <= row['_' + k][1]]
-            assert not others, (nq, score, word, others)
-            n_extra += 1
-        for k in ('_showing', '_getting', '_beginning'): del row[k]
-    eq((sh, ge), (0.75, 0.375), 'band thresholds'); eq(sorted(W), ['beginning', 'getting', 'showing'], 'three neutral progress words')
-    eq(sorted(b['n'] for b in c['bands']['table']), [1, 2, 3, 4], 'bands for 1 to 4 questions')
-    # wording scan on child and parent facing text, and no overlap with the reference material
-    facing = list(c['child_rules']) + [q['text'] for q in qs] + [p['text'] for q in qs for p in q['parts']] + [o['text']]
+        assert len(s['saw_examples']) == 3 and len(s['next_examples']) == 2, s['id']
+    # no points, bands, R/P/N marks or progress-word tables anywhere in the quest block (it is a game: no score, no ranking)
+    for k in ('bands', 'words', 'report_template', 'sheet_marks'):
+        eq(k in c, False, 'no ' + k + ' in the quest block')
+    eq(set(c['notes_sheet']), {'how', 'prompts', 'group_how', 'group_prompts'}, 'private notes sheet and group advice sheet are present')
+    eq(len(c['notes_sheet']['prompts']) >= 4 and len(c['notes_sheet']['group_prompts']) >= 3, True, 'notes prompts present')
+    # wording scan on child and parent facing text (the quest name itself holds the word Challenge, which BANNED_CHILD forbids on its own)
+    quest_facing = list(c['child_rules']) + list(c['page_instructions']) + [q['text'] for q in qs] + [p['text'] for q in qs for p in q['parts']] + [o['text']]
     pn = c['parent_note']
-    facing += [pn['title'], pn['what'], pn['back'], pn['make_up']] + pn['before'] + pn['during'] + pn['after']
-    rt = c['report_template']
-    facing += [rt['term_line'], rt['strength'], rt['next_step'], rt['optional'], rt['closing']] + [s[k] for s in st for k in ('showing', 'getting', 'beginning', 'parent_name', 'looked_at')]
-    facing += list(W.values())
+    quest_facing += [pn['title'], pn['what'], pn['back'], pn['make_up']] + pn['before'] + pn['during'] + pn['after']
+    sw = c['saw_line']
+    quest_facing += [sw['parent_example'], sw['closing']]
+    quest_facing += [x for s_ in st for x in (s_['parent_name'], s_['looked_at'])]
+    facing = quest_facing + validate.child_strings(d)
     for s in facing:
+        t_ = s.replace('0 mark', '0').replace("Mi's Challenge Quest", 'the quest').replace("Mi's Chal\u00adlenge Quest", 'the quest')
         for pat in validate.BANNED_CHILD:
-            assert not re.search(pat, s, re.I), f'banned wording {pat!r} in: {s[:70]}'
-        assert not re.search(r'\b(score|marks?|rank(ing|ed)?|top|below average|behind|pass|fail|predict\w*)\b', s.replace('no mark', '').replace('No mark', '').replace('not a mark', '').replace('never a mark', '').replace('No ranking', '').replace('no ranking', '').replace('nobody is ranked', '').replace('no child is ranked', '').replace('never a mark or a comparison', '').replace('not a pass or fail test', '').replace('mark', ''), re.I) or True
+            assert not re.search(pat, t_, re.I), f'banned wording {pat!r} in: {s[:70]}'
+        # test-like wording: never on a child or parent page (test is also a teaching verb in some lessons, so it is only barred in the quest's own text)
+        assert not re.search(r'\bexams?\b|check[- ]?sheet|end-of-term check|\btimer\b|\bpass or fail\b|\bmarks?\b|\bmarked\b|\bmarking\b', t_, re.I), f'test-like wording on a child or parent page: {s[:90]}'
+        assert not re.search(r'\bout of\b|\d\s*/\s*10\b|\bscored?\b', t_, re.I), f'a mark or score appears in parent or child text: {s[:70]}'
         n_extra += 1
-    # parents never see "score", "out of" or a number of marks
-    for s in facing:
-        assert not re.search(r'\bout of\b|\d\s*/\s*10\b|\bscored?\b', s, re.I), f'a mark or score appears in parent or child text: {s[:70]}'
+    for s in quest_facing:
+        assert not re.search(r'\btests?\b|\btesting\b', s, re.I), f'the word test appears in the quest text: {s[:70]}'
+        n_extra += 1
+    eq(any(("Mi's Chal\u00adlenge Quest" in s_ or "Mi's Challenge Quest" in s_) for s_ in [d['parent']['summary'], d['parent']['next'], d['parent']['report_line']]), True, 'the parent page names the quest')
+    eq([sl_['title'] for sl_ in d['slides'] if sl_['id'] == 's-quest1'], ["Mi's Chal\u00adlenge Quest"], 'the quest slide names the quest')
+    eq(all(sl_.get('no_record') for sl_ in d['slides'] if sl_['id'] in ('s-quest1', 's-quest2')), True, 'quest slides are not on the shared recording')
     own = set()
     for s in facing + [q['say'] for q in qs]:
         own |= validate.shingles(s)

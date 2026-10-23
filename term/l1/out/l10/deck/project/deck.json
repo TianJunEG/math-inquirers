@@ -35,8 +35,8 @@
   "s-sneakans",
   "s-exit",
   "s-exitans",
-  "s-check1",
-  "s-check2",
+  "s-quest1",
+  "s-quest2",
   "s-look",
   "s-end",
   "s-opt",
@@ -81,15 +81,18 @@
    "start": "s-exit"
   },
   "s10": {
-   "description": "End-of-term check",
-   "start": "s-check1"
+   "description": "Mi's Challenge Quest",
+   "start": "s-quest1"
   },
   "s11": {
    "description": "Look-back",
    "start": "s-look"
   }
  },
- "no_record": [],
+ "no_record": [
+  "s-quest1",
+  "s-quest2"
+ ],
  "faces": {
   "fredoka": {
    "family": "Fredoka",
