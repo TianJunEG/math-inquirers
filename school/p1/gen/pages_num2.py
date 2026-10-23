@@ -283,7 +283,7 @@ def page25():
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=5,
              key=dict(answers=f"1) {c1}, 2) {c2}, 3) 10 + {fk} = {10 + fk}, 4) {a1} - {b1} = {d1} more, 5) {a2} - {b2} = {d2} fewer", check_result=f"Code word: {word}"),
              note=("Three counting items (the third is a full ten frame and some more) and two comparing items. In the comparing items every picture in the shorter row is joined by a line to one in the longer row; the pictures with no line are the answer to how many more or how many fewer. "
-                   "Pictures are objects, never bare dots. Sets are 12 or fewer except the ten frame item, which has over 12."),
+                   "Pictures are objects, never bare dots. Every set is small; the ten frame item is a full ten and some more."),
              seed=2505)
     solved = [sum(count_objs(s1).values()), sum(count_objs(s2).values()), sum(count_objs(s3).values()),
               solve_compare_svg(cmp1, k[3], k[4], "more"), solve_compare_svg(cmp2, k[5], k[6], "fewer")]

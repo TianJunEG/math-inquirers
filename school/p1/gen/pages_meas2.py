@@ -262,7 +262,7 @@ def page33():
     srows = "".join(f'<div class="srow">{svg(14, 14, shape_svg(k, 7, 7, 12, fill="#fff", sw=0.5))}<span class="sn"><b>{KNAME[k]}</b><br>{KEDGE[k]}</span><span class="ab"></span></div>' for k in KINDS)
     silh = silhouette_svg(target, 10.0)
     opts = "".join(f'<div class="fopt"><i class="cl">{opt_letters[s_]}</i>{option_pieces_svg([k for k, x, y, r in FORM_TEMPLATES[order[s_]]])}</div>' for s_ in range(3))
-    form = (f'<div class="formtask"><div class="fg"><small>make this figure</small>{silh}</div><div class="fo"><p class="ptxt">Which pieces make this figure? Write that letter last.</p><div class="fopts">{opts}</div></div></div>')
+    form = (f'<div class="formtask"><div class="fg"><small>make this figure</small>{silh}</div><div class="fo"><p class="ptxt">Which pieces make this figure?</p><p class="ptxt">Write that letter last.</p><div class="fopts">{opts}</div></div></div>')
     body = f'<div class="figwrap">{figsvg}</div><p class="lead" style="margin:0;font-size:11pt;text-align:center">Squares and rectangles are different kinds here.</p><div class="srows s5">{srows}</div><div class="ctc">{code_block(table)}</div>{form}'
     chk_code = code_check(table)
     P = Page(no=33, title="Shape Builder", tier=2, topic="2D shapes: count the shapes in a figure and form a figure",
