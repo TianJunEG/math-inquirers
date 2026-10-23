@@ -49,7 +49,7 @@
     "child": [
       "A ruler with cm marks, starting at 0 (15 or 30 cm). No ruler? Tell your tutor before the lesson.",
       "3 or 4 things to measure; 10 paper clips (or small same-size things)",
-      "Workbook pages 1 to 5 (A4, printed at 100%; page 6 is not used), a pencil, a rubber, spare paper"
+      "Workbook pages 1 to 5 (A4, printed at 100%), a pencil, a rubber, spare paper"
     ],
     "tutor": [
       "A real ruler, a pencil and a strip of paper for your own use",
@@ -804,7 +804,7 @@
           },
           {
             "k": "SAY",
-            "text": "Well done, inquirers. Next lesson is Story Steps, the last lesson of the term. You need about 20 counters, such as buttons or coins, your ruler, a pencil and paper. Your grown-up will get a note about the check sheet to print."
+            "text": "Well done, inquirers. Next lesson is Story Steps, the last lesson of the term, with Mi's Challenge Quest, a game with Mi. You need about 20 counters, such as buttons or coins, your ruler, a pencil and paper, and the Quest Log in its envelope, kept closed. You also need a quest partner: a grown-up, or a brother or sister. Your grown-up will get a note about the Quest Log to print."
           },
           {
             "k": "SLIDE",
@@ -1604,7 +1604,7 @@
           "t": "card",
           "head": "NEXT LESSON",
           "items": [
-            "Story Steps, the last lesson. Bring about 20 counters, your ruler, a pencil and paper."
+            "Story Steps and Mi's Challenge Quest. Have ready: about 20 counters, your ruler, a pencil and paper, the Quest Log in its envelope (keep it closed) and a quest partner (a grown-up, or a brother or sister)."
           ]
         }
       ],
@@ -2906,13 +2906,13 @@
       "Does the line start at the 0 mark?"
     ],
     "when_stuck": "Let your child slide a finger along the ruler and count the jumps aloud. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
-    "next": "Lesson 10: Story Steps: Read It Twice. It includes the end-of-term check: your tutor will send a note. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+    "next": "Lesson 10: Story Steps: Read It Twice, with Mi's Challenge Quest (a game with Mi). Your tutor will send the Quest Log and a note. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to measure and draw lines in centimetres with a ruler and to say how they know. This week: starting at 0, reading the end mark, and comparing lengths.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "next_materials": [
-      "About 20 counters (buttons, coins or pasta) and your ruler",
-      "The printed Lesson 10 workbook, a pencil and spare paper",
-      "The 4-page check sheet, printed at 100% (actual size): see the note"
+      "Lesson 10 workbook with its kit page (page 6) cut out; about 20 counters (buttons, coins)",
+      "Quest Log (4 pages, printed at 100%), kept closed in an envelope; a quest partner (grown-up or sibling)",
+      "Your ruler, a pencil, a rubber and spare paper"
     ]
   },
   "safeguarding": [
@@ -2926,7 +2926,7 @@
   ],
   "tutor_prep": [
     "Solve every workbook question yourself with a real ruler first. Use something short, such as a crayon, for question 3.",
-    "Tell parents a week before: a ruler marked in centimetres starting at 0, workbook pages 1 to 5 printed on A4 (page 6, the cut-out page, is not used in this lesson), about 4 things to measure, 10 paper clips or small same-size things, a pencil and spare paper. Ask them to print the workbook at 100% (actual size), because the ruler pictures are real size.",
+    "Tell parents a week before: a ruler marked in centimetres starting at 0, workbook pages 1 to 5 printed on A4 (there is no cut-out page this lesson), about 4 things to measure, 10 paper clips or small same-size things, a pencil and spare paper. Ask them to print the workbook at 100% (actual size), because the ruler pictures are real size.",
     "Have your own ruler, a pencil and a strip of paper ready. Draw on a shared whiteboard or a blank slide (not on paper under the webcam, which the recording cannot show). Have the slides open.",
     "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes. If a family has no ruler, ask them before the lesson so a grown-up can find one; do not ask the child in front of the group.",
     "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."

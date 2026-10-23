@@ -60,3 +60,7 @@ Total: 17 / 24
 ## Second fix pass, 22 Oct 2026
 
 Changes are listed in `audit/FIXES2_L09.md`. Re-checked: validator 0 FAIL; 178 answer checks; 230 practice variants; slow-class script 89:35 (little margin; workbook overrun covered by the flex buffer and stated in the guide); workbook 5 pages, fill 84, 92, 95, 88, 91%; parent page one page. Start here has no rounding; the closer-mark idea is a Think harder preview. Ruler pictures are on the key slides; nothing is held up to the camera. The ruler dependency (no printed fallback) is still the owner's decision. No child has used the lesson; times are modelled.
+
+## Update (fourth fix pass, 23 Oct 2026): hand-off to Lesson 10
+
+Parent `next` and `next_materials`, the goodbye script line and the `s-end` slide now name Mi's Challenge Quest (not the old 4-page check sheet): Lesson 10 workbook with its kit page 6 cut out, about 20 counters, the Quest Log (4 pages, 100%) closed in an envelope, a quest partner, ruler, pencil, rubber, paper. The stale "page 6 is not used" in materials and tutor prep is removed (this lesson's workbook has 5 pages and no kit page). Validator 0 FAIL; parent page 1 page (96%).
