@@ -1,0 +1,654 @@
+{
+ "passed": 572,
+ "failed": 0,
+ "failures": [],
+ "worksheets": {
+  "CBC-P2-01": {
+   "single_slip": {
+    "wrong_values": 15000,
+    "in_key": 60,
+    "detected_all": 15000,
+    "rate_all": 1.0,
+    "detected_in_key": 60,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.6667
+   },
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 3.7,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-P2-02": {
+   "single_slip": {
+    "wrong_values": 13000,
+    "in_key": 52,
+    "detected_all": 13000,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.3654
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.5,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 37.0
+  },
+  "CBC-P2-03": {
+   "single_slip": {
+    "wrong_values": 14000,
+    "in_key": 56,
+    "detected_all": 14000,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8571
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 3.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 37.7
+  },
+  "CBC-P2-04": {
+   "single_slip": {
+    "wrong_values": 1700,
+    "in_key": 68,
+    "detected_all": 1700,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.5
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.1,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-P2-05": {
+   "single_slip": {
+    "wrong_values": 1700,
+    "in_key": 68,
+    "detected_all": 1700,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8235
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.2,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 38.0
+  },
+  "CBC-P2-06": {
+   "single_slip": {
+    "wrong_values": 910,
+    "in_key": 56,
+    "detected_all": 910,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.7143
+   },
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 3.5,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 39.8
+  },
+  "CBC-P2-07": {
+   "single_slip": {
+    "wrong_values": 30000,
+    "in_key": 60,
+    "detected_all": 30000,
+    "rate_all": 1.0,
+    "detected_in_key": 60,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.4333
+   },
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 4.1,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 37.9
+  },
+  "CBC-P2-08": {
+   "single_slip": {
+    "wrong_values": 11504,
+    "in_key": 64,
+    "detected_all": 11504,
+    "rate_all": 1.0,
+    "detected_in_key": 64,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.4375
+   },
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 3.4,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-P2-09": {
+   "single_slip": {
+    "wrong_values": 65052,
+    "in_key": 52,
+    "detected_all": 65052,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.3654
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.5,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 36.2
+  },
+  "CBC-P2-10": {
+   "single_slip": {
+    "wrong_values": 1300,
+    "in_key": 52,
+    "detected_all": 1300,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.3654
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.1,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 37.0
+  },
+  "CBC-P2-11": {
+   "single_slip": {
+    "wrong_values": 280,
+    "in_key": 56,
+    "detected_all": 280,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 1.0
+   },
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 4.5,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 36.2
+  },
+  "CBC-P2-12": {
+   "single_slip": {
+    "wrong_values": 12000,
+    "in_key": 48,
+    "detected_all": 12000,
+    "rate_all": 1.0,
+    "detected_in_key": 48,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8333
+   },
+   "min_pupil_font_mm": 4.5,
+   "min_teacher_font_mm": 3.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  }
+ },
+ "banks_and_pictures": {
+  "bank numbers tier 1": {
+   "questions": 1475,
+   "forms": [
+    "between",
+    "blocks",
+    "count_on",
+    "expanded",
+    "greatest",
+    "p100less",
+    "p100more",
+    "p10less",
+    "p10more",
+    "p1more",
+    "smallest",
+    "wrds"
+   ],
+   "bad": 0
+  },
+  "bank numbers tier 2": {
+   "questions": 1875,
+   "forms": [
+    "between",
+    "blocks",
+    "blocks_row",
+    "count_on",
+    "expanded",
+    "greatest",
+    "middle",
+    "p100less",
+    "p100more",
+    "p10less",
+    "p10more",
+    "p1less",
+    "p1more",
+    "regroup",
+    "smallest",
+    "wrds"
+   ],
+   "bad": 0
+  },
+  "bank pattern tier 1": {
+   "questions": 959,
+   "forms": [
+    "compact",
+    "compact4",
+    "compact_rule",
+    "f_back",
+    "f_back2",
+    "f_plain",
+    "f_rule",
+    "start"
+   ],
+   "bad": 0
+  },
+  "bank pattern tier 2": {
+   "questions": 971,
+   "forms": [
+    "compact",
+    "compact4",
+    "compact_rule",
+    "f_back",
+    "f_back2",
+    "f_plain",
+    "f_rule",
+    "odd_one",
+    "start"
+   ],
+   "bad": 0
+  },
+  "bank oddeven tier 1": {
+   "questions": 1250,
+   "forms": [
+    "between",
+    "great",
+    "nxt",
+    "nxt1",
+    "prv",
+    "prv1",
+    "seq",
+    "seq1",
+    "small",
+    "which"
+   ],
+   "bad": 0
+  },
+  "bank oddeven tier 2": {
+   "questions": 1250,
+   "forms": [
+    "between",
+    "great",
+    "nxt",
+    "nxt1",
+    "prv",
+    "prv1",
+    "seq",
+    "seq1",
+    "small",
+    "which"
+   ],
+   "bad": 0
+  },
+  "bank add tier 1": {
+   "questions": 1125,
+   "forms": [
+    "addto",
+    "atfirst",
+    "first",
+    "miss",
+    "more",
+    "rev",
+    "story",
+    "sum_",
+    "sumof"
+   ],
+   "bad": 0
+  },
+  "bank add tier 2": {
+   "questions": 1140,
+   "forms": [
+    "addto",
+    "atfirst",
+    "first",
+    "miss",
+    "more",
+    "rev",
+    "story",
+    "sum_",
+    "sumof",
+    "three"
+   ],
+   "bad": 0
+  },
+  "bank sub tier 1": {
+   "questions": 1000,
+   "forms": [
+    "diff",
+    "fewer",
+    "findiff",
+    "missing_min",
+    "missing_sub",
+    "reversal",
+    "story",
+    "subfrom"
+   ],
+   "bad": 0
+  },
+  "bank sub tier 2": {
+   "questions": 1051,
+   "forms": [
+    "diff",
+    "fewer",
+    "findiff",
+    "missing_min",
+    "missing_sub",
+    "reversal",
+    "story",
+    "subfrom",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank mult tier 1": {
+   "questions": 1000,
+   "forms": [
+    "arr",
+    "bags",
+    "grp",
+    "grp_short",
+    "grpart",
+    "multiply",
+    "rep",
+    "times"
+   ],
+   "bad": 0
+  },
+  "bank mult tier 2": {
+   "questions": 1240,
+   "forms": [
+    "arr",
+    "bags",
+    "grp",
+    "grp_short",
+    "grpart",
+    "multiply",
+    "plus",
+    "rep",
+    "times",
+    "times_as"
+   ],
+   "bad": 0
+  },
+  "bank div tier 1": {
+   "questions": 1000,
+   "forms": [
+    "div",
+    "group",
+    "into",
+    "mfac",
+    "related",
+    "share",
+    "sharer",
+    "short"
+   ],
+   "bad": 0
+  },
+  "bank div tier 2": {
+   "questions": 1125,
+   "forms": [
+    "div",
+    "group",
+    "into",
+    "mfac",
+    "most",
+    "related",
+    "share",
+    "sharer",
+    "short"
+   ],
+   "bad": 0
+  },
+  "bank frac tier 1": {
+   "questions": 964,
+   "forms": [
+    "add",
+    "cmp_like",
+    "cmp_unit",
+    "parts",
+    "shaded",
+    "shaded_bar",
+    "shaded_row",
+    "sub",
+    "unshaded",
+    "whole"
+   ],
+   "bad": 0
+  },
+  "bank frac tier 2": {
+   "questions": 1112,
+   "forms": [
+    "add",
+    "cmp_like",
+    "cmp_unit",
+    "parts",
+    "shaded",
+    "shaded_bar",
+    "shaded_row",
+    "sub",
+    "unshaded",
+    "whole"
+   ],
+   "bad": 0
+  },
+  "bank money tier 1": {
+   "questions": 1023,
+   "forms": [
+    "add",
+    "cash_short",
+    "cashq",
+    "change",
+    "convert",
+    "great",
+    "great_min",
+    "more",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank money tier 2": {
+   "questions": 1052,
+   "forms": [
+    "add",
+    "cash_short",
+    "cashq",
+    "change",
+    "comp",
+    "convert",
+    "great",
+    "great_min",
+    "more",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank time tier 1": {
+   "questions": 925,
+   "forms": [
+    "before",
+    "clock_row",
+    "clock_short",
+    "clock_stack",
+    "digital",
+    "hour",
+    "later",
+    "pastto"
+   ],
+   "bad": 0
+  },
+  "bank time tier 2": {
+   "questions": 800,
+   "forms": [
+    "ampm",
+    "conv",
+    "film",
+    "fromto",
+    "hours_mins_in",
+    "min_short",
+    "ret"
+   ],
+   "bad": 0
+  },
+  "bank measure tier 1": {
+   "questions": 750,
+   "forms": [
+    "bal",
+    "cm_add",
+    "cm_cut",
+    "kg_add",
+    "kg_heavier",
+    "l_add",
+    "l_left",
+    "l_share",
+    "less",
+    "one",
+    "ruler",
+    "short"
+   ],
+   "bad": 0
+  },
+  "bank measure tier 2": {
+   "questions": 682,
+   "forms": [
+    "bal",
+    "cm_add",
+    "cm_cut",
+    "g_add",
+    "kg_g",
+    "l_add",
+    "l_left",
+    "l_share",
+    "less",
+    "one",
+    "short"
+   ],
+   "bad": 0
+  },
+  "bank graph tier 1": {
+   "questions": 750,
+   "forms": [
+    "more",
+    "read",
+    "row1",
+    "tally1",
+    "tallyf",
+    "total"
+   ],
+   "bad": 0
+  },
+  "bank graph tier 2": {
+   "questions": 675,
+   "forms": [
+    "more",
+    "read",
+    "row1",
+    "tally1",
+    "tallyf",
+    "total"
+   ],
+   "bad": 0
+  },
+  "bank shape tier 1": {
+   "questions": 709,
+   "forms": [
+    "count2d",
+    "curved",
+    "curved_text",
+    "flat",
+    "flat_row",
+    "flat_text",
+    "flat_text2",
+    "pattern",
+    "sides",
+    "sides_text",
+    "sides_text2"
+   ],
+   "bad": 0
+  },
+  "bank shape tier 2": {
+   "questions": 619,
+   "forms": [
+    "flat_sum",
+    "flat_sum_row",
+    "pattern",
+    "sides",
+    "sides_row",
+    "sum_line",
+    "sum_text"
+   ],
+   "bad": 0
+  },
+  "picture rocket": {
+   "regions": 15,
+   "pairs": 5,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture fish": {
+   "regions": 16,
+   "pairs": 0,
+   "groups": 2,
+   "subsets": 1
+  },
+  "picture house": {
+   "regions": 17,
+   "pairs": 0,
+   "groups": 3,
+   "subsets": 1
+  },
+  "picture butterfly": {
+   "regions": 14,
+   "pairs": 7,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture icecream": {
+   "regions": 12,
+   "pairs": 5,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture owl": {
+   "regions": 14,
+   "pairs": 5,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture sailboat": {
+   "regions": 13,
+   "pairs": 0,
+   "groups": 1,
+   "subsets": 1
+  },
+  "picture castle": {
+   "regions": 17,
+   "pairs": 7,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture car": {
+   "regions": 13,
+   "pairs": 0,
+   "groups": 1,
+   "subsets": 1
+  },
+  "picture elephant": {
+   "regions": 14,
+   "pairs": 6,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture dinosaur": {
+   "regions": 15,
+   "pairs": 0,
+   "groups": 2,
+   "subsets": 1
+  }
+ }
+}

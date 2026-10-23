@@ -205,3 +205,86 @@ def sailboat():
     b.group(["hull_1", "hull_2", "hull_3"], "the three parts of the boat")
     b.subset(["sail_a", "sail_b", "jib_top", "jib_bot"], "The boat has {n} sails. Exactly {c} {are} {colour}.")
     return b.done()
+
+# ---------------------------------------------------------------- castle (symmetric)
+@picture
+def castle():
+    b = Builder("castle", "Castle", symmetric=True, blurb="castle with two towers, a keep with a flag, double doors, clouds and a lawn")
+    b.pair("cloud", E(24, 18, 22, 12))
+    b.pair("tower_roof", P((0, 80), (52, 80), (26, 40)))
+    b.pair("tower_a", R(0, 80, 52, 112))
+    b.pair("tower_b", R(0, 112, 52, 144))
+    b.pair("tower_c", R(0, 144, 52, 176))
+    b.add("keep_roof", P((56, 80), (124, 80), (90, 32)))
+    b.pair("keep_a", R(52, 80, AXIS, 112))
+    b.add("keep_b", R(52, 112, 128, 140))
+    b.pair("door", R(52, 140, AXIS, 176))
+    b.add("lawn", R(0, 176, 180, 200))
+    b.decor('<path d="M90,32 L90,10" stroke="#000" stroke-width="0.9" fill="none"/><path d="M90,10 L110,16 L90,22 Z" fill="#000"/>', R(88, 8, 112, 32))
+    b.decor('<circle cx="84" cy="158" r="2.2" fill="#000"/><circle cx="96" cy="158" r="2.2" fill="#000"/>', C(84, 158, 2.2).union(C(96, 158, 2.2)))
+    return b.done()
+
+# ---------------------------------------------------------------- car (not symmetric)
+@picture
+def car():
+    b = Builder("car", "Car", blurb="car with two windows, three body parts, two wheels, sun, clouds and a road")
+    wheels = C(46, 146, 24).union(C(134, 146, 24))
+    b.add("sun", C(24, 24, 18.5))
+    b.add("cloud_1", E(84, 20, 24, 13))
+    b.add("cloud_2", E(150, 24, 24, 13))
+    b.add("window_1", P((46, 96), (91, 96), (91, 50), (68, 50)))
+    b.add("window_2", P((91, 96), (138, 96), (116, 50), (91, 50)))
+    body = R(8, 96, 172, 148) - wheels
+    b.add("body_a", body & R(0, 0, 62, 200))
+    b.add("body_b", body & R(62, 0, 118, 200))
+    b.add("body_c", body & R(118, 0, 200, 200))
+    b.add("wheel_1", C(46, 146, 24))
+    b.add("wheel_2", C(134, 146, 24))
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"road_{i + 1}", R(x0, 174, x1, 200) - wheels)
+    b.group(["wheel_1", "wheel_2"], "the two wheels")
+    b.subset(["window_1", "window_2", "body_a", "body_b", "body_c"], "The car has {n} body and window parts. Exactly {c} {are} {colour}.")
+    return b.done()
+
+# ---------------------------------------------------------------- elephant, front view (symmetric)
+@picture
+def elephant():
+    b = Builder("elephant", "Elephant", symmetric=True, blurb="elephant face with two big ears, a trunk, two eyes, clouds and ground")
+    head = E(90, 80, 46, 50)
+    trunk = P((68, 124), (112, 124), (106, 170), (74, 170))
+    ear = E(26, 88, 26, 50) - head
+    b.pair("ear", ear)
+    b.pair("head_up", head & R(0, 0, AXIS, 62))
+    b.pair("head_mid", head & R(0, 62, AXIS, 100))
+    b.pair("head_low", (head & R(0, 100, AXIS, 200)) - trunk)
+    b.add("trunk", trunk - head)
+    b.pair("cloud", E(22, 16, 20, 11))
+    b.pair("ground", R(0, 174, 60, 200))
+    b.add("ground_m", R(60, 174, 120, 200))
+    b.decor('<circle cx="70" cy="70" r="3" fill="#000"/><circle cx="110" cy="70" r="3" fill="#000"/>', None)
+    return b.done()
+
+# ---------------------------------------------------------------- dinosaur (not symmetric)
+@picture
+def dinosaur():
+    b = Builder("dinosaur", "Dinosaur", blurb="long-necked dinosaur with a four-part body, two legs, a tail, sun, cloud and ground")
+    body = E(96, 118, 52, 34)
+    b.add("head", C(28, 38, 22))
+    b.add("neck_up", P((4, 60), (52, 60), (58, 90), (12, 90)))
+    b.add("neck_low", P((12, 90), (58, 90), (70, 118), (16, 118)) - body)
+    b.add("body_ul", body & R(0, 0, 96, 118))
+    b.add("body_ur", body & R(96, 0, 200, 118))
+    b.add("body_ll", body & R(0, 118, 96, 200))
+    b.add("body_lr", body & R(96, 118, 200, 200))
+    b.add("tail", P((140, 110), (180, 90), (180, 160), (140, 150)) - body)
+    b.add("leg_1", R(52, 100, 90, 178) - body)
+    b.add("leg_2", R(102, 100, 140, 178) - body)
+    for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
+        b.add(f"ground_{i + 1}", R(x0, 180, x1, 200))
+    b.add("sun", C(150, 28, 20))
+    b.add("cloud", E(92, 26, 26, 14))
+    b.decor('<circle cx="38" cy="28" r="2.8" fill="#000"/>', C(38, 28, 2.8))
+    b.group(["leg_1", "leg_2"], "the two legs")
+    b.group(["neck_up", "neck_low"], "the two parts of the neck")
+    b.subset(["body_ul", "body_ur", "body_ll", "body_lr"], "The dinosaur's body has {n} parts. Exactly {c} {are} {colour}.")
+    return b.done()

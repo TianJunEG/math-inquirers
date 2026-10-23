@@ -1,68 +1,11 @@
-"""Topic banks for Primary 1. A bank knows nothing about pictures: it makes one question for any wanted answer.
-Each bank has, per tier (1 = one star, 2 = two stars): five key values (the answers that map to the five colours),
-a domain of every value a pupil could plausibly write, and several question forms that differ in layout.
-A Q carries the printed lines, the teacher lines, and `holds(v)` that says whether value v answers the question."""
+"""Primary 1 topic banks (level file: LEVEL, RULES, BANKS, GALLERY). See banks.py for how level files are found.
+A bank knows nothing about pictures: it makes one question for any wanted answer (see qcore.py)."""
 import random, re
-from dataclasses import dataclass, field
 import art as A
+from qcore import *
 
-BOX = "□"
-MINUS = "−"
-
-@dataclass
-class Q:
-    lines: list                       # printed lines; BOX marks a blank
-    holds: object                     # v -> bool
-    sol: list = None                  # teacher lines with the answer in place (filled by the bank)
-    art: object = None                # art.Art or None
-    layout: str = "stack"             # 'stack' (art above the text) or 'row' (art left, text right)
-    form: str = ""
-    eq: list = field(default_factory=list)   # printed equation lines that the verifier re-evaluates from the text
-
-def mark(s, a_text):
-    return s.replace(BOX, "⟦" + a_text + "⟧", 1) if BOX in s else s
-
-def eq_eval(line, v):
-    t = line.replace(BOX, f"({v})").replace(MINUS, "-").replace("¢", "").replace("$", "").replace("cm", "")
-    if not re.fullmatch(r"[0-9+\-() =]+", t): raise ValueError(line)
-    l, r = t.split("=")
-    return eval(l) == eval(r)
-
-def EQ(lines, a, a_text=None, **kw):
-    """question whose answer is found by solving the equation line(s) that contain a blank"""
-    lines = list(lines)
-    eqs = [l for l in lines if BOX in l and "=" in l]
-    if len(lines) > 1 and not all(BOX in l and "=" in l for l in lines):
-        eqs = [" ".join(lines)]                     # one equation printed over two lines
-    assert eqs, lines
-    q = Q(lines, lambda v, eqs=eqs: all(eq_eval(l, v) for l in eqs), eq=eqs, **kw)
-    at = a_text if a_text is not None else str(a)
-    q.sol = [mark(l, at) for l in lines]
-    return q
-
-def SEM(lines, holds, a_text, **kw):
-    q = Q(list(lines), holds, **kw)
-    q.sol = [mark(l, a_text) for l in lines]
-    return q
-
-@dataclass
-class Tier:
-    key: list
-    domain: list
-    forms: list
-    disp: object = str
-    instr: str = None                 # overrides the bank's instruction line for this tier
-
-@dataclass
-class Bank:
-    id: str
-    title: str                 # words used in the worksheet title
-    topic: str                 # inventory topic name
-    instr: str
-    tiers: dict
-    topic_by_tier: dict = None         # optional more exact topic name per tier
-
-    def topic_for(self, tier): return (self.topic_by_tier or {}).get(tier, self.topic)
+LEVEL = 1
+RULES = dict(allow_division_sign=False, time_words_only=True)   # wording rules the verifier applies to this level's pages
 
 # ------------------------------------------------------------------ addition within 20
 def _add1(a, r):
@@ -264,41 +207,41 @@ def _money1():
     def coins_(a, r):
         cs = r.choice(_coin_sets(a)); r.shuffle(cs)
         art = A.coins(cs)
-        return SEM(["How much?", f"{BOX}{S}"], lambda v, t=a: v == t, str(a) + S, art=art, form="count the coins")
+        return SEM(["How much?", f"{BOX}{S}"], lambda v, t=a: v == t, str(a), art=art, form="count the coins")
     def coins_row(a, r):
         cs = r.choice(_coin_sets(a)); r.shuffle(cs)
-        return SEM([f"{BOX}{S}"], lambda v, t=a: v == t, str(a) + S, art=A.coins(cs), form="coins, answer only")
+        return SEM([f"{BOX}{S}"], lambda v, t=a: v == t, str(a), art=A.coins(cs), form="coins, answer only")
     def sum_(a, r):
-        x = r.choice([v for v in range(5, a, 5)]); return EQ([f"{x}{S} + {a - x}{S} = {BOX}{S}"], a, str(a) + S, form="add cents")
+        x = r.choice([v for v in range(5, a, 5)]); return EQ([f"{x}{S} + {a - x}{S} = {BOX}{S}"], a, str(a), form="add cents")
     def miss(a, r):
-        x = r.choice([v for v in range(5, 50, 5)]); return EQ([f"{x}{S} + {BOX}{S} = {a + x}{S}"], a, str(a) + S, form="missing cents")
+        x = r.choice([v for v in range(5, 50, 5)]); return EQ([f"{x}{S} + {BOX}{S} = {a + x}{S}"], a, str(a), form="missing cents")
     def spend(a, r):
-        s = r.choice([v for v in range(5, 55, 5)]); return EQ([f"{a + s}{S} {MINUS} {s}{S} = {BOX}{S}"], a, str(a) + S, form="cents left")
+        s = r.choice([v for v in range(5, 55, 5)]); return EQ([f"{a + s}{S} {MINUS} {s}{S} = {BOX}{S}"], a, str(a), form="cents left")
     def more(a, r):
         x = r.choice([v for v in range(5, a, 5)])
-        return SEM([f"I have {x}{S}.", f"I get {a - x}{S} more.", f"Now {BOX}{S}"], lambda v, t=a: v == t, str(a) + S, form="get more")
+        return SEM([f"I have {x}{S}.", f"I get {a - x}{S} more.", f"Now {BOX}{S}"], lambda v, t=a: v == t, str(a), form="get more")
     def fewer(a, r):
-        s = r.choice([5, 10, 20]); return SEM([f"Ann has {a + s}{S}.", f"Ben has {s}{S} fewer.", f"Ben: {BOX}{S}"], lambda v, t=a: v == t, str(a) + S, form="fewer than")
+        s = r.choice([5, 10, 20]); return SEM([f"Ann has {a + s}{S}.", f"Ben has {s}{S} fewer.", f"Ben: {BOX}{S}"], lambda v, t=a: v == t, str(a), form="fewer than")
     return [coins_, coins_row, sum_, miss, spend, more, fewer]
 def _money2():
     def notes_(a, r):
         sets = {12: [[10, 2]], 14: [[10, 2, 2], [5, 5, 2, 2]], 16: [[10, 5, 1], [10, 2, 2, 2]], 18: [[10, 5, 2, 1], [10, 2, 2, 2, 2]], 20: [[10, 10], [10, 5, 5]]}
         ns = r.choice([s for s in sets[a] if len(s) <= 4]); ns = list(ns); r.shuffle(ns)
-        return SEM(["How much?", f"${BOX}"], lambda v, t=a: v == t, "$" + str(a), art=A.notes(ns), form="count the notes")
+        return SEM(["How much?", f"${BOX}"], lambda v, t=a: v == t, str(a), art=A.notes(ns), form="count the notes")
     def sum_(a, r):
-        x = r.randint(5, a - 5); return EQ([f"${x} + ${a - x} = ${BOX}"], a, "$" + str(a), form="add dollars")
+        x = r.randint(5, a - 5); return EQ([f"${x} + ${a - x} = ${BOX}"], a, str(a), form="add dollars")
     def more(a, r):
         x = r.randint(5, 9)
-        return SEM([f"Ann has ${a - x}.", f"Ben has ${x} more.", f"Ben has ${BOX}"], lambda v, t=a: v == t, "$" + str(a), form="more than")
+        return SEM([f"Ann has ${a - x}.", f"Ben has ${x} more.", f"Ben has ${BOX}"], lambda v, t=a: v == t, str(a), form="more than")
     def both(a, r):
         x = r.randint(4, a - 4)
-        return SEM([f"A toy costs ${x}.", f"A ball costs ${a - x}.", f"Both cost ${BOX}"], lambda v, t=a: v == t, "$" + str(a), form="two prices")
+        return SEM([f"A toy costs ${x}.", f"A ball costs ${a - x}.", f"Both cost ${BOX}"], lambda v, t=a: v == t, str(a), form="two prices")
     def left(a, r):
         s = r.randint(3, 8)
-        return EQ([f"${a + s} {MINUS} ${s} = ${BOX}"], a, "$" + str(a), form="dollars left") if a + s <= 28 else None
+        return EQ([f"${a + s} {MINUS} ${s} = ${BOX}"], a, str(a), form="dollars left") if a + s <= 28 else None
     def fewer(a, r):
         s = r.randint(3, 8)
-        return SEM([f"Ann has ${a + s}.", f"Tom has ${s} fewer.", f"Tom: ${BOX}"], lambda v, t=a: v == t, "$" + str(a), form="fewer than") if a + s <= 28 else None
+        return SEM([f"Ann has ${a + s}.", f"Tom has ${s} fewer.", f"Tom: ${BOX}"], lambda v, t=a: v == t, str(a), form="fewer than") if a + s <= 28 else None
     return [notes_, sum_, more, both, left, fewer]
 
 # ------------------------------------------------------------------ time (o'clock and half past only)
@@ -417,7 +360,6 @@ def _shapes(tier):
     return forms
 
 def build_banks():
-    def T(key, domain, forms, disp=str, instr=None): return Tier(key, list(domain), forms, disp, instr)
     B = {}
     B["add"] = Bank("add", "Addition", "Addition within 20", "Add. Find the answer in the key. Colour the part with that colour.",
         {1: T([8, 9, 10, 11, 12], range(0, 21), _add1(0, 0)), 2: T([13, 14, 15, 16, 17], range(0, 21), _add2(0, 0))})
@@ -446,3 +388,16 @@ def build_banks():
     return B
 
 BANKS = build_banks()
+
+GALLERY = [
+    dict(id="CBC-01", picture="rocket",    bank="bonds",   tier=1, seed=101),
+    dict(id="CBC-02", picture="fish",      bank="add",     tier=2, seed=102),
+    dict(id="CBC-03", picture="butterfly", bank="sub",     tier=2, seed=103),
+    dict(id="CBC-04", picture="house",     bank="place",   tier=1, seed=104),
+    dict(id="CBC-05", picture="icecream",  bank="count",   tier=2, seed=105),
+    dict(id="CBC-06", picture="owl",       bank="compare", tier=2, seed=106),
+    dict(id="CBC-07", picture="sailboat",  bank="money",   tier=1, seed=107),
+    dict(id="CBC-08", picture="fish",      bank="time",    tier=1, seed=108),
+    dict(id="CBC-09", picture="icecream",  bank="length",  tier=1, seed=109),
+    dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=114),
+]

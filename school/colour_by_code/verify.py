@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Verify every colour-by-code worksheet. Exit code 1 on any failure. Writes out/verification.json, out/verification.txt and out/inventory.md.
-   python3 verify.py [--out out]
+   python3 verify.py [--level 2] [--out out]      (without --level: every level in turn; level N reads and writes out/pN/)
 Checks (per worksheet unless noted):
   banks (every bank, both tiers): each question has exactly one answer in the bank's domain and it is the intended one; printed equations are re-evaluated from their text
   pictures: 12 to 18 regions, regions do not overlap, mirror pairs are exact mirror images, a label box at least 28 mm wide fits every region
@@ -14,13 +14,18 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import numpy as np
 from PIL import Image
 from shapely.geometry import box as sbox
+import zlib
 import sheet as S, build as B, layout as L
-from banks import BANKS, BOX
+from banks import banks, gallery, levels, rules, BOX
 from pictures import PICTURES
-from worksheets import GALLERY
 
-ap = argparse.ArgumentParser(); ap.add_argument("--out", default=os.path.join(HERE, "out")); a = ap.parse_args()
-OUT = a.out
+ap = argparse.ArgumentParser(); ap.add_argument("--level", type=int); ap.add_argument("--out", default=os.path.join(HERE, "out")); a = ap.parse_args()
+if a.level is None:                       # every level in turn, one process each
+    rc = 0
+    for n in levels(): rc |= subprocess.call([sys.executable, os.path.abspath(__file__), "--level", str(n), "--out", a.out])
+    sys.exit(1 if rc else 0)
+LEVEL = a.level; BANKS = banks(LEVEL); GALLERY = gallery(LEVEL); RULES = rules(LEVEL)
+OUT = os.path.join(a.out, f"p{LEVEL}")
 log, fails, report = [], [], {}
 def rec(name, ok, detail=""):
     log.append(f'{"PASS" if ok else "FAIL"}  {name}  {detail}')
@@ -36,26 +41,26 @@ for bid, bank in BANKS.items():
         for ai, ans in enumerate(tier.key):
             for f in tier.forms:
                 for k in range(25):
-                    rng = random.Random(hash((bid, t, ai, f.__name__, k)) & 0xffffffff)
+                    rng = random.Random(zlib.crc32(f"{bid}|{t}|{ai}|{f.__name__}|{k}".encode()))
                     q = f(ans, rng)
                     if q is None: continue
                     made += 1; forms.add(f.__name__)
                     sol = [v for v in tier.domain if q.holds(v)]
                     if sol != [ans]: bad.append((f.__name__, q.lines, sol))
                     solved = " ".join(q.sol)
-                    if L.ANS_L + (tier.disp(ans) if not isinstance(ans, tuple) else "") not in solved and not isinstance(ans, tuple) and q.art is None and BOX in " ".join(q.lines):
-                        if str(ans) not in solved: bad.append((f.__name__, "answer not in teacher lines", q.sol))
+                    if q.a_text is not None and BOX in " ".join(q.lines) and L.ANS_L + q.a_text + L.ANS_R not in solved: bad.append((f.__name__, "answer not in teacher lines", q.sol))
                     for e in q.eq:        # re-evaluate the printed equation with the intended answer substituted
-                        if not __import__("banks").eq_eval(e, ans): bad.append((f.__name__, "equation", e))
-                    if q.art is not None and q.art.meta.get("kind") == "clock":
+                        if not __import__("qcore").eq_eval(e, ans, q.eq_money): bad.append((f.__name__, "equation", e))
+                    if q.extra is not None and not q.extra(ans): bad.append((f.__name__, "bank-specific picture or text check", q.lines))
+                    if q.extra is None and q.art is not None and q.art.meta.get("kind") == "clock":
                         import art as A
                         if A.decode_clock(q.art.meta) != ans: bad.append((f.__name__, "clock hands", q.art.meta))
-                    if q.art is not None and q.art.meta.get("kind") == "ruler":
+                    if q.extra is None and q.art is not None and q.art.meta.get("kind") == "ruler":
                         m = q.art.meta
                         if m["end"] - m["start"] != ans: bad.append((f.__name__, "ruler", m))
-                    if q.art is not None and q.art.meta.get("kind") in ("coins", "notes"):
+                    if q.extra is None and q.art is not None and q.art.meta.get("kind") in ("coins", "notes"):
                         if sum(q.art.meta["values"]) != ans: bad.append((f.__name__, "coins", q.art.meta))
-                    if q.art is not None and q.art.meta.get("kind") == "shapes":
+                    if q.extra is None and q.art is not None and q.art.meta.get("kind") == "shapes":
                         import art as A
                         if sum(A.SHAPES[k_] for k_ in q.art.meta["kinds"]) * (1 if t == 1 else 2) != ans: bad.append((f.__name__, "shapes", q.art.meta))
                     if hasattr(q, "seq"):
@@ -193,7 +198,7 @@ from playwright.sync_api import sync_playwright
 JS = """
 () => {
   const svg = document.querySelector('svg.pic'); const out = {labels: [], decor: 0, issues: []};
-  const regions = {}; svg.querySelectorAll('path.r').forEach(p => regions[p.id.split('-').slice(2).join('-')] = p);
+  const regions = {}; svg.querySelectorAll('path.r').forEach(p => regions[p.dataset.r] = p);
   const decor = [...svg.children].filter(e => !e.classList.contains('r') && !e.classList.contains('lab'));
   svg.querySelectorAll('g.lab').forEach(g => {
     const id = g.dataset.r; const p = regions[id]; const bb = g.getBBox();
@@ -238,7 +243,7 @@ with sync_playwright() as pw:
 # ---------------------------------------------------------------------------------------------- 5. PDFs: wording, fonts, size, 1-bit legibility
 import tempfile
 tmp = tempfile.mkdtemp()
-FORBIDDEN = re.compile(r"S\$|SGD|per copy|per school|\bRRP\b|discount|\bMi\b|MOE|Ministry|aligned|alignment|affiliat|endorse|÷", re.I)
+FORBIDDEN = re.compile(r"S\$|SGD|per copy|per school|\bRRP\b|discount|\bMi\b|MOE|Ministry|aligned|alignment|affiliat|endorse" + ("" if RULES.get("allow_division_sign") else "|÷"), re.I)
 total_bytes = 0
 for sh in sheets:
     sp = sh["spec"]; wid = sp["id"]; slug = B.slug(sp)
@@ -253,7 +258,7 @@ for sh in sheets:
         txt = pdftext(path)
         rec(f"{wid} {kind}: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)", not FORBIDDEN.search(txt) and not re.search(r"(?<![\w.])\d+c\b", txt), str(FORBIDDEN.findall(txt)[:3]))
         rec(f"{wid} {kind}: footer has a school-name field and the worksheet code", "School name:" in txt and wid in txt)
-        if sp["bank"] == "time": rec(f"{wid} {kind}: time uses only o'clock and half past", not re.search(r"quarter|\bten past|twenty|\bto \d", txt, re.I))
+        if sp["bank"] == "time" and RULES.get("time_words_only"): rec(f"{wid} {kind}: time uses only o'clock and half past", not re.search(r"quarter|\bten past|twenty|\bto \d", txt, re.I))
         h = open(os.path.join(OUT, "html", f"{slug}_{kind}.html")).read()
         body = h[h.index("<body>"):]
         cols = set(c.lower() for c in re.findall(r"#[0-9a-fA-F]{3,6}\b", h))
@@ -295,8 +300,9 @@ for sh in sheets:
 rec("all PDFs together are under 20 MB", total_bytes < 20e6, f"{total_bytes / 1e6:.2f} MB")
 cs = os.path.join(OUT, "contact_sheet.pdf")
 rec("contact sheet PDF exists with 2 pages", os.path.exists(cs) and re.search(r"Pages:\s+2\b", subprocess.run(["pdfinfo", cs], capture_output=True, text=True).stdout) is not None)
-rec("gallery has 10 worksheets, at least 5 pictures, at least 6 topics, mixed stars",
-    len(GALLERY) == 10 and len({g["picture"] for g in GALLERY}) >= 5 and len({g["bank"] for g in GALLERY}) >= 6 and {g["tier"] for g in GALLERY} == {1, 2})
+rec(f"Primary {LEVEL} gallery has 10 to 12 worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids",
+    10 <= len(GALLERY) <= 12 and len({g["picture"] for g in GALLERY}) >= 5 and len({g["bank"] for g in GALLERY}) >= 6 and {g["tier"] for g in GALLERY} == {1, 2} and len({g["id"] for g in GALLERY}) == len(GALLERY),
+    f"{len(GALLERY)} worksheets, {len({g['picture'] for g in GALLERY})} pictures, {len({g['bank'] for g in GALLERY})} topics")
 rec("library has at least 5 pictures and 6 topic banks", len(PICTURES) >= 5 and len(BANKS) >= 6, f"{len(PICTURES)} pictures, {len(BANKS)} banks")
 
 # ---------------------------------------------------------------------------------------------- report

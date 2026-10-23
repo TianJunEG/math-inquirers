@@ -3,7 +3,7 @@ region that fits its label box, and write the pupil and teacher pages as HTML.""
 import html, math, os, random
 from collections import Counter
 import layout as L
-from banks import BANKS, BOX
+from banks import get_bank, BOX
 from pictures import PICTURES
 
 COLOURS = ["yellow", "red", "blue", "green", "orange"]
@@ -39,7 +39,8 @@ def assign(pic, rng):
 
 def make_sheet(spec, school=""):
     pic = PICTURES[spec["picture"]]()
-    bank = BANKS[spec["bank"]]; tier = bank.tiers[spec["tier"]]
+    level = spec.get("level", 1)
+    bank = get_bank(level, spec["bank"]); tier = bank.tiers[spec["tier"]]
     rng = random.Random(spec["seed"])
     idx = assign(pic, rng)
     key = tier.key
@@ -83,7 +84,7 @@ def make_sheet(spec, school=""):
         use[form.__name__] += 1; seen.add(sig)
         items[reg.id] = dict(id=reg.id, answer=a, colour=COLOURS[idx[reg.id]], q=q, form=form.__name__, content=content, place=p, tcontent=tc, tplace=tp, teacher_short=short, dup=dup)
     tally = {COLOURS[k]: sum(1 for r in pic.regions if idx[r.id] == k) for k in range(5)}
-    return dict(spec=spec, pic=pic, bank=bank, tier=tier, key=key, idx=idx, items=items, tally=tally, dups=sum(1 for i in items.values() if i['dup']), school=school, checks=check_sentences(pic, idx, tally))
+    return dict(spec=spec, level=level, pic=pic, bank=bank, tier=tier, key=key, idx=idx, items=items, tally=tally, dups=sum(1 for i in items.values() if i['dup']), school=school, checks=check_sentences(pic, idx, tally))
 
 def check_sentences(pic, idx, tally):
     out = [("tally", "Count the parts of each colour. You should have: " + ", ".join(f"{c} {n}" for c, n in tally.items()) + ".")]
@@ -136,7 +137,7 @@ def page_html(sh, teacher=False):
     pic, bank, spec = sh["pic"], sh["bank"], sh["spec"]
     parts = []
     for r in pic.regions:
-        parts.append(f'<path class="r" id="{spec["id"]}-{r.id}" d="{__import__("geom").path_d(r.geom)}"/>')
+        parts.append(f'<path class="r" id="{spec["id"]}-{r.id}" data-r="{r.id}" d="{__import__("geom").path_d(r.geom)}"/>')
     for svgf, _ in pic.decor: parts.append(svgf)
     for r in pic.regions:
         it = sh["items"][r.id]
@@ -153,4 +154,4 @@ def page_html(sh, teacher=False):
     head_r = star_svg(spec["tier"]) + ('<div class="nm">Name <span></span><br>Class <span></span></div>' if not teacher else "")
     return (f'<div class="page" data-ws="{spec["id"]}"><header><h1 style="font-size:{tsize}pt">{title}</h1>{head_r}</header><p class="instr">{html.escape(instr)}</p>'
             f'<div class="key">{keyhtml}</div>{svg}<div class="chk"><b>Check your work.</b>{chk}</div>'
-            f'<footer><span>{school}</span><span>{spec["id"]} &middot; {html.escape(bank.topic_for(spec["tier"]))} &middot; {stars}</span></footer></div>')
+            f'<footer><span>{school}</span><span>{spec["id"]} &middot; Primary {sh["level"]} &middot; {html.escape(bank.topic_for(spec["tier"]))} &middot; {stars}</span></footer></div>')

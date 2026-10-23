@@ -1,0 +1,574 @@
+PASS  bank numbers tier 1: key has five distinct values inside the domain  
+PASS  bank numbers tier 1: 1475 sample questions each have exactly one answer in the domain, equal to the intended one (12 forms)  []
+PASS  bank numbers tier 2: key has five distinct values inside the domain  
+PASS  bank numbers tier 2: 1875 sample questions each have exactly one answer in the domain, equal to the intended one (16 forms)  []
+PASS  bank pattern tier 1: key has five distinct values inside the domain  
+PASS  bank pattern tier 1: 959 sample questions each have exactly one answer in the domain, equal to the intended one (8 forms)  []
+PASS  bank pattern tier 2: key has five distinct values inside the domain  
+PASS  bank pattern tier 2: 971 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank oddeven tier 1: key has five distinct values inside the domain  
+PASS  bank oddeven tier 1: 1250 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank oddeven tier 2: key has five distinct values inside the domain  
+PASS  bank oddeven tier 2: 1250 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank add tier 1: key has five distinct values inside the domain  
+PASS  bank add tier 1: 1125 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank add tier 2: key has five distinct values inside the domain  
+PASS  bank add tier 2: 1140 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank sub tier 1: key has five distinct values inside the domain  
+PASS  bank sub tier 1: 1000 sample questions each have exactly one answer in the domain, equal to the intended one (8 forms)  []
+PASS  bank sub tier 2: key has five distinct values inside the domain  
+PASS  bank sub tier 2: 1051 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank mult tier 1: key has five distinct values inside the domain  
+PASS  bank mult tier 1: 1000 sample questions each have exactly one answer in the domain, equal to the intended one (8 forms)  []
+PASS  bank mult tier 2: key has five distinct values inside the domain  
+PASS  bank mult tier 2: 1240 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank div tier 1: key has five distinct values inside the domain  
+PASS  bank div tier 1: 1000 sample questions each have exactly one answer in the domain, equal to the intended one (8 forms)  []
+PASS  bank div tier 2: key has five distinct values inside the domain  
+PASS  bank div tier 2: 1125 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank frac tier 1: key has five distinct values inside the domain  
+PASS  bank frac tier 1: 964 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank frac tier 2: key has five distinct values inside the domain  
+PASS  bank frac tier 2: 1112 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank money tier 1: key has five distinct values inside the domain  
+PASS  bank money tier 1: 1023 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank money tier 2: key has five distinct values inside the domain  
+PASS  bank money tier 2: 1052 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
+PASS  bank time tier 1: key has five distinct values inside the domain  
+PASS  bank time tier 1: 925 sample questions each have exactly one answer in the domain, equal to the intended one (8 forms)  []
+PASS  bank time tier 2: key has five distinct values inside the domain  
+PASS  bank time tier 2: 800 sample questions each have exactly one answer in the domain, equal to the intended one (7 forms)  []
+PASS  bank measure tier 1: key has five distinct values inside the domain  
+PASS  bank measure tier 1: 750 sample questions each have exactly one answer in the domain, equal to the intended one (12 forms)  []
+PASS  bank measure tier 2: key has five distinct values inside the domain  
+PASS  bank measure tier 2: 682 sample questions each have exactly one answer in the domain, equal to the intended one (11 forms)  []
+PASS  bank graph tier 1: key has five distinct values inside the domain  
+PASS  bank graph tier 1: 750 sample questions each have exactly one answer in the domain, equal to the intended one (6 forms)  []
+PASS  bank graph tier 2: key has five distinct values inside the domain  
+PASS  bank graph tier 2: 675 sample questions each have exactly one answer in the domain, equal to the intended one (6 forms)  []
+PASS  bank shape tier 1: key has five distinct values inside the domain  
+PASS  bank shape tier 1: 709 sample questions each have exactly one answer in the domain, equal to the intended one (11 forms)  []
+PASS  bank shape tier 2: key has five distinct values inside the domain  
+PASS  bank shape tier 2: 619 sample questions each have exactly one answer in the domain, equal to the intended one (7 forms)  []
+PASS  picture rocket: 12 to 18 regions  15
+PASS  picture rocket: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture rocket: regions do not overlap  []
+PASS  picture rocket: region ids are unique  
+PASS  picture rocket: mirror pairs are exact mirror images (5 pairs)  []
+PASS  picture rocket: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture fish: 12 to 18 regions  16
+PASS  picture fish: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture fish: regions do not overlap  []
+PASS  picture fish: region ids are unique  
+PASS  picture fish: mirror pairs are exact mirror images (0 pairs)  []
+PASS  picture fish: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture house: 12 to 18 regions  17
+PASS  picture house: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture house: regions do not overlap  []
+PASS  picture house: region ids are unique  
+PASS  picture house: mirror pairs are exact mirror images (0 pairs)  []
+PASS  picture house: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture butterfly: 12 to 18 regions  14
+PASS  picture butterfly: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture butterfly: regions do not overlap  []
+PASS  picture butterfly: region ids are unique  
+PASS  picture butterfly: mirror pairs are exact mirror images (7 pairs)  []
+PASS  picture butterfly: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture icecream: 12 to 18 regions  12
+PASS  picture icecream: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture icecream: regions do not overlap  []
+PASS  picture icecream: region ids are unique  
+PASS  picture icecream: mirror pairs are exact mirror images (5 pairs)  []
+PASS  picture icecream: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture owl: 12 to 18 regions  14
+PASS  picture owl: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture owl: regions do not overlap  []
+PASS  picture owl: region ids are unique  
+PASS  picture owl: mirror pairs are exact mirror images (5 pairs)  []
+PASS  picture owl: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture sailboat: 12 to 18 regions  13
+PASS  picture sailboat: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture sailboat: regions do not overlap  []
+PASS  picture sailboat: region ids are unique  
+PASS  picture sailboat: mirror pairs are exact mirror images (0 pairs)  []
+PASS  picture sailboat: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture castle: 12 to 18 regions  17
+PASS  picture castle: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture castle: regions do not overlap  []
+PASS  picture castle: region ids are unique  
+PASS  picture castle: mirror pairs are exact mirror images (7 pairs)  []
+PASS  picture castle: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture car: 12 to 18 regions  13
+PASS  picture car: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture car: regions do not overlap  []
+PASS  picture car: region ids are unique  
+PASS  picture car: mirror pairs are exact mirror images (0 pairs)  []
+PASS  picture car: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture elephant: 12 to 18 regions  14
+PASS  picture elephant: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture elephant: regions do not overlap  []
+PASS  picture elephant: region ids are unique  
+PASS  picture elephant: mirror pairs are exact mirror images (6 pairs)  []
+PASS  picture elephant: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  picture dinosaur: 12 to 18 regions  15
+PASS  picture dinosaur: every region is one valid polygon, area >= 250 mm2, inside the canvas  
+PASS  picture dinosaur: regions do not overlap  []
+PASS  picture dinosaur: region ids are unique  
+PASS  picture dinosaur: mirror pairs are exact mirror images (0 pairs)  []
+PASS  picture dinosaur: a label box at least 28 mm wide and 12 mm high fits every region  []
+PASS  CBC-P2-01: pupil and teacher PDFs exist  
+PASS  CBC-P2-01: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-01: no two regions have the same question  0 repeated
+PASS  CBC-P2-01: all five key values and colours are used (counts [4, 3, 4, 2, 2], each at least 2)  
+PASS  CBC-P2-01: tally printed on the pupil page equals the tally of the answers  printed [4, 3, 4, 2, 2]
+PASS  CBC-P2-01: tally printed on the teacher page equals the tally of the answers  printed [4, 3, 4, 2, 2]
+PASS  CBC-P2-01: mirror pairs share one colour (5 pairs)  
+PASS  CBC-P2-01: must-match groups share one colour (0 groups)  
+PASS  CBC-P2-01: single-slip detection 15000/15000 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-01: single-slip detection for wrong values that do have a crayon colour 60/60 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-01: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-01: smallest pupil text 4.4 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-01: every region is at least 28 mm wide where its label sits (narrowest (34.0, 'fin_l'))  
+PASS  CBC-P2-02: pupil and teacher PDFs exist  
+PASS  CBC-P2-02: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-02: no two regions have the same question  0 repeated
+PASS  CBC-P2-02: all five key values and colours are used (counts [2, 3, 3, 3, 2], each at least 2)  
+PASS  CBC-P2-02: tally printed on the pupil page equals the tally of the answers  printed [2, 3, 3, 3, 2]
+PASS  CBC-P2-02: tally printed on the teacher page equals the tally of the answers  printed [2, 3, 3, 3, 2]
+PASS  CBC-P2-02: mirror pairs share one colour (0 pairs)  
+PASS  CBC-P2-02: must-match groups share one colour (1 groups)  
+PASS  CBC-P2-02: counted-subset check 'The car has 5 body and window parts. Exactly 2 are green.' is true of the answers and printed correctly  real 2
+PASS  CBC-P2-02: single-slip detection 13000/13000 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-02: single-slip detection for wrong values that do have a crayon colour 52/52 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-02: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-02: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-02: every region is at least 28 mm wide where its label sits (narrowest (37.0, 'sun'))  
+PASS  CBC-P2-03: pupil and teacher PDFs exist  
+PASS  CBC-P2-03: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-03: no two regions have the same question  0 repeated
+PASS  CBC-P2-03: all five key values and colours are used (counts [4, 3, 3, 2, 2], each at least 2)  
+PASS  CBC-P2-03: tally printed on the pupil page equals the tally of the answers  printed [4, 3, 3, 2, 2]
+PASS  CBC-P2-03: tally printed on the teacher page equals the tally of the answers  printed [4, 3, 3, 2, 2]
+PASS  CBC-P2-03: mirror pairs share one colour (6 pairs)  
+PASS  CBC-P2-03: must-match groups share one colour (0 groups)  
+PASS  CBC-P2-03: single-slip detection 14000/14000 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-03: single-slip detection for wrong values that do have a crayon colour 56/56 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-03: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-03: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-03: every region is at least 28 mm wide where its label sits (narrowest (37.7, 'trunk'))  
+PASS  CBC-P2-04: pupil and teacher PDFs exist  
+PASS  CBC-P2-04: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-04: no two regions have the same question  0 repeated
+PASS  CBC-P2-04: all five key values and colours are used (counts [3, 5, 2, 3, 4], each at least 2)  
+PASS  CBC-P2-04: tally printed on the pupil page equals the tally of the answers  printed [3, 5, 2, 3, 4]
+PASS  CBC-P2-04: tally printed on the teacher page equals the tally of the answers  printed [3, 5, 2, 3, 4]
+PASS  CBC-P2-04: mirror pairs share one colour (0 pairs)  
+PASS  CBC-P2-04: must-match groups share one colour (3 groups)  
+PASS  CBC-P2-04: counted-subset check 'The house has 6 wall and window parts. Exactly 2 are red.' is true of the answers and printed correctly  real 2
+PASS  CBC-P2-04: single-slip detection 1700/1700 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-04: single-slip detection for wrong values that do have a crayon colour 68/68 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-04: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-04: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-04: every region is at least 28 mm wide where its label sits (narrowest (34.0, 'trunk'))  
+PASS  CBC-P2-05: pupil and teacher PDFs exist  
+PASS  CBC-P2-05: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-05: no two regions have the same question  0 repeated
+PASS  CBC-P2-05: all five key values and colours are used (counts [5, 4, 3, 2, 3], each at least 2)  
+PASS  CBC-P2-05: tally printed on the pupil page equals the tally of the answers  printed [5, 4, 3, 2, 3]
+PASS  CBC-P2-05: tally printed on the teacher page equals the tally of the answers  printed [5, 4, 3, 2, 3]
+PASS  CBC-P2-05: mirror pairs share one colour (7 pairs)  
+PASS  CBC-P2-05: must-match groups share one colour (0 groups)  
+PASS  CBC-P2-05: single-slip detection 1700/1700 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-05: single-slip detection for wrong values that do have a crayon colour 68/68 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-05: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-05: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-05: every region is at least 28 mm wide where its label sits (narrowest (38.0, 'door_l'))  
+PASS  CBC-P2-06: pupil and teacher PDFs exist  
+PASS  CBC-P2-06: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-06: no two regions have the same question  0 repeated
+PASS  CBC-P2-06: all five key values and colours are used (counts [2, 2, 4, 3, 3], each at least 2)  
+PASS  CBC-P2-06: tally printed on the pupil page equals the tally of the answers  printed [2, 2, 4, 3, 3]
+PASS  CBC-P2-06: tally printed on the teacher page equals the tally of the answers  printed [2, 2, 4, 3, 3]
+PASS  CBC-P2-06: mirror pairs share one colour (5 pairs)  
+PASS  CBC-P2-06: must-match groups share one colour (0 groups)  
+PASS  CBC-P2-06: single-slip detection 910/910 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-06: single-slip detection for wrong values that do have a crayon colour 56/56 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-06: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-06: smallest pupil text 4.4 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-06: every region is at least 28 mm wide where its label sits (narrowest (39.8, 'wing_r'))  
+PASS  CBC-P2-07: pupil and teacher PDFs exist  
+PASS  CBC-P2-07: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-07: no two regions have the same question  0 repeated
+PASS  CBC-P2-07: all five key values and colours are used (counts [4, 2, 4, 2, 3], each at least 2)  
+PASS  CBC-P2-07: tally printed on the pupil page equals the tally of the answers  printed [4, 2, 4, 2, 3]
+PASS  CBC-P2-07: tally printed on the teacher page equals the tally of the answers  printed [4, 2, 4, 2, 3]
+PASS  CBC-P2-07: mirror pairs share one colour (0 pairs)  
+PASS  CBC-P2-07: must-match groups share one colour (2 groups)  
+PASS  CBC-P2-07: counted-subset check 'The dinosaur's body has 4 parts. Exactly 2 are yellow.' is true of the answers and printed correctly  real 2
+PASS  CBC-P2-07: single-slip detection 30000/30000 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-07: single-slip detection for wrong values that do have a crayon colour 60/60 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-07: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-07: smallest pupil text 4.7 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-07: every region is at least 28 mm wide where its label sits (narrowest (37.9, 'neck_low'))  
+PASS  CBC-P2-08: pupil and teacher PDFs exist  
+PASS  CBC-P2-08: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-08: no two regions have the same question  0 repeated
+PASS  CBC-P2-08: all five key values and colours are used (counts [4, 2, 3, 3, 4], each at least 2)  
+PASS  CBC-P2-08: tally printed on the pupil page equals the tally of the answers  printed [4, 2, 3, 3, 4]
+PASS  CBC-P2-08: tally printed on the teacher page equals the tally of the answers  printed [4, 2, 3, 3, 4]
+PASS  CBC-P2-08: mirror pairs share one colour (0 pairs)  
+PASS  CBC-P2-08: must-match groups share one colour (2 groups)  
+PASS  CBC-P2-08: counted-subset check 'The fish has 6 scales. Exactly 2 of them are red.' is true of the answers and printed correctly  real 2
+PASS  CBC-P2-08: single-slip detection 11504/11504 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-08: single-slip detection for wrong values that do have a crayon colour 64/64 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-08: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-08: smallest pupil text 4.2 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-08: every region is at least 28 mm wide where its label sits (narrowest (35.0, 'bubble_1'))  
+PASS  CBC-P2-09: pupil and teacher PDFs exist  
+PASS  CBC-P2-09: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-09: no two regions have the same question  0 repeated
+PASS  CBC-P2-09: all five key values and colours are used (counts [4, 3, 2, 2, 2], each at least 2)  
+PASS  CBC-P2-09: tally printed on the pupil page equals the tally of the answers  printed [4, 3, 2, 2, 2]
+PASS  CBC-P2-09: tally printed on the teacher page equals the tally of the answers  printed [4, 3, 2, 2, 2]
+PASS  CBC-P2-09: mirror pairs share one colour (0 pairs)  
+PASS  CBC-P2-09: must-match groups share one colour (1 groups)  
+PASS  CBC-P2-09: counted-subset check 'The boat has 4 sails. Exactly 1 is green.' is true of the answers and printed correctly  real 1
+PASS  CBC-P2-09: single-slip detection 65052/65052 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-09: single-slip detection for wrong values that do have a crayon colour 52/52 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-09: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-09: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-09: every region is at least 28 mm wide where its label sits (narrowest (36.2, 'jib_top'))  
+PASS  CBC-P2-10: pupil and teacher PDFs exist  
+PASS  CBC-P2-10: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-10: no two regions have the same question  0 repeated
+PASS  CBC-P2-10: all five key values and colours are used (counts [4, 2, 3, 2, 2], each at least 2)  
+PASS  CBC-P2-10: tally printed on the pupil page equals the tally of the answers  printed [4, 2, 3, 2, 2]
+PASS  CBC-P2-10: tally printed on the teacher page equals the tally of the answers  printed [4, 2, 3, 2, 2]
+PASS  CBC-P2-10: mirror pairs share one colour (0 pairs)  
+PASS  CBC-P2-10: must-match groups share one colour (1 groups)  
+PASS  CBC-P2-10: counted-subset check 'The car has 5 body and window parts. Exactly 2 are yellow.' is true of the answers and printed correctly  real 2
+PASS  CBC-P2-10: single-slip detection 1300/1300 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-10: single-slip detection for wrong values that do have a crayon colour 52/52 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-10: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-10: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-10: every region is at least 28 mm wide where its label sits (narrowest (37.0, 'sun'))  
+PASS  CBC-P2-11: pupil and teacher PDFs exist  
+PASS  CBC-P2-11: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-11: no two regions have the same question  0 repeated
+PASS  CBC-P2-11: all five key values and colours are used (counts [2, 2, 4, 2, 4], each at least 2)  
+PASS  CBC-P2-11: tally printed on the pupil page equals the tally of the answers  printed [2, 2, 4, 2, 4]
+PASS  CBC-P2-11: tally printed on the teacher page equals the tally of the answers  printed [2, 2, 4, 2, 4]
+PASS  CBC-P2-11: mirror pairs share one colour (7 pairs)  
+PASS  CBC-P2-11: must-match groups share one colour (0 groups)  
+PASS  CBC-P2-11: single-slip detection 280/280 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-11: single-slip detection for wrong values that do have a crayon colour 56/56 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-11: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-11: smallest pupil text 4.7 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-11: every region is at least 28 mm wide where its label sits (narrowest (36.2, 'up_in_r'))  
+PASS  CBC-P2-12: pupil and teacher PDFs exist  
+PASS  CBC-P2-12: every question has exactly one answer and it is one of the five key values  []
+PASS  CBC-P2-12: no two regions have the same question  0 repeated
+PASS  CBC-P2-12: all five key values and colours are used (counts [4, 2, 2, 2, 2], each at least 2)  
+PASS  CBC-P2-12: tally printed on the pupil page equals the tally of the answers  printed [4, 2, 2, 2, 2]
+PASS  CBC-P2-12: tally printed on the teacher page equals the tally of the answers  printed [4, 2, 2, 2, 2]
+PASS  CBC-P2-12: mirror pairs share one colour (5 pairs)  
+PASS  CBC-P2-12: must-match groups share one colour (0 groups)  
+PASS  CBC-P2-12: single-slip detection 12000/12000 = 100.0% (every wrong value of every region; needs >= 95%)  
+PASS  CBC-P2-12: single-slip detection for wrong values that do have a crayon colour 48/48 = 100.0% (needs >= 95%)  
+PASS  CBC-P2-12: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
+PASS  CBC-P2-12: smallest pupil text 4.5 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-12: every region is at least 28 mm wide where its label sits (narrowest (35.0, 'cherry'))  
+PASS  CBC-P2-01 pupil: real browser text of all 15 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-01 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-01 teacher: real browser text of all 15 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-01 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-02 pupil: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-02 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 273.3, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-02 teacher: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-02 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 273.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-03 pupil: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-03 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-03 teacher: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-03 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-04 pupil: real browser text of all 17 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-04 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 278.0, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-04 teacher: real browser text of all 17 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-04 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 278.5, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-05 pupil: real browser text of all 17 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-05 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-05 teacher: real browser text of all 17 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-05 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-06 pupil: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-06 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-06 teacher: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-06 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-07 pupil: real browser text of all 15 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-07 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 273.3, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-07 teacher: real browser text of all 15 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-07 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 273.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-08 pupil: real browser text of all 16 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-08 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 273.3, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-08 teacher: real browser text of all 16 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-08 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 273.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-09 pupil: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-09 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 273.3, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-09 teacher: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-09 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 273.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-10 pupil: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-10 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 273.3, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-10 teacher: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-10 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 273.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-11 pupil: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-11 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-11 teacher: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-11 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-12 pupil: real browser text of all 12 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-12 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-12 teacher: real browser text of all 12 labels lies inside its region, clear of outlines and decorations  []
+PASS  CBC-P2-12 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-01 pupil: one A4 page  
+PASS  CBC-P2-01 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-01 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-01 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-01 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-01 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
+PASS  CBC-P2-01 pupil: 1-bit render at 150 dpi keeps the ink (loss 8.1%, needs <= 25%)  
+PASS  CBC-P2-01 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-01 pupil: all 15 regions stay separate white areas in the 1-bit render (22 large white areas incl. background and boxes)  
+PASS  CBC-P2-01 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, moon; needs <= 40%)  
+PASS  CBC-P2-01 teacher: one A4 page  
+PASS  CBC-P2-01 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-01 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-01 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-01 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-01 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
+PASS  CBC-P2-01 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.9%, needs <= 25%)  
+PASS  CBC-P2-01 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-01 teacher: all 15 regions stay separate white areas in the 1-bit render (22 large white areas incl. background and boxes)  
+PASS  CBC-P2-01 teacher: every label keeps its ink in the 1-bit render (worst 21% lost, planet; needs <= 40%)  
+PASS  CBC-P2-02 pupil: one A4 page  
+PASS  CBC-P2-02 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-02 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-02 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-02 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-02 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-02 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.5%, needs <= 25%)  
+PASS  CBC-P2-02 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-02 pupil: all 13 regions stay separate white areas in the 1-bit render (20 large white areas incl. background and boxes)  
+PASS  CBC-P2-02 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, body_b; needs <= 40%)  
+PASS  CBC-P2-02 teacher: one A4 page  
+PASS  CBC-P2-02 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-02 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-02 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-02 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-02 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-02 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.4%, needs <= 25%)  
+PASS  CBC-P2-02 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-02 teacher: all 13 regions stay separate white areas in the 1-bit render (20 large white areas incl. background and boxes)  
+PASS  CBC-P2-02 teacher: every label keeps its ink in the 1-bit render (worst 18% lost, cloud_1; needs <= 40%)  
+PASS  CBC-P2-03 pupil: one A4 page  
+PASS  CBC-P2-03 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-03 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-03 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-03 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-03 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-03 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.4%, needs <= 25%)  
+PASS  CBC-P2-03 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-03 pupil: all 14 regions stay separate white areas in the 1-bit render (22 large white areas incl. background and boxes)  
+PASS  CBC-P2-03 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, ground_m; needs <= 40%)  
+PASS  CBC-P2-03 teacher: one A4 page  
+PASS  CBC-P2-03 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-03 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-03 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-03 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-03 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-03 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.2%, needs <= 25%)  
+PASS  CBC-P2-03 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-03 teacher: all 14 regions stay separate white areas in the 1-bit render (22 large white areas incl. background and boxes)  
+PASS  CBC-P2-03 teacher: every label keeps its ink in the 1-bit render (worst 21% lost, cloud_r; needs <= 40%)  
+PASS  CBC-P2-04 pupil: one A4 page  
+PASS  CBC-P2-04 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-04 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-04 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-04 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-04 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-04 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.8%, needs <= 25%)  
+PASS  CBC-P2-04 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-04 pupil: all 17 regions stay separate white areas in the 1-bit render (26 large white areas incl. background and boxes)  
+PASS  CBC-P2-04 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, grass_3; needs <= 40%)  
+PASS  CBC-P2-04 teacher: one A4 page  
+PASS  CBC-P2-04 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-04 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-04 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-04 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-04 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-04 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.8%, needs <= 25%)  
+PASS  CBC-P2-04 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-04 teacher: all 17 regions stay separate white areas in the 1-bit render (26 large white areas incl. background and boxes)  
+PASS  CBC-P2-04 teacher: every label keeps its ink in the 1-bit render (worst 18% lost, trunk; needs <= 40%)  
+PASS  CBC-P2-05 pupil: one A4 page  
+PASS  CBC-P2-05 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-05 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-05 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-05 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-05 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-05 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.9%, needs <= 25%)  
+PASS  CBC-P2-05 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-05 pupil: all 17 regions stay separate white areas in the 1-bit render (24 large white areas incl. background and boxes)  
+PASS  CBC-P2-05 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, cloud_r; needs <= 40%)  
+PASS  CBC-P2-05 teacher: one A4 page  
+PASS  CBC-P2-05 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-05 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-05 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-05 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-05 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-05 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.7%, needs <= 25%)  
+PASS  CBC-P2-05 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-05 teacher: all 17 regions stay separate white areas in the 1-bit render (24 large white areas incl. background and boxes)  
+PASS  CBC-P2-05 teacher: every label keeps its ink in the 1-bit render (worst 21% lost, cloud_r; needs <= 40%)  
+PASS  CBC-P2-06 pupil: one A4 page  
+PASS  CBC-P2-06 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-06 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-06 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-06 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-06 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-06 pupil: 1-bit render at 150 dpi keeps the ink (loss 5.5%, needs <= 25%)  
+PASS  CBC-P2-06 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-06 pupil: all 14 regions stay separate white areas in the 1-bit render (34 large white areas incl. background and boxes)  
+PASS  CBC-P2-06 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, branch_r; needs <= 40%)  
+PASS  CBC-P2-06 teacher: one A4 page  
+PASS  CBC-P2-06 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-06 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-06 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-06 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-06 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-06 teacher: 1-bit render at 150 dpi keeps the ink (loss 7.4%, needs <= 25%)  
+PASS  CBC-P2-06 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-06 teacher: all 14 regions stay separate white areas in the 1-bit render (34 large white areas incl. background and boxes)  
+PASS  CBC-P2-06 teacher: every label keeps its ink in the 1-bit render (worst 20% lost, head_l; needs <= 40%)  
+PASS  CBC-P2-07 pupil: one A4 page  
+PASS  CBC-P2-07 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-07 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-07 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-07 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-07 pupil: 1-bit render at 150 dpi keeps the ink (loss 8.1%, needs <= 25%)  
+PASS  CBC-P2-07 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-07 pupil: all 15 regions stay separate white areas in the 1-bit render (25 large white areas incl. background and boxes)  
+PASS  CBC-P2-07 pupil: every label keeps its ink in the 1-bit render (worst 19% lost, ground_2; needs <= 40%)  
+PASS  CBC-P2-07 teacher: one A4 page  
+PASS  CBC-P2-07 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-07 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-07 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-07 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-07 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.7%, needs <= 25%)  
+PASS  CBC-P2-07 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-07 teacher: all 15 regions stay separate white areas in the 1-bit render (25 large white areas incl. background and boxes)  
+PASS  CBC-P2-07 teacher: every label keeps its ink in the 1-bit render (worst 19% lost, body_ll; needs <= 40%)  
+PASS  CBC-P2-08 pupil: one A4 page  
+PASS  CBC-P2-08 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-08 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-08 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-08 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-08 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-08 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.4%, needs <= 25%)  
+PASS  CBC-P2-08 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-08 pupil: all 16 regions stay separate white areas in the 1-bit render (28 large white areas incl. background and boxes)  
+PASS  CBC-P2-08 pupil: every label keeps its ink in the 1-bit render (worst 19% lost, tail_dn; needs <= 40%)  
+PASS  CBC-P2-08 teacher: one A4 page  
+PASS  CBC-P2-08 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-08 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-08 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-08 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-08 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-08 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.2%, needs <= 25%)  
+PASS  CBC-P2-08 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-08 teacher: all 16 regions stay separate white areas in the 1-bit render (28 large white areas incl. background and boxes)  
+PASS  CBC-P2-08 teacher: every label keeps its ink in the 1-bit render (worst 24% lost, tail_up; needs <= 40%)  
+PASS  CBC-P2-09 pupil: one A4 page  
+PASS  CBC-P2-09 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-09 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-09 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-09 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-09 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-09 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.8%, needs <= 25%)  
+PASS  CBC-P2-09 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-09 pupil: all 13 regions stay separate white areas in the 1-bit render (22 large white areas incl. background and boxes)  
+PASS  CBC-P2-09 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, sail_b; needs <= 40%)  
+PASS  CBC-P2-09 teacher: one A4 page  
+PASS  CBC-P2-09 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-09 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-09 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-09 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-09 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-09 teacher: 1-bit render at 150 dpi keeps the ink (loss 8.4%, needs <= 25%)  
+PASS  CBC-P2-09 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-09 teacher: all 13 regions stay separate white areas in the 1-bit render (22 large white areas incl. background and boxes)  
+PASS  CBC-P2-09 teacher: every label keeps its ink in the 1-bit render (worst 18% lost, cloud_2; needs <= 40%)  
+PASS  CBC-P2-10 pupil: one A4 page  
+PASS  CBC-P2-10 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-10 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-10 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-10 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-10 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
+PASS  CBC-P2-10 pupil: 1-bit render at 150 dpi keeps the ink (loss 4.9%, needs <= 25%)  
+PASS  CBC-P2-10 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-10 pupil: all 13 regions stay separate white areas in the 1-bit render (20 large white areas incl. background and boxes)  
+PASS  CBC-P2-10 pupil: every label keeps its ink in the 1-bit render (worst 7% lost, road_2; needs <= 40%)  
+PASS  CBC-P2-10 teacher: one A4 page  
+PASS  CBC-P2-10 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-10 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-10 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-10 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-10 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
+PASS  CBC-P2-10 teacher: 1-bit render at 150 dpi keeps the ink (loss 6.8%, needs <= 25%)  
+PASS  CBC-P2-10 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-10 teacher: all 13 regions stay separate white areas in the 1-bit render (20 large white areas incl. background and boxes)  
+PASS  CBC-P2-10 teacher: every label keeps its ink in the 1-bit render (worst 12% lost, road_2; needs <= 40%)  
+PASS  CBC-P2-11 pupil: one A4 page  
+PASS  CBC-P2-11 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-11 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-11 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-11 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-11 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-11 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.6%, needs <= 25%)  
+PASS  CBC-P2-11 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-11 pupil: all 14 regions stay separate white areas in the 1-bit render (28 large white areas incl. background and boxes)  
+PASS  CBC-P2-11 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, up_low_r; needs <= 40%)  
+PASS  CBC-P2-11 teacher: one A4 page  
+PASS  CBC-P2-11 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-11 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-11 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-11 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-11 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-11 teacher: 1-bit render at 150 dpi keeps the ink (loss 8.0%, needs <= 25%)  
+PASS  CBC-P2-11 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-11 teacher: all 14 regions stay separate white areas in the 1-bit render (28 large white areas incl. background and boxes)  
+PASS  CBC-P2-11 teacher: every label keeps its ink in the 1-bit render (worst 19% lost, up_in_r; needs <= 40%)  
+PASS  CBC-P2-12 pupil: one A4 page  
+PASS  CBC-P2-12 pupil: fonts embedded  3 fonts
+PASS  CBC-P2-12 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-12 pupil: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-12 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-12 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-12 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.7%, needs <= 25%)  
+PASS  CBC-P2-12 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-12 pupil: all 12 regions stay separate white areas in the 1-bit render (19 large white areas incl. background and boxes)  
+PASS  CBC-P2-12 pupil: every label keeps its ink in the 1-bit render (worst 20% lost, diamond_l; needs <= 40%)  
+PASS  CBC-P2-12 teacher: one A4 page  
+PASS  CBC-P2-12 teacher: fonts embedded  3 fonts
+PASS  CBC-P2-12 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
+PASS  CBC-P2-12 teacher: footer has a school-name field and the worksheet code  
+PASS  CBC-P2-12 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
+PASS  CBC-P2-12 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
+PASS  CBC-P2-12 teacher: 1-bit render at 150 dpi keeps the ink (loss 9.2%, needs <= 25%)  
+PASS  CBC-P2-12 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
+PASS  CBC-P2-12 teacher: all 12 regions stay separate white areas in the 1-bit render (19 large white areas incl. background and boxes)  
+PASS  CBC-P2-12 teacher: every label keeps its ink in the 1-bit render (worst 22% lost, diamond_l; needs <= 40%)  
+PASS  all PDFs together are under 20 MB  0.76 MB
+PASS  contact sheet PDF exists with 2 pages  
+PASS  Primary 2 gallery has 10 to 12 worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids  12 worksheets, 11 pictures, 12 topics
+PASS  library has at least 5 pictures and 6 topic banks  11 pictures, 13 banks
+
+572 passed, 0 failed

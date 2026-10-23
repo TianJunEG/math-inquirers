@@ -1,0 +1,478 @@
+{
+ "passed": 487,
+ "failed": 0,
+ "failures": [],
+ "worksheets": {
+  "CBC-01": {
+   "single_slip": {
+    "wrong_values": 150,
+    "in_key": 60,
+    "detected_all": 150,
+    "rate_all": 1.0,
+    "detected_in_key": 60,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.6667
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-02": {
+   "single_slip": {
+    "wrong_values": 320,
+    "in_key": 64,
+    "detected_all": 320,
+    "rate_all": 1.0,
+    "detected_in_key": 64,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.4375
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-03": {
+   "single_slip": {
+    "wrong_values": 280,
+    "in_key": 56,
+    "detected_all": 280,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 1.0
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.9
+  },
+  "CBC-04": {
+   "single_slip": {
+    "wrong_values": 170,
+    "in_key": 68,
+    "detected_all": 170,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.4559
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-05": {
+   "single_slip": {
+    "wrong_values": 1200,
+    "in_key": 48,
+    "detected_all": 1200,
+    "rate_all": 1.0,
+    "detected_in_key": 48,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8333
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.2,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-06": {
+   "single_slip": {
+    "wrong_values": 1400,
+    "in_key": 56,
+    "detected_all": 1400,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.7143
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 39.9
+  },
+  "CBC-07": {
+   "single_slip": {
+    "wrong_values": 260,
+    "in_key": 52,
+    "detected_all": 260,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.3654
+   },
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 4.5,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 36.8
+  },
+  "CBC-08": {
+   "single_slip": {
+    "wrong_values": 368,
+    "in_key": 64,
+    "detected_all": 368,
+    "rate_all": 1.0,
+    "detected_in_key": 64,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.4375
+   },
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 3.7,
+   "teacher_short_labels": 3,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-09": {
+   "single_slip": {
+    "wrong_values": 240,
+    "in_key": 48,
+    "detected_all": 240,
+    "rate_all": 1.0,
+    "detected_in_key": 48,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8333
+   },
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 3.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-10": {
+   "single_slip": {
+    "wrong_values": 204,
+    "in_key": 68,
+    "detected_all": 204,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.4118
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 3.7,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  }
+ },
+ "banks_and_pictures": {
+  "bank add tier 1": {
+   "questions": 625,
+   "forms": [
+    "make",
+    "miss",
+    "more",
+    "rev",
+    "sum_"
+   ],
+   "bad": 0
+  },
+  "bank add tier 2": {
+   "questions": 578,
+   "forms": [
+    "miss",
+    "more",
+    "sum_",
+    "three",
+    "three_miss",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank sub tier 1": {
+   "questions": 575,
+   "forms": [
+    "diff",
+    "fewer",
+    "first",
+    "miss",
+    "take"
+   ],
+   "bad": 0
+  },
+  "bank sub tier 2": {
+   "questions": 620,
+   "forms": [
+    "diff",
+    "fewer",
+    "miss",
+    "mix",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank bonds tier 1": {
+   "questions": 750,
+   "forms": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6"
+   ],
+   "bad": 0
+  },
+  "bank bonds tier 2": {
+   "questions": 750,
+   "forms": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6"
+   ],
+   "bad": 0
+  },
+  "bank place tier 1": {
+   "questions": 750,
+   "forms": [
+    "ones_a",
+    "ones_b",
+    "ones_c",
+    "tens_a",
+    "tens_b",
+    "tens_c"
+   ],
+   "bad": 0
+  },
+  "bank place tier 2": {
+   "questions": 975,
+   "forms": [
+    "less10",
+    "more10",
+    "ones_a",
+    "ones_b",
+    "ones_c",
+    "tens_a",
+    "tens_b",
+    "tens_c"
+   ],
+   "bad": 0
+  },
+  "bank count tier 1": {
+   "questions": 460,
+   "forms": [
+    "f_back",
+    "f_back2",
+    "f_norule",
+    "f_rule"
+   ],
+   "bad": 0
+  },
+  "bank count tier 2": {
+   "questions": 618,
+   "forms": [
+    "f_back",
+    "f_back2",
+    "f_norule",
+    "f_rule",
+    "f_steps"
+   ],
+   "bad": 0
+  },
+  "bank compare tier 1": {
+   "questions": 875,
+   "forms": [
+    "between",
+    "greatest",
+    "less1",
+    "less10",
+    "more1",
+    "more10",
+    "smallest"
+   ],
+   "bad": 0
+  },
+  "bank compare tier 2": {
+   "questions": 1125,
+   "forms": [
+    "greatest",
+    "less1",
+    "less10",
+    "middle",
+    "more1",
+    "more10",
+    "smallest",
+    "two",
+    "two_b"
+   ],
+   "bad": 0
+  },
+  "bank money tier 1": {
+   "questions": 875,
+   "forms": [
+    "coins_",
+    "coins_row",
+    "fewer",
+    "miss",
+    "more",
+    "spend",
+    "sum_"
+   ],
+   "bad": 0
+  },
+  "bank money tier 2": {
+   "questions": 750,
+   "forms": [
+    "both",
+    "fewer",
+    "left",
+    "more",
+    "notes_",
+    "sum_"
+   ],
+   "bad": 0
+  },
+  "bank time tier 1": {
+   "questions": 875,
+   "forms": [
+    "clock_alone",
+    "clock_row",
+    "clock_short",
+    "clock_stack",
+    "digital",
+    "later",
+    "later1"
+   ],
+   "bad": 0
+  },
+  "bank time tier 2": {
+   "questions": 1125,
+   "forms": [
+    "before",
+    "clock_alone",
+    "clock_row",
+    "clock_short",
+    "clock_stack",
+    "digital",
+    "later",
+    "later1",
+    "later2"
+   ],
+   "bad": 0
+  },
+  "bank length tier 1": {
+   "questions": 1125,
+   "forms": [
+    "cut",
+    "longer",
+    "ruler0",
+    "ruler_cap",
+    "ruler_s",
+    "shorter",
+    "sub_c",
+    "sum_",
+    "sum_c"
+   ],
+   "bad": 0
+  },
+  "bank length tier 2": {
+   "questions": 1105,
+   "forms": [
+    "cut",
+    "longer",
+    "ruler0",
+    "ruler_cap",
+    "ruler_s",
+    "shorter",
+    "sub_c",
+    "sum_",
+    "sum_c"
+   ],
+   "bad": 0
+  },
+  "bank shapes tier 1": {
+   "questions": 875,
+   "forms": [
+    "blank_row",
+    "blank_stack",
+    "corners1_row",
+    "corners1_stack",
+    "corners2_stack",
+    "corners_short_row",
+    "cornersq_stack"
+   ],
+   "bad": 0
+  },
+  "bank shapes tier 2": {
+   "questions": 875,
+   "forms": [
+    "blank_row",
+    "blank_stack",
+    "both1_row",
+    "both1_stack",
+    "both2_stack",
+    "both_short_row",
+    "bothq_stack"
+   ],
+   "bad": 0
+  },
+  "picture rocket": {
+   "regions": 15,
+   "pairs": 5,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture fish": {
+   "regions": 16,
+   "pairs": 0,
+   "groups": 2,
+   "subsets": 1
+  },
+  "picture house": {
+   "regions": 17,
+   "pairs": 0,
+   "groups": 3,
+   "subsets": 1
+  },
+  "picture butterfly": {
+   "regions": 14,
+   "pairs": 7,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture icecream": {
+   "regions": 12,
+   "pairs": 5,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture owl": {
+   "regions": 14,
+   "pairs": 5,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture sailboat": {
+   "regions": 13,
+   "pairs": 0,
+   "groups": 1,
+   "subsets": 1
+  },
+  "picture castle": {
+   "regions": 17,
+   "pairs": 7,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture car": {
+   "regions": 13,
+   "pairs": 0,
+   "groups": 1,
+   "subsets": 1
+  },
+  "picture elephant": {
+   "regions": 14,
+   "pairs": 6,
+   "groups": 0,
+   "subsets": 0
+  },
+  "picture dinosaur": {
+   "regions": 15,
+   "pairs": 0,
+   "groups": 2,
+   "subsets": 1
+  }
+ }
+}
