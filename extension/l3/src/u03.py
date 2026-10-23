@@ -65,7 +65,7 @@ u.S(3, 'Write the last digit of each answer. Do not find the whole answer.', par
 u.S(3, 'Mei puts 30 tiles in equal rows. There are at least 2 rows and at least 2 tiles in each row. 2 rows of 15 and 15 rows of 2 are different ways. List ALL the ways.', parts=[
     P('', 'There are {b} ways.', A('6'))],
     space={'table': {'cols': ['rows', 'tiles in each row'], 'rows': 8}},
-    why='Check the number of rows from 2 upwards: 2 rows of 15, 3 rows of 10, 5 rows of 6, 6 rows of 5, 10 rows of 3 and 15 rows of 2. 4 rows does not work because 30 is not in the 4 times table. That is 6 ways.')
+    why='Try the number of rows from 2 upwards: 2 rows of 15, 3 rows of 10, 5 rows of 6, 6 rows of 5, 10 rows of 3 and 15 rows of 2. 4 rows does not work because 30 is not in the 4 times table. That is 6 ways.')
 u.S(3, 'Which of these numbers are in the 6 times table?\n24, 38, 42, 56, 60\n{ll}', A(['24', '42', '60'], '24, 42, 60', list=True),
     why='6 × 4 = 24, 6 × 7 = 42 and 6 × 10 = 60. The numbers 38 and 56 are not: 6 × 6 = 36 and 6 × 9 = 54, and the next answer after 54 is 60.')
 u.S(3, 'Mei buys 6 packs of 8 stickers. Ben buys 7 packs of 7 stickers.', parts=[
@@ -113,7 +113,7 @@ u.G('Beyond Level 3: Square numbers.\nMultiply a number by itself. For example 7
 
 # ---------------- Check yourself
 u.C('A box holds 8 pens. How many pens are in 7 boxes? {b}', A('56'), why='7 × 8 = 56. Check: 8 × 7 = 56.')
-u.C('You know that 10 × 8 = 80. Use it to find 9 × 8. {b}', A('72'), why='9 × 8 is one less 8 than 10 × 8: 80 - 8 = 72.')
+u.C('Fill in the blank: 7 × 8 = 7 × 4 + 7 × {b}', A('4'), why='8 = 4 + 4, so 7 × 8 = 7 × 4 + 7 × 4. That is 28 + 28 = 56.')
 u.C('Is 63 in the 6 times table?   {circ:Yes|No}', A('No'), why='6 × 10 = 60 and 6 × 11 = 66, so 63 is not in the table.')
 u.C('Mei has 54 apples. She puts 6 apples in each bag. How many bags does she need? {b}', A('9'), why='54 ÷ 6 = 9, because 6 × 9 = 54.')
 u.save()

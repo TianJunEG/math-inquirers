@@ -62,15 +62,16 @@ def _():
 
 @check('L3U05-S05')
 def _():
-    coins = 9 * 5 + 4
-    return {'a': s([coins]), 'b': s(divmod_sub(coins, 6))}
+    sols = [n for n in range(1, 200) if divmod_sub(n, 6) == (8, 5)]
+    n = only(sols)
+    return {'a': s([n]), 'b': s(divmod_sub(n, 7))}
 
 
 @check('L3U05-S06')
 def _():
     rems = sorted({divmod_sub(n, 5)[1] for n in range(5, 200)} | {0})
-    big = [n for n in range(51, 60) if divmod_sub(n, 7)[1] == 6]
-    return {'a': s(rems), 'b': s([only(big)])}
+    big = [n for n in range(10, 100) if divmod_sub(n, 8)[1] == 5]
+    return {'a': s(rems), 'b': s([max(big)])}
 
 
 @check('L3U05-S07')
@@ -140,13 +141,8 @@ def _():
 
 @check('L3U05-T03')
 def _():
-    sols = []
-    for pupils in range(1, 100):
-        pens = 3 * pupils + 11
-        if 5 * pupils - pens == 7:
-            sols.append((pupils, pens))
-    p, pens = only(sols)
-    return {'a': s([p]), 'b': s([pens])}
+    good = [n for n in range(1, 100) if divmod_sub(n, 9)[0] == divmod_sub(n, 9)[1]]
+    return {'a': s([only(n for n in good if divmod_sub(n, 9)[0] == 4)]), 'b': s([max(good)]), 'c': s([len(good)])}
 
 
 @check('L3U05-G01')

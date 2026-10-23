@@ -57,8 +57,11 @@ def _():
 @check('L5U08-S01')
 def _():
     O = (0, 0)
-    A, B, C, D = pol(O, 1, 0), pol(O, 1, 180), pol(O, 1, 64), pol(O, 1, 244)    # AB and CD are straight lines through O, AOC = 64
-    return {'a': [r(ang(O, B, C))], 'b': [r(ang(O, B, D))], 'c': [r(ang(O, A, D))]}
+    # AB and CD are straight lines through O; BOC is 2 times AOC: search the angle AOC
+    for aoc in range(1, 180):
+        A, B, C, D = pol(O, 1, 0), pol(O, 1, 180), pol(O, 1, aoc), pol(O, 1, aoc + 180)
+        if abs(ang(O, B, C) - 2 * ang(O, A, C)) < 1e-9:
+            return {'a': [r(ang(O, A, C))], 'b': [r(ang(O, B, C))], 'c': [r(ang(O, B, D))]}
 
 
 @check('L5U08-S02')
@@ -102,28 +105,27 @@ def _():
 
 @check('L5U08-S06')
 def _():
-    B, C = (0, 0), (1, 0)
-    A = pol(B, 1, 124)                                       # rhombus: all sides 1
-    D = (A[0] + 1, A[1])
-    return {'a': [r(ang(A, B, C))], 'b': [r(ang(A, B, D))]}
+    A, B = (0, 0), (1, 0)
+    D = pol(A, 1, 76)                                        # rhombus: all sides 1
+    C = (B[0] + D[0], B[1] + D[1])
+    return {'a': [r(ang(B, A, D))], 'b': [r(ang(B, A, C))]}
 
 
 @check('L5U08-S07')
 def _():
     A, B = (0, 0), (1, 0)
-    Dd = pol(A, 0.5, 75)
-    # C on the line through B with direction making angle 110 at B, and on the line y = D.y (DC parallel to AB)
-    C = meet(B, d(180 - 110), Dd, (1, 0))
+    Dd = pol(A, 0.5, 58)
+    # C on the line through B with direction making angle 100 at B, and on the line y = D.y (DC parallel to AB)
+    C = meet(B, d(180 - 100), Dd, (1, 0))
     return {'a': [r(ang(C, B, Dd))], 'b': [r(ang(Dd, C, A))]}
 
 
 @check('L5U08-S08')
 def _():
     B, D = (0, 0), (1, 0)
-    A = meet(B, d(55), (0.5, 0), (0, 1))                     # AB = AD: A lies on the perpendicular bisector of BD; angle ABD = 55
-    th = math.degrees(math.atan2(A[1], A[0] - D[0]))         # direction of ray D->A
+    A = meet(B, d(58), (0.5, 0), (0, 1))                     # AB = AD: A lies on the perpendicular bisector of BD; angle ABD = 58
     ray_AD = math.degrees(math.atan2(D[1] - A[1], D[0] - A[0]))
-    ray_AC = ray_AD + 30                                     # rotate AD by 30 degrees towards C (to the right)
+    ray_AC = ray_AD + 24                                     # rotate AD by 24 degrees towards C (to the right)
     C = meet(A, d(ray_AC), (0, 0), (1, 0))
     assert C[0] > D[0]
     return {'a': [r(ang(D, A, B))], 'b': [r(ang(A, B, D))], 'c': [r(ang(D, C, A))], 'd': [r(ang(C, D, A))]}
@@ -262,8 +264,8 @@ def _():
 
 @check('L5U08-C04')
 def _():
-    B, D = (0, 0), (1, 0)
-    A = meet(B, d(62), (0.5, 0), (0, 1))
-    ray_AD = math.degrees(math.atan2(D[1] - A[1], D[0] - A[0]))
-    C = meet(A, d(ray_AD + 40), (0, 0), (1, 0))
-    return [r(ang(C, D, A))]
+    C = (0, 0)
+    A = pol(C, 1, 180 - 76)                                  # angle ACB = 76 with B to the left of C
+    B, D = (-1, 0), (1, 0)                                   # CD = CA = 1
+    assert abs(ang(C, A, B) - 76) < 1e-9
+    return [r(ang(A, C, D))]

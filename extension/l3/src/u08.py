@@ -49,7 +49,7 @@ u.learn(
      'answer': 'P is smaller than a right angle. Q is a right angle. R is greater than a right angle.'},
     {'title': 'Lines to remember',
      'steps': ['Perpendicular lines meet at a right angle.', 'Parallel lines never meet. They stay the same distance apart.',
-               'Count angles in order: the small ones first.']},
+               'Count angles in order: the small ones first.', 'A corner that points into a shape is a dent. A dent is greater than a right angle.']},
     {'text': 'Use a right angle checker. This angle is   {circ:smaller than|equal to|greater than}   a right angle.',
      'figure': {'type': 'l3_angles', 'items': [{'deg': 70, 'rot': 10}], 'cols': 1, 'width_mm': 44}, 'figright': True,
      'answer': A('smaller than'), 'explanation': 'The second line is inside the corner of the checker, so the angle is smaller than a right angle.'})
@@ -122,11 +122,11 @@ u.T('Lines from a point O make angles. 2 lines give 1 angle, 3 lines give 3 angl
 u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler. Make it reach the bottom row of dots.', parts=[
     P('a', 'Your line reaches the bottom row at   {circ:P|Q|R|S}', A('R'))],
     figure={'type': 'l3_segs', 'k': 44, 'pad': 40, 'width_mm': 64, 'dots': [7, 7], 'segs': [[0, 2, 4, 4]],
-            'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -26, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 26}, {'x': 2, 'y': 6, 't': 'C', 'dx': -26},
+            'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -26, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 26}, {'x': 2, 'y': 6, 't': 'C', 'dy': -34},
                        {'x': 2, 'y': 0, 't': 'P', 'dy': 40}, {'x': 4, 'y': 0, 't': 'Q', 'dy': 40}, {'x': 5, 'y': 0, 't': 'R', 'dy': 40}, {'x': 6, 'y': 0, 't': 'S', 'dy': 40}]},
     figside=True,
     hint='AB goes 2 across and 1 up. Turn it a quarter turn.',
-    why='AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C, 1 across and 2 down reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.')
+    why='AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down. From C, keep going 1 across and 2 down until you reach the bottom row: R.')
 u.T('Look at the plus sign. All its corners are square.', parts=[
     P('a', 'It has {b} right angles inside.', A('8')), P('b', 'It has {b} dents.', A('4')),
     P('c', 'Another shape with square corners has 10 corners and 3 dents. It has {b} right angles inside.', A('7'))],
@@ -158,7 +158,7 @@ u.G('A board has 2 lines across and 2 lines up.', parts=[
 u.C('Use a right angle checker. This angle is   {circ:smaller than|equal to|greater than}   a right angle.', A('greater than'),
     figure={'type': 'l3_angles', 'items': [{'deg': 120, 'rot': 15}], 'cols': 1, 'width_mm': 44}, figright=True,
     why='The second line sticks out past the corner of the checker, so the angle is greater than a right angle.')
-u.C('Circle each letter with 2 parallel lines.   {circ:E|H|V|T}', A(['E', 'H'], 'E and H', list=True),
+u.C('Circle each letter that has parallel lines.   {circ:E|H|V|T}', A(['E', 'H'], 'E and H', list=True),
     figure=letters(['E', 'H', 'V', 'T'], 58),
     why='E has 3 parallel arms. H has 2 parallel upright lines. V has 2 sloping lines that are not parallel. T has no pair of parallel lines.')
 u.C('A rectangle has {b} pairs of parallel sides.', A('2'), why='The 2 long sides are parallel and the 2 short sides are parallel.')

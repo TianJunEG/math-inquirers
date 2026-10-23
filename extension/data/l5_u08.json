@@ -8,7 +8,7 @@
  "holiday_lesson": 8,
  "goal": "I can use angle facts to find unknown angles step by step, and give a reason for every step.",
  "learn": {
-  "intro": "Angle facts: angles on a straight line add up to 180°. Angles at a point add up to 360°. Vertically opposite angles are equal. The angles of a triangle add up to 180°. Drawings are not to scale.",
+  "intro": "Crossing lines make equal opposite angles. Drawings are not to scale.",
   "example": {
    "problem": "In the figure, AB = AC and angle BAC = 48°. BCD is a straight line. Find angle ACD. Give a reason for each step.",
    "steps": [
@@ -91,7 +91,7 @@
      "D": "br"
     },
     "alt": "isosceles triangle ABC with BC extended to D",
-    "mm": 4.35
+    "mm": 2.61
    }
   },
   "howto": {
@@ -105,9 +105,10 @@
   "facts": {
    "title": "Reasons",
    "lines": [
-    "Straight line: 180°.",
-    "Point: 360°.",
-    "Triangle: 180°."
+    "Line 180°. Point 360°. Triangle 180°.",
+    "Isosceles: equal sides, equal angles.",
+    "Parallelogram: opposite angles equal, neighbours 180°.",
+    "Trapezium: between parallel sides 180°."
    ]
   },
   "tight": true,
@@ -192,7 +193,7 @@
    "id": "L5U08-S01",
    "tier": "start",
    "page": 1,
-   "text": "Straight lines AB and CD meet at point O. Angle AOC = 64°. Find each angle.",
+   "text": "Lines AB and CD cross at O. Angle BOC is twice angle AOC. Find each angle.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -206,12 +207,12 @@
       -2.052
      ],
      "C": [
-      0.627,
-      5.967
+      1.042,
+      5.909
      ],
      "D": [
-      -0.627,
-      -5.967
+      -1.042,
+      -5.909
      ],
      "O": [
       0,
@@ -236,7 +237,7 @@
       "at": "O",
       "a": "A",
       "b": "C",
-      "text": "64°",
+      "text": "(a)",
       "r": 22,
       "tr": 40,
       "size": 18
@@ -245,7 +246,7 @@
       "at": "O",
       "a": "C",
       "b": "B",
-      "text": "(a)",
+      "text": "(b)",
       "r": 22,
       "tr": 40,
       "size": 18
@@ -254,15 +255,6 @@
       "at": "O",
       "a": "B",
       "b": "D",
-      "text": "(b)",
-      "r": 22,
-      "tr": 40,
-      "size": 18
-     },
-     {
-      "at": "O",
-      "a": "D",
-      "b": "A",
       "text": "(c)",
       "r": 22,
       "tr": 40,
@@ -277,41 +269,41 @@
      "O": "bl"
     },
     "alt": "two straight lines crossing at O",
-    "mm": 2.26
+    "mm": 2.28
    },
    "parts": [
     {
      "label": "a",
-     "text": "Angle BOC (a) = {b}°",
+     "text": "Angle AOC (a) = {b}°",
      "answer": {
       "value": [
-       "116"
+       "60"
       ],
-      "text": "116"
+      "text": "60"
      }
     },
     {
      "label": "b",
-     "text": "Angle BOD (b) = {b}°",
+     "text": "Angle BOC (b) = {b}°",
      "answer": {
       "value": [
-       "64"
+       "120"
       ],
-      "text": "64"
+      "text": "120"
      }
     },
     {
      "label": "c",
-     "text": "Angle AOD (c) = {b}°",
+     "text": "Angle BOD (c) = {b}°",
      "answer": {
       "value": [
-       "116"
+       "60"
       ],
-      "text": "116"
+      "text": "60"
      }
     }
    ],
-   "explanation": "(a) Straight line: 180° - 64° = 116°. (b) Vertically opposite: 64°. (c) Vertically opposite BOC: 116°.",
+   "explanation": "(a) A straight line: 3 parts = 180°, so AOC = 60°. (b) BOC = 2 × 60° = 120°. (c) Vertically opposite AOC: 60°.",
    "figside": true
   },
   {
@@ -494,7 +486,7 @@
      }
     }
    ],
-   "explanation": "(a) 180° - 47° - 85° = 48°. (b) 360° - 125° - 90° - 105° = 40°.",
+   "explanation": "(a) Angles on a straight line: 180° - 47° - 85° = 48°. (b) Angles at a point: 360° - 125° - 90° - 105° = 40°.",
    "figside": true
   },
   {
@@ -629,7 +621,7 @@
      }
     }
    ],
-   "explanation": "(a) 180° - 58° - 67° = 55°. (b) 180° - 90° - 38° = 52°.",
+   "explanation": "Angles of a triangle add up to 180°. (a) 180° - 58° - 67° = 55°. (b) 180° - 90° - 38° = 52°.",
    "figside": true
   },
   {
@@ -735,7 +727,7 @@
      }
     }
    ],
-   "explanation": "(a) PQ = PR, so R = Q = 72°. (b) 180° - 72° - 72° = 36°.",
+   "explanation": "(a) Equal sides PQ = PR: equal angles R = Q = 72°. (b) Angles of a triangle: 180° - 72° - 72° = 36°.",
    "figside": true
   },
   {
@@ -864,26 +856,26 @@
    "id": "L5U08-S06",
    "tier": "start",
    "page": 2,
-   "text": "ABCD is a rhombus. Angle ABC = 124°. The dashed line is the diagonal AC.",
+   "text": "ABCD is a rhombus. Angle DAB = 76°. The dashed line is the diagonal BD.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
     "pts": {
      "A": [
-      -4.474,
-      6.632
-     ],
-     "B": [
       0,
       0
      ],
-     "C": [
+     "B": [
       8,
       0
      ],
+     "C": [
+      9.935,
+      7.762
+     ],
      "D": [
-      3.526,
-      6.632
+      1.935,
+      7.762
      ]
     },
     "polys": [
@@ -899,8 +891,8 @@
     ],
     "lines": [
      {
-      "a": "A",
-      "b": "C",
+      "a": "B",
+      "b": "D",
       "dash": true
      }
     ],
@@ -928,72 +920,72 @@
     ],
     "angles": [
      {
-      "at": "B",
-      "a": "C",
-      "b": "A",
-      "text": "124°",
+      "at": "A",
+      "a": "B",
+      "b": "D",
+      "text": "76°",
       "r": 24,
       "tr": 40,
       "size": 18
      },
      {
-      "at": "A",
-      "a": "B",
-      "b": "C",
+      "at": "B",
+      "a": "A",
+      "b": "D",
       "text": "(a)",
       "r": 24,
-      "tr": 44,
+      "tr": 46,
       "size": 18
      },
      {
-      "at": "A",
-      "a": "D",
-      "b": "B",
+      "at": "B",
+      "a": "C",
+      "b": "A",
       "text": "(b)",
-      "r": 34,
-      "tr": 70,
+      "r": 40,
+      "tr": 64,
       "size": 18
      }
     ],
     "vlab": {
-     "A": "tl",
-     "B": "bl",
-     "C": "br",
-     "D": "tr"
+     "A": "bl",
+     "B": "br",
+     "C": "tr",
+     "D": "tl"
     },
-    "alt": "rhombus ABCD with diagonal AC",
-    "mm": 3.62
+    "alt": "rhombus ABCD with diagonal BD",
+    "mm": 3.09
    },
    "parts": [
     {
      "label": "a",
-     "text": "Angle BAC (a) = {b}°",
+     "text": "Angle ABD (a) = {b}°",
      "answer": {
       "value": [
-       "28"
+       "52"
       ],
-      "text": "28"
+      "text": "52"
      }
     },
     {
      "label": "b",
-     "text": "Angle BAD (b) = {b}°",
+     "text": "Angle ABC (b) = {b}°",
      "answer": {
       "value": [
-       "56"
+       "104"
       ],
-      "text": "56"
+      "text": "104"
      }
     }
    ],
-   "explanation": "(a) AB = BC, so triangle ABC is isosceles: (180° - 124°) ÷ 2 = 28°. (b) Neighbouring angles add up to 180°: 56°.",
+   "explanation": "(a) AB = AD, so triangle ABD is isosceles: (180° - 76°) ÷ 2 = 52°. (b) Neighbouring angles add up to 180°: 104°.",
    "figside": true
   },
   {
    "id": "L5U08-S07",
    "tier": "start",
    "page": 2,
-   "text": "ABCD is a trapezium. AB is parallel to DC. Angle A = 75° and angle B = 110°.",
+   "text": "ABCD is a trapezium. AB is parallel to DC. Angle A = 58° and angle B = 100°.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1007,12 +999,12 @@
       0
      ],
      "C": [
-      13.934,
-      5.313
+      12.822,
+      4.664
      ],
      "D": [
-      1.424,
-      5.313
+      2.915,
+      4.664
      ]
     },
     "polys": [
@@ -1031,7 +1023,7 @@
       "at": "A",
       "a": "B",
       "b": "D",
-      "text": "75°",
+      "text": "58°",
       "r": 24,
       "tr": 40,
       "size": 18
@@ -1040,7 +1032,7 @@
       "at": "B",
       "a": "A",
       "b": "C",
-      "text": "110°",
+      "text": "100°",
       "r": 24,
       "tr": 40,
       "size": 18
@@ -1083,7 +1075,7 @@
      "D": "tl"
     },
     "alt": "trapezium ABCD",
-    "mm": 4.45
+    "mm": 4.84
    },
    "parts": [
     {
@@ -1091,9 +1083,9 @@
      "text": "Angle C (a) = {b}°",
      "answer": {
       "value": [
-       "70"
+       "80"
       ],
-      "text": "70"
+      "text": "80"
      }
     },
     {
@@ -1101,27 +1093,27 @@
      "text": "Angle D (b) = {b}°",
      "answer": {
       "value": [
-       "105"
+       "122"
       ],
-      "text": "105"
+      "text": "122"
      }
     }
    ],
-   "explanation": "Angles between parallel sides add to 180°. (a) C = 180° - 110° = 70°. (b) D = 180° - 75° = 105°.",
+   "explanation": "Angles between parallel sides add to 180°. (a) C = 180° - 100° = 80°. (b) D = 180° - 58° = 122°.",
    "figside": true
   },
   {
    "id": "L5U08-S08",
    "tier": "start",
    "page": 2,
-   "text": "BDC is a straight line. AB = AD. Angle ABD = 55° and angle DAC = 30°.",
+   "text": "BDC is a straight line. AB = AD. Angle ABD = 58° and angle DAC = 24°.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
     "pts": {
      "A": [
       4,
-      5.712592026968458
+      6.401338116164203
      ],
      "B": [
       0,
@@ -1132,7 +1124,7 @@
       0
      ],
      "C": [
-      16.250693135881583,
+      13.490374037277919,
       0
      ]
     },
@@ -1170,7 +1162,7 @@
       "at": "B",
       "a": "D",
       "b": "A",
-      "text": "55°",
+      "text": "58°",
       "r": 24,
       "tr": 40,
       "size": 18
@@ -1206,7 +1198,7 @@
       "at": "A",
       "a": "D",
       "b": "C",
-      "text": "30°",
+      "text": "24°",
       "r": 24,
       "tr": 40,
       "size": 18
@@ -1228,7 +1220,7 @@
      "C": "br"
     },
     "alt": "triangle ABC with D on BC",
-    "mm": 3.82
+    "mm": 4.37
    },
    "parts": [
     {
@@ -1236,9 +1228,9 @@
      "text": "Angle ADB (a) = {b}°",
      "answer": {
       "value": [
-       "55"
+       "58"
       ],
-      "text": "55"
+      "text": "58"
      }
     },
     {
@@ -1246,9 +1238,9 @@
      "text": "Angle BAD (b) = {b}°",
      "answer": {
       "value": [
-       "70"
+       "64"
       ],
-      "text": "70"
+      "text": "64"
      }
     },
     {
@@ -1256,9 +1248,9 @@
      "text": "Angle ADC (c) = {b}°",
      "answer": {
       "value": [
-       "125"
+       "122"
       ],
-      "text": "125"
+      "text": "122"
      }
     },
     {
@@ -1266,13 +1258,13 @@
      "text": "Angle ACD (d) = {b}°",
      "answer": {
       "value": [
-       "25"
+       "34"
       ],
-      "text": "25"
+      "text": "34"
      }
     }
    ],
-   "explanation": "(a) AB = AD: 55°. (b) 180° - 55° - 55° = 70°. (c) Straight line: 180° - 55° = 125°. (d) 180° - 125° - 30° = 25°.",
+   "explanation": "(a) AB = AD: equal base angles, 58°. (b) Triangle ABD: 180° - 58° - 58° = 64°. (c) Straight line: 180° - 58° = 122°. (d) Triangle ADC: 180° - 122° - 24° = 34°.",
    "figside": true
   },
   {
@@ -1386,7 +1378,7 @@
      }
     }
    ],
-   "explanation": "(a) 180° ÷ 3 = 60°. (b) Straight line: 180° - 60° = 120°.",
+   "explanation": "(a) Equilateral: 3 equal angles, 180° ÷ 3 = 60°. (b) Angles on a straight line: 180° - 60° = 120°.",
    "figside": true
   },
   {
@@ -1772,13 +1764,6 @@
       "size": 18
      }
     ],
-    "lines": [
-     {
-      "a": "D",
-      "b": "E",
-      "dash": true
-     }
-    ],
     "vlab": {
      "A": "l",
      "B": "r",
@@ -1800,8 +1785,8 @@
      "Working:"
     ]
    },
-   "hint": "AD = AB = AE. What kind of triangle is ADE?",
-   "explanation": "AD = AB = AE. DAE = 80° + 60° = 140°. AED = (180° - 140°) ÷ 2 = 20°.",
+   "hint": "Which sides of the figure are equal in length?",
+   "explanation": "AD = AB = AE. Join D to E: angle DAE = 80° + 60° = 140°, and AED = (180° - 140°) ÷ 2 = 20° (isosceles).",
    "figright": true
   },
   {
@@ -1966,7 +1951,7 @@
     ],
     "ticks": [
      [
-      "A",
+      "D",
       "B",
       1
      ],
@@ -2097,7 +2082,7 @@
      "D": "b"
     },
     "alt": "two lines crossing at O",
-    "mm": 2.83
+    "mm": 2.52
    },
    "answer": {
     "value": [
@@ -2138,25 +2123,25 @@
    "id": "L5U08-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "BDC is a straight line. AB = AD. Angle ABD = 62° and angle DAC = 40°. Find angle ACD. {b}°",
+   "text": "BCD is a straight line. CA = CD. Angle ACB = 76°. Find angle CAD. {b}°",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
     "pts": {
      "A": [
-      3.5,
-      6.582542628712162
+      6.548468626401993,
+      5.821774357655979
      ],
      "B": [
       0,
       0
      ],
-     "D": [
-      7,
+     "C": [
+      8,
       0
      ],
-     "C": [
-      19.792364722377815,
+     "D": [
+      14,
       0
      ]
     },
@@ -2165,7 +2150,7 @@
       "v": [
        "A",
        "B",
-       "C"
+       "D"
       ],
       "fill": "light"
      }
@@ -2173,45 +2158,36 @@
     "lines": [
      {
       "a": "A",
-      "b": "D",
+      "b": "C",
       "dash": false
      }
     ],
     "ticks": [
      [
+      "C",
       "A",
-      "B",
       1
      ],
      [
-      "A",
+      "C",
       "D",
       1
      ]
     ],
     "angles": [
      {
-      "at": "B",
-      "a": "D",
-      "b": "A",
-      "text": "62°",
+      "at": "C",
+      "a": "A",
+      "b": "B",
+      "text": "76°",
       "r": 24,
       "tr": 40,
       "size": 18
      },
      {
       "at": "A",
-      "a": "D",
-      "b": "C",
-      "text": "40°",
-      "r": 24,
-      "tr": 40,
-      "size": 18
-     },
-     {
-      "at": "C",
-      "a": "D",
-      "b": "A",
+      "a": "C",
+      "b": "D",
       "text": "?",
       "r": 24,
       "tr": 40,
@@ -2221,19 +2197,19 @@
     "vlab": {
      "A": "t",
      "B": "bl",
-     "D": "b",
-     "C": "br"
+     "C": "b",
+     "D": "br"
     },
-    "alt": "triangle with D on BC",
-    "mm": 2.53
+    "alt": "triangle ABD with C on BD",
+    "mm": 2.75
    },
    "answer": {
     "value": [
-     "22"
+     "38"
     ],
-    "text": "22°"
+    "text": "38°"
    },
-   "explanation": "AB = AD, so ADB = ABD = 62°. BDC is a straight line, so ADC = 180° - 62° = 118°. In triangle ADC: ACD = 180° - 118° - 40° = 22°.",
+   "explanation": "Straight line: ACD = 180° - 76° = 104°. CA = CD, so (180° - 104°) ÷ 2 = 38°.",
    "figright": true
   }
  ]

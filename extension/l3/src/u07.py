@@ -21,13 +21,13 @@ u.learn(
     {'title': 'How to find area and perimeter',
      'steps': ['Area: count the squares, or length × width.', 'Perimeter: add all the sides.',
                'Rectangle: perimeter = 2 × (length + width).', 'Write cm for the perimeter and cm² for the area.']},
-    {'text': 'A rectangle is 8 cm long and 3 cm wide.', 'figure': rect(8, 3, 84), 'figright': True,
+    {'text': 'A rectangle is 9 cm long and 4 cm wide.', 'figure': rect(9, 4, 84), 'figright': True,
      'answer': None, 'explanation': ''})
 tr = u.u['learn']['try']
 tr.pop('answer'); tr.pop('text')
-u.u['learn']['try'] = {'id': 'L3U07-L01', 'text': 'A rectangle is 8 cm long and 3 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.', 'figure': rect(8, 3, 84),
-                       'answer': A(['24', '22'], 'Area 24 cm². Perimeter 22 cm.', list=True),
-                       'explanation': 'Area: 8 × 3 = 24 cm². Perimeter: 8 + 3 + 8 + 3 = 22 cm, or 2 × (8 + 3) = 22 cm.'}
+u.u['learn']['try'] = {'id': 'L3U07-L01', 'text': 'A rectangle is 9 cm long and 4 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.', 'figure': rect(9, 4, 84),
+                       'answer': A(['36', '26'], 'Area 36 cm². Perimeter 26 cm.', list=True),
+                       'explanation': 'Area: 9 × 4 = 36 cm². Perimeter: 9 + 4 + 9 + 4 = 26 cm, or 2 × (9 + 4) = 26 cm.'}
 
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'Every square in the picture has sides of 1 cm. What are the area and the perimeter of each figure?', parts=[
@@ -127,8 +127,8 @@ u.G('Beyond Level 3: The largest square tile.\nA floor is 12 m long and 10 m wid
     why='The side must divide both 12 and 10 exactly. 1 and 2 do. 3 does not divide 10, 4 does not, 5 does not divide 12, and 6 does not divide 10. So the largest side is 2 m. There are 6 tiles along and 5 tiles across: 30 tiles.')
 
 # ---------------- Check yourself
-u.C('A rectangle is 9 cm long and 5 cm wide. Its area is {b} cm².', A('45'), why='9 × 5 = 45 cm².')
-u.C('A square has sides of 6 cm. Its perimeter is {b} cm.', A('24'), why='4 × 6 = 24 cm.')
+u.C('A rectangle is 9 cm long and 5 cm wide. Its area is {b} cm².', A('45'), why='Area is length × width: 9 × 5 = 45 cm².')
+u.C('A square tile has a perimeter of 20 cm. Each side is {b} cm.', A('5'), why='A square has 4 equal sides: 20 ÷ 4 = 5 cm.')
 u.C('Every square has sides of 1 cm. The area is {b} cm². The perimeter is {b} cm.', A(['7', '12'], 'Area 7 cm². Perimeter 12 cm.', list=True),
     figure={'type': 'l3_cells', 'rows': ['XXX', 'XX.', 'XX.'], 'width_mm': 36, 'cell': 52}, figright=True,
     why='Area: 3 + 2 + 2 = 7 cm². Perimeter: the figure fits in a 3 by 3 box and has no dents on the outside, so 2 × (3 + 3) = 12 cm.')

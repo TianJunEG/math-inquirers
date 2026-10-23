@@ -28,7 +28,7 @@ u.learn(
     {'text': 'Ravi’s plant is 480 mm tall. Mei’s plant is 215 mm shorter. How tall is Mei’s plant? {b} mm', 'answer': A('265'),
      'explanation': 'Mei’s plant is shorter, so subtract: 480 - 215 = 265 mm. Check: 265 + 215 = 480.'})
 
-u.u['learn']['facts'] = {'title': 'More models', 'lines': ['Times as many: draw 1 box, then 3 boxes. Count the boxes.', 'Total and difference: take away the extra, then share the rest.', 'Same after giving: half the gap moves.']}
+u.u['learn']['facts'] = {'title': 'More models', 'lines': ['Times as many: Ben has 3 times as many as Ali, 48 in all. 4 equal boxes: 48 ÷ 4 = 12 each.', 'Total and difference: 50 in all and Mei has 10 more. Take away the 10: 40. Share it: 20 and 30.', 'Same after giving: 70 and 50. The gap is 20. The child with more gives half the gap, 10. Both have 60.']}
 
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'A farm has 2400 eggs. 875 of them are brown. The rest are white. How many eggs are white? {b}', A('1525'),
@@ -61,22 +61,22 @@ u.S(3, 'Ravi reads 85 pages on Monday. On Tuesday he reads 28 pages more than he
     why='(a) 85 + 28 = 113. (b) 113 - 17 = 96. (c) 85 + 113 + 96 = 294. Wednesday is compared with Tuesday, not with Monday.')
 u.S(3, 'Mei has $50. She buys a book for $18.40 and a pen for $6.75. How much money does she have left? ${bw}', A('24.85'),
     why='First add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85. Check: 25.15 + 24.85 = 50.00.')
-u.S(3, 'Wei has 3 times as many marbles as Aisha. Wei has 48 marbles.', parts=[
-    P('a', 'Aisha has {b} marbles.', A('16')), P('b', 'They have {b} marbles in all.', A('64'))],
+u.S(3, 'A zoo has 3 times as many monkeys as parrots. There are 48 monkeys.', parts=[
+    P('a', 'There are {b} parrots.', A('16')), P('b', 'There are {b} monkeys and parrots in all.', A('64'))],
     space={'rows': ['Draw your model:']},
-    why='Wei has 3 boxes and Aisha has 1 box. 3 boxes are 48 marbles, so 1 box is 48 ÷ 3 = 16. Together they have 4 boxes: 4 × 16 = 64.')
+    why='Monkeys are 3 boxes and parrots are 1 box. 3 boxes are 48, so 1 box is 48 ÷ 3 = 16. Together they are 4 boxes: 4 × 16 = 64.')
 u.S(3, 'A shop has 54 red pens. It has 18 fewer blue pens than red pens. Kumar says the shop has 54 + 18 = 72 blue pens.', parts=[
-    P('a', 'Is Ravi right?   {circ:Yes|No}', A('No')), P('b', 'The shop has {b} blue pens.', A('36'))],
+    P('a', 'Is Kumar right?   {circ:Yes|No}', A('No')), P('b', 'The shop has {b} blue pens.', A('36'))],
     why='There are fewer blue pens than red pens, so fewer than 54. Kumar added instead of subtracting. The right answer is 54 - 18 = 36.')
 u.S(3, 'Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${bw}', A('49'),
     space={'rows': ['Working:']},
     why='In 7 weeks she saves 7 × $12 = $84. Then 84 - 35 = 49. She has $49 left.')
 
 # ---------------- Think harder
-u.T('Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. After that, each boy has the same number of marbles. How many marbles does Kumar give away? {b}', A('21'), beyond='Giving to make them equal',
-    hint='Find how many each has at first. Then how many each has later.',
+u.T('A library has 84 books on 2 shelves. The top shelf has 3 times as many books as the bottom shelf. The librarian moves some books from the top shelf to the bottom shelf. Now both shelves have the same number of books. How many books does she move? {b}', A('21'), beyond='Giving to make them equal',
+    hint='Find how many each shelf has at first. Then how many later.',
     space={'rows': ['Draw your model:', 'Working:']},
-    why='At first there are 4 equal boxes: 84 ÷ 4 = 21, so Wei has 21 and Kumar has 63. At the end each has 84 ÷ 2 = 42. Kumar gives 63 - 42 = 21 marbles. Check: 21 + 21 = 42.')
+    why='At first there are 4 equal boxes: 84 ÷ 4 = 21, so the bottom shelf has 21 and the top shelf has 63. At the end each has 84 ÷ 2 = 42. She moves 63 - 42 = 21 books.')
 u.T('Ali buys a pencil box and 2 pens for $14. Mei buys the same box and 5 pens for $23.', parts=[
     P('a', '1 pen costs ${bw}.', A('3')), P('b', 'The pencil box costs ${bw}.', A('8'))],
     hint='What is different between the 2 bills?',

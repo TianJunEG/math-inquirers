@@ -83,9 +83,11 @@ u.T('Look at the fractions with bottom number 12. List every one between 1/3 and
     hint='Change 1/3 and 2/3 into twelfths first.',
     why='1/3 = 4/12 and 2/3 = 8/12. The twelfths between 4/12 and 8/12 are 5/12, 6/12 and 7/12. The fractions 4/12 and 8/12 are not between.',
     space={'rows': ['Working:', '', '', '']})
-u.T('A fraction is equal to 2/5. Its bottom number is 9 more than its top number. Write the fraction. {b}/{b}', A(['6', '15'], '6/15', list=True),
-    hint='Write fractions equal to 2/5. Look at the gap each time.',
-    why='Equal fractions of 2/5 are 4/10, 6/15, 8/20. The gap between bottom and top is 3, 6, 9, 12. The gap is 9 for 6/15. Check: 15 - 6 = 9.',
+u.T('Look at the fractions between 1/3 and 1/2.', parts=[
+    P('a', 'A fraction with bottom number 12 is between them. It is {b}/12.', A('5')),
+    P('b', 'With bottom number 24 there are {b} fractions between them.', A('3'))],
+    hint='Write 1/3 and 1/2 with the same bottom number first.',
+    why='(a) 1/3 = 4/12 and 1/2 = 6/12. The only top number between 4 and 6 is 5: 5/12. (b) 1/3 = 8/24 and 1/2 = 12/24. The tops 9, 10 and 11 fit: 3 fractions.',
     space={'rows': ['My list:', '', '']})
 u.T('A jug is full of juice. Mei drinks 1/4 of the jug. Ali drinks 1/3 of the jug.', parts=[
     P('a', 'Together they drink {b}/12 of the jug.', A('7')), P('b', '{b}/12 of the jug is left.', A('5'))],

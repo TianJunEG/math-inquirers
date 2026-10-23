@@ -19,6 +19,7 @@ u.learn(
     {'text': 'A baker packs 43 buns into boxes of 6. She fills {b} boxes and has {b} buns left over.',
      'answer': A(['7', '1'], '7 full boxes, 1 bun left over', list=True),
      'explanation': '6 × 7 = 42 and 43 - 42 = 1. So 43 ÷ 6 = 7 remainder 1. Check: 7 × 6 + 1 = 43.'})
+u.u['learn']['facts'] = {'title': 'Round up or not?', 'lines': ['31 children, 4 at each table: 31 ÷ 4 = 7 remainder 3. The 3 left over need a table too: 8 tables.', '$31, pens at $4: 7 pens and $3 is left. The leftover is not enough for another pen.']}
 u.u['learn']['tight'] = True
 
 # ---------------- Start here (pages 1 to 3)
@@ -44,14 +45,14 @@ u.S(1, 'Kumar says 59 ÷ 7 = 7 remainder 10.', parts=[
     P('b', 'The right answer is {b} remainder {b}.', A(['8', '3'], '8 remainder 3', list=True))],
     why='A remainder must be smaller than the number we divide by. 10 is greater than 7, so another group of 7 fits. 7 × 8 = 56 and 59 - 56 = 3. So 59 ÷ 7 = 8 remainder 3.')
 
-u.S(2, 'Ali stacks coins in piles of 5. He makes 9 full piles and has 4 coins left over.', parts=[
-    P('a', 'Ali has {b} coins.', A('49')),
-    P('b', 'He stacks all the coins again in piles of 6. He makes {b} piles and has {b} coins left.', A(['8', '1'], '8 piles, 1 coin left', list=True))],
-    why='(a) 9 × 5 = 45, and 45 + 4 = 49. (b) 49 ÷ 6: 6 × 8 = 48 and 49 - 48 = 1. So 8 full piles and 1 coin left.')
+u.S(2, 'Lily thinks of a number. She divides it by 6. The answer is 8 remainder 5.', parts=[
+    P('a', 'Lily’s number is {b}.', A('53')),
+    P('b', 'She divides the same number by 7. The answer is {b} remainder {b}.', A(['7', '4'], '7 remainder 4', list=True))],
+    why='(a) 8 groups of 6 make 48, and 48 + 5 = 53. (b) 53 ÷ 7: 7 × 7 = 49 and 53 - 49 = 4. So 7 remainder 4.')
 u.S(2, 'Think about remainders.', parts=[
     P('a', 'List every remainder that is possible when a number is divided by 5.\n{ll}', A(['0', '1', '2', '3', '4'], '0, 1, 2, 3, 4', list=True)),
-    P('b', 'A number between 50 and 60 is divided by 7. The remainder is as great as it can be. The number is {b}.', A('55'))],
-    why='(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) The greatest remainder for 7 is 6. The numbers with remainder 6 are 6, 13, 20, ... 48, 55, 62. Only 55 is between 50 and 60.')
+    P('b', 'The greatest 2-digit number that leaves remainder 5 when divided by 8 is {b}.', A('93'))],
+    why='(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) 96 is in the 8 times table, and 96 + 5 = 101 has 3 digits. The next one down: 88 + 5 = 93.')
 u.S(2, 'Look for a pattern. Write the remainder when each number is divided by 4.', parts=[
     P('a', 'Fill in the empty cells.', A(['0', '1', '2', '3', '0', '1', '2', '3'], '0, 1, 2, 3, 0, 1, 2, 3', list=True)),
     P('b', 'When 30 is divided by 4 the remainder is {b}.', A('2')),
@@ -94,10 +95,12 @@ u.T('Find the 2-digit number. Dividing it by 5 gives remainder 2. Dividing it by
     hint='Begin with the clue that gives the fewest numbers to list.',
     why='The 2-digit numbers that leave remainder 2 when divided by 5 end in 2 or 7. Test them with 3 and 4. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other number works.',
     space={'rows': ['My list:', 'Tests:', '']})
-u.T('Aisha shares crayons among her cousins. If each cousin gets 3 crayons, 11 crayons are not used. If each cousin gets 5 crayons, she needs 7 more. How many cousins are there? How many crayons does she have?', beyond='Too many and too few', parts=[
-    P('a', 'There are {b} cousins.', A('9')), P('b', 'She has {b} crayons.', A('38'))],
-    hint='Compare the 2 plans: each cousin gets 2 more crayons.',
-    why='Giving each cousin 2 more crayons uses the 11 crayons that were not used and needs 7 more: 11 + 7 = 18 crayons. So 18 ÷ 2 = 9 cousins. The crayons: 9 × 3 + 11 = 38. Check: 9 × 5 = 45 and 45 - 38 = 7 more are needed.',
+u.T('Mei divides a number by 9. The whole-number answer and the remainder are the same. Her number is greater than 0 and less than 100.', beyond='Same answer and remainder', parts=[
+    P('a', 'When both are 4, her number is {b}.', A('40')),
+    P('b', 'The greatest number that works is {b}.', A('80')),
+    P('c', 'There are {b} numbers that work.', A('8'))],
+    hint='Try 1 remainder 1, then 2 remainder 2. Look for a pattern.',
+    why='4 groups of 9 and 4 left make 4 × 9 + 4 = 40. The numbers that work are 10, 20, 30, up to 80: 1 × 10, 2 × 10, ... 8 × 10. A remainder must be less than 9, so 9 remainder 9 is not allowed. The greatest is 80 and there are 8 numbers.',
     space={'rows': ['Working:', '']})
 
 # ---------------- Go further

@@ -10,18 +10,18 @@ def seg(w, t='', style='plain'):
 
 u.learn(
     'Use one unit before you add or take away. 1 m = 100 cm, 1 kg = 1000 g, 1 ℓ = 1000 ml and $1 = 100¢.',
-    {'problem': 'A ribbon is 2 m 35 cm long. Mei cuts off 80 cm. How long is the ribbon now?',
-     'figure': {'type': 'l3_bars', 'rows': [{'segs': [seg(3.5, '?', 'q'), seg(1.5, '80 cm', 'ghost')], 'braces': [{'a': 0, 'b': 1, 't': '2 m 35 cm'}]}], 'width_mm': 68, 'u': 60, 'lab': 20},
-     'steps': ['Change to cm: 2 m 35 cm = 235 cm.', 'Take away: 235 - 80 = 155 cm = 1 m 55 cm.'],
-     'answer': 'The ribbon is 1 m 55 cm long.'},
+    {'problem': 'A ribbon is 3 m 40 cm long. Mei cuts off 85 cm. How long is the ribbon now?',
+     'figure': {'type': 'l3_bars', 'rows': [{'segs': [seg(3.5, '?', 'q'), seg(1.5, '85 cm', 'ghost')], 'braces': [{'a': 0, 'b': 1, 't': '3 m 40 cm'}]}], 'width_mm': 68, 'u': 60, 'lab': 20},
+     'steps': ['Change to cm: 3 m 40 cm = 340 cm.', 'Take away: 340 - 85 = 255 cm = 2 m 55 cm.'],
+     'answer': 'The ribbon is 2 m 55 cm long.'},
     {'title': 'Tips',
      'steps': ['Write both amounts in the small unit first.', 'On a time line, jump to the next o’clock.']},
     {'text': 'A jug holds 2 ℓ 350 ml. Ali pours out 800 ml. The jug now holds {b} ℓ {b} ml.', 'answer': A(['1', '550'], '1 ℓ 550 ml', list=True),
      'explanation': '2 ℓ 350 ml = 2350 ml. Then 2350 - 800 = 1550 ml = 1 ℓ 550 ml. Check: 1550 + 800 = 2350.'},
-    example2={'problem': 'A film starts at 2:50 pm and ends at 4:20 pm. How long is the film?',
-              'figure': {'type': 'l3_timeline', 'points': [{'t': '2:50'}, {'t': '3:00'}, {'t': '4:00'}, {'t': '4:20'}], 'arcs': [{'a': 0, 'b': 1, 'text': '10 min'}, {'a': 1, 'b': 2, 'text': '1 h'}, {'a': 2, 'b': 3, 'text': '20 min'}], 'width_mm': 100},
-              'steps': ['Jump to the next o’clock, then to 4:00, then to 4:20.', 'Add the jumps: 10 min + 1 h + 20 min = 1 h 30 min.'],
-              'answer': 'The film is 1 h 30 min long.'})
+    example2={'problem': 'A film starts at 1:40 pm and ends at 3:15 pm. How long is the film?',
+              'figure': {'type': 'l3_timeline', 'points': [{'t': '1:40'}, {'t': '2:00'}, {'t': '3:00'}, {'t': '3:15'}], 'arcs': [{'a': 0, 'b': 1, 'text': '20 min'}, {'a': 1, 'b': 2, 'text': '1 h'}, {'a': 2, 'b': 3, 'text': '15 min'}], 'width_mm': 100},
+              'steps': ['Jump to the next o’clock, then to 3:00, then to 3:15.', 'Add the jumps: 20 min + 1 h + 15 min = 1 h 35 min.'],
+              'answer': 'The film is 1 h 35 min long.'})
 u.u['learn']['tight'] = True
 
 # ---------------- Start here (pages 1 to 3)
@@ -38,9 +38,9 @@ u.S(1, 'The ruler is shown at real size. Read the length of each object.', parts
 u.S(1, 'The parcels weigh: A 1 kg 80 g, B 1900 g, C 1 kg 8 g, D 1 kg 90 g. Write the letters in order. Begin with the lightest.\n{b}  {b}  {b}  {b}',
     A(['C', 'A', 'D', 'B'], 'C, A, D, B', list=True),
     why='Write each in grams: A is 1080 g, B is 1900 g, C is 1008 g and D is 1090 g. In order: 1008, 1080, 1090, 1900. That is C, A, D, B.')
-u.S(1, 'A jug has 2 ℓ 500 ml of juice. Ali pours it into cups of 400 ml.', parts=[
-    P('a', 'He fills {b} cups.', A('6')), P('b', '{b} ml of juice are left over.', A('100'))],
-    why='2 ℓ 500 ml = 2500 ml. 2500 ÷ 400 = 6 remainder 100. He fills 6 cups, and 100 ml are left over.')
+u.S(1, 'A can has 3 ℓ 200 ml of paint. Siti pours the paint into pots. Each pot holds 500 ml.', parts=[
+    P('a', 'She fills {b} pots.', A('6')), P('b', '{b} ml of paint are left.', A('200'))],
+    why='3 ℓ 200 ml = 3200 ml. 3200 ÷ 500 = 6 remainder 200. She fills 6 pots, and 200 ml are left.')
 u.S(2, 'Read the water level in each jug.', parts=[
     P('a', 'A holds {b} ml', A('350')), P('b', 'B holds {b} ml', A('600')), P('c', 'C holds {b} ml', A('850')),
     P('d', 'C has {b} ml more than A', A('500'))],
