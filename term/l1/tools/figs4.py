@@ -256,7 +256,7 @@ def shelf(items=None, title=None, size=64, per_row=6):
     """A shelf: pictures standing on a board, with a name above ('Shelf 1'). items=[{'icon':'cookie','n':3}, ...] in order from the left."""
     flat = []
     for it in items or []: flat += [it['icon']] * it.get('n', 1)
-    cols = min(per_row, max(len(flat), 1)); rows = -(-len(flat) // cols)
+    cols = per_row; rows = -(-len(flat) // cols)
     W = cols * (size + 8) + 40; top = 50 if title else 8
     P = []
     if title: P.append(f'<text x="14" y="38" font-size="36" font-weight="800" fill="{TEAL}" font-family="{FONT}">{_esc(title)}</text>')
