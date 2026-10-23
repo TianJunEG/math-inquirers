@@ -176,7 +176,8 @@ def check_slides_links(d):
     pages = {q['page'] for t in ('start', 'think', 'go') for q in d['tiers'][t]} | {d['tiers']['investigation']['page']}
     txt = ' '.join(ln.get('text', '') for seg in d['script']['segments'] for ln in seg['lines']) + ' ' + ' '.join(s['note'] for s in d['slides'])
     nk = max(1, kit_pages_total(d))
-    kp = set(range(6, 6 + nk)) | set(range(max(pages) + 1, max(pages) + 1 + nk))
+    if d.get('workbook', {}).get('exit_page'): pages = pages | {max(pages) + 1}        # exit ticket and look-back have their own page
+    kp = set(range(6, 7 + nk)) | set(range(max(pages) + 1, max(pages) + 1 + nk))
     for m in re.finditer(r'\bpages? (\d+)', txt, re.I):
         if int(m.group(1)) not in pages | kp: fail(f'link: text mentions page {m.group(1)} which does not exist (pages {sorted(pages)} and kit pages {sorted(kp)})')
 
