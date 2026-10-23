@@ -14,7 +14,7 @@
    "steps": [
     "Mei does not have a cat or a fish, so Mei has the dog. Write Yes for Mei and dog.",
     "The dog is taken. Write No in the dog column for Ali and Siti, and No in the other columns for Mei.",
-    "Ali does not have a fish and does not have the dog, so Ali has the cat.",
+    "Ali has no fish and no dog, so Ali has the cat.",
     "Check: Siti has the fish. Every clue is true."
    ],
    "answer": "Ali has the cat.",
@@ -119,14 +119,14 @@
    "id": "L5U10-S03",
    "tier": "start",
    "page": 1,
-   "text": "Aisha, Wei and Ravi each have a different pet: a rabbit, a hamster or a bird. Ravi has no bird and no hamster. Aisha has no hamster. Who has the bird? {b}",
+   "text": "Aisha, Wei and Ravi own a turtle, a parrot and a goldfish, one each. Ravi owns neither the parrot nor the goldfish. Aisha does not own the goldfish. Who owns the parrot? {b}",
    "answer": {
     "value": [
      "Aisha"
     ],
     "text": "Aisha"
    },
-   "explanation": "Ravi has no bird and no hamster, so Ravi has the rabbit. Aisha has no hamster and the rabbit is taken, so Aisha has the bird. Wei has the hamster."
+   "explanation": "Ravi owns neither the parrot nor the goldfish, so Ravi owns the turtle. Aisha does not own the goldfish and the turtle is taken, so Aisha owns the parrot. Wei owns the goldfish."
   },
   {
    "id": "L5U10-S04",
@@ -253,7 +253,8 @@
      }
     }
    ],
-   "explanation": "(a) The grid has 9 small squares. (b) A 2 by 2 square can start in 2 columns and 2 rows: 2 × 2 = 4. (c) There is 1 big square. (d) 9 + 4 + 1 = 14."
+   "explanation": "(a) The grid has 9 small squares. (b) A 2 by 2 square can start in 2 columns and 2 rows: 2 × 2 = 4. (c) There is 1 big square. (d) 9 + 4 + 1 = 14.",
+   "figside": true
   },
   {
    "id": "L5U10-S06",
@@ -295,7 +296,7 @@
    "id": "L5U10-S08",
    "tier": "start",
    "page": 2,
-   "text": "Ben gives 1/3 of his stickers to Ali. He gives 1/2 of the rest to Mei. He has 12 stickers left. How many stickers did Ben have at first? {b}",
+   "text": "Ben gives 1/3 of his stickers to Ali. He gives 1/2 of the rest to Mei. 12 stickers are left. Find the number of stickers Ben began with. {b}",
    "answer": {
     "value": [
      "36"
@@ -313,7 +314,7 @@
    "id": "L5U10-S09",
    "tier": "start",
    "page": 2,
-   "text": "A farm has hens and cows. There are 20 animals and 56 legs altogether. A hen has 2 legs and a cow has 4 legs.",
+   "text": "A farm has hens and cows, 20 animals in all. They have 56 legs altogether. Hens have 2 legs each and cows have 4 legs each.",
    "parts": [
     {
      "label": "a",
@@ -449,7 +450,7 @@
    "id": "L5U10-T01",
    "tier": "think",
    "page": 4,
-   "text": "Ben, Kumar, Aisha and Wei each play a different sport: swimming, tennis, football or badminton. Write Yes or No in the grid. Then write the sport for each child.\nClue 1: Ben does not play tennis or badminton.\nClue 2: Kumar does not play swimming or tennis.\nClue 3: Wei does not play swimming or badminton.\nClue 4: Wei does not play tennis.",
+   "text": "Ben, Kumar, Aisha and Wei each play a different sport: swimming, tennis, football or badminton. Write Yes or No in the grid. Then write the sport for each child.\nClue 1: Ben does not play tennis or badminton.\nClue 2: Kumar does not play swimming or tennis.\nClue 3: Wei does not play swimming, badminton or tennis.",
    "figure": {
     "type": "l5_table",
     "cols": [
@@ -538,7 +539,7 @@
     }
    ],
    "hint": "Which child has the most clues? Start with Wei.",
-   "explanation": "Wei does not play swimming, badminton or tennis, so Wei plays football (clues 3 and 4). Ben does not play tennis or badminton, and football is taken, so Ben plays swimming. Kumar does not play swimming or tennis, so Kumar plays badminton. Aisha plays tennis. Check all 4 clues: each is true.",
+   "explanation": "Wei does not play swimming, badminton or tennis, so Wei plays football (clue 3). Ben does not play tennis or badminton, and football is taken, so Ben plays swimming. Kumar does not play swimming or tennis, so Kumar plays badminton. Aisha plays tennis. Check all 3 clues: each is true.",
    "partsrow": true
   },
   {
@@ -619,7 +620,8 @@
     ]
    },
    "hint": "Count by size: 1 by 1, 2 by 1, 3 by 1, 4 by 1 ... and then 2 high.",
-   "explanation": "(a) 1 by 1: 8. 2 by 2: 3 (3 places across, 1 place up). Total 8 + 3 = 11. (b) Count by size, width by height. Height 1: widths 1, 2, 3, 4 give 8, 6, 4, 2 rectangles = 20. Height 2: widths 1, 2, 3, 4 give 4, 3, 2, 1 = 10. Total 30. Check another way: choose 2 of 3 horizontal lines (3 ways) and 2 of 5 vertical lines (10 ways): 3 × 10 = 30."
+   "explanation": "(a) 1 by 1: 8. 2 by 2: 3 (3 places across, 1 place up). Total 8 + 3 = 11. (b) Count by size, width by height. Height 1: widths 1, 2, 3, 4 give 8, 6, 4, 2 rectangles = 20. Height 2: widths 1, 2, 3, 4 give 4, 3, 2, 1 = 10. Total 30. Check another way: choose 2 of 3 horizontal lines (3 ways) and 2 of 5 vertical lines (10 ways): 3 × 10 = 30.",
+   "figside": true
   },
   {
    "id": "L5U10-T03",
@@ -639,14 +641,14 @@
      ""
     ]
    },
-   "hint": "Undo the last step first. 14 is what fraction of the number before it?",
+   "hint": "Undo the last step first. 14 is what part of the number before?",
    "explanation": "Work backwards. After the last step 14 are left, and that is 2/3 of the number before it, so there were 14 ÷ 2 × 3 = 21. Before 3 arrived: 21 - 3 = 18. The 18 is 3/4 of the first number, so 1/4 is 6 and at first there were 24. Check: 24 - 6 = 18, 18 + 3 = 21, 21 - 7 = 14."
   },
   {
    "id": "L5U10-G01",
    "tier": "go",
    "page": 5,
-   "text": "How many 3-digit numbers have digits that add up to 7? Make an ordered list to be sure. {b}",
+   "text": "For how many 3-digit numbers do the digits sum to 7? Make an ordered list to be sure. {b}",
    "answer": {
     "value": [
      "28"
@@ -667,7 +669,7 @@
    "id": "L5U10-G02",
    "tier": "go",
    "page": 5,
-   "text": "Ali has 24 coins. They are 10¢, 20¢ and 50¢ coins. There are as many 10¢ coins as 50¢ coins. The coins are worth $7.00 in all.",
+   "text": "Ali has 24 coins. They are 10¢, 20¢ and 50¢ coins. The number of 10¢ coins equals the number of 50¢ coins. The coins are worth $7.00 in all.",
    "parts": [
     {
      "label": "a",

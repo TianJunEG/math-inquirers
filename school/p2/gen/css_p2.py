@@ -89,4 +89,19 @@ table.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid
 .popts{display:flex;gap:3mm;margin-left:auto}.popt{display:flex;flex-direction:column;align-items:center;gap:0.5mm}.popt svg{width:13mm;height:13mm;max-width:none}
 .mcard{padding:2mm 3mm 2mm 11mm}.clk30 svg{width:26mm;height:26mm}
 .tt th,.tt td{height:7.4mm;font-size:12pt}.qc.tq .qt{font-size:12pt}.qc.tq{padding:1.2mm 2.5mm}.qc.tq .ab{height:12.5mm;width:20mm}
+/* wave 5 */
+.srows3{display:flex;flex-direction:column;gap:2.5mm}
+.srow3{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.sol{width:34mm;display:flex;justify-content:center}.sol svg{max-width:none;height:24mm;width:auto}
+.sopts{display:flex;gap:2mm;margin-left:auto}
+.sgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5mm;border:0.4mm solid #000;border-radius:2mm;padding:2mm}
+.sc{display:flex;align-items:center;justify-content:center;height:20mm}.sc svg{max-width:none;height:17mm;width:auto}
+.trows2{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm}
+.trow2{display:flex;flex-direction:column;align-items:center;gap:1mm;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm}.trow2 b{font-size:12pt}.ticon svg{max-width:none;height:13mm;width:auto}
+.pgraph3{display:flex;flex-direction:column;gap:1.2mm;border:0.4mm solid #000;border-radius:2mm;padding:2mm 3mm}
+.grow3{display:flex;align-items:center;gap:3mm;height:11.5mm;border-bottom:0.25mm solid #000}.gname{width:26mm;font-size:13pt;font-weight:700}
+.gcells{display:flex;gap:0.8mm}.gcell svg{display:block;max-width:none;width:10.5mm;height:10.5mm}.hid{font-size:11pt;font-weight:700;border:0.4mm dashed #000;padding:1mm 6mm;border-radius:1mm}
+.gkey{font-size:13pt;font-weight:800;display:flex;align-items:center;gap:2mm;padding-top:1mm}.gkey svg{max-width:none;width:10.5mm;height:10.5mm}
+ul.clues{font-size:13.5pt;margin:1mm 0;padding-left:6mm}
+.grow3{height:10.2mm}
 """

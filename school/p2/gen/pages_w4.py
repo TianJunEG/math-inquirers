@@ -77,7 +77,7 @@ def page25():
         ["Read each scale.", "Write the mass and its unit.", INSTR_CODE],
         qgrid(cards, 3, "dials"), ans, table, word, 0, 0,
         "; ".join(f"{i+1}) {v} {u}" for i, (u, v) in enumerate(items)),
-        "Six weighing scales with a needle: three read in kilograms (0 to 10 kg, a mark for each kg) and three in grams (0 to 1000 g, a mark every 50 g; the readings are halfway between two numbers). The unit is printed on each scale and the pupil writes it after the number. The decoy letters stand for the next mark read by mistake. Drawings are not to scale. A box left blank gives no letter and the check cannot see it.",
+        "Six weighing scales with a needle: three read in kilograms (0 to 10 kg, a mark for each kg) and three in grams (0 to 1000 g, a mark halfway between the numbers; the readings are on a half mark). The unit is printed on each scale and the pupil writes it after the number. The decoy letters stand for the next mark read by mistake. Drawings are not to scale. A box left blank gives no letter and the check cannot see it.",
         domain=domain, fmt=fmt)
     solved = [read_dial(s)[0] for s in svgs]
     P.v("V1 independent solver reads the needle angle of each dial and equals the key", solved == ans, solved)
@@ -223,7 +223,7 @@ def page29():
         ["Find how long it took.", "Write the hours and the minutes.", INSTR_CODE],
         '<div class="hrows">' + "".join(rows) + '</div>', ans, table, word, 0, 0,
         "; ".join(f"{i+1}) {A.tstr(it['sh'], it['sm'])} to {A.tstr(it['eh'], it['em'])}: {a[0]} h {a[1]} min" for i, (it, a) in enumerate(zip(items, ans))),
-        "Two clock pairs (start and end on clock faces, on a five-minute mark) and three pairs of digital times. The time taken is 20 minutes to under 5 hours; the pupil writes hours and minutes, which may cross an hour. The decoy letters stand for a wrong number of minutes or hours. Times use am and pm. A box left blank gives no letter and the check cannot see it.",
+        "Two clock pairs (start and end on clock faces, on a five-minute mark) and three pairs of digital times. The time taken is under 5 hours; the pupil writes hours and minutes, which may cross an hour. The decoy letters stand for a wrong number of minutes or hours. Times use am and pm. A box left blank gives no letter and the check cannot see it.",
         domain=domain, fmt=lambda t: (f"{t[0]} h " if t[0] else "") + (f"{t[1]} min" if t[1] or not t[0] else ""), cols=4)
     def solve(t):
         if isinstance(t, tuple):
@@ -279,7 +279,7 @@ def page30():
         ["1 h = 60 min.", "Fill in the missing number.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 0, 300,
         "; ".join(f"{i+1}) {t} {a}" for i, (t, a) in enumerate(zip(texts, ans))),
-        "Three conversions from hours and minutes to minutes (one with whole hours) and three from minutes to hours and minutes (two ask for the minutes left over, one for the hours). The fact 1 h = 60 min is printed. The decoy letters stand for the usual slips (100 minutes in an hour, or hours and minutes added). A box left blank gives no letter and the check cannot see it.")
+        "Three conversions from hours and minutes to minutes (one with whole hours) and three from minutes to hours and minutes (two ask for the minutes left over, one for the hours). The fact 1 h = 60 min is printed. The decoy letters stand for the usual slips (the wrong number of minutes in an hour, or hours and minutes added). A box left blank gives no letter and the check cannot see it.")
     def solve(t):
         left, right = t.split(" = ")
         n = [int(x) for x in re.findall(r"\d+", left)]
@@ -339,7 +339,7 @@ def page31():
         ["Read the timetable.", "Answer each question in minutes.", INSTR_CODE],
         '<div class="blk">' + tbl + '</div>' + qgrid(cards, 2), ans, table, word, 0, 300,
         "; ".join(f"{i+1}) {t} {a} min" for i, (t, a) in enumerate(zip(qtxts, ans))),
-        "A timetable of six lessons (start and end times, am and pm) and six questions: how long a lesson lasts (twice), the wait between two lessons, two lessons together, the time from the start of one lesson to the end of a later one, and how much longer one lesson is than another. Lessons last between 25 and 80 minutes; one question asks from the start of one lesson to the end of a later one. The decoy letters stand for being 5 or 10 minutes out, or an hour out. A box left blank gives no letter and the check cannot see it.", ps=True)
+        "A timetable of six lessons (start and end times, am and pm) and six questions: how long a lesson lasts (twice), the wait between two lessons, two lessons together, the time from the start of one lesson to the end of a later one, and how much longer one lesson is than another. Lessons are all under an hour and a half; one question asks from the start of one lesson to the end of a later one. The decoy letters stand for being 5 or 10 minutes out, or an hour out. A box left blank gives no letter and the check cannot see it.", ps=True)
     # independent solver: read the table back from the printed HTML
     rows_ = re.findall(r"<tr><td>([^<]+)</td><td>(\d+):(\d\d) (am|pm)</td><td>(\d+):(\d\d) (am|pm)</td></tr>", tbl)
     tb = {r[0]: ((int(r[1]) % 12) * 60 + int(r[2]) + (720 if r[3] == "pm" else 0), (int(r[4]) % 12) * 60 + int(r[5]) + (720 if r[6] == "pm" else 0)) for r in rows_}
@@ -404,6 +404,15 @@ def make_pattern(rng, attrs):
     elif attrs == "turn":
         kd = rng.choice(["tri", "half"]); rots = rng.sample([0, 90, 180, 270], period)
         seq = [el(kd, True, "w", rots[i % period]) for i in range(7)]
+    elif attrs == "sizecol":
+        kd = rng.choice(["circle", "square", "tri"])
+        cycs = [(rng.choice([True, False]), rng.choice(["w", "b"])) for _ in range(period)]
+        while len(set(cycs)) < period or len({c[0] for c in cycs}) == 1 or len({c[1] for c in cycs}) == 1: cycs = [(rng.choice([True, False]), rng.choice(["w", "b"])) for _ in range(period)]
+        seq = [el(kd, cycs[i % period][0], cycs[i % period][1]) for i in range(7)]
+    elif attrs == "shapesize":
+        cycs = [(kinds[i], rng.choice([True, False])) for i in range(period)]
+        while len({c[1] for c in cycs}) == 1 or len({c[0] for c in cycs}) < period: cycs = [(kinds[i], rng.choice([True, False])) for i in range(period)]
+        seq = [el(cycs[i % period][0], cycs[i % period][1]) for i in range(7)]
     else:                                   # two attributes: shape and colour
         cycs = [(kinds[i], rng.choice(["w", "b"])) for i in range(period)]
         while len({c[1] for c in cycs}) == 1: cycs = [(kinds[i], rng.choice(["w", "b"])) for i in range(period)]

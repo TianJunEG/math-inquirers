@@ -84,14 +84,14 @@ def _():
     return {'a': [str(first_figure(hexagon_sticks, 96))], 'b': [str(best), str(100 - hexagon_sticks(best))]}
 
 
-@check('L5U09-S04')
+@check('L5U09-S05')
 def _():
     sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(plus_tiles(n) == m * n + c for n in range(1, 30))]
     assert len(sol) == 1
     return {'a': [str(plus_tiles(4))], 'b': [str(plus_tiles(15))], 'c': [str(sol[0][0]), str(sol[0][1])], 'd': [str(first_figure(plus_tiles, 81))]}
 
 
-@check('L5U09-S05')
+@check('L5U09-S04')
 def _():
     seq = [7]
     while len(seq) < 60:
@@ -99,28 +99,28 @@ def _():
     return {'a': [str(seq[4]), str(seq[5])], 'b': [str(seq[9])], 'c': ['Yes' if 100 in seq else 'No']}
 
 
-@check('L5U09-S08')
+@check('L5U09-S09')
 def _():
     sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(chairs_for_tables(n) == m * n + c for n in range(1, 30))]
     assert len(sol) == 1
     return {'a': [str(chairs_for_tables(5))], 'b': [str(sol[0][0]), str(sol[0][1])], 'c': [str(first_figure(chairs_for_tables, 50))]}
 
 
-@check('L5U09-S09')
+@check('L5U09-S06')
 def _():
     sols = [(a, 15 - a) for a in range(0, 16) if 9 * a + 5 * (15 - a) == 107]
     assert len(sols) == 1
     return {'a': [str(sols[0][0])], 'b': [str(sols[0][1])]}
 
 
-@check('L5U09-S06')
+@check('L5U09-S07')
 def _():
     sols = [(c, 17 - c) for c in range(0, 18) if 4 * c + 3 * (17 - c) == 61]
     assert len(sols) == 1
     return {'a': [str(sols[0][0])], 'b': [str(sols[0][1])]}
 
 
-@check('L5U09-S07')
+@check('L5U09-S08')
 def _():
     sols = [(right, 12 - right) for right in range(0, 13) if 5 * right - 2 * (12 - right) == 39]
     assert len(sols) == 1

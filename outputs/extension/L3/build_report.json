@@ -58,9 +58,9 @@
    "kind": "learn",
    "label": "Unit 8 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9511457260556128,
+   "fill": 0.9161302780638517,
    "over": false,
-   "excess_mm": -12.6,
+   "excess_mm": -21.5,
    "edition": "soft"
   },
   {
@@ -98,9 +98,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9699085993820803,
+   "fill": 0.9754924047373842,
    "over": false,
-   "excess_mm": -7.7,
+   "excess_mm": -6.3,
    "edition": "soft"
   },
   {
@@ -235,9 +235,9 @@
    "kind": "learn",
    "label": "Unit 8 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9552651905252317,
+   "fill": 0.9202497425334707,
    "over": false,
-   "excess_mm": -11.5,
+   "excess_mm": -20.5,
    "edition": "print"
   },
   {
@@ -275,9 +275,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9760877960865088,
+   "fill": 0.9816716014418125,
    "over": false,
-   "excess_mm": -6.1,
+   "excess_mm": -4.7,
    "edition": "print"
   },
   {
