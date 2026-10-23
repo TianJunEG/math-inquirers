@@ -11,6 +11,7 @@ The site is static: `website/dist/` is the whole thing. Rebuild first:
 4. You get a `https://<project>.pages.dev` preview URL. Protect it: Zero Trust > Access > Applications > add the `*.pages.dev` project, allow only your and Jasmine's emails.
 
 ## Step 2: go public
+Until launch the site is built as a PRIVATE PREVIEW: `robots.txt` says Disallow, every page has a robots noindex meta tag and every response carries `X-Robots-Tag: noindex, nofollow, noarchive`. This keeps it out of search engines but does not stop anyone who has the link (use the Cloudflare Access lock for that). At launch build with `--public` (or `MI_PUBLIC=1`) to remove all three and write the sitemap.
 Do all of these first:
 - Replace the `to confirm` WhatsApp number and email (CONFIG in `lp_build.py`).
 - Fill the bracketed placeholders in `terms.html` / `privacy.html`, have a lawyer review, remove the draft banner.

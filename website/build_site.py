@@ -23,6 +23,9 @@ SB_KEY = os.environ.get('SUPABASE_ANON_KEY', '')
 # falls back to a prefilled WhatsApp message and the page loads no config and makes no network call.
 INTEREST_PORTAL = WITH_PORTAL and bool(SB_URL and SB_KEY) and re.fullmatch(r'https://[a-z0-9-]+\.supabase\.co', SB_URL) is not None
 BASE = (sys.argv[sys.argv.index('--base') + 1] if '--base' in sys.argv else '').rstrip('/')
+# PRIVATE PREVIEW (default until launch): ask search engines not to index or archive the site (robots.txt Disallow, X-Robots-Tag header, robots meta).
+# Build with --public (or MI_PUBLIC=1) at launch to allow indexing and write the sitemap. This is only a stopgap: it does not stop anyone who has the link.
+PUBLIC = '--public' in sys.argv or os.environ.get('MI_PUBLIC') == '1'
 
 PAGES = [  # (source, output path, title, description)
     ('mi_signup.html', 'index.html', 'Math Inquirers Holiday Program',
@@ -68,7 +71,7 @@ def wrap(src, title, desc, path):
     canon = f'<link rel="canonical" href="{BASE}/{path.replace("index.html", "")}">' if BASE else ''
     head = ('<!doctype html>\n<html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
-            f'<title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc)}">'
+            f'<title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc)}">' + ('' if PUBLIC else '<meta name="robots" content="noindex,nofollow,noarchive">') +
             f'<meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">'
             '<meta property="og:type" content="website"><meta name="theme-color" content="#1B2A49">'
             '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%231B2A49%27/%3E%3Ctext x=%2716%27 y=%2724%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23FFD23F%27 font-family=%27sans-serif%27 font-weight=%27700%27%3E?%3C/text%3E%3C/svg%3E">'
@@ -103,14 +106,16 @@ def main():
         '<p>Notice it. Test it. Explain why.</p><p><a href="/">Back to Math Inquirers</a></p></main></body></html>\n')
     # placeholder slot labels (public data, no personal data): the portal admin Interest tab reads this to show names instead of ids
     shutil.copy(os.path.join(HERE, 'data', 'interest_slots.json'), os.path.join(DIST, 'interest-slots.json'))
-    open(os.path.join(DIST, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\n' + (f'Sitemap: {BASE}/sitemap.xml\n' if BASE else ''))
-    if BASE:
+    open(os.path.join(DIST, 'robots.txt'), 'w').write(('User-agent: *\nAllow: /\n' + (f'Sitemap: {BASE}/sitemap.xml\n' if BASE else '')) if PUBLIC else 'User-agent: *\nDisallow: /\n')
+    if BASE and PUBLIC:
         urls = ''.join(f'<url><loc>{BASE}/{o.replace("index.html", "")}</loc></url>' for _, o, _, _ in PAGES) + f'<url><loc>{BASE}/syllabus/</loc></url>'
         open(os.path.join(DIST, 'sitemap.xml'), 'w').write(
             '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     # _headers / _redirects work on Cloudflare Pages and Netlify
     sec = ('  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n'
            "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n")
+    if not PUBLIC:
+        sec += '  X-Robots-Tag: noindex, nofollow, noarchive\n'
     site_csp = ("  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n")
     if INTEREST_PORTAL:   # the site pages (not only /portal/*) may POST the interest form to the Supabase origin
         site_csp = site_csp.replace("connect-src 'self';", "connect-src 'self' %s;" % SB_URL)
