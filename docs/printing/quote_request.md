@@ -38,7 +38,7 @@ Thank you.
 
 Printing is triggered by payment. Each paid term, the child receives that term's combined workbook books (printed, no extension workbooks). Answer keys are for tutors only and are never part of the child set. Files are made by `python3 print/make_term_books.py` from `term/l<L>/out/` and written to `outputs/print/term/` (same rules as the level workbooks: A4, black and white, double-sided, flip on the long edge, bound on the LEFT with a mirrored 12 mm gutter, even page count, blank pages are intentional).
 
-**Quantities per paid child per term:** Level 1 Term 1 = 1 x Book 1 + 1 x Book 2; Level 1 Term 2 = 1 x Book 3 + 1 x Book 4 (2 books per child per term, 4 per child for a full year). Tutor answer keys: 1 set per tutor, not per child. The home-practice pack is optional (it is a separate stapled pack of loose sheets; the same sheets can be issued digitally).
+**Quantities per paid child per term:** Level 1 Term 1 = 1 x Book 1 + 1 x Book 2; Level 1 Term 2 = 1 x Book 3 + 1 x Book 4; Level 1 Term 3 = 1 x Book 5 + 1 x Book 6; Level 1 Term 4 = 1 x Book 7 + 1 x Book 8 (2 books per child per term, 8 per child for the four terms). Tutor answer keys: 1 set per tutor, not per child. The home-practice pack is optional (it is a separate stapled pack of loose sheets; the same sheets can be issued digitally).
 
 **Spec (all books):** A4, 80 to 120 gsm (please quote 80, 100 and 120; the cheaper stock is acceptable), BLACK AND WHITE both sides (files in `outputs/print/bw/term/`), spiral or wire-o on the left long edge, quote (a) first page as cover and (b) clear front cover and card back. Kit (cut-out) pages have a blank back and a dashed tear line in the left margin; please keep blank pages. Optional: perforation along the dashed tear line on kit pages (please quote).
 
@@ -48,12 +48,18 @@ Printing is triggered by payment. Each paid term, the child receives that term's
 | L1_T1_Book2_Lessons06-10_Workbook | 46 | 23 | child, Term 1 |
 | L1_T2_Book3_Lessons01-05_Workbook | 44 | 22 | child, Term 2 |
 | L1_T2_Book4_Lessons06-10_Workbook | 48 | 24 | child, Term 2 |
+| L1_T3_Book5_Lessons01-05_Workbook | 42 | 21 | child, Term 3 |
+| L1_T3_Book6_Lessons06-10_Workbook | 46 | 23 | child, Term 3 |
+| L1_T4_Book7_Lessons01-05_Workbook | 48 | 24 | child, Term 4 |
+| L1_T4_Book8_Lessons06-10_Workbook | 42 | 21 | child, Term 4 |
 | Book1-4 AnswerKey_TUTOR | 22 / 30 / 22 / 28 | 11 / 15 / 11 / 14 | tutor only |
+| Book5-8 AnswerKey_TUTOR | 22 / 30 / 22 / 30 | 11 / 15 / 11 / 15 | tutor only |
 | Book1-4 HomePack (optional) | 12 / 14 / 12 / 14 | 6 / 7 / 6 / 7 | loose, stapled |
+| Book5-8 HomePack (optional) | 12 / 14 / 12 / 14 | 6 / 7 / 6 / 7 | loose, stapled |
 
-**Numbering.** Lessons are numbered within the term everywhere in the books: covers, contents, page headers, answer keys and home packs all say "Term 2, Lessons 1 to 5" (Book 3) and "Term 2, Lessons 6 to 10" (Book 4). File names follow the same numbers (Book3_Lessons01-05 is Term 2 Lessons 1 to 5; internally lessons 11 to 15 of Level 1).
+**Numbering.** Lessons are numbered within the term everywhere in the books: covers, contents, page headers, answer keys and home packs all say "Term 2, Lessons 1 to 5" (Book 3), "Term 2, Lessons 6 to 10" (Book 4), "Term 3, Lessons 1 to 5" (Book 5), "Term 3, Lessons 6 to 10" (Book 6), "Term 4, Lessons 1 to 5" (Book 7) and "Term 4, Lessons 6 to 10" (Book 8). File names follow the same numbers (Book3_Lessons01-05 is Term 2 Lessons 1 to 5; internally lessons 11 to 15 of Level 1; Book5 is lessons 21 to 25, Book6 26 to 30, Book7 31 to 35, Book8 36 to 40).
 
-**Quest Log.** The Quest Log is printed inside the workbook books: 4 pages at the end of Book 2 (after Term 1 Lesson 10) and 3 pages at the end of Book 4 (after Term 2 Lesson 10), already counted in the page numbers above. Tutors also send each family a loose copy (L10_Quest_Log.pdf, L20_Quest_Log.pdf) a week before the quest lesson, with the grown-up note, for families who prefer to print their own or who need it earlier.
+**Quest Log.** The Quest Log is printed inside the workbook books: 4 pages at the end of Book 2 (after Term 1 Lesson 10) and 3 pages at the end of Book 4 (after Term 2 Lesson 10), 4 pages at the end of Book 6 (after Term 3 Lesson 10) and 4 pages at the end of Book 8 (after Term 4 Lesson 10), already counted in the page numbers above. Tutors also send each family a loose copy (L10_Quest_Log.pdf, L20_Quest_Log.pdf, L30_Quest_Log.pdf, L40_Quest_Log.pdf) a week before the quest lesson, with the grown-up note, for families who prefer to print their own or who need it earlier.
 
 Page counts follow the current lesson builds; re-run the script (and re-check `term_books_spec.json`) after any rebuild before sending a quote.
 
