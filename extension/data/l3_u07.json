@@ -438,11 +438,13 @@
      },
      {
       "side": 2,
-      "text": "a"
+      "text": "a",
+      "shift": -0.25
      },
      {
       "side": 3,
-      "text": "b"
+      "text": "b",
+      "shift": 0.2
      },
      {
       "side": 4,

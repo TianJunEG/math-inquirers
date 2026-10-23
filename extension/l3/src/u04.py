@@ -59,7 +59,7 @@ u.S(3, 'Ravi reads 85 pages on Monday. On Tuesday he reads 28 pages more than he
     P('a', 'He reads {b} pages on Tuesday.', A('113')), P('b', 'He reads {b} pages on Wednesday.', A('96')),
     P('c', 'He reads {b} pages in the 3 days.', A('294'))],
     why='(a) 85 + 28 = 113. (b) 113 - 17 = 96. (c) 85 + 113 + 96 = 294. Wednesday is compared with Tuesday, not with Monday.')
-u.S(3, 'Mei has $50. She buys a book for $18.40 and a pen for $6.75. How much money does she have left? ${b}', A('24.85'),
+u.S(3, 'Mei has $50. She buys a book for $18.40 and a pen for $6.75. How much money does she have left? ${bw}', A('24.85'),
     why='First add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85. Check: 25.15 + 24.85 = 50.00.')
 u.S(3, 'Wei has 3 times as many marbles as Aisha. Wei has 48 marbles.', parts=[
     P('a', 'Aisha has {b} marbles.', A('16')), P('b', 'They have {b} marbles in all.', A('64'))],
@@ -68,7 +68,7 @@ u.S(3, 'Wei has 3 times as many marbles as Aisha. Wei has 48 marbles.', parts=[
 u.S(3, 'A shop has 54 red pens. It has 18 fewer blue pens than red pens. Kumar says the shop has 54 + 18 = 72 blue pens.', parts=[
     P('a', 'Is Ravi right?   {circ:Yes|No}', A('No')), P('b', 'The shop has {b} blue pens.', A('36'))],
     why='There are fewer blue pens than red pens, so fewer than 54. Kumar added instead of subtracting. The right answer is 54 - 18 = 36.')
-u.S(3, 'Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${b}', A('49'),
+u.S(3, 'Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${bw}', A('49'),
     space={'rows': ['Working:']},
     why='In 7 weeks she saves 7 × $12 = $84. Then 84 - 35 = 49. She has $49 left.')
 
@@ -78,7 +78,7 @@ u.T('Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as 
     space={'rows': ['Draw your model:', 'Working:']},
     why='At first there are 4 equal boxes: 84 ÷ 4 = 21, so Wei has 21 and Kumar has 63. At the end each has 84 ÷ 2 = 42. Kumar gives 63 - 42 = 21 marbles. Check: 21 + 21 = 42.')
 u.T('Ali buys a pencil box and 2 pens for $14. Mei buys the same box and 5 pens for $23.', parts=[
-    P('a', '1 pen costs ${b}.', A('3')), P('b', 'The pencil box costs ${b}.', A('8'))],
+    P('a', '1 pen costs ${bw}.', A('3')), P('b', 'The pencil box costs ${bw}.', A('8'))],
     hint='What is different between the 2 bills?',
     space={'rows': ['Draw your model:', 'Working:', '']},
     why='The second bill has 3 more pens and costs $23 - $14 = $9 more. So 3 pens cost $9 and 1 pen costs $3. The box costs $14 - 2 × $3 = $8. Check: 8 + 15 = 23.')

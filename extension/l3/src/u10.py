@@ -46,7 +46,7 @@ u.S(1, 'The bar graph shows the books 4 children read. Kumar read 15 more books 
 u.S(1, 'The graph shows the stamps 3 clubs collected. Each thin line is 10 stamps.', parts=[
     P('a', 'Club A: {b}', A('70')), P('b', 'Club B: {b}', A('110')),
     P('c', 'Club C: {b}', A('90')), P('d', 'All 3: {b}', A('270'))],
-    figure=graph(['Club A', 'Club B', 'Club C'], [70, 110, 90], 140, 20, 72, minor=10, unit_label='stamps', h=230), figside=True,
+    figure=graph(['Club A', 'Club B', 'Club C'], [70, 110, 90], 140, 20, 86, minor=10, unit_label='stamps', h=250), figside=True,
     why='The labelled lines go up in 20s and there is a thin line halfway between them, so each thin line is 10. A is at 70, B is at 110 and C is at 90. Together: 70 + 110 + 90 = 270.')
 u.S(1, 'The 3rd of a month is a Tuesday.', parts=[
     P('a', 'The 24th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}', A('Tue')), P('b', 'The 30th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}', A('Mon'))],
@@ -124,7 +124,7 @@ u.G('Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE
 
 # ---------------- Check yourself
 u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.', A('15'),
-    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 5, 50, unit_label='pencils', h=150), figright=True,
+    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 10, 84, minor=5, unit_label='pencils', h=190), figright=True,
     why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
 u.C('In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.', A('8'),
     why='3 + 1 + 4 = 8. Do not forget Ben.')

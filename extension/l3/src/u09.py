@@ -87,7 +87,7 @@ u.T('Ali starts his homework at 18:35 and stops at 20:10. He has a 15 minute bre
     hint='Find the whole time first. Then take away the break.',
     space={'rows': ['Time line:', '']},
     why='From 18:35 to 19:00 is 25 min. From 19:00 to 20:00 is 1 h. From 20:00 to 20:10 is 10 min. The whole time is 1 h 35 min. Take away the 15 min break: 1 h 20 min.')
-u.T('2 notebooks and 3 pens cost $9. A notebook costs $1.50 more than a pen.', parts=[
+u.T('2 notebooks and 3 pens cost $9. A notebook costs $1.50 more than a pen.', beyond='Two bills in one', parts=[
     P('a', 'A pen costs ${bw}.', A('1.20')), P('b', 'A notebook costs ${bw}.', A('2.70'))],
     hint='How much more do 2 notebooks cost than 2 pens?',
     space={'rows': ['Working:', '', '']},

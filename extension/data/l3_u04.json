@@ -375,7 +375,7 @@
    "id": "L3U04-S09",
    "tier": "start",
    "page": 3,
-   "text": "Mei has $50. She buys a book for $18.40 and a pen for $6.75. How much money does she have left? ${b}",
+   "text": "Mei has $50. She buys a book for $18.40 and a pen for $6.75. How much money does she have left? ${bw}",
    "answer": {
     "value": [
      "24.85"
@@ -451,7 +451,7 @@
    "id": "L3U04-S12",
    "tier": "start",
    "page": 3,
-   "text": "Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${b}",
+   "text": "Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${bw}",
    "answer": {
     "value": [
      "49"
@@ -494,7 +494,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "1 pen costs ${b}.",
+     "text": "1 pen costs ${bw}.",
      "answer": {
       "value": [
        "3"
@@ -504,7 +504,7 @@
     },
     {
      "label": "b",
-     "text": "The pencil box costs ${b}.",
+     "text": "The pencil box costs ${bw}.",
      "answer": {
       "value": [
        "8"

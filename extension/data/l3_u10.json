@@ -184,10 +184,10 @@
     ],
     "max": 140,
     "step": 20,
-    "width_mm": 72,
+    "width_mm": 86,
     "minor": 10,
     "unit_label": "stamps",
-    "h": 230
+    "h": 250
    },
    "figside": true
   },
@@ -889,10 +889,11 @@
      25
     ],
     "max": 40,
-    "step": 5,
-    "width_mm": 50,
+    "step": 10,
+    "width_mm": 84,
+    "minor": 5,
     "unit_label": "pencils",
-    "h": 150
+    "h": 190
    },
    "figright": true
   },
