@@ -1,0 +1,4455 @@
+{
+ "schema_version": 1,
+ "id": "l1-t4-05",
+ "level": 1,
+ "term": 4,
+ "lesson": 35,
+ "lesson_in_term": 5,
+ "title": "Spot It",
+ "big_idea": "Compare one feature at a time",
+ "child_idea": "To find what is different, look at one thing at a time: the shape, how many, how big, the pattern and which way it faces. Then you can spot the odd one out.",
+ "skill": "Perception",
+ "ages": "6-8",
+ "moe": {
+  "strand": "Not a listed Primary 1 outcome as a lesson. Describing and sorting shapes is Primary 1 (Geometry, p. 32); patterns by size, shape, colour or orientation are Primary 2 (Geometry, p. 34)",
+  "topics": [
+   "Comparing two pictures one feature at a time: shape, number, size, pattern (describing and sorting shapes is Primary 1, p. 32)",
+   "The odd one out and a missing piece in a tile pattern; a repeating pattern and its 11th tile (complete a pattern is Primary 1; patterns with orientation are Primary 2, p. 34)",
+   "A shape turned and a shape flipped (orientation: beyond Primary 1, Primary 2 idea, p. 34)"
+  ],
+  "note": "Strand label for the tutor only. This is an added lesson (the plan says: Spot It, a perception lesson) and it is not a listed Primary 1 content outcome. It practises looking carefully and saying what is the same and what is different, one feature at a time, which is the same habit as describing and sorting shapes. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: an odd one out where four tiles share one hidden feature, the missing piece of a 2 by 2 tile pattern, the 11th tile of a repeating pattern, and Shadow Match (which shape is the same shape turned, not flipped: orientation is a Primary 2 idea, p. 34). Named puzzle: Shadow Match. The plan marks this lesson safest to skip and gives it thin evidence (visual perception is partly a practice effect): make no promise about contests or results. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. No Primary 1 paper in the 32 files read holds a spot-the-difference item, so the wording is unverified; the nearest P1 forms are 'Circle the shape that comes next' and 'grouped by shape, size or colour'. Printed books are black and white, so the pattern feature (plain, stripes, dots) is used instead of colour. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Non-routine types (tutor only): the odd one out (logic), say which feature differs and why (explain), a repeating pattern and its 11th tile."
+ },
+ "contest_moves": [
+  "the odd one out: four tiles share one hidden feature, find the one that does not (logic)",
+  "say which feature differs, and which tile is odd when you look at pattern only or size only (explain)",
+  "a repeating pattern: which tile is the 11th, and which tile number is the 4th square (pattern)",
+  "the missing piece of a 2 by 2 tile pattern: look across, then look down",
+  "Shadow Match: the same shape turned is not the same as the shape flipped"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Say what is different between two pictures one feature at a time: shape, number, size, pattern or turn.",
+  "Say whether two pictures are the same, and count the differences.",
+  "Find the odd one out in a row and say which feature makes it odd.",
+  "Think harder: find the odd one out when four tiles share one hidden feature, find the missing piece of a 2 by 2 tile pattern, find the two tiles that are the same picture turned, and say which tile is the 11th in a repeating pattern.",
+  "Go further: Shadow Match (a shape turned, not flipped), find the odd one out for pattern and then for size in the same row, and make your own odd one out."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Comparing two lines by laying squares along them (holiday measuring, taught again with a picture)",
+   "Naming a picture one thing at a time: the shape, how many, how big (taught again with a picture)",
+   "Saying what changed between two rows of counters (taught again with a picture)"
+  ],
+  "assumes": "Only counting to 10 and comparing two small numbers. Nothing from the lessons before is needed: the warm-up re-teaches comparing two lines, naming a picture one thing at a time and what changed between two rows. The words pattern, turn and odd one out are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Comparing lengths with squares or cubes",
+   "Counting in ones to 10"
+  ],
+  "safe_to_miss": true,
+  "note": "Safe to miss: no other lesson needs it, but Mi's Challenge Quest in the last lesson of the year has a gate on spotting the odd one out. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here cold can follow: the warm-up re-teaches comparing, and Start here keeps to two pictures of at most 4 tiles."
+ },
+ "materials": {
+  "child": [
+   "Your Term 4 book (Book 7), workbook pages 1 to 5, and the pair-cards page (page 6): the 12 cards are cut out by a grown-up beforehand and kept in three piles (top row, middle row, bottom row of the page)",
+   "No printer or no cutting? Draw 4 small pictures on 4 scraps of paper: 3 the same and 1 different. Make 3 sets",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own set of 12 pair cards, if you wish, to hold up for yourself (not for the children)",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Pair cards (page 6): 12 cards in 3 sets of 4. A grown-up cuts them out. Children only lay them in a line and point: nothing else is needed."
+  ],
+  "ruler": false,
+  "notes": "Nothing needs to be bought. Cards are small pieces: they stay on the table; nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: a grown-up cut the cards beforehand.",
+  "kit_contract": [
+   {
+    "piece": "pair cards",
+    "supplied": 12,
+    "max_used": 12,
+    "used_by": [
+     "explore"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 11 minutes: the pair cards (three sets, one odd card in each) and then two pictures of three tiles with three differences. The Mini-lesson has 11: the five things to check, the odd one out in a row, the missing piece, a repeating pattern, and same or different with a count. The workbook has 32 minutes: Start here takes a middle child about 17 minutes (page 1 about 8, page 2 about 9), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the repeating pattern (s-m4) and keep it for the workbook",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Count the fish in each row. Write the two numbers.",
+  "q2": "Three of the four triangles are alike. One is different. Which one is it? I know because ___.",
+  "a1": "4 fish in the top row and 5 in the bottom row.",
+  "a2": "C. It points the other way (it is turned upside down)."
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your pair cards. Pause or rewind any time.",
+   "action": "Gather your workbook, pair cards, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Lay out each set of cards and find the odd one. Then look at the two pictures. Press play when ready.",
+   "action": "Pause. Lay out each set of cards and find the odd one. Then look at the two pictures of three tiles."
+  },
+  "mini": {
+   "say": "Recording: keep watching and look at each picture one thing at a time. Rewind if you miss a step.",
+   "action": "Watch and look at each picture one thing at a time. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Copy the move, then change one thing.",
+   "action": "Stand up. Copy each move, then change one thing. Then sit down."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up how you can say exactly what is different between two pictures.",
+   "action": "Pause. Explain to someone at home how you can say exactly what is different."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Make a row of 4 things at home with one odd one out.",
+   "action": "Make a row of 4 things with one odd one out and ask a grown-up to find it."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Spot It",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Spot what is different, one thing at a time.",
+      "Find the odd one out.",
+      "Find the missing piece."
+     ]
+    }
+   ],
+   "note": "Lesson 5 of Term 4, 90 minutes. Objective: say exactly what is different between two pictures, one feature at a time (shape, number, size, pattern, turn), find the odd one out and the missing piece of a tile pattern. Plain statement for families: describing and sorting shapes is Primary 1, patterns that change by size, shape, colour or orientation are Primary 2, so the harder items (a hidden shared feature, a missing piece, the 11th tile and Shadow Match, a shape turned and not flipped) go beyond Primary 1 on purpose. This is the plan's thin-evidence lesson: no promise about contests. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+   "subtitle": "Look closely. One thing at a time.",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: two lines",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "items": [
+      {
+       "icon": "square",
+       "n": 5
+      },
+      {
+       "icon": "square",
+       "n": 7
+      }
+     ],
+     "per_row": 7,
+     "size": "s"
+    },
+    {
+     "t": "chip",
+     "text": "Two lines made of squares. Which line is longer? How many squares longer?"
+    }
+   ],
+   "note": "Comparing two lengths with squares (holiday measuring, taught again). The top line is 5 squares and the bottom line is 7 squares: the bottom line is longer, by 2 squares. Ask: which line is longer (the bottom one), how many squares longer (2). A child who is unsure counts the squares in each line with a finger. Your turn, no picture: a line of 4 squares and a line of 9 squares; which is longer, and by how many (the second, by 5). Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: look at one thing",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "l"
+      },
+      {
+       "shape": "triangle",
+       "n": 3,
+       "size": "s"
+      }
+     ],
+     "cell": 130,
+     "cols": 2
+    },
+    {
+     "t": "chip",
+     "text": "Tile 1 and tile 2. What shape is it? How many are there? How big is it?"
+    }
+   ],
+   "note": "Naming a picture one thing at a time (taught again). Tile 1 is one big circle. Tile 2 is three small triangles. Ask for each tile: what shape (circle; triangle), how many (1; 3), how big (big; small). Say: when we look at one thing at a time, we do not miss anything. Your turn, no picture: two big squares; say the shape, how many and how big. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: what changed?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "items": [
+      {
+       "icon": "counter",
+       "n": 4
+      },
+      {
+       "icon": "counter",
+       "n": 5
+      }
+     ],
+     "per_row": 5,
+     "size": "s"
+    },
+    {
+     "t": "chip",
+     "text": "Two rows of counters. What is different? Which row has more? How many more?"
+    }
+   ],
+   "note": "What changed between two rows (taught again). The top row has 4 counters and the bottom row has 5: what is different is how many; the bottom row has 1 more. Ask: what is different (how many), how many more (1). A child who is unsure touches each counter once. Your turn, no picture: a row of 6 and a row of 4; which has fewer, and by how many (the second, by 2). Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Count the fish in each row.",
+         "Write the two numbers."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "objects",
+        "items": [
+         {
+          "icon": "fish",
+          "n": 4
+         },
+         {
+          "icon": "fish",
+          "n": 5
+         }
+        ],
+        "per_row": 5,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Three of the four triangles are alike.",
+         "One is different. Which one is it?",
+         "I know because ___."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l",
+          "turn": 180
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         }
+        ],
+        "cell": 110,
+        "cols": 4,
+        "labels": [
+         "A",
+         "B",
+         "C",
+         "D"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: 4 fish in the top row and 5 in the bottom row. Puzzle 2 is a thinking question on the lesson idea: three triangles point up and one (C) points down, so it is turned the other way. A child who says it is upside down or that it points the other way has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 4 and 5; C, it points the other way. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: the odd card",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take your pair cards. Keep each row of 4 together.",
+      "Lay out set 1, the top row, in a line.",
+      "Three cards are alike. Find the odd one."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "What is different about the odd card? Say it in a whole sentence."
+    }
+   ],
+   "note": "Round 1, about 6 minutes. Each child has the 12 pair cards cut out beforehand; the page has three rows, and each row is one set of 4: three alike and one different. Set 1 (top row): apples and one cookie. Set 2 (middle row): ladybirds and one spider. Set 3 (bottom row): cups and one jar. Children lay a set in a line, find the odd card and say what is different, then do the same for sets 2 and 3. About 2 minutes a set. Do not tell which card is odd. Ask: which card is the odd one; what is different about it. Accept any true thing: it is a different thing, it has more legs, it has a lid. Nobody holds cards up to the camera: children say it aloud and show fingers. A child with no cards draws 4 small pictures on paper. Answers on the next slide."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "The odd ones out",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Set",
+       "The odd card",
+       "What is different"
+      ],
+      [
+       "Set 1",
+       "the cookie",
+       "it is a different thing, not an apple"
+      ],
+      [
+       "Set 2",
+       "the spider",
+       "it is a different thing, with more legs"
+      ],
+      [
+       "Set 3",
+       "the jar",
+       "it is a different thing, with a lid"
+      ]
+     ]
+    }
+   ],
+   "note": "Children check their own sets. Set 1: the cookie, not an apple. Set 2: the spider, with eight legs (the ladybirds have six). Set 3: the jar, with a lid. Say: all of these are different in one thing, what it is. Ticks only. Do not name any child."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: two pictures",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "p",
+        "text": "Picture 1"
+       },
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "star",
+          "n": 3,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "Picture 2"
+       },
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "l"
+         },
+         {
+          "shape": "star",
+          "n": 4,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "m",
+          "pattern": 2
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Look at tile 1, then tile 2, then tile 3. What is different?"
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Two pictures of three tiles each. Picture 2 is like Picture 1 except for three things, one in each tile: tile 1 is bigger (size), tile 2 has 4 stars instead of 3 (number), tile 3 has dots instead of stripes (pattern). Children look at one tile at a time: say aloud what is different, using the words size, number, pattern. Answers on the next slide. Nobody points on screen: children say it aloud or show fingers for the tile number."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Three differences",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "star",
+          "n": 3,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "l"
+         },
+         {
+          "shape": "star",
+          "n": 4,
+          "size": "m"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "m",
+          "pattern": 2
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Tile 1: size. The circle is bigger. Tile 2: number. 3 stars and 4 stars. Tile 3: pattern. Stripes and dots."
+    }
+   ],
+   "note": "Read the three answers aloud so children can tick their own. Tile 1: the circle is bigger (size). Tile 2: 3 stars and 4 stars (number). Tile 3: stripes and dots (pattern). Say: we looked at one tile and one thing at a time. Ticks only."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "How did you find each difference?",
+      "What did you say about the odd card?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: we looked at one tile at a time; we asked what is it, how many, how big, which pattern; the odd card was different in one thing. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Five things to check",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "LOOK AT ONE THING AT A TIME",
+     "items": [
+      "What shape is it?",
+      "How many are there?",
+      "How big is it?",
+      "Which pattern: plain, stripes or dots?",
+      "Which way does it face?"
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         }
+        ],
+        "cell": 130,
+        "cols": 1
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l",
+          "turn": 90
+         }
+        ],
+        "cell": 130,
+        "cols": 1
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Two triangles. What is the same? What is different?"
+    }
+   ],
+   "note": "Worked example. The five things to check are shape, number, size, pattern and turn (which way it faces). The slide shows two triangles, A and B. They are the same in shape, number, size and pattern. Triangle B faces another way: it is turned. Ask: what is the same (shape, number, size, pattern); what is different (which way it faces). The answer is on the next slide. Say: a shape turned is still the same shape; it only faces another way."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Same shape, turned",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l",
+       "turn": 90
+      }
+     ],
+     "cell": 140,
+     "cols": 2,
+     "labels": [
+      "A",
+      "B"
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "The same: shape, number, size and pattern. Different: turn. B is turned to face the right."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. A turned shape is not a new shape. Say the key word turn twice."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "The odd one out",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      }
+     ],
+     "cell": 110,
+     "cols": 5,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Four tiles are alike. One is the odd one out. Which one? What is different?"
+    }
+   ],
+   "note": "Worked example. Five circles with stripes. Four are the same size and tile C is bigger, so C is the odd one out and the difference is size. Ask: what do four of them have in common (the same size), which tile is the odd one out (C), what is different about it (size: it is bigger). The answer is on the next slide. Say: check one thing at a time: shape, number, size, pattern, turn."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "C is bigger",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      }
+     ],
+     "cell": 110,
+     "cols": 5,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "The odd one out is C. It is different in size. It is bigger."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. Say how we found it: we looked at size and four were the same and one was not."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "The missing piece",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         },
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         }
+        ],
+        "cell": 110,
+        "cols": 2,
+        "hide": [
+         3
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         },
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         },
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "s",
+          "pattern": 1
+         }
+        ],
+        "cell": 100,
+        "cols": 4,
+        "labels": [
+         "A",
+         "B",
+         "C",
+         "D"
+        ]
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Look across. Then look down. Which tile goes in the box with the question mark?"
+    }
+   ],
+   "note": "Worked example. A 2 by 2 pattern: across, the pattern changes from plain to stripes; down, the shape changes from circle to star. So the missing tile is a star with stripes, option B. Option A is a star but plain (the pattern is wrong), option C has stripes but is a circle (the shape is wrong), option D is a star with stripes but small (the size is wrong). Ask: what changes when we go across (plain to stripes); what changes when we go down (circle to star); which tile goes in the box (B). The answer is on the next slide."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "B is the missing piece",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "circle",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         },
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m"
+         },
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m",
+          "pattern": 1
+         }
+        ],
+        "cell": 110,
+        "cols": 2
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Across: plain, then stripes. Down: circle, then star. The missing tile is B, a star with stripes."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. The missing tile B is the same size as the others, so the three wrong options each differ in one thing."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "A pattern that repeats",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      }
+     ],
+     "cell": 110,
+     "cols": 6,
+     "labels": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The pattern keeps going. Which shape is tile 9? Count in threes: 3, 6, 9."
+    }
+   ],
+   "note": "Worked example. The pattern repeats every 3 tiles: square, square, circle. The circles are tiles 3, 6, 9 (counting in threes), so tile 9 is a circle. Ask: what repeats (square, square, circle); which tiles are circles (3 and 6, then 9); which shape is tile 9 (circle). The answer is on the next slide. Say: a pattern that repeats has a part that comes again and again; find the part first."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Tile 9 is a circle",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      }
+     ],
+     "cell": 110,
+     "cols": 6,
+     "labels": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "The part that repeats is square, square, circle. Tiles 3, 6 and 9 are circles. Tile 9 is a circle."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. Counting in threes (Term 2 Lesson 6) finds the circles."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Same or different?",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "p",
+        "text": "Picture 1"
+       },
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m",
+          "pattern": 2
+         },
+         {
+          "shape": "circle",
+          "n": 3,
+          "size": "s",
+          "pattern": 1
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "Picture 2"
+       },
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "s",
+          "pattern": 2
+         },
+         {
+          "shape": "circle",
+          "n": 4,
+          "size": "s",
+          "pattern": 1
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Are the two pictures the same? How many differences are there?"
+    }
+   ],
+   "note": "Worked example. Picture 2 is not the same as Picture 1. There are 2 differences: tile 1 is smaller (size) and tile 2 has 4 circles instead of 3 (number). Tile 3 is the same. Ask: are they the same (no); which tiles are different (1 and 2); how many differences (2). The answer is on the next slide. Say: look at every tile, one thing at a time, so you do not miss one."
+  },
+  {
+   "id": "s-m5-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "2 differences",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "m",
+          "pattern": 2
+         },
+         {
+          "shape": "circle",
+          "n": 3,
+          "size": "s",
+          "pattern": 1
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "panel",
+        "tiles": [
+         {
+          "shape": "star",
+          "n": 1,
+          "size": "s",
+          "pattern": 2
+         },
+         {
+          "shape": "circle",
+          "n": 4,
+          "size": "s",
+          "pattern": 1
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
+          "size": "l"
+         }
+        ],
+        "cell": 120,
+        "cols": 3
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "No. 2 differences. Tile 1: size, it is smaller. Tile 2: number, 3 circles and 4 circles. Tile 3 is the same."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. Tile 3 is the same: it is also right to say what is the same."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "light",
+   "title": "Copy and change break",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Copy my move."
+    },
+    {
+     "t": "p",
+     "text": "Now copy it, with one thing different."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Make a slow move (arms up, arms out, one foot forward). Children copy it. Then change one thing (for example one arm lower) and say: what is different? Children say it aloud, then copy the new move. Do three or four moves. Say the five things: how many (arms), how big (a big step or a small step), which way (turn to face the side). No equipment, no running. A child may stay seated and move one arm. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: say what is different in each tile. Question 2: are the pictures the same, yes or no, twice. Question 3: find the odd one out and say what is different."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: size, number, turn. Q2: (a) Yes, (b) No. Q3: C, pattern."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: two shelves; how many more apples does shelf 2 have. Question 5: how many differences between two pictures, and which tile is the same. Question 6: which two tiles are the same. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 1 more apple. Q5 3 differences, and tile 1 is the same. Q6 A and D."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "The odd one out, a missing piece, a turn, a repeating pattern"
+      ],
+      [
+       "Go further (page 4)",
+       "Shadow Match, odd for pattern and for size, make your own"
+      ],
+      [
+       "Investigation (page 5)",
+       "Change just one thing"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD IN ANOTHER CLASS SAYS",
+     "items": [
+      "I look at two pictures.",
+      "I say: they are not the same."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is that enough? What could she say to be exact?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: not yet. She should say which thing is different (the shape, how many, how big, which pattern, which way it faces), one thing at a time. Link to the sneak-peek and the mini-lesson. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 4 fish and 5 fish. Puzzle 2: C. It is the triangle that points the other way."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: 4 fish in the top row and 5 in the bottom row, so what is different is how many. Puzzle 2: C is the odd one out because it is turned to face the other way; the other three point up. It was the same idea as Explore and the mini-lesson: say which thing is different, one thing at a time."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 pattern; E2 C; E3 2 differences."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Make a row of 4 things at home. Make one the odd one out."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Count Everything",
+      "Have ready: Book 8, and the paper people from it, cut out by a grown-up."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs Book 8 (the last five lessons of the year), with the paper-people page torn out along the dashed line and the 8 paper people cut out by a grown-up beforehand. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: the same, turned",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l",
+       "turn": 270
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m"
+      }
+     ],
+     "cell": 120,
+     "cols": 3,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Which two tiles are the same picture, turned?"
+    }
+   ],
+   "note": "Optional, only if you are on time. Tiles A and B are the same triangle, one turned to face right; tile C is a different picture (three circles). Ask: which two tiles are the same picture turned (A and B). Take two answers and move on. This links to the turn idea.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Can a row have two odd ones out?"
+      ],
+      [
+       "Make a puzzle",
+       "Make a row for your grown-up with one odd one out."
+      ],
+      [
+       "Teach it back",
+       "Tell a toy how to say exactly what is different."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 10
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your pair cards on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are spot-it detectives. We look at two pictures and say exactly what is different, one thing at a time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: describing and sorting shapes is Primary 1 and patterns by size, shape, colour or orientation are Primary 2, so the odd-one-out with a hidden feature, the missing piece, the 11th tile and Shadow Match go beyond Primary 1 on purpose. There is no school-paper evidence for this lesson, so the wording is unverified. It is the plan's thin-evidence lesson: make no promise about contests."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without pair cards draws 4 small pictures on paper: 3 the same and 1 different."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two lines made of squares. Count the squares in each line."
+     },
+     {
+      "k": "ASK",
+      "text": "Which line is longer? How many squares longer?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. A line of four squares and a line of nine squares. Which is longer, and by how many? Say it with me.",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Look at one thing at a time. Tile one. Tile two."
+     },
+     {
+      "k": "ASK",
+      "text": "For each tile, what shape is it? How many are there? How big is it?",
+      "resp": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Two big squares. Say the shape, how many and how big.",
+      "s": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Two rows of counters. Touch each counter once."
+     },
+     {
+      "k": "ASK",
+      "text": "What is different? Which row has more? How many more?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. A row of six and a row of four. Which has fewer, and by how many?",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Say each answer with me: the bottom line, two; circle, one, big; triangle, three, small; how many, the bottom row, one. Now the your-turn answers: the second line, five; square, two, big; the second row, two. Then stretch your fingers.",
+      "s": 22
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to compare the lines, count the squares in each line with a finger and say each number. For what changed, touch each counter once. For the picture, say the shape first, then how many, then how big."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: the bottom line is longer, by 2; tile 1 is a circle, 1, big; tile 2 is triangles, 3, small; the rows differ in how many, the bottom row has 1 more. Your turns: the second line, by 5; square, 2, big; the second row has 2 fewer. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 10 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Count the fish in each row. Write the two numbers."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 35
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Three of the four triangles are alike. One is different. Which one is it? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 85
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 4 fish and 5 fish. Puzzle 2 answer: C, the triangle that points down (it is turned). Look for good ideas to praise later (a child who said it faces the other way). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are detectives. Take your pair cards. Keep each row of four together. Lay out set one, the top row, in a line."
+     },
+     {
+      "k": "READ",
+      "text": "Three cards are alike. Find the odd one. What is different about it?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children lay out set one and find the odd card. Tutor scans the cameras and listens.",
+      "s": 70
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to tell us about set one? A whole sentence, please.",
+      "resp": 35
+     },
+     {
+      "k": "SAY",
+      "text": "Now set two, the middle row. Then set three, the bottom row."
+     },
+     {
+      "k": "WORK",
+      "text": "Children lay out sets two and three one after the other, find each odd card and say what is different, aloud to their grown-up.",
+      "s": 120
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Set one, the cookie. Set two, the spider, with more legs. Set three, the jar, with a lid. All different in what they are."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Two pictures, three tiles each. Look at tile one, then tile two, then tile three."
+     },
+     {
+      "k": "READ",
+      "text": "What is different?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children look at one tile at a time and say what is different. Wait before anyone answers.",
+      "s": 75
+     },
+     {
+      "k": "ASK",
+      "text": "Tile one first. What is different?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Tile one, size. Tile two, number. Tile three, pattern."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "How did you find each difference? What did you say about the odd card?",
+      "resp": 50
+     },
+     {
+      "k": "SAY",
+      "text": "We looked at one tile and one thing at a time. Next we say it exactly."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot find a difference: cover all but one tile and ask, what shape, how many, how big. A child who says they look different: ask, how are they different? A child with no cards draws 4 small pictures and uses them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small cards, so ask children to say it aloud and show fingers. Answers: set 1 the cookie, set 2 the spider, set 3 the jar; tile 1 size, tile 2 number, tile 3 pattern. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "There are five things to check: the shape, how many, how big, which pattern, and which way it faces. Look at two triangles."
+     },
+     {
+      "k": "ASK",
+      "text": "What is the same? What is different?",
+      "resp": 55
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The same: shape, number, size and pattern. Different: which way it faces. Triangle B is turned. A turned shape is still the same shape."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The odd one out. Four tiles are alike and one is not."
+     },
+     {
+      "k": "ASK",
+      "text": "Which tile is the odd one out? What is different about it?",
+      "resp": 65
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Tile C. It is bigger, so the difference is size. Four were the same size and one was not."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A missing piece. Look across. Then look down."
+     },
+     {
+      "k": "ASK",
+      "text": "What changes when we go across? What changes when we go down? Which tile goes in the box?",
+      "resp": 90
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Across, plain then stripes. Down, circle then star. So the missing tile is a star with stripes: B."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A pattern that repeats. Find the part that comes again and again."
+     },
+     {
+      "k": "ASK",
+      "text": "Which shape is tile nine? Count in threes: three, six, nine.",
+      "resp": 65
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Square, square, circle repeats. Tiles three, six and nine are circles. Tile nine is a circle."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two pictures. Check every tile, one thing at a time."
+     },
+     {
+      "k": "ASK",
+      "text": "Are they the same? How many differences are there?",
+      "resp": 75
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Not the same. Two differences. Tile one is smaller. Tile two has four circles, not three. Tile three is the same."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child says they look different, ask: what is different, the shape, how many, how big, the pattern or which way? If a child cannot find the missing piece, cover the pictures and say what changes across, then down. If a child cannot find tile 9, count in threes on fingers: three, six, nine."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: shape, number, size, pattern, turn, odd one out. Fixed question forms: What is different? Which tile is the odd one out? How many differences? The slides keep the answers off the screen while you ask: read every question aloud. Class numbers are not used in the workbook."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. Copy my move. Then I change one thing."
+     },
+     {
+      "k": "WORK",
+      "text": "Call movements: arms up, arms out, one big step forward. Then change one thing each time and ask what is different (one arm lower, a small step, turn to face the side). Seated children move one arm.",
+      "s": 175
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: look at the two pictures. For each tile, circle what is different: shape, number, size, pattern or turn. Question 2: are the two pictures the same? Circle Yes or No, twice. Question 3: which tile is the odd one out? Circle A, B, C or D. Then say what is different."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: size, number, turn. Question 2: part a, Yes. Part b, No. Question 3: C, and the pattern is different. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: two shelves. How many more apples does shelf 2 have? Question 5: how many differences are there between the two pictures? Which tile is the same in both? Question 6: which two tiles are the same? Write the two letters."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: one more apple. Question 5: three differences, and tile one is the same. Question 6: A and D. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: cover all but one tile in each picture. Q2: check every tile, one thing at a time. Q3: look at one thing at a time; which one are four alike in? Q4: count the apples on each shelf. Q5: tick the tiles that are different. Q6: find the two that match in every thing."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has the odd one out with a hidden feature, the missing piece, two tiles that are the same turned, and a repeating pattern. Go further has Shadow Match (beyond Primary 1 on purpose), the odd one out for pattern and then for size, and making your own. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child in another class looks at two pictures. She says: they are not the same. Is that enough? What could she say to be exact?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it. You may look at your pair cards.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: four fish and five fish. Puzzle two: C, the triangle that points the other way."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: not yet. She should say which thing is different: the shape, how many, how big, which pattern or which way it faces, one thing at a time. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Look at the two tiles. What is different? Circle shape, number, size, pattern or turn. E2. Which tile is the odd one out? Circle A, B, C or D. E3. How many differences are there between the two pictures? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 190
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: pattern. E2: C. E3: two differences."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Count Everything. Please have Book 8 ready, with the paper people cut out by a grown-up. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time. Three tiles. Which two are the same picture, turned?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: A and B, the same triangle turned. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at Picture 1 and Picture 2. Compare tile by tile.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Tile 1: circle what is different.",
+      "ans": "size",
+      "val": "size",
+      "choices": [
+       "number",
+       "size",
+       "pattern",
+       "turn"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Tile 2: circle what is different.",
+      "ans": "number",
+      "val": "number",
+      "choices": [
+       "number",
+       "size",
+       "pattern",
+       "turn"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "Tile 3: circle what is different.",
+      "ans": "turn",
+      "val": "turn",
+      "choices": [
+       "number",
+       "size",
+       "pattern",
+       "turn"
+      ]
+     }
+    ],
+    "answer": "size; number; turn",
+    "val": [
+     "size",
+     "number",
+     "turn"
+    ],
+    "hint": "Cover all but one tile. Ask: what shape, how many, how big, which pattern, which way?",
+    "solution": "Tile 1 is a star in both pictures, but it is bigger in Picture 2, so the difference is size. Tile 2 has 3 squares and then 4 squares, so the difference is number. Tile 3 is the same triangle, but it faces down in Picture 2, so the difference is turn.",
+    "mistakes": [
+     "Saying the shape is different when it is only turned.",
+     "Saying the pattern is different when it is the same."
+    ],
+    "mins": 3.5,
+    "visuals": [
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "star",
+        "n": 1,
+        "size": "m"
+       },
+       {
+        "shape": "square",
+        "n": 3,
+        "size": "m",
+        "pattern": 1
+       },
+       {
+        "shape": "triangle",
+        "n": 1,
+        "size": "m",
+        "pattern": 2
+       }
+      ],
+      "cell": 100,
+      "cols": 3
+     },
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "star",
+        "n": 1,
+        "size": "l"
+       },
+       {
+        "shape": "square",
+        "n": 4,
+        "size": "m",
+        "pattern": 1
+       },
+       {
+        "shape": "triangle",
+        "n": 1,
+        "size": "m",
+        "pattern": 2,
+        "turn": 180
+       }
+      ],
+      "cell": 100,
+      "cols": 3
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Are the two pictures the same?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Picture A and Picture B. Circle Yes or No.",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Picture C and Picture D. Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "Yes; No",
+    "val": [
+     "Yes",
+     "No"
+    ],
+    "hint": "Check each tile, one thing at a time. Are all the tiles the same?",
+    "solution": "Picture A and Picture B have the same tiles: 3 stars and one big striped circle, so they are the same. Picture C has 4 triangles and Picture D has 3 triangles, so they are not the same.",
+    "mistakes": [
+     "Saying No because the pictures are side by side.",
+     "Not checking the number of triangles."
+    ],
+    "mins": 3.5,
+    "visuals": [
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "star",
+        "n": 3,
+        "size": "m"
+       },
+       {
+        "shape": "circle",
+        "n": 1,
+        "size": "l",
+        "pattern": 1
+       }
+      ],
+      "cell": 90,
+      "cols": 2
+     },
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "star",
+        "n": 3,
+        "size": "m"
+       },
+       {
+        "shape": "circle",
+        "n": 1,
+        "size": "l",
+        "pattern": 1
+       }
+      ],
+      "cell": 90,
+      "cols": 2
+     },
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "square",
+        "n": 1,
+        "size": "m"
+       },
+       {
+        "shape": "triangle",
+        "n": 4,
+        "size": "m",
+        "pattern": 2
+       }
+      ],
+      "cell": 90,
+      "cols": 2
+     },
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "square",
+        "n": 1,
+        "size": "m"
+       },
+       {
+        "shape": "triangle",
+        "n": 3,
+        "size": "m",
+        "pattern": 2
+       }
+      ],
+      "cell": 90,
+      "cols": 2
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Three tiles are alike. One is the odd one out.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Circle the odd one out: A, B, C or D.",
+      "ans": "C",
+      "val": "C",
+      "choices": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "It is different in its: circle shape, number, size, pattern or turn.",
+      "ans": "pattern",
+      "val": "pattern",
+      "choices": [
+       "shape",
+       "number",
+       "size",
+       "pattern",
+       "turn"
+      ]
+     }
+    ],
+    "answer": "C; pattern",
+    "val": [
+     "C",
+     "pattern"
+    ],
+    "hint": "Check one thing at a time. Which tile has a different pattern?",
+    "solution": "A, B and D are big squares with stripes. Tile C is a big square with dots. It has the same shape, number and size, so the pattern is different.",
+    "mistakes": [
+     "Choosing the tile that is in a different place.",
+     "Saying size when the squares are the same size."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "l",
+       "pattern": 2
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      }
+     ],
+     "cell": 100,
+     "cols": 4,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ]
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the two shelves.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Shelf 2 has [] more apple than shelf 1.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "1 more apple",
+    "val": 1,
+    "hint": "Count the apples on each shelf.",
+    "solution": "Shelf 1 has 3 cookies and 2 apples. Shelf 2 has 3 cookies and 3 apples. The cookies are the same. Shelf 2 has 1 more apple.",
+    "mistakes": [
+     "Saying 3 for the number of apples.",
+     "Saying the cookies are different."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "objects",
+      "items": [
+       {
+        "icon": "cookie",
+        "n": 3
+       },
+       {
+        "icon": "apple",
+        "n": 2
+       }
+      ],
+      "per_row": 3,
+      "size": "s",
+      "label": "Shelf 1"
+     },
+     {
+      "type": "objects",
+      "items": [
+       {
+        "icon": "cookie",
+        "n": 3
+       },
+       {
+        "icon": "apple",
+        "n": 3
+       }
+      ],
+      "per_row": 3,
+      "size": "s",
+      "label": "Shelf 2"
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at Picture 1 and Picture 2.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] differences.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "Tile [] is the same in both pictures.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "3; 1",
+    "val": [
+     3,
+     1
+    ],
+    "hint": "Check each tile, one at a time. Tick the tiles that are different.",
+    "solution": "Tile 1 is the same. Tile 2 has 3 stars and then 4 stars (number). Tile 3 is smaller in Picture 2 (size). Tile 4 faces another way (turn). That makes 3 differences.",
+    "mistakes": [
+     "Counting 4 differences because there are 4 tiles.",
+     "Missing the turned triangle."
+    ],
+    "mins": 3.5,
+    "visuals": [
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "circle",
+        "n": 1,
+        "size": "m",
+        "pattern": 1
+       },
+       {
+        "shape": "star",
+        "n": 3,
+        "size": "s"
+       },
+       {
+        "shape": "circle",
+        "n": 4,
+        "size": "m"
+       },
+       {
+        "shape": "triangle",
+        "n": 1,
+        "size": "l",
+        "turn": 90
+       }
+      ],
+      "cell": 88,
+      "cols": 4
+     },
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "circle",
+        "n": 1,
+        "size": "m",
+        "pattern": 1
+       },
+       {
+        "shape": "star",
+        "n": 4,
+        "size": "s"
+       },
+       {
+        "shape": "circle",
+        "n": 4,
+        "size": "s"
+       },
+       {
+        "shape": "triangle",
+        "n": 1,
+        "size": "l"
+       }
+      ],
+      "cell": 88,
+      "cols": 4
+     }
+    ]
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Two of the four tiles are the same picture.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Tile [] and tile [] are the same.",
+      "ans": "A; D",
+      "val": [
+       "A",
+       "D"
+      ]
+     }
+    ],
+    "answer": "A and D",
+    "val": [
+     "A",
+     "D"
+    ],
+    "hint": "Check one thing at a time. Find the two with the same shape, number, size and pattern.",
+    "solution": "A and D are both stars with dots. B is a star with stripes (the pattern is different). C is a triangle (the shape is different). So A and D are the same.",
+    "mistakes": [
+     "Choosing A and B because both are stars.",
+     "Not checking the pattern."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 2
+      }
+     ],
+     "cell": 100,
+     "cols": 4,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ]
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Four of the five tiles have one thing the same. One tile is the odd one out.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Circle the odd one out: A, B, C, D or E.",
+      "ans": "C",
+      "val": "C",
+      "choices": [
+       "A",
+       "B",
+       "C",
+       "D",
+       "E"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Circle what makes it the odd one out: shape, number, size or pattern.",
+      "ans": "number",
+      "val": "number",
+      "choices": [
+       "shape",
+       "number",
+       "size",
+       "pattern"
+      ]
+     }
+    ],
+    "answer": "C; number",
+    "val": [
+     "C",
+     "number"
+    ],
+    "hint": "Check one thing at a time. Look only at how many, then only at the shape.",
+    "solution": "Look at how many shapes are in each tile. A, B, D and E each have 3. Tile C has only 1. So C is the odd one out and the difference is number. The shapes, sizes and patterns are all mixed, so they cannot be what makes a tile odd.",
+    "mistakes": [
+     "Choosing the tile with the different shape.",
+     "Choosing the biggest tile."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "star",
+       "n": 3,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "s"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "s",
+       "pattern": 2
+      },
+      {
+       "shape": "square",
+       "n": 3,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "triangle",
+       "n": 3,
+       "size": "s"
+      }
+     ],
+     "cell": 100,
+     "cols": 5,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ]
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Look across, then look down. Which tile is the missing piece?",
+    "parts": [
+     {
+      "l": "",
+      "text": "Circle the missing piece: A, B, C or D.",
+      "ans": "C",
+      "val": "C",
+      "choices": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     }
+    ],
+    "answer": "C",
+    "val": [
+     "C"
+    ],
+    "hint": "Across, what changes? Down, what changes? Then check each option.",
+    "solution": "Across, 1 shape becomes 3 shapes. Down, a square becomes a circle. So the missing tile is 3 circles, the same size. That is tile C. A has only 1 circle, B has squares, D has small circles.",
+    "mistakes": [
+     "Choosing A because the circle is on the left.",
+     "Choosing D because it looks neat."
+    ],
+    "mins": 5,
+    "visuals": [
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "square",
+        "n": 1,
+        "size": "m"
+       },
+       {
+        "shape": "square",
+        "n": 3,
+        "size": "m"
+       },
+       {
+        "shape": "circle",
+        "n": 1,
+        "size": "m"
+       },
+       {
+        "shape": "circle",
+        "n": 3,
+        "size": "m"
+       }
+      ],
+      "cell": 100,
+      "cols": 2,
+      "hide": [
+       3
+      ]
+     },
+     {
+      "type": "panel",
+      "tiles": [
+       {
+        "shape": "circle",
+        "n": 1,
+        "size": "m"
+       },
+       {
+        "shape": "square",
+        "n": 3,
+        "size": "m"
+       },
+       {
+        "shape": "circle",
+        "n": 3,
+        "size": "m"
+       },
+       {
+        "shape": "circle",
+        "n": 3,
+        "size": "s"
+       }
+      ],
+      "cell": 100,
+      "cols": 4,
+      "labels": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Two of the four tiles are the same picture, turned. Do not choose a tile that is bigger or has another pattern.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Tile [] and tile [] are the same, turned.",
+      "ans": "A; C",
+      "val": [
+       "A",
+       "C"
+      ]
+     }
+    ],
+    "answer": "A and C",
+    "val": [
+     "A",
+     "C"
+    ],
+    "hint": "Turn your page, or tilt your head. Which two have the same size and pattern?",
+    "solution": "A and C are big triangles with no pattern. C is A turned upside down. B has dots, so the pattern is different. D is small, so the size is different. So the answer is A and C.",
+    "mistakes": [
+     "Choosing A and B because both are big.",
+     "Choosing A and D because both look plain."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l"
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l",
+       "pattern": 2
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "l",
+       "turn": 180
+      },
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "s",
+       "turn": 90
+      }
+     ],
+     "cell": 100,
+     "cols": 4,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ]
+    }
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "A pattern of tiles repeats again and again.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Tile 11 is a circle or a square? Circle the shape.",
+      "ans": "circle",
+      "val": "circle",
+      "choices": [
+       "circle",
+       "square"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The 4th square is tile number [].",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "circle; 10",
+    "val": [
+     "circle",
+     10
+    ],
+    "hint": "Find the part that repeats. Then count: tile 7 starts it again.",
+    "solution": "The part that repeats is square, circle, circle. The squares are tiles 1, 4, 7 and 10, so the 4th square is tile 10. Tile 11 comes after tile 10, so it is the first circle of the next part: a circle.",
+    "mistakes": [
+     "Saying tile 11 is a square.",
+     "Saying the 4th square is tile 4."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "square",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      }
+     ],
+     "cell": 90,
+     "cols": 6,
+     "labels": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ]
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Shadow Match. Look at the shadow on top. One of the four shadows below it is the same shape, turned.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Circle A, B, C or D.",
+      "ans": "B",
+      "val": "B",
+      "choices": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     }
+    ],
+    "answer": "B",
+    "val": [
+     "B"
+    ],
+    "hint": "Turn your page a quarter turn. Which shadow looks like the top one now?",
+    "solution": "The top shadow is a tall L. Turn it a quarter turn to the right and the long part lies flat along the top, with the foot hanging under the left end. That is shadow B. Shadow A is the L flipped like a mirror: its foot points the other way, and a turn cannot do that. Shadow C has 5 squares and shadow D is a different shape.",
+    "mistakes": [
+     "Choosing the flipped shadow because it looks nearly the same.",
+     "Choosing the shadow with more squares."
+    ],
+    "mins": 7,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "cell": 50,
+     "size": "s"
+    },
+    "visuals": [
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 3,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "cell": 50,
+      "size": "s",
+      "counts": {
+       "2,2": "A"
+      }
+     },
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 3,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "cell": 50,
+      "size": "s",
+      "counts": {
+       "2,2": "B"
+      }
+     },
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 3,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "cell": 50,
+      "size": "s",
+      "counts": {
+       "0,2": "C"
+      }
+     },
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 3,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "cell": 50,
+      "size": "s",
+      "counts": {
+       "2,2": "D"
+      }
+     }
+    ]
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Look at the five tiles. Check one thing at a time.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "If we look only at the pattern, the odd one out is tile [].",
+      "ans": "D",
+      "val": "D"
+     },
+     {
+      "l": "b",
+      "text": "If we look only at the size, the odd one out is tile [].",
+      "ans": "B",
+      "val": "B"
+     }
+    ],
+    "answer": "D; B",
+    "val": [
+     "D",
+     "B"
+    ],
+    "hint": "First look only at the pattern. Then look only at the size.",
+    "solution": "Look only at the pattern: A, B, C and E have stripes and D has dots, so D is the odd one out. Look only at the size: A, C, D and E are medium and B is big, so B is the odd one out. A row can have a different odd one out for each thing you check.",
+    "mistakes": [
+     "Choosing the same tile for both.",
+     "Looking at the pattern and the size together."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      }
+     ],
+     "cell": 100,
+     "cols": 5,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+     ]
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Make your own odd one out for a partner. Draw 4 tiles in a row. Three tiles are alike. One is different in just one thing. Many answers are right.",
+    "parts": [
+     {
+      "l": "",
+      "text": "The odd one is different in its ___.",
+      "ans": "any one thing: shape, number, size, pattern or turn",
+      "val": "open"
+     }
+    ],
+    "answer": "Many answers are right: three tiles alike and one different in exactly one thing",
+    "val": [
+     "open"
+    ],
+    "hint": "Draw one tile first. Copy it three times. Then change one thing on one copy.",
+    "solution": "For example, draw 3 small striped circles and 1 big striped circle. The odd one is different in its size. Check that it differs in just one thing, and that the other three are the same in everything.",
+    "mistakes": [
+     "Changing two things on the odd tile.",
+     "Making the three tiles different from each other."
+    ],
+    "mins": 6,
+    "draw": 2
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Change just one thing",
+   "first": "Draw a small circle with stripes. Next to it, draw the same circle, but bigger. What is different? ____",
+   "text": "Now draw a tile that is different from your first circle in two things. Write the two things.",
+   "lines": 4,
+   "draw": 2,
+   "answer": "The bigger circle is different in size only. A tile with two things different, for example a big circle with dots, is different in size and pattern. Many answers are right.",
+   "val": [
+    "size"
+   ],
+   "look_for": "A child who names one thing for the first tile (size) and two different things for the second tile, such as size and pattern. Credit any clear drawing with the right count of differences. A child who changes the shape and the number has found two things too.",
+   "mistakes": [
+    "Saying the circle is a different shape when it is only bigger.",
+    "Drawing a tile that is different in three things when asked for two."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child in another class looks at two pictures. She says: they are not the same. Is that enough? What could she say to be exact?",
+  "starter": "I think ... because ...",
+  "answer": "Not yet. She should say which thing is different: the shape, how many, how big, which pattern or which way it faces, one thing at a time.",
+  "look_for": "A child who names one of the five things (shape, number, size, pattern, turn) or says to check one thing at a time. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Look at the two tiles.",
+   "parts": [
+    {
+     "l": "",
+     "text": "What is different? Circle shape, number, size, pattern or turn.",
+     "ans": "pattern",
+     "val": "pattern",
+     "choices": [
+      "shape",
+      "number",
+      "size",
+      "pattern",
+      "turn"
+     ]
+    }
+   ],
+   "answer": "pattern",
+   "val": [
+    "pattern"
+   ],
+   "solution": "Both tiles have 3 circles of the same size. One has dots and one has stripes, so the pattern is different.",
+   "mistakes": [
+    "Saying number because there are 3 circles.",
+    "Saying shape."
+   ],
+   "visual": {
+    "type": "panel",
+    "tiles": [
+     {
+      "shape": "circle",
+      "n": 3,
+      "size": "m",
+      "pattern": 2
+     },
+     {
+      "shape": "circle",
+      "n": 3,
+      "size": "m",
+      "pattern": 1
+     }
+    ],
+    "cell": 100,
+    "cols": 2
+   }
+  },
+  {
+   "id": "E2",
+   "text": "Three tiles are alike. One is the odd one out.",
+   "parts": [
+    {
+     "l": "",
+     "text": "Circle the odd one out: A, B, C or D.",
+     "ans": "C",
+     "val": "C",
+     "choices": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ]
+    }
+   ],
+   "answer": "C",
+   "val": [
+    "C"
+   ],
+   "solution": "A, B and D are circles. Tile C is a star. So C is the odd one out.",
+   "mistakes": [
+    "Choosing D because it is last.",
+    "Saying there is no odd one out."
+   ],
+   "visual": {
+    "type": "panel",
+    "tiles": [
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "m"
+     },
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "m"
+     },
+     {
+      "shape": "star",
+      "n": 1,
+      "size": "m"
+     },
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "m"
+     }
+    ],
+    "cell": 80,
+    "cols": 4,
+    "labels": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ]
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Look at Picture 1 and Picture 2.",
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] differences.",
+     "ans": "2",
+     "val": 2
+    }
+   ],
+   "answer": "2",
+   "val": [
+    2
+   ],
+   "solution": "Tile 1 faces another way (turn). Tile 3 is smaller (size). Tile 2 is the same. So there are 2 differences.",
+   "mistakes": [
+    "Counting 3 differences.",
+    "Missing the turned triangle."
+   ],
+   "visuals": [
+    {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "m",
+       "turn": 90
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "l",
+       "pattern": 1
+      }
+     ],
+     "cell": 80,
+     "cols": 3
+    },
+    {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "triangle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      }
+     ],
+     "cell": 80,
+     "cols": 3
+    }
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "finding the differences",
+   "the odd one out",
+   "the missing piece",
+   "something else"
+  ],
+  "helped": [
+   "my pair cards",
+   "looking at one thing at a time",
+   "saying it aloud",
+   "I was not stuck"
+  ],
+  "next": [
+   "checking one thing at a time",
+   "finding the missing piece",
+   "counting the differences",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Ali makes a row of 4 shapes: big, big, small, big. Which shape is the odd one out? It is the ___ shape. (Write first, second, third or fourth.)",
+   "answer": "third",
+   "val": "third",
+   "solution": "The big shapes are the 1st, 2nd and 4th. The 3rd shape is small, so it is the odd one out."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Picture 1 has 5 stars. Picture 2 has 6 stars. How many more stars does Picture 2 have? There is ___ more star.",
+   "answer": "1",
+   "val": 1,
+   "solution": "Count up from 5 to 6: 1. Picture 2 has 1 more star."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Lily makes two pictures of 3 tiles. Tile 1 is the same. Tile 2 is bigger in Picture 2. Tile 3 is dotted in Picture 2 and striped in Picture 1. How many differences are there? There are ___ differences.",
+   "answer": "2",
+   "val": 2,
+   "solution": "Tile 1 is the same. Tile 2 is different in size. Tile 3 is different in pattern. That is 2 differences."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "A pattern goes: star, circle, circle, star, circle, circle, and keeps going. What is the 10th shape? It is a ___. (Write star or circle.)",
+   "answer": "star",
+   "val": "star",
+   "solution": "The part that repeats is star, circle, circle. The stars are the 1st, 4th, 7th and 10th shapes, so the 10th shape is a star."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 2 Lesson 5",
+   "text": "Mei has 2 bags with 3 sweets in each bag and 1 bag with 4 sweets. Are the groups equal? Circle Yes or No.",
+   "answer": "No",
+   "val": [
+    "No"
+   ],
+   "solution": "The bags have 3, 3 and 4 sweets. The groups are not equal."
+  }
+ ],
+ "online_practice": {
+  "key": "t4l35",
+  "title": "Spot It",
+  "topic": "Spot the difference, the odd one out, a missing piece and a repeating pattern",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "Picture A has 4 stars. Picture B has 6 stars. How many more stars does Picture B have?",
+    "hint": "Count up from the smaller number to the greater.",
+    "steps": [
+     "Picture A has 4 stars.",
+     "Picture B has 6 stars.",
+     "Count up from 4 to 6: 2 more stars."
+    ],
+    "answer": 2,
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "6 is the number of stars in Picture B. How many MORE does it have?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       6
+      ],
+      "k": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {
+      "b": "a+k"
+     },
+     "q": "Picture A has {a} stars. Picture B has {b} stars. How many more stars does Picture B have?",
+     "answer": "k",
+     "hint": "Count up from the smaller number to the greater.",
+     "steps": [
+      "Picture A has {a} stars.",
+      "Picture B has {b} stars.",
+      "Count up from {a} to {b}: {ans} more."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "choice",
+    "q": "Two triangles have the same shape, number, size and pattern. One faces up and one faces down. What is different?",
+    "hint": "Check the five things one at a time.",
+    "steps": [
+     "The shape is the same: both are triangles.",
+     "The number, size and pattern are the same.",
+     "One faces up and one faces down, so the difference is turn."
+    ],
+    "options": [
+     "shape",
+     "number",
+     "size",
+     "pattern",
+     "turn"
+    ],
+    "answer": "turn",
+    "slips": [
+     {
+      "a": [
+       "shape"
+      ],
+      "say": "Both are triangles. Which way does each one face?"
+     }
+    ]
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Three tiles are alike. One is the odd one out. Which tile is it?",
+    "hint": "Check one thing at a time. Which tile has a different pattern?",
+    "steps": [
+     "A, B and D have stripes.",
+     "C has dots.",
+     "C is the odd one out."
+    ],
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "answer": "C",
+    "slips": [
+     {
+      "a": [
+       "D"
+      ],
+      "say": "D is last, but it is the same as A and B. Which tile has a different pattern?"
+     }
+    ],
+    "fig": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m",
+       "pattern": 2
+      },
+      {
+       "shape": "circle",
+       "n": 3,
+       "size": "m",
+       "pattern": 1
+      }
+     ],
+     "cell": 100,
+     "cols": 4,
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "A pattern repeats: square, circle, circle. Which shape is tile 4?",
+    "hint": "Find the part that repeats. Tile 4 starts the part again.",
+    "steps": [
+     "The part that repeats is square, circle, circle.",
+     "Tile 4 is the first tile of the next part.",
+     "The first tile of the part is a square."
+    ],
+    "options": [
+     "square",
+     "circle"
+    ],
+    "answer": "square",
+    "slips": [
+     {
+      "a": [
+       "circle"
+      ],
+      "say": "Tile 3 is a circle. Tile 4 starts the part again."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "derive": {},
+     "q": "A pattern repeats: square, circle, circle. Which shape is tile {n}?",
+     "options": [
+      "square",
+      "circle"
+     ],
+     "answer_index": "(n%3+1)%2",
+     "hint": "Find the part that repeats. Count in threes.",
+     "steps": [
+      "The part that repeats is square, circle, circle.",
+      "Count in threes to find where the part starts again.",
+      "Tile {n} is a {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "A row has 3 big tiles and 1 small tile. How many tiles are in the row?",
+    "hint": "Count the big tiles, then the small tile.",
+    "steps": [
+     "There are 3 big tiles.",
+     "There is 1 small tile.",
+     "3 and 1 make 4 tiles."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       1
+      ],
+      "say": "1 is the small tile. Count the big tiles too."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {},
+     "q": "A row has {n} big tiles and 1 small tile. How many tiles are in the row?",
+     "answer": "n+1",
+     "hint": "Count the big tiles, then the small tile.",
+     "steps": [
+      "There are {n} big tiles.",
+      "There is 1 small tile.",
+      "{n} and 1 make {ans} tiles."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A pattern repeats: star, circle, circle. Which tile number is the 4th star?",
+    "hint": "The stars are tiles 1, 4, 7 and so on. Count in threes.",
+    "steps": [
+     "The part that repeats is star, circle, circle.",
+     "The stars are tiles 1, 4, 7 and 10.",
+     "The 4th star is tile 10."
+    ],
+    "answer": 10,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "Tile 4 is the 2nd star. Count the stars: tile 1, tile 4, tile 7, tile 10."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "k": [
+       3,
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "derive": {},
+     "q": "A pattern repeats: star, circle, circle. Which tile number is the {k|ord} star?",
+     "answer": "3*k-2",
+     "hint": "The stars are tiles 1, 4, 7 and so on. Count in threes.",
+     "steps": [
+      "The part that repeats is star, circle, circle.",
+      "The stars are tiles 1, 4, 7 and so on, 3 apart.",
+      "The {k|ord} star is tile {ans}."
+     ]
+    },
+    "easier": "c4"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A pattern repeats: square, square, circle. How many circles are in the first 9 tiles?",
+    "hint": "There is 1 circle in every 3 tiles.",
+    "steps": [
+     "The part that repeats is square, square, circle.",
+     "The first 9 tiles are 3 parts.",
+     "Each part has 1 circle, so there are 3 circles."
+    ],
+    "answer": 3,
+    "slips": [
+     {
+      "a": [
+       9
+      ],
+      "say": "9 is the number of tiles. Only 1 tile in every 3 is a circle."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       6,
+       9,
+       12,
+       15
+      ]
+     },
+     "derive": {},
+     "q": "A pattern repeats: square, square, circle. How many circles are in the first {n} tiles?",
+     "answer": "n//3",
+     "hint": "There is 1 circle in every 3 tiles.",
+     "steps": [
+      "The part that repeats is square, square, circle.",
+      "The first {n} tiles are made of parts of 3 tiles.",
+      "Each part has 1 circle, so there are {ans} circles."
+     ]
+    },
+    "easier": "c4"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Look across, then look down. Which tile is the missing piece?",
+    "hint": "Across, what changes? Down, what changes?",
+    "steps": [
+     "Across, plain becomes stripes.",
+     "Down, a star becomes a circle.",
+     "The missing tile is a circle with stripes: B."
+    ],
+    "options": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "answer": "B",
+    "slips": [
+     {
+      "a": [
+       "A"
+      ],
+      "say": "A is a circle but it is plain. What changes across?"
+     }
+    ],
+    "fig": {
+     "type": "panel",
+     "tiles": [
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "star",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m"
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "m",
+       "pattern": 1
+      },
+      {
+       "shape": "circle",
+       "n": 1,
+       "size": "s",
+       "pattern": 1
+      }
+     ],
+     "cell": 100,
+     "cols": 2,
+     "hide": [
+      3
+     ],
+     "size": "m"
+    },
+    "easier": "c3"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A shape is made of 4 squares. It is turned a quarter turn. How many squares does it have now?",
+    "hint": "Turning changes which way it faces. It does not add or take away squares.",
+    "steps": [
+     "The shape has 4 squares.",
+     "A turn only changes which way it faces.",
+     "It still has 4 squares."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       3,
+       5
+      ],
+      "say": "Turning does not add or take away squares. Count the squares in the first shape."
+     }
+    ],
+    "easier": "t2"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A pattern repeats: square, circle, circle. How many squares are in the first 10 tiles?",
+    "hint": "The squares are tiles 1, 4, 7 and 10.",
+    "steps": [
+     "The part that repeats is square, circle, circle.",
+     "The squares are tiles 1, 4, 7 and 10.",
+     "That makes 4 squares."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "Tile 10 is a square too. Count the squares: tiles 1, 4, 7, 10."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       7,
+       8,
+       9,
+       10,
+       11,
+       12,
+       13
+      ]
+     },
+     "derive": {},
+     "q": "A pattern repeats: square, circle, circle. How many squares are in the first {n} tiles?",
+     "answer": "(n+2)//3",
+     "hint": "The squares are tiles 1, 4, 7, and so on.",
+     "steps": [
+      "The part that repeats is square, circle, circle.",
+      "The squares are tiles 1, 4, 7, 10 and so on.",
+      "There are {ans} squares in the first {n} tiles."
+     ]
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make a row of 4 things at home. Three are alike and one is different. Ask a grown-up to find the odd one out and say what is different.",
+    "hint": "Change only one thing.",
+    "steps": [
+     "Pick 3 things that are alike.",
+     "Pick 1 thing that is different in just one way.",
+     "Ask a grown-up what is different."
+    ],
+    "easier": "c3"
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "number",
+    "q": "A pen costs $7 and a rubber costs $5. How much do they cost altogether?",
+    "hint": "Altogether means add.",
+    "steps": [
+     "Altogether means add.",
+     "7 and 5 make 12.",
+     "They cost $12 altogether."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "2 is the gap. Altogether means add the two prices."
+     }
+    ],
+    "fig": {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "${a}"
+    },
+    "fig_base": {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$7"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       7,
+       8,
+       9,
+       11,
+       12
+      ],
+      "b": [
+       2,
+       3,
+       5,
+       6,
+       8
+      ]
+     },
+     "derive": {},
+     "q": "A pen costs {a|usd} and a rubber costs {b|usd}. How much do they cost altogether?",
+     "answer": "a+b",
+     "hint": "Altogether means add.",
+     "steps": [
+      "Altogether means add.",
+      "{a} and {b} make {ans}.",
+      "They cost {ans|usd} altogether."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 5"
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "choice",
+    "q": "A book costs $15 and a cup costs $8. Which costs more?",
+    "hint": "Look at the dollars. Which number is bigger?",
+    "steps": [
+     "The book costs $15.",
+     "The cup costs $8.",
+     "15 is more than 8, so the book costs more."
+    ],
+    "options": [
+     "book",
+     "cup"
+    ],
+    "answer": "book",
+    "slips": [],
+    "tpl": {
+     "vars": {
+      "u": [
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18
+      ],
+      "v": [
+       3,
+       4,
+       5,
+       7,
+       8,
+       9
+      ],
+      "k": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "x": "u*(1-k)+v*k",
+      "y": "v*(1-k)+u*k"
+     },
+     "q": "A book costs {x|usd} and a cup costs {y|usd}. Which costs more?",
+     "options": [
+      "book",
+      "cup"
+     ],
+     "answer_index": "k",
+     "hint": "Look at the dollars. Which number is bigger?",
+     "steps": [
+      "The book costs {x|usd}.",
+      "The cup costs {y|usd}.",
+      "The bigger price costs more."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 5"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We played spot-the-difference with shapes. We looked at one thing at a time: the shape, how many, how big, the pattern and which way it faces. We found the odd one out, a missing piece and the 11th tile of a repeating pattern.",
+  "words": [
+   "odd one out: the one that is not like the others",
+   "pattern: plain, stripes or dots",
+   "turn: which way a shape faces",
+   "feature: one thing you can check, such as size"
+  ],
+  "try_home": [
+   "Line up 4 spoons, cups or toys with one odd one out. Ask: what is different?",
+   "Make two pictures that are different in 3 ways. Ask your child to find them, one thing at a time.",
+   "Make a pattern with coins or socks that repeats (for example, big, small, small). Ask: what is the 10th?"
+  ],
+  "ask": [
+   "What is different? Say one thing.",
+   "How many things are different?",
+   "What part repeats?"
+  ],
+  "when_stuck": "Let your child use the cards or draw, and wait 10 seconds before helping. Please do not point to the answer: ask \"What shape? How many? How big? Which pattern? Which way?\" one at a time. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Count Everything. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "Look at one thing at a time, and you will not miss a difference.",
+  "report_line": "Your child is learning to look closely and say exactly what is different, one feature at a time. This week: pictures that differ in shape, number, size, pattern or turn, the odd one out, and a repeating pattern.",
+  "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+  "next_materials": [
+   "Your Term 4 second book (Book 8, the last five lessons of the year): tear out the paper-people page along the dashed line, then a grown-up cuts out the 8 paper people. If Book 8 has not reached you, tell us on the business WhatsApp and we will send the pages as a PDF straight away",
+   "The pair cards are not needed again: keep them for puzzles at home",
+   "A pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "Pair cards and paper pieces are small. They stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the cards beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper, cards or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Moves are gentle; a child may stay seated and move one arm.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 size, number, turn; S2 Yes and No; S3 C and pattern; S4 1; S5 3 and 1; S6 A and D; T1 C and number; T2 C; T3 A and C; T4 circle and 10; G1 second; G2 D and B; G3 any row of three alike and one different in just one thing; I1 size, then any tile that differs in two things.",
+  "Tell parents a week before: the pair-cards page (page 6 of Book 7) needs 12 cards cut out by a grown-up, with the three rows kept as three piles. The next lesson needs Book 8 (lessons 36 to 40) in the house, with its paper-people page torn out and the 8 people cut out. Check that every family has Book 8 before the next lesson. Printing and postage are included in the program fee (owner decision, 23 Oct 2026). Parcel policy (draft, owner to confirm): a missing or damaged book is reported, the pages go out as a PDF straight away and there is one free resend; a second loss is discussed. Delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later.",
+  "Have the slides open. Have your own set of pair cards to look at if you wish. Practise the copy-and-change break. When you read a pair of pictures, say the five things in the same order every time: shape, how many, how big, which pattern, which way.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
+  "Be plain with families: describing and sorting shapes is Primary 1; patterns by size, shape, colour or orientation are Primary 2; the hidden shared feature, the missing piece, the 11th tile and Shadow Match go beyond Primary 1 on purpose. Do not call the lesson MOE-aligned and do not promise contest results: the lesson is marked thin evidence in the plan.",
+  "Wording rule: wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. Printed books are black and white, so the lesson uses pattern (plain, stripes, dots) and not colour. Slides keep the answers off the screen while you ask: read every question aloud."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "A child says: a row of 4 tiles always has an odd one out. Is that always true? Test a row of 4 tiles: big, big, small, small.",
+    "rec": "Recording: pause. Test a row of 4 tiles: big, big, small, small. Is there an odd one out?",
+    "answer": "No. With 2 big and 2 small tiles nothing is the odd one out. An odd one out needs one different tile and all the others the same."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Make a row of 4 tiles with one odd one out. Ask your grown-up to find it and say what is different.",
+    "rec": "Recording: pause. Make a row of 4 tiles with one odd one out and ask a grown-up to find it.",
+    "answer": "No single answer. Check that the odd tile is different in exactly one thing."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend a toy says: these two pictures look different. Teach the toy to say exactly what is different, one thing at a time.",
+    "rec": "Recording: pause. Teach a toy to say exactly what is different, one thing at a time.",
+    "answer": "Use the five things in order: shape, how many, how big, which pattern, which way. Name the one that is different."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Spot It: one thing at a time",
+  "hint_p1": "Look at one thing at a time: shape, number, size, pattern, turn. Compare tile by tile.",
+  "hint_p2": "Count the differences. Tick each tile that is different.",
+  "hint_p3": "Check one thing at a time. Choose any question, in any order.",
+  "hint_p4": "Use your pair cards or a sheet of paper to turn. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use real things and paper. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "pair_cards",
+    "labels": [
+     "icon:apple",
+     "icon:apple",
+     "icon:cookie",
+     "icon:apple",
+     "icon:spider",
+     "icon:ladybird",
+     "icon:ladybird",
+     "icon:ladybird",
+     "icon:cup",
+     "icon:cup",
+     "icon:cup",
+     "icon:jar"
+    ],
+    "title": "Kit page: pair cards",
+    "intro": "A grown-up cuts out the 12 cards before the lesson. Each row of 4 is one set: three cards are alike and one is different. Keep each row together in a pile. No cutting? Draw 4 small pictures on paper: 3 the same and 1 different."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Shadow Match",
+  "where": [
+   "G1"
+  ],
+  "text": "A shape made of 4 squares is shown, and the child chooses which of four other shadows is the same shape turned: not the shape flipped like a mirror, not a shape with another number of squares, not a different shape. Turning (orientation) is a Primary 2 idea (p. 34), and a flip is not taught before Primary 4 (symmetry). Also at Go further: the odd one out for pattern and then for size in the same row (the odd one depends on what you check). Named puzzle: Shadow Match.",
+  "parent": "Shadow Match (which shape is the same shape turned, not flipped) goes past the Primary 1 syllabus on purpose."
+ }
+}
