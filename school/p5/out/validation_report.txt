@@ -398,7 +398,7 @@ PASS  S2: footer codes use the form S1-07 (P5-07) with the right pair of numbers
 PASS  every page has a self-check strip text  
 PASS  every page names a self-check mechanism  
 PASS  every page has outcome lines from the syllabus summary  
-FAIL  V8 reading level (Primary 5): instruction and clue sentences <= 16 words, <= 4 sentences  [(5, 'Colour the part, or write its letter (Y, R, B, G or O) if you have no crayon.'), (22, 'Colour the part, or write its letter (Y, R, B, G or O) if you have no crayon.')]
+PASS  V8 reading level (Primary 5): instruction and clue sentences <= 16 words, <= 4 sentences  []
 PASS  check strip text <= 26 words (pages with several check lines: 40)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
@@ -727,7 +727,7 @@ PASS  S1_key.html: colour-by-code pictures: 1 found (expected 1); every label of
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 14)]
 PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(10, 0, 14)]
 PASS  P5_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.34% vs greyscale)  20 pages
-PASS  P5_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 166, budget 40 on average per page)  
+PASS  P5_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 165, budget 40 on average per page)  
 PASS  P5_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 32.43% vs greyscale)  5 pages
 PASS  P5_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 147, budget 40 on average per page)  
 PASS  P5_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 29.50% vs greyscale)  9 pages
@@ -739,4 +739,4 @@ PASS  P5_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels coun
 PASS  P5_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.68% vs greyscale)  10 pages
 PASS  P5_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 700, budget 130 on average per page)  
 
-TOTAL 740 checks, 1 failed
+TOTAL 740 checks, 0 failed
