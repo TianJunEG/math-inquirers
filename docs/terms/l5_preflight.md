@@ -4,7 +4,7 @@ Status: planning only, written 23 Oct 2026. No lesson, tool, template or output 
 
 Sources read in full: `docs/terms/owner_decisions.md` (all entries), `docs/terms/l1_term2_preflight.md` and `docs/terms/l1_term3_term4_preflight.md` (the models), `docs/terms/l3_preflight.md` and the template, kit and Quest sections of `l2_preflight.md` and `l4_preflight.md` (for cross-level reuse of figure codes), `docs/terms/level_5_year_plan.md` (all four terms, the revision blocks, the SASMO table, the MOE verification block, the "Non-routine assignments" section, the matrix and the notes), `docs/books/p5_school_paper_patterns.md` and `p5_non_routine_catalogue.md` (wording, ranges, pictures, marks, 49 original examples), `docs/moe/syllabus_by_level.md` (P1 to P6, the year index and the "not in the syllabus anywhere" row), `docs/sasmo/g5_analysis.md` and `g5_original_problems_draft.md`, `term/l1/AUTHORING.md` (all passes, Terms 3 and 4 section), `WORDING_GUIDE.md`, `audit/TERM_WIDE_AUDIT.md`, `CUTOUT_AUDIT.md`, `FINAL_AUDIT_T1.md`, `FINAL_AUDIT_T2.md`, the Level 1 tool inventory (`term/l1/tools/figs2.py`, `figs3.py`, `svg.py` signatures, `b_quest.py` bans), and the holiday Level 5 content `p5/SPEC.md` and `p5/content/l1.js` to `l10.js` (every Start here, Think harder and Go further question of the ten holiday lessons was extracted and read). The word-problem analyses (`word_problems_g1_g2_*`) cover Grades 1 and 2 only and were not used.
 
-Numbers quoted as "verified" were recomputed by brute force in `verify_l5_preflight.py` (appendix): **265 checks, all passed**. Lesson authors must still write their own `verify/lNN_checks.py`; nothing here replaces it. Check ids (`V7.2` and so on) point to the appendix; `Q` ids are Quest gate items; `K` ids are kit arithmetic.
+Numbers quoted as "verified" were recomputed by brute force in `verify_l5_preflight.py` (appendix): **272 checks, all passed**. Lesson authors must still write their own `verify/lNN_checks.py`; nothing here replaces it. Check ids (`V7.2` and so on) point to the appendix; `Q` ids are Quest gate items; `K` ids are kit arithmetic.
 
 ## 0. Headline findings
 
@@ -16,10 +16,10 @@ Numbers quoted as "verified" were recomputed by brute force in `verify_l5_prefli
 6. **Printed workbooks are black and white; the books print every page at 94.3 percent.** Level 5 depends on pictures more than Level 1: shaded fractions, hatched bar models, graphs, solids, tiles, colouring puzzles. Every figure must carry its meaning in shape, label or hatch; colour is decoration for the soft copy. Colouring puzzles use letters (A to D), not colours, in the printed book. Everything that depends on a printed length (a ruler picture, a protractor, an area counted in squares of a stated size) must say "not drawn to scale" or give the numbers in text (CUTOUT_AUDIT F4).
 7. **Words and topics that the MOE syllabus lacks anywhere.** The syllabus summary lists "prime numbers, negative numbers, probability, coordinates, speed, surface area, median/mode, pentagon/hexagon" as absent from the whole primary syllabus. Level 5 uses some of them (a number with exactly two factors, surface area of a cuboid, pentagon and hexagon angle sums, grid points). They are allowed only as Think harder or Go further items or inside the named Beyond item, with a one-line level note, and never at Start here (D12). Start here uses "numbers with exactly two factors" and "dots across and up", not "prime" and "coordinates".
 8. **Level 1's recurring defects are known and must be designed out from lesson 1:** kit pieces that do not match the tasks, false "next lesson" materials lines, workbook numbers repeated from class, answers on the slide while the question is asked, paper hold-ups to the camera, family pages that print the global lesson number, a validator that fails on our own catalogue text. Sections 6, 7 and 10 turn each into a rule with a check.
-9. **Cutting load is small: 146 pieces a year** (T1 29, T2 12, T3 59, T4 46; section 6) against 271 at Level 3, because children aged 10 to 12 draw and write more than they cut and the plan keeps most manipulatives at home. The heaviest pages are lesson 28 (21 play coins) and lesson 1 (13 tiles). Two books, 4 and 8, have no cutting.
+9. **Cutting load is small: 146 pieces a year** (T1 29, T2 12, T3 59, T4 46; section 6) against 271 at Level 3, because children aged 10 to 12 draw and write more than they cut and the plan keeps most manipulatives at home. The heaviest pages are lesson 28 (21 play coins), lesson 35 (16 cards) and lesson 1 (13 tiles). Two books, 4 and 8, have no cutting.
 10. **Seven lessons and half of an eighth have little or no school-paper evidence** (patterns section 3): 9 Two Groups and the Overlap, 33 Clocks and Calendars (durations only), 34 Logic Grids and Digit Puzzles, 35 Odd, Even, Remainders and Extremes, 38 Children Set the Problem, 39 Colouring, Cycles and Choices, 40 Year Showcase, and the isometric half of 19. They stay as the plan says, labelled beyond school, each with a named swap candidate (D13). Lesson 35 is still the most overloaded (KIV) and lesson 39 the thinnest.
 11. **Year-end exams fall in Term 4.** P5 pupils sit end-of-year papers in late Oct and Nov, so Term 4 attendance dips (plan open question 9). The plan's Term 4 is the lightest in new content; lesson 39 is the safest to skip, 37 next, and lesson 40 holds the Quest and the showcase, which a recording cannot replace (make-up route, section 8).
-12. **Estimate:** about 391 agent-hours for the 40 lessons (write, wording review, independent audit, fix pass, four term-wide audits and one 40-lesson sweep) and 141 to 193 hours of template engineering, so roughly 532 to 584 hours; at the Level 1 pace (eight to ten writers, three engineers) about 9 to 11 working days from Sprint A to an audited Term 4 (section 13). Hours are estimates from Level 1 documents, not measurements.
+12. **Estimate:** about 391 agent-hours for the 40 lessons (write, wording review, independent audit, fix pass, four term-wide audits and one 40-lesson sweep) and template engineering that should be budgeted at **about 84 to 93 hours** (the Level 5 share when Levels 2 to 4 are built first; 141 hours if Level 5 is built alone with the deferrals; 193 hours if nothing exists yet), so roughly 475 to 485 hours on the first basis (532 to 584 on the others); at the Level 1 pace (eight to ten writers, three engineers) about 9 to 11 working days from Sprint A to an audited Term 4 (section 13). Hours are estimates from Level 1 documents, not measurements.
 
 ## 0.1 Assumptions made (change them if wrong)
 
@@ -79,8 +79,8 @@ Can a new child join cold? Yes: the warm-ups cover Primary 4 recall (place value
 - **Objective.** List factors and multiples in order; find common factors and common multiples; solve packing and sharing stories (the greatest number of bags, the smallest number shared); use digit sums for 3 and 9. Think harder: missing digit; multiples in a range; packing; true, false or not possible to tell. Go further: Locker Parade; riddle; counterexample.
 - **Prerequisites.** Primary 4 factors and multiples; tables to 12.
 - **Remember (6 min).** (1) Write all the factors of 24 in pairs (P4). (2) The first five multiples of 6 and of 8 and the first number in both. (3) Spiral from H1: the digit sum of 7 346 (20).
-- **Start here (6).** (1) List all the factors of 36 (nine) and of 48 (ten) (V2.1). (2) Common factors of 24 and 36 (1, 2, 3, 4, 6, 12); the greatest is 12 (V2.1). (3) The first three common multiples of 4 and 6 (12, 24, 36, V2.1). (4) Is 7 482 a multiple of 3? Of 9? Use the digit sum (21: yes and no, V2.10). (5) Multiples of 7 up to 70. (6) A story: 12 pupils sit in equal rows; list every way (six).
-- **Think harder (4).** (1) Find the missing digit so that 5 [ ] 7 2 is a multiple of 9 (4, V2.9); which digits make 3 [ ] 4 8 a multiple of 12 (0, 3, 6, 9, V2.9). (2) (a) 48 mangoes and 72 apples are packed into identical bags with none left over: the greatest number of bags (24) and what is in each bag (2 and 3, V2.3). (b) Sweets can be shared equally among 9 children or among 12 children: the smallest number above 200 (216, V2.4). (3) How many multiples of 7 are there from 100 to 500 (57)? How many of them are not multiples of 14 (29)? (V2.6). (4) A whole number has exactly five factors. True, false or not possible to tell: it is a square number (true); it is even (not possible to tell); it is less than 100 (not possible to tell) (V2.2).
+- **Start here (6).** (1) List all the factors of 36 (nine) and of 48 (ten) (V2.1). (2) Common factors of 24 and 36 (1, 2, 3, 4, 6, 12); the greatest is 12 (V2.1). (3) The first three common multiples of 4 and 6 (12, 24, 36, V2.1). (4) Is 7 482 a multiple of 2? Of 5? Of 10? Use the last digit (yes, no, no, V2.11). (5) Multiples of 7 up to 70. (6) A story: 12 pupils sit in equal rows; list every way (six).
+- **Think harder (4).** (1) (a) Is 7 482 a multiple of 3? Of 9? Use the digit sum (21: yes and no, V2.10; moved here from Start here, owner decision 6); (b) find the missing digit so that 5 [ ] 7 2 is a multiple of 9 (4, V2.9); which digits make 3 [ ] 4 8 a multiple of 12 (0, 3, 6, 9, V2.9). (2) (a) 48 mangoes and 72 apples are packed into identical bags with none left over: the greatest number of bags (24) and what is in each bag (2 and 3, V2.3). (b) Sweets can be shared equally among 9 children or among 12 children: the smallest number above 200 (216, V2.4). (3) How many multiples of 7 are there from 100 to 500 (57)? How many of them are not multiples of 14 (29)? (V2.6). (4) A whole number has exactly five factors. True, false or not possible to tell: it is a square number (true); it is even (not possible to tell); it is less than 100 (not possible to tell) (V2.2).
 - **Go further (3).** G1 **Beyond (named): "Locker Parade".** 100 lockers are shut. Pupil 1 opens every locker, pupil 2 changes every 2nd locker (open becomes shut, shut becomes open), pupil 3 every 3rd, and so on to pupil 100. Which lockers are open at the end (the 10 square numbers, V2.7)? Why? Level note: factor pairs and square numbers; the proof that factors come in pairs is a secondary idea. G2 I am a 2-digit multiple of 8, my digits add up to 10 and dividing by 7 leaves 1 (64, V2.5). G3 Tom says a number that is a multiple of 4 and of 6 must be a multiple of 24. Find a counterexample (12, V2.8).
 - **Non-routine.** LIST T (V2.3), LIST G (V2.4), LOG T (V2.2), LOG G (V2.5), EXP G (V2.8), PAT G Beyond (V2.7).
 - **Numbers.** Factors of numbers to 100; packing numbers to 100; multiples in ranges to 500; digit tests on 4- and 5-digit numbers. The word "prime" is not used at Start here (it is absent from the syllabus); "a number with exactly two factors" is used at Think harder.
@@ -153,7 +153,7 @@ Can a new child join cold? Yes: the warm-ups cover Primary 4 recall (place value
 - **Remember (6 min).** (1) 3/4 = 0.75 and 3/8 = 0.375 (V6.2). (2) Order 0.5, 0.45, 0.405. (3) Spiral from H2: 3 / 4 as a fraction and as a decimal.
 - **Start here (6).** (1) Order 0.38, 0.308, 0.83, 0.3 from the smallest. (2) 3/8 = 0.375 and 7/20 = 0.35 (V6.2). (3) 3.45 x 100 = 345 (V6.1). (4) 0.078 x 1 000 = 78 (V6.1). (5) 52.6 / 100 = 0.526 (V6.1). (6) A money story with cents: 4 items at $2.45.
 - **Think harder (4).** (1) The sum of two numbers is 7.5 and their difference is 2.3: find them (4.9 and 2.6, V6.4). (2) A number is 4.3 correct to the nearest tenth and has 2 decimal places: the least and the greatest it can be (4.25 and 4.34, V6.3). (3) Write one decimal between 0.35 and 0.36 (for example 0.355); many answers are right. (4) Give 2.075 kg in kg and g (2 kg 75 g, V14.1).
-- **Go further (3).** G1 **Beyond (named): "Never-Ending Decimals".** Write 1/n as a decimal for n from 2 to 20: seven of them stop (n = 2, 4, 5, 8, 10, 16, 20, V6.6), the others repeat; 1/7 repeats the block 142857 (V6.7). What do 2, 4, 5, 8, 10, 16 and 20 have in common? Level note: terminating and recurring decimals; secondary. G2 Ravi has $9.60 more than Siti. Ravi spends $19.20 and then Siti has 3 times as much as Ravi has left: how much did each have at first (Siti $14.40, Ravi $24.00, V6.5)? G3 5/16 as a decimal (0.3125, V6.2): why does it need four places?
+- **Go further (3).** G1 **Beyond (named): "Never-Ending Decimals".** Write 1/n as a decimal for n from 2 to 20: seven of them stop (n = 2, 4, 5, 8, 10, 16, 20, V6.6), the others repeat; 1/7 repeats the block 142857 (V6.7). What do 2, 4, 5, 8, 10, 16 and 20 have in common? Level note: terminating and recurring decimals; secondary. G2 A bag of rice costs $1.80 more than a bag of flour, and 3 bags of rice and 2 bags of flour cost $21.40: flour $3.20 and rice $5.00 (V6.5; the earlier "spends, then 3 times as much" chain is the structure of Level 4 Lessons 18 and 37, audit M3). G3 5/16 as a decimal (0.3125, V6.2): why does it need four places?
 - **Non-routine.** EQ G (V6.5), CMP T (V6.4), LIST T (V6.3), POSE T, PAT G Beyond (V6.6).
 - **Numbers.** Decimals to 3 places; money to the cent; one answer to 4 places (G3).
 - **Home materials.** Pencil, a ruler marked in mm (optional).
@@ -170,7 +170,7 @@ Can a new child join cold? Yes: the warm-ups cover Primary 4 recall (place value
 - **Prerequisites.** Primary 4 area of rectangles and composite figures (p. 39).
 - **Remember (6 min).** (1) Area of a rectangle 8 cm by 5 cm. (2) The height meets the base at a right angle; name it in a drawn triangle. (3) Spiral from H4: 1/2 x 12 x 7 = 42.
 - **Start here (6).** (1) Count squares for a right-angled triangle on a grid with legs 6 and 4 (12). (2) A triangle with a horizontal base of 8 and height 5 on a grid (20). (3) Which segment is the height? (4) A rectangle 9 by 4 with a triangle of base 9 and height 4 on top: the area of the figure. (5) Find the shaded triangle in an L-shaped figure by taking away. (6) A story: a sail with base 7 m and height 6 m (21 m2).
-- **Think harder (4).** (1) A tilted triangle with corners at dots (1, 1), (6, 3) and (3, 7), counted as dots across and up: box it in a rectangle of 5 by 6 = 30 and subtract three corner triangles of 5, 6 and 6: 13 (V7.1). (2) A triangle has an area of 54 cm2 and a height of 9 cm: the base (12 cm, V7.6). (3) True, false or not possible to tell: two triangles with the same height have the same area (not possible to tell: the bases may differ). (4) Draw a triangle of area 12 cm2 on a grid in two different ways.
+- **Think harder (4).** (1) A tilted triangle with corners at dots (1, 1), (6, 3) and (3, 7), counted as dots across and up: box it in a rectangle of 5 by 6 = 30 and subtract three corner triangles of 5, 6 and 6: 13 (V7.1). (2) A triangle has an area of 45 cm2 and a height of 6 cm: the base (15 cm, V7.6; the holiday triangle of area 54 and the "area 42 with base 12" item are not reused, audit H1). (3) True, false or not possible to tell: two triangles with the same height have the same area (not possible to tell: the bases may differ). (4) Draw a triangle of area 12 cm2 on a grid in two different ways.
 - **Go further (3).** G1 **Beyond (named): "Dots Inside, Dots on the Edge".** On dot paper, a triangle with corners on dots has I dots strictly inside and B dots on its edge. Try ten triangles and find the rule: area = I + B/2 - 1 (checked on every triangle on a 6 by 6 grid, V7.2). On a 4 by 4 grid there are 48 triangles of area 3 (V7.5). Level note: Pick's theorem; secondary. G2 ABCD is a square of side 12 cm and M and N are the midpoints of AB and BC: the area of triangle DMN is 54 cm2, so shaded : whole = 3 : 8 (V7.3). G3 A right-angled triangle has legs 5 and 3: draw a rectangle of twice the area, 15 cm2 (3 by 5, V7.4).
 - **Non-routine.** GEO T (V7.1), EXP T, GEO G (V7.3), CHAL G (V7.4), PAT G Beyond (V7.2).
 - **Numbers.** Bases and heights to 20; grids to 8 by 8 dots; areas to 150 cm2; half squares allowed. "Coordinates" is not used; points are "dots across and up".
@@ -187,7 +187,7 @@ Can a new child join cold? Yes: the warm-ups cover Primary 4 recall (place value
 - **Objective.** Name triangles by sides and angles; find a third angle; use the exterior angle; chase an angle through two joined triangles with a reason at each step; judge statements about angles. Think harder: exterior angle, chain. Go further: Five-Point Star; a quadrilateral from its angles.
 - **Prerequisites.** Primary 4 angle notation. The angle facts (line 180, point 360, vertically opposite equal) are Geometry 1.1 to 1.3 and are **recalled, not taught** (plan open question 6, D9).
 - **Remember (6 min).** (1) An angle facts card: 180 on a line, 360 at a point, vertically opposite equal; find the other angle when 127 is on a line (53). (2) The angle sum of a triangle is 180. (3) Spiral from H8: isosceles base angles are equal.
-- **Start here (6).** (1) Name a triangle from its sides: equilateral, isosceles, scalene. (2) The third angle from 48 and 67 (65, Q1.7). (3) An isosceles triangle with a 40 degree angle at the top: the base angles (70, Q1.7). (4) An equilateral triangle: each angle 60. (5) Angles on a line, then a triangle: two steps. (6) Vertically opposite angles, then a triangle: two steps.
+- **Start here (6).** (1) Name a triangle from its sides: equilateral, isosceles, scalene. (2) The third angle from 48 and 67 (65, Q1.7). (3) An isosceles triangle with a 40 degree angle at the top: the base angles (70, Q1.7). (4) An equilateral triangle: each angle 60. (5) Angles on a line, then a triangle: two steps. (6) Vertically opposite angles, then a triangle: two steps. The two angle facts are first set at Primary 5 (D9 recalls them): the Remember rebuilds each by folding paper, and the page prints the fact in a box beside the picture, so a Term 1 joiner meets them taught, not recalled (audit M6).
 - **Think harder (4).** (1) AB = AC and angle BAC = 52 degrees; BC is extended to D: angle ACD = 116 degrees, which is 52 + 64 (V8.1). (2) AB = BD and AD = DC with D on BC; angle ABC = 44 degrees: (a) angle ADB = 68, (b) angle ACB = 34 (V8.2, V8.3, V8.7). (3) True, false or not possible to tell: "an isosceles triangle can have a right angle" (true); "can have two obtuse angles" (false, V8.5); "has one angle of 100 degrees so the other two are equal" (not possible to tell). (4) A figure of two joined triangles with a reason at each step.
 - **Go further (3).** G1 **Beyond (named): "Five-Point Star".** The five tips of a star drawn by joining every second point of five points on a circle add up to 180 degrees, whatever the five points (checked for 200 random stars, V8.4). Level note: polygon and star angle sums are not in the syllabus; the proof uses the exterior angle. G2 A chain like Think harder 2 with angle ABC = 60 degrees (angle ACB = 30). G3 A quadrilateral has angles 70, 110, 70, 110 in order: is it a parallelogram (true)? And 70, 110, 110, 70 (false: a trapezium) (V8.6).
 - **Non-routine.** GEO T (V8.1), GEO G (V8.2), LOG T (V8.5), EXP G (V8.6), EXP G Beyond (V8.4).
@@ -206,8 +206,8 @@ Can a new child join cold? Yes: the warm-ups cover Primary 4 recall (place value
 - **Prerequisites.** Primary 4 tables and fractions of a set.
 - **Remember (6 min).** (1) 3/5 of 40 (24). (2) Read a two-way table with a total row. (3) Spiral from H3: 2/5 of a class are boys, so 3/5 are girls.
 - **Start here (6).** (1) Sort 12 pupils into a table by two features. (2) Fill a Venn diagram from counts. (3) How many play only swimming. (4) How many play at least one game. (5) How many play neither. (6) A story with a table and a total row.
-- **Think harder (4).** (1) (a) In a group of 36 children, 24 swim, 19 cycle and 5 do neither: how many do at least one (31)? (b) How many do both (12, V9.1)? (2) Ann and Ben have $85, Ben and Cara $97, Ann and Cara $102: how much does Ann have ($45; Ben $40, Cara $57, V9.3)? (3) A library table: fiction 84 (boys) and 66 (girls), non-fiction 40 and 30: what percentage of the books are fiction, to the nearest whole number (68, V9.5)? (4) Four children finish a race: B ahead of C, C not last, A not first or last, D directly behind A (B, C, A, D, V9.6).
-- **Go further (3).** G1 **Beyond (named): "Squeeze the Overlap".** In a class of 45, 28 play chess and 31 play badminton and nobody plays neither or both is unknown: what is the least number who play both (14) and the greatest (28, V9.2)? Level note: inclusion and exclusion; a secondary idea. G2 2/5 of a class are boys; half of the boys and a third of the girls wear glasses; 18 wear glasses: how many pupils (45, V9.4)? G3 The same with percentages: 60 percent like cats and 70 percent like dogs and everyone likes at least one: at least 30 percent like both, at most 60 percent (V9.7).
+- **Think harder (4).** (1) (a) In a group of 36 children, 24 swim, 19 cycle and 5 do neither: how many do at least one (31)? (b) How many do both (12, V9.1)? (2) Ann and Ben have $85, Ben and Cara $97, Ann and Cara $102: how much does Ann have ($45; Ben $40, Cara $57, V9.3)? (3) A library table: fiction 84 (boys) and 66 (girls), non-fiction 40 and 30: what percentage of the books are fiction, to the nearest whole number (68, V9.5)? (4) Four children finish a race: B is in front of C, C is not last, A is not first or last, D is directly behind A (B, C, A, D, V9.6).
+- **Go further (3).** G1 **Beyond (named): "Squeeze the Overlap".** In a class of 45, 28 play chess and 31 play badminton; some pupils may play neither game: what is the least number who play both (14) and the greatest (28, V9.2)? Level note: inclusion and exclusion; a secondary idea. G2 2/5 of a class are boys; half of the boys and a third of the girls wear glasses; 18 wear glasses: how many pupils (45, V9.4)? G3 The same with percentages: 60 percent like cats and 70 percent like dogs and everyone likes at least one: at least 30 percent like both, at most 60 percent (V9.7).
 - **Non-routine.** CMP T (V9.3), TAB T (V9.5), LOG T (V9.6), MULTI G (V9.4), LIST G Beyond (V9.2).
 - **Numbers.** Classes up to 60; money to $200; percentages to the nearest whole number.
 - **Home materials.** 20 small things (not food), pencil; the Venn mat is printed.
@@ -225,14 +225,14 @@ Can a new child join cold? Yes: the warm-ups cover Primary 4 recall (place value
 - **Prerequisites.** None beyond lessons 1 to 9 through the warm-up.
 - **Remember (6 min).** Three recall items, one from each of three Term 1 strands: place value (shift 2 400 x 30), a fraction of a remainder, an isosceles angle.
 - **Start here (6, a menu).** One quick item from each of six Term 1 strands (see the Quest gates for the style); the child chooses four.
-- **Think harder (4).** (1) Ali has 4 times as many cards as Ben. After Ali gives Ben 36 cards, Ali has twice as many as Ben: how many cards did each have at first (Ben 54, Ali 216, V10.1). (2) Mia spent 2/5 of her money on a book and then $18 on lunch and had $24 left: how much at first ($70, V10.2). (3) The beads repeat 3, 1, 4, 1, 5 in blocks: the 117th term is 1 and the sum of the first 117 is 326 (V10.3). (4) An angle chain from the warm-up.
-- **Go further (3).** G1 **Beyond (named): "Exactly One".** Write a number puzzle that has exactly one answer and prove it by listing every case. Example for the tutor: "I am a 2-digit number, my digits add up to 12, I leave 1 when divided by 4 and my tens digit is smaller than my ones digit" has the single answer 57 (V10.5). Level note: designing and proving a unique answer is a secondary idea. G2 Four runners P, Q, R and S: S is not first, P finishes ahead of Q, R finishes directly behind P and Q is not last (order P, R, Q, S, V10.4). G3 Choose a heuristic for a new problem and say why in a sentence.
+- **Think harder (4).** (1) Ali has 7 times as many stamps as Ben. After Ali gives Ben 30 stamps, Ali has 3 times as many as Ben: how many stamps did each have at first (Ben 30, Ali 210, V10.1; the earlier "4 times, then twice as many" item is Level 4 Lesson 13 Go further 3, audit M3). (2) Rui read 3/5 of a book on Monday and 1/4 of the whole book on Tuesday, and 33 pages were left: how many pages in the book (220, V10.2; the "fraction then a fixed amount" structure of the holiday exit ticket is not used, audit H1). (3) The beads repeat 3, 1, 4, 1, 5 in blocks: the 117th term is 1 and the sum of the first 117 is 326 (V10.3). (4) An angle chain from the warm-up.
+- **Go further (3).** G1 **Beyond (named): "Exactly One".** Write a number puzzle that has exactly one answer and prove it by listing every case. Example for the tutor: "I am a 2-digit number, my digits add up to 12, I leave 1 when divided by 4 and my tens digit is smaller than my ones digit" has the single answer 57 (V10.5). Level note: designing and proving a unique answer is a secondary idea. G2 Four runners P, Q, R and S: S is not first, P finishes in front of Q, R finishes directly behind P and Q is not last (order P, R, Q, S, V10.4). G3 Choose a heuristic for a new problem and say why in a sentence.
 - **Non-routine.** EQ T (V10.1), BACK T (V10.2), PAT T (V10.3), LOG G (V10.4), CHAL G Beyond (V10.5).
 - **Numbers.** Within the Term 1 ranges.
 - **Home materials.** Pencil, plain paper; the Quest Log stays closed in the book; a quest partner.
-- **Kit.** None cut. The Quest Log (3 pages) is in Book 2.
+- **Kit.** None cut. The Quest Log (4 pages, as sections 0.1, 8 and D19) is in Book 2.
 - **Figures.** As the gates (section 8.1): `place_mat`, `venn`, `angle_fig`.
-- **Misconceptions.** Starting every problem by adding; reading "4 times as many" as "4 more"; treating the Quest as a race; choosing a heuristic by habit rather than reason.
+- **Misconceptions.** Starting every problem by adding; reading "7 times as many" as "7 more"; treating the Quest as a race; choosing a heuristic by habit rather than reason.
 - **Needs.** Quest builder (TL3), Y1, Y6, Y7.
 
 ### 1.3 Term 2: Measure and Make (lessons 11 to 20)
@@ -248,7 +248,7 @@ Can a new child join cold? Yes: the warm-ups recall Primary 4 area, nets, decima
 - **Remember (6 min).** (1) A cube has 6 faces, 12 edges and 8 corners; which of three nets folds to a cube (P4). (2) The top view of a stack of 3 cubes on 2 cubes. (3) Spiral from H5: a 3 x 2 x 2 box holds 12 cubes.
 - **Start here (6).** (1) A numbered top view with counts 2, 1 / 3, 1: how many cubes (7, Q2.1)? (2) Draw the front view from the numbers. (3) Which net folds to a cube (circle). (4) On a die the 1 is opposite the 6: write the face opposite 2, 3, 4. (5) How many faces of one cube show in a stack of two cubes. (6) Match a stack to its top view.
 - **Think harder (4).** (1) Top view with counts 2, 0, 1 / 3, 1, 0 / 1, 2, 2: the total is 12 cubes; the front view columns are 3, 2, 2 and the side view rows are 2, 3, 2 (V11.5). (2) (a) Four dice are stacked in a tower and the top shows 5: the sum of all faces you can see is 61 (each die shows 14 on its four sides, V11.2). (b) Three dice stand in a row and touching faces add to 8; the left end shows 2: the right end shows 3 (V11.3). (3) A 5 x 5 x 5 cube has its top and front faces painted and is cut into 125 small cubes: 5 cubes have two painted faces, 40 have one and 80 have none (V11.4). (4) Check that the net of a die has opposite faces adding to 7 (V11.1).
-- **Go further (3).** G1 **Beyond (named): "Hidden Cubes".** The front view shows columns of 3, 1, 2 cubes and the side view rows of 2, 3, 1: what is the fewest number of cubes and what is the most (6 and 14, V11.6)? Level note: reconstructing a solid from its views; secondary. G2 With the stack of Think harder 1, what is the greatest number of cubes that can be added without changing the front and side views (7), and without changing any of the three views (3) (V11.7)? G3 Which of four pictures cannot be the top view of a stack with these two views.
+- **Go further (3).** G1 **Beyond (named): "Hidden Cubes".** The front view shows columns of 1, 2, 3 cubes and the side view rows of 2, 2, 3: what is the fewest number of cubes and what is the most (8 and 16, from 469 possible stacks, V11.6; Level 4 Lesson 27 keeps the 3, 1, 2 and 2, 3, 1 pair, audit M3)? Level note: reconstructing a solid from its views; secondary. G2 With the stack of Think harder 1, what is the greatest number of cubes that can be added without changing the front and side views (7), and without changing any of the three views (3) (V11.7)? G3 Which of four pictures cannot be the top view of a stack with these two views.
 - **Non-routine.** DIAG T (V11.5), LOG T (V11.2, V11.3), LIST T (V11.4), LIST G (V11.7), DIAG G Beyond (V11.6).
 - **Numbers.** Bases up to 4 by 4, heights up to 5; dice 1 to 6; counts to 125.
 - **Home materials.** Tape; a die from a board game (optional); up to 12 small blocks (optional; the drawn fallback is complete).
@@ -282,8 +282,8 @@ Can a new child join cold? Yes: the warm-ups recall Primary 4 area, nets, decima
 - **Objective.** Convert litres, ml and cm3; find the volume of water in a tank; find the new depth after adding water; fractions of a tank backwards; a block laid or stood in the water. Think harder: fraction and amount; depth after pouring; litres from edges. Go further: block in two orientations; Stepped Tank.
 - **Prerequisites.** Lesson 12.
 - **Remember (6 min).** (1) 1 l = 1 000 ml = 1 000 cm3. (2) Volume of a 40 x 25 x 6 slab (6 000 cm3 = 6 l, Q2.3). (3) Spiral from H5: the rise of water when a 12 cm3 solid sinks in a 4 x 3 base (1 cm).
-- **Start here (6).** (1) 2.5 l in ml. (2) A tank 40 cm by 25 cm with water 6 cm deep holds how many litres (6, Q2.3). (3) A bottle holds 1 l: how many cm3. (4) The volume of water in a 30 x 20 base tank 12 cm deep. (5) Half a tank of 48 l. (6) Draw the water level at 3/4.
-- **Think harder (4).** (1) A tank is 3/10 full; after 3.5 l are added it is 4/5 full: its capacity is 7 l (V13.2). (2) A tank has a base 50 cm by 30 cm and water 8 cm deep; 4.5 l are poured in: the depth is now 11 cm (V13.4). (3) A tank 60 cm long, 40 cm wide and 35 cm high holds 84 l when full (V13.5). (4) True, false or not possible to tell: if water 5 cm deep fills 2/3 of a tank, the tank is 7.5 cm deep (true).
+- **Start here (6).** (1) 2.5 l in ml. (2) A tank 40 cm by 25 cm with water 6 cm deep holds how many litres (6, Q2.3). (3) A bottle holds 1 l: how many cm3. (4) The volume of water in a 25 x 20 base tank 12 cm deep (6 000 cm3, V13.6). (5) Half a tank of 48 l. (6) Draw the water level at 3/4.
+- **Think harder (4).** (1) A tank is 3/10 full; after 3.5 l are added it is 4/5 full: its capacity is 7 l (V13.2). (2) A tank has a base 50 cm by 30 cm and water 8 cm deep; 4.5 l are poured in: the depth is now 11 cm (V13.4). (3) A tank 70 cm long, 50 cm wide and 36 cm high holds 126 l when full (V13.5; the holiday tank was 60 by 40, audit L7). (4) True, false or not possible to tell: if water 5 cm deep fills 2/3 of a tank, the tank is 7.5 cm deep (true).
 - **Go further (3).** G1 **Beyond (named): "Stepped Tank".** A tank 60 cm wide and 20 cm from front to back has a fixed step 30 cm wide and 12 cm high along one end of the floor. 9 l of water are poured into the empty tank: how deep is the water over the free floor (13.5 cm, V13.1)? The depth rises faster once the step is covered. Level note: height from volume and base area (P6) with a changing base. G2 A tank 36 cm by 25 cm has water 9 cm deep. A block 10 cm by 9 cm by 18 cm is stood upright: the depth becomes 10 cm (V13.3); laid on its 10 x 18 face it is covered and the water rises to 10.8 cm (V13.3). G3 A tank with a divider: water is poured into one side until it spills over.
 - **Non-routine.** BACK T (V13.2), CTX T (V13.4), DIAG G (V13.3), DIAG G Beyond (V13.1), EXP T.
 - **Numbers.** Edges 3 to 60 cm; depths 2 to 30 cm; volumes to 90 l; decimals in litres to 1 place.
@@ -318,8 +318,8 @@ Can a new child join cold? Yes: the warm-ups recall Primary 4 area, nets, decima
 - **Objective.** Cut a parallelogram into a rectangle and a trapezium into a parallelogram; show the square on the midpoints of a square has half the area; find areas of folded paper. Think harder: midpoint square, statements, draw. Go further: folded corner; Midpoint Squares.
 - **Prerequisites.** Lesson 7.
 - **Remember (6 min).** (1) Area of a triangle is half base times height. (2) A parallelogram has opposite sides parallel. (3) Spiral from H4: same base, same height, same area.
-- **Start here (6).** (1) Area by counting squares. (2) A right-angled triangle is half a rectangle. (3) Cut a parallelogram and slide a triangle: rectangle 9 by 5 = 45 (V15.2). (4) A trapezium as two triangles: (7 + 11) / 2 x 4 = 36 (V15.2). (5) A composite figure by adding. (6) A shaded part by taking away.
-- **Think harder (4).** (1) A square of side 8 cm: join the midpoints of its sides; the new square has area 32 cm2 (V15.1); show it by cutting. (2) True, false or not possible to tell: a parallelogram and a rectangle on the same base and between the same parallel lines have the same area (true). (3) Draw a parallelogram with the same area as a triangle of base 6 cm and height 5 cm (15 cm2, for example base 5 and height 3). (4) The half of a half: the triangle cut off a rectangle by a diagonal.
+- **Start here (6).** (1) Area by counting squares. (2) A right-angled triangle is half a rectangle. (3) A rectangle 12 cm by 7 cm is cut along a diagonal: each triangle has area 42 cm2 (V15.5). (4) Count the squares of a right-angled triangle on a grid with legs 6 and 4: 12. (5) A composite figure by adding. (6) A shaded part by taking away.
+- **Think harder (4).** (1) A square of side 8 cm: join the midpoints of its sides; the new square has area 32 cm2 (V15.1); show it by cutting. (2) True, false or not possible to tell: a parallelogram and a rectangle on the same base and between the same parallel lines have the same area (true). (3) (a) Cut a parallelogram and slide a triangle: rectangle 9 by 5 = 45 (V15.2); (b) a trapezium as two triangles: (7 + 11) / 2 x 4 = 36 (V15.2); parallelogram and trapezium area are not in the primary syllabus, so they moved here from Start here (audit M6); (c) draw a parallelogram with the same area as a triangle of base 6 cm and height 5 cm (15 cm2, for example base 5 and height 3). (4) The half of a half: the triangle cut off a rectangle by a diagonal.
 - **Go further (3).** G1 **Beyond (named): "Midpoint Squares".** Join the midpoints again and again: the areas are 64, 32, 16, 8, 4 cm2 (V15.1); after how many joinings is the area first below 1 cm2 (seven: 0.5, V15.4)? Level note: halving and geometric patterns; secondary. G2 A rectangle ABCD is 12 cm by 8 cm. C is folded onto P on AB with AP = 8 cm: the part that is two layers thick is 25 cm2 and the folded figure covers 71 cm2 (V15.3). G3 A figure that needs a cut and a swap to find a shaded area.
 - **Non-routine.** GEO G (V15.3), EXP T, CHAL T, PAT G Beyond (V15.1).
 - **Numbers.** Sides to 20 cm; areas to 150 cm2; half cm2 allowed.
@@ -353,7 +353,7 @@ Can a new child join cold? Yes: the warm-ups recall Primary 4 area, nets, decima
 - **Strand.** MOE Statistics: average as total divided by number of data is **P6** (p. 44), so this lesson is a labelled preview; P5 Standard has no Statistics strand. The 2020 to 2024 papers set average at P5 (87 items) and the 2025 papers do not. **Holiday boundary:** none (the holiday course has no average).
 - **Objective.** Level out by moving items; average = total / number; total = average x number; the effect of adding or removing a value; the average of two groups. Think harder: add a value; the missing bar; a data table. Go further: Merging Classes.
 - **Prerequisites.** Primary 4 bar graphs and tables (p. 40).
-- **Remember (6 min).** (1) Four numbers 4, 9, 5, 6, 6 levelled out: each becomes 6 (V17.4). (2) Total and number. (3) Read a bar graph.
+- **Remember (6 min).** (1) Five numbers 4, 9, 5, 6, 6 levelled out: each becomes 6 (V17.4). (2) Total and number. (3) Read a bar graph.
 - **Start here (6).** (1) Share 24 counters equally among 4 children by moving items. (2) The average of 4, 7, 9, 12 (8, Q2.7). (3) The total from an average and a number. (4) A missing value from a total. (5) A bar graph average by levelling. (6) A story with a table.
 - **Think harder (4).** (1) The average of six test scores is 74; what must the seventh be for the average of seven to be 76 (88, V17.1)? (2) A bar graph shows Monday 48, Tuesday 57, Wednesday 45 and Thursday 60 and the average of five days was 52: draw Friday's bar (50, V17.3). (3) Which class is closest to the average on a bar graph. (4) Average of a data table.
 - **Go further (3).** G1 **Beyond (named): "Merging Classes".** 12 children have an average mark of 15 and 8 children an average of 20: the average of all 20 children is 17, not 17.5 (V17.2). Level note: a weighted average; secondary. G2 Five numbers 1, 1, 1, 1, 16 have an average of 4 although no number is near 4 (V17.5): explain. G3 The average of 5 consecutive whole numbers is 12: they are 10 to 14 (V17.6).
@@ -466,9 +466,9 @@ Can a new child join cold? Yes: the warm-ups recall fraction of a quantity, frac
 - **Objective.** Write one number as a percent of another (also to the nearest whole percent); find a percentage of a remainder; judge statements about percents; preview finding the whole. Think harder: nearest percent; statements; percent of a remainder. Go further: find the whole; Juice Mix.
 - **Prerequisites.** Lesson 21.
 - **Remember (6 min).** (1) 18 out of 24 as a fraction in the simplest form. (2) 30% of $250. (3) Spiral from H7: 24 out of 40 is 60%.
-- **Start here (6).** (1) 18 out of 24 is 75% (Q3.3, V23.1). (2) 15 out of 20. (3) 9 out of 12 as a percent. (4) What percent of 50 is 7. (5) A table with a total row. (6) What percent of an hour is 15 minutes.
-- **Think harder (4).** (1) 41 out of 60 as a percent to the nearest whole number (68%, V23.1). (2) Ali had $250. He spent 40% on shoes and 30% of the rest on a bag: the bag cost $45 (V23.4). (3) Of the cars in a car park 52% are red. True, false or not possible to tell: more than half are red (true); there are 52 cars (false: the number of cars must be a multiple of 25, V23.3); the number of red cars is even (not possible to tell: 25 cars have 13 red, 50 have 26). (4) A table of marks: the percent that passed.
-- **Go further (3).** G1 **Beyond (named): "Juice Mix".** 2 kg of juice that is 20% fruit is mixed with 3 kg that is 40% fruit: the mixture is 32% fruit (V23.2). Level note: weighted percentages; secondary. G2 An amount is 45% of a whole and is 36: the whole is 80 (P6 preview, V23.1). G3 After spending 40% on shoes and 30% of the rest the rest is $105: the money at first.
+- **Start here (6).** (1) 18 of the 24 pupils in a class are girls: what percent are girls (75%, Q3.3, V23.1). (2) 15 of the 20 pupils wear glasses: what percent. (3) 9 of the 12 sweets are red: what percent. (4) What percent of 50 is 7. (5) A table with a total row. (6) What percent of an hour is 15 minutes.
+- **Think harder (4).** (1) 41 out of 60 as a percent to the nearest whole number (68%, V23.1). (2) Ali had $400. He spent 35% on shoes and 20% of the rest on a bag: the bag cost $52 (V23.4; the holiday "40% then 50% of the rest" is not reused, audit H1). (3) Of the cars in a car park 52% are red. True, false or not possible to tell: more than half are red (true); there are 52 cars (false: the number of cars must be a multiple of 25, V23.3); the number of red cars is even (not possible to tell: 25 cars have 13 red, 50 have 26). (4) A table of marks: the percent that passed.
+- **Go further (3).** G1 **Beyond (named): "Juice Mix".** 2 kg of juice that is 20% fruit is mixed with 3 kg that is 40% fruit: the mixture is 32% fruit (V23.2). Level note: weighted percentages; secondary. G2 An amount is 45% of a whole and is 36: the whole is 80 (P6 preview, V23.1). G3 After spending 35% on shoes and 20% of the rest, $208 is left: the money at first ($400, V23.4).
 - **Non-routine.** LOG T (V23.3), MULTI T (V23.4), BACK G (V23.1), CMP G Beyond (V23.2).
 - **Numbers.** Percents to the nearest whole number; wholes to 500.
 - **Home materials.** Pencil.
@@ -522,7 +522,7 @@ Can a new child join cold? Yes: the warm-ups recall fraction of a quantity, frac
 - **Remember (6 min).** (1) The next two numbers of 7, 12, 17 and the rule in words. (2) A table of figure number and dots. (3) Spiral from H9: 5, 9, 13, 17 has a constant step of 4.
 - **Start here (6).** (1) Say the rule in words for 4, 11, 18, 25. (2) The 10th term of 3, 8, 13 (48). (3) Complete a table for a figure pattern of rows. (4) Is 98 in the pattern 3, 8, 13, ... (yes, the 20th). (5) Find the figure number from the dots. (6) Which rule gives the numbers in the table.
 - **Think harder (4).** (1) 2, 5, 11, 20, 32: the gaps are 3, 6, 9, 12, so the 8th term is 86 (V26.1). (2) 3, 40, 7, 35, 11, 30, ... is two sequences woven together: the 13th term is 27 and the sum of the first 10 is 205 (V26.2). (3) Figure 1 has 5 dots, figure 2 has 8, figure 3 has 13, figure 4 has 20: figure 10 has 104 dots and 229 dots is figure 15 (V26.6). (4) The triangle numbers 1, 3, 6, 10, ...: pair the numbers to add 1 + 2 + ... + 24 (300); the first triangle number above 300 is the 25th (325, V26.3).
-- **Go further (3).** G1 **Beyond (named): "Not Always Doubling".** Put 1, 2, 3, ... points on a circle and join every pair: the regions are 1, 2, 4, 8, 16, but with 6 points there are 31, and with 7 there are 57 (V26.4). Level note: a pattern that is not what it looks like; secondary. G2 An invented rule found from three examples: n x n + 1 gives 5, 10, 17 for n = 2, 3, 4 and so does n x n + 1 + (n - 2)(n - 3)(n - 4); they disagree at n = 5 (26 and 32, V26.5). G3 Prove by pairing why 1 + 2 + ... + n is half of n x (n + 1).
+- **Go further (3).** G1 **Beyond (named): "Not Always Doubling".** Put 1, 2, 3, ... points on a circle and join every pair: the regions are 1, 2, 4, 8, 16, but with 6 points there are 31, and with 7 there are 57 (V26.4). Level note: a pattern that is not what it looks like; secondary. G2 An invented rule found from three examples: n x n + 1 gives 5, 10, 17 for n = 2, 3, 4 and so does n x n + 1 + (n - 2)(n - 3)(n - 4); they disagree at n = 5 (26 and 32, V26.5). G3 Show that the sum of any 5 neighbouring whole numbers is 5 times the middle one, for example 10 + 11 + 12 + 13 + 14 = 60 (V26.7); this replaces the pairing proof of 1 + 2 + ... + n, which is the explanation of holiday H9 challenge 1 (audit L7).
 - **Non-routine.** PAT T (V26.1, V26.2, V26.6, V26.3), PAT G (V26.4), TAB T, LOG G (V26.5).
 - **Numbers.** Terms to 200; positions to 100; chords for 1 to 7 points.
 - **Home materials.** Pencil, squared paper.
@@ -539,7 +539,7 @@ Can a new child join cold? Yes: the warm-ups recall fraction of a quantity, frac
 - **Prerequisites.** Primary 4 multiplication.
 - **Remember (6 min).** (1) 3 tops and 2 bottoms: list all outfits (6). (2) 4 children and handshakes by listing (6). (3) Spiral from H9: the squares of a 2 x 2 grid (5).
 - **Start here (6).** (1) List all outfits. (2) A tree diagram of two choices. (3) List all 2-digit numbers from the cards 2, 5, 7. (4) How many pairs from 5 children (10). (5) Match each list with a count. (6) A menu with 3 mains and 2 drinks.
-- **Think harder (4).** (1) A fence is 45 m long with a post every 5 m: 10 posts (9 gaps); round a pond of 45 m: 9 posts (V27.1). (2) Triangle ABC has points P, Q, R on BC and lines AP, AQ, AR: 10 triangles (V27.2). (3) A book uses 282 digits to number its pages from 1: it has 130 pages (V27.4). (4) Four children stand in a line and Ann and Ben must not stand next to each other: 12 lines (V27.3).
+- **Think harder (4).** (1) A fence is 45 m long with a post every 5 m: 10 posts (9 gaps); round a pond of 45 m: 9 posts (V27.1). (2) Triangle ABC has points P, Q, R on BC and lines AP, AQ, AR: 10 triangles (V27.2). (3) A sign-maker uses 522 digits for the house numbers 1 up to the last house on a street: the street has 210 houses (V27.4; Level 3 Lesson 34 keeps the page-number version, audit L7). (4) Four children stand in a line and Ann and Ben must not stand next to each other: 12 lines (V27.3).
 - **Go further (3).** G1 **Beyond (named): "Triangles Hiding".** Six lines meet at A and cross two parallel lines: there are 30 triangles (2 x 15, V27.2); with five lines and two parallels, 20. Level note: counting by choosing lines; secondary. G2 Nine children each shake hands once with every other child: 36 handshakes (V27.3). G3 How many whole numbers from 2 000 to 3 999 have 4 different digits (1 008, V27.5).
 - **Non-routine.** DIAG T (V27.2), WAYS T (V27.3), LIST T (V27.4), WAYS G (V27.3), LIST G (V27.5), DIAG G Beyond (V27.2).
 - **Numbers.** Choices to 6; groups of people to 10; digits to 4; lines to 6.
@@ -614,8 +614,8 @@ Can a new child join cold? Yes: the warm-ups recall the angle facts and the tria
 - **Objective.** Use 360 degrees for a quadrilateral; find the sum for a pentagon (540) and hexagon (720) by dividing into triangles; find one angle of a regular polygon; walk round a polygon turning at each corner. Think harder: pentagon and hexagon sums; regular pentagon chain; draw a regular polygon from its angle. Go further: Turtle Walk.
 - **Prerequisites.** Lesson 8; Primary 4 angle measuring.
 - **Remember (6 min).** (1) The angle sum of a triangle is 180. (2) The angle facts card of lesson 8. (3) Spiral from H8: a quadrilateral has angles adding to 360.
-- **Start here (6).** (1) Three angles of a quadrilateral are 95, 110 and 80: the fourth is 75. (2) Opposite angles of a parallelogram. (3) A rhombus with an angle of 70 and the other angles. (4) A trapezium between parallel lines. (5) Draw one diagonal of a quadrilateral and see two triangles. (6) A chain with a parallelogram.
-- **Think harder (4).** (1) A pentagon splits into 3 triangles from one corner, so its angles add to 540; a hexagon splits into 4, so 720 (V31.1). (2) In a regular pentagon ABCDE each angle is 108; angle BAC is 36 and angle CAD is 36 (V31.3). (3) Each angle of a regular polygon is 140: it has 9 sides (V31.2). (4) True, false or not possible to tell: a polygon whose angles add to 720 has 6 sides (true).
+- **Start here (6).** (1) A parallelogram has an angle of 72 degrees: the angle next to it is 108 and the opposite angle is 72 (V31.6). (2) Opposite angles of a parallelogram. (3) A rhombus with an angle of 70 and the other angles. (4) A trapezium between parallel lines. (5) Draw one diagonal of a quadrilateral and see two triangles. (6) A chain with a parallelogram.
+- **Think harder (4).** (1) (a) Three angles of a quadrilateral are 95, 110 and 80: the fourth is 75, because two triangles make 360 (moved here from Start here: polygon angle sums are not in the primary syllabus, audit M6); (b) a pentagon splits into 3 triangles from one corner, so its angles add to 540; a hexagon splits into 4, so 720 (V31.1). (2) In a regular pentagon ABCDE each angle is 108; angle BAC is 36 and angle CAD is 36 (V31.3). (3) Each angle of a regular polygon is 140: it has 9 sides (V31.2). (4) True, false or not possible to tell: a polygon whose angles add to 720 has 6 sides (true).
 - **Go further (3).** G1 **Beyond (named): "Turtle Walk".** A turtle walks round a polygon and turns at every corner; the turns add to 360 for any polygon (checked on 100 random polygons, V31.4). If each turn is 24 degrees the polygon has 15 sides (V31.2). Level note: exterior angles; secondary. G2 Each angle of a regular 12-sided polygon is 150 (V31.1). G3 Find the number of sides of a polygon whose angle sum is 1 260 (9, V31.5).
 - **Non-routine.** GEO T (V31.3), LOG T, CHAL T (V31.2), PAT G Beyond (V31.4).
 - **Numbers.** Whole degrees; polygons up to 12 sides.
@@ -653,7 +653,7 @@ Can a new child join cold? Yes: the warm-ups recall the angle facts and the tria
 - **Start here (6).** (1) Time differences across noon: 3:45 pm to 10:25 pm. (2) Change 2150 hours to 9:50 pm. (3) The angle between the hands at 4:00 is 120 (Q4.3). (4) The weekday after 3 days. (5) The same weekday dates on a calendar. (6) How many days in 3 weeks.
 - **Think harder (4).** (1) The angle between the hands at 7:20 is 100 degrees (V33.1). (2) After 3:00 the hands first meet at 3:16 and 4/11 minutes (V33.2). (3) A film ends at 2:10 pm after 3 h 45 min: it began at 10:25 am (V33.5). (4) Today is Tuesday: 150 days later it is Friday (150 = 21 weeks and 3 days, V33.4).
 - **Go further (3).** G1 **Beyond (named): "How Often Do the Hands Meet".** In 12 hours the hands meet 11 times and make a right angle 22 times (V33.3). Level note: relative speed of the hands, a secondary idea. G2 A common year of 365 days has one weekday 53 times: the weekday it starts on (V33.6). G3 A 24-hour pay problem: 2150 to 0630 at $9 an hour ($78, V33.7).
-- **Non-routine.** GEO T (V33.1), BACK T (V33.5), PAT G (V33.4), LIST G Beyond (V33.3).
+- **Non-routine.** GEO T (V33.1), BACK T (V33.5), PAT G (V33.4), CTX G (V33.7), LIST G Beyond (V33.3).
 - **Numbers.** Times to the minute; days to 365; 24-hour times written 2150.
 - **Home materials.** A real clock (optional); a calendar of any year.
 - **Kit (KT12 `clock_kit`, one page, 6 pieces to cut).** 2 faces (not cut), 3 hour hands and 3 minute hands. Contract: a task uses 2 faces and 2 + 2 hands; supplied 2 + 3 + 3, maximum used 2 + 2 + 2. Loose hands, no fastener.
@@ -669,7 +669,7 @@ Can a new child join cold? Yes: the warm-ups recall the angle facts and the tria
 - **Prerequisites.** Primary 4 addition.
 - **Remember (6 min).** (1) Which two statements cannot both be true. (2) Ones digit of a sum. (3) Spiral from H10: three children and three pets by elimination.
 - **Start here (6).** (1) A 3 by 3 grid with three clues. (2) Order three children from two clues. (3) Fill the ones column of AB + B = CB. (4) A two-clue number riddle. (5) Tick and cross in a grid. (6) Who is not telling the truth in a pair.
-- **Think harder (4).** (1) Five runners V, W, X, Y, Z: V is neither first nor last, W is directly behind V, X is ahead of V, Y is ahead of X and Z is behind W; the order is Y, X, V, W, Z (V34.1). (2) Four children: exactly one lies. Ana: "Ben is lying". Ben: "Cara and Dev both tell the truth". Cara: "Ana is lying". Dev: "Ben and Cara both tell the truth". Ana is the liar (V34.2, and without the rule "exactly one liar" the clues do not decide). (3) ABC + BBB = DCCE has the single solution 562 + 666 = 1228 (V34.3). (4) Find the error in a digit-puzzle solution.
+- **Think harder (4).** (1) Five runners V, W, X, Y, Z: V is neither first nor last, W is directly behind V, X is in front of V, Y is in front of X and Z is behind W; the order is Y, X, V, W, Z (V34.1). (2) Four children: exactly one lies. Ana: "Ben is lying". Ben: "Cara and Dev both tell the truth". Cara: "Ana is lying". Dev: "Ben and Cara both tell the truth". Ana is the liar (V34.2, and without the rule "exactly one liar" the clues do not decide). (3) ABC + BBB = DCCE has the single solution 562 + 666 = 1228 (V34.3). (4) Find the error in a digit-puzzle solution.
 - **Go further (3).** G1 **Beyond (named): "Digit Detective".** ABACD + CAEF = CFFCC has one solution, 64675 + 7602 = 72277; the carry from the thousands column makes C = 7 (V34.4). Level note: cryptarithms with carries; Level 3 enrichment. G2 Several liars among five children. G3 A 5 by 5 square with diagonals (picture needed).
 - **Non-routine.** LOG T (V34.1, V34.2), EXP T, LOG G Beyond (V34.4).
 - **Numbers.** Letters stand for different digits; no number starts with 0; 3- to 5-digit sums.
@@ -719,12 +719,12 @@ Can a new child join cold? Yes: the warm-ups recall the angle facts and the tria
 
 - **Big idea.** Long questions are short ones joined together.
 - **Strand.** Multi-step problems combining fractions, percent, rate and area (the Paper 2 question 17 form). **Holiday boundary:** none specific; the pieces repeat H3, H6 and H7 stems, which are barred. New: a three-step story with a fraction and a percent, a decimal unit chain, a charge in steps inside a story, a spare clue.
-- **Objective.** Split a long question into parts; mark what is asked; use part (a) for part (b). Think harder: three-step; decimal chain; steps. Go further: Spare Clue; four-step.
+- **Objective.** Split a long question into parts; mark what is asked; use part (a) for part (b). Think harder: three-step; decimal chain; steps. Go further: Which Third Side; four-step.
 - **Prerequisites.** Lessons 22, 24, 28 through the warm-up.
 - **Remember (6 min).** (1) 30% of 60. (2) 2/7 of 42. (3) A bar model with a total.
 - **Start here (6).** (1) A two-step story with a model. (2) Mark the question asked. (3) Find the missing step. (4) A bar model first, then the sum. (5) A table of steps. (6) Check by estimating.
 - **Think harder (4).** (1) A shop had 60 kg of rice, sold 3/10 on Monday and 2/7 of the rest on Tuesday: 30 kg were left (V37.1). (2) A bicycle costs $450; a 20% discount and then 9% GST are added; a deposit of 25% is paid and the rest in 6 equal instalments of $49.05 (V37.5). (3) Ravi has $4.50 more than Siti; both save $3.60 and then Siti has 2/3 of Ravi's money: Siti had $5.40 and Ravi $9.90 at first (V37.2). (4) An audio guide costs $1.50 for the first 30 minutes and $0.80 for every further 15 minutes or part: 2 h 5 min costs $7.10 and $8.70 buys at most 165 minutes (V37.3).
-- **Go further (3).** G1 **Beyond (named): "Spare Clue".** A rectangle has a perimeter of 36 cm and its length is 2 cm more than its width, and its area is 80 cm2: the sides are 8 and 10; the area clue was not needed, and with "area 84" no rectangle fits (V37.4). Level note: reading a problem for the clues it needs. G2 A four-step unit chain with decimals. G3 A step charge in a longer story.
+- **Go further (3).** G1 **Beyond (named): "Which Third Side?".** Two sides of a triangle are 6 cm and 10 cm and the third is a whole number of centimetres: it can be any length from 5 to 15, so 11 different triangles; 4 cm and 16 cm cannot be drawn because the two short sides must together be longer than the long side (V37.4). Level note: the triangle inequality is not a primary topic. The earlier item ("Spare Clue", reading a problem for the clues it needs) is a process skill, not a beyond-school idea (audit L5). G2 A four-step unit chain with decimals. G3 A step charge in a longer story.
 - **Non-routine.** MULTI T (V37.1, V37.5), EQ G (V37.2), CTX G (V37.3), EXP G Beyond (V37.4).
 - **Numbers.** Totals to $1 000; steps to 6; decimals to 2 places.
 - **Home materials.** Pencil.
@@ -758,8 +758,8 @@ Can a new child join cold? Yes: the warm-ups recall the angle facts and the tria
 - **Objective.** Colour a figure of circles joined by lines so joined circles differ; find the fewest colours with a proof; count colourings by choosing one circle at a time; find the nth colour of a repeating cycle. Think harder: count by multiplying; a ring of five; a cycle. Go further: Ten Circles.
 - **Prerequisites.** None.
 - **Remember (6 min).** (1) 3 x 2 x 2. (2) The 12th term of a cycle of 4. (3) Draw a path of 4 circles.
-- **Start here (6).** (1) Colour a small figure with 3 colours (letters A, B, C). (2) Two joined circles: 6 ways with 3 colours. (3) Which figure needs only 2 colours. (4) A path of 4 circles with 3 colours: 24 ways (Q4.8). (5) Spot the wrong colouring. (6) The next circles in a repeating pattern.
-- **Think harder (4).** (1) Six circles in a line, 4 colours: 4 x 3^5 = 972 colourings (V39.1). (2) Five circles in a ring: 30 colourings with 3 colours and none with 2 (V39.1). (3) A hub joined to a ring of five circles needs 4 colours (V39.1). (4) The colours repeat A, B, B, C: the 50th is B and there are 25 B's in the first 50 (V39.3).
+- **Start here (6).** (1) Colour a small figure with 3 colours (letters A, B, C). (2) Two joined circles with the letters A, B, C: tick which of four drawn colourings are correct (joined circles differ; R5.2). (3) Which figure needs only 2 colours. (4) Colour a path of 4 circles with A, B, C so that joined circles differ; many answers are right (Q4.10). Counting the ways is Think harder (1). (5) Spot the wrong colouring. (6) The next circles in a repeating pattern.
+- **Think harder (4).** (1) (a) A path of 4 circles with 3 colours: 24 ways (Q4.8, moved here from Start here); (b) six circles in a line, 4 colours: 4 x 3^5 = 972 colourings (V39.1). (2) Five circles in a ring: 30 colourings with 3 colours and none with 2 (V39.1). (3) A hub joined to a ring of five circles needs 4 colours (V39.1). (4) The colours repeat A, B, B, C: the 50th is B and there are 25 B's in the first 50 (V39.3).
 - **Go further (3).** G1 **Beyond (named): "Ten Circles".** Ten circles form an outer ring of five, an inner five-pointed star and five joining lines (15 lines). 3 colours are enough in 120 ways and 2 colours are impossible because the ring of five needs 3 (V39.2). Level note: graph colouring (secondary). G2 A ring of four circles with 3 colours: 18 ways (V39.4). G3 A figure that needs 4 colours.
 - **Non-routine.** WAYS T (V39.1), PAT T (V39.3), LIST G Beyond (V39.2).
 - **Numbers.** Figures up to 10 circles; colours up to 4.
@@ -848,7 +848,7 @@ Waves (explained in section 13): **A** = can be written once the stacked-fractio
 | 34 | Logic Grids and Digit Puzzles | E | Y16, Y17, KT13 | Digit Detective | Fairly safe |
 | 35 | Odd, Even, Remainders and Extremes | A | KT14, RN13 | In the Dark | Fairly safe (KIV too full) |
 | 36 | Working Backwards | A | Y3 | Doubling Swap | No |
-| 37 | The Long Question | A | Y3, RN14 | Spare Clue | Yes, second safest in Term 4 |
+| 37 | The Long Question | A | Y3, RN14 | Which Third Side? | Yes, second safest in Term 4 |
 | 38 | Children Set the Problem | A | none | Prove It Unique | Fairly safe |
 | 39 | Colouring, Cycles and Choices | E | Y15 | Ten Circles | Yes, safest in Term 4 |
 | 40 | Year Showcase and Mi's Challenge Quest | Q | TL3 | Puzzle With a Proof | No (holds the Quest and the showcase) |
@@ -867,10 +867,10 @@ The lesson authors must check every item against `p5/content/l1.js` to `l10.js` 
 | 4 | H2 core 1 to 6, stretch 1 to 9, challenge 1 to 9 | Heavy | 3 bars among 4, 4 l into 6 bottles, 5 pizzas among 12, unit-fraction sums, 1/2 - 1/3 patterns, 5/6 against 6/7 | mixed-number sums with regrouping, a tank story, tickets by fractions, Halves Forever |
 | 5 | H2 core 4, 5, stretch 2, 8, 9, challenge 2, 3, 5; H3 core 3, challenge 8 | Heavy | telescoping product to 99/100, digit cards 1 2 3 4 and 1 3 5 7, cookies by 1/2, 1/3, 1/4, give half and 4 more twice | area-model products, digit cards 2 4 5 9 for a product, 3/5 of red = 3/4 of blue, Half-Way Squares |
 | 6 | H6 core 6, H7 GST, H5 core 6 | Light | nuts at $1.50 per 100 g, 2.5 l in ml | decimals by 10, 100, 1 000, rounding bounds, never-ending decimals |
-| 7 | H4 whole lesson | Heavy | a point on the top side of a rectangle, two squares 10 and 6, triangle ABC 54 with BD 4 and DC 8, the 13-14-15 triangle, a square with a triangle on top, area 42 with base 12 | tilted triangles by boxing in, Pick's rule, ratio of a square and a triangle |
+| 7 | H4 whole lesson | Heavy | a point on the top side of a rectangle, two squares 10 and 6, triangle ABC 54 with BD 4 and DC 8 (so any triangle of area 54 with height 9 and base 12), the 13-14-15 triangle, a square with a triangle on top, area 42 with base 12 | tilted triangles by boxing in, Pick's rule, ratio of a square and a triangle |
 | 8 | H8 whole lesson | Heavy | tearing corners, 127 on a line, isosceles 110, 20, 30 more, 30-60-90 joined, an angle bisector, D on AC with BD = BC, clock angles | exterior angle, AB = BD and AD = DC chain, true/false/not possible, the star |
 | 9 | H3 core 5, H7 challenge 5 | Light | 40 pupils with 3/8 boys, 800 pupils with 45% boys | Venn, at least one, pair totals, least and greatest overlap |
-| 10 | H10 whole lesson | Medium | every H10 stem and its exit ticket (1/2 on a ticket, $5 on a snack, $7 left) | unit chain with a transfer, a repeating block, an ordering puzzle, exactly one answer |
+| 10 | H10 whole lesson | Medium | every H10 stem and its exit ticket (1/2 on a ticket, $5 on a snack, $7 left), and the structure "a fraction then a fixed amount" | unit chain with a transfer, a repeating block, an ordering puzzle, exactly one answer |
 | 11 | H5 stretch 4, challenge 1, 8 | Medium | painting the whole outside of a 3 x 4 x 5 cuboid, 96 cubes with one painted face | views, dice and nets, two painted faces, hidden cubes |
 | 12 | H5 core 1 to 4, stretch 1, 3, challenge 2, 6, 7 | Heavy | 3 x 2 x 2, 12 cubes into rectangles, 2-cm cubes in 9 x 6 x 5, square base with volume 245, 64 cubes, 2 x 3 x 4 bricks into a cube, faces 12, 15, 20 | volume 72 listed, 3-cm cubes in 25 x 17 x 13, surface for wrapping |
 | 13 | H5 more than a dozen tank and litre items | Heavy | 1/3 to 3/5 with 12 l, a rock raising 8 to 10 cm, 60 x 40 x 50 and buckets, 36 l in 40 x 30, a 20 cm cube poured in, 3 l and a stone, A and B equal depth, a 10 cm cube, 4 bricks, a block stood in 30 x 20 | fraction and amount, 4.5 l in 50 x 30, block upright and laid, a stepped floor |
@@ -902,6 +902,8 @@ The lesson authors must check every item against `p5/content/l1.js` to `l10.js` 
 | 39 | H9 stretch 1 | Light | beads red red blue yellow yellow yellow | graph colouring, ten circles, counting by choices |
 | 40 | none | None | - | year review, showcase, Puzzle With a Proof |
 
+**Cross-level duplicates (audit M3).** Level 3 section 3.1 lists the puzzles that appeared at more than one level. Level 5's actions: lesson 11 "Hidden Cubes" now uses the front view 1, 2, 3 and side view 2, 2, 3 (8 to 16 cubes, 469 stacks) because Level 4 lesson 27 keeps the 3, 1, 2 and 2, 3, 1 pair (6 to 14, 275 stacks) and Level 2 lesson 25 uses a third pair; lesson 10 Think harder (1) no longer repeats Level 4 lesson 13 Go further 3; lesson 6 Go further 2 no longer has the "spends, then 3 times as much" structure of Level 4 lessons 18 and 37; lesson 27 Think harder (3) is a house-number digit count, not the page-number count of Level 3 lesson 34.
+
 ## 4. Non-routine assignments (checked against the Primary 5 catalogue and the holiday register)
 
 The owner decided on 23 Oct that every term plan names, for each lesson, the non-routine types it carries, the tier (Think harder or Go further, never Start here) and original examples, with the spiral shown as a type-by-lesson matrix. The Level 5 plan already holds that section (`level_5_year_plan.md`, "Non-routine assignments", checked: it is Level 5 text, 2279 items, 16 types; unlike the Level 3 plan it was not written from another level's catalogue). This section keeps the plan's types, **replaces every item that repeats a holiday item or a SASMO problem** (section 3), adds the check ids, and re-draws the matrix. Source: `docs/books/p5_non_routine_catalogue.md` (2279 non-routine questions from 166 papers, 19 schools, 2020 to 2025; the per-type tables) and `docs/books/p5_school_paper_patterns.md`. Examples are original and script-verified (appendix); no school text is copied. 965 of the 2279 school items need a picture (a floor, not a count), so every picture-dependent item needs a drawn figure on the page (section 5).
@@ -917,12 +919,12 @@ How to read it. Types: EQ unit and equal-share models; GEO geometry chains; LOG 
 | 3 | Smart Calculation | EXP T: choose the expression for a shopping story (V3.5); LOG T: odd or even without calculating (V3.3); POSE G: make 24 from 3, 4, 6, 9 (V3.6); WAYS G: count the values of all bracketings (V3.4) |
 | 4 | Mixed Numbers and Sharing | MULTI T: 3/7 then 3/8 of the rest (V4.3); CTX T: mixed numbers in a tank story (V4.7); EQ G: 3/4 of red equals 2/3 of blue (V4.4); PAT G: Halves Forever (V4.5) |
 | 5 | Fractions of Fractions | MULTI T: 3/5 then 1/4 of the rest, then a difference (V5.4); LIST T: digit cards 2, 4, 5, 9 for fraction products (V5.2); EQ T: 3/5 of red equals 3/4 of blue (V5.6); BACK G: a two-stage chain with thirds and halves (V5.5); PAT G: Half-Way Squares (V5.3) |
-| 6 | Decimal Sense | EQ G: a decimal unit chain (V6.5); CMP T: sum and difference of two decimals (V6.4); LIST T: least and greatest 2-decimal numbers that round to 4.3 (V6.3); POSE T: a decimal between two others; PAT G: Never-Ending Decimals (V6.6) |
+| 6 | Decimal Sense | EQ G: a decimal unit chain, rice and flour (V6.5); CMP T: sum and difference of two decimals (V6.4); LIST T: least and greatest 2-decimal numbers that round to 4.3 (V6.3); POSE T: a decimal between two others; PAT G: Never-Ending Decimals (V6.6) |
 | 7 | Boxed-In Triangles | GEO T: a tilted triangle by boxing in (V7.1); EXP T: true/false/not possible to tell about equal heights; GEO G: a square and a triangle in the ratio 3 : 8 (V7.3); CHAL G: a rectangle of twice the area on a grid (V7.4); PAT G: Pick's rule (V7.2) |
 | 8 | Angles and Triangle Families | GEO T: the exterior angle and a joined-triangles chain (V8.1, V8.2); LOG T: true/false/not possible to tell about angles (V8.5); GEO G: the same chain with new angles; EXP G: is it a parallelogram (V8.6) and Five-Point Star (V8.4) |
 | 9 | Two Groups and the Overlap | CMP T: three pair totals (V9.3); TAB T: a two-way table and a percent (V9.5); LOG T: an ordering puzzle (V9.6); MULTI G: two groups with different fractions (V9.4); LIST G: Squeeze the Overlap (V9.2) |
-| 10 | Term 1 Review and Mi's Challenge Quest | EQ T: 4 times as many, then a transfer (V10.1); BACK T: 2/5 then a fixed amount (V10.2); PAT T: a repeating block (V10.3); LOG G: four runners (V10.4); CHAL G: Exactly One (V10.5) |
-| 11 | Solid Views and Dice | DIAG T: a numbered top view and its three views (V11.5); LOG T: dice towers and rows (V11.2, V11.3); LIST T: two painted faces (V11.4); LIST G: cubes that can be added (V11.7); DIAG G: Hidden Cubes (V11.6) |
+| 10 | Term 1 Review and Mi's Challenge Quest | EQ T: 7 times as many, then a transfer (V10.1); BACK T: two fractions of the whole and the rest (V10.2); PAT T: a repeating block (V10.3); LOG G: four runners (V10.4); CHAL G: Exactly One (V10.5) |
+| 11 | Solid Views and Dice | DIAG T: a numbered top view and its three views (V11.5); LOG T: dice towers and rows (V11.2, V11.3); LIST T: two painted faces (V11.4); LIST G: cubes that can be added (V11.7); DIAG G: Hidden Cubes, 8 to 16 cubes (V11.6) |
 | 12 | Boxes and Bricks | LIST T: the most 3-cm cubes in a box (V12.2); EQ T: a longer box with 300 cm3 more (V12.4); EXP T: statement about equal volumes; WAYS G: every cuboid of volume 72 and Least Wrapping (V12.1) |
 | 13 | Tank Tales | BACK T: 3/10 full, 3.5 l more (V13.2); CTX T: 4.5 l poured into a tank (V13.4); EXP T: a statement about depth; DIAG G: a block upright and laid (V13.3); DIAG G: Stepped Tank (V13.1) |
 | 14 | Decimal Measures | CTX T: a bill in metres and kilograms (V14.3); TAB T: a water-bill table (V14.5); POSE G: two readings that round to 3.4; CMP G: Rounding Rattle (V14.2) |
@@ -948,7 +950,7 @@ How to read it. Types: EQ unit and equal-share models; GEO geometry chains; LOG 
 | 34 | Logic Grids and Digit Puzzles | LOG T: five runners, a liar (V34.1, V34.2); EXP T: the error in a digit puzzle; LOG G: Digit Detective (V34.4) |
 | 35 | Odd, Even, Remainders and Extremes | LOG T: a total that must be odd (V35.1); LIST T: divisors with a remainder, minimise the biggest (V35.2, V35.5); EXP T: a counterexample about remainders; LIST G: no multiples, the parity cap (V35.6, V35.7); LOG G: In the Dark (V35.4) |
 | 36 | Working Backwards | BACK T: a percent and a fraction run backwards (V36.6, V36.5); EQ T: a fraction transfer (V36.4); BACK G: Doubling Swap (V36.2); EQ G: make equal then find the start |
-| 37 | The Long Question | MULTI T: three-step with a fraction and a percent (V37.1, V37.5); EQ G: a decimal unit chain (V37.2); CTX G: a step charge in a story (V37.3); EXP G: Spare Clue (V37.4) |
+| 37 | The Long Question | MULTI T: three-step with a fraction and a percent (V37.1, V37.5); EQ G: a decimal unit chain (V37.2); CTX G: a step charge in a story (V37.3); EXP G: Which Third Side? (V37.4) |
 | 38 | Children Set the Problem | POSE T: write a new question and check it; EXP T: find the error in a classmate's solution; CHAL G: a puzzle with a unique answer; LOG G: Prove It Unique (V38.1, V38.2) |
 | 39 | Colouring, Cycles and Choices | WAYS T: count colourings by choosing (V39.1); PAT T: the nth colour of a cycle (V39.3); LIST G: Ten Circles, a proof it cannot be fewer (V39.2) |
 | 40 | Year Showcase and Mi's Challenge Quest | EXP T: choose a move for a mixed set and say why; POSE G: explain why a claim cannot be right; CHAL G: Puzzle With a Proof |
@@ -968,7 +970,7 @@ LIST     TB..TT..G. BT......G. ......BG.. ..G.B...G.
 MULTI    ...TT...G. .......... .TT.....TT ......T...
 BACK     ....G....T ..T....... ..G.G..... ..T..B....
 CHAL     ......G..G ....T.TT.G .........G T......G.G
-EXP      .GT...TG.. .TT.T.GT.. BG..T..... .T.TT.GT.T
+EXP      .GT...TG.. .TT.T.GB.. BG..T..... .T.TT.GT.T
 TAB      ........T. ...T.TTB.. T....T.... ..........
 GC       .......... .....T.... .......T.T ..........
 PAT      .G.GGGG..T ....G..... .....B...T G.G.....T.
@@ -1089,6 +1091,7 @@ Shared with Levels 2 to 4: TL1 level parameter 6, TL2 copy-check list 1, TL3 Que
 |---|---|---|
 | TL11 | Level 5 wording linter rules: GST 9 percent (7 percent only in labelled older-paper practice), the degree sign, "Express your answer in the simplest form", no "prime", "coordinates" or bare "challenge" on child pages, mixed-number format, "The figure is not drawn to scale." on figure pages | 1 |
 | TL12 | `verify_lib.py`: shared brute-force helpers (`fractions`, `divisors`, `partitions`, `permutations` with constraints, polygon area, angle and line intersection, cube-stack views) so each `verify/lNN_checks.py` does not rewrite them | 3 |
+| TL13 | (no item: the numbering skips TL13 because an earlier draft merged it into TL12) | 0 |
 | TL14 | A required `nonroutine: [{type, tier, item_id}]` field (type from the 16 codes, tier T or G, never Start here) and the validator rule | 2 |
 | TL15 | Black-and-white check for the Y figures: hatch patterns, letters A to D for colouring, `print/check_bw.py` on every Level 5 book | 1 |
 
@@ -1201,7 +1204,7 @@ The Level 1 rule: `parent.next_materials` of lesson n lists everything lesson n+
 
 The Level 1 Quest (lesson 20) is the model: 20 minutes at minutes 35 to 55 straight after the break; eight short gates and one optional secret cave; a quest partner (answers are written on private paper, each child writes their own); no score, mark, ranking or visible timer; no word "test" or "exam" on any child or parent page (`BAN_FAMILY` in `b_quest.py`); the tutor keeps private notes only, used for one line to each grown-up and for advice on next term's group; the recording is paused for the Quest and a make-up child does the Quest before watching the recording; photos of the Quest Log are returned by the parent to the business WhatsApp (+65 9880 5962, never on a slide). Explore 10 and Mini-lesson 9; the Start here workbook is 25 minutes; pages 3 to 5 are for home; the exit ticket is not live. Three files per Quest: `LNN_Quest_Log.pdf` (**[Default] 4 pages for ages 10 to 12**, as Level 4; 3 at Levels 1 and 3), `LNN_Quest_Tutor_Notes.pdf` (key book), `LNN_Quest_Parent_Note.pdf` (home pack). The Quest Log may carry figures because the Level 1 generator accepts any registered figure (TL3). Rules for authors: every gate is Start here level for its own lesson and "pass" is always allowed; the Quest is never the part that shrinks in a slow class (skip order: Flex, then the optional Go further slide, then Talk); the cave is the only place for a puzzle the children have not met; one item per part; children read the Quest Log themselves and the tutor reads each gate once aloud. **Test-savvy children:** ten- to twelve-year-olds recognise a paper; the Log is framed as Mi's map with gates, pairs may talk through a gate (each writes their own answer), and nothing is added up. Lessons 10, 20 and 30 are also content lessons (Explore 10 and Mini-lesson 9 minutes only), so each is a review of choosing a method, not a new topic.
 
-Lessons share a gate where two neighbouring lessons are small: every lesson of the term is visited by exactly one gate. All answers below were recomputed (check ids in the last column).
+Lessons share a gate where two neighbouring lessons are small: every lesson of the term is visited by exactly one gate (lesson 40 itself has no gate, see the end of 8.4). No gate repeats a Start here, Think harder or Go further item of its lesson (the audit found eleven that did, M1), none repeats a holiday item (H1), none is a contest move at Start here level (owner decision 6: no digit-sum tests, ratio notation, counting colourings, worst-case or list-all-the-ways items), and none uses the Quest ban words "marked", "score", "out of", "grade" or "ahead of" (M2). All answers below were recomputed (check ids in the last column).
 
 ### 8.1 Term 1 (lesson 10)
 
@@ -1211,10 +1214,10 @@ Lessons share a gate where two neighbouring lessons are small: every lesson of t
 | 2 | 2 | Write all the common factors of 18 and 30: 1, 2, 3, 6; the greatest is 6 | none | Q1.2 |
 | 3 | 3 | Find the value of 5 + 12 / 4 x 2 - 3: 8 | none | Q1.3 |
 | 4 | 4, 5 | 7 / 4 as a mixed number is 1 3/4; 2/3 of 3/5 is 2/5 | `frac` | Q1.4 |
-| 5 | 6 | 3/8 as a decimal is 0.375; 4.5 / 1 000 = 0.0045 | `place_mat` | Q1.5 |
-| 6 | 7 | A triangle with base 14 cm and height 6 cm has area 42 cm2 | `grid` | Q1.6 |
-| 7 | 8 | An isosceles triangle has a 40 degree angle at the top: each base angle is 70; two angles of 48 and 67 leave 65 | `angle_fig` | Q1.7 |
-| 8 | 9 | In a group of 30, 18 swim, 15 cycle and 5 do neither: 8 do both | `venn` | Q1.8 |
+| 5 | 6 | 5/8 as a decimal is 0.625; 6.3 / 1 000 = 0.0063 | `place_mat` | Q1.5 |
+| 6 | 7 | A triangle with base 14 cm and height 5 cm has area 35 cm2 | `grid` | Q1.6 |
+| 7 | 8 | An isosceles triangle has a 50 degree angle at the top: each base angle is 65; two angles of 38 and 72 leave 70 | `angle_fig` | Q1.7 |
+| 8 | 9 | A Venn diagram shows 7 pupils in swimming only, 4 in both and 9 in cycling only: 20 play at least one game | `venn` | Q1.8 |
 | Cave | beyond | I am between 40 and 60, a multiple of 7, and my digits add up to 11: 56 | none | Q1.9 |
 
 Lesson 10's Explore (10 minutes) is an angle warm-up and "choose a start" with three examples; the Start here workbook is a menu (do four of six). Gates 4 to 8 carry figures, so Y1, Y2, Y6 and Y7 must exist before lesson 10 is built.
@@ -1223,15 +1226,15 @@ Lesson 10's Explore (10 minutes) is an angle warm-up and "choose a start" with t
 
 | Gate | Lessons | Item (Start here level) | Figure | Check |
 |---|---|---|---|---|
-| 1 | 11 | A numbered top view with counts 2, 1 / 3, 1 has 7 cubes | `cube_stack` | Q2.1 |
-| 2 | 12 | A box 5 cm by 4 cm by 3 cm has volume 60 cm3 | `cube_stack` | Q2.2 |
-| 3 | 13 | A tank 40 cm by 25 cm with water 6 cm deep holds 6 000 cm3, which is 6 l | `tank` | Q2.3 |
+| 1 | 11 | A numbered top view with counts 1, 3 / 2, 2 has 8 cubes | `cube_stack` | Q2.1 |
+| 2 | 12 | A box 7 cm by 3 cm by 2 cm has volume 42 cm3 (the holiday 5 by 4 by 3 box is not reused) | `cube_stack` | Q2.2 |
+| 3 | 13 | A tank 50 cm by 20 cm with water 8 cm deep holds 8 000 cm3, which is 8 l | `tank` | Q2.3 |
 | 4 | 14 | 3 kg 250 g + 1.9 kg = 5.15 kg = 5 kg 150 g | none | Q2.4 |
-| 5 | 15 | A parallelogram with base 9 cm and height 5 cm has area 45 cm2 | `grid` | Q2.5 |
-| 6 | 16 | A tap fills 18 l a minute: 270 l take 15 minutes | none | Q2.6 |
-| 7 | 17, 18 | The average of 4, 7, 9 and 12 is 8; read the 11 am value from the line graph | `graph` | Q2.7 |
+| 5 | 15 | A rectangle 12 cm by 7 cm is cut along a diagonal: each triangle has area 42 cm2 | `grid` | Q2.5 |
+| 6 | 16 | A tap fills 25 l a minute: 350 l take 14 minutes | none | Q2.6 |
+| 7 | 17, 18 | The average of 5, 8, 11 and 16 is 10; read the 11 am value from the line graph | `graph` | Q2.7 |
 | 8 | 19 | On a 3 by 2 by 2 cuboid you can see 3 x 2 + 3 x 2 + 2 x 2 = 16 unit squares | `iso` | Q2.8 |
-| Cave | beyond | A tank with a 30 cm by 20 cm base holds water 5 cm deep; 3 l are added: 10 cm deep | `tank` | Q2.9 |
+| Cave | beyond | A tank with a 20 cm by 15 cm base holds water 4 cm deep; 1.5 l are added: 9 cm deep | `tank` | Q2.9 |
 
 Gate 7 pairs lessons 17 and 18 because Fair Shares and Graph Stories are both small; gate 8 carries the isometric figure, so Y10 must exist before lesson 20 is built. Lesson 20's Think harder holds the Term 2 buy-more-get-free item.
 
@@ -1239,15 +1242,15 @@ Gate 7 pairs lessons 17 and 18 because Fair Shares and Graph Stories are both sm
 
 | Gate | Lessons | Item (Start here level) | Figure | Check |
 |---|---|---|---|---|
-| 1 | 21 | 35% of 80 is 28; 0.4 is 40% | `percent_grid` | Q3.1 |
-| 2 | 22 | A $50 jacket is 20% off: $40; add 9% GST: $43.60 | `price_tag` | Q3.2 |
-| 3 | 23 | 18 out of 24 is 75% | none | Q3.3 |
-| 4 | 24 | Pens to pencils are 2 to 3 and there are 45 in all: 18 pens | `bar_model` | Q3.4 |
-| 5 | 25 | 3 [ ] + 5 = 29: [ ] = 8 | `balance` | Q3.5 |
+| 1 | 21 | 45% of 60 is 27; 0.7 is 70% | `percent_grid` | Q3.1 |
+| 2 | 22 | An $80 bag is 25% off: $60; add 9% GST: $65.40 | `price_tag` | Q3.2 |
+| 3 | 23 | 9 of the 25 pupils wear glasses: 36% | none | Q3.3 |
+| 4 | 24 | For every 2 pens there are 3 pencils and there are 45 in all: 18 pens | `bar_model` | Q3.4 |
+| 5 | 25 | 4 [ ] + 6 = 38: [ ] = 8 | `balance` | Q3.5 |
 | 6 | 26 | 2, 5, 8, 11, ...: the 20th number is 59 | `pattern_fig` | Q3.6 |
-| 7 | 27, 28 | Nine children shake hands once each: 36; 10 tickets at $4 and $6 cost $48: 4 at $6 | `network` | Q3.7 |
+| 7 | 27, 28 | A menu has 3 mains and 2 drinks; a finished table has 6 cells, so 6 meals; 9 items, some at $2 and some at $5, cost $30: 4 at $5 | `table` | Q3.7 |
 | 8 | 29 | $1 000 at 4% a year for 3 years earns $120 | `table` | Q3.8 |
-| Cave | beyond | Pens cost $3 each or 3 for $8: exactly 10 pens cost at least $27 | `table` | Q3.9 |
+| Cave | beyond | Mugs cost $5 each or 4 for $16: exactly 10 mugs cost at least $42 | `table` | Q3.9 |
 
 Gate 7 pairs lessons 27 and 28. The cave is an offer item that uses lesson 22's idea and lesson 28's table.
 
@@ -1255,14 +1258,14 @@ Gate 7 pairs lessons 27 and 28. The cave is an offer item that uses lesson 22's 
 
 | Gate | Lessons | Item (Start here level) | Figure | Check |
 |---|---|---|---|---|
-| 1 | 31 | Each angle of a regular hexagon is 120 (the angles add to 720) | `angle_fig` | Q4.1 |
-| 2 | 32 | Four equal sides and equal diagonals: a square | `angle_fig` | Q4.2 |
-| 3 | 33 | The hands at 4:00 make 120 degrees; 100 days after a Monday is a Wednesday | `clock` | Q4.3 |
-| 4 | 34 | Mei is not first, Ravi is directly behind Mei and Kai is ahead of Mei: Kai, Mei, Ravi | `logic_grid` | Q4.4 |
-| 5 | 35 | The sum of 9 odd numbers is odd; name a number between 10 and 60 that leaves 3 when divided by 7 and 1 when divided by 4 (17 or 45) | none | Q4.5 |
-| 6 | 36 | Times 3, take away 4 gives 20: the number is 8 | none | Q4.6 |
+| 1 | 31 | A parallelogram has an angle of 80 degrees: the angle next to it is 100 | `angle_fig` | Q4.1 |
+| 2 | 32 | Two pairs of equal sides and four right angles, but not four equal sides: a rectangle | `angle_fig` | Q4.2 |
+| 3 | 33 | The hands at 5:00 make 150 degrees; 30 days after a Monday is a Wednesday | `clock` | Q4.3 |
+| 4 | 34 | Mei is not first, Ravi is directly behind Mei and Kai is in front of Mei: Kai, Mei, Ravi | `logic_grid` | Q4.4 |
+| 5 | 35 | The sum of 7 odd numbers is odd; the remainder of 58 divided by 7 is 2 | none | Q4.5 |
+| 6 | 36 | Times 4, take away 6 gives 30: the number is 9 | none | Q4.6 |
 | 7 | 37, 38 | A $60 bag is 25% off and 9% GST is added: $49.05; write a question with the answer $49.05 | `table` | Q4.7 |
-| 8 | 39 | A path of 4 circles with 3 colours: 24 ways | `graph_colour` | Q4.8 |
+| 8 | 39 | Colour a path of 4 circles with the letters A, B and C so that joined circles differ (many answers are right; A B A C is one) | `graph_colour` | Q4.10 |
 | Cave | beyond | How many 3-digit numbers have digits that add up to 5: 15 | none | Q4.9 |
 
 Gate 7 pairs lessons 37 and 38 (the second part is a posing item and has no single answer). Lesson 40's own showcase is the closing part of the Quest lesson and has no gate. A child who joins at lesson 30 or 40 has not met the earlier gates: every gate states its own idea in one line, and the cave may be skipped.
@@ -1364,12 +1367,12 @@ Read from `TERM_WIDE_AUDIT`, `CUTOUT_AUDIT`, `FINAL_AUDIT_T1`, `FINAL_AUDIT_T2` 
 9. **Lessons with little or no school evidence.** Lessons 9, 33 (clock-hand angles), 34, 35, 38, 39, 40 and the isometric half of 19. They are labelled beyond school and each has a named swap candidate (D13).
 10. **Quest lessons are tight.** Explore 10 and Mini-lesson 9 minutes. Lessons 10, 20 and 30 are reviews, so the shortened teaching costs no new content; lesson 40 adds a 20-minute showcase after the Quest, so its Explore and Mini-lesson are the shortest of the year.
 11. **Timing.** The Level 1 audits found the workbook 3 to 4 minutes over in a slow class in every lesson and the 5-minute buffer consumed. Level 5 children write more per question and the plan keeps six Start here questions. Measure in the trial; if confirmed, cut one warm-up group per lesson.
-12. **Cutting load.** 146 pieces a year (section 6); Term 3 about 59, Term 4 about 46. The heaviest are lesson 28 (21 coins) and lesson 1 (13 tiles). Options: real coins for lesson 28, a pack of playing cards for lesson 35, paper plates for lesson 4.
+12. **Cutting load.** 146 pieces a year (section 6); Term 3 about 59, Term 4 about 46. The heaviest are lesson 28 (21 coins), lesson 35 (16 cards) and lesson 1 (13 tiles). Options: real coins for lesson 28, a pack of playing cards for lesson 35, paper plates for lesson 4.
 13. **Real coins and play money.** The same open legal question as Level 1 (D1 there) for lesson 28: stylised pieces marked PLAY MONEY. Check before anything realistic is printed (D25).
 14. **Wording evidence.** The papers were read from OCR text; no picture was seen in any paper (patterns section 6). Items whose form rests on a picture (angle figures, graphs, views, tanks, isometric drawing) are "wording unverified" until the owner supplies pictures or sample papers (D21).
 15. **Two syllabus eras.** The 2020 to 2024 papers set ratio, average and speed at Primary 5; the 2025 papers do not. Level 5 keeps ratio (24) and average (17) as labelled previews and excludes speed (D14, D17). A tutor must not tell a parent that either is on the P5 syllabus.
 16. **Books.** Eight books of about 36 to 40 pages (Books 2, 4, 6, 8 carry a 4-page Quest Log); a book boundary falls at lessons 5, 15, 25, 35 mid-term; if a book is late the hand-off fails (D10). The Quest Log must stay closed in its envelope.
-17. **Slots and exams.** The 90-minute lessons need slots re-derived from the 2027 grid (owner entry of 23 Oct, still open). P5 children sit school papers in late Oct and Nov, so Term 4 attendance dips (D30); lesson 40 is best attended.
+17. **Slots and exams (audit M5).** The 90-minute grid is derived: `docs/schedule/term_2027_t1_availability.md` section 7 (8 slots, a 15-minute buffer before and after every other commitment; the draft default for Level 5 is Saturday 5:15 to 6:45 pm, D36); its earlier 75-minute grid is superseded. P5 children sit school papers in late Oct and Nov, so Term 4 attendance dips (D30); lesson 40 is best attended.
 18. **Website, privacy and terms.** Still describe the holiday beta; the Level 1 findings F10 and F11 apply unchanged (no Level 5 term page, the photo return flow unnamed in the privacy notice). Not a lesson-file concern.
 19. **Parallel agents on shared files.** Same rule as Level 1: only the template owner edits shared tools; lesson agents write only their own files and commit with explicit `git add`, never `git add -A`.
 20. **Authoring documents are Level 1 specific.** `AUTHORING.md` lists Lessons 2 to 10 and Terms 3 and 4; `LESSON_BRIEF.txt` names Lesson 1 as the pilot: a Level 5 brief (TL8) before agents start.
@@ -1406,7 +1409,7 @@ None is irreversible; changing a default after the build costs time, as noted.
 - **D23. Weekly workload statement.** [Default] "Home Practice (about 15 minutes) if you like; pages 3 to 5 and online practice are optional." Reports use one descriptive line from the tutor's private notes, not a strand profile; the plan's four report lines become the sentence stems.
 - **D24. Beyond field.** The beyond-syllabus rule is recorded (owner decisions, 23 Oct). [Default] The tutor-only `beyond` field is required in all 40 lessons from the start; the child-facing name is a puzzle title and never carries the word "challenge".
 - **D25. Play money legal check.** [Default] Stylised coins marked PLAY MONEY in lesson 28; real coins from a purse are the first choice. I have not checked Singapore's rules on reproducing coins.
-- **D26. Slots.** The 90-minute term slots are not yet re-derived from the 2027 grid (owner entry of 23 Oct). Hand-off lead times assume a week.
+- **D26. Slots.** The 90-minute term slots are derived in `docs/schedule/term_2027_t1_availability.md` section 7 (see D36 for the Level 5 default). Hand-off lead times assume a week.
 - **D27. Runner keys.** [Default] `l5t1l01` ... `l5t4l40` (the level prefix is new).
 - **D28. File layout and tools.** [Default] `term/l5/` holds the data; the Level 1 tools are imported through the shared `level` parameter and new figures live in `figs5.py`. Moving the tools to a shared folder is cleaner but disturbs the agents still building Level 1; do it after Level 1 Term 4 is audited.
 - **D29. GST rate.** [Default] 9 percent on child pages (the 2025 papers); an older-paper practice item may say 7 percent and says so in the stem.
@@ -1416,6 +1419,10 @@ None is irreversible; changing a default after the build costs time, as noted.
 - **D33. Lessons 7 and 8 against H4 and H8 (plan open question 5).** [Default] Keep both with the barred lists of section 3 and test them with one holiday graduate before the Term 1 launch. [Alternative] Replace lesson 8 with the construction of triangles (compass and protractor), which the holiday course does not touch.
 - **D34. Lesson 19 figures.** [Default] Figures are drawn first (Y10); if they slip, lesson 19 loses its rope item and its matrix item and keeps the isometric drawing and the views.
 - **D35. Cross-level build owner.** [Default] One template owner builds each shared figure once (section 13); Level 5 does not start Y2, Y3, Y9 before the earlier level plans say who owns them.
+- **D36. Weekly slot.** [Default] Saturday 5:15 to 6:45 pm, the Level 5 default of `docs/schedule/term_2027_t1_availability.md` section 7 (the 90-minute grid, 15-minute buffers). The owner changes it there; no lesson depends on it.
+- **D37. Break length.** [Default] 4 minutes inside the lesson as at Level 1 (Levels 2 and 4 offer 5 minutes for older children). Alternative: 5 minutes with 1 minute taken from Flex.
+- **D38. Term price and prorating.** Not decided in `owner_decisions.md` (prices are on hold; no price may appear on any page). Nothing in Level 5 depends on it except the payment note and the prorated fee for a mid-term joiner.
+- **D39. Rewind rule for lessons 1 to 10.** [Default] A holiday topic (as Level 3); Levels 2 and 4 rewind inside Term 1 from lesson 6. The difference is drift, not a requirement; the owner may unify (audit L4).
 
 ## 13. Build order, effort and cost
 
@@ -1482,7 +1489,7 @@ Per lesson, total hours = write and build + wording review + audit + fix pass, t
 | 40 Year Showcase and Mi's Challenge Quest | 9.0 | 0.7 | 1.5 | 1.8 | 13.0 |
 | **Term 1 / 2 / 3 / 4** | | | | | **87.0 / 90.0 / 87.0 / 85.0** |
 
-Plus four term-wide second-round audits (about 8 hours each, 32) and one 40-lesson consistency sweep (about 10): **about 391 agent-hours** for the lessons. Template engineering (section 5): **193 hours if everything is built from scratch, 141 with the deferrals and with the shared items built by earlier levels, about 84 for the Level 5 share alone**. Together about 532 to 584 hours.
+Plus four term-wide second-round audits (about 8 hours each, 32) and one 40-lesson consistency sweep (about 10): **about 391 agent-hours** for the lessons. Template engineering (section 5), stated on three bases so that the owner can pick one: **193 hours** if everything is built from scratch (nothing from Levels 2 to 4 exists); **141 hours** if Level 5 is built alone and the deferrals are taken; **about 93 hours (84 with the deferrals)** if Levels 2 to 4 are built first and charge the shared items to themselves (Level 2 section 3.4: programme total about 445 hours for Levels 2 to 5, about 388 with deferrals). **Budget 84 to 93 hours for Level 5 when the levels are built in order.** Together about 475 to 485 hours on that basis, 532 to 584 on the others. Estimate basis: the lesson hours average 8.7 per lesson, close to the 8.6 of Level 1 Terms 3 and 4 (172 hours for 20 lessons, the only data point); nothing was measured.
 
 Elapsed time, at the Level 1 pace (eight to ten writing agents and three engineers working as in 13.2): Term 1 about 2 working days including the figure foundations, Term 2 about 2.5 (the solids, tank and isometric figures), Term 3 about 2, Term 4 about 2, plus audits and fixes, so **about 9 to 11 working days** from Sprint A to an audited Term 4; if the template work is done serially before any lesson starts, add about 2 days. Not in these numbers: a tutor trial per term, the cold-join trial, the holiday-graduate trial, the legal check (D25), the owner's paper search (D21), and the owner and tutor review time (allow another 20 to 25 hours across the year).
 
@@ -1492,16 +1499,27 @@ Elapsed time, at the Level 1 pace (eight to ten writing agents and three enginee
 - The holiday register compares question stems and objectives of `p5/content/l1.js` to `l10.js` that I extracted by loading the modules (`qbank` core, stretch and challenge, `lesson.extension`, `lesson.share`, `lesson.exit`); it did not read the holiday decks, scripts, workbooks or the enrichment files `gaps.js` and `inv.js` in full (only their headers), so an overlap that exists only there would be missed (TL2 reads the files).
 - MOE placements come from `docs/moe/syllabus_by_level.md`; I did not re-open the PDF. The words "prime", "coordinates", "pentagon" and "hexagon" are taken from its "not in the syllabus anywhere" row, which is a text search by an earlier agent.
 - No Primary 5 picture was seen in any paper; no angle diagram, graph, cube view, tank or isometric figure could be compared with a school style. The papers were read from OCR text. Counts describe this set of papers, not the country.
-- The Level 2, 3 and 4 pre-flights were read for template codes and Quest rules only; their lesson lists were not compared with Level 5 for overlap. The Level 3 pre-flight lists its lesson 36 (brackets) as overlapping Level 4 lesson 1.2 and Level 5 "lesson 1" (the brackets lesson of the Level 5 plan is lesson 3); a child who came through Levels 3 and 4 meets brackets three times (an accepted spiral, D17).
+- The Level 2, 3 and 4 pre-flights were read for template codes and Quest rules only when this document was first drafted; the audit revision compared their lesson items with Level 5 (Level 3 section 3.1 lists the duplicates and how they were resolved). The Level 3 pre-flight lists its lesson 36 (brackets) as overlapping Level 4 lesson 1.2 and Level 5 "lesson 1" (the brackets lesson of the Level 5 plan is lesson 3); a child who came through Levels 3 and 4 meets brackets three times (an accepted spiral, D17).
 - Singapore's rules on reproducing coins were not checked (D25).
 - The Foundation track and the 2013 P6 syllabus were not read.
-- The 2027 term slot grid for 90-minute lessons is not re-derived here (owner entry of 23 Oct, still open).
+- The 90-minute slot grid is taken from `docs/schedule/term_2027_t1_availability.md` section 7 (current); this document does not choose the slot (D36).
 - The "Start here" items in the lesson specs without a check id are trivial arithmetic for the author's own verify script; every id quoted in the specs, the Quest tables and section 4 has a check in the appendix.
-- Beyond puzzles are original in numbers and context; several rest on well-known ideas (lockers, Pick's rule, the star angle sum, the chord regions, the pigeonhole principle, Petersen colouring). The 7-word check protects against copied text, not against a famous puzzle; the lesson authors should not present them as invented.
+- Beyond puzzles are original in numbers and context; several rest on well-known ideas (lockers, Pick's rule, the star angle sum, the chord regions, the pigeonhole principle, Petersen colouring). The 7-word check protects against copied text, not against a famous puzzle; the lesson authors should not present them as invented: the tutor guide says "a well-known puzzle" where that is true (audit L6).
+
+## Revision after audit (23 Oct 2026)
+
+Fixes from `docs/audit_final/preflights_l2_l5.md`. Only this document changed; marked defaults stand where an owner decision is needed.
+
+- **High, holiday reuse (H1).** Lesson 7 Think harder (2): the area-54 triangle is replaced by area 45, height 6, base 15 (V7.6). Lesson 23 Think harder (2) and Go further 3: the shoes item is now 35% then 20% of the rest on $400 (V23.4). Lesson 10 Think harder (2): the fraction-then-fixed-amount structure is replaced by two fractions of the whole and the rest (V10.2), and the register now bars the structure. Quest Term 2 gate 2: the 5 by 4 by 3 box is replaced by 7 by 3 by 2. All numbers re-verified by brute force.
+- **High, contest items at Start here (H2).** Lesson 2 Start here (4): the digit-sum test moved to Think harder (1a), Start here uses last-digit tests (V2.11). Lesson 39 Start here (2) and (4): counting colourings replaced by checking and making one colouring, the counts moved to Think harder (1). Quest Term 3 gate 4: the ratio statement is "for every 2 pens there are 3 pencils" (no ratio notation). Quest Term 4 gate 8: one correct colouring (Q4.10). Further tier fixes (M6): Lesson 15 Start here no longer needs parallelogram and trapezium area (moved to Think harder 3), Lesson 31 Start here uses the parallelogram and the quadrilateral sum moved to Think harder (1), and Lesson 8 says how the two Primary 5 angle facts are rebuilt in the Remember.
+- **Medium.** Quest gates that repeated lesson items are replaced with fresh numbers (Term 1 gates 5 to 8; Term 2 gates 1, 2, 3, 5, 6, 7 and the cave; Term 3 gates 1 to 5, 7 and the cave; Term 4 gates 1 to 6 and 8; checks Q1.5 to Q4.10). Banned words: "out of" in Lesson 23 Start here and Quest Term 3 gate 3 became "of the" wording; "ahead of" in Lessons 9, 10, 34 and the Term 4 gate became "in front of". Cross-level duplicates: section 3 note (Lessons 6, 10, 11, 27 changed; Lesson 26 Go further 3 replaced because it repeated the holiday staircase explanation, V26.7). Stale slot text replaced by `docs/schedule/term_2027_t1_availability.md` section 7 with D36. Template hours stated on three bases with a recommended budget (84 to 93 hours) and the programme total in Level 2 section 3.4.
+- **Low.** Quest Log pages (4) in the Lesson 10 kit line; "Five numbers" in Lesson 17; the garbled Lesson 9 Go further 1 reworded; heaviest-page lists include Lesson 35 (16 cards); the matrix cell for Lesson 18 (EXP both tiers) and the Lesson 33 spec (CTX G) now agree with their tables; TL13 gap explained; Lesson 37 beyond item "Spare Clue" (a process skill) replaced by "Which Third Side?" (V37.4); Lesson 13 tank sizes changed from the holiday 60 by 40 and 30 by 20 bases (V13.5, V13.6); a note that classic puzzles are not presented as invented; D36 to D39 added (slot, break length, term price and prorating, rewind rule).
+- **Unchanged because an owner decision is needed:** the D9 default (angle facts recalled, now with a Remember rebuild and a boxed fact), the rewind rule per level (D39), the Quest Log length (D19), whether the Level 5 break is 4 or 5 minutes (D37).
+- **Appendix script:** re-run after the edits, `272 checks, 272 passed` (was 265).
 
 ## Appendix: the check script
 
-`verify_l5_preflight.py`, run with `python3 -I verify_l5_preflight.py`. On 23 Oct 2026 it printed `verify_l5_preflight: 265 checks, 265 passed`. Checks are brute force: all digit assignments, all permutations, breadth-first search of jug states, every colouring, every cube arrangement, every bracketing, a geometric region count for the chord circle, a rolling-cube fold of the dice net; they use no formula from the lessons. The script writes no file and prints one summary line when everything passes.
+`verify_l5_preflight.py`, run with `python3 -I verify_l5_preflight.py`. On 23 Oct 2026 it printed `verify_l5_preflight: 272 checks, 272 passed`. Checks are brute force: all digit assignments, all permutations, breadth-first search of jug states, every colouring, every cube arrangement, every bracketing, a geometric region count for the chord circle, a rolling-cube fold of the dice net; they use no formula from the lessons. The script writes no file and prints one summary line when everything passes.
 
 ```python
 #!/usr/bin/env python3
@@ -1640,9 +1658,9 @@ ok = [x for x in two if rnd1(x) == F("4.3")]
 ck("V6.3", (min(ok), max(ok)), (F("4.25"), F("4.34")))
 s, d = F("7.5"), F("2.3")
 ck("V6.4", ((s + d) / 2, (s - d) / 2), (F("4.9"), F("2.6")))
-# Ravi has 9.60 more than Siti; Ravi spends 19.20; then Siti has 3 times Ravi's left
-sol = [(S / 100, R_ / 100) for S in range(0, 10000) for R_ in [S + 960] if S == 3 * (R_ - 1920)]
-ck("V6.5", sol, [(14.4, 24.0)])
+# rice costs 1.80 more than flour; 3 rice and 2 flour cost 21.40
+sol = [(f / 100, (f + 180) / 100) for f in range(1, 3000) if 3 * (f + 180) + 2 * f == 2140]
+ck("V6.5", sol, [(3.2, 5.0)])
 term = []
 for n in range(2, 21):
     m = n
@@ -1758,9 +1776,9 @@ sol = ["".join(o) for o in itertools.permutations(names) if ordering_ok(o)]
 ck("V9.6", sol, ["BCAD"])
 
 # ---------------- Lesson 10 Term 1 Review
-sol = [(b, 4 * b) for b in range(1, 1000) if 4 * b - 36 == 2 * (b + 36)]
-ck("V10.1", sol, [(54, 216)])
-ck("V10.2", F(24 + 18) / F(3, 5), 70)
+sol = [(b, 7 * b) for b in range(1, 1000) if 7 * b - 30 == 3 * (b + 30)]
+ck("V10.1", sol, [(30, 210)])
+ck("V10.2", F(33) / (1 - F(3, 5) - F(1, 4)), 220)
 block = [3, 1, 4, 1, 5]
 seq117 = [block[i % 5] for i in range(117)]
 ck("V10.3", (seq117[-1], sum(seq117)), (1, 326))
@@ -1769,7 +1787,7 @@ def cond(o):
     pos = {n: i for i, n in enumerate(o)}
     return pos["P"] < pos["Q"] and pos["R"] == pos["S"] - 1 and pos["Q"] < pos["S"] and pos["P"] != 0
 sol = ["".join(o) for o in itertools.permutations("PQRS") if cond(o)]
-# define puzzle: S is not first; P finishes ahead of Q; R finishes directly behind P; Q is not last
+# define puzzle: S is not first; P finishes in front of Q; R finishes directly behind P; Q is not last
 def cond2(o):
     pos = {n: i for i, n in enumerate(o)}
     return pos["S"] != 0 and pos["P"] < pos["Q"] and pos["R"] == pos["P"] + 1 and pos["Q"] != 3
@@ -1842,14 +1860,14 @@ top = [[2, 0, 1], [3, 1, 0], [1, 2, 2]]
 colmax = [max(top[r][c] for r in range(3)) for c in range(3)]
 rowmax = [max(top[r]) for r in range(3)]
 ck("V11.5", (sum(map(sum, top)), colmax, rowmax), (12, [3, 2, 2], [2, 3, 2]))
-# Hidden Cubes: front view column maxima [3,1,2], side view row maxima [2,3,1]
-fm = [3, 1, 2]; sm = [2, 3, 1]
+# Hidden Cubes: front view column maxima [1,2,3], side view row maxima [2,2,3] (Level 4 lesson 27 keeps [3,1,2] and [2,3,1])
+fm = [1, 2, 3]; sm = [2, 2, 3]
 tots = []
 for g in itertools.product(range(4), repeat=9):
     grid_ = [g[0:3], g[3:6], g[6:9]]
     if [max(grid_[r][c] for r in range(3)) for c in range(3)] == fm and [max(grid_[r]) for r in range(3)] == sm:
         tots.append(sum(g))
-ck("V11.6", (min(tots), max(tots)), (6, 14))
+ck("V11.6", (min(tots), max(tots), len(tots)), (8, 16, 469))
 
 # ---------------- Lesson 12 Boxes and Bricks
 trip = sorted({tuple(sorted((a, b, 72 // (a * b)))) for a in range(1, 73) for b in range(1, 73) if 72 % (a * b) == 0})
@@ -1964,7 +1982,7 @@ ck("V23.1", (F(18, 24) * 100, round(41 / 60 * 100), F(36, 80) * 100), (75, 68, F
 ck("V23.2", (F(20 * 2 + 40 * 3, 100) / 5 * 100, (F(2) * F(20, 100) + F(3) * F(40, 100)) / 5), (32, F(8, 25)))
 tots = [n for n in range(1, 201) if (F(52, 100) * n).denominator == 1]
 ck("V23.3", (tots[:4], {(52 * n // 100) % 2 for n in tots}, 52 in tots), ([25, 50, 75, 100], {0, 1}, False))
-ck("V23.4", (F(250) * F(60, 100) , F(250) * F(60, 100) * F(30, 100)), (150, 45))
+ck("V23.4", (F(400) * F(65, 100), F(400) * F(65, 100) * F(20, 100), F(400) * F(65, 100) * F(80, 100)), (260, 52, 208))
 
 # ---------------- Lesson 24 Unequal Parts
 sol = [(r, c) for r in range(1, 100) for c in range(1, 100) if c == r + 7 and 3 * c + 2 * r == 76]
@@ -2055,7 +2073,7 @@ def rays_transversals(rays, trans):
 ck("V27.2", (rays_transversals(5, 1), rays_transversals(5, 2), rays_transversals(6, 2)), (10, 20, 30))
 ck("V27.3", (math.comb(9, 2), len([p for p in itertools.permutations(range(4)) if abs(p.index(0) - p.index(1)) != 1])), (36, 12))
 def digits_to(N): return sum(len(str(k)) for k in range(1, N + 1))
-ck("V27.4", (digits_to(130), min(N for N in range(1, 400) if digits_to(N) == 282), digits_to(99)), (282, 130, 189))
+ck("V27.4", (digits_to(210), min(N for N in range(1, 400) if digits_to(N) == 522), digits_to(99)), (522, 210, 189))
 ck("V27.5", len([n for n in range(2000, 4000) if len(set(str(n))) == 4]), 1008)
 
 # ---------------- Lesson 28 Supposition Studio
@@ -2160,7 +2178,7 @@ for k in range(365):
 ck("V33.6", (max(cnt, key=cnt.get), max(cnt.values()), sorted(cnt.values())[0]), (d1.strftime("%A"), 53, 52))
 
 # ---------------- Lesson 34 Logic Grids and Digit Puzzles
-# five runners; clues: V is neither first nor last; W finished directly after V; X is ahead of V; Y is ahead of X; Z is behind W
+# five runners; clues: V is neither first nor last; W finished directly after V; X is in front of V; Y is in front of X; Z is behind W
 def run5c(o):
     pos = {n: i for i, n in enumerate(o)}
     return pos["V"] not in (0, 4) and pos["W"] == pos["V"] + 1 and pos["X"] < pos["V"] and pos["Y"] < pos["X"] and pos["Z"] > pos["W"]
@@ -2289,7 +2307,7 @@ ck("V37.3", (park(125), max(m for m in range(1, 600) if park(m) <= F("8.70"))), 
 
 # Spare Clue: a rectangle with perimeter 36 cm and length 2 cm more than the width; "area 80 cm2" is a spare clue
 sol = [(w, w + 2) for w in range(1, 50) if 2 * (2 * w + 2) == 36]
-ck("V37.4", (sol, sol[0][0] * sol[0][1], [w * (w + 2) for w in range(1, 50) if 2 * (2 * w + 2) == 36 and w * (w + 2) == 84]), ([(8, 10)], 80, []))
+ck("V37.4", ([x for x in range(1, 40) if 6 + 10 > x and 6 + x > 10 and 10 + x > 6]), list(range(5, 16)))
 
 # ---------------- Lesson 38 Children Set the Problem
 cands = [n for n in range(100, 1000) if n % 7 == 0 and digsum(n) == 12 and (n // 10) % 10 == 0]
@@ -2321,57 +2339,67 @@ ck("Q1.1", (4250 * 100, 3600000 // 1000), (425000, 3600))
 ck("Q1.2", ([d for d in divisors(18) if 30 % d == 0], max(d for d in divisors(18) if 30 % d == 0)), ([1, 2, 3, 6], 6))
 ck("Q1.3", 5 + 12 // 4 * 2 - 3, 8)
 ck("Q1.4", (F(7, 4) - 1, F(2, 3) * F(3, 5)), (F(3, 4), F(2, 5)))
-ck("Q1.5", (float(F(3, 8)), F("4.5") / 1000), (0.375, F("0.0045")))
-ck("Q1.6", F(14 * 6, 2), 42)
-ck("Q1.7", ((180 - 40) / 2, 180 - 48 - 67), (70.0, 65))
-ck("Q1.8", 18 + 15 - (30 - 5), 8)
+ck("Q1.5", (float(F(5, 8)), F("6.3") / 1000), (0.625, F("0.0063")))
+ck("Q1.6", F(14 * 5, 2), F(35))
+ck("Q1.7", ((180 - 50) / 2, 180 - 38 - 72), (65.0, 70))
+ck("Q1.8", 7 + 4 + 9, 20)
 ck("Q1.9", [n for n in range(41, 60) if n % 7 == 0 and digsum(n) == 11], [56])
 
 # ---------------- Term 2 Quest (lesson 20)
-top = [[2, 1], [3, 1]]
-ck("Q2.1", sum(map(sum, top)), 7)
-ck("Q2.2", 5 * 4 * 3, 60)
-ck("Q2.3", (40 * 25 * 6, 40 * 25 * 6 // 1000), (6000, 6))
+top = [[1, 3], [2, 2]]
+ck("Q2.1", sum(map(sum, top)), 8)
+ck("Q2.2", 7 * 3 * 2, 42)
+ck("Q2.3", (50 * 20 * 8, 50 * 20 * 8 // 1000), (8000, 8))
 ck("Q2.4", (F(3250, 1000) + F("1.9"), divmod(int((F(3250, 1000) + F("1.9")) * 1000), 1000)), (F("5.15"), (5, 150)))
-ck("Q2.5", 9 * 5, 45)
-ck("Q2.6", (18 * 15, F(270, 18)), (270, 15))
-ck("Q2.7", (F(4 + 7 + 9 + 12, 4), 8), (8, 8))
+ck("Q2.5", F(12 * 7, 2), 42)
+ck("Q2.6", (25 * 14, F(350, 25)), (350, 14))
+ck("Q2.7", (F(5 + 8 + 11 + 16, 4), 10), (10, 10))
 ck("Q2.8", 3 * 2 + 3 * 2 + 2 * 2, 16)
-ck("Q2.9", (30 * 20, F(3000, 600), 5 + F(3000, 600)), (600, 5, 10))
+ck("Q2.9", (20 * 15, F(1500, 300), 4 + F(1500, 300)), (300, 5, 9))
 
 # ---------------- Term 3 Quest (lesson 30)
-ck("Q3.1", (F(35, 100) * 80, F(40, 100)), (28, F(2, 5)))
-ck("Q3.2", (50 * F(8, 10), 50 * F(8, 10) * F(109, 100)), (40, F("43.60")))
-ck("Q3.3", F(18, 24) * 100, 75)
+ck("Q3.1", (F(45, 100) * 60, F(70, 100)), (27, F(7, 10)))
+ck("Q3.2", (80 * F(75, 100), 80 * F(75, 100) * F(109, 100)), (60, F("65.40")))
+ck("Q3.3", F(9, 25) * 100, 36)
 ck("Q3.4", [p for p in range(1, 45) if p * 3 == (45 - p) * 2], [18])
-ck("Q3.5", [x for x in range(30) if 3 * x + 5 == 29], [8])
+ck("Q3.5", [x for x in range(30) if 4 * x + 6 == 38], [8])
 ck("Q3.6", 2 + 3 * 19, 59)
-ck("Q3.7", (math.comb(9, 2), [x for x in range(11) if 4 * (10 - x) + 6 * x == 48]), (36, [4]))
+ck("Q3.7", (3 * 2, [x for x in range(10) if 2 * (9 - x) + 5 * x == 30]), (6, [4]))
 ck("Q3.8", F(1000) * F(4, 100) * 3, 120)
 def cost(n):  # pens $3 each or 3 for $8
     return min(8 * k + 3 * max(0, n - 3 * k) for k in range(0, n // 3 + 2))
-ck("Q3.9", (cost(10), cost(9), cost(12)), (27, 24, 32))
+def mug_cost(n):  # mugs $5 each or 4 for $16
+    return min(16 * k + 5 * max(0, n - 4 * k) for k in range(0, n // 4 + 2))
+ck("Q3.9", (mug_cost(10), mug_cost(8), mug_cost(11)), (42, 32, 47))
 
 # ---------------- Term 4 Quest (lesson 40)
-ck("Q4.1", (F((6 - 2) * 180, 6), (6 - 2) * 180), (120, 720))
+ck("Q4.1", (180 - 80, 180 - 80), (100, 100))
 sq = [(0, 0), (4, 0), (4, 4), (0, 4)]
 def sides_equal(p):
     d = [(p[(i + 1) % 4][0] - p[i][0]) ** 2 + (p[(i + 1) % 4][1] - p[i][1]) ** 2 for i in range(4)]
     return len(set(d)) == 1
 def diag_equal(p): return (p[2][0] - p[0][0]) ** 2 + (p[2][1] - p[0][1]) ** 2 == (p[3][0] - p[1][0]) ** 2 + (p[3][1] - p[1][1]) ** 2
 shapes = {"square": sq, "rhombus": [(0, 0), (5, 0), (8, 4), (3, 4)], "kite": [(0, 0), (2, 1), (0, 5), (-2, 1)], "parallelogram": [(0, 0), (6, 0), (8, 3), (2, 3)]}
-ck("Q4.2", [k for k, v in shapes.items() if sides_equal(v) and diag_equal(v)], ["square"])
-ck("Q4.3", (abs(4 * 30), (datetime.date(2026, 10, 5) + datetime.timedelta(days=100)).strftime("%A"), datetime.date(2026, 10, 5).strftime("%A")), (120, "Wednesday", "Monday"))
+rect = [(0, 0), (6, 0), (6, 4), (0, 4)]
+def right_angles(p):
+    return all((p[(i + 1) % 4][0] - p[i][0]) * (p[(i + 2) % 4][0] - p[(i + 1) % 4][0]) + (p[(i + 1) % 4][1] - p[i][1]) * (p[(i + 2) % 4][1] - p[(i + 1) % 4][1]) == 0 for i in range(4))
+def opp_equal(p):
+    d = [(p[(i + 1) % 4][0] - p[i][0]) ** 2 + (p[(i + 1) % 4][1] - p[i][1]) ** 2 for i in range(4)]
+    return d[0] == d[2] and d[1] == d[3]
+shapes["rectangle"] = rect
+ck("Q4.2", [k for k, v in shapes.items() if opp_equal(v) and right_angles(v) and not sides_equal(v)], ["rectangle"])
+ck("Q4.3", (abs(5 * 30), (datetime.date(2026, 10, 5) + datetime.timedelta(days=30)).strftime("%A"), datetime.date(2026, 10, 5).strftime("%A")), (150, "Wednesday", "Monday"))
 def finish(o):
     pos = {n: i for i, n in enumerate(o)}
     return pos["Mei"] != 0 and pos["Ravi"] == pos["Mei"] + 1 and pos["Kai"] < pos["Mei"]
 ck("Q4.4", ["".join(n[0] for n in o) for o in itertools.permutations(["Kai", "Mei", "Ravi"]) if finish(o)], ["KMR"])
-ck("Q4.5", [n for n in range(10, 60) if n % 7 == 3 and n % 4 == 1], [17, 45])
-ck("Q4.6", [x for x in range(1, 60) if x * 3 - 4 == 20], [8])
+ck("Q4.5", (sum(range(1, 14, 2)) % 2, 58 % 7), (1, 2))
+ck("Q4.6", [x for x in range(1, 60) if x * 4 - 6 == 30], [9])
 ck("Q4.7", F(60) * F(75, 100) * F(109, 100), F("49.05"))
 def colourings(n, edges, k):
     return sum(1 for col in itertools.product(range(k), repeat=n) if all(col[a] != col[b] for a, b in edges))
 ck("Q4.8", colourings(4, [(0, 1), (1, 2), (2, 3)], 3), 24)
+ck("Q4.10", all("ABAC"[i] != "ABAC"[i + 1] for i in range(3)), True)
 # cave: how many 3-digit numbers have digit sum 5 (unseen puzzle joining two moves)
 ck("Q4.9", len([n for n in range(100, 1000) if digsum(n) == 5]), 15)
 
@@ -2458,7 +2486,7 @@ ck("V5.6", sol, [(90, 72)])
 ck("V5.7", F(4, 6) * F(3, 8), F(1, 4))
 ck("V5.8", F(1, 2) * F(1, 3) * F(1, 4) * 240, 10)
 # ---- Lesson 7
-ck("V7.6", F(2 * 54, 9), 12)
+ck("V7.6", F(2 * 45, 6), 15)
 # ---- Lesson 8
 # triangle with angles from the AB = BD, AD = DC chain: angles at A, B, C, D
 x = 34
@@ -2496,7 +2524,8 @@ ck("V12.4", 12 + F(300, 5 * 4), 27)
 ck("V12.5", (6 ** 3 // 2 ** 3, (6 // 2) ** 3), (27, 27))
 # ---- Lesson 13
 ck("V13.4", (50 * 30, 8 + F(4500, 50 * 30)), (1500, 11))
-ck("V13.5", 60 * 40 * 35 // 1000, 84)
+ck("V13.5", 70 * 50 * 36 // 1000, 126)
+ck("V13.6", 25 * 20 * 12, 6000)
 # ---- Lesson 14
 ck("V14.4", (F("3.6") - F("1.85"), F("1.75") * 1000), (F("1.75"), 1750))
 ck("V14.5", (18400 + 21650 + (21650 + 2500)), 64200)
@@ -2557,6 +2586,13 @@ ck("V16.7", (F(1, 6) - F(1, 10), 1 / (F(1, 6) - F(1, 10))), (F(1, 15), 15))
 # ---------------------------------------------------------------- summary
 ids = [i for i, _ in R]
 dup = sorted({i for i in ids if ids.count(i) > 1})
+# ---------------- audit revision (23 Oct 2026)
+ck("V2.11", (7482 % 2 == 0, 7482 % 5 != 0, 7482 % 10 != 0), (True, True, True))
+ck("V15.5", F(12 * 7, 2), 42)
+ck("V26.7", all(sum(range(a, a + 5)) == 5 * (a + 2) for a in range(1, 300)) and sum(range(10, 15)) == 60, True)
+ck("V31.6", (180 - 72, 72), (108, 72))
+two = [("A", "B"), ("B", "B"), ("C", "A"), ("A", "C")]
+ck("R5.2", [c for c in two if c[0] != c[1]], [("A", "B"), ("C", "A"), ("A", "C")])
 assert not dup, "duplicate check ids: %s" % dup
 bad = [i for i, ok in R if not ok]
 if bad:
