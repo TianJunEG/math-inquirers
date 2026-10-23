@@ -65,8 +65,10 @@ def is_kit(path, p):
 def lesson_title(path):
     """(topic, title) from the first workbook page, e.g. ('Whole numbers: tens and ones', 'Bundles and singles')."""
     lines = [re.split(r'\s{2,}', l.strip()) for l in text_of(path, 1).split('\n') if l.strip()]
-    topic = lines[0][1].title() if lines and len(lines[0]) > 1 else ''
-    title = lines[1][0].rstrip('!').title() if len(lines) > 1 and lines[1][0].isupper() else ''
+    ti = next((i for i, l in enumerate(lines[1:], 1) if len(l) == 1 and l[0].isupper() and len(l[0]) > 3), None)
+    head = lines[:ti] if ti else lines[:1]
+    topic = ' '.join(l[1] for l in head if len(l) > 1).title()     # a long topic wraps onto a second header line
+    title = lines[ti][0].rstrip('!').title() if ti else ''
     return topic, title
 
 
