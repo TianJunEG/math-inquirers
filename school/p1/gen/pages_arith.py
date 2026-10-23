@@ -339,7 +339,7 @@ def page03():
         if len(items) != 6: continue
         ans = [per if kind == "share" else g for kind, n, g, per in items]
         if len(set(ans)) != 6 or len({(n, g if kind == "share" else per) for kind, n, g, per in items}) != 6: continue
-        table = make_code_table(ans, word, rng, 1, 20, n_decoy=3, near=(1, -1, 2, -2, 3, -3), tries=300)
+        table = make_code_table(ans, word, rng, 1, 20, n_decoy=2, near=(1, -1, 2, -2, 3, -3), tries=600)
         if table: break
     objk = [kinds_[(i + rng.randrange(4)) % 4] for i in range(6)]
     if len(set(objk)) < 4: objk = [kinds_[i % 4] for i in range(6)]

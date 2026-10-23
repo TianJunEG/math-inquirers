@@ -1,9 +1,7 @@
 {
- "passed": 796,
- "failed": 1,
- "failures": [
-  "CBC-P2-10: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)"
- ],
+ "passed": 797,
+ "failed": 0,
+ "failures": [],
  "worksheets": {
   "CBC-P2-01": {
    "single_slip": {
@@ -210,7 +208,7 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.7,
+   "min_pupil_font_mm": 4.9,
    "min_teacher_font_mm": 3.8,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.9

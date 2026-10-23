@@ -84,7 +84,7 @@ def page21():
         for it in items:
             wrong |= {it["a"] + it["b"], it["a"] - it["b"]}
         wrong = sorted(w for w in wrong if 0 <= w <= 20 and w not in ans)
-        table = make_code_table(ans, word, rng, 0, 20, n_decoy=3, near=(1, -1, 2, -2, 10, -10), tries=300, pool=wrong)
+        table = make_code_table(ans, word, rng, 0, 20, n_decoy=2, near=(1, -1, 2, -2, 10, -10), tries=300, pool=wrong)
         if table: break
     cards = []; texts = []; picobjs = []
     for i, it in enumerate(items):
