@@ -890,14 +890,14 @@ _SUN_N = 0
 
 
 def _sun_card(spec, x, y, cw, ch):
-    """A pair-card face that really shows what a set differs in: 'sun:N:size:pattern' = N suns (1-5), size big|mid|small, pattern plain|striped|dotted."""
+    """A pair-card face that really shows what a set differs in: 'sun:N:size:pattern' = N suns (1-5), size big|mid|small|few, pattern plain|striped|dotted."""
     global _SUN_N
     _, n, size, pat = spec.split(':'); n = int(n)
     _SUN_N += 1; pid = f'sunpat{_SUN_N}'
-    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10}[size] * cw * (1 if n == 1 else 0.82 if n <= 2 else 0.74)
+    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.095}[size] * cw
     if n == 1: pos = [(0.5, 0.5)]
     elif n == 2: pos = [(0.3, 0.5), (0.7, 0.5)]
-    elif n == 5: pos = [(0.22, 0.28), (0.5, 0.2), (0.78, 0.28), (0.34, 0.72), (0.66, 0.72)]
+    elif n == 5: pos = [(0.17, 0.25), (0.5, 0.25), (0.83, 0.25), (0.33, 0.75), (0.67, 0.75)]
     else: raise ValueError('sun card: N must be 1, 2 or 5')
     fill = {'plain': YEL, 'striped': f'url(#{pid}s)', 'dotted': f'url(#{pid}d)'}[pat]
     out = [f'<defs><pattern id="{pid}s" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="translate({x:.1f} {y:.1f}) rotate(45)"><rect width="10" height="10" fill="#fff"/><rect width="4" height="10" fill="{NAVY}"/></pattern>'
@@ -906,7 +906,7 @@ def _sun_card(spec, x, y, cw, ch):
         cx, cy = x + px * cw, y + py * ch
         for k in range(8):
             a = k * math.pi / 4
-            out.append(f'<line x1="{cx + R * 1.25 * math.cos(a):.1f}" y1="{cy + R * 1.25 * math.sin(a):.1f}" x2="{cx + R * 1.7 * math.cos(a):.1f}" y2="{cy + R * 1.7 * math.sin(a):.1f}" stroke="{NAVY}" stroke-width="{3.4 if size != "small" else 2.6}" stroke-linecap="round"/>')
+            out.append(f'<line x1="{cx + R * 1.25 * math.cos(a):.1f}" y1="{cy + R * 1.25 * math.sin(a):.1f}" x2="{cx + R * 1.6 * math.cos(a):.1f}" y2="{cy + R * 1.6 * math.sin(a):.1f}" stroke="{NAVY}" stroke-width="{3.4 if size != "small" else 2.6}" stroke-linecap="round"/>')
         out.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{R:.1f}" fill="{fill}" stroke="{NAVY}" stroke-width="3"/>')
     return ''.join(out)
 

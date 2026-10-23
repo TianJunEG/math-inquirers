@@ -63,12 +63,12 @@ const dotTriangles = () => {
 };
 
 // ---- coins ----
-const coinCell = (v, label) => `<div style="text-align:center">${svg(60, 56, coinF(v, 30, 28), v + ' cent coin', 60)}<div style="font-size:12px;font-weight:700">${label}</div></div>`;
+const coinCell = (v, label) => `<div style="text-align:center">${svg(50, 46, coinF(v, 25, 23), v + ' cent coin', 50)}<div style="font-size:12px;font-weight:700">${label}</div></div>`;
 const coinsRow = (vals, o = {}) => W(F.coinRow(vals, o), 2);
 // No.3: purse strip for 85¢
 const purse = () => W(svg(560, 90, coinTrayInner([5, 10, 20, 50], 6, 8) + R(10, 62, 540, 24, '#fff', { dash: true, sw: 2.4, rx: 8 }) + T(280, 79, 'My 85¢ purse: place coins here', 15, { w: 600, c: '#8A94AD', i: true }), 'Tray with a 5, 10, 20 and 50 cent coin and an empty purse for 85 cents'), 2);
 function coinTrayInner(vals, x, y) { let s = '', cx = x; vals.forEach(v => { const r = F.COIN[v].r; s += coinF(v, cx + r + 4, y + 26 + 0); cx += 2 * r + 14; }); return s; }
-const trayRow = (vals, extra = '') => W(svg(560, 62, coinTrayInner(vals, 6, 5) + extra, 'Coins: ' + vals.join(', ') + ' cents'), 2);
+const trayRow = (vals, extra = '') => W(svg(560, 52, coinTrayInner(vals, 6, -1) + extra, 'Coins: ' + vals.join(', ') + ' cents'), 2);
 const benTwo = () => {
   let s = coinTrayInner([5, 10, 20, 50], 6, 4);
   s += T(380, 36, 'Two coins:', 16, { a: 'end' }) + coinF(20, 410, 31, { empty: true, q: true }) + T(443, 38, '+', 24) + coinF(20, 476, 31, { empty: true, q: true }) + T(510, 38, '= 35¢ ?', 17, { a: 'start' });
@@ -121,12 +121,12 @@ const ruler6 = () => { // L9 No.6: ruler 0-12 with pencil from 0 to 12 and crayo
 const queue20 = () => {
   const s0 = 28, pitch = 33; let o = '';
   for (let r = 0; r < 2; r++) for (let i = 0; i < 10; i++) {
-    const n = r * 10 + i + 1, cx = 40 + i * pitch * 1.5 + 0, cy = 30 + r * 66;
-    o += C(cx, cy, s0 / 2, n === 7 ? Y : '#fff', { sw: 2.4 }) + T(cx, cy + 36, n, 15, { c: '#44506F' });
+    const n = r * 10 + i + 1, cx = 40 + i * pitch * 1.5 + 0, cy = 24 + r * 52;
+    o += C(cx, cy, s0 / 2, n === 7 ? Y : '#fff', { sw: 2.4 }) + T(cx, cy + 27, n, 14, { c: '#44506F' });
     if (n === 7) o += T(cx, cy + 6, 'Mei', 13, { w: 800 });
   }
-  o += T(10, 14, 'front', 14, { a: 'start', c: TEAL, i: true });
-  return W(svg(560, 150, o, 'A queue of 20 children in two rows of 10, numbered 1 to 20 from the front; Mei is the 7th'), 2);
+  o += T(10, 12, 'front', 14, { a: 'start', c: TEAL, i: true });
+  return W(svg(560, 112, o, 'A queue of 20 children in two rows of 10, numbered 1 to 20 from the front; Mei is the 7th'), 2);
 };
 // extra (Think harder / Go further) figures by '<lesson>.<T|C><n>'
 const FX = {

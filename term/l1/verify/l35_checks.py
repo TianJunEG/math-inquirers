@@ -221,8 +221,8 @@ def run(d):
     eq(row_diffs(a, b), [['size'], ['n'], ['pattern']], 'explore: size, number, pattern'); eq(P('s-explore2-ans', 0)['tiles'], a['tiles'], 'explore answer slide shows picture 1'); eq(P('s-explore2-ans', 1)['tiles'], b['tiles'], 'explore answer slide shows picture 2')
     eq('Tile 1: size' in sl['s-explore2-ans']['blocks'][-1]['text'] and 'Tile 2: number' in sl['s-explore2-ans']['blocks'][-1]['text'] and 'Tile 3: pattern' in sl['s-explore2-ans']['blocks'][-1]['text'], True, 'explore answer text')
     kit = d['workbook']['kits'][0]; labs = list(kit['labels']); sets = [labs[i:i + 4] for i in range(0, 12, 4)]
-    eq([max(set(s), key=s.count) for s in sets], ['sun:2:mid:plain', 'sun:1:big:plain', 'sun:1:mid:striped'], 'kit: the three alike in each set')
-    eq([[x for x in s if s.count(x) == 1] for s in sets], [['sun:5:mid:plain'], ['sun:1:small:plain'], ['sun:1:mid:dotted']], 'kit: one odd card in each set')
+    eq([max(set(s), key=s.count) for s in sets], ['sun:2:few:plain', 'sun:1:big:plain', 'sun:1:mid:striped'], 'kit: the three alike in each set')
+    eq([[x for x in s if s.count(x) == 1] for s in sets], [['sun:5:few:plain'], ['sun:1:small:plain'], ['sun:1:mid:dotted']], 'kit: one odd card in each set')
     eq([[i for i in (1, 2, 3) if len({x.split(':')[i] for x in s}) > 1] for s in sets], [[1], [2], [3]], 'kit: each set differs in exactly one drawn thing (number, size, pattern)'); eq([len(s) - len(set(s)) for s in sets], [2, 2, 2], 'kit: three alike and one different')
     eq(len(labs), 12, 'kit: 12 cards'); eq(d['materials']['kit_contract'][0]['supplied'], 12, 'kit contract supplied'); eq(d['materials']['kit_contract'][0]['max_used'], len(labs), 'kit contract: every card is used in Explore')
     rows = {r[0]: r for r in sl['s-explore1-ans']['blocks'][0]['rows'][1:]}; eq([rows['Set 1'][1], rows['Set 2'][1], rows['Set 3'][1]], ['the 5 suns', 'the small sun', 'the dotted sun'], 's-explore1-ans odd cards')

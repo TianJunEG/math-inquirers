@@ -9,18 +9,18 @@ const tx = (x, y, s, size = 15, o = {}) => `<text x="${x}" y="${y}" font-size="$
 // Accurate line graph. o: {x, y, w, h, xl, y0, y1, step, lab, yt, series:[{v, c, mark, dash, name}], legend}
 // Points sit on the vertical grid lines; v[i] === null leaves a gap (no point, no line to it).
 const graph = o => {
-  const L = o.x + 52, T = o.y + (o.legend ? 34 : 12), R = o.x + o.w - 14, B = o.y + o.h - 46;
+  const L = o.x + 58, T = o.y + (o.legend ? 34 : 12), R = o.x + o.w - 14, B = o.y + o.h - 46;
   const n = o.xl.length, xs = i => L + 26 + i * (R - L - 52) / (n - 1), ys = v => B - (v - o.y0) * (B - T) / (o.y1 - o.y0);
   let s = `<rect x="${L}" y="${T}" width="${R - L}" height="${B - T}" fill="${WH}"/>`;
   for (let v = o.y0; v <= o.y1 + 1e-9; v += o.step) {
     const yy = ys(v), major = Math.abs((v - o.y0) % o.lab) < 1e-9;
     s += `<line x1="${L}" y1="${yy}" x2="${R}" y2="${yy}" stroke="${N}" stroke-opacity="${major ? 0.3 : 0.13}" stroke-width="1"/>`;
-    if (major) s += tx(L - 8, yy + 5, v, 15, { a: 'end' });
+    if (major) s += tx(L - 8, yy + 5, v, 18, { a: 'end' });
   }
-  o.xl.forEach((l, i) => { s += `<line x1="${xs(i)}" y1="${T}" x2="${xs(i)}" y2="${B}" stroke="${N}" stroke-opacity="0.13"/>` + tx(xs(i), B + 20, l, 15); });
+  o.xl.forEach((l, i) => { s += `<line x1="${xs(i)}" y1="${T}" x2="${xs(i)}" y2="${B}" stroke="${N}" stroke-opacity="0.13"/>` + tx(xs(i), B + 20, l, 18); });
   s += `<line x1="${L}" y1="${T - 4}" x2="${L}" y2="${B}" stroke="${N}" stroke-width="2.5"/><line x1="${L}" y1="${B}" x2="${R}" y2="${B}" stroke="${N}" stroke-width="2.5"/>`;
-  s += tx(o.x + 14, (T + B) / 2, o.yt, 15, { rot: true });
-  if (o.xt) s += tx((L + R) / 2, B + 40, o.xt, 15);
+  s += tx(o.x + 14, (T + B) / 2, o.yt, 18, { rot: true });
+  if (o.xt) s += tx((L + R) / 2, B + 40, o.xt, 18);
   o.series.forEach((se, k) => {
     let d = '';
     se.v.forEach((v, i) => {
@@ -35,16 +35,16 @@ const graph = o => {
       s += se.mark === 'sq' ? `<rect x="${X - 6}" y="${Yv - 6}" width="12" height="12" fill="${WH}" stroke="${se.c}" stroke-width="3"/>` : `<circle cx="${X}" cy="${Yv}" r="6" fill="${Y}" stroke="${se.c}" stroke-width="3"/>`;
     });
     if (o.legend) {
-      const lx = L + 10 + k * 150;
+      const lx = L + 10 + k * 170;
       s += `<line x1="${lx}" y1="${o.y + 14}" x2="${lx + 36}" y2="${o.y + 14}" stroke="${se.c}" stroke-width="3"${se.dash ? ' stroke-dasharray="9 6"' : ''}/>` +
         (se.mark === 'sq' ? `<rect x="${lx + 12}" y="${o.y + 8}" width="12" height="12" fill="${WH}" stroke="${se.c}" stroke-width="3"/>` : `<circle cx="${lx + 18}" cy="${o.y + 14}" r="6" fill="${Y}" stroke="${se.c}" stroke-width="3"/>`) +
-        tx(lx + 44, o.y + 19, se.name, 15, { a: 'start' });
+        tx(lx + 44, o.y + 19, se.name, 18, { a: 'start' });
     }
   });
   return s;
 };
 const svg = (w, h, body, label, dw) => `<svg aria-label="${label}" viewBox="0 0 ${w} ${h}" width="${dw || w}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${body}</svg>`;
-const titled = (t, x) => tx(x, 18, t, 16);
+const titled = (t, x) => tx(x, 18, t, 18);
 
 const DAYS7 = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const juiceSvg = () => svg(600, 200, titled('Cups of sugarcane juice sold each day', 300) +
@@ -55,7 +55,7 @@ const moneySvg = () => svg(600, 196, titled('Money in each money box at the end 
     series: [{ v: [10, 20, 30, 40, 50, 60], c: TEAL, name: 'Ali' }, { v: [30, 35, 40, 45, 50, 55], c: RED, mark: 'sq', dash: true, name: 'Mei' }] }),
   'Two line graphs: Ali has 10, 20, 30, 40, 50, 60 dollars in weeks 1 to 6; Mei has 30, 35, 40, 45, 50, 55 dollars', 500);
 const shopsSvg = () => svg(600, 182,
-  tx(150, 18, 'Shop A: phone cases sold', 15) + tx(450, 18, 'Shop B: phone cases sold', 15) +
+  tx(150, 18, 'Shop A: phone cases sold', 18) + tx(450, 18, 'Shop B: phone cases sold', 18) +
   graph({ x: 0, y: 22, w: 295, h: 160, xl: ['Jan', 'Feb', 'Mar', 'Apr'], y0: 0, y1: 100, step: 20, lab: 20, yt: 'Number sold', series: [{ v: [20, 40, 60, 80], c: N }] }) +
   graph({ x: 305, y: 22, w: 295, h: 160, xl: ['Jan', 'Feb', 'Mar', 'Apr'], y0: 40, y1: 60, step: 4, lab: 4, yt: 'Number sold', series: [{ v: [44, 48, 52, 56], c: N }] }),
   'Two line graphs that look the same. Shop A: 20, 40, 60, 80 on a scale from 0 to 100. Shop B: 44, 48, 52, 56 on a scale from 40 to 60', 500);

@@ -385,8 +385,8 @@ PASS  S1 front page 01 layout (no overflow/clipping/margin breach)
 PASS  S1 front page 01 min text size >= 8 pt  12.0 pt
 PASS  S1 front page 02 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 02 min text size >= 8 pt  12.0 pt
-FAIL  S1 front page 03 layout (no overflow/clipping/margin breach)  page overflows; outside print-safe margin: UL. Code word. The answe; outside print-safe margin: LI. Total. The whole cou
-PASS  S1 front page 03 min text size >= 8 pt  12.0 pt
+FAIL  S1 front page 03 layout (no overflow/clipping/margin breach)  page overflows; outside print-safe margin: P. For every page, a sc
+PASS  S1 front page 03 min text size >= 8 pt  11.5 pt
 PASS  S1 front page 04 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 04 min text size >= 8 pt  8.5 pt
 PASS  S1 front page 05 layout (no overflow/clipping/margin breach)  
@@ -405,10 +405,10 @@ PASS  S1 key page 06 layout (no overflow/clipping/margin breach)
 PASS  S1 key page 06 min text size >= 8 pt  8.0 pt
 PASS  S1 key page 07 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 07 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 01 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
-PASS  S2 pupil page 01 page-fill: puzzle content 182 of 183 mm  0.99
+PASS  S2 pupil page 01 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 01 page-fill: puzzle content 181 of 183 mm  0.99
 PASS  S2 pupil page 01 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 02 layout (no overflow/clipping/margin breach)  outside print-safe margin: H1. Colour the Ice Cream
+PASS  S2 pupil page 02 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 02 page-fill: puzzle content 197 of 198 mm  0.99
 PASS  S2 pupil page 02 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 03 layout (no overflow/clipping/margin breach)  
@@ -436,8 +436,8 @@ PASS  S2 front page 01 layout (no overflow/clipping/margin breach)
 PASS  S2 front page 01 min text size >= 8 pt  12.0 pt
 PASS  S2 front page 02 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 02 min text size >= 8 pt  12.0 pt
-FAIL  S2 front page 03 layout (no overflow/clipping/margin breach)  page overflows; outside print-safe margin: P. For every page, a sc
-PASS  S2 front page 03 min text size >= 8 pt  12.0 pt
+PASS  S2 front page 03 layout (no overflow/clipping/margin breach)  
+PASS  S2 front page 03 min text size >= 8 pt  11.5 pt
 PASS  S2 front page 04 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 04 min text size >= 8 pt  8.5 pt
 PASS  S2 front page 05 layout (no overflow/clipping/margin breach)  
@@ -456,17 +456,17 @@ PASS  S1_pupil.html: colour-by-code pictures: 2 found (expected 2); every label 
 PASS  S1_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(6, 0, 15), (7, 0, 17)]
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 13)]
 PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(5, 0, 13)]
-PASS  P1_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.78% vs greyscale)  11 pages
-PASS  P1_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 85, limit 40 per page)  
-PASS  P1_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 25.02% vs greyscale)  5 pages
-PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 69, limit 40 per page)  
+PASS  P1_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.84% vs greyscale)  11 pages
+PASS  P1_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 89, limit 40 per page)  
+PASS  P1_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 23.88% vs greyscale)  5 pages
+PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 134, limit 40 per page)  
 PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.19% vs greyscale)  7 pages
 PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 288, limit 75 per page)  
-PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 10.78% vs greyscale)  9 pages
+PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 10.80% vs greyscale)  9 pages
 PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 73, limit 40 per page)  
-PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 24.75% vs greyscale)  5 pages
-PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 70, limit 40 per page)  
+PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 23.39% vs greyscale)  5 pages
+PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 125, limit 40 per page)  
 PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 32.78% vs greyscale)  5 pages
 PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 232, limit 75 per page)  
 
-TOTAL 470 checks, 4 failed
+TOTAL 470 checks, 1 failed

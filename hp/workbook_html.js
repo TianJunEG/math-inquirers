@@ -231,15 +231,13 @@ W.push(...hdr(6, 'Money', 'COIN COMBOS')); W.push(fast());
 W.push(p('We have 5¢, 10¢, 20¢ and 50¢ coins. You can use the same kind of coin more than once.', { after: 100 }));
 W.push(q(1, 'Show different ways to make exactly 20¢ using only 20¢, 10¢ and 5¢ coins. Write how many of each coin in the table.', { before: 100, keepNext: true }));
 { const ws = [2500, 2470, 2470, 2460];
-  W.push(tbl(ws, [row(['Way', 'Number of 20¢', 'Number of 10¢', 'Number of 5¢'].map((s, i) => cell(i ? [FG.coinCell([0, 20, 10, 5][i], s)] : s, ws[i], { bold: true, fill: 'D9D9D9', size: 22, h: 40 }))), ...['A', 'B', 'C', 'D', 'E'].map(l => row([cell(l, ws[0], { bold: true, h: 100 }), cell('', ws[1]), cell('', ws[2]), cell('', ws[3])]))])); }
-W.push(p([t('You may not need every row.', { italics: true })], { indent: { left: 560 }, after: 60 }));
-W.push(gap(60));
-W.push(sub('a', 'Which way uses the FEWEST coins?')); W.push(ans());
-W.push(sub('b', 'Which way uses the MOST coins?')); W.push(ans());
+  W.push(tbl(ws, [row(['Way', 'Number of 20¢', 'Number of 10¢', 'Number of 5¢'].map((s, i) => cell(i ? [FG.coinCell([0, 20, 10, 5][i], s)] : s, ws[i], { bold: true, fill: 'D9D9D9', size: 22, h: 10 }))), ...['A', 'B', 'C', 'D', 'E'].map(l => row([cell(l, ws[0], { bold: true, h: 30 }), cell('', ws[1], { h: 30 }), cell('', ws[2], { h: 30 }), cell('', ws[3], { h: 30 })]))])); }
+W.push(p([t('You may not need every row.', { italics: true })], { indent: { left: 560 }, after: 20 }));
+W.push(sub('a', 'Which way uses the FEWEST coins?   ____________'));
+W.push(sub('b', 'Which way uses the MOST coins?   ____________'));
 W.push(sub('c', 'How do you know you have found ALL the ways?'));
-W.push(...lines(2));
+W.push(...lines(1));
 W.push(q(2, 'Find ALL the ways to make 25¢ using 20¢, 10¢ and 5¢ coins. Start with the biggest coin. Write each way like this:  20¢ + 5¢   (Hint: there are 4 ways.)', { before: 120, keepNext: true }));
-W.push(FG.trayRow([20, 10, 5]));
 W.push(...lines(4));
 W.push(q(3, 'Mei wants to pay exactly 85¢ using 5¢, 10¢, 20¢ and 50¢ coins.', { pb: true, before: 0, keepNext: true }));
 W.push(FG.purse());
