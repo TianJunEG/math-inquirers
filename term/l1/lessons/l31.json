@@ -17,7 +17,7 @@
    "Fractions as numbers, with notation such as 1/2 and 1/4, are Primary 2 (p. 33): this lesson uses the words half and quarter and pictures only, no fraction notation",
    "Equal area in different shapes (the same half cut in different ways) and a fraction of a number of squares are Primary 2 and Primary 3 ideas (pp. 33 and 36)"
   ],
-  "note": "Strand label for the tutor only. Start here is school Primary 1 work: fold a circle into halves and quarters, say whether a coloured part is a half or a quarter, count the equal parts, name a half circle and a quarter circle, and draw a line that cuts a square into 2 or 4 equal parts. No Primary 1 school paper in the sample we studied has an equal-parts item, so the wording is marked unverified; the Primary 1 papers do name and count shapes, which is what the warm-up uses. Think harder cuts a square into halves in several ways (DIAG), counts the small squares in a half and a quarter of a rectangle, tests four statements, and tests four statements. BEYOND PRIMARY 1 ON PURPOSE, at Think harder and Go further only: Same Half, Different Shape (three halves of a 2 by 4 rectangle with different shapes and the same 4 squares), guessing a shape from clues (LOG), and finding the whole from a quarter (BACK). Do not call this lesson MOE-aligned. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type. Contest tag (tutor only): equal parts and fold lines; equal area in different shapes."
+  "note": "Strand label for the tutor only. Start here is school Primary 1 work: fold a circle into halves and quarters, say whether a coloured part is a half or a quarter, count the equal parts, name a half circle and a quarter circle, and draw a line that cuts a square into 2 or 4 equal parts. No Primary 1 school paper in the sample we studied has an equal-parts item, so the wording is marked unverified; the Primary 1 papers do name and count shapes, which is what the warm-up uses. Think harder cuts a square into halves in several ways (DIAG), counts the small squares in a half and a quarter of a rectangle, tests four true or false statements. BEYOND PRIMARY 1 ON PURPOSE, at Think harder and Go further only: Same Half, Different Shape (three halves of a 2 by 4 rectangle with different shapes and the same 4 squares), guessing a shape from clues (LOG), and finding the whole from a quarter (BACK). Do not call this lesson MOE-aligned. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type. Contest tag (tutor only): equal parts and fold lines; equal area in different shapes."
  },
  "contest_moves": [
   "draw it: cut a square into 2 equal parts in several different ways (DIAG)",
@@ -2764,7 +2764,7 @@
    "page": 5,
    "tier": "investigation",
    "title": "Fold twice",
-   "first": "Fold a paper square in half. Open it. How many parts? Write the number.",
+   "first": "Fold a paper square in half. Open it. How many equal parts are there? Write the number: ______",
    "text": "Fold it in half again to make 4 equal parts. Draw the fold lines on the first square. Make 4 equal parts a different way on the second square.",
    "visuals": [
     {
@@ -3465,7 +3465,7 @@
   ]
  },
  "parent": {
-  "summary": "We folded paper shapes into equal parts. Your child folded a circle into 2 equal parts (halves) and then 4 equal parts (quarters), checked that parts match by laying one on top of the other, and named a half circle and a quarter circle. These are Primary 1 shapes ideas.",
+  "summary": "We folded paper shapes into equal parts. Your child folded a circle into 2 equal parts (halves) and then 4 equal parts (quarters), checked that parts match by laying one on top of the other, and named a half circle and a quarter circle. These are Primary 1 ideas about shapes.",
   "words": [
    "equal parts: the same size; they match when laid on top of each other",
    "half: 1 of 2 equal parts",

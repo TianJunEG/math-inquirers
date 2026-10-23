@@ -8,7 +8,7 @@ Sources read: `docs/pedagogy/term_review.md` (toolbox 2.2, explain ladder 2.4, c
 
 ## 0. The idea in one paragraph
 
-Lessons are live (Google Meet, up to 8 children, 90 minutes), so we can see how each child works, not just whether the page is right. We keep a small, structured record of three things the owner has adopted as the spine: (a) which strategy from the toolbox the child chooses, (b) giving a reason (the 5-rung explain ladder), and (c) checking and persistence. Digital answers add two context signals, time taken and accuracy. The record produces one thing parents see (a short block report in plain words), one thing tutors use (a view that tells them whom to ask what next), and one thing the owner uses (to find out whether the program is working). It never produces a rank, a score shown to a child, or a prediction.
+Lessons are live (Google Meet, up to 8 children, 90 minutes), so we can see how each child works, not just whether the page is right. We keep a small, structured record of three things the owner has adopted as the spine: (a) which strategy from the toolbox the child chooses, (b) giving a reason (the 5-rung explain ladder), and (c) checking and persistence. Digital answers add pace (time on accurate answers) and accuracy, which show fluency and confidence. The record produces one thing parents see (a short block report in plain words), one thing tutors use (a view that tells them whom to ask what next), and one thing the owner uses (to find out whether the program is working). Time taken on accurate answers (pace) is used as a real measure of fluency and confidence, in short labelled Quick sets only, against the child's own baseline. It never produces a public rank, a score shown to a child, or a prediction.
 
 ## 1. Purpose and honest limits
 
@@ -22,7 +22,7 @@ Lessons are live (Google Meet, up to 8 children, 90 minutes), so we can see how 
 - **Not predictive.** The record says nothing about exams, competitions, GEP or any school outcome. No MOE, GEP or SASMO claim, no exam-result promise (gifted_research section 3; owner decisions on the spine).
 - **Not causal.** No control group; the course cannot be shown to have caused a change.
 - **Observed, not total.** A child is observed 2-4 times per block by rotation. A report line says "in the lessons we watched".
-- **Digital capture is partial.** Children answer on their own devices; a slow answer may be a phone call, a sibling, a dropped connection, or thinking. Time never stands alone (section 3).
+- **Digital capture is partial.** Children answer on their own devices; a slow answer may be a phone call, a sibling, a dropped connection, or thinking. Pace is read together with accuracy, checks and hints (section 3).
 - **Today the runner records nothing server-side.** `term/l1/runner/practice.js` keeps only a done flag in the browser's localStorage (`mi-practice-<lesson>`), counts tries in memory, does not count hints, stores no times, and has no child identity. `portal/public/practice.js` is a placeholder. The `practice_attempts` table exists (`child_id`, `lesson_key`, `item_key`, `correct`, `hints_used`) but nothing writes to it. So every digital number in this spec is new build work (phase 1).
 
 ## 2. What is captured, by whom, when
@@ -42,9 +42,10 @@ One row per item per child, written when the item is finished (answered correctl
 | tier | core / stretch / challenge (already in the item data). |
 | tool_chosen | Only on items that ask "Which tool did you use?" (tool cards introduced so far, plus "I just knew" and "I'm not sure"). Optional to answer; skipping is recorded as null, not as a failure. |
 | checked | Only on items that ask "Did you check?" (a tick, as in the paper look-back). |
-| context | `live` (during a Meet lesson, from a link the tutor shared) or `home` (practice link at home). Live time includes listening to the tutor and is NOT analysed (section 3.4). |
+| mode, skill | `mode` is `depth` (untimed) or `fluency` (a labelled Quick set); `skill` is a short tag such as `add-2digit`. Only `fluency` items feed pace (section 3). |
+| context | `live` (during a Meet lesson, from a link the tutor shared) or `home` (practice link at home). Live time includes listening to the tutor and is used as context only unless it is in a labelled Quick set (section 3.6). |
 
-Rules for the child's screen, unchanged from the runner's header: **no timer shown, no score, no streak, no leaderboard.** The only change is that time and hints are noted in the background. Because the practice page currently says "There is no score and no timer", the wording must be changed to something true: "We do not show a timer or score. With your parent's agreement we note how long you spend on a question, to understand how you think. It is never used to compare you with anyone." **[OWNER]** to approve that this background timing is acceptable at all (see decision D3).
+Rules for the child's screen, unchanged from the runner's header: **no timer shown, no score, no streak, no leaderboard.** The only change is that time and hints are noted in the background; Quick sets (3.4) are labelled and may be skipped. Because the practice page currently says "There is no score and no timer", the wording must be changed to something true: "We do not show a timer or score. With your parent's agreement we note how long you spend on a question, to understand how you think. It is never used to compare you with anyone." **[OWNER]** to approve that this background timing is acceptable at all (see decision D3).
 
 ### 2.2 Quick tutor capture in the live lesson
 
@@ -93,42 +94,73 @@ Design for a tablet or second laptop, **never the screen shared into Meet**. Lar
 +--------------------------------------------------------------+
 ```
 
-Behaviours: selecting a rung or tool is one tap and stays highlighted; "Save and next child" saves and moves on; an entry can be edited until "Finish lesson" (and for 24 hours after, for the tutor only); the phase-0 paper sheet (section 9) is the same layout on one A5 page per lesson. The screen shows no digital time or accuracy numbers during the lesson; the tutor sees those only after the lesson (section 5.2), so the number never steers live judgement of a child.
+Behaviours: selecting a rung or tool is one tap and stays highlighted; "Save and next child" saves and moves on; an entry can be edited until "Finish lesson" (and for 24 hours after, for the tutor only); the phase-0 paper sheet (section 9) is the same layout on one A5 page per lesson. The screen shows no digital time or accuracy numbers during the lesson; the tutor sees those only after the lesson (section 5.2), so a number does not steer the live rating.
 
-## 3. How TIME and ACCURACY are used responsibly
+## 3. How TIME (pace) and ACCURACY are used
+
+**Owner correction (23 Oct 2026).** Contests and school exams are timed, and a child who answers accurately and quickly is usually a confident child. So pace is a real measure here, of **fluency and confidence**, alongside the three spine outcomes. It is not a hidden extra and it is not forbidden. What stays forbidden is turning pace into a public rank or a verdict on a child.
+
+**Two honest views, both kept.** `docs/gifted_research.md` rates "depth over speed" as a core design feature (few problems, long think time, rewarding explaining over finishing) and notes that competitions reward speed and accuracy on closed-answer items, while math circles and depth programmes differ. We do not settle that argument. We keep two modes so the data can hold both: **Depth mode** (untimed) and **Fluency mode** (timed, short, labelled). Neither is "the real one". The research note gathered no evidence that speed practice transfers to contest or exam results, and none that it does not; this spec makes no such claim.
 
 ### 3.1 Principles
-1. **Context, never a score.** Time and accuracy are inputs the tutor reads together with the three outcomes. No page, report, or export has a field called "speed", "score", "accuracy %" or "rank" for a child.
-2. **Depth over speed.** gifted_research rates "depth over speed" as a core criterion (few problems, long think time, rewarding explaining over finishing). Nothing here may reward quick answers. Fast is not praised; slow is not penalised.
-3. **Each child against their own baseline.** "Long" and "fast" are defined per child (3.3), not against the group.
-4. **No leaderboards, no comparison between children,** on screen, in reports, in the admin export, or in what a tutor says. Group-level numbers are shown to the owner only as counts of observations, never per child, and only for groups of at least five children (section 5.3).
-5. **Nothing automatic is shown to a child or parent.** Derived labels are prompts for the tutor and are not stored as facts about the child.
+1. **Pace counts only on accurate answers.** Pace = time taken on items answered correctly. Time on wrong answers is read for the quadrant (3.3) but is not "pace".
+2. **Two modes, never mixed.** Depth tasks are untimed and are never used for pace. Fluency sets are short, labelled, and are the only items used for a pace statement (3.4).
+3. **A child against their own baseline first.** Pace is reported as movement against the child's own earlier sets (3.5). Optional indicative target ranges are secondary and are never shown as a pass or fail.
+4. **No public leaderboards, no ranking or comparison between children,** on screen, in reports, in exports, or aloud. Group figures go to the owner only as counts, never per child, and only for cohorts of 5 or more (5.3).
+5. **Speed is never the headline for a young child, and never praised on its own.** The tutor praises the use of a tool, a check or a reason, and says "quicker" only about a skill, not about the child.
+6. **Pace never replaces tutor judgement.** The quadrant is a prompt; the tutor decides what it means for this child on this day.
 
-### 3.2 Reading the signals together (tutor view only)
+### 3.2 Depth mode and Fluency mode
 
-| Pattern in this child's recent items | What the tutor view says (a prompt, not a verdict) |
-|---|---|
-| Long time + correct + checked (or hints low, retried a different way) | "Looks like persistence. Worth naming: 'You stayed with that one.'" Evidence for outcome (c). |
-| Long time + correct, not checked | "Stayed with it. Ask how they could check." |
-| Fast + wrong + no check | "Prompt to slow down: ask 'How could you check that before you press Check?'" |
-| Fast + correct | No inference. Not praised. (Could be easy for them: offer a Think harder item.) |
-| Long time + wrong, no hint used | "May be stuck, not lazy. Offer the tool card, not the answer." |
-| Long time + many hints + shown solution | "Needs an easier entry (the item's 'Try an easier one first'), not more time." |
-| Very short time on many items in a row, all wrong | "May be tapping through. Check in kindly; the rule is 'It is fine to guess' but then check." |
-| Anything in a `live` context | Ignored for time (listening time is included). |
+| | Depth mode | Fluency mode |
+|---|---|---|
+| Purpose | Strategy, reasoning, checking, persistence (the spine) | Fluency and confidence on a skill the child already has |
+| Items | Think harder, Go further, investigations, the Quest gates | Short closed-answer items on one skill (for example 2-digit sums, times facts, telling the time, converting units) |
+| Time | Untimed; no timer; think time is protected | Short set, clearly labelled "Quick set"; a soft clock the child can see only if they want (3.4) |
+| Recorded | Tool, rung, checked, persisted, hints, attempts, time kept as context only | Per item: correct, time, first-try, plus the set's skill tag |
+| Used for | The three outcomes | Pace on accurate answers, the quadrant, the fluency line in the report |
+| Who | All children | All children may do a Quick set; anxious children can opt out (3.6) |
 
-These are stored only as a flag on the lesson view and are recomputed, not saved as child attributes.
+The item field `mode` (`depth` or `fluency`) and `skill` (a short skill tag such as `add-2digit`) are stored on every digital item (section 7). The runner's current rule "no timers, no scores, no streaks, no leaderboard" stays for depth items; Fluency mode needs an explicit change to that header, which is an owner decision (D3, D12).
 
-### 3.3 Per-child baselines
-- Baseline = the child's own median `active_ms` on items of the same tier and type in their previous 12 `home`-context items. "Long" = more than 1.5x that child's baseline; "fast" = less than 0.5x.
-- No flags until the child has at least 8 prior items in that tier. Until then, only accuracy and hints are shown, as counts for that lesson.
-- A tutor can mark any item "not valid" (phone call, wrong link). Invalid items are excluded.
-- Baselines are recalculated per block, not carried across years without the child present.
+### 3.3 The speed-accuracy quadrant (per child, per skill)
+"Fast" and "slow" are relative to the child's own baseline for that skill and item type (3.5); until a baseline exists the tutor view shows only accuracy and hints.
 
-### 3.4 What is never used
-- Time on `live` items (mixed with listening). Time on items where the child had a device problem. Any time as a total ("minutes spent"). Streaks, completion counts as achievement, or points.
-- Comparing the first and last block's speed as "improvement". A child getting slower because they now check is the goal.
-- Accuracy is shown to a parent only as words about the work ("solved the Go further problem alone"), never as a percentage.
+| | Fast | Slow |
+|---|---|---|
+| **Accurate** | **Fluent / confident.** The skill is secure. Offer a Think harder item rather than more of the same. Evidence for fluency and confidence. | **Careful.** Two different stories, told apart with the check and hint data: (a) *persisting*: long time, a check done or a second method tried, few hints, correct: evidence for outcome (c); say "stayed with it". (b) *needs fluency practice*: little checking, steady hesitation across the whole set, hints at the start: a short Quick set on that skill, with an easier entry. |
+| **Wrong** | **Rushing.** Prompt to slow down: "How could you check that before you press Check?" Also look for tapping through (many very short, all wrong). | **Needs re-teaching.** Long time, wrong, often with hints: go back to the tool card or an easier item (the item's "Try an easier one first"), not more time. |
+
+Checks on the quadrant: a single item never classifies a child; the quadrant uses at least 6 items on the skill in a set or across 2 lessons. The tutor can mark an item invalid (device problem, interruption). The labels are computed when the tutor opens the view and are not stored as facts about the child.
+
+### 3.4 Fluency mode design (Quick sets, age-banded)
+- **Format.** Short sets of closed-answer items on one skill the child has met. Tap or choice items for ages 6-8 (3.6); typed numbers from about age 9.
+- **Age bands (our proposal, not a norm).**
+  - Ages 6-8 (Levels 1-2): **very light.** One set per block of 6 items, at most 3 minutes of lesson time, tap/choice only, no running countdown visible; the clock is silent. Pace is not reported as a number or compared with a target; the report says only "is getting quicker at ...".
+  - Ages 9-10 (Levels 3-4): **light-to-moderate.** Up to two sets of 8 items per block, about 4 minutes each, typed answers allowed after a practice item.
+  - Ages 11-13 (Levels 5-6): **moderate.** Up to three sets of 10 items per block, about 5 minutes each; optionally a visible soft clock for children who choose it.
+- **Labelling.** Every set is introduced as "a Quick set: just finding how smoothly you can do this today; it is the only part where time is noted. Press Skip any time." No "test", "exam", "score", "race" or "best time". Mi appears only where already placed.
+- **Where it sits.** Option A (recommended): a short **Quest Sprint** inside the Challenge Quest, optional per child. Option B: an optional block activity in the lesson look-back or take-home runner (`home` context). Option C: none, Fluency mode only in the take-home runner. **[OWNER]** The owner removed the end-of-term check and made the Quest a game with no scores, no visible timer and no word "test" (owner_decisions, 22 Oct 2026). A Sprint changes that decision, so it needs an explicit decision (D12). Recommended wording if approved: the Sprint is optional, shows no time or score to the child, is the last part of the Quest, and never replaces a gate.
+- **No timer shown by default.** The system times in the background; the child sees a clock only in the optional visible mode (ages 11-13).
+
+### 3.5 Pace against the child's own baseline, and optional target ranges
+- **Own baseline (primary).** Baseline = the child's own median time on correct answers for that skill and item type in their first Quick set, then their previous two sets as it moves. The report compares the latest set with the child's earlier set ("quicker", "about the same", "slower while checking more"). No flags until there are at least 6 correct items on the skill.
+- **Item-type baselines.** Different item types have different overhead (tap vs typing vs handwriting). Baselines are per item type: tap, typed number, several fields, written working. Compare like with like only.
+- **Indicative target ranges (secondary, optional, our own).** Derived by the tutor team from the item type, not from a population: time-to-answer is split into (a) a reading time (words in the question), (b) an input time (a tap is about 2 s, a typed 1-2 digit answer about 4 s, a 3-4 digit about 6 s for a child who has settled in; longer for ages 6-8) and (c) a thinking time that depends on the skill. A working range for a single-step item on a secure skill is "reading + input + 3 to 10 seconds of thinking" for ages 9-13, with wider ranges for ages 6-8. These are rough starting points to be tuned by observing the first sets; they are **our own indicative targets, not norms, and not a prediction of any contest or exam**. A child above the range is shown nothing; the tutor sees "inside / above range" only to decide whether to offer more of that skill. No range is shown to a parent as a number. No MOE, GEP or SASMO claim is made or implied.
+- **Never:** compare a child with another child, with the group median, or with a "typical" child, in any view a parent or child sees.
+
+### 3.6 Measurement caveats (what pace does and does not tell)
+- **Online timing is noisy.** It includes typing, mouse or finger accuracy, handwriting transcribed onto the screen, device speed, and network latency; the noise is greatest at ages 6-8 whose typing and mouse control are still developing. Mitigations: **tap/choice items for timed sets at ages 6-8**; exclude the first 3 seconds of each item (reading and settling) or measure from first interaction; use item-type baselines (3.5); keep only `home` or labelled Quick-set `live` items for pace; drop items flagged invalid; never read pace from fewer than 6 items.
+- **Live time is not pace.** Time during a live lesson includes listening to the tutor and answering at the same time as others, and is used as context only unless the item sits in a labelled Quick set.
+- **Pressure and anxiety.** A timed set can make an anxious child worse and teach them that speed is what matters. Mitigations: sets are short, opt-out is a button, the parent can switch Fluency mode off for the child at registration or at any time (the consent in 8.3 has a separate tick), no time or score is shown, no group results are shown, and the tutor may skip a child on the day without a reason. Opt-out is recorded as "skipped", never as a low result. A child who opts out of Quick sets still gets a full report on the three outcomes.
+- **Pace is not ability.** Fast does not mean gifted and slow does not mean weak. The report uses the phrase "on this skill, in these sets".
+- **Tutor judgement stays final.** The tutor can set any pace statement aside before approval of a report.
+
+### 3.7 What is never used
+- Pace or accuracy as a rank, as a total ("minutes spent"), as points, as a streak, or as a leaderboard.
+- Time on depth items as pace.
+- Accuracy as a percentage shown to a parent or child; the report says what the child could do, in words.
+- Comparing speed between children, groups, tutors or channels.
 
 ### 3.5 Quiet children
 - **Rotation, not volunteers.** The tutor screen lists children least-recently observed first. Every child is observed at least 2 times per block (with 8 children, 3 per lesson, 10 lessons = 30 slots, about 3.75 each; the minimum rule is the guarantee). A lesson-start check shows who has fewer than 2.
@@ -161,7 +193,8 @@ The Quest (lessons 10, 20, 30, 40; "no scores or marks shown, no ranking, no vis
 Short (about 120-170 words), plain words, no numbers, no ranks, no exam language. Fixed structure:
 1. **One named strength** (a specific thing seen, with a quote or example if one was captured).
 2. **One next step** (a thing for the child to practise, plus a home prompt such as "Which tool did you pick first, and why?").
-3. **Growth on the three outcomes in plain words** using only these phrases: tools (starting to / sometimes / often chooses a tool without being asked), reasons (the rung in words, for example "gives a reason with objects"), checking and sticking with it (starting / sometimes / often).
+3. **Growth on the three outcomes in plain words, and a fluency line where a Quick set was done** using only these phrases: tools (starting to / sometimes / often chooses a tool without being asked), reasons (the rung in words, for example "gives a reason with objects"), checking and sticking with it (starting / sometimes / often).
+3a. **Fluency line (only if the child did Quick sets and did not opt out; never a number).** Examples: "Amira is getting quicker at 2-digit sums and still checking her answers." / "Daniel answers times facts smoothly; on word problems he is accurate but takes his time, which is fine while he checks." / "Mei is accurate on the 'telling the time' set; we are building speed gently, with no pressure." For ages 6-8 the line says only "is getting quicker at ..." or is left out. If pace is slower than before because the child now checks, the line says so.
 4. **A footer:** "This is what [Name] did in the lessons we watched. It is not a score, a ranking, or a prediction of exam results."
 
 The tutor writes and approves each report; the system drafts from the structured entries (rules, not a third-party AI service; see 7.6) and the tutor edits and approves before it is released to the parent (status draft -> approved -> sent).
@@ -177,7 +210,7 @@ The tutor writes and approves each report; the system drafts from the structured
 *Example C: Level 1, enough evidence for only two outcomes.*
 > **Block 1 report for Mei (Level 1).** Strength: Mei stuck with the "how many ways" puzzle in lesson 7 even after her first list missed one, and found the missing way by herself. Next step: say "because" out loud, for example "I know there are no more because...". At home you could ask: "How do you know?" Growth: Mei is starting to choose a tool on her own (she used List every case and Act it out). We saw her give a reason twice and have not seen enough to say more about her reasons yet; we will look closely next block. She checked her work after a prompt and, in the last lessons, sometimes without one. This is what Mei did in the lessons we watched. It is not a score, a ranking, or a prediction of exam results.
 
-Consistency checks before a report can be approved: at least 3 observations per outcome (else the "not enough yet" phrase is forced), no adjectives about the child's character, no comparison words ("best", "ahead", "behind", "top"), no numbers or percentages.
+Consistency checks before a report can be approved: at least 3 observations per outcome (else the "not enough yet" phrase is forced), no adjectives about the child's character, no comparison words ("best", "ahead", "behind", "top"), no numbers or percentages (pace is words against the child's own earlier set).
 
 ### 5.2 The tutor view
 After a lesson and before the next, per group (only the tutor's own groups):
@@ -206,7 +239,7 @@ The three outcomes, the toolbox and explain ladder, the tutor rubric and the sam
 |---|---|---|
 | Tutor observation (tool, rung, checked, persisted, note) | Yes. Tutor sees faces if cameras on; relies on voice, chat, shared answer slides. Quiet or camera-off children are harder to see, so written and runner evidence matter more. | Yes, and easier to see working on paper, gestures, and who stalls. Small risk of tutor attention being pulled to the loudest child. |
 | Accuracy | Automatic from runner (per item, attempts, hints); also marked photos. | Only from marked paper (tutor marks after the lesson), or if tablets/laptops are provided. |
-| Time taken | Automatic (`active_ms`), with the caveats in section 3. | No reliable time without devices. A stopwatch or tutor estimate is not recommended: it would push the lesson toward speed. Record "no time" and do not try to infer it. |
+| Time taken (pace) | Automatic (`active_ms`) in labelled Quick sets, with the caveats in section 3.6. | No reliable time without devices. A stopwatch or tutor estimate is possible for a paper Quick set (the tutor times the set as a whole, not a child) but is a weak measure; record "no pace" otherwise and do not infer it. |
 | Hints used | Automatic. | Count of hint cards taken, if hint cards are used (cheap). |
 | Tool chosen / checked tick | Runner asks; paper look-back copy via parent photo to the business WhatsApp (existing route). | The child's paper look-back is simply collected in class. |
 | Mini-checks and Quest | Paper at home, photographed by parent via business WhatsApp; the tutor sees the child during. | Paper in the room, tutor sees the whole process; best case for the "persistence" evidence. |
@@ -221,7 +254,7 @@ The three outcomes, the toolbox and explain ladder, the tutor rubric and the sam
 ### 6.4 Recommended pilots
 1. **Pilot 1, online (the November beta onward):** phase 0 paper/Google-Form tutor sheet, then phase 1 digital capture, phase 2 tutor screen and report. One or two groups per level.
 2. **Pilot 2, small face-to-face, paper only:** one group of up to 8, one block, with the **same paper tutor sheet** and marked work, and **no time or digital capture at all**. Its question is whether the rubric and report work without the technology, and whether tutors rate the same way on paper.
-3. **What to compare** (always as methods, never as children or groups ranked): (i) share of children with enough observations per outcome, (ii) tutor time per lesson spent on the sheet, (iii) inter-tutor agreement after calibration (section 8), (iv) share of reports that needed the "not enough seen" phrase, (v) parent comprehension and usefulness of the report (a two-question reply), (vi) what the digital data added beyond the tutor sheet, answered by the tutor ("did time or accuracy change what you asked a child?"), and (vii) a plain cost per child. Do not compare children's outcomes across the two channels: groups, tutors, and families differ and numbers are small.
+3. **What to compare** (always as methods, never as children or groups ranked): (i) share of children with enough observations per outcome, (ii) tutor time per lesson spent on the sheet, (iii) inter-tutor agreement after calibration (section 8), (iv) share of reports that needed the "not enough seen" phrase, (v) parent comprehension and usefulness of the report (a two-question reply), (vi) what the digital data added beyond the tutor sheet, answered by the tutor ("did time or accuracy change what you asked a child?"), and (vii) a plain cost per child. Pace is not available face-to-face, so do not compare it across channels. Do not compare children's outcomes across the two channels: groups, tutors, and families differ and numbers are small.
 
 ### 6.5 What the owner must tell me about any face-to-face plan
 Where and how often; group size; who the tutors are and whether they are the same as online; device policy (any child devices at all); who may take photos and whether marked work is kept or returned; the venue's own data rules (a school or community centre); the target levels; whether recording or CCTV exists; whether the fee, terms, and MOE/private education registration are affected (the legal review already flags MOE registration for 10 or more persons; confirm for face-to-face, which this spec does not assume). Until then this document does not cover face-to-face consent wording beyond the principles above.
@@ -299,6 +332,9 @@ create table public.item_events (
   first_try_correct boolean,
   attempts         smallint not null default 1 check (attempts between 1 and 3),
   hints_used       smallint not null default 0 check (hints_used between 0 and 20),
+  mode             text not null default 'depth' check (mode in ('depth','fluency')),
+  skill            text,                           -- e.g. 'add-2digit'; used for the quadrant and pace
+  item_type        text check (item_type in ('tap','typed','fields','written')),
   active_ms        int check (active_ms is null or active_ms between 0 and 1200000),
   wall_ms          int check (wall_ms is null or wall_ms between 0 and 1200000),
   tool_chosen      text,                           -- tool id, 'knew', 'unsure', or null (not asked/skipped)
@@ -348,7 +384,7 @@ create table public.block_reports (
   block_no    smallint not null,
   strength    text not null check (char_length(strength) <= 500),
   next_step   text not null check (char_length(next_step) <= 500),
-  growth      jsonb not null,    -- {"tools":"sometimes","reasons":"rung 2","checking":"starting","evidence":{"tools":4,"reasons":3,"checking":3}}
+  growth      jsonb not null,    -- {"tools":"sometimes","reasons":"rung 2","checking":"starting","fluency":{"skill":"add-2digit","pace":"quicker"},"evidence":{...}}; fluency optional
   status      text not null default 'draft' check (status in ('draft','approved','sent')),
   approved_by uuid references public.tutors(user_id),
   approved_at timestamptz,
@@ -416,7 +452,7 @@ end $$;
 -- Child: log one item. The child has no Supabase auth user (family code + name + PIN), so this is called
 -- by an Edge Function that has verified the PIN session; it is NOT granted to anon/authenticated.
 -- create or replace function public.log_item_event(p_child uuid, p_payload jsonb) returns void ... ;
--- (service role only; validates ranges and the child's consent_type 'learning_record'; drops timing fields if no consent.)
+-- (service role only; validates ranges and the child's consent_type 'learning_record'; drops timing fields if no consent; fluency items also need the separate fluency consent.)
 
 -- Parents' consent gate: timing and tool fields are written only if the latest 'learning_record' consent is granted.
 ```
@@ -510,7 +546,8 @@ Level bands note typical Level and rung (term_review 2.4): Level 1 mostly rungs 
 | 2 | Tutor screen (mock-up 2.3), tutor roster view and RLS, rotation logic, tutor view, report drafting and approval, parent report page in the portal, owner view, export function. | 15-20 days (tutor screen 4-5, RLS and tests 3, rotation and prompts 2, report generator and approval 3-4, parent page 2, owner view 2-3) | Phases 0-1 results, a test group, lawyer review of the notice |
 
 ### 10.2 Risks
-- **Speed becomes the message.** Even hidden, time data can push tutors to praise quick answers. Mitigation: no time on the live screen, rules 3.2/3.4, tutor guide.
+- **Speed becomes the message.** Pace is a real measure now, so tutors and parents may start to praise speed on its own. Mitigation: two modes, own-baseline reporting, young-child limits, no time on the live screen, rules 3.1/3.7, tutor guide.
+- **Anxiety from timed sets** and noisy online timing: opt-out, tap items at ages 6-8, Quick sets labelled and short (3.6).
 - **Tutor rating noise and halo effects.** Calibration, "not observed", report wording limits; honest footer.
 - **Quiet children under-observed.** Rotation, minimum count, written evidence route.
 - **Over-claiming.** Report footer and website language: no exam, GEP, MOE or SASMO claims; never "measures ability".
@@ -526,7 +563,7 @@ Level bands note typical Level and rung (term_review 2.4): Level 1 mostly rungs 
 |---|---|---|
 | D1 | Structured tutor entries and the 0-2 mini-check lines vs "notes in words only" (the Quest checklist forbids tallies). | Allow the structured entry (categories, not tallies); use 0-2 only in the two mini-checks, words everywhere else. Record this as superseding the "private notes only" line for the Quest. |
 | D2 | Phase 0 in the beta: yes or no, and paper or Google Form. | Yes, paper sheet; copy to a private Form after the lesson if the tutor wants. |
-| D3 | Is background timing of online practice acceptable, and as optional or required consent? | Optional consent; no timing stored without it. |
+| D3 | Is background timing of online practice acceptable, and as optional or required consent? Pace in Fluency mode only? | Optional consent; no timing stored without it; pace used only from labelled Quick sets. |
 | D4 | Retention periods in 7.7. | As proposed; lawyer to confirm. |
 | D5 | Rotation target (every child seen at least twice per block). | Yes. |
 | D6 | No third-party AI service for report drafting. | None, rules and tutor edit. |
@@ -534,6 +571,7 @@ Level bands note typical Level and rung (term_review 2.4): Level 1 mostly rungs 
 | D8 | Parent may read raw tutor notes on request (access right), or only via export. | Export on request only. |
 | D9 | Face-to-face pilot: go or not, and the details in section 6.5. | Not before the online pilot; paper only. |
 | D10 | Public DPO contact (a business email or WhatsApp) before any of this goes live. | Required (legal review P1). |
+| D12 | Fluency mode and the Quest Sprint: allowed at all? Inside the Quest (which the owner made a game with no visible timer), a separate optional activity, or the take-home runner only? Age bands as in 3.4? | Allowed; take-home runner and an optional Sprint; ages 6-8 very light, tap only; owner confirms because it changes the Quest decision. |
 | D11 | Who develops the scripts for forms A/B per level and who owns calibration. | Assistant drafts, owner approves. |
 
 ## 11. Not in this document
