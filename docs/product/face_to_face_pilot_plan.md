@@ -12,7 +12,7 @@ No claim of MOE, GEP or SASMO affiliation, approval or outcome is made or implie
 
 1. Run one group of up to 8 children, ages 6-8 (Level 1), for the 10 holiday lessons, in a hired community room (not a private home), with two adults in the room.
 2. Keep the number of children at the venue under 10 at all times, and ask MOE the question in section 2.3 before taking any fees. Whether the owner contacts MOE first is her decision (section 6).
-3. Default dates: two lessons a day on five Wednesday and Thursday mornings, Wed 2, Thu 3, Wed 9, Thu 10 and Wed 16 Dec 2026 (section 1.3). These avoid the online beta's published times but have not been checked against the owner's live calendars.
+3. Default dates (updated 23 Oct 2026, owner asked for dates that avoid the Wed/Thu reserve-group clash): Option 1, two lessons a session on Mon 7, Wed 9, Mon 14, Wed 16 and Mon 21 Dec 2026, in the afternoon; fallback Option 2, Mon 28 Dec to Sat 2 Jan. The old Wed/Thu morning dates are dropped. Full clash matrix, day-by-day schedules and lead times: `face_to_face_pilot_dates.md`.
 4. The pilot also tests the paper learning record: a rotating observation of 2-3 children a lesson on a paper tutor sheet, plus optional age-light timed items.
 5. Biggest risks: the MOE question, workload (the launch checklist is full until 24 Nov), a venue and insurance that cannot be arranged in six weeks, and tutor/assistant availability. Section 3.8 lists them. The honest fallback is to move the pilot to the March 2027 holidays.
 
@@ -71,22 +71,20 @@ Why mornings: it matches the Level 1 online beta times (Tue/Fri 9:00am), so the 
 | Alternative: 1 lesson a day, 10 days | 10 | Gentler; closer to the online two-a-week rhythm if spread over two weeks | Twice the venue bookings and fees; more days the owner must be free; more parent trips |
 | Alternative: 2 lessons a day for the first and last day only, 1 a day otherwise | 7 | Compromise | Complicated to explain |
 
-### 1.3 Candidate dates (NOT confirmed; owner to choose)
+### 1.3 Default dates and options (updated 23 Oct 2026; NOT confirmed; owner to choose)
 
-Facts the dates rest on (all from repository files, not rechecked against live calendars today):
-- MOE 2026 year-end school holidays are given as 21 Nov to 31 Dec 2026 in `beta_schedule.md` (taken from search results quoting an MOE press release; the MOE page was not opened). UNVERIFIED: confirm on moe.gov.sg. 2027 Term 1 is given as starting 4 Jan (secondary sources).
-- The online beta runs 24 Nov to about 27 Dec. Published beta times use Tue, Fri, Thu (Level 6 and the Thu 24 Dec last lessons), Sat and Sun. Level 1 is Tue and Fri 9:00-10:30am; Levels 2 to 4 follow on Tue and Fri until 4:30pm. Wednesday and Thursday daytime are free except the reserved, unpublished groups R1 to R3 (Wed and Thu 9:00am, 10:45am, 1:15pm), Wed 23 Dec 4:45pm (Level 5, lesson 9) and Thu 24 Dec (Levels 1-4 last lessons).
-- Mondays 7, 14, 21 and 28 Dec have a 10:30am-12:30pm event ("P5M") and Wednesdays have an 8:00-9:30pm event, so Monday mornings and Wednesday nights need care.
-- The owner's day job is shown as 7:45am-2:30pm on school days in the availability grid. Whether she works in the December holidays is NOT stated.
+The old default (Wed 2, Thu 3, Wed 9, Thu 10, Wed 16 Dec mornings) clashed with the reserve groups R1 to R3, which hold Wed/Thu 9:00am, 10:45am and 1:15pm. A full clash matrix of every day from Mon 30 Nov to Thu 31 Dec against the online beta, the reserves, the owner's blocked times and public holidays is in `face_to_face_pilot_dates.md`, with the day-by-day schedules and lead times. Summary:
 
-| Option | Dates | Lessons | Clashes and risks |
+Facts the dates rest on: MOE 2026 school year ends Fri 20 Nov and the year-end holidays run Sat 21 Nov to Thu 31 Dec (read on the official MOE press release on 23 Oct 2026); Mon 9 Nov and Fri 25 Dec 2026 are public holidays; Fri 1 Jan 2027 is New Year's Day (verify on mom.gov.sg); the 2027 school start (Mon 4 Jan assumed) is to verify on moe.gov.sg. Tue and Fri are taken by the online beta, Wed/Thu mornings by the reserves, Sat morning by reserve R4, Sunday morning by church. The owner's holiday availability (day job, "taken" private-tutoring slots, "P5M" events) is still unconfirmed.
+
+| Option | Dates | Lessons | Notes |
 |---|---|---|---|
-| A (default) | Wed 2, Thu 3, Wed 9, Thu 10, Wed 16 Dec, 9:00am-12:15pm, 2 lessons a day | 1-2, 3-4, 5-6, 7-8, 9-10 | Uses Wed/Thu morning slots that reserve groups R1 to R3 hold. If a reserve is released, the pilot must move. Starts 40 days from today, while the owner is also launching the beta (checklist until 24 Nov). Weeks apart means a child sees lessons only 5 or 6 days apart in pairs; consistent with the online two-a-week rhythm. |
-| B | Mon 28 Dec afternoon only, Tue 29, Wed 30, Thu 31 Dec and Sat 2 Jan | 10 over 5 sessions | Squeezed into the last holiday week; Fri 1 Jan is a public holiday; New Year travel likely; Mon 28 Dec morning has the P5M event; Sat morning is "taken" in the 2027 grid. Also overlaps the last beta lessons (27 Dec). Not recommended. |
-| C | Half pilot: Lessons 1-5 only, 3 days, then a second block in the March 2027 holidays (13-21 Mar, UNVERIFIED) | 5 + 5 | Safe fallback if the MOE answer or venue is late. Weakens the 10-lesson comparison. |
-| D | Move the whole pilot to the March 2027 holidays | 10 | Most time for MOE, venue, insurance and screening. Loses the December timing the owner asked for. |
+| 1 (default, recommended) | Mon 7, Wed 9, Mon 14, Wed 16, Mon 21 Dec; Mon 1:30-3:00pm and 3:15-4:45pm, Wed 3:00-4:30pm and 4:45-6:15pm | 1-2, 3-4, 5-6, 7-8, 9-10 | No clash with any beta lesson, reserve, owner block or public holiday. Afternoons, so time of day differs from the 9:00am online Level 1 group; Wednesday ends 6:15pm; needs Mon/Wed afternoons confirmed free. Ends before Christmas week. |
+| 2 (fallback) | Mon 28 Dec (1:30-3:00pm, 3:15-4:45pm), Tue 29, Wed 30, Thu 31 Dec (9:00am-12:15pm), Sat 2 Jan (9:00am-12:15pm) | 1-2, 3-4, 5-6, 7-8, 9-10 | After the beta ends (27 Dec), so no clash with anything. Most lead time, mornings (four of five sessions). Risks: attendance in the New Year week, venue hours, Fri 1 Jan holiday gap, Sat morning confirm. |
+| 3 | Mon 30 Nov, Wed 2, Mon 7, Wed 9, Mon 14 Dec (same times as Option 1) | 1-2, 3-4, 5-6, 7-8, 9-10 | Earliest, but only 5 weeks of lead time and it starts the week the beta launches. Not recommended. |
+| D | Move the whole pilot to the March 2027 holidays (13-21 Mar, UNVERIFIED) | 10 | Last fallback. Most time for MOE, venue, insurance and screening. |
 
-Recommendation: plan for Option A, hold Option D open as the fallback, and take the go/no-go decision on Fri 13 Nov (section 5) once MOE, the venue and insurance have each answered.
+Recommendation: plan for Option 1; if the MOE reply, venue or insurance is missing by Fri 13 Nov, switch to Option 2 and move the go/no-go to Fri 27 Nov; keep Option D as the last fallback. Section 1.2's two-lesson morning (9:00am and 10:45am) is the pattern for Option 2 and the old default; for Options 1 and 3 the Monday and Wednesday afternoon times above replace it (same 90-minute lessons and 15-minute break; children eat lunch at home first).
 
 ### 1.4 What changes from the online version
 
@@ -322,22 +320,22 @@ The `hp/budget.json` timings for Lesson 1 are shown above only as an example; ea
 - Confirm a seat only after: MOE answer (or owner's decision), venue booked, insurance in place, consent and medical forms returned, fee received or waived.
 - Parents of the online Level 1 beta groups may also ask for a seat; keep the comparison clean (section 1.1).
 
-### 3.8 Parent communication timeline (working back from the first day, Option A: Wed 2 Dec)
+### 3.8 Parent communication timeline (working back from the first day, Option 1: Mon 7 Dec; Options 2 and 3 are in `face_to_face_pilot_dates.md` section 4)
 
 | When | Send | Via |
 |---|---|---|
 | Mon 26 Oct to 30 Oct | Nothing to parents. First, decide and send (or not) the MOE email, ask the venue | Owner |
 | Mon 2 Nov | Interest list opens (only if the owner agrees): "a small face-to-face holiday pilot, dates and fee to be confirmed" | WhatsApp / interest form |
 | Fri 13 Nov | Go/no-go decision. If go: offer places to the first eight; send the pilot information sheet, consent form, medical form, authorised-collector form, refund rule, fee and payment details | WhatsApp, email |
-| Wed 18 Nov | Forms returned by this date; chase gaps | WhatsApp |
-| Fri 20 Nov | Confirm the seat in writing once forms and payment are in (the existing message 1 needs a face-to-face version: venue, no Meet) | WhatsApp |
-| Wed 25 Nov | Venue address, map, arrival and parking, what to bring, what to wear, no valuables | Message and PDF |
-| Wed 25 Nov | Remind families that the posted-workbook route does not apply: workbooks are handed out at the room (if so decided) | Message |
-| Mon 30 Nov | One-day-before reminder for Wed 2 Dec: time, place, collector rule, illness rule ("do not come if unwell") | WhatsApp |
-| Wed 2 Dec | Day 1 | |
+| Wed 25 Nov | Forms returned by this date; chase gaps | WhatsApp |
+| Fri 27 Nov | Confirm the seat in writing once forms and payment are in (the existing message 1 needs a face-to-face version: venue, no Meet) | WhatsApp |
+| Mon 30 Nov | Venue address, map, arrival and parking, what to bring, what to wear, no valuables | Message and PDF |
+| Mon 30 Nov | Remind families that the posted-workbook route does not apply: workbooks are handed out at the room (if so decided) | Message |
+| Fri 4 Dec | Reminder for Mon 7 Dec: time, place, collector rule, illness rule ("do not come if unwell") | WhatsApp |
+| Mon 7 Dec | Day 1 | |
 | After each day | A short message to each parent: arrival/collection confirmed and one specific kind observation (the existing message 9 style) | WhatsApp |
-| After the last day (Wed 16 Dec) | End-of-program note using the template (`ops/out/end_of_program_report_L1`) and the learning-record observation lines (section 4.6) | Email/PDF |
-| 30 days after | Delete sign-in sheets, medical forms and any remaining personal data per the promised date | Owner |
+| After the last day (Mon 21 Dec; send Mon 28 Dec, not on the Christmas holiday) | End-of-program note using the template (`ops/out/end_of_program_report_L1`) and the learning-record observation lines (section 4.6) | Email/PDF |
+| Wed 20 Jan 2027 (30 days after) | Delete sign-in sheets, medical forms and any remaining personal data per the promised date | Owner |
 
 ### 3.9 Risk list
 
@@ -435,7 +433,7 @@ Limits (stated in `holiday_review.md` and `term_review.md`): at most 8 children,
 
 ---
 
-## 5. Dated timeline from today (Fri 23 Oct 2026) to the last day (Option A: Wed 16 Dec)
+## 5. Dated timeline from today (Fri 23 Oct 2026) to the last day (Option 1: Mon 21 Dec; Options 2 and 3 in `face_to_face_pilot_dates.md` section 4)
 
 Existing beta dates are in `docs/ops/launch_checklist.md`. The owner's workload to 24 Nov is already high, so this timeline puts only decisions and questions in October, and only parent-facing work after the beta launches.
 
@@ -443,31 +441,33 @@ Existing beta dates are in `docs/ops/launch_checklist.md`. The owner's workload 
 |---|---|---|
 | Fri 23 Oct | This plan written | Read it; answer the questions in section 6 |
 | Mon 26 Oct | Decide whether to contact MOE first | Owner chooses: send the MOE email (section 2.3) herself, add it to the lawyer brief, or skip the pilot. Read the GoBusiness guide "Notification for Private Tuition Enrichment" |
-| By Fri 30 Oct | Check dates | Owner confirms the December dates against her calendars and day job; confirm MOE school holiday dates (already on the launch checklist for Fri 30 Oct); decide Option A, B, C or D |
+| By Fri 30 Oct | Check dates | Owner confirms the December dates (Option 1 default: Mon/Wed afternoons, 7-21 Dec) against her calendars and day job; confirm MOE school holiday dates (already on the launch checklist for Fri 30 Oct); decide Option 1, 2, 3 or D |
 | By Fri 30 Oct | Venue enquiries | Ask 2-3 venues the questions in section 2.4; book nothing without the rules in writing |
 | By Fri 30 Oct | Assistant | Name a candidate assistant and a backup |
 | Mon 2 Nov | Insurance quotes | Ask an insurer or broker; owner decides whether cover is affordable |
 | Mon 2 Nov | Interest list (optional) | Owner approves a short message; no fees and no seats |
 | Fri 6 Nov | Lawyer comments back (existing) | Add pilot consent forms and refund wording to the lawyer's scope |
-| Mon 9 Nov | Printer order (existing) | Add 10 Level 1 workbooks to the order if the pilot is still on, or ask for a small separate run |
+| Mon 9 Nov (public holiday: Fri 6 or Tue 10 Nov if the printer is closed) | Printer order (existing) | Add 10 Level 1 workbooks to the order if the pilot is still on, or ask for a small separate run |
 | Wed 11 Nov | Venue decision | Book the venue with a refundable deposit (or choose Option D) |
 | Fri 13 Nov | Go/no-go | Owner decides with the MOE reply (if any), venue, insurance, assistant and screening |
 | Fri 13 Nov | Forms to parents | Send information sheet, consent, medical, collector forms, refund rule, fee (if go) |
 | Mon 16 Nov to Fri 20 Nov | Cut and bag kits (can begin once workbooks arrive) | Owner and assistant |
-| Wed 18 Nov | Forms returned by this date | Chase gaps |
-| Fri 20 Nov | Confirm seats | Only for complete forms and payment |
-| Tue 24 Nov | Online beta begins | Pilot pauses; the owner is teaching online |
-| Wed 25 Nov | Venue and arrival information to parents | |
-| Fri 27 Nov | Assistant briefing and room walk-through; incident-book and first-aid check | |
-| Mon 30 Nov | Reminder to parents; print forms and sheets; test the room's screen | |
-| Wed 2 Dec | Day 1: Lessons 1 and 2 | |
-| Thu 3 Dec | Day 2: Lessons 3 and 4; first end-of-day review of the sheet | |
-| Wed 9 Dec | Day 3: Lessons 5 and 6 | |
-| Thu 10 Dec | Day 4: Lessons 7 and 8 | |
-| Wed 16 Dec | Day 5: Lessons 9 and 10; final timed items if approved | |
-| Fri 18 Dec | End-of-program notes to parents | |
+| Tue 24 Nov | Online beta begins | Pilot waits; the owner is teaching online |
+| Wed 25 Nov | Forms returned by this date | Chase gaps |
+| Fri 27 Nov | Confirm seats | Only for complete forms and payment |
+| Sat 28 to Sun 29 Nov | Cut and bag kits | Owner and assistant (workbooks arrive by about Fri 20 Nov) |
+| Mon 30 Nov | Venue and arrival information to parents; assistant briefing and room walk-through; incident-book and first-aid check | |
+| Fri 4 Dec | Reminder to parents; print forms and sheets; test the room's screen | |
+| Mon 7 Dec | Day 1: Lessons 1 and 2 | |
+| Wed 9 Dec | Day 2: Lessons 3 and 4; first end-of-day review of the sheet | |
+| Mon 14 Dec | Day 3: Lessons 5 and 6 | |
+| Wed 16 Dec | Day 4: Lessons 7 and 8 | |
+| Mon 21 Dec | Day 5: Lessons 9 and 10; final timed items if approved | |
+| Mon 28 Dec | End-of-program notes to parents | |
 | By Fri 8 Jan 2027 | Debrief: compare with the online pilot (section 4.6); decide whether to repeat | |
-| By Sun 17 Jan 2027 (30 days) | Delete personal data per the promised schedule | |
+| By Wed 20 Jan 2027 (30 days) | Delete personal data per the promised schedule | |
+
+Note: Mon 9 Nov is a public holiday (Deepavali observed); confirm with the printer whether the order can be placed that day or place it on Fri 6 Nov or Tue 10 Nov.
 
 If Option D (March 2027) is chosen, shift every date later by the same lead time; the first parent-facing step moves to about January 2027, which also lets MOE answer.
 
@@ -475,7 +475,7 @@ If Option D (March 2027) is chosen, shift every date later by the same lead time
 
 ## 6. What could not be determined; what is needed from the owner
 
-1. Dates: which option (A, B, C or D) and whether she is available on those days (day job, private lessons, the "P5M" events, any December travel). MOE 2026 school holidays and the March 2027 holidays still need verifying on moe.gov.sg.
+1. Dates: which option (1, 2, 3 or D) and whether she is available on those days (day job, private lessons, the "P5M" events, any December travel). MOE 2026 school holidays and the March 2027 holidays still need verifying on moe.gov.sg.
 2. Whether the owner wants MOE contacted first, and whether she, a lawyer, or the assistant sends the question. Her answer decides whether the pilot can go ahead in December.
 3. Venue: which, and whether she has contacts. Whether the venue can take a paid children's class and what capacity and fire-safety rules apply.
 4. Group size and level: confirm Level 1, one group of at most 8, and the minimum to run.
