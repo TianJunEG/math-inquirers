@@ -126,7 +126,7 @@ def progress(book, theme, ctx):
         rows.append(f'<tr><td><b>{n}</b></td><td class="l">{esc(title)}</td>' + '<td><span class="tick"></span></td>' * 4 +
                     '<td>&nbsp;&nbsp;&nbsp;/ 4</td><td style="width:22mm"></td></tr>')
     return ('<div class="pbody"><div class="h1">My progress</div><div class="lead">Tick each box when you finish. Write your Check yourself score.</div>'
-            '<table class="grid"><tr><th>Unit</th><th>Topic</th><th>Learn it</th><th>Start here</th><th>Think harder</th><th>Go further</th><th>Score</th><th>Date</th></tr>' + ''.join(rows) + '</table>'
+            '<table class="grid prog"><tr><th>Unit</th><th>Topic</th><th>Learn it</th><th>Start here</th><th>Think harder</th><th>Go further</th><th>Score</th><th>Date</th></tr>' + ''.join(rows) + '</table>'
             '<div class="box"><h3>Look back</h3><div class="rows"><div class="rw"><span class="rl">My favourite unit was</span><span class="rln"></span></div>'
             '<div class="rw"><span class="rl">The hardest idea was</span><span class="rln"></span></div>'
             '<div class="rw"><span class="rl">Next I want to try</span><span class="rln"></span></div></div></div></div>')
