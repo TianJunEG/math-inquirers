@@ -38,7 +38,7 @@ const q1Fig = () => {
   let b = bgGrid(x0, y0, 22, 5, c);
   b += cellsFig(sh(FA, 1, 1), x0, y0, c) + cellsFig(sh(FB, 6, 1), x0, y0, c) + cellsFig(sh(FC, 12, 1), x0, y0, c) + cellsFig(sh(FD, 17, 1), x0, y0, c);
   [['A', 3], ['B', 8.5], ['C', 13.5], ['D', 18.5]].forEach(([l, cx]) => { b += txt(x0 + cx * c, y0 + 5 * c + 26, l, { size: 22 }); });
-  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 420);
+  return svg(600, 170, b, 'Four figures on a 1 cm square grid: A is a 4 by 2 rectangle; B has 5 squares on top and 3 below; C is a 3 by 3 square; D is a U shape of 5 squares', 500);
 };
 // Q3: L-shape, 10 cm by 7 cm with a 4 cm by 3 cm corner cut away (scale 22 px per cm)
 const q3Fig = () => {

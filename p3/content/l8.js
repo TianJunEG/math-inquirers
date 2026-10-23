@@ -20,19 +20,20 @@ const rad = d => d * Math.PI / 180;
 // a 90 (turned), b 45, c 120, d 90 (one short arm), e 150, f 70 (long arms)
 const ANG = [['a', 25, 90, 62, 62], ['b', 60, 45, 66, 66], ['c', 10, 120, 58, 58], ['d', 0, 90, 70, 34], ['e', 200, 150, 52, 52], ['f', 100, 60, 72, 72]];
 const q1Fig = () => {
-  let b = '';
+  // six angles in 2 rows of 3, arms about 1.5 times longer than before so the right-angle checker fits them
+  let b = ''; const K = 1.5;
   ANG.forEach(([l, d1, sz, L1, L2], i) => {
-    const d2 = d1 + sz;
+    const d2 = d1 + sz; L1 *= K; L2 *= K;
     const p1 = [L1 * Math.cos(rad(d1)), -L1 * Math.sin(rad(d1))], p2 = [L2 * Math.cos(rad(d2)), -L2 * Math.sin(rad(d2))];
     const xs = [0, p1[0], p2[0]], ys = [0, p1[1], p2[1]];
-    const cx = 50 + i * 100, cy = 62;
+    const cx = 100 + (i % 3) * 200, cy = 76 + Math.floor(i / 3) * 170;
     const vx = cx - (Math.min(...xs) + Math.max(...xs)) / 2, vy = cy - (Math.min(...ys) + Math.max(...ys)) / 2;
-    const r = 16, a1 = [vx + r * Math.cos(rad(d1)), vy - r * Math.sin(rad(d1))], a2 = [vx + r * Math.cos(rad(d2)), vy - r * Math.sin(rad(d2))];
+    const r = 22, a1 = [vx + r * Math.cos(rad(d1)), vy - r * Math.sin(rad(d1))], a2 = [vx + r * Math.cos(rad(d2)), vy - r * Math.sin(rad(d2))];
     b += `<path d="M${a1[0].toFixed(1)} ${a1[1].toFixed(1)} A${r} ${r} 0 0 0 ${a2[0].toFixed(1)} ${a2[1].toFixed(1)}" fill="none" stroke="${G}" stroke-width="3"/>`;
     b += ln(vx, vy, vx + p1[0], vy + p1[1]) + ln(vx, vy, vx + p2[0], vy + p2[1]) + dot(vx, vy, 4);
-    b += txt(cx, 148, l, { size: 22 });
+    b += txt(cx, cy + 80, l, { size: 24 });
   });
-  return svg(600, 158, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 500);
+  return svg(600, 332, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 600);
 };
 // Q3 worked example: 3 lines from one point make 3 angles
 const exFig = () => {
@@ -62,7 +63,7 @@ const q3Fig = () => {
   const ox = 190, oy = 196, L = 170; let b = '';
   [15, 45, 75, 105, 135, 165].forEach(d => { b += ln(ox, oy, ox + L * Math.cos(rad(d)), oy - L * Math.sin(rad(d)), { sw: 4 }); });
   b += dot(ox, oy, 6) + txt(ox, oy + 26, 'O', { size: 22 });
-  return svg(380, 228, b, 'Six straight lines going out from one point O, spread out like a fan', 215);
+  return svg(380, 228, b, 'Six straight lines going out from one point O, spread out like a fan', 300);
 };
 // Q4: letters made of straight lines
 const q4Fig = () => {

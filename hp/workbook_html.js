@@ -108,7 +108,7 @@ W.push(sub('e', 'Mei says “4 + 4 = 8 + 1 is true.” Is she right? Explain.'))
 W.push(...lines(2));
 W.push(q(5, 'Magic triangle. Put 1, 2, 3, 4, 5 and 6 in the circles so that each side adds up to 9. Start with 1, 2 and 3 in the corners.', { keepNext: true }));
 W.push(p([t('Hint: use counters. Find the number between each pair of corners.', { italics: true })], { indent: { left: 560 }, after: 60 }));
-W.push(img('magic.png', 300, 267));
+W.push(img('magic.png', 230, 205));
 W.push(sub('a', 'Which numbers go between the corners?   ______________'));
 W.push(sub('b', 'If you have time: now make each side add up to 10. Which numbers are in the corners this time?   ______________'));
 W.push(q(6, 'Two numbers add up to 10. One is 2 more than the other. What are the numbers?', { keepNext: true }));

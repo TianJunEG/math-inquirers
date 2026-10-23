@@ -144,7 +144,7 @@ const mT1 = () => machine([{ t: '?', k: 'q' }, { t: '− 5', k: 'op' }, { t: '+ 
 const mT2 = () => machine([{ t: '?', k: 'q' }, { t: '− 6', k: 'op' }, { t: '+ 4', k: 'op' }, { t: '− 3', k: 'op' }, { t: '10', k: 'out' }]);
 // C2 snail: a wall scale 0..9 cm, drawn tall
 const snailWall = () => {
-  let s = '', y0 = 236, k = 24; s += R(60, y0 - 9 * k, 56, 9 * k, '#F4F1E8', { sw: 2.6 });
+  let s = '', y0 = 254, k = 24; s += R(60, y0 - 9 * k, 56, 9 * k, '#F4F1E8', { sw: 2.6 });
   for (let v = 0; v <= 9; v++) { s += L(52, y0 - v * k, 116, y0 - v * k, { sw: v % 3 ? 1.4 : 2.4 }) + T(40, y0 - v * k + 6, v, 16, { a: 'end' }); }
   s += T(88, y0 - 9 * k - 10, 'top', 15, { c: TEAL }) + T(88, y0 + 20, 'bottom', 15, { c: TEAL });
   s += `<ellipse cx="150" cy="${y0 - 12}" rx="26" ry="14" fill="${GR}" stroke="${NAVY}" stroke-width="2.4"/>` + C(150, y0 - 14, 8, '#fff', { sw: 2.4 }) + T(150, y0 - 10, '·', 20) + L(172, y0 - 22, 184, y0 - 38, { sw: 2.4 }) + C(184, y0 - 40, 3, NAVY, { sw: 1 });
@@ -153,10 +153,9 @@ const snailWall = () => {
 };
 // L6 T5: dollar notes and price tags
 const dollars = () => {
-  let s = '', x = 6; [[2], [5], [10], [50]].forEach(([v], i) => { s += noteF(v, x, 8, 84, 42); x += 94; }); s += coinF(100, x + 22, 30); s += T(x + 54, 36, '= $1 coin', 15, { a: 'start', w: 600 });
-  const tag = (x0, nm, pr) => P([[x0 + 14, 74], [x0 + 130, 74], [x0 + 130, 112], [x0 + 14, 112], [x0, 93]], Y, { sw: 2.4 }) + C(x0 + 14, 93, 4, '#fff', { sw: 1.6 }) + T(x0 + 74, 90, nm, 14, {}) + T(x0 + 74, 108, pr, 17, {});
-  s += tag(10, 'toy', '$17') + tag(160, 'bicycle', '$65') + tag(310, 'helmet', '$8');
-  return W(svg(590, 124, s, 'Dollar notes of 2, 5, 10 and 50, a 1 dollar coin, and price tags: toy 17 dollars, bicycle 65 dollars, helmet 8 dollars'), 2);
+  let s = '', x = 6; [[2], [5], [10], [50]].forEach(([v], i) => { s += noteF(v, x, 4, 84, 40); x += 94; }); s += coinF(100, x + 22, 26); s += T(x + 54, 32, '= $1 coin', 15, { a: 'start', w: 600 });
+  const tag = (x0, nm, pr) => P([[x0 + 14, 58], [x0 + 130, 58], [x0 + 130, 94], [x0 + 14, 94], [x0, 76]], Y, { sw: 2.4 }) + C(x0 + 14, 76, 4, '#fff', { sw: 1.6 }) + T(x0 + 74, 74, nm, 14, {}) + T(x0 + 74, 90, pr, 17, {});
+  return W(svg(590, 52, s, 'Dollar notes of 2, 5, 10 and 50, a 1 dollar coin, and price tags: toy 17 dollars, bicycle 65 dollars, helmet 8 dollars'), 2);
 };
 // extra (Think harder / Go further) figures by '<lesson>.<T|C><n>'
 const FX = {
@@ -169,6 +168,8 @@ const FX = {
   '4.T3': Object.assign(() => t3(), { lines: 1 }),
   '4.T4': Object.assign(() => stickSquares(), { lines: 1 }),
   '4.C2': Object.assign(() => dotTriangles(), { lines: 3 }),
+  '6.T2': Object.assign(() => '', { lines: 1 }),
+  '6.T3': Object.assign(() => '', { lines: 1 }),
   '5.T1': Object.assign(() => mT1(), { lines: 1 }),
   '5.T2': Object.assign(() => mT2(), { lines: 1 }),
   '5.C2': Object.assign(() => snailWall(), { lines: 2 }),
