@@ -287,3 +287,6 @@ Owner chose to start the Primary 3 school puzzle booklets (Semester 1 and 2) in 
 - SAMPLER-YES: make a 4-page Primary 1 sampler, a one-page school summary (no price) and a draft email for the owner to send; the owner sends it (nothing is sent by the assistant); lawyer sees the licence wording before wide sending.
 - PILOT-L2: pilot Level 2 Term 1 (10 lessons) first, per docs/terms/levels_2_6_term_build_plan.md, once Level 1 is final (tools move to term/tools/ with golden-master check). Other plan decisions (section 8) remain open.
 - P1-WEAK-ACCEPT: Primary 1 booklets keep recognition-level coverage of "forming figures" and "copy on a grid" (teacher glance on two pages).
+
+## 23 Oct 2026 (night): ratio in Level 5 holiday
+Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Level 5 holiday gets a ratio ("a : b") strand as a beyond-syllabus preview (equivalent ratios, simplest form, share in a ratio, link to bar models). Now: slides and tutor bank (printed workbooks frozen for the 6 Nov order). Printed workbook version: open question (swap before Mon 2 Nov at risk, or v2).

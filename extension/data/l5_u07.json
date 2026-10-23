@@ -218,19 +218,9 @@
       ],
       "text": "35"
      }
-    },
-    {
-     "label": "c",
-     "text": "3 out of 8 pupils walk. That is {b}%.",
-     "answer": {
-      "value": [
-       "37.5"
-      ],
-      "text": "37.5"
-     }
     }
    ],
-   "explanation": "(a) 18 ÷ 25 = 72 ÷ 100, so 72%. (b) 7 out of 20 = 35 out of 100 = 35%. (c) 1 out of 8 is 12.5%, so 3 out of 8 is 37.5%."
+   "explanation": "(a) 18 ÷ 25 = 72 ÷ 100, so 72%. (b) 7 out of 20 = 35 out of 100 = 35%."
   },
   {
    "id": "L5U07-S04",

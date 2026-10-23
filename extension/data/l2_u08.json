@@ -603,6 +603,46 @@
    "figside": true
   },
   {
+   "id": "L2U08-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Name the flat faces.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each face of a cube is a   {circ:square|circle|triangle}",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each flat face of a cylinder is a   {circ:circle|square|triangle}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The flat face of a cone is a   {circ:triangle|circle|square}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    }
+   ],
+   "explanation": "(a) A cube has 6 faces and each one is a square. (b) The 2 flat faces of a cylinder are circles. (c) The flat face of a cone is its base, a circle.",
+   "partsrow": true
+  },
+  {
    "id": "L2U08-T01",
    "tier": "think",
    "page": 4,
@@ -727,7 +767,7 @@
       ]
      }
     ],
-    "width_mm": 150
+    "width_mm": 130
    },
    "parts": [
     {
@@ -838,7 +878,8 @@
     }
    ],
    "explanation": "1 square long: 4. 2 squares long: they start at square 1, 2 or 3, so 3. 3 squares long: they start at square 1 or 2, so 2. 4 squares long: 1. Total: 4 + 3 + 2 + 1 = 10.",
-   "hint": "A rectangle 2 squares long can start in 3 places."
+   "hint": "A rectangle 2 squares long can start in 3 places.",
+   "partsrow": true
   },
   {
    "id": "L2U08-T03",
@@ -885,7 +926,8 @@
    ],
    "explanation": "The 2 lines from the top and the 2 sloping sides make 4 lines from the top. Choosing 2 of them gives 6 triangles on each line that runs across: 3 small ones, 2 made of 2 parts and 1 made of 3 parts. There are 2 lines across (the base and the middle line): 6 + 6 = 12 triangles.",
    "hint": "Count the triangles that sit on each line separately.",
-   "figside": true
+   "figside": true,
+   "partsrow": false
   },
   {
    "id": "L2U08-G01",
@@ -916,11 +958,6 @@
    ],
    "explanation": "(a) 5 by 5 = 25 cubes. (b) 1 + 4 + 9 + 16 + 25 = 55 cubes.",
    "hint": "Add the layers: 1 + 4 + 9 ...",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
    "beyond": "Square numbers in a pyramid"
   },
   {
@@ -970,13 +1007,8 @@
      }
     }
    ],
-   "explanation": "3 faces: the 8 corners. 2 faces: each of the 12 edges has 2 cubes between the corners, so 24. 1 face: each of the 6 faces has a 2 by 2 middle, so 6 x 4 = 24. No paint: the middle block is 2 by 2 by 2, so 8. Check: 8 + 24 + 24 + 8 = 64 = 4 x 4 x 4.",
-   "hint": "Corners, edges, faces, inside. Check they make 64.",
-   "space": {
-    "rows": [
-     "Check: the four numbers add up to 64."
-    ]
-   }
+   "explanation": "3 faces: the 8 corners. 2 faces: each of the 12 edges has 2 cubes between the corners, so 24. 1 face: each of the 6 faces has a 2 by 2 middle, so 6 × 4 = 24. No paint: the middle block is 2 by 2 by 2, so 8. Check: 8 + 24 + 24 + 8 = 64 = 4 × 4 × 4.",
+   "hint": "Corners, edges, faces, inside. Check they make 64."
   },
   {
    "id": "L2U08-G03",
@@ -993,8 +1025,7 @@
    "hint": "A layer must sit on a layer at least as big.",
    "space": {
     "rows": [
-     "Stack 1:",
-     "Stack 2:"
+     "Stack 1:"
     ]
    }
   },
@@ -1028,11 +1059,6 @@
    },
    "explanation": "1 by 1: 6. 1 high and 2 long: 4. 1 high and 3 long: 2. 2 high and 1 long: 3. 2 high and 2 long: 2. 2 high and 3 long: 1. Total: 6 + 4 + 2 + 3 + 2 + 1 = 18.",
    "hint": "Sort them by size: 1 by 1, 1 by 2, 1 by 3, 2 by 1, 2 by 2, 2 by 3.",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
    "figside": true
   },
   {
@@ -1057,7 +1083,7 @@
     ],
     "text": "6"
    },
-   "explanation": "1 half circle is 2 quarter circles. 3 half circles make 3 x 2 = 6 quarter circles."
+   "explanation": "1 half circle is 2 quarter circles. 3 half circles make 3 × 2 = 6 quarter circles."
   },
   {
    "id": "L2U08-C03",
@@ -1069,7 +1095,7 @@
     ],
     "text": "24"
    },
-   "explanation": "One layer is 4 x 3 = 12 cubes. There are 2 layers: 12 + 12 = 24."
+   "explanation": "One layer is 4 × 3 = 12 cubes. There are 2 layers: 12 + 12 = 24."
   },
   {
    "id": "L2U08-C04",

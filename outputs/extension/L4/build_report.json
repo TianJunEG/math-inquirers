@@ -118,9 +118,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 1.0094136199794026,
-   "over": true,
-   "excess_mm": 2.4,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
    "edition": "soft"
   },
   {
@@ -285,9 +285,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 1.0094136199794026,
-   "over": true,
-   "excess_mm": 2.4,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
    "edition": "print"
   },
   {
@@ -348,10 +348,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 12 (Unit 9 \u00b7 Check yourself): content overflows the page (natural height minus body 2.4 mm)",
-  "print page 12 (Unit 9 \u00b7 Check yourself): content overflows the page (natural height minus body 2.4 mm)"
- ],
+ "problems": [],
  "soft_pages": 17,
  "print_pages": 18
 }

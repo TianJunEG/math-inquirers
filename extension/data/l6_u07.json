@@ -763,17 +763,6 @@
     },
     {
      "label": "b",
-     "text": "After 8 repeats: x = {b}, y = {b}",
-     "answer": {
-      "value": [
-       "-40",
-       "40"
-      ],
-      "text": "−40, 40"
-     }
-    },
-    {
-     "label": "c",
      "text": "After 12 repeats: x = {b}, y = {b}",
      "answer": {
       "value": [
@@ -863,16 +852,6 @@
    "parts": [
     {
      "label": "a",
-     "text": "Each inside angle is {b}°.",
-     "answer": {
-      "value": [
-       "179"
-      ],
-      "text": "179"
-     }
-    },
-    {
-     "label": "b",
      "text": "The path is {b} steps long.",
      "answer": {
       "value": [
@@ -882,7 +861,7 @@
      }
     },
     {
-     "label": "c",
+     "label": "b",
      "text": "The distance across the shape is about {b} steps (use 3.14, nearest whole number).",
      "answer": {
       "value": [

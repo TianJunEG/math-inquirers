@@ -151,8 +151,7 @@ I.append(IT(U, 'G', 1, 5,
             f'Every 4 repeats adds {M}20 to x and 20 to y, so after 12 repeats it is at ({M}60, 60).',
             fig=code([['var', 'set n to (10)'], ['ctl', 'repeat (4)', [mv('n'), tn(90), ['var', 'change n by (10)']]]]),
             parts=[P('a', 'After 4 repeats: x = {b}, y = {b}', [-20, 20], f'{M}20, 20'),
-                   P('b', 'After 8 repeats: x = {b}, y = {b}', [-40, 40], f'{M}40, 40'),
-                   P('c', 'After 12 repeats: x = {b}, y = {b}', [-60, 60], f'{M}60, 60')],
+                   P('b', 'After 12 repeats: x = {b}, y = {b}', [-60, 60], f'{M}60, 60')],
             hint='Make a table. Write x and y after each repeat.'))
 I.append(IT(U, 'G', 2, 5,
             'Beyond Level 6: Points of a star.\nThe angle at each point of a star is 180° − the turn. Add up all the point angles.',
@@ -166,9 +165,8 @@ I.append(IT(U, 'G', 3, 5,
             f'Beyond Level 6: A polygon that looks like a circle.\nThe turtle runs repeat 360 [move 1, turn {TURN} 1].',
             f'360 turns of 1{D} add to 360{D}, one full turn, so the path closes. Inside angle: 180 {M} 1 = 179{D}. The path is 360 steps long. For a circle, the distance round is about 3.14 {X} the distance across, '
             f'so the distance across is about 360 ÷ 3.14 = 114.6, which is 115 to the nearest whole number.',
-            parts=[P('a', 'Each inside angle is {b}°.', [179]),
-                   P('b', 'The path is {b} steps long.', [360]),
-                   P('c', 'The distance across the shape is about {b} steps (use 3.14, nearest whole number).', [115])],
+            parts=[P('a', 'The path is {b} steps long.', [360]),
+                   P('b', 'The distance across the shape is about {b} steps (use 3.14, nearest whole number).', [115])],
             hint='The path round the shape is about 3.14 times the distance across.'))
 
 # ---------------------------------------------------------------- Check yourself
