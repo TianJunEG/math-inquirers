@@ -273,3 +273,7 @@ Owner chose RETROFIT-NOW: retrofit the thin non-routine spots (work backwards, t
 
 ## 23 Oct 2026 (night): SCHOOLBOOKS-P3-NEXT
 Owner chose to start the Primary 3 school puzzle booklets (Semester 1 and 2) in parallel with Primary 2, instead of waiting for the Primary 2 audit or school interest. (Plan gate "2 interested schools" waived by owner.) Owner also asked to see the list of syllabus topics NOT covered by the school puzzle booklets: Primary 1 list given in chat; Primary 2 and 3 lists come from their gap analyses (docs/school_books/p2_semester_booklets_plan.md, p3_semester_booklets_plan.md).
+
+## 23 Oct 2026 (night): TERM-INSTALMENTS-REMOVE, SCHOOLBOOKS-WAIT
+- TERM-INSTALMENTS-REMOVE: the terms page no longer offers three instalments; the term fee is one payment before lesson 1. Open: whether the 5% full-term discount still applies (the wording is a marked placeholder; prices on hold).
+- SCHOOLBOOKS-WAIT (overrides SCHOOLBOOKS-P3-NEXT): Primary 3-6 school booklets wait until the Primary 2 booklets are audited and schools show interest. Primary 2 continues. The Primary 3 agent was told to stop and leave a PAUSED note.

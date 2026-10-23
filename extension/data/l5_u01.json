@@ -71,7 +71,7 @@
    },
    "lines": [
     "The number is 4 053 201.",
-    "M is millions. TTh is ten thousands."
+    "M is millions. TTh is ten-thousands."
    ]
   },
   "tight": true,
@@ -110,7 +110,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Six million, two hundred and five thousand and thirty is written {l}",
+     "text": "Write the number: 6 million, 205 thousand and 30. {l}",
      "answer": {
       "value": [
        "6205030"
@@ -244,7 +244,7 @@
    "id": "L5U01-S05",
    "tier": "start",
    "page": 1,
-   "text": "Ben has the number below. He adds 2 hundred thousands. Then he takes away 5 ten thousands. What is Ben's new number?",
+   "text": "Ben has the number below. He adds 2 hundred-thousands. Then he takes away 5 ten-thousands. What is Ben's new number?",
    "figure": {
     "type": "l5_table",
     "cols": [
@@ -546,20 +546,43 @@
    "id": "L5U01-S12",
    "tier": "start",
    "page": 3,
-   "text": "Solve the riddle. Check every clue when you finish.\nClue 1: I am a 6-digit number. All my digits are different.\nClue 2: Rounded to the nearest ten thousand I am 470 000.\nClue 3: My thousands digit is 2.\nClue 4: My hundreds digit is twice my tens digit.\nClue 5: My ones digit is 0.\nI am {l}",
-   "answer": {
-    "value": [
-     "472630"
+   "text": "Solve the riddle in the box. Check every clue when you finish.",
+   "figure": {
+    "type": "l5_clues",
+    "lines": [
+     [
+      "I am a 6-digit number.",
+      "All my digits are different."
+     ],
+     [
+      "I round to 470 000 when rounded to",
+      "the nearest ten-thousand."
+     ],
+     "My thousands digit is 2.",
+     "My hundreds digit is twice my tens digit.",
+     "My ones digit is 0."
     ],
-    "text": "472 630"
+    "width_mm": 130
    },
+   "parts": [
+    {
+     "label": "",
+     "text": "I am {l}",
+     "answer": {
+      "value": [
+       "472630"
+      ],
+      "text": "472 630"
+     }
+    }
+   ],
    "explanation": "Clue 2: the number is from 465 000 to 474 999. With Clue 3 the thousands digit is 2, so it starts 472 (465 and 474 do not fit). Clue 5: ones 0. Clue 4: the tens and hundreds digits are 3 and 6, or 1 and 2 (2 is already used), or 4 and 8 (4 is used). So 472 630. Check all digits differ: 4, 7, 2, 6, 3, 0."
   },
   {
    "id": "L5U01-S13",
    "tier": "start",
    "page": 3,
-   "text": "A stadium has 48 000 seats. On Monday 3 100 people came. On Tuesday twice as many came. On Wednesday 1 250 fewer people came than on Tuesday. How many people came on the three days? {b} people",
+   "text": "A stadium has 48 000 seats. On Monday 3 100 people came. On Tuesday twice as many came. On Wednesday 1 250 fewer people came than on Tuesday. How many people came in all? {b} people",
    "answer": {
     "value": [
      "14250"
@@ -588,30 +611,60 @@
    "id": "L5U01-T01",
    "tier": "think",
    "page": 4,
-   "text": "Solve the riddle. Test the clues one at a time.\nClue 1: I am a 7-digit number. All my digits are different.\nClue 2: Rounded to the nearest hundred thousand I am 6 400 000.\nClue 3: My ten thousands digit is 1 less than my hundred thousands digit.\nClue 4: My hundreds digit is 2 more than my thousands digit.\nClue 5: My tens digit is 0.\nClue 6: My digits add up to 33.\nI am {l}",
-   "answer": {
-    "value": [
-     "6435708"
+   "text": "Solve the riddle in the box. Test the clues one at a time.",
+   "figure": {
+    "type": "l5_clues",
+    "lines": [
+     [
+      "I am a 7-digit number.",
+      "All my digits are different."
+     ],
+     [
+      "I round to 6 400 000 when rounded to",
+      "the nearest hundred-thousand."
+     ],
+     [
+      "My ten-thousands digit is 1 less than",
+      "my hundred-thousands digit."
+     ],
+     [
+      "My hundreds digit is 2 more than",
+      "my thousands digit."
+     ],
+     "My tens digit is 0.",
+     "My digits add up to 33."
     ],
-    "text": "6 435 708"
+    "width_mm": 130
    },
+   "parts": [
+    {
+     "label": "",
+     "text": "I am {l}",
+     "answer": {
+      "value": [
+       "6435708"
+      ],
+      "text": "6 435 708"
+     }
+    }
+   ],
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "hint": "Clue 2 and 3 fix the first three digits. Then use Clue 6.",
-   "explanation": "Clue 2: from 6 350 000 to 6 449 999, so it starts 6 3 5 or more, or 6 4. Clue 3: the ten thousands digit is 1 less than the hundred thousands digit. 6 3 5 does not fit (5 is not 2). So it starts 6 4 3. Digits so far: 6, 4, 3 and 0 (the tens). Clue 6: the other three digits add to 33 - 6 - 4 - 3 - 0 = 20. The thousands digit t and the hundreds digit t + 2: t + (t + 2) + ones = 20. Try t = 5: 5 + 7 = 12, ones = 8. All different: 6, 4, 3, 5, 7, 0, 8. So 6 435 708."
+   "hint": "Clues 2 and 3 fix the first 3 digits. Then use Clue 6.",
+   "explanation": "Clue 2: from 6 350 000 to 6 449 999, so it starts 6 3 5 or more, or 6 4. Clue 3: the ten-thousands digit is 1 less than the hundred-thousands digit. 6 3 5 does not fit (5 is not 2). So it starts 6 4 3. Digits so far: 6, 4, 3 and 0 (the tens). Clue 6: the other three digits add to 33 - 6 - 4 - 3 - 0 = 20. The thousands digit t and the hundreds digit t + 2: t + (t + 2) + ones = 20. Try t = 5: 5 + 7 = 12, ones = 8. All different: 6, 4, 3, 5, 7, 0, 8. So 6 435 708."
   },
   {
    "id": "L5U01-T02",
    "tier": "think",
    "page": 4,
-   "text": "Every number from 195 000 to 204 999 rounds to 200 000 when rounded to the nearest ten thousand.",
+   "text": "Every number from 195 000 to 204 999 rounds to 200 000 when rounded to the nearest ten-thousand.",
    "parts": [
     {
      "label": "a",
-     "text": "How many of these numbers have digits that add up to 4? {b}",
+     "text": "How many of these numbers have a digit sum of 4? {b}",
      "answer": {
       "value": [
        "10"
@@ -626,14 +679,14 @@
      ""
     ]
    },
-   "hint": "A number from 195 000 to 199 999 already has a digit sum over 4.",
+   "hint": "Numbers from 195 000 to 199 999 have a digit sum over 4.",
    "explanation": "From 195 000 to 199 999 the digits 1 + 9 are already 10, too big. So the number is 20 _ _ _ _ with the other four digits adding to 2. The thousands digit is at most 4. The ways: 2 in one place (4 ways: 200 002, 200 020, 200 200, 202 000) or 1 and 1 in two places (6 ways: 200 011, 200 101, 200 110, 201 001, 201 010, 201 100). Total 10."
   },
   {
    "id": "L5U01-T03",
    "tier": "think",
    "page": 4,
-   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the two numbers. Make the product as great as you can. Write the product.",
+   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the 2 numbers. Make the product as great as you can.",
    "figure": {
     "type": "l5_cards",
     "items": [
@@ -664,14 +717,14 @@
      ""
     ]
    },
-   "hint": "The two greatest digits should be the first digits. Try both ways.",
+   "hint": "The greatest digits go first. Try both ways.",
    "explanation": "Put the greatest digits first: 9 and 7 lead the two numbers. Try 9__ × 7_ and 7__ × 9_ with the other digits 5, 3, 2 in order. 752 × 93 = 69 936 beats 953 × 72 = 68 616 and 732 × 95 = 69 540. The best is 752 × 93 = 69 936."
   },
   {
    "id": "L5U01-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Counting choices\nA 7-digit number cannot start with 0. How many 7-digit numbers have all their digits different? {l}",
+   "text": "Beyond Level 5: Counting choices\nThe first digit is never 0. How many 7-digit numbers have 7 different digits? {l}",
    "answer": {
     "value": [
      "544320"
@@ -755,11 +808,11 @@
    "id": "L5U01-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "In 5 280 436, write (a) the value of the digit 2 and (b) the number rounded to the nearest hundred thousand.",
+   "text": "Look at the number 5 280 436.",
    "parts": [
     {
      "label": "a",
-     "text": "{l}",
+     "text": "The digit 2 stands for {l}",
      "answer": {
       "value": [
        "200000"
@@ -769,7 +822,7 @@
     },
     {
      "label": "b",
-     "text": "{l}",
+     "text": "Rounded to the nearest 100 000, it is {l}",
      "answer": {
       "value": [
        "5300000"
@@ -785,7 +838,7 @@
    "id": "L5U01-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Use each card once to make a 7-digit number as close as you can to 4 000 000.",
+   "text": "Build the 7-digit number nearest to 4 000 000. Use each card once.",
    "figure": {
     "type": "l5_cards",
     "items": [

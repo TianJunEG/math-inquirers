@@ -159,7 +159,7 @@ def _():
             continue
         sol.append(v)
     assert len(sol) == 1
-    return s(sol)
+    return {'': s(sol)}
 
 
 @check('L5U01-S13')
@@ -184,7 +184,7 @@ def _():
         if len(set(d)) == 7 and rnd(v, 100000) == 6400000 and d[2] == d[1] - 1 and d[4] == d[3] + 2 and d[5] == 0 and sum(d) == 33:
             sol.append(v)
     assert len(sol) == 1
-    return s(sol)
+    return {'': s(sol)}
 
 
 @check('L5U01-T02')

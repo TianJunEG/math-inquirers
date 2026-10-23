@@ -5,10 +5,18 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(os.path.dirname(os.path.dirname(HERE)), 'data')
 
 
+def nf(x):
+    """Format a whole number for printing: 5 digits or more get a non-breaking space between the thousands."""
+    s = str(x)
+    if s.lstrip('-').isdigit() and len(s) >= 5:
+        return f'{int(s):,}'.replace(',', '\u00a0')
+    return s
+
+
 def A(*vals, text=None, **kw):
     """Answer: values (strings or numbers), printed text (default: values joined with ', ')."""
     v = [str(x) for x in vals]
-    d = {'value': v, 'text': text if text is not None else ', '.join(v)}
+    d = {'value': v, 'text': text if text is not None else ', '.join(nf(x) for x in v)}
     d.update(kw)
     return d
 
@@ -41,7 +49,24 @@ def item(id_, tier, page, text, ans=None, parts=None, why='', fig=None, hint=Non
     return d
 
 
+import re
+_NB = re.compile(r'(?<![\d])(\d{2,3}) (\d{3})(?!\d)')
+
+
+def _fmt(o, key=None):
+    if isinstance(o, str):
+        if key in ('value', 'id'):
+            return o
+        return _NB.sub('\\1\u00a0\\2', o)
+    if isinstance(o, list):
+        return [_fmt(x, key) for x in o]
+    if isinstance(o, dict):
+        return {k: _fmt(v, k) for k, v in o.items()}
+    return o
+
+
 def write(n, unit):
+    unit = _fmt(unit)
     tr = unit['learn']['try']
     if '{ll}' in tr['text']:
         tr['answer'] = dict(tr['answer'], list=True)

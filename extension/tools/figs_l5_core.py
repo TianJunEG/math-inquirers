@@ -184,4 +184,28 @@ def grid100(spec, w=None):
     return F._wrap(''.join(P), 10 * c + 8, 10 * c + 8, spec.get('alt', 'hundred grid'), _w(spec, w, 80))
 
 
-FIGS = {'l5_cards': cards, 'l5_table': table, 'l5_numline': numline, 'l5_bars': bars, 'l5_grid100': grid100}
+# ---------------------------------------------------------------------------------------------- clue card
+def clues(spec, w=None):
+    """A riddle card: {lines:[str or [str, str]], title?}. A clue given as a list is wrapped over several lines."""
+    size = spec.get('size', 20)
+    lh = size * 1.45
+    P = []
+    y = 20
+    title = spec.get('title')
+    if title:
+        P.append(T(24, y + size, esc(title), size + 2, anchor='start', weight=800)); y += lh + 6
+    for i, c in enumerate(spec['lines'], 1):
+        ls = [c] if isinstance(c, str) else list(c)
+        if spec.get('numbered', True):
+            P.append(T(24, y + size, f'Clue {i}', size, TEAL, 'start', 800))
+        for k, line in enumerate(ls):
+            P.append(T(24 + (size * 4.3 if spec.get('numbered', True) else 0), y + size, esc(line), size, anchor='start', weight=700))
+            y += lh
+        y += 5
+    Wd = 600
+    H = y + 12
+    box = f'<rect x="4" y="4" width="{Wd - 8}" height="{H - 8:.1f}" rx="14" fill="{SOFT}" stroke="{NAVY}" stroke-width="{SW}"/>'
+    return F._wrap(box + ''.join(P), Wd, round(H, 1), spec.get('alt', 'riddle clues'), _w(spec, w, 150))
+
+
+FIGS = {'l5_cards': cards, 'l5_table': table, 'l5_numline': numline, 'l5_bars': bars, 'l5_grid100': grid100, 'l5_clues': clues}
