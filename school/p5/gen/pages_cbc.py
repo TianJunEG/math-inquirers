@@ -139,13 +139,13 @@ def _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
 
 def page05():
     return cbc_page(5, dict(id="CBC-P5-01", picture="rocket", bank="ops", tier=1, seed=501, level=5), "Colour the Rocket",
-        ["Work out the answer in each part.", "Find it in the key.", "Colour the part, or write its letter (Y, R, B, G or O) if you have no crayon."],
+        ["Work out the answer in each part.", "Find it in the key.", "Colour the part, or write Y, R, B, G or O if you have no crayon."],
         "Number and Algebra - Whole Numbers", "2.2, 2.3 (order of operations and use of brackets, without a calculator)",
         "Every part is a calculation with the four operations, with or without brackets: multiplication and division come before addition and subtraction, and brackets come first.", oc=["WN2.2", "WN2.3"])
 
 def page22():
     return cbc_page(22, dict(id="CBC-P5-02", picture="butterfly", bank="pct", tier=1, seed=502, level=5), "Colour the Butterfly",
-        ["Work out the answer in each part.", "Find it in the key.", "Colour the part, or write its letter (Y, R, B, G or O) if you have no crayon."],
+        ["Work out the answer in each part.", "Find it in the key.", "Colour the part, or write Y, R, B, G or O if you have no crayon."],
         "Number and Algebra - Percentage", "a percentage part of a whole, a part of a whole as a percentage, discount and GST (percentage)",
         "Every part asks for a percentage of a quantity, a part of a whole written as a percentage, a price after a discount, or a price after adding a percentage such as GST.", oc=["PC1.1", "PC1.2", "PC1.3", "PC1.4"])
 
