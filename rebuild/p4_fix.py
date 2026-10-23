@@ -46,7 +46,7 @@ def _time_plan(n, G):
          f'Brain break {_r(*P["Brain break"])} (water and toilet first, then the game; clock check at the end of the break: if you are more than 1.5 minutes behind, skip the next optional item, never a check, the exit ticket or Looking back). '
          f'Worksheet {_r(*ws)}: page 1 (Start here, in pairs){pre} {_r(*W[0])}, check together {_r(*W[1])}, short teaching before page 2 {_r(*W[2])}, '
          f'page 2 on your own {_r(*W[3])} (the last {buf} minutes are the standing buffer: if earlier parts ran long, spend the buffer first, then the choice questions, and never the checks, the exit ticket or Looking back), check together {_r(*W[4])}. '
-         f'Talk time {_r(*P["Talk time"])} (one minute of pair talk, no breakout). Exit ticket {_r(*P["Exit ticket"])}. Looking back {_r(*P["Looking back"])} (2 minutes of writing). ')
+         f'Talk time {_r(*P["Talk time"])} (one minute of pair talk, no breakout; one minute is the tool question: where did you use today\'s tool?). Exit ticket {_r(*P["Exit ticket"])}. Looking back {_r(*P["Looking back"])} (common look-back: 90-second timer, then about 60 seconds to stamp journals). ')
     if n == 10:
         s += f'Certificates and goodbye {_r(*P["Certificates and goodbye"])} (whole group, no per-child comments). '
     s += (p1 + ' Think harder, Go further and the Investigation have no fixed time slot: any child may choose them at any time, or take them home. '
@@ -220,6 +220,13 @@ def finish(S, n, G, pic=None, go2=None, tp=None):
     tk = tk.replace(FOOTSTART, '\n' + card(p('Pass is always fine. Volunteers share first. We do not keep scores.', 30, 600, MUTED)) + FOOTSTART, 1)
     tk = tk.replace('</aside>', E(' TALK TIME RULES: ask for volunteers first; a child may always pass; never call on a child by name to answer; no public tallies, scores or rankings; praise the reason, not the child. If a question uses a mistaken idea (a character who gets it wrong), present it as the character\'s idea and ask "What would you say to them?" so no child owns the mistake.') + '</aside>')
     S[f'{ID}-talk'] = tk
+    # clock: talk and exit windows come from the budget (Talk time got 1 minute from Looking back, spine routine, 23 Oct)
+    for suf in ('talk', 'exit'):
+        a, b = B.window(n, suf); h = S[f'{ID}-{suf}']
+        h = PILL_RE.sub(B.pill(n, suf), h, count=1)
+        h = re.sub(r'Minutes [\d.]+ to [\d.]+\.', f'Minutes {B.fmt(a)} to {B.fmt(b)}.', h, count=1)
+        S[f'{ID}-{suf}'] = h
+    S[f'{ID}-talk'] = S[f'{ID}-talk'].replace('</aside>', E(' TOOL MINUTE: Talk time is one minute longer than before (the common look-back is shorter). Spend it on the question on the slide: where did you use today\'s tool, and what did it help you see? Listen for the tool named, not for the answer; a child may pass.') + '</aside>', 1)
     # all slides: neutral names
     for k in list(S):
         S[k] = _renames(S[k], n)
