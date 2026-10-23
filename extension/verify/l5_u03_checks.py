@@ -61,10 +61,10 @@ def _():
 
 @check('L5U03-S06')
 def _():
-    red, blue = 12, 8
-    red2 = red + 10
-    unchanged = 'blue' if red2 != red else 'red'
-    return {'a': [unchanged], 'b': [fs(Fr(blue, red + blue))], 'c': [fs(Fr(blue, red2 + blue))]}
+    white, black = Fr(3, 4) * 20, Fr(1, 4) * 20
+    white2 = white - 10
+    unchanged = 'black' if white2 != white else 'white'
+    return {'a': [unchanged], 'b': [fs(black)], 'c': [fs(white2 / (white2 + black))]}
 
 
 @check('L5U03-S07')
@@ -130,20 +130,18 @@ def _():
 
 @check('L5U03-T01')
 def _():
-    for m in range(8, 1000, 8):
-        mon = Fr(3, 8) * m
-        tue = Fr(2, 5) * (m - mon)
-        if m - mon - tue == 60:
-            return [str(m)]
+    for kg in range(8, 2000, 8):
+        left = kg - Fr(3, 8) * kg - Fr(1, 4) * kg
+        if left == 120:
+            return [str(kg)]
 
 
 @check('L5U03-T02')
 def _():
-    for siti in range(1, 132):
-        mei = 132 - siti
-        s2, m2 = siti - 14, mei + 14
-        if Fr(s2) == Fr(4, 7) * m2:
-            return [str(siti)]
+    for ali in range(3, 600, 3):
+        ben = Fr(2, 3) * ali
+        if ali - 12 == ben + 8:
+            return [str(ali)]
 
 
 @check('L5U03-T03')

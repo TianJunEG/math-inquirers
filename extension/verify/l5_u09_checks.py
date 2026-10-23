@@ -99,10 +99,15 @@ def _():
 
 @check('L5U09-S05')
 def _():
-    assert [u_tiles(k) for k in (1, 2, 3)] == [5, 8, 11]
-    sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(u_tiles(n) == m * n + c for n in range(1, 30))]
+    def u2(n):
+        cells = {(c, 0) for c in range(n + 2)}
+        for r in range(1, 2 * n + 1):
+            cells |= {(0, r), (n + 1, r)}
+        return len(cells)
+    assert [u2(k) for k in (1, 2)] == [7, 12]
+    sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(u2(n) == m * n + c for n in range(1, 30))]
     assert len(sol) == 1
-    return {'a': [str(u_tiles(4))], 'b': [str(u_tiles(15))], 'c': [str(sol[0][0]), str(sol[0][1])], 'd': [str(first_figure(u_tiles, 98))]}
+    return {'a': [str(u2(4))], 'b': [str(u2(12))], 'c': [str(sol[0][0]), str(sol[0][1])], 'd': [str(first_figure(u2, 92))]}
 
 
 @check('L5U09-S04')
@@ -203,8 +208,7 @@ def _():
 
 @check('L5U09-G03')
 def _():
-    answered = 25 - 5
-    sols = [right for right in range(0, answered + 1) if 6 * right - 2 * (answered - right) == 64]
+    sols = [h for h in range(0, 21) if 7 * h - 3 * (20 - h) == 60]
     assert len(sols) == 1
     return [str(sols[0])]
 

@@ -253,40 +253,40 @@
    "id": "L5U03-S06",
    "tier": "start",
    "page": 2,
-   "text": "A box has 12 red cubes and 8 blue cubes. Then 10 more red cubes are put in.",
+   "text": "A bag holds 20 counters. 3/4 of them are white and the rest are black. Then 10 white counters are taken out.",
    "parts": [
     {
      "label": "a",
-     "text": "The cubes that did not change are   {circ:red|blue}",
+     "text": "The counters that did not change are   {circ:white|black}",
      "answer": {
       "value": [
-       "blue"
+       "black"
       ],
-      "text": "blue"
+      "text": "black"
      }
     },
     {
      "label": "b",
-     "text": "At first, blue cubes are {b} of the cubes.  (simplest form)",
+     "text": "There are {b} black counters.",
      "answer": {
       "value": [
-       "2/5"
+       "5"
       ],
-      "text": "2/5"
+      "text": "5"
      }
     },
     {
      "label": "c",
-     "text": "Now, blue cubes are {b} of the cubes.  (simplest form)",
+     "text": "Now, white counters are {b} of the counters in the bag.  (simplest form)",
      "answer": {
       "value": [
-       "4/15"
+       "1/2"
       ],
-      "text": "4/15"
+      "text": "1/2"
      }
     }
    ],
-   "explanation": "(a) Only red cubes were added. (b) 8 of 20 = 2/5. (c) 8 of 30 = 4/15."
+   "explanation": "(a) Only white counters were taken out. (b) 1/4 of 20 = 5. (c) 5 white and 5 black: 5/10 = 1/2."
   },
   {
    "id": "L5U03-S07",
@@ -552,12 +552,12 @@
    "id": "L5U03-T01",
    "tier": "think",
    "page": 4,
-   "text": "On Monday Ravi spends 3/8 of his money. On Tuesday he spends 2/5 of what is left. After Tuesday he has $60. How much money did Ravi start with? $ {b}",
+   "text": "A shop sells 3/8 of its rice on Monday. On Tuesday it sells 1/4 of all its rice. 120 kg are left. How many kg of rice did the shop have at first? {b}",
    "answer": {
     "value": [
-     "160"
+     "320"
     ],
-    "text": "$160"
+    "text": "320 kg"
    },
    "space": {
     "rows": [
@@ -568,19 +568,19 @@
      ""
     ]
    },
-   "hint": "Find what fraction of all the money is left at the end.",
-   "explanation": "Monday leaves 5/8. Tuesday takes 2/5 of 5/8 = 2/8. Left 3/8 = $60, so 1/8 = $20 and the whole is $160."
+   "hint": "Add the fractions sold. What fraction is left?",
+   "explanation": "Sold 3/8 + 1/4 = 5/8. Left 3/8 = 120 kg, so 1/8 = 40 kg and all of the rice is 320 kg."
   },
   {
    "id": "L5U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ali and Ben have 132 cards altogether. Ben gives 14 cards to Ali. Then Ben has 4/7 of Ali's number of cards. How many cards did Ben have at first? {b}",
+   "text": "Ben has 2/3 as many marbles as Ali. Ali loses 12 marbles and Ben wins 8 marbles. Then they have the same number. How many marbles did Ali have at first? {b}",
    "answer": {
     "value": [
-     "62"
+     "60"
     ],
-    "text": "62 cards"
+    "text": "60 marbles"
    },
    "space": {
     "rows": [
@@ -591,8 +591,8 @@
      ""
     ]
    },
-   "hint": "The total stays the same. Find each child's cards after.",
-   "explanation": "After: Ben 4 units, Ali 7 units. 11 units = 132, so 1 unit = 12. Ben has 48 now. Before giving 14 he had 48 + 14 = 62."
+   "hint": "How far apart were they at first?",
+   "explanation": "Ali 3 units, Ben 2 units. Losing 12 and gaining 8 closes the gap of 1 unit by 20. 1 unit = 20, so Ali had 60."
   },
   {
    "id": "L5U03-T03",

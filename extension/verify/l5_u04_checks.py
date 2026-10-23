@@ -64,9 +64,9 @@ def _():
 @check('L5U04-S01')
 def _():
     import math
-    A, B, C = (0, 0), (8, 0), (4, 3)
-    P, Q, R = (11, 0), (25, 0), (16, 12)
-    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [5, 5, 13, 15]   # the labelled slanting sides
+    A, B, C = (0, 0), (12, 0), (6, 8)
+    P, Q, R = (16, 0), (30, 0), (21, 12)
+    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [10, 10, 13, 15]   # the labelled slanting sides
     return {'a': [fmt(area([A, B, C]))], 'b': [fmt(area([P, Q, R]))]}
 
 
@@ -105,9 +105,9 @@ def _():
 
 @check('L5U04-S06')
 def _():
-    rect = area([(0, 0), (14, 0), (14, 9), (0, 9)])
+    rect = 14 * 9
     tri = area([(0, 0), (14, 0), (5, 9)])
-    return {'a': [fmt(tri)], 'b': [fmt(rect - tri)]}
+    return {'a': [fmt(tri)], 'b': [fmt(Fr(rect) / tri)]}
 
 
 @check('L5U04-S07')
@@ -124,9 +124,9 @@ def _():
 
 @check('L5U04-S09')
 def _():
-    sq = 12 * 12
-    h = next(h for h in range(1, 500) if Fr(18 * h, 2) == sq)
-    return {'a': [str(sq)], 'b': [str(h)]}
+    tri = Fr(15 * 8, 2)
+    length = next(l for l in range(1, 500) if 5 * l == tri)
+    return {'a': [str(tri)], 'b': [str(length)]}
 
 
 @check('L5U04-S10')
@@ -208,7 +208,9 @@ def _():
 
 @check('L5U04-C02')
 def _():
-    return [str(next(h for h in range(1, 200) if Fr(14 * h, 2) == 70))]
+    sols = [(h, 2 * h) for h in range(1, 200) if Fr(2 * h * h, 2) == 49]
+    assert len(sols) == 1
+    return [str(sols[0][1])]
 
 
 @check('L5U04-C03')

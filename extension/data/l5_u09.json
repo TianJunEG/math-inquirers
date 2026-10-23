@@ -8,7 +8,7 @@
  "holiday_lesson": 9,
  "goal": "I can find the rule of a growing pattern and say it in words. I can use the rule for a far figure and backwards.",
  "learn": {
-  "intro": "Find what grows each time. Make a table. Say the rule in words. Use it for any figure, and backwards.",
+  "intro": "Find what grows each time. Say the rule in words, then use it.",
   "example": {
    "problem": "Tiles make a plus sign. Figure 1 has 5 tiles and figure 2 has 9 tiles. Figure 3 has arms of 3 tiles. How many tiles are in figure 10? Which figure has 81 tiles?",
    "steps": [
@@ -98,11 +98,10 @@
    ]
   },
   "facts": {
-   "title": "Two kinds of thing",
+   "title": "Two kinds: suppose",
    "lines": [
-    "Suppose all are the cheaper kind.",
-    "Find how far short the total is.",
-    "Divide by the difference in value."
+    "5 cars and bikes, 14 wheels. All bikes: 10 wheels, 4 short. A car adds 2: 2 cars.",
+    "Marks: suppose all are right. Each wrong loses marks and the penalty."
    ]
   },
   "tight": true,
@@ -508,10 +507,10 @@
    "id": "L5U09-S05",
    "tier": "start",
    "page": 2,
-   "text": "Tiles make U shapes. The bottom row of figure 1 has 3 tiles and a tile above each end. Each new figure has a bottom row 1 tile longer. Its 2 sides are 1 tile taller.",
+   "text": "Tiles make U shapes. The bottom row of figure 1 has 3 tiles and 2 tiles above each end. Each new figure has a bottom row 1 tile longer. Its 2 sides are 2 tiles taller.",
    "figure": {
     "type": "l5_pat",
-    "mm": 8,
+    "mm": 6.6,
     "panels": [
      {
       "cells": [
@@ -534,6 +533,14 @@
        [
         2,
         1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        2,
+        2
        ]
       ]
      },
@@ -570,6 +577,22 @@
        [
         3,
         2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
        ]
       ]
      }
@@ -582,19 +605,19 @@
      "text": "Figure 4 has {b} tiles.",
      "answer": {
       "value": [
-       "14"
+       "22"
       ],
-      "text": "14"
+      "text": "22"
      }
     },
     {
      "label": "b",
-     "text": "Figure 15 has {b} tiles.",
+     "text": "Figure 12 has {b} tiles.",
      "answer": {
       "value": [
-       "47"
+       "62"
       ],
-      "text": "47"
+      "text": "62"
      }
     },
     {
@@ -602,24 +625,24 @@
      "text": "tiles = {b} × figure + {b}",
      "answer": {
       "value": [
-       "3",
+       "5",
        "2"
       ],
-      "text": "3, 2"
+      "text": "5, 2"
      }
     },
     {
      "label": "d",
-     "text": "Figure {b} has 98 tiles.",
+     "text": "Figure {b} has 92 tiles.",
      "answer": {
       "value": [
-       "32"
+       "18"
       ],
-      "text": "32"
+      "text": "18"
      }
     }
    ],
-   "explanation": "Figure 1 has 5 tiles, figure 2 has 8: each figure adds 3. (a) 3 × 4 + 2 = 14. (b) 3 × 15 + 2 = 47. (c) 3 and 2. (d) 96 ÷ 3 = 32.",
+   "explanation": "Figure 1 has 7 tiles, figure 2 has 12: each figure adds 5. (a) 22. (b) 62. (c) 5 and 2. (d) 90 ÷ 5 = 18.",
    "figside": true
   },
   {
@@ -1353,12 +1376,12 @@
    "id": "L5U09-G03",
    "tier": "go",
    "page": 5,
-   "text": "A test has 25 questions. A right answer scores 6 marks. A wrong answer loses 2 marks. A blank scores 0. Dev leaves 5 blank and scores 64 marks. How many questions does he get right? {b}",
+   "text": "Kai takes 20 shots at a target. A hit scores 7 points. A miss loses 3 points. Kai scores 60 points altogether. How many hits does he make? {b}",
    "answer": {
     "value": [
-     "13"
+     "12"
     ],
-    "text": "13 right"
+    "text": "12 hits"
    },
    "space": {
     "rows": [
@@ -1368,8 +1391,8 @@
      ""
     ]
    },
-   "hint": "Only answered questions count. Suppose all of them are right.",
-   "explanation": "He answers 20. All right: 120. Each wrong answer costs 6 + 2 = 8. (120 - 64) ÷ 8 = 7 wrong, so 13 right."
+   "hint": "Suppose every shot is a hit. How many points too many?",
+   "explanation": "All hits: 140, which is 80 too many. Each miss costs 7 + 3 = 10: 8 misses, 12 hits."
   },
   {
    "id": "L5U09-C01",
