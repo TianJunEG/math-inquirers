@@ -734,9 +734,35 @@
         "t": "card",
         "head": "2 SQUARES",
         "items": [
-         "make a rectangle."
+         "Put them together, whole sides touching. What shape do they make?"
         ]
-       },
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "2 HALF CIRCLES",
+        "items": [
+         "Put them together, straight sides touching. What shape do they make?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "2 TRIANGLES",
+        "items": [
+         "Put them together, whole sides touching. What shapes can they make?"
+        ]
+       }
+      ]
+     ]
+    },
+    {
+     "t": "cols",
+     "reveal": true,
+     "cols": [
+      [
        {
         "t": "visual",
         "type": "grid",
@@ -755,44 +781,42 @@
         ],
         "cell": 60,
         "size": "m"
+       },
+       {
+        "t": "p",
+        "text": "A rectangle."
        }
       ],
       [
-       {
-        "t": "card",
-        "head": "2 HALF CIRCLES",
-        "items": [
-         "make a circle."
-        ]
-       },
        {
         "t": "visual",
         "type": "shapes2d",
         "shape": "circle",
         "parts": 1,
         "size": 110
+       },
+       {
+        "t": "p",
+        "text": "A circle."
        }
       ],
       [
-       {
-        "t": "card",
-        "head": "2 TRIANGLES",
-        "items": [
-         "make a square or a bigger triangle."
-        ]
-       },
        {
         "t": "visual",
         "type": "shapes2d",
         "shape": "square",
         "parts": 1,
         "size": 110
+       },
+       {
+        "t": "p",
+        "text": "A square or a bigger triangle."
        }
       ]
      ]
     }
    ],
-   "note": "Three ways that 2 pieces make 1 shape, with whole sides touching. 2 squares side by side make a rectangle: show it with 2 kit squares. 2 half circles with their straight sides together make a circle: show it with the 2 half circles. 2 triangles make a square or a bigger triangle, as in Explore. Children try each with their pieces. Ask: what do 2 squares make (a rectangle); what do 2 half circles make (a circle); what do 2 triangles make (it depends on which sides touch). Say: the shapes must touch with whole sides. The pictures show the made shape."
+   "note": "Three ways that 2 pieces make 1 shape, with whole sides touching. 2 squares side by side make a rectangle: show it with 2 kit squares. 2 half circles with their straight sides together make a circle: show it with the 2 half circles. 2 triangles make a square or a bigger triangle, as in Explore. Children try each with their pieces. Ask: what do 2 squares make (a rectangle); what do 2 half circles make (a circle); what do 2 triangles make (it depends on which sides touch). Say: the shapes must touch with whole sides. The made shapes are on the next slide, after the children have answered."
   },
   {
    "id": "s-m2",
@@ -2537,11 +2561,11 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Fill in the blanks. Circle one word each time.",
+    "text": "Circle the word that finishes each sentence.",
     "parts": [
      {
       "l": "a",
-      "text": "2 squares make a ____ . Circle one.",
+      "text": "2 squares make a",
       "ans": "rectangle",
       "val": "rectangle",
       "choices": [
@@ -2552,7 +2576,7 @@
      },
      {
       "l": "b",
-      "text": "2 half circles make a ____ . Circle one.",
+      "text": "2 half circles make a",
       "ans": "circle",
       "val": "circle",
       "choices": [
@@ -2563,7 +2587,7 @@
      },
      {
       "l": "c",
-      "text": "2 quarter circles make a ____ . Circle one.",
+      "text": "2 quarter circles make a",
       "ans": "half circle",
       "val": "half circle",
       "choices": [
@@ -2655,7 +2679,7 @@
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Count each kind of shape in the picture. Fill in the table.",
+    "text": "Count the small shapes one by one. Do not count a big shape made of small ones. Fill in the table.",
     "parts": [],
     "answer": "triangles 5; squares 6; circles 3",
     "val": [
@@ -2663,11 +2687,11 @@
      6,
      3
     ],
-    "hint": "Count one kind at a time. Each tile has 1 to 4 shapes of the same kind. Add up the shapes, not the tiles.",
+    "hint": "Count one kind at a time. Each tile has 1 to 4 small shapes of the same kind. Add up the small shapes, not the tiles.",
     "solution": "Triangles: 3 and 2 make 5. Squares: 2 and 4 make 6. Circles: 1 and 2 make 3. 5 + 6 + 3 = 14 shapes in all.",
     "mistakes": [
-     "Counting the tiles instead of the shapes.",
-     "Counting a tile that has 4 shapes as 1."
+     "Counting the tiles instead of the small shapes.",
+     "Counting a block of 4 squares as 1 big square, or a pair of squares as 1 rectangle."
     ],
     "mins": 5,
     "visual": {
@@ -2724,7 +2748,7 @@
       "type": "table",
       "head": [
        "Triangles",
-       "Squares",
+       "Small squares",
        "Circles"
       ],
       "rows": [
@@ -2937,7 +2961,7 @@
    "title": "2 triangles, many shapes",
    "first": "Put 2 triangles together so whole sides touch. Make a square. Draw it.",
    "text": "Find other shapes you can make with 2 triangles. Draw each one. How many different shapes can you find?",
-   "draw": 1,
+   "draw": 2,
    "answer": "First: a square (the 2 longest sides touch). Then 3 different shapes in all when whole sides touch: a square, a bigger triangle (2 short sides touch, the right-angle corners together) and a slanted four-sided shape (2 short sides touch, turned the other way). A child who finds 2 has the main idea; a child who finds the third has seen that it depends on which sides touch.",
    "val": [
     "3"
