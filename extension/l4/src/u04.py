@@ -83,10 +83,11 @@ S.append(item(U+'-S13', 'start', 3, 'How many?',
   parts=[P('a', 'quarters in 5 wholes: {b}', A(20)), P('b', 'sixths in 3 wholes: {b}', A(18)), P('c', 'halves in 2 1/2: {b}', A(5))],
   why='(a) 5 × 4 = 20. (b) 3 × 6 = 18. (c) 2 wholes make 4 halves, and 1/2 makes 1 more half: 5 halves.'))
 
-T.append(item(U+'-T01', 'think', 4, 'n is a whole number. It makes 1/2 < n/9 < 5/6 true. Find the least and the greatest value of n.\nLeast {b}   Greatest {b}',
-  ans=A(5, 7, text='Least 5, greatest 7'), hint='Make all 3 fractions have the same bottom number. Try 18.',
-  why='Use 18 on the bottom: 1/2 = 9/18, n/9 = 2n/18 and 5/6 = 15/18. So 9 < 2n < 15 and n is 5, 6 or 7. The least is 5 and the greatest is 7.',
-  space={'rows': ['Working:', '', '', '']}))
+T.append(item(U+'-T01', 'think', 4, 'n is a whole number. The fraction 4/n is greater than 4/9 and less than 4/5.',
+  parts=[P('a', 'How many values can n have? {b}', A(3)), P('b', 'The greatest of these fractions is 4/{b}', A(6))],
+  hint='With the same top, a greater bottom number gives a smaller fraction.',
+  why='4/n is less than 4/5, so n is greater than 5. It is greater than 4/9, so n is less than 9. n is 6, 7 or 8: 3 values. The greatest fraction has the least n: 4/6.',
+  space={'rows': ['List:', '', '']}))
 T.append(item(U+'-T02', 'think', 4, 'In one day Ali sleeps 1/3 of the 24 hours and is at school for 1/4 of the 24 hours. He plays for half of the hours that are left. How many hours does he play? {b} hours',
   ans=A(5), hint='How many hours are left after sleep and school?',
   why='1/3 of 24 = 8 hours and 1/4 of 24 = 6 hours. 24 − 8 − 6 = 10 hours are left. Half of 10 is 5 hours.',

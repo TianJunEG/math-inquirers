@@ -575,7 +575,7 @@
    "id": "L5U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ben has 2/3 as many marbles as Ali. Ali loses 12 marbles and Ben wins 8 marbles. Then they have the same number. How many marbles did Ali have at first? {b}",
+   "text": "Ben has 2/3 as many marbles as Ali. Ali loses 12 marbles and Ben wins 8 marbles. Now the 2 children are level. How many marbles did Ali have at first? {b}",
    "answer": {
     "value": [
      "60"

@@ -69,7 +69,7 @@ S.append(item(U+'-S11', 'start', 3, 'Three next-door numbers add up to 87. What 
   space={'rows': ['Working:']}))
 S.append(item(U+'-S12', 'start', 3, 'A lock code has 3 digits. The middle digit is 0. The first digit is twice the last digit. The digits add up to 9. What is the code? {b}',
   ans=A(603), hint='Try a last digit of 1, then 2, then 3. Add the digits.',
-  why='The last digit and twice the last digit make 3 × last = 9, so the last digit is 3 and the first is 6. The code is 603.',
+  why='The first digit is twice the last, so the 3 digits add up to 3 times the last digit. 3 × last = 9, so the last digit is 3 and the first is 6. The code is 603.',
   space={'rows': ['Try:']}))
 
 T.append(item(U+'-T01', 'think', 4, 'A shop sells pens in boxes of 2 and boxes of 5. Ali buys 12 boxes with 45 pens in all.',

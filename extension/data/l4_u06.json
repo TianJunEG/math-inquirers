@@ -732,7 +732,8 @@
     ]
    },
    "hint": "The 4 angles add up to 180°. Take away the extra degrees first.",
-   "explanation": "The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°."
+   "explanation": "The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.",
+   "partsrow": true
   },
   {
    "id": "L4U06-G02",
@@ -771,6 +772,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "hint": "12 seats share 360°. What is the angle between neighbours?",
    "explanation": "(a) Seat 1 is opposite Seat 7. (b) Seats 2 to 9 are 7 steps of 30°, which is 210°. The smaller way is 360° − 210° = 150°. (c) 270° ÷ 30° = 9 steps, and 1 + 9 = Seat 10."
   },
@@ -782,7 +788,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The smallest slice has an angle of {b}°",
+     "text": "The smallest slice: {b}°",
      "answer": {
       "value": [
        "40"
@@ -792,7 +798,7 @@
     },
     {
      "label": "b",
-     "text": "The 4th slice has an angle of {b}°",
+     "text": "The 4th slice: {b}°",
      "answer": {
       "value": [
        "120"
@@ -801,8 +807,14 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "hint": "Count the equal parts: 1 + 2 + 3 + 3. All round is 360°.",
-   "explanation": "The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°."
+   "explanation": "The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°.",
+   "partsrow": true
   },
   {
    "id": "L4U06-G04",

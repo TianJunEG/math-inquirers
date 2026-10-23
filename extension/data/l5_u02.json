@@ -826,7 +826,8 @@
     ]
    },
    "hint": "Can each fraction be written as a difference of 2 fractions?",
-   "explanation": "Write each as 1/2 × (a difference). The middle parts cancel, leaving 1/2 × (1 - 1/9) = 4/9."
+   "explanation": "Write each as 1/2 × (a difference). The middle parts cancel, leaving 1/2 × (1 - 1/9) = 4/9.",
+   "beyond": "A sum that collapses"
   },
   {
    "id": "L5U02-C01",

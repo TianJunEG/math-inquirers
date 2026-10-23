@@ -161,16 +161,11 @@ def _():
 
 @check('L4U07-T02')
 def _():
-    f = ITEM['L4U07-T02']['figure']['shapes'][0]
-    sides = [int(a ** 0.5) for a in (4, 9, 16)]
-    assert [x * x for x in sides] == [4, 9, 16]
-    cells, x0 = set(), 0
-    for sd in sides:
-        cells |= {(x, y) for x in range(x0, x0 + sd) for y in range(sd)}
-        x0 += sd
-    edges = sum(1 for (x, y) in cells for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + dx, y + dy) not in cells)
-    assert area(f['pts']) == len(cells) and perim(f['pts']) == edges
-    return s([edges])
+    wall = 5 * 3
+    door, window = 2 * 1, 1 * 1
+    paint = wall - door - window
+    tins = -(-(2 * paint) // 9)
+    return {'a': s([paint]), 'b': s([tins])}
 
 
 @check('L4U07-T03')

@@ -948,59 +948,29 @@
    "id": "L4U07-T02",
    "tier": "think",
    "page": 4,
-   "text": "Three squares have areas of 4 cm², 9 cm² and 16 cm². They stand side by side on one line. What is the perimeter of the whole shape? {b} cm",
-   "figure": {
-    "type": "l4_poly",
-    "shapes": [
-     {
-      "pts": [
-       [
-        0,
-        0
-       ],
-       [
-        9,
-        0
-       ],
-       [
-        9,
-        4
-       ],
-       [
-        5,
-        4
-       ],
-       [
-        5,
-        3
-       ],
-       [
-        2,
-        3
-       ],
-       [
-        2,
-        2
-       ],
-       [
-        0,
-        2
-       ]
+   "text": "A wall is 5 m wide and 3 m high. It has a door 2 m high and 1 m wide, and a window 1 m by 1 m. Mei paints the wall, not the door or the window. She paints 2 coats. A tin of paint covers 9 m².",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Area to paint with 1 coat: {b} m²",
+     "answer": {
+      "value": [
+       "12"
       ],
-      "labels": []
+      "text": "12"
      }
-    ],
-    "cell": 14,
-    "width_mm": 56,
-    "padx": 14,
-    "pady": 14
-   },
-   "answer": {
-    "value": [
-     "26"
-    ],
-    "text": "26"
-   },
+    },
+    {
+     "label": "b",
+     "text": "Tins of paint she needs: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
    "space": {
     "rows": [
      "Working:",
@@ -1008,9 +978,8 @@
      ""
     ]
    },
-   "hint": "Find the side of each square first.",
-   "explanation": "The sides are 2, 3 and 4 cm. Push the steps out: the shape fits in a 9 cm by 4 cm rectangle with the same perimeter, 2 × (9 + 4) = 26 cm.",
-   "figright": true
+   "hint": "Whole wall take away the door and the window.",
+   "explanation": "(a) The wall is 5 × 3 = 15 m². The door is 2 m² and the window is 1 m²: 15 − 2 − 1 = 12 m². (b) 2 coats cover 2 × 12 = 24 m². 24 ÷ 9 is 2 and a bit, so she needs 3 tins."
   },
   {
    "id": "L4U07-T03",

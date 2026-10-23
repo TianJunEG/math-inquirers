@@ -551,7 +551,7 @@
     ]
    },
    "hint": "Try a last digit of 1, then 2, then 3. Add the digits.",
-   "explanation": "The last digit and twice the last digit make 3 × last = 9, so the last digit is 3 and the first is 6. The code is 603."
+   "explanation": "The first digit is twice the last, so the 3 digits add up to 3 times the last digit. 3 × last = 9, so the last digit is 3 and the first is 6. The code is 603."
   },
   {
    "id": "L4U10-T01",

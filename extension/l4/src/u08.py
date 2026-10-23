@@ -82,12 +82,12 @@ T.append(item(U+'-T01', 'think', 4, 'Mei paints each face of a cube red or blue.
   hint='Which faces share an edge with a given face?',
   why='(a) A face shares an edge with 4 faces and is opposite just 1. Two opposite red faces do not share an edge. A third red face would touch one of them. So the most is 2. (b) Take 3 faces that meet at one corner. They are not opposite each other, so 3 red faces work. A 4th red face would be opposite one of them. So the most is 3.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Dice stand on a table. On every dice, the top and bottom faces add up to 7.',
-  parts=[P('a', '2 dice: tops add up to 9, so bottoms add up to {b}', A(5)),
-         P('b', '3 dice: tops add up to 12, so bottoms add up to {b}', A(9)),
-         P('c', '1 dice: the 4 side faces add up to {b}', A(14))],
-  hint='All 6 faces of a dice add up to 21.',
-  why='(a) 2 × 7 = 14, and 14 − 9 = 5. (b) 3 × 7 = 21, and 21 − 12 = 9. (c) All 6 faces add up to 21. The top and bottom make 7, so the sides make 14.',
+T.append(item(U+'-T02', 'think', 4, 'A square of paper is folded in half again and again. The folds lie on top of each other. Then holes are punched through all the layers at once.',
+  parts=[P('a', '2 folds, then 3 holes punched. Holes when opened: {b}', A(12)),
+         P('b', '3 folds, then 2 holes punched. Holes when opened: {b}', A(16)),
+         P('c', 'After 3 folds, how many holes make 40 holes in all? {b}', A(5))],
+  hint='Each fold doubles the layers. Count the layers.',
+  why='Each fold doubles the layers. 2 folds: 4 layers, and 4 × 3 = 12 holes. 3 folds: 8 layers, and 8 × 2 = 16 holes. 40 ÷ 8 = 5 holes.',
   space={'rows': ['Working:']}))
 T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 4 squares. A fold along the dashed diagonal must make the halves match. How many patterns can you make? {b}',
   fig=GRID(3, 3, 44, axis={'kind': 'd', 'at': 0}, width_mm=42),

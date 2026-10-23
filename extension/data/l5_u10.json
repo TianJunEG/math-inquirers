@@ -450,7 +450,7 @@
    "id": "L5U10-S12",
    "tier": "start",
    "page": 3,
-   "text": "How many 2-digit numbers have a tens digit that is greater than the ones digit? {b}",
+   "text": "Count the 2-digit numbers whose tens digit beats the ones digit. {b}",
    "answer": {
     "value": [
      "45"

@@ -208,12 +208,10 @@ def _():
 
 @check('L4U08-T02')
 def _():
-    faces = range(1, 7)
-    two = {(7 - a) + (7 - b) for a in faces for b in faces if a + b == 9}
-    three = {(7 - a) + (7 - b) + (7 - c) for a in faces for b in faces for c in faces if a + b + c == 12}
-    sides = {sum(f for f in faces if f not in (t, 7 - t)) for t in faces}
-    assert len(two) == len(three) == len(sides) == 1
-    return {'a': s(two), 'b': s(three), 'c': s(sides)}
+    layers = lambda folds: 2 ** folds
+    need = [h for h in range(1, 100) if layers(3) * h == 40]
+    assert len(need) == 1
+    return {'a': s([layers(2) * 3]), 'b': s([layers(3) * 2]), 'c': s(need)}
 
 
 @check('L4U08-T03')

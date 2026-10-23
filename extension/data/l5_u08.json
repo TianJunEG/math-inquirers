@@ -107,7 +107,7 @@
    "lines": [
     "Line 180°. Point 360°. Triangle 180°.",
     "Isosceles: equal sides, equal angles.",
-    "Parallelogram: opposite angles equal, neighbours 180°.",
+    "Parallelogram: opposite angles equal, neighbours 180°. Rhombus: a parallelogram with 4 equal sides.",
     "Trapezium: between parallel sides 180°."
    ]
   },
@@ -167,14 +167,18 @@
       "a": "X",
       "b": "Z",
       "text": "54°",
-      "r": 34
+      "r": 26,
+      "tr": 58,
+      "size": 18
      },
      {
       "at": "X",
       "a": "Y",
       "b": "Z",
       "text": "?",
-      "r": 30
+      "r": 26,
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -183,7 +187,7 @@
      "Z": "br"
     },
     "alt": "isosceles triangle XYZ",
-    "mm": 4.0
+    "mm": 3.83
    },
    "figright": true
   }
@@ -938,12 +942,12 @@
       "size": 18
      },
      {
-      "at": "B",
-      "a": "C",
-      "b": "A",
+      "at": "C",
+      "a": "D",
+      "b": "B",
       "text": "(b)",
-      "r": 40,
-      "tr": 64,
+      "r": 24,
+      "tr": 46,
       "size": 18
      }
     ],
@@ -969,16 +973,16 @@
     },
     {
      "label": "b",
-     "text": "Angle ABC (b) = {b}°",
+     "text": "Angle BCD (b) = {b}°",
      "answer": {
       "value": [
-       "104"
+       "76"
       ],
-      "text": "104"
+      "text": "76"
      }
     }
    ],
-   "explanation": "(a) AB = AD, so triangle ABD is isosceles: (180° - 76°) ÷ 2 = 52°. (b) Neighbouring angles add up to 180°: 104°.",
+   "explanation": "(a) AB = AD, so triangle ABD is isosceles: (180° - 76°) ÷ 2 = 52°. (b) Opposite angles of a rhombus are equal: 76°.",
    "figside": true
   },
   {
@@ -1951,16 +1955,6 @@
     ],
     "ticks": [
      [
-      "D",
-      "B",
-      1
-     ],
-     [
-      "A",
-      "C",
-      1
-     ],
-     [
       "A",
       "D",
       2
@@ -2016,26 +2010,22 @@
    "id": "L5U08-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "Straight lines AB and CD meet at point O. Angle AOC = 133°. Find angle COB. {b}°",
+   "text": "AOB is a straight line. Angle AOC is 3 times angle COB. Find angle COB. {b}°",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
     "pts": {
      "A": [
-      5.796,
-      1.553
+      6.0,
+      0.0
      ],
      "B": [
-      -5.796,
-      -1.553
+      -6.0,
+      0.0
      ],
      "C": [
-      -5.088,
-      3.18
-     ],
-     "D": [
-      5.088,
-      -3.18
+      -4.243,
+      4.243
      ],
      "O": [
       0,
@@ -2050,21 +2040,12 @@
       "dash": false
      },
      {
-      "a": "C",
-      "b": "D",
+      "a": "O",
+      "b": "C",
       "dash": false
      }
     ],
     "angles": [
-     {
-      "at": "O",
-      "a": "A",
-      "b": "C",
-      "text": "133°",
-      "r": 22,
-      "tr": 40,
-      "size": 18
-     },
      {
       "at": "O",
       "a": "C",
@@ -2079,18 +2060,18 @@
      "A": "r",
      "B": "l",
      "C": "t",
-     "D": "b"
+     "O": "b"
     },
-    "alt": "two lines crossing at O",
-    "mm": 2.52
+    "alt": "straight line AOB with a ray OC",
+    "mm": 3.77
    },
    "answer": {
     "value": [
-     "47"
+     "45"
     ],
-    "text": "47°"
+    "text": "45°"
    },
-   "explanation": "AOB is a straight line, so COB = 180° - 133° = 47° (angles on a straight line).",
+   "explanation": "AOB is a straight line: 4 equal parts make 180°, so COB = 45°.",
    "figright": true
   },
   {

@@ -86,11 +86,11 @@ T.append(item(U+'-T02', 'think', 4, 'A number tower has 3 numbers at the bottom.
   ans=A(18), hint='Write the 2 numbers in the middle row. They add up to 52.', figright=True,
   why='The middle row is 5 + ? and ? + 11, and these add up to 52. So 5 + 11 + 2 × ? = 52, 2 × ? = 36 and ? = 18. The middle row is 23 and 29.',
   space={'rows': ['Working:', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'Two jars hold $84 together. The red jar has $30 more than the blue jar.',
-  parts=[P('a', 'The blue jar holds ${b}', A(27)), P('b', 'To make the jars equal, move ${b} from the red jar to the blue jar', A(15))],
-  hint='Take away the extra $30 first. Then share what is left.',
-  why='Take away the extra $30: $84 − $30 = $54, shared by 2 jars. Blue holds $27 and red holds $57. Equal jars hold $42 each, so move $57 − $42 = $15.',
-  space={'rows': ['Draw a bar model here.', '', '']}))
+T.append(item(U+'-T03', 'think', 4, 'At a zoo, 2 adult tickets and 3 child tickets cost $54. 2 adult tickets and 1 child ticket cost $38.',
+  parts=[P('a', 'One child ticket costs ${b}', A(8)), P('b', 'One adult ticket costs ${b}', A(15))],
+  hint='Compare the 2 bills. What is different?',
+  why='The bills differ by 2 child tickets: $54 − $38 = $16, so 1 child ticket is $8. 2 adult tickets cost $38 − $8 = $30, so 1 adult ticket is $15.',
+  space={'rows': ['Working:', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Beyond Level 4: Signs and brackets\nRule: brackets first, then × and ÷, then + and −.',
   parts=[P('a', 'Write + − × or ÷ in each circle: 9 ○ 4 ○ 6 = 30', A('×', '−', text='9 × 4 − 6')),

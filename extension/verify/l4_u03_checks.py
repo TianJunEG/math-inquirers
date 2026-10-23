@@ -149,11 +149,10 @@ def _():
 
 @check('L4U03-T03')
 def _():
-    c = [(b, b + 30) for b in range(1, 84) if b + (b + 30) == 84]
-    assert len(c) == 1
-    mv = [m for m in range(0, 60) if c[0][1] - m == c[0][0] + m]
-    assert len(mv) == 1
-    return {'a': s([c[0][0]]), 'b': s(mv)}
+    adult, child = [(a, c) for a in range(1, 60) for c in range(1, 60) if 2 * a + 3 * c == 54 and 2 * a + c == 38][0]
+    sol = [(a, c) for a in range(1, 60) for c in range(1, 60) if 2 * a + 3 * c == 54 and 2 * a + c == 38]
+    assert len(sol) == 1
+    return {'a': s([child]), 'b': s([adult])}
 
 
 @check('L4U03-G01')

@@ -941,7 +941,7 @@
     },
     {
      "label": "b",
-     "text": "The length of the rectangle is {b} cm.",
+     "text": "The rectangle is {b} cm long.",
      "answer": {
       "value": [
        "12"

@@ -882,24 +882,38 @@
    "id": "L4U04-T01",
    "tier": "think",
    "page": 4,
-   "text": "n is a whole number. It makes 1/2 < n/9 < 5/6 true. Find the least and the greatest value of n.\nLeast {b}   Greatest {b}",
-   "answer": {
-    "value": [
-     "5",
-     "7"
-    ],
-    "text": "Least 5, greatest 7"
-   },
+   "text": "n is a whole number. The fraction 4/n is greater than 4/9 and less than 4/5.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many values can n have? {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The greatest of these fractions is 4/{b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
    "space": {
     "rows": [
-     "Working:",
-     "",
+     "List:",
      "",
      ""
     ]
    },
-   "hint": "Make all 3 fractions have the same bottom number. Try 18.",
-   "explanation": "Use 18 on the bottom: 1/2 = 9/18, n/9 = 2n/18 and 5/6 = 15/18. So 9 < 2n < 15 and n is 5, 6 or 7. The least is 5 and the greatest is 7."
+   "hint": "With the same top, a greater bottom number gives a smaller fraction.",
+   "explanation": "4/n is less than 4/5, so n is greater than 5. It is greater than 4/9, so n is less than 9. n is 6, 7 or 8: 3 values. The greatest fraction has the least n: 4/6."
   },
   {
    "id": "L4U04-T02",

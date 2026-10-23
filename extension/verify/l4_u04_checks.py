@@ -124,9 +124,8 @@ def _():
 
 @check('L4U04-T01')
 def _():
-    ns = [n for n in range(1, 40) if Fr(1, 2) < Fr(n, 9) < Fr(5, 6)]
-    assert ns == list(range(ns[0], ns[-1] + 1))
-    return s([ns[0], ns[-1]])
+    ns = [n for n in range(1, 100) if Fr(4, 9) < Fr(4, n) < Fr(4, 5)]
+    return {'a': s([len(ns)]), 'b': s([min(ns)])}
 
 
 @check('L4U04-T02')

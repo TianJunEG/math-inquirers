@@ -661,21 +661,21 @@
    "id": "L4U03-T03",
    "tier": "think",
    "page": 4,
-   "text": "Two jars hold $84 together. The red jar has $30 more than the blue jar.",
+   "text": "At a zoo, 2 adult tickets and 3 child tickets cost $54. 2 adult tickets and 1 child ticket cost $38.",
    "parts": [
     {
      "label": "a",
-     "text": "The blue jar holds ${b}",
+     "text": "One child ticket costs ${b}",
      "answer": {
       "value": [
-       "27"
+       "8"
       ],
-      "text": "27"
+      "text": "8"
      }
     },
     {
      "label": "b",
-     "text": "To make the jars equal, move ${b} from the red jar to the blue jar",
+     "text": "One adult ticket costs ${b}",
      "answer": {
       "value": [
        "15"
@@ -686,13 +686,13 @@
    ],
    "space": {
     "rows": [
-     "Draw a bar model here.",
+     "Working:",
      "",
      ""
     ]
    },
-   "hint": "Take away the extra $30 first. Then share what is left.",
-   "explanation": "Take away the extra $30: $84 − $30 = $54, shared by 2 jars. Blue holds $27 and red holds $57. Equal jars hold $42 each, so move $57 − $42 = $15."
+   "hint": "Compare the 2 bills. What is different?",
+   "explanation": "The bills differ by 2 child tickets: $54 − $38 = $16, so 1 child ticket is $8. 2 adult tickets cost $38 − $8 = $30, so 1 adult ticket is $15."
   },
   {
    "id": "L4U03-G01",

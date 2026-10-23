@@ -97,10 +97,19 @@ Every item and every part has a function that recomputes the answer without read
 - Figures: unit 4 Start here 1, 5 and Check yourself 1, unit 8 Start here 1, 6, 7, Go further 3 and Check yourself 4 were redrawn or relabelled.
 - The letter n is no longer used in unit 9.
 
+## Changes after audit round 2 (`AUDIT_ROUND2.md`)
+
+- R1 to R3 fixed: unit 3 Start here 6 (counters, fraction given, some removed), unit 9 Start here 5 (U shape, rule 5 x figure + 2, 92 tiles), unit 4 Start here 9 (triangle and rectangle, 15 by 8 and 5 wide).
+- R4: about 17 more items got a new frame as well as new numbers: unit 2 S06; unit 3 T01, T02; unit 4 S06(b), C02; unit 5 S13, G03; unit 6 S13, T03; unit 7 S13, T02, G01, G02; unit 9 G03; unit 10 S06 (prize boxes), S07, S12. Items that remain "same skill, new numbers" are listed as class A in the audits; the Welcome text promises only new numbers and stories.
+- Figures: unit 4 Start here 1 redrawn (isosceles 12 by 8 and 14 by 12), unit 8 Start here 6 now asks angle BCD (no label collisions), Go further 3 no longer shows a tick pattern that claims DB = AC, the unit 8 Try labels moved, unit 4 Check yourself 1 right-angle mark smaller. Unit 9 Start here 5 uses tiles of 6.6 mm (page space).
+- Learn: unit 9 has a worked supposition example and a marks-and-penalty line; unit 8 names the rhombus.
+- Whys: unit 1 S12 lists all three pairs, unit 1 T01 has no letter variable, unit 4 C03 uses only the 4 cm shown. Unit 7 T03 is back to 9 percent GST ($545). Unit 2 G04 now has the Beyond label. Unit 10 S03 lost the redundant clue.
+
+
 ## Open points for the owner or the next agent
 
 1. Page count is 100 after shortening about 140 Why lines (owner decision L5-TRIM). The Why texts are now very short; some units explain less than the holiday program does.
 2. Child trial and a cold read audit have not been done for Level 5. The hints are one line of at most 68 characters (checked); the Go further and Think harder difficulty is untested with children.
-3. Objects under 8 mm: chairs in the unit 9 tables item (5 mm), the grid squares in the unit 4 grid items (3.9 mm cells, 1 cm squares) and the unit 10 grids (5.3 mm cells), the matchstick hexagons in the Try. All are legible at print size.
+3. Objects under 8 mm: chairs in the unit 9 tables item (5 mm), the tiles of unit 9 Start here 5 (6.6 mm), the grid squares in the unit 4 grid items (3.9 and 4.0 mm cells, 1 cm squares) and the unit 10 grids (5.3 mm cells), the matchstick hexagons in the Try. All are legible at print size.
 4. The printer proof and the 600 dpi 1-bit file (Print_BW.pdf) are produced by the shared build; the dotted grid and the hatching have only been checked at 200 dpi (`bw_check.py`) and by `print/check_bw.py`.
 5. `verify_all.sh 5` was not used as a whole because its black-and-white step scans every level's output; the same steps were run one by one for Level 5.

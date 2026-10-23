@@ -108,7 +108,7 @@ def _():
     A, B = (0, 0), (1, 0)
     D = pol(A, 1, 76)                                        # rhombus: all sides 1
     C = (B[0] + D[0], B[1] + D[1])
-    return {'a': [r(ang(B, A, D))], 'b': [r(ang(B, A, C))]}
+    return {'a': [r(ang(B, A, D))], 'b': [r(ang(C, B, D))]}
 
 
 @check('L5U08-S07')
@@ -236,7 +236,10 @@ def _():
 @check('L5U08-C01')
 def _():
     O = (0, 0)
-    return [r(ang(O, pol(O, 1, 180), pol(O, 1, 133)))]
+    for aoc in range(1, 180):
+        A, B, C = pol(O, 1, 0), pol(O, 1, 180), pol(O, 1, aoc)       # AOB straight, OC at angle aoc from OA
+        if abs(ang(O, A, C) - 3 * ang(O, C, B)) < 1e-9:
+            return [r(ang(O, C, B))]
 
 
 @check('L5U08-C02')

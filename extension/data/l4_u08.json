@@ -904,36 +904,36 @@
    "id": "L4U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Dice stand on a table. On every dice, the top and bottom faces add up to 7.",
+   "text": "A square of paper is folded in half again and again. The folds lie on top of each other. Then holes are punched through all the layers at once.",
    "parts": [
     {
      "label": "a",
-     "text": "2 dice: tops add up to 9, so bottoms add up to {b}",
+     "text": "2 folds, then 3 holes punched. Holes when opened: {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 folds, then 2 holes punched. Holes when opened: {b}",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "c",
+     "text": "After 3 folds, how many holes make 40 holes in all? {b}",
      "answer": {
       "value": [
        "5"
       ],
       "text": "5"
-     }
-    },
-    {
-     "label": "b",
-     "text": "3 dice: tops add up to 12, so bottoms add up to {b}",
-     "answer": {
-      "value": [
-       "9"
-      ],
-      "text": "9"
-     }
-    },
-    {
-     "label": "c",
-     "text": "1 dice: the 4 side faces add up to {b}",
-     "answer": {
-      "value": [
-       "14"
-      ],
-      "text": "14"
      }
     }
    ],
@@ -942,8 +942,8 @@
      "Working:"
     ]
    },
-   "hint": "All 6 faces of a dice add up to 21.",
-   "explanation": "(a) 2 × 7 = 14, and 14 − 9 = 5. (b) 3 × 7 = 21, and 21 − 12 = 9. (c) All 6 faces add up to 21. The top and bottom make 7, so the sides make 14."
+   "hint": "Each fold doubles the layers. Count the layers.",
+   "explanation": "Each fold doubles the layers. 2 folds: 4 layers, and 4 × 3 = 12 holes. 3 folds: 8 layers, and 8 × 2 = 16 holes. 40 ÷ 8 = 5 holes."
   },
   {
    "id": "L4U08-T03",
