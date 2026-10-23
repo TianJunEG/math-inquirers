@@ -832,11 +832,11 @@
    "id": "L5U02-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "4 loaves are shared equally among 9 children. Write the answers as fractions.",
+   "text": "4 loaves are shared equally among 9 children. Write each answer as a fraction or mixed number.",
    "parts": [
     {
      "label": "a",
-     "text": "Each child gets {b} of a loaf.",
+     "text": "Each child gets {b} loaf.",
      "answer": {
       "value": [
        "4/9"
@@ -846,7 +846,7 @@
     },
     {
      "label": "b",
-     "text": "7 ÷ 3 = {bw}  (mixed number)",
+     "text": "7 ÷ 3 = {bw}",
      "answer": {
       "value": [
        "2 1/3"
