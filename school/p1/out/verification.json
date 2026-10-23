@@ -1,0 +1,717 @@
+[
+ {
+  "no": 1,
+  "title": "Tens and Ones",
+  "tier": 1,
+  "topic": "Counting: tens and ones",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.1 to 1.3 (count a set, tens and ones)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
+  "seed": 101,
+  "checks": [
+   {
+    "name": "V1 unique answer (count of drawn rods/dots)",
+    "ok": true,
+    "detail": "[94, 38, 88, 62, 77, 18]"
+   },
+   {
+    "name": "V2 code word spells ROCKET",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   534,
+   534
+  ]
+ },
+ {
+  "no": 2,
+  "title": "Mystery Numbers",
+  "tier": 2,
+  "topic": "Numbers to 100: tens digit, ones digit, more and less",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.1 to 1.5 (numbers to 100, compare)",
+  "ptype": "Number riddles",
+  "mech": "K1 code word + K7 test the clues (5 letters)",
+  "seed": 202,
+  "checks": [
+   {
+    "name": "V1 each riddle has exactly 1 solution in 1..100",
+    "ok": true,
+    "detail": "[66, 85, 36, 56, 26]"
+   },
+   {
+    "name": "V1b every clue is necessary",
+    "ok": true,
+    "detail": "checked in generator, re-run here: True"
+   },
+   {
+    "name": "V2 code word spells CLOUD",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   495,
+   495
+  ]
+ },
+ {
+  "no": 3,
+  "title": "Number Cards",
+  "tier": 1,
+  "topic": "Ordering numbers to 100 (smallest to greatest)",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.4, 1.5 (compare and order numbers)",
+  "ptype": "Ordering cards",
+  "mech": "K1 letters read in order spell a word (6 letters)",
+  "seed": 303,
+  "checks": [
+   {
+    "name": "V1 sorting gives the intended word",
+    "ok": true,
+    "detail": "BRIDGE"
+   },
+   {
+    "name": "V1b numbers all different",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 every neighbour swap breaks the word",
+    "ok": true,
+    "detail": "[True, True, True, True, True]"
+   },
+   {
+    "name": "V5 word on safe list",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   5,
+   5
+  ]
+ },
+ {
+  "no": 4,
+  "title": "Sticker Grid",
+  "tier": 2,
+  "topic": "Comparing numbers to 100 (more, fewer, greatest, smallest)",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.4, 1.5 (compare and order numbers)",
+  "ptype": "Logic grid",
+  "mech": "K4 grid: one tick in each row and column",
+  "seed": 404,
+  "checks": [
+   {
+    "name": "V1 exactly one assignment satisfies all clues",
+    "ok": true,
+    "detail": "1 solution(s)"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 all 119 other placements break a clue",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   119,
+   119
+  ]
+ },
+ {
+  "no": 5,
+  "title": "Missing Numbers",
+  "tier": 1,
+  "topic": "Number patterns: count on and count back",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.6 (number patterns)",
+  "ptype": "Pattern chain + code",
+  "mech": "K1 code word (6 letters)",
+  "seed": 505,
+  "checks": [
+   {
+    "name": "V1 each row has exactly 1 completion (arithmetic rule, 0..100)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1b answers match solver",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells FLOWER",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   600,
+   600
+  ]
+ },
+ {
+  "no": 6,
+  "title": "Count On Maze",
+  "tier": 2,
+  "topic": "Number patterns: counting on by 5",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.6 (number patterns)",
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH",
+  "seed": 606,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish (exhaustive DFS)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V3 dead-end decoys present (wrong turn is detectable)",
+    "ok": true,
+    "detail": "3"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   3,
+   3
+  ]
+ },
+ {
+  "no": 7,
+  "title": "The Queue",
+  "tier": 1,
+  "topic": "Ordinal numbers: 1st to 5th, before and behind",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.7 (ordinal numbers first to tenth)",
+  "ptype": "Logic (queue)",
+  "mech": "K1 shirt letters read 1st to 5th spell a word + K4 each child used once",
+  "seed": 707,
+  "checks": [
+   {
+    "name": "V1 exactly one queue order satisfies the clues",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V2 shirt letters in queue order spell TIGER",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 other queue orders do not spell a real word (>=98%)",
+    "ok": true,
+    "detail": "119/119"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   119,
+   119
+  ]
+ },
+ {
+  "no": 8,
+  "title": "Make Twelve",
+  "tier": 1,
+  "topic": "Addition within 20",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.1 to 2.4, 2.7 (add within 20, mental calculation)",
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH",
+  "seed": 808,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish (exhaustive DFS)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V3 dead-end boxes that also make 12 exist",
+    "ok": true,
+    "detail": "3"
+   },
+   {
+    "name": "V7 all sums within 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   3,
+   3
+  ]
+ },
+ {
+  "no": 9,
+  "title": "Magic Square",
+  "tier": 2,
+  "topic": "Adding three 1-digit numbers",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.4 (add more than two 1-digit numbers)",
+  "ptype": "Magic square",
+  "mech": "K3 every line makes 15 (8 line totals)",
+  "seed": 909,
+  "checks": [
+   {
+    "name": "V1 exactly one completion (all 362880 arrangements tested)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V3 every single wrong entry breaks a line total",
+    "ok": true,
+    "detail": "48/48"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   48,
+   48
+  ]
+ },
+ {
+  "no": 10,
+  "title": "Take Away Code",
+  "tier": 1,
+  "topic": "Subtraction within 20; missing numbers",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.1 to 2.3, 2.7 (subtract within 20, inverse)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 1010,
+  "checks": [
+   {
+    "name": "V1 each blank has exactly one value in 0..20",
+    "ok": true,
+    "detail": "[8, 5, 11, 6, 4, 3]"
+   },
+   {
+    "name": "V1b solver answers equal key",
+    "ok": true,
+    "detail": "[8, 5, 11, 6, 4, 3]"
+   },
+   {
+    "name": "V2 code word spells CASTLE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   },
+   {
+    "name": "V7 all numbers within 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   114,
+   114
+  ]
+ },
+ {
+  "no": 11,
+  "title": "Shape Sums",
+  "tier": 2,
+  "topic": "Add and subtract within 20: find the missing number",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.1 to 2.4 (add, subtract, inverse, more than two 1-digit numbers)",
+  "ptype": "Balance / picture equations",
+  "mech": "K7 put the numbers back + K1 code word (6 letters)",
+  "seed": 1111,
+  "checks": [
+   {
+    "name": "V1 each set has exactly one solution (all 729 triples tested)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells SPRING",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   },
+   {
+    "name": "V7 all sums within 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   48,
+   48
+  ]
+ },
+ {
+  "no": 12,
+  "title": "Shade the Picture",
+  "tier": 1,
+  "topic": "Add and subtract within 100 (no renaming)",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.5 to 2.7 (add and subtract within 100, 2-digit and ones, 2-digit and tens)",
+  "ptype": "Picture-fill (colour by answer)",
+  "mech": "K2 hidden picture appears",
+  "seed": 1212,
+  "checks": [
+   {
+    "name": "V1 evaluating every box gives exactly the intended picture",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 slips of +-1 or +-10 that change the picture (informational, see README)",
+    "ok": true,
+    "detail": "72/100 = 0.72"
+   },
+   {
+    "name": "V7 all answers within 100",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   0.72,
+   72,
+   100
+  ]
+ },
+ {
+  "no": 13,
+  "title": "Equal Groups",
+  "tier": 1,
+  "topic": "Multiplication: equal groups",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.2 (concept of multiplication, multiplying within 40)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
+  "seed": 1313,
+  "checks": [
+   {
+    "name": "V1 counted bags x dots equals the key (from drawn SVG)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells PLANET",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   },
+   {
+    "name": "V7 totals within 40",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   234,
+   234
+  ]
+ },
+ {
+  "no": 14,
+  "title": "Times and Share",
+  "tier": 2,
+  "topic": "Multiplication within 40 and division within 20",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.2 to 3.4 (multiplying within 40, dividing within 20)",
+  "ptype": "Picture-fill (colour by answer)",
+  "mech": "K2 hidden picture appears",
+  "seed": 1414,
+  "checks": [
+   {
+    "name": "V1 evaluating every box gives exactly the intended picture",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 slips of +-1 or +-10 that change the picture (informational, see README)",
+    "ok": true,
+    "detail": "110/144 = 0.76"
+   },
+   {
+    "name": "V7 products <= 40, dividends <= 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   0.7639,
+   110,
+   144
+  ]
+ },
+ {
+  "no": 15,
+  "title": "Coin Purses",
+  "tier": 1,
+  "topic": "Money: counting coins in cents (up to $1)",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money (count money in cents up to $1)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (5 letters)",
+  "seed": 1515,
+  "checks": [
+   {
+    "name": "V1 coin values read from the drawing add to the key",
+    "ok": true,
+    "detail": "[80, 60, 40, 25, 95]"
+   },
+   {
+    "name": "V2 code word spells PIANO",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   },
+   {
+    "name": "V7 totals below $1",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   475,
+   475
+  ]
+ },
+ {
+  "no": 16,
+  "title": "Shop Prices",
+  "tier": 2,
+  "topic": "Money: dollars, more and less",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money (dollars up to $100) with 2.1 to 2.3 (add, subtract)",
+  "ptype": "Logic grid",
+  "mech": "K4 grid: one tick in each row and column",
+  "seed": 1616,
+  "checks": [
+   {
+    "name": "V1 exactly one price assignment satisfies all clues",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 all 119 other placements break a clue",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 prices within $100",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   119,
+   119
+  ]
+ },
+ {
+  "no": 17,
+  "title": "How Long?",
+  "tier": 1,
+  "topic": "Length: measure in centimetres",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Length 1.1 to 1.3 (measure in cm, abbreviation cm)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
+  "seed": 1717,
+  "checks": [
+   {
+    "name": "V1 strip widths read against the 10 mm/cm scale equal the key",
+    "ok": true,
+    "detail": "[4, 5, 10, 2, 8, 6]"
+   },
+   {
+    "name": "V2 code word spells PENCIL",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   66,
+   66
+  ]
+ },
+ {
+  "no": 18,
+  "title": "Clock Time",
+  "tier": 2,
+  "topic": "Time: tell time to 5 minutes; 1 hour and half an hour later",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1 to 2.4 (tell time to 5 minutes, durations of 1 hour or half an hour)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (5 letters)",
+  "seed": 1818,
+  "checks": [
+   {
+    "name": "V1 clock hands read back from the drawing equal the intended times",
+    "ok": true,
+    "detail": "[(2, 25), (7, 50), (8, 25), (7, 35), (6, 0)]"
+   },
+   {
+    "name": "V1b later times computed from drawing equal the key",
+    "ok": true,
+    "detail": "['3:25', '8:20', '9:25', '8:05', '7:00']"
+   },
+   {
+    "name": "V2 code word spells TIMER",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "714/715"
+   }
+  ],
+  "slip_detect": [
+   0.9986,
+   714,
+   715
+  ]
+ },
+ {
+  "no": 19,
+  "title": "Shape Count",
+  "tier": 2,
+  "topic": "2D shapes: rectangle, triangle, circle, half circle, quarter circle",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.1, 1.3 (name 2D shapes; identify the shapes in a figure)",
+  "ptype": "Count + code-breaker",
+  "mech": "K3 the five counts add to 15 + K1 code word (5 letters)",
+  "seed": 1919,
+  "checks": [
+   {
+    "name": "V1 shapes counted in the drawn picture equal the key",
+    "ok": true,
+    "detail": "[5, 4, 2, 1, 3]"
+   },
+   {
+    "name": "V1b counts are all different and total 15",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells SHAPE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 single-slip detection >=98%",
+    "ok": true,
+    "detail": "1.000"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   40,
+   40
+  ]
+ },
+ {
+  "no": 20,
+  "title": "Fruit Graph",
+  "tier": 2,
+  "topic": "Picture graphs: read, complete and answer",
+  "strand": "Statistics - Data Analysis",
+  "syll": "Picture graphs (read and interpret picture graphs)",
+  "ptype": "Graph detective",
+  "mech": "K3 total circles equals the stated total",
+  "seed": 2020,
+  "checks": [
+   {
+    "name": "V1 exactly one set of row counts satisfies the clues (all 1000 combinations tested)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b the most/least answers are unique",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 total of all rows equals the stated total",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every row fits in 9 boxes",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 one wrong row breaks the total",
+    "ok": true,
+    "detail": "12/12"
+   }
+  ],
+  "slip_detect": [
+   1.0,
+   12,
+   12
+  ]
+ }
+]

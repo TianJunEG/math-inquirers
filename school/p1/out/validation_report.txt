@@ -1,0 +1,199 @@
+PASS  P1-01 V1 unique answer (count of drawn rods/dots)  [94, 38, 88, 62, 77, 18]
+PASS  P1-01 V2 code word spells ROCKET  
+PASS  P1-01 V3 single-slip detection >=98%  1.000
+PASS  P1-02 V1 each riddle has exactly 1 solution in 1..100  [66, 85, 36, 56, 26]
+PASS  P1-02 V1b every clue is necessary  checked in generator, re-run here: True
+PASS  P1-02 V2 code word spells CLOUD  
+PASS  P1-02 V3 single-slip detection >=98%  1.000
+PASS  P1-03 V1 sorting gives the intended word  BRIDGE
+PASS  P1-03 V1b numbers all different  
+PASS  P1-03 V3 every neighbour swap breaks the word  [True, True, True, True, True]
+PASS  P1-03 V5 word on safe list  
+PASS  P1-04 V1 exactly one assignment satisfies all clues  1 solution(s)
+PASS  P1-04 V1b every clue needed  
+PASS  P1-04 V3 all 119 other placements break a clue  
+PASS  P1-05 V1 each row has exactly 1 completion (arithmetic rule, 0..100)  
+PASS  P1-05 V1b answers match solver  
+PASS  P1-05 V2 code word spells FLOWER  
+PASS  P1-05 V3 single-slip detection >=98%  1.000
+PASS  P1-06 V1 exactly one route start->finish (exhaustive DFS)  1
+PASS  P1-06 V3 dead-end decoys present (wrong turn is detectable)  3
+PASS  P1-07 V1 exactly one queue order satisfies the clues  1
+PASS  P1-07 V2 shirt letters in queue order spell TIGER  
+PASS  P1-07 V3 other queue orders do not spell a real word (>=98%)  119/119
+PASS  P1-08 V1 exactly one route start->finish (exhaustive DFS)  1
+PASS  P1-08 V3 dead-end boxes that also make 12 exist  3
+PASS  P1-08 V7 all sums within 20  
+PASS  P1-09 V1 exactly one completion (all 362880 arrangements tested)  1
+PASS  P1-09 V3 every single wrong entry breaks a line total  48/48
+PASS  P1-10 V1 each blank has exactly one value in 0..20  [8, 5, 11, 6, 4, 3]
+PASS  P1-10 V1b solver answers equal key  [8, 5, 11, 6, 4, 3]
+PASS  P1-10 V2 code word spells CASTLE  
+PASS  P1-10 V3 single-slip detection >=98%  1.000
+PASS  P1-10 V7 all numbers within 20  
+PASS  P1-11 V1 each set has exactly one solution (all 729 triples tested)  
+PASS  P1-11 V2 code word spells SPRING  
+PASS  P1-11 V3 single-slip detection >=98%  1.000
+PASS  P1-11 V7 all sums within 20  
+PASS  P1-12 V1 evaluating every box gives exactly the intended picture  
+PASS  P1-12 V3 slips of +-1 or +-10 that change the picture (informational, see README)  72/100 = 0.72
+PASS  P1-12 V7 all answers within 100  
+PASS  P1-13 V1 counted bags x dots equals the key (from drawn SVG)  
+PASS  P1-13 V2 code word spells PLANET  
+PASS  P1-13 V3 single-slip detection >=98%  1.000
+PASS  P1-13 V7 totals within 40  
+PASS  P1-14 V1 evaluating every box gives exactly the intended picture  
+PASS  P1-14 V3 slips of +-1 or +-10 that change the picture (informational, see README)  110/144 = 0.76
+PASS  P1-14 V7 products <= 40, dividends <= 20  
+PASS  P1-15 V1 coin values read from the drawing add to the key  [80, 60, 40, 25, 95]
+PASS  P1-15 V2 code word spells PIANO  
+PASS  P1-15 V3 single-slip detection >=98%  1.000
+PASS  P1-15 V7 totals below $1  
+PASS  P1-16 V1 exactly one price assignment satisfies all clues  1
+PASS  P1-16 V1b every clue needed  
+PASS  P1-16 V3 all 119 other placements break a clue  
+PASS  P1-16 V7 prices within $100  
+PASS  P1-17 V1 strip widths read against the 10 mm/cm scale equal the key  [4, 5, 10, 2, 8, 6]
+PASS  P1-17 V2 code word spells PENCIL  
+PASS  P1-17 V3 single-slip detection >=98%  1.000
+PASS  P1-18 V1 clock hands read back from the drawing equal the intended times  [(2, 25), (7, 50), (8, 25), (7, 35), (6, 0)]
+PASS  P1-18 V1b later times computed from drawing equal the key  ['3:25', '8:20', '9:25', '8:05', '7:00']
+PASS  P1-18 V2 code word spells TIMER  
+PASS  P1-18 V3 single-slip detection >=98%  714/715
+PASS  P1-19 V1 shapes counted in the drawn picture equal the key  [5, 4, 2, 1, 3]
+PASS  P1-19 V1b counts are all different and total 15  
+PASS  P1-19 V2 code word spells SHAPE  
+PASS  P1-19 V3 single-slip detection >=98%  1.000
+PASS  P1-20 V1 exactly one set of row counts satisfies the clues (all 1000 combinations tested)  1
+PASS  P1-20 V1b the most/least answers are unique  
+PASS  P1-20 V2 total of all rows equals the stated total  
+PASS  P1-20 V7 every row fits in 9 boxes  
+PASS  P1-20 V3 one wrong row breaks the total  12/12
+PASS  20 pages, ids 1..20  
+PASS  tier mix 10 one-star / 10 two-star  
+PASS  every page has a self-check strip text  
+PASS  every page names a self-check mechanism  
+PASS  V8 reading level: instruction and clue sentences <= 8 words, <= 4 lines  []
+PASS  check strip text <= 18 words  []
+PASS  B/W colours only in pupil.html  ['#000', '#fff']
+PASS  stroke widths >= 0.2 mm (0.57 pt) in pupil.html  min 0.25
+PASS  CSS rule widths >= 0.25 mm (0.7 pt) in pupil.html  min 0.25
+PASS  no opacity/alpha/gradient in pupil.html  []
+PASS  B/W colours only in front.html  ['#000', '#fff']
+PASS  stroke widths >= 0.2 mm (0.57 pt) in front.html  min -
+PASS  CSS rule widths >= 0.25 mm (0.7 pt) in front.html  min 0.25
+PASS  no opacity/alpha/gradient in front.html  []
+PASS  B/W colours only in key.html  ['#000', '#fff']
+PASS  stroke widths >= 0.2 mm (0.57 pt) in key.html  min -
+PASS  CSS rule widths >= 0.25 mm (0.7 pt) in key.html  min 0.25
+PASS  no opacity/alpha/gradient in key.html  []
+PASS  P1_Puzzles.pdf has 20 pages  20
+PASS  P1_Puzzles.pdf fonts all embedded  7 fonts
+PASS  P1_Puzzles.pdf size < 20 MB  0.42 MB
+PASS  P1_Puzzles.pdf A4 page size  
+PASS  P1_FrontMatter.pdf has 4 pages  4
+PASS  P1_FrontMatter.pdf fonts all embedded  5 fonts
+PASS  P1_FrontMatter.pdf size < 20 MB  0.04 MB
+PASS  P1_FrontMatter.pdf A4 page size  
+PASS  P1_Complete_Pack.pdf has 24 pages  24
+PASS  P1_Complete_Pack.pdf fonts all embedded  12 fonts
+PASS  P1_Complete_Pack.pdf size < 20 MB  0.46 MB
+PASS  P1_Complete_Pack.pdf A4 page size  
+PASS  P1_Answer_Key.pdf has 8 pages  8
+PASS  P1_Answer_Key.pdf fonts all embedded  4 fonts
+PASS  P1_Answer_Key.pdf size < 20 MB  0.08 MB
+PASS  P1_Answer_Key.pdf A4 page size  
+PASS  school name printed on all 20 page footers  ________________________ (school name)
+PASS  page codes P1-01..P1-20 present  
+PASS  pupil page 01 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 01 page-fill: puzzle content 163 of 183 mm  0.89
+PASS  pupil page 01 min text size >= 8 pt  8.0 pt
+PASS  pupil page 02 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 02 page-fill: puzzle content 114 of 183 mm  0.62
+PASS  pupil page 02 min text size >= 8 pt  8.0 pt
+PASS  pupil page 03 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 03 page-fill: puzzle content 98 of 176 mm  0.56
+PASS  pupil page 03 min text size >= 8 pt  8.0 pt
+PASS  pupil page 04 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 04 page-fill: puzzle content 137 of 183 mm  0.75
+PASS  pupil page 04 min text size >= 8 pt  8.0 pt
+PASS  pupil page 05 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 05 page-fill: puzzle content 141 of 174 mm  0.81
+PASS  pupil page 05 min text size >= 8 pt  8.0 pt
+PASS  pupil page 06 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 06 page-fill: puzzle content 157 of 176 mm  0.89
+PASS  pupil page 06 min text size >= 8 pt  8.0 pt
+PASS  pupil page 07 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 07 page-fill: puzzle content 164 of 176 mm  0.94
+PASS  pupil page 07 min text size >= 8 pt  8.0 pt
+PASS  pupil page 08 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 08 page-fill: puzzle content 157 of 176 mm  0.89
+PASS  pupil page 08 min text size >= 8 pt  8.0 pt
+PASS  pupil page 09 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 09 page-fill: puzzle content 146 of 176 mm  0.83
+PASS  pupil page 09 min text size >= 8 pt  8.0 pt
+PASS  pupil page 10 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 10 page-fill: puzzle content 129 of 189 mm  0.68
+PASS  pupil page 10 min text size >= 8 pt  8.0 pt
+PASS  pupil page 11 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 11 page-fill: puzzle content 135 of 174 mm  0.78
+PASS  pupil page 11 min text size >= 8 pt  8.0 pt
+PASS  pupil page 12 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 12 page-fill: puzzle content 157 of 183 mm  0.86
+PASS  pupil page 12 min text size >= 8 pt  8.0 pt
+PASS  pupil page 13 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 13 page-fill: puzzle content 150 of 183 mm  0.82
+PASS  pupil page 13 min text size >= 8 pt  8.0 pt
+PASS  pupil page 14 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 14 page-fill: puzzle content 158 of 183 mm  0.86
+PASS  pupil page 14 min text size >= 8 pt  8.0 pt
+PASS  pupil page 15 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 15 page-fill: puzzle content 153 of 183 mm  0.84
+PASS  pupil page 15 min text size >= 8 pt  8.0 pt
+PASS  pupil page 16 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 16 page-fill: puzzle content 128 of 183 mm  0.70
+PASS  pupil page 16 min text size >= 8 pt  8.0 pt
+PASS  pupil page 17 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 17 page-fill: puzzle content 171 of 181 mm  0.94
+PASS  pupil page 17 min text size >= 8 pt  8.0 pt
+PASS  pupil page 18 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 18 page-fill: puzzle content 171 of 176 mm  0.97
+PASS  pupil page 18 min text size >= 8 pt  8.0 pt
+PASS  pupil page 19 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 19 page-fill: puzzle content 153 of 181 mm  0.84
+PASS  pupil page 19 min text size >= 8 pt  8.0 pt
+PASS  pupil page 20 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 20 page-fill: puzzle content 157 of 176 mm  0.89
+PASS  pupil page 20 min text size >= 8 pt  8.0 pt
+PASS  front page 01 layout (no overflow/clipping/margin breach)  
+PASS  front page 01 min text size >= 8 pt  12.0 pt
+PASS  front page 02 layout (no overflow/clipping/margin breach)  
+PASS  front page 02 min text size >= 8 pt  13.0 pt
+PASS  front page 03 layout (no overflow/clipping/margin breach)  
+PASS  front page 03 min text size >= 8 pt  10.5 pt
+PASS  front page 04 layout (no overflow/clipping/margin breach)  
+PASS  front page 04 min text size >= 8 pt  10.5 pt
+PASS  key page 01 layout (no overflow/clipping/margin breach)  
+PASS  key page 01 min text size >= 8 pt  10.0 pt
+PASS  key page 02 layout (no overflow/clipping/margin breach)  
+PASS  key page 02 min text size >= 8 pt  8.0 pt
+PASS  key page 03 layout (no overflow/clipping/margin breach)  
+PASS  key page 03 min text size >= 8 pt  8.0 pt
+PASS  key page 04 layout (no overflow/clipping/margin breach)  
+PASS  key page 04 min text size >= 8 pt  8.0 pt
+PASS  key page 05 layout (no overflow/clipping/margin breach)  
+PASS  key page 05 min text size >= 8 pt  8.0 pt
+PASS  key page 06 layout (no overflow/clipping/margin breach)  
+PASS  key page 06 min text size >= 8 pt  8.0 pt
+PASS  key page 07 layout (no overflow/clipping/margin breach)  
+PASS  key page 07 min text size >= 8 pt  8.0 pt
+PASS  key page 08 layout (no overflow/clipping/margin breach)  
+PASS  key page 08 min text size >= 8 pt  8.0 pt
+PASS  P1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.12% vs greyscale)  20 pages
+PASS  P1_Puzzles.pdf: no flat grey tint areas (blocks counted 153)  
+PASS  P1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 24.81% vs greyscale)  4 pages
+PASS  P1_FrontMatter.pdf: no flat grey tint areas (blocks counted 66)  
+PASS  P1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.13% vs greyscale)  8 pages
+PASS  P1_Answer_Key.pdf: no flat grey tint areas (blocks counted 268)  
+
+TOTAL 197 checks, 0 failed
