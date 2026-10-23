@@ -1,6 +1,6 @@
 # Level 1 Extension Workbook: fixes after the independent audit (AUDIT.md, 23 Oct 2026)
 
-Done 23 Oct 2026. Gates: `extension/verify_all.sh 1` (answers, duplicates, wording, build, B&W, page fill). Every page changed below was rendered and viewed in both editions. 402 answers independently checked (403 before: three replaced items changed their number of parts).
+Done 23 Oct 2026. `extension/verify_all.sh 1` passed to the end (402 answers independently checked, 403 before because replaced items changed their number of parts; duplicates; wording; build; B&W on the vector and the 1-bit file; `print/check_bw.py`; page fill, no overflow). Pages viewed as images: Welcome, contents, pace plan, divider, Unit 3 (all), Unit 4 Learn it and Start here 1, Unit 5 Think harder and Go further, Unit 6 Start here 3 and Think harder, Unit 7 Learn it, Unit 8 (all), Unit 9 Learn it, Start here 1 to 3, Think harder and Go further, Unit 10 Think harder and Go further, and answer pages 91 and 93. Most were seen in the colour soft copy, the rest in the 1-bit print file. Not individually viewed: Unit 1 and 2 pages (hints only changed), Unit 4 Start here 2 and 3, Unit 5 Learn it, other Check yourself pages, the other answer pages.
 
 ## High
 **H1 Placeholders and draft licence (p2): NOT changed.** Needs the owner (business email, registered office, lawyer-approved licence, UEN check). The bracketed placeholders and the DRAFT wording stay as they were. Blocks sale.
@@ -22,7 +22,7 @@ Done 23 Oct 2026. Gates: `extension/verify_all.sh 1` (answers, duplicates, wordi
 
 **M9 Figures.** Measured icon size was 5.7 to 6.2 mm (audit said 3 mm): picture-graph scale raised by about 15 to 25 percent on U3 Learn, Q1, Q5, Q8, TH1, GF1; Check yourself graph 66 to 76 mm wide (icon 5 to 6 mm). Larger was not possible without moving items off their pages (pages are 86 to 100 percent full). Logic grids 8.6 to 9.2 mm cells in practice, 8 to 9 mm in Learn it; Venn loops 100 mm wide with 31-unit numbers and commas ("3, 7," / "9"), no more "37". Not done: the full 1.5x.
 
-**M10 Print pipeline.** `build.py` now converts the native print PDF with `print/make_bw_print.py` (1-bit, 600 dpi, CCITT G4) and runs `print/check_bw.py`; `verify_all.sh` runs the check too. `Print_BW.pdf` is the 1-bit file for the printer; `Print_BW_vector.pdf` is its native vector source. A printer proof is still needed (owner).
+**M10 Print pipeline.** `build.py` now converts the native print PDF with `print/make_bw_print.py` (1-bit, 600 dpi, CCITT G4) and runs `print/check_bw.py`; `verify_all.sh` runs the check too. `Print_BW.pdf` is the 1-bit file for the printer (96 pages, 12 MB; check_bw: 0 non-grey pixels); `Print_BW_vector.pdf` is its native vector source. A printer proof is still needed (owner).
 
 **M11 Mi on the cover.** 90 mm to 52 mm tall (about 35 to 20 percent of the page height).
 
