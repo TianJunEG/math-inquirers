@@ -193,9 +193,9 @@ def table(spec, w=None):
     xs = [0]
     for c in cwid:
         xs.append(xs[-1] + c / tot * TW)
-    rh = spec.get('row_h', 58)
-    hh = spec.get('head_h', 58)
-    fs = spec.get('size', 30)
+    rh = spec.get('row_h', 66)
+    hh = spec.get('head_h', 66)
+    fs = spec.get('size', 36)
     P = []
     x0, y0 = 6, 6
     for j, c in enumerate(cols):
@@ -207,7 +207,9 @@ def table(spec, w=None):
             P.append(f'<rect x="{x0 + xs[j]}" y="{y}" width="{xs[j + 1] - xs[j]}" height="{rh}" fill="#fff" stroke="{NAVY}" stroke-width="3"/>')
             if v is not None:
                 bold = 800 if (j == 0 and spec.get('first_bold')) else 600
-                P.append(T(x0 + (xs[j] + xs[j + 1]) / 2, y + rh / 2 + fs * 0.35, v, fs, weight=bold))
+                cwid_u = xs[j + 1] - xs[j] - 14
+                f2 = max(24, min(fs, cwid_u / (max(len(str(v)), 1) * 0.62)))
+                P.append(T(x0 + (xs[j] + xs[j + 1]) / 2, y + rh / 2 + f2 * 0.35, v, round(f2, 1), weight=bold))
     H = y0 + hh + len(rows) * rh + 8
     return wrap(P, TW + 12, H, spec.get('label', 'table'), w, 0.2)
 
