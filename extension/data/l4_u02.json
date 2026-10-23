@@ -48,11 +48,11 @@
     "minor": 500,
     "major": 500,
     "labels": {
-     "7000": "7 000",
-     "7500": "7 500",
-     "8000": "8 000",
-     "8500": "8 500",
-     "9000": "9 000"
+     "7000": "7000",
+     "7500": "7500",
+     "8000": "8000",
+     "8500": "8500",
+     "9000": "9000"
     },
     "labels_only": true,
     "marks": [
@@ -75,10 +75,10 @@
     "W": 520
    },
    "steps": [
-    "7 500 is halfway, so it rounds up to 8000.",
-    "8 500 rounds up to 9000, so the last number is 8 499."
+    "7500 is halfway, so it rounds up to 8000.",
+    "8500 rounds up to 9000, so the last number is 8499."
    ],
-   "answer": "Smallest 7 500 and largest 8 499."
+   "answer": "Smallest 7500 and largest 8499."
   },
   "pair": true,
   "tight": true,
@@ -115,7 +115,8 @@
     "width_mm": 78
    },
    "lines": [
-    "35 206 = 30 000 + 5000 + 200 + 6"
+    "35 206 = 30 000 + 5000 + 200 + 6",
+    "Halfway rounds up: 46 500 goes up to 47 000."
    ]
   },
   "try": {
@@ -170,7 +171,7 @@
      1.5,
      1.6
     ],
-    "cell_h": 62,
+    "cell_h": 72,
     "font": 28,
     "first_col_head": true,
     "width_mm": 165
@@ -261,7 +262,7 @@
      3,
      1.4
     ],
-    "cell_h": 62,
+    "cell_h": 72,
     "font": 28,
     "first_col_head": true,
     "width_mm": 150
@@ -703,6 +704,7 @@
    "space": {
     "rows": [
      "Working:",
+     "",
      ""
     ]
    },

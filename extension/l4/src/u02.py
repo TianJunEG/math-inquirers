@@ -11,23 +11,23 @@ learn = {
   'answer': '46 382 rounds to 46 000.'},
  'example2': {
   'problem': 'A number rounds to 8000 to the nearest 1000. What are the smallest and the largest it can be?',
-  'figure': NL(7000, 9000, {7000: '7 000', 7500: '7 500', 8000: '8 000', 8500: '8 500', 9000: '9 000'}, [{'v': 7500, 'kind': 'dot'}, {'v': 8500, 'kind': 'ring'}], shade=[[7500, 8500]], minor=500, W=520, width_mm=76),
-  'steps': ['7 500 is halfway, so it rounds up to 8000.', '8 500 rounds up to 9000, so the last number is 8 499.'],
-  'answer': 'Smallest 7 500 and largest 8 499.'},
+  'figure': NL(7000, 9000, {7000: '7000', 7500: '7500', 8000: '8000', 8500: '8500', 9000: '9000'}, [{'v': 7500, 'kind': 'dot'}, {'v': 8500, 'kind': 'ring'}], shade=[[7500, 8500]], minor=500, W=520, width_mm=76),
+  'steps': ['7500 is halfway, so it rounds up to 8000.', '8500 rounds up to 9000, so the last number is 8499.'],
+  'answer': 'Smallest 7500 and largest 8499.'},
  'pair': True, 'tight': True,
  'howto': {'title': 'How to round',
            'steps': ['Find the 2 neighbours, such as 46 000 and 47 000.',
                      'Find the halfway number. Halfway rounds up.',
                      'To work backwards, find where the rounding changes.']},
  'facts': {'title': 'Place value', 'figure': {'type': 'l4_table', 'head': ['10 000s', '1000s', '100s', '10s', '1s'], 'rows': [['3', '5', '2', '0', '6']], 'cell_h': 54, 'font': 26, 'width_mm': 78},
-           'lines': ['35 206 = 30 000 + 5000 + 200 + 6']},
+           'lines': ['35 206 = 30 000 + 5000 + 200 + 6', 'Halfway rounds up: 46 500 goes up to 47 000.']},
  'try': {'id': U + '-L01', 'text': 'Round 52 718 to the nearest 100. {b}',
          'answer': A(52700),
          'explanation': '52 718 is between 52 700 and 52 800. The halfway mark is 52 750. 52 718 is before it, so it rounds down to 52 700.'}}
 
 S, T, G, C = [], [], [], []
 S.append(item(U+'-S01', 'start', 1, 'Round each number. Write the answers in the table.',
-  fig={'type': 'l4_table', 'head': ['Number', 'Nearest 10', 'Nearest 100', 'Nearest 1000'], 'rows': [['38 746', '', '', ''], ['70 049', '', '', ''], ['9996', '', '', '']], 'widths': [1.2, 1.4, 1.5, 1.6], 'cell_h': 62, 'font': 28, 'first_col_head': True, 'width_mm': 165},
+  fig={'type': 'l4_table', 'head': ['Number', 'Nearest 10', 'Nearest 100', 'Nearest 1000'], 'rows': [['38 746', '', '', ''], ['70 049', '', '', ''], ['9996', '', '', '']], 'widths': [1.2, 1.4, 1.5, 1.6], 'cell_h': 72, 'font': 28, 'first_col_head': True, 'width_mm': 165},
   ans=A(38750, 38700, 39000, 70050, 70000, 70000, 10000, 10000, 10000, list=True),
   why='38 746: the 6 ones round up to 38 750. To the nearest 100, 46 is under 50, so 38 700. To the nearest 1000, 746 is over 500, so 39 000. 70 049: 70 050, 70 000, 70 000. 9996 is 4 away from 10 000, so all three roundings are 10 000.'))
 S.append(item(U+'-S02', 'start', 1, 'Write the value of the digit 6 in each number.',
@@ -35,7 +35,7 @@ S.append(item(U+'-S02', 'start', 1, 'Write the value of the digit 6 in each numb
   partsrow=True,
   why='46 281 has 6 in the thousands place, so it is worth 6000. In 60 912 it is in the ten thousands place: 60 000. In 83 062 it is in the tens place: 60.'))
 S.append(item(U+'-S03', 'start', 1, 'Write each number in figures.',
-  fig={'type': 'l4_table', 'head': ['In words', 'In figures'], 'rows': [['forty-two thousand and seven', ''], ['sixty thousand, nine hundred', ''], ['eight thousand and thirty', '']], 'widths': [3, 1.4], 'cell_h': 62, 'font': 28, 'first_col_head': True, 'width_mm': 150},
+  fig={'type': 'l4_table', 'head': ['In words', 'In figures'], 'rows': [['forty-two thousand and seven', ''], ['sixty thousand, nine hundred', ''], ['eight thousand and thirty', '']], 'widths': [3, 1.4], 'cell_h': 72, 'font': 28, 'first_col_head': True, 'width_mm': 150},
   ans=A(42007, 60900, 8030, list=True),
   why='forty-two thousand and seven is 42 007: 42 thousands, no hundreds, no tens and 7 ones. sixty thousand, nine hundred is 60 900. eight thousand and thirty is 8030.'))
 S.append(item(U+'-S04', 'start', 1, 'Write the numbers in order. Begin with the greatest.\n58 304   58 340   58 034   58 430\n{ll}',
@@ -92,7 +92,7 @@ T.append(item(U+'-T02', 'think', 4, 'Two crowds were counted. To the nearest 100
          P('b', 'The largest possible total of both crowds: {b}', A(69998))],
   hint='Add the 2 smallest numbers. Then add the 2 largest.',
   why='The smallest crowds are 40 500 and 27 500: 68 000. The largest are 41 499 and 28 499: 69 998.',
-  space={'rows': ['Working:', '']}))
+  space={'rows': ['Working:', '', '']}))
 T.append(item(U+'-T03', 'think', 4, 'A 5-digit number has 5 different digits. It rounds to 70 000 to the nearest 10 000.',
   parts=[P('a', 'The greatest it can be: {b}', A(74986)), P('b', 'The least it can be: {b}', A(65012))],
   hint='Numbers that round to 70 000 run from 65 000 to 74 999.',

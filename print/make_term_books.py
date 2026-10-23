@@ -109,7 +109,7 @@ def cover_page(W, H, lvl, term, a, b, kind, bookno, ages):
     return overlay(W, H, draw)
 
 
-def contents_page(W, H, lvl, term, kind, bookno, rows, kitnote):
+def contents_page(W, H, lvl, term, kind, bookno, rows, kitnote, cardnote=False):
     def draw(c):
         c.setFillColor(TEAL); c.setFont('Helvetica-Bold', 28); c.drawString(70, H - 90, 'Contents')
         c.setFillColor(INK); c.setFont('Helvetica', 12)
@@ -119,9 +119,15 @@ def contents_page(W, H, lvl, term, kind, bookno, rows, kitnote):
             c.setFont('Helvetica-Bold', 15); c.setFillColor(TEAL); c.drawString(70, y, lab)
             c.setFont('Helvetica-Bold', 14); c.setFillColor(INK); c.drawString(160, y + 1, title[0][:46])
             c.setFont('Helvetica', 10); c.setFillColor(HexColor('#555555')); c.drawString(160, y - 13, title[1][:60])
-            c.setFont('Helvetica-Bold', 14); c.drawRightString(W - 70, y, f'page {pg}')
+            c.setFont('Helvetica-Bold', 14); c.drawRightString(W - 70, y, pg if isinstance(pg, str) else f'page {pg}')
             c.setStrokeColor(HexColor('#CCCCCC')); c.setDash(1, 3); c.line(70, y - 8, W - 70, y - 8); c.setDash()
             y -= 52
+        if cardnote:      # CARD-BOOK1: the Toolbox Card (A5, two sides) ships printed with Book 1; it is loose, not a bound page
+            c.setFillColor(INK); c.setFont('Helvetica-Bold', 12); c.drawString(70, 232, 'Toolbox Card (comes with this book)')
+            c.setFont('Helvetica', 11)
+            for i, t in enumerate(['The Toolbox Card is a loose A5 card, printed on both sides, that comes in the pack with this book.',
+                                   'It shows the tools we use all year. Keep it where you do your maths and point to it in class.']):
+                c.drawString(70, 214 - 15 * i, t)
         if kitnote:
             c.setFillColor(INK); c.setFont('Helvetica-Bold', 12); c.drawString(70, 150, 'Kit pages (cut-outs)')
             c.setFont('Helvetica', 11)
@@ -199,7 +205,10 @@ def build_book(level, term, bookno, lessons, kind, ages='', per_term=10):
     ty = (H - s * H) / 2
     a, b = (lessons[0] - 1) % per_term + 1, (lessons[-1] - 1) % per_term + 1     # numbers within the term, as printed on every page header
     cover = cover_page(W, H, level, term, a, b, kind, bookno, ages)
-    cont = contents_page(W, H, level, term, kind, bookno, toc, kitmode and any(x and x != 'cover' and x != 'contents' and x[3] for x in seq))
+    card = kind == 'workbook' and level == 1 and bookno == 1
+    if card:
+        toc.append(('Card', ('Toolbox Card', 'A5 card, printed both sides, loose in the pack'), 'in the pack'))
+    cont = contents_page(W, H, level, term, kind, bookno, toc, kitmode and any(x and x != 'cover' and x != 'contents' and x[3] for x in seq), card)
     wr = PdfWriter()
     kits = []
     for i, item in enumerate(seq, start=1):
@@ -230,7 +239,8 @@ def build_book(level, term, bookno, lessons, kind, ages='', per_term=10):
     with open(out, 'wb') as f:
         wr.write(f)
     return dict(level=level, term=term, book=bookno, kind=kind, lessons=f'{a}-{b}', print_pages=len(seq), sheets=len(seq) // 2,
-                blank_pages=sum(1 for x in seq if x is None), kit_pages=kits, content_scale=round(s, 4), file=os.path.relpath(out, ROOT))
+                blank_pages=sum(1 for x in seq if x is None), kit_pages=kits, content_scale=round(s, 4), file=os.path.relpath(out, ROOT),
+                **({'ships_with': ['Toolbox Card A5 (band A, ages 6-8), 1 card printed both sides, loose in the pack (outputs/kit/Math_Inquirers_Toolbox_Card_A_6-8_PRINT_BW.pdf)']} if card else {}))
 
 
 if __name__ == '__main__':

@@ -58,9 +58,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.8387937693099897,
+   "fill": 0.8828205458290422,
    "over": false,
-   "excess_mm": -41.4,
+   "excess_mm": -30.1,
    "edition": "soft"
   },
   {
@@ -68,9 +68,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.8462763903192585,
+   "fill": 0.9130084963954685,
    "over": false,
-   "excess_mm": -39.5,
+   "excess_mm": -22.3,
    "edition": "soft"
   },
   {
@@ -98,9 +98,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8467752317198765,
+   "fill": 0.8779125901132853,
    "over": false,
-   "excess_mm": -39.4,
+   "excess_mm": -31.4,
    "edition": "soft"
   },
   {
@@ -235,9 +235,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.8417546343975283,
+   "fill": 0.8857814109165808,
    "over": false,
-   "excess_mm": -40.7,
+   "excess_mm": -29.3,
    "edition": "print"
   },
   {
@@ -245,9 +245,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.846260298661174,
+   "fill": 0.9129924047373842,
    "over": false,
-   "excess_mm": -39.5,
+   "excess_mm": -22.4,
    "edition": "print"
   },
   {
@@ -275,9 +275,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8529544284243048,
+   "fill": 0.8840917868177137,
    "over": false,
-   "excess_mm": -37.8,
+   "excess_mm": -29.8,
    "edition": "print"
   },
   {
@@ -359,13 +359,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 6 (Unit 2 \u00b7 Learn it): natural fill 0.84 < 0.85",
-  "soft page 7 (Unit 2 \u00b7 Start here 1): natural fill 0.85 < 0.85",
-  "soft page 10 (Unit 2 \u00b7 Think harder): natural fill 0.85 < 0.85",
-  "print page 6 (Unit 2 \u00b7 Learn it): natural fill 0.84 < 0.85",
-  "print page 7 (Unit 2 \u00b7 Start here 1): natural fill 0.85 < 0.85"
- ],
+ "problems": [],
  "soft_pages": 18,
  "print_pages": 18
 }

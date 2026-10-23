@@ -10,7 +10,7 @@
  "learn": {
   "intro": "In a missing-digit sum, work one column at a time. Start with the ones. Remember to add the digit you carried.",
   "example": {
-   "problem": "Find the two missing digits in this sum.",
+   "problem": "Find the 2 missing digits in this sum.",
    "figure": {
     "type": "l3_vsum",
     "heads": [
@@ -19,7 +19,7 @@
      "T",
      "O"
     ],
-    "width_mm": 70,
+    "width_mm": 64,
     "lines": [
      {
       "sign": "",
@@ -51,7 +51,6 @@
      }
     ]
    },
-   "side": true,
    "steps": [
     "Ones: 7 + 8 = 15. Write 5 and carry 1.",
     "Tens: ? + 6 + 1 carried must end in 9. So ? is 2.",
@@ -224,7 +223,7 @@
    "id": "L3U02-S06",
    "tier": "start",
    "page": 2,
-   "text": "Every row, every column and each corner-to-corner line of this magic square adds up to the same total.",
+   "text": "In this magic square, every row, column and diagonal adds up to the same total.",
    "parts": [
     {
      "label": "a",
@@ -292,7 +291,7 @@
    "id": "L3U02-S07",
    "tier": "start",
    "page": 2,
-   "text": "In a number pyramid, each brick is the sum of the 2 bricks under it.",
+   "text": "Add each pair of side-by-side bricks to get the brick above them.",
    "parts": [
     {
      "label": "a",
@@ -340,7 +339,7 @@
    "id": "L3U02-S08",
    "tier": "start",
    "page": 2,
-   "text": "Find the two missing digits.",
+   "text": "Find the 2 missing digits.",
    "parts": [
     {
      "label": "a",
@@ -372,7 +371,7 @@
      "T",
      "O"
     ],
-    "width_mm": 70,
+    "width_mm": 60,
     "lines": [
      {
       "sign": "",
@@ -409,8 +408,8 @@
   {
    "id": "L3U02-S09",
    "tier": "start",
-   "page": 2,
-   "text": "Find the two missing digits.",
+   "page": 3,
+   "text": "Find the 2 missing digits.",
    "parts": [
     {
      "label": "a",
@@ -442,7 +441,7 @@
      "T",
      "O"
     ],
-    "width_mm": 70,
+    "width_mm": 60,
     "lines": [
      {
       "sign": "",
@@ -508,7 +507,7 @@
   {
    "id": "L3U02-S11",
    "tier": "start",
-   "page": 3,
+   "page": 1,
    "text": "Look for a pattern.",
    "parts": [
     {
@@ -574,7 +573,7 @@
      }
     }
    ],
-   "explanation": "For the greatest sum, put the 2 greatest digits in the hundreds place, the next 2 in the tens place, and the last 2 in the ones place: 800 + 700 + 50 + 40 + 3 + 2 = 1595. For the smallest sum, do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
+   "explanation": "For the greatest sum, put the 2 greatest digits in the hundreds places. Then the next 2 in the tens places, and the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. For the smallest sum, do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -591,7 +590,7 @@
    "id": "L3U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Each letter stands for a digit. Different letters stand for different digits. Find them.\nAB + AC = BBD",
+   "text": "Letters hide digits. The same letter is the same digit. Different letters are different digits.\nAB + AC = BBD",
    "parts": [
     {
      "label": "a",
@@ -680,7 +679,7 @@
    "id": "L3U02-T03",
    "tier": "think",
    "page": 4,
-   "text": "Look at this magic square. Every row, column and corner-to-corner line has the same total.",
+   "text": "Look at this magic square. Every row, column and diagonal has the same total.",
    "parts": [
     {
      "label": "a",
@@ -713,7 +712,7 @@
      }
     }
    ],
-   "explanation": "Add the middle row, the middle column and the 2 corner-to-corner lines. The middle number is counted 4 times, and every other number once, so 4 totals = all 9 numbers + 3 times the middle number. All 9 numbers make 3 totals, so the total is 3 times the middle: 3 x 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
+   "explanation": "Add the middle row, the middle column and the 2 diagonals. The middle number is counted 4 times, and every other number once, so 4 totals = all 9 numbers + 3 times the middle number. All 9 numbers make 3 totals, so the total is 3 times the middle: 3 x 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
    "hint": "The middle number is in 4 lines. Add those 4 lines.",
    "figure": {
     "type": "l3_grid",
@@ -764,7 +763,7 @@
    "id": "L3U02-G01",
    "tier": "go",
    "page": 5,
-   "text": "Each letter stands for a digit. Different letters stand for different digits. Find them.\nABC + BC = CAB",
+   "text": "Letters hide digits. The same letter is the same digit. Different letters are different digits.\nABC + BC = CAB",
    "parts": [
     {
      "label": "a",
@@ -810,7 +809,7 @@
    "id": "L3U02-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Pyramids with a hidden number.\nIn this pyramid each brick is the sum of the 2 bricks under it. The 2 bricks marked X are equal. Find X. {b}",
+   "text": "Beyond Level 3: Pyramids with a hidden number.\nAdd each pair of side-by-side bricks to get the brick above them. The 2 bricks marked X are equal. Find X. {b}",
    "answer": {
     "value": [
      "440"
@@ -854,7 +853,7 @@
    "id": "L3U02-G03",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the two numbers.",
+   "text": "Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the 2 numbers.",
    "parts": [
     {
      "label": "a",
@@ -897,7 +896,7 @@
      }
     }
    ],
-   "explanation": "99 = 9 x 11, 143 = 13 x 11, 121 = 11 x 11. A 2-digit number with digits A and B plus its reverse is (10A + B) + (10B + A) = 11 x (A + B), so the answer is always in the 11 times table.",
+   "explanation": "99 = 9 x 11, 143 = 13 x 11, 121 = 11 x 11. Here is why. A 2-digit number with digits A and B is 10 A + B. Its reverse is 10 B + A. Together they make 11 A + 11 B, which is 11 x (A + B). So the answer is always in the 11 times table.",
    "hint": "Add the tens digit and ones digit. Compare with the answers.",
    "partsrow": true
   },
@@ -950,7 +949,7 @@
    "id": "L3U02-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "In this number pyramid each brick is the sum of the 2 bricks under it. The brick M is {b}.",
+   "text": "Add each pair of side-by-side bricks to get the brick above them. The brick M is {b}.",
    "answer": {
     "value": [
      "520"

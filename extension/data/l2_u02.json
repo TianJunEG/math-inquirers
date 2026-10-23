@@ -1,0 +1,1015 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 2,
+ "id": "L2U02",
+ "title": "Missing digit mysteries",
+ "topic": "Adding and subtracting to 1000",
+ "holiday_lesson": 2,
+ "goal": "I can find missing digits in 3-digit sums. I can balance number sentences and solve magic squares and triangles.",
+ "learn": {
+  "intro": "A missing digit is a mystery to solve. Start at the ones column and ask: was a ten carried? The = sign means \"is the same as\".",
+  "example": {
+   "problem": "Find the missing digits in this sum.",
+   "figure": {
+    "type": "l2_vsum",
+    "op": "+",
+    "rows": [
+     "3?5",
+     "24?",
+     "617"
+    ],
+    "width_mm": 56
+   },
+   "side": true,
+   "steps": [
+    "Ones: 5 + ? must end in 7. So the missing digit is 2.",
+    "Tens: ? + 4 must end in 1. 11 is possible: 7 + 4 = 11. Write 1 and carry 1.",
+    "Hundreds: 3 + 2 + 1 carried = 6. It matches.",
+    "Check: 375 + 242 = 617."
+   ],
+   "answer": "The missing digits are 7 and 2."
+  },
+  "howto": {
+   "title": "How to find a missing digit",
+   "steps": [
+    "Start at the ones column.",
+    "Ask: was a ten carried?",
+    "Move left, one column at a time.",
+    "Check by adding the whole numbers."
+   ]
+  },
+  "facts": {
+   "title": "Balance",
+   "lines": [
+    "= means \"is the same as\".",
+    "260 + 150 = 410, so 300 + [ ] must be 410.",
+    "The box is 110."
+   ]
+  },
+  "try": {
+   "id": "L2U02-L01",
+   "text": "Find the missing digit.   5?4 + 337 = 891   The digit is {b}",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5"
+   },
+   "explanation": "Ones: 4 + 7 = 11, write 1 and carry 1. Tens: 5 + 3 + 1 = 9, so the missing digit is 5. Check: 554 + 337 = 891."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U02-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the missing digits. Write one digit in each empty box.",
+   "figure": {
+    "type": "l2_vsum",
+    "sums": [
+     {
+      "op": "+",
+      "rows": [
+       "2?4",
+       "35?",
+       "603"
+      ],
+      "label": "(a)"
+     },
+     {
+      "op": "+",
+      "rows": [
+       "4?8",
+       "?26",
+       "874"
+      ],
+      "label": "(b)"
+     },
+     {
+      "op": "+",
+      "rows": [
+       "?65",
+       "2?8",
+       "703"
+      ],
+      "label": "(c)"
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Sum (a): write the missing digits, top number first.",
+     "answer": {
+      "value": [
+       "4",
+       "9"
+      ],
+      "text": "4 and 9 (444... see Why)",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Sum (b): write the missing digits, top number first.",
+     "answer": {
+      "value": [
+       "4",
+       "4"
+      ],
+      "text": "4 and 4",
+      "list": true
+     }
+    },
+    {
+     "label": "c",
+     "text": "Sum (c): write the missing digits, top number first.",
+     "answer": {
+      "value": [
+       "4",
+       "3"
+      ],
+      "text": "4 and 3",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "(a) Ones: 4 + 9 = 13, carry 1. Tens: 4 + 5 + 1 = 10, carry 1. Hundreds: 2 + 3 + 1 = 6. So 244 + 359 = 603. (b) Ones: 8 + 6 = 14, carry 1. Tens: 4 + 2 + 1 = 7. Hundreds: 4 + 4 = 8. So 448 + 426 = 874. (c) Ones: 5 + 8 = 13, carry 1. Tens: 6 + 3 + 1 = 10, carry 1. Hundreds: 4 + 2 + 1 = 7. So 465 + 238 = 703."
+  },
+  {
+   "id": "L2U02-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the missing digits in these subtractions. Try a digit and check it. Check: answer + the number taken away = the start number.",
+   "figure": {
+    "type": "l2_vsum",
+    "sums": [
+     {
+      "op": "-",
+      "rows": [
+       "8?5",
+       "26?",
+       "568"
+      ],
+      "label": "(a)"
+     },
+     {
+      "op": "-",
+      "rows": [
+       "5?2",
+       "?47",
+       "265"
+      ],
+      "label": "(b)"
+     }
+    ],
+    "width_mm": 110
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Sum (a): write the missing digits, top number first.",
+     "answer": {
+      "value": [
+       "3",
+       "7"
+      ],
+      "text": "3 and 7",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Sum (b): write the missing digits, top number first.",
+     "answer": {
+      "value": [
+       "1",
+       "2"
+      ],
+      "text": "1 and 2",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265."
+  },
+  {
+   "id": "L2U02-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "The = sign means \"is the same as\". Fill in the boxes.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "270 + 140 = 300 + {b}",
+     "answer": {
+      "value": [
+       "110"
+      ],
+      "text": "110"
+     }
+    },
+    {
+     "label": "b",
+     "text": "840 - 300 = {b} - 200",
+     "answer": {
+      "value": [
+       "740"
+      ],
+      "text": "740"
+     }
+    },
+    {
+     "label": "c",
+     "text": "360 + {b} = 400 + 150",
+     "answer": {
+      "value": [
+       "190"
+      ],
+      "text": "190"
+     }
+    },
+    {
+     "label": "d",
+     "text": "199 + 250 = 200 + 249   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) 270 + 140 = 410, and 410 - 300 = 110. (b) 840 - 300 = 540, and 540 + 200 = 740. (c) 400 + 150 = 550, and 550 - 360 = 190. (d) 199 is 1 less than 200 and 250 is 1 more than 249, so both sides are 449.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U02-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "This is a magic square. Every row, column and corner-to-corner line has the same total.",
+   "figure": {
+    "type": "l2_grid",
+    "values": [
+     [
+      100,
+      null,
+      300
+     ],
+     [
+      null,
+      250,
+      null
+     ],
+     [
+      200,
+      null,
+      400
+     ]
+    ],
+    "cell": 80,
+    "width_mm": 60
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The magic total is {b}",
+     "answer": {
+      "value": [
+       "750"
+      ],
+      "text": "750"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Fill in the 4 empty squares.",
+     "answer": {
+      "value": [
+       "350",
+       "450",
+       "50",
+       "150"
+      ],
+      "text": "350 (top), 450 (left), 50 (right), 150 (bottom)",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "A line with all 3 numbers: 100 + 250 + 400 = 750. Top row: 750 - 100 - 300 = 350. Left column: 750 - 100 - 200 = 450. Right column: 750 - 300 - 400 = 50. Bottom row: 750 - 200 - 400 = 150.",
+   "figside": true
+  },
+  {
+   "id": "L2U02-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Ali and Ben have 460 stickers altogether. Ali has 80 more than Ben.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Ben",
+      "segs": [
+       {
+        "w": 6,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Ali",
+      "segs": [
+       {
+        "w": 6,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 2.6,
+        "t": "80"
+       }
+      ]
+     }
+    ],
+    "brace": {
+     "text": "460",
+     "rows": [
+      0,
+      1
+     ]
+    },
+    "width_units": 400,
+    "width_mm": 110
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Take away the extra 80: 460 - 80 = {b}",
+     "answer": {
+      "value": [
+       "380"
+      ],
+      "text": "380"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has {b} stickers.",
+     "answer": {
+      "value": [
+       "190"
+      ],
+      "text": "190"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ali has {b} stickers.",
+     "answer": {
+      "value": [
+       "270"
+      ],
+      "text": "270"
+     }
+    }
+   ],
+   "explanation": "Without the extra 80, both have the same, and together they have 380. Half of 380 is 190, so Ben has 190. Ali has 190 + 80 = 270. Check: 190 + 270 = 460."
+  },
+  {
+   "id": "L2U02-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Mei had 500 beads. She used some for a necklace and 135 for a bracelet. 210 beads were left. How many beads did she use for the necklace? {b}",
+   "answer": {
+    "value": [
+     "155"
+    ],
+    "text": "155"
+   },
+   "explanation": "Work backwards: 210 beads are left and 135 were used for the bracelet, so 210 + 135 = 345 beads were not used for the necklace... 500 - 345 = 155 beads were used for the necklace. Check: 155 + 135 + 210 = 500.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U02-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Ben wrote 614 - 278 = 346. He checks by adding.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "346 + 278 = {b}",
+     "answer": {
+      "value": [
+       "624"
+      ],
+      "text": "624"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is Ben right?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The correct answer is {b}",
+     "answer": {
+      "value": [
+       "336"
+      ],
+      "text": "336"
+     }
+    }
+   ],
+   "explanation": "(a) 346 + 278 = 624. (b) A right answer would give 614 when you add back, so Ben is wrong. (c) 614 - 278: ones 14 - 8 = 6, tens 0 lent 1 so borrow again 10 + 0 - 1 - 7 = 2... in short 614 - 278 = 336. Check: 336 + 278 = 614."
+  },
+  {
+   "id": "L2U02-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Ali had 345 stickers. He gave some away. Now he has 128 stickers.\n(1) 345 + [ ] = 128      (2) 345 - [ ] = 128\n(3) [ ] - 345 = 128      (4) 128 - [ ] = 345",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Which number sentence matches the story?   {circ:(1)|(2)|(3)|(4)}",
+     "answer": {
+      "value": [
+       "(2)"
+      ],
+      "text": "(2)"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many stickers did Ali give away? {b}",
+     "answer": {
+      "value": [
+       "217"
+      ],
+      "text": "217"
+     }
+    }
+   ],
+   "explanation": "(a) He starts with 345 and takes some away, so 345 - [ ] = 128, which is (2). (b) 345 - 128 = 217. Check: 128 + 217 = 345."
+  },
+  {
+   "id": "L2U02-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Add or subtract.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "368 + 457 = {b}",
+     "answer": {
+      "value": [
+       "825"
+      ],
+      "text": "825"
+     }
+    },
+    {
+     "label": "b",
+     "text": "702 - 385 = {b}",
+     "answer": {
+      "value": [
+       "317"
+      ],
+      "text": "317"
+     }
+    },
+    {
+     "label": "c",
+     "text": "249 + 394 = {b}",
+     "answer": {
+      "value": [
+       "643"
+      ],
+      "text": "643"
+     }
+    },
+    {
+     "label": "d",
+     "text": "910 - 466 = {b}",
+     "answer": {
+      "value": [
+       "444"
+      ],
+      "text": "444"
+     }
+    }
+   ],
+   "explanation": "(a) 368 + 457 = 825. (b) 702 - 385 = 317. (c) 249 + 394 = 643. (d) 910 - 466 = 444. Check each answer by doing the opposite.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U02-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Make 1000. Fill in the missing number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "340 + {b} = 1000",
+     "answer": {
+      "value": [
+       "660"
+      ],
+      "text": "660"
+     }
+    },
+    {
+     "label": "b",
+     "text": "485 + {b} = 1000",
+     "answer": {
+      "value": [
+       "515"
+      ],
+      "text": "515"
+     }
+    },
+    {
+     "label": "c",
+     "text": "1000 - 755 = {b}",
+     "answer": {
+      "value": [
+       "245"
+      ],
+      "text": "245"
+     }
+    },
+    {
+     "label": "d",
+     "text": "{b} + 75 = 1000",
+     "answer": {
+      "value": [
+       "925"
+      ],
+      "text": "925"
+     }
+    }
+   ],
+   "explanation": "(a) 1000 - 340 = 660. (b) 1000 - 485 = 515. (c) 1000 - 755 = 245. (d) 1000 - 75 = 925. Tip: make the ones 10, the tens 9 and the hundreds 9 to reach 999, then add 1.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U02-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Lily's book has 500 pages. She has read 287 pages.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many pages are left? {b}",
+     "answer": {
+      "value": [
+       "213"
+      ],
+      "text": "213"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Then she reads 120 more pages. How many pages are left now? {b}",
+     "answer": {
+      "value": [
+       "93"
+      ],
+      "text": "93"
+     }
+    }
+   ],
+   "explanation": "(a) 500 - 287 = 213. (b) 213 - 120 = 93."
+  },
+  {
+   "id": "L2U02-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Put the numbers 120, 135, 150, 165, 180 and 195 in the circles of each triangle, once each. In triangle A every side adds up to 450. In triangle B every side adds up to 495.",
+   "figure": {
+    "type": "l2_triangle",
+    "triangles": [
+     {
+      "values": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "caption": "Triangle A: sides 450"
+     },
+     {
+      "values": [
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      "caption": "Triangle B: sides 495"
+     }
+    ],
+    "width_mm": 160
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Triangle A: the 3 corner numbers are {ll}",
+     "answer": {
+      "value": [
+       "120",
+       "135",
+       "150"
+      ],
+      "text": "120, 135, 150",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Triangle B: the 3 corner numbers are {ll}",
+     "answer": {
+      "value": [
+       "165",
+       "180",
+       "195"
+      ],
+      "text": "165, 180, 195",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "A: corners 120, 135, 150. Between 120 and 135: 450 - 255 = 195. Between 135 and 150: 450 - 285 = 165. Between 150 and 120: 450 - 270 = 180. B: corners 165, 180, 195. Between 165 and 180: 150. Between 180 and 195: 120. Between 195 and 165: 135. Each side adds up to 495.",
+   "hint": "Corner numbers are used in 2 sides. Try the 3 smallest corners."
+  },
+  {
+   "id": "L2U02-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Circle True or False. Do not add both sides. Say why on the line.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "468 + 199 = 467 + 200   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "350 + 240 = 340 + 260   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "502 + 99 = 500 + 101   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "d",
+     "text": "275 + 275 = 250 + 310   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "(a) 468 is 1 more than 467 and 199 is 1 less than 200: true. (b) 350 is 10 more than 340, but 240 is 20 less than 260, so the sides are 590 and 600: false. (c) 502 is 2 more than 500 and 99 is 2 less than 101: true. (d) 275 + 275 = 550 and 250 + 310 = 560: false.",
+   "hint": "Move the same amount from one number to the other.",
+   "space": {
+    "rows": [
+     "Why (b):"
+    ]
+   }
+  },
+  {
+   "id": "L2U02-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Ali, Ben and Siti have 530 stickers altogether. Ali has 60 more than Ben. Siti has 40 fewer than Ben.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Ali",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 2,
+        "t": "60"
+       }
+      ]
+     },
+     {
+      "label": "Ben",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Siti",
+      "segs": [
+       {
+        "w": 3,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     }
+    ],
+    "brace": {
+     "text": "530",
+     "rows": [
+      0,
+      2
+     ]
+    },
+    "width_units": 400,
+    "width_mm": 112
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ben has {b} stickers.",
+     "answer": {
+      "value": [
+       "170"
+      ],
+      "text": "170"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali has {b} stickers.",
+     "answer": {
+      "value": [
+       "230"
+      ],
+      "text": "230"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Siti has {b} stickers.",
+     "answer": {
+      "value": [
+       "130"
+      ],
+      "text": "130"
+     }
+    }
+   ],
+   "explanation": "Add 40 to Siti and take 60 off Ali: now all three have the same as Ben, and the total is 530 + 40 - 60 = 510... so 3 equal parts do not add to 510. Check again: Siti has 40 fewer, so adding 40 makes her equal to Ben (530 + 40 = 570). Ali has 60 more, so take 60 away (570 - 60 = 510). Three Bens are 510, so Ben has 170. Ali has 170 + 60 = 230 and Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.",
+   "hint": "Make all 3 bars the same length as Ben's bar."
+  },
+  {
+   "id": "L2U02-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali and Mei have 540 stickers together. Mei and Ravi have 610 together. Ali and Ravi have 450 together. How many stickers does each child have?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali has {b}",
+     "answer": {
+      "value": [
+       "190"
+      ],
+      "text": "190"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei has {b}",
+     "answer": {
+      "value": [
+       "350"
+      ],
+      "text": "350"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ravi has {b}",
+     "answer": {
+      "value": [
+       "260"
+      ],
+      "text": "260"
+     }
+    }
+   ],
+   "explanation": "Add the 3 totals: 540 + 610 + 450 = 1600. Each child is counted twice, so all 3 together have 800. Ravi = 800 - 540 = 260. Ali = 800 - 610 = 190. Mei = 800 - 450 = 350. Check: 190 + 350 = 540, 350 + 260 = 610, 190 + 260 = 450.",
+   "hint": "Add the 3 totals, then halve. That is all 3 children together.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U02-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Swap the hundreds digit and the ones digit of a number. Then subtract the smaller number from the greater.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "742 and 247:  742 - 247 = {b}",
+     "answer": {
+      "value": [
+       "495"
+      ],
+      "text": "495"
+     }
+    },
+    {
+     "label": "b",
+     "text": "831 and 138:  831 - 138 = {b}",
+     "answer": {
+      "value": [
+       "693"
+      ],
+      "text": "693"
+     }
+    },
+    {
+     "label": "c",
+     "text": "What is the middle digit of both answers? {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Use the pattern: 954 - 459 = {b}",
+     "answer": {
+      "value": [
+       "495"
+      ],
+      "text": "495"
+     }
+    }
+   ],
+   "explanation": "(a) 742 - 247 = 495. (b) 831 - 138 = 693. (c) Both answers have 9 in the middle. (d) The answer to a reverse-and-subtract is always a multiple of 99. 954 - 459 = 495. The hundreds digits 9 and 4 differ by 5, and 5 x 99 = 495.",
+   "hint": "Look at the middle digit and the digit sum of each answer.",
+   "beyond": "Patterns in subtraction"
+  },
+  {
+   "id": "L2U02-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own missing-digit sum. Write 2 missing digits in an addition of two 3-digit numbers, so that only ONE pair of digits works. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: 4?6 + 37? = 801 (426 + 375). Test every digit for each box: only 2 and 5 work."
+   },
+   "explanation": "Example: 426 + 375 = 801. Ones: 6 + ? must end in 1, so the ones box is 5. That carries 1. Tens: ? + 7 + 1 must end in 0, so the tens box is 2. Check that no other digit fits in each box.",
+   "hint": "Start with a full sum. Then hide a digit in each number.",
+   "space": {
+    "rows": [
+     "My sum:",
+     "My answer:"
+    ]
+   }
+  },
+  {
+   "id": "L2U02-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "The same number goes in both boxes. Find it. Check your answer.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "[ ] + 175 = 625 - [ ]    The number is {b}",
+     "answer": {
+      "value": [
+       "225"
+      ],
+      "text": "225"
+     }
+    },
+    {
+     "label": "b",
+     "text": "[ ] + 240 = 800 - [ ]    The number is {b}",
+     "answer": {
+      "value": [
+       "280"
+      ],
+      "text": "280"
+     }
+    }
+   ],
+   "explanation": "(a) Move the box: 2 boxes = 625 - 175 = 450, so one box is 225. Check: 225 + 175 = 400 and 625 - 225 = 400. (b) 2 boxes = 800 - 240 = 560, so one box is 280. Check: 280 + 240 = 520 and 800 - 280 = 520.",
+   "hint": "Both sides must be equal. Try a number and check it."
+  },
+  {
+   "id": "L2U02-C01",
+   "tier": "quiz",
+   "text": "Find the missing digits. Write them in the boxes.",
+   "figure": {
+    "type": "l2_vsum",
+    "op": "+",
+    "rows": [
+     "2?6",
+     "43?",
+     "689"
+    ],
+    "width_mm": 56
+   },
+   "answer": {
+    "value": [
+     "5",
+     "3"
+    ],
+    "text": "5 and 3",
+    "list": true
+   },
+   "explanation": "Ones: 6 + 3 = 9, so the bottom box is 3. Tens: 5 + 3 = 8, so the top box is 5. Check: 256 + 433 = 689."
+  },
+  {
+   "id": "L2U02-C02",
+   "tier": "quiz",
+   "text": "530 + 160 = 600 + {b}",
+   "answer": {
+    "value": [
+     "90"
+    ],
+    "text": "90"
+   },
+   "explanation": "530 + 160 = 690, and 690 - 600 = 90."
+  },
+  {
+   "id": "L2U02-C03",
+   "tier": "quiz",
+   "text": "Ravi had 800 stickers. He gave 175 to Mei and some to Ben. He had 350 left. How many stickers did he give to Ben? {b}",
+   "answer": {
+    "value": [
+     "275"
+    ],
+    "text": "275"
+   },
+   "explanation": "800 - 175 = 625. 625 - 350 = 275. Check: 175 + 275 + 350 = 800."
+  },
+  {
+   "id": "L2U02-C04",
+   "tier": "quiz",
+   "text": "Two numbers add up to 420. One is 60 more than the other. What is the smaller number? {b}",
+   "answer": {
+    "value": [
+     "180"
+    ],
+    "text": "180"
+   },
+   "explanation": "Take away the extra 60: 420 - 60 = 360. Half of 360 is 180. The numbers are 180 and 240."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}

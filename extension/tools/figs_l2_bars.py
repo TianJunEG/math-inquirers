@@ -51,23 +51,28 @@ def bar(spec, w=None):
 
 
 def triangle(spec, w=None):
-    v = spec['values']
+    """One triangle (values, caption) or several side by side (triangles: [{values, caption}])."""
+    tris = spec.get('triangles') or [spec]
     R = 44
     pts = [(300, 62), (70, 390), (530, 390)]
     mids = [((pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2), ((pts[1][0] + pts[2][0]) / 2, (pts[1][1] + pts[2][1]) / 2), ((pts[2][0] + pts[0][0]) / 2, (pts[2][1] + pts[0][1]) / 2)]
     allp = pts + mids
-    P = [f'<polygon points="{" ".join(f"{x},{y}" for x, y in pts)}" fill="none" stroke="{NAVY}" stroke-width="3.4"/>']
-    for (x, y), val in zip(allp, v):
-        if val is None:
-            P.append(f'<circle cx="{x}" cy="{y}" r="{R}" fill="#fff" stroke="{NAVY}" stroke-width="3.4" stroke-dasharray="9 6"/>')
-        else:
-            P.append(f'<circle cx="{x}" cy="{y}" r="{R}" fill="{SOFT}" stroke="{NAVY}" stroke-width="3.4"/>')
-            P.append(T(x, y + 12, val, 34))
+    P = []
     H = 390 + R + 10
-    if spec.get('caption'):
-        P.append(T(300, H + 30, spec['caption'], 30, weight=600))
+    for t, tri in enumerate(tris):
+        ox = t * 650
+        P.append(f'<polygon points="{" ".join(f"{x + ox},{y}" for x, y in pts)}" fill="none" stroke="{NAVY}" stroke-width="3.4"/>')
+        for (x, y), val in zip(allp, tri['values']):
+            if val is None:
+                P.append(f'<circle cx="{x + ox}" cy="{y}" r="{R}" fill="#fff" stroke="{NAVY}" stroke-width="3.4" stroke-dasharray="9 6"/>')
+            else:
+                P.append(f'<circle cx="{x + ox}" cy="{y}" r="{R}" fill="{SOFT}" stroke="{NAVY}" stroke-width="3.4"/>')
+                P.append(T(x + ox, y + 12, val, 34))
+        if tri.get('caption'):
+            P.append(T(300 + ox, H + 30, tri['caption'], 32, weight=700))
+    if any(t.get('caption') for t in tris):
         H += 44
-    return wrap(P, 600, H, 'magic triangle', w, 0.24)
+    return wrap(P, 600 + (len(tris) - 1) * 650, H, 'magic triangle', w, 0.24)
 
 
 FIGS = {'l2_bar': bar, 'l2_triangle': triangle}
