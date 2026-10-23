@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Act it out">
+<circle cx="12" cy="14" r="5.5"/><path d="M12 20 V41 M12 41 L5 57 M12 41 L19 57 M12 27 L24 37"/>
+<circle cx="52" cy="14" r="5.5"/><path d="M52 20 V41 M52 41 L45 57 M52 41 L59 57 M52 27 L40 37"/>
+<circle cx="32" cy="40" r="4.5"/>
+</svg>

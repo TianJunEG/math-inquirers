@@ -208,7 +208,7 @@ def run(d):
     for _ in range(rect['rows']): total += rect['cols']
     eq((rect['rows'], rect['cols'], total), (3, 3, 9), 'C1 rectangle 3 rows of 3 squares (from the text)'); eq(nums(g['text']), [3, 3], 'C1 text')
     g = C['C2']; f = vis(g); dx = f['end'][0] - f['start'][0]; dy = f['start'][1] - f['end'][1]; eq((dx, dy), (2, 1), 'C2 2 right and 1 up'); rt = routes(dx, dy); eq(rt, ['RRU', 'RUR', 'URR'], 'C2 every route'); eq((dx + dy, len(rt)), (3, 3), 'C2 steps and routes'); eq(g['val'], [3, 3], 'C2 val')
-    g = C['C3']; st, fp = vis(g, 0), vis(g, 1); cubes = 0
+    g = C['C3']; st, pp, fp = vis(g, 0), vis(g, 1), vis(g, 2); eq((pp['stage'], pp['fold']), ('paper', 'h'), 'C3 the paper shows its dashed fold line'); cubes = 0
     for r in st['heights']:
         for h in r: cubes += h
     eq(cubes, 6, 'C3 6 cubes'); eq(fp['stage'], 'folded', 'C3 the paper is folded'); layers = 2; holes = 0
