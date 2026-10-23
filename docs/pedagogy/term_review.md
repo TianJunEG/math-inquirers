@@ -982,6 +982,19 @@ Not a promise, not a pass mark: the child names at least three tools; picks one 
 
 ## 12. Decisions and fixes for the owner
 
+**Term review decisions status (23 Oct 2026, after the owner's TERM-YES reply).** The six numbered decisions below are unchanged; this table records where each stands.
+
+| # | Decision | Status |
+|---|---|---|
+| 1 | Adopt the toolbox spine and the tool schedule | YES. Already adopted and built: holiday decks, workbooks, tutor guides and the Toolbox Card (owner decision of 23 Oct, `docs/pedagogy/spine_routine_spec.md`). The term lessons are not yet changed. |
+| 2 | Lesson x.0 as a choose-the-tool consolidation lesson hosting the Quest | Awaiting an explicit owner answer. Not decided. |
+| 3 | A three-word independence scale in private tutor notes | Awaiting an explicit owner answer. Not decided. |
+| 4 | Level 1 Term 1: keep the stronger arithmetic, or move some lessons to Think harder only | Awaiting an explicit owner answer. Not decided (the 22 Oct stronger-arithmetic decision stands until the owner says otherwise). |
+| 5 | Level 6 intake and Terms 3 and 4 around the PSLE; bridge or acceleration | Awaiting an explicit owner answer. Not decided. |
+| 6 | The holiday course: confirm the toolbox stays out of it | Superseded. The owner chose to add the strategy card and the common look-back to the holiday materials. |
+
+The data fixes listed after the decisions were applied on 23 Oct 2026 as plan hygiene, except the Level 1 `term_line` fields, which are noted in `docs/terms/level_1_year_plan.md` section 5 but not yet replaced in the lesson files.
+
 **Decisions**
 1. Adopt the toolbox spine (section 2) and the tool schedule (2.2): yes or no. This needs a one-page card and a look-back change, not new lessons, plus about four replacement lessons per level (section 8).
 2. Should lesson x.0 become a choose-the-tool consolidation lesson that hosts the Quest (section 8), moving the new ideas of Level 1 Lessons 10, 20, 30 into earlier slots?
