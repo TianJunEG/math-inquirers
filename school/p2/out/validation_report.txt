@@ -239,7 +239,7 @@ PASS  S2-19 (P2-37) V7 scale 5 or 10, at most 8 pictures in a row
 PASS  S1-02 (P2-38) V1 every question has exactly one answer in the bank's domain  []
 PASS  S1-02 (P2-38) V1a the independent evaluator (textcheck) re-solves all 15 printed questions from their text and picture and gets the coloured answer  []
 PASS  S1-02 (P2-38) V1b every answer is one of the five key values  
-PASS  S1-02 (P2-38) V1c all five colours used at least twice  {'yellow': 2, 'red': 4, 'blue': 2, 'green': 4, 'orange': 3}
+PASS  S1-02 (P2-38) V1c all five colours used at least twice  {'yellow': 3, 'red': 2, 'blue': 4, 'green': 4, 'orange': 2}
 PASS  S1-02 (P2-38) V2 the right answers pass every check (tally, matching parts)  
 PASS  S1-02 (P2-38) V2b questions are not repeated  0
 PASS  S1-02 (P2-38) V7 regions 12 to 18, every label found a box  15
@@ -454,7 +454,7 @@ PASS  every clue word named in a teacher note (more than, fewer than, greatest, 
 PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P2 strand  
 PASS  B/W colours only in S1_pupil.html  ['#000', '#fff']
-PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_pupil.html  min 0.3
+PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_pupil.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S1_pupil.html  min 0.25
 PASS  answer boxes at least 12 mm high in S1_pupil.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_pupil.html  []
@@ -464,7 +464,7 @@ PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S1_front.html  min 0.25
 PASS  answer boxes at least 12 mm high in S1_front.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_front.html  []
 PASS  B/W colours only in S1_key.html  ['#000', '#fff']
-PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_key.html  min 0.3
+PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_key.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S1_key.html  min 0.25
 PASS  answer boxes at least 12 mm high in S1_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_key.html  []
@@ -734,11 +734,11 @@ PASS  S1_key.html: colour-by-code pictures: 2 found (expected 2); every label of
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(20, 0, 14)]
 PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14)]
 PASS  P2_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 14.23% vs greyscale)  20 pages
-PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 185, budget 40 on average per page)  
+PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 184, budget 40 on average per page)  
 PASS  P2_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.39% vs greyscale)  5 pages
 PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 111, budget 40 on average per page)  
 PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.49% vs greyscale)  11 pages
-PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 813, budget 130 on average per page)  
+PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 810, budget 130 on average per page)  
 PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.70% vs greyscale)  20 pages
 PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 204, budget 40 on average per page)  
 PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.33% vs greyscale)  5 pages

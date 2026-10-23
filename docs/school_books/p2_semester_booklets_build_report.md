@@ -61,3 +61,24 @@ Page table (code, title, stars, check): see `school/p2/README.md` and the plan, 
 ## Final state
 
 `school/p2/validate.py` (full, 40 pages): 747 checks, 0 failed (about 10 minutes). Page counts: pupil booklets 20 and 20, front matter 5 and 5, complete packs 25 and 25, answer keys as printed in `out/` (see `pdfinfo`). Committed: the PDFs, `verification.json`, `validation_report.txt`; not committed: `out/*.html`, `out/bilevel_check/`.
+
+## Audit round 1: fixes made (after `docs/audit_final/p2_semester_booklets_audit.md`)
+
+validate.py: 747 checks, 0 failed. Page counts unchanged (20 / 5 / 25; keys 11 and 9). Not changed on the coordinator's instruction: the time-duration pages P2-29, P2-31, P2-40 (M3, owner decision) and P2-20's division wording beyond L4.
+
+| Finding | Fix |
+|---|---|
+| H1 P2-39 | The dinosaur (eye dot = twin mark, unmarked tail, marks on boundaries) was replaced by the house picture (mult bank, tier 2, seed 1): no eye or doorknob decoration, every mark inside its own part and away from boundaries, the check-strip rule holds. Page is now "Colour the House". Coloured by hand: yellow 4, red 3, blue 4, green 3, orange 3; every mark set shares one colour. |
+| M1 coins | Coins drawn at 0.78 of real-ratio size x (was 0.70); the word "cents" and "dollar" is 2.7 mm font (cap height about 1.9 mm), placed clear of the dashed ring; value numeral 0.58 r. P2-06 and P2-24 re-laid and viewed. The word "purse" no longer appears on P2-06 (L10). |
+| M2 fractions | Shaded parts are black fills separated by a white line 1.1 mm wide drawn on top (survives the audit's 600 dpi gap test far better than 0.17 mm); unshaded parts keep black outlines. Viewed; solved again (FROZEN). |
+| M4 colour boxes | Answer box 7.5 mm (was 6) on the three colour pages. P2-38 uses seed 306 (the larger box made seed 301 repeat a question). |
+| M5, L3 | P2-10: "Make a 3-digit number." P2-05: "The sharer gets a share too." as the first instruction. |
+| L1 | P2-09 key note now says two touching boxes can share the words on top. |
+| L4 | P2-20: the "if a x b = p then p / b = a" statement divides by 2, 3, 4 or 5 only (no 9). |
+| L5 | "siring" and "jailor" added to the reject list in `gen/kit.py` (P2-07 now spells TEACUP). Word assignments of later pages shifted with it; all 32 words are still distinct. |
+| L6 | Plan tables regenerated from the built pages. |
+| L7 | validate.py label now reads "budget on average per page"; the real concern (flat tint) was checked by the auditor: zero flat blocks. |
+| L11 | Cuboids drawn at least 2 : 1 front face; notes say a cube has six equal faces. |
+| M3, L8, L9, L12 | Not changed (M3 awaits the owner; L8 is a library sheet without a unit after two boxes; L9 info; L12 owner: the not-affiliated sentence is also on the P2 licence pages). |
+
+Because the word list changed, several pages got new puzzles or new code words (P2-11, 13 letters, 20, 21 BOTANY, 22, 24 CAMPUS, 25, 27, 28 PEANUT, 30 TONGUE, 31 BANDIT with a new timetable, 32 BEHIND, 33 COBALT, 34 BACKUP, 36, 37 FAMILY with new graph, 38). Re-solved by hand from the final render: P2-04, 06, 07 (TEACUP), 13 (CREAMY), 15, 20 (WIZARD), 21, 24, 28, 30, 31, 32, 33, 34, 37, 38, 39. Pages 11, 22, 25, 27, 36 kept their answers and only the letters changed (their solvers and the word tests pass). The earlier hand-solve list in this report refers to the previous build for those pages.

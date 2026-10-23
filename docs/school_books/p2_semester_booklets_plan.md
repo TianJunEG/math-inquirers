@@ -38,11 +38,11 @@ The PDF has 30 numbered lines (counting each of fractions 1.1 to 1.3 and 2.1, an
 | Length, Mass and Volume 1.1 measuring (length in metres; mass in kilograms/grams; volume of liquid... | P2-08, P2-25, P2-26, P2-28 | Part: reading pictured scales, tapes and containers; a printed page cannot hold a real instrument |
 | Length, Mass and Volume 1.2 using appropriate units of measurement and their abbreviations m, g, k... | P2-08, P2-25, P2-26, P2-27 | Full |
 | Length, Mass and Volume 1.3 comparing and ordering (lengths; masses; volumes) | P2-28 | Full (one unit at a time: kg to g and m to cm conversions are Primary 3) |
-| Time 2.1 telling time to the minute | P2-07, P2-29, P2-31 | Full |
-| Time 2.2 measuring time in hours and minutes | P2-29, P2-31 | Full |
-| Time 2.3 converting time in hours and minutes to minutes only, and vice versa | P2-30, P2-31 | Full |
-| 2D Shapes 1.1 making/completing patterns with 2D shapes according to one or two of t... | P2-32, P2-33, P2-40 | Part: completing patterns by choosing the next shape; the pupil's own drawn pattern cannot be checked |
-| 3D Shapes 2.1 identifying, naming, describing and classifying 3D shapes (cube, cuboi... | P2-34, P2-35, P2-40 | Full by picture (cube, cuboid, cone, cylinder, sphere); no real solids to handle |
+| Time 2.1 telling time to the minute | P2-07, P2-29, P2-31, P2-40 | Full |
+| Time 2.2 measuring time in hours and minutes | P2-29, P2-31, P2-40 | Full |
+| Time 2.3 converting time in hours and minutes to minutes only, and vice versa | P2-30, P2-31, P2-40 | Full |
+| 2D Shapes 1.1 making/completing patterns with 2D shapes according to one or two of t... | P2-32, P2-33 | Part: completing patterns by choosing the next shape; the pupil's own drawn pattern cannot be checked |
+| 3D Shapes 2.1 identifying, naming, describing and classifying 3D shapes (cube, cuboi... | P2-34, P2-35 | Full by picture (cube, cuboid, cone, cylinder, sphere); no real solids to handle |
 | Picture Graphs with Scales 1.1 reading and interpreting data from picture graphs with scales | P2-36, P2-37 | Full (picture graphs with keys of 2, 5 and 10) |
 
 **Not covered, or only in part (for the owner):** writing number words by hand (WN 1.3), taking a real measurement or building a real pattern or solid (ME 1.1, GE 1.1, GE 2.1), and anything that needs the pupil to draw. These are the verbs a printed self-checking page cannot see; the teacher notes say so. **Excluded as above Primary 2** (and never used): decimals beyond dollars-and-cents notation, adding or subtracting decimal money (Primary 3), conversions kg to g, m to cm, ℓ to mℓ, tables of 6 to 9, division with remainder, equivalent fractions, unlike fractions, mixed numbers, bar graphs, tally charts as a taught skill, 24-hour time, angles, area and perimeter.
@@ -73,7 +73,7 @@ Page ids P2-01 to P2-40 are in build order; "Pos" is the position in the booklet
 | S1-14 | P2-14 | Times Table Maze | Multiplication and Division 3.1, Multiplication and Division 3.2, Multiplication and Division 3.5 | 1 | K6 route closes at FINISH |
 | S1-15 | P2-19 | Fact Families | Multiplication and Division 3.2, Multiplication and Division 3.3, Multiplication and Division 3.4 | 2 | K8 loop closes |
 | S1-16 | P2-20 | True or False Tables | Multiplication and Division 3.1, Multiplication and Division 3.3, Multiplication and Division 3.4, Multiplication and Division 3.5 | 2 | K1 letters spell a word |
-| S1-17 | P2-39 | Colour the Dinosaur | Multiplication and Division 3.1, Multiplication and Division 3.2, Multiplication and Division 3.3, Multiplication and Division 3.4, Multiplication and Division 3.5 | 2 | colour by code, tally and matching parts |
+| S1-17 | P2-39 | Colour the House | Multiplication and Division 3.1, Multiplication and Division 3.2, Multiplication and Division 3.3, Multiplication and Division 3.4, Multiplication and Division 3.5 | 2 | colour by code, tally and matching parts |
 | S1-18 | P2-15 | Parts of a Whole | Fractions 1.1, Fractions 1.2 | 1 | K1 code word |
 | S1-19 | P2-21 | Fraction Order | Fractions 1.2, Fractions 1.3 | 2 | K1 letters spell a word |
 | S1-20 | P2-22 | Fraction Sums | Fractions 2.1 | 2 | K1 code word |
@@ -101,9 +101,9 @@ Page ids P2-01 to P2-40 are in build order; "Pos" is the position in the booklet
 | S2-17 | P2-35 | Solid Sort | 3D Shapes 2.1 | 2 | K3 total 15 + K1 code word |
 | S2-18 | P2-36 | Picture Graph Scales | Picture Graphs with Scales 1.1 | 1 | K1 code word |
 | S2-19 | P2-37 | Graph Detective Two | Picture Graphs with Scales 1.1 | 2 | K1 code word |
-| S2-20 | P2-40 | Colour the Butterfly | 2D Shapes 1.1, 3D Shapes 2.1 | 2 | colour by code, tally and matching parts |
+| S2-20 | P2-40 | Colour the Butterfly | Time 2.1, Time 2.2, Time 2.3 | 2 | colour by code, tally and matching parts |
 
-(These tables were regenerated from the built pages after the build; the page titles, outcomes and mechanics are those in `school/p2/gen/`. Differences from the first draft of this plan are listed in the build report.)
+(Regenerated from the built pages after the audit-fix build; titles, outcomes and mechanics are those in `school/p2/gen/`.)
 
 ## 3. Ranges and wording
 

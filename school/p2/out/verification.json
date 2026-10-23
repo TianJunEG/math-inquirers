@@ -2466,7 +2466,7 @@
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
-  "seed": 303,
+  "seed": 306,
   "checks": [
    {
     "name": "V1 every question has exactly one answer in the bank's domain",
@@ -2486,7 +2486,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 2, 'red': 4, 'blue': 2, 'green': 4, 'orange': 3}"
+    "detail": "{'yellow': 3, 'red': 2, 'blue': 4, 'green': 4, 'orange': 2}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
