@@ -14,9 +14,9 @@ Per-unit status (G = gates: answers checked, wording lint, dup gate, build, page
 | 4 | Algebra machines | done, gates pass, viewed |
 | 5 | Every possible way | done, gates pass, viewed |
 | 6 | Fair or unfair? | done, gates pass, viewed |
-| 7 | Turtle geometry | not started |
-| 8 | Secret codes | not started |
-| 9 | Data detectives | not started |
+| 7 | Turtle geometry | done, gates pass, viewed |
+| 8 | Secret codes | done, gates pass, viewed |
+| 9 | Data detectives | done, gates pass, viewed |
 | 10 | Showcase challenge | not started |
 
 To resume: start the next unit in the table: write `src/uNN.py` (copy the shape of `src/u01.py`), run it (it prints the page fills), write `verify/l6_uNN_checks.py`, then
