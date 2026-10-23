@@ -340,3 +340,6 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 ## 2026-10-24 (owner, deferred rewrite now)
 - REWRITE-NOW: the owner pasted the status table row "The rewrite of lessons 10, 21, 23, 24, 28 and 36 against private sources ..." and wrote "do now" (message cut off). Understood as: do the Level 1 term lesson rewrite (TERMCHECK "too close" items) NOW, not after 6 Nov. Overrides Rewrite-after-6nov. To be confirmed with the owner if the intent was different.
 - REWRITE-NOW confirmed by the owner (24 Oct): "u can start with this because it is alot of work". The rewrite of Level 1 term lessons 10, 21, 23, 24, 28, 36 is prioritised first.
+
+## 2026-10-24 (owner, school booklets P3 to P6)
+- SCHOOLBOOKS-P3-6-GO: owner said "School booklets, Primary 3 to 6 - work on this". Overrides SCHOOLBOOKS-WAIT. Four agents build school/p3 to school/p6 in parallel from the audited school/p2 pipeline (briefs: scratchpad brief_p3..p6.txt). Independent audits follow. Licence wording still awaits the lawyer; nothing is sold or sent.
