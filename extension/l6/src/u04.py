@@ -126,7 +126,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', 'IN 5 gives OUT {b}.', [35]),
                    P('b', 'OUT 77 comes from IN {b}.', [12]),
                    P('c', f'Joined, the rule is OUT = {{b}} {X} n + {{b}}.', [6, 5], '6, 5')],
-            hint='Start from the OUT end of the joined machines.', partsrow=True, space={'rows': ['Working:']}))
+            hint='Which end of the joined machines do you already know?', partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'T', 2, 4,
             'Ali is n years old. His brother is 4 years older. Their mother is 3 times as old as Ali. Together the 3 of them are 64 years old.',
             f'Ali n, brother n + 4, mother 3n. Together: n + (n + 4) + 3n = 5n + 4 = 64. So 5n = 60 and n = 12. Ali is 12, his brother is 16 and their mother is 36. Check: 12 + 16 + 36 = 64.',
@@ -191,5 +191,14 @@ I.append(IT(U, 'C', 4, 6,
             f'n + (n + 4) = 2n + 4 = 30. So 2n = 26 and n = 13. Check: 13 + 17 = 30.',
             answer=A([13], '13')))
 
+learn['facts'] = {'title': 'Reading the code blocks', 'lines': [
+    'repeat 5: do the blocks inside 5 times.',
+    'repeat until <test>: keep going until the test is true.',
+    'if <test> then ... else ...: do the first part if the test is true. If not, do the else part.',
+    'n mod d: the remainder when n is divided by d.',
+    'pick random 1 to 6: a random whole number from 1 to 6.',
+    'item i of list: the i-th number in the list. The first is item 1.',
+    'answer: what the user just typed after ask.',
+    '↻ turn: turn clockwise.']}
 write_unit(4, 'Algebra machines', 'Machines and equations',
            'I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.', learn, I)

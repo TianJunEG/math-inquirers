@@ -18,16 +18,16 @@ def alpha():
 
 
 learn = {
-    'intro': 'On a clock, counting past 12 goes back to 1. n mod m is the remainder when n is divided by m. '
+    'intro': 'On a clock, counting past 12 goes back to 1: 5 o\'clock plus 30 hours is 35, and 35 − 24 = 11 o\'clock (2 full turns of 12 are 24). n mod m is the remainder when n is divided by m. '
              'A Caesar code moves every letter along the alphabet: number the letters A = 0 to Z = 25, add the shift, then take mod 26.',
     'example': {
-        'problem': 'Code the word ZIP with a shift of 7.',
+        'problem': 'Code the word JUMP with a shift of 9.',
         'figure': alpha(),
-        'steps': ['Letter numbers: Z = 25, I = 8, P = 15.',
-                  'Add the shift 7 to each: 32, 15 and 22.',
-                  f'Take mod 26: 32 {M} 26 = 6. The numbers are 6, 15 and 22.',
-                  'Back to letters: 6 = G, 15 = P, 22 = W.'],
-        'answer': 'ZIP becomes GPW.'},
+        'steps': ['Letter numbers: J = 9, U = 20, M = 12, P = 15.',
+                  'Add the shift 9 to each: 18, 29, 21 and 24.',
+                  f'29 is more than 25, so take mod 26: 29 {M} 26 = 3. The numbers are 18, 3, 21 and 24.',
+                  'Back to letters: 18 = S, 3 = D, 21 = V, 24 = Y.'],
+        'answer': 'JUMP becomes SDVY.'},
     'howto': {'title': 'How to code and decode',
               'steps': ['Write the letter numbers, A = 0 to Z = 25.',
                         f'To code, add the shift. If the total is 26 or more, take away 26.',
@@ -112,11 +112,11 @@ I.append(IT(U, 'S', 10, 3,
                    P('c', 'The 3rd number it says is the letter {b}.', ['V'])],
             figside=True))
 I.append(IT(U, 'S', 11, 3,
-            'Start at 12 on a clock with 12 numbers. Keep jumping the same number of hours.',
+            'Start at 12 on a clock with 12 numbers. Keep jumping the same number of hours. Count 12 too.',
             'Jumps of 7: 7, 2, 9, 4, 11, 6, 1, 8, 3, 10, 5, 12. All 12 numbers. Jumps of 9: 9, 6, 3, 12. Only 4 numbers, because 9 and 12 share a factor, 3.',
             fig={'type': 'l6_clock', 'ring': [12], 'r': 20},
-            parts=[P('a', 'Jumps of 7 visit {b} different numbers.', [12]),
-                   P('b', 'Jumps of 9 visit {b} different numbers.', [4])],
+            parts=[P('a', 'Jumps of 7 visit {b} different numbers, including 12.', [12]),
+                   P('b', 'Jumps of 9 visit {b} different numbers, including 12.', [4])],
             figside=True))
 
 # ---------------------------------------------------------------- Think harder
@@ -140,7 +140,7 @@ I.append(IT(U, 'T', 3, 4,
             f'A = 0 became E = 4, so the shift is 4. Decode each letter by taking away 4. QIIX: 16, 8, 8, 23 minus 4 is 12, 4, 4, 19: MEET. EX: AT. RSSR: 17, 18, 18, 17 minus 4 is 13, 14, 14, 13: NOON.',
             parts=[P('a', 'The shift is {b}.', [4]),
                    P('b', 'The message is {l}', ['MEET AT NOON'])],
-            hint='A is 0 and its code letter is E. How far is that?', space={'rows': ['Working:', '']}))
+            hint='Compare A with its code letter. How far did it move?', space={'rows': ['Working:', '']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,

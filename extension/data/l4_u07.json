@@ -542,7 +542,7 @@
      }
     }
    ],
-   "explanation": "Each shape has 5 tiles, so the area is 5 cm². Count the edges round each shape. A: 10 cm. B: 5 + 5 + 1 + 1 = 12 cm. C: the plus sign has 12 cm. A is the most compact shape, so it has the least perimeter."
+   "explanation": "Each shape has 5 tiles, so the area is 5 cm². Count the edges. A: 10 cm. B: 5 + 5 + 1 + 1 = 12 cm. C: 12 cm. A is the most compact, so it has the least perimeter."
   },
   {
    "id": "L4U07-S05",
@@ -1020,7 +1020,7 @@
     ]
    },
    "hint": "For (b), the fence makes 2 short sides and 1 long side.",
-   "explanation": "(a) length + width = 14, so the greatest area is a 7 m square: 49 m². (b) The fence is 2 widths and 1 length: 2w + l = 28. w = 7, l = 14 gives 98 m². w = 6 or w = 8 gives 96 m². The greatest is 98 m²."
+   "explanation": "(a) length + width = 14, so the greatest area is a 7 m square: 49 m². (b) 2w + l = 28. w = 7, l = 14 gives 98 m². w = 6 or 8 gives 96 m². The greatest is 98 m²."
   },
   {
    "id": "L4U07-T03",
@@ -1191,7 +1191,7 @@
     }
    ],
    "hint": "The middle square is part of both rectangles.",
-   "explanation": "(a) 10 × 2 + 10 × 2 = 40, but the 2 cm by 2 cm square in the middle is counted twice: 40 − 4 = 36 cm². (b) Each of the 4 arms is 4 cm long and 2 cm wide. Round one arm the edge is 4 + 2 + 4 = 10 cm, so 4 arms make 40 cm.",
+   "explanation": "(a) 10 × 2 + 10 × 2 = 40, but the 2 cm square in the middle is counted twice: 40 − 4 = 36 cm². (b) Each arm is 4 + 2 + 4 = 10 cm round the edge, so 4 arms make 40 cm.",
    "figright": true
   },
   {

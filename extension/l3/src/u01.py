@@ -83,11 +83,11 @@ u.T('The digits of a 4-digit number are all different and add up to 8. The numbe
     P('a', 'The greatest it can be is {b}.', A('5210')), P('b', 'The smallest it can be is {b}.', A('1034'))],
     hint='Find the sets of 4 different digits that add up to 8 first.',
     why='Only two sets of 4 different digits add up to 8: 0, 1, 2, 5 and 0, 1, 3, 4. Even numbers need an even last digit. The greatest even number is 5210. The smallest is 1034.',
-    space={'rows': ['Sets of digits:', 'Numbers I tried:', '', '']})
+    space={'rows': ['Sets of digits:', 'Numbers I tried:', '']})
 u.T('Count the 3-digit numbers whose digits multiply to make 8. No digit is 0. {b}', A('10'),
     hint='List the sets of 3 digits first. Then arrange each set.',
     why='The sets of 3 digits are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. The set 1, 1, 8 makes 118, 181, 811: 3 numbers. The set 1, 2, 4 makes 124, 142, 214, 241, 412, 421: 6 numbers. The set 2, 2, 2 makes 222: 1 number. 3 + 6 + 1 = 10.',
-    space={'rows': ['Sets of digits:', 'Numbers:', '', '']})
+    space={'rows': ['Sets of digits:', 'Numbers:', '']})
 u.T('Mei makes 4-digit numbers with the cards 1, 2, 3 and 4. She uses each card once.', parts=[
     P('a', '{b} of the numbers are greater than 2500.', A('12')), P('b', 'The 7th smallest number is {b}.', A('2134'))],
     hint='List them from the smallest. Fix the first digit.',

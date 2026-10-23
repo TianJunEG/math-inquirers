@@ -129,7 +129,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', 'The rule for the nth term is {b} − 5n.', [63]),
                    P('b', 'The 10th term is {b}.', [13]),
                    P('c', 'The last term above 0 is term number {b}.', [12])],
-            hint='The terms go down by 5. Take 5 × n away from a start number.', partsrow=True, space={'rows': ['Working:']}))
+            hint='By how much do the terms change each step? Build the rule from it.', partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'T', 2, 4,
             'Program P starts at the 1st term of 6, 10, 14, 18, ... Program Q starts at the 5th term of the same sequence. Both change by 4 each repeat.',
             'The 5th term is 4 × 5 + 2 = 22. Q adds 4 sixteen times: 22 + 64 = 86. Q has moved 16 terms on, so it ends at term 5 + 16 = 21. '
@@ -147,7 +147,7 @@ I.append(IT(U, 'T', 3, 4,
                    P('b', 'Each jump is {b}.', [6]),
                    P('c', 'The 1st term is {b}.', [5]),
                    P('d', 'The rule is {b} × n − {b}.', [6, 1], '6, 1')],
-            hint='Count the jumps between the 2 terms. Share the rise equally.', partsrow=True, space={'rows': ['Working:']}))
+            hint='How many jumps are there between the 2 known terms?', partsrow=True, space={'rows': ['Working:']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,

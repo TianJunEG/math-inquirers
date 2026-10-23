@@ -1,7 +1,6 @@
 """Shorter answer explanations for the longest items.  lib.write_unit puts these in place of the long form written in uNN.py, so that the answer section
 stays within the page budget (the book must not run over 100 pages).  Keys are item ids; the maths is the same as in the long form."""
 WHY = {
- 'L6U02-G01': "(a) 72 has 12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. A factor uses 0 to 3 twos and 0 to 2 threes: 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5 gives 3 × 3 × 2 = 18. (c) 60 = 2 × 2 × 3 × 5 gives 3 × 2 × 2 = 12, and no smaller number has 12.",
  'L6U04-G02': "(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so n = 31. (b) 5 odd numbers: n + (n + 2) + (n + 4) + (n + 6) + (n + 8) = 5n + 20 = 125, so n = 21. (c) 4n + 6 = 100 gives n = 23.5, not a whole number: No.",
  'L6U07-G01': "Right 10, down 20, left 30, up 40 ends at x = 10 − 30 = −20, y = −20 + 40 = 20. The next 4 moves (50, 60, 70, 80) end at x = −40, y = 40. Each 4 repeats adds −20 to x and 20 to y, so 12 repeats end at (−60, 60).",
  'L6U04-G01': "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 for every 1 of IN, so the lead is gone in 4 steps, at IN 6. Both give 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.",
@@ -67,5 +66,4 @@ WHY.update({
  'L6U10-T03': "Digits adding to 10: 19, 28, 37, 46, 55, 64, 73, 82, 91. Primes: 19, 37, 73. Reversed: 91 = 7 × 13 is not prime, but 73 and 37 both are.",
  'L6U08-T02': "10 Jan to 10 Apr: 31 + 28 + 31 = 90 days. 90 mod 7 = 6 (90 = 12 × 7 + 6). Tuesday and 6 more days is Monday.",
  'L6U04-T02': "Ali n, brother n + 4, mother 3n: 5n + 4 = 64, so n = 12. Ali is 12, his brother 16, their mother 36 (12 + 16 + 36 = 64).",
- 'L6U02-T01': "(a) 16 has 5 factors (1, 2, 4, 8, 16). (b) 36 has 9 (1, 2, 3, 4, 6, 9, 12, 18, 36). (c) 48 has 10 (1, 2, 3, 4, 6, 8, 12, 16, 24, 48). Smaller numbers have fewer.",
 })

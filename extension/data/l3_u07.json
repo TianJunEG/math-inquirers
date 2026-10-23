@@ -236,7 +236,7 @@
      }
     }
    ],
-   "explanation": "(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 m.",
+   "explanation": "(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) 4 equal sides: 36 ÷ 4 = 9 m.",
    "partsrow": true
   },
   {
@@ -625,7 +625,7 @@
      }
     }
    ],
-   "explanation": "(a) 8 × 8 = 64, so each side is 8 m. (b) The border is the perimeter: 4 × 8 = 32 m.",
+   "explanation": "(a) 8 × 8 = 64, so each side is 8 m. (b) The border is the perimeter: 32 m.",
    "partsrow": true
   },
   {
@@ -665,7 +665,7 @@
      }
     }
    ],
-   "explanation": "Each rectangle is 8 cm by 4 cm: perimeter 24 cm, so 48 cm in all. The square has 32 cm, and 48 - 32 = 16. The 8 cm cut is on both pieces: 2 × 8 = 16 cm.",
+   "explanation": "Each rectangle is 8 cm by 4 cm: perimeter 24 cm, so 48 cm in all. The square has 32 cm, and 48 - 32 = 16. The 8 cm cut is on both pieces: 16 cm.",
    "hint": "Draw the square. Draw the cut.",
    "space": {
     "rows": [
@@ -700,7 +700,7 @@
      }
     }
    ],
-   "explanation": "Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36 are 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9.",
+   "explanation": "Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36: 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9.",
    "hint": "List pairs that multiply to 36. Then add each pair.",
    "space": {
     "rows": [

@@ -448,7 +448,7 @@
      }
     }
    ],
-   "explanation": "52 ÷ 9 = 5 remainder 7. 5 full buses are not enough, because 7 children are left. So they need 6 buses. The last bus has 7 children, and 9 - 7 = 2 seats are empty."
+   "explanation": "52 ÷ 9 = 5 remainder 7. 5 full buses are not enough, as 7 children are left. So they need 6 buses. The last bus has 7 children, and 9 - 7 = 2 seats are empty."
   },
   {
    "id": "L3U05-S10",
@@ -477,7 +477,7 @@
      }
     }
    ],
-   "explanation": "The pattern repeats every 4 letters. 30 ÷ 4 = 7 remainder 2, so the 30th letter is the 2nd of the pattern: B. 32 ÷ 4 = 8 with none left, so the 32nd is the last: D.",
+   "explanation": "The pattern repeats every 4 letters. 30 ÷ 4 = 7 remainder 2, so the 30th letter is the 2nd: B. 32 ÷ 4 = 8 with none left, so the 32nd is the last: D.",
    "figure": {
     "type": "l3_grid",
     "head_col": true,
@@ -568,7 +568,7 @@
     "text": "18, 23, 33 and 48",
     "list": true
    },
-   "explanation": "A number leaves remainder 3 when it is 3 more than a number in the 5 times table. 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3, 48 = 45 + 3. 41 = 40 + 1 leaves remainder 1."
+   "explanation": "A number leaves remainder 3 when it is 3 more than a number in the 5 times table: 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3, 48 = 45 + 3. 41 = 40 + 1 leaves 1."
   },
   {
    "id": "L3U05-S13",
@@ -581,7 +581,7 @@
     ],
     "text": "8"
    },
-   "explanation": "47 ÷ 4 = 11 remainder 3. 47 ÷ 5 = 9 remainder 2. 47 ÷ 6 = 7 remainder 5. 47 ÷ 7 = 6 remainder 5. 47 ÷ 8 = 5 remainder 7. The greatest remainder is 7, from 8."
+   "explanation": "47 ÷ 4 = 11 remainder 3. 47 ÷ 5 = 9 remainder 2. 47 ÷ 6 = 7 remainder 5. 47 ÷ 7 = 6 remainder 5. 47 ÷ 8 = 5 remainder 7. The greatest is 7, from 8."
   },
   {
    "id": "L3U05-T01",
@@ -630,7 +630,7 @@
     ],
     "text": "67"
    },
-   "explanation": "Numbers with remainder 2 when divided by 5 end in 2 or 7. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other works.",
+   "explanation": "Numbers with remainder 2 when divided by 5 end in 2 or 7. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other.",
    "hint": "Begin with the clue that gives the fewest numbers to list.",
    "space": {
     "rows": [
@@ -844,7 +844,7 @@
     ],
     "text": "29"
    },
-   "explanation": "The numbers from 20 to 30 that leave remainder 2 when divided by 3 are 20, 23, 26 and 29. Of these, only 29 leaves remainder 4 when divided by 5 (25 + 4)."
+   "explanation": "The numbers from 20 to 30 with remainder 2 when divided by 3 are 20, 23, 26 and 29. Only 29 leaves remainder 4 when divided by 5 (25 + 4)."
   }
  ]
 }

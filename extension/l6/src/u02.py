@@ -19,7 +19,9 @@ learn = {
               'steps': ['Try the primes 2, 3, 5, 7, ... in order.',
                         'Find n mod d. A remainder of 0 means d is a factor.',
                         'Stop when d × d is more than n.',
-                        'No remainder was 0? Then n is prime.']},
+                        'No remainder was 0? Then n is prime.',
+                        'Quick tests: an even last digit means 2 is a factor, digits adding to a multiple of 3 means 3 is a factor, and a last digit of 0 or 5 means 5 is a factor.',
+                        'Factor tree: split a number into 2 factors again and again. The ends that cannot split are primes: 60 = 6 × 10 = 2 × 3 × 2 × 5.']},
     'try': IT(U, 'L', 1, 0, 'Is 143 prime?  {circ:Yes|No}   If not, 143 = {b} × {b}.',
               'Test 2, 3, 5 and 7: each leaves a remainder (143 mod 7 = 3). Then test 11, because 11 × 11 = 121 is less than 143: 11 × 13 = 143. '
               'So 143 is not prime.',
@@ -59,7 +61,7 @@ I.append(IT(U, 'S', 4, 1,
             parts=[P('a', 'The code says {b}.', [4]),
                    P('b', 'To count all the factors of 20, change repeat 6 to repeat {b}.', [20])]))
 I.append(IT(U, 'S', 5, 2,
-            'Use the primes to write 26 as a sum of 2 primes. Find every way.',
+            'Write 26 as a sum of 2 primes. The 2 primes may be the same. Find every way.',
             'Try each prime and see if 26 take away that prime is also prime: 26 − 3 = 23, 26 − 7 = 19 and 26 − 13 = 13 all work. '
             '26 − 2, 26 − 5, 26 − 11, 26 − 17 are 24, 21, 15 and 9, which are not prime. There are 3 ways.',
             fig=grid([['2', '3', '5', '7', '11', '13', '17', '19', '23', '29']], [13] * 10, ch=10),
@@ -116,7 +118,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', '5 factors:  {b}', [16]),
                    P('b', '9 factors:  {b}', [36]),
                    P('c', '10 factors:  {b}', [48])],
-            hint='Count the factors of 12, 16, 24, 36 and 48. Look for a match.', partsrow=True, space={'rows': ['Working:', '']}))
+            hint='Check numbers in order. Count their factors until you reach 5.', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 2, 4,
             'A number is 2 × 3 × p, where p is a prime greater than 5. The number is less than 100.',
             'p can be 7, 11 or 13: 2 × 3 × 7 = 42, 2 × 3 × 11 = 66 and 2 × 3 × 13 = 78. p = 17 gives 102, which is too big. '
@@ -143,7 +145,7 @@ I.append(IT(U, 'G', 1, 5,
             parts=[P('a', 'List the factors of 72, then count them: {b}', [12]),
                    P('b', '180 = 2 × 2 × 3 × 3 × 5 has {b} factors.', [18]),
                    P('c', 'The smallest number with exactly 12 factors is {b}.', [60])],
-            hint='A factor uses 0 to 3 twos and 0 to 2 threes. Count choices.',
+            hint='Break 72 into primes first. Then count the choices for each prime.',
             beyond='Counting factors', space={'rows': ['Factors of 72:']}))
 I.append(IT(U, 'G', 2, 5,
             'Use the sieve to find the primes up to 60. Start by crossing out 1. Then do this for 2, 3, 5 and 7: ring the number and cross out its other multiples.',

@@ -8,9 +8,9 @@
  "holiday_lesson": 8,
  "goal": "I can do clock arithmetic with mod. I can code and decode a secret message with a shift.",
  "learn": {
-  "intro": "On a clock, counting past 12 goes back to 1. n mod m is the remainder when n is divided by m. A Caesar code moves every letter along the alphabet: number the letters A = 0 to Z = 25, add the shift, then take mod 26.",
+  "intro": "On a clock, counting past 12 goes back to 1: 5 o'clock plus 30 hours is 35, and 35 − 24 = 11 o'clock (2 full turns of 12 are 24). n mod m is the remainder when n is divided by m. A Caesar code moves every letter along the alphabet: number the letters A = 0 to Z = 25, add the shift, then take mod 26.",
   "example": {
-   "problem": "Code the word ZIP with a shift of 7.",
+   "problem": "Code the word JUMP with a shift of 9.",
    "figure": {
     "type": "l6_grid",
     "rows": [
@@ -172,12 +172,12 @@
     "fs": 16
    },
    "steps": [
-    "Letter numbers: Z = 25, I = 8, P = 15.",
-    "Add the shift 7 to each: 32, 15 and 22.",
-    "Take mod 26: 32 − 26 = 6. The numbers are 6, 15 and 22.",
-    "Back to letters: 6 = G, 15 = P, 22 = W."
+    "Letter numbers: J = 9, U = 20, M = 12, P = 15.",
+    "Add the shift 9 to each: 18, 29, 21 and 24.",
+    "29 is more than 25, so take mod 26: 29 − 26 = 3. The numbers are 18, 3, 21 and 24.",
+    "Back to letters: 18 = S, 3 = D, 21 = V, 24 = Y."
    ],
-   "answer": "ZIP becomes GPW."
+   "answer": "JUMP becomes SDVY."
   },
   "howto": {
    "title": "How to code and decode",
@@ -202,51 +202,6 @@
   }
  },
  "items": [
-  {
-   "id": "L6U08-S01",
-   "tier": "start",
-   "text": "The clock shows 8 o'clock now. A clock goes back to 1 after 12.",
-   "page": 1,
-   "parts": [
-    {
-     "label": "a",
-     "text": "In 7 hours it will be {b} o'clock.",
-     "answer": {
-      "value": [
-       "3"
-      ],
-      "text": "3"
-     }
-    },
-    {
-     "label": "b",
-     "text": "It is 5 o'clock. 9 hours earlier the clock showed {b}.",
-     "answer": {
-      "value": [
-       "8"
-      ],
-      "text": "8"
-     }
-    },
-    {
-     "label": "c",
-     "text": "At 7 o'clock, 50 hours later it is {b} o'clock.",
-     "answer": {
-      "value": [
-       "9"
-      ],
-      "text": "9"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_clock",
-    "hand": 8,
-    "r": 21
-   },
-   "explanation": "(a) 8 + 7 = 15, and 15 − 12 = 3. (b) 5 − 9 = −4, and −4 + 12 = 8. (c) 7 + 50 = 57. 57 − 48 = 9 (4 full turns of 12 are 48), so it is 9 o'clock.",
-   "figside": true
-  },
   {
    "id": "L6U08-S02",
    "tier": "start",
@@ -365,6 +320,195 @@
     "ch": 9
    },
    "explanation": "40 mod 7 = 5. Thursday and 5 more days: Fri, Sat, Sun, Mon, Tue. 100 mod 7 = 2, so Thursday + 2 is Saturday. 20 mod 7 = 6. Back 6 days from Thursday: Wed, Tue, Mon, Sun, Sat, Fri."
+  },
+  {
+   "id": "L6U08-S04",
+   "tier": "start",
+   "text": "Use the letter table to code each word. Add the shift to every letter number.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "HELP with a shift of 3: {l}",
+     "answer": {
+      "value": [
+       "KHOS"
+      ],
+      "text": "KHOS"
+     }
+    },
+    {
+     "label": "b",
+     "text": "MAZE with a shift of 5: {l}",
+     "answer": {
+      "value": [
+       "RFEJ"
+      ],
+      "text": "RFEJ"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      {
+       "t": "A",
+       "shade": true
+      },
+      {
+       "t": "B",
+       "shade": true
+      },
+      {
+       "t": "C",
+       "shade": true
+      },
+      {
+       "t": "D",
+       "shade": true
+      },
+      {
+       "t": "E",
+       "shade": true
+      },
+      {
+       "t": "F",
+       "shade": true
+      },
+      {
+       "t": "G",
+       "shade": true
+      },
+      {
+       "t": "H",
+       "shade": true
+      },
+      {
+       "t": "I",
+       "shade": true
+      },
+      {
+       "t": "J",
+       "shade": true
+      },
+      {
+       "t": "K",
+       "shade": true
+      },
+      {
+       "t": "L",
+       "shade": true
+      },
+      {
+       "t": "M",
+       "shade": true
+      }
+     ],
+     [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     [
+      {
+       "t": "N",
+       "shade": true
+      },
+      {
+       "t": "O",
+       "shade": true
+      },
+      {
+       "t": "P",
+       "shade": true
+      },
+      {
+       "t": "Q",
+       "shade": true
+      },
+      {
+       "t": "R",
+       "shade": true
+      },
+      {
+       "t": "S",
+       "shade": true
+      },
+      {
+       "t": "T",
+       "shade": true
+      },
+      {
+       "t": "U",
+       "shade": true
+      },
+      {
+       "t": "V",
+       "shade": true
+      },
+      {
+       "t": "W",
+       "shade": true
+      },
+      {
+       "t": "X",
+       "shade": true
+      },
+      {
+       "t": "Y",
+       "shade": true
+      },
+      {
+       "t": "Z",
+       "shade": true
+      }
+     ],
+     [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+     ]
+    ],
+    "cw": [
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9,
+     9
+    ],
+    "ch": 8,
+    "fs": 16
+   },
+   "explanation": "HELP: 7, 4, 11, 15 plus 3 is 10, 7, 14, 18, which is KHOS. MAZE: 12, 0, 25, 4 plus 5 is 17, 5, 30, 9. 30 − 26 = 4, so the numbers 17, 5, 4, 9 are RFEJ."
   },
   {
    "id": "L6U08-S06",
@@ -883,193 +1027,49 @@
    "figside": true
   },
   {
-   "id": "L6U08-S04",
+   "id": "L6U08-S01",
    "tier": "start",
-   "text": "Use the letter table to code each word. Add the shift to every letter number.",
+   "text": "The clock shows 8 o'clock now. A clock goes back to 1 after 12.",
    "page": 3,
    "parts": [
     {
      "label": "a",
-     "text": "HELP with a shift of 3: {l}",
+     "text": "In 7 hours it will be {b} o'clock.",
      "answer": {
       "value": [
-       "KHOS"
+       "3"
       ],
-      "text": "KHOS"
+      "text": "3"
      }
     },
     {
      "label": "b",
-     "text": "MAZE with a shift of 5: {l}",
+     "text": "It is 5 o'clock. 9 hours earlier the clock showed {b}.",
      "answer": {
       "value": [
-       "RFEJ"
+       "8"
       ],
-      "text": "RFEJ"
+      "text": "8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "At 7 o'clock, 50 hours later it is {b} o'clock.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
      }
     }
    ],
    "figure": {
-    "type": "l6_grid",
-    "rows": [
-     [
-      {
-       "t": "A",
-       "shade": true
-      },
-      {
-       "t": "B",
-       "shade": true
-      },
-      {
-       "t": "C",
-       "shade": true
-      },
-      {
-       "t": "D",
-       "shade": true
-      },
-      {
-       "t": "E",
-       "shade": true
-      },
-      {
-       "t": "F",
-       "shade": true
-      },
-      {
-       "t": "G",
-       "shade": true
-      },
-      {
-       "t": "H",
-       "shade": true
-      },
-      {
-       "t": "I",
-       "shade": true
-      },
-      {
-       "t": "J",
-       "shade": true
-      },
-      {
-       "t": "K",
-       "shade": true
-      },
-      {
-       "t": "L",
-       "shade": true
-      },
-      {
-       "t": "M",
-       "shade": true
-      }
-     ],
-     [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12"
-     ],
-     [
-      {
-       "t": "N",
-       "shade": true
-      },
-      {
-       "t": "O",
-       "shade": true
-      },
-      {
-       "t": "P",
-       "shade": true
-      },
-      {
-       "t": "Q",
-       "shade": true
-      },
-      {
-       "t": "R",
-       "shade": true
-      },
-      {
-       "t": "S",
-       "shade": true
-      },
-      {
-       "t": "T",
-       "shade": true
-      },
-      {
-       "t": "U",
-       "shade": true
-      },
-      {
-       "t": "V",
-       "shade": true
-      },
-      {
-       "t": "W",
-       "shade": true
-      },
-      {
-       "t": "X",
-       "shade": true
-      },
-      {
-       "t": "Y",
-       "shade": true
-      },
-      {
-       "t": "Z",
-       "shade": true
-      }
-     ],
-     [
-      "13",
-      "14",
-      "15",
-      "16",
-      "17",
-      "18",
-      "19",
-      "20",
-      "21",
-      "22",
-      "23",
-      "24",
-      "25"
-     ]
-    ],
-    "cw": [
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9,
-     9
-    ],
-    "ch": 8,
-    "fs": 16
+    "type": "l6_clock",
+    "hand": 8,
+    "r": 21
    },
-   "explanation": "HELP: 7, 4, 11, 15 plus 3 is 10, 7, 14, 18, which is KHOS. MAZE: 12, 0, 25, 4 plus 5 is 17, 5, 30, 9. 30 − 26 = 4, so the numbers 17, 5, 4, 9 are RFEJ."
+   "explanation": "(a) 8 + 7 = 15, and 15 − 12 = 3. (b) 5 − 9 = −4, and −4 + 12 = 8. (c) 7 + 50 = 57. 57 − 48 = 9 (4 full turns of 12 are 48), so it is 9 o'clock.",
+   "figside": true
   },
   {
    "id": "L6U08-S08",
@@ -1152,12 +1152,12 @@
   {
    "id": "L6U08-S11",
    "tier": "start",
-   "text": "Start at 12 on a clock with 12 numbers. Keep jumping the same number of hours.",
+   "text": "Start at 12 on a clock with 12 numbers. Keep jumping the same number of hours. Count 12 too.",
    "page": 3,
    "parts": [
     {
      "label": "a",
-     "text": "Jumps of 7 visit {b} different numbers.",
+     "text": "Jumps of 7 visit {b} different numbers, including 12.",
      "answer": {
       "value": [
        "12"
@@ -1167,7 +1167,7 @@
     },
     {
      "label": "b",
-     "text": "Jumps of 9 visit {b} different numbers.",
+     "text": "Jumps of 9 visit {b} different numbers, including 12.",
      "answer": {
       "value": [
        "4"

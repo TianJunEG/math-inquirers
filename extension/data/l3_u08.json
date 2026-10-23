@@ -508,7 +508,7 @@
      }
     }
    ],
-   "explanation": "There are 3 small angles. The next size is made of 2 small angles side by side: 2 of those. Then 1 angle made of all 3 small ones. 3 + 2 + 1 = 6 angles.",
+   "explanation": "There are 3 small angles. The next size is 2 small angles side by side: 2 of those. Then 1 angle made of all 3 small ones. 3 + 2 + 1 = 6 angles.",
    "figure": {
     "type": "l3_segs",
     "k": 44,
@@ -768,7 +768,7 @@
      }
     }
    ],
-   "explanation": "Turning right from north: east, south, west. (a) 1 turn: east. (b) 3 turns: west. (c) 2 turns left: west, then south. Two right angles either way face the opposite way: south."
+   "explanation": "Turning right from north: east, south, west. (a) 1 turn: east. (b) 3 turns: west. (c) 2 turns left: west, then south. Two right angles either way: south."
   },
   {
    "id": "L3U08-S08",

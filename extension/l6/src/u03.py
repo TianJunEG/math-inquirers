@@ -122,7 +122,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', f'6 {M} ({M}4) = {{b}}', [10]),
                    P('b', f'{M}2 {M} ({M}5) = {{b}}', [3]),
                    P('c', f'So taking away {M}4 gives the same result as adding {{b}}.', [4])],
-            hint='How far is it from the second number up to the first number?', partsrow=True, space={'rows': ['Number line:', '']}, beyond='Subtracting a negative number'))
+            hint='Picture both numbers on a number line.', partsrow=True, space={'rows': ['Number line:', '']}, beyond='Subtracting a negative number'))
 I.append(IT(U, 'T', 2, 4,
             f'A sprite starts at x = {M}90. The loop stops as soon as x is greater than 40 at the start of a repeat.',
             f'Each repeat changes x by 35 {M} 10 = 25. After the repeats x is {M}65, {M}40, {M}15, 10, 35, 60. After 5 repeats x = 35, which is not greater than 40, so it repeats a 6th time. '
@@ -164,7 +164,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'From 5 BC to 1 BC is {b} years.', [4]),
                    P('b', 'From 3 BC to AD 4 is {b} years.', [6]),
                    P('c', 'A person born in 10 BC dies in AD 12. They are {b} years old.', [21])],
-            hint='A number line with 0 would be 1 step too short.', beyond='A calendar with no year 0', partsrow=True, space={'rows': ['Working:', '']}))
+            hint='Which year comes straight after 1 BC? Count carefully.', beyond='A calendar with no year 0', partsrow=True, space={'rows': ['Working:', '']}))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

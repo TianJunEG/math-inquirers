@@ -229,7 +229,7 @@
     ],
     "text": "4406"
    },
-   "explanation": "3 boxes are 3000 pins. 14 packs are 1400 pins. 3000 + 1400 + 6 = 4406."
+   "explanation": "3 boxes are 3000 pins. 14 packs are 1400. 3000 + 1400 + 6 = 4406."
   },
   {
    "id": "L3U01-S06",
@@ -278,7 +278,7 @@
      }
     }
    ],
-   "explanation": "(a) Greatest digits first: 8752. (b) Smallest first, no 0 here: 2578. (c) The ones digit is 7 or 5. With 5 last, 8725 beats 8527. (d) With 7 last, 2587 beats 2785.",
+   "explanation": "(a) Greatest digits first: 8752. (b) Smallest first, no 0 here: 2578. (c) The ones digit is 7 or 5. 5 last: 8725 beats 8527. (d) 7 last: 2587 beats 2785.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -306,7 +306,7 @@
     "text": "3005, 3050, 3500, 5003, 5030, 5300",
     "list": true
    },
-   "explanation": "The first digit is 3 or 5, never 0. After 3, the 5 goes in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same: 5003, 5030, 5300. That is 6 numbers.",
+   "explanation": "The first digit is 3 or 5, never 0. After 3, the 5 goes in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same: 5003, 5030, 5300. 6 numbers.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -365,7 +365,7 @@
      }
     }
    ],
-   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8: 30 + 8 = 38, 38 + 8 = 46."
+   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8: 38, then 46."
   },
   {
    "id": "L3U01-S09",
@@ -546,7 +546,7 @@
      }
     }
    ],
-   "explanation": "The first 7 is in the hundreds place: 700. The second is in the ones place: 7. 700 - 7 = 693."
+   "explanation": "First 7: hundreds, 700. Second 7: ones, 7. 700 - 7 = 693."
   },
   {
    "id": "L3U01-T01",
@@ -581,7 +581,6 @@
     "rows": [
      "Sets of digits:",
      "Numbers I tried:",
-     "",
      ""
     ]
    }
@@ -597,13 +596,12 @@
     ],
     "text": "10"
    },
-   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. Set 1, 1, 8 makes 118, 181, 811: 3 numbers. Set 1, 2, 4 makes 6 numbers. Set 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
+   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. Set 1, 1, 8 makes 118, 181, 811: 3 numbers. Set 1, 2, 4 makes 6. Set 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
    "hint": "List the sets of 3 digits first. Then arrange each set.",
    "space": {
     "rows": [
      "Sets of digits:",
      "Numbers:",
-     "",
      ""
     ]
    }
@@ -673,7 +671,7 @@
      }
     }
    ],
-   "explanation": "Sum 4: first digit 4 gives 1 number (400), 3 gives 2 (310, 301), 2 gives 3, 1 gives 4: 1 + 2 + 3 + 4 = 10. Sum 5, first digit 1 gives 5 numbers: 1 + 2 + 3 + 4 + 5 = 15.",
+   "explanation": "Sum 4: first digit 4 gives 1 number (400), 3 gives 2, 2 gives 3, 1 gives 4: 1 + 2 + 3 + 4 = 10. Sum 5, first digit 1 gives 5 numbers: 1 + 2 + 3 + 4 + 5 = 15.",
    "hint": "Fix the first digit. See how the counts grow: 1, 2, 3, ...",
    "space": {
     "rows": [
@@ -778,7 +776,7 @@
     ],
     "text": "1056"
    },
-   "explanation": "The first digit cannot be 0, so use 1. Then the rest in order: 0, 5, 6. The number is 1056.",
+   "explanation": "The first digit cannot be 0, so use 1, then 0, 5, 6. The number is 1056.",
    "figure": {
     "type": "l3_cards",
     "items": [

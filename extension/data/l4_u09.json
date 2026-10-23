@@ -316,7 +316,7 @@
      }
     }
    ],
-   "explanation": "4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and only 29 in Week 2.",
+   "explanation": "4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 112. Week 2: 117. Total 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and 29 in Week 2.",
    "figside": true
   },
   {
@@ -419,7 +419,7 @@
      }
     }
    ],
-   "explanation": "(a) The dashed Mei line is on 60 in Week 3. (b) Ali's line goes up by 10 each week. (c) The lines meet in Week 7 at $80. (d) In Week 8 Ali has $90 and Mei has $85, so Week 8 is the first week Ali has more.",
+   "explanation": "(a) Mei is on 60 in Week 3. (b) Ali goes up by 10 each week. (c) The lines meet in Week 7 at $80. (d) In Week 8 Ali has $90 and Mei $85: the first week Ali has more.",
    "partsrow": true
   },
   {
@@ -683,7 +683,7 @@
      "Working:"
     ]
    },
-   "explanation": "(a) From 7 am to noon is 5 hours: 25 + 5 × 2 = 35 °C. (b) From noon to 3 pm is 3 hours: 35 − 3 × 3 = 26 °C. (c) 29 − 25 = 4 °C more, and 4 ÷ 2 = 2 hours after 7 am, which is 9 am."
+   "explanation": "(a) 7 am to noon is 5 hours: 25 + 5 × 2 = 35 °C. (b) Noon to 3 pm is 3 hours: 35 − 3 × 3 = 26 °C. (c) 29 − 25 = 4 °C, and 4 ÷ 2 = 2 hours: 9 am."
   },
   {
    "id": "L4U09-T01",
@@ -719,7 +719,7 @@
     ]
    },
    "hint": "From Week 3 to Week 8 is 5 weeks. How much is that each week?",
-   "explanation": "87 − 52 = 35 over 5 weeks, so sales go up by 7 each week. Week 1 is 2 weeks before Week 3: 52 − 14 = 38. Week 9 is 94 and Week 10 is 101, so Week 10 is the first week above 100."
+   "explanation": "87 − 52 = 35 over 5 weeks, so sales go up by 7 a week. Week 1 is 52 − 14 = 38. Week 9 is 94 and Week 10 is 101: Week 10 is the first above 100."
   },
   {
    "id": "L4U09-T02",
@@ -823,7 +823,7 @@
     ]
    },
    "hint": "Find the sales in January and February first.",
-   "explanation": "On X, January is 80 and February is 100: sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Y's line climbs 4 lines and X's climbs 1, so Y makes the rise look greater."
+   "explanation": "On X, sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Y climbs 4 lines and X climbs 1, so Y makes the rise look greater."
   },
   {
    "id": "L4U09-G02",
@@ -859,7 +859,7 @@
     ]
    },
    "hint": "Take away the extras: 0, 8, 16, 24 and 32.",
-   "explanation": "The extras over Monday are 0 + 8 + 16 + 24 + 32 = 80. Without them, 5 equal days make 340 − 80 = 260, so Monday is 260 ÷ 5 = 52. Friday is 52 + 32 = 84. The days are 52, 60, 68, 76 and 84."
+   "explanation": "The extras over Monday are 0 + 8 + 16 + 24 + 32 = 80. Then 340 − 80 = 260 for 5 equal days, so Monday is 52. The days are 52, 60, 68, 76 and 84."
   },
   {
    "id": "L4U09-G03",

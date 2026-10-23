@@ -53,6 +53,19 @@
     "text": "8"
    },
    "explanation": "Undo the last step first: 41 − 9 = 32. Then undo × 4: 32 ÷ 4 = 8. Check: 8 × 4 + 9 = 41."
+  },
+  "facts": {
+   "title": "Reading the code blocks",
+   "lines": [
+    "repeat 5: do the blocks inside 5 times.",
+    "repeat until <test>: keep going until the test is true.",
+    "if <test> then ... else ...: do the first part if the test is true. If not, do the else part.",
+    "n mod d: the remainder when n is divided by d.",
+    "pick random 1 to 6: a random whole number from 1 to 6.",
+    "item i of list: the i-th number in the list. The first is item 1.",
+    "answer: what the user just typed after ask.",
+    "↻ turn: turn clockwise."
+   ]
   }
  },
  "items": [
@@ -712,7 +725,7 @@
      }
     }
    ],
-   "hint": "Start from the OUT end of the joined machines.",
+   "hint": "Which end of the joined machines do you already know?",
    "space": {
     "rows": [
      "Working:"

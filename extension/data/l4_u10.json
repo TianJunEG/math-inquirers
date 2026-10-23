@@ -214,7 +214,7 @@
      "My answer: {l}"
     ]
    },
-   "explanation": "1 notebook leaves $36 = 12 pens. 4 leave $21 = 7 pens. 7 leave $6 = 2 pens. Other numbers of notebooks leave amounts that are not multiples of $3. So there are 3 ways, and the fewest pens is 2."
+   "explanation": "1 notebook leaves $36 = 12 pens. 4 leave $21 = 7 pens. 7 leave $6 = 2 pens. Other numbers leave amounts that are not multiples of $3. 3 ways, fewest pens 2."
   },
   {
    "id": "L4U10-S03",
@@ -440,7 +440,7 @@
      }
     }
    ],
-   "explanation": "Ali's pet barks, so it is the dog. The fish is the only pet with no fur, so Ben has the fish. A rabbit hops, so Mei does not have the rabbit. The cat and the rabbit are left. Mei has the cat and Siti has the rabbit.",
+   "explanation": "Ali's pet barks: the dog. The fish is the only pet with no fur: Ben. Mei does not have the rabbit, so Mei has the cat and Siti has the rabbit.",
    "partsrow": true
   },
   {
@@ -587,7 +587,7 @@
     ]
    },
    "hint": "Suppose all 12 boxes hold 2 pens. How many pens are missing?",
-   "explanation": "If all 12 boxes held 2 pens, there would be 24 pens. 45 − 24 = 21 pens are missing. Each box of 5 instead of 2 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 12 − 7 = 5 boxes hold 2.",
+   "explanation": "If all 12 boxes held 2 pens, there would be 24 pens, so 21 are missing. A box of 5 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 5 boxes hold 2.",
    "partsrow": true
   },
   {
@@ -695,7 +695,7 @@
     ]
    },
    "hint": "Try a small number of 50¢ coins first.",
-   "explanation": "A group of 3 coins of 20¢ and 1 coin of 50¢ is worth 60¢ + 50¢ = 110¢. $4.40 = 440¢ and 440 ÷ 110 = 4 groups. Each group has 4 coins, so he has 16 coins: 12 coins of 20¢ and 4 coins of 50¢."
+   "explanation": "A group of 3 coins of 20¢ and 1 of 50¢ is worth 110¢. $4.40 = 440¢, and 440 ÷ 110 = 4 groups of 4 coins: 16 coins, 12 of 20¢ and 4 of 50¢."
   },
   {
    "id": "L4U10-G03",
@@ -717,7 +717,7 @@
     ]
    },
    "hint": "Mei may be left or right of Ben.",
-   "explanation": "Mei right of Ben: she is 6 places after him, 11 + 6 = 17th from the left, so there are 17 + 7 = 24 children. Mei left of Ben: she is 11 − 6 = 5th from the left, so there are 5 + 7 = 12 children. Both fit."
+   "explanation": "Mei right of Ben: 11 + 6 = 17th from the left, so 17 + 7 = 24 children. Mei left of Ben: 11 − 6 = 5th from the left, so 5 + 7 = 12 children. Both fit."
   },
   {
    "id": "L4U10-G04",
@@ -753,7 +753,7 @@
     ]
    },
    "hint": "Write the ones digits of the first 6 products. Look for the cycle.",
-   "explanation": "The products are 3, 9, 27, 81, 243, 729, 2187. The ones digits 3, 9, 7, 1 go round in a cycle of 4. (a) The 5th product ends in 3. (b) 20 is 5 whole cycles, so the 20th ends in 1."
+   "explanation": "The products are 3, 9, 27, 81, 243, 729, 2187. The ones digits 3, 9, 7, 1 repeat in a cycle of 4. (a) The 5th ends in 3. (b) 20 is 5 whole cycles, so the 20th ends in 1."
   },
   {
    "id": "L4U10-C01",

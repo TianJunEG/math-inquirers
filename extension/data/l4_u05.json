@@ -350,7 +350,7 @@
      }
     }
    ],
-   "explanation": "(a) 4.06 has 0 tenths and 4.6 has 6 tenths. (b) 0.38 has 8 hundredths and 0.308 has 0 hundredths. (c) 12.50 is 12.5 with a 0 added. (d) 7.09 is 7.09 and 7.1 is 7.10, and 10 hundredths is more than 9."
+   "explanation": "(a) 4.06 has 0 tenths and 4.6 has 6. (b) 0.38 has 8 hundredths and 0.308 has 0. (c) 12.50 is 12.5 with a 0 added. (d) 7.1 is 7.10, and 10 hundredths is more than 9."
   },
   {
    "id": "L4U05-S05",
@@ -452,7 +452,7 @@
      "Working:"
     ]
    },
-   "explanation": "(a) 6.847 is between 6 and 7 and is past 6.5, so 7. (b) 6.847 is between 6.8 and 6.9. The halfway mark is 6.85, so it rounds to 6.8. (c) 6.847 is between 6.84 and 6.85. The halfway mark is 6.845, so it rounds up to 6.85."
+   "explanation": "(a) 6.847 is past 6.5, so 7. (b) It is between 6.8 and 6.9, and the halfway mark 6.85 is higher: 6.8. (c) It is between 6.84 and 6.85, and the halfway mark 6.845 is lower: 6.85."
   },
   {
    "id": "L4U05-S08",

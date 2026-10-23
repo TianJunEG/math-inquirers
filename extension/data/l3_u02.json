@@ -107,7 +107,7 @@
      }
     }
    ],
-   "explanation": "(a) Ones 6 + 1 = 7 and tens 4 + 5 = 9 are fine. Hundreds: ? + 2 = 5, so ? is 3. (b) Ones: 9 + 5 = 14, carry 1. Tens: ? + 3 + 1 ends in 0, so ? is 6 and 10 is made."
+   "explanation": "(a) Ones 6 + 1 = 7 and tens 4 + 5 = 9 are fine. Hundreds: ? + 2 = 5, so ? is 3. (b) Ones: 9 + 5 = 14, carry 1. Tens: ? + 3 + 1 ends in 0, so ? is 6."
   },
   {
    "id": "L3U02-S02",
@@ -391,7 +391,7 @@
      }
     }
    ],
-   "explanation": "Ones: 2 + 6 = 8. Tens: 5 + ? ends in 4, so ? is 9 and 1 is carried. Hundreds: ? + 4 + 1 ends in 1, so ? is 6 and 1 is carried. Thousands: 3 + 2 + 1 = 6.",
+   "explanation": "Ones: 2 + 6 = 8. Tens: 5 + ? ends in 4, so ? is 9, carry 1. Hundreds: ? + 4 + 1 ends in 1, so ? is 6, carry 1. Thousands: 3 + 2 + 1 = 6.",
    "figure": {
     "type": "l3_vsum",
     "heads": [
@@ -578,7 +578,7 @@
      }
     }
    ],
-   "explanation": "Greatest sum: the 2 greatest digits go in the hundreds places, the next 2 in the tens, the last 2 in the ones: 800 + 700 + 50 + 40 + 3 + 2 = 1595. Smallest: do the same with the smallest digits: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
+   "explanation": "Greatest sum: the 2 greatest digits go in the hundreds places, the next 2 in the tens, the last 2 in the ones: 800 + 700 + 50 + 40 + 3 + 2 = 1595. Smallest: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -618,7 +618,7 @@
      }
     }
    ],
-   "explanation": "(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640.",
+   "explanation": "(a) 1875 + 2430 = 4305, 4305 + 1790 = 6095. (b) 2430 - 1790 = 640.",
    "space": {
     "rows": [
      "Working:"
@@ -857,7 +857,7 @@
     ],
     "text": "440"
    },
-   "explanation": "The end bricks of the bottom row count once in the top brick and the 2 middle bricks 3 times each. So 200 + 3 X + 3 X + 440 = 3280, 6 X = 2640 and X = 440.",
+   "explanation": "The end bricks of the bottom row count once in the top brick and the 2 middle bricks 3 times each. So 200 + 6 X + 440 = 3280, 6 X = 2640 and X = 440.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [
@@ -947,7 +947,7 @@
     ],
     "text": "Answers vary. Example: top brick 800, middle left brick 370, bottom right brick 180 shown. The hidden bricks are 430 (middle right), 250 (bottom middle) and 120 (bottom left)."
    },
-   "explanation": "In the example: 800 - 370 = 430, then 430 - 180 = 250, then 370 - 250 = 120.",
+   "explanation": "In the example: 800 - 370 = 430, 430 - 180 = 250, 370 - 250 = 120.",
    "hint": "Make a full pyramid first. Then hide 3 bricks.",
    "space": {
     "rows": [

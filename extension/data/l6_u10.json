@@ -832,7 +832,6 @@
      ]
     ]
    },
-   "hint": "Which numbers from 1 to 8 are greater than 6?",
    "explanation": "The numbers greater than 6 are 7 and 8, which is 2 results out of 8, so 1/4. 1/4 × 800 = 200. The numbers greater than 4 are 5, 6, 7 and 8, which is 4 out of 8, so the count would be 1/2 × 800 = 400. A real run is near these numbers, not exactly equal.",
    "figside": true
   },

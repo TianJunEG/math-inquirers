@@ -169,7 +169,7 @@
      }
     }
    ],
-   "explanation": "The labelled lines go up in 20s and a thin line is halfway between them, so each thin line is 10. A is 70, B is 110, C is 90. Together: 70 + 110 + 90 = 270.",
+   "explanation": "The labelled lines go up in 20s and a thin line is halfway between, so each thin line is 10. A is 70, B is 110, C is 90. Together: 70 + 110 + 90 = 270.",
    "figure": {
     "type": "l3_bargraph",
     "cats": [
@@ -218,7 +218,7 @@
      }
     }
    ],
-   "explanation": "(a) 3rd to 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) 3rd to 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.",
+   "explanation": "(a) 3rd to 24th is 21 days = 3 weeks. So the 24th is a Tuesday again. (b) 3rd to 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.",
    "space": {
     "rows": [
      "Working:"
@@ -272,7 +272,7 @@
      }
     }
    ],
-   "explanation": "Only Lily has a 4-letter name: orange. Kumar has neither apple nor banana, so grapes. Wei does not have the apple, so banana. Aisha has the apple.",
+   "explanation": "Only Lily has a 4-letter name: orange. Kumar has neither apple nor banana: grapes. Wei does not have the apple: banana. Aisha has the apple.",
    "figure": {
     "type": "l3_grid",
     "head_row": true,
@@ -439,7 +439,7 @@
      }
     }
    ],
-   "explanation": "Each new hexagon adds 5 sticks. The table goes 1: 6, 2: 11, 3: 16, 4: 21, 5: 26, 6: 31. For 41 sticks, count on: 7 hexagons need 36 and 8 hexagons need 41.",
+   "explanation": "Each new hexagon adds 5 sticks: 1: 6, 2: 11, 3: 16, 4: 21, 5: 26, 6: 31. For 41 sticks, count on: 7 hexagons need 36 and 8 hexagons need 41.",
    "figure": {
     "type": "l3_segs",
     "segs": [
@@ -708,7 +708,7 @@
      }
     }
    ],
-   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. In all: 6 boxes + 5 = 185, so 1 box = 30. Mon 30, Tue 45, Wed 60, Thu 50.",
+   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Mon 30, Tue 45, Wed 60, Thu 50.",
    "partsrow": true,
    "hint": "Draw Monday as 1 bar. Then draw the other days with it.",
    "space": {

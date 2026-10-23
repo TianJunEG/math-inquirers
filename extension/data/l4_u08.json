@@ -283,7 +283,7 @@
     "text": "A and C",
     "unordered": true
    },
-   "explanation": "A: the row of 4 makes the walls, with a lid above and a base below. It folds. B: a 2 by 2 block puts 4 squares at one corner, but a cube has only 3 faces at a corner. D: 5 in a row wrap round and the 5th covers the 1st. C folds."
+   "explanation": "A folds: the row of 4 makes walls, with a lid and a base. B: a cube has only 3 faces at a corner, not 4. D: the 5th square covers the 1st. C folds."
   },
   {
    "id": "L4U08-S02",
@@ -427,7 +427,7 @@
     "text": "5, 4, 6 (row by row)",
     "list": true
    },
-   "explanation": "Find the opposite squares. 2 and the third square of the row are opposite, so that square is 7 − 2 = 5. 3 and the fourth square are opposite, so it is 7 − 3 = 4. 1 and the bottom square are opposite, so it is 7 − 1 = 6."
+   "explanation": "2 is opposite the third square of the row: 7 − 2 = 5. 3 is opposite the fourth square: 7 − 3 = 4. 1 is opposite the bottom square: 7 − 1 = 6."
   },
   {
    "id": "L4U08-S04",
@@ -713,7 +713,7 @@
      }
     }
    ],
-   "explanation": "Only the shaded square in the bottom row has no partner. For the up-down line its partner is in the bottom row on the right. For the across line its partner is in the top row. Each fix works for one line: 2 ways.",
+   "explanation": "Only the shaded square in the bottom row has no partner. For the up-down line its partner is bottom right. For the across line it is in the top row. 2 ways.",
    "figside": true
   },
   {
@@ -898,7 +898,7 @@
     ]
    },
    "hint": "Which faces share an edge with a given face?",
-   "explanation": "(a) A face shares an edge with 4 faces, and a third red face would touch one of 2 opposite red faces. So the most is 2. (b) 3 faces at one corner are not opposite each other, but a 4th would be opposite one. So the most is 3."
+   "explanation": "(a) A face touches 4 faces, so a third red face would touch one of 2 opposite red faces: most 2. (b) 3 faces at a corner are not opposite, but a 4th would be: most 3."
   },
   {
    "id": "L4U08-T02",
@@ -938,7 +938,7 @@
     ]
    },
    "hint": "At a corner, the 3 faces are from 3 different opposite pairs.",
-   "explanation": "The pairs are 1 and 6, 2 and 5, 3 and 4. She sees one number from each pair, so no two of the 3 numbers add up to 7. The only choice with a total of 10 is 1, 5 and 4. The hidden faces are opposite: 6, 2 and 3."
+   "explanation": "The pairs are 1 and 6, 2 and 5, 3 and 4. She sees one from each pair. The only choice with total 10 is 1, 5 and 4. The hidden faces are opposite: 6, 2 and 3."
   },
   {
    "id": "L4U08-T03",
@@ -970,7 +970,7 @@
     ]
    },
    "hint": "Middle-column squares match themselves. The others come in pairs.",
-   "explanation": "The 3 shaded squares are 3 from the middle column, or 1 from the middle column and 1 pair. 3 in the middle column: 1 way. 1 in the middle column (3 choices) and 1 pair (3 rows to choose): 3 × 3 = 9 ways. 1 + 9 = 10.",
+   "explanation": "3 shaded squares: all 3 in the middle column is 1 way. 1 in the middle column (3 choices) and 1 pair (3 rows): 3 × 3 = 9 ways. 1 + 9 = 10.",
    "figright": true
   },
   {
@@ -1022,7 +1022,7 @@
     }
    ],
    "hint": "Corners, edges and faces of the big cube. Count each kind.",
-   "explanation": "3 painted faces: the 8 corner cubes. 2 faces: 1 in the middle of each of the 12 edges. 1 face: 1 in the middle of each of the 6 faces. No paint: the 1 cube in the middle. 8 + 12 + 6 + 1 = 27."
+   "explanation": "3 painted faces: the 8 corner cubes. 2 faces: 12 edge cubes. 1 face: 6 face cubes. No paint: 1 cube in the middle. 8 + 12 + 6 + 1 = 27."
   },
   {
    "id": "L4U08-G02",
@@ -1069,7 +1069,7 @@
     }
    ],
    "hint": "Try a corner square, then an edge square, then the middle.",
-   "explanation": "A single square has a line of symmetry when it is on the middle row, the middle column or a diagonal. Middle row and column: 5 + 5 − 1 = 9 squares. The diagonals add 8 more: 17. The middle square has 4 lines, so the other 16 have exactly 1.",
+   "explanation": "A single square has a line of symmetry on the middle row, the middle column or a diagonal. Row and column: 9 squares. The diagonals add 8: 17. The middle square has 4 lines, the other 16 have 1.",
    "figright": true
   },
   {
@@ -1100,7 +1100,7 @@
     }
    ],
    "hint": "Write the top, north and east faces after each roll.",
-   "explanation": "Start: top 1, bottom 6, north 2, south 5, east 3, west 4. Roll north: top 5, bottom 2, north 1, south 6. Roll east: top 4, bottom 3, east 5, west 2. Roll north: the north face 1 lands down, so the bottom is 1 and the top is the old south face, 6."
+   "explanation": "Start: top 1, north 2, east 3. Roll north: top 5, north 1. Roll east: top 4, east 5. Roll north: the old north face 1 goes down, and the top is the old south face, 6."
   },
   {
    "id": "L4U08-C01",

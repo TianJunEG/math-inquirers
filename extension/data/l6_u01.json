@@ -730,7 +730,7 @@
      }
     }
    ],
-   "hint": "The terms go down by 5. Take 5 × n away from a start number.",
+   "hint": "By how much do the terms change each step? Build the rule from it.",
    "space": {
     "rows": [
      "Working:"
@@ -855,7 +855,7 @@
      }
     }
    ],
-   "hint": "Count the jumps between the 2 terms. Share the rise equally.",
+   "hint": "How many jumps are there between the 2 known terms?",
    "space": {
     "rows": [
      "Working:"

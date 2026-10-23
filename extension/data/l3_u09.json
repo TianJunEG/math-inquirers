@@ -173,7 +173,7 @@
      }
     }
    ],
-   "explanation": "(a) 3 × 100 = 300. (b) 4 kg = 4000 g, and 4000 + 50 = 4050. (c) 5 ℓ = 5000 ml, 5000 + 300 = 5300. (d) 2000 g is 2 kg, 750 g left. (e) 300 cm is 3 m, 65 cm left.",
+   "explanation": "(a) 3 × 100 = 300. (b) 4 kg = 4000 g, 4000 + 50 = 4050. (c) 5 ℓ = 5000 ml, 5000 + 300 = 5300. (d) 2000 g is 2 kg, 750 g left. (e) 300 cm is 3 m, 65 cm left.",
    "partsrow": true
   },
   {
@@ -413,7 +413,7 @@
      }
     }
    ],
-   "explanation": "(a) 6.20 + 4.85 = 11.05, and 11.05 + 3.40 = 14.45. (b) 20.00 - 14.45 = 5.55. (c) All 4 things cost 14.45 + 1.75 = 16.20, which is less than $20. So she can.",
+   "explanation": "(a) 6.20 + 4.85 = 11.05, and 11.05 + 3.40 = 14.45. (b) 20.00 - 14.45 = 5.55. (c) 14.45 + 1.75 = 16.20, which is less than $20. So she can.",
    "figure": {
     "type": "l3_grid",
     "head_row": true,
@@ -687,7 +687,7 @@
     "text": "1 h 20 min",
     "list": true
    },
-   "explanation": "From 18:35 to 19:00 is 25 min. From 19:00 to 20:00 is 1 h. From 20:00 to 20:10 is 10 min. The whole time is 1 h 35 min. Take away the 15 min break: 1 h 20 min.",
+   "explanation": "From 18:35 to 19:00 is 25 min. 19:00 to 20:00 is 1 h. 20:00 to 20:10 is 10 min. The whole time is 1 h 35 min. Take away the 15 min break: 1 h 20 min.",
    "hint": "Find the whole time first. Then take away the break.",
    "space": {
     "rows": [
@@ -724,7 +724,7 @@
      }
     }
    ],
-   "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. A pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70.",
+   "explanation": "The 2 notebooks cost $3 more than 2 pens (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. A pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70.",
    "hint": "How much more do 2 notebooks cost than 2 pens?",
    "space": {
     "rows": [

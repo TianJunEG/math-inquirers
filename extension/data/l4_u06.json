@@ -171,7 +171,7 @@
      }
     }
    ],
-   "explanation": "One arm lies along the baseline at 0 on the left. Read the scale that starts at 0 on the left arm: 52°. A right angle is 90°, and 52° is smaller. The other scale says 128°, which is the angle measured from the other arm.",
+   "explanation": "Read the scale that starts at 0 on the arm along the baseline: 52°. It is smaller than a right angle. The other scale says 128°, measured from the other arm.",
    "figside": true
   },
   {
@@ -316,7 +316,7 @@
      }
     }
    ],
-   "explanation": "(a) 90° is 2 steps. From W clockwise: NW, N. (b) 180° is 4 steps. From SE: S, SW, W, NW. (c) 270° is 6 steps. From NE clockwise: E, SE, S, SW, W, NW. (d) Go back the other way: 135° is 3 steps clockwise from S: SW, W, NW.",
+   "explanation": "(a) 90° is 2 steps: W, NW, N. (b) 180° is 4 steps: SE, S, SW, W, NW. (c) 270° is 6 steps: NE, E, SE, S, SW, W, NW. (d) 135° is 3 steps clockwise from S: SW, W, NW.",
    "figside": true
   },
   {
@@ -732,7 +732,7 @@
     ]
    },
    "hint": "One small angle is 30°. Count 1-part, 2-part, 3-part angles.",
-   "explanation": "Each small angle is 150° ÷ 5 = 30°. Angles made of 1 part: 5. Of 2 parts: 4. Of 3 parts: 3. Of 4 parts: 2. Of 5 parts: 1. In all 5 + 4 + 3 + 2 + 1 = 15. A right angle is 3 parts of 30°, and there are 3 of them."
+   "explanation": "Each small angle is 150° ÷ 5 = 30°. Angles of 1 part: 5, of 2 parts: 4, of 3: 3, of 4: 2, of 5: 1. In all 15. A right angle is 3 parts, and there are 3 of them."
   },
   {
    "id": "L4U06-G02",
