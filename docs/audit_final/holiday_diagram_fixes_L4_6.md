@@ -27,3 +27,16 @@ Answer keys: no figure changes what is asked; every figure is a scaffold (no val
 - P4: L7 C6/C7 garden/tank figures, L10 No.2 heads and legs picture row (Low).
 - P5: L3 A2 red/blue bead bars, L6 A1/A3/B1/B2, L10 No.6 age bars, B1 tank bar.
 - P6: L7 T3 and C6 polygon figures, L8 Caesar wheel, L3 C7 floor list, L9 mean "balance" bars.
+
+## Review fixes (independent review, docs/audit_final/holiday_diagram_review_L4_6.md)
+Page counts unchanged (P4 66/76, P5 57/62, P6 58/62 source/print; print_spec.json and bw_spec.json re-written, all even). check_bw.py ok for P4-P6.
+- H1 P5 L5 Go further B3 tank: caption no longer clipped, block labels removed (the question gives 10 x 10 x 15), water label clear, base labels separate. Also the L5 No.3 tank labels enlarged to >= 9 pt and no longer clipped.
+- H2 P5 L1 No.6: shaded band and title removed; ticks and labels kept; key (smallest 2 499 500, greatest 2 500 499) unchanged.
+- M5 red text: every red text label in figures is now navy (done in `FG.fit()` and again when the workbook body is written, so figures inside table cells are covered too); P5 L8 angle values, P4 queue, P4 "? cm", P6 turn 70 and $69 all checked in B&W.
+- M7 P4 L4 Go further No.5: jar is one undivided bar with only the three braces (Mei 1/2, Ali 1/3, 5 left).
+- M6 P6 L5 No.5: P box moved into the cell beside the hatched circle (touching only that circle); B label clear.
+- M1 P5 L2 No.1: bars unshaded (just 3 and 5 equal parts), labels 18 px; M2 No.3 bar labels enlarged to 9 pt+ (width cap removed).
+- M4 P5 L8 A4: figure labels enlarged (26 px in a 0.66 scale figure, about 9 pt); page still 5 lines per box and 57 pages.
+- M9 P5 L6 No.4 printers: P alone drawn at one sixth (150 of 900), brace over the whole bar "? minutes in all, from the start" (key 20 min).
+- Low: P6 L4 C6 says "The bars are not drawn to scale"; Tutor Guide wording for P6 L7 (Q5 on the next sheet), L8 (Q2 at the top of the next sheet, Q3-Q5 on the sheet after) and L9 (Q4 at the top of the next sheet) fixed, guides and weekly PDFs rebuilt.
+Left as they were (Low): P4 L1 bus timeline labels, P4 L2 No.2 line labels, clock hands over numerals, P5 L6 No.5 six drawn boxes, thin tab sliver, 8.7 pt axis titles in P6 L9, P5 L4 side labels 8.8 pt.
