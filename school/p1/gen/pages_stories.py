@@ -2,7 +2,7 @@
 import random, itertools, re
 from .common import *
 from . import art
-from .art import row_svg, count_objs, NAMES as OBJN
+from .art import row_svg, count_objs, NAMES as OBJN, osz, opitch, COUNT_KINDS
 
 PEOPLE = ["Ali", "Mei", "Siti", "Ben", "Kumar", "Aisha", "Wei", "Ravi", "Jenny", "Lily"]
 
@@ -18,8 +18,8 @@ def finish_code(P, answers, table, word, lo, hi, domain=None, plain="Code word (
 def plain_text(h): return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h)).strip()
 
 # ---------------------------------------------------------------- N01 Story Sums (P1-21)
-ADD_V = {"apple": "picks", "flower": "picks", "star": "finds", "ball": "gets", "sweet": "gets", "bird": "gets", "fish": "gets", "balloon": "buys", "car": "gets", "kite": "buys"}
-SUB_V = {"apple": "eats", "sweet": "eats", "flower": "gives away", "star": "loses", "ball": "loses", "bird": "gives away", "fish": "gives away", "balloon": "gives away", "car": "gives away", "kite": "loses"}
+ADD_V = {"cat": "finds", "dog": "finds", "drum": "buys", "boat": "buys", "apple": "picks", "flower": "picks", "star": "finds", "ball": "gets", "sweet": "gets", "bird": "gets", "fish": "gets", "balloon": "buys", "car": "gets", "kite": "buys"}
+SUB_V = {"cat": "gives away", "dog": "gives away", "drum": "loses", "boat": "loses", "apple": "eats", "sweet": "eats", "flower": "gives away", "star": "loses", "ball": "loses", "bird": "gives away", "fish": "gives away", "balloon": "gives away", "car": "gives away", "kite": "loses"}
 
 def story_text(kind, a, b, N, M, pl, obj):
     if kind == "add":   return [f"{N} has {a} {pl}.", f"{N} {ADD_V[obj]} {b} more.", "How many now?"]
@@ -61,7 +61,7 @@ def page21():
     rng = random.Random(2101)
     word = "MONKEY"
     kinds = ["add", "sub", "more", "fewer", "diff", "total"]
-    objs = ["apple", "bird", "star", "fish", "balloon", "sweet", "flower", "ball", "car", "kite"]
+    objs = list(COUNT_KINDS)
     while True:
         rng.shuffle(kinds); items = []
         names = rng.sample(PEOPLE, 6)
@@ -90,10 +90,10 @@ def page21():
     for i, it in enumerate(items):
         pl = OBJN[it["obj"]][1]
         lines = story_text(it["kind"], it["a"], it["b"], it["N"], it["M"], pl, it["obj"]); texts.append(lines)
-        s1, _, _ = row_svg(it["obj"], it["a"], size=10.0, pitch=10.8, per_row=7)
+        s1, _, _ = row_svg(it["obj"], it["a"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=int(76 / opitch(it["obj"])))
         pics = [s1]; cnt = [it["a"]]
         if it["kind"] in ("diff", "total"):
-            s2, _, _ = row_svg(it["obj"], it["b"], size=10.0, pitch=10.8, per_row=7); pics.append(s2); cnt.append(it["b"])
+            s2, _, _ = row_svg(it["obj"], it["b"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=int(76 / opitch(it["obj"]))); pics.append(s2); cnt.append(it["b"])
         picobjs.append(pics)
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
@@ -226,7 +226,7 @@ def solve_share(lines):
 def page39():
     rng = random.Random(3939)
     word = "SPONGE"
-    objs = ["apple", "star", "sweet", "flower", "ball", "balloon", "kite", "cup"]
+    objs = list(COUNT_KINDS)
     while True:
         names = rng.sample(PEOPLE, 6); o = rng.sample(objs, 6); items = []
         f1 = rng.choice([1, 2, 3]); p1 = rng.randint(2, 6); items.append(dict(k="with", N=names[0], obj=o[0], n=p1 * (f1 + 1), f=f1, ans=p1))
@@ -252,8 +252,8 @@ def page39():
         elif k == "car": lines = ["Fact: 1 car has 4 wheels.", f"{N} counts {it['w']} wheels.", "How many cars?"]
         else: lines = ["Fact: 1 bird has 2 legs.", f"{N} counts {it['l']} legs.", "How many birds?"]
         texts.append(lines)
-        if k in ("car", "bird"): pics = [row_svg(k if k == "car" else "bird", 1, size=10.0, pitch=11)[0]]
-        else: pics = [row_svg(it["obj"], it["n"], size=9.0, pitch=9.6, per_row=8)[0]]
+        if k in ("car", "bird"): pics = [row_svg(k, 1, size=14.0 if k == "car" else 12.5, pitch=15)[0]]
+        else: pics = [row_svg(it["obj"], it["n"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=int(76 / opitch(it["obj"])))[0]]
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=39, title="Share and Group", tier=1, topic="Sharing and grouping stories within 20, and printed facts",

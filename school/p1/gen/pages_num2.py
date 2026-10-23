@@ -3,7 +3,7 @@ and later N09 Bonds and Families (P1-37), N03 More or Fewer (P1-38)."""
 import random, itertools, re
 from .common import *
 from . import art
-from .art import row_svg, count_objs, NAMES as OBJN
+from .art import row_svg, count_objs, NAMES as OBJN, osz, opitch
 from .pages_numbers import random_walk, count_routes, neighbours, maze_html
 from .pages_stories import finish_code, plain_text, PEOPLE
 
@@ -224,7 +224,8 @@ def page24():
 
 
 # ---------------------------------------------------------------- N05 Count the Crowd (P1-25)
-def scene_svg(kind, n, rng, cols=4, rows=3, pitch=11.0, size=10.0):
+def scene_svg(kind, n, rng, cols=4, rows=3):
+    size = osz(kind); pitch = max(12.0, size + 1.2)
     cells = rng.sample([(r, c) for r in range(rows) for c in range(cols)], n)
     inner = "".join(art.obj_g(kind, 1 + c * pitch + rng.uniform(-0.6, 0.6), 1 + r * (pitch - 1.2) + rng.uniform(-0.5, 0.5), size) for r, c in cells)
     return common_svg(cols * pitch + 1, rows * (pitch - 1.2) + 1.5, inner)
@@ -233,7 +234,8 @@ def common_svg(w, h, inner):
     from .common import svg
     return svg(round(w, 1), round(h, 1), inner)
 
-def frame_svg(kind, k, pitch=9.6, size=9.0):
+def frame_svg(kind, k):
+    size = osz(kind); pitch = size + 0.8
     """a ten frame (5 by 2, full of objects) and k loose objects below"""
     inner = '<rect class="frame" x="0.8" y="0.8" width="%.1f" height="%.1f" fill="#fff" stroke="#000" stroke-width="0.6"/>' % (5 * pitch, 2 * pitch)
     inner += '<line x1="0.8" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#000" stroke-width="0.35"/>' % (pitch + 0.8, 5 * pitch + 0.8, pitch + 0.8)
@@ -242,11 +244,12 @@ def frame_svg(kind, k, pitch=9.6, size=9.0):
     for i in range(k): inner += art.obj_g(kind, 1 + i * (pitch - 1), 2 * pitch + 3.2, size)
     return common_svg(max(5 * pitch + 2, 1 + k * (pitch - 1) + 1), 2 * pitch + 3.2 + size + 1.5, inner)
 
-def compare_svg(ka, a, kb, b, pitch=9.6, size=9.0, gap=11):
+def compare_svg(ka, a, kb, b, gap=12):
+    size = osz(ka); pitch = max(osz(ka), osz(kb)) + 0.8
     top = "".join(art.obj_g(ka, 1 + i * pitch, 0.5, size) for i in range(a))
-    bot = "".join(art.obj_g(kb, 1 + i * pitch, size + gap, size) for i in range(b))
+    bot = "".join(art.obj_g(kb, 1 + i * pitch, size + gap, osz(kb)) for i in range(b))
     lines = "".join('<line class="mline" x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#000" stroke-width="0.4" stroke-dasharray="1 0.8"/>' % (1 + i * pitch + size / 2, size + 1.2, 1 + i * pitch + size / 2, size + gap - 0.6) for i in range(min(a, b)))
-    return common_svg(max(a, b) * pitch + 1.5, 2 * size + gap + 1.5, top + bot + lines)
+    return common_svg(max(a, b) * pitch + 1.5, size + osz(kb) + gap + 1.5, top + bot + lines)
 
 def solve_compare_svg(s, ka, kb, mode):
     objs = count_objs(s); a, b = objs.get(ka, 0), objs.get(kb, 0); m = s.count('class="mline"')
@@ -256,9 +259,11 @@ def solve_compare_svg(s, ka, kb, mode):
 def page25():
     rng = random.Random(2505)
     word = "CLOTH"
-    kinds = ["apple", "bird", "star", "fish", "balloon", "sweet", "flower", "ball", "car", "kite"]
+    kinds = ["apple", "star", "ball", "cat", "dog", "flower", "drum", "boat"]
+    small = ["star", "ball", "cat", "dog"]
     while True:
-        k = rng.sample(kinds, 7)
+        k = rng.sample(kinds, 3) + rng.sample(small, 2) + rng.sample(small, 2)
+        if k[3] == k[4] or k[5] == k[6]: continue
         c1, c2 = rng.randint(6, 9), rng.randint(10, 12); fk = rng.randint(3, 6)
         a1, b1 = rng.randint(6, 8), rng.randint(2, 5); a2, b2 = rng.randint(5, 8), rng.randint(2, 4)
         d1, d2 = a1 - b1, a2 - b2

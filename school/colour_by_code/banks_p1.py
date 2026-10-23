@@ -464,7 +464,7 @@ def _share1(tier):
 # ------------------------------------------------------------------ picture graphs (one face is one child, pet or thing), read and compare
 P1_GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
 def _pgraph(tier):
-    PG = dict(pitch=4.6, font=3.5)
+    PG = dict(pitch=5.8, font=3.5)
     def pick(r, n):
         labs = list(_ch(r, P1_GRAPH_SETS)); r.shuffle(labs); return labs[:n]
     def G(rows): return A.picgraph(rows, 1, **PG)
@@ -585,6 +585,6 @@ GALLERY = [
     dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=128),
     dict(id="CBC-11", picture="car",       bank="mult",    tier=2, seed=3),
     dict(id="CBC-12", picture="castle",    bank="share",   tier=1, seed=3),
-    dict(id="CBC-13", picture="rocket",    bank="pgraph",  tier=1, seed=23),
+    dict(id="CBC-13", picture="butterfly", bank="pgraph",  tier=1, seed=11),
     dict(id="CBC-14", picture="sailboat",  bank="ordinal", tier=1, seed=1),
 ]

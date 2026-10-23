@@ -47,10 +47,10 @@ PASS  bank frac tier 2: key has five distinct values inside the domain
 PASS  bank frac tier 2: 1112 sample questions each have exactly one answer in the domain, equal to the intended one (10 forms)  []
 PASS  bank frac tier 2: 0 design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)  []
 PASS  bank money tier 1: key has five distinct values inside the domain  
-PASS  bank money tier 1: 412 sample questions each have exactly one answer in the domain, equal to the intended one (5 forms)  []
+PASS  bank money tier 1: 410 sample questions each have exactly one answer in the domain, equal to the intended one (5 forms)  []
 PASS  bank money tier 1: 0 design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)  []
 PASS  bank money tier 2: key has five distinct values inside the domain  
-PASS  bank money tier 2: 849 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
+PASS  bank money tier 2: 838 sample questions each have exactly one answer in the domain, equal to the intended one (9 forms)  []
 PASS  bank money tier 2: 0 design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)  []
 PASS  bank time tier 1: key has five distinct values inside the domain  
 PASS  bank time tier 1: 1375 sample questions each have exactly one answer in the domain, equal to the intended one (11 forms)  []
@@ -312,7 +312,7 @@ PASS  CBC-P2-10: pupil and teacher PDFs exist
 PASS  CBC-P2-10: every question has exactly one answer and it is one of the five key values  []
 PASS  CBC-P2-10: independent evaluator re-solves all 14 printed questions from their text and picture; each equals the answer coloured and that answer is a key value  []
 PASS  CBC-P2-10: design rules hold on every printed question (choose-one-of-three numbers all on the key, clocks >= 40 degrees, rulers with a start arrow, no Primary 3 money or mass items)  []
-PASS  CBC-P2-10: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)  0 repeated
+FAIL  CBC-P2-10: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)  2 repeated
 PASS  CBC-P2-10: no clock face is drawn twice and no digital time is printed twice  
 PASS  CBC-P2-10: all five key values and colours are used (counts [4, 4, 2, 2, 2], each at least 2)  
 PASS  CBC-P2-10: tally printed on the pupil page equals the tally of the answers  printed [4, 4, 2, 2, 2]
@@ -324,7 +324,7 @@ PASS  CBC-P2-10: single-slip detection for wrong values that do have a crayon co
 PASS  CBC-P2-10: double-slip detection by enumeration 1456/1456 = 100.0% (every pair of regions, every pair of wrong colours; needs >= 95%)  
 PASS  CBC-P2-10: swap detection 76/76 = 100.0% (two regions exchange their colours, tally unchanged; needs >= 95%)  
 PASS  CBC-P2-10: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)  []
-PASS  CBC-P2-10: smallest pupil text 4.9 mm (>= 4.2 mm, about 12 pt)  
+PASS  CBC-P2-10: smallest pupil text 4.7 mm (>= 4.2 mm, about 12 pt)  
 PASS  CBC-P2-10: every region is at least 28 mm wide where its label sits (narrowest (34.9, 'up_in_l'))  
 PASS  CBC-P2-11: pupil and teacher PDFs exist  
 PASS  CBC-P2-11: every question has exactly one answer and it is one of the five key values  []
@@ -612,7 +612,7 @@ PASS  CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min
 PASS  CBC-P2-07 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.1%, needs <= 25%)  
 PASS  CBC-P2-07 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-07 pupil: all 15 regions stay separate white areas in the 1-bit render (35 large white areas incl. background and boxes)  
-PASS  CBC-P2-07 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, body_lr; needs <= 40%)  
+PASS  CBC-P2-07 pupil: every label keeps its ink in the 1-bit render (worst 18% lost, body_ll; needs <= 40%)  
 PASS  CBC-P2-07 teacher: one A4 page  
 PASS  CBC-P2-07 teacher: fonts embedded  3 fonts
 PASS  CBC-P2-07 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
@@ -670,22 +670,22 @@ PASS  CBC-P2-10 pupil: fonts embedded  3 fonts
 PASS  CBC-P2-10 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
 PASS  CBC-P2-10 pupil: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-10 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
-PASS  CBC-P2-10 pupil: every blank box a pupil writes in is at least 6 mm wide (4 boxes, smallest 6.0 mm)  
+PASS  CBC-P2-10 pupil: every blank box a pupil writes in is at least 6 mm wide (7 boxes, smallest 6.0 mm)  
 PASS  CBC-P2-10 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
-PASS  CBC-P2-10 pupil: 1-bit render at 150 dpi keeps the ink (loss 3.7%, needs <= 25%)  
+PASS  CBC-P2-10 pupil: 1-bit render at 150 dpi keeps the ink (loss 4.6%, needs <= 25%)  
 PASS  CBC-P2-10 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
-PASS  CBC-P2-10 pupil: all 14 regions stay separate white areas in the 1-bit render (25 large white areas incl. background and boxes)  
-PASS  CBC-P2-10 pupil: every label keeps its ink in the 1-bit render (worst 8% lost, up_tip_r; needs <= 40%)  
+PASS  CBC-P2-10 pupil: all 14 regions stay separate white areas in the 1-bit render (28 large white areas incl. background and boxes)  
+PASS  CBC-P2-10 pupil: every label keeps its ink in the 1-bit render (worst 12% lost, up_tip_l; needs <= 40%)  
 PASS  CBC-P2-10 teacher: one A4 page  
 PASS  CBC-P2-10 teacher: fonts embedded  3 fonts
 PASS  CBC-P2-10 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
 PASS  CBC-P2-10 teacher: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-10 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-P2-10 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
-PASS  CBC-P2-10 teacher: 1-bit render at 150 dpi keeps the ink (loss 5.3%, needs <= 25%)  
+PASS  CBC-P2-10 teacher: 1-bit render at 150 dpi keeps the ink (loss 6.2%, needs <= 25%)  
 PASS  CBC-P2-10 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-10 teacher: all 14 regions stay separate white areas in the 1-bit render (21 large white areas incl. background and boxes)  
-PASS  CBC-P2-10 teacher: every label keeps its ink in the 1-bit render (worst 13% lost, up_tip_r; needs <= 40%)  
+PASS  CBC-P2-10 teacher: every label keeps its ink in the 1-bit render (worst 14% lost, up_in_r; needs <= 40%)  
 PASS  CBC-P2-11 pupil: one A4 page  
 PASS  CBC-P2-11 pupil: fonts embedded  3 fonts
 PASS  CBC-P2-11 pupil: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
@@ -791,9 +791,9 @@ PASS  CBC-P2-15 teacher: 1-bit render at 150 dpi keeps the ink (loss 8.7%, needs
 PASS  CBC-P2-15 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-15 teacher: all 17 regions stay separate white areas in the 1-bit render (34 large white areas incl. background and boxes)  
 PASS  CBC-P2-15 teacher: every label keeps its ink in the 1-bit render (worst 22% lost, roof_top; needs <= 40%)  
-PASS  all PDFs together are under 20 MB  1.01 MB
+PASS  all PDFs together are under 20 MB  1.00 MB
 PASS  contact sheet PDF exists with 2 pages  
 PASS  Primary 2 gallery has 14 to 16 worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids  15 worksheets, 10 pictures, 13 topics
 PASS  library has at least 5 pictures and 6 topic banks  11 pictures, 13 banks
 
-797 passed, 0 failed
+796 passed, 1 failed

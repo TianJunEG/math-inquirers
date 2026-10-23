@@ -12,5 +12,5 @@
 | CBC-10 | House | Shapes: corners | 1 | 3, 4, 6, 7, 8 | 17 | tally, small marks (parts with the same mark share a colour) | 204/204 = 100.0% | 99.9% / 97.4% | 4.4 mm | PASS |
 | CBC-11 | Car | Multiplication within 40 | 2 | 12, 15, 20, 30, 40 | 13 | tally, small marks (parts with the same mark share a colour) | 520/520 = 100.0% | 99.9% / 98.5% | 4.9 mm | PASS |
 | CBC-12 | Castle | Sharing and grouping within 20 | 1 | 2, 3, 4, 5, 6 | 17 | tally, mirror pairs | 340/340 = 100.0% | 99.9% / 98.2% | 4.2 mm | PASS |
-| CBC-13 | Rocket | Picture graphs | 1 | 1, 2, 3, 4, 5 | 15 | tally, mirror pairs | 300/300 = 100.0% | 99.9% / 97.7% | 4.9 mm | PASS |
+| CBC-13 | Butterfly | Picture graphs | 1 | 1, 2, 3, 4, 5 | 14 | tally, mirror pairs | 280/280 = 100.0% | 100.0% / 100.0% | 4.7 mm | PASS |
 | CBC-14 | Sailboat | Ordinal numbers: first to tenth | 1 | 4th, 5th, 6th, 7th, 8th | 13 | tally, small marks (parts with the same mark share a colour) | 130/130 = 100.0% | 99.9% / 98.5% | 4.9 mm | PASS |

@@ -168,7 +168,6 @@ def house():
         b.add(f"grass_{i + 1}", R(x0, 176, x1, 200))
     b.twin(["roof_l", "roof_r"]).twin(["window_l", "window_r"]).twin(["crown_top", "crown_bot"]).twin(["grass_1", "grass_2", "grass_3"])
     b.twin(["wall_ll", "wall_mid", "wall_rr"]).twin(["sun", "cloud"])
-    b.decor('<circle cx="69" cy="152" r="2.2" fill="#000"/>', C(69, 152, 2.2))
     return b.done()
 
 # ---------------------------------------------------------------- butterfly (symmetric)

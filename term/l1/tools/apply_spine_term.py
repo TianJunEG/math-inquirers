@@ -131,10 +131,35 @@ def fits(d):
     return True, '', used, slow
 
 
+def warns(d):
+    """The timing warnings validate.check_timing would print: {(part, tag)} with tag slow (slow class over the part), loose (<70%), tight (>97%)."""
+    out = set()
+    for s in C.segment_timeline(d):
+        u, a, sl = s['used'], s['alloc'], C.slow_used(s)
+        if s['part'] == 'flex': continue
+        if u > a: continue
+        if sl > a: out.add((s['part'], 'slow'))
+        elif u < 0.70 * a: out.add((s['part'], 'loose'))
+        elif u > 0.97 * a: out.add((s['part'], 'tight'))
+    return out
+
+
+def tune_look(d):
+    """Give the children the time the longer look-back needs: WORK seconds up to the most that keeps the slow class inside the part (never below the lesson's own value, at most 120 s)."""
+    seg = segment(d, 'look')
+    p = C.part_map(d)['look']
+    alloc = (p['end'] - p['start']) * 60.0
+    others = sum(C.slow_used({'lines': [(0, C.line_seconds(d, 'look', ln), ln)]}) for ln in seg['lines'] if ln['k'] != 'WORK')
+    for ln in seg['lines']:
+        if ln['k'] == 'WORK' and ln.get(MARK) == 'look':
+            calc = int((alloc - others) / 1.2 / 5) * 5
+            ln['s'] = max(ln['s'], min(120, calc))
+
+
 VARIANTS = ['say+do, ask', 'say+do, note', 'say only, note', 'notes only']
 
 
-def build_variant(d, n, variant):
+def build_variant(d, n, variant, prefer='opening'):
     """Return a deep copy of d with the spine script lines of the given variant (and the look-back text) applied."""
     d2 = copy.deepcopy(d)
     row = TERM['lessons'][str(n)]
@@ -146,6 +171,7 @@ def build_variant(d, n, variant):
     ask = S['choose_note'] if choose else fill(S['talk_ask'], t)
     note_t = S['choose_note'] if choose else S['talk_note']
     look_text(d2)
+    tune_look(d2)
     # --- opening (or remember when the opening is full)
     place = 'opening'
     if variant in VARIANTS[:3]:
@@ -153,7 +179,7 @@ def build_variant(d, n, variant):
         seg = segment(d2, 'opening')
         insert_after_last(seg, ('SAY', 'ASK', 'READ'), lines)
         ok, _, _, _ = fits(d2)
-        if not ok:   # try the start of Remember (after its SLIDE and REC lines)
+        if not ok or prefer == 'remember':   # the start of Remember (after its SLIDE and REC lines)
             seg['lines'] = [ln for ln in seg['lines'] if MARK not in ln or ln[MARK] == 'look']
             rem = segment(d2, 'remember')
             pos = 0
@@ -170,11 +196,11 @@ def build_variant(d, n, variant):
         insert_after_last(segment(d2, 'opening'), ('SAY', 'ASK', 'READ'), [line('NOTE', 'Say: ' + say + ' (no time modelled: the opening is full).', **{MARK: 'opening'})])
     # --- tool note for Lesson 1: the Toolbox card
     if n == 1:
-        segment(d2, 'opening')['lines'].append(line('NOTE', 'Toolbox card: ' + SPINE['kit_line'] + '. Point at it when you point at the tool on page 1. If the card is not printed, send the PDF with the welcome message.', **{MARK: 'opening'}))
+        segment(d2, 'opening')['lines'].append(line('NOTE', S['kit_note'], **{MARK: 'opening'}))
     # --- talk
     tk = segment(d2, 'talk')
     if variant == 'say+do, ask' and not choose:
-        new = [line('ASK', ask, resp=15, **{MARK: 'talk'}), line('NOTE', S['talk_note'], **{MARK: 'talk'})]
+        new = [line('ASK', ask, resp=10, **{MARK: 'talk'}), line('NOTE', S['talk_note'], **{MARK: 'talk'})]
     else:
         new = [line('NOTE', note_t if choose else 'Ask the group where they used ' + t['name'] + ' today (about 20 seconds, no time modelled). ' + S['talk_note'], **{MARK: 'talk'})]
     last = max([i for i, ln in enumerate(tk['lines']) if ln['k'] not in ('NOTE', 'STUCK')] or [0])
@@ -191,19 +217,24 @@ def plan_lesson(n):
         return path, raw, raw, {'n': n, 'status': 'SKIPPED: the file is not re-dumpable byte for byte (format changed); fix by hand'}
     strip_spine_lines(d)
     base_ok, base_why, u0, s0 = fits(d)
+    w0 = warns(d)
     rep = {'n': n, 'baseline_ok': base_ok}
-    chosen = None
+    cands = []
     for v in VARIANTS:
-        d2, place = build_variant(d, n, v)
-        ok, why, u, sl = fits(d2)
-        if ok:
-            chosen = (v, d2, place, u, sl); break
-        rep.setdefault('tried', []).append(f'{v}: {why}')
-    if chosen is None:
-        d2, _ = build_variant(d, n, 'notes only')       # look-back words only; notes only never adds modelled seconds
-        v, place, u, sl = 'NEEDS HUMAN', '-', fits(d2)[2], fits(d2)[3]
+        for pref in (('opening', 'remember') if v in VARIANTS[:3] else ('opening',)):
+            d2, place = build_variant(d, n, v, pref)
+            ok, why, u, sl = fits(d2)
+            if not ok:
+                rep.setdefault('tried', []).append(f'{v}/{pref}: {why}'); continue
+            new_w = warns(d2) - w0
+            cands.append((VARIANTS.index(v), len(new_w), v, d2, place, u, sl, new_w))
+    if cands:
+        best = min(cands, key=lambda c: (c[0], c[1]))      # the richest variant that fits; for the same variant the placement with the fewest new warnings
+        _, _, v, d2, place, u, sl, new_w = best
+        rep['new_warns'] = sorted(f'{a}:{b}' for a, b in new_w)
     else:
-        v, d2, place, u, sl = chosen
+        d2, _ = build_variant(d, n, 'notes only')
+        v, place, u, sl = 'NEEDS HUMAN', '-', fits(d2)[2], fits(d2)[3]
     d2['spine'] = spine_obj(n)
     d3 = {}
     for k, val in d2.items():              # place `spine` right after `skill`
@@ -341,7 +372,7 @@ def main():
                 if a.apply: open(p, 'w', encoding='utf-8').write(new)
     print('\nlesson   status      variant           placed     used min (before>after)  slow min (before>after)')
     for r in rows:
-        print(f"L{r['n']:<6} {r.get('status', '?')[:10]:<11} {r.get('variant', '-'):<17} {r.get('place', '-'):<10} {r.get('used_before', '-')}>{r.get('used_after', '-')}".ljust(76) + f"{r.get('slow_before', '-')}>{r.get('slow_after', '-')}" + ('   tried: ' + '; '.join(r['tried']) if r.get('tried') else ''))
+        print(f"L{r['n']:<6} {r.get('status', '?')[:10]:<11} {r.get('variant', '-'):<17} {r.get('place', '-'):<10} {r.get('used_before', '-')}>{r.get('used_after', '-')}".ljust(76) + f"{r.get('slow_before', '-')}>{r.get('slow_after', '-')}" + ('   NEW WARNS ' + ','.join(r['new_warns']) if r.get('new_warns') else '') + ('   tried: ' + '; '.join(r['tried']) if r.get('tried') else ''))
     need = [r['n'] for r in rows if r.get('variant') == 'NEEDS HUMAN' or str(r.get('status', '')).startswith('SKIPPED')]
     if need: print('\nNEEDS HUMAN (timing too full or format changed):', need)
     print(f'\n{changed} files {"changed" if a.apply else "would change"}' + ('' if a.apply else '   (run with --apply in Phase B)'))

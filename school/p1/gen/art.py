@@ -40,3 +40,13 @@ OBJ_PATHS.update({
     "turtle": f'<path d="M3,12 C3,5 17,5 17,12 Z" {OBJ_ST}/><circle cx="18" cy="11" r="2" {OBJ_ST}/><path d="M5,12 L4,16 M9,12 L8.5,16 M13,12 L13.5,16" {OBJ_ST} fill="none"/><path d="M6,9 L9,7.5 L12,9 L15,8" {OBJ_ST} fill="none"/>',
 })
 NAMES.update({"cat": ("cat", "cats"), "dog": ("dog", "dogs"), "rabbit": ("rabbit", "rabbits"), "turtle": ("turtle", "turtles")})
+
+# size (mm of the 20-unit cell) at which the DRAWN picture is at least 8 mm in both directions (measured at 300 dpi, see the round 2 note in the build report)
+GLYPH_SIZE = {"apple": 11.0, "flower": 10.5, "star": 9.0, "ball": 9.0, "cat": 9.0, "dog": 9.5, "drum": 10.0, "boat": 10.5}
+def osz(kind): return GLYPH_SIZE[kind]
+def opitch(kind): return GLYPH_SIZE[kind] + 0.8
+COUNT_KINDS = ["apple", "star", "ball", "cat", "dog", "flower", "drum", "boat"]
+NAMES.update({"ball": ("balls", "bowl", "bowls"), "cat": ("cats", "bag", "bags"), "dog": ("dogs", "box", "boxes"), "drum": ("drums", "box", "boxes"), "boat": ("boats", "box", "boxes")})
+
+from . import common as _c
+_c.OBJ_NAMES.update({'ball': ('balls', 'bowl', 'bowls'), 'cat': ('cats', 'bag', 'bags'), 'dog': ('dogs', 'box', 'boxes')})

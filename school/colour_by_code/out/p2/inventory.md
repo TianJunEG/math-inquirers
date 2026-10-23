@@ -9,7 +9,7 @@
 | CBC-P2-07 | Dinosaur | Money: cents and dollars, decimal notation | 2 | 35¢, 65¢, 135¢, 185¢, 250¢ | 15 | tally, small marks (parts with the same mark share a colour) | 30000/30000 = 100.0% | 99.9% / 98.9% | 4.6 mm | PASS |
 | CBC-P2-08 | Butterfly | Time: hours and minutes | 1 | 2:40, 4:55, 6:45, 8:35, 10:15 | 14 | tally, mirror pairs | 10066/10066 = 100.0% | 100.0% / 100.0% | 4.8 mm | PASS |
 | CBC-P2-09 | Sailboat | Length, mass and volume | 2 | 35 cm, 60 cm, 250 g, 450 g, 12 l | 13 | tally, small marks (parts with the same mark share a colour) | 65052/65052 = 100.0% | 99.9% / 98.5% | 4.2 mm | PASS |
-| CBC-P2-10 | Butterfly | Picture graphs and tally marks | 2 | 6, 8, 10, 12, 15 | 14 | tally, mirror pairs | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.9 mm | PASS |
+| CBC-P2-10 | Butterfly | Picture graphs and tally marks | 2 | 6, 8, 10, 12, 15 | 14 | tally, mirror pairs | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.7 mm | FAIL |
 | CBC-P2-11 | Butterfly | 2D and 3D shapes and shape patterns | 1 | 1, 2, 3, 4, 6 | 14 | tally, mirror pairs | 280/280 = 100.0% | 100.0% / 100.0% | 4.2 mm | PASS |
 | CBC-P2-12 | Ice Cream | Odd and even numbers | 2 | 200, 301, 402, 503, 604 | 13 | tally, mirror pairs | 13000/13000 = 100.0% | 99.8% / 95.5% | 4.2 mm | PASS |
 | CBC-P2-13 | Fish | Number patterns: counting in steps up to 100 | 1 | 210, 300, 350, 420, 500 | 16 | tally, small marks (parts with the same mark share a colour) | 16000/16000 = 100.0% | 100.0% / 99.0% | 4.9 mm | PASS |

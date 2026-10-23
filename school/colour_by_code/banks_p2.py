@@ -826,7 +826,7 @@ GALLERY = [
     dict(id="CBC-P2-07", picture="dinosaur", bank="money", tier=2, seed=1),
     dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=1, seed=308),
     dict(id="CBC-P2-09", picture="sailboat", bank="measure", tier=2, seed=309),
-    dict(id="CBC-P2-10", picture="butterfly", bank="graph", tier=2, seed=10),
+    dict(id="CBC-P2-10", picture="butterfly", bank="graph", tier=2, seed=11),
     dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=1, seed=316),
     dict(id="CBC-P2-12", picture="icecream", bank="oddeven", tier=2, seed=323),
     dict(id="CBC-P2-13", picture="fish", bank="pattern", tier=1, seed=1),
