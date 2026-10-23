@@ -318,3 +318,6 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 
 ## 2026-10-23 (owner clarification)
 - Owner: the reply codes were copy-pasted from the assistant's lists; no real-world checking was done. Rule from now on: a reply code that says something was done, sent, asked, tested or checked (for example *-ASKED, *-SENT, *-TESTED, *-CHECKED, *-OK on a physical test) is NOT recorded as done unless the owner says in their own words what they did. Decisions (yes/no choices) stand. Everything that needs a real-world check is collected in docs/owner_checks_outstanding.md.
+
+## 2026-10-23 (owner, coin and note art)
+- COINS-FIX-SIZE (owner wrote it in own words): (1) coin sizes follow real Singapore proportions as closely as the specifications allow; (2) notes drawn at 2:1 and bigger for higher values; (3) add a small "Pictures are not actual size" line to the teacher notes. Applies to P1, P2 and the colour_by_code library (and later P3-6 booklets). The art stays original (symbols, no real designs).

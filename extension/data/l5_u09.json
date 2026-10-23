@@ -495,7 +495,7 @@
      "Working:"
     ]
    },
-   "explanation": "Each number is 5 more than the one before. (a) 27 and 32. (b) There are 9 jumps of 5 from the 1st to the 10th: 7 + 9 × 5 = 52. (c) 100 - 7 = 93, and 93 is not a multiple of 5, so 100 is not in the pattern. (Every number ends in 2 or 7.)"
+   "explanation": "Each is 5 more. (a) 27, 32. (b) 7 + 9 × 5 = 52. (c) 93 is not a multiple of 5: no."
   },
   {
    "id": "L5U09-S05",
@@ -616,7 +616,7 @@
      }
     }
    ],
-   "explanation": "Each is 5 more. (a) 27, 32. (b) 7 + 9 × 5 = 52. (c) 93 is not a multiple of 5: no.",
+   "explanation": "Each figure has 4 arms of n tiles and 1 middle tile. (a) 4 × 4 + 1 = 17. (b) 4 × 15 + 1 = 61. (c) The rule is tiles = 4 × figure number + 1. (d) 81 - 1 = 80, and 80 ÷ 4 = 20.",
    "figside": true
   },
   {
@@ -651,7 +651,7 @@
      "Working:"
     ]
    },
-   "explanation": "All stools: 51 legs, 10 short. Each chair adds 1 leg: 10 chairs, 7 stools."
+   "explanation": "Try 10 adults and 5 children: $90 + $25 = $115, too much. Try 8 adults and 7 children: $72 + $35 = $107. Right."
   },
   {
    "id": "L5U09-S07",
@@ -685,7 +685,7 @@
      "Working:"
     ]
    },
-   "explanation": "All right: 60. Each wrong costs 5 + 2 = 7. (60 - 39) ÷ 7 = 3 wrong, so 9 right."
+   "explanation": "All stools: 51 legs, 10 short. Each chair adds 1 leg: 10 chairs, 7 stools."
   },
   {
    "id": "L5U09-S08",
@@ -719,7 +719,7 @@
      "Working:"
     ]
    },
-   "explanation": "Each table adds 4 chairs. (a) 4 × 5 + 2 = 22. (b) 4 and 2. (c) 48 ÷ 4 = 12."
+   "explanation": "All right: 60. Each wrong costs 5 + 2 = 7. (60 - 39) ÷ 7 = 3 wrong, so 9 right."
   },
   {
    "id": "L5U09-S09",
@@ -914,7 +914,7 @@
      }
     }
    ],
-   "explanation": "1 table has 6 chairs and 2 tables have 10. Each new table adds 4 chairs (2 on each side). (a) 4 × 5 + 2 = 22. (b) chairs = 4 × tables + 2. (c) 50 - 2 = 48, and 48 ÷ 4 = 12 tables.",
+   "explanation": "Each table adds 4 chairs. (a) 4 × 5 + 2 = 22. (b) 4 and 2. (c) 48 ÷ 4 = 12.",
    "figside": true
   },
   {
