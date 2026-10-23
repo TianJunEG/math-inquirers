@@ -74,11 +74,16 @@ def page28():
             cosang = abs(bv[0] * v[0] + bv[1] * v[1]) / (math.hypot(*bv) * math.hypot(*v))
             if cosang < 0.02: perp.append(i)
         return perp[0] if len(perp) == 1 else -1
+    n_out = sum('stroke-dasharray="1.2 1.2"' in r["fig"] for r in rows)
+    n_tilt = 0
+    for r in rows:
+        bn = re.match(r"(\w\w) is the base", re.sub("<[^>]+>", "", r["q"])).group(1); sg = read_segs(r["fig"]); sg = sg.get(bn) or sg.get(bn[::-1])
+        n_tilt += abs(sg[1] - sg[3]) > 0.5
     P = mc_page(28, 5128, "Height Hunt", 1, "Area of a triangle: the base and its height", STRAND_AR,
         "area of a triangle: base and height (the height is at a right angle to the base)", ["AR1.1"], "Lettered choices (figures)",
         ["The height is at a right angle to the base. Circle its letter.", "The figures are drawn to scale: check with a corner of paper.", "Write the six letters in the boxes."],
         rng, rows, 3, word, "; ".join(f"{i+1}) {k}" for i, k in enumerate(keys)),
-        "Six triangles, each with a named base. One dashed line from the opposite vertex meets the base line at a right angle (it is the height); a second dashed line and a side of the triangle do not. Some bases are tilted and some heights fall outside the triangle (the base is extended with a dotted line). The page says the figures are drawn to scale, so a pupil can check a right angle with the corner of a sheet of paper or a set square. This is the only page of the two booklets that relies on the drawing. The wrong choices are the slanted line and a side. Each choice has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
+        f"Six triangles, each with a named base. One dashed line from the opposite vertex meets the base line at a right angle (it is the height); a second dashed line and a side of the triangle do not. {n_tilt} of the six bases are tilted and {n_out} of the six heights fall outside the triangle (the base is then extended with a dotted line). The page says the figures are drawn to scale, so a pupil can check a right angle with the corner of a sheet of paper or a set square. This is the only page of the two booklets that relies on the drawing. The wrong choices are the slanted line and a side. Each choice has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
         solve_row, rows_cls="mcgrid", ps=False)
     return P
 
@@ -106,11 +111,12 @@ def page29():
     solved = []
     for c in cards:
         b, h, s = read_tri(c); solved.append(Fr(b * h, 2))
+    n_side = sum('data-r="side"' in c_ for c_ in cards); n_out = sum('stroke-dasharray="1.2 1.2"' in c_ for c_ in cards)
     P = code_page(29, 5129, "Triangle Areas", 1, "Area of a triangle: base, height and area", STRAND_AR,
         "area of a triangle from its base and height", ["AR1.1", "AR1.2"], "Code-breaker (areas of triangles)",
         ["Find the area of each triangle.", "The height is the length at a right angle to the base. Write the area in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} cm² (base {b}, height {h})" for i, (a, (b, h, f, s)) in enumerate(zip(ans, items))),
-        "Six triangles with the base and the height (dashed, at a right angle to the base) labelled in cm; some figures have a length beside a slanted side that is not needed, and some have the height outside the triangle. The decoy letters stand for the usual slips: forgetting to halve, adding the base and the height, or using the slanted side instead of the height. A box left blank gives no letter and the check cannot see it. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers.",
+        f"Six triangles with the base and the height (dashed, at a right angle to the base) labelled in cm; {n_side} of the six figures have a length beside a slanted side that is not needed, and {n_out} have the height outside the triangle (the base is then extended with a dotted line). The decoy letters stand for the usual slips: forgetting to halve, adding the base and the height, or using the slanted side instead of the height. A box left blank gives no letter and the check cannot see it. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers.",
         solved, cols=4, layout="c3", checks=[("V7 every product base x height is even and every area is below 100 cm²", all((b * h) % 2 == 0 for b, h, _, _ in items) and max(ans) < 100, "")])
     return P
 
@@ -137,11 +143,12 @@ def page30():
             break
         except RuntimeError: continue
     else: raise RuntimeError("p30")
+    n_out = sum('stroke-dasharray="1.2 1.2"' in c_ for r_ in grid for c_ in r_)
     P = route_page(30, 5130, "Triangle Route", 2, "Area of a triangle: base, height and area", STRAND_AR,
         "area of a triangle from its base and height", ["AR1.2"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on triangles with area {T} cm{SQ}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
-        f"A 4 by 4 grid of sixteen triangles, each with its base and its height (dashed) labelled in cm. The boxes on the route have area {T} cm{SQ}; some have a length beside a slanted side that is not needed. The boxes off the route have a product base x height that gives the area without halving, or an area a little more or less than {T} cm{SQ}; some extra boxes that do have area {T} cm{SQ} are dead ends. Counting the boxes shows a line that takes a shortcut. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers.",
+        f"A 4 by 4 grid of sixteen triangles, each with its base and its height (dashed) labelled in cm; {n_out} of the sixteen have the height outside the triangle (the base is then extended with a dotted line). The boxes on the route have area {T} cm{SQ}. The boxes off the route have a product base x height that gives the area without halving, or an area a little more or less than {T} cm{SQ}; some extra boxes that do have area {T} cm{SQ} are dead ends. Counting the boxes shows a line that takes a shortcut. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers.",
         lambda c: "{} x {} / 2 = {}".format(*read_tri(c)[:2], read_tri(c)[0] * read_tri(c)[1] // 2) if True else "", f"Does your line reach FINISH? Count its boxes: are there {L}? Does every triangle have area {T} cm{SQ}?", extra_facts=str(T), cls="maze tall tri")
     return P
 
