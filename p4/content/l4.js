@@ -1,5 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 4: Fraction Frontier (Fractions)
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>
@@ -53,8 +54,8 @@ const setSvg = () => {
 // Q4c scaffold: two bars of the same length, 4/9 and 5/8 shaded (drawn, no glyphs)
 const cmpSvg = () => {
   const x0 = 120, W = 360;
-  let s = `<svg aria-label="Two bars of the same length. The top bar is cut into 9 equal parts with 4 shaded. The bottom bar is cut into 8 equal parts with 5 shaded." viewBox="0 0 600 130" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
-  [[9, 4, 14], [8, 5, 72]].forEach(([n, k, y]) => {
+  let s = `<svg aria-label="Two bars of the same length. The top bar is cut into 9 equal parts with 4 shaded. The bottom bar is cut into 8 equal parts with 5 shaded." viewBox="0 0 600 104" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  [[9, 4, 6], [8, 5, 56]].forEach(([n, k, y]) => {
     for (let i = 0; i < n; i++) s += `<rect x="${x0 + i * W / n}" y="${y}" width="${W / n}" height="40" fill="${i < k ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
     s += sfr(60, y + 16, k, n, 17);
   });
@@ -184,21 +185,20 @@ module.exports = {
     W.push(tip('fold a strip into quarters, then fold each quarter in half. 3 quarters = ____ eighths.'));
     W.push(H.sub('a', [fr(3, 4), box, fr(5, 8)]));
     W.push(H.sub('b', [fr(2, 3), box, fr(7, 12)]));
-    W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     The two bars below are the same length. Write how you know:  ______________________']));
+    W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '    The bars are the same length. Why? ____________']));
     W.push(H.fig(cmpSvg()));
     W.push(H.sub('d', [fr(3, 5), box, fr(3, 7)]));
     W.push(H.sub('e', ['Put in order, smallest first:   ', fr(2, 3), ',  ', fr(5, 6), ',  ', fr(7, 12), '        ________,  ________,  ________']));
     W.push(H.q(5, ['', fr(3, 5), ' of the sweets in a jar are red. There are 27 red sweets.'], { keepNext: true }));
     W.push(tip('put 27 counters into 3 equal groups. How many in each group?  ______'));
-    W.push(H.sub('a', 'Draw a bar model. How many sweets are in the jar?'));
-    W.push(H.gap(700));
-    W.push(H.ans());
-    W.push(H.sub('b', 'How many sweets are NOT red?'));
-    W.push(H.ans());
+    W.push(H.sub('a', 'Use the bar model: the whole jar is cut into 5 equal parts. How many sweets are in the jar?  ________'));
+    W.push(H.fig(FG.barModel({ left: 120, rowH: 38, rows: [{ name: 'Jar', segs: [{ u: 1, f: 'shade' }, { u: 1, f: 'shade' }, { u: 1, f: 'shade' }, { u: 1 }, { u: 1 }] }],
+      ann: [{ k: 'brace', row: 0, from: 0, to: 3, side: 'bottom', t: '27 red sweets' }, { k: 'brace', row: 0, from: 0, to: 5, t: '? sweets in the jar' }],
+      label: 'A bar for the jar cut into 5 equal parts. 3 parts are shaded and marked 27 red sweets. A brace over all 5 parts is marked with a question mark.' })));
+    W.push(H.sub('b', 'How many sweets are NOT red?  ________'));
     W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Start here: on the strip, shade ', fr(1, 3), ' of the boxes, then ', fr(3, 4), '.'], { keepNext: true }));
     W.push(H.fig(stripSvg()));
-    W.push(...H.lines(1));
-    W.push(H.ans('How many?'));
+    W.push(H.ans('Fractions found, and how many:'));
     return W;
   }
 };

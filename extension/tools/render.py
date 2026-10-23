@@ -78,12 +78,18 @@ def item_html(it, n, theme, hint=True, extra_cls=''):
     out = [f'<div class="item {extra_cls}" id="{it["id"]}">', badge(tier, n, theme)]
     if it.get('beyond'):
         out.append(f'<div class="beyond">&#9733; Beyond Level 1: {esc(it["beyond"])}</div>')
-    out.append(f'<div class="stem">{mk(it["text"])}</div>')
+    stem_html = f'<div class="stem">{mk(it["text"])}</div>'
+    if it.get('figure') and it.get('figright'):      # figure to the right of the question text (saves height, audit 3)
+        out.append(f'<div class="figright"><div class="frt">{stem_html}</div>{fig_html(it["figure"], theme)}</div>')
+    else:
+        out.append(stem_html)
     parts_html = ''
     if it.get('parts'):
         parts_html = '<div class="parts' + (' prow' if it.get('partsrow') else '') + '">' + ''.join(
             f'<div class="part"><span class="plab">{("(" + p["label"] + ")") if p["label"] else ""}</span><span>{mk(p["text"])}</span></div>' for p in it['parts']) + '</div>'
-    if it.get('figure') and it.get('figside'):      # figure to the right of the answer parts (saves height)
+    if it.get('figure') and it.get('figright'):
+        out.append(parts_html)
+    elif it.get('figure') and it.get('figside'):      # figure to the right of the answer parts (saves height)
         out.append(f'<div class="figside">{parts_html}{fig_html(it["figure"], theme)}</div>')
     else:
         if it.get('figure'):

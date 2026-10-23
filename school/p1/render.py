@@ -144,6 +144,8 @@ svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle
 table.tbl{border-collapse:collapse;width:100%;font-size:10.5pt}
 table.tbl th,table.tbl td{border:0.4mm solid #000;padding:1.2mm 2mm;text-align:left;vertical-align:top}
 table.tbl th{font-weight:800;border-bottom:0.8mm solid #000}
+table.tbl.cov{font-size:8.6pt}table.tbl.cov td:first-child{white-space:nowrap}table.tbl.cov td:last-child{white-space:nowrap}table.tbl.cov th,table.tbl.cov td{padding:0.7mm 1.6mm}
+table.tbl.cont{font-size:9.6pt}table.tbl.cont th,table.tbl.cont td{padding:1mm 1.6mm}
 .kentry{border:0.5mm solid #000;border-radius:2mm;padding:2.2mm 3.5mm;margin-bottom:3mm;font-size:10pt;line-height:1.25;break-inside:avoid}
 .kentry h4{font-family:'Fredoka';font-weight:600;font-size:13pt;margin:0 0 1.5mm}
 .kentry .tags{font-weight:700;margin-bottom:1mm}
@@ -193,7 +195,7 @@ def footer(code, school):
             f'<span class="pc"><b>{code}</b></span></footer>')
 
 def pupil_page(p, school):
-    code = f"P1-{p['no']:02d}"
+    code = p.get("code") or f"P1-{p['no']:02d}"
     instr = "".join(f"<p>{html.escape(s)}</p>" for s in p["instr"])
     lb = ""
     if p.get("check_boxes"):
@@ -217,30 +219,34 @@ def doc(pages_html, title):
     return (f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>{html.escape(title)}</title>'
             f'<style>{CSS.replace("FONT", FONT)}</style></head><body>{pages_html}</body></html>')
 
-# ------------------------------------------------------------------ front matter
+# ------------------------------------------------------------------ front matter (one set per booklet)
+from gen.outcomes import OUTCOMES, PAGE_OC, BOOKLETS, oc_label
+
 DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
 CONTACT = "pypteltd@gmail.com (business email for now, to be changed later)"
 REG_OFFICE = "[registered office address: to be added by the owner]"
+NOT_AFFILIATED = "Not affiliated with or endorsed by the Ministry of Education, Singapore."      # plan section 12; on the licence page only
 
 def draft_banner(what):
     if not DRAFT: return ""
     return f'<div class="draft">DRAFT: {html.escape(what)} Contact: {html.escape(CONTACT)}</div>'
 
-def cover(school):
+def cover(school, bk):
     s = html.escape(school) if school.strip() else "&nbsp;"
     pub = ('<p style="margin-top:14mm;font-size:12pt">[Publisher line: wording to be confirmed by the owner]</p>' if DRAFT
            else '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd</p>')
     return ('<section class="page cover fm"><div>' + (draft_banner("cover wording, title and publisher line are not final.") if DRAFT else "") +
             '<p class="sub" style="margin-top:12mm">Maths puzzles for early finishers</p>'
-            '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 1</div></div>'
+            '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 1</div>'
+            f'<div class="big" style="font-size:28pt;margin-top:5mm">{html.escape(bk["name"])}</div><p class="sub" style="margin-top:2mm">{html.escape(bk["terms"])}</p></div>'
             '<div class="box">20 single-page puzzles<br>Every puzzle checks itself<br>One star and two star pages<br>Teacher answer key included</div>'
-            f'<div><p style="font-size:13pt;margin:0 0 2mm">This pack belongs to</p><span class="school">{s}</span>'
+            f'<div><p style="font-size:13pt;margin:0 0 2mm">This booklet belongs to</p><span class="school">{s}</span>'
             + pub + '</div></section>')
 
-def licence(school):
+def licence(school, bk):
     s = html.escape(school) if school.strip() else "____________________________"
     return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the registered office address below must be filled in, before any school receives this pack.")
+            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the registered office address below must be filled in, before any school receives this booklet.")
             + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
@@ -249,67 +255,88 @@ def licence(school):
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
             '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ". Registered office: " + REG_OFFICE) if DRAFT else "") + '</p>'
-            '<h3>Notes</h3><p>The licence is for the edition bought. The school name shown on each page is set when the pack is made.</p>'
-            '<p style="margin-top:12mm">&copy; 2026 Preciouslyours Pte Ltd.' + (" [entity name and year: owner to confirm]" if DRAFT else " All rights reserved.") + '</p></section>')
+            '<h3>Notes</h3><p>The licence is for the edition bought. The school name shown on each page is set when the booklet is made. '
+            f'This licence covers {html.escape(bk["name"])} only; the other semester booklet is licensed separately.</p>'
+            f'<p>{NOT_AFFILIATED} The mathematics syllabus is published by the Ministry of Education, Singapore.</p>'
+            '<p style="margin-top:10mm">&copy; 2026 Preciouslyours Pte Ltd.' + (" [entity name and year: owner to confirm]" if DRAFT else " All rights reserved.") + '</p></section>')
 
 def _plist(pages, pred):
-    return ", ".join("P1-%02d" % p["no"] for p in pages if pred(p))
+    return ", ".join(p["code"].split(" ")[0] for p in pages if pred(p))
 
-def teacher_notes(pages):
+def _has(pages, nos): return any(p["no"] in nos for p in pages)
+
+def teacher_notes(pages, bk):
     n1 = sum(1 for p in pages if p["tier"] == 1); n2 = len(pages) - n1
     cbc = _plist(pages, lambda p: p.get("cbc"))
-    later = _plist(pages, lambda p: p.get("later"))
+    ps = _plist(pages, lambda p: p.get("ps"))
+    other = "Semester 2 (Terms 3 and 4)" if bk["n"] == 1 else "Semester 1 (Terms 1 and 2)"
+    bullets = [
+        (None, '<li><b>Code word.</b> The answers give letters that spell a word. The strip gives no hint of the word. Each word can be spelt from its letters in one way only, so answers in the wrong boxes never make another word.</li>'),
+        ({1, 12, 14}, '<li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'),
+        ({7, 8, 24, 30}, '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes, and every box on it must follow the rule on the page.</li>'),
+        ({4, 7, 31, 34, 38}, '<li><b>Logic grid, queue, strips and matching pictures.</b> Each number, child, strip or picture has a letter; the letters, read in the order asked, must spell a word. Where one item is left out, its letter is a decoy that is not part of the word.</li>'),
+        ({9, 19, 20, 36}, '<li><b>Total.</b> The whole count must make the total printed in the strip (the graph pages add a second sum).</li>'),
+        ({37}, '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop, and the top numbers must add to the printed total.</li>'),
+    ]
+    blt = "".join(t for need, t in bullets if need is None or _has(pages, need))
     return ('<section class="page fm"><h2>Teacher notes' + (" (DRAFT)" if DRAFT else "") + '</h2>'
             + draft_banner("teacher notes are for owner review.")
-            + '<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
+            + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
+            f'<h3>Which terms</h3><p>The pages are grouped by the order in which Primary 1 topics are typically taught: this booklet follows {html.escape(bk["terms"])}, the other booklet follows {other}. Schools vary, so check your scheme of work: a page can be used at any time once the topic has been taught, and a school that teaches a topic earlier can use the other booklet early.</p>'
             f'<h3>Stars</h3><p>One star pages practise a topic as it is usually taught ({n1} pages). Two star pages use the same topics with two steps or two clues to combine ({n2} pages).</p>'
-            '<h3>Every page checks itself</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer.</p>'
-            '<ul><li><b>Code word.</b> The answers give letters that spell a word. The strip gives no hint of the word. Each word can be spelt from its letters in one way only, so answers in the wrong boxes never make another word.</li><li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'
-            '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes.</li><li><b>Logic grid and queue.</b> Each number, price or child has a letter; the letters, read down the list, must spell a word. P1-04 and P1-07 list one number or child too many; its letter is a decoy.</li><li><b>Total.</b> The whole count must make the stated total (P1-20 adds a second sum for the two questions).</li></ul>'
+            '<h3>Every page checks itself</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer, and it asks the pupil to see whether the answer makes sense.</p>'
+            f'<ul>{blt}</ul>'
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
             '<h3>How the checks were tested</h3><p>For every page, a script tried every single wrong answer (any other value in the page\'s range) and every wrong arrangement of the logic pages. The check rejected at least 95% of them on every page. A wrong answer that spells any word of a list of about 129 000 English words counts as not rejected.</p>'
             '</section>'
             '<section class="page fm"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            '<h3>Using the pages</h3><ul><li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). The outline is printed black and white; the colour words in the key are what the pupil follows.</li>'
-            '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
-            '<li><b>When to use.</b> Some topics are usually taught later in the year: ' + later + '. P1-06 uses o\'clock and half past; P1-18 reads times to 5 minutes and is usually used late in the year. Check your scheme of work before giving out these pages.</li>'
-            '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li></ul>'
-            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only; the back of a copy stays blank. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size); on P1-17 a real ruler matches the drawn ruler only at 100%.</p>'
-            '<h3>What is in this pack</h3><table class="tbl"><tr><th>Part</th><th>Pages</th><th>Photocopy for pupils?</th></tr>'
-            '<tr><td>Cover</td><td>1</td><td>No</td></tr><tr><td>Photocopy licence</td><td>1</td><td>No</td></tr>'
-            '<tr><td>Teacher notes</td><td>2</td><td>No</td></tr><tr><td>Contents</td><td>1</td><td>No</td></tr>'
-            '<tr><td>Puzzle pages P1-01 to P1-20</td><td>20</td><td>Yes</td></tr>'
-            '<tr><td><b>Complete pack to print</b></td><td><b>25</b></td><td>The teacher answer key is a separate file.</td></tr></table>'
+            '<h3>Using the pages</h3><ul>'
+            + ('<li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). For a pencil-only copy the pupil writes Y, R, B, G or O in each part; the tally and the matching parts are checked the same way.</li>' if cbc else '<li><b>Time.</b> Most pages take 5 to 15 minutes.</li>')
+            + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
+            + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as stories with more than one step or fewest coins, rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
+            + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li></ul>'
+            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size); on the ruler pages a real ruler matches the drawn ruler only at 100%.</p>'
+            '<h3>What the booklet covers</h3>' + coverage_table(pages, bk) +
             '</section>')
 
-def contents(pages):
-    rows = "".join(f'<tr><td>P1-{p["no"]:02d}</td><td>{html.escape(p["title"])}</td><td>{html.escape(p["topic"])}</td><td>{"1 star" if p["tier"]==1 else "2 stars"}</td></tr>' for p in pages)
-    return ('<section class="page fm"><h2>Contents</h2><table class="tbl"><tr><th>Page</th><th>Puzzle</th><th>Topic</th><th>Tier</th></tr>'
-            + rows + '</table><p style="margin-top:4mm;font-size:11pt">Pages are independent. Pick any page.</p></section>')
+def coverage_table(pages, bk):
+    pos = {}
+    for p in pages:
+        for o in PAGE_OC[p["no"]]:
+            pos.setdefault(o, []).append(p["code"].split(" ")[0])
+    rows = "".join(f'<tr><td>{html.escape(oc_label(o))}</td><td>{html.escape(OUTCOMES[o][1])}</td><td>{", ".join(pos[o])}</td></tr>' for o in OUTCOMES if o in pos)
+    absent = [oc_label(o) for o in OUTCOMES if o not in pos]
+    return ('<table class="tbl cov"><tr><th>Syllabus outcome</th><th>Wording in the syllabus</th><th>Pages</th></tr>' + rows + '</table>'
+            + '<p style="font-size:8.5pt;margin-top:1.5mm">Outcomes practised in the other booklet: ' + html.escape("; ".join(absent)) + '.</p>')
+
+def contents(pages, bk):
+    rows = "".join(f'<tr><td>{p["code"].split(" ")[0]}</td><td>{p["code"].split("(")[1].rstrip(")")}</td><td>{html.escape(p["title"])}</td><td>{html.escape(p["topic"])}</td><td>{"1 star" if p["tier"]==1 else "2 stars"}</td></tr>' for p in pages)
+    return (f'<section class="page fm"><h2>Contents: {html.escape(bk["name"])}</h2><table class="tbl cont"><tr><th>Page</th><th>Code</th><th>Puzzle</th><th>Topic</th><th>Tier</th></tr>'
+            + rows + '</table><p style="margin-top:4mm;font-size:11pt">Pages are independent. Pick any page. The code in the footer shows the page in this booklet and, in brackets, its number in the full set of 40 pages (P1-01 to P1-40).</p></section>')
 
 # ------------------------------------------------------------------ teacher key
 def key_entry(p):
     extra = p.get("mini", "")
-    return (f'<div class="kentry"><h4>P1-{p["no"]:02d} {html.escape(p["title"])} &nbsp; {"1 star" if p["tier"]==1 else "2 stars"}</h4>'
+    oc = ", ".join(oc_label(o) for o in PAGE_OC[p["no"]])
+    return (f'<div class="kentry"><h4>{p["code"]} {html.escape(p["title"])} &nbsp; {"1 star" if p["tier"]==1 else "2 stars"}</h4>'
             f'<div class="tags">Topic: {html.escape(p["topic"])}</div>'
-            f'<div>Syllabus topic: {html.escape(p["strand"])}; reference {html.escape(p["syll"])}</div>'
+            f'<div>Syllabus outcomes: {html.escape(oc)}' + (" (problem solving)" if p.get("ps") else "") + f'. Notes on the tag: {html.escape(p["syll"])}</div>'
             f'<div>Puzzle type: {html.escape(p["ptype"])}. How the pupil checks: {html.escape(p.get("mech_plain", p["mech"]))}.</div>'
             f'<div class="row"><div><b>Answers:</b> {html.escape(p["key"]["answers"])}<br><b>Check result:</b> {html.escape(p["key"]["check_result"])}</div>{extra}</div>'
             f'<div><b>Teacher note:</b> {html.escape(p["note"])}</div></div>')
 
-def key_pages(pages, school, packing=None):
-    out = ['<section class="page fm"><h2>Teacher answer key: Primary 1</h2>'
+def key_pages(pages, school, packing, bk):
+    out = [f'<section class="page fm"><h2>Teacher answer key: Primary 1, {html.escape(bk["name"])}</h2>'
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the Primary 1 topic the puzzle practises, with a reference to the Primary 1 topics in the Mathematics Syllabus, Primary (2021 edition, pages 31 and 32). Where the syllabus lists several outcomes under one topic, the range of outcome numbers is given. The references are for your planning only and are not printed on the pupil pages.</p>'
-           '<h3>Topic coverage</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
-           + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join("P1-%02d" % x for x in v)}</td></tr>' for k, v in strand_map(pages).items())
-           + '</table><p style="font-size:10pt;margin-top:4mm">Syllabus items not covered by a puzzle: reading and writing numbers in words, number-sentence signs in isolation, measuring and drawing a line to the nearest cm, am and pm, copying figures on a grid, forming figures from shapes, ordinals beyond 5th, naming a shape from a description.</p></section>']
-    groups = packing or [pages[i:i + 3] for i in range(0, len(pages), 3)]
-    for g in groups:
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 1 content in the Mathematics Syllabus, Primary (2021 edition, pages 31 and 32). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
+           + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
+           + '</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example S1-07 (P1-08), gives the page in this booklet and, in brackets, its number in the full set of 40.</p></section>']
+    for g in packing:
         out.append('<section class="page fm" >' + "".join(key_entry(p) for p in g) + footer("KEY", school).replace("Photocopy licence", "Teacher key. Photocopy licence") + "</section>")
     for p in pages:
         if p.get("cbc"):
-            out.append(f'<section class="page fm cbcans" ><h2>Answers: P1-{p["no"]:02d} {html.escape(p["title"])}</h2>'
+            out.append(f'<section class="page fm cbcans" ><h2>Answers: {p["code"]} {html.escape(p["title"])}</h2>'
                        f'<p style="margin:0 0 2mm;font-size:10.5pt">Every part shows the question, the answer underlined and the colour in brackets. Pupils colour their own copy. '
                        f'Colour key: {html.escape(p["key"]["answers"].replace("Colour key: ", ""))}.</p>{p["teacher_svg"]}'
                        + footer("KEY", school).replace("Photocopy licence", "Teacher key. Photocopy licence") + "</section>")
@@ -318,5 +345,5 @@ def key_pages(pages, school, packing=None):
 def strand_map(pages):
     m = {}
     for p in pages:
-        m.setdefault(p["strand"], []).append(p["no"])
+        m.setdefault(p["strand"], []).append(p["code"].split(" ")[0])
     return m

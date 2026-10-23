@@ -28,7 +28,7 @@ const C = (x, y, r, o = {}) =>
 const DEFS = `<defs><pattern id="mi-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="${Y}"/><line x1="0" y1="0" x2="0" y2="9" stroke="${N}" stroke-width="2"/></pattern>` +
   `<pattern id="mi-dots" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="${SKY}"/><circle cx="4" cy="4" r="1.6" fill="${N}"/></pattern></defs>`;
 const svg = (vw, vh, inner, label, width) =>
-  `<svg aria-label="${label.replace(/"/g, '&quot;')}" viewBox="0 0 ${vw} ${vh}" width="${width || vw}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${DEFS}${inner}</svg>`;
+  `<svg aria-label="${label.replace(/"/g, '&quot;')}" viewBox="0 0 ${vw} ${vh}" width="${width || Math.round(vw * 0.75)}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${DEFS}${inner}</svg>`;
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // fit: make sure the smallest text in a figure prints at >= minPt (default 9) on the A4 print.
@@ -43,7 +43,8 @@ const fit = (s, level, opt = {}) => {
   if (!vb) return s;
   const vw = +vb[1];
   const wm = tag.match(/ width="([\d.]+)"/);
-  const w0 = wm ? +wm[1] : vw;
+  const sm = tag.match(/style="[^"]*?(?:^|;|")width:\s*([\d.]+)px/) || tag.match(/style="width:\s*([\d.]+)px/);
+  const w0 = wm ? +wm[1] : sm ? +sm[1] : vw;
   let fs = [...s.matchAll(/font-size[=:]\s*"?([\d.]+)/g)].map(x => +x[1]);
   if (!fs.length) return s;
   // ignore a single tiny decorative glyph? no: every text counts
@@ -51,7 +52,8 @@ const fit = (s, level, opt = {}) => {
   const need = minPt / (mn * k) * vw;
   const w = Math.min(maxW, Math.max(w0, Math.ceil(need)));
   if (w === w0) return s;
-  const tag2 = wm ? tag.replace(/ width="[\d.]+"/, ` width="${w}"`) : tag.replace('<svg', `<svg width="${w}"`);
+  let tag2 = wm ? tag.replace(/ width="[\d.]+"/, ` width="${w}"`) : tag.replace('<svg', `<svg width="${w}"`);
+  if (sm) tag2 = tag2.replace(/width:\s*[\d.]+px/, `width:${w}px`);
   return s.replace(tag, tag2);
 };
 
@@ -64,12 +66,12 @@ const fit = (s, level, opt = {}) => {
 //                           {k:'vline', from, to rows, at}                        dashed vertical line at unit position
 //                           {k:'txt', row, at, t, dx, dy}
 const barModel = (spec) => {
-  const w = spec.w || 600, left = spec.left === undefined ? 112 : spec.left, rowH = spec.rowH || 50;
+  const w = spec.w || 600, left = spec.left === undefined ? 112 : spec.left, rowH = spec.rowH || 46;
   const maxU = Math.max(...spec.rows.map(r => (r.off || 0) + r.segs.reduce((a, s) => a + s.u, 0)));
-  const U = spec.unit || (w - left - 20) / maxU;
+  const U = spec.unit || (w - left - (spec.right || 20)) / maxU;
   const ann = spec.ann || [];
-  const topPad = (row) => ann.some(a => a.k === 'brace' && a.row === row && (a.side || 'top') === 'top') ? 46 : 12;
-  const botPad = (row) => ann.some(a => (a.k === 'brace' && a.row === row && a.side === 'bottom') || (a.k === 'dim' && a.row === row)) ? 50 : 12;
+  const topPad = (row) => ann.some(a => a.k === 'brace' && a.row === row && (a.side || 'top') === 'top') ? 58 : 8;
+  const botPad = (row) => ann.some(a => (a.k === 'brace' && a.row === row && a.side === 'bottom') || (a.k === 'dim' && a.row === row)) ? 62 : 8;
   let y = 6; const ys = [];
   spec.rows.forEach((r, i) => { y += topPad(i); ys[i] = y; y += rowH + botPad(i); });
   const h = Math.ceil(y);
@@ -99,12 +101,16 @@ const barModel = (spec) => {
       const top = (a.side || 'top') === 'top';
       const yb = top ? y0 - 8 : y0 + rowH + 8, d = top ? -1 : 1;
       s += `<path d="M${r2(xa)} ${r2(yb)} q0 ${12 * d} 12 ${12 * d} L${r2(xm - 12)} ${r2(yb + 12 * d)} q12 0 12 ${12 * d} q0 ${-12 * d} 12 ${-12 * d} L${r2(xb - 12)} ${r2(yb + 12 * d)} q12 0 12 ${-12 * d}" fill="none" stroke="${N}" stroke-width="3"/>`;
-      s += T(xm, top ? yb - 24 : yb + 40, a.t, { size: a.size || 19, fill: a.fill || TEAL });
+      s += T(xm, top ? yb - 36 : yb + 44, a.t, { size: a.size || 19, fill: a.fill || TEAL });
     } else if (a.k === 'dim') {
       const yb = y0 + rowH + 22;
       s += L(xa, yb, xb, yb, { w: 3, c: RED }) + `<polygon points="${r2(xa)},${yb} ${r2(xa + 11)},${yb - 7} ${r2(xa + 11)},${yb + 7}" fill="${RED}"/><polygon points="${r2(xb)},${yb} ${r2(xb - 11)},${yb - 7} ${r2(xb - 11)},${yb + 7}" fill="${RED}"/>`;
       s += L(xa, y0 + rowH, xa, yb + 8, { w: 2, c: RED, dash: '4 3' }) + L(xb, y0 + rowH, xb, yb + 8, { w: 2, c: RED, dash: '4 3' });
       s += T(xm, yb + 28, a.t, { size: 18, fill: RED });
+    } else if (a.k === 'rbrace') {   // vertical brace on the right spanning rows r1..r2 (at = unit position of the right end of the bars)
+      const x = left + a.at * U + 14, ya = ys[a.r1] , yb = ys[a.r2] + rowH, ym = (ya + yb) / 2;
+      s += `<path d="M${r2(x)} ${r2(ya)} q12 0 12 12 L${r2(x + 12)} ${r2(ym - 12)} q0 12 12 12 q-12 0 -12 12 L${r2(x + 12)} ${r2(yb - 12)} q0 12 -12 12" fill="none" stroke="${N}" stroke-width="3"/>`;
+      s += T(x + 32, ym + 7, a.t, { size: a.size || 19, fill: a.fill || TEAL, anchor: 'start' });
     } else if (a.k === 'vline') {
       const ya = ys[a.r1 || 0] - 6, yb2 = ys[a.r2 === undefined ? spec.rows.length - 1 : a.r2] + rowH + 6, x = left + a.at * U;
       s += L(x, ya, x, yb2, { w: 2.5, dash: '7 5', c: GR });
@@ -112,16 +118,23 @@ const barModel = (spec) => {
       s += T(left + ((rr.off || 0) + (a.at || 0)) * U + (a.dx || 0), y0 + (a.dy === undefined ? -10 : a.dy), a.t, { size: a.size || 18, fill: a.fill || TEAL, anchor: a.anchor || 'middle' });
     }
   });
-  return svg(w, h, s, spec.label || 'A bar model', spec.width || w);
+  return svg(w, h, s, spec.label || 'A bar model', spec.width);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // numberLine: {w=600, h, min, max, major, minor (tick step; default major), x0=36, x1=w-36, fmt(v)->string, labelEvery (major steps, default 1),
 //   hideLabels:[v], marks:[{v, t (label above), k:'dot'|'arrow'|'x'|'box'}], arcs:[{a,b,t,dir:'up'|'down'}], label, y}
-const numberLine = (sp) => {
+const numberLine = (sp) => { const r = lineParts(sp); return svg(r.w, r.h, r.inner, sp.label || 'A number line', sp.width); };
+// stackSvg: several figure parts ({inner,h}) one under the other in one svg
+const stackSvg = (parts, label, w = 600, width) => {
+  let y = 0, s = '';
+  parts.forEach(p => { s += `<g transform="translate(0 ${y})">${p.inner}</g>`; y += p.h + (p.gap === undefined ? 0 : p.gap); });
+  return svg(w, y, s, label, width);
+};
+const lineParts = (sp) => {
   const w = sp.w || 600, x0 = sp.x0 === undefined ? 40 : sp.x0, x1 = sp.x1 === undefined ? w - 40 : sp.x1;
-  const top = sp.top === undefined ? ((sp.marks || []).some(m => m.t) || (sp.arcs || []).some(a => (a.dir || 'up') === 'up') ? 70 : 26) : sp.top;
-  const y = top + 14, h = sp.h || (y + 70);
+  const top = sp.top === undefined ? ((sp.marks || []).some(m => m.t) || (sp.arcs || []).some(a => (a.dir || 'up') === 'up') ? 50 : 18) : sp.top;
+  const y = top + 14, h = sp.h || (y + 46);
   const sx = v => x0 + (v - sp.min) / (sp.max - sp.min) * (x1 - x0);
   const fmt = sp.fmt || (v => String(v));
   let s = L(x0 - 14, y, x1 + 14, y, { w: 3.5 });
@@ -134,7 +147,7 @@ const numberLine = (sp) => {
     s += L(x, y - (isMaj ? 15 : 9), x, y + (isMaj ? 15 : 9), { w: isMaj ? 3.5 : 2.5 });
     const idx = Math.round((v - sp.min) / major);
     const show = isMaj && idx % (sp.labelEvery || 1) === 0 && !(sp.hideLabels || []).some(q => Math.abs(q - v) < 1e-9);
-    if (show || (sp.showLabels || []).some(q => Math.abs(q - v) < 1e-9)) s += T(x, y + 40, fmt(v), { size: sp.size || 18 });
+    if (show || (sp.showLabels || []).some(q => Math.abs(q - v) < 1e-9)) s += T(x, y + 36, fmt(v), { size: sp.size || 18 });
   }
   (sp.arcs || []).forEach(a => {
     const xa = sx(a.a), xb = sx(a.b), up = (a.dir || 'up') === 'up', hh = 30, d = up ? -1 : 1, yy = y + d * 18;
@@ -148,12 +161,13 @@ const numberLine = (sp) => {
     else if (k === 'dot') s += C(x, y, 8, { fill: Y });
     else if (k === 'box') s += R(x - 22, y - 56, 44, 34, { w: 3, dash: '5 3' }) + L(x, y - 22, x, y - 10, { w: 2.5 });
     else {
-      s += `<circle cx="${r2(x)}" cy="${y - 44}" r="17" fill="${Y}" stroke="${N}" stroke-width="3"/>` + T(x, y - 37, m.t || '', { size: 20 });
-      s += L(x, y - 27, x, y - 18, { w: 3, c: TEAL }) + `<polygon points="${r2(x)},${y - 8} ${r2(x - 7)},${y - 20} ${r2(x + 7)},${y - 20}" fill="${TEAL}"/>`;
+      s += `<circle cx="${r2(x)}" cy="${y - 38}" r="15" fill="${Y}" stroke="${N}" stroke-width="3"/>` + T(x, y - 32, m.t || '', { size: 19 });
+      s += L(x, y - 23, x, y - 16, { w: 3, c: TEAL }) + `<polygon points="${r2(x)},${y - 8} ${r2(x - 7)},${y - 18} ${r2(x + 7)},${y - 18}" fill="${TEAL}"/>`;
     }
     if (m.t && k !== 'arrow') s += T(x, y - 28, m.t, { size: 18, fill: TEAL });
   });
-  return svg(w, h, s, sp.label || 'A number line', sp.width || w);
+  if (sp.tag) s += T(8, y + 7, sp.tag, { size: 19, fill: TEAL, anchor: 'start' });
+  return { inner: s, w, h };
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -188,7 +202,7 @@ const clockInner = (sp) => {
 };
 const clockFace = (sp) => {
   const r = sp.r || 70, w = sp.w || r * 2 + 20, h = sp.h2 || r * 2 + 20;
-  return svg(w, h, clockInner({ cx: w / 2, cy: h / 2, r, h: sp.h, m: sp.m, numerals: sp.numerals, noHands: sp.noHands, sector: sp.sector }), sp.label || 'A clock face', sp.width || w);
+  return svg(w, h, clockInner({ cx: w / 2, cy: h / 2, r, h: sp.h, m: sp.m, numerals: sp.numerals, noHands: sp.noHands, sector: sp.sector }), sp.label || 'A clock face', sp.width);
 };
 // several clocks side by side: items [{h,m,cap,noHands,sector}]
 const clocks = (items, o = {}) => {
@@ -215,7 +229,7 @@ const queueRow = (sp) => {
     if (mk) s += T(x, y - rr - 10, mk, { size: 18, fill: TEAL });
   }
   s += T(20, y + rr + 28, sp.front || 'FRONT', { size: 16, anchor: 'start', fill: GR }) + T(w - 20, y + rr + 28, sp.back || 'BACK', { size: 16, anchor: 'end', fill: GR });
-  return svg(w, y + rr + 40, s, sp.label || 'A queue', sp.width || w);
+  return svg(w, y + rr + 40, s, sp.label || 'A queue', sp.width);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -236,7 +250,7 @@ const grid = (sp) => {
       if (tx !== '' && tx !== undefined) s += (hi ? `<rect x="${lx + j * cell + cell / 2 - 17}" y="${ty + i * cell + cell / 2 - 14}" width="34" height="26" rx="5" fill="#fff"/>` : '') + T(lx + j * cell + cell / 2, ty + i * cell + cell / 2 + 7, tx, { size: 19 });
     });
   });
-  return svg(w, h, s, sp.label || 'A grid', sp.width || w);
+  return svg(w, h, s, sp.label || 'A grid', sp.width);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -253,7 +267,7 @@ const dotPlot = (sp) => {
   Object.keys(counts).forEach(k => { for (let i = 0; i < counts[k]; i++) s += C(x0 + (k - sp.min) * step, y - 14 - rr - i * (rr * 2 + 4), rr, { fill: Y, w: 2.5 }); });
   if (sp.meanLine !== undefined) { const xm = x0 + (sp.meanLine - sp.min) * step; s += L(xm, 14, xm, y + 4, { w: 3, dash: '8 5', c: RED }) + T(xm, 12, sp.meanText || 'mean', { size: 17, fill: RED }); }
   if (sp.axis) s += T(w / 2, y + 66, sp.axis, { size: 17, fill: GR });
-  return svg(w, y + (sp.axis ? 76 : 50), s, sp.label || 'A dot plot', sp.width || w);
+  return svg(w, y + (sp.axis ? 76 : 50), s, sp.label || 'A dot plot', sp.width);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -274,4 +288,4 @@ const angleFig = (items, o = {}) => {
   return svg(w, h, s, o.label || 'Angles', o.width || w);
 };
 
-module.exports = { fit, barModel, numberLine, clockFace, clocks, queueRow, grid, dotPlot, angleFig, svg, T, L, R, C, DEFS, N, Y, SKY, TEAL, RED, WH, GR, F };
+module.exports = { fit, barModel, numberLine, lineParts, stackSvg, clockFace, clocks, queueRow, grid, dotPlot, angleFig, svg, T, L, R, C, DEFS, N, Y, SKY, TEAL, RED, WH, GR, F };

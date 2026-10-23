@@ -51,6 +51,10 @@ const ICON = {
   grape: (cx, cy, s) => { const k = s / 40, d = [[-9, -8], [0, -8], [9, -8], [-4.5, 0], [4.5, 0], [0, 8]]; return d.map(p => C(cx + p[0] * k, cy + p[1] * k + 1 * k, 5.6 * k, '#D9C2F0', { sw: 1.9 })).join('') + L(cx, cy - 14 * k, cx + 2 * k, cy - 20 * k, { sw: 2.2 }) + `<path d="M${f1(cx + 2 * k)} ${f1(cy - 17 * k)} Q${f1(cx + 11 * k)} ${f1(cy - 22 * k)} ${f1(cx + 13 * k)} ${f1(cy - 15 * k)} Q${f1(cx + 6 * k)} ${f1(cy - 13 * k)} ${f1(cx + 2 * k)} ${f1(cy - 17 * k)}" fill="${GR}" stroke="${NAVY}" stroke-width="1.6"/>`; },
   melon: (cx, cy, s) => { const k = s / 40; return `<path d="M${f1(cx - 21 * k)} ${f1(cy - 6 * k)} A${f1(21 * k)} ${f1(21 * k)} 0 0 0 ${f1(cx + 21 * k)} ${f1(cy - 6 * k)} Z" fill="${RD}" stroke="${NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="M${f1(cx - 18 * k)} ${f1(cy - 6 * k)} A${f1(18 * k)} ${f1(18 * k)} 0 0 0 ${f1(cx + 18 * k)} ${f1(cy - 6 * k)}" fill="none" stroke="${NAVY}" stroke-width="3.2" stroke-dasharray="1 0"/>` + `<path d="M${f1(cx - 21 * k)} ${f1(cy - 6 * k)} A${f1(21 * k)} ${f1(21 * k)} 0 0 0 ${f1(cx + 21 * k)} ${f1(cy - 6 * k)}" fill="none" stroke="${NAVY}" stroke-width="2.4"/>` + [[-8, 1], [0, 4], [8, 1], [-3, 9], [4, 9]].map(p => `<ellipse cx="${f1(cx + p[0] * k)}" cy="${f1(cy + p[1] * k)}" rx="${f1(1.6 * k)}" ry="${f1(2.4 * k)}" fill="${NAVY}"/>`).join(''); },
   duck: (cx, cy, s) => ICON.bird(cx, cy, s, Y),
+  // coloured counters that still read in black and white: a letter inside
+  red: (cx, cy, s) => C(cx, cy, s * .44, RD, { sw: 2.6 }) + T(cx, cy + s * .16, 'R', s * .46, { w: 800 }),
+  blue: (cx, cy, s) => C(cx, cy, s * .44, BL, { sw: 2.6 }) + T(cx, cy + s * .16, 'B', s * .46, { w: 800 }),
+  green: (cx, cy, s) => C(cx, cy, s * .44, GR, { sw: 2.6 }) + T(cx, cy + s * .16, 'G', s * .46, { w: 800 }),
 };
 // icon by name; "half" draws the left half only (clipped) with a dashed right edge
 const icon = (name, cx, cy, s, o = {}) => {
@@ -118,7 +122,7 @@ const barModelF = (o, y0) => {
       const b = r.brace, bx0 = x0 + (r.indent || 0) * unit + b.from * unit, bx1 = x0 + (r.indent || 0) * unit + b.to * unit, up = b.pos === 'top', yb = up ? top - 4 : top + rh + 4, d = up ? -13 : 13, m = (bx0 + bx1) / 2;
       s += `<path d="M${f1(bx0)} ${f1(yb)} Q${f1(bx0)} ${f1(yb + d)} ${f1(bx0 + 12)} ${f1(yb + d)} L${f1(m - 12)} ${f1(yb + d)} Q${f1(m)} ${f1(yb + d)} ${f1(m)} ${f1(yb + 2 * d)} Q${f1(m)} ${f1(yb + d)} ${f1(m + 12)} ${f1(yb + d)} L${f1(bx1 - 12)} ${f1(yb + d)} Q${f1(bx1)} ${f1(yb + d)} ${f1(bx1)} ${f1(yb)}" fill="none" stroke="${NAVY}" stroke-width="2.4"/>`;
       if (b.t) s += T(m, up ? yb + 2 * d - 6 : yb + 2 * d + 19, b.t, 18, { c: b.c || TEAL });
-      if (!up) y += 34;
+      if (!up) y += b.t ? 52 : 34;
     }
     y += rh + gap;
   });
@@ -152,7 +156,7 @@ const pictureRow = (o) => {
 
 // ---------------------------------------------------------------- picture graph (pictograph): rows [{name, n, icon}], key text, optional half
 const pictographF = (o, y0) => {
-  const s = o.size || 36, pitch = s + 6, lw = o.labelW || 130, rh = s + 12; let out = '';
+  const s = o.size || 36, pitch = s + 6, lw = o.labelW || 130, rh = s + (o.rowPad === undefined ? 12 : o.rowPad); let out = '';
   o.rows.forEach((r, i) => {
     const y = y0 + i * rh, cy = y + rh / 2;
     out += R(0, y, lw, rh, '#EDEDED', { sw: 2 }) + T(lw / 2, cy + 6, r.name, 17) + R(lw, y, pitch * (o.maxN || 9) + 14, rh, '#fff', { sw: 2 });
@@ -160,10 +164,11 @@ const pictographF = (o, y0) => {
     if (r.n % 1) out += icon(r.icon || o.icon, lw + 10 + pitch * Math.floor(r.n) + pitch / 2, cy, s, { half: true });
     if (r.blank) out += T(lw + 14, cy + 6, r.blank, 15, { a: 'start', i: true, c: '#8A94AD' });
   });
-  const ky = y0 + o.rows.length * rh + 12;
-  out += R(0, ky, lw + pitch * (o.maxN || 9) + 14, 50, '#FFF4D1', { sw: 2, rx: 6 }) + T(14, ky + 31, 'Key:', 17, { a: 'start' }) + icon(o.icon || o.rows[0].icon, 92, ky + 25, 32) + T(116, ky + 31, '= ' + o.key, 17, { a: 'start' });
-  if (o.halfKey) out += icon(o.icon || o.rows[0].icon, 330, ky + 25, 32, { half: true }) + T(352, ky + 31, '= ' + o.halfKey, 17, { a: 'start' });
-  return { s: out, h: ky + 54 };
+  if (o.noKey) return { s: out, h: y0 + o.rows.length * rh + 4 };
+  const ky = y0 + o.rows.length * rh + (o.keyGap === undefined ? 12 : o.keyGap), kh = o.keyH || 50, kc = ky + kh / 2;
+  out += R(0, ky, lw + pitch * (o.maxN || 9) + 14, kh, '#FFF4D1', { sw: 2, rx: 6 }) + T(14, kc + 6, 'Key:', 17, { a: 'start' }) + icon(o.icon || o.rows[0].icon, 92, kc, Math.min(32, kh - 8)) + T(116, kc + 6, '= ' + o.key, 17, { a: 'start' });
+  if (o.halfKey) out += icon(o.icon || o.rows[0].icon, 262, kc, Math.min(32, kh - 8), { half: true }) + T(284, kc + 6, '= ' + o.halfKey, 17, { a: 'start' });
+  return { s: out, h: ky + kh + 4 };
 };
 const pictograph = (o) => {
   const W = (o.labelW || 130) + (36 + 6) * 0 + ((o.size || 36) + 6) * (o.maxN || 9) + 18, r = pictographF(o, 4);

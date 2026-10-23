@@ -198,7 +198,24 @@
     ],
     "text": "clap"
    },
-   "explanation": "The core is clap, clap, stomp: 3 actions. Count in 3s: 3, 6, 9. Place 9 is a stomp. Place 10 starts a new core, so it is a clap."
+   "explanation": "The core is clap, clap, stomp: 3 actions. Count in 3s: 3, 6, 9. Place 9 is a stomp. Place 10 starts a new core, so it is a clap.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "C",
+     "C",
+     "S",
+     "C",
+     "C",
+     "S",
+     null,
+     null,
+     null,
+     null
+    ],
+    "per_row": 10,
+    "width_mm": 120
+   }
   },
   {
    "id": "L1U04-S06",
@@ -382,7 +399,22 @@
      }
     }
    ],
-   "explanation": "Day 1: 3. Then add 2 each day: 3, 5, 7, 9, 11, 13, 15. Day 5 is 11 and 15 is day 7."
+   "explanation": "Day 1: 3. Then add 2 each day: 3, 5, 7, 9, 11, 13, 15. Day 5 is 11 and 15 is day 7.",
+   "figure": {
+    "type": "grow_table",
+    "head": "Day",
+    "label": "Beads",
+    "values": [
+     3,
+     "",
+     "",
+     "",
+     ""
+    ],
+    "step": "+2",
+    "width_mm": 80
+   },
+   "figright": true
   },
   {
    "id": "L1U04-S12",
@@ -397,7 +429,8 @@
      8,
      null
     ],
-    "width_mm": 95
+    "width_mm": 90,
+    "frame": 13
    },
    "parts": [
     {
@@ -624,7 +657,23 @@
     }
    ],
    "hint": "Make a table. Write the day and the stickers.",
-   "explanation": "Add 3 each day: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. Day 6 is 20. 32 is the 10th number, so it is day 10."
+   "explanation": "Add 3 each day: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. Day 6 is 20. 32 is the 10th number, so it is day 10.",
+   "figure": {
+    "type": "grow_table",
+    "head": "Day",
+    "label": "Stickers",
+    "values": [
+     5,
+     8,
+     11,
+     "",
+     "",
+     ""
+    ],
+    "step": "?",
+    "width_mm": 84
+   },
+   "figright": true
   },
   {
    "id": "L1U04-G01",
@@ -678,7 +727,10 @@
       "n": 3,
       "label": "Mei"
      }
-    ]
+    ],
+    "mark": true,
+    "lab": 85,
+    "width_mm": 76
    },
    "parts": [
     {
@@ -822,5 +874,8 @@
    },
    "explanation": "Count on in 2s: 3, 5, 7, 9, 11, 13. 6 triangles use 13 straws."
   }
+ ],
+ "snug": [
+  "go"
  ]
 }

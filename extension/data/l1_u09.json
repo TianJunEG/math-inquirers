@@ -145,7 +145,34 @@
     ],
     "text": "5 cubes"
    },
-   "explanation": "\"How many longer\" asks for the gap. 13 - 8 = 5. Check: 8 + 5 = 13."
+   "explanation": "\"How many longer\" asks for the gap. 13 - 8 = 5. Check: 8 + 5 = 13.",
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "tape",
+      "segs": [
+       {
+        "n": 13
+       }
+      ],
+      "cuts": [
+       8
+      ],
+      "note": "? more"
+     },
+     {
+      "label": "strip",
+      "segs": [
+       {
+        "n": 8
+       }
+      ]
+     }
+    ],
+    "width_mm": 84
+   },
+   "figright": true
   },
   {
    "id": "L1U09-S03",
@@ -544,14 +571,45 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Pen:",
-     "Bag:"
-    ]
-   },
    "hint": "Change clips into cubes first.",
-   "explanation": "The pen is 5 clips, and each clip is 2 cubes: 2 + 2 + 2 + 2 + 2 = 10 cubes. The bag is 2 pens: 10 + 10 = 20 cubes."
+   "explanation": "The pen is 5 clips, and each clip is 2 cubes: 2 + 2 + 2 + 2 + 2 = 10 cubes. The bag is 2 pens: 10 + 10 = 20 cubes.",
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "clip",
+      "segs": [
+       {
+        "n": 1,
+        "w": 2
+       }
+      ]
+     },
+     {
+      "label": "pen",
+      "segs": [
+       {
+        "n": 5,
+        "w": 2
+       }
+      ]
+     },
+     {
+      "label": "bag",
+      "segs": [
+       {
+        "n": 5,
+        "w": 2
+       },
+       {
+        "n": 5,
+        "w": 2
+       }
+      ]
+     }
+    ],
+    "width_mm": 120
+   }
   },
   {
    "id": "L1U09-T03",

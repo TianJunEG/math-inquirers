@@ -155,7 +155,99 @@
      }
     }
    ],
-   "explanation": "Siti is older than Wei, and Wei is older than Jamie. The order from oldest is Siti, Wei, Jamie."
+   "explanation": "Siti is older than Wei, and Wei is older than Jamie. The order from oldest is Siti, Wei, Jamie.",
+   "figure": {
+    "type": "draw",
+    "w": 330,
+    "h": 172,
+    "scale": 0.125,
+    "label": "ladder of 3 empty places",
+    "elements": [
+     {
+      "poly": [
+       [
+        130,
+        8
+       ],
+       [
+        320,
+        8
+       ],
+       [
+        320,
+        52
+       ],
+       [
+        130,
+        52
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        64
+       ],
+       [
+        320,
+        64
+       ],
+       [
+        320,
+        108
+       ],
+       [
+        130,
+        108
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        120
+       ],
+       [
+        320,
+        120
+       ],
+       [
+        320,
+        164
+       ],
+       [
+        130,
+        164
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "text": [
+       62,
+       40.0,
+       "oldest",
+       26
+      ]
+     },
+     {
+      "text": [
+       62,
+       152.0,
+       "youngest",
+       26
+      ]
+     }
+    ]
+   },
+   "figright": true
   },
   {
    "id": "L1U08-S02",
@@ -184,7 +276,20 @@
      }
     }
    ],
-   "explanation": "Just behind 3rd is 4th, so Kumar is 4th. Just in front of 3rd is 2nd, so Aisha is 2nd."
+   "explanation": "Just behind 3rd is 4th, so Kumar is 4th. Just in front of 3rd is 2nd, so Aisha is 2nd.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     null,
+     null,
+     "B",
+     null,
+     null
+    ],
+    "per_row": 5,
+    "width_mm": 56
+   },
+   "figright": true
   },
   {
    "id": "L1U08-S03",
@@ -217,7 +322,19 @@
      }
     }
    ],
-   "explanation": "Ali is 1st and Mei is just behind, so Mei is 2nd. Ben is last, 4th. Siti has the place that is left: 3rd."
+   "explanation": "Ali is 1st and Mei is just behind, so Mei is 2nd. Ben is last, 4th. Siti has the place that is left: 3rd.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "A",
+     null,
+     null,
+     "B"
+    ],
+    "per_row": 4,
+    "width_mm": 48
+   },
+   "figright": true
   },
   {
    "id": "L1U08-S04",
@@ -327,7 +444,59 @@
     "rows": [
      "Fewest to most:"
     ]
-   }
+   },
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "5 sweets",
+      "segs": [
+       {
+        "n": 5
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "6 sweets",
+      "segs": [
+       {
+        "n": 6
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "7 sweets",
+      "segs": [
+       {
+        "n": 7
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "8 sweets",
+      "segs": [
+       {
+        "n": 8
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "9 sweets",
+      "segs": [
+       {
+        "n": 9
+       }
+      ],
+      "note": "_____"
+     }
+    ],
+    "width_mm": 72
+   },
+   "figright": true
   },
   {
    "id": "L1U08-S07",
@@ -538,7 +707,7 @@
      "piano",
      "bell"
     ],
-    "width_mm": 56
+    "width_mm": 74
    },
    "parts": [
     {
@@ -563,7 +732,8 @@
     }
    ],
    "hint": "Which row can you tick first?",
-   "explanation": "Lily has the bell. Nobody except Kumar can have the piano (Lily, Jason and Aisha cannot), so Kumar has the piano. Jason does not have the bell or the drum, so Jason has the flute. Aisha has the drum."
+   "explanation": "Lily has the bell. Nobody except Kumar can have the piano (Lily, Jason and Aisha cannot), so Kumar has the piano. Jason does not have the bell or the drum, so Jason has the flute. Aisha has the drum.",
+   "figright": true
   },
   {
    "id": "L1U08-T02",

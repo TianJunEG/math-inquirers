@@ -270,7 +270,36 @@
     ],
     "text": "4 books"
    },
-   "explanation": "16 + 4 = 20, because 6 + 4 = 10."
+   "explanation": "16 + 4 = 20, because 6 + 4 = 10.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     "square",
+     null,
+     null,
+     null,
+     null
+    ],
+    "per_row": 10,
+    "numbers": false,
+    "width_mm": 80
+   },
+   "figright": true
   },
   {
    "id": "L1U02-S09",
@@ -456,7 +485,7 @@
       "First bag",
       "Second bag"
      ],
-     "rows": 6
+     "rows": 7
     }
    },
    "hint": "Try 1 marble in the first bag. Then 2. Where do you stop?",
@@ -508,6 +537,7 @@
    },
    "space": {
     "rows": [
+     "{b} + {b} + {b} = 9",
      "{b} + {b} + {b} = 9",
      "{b} + {b} + {b} = 9",
      "{b} + {b} + {b} = 9"
@@ -699,5 +729,8 @@
    },
    "explanation": "11 + 9 = 20, because 1 + 9 = 10."
   }
+ ],
+ "snug": [
+  "think"
  ]
 }

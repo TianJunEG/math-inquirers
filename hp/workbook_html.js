@@ -21,6 +21,7 @@ const hdr = (n, topic, title, pb = true, tag = 'Start here') => {
 };
 
 const QB = require('./qbank.json');
+const FG = require('./figs_l1_3_l1.js');   // Level 1 figures (shared helper hp/figs_l1_3.js)
 const NL = () => new TextRun('<br>');
 const GAPS = require('./gaps.json');
 const b64 = f => 'data:image/png;base64,' + fs.readFileSync(f).toString('base64');
@@ -37,15 +38,15 @@ const txp = (n) => (GAPS[String(n)].tx || []).flatMap(x => [q(x.label, x.q, { be
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'Think harder', true, '')];
-  const tight = (GAPS[String(n)].tx || []).length > 0;
+  const tight = (GAPS[String(n)].tx || []).length > 0 || Object.keys(FG.FX).some(k => k.startsWith(n + '.'));
   if (!tight) out.push(p(t('Use objects, draw a picture or make a table. Then write how you know. Choose any question you like, in any order.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(banner('Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('T' + (i + 1), x.q, { before: tight ? 60 : 140, after: 40, keepNext: true })); out.push(...lines((GAPS[String(n)].tx || []).length ? 2 : 3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q('T' + (i + 1), x.q, { before: tight ? 60 : 140, after: 40, keepNext: true })); const fx = FG.FX[n + '.T' + (i + 1)]; if (fx) { const h = fx(); if (h) out.push(h); } out.push(...lines(fx ? (fx.lines === undefined ? 2 : fx.lines) : (GAPS[String(n)].tx || []).length ? 2 : 3)); });
   out.push(...txp(n));
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q('C' + (i + 1), x.q, { before: 200, after: 40, keepNext: true })); if (x.img) out.push(img(x.img[0], x.img[1], x.img[2])); out.push(...lines(x.img ? 3 : 4)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q('C' + (i + 1), x.q, { before: 200, after: 40, keepNext: true })); if (x.img) out.push(img(x.img[0], x.img[1], x.img[2])); const fx = FG.FX[n + '.C' + (i + 1)]; if (fx) { const h = fx(); if (h) out.push(h); } out.push(...lines(x.img || fx ? 3 : 4)); });
   return out;
 };
 const stamps=L.lessons.map(ls=>`<div class="stamp"><div class="sn">Lesson ${ls.n}</div><div class="st">${ls.title}</div><div class="sc"></div></div>`).join('');
@@ -63,10 +64,9 @@ W.push(q(2, 'What is the rule? Fill in the rule and the next two numbers.'));
 W.push(sub('a', '4,  7,  10,  13,  ____,  ____        Rule: ______________'));
 W.push(sub('b', '30,  27,  24,  21,  ____,  ____       Rule: ______________'));
 W.push(sub('c', '2,  6,  10,  14,  ____,  ____        Rule: ______________'));
-W.push(q(3, 'A frog starts at 0 and hops 4 steps each time. Colour the numbers where the frog lands.', { keepNext: true }));
-{ const w = Math.floor(CW / 21); const ws = Array(21).fill(w); ws[20] = CW - w * 20; W.push(tbl(ws, [row(ws.map((x, i) => cell(String(i), x, { size: 20, h: 150 })))])); }
-W.push(gap(80));
-W.push(sub('a', 'A second frog also starts at 0 but hops 5 steps each time. Mark its landing numbers with a cross (X) above the number line.'));
+W.push(q(3, 'A frog starts at 0 and hops 4 steps each time. Circle or colour the numbers where the frog lands. The first hop is drawn for you.', { keepNext: true }));
+W.push(FG.frogLines());
+W.push(sub('a', 'A second frog also starts at 0 but hops 5 steps each time. Mark its landing numbers with a cross (X) on the second number line.'));
 W.push(sub('b', 'Besides 0, which number do BOTH frogs land on?'));
 W.push(ans());
 W.push(q(4, 'Ali counts in 2s from 2 up to 30. Mei counts in 5s from 5 up to 30. Write both lists first.', { pb: true, before: 0 }));
@@ -75,6 +75,7 @@ W.push(ans());
 W.push(sub('b', 'What do you notice about these numbers?'));
 W.push(...lines(2));
 W.push(q(5, 'Mei puts stickers in boxes. Box 1 has 2 stickers. Each box after it has 3 more stickers than the box before.', { keepNext: true }));
+W.push(FG.stickerBoxes());
 { const ws = [CW - 8000, ...Array(10).fill(800)]; const vals = ['2', '5'];
   W.push(tbl(ws, [row([cell('Box', ws[0], { bold: true, fill: 'EDEDED' }), ...Array.from({ length: 10 }, (_, i) => cell(String(i + 1), 800, { bold: true, fill: 'EDEDED' }))]),
     row([cell('Stickers', ws[0], { bold: true }), ...Array.from({ length: 10 }, (_, i) => cell(vals[i] || '', 800, { h: 160 }))])])); }
@@ -118,10 +119,8 @@ W.push(p([t('If you have time: two numbers add up to 12. One is 4 more than the 
 W.push(...coreEnd(2));
 W.push(...extra(2));
 W.push(...hdr(3, 'Picture Graphs', 'LET’S PLAN THE FRUIT PARTY!')); W.push(fast());
-W.push(p('Our teacher wants to buy fruit for a class party. Every child voted for ONE fruit. The picture graph shows the votes.', { after: 120 }));
-W.push(p([t('Key:  ', { bold: true }), new C.TextRun('<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#333333"></span>'), t(' = 1 child')], { after: 100 }));
-{ const rows = [['Apple', 6, 'C0392B'], ['Banana', 5, 'B8860B'], ['Orange', 8, 'E67E22'], ['Grape', 3, '7D3C98'], ['Watermelon', 5, '1E8449']];
-  W.push(tbl([2400, 7500], [row([cell('Fruit', 2400, { bold: true, fill: 'D9D9D9' }), cell('Votes', 7500, { bold: true, fill: 'D9D9D9' })]), ...rows.map(r => row([cell(r[0], 2400, { bold: true, h: 40 }), cell(dots(r[1], r[2]), 7500, { align: AlignmentType.LEFT, h: 40 })]))])); }
+W.push(p('Our teacher wants to buy fruit for a class party. Every child voted for ONE fruit. The picture graph shows the votes.', { after: 40 }));
+W.push(FG.fruitGraph());
 W.push(gap(20));
 W.push(banner('Part A: Read the graph'));
 W.push(q(1, 'Which fruit got the most votes?', { before: 140 })); W.push(ans());
@@ -134,12 +133,12 @@ W.push(sub('a', [t('Is Mei right?    '), t('Yes  /  No', { bold: true })]));
 W.push(sub('b', 'Why do you think so?'));
 W.push(...lines(1));
 W.push(q(7, 'What else should the teacher think about before buying fruit for the party?'));
-W.push(...lines(2));
-W.push(gap(60));
+W.push(...lines(1));
+W.push(gap(20));
 W.push(banner('Part B: Now it’s your turn!'));
 W.push(p('Ask your own group to vote. Each child votes for ONE fruit. Make a tally mark for each vote.', { before: 140, after: 100 }));
-W.push(tbl([2400, 5700, 1800], [row([cell('Fruit', 2400, { bold: true, fill: 'D9D9D9' }), cell('Tally', 5700, { bold: true, fill: 'D9D9D9' }), cell('Total', 1800, { bold: true, fill: 'D9D9D9' })]), ...['Apple', 'Banana', 'Orange', 'Grape', 'Watermelon'].map(f => row([cell(f, 2400, { bold: true }), cell('', 5700, { h: 60 }), cell('', 1800, { h: 60 })]))]));
-W.push(q(8, 'Which fruit did YOUR group like best?  ____________________    Is it the same as the graph above?  Yes / No', { before: 100 }));
+W.push(tbl([2400, 5700, 1800], [row([cell('Fruit', 2400, { bold: true, fill: 'D9D9D9' }), cell('Tally', 5700, { bold: true, fill: 'D9D9D9' }), cell('Total', 1800, { bold: true, fill: 'D9D9D9' })]), ...['Apple', 'Banana', 'Orange', 'Grape', 'Watermelon'].map(f => row([cell(f, 2400, { bold: true }), cell('', 5700, { h: 30 }), cell('', 1800, { h: 30 })]))]));
+W.push(q(8, 'Which fruit did YOUR group like best?  ____________________    Is it the same as the graph above?  Yes / No', { before: 40 }));
 W.push(q(9, 'Why might two groups choose different fruits?'));
 W.push(...lines(1));
 
@@ -149,19 +148,24 @@ W.push(...extra(3));
 W.push(...hdr(4, 'Patterns', 'PATTERN INQUIRY')); W.push(fast());
 W.push(q(1, 'Look at the shape pattern. Draw the missing shapes in places 8 and 9.', { before: 60 }));
 W.push(img('shapes.png', 640, 92));
-W.push(q(2, 'The pattern is circle, square, triangle, circle, square, triangle, circle … What is the 10th one? (Keep writing the pattern until you get there.)', { before: 100 }));
+W.push(q(2, 'The pattern is circle, square, triangle, circle, square, triangle, circle … What is the 10th one? (Keep writing the pattern until you get there.)', { before: 100, keepNext: true }));
+W.push(FG.p2());
 W.push(ans('Answer:', 560));
-W.push(q(3, 'The pattern is red, red, blue, red, red, blue, red … What is the 8th one?', { before: 100 }));
+W.push(q(3, 'The pattern is red, red, blue, red, red, blue, red … What is the 8th one?', { before: 100, keepNext: true }));
+W.push(FG.p3());
 W.push(ans('Answer:', 560));
-W.push(q(4, 'The pattern keeps going in the same way.'));
+W.push(q(4, 'Look at this pattern. It keeps going in the same way. You may draw in the empty boxes.', { keepNext: true }));
+W.push(FG.p4());
 W.push(sub('a', 'What shape will be in place 10?   ____________________'));
 W.push(sub('b', 'What shape will be in place 12?   ____________________'));
 W.push(sub('c', 'What shape will be in place 30? (Keep drawing, or look for a shortcut.)   ____________'));
 W.push(sub('d', 'How do you know?'));
 W.push(...lines(2));
-W.push(q(5, 'The pattern is cat, dog, dog, cat, dog, dog, cat … What is the 12th one?', { pb: true, before: 0 }));
+W.push(q(5, 'The pattern is cat, dog, dog, cat, dog, dog, cat … What is the 12th one?', { pb: true, before: 0, keepNext: true }));
+W.push(FG.p5());
 W.push(ans('Answer:', 560));
-W.push(q(6, 'The pattern is A, B, C, D, A, B, C … What is the 11th one? (Write the letters in a row and number them.)', { before: 100 }));
+W.push(q(6, 'The pattern is A, B, C, D, A, B, C … What is the 11th one? (Write the letters in a row and number them.)', { before: 100, keepNext: true }));
+W.push(FG.p6());
 W.push(ans('Answer:', 560));
 W.push(q(7, 'Ben makes a row of triangles with sticks.', { keepNext: true }));
 W.push(img('sticks.png', 620, 127));
@@ -213,7 +217,8 @@ W.push(p([t('Colour one box for each marble to help you. Ali’s bar is done for
 { const ws = [1300, ...Array(14).fill(610)]; W.push(tbl(ws, ['Ali', 'Mei', 'Ben'].map(nm => row([cell(nm, ws[0], { bold: true, h: 110 }), ...Array.from({ length: 14 }, (_, i) => cell('', 610, { h: 110, fill: nm === 'Ali' && i < 8 ? 'D9D9D9' : undefined }))])))); }
 W.push(gap(60));
 W.push(q(4, 'Queue puzzles.', { keepNext: true }));
-W.push(sub('a', 'There are 20 children in a queue. Mei is 7th from the front. How many children are behind her?'));
+W.push(sub('a', 'There are 20 children in a queue. Mei is 7th from the front. How many children are behind her?', { keepNext: true }));
+W.push(FG.queue20());
 W.push(ans());
 W.push(sub('b', 'Ali is 3rd from the front AND 3rd from the back. How many children are in the queue? Draw the children as circles first.'));
 W.push(ans());
@@ -228,7 +233,7 @@ W.push(...hdr(6, 'Money', 'COIN COMBOS')); W.push(fast());
 W.push(p('We have 5¢, 10¢, 20¢ and 50¢ coins. You can use the same kind of coin more than once.', { after: 100 }));
 W.push(q(1, 'Show different ways to make exactly 20¢ using only 20¢, 10¢ and 5¢ coins. Write how many of each coin in the table.', { before: 100, keepNext: true }));
 { const ws = [2500, 2470, 2470, 2460];
-  W.push(tbl(ws, [row(['Way', 'Number of 20¢', 'Number of 10¢', 'Number of 5¢'].map((s, i) => cell(s, ws[i], { bold: true, fill: 'D9D9D9', size: 22 }))), ...['A', 'B', 'C', 'D', 'E'].map(l => row([cell(l, ws[0], { bold: true, h: 100 }), cell('', ws[1]), cell('', ws[2]), cell('', ws[3])]))])); }
+  W.push(tbl(ws, [row(['Way', 'Number of 20¢', 'Number of 10¢', 'Number of 5¢'].map((s, i) => cell(i ? [FG.coinCell([0, 20, 10, 5][i], s)] : s, ws[i], { bold: true, fill: 'D9D9D9', size: 22, h: 40 }))), ...['A', 'B', 'C', 'D', 'E'].map(l => row([cell(l, ws[0], { bold: true, h: 100 }), cell('', ws[1]), cell('', ws[2]), cell('', ws[3])]))])); }
 W.push(p([t('You may not need every row.', { italics: true })], { indent: { left: 560 }, after: 60 }));
 W.push(gap(60));
 W.push(sub('a', 'Which way uses the FEWEST coins?')); W.push(ans());
@@ -236,16 +241,21 @@ W.push(sub('b', 'Which way uses the MOST coins?')); W.push(ans());
 W.push(sub('c', 'How do you know you have found ALL the ways?'));
 W.push(...lines(2));
 W.push(q(2, 'Find ALL the ways to make 25¢ using 20¢, 10¢ and 5¢ coins. Start with the biggest coin. Write each way like this:  20¢ + 5¢   (Hint: there are 4 ways.)', { before: 120, keepNext: true }));
+W.push(FG.trayRow([20, 10, 5]));
 W.push(...lines(4));
 W.push(q(3, 'Mei wants to pay exactly 85¢ using 5¢, 10¢, 20¢ and 50¢ coins.', { pb: true, before: 0, keepNext: true }));
+W.push(FG.purse());
 W.push(p([t('Tip: use play coins. Pay 85¢ any way you can, then try to use fewer coins.', { italics: true })], { indent: { left: 560 }, after: 60 }));
 W.push(sub('a', 'What is the smallest number of coins she can use? Which coins are they?')); W.push(ans());
 W.push(sub('b', 'If you have time: find a different way that uses exactly 6 coins.')); W.push(ans());
-W.push(q(4, 'Can Ben make 35¢ using only 2 coins? Explain your answer.'));
+W.push(q(4, 'Can Ben make 35¢ using only 2 coins? Explain your answer.', { keepNext: true }));
+W.push(FG.benTwo());
 W.push(...lines(2));
-W.push(q(5, 'Ali has a 20¢ coin, a 10¢ coin and a 5¢ coin. How much money does he have?'));
+W.push(q(5, 'Ali has a 20¢ coin, a 10¢ coin and a 5¢ coin. How much money does he have?', { keepNext: true }));
+W.push(FG.coinsRow([20, 10, 5]));
 W.push(ans('Answer:', 560));
-W.push(q(6, 'Mei has two 20¢ coins and one 5¢ coin. How much money does she have?'));
+W.push(q(6, 'Mei has two 20¢ coins and one 5¢ coin. How much money does she have?', { keepNext: true }));
+W.push(FG.coinsRow([20, 20, 5]));
 W.push(ans('Answer:', 560));
 
 /* ---------- LESSON 7 ---------- */
@@ -327,15 +337,17 @@ W.push(img('desk_spans.png', 440, 110));
 W.push(sub('a', 'Whose span is longer?   ____________'));
 W.push(sub('b', 'How do you know?'));
 W.push(...lines(2));
-W.push(q(4, 'If you have time: 1 clip = 2 erasers.'));
+W.push(q(4, 'If you have time: 1 clip = 2 erasers.', { keepNext: true }));
+W.push(FG.clipEraser());
 W.push(sub('a', 'A desk is 5 clips. How many erasers? (Draw it or count in 2s.)   ____'));
 W.push(sub('b', 'A pencil is 12 erasers long. How many clips?   ____'));
 W.push(q(5, 'Mei’s pencil is 8 cubes. Ali’s is 3 cubes longer. Ben’s is 2 cubes shorter.', { keepNext: true }));
+W.push(FG.pencilCubes());
 W.push(sub('a', 'How long is Ali’s pencil?   ____ cubes'));
 W.push(sub('b', 'How long is Ben’s pencil?   ____ cubes'));
 W.push(sub('c', 'All three end to end: ____ cubes?'));
 W.push(q(6, 'Read the ruler.', { keepNext: true }));
-W.push(img('ruler_q6.png', 600, 130));
+W.push(FG.ruler6());
 W.push(sub('a', 'The pencil goes from 0 to 12 cm. How long?   ____ cm'));
 W.push(sub('b', 'The crayon goes from 3 to 8 cm. How long? (Hop from 3 to 8.)   ____ cm'));
 W.push(sub('c', 'My pencil: ____ cm. Longer or shorter than 10 cm?   ________'));
@@ -348,13 +360,12 @@ W.push(p([t('Show how you know. Remember the inquirer rules!', { italics: true }
 W.push(q(1, 'Pattern:   3,   8,   13,   18,   ____,   ____       Rule: ______________', { before: 40 }));
 W.push(q(2, 'Two numbers add up to 12. One is 2 more than the other. What are they?   ____ and ____'));
 W.push(q(3, 'The graph shows pets in a street.', { keepNext: true }));
-{ const rows = [['Dog', 4, 'B8860B'], ['Cat', 7, 'C0392B'], ['Fish', 3, '2E86C1'], ['Bird', 5, '1E8449']];
-  W.push(tbl([2000, 7900], rows.map(r => row([cell(r[0], 2000, { bold: true, h: 40 }), cell(dots(r[1], r[2], 36), 7900, { align: AlignmentType.LEFT, h: 40 })])))); }
-W.push(p([new C.TextRun('<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#333333"></span>'), t(' = 1 pet', { size: 22 })], { before: 40, after: 60 }));
+W.push(FG.petGraph());
 W.push(sub('a', 'How many more cats than birds?   ____'));
 W.push(sub('b', 'How many pets are there altogether?   ____'));
 W.push(sub('c', 'Which two kinds of pet together make exactly 10?   ______________'));
-W.push(q(4, 'You have one 20¢ coin, two 10¢ coins and two 5¢ coins.'));
+W.push(q(4, 'You have one 20¢ coin, two 10¢ coins and two 5¢ coins.', { keepNext: true }));
+W.push(FG.coinsRow([20, 10, 10, 5, 5]));
 W.push(sub('a', 'How much money do you have?   ____'));
 W.push(sub('b', 'Which of your coins make exactly 35¢?   ______________'));
 W.push(q(5, 'Shapes', { keepNext: true, pb: true, before: 0 }));

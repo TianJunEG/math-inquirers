@@ -3,6 +3,7 @@
 // Every answer below was worked out and checked (the "find all" and riddle items with a short Python script).
 
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF', RED = '#D64545';
 const T = (x, y, s, size = 16, fill = NAVY, anchor = 'middle', weight = 700) => `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="Arial">${s}</text>`;
 
@@ -22,11 +23,9 @@ const nline = (y, left, right, arrows, n = 10) => {
   return s;
 };
 const lines3 = () => {
-  let s = `<svg aria-label="Three number lines. Line a from 6 to 7 with arrows A and B. Line b from 4.5 to 4.6 with arrows C and D. Line c from 0.24 to 0.25 with arrow E." viewBox="0 0 600 296" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">`;
-  s += T(18, 82, '(a)', 16, TEAL, 'start') + nline(76, '6', '7', [[3, 'A'], [8.5, 'B']]);
-  s += T(18, 172, '(b)', 16, TEAL, 'start') + nline(166, '4.5', '4.6', [[3, 'C'], [8, 'D']]);
-  s += T(18, 262, '(c)', 16, TEAL, 'start') + nline(256, '0.24', '0.25', [[7, 'E']]);
-  return s + '</svg>';
+  const mk = (tag, min, max, mid, marks, dp) => FG.lineParts({ w: 600, x0: 80, x1: 560, min, max, major: (max - min) / 2, minor: (max - min) / 10, tag, marks: marks.map(([v, t]) => ({ v: min + v * (max - min) / 10, t })), fmt: v => v.toFixed(dp).replace(/\.?0+$/, '') || '0', size: 19 });
+  return FG.stackSvg([mk('(a)', 6, 7, 6.5, [[3, 'A'], [8.5, 'B']], 2), mk('(b)', 4.5, 4.6, 4.55, [[3, 'C'], [8, 'D']], 3), mk('(c)', 0.24, 0.25, 0.245, [[7, 'E']], 3)],
+    'Three number lines, each with 10 equal steps and the two ends and the middle labelled. Line a from 6 to 7 with arrows A and B. Line b from 4.5 to 4.6 with arrows C and D. Line c from 0.24 to 0.25 with arrow E.');
 };
 // Q6 picture: two scales, the full box and the empty box
 const scales = () => {
@@ -40,26 +39,26 @@ const scales = () => {
     }
     return g;
   };
-  return `<svg aria-label="A box with 6 cans on a scale reads 2.85 kg. The empty box on a scale reads 0.45 kg." viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">` +
+  return `<svg aria-label="A box with 6 cans on a scale reads 2.85 kg. The empty box on a scale reads 0.45 kg." viewBox="0 24 600 190" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">` +
     scale(160, '2.85 kg', 6) + scale(440, '0.45 kg', 0) + T(160, 40, 'box with 6 cans', 16, TEAL) + T(440, 40, 'empty box', 16, TEAL) + '</svg>';
 };
 
 // Q3 scaffold: number line from 7.30 to 7.50 in hundredths (labels only at 7.3, 7.4, 7.5)
 const roundLine = () => {
-  const x0 = 40, W = 520, y = 60;
-  let sv = `<svg aria-label="A number line from 7.30 to 7.50 marked in hundredths, with 7.3, 7.4 and 7.5 labelled and a dot at 7.4" viewBox="0 0 600 110" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  const x0 = 40, W = 520, y = 34;
+  let sv = `<svg aria-label="A number line from 7.30 to 7.50 marked in hundredths, with 7.3, 7.4 and 7.5 labelled and a dot at 7.4" viewBox="0 0 600 84" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   sv += `<line x1="${x0 - 10}" y1="${y}" x2="${x0 + W + 10}" y2="${y}" stroke="${NAVY}" stroke-width="3"/>`;
   for (let i = 0; i <= 20; i++) {
     const x = x0 + i * W / 20, big = i % 10 === 0;
     sv += `<line x1="${x}" y1="${y - (big ? 14 : 8)}" x2="${x}" y2="${y + (big ? 14 : 8)}" stroke="${NAVY}" stroke-width="${big ? 4 : 2}"/>`;
-    if (big) sv += T(x, y + 40, '7.' + (3 + i / 10), 20);
+    if (big) sv += T(x, y + 38, '7.' + (3 + i / 10), 20);
   }
   sv += `<circle cx="${x0 + W / 2}" cy="${y}" r="9" fill="${YEL}" stroke="${NAVY}" stroke-width="3"/>`;
   return sv + '</svg>';
 };
 // Q6 scaffold: a bar of 6 equal parts for the cans
 const canBar = () => {
-  let sv = `<svg aria-label="A bar cut into 6 equal parts, one part for each can. The whole bar is the mass of all 6 cans." viewBox="0 0 600 100" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  let sv = `<svg aria-label="A bar cut into 6 equal parts, one part for each can. The whole bar is the mass of all 6 cans." viewBox="0 6 600 90" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   sv += `<path d="M60 44 Q60 30 74 30 L290 30 Q300 30 300 20 Q300 30 310 30 L526 30 Q540 30 540 44" fill="none" stroke="${NAVY}" stroke-width="2.5"/>` + T(300, 16, 'all 6 cans together', 16, TEAL);
   for (let i = 0; i < 6; i++) sv += `<rect x="${60 + i * 80}" y="50" width="80" height="40" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/>` + T(100 + i * 80, 76, 'can', 15, '#8A94AD');
   return sv + '</svg>';
@@ -179,8 +178,10 @@ module.exports = {
     H.sub('b', 'Which is the largest number?   ________'),
     H.sub('c', 'Which of your numbers is closest to 7?   ________'),
     H.sub('d', 'Two of your numbers round to 4 (to the nearest whole number). Which two?   ________   ________'),
-    H.q(5, 'Mei and Siti have $9.40 altogether. Mei has $1.20 more than Siti. How much money does each girl have? Draw a bar model.', { keepNext: true }),
-    ...H.lines(3),
+    H.q(5, 'Mei and Siti have $9.40 altogether. Mei has $1.20 more than Siti. How much money does each girl have? The bar model shows the two girls.', { keepNext: true }),
+    H.fig(FG.barModel({ left: 90, right: 160, rows: [{ name: 'Siti', segs: [{ u: 3 }] }, { name: 'Mei', segs: [{ u: 3 }, { u: 1, f: 'shade' }] }],
+      ann: [{ k: 'dim', row: 1, from: 3, to: 4, t: '$1.20 more' }, { k: 'rbrace', r1: 0, r2: 1, at: 4, t: '$9.40' }],
+      label: 'Two bars. Siti has a bar of 3 equal parts. Mei has the same bar plus a shaded extra part marked $1.20 more. A brace on the right marks $9.40 altogether.' })),
     H.sub('', 'Mei  $________          Siti  $________'),
     H.q(6, 'A box holds 6 cans that all have the same mass.', { keepNext: true }),
     H.fig(scales()),

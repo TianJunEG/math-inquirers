@@ -60,9 +60,10 @@ def icon(name, x, y, s=44, clip=None):
         raise ValueError('icon ' + name)
     if clip == 'left':
         cid = f'hf{next(_uid)}'
-        return (f'<clipPath id="{cid}"><rect x="{x - 2}" y="{y - 2}" width="{s / 2 + 2}" height="{s + 4}"/></clipPath>'
+        # a half picture: the left half, closed by a solid straight edge (audit 3: the old clipped half looked like a stray mark)
+        return (f'<clipPath id="{cid}"><rect x="{x - 4}" y="{y - 4}" width="{s / 2 + 4}" height="{s + 8}"/></clipPath>'
                 f'<g clip-path="url(#{cid})">{g}</g>'
-                f'<line x1="{cx}" y1="{y + 1}" x2="{cx}" y2="{y + s - 1}" stroke="{NAVY}" stroke-width="1.8" stroke-dasharray="4 4"/>')
+                f'<line x1="{cx}" y1="{cy - r}" x2="{cx}" y2="{cy + r}" stroke="{NAVY}" stroke-width="{SW}" stroke-linecap="round"/>')
     return g
 
 
@@ -197,7 +198,7 @@ def _edges_sq(n, L):
     return e
 
 
-def stick_rows(rows, width_mm=None):
+def stick_rows(rows, width_mm=None, lab=175, mark=False):
     """rows: [{'kind': 'tri'|'sq'|'tri_sep', 'n': int, 'label': str}] drawn one under the other as sticks.
     Returns sticks per row through count_sticks()."""
     L, H = 56, 49
@@ -220,9 +221,18 @@ def stick_rows(rows, width_mm=None):
             h = H; w = n * (L + 16) - 16
         else:
             raise ValueError(kind)
-        x0 = 175
+        x0 = lab
         for (p, q) in sorted(edges):
             parts.append(f'<line x1="{x0 + p[0]:.1f}" y1="{y + 8 + p[1]:.1f}" x2="{x0 + q[0]:.1f}" y2="{y + 8 + q[1]:.1f}" stroke="{NAVY}" stroke-width="6.5" stroke-linecap="round"/>')
+        if mark or r.get('mark'):      # a number inside every triangle, so a child can count them (audit 3)
+            for i in range(n):
+                if kind == 'tri':
+                    cx = x0 + (i + 1) * L / 2
+                    cy = y + 8 + (H * 0.64 if i % 2 == 0 else H * 0.36)
+                else:
+                    cx = x0 + i * (L + 16) + L / 2
+                    cy = y + 8 + H * 0.64
+                parts.append(_t(cx, cy + 9, i + 1, 26))
         if r.get('label'):
             parts.append(_t(2, y + h / 2 + 18, r['label'], 24, 'start'))
         W = max(W, x0 + w + 12)
@@ -242,17 +252,20 @@ def count_sticks(kind, n):
 
 
 # ---------------------------------------------------------------- towers of blocks
-def towers(counts, width_mm=None):
-    """Towers of square blocks, one tower per step (a growing pattern).  None = an empty dashed place for the child to draw."""
+def towers(counts, width_mm=None, frame=None):
+    """Towers of square blocks, one tower per step (a growing pattern).  None = an empty place for the child to draw: a dashed
+    frame that is open at the top and has no grid, and is `frame` blocks tall (a number NOT tied to the answer; default: 3 more than the
+    tallest drawn tower, which used to equal the answer, audit 3)."""
     B, G = 34, 46
     top = 4
-    mx = max(c for c in counts if c) + (3 if None in counts else 0)
+    mx = frame or (max(c for c in counts if c) + (3 if None in counts else 0))
     H = mx * B + 52
     parts = []
     for i, n in enumerate(counts):
         x = 8 + i * (3 * B + G)
         if n is None:
-            parts.append(f'<rect x="{x + B}" y="{top}" width="{B}" height="{mx * B}" rx="6" fill="none" stroke="{GREY}" stroke-width="2.4" stroke-dasharray="6 5"/>')
+            yb = top + mx * B
+            parts.append(f'<path d="M{x + B},{top} V{yb} H{x + 2 * B} V{top}" fill="none" stroke="{GREY}" stroke-width="2.4" stroke-dasharray="6 5"/>')
         else:
             for k in range(n):
                 parts.append(f'<rect x="{x + B}" y="{top + (mx - 1 - k) * B}" width="{B}" height="{B}" fill="{SKY}" stroke="{NAVY}" stroke-width="{SW}"/>')
@@ -314,7 +327,7 @@ def grow_table(spec, width_mm=None):
 FIGS = {'grow_table': grow_table, 
     'picture_graph': lambda s, w: picture_graph(s, w),
     'shape_row': lambda s, w: shape_row(s['items'], s.get('start_no', 1), s.get('per_row', 10), s.get('numbers', True), w, s.get('items2')),
-    'stick_rows': lambda s, w: stick_rows(s['rows'], w),
-    'towers': lambda s, w: towers(s['counts'], w),
+    'stick_rows': lambda s, w: stick_rows(s['rows'], w, s.get('lab', 175), s.get('mark', False)),
+    'towers': lambda s, w: towers(s['counts'], w, s.get('frame')),
     'tally': lambda s, w: tally(s['rows'], w),
 }

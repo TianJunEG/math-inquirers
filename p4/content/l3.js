@@ -1,5 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 3: Operation Detectives (Four operations)
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF', G = '#EDEDED';
 const F = 'Fredoka, Arial, sans-serif';
 const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>
@@ -175,12 +176,13 @@ module.exports = {
     W.push(H.sub('a', 'What do you notice?  ______________________________'));
     W.push(H.sub('b', 'Fill in the blanks.  × 5 then ÷ 5 gives back my _______.  The 35 ÷ 5 adds _______.  Taking away my number leaves _______.'));
     W.push(H.q(6, 'A hawker stall sold 3 times as many plates of chicken rice as plates of laksa. It sold 124 plates altogether.', { keepNext: true }));
-    W.push(H.sub('a', 'Draw a bar model.'));
-    W.push(H.gap(240));
-    W.push(H.sub('b', 'How many plates of chicken rice did it sell?'));
-    W.push(H.ans());
-    W.push(H.sub('c', 'How many more plates of chicken rice than laksa did it sell?'));
-    W.push(H.ans());
+    W.push(H.sub('a', 'Finish the bar model: write what each bar stands for, then use it to answer b and c.'));
+    W.push(H.fig(FG.barModel({ left: 130, right: 150, rows: [
+      { name: 'Laksa', segs: [{ u: 1 }], note: '' },
+      { name: 'Chicken rice', segs: [{ u: 1 }, { u: 1 }, { u: 1 }], note: '' }],
+      ann: [{ k: 'rbrace', r1: 0, r2: 1, at: 3, t: '124 plates' }],
+      label: 'Bar model: one box for laksa and three boxes of the same size for chicken rice. A brace on the right shows 124 plates altogether.' })));
+    W.push(H.sub('b', ['How many plates of chicken rice did it sell?  ________       <b style="color:#1F7A6F">c</b>  How many more plates of chicken rice than laksa?  ________']));
     W.push(H.q(7, '★ Take-home choice. Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', { keepNext: true }));
     W.push(H.fig(chainSvg()));
     W.push(H.sub('a', ['Chain (a): work backwards from 13 and 21.     <b style="color:#1F7A6F">b</b>  Chain (b): guess the 2nd number, then check.']));

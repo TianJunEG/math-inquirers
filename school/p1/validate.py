@@ -7,18 +7,24 @@ from PIL import Image
 import build, render
 from gen.common import max_words
 
-ap = argparse.ArgumentParser(); ap.add_argument("--outdir", default=os.path.join(HERE, "out")); a = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument("--outdir", default=os.path.join(HERE, "out"))
+ap.add_argument("--partial", action="store_true", help="work in progress: not every one of the 40 pages exists yet (page counts follow the pages found)")
+a = ap.parse_args()
 O = a.outdir
 log = []; fails = []
 def rec(name, ok, detail=""):
     log.append(f'{"PASS" if ok else "FAIL"}  {name}  {detail}')
     if not ok: fails.append(name)
 
+from gen import outcomes as OC
 pages = build.all_pages()
+BK = {k: build.booklet_pages(pages, k) for k in OC.BOOKLETS}
+NP = {k: (len(v) if a.partial else 20) for k, v in BK.items()}
+def L(p): return p["code"]
 # ---- 1. puzzle verification
 for p in pages:
     for n, ok, d in p["verify"]:
-        rec(f'P1-{p["no"]:02d} {n}', ok, str(d)[:80])
+        rec(f'{L(p)} {n}', ok, str(d)[:80])
 
 # ---- 1b. wrong-answer enumeration (owner addendum 8: a pupil can tell when an answer is wrong)
 # Every page supplies a model: the right answers (truth), the values each answer could take (domains) and the
@@ -57,16 +63,16 @@ def enumerate_model(m):
 verification = []
 for p in pages:
     r = enumerate_model(p["model"]) if "model" in p else None
-    rec(f'P1-{p["no"]:02d} has a self-check model for the enumeration', r is not None)
+    rec(f'{L(p)} has a self-check model for the enumeration', r is not None)
     if r is None: continue
-    rec(f'P1-{p["no"]:02d} check passes the right answers', r["right_passes"])
+    rec(f'{L(p)} check passes the right answers', r["right_passes"])
     a, b = r["plausible"]
-    rec(f'P1-{p["no"]:02d} enumeration: plausible single slips rejected {a}/{b} = {a / b:.1%} (needs >= 95%)', b > 0 and a / b >= THRESH - 1e-9)
+    rec(f'{L(p)} enumeration: plausible single slips rejected {a}/{b} = {a / b:.1%} (needs >= 95%)', b > 0 and a / b >= THRESH - 1e-9)
     a2, b2 = r["allv"]
-    rec(f'P1-{p["no"]:02d} enumeration: every other value of one answer rejected {a2}/{b2} = {a2 / b2:.1%} (needs >= 95%)', b2 > 0 and a2 / b2 >= THRESH - 1e-9)
+    rec(f'{L(p)} enumeration: every other value of one answer rejected {a2}/{b2} = {a2 / b2:.1%} (needs >= 95%)', b2 > 0 and a2 / b2 >= THRESH - 1e-9)
     if r["perm"]:
         a3, b3 = r["perm"]
-        rec(f'P1-{p["no"]:02d} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
+        rec(f'{L(p)} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
     verification.append((p["no"], r))
 rec("3 colour-by-code pages (P1-01, P1-12, P1-14), 3 or 4 wanted of 20", [p["no"] for p in pages if p.get("cbc")] == [1, 12, 14])
 # coverage within the 20-page budget (audit 2, F-new 12 and F-new 7)

@@ -221,3 +221,8 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 .steps li{counter-increment:st;display:flex;gap:3mm;align-items:center;font-weight:600}
 .steps li::before{content:counter(st);flex:none;width:8mm;height:8mm;border-radius:50%;border:0.6mm solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12pt}
 .parts.prow{flex-direction:row;flex-wrap:wrap;gap:1.2mm 6mm}
+
+/* audit 3: figure beside the question text */
+.figright{display:flex;gap:4mm;align-items:center}
+.figright .frt{flex:1;min-width:0}
+.figright .fig{flex:none;margin:0}

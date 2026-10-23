@@ -30,6 +30,42 @@ How to read: "NA" = Number and Algebra, "MG" = Measurement and Geometry, "ST" = 
 
 **ST (p. 32):** read and interpret picture graphs.
 
+
+**Outcome wording as printed in the PDF (added 23 Oct 2026 from pp. 31-32 of the October 2025 edition; the tags in school/p1 use these words):**
+- Whole Numbers 1.1: counting to tell the number of objects in a given set
+- Whole Numbers 1.2: number notation, representations and place values (tens, ones)
+- Whole Numbers 1.3: reading and writing numbers in numerals and in words
+- Whole Numbers 1.4: comparing the number of objects in two or more sets
+- Whole Numbers 1.5: comparing and ordering numbers
+- Whole Numbers 1.6: patterns in number sequences
+- Whole Numbers 1.7: ordinal numbers (first, second, up to tenth) and symbols (1st, 2nd, 3rd, etc.)
+- Addition and Subtraction 2.1: concepts of addition and subtraction
+- Addition and Subtraction 2.2: use of +, - and =
+- Addition and Subtraction 2.3: relationship between addition and subtraction
+- Addition and Subtraction 2.4: adding more than two 1-digit numbers
+- Addition and Subtraction 2.5: adding and subtracting within 100
+- Addition and Subtraction 2.6: adding and subtracting using algorithms
+- Addition and Subtraction 2.7: mental calculation involving addition and subtraction (within 20; 2-digit number and ones without renaming; 2-digit number and tens)
+- Multiplication and Division 3.1: concepts of multiplication and division
+- Multiplication and Division 3.2: use of x
+- Multiplication and Division 3.3: multiplying within 40
+- Multiplication and Division 3.4: dividing within 20
+- Money 1.1: counting amount of money (in cents up to $1; in dollars up to $100)
+- Length 1.1: measuring length in centimetres
+- Length 1.2: use of abbreviation cm
+- Length 1.3: comparing and ordering lengths in cm
+- Length 1.4: measuring and drawing a line segment to the nearest cm
+- Time 2.1: telling time to 5 minutes
+- Time 2.2: use of 'am' and 'pm'
+- Time 2.3: use of abbreviations h and min
+- Time 2.4: duration of one hour/half hour
+- 2D Shapes 1.1: identifying, naming, describing and classifying 2D shapes (rectangle, square, triangle, circle, half circle, quarter circle)
+- 2D Shapes 1.2: forming different 2D figures with rectangle, square, triangle, half circle, quarter circle
+- 2D Shapes 1.3: identifying the 2D shapes that make up a given figure
+- 2D Shapes 1.4: copying figures on dot grid or square grid
+- Picture Graphs 1.1: reading and interpreting data from picture graphs
+- Problem solving (p. 13): problem-solving competency is the central focus of the curriculum; general problem-solving strategies and heuristics (guess and check, work backwards, draw a model, make a list or table, look for a pattern). School-test question types that are not one numbered outcome are tagged "problem solving".
+
 ## Primary 2 (pp. 33-34)
 
 **NA, Whole Numbers (p. 33):** numbers to 1000 (count in tens and hundreds, place value to hundreds, words, compare and order, patterns, odd and even numbers 1.6). Add and subtract with algorithms to 3 digits; mental calculation with a 3-digit number and ones, tens or hundreds. Multiplication tables of 2, 3, 4, 5 and 10; the sign ÷; x and ÷ as related; mental calculation within those tables.

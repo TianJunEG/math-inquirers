@@ -88,7 +88,7 @@
      "$2",
      "$2"
     ],
-    "width_mm": 85
+    "width_mm": 95
    },
    "answer": {
     "value": [
@@ -562,8 +562,8 @@
    },
    "space": {
     "rows": [
-     "Set 1:",
-     "Set 2:"
+     "Set 1: {l}   Set 2: {l}",
+     "Set 3: {l}   Set 4: {l}"
     ]
    },
    "hint": "Is a 50¢ coin in every set? Try with it, then without.",
@@ -646,7 +646,7 @@
       "20¢ coins",
       "10¢ coins"
      ],
-     "rows": 3
+     "rows": 5
     }
    },
    "explanation": "Start with the most 20¢ coins. Two 20¢ coins make 40¢. One 20¢ and two 10¢ coins make 40¢. No 20¢ needs four 10¢ coins. That is 3 ways.",
@@ -725,14 +725,134 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Spent:",
-     "Bag:"
-    ]
-   },
    "hint": "How much money did Wei really spend?",
-   "explanation": "He spends $50 - $12 = $38 altogether. The bag costs the rest: $38 - $18 = $20. Check: $20 + $18 = $38 and $50 - $38 = $12."
+   "explanation": "He spends $50 - $12 = $38 altogether. The bag costs the rest: $38 - $18 = $20. Check: $20 + $18 = $38 and $50 - $38 = $12.",
+   "figure": {
+    "type": "draw",
+    "w": 520,
+    "h": 130,
+    "scale": 0.16,
+    "label": "$50 split into hat, bag and change",
+    "elements": [
+     {
+      "poly": [
+       [
+        10,
+        40
+       ],
+       [
+        510,
+        40
+       ],
+       [
+        510,
+        50
+       ],
+       [
+        10,
+        50
+       ]
+      ],
+      "fill": "white"
+     },
+     {
+      "text": [
+       260,
+       30,
+       "$50 note",
+       26
+      ]
+     },
+     {
+      "poly": [
+       [
+        10,
+        60
+       ],
+       [
+        170,
+        60
+       ],
+       [
+        170,
+        120
+       ],
+       [
+        10,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       90,
+       98,
+       "hat $18",
+       28
+      ]
+     },
+     {
+      "poly": [
+       [
+        170,
+        60
+       ],
+       [
+        340,
+        60
+       ],
+       [
+        340,
+        120
+       ],
+       [
+        170,
+        120
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "text": [
+       255,
+       98,
+       "bag ?",
+       28
+      ]
+     },
+     {
+      "poly": [
+       [
+        340,
+        60
+       ],
+       [
+        510,
+        60
+       ],
+       [
+        510,
+        120
+       ],
+       [
+        340,
+        120
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       425,
+       98,
+       "change $12",
+       28
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "L1U06-G03",
@@ -842,5 +962,8 @@
    },
    "explanation": "A $1 coin is worth 100¢. 100¢ is more than 85¢, so $1 is more."
   }
+ ],
+ "snug": [
+  "think"
  ]
 }

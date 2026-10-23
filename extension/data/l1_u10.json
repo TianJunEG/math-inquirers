@@ -277,7 +277,8 @@
      "square",
      "triangle"
     ],
-    "numbers": false
+    "numbers": false,
+    "width_mm": 58
    },
    "answer": {
     "value": [
@@ -285,7 +286,8 @@
     ],
     "text": "10 sides"
    },
-   "explanation": "A triangle has 3 sides and a square has 4 sides. 3 + 4 + 3 = 10."
+   "explanation": "A triangle has 3 sides and a square has 4 sides. 3 + 4 + 3 = 10.",
+   "figright": true
   },
   {
    "id": "L1U10-S08",
@@ -302,12 +304,121 @@
     "text": "Amelia, Lily, Ray, Jamie",
     "list": true
    },
-   "space": {
-    "rows": [
-     "Draw it:"
+   "explanation": "Amelia is older than Lily, Lily is older than Ray, and Ray is older than Jamie. The order is Amelia, Lily, Ray, Jamie.",
+   "figure": {
+    "type": "draw",
+    "w": 330,
+    "h": 228,
+    "scale": 0.15,
+    "label": "ladder of 4 empty places",
+    "elements": [
+     {
+      "poly": [
+       [
+        130,
+        8
+       ],
+       [
+        320,
+        8
+       ],
+       [
+        320,
+        52
+       ],
+       [
+        130,
+        52
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        64
+       ],
+       [
+        320,
+        64
+       ],
+       [
+        320,
+        108
+       ],
+       [
+        130,
+        108
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        120
+       ],
+       [
+        320,
+        120
+       ],
+       [
+        320,
+        164
+       ],
+       [
+        130,
+        164
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        176
+       ],
+       [
+        320,
+        176
+       ],
+       [
+        320,
+        220
+       ],
+       [
+        130,
+        220
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "text": [
+       62,
+       40.0,
+       "oldest",
+       26
+      ]
+     },
+     {
+      "text": [
+       62,
+       208.0,
+       "youngest",
+       26
+      ]
+     }
     ]
    },
-   "explanation": "Amelia is older than Lily, Lily is older than Ray, and Ray is older than Jamie. The order is Amelia, Lily, Ray, Jamie."
+   "figright": true
   },
   {
    "id": "L1U10-S09",
@@ -376,7 +487,21 @@
      "Undo -3:"
     ]
    },
-   "explanation": "Go backwards. Undo the last step: 14 - 8 = 6. Undo the first step: 6 + 3 = 9. Check: 9 - 3 = 6 and 6 + 8 = 14."
+   "explanation": "Go backwards. Undo the last step: 14 - 8 = 6. Undo the first step: 6 + 3 = 9. Check: 9 - 3 = 6 and 6 + 8 = 14.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     "?",
+     14
+    ],
+    "ops": [
+     "-3",
+     "+8"
+    ],
+    "width_mm": 70
+   },
+   "figright": true
   },
   {
    "id": "L1U10-S13",
@@ -502,15 +627,24 @@
     ],
     "text": "16 cubes"
    },
-   "space": {
-    "rows": [
-     "Undo +2:",
-     "Undo -3:",
-     "Undo -4:"
-    ]
-   },
    "hint": "Start at 11 and work back. What was the last step?",
-   "explanation": "Go backwards. Undo adding 2: 11 - 2 = 9. Undo cutting off 3: 9 + 3 = 12. Undo cutting off 4: 12 + 4 = 16. Check: 16 - 4 = 12, 12 - 3 = 9, 9 + 2 = 11."
+   "explanation": "Go backwards. Undo adding 2: 11 - 2 = 9. Undo cutting off 3: 9 + 3 = 12. Undo cutting off 4: 12 + 4 = 16. Check: 16 - 4 = 12, 12 - 3 = 9, 9 + 2 = 11.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     "?",
+     "?",
+     11
+    ],
+    "ops": [
+     "-4",
+     "-3",
+     "+2"
+    ],
+    "width_mm": 76
+   },
+   "figright": true
   },
   {
    "id": "L1U10-G01",
