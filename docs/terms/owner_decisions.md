@@ -336,3 +336,6 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 
 ## 2026-10-24 (owner, coin and note images)
 - Owner: the current original coin and note art "looks nothing like the real ones" and showed a published Singapore school practice book that uses real coin and note images (notes with SPECIMEN overprint). Direction: a real-image VARIANT of the four money pages (P2 S2-01, S2-04; P1 S2-10, S2-11) is being built from official MAS images for owner review, held back from the booklets until a lawyer confirms the MAS educational-publication exemption (SPECIMEN, scaling, one-sided conditions). The booklets keep the original art meanwhile. A tenth question is added to the lawyer email draft. The other publisher's images are NOT to be copied.
+
+## 2026-10-24 (owner, deferred rewrite now)
+- REWRITE-NOW: the owner pasted the status table row "The rewrite of lessons 10, 21, 23, 24, 28 and 36 against private sources ..." and wrote "do now" (message cut off). Understood as: do the Level 1 term lesson rewrite (TERMCHECK "too close" items) NOW, not after 6 Nov. Overrides Rewrite-after-6nov. To be confirmed with the owner if the intent was different.
