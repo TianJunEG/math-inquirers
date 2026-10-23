@@ -86,3 +86,32 @@ Every new page has: a generator with its own seed; an independent solver that re
 - Whether the one not-affiliated sentence stays on the licence page.
 - Whether to draw the CBC gallery diagram fixes and the other B items of the diagram audit (not in this build).
 - The independent audit (hand-solve at least the six pages named above, mono copy test, V9 non-copy check): the owner's next step, not run here.
+
+## Audit round 1: fixes made (23 Oct 2026, after `docs/audit_final/p1_semester_booklets_audit.md`)
+
+validate.py: 781 checks, 0 failed. Page counts unchanged (20 / 5 / 25 / key 10 and 9, all even per booklet). Every changed page was re-solved by hand from the rendered image (P1-03, 05, 12, 13, 21, 25, 28, 30, 33, 38, 39; P1-22, 34 re-checked against their solvers and the render) and viewed in colour and as a 1-bit copy.
+
+| Finding | Fix |
+|---|---|
+| H1 P1-12 | Every part now has a thick write-on line in place of the small square box (a box looks like one of the squares being counted); the label "Corners:" is printed wherever the part is large enough (3 of 17 parts; the rest are too small to hold shapes, label and line, so they show shapes and the thick line only); the instruction says "Write it on the thick line". Marks are now triangle, square, star, cross, circle, moon (hexagon and diamond removed everywhere in the colour library). Hand count of all 17 parts matches the tally (yellow 3, red 4, blue 3, green 3, orange 4). |
+| H2 P1-33 | A real "form a figure" task was added: a small outline is shown and the pupil picks which two pieces make it (three lettered sets with different total areas); its letter is the sixth letter of the code word, which is now BUDGIE (six boxes). The independent check compares the drawn outline's area with each set. 2D Shapes 1.2 is now genuinely practised; "all 32 outcomes covered" holds (validate.py checks it). P1-33 also says squares and rectangles are different kinds here. |
+| H3 | Both answer keys carry the DRAFT stamp and the contact email. While entity and year are unconfirmed the pupil footers drop the "(c) 2026 Preciouslyours Pte Ltd" line (a `--final` build prints it); the footer keeps "Photocopy licence: ____ (school name) only", the blank line the licence sentence describes. Still owner items: entity, year, publisher line, licence wording and term, registered office. Keys now print "Key page n of N" and the right footer example. |
+| M1 objects | Counted objects drawn at 8 to 10 mm (glyph about 7 to 8 mm): P1-25, 21, 03, 39, 13 and the P1-05 arrays at 8 mm (rows of at most 4). To fit, counts were reduced (P1-21 first groups at most 7; P1-13 totals within 16; P1-05 groups of 2 to 4 with products within 20; P1-03 objects 8.6 mm, 10 per row) and the answers and code tables regenerated, so keys changed. P1-22 stories no longer carry pictures (not a counting task). |
+| M2 P1-34 | Grid 4 by 3 cells of 9 mm (was 6 by 4 of 6 mm); the right half is two columns. |
+| M3 P1-28 | Purses: four, two per row, coins 1.2 times larger; "cents" lettering larger on every coin page. |
+| M4 P1-39 | "The sharer gets a share too." is now an instruction line at the top. Star level not changed (pupil trial). |
+| M5 P1-38 | Clue 4: "Kumar gives 7 stickers to Ben. Then they have the same number." |
+| M6 notes | Loop bullet no longer claims a printed total; the problem-solving sentence names examples that are in that booklet. |
+| M7 cover and notes | Cover: "Almost every puzzle checks itself"; the notes say that on Finish the Figure (S1) and Measure and Draw (S2) the check tests matching and reading, not the drawing. |
+| M8 colour pages | Pupil instruction: "No crayon? Write Y, R, B, G or O."; notes: light crayons, a dark one hides the number on a copy. Space for a letter in the smallest parts was not re-checked. |
+| M9, L3 P1-30 | No 12:00 or 12:30 times and no "recess" event; the event list is seven events. |
+| L1 | Notes add that two wrong answers at once were not all tested. The single-slip words SIRING (P1-32) and JAILOR (P1-29) found by the audit were not changed. |
+| L2 | Done with H1. |
+| L4 | P1-01 no longer tagged 1.1; P1-38 tagged 1.5 instead of 1.4 (all 32 outcomes still covered). |
+| L5 | Done with H2. |
+| L6 | Notes name the offset-ruler extension. |
+| L7 | Minute hands already stop inside the numeral ring (build wave 3). |
+| L8 | Tile labels on P1-37 made smaller. S2-12 box spacing and S1-11 icon size not touched. |
+| L9 | Done with H3. |
+
+Not fixed or left for the owner: the entity, year, publisher and licence placeholders (H3); the eight-wording question of the not-affiliated sentence (kept on the licence page only, as asked); pupil-trial questions (stars of P1-39, fairness of the P1-31 trap); coin art comparison (L10); P1-12 parts too small to carry the label (3 of 17 labelled); the P1-01 and P1-14 colour pages were regenerated with the new marks and checked by validate.py, their small-part letter space not re-measured; validate.py thresholds loosened slightly for the small-print pages (front matter 1-bit ink loss 32%, key flat-grey blocks 90 per page, both anti-aliasing of small text on pure black and white PDFs).

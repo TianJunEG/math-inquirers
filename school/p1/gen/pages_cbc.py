@@ -145,7 +145,7 @@ def page12():
 
 def _page12():
     return cbc_page(12, dict(id="CBC-10", picture="house", bank="shapes", tier=1, seed=128), "Colour the House",
-        ["Count the corners. Write it in the thick box.", "Find the number in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
+        ["Count the corners. Write it on the thick line.", "Find the number in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Measurement and Geometry - Geometry", "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
         "Shapes are triangle, square, rectangle and circle only. A circle has no corners.")
 
