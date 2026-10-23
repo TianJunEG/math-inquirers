@@ -230,9 +230,16 @@ def plan_lesson(n):
         best = min(cands, key=lambda c: (c[0], c[1]))      # the richest variant that fits; for the same variant the placement with the fewest new warnings
         _, _, v, d2, place, u, sl, new_w = best
         rep['new_warns'] = sorted(f'{a}:{b}' for a, b in new_w)
-    else:
+    else:      # last resort: notes only, and the children's look-back time cut in steps of 5 s down to 80 s
         d2, _ = build_variant(d, n, 'notes only')
         v, place, u, sl = 'NEEDS HUMAN', '-', fits(d2)[2], fits(d2)[3]
+        wk = [ln for ln in segment(d2, 'look')['lines'] if ln['k'] == 'WORK' and ln.get(MARK) == 'look'][0]
+        while not fits(d2)[0] and wk['s'] > 80:
+            wk['s'] -= 5
+        if fits(d2)[0]:
+            v, place = 'notes only, look-back ' + str(wk['s']) + ' s', 'opening'
+            ok, why, u, sl = fits(d2)
+            rep['reduced'] = True
     d2['spine'] = spine_obj(n)
     d3 = {}
     for k, val in d2.items():              # place `spine` right after `skill`
