@@ -710,7 +710,7 @@ PASS  S2 pupil page 10 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 10 page-fill: puzzle content 171 of 183 mm  0.93
 PASS  S2 pupil page 10 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 11 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 11 page-fill: puzzle content 156 of 183 mm  0.85
+PASS  S2 pupil page 11 page-fill: puzzle content 149 of 183 mm  0.81
 PASS  S2 pupil page 11 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 12 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 12 page-fill: puzzle content 174 of 183 mm  0.95
@@ -778,7 +778,7 @@ PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 134, limit 
 PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.92% vs greyscale)  10 pages
 PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 596, limit 90 per page)  
 PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.06% vs greyscale)  20 pages
-PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 175, limit 40 per page)  
+PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 174, limit 40 per page)  
 PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.07% vs greyscale)  5 pages
 PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 133, limit 40 per page)  
 PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.67% vs greyscale)  9 pages
