@@ -130,7 +130,7 @@ module.exports = {
     H.sub('a', 'List ALL the numbers in order.  ______________________________'),
     H.sub('b', 'Greatest: ________     Smallest: ________'),
     H.sub('c', 'Which of them are between 300 and 810?  ______________________'),
-    H.q(3, [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Ben has 6 coins. They are all 50¢ and 20¢ coins. Together they are worth $1.80. How many of each coin does he have? Make a table.')], { keepNext: true }),
+    H.q(3, [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Ben has 6 coins. They are all 50¢ and 20¢ coins. Together they are worth $1.80. How many of each coin does he have? Make a table.')], { keepNext: true }),
     H.tbl([3300, 3300, 3300], [
       H.row(['Number of 50¢', 'Number of 20¢', 'Total'].map(s => H.cell(s, 3300, { bold: true, fill: 'EDEDED', h: 30 }))),
       H.row([H.cell('0', 3300, { h: 30 }), H.cell('6', 3300, { h: 30 }), H.cell('$1.20', 3300, { h: 30 })]),

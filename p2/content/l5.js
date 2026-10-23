@@ -122,7 +122,7 @@ module.exports = {
       H.sub('a', 'I multiply by 2, then add 7. I get 27.', { after: 30, keepNext: true }), m2('× 2', '+ 7', '27'), H.gap(16),
       H.sub('b', 'I take away 8, then multiply by 5. I get 40.', { after: 30, keepNext: true }), m2('− 8', '× 5', '40'), H.gap(16),
       H.sub('c', 'I divide by 3, then add 12. I get 20.', { after: 30, keepNext: true }), m2('÷ 3', '+ 12', '20'), H.gap(16),
-      H.sub('d', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('I multiply by 4, then take away 15. I get 21.')], { after: 30, keepNext: true }), m2('× 4', '− 15', '21'),
+      H.sub('d', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('I multiply by 4, then take away 15. I get 21.')], { after: 30, keepNext: true }), m2('× 4', '− 15', '21'),
       H.q(2, 'Two-step number machines.', { keepNext: true }),
       H.sub('a', 'This machine does × 3, then + 2. Fill in the table.', { keepNext: true }),
       io(['4', '10', '', ''], ['', '', '17', '29']), H.gap(30),

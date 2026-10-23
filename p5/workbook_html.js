@@ -26,7 +26,7 @@ const bx = '<span style="display:inline-block;width:20px;height:20px;border:2.5p
 const reflect = () => SP.lookback(LEVEL);   // common look-back (three prompts, tool ticks, still stuck / pass); replaces the old My reflection box
 // Neutral choice line at the top of page 1 (replaces the old printed fast-track criterion).
 // The number is the last question printed on page 1 of that lesson (2 or 3), computed in data.js from the real page break.
-const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceQ(n)}</b> you may choose: carry on, or try Think harder. <b style="color:#D9662B">&#9733;</b> = for home.</div>`;
+const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#8A3F10">After question ${L.choiceQ(n)}</b> you may choose: carry on, or try Think harder. <b style="color:#8A3F10">&#9733;</b> = for home.</div>`;
 const planLine = txt => `<div class="p" style="border:2px solid #1F7A6F;border-radius:10px;padding:4px 12px;margin:2px 0 6px;background:#F3FAF8;font-size:16px"><b style="color:#1F7A6F">Page 2 plan.</b> Start with ${txt}. Then choose. You need not finish.</div>`;
 const BRK = '<div class="brk"></div>';
 const extra = (n) => {
@@ -36,7 +36,7 @@ const extra = (n) => {
   // Page 3: the Investigation (an option for everyone, with an easy first step) and the reflection box
   out.push(...hdr(n, ls.topic, 'INVESTIGATION'));
   out.push(banner('Investigation: ' + inv.title));
-  out.push(`<div class="p" style="border:2px dashed #1F7A6F;border-radius:10px;padding:5px 12px;margin:4px 0 6px;background:#F3FAF8;font-size:17px"><b style="color:#1F7A6F">An open puzzle for everyone.</b> <b style="color:#D9662B">&#9733; take-home</b> (or the start of the next lesson). ${inv.first}</div>`);
+  out.push(`<div class="p" style="border:2px dashed #1F7A6F;border-radius:10px;padding:5px 12px;margin:4px 0 6px;background:#F3FAF8;font-size:17px"><b style="color:#1F7A6F">An open puzzle for everyone.</b> <b style="color:#8A3F10">&#9733; take-home</b> (or the start of the next lesson). ${inv.first}</div>`);
   out.push(q('C', '(a) ' + inv.parts[0], { before: 80, after: 30, keepNext: true }));
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(b)</b> ${inv.parts[1]}</div>`);
   out.push(`<div class="p" style="margin:4px 0 4px 28px"><b>(c)</b> ${inv.parts[2]}</div>`);
@@ -54,7 +54,7 @@ const extra = (n) => {
   out.push(banner('Go further  (a puzzle that goes further)'));
   b.challenge.slice(-3).forEach((x, i) => { out.push(q('B' + (i + 1), x.q, { before: 200, after: 40, keepNext: true })); if (x.fig) out.push(H.fig(x.fig, { maxH: n === 5 ? 300 : 210 })); out.push(...lines(x.fig ? 2 : 4)); });
   // One problem-posing prompt per lesson (think for 30 seconds first). Open-ended, so there is no answer line.
-  if (ls.pose) out.push(`<div class="p" style="border:2.5px dashed #D9662B;border-radius:12px;padding:8px 14px;margin:10px 0 0;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">Make up your own.</b> ${ls.pose} <i>(Think for 30 seconds before anyone speaks.)</i></div>`);
+  if (ls.pose) out.push(`<div class="p" style="border:2.5px dashed #D9662B;border-radius:12px;padding:8px 14px;margin:10px 0 0;background:#FFF6EE;font-size:17px"><b style="color:#8A3F10">Make up your own.</b> ${ls.pose} <i>(Think for 30 seconds before anyone speaks.)</i></div>`);
   return out;
 };
 // Page 2 gets a small "Start here" banner and a neutral plan line after its page break.

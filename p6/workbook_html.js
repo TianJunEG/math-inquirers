@@ -67,5 +67,6 @@ L.content.forEach(c => {
 W.push('<div class="brk"></div>');
 W.push(...require('./kit.js')());
 W.push(`<div class="cert pb"><div class="ci"><div class="ct">CERTIFICATE OF COMPLETION</div><div class="cp">${PROG}</div><div class="cs">Primary 6 Holiday Program</div><div class="cl">This certifies that</div><div class="cn"></div><div class="cl">completed all 10 lessons, solved puzzles, spotted patterns and explained their thinking.</div><div class="cq">${SLOGAN}</div><div class="cl">Tutor: ____________________ &nbsp;&nbsp;&nbsp; Date: ________________</div></div></div>`);
-fs.writeFileSync('workbook_body.html', W.join('\n').replace(/(<text[^>]*?fill=")#D64545(")/g, '$1#1B2A49$2'));   // red text turns into hatched ghost digits in B&W: navy instead
+const lightBlocks = html => html.replace(/<svg[\s\S]*?<\/svg>/g, sv => /<text[^>]*fill="#(?:FFFFFF|fff)"/i.test(sv) ? sv.replace(/(<text[^>]*?fill=")#(?:FFFFFF|fff)(")/gi, '$1#1B2A49$2').replace(/(<(?:rect|path|polygon)[^>]*?fill=")#(?:1F7A6F|D64545)(")/g, (m, a1, a2) => a1 + (m.includes('#1F7A6F') ? '#E4F3F0' : '#FBE4E4') + a2) : sv);   // white text on dark fills turns into patterns in black and white: dark text on a very light fill
+fs.writeFileSync('workbook_body.html', lightBlocks(W.join('\n')).replace(/(<text[^>]*?fill=")#D64545(")/g, '$1#1B2A49$2'));   // red text turns into hatched ghost digits in B&W: navy instead
 console.log('html body built');

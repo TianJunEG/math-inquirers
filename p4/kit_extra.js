@@ -23,8 +23,9 @@ function cards() {
   });
   const rows = Math.ceil(faces.length / cols);
   const hh = 28 + rows * (h + gy);
-  b += note(14, hh + 8, 'Cut along the dashed lines. Keep the cards in one envelope. Digits: Lessons 2, 3, 5 and 10. Decimal points: Lesson 5. Signs and brackets: Lesson 3.');
-  return svg(hh + 24, b);
+  b += note(14, hh + 8, 'Cut along the dashed lines. Keep the cards in one envelope. Digits: Lessons 2, 3, 5 and 10.');
+  b += note(14, hh + 28, 'Decimal points: Lesson 5. Signs and brackets: Lesson 3.');
+  return svg(hh + 44, b);
 }
 
 // two blank line-graph grids, scale boxes to fill in
@@ -40,8 +41,9 @@ function graphGrids() {
     b += `<text x="${ox + cols * s / 2}" y="${oy + rows * s + 36}" font-size="15" font-weight="800" text-anchor="middle" fill="${NAVY}" font-family="Nunito Sans, Arial">what is along the bottom: ____________________</text>`;
   });
   const hh = 60 + 2 * (rows * s + 120);
-  b += note(14, hh - 8, 'Write the scale in the small boxes at the side first (for example 0, 10, 20 ...). Print extra copies if you need them.');
-  return svg(hh, b);
+  b += note(14, hh - 8, 'Write the scale in the small boxes at the side first (for example 0, 10, 20 ...).');
+  b += note(14, hh + 12, 'Make extra copies if you need them.');
+  return svg(hh + 20, b);
 }
 
 // paper clock face + hands, pizza circles, bring-from-home box
@@ -62,9 +64,9 @@ function clockPage() {
   b += `<g ${dash}><path d="M500 60 h24 l6 -22 l6 22 h24 v200 h-60 Z" fill="${YEL}" stroke="${NAVY}" stroke-width="2.5"/></g><text x="530" y="290" font-size="15" font-weight="800" text-anchor="middle" fill="${NAVY}" font-family="Nunito Sans, Arial">hour hand</text>`;
   b += `<g ${dash}><path d="M620 40 h20 l6 -22 l6 22 h20 v270 h-52 Z" fill="${SKY}" stroke="${NAVY}" stroke-width="2.5"/></g><text x="646" y="334" font-size="15" font-weight="800" text-anchor="middle" fill="${NAVY}" font-family="Nunito Sans, Arial">minute hand</text>`;
   b += `<circle cx="530" cy="236" r="5" fill="${RED}"/><circle cx="646" cy="286" r="5" fill="${RED}"/>`;
-  b += note(480, 360, 'Make a hole at each red dot, then join the hands to the centre of the face with a split pin.');
+  b += note(14, 468, 'Make a hole at each red dot, then join the hands to the centre of the face with a split pin.');
   // pizza circles
-  b += `<text x="14" y="510" font-size="18" font-weight="800" fill="${NAVY}" font-family="Nunito Sans, Arial">Pizza circles (Lesson 4): cut out each circle, then cut it into 4 equal slices (quarters)</text>`;
+  b += `<text x="14" y="510" font-size="18" font-weight="800" fill="${NAVY}" font-family="Nunito Sans, Arial">Pizza circles (Lesson 4): cut out each circle, then cut it into 4 equal slices</text>`;
   [120, 350, 580].forEach(x => {
     b += `<circle cx="${x}" cy="640" r="105" fill="#FFF0C2" stroke="${NAVY}" stroke-width="3" ${dash}/>`;
     b += `<line x1="${x - 105}" y1="640" x2="${x + 105}" y2="640" stroke="#C9A24A" stroke-width="1.4" ${dash}/><line x1="${x}" y1="535" x2="${x}" y2="745" stroke="#C9A24A" stroke-width="1.4" ${dash}/>`;
@@ -76,10 +78,10 @@ function clockPage() {
   ['A clear 180 degree protractor and a 30 cm ruler. Lesson 6 starts with them, so have them ready.',
     'No protractor? A plastic school one is fine and cheap to buy. Or tell your tutor: there are spares.',
     'A ruler and two coloured pencils (Lessons 7 and 9). Scissors and tape (Lessons 4, 6, 7 and 8).',
-    'Squared paper, if you want extra: the Square grid page can be cut into 1 cm squares for Lessons 7 and 8.'].forEach((t, i) => {
+    'Squared paper, if you want extra: cut the Square grid page into 1 cm squares.'].forEach((t, i) => {
     b += `<text x="34" y="${858 + i * 24}" font-size="15" fill="${NAVY}" font-family="Nunito Sans, Arial">• ${t}</text>`;
   });
-  return svg(960, b);
+  return svg(960, b).replace('width="100%"', 'width="86%"');
 }
 
 

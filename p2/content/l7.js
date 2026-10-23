@@ -78,7 +78,7 @@ const q4svg = () => {
       else if (pp === '1 whole') { s += text(x + 18, y + 27, '1 whole', 18, N, 'middle'); x += 60; }
       else { s += text(x - 2, y + 28, pp, 20); x += 32; }
     });
-    if (l === 'd' || l === 'e') s += text(4, y + 9, '★', 14, '#B45F06', 'start');
+    if (l === 'd' || l === 'e') s += text(4, y + 9, '★', 14, '#1B2A49', 'start');
     if (l !== 'd') s += `<rect x="${x - 16}" y="${y - 2}" width="40" height="46" rx="5" fill="none" stroke="${N}" stroke-width="2" stroke-dasharray="4 3"/>`;
   });
   return svg(600, 296, s, 'Five bars to colour: 5, 8, 12, 6 and 10 equal parts, each next to a sum with a box for the answer');
@@ -186,7 +186,7 @@ module.exports = {
     const out = [];
     out.push(H.q(1, R('Fair shares? Each shape has 4 parts and 1 part is shaded. Circle the shapes that are cut into quarters (4 EQUAL parts).'), { before: 40, keepNext: true }));
     out.push(H.fig(q1svg()));
-    out.push(H.sub('a', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Choose one shape that is NOT cut into quarters. Explain how you know.')], { after: 20 }));
+    out.push(H.sub('a', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Choose one shape that is NOT cut into quarters. Explain how you know.')], { after: 20 }));
     out.push(...H.lines(1));
     out.push(H.q(2, 'What fraction is shaded? What fraction is NOT shaded? Write them in the boxes.', { keepNext: true }));
     out.push(H.fig(q2svg()));
@@ -197,7 +197,7 @@ module.exports = {
     out.push(H.sub('c', R('Mei says: “{1/6} is bigger than {1/4}, because 6 is bigger than 4.” Is she right? Explain.'), { after: 20 }));
     out.push(...H.lines(1));
 
-    out.push(H.q(4, [H.t('Add or take away. Colour the bars to help you. Write each answer in the box.  '), H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Parts d and e are done at home.')], { before: 40, keepNext: true }));
+    out.push(H.q(4, [H.t('Add or take away. Colour the bars to help you. Write each answer in the box.  '), H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Parts d and e are done at home.')], { before: 40, keepNext: true }));
     out.push(H.fig(q4svg()));
     out.push(H.q(5, 'Mum cuts a cake into 8 equal slices. Ali eats 2 slices. Mei eats 3 slices.', { keepNext: true }));
     out.push(H.fig(q5svg()));

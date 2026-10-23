@@ -71,7 +71,7 @@ const icon = (name, cx, cy, s, o = {}) => {
 const COIN = { 5: { r: 17, f: '#F1F3F6' }, 10: { r: 19, f: '#F1F3F6' }, 20: { r: 21.5, f: '#F1F3F6' }, 50: { r: 24.5, f: '#F1F3F6' }, 100: { r: 27, f: '#FBF0C4' } };
 const coinF = (v, cx, cy, o = {}) => {
   const d = COIN[v]; const r = (o.r || d.r), lab = v >= 100 ? '$' + v / 100 : v + '¢';
-  if (o.empty) return C(cx, cy, r, '#fff', { dash: true, sw: 2.2 }) + (o.q ? T(cx, cy + 6, '?', 18, { c: '#8A94AD' }) : '');
+  if (o.empty) return C(cx, cy, r, '#fff', { dash: true, sw: 2.2 }) + (o.q ? T(cx, cy + 6, '?', 18, { c: '#44506F' }) : '');
   return C(cx, cy, r, d.f, { sw: 2.6 }) + C(cx, cy, r - 3.6, 'none', { sw: 1.1 }) + T(cx, cy + (v >= 100 ? 6 : 5.5), lab, v >= 50 || v === 20 ? 16 : 14.5, { w: 800 });
 };
 const coinRow = (vals, o = {}) => { // horizontal row of coins; returns svg
@@ -148,7 +148,7 @@ const pictureRowF = (o, y0) => {
   const s = o.size || 42, pitch = o.pitch || s + 12, x0 = o.x0 === undefined ? 12 : o.x0; let out = '';
   (o.items || []).forEach((it, i) => {
     const cx = x0 + pitch * i + pitch / 2, cy = y0 + s / 2 + 4;
-    if (it === null || it === '?') out += R(cx - s / 2, cy - s / 2, s, s, '#fff', { dash: true, sw: 2.2, rx: 5 }) + (it === '?' ? T(cx, cy + 7, '?', 22, { c: '#8A94AD' }) : '');
+    if (it === null || it === '?') out += R(cx - s / 2, cy - s / 2, s, s, '#fff', { dash: true, sw: 2.2, rx: 5 }) + (it === '?' ? T(cx, cy + 7, '?', 22, { c: '#44506F' }) : '');
     else if (typeof it === 'string' && it.startsWith('=')) out += T(cx, cy + 9, it.slice(1), 30, { w: 800 });  // letter tiles: '=A'
     else if (typeof it === 'string' && it.startsWith('#')) { const nm = it.slice(1); out += R(cx - s / 2, cy - s / 2, s, s, Y, { sw: 2.4, rx: 6 }) + T(cx, cy + 9, nm, 28, { w: 800 }); }
     else if (it && typeof it === 'object') out += icon(it.k, cx, cy, s, it);
@@ -171,7 +171,7 @@ const pictographF = (o, y0) => {
     out += R(0, y, lw, rh, '#EDEDED', { sw: 2 }) + T(lw / 2, cy + 6, r.name, 17) + R(lw, y, pitch * (o.maxN || 9) + 14, rh, '#fff', { sw: 2 });
     for (let k = 0; k < Math.floor(r.n); k++) out += icon(r.icon || o.icon, lw + 10 + pitch * k + pitch / 2, cy, s);
     if (r.n % 1) out += icon(r.icon || o.icon, lw + 10 + pitch * Math.floor(r.n) + pitch / 2, cy, s, { half: true });
-    if (r.blank) out += T(lw + 14, cy + 6, r.blank, 15, { a: 'start', i: true, c: '#8A94AD' });
+    if (r.blank) out += T(lw + 14, cy + 6, r.blank, 15, { a: 'start', i: true, c: '#44506F' });
   });
   if (o.keyRight) { const kx = lw + pitch * (o.maxN || 9) + 30, kh = 74, ky = y0 + o.rows.length * rh / 2 - kh / 2;
     out += R(kx, ky, 128, kh, '#FFF4D1', { sw: 2, rx: 6 }) + T(kx + 64, ky + 22, 'Key', 17) + icon(o.icon || o.rows[0].icon, kx + 30, ky + 50, 30) + T(kx + 52, ky + 56, '= ' + o.key, 16, { a: 'start' });

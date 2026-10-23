@@ -126,7 +126,7 @@ module.exports = {
 
   workbook: H => {
     const W = [];
-    const TH = () => H.t('★ take-home  ', { bold: true, color: 'B45F06' });
+    const TH = () => H.t('★ take-home  ', { bold: true, color: '1B2A49' });
     W.push(H.p('A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth.', { after: 80 }));
     W.push(H.q(1, 'Place value. Fill in the blanks.', { before: 60, keepNext: true }));
     W.push(H.sub('a', '4 hundreds, 0 tens and 7 ones  =  ________'));

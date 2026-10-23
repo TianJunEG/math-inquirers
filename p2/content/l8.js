@@ -83,8 +83,8 @@ const q5svg = (from = 0, to = 4) => {
 };
 const q5bsvg = () => {
   const c = 30, x0 = 195, y0 = 6; let s = '';
-  for (let i = 0; i <= 7; i++) s += line(x0 + i * c - 30, y0, x0 + i * c - 30, y0 + 4 * c, 1.5, '#6F7F9E', '3 4');
-  for (let j = 0; j <= 4; j++) s += line(x0 - 30, y0 + j * c, x0 + 6 * c, y0 + j * c, 1.5, '#6F7F9E', '3 4');
+  for (let i = 0; i <= 7; i++) s += line(x0 + i * c - 30, y0, x0 + i * c - 30, y0 + 4 * c, 2.4, '#44506F', '6 4');
+  for (let j = 0; j <= 4; j++) s += line(x0 - 30, y0 + j * c, x0 + 6 * c, y0 + j * c, 2.4, '#44506F', '6 4');
   s += net(['.....', '..#..', '.####', '.....'], x0 - 30, y0, c);
   return svg(600, 132, s, 'A row of 4 squares with 1 square above the second square, on a dotted grid', 420);
 };
@@ -189,13 +189,13 @@ module.exports = {
     out.push(H.q(1, 'The robot is made of pieces. Count each kind of piece and write how many in the boxes. Tick each piece as you count it.', { before: 40, keepNext: true }));
     out.push(H.fig(q2svg()));
     out.push(H.sub('a', 'Which kind is there the most of?  __________' + sp(4) + 'b' + sp(2) + 'Pieces altogether?  _____'));
-    out.push(H.sub('c', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Mei has 3 half circles and 6 quarter circles, all cut from same-size circles. How many whole circles can she make? Show how.')], { after: 20 }));
+    out.push(H.sub('c', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Mei has 3 half circles and 6 quarter circles, all cut from same-size circles. How many whole circles can she make? Show how.')], { after: 20 }));
     out.push(...H.lines(1));
     out.push(H.q(2, 'Count every shape. Work in order. In (a), colour each 2 by 2 square you find a different colour.', { keepNext: true }));
     out.push(H.fig(q3svg()));
     const ws = [6200, 3700];
     out.push(H.tbl(ws, [H.row(['a   How many squares?', 'Number'].map((t, i) => H.cell(t, ws[i], { bold: true, fill: 'EDEDED', h: 15 }))), ...['1 by 1 squares', '2 by 2 squares', '3 by 3 squares', '4 by 4 squares', 'Squares altogether'].map(t => H.row([H.cell(t, ws[0], { h: 15, bold: t.startsWith('Squares') }), H.cell('', ws[1], { h: 15 })]))]));
-    out.push(H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____')]));
+    out.push(H.sub('b', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Triangles on the bottom line: ____' + sp(4) + 'on the line across: ____' + sp(4) + 'altogether: ____')]));
 
     out.push(H.q(3, 'Count the cubes. Build stack A with your cubes first, then count. Every cube is on the table or sits on top of another cube. Stack A is only 1 cube deep.', { pb: true, before: 0, keepNext: true }));
     out.push(H.fig(q4svg()));
@@ -203,7 +203,7 @@ module.exports = {
     out.push(H.sub('b', 'Ravi wants to turn stack C into a big cube 3 cubes long, 3 cubes wide and 3 cubes high. How many more cubes does he need?   ______'));
     out.push(H.q(4, 'Cut out nets A to D from the cut-out page. Fold net A with your tutor on camera first, then fold B, C and D. Circle the letters of the nets that fold up into a cube.', { keepNext: true }));
     out.push(H.fig(q5svg()));
-    out.push(H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.')], { keepNext: true }));
+    out.push(H.sub('b', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Add ONE more square to this shape so that it folds into a cube. Draw it on the grid.')], { keepNext: true }));
     out.push(H.fig(q5bsvg()));
     return out;
   }

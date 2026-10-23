@@ -16,7 +16,7 @@ const stickerBoxes = () => {
   [2, 5, null, null].forEach((n, i) => {
     const x = x0 + i * (bw + gap);
     s += T(x + bw / 2, y0 - 8, 'Box ' + (i + 1), 17) + R(x, y0, bw, bh, n === null ? '#fff' : '#FFF9E8', { dash: n === null, sw: 2.6, rx: 8 });
-    if (n === null) s += T(x + bw / 2, y0 + bh / 2 + 5, 'draw here', 15, { w: 600, c: '#8A94AD', i: true });
+    if (n === null) s += T(x + bw / 2, y0 + bh / 2 + 5, 'draw here', 15, { w: 600, c: '#44506F', i: true });
     else for (let k = 0; k < n; k++) s += icon('star', x + 22 + pos[k][0] * 34 + (n === 2 ? 17 : 0), y0 + 26 + pos[k][1] * 38 - (n === 2 ? -10 : 0), 32);
     if (i < 3) { const xa = x + bw + 6, xb = x + bw + gap - 6; s += L(xa, y0 + bh / 2, xb, y0 + bh / 2, { sw: 2.6 }) + F.arrowHead(xb + 3, y0 + bh / 2, 'r', 8) + T((xa + xb) / 2, y0 + bh / 2 - 8, '+3', 17, { c: TEAL }); }
   });
@@ -66,7 +66,7 @@ const dotTriangles = () => {
 const coinCell = (v, label) => `<div style="text-align:center">${svg(50, 46, coinF(v, 25, 23), v + ' cent coin', 50)}<div style="font-size:12px;font-weight:700">${label}</div></div>`;
 const coinsRow = (vals, o = {}) => W(F.coinRow(vals, o), 2);
 // No.3: purse strip for 85¢
-const purse = () => W(svg(560, 90, coinTrayInner([5, 10, 20, 50], 6, 8) + R(10, 62, 540, 24, '#fff', { dash: true, sw: 2.4, rx: 8 }) + T(280, 79, 'My 85¢ purse: place coins here', 15, { w: 600, c: '#8A94AD', i: true }), 'Tray with a 5, 10, 20 and 50 cent coin and an empty purse for 85 cents'), 2);
+const purse = () => W(svg(560, 90, coinTrayInner([5, 10, 20, 50], 6, 8) + R(10, 62, 540, 24, '#fff', { dash: true, sw: 2.4, rx: 8 }) + T(280, 79, 'My 85¢ purse: place coins here', 15, { w: 600, c: '#44506F', i: true }), 'Tray with a 5, 10, 20 and 50 cent coin and an empty purse for 85 cents'), 2);
 function coinTrayInner(vals, x, y) { let s = '', cx = x; vals.forEach(v => { const r = F.COIN[v].r; s += coinF(v, cx + r + 4, y + 26 + 0); cx += 2 * r + 14; }); return s; }
 const trayRow = (vals, extra = '') => W(svg(560, 52, coinTrayInner(vals, 6, -1) + extra, 'Coins: ' + vals.join(', ') + ' cents'), 2);
 const benTwo = () => {

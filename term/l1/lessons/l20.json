@@ -5,60 +5,65 @@
  "term": 2,
  "lesson": 20,
  "lesson_in_term": 10,
- "title": "Find One First",
- "big_idea": "Find one, then find many",
- "child_idea": "When we know what a group costs, we can find what one costs by sharing equally. Then we can find what any number of them cost.",
- "skill": "Unit method",
+ "title": "Choose Your Tool",
+ "big_idea": "Pick a tool, say why, and check your answer",
+ "child_idea": "Many problems can be solved in more than one way. We pick a tool, say why we picked it, and check the answer another way.",
+ "skill": "Choosing a method and checking it",
  "ages": "6-8",
  "moe": {
-  "strand": "Multiplication and Division; Money",
+  "strand": "Whole Numbers; Addition and Subtraction; Multiplication and Division; Money (Term 2 spiral, problem solving)",
   "topics": [
-   "Multiplication and division word problems: divide within 20, multiply within 40 (Primary 1, Multiplication and Division, p. 31)",
-   "Count money in dollars (Primary 1, Money, p. 31): whole dollars only, no notes, coins or cents until Term 3"
+   "Addition and subtraction within 100, more than and fewer than (Primary 1, Addition and Subtraction, p. 31)",
+   "Multiplication within 40 and division within 20: groups, sharing and the price of one (Primary 1, Multiplication and Division, p. 31)",
+   "Counting in 2s, 5s and 10s; odd and even numbers; positions in a line (Primary 1, Whole Numbers, p. 31)",
+   "Choosing and checking a method: problem-solving heuristics (draw a model, act it out, look for a pattern, make a list or table, work backwards)"
   ],
-  "note": "Strand label for the tutor only. This is an added lesson (gap from the word-problem books analysis: the price or size of one from a group). Start here is Primary 1 content: share a total equally to find one (within 20), then multiply to find many (within 40), in whole dollars. BEYOND PRIMARY 1 ON PURPOSE: Think harder and Go further chain the two steps with different numbers (the price of 7 from the price of 3), use the words a dozen and such, ask how many can be bought, and compare the price of one in two shops. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Money is only whole dollars and $1 tokens (counters): no notes, coins or cents until Term 3. Vocabulary taught here: each, a dozen, such. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55; a game with Mi, not a test); the tutor notes with the private notes sheet and the grown-up note are in the Quest files built by assets/quest_build.py. Contest tag (tutor only): price of one first, then many; how many can be bought; compare the price of one."
+  "note": "Strand label for the tutor only. A choose-the-tool consolidation lesson: it teaches no new idea. It spirals Term 2 in fresh numbers and asks the child to choose a tool (draw it, act it out, spot the pattern, list every way, make a table, work backwards), say why and check. It hosts Mi's Challenge Quest (20 minutes, minutes 35 to 55; a game with Mi, not a test); the tutor notes, the private notes sheet and the grown-up note are built from the quest block by tools/b_quest.py. Start here items are Primary 1 reach in fresh numbers (one or two steps, counting in 5s, the price of one, a missing number). BEYOND PRIMARY 1 ON PURPOSE and named: choosing a tool and giving a reason, and the same problem solved with a second tool (Think harder T1); counting places in a queue with both ends (T3); the numbers two counting lists share (T4); a three-step number puzzle reversed (G2); the price of one in two shops (G1); a picture equation with a sum and a product (G3). Non-routine types: queue counting, 'I think of a number' puzzles worked backwards, odd and even claims tested on examples, the price of one first, shapes as numbers. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Money is whole dollars only. Contest tag (tutor only): choose and justify a method, check by a second method."
  },
  "contest_moves": [
-  "find the price of one first, then the price of many",
-  "how many can be bought with a given amount",
-  "compare the price of one in two shops"
+  "choose a method and say why",
+  "check an answer by a second method",
+  "queue counting with both ends",
+  "work backwards on 'I think of a number'",
+  "odd and even claims tested on examples",
+  "the price of one in two shops"
  ],
  "objectives": [
-  "Find the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\") and the cost of many from the cost of one (\"1 pen costs $3, so 4 pens cost $12\").",
-  "Draw a strip of equal parts for the story and write both steps: find one first, then find many.",
-  "Use the words each, a dozen and such.",
-  "Think harder: find the price of 7 from the price of 3, use a dozen and such, and say how many can be bought.",
-  "Go further: one price from each of two groups, money left over, and which shop sells one for less.",
-  "Play Mi's Challenge Quest, a game with Mi on private paper: 8 short gates that visit the lessons of the term."
+  "Name the six tools in our toolbox (draw it, act it out, spot the pattern, list every way, make a table, work backwards) and say what each is for.",
+  "Choose a tool for a problem, say \"I will ... because ...\", and check the answer another way.",
+  "Solve mixed Term 2 problems (more and fewer, queues, missing numbers, groups, sharing, the price of one) in fresh numbers.",
+  "Think harder: solve the same problem with a second tool and say which was quicker for you.",
+  "Go further: three-step puzzles and the price of one in two shops, with no tool named.",
+  "Play Mi's Challenge Quest, a game with Mi on private paper: 8 short gates and an optional secret cave. Under each gate the child circles the tool they used."
  ],
  "joining_cold": {
   "remember": [
-   "12 counters shared equally onto 3 plates (Term 2 Lesson 7, taught again with plates)",
-   "Each and in all: 3 bags with 4 counters in each bag (Term 2 Lessons 5 and 8, taught again with a picture)",
-   "A strip of 4 equal parts with the whole strip 20 (Term 2 Lesson 8, taught again with a picture)"
+   "The six tools in the toolbox, one small picture each: draw it, act it out, spot the pattern, list every way, make a table, work backwards (taught again on the toolbox page)",
+   "Using two tools on tiny problems: a strip for more and fewer, a table for groups of 3 (taught again with a picture)",
+   "Working backwards on I think of a number, and saying I will ... because ... (taught again in the warm-up)"
   ],
-  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up deals counters onto plates, shows bags with the same number in each bag and shows a strip cut into equal parts. The words each, a dozen and such, and the idea of a price, are taught in Explore and the Mini-lesson.",
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up shows each tool with a picture and uses three of them on tiny problems. The tool names are taught on the toolbox page and used again all lesson.",
   "holiday_topics_revisited": [],
   "safe_to_miss": false,
-  "note": "Try not to miss this lesson: it holds Mi's Challenge Quest. A child who misses it plays at the make-up slot (small group, a parent beside the child on camera) BEFORE watching the recording: the quest is not in the recording. The lesson itself builds on Term 2 Lessons 5 to 8 (groups, tables, sharing, stories), and a child who joins here without them can follow the warm-up and the first workbook page; the line for the grown-up covers only what the child met, and the family may leave out gates for lessons the child did not attend."
+  "note": "Try not to miss this lesson: it holds Mi's Challenge Quest. A child who misses it plays at the make-up slot (small group, a parent beside the child on camera) BEFORE watching the recording: the quest is not in the recording. A child who joins here without the Term 2 lessons can follow the toolbox page and the first workbook page, because the warm-up shows each tool; the line for the grown-up covers only what the child met, and the family may leave out gates for lessons the child did not attend."
  },
  "materials": {
   "child": [
-   "The printed workbook with the $1 tokens kit page (page 6): a grown-up cuts out the 30 tokens beforehand (or use about 30 counters, beans or buttons as $1 tokens; the lesson needs at most 28)",
-   "3 to 6 small things to be the shop items (pencils, rubbers, cups or toys)",
+   "The printed workbook with the tool cards kit page (page 6): a grown-up cuts out the 6 tool cards and the 6 problem cards beforehand",
+   "About 20 small things of one kind (counters, buttons, dry beans or pasta) for acting it out",
    "The Quest Log, printed at 100% and kept folded or closed in an envelope (sent a week before, with the grown-up note), a quest partner (a grown-up or a brother or sister), and a pencil and rubber",
    "A pencil, a rubber and spare paper"
   ],
   "tutor": [
    "The slide deck and the quest files (tutor notes with the private notes sheet, grown-up note)",
-   "A few shop items and some tokens to show on camera if you wish",
+   "A set of paper tool cards and some counters to show on camera if you wish",
    "Your own watch or clock, out of sight of the camera. No timer or clock is shown during the quest"
   ],
   "kit_pages": [
-   "$1 tokens (page 6): 30 round tokens to cut out (the most any question needs is 28). Money in this lesson is whole dollars only, so a token stands for $1"
+   "Tool cards (page 6): 6 tool cards (picture and name) and 6 problem cards to cut out. The problem cards have short labels; your tutor reads each problem aloud. No cutting? Write the 6 tool names on 6 scraps of paper"
   ],
   "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home, and the tokens can be counters, beans or buttons. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. No real money is needed and no notes or coins are shown."
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. No real money is needed."
  },
  "timing": {
   "parts": [
@@ -131,25 +136,25 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Term 2 Lesson 10 is the last lesson of the term, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh, not at the very end as in Term 1; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (find one, find many, find one then many with tokens and a strip); the Mini-lesson has 9 (the two steps, writing them, the words each, a dozen and such). The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 5 minutes are the standing buffer; nothing new is started in it.",
+  "notes": "Term 2 Lesson 10 is the last lesson of the term, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 18 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. This lesson teaches no new idea: Remember has the toolbox page, the Sneak-peek has two puzzles that want different tools, Explore is a tool market (six problem cards, nobody solves), and the Mini-lesson solves one problem with two tools and checks it a third way, then shows what to do when a tool gets stuck. The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 4 minutes are the standing buffer; nothing new is started in it.",
   "skip_order": [
-   "In a slow class the workbook part runs over: take the time from the 5-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
+   "In a slow class the workbook part runs over: take the time from the 4-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
    "the optional slide and the optional exit ticket",
-   "the dozen slide in the Mini-lesson",
+   "the third card pair of the tool market (cards 5 and 6) and the Mini-lesson your-turn slide",
    "never shorten Mi's Challenge Quest"
   ]
  },
  "sneak_peek": {
-  "q1": "4 pencils cost $8. How much does 1 pencil cost?",
-  "q2": "3 apples cost $6. How much do 5 apples cost?",
-  "a1": "$2",
-  "a2": "$10. 3 apples cost $6, so 1 apple costs $2. 5 apples cost 5 groups of $2, which is $10.",
+  "q1": "Ravi is 3rd in a line. Lily is 6th in the same line. How many children are between Ravi and Lily?",
+  "q2": "Ben thinks of a number. He doubles it and gets 14. What is Ben's number?",
+  "a1": "2",
+  "a2": "7. 7 + 7 = 14, so Ben's number is 7.",
   "val1": 2
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, tokens and your Quest Log. Pause or rewind any time.",
-   "action": "Gather your workbook, tokens, pencil, paper and the closed Quest Log. Press play when ready."
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your tool cards and your Quest Log. Pause or rewind any time.",
+   "action": "Gather your workbook, tool cards, pencil, paper and the closed Quest Log. Press play when ready."
   },
   "remember": {
    "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
@@ -160,8 +165,8 @@
    "action": "Pause. Try both puzzles on your own paper. A guess is fine."
   },
   "explore": {
-   "say": "Recording: pause now. Use your tokens to find the cost of one, then of many. Press play when you have tried.",
-   "action": "Pause. Share the tokens to find 1, then count tokens to find many."
+   "say": "Recording: pause now. For each problem card, point to the tool you would start with. Press play when you have chosen.",
+   "action": "Pause. Point to the tool you would start with for each problem card."
   },
   "mini": {
    "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
@@ -180,8 +185,8 @@
    "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
   },
   "talk": {
-   "say": "Recording: pause. Tell a grown-up if Aisha is right, and test it with tokens.",
-   "action": "Pause. Explain your answer to someone at home, and test it with tokens."
+   "say": "Recording: pause. Tell a grown-up if Mei is right, and try a problem with two tools.",
+   "action": "Pause. Explain your answer to someone at home, and try one problem two ways."
   },
   "look": {
    "say": "Recording: pause and fill in your look-back box. You can pass.",
@@ -197,19 +202,20 @@
    "id": "s-title",
    "part": "opening",
    "kind": "title",
-   "title": "Find One First",
+   "title": "Choose Your Tool",
    "blocks": [
     {
      "t": "card",
      "head": "TODAY WE WILL",
      "items": [
-      "Find the cost of one, then of many.",
-      "Play Mi's Chal\u00adlenge Quest."
+      "Choose a tool for each problem.",
+      "Say why, and check.",
+      "Play Mi's Chal­lenge Quest."
      ]
     }
    ],
-   "note": "Term 2 Lesson 10, 90 minutes, the last lesson of the term. Objective: find the cost of one by sharing a total equally, then the cost of many; use each, a dozen and such. This lesson also holds Mi's Challenge Quest (20 minutes, after the brain break, a game with Mi on private paper). Plain statement for families: dividing within 20 and multiplying within 40 in whole dollars is Primary 1 work; finding the price of 7 from the price of 3, a dozen, such and how-many-can-be-bought go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 80, talk 80 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
-   "subtitle": "Find one, then find many",
+   "note": "Term 2 Lesson 10, 90 minutes, the last lesson of the term. Objective: choose a tool (draw it, act it out, spot the pattern, list every way, make a table, work backwards), say why, and check the answer another way. No new idea is taught: it spirals Term 2 in fresh numbers. This lesson also holds Mi's Challenge Quest (20 minutes, after the brain break, a game with Mi on private paper). Plain statement for families: most questions are Primary 1 work; choosing a tool and giving a reason, the same problem with a second tool, queue counting with both ends and three-step puzzles go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 80, talk 80 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Pick a tool. Say why. Check.",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -219,117 +225,152 @@
    "id": "s-rem1",
    "part": "remember",
    "kind": "light",
-   "title": "Warm-up: share equally",
+   "title": "Warm-up: our toolbox",
    "blocks": [
     {
      "t": "chip",
-     "text": "Deal the counters one at a time. Same number on each plate."
-    },
-    {
-     "t": "visual",
-     "type": "groups",
-     "container": "plate",
-     "n": 3,
-     "each": 0,
-     "icon": "counter_red",
-     "empty": true,
-     "per_row": 3
+     "text": "Six tools. Say each name with me."
     },
     {
      "t": "visual",
      "type": "table",
+     "head": [
+      "Tool",
+      "What it is for"
+     ],
      "rows": [
       [
-       "12",
-       "counters",
-       "3",
-       "plates"
+       {
+        "icon": "t_draw",
+        "n": 1
+       },
+       "Draw it: a picture or a strip"
+      ],
+      [
+       {
+        "icon": "child1",
+        "n": 1
+       },
+       "Act it out: use counters"
+      ],
+      [
+       {
+        "icon": "t_steps",
+        "n": 1
+       },
+       "Spot the pattern: what repeats or grows"
+      ],
+      [
+       {
+        "icon": "t_list",
+        "n": 1
+       },
+       "List every way: write each one"
+      ],
+      [
+       {
+        "icon": "t_table",
+        "n": 1
+       },
+       "Make a table: rows and columns"
+      ],
+      [
+       {
+        "icon": "t_back",
+        "n": 1
+       },
+       "Work backwards: undo the steps"
       ]
      ],
      "col_w": [
       1,
-      2,
-      1,
-      2
+      4
      ]
     }
    ],
-   "note": "Twelve counters are shared equally onto 3 plates. Children deal counters one at a time (or imagine it). Ask: how many on each plate (4); 6 counters shared between 2 plates (3); 15 counters shared among 3 plates (5). Children answer aloud or with fingers. No writing, no marks. A child who is unsure deals real counters or small things onto three plates or three pieces of paper.",
+   "note": "The toolbox page. Say the six names together, touching the tool cards on the kit page. Ask: which tool is for undoing the steps (work backwards); which is for writing each way (list every way); which uses counters (act it out). Children answer aloud or point. No writing, no marks. A child who joins cold needs nothing else: every tool is shown here with a picture. There is no wrong tool in this lesson.",
    "mascot": {
     "size": "s",
-    "say": "Sharing is fun!"
+    "say": "Six tools in my toolbox!"
    }
   },
   {
    "id": "s-rem2",
    "part": "remember",
    "kind": "light",
-   "title": "Each and in all",
+   "title": "Try two tools",
    "blocks": [
     {
-     "t": "visual",
-     "type": "groups",
-     "container": "bag",
-     "n": 3,
-     "each": 4,
-     "icon": "counter_red",
-     "per_row": 3
-    },
-    {
-     "t": "visual",
-     "type": "table",
-     "rows": [
+     "t": "cols",
+     "cols": [
       [
-       "3",
-       "bags",
-       "4",
-       "in each bag"
+       {
+        "t": "card",
+        "head": "DRAW IT",
+        "items": [
+         "Ben has 6 marbles.",
+         "Kumar has 3 more than Ben."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "table",
+        "head": [
+         "Bags",
+         "Sweets"
+        ],
+        "rows": [
+         [
+          "1",
+          "3"
+         ],
+         [
+          "2",
+          "6"
+         ],
+         [
+          "3",
+          "[]"
+         ],
+         [
+          "4",
+          "[]"
+         ]
+        ],
+        "col_w": [
+         1,
+         1
+        ]
+       }
       ]
-     ],
-     "col_w": [
-      1,
-      2,
-      1,
-      3
      ]
-    },
-    {
-     "t": "p",
-     "text": "Each bag has the same number."
     }
    ],
-   "note": "Three bags with 4 counters in each bag. We say each bag has 4, and in all means every bag together. Ask: how many counters in all (12); 5 bags with 2 in each bag (10); 4 groups of 5 (20). This is Term 2 Lessons 5 and 8 taught again. A child who is unsure adds one bag at a time and says the total each time."
+   "note": "Two tools on tiny problems, about a minute each. Left: Ben has 6 marbles and Kumar has 3 more; draw a strip and count on: 9. Right: each bag has 3 sweets; a table adds 3 each row: 9 for 3 bags and 12 for 4 bags. Ask: how many marbles does Kumar have (9); how many sweets in 3 bags (9); in 4 bags (12). Children answer aloud or with fingers. A child who is unsure uses counters."
   },
   {
    "id": "s-rem3",
    "part": "remember",
    "kind": "light",
-   "title": "A strip of equal parts",
+   "title": "Work backwards, and say why",
    "blocks": [
     {
-     "t": "visual",
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "whole strip",
-       "len": 4
-      }
-     ],
-     "units": {
-      "n": 4,
-      "text": "?"
-     },
-     "brace": {
-      "text": "20",
-      "over": "all"
-     }
+     "t": "card",
+     "head": "I THINK OF A NUMBER",
+     "items": [
+      "I add 3.",
+      "I get 10.",
+      "What is my number?"
+     ]
     },
     {
-     "t": "p",
-     "text": "4 equal parts. The whole strip is 20."
+     "t": "chip",
+     "text": "I will ... because ..."
     }
    ],
-   "note": "A strip is cut into 4 equal parts, and the whole strip is 20. Ask: how big is each part (5); 3 parts of 5 (15); 6 shared into 2 equal parts (3). This is Term 2 Lesson 8 taught again: a strip shows equal groups. A child who is unsure counts 5, 10, 15, 20 on fingers and counts the fingers."
+   "note": "Work backwards: undo the adding, so take 3 away from 10: 7. Check by going forwards: 7 + 3 = 10. Ask: what is my number (7); I think of a number, take away 2 and get 8: what is it (10). Then model the sentence frame once: I will work backwards because the story gives the end number. Children answer aloud. No writing."
   },
   {
    "id": "s-sneak",
@@ -339,7 +380,7 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is judged."
+     "text": "Ideas we have not met in this way. A guess is a great start. Nobody is judged."
     },
     {
      "t": "cols",
@@ -349,9 +390,9 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "4 pencils cost $8.",
-         "How much does 1 pencil cost?",
-         "You may use counters."
+         "Ravi is 3rd in a line.",
+         "Lily is 6th in the line.",
+         "How many children are between them?"
         ]
        }
       ],
@@ -360,315 +401,459 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "3 apples cost $6.",
-         "How much do 5 apples cost?"
+         "Ben thinks of a number.",
+         "He doubles it and gets 14.",
+         "What is his number?"
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Puzzle 1 (4 pencils for $8; 1 pencil is $2) is an access question: any child can share 8 counters onto 4 pencils. Puzzle 2 is a thinking question on the lesson idea: find one first. 1 apple costs $2 and 5 apples cost $10. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: $2; $10. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 (3rd and 6th; 2 children between) is an access question: a child can list 4th, 5th. Puzzle 2 is a thinking question: work backwards (half of 14 is 7). No tool is named in either: the two puzzles want different tools, and the Talk time slide comes back to them. Say: two sneak-peek puzzles; a guess is a great start; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 2 children; 7. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: find one",
+   "title": "Tool market: cards 1 and 2",
    "blocks": [
     {
-     "t": "visual",
-     "type": "table",
-     "rows": [
+     "t": "chip",
+     "text": "Do not solve. Point to the tool you would start with."
+    },
+    {
+     "t": "cols",
+     "cols": [
       [
        {
-        "icon": "pen",
-        "n": 4
-       },
-       "20"
+        "t": "card",
+        "head": "CARD 1",
+        "items": [
+         "Ali has 15 stickers. Siti has 6 fewer. How many stickers does Siti have?"
+        ]
+       }
       ],
       [
        {
-        "icon": "pen",
-        "n": 1
-       },
-       "[]"
+        "t": "card",
+        "head": "CARD 2",
+        "items": [
+         "Mei puts 20 counters into bags. Each bag has 4. How many bags?"
+        ]
+       }
       ]
-     ],
-     "head": [
-      "Items",
-      "Cost in $"
-     ],
-     "col_w": [
-      2,
-      1
      ]
     },
     {
-     "t": "list",
-     "ordered": true,
-     "items": [
-      "4 pens cost $20. Count out 20 tokens.",
-      "Share the tokens equally onto 4 pens.",
-      "How much does 1 pen cost?"
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "Draw it",
+      "Act it out",
+      "Spot the pattern",
+      "List every way",
+      "Make a table",
+      "Work backwards"
+     ],
+     "rows": [
+      [
+       {
+        "icon": "t_draw",
+        "n": 1
+       },
+       {
+        "icon": "child1",
+        "n": 1
+       },
+       {
+        "icon": "t_steps",
+        "n": 1
+       },
+       {
+        "icon": "t_list",
+        "n": 1
+       },
+       {
+        "icon": "t_table",
+        "n": 1
+       },
+       {
+        "icon": "t_back",
+        "n": 1
+       }
+      ]
+     ],
+     "col_w": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
      ]
     }
    ],
-   "note": "Round 1, about 4 minutes. Children use their $1 tokens (the kit page or counters) and 4 small things as the pens. 4 pens cost $20: they count out 20 tokens and deal them one at a time onto the 4 pens until every pen has the same. Ask: how much does 1 pen cost (5). Say: 1 pen costs $5, because $20 shared equally among 4 pens is $5 each. Money is whole dollars only, and a token stands for $1. If a family has no shop items, 4 pieces of paper are fine. Answer: $5."
+   "note": "Tool market, about 3 minutes. Nobody solves. Read card 1 and card 2. Ask: which tool would you start with? Children point to a tool card on their own table, then volunteers say: I will ... because ... . Card 1 fits draw it (a strip). Card 2 has two good tools: act it out (deal counters into bags) or draw it. Say: there is no wrong tool; a good tool gets an answer you can check. Never call a child by name to answer."
   },
   {
    "id": "s-explore2",
    "part": "explore",
    "kind": "light",
-   "title": "Find many",
+   "title": "Tool market: cards 3 and 4",
    "blocks": [
     {
-     "t": "visual",
-     "type": "table",
-     "rows": [
+     "t": "chip",
+     "text": "Do not solve. Point to the tool you would start with."
+    },
+    {
+     "t": "cols",
+     "cols": [
       [
        {
-        "icon": "pen",
-        "n": 1
-       },
-       "3"
+        "t": "card",
+        "head": "CARD 3",
+        "items": [
+         "Each box holds 5 pencils. How many pencils are in 7 boxes?"
+        ]
+       }
       ],
       [
        {
-        "icon": "pen",
-        "n": 4
-       },
-       "[]"
+        "t": "card",
+        "head": "CARD 4",
+        "items": [
+         "Ben thinks of a number. He adds 6 and gets 15. What is his number?"
+        ]
+       }
       ]
-     ],
-     "head": [
-      "Items",
-      "Cost in $"
-     ],
-     "col_w": [
-      2,
-      1
      ]
     },
     {
-     "t": "list",
-     "ordered": true,
-     "items": [
-      "1 pen costs $3. Put 3 tokens by each pen.",
-      "Do this for 4 pens.",
-      "Count all the tokens."
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "Draw it",
+      "Act it out",
+      "Spot the pattern",
+      "List every way",
+      "Make a table",
+      "Work backwards"
+     ],
+     "rows": [
+      [
+       {
+        "icon": "t_draw",
+        "n": 1
+       },
+       {
+        "icon": "child1",
+        "n": 1
+       },
+       {
+        "icon": "t_steps",
+        "n": 1
+       },
+       {
+        "icon": "t_list",
+        "n": 1
+       },
+       {
+        "icon": "t_table",
+        "n": 1
+       },
+       {
+        "icon": "t_back",
+        "n": 1
+       }
+      ]
+     ],
+     "col_w": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
      ]
     }
    ],
-   "note": "Round 2, about 3.5 minutes. Now we know the cost of one: 1 pen costs $3. For 4 pens children put 3 tokens by each pen and count all the tokens (12). Ask: how much do 4 pens cost (12). Say: 4 groups of $3 is $12. Link to Term 2 Lesson 5: groups of. Answer: $12. A child who loses count puts the tokens in a row of 3 and counts in 3s."
+   "note": "About 3 minutes. Nobody solves. Card 3 has two good tools: make a table (boxes and pencils) or spot the pattern (count in 5s). Card 4 fits work backwards (undo the adding). Ask: which tool would you start with, and why? Volunteers first; a pass is always fine."
   },
   {
    "id": "s-explore3",
    "part": "explore",
    "kind": "light",
-   "title": "Find one, then many",
+   "title": "Tool market: cards 5 and 6",
    "blocks": [
     {
-     "t": "visual",
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "4 pens",
-       "len": 4
-      }
-     ],
-     "units": {
-      "n": 4,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$20",
-      "over": "all"
-     }
+     "t": "chip",
+     "text": "Do not solve. Point to the tool you would start with."
     },
     {
-     "t": "list",
-     "ordered": false,
-     "items": [
-      "4 pens cost $20.",
-      "How much do 3 pens cost?"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "CARD 5",
+        "items": [
+         "Mei has 2 hats and 3 scarves. How many different hat and scarf pairs can she make?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "CARD 6",
+        "items": [
+         "Is the sum of two odd numbers always even? Try some."
+        ]
+       }
+      ]
      ]
     },
-    {
-     "t": "list",
-     "ordered": false,
-     "items": [
-      "Find 1 pen first: share $20 into 4 equal parts.",
-      "Then take 3 parts."
-     ],
-     "reveal": true
-    }
-   ],
-   "note": "Round 3, about 3.5 minutes. 4 pens cost $20. How much do 3 pens cost? Children share 20 tokens onto 4 pens (5 each) and then take 3 pens (15). The strip shows 4 equal parts for the 4 pens, and 3 parts are the 3 pens. Ask: how much does 1 pen cost (5); how much do 3 pens cost (15). Say: find one first, then find many. Answers: $5 and $15. The steps (find 1 pen first, then take 3 parts) appear on the next slide, after the children have tried."
-  },
-  {
-   "id": "s-m1",
-   "part": "mini",
-   "kind": "light",
-   "title": "Find one first",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "5 cups",
-       "len": 5
-      }
-     ],
-     "units": {
-      "n": 5,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$15",
-      "over": "all"
-     }
-    },
-    {
-     "t": "card",
-     "head": "STEPS",
-     "items": [
-      "Step 1: find 1. Share the cost equally.",
-      "Step 2: find many. Count that many ones."
-     ],
-     "reveal": true
-    }
-   ],
-   "note": "5 cups cost $15. How much do 2 cups cost? Step 1 finds 1 cup: $15 shared equally among 5 cups. Step 2 finds 2 cups: 2 groups of that. Ask: how much does 1 cup cost (3); how much do 2 cups cost (6). The steps card appears on the next slide, after the children have answered. Children say each number first. Always say find one first."
-  },
-  {
-   "id": "s-m2",
-   "part": "mini",
-   "kind": "light",
-   "title": "Write the two steps",
-   "blocks": [
     {
      "t": "visual",
      "type": "table",
+     "head": [
+      "Draw it",
+      "Act it out",
+      "Spot the pattern",
+      "List every way",
+      "Make a table",
+      "Work backwards"
+     ],
      "rows": [
       [
-       "Step 1",
-       "1 cup: $15 shared equally among 5 cups",
-       "[]"
-      ],
-      [
-       "Step 2",
-       "2 cups: 2 groups of the cost of 1 cup",
-       "[]"
+       {
+        "icon": "t_draw",
+        "n": 1
+       },
+       {
+        "icon": "child1",
+        "n": 1
+       },
+       {
+        "icon": "t_steps",
+        "n": 1
+       },
+       {
+        "icon": "t_list",
+        "n": 1
+       },
+       {
+        "icon": "t_table",
+        "n": 1
+       },
+       {
+        "icon": "t_back",
+        "n": 1
+       }
       ]
-     ],
-     "head": [
-      "Step",
-      "What we do",
-      "Cost in $"
      ],
      "col_w": [
       1,
-      4,
+      1,
+      1,
+      1,
+      1,
       1
      ]
-    },
-    {
-     "t": "chip",
-     "text": "Check: 5 cups at $3 each make $15."
     }
    ],
-   "note": "Write the two steps: Step 1 is 15 shared equally among 5, which is 3. Step 2 is 2 groups of 3, which is 6. Check by putting the cost of one back: 5 groups of $3 is $15. Say each step as a short sentence. Either reading order of a groups line is accepted in a child answer. Answers: $3 and $6."
+   "note": "About 2 minutes. Nobody solves. Card 5 fits list every way (write each pair); drawing also works. Card 6 fits spot the pattern: try some odd pairs and see what the sums do. Many answers are right. Ask for a reason each time: I will ... because ... ."
   },
   {
-   "id": "s-m3",
-   "part": "mini",
+   "id": "s-explore4",
+   "part": "explore",
    "kind": "light",
-   "title": "Three words",
+   "title": "Two good tools",
    "blocks": [
     {
      "t": "table",
      "header": true,
      "rows": [
       [
-       "Word",
-       "What it means",
-       "Example"
+       "Card",
+       "Good tools"
       ],
       [
-       "each",
-       "for one",
-       "$2 each: 1 pen costs $2"
+       "2: bags of 4",
+       "Act it out or draw it"
       ],
       [
-       "a dozen",
-       "12",
-       "a dozen eggs: 12 eggs"
-      ],
-      [
-       "such",
-       "of the same kind",
-       "3 such cups: 3 cups the same"
+       "3: boxes of 5",
+       "Make a table or spot the pattern"
       ]
-     ]
-    }
-   ],
-   "note": "Three words for word problems. Each means for one. A dozen is 12. Such means of the same kind, so 6 such cups are 6 cups the same, with the same price. Ask: what is a dozen (12); a dozen eggs is how many eggs (12); if 3 such cups cost $6, does each cup cost the same (yes). A dozen and such are used in Think harder."
-  },
-  {
-   "id": "s-m3b",
-   "part": "mini",
-   "kind": "light",
-   "title": "A dozen",
-   "blocks": [
-    {
-     "t": "visual",
-     "type": "objects",
-     "icon": "cookie",
-     "n": 12,
-     "per_row": 6
+     ],
+     "reveal": true
     },
     {
-     "t": "p",
-     "text": "A dozen cookies is 12 cookies."
+     "t": "chip",
+     "text": "There is no wrong tool. Check your answer."
     }
    ],
-   "note": "Count the cookies together: 12. A dozen is 12, whatever it is 12 of. A dozen eggs, a dozen pens. Ask: how many pens are in a dozen (12). This slide is optional to shorten: cut it first if the Mini-lesson runs over."
+   "note": "About 2 minutes. Before showing the table, ask: which cards had more than one good tool? Children say. Then reveal: card 2 (act it out or draw it) and card 3 (make a table or spot the pattern). Say: when two tools work, pick the one you like, then check with the other if you have time. Answers are in the guide. Do not solve the cards."
   },
   {
-   "id": "s-m4",
+   "id": "s-m1",
    "part": "mini",
    "kind": "light",
-   "title": "Your turn",
+   "title": "One problem, tool 1: draw it",
    "blocks": [
+    {
+     "t": "card",
+     "head": "PROBLEM",
+     "items": [
+      "Ali saves $3 each week.",
+      "How many weeks to save $18?"
+     ]
+    },
     {
      "t": "visual",
      "type": "bar_model",
      "bars": [
       {
-       "name": "6 pencils",
+       "name": "$18",
        "len": 6
       }
      ],
      "units": {
       "n": 6,
-      "text": "?"
+      "text": "$3"
      },
      "brace": {
       "text": "$18",
       "over": "all"
      }
+    }
+   ],
+   "note": "Tool 1: draw it. A strip for $18 cut into parts of $3. Count the parts: 6 weeks. Ask: how many parts (6). Whole dollars only. Children may use counters as $1."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Tool 2: make a table",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Week",
+       "Saved"
+      ],
+      [
+       "1",
+       "$3"
+      ],
+      [
+       "2",
+       "$6"
+      ],
+      [
+       "3",
+       "$9"
+      ],
+      [
+       "4",
+       "$12"
+      ],
+      [
+       "5",
+       "$15"
+      ],
+      [
+       "6",
+       "$18"
+      ]
+     ]
     },
     {
      "t": "chip",
-     "text": "How much does 1 pencil cost? How much do 4 pencils cost?"
+     "text": "Which tool was quicker for you?"
     }
    ],
-   "note": "Each child works on their own paper with tokens if they like. 6 pencils cost $18. Step 1: 1 pencil costs $3. Step 2: 4 pencils cost 4 groups of $3, which is $12. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: $3 and $12."
+   "note": "Tool 2: make a table. Add $3 each row until $18: week 6. Ask: how many weeks (6). Then: which was quicker, the strip or the table? Volunteers first; there is no right answer. Some children prefer the strip, some the table."
   },
   {
-   "id": "s-m4a",
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check it a third way",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "WORK BACKWARDS",
+     "items": [
+      "6 weeks, $3 each week.",
+      "6 groups of $3 is $18.",
+      "It matches."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Put the answer back into the story."
+    }
+   ],
+   "note": "Check a third way: put 6 back into the story. 6 weeks at $3 a week is 6 groups of $3: 3, 6, 9, 12, 15, 18. It matches $18. Say: two tools gave 6, and putting 6 back agrees. That is how we know."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "When a tool gets stuck",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "BEN THINKS OF A NUMBER",
+     "items": [
+      "He doubles it. Then he adds 2.",
+      "He gets 20."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Wait. Try a tool. Try a smaller case. Ask."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Guessing numbers is slow: it is stuck.",
+      "Try work backwards: 20 - 2 = 18.",
+      "Half of 18 is 9. Check: 9 + 9 = 18, 18 + 2 = 20."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "A tool that gets stuck. Children may try a guess first (try 5: 12; try 8: 18; slow). Say the stuck chant: Wait. Try a tool. Try a smaller case. Ask. Then switch to work backwards: 20 - 2 = 18, half of 18 is 9. Check forwards: 9 + 9 = 18, 18 + 2 = 20. Answer 9. The steps appear on the next slide, after the children have tried."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "SITI THINKS OF A NUMBER",
+     "items": [
+      "She adds 3. Then she doubles it.",
+      "She gets 16."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Choose a tool. Say why. Check."
+    }
+   ],
+   "note": "Each child works on their own paper. Siti adds 3, then doubles, and gets 16. Work backwards: half of 16 is 8, then 8 - 3 = 5. Check: 5 + 3 = 8, 8 + 8 = 16. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answer: 5."
+  },
+  {
+   "id": "s-m5a",
    "part": "mini",
    "kind": "light",
    "title": "Check: your turn",
@@ -680,22 +865,27 @@
       [
        "Step",
        "What we do",
-       "Cost"
+       "Number"
       ],
       [
-       "Step 1",
-       "1 pencil: $18 shared among 6 pencils",
-       "$3"
+       "Undo the double",
+       "16 shared into 2 equal halves",
+       "8"
       ],
       [
-       "Step 2",
-       "4 pencils: 4 groups of $3",
-       "$12"
+       "Undo the adding",
+       "8 take away 3",
+       "5"
+      ],
+      [
+       "Check",
+       "5 + 3 = 8, then 8 + 8",
+       "16"
       ]
      ]
     }
    ],
-   "note": "Answers: 1 pencil costs $3 and 4 pencils cost $12. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
+   "note": "Answer: 5. Read each step aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
   },
   {
    "id": "s-break",
@@ -722,7 +912,7 @@
    "id": "s-quest1",
    "part": "exit",
    "kind": "light",
-   "title": "Mi's Chal\u00adlenge Quest",
+   "title": "Mi's Chal­lenge Quest",
    "blocks": [
     {
      "t": "chip",
@@ -736,6 +926,7 @@
       "Pencil ready. Counters are fine.",
       "Your quest partner sits beside you.",
       "I read each gate. Then you write.",
+      "Circle the tool you used. Tick I checked.",
       "You may skip a gate. It is not a race."
      ]
     },
@@ -748,7 +939,7 @@
      ]
     }
    ],
-   "note": "Introduce the quest for about a minute: Mi the dolphin swims to the Pearl Cave through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; no answers are read out; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the quest tutor notes (L20_Quest_Tutor_Notes.pdf). The number is in the grown-up note, never on a slide.",
+   "note": "Introduce the quest for about a minute: Mi the dolphin swims to the Pearl Cave through 8 gates and an optional secret cave (about 20 minutes); under each gate the child circles the tool they used and ticks I checked, and there is no wrong tool, on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; no answers are read out; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the quest tutor notes (L20_Quest_Tutor_Notes.pdf). The number is in the grown-up note, never on a slide.",
    "no_record": true,
    "mascot": {
     "size": "s",
@@ -779,7 +970,7 @@
      ]
     }
    ],
-   "note": "Say thank you. The grown-up takes one clear photo of each of the 3 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use a few minutes of the workbook time to finish. Restart the recording for the workbook. The number is in the grown-up note, never on a slide.",
+   "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use a few minutes of the workbook time to finish. Restart the recording for the workbook. The number is in the grown-up note, never on a slide.",
    "no_record": true
   },
   {
@@ -802,7 +993,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own with tokens; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: 4 pens cost $16. Question 2: 1 pen costs $2 and we want 7 pens. Question 3: a strip of 6 buns for $12."
+   "note": "Read questions 1 to 3 aloud. Children choose a tool, write its name and tick I checked. The tutor walks the cameras and asks which tool and why. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: Ali 18 stickers, Siti 7 fewer. Question 2: Ben 6th and Lily 9th in a queue. Question 3: Mei adds 4 and gets 13; Ravi takes away 5 and gets 9."
   },
   {
    "id": "s-ws1ans",
@@ -819,7 +1010,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 $4; Q2 $14; Q3 $2."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 11 and 29; Q2 2 and 8; Q3 9 and 14."
   },
   {
    "id": "s-ws2",
@@ -841,7 +1032,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: 3 books cost $15; find 1 book, then 2 books. Question 5: 5 pens cost $15 and Lily says 1 pen costs $4; is she correct? Question 6: each book costs $4 and Kumar buys 3 books."
+   "note": "Read questions 4 to 6 aloud. Question 4: a table of bags of 4 sweets. Question 5: Mei says 7 + 9 is odd; circle Yes or No. Question 6: 4 cups cost $20."
   },
   {
    "id": "s-ws2ans",
@@ -858,7 +1049,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 $5 and $10; Q5 No, 1 pen costs $3; Q6 $12."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Answers: Q4 20 and 5; Q5 No and 16; Q6 $5 and $15."
   },
   {
    "id": "s-choice",
@@ -876,15 +1067,15 @@
       ],
       [
        "Think harder (page 3)",
-       "7 from 3, a dozen, such"
+       "The same problem with a second tool"
       ],
       [
        "Go further (page 4)",
-       "Two kinds, and which shop?"
+       "No tool named"
       ],
       [
        "Investigation (page 5)",
-       "Which pack costs less?"
+       "Write a problem for a tool"
       ],
       [
        "Check",
@@ -897,7 +1088,7 @@
      "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
     }
    ],
-   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+   "note": "Invite the whole group at once: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. About 5 minutes."
   },
   {
    "id": "s-talk",
@@ -907,40 +1098,22 @@
    "blocks": [
     {
      "t": "card",
-     "head": "AISHA SAYS",
+     "head": "MEI SAYS",
      "items": [
-      "3 books cost $12.",
-      "So 6 books cost $24."
+      "Draw it is the best tool",
+      "for every problem."
      ]
     },
     {
-     "t": "visual",
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "3 books",
-       "len": 3
-      }
-     ],
-     "units": {
-      "n": 3,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$12",
-      "over": "all"
-     }
-    },
-    {
-     "t": "p",
-     "text": "Is Aisha right? How could we check?"
+     "t": "chip",
+     "text": "Is Mei right? How could we check?"
     },
     {
      "t": "chip",
      "text": "I think ... because ..."
     }
    ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test Aisha with tokens: 12 tokens on 3 books is 4 each, and 6 books at 4 each is 24; or 6 books are 2 lots of 3 books, so 2 lots of $12. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Repeat each child answer in your own words for the recording."
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children try one problem two ways: 4 bags of 5 sweets by drawing and by counting in 5s. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Drawing is good for a whole and parts; a table is quicker for counting in 5s; work backwards is quicker for I think of a number. Repeat each child answer in your own words for the recording."
   },
   {
    "id": "s-sneakans",
@@ -949,67 +1122,32 @@
    "title": "Back to the sneak-peek",
    "blocks": [
     {
-     "t": "visual",
-     "type": "table",
+     "t": "table",
+     "header": true,
      "rows": [
       [
-       {
-        "icon": "pencil",
-        "n": 4
-       },
-       "8"
+       "Puzzle",
+       "A good tool",
+       "Answer"
       ],
       [
-       {
-        "icon": "pencil",
-        "n": 1
-       },
-       "2"
+       "Ravi 3rd, Lily 6th",
+       "List every way, or draw it",
+       "2 children"
+      ],
+      [
+       "Ben doubles to 14",
+       "Work backwards",
+       "7"
       ]
-     ],
-     "head": [
-      "Items",
-      "Cost in $"
-     ],
-     "col_w": [
-      2,
-      1
      ]
     },
     {
-     "t": "visual",
-     "type": "table",
-     "rows": [
-      [
-       {
-        "icon": "apple",
-        "n": 3
-       },
-       "6"
-      ],
-      [
-       {
-        "icon": "apple",
-        "n": 5
-       },
-       "10"
-      ]
-     ],
-     "head": [
-      "Items",
-      "Cost in $"
-     ],
-     "col_w": [
-      2,
-      1
-     ]
-    },
-    {
-     "t": "answer",
-     "text": "1 pencil costs $2. 5 apples cost $10."
+     "t": "chip",
+     "text": "Many tools can work. Did you check?"
     }
    ],
-   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. 4 pencils cost $8, so 1 pencil costs $2. 3 apples cost $6, so 1 apple costs $2, and 5 apples cost 5 groups of $2, which is $10. It was the same idea: find one first."
+   "note": "Reveal both puzzles. Puzzle 1: list the places 3rd, 4th, 5th, 6th; the 4th and 5th are between: 2 children. Puzzle 2: half of 14 is 7; check 7 + 7 = 14. Do not read out anyone's earlier answer. Say: it was the same idea in both: pick a tool and check."
   },
   {
    "id": "s-look",
@@ -1042,7 +1180,7 @@
      "head": "NEXT TERM",
      "items": [
       "Term 3: What Time Is It? (the first lesson)",
-      "Have ready: your Term 3 book. Tear out the clock page and a grown-up cuts out the 6 clock hands (the 2 clock faces can stay on the page). Keep your $1 tokens: we need them in Lesson 24. A real clock helps. Also a pencil and paper. Your tutor will tell you the start date."
+      "Have ready: your Term 3 book. Tear out the clock page and a grown-up cuts out the 6 clock hands (the 2 clock faces can stay on the page). Keep your $1 tokens from Term 2 Lesson 9: we need them in Lesson 24. A real clock helps. Also a pencil and paper. Your tutor will tell you the start date."
      ]
     }
    ],
@@ -1056,36 +1194,22 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "title": "Go further: do we always find one first?",
+   "title": "Go further: which tool is quickest?",
    "blocks": [
     {
-     "t": "visual",
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "2 pens",
-       "len": 2
-      }
-     ],
-     "units": {
-      "n": 2,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$6",
-      "over": "all"
-     }
+     "t": "card",
+     "head": "HOW MANY FIVES?",
+     "items": [
+      "How many 5s make 35?",
+      "Which tool is quickest?"
+     ]
     },
     {
-     "t": "p",
-     "text": "2 pens cost $6. How much do 4 pens cost?"
-    },
-    {
-     "t": "p",
-     "text": "Do we need to find 1 pen first?"
+     "t": "chip",
+     "text": "Count in 5s, make a table, or draw it."
     }
    ],
-   "note": "Optional, only if you are on time. 2 pens cost $6. 4 pens are 2 lots of 2 pens, so 4 pens cost 2 lots of $6, which is $12. We do not need to find 1 pen first when the new number is a whole number of lots. Finding one first always works; doubling is a quick way here. Take two answers and move on.",
+   "note": "Optional, only if you are on time. How many 5s make 35? Counting in 5s (5, 10, 15, 20, 25, 30, 35) gives 7. A table or a strip gives 7 too. Ask which was quickest for them and take two answers. Move on.",
    "optional": true
   },
   {
@@ -1103,16 +1227,16 @@
        "What we do"
       ],
       [
-       "Does 1 cost more?",
-       "Mei says 1 pen costs $6 at 4 pens for $12. Is she right?"
+       "Is there another tool?",
+       "Solve 4 bags of 5 a second way"
       ],
       [
-       "Make a shop puzzle",
-       "Write a price puzzle for your grown-up"
+       "Make a tool problem",
+       "Write a problem for your grown-up"
       ],
       [
        "Teach it back",
-       "Show a toy how to find 1 first"
+       "Show a toy how to work backwards"
       ]
      ]
     },
@@ -1162,7 +1286,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: $3; option 2, $15; $2 and $8. The exit ticket is never part of Mi's Challenge Quest and never shown to the group.",
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: $2; option 1, 9; 2 and 4. The exit ticket is never part of Mi's Challenge Quest and never shown to the group.",
    "optional": true
   }
  ],
@@ -1183,7 +1307,7 @@
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Pencil ready, and your tokens and your closed Quest Log on the table. Cameras can be on or off, as you like."
+      "text": "Hello, inquirers! Pencil ready, your tool cards and your closed Quest Log on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
@@ -1204,7 +1328,7 @@
      },
      {
       "k": "SAY",
-      "text": "Today we find one first, and then we find many. After our break we play Mi's Challenge Quest, a game with Mi, on our own paper. It is not a race, and nobody sees your answers."
+      "text": "Today we choose our tool. For each problem we pick a tool, say why, and check. After our break we play Mi's Challenge Quest, a game with Mi, on our own paper. It is not a race, and nobody sees your answers."
      },
      {
       "k": "NOTE",
@@ -1212,7 +1336,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Plain statement for families when it comes up: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the two steps with different numbers, a dozen, such and how many can be bought go beyond Primary 1 on purpose."
+      "text": "Plain statement for families when it comes up: most questions are Primary 1 work in fresh numbers, but choosing a tool and giving a reason, the same problem with a second tool, queue counting with both ends and three-step puzzles go beyond Primary 1 on purpose."
      },
      {
       "k": "NOTE",
@@ -1233,21 +1357,21 @@
      },
      {
       "k": "SAY",
-      "text": "Twelve counters, three plates. Deal the counters one at a time, so every plate has the same."
+      "text": "Our toolbox has six tools. Draw it. Act it out. Spot the pattern. List every way. Make a table. Work backwards. Say them with me."
      },
      {
       "k": "ASK",
-      "text": "How many counters are on each plate?",
+      "text": "Which tool is for undoing the steps?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Six counters shared between two plates. How many on each plate?",
+      "text": "Which tool uses counters?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Fifteen counters shared among three plates. How many on each plate?",
+      "text": "Which tool is for writing down each way?",
       "resp": 12
      },
      {
@@ -1256,22 +1380,21 @@
      },
      {
       "k": "SAY",
-      "text": "Three bags with four counters in each bag. Each bag has four. In all means all the bags together."
+      "text": "Two tools, quickly. Ben has six marbles. Kumar has three more. Draw a strip, and count on."
      },
      {
       "k": "ASK",
-      "text": "How many counters are there in all?",
+      "text": "How many marbles does Kumar have?",
       "resp": 12
      },
      {
-      "k": "ASK",
-      "text": "Five bags with two in each bag. How many in all?",
-      "resp": 12
+      "k": "SAY",
+      "text": "Each bag has three sweets. The table adds three each row."
      },
      {
       "k": "ASK",
-      "text": "Four groups of five?",
-      "resp": 12
+      "text": "How many sweets are in three bags? In four bags?",
+      "resp": 15
      },
      {
       "k": "SLIDE",
@@ -1279,30 +1402,29 @@
      },
      {
       "k": "SAY",
-      "text": "A strip cut into four equal parts. The whole strip is twenty."
+      "text": "I think of a number. I add three. I get ten. To work backwards we undo the adding."
      },
      {
       "k": "ASK",
-      "text": "How big is each part?",
+      "text": "What is my number?",
       "resp": 12
      },
      {
       "k": "ASK",
-      "text": "Three parts of five?",
+      "text": "I think of a number, take away two and get eight. What is my number?",
       "resp": 12
      },
      {
-      "k": "ASK",
-      "text": "Six shared into two equal parts?",
-      "resp": 12
+      "k": "SAY",
+      "text": "We say: I will work backwards, because the story gives the end number."
      },
      {
       "k": "STUCK",
-      "text": "If a child is unsure about sharing, deal real counters one at a time onto plates or pieces of paper. For the bags, add one bag at a time and say the total each time. For the strip, count on in fives on fingers and count the parts."
+      "text": "If a child is unsure, use real counters: put 10 in a row, take 3 away and count the rest. For the table, add 3 on fingers each row. Every tool is on the slide with a picture; nothing from an earlier lesson is needed."
      },
      {
       "k": "NOTE",
-      "text": "Answers: 4, 3, 5; 12, 10, 20; 5, 15, 3. Children answer with a whisper, fingers or hands. Nobody writes. Do not say price or cost yet. Joining cold: all you need is counting to 20 and adding small numbers."
+      "text": "Answers: 7, 10; 9; 9, 12; 7, 10. Children answer with a whisper, fingers or hands. Nobody writes. There is no wrong tool in this lesson. Joining cold: all you need is counting to 20 and adding small numbers."
      }
     ]
    },
@@ -1319,20 +1441,20 @@
      },
      {
       "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is judged."
+      "text": "Two sneak-peek puzzles. A guess is a great start, and I do not know is welcome. Nobody is judged."
      },
      {
       "k": "READ",
-      "text": "Puzzle one. 4 pencils cost 8 dollars. How much does 1 pencil cost? You may use counters."
+      "text": "Puzzle one. Ravi is 3rd in a line. Lily is 6th in the line. How many children are between them?"
      },
      {
       "k": "WORK",
-      "text": "Children share counters or draw, and write the number on their own paper.",
+      "text": "Children draw or write the number on their own paper.",
       "s": 40
      },
      {
       "k": "READ",
-      "text": "Puzzle two. 3 apples cost 6 dollars. How much do 5 apples cost?"
+      "text": "Puzzle two. Ben thinks of a number. He doubles it and gets 14. What is his number?"
      },
      {
       "k": "WORK",
@@ -1345,7 +1467,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: $2. Puzzle 2 answer: $10 (1 apple costs $2, so 5 apples cost $10). Look for good ideas to praise later (a child who found 1 apple first). Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: 2 children. Puzzle 2 answer: 7. Look for good ideas to praise later (a child who listed the places, a child who halved 14). Do not write scores or keep a list."
      }
     ]
    },
@@ -1362,78 +1484,93 @@
      },
      {
       "k": "SAY",
-      "text": "Your hands are the teachers. Today a token is one dollar. Four pens cost twenty dollars. Count out twenty tokens, and put out four small things for the pens."
+      "text": "Welcome to the tool market. We do not solve today. For each problem card, point to the tool you would start with. Then say: I will, blank, because, blank."
+     },
+     {
+      "k": "READ",
+      "text": "Card one. Ali has 15 stickers. Siti has 6 fewer. How many stickers does Siti have? Card two. Mei puts 20 counters into bags. Each bag has 4. How many bags?"
      },
      {
       "k": "WORK",
-      "text": "Children count out 20 tokens and deal them one at a time onto 4 pens until every pen has the same.",
-      "s": 90
+      "text": "Children point to a tool card on their own table for each card.",
+      "s": 40
      },
      {
       "k": "ASK",
-      "text": "How much does 1 pen cost?",
-      "resp": 15
+      "text": "Which tool would you start with for card one, and why?",
+      "resp": 25
      },
      {
-      "k": "SAY",
-      "text": "One pen costs five dollars. Twenty dollars shared equally among four pens is five dollars each."
+      "k": "ASK",
+      "text": "Which tool for card two, and why?",
+      "resp": 25
      },
      {
       "k": "SLIDE",
       "slide": "s-explore2"
      },
      {
-      "k": "SAY",
-      "text": "Round two. Now we know one pen costs three dollars. How much do four pens cost? Put three tokens by each pen."
+      "k": "READ",
+      "text": "Card three. Each box holds 5 pencils. How many pencils are in 7 boxes? Card four. Ben thinks of a number. He adds 6 and gets 15. What is his number?"
      },
      {
       "k": "WORK",
-      "text": "Children put 3 tokens by each of 4 pens and count all the tokens.",
-      "s": 70
+      "text": "Children point to a tool card for each card.",
+      "s": 40
      },
      {
       "k": "ASK",
-      "text": "How much do 4 pens cost?",
-      "resp": 15
+      "text": "Which tool for card three, and why?",
+      "resp": 25
      },
      {
-      "k": "SAY",
-      "text": "Four groups of three dollars is twelve dollars."
+      "k": "ASK",
+      "text": "Which tool for card four, and why?",
+      "resp": 25
      },
      {
       "k": "SLIDE",
       "slide": "s-explore3"
      },
      {
-      "k": "SAY",
-      "text": "Round three. Four pens cost twenty dollars. How much do three pens cost? First find one pen, then take three pens."
+      "k": "READ",
+      "text": "Card five. Mei has 2 hats and 3 scarves. How many different hat and scarf pairs can she make? Card six. Is the sum of two odd numbers always even? Try some."
      },
      {
       "k": "WORK",
-      "text": "Children share 20 tokens onto 4 pens, then take 3 pens and count their tokens.",
-      "s": 100
+      "text": "Children point to a tool card for each card.",
+      "s": 35
      },
      {
       "k": "ASK",
-      "text": "How much does 1 pen cost?",
-      "resp": 15
+      "text": "Which tool for card five, and why?",
+      "resp": 25
      },
      {
       "k": "ASK",
-      "text": "How much do 3 pens cost?",
-      "resp": 15
+      "text": "Which tool for card six, and why?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "ASK",
+      "text": "Which cards had more than one good tool?",
+      "resp": 25
      },
      {
       "k": "SAY",
-      "text": "Find one first, then find many. That is our idea for today."
+      "text": "Card two can be acted out or drawn. Card three can be a table or a pattern. There is no wrong tool. A good tool gets an answer we can check."
      },
      {
       "k": "STUCK",
-      "text": "A child who adds 20 and 4: ask, what are we sharing? A child who stops after finding 1: ask, how many pens do we want? A child with no tokens uses counters, beans or drawn circles. Money is only whole dollars; do not use coins or notes."
+      "text": "A child who cannot choose: ask what the problem gives us and what we want. A child with no tool cards points at the toolbox page on the slide. Never name a child; volunteers first, a pass is always fine."
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say their answers aloud and show fingers; you cannot see tokens on small tiles. Answers: 1 pen $5; 4 pens at $3 is $12; 1 pen $5 and 3 pens $15. A token stands for one dollar. Do not teach cents, coins or notes."
+      "text": "Nobody solves in the tool market. Possible tools: card 1 draw it; card 2 act it out or draw it; card 3 make a table or spot the pattern; card 4 work backwards; card 5 list every way; card 6 spot the pattern. Any reason is fine; listen for I will, because."
      }
     ]
    },
@@ -1450,16 +1587,11 @@
      },
      {
       "k": "SAY",
-      "text": "Five cups cost fifteen dollars. How much do two cups cost? Step one: find one cup, by sharing the cost equally. Step two: find many, by counting that many ones."
+      "text": "One problem, two tools. Ali saves three dollars each week. How many weeks to save eighteen dollars? Tool one: draw it. A strip of eighteen, cut into parts of three."
      },
      {
       "k": "ASK",
-      "text": "How much does 1 cup cost?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "How much do 2 cups cost?",
+      "text": "How many parts are in the strip?",
       "resp": 15
      },
      {
@@ -1468,7 +1600,17 @@
      },
      {
       "k": "SAY",
-      "text": "We write two steps. Step one: fifteen shared equally among five cups is three dollars. Step two: two groups of three dollars is six dollars. We check: five cups at three dollars each make fifteen dollars."
+      "text": "Tool two: a table. Add three dollars each row until we reach eighteen."
+     },
+     {
+      "k": "ASK",
+      "text": "In which week do we reach eighteen dollars?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Which tool was quicker for you, the strip or the table?",
+      "resp": 20
      },
      {
       "k": "SLIDE",
@@ -1476,49 +1618,54 @@
      },
      {
       "k": "SAY",
-      "text": "Three words. Each means for one. A dozen is twelve. Such means of the same kind: three such cups are three cups the same."
-     },
-     {
-      "k": "ASK",
-      "text": "How many eggs are in a dozen eggs?",
-      "resp": 15
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3b"
-     },
-     {
-      "k": "SAY",
-      "text": "A dozen cookies is twelve cookies. A dozen is twelve, whatever there are twelve of."
+      "text": "Now we check a third way. Put six back into the story. Six weeks at three dollars is six groups of three, and that is eighteen. It matches."
      },
      {
       "k": "SLIDE",
       "slide": "s-m4"
      },
      {
-      "k": "READ",
-      "text": "Your turn. 6 pencils cost 18 dollars. How much does 1 pencil cost? How much do 4 pencils cost?"
+      "k": "SAY",
+      "text": "Ben thinks of a number. He doubles it. Then he adds two. He gets twenty. Guessing numbers is slow. When a tool gets stuck we say: Wait. Try a tool. Try a smaller case. Ask."
      },
      {
       "k": "WORK",
-      "text": "Children work on their own paper, with tokens if they like. Wait 10 seconds before helping.",
-      "s": 140
+      "text": "Children try work backwards on their own paper.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "What is Ben's number?",
+      "resp": 15
      },
      {
       "k": "SLIDE",
-      "slide": "s-m4a"
+      "slide": "s-m5"
      },
      {
       "k": "READ",
-      "text": "One pencil costs 3 dollars. Four pencils cost 12 dollars. Tick your own work with a tick."
+      "text": "Your turn. Siti thinks of a number. She adds 3. Then she doubles it. She gets 16. Choose a tool. Say why. Check."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work on their own paper. Wait 10 seconds before helping.",
+      "s": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a"
+     },
+     {
+      "k": "READ",
+      "text": "Siti's number is 5. Undo the double: 8. Undo the adding: 5. Check: 5 plus 3 is 8, and 8 plus 8 is 16. Tick your own work with a tick."
      },
      {
       "k": "NOTE",
-      "text": "Key words to use every time: find one first, find many, each, in all, cost. Step 1 shares, step 2 counts groups. The ÷ sign is not needed: say shared equally. Do not teach a rule to recite; the tokens and the strip are the method. Beyond Primary 1 on purpose: a dozen, such and the price of many from a different number are in Think harder."
+      "text": "Key phrases to use every time: I will, because; check another way; wait, try a tool, try a smaller case, ask. We do not name a best tool. Beyond Primary 1 on purpose: choosing a tool and giving a reason, and the same problem with a second tool."
      },
      {
       "k": "STUCK",
-      "text": "If a child multiplies 15 and 5, ask: what do we know, the cost of 1 or the cost of 5? If a child stops after step 1, ask: how many do we want? If a child cannot share 18 among 6, deal 18 tokens onto 6 pencils one at a time."
+      "text": "If a child cannot start the number puzzle, give a small number: Siti adds 3 to 5, then doubles it, what does she get? Then undo it. A child who guesses and checks is using a tool too."
      }
     ]
    },
@@ -1561,7 +1708,7 @@
      },
      {
       "k": "SAY",
-      "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming to the Pearl Cave, and eight gates are in the way. At each gate there is a puzzle for you. You work on your own paper with your quest partner beside you."
+      "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming to the Pearl Cave, and eight gates are in the way. At each gate there is a puzzle for you. You choose your own tool. Under each gate, circle the tool you used, and tick I checked when you have checked. You work on your own paper with your quest partner beside you."
      },
      {
       "k": "SAY",
@@ -1574,29 +1721,29 @@
      },
      {
       "k": "READ",
-      "text": "Page 1. Gate 1. Siti is 4th in a line. Ben stands right behind Siti. Part a: Ben is blank in the line. Part b: how many children are in front of Siti? Gate 2. Ravi has 26 marbles. Lily has 9 more marbles than Ravi. Part a: Lily has blank marbles. Part b: they have blank marbles altogether. Gate 3. Look at the ten-frames: 9 and 9. Part a: 9 plus 9 equals blank. Part b: write odd or even. 15 is blank."
+      "text": "Page 1. Gate 1. Kumar is 6th in a line. Ben has 24 marbles. Jenny has 8 fewer marbles than Ben. Part a: how many children are in front of Kumar? Part b: Jenny has blank marbles. Gate 2. Each shape is a number. The star plus the star plus the star equals 18. Ben says the star is 5. Part a: is Ben correct? Circle Yes or No. Part b: the star is blank."
      },
      {
       "k": "WORK",
-      "text": "Children work quietly on page 1 (gates 1 to 3); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
-      "s": 190
+      "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
+      "s": 150
      },
      {
       "k": "SAY",
-      "text": "Gates one, two and three are open! Mi swims on. Turn to page 2."
+      "text": "Gates one and two are open! Mi swims on. Turn to page 2."
      },
      {
       "k": "READ",
-      "text": "Gate 4. Jenny has 3 jars. Each jar has 5 sweets. Part a: fill in the boxes: blank times blank equals blank. Part b: count in 2s: 2, 4, 6, blank, 10. Gate 5. Siti shares 16 stickers equally among 4 friends. Kumar puts 10 pens into boxes, 2 pens in each box. Part a: each of Siti's friends gets blank stickers. Part b: Kumar needs blank boxes. Gate 6. Mei has 5 bags. Each bag has 3 sweets. She gives 4 sweets to Ben. Part a: the bags have blank sweets. Part b: Mei has blank sweets left."
+      "text": "Gate 3. Mei adds 9 and 7. Siti counts in 5s. Part a: write odd or even. 9 plus 7 is blank. Part b: count in 5s: 5, 10, 15, blank, 25. Gate 4. Jenny has 4 plates. Each plate has 6 cookies. Siti shares 18 sweets equally among 3 friends. Part a: fill in the boxes: blank times blank equals blank. Part b: each friend gets blank sweets."
      },
      {
       "k": "WORK",
-      "text": "Children work quietly on page 2 (gates 4 to 6).",
-      "s": 210
+      "text": "Children work quietly on page 2 (gates 3 and 4).",
+      "s": 160
      },
      {
       "k": "SAY",
-      "text": "Gates four, five and six are open!"
+      "text": "Gates three and four are open!"
      },
      {
       "k": "MOVE",
@@ -1605,15 +1752,28 @@
      },
      {
       "k": "SAY",
-      "text": "Turn to page 3. The Pearl Cave is just ahead."
+      "text": "Turn to page 3."
      },
      {
       "k": "READ",
-      "text": "Gate 7. Each shape is a number. The heart plus the heart equals 18. Ben says the heart is 8. Part a: is Ben correct? Circle Yes or No. Part b: the heart is blank. Gate 8. 8 buns cost 16 dollars. Part a: 1 bun costs blank dollars. Part b: 5 buns cost blank dollars. The secret cave has one more puzzle, and it is optional. You may skip it. Ravi is 8th from the front and 8th from the back of a line. Mei says there are 16 children in the line. Is Mei correct? Circle Yes or No. Then write how many children are in the line."
+      "text": "Gate 5. Ali has 4 boxes. Each box has 5 pencils. He gives 7 pencils to Ben. Part a: the boxes have blank pencils. Part b: Ali has blank pencils left. Gate 6. 4 cups cost 16 dollars. Part a: 1 cup costs blank dollars. Part b: 5 cups cost blank dollars."
      },
      {
       "k": "WORK",
-      "text": "Children work quietly on page 3: gates 7 and 8, then the optional secret cave item if they wish.",
+      "text": "Children work quietly on page 3 (gates 5 and 6).",
+      "s": 160
+     },
+     {
+      "k": "SAY",
+      "text": "Gates five and six are open! Turn to page 4. The Pearl Cave is just ahead."
+     },
+     {
+      "k": "READ",
+      "text": "Gate 7. Mei thinks of a number. She doubles it and then adds 5. She gets 21. Ben says her number is 9. Part a: Mei's number is blank. Part b: is Ben correct? Circle Yes or No. Gate 8. Siti has 2 hats and 3 scarves. She wears one hat and one scarf. The shop counts pens in 4s. Part a: she can dress blank different ways. Part b: count in 4s: 4, 8, 12, blank, 20. The secret cave has one more puzzle, and it is optional. You may skip it. Ravi is 7th from the front and 4th from the back of a line. Mei says there are 11 children in the line. Is Mei correct? Circle Yes or No. Then write how many children are in the line, and why you chose your tool."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work quietly on page 4: gates 7 and 8, then the optional secret cave item if they wish.",
       "s": 230
      },
      {
@@ -1652,11 +1812,11 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: 4 pens cost 16 dollars. How much does 1 pen cost? Question 2: 1 pen costs 2 dollars. How much do 7 pens cost? Fill in the blanks. Question 3: 6 buns cost 12 dollars. How much does 1 bun cost? Look at the strip."
+      "text": "Page 1, Start here. Question 1: Ali has 18 stickers. Siti has 7 fewer. Part a: Siti has blank stickers. Part b: they have blank stickers altogether. Question 2: Ben is 6th in a queue. Lily is 9th. Part a: how many children are between them? Part b: how many are in front of Lily? Question 3: each child thinks of a number. Mei adds 4 and gets 13. Ravi takes away 5 and gets 9. What are their numbers? After each answer, write the tool you used and tick I checked."
      },
      {
       "k": "WORK",
-      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks which tool and why. Wait 10 seconds before helping.",
       "s": 450
      },
      {
@@ -1665,7 +1825,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 4 dollars. Question 2: 14 dollars. Question 3: 2 dollars. Tick your own page with a tick."
+      "text": "Question 1: 11 and 29. Question 2: 2 and 8. Question 3: 9 and 14. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1677,7 +1837,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: 3 books cost 15 dollars. Fill in the blanks. Look at the strip. Question 5: 5 pens cost 15 dollars. Lily says 1 pen costs 4 dollars. Is Lily correct? Question 6: each book costs 4 dollars. Kumar buys 3 books. How much do the 3 books cost?"
+      "text": "Page 2. Question 4: each bag has 4 sweets. Look at the table. Part a: 5 bags have blank sweets. Part b: 20 sweets in bags of 4 make blank bags. Question 5: Mei says 7 plus 9 is an odd number. Is Mei correct? Circle Yes or No. Then 7 plus 9 equals blank. Question 6: 4 cups cost 20 dollars. Part a: 1 cup costs blank dollars. Part b: 3 cups cost blank dollars."
      },
      {
       "k": "WORK",
@@ -1690,7 +1850,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: 5 dollars and 10 dollars. Question 5: no, 1 pen costs 3 dollars. Question 6: 12 dollars."
+      "text": "Question 4: 20 and 5. Question 5: no, and 16. Question 6: 5 dollars and 15 dollars."
      },
      {
       "k": "SLIDE",
@@ -1712,7 +1872,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: share 16 between 4 pens. Q2: put 2 by each of 7 pens. Q3: count the parts of the strip, then share 12. Q4: find 1 book first, then 2 books. Q5: put Lily's number into the story: 5 groups of 4 is 20. Q6: 3 groups of 4."
+      "text": "Q1: draw a strip for Ali and a shorter one for Siti. Q2: write 6th, 7th, 8th, 9th. Q3: undo each step. Q4: count on in 4s. Q5: add 7 and 9, then odd or even. Q6: share 20 among 4 cups."
      },
      {
       "k": "STUCK",
@@ -1720,7 +1880,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder chains the two steps with different numbers and uses a dozen, such and how many can be bought (beyond Primary 1 on purpose). Go further has two kinds of item, money left over and a comparison of two shops. Do not announce who is on which page. The check came first, so some children are tired, and Start here takes a middle child about 16 minutes: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+      "text": "Think harder asks for the same problem with a second tool and which was quicker for the child (beyond Primary 1 on purpose). Go further names no tool. Do not announce who is on which page. The quest came first, so some children are tired, and Start here takes a middle child about 18 minutes: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -1737,11 +1897,11 @@
      },
      {
       "k": "READ",
-      "text": "Aisha says: 3 books cost 12 dollars, so 6 books cost 24 dollars. Is Aisha right? How could we check?"
+      "text": "Mei says: Draw it is the best tool for every problem. Is Mei right? How could we check?"
      },
      {
       "k": "WORK",
-      "text": "Test Aisha with tokens: 12 on 3 books, then 6 books.",
+      "text": "Try 4 bags of 5 sweets two ways: draw it, and count in 5s.",
       "s": 35
      },
      {
@@ -1760,7 +1920,7 @@
      },
      {
       "k": "SAY",
-      "text": "Remember the sneak-peek? Four pencils cost eight dollars, so one pencil costs two dollars. Three apples cost six dollars, so one apple costs two dollars, and five apples cost ten dollars."
+      "text": "Remember the sneak-peek? Ravi third, Lily sixth: two children are between them, and we can list the places. Ben doubles to fourteen: work backwards, seven."
      },
      {
       "k": "ASK",
@@ -1769,7 +1929,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Or 6 books are 2 lots of 3 books, so 2 lots of $12. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+      "text": "Model answer: no. Draw it is good for a story with a whole and parts. A table is quicker for counting in 5s. Work backwards is quicker for I think of a number. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
     ]
    },
@@ -1804,7 +1964,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers, for the whole term. Next term starts with What Time Is It?, the first lesson of Term 3. You need your Term 3 book. A grown-up tears out the clock page and cuts out the 6 clock hands; the 2 clock faces can stay on the page. Keep your dollar tokens, because we need them again in Lesson 24. A real clock helps too. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers, for the whole term. Next term starts with What Time Is It?, the first lesson of Term 3. You need your Term 3 book. A grown-up tears out the clock page and cuts out the 6 clock hands; the 2 clock faces can stay on the page. Keep your dollar tokens from Term 2 Lesson 9, because we need them again in Lesson 24. A real clock helps too. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -1813,7 +1973,7 @@
      },
      {
       "k": "SAY",
-      "text": "Optional, only if you are on time: 2 pens cost 6 dollars. How much do 4 pens cost? Do we need to find 1 pen first?",
+      "text": "Optional, only if you are on time: how many fives make thirty-five? Which tool is quickest?",
       "optional": true
      },
      {
@@ -1834,7 +1994,7 @@
      },
      {
       "k": "READ",
-      "text": "Optional exit ticket. Question 1: 3 pencils cost 9 dollars. How much does 1 pencil cost? Question 2: each sticker costs 5 dollars. How much do 3 stickers cost? Option 1: 8 dollars. Option 2: 15 dollars. Option 3: 2 dollars. Option 4: 53 dollars. Write its number in the bracket. Question 3: 5 cakes cost 10 dollars. Fill in the blanks: 1 cake costs blank dollars; 4 cakes cost blank dollars.",
+      "text": "Optional exit ticket. Question 1: 5 cups cost 10 dollars. How much does 1 cup cost? Question 2: Ben thinks of a number. He adds 6 and gets 15. Option 1: 9. Option 2: 21. Option 3: 8. Option 4: 10. Write its number in the bracket. Question 3: Ali is 5th in a queue. Siti is 8th. Part a: how many children are between them? Part b: counting both, how many?",
       "optional": true
      },
      {
@@ -1850,7 +2010,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 3 dollars. Question 2: option 2, 15 dollars. Question 3: 2 dollars and 8 dollars. Tick your own ticket with a tick.",
+      "text": "Question 1: 2 dollars. Question 2: option 1, 9. Question 3: 2 and 4. Tick your own ticket with a tick.",
       "optional": true
      },
      {
@@ -1860,7 +2020,7 @@
      },
      {
       "k": "NOTE",
-      "text": "This is the standing buffer. A child who needs more time for the quest may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 pens are 2 lots of 2 pens, so $12; finding one first always works and doubling is a quick way here. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+      "text": "This is the standing buffer. A child who needs more time for the quest may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 7 fives make 35; counting in 5s, a table and a strip all give 7. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
      }
     ]
    }
@@ -1872,175 +2032,192 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "4 pens cost $16. How much does 1 pen cost? Use tokens or draw.",
+    "text": "Ali has 18 stickers. Siti has 7 fewer stickers than Ali. Fill in the blanks.",
     "parts": [
      {
+      "l": "a",
+      "text": "Siti has [2] stickers.",
+      "ans": "11",
+      "val": 11
+     },
+     {
+      "l": "b",
+      "text": "They have [2] stickers altogether.",
+      "ans": "29",
+      "val": 29
+     },
+     {
       "l": "",
-      "text": "1 pen costs $[].",
-      "ans": "4",
-      "val": 4
+      "text": "Tool I used: ___ I checked: [ ]",
+      "ans": "(any tool, ticked)",
+      "val": "tool"
      }
     ],
-    "answer": "$4",
+    "answer": "11; 29",
     "val": [
-     4
+     11,
+     29
     ],
-    "hint": "Share $16 equally among 4 pens. Use tokens.",
-    "solution": "$16 shared equally among 4 pens is $4 each. Check: 4 groups of $4 make $16.",
+    "hint": "Draw a strip for Ali and a shorter strip for Siti. The missing part is 7.",
+    "solution": "Siti has 7 fewer, so take away: 18 - 7 = 11. Altogether: 18 + 11 = 29.",
     "mistakes": [
-     "Writing 20 (adding 16 and 4).",
-     "Writing 64 (multiplying).",
-     "Writing 16 (the total)."
+     "(a) 25 (adding 7 instead of taking away).",
+     "(b) 18 + 7 = 25, or stopping after part a."
     ],
-    "mins": 2.5,
-    "visual": {
-     "type": "objects",
-     "icon": "pen",
-     "n": 4,
-     "per_row": 4
-    },
-    "draw": true,
-    "draw_strokes": 16
+    "mins": 3
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "1 pen costs $2. How much do 7 pens cost? Fill in the blanks.",
+    "text": "Ben is 6th in a queue. Lily is 9th in the same queue. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "7 × 2 = [2]",
-      "ans": "14",
-      "val": 14
+      "text": "There are [] children between Ben and Lily.",
+      "ans": "2",
+      "val": 2
      },
      {
       "l": "b",
-      "text": "7 pens cost $[2].",
-      "ans": "14",
-      "val": 14
+      "text": "There are [] children in front of Lily.",
+      "ans": "8",
+      "val": 8
+     },
+     {
+      "l": "",
+      "text": "Tool I used: ___ I checked: [ ]",
+      "ans": "(any tool, ticked)",
+      "val": "tool"
      }
     ],
-    "answer": "14; $14",
+    "answer": "2; 8",
     "val": [
-     14,
-     14
+     2,
+     8
     ],
-    "hint": "Put 2 tokens by each pen and count them all.",
-    "solution": "7 groups of $2 is 2 + 2 + 2 + 2 + 2 + 2 + 2 = 14, so 7 pens cost $14.",
+    "hint": "Write 6th, 7th, 8th, 9th. Which places are between Ben and Lily?",
+    "solution": "Between 6th and 9th are the 7th and the 8th: 2 children. In front of Lily (9th) are the 1st to the 8th: 8 children.",
     "mistakes": [
-     "Writing 9 (adding 2 and 7).",
-     "Writing 2 (the cost of 1 pen)."
+     "(a) 3 (9 - 6 counts Lily).",
+     "(b) 9 (counting Lily herself)."
     ],
-    "mins": 2.5,
-    "visual": {
-     "type": "objects",
-     "icon": "pen",
-     "n": 7,
-     "per_row": 4
-    }
+    "mins": 3
    },
    {
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "6 buns cost $12. How much does 1 bun cost? Look at the strip.",
+    "text": "Each child thinks of a number. Fill in the blanks.",
     "parts": [
      {
-      "l": "",
-      "text": "1 bun costs $[].",
-      "ans": "2",
-      "val": 2
-     }
-    ],
-    "answer": "$2",
-    "val": [
-     2
-    ],
-    "hint": "The strip has 6 equal parts. Share $12 into 6 parts.",
-    "solution": "$12 shared equally among 6 buns is $2 each. Check: 6 groups of $2 make $12.",
-    "mistakes": [
-     "Writing 6 (the number of buns).",
-     "Writing 72 (multiplying)."
-    ],
-    "mins": 2.5,
-    "visual": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "6 buns",
-       "len": 6
-      }
-     ],
-     "units": {
-      "n": 6,
-      "text": "?"
+      "l": "a",
+      "text": "Mei adds 4 to her number and gets 13. Her number is [].",
+      "ans": "9",
+      "val": 9
      },
-     "brace": {
-      "text": "$12",
-      "over": "all"
+     {
+      "l": "b",
+      "text": "Ravi takes away 5 from his number and gets 9. His number is [2].",
+      "ans": "14",
+      "val": 14
+     },
+     {
+      "l": "",
+      "text": "Tool I used: ___ I checked: [ ]",
+      "ans": "(any tool, ticked)",
+      "val": "tool"
      }
-    }
+    ],
+    "answer": "9; 14",
+    "val": [
+     9,
+     14
+    ],
+    "hint": "Undo the step. For Mei, take 4 away from 13.",
+    "solution": "Mei: 13 - 4 = 9. Check: 9 + 4 = 13. Ravi: 9 + 5 = 14. Check: 14 - 5 = 9.",
+    "mistakes": [
+     "(a) 17 (adding 4 to 13).",
+     "(b) 4 (taking 5 from 9)."
+    ],
+    "mins": 3
    },
    {
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "3 books cost $15. Fill in the blanks. Look at the strip.",
+    "text": "Each bag has 4 sweets. Look at the table. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "1 book costs $[].",
+      "text": "5 bags have [2] sweets.",
+      "ans": "20",
+      "val": 20
+     },
+     {
+      "l": "b",
+      "text": "20 sweets in bags of 4 make [] bags.",
       "ans": "5",
       "val": 5
      },
      {
-      "l": "b",
-      "text": "2 books cost $[2].",
-      "ans": "10",
-      "val": 10
+      "l": "",
+      "text": "Tool I used: ___ I checked: [ ]",
+      "ans": "(any tool, ticked)",
+      "val": "tool"
      }
     ],
-    "answer": "$5; $10",
+    "answer": "20; 5",
     "val": [
-     5,
-     10
+     20,
+     5
     ],
-    "hint": "Find 1 book first. Then find 2 books.",
-    "solution": "$15 shared equally among 3 books is $5 each. 2 books cost 2 groups of $5, which is $10. Check: 3 groups of $5 make $15.",
+    "hint": "Count on in 4s: 4, 8, 12, 16, then one more.",
+    "solution": "Each bag adds 4: 16 + 4 = 20, so 5 bags have 20 sweets. Counting in 4s to 20 takes 5 steps, so 20 sweets make 5 bags.",
     "mistakes": [
-     "Writing 15 for 2 books.",
-     "Writing 7 (adding 5 and 2).",
-     "Stopping after the first part."
+     "(a) 9 (adding 5 and 4).",
+     "(b) 16 (the last number in the table)."
     ],
     "mins": 3,
     "visual": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "3 books",
-       "len": 3
-      }
+     "type": "table",
+     "head": [
+      "Bags",
+      "Sweets"
      ],
-     "units": {
-      "n": 3,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$15",
-      "over": "all"
-     }
+     "rows": [
+      [
+       "1",
+       "4"
+      ],
+      [
+       "2",
+       "8"
+      ],
+      [
+       "3",
+       "12"
+      ],
+      [
+       "4",
+       "16"
+      ]
+     ],
+     "col_w": [
+      1,
+      1
+     ]
     }
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "5 pens cost $15. Lily says 1 pen costs $4. Look at the picture.",
+    "text": "Mei says 7 + 9 is an odd number. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "Is Lily correct? Circle Yes or No.",
+      "text": "Is Mei correct? Circle Yes or No.",
       "ans": "No",
       "val": "No",
       "choices": [
@@ -2050,62 +2227,67 @@
      },
      {
       "l": "b",
-      "text": "1 pen costs $[].",
-      "ans": "3",
-      "val": 3
+      "text": "7 + 9 = [2]",
+      "ans": "16",
+      "val": 16
+     },
+     {
+      "l": "",
+      "text": "Tool I used: ___ I checked: [ ]",
+      "ans": "(any tool, ticked)",
+      "val": "tool"
      }
     ],
-    "answer": "No; $3",
+    "answer": "No; 16",
     "val": [
      "No",
-     3
+     16
     ],
-    "hint": "Put Lily's number back: 5 groups of $4.",
-    "solution": "5 groups of $4 make $20, not $15. So Lily is not correct. $15 shared equally among 5 pens is $3 each. Check: 5 groups of $3 make $15.",
+    "hint": "Add 7 and 9. Is the answer odd or even?",
+    "solution": "7 + 9 = 16. 16 can be shared into pairs with none left over, so it is even. Mei is not correct.",
     "mistakes": [
-     "Saying Yes because 4 is close to 3.",
-     "Writing 15 for 1 pen."
+     "(a) Yes (an odd and an odd look odd).",
+     "(b) 15 or 17 (a counting slip)."
     ],
-    "mins": 3,
-    "visual": {
-     "type": "objects",
-     "icon": "pen",
-     "n": 5,
-     "per_row": 5
-    }
+    "mins": 3
    },
    {
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Each book costs $4. Kumar buys 3 books. How much do the 3 books cost? Use tokens or draw.",
+    "text": "4 cups cost $20. Fill in the blanks.",
     "parts": [
      {
+      "l": "a",
+      "text": "1 cup costs $[].",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "3 cups cost $[2].",
+      "ans": "15",
+      "val": 15
+     },
+     {
       "l": "",
-      "text": "The 3 books cost $[2].",
-      "ans": "12",
-      "val": 12
+      "text": "Tool I used: ___ I checked: [ ]",
+      "ans": "(any tool, ticked)",
+      "val": "tool"
      }
     ],
-    "answer": "$12",
+    "answer": "$5; $15",
     "val": [
-     12
+     5,
+     15
     ],
-    "hint": "Each means for one. Count 3 groups of $4.",
-    "solution": "3 groups of $4: 4 + 4 + 4 = 12, so the 3 books cost $12.",
+    "hint": "Share $20 equally among the 4 cups.",
+    "solution": "$20 shared equally among 4 cups is $5 each. 3 cups cost 3 groups of $5, which is $15.",
     "mistakes": [
-     "Writing 7 (adding 4 and 3).",
-     "Writing 4."
+     "(a) 24 (adding 20 and 4).",
+     "(b) 20 (the total) or 8 (5 + 3)."
     ],
-    "mins": 2.5,
-    "visual": {
-     "type": "objects",
-     "icon": "book",
-     "n": 3,
-     "per_row": 3
-    },
-    "draw": true,
-    "draw_strokes": 12
+    "mins": 3
    }
   ],
   "think": [
@@ -2113,147 +2295,183 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "4 cups cost $12. Fill in the blanks. Look at the strip.",
+    "text": "Ben saves $3 each week. He wants to save $15. Use two tools. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "1 cup costs $[].",
-      "ans": "3",
-      "val": 3
+      "text": "Make a table. Ben needs [] weeks.",
+      "ans": "5",
+      "val": 5
      },
      {
       "l": "b",
-      "text": "7 cups cost $[2].",
-      "ans": "21",
-      "val": 21
-     }
-    ],
-    "answer": "$3; $21",
-    "val": [
-     3,
-     21
-    ],
-    "hint": "Find 1 cup first. Then find 7 cups.",
-    "solution": "$12 shared equally among 4 cups is $3 each. 7 cups cost 7 groups of $3, which is $21. Check: 4 groups of $3 make $12.",
-    "mistakes": [
-     "Writing 84 (12 × 7).",
-     "Writing 19 (12 + 7).",
-     "Stopping after the first part."
-    ],
-    "mins": 4,
-    "visual": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "4 cups",
-       "len": 4
-      }
-     ],
-     "units": {
-      "n": 4,
-      "text": "?"
+      "text": "Draw a strip to check. [] parts of $3 make $15.",
+      "ans": "5",
+      "val": 5
      },
-     "brace": {
-      "text": "$12",
-      "over": "all"
+     {
+      "l": "c",
+      "text": "Which was quicker for you? Circle one.",
+      "ans": "Either is fine",
+      "val": "either",
+      "choices": [
+       "Table",
+       "Strip"
+      ]
      }
+    ],
+    "answer": "5 weeks; 5 parts; either is fine",
+    "val": [
+     5,
+     5,
+     "either"
+    ],
+    "hint": "Fill the table: $3, $6, then keep adding $3 each week.",
+    "solution": "The table goes $3, $6, $9, $12, $15, so Ben needs 5 weeks. A strip with parts of $3 has 5 parts. Both tools give 5, so the answer is checked. Many answers are right for part c.",
+    "mistakes": [
+     "(a) 12 (the $ in week 4).",
+     "(b) 15 (the total), or a strip that does not have equal parts."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Week",
+      "Money saved"
+     ],
+     "rows": [
+      [
+       "1",
+       "$3"
+      ],
+      [
+       "2",
+       "$6"
+      ],
+      [
+       "3",
+       "[]"
+      ],
+      [
+       "4",
+       "[]"
+      ],
+      [
+       "5",
+       "[]"
+      ]
+     ],
+     "col_w": [
+      1,
+      1
+     ]
     }
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "A dozen buns cost $24. Fill in the blanks.",
+    "text": "Mei thinks of a number. She doubles it. Then she adds 3. She gets 17. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "1 bun costs $[].",
-      "ans": "2",
-      "val": 2
+      "text": "Work backwards. Mei's number is [].",
+      "ans": "7",
+      "val": 7
      },
      {
       "l": "b",
-      "text": "3 buns cost $[].",
-      "ans": "6",
-      "val": 6
+      "text": "Check going forwards. Double her number: [2]. Then add 3: [2].",
+      "ans": "14, 17",
+      "val": [
+       14,
+       17
+      ],
+      "ordered": true
      }
     ],
-    "answer": "$2; $6",
+    "answer": "7; 14 and 17",
     "val": [
-     2,
-     6
+     7,
+     14,
+     17
     ],
-    "hint": "A dozen is 12. Share $24 equally among 12 buns.",
-    "solution": "A dozen is 12, so 12 buns cost $24. $24 shared equally among 12 buns is $2 each. 3 buns cost 3 groups of $2, which is $6.",
+    "hint": "Undo the last step first. Take 3 away from 17.",
+    "solution": "17 - 3 = 14, and half of 14 is 7. Check: 7 + 7 = 14, and 14 + 3 = 17.",
     "mistakes": [
-     "Using 24 shared among 2 buns.",
-     "Writing 24 for 3 buns."
+     "(a) 14 (stopping after taking 3 away).",
+     "(a) 10 (taking 7 from 17)."
     ],
-    "mins": 3.5
+    "mins": 4
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Wei pays $24 for 6 such cups. Fill in the blanks.",
+    "text": "Lily is 4th from the front of a queue. Ravi is 9th from the front. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "1 cup costs $[].",
-      "ans": "4",
-      "val": 4
+      "text": "From Lily to Ravi, counting both, there are [] children.",
+      "ans": "6",
+      "val": 6
      },
      {
       "l": "b",
-      "text": "4 such cups cost $[2].",
-      "ans": "16",
-      "val": 16
+      "text": "Ben says 9 - 4 = 5 children. Is Ben correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
      }
     ],
-    "answer": "$4; $16",
+    "answer": "6; No",
     "val": [
-     4,
-     16
+     6,
+     "No"
     ],
-    "hint": "Such means the cups are the same, so each costs the same.",
-    "solution": "$24 shared equally among 6 cups is $4 each. 4 such cups cost 4 groups of $4, which is $16.",
+    "hint": "List the places: 4th, 5th, and so on up to 9th.",
+    "solution": "The places are 4th, 5th, 6th, 7th, 8th, 9th: 6 children. 9 - 4 = 5 leaves out Lily, so Ben is not correct.",
     "mistakes": [
-     "Writing 24 for 4 cups.",
-     "Writing 8 (4 + 4)."
+     "(a) 5 (9 - 4 leaves one end out).",
+     "(b) Yes (9 - 4 looks right)."
     ],
-    "mins": 3.5
+    "mins": 4
    },
    {
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "4 pens cost $8. Ben has $10. Fill in the blanks.",
+    "text": "Mei counts in 3s: 3, 6, 9, and so on. Ravi counts in 4s: 4, 8, 12, and so on. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "1 pen costs $[].",
-      "ans": "2",
-      "val": 2
+      "text": "The first number that both say is [2].",
+      "ans": "12",
+      "val": 12
      },
      {
       "l": "b",
-      "text": "Ben can buy [] pens.",
-      "ans": "5",
-      "val": 5
+      "text": "The next number that both say is [2].",
+      "ans": "24",
+      "val": 24
      }
     ],
-    "answer": "$2; 5 pens",
+    "answer": "12; 24",
     "val": [
-     2,
-     5
+     12,
+     24
     ],
-    "hint": "Find 1 pen first. Then count how many groups of $2 fit in $10.",
-    "solution": "$8 shared equally among 4 pens is $2 each. $10 holds 5 groups of $2, so Ben can buy 5 pens.",
+    "hint": "Write both lists side by side. Which number is in both?",
+    "solution": "Mei: 3, 6, 9, 12, 15, 18, 21, 24. Ravi: 4, 8, 12, 16, 20, 24. The first number in both is 12 and the next is 24.",
     "mistakes": [
-     "Writing 4 pens (the number in the story).",
-     "Writing 20 (10 × 2)."
+     "(a) 6 or 8 (only in one list).",
+     "(b) 36 (jumping ahead without listing)."
     ],
-    "mins": 4
+    "mins": 5,
+    "lines": 2
    }
   ],
   "go": [
@@ -2261,38 +2479,41 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "2 hats cost $10. 3 scarves cost $18. Jenny buys 1 hat and 2 scarves. Fill in the blanks.",
+    "text": "Shop A: 3 pens cost $12. Shop B: 5 pens cost $15. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "1 hat costs $[].",
-      "ans": "5",
-      "val": 5
+      "text": "In Shop A, 1 pen costs $[].",
+      "ans": "4",
+      "val": 4
      },
      {
       "l": "b",
-      "text": "1 scarf costs $[].",
-      "ans": "6",
-      "val": 6
+      "text": "In Shop B, 1 pen costs $[].",
+      "ans": "3",
+      "val": 3
      },
      {
       "l": "c",
-      "text": "Jenny pays $[2].",
-      "ans": "17",
-      "val": 17
+      "text": "Which shop sells 1 pen for less? Circle Shop A or Shop B.",
+      "ans": "Shop B",
+      "val": "Shop B",
+      "choices": [
+       "Shop A",
+       "Shop B"
+      ]
      }
     ],
-    "answer": "$5; $6; $17",
+    "answer": "$4; $3; Shop B",
     "val": [
-     5,
-     6,
-     17
+     4,
+     3,
+     "Shop B"
     ],
-    "hint": "Find 1 hat and 1 scarf first.",
-    "solution": "$10 shared equally among 2 hats is $5 each. $18 shared equally among 3 scarves is $6 each. 2 scarves cost $12. 1 hat and 2 scarves cost $5 + $12 = $17.",
+    "hint": "Find the price of 1 pen in each shop first.",
+    "solution": "Shop A: $12 shared among 3 pens is $4. Shop B: $15 shared among 5 pens is $3. 1 pen costs less in Shop B.",
     "mistakes": [
-     "Adding 10 and 18.",
-     "Counting 1 scarf instead of 2."
+     "(c) Shop A (it has the smaller number of pens, or the bigger total)."
     ],
     "mins": 5
    },
@@ -2300,113 +2521,87 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "8 pens cost $24. Mei has $30. She buys 5 pens. Fill in the blanks.",
+    "text": "Ali thinks of a number. He adds 5. Then he doubles the answer. Then he takes away 4. He gets 16. Show your working on the lines.",
     "parts": [
      {
-      "l": "a",
-      "text": "1 pen costs $[].",
-      "ans": "3",
-      "val": 3
-     },
-     {
-      "l": "b",
-      "text": "5 pens cost $[2].",
-      "ans": "15",
-      "val": 15
-     },
-     {
-      "l": "c",
-      "text": "Mei has $[2] left.",
-      "ans": "15",
-      "val": 15
+      "l": "",
+      "text": "Ali's number is [2].",
+      "ans": "5",
+      "val": 5
      }
     ],
-    "answer": "$3; $15; $15",
+    "answer": "5",
     "val": [
-     3,
-     15,
-     15
+     5
     ],
-    "hint": "Find 1 pen first, then 4 pens, then what is left from $20.",
-    "solution": "$24 shared equally among 8 pens is $3 each. 5 pens cost $15. $30 - $15 = $15 is left.",
+    "hint": "Work backwards, one step at a time, starting with the last step.",
+    "solution": "16 + 4 = 20. Half of 20 is 10. 10 - 5 = 5. Check: 5 + 5 = 10, 10 + 10 = 20, 20 - 4 = 16.",
     "mistakes": [
-     "Taking 24 away from 30.",
-     "Forgetting to take the cost away from $30."
+     "10 (stopping before the last undo).",
+     "20 or 12 (undoing in the wrong order)."
     ],
-    "mins": 5
+    "mins": 6,
+    "lines": 3
    },
    {
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Shop A sells 4 pens for $12. Shop B sells 5 pens for $20. Which shop sells 1 pen for less?",
+    "text": "Each shape is a number. Find the number for each shape.",
     "parts": [
      {
       "l": "a",
-      "text": "At Shop A, 1 pen costs $[].",
-      "ans": "3",
-      "val": 3
+      "text": "The star is [].",
+      "ans": "6",
+      "val": 6
      },
      {
       "l": "b",
-      "text": "At Shop B, 1 pen costs $[].",
+      "text": "The heart is [].",
       "ans": "4",
       "val": 4
-     },
-     {
-      "l": "c",
-      "text": "Circle Shop A or Shop B.",
-      "ans": "Shop A",
-      "val": "Shop A",
-      "choices": [
-       "Shop A",
-       "Shop B"
-      ]
      }
     ],
-    "answer": "$3; $4; Shop A",
+    "answer": "star 6; heart 4",
     "val": [
-     3,
-     4,
-     "Shop A"
+     6,
+     4
     ],
-    "hint": "Find the cost of 1 pen in each shop first.",
-    "solution": "Shop A: $12 shared among 4 pens is $3. Shop B: $20 shared among 5 pens is $4. $3 is less than $4, so Shop A sells 1 pen for less.",
+    "hint": "Use line 1 to find the star. Then use line 2.",
+    "solution": "Line 1: star + star = 12, so the star is 6. Line 2: heart × star = 24, so heart groups of 6 make 24: the heart is 4. Check: 4 × 6 = 24.",
     "mistakes": [
-     "Choosing Shop B because 20 is more.",
-     "Comparing $12 and $20 without finding 1 pen."
+     "(b) 18 (24 - 6) or 6 (copying the star)."
     ],
-    "mins": 5,
+    "mins": 6,
     "visual": {
-     "type": "table",
+     "type": "picture_equation",
      "rows": [
-      [
-       "A",
-       {
-        "icon": "pen",
-        "n": 4
-       },
-       "12"
-      ],
-      [
-       "B",
-       {
-        "icon": "pen",
-        "n": 5
-       },
-       "20"
-      ]
+      {
+       "items": [
+        {
+         "sym": "star",
+         "n": 2
+        }
+       ],
+       "op": "+",
+       "total": "12"
+      },
+      {
+       "items": [
+        {
+         "sym": "heart",
+         "n": 1
+        },
+        {
+         "sym": "star",
+         "n": 1
+        }
+       ],
+       "op": "×",
+       "total": "24"
+      }
      ],
-     "head": [
-      "Shop",
-      "Pens",
-      "Cost in $"
-     ],
-     "col_w": [
-      1,
-      3,
-      1
-     ]
+     "sym": 80
     }
    }
   ],
@@ -2414,19 +2609,18 @@
    "id": "I1",
    "page": 5,
    "tier": "investigation",
-   "title": "Which pack costs less?",
-   "first": "A pack of 2 pens costs $8. How much does 1 pen cost?",
-   "text": "A pack of 5 pens costs $20. Does 1 pen cost less in this pack? Why?",
+   "title": "Write a problem for a tool",
+   "first": "Mei thinks of a number. She adds 4 and gets 10. Her number is 6. Write 2 more puzzles like this one.",
+   "text": "Write a number puzzle that you can solve by working backwards. Solve it. Ask a grown-up to solve it a different way.",
    "lines": 4,
-   "answer": "No. In both packs 1 pen costs $4 ($8 shared between 2 pens, and $20 shared among 5 pens), so 1 pen does not cost less in the bigger pack. Finding the price of one lets us compare packs of different sizes.",
+   "answer": "Many answers are right. A good puzzle gives the steps and the end number, and has one answer. Check it by going forwards: put the answer back and follow the steps.",
    "val": [
-    "4",
-    "4"
+    "any"
    ],
-   "look_for": "A child who finds $3 for both packs, or who says 1 pen costs the same in both. Credit any clear reason. A child who says the bigger pack costs more is right about the total but has not compared one pen.",
+   "look_for": "A child who writes steps and an end number, solves by undoing the steps, and checks by going forwards. Credit any clear puzzle. A puzzle with two answers or no answer is a good moment to say: try it and check.",
    "mistakes": [
-    "Saying 1 pen costs less in the pack of 5 because it has more pens.",
-    "Comparing $6 and $15 without finding 1 pen."
+    "A puzzle that gives the starting number as well as the end number.",
+    "A puzzle with no end number."
    ],
    "mins": 8
   }
@@ -2434,100 +2628,100 @@
  "exit": [
   {
    "id": "E1",
-   "text": "3 pencils cost $9. How much does 1 pencil cost?",
+   "text": "5 cups cost $10. How much does 1 cup cost?",
    "parts": [
     {
      "l": "",
-     "text": "1 pencil costs $[].",
-     "ans": "3",
-     "val": 3
+     "text": "1 cup costs $[].",
+     "ans": "2",
+     "val": 2
     }
    ],
-   "answer": "$3",
+   "answer": "$2",
    "val": [
-    3
+    2
    ],
-   "solution": "$9 shared equally among 3 pencils is $3 each.",
+   "solution": "$10 shared equally among 5 cups is $2 each.",
    "mistakes": [
-    "Writing 12 (adding 9 and 3).",
-    "Writing 27 (multiplying)."
+    "Writing 15 (adding 10 and 5).",
+    "Writing 5 (the number of cups)."
    ]
   },
   {
    "id": "E2",
-   "text": "Each sticker costs $5. How much do 3 stickers cost? Write its number in the bracket.",
+   "text": "Ben thinks of a number. He adds 6 and gets 15. Choose the correct answer. Write its number in the bracket.",
    "parts": [],
-   "answer": "(2) $15",
+   "answer": "(1) 9",
    "val": [
-    2
+    1
    ],
-   "solution": "Each sticker costs $5, so 3 stickers cost 3 groups of $5, which is $15.",
+   "solution": "15 - 6 = 9. Check: 9 + 6 = 15.",
    "mistakes": [
-    "Choosing (1) $8 by adding 5 and 3.",
-    "Choosing (3) $2 by taking 3 from 5."
+    "Choosing (2) 21 (adding 6 to 15).",
+    "Choosing (3) 8 or (4) 10 after a counting slip."
    ],
    "mcq": {
     "options": [
-     "$8",
-     "$15",
-     "$2",
-     "$53"
+     "9",
+     "21",
+     "8",
+     "10"
     ],
     "bracket": true
    }
   },
   {
    "id": "E3",
-   "text": "5 cakes cost $10. Fill in the blanks.",
+   "text": "Ali is 5th in a queue. Siti is 8th in the same queue. Fill in the blanks.",
    "parts": [
     {
      "l": "a",
-     "text": "1 cake costs $[].",
+     "text": "There are [] children between Ali and Siti.",
      "ans": "2",
      "val": 2
     },
     {
      "l": "b",
-     "text": "4 cakes cost $[].",
-     "ans": "8",
-     "val": 8
+     "text": "From Ali to Siti, counting both, there are [] children.",
+     "ans": "4",
+     "val": 4
     }
    ],
-   "answer": "$2; $8",
+   "answer": "2; 4",
    "val": [
     2,
-    8
+    4
    ],
-   "solution": "$10 shared equally among 5 cakes is $2 each. 4 cakes cost 4 groups of $2, which is $8.",
+   "solution": "Between 5th and 8th are the 6th and the 7th: 2 children. Counting both, the places are 5th, 6th, 7th, 8th: 4 children.",
    "mistakes": [
-    "Writing 10 for 4 cakes.",
-    "Writing 9 (5 + 4)."
+    "(a) 3 (8 - 5).",
+    "(b) 3 (8 - 5 leaves one end out)."
    ]
   }
  ],
  "talk": {
-  "question": "Aisha says: 3 books cost $12, so 6 books cost $24. Is Aisha right? How could we check?",
+  "question": "Mei says: Draw it is the best tool for every problem. Is Mei right? How could we check?",
   "starter": "I think ... because ...",
-  "answer": "Yes. Find 1 book first: $12 shared equally among 3 books is $4. 6 books cost 6 groups of $4, which is $24. We can also see that 6 books are 2 lots of 3 books, and 2 lots of $12 is $24. We can check with tokens.",
-  "look_for": "A child who finds the cost of 1 book first, or who sees that 6 books are 2 lots of 3 books. Not just yes or no."
+  "answer": "No. Draw it is a good tool for a story with a whole and parts, but a table is quicker for counting in fives and working backwards is quicker for I think of a number puzzles. We can check by trying one problem with two tools and seeing which was quicker for us.",
+  "look_for": "A child who names a problem where another tool is quicker, or who says we can try two tools. Not just yes or no."
  },
  "look_back": {
   "hardest": [
-   "sharing to find one",
-   "finding many from one",
-   "using the strip",
+   "choosing a tool",
+   "using the tool",
+   "checking my answer",
    "something else"
   ],
   "helped": [
-   "tokens",
-   "drawing a strip",
+   "the tool cards",
+   "drawing it",
    "checking my answer",
    "I was not stuck"
   ],
   "next": [
-   "using tokens",
-   "drawing a strip",
+   "trying a different tool",
    "checking my answer",
+   "drawing it",
    "asking a question"
   ]
  },
@@ -2535,84 +2729,255 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "5 pens cost $10. How much does 1 pen cost? $___",
-   "answer": "$2",
-   "val": 2,
-   "solution": "$10 shared equally among 5 pens is $2 each."
+   "text": "Mei puts 20 counters into bags. She puts 4 counters in each bag. How many bags does she need? ___",
+   "answer": "5",
+   "val": 5,
+   "solution": "Counting in 4s: 4, 8, 12, 16, 20. That is 5 bags."
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "Each cup costs $3. Fill in the blanks. 6 × 3 = ___ . 6 cups cost $___ (× means groups of)",
-   "answer": "18; $18",
-   "val": [
-    18,
-    18
-   ],
-   "solution": "6 groups of $3: 3 + 3 + 3 + 3 + 3 + 3 = 18."
+   "text": "Ravi thinks of a number. He adds 7 and gets 16. What is his number? ___",
+   "answer": "9",
+   "val": 9,
+   "solution": "16 - 7 = 9. Check: 9 + 7 = 16."
   },
   {
    "id": "H3",
    "tier": "start",
-   "text": "4 rubbers cost $12. How much do 2 rubbers cost? $___",
-   "answer": "$6",
-   "val": 6,
-   "solution": "$12 shared equally among 4 rubbers is $3 each. 2 rubbers cost 2 groups of $3, which is $6."
+   "text": "Each bag has 5 sweets. How many sweets are in 6 bags? ___",
+   "answer": "30",
+   "val": 30,
+   "solution": "Counting in 5s: 5, 10, 15, 20, 25, 30. 6 bags have 30 sweets."
   },
   {
    "id": "H4",
    "tier": "think",
-   "text": "A dozen eggs cost $36. How much do 4 eggs cost? $___",
-   "answer": "$12",
-   "val": 12,
-   "solution": "A dozen is 12 eggs. $36 shared equally among 12 eggs is $3 each. 4 eggs cost 4 groups of $3, which is $12."
+   "text": "Siti is 3rd in a queue. Ali is 8th. How many children are there from Siti to Ali, counting both? ___",
+   "answer": "6",
+   "val": 6,
+   "solution": "The places are 3rd, 4th, 5th, 6th, 7th, 8th. That is 6 children."
   },
   {
    "id": "H5",
    "tier": "go",
-   "text": "3 mugs cost $12. 2 plates cost $10. Siti buys 1 mug and 1 plate. How much does Siti pay? $___",
-   "answer": "$9",
-   "val": 9,
-   "solution": "1 mug costs $12 shared among 3 mugs, which is $4. 1 plate costs $10 shared between 2 plates, which is $5. 1 mug and 1 plate cost $4 + $5 = $9."
+   "text": "3 pens cost $12. 2 rubbers cost $6. Jenny buys 2 pens and 1 rubber. How much does she pay? $___",
+   "answer": "$11",
+   "val": 11,
+   "solution": "1 pen costs $4, so 2 pens cost $8. 1 rubber costs $3. $8 + $3 = $11."
   }
  ],
  "online_practice": {
   "key": "t2l20",
-  "title": "Find One First",
-  "topic": "Find one, then find many",
+  "title": "Choose Your Tool",
+  "topic": "Pick a tool, say why, check",
   "items": [
    {
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "4 pens cost $20. How much does 1 pen cost?",
-    "answer": 5,
-    "hint": "Share the cost equally among the pens.",
+    "q": "Ali has 18 stickers. Siti has 7 fewer. How many stickers does Siti have?",
+    "answer": 11,
+    "hint": "Siti has fewer, so take away.",
     "steps": [
-     "$20 is shared equally among 4 pens.",
+     "Siti has 7 fewer than 18.",
+     "18 - 7 = 11.",
+     "Siti has 11 stickers."
+    ],
+    "slips": [
+     {
+      "a": [
+       25
+      ],
+      "say": "25 adds 7. Siti has fewer, so take away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       14,
+       15,
+       16,
+       17,
+       18,
+       19,
+       20
+      ],
+      "k": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "q": "Ali has {a} stickers. Siti has {k} fewer. How many stickers does Siti have?",
+     "answer": "a-k",
+     "hint": "Siti has fewer, so take away.",
+     "steps": [
+      "Siti has {k} fewer than {a}.",
+      "{a} - {k} = {ans}.",
+      "Siti has {ans} stickers."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "Ben thinks of a number. He adds 6 and gets 15. What is his number?",
+    "answer": 9,
+    "hint": "Undo the adding: take 6 away from 15.",
+    "steps": [
+     "Ben added {k}, so we take {k} away.",
+     "15 - 6 = 9.",
+     "Ben's number is 9."
+    ],
+    "slips": [
+     {
+      "a": [
+       21
+      ],
+      "say": "21 adds 6 to 15. Undo the adding: take 6 away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "k": [
+       3,
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "derive": {
+      "t": "n+k"
+     },
+     "q": "Ben thinks of a number. He adds {k} and gets {t}. What is his number?",
+     "answer": "n",
+     "hint": "Undo the adding: take {k} away from {t}.",
+     "steps": [
+      "Ben added {k}, so we take {k} away.",
+      "{t} - {k} = {ans}.",
+      "Ben's number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "Each bag has 5 sweets. How many sweets are in 4 bags?",
+    "answer": 20,
+    "hint": "Count in 5s, one bag at a time.",
+    "steps": [
+     "Count in 5s: 5, 10, 15, 20.",
+     "4 bags have 20 sweets."
+    ],
+    "slips": [
+     {
+      "a": [
+       9
+      ],
+      "say": "9 adds 5 and 4. Count in 5s, one bag at a time."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6
+      ],
+      "u": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "Each bag has {u} sweets. How many sweets are in {n} bags?",
+     "answer": "n*u",
+     "hint": "Count in {u}s, one bag at a time.",
+     "steps": [
+      "{n} groups of {u}.",
+      "{n} × {u} = {ans}.",
+      "{n} bags have {ans} sweets."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "number",
+    "q": "Ravi is 7th in a queue. How many children are in front of Ravi?",
+    "answer": 6,
+    "hint": "Count the places before 7th.",
+    "steps": [
+     "The places in front are 1st to 6th.",
+     "There are 6 children in front of Ravi."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 counts Ravi himself. Count the places before him."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "r": [
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "q": "Ravi is {r}th in a queue. How many children are in front of Ravi?",
+     "answer": "r-1",
+     "hint": "Count the places before {r}th.",
+     "steps": [
+      "The places in front are 1st to {ans}th.",
+      "There are {ans} children in front of Ravi."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "4 cups cost $20. How much does 1 cup cost?",
+    "answer": 5,
+    "hint": "Share the cost equally among the cups.",
+    "steps": [
+     "$20 is shared equally among 4 cups.",
      "5 + 5 + 5 + 5 = 20.",
-     "1 pen costs $5."
+     "1 cup costs $5."
     ],
     "slips": [
      {
       "a": [
        24
       ],
-      "say": "24 adds the cost and the number of pens. Share the cost equally among the pens."
+      "say": "24 adds the cost and the number of cups. Share the cost equally."
      }
     ],
-    "fig": {
-     "type": "objects",
-     "icon": "pen",
-     "n": "{n}",
-     "per_row": 5
-    },
-    "fig_base": {
-     "type": "objects",
-     "icon": "pen",
-     "n": 4,
-     "per_row": 5
-    },
     "tpl": {
      "vars": {
       "n": [
@@ -2632,393 +2997,64 @@
      "derive": {
       "t": "n*u"
      },
-     "q": "{n} pens cost ${t}. How much does 1 pen cost?",
+     "q": "{n} cups cost ${t}. How much does 1 cup cost?",
      "answer": "u",
-     "hint": "Share the cost equally among the pens.",
+     "hint": "Share the cost equally among the cups.",
      "steps": [
-      "${t} is shared equally among {n} pens.",
+      "${t} is shared equally among {n} cups.",
       "{n} groups of ${u} make ${t}.",
-      "1 pen costs ${u}."
-     ]
-    }
-   },
-   {
-    "id": "c2",
-    "tier": "core",
-    "type": "number",
-    "q": "1 cup costs $3. How much do 4 cups cost?",
-    "answer": 12,
-    "hint": "Count groups of the cost of 1 cup.",
-    "steps": [
-     "4 groups of $3.",
-     "3 + 3 + 3 + 3 = 12.",
-     "4 cups cost $12."
-    ],
-    "slips": [
-     {
-      "a": [
-       7
-      ],
-      "say": "7 adds 3 and 4. Count 4 groups of $3."
-     }
-    ],
-    "fig": {
-     "type": "objects",
-     "icon": "cup",
-     "n": "{n}",
-     "per_row": 6
-    },
-    "fig_base": {
-     "type": "objects",
-     "icon": "cup",
-     "n": 4,
-     "per_row": 6
-    },
-    "tpl": {
-     "vars": {
-      "n": [
-       3,
-       4,
-       5,
-       6
-      ],
-      "u": [
-       2,
-       3,
-       4,
-       5
-      ]
-     },
-     "q": "1 cup costs ${u}. How much do {n} cups cost?",
-     "answer": "n*u",
-     "hint": "Count groups of the cost of 1 cup.",
-     "steps": [
-      "{n} groups of ${u}.",
-      "{n} × {u} = {ans}.",
-      "{n} cups cost ${ans}."
-     ]
-    }
-   },
-   {
-    "id": "c3",
-    "tier": "core",
-    "type": "fields",
-    "q": "3 books cost $15. Look at the strip. Fill in the boxes.",
-    "hint": "Find 1 book first. Then find 2 books.",
-    "steps": [
-     "$15 shared equally among 3 books is $5.",
-     "2 groups of $5 make $10."
-    ],
-    "slips": [],
-    "frame": "1 book costs ${u}. 2 books cost ${v}.",
-    "fields": [
-     {
-      "id": "u",
-      "answer": 5
-     },
-     {
-      "id": "v",
-      "answer": 10
-     }
-    ],
-    "fig": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "{n} books",
-       "len": "{n}"
-      }
-     ],
-     "units": {
-      "n": "{n}",
-      "text": "?"
-     },
-     "brace": {
-      "text": "${t}",
-      "over": "all"
-     }
-    },
-    "fig_base": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "3 books",
-       "len": 3
-      }
-     ],
-     "units": {
-      "n": 3,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$15",
-      "over": "all"
-     }
-    },
-    "tpl": {
-     "vars": {
-      "n": [
-       3,
-       4,
-       5
-      ],
-      "u": [
-       2,
-       3,
-       4,
-       5
-      ]
-     },
-     "derive": {
-      "t": "n*u",
-      "v": "u+u"
-     },
-     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
-     "frame": "1 book costs ${u}. 2 books cost ${v}.",
-     "answers": {
-      "u": "u",
-      "v": "v"
-     },
-     "hint": "Find 1 book first. Then find 2 books.",
-     "steps": [
-      "${t} shared equally among {n} books is ${u}.",
-      "2 groups of ${u} make ${v}."
-     ]
-    }
-   },
-   {
-    "id": "c4",
-    "tier": "core",
-    "type": "choice",
-    "q": "4 pens cost $12. Lily says 1 pen costs $4. Is Lily correct?",
-    "options": [
-     "yes",
-     "no"
-    ],
-    "answer": "no",
-    "hint": "Put Lily's number back: 4 groups of her number.",
-    "steps": [
-     "4 groups of $4 make $16.",
-     "The pens cost $12.",
-     "So Lily is not correct."
-    ],
-    "slips": [
-     {
-      "a": [
-       "yes"
-      ],
-      "say": "Put Lily's number back: 4 groups of it. Do they make the total?"
-     }
-    ],
-    "fig": {
-     "type": "objects",
-     "icon": "pen",
-     "n": 4,
-     "per_row": 4
-    },
-    "fig_base": {
-     "type": "objects",
-     "icon": "pen",
-     "n": 4,
-     "per_row": 4
-    },
-    "tpl": {
-     "vars": {
-      "u": [
-       2,
-       3,
-       4,
-       5
-      ],
-      "k": [
-       0,
-       1
-      ]
-     },
-     "derive": {
-      "t": "4*u",
-      "c": "u+k"
-     },
-     "q": "4 pens cost ${t}. Lily says 1 pen costs ${c}. Is Lily correct?",
-     "options": [
-      "yes",
-      "no"
-     ],
-     "answer_index": "k",
-     "hint": "Put Lily's number back: 4 groups of her number.",
-     "steps": [
-      "4 groups of ${c} make 4 × {c}.",
-      "The pens cost ${t}.",
-      "The answer is {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c5",
-    "tier": "core",
-    "type": "number",
-    "q": "How many eggs are in a dozen eggs?",
-    "answer": 12,
-    "hint": "A dozen is a special number.",
-    "steps": [
-     "A dozen is 12.",
-     "So a dozen eggs is 12 eggs."
-    ],
-    "slips": [
-     {
-      "a": [
-       10
-      ],
-      "say": "A dozen is 12, not 10."
-     }
-    ]
-   },
-   {
-    "id": "c6",
-    "tier": "core",
-    "type": "number",
-    "q": "Each book costs $3. Kumar buys 5 books. How much do the 5 books cost?",
-    "answer": 15,
-    "hint": "Each means for one. Count groups.",
-    "steps": [
-     "5 groups of $3.",
-     "3 + 3 + 3 + 3 + 3 = 15.",
-     "The 5 books cost $15."
-    ],
-    "slips": [
-     {
-      "a": [
-       8
-      ],
-      "say": "8 adds 3 and 5. Count 5 groups of $3."
-     }
-    ],
-    "fig": {
-     "type": "objects",
-     "icon": "book",
-     "n": "{n}",
-     "per_row": 6
-    },
-    "fig_base": {
-     "type": "objects",
-     "icon": "book",
-     "n": 5,
-     "per_row": 6
-    },
-    "tpl": {
-     "vars": {
-      "n": [
-       3,
-       4,
-       5,
-       6
-      ],
-      "u": [
-       2,
-       3,
-       4,
-       5
-      ]
-     },
-     "q": "Each book costs ${u}. Kumar buys {n} books. How much do the {n} books cost?",
-     "answer": "n*u",
-     "hint": "Each means for one. Count groups.",
-     "steps": [
-      "{n} groups of ${u}.",
-      "{n} × {u} = {ans}.",
-      "The {n} books cost ${ans}."
+      "1 cup costs ${u}."
      ]
     }
    },
    {
     "id": "t1",
     "tier": "stretch",
-    "type": "fields",
-    "q": "3 books cost $12. Look at the strip. Fill in the boxes.",
-    "easier": "c3",
-    "hint": "Find 1 book first. Then find the cost of many.",
+    "type": "number",
+    "q": "Mei thinks of a number. She doubles it. Then she adds 3. She gets 17. What was her number?",
+    "answer": 7,
+    "hint": "Work backwards. Undo the last step first.",
     "steps": [
-     "$12 shared equally among 3 books is $4.",
-     "7 groups of $4 make $28."
+     "Take 3 away from 17: 14.",
+     "Half of 14 is 7.",
+     "Mei's number is 7."
     ],
-    "slips": [],
-    "frame": "1 book costs ${u}. 7 books cost ${w}.",
-    "fields": [
+    "slips": [
      {
-      "id": "u",
-      "answer": 4
-     },
-     {
-      "id": "w",
-      "answer": 28
+      "a": [
+       14
+      ],
+      "say": "14 is halfway. Undo the doubling too: half of 14."
      }
     ],
-    "fig": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "{n} books",
-       "len": "{n}"
-      }
-     ],
-     "units": {
-      "n": "{n}",
-      "text": "?"
-     },
-     "brace": {
-      "text": "${t}",
-      "over": "all"
-     }
-    },
-    "fig_base": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "3 books",
-       "len": 3
-      }
-     ],
-     "units": {
-      "n": 3,
-      "text": "?"
-     },
-     "brace": {
-      "text": "$12",
-      "over": "all"
-     }
-    },
+    "easier": "c2",
     "tpl": {
      "vars": {
       "n": [
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ],
+      "k": [
+       2,
        3,
        4,
        5
-      ],
-      "u": [
-       2,
-       3,
-       4
-      ],
-      "m": [
-       6,
-       7,
-       8
       ]
      },
      "derive": {
-      "t": "n*u",
-      "w": "m*u"
+      "t": "n+n+k"
      },
-     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
-     "frame": "1 book costs ${u}. {m} books cost ${w}.",
-     "answers": {
-      "u": "u",
-      "w": "w"
-     },
-     "hint": "Find 1 book first. Then find the cost of many.",
+     "q": "Mei thinks of a number. She doubles it. Then she adds {k}. She gets {t}. What was her number?",
+     "answer": "n",
+     "hint": "Work backwards. Undo the last step first.",
      "steps": [
-      "${t} shared equally among {n} books is ${u}.",
-      "{m} groups of ${u} make ${w}."
+      "Take {k} away from {t}.",
+      "Then take half of that.",
+      "Mei's number is {ans}."
      ]
     }
    },
@@ -3026,100 +3062,42 @@
     "id": "t2",
     "tier": "stretch",
     "type": "number",
-    "q": "A dozen buns cost $24. How much do 3 buns cost?",
+    "q": "Lily is 4th from the front of a queue. Ravi is 9th from the front. How many children are there from Lily to Ravi, counting both?",
     "answer": 6,
-    "easier": "c5",
-    "hint": "A dozen is 12. Find 1 bun first.",
+    "hint": "List the places: 4th, 5th, and so on.",
     "steps": [
-     "12 buns cost $24, so 1 bun costs $2.",
-     "3 groups of $2.",
-     "3 buns cost $6."
+     "The places are 4th, 5th, 6th, 7th, 8th, 9th.",
+     "That is 6 children."
     ],
     "slips": [
      {
       "a": [
-       2
+       5
       ],
-      "say": "2 is the cost of 1 bun. How much do 3 buns cost?"
+      "say": "9 - 4 leaves one end out. Count both ends."
      }
     ],
+    "easier": "c4",
     "tpl": {
      "vars": {
-      "u": [
-       2,
-       3
-      ],
-      "k": [
-       2,
-       3,
-       4,
-       5
-      ]
-     },
-     "derive": {
-      "t": "12*u"
-     },
-     "q": "A dozen buns cost ${t}. How much do {k} buns cost?",
-     "answer": "u*k",
-     "hint": "A dozen is 12. Find 1 bun first.",
-     "steps": [
-      "12 buns cost ${t}, so 1 bun costs ${u}.",
-      "{k} groups of ${u}.",
-      "{k} buns cost ${ans}."
-     ]
-    }
-   },
-   {
-    "id": "t3",
-    "tier": "stretch",
-    "type": "number",
-    "q": "3 pens cost $9. Ben has $12. How many pens can Ben buy?",
-    "answer": 4,
-    "easier": "c1",
-    "hint": "Find 1 pen first. How many groups fit?",
-    "steps": [
-     "$9 shared among 3 pens is $3.",
-     "How many groups of $3 fit in $12?",
-     "Ben can buy 4 pens."
-    ],
-    "slips": [
-     {
       "a": [
-       3
-      ],
-      "say": "3 is the number of pens in the story. How many $3 pens can Ben buy with $12?"
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "n": [
        3,
        4,
        5
       ],
-      "u": [
-       2,
-       3,
-       4
-      ],
-      "j": [
-       2,
-       3,
-       4,
-       5
+      "b": [
+       8,
+       9,
+       10
       ]
      },
-     "derive": {
-      "t": "n*u",
-      "m": "j*u"
-     },
-     "q": "{n} pens cost ${t}. Ben has ${m}. How many pens can Ben buy?",
-     "answer": "j",
-     "hint": "Find 1 pen first. How many groups fit?",
+     "q": "Lily is {a}th from the front of a queue. Ravi is {b}th from the front. How many children are there from Lily to Ravi, counting both?",
+     "answer": "b-a+1",
+     "hint": "List the places from {a}th to {b}th.",
      "steps": [
-      "${t} shared among {n} pens is ${u}.",
-      "How many groups of ${u} fit in ${m}?",
-      "Ben can buy {ans} pens."
+      "List the places from {a}th to {b}th.",
+      "Count them: {ans} places.",
+      "There are {ans} children."
      ]
     }
    },
@@ -3127,23 +3105,23 @@
     "id": "g1",
     "tier": "challenge",
     "type": "number",
-    "q": "2 hats cost $10. 3 scarves cost $18. Jenny buys 1 hat and 2 scarves. How much does Jenny pay?",
-    "answer": 17,
-    "easier": "t2",
-    "hint": "Find the cost of 1 hat and of 1 scarf first.",
+    "q": "3 pens cost $12. 2 rubbers cost $6. Jenny buys 2 pens and 1 rubber. How much does she pay?",
+    "answer": 11,
+    "hint": "Find the price of 1 pen and 1 rubber first.",
     "steps": [
-     "1 hat costs $5.",
-     "1 scarf costs $6, so 2 scarves cost $12.",
-     "$5 + $12 = $17."
+     "1 pen costs $4, so 2 pens cost $8.",
+     "1 rubber costs $3.",
+     "$8 + $3 = $11."
     ],
     "slips": [
      {
       "a": [
-       28
+       18
       ],
-      "say": "28 adds the two totals. Find 1 hat and 1 scarf first."
+      "say": "18 adds the two totals. Find 1 pen and 1 rubber first."
      }
     ],
+    "easier": "t1",
     "tpl": {
      "vars": {
       "a": [
@@ -3158,15 +3136,15 @@
       ]
      },
      "derive": {
-      "h": "2*a",
-      "s": "3*b"
+      "p": "3*a",
+      "r": "2*b"
      },
-     "q": "2 hats cost ${h}. 3 scarves cost ${s}. Jenny buys 1 hat and 2 scarves. How much does Jenny pay?",
-     "answer": "a+b+b",
-     "hint": "Find the cost of 1 hat and of 1 scarf first.",
+     "q": "3 pens cost ${p}. 2 rubbers cost ${r}. Jenny buys 2 pens and 1 rubber. How much does she pay?",
+     "answer": "a+a+b",
+     "hint": "Find the price of 1 pen and 1 rubber first.",
      "steps": [
-      "1 hat costs ${a}.",
-      "1 scarf costs ${b}, so 2 scarves cost {b}+{b}.",
+      "1 pen costs ${a}, so 2 pens cost {a}+{a}.",
+      "1 rubber costs ${b}.",
       "Jenny pays ${ans}."
      ]
     }
@@ -3174,71 +3152,17 @@
    {
     "id": "g2",
     "tier": "challenge",
-    "type": "number",
-    "q": "6 pens cost $18. Mei has $20. She buys 4 pens. How much money does Mei have left?",
-    "answer": 8,
-    "easier": "t3",
-    "hint": "Find 1 pen, then 4 pens, then what is left.",
-    "steps": [
-     "1 pen costs $3.",
-     "4 pens cost $12.",
-     "$20 - $12 = $8."
-    ],
-    "slips": [
-     {
-      "a": [
-       12
-      ],
-      "say": "12 is the cost of the 4 pens. How much money is left from $20?"
-     }
-    ],
-    "tpl": {
-     "vars": {
-      "u": [
-       2,
-       3,
-       4
-      ],
-      "n": [
-       3,
-       6
-      ],
-      "k": [
-       2,
-       4
-      ],
-      "m": [
-       20,
-       30
-      ]
-     },
-     "derive": {
-      "t": "n*u"
-     },
-     "q": "{n} pens cost ${t}. Mei has ${m}. She buys {k} pens. How much money does Mei have left?",
-     "answer": "m-k*u",
-     "hint": "Find 1 pen, then {k} pens, then what is left.",
-     "steps": [
-      "1 pen costs ${u}.",
-      "{k} pens cost {k} × {u}.",
-      "${m} take away the cost is ${ans}."
-     ]
-    }
-   },
-   {
-    "id": "g3",
-    "tier": "challenge",
     "type": "selfcheck",
-    "q": "Make your own shop puzzle. Choose a price for 1 pen and a number of pens. Write how much the pens cost in all, and ask a grown-up to find the price of 1 pen. Many answers are right.",
-    "hint": "Start with the price of 1 pen, then multiply.",
+    "q": "Make your own tool problem. Write a number puzzle that you can solve by working backwards, and ask a grown-up to solve it. Many answers are right.",
+    "hint": "Start with the answer, then write the steps that lead to it.",
     "steps": [
-     "Choose the price of 1 pen.",
-     "Choose how many pens.",
-     "Write how much they cost in all.",
-     "Ask a grown-up to find 1 pen."
+     "Choose a number.",
+     "Choose a step, such as add 4.",
+     "Write the end number.",
+     "Ask a grown-up to work backwards."
     ],
     "slips": [],
-    "easier": "c1"
+    "easier": "c2"
    }
   ]
  },
@@ -3252,61 +3176,61 @@
   "menu": [
    {
     "id": "M1",
-    "title": "Does 1 cost more if we buy more?",
+    "title": "Is there another tool?",
     "minutes": 4,
-    "tutor": "Mei says: 2 pens cost $6, so 1 pen costs $3. At 4 pens for $12, 1 pen costs $6. Is Mei right? Test it with tokens.",
-    "rec": "Recording: pause. Mei says 1 pen costs $3 for 2 pens at $6, but $6 for 4 pens at $12. Is she right?",
-    "answer": "No. $12 shared equally among 4 pens is $3 each, the same as before. 1 pen costs the same when each pen costs the same, so we say such pens or each."
+    "tutor": "Mei counted 4 bags of 5 sweets by drawing. Is there another tool that would work? Try counting in 5s, or a table. Which was quicker?",
+    "rec": "Recording: pause. Mei drew 4 bags of 5 sweets. Find another tool that works. Which is quicker?",
+    "answer": "Counting in 5s (spot the pattern) gives 5, 10, 15, 20. A table of bags and sweets gives the same 20. Drawing works too. Any tool that gets 20 and can be checked is a good tool."
    },
    {
     "id": "M2",
-    "title": "Make a shop puzzle for your grown-up",
+    "title": "Make a tool problem for your grown-up",
     "minutes": 4,
-    "tutor": "Choose a price for 1 pen and a number of pens. Write how much they cost in all. Ask your grown-up to find the price of 1 pen, then check with tokens.",
-    "rec": "Recording: pause. Choose a price for 1 pen. Write the total for some pens. Ask a grown-up to find the price of 1.",
-    "answer": "No single answer. Check by sharing: with 4 pens at $5 each the total is $20, and $20 shared among 4 pens is $5."
+    "tutor": "Write a short problem that works well with one tool. Tell your grown-up the tool to try. Then check their answer another way.",
+    "rec": "Recording: pause. Write a problem for one tool. Ask a grown-up to solve it and check it another way.",
+    "answer": "No single answer. Check with the tool named: for example, 'I think of a number and add 5 to get 12' works well backwards (12 - 5 = 7)."
    },
    {
     "id": "M3",
     "title": "Teach it back",
     "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never found the price of one. Use tokens to show how 3 books cost $12, so 1 book costs $4.",
-    "rec": "Recording: pause. Show a grown-up how to share 12 tokens among 3 books to find the cost of 1 book.",
-    "answer": "12 tokens shared equally among 3 books is 4 tokens each, so 1 book costs $4."
+    "tutor": "Pretend a toy has never worked backwards. Show it how to find the number: I think of a number, add 3 and get 10.",
+    "rec": "Recording: pause. Show a grown-up how to work backwards when a number plus 3 is 10.",
+    "answer": "Undo the adding: 10 - 3 = 7. Check: 7 + 3 = 10."
    }
   ]
  },
  "parent": {
-  "summary": "We found the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\"), then the cost of many, with tokens and a strip. We met the words each, a dozen and such. Money is whole dollars only. Sharing within 20 and multiplying within 40 is Primary 1 work; chaining the steps, a dozen, such and how many can be bought go past the Primary 1 syllabus on purpose. Your child may also have played Mi's Chal\u00adlenge Quest, our end-of-term game with Mi, on private paper; your tutor then sends one line about what we saw.",
+  "summary": "This was a choose-the-tool lesson: nothing new was taught. We met six tools (draw it, act it out, spot the pattern, list every way, make a table, work backwards), solved mixed problems from the term in fresh numbers, picked a tool, said why and checked the answer another way. Most questions are Primary 1 work; choosing a tool and giving a reason, queue counting with both ends, three-step number puzzles and the price of one in two shops go past the school Primary 1 syllabus on purpose. Your child may also have played Mi's Chal­lenge Quest, our end-of-term game with Mi, on private paper; your tutor then sends one line about what we saw.",
   "words": [
-   "each: for one",
-   "a dozen: 12",
-   "such: of the same kind",
-   "find one first: share the total equally to find the price of 1",
-   "×: groups of (6 × 3 is 6 groups of 3)"
+   "tool: a way to solve a problem",
+   "work backwards: undo the steps",
+   "check: try the answer a second way",
+   "queue: a line of people",
+   "each: for one"
   ],
   "try_home": [
-   "Shop: put 3 small things on the table and a price of $6 for the three. Ask your child to find the price of 1, then of 2, using tokens.",
-   "A dozen: look for a dozen of something (12 spoons, 12 buttons). Ask: if a dozen costs $24, how much does 1 cost?",
-   "Check it: ask your child to put the price of 1 back into the story. 4 pens at $3 each: do they make $12?"
+   "Two ways: pick a small problem, such as 4 bags with 5 sweets in each bag. Solve it with a drawing, then check it by counting in 5s.",
+   "Think of a number: you think of a number, add 3 and tell your child the answer. Can they work backwards to your number?",
+   "Which tool? Give your child a problem and ask: which tool will you try first, and why?"
   ],
   "ask": [
-   "What do we find first?",
-   "How do you know your answer is right?"
+   "Which tool did you pick, and why?",
+   "How did you check your answer?"
   ],
-  "when_stuck": "Let your child share tokens or counters one at a time, and wait 10 seconds before helping. Asking ‘how many do we want?’ works better than giving the answer. Please do not teach a rule or the division sign: tokens and ‘share equally’ are enough. Money is whole dollars only. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "when_stuck": "Let your child use counters or draw, and wait 10 seconds before helping. Asking ‘which tool could you try?’ works better than giving the answer. Please do not teach a rule: counters and drawings are enough. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
   "next": "Next term, the first lesson of Term 3: What Time Is It? Your tutor will tell you the start date. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
-  "quote": "Find one, then find many.",
-  "report_line": "Your child is learning to find the cost of one by sharing equally, and then the cost of many. This week: pens, buns and books in whole dollars.",
-  "term_line": "Term 2 is done: places, strips, doubles, odd and even, groups, tables, sharing, stories, picture equations and prices.",
+  "quote": "Pick a tool, say why, and check.",
+  "report_line": "Your child is learning to choose a tool for a problem, say why, and check the answer another way. This week: a toolbox of six tools and mixed Term 2 problems.",
+  "term_line": "Term 2 is done: places, strips, picture equations, odd and even, groups, tables, sharing, stories, prices, and choosing a tool.",
   "next_materials": [
-   "Your Term 3 book is in the house: tear out the clock page, and a grown-up cuts out the 6 clock hands (the 2 clock faces can stay on the page or be cut out)",
-   "Keep the $1 tokens from this lesson: they are needed again in Term 3 Lesson 4, Dollars and Change",
+   "Your Term 3 book is in the house: tear out the clock page, and a grown-up cuts out the 6 clock hands (the 2 clock faces can stay on the page)",
+   "Keep the $1 tokens from Term 2 Lesson 9: they are needed again in Term 3 Lesson 4, Dollars and Change",
    "A real clock with a face helps (not needed to start)"
   ]
  },
  "safeguarding": [
-  "Tokens, counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Money is whole dollars only: no real money, notes or coins are needed.",
+  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Money is whole dollars only: no real money, notes or coins are needed.",
   "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
   "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. Mi's Challenge Quest stays flat on the table and is never held up or read out, and nothing is added up in front of the group. There is no private chat.",
   "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
@@ -3316,65 +3240,62 @@
  ],
  "tutor_prep": [
   "Solve every workbook question and every quest gate (and the secret cave item) yourself first, with the quest tutor notes (L20_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Money is whole dollars only; do not bring notes or coins into the lesson.",
-  "A week before, send the families the grown-up note (L20_Quest_Parent_Note.pdf), the Quest Log (L20_Quest_Log.pdf, 3 pages, print at 100%) and the lesson materials: the workbook with the tokens kit page (a grown-up cuts out the 30 tokens), a few small shop items, and a closed envelope for the Quest Log. A family with no printer tells you: arrange the make-up slot. Build the quest files with: bash term/l1/build.sh 20 then python3 term/l1/assets/quest_build.py 20.",
-  "Hand-off to Term 3: remind families at the goodbye and in the parent summary that the Term 3 book is needed in the house, that a grown-up tears out the clock page and cuts out the 6 clock hands, and that the $1 tokens must be kept (Term 3 Lesson 4 uses them). The clock is part of the first lesson, not optional.",
+  "A week before, send the families the grown-up note (L20_Quest_Parent_Note.pdf), the Quest Log (L20_Quest_Log.pdf, 4 pages, print at 100%) and the lesson materials: the workbook with the tool cards kit page (a grown-up cuts out the 6 tool cards and 6 problem cards) and a closed envelope for the Quest Log. A family with no printer tells you: arrange the make-up slot. Build the quest files with: bash term/l1/build.sh 20.",
+  "Hand-off to Term 3: remind families at the goodbye and in the parent summary that the Term 3 book is needed in the house, that a grown-up tears out the clock page and cuts out the 6 clock hands, and that the $1 tokens from Term 2 Lesson 9 must be kept (Term 3 Lesson 4 uses them). The clock is part of the first lesson, not optional.",
   "Have the slides open. The quest is straight after the brain break, minutes 35 to 55, then the workbook. Have the quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the quest. Delete each child's notes sheet when the line is sent.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
-  "Be plain with families: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the steps with different numbers, a dozen, such and how many can be bought go beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Use the words shared equally, not a division sign. The tokens and the strip are the method, not a rule to recite."
+  "Be plain with families: most questions are Primary 1 work in fresh numbers, but choosing a tool and giving a reason, the same problem with a second tool, queue counting with both ends, three-step number puzzles and the price of one in two shops go beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. In the tool market nobody solves: the child points to a tool and says I will ... because ...; two cards have two good tools, so there is no single right tool. The strips, counters and tables are the method, not a rule to recite."
  ],
  "workbook": {
-  "header": "Division and money: find one first",
-  "hint_p1": "A token is $1. Share the tokens to find 1. Count groups to find many.",
-  "hint_p2": "Find 1 first. Then find many. Each means for one.",
-  "hint_p3": "Use tokens or draw a strip. Find 1 first. A dozen is 12. Such cups are cups the same. Choose any question.",
+  "header": "Choose your tool: say why and check",
+  "hint_p1": "Choose a tool. You may draw, use counters, or make a table. Write the tool you used. Tick I checked.",
+  "hint_p2": "There is no wrong tool. Pick one, say why, and check your answer.",
+  "hint_p3": "Solve it with one tool, then check it with another. Many answers are right where it says Choose.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",
   "inv_then_label": "Next:",
-  "home_hint": "Use tokens or counters. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "home_hint": "Use counters or draw. Small things stay on the table, away from mouths and little brothers and sisters.",
   "kits": [
    {
-    "type": "cards",
-    "labels": [
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1",
-     "$1"
+    "type": "tool_cards",
+    "tools": [
+     [
+      "t_draw",
+      "Draw it"
+     ],
+     [
+      "child1",
+      "Act it out"
+     ],
+     [
+      "t_steps",
+      "Spot the pattern"
+     ],
+     [
+      "t_list",
+      "List every way"
+     ],
+     [
+      "t_table",
+      "Make a table"
+     ],
+     [
+      "t_back",
+      "Work backwards"
+     ]
     ],
-    "cols": 6,
-    "w": 90,
-    "h": 90,
-    "round": true,
-    "width": 100,
-    "title": "Kit page: $1 tokens",
-    "intro": "A grown-up cuts out the 30 round tokens before the lesson (the lesson needs at most 28). A token stands for one dollar. Whole dollars only: there are no coins or notes in this lesson. Keep the tokens in an envelope."
+    "problems": [
+     "1. Ali 15, Siti 6 fewer",
+     "2. 20 counters, bags of 4",
+     "3. 7 boxes of 5 pencils",
+     "4. A number add 6 is 15",
+     "5. 2 hats, 3 scarves: pairs",
+     "6. Two odd numbers: even?"
+    ],
+    "title": "Kit page: tool cards and problem cards",
+    "intro": "A grown-up cuts out the 12 cards before the lesson: 6 tool cards and 6 problem cards. Each problem card has a short label; your tutor reads the whole problem aloud. No cutting? Write the 6 tool names on 6 scraps of paper."
    }
   ]
  },
@@ -3383,8 +3304,8 @@
   "title": "Mi's Challenge Quest",
   "minutes": 20,
   "where": "Term 2 Lesson 10 (the last lesson of the term), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
-  "plan_note": "Owner decisions of 22 Oct 2026: the end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Term 2 Lessons 3 and 4 share gate 3 and Term 2 Lessons 5 and 6 share gate 4, so every lesson of the term is still visited. Gate 7 asks the child to try a friend's number by putting it back, which is the claim-trying the term line talks about. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The quest sits straight after the brain break (not at the end of the lesson as in Term 1) so children are fresh. The Quest Log has no pictures except the ten-frames in gate 3, because the page generator draws only a few figure types.",
-  "sheet_pages": 3,
+  "plan_note": "Owner decisions of 22 and 23 Oct 2026: the end-of-term slot is a game with Mi, not a test, and it sits in a choose-the-tool lesson. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, in words, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level. Six gates are tagged to lessons, and each covers one or two lessons (11 and 12, 13, 14 and 16, 15 and 17, 18, 19), so every lesson of the term is still visited; two gates (7 and 8) are mixed and carry no lesson tag. No gate names a tool: the child circles the tool they used. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The quest sits straight after the brain break so children are fresh. The Quest Log has no pictures because the page generator draws only a few figure types.",
+  "sheet_pages": 4,
   "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
   "child_rules": [
    "Mi is swimming to the Pearl Cave and needs your help at 8 gates.",
@@ -3395,248 +3316,62 @@
   ],
   "child_footer": "Math Inquirers Term 2 Mi's Challenge Quest. Print at 100% (actual size).",
   "page_instructions": [
-   "Gates 1, 2 and 3: Mi needs your help. Write your answers in the spaces.",
-   "Gates 4, 5 and 6: keep swimming. Write your answers in the spaces.",
-   "Gates 7 and 8 and the secret cave: nearly there. Circle Yes or No where you see it."
+   "Gates 1 and 2: Mi needs your help. Write your answers in the spaces.",
+   "Gates 3 and 4: keep swimming. Write your answers in the spaces.",
+   "Gates 5 and 6: keep going. Circle Yes or No where you see it.",
+   "Gates 7 and 8 and the secret cave: nearly there."
   ],
   "questions": [
    {
     "id": "C1",
-    "lesson": 11,
-    "strand": "numbers",
+    "lesson": [
+     11,
+     12
+    ],
     "page": 1,
     "tier": "start",
-    "skill": "A place in a line (1st, 2nd, 3rd) and how many are in front",
-    "text": "Siti is 4th in a line. Ben stands right behind Siti.",
+    "skill": "A place in a queue and how many are in front (Term 2 Lesson 1); a strip for fewer (Term 2 Lesson 2)",
+    "text": "Kumar is 6th in a line. Ben has 24 marbles. Jenny has 8 fewer marbles than Ben.",
     "parts": [
      {
       "l": "a",
-      "text": "Ben is ___ in the line.",
-      "ans": "5th",
+      "text": "There are [box] children in front of Kumar.",
+      "ans": "5",
       "val": 5
      },
      {
       "l": "b",
-      "text": "There are [box] children in front of Siti.",
-      "ans": "3",
-      "val": 3
+      "text": "Jenny has ___ marbles.",
+      "ans": "16",
+      "val": 16
      }
     ],
-    "say": "Gate 1. Siti is 4th in a line. Ben stands right behind Siti. Part a: Ben is blank in the line. Part b: how many children are in front of Siti?",
-    "answer": "5th; 3",
+    "say": "Gate 1. Kumar is 6th in a line. Ben has 24 marbles. Jenny has 8 fewer marbles than Ben. Part a: how many children are in front of Kumar? Part b: Jenny has blank marbles.",
+    "answer": "5; 16",
     "val": [
      5,
-     3
+     16
     ],
-    "solution": "Right behind the 4th child is the 5th. In front of Siti are the 1st, 2nd and 3rd children: 3 children.",
-    "right": "Both correct (5th or 5 is right for part a).",
+    "solution": "In front of the 6th child are the 1st to the 5th: 5 children. Jenny has fewer, so take away: 24 - 8 = 16.",
+    "right": "Both correct.",
     "partly": "One of the two correct.",
     "mistakes": [
-     "(a) 3rd or 4th.",
-     "(b) 4 (counting Siti herself)."
+     "(a) 6 (counting Kumar).",
+     "(b) 32 (adding 8)."
+    ],
+    "strand": "numbers",
+    "tools": [
+     "list",
+     "draw"
     ]
    },
    {
     "id": "C2",
-    "lesson": 12,
-    "strand": "numbers",
-    "page": 1,
-    "tier": "start",
-    "skill": "A strip for more: the other person and the total",
-    "text": "Ravi has 26 marbles. Lily has 9 more marbles than Ravi.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Lily has ___ marbles.",
-      "ans": "35",
-      "val": 35
-     },
-     {
-      "l": "b",
-      "text": "They have ___ marbles altogether.",
-      "ans": "61",
-      "val": 61
-     }
-    ],
-    "say": "Gate 2. Ravi has 26 marbles. Lily has 9 more marbles than Ravi. Part a: Lily has blank marbles. Part b: they have blank marbles altogether.",
-    "answer": "35; 61",
-    "val": [
-     35,
-     61
-    ],
-    "solution": "Lily has 9 more than Ravi, so add: 26 + 9 = 35. Altogether: 26 + 35 = 61.",
-    "right": "Both correct.",
-    "partly": "Part a right and part b wrong, or part b right from a wrong part a (counts as one).",
-    "mistakes": [
-     "(a) 17 (taking away).",
-     "(b) 35 (stopping after part a) or 35 + 9."
-    ]
-   },
-   {
-    "id": "C3",
     "lesson": 13,
-    "strand": "numbers",
     "page": 1,
     "tier": "start",
-    "skill": "A double from ten-frames (Term 2 Lesson 3) and odd or even (Term 2 Lesson 4)",
-    "text": "Look at the ten-frames.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "9 + 9 = ___",
-      "ans": "18",
-      "val": 18
-     },
-     {
-      "l": "b",
-      "text": "Write odd or even. 15 is ___.",
-      "ans": "odd",
-      "val": "odd"
-     }
-    ],
-    "say": "Gate 3. Look at the ten-frames: 9 and 9. Part a: 9 plus 9 equals blank. Part b: write odd or even. 15 is blank.",
-    "answer": "18; odd",
-    "val": [
-     18,
-     "odd"
-    ],
-    "solution": "9 + 9 = 18 (one ten-frame is filled with 9, and so is the other: 10 + 8). 15 pairs up with 1 left over, so 15 is odd.",
-    "right": "Both correct.",
-    "partly": "One of the two correct.",
-    "mistakes": [
-     "(a) 17 or 19 (a counting slip).",
-     "(b) even (the last digit 5 is not read)."
-    ],
-    "visual": {
-     "type": "tenframes",
-     "a": 9,
-     "b": 9
-    },
-    "lessons": [
-     13,
-     14
-    ]
-   },
-   {
-    "id": "C4",
-    "lesson": 15,
-    "strand": "groups",
-    "page": 2,
-    "tier": "start",
-    "skill": "Groups of the same size and the times sign (Term 2 Lesson 5), counting in 2s (Term 2 Lesson 6)",
-    "text": "Jenny has 3 jars. Each jar has 5 sweets.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Fill in the boxes. [box] × [box] = [box][box]",
-      "ans": "3 × 5 = 15 (or 5 × 3)",
-      "val": 15
-     },
-     {
-      "l": "b",
-      "text": "Count in 2s: 2, 4, 6, ___, 10",
-      "ans": "8",
-      "val": 8
-     }
-    ],
-    "say": "Gate 4. Jenny has 3 jars. Each jar has 5 sweets. Part a: fill in the boxes: blank times blank equals blank. Part b: count in 2s: 2, 4, 6, blank, 10.",
-    "answer": "3 × 5 = 15; 8",
-    "val": [
-     15,
-     8
-    ],
-    "solution": "3 groups of 5: 5 + 5 + 5 = 15, so 3 × 5 = 15 (5 × 3 = 15 is also right). Counting in 2s: 2, 4, 6, 8, 10.",
-    "right": "Both correct (3 and 5 in either order, and 15).",
-    "partly": "One of the two correct, or the product right with the factors swapped or missing.",
-    "mistakes": [
-     "(a) 3 + 5 = 8.",
-     "(b) 7 (counting on by 1)."
-    ],
-    "lessons": [
-     15,
-     16
-    ]
-   },
-   {
-    "id": "C5",
-    "lesson": 17,
-    "strand": "groups",
-    "page": 2,
-    "tier": "start",
-    "skill": "Share equally and put into groups (Term 2 Lesson 7)",
-    "text": "Siti shares 16 stickers equally among 4 friends. Kumar puts 10 pens into boxes, 2 pens in each box.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "Each of Siti's friends gets [box] stickers.",
-      "ans": "4",
-      "val": 4
-     },
-     {
-      "l": "b",
-      "text": "Kumar needs [box] boxes.",
-      "ans": "5",
-      "val": 5
-     }
-    ],
-    "say": "Gate 5. Siti shares 16 stickers equally among 4 friends. Kumar puts 10 pens into boxes, 2 pens in each box. Part a: each of Siti's friends gets blank stickers. Part b: Kumar needs blank boxes.",
-    "answer": "4; 5",
-    "val": [
-     4,
-     5
-    ],
-    "solution": "16 shared equally among 4 friends is 4 each. 10 pens in groups of 2 make 5 boxes (2, 4, 6, 8, 10).",
-    "right": "Both correct.",
-    "partly": "One of the two correct.",
-    "mistakes": [
-     "(a) 12 (16 - 4) or 20.",
-     "(b) 8 (10 - 2) or 2 (the pens in each box)."
-    ]
-   },
-   {
-    "id": "C6",
-    "lesson": 18,
-    "strand": "groups",
-    "page": 2,
-    "tier": "start",
-    "skill": "A times story with a second step (Term 2 Lesson 8)",
-    "text": "Mei has 5 bags. Each bag has 3 sweets. She gives 4 sweets to Ben.",
-    "parts": [
-     {
-      "l": "a",
-      "text": "The bags have ___ sweets.",
-      "ans": "15",
-      "val": 15
-     },
-     {
-      "l": "b",
-      "text": "Mei has ___ sweets left.",
-      "ans": "11",
-      "val": 11
-     }
-    ],
-    "say": "Gate 6. Mei has 5 bags. Each bag has 3 sweets. She gives 4 sweets to Ben. Part a: the bags have blank sweets. Part b: Mei has blank sweets left.",
-    "answer": "15; 11",
-    "val": [
-     15,
-     11
-    ],
-    "solution": "5 groups of 3 is 15 sweets. She gives 4 away: 15 - 4 = 11.",
-    "right": "Both correct.",
-    "partly": "Part a right and part b wrong (for example 19), or part b right from a wrong part a.",
-    "mistakes": [
-     "(a) 8 (adding 5 and 3).",
-     "(b) 19 (adding 4) or 4."
-    ]
-   },
-   {
-    "id": "C7",
-    "lesson": 19,
-    "strand": "numbers",
-    "page": 3,
-    "tier": "start",
-    "skill": "A hidden number in a picture equation, and checking a friend's number (Term 2 Lesson 9)",
-    "text": "Each shape is a number. The heart + the heart = 18. Ben says the heart is 8.",
+    "skill": "A hidden number in a picture equation, and checking a friend's number (Term 2 Lesson 3)",
+    "text": "Each shape is a number. The star + the star + the star = 18. Ben says the star is 5.",
     "parts": [
      {
       "l": "a",
@@ -3646,59 +3381,272 @@
      },
      {
       "l": "b",
-      "text": "The heart is ___.",
-      "ans": "9",
-      "val": 9
+      "text": "The star is ___.",
+      "ans": "6",
+      "val": 6
      }
     ],
-    "say": "Gate 7. Each shape is a number. The heart plus the heart equals 18. Ben says the heart is 8. Part a: is Ben correct? Circle Yes or No. Part b: the heart is blank.",
-    "answer": "No; 9",
+    "say": "Gate 2. Each shape is a number. The star plus the star plus the star equals 18. Ben says the star is 5. Part a: is Ben correct? Circle Yes or No. Part b: the star is blank.",
+    "answer": "No; 6",
     "val": [
      "No",
-     9
+     6
     ],
-    "solution": "8 + 8 = 16, not 18, so Ben is not correct. 9 + 9 = 18, so the heart is 9.",
-    "right": "No and 9.",
+    "solution": "5 + 5 + 5 = 15, not 18, so Ben is not correct. 6 + 6 + 6 = 18, so the star is 6.",
+    "right": "No and 6.",
     "partly": "One of the two correct.",
     "mistakes": [
-     "(a) Yes (not checking by adding 8 + 8).",
-     "(b) 18 (the total)."
+     "(a) Yes (not putting 5 back into the line).",
+     "(b) 18 (the total) or 3 (the number of stars)."
+    ],
+    "strand": "numbers",
+    "tools": [
+     "backwards",
+     "actout"
+    ]
+   },
+   {
+    "id": "C3",
+    "lesson": [
+     14,
+     16
+    ],
+    "page": 2,
+    "tier": "start",
+    "skill": "Odd and even (Term 2 Lesson 4) and counting in 5s (Term 2 Lesson 6)",
+    "text": "Mei adds 9 and 7. Siti counts in 5s.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Write odd or even. 9 + 7 is ___.",
+      "ans": "even",
+      "val": "even"
+     },
+     {
+      "l": "b",
+      "text": "Count in 5s: 5, 10, 15, ___, 25",
+      "ans": "20",
+      "val": 20
+     }
+    ],
+    "say": "Gate 3. Mei adds 9 and 7. Siti counts in 5s. Part a: write odd or even. 9 plus 7 is blank. Part b: count in 5s: 5, 10, 15, blank, 25.",
+    "answer": "even; 20",
+    "val": [
+     "even",
+     20
+    ],
+    "solution": "9 + 7 = 16, and 16 pairs up with none left over, so it is even. Counting in 5s: 5, 10, 15, 20, 25.",
+    "right": "Both correct.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "(a) odd (two odd numbers look odd).",
+     "(b) 16 or 30 (a slip)."
+    ],
+    "strand": "groups",
+    "tools": [
+     "pattern",
+     "table"
+    ]
+   },
+   {
+    "id": "C4",
+    "lesson": [
+     15,
+     17
+    ],
+    "page": 2,
+    "tier": "start",
+    "skill": "Groups of the same size and the times sign (Term 2 Lesson 5); sharing equally (Term 2 Lesson 7)",
+    "text": "Jenny has 4 plates. Each plate has 6 cookies. Siti shares 18 sweets equally among 3 friends.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Fill in the boxes. [box] × [box] = [box][box]",
+      "ans": "4 × 6 = 24 (or 6 × 4)",
+      "val": 24
+     },
+     {
+      "l": "b",
+      "text": "Each friend gets [box] sweets.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "say": "Gate 4. Jenny has 4 plates. Each plate has 6 cookies. Siti shares 18 sweets equally among 3 friends. Part a: fill in the boxes: blank times blank equals blank. Part b: each friend gets blank sweets.",
+    "answer": "4 × 6 = 24; 6",
+    "val": [
+     24,
+     6
+    ],
+    "solution": "4 groups of 6: 6, 12, 18, 24, so 4 × 6 = 24 (6 × 4 = 24 is also right). 18 shared equally among 3 friends is 6 each.",
+    "right": "Both correct (4 and 6 in either order, and 24).",
+    "partly": "One of the two correct, or the product right with the factors swapped or missing.",
+    "mistakes": [
+     "(a) 4 + 6 = 10.",
+     "(b) 15 (18 - 3) or 3."
+    ],
+    "strand": "groups",
+    "tools": [
+     "actout",
+     "draw"
+    ]
+   },
+   {
+    "id": "C5",
+    "lesson": 18,
+    "page": 3,
+    "tier": "start",
+    "skill": "A times story with a second step (Term 2 Lesson 8)",
+    "text": "Ali has 4 boxes. Each box has 5 pencils. He gives 7 pencils to Ben.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The boxes have ___ pencils.",
+      "ans": "20",
+      "val": 20
+     },
+     {
+      "l": "b",
+      "text": "Ali has ___ pencils left.",
+      "ans": "13",
+      "val": 13
+     }
+    ],
+    "say": "Gate 5. Ali has 4 boxes. Each box has 5 pencils. He gives 7 pencils to Ben. Part a: the boxes have blank pencils. Part b: Ali has blank pencils left.",
+    "answer": "20; 13",
+    "val": [
+     20,
+     13
+    ],
+    "solution": "4 groups of 5 is 20 pencils. He gives 7 away: 20 - 7 = 13.",
+    "right": "Both correct.",
+    "partly": "Part a right and part b wrong (for example 27), or part b right from a wrong part a.",
+    "mistakes": [
+     "(a) 9 (adding 4 and 5).",
+     "(b) 27 (adding 7) or 7."
+    ],
+    "strand": "groups",
+    "tools": [
+     "draw",
+     "table"
+    ]
+   },
+   {
+    "id": "C6",
+    "lesson": 19,
+    "page": 3,
+    "tier": "start",
+    "skill": "Find one first, then many (Term 2 Lesson 9)",
+    "text": "4 cups cost $16.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 cup costs $___.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "5 cups cost $___.",
+      "ans": "20",
+      "val": 20
+     }
+    ],
+    "say": "Gate 6. 4 cups cost 16 dollars. Part a: 1 cup costs blank dollars. Part b: 5 cups cost blank dollars.",
+    "answer": "$4; $20",
+    "val": [
+     4,
+     20
+    ],
+    "solution": "$16 shared equally among 4 cups is $4 each. 5 cups cost 5 groups of $4, which is $20.",
+    "right": "Both correct.",
+    "partly": "Part a right and part b wrong, or part b right from a wrong part a.",
+    "mistakes": [
+     "(a) 20 (adding) or 64.",
+     "(b) 16 (the total) or 9 (4 + 5)."
+    ],
+    "strand": "groups",
+    "tools": [
+     "draw",
+     "table"
+    ]
+   },
+   {
+    "id": "C7",
+    "lesson": "mixed",
+    "page": 4,
+    "tier": "start",
+    "skill": "A number puzzle with two steps, and checking a friend's number",
+    "text": "Mei thinks of a number. She doubles it and then adds 5. She gets 21. Ben says her number is 9.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei's number is ___.",
+      "ans": "8",
+      "val": 8
+     },
+     {
+      "l": "b",
+      "text": "Is Ben correct? Circle Yes or No. [yesno]",
+      "ans": "No",
+      "val": "No"
+     }
+    ],
+    "say": "Gate 7. Mei thinks of a number. She doubles it and then adds 5. She gets 21. Ben says her number is 9. Part a: Mei's number is blank. Part b: is Ben correct? Circle Yes or No.",
+    "answer": "8; No",
+    "val": [
+     8,
+     "No"
+    ],
+    "solution": "21 - 5 = 16 and half of 16 is 8. Check: 8 + 8 = 16, 16 + 5 = 21. Ben's 9 gives 9 + 9 + 5 = 23, not 21, so Ben is not correct.",
+    "right": "8 and No.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "(a) 16 (stopping after taking 5 away) or 13.",
+     "(b) Yes (not trying 9)."
+    ],
+    "tools": [
+     "backwards"
     ]
    },
    {
     "id": "C8",
-    "lesson": 20,
-    "strand": "groups",
-    "page": 3,
+    "lesson": "mixed",
+    "page": 4,
     "tier": "start",
-    "skill": "Find one first, then many (Term 2 Lesson 10)",
-    "text": "8 buns cost $16.",
+    "skill": "Every way, and a skip-count pattern",
+    "text": "Siti has 2 hats and 3 scarves. She wears one hat and one scarf. The shop counts pens in 4s.",
     "parts": [
      {
       "l": "a",
-      "text": "1 bun costs $___.",
-      "ans": "2",
-      "val": 2
+      "text": "She can dress ___ different ways.",
+      "ans": "6",
+      "val": 6
      },
      {
       "l": "b",
-      "text": "5 buns cost $___.",
-      "ans": "10",
-      "val": 10
+      "text": "Count in 4s: 4, 8, 12, ___, 20",
+      "ans": "16",
+      "val": 16
      }
     ],
-    "say": "Gate 8. 8 buns cost 16 dollars. Part a: 1 bun costs blank dollars. Part b: 5 buns cost blank dollars.",
-    "answer": "$2; $10",
+    "say": "Gate 8. Siti has 2 hats and 3 scarves. She wears one hat and one scarf. The shop counts pens in 4s. Part a: she can dress blank different ways. Part b: count in 4s: 4, 8, 12, blank, 20.",
+    "answer": "6; 16",
     "val": [
-     2,
-     10
+     6,
+     16
     ],
-    "solution": "$16 shared equally among 8 buns is $2 each. 5 buns cost 5 groups of $2, which is $10.",
+    "solution": "Each hat goes with each of the 3 scarves: 3 + 3 = 6 ways. Counting in 4s: 4, 8, 12, 16, 20.",
     "right": "Both correct.",
-    "partly": "Part a right and part b wrong, or part b right from a wrong part a.",
+    "partly": "One of the two correct.",
     "mistakes": [
-     "(a) 24 (adding) or 128.",
-     "(b) 16 (the total) or 7 (2 + 5)."
+     "(a) 5 (2 + 3) or 3.",
+     "(b) 15 or 14 (a slip)."
+    ],
+    "tools": [
+     "list",
+     "actout",
+     "pattern"
     ]
    }
   ],
@@ -3706,10 +3654,11 @@
    "id": "CT",
    "tier": "think",
    "optional": true,
-   "lesson": 11,
+   "lesson": "beyond",
    "strand": "numbers",
-   "skill": "Queue counting: 8th from the front and from the back, and checking a claim",
-   "text": "Think harder (optional). Ravi is 8th from the front and 8th from the back of a line. Mei says there are 16 children in the line.",
+   "because": true,
+   "skill": "Queue counting with both ends, and checking a claim",
+   "text": "Think harder (optional). Ravi is 7th from the front and 4th from the back of a line. Mei says there are 11 children in the line.",
    "parts": [
     {
      "l": "a",
@@ -3720,20 +3669,20 @@
     {
      "l": "b",
      "text": "There are ___ children in the line.",
-     "ans": "15",
-     "val": 15
+     "ans": "10",
+     "val": 10
     }
    ],
-   "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Ravi is 8th from the front and 8th from the back of a line. Mei says there are 16 children in the line. Is Mei correct? Circle Yes or No. Then write how many children are in the line.",
-   "answer": "No; 15 children (7 in front of Ravi, Ravi, and 7 behind him)",
+   "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Ravi is 7th from the front and 4th from the back of a line. Mei says there are 11 children in the line. Is Mei correct? Circle Yes or No. Then write how many children are in the line. Choose a tool, and write why you chose it.",
+   "answer": "No; 10 children (6 in front of Ravi, Ravi, and 3 behind him)",
    "val": [
     "No",
-    15
+    10
    ],
-   "solution": "There are 7 children in front of Ravi and 7 behind him, and Ravi himself: 7 + 7 + 1 = 15. 8 + 8 = 16 counts Ravi twice.",
+   "solution": "There are 6 children in front of Ravi and 3 behind him, and Ravi himself: 6 + 1 + 3 = 10. 7 + 4 = 11 counts Ravi twice.",
    "mistakes": [
-    "16 (counting Ravi twice).",
-    "14 (leaving Ravi out)."
+    "11 (counting Ravi twice).",
+    "9 (leaving Ravi out)."
    ],
    "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing."
   },
@@ -3745,24 +3694,20 @@
     "lessons": [
      11,
      12,
-     13,
-     14,
-     19
+     13
     ],
     "questions": [
      "C1",
-     "C2",
-     "C3",
-     "C7"
+     "C2"
     ],
-    "looked_at": "places in a line (1st, 2nd, 3rd), strips for more and fewer, doubles, odd and even numbers, and finding a hidden number in a picture equation",
+    "looked_at": "places in a queue, strips for more and fewer, and finding a hidden number in a picture equation",
     "saw_examples": [
-     "[Name] found a place in a line (1st, 2nd, 3rd) and used a strip to find the other number and the total.",
-     "[Name] doubled numbers and told odd from even using the ten-frames.",
-     "[Name] tried a friend's number in a picture equation by putting it back, and explained what happened."
+     "[Name] found a place in a queue (1st, 2nd, 3rd) and used a strip or a list to find how many were in front.",
+     "[Name] tried a friend's number in a picture equation by putting it back, and explained what happened.",
+     "[Name] chose a tool for a number puzzle and checked the answer another way."
     ],
     "next_examples": [
-     "Line up toys at home and say 1st, 2nd, 3rd; draw two strips for more and fewer stories.",
+     "Line up toys at home and say 1st, 2nd, 3rd; draw a strip for more and fewer stories.",
      "Put a number back into a sum to try it, with counters."
     ]
    },
@@ -3771,22 +3716,23 @@
     "parent_name": "Groups, sharing and stories about groups",
     "moe_label": "Multiplication and Division; Money",
     "lessons": [
+     14,
      15,
      16,
      17,
      18,
-     20
+     19
     ],
     "questions": [
+     "C3",
      "C4",
      "C5",
-     "C6",
-     "C8"
+     "C6"
     ],
-    "looked_at": "groups of the same size and the times sign, counting in 2s and 5s, sharing equally and putting into groups, stories about groups with a second step, and finding the cost of one first",
+    "looked_at": "odd and even numbers, groups of the same size and the times sign, counting in 5s, sharing equally, stories about groups with a second step, and finding the cost of one first",
     "saw_examples": [
-     "[Name] wrote groups of the same size with the times sign and counted in 2s.",
-     "[Name] shared equally and put things into groups, using counters or a drawing.",
+     "[Name] told odd from even and counted in 5s.",
+     "[Name] wrote groups of the same size with the times sign and shared equally, using counters or a drawing.",
      "[Name] solved a story about groups with a second step, and found the cost of one first."
     ],
     "next_examples": [
@@ -3796,16 +3742,16 @@
    }
   ],
   "give": [
-   "A week before: send the grown-up note (L20_Quest_Parent_Note.pdf) and the Quest Log (L20_Quest_Log.pdf, 3 pages) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
-   "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. It is not a race, a gate may be skipped, and nothing is shown to the group.",
+   "A week before: send the grown-up note (L20_Quest_Parent_Note.pdf) and the Quest Log (L20_Quest_Log.pdf, 4 pages) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
+   "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. Under each gate they circle the tool they used and tick I checked: there is no wrong tool. It is not a race, a gate may be skipped, and nothing is shown to the group.",
    "Start at minute 35 (straight after the brain break) and finish by minute 55. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
-   "Read each page aloud, one gate at a time (the script has the words), then leave quiet working time: about 3 minutes for page 1, 3.5 for page 2 and 4 for page 3. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
+   "Read each page aloud, one gate at a time (the script has the words), then leave quiet working time: about 2.5 minutes for each page of two gates, and 4 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
    "Allowed: fingers, counters and talk with the quest partner. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the Quest Log over and draws quietly.",
-   "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 3, show slide s-quest2. Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, drawing, strip, talking to the partner."
+   "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, drawing, a table, talking to the partner, and which tool they circle."
   ],
   "after": [
-   "Same day: the grown-up takes ONE clear photo of each of the 3 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
-   "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you; accept 5 or 5th for gate 1 part a, and either order of 3 and 5 in gate 4. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
+   "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
+   "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you; accept either order of 4 and 6 in gate 4. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
    "Write ONE line for each grown-up from your notes (section 7): what we saw, in plain words, and one small next step if it helps. It is sent to the parent only. No marks, no x out of 8, no ranking, no comparison with other children, no prediction.",
    "Fill in the group advice sheet (section 6): what several children were still working on, with no names, and what you will do in the first lessons of next term. It is kept for next term's tutor and is never shown to families.",
    "Once the line is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete each child's notes sheet when the line is sent (keep only the line in the family file, and the group advice sheet). Never forward the photos or save them to a personal phone or any other device.",
@@ -3823,14 +3769,15 @@
    "No answer is said aloud during or after the quest. Gates open for everyone, whatever the answers.",
    "No clock, countdown or timer is shown; nobody is told who finished first or last.",
    "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the line goes to the parent only; no private message to any child.",
-   "No score, no x out of 8, no ranking, no tally, no comparison between children, not even in your own notes.",
+   "No score, no x out of 8, no ranking, no comparison between children, and no tally or count of any kind on a child's page or anywhere a family can see. In your own notes: words only. You may circle one of the three words (with help / with a prompt / on their own) for each habit in the private notes sheet (section 5); never add the circles up, never compare children, and never say or show the words to a child or a grown-up.",
    "The recording captures the tutor, the shared screen and any voice that is not muted: the recording is paused for the whole quest (slides s-quest1 and s-quest2) and restarted for the workbook. The WhatsApp number is never on a slide."
   ],
   "notes_sheet": {
-   "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look.",
+   "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look. Under the gates table you will find the four habits and the three-word scale: private, words only, never counted.",
    "prompts": [
-    "Something the child did well (a named strength, for example: drew a strip to find how many more marbles one child had)",
-    "How they started: counters, drawing a strip, ten-frames, or in their head",
+    "Something the child did well (a named strength, for example: listed the places in a queue to find how many were between two children)",
+    "Which tool they circled (a word), and a reason in their own words (the because line in the secret cave, or what they said)",
+    "How they started: counters, drawing a strip, a table, or in their head",
     "Where they paused or turned to their partner, and what helped",
     "One next step for home (small and concrete)",
     "Did they try the secret cave? (a neutral note only)"
@@ -3846,15 +3793,15 @@
    "heading": "Mi's Challenge Quest: [Name]",
    "pattern": "In Mi's Challenge Quest, [Name] [one specific thing you saw, in plain words]. [Optional: one small next step at home.]",
    "how": "One or two sentences at most. Say what the child did (drew a strip, shared equally, explained a step), not how many answers were right. Use the lines below as patterns and always add your own detail from your notes.",
-   "example": "In Mi's Challenge Quest, Mei drew a strip to find how many more marbles one child had, and shared 16 stickers equally among 4 friends. A good next step: share real counters onto plates at home to find how many in each.",
-   "parent_example": "For example: In Mi's Challenge Quest, Mei drew a strip to find how many more marbles one child had.",
+   "example": "In Mi's Challenge Quest, Mei chose to list every place in the queue and checked that none was missing, and worked backwards to find a hidden number. A good next step: put a number back into a sum to try it, with counters.",
+   "parent_example": "For example: In Mi's Challenge Quest, Mei chose to list every place in the queue and checked that none was missing.",
    "closing": "This line describes [Name]'s own thinking in the game. It does not compare children."
   },
   "parent_note": {
    "title": "Mi's Challenge Quest: a note for grown-ups",
    "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. Term 2 goes beyond the school Primary 1 syllabus on purpose (odd and even numbers, the 3 and 4 tables, and stories about groups), so a few gates may be new.",
    "before": [
-    "We send you this note and a loose copy of the Quest Log a week before. The Quest Log is also printed on the last pages of the Term 2 workbook book (Book 4); if you use the book, keep it closed until the tutor says to open it. If you print the loose copy, print it at 100% (actual size, not fit to page). It has 3 pages. No printer? Tell us a week before and we will find another way.",
+    "We send you this note and a loose copy of the Quest Log a week before. The Quest Log is also printed on the last pages of the Term 2 workbook book (Book 4); if you use the book, keep it closed until the tutor says to open it. If you print the loose copy, print it at 100% (actual size, not fit to page). It has 4 pages. No printer? Tell us a week before and we will find another way.",
     "Keep the Quest Log folded or in an envelope until the tutor says to open it.",
     "Have a pencil, a rubber and a quiet table. Counters and fingers are fine."
    ],
@@ -3864,7 +3811,7 @@
     "The paper stays flat on the table. Cameras may be on or off."
    ],
    "after": [
-    "The same day, take ONE clear photo of each of the 3 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
+    "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
     "Send the photos to the program's business WhatsApp, +65 9880 5962. Please send them to this number only: not to a tutor's own phone, not to the class chat, and never through a child.",
     "We use the photos only to write one line about your child. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
    ],
@@ -3873,21 +3820,36 @@
   },
   "timing_model": {
    "child_seconds": {
-    "C1": 60,
-    "C2": 70,
-    "C3": 80,
-    "C4": 80,
+    "C1": 80,
+    "C2": 80,
+    "C3": 70,
+    "C4": 90,
     "C5": 80,
-    "C6": 80,
-    "C7": 80,
-    "C8": 70
+    "C6": 70,
+    "C7": 90,
+    "C8": 80
    },
    "stretch_seconds": 60,
    "slow_child_factor": 1.4
   },
-  "quest_map": false
+  "quest_map": false,
+  "tool_row": "term"
  },
  "limits": {
-  "max_parent_words": 110
- }
+  "max_parent_words": 120
+ },
+ "beyond": {
+  "name": "Choose a tool and check it a second way",
+  "where": [
+   "T1",
+   "T3",
+   "T4",
+   "G1",
+   "G2",
+   "G3"
+  ],
+  "text": "Choosing a tool and saying why, the same problem with a second tool, queue counting with both ends, the numbers two counting lists share, a three-step puzzle reversed, the price of one in two shops, and a picture equation with a sum and a product go past the school Primary 1 syllabus on purpose.",
+  "parent": "Choosing a tool and checking an answer a second way goes past the school Primary 1 syllabus on purpose."
+ },
+ "contest_where": "Think harder, Go further, the Investigation and the Quest gates"
 }

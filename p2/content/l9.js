@@ -163,7 +163,7 @@ module.exports = {
     H.fig(jugsFig),
     H.sub('a', 'How can you get exactly 2 ℓ? Write the steps.'),
     ...H.lines(1),
-    H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('How can you get exactly 1 ℓ? Write the steps.')]),
+    H.sub('b', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('How can you get exactly 1 ℓ? Write the steps.')]),
     ...H.lines(2),
     H.q(3, 'Next puzzle. Get exactly 4 ℓ in the 5 ℓ jug. Start with both jugs empty. The first three steps are done for you: you now have 2 ℓ in the 5 ℓ jug. Tip: act it out with two cups of different sizes, or draw the jugs. Where can that 2 ℓ go? Write each step in the table. You may not need every row.', { pb: true, before: 0, keepNext: true }),
     H.tbl([1300, 4600, 2000, 2000], [
@@ -176,12 +176,12 @@ module.exports = {
     ]),
     H.q(4, 'Siti has a red ribbon 64 cm long. Her blue ribbon is 18 cm shorter than the red ribbon.', { keepNext: true }),
     H.sub('a', 'How long is the blue ribbon?   ________ cm'),
-    H.sub('b', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.')], { keepNext: true }),
+    H.sub('b', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('She glues them end to end with a 5 cm overlap. The new ribbon is ________ cm long.')], { keepNext: true }),
     H.fig(ribbonFig),
     H.q(5, 'Read the clocks. Hint: on clock B the hour hand is almost on the 5. Is it 4 o\u2019clock or 5 o\u2019clock?', { keepNext: true }),
     H.fig(clocksFig),
     H.sub('a', 'Write each time with am or pm.   A: ____________   B: ____________', { after: 50 }),
     H.sub('b', 'Swimming starts at the time on clock B and lasts 35 minutes. It ends at ____________', { after: 50 }),
-    H.sub('c', [H.t('★ take-home  ', { bold: true, color: 'B45F06' }), H.t('Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 11:30 am. How long is the trip?   ______________')])
+    H.sub('c', [H.t('★ take-home  ', { bold: true, color: '1B2A49' }), H.t('Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 11:30 am. How long is the trip?   ______________')])
   ]
 };

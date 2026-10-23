@@ -1,11 +1,10 @@
-"""Independent answer checks for Level 1 Term 3 Lesson 10 (Lesson 30, Calendar Detective, and Mi's Challenge Quest).
+"""Independent answer checks for Level 1 Term 3 Lesson 10 (Lesson 30, Tool Detectives, and Mi's Challenge Quest).
 
-Every day, date and count in l30.json is recomputed here by stepping ONE DAY AT A TIME round the week (not by a modulo formula in the lesson): 'n days later', 'the day before', the weekday
-of each date on the made-up month page (the 1st is a Wednesday, 31 days), a week and a fortnight later, the 10th day from Monday, 100 days later (stepped, then compared with 14 weeks and
-2 days), every Wednesday of the month, and how many times each weekday occurs in the month (Wednesday, Thursday and Friday five times). The Quest gates are recomputed too: the clock hands
-for 4:35, the coins (95 cents), the change, the two prices, the 3 by 3 grid (every row and column holds one of each shape), the stick counts for triangles (counted from the drawing's
-points), the wrong sum and the cave ways for $14. Class items (warm-up, sneak-peek, Explore, Mini-lesson, Talk) are listed and checked to differ from the workbook, exit ticket, home
-items and the Quest gates. Online practice templates get brute-force oracles; kit contract and hand-offs are checked against the neighbouring lessons.
+This lesson replaces the old Lesson 30 (Calendar Detective, now Lesson 27). Every number is recomputed here by stepping, listing or simulating (not by the lesson's own formula): clock times by counting minutes, money left
+by counting back, which two tags make an exact amount by trying every pair, linear patterns by adding step by step, the 5-cent and 10-cent coin puzzles by trying every split, the pet puzzle by trying all six
+assignments against the clues, the cycle of 3 days on a week of 7 by stepping day by day, the wrong sum by recomputing it, and the Quest gates one by one (clock hands, coins, prices, calendar, sticks counted from the
+drawing, the wrong sum, the two mixed gates and the cave ways for $14). Class items (warm-up, sneak-peek, Explore, Mini-lesson, Talk) are listed and checked to differ from the workbook, exit ticket, home items and the
+Quest gates. Online practice templates get brute-force oracles. The kit contract and hand-offs are checked against the neighbouring lessons.
 """
 import itertools
 import json
@@ -17,34 +16,12 @@ WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sun
 
 
 def later(day, n):
-    """The day n days later, stepping one day at a time."""
     i = WEEK.index(day)
     for _ in range(n):
         i += 1
         if i == 7:
             i = 0
     return WEEK[i]
-
-
-def before(day, n=1):
-    i = WEEK.index(day)
-    for _ in range(n):
-        i -= 1
-        if i < 0:
-            i = 6
-    return WEEK[i]
-
-
-def weekday_of_date(date, first='Wednesday'):
-    """Weekday of a date in a month whose 1st is `first`, stepping from the 1st."""
-    d = first
-    for _ in range(date - 1):
-        d = later(d, 1)
-    return d
-
-
-def dates_on(day, first='Wednesday', length=31):
-    return [n for n in range(1, length + 1) if weekday_of_date(n, first) == day]
 
 
 def plus(a, b):
@@ -65,16 +42,52 @@ def nums(text):
     return [int(x) for x in re.findall(r'\d+', text)]
 
 
+def add_minutes(h, m, mins):
+    """Clock time after mins minutes, stepping one minute at a time (12-hour clock)."""
+    for _ in range(mins):
+        m += 1
+        if m == 60:
+            m = 0
+            h += 1
+            if h == 13:
+                h = 1
+    return h, m
+
+
+def fmt(t):
+    return f'{t[0]}:{t[1]:02d}'
+
+
 def ways(target, prices):
-    out = []
-    for combo in itertools.product(range(target + 1), repeat=len(prices)):
-        if sum(c * p for c, p in zip(combo, prices)) == target:
-            out.append(combo)
-    return out
+    return [c for c in itertools.product(range(target + 1), repeat=len(prices)) if sum(x * p for x, p in zip(c, prices)) == target]
+
+
+def pairs_with_total(tags, total):
+    return [c for c in itertools.combinations(tags, 2) if sum(c) == total]
+
+
+def linear(first, step, n):
+    """The n-th term of a pattern that adds `step` each time, built by adding one step at a time."""
+    v = first
+    for _ in range(n - 1):
+        v = plus(v, step)
+    return v
+
+
+def coin_splits(count, total, a=5, b=10):
+    return [(x, count - x) for x in range(count + 1) if x * a + (count - x) * b == total]
+
+
+def pets():
+    sols = []
+    for perm in itertools.permutations(['cat', 'fish', 'bird']):
+        mei, ali, ben = perm
+        if ali == 'fish' and mei != 'cat':
+            sols.append(perm)
+    return sols
 
 
 def triangle_sticks(n):
-    """Sticks in n triangles in a row, counted from the zigzag points: the points alternate bottom, top; each triangle j uses edges (j,j+1), (j+1,j+2), (j,j+2)."""
     edges = set()
     for j in range(n):
         for a, b in ((j, j + 1), (j + 1, j + 2), (j, j + 2)):
@@ -89,38 +102,34 @@ def coin_total(vs):
     return t
 
 
-QUEST = {'C1': ('clock', 4, 35), 'C2': ('later', 2, 30, 30), 'C3': ('coins', 95), 'C4': ('prices', 6, 9), 'C5': ('grid',), 'C6': ('sticks',), 'C7': ('sum', 49, 38, 77), 'C8': ('days', 'Friday', 3), 'cave': ('ways', 14)}
+def _c1(e): return minus(e['m'], e['b'])
+def _c2(e): return e['h'] + 1
+def _c4(e): return linear(e['a'], e['d'], 4)
+def _c5(e): return sum(e['p'] for _ in range(e['n']))
+def _t1(e): return plus(e['l'], e['e'])
+def _t3(e): return linear(e['a'], 3, e['n'])
+
+
+ORACLES = {'c1': _c1, 'c2': _c2, 'c4': _c4, 'c5': _c5, 't1': _t1, 't3': _t3}
+BASE_ENV = {'c1': dict(m=15, b=6), 'c2': dict(h=3), 'c4': dict(a=2, d=3), 'c5': dict(n=3, p=4), 't1': dict(e=5, l=8), 't3': dict(a=4, n=5)}
+
+# class items and the items of the workbook, exit ticket, home and Quest, as (kind, ...) tuples; none may repeat
 CLASS = {
-    'remember': [('seq7', 3), ('seq7', 5), ('ordinal', 3), ('order',)],
-    'sneak': [('days', 'Monday', 1), ('days', 'Thursday', 5)],
-    'explore': [('days', 'Tuesday', 5), ('days', 'Sunday', 3), ('week', 5), ('after', 'Sunday')],
-    'mini': [('days', 'Thursday', 4), ('before', 'Monday'), ('week', 9), ('fortnight', 4), ('week', 2), ('after', 'Friday'), ('before', 'Thursday')],
-    'break': [('seq7', 7)],
-    'talk': [('days', 'Monday', 10)],
-    'opt': [('date', 15)],
+    'remember': [('diff', 9, 5), ('back', 4, 11), ('next', 3, 3)],
+    'sneak': [('days', 'Monday', 3), ('back', 6, 15)],
+    'explore': [('film', 3, 30, 60), ('pair', 12), ('stars', 2, 8), ('back', 7, 12), ('coins', 4, 30), ('days', 'Wednesday', 10)],
+    'mini': [('left', 15, 10), ('squares', 4, 8)],
+    'talk': [('pattern20',)],
+    'opt': [('notes', 3, 2, 10)],
 }
 WORKBOOK = {
-    'S1': [('missing', 'Wednesday', 'Saturday')], 'S2': [('before', 'Wednesday'), ('after', 'Saturday')], 'S3': [('days', 'Tuesday', 3), ('days', 'Tuesday', 4)], 'S4': [('days', 'Saturday', 2)], 'S5': [('week', 6)],
-    'S6': [('tfday', 1), ('tfday', 2), ('tfday', 3), ('tfday', 4)],
-    'T1': [('yesterday2', 'Thursday')], 'T2': [('dayn', 'Monday', 7), ('dayn', 'Monday', 10)], 'T3': [('weeks', 3), ('weeks', 2)], 'T4': [('date', 18), ('week', 18)],
-    'G1': [('days', 'Monday', 100)], 'G2': [('wednesdays',), ('date', 31)], 'G3': [('weeks', 3, 6)], 'I1': [('five',)],
-    'E1': [('days', 'Sunday', 2)], 'E2': [('week', 11)], 'E3': [('week', 4)],
-    'H1': [('days', 'Wednesday', 4)], 'H2': [('date', 10)], 'H3': [('week', 14), ('fortnight', 14)], 'H4': [('days', 'Saturday', 9)], 'H5': [('steps', 36, 10, 4)],
+    'S1': [('film', 7, 30, 60), ('film', 3, 0, 30)], 'S2': [('left', 20, 13)], 'S3': [('pair', 15)], 'S4': [('next', 5, 3, 4)], 'S5': [('days', 'Thursday', 6)], 'S6': [('sumcheck', 63, 28)],
+    'T1': [('back', 7, 9)], 'T2': [('steps', 3, 4, 8)], 'T3': [('pets',)], 'T4': [('coins', 5, 35)],
+    'G1': [('buy', 30)], 'G2': [('mix', 3, 5, 4, 16)], 'G3': [('swims', 'Monday', 3)],
+    'E1': [('film', 4, 0, 30)], 'E2': [('left', 20, 12)], 'E3': [('back', 3, 8)],
+    'H1': [('left', 20, 9)], 'H2': [('pair', 13)], 'H3': [('film', 9, 0, 30)], 'H4': [('next', 4, 2, 6)], 'H5': [('story', 52, 20, 7)],
 }
-
-
-def _c1(e): return plus(e['a'], 7)
-def _c2(e): return 7 * e['w']
-def _c5(e): return plus(e['s'], 21)
-def _t1(e): return plus(e['a'], 14)
-def _t3(e): return 14 * e['w']
-def _g1(e):
-    # the Mondays of a 31-day month when the a-th is a Monday: list them
-    return len([n for n in range(e['a'], 32, 7)])
-
-
-ORACLES = {'c1': _c1, 'c2': _c2, 'c5': _c5, 't1': _t1, 't3': _t3, 'g1': _g1}
-BASE_ENV = {'c1': dict(a=5), 'c2': dict(w=2), 'c5': dict(s=3), 't1': dict(a=4), 't3': dict(w=2), 'g1': dict(a=2)}
+QUEST = {'C1': ('clock', 4, 35), 'C2': ('coins', 95), 'C3': ('prices', 6, 9), 'C4': ('days', 'Friday', 3), 'C5': ('sticks',), 'C6': ('sum', 49, 38, 77), 'C7': ('first', 9, 6), 'C8': ('coins', 4, 25), 'cave': ('ways', 14)}
 
 
 def run(d):
@@ -145,117 +154,99 @@ def run(d):
     eq(len(set(allcls)), len(allcls), 'class items are all different')
     eq(len(set(allwb)), len(allwb), 'workbook items are all different')
     eq(sorted(set(allcls) & set(allwb), key=str), [], 'no workbook, exit or home item repeats a class item')
-    qset = set(QUEST.values())
-    eq(sorted((set(allcls) | set(allwb)) & qset, key=str), [], 'no class or workbook item is a Quest gate')
-    # class items that are plain 'week of date' also must not equal the gate (3 -> 10)
-    eq(any(p == ('week', 3) for p in allcls + allwb), False, 'no class or workbook item uses the gate date (the 3rd)')
+    eq(sorted((set(allcls) | set(allwb)) & set(QUEST.values()), key=str), [], 'no class or workbook item is a Quest gate')
+    eq([p for p in allcls + allwb if p[0] == 'coins' and p[1:] in ((4, 25), (5, 35))], [('coins', 5, 35)], 'only T4 uses the 5-coin puzzle')
 
-    # ---------------------------------------------------------------- the calendar itself
-    eq([later(WEEK[0], k) for k in range(8)], WEEK + ['Monday'], 'after Sunday comes Monday')
-    eq(before('Monday'), 'Sunday', 'before Monday')
-    for dn in WEEK: eq(later(dn, 7), dn, f'a week later than {dn} is {dn}')
-    eq(weekday_of_date(1), 'Wednesday', 'the 1st is a Wednesday')
-    month = {k: weekday_of_date(k) for k in range(1, 32)}
-    eq([month[k + 7] == month[k] for k in range(1, 25)], [True] * 24, 'a week later is the same weekday for every date')
-    eq(sl['s-explore3']['blocks'][0]['highlight'], [5], 's-explore3 highlights the 5th'); eq(sl['s-explore3']['blocks'][0]['start'], 'Wed', 's-explore3 month starts on a Wednesday')
     # ---------------------------------------------------------------- warm-up
-    s = sl['s-rem1']['blocks'][0]; eq(s['items'], [3, 10, 17, None], 's-rem1 items'); eq((plus(3, 7), plus(10, 7), plus(17, 7)), (10, 17, 24), 's-rem1 count in 7s'); eq(s['gaps'], ['+7'] * 3, 's-rem1 gaps')
-    eq(plus(plus(5, 7), 7), 19, 's-rem1 your turn: 5, 12, 19')
-    eq(len(sl['s-rem2']['blocks'][0].get('highlight', [])), 1, 's-rem2 one highlighted child'); eq(sl['s-rem2']['blocks'][0]['highlight'], [3], 's-rem2 third place (line_up places are numbered from 1)')
-    tb = sl['s-rem3']['blocks'][0]['rows']; eq([c for r in tb for c in r][:7], WEEK, 's-rem3 days in order'); eq(tb[1][3], '?', 's-rem3 the blank after Sunday')
+    eq((minus(9, 5), plus(4, 4) == 8 and minus(11, 4) == 7), (4, True), 'remember 1 and 2'); eq(plus(7, 4), 11, 'remember 2 forwards check')
+    s = sl['s-rem2']['blocks'][0]; eq([b['len'] for b in s['bars']], [9, 5], 's-rem2 bars')
+    s = sl['s-rem3']['blocks'][0]; eq((s['hide'], s['jumps']), ([7], [[7, 11, '+4']]), 's-rem3 number line')
+    s = sl['s-rem4']['blocks'][0]; eq((s['items'], [linear(3, 3, k) for k in (1, 2, 3, 4)]), ([3, 6, 9, None], [3, 6, 9, 12]), 's-rem4 pattern')
+    eq([r[0] for r in sl['s-rem1']['blocks'][0]['rows']], ['Draw it', 'Act it out', 'Spot the pattern', 'List every way', 'Make a table', 'Work backwards', 'Guess and check'], 's-rem1 lists the seven card names')
     # ---------------------------------------------------------------- sneak-peek
-    sp = d['sneak_peek']; eq(later('Monday', 1), 'Tuesday', 'sneak 1'); eq(later('Thursday', 5), 'Tuesday', 'sneak 2'); eq((sp['a1'], sp['a2'].split('.')[0]), ('Tuesday.', 'Tuesday'), 'sneak answers')
-    eq([later('Thursday', k) for k in range(1, 6)], ['Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday'], 'sneak 2 count on')
-    eq(later('Thursday', 0 + 1 - 1 + 4), 'Monday', 'a child who counts Thursday as day 1 gets Monday')
-    # ---------------------------------------------------------------- Explore
-    eq(later('Tuesday', 5), 'Sunday', 'explore 2a'); eq(later('Sunday', 3), 'Wednesday', 'explore 2b'); eq(sl['s-explore2-ans']['blocks'][0]['rows'][1:], [['Tuesday', '5', 'Sunday'], ['Sunday', '3', 'Wednesday']], 's-explore2-ans')
-    eq((plus(5, 7), month[12], month[5]), (12, 'Sunday', 'Sunday'), 'explore 3: the 12th is a week after the 5th, both Sundays'); eq(sl['s-explore3-ans']['blocks'][0]['highlight'], [5, 12], 's-explore3-ans')
-    eq([k for k in range(1, 32) if month[k] == 'Sunday'], [5, 12, 19, 26], 'explore 4: the Sundays')
-    row = sl['s-explore1-ans']['blocks'][0]['rows']; eq(row[0], ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon'], 's-explore1-ans row')
+    sp = d['sneak_peek']; eq(later('Monday', 3), 'Thursday', 'sneak 1'); eq(minus(15, 6), 9, 'sneak 2'); eq(plus(9, 6), 15, 'sneak 2 check'); eq((sp['val1'], sp['a2'][:1]), ('Thursday', '9'), 'sneak answers')
+    # ---------------------------------------------------------------- Explore (nobody solves: the answers are for the tutor)
+    eq(fmt(add_minutes(3, 30, 60)), '4:30', 'explore film'); eq(pairs_with_total((3, 5, 8, 9), 12), [(3, 9)], 'explore card 2 has exactly one pair')
+    eq(linear(2, 2, 8), 16, 'explore stars row 8'); eq(minus(12, 0) + 7, 19, 'explore card 4: 19 take away 7 is 12'); eq(minus(19, 7), 12, 'explore card 4 check')
+    eq(coin_splits(4, 30), [(2, 2)], 'explore card 5: one split'); eq(later('Wednesday', 10), 'Saturday', 'explore card 6')
     # ---------------------------------------------------------------- Mini-lesson
-    eq(later('Thursday', 4), 'Monday', 's-m1'); eq(later('Wednesday', 6), 'Tuesday', 'not used in class any more but still true')
-    eq(before('Monday'), 'Sunday', 's-m2'); eq((later('Friday', 1), before('Thursday')), ('Saturday', 'Wednesday'), 's-m2 your turn'); eq((month[15], plus(1, 14)), ('Wednesday', 15), 's-opt: the 15th is a Wednesday')
-    eq((sl['s-m3']['blocks'][0]['highlight'], plus(9, 7), month[9], month[16]), ([9], 16, 'Thursday', 'Thursday'), 's-m3')
-    eq(plus(2, 7), 9, 's-m3 your turn: a week after the 2nd')
-    eq((sl['s-m4']['blocks'][0]['highlight'], plus(4, 14), month[4], month[18]), ([4], 18, 'Saturday', 'Saturday'), 's-m4'); eq((7 * 2, plus(4, 7), plus(plus(4, 7), 7)), (14, 11, 18), 's-m4 steps')
-    eq((7, 14), (7 * 1, 7 * 2), 's-m4 your turn: a week is 7 days and a fortnight 14')
+    eq(minus(minus(15, 6), 4), 5, 'm2 backwards'); eq(plus(plus(6, 4), 5), 15, 'm2 third check'); b = sl['s-m1']['blocks'][0]['bars'][0]['segments']; eq([x['v'] for x in b], [6, 4, 5], 's-m1 strip parts'); eq(sum(x['v'] for x in b), 15, 's-m1 strip total')
+    eq([triangle_sticks(1) + 0], [3], 'triangle row check (gate 5 uses it)')
+    sq = [linear(4, 3, k) for k in range(1, 9)]; eq(sq, [4, 7, 10, 13, 16, 19, 22, 25], 's-m3 table'); eq(sl['s-m3-ans']['blocks'][0]['rows'][0][1:], [str(x) for x in sq], 's-m3-ans row'); eq(plus(4, 21), 25, 's-m3 check another way')
+    eq((sl['s-m3']['blocks'][0]['shape'], sl['s-m3']['blocks'][0]['n']), ('square', 3), 's-m3 picture')
     # ---------------------------------------------------------------- Start here
-    q = T['S1']; eq([c for r_ in q['visual']['rows'] for c in r_ if c], ['Monday', 'Tuesday', '[]', 'Thursday', 'Friday', '[]', 'Sunday'], 'S1 table (full names in order, no abbreviation row that shows the answers)'); eq(q['visual']['head'], [], 'S1 has no abbreviation header'); eq([WEEK[i] for i in (2, 5)], q['val'], 'S1 missing days')
-    eq([d_ for d_ in WEEK if d_ not in ('Monday', 'Tuesday', 'Thursday', 'Friday', 'Sunday')], ['Wednesday', 'Saturday'], 'S1 recomputed')
-    q = T['S2']; eq((before('Wednesday'), later('Saturday', 1)), ('Tuesday', 'Sunday'), 'S2'); eq(q['val'], ['Tuesday', 'Sunday'], 'S2 val')
-    q = T['S3']; eq(later('Tuesday', 3), 'Friday', 'S3'); eq(later('Tuesday', 4), 'Saturday', 'S3b: 4 days later, not the Explore example (Tuesday and 5 days is Sunday)'); eq(q['val'], ['Friday', 'Saturday'], 'S3 val'); eq(q['visual']['rows'][0][1], 'today', 'S3 marks today')
-    q = T['S4']; eq(later('Saturday', 2), 'Monday', 'S4'); eq(q['val'], ['Monday'], 'S4 val')
-    q = T['S5']; eq(q['visual']['highlight'], [6], 'S5 highlight'); eq((7, plus(6, 7), month[6], month[13]), (7, 13, 'Monday', 'Monday'), 'S5'); eq(q['val'], [7, 13], 'S5 val')
-    q = T['S6']; st = [x['s'] for x in q['tf']]
-    truth = [later('Sunday', 1) == 'Monday', before('Thursday') == 'Friday', WEEK.index('Wednesday') == WEEK.index('Tuesday') + 1 == WEEK.index('Thursday') - 1, before('Sunday') == 'Saturday']
-    eq(truth, [True, False, True, True], 'S6 truth values'); eq(q['val'], ['True', 'False', 'True', 'True'], 'S6 val'); eq(len(st), 4, 'S6 four statements')
+    q = T['S1']; eq((fmt(add_minutes(7, 30, 60)), fmt(add_minutes(3, 0, 30))), ('8:30', '3:30'), 'S1'); eq((q['visual']['h'], q['visual']['m']), (7, 30), 'S1 clock'); eq(q['val'], ['8:30', '3:30'], 'S1 val')
+    q = T['S2']; eq((minus(20, 13), plus(7, 13)), (7, 20), 'S2 and its check'); eq(q['val'], [7], 'S2 val')
+    q = T['S3']; eq(pairs_with_total((5, 7, 8, 12), 15), [(7, 8)], 'S3 exactly one pair'); eq(q['val'], [7, 8], 'S3 val'); eq([v['price'] for v in q['visuals']], ['$5', '$7', '$8', '$12'], 'S3 tags')
+    q = T['S4']; eq([linear(5, 3, k) for k in (1, 2, 3, 4)], [5, 8, 11, 14], 'S4'); eq(q['visual']['rows'][0], ['Tiles', '5', '8', '11', '[]'], 'S4 table'); eq(q['val'], [14], 'S4 val')
+    q = T['S5']; eq([later('Thursday', k) for k in range(1, 7)], ['Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday'], 'S5 stepped'); eq(q['val'], ['Wednesday'], 'S5 val')
+    q = T['S6']; eq((plus(45, 28), minus(63, 28), 45 == minus(63, 28), plus(35, 28)), (73, 35, False, 63), 'S6'); eq(q['val'], [73, 'No', 35], 'S6 val')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes')
+    eq(all(any(p['text'].startswith('Tool I used') for p in x['parts']) for x in d['tiers']['start']), True, 'every Start here question has the tool and I checked line')
     # ---------------------------------------------------------------- Think harder
-    q = T['T1']; yd = before('Thursday'); dby = before(yd); eq((yd, dby, later(dby, 2)), ('Wednesday', 'Tuesday', 'Thursday'), 'T1a is today'); tm = later('Thursday', 1); eq((tm, before(tm, 2)), ('Friday', 'Wednesday'), 'T1b'); eq(q['val'], ['Thursday', 'Wednesday'], 'T1 val')
-    q = T['T2']; eq(later('Monday', 6), 'Sunday', 'T2 day 7 (6 steps after day 1)'); eq(later('Monday', 9), 'Wednesday', 'T2 day 10 (9 steps after day 1)'); eq(later('Monday', 7), 'Monday', 'T2 day 8 is Monday'); eq(q['val'], ['Sunday', 'Wednesday'], 'T2 val')
-    q = T['T3']; eq((plus(plus(7, 7), 7), plus(7, 7)), (21, 14), 'T3'); eq(q['val'], [21, 14], 'T3 val')
-    q = T['T4']; eq((month[18], plus(18, 7), month[25]), ('Saturday', 25, 'Saturday'), 'T4'); eq(q['val'], ['Saturday', 25], 'T4 val'); eq((q['visual']['week'], '18' in q['text']), (0, True), 'T4 prints only the first week row: the 18th is not on it, so the weekday is reasoned, not read')
-    eq(dates_on('Wednesday'), [1, 8, 15, 22, 29], 'T4 hint: the Wednesdays')
+    q = T['T1']; eq((plus(9, 7), minus(16, 7), plus(16, 0)), (16, 9, 16), 'T1 both tools and check'); eq(q['val'], [16, 16], 'T1 val')
+    q = T['T2']; row = [linear(3, 4, k) for k in range(1, 9)]; eq(row, [3, 7, 11, 15, 19, 23, 27, 31], 'T2 steps'); eq(q['visual']['rows'][0], ['Blocks', '3', '7', '11', '[]', '[]', '23'], 'T2 table'); eq((row[3], row[4], row[5], row[7]), (15, 19, 23, 31), 'T2 values'); eq(q['val'], [15, 19, 31], 'T2 val')
+    q = T['T3']; eq(pets(), [('bird', 'fish', 'cat')], 'T3 exactly one assignment (Mei, Ali, Ben)'); eq(q['val'], ['bird', 'cat'], 'T3 val'); eq([r[0] for r in q['visual']['rows']], ['Mei', 'Ali', 'Ben'], 'T3 table rows'); eq(q['visual']['head'], ['', 'cat', 'fish', 'bird'], 'T3 columns')
+    q = T['T4']; eq(2 * 5 + 3 * 10, 40, 'T4a'); eq(coin_splits(5, 35), [(3, 2)], 'T4 exactly one split'); eq(q['val'], [40, 'Too high', 3, 2], 'T4 val')
     # ---------------------------------------------------------------- Go further
-    q = T['G1']; eq(later('Monday', 100), 'Wednesday', 'G1 stepped 100 days'); eq((7 * 14, 100 - 7 * 14), (98, 2), 'G1 14 weeks and 2 days'); eq(later('Monday', 98), 'Monday', 'G1 98 days is whole weeks'); eq(q['val'], [14, 2, 'Wednesday'], 'G1 val')
-    eq(sum(1 for k in range(1, 101) if k % 7 == 0), 14, 'G1 whole weeks in 100 days (counted)')
-    q = T['G2']; w = dates_on('Wednesday'); eq(w, [1, 8, 15, 22, 29], 'G2 Wednesdays'); eq([plus(x, 7) for x in w[:-1]], w[1:], 'G2 each is 7 more'); eq(month[31], 'Friday', 'G2 the 31st'); eq(q['val'], [8, 15, 22, 29, 'Friday'], 'G2 val'); eq((q['visual']['week'], q['visual']['highlight']), (0, [1]), 'G2 prints only the first week row: 8, 15, 22 and 29 are not on it')
-    q = T['G3']; eq((plus(plus(7, 7), 7), plus(6, 21), month[6], month[27]), (21, 27, 'Monday', 'Monday'), 'G3'); eq(q['val'], [21, 27, 'Monday'], 'G3 val')
-    # ---------------------------------------------------------------- Investigation: weekdays that come 5 times
-    cnt = {dn: len(dates_on(dn)) for dn in WEEK}; eq(cnt, {'Monday': 4, 'Tuesday': 4, 'Wednesday': 5, 'Thursday': 5, 'Friday': 5, 'Saturday': 4, 'Sunday': 4}, 'I1 counts'); eq(sum(cnt.values()), 31, 'I1 every date counted once')
-    eq((7 * 4, 31 - 28), (28, 3), 'I1 4 weeks and 3 days over'); eq(inv['val'], ['5', 'Thursday', 'Friday'], 'I1 val')
-    eq(dates_on('Thursday'), [2, 9, 16, 23, 30], 'I1 Thursdays'); eq(dates_on('Friday'), [3, 10, 17, 24, 31], 'I1 Fridays')
-    # ---------------------------------------------------------------- talk, exit
-    eq((later('Monday', 10), later('Monday', 8)), ('Thursday', 'Tuesday'), 'talk: 10 days later is Thursday; 8 days later is Tuesday'); eq(later(later('Monday', 7), 3), 'Thursday', 'talk: a week then 3 days')
-    q = X['E1']; eq(later('Sunday', 2), 'Tuesday', 'E1'); eq(q['val'], ['Tuesday'], 'E1 val')
-    q = X['E2']; opts = [nums(o)[0] for o in q['mcq']['options']]; eq([o for o in opts if o == plus(11, 7) and month[o] == month[11]], [18], 'E2 one correct option'); eq(q['val'], [2], 'E2 val'); eq(opts, [17, 18, 19, 25], 'E2 options'); eq(plus(plus(11, 7), 7), 25, 'E2 distractor is a fortnight')
-    q = X['E3']; eq(plus(4, 7), 11, 'E3'); eq(q['val'], [11], 'E3 val')
-    # ---------------------------------------------------------------- home
-    eq(later('Wednesday', 4), 'Sunday', 'H1'); eq(H['H1']['val'], 'Sunday', 'H1 val'); eq(month[10], 'Friday', 'H2'); eq(H['H2']['val'], 'Friday', 'H2 val')
-    eq((plus(14, 7), plus(14, 14)), (21, 28), 'H3'); eq(H['H3']['val'], [21, 28], 'H3 val'); eq(later('Saturday', 9), 'Monday', 'H4'); eq(H['H4']['val'], 'Monday', 'H4 val')
-    eq(minus(plus(36, 10), 4), 42, 'H5'); eq(H['H5']['val'], 42, 'H5 val'); eq(H['H5'].get('rewind_of'), 'Term 1 Lesson 10', 'H5 is the rewind item'); eq(len([h for h in d['home_practice'] if h['tier'] == 'start']) >= 3, True, 'home has 3 Start here items')
+    q = T['G1']; eq((plus(6, 6), minus(minus(30, 12), 9)), (12, 9), 'G1'); eq(plus(plus(12, 9), 9), 30, 'G1 check'); eq(q['val'], [12, 9], 'G1 val')
+    q = T['G2']; eq([c for c in itertools.product(range(5), repeat=2) if c[0] + c[1] == 4 and 3 * c[0] + 5 * c[1] == 16], [(2, 2)], 'G2 exactly one answer'); eq(q['val'], [2, 2], 'G2 val')
+    q = T['G3']; sw = ['Monday']
+    for _ in range(4): sw.append(later(sw[-1], 3))
+    eq(sw, ['Monday', 'Thursday', 'Sunday', 'Wednesday', 'Saturday'], 'G3 swims'); eq(later('Monday', 12), 'Saturday', 'G3 twelve days'); eq(q['val'], ['Thursday', 'Saturday'], 'G3 val')
+    eq(inv['tier'], 'investigation', 'I1'); eq(plus(7, 4), 11, 'I1 example answer')
+    # ---------------------------------------------------------------- talk, exit, home
+    eq(linear(4, 3, 20), 61, 'talk: the 20th picture by adding'); eq(4 + 19 * 3, 61, 'talk: 4 and 19 lots of 3')
+    eq(fmt(add_minutes(4, 0, 30)), '4:30', 'E1'); eq(X['E1']['val'], ['4:30'], 'E1 val')
+    eq(minus(20, 12), 8, 'E2'); eq([nums(o)[0] for o in X['E2']['mcq']['options']], [6, 8, 10, 32], 'E2 options'); eq(X['E2']['val'], [2], 'E2 val'); eq(plus(8, 12), 20, 'E2 check')
+    eq(plus(8, 3), 11, 'E3'); eq(X['E3']['val'], [11], 'E3 val')
+    eq(minus(20, 9), 11, 'H1'); eq(H['H1']['val'], 11, 'H1 val'); eq(pairs_with_total((4, 5, 7, 9), 13), [(4, 9)], 'H2'); eq(H['H2']['val'], [4, 9], 'H2 val')
+    eq(fmt(add_minutes(9, 0, 30)), '9:30', 'H3'); eq(H['H3']['val'], '9:30', 'H3 val'); eq(linear(4, 2, 6), 14, 'H4'); eq(H['H4']['val'], 14, 'H4 val')
+    eq(plus(minus(52, 20), 7), 39, 'H5'); eq(H['H5']['val'], 39, 'H5 val'); eq(H['H5'].get('rewind_of'), 'Term 1 Lesson 10', 'H5 is the rewind item')
+    eq(plus(minus(3 * 5 + 2 * 2, 10), 0), 9, 'optional slide: 19 take away 10')
     # ---------------------------------------------------------------- Quest gates
-    q = G['C1']; eq((q['visual']['h'], q['visual']['m']), (4, 35), 'C1 clock'); hour_at = 4 + 35 / 60; eq(abs(hour_at - 4.5833) < 0.001, True, 'C1 hour hand a little before the 5'); eq(35 // 5, 7, 'C1 long hand on the 7'); eq(q['val'], ['4:35', 'am'], 'C1 val')
-    q = G['C2']; eq(nums(q['text']), [2, 30], 'C2 text'); eq((2 * 60 + 30 + 30, 5 * 60 + 30 + 60), (3 * 60, 6 * 60 + 30), 'C2 minutes'); eq(q['val'], ['3:00', '6:30'], 'C2 val')
-    q = G['C3']; eq(coin_total(['50c', '20c', '20c', '5c']), 95, 'C3 coins'); eq(q['visual']['items'], [{'v': '50c'}, {'v': '20c', 'n': 2}, {'v': '5c'}], 'C3 picture'); eq(minus(10, 7), 3, 'C3 change'); eq(q['val'], [95, 3], 'C3 val')
-    q = G['C4']; eq((minus(9, 6), [p for p in (6, 9) if p == max(6, 9)]), (3, [9]), 'C4 more'); eq([c for c in itertools.combinations((4, 5, 6), 2) if sum(c) == 10], [(4, 6)], 'C4 exactly one pair for $10'); eq(q['val'], ['ruler', 3, 4, 6], 'C4 val')
-    q = G['C5']; tiles = [t['shape'] for t in q['visual']['tiles']]; grid = [tiles[0:3], tiles[3:6], tiles[6:9]]; hid = q['visual']['hide'][0]; r_, c_ = divmod(hid, 3)
-    need = {'circle', 'square', 'triangle'} - ({grid[r_][k] for k in range(3) if k != c_}); need2 = {'circle', 'square', 'triangle'} - ({grid[k][c_] for k in range(3) if k != r_}); eq((need, need2), ({'triangle'}, {'triangle'}), 'C5 row and column agree')
-    full = [list(row) for row in grid]; full[r_][c_] = 'triangle'; eq(all(len(set(row)) == 3 for row in full) and all(len({full[i][j] for i in range(3)}) == 3 for j in range(3)), True, 'C5 completed grid is a Latin square'); eq(q['val'], ['triangle'], 'C5 val')
-    q = G['C6']; eq([triangle_sticks(k) for k in (1, 2, 3, 4, 5)], [3, 5, 7, 9, 11], 'C6 sticks counted from the drawing'); eq(q['val'], [9, 11], 'C6 val')
-    q = G['C7']; eq(plus(49, 38), 87, 'C7'); eq(plus(49, 38) == 77, False, 'C7 77 is wrong'); eq(minus(77, 38), 39, 'C7 check'); eq(q['val'], ['No', 87], 'C7 val')
-    q = G['C8']; eq(later('Friday', 3), 'Monday', 'C8a'); eq((plus(3, 7), month[3], month[10]), (10, 'Friday', 'Friday'), 'C8b: the 3rd is a Friday on the month page'); eq(q['val'], ['Monday', 10], 'C8 val'); eq(q['visual']['highlight'], [3], 'C8 highlight')
-    c = cq['optional']; w = ways(14, (2, 5)); eq(sorted(w), [(2, 2), (7, 0)], 'cave exactly two ways'); eq(c['val'], [7, 0], 'cave val')
-    eq([g['page'] for g in cq['questions']], [1, 1, 2, 2, 3, 3, 3, 4], 'gates per page'); eq(cq['sheet_pages'], 4, 'quest log pages')
-    covered = sorted({n_ for g in cq['questions'] for n_ in (g['lesson'] if isinstance(g['lesson'], list) else [g['lesson']])}); eq(covered, list(range(21, 31)), 'every lesson of the term is visited by a gate')
+    q = G['C1']; eq((q['visual']['h'], q['visual']['m']), (4, 35), 'C1 clock'); eq(abs((4 + 35 / 60) - 4.5833) < 0.001, True, 'C1 hour hand'); eq(35 // 5, 7, 'C1 long hand on the 7'); eq(fmt(add_minutes(2, 30, 30)), '3:00', 'C1c'); eq(q['val'], ['4:35', 'am', '3:00'], 'C1 val')
+    q = G['C2']; eq(coin_total(['50c', '20c', '20c', '5c']), 95, 'C2 coins'); eq(q['visual']['items'], [{'v': '50c'}, {'v': '20c', 'n': 2}, {'v': '5c'}], 'C2 picture'); eq(minus(10, 7), 3, 'C2 change'); eq(q['val'], [95, 3], 'C2 val')
+    q = G['C3']; eq((minus(9, 6), max(6, 9)), (3, 9), 'C3 more'); eq([c for c in itertools.combinations((4, 5, 6), 2) if sum(c) == 10], [(4, 6)], 'C3 exactly one pair'); eq(q['val'], ['ruler', 3, 4, 6], 'C3 val')
+    q = G['C4']; month = {1: 'Wednesday'}
+    for k in range(2, 32): month[k] = later(month[k - 1], 1)
+    eq(later('Friday', 3), 'Monday', 'C4a'); eq((plus(3, 7), month[3], month[10]), (10, 'Friday', 'Friday'), 'C4b'); eq(q['val'], ['Monday', 10], 'C4 val'); eq(q['visual']['highlight'], [3], 'C4 highlight')
+    q = G['C5']; eq([triangle_sticks(k) for k in (1, 2, 3, 4, 5)], [3, 5, 7, 9, 11], 'C5 sticks counted from the drawing'); eq(q['val'], [9, 11], 'C5 val')
+    q = G['C6']; eq(plus(49, 38), 87, 'C6'); eq(plus(49, 38) == 77, False, 'C6 77 is wrong'); eq(minus(77, 38), 39, 'C6 check'); eq(q['val'], ['No', 87], 'C6 val')
+    q = G['C7']; eq((plus(9, 6), minus(9, 4)), (15, 5), 'C7'); eq(q['val'], [15, 5], 'C7 val')
+    q = G['C8']; eq(coin_splits(4, 25), [(3, 1)], 'C8 exactly one split'); eq(q['val'], [3, 1], 'C8 val')
+    c = cq['optional']; eq(sorted(ways(14, (2, 5))), [(2, 2), (7, 0)], 'cave exactly two ways'); eq(c['val'], [7, 0], 'cave val')
+    eq([g['page'] for g in cq['questions']], [1, 1, 2, 2, 3, 3, 4, 4], 'gates per page'); eq(cq['sheet_pages'], 4, 'quest log pages'); eq(cq['tool_row'], 'term', 'Quest v2 tool row')
+    eq([g['lesson'] for g in cq['questions'] if g['lesson'] == 'mixed'], ['mixed', 'mixed'], 'two mixed gates')
+    covered = sorted({n_ for g in cq['questions'] for n_ in (g['lesson'] if isinstance(g['lesson'], list) else [g['lesson']]) if n_ != 'mixed'})
+    eq(covered, [21, 22, 23, 24, 25, 26, 27, 28, 29], 'every content lesson of the term is visited by a gate')
     eq(sorted(q_ for s_ in cq['strands'] for q_ in s_['questions']), sorted(g['id'] for g in cq['questions']), 'every gate is in a strand')
+    eq(any('tally' in x and 'not even in your own notes' in x for x in cq['privacy_checklist']), False, 'old privacy line is gone')
+    eq(any('no tally or count of any kind' in x for x in cq['privacy_checklist']), True, 'new privacy line')
+    toolwords = ('draw it', 'act it out', 'spot the pattern', 'list every way', 'make a table', 'work backwards', 'guess and check')
+    eq([w for g in cq['questions'] for w in toolwords if w in json.dumps([g['text'], g['parts'], g['say']]).lower()], [], 'no Quest gate names a tool')
     # ---------------------------------------------------------------- online practice
     items = {i['id']: i for i in d['online_practice']['items']}
     for cid, env in BASE_ENV.items(): eq(items[cid]['answer'], ORACLES[cid](env), cid + ' authored answer')
-    eq((items['c3']['answer'], later('Thursday', 2)), ('Saturday', 'Saturday'), 'c3 (not workbook S3: Tuesday plus 3)'); eq((items['c4']['answer'], later('Sunday', 1)), ('Monday', 'Monday'), 'c4')
-    eq((items['t2']['answer'], later(before(before('Tuesday')), 1)), ('Monday', 'Monday'), 't2 (not workbook T1(a))'); eq((items['g2']['answer'], later('Tuesday', 50)), ('Wednesday', 'Wednesday'), 'g2 (not workbook G1: 100 days after Monday)')
+    eq((items['g1']['answer'], [c_[1] for c_ in itertools.product(range(5), repeat=2) if c_[0] + c_[1] == 4 and 3 * c_[0] + 5 * c_[1] == 16]), (2, [2]), 'g1')
+    eq((items['g2']['answer'], later(later('Monday', 3), 3)), ('Sunday', 'Sunday'), 'g2')
+    eq(items['c3']['answer'], 'Work backwards', 'c3'); eq(items['t2']['answer'], 'Make a table', 't2')
     for it in items.values():
         for s_ in it.get('slips', []):
             if it['type'] == 'number': eq(it['answer'] in s_['a'], False, it['id'] + ' slip is wrong')
         if it['type'] == 'choice': eq(it['answer'] in it['options'], True, it['id'] + ' answer is an option')
-    for a in items['c1']['tpl']['vars']['a']: eq(plus(a, 7) <= 31, True, f'c1 {a} stays in the month')
-    for s_ in items['c5']['tpl']['vars']['s']: eq(plus(s_, 21) - s_, 21, f'c5 {s_}')
-    for a in items['t1']['tpl']['vars']['a']: eq(plus(a, 14) <= 31, True, f't1 {a} stays in the month')
-    for a in items['g1']['tpl']['vars']['a']: eq(_g1(dict(a=a)), 5 if a <= 3 else 4, f'g1 {a} Mondays')
+    for m_, b_ in itertools.product(items['c1']['tpl']['vars']['m'], items['c1']['tpl']['vars']['b']): eq(m_ > b_, True, f'c1 {m_} {b_}')
+    for e_, l_ in itertools.product(items['t1']['tpl']['vars']['e'], items['t1']['tpl']['vars']['l']): eq(e_ + l_ <= 20, True, f't1 {e_} {l_}')
+    for h_ in items['c2']['tpl']['vars']['h']: eq(h_ + 1 <= 11, True, f'c2 {h_}')
     for it in items.values():
         tp = it.get('tpl')
-        if tp: eq(re.search(r'\{\w+\}th', json.dumps(tp)), None, it['id'] + ' template uses the ordinal formatter, never {a}th (2th, 22th)')
-    eq([cq['child_footer'].count('Print at 100%'), ' '.join(cq['child_rules']).count('nobody sees your answers')], [0, 0], 'the Quest Log footer and rules: no print instruction, no nobody-sees claim (photos go to the tutor)')
-    eq(re.search(r'odd and even|3 and 4 tables', json.dumps(cq['parent_note'])), None, 'the Quest grown-up note is not the Term 2 note')
-    eq(G['C8']['strand'], 'time', 'gate 8 is a Time gate')
-    eq(all('yellow' not in json.dumps(x['text']) for x in (T['S5'], G['C8'])), True, 'no question depends on a colour')
+        if tp: eq(re.search(r'\{\w+\}th', json.dumps(tp)), None, it['id'] + ' template never writes {a}th')
     # ---------------------------------------------------------------- kit contract, hand-offs
     kc = {r['piece']: r for r in d['materials']['kit_contract']}
     for r in kc.values(): eq(r['supplied'] >= r['max_used'], True, 'kit contract ' + r['piece'])
-    eq(kc['day cards (Monday to Sunday)']['supplied'], 7, 'seven day cards'); eq(len(WEEK), 7, 'seven days')
+    eq((kc['tool cards']['supplied'], len(d['workbook']['kits'][0]['labels'])), (7, 7), 'seven tool cards'); eq(d['workbook']['kits'][0]['labels'], [r[0] for r in sl['s-rem1']['blocks'][0]['rows']], 'cards match the toolbox page')
     nm = ' '.join(d['parent']['next_materials']).lower(); eq(('term 4' in nm and 'cut' in nm), True, 'hand-off to Term 4 names the book and the cut-out')
     p29 = json.load(open(os.path.join(L1, 'lessons', 'l29.json'), encoding='utf-8')); pm = ' '.join(p29['parent']['next_materials']).lower()
     mk = ' '.join(d['materials']['child']).lower()
-    eq(all(w_ in pm for w_ in ('quest log', 'quest partner', 'calendar', '7 day cards')) and all(w_ in mk for w_ in ('quest log', 'quest partner', 'day cards', 'calendar')), True, 'Lesson 29 hand-off matches this lesson\'s materials')
-    eq(d['workbook']['kits'][0]['type'], 'calendar_cards', 'the kit is the calendar page')
+    eq(all(w_ in pm for w_ in ('quest log', 'quest partner', 'tool-card page', '7 tool cards')) and all(w_ in mk for w_ in ('quest log', 'quest partner', 'tool cards')), True, 'Lesson 29 hand-off matches this lesson\'s materials')
     return n

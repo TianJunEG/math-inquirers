@@ -198,8 +198,8 @@ module.exports = {
     const x0 = 130; g += poly([[x0, 102], [x0 + 9 * 12, 102], [x0 + 3 * 12, 22]], SKY) + ln([x0 + 3 * 12, 22], [x0 + 3 * 12, 102], true) + ra([x0 + 3 * 12, 102], 1, -1) + lab(x0 + 54, 120, '9 cm') + lab(x0 + 9 * 12 + 6, 62, 'height ?', 'start');
     module.exports.qbank.stretch[2].fig = fsv(340, 130, 'A square with sides 6 cm and a triangle with base 9 cm and an unknown height; the two have the same area', g, 0.8); }
   // A4: a rectangle and a triangle with the same base 12 cm and the same height 7 cm
-  { let g = poly([[20, 20], [20 + 12 * 11, 20], [20 + 12 * 11, 20 + 7 * 11], [20, 20 + 7 * 11]], YEL) + lab(20 + 66, 20 + 7 * 11 + 18, '12 cm') + lab(14, 20 + 40, '7 cm', 'end');
-    const x0 = 200; g += poly([[x0, 97], [x0 + 12 * 11, 97], [x0 + 4 * 11, 20]], SKY) + ln([x0 + 4 * 11, 20], [x0 + 4 * 11, 97], true) + ra([x0 + 4 * 11, 97], 1, -1) + lab(x0 + 66, 115, '12 cm') + lab(x0 + 4 * 11 + 8, 60, '7 cm', 'start');
+  { let g = poly([[20, 20], [20 + 12 * 11, 20], [20 + 12 * 11, 20 + 7 * 11], [20, 20 + 7 * 11]], YEL) + lab(20 + 66, 20 + 7 * 11 + 18, '12 cm') + lab(26, 20 + 44, '7 cm', 'start');
+    const x0 = 200; g += poly([[x0, 97], [x0 + 12 * 11, 97], [x0 + 4 * 11, 20]], SKY) + ln([x0 + 4 * 11, 20], [x0 + 4 * 11, 97], true) + ra([x0 + 4 * 11, 97], 1, -1) + lab(x0 + 66, 115, '12 cm') + `<rect x="${x0 + 4 * 11 - 24}" y="48" width="48" height="22" fill="#DDEBF7"/>` + lab(x0 + 4 * 11, 64, '7 cm');
     module.exports.qbank.stretch[3].fig = fsv(350, 130, 'A rectangle 12 cm by 7 cm and a triangle with base 12 cm and height 7 cm side by side', g, 0.8); }
   // B1: right-angled triangle 15, 20, 25 with the 25 cm side as the base
   { const P = M(80, 150, 6.4); let g = poly([P(0, 0), P(20, 0), P(0, 15)], SKY) + ra(P(0, 0), 1, -1) + lab(80 + 64, 168, '20 cm') + lab(72, 110, '15 cm', 'end') + lab(80 + 90, 88, '25 cm', 'start');

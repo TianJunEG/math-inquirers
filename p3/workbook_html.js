@@ -52,8 +52,8 @@ const investigation = (n) => {
     if (i === 0 && g.table) {
       const nc = g.table.cols.length, hasLab = g.table.rows.some(r => r !== ''), first = hasLab ? 1700 : 0;
       const w = hasLab ? [first, ...Array(nc - 1).fill(Math.floor((9900 - first) / (nc - 1)))] : Array(nc).fill(Math.floor(9900 / nc));
-      const rh = g.table.rows.length > 8 ? 34 : 70;
-      out.push(C.tbl(w, [C.row(g.table.cols.map((c, j) => C.cell(c, w[j], { bold: true, fill: 'D9D9D9', size: 18, h: 40 }))), ...g.table.rows.map(r => C.row(w.map((ww, j) => (j === 0 && hasLab) ? C.cell(r, ww, { bold: true, fill: 'EDEDED', size: 20, h: rh }) : C.cell('', ww, { h: rh }))))]));
+      const rh = g.table.rows.length > 8 ? 150 : 90;
+      out.push(C.tbl(w, [C.row(g.table.cols.map((c, j) => C.cell(c, w[j], { bold: true, fill: 'FFFFFF', size: 22, h: 40 }))), ...g.table.rows.map(r => C.row(w.map((ww, j) => (j === 0 && hasLab) ? C.cell(r, ww, { bold: true, fill: 'FFFFFF', size: 22, h: rh }) : C.cell('', ww, { h: rh }))))]).replace(/<td style="/g, '<td style="border:1.6px solid #1B2A49;'));   // white cells and dark borders so the table reads in black and white
       out.push(C.gap(40));
     }
   });

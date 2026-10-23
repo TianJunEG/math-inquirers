@@ -62,7 +62,7 @@ const legend1 = () => { // L6 No.1: all notes and coins we have
 const changeLines = () => {
   const l1 = numberLineF({ min: 65, max: 100, W: 600, step: 5, labelEvery: 5, fmt: v => v + '¢', marks: [{ v: 65, kind: 'dot' }, { v: 100, kind: 'dot' }], size: 16 }, 70);
   const l2 = numberLineF({ min: 26, max: 50, W: 600, step: 1, labelEvery: 2, fmt: v => '$' + v, marks: [{ v: 26, kind: 'dot' }, { v: 50, kind: 'dot' }], size: 16 }, 70);
-  return W(svg(600, 96, T(10, 18, 'a  from 65¢ up to $1 (100¢): count up in hops', 15, { a: 'start', w: 600, c: '#44506F' }) + l1, 'Number line from 65 cents to 1 dollar'), 2) + W(svg(600, 96, T(10, 18, 'b  from $26 up to $50: count up in hops', 15, { a: 'start', w: 600, c: '#44506F' }) + l2, 'Number line from 26 dollars to 50 dollars'), 2);
+  return W(svg(600, 112, T(10, 18, 'a  from 65¢ up to $1 (100¢): count up in hops', 15, { a: 'start', w: 600, c: '#44506F' }) + l1, 'Number line from 65 cents to 1 dollar'), 2) + W(svg(600, 112, T(10, 18, 'b  from $26 up to $50: count up in hops', 15, { a: 'start', w: 600, c: '#44506F' }) + l2, 'Number line from 26 dollars to 50 dollars'), 2);
 };
 const spendBar = () => bm({ rows: [{ label: 'Siti', segs: [{ u: 1.6, t: '45¢', k: 'a' }, { u: 1.2, t: '30¢', k: 'b' }, { u: 1.0, t: '25¢ left', k: 'dt' }], brace: { from: 0, to: 3.8, t: '? at first', pos: 'bottom' } }], unit: 110, labelW: 60, rowH: 44 }, 'A bar: 45 cents, 30 cents and 25 cents left');
 const stickerEraser = () => W(svg(600, 76, (() => { let s = ''; s += R(10, 10, 130, 56, Y, { sw: 2.4, rx: 6 }) + icon('star', 38, 38, 32) + T(100, 44, '20¢', 22); s += T(150, 44, 'each sticker', 15, { a: 'start', w: 600 }); s += R(330, 10, 130, 56, BL, { sw: 2.4, rx: 6 }) + P([[352, 28], [388, 28], [388, 48], [352, 48]], '#fff', { sw: 2 }) + T(425, 44, '50¢', 22); s += T(470, 44, 'each eraser', 15, { a: 'start', w: 600 }); return s; })(), 'A sticker costs 20 cents and an eraser costs 50 cents'), 2);
@@ -109,7 +109,7 @@ const balances = (defs, label, h) => W(svg(600, h || 200, defs.map((d, i) => sca
 const scalesQ1 = () => {
   const defs = [[['melon'], ['apple', 'apple'], 'melon', '2 apples', 94], [['apple'], ['w:100 g', 'w:100 g'], 'apple', '2 × 100 g', 286], [['melon'], ['apple', 'lemon', 'lemon', 'lemon', 'lemon'], 'melon', 'apple, 4 lemons', 476]];
   let s = '';
-  defs.forEach((d, i) => { const cx = d[4]; s += scaleF(cx, d[0], d[1], { arm: 52, pw: 40, post: 12, sz: 27, y: 40, drop: 70 }) + T(cx, 16, 'Scale ' + (i + 1), 17) + T(cx - 52, 158, d[2], 15, { w: 700 }) + T(cx + 52, 158, d[3], 15, { w: 700 }); });
+  defs.forEach((d, i) => { const cx = d[4]; s += scaleF(cx, d[0], d[1], { arm: 52, pw: 40, post: 12, sz: 27, y: 40, drop: 70 }) + T(cx, 16, 'Scale ' + (i + 1), 17) + T(cx - 52, 158, d[2], 15, { w: 700 }) + T(cx + 68, 158, d[3], 15, { w: 700 }); });
   return svg(600, 206, s, 'Three level scales. Scale 1: a melon and 2 apples. Scale 2: an apple and two 100 g weights. Scale 3: a melon and an apple with 4 lemons.');
 };
 const balT1 = () => balances([[['apple', 'apple', 'lemon'], ['pomelo']], [['pomelo'], ['lemon', 'lemon', 'lemon', 'lemon', 'lemon']]], 'Two level scales: 2 apples and a lemon balance a pomelo; a pomelo balances 5 lemons');

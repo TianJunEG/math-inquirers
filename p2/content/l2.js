@@ -154,7 +154,7 @@ module.exports = {
 
   workbook: H => {
     const W = [];
-    const TH = () => H.t('★ take-home  ', { bold: true, color: 'B45F06' });
+    const TH = () => H.t('★ take-home  ', { bold: true, color: '1B2A49' });
     W.push(H.p('Each yellow box hides one digit (on the slides a hidden digit is a box too). Start at the ones column. Ask: was there a carry?', { after: 60 }));
     W.push(H.q(1, 'Find the missing digits. Write them in the boxes.', { before: 60, keepNext: true }));
     W.push(H.fig(sumsSvg([['(a)', '2?4', '35?', '579', '+'], ['(b)', '46?', '?75', '837', '+'], ['(c)', '?86', '2?9', '645', '+']], 'Three additions with missing digits')));

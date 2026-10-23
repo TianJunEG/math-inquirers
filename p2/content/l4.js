@@ -159,7 +159,7 @@ const qbank = {
 
 const workbook = H => {
   const out = [];
-  const TH = () => H.t('★ take-home  ', { bold: true, color: 'B45F06' });
+  const TH = () => H.t('★ take-home  ', { bold: true, color: '1B2A49' });
   const hr = (ws, lab, vals, h = 80) => H.row([H.cell(lab, ws[0], { bold: true, fill: 'D9D9D9', h }), ...vals.map((v, i) => H.cell(v || ' ', ws[i + 1], { h }))]);
   // ---- page 1 (in pairs)
   out.push(H.q(1, 'This pattern keeps going in the same way. Here are places 1 to 10. Tip: draw a line after the LAST shape of each group.', { before: 20, keepNext: true }));
