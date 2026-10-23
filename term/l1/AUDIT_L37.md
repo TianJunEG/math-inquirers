@@ -40,4 +40,4 @@ Total: 19 / 24
 
 - Never trialled with children; times and difficulty are modelled. No Primary 1 paper collects, tallies or sorts for a graph (papers only read or complete one), so those parts are activity and the wording is unverified.
 - The jumbled tray depends on the shared `table` figure and is small on paper. The graph mat is a column graph while the workbook graphs are rows (the lesson says to turn the mat on its side).
-- The hand-off from Lesson 36 could not be checked: `lessons/l36.json` did not exist when this lesson was written. This lesson needs 12 to 20 small things from the house in 3 or 4 kinds (not food), a Book 8 graph-mat page that needs no cutting, and coloured pencils (optional); Lesson 36's `parent.next_materials` must say the same.
+- Hand-off checked against `lessons/l36.json` (written after this lesson): its `parent.next_materials` names the Book 8 graph-mat page with no cutting, about 12 small things from the house in 3 or 4 kinds (not food) and optional coloured pencils, which is exactly what this lesson needs. This lesson's own hand-off to Lesson 38 says nothing to cut out, matching Lesson 38.
