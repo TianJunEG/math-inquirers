@@ -1,0 +1,314 @@
+#!/usr/bin/env python3
+"""Verify every colour-by-code worksheet. Exit code 1 on any failure. Writes out/verification.json, out/verification.txt and out/inventory.md.
+   python3 verify.py [--out out]
+Checks (per worksheet unless noted):
+  banks (every bank, both tiers): each question has exactly one answer in the bank's domain and it is the intended one; printed equations are re-evaluated from their text
+  pictures: 12 to 18 regions, regions do not overlap, mirror pairs are exact mirror images, a label box at least 28 mm wide fits every region
+  unique answers, answers all in the key, all five colours used, tally printed on the page equals the tally of the answers
+  mirror pairs / groups / counted subset (e.g. exactly N red scales) hold and are printed correctly
+  single-slip detection: every single wrong answer of every region is tried; the share caught by the page's checks must be >= 95 %
+  text fit: conservative font metrics (build time) and a real browser measurement of every label against its region
+  1-bit 150 dpi legibility, no grey tints, regions stay separate in the 1-bit render; page layout, fonts, wording rules, black and white only"""
+import argparse, glob, html, json, os, re, subprocess, sys, random
+HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+import numpy as np
+from PIL import Image
+from shapely.geometry import box as sbox
+import sheet as S, build as B, layout as L
+from banks import BANKS, BOX
+from pictures import PICTURES
+from worksheets import GALLERY
+
+ap = argparse.ArgumentParser(); ap.add_argument("--out", default=os.path.join(HERE, "out")); a = ap.parse_args()
+OUT = a.out
+log, fails, report = [], [], {}
+def rec(name, ok, detail=""):
+    log.append(f'{"PASS" if ok else "FAIL"}  {name}  {detail}')
+    if not ok: fails.append(name)
+THRESH = 0.95
+
+# ---------------------------------------------------------------------------------------------- 1. banks
+for bid, bank in BANKS.items():
+    for t, tier in bank.tiers.items():
+        tag = f"bank {bid} tier {t}"
+        rec(f"{tag}: key has five distinct values inside the domain", len(set(tier.key)) == 5 and all(k in tier.domain for k in tier.key))
+        bad, made, forms, nonum = [], 0, set(), 0
+        for ai, ans in enumerate(tier.key):
+            for f in tier.forms:
+                for k in range(25):
+                    rng = random.Random(hash((bid, t, ai, f.__name__, k)) & 0xffffffff)
+                    q = f(ans, rng)
+                    if q is None: continue
+                    made += 1; forms.add(f.__name__)
+                    sol = [v for v in tier.domain if q.holds(v)]
+                    if sol != [ans]: bad.append((f.__name__, q.lines, sol))
+                    solved = " ".join(q.sol)
+                    if L.ANS_L + (tier.disp(ans) if not isinstance(ans, tuple) else "") not in solved and not isinstance(ans, tuple) and q.art is None and BOX in " ".join(q.lines):
+                        if str(ans) not in solved: bad.append((f.__name__, "answer not in teacher lines", q.sol))
+                    for e in q.eq:        # re-evaluate the printed equation with the intended answer substituted
+                        if not __import__("banks").eq_eval(e, ans): bad.append((f.__name__, "equation", e))
+                    if q.art is not None and q.art.meta.get("kind") == "clock":
+                        import art as A
+                        if A.decode_clock(q.art.meta) != ans: bad.append((f.__name__, "clock hands", q.art.meta))
+                    if q.art is not None and q.art.meta.get("kind") == "ruler":
+                        m = q.art.meta
+                        if m["end"] - m["start"] != ans: bad.append((f.__name__, "ruler", m))
+                    if q.art is not None and q.art.meta.get("kind") in ("coins", "notes"):
+                        if sum(q.art.meta["values"]) != ans: bad.append((f.__name__, "coins", q.art.meta))
+                    if q.art is not None and q.art.meta.get("kind") == "shapes":
+                        import art as A
+                        if sum(A.SHAPES[k_] for k_ in q.art.meta["kinds"]) * (1 if t == 1 else 2) != ans: bad.append((f.__name__, "shapes", q.art.meta))
+                    if hasattr(q, "seq"):
+                        terms, blank = q.seq
+                        if terms[blank] != ans: bad.append((f.__name__, "sequence", q.seq))
+        rec(f"{tag}: {made} sample questions each have exactly one answer in the domain, equal to the intended one ({len(forms)} forms)", not bad and made > 200, str(bad[:2])[:150])
+        report[tag] = dict(questions=made, forms=sorted(forms), bad=len(bad))
+
+# ---------------------------------------------------------------------------------------------- 2. pictures
+for pid, fn in PICTURES.items():
+    pic = fn(); n = len(pic.regions); tag = f"picture {pid}"
+    rec(f"{tag}: 12 to 18 regions", 12 <= n <= 18, str(n))
+    rec(f"{tag}: every region is one valid polygon, area >= 250 mm2, inside the canvas", all(r.geom.is_valid and r.geom.geom_type == "Polygon" and r.geom.area >= 250 and r.geom.bounds[0] >= -0.01 and r.geom.bounds[2] <= 180.01 and r.geom.bounds[1] >= -0.01 and r.geom.bounds[3] <= 200.01 for r in pic.regions))
+    ov = [(a_.id, b_.id, round(a_.geom.intersection(b_.geom).area, 2)) for i, a_ in enumerate(pic.regions) for b_ in pic.regions[i + 1:] if a_.geom.intersection(b_.geom).area > 1.0]
+    rec(f"{tag}: regions do not overlap", not ov, str(ov[:3]))
+    ids = [r.id for r in pic.regions]; rec(f"{tag}: region ids are unique", len(set(ids)) == n)
+    by = pic.by_id()
+    from geom import mir
+    bad = [(l, r) for l, r in pic.mirror_pairs if by[l].geom.symmetric_difference(mir(by[r].geom)).area > 0.5]
+    rec(f"{tag}: mirror pairs are exact mirror images ({len(pic.mirror_pairs)} pairs)", not bad, str(bad))
+    narrow = []
+    for r in pic.regions:
+        w12 = max([b[2] for b in pic.boxes(r.id) if b[3] <= 12.0] or [0])
+        if w12 < 28.0: narrow.append((r.id, w12))
+    rec(f"{tag}: a label box at least 28 mm wide and 12 mm high fits every region", not narrow, str(narrow))
+    report[tag] = dict(regions=n, pairs=len(pic.mirror_pairs), groups=len(pic.groups), subsets=len(pic.subsets))
+
+# ---------------------------------------------------------------------------------------------- 3. worksheets
+def pdftext(path): return subprocess.run(["pdftotext", "-layout", path, "-"], capture_output=True, text=True).stdout
+
+def slip_stats(sh):
+    """try every single wrong answer in every region; count how many the page's checks reject"""
+    pic, tier, key, idx = sh["pic"], sh["tier"], sh["key"], sh["idx"]
+    truth = {r.id: key.index(sh["items"][r.id]["answer"]) for r in pic.regions}
+    assert truth == idx
+    base = {k: sum(1 for v in truth.values() if v == k) for k in range(5)}
+    pairs = list(pic.mirror_pairs); groups = [g[0] for g in pic.groups]
+    subs = [(s[2], s[3], s[4]) for s in sh["checks"] if s[0] == "subset"]
+    def failed_checks(col):
+        out = []
+        cnt = {k: sum(1 for v in col.values() if v == k) for k in range(5)}
+        if cnt != base: out.append("tally")
+        if any(col[l] != col[r] for l, r in pairs): out.append("mirror")
+        if any(len({col[i] for i in g}) != 1 for g in groups): out.append("group")
+        if any(sum(col[i] == k for i in ids) != c for ids, k, c in subs): out.append("subset")
+        return out
+    assert not failed_checks(dict(truth)), "right answers must pass every check"
+    tot = in_key = det_all = det_key = det_structure = 0
+    for r in pic.regions:
+        for w in tier.domain:
+            if w == sh["items"][r.id]["answer"]: continue
+            tot += 1
+            if w not in key: det_all += 1; continue            # no crayon colour exists for this answer: the pupil sees it at once
+            in_key += 1
+            col = dict(truth); col[r.id] = key.index(w)
+            f = failed_checks(col)
+            if f: det_all += 1; det_key += 1
+            if any(x != "tally" for x in f): det_structure += 1
+    return dict(wrong_values=tot, in_key=in_key, detected_all=det_all, rate_all=round(det_all / tot, 4), detected_in_key=det_key,
+                rate_in_key=round(det_key / max(in_key, 1), 4), caught_by_structure_checks=round(det_structure / max(in_key, 1), 4))
+
+def tally_from_pdf(txt):
+    m = re.search(r"You should have:\s*yellow (\d+), red (\d+), blue (\d+), green (\d+), orange (\d+)", re.sub(r"\s+", " ", txt))
+    return [int(x) for x in m.groups()] if m else None
+
+sheets = [S.make_sheet(sp, "") for sp in GALLERY]
+ws_report = {}
+for sh in sheets:
+    sp = sh["spec"]; wid = sp["id"]; pic, bank, tier = sh["pic"], sh["bank"], sh["tier"]
+    R = {}; ws_report[wid] = R
+    slug = B.slug(sp)
+    pdf_p, pdf_t = os.path.join(OUT, slug + "_pupil.pdf"), os.path.join(OUT, slug + "_teacher.pdf")
+    rec(f"{wid}: pupil and teacher PDFs exist", os.path.exists(pdf_p) and os.path.exists(pdf_t))
+    if not (os.path.exists(pdf_p) and os.path.exists(pdf_t)): continue
+    items = sh["items"]
+    # unique answer per question, in the key
+    probs = []
+    for rid, it in items.items():
+        sol = [v for v in tier.domain if it["q"].holds(v)]
+        if sol != [it["answer"]]: probs.append((rid, it["q"].lines, sol))
+        if it["answer"] not in sh["key"]: probs.append((rid, "answer not in key"))
+    rec(f"{wid}: every question has exactly one answer and it is one of the five key values", not probs, str(probs[:2]))
+    # dedupe
+    sigs = [" / ".join(it["q"].lines) + str(getattr(it["q"].art, "meta", "")) for it in items.values()]
+    rec(f"{wid}: no two regions have the same question", len(set(sigs)) == len(sigs), f"{len(sigs) - len(set(sigs))} repeated")
+    # key coverage and tally
+    colours_used = [sh["key"].index(it["answer"]) for it in items.values()]
+    cnt = [colours_used.count(k) for k in range(5)]
+    rec(f"{wid}: all five key values and colours are used (counts {cnt}, each at least 2)", min(cnt) >= 2)
+    tp = tally_from_pdf(pdftext(pdf_p)); tt = tally_from_pdf(pdftext(pdf_t))
+    rec(f"{wid}: tally printed on the pupil page equals the tally of the answers", tp == cnt, f"printed {tp}")
+    rec(f"{wid}: tally printed on the teacher page equals the tally of the answers", tt == cnt, f"printed {tt}")
+    ans = {r.id: items[r.id]["answer"] for r in pic.regions}
+    rec(f"{wid}: mirror pairs share one colour ({len(pic.mirror_pairs)} pairs)", all(ans[l] == ans[r] for l, r in pic.mirror_pairs))
+    rec(f"{wid}: must-match groups share one colour ({len(pic.groups)} groups)", all(len({ans[i] for i in g[0]}) == 1 for g in pic.groups))
+    for s in [c for c in sh["checks"] if c[0] == "subset"]:
+        ids, k, c = s[2], s[3], s[4]
+        real = sum(1 for i in ids if ans[i] == sh["key"][k])
+        printed = re.search(r"Exactly (\d+)", re.sub(r"\s+", " ", pdftext(pdf_p)))
+        rec(f"{wid}: counted-subset check '{s[1]}' is true of the answers and printed correctly", real == c and printed and int(printed.group(1)) == c, f"real {real}")
+    # single slips
+    st = slip_stats(sh); R["single_slip"] = st
+    rec(f"{wid}: single-slip detection {st['detected_all']}/{st['wrong_values']} = {st['rate_all']:.1%} (every wrong value of every region; needs >= 95%)", st["rate_all"] >= THRESH)
+    rec(f"{wid}: single-slip detection for wrong values that do have a crayon colour {st['detected_in_key']}/{st['in_key']} = {st['rate_in_key']:.1%} (needs >= 95%)", st["rate_in_key"] >= THRESH)
+    # geometric fit of every label (conservative metrics) with margin to the outline
+    prob = []
+    minf = 99; tmin = 99; short = 0
+    for r in pic.regions:
+        it = items[r.id]
+        for lab, pl in (("pupil", it["place"]), ("teacher", it["tplace"])):
+            cx, cy = pl["box"][0], pl["box"][1]
+            rect = sbox(cx - pl["w"] / 2, cy - pl["h"] / 2, cx + pl["w"] / 2, cy + pl["h"] / 2)
+            if not r.geom.buffer(-0.6).contains(rect): prob.append((r.id, lab))
+            if lab == "pupil": minf = min(minf, pl["f"]); R.setdefault("label_widths", []).append(round(pl["box"][2], 1))
+            else: tmin = min(tmin, pl["f"])
+        short += it["teacher_short"]
+    rec(f"{wid}: every label lies inside its region with at least 0.6 mm clear of the outline (conservative metrics)", not prob, str(prob[:3]))
+    rec(f"{wid}: smallest pupil text {minf} mm (>= 4.2 mm, about 12 pt)", minf >= 4.2)
+    R["min_pupil_font_mm"] = minf; R["min_teacher_font_mm"] = tmin; R["teacher_short_labels"] = short
+    del R["label_widths"]
+    from shapely.geometry import LineString
+    chords = []
+    for r in pic.regions:
+        cx, cy = items[r.id]["place"]["box"][0], items[r.id]["place"]["box"][1]
+        seg = r.geom.intersection(LineString([(-5, cy), (185, cy)]))
+        parts = [seg] if seg.geom_type == "LineString" else list(seg.geoms)
+        parts = [s_ for s_ in parts if s_.geom_type == "LineString"]
+        w = max((s_.length for s_ in parts if s_.distance(__import__("shapely.geometry", fromlist=["Point"]).Point(cx, cy)) < 0.01), default=0)
+        chords.append((round(w, 1), r.id))
+    R["narrowest_region_width_at_label_mm"] = min(chords)[0]
+    rec(f"{wid}: every region is at least 28 mm wide where its label sits (narrowest {min(chords)})", min(chords)[0] >= 28.0)
+
+# ---------------------------------------------------------------------------------------------- 4. browser: real text against real regions
+from playwright.sync_api import sync_playwright
+JS = """
+() => {
+  const svg = document.querySelector('svg.pic'); const out = {labels: [], decor: 0, issues: []};
+  const regions = {}; svg.querySelectorAll('path.r').forEach(p => regions[p.id.split('-').slice(2).join('-')] = p);
+  const decor = [...svg.children].filter(e => !e.classList.contains('r') && !e.classList.contains('lab'));
+  svg.querySelectorAll('g.lab').forEach(g => {
+    const id = g.dataset.r; const p = regions[id]; const bb = g.getBBox();
+    const pts = []; const nx = 9, ny = 5;
+    for (let i = 0; i <= nx; i++) for (let j = 0; j <= ny; j++) pts.push([bb.x - 0.45 + (bb.width + 0.9) * i / nx, bb.y - 0.45 + (bb.height + 0.9) * j / ny]);
+    let outside = 0, hit = 0;
+    for (const [x, y] of pts) {
+      const dp = new DOMPoint(x, y);
+      if (!p.isPointInFill(dp) || p.isPointInStroke(dp)) outside++;
+      for (const d of decor) if (d.isPointInFill && (d.isPointInFill(dp) || d.isPointInStroke(dp))) hit++;
+    }
+    // text actually measured: widest text run
+    let tw = 0; g.querySelectorAll('text').forEach(t => tw = Math.max(tw, t.getBBox().width));
+    out.labels.push({id, x: bb.x, y: bb.y, w: bb.width, h: bb.height, outside, hit, fs: Math.min(...[...g.querySelectorAll('text')].map(t => parseFloat(t.style.fontSize || 99)))});
+  });
+  const page = document.querySelector('.page'); const r = svg.getBoundingClientRect(); const mm = 25.4 / 96;
+  out.svg = {left: r.left * mm, top: r.top * mm, width: r.width * mm, height: r.height * mm};
+  const chk = document.querySelector('.chk').getBoundingClientRect(), ft = document.querySelector('footer').getBoundingClientRect(), hd = document.querySelector('header').getBoundingClientRect();
+  out.layout = {pageOverflow: page.scrollHeight > page.clientHeight + 1, svgBottom: r.bottom * mm, chkTop: chk.top * mm, chkBottom: chk.bottom * mm, footerTop: ft.top * mm, footerBottom: ft.bottom * mm, headerTop: hd.top * mm,
+    minLeft: Math.min(...[...page.querySelectorAll('*')].map(e => e.getBoundingClientRect()).filter(b => b.width > 0).map(b => b.left)) * mm,
+    maxRight: Math.max(...[...page.querySelectorAll('*')].map(e => e.getBoundingClientRect()).filter(b => b.width > 0).map(b => b.right)) * mm};
+  return out;
+}
+"""
+browser_res = {}
+with sync_playwright() as pw:
+    br = pw.chromium.launch()
+    for sh in sheets:
+        sp = sh["spec"]; wid = sp["id"]; slug = B.slug(sp)
+        for kind in ("pupil", "teacher"):
+            hp = os.path.join(OUT, "html", f"{slug}_{kind}.html")
+            if not os.path.exists(hp): rec(f"{wid} {kind}: html exists", False); continue
+            pg = br.new_page(viewport={"width": 794, "height": 1123}); pg.goto("file://" + hp); pg.wait_for_timeout(600)
+            res = pg.evaluate(JS); pg.close(); browser_res[(wid, kind)] = res
+            bad = [l for l in res["labels"] if l["outside"] or l["hit"]]
+            rec(f"{wid} {kind}: real browser text of all {len(res['labels'])} labels lies inside its region, clear of outlines and decorations", not bad, str([(b['id'], b['outside'], b['hit']) for b in bad][:4]))
+            lay = res["layout"]
+            rec(f"{wid} {kind}: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides",
+                not lay["pageOverflow"] and lay["svgBottom"] <= lay["chkTop"] + 0.1 and lay["chkBottom"] <= lay["footerTop"] + 0.1 and lay["minLeft"] >= 14.0 and lay["maxRight"] <= 196.0 and lay["footerBottom"] <= 297 - 6, str({k: round(v, 1) if isinstance(v, float) else v for k, v in lay.items()}))
+    br.close()
+
+# ---------------------------------------------------------------------------------------------- 5. PDFs: wording, fonts, size, 1-bit legibility
+import tempfile
+tmp = tempfile.mkdtemp()
+FORBIDDEN = re.compile(r"S\$|SGD|per copy|per school|\bRRP\b|discount|\bMi\b|MOE|Ministry|aligned|alignment|affiliat|endorse|÷", re.I)
+total_bytes = 0
+for sh in sheets:
+    sp = sh["spec"]; wid = sp["id"]; slug = B.slug(sp)
+    for kind in ("pupil", "teacher"):
+        path = os.path.join(OUT, f"{slug}_{kind}.pdf")
+        if not os.path.exists(path): continue
+        total_bytes += os.path.getsize(path)
+        info = subprocess.run(["pdfinfo", path], capture_output=True, text=True).stdout
+        rec(f"{wid} {kind}: one A4 page", re.search(r"Pages:\s+1\b", info) is not None and "(A4)" in info)
+        fo = subprocess.run(["pdffonts", path], capture_output=True, text=True).stdout.splitlines()[2:]
+        rec(f"{wid} {kind}: fonts embedded", all(l.split()[-5] == "yes" for l in fo if l.strip()), f"{len(fo)} fonts")
+        txt = pdftext(path)
+        rec(f"{wid} {kind}: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)", not FORBIDDEN.search(txt) and not re.search(r"(?<![\w.])\d+c\b", txt), str(FORBIDDEN.findall(txt)[:3]))
+        rec(f"{wid} {kind}: footer has a school-name field and the worksheet code", "School name:" in txt and wid in txt)
+        if sp["bank"] == "time": rec(f"{wid} {kind}: time uses only o'clock and half past", not re.search(r"quarter|\bten past|twenty|\bto \d", txt, re.I))
+        h = open(os.path.join(OUT, "html", f"{slug}_{kind}.html")).read()
+        body = h[h.index("<body>"):]
+        cols = set(c.lower() for c in re.findall(r"#[0-9a-fA-F]{3,6}\b", h))
+        rec(f"{wid} {kind}: html uses only black and white (#000, #fff)", cols <= {"#000", "#fff", "#000000", "#ffffff"} and not re.search(r"(?:fill|stroke|color|background)\s*[:=]\s*[\"']?(red|blue|green|gray|grey|orange|yellow)", h, re.I), str(sorted(cols))[:60])
+        sw = [float(x) for x in re.findall(r'stroke-width[=:]\s*"?([\d.]+)', h)]
+        rec(f"{wid} {kind}: outline width 0.9 mm and no line thinner than 0.3 mm", "stroke-width:0.9" in h and min(sw) >= 0.3, f"min {min(sw)}")
+        # 1-bit legibility at 150 dpi
+        d = os.path.join(tmp, f"{wid}{kind}"); os.makedirs(d)
+        subprocess.run(["pdftoppm", "-r", "150", "-gray", path, os.path.join(d, "g")], check=True)
+        subprocess.run(["pdftoppm", "-r", "150", "-mono", path, os.path.join(d, "m")], check=True)
+        G = np.array(Image.open(glob.glob(d + "/g-*.pgm")[0]).convert("L")); M = np.array(Image.open(glob.glob(d + "/m-*.pbm")[0]).convert("L"))
+        loss = 1 - (M < 128).sum() / max((G < 235).sum(), 1)
+        rec(f"{wid} {kind}: 1-bit render at 150 dpi keeps the ink (loss {loss:.1%}, needs <= 25%)", loss <= 0.25)
+        # grey flat tints
+        blocks = G[:G.shape[0] // 6 * 6, :G.shape[1] // 6 * 6].reshape(G.shape[0] // 6, 6, G.shape[1] // 6, 6)
+        mn, mx = blocks.min(axis=(1, 3)), blocks.max(axis=(1, 3))
+        grey = int(((mn > 40) & (mx < 215)).sum())
+        rec(f"{wid} {kind}: no flat grey tint areas in the greyscale render ({grey} blocks, limit 60)", grey < 60)
+        # regions stay separate: connected white areas in the 1-bit image
+        from scipy import ndimage
+        white = M > 128
+        lab, n = ndimage.label(white)
+        sizes = np.bincount(lab.ravel())[1:]
+        big = int((sizes >= 600).sum())      # background (1) + each region; glyph holes are far smaller
+        npics = len(sh["pic"].regions)
+        rec(f"{wid} {kind}: all {npics} regions stay separate white areas in the 1-bit render ({big} large white areas incl. background and boxes)", big >= npics + 1, "")
+        # per label ink retention in the 1-bit render
+        res = browser_res.get((wid, kind))
+        if res:
+            ox, oy = res["svg"]["left"], res["svg"]["top"]; worst = 0; worst_id = ""
+            for lb in res["labels"]:
+                x0 = int((ox + lb["x"] + 0.5) / 25.4 * 150) - 2; x1 = int((ox + lb["x"] + lb["w"] + 0.5) / 25.4 * 150) + 2
+                y0 = int((oy + lb["y"] + 0.5) / 25.4 * 150) - 2; y1 = int((oy + lb["y"] + lb["h"] + 0.5) / 25.4 * 150) + 2
+                g = (G[y0:y1, x0:x1] < 235).sum(); m = (M[y0:y1, x0:x1] < 128).sum()
+                ls = 1 - m / max(g, 1)
+                if ls > worst: worst, worst_id = ls, lb["id"]
+            rec(f"{wid} {kind}: every label keeps its ink in the 1-bit render (worst {worst:.0%} lost, {worst_id}; needs <= 40%)", worst <= 0.40)
+    # gallery files
+rec("all PDFs together are under 20 MB", total_bytes < 20e6, f"{total_bytes / 1e6:.2f} MB")
+cs = os.path.join(OUT, "contact_sheet.pdf")
+rec("contact sheet PDF exists with 2 pages", os.path.exists(cs) and re.search(r"Pages:\s+2\b", subprocess.run(["pdfinfo", cs], capture_output=True, text=True).stdout) is not None)
+rec("gallery has 10 worksheets, at least 5 pictures, at least 6 topics, mixed stars",
+    len(GALLERY) == 10 and len({g["picture"] for g in GALLERY}) >= 5 and len({g["bank"] for g in GALLERY}) >= 6 and {g["tier"] for g in GALLERY} == {1, 2})
+rec("library has at least 5 pictures and 6 topic banks", len(PICTURES) >= 5 and len(BANKS) >= 6, f"{len(PICTURES)} pictures, {len(BANKS)} banks")
+
+# ---------------------------------------------------------------------------------------------- report
+open(os.path.join(OUT, "verification.txt"), "w").write("\n".join(log) + f"\n\n{len(log) - len(fails)} passed, {len(fails)} failed\n")
+inv = ["| id | picture | topic | stars | key (answers, in colour order yellow, red, blue, green, orange) | regions | checks printed on the page | single-slip detection | min text | verification |", "|---|---|---|---|---|---|---|---|---|---|"]
+for sh in sheets:
+    sp = sh["spec"]; R = ws_report.get(sp["id"], {}); st = R.get("single_slip", {})
+    chk = ["tally"] + (["mirror pairs"] if sh["pic"].mirror_pairs else []) + (["same-colour groups"] if sh["pic"].groups else []) + [s[1].split(":")[0].split(".")[0].replace("The ", "").lower() + " count" for s in sh["checks"] if s[0] == "subset"]
+    mine = [l for l in log if l.startswith("FAIL") and sp["id"] in l]
+    inv.append(f"| {sp['id']} | {sh['pic'].title} | {sh['bank'].topic_for(sp['tier'])} | {sp['tier']} | {', '.join(sh['tier'].disp(k) for k in sh['key'])} | {len(sh['pic'].regions)} | {', '.join(chk)} | {st.get('detected_all', 0)}/{st.get('wrong_values', 0)} = {st.get('rate_all', 0):.1%} | {R.get('min_pupil_font_mm', 0)} mm | {'PASS' if not mine else 'FAIL'} |")
+open(os.path.join(OUT, "inventory.md"), "w").write("\n".join(inv) + "\n")
+json.dump(dict(passed=len(log) - len(fails), failed=len(fails), failures=fails, worksheets=ws_report, banks_and_pictures=report), open(os.path.join(OUT, "verification.json"), "w"), indent=1)
+print("\n".join(l for l in log if l.startswith("FAIL")) or "no failures")
+print(f"{len(log) - len(fails)} passed, {len(fails)} failed")
+sys.exit(1 if fails else 0)
