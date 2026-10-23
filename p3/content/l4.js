@@ -177,16 +177,13 @@ module.exports = {
     // ---------- page 2 ----------
     out.push(H.q(4, 'Ali and Ben have 150 marbles altogether. Ali has 24 more marbles than Ben. How many marbles does each boy have?', { pb: true, before: 0, keepNext: true }));
     out.push(H.p('Hint: you can guess and check. Try Ben = 50, so Ali = 74. Is the total 150? Too big or too small? Try again.', { after: 20 }));
-    out.push(H.fig(drawBox(100)));
     out.push(H.sub('', 'Ben: ________      Ali: ________'));
     out.push(H.q(5, 'Mei has 85 stickers. Siti has 47 stickers. Mei gives some stickers to Siti so that they both have the same number.', { keepNext: true }));
     out.push(H.p('Hint: try giving 10 stickers. Do they have the same number now? Keep trying.', { after: 20 }));
-    out.push(H.fig(drawBox(100)));
     out.push(H.sub('a', 'How many stickers does Mei give Siti?   ________'));
     out.push(H.sub('b', '(if time) Ravi says, "Mei must give Siti 38 stickers, because 85 − 47 = 38." What mistake did Ravi make?'));
     out.push(...H.lines(2));
     out.push(H.q(6, '(if time) Ali has $45. Ben has $18. Grandma gives each boy $10.', { keepNext: true }));
-    out.push(H.fig(drawBox(120)));
     out.push(H.sub('a', 'How much more money does Ali have than Ben now?   ________'));
     out.push(H.sub('b', 'How much more did Ali have than Ben before Grandma gave the money?   ________'));
     out.push(H.sub('c', 'What do you notice? Why?'));

@@ -45,11 +45,11 @@ Printing is triggered by payment. Each paid term, the child receives that term's
 | File (outputs/print/term/) | Pages | Sheets | Issued to |
 |---|---|---|---|
 | L1_T1_Book1_Lessons01-05_Workbook | 46 | 23 | child, Term 1 |
-| L1_T1_Book2_Lessons06-10_Workbook | 46 | 23 | child, Term 1 |
+| L1_T1_Book2_Lessons06-10_Workbook | 44 | 22 | child, Term 1 |
 | L1_T2_Book3_Lessons01-05_Workbook | 44 | 22 | child, Term 2 |
 | L1_T2_Book4_Lessons06-10_Workbook | 48 | 24 | child, Term 2 |
 | L1_T3_Book5_Lessons01-05_Workbook | 42 | 21 | child, Term 3 |
-| L1_T3_Book6_Lessons06-10_Workbook | 46 | 23 | child, Term 3 |
+| L1_T3_Book6_Lessons06-10_Workbook | 44 | 22 | child, Term 3 |
 | L1_T4_Book7_Lessons01-05_Workbook | 48 | 24 | child, Term 4 |
 | L1_T4_Book8_Lessons06-10_Workbook | 42 | 21 | child, Term 4 |
 | Book1-4 AnswerKey_TUTOR | 22 / 30 / 22 / 28 | 11 / 15 / 11 / 14 | tutor only |

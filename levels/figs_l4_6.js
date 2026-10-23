@@ -291,4 +291,40 @@ const angleFig = (items, o = {}) => {
   return svg(w, h, s, o.label || 'Angles', o.width || w);
 };
 
-module.exports = { fit, barModel, numberLine, lineParts, stackSvg, clockFace, clocks, queueRow, grid, dotPlot, angleFig, svg, T, L, R, C, DEFS, N, Y, SKY, TEAL, RED, WH, GR, F };
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// ringInner / rings: n points round a circle (a clock, a 7-day week, the dots for a star). items: [{n, labels[], r, title, hl (index), hands:[from,to] arrows, star:{k}}]
+// star:{k} joins every k-th point (a star polygon {n/k}) with straight lines.
+const ringInner = (cx, cy, r, it) => {
+  const n = it.n, lab = it.labels || [], pos = i => [cx + r * Math.sin(2 * Math.PI * i / n), cy - r * Math.cos(2 * Math.PI * i / n)];
+  let s = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${GR}" stroke-width="2" stroke-dasharray="${it.solid ? '' : '6 5'}"/>`;
+  if (it.star) { const k = it.star.k; let path = ''; for (let i = 0, c = 0; c <= n; c++, i = (i + k) % n) path += (c ? 'L' : 'M') + pos(i).map(r2).join(' ') + ' '; s += `<path d="${path}" fill="none" stroke="${TEAL}" stroke-width="3.5" stroke-linejoin="round"/>`; }
+  (it.arrows || []).forEach(([a, b]) => { const [x1, y1] = pos(a), [x2, y2] = pos(b); const mx = (x1 + x2) / 2 + (cx - (x1 + x2) / 2) * 0.35, my = (y1 + y2) / 2 + (cy - (y1 + y2) / 2) * 0.35; s += `<path d="M${r2(x1)} ${r2(y1)} Q${r2(mx)} ${r2(my)} ${r2(x2)} ${r2(y2)}" fill="none" stroke="${RED}" stroke-width="3"/>`; });
+  for (let i = 0; i < n; i++) {
+    const [x, y] = pos(i), hl = it.hl === i, big = it.dotR || 11;
+    s += C(x, y, big, { fill: hl ? Y : WH, w: 3 });
+    if (lab[i] !== undefined && lab[i] !== '') {
+      const out = it.outside !== false, rr = r + (big + 15 + (String(lab[i]).length > 2 ? 10 : 0)), [lx, ly] = out ? [cx + rr * Math.sin(2 * Math.PI * i / n), cy - rr * Math.cos(2 * Math.PI * i / n)] : [x, y];
+      s += T(lx, ly + 6, lab[i], { size: it.size || 17 });
+    }
+  }
+  if (it.title) s += T(cx, cy + 6, it.title, { size: 17, fill: TEAL });
+  return s;
+};
+const rings = (items, o = {}) => {
+  const r = o.r || 66, cw = o.cw || (2 * r + 120), w = items.length * cw, h = 2 * r + 96;
+  let s = '';
+  items.forEach((it, i) => { s += ringInner(i * cw + cw / 2, h / 2 - 8, it.r || r, it); if (it.cap) s += T(i * cw + cw / 2, h - 6, it.cap, { size: 18, fill: TEAL }); });
+  return svg(w, h, s, o.label || 'Points round a circle', o.width || w);
+};
+// vline: vertical number line (heights, floors). {min,max,step,marks:[{v,t}], labels:[...], h}
+const vline = (sp) => {
+  const h = sp.h || 300, w = sp.w || 260, y0 = 20, y1 = h - 20, x = 110, sy = v => y1 - (v - sp.min) / (sp.max - sp.min) * (y1 - y0);
+  let s = L(x, y0 - 10, x, y1 + 10, { w: 3.5 });
+  for (let v = sp.min; v <= sp.max + 1e-9; v += sp.step) { s += L(x - 10, sy(v), x + 10, sy(v), { w: 3 }) + T(x - 18, sy(v) + 6, sp.fmt ? sp.fmt(v) : v, { size: 17, anchor: 'end' }); }
+  (sp.marks || []).forEach(m => { s += C(x, sy(m.v), 9, { fill: Y }) + T(x + 20, sy(m.v) + 6, m.t, { size: 18, anchor: 'start', fill: TEAL }); });
+  (sp.lines || []).forEach(l => { s += `<line x1="${x - 60}" y1="${sy(l.v)}" x2="${x + 150}" y2="${sy(l.v)}" stroke="${l.c || TEAL}" stroke-width="3" stroke-dasharray="8 5"/>` + T(x + 24, sy(l.v) - 8, l.t, { size: 18, anchor: 'start', fill: l.c || TEAL }); });
+  return svg(w, h, s, sp.label || 'A vertical number line', sp.width);
+};
+
+module.exports = { ringInner, rings, vline, fit, barModel, numberLine, lineParts, stackSvg, clockFace, clocks, queueRow, grid, dotPlot, angleFig, svg, T, L, R, C, DEFS, N, Y, SKY, TEAL, RED, WH, GR, F };

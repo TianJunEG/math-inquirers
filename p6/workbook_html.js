@@ -4,7 +4,7 @@ const { fs, t, p, q, lines, banner, AlignmentType } = C;
 const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const FIG = require('../levels/figs_l4_6.js');
-const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + FIG.fit(s, 6) + '</div>' });
+const H = Object.assign({}, C, { fig: (s, o) => '<div class="p img" style="text-align:center">' + FIG.fit(s, 6, Object.assign({ minPt: 7.3 }, o)) + '</div>' });
 const W = [];
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const LASTQ1 = { 1: 3, 2: 2, 3: 3, 4: 3, 5: 3, 6: 3, 7: 2, 8: 2, 9: 4, 10: 3 };

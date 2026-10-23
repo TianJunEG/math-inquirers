@@ -12,6 +12,8 @@ const svg = (w, h, inner, label, maxw) =>
   `<defs>` +
   `<pattern id="hz" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="${NAVY}" stroke-width="2.2"/></pattern>` +
   `<pattern id="dt" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="4" cy="4" r="1.6" fill="${NAVY}"/></pattern>` +
+  `<pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#fff"/><path d="M0 0L9 9M9 0L0 9" stroke="${NAVY}" stroke-width="1.6"/></pattern>` +
+  `<pattern id="hh" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="4" x2="8" y2="4" stroke="${NAVY}" stroke-width="2.2"/></pattern>` +
   `</defs>${inner}</svg>`;
 
 const T = (x, y, s, size = 16, o = {}) =>

@@ -2,6 +2,7 @@
 // Every answer below was worked out and checked by computer: letter numbers A = 0 … Z = 25,
 // code number = (letter number + shift) mod 26; clock and calendar answers use mod 12 and mod 7. The Python program was run.
 
+const FG = require('../../levels/figs_l4_6.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -177,7 +178,7 @@ module.exports = {
       { q: 'Ali codes a message with a shift of k, then codes the result again with the same shift k. It is the same as one shift of 6. What could k be? Find every answer from 0 to 25.', a: '3 or 16 (3 + 3 = 6; 16 + 16 = 32 and 32 mod 26 = 6)' },
       { q: 'Write your own secret message of at least 8 letters and code it with a shift of your choice. Write clear instructions telling a friend how to decode it, and explain how a friend could crack it without being told the shift. Swap and decode.', a: 'Open. Check the code by decoding it, and that the cracking idea is sensible: try every shift from 1 to 25, or use the commonest letter (often E) or a short word (A or I). Example: MEET AT SIX with a shift of 3 is PHHW DW VLA.' },
       { q: 'Ali codes a message with a shift of 7. Mei codes Ali’s result with another shift. The final message is the same as the original coded with a shift of 2. What shift did Mei use?', a: '21 (7 + 21 = 28, and 28 mod 26 = 2)' },
-      { q: 'Start at 12 on a clock and keep jumping forward 5 hours. Do you land on every number before you get back to 12? What about jumps of 4 hours?', a: 'Jumps of 5: yes, all 12 numbers (5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7, 12). Jumps of 4: no, only 4, 8 and 12, because 4 shares a factor with 12.' }
+      { q: 'Start at 12 on a clock and keep jumping forward 5 hours. Do you land on every number before you get back to 12? What about jumps of 4 hours?', fig: FG.rings([{ n: 12, labels: [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], cap: 'jumps of 5 hours', hl: 0, solid: true }, { n: 12, labels: [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], cap: 'jumps of 4 hours', hl: 0, solid: true }], { r: 52, cw: 290, label: 'Two clock circles with 12 at the top marked as the start, to draw the jumps on.' }), a: 'Jumps of 5: yes, all 12 numbers (5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7, 12). Jumps of 4: no, only 4, 8 and 12, because 4 shares a factor with 12.' }
     ]
   },
 
@@ -190,9 +191,13 @@ module.exports = {
       H.p('Letter numbers (we start at A = 0). Use them for every code question in this lesson.', { after: 10 }),
       H.fig(strip()),
       H.q(1, 'Clock and calendar puzzles. A clock wraps round after 12; a week wraps round after 7 days.', { before: 40, keepNext: true }),
-      H.sub('a', 'It is 8 o’clock. 7 hours later it is  ______ o’clock.      (b)  It is 11 o’clock. 30 hours later (count 12 hours at a time):  ______ o’clock.', { after: 60 }),
-      H.sub('c', 'It is 4 o’clock. 9 hours ago it was  ______ o’clock.      (d)  Today is Saturday. In 100 days:  __________ .', { after: 60 }),
-      H.sub('e', 'Today is Saturday. 30 days ago it was  __________ .', { after: 60 }),
+      ((figH, subsH) => '<div class="p img" style="display:flex;align-items:center;gap:6px;text-align:left"><div style="flex:1;min-width:0">' + subsH + '</div><div style="flex:none">' + figH + '</div></div>')(
+        FG.rings([{ n: 12, labels: [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], cap: 'a 12-hour clock', solid: true }, { n: 7, labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], cap: 'a week of 7 days', hl: 6, solid: true, dotR: 11, size: 17 }], { r: 46, cw: 215, label: 'Two circles to count round. Left: the 12 hours of a clock, 12 at the top. Right: the 7 days of a week, with Saturday marked.' }),
+        [
+          H.sub('a', 'It is 8 o’clock. 7 hours later it is  ______ o’clock.      (b)  It is 11 o’clock. 30 hours later (count 12 hours at a time):  ______ o’clock.', { after: 60 }),
+          H.sub('c', 'It is 4 o’clock. 9 hours ago it was  ______ o’clock.      (d)  Today is Saturday. In 100 days:  __________ .', { after: 60 }),
+          H.sub('e', 'Today is Saturday. 30 days ago it was  __________ .', { after: 60 })
+        ].join('')),
       H.q(2, 'Caesar codes. Code number = (letter number + shift) mod 26. Test your answers in Scratch (type the message in capital letters; the starter keeps the spaces).', { keepNext: true }),
       H.sub('a', 'Code the word PIZZA with a shift of 7.      ______________________', { after: 60 }),
       H.sub('b', 'Decode this message. It was made with a shift of 10:   MYNO SC PEX      ______________________', { after: 60 }),

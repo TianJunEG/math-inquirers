@@ -6,6 +6,10 @@ const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
+const FG = require('./figs_l3.js').FX;   // Level 3 figures (shared helper hp/figs_l1_3.js); keys '<lesson>.<q>', '<lesson>.<q><part>', '<lesson>.t<n>', '<lesson>.c<n>'
+let CUR = 0, LASTQ = 0;
+H.q = (n, text, o) => { LASTQ = n; return C.q(n, text, o) + (FG[CUR + '.' + n] ? '\n' + FG[CUR + '.' + n]() : ''); };
+H.sub = (l, text, o) => C.sub(l, text, o) + (l && FG[CUR + '.' + LASTQ + l] ? '\n' + FG[CUR + '.' + LASTQ + l]() : '');
 const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
 const LEVEL = 3;
 const COMPACT = new Set([3, 5, 7, 10]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
@@ -63,11 +67,11 @@ const extra = (n) => {
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(p(t('Think harder is for anyone who wants it. Try a question, then try the Investigation on the last page of this lesson if you like.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60, align: AlignmentType.CENTER }));
   out.push(banner('Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); const fx = FG[n + '.t' + (i + 1)]; if (fx) out.push(fx()); out.push(...lines(fx ? 1 : 3)); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); const fx = FG[n + '.c' + (i + 5)]; if (fx) out.push(fx()); out.push(...lines(fx ? 2 : 4)); });
   const th = (L.content[n - 1].deck.takeHome || []);   // quick questions the lesson did not have time for (answers are in the tutor guide)
   if (th.length) {
     out.push(banner('★ Take-home'));
@@ -85,6 +89,7 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
+  CUR = l.n;
   W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, true));
   W.push(startHere());
   W.push(...c.workbook(H));

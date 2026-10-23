@@ -57,15 +57,15 @@ const cornerFig = () => {
   const A = [20, B[1]], C = [B[0] + 95 * Math.cos(t * r), B[1] + 95 * Math.sin(t * r)];
   const pt = (rad, a) => [(B[0] + rad * Math.cos(a * r)).toFixed(1), (B[1] + rad * Math.sin(a * r)).toFixed(1)];
   const arc = (rad, a1, a2, col) => `<path d="M${pt(rad, a1).join(' ')} A${rad} ${rad} 0 0 1 ${pt(rad, a2).join(' ')}" fill="none" stroke="${col}" stroke-width="3.5"/>`;
-  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" style="width:210px;max-width:100%">`;
+  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" style="width:240px;max-width:100%">`;
   s += `<line x1="${B[0]}" y1="${B[1]}" x2="${B[0] + 110}" y2="${B[1]}" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="7 5"/>`;
   s += `<polyline points="${A.join(',')} ${B.join(',')} ${C.map(v => v.toFixed(1)).join(',')}" fill="none" stroke="${NAVY}" stroke-width="4" stroke-linejoin="round"/>`;
   s += `<polygon points="60,${B[1] - 8} 80,${B[1]} 60,${B[1] + 8}" fill="${TEAL}"/>`;
   s += arc(40, 0, t, RED) + arc(26, t, 180, TEAL);
   const [tx, ty] = pt(62, 30), [ix, iy] = pt(48, 140);
-  s += `<text x="${tx}" y="${(+ty + 5).toFixed(1)}" font-size="15" font-weight="700" fill="${RED}" font-family="Arial">turn 70°</text>`;
-  s += `<text x="${ix}" y="${(+iy + 12).toFixed(1)}" font-size="15" font-weight="700" text-anchor="end" fill="${TEAL}" font-family="Arial">inside 110°</text>`;
-  s += `<text x="${B[0] + 30}" y="${B[1] - 8}" font-size="14" fill="${NAVY}" font-family="Arial">straight on</text>`;
+  s += `<text x="${tx}" y="${(+ty + 5).toFixed(1)}" font-size="17" font-weight="700" fill="${RED}" font-family="Arial">turn 70°</text>`;
+  s += `<text x="${ix}" y="${(+iy + 12).toFixed(1)}" font-size="17" font-weight="700" text-anchor="end" fill="${TEAL}" font-family="Arial">inside 110°</text>`;
+  s += `<text x="${B[0] + 30}" y="${B[1] - 8}" font-size="16" fill="${NAVY}" font-family="Arial">straight on</text>`;
   return s + '</svg>';
 };
 
@@ -210,9 +210,9 @@ module.exports = {
     const t5 = H.tbl(w5, [H.row(['Sides', '3', '4', '5', '6', '10'].map((s, i) => H.cell(s, w5[i], { bold: true, fill: 'D9D9D9', size: 22, h: 45 }))),
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
-    const intro = H.tbl([7300, 2600], [H.row([
-      H.cell('<div style="text-align:left;line-height:1.35;font-size:13.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
-      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
+    const intro = H.tbl([6200, 3700], [H.row([
+      H.cell('<div style="text-align:left;line-height:1.35;font-size:13.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 6200, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 3700, { h: 10 })])]);
     return [
       intro,
       H.p(['<div style="border:2.5px dashed #1F7A6F;background:#F3FAF8;border-radius:8px;padding:3px 10px;margin:2px 0 0;text-align:left;font-size:13.5px;line-height:1.3"><b style="color:#1F7A6F">Try it first.</b> Stand up and walk a square (step, turn right 90°, repeat until you are home facing the way you began). Quarter turns: ____ Degrees altogether: ____ <span style="color:#3B4A6B">(Or draw it.)</span></div>'], { after: 0 }),
