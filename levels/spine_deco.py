@@ -103,12 +103,13 @@ def reflect_slide(old, lv, ln, sid):
     foot = re.search(r'<p style="position:absolute;left:128px;bottom:64px[^>]*>[^<]*</p>', old).group(0)
     img = IMG.search(old); img = img.group(0) if img else ''
     yn = f'<span style="display:inline-flex;align-items:center;gap:12px;margin-left:28px;white-space:nowrap">{box()}yes</span><span style="display:inline-flex;align-items:center;gap:12px;margin-left:28px;white-space:nowrap">{box()}not yet</span>'
+    QF, RP = (40, 14) if band == 'C' else (46, 24)   # band C prompts are longest (Levels 5-6): smaller type and padding so the card clears the footer line
     a3 = L['answer3'][band]
-    ans3 = f'<span style="display:inline-flex;align-items:flex-end;gap:14px;font-size:32px;font-weight:600;color:#3B4A6B;white-space:nowrap">{esc(a3)}<span style="display:inline-block;width:{260 if band=="A" else 420}px;border-bottom:4px dotted {NAVY};height:30px"></span></span>'
+    ans3 = f'<span style="display:inline-flex;align-items:flex-end;gap:14px;font-size:32px;font-weight:600;color:#3B4A6B;white-space:nowrap">{esc(a3)}<span style="display:inline-block;width:{260 if band=="A" else (300 if band=="C" else 420)}px;border-bottom:4px dotted {NAVY};height:30px"></span></span>'
     def row(n, q, right, first=False):
         bt = '' if first else f'border-top:2px solid #DCE4F0;'
-        return (f'<div style="display:flex;gap:28px;align-items:center;padding:24px 0;{bt}"><p style="flex:none;width:64px;height:64px;border-radius:50%;background:{a};color:{CREAM};font-size:38px;font-weight:800;display:flex;align-items:center;justify-content:center">{n}</p>'
-                f'<p style="flex:1;font-size:46px;font-weight:700;line-height:1.2">{esc(q)}</p><div style="flex:none;font-size:38px;font-weight:700;display:flex;align-items:center">{right}</div></div>')
+        return (f'<div style="display:flex;gap:28px;align-items:center;padding:{RP}px 0;{bt}"><p style="flex:none;width:64px;height:64px;border-radius:50%;background:{a};color:{CREAM};font-size:38px;font-weight:800;display:flex;align-items:center;justify-content:center">{n}</p>'
+                f'<p style="flex:1;font-size:{QF}px;font-weight:700;line-height:1.2">{esc(q)}</p><div style="flex:none;font-size:38px;font-weight:700;display:flex;align-items:center">{right}</div></div>')
     rows = row(1, P[0], yn, True) + row(2, P[1], yn) + row(3, P[2], ans3)
     tools = ''.join(f'<span style="display:inline-flex;align-items:center;gap:8px">{si.icon(x["id"], NAVY, 76)}{box(32)}</span>' for x in si.SPINE['tools'])
     foot2 = (f'<div style="display:flex;align-items:center;gap:20px;border-top:2px solid #DCE4F0;padding-top:24px;font-size:32px;font-weight:700"><span style="white-space:nowrap">{esc(L["footer_tools"])}:</span>{tools}</div>'
