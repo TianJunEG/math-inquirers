@@ -74,6 +74,8 @@ def space_html(sp):
 def item_html(it, n, theme, hint=True, extra_cls=''):
     tier = it['tier']
     out = [f'<div class="item {extra_cls}" id="{it["id"]}">', badge(tier, n, theme)]
+    if it.get('beyond'):
+        out.append(f'<div class="beyond">&#9733; Beyond Level 1: {esc(it["beyond"])}</div>')
     out.append(f'<div class="stem">{mk(it["text"])}</div>')
     if it.get('figure'):
         out.append(fig_html(it['figure'], theme))

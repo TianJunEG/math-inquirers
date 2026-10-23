@@ -519,6 +519,7 @@
   {
    "id": "L1U02-G01",
    "tier": "go",
+   "beyond": "Making two amounts equal",
    "page": 5,
    "text": "Ali has 16 stickers. Mei has 8 stickers. Ali gives some of his stickers to Mei. Now each child has an equal number of stickers.",
    "parts": [

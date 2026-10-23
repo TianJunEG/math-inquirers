@@ -598,6 +598,7 @@
   {
    "id": "L1U01-G01",
    "tier": "go",
+   "beyond": "Triangle numbers",
    "page": 5,
    "text": "Look at the triangles made of dots. Triangle 1 has 1 dot, Triangle 2 has 3 dots and Triangle 3 has 6 dots. The pattern keeps going.",
    "figure": {
