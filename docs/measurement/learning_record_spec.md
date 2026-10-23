@@ -105,7 +105,7 @@ Behaviours: selecting a rung or tool is one tap and stays highlighted; "Save and
 ### 3.1 Principles
 1. **Pace counts only on accurate answers.** Pace = time taken on items answered correctly. Time on wrong answers is read for the quadrant (3.3) but is not "pace".
 2. **Two modes, never mixed.** Depth tasks are untimed and are never used for pace. Fluency sets are short, labelled, and are the only items used for a pace statement (3.4).
-3. **A child against their own baseline first.** Pace is reported as movement against the child's own earlier sets (3.5). Optional indicative target ranges are secondary and are never shown as a pass or fail.
+3. **A child against their own baseline first.** For Levels 4-6, pace is reported as movement against the child's own earlier sets (3.5). Optional indicative target ranges are secondary and are never shown as a pass or fail.
 4. **No public leaderboards, no ranking or comparison between children,** on screen, in reports, in exports, or aloud. Group figures go to the owner only as counts, never per child, and only for cohorts of 5 or more (5.3).
 5. **Speed is never the headline for a young child, and never praised on its own.** The tutor praises the use of a tool, a check or a reason, and says "quicker" only about a skill, not about the child.
 6. **Pace never replaces tutor judgement.** The quadrant is a prompt; the tutor decides what it means for this child on this day.
@@ -115,13 +115,13 @@ Behaviours: selecting a rung or tool is one tap and stays highlighted; "Save and
 | | Depth mode | Fluency mode |
 |---|---|---|
 | Purpose | Strategy, reasoning, checking, persistence (the spine) | Fluency and confidence on a skill the child already has |
-| Items | Think harder, Go further, investigations, the Quest gates | Short closed-answer items on one skill (for example 2-digit sums, times facts, telling the time, converting units) |
-| Time | Untimed; no timer; think time is protected | Short set, clearly labelled "Quick set"; a soft clock the child can see only if they want (3.4) |
+| Items | Think harder, Go further, investigations, the Quest gates | Short closed-answer items on one skill (for example multiplication facts, fractions of a quantity, converting units) |
+| Time | Untimed; no timer; think time is protected | Short set, clearly labelled "Quick set"; a soft clock the child can see only if they choose (3.4) |
 | Recorded | Tool, rung, checked, persisted, hints, attempts, time kept as context only | Per item: correct, time, first-try, plus the set's skill tag |
 | Used for | The three outcomes | Pace on accurate answers, the quadrant, the fluency line in the report |
 | Who | All children | All children may do a Quick set; anxious children can opt out (3.6) |
 
-The item field `mode` (`depth` or `fluency`) and `skill` (a short skill tag such as `add-2digit`) are stored on every digital item (section 7). The runner's current rule "no timers, no scores, no streaks, no leaderboard" stays for depth items; Fluency mode needs an explicit change to that header, which is an owner decision (D3, D12).
+The item field `mode` (`depth` or `fluency`) and `skill` (a short skill tag such as `add-2digit`) are stored on every digital item (section 7). The runner's current rule "no timers, no scores, no streaks, no leaderboard" stays for depth items; Fluency mode needs an explicit change to that header, which the owner has decided for Levels 4-6 only (3.4); D3 still covers the background-timing consent.
 
 ### 3.3 The speed-accuracy quadrant (per child, per skill)
 "Fast" and "slow" are relative to the child's own baseline for that skill and item type (3.5); until a baseline exists the tutor view shows only accuracy and hints.
@@ -133,26 +133,27 @@ The item field `mode` (`depth` or `fluency`) and `skill` (a short skill tag such
 
 Checks on the quadrant: a single item never classifies a child; the quadrant uses at least 6 items on the skill in a set or across 2 lessons. The tutor can mark an item invalid (device problem, interruption). The labels are computed when the tutor opens the view and are not stored as facts about the child.
 
-### 3.4 Fluency mode design (Quick sets, age-banded)
-- **Format.** Short sets of closed-answer items on one skill the child has met. Tap or choice items for ages 6-8 (3.6); typed numbers from about age 9.
-- **Age bands (our proposal, not a norm).**
-  - Ages 6-8 (Levels 1-2): **very light.** One set per block of 6 items, at most 3 minutes of lesson time, tap/choice only, no running countdown visible; the clock is silent. Pace is not reported as a number or compared with a target; the report says only "is getting quicker at ...".
-  - Ages 9-10 (Levels 3-4): **light-to-moderate.** Up to two sets of 8 items per block, about 4 minutes each, typed answers allowed after a practice item.
-  - Ages 11-13 (Levels 5-6): **moderate.** Up to three sets of 10 items per block, about 5 minutes each; optionally a visible soft clock for children who choose it.
-- **Labelling.** Every set is introduced as "a Quick set: just finding how smoothly you can do this today; it is the only part where time is noted. Press Skip any time." No "test", "exam", "score", "race" or "best time". Mi appears only where already placed.
-- **Where it sits.** Option A (recommended): a short **Quest Sprint** inside the Challenge Quest, optional per child. Option B: an optional block activity in the lesson look-back or take-home runner (`home` context). Option C: none, Fluency mode only in the take-home runner. **[OWNER]** The owner removed the end-of-term check and made the Quest a game with no scores, no visible timer and no word "test" (owner_decisions, 22 Oct 2026). A Sprint changes that decision, so it needs an explicit decision (D12). Recommended wording if approved: the Sprint is optional, shows no time or score to the child, is the last part of the Quest, and never replaces a gate.
-- **No timer shown by default.** The system times in the background; the child sees a clock only in the optional visible mode (ages 11-13).
+### 3.4 Quest Sprint (Fluency mode): DECIDED by the owner, 23 Oct 2026
+**Decision.** Timed sets are allowed only as an **optional "Quest Sprint" for ages 9-13 (Levels 4, 5 and 6)**. **None for Levels 1-3 for now.** Children aged 6-10 (Levels 1-3, and the younger Level 4 children) get no timed-set experience at all. For them, pace is only background context from ordinary digital items (tutor view, 3.3 note below), never a Sprint result and never a number in a report. Rules that stay: accurate answers only count towards pace; own baseline first, with optional indicative targets that are not exam or contest norms; no leaderboards or ranking; anxious children may opt out; depth tasks stay untimed; online timing is noisy (3.6). This supersedes the earlier proposed age bands and options A-C and closes D12. The owner should still note this changes the earlier "no visible timer" Quest rule for these levels.
+
+**Design of the Sprint.**
+- **Where.** The last part of the Challenge Quest at Levels 4-6 (lessons 10, 20, 30, 40), after the gates and never replacing one. It is a separate, clearly marked, optional part, so the rest of the Quest stays a game with no scores.
+- **Format.** One short set of 8-10 closed-answer items on one skill the block has taught, about 4-5 minutes, typed or chosen answers (typing is allowed from about age 9; a practice item first). Level 4: 8 items, about 4 minutes. Levels 5-6: 10 items, about 5 minutes.
+- **Labelling.** "A Quick set: just to see how smoothly you can do this skill today. It is the only part where time is noted. Press Skip any time." No "test", "exam", "score", "race" or "best time". No time or score shown to the child at the end. A soft clock is visible only if the child chooses it.
+- **Opt-out.** A Skip button on screen, a parent switch (a separate consent tick, 8.3), and a tutor option to skip a child without reason. Skipping is recorded as "skipped", never as a low result.
+- **What is recorded.** The items are `mode = 'fluency'` with a `skill` tag. Pace is computed from correct answers only (3.5).
+- **Younger children (Levels 1-3).** Ordinary digital items are `mode = 'depth'`. Their time is stored as context (3.6). The tutor view may show the quadrant (3.3) as a prompt about an item pattern, but it needs the full caveats, no report line quotes pace, and no timed set is offered.
 
 ### 3.5 Pace against the child's own baseline, and optional target ranges
 - **Own baseline (primary).** Baseline = the child's own median time on correct answers for that skill and item type in their first Quick set, then their previous two sets as it moves. The report compares the latest set with the child's earlier set ("quicker", "about the same", "slower while checking more"). No flags until there are at least 6 correct items on the skill.
 - **Item-type baselines.** Different item types have different overhead (tap vs typing vs handwriting). Baselines are per item type: tap, typed number, several fields, written working. Compare like with like only.
-- **Indicative target ranges (secondary, optional, our own).** Derived by the tutor team from the item type, not from a population: time-to-answer is split into (a) a reading time (words in the question), (b) an input time (a tap is about 2 s, a typed 1-2 digit answer about 4 s, a 3-4 digit about 6 s for a child who has settled in; longer for ages 6-8) and (c) a thinking time that depends on the skill. A working range for a single-step item on a secure skill is "reading + input + 3 to 10 seconds of thinking" for ages 9-13, with wider ranges for ages 6-8. These are rough starting points to be tuned by observing the first sets; they are **our own indicative targets, not norms, and not a prediction of any contest or exam**. A child above the range is shown nothing; the tutor sees "inside / above range" only to decide whether to offer more of that skill. No range is shown to a parent as a number. No MOE, GEP or SASMO claim is made or implied.
+- **Indicative target ranges (secondary, optional, our own).** Derived by the tutor team from the item type, not from a population: time-to-answer is split into (a) a reading time (words in the question), (b) an input time (a tap is about 2 s, a typed 1-2 digit answer about 4 s, a 3-4 digit about 6 s for a child who has settled in; longer for ages 6-8) and (c) a thinking time that depends on the skill. A working range for a single-step item on a secure skill is "reading + input + 3 to 10 seconds of thinking" for Levels 4-6 (the only levels with a Sprint). These are rough starting points to be tuned by observing the first sets; they are **our own indicative targets, not norms, and not a prediction of any contest or exam**. A child above the range is shown nothing; the tutor sees "inside / above range" only to decide whether to offer more of that skill. No range is shown to a parent as a number. No MOE, GEP or SASMO claim is made or implied.
 - **Never:** compare a child with another child, with the group median, or with a "typical" child, in any view a parent or child sees.
 
 ### 3.6 Measurement caveats (what pace does and does not tell)
-- **Online timing is noisy.** It includes typing, mouse or finger accuracy, handwriting transcribed onto the screen, device speed, and network latency; the noise is greatest at ages 6-8 whose typing and mouse control are still developing. Mitigations: **tap/choice items for timed sets at ages 6-8**; exclude the first 3 seconds of each item (reading and settling) or measure from first interaction; use item-type baselines (3.5); keep only `home` or labelled Quick-set `live` items for pace; drop items flagged invalid; never read pace from fewer than 6 items.
+- **Online timing is noisy.** It includes typing, mouse or finger accuracy, handwriting transcribed onto the screen, device speed, and network latency; the noise is greatest at ages 6-8 whose typing and mouse control are still developing. Mitigations: no timed sets below Level 4; for the Sprint use choice or short typed items and a practice item; exclude the first 3 seconds of each item (reading and settling) or measure from first interaction; use item-type baselines (3.5); keep only `home` or labelled Quick-set `live` items for pace; drop items flagged invalid; never read pace from fewer than 6 items.
 - **Live time is not pace.** Time during a live lesson includes listening to the tutor and answering at the same time as others, and is used as context only unless the item sits in a labelled Quick set.
-- **Pressure and anxiety.** A timed set can make an anxious child worse and teach them that speed is what matters. Mitigations: sets are short, opt-out is a button, the parent can switch Fluency mode off for the child at registration or at any time (the consent in 8.3 has a separate tick), no time or score is shown, no group results are shown, and the tutor may skip a child on the day without a reason. Opt-out is recorded as "skipped", never as a low result. A child who opts out of Quick sets still gets a full report on the three outcomes.
+- **Pressure and anxiety.** A Sprint can make an anxious child worse and teach them that speed is what matters. Mitigations: sets are short, opt-out is a button, the parent can switch Fluency mode off for the child at registration or at any time (the consent in 8.3 has a separate tick), no time or score is shown, no group results are shown, and the tutor may skip a child on the day without a reason. Opt-out is recorded as "skipped", never as a low result. A child who opts out of the Sprint still gets a full report on the three outcomes.
 - **Pace is not ability.** Fast does not mean gifted and slow does not mean weak. The report uses the phrase "on this skill, in these sets".
 - **Tutor judgement stays final.** The tutor can set any pace statement aside before approval of a report.
 
@@ -194,7 +195,7 @@ Short (about 120-170 words), plain words, no numbers, no ranks, no exam language
 1. **One named strength** (a specific thing seen, with a quote or example if one was captured).
 2. **One next step** (a thing for the child to practise, plus a home prompt such as "Which tool did you pick first, and why?").
 3. **Growth on the three outcomes in plain words, and a fluency line where a Quick set was done** using only these phrases: tools (starting to / sometimes / often chooses a tool without being asked), reasons (the rung in words, for example "gives a reason with objects"), checking and sticking with it (starting / sometimes / often).
-3a. **Fluency line (only if the child did Quick sets and did not opt out; never a number).** Examples: "Amira is getting quicker at 2-digit sums and still checking her answers." / "Daniel answers times facts smoothly; on word problems he is accurate but takes his time, which is fine while he checks." / "Mei is accurate on the 'telling the time' set; we are building speed gently, with no pressure." For ages 6-8 the line says only "is getting quicker at ..." or is left out. If pace is slower than before because the child now checks, the line says so.
+3a. **Fluency line (only for Levels 4-6, only if the child did the Quest Sprint and did not opt out; never a number; none at Levels 1-3).** Examples: "Amira is getting quicker at fraction of a quantity and still checking her answers." / "Daniel answers multiplication facts smoothly; on word problems he is accurate but takes his time, which is fine while he checks." / "Ravi is accurate on the unit-conversion set; we are building speed gently, with no pressure." Levels 1-3 never get this line. If pace is slower than before because the child now checks, the line says so.
 4. **A footer:** "This is what [Name] did in the lessons we watched. It is not a score, a ranking, or a prediction of exam results."
 
 The tutor writes and approves each report; the system drafts from the structured entries (rules, not a third-party AI service; see 7.6) and the tutor edits and approves before it is released to the parent (status draft -> approved -> sent).
@@ -547,7 +548,7 @@ Level bands note typical Level and rung (term_review 2.4): Level 1 mostly rungs 
 
 ### 10.2 Risks
 - **Speed becomes the message.** Pace is a real measure now, so tutors and parents may start to praise speed on its own. Mitigation: two modes, own-baseline reporting, young-child limits, no time on the live screen, rules 3.1/3.7, tutor guide.
-- **Anxiety from timed sets** and noisy online timing: opt-out, tap items at ages 6-8, Quick sets labelled and short (3.6).
+- **Anxiety from timed sets** and noisy online timing: opt-out, no timed sets below Level 4, the Sprint labelled and short (3.4, 3.6).
 - **Tutor rating noise and halo effects.** Calibration, "not observed", report wording limits; honest footer.
 - **Quiet children under-observed.** Rotation, minimum count, written evidence route.
 - **Over-claiming.** Report footer and website language: no exam, GEP, MOE or SASMO claims; never "measures ability".
@@ -571,7 +572,7 @@ Level bands note typical Level and rung (term_review 2.4): Level 1 mostly rungs 
 | D8 | Parent may read raw tutor notes on request (access right), or only via export. | Export on request only. |
 | D9 | Face-to-face pilot: go or not, and the details in section 6.5. | Not before the online pilot; paper only. |
 | D10 | Public DPO contact (a business email or WhatsApp) before any of this goes live. | Required (legal review P1). |
-| D12 | Fluency mode and the Quest Sprint: allowed at all? Inside the Quest (which the owner made a game with no visible timer), a separate optional activity, or the take-home runner only? Age bands as in 3.4? | Allowed; take-home runner and an optional Sprint; ages 6-8 very light, tap only; owner confirms because it changes the Quest decision. |
+| D12 | DECIDED (23 Oct 2026): optional Quest Sprint for Levels 4-6 only; none for Levels 1-3 for now. Still to confirm: Sprint length, the skill chosen per block, the visible-clock option. | As in 3.4. |
 | D11 | Who develops the scripts for forms A/B per level and who owns calibration. | Assistant drafts, owner approves. |
 
 ## 11. Not in this document
