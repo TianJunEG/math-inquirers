@@ -156,7 +156,7 @@ module.exports = {
     W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? The bars show their ages in 5 years.', { keepNext: true }));
     W.push(H.fig(ageFig()));
     W.push(tip('try an age and check it. Try 1: Ben is 6, so his father is 44. In 5 years: Ben 11, father 49. Is 49 three times 11? No (33). Try again with a different age.'));
-    W.push(H.ans('Ben is ______ years old now. Check:'));
+    W.push(H.ans('Ben is now (years):'));
     return W;
   }
 };

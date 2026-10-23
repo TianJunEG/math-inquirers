@@ -4,6 +4,7 @@
 // Every answer below was worked out and checked (compass turns, clock angles and the "find all" items with a short Python script).
 
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF', RED = '#D64545';
 const T = (x, y, s, size = 16, fill = NAVY, anchor = 'middle', weight = 700) => `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="Arial">${s}</text>`;
 const rad = d => d * Math.PI / 180;
@@ -20,7 +21,7 @@ const angleIn = (px, py, pw, ph, d0, d1, r, name) => {
   const lab = pt(cx, cy, 48, (d0 + d1) / 2);
   return L([cx, cy], pt(cx, cy, r, d0)) + L([cx, cy], pt(cx, cy, r, d1)) + arc(cx, cy, 28, d0, d1) + T(lab[0], lab[1] + 7, name, 22, TEAL) + `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="3.5" fill="${NAVY}"/>`;
 };
-const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c and d" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:420px;max-width:100%">` +
+const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c and d" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:640px;max-width:100%">` +
   `<rect x="2" y="2" width="596" height="356" rx="12" fill="${WHITE}" stroke="#C9D4EC" stroke-width="2"/><line x1="300" y1="12" x2="300" y2="348" stroke="#C9D4EC" stroke-width="2"/><line x1="12" y1="180" x2="588" y2="180" stroke="#C9D4EC" stroke-width="2"/>` +
   angleIn(0, 0, 300, 180, 0, 40, 170, 'a') + angleIn(300, 0, 300, 180, 20, 135, 145, 'b') +
   angleIn(0, 180, 300, 180, 200, 275, 145, 'c') + angleIn(300, 180, 300, 180, 12, 162, 140, 'd') + '</svg>';
@@ -28,7 +29,7 @@ const fourAngles = () => `<svg aria-label="Four angles drawn to size: a, b, c an
 // Q2: a fan of 4 rays from O: OA at 0°, OB at 30°, OC at 90°, OD at 135°
 const fan = () => {
   const O = [250, 228], R = 188;
-  let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 262" xmlns="http://www.w3.org/2000/svg" style="width:300px;max-width:100%">`;
+  let s = `<svg aria-label="Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, between OC and OD is 45 degrees." viewBox="0 0 600 262" xmlns="http://www.w3.org/2000/svg" style="width:430px;max-width:100%">`;
   [[0, 'A'], [30, 'B'], [90, 'C'], [135, 'D']].forEach(([d, n]) => { s += L(O, pt(O[0], O[1], R, d)); const q = pt(O[0], O[1], R + 18, d); s += T(q[0], q[1] + 8, n, 24); });
   s += arc(O[0], O[1], 120, 0, 30) + arc(O[0], O[1], 60, 30, 90) + arc(O[0], O[1], 90, 90, 135);
   let q = pt(O[0], O[1], 145, 15); s += T(q[0] + 8, q[1] + 7, '30°', 21, TEAL);
@@ -165,8 +166,8 @@ module.exports = {
     ],
     stretch: [
       { q: 'Siti faces SE. She turns 225° clockwise. Which direction does she face now?', a: 'N (225° is 5 steps of 45°: S, SW, W, NW, N)', fig: compass(420, ['SE']) },
-      { q: 'What is the angle between the clock hands at 10 o’clock? At 2 o’clock? What do you notice?', a: '60° and 60°. Both are 2 spaces apart the shorter way.' },
-      { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (35 minutes × 6°)' },
+      { q: 'What is the angle between the clock hands at 10 o’clock? At 2 o’clock? What do you notice?', a: '60° and 60°. Both are 2 spaces apart the shorter way.', fig: FG.clocks([{ h: 10, m: 0, cap: '10 o’clock' }, { h: 2, m: 0, cap: '2 o’clock' }], { r: 82, gap: 40, label: 'Two clock faces showing 10 o’clock and 2 o’clock.' }) },
+      { q: 'How many degrees does the minute hand turn from 7:15 to 7:50?', a: '210° (35 minutes × 6°)', fig: FG.clocks([{ h: 7, m: 15, cap: '7:15' }, { h: 7, m: 50, cap: '7:50' }], { r: 82, gap: 40, label: 'Two clock faces. The first shows 7:15 and the second shows 7:50.' }) },
       { q: 'A robot starts facing N. Ben wants it to turn from N to W using two DIFFERENT cards from:  45° clockwise,  90° clockwise,  135° anticlockwise,  180°.  Find ALL the pairs that work.', a: 'Two ways: 45° clockwise and 135° anticlockwise; or 90° clockwise and 180°.' },
       { q: 'Mei faces W. She turns clockwise until she faces SE. How many degrees does she turn?', a: '225° (W → NW → N → NE → E → SE: 5 steps of 45°)' },
       { q: 'Four rays come out of one point, making 3 angles side by side: 25°, 40° and 25°. How many angles are there altogether? What is the biggest?', a: '6 angles (25°, 40°, 25°, 65°, 65°, 90°); the biggest is 90°.' },
@@ -181,7 +182,7 @@ module.exports = {
       { q: 'At 4 o’clock the angle between the clock hands is 120°. What is the angle at 4:10?', a: '65°. In 10 minutes the minute hand turns 60° and the hour hand turns 5° the same way, so the gap shrinks by 55°: 120° − 55° = 65°.' },
       { q: 'Mei says: "At 2 o’clock the angle between the clock hands is 60°, so at 10 o’clock it must be 60° too." Is she right? Explain with a drawing. Which other pairs of o’clock times have the same angle?', a: 'She is right. 10 o’clock is the mirror image of 2 o’clock across the line from 12 to 6, so the hands make the same angle. The other pairs are 1 and 11 (30°), 3 and 9 (90°), 4 and 8 (120°), 5 and 7 (150°).' },
       { q: 'Mei faces S and turns clockwise to face NE. Ali faces S and turns anticlockwise to face NE. How many more degrees did Mei turn than Ali?', a: '90° (Mei 225°, Ali 135°)' },
-      { q: 'Make up your own clock-angle puzzle. Choose a time that is NOT an o’clock time (half past is easiest), work out the angle between the hands, and write your puzzle as "What is the angle at …?". Draw the clock to check your answer. Then find a second time with the same angle.', a: 'Puzzles will vary. Model: 9:30 is 105° (the hour hand is halfway between 9 and 10, 3 and a half spaces, 3 × 30° + 15°). Another time with the same angle is 2:30.' },
+      { q: 'Make up your own clock-angle puzzle. Choose a time that is NOT an o’clock time (half past is easiest), work out the angle between the hands, and write your puzzle as "What is the angle at …?". Draw the clock to check your answer. Then find a second time with the same angle.', fig: FG.clocks([{ noHands: true, cap: 'my time' }, { noHands: true, cap: 'a second time' }], { r: 82, gap: 40, label: 'Two blank clock faces to draw on.' }), a: 'Puzzles will vary. Model: 9:30 is 105° (the hour hand is halfway between 9 and 10, 3 and a half spaces, 3 × 30° + 15°). Another time with the same angle is 2:30.' },
       { q: 'The corner of a square is cut into 3 angles. The middle angle is twice the smallest. The biggest is 3 times the smallest. Find all three angles.', a: '15°, 30° and 45° (6 equal parts make 90°, so one part is 15°)' },
       { q: 'Two squares share one corner O and overlap, like the picture. The angle covered by both squares together (from the outside side of one square to the outside side of the other) is 160°. What is the angle where the squares overlap?', a: '20° (90° + 90° = 180°, and 180° − 160° = 20°)', fig: overlapFig() }
     ]
@@ -205,10 +206,11 @@ module.exports = {
     H.sub('c', 'Which angle is a right angle?   ________'),
 
     H.q(3, 'Clock angles. A clock face has 12 equal spaces in 360°. Find the smaller angle.', { pb: true, before: 0, keepNext: true }),
+    H.fig(FG.clocks([{ h: 4, m: 0, cap: '4 o’clock', sector: { from: 0, to: 120 } }, { h: 7, m: 0, cap: '7 o’clock', sector: { from: 210, to: 360 } }, { noHands: true, cap: 'for part c' }], { r: 82, gap: 26, label: 'Three clock faces. The first shows 4 o’clock with the smaller angle between the hands shaded. The second shows 7 o’clock with the smaller angle between the hands shaded. The third is a blank clock face with no hands.' })),
     H.sub('a', ['At 4 o’clock:  ________          <b style="color:#1F7A6F">b</b>  At 7 o’clock:  ________']),
     H.sub('c', 'Find both o’clock times when the angle is 30°.   ______________'),
     H.q(4, 'Compass turns. One step from a direction to the next one is 45°.', { keepNext: true }),
-    H.fig(compass(420)),
+    H.fig(compass(350)),
     H.sub('a', 'Ali faces W and turns 90° clockwise. Now he faces:   ______'),
     H.sub('b', 'Mei faces SW and turns 135° anticlockwise. Now she faces:   ______'),
     H.sub('c', 'Siti faces NE and wants to face S. Her smallest turn is:  ____________'),
