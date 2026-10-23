@@ -88,8 +88,11 @@ def run(d):
     # ---- Go further
     rowfr = T['G1']['visual']['head'][1:]; each = [share_each(12, int(f)) for f in rowfr]
     eq(each, [12, 6, 4, 3, 2, 1], 'G1 table'); eq([share_left(12, int(f)) for f in rowfr], [0] * 6, 'G1 none left over')
-    eq(rowfr, [str(k) for k in divisors(12)], 'G1 columns are exactly the numbers of friends that work'); eq(share_left(12, 5), 2, 'G1 five friends leave 2'); eq(T['G1']['val'], each + ['No', 2], 'G1 val')
+    eq(rowfr, [str(k) for k in divisors(12)], 'G1 columns are exactly the numbers of friends that work'); eq(share_left(12, 5), 2, 'G1 five friends leave 2'); eq(T['G1']['val'][:-1], each + ['No', 2], 'G1 val')
     eq(T['G1']['visual']['rows'][0][1], '[2]', 'G1 first box has two digits')
+    # G1 part (c): every number of friends that shares 18 with none left over (tested by dealing, 1 to 18)
+    ways18 = [f for f in range(1, 19) if share_left(18, f) == 0]
+    eq(ways18, [1, 2, 3, 6, 9, 18], 'G1c ways to share 18'); eq(ways18, divisors(18), 'G1c matches divisors'); eq(T['G1']['parts'][2]['val'], ways18, 'G1c val'); eq(T['G1']['val'][-1], ways18, 'G1 val last')
     eq((share_each(20, 4), share_each(20, 4) + 3), (5, 8), 'G2'); eq(sum(deal(20, 4)) + 4 * 3, 32, 'G2 all pencils now'); eq(times(4, 8), 32, 'G2 4 pots of 8'); eq(T['G2']['val'], [5, 8, 32], 'G2 val')
     eq((20 - 2, share_each(20 - 2, 3), share_left(20 - 2, 3)), (18, 6, 0), 'G3'); eq(share_each(20, 3), 6, 'G3 sharing all 20 leaves a left over'); eq(share_left(20, 3), 2, 'G3 left over if no stickers kept')
     eq(T['G3']['val'], [18, 6], 'G3 val')

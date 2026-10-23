@@ -17,7 +17,7 @@
    "Checking a share by multiplying (Primary 1)",
    "The division sign and \"left over\" (Primary 2 sign, p. 33; remainders, Primary 3, p. 35)"
   ],
-  "note": "Strand label for the tutor only. Sharing equally and putting into same-size groups, with totals within 20 and no left over, are in the school Primary 1 syllabus (p. 31). BEYOND PRIMARY 1 ON PURPOSE: the division sign (Primary 2, p. 33) is shown only as a small grown-up sign and is never required; the idea of \"left over\" (a remainder is Primary 3, p. 35, so we never write it as a remainder) appears at Think harder; \"all the ways to share 12\" (the factors of 12, Primary 4, p. 37) is Go further. Owner decision of 22 Oct 2026: strong content with scaffolding, said plainly to families on the parent page. Do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order (owner default): 3 groups of 4 is 3 × 4; either order is accepted. Contest tag (tutor only): list all the ways (G1), who is in the group (T2), a left-over pattern (Investigation)."
+  "note": "Strand label for the tutor only. Sharing equally and putting into same-size groups, with totals within 20 and no left over, are in the school Primary 1 syllabus (p. 31). BEYOND PRIMARY 1 ON PURPOSE: the division sign (Primary 2, p. 33) is shown only as a small grown-up sign and is never required; the idea of \"left over\" (a remainder is Primary 3, p. 35, so we never write it as a remainder) appears at Think harder; \"all the ways to share 12\" (the factors of 12, Primary 4, p. 37) is Go further. Owner decision of 22 Oct 2026: strong content with scaffolding, said plainly to families on the parent page. Do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order (owner default): 3 groups of 4 is 3 × 4; either order is accepted. Contest tag (tutor only): list all the ways (G1), who is in the group (T2), a left-over pattern (Investigation). Named beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Go further G1 part (c), finding every number of friends that can share 18 sweets with none left over (1, 2, 3, 6, 9, 18), which builds toward factors."
  },
  "contest_moves": [
   "who is in the group: \"shares with his 3 cousins\" means 4 people (T2)",
@@ -2270,9 +2270,22 @@
       "text": "If Jenny shares them among 5 friends, there are [] sweets left over.",
       "ans": "2",
       "val": 2
+     },
+     {
+      "l": "c",
+      "text": "Now Jenny has 18 sweets. Write every number of friends who can share them equally, with none left over. _______",
+      "ans": "1, 2, 3, 6, 9, 18",
+      "val": [
+       1,
+       2,
+       3,
+       6,
+       9,
+       18
+      ]
      }
     ],
-    "answer": "12, 6, 4, 3, 2, 1; No; 2 left over",
+    "answer": "12, 6, 4, 3, 2, 1; No; 2 left over; 18 sweets: 1, 2, 3, 6, 9, 18 friends",
     "val": [
      12,
      6,
@@ -2281,15 +2294,24 @@
      2,
      1,
      "No",
-     2
+     2,
+     [
+      1,
+      2,
+      3,
+      6,
+      9,
+      18
+     ]
     ],
-    "hint": "Try dealing the sweets to each number of friends. Which ones come out with none left over?",
-    "solution": "1 friend gets all 12. 2 friends get 6 each. 3 friends get 4 each. 4 friends get 3 each. 6 friends get 2 each. 12 friends get 1 each. With 5 friends, each gets 2 and that uses 10 sweets, so 2 are left over and the answer to (a) is No.",
+    "hint": "Try dealing the sweets to each number of friends. Which ones come out with none left over? For (c), try each number of friends from 1 up and check that none are left over.",
+    "solution": "1 friend gets all 12. 2 friends get 6 each. 3 friends get 4 each. 4 friends get 3 each. 6 friends get 2 each. 12 friends get 1 each. With 5 friends, each gets 2 and that uses 10 sweets, so 2 are left over and the answer to (a) is No. (c) With 18 sweets: 1 friend gets 18, 2 get 9, 3 get 6, 6 get 3, 9 get 2 and 18 get 1. Try 4, 5, 7 and 8: each leaves some over. So the numbers are 1, 2, 3, 6, 9 and 18, six ways in all. Finding every way to share is the start of factors, which school meets later.",
     "mistakes": [
      "Writing the number of friends instead of the number each.",
-     "Saying Yes for 5 friends."
+     "Saying Yes for 5 friends.",
+     "Part (c): stopping at 2, 3 and 6 and missing 9 or 18, or writing how many each gets instead of the number of friends."
     ],
-    "mins": 5,
+    "mins": 7,
     "visual": {
      "type": "table",
      "head": [

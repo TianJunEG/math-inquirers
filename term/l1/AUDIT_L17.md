@@ -57,3 +57,7 @@ Total: 18 / 24
 - The look-back line now reads "my grown-up will photograph this page for my tutor" (template batch 3) and the contest-style row reads "Used at Think harder, Go further and the Investigation" (`contest_where`).
 - Template limits left: the exit-ticket slide does not print MCQ options (the four stories are added as a list block), the S4 table and S5 number line thumbnails on workbook slides and the S5 line on the page are small, S7 choice words are not column-aligned, and the online runner has the c1 "Try a similar one" defect (see FIXES_L17.md).
 - Online practice: the share and group pictures are drawn for every variant of c1; the other items are text only.
+
+## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
+
+Added Go further G1 part (c) (page 4): with 18 sweets, write every number of friends who can share equally with none left over (1, 2, 3, 6, 9, 18). The table in G1 gave the factors of 12 ready-made; (c) asks the child to find them unaided, which builds toward factors (a later-year idea). `moe.note` names it. Verified by dealing for 1 to 18 friends in `verify/l17_checks.py`. Real PDF workbook fill 93, 84, 94, 94, 97, 82% (was page 4 88%); parts still sum to 90; validator 0 FAIL.
