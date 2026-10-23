@@ -81,7 +81,9 @@ def _bond(total):
     def f4(a, r): return EQ([f"{total} = {total - a} + {BOX}"], a, form="T = b + _")
     def f5(a, r): return EQ([f"{total} {MINUS} {BOX} = {total - a}"], a, form="T - _ = b")
     def f6(a, r): return SEM([f"{total - a} and {BOX}", f"make {total}"], lambda v, b=total - a, T=total: v + b == T, str(a), form="make T")
-    return [f1, f2, f3, f4, f5, f6]
+    def f7(a, r): return SEM([f"Make {total} with {total - a}:", f"{BOX}"], lambda v, b=total - a, T=total: v + b == T, str(a), form="make T with b")
+    def f8(a, r): return SEM([f"{total - a} needs {BOX} more", f"to make {total}"], lambda v, b=total - a, T=total: v + b == T, str(a), form="b needs _ more")
+    return [f1, f2, f3, f4, f5, f6, f7, f8]
 
 # ------------------------------------------------------------------ place value
 def tn(t): return "1 ten" if t == 1 else f"{t} tens"
@@ -326,7 +328,7 @@ def _combos(k_range, total):
     rec([], total)
     return [c for c in out if sorted(c) != ["circle"]]
 def _shapes(tier):
-    ks = range(1, 3)
+    ks = range(1, 4)
     mult = 1 if tier == 1 else 2          # two stars: corners and sides together, so the answer is twice the corner count
     def mk(words, layout):
         def f(a, r):

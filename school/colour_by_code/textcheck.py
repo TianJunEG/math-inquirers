@@ -148,6 +148,11 @@ def had_gave(m, c): return I(m[1]) - I(m[2])
 @R(r"Ann has (\d+), (\d+) more than Jane\. Jane: " + B)
 def jane(m, c): return I(m[1]) - I(m[2])
 
+@R(r"Make (\d+) with (\d+): " + B)
+def make_with(m, c): return I(m[1]) - I(m[2])
+@R(r"(\d+) needs " + B + r" more to make (\d+)")
+def needs_more(m, c): return I(m[2]) - I(m[1])
+
 # ---- place value (P1)
 @R(r"How many tens in (\d+)\? " + B)
 def how_many_tens(m, c): return I(m[1]) // 10
