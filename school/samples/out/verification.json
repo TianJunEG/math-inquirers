@@ -1,0 +1,15 @@
+{
+ "cells": 24,
+ "tally": {
+  "yellow": 4,
+  "red": 4,
+  "blue": 8,
+  "green": 4,
+  "orange": 4
+ },
+ "mirror_ok": true,
+ "questions_correct_and_unique": true,
+ "single_slip_detected": 240,
+ "single_slip_total": 240,
+ "single_slip_rate": 1.0
+}
