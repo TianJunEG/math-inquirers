@@ -210,7 +210,7 @@ add(id='L2-LETTER1', level=2, lesson=2, slot='slide', group='g1', skill='Letter-
 add(id='L2-SEQ1', level=2, lesson=4, slot='slide', group='g1', skill='Sequences: the gap grows by 1 each time', tool='table',
     stem='Ali writes a pattern: 6, 7, 9, 12, 16, __, __',
     parts=['a) Write the next two numbers.', 'b) Will 40 be in the pattern?'],
-    fig=('seq', dict(terms=[6, 7, 9, 12, 16, 0, 0], gaps=[1, 2, 3, 4, None, None], blanks_from=5)),
+    fig=('seq', dict(terms=[6, 7, 9, 12, 16, 0, 0], gaps=[1, 2, 3, 4, None, None], blanks_from=5, fs=36)),
     a='a) 21 and 27 (the gaps are 1, 2, 3, 4, 5, 6). b) No: the pattern goes 27, 34, 42 and jumps over 40.', p=dict(start=6, first_gap=1, grow=1, n=9, test=40), ans=[21, 27, 'no'],
     say='This pattern does not add the same number. Make a table and put the gaps in a row of their own.', ask='What are the gaps? How does the gap change? What is the next gap?', listen='"The gap goes up by 1."')
 add(id='L2-SEQ2', level=2, lesson=4, slot='slide', group='g1', skill='Sequences: add the two numbers before', tool='pattern',

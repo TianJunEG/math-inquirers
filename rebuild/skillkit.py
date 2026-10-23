@@ -64,6 +64,9 @@ def iso(heights, s=44, walls=False, label='Stack of cubes', pad=14):
         out += f'<polygon points="{pts([P(0,0,0),P(0,nj,0),P(ni,nj,0),P(ni,0,0)])}" fill="#F4E9C8" stroke="{NAVY}" stroke-width="3"/>'
         out += f'<polygon points="{pts([P(0,0,0),P(0,nj,0),P(0,nj,wallh),P(0,0,wallh)])}" fill="#CFE3F5" stroke="{NAVY}" stroke-width="3"/>'
         out += f'<polygon points="{pts([P(0,0,0),P(ni,0,0),P(ni,0,wallh),P(0,0,wallh)])}" fill="#E1ECF8" stroke="{NAVY}" stroke-width="3"/>'
+        lx, ly = P(0, nj * 0.5, wallh * 0.85); rx, ry = P(ni * 0.5, 0, wallh * 0.85)
+        out += f'<text x="{lx:.0f}" y="{ly:.0f}" font-size="22" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">left wall</text>'
+        out += f'<text x="{rx:.0f}" y="{ry:.0f}" font-size="22" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">right wall</text>'
     cubes = [(i, j, k) for i in range(ni) for j in range(nj) for k in range(heights[i][j])]
     cubes.sort(key=lambda t: (t[0] + t[1], t[2], t[0]))
     for i, j, k in cubes:
@@ -123,7 +126,7 @@ def bars(rows, unit=64, label='Bars'):
 # ---------------------------------------------------------------- days of the week strip
 def week_strip(start_idx=0, days=14, label='Days of the week, repeating'):
     names = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    bw = 110; w = days * (bw + 6); out = ''
+    bw = 100; w = days * (bw + 6); out = ''
     for d in range(days):
         n = names[(start_idx + d) % 7]
         col = SKY if d < 7 else SOFT
@@ -143,11 +146,11 @@ def cards(nums, w=84, h=116):
 
 
 # ---------------------------------------------------------------- html table for sequences with a gap row
-def seq_table(terms, gaps, blanks_from):
+def seq_table(terms, gaps, blanks_from, fs=46):
     """terms: list; entries from index blanks_from on are shown as empty boxes. gaps: list shown under the terms (None = empty box)."""
-    box = f'<span style="display:inline-block;width:64px;height:56px;border:4px solid {NAVY};border-radius:8px;background:{YEL};vertical-align:middle"></span>'
+    box = f'<span style="display:inline-block;width:{int(fs*1.4)}px;height:{int(fs*1.2)}px;border:4px solid {NAVY};border-radius:8px;background:{YEL};vertical-align:middle"></span>'
     def cell(v, bold=True, bg=WHITE):
-        return f'<td style="border:3px solid {NAVY};background:{bg};padding:6px 10px;min-width:84px;text-align:center;font-size:46px;font-weight:{800 if bold else 600}">{v}</td>'
+        return f'<td style="border:3px solid {NAVY};background:{bg};padding:6px 10px;min-width:{int(fs*1.8)}px;text-align:center;font-size:{fs}px;font-weight:{800 if bold else 600}">{v}</td>'
     r1 = f'<td style="padding:6px 12px;font-size:32px;font-weight:800;color:{TEAL}">Number</td>' + ''.join(cell(box if i >= blanks_from else t) for i, t in enumerate(terms))
     r2 = f'<td style="padding:6px 12px;font-size:32px;font-weight:800;color:{TEAL}">Gap</td><td></td>' + ''.join(cell(box if g is None else f'+{g}', False, SKY) for g in gaps)
     return f'<table style="border-collapse:separate;border-spacing:6px"><tr>{r1}</tr><tr>{r2}</tr></table>'

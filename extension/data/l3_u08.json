@@ -165,7 +165,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Shape A has {b} right angles.",
+     "text": "A: {b} right angles",
      "answer": {
       "value": [
        "5"
@@ -175,7 +175,7 @@
     },
     {
      "label": "b",
-     "text": "Shape B has {b} right angles.",
+     "text": "B: {b} right angles",
      "answer": {
       "value": [
        "6"
@@ -185,7 +185,7 @@
     },
     {
      "label": "c",
-     "text": "Shape C has {b} right angles.",
+     "text": "C: {b} right angles",
      "answer": {
       "value": [
        "2"

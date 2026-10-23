@@ -1,0 +1,825 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 10,
+ "id": "L5U10",
+ "title": "Challenge day",
+ "topic": "Mixed heuristics",
+ "holiday_lesson": 10,
+ "goal": "I can choose a way to start a puzzle, and check my answer against every clue.",
+ "learn": {
+  "intro": "Choose a start: draw a model, make a list or a table, work backwards, guess and check, or use a logic grid. Then check your answer against every clue.",
+  "example": {
+   "problem": "Ali, Mei and Siti each have a different pet: a dog, a cat or a fish. Ali does not have a fish. Mei does not have a cat or a fish. Who has the cat?",
+   "steps": [
+    "Mei does not have a cat or a fish, so Mei has the dog. Write Yes for Mei and dog.",
+    "The dog is taken. Write No in the dog column for Ali and Siti, and No in the other columns for Mei.",
+    "Ali does not have a fish and does not have the dog, so Ali has the cat.",
+    "Check: Siti has the fish. Every clue is true."
+   ],
+   "answer": "Ali has the cat.",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "",
+     "Dog",
+     "Cat",
+     "Fish"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "No",
+      "Yes",
+      "No"
+     ],
+     [
+      "Mei",
+      "Yes",
+      "No",
+      "No"
+     ],
+     [
+      "Siti",
+      "No",
+      "No",
+      "Yes"
+     ]
+    ],
+    "width_mm": 90,
+    "rowh": 34,
+    "size": 20,
+    "first_bold": true,
+    "alt": "logic grid"
+   }
+  },
+  "howto": {
+   "title": "How to",
+   "steps": [
+    "Use a clue that tells you something for sure.",
+    "A Yes means No in the rest of its row and column.",
+    "Check every clue at the end."
+   ]
+  },
+  "facts": {
+   "title": "Ways to start",
+   "lines": [
+    "Draw a model.",
+    "List in order or make a table.",
+    "Work backwards.",
+    "Guess and check."
+   ]
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U10-L01",
+   "text": "Ben, Kumar and Aisha each choose a different drink: tea, juice or milk. Ben does not choose juice or milk. Aisha does not choose tea. Kumar does not choose milk. Who chooses juice? {b}",
+   "answer": {
+    "value": [
+     "Kumar"
+    ],
+    "text": "Kumar"
+   },
+   "explanation": "Ben cannot have juice or milk, so Ben has tea. Kumar does not choose milk and tea is taken, so Kumar has juice. Aisha has the milk. Check: Aisha does not have tea. All clues are true."
+  }
+ },
+ "items": [
+  {
+   "id": "L5U10-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Mei picks a number. She multiplies it by 3, adds 8 and then halves the result. She gets 19. What number did Mei pick? {b}",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10"
+   },
+   "explanation": "Work backwards, undoing the last step first. Undo halve: 19 × 2 = 38. Undo add 8: 38 - 8 = 30. Undo multiply by 3: 30 ÷ 3 = 10. Check: 10 × 3 = 30, 30 + 8 = 38, 38 ÷ 2 = 19."
+  },
+  {
+   "id": "L5U10-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Kumar spends 1/4 of his money. Then he spends $6. He has $15 left. How much money did Kumar have at first? $ {b}",
+   "answer": {
+    "value": [
+     "28"
+    ],
+    "text": "$28"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Work backwards. Before the $6 he had $15 + $6 = $21. The $21 is the 3/4 left after spending 1/4. So 1/4 is $7 and the whole is 4 × $7 = $28. Check: 1/4 of 28 = 7, 28 - 7 = 21, 21 - 6 = 15."
+  },
+  {
+   "id": "L5U10-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Aisha, Wei and Ravi each have a different pet: a rabbit, a hamster or a bird. Ravi has no bird and no hamster. Aisha has no hamster. Who has the bird? {b}",
+   "answer": {
+    "value": [
+     "Aisha"
+    ],
+    "text": "Aisha"
+   },
+   "explanation": "Ravi has no bird and no hamster, so Ravi has the rabbit. Aisha has no hamster and the rabbit is taken, so Aisha has the bird. Wei has the hamster."
+  },
+  {
+   "id": "L5U10-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Two numbers add up to 52. The larger number is 14 more than the smaller number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The larger number is {b}.",
+     "answer": {
+      "value": [
+       "33"
+      ],
+      "text": "33"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smaller number is {b}.",
+     "answer": {
+      "value": [
+       "19"
+      ],
+      "text": "19"
+     }
+    }
+   ],
+   "explanation": "Take away the 14: 52 - 14 = 38. Share equally: 19 and 19. Add the 14 back to one of them: 33 and 19. Check: 33 + 19 = 52 and 33 - 19 = 14."
+  },
+  {
+   "id": "L5U10-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Count the squares of every size in a 3 by 3 grid.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "gap": 0,
+    "panels": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "title": " "
+     }
+    ],
+    "alt": "grid of squares"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Squares 1 by 1: {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Squares 2 by 2: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Squares 3 by 3: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "d",
+     "text": "All the squares: {b}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "explanation": "(a) The grid has 9 small squares. (b) A 2 by 2 square can start in 2 columns and 2 rows: 2 × 2 = 4. (c) There is 1 big square. (d) 9 + 4 + 1 = 14."
+  },
+  {
+   "id": "L5U10-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Exactly one of 3 children broke a vase. Exactly one of the 3 children is telling the truth.\nAli says, \"I did not break the vase.\"\nBen says, \"Ali broke the vase.\"\nSiti says, \"Ben is lying.\" Who broke the vase? {b}",
+   "answer": {
+    "value": [
+     "Ali"
+    ],
+    "text": "Ali"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Try each child. If Ali broke it: Ali lies, Ben tells the truth, Siti lies (Ben is not lying). That is 1 truth. Good. If Ben broke it: Ali is true, Ben lies, Siti is true. That is 2 truths, which is wrong. If Siti broke it: Ali is true, Ben lies, Siti is true: 2 truths, wrong. Only Ali fits."
+  },
+  {
+   "id": "L5U10-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Dad is 40 years old. Ali is 8 years old. In how many years will Dad be 3 times as old as Ali? {b} years",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 years"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "The difference in their ages is always 40 - 8 = 32 years. When Dad is 3 times as old as Ali, the difference is 2 times Ali's age, so Ali is 16. That is 16 - 8 = 8 years from now. Check: Dad 48 = 3 × 16."
+  },
+  {
+   "id": "L5U10-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Ben gives 1/3 of his stickers to Ali. He gives 1/2 of the rest to Mei. He has 12 stickers left. How many stickers did Ben have at first? {b}",
+   "answer": {
+    "value": [
+     "36"
+    ],
+    "text": "36 stickers"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Work backwards. The 12 left are half of the rest, so the rest was 24. The 24 is 2/3 of his stickers, so 1/3 is 12 and he had 36. Check: 36 - 12 = 24, 24 - 12 = 12."
+  },
+  {
+   "id": "L5U10-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "A farm has hens and cows. There are 20 animals and 56 legs altogether. A hen has 2 legs and a cow has 4 legs.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} cows.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} hens.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Suppose all 20 are hens: 40 legs. That is 56 - 40 = 16 legs short. Each cow instead of a hen adds 2 legs, so 16 ÷ 2 = 8 cows. Then 20 - 8 = 12 hens. Check: 32 + 24 = 56."
+  },
+  {
+   "id": "L5U10-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "The product of 2 whole numbers is 72. Their sum is 17. List the pairs with product 72 to find them.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The numbers are {b} and {b}.",
+     "answer": {
+      "value": [
+       "8",
+       "9"
+      ],
+      "text": "8 and 9",
+      "unordered": true
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "List the pairs with product 72: 1 and 72, 2 and 36, 3 and 24, 4 and 18, 6 and 12, 8 and 9. Their sums are 73, 38, 27, 22, 18 and 17. Only 8 and 9 have a sum of 17."
+  },
+  {
+   "id": "L5U10-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Use the digit cards 1, 2 and 3 once each to make 3-digit numbers.",
+   "figure": {
+    "type": "l5_cards",
+    "items": [
+     1,
+     2,
+     3
+    ],
+    "width_mm": 50,
+    "alt": "cards 1 2 3"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number of different numbers is {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The even numbers are {b} and {b}.",
+     "answer": {
+      "value": [
+       "132",
+       "312"
+      ],
+      "text": "132 and 312",
+      "unordered": true
+     }
+    },
+    {
+     "label": "c",
+     "text": "The number closest to 250 is {b}.",
+     "answer": {
+      "value": [
+       "231"
+      ],
+      "text": "231"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "List in order: 123, 132, 213, 231, 312, 321. That is 6 numbers. (b) Even numbers end in 2: 132 and 312. (c) The differences from 250 are 127, 118, 37, 19, 62 and 71. The smallest is 19, so 231."
+  },
+  {
+   "id": "L5U10-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Ali writes the whole numbers from 1 to 60. How many times does he write the digit 5? {b}",
+   "answer": {
+    "value": [
+     "16"
+    ],
+    "text": "16 times"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "In the ones place: 5, 15, 25, 35, 45 and 55 is 6 times. In the tens place: 50 to 59 is 10 times. 6 + 10 = 16. (55 has the digit 5 twice and is counted in both places.)"
+  },
+  {
+   "id": "L5U10-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Ben, Kumar, Aisha and Wei each play a different sport: swimming, tennis, football or badminton. Write Yes or No in the grid. Then write the sport for each child.\nClue 1: Ben does not play tennis or badminton.\nClue 2: Kumar does not play swimming or tennis.\nClue 3: Wei does not play swimming or badminton.\nClue 4: Wei does not play tennis.",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "",
+     "swimming",
+     "tennis",
+     "football",
+     "badminton"
+    ],
+    "rows": [
+     [
+      "Ben",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "Kumar",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "Aisha",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "Wei",
+      null,
+      null,
+      null,
+      null
+     ]
+    ],
+    "width_mm": 130,
+    "rowh": 38,
+    "size": 20,
+    "first_bold": true,
+    "alt": "blank logic grid"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ben plays {b}",
+     "answer": {
+      "value": [
+       "swimming"
+      ],
+      "text": "swimming"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Kumar plays {b}",
+     "answer": {
+      "value": [
+       "badminton"
+      ],
+      "text": "badminton"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Aisha plays {b}",
+     "answer": {
+      "value": [
+       "tennis"
+      ],
+      "text": "tennis"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Wei plays {b}",
+     "answer": {
+      "value": [
+       "football"
+      ],
+      "text": "football"
+     }
+    }
+   ],
+   "hint": "Which child has the most clues? Start with Wei.",
+   "explanation": "Wei does not play swimming, badminton or tennis, so Wei plays football (clues 3 and 4). Ben does not play tennis or badminton, and football is taken, so Ben plays swimming. Kumar does not play swimming or tennis, so Kumar plays badminton. Aisha plays tennis. Check all 4 clues: each is true.",
+   "partsrow": true
+  },
+  {
+   "id": "L5U10-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Count the squares and the rectangles in a 2 by 4 grid. A square also counts as a rectangle.",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "gap": 0,
+    "panels": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "title": " "
+     }
+    ],
+    "alt": "grid of squares"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number of squares (all sizes) is {b}.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number of rectangles (all sizes) is {b}.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Count by size: 1 by 1, 2 by 1, 3 by 1, 4 by 1 ... and then 2 high.",
+   "explanation": "(a) 1 by 1: 8. 2 by 2: 3 (3 places across, 1 place up). Total 8 + 3 = 11. (b) Count by size, width by height. Height 1: widths 1, 2, 3, 4 give 8, 6, 4, 2 rectangles = 20. Height 2: widths 1, 2, 3, 4 give 4, 3, 2, 1 = 10. Total 30. Check another way: choose 2 of 3 horizontal lines (3 ways) and 2 of 5 vertical lines (10 ways): 3 × 10 = 30."
+  },
+  {
+   "id": "L5U10-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "In a cafe, 1/4 of the customers leave. Then 3 more customers arrive. Then 1/3 of the customers in the cafe leave. 14 customers are left. How many customers were in the cafe at first? {b}",
+   "answer": {
+    "value": [
+     "24"
+    ],
+    "text": "24 customers"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Undo the last step first. 14 is what fraction of the number before it?",
+   "explanation": "Work backwards. After the last step 14 are left, and that is 2/3 of the number before it, so there were 14 ÷ 2 × 3 = 21. Before 3 arrived: 21 - 3 = 18. The 18 is 3/4 of the first number, so 1/4 is 6 and at first there were 24. Check: 24 - 6 = 18, 18 + 3 = 21, 21 - 7 = 14."
+  },
+  {
+   "id": "L5U10-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "How many 3-digit numbers have digits that add up to 7? Make an ordered list to be sure. {b}",
+   "answer": {
+    "value": [
+     "28"
+    ],
+    "text": "28 numbers"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Sort by the first digit: 1__, 2__, ... How many for each?",
+   "explanation": "Sort by the hundreds digit. If it is 1, the other 2 digits add up to 6: 06, 15, 24, 33, 42, 51, 60 is 7 numbers. If it is 2, the others add up to 5: 6 numbers. If it is 3, add up to 4: 5 numbers. If 4: 4 numbers. If 5: 3 numbers. If 6: 2 numbers. If 7: 1 number (700). Total: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28."
+  },
+  {
+   "id": "L5U10-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali has 24 coins. They are 10¢, 20¢ and 50¢ coins. There are as many 10¢ coins as 50¢ coins. The coins are worth $7.00 in all.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} coins of 50¢.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} coins of 10¢.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "c",
+     "text": "There are {b} coins of 20¢.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Join a 10¢ coin and a 50¢ coin as a pair. How much is a pair?",
+   "explanation": "A 10¢ coin and a 50¢ coin make a pair worth 60¢. Suppose all 24 coins are 20¢: $4.80. That is $2.20 short. Replace two 20¢ coins (40¢) with 1 pair (60¢): it adds 20¢. $2.20 ÷ 20¢ = 11 pairs. So 11 coins of 50¢, 11 coins of 10¢ and 24 - 22 = 2 coins of 20¢. Check: $5.50 + $1.10 + $0.40 = $7.00."
+  },
+  {
+   "id": "L5U10-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 5: The worst case\nA drawer has 10 red socks, 10 blue socks and 10 black socks. You take socks out in the dark. How many socks must you take to be sure of 2 socks of the same colour? {b}",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4 socks"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Think of the worst luck. How many socks can you take with no pair?",
+   "explanation": "In the worst case you take 1 red, 1 blue and 1 black sock: 3 socks and no pair. The 4th sock must match one of them. So 4 socks make sure of a pair. (3 socks are not enough because they could be 3 different colours.)"
+  },
+  {
+   "id": "L5U10-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Siti picks a number. She adds 7 and then multiplies by 4. She gets 60. What number did Siti pick? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Work backwards. Undo multiply by 4: 60 ÷ 4 = 15. Undo add 7: 15 - 7 = 8. Check: 8 + 7 = 15, 15 × 4 = 60."
+  },
+  {
+   "id": "L5U10-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Mei spends 2/5 of her money. Then she spends $9. She has $12 left. How much money did Mei have at first? $ {b}",
+   "answer": {
+    "value": [
+     "35"
+    ],
+    "text": "$35"
+   },
+   "explanation": "Before the $9 she had $12 + $9 = $21. The $21 is 3/5 of her money, so 1/5 is $7 and the whole is 5 × $7 = $35. Check: 2/5 of 35 = 14, 35 - 14 = 21, 21 - 9 = 12."
+  },
+  {
+   "id": "L5U10-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A box holds 9 hens and goats. They have 26 legs altogether. A hen has 2 legs and a goat has 4 legs. How many goats are there? {b}",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4 goats"
+   },
+   "explanation": "Suppose all 9 are hens: 18 legs. That is 26 - 18 = 8 legs short. Each goat adds 2 legs, so 8 ÷ 2 = 4 goats. Check: 4 × 4 + 5 × 2 = 16 + 10 = 26."
+  },
+  {
+   "id": "L5U10-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Count the squares of every size in a 2 by 3 grid. {b}",
+   "figure": {
+    "type": "l5_pat",
+    "mm": 8,
+    "gap": 0,
+    "panels": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "title": " "
+     }
+    ],
+    "alt": "grid of squares"
+   },
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 squares"
+   },
+   "explanation": "There are 6 small squares. A 2 by 2 square can go in 2 places. 6 + 2 = 8.",
+   "figright": true
+  }
+ ]
+}

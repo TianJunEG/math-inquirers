@@ -68,9 +68,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 1.020790422245108,
-   "over": true,
-   "excess_mm": 5.3,
+   "fill": 0.974880921730175,
+   "over": false,
+   "excess_mm": -6.5,
    "edition": "soft"
   },
   {
@@ -245,9 +245,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 1.020790422245108,
-   "over": true,
-   "excess_mm": 5.3,
+   "fill": 0.974880921730175,
+   "over": false,
+   "excess_mm": -6.5,
    "edition": "print"
   },
   {
@@ -359,10 +359,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 7 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 5.3 mm)",
-  "print page 7 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 5.3 mm)"
- ],
+ "problems": [],
  "soft_pages": 18,
  "print_pages": 18
 }

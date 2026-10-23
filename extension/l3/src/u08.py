@@ -63,7 +63,7 @@ u.S(1, 'Use a right angle checker on each angle. Write the letters.', parts=[
                                            {'deg': 150, 'rot': 10, 'label': 'D'}, {'deg': 40, 'rot': 60, 'label': 'E'}, {'deg': 90, 'rot': 100, 'label': 'F'}], 'cols': 3, 'ch': 176, 'width_mm': 100},
     why='A and F fit the checker exactly, so they are right angles. B and E are inside the corner of the checker, so they are smaller. C and D stick out past the corner of the checker, so they are greater.')
 u.S(1, 'Count the right angles INSIDE each shape. Check each corner. A dent is greater than a right angle, so leave it out.', parts=[
-    P('a', 'Shape A has {b} right angles.', A('5')), P('b', 'Shape B has {b} right angles.', A('6')), P('c', 'Shape C has {b} right angles.', A('2'))],
+    P('a', 'A: {b} right angles', A('5')), P('b', 'B: {b} right angles', A('6')), P('c', 'C: {b} right angles', A('2'))],
     partsrow=True,
     figure={'type': 'l3_segs', 'k': 30, 'pad': 44, 'width_mm': 90, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
     why='Shape A is an L. It has 5 right angles, and its dent is greater than a right angle. Shape B has 6 right angles and 2 dents. Shape C has right angles only at its 2 left corners. Its 2 sloping corners do not fit the checker.')
