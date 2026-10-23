@@ -140,6 +140,10 @@ for p in pages:
     for a_, b_ in re.findall(r"\b(\d)\.(\d)\b", p["syll"].split("(")[0]):
         if not any(o.endswith(f"{a_}.{b_}") for o in ids): bad.append((p["no"], f"{a_}.{b_} in tag but not in outcome ids"))
 rec("F28: every outcome id of every page has its PDF wording in docs/school_books/p5_outcome_wording.md, and the numbers in each tag are the page's own outcome ids", not bad, str(bad[:5]))
+import json as _json
+_ow = set(_json.load(open(os.path.join(HERE, "gen", "other_levels_words.json"))))
+_pw = [m.group(1) for p in pages for m in [re.search(r"(?:Code word|Word): ([A-Z]+)", p["key"].get("check_result", ""))] if m]
+rec(f"the {len(_pw)} code words are all different, and none is a code word of another level (gen/other_levels_words.json, read from the other levels' answer keys)", len(set(_pw)) == len(_pw) and not [w for w in _pw if w.lower() in _ow], str(sorted(set(w for w in _pw if w.lower() in _ow)) or [w for w in _pw if _pw.count(w) > 1]))
 rec("topic tags name a Primary 5 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Fractions", "Decimals", "Percentage", "Rate", "Area and Volume", "Geometry")) for p in pages))
 # ---- 3. HTML black and white / stroke scan
 for k in BK:
