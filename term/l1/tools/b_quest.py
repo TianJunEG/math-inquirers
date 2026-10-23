@@ -124,7 +124,7 @@ def tutor_notes_html(d):
     H.append('<h2 class="pb">6. Group advice for next term (tutor only; one sheet per class; no names)</h2>')
     H.append('<p class="small">' + E(ns['group_how']) + '</p>')
     H.append('<table><tr><th style="width:26%">Area</th><th>What several children were still working on (no names)</th><th>What I will do in the first two lessons of next term</th></tr>' + ''.join(
-        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">Lessons {s["lessons"][0]} to {s["lessons"][-1]}: {E(s["looked_at"])}</div></td><td style="height:78px"></td><td></td></tr>' for s in c['strands']) + '</table>')
+        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">{"Lesson " + str(s["lessons"][0]) if s["lessons"][0] == s["lessons"][-1] else "Lessons " + str(s["lessons"][0]) + " to " + str(s["lessons"][-1])}: {E(s["looked_at"])}</div></td><td style="height:78px"></td><td></td></tr>' for s in c['strands']) + '</table>')
     H.append('<table><tr><th>Prompt</th><th>My notes</th></tr>' + ''.join(f'<tr><td style="width:36%">{E(p)}</td><td style="height:44px"></td></tr>' for p in ns['group_prompts']) + '</table>')
     # --- the one-line templates
     sl = c['saw_line']
@@ -170,7 +170,7 @@ def build_quest(d, pw):
     od = os.path.join(L1, 'out', f'l{n}')
     os.makedirs(od, exist_ok=True)
     term = f'Math Inquirers Term {d["term"]}'
-    log = bc.render(pw, quest_log_html(d), 'quest_log', od, f'L{n}_Quest_Log.pdf', f"{term} {NAME}. Print at 100% (actual size).", {'top': '12mm', 'bottom': '15mm', 'left': '14mm', 'right': '14mm'})
+    log = bc.render(pw, quest_log_html(d), 'quest_log', od, f'L{n}_Quest_Log.pdf', f"{term} {NAME}.", {'top': '12mm', 'bottom': '15mm', 'left': '14mm', 'right': '14mm'})
     notes = bc.render(pw, tutor_notes_html(d), 'quest_tutor_notes', od, f'L{n}_Quest_Tutor_Notes.pdf', f'{term} {NAME}. Tutor notes and private return plan. Tutor only.', {'top': '14mm', 'bottom': '16mm', 'left': '13mm', 'right': '13mm'})
     note = bc.render(pw, parent_note_html(d), 'quest_parent_note', od, f'L{n}_Quest_Parent_Note.pdf', '', {'top': '12mm', 'bottom': '12mm', 'left': '15mm', 'right': '15mm'})
     fails = []
