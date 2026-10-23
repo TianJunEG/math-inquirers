@@ -54,3 +54,7 @@ Total: 20 / 24
 - Days of the week and dates are not a listed Primary 1 outcome; no Primary 1 school paper in the sample tests the calendar. Flagged for tutor review (D6).
 - The Quest Log is 4 pages (Lesson 20's is 3) because the term has more pictures; the grown-up note, the Lesson 29 hand-off and the tutor notes say 4. The Quest needs the Quest Log printed at 100 percent; figures are small.
 - Template note for the owner: b_quest.py could scale figures to the room left on the page; here the per-gate figure sizes were set by hand.
+
+## Fix pass (Term 3 independent audits)
+
+See `audit/FIXES_T3_L30.md`. After the fix pass: validator 22 pass, 0 warn, 0 FAIL; script 69:42 of 90, slow class 82:14; workbook PDF fill 95, 82, 88, 89, 93% (kit page 76%). S3(b) no longer repeats the Explore example, the Quest grown-up note is rewritten for Term 3, the privacy statement matches the WhatsApp photo route, Start here is split S1 to S4 and S5 to S6 as printed, no question depends on colour, online ordinals are correct. Open (shared tools or owner): Quest Log footer text, black and white build, figure sizes and kit cut gaps, L20 hand-off.

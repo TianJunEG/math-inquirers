@@ -100,7 +100,7 @@ CLASS = {
     'opt': [('date', 15)],
 }
 WORKBOOK = {
-    'S1': [('missing', 'Wednesday', 'Saturday')], 'S2': [('before', 'Wednesday'), ('after', 'Saturday')], 'S3': [('days', 'Tuesday', 3)], 'S4': [('days', 'Saturday', 2)], 'S5': [('week', 6)],
+    'S1': [('missing', 'Wednesday', 'Saturday')], 'S2': [('before', 'Wednesday'), ('after', 'Saturday')], 'S3': [('days', 'Tuesday', 3), ('days', 'Tuesday', 4)], 'S4': [('days', 'Saturday', 2)], 'S5': [('week', 6)],
     'S6': [('tfday', 1), ('tfday', 2), ('tfday', 3), ('tfday', 4)],
     'T1': [('yesterday2', 'Thursday')], 'T2': [('dayn', 'Monday', 7), ('dayn', 'Monday', 10)], 'T3': [('weeks', 3), ('weeks', 2)], 'T4': [('date', 18), ('week', 18)],
     'G1': [('days', 'Monday', 100)], 'G2': [('wednesdays',), ('date', 31)], 'G3': [('weeks', 3, 6)], 'I1': [('five',)],
@@ -161,7 +161,7 @@ def run(d):
     # ---------------------------------------------------------------- warm-up
     s = sl['s-rem1']['blocks'][0]; eq(s['items'], [3, 10, 17, None], 's-rem1 items'); eq((plus(3, 7), plus(10, 7), plus(17, 7)), (10, 17, 24), 's-rem1 count in 7s'); eq(s['gaps'], ['+7'] * 3, 's-rem1 gaps')
     eq(plus(plus(5, 7), 7), 19, 's-rem1 your turn: 5, 12, 19')
-    eq(len(sl['s-rem2']['blocks'][0].get('highlight', [])), 1, 's-rem2 one highlighted child'); eq(sl['s-rem2']['blocks'][0]['highlight'], [2], 's-rem2 third place (index 2)')
+    eq(len(sl['s-rem2']['blocks'][0].get('highlight', [])), 1, 's-rem2 one highlighted child'); eq(sl['s-rem2']['blocks'][0]['highlight'], [3], 's-rem2 third place (line_up places are numbered from 1)')
     tb = sl['s-rem3']['blocks'][0]['rows']; eq([c for r in tb for c in r][:7], WEEK, 's-rem3 days in order'); eq(tb[1][3], '?', 's-rem3 the blank after Sunday')
     # ---------------------------------------------------------------- sneak-peek
     sp = d['sneak_peek']; eq(later('Monday', 1), 'Tuesday', 'sneak 1'); eq(later('Thursday', 5), 'Tuesday', 'sneak 2'); eq((sp['a1'], sp['a2'].split('.')[0]), ('Tuesday.', 'Tuesday'), 'sneak answers')
@@ -180,10 +180,10 @@ def run(d):
     eq((sl['s-m4']['blocks'][0]['highlight'], plus(4, 14), month[4], month[18]), ([4], 18, 'Saturday', 'Saturday'), 's-m4'); eq((7 * 2, plus(4, 7), plus(plus(4, 7), 7)), (14, 11, 18), 's-m4 steps')
     eq((7, 14), (7 * 1, 7 * 2), 's-m4 your turn: a week is 7 days and a fortnight 14')
     # ---------------------------------------------------------------- Start here
-    q = T['S1']; eq(q['visual']['rows'][0], ['Monday', 'Tuesday', '[]', 'Thursday', 'Friday', '[]', 'Sunday'], 'S1 table'); eq([WEEK[i] for i in (2, 5)], q['val'], 'S1 missing days')
+    q = T['S1']; eq([c for r_ in q['visual']['rows'] for c in r_ if c], ['Monday', 'Tuesday', '[]', 'Thursday', 'Friday', '[]', 'Sunday'], 'S1 table (full names in order, no abbreviation row that shows the answers)'); eq(q['visual']['head'], [], 'S1 has no abbreviation header'); eq([WEEK[i] for i in (2, 5)], q['val'], 'S1 missing days')
     eq([d_ for d_ in WEEK if d_ not in ('Monday', 'Tuesday', 'Thursday', 'Friday', 'Sunday')], ['Wednesday', 'Saturday'], 'S1 recomputed')
     q = T['S2']; eq((before('Wednesday'), later('Saturday', 1)), ('Tuesday', 'Sunday'), 'S2'); eq(q['val'], ['Tuesday', 'Sunday'], 'S2 val')
-    q = T['S3']; eq(later('Tuesday', 3), 'Friday', 'S3'); eq(later('Tuesday', 5), 'Sunday', 'S3b'); eq(q['val'], ['Friday', 'Sunday'], 'S3 val'); eq(q['visual']['rows'][0][1], 'today', 'S3 marks today')
+    q = T['S3']; eq(later('Tuesday', 3), 'Friday', 'S3'); eq(later('Tuesday', 4), 'Saturday', 'S3b: 4 days later, not the Explore example (Tuesday and 5 days is Sunday)'); eq(q['val'], ['Friday', 'Saturday'], 'S3 val'); eq(q['visual']['rows'][0][1], 'today', 'S3 marks today')
     q = T['S4']; eq(later('Saturday', 2), 'Monday', 'S4'); eq(q['val'], ['Monday'], 'S4 val')
     q = T['S5']; eq(q['visual']['highlight'], [6], 'S5 highlight'); eq((7, plus(6, 7), month[6], month[13]), (7, 13, 'Monday', 'Monday'), 'S5'); eq(q['val'], [7, 13], 'S5 val')
     q = T['S6']; st = [x['s'] for x in q['tf']]
@@ -194,12 +194,12 @@ def run(d):
     q = T['T1']; yd = before('Thursday'); dby = before(yd); eq((yd, dby, later(dby, 2)), ('Wednesday', 'Tuesday', 'Thursday'), 'T1a is today'); tm = later('Thursday', 1); eq((tm, before(tm, 2)), ('Friday', 'Wednesday'), 'T1b'); eq(q['val'], ['Thursday', 'Wednesday'], 'T1 val')
     q = T['T2']; eq(later('Monday', 6), 'Sunday', 'T2 day 7 (6 steps after day 1)'); eq(later('Monday', 9), 'Wednesday', 'T2 day 10 (9 steps after day 1)'); eq(later('Monday', 7), 'Monday', 'T2 day 8 is Monday'); eq(q['val'], ['Sunday', 'Wednesday'], 'T2 val')
     q = T['T3']; eq((plus(plus(7, 7), 7), plus(7, 7)), (21, 14), 'T3'); eq(q['val'], [21, 14], 'T3 val')
-    q = T['T4']; eq((month[18], plus(18, 7), month[25]), ('Saturday', 25, 'Saturday'), 'T4'); eq(q['val'], ['Saturday', 25], 'T4 val'); eq(q['visual']['highlight'], [18], 'T4 highlight')
+    q = T['T4']; eq((month[18], plus(18, 7), month[25]), ('Saturday', 25, 'Saturday'), 'T4'); eq(q['val'], ['Saturday', 25], 'T4 val'); eq((q['visual']['week'], '18' in q['text']), (0, True), 'T4 prints only the first week row: the 18th is not on it, so the weekday is reasoned, not read')
     eq(dates_on('Wednesday'), [1, 8, 15, 22, 29], 'T4 hint: the Wednesdays')
     # ---------------------------------------------------------------- Go further
     q = T['G1']; eq(later('Monday', 100), 'Wednesday', 'G1 stepped 100 days'); eq((7 * 14, 100 - 7 * 14), (98, 2), 'G1 14 weeks and 2 days'); eq(later('Monday', 98), 'Monday', 'G1 98 days is whole weeks'); eq(q['val'], [14, 2, 'Wednesday'], 'G1 val')
     eq(sum(1 for k in range(1, 101) if k % 7 == 0), 14, 'G1 whole weeks in 100 days (counted)')
-    q = T['G2']; w = dates_on('Wednesday'); eq(w, [1, 8, 15, 22, 29], 'G2 Wednesdays'); eq([plus(x, 7) for x in w[:-1]], w[1:], 'G2 each is 7 more'); eq(month[31], 'Friday', 'G2 the 31st'); eq(q['val'], [8, 15, 22, 29, 'Friday'], 'G2 val')
+    q = T['G2']; w = dates_on('Wednesday'); eq(w, [1, 8, 15, 22, 29], 'G2 Wednesdays'); eq([plus(x, 7) for x in w[:-1]], w[1:], 'G2 each is 7 more'); eq(month[31], 'Friday', 'G2 the 31st'); eq(q['val'], [8, 15, 22, 29, 'Friday'], 'G2 val'); eq((q['visual']['week'], q['visual']['highlight']), (0, [1]), 'G2 prints only the first week row: 8, 15, 22 and 29 are not on it')
     q = T['G3']; eq((plus(plus(7, 7), 7), plus(6, 21), month[6], month[27]), (21, 27, 'Monday', 'Monday'), 'G3'); eq(q['val'], [21, 27, 'Monday'], 'G3 val')
     # ---------------------------------------------------------------- Investigation: weekdays that come 5 times
     cnt = {dn: len(dates_on(dn)) for dn in WEEK}; eq(cnt, {'Monday': 4, 'Tuesday': 4, 'Wednesday': 5, 'Thursday': 5, 'Friday': 5, 'Saturday': 4, 'Sunday': 4}, 'I1 counts'); eq(sum(cnt.values()), 31, 'I1 every date counted once')
@@ -232,8 +232,8 @@ def run(d):
     # ---------------------------------------------------------------- online practice
     items = {i['id']: i for i in d['online_practice']['items']}
     for cid, env in BASE_ENV.items(): eq(items[cid]['answer'], ORACLES[cid](env), cid + ' authored answer')
-    eq((items['c3']['answer'], later('Tuesday', 3)), ('Friday', 'Friday'), 'c3'); eq((items['c4']['answer'], later('Sunday', 1)), ('Monday', 'Monday'), 'c4')
-    eq((items['t2']['answer'], later(before(before('Thursday')), 2)), ('Thursday', 'Thursday'), 't2'); eq((items['g2']['answer'], later('Monday', 100)), ('Wednesday', 'Wednesday'), 'g2')
+    eq((items['c3']['answer'], later('Thursday', 2)), ('Saturday', 'Saturday'), 'c3 (not workbook S3: Tuesday plus 3)'); eq((items['c4']['answer'], later('Sunday', 1)), ('Monday', 'Monday'), 'c4')
+    eq((items['t2']['answer'], later(before(before('Tuesday')), 1)), ('Monday', 'Monday'), 't2 (not workbook T1(a))'); eq((items['g2']['answer'], later('Tuesday', 50)), ('Wednesday', 'Wednesday'), 'g2 (not workbook G1: 100 days after Monday)')
     for it in items.values():
         for s_ in it.get('slips', []):
             if it['type'] == 'number': eq(it['answer'] in s_['a'], False, it['id'] + ' slip is wrong')
@@ -242,6 +242,13 @@ def run(d):
     for s_ in items['c5']['tpl']['vars']['s']: eq(plus(s_, 21) - s_, 21, f'c5 {s_}')
     for a in items['t1']['tpl']['vars']['a']: eq(plus(a, 14) <= 31, True, f't1 {a} stays in the month')
     for a in items['g1']['tpl']['vars']['a']: eq(_g1(dict(a=a)), 5 if a <= 3 else 4, f'g1 {a} Mondays')
+    for it in items.values():
+        tp = it.get('tpl')
+        if tp: eq(re.search(r'\{\w+\}th', json.dumps(tp)), None, it['id'] + ' template uses the ordinal formatter, never {a}th (2th, 22th)')
+    eq([cq['child_footer'].count('Print at 100%'), ' '.join(cq['child_rules']).count('nobody sees your answers')], [0, 0], 'the Quest Log footer and rules: no print instruction, no nobody-sees claim (photos go to the tutor)')
+    eq(re.search(r'odd and even|3 and 4 tables', json.dumps(cq['parent_note'])), None, 'the Quest grown-up note is not the Term 2 note')
+    eq(G['C8']['strand'], 'time', 'gate 8 is a Time gate')
+    eq(all('yellow' not in json.dumps(x['text']) for x in (T['S5'], G['C8'])), True, 'no question depends on a colour')
     # ---------------------------------------------------------------- kit contract, hand-offs
     kc = {r['piece']: r for r in d['materials']['kit_contract']}
     for r in kc.values(): eq(r['supplied'] >= r['max_used'], True, 'kit contract ' + r['piece'])

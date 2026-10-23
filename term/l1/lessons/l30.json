@@ -42,7 +42,7 @@
    "Counting on within a cycle and on a month page (number patterns, Primary 1, p. 31)",
    "Mi's Challenge Quest: 8 short gates, one for each lesson of the term, and an optional secret cave (all at Start here level)"
   ],
-  "note": "Strand label for the tutor only. This is an added lesson (gap: time and calendar). Days of the week and dates are not a listed Primary 1 outcome (Primary 1 Time items are clock items), so the lesson is flagged for tutor review; no Primary 1 school paper in the sample tests the calendar. Start here is approachable: the days in order, the day before and after, three days later (no wrap), the number of days in a week and a week after a date on a month page. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: 'two days after the day before yesterday', the 10th day from Monday, 3 weeks, a fortnight, the date of a day on a month page, every Wednesday of a month (the same weekday every 7 days), and 'Hundred Days Later' (100 days is 14 weeks and 2 days, so Monday plus 100 days is Wednesday; dividing by 7 with a left-over is a Primary 3 outcome, so the lesson says 14 weeks and 2 days over). Owner decisions, 22 and 23 Oct 2026: Mi's Challenge Quest replaces the end-of-term check; every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes and am or pm (Lessons 21 and 22), 2 half an hour and one hour later (23), 3 coins and change (24), 4 compare prices and exactly $10 (25 and 26), 5 grid (27), 6 sticks (28), 7 a wrong sum (29), 8 days later and a week on the month page (30); the secret cave is an unseen puzzle joining two moves. Contest tag (tutor only): day-of-the-week cycles; counting on; a week as a unit. Non-routine types (tutor only): a context fact (a week, a fortnight), a pattern (the cycle of 7), a logic puzzle (two days after the day before yesterday)."
+  "note": "Strand label for the tutor only. This is an added lesson (gap: time and calendar). Days of the week and dates are not a listed Primary 1 outcome (Primary 1 Time items are clock items), so the lesson is flagged for tutor review; no Primary 1 school paper in the sample tests the calendar. Start here is approachable: the days in order, the day before and after, three days later (no wrap), the number of days in a week and a week after a date on a month page. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: 'two days after the day before yesterday', the 10th day from Monday, 3 weeks, a fortnight, the date of a day on a month page, every Wednesday of a month (the same weekday every 7 days), and 'Hundred Days Later' (100 days is 14 weeks and 2 days, so Monday plus 100 days is Wednesday; dividing by 7 with a left-over is a Primary 3 outcome, so the lesson says 14 weeks and 2 days over). Mi's Challenge Quest is the end-of-term game; every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes and am or pm (Lessons 21 and 22), 2 half an hour and one hour later (23), 3 coins and change (24), 4 compare prices and exactly $10 (25 and 26), 5 grid (27), 6 sticks (28), 7 a wrong sum (29), 8 days later and a week on the month page (30); the secret cave is an unseen puzzle joining two moves. Contest tag (tutor only): day-of-the-week cycles; counting on; a week as a unit. Non-routine types (tutor only): a context fact (a week, a fortnight), a pattern (the cycle of 7), a logic puzzle (two days after the day before yesterday)."
  },
  "contest_moves": [
   "day-of-the-week cycles: counting on round a cycle of 7, and a left-over after whole weeks",
@@ -75,7 +75,7 @@
   "child": [
    "Your Term 3 book: the calendar page, torn out along the dashed line, with the 7 day cards cut out by a grown-up beforehand (the month page is not cut)",
    "The Quest Log (4 pages, in your Term 3 book), kept closed in an envelope until the tutor says to open it, a quest partner (a grown-up or a brother or sister), and a pencil and rubber",
-   "No printer or no cutting? Write the 7 days on 7 small pieces of paper. A calendar from the house works instead of the month page",
+   "No cutting? Write the 7 days on 7 small pieces of paper. A calendar from the house works instead of the month page",
    "Your clock and play money from earlier in the term are optional helpers in the Quest; they are not needed",
    "A pencil, a rubber and spare paper"
   ],
@@ -184,7 +184,7 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Lesson 30 is the last lesson of Term 3, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (the day cards in order, counting on round the cycle, a week on the month page); the Mini-lesson has 9 (days later, the day before, a week and a fortnight on the month page). The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 4 minutes are the standing buffer; nothing new is started in it.",
+  "notes": "Lesson 30 is the last lesson of Term 3, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 17 minutes (page 1 about 10, page 2 about 6.5), so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (the day cards in order, counting on round the cycle, a week on the month page); the Mini-lesson has 9 (days later, the day before, a week and a fortnight on the month page). The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 4 minutes are the standing buffer; nothing new is started in it.",
   "skip_order": [
    "In a slow class the workbook part runs over: take the time from the 4-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
    "the optional slide and the optional exit ticket",
@@ -312,12 +312,12 @@
      "n": 6,
      "labels": "ordinal",
      "highlight": [
-      2
+      3
      ]
     },
     {
      "t": "chip",
-     "text": "Count the places. Which place is the green one?"
+     "text": "Count the places. Which place is the child with a ring round them?"
     }
    ],
    "note": "Places in a line (Term 2 Lesson 11, taught again). Dates use the same words: the 1st, 2nd, 3rd, 4th ... 10th. Ask: which place is the highlighted child (3rd). Say: the 3rd of the month is the third day. A child who is unsure counts from the front. Children answer aloud. No writing."
@@ -361,7 +361,7 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody sees your answers."
+     "text": "Ideas we have not learnt yet. A guess is a great start. Your paper is not collected."
     },
     {
      "t": "cols",
@@ -390,7 +390,7 @@
      ]
     }
    ],
-   "note": "Puzzle 1 (Tuesday) is an access question. Puzzle 2 is a thinking question on the lesson idea: 5 days later than Thursday is Tuesday, counting on from tomorrow (Friday is day 1) and going round past Sunday to Monday and Tuesday. A child who counts Thursday as day 1 gets Monday: say nothing yet. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody sees your answers. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: Tuesday; Tuesday. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 (Tuesday) is an access question. Puzzle 2 is a thinking question on the lesson idea: 5 days later than Thursday is Tuesday, counting on from tomorrow (Friday is day 1) and going round past Sunday to Monday and Tuesday. A child who counts Thursday as day 1 gets Monday: say nothing yet. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; your paper is not collected. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: Tuesday; Tuesday. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
@@ -515,14 +515,17 @@
      "highlight": [
       5
      ],
-     "size": 68
+     "size": 68,
+     "mark": [
+      5
+     ]
     },
     {
      "t": "chip",
-     "text": "The yellow day is the 5th. Count on 7 days. Which date do you land on?"
+     "text": "The day with a ring round it is the 5th. Count on 7 days. Which date do you land on?"
     }
    ],
-   "note": "Round 3, about 3 minutes. The month page is not a real month: it starts on a Wednesday and has 31 days. The 5th is yellow, a Sunday. Count on 7 days: the 6th is 1, the 7th is 2 ... the 12th is 7. Children count along the page with a finger and say the date. Ask: which day of the week is the 12th (Sunday too). The answer is on the next slide. A child with no month page uses a calendar from the house or writes the numbers in rows of 7."
+   "note": "Round 3, about 3 minutes. The month page is not a real month: it starts on a Wednesday and has 31 days. The 5th has a ring round it, a Sunday. Count on 7 days: the 6th is 1, the 7th is 2 ... the 12th is 7. Children count along the page with a finger and say the date. Ask: which day of the week is the 12th (Sunday too). The answer is on the next slide. A child with no month page uses a calendar from the house or writes the numbers in rows of 7."
   },
   {
    "id": "s-explore3-ans",
@@ -539,7 +542,11 @@
       5,
       12
      ],
-     "size": 68
+     "size": 68,
+     "mark": [
+      5,
+      12
+     ]
     },
     {
      "t": "chip",
@@ -632,11 +639,14 @@
      "highlight": [
       9
      ],
-     "size": 68
+     "size": 68,
+     "mark": [
+      9
+     ]
     },
     {
      "t": "chip",
-     "text": "The yellow day is the 9th. What date is a week later?"
+     "text": "The day with a ring round it is the 9th. What date is a week later?"
     }
    ],
    "note": "Worked example. A week after the 9th is 7 days later: the 16th, the date straight below the 9th on the month page. Ask: what date (16). Check: 9 and 7 make 16. Say: a week later is the same day of the week. Children answer aloud. The answer is on the next slide."
@@ -668,11 +678,14 @@
      "highlight": [
       4
      ],
-     "size": 68
+     "size": 68,
+     "mark": [
+      4
+     ]
     },
     {
      "t": "chip",
-     "text": "A fortnight is 2 weeks. The yellow day is the 4th. What date is a fortnight later?"
+     "text": "A fortnight is 2 weeks. The day with a ring round it is the 4th. What date is a fortnight later?"
     }
    ],
    "note": "Worked example. A fortnight is 2 weeks, which is 14 days. A fortnight after the 4th: one week is the 11th, two weeks is the 18th. Check: 4 and 14 make 18. Ask: what date (18). Say: a fortnight is 2 weeks or 14 days. Children answer aloud. The answer is on the next slide. A child who adds 2 gave the number of weeks, not days."
@@ -783,19 +796,20 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 1 to 3. Take your time."
+     "text": "Questions 1 to 4. Take your time."
     },
     {
      "t": "qs",
      "ids": [
       "S1",
       "S2",
-      "S3"
+      "S3",
+      "S4"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own with the day cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: two missing days in the week. Question 2: the day before and the day after. Question 3: 3 days later."
+   "note": "Read questions 1 to 4 aloud. Children work on their own with the day cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 4 any child may choose to carry on or try Think harder. Question 1: two missing days in the week. Question 2: the day before and the day after. Question 3: 3 days later and 4 days later. Question 4: 2 days later than Saturday."
   },
   {
    "id": "s-ws1ans",
@@ -808,11 +822,12 @@
      "ids": [
       "S1",
       "S2",
-      "S3"
+      "S3",
+      "S4"
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 Wednesday and Saturday. Q2 Tuesday and Sunday. Q3 Friday."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 Wednesday and Saturday. Q2 Tuesday and Sunday. Q3 Friday, then Saturday. Q4 Monday."
   },
   {
    "id": "s-ws2",
@@ -822,19 +837,18 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 4 to 6. Take your time."
+     "text": "Questions 5 and 6. Take your time."
     },
     {
      "t": "qs",
      "ids": [
-      "S4",
       "S5",
       "S6"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: 2 days later than Saturday. Question 5: a week and a week after the 6th on the month page. Question 6: tick True or False for four statements. Wait 10 seconds before helping."
+   "note": "Read questions 5 and 6 aloud. Question 5: a week, and a week after the date with a ring round it, on the month page. Question 6: tick True or False for four statements. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -845,13 +859,12 @@
     {
      "t": "answers",
      "ids": [
-      "S4",
       "S5",
       "S6"
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 Monday. Q5 7 days; the 13th. Q6 True, False, True, True."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q5 7 days; the 13th. Q6 True, False, True, True."
   },
   {
    "id": "s-choice",
@@ -1097,7 +1110,7 @@
      },
      {
       "k": "SAY",
-      "text": "Today we are calendar detectives. After our break we play Mi's Challenge Quest, a game with Mi, on our own paper. It is not a race, and nobody sees your answers."
+      "text": "Today we are calendar detectives. After our break we play Mi's Challenge Quest, a game with Mi, on our own paper. It is not a race. Your answers are private: only your grown-up and your tutor may see them."
      },
      {
       "k": "NOTE",
@@ -1150,7 +1163,7 @@
      },
      {
       "k": "ASK",
-      "text": "Which place is the green child?",
+      "text": "Which place is the child with a ring round them?",
       "resp": 25
      },
      {
@@ -1196,7 +1209,7 @@
      },
      {
       "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody sees your answers."
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Your paper is not collected."
      },
      {
       "k": "READ",
@@ -1296,7 +1309,7 @@
      },
      {
       "k": "SAY",
-      "text": "Round three. This month page starts on a Wednesday. The fifth is yellow. Count on seven days. Which date do you land on?"
+      "text": "Round three. This month page starts on a Wednesday. The fifth has a ring round it. Count on seven days. Which date do you land on?"
      },
      {
       "k": "WORK",
@@ -1410,7 +1423,7 @@
      },
      {
       "k": "SAY",
-      "text": "A week on the month page. The yellow day is the ninth."
+      "text": "A week on the month page. The day with a ring round it is the ninth."
      },
      {
       "k": "ASK",
@@ -1428,7 +1441,7 @@
      },
      {
       "k": "READ",
-      "text": "Your turn. The yellow day is the 2nd. What date is a week later? Write the number."
+      "text": "Your turn. The day with a ring round it is the 2nd. What date is a week later? Write the number."
      },
      {
       "k": "WORK",
@@ -1446,7 +1459,7 @@
      },
      {
       "k": "SAY",
-      "text": "A fortnight is two weeks. That is fourteen days. The yellow day is the fourth."
+      "text": "A fortnight is two weeks. That is fourteen days. The day with a ring round it is the fourth."
      },
      {
       "k": "ASK",
@@ -1530,7 +1543,11 @@
      },
      {
       "k": "SAY",
-      "text": "It is a game, not a race, and nobody gets a score. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
+      "text": "It is a game, not a race, and nobody gets a score. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
+     },
+     {
+      "k": "SAY",
+      "text": "The recording pauses now for Mi's Challenge Quest, and starts again for the workbook."
      },
      {
       "k": "DO",
@@ -1587,7 +1604,7 @@
      },
      {
       "k": "READ",
-      "text": "Gate 8. Today is Friday. Part a: three days later it is blank. Part b: look at the calendar. The yellow day is the 3rd. A week later is the blank th. The secret cave has one more puzzle, and it is optional. You may skip it. Ali pays exactly 14 dollars with 2-dollar notes and 5-dollar notes. Write one way to do it."
+      "text": "Gate 8. Today is Friday. Part a: three days later it is blank. Part b: look at the calendar. The day with a ring round it is the 3rd. A week later is the blank th. The secret cave has one more puzzle, and it is optional. You may skip it. Ali pays exactly 14 dollars with 2-dollar notes and 5-dollar notes. Write one way to do it."
      },
      {
       "k": "WORK",
@@ -1632,12 +1649,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: write the missing days of the week. Part a and part b. Question 2: part a: the day before Wednesday is blank. Part b: the day after Saturday is blank. Question 3: today is Tuesday. What day is it 3 days later? Write the day."
+      "text": "Page 1, Start here. Question 1: write the missing days of the week. Question 2: part a: the day before Wednesday is blank. Part b: the day after Saturday is blank. Question 3: today is Tuesday. Part a: 3 days later it is blank. Part b: 4 days later it is blank. Question 4: today is Saturday. What day is it 2 days later? Write the day."
      },
      {
       "k": "WORK",
-      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 400
+      "text": "Page 1, questions 1 to 4. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 570
      },
      {
       "k": "SLIDE",
@@ -1646,11 +1663,11 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: Wednesday and Saturday. Question 2: Tuesday, then Sunday. Question 3: Friday. Tick your own page with a tick."
+      "text": "Question 1: Wednesday and Saturday. Question 2: Tuesday, then Sunday. Question 3: Friday, then Saturday. Question 4: Monday. Tick your own page with a tick."
      },
      {
       "k": "SAY",
-      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+      "text": "After question 4 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
      },
      {
       "k": "SLIDE",
@@ -1659,12 +1676,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: today is Saturday. What day is it 2 days later? Question 5: look at the month page. Part a: a week has blank days. Part b: a week after the 6th is the blank th. Question 6: tick True or False for each statement."
+      "text": "Page 2. Question 5: look at the month page. The day with a ring round it is the 6th. Part a: a week has blank days. Part b: a week after the 6th is the blank th. Question 6: tick True or False for each statement."
      },
      {
       "k": "WORK",
-      "text": "Page 2, questions 4 to 6.",
-      "s": 460
+      "text": "Page 2, questions 5 and 6.",
+      "s": 360
      },
      {
       "k": "SLIDE",
@@ -1673,7 +1690,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: Monday. Question 5: 7 days, and the 13th. Question 6: True, False, True, True. Tick your own page."
+      "text": "Question 5: 7 days, and the 13th. Question 6: True, False, True, True. Tick your own page."
      },
      {
       "k": "SLIDE",
@@ -1887,27 +1904,22 @@
      "Writing a day twice.",
      "Writing Sunday before Saturday."
     ],
-    "mins": 2.5,
+    "mins": 2,
     "visual": {
      "type": "table",
-     "head": [
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat",
-      "Sun"
-     ],
+     "head": [],
      "rows": [
       [
        "Monday",
        "Tuesday",
        "[]",
-       "Thursday",
+       "Thursday"
+      ],
+      [
        "Friday",
        "[]",
-       "Sunday"
+       "Sunday",
+       ""
       ]
      ]
     }
@@ -1948,7 +1960,7 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Today is Tuesday. What day is it 3 days later?",
+    "text": "Today is Tuesday. Count on from tomorrow.",
     "parts": [
      {
       "l": "a",
@@ -1958,22 +1970,22 @@
      },
      {
       "l": "b",
-      "text": "5 days later it is ____ .",
-      "ans": "Sunday",
-      "val": "Sunday"
+      "text": "4 days later it is ____ .",
+      "ans": "Saturday",
+      "val": "Saturday"
      }
     ],
-    "answer": "Friday; Sunday",
+    "answer": "Friday; Saturday",
     "val": [
      "Friday",
-     "Sunday"
+     "Saturday"
     ],
     "hint": "Count on from tomorrow. Wednesday is 1.",
-    "solution": "Wednesday is 1, Thursday is 2, Friday is 3. It is Friday. Five days later: Saturday is 4, Sunday is 5. It is Sunday.",
+    "solution": "Wednesday is 1, Thursday is 2, Friday is 3. It is Friday. Four days later: Saturday is 4. It is Saturday.",
     "mistakes": [
      "Counting Tuesday as day 1 and writing Thursday.",
      "Writing Wednesday.",
-     "(b) Writing Saturday (counting Tuesday as day 1)."
+     "(b) Writing Friday (counting Tuesday as day 1)."
     ],
     "mins": 3,
     "visual": {
@@ -2023,13 +2035,13 @@
      "Writing Sunday.",
      "Writing Tuesday."
     ],
-    "mins": 3
+    "mins": 2.5
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Look at the month page. The yellow day is the 6th.",
+    "text": "Look at the month page. The day with a ring round it is the 6th.",
     "parts": [
      {
       "l": "a",
@@ -2061,6 +2073,9 @@
      "start": "Wed",
      "days": 31,
      "highlight": [
+      6
+     ],
+     "mark": [
       6
      ]
     }
@@ -2202,7 +2217,7 @@
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "Look at the month page. Mei's party is on the 18th.",
+    "text": "Look at the first week of a month with 31 days. Mei's party is on the 18th.",
     "parts": [
      {
       "l": "a",
@@ -2233,9 +2248,7 @@
      "type": "calendar",
      "start": "Wed",
      "days": 31,
-     "highlight": [
-      18
-     ]
+     "week": 0
     }
    }
   ],
@@ -2274,13 +2287,14 @@
      "Writing Monday (forgetting the 2 days over).",
      "Counting 100 days one at a time."
     ],
-    "mins": 6
+    "mins": 6,
+    "lines": 3
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "A month has 31 days. The 1st is a Wednesday. Look at the month page.",
+    "text": "A month has 31 days. Look at its first week.",
     "parts": [
      {
       "l": "a",
@@ -2319,7 +2333,11 @@
      "type": "calendar",
      "start": "Wed",
      "days": 31,
+     "week": 0,
      "highlight": [
+      1
+     ],
+     "mark": [
       1
      ]
     }
@@ -2361,7 +2379,8 @@
      "Writing 9 (6 + 3).",
      "Writing Tuesday."
     ],
-    "mins": 5
+    "mins": 5,
+    "lines": 1
    }
   ],
   "investigation": {
@@ -2514,7 +2533,7 @@
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "A week after the 5th is the ___ th. What is the number?",
+    "q": "A week after the 5th is which date? Write the number.",
     "hint": "A week is 7 days. Add 7.",
     "steps": [
      "A week is 7 days.",
@@ -2545,13 +2564,13 @@
       ]
      },
      "derive": {},
-     "q": "A week after the {a}th is the ___ th. What is the number?",
+     "q": "A week after the {a|ord} is which date? Write the number.",
      "answer": "a+7",
      "hint": "A week is 7 days. Add 7.",
      "steps": [
       "A week is 7 days.",
       "{a} and 7 make {ans}.",
-      "A week after the {a}th is the {ans}th."
+      "A week after the {a|ord} is the {ans|ord}."
      ]
     }
    },
@@ -2598,19 +2617,19 @@
     "id": "c3",
     "tier": "core",
     "type": "choice",
-    "q": "Today is Tuesday. What day is it 3 days later?",
+    "q": "Today is Thursday. What day is it 2 days later?",
     "hint": "Count on from tomorrow.",
     "steps": [
-     "Wednesday is 1.",
-     "Thursday is 2.",
-     "Friday is 3."
+     "Friday is 1.",
+     "Saturday is 2.",
+     "It is Saturday."
     ],
     "options": [
-     "Thursday",
      "Friday",
-     "Saturday"
+     "Saturday",
+     "Sunday"
     ],
-    "answer": "Friday",
+    "answer": "Saturday",
     "slips": []
    },
    {
@@ -2710,13 +2729,13 @@
       ]
      },
      "derive": {},
-     "q": "Ben swims every 7 days. He swims on the {a}th. What date is his 3rd swim?",
+     "q": "Ben swims every 7 days. He swims on the {a|ord}. What date is his 3rd swim?",
      "answer": "a+14",
      "hint": "Add 7 for each swim after the first.",
      "steps": [
       "The 2nd swim is {a} and 7 more.",
       "The 3rd swim is 7 more again.",
-      "His 3rd swim is on the {ans}th."
+      "His 3rd swim is on the {ans|ord}."
      ]
     },
     "easier": "c1"
@@ -2725,19 +2744,19 @@
     "id": "t2",
     "tier": "stretch",
     "type": "choice",
-    "q": "Today is Thursday. Two days after the day before yesterday is which day?",
+    "q": "Today is Tuesday. One day after the day before yesterday is which day?",
     "hint": "Find yesterday first.",
     "steps": [
-     "Yesterday was Wednesday.",
-     "The day before yesterday was Tuesday.",
-     "Two days after Tuesday is Thursday."
+     "Yesterday was Monday.",
+     "The day before yesterday was Sunday.",
+     "One day after Sunday is Monday."
     ],
     "options": [
-     "Tuesday",
-     "Wednesday",
-     "Thursday"
+     "Sunday",
+     "Monday",
+     "Tuesday"
     ],
-    "answer": "Thursday",
+    "answer": "Monday",
     "slips": [],
     "easier": "c3"
    },
@@ -2813,7 +2832,7 @@
       ]
      },
      "derive": {},
-     "q": "A month has 31 days. The {a}th is a Monday. How many Mondays are in the month?",
+     "q": "A month has 31 days. The {a|ord} is a Monday. How many Mondays are in the month?",
      "answer": "(31-a)//7+1",
      "hint": "List the Mondays. Each is 7 more than the one before.",
      "steps": [
@@ -2828,17 +2847,17 @@
     "id": "g2",
     "tier": "challenge",
     "type": "choice",
-    "q": "Today is Monday. What day is it 100 days later?",
-    "hint": "100 days is 14 weeks and 2 days over.",
+    "q": "Today is Tuesday. What day is it 50 days later?",
+    "hint": "50 days is 7 weeks and 1 day over.",
     "steps": [
-     "14 weeks is 98 days.",
-     "98 days later is Monday again.",
-     "2 more days is Wednesday."
+     "7 weeks is 49 days.",
+     "49 days later is Tuesday again.",
+     "1 more day is Wednesday."
     ],
     "options": [
-     "Monday",
      "Tuesday",
-     "Wednesday"
+     "Wednesday",
+     "Thursday"
     ],
     "answer": "Wednesday",
     "slips": [],
@@ -2879,7 +2898,7 @@
    "How many days make a week?"
   ],
   "when_stuck": "Let your child use the day cards and the month page and wait 10 seconds before helping. Asking 'What is tomorrow?' works better than giving the answer. Please do not chant the days; say them calmly. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next term, the first lesson of Term 4: Half and Quarter. Your tutor will tell you the start date. Online practice: your tutor will share the practice link.",
+  "next": "Next term, the first lesson of Term 4: Half and Quarter. Your tutor will tell you the start date. Online practice: your tutor will share the practice link. Mi's Challenge Quest: please send one photo of each of the 4 pages to the business WhatsApp today. The recording link is private: please do not share it.",
   "quote": "After Sunday comes Monday again. A week later is the same day.",
   "report_line": "Your child is learning to count on round the days of the week and to find a date on a month page. This week: days later, a week and a fortnight, and Mi's Challenge Quest.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
@@ -2899,8 +2918,8 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question and every quest gate (and the secret cave item) yourself first, with the quest tutor notes (L30_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Workbook answers: S1 Wednesday, Saturday; S2 Tuesday, Sunday; S3 Friday; S4 Monday; S5 7, the 13th; S6 True, False, True, True; T1 Thursday, Wednesday; T2 Sunday, Wednesday; T3 21, 14; T4 Saturday, the 25th; G1 14 weeks and 2 days, Wednesday; G2 8, 15, 22, 29 and Friday; G3 21, the 27th, Monday; I1 Wednesday, Thursday and Friday.",
-  "A week before, tell the families to have ready: the Quest Log (4 pages, in the Term 3 book), kept closed in an envelope; a quest partner (a grown-up or a brother or sister); and the calendar page torn out, with the 7 day cards cut out by a grown-up. Send them the grown-up note (L30_Quest_Parent_Note.pdf). A family with no printer tells you: arrange the make-up slot. Build the quest files with: bash term/l1/build.sh 30.",
+  "Solve every workbook question and every quest gate (and the secret cave item) yourself first, with the quest tutor notes (L30_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Workbook answers: S1 Wednesday, Saturday; S2 Tuesday, Sunday; S3 Friday, Saturday; S4 Monday; S5 7, the 13th; S6 True, False, True, True; T1 Thursday, Wednesday; T2 Sunday, Wednesday; T3 21, 14; T4 Saturday, the 25th; G1 14 weeks and 2 days, Wednesday; G2 8, 15, 22, 29 and Friday; G3 21, the 27th, Monday; I1 Wednesday, Thursday and Friday.",
+  "A week before, tell the families to have ready: the Quest Log (4 pages, in the Term 3 book), kept closed in an envelope; a quest partner (a grown-up or a brother or sister); and the calendar page torn out, with the 7 day cards cut out by a grown-up. Send them the grown-up note (L30_Quest_Parent_Note.pdf). A family whose Quest Log is missing or damaged tells you: arrange the make-up slot.",
   "Have the slides open. The quest is straight after the brain break, minutes 35 to 55, then the workbook. Have the quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the quest. Delete each child's notes sheet when the line is sent.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. PAUSE the recording for the whole quest (minutes 35 to 55) and restart it for the workbook. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
   "Be plain with families: days of the week are not a listed Primary 1 outcome (flagged for tutor review); the days, day before and after and a week as 7 days are approachable, and two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go beyond the Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. The month is made up: no year, no public holidays."
@@ -2945,7 +2964,7 @@
   "hint_p2": "A week is 7 days. A week later is the same day. Use the month page.",
   "hint_p3": "Use your day cards and the month page. Count in 7s for weeks. Choose any question.",
   "hint_p4": "Whole weeks bring us back to the same day. Choose any question. You do not have to finish them all.",
-  "choice_after": 3,
+  "choice_after": 4,
   "inv_intro": "",
   "inv_first_label": "First:",
   "inv_then_label": "Next:",
@@ -2956,7 +2975,7 @@
     "start": "Wed",
     "days": 31,
     "title": "Kit page: calendar and day cards",
-    "intro": "The month page is not cut: keep it flat. A grown-up cuts out the 7 day cards before the lesson. The month is made up: it starts on a Wednesday and has 31 days. Keep the cards in an envelope."
+    "intro": "The month page is not cut: keep it flat. A grown-up cuts out the 7 day cards before the lesson. The month is made up: it starts on a Wednesday and has 31 days. No cards? Write the 7 days on 7 small pieces of paper."
    }
   ]
  },
@@ -2966,22 +2985,22 @@
    "G1"
   ],
   "text": "Finding the day 100 days later (14 weeks and 2 days over, so Monday plus 100 days is Wednesday) by using whole weeks and the left-over days. Dividing by 7 with a left-over is a Primary 3 outcome (remainders), so the lesson says weeks and days over and never writes a division. The other Think harder and Go further items (two days after the day before yesterday, the 10th day from Monday, a fortnight, every Wednesday of a month, 3 weeks later) go past the Primary 1 time outcomes too. Named puzzle: Hundred Days Later.",
-  "parent": "Finding the day 100 days later, using whole weeks and the days left over, goes past the school Primary 1 syllabus on purpose."
+  "parent": "Finding the day 100 days later (using whole weeks and the days left over), a fortnight and every Wednesday of a month go past the school Primary 1 syllabus on purpose; days of the week are not a listed Primary 1 topic."
  },
  "challenge_quest": {
   "title": "Mi's Challenge Quest",
   "minutes": 20,
   "where": "Lesson 30 (the last lesson of the term), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
-  "plan_note": "Owner decisions of 22 Oct 2026: the end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 21 and 22 share gate 1 and Lessons 25 and 26 share gate 4, so every lesson of the term is still visited. Gate 7 asks the child to check a sum a friend wrote, which is the claim-testing the term line talks about. The secret cave joins two ideas the group has met (money and listing) in an unseen way. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The quest sits straight after the brain break so children are fresh. The Quest Log carries the Term 3 pictures (a clock, coins, price tags, a grid, a stick pattern and a calendar). Time is written as digits with am or pm; money with the cent sign.",
+  "plan_note": "The end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 21 and 22 share gate 1 and Lessons 25 and 26 share gate 4, so every lesson of the term is still visited. Gate 7 asks the child to check a sum a friend wrote, which is the claim-testing the term line talks about. The secret cave joins two ideas the group has met (money and listing) in an unseen way. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The quest sits straight after the brain break so children are fresh. The Quest Log carries the Term 3 pictures (a clock, coins, price tags, a grid, a stick pattern and a calendar). Time is written as digits with am or pm; money with the cent sign.",
   "sheet_pages": 4,
   "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
   "child_rules": [
    "Mi is swimming to the Pearl Cave and needs your help at 8 gates.",
    "Use your own paper. Talk with your quest partner, then write your own answer.",
-   "It is not a race and nobody sees your answers. You may skip a gate: Mi swims round it.",
+   "It is not a race. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate: Mi swims round it.",
    "The secret cave at the end is optional, just for fun."
   ],
-  "child_footer": "Math Inquirers Term 3 Mi's Challenge Quest. Print at 100% (actual size).",
+  "child_footer": "Math Inquirers Term 3 Mi's Challenge Quest.",
   "page_instructions": [
    "Gates 1 and 2: Mi needs your help. Write your answers in the spaces.",
    "Gates 3 and 4: keep swimming.",
@@ -3344,11 +3363,11 @@
    {
     "id": "C8",
     "lesson": 30,
-    "strand": "reasoning",
+    "strand": "time",
     "page": 4,
     "tier": "start",
     "skill": "Days later and a week on the month page (Lesson 30)",
-    "text": "Today is Friday. Look at the calendar. The yellow day is the 3rd.",
+    "text": "Today is Friday. Look at the calendar. The day with a ring round it is the 3rd.",
     "parts": [
      {
       "l": "a",
@@ -3363,7 +3382,7 @@
       "val": 10
      }
     ],
-    "say": "Gate 8. Today is Friday. Part a: three days later it is blank. Part b: look at the calendar. The yellow day is the 3rd. A week later is the blank th.",
+    "say": "Gate 8. Today is Friday. Part a: three days later it is blank. Part b: look at the calendar. The day with a ring round it is the 3rd. A week later is the blank th.",
     "answer": "Monday; 10",
     "val": [
      "Monday",
@@ -3383,7 +3402,10 @@
      "highlight": [
       3
      ],
-     "size": 60
+     "size": 60,
+     "mark": [
+      3
+     ]
     }
    }
   ],
@@ -3518,12 +3540,12 @@
    }
   ],
   "give": [
-   "A week before: send the grown-up note (L30_Quest_Parent_Note.pdf) and the Quest Log (L30_Quest_Log.pdf, 4 pages) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
+   "A week before: send the grown-up note (L30_Quest_Parent_Note.pdf). The Quest Log (4 pages) is in each child's Term 3 book: families keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family whose book has a missing or damaged Quest Log page tells you: arrange another way (for example the make-up slot, with L30_Quest_Log.pdf sent to the family another way).",
    "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. It is not a race, a gate may be skipped, and nothing is shown to the group.",
    "Start at minute 35 (straight after the brain break) and finish by minute 55. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
    "Read each page aloud, one gate at a time (the script has the words), then leave quiet working time: about 2.5 minutes for page 1, 3 for page 2, 3 for page 3 and 2 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
    "Allowed: fingers, counters and talk with the quest partner. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the Quest Log over and draws quietly.",
-   "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, drawing, strip, talking to the partner."
+   "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, a clock face, coins, drawing, talking to the partner."
   ],
   "after": [
    "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
@@ -3538,7 +3560,7 @@
    "A child who joined late: the family may choose to leave out gates for lessons the child did not attend. Write nothing for those gates; if no gate of an area was taught, the line for the grown-up says nothing about that area.",
    "A family that does not want the quest: no problem. The child does the Lesson 30 work as usual and the line for the grown-up uses your own notes from the lessons only.",
    "A child who is upset or stuck: remind the group (open session) that every gate can be skipped and Mi swims round it. Do not single the child out. The grown-up may stop the quest at any time.",
-   "A family with no printer: tell the family to say so a week before and arrange another way (for example the make-up slot, with the Quest Log sent to the family another way). Never ask a child about it in front of the group."
+   "A family whose Quest Log is missing or damaged: tell the family to say so a week before and arrange another way (for example the make-up slot, with L30_Quest_Log.pdf sent to the family another way). Never ask a child about it in front of the group."
   ],
   "privacy_checklist": [
    "Quest Logs are never held up to the camera and never read out.",
@@ -3551,8 +3573,8 @@
   "notes_sheet": {
    "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look.",
    "prompts": [
-    "Something the child did well (a named strength, for example: drew a strip to find how many more marbles one child had)",
-    "How they started: counters, drawing a strip, ten-frames, or in their head",
+    "Something the child did well (a named strength, for example: read a clock to 5 minutes and said am or pm)",
+    "How they started: counters, a clock face, coins, drawing, or in their head",
     "Where they paused or turned to their partner, and what helped",
     "One next step for home (small and concrete)",
     "Did they try the secret cave? (a neutral note only)"
@@ -3567,17 +3589,17 @@
   "saw_line": {
    "heading": "Mi's Challenge Quest: [Name]",
    "pattern": "In Mi's Challenge Quest, [Name] [one specific thing you saw, in plain words]. [Optional: one small next step at home.]",
-   "how": "One or two sentences at most. Say what the child did (drew a strip, shared equally, explained a step), not how many answers were right. Use the lines below as patterns and always add your own detail from your notes.",
-   "example": "In Mi's Challenge Quest, Mei drew a strip to find how many more marbles one child had, and shared 16 stickers equally among 4 friends. A good next step: share real counters onto plates at home to find how many in each.",
-   "parent_example": "For example: In Mi's Challenge Quest, Mei drew a strip to find how many more marbles one child had.",
+   "how": "One or two sentences at most. Say what the child did (counted coins in tens and fives, read a clock to 5 minutes, explained a step), not how many answers were right. Use the lines below as patterns and always add your own detail from your notes.",
+   "example": "In Mi's Challenge Quest, Mei counted the coins in tens and fives, and read a clock to 5 minutes. A good next step: say the time on a real clock at different times of the day, and ask am or pm.",
+   "parent_example": "For example: In Mi's Challenge Quest, Mei counted coins in tens and fives.",
    "closing": "This line describes [Name]'s own thinking in the game. It does not compare children."
   },
   "parent_note": {
    "title": "Mi's Challenge Quest: a note for grown-ups",
-   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. Term 3 goes beyond the school Primary 1 syllabus on purpose (odd and even numbers, the 3 and 4 tables, and stories about groups), so a few gates may be new.",
+   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. The gates look back over Term 3: clocks, money, a grid, a pattern, checking a sum and the calendar. Reading a clock to 5 minutes with am and pm, and a growing pattern of sticks, go past the school Primary 1 syllabus on purpose, so a few gates may be new.",
    "before": [
-    "We send you this note and the Quest Log a week before. Print the Quest Log at 100% (actual size, not fit to page). It has 4 pages. No printer? Tell us a week before and we will find another way.",
-    "Keep the Quest Log folded or in an envelope until the tutor says to open it.",
+    "The Quest Log (4 pages) is in your child's Term 3 book. Keep it closed, in an envelope, until the tutor says to open it. Something missing from the book? Tell us a week before and we will find another way.",
+    "We send you this note a week before the lesson.",
     "Have a pencil, a rubber and a quiet table. Counters and fingers are fine."
    ],
    "during": [
