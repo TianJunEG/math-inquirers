@@ -222,7 +222,7 @@ def page03():
         ["Build each number from its four digit cards.", "Use every card once. A number cannot start with 0.", INSTR_CODE],
         qgrid(cards_h, 2), ans, table, word, 1000, 9999,
         "; ".join(f"{i+1}) {k}: {a}" for i, ((k, c), a) in enumerate(zip(items, ans))),
-        "Six sets of four digit cards: greatest, smallest, greatest even, smallest even, greatest odd and smallest odd. A zero card cannot be the thousands digit. The decoy letters stand for the other arrangements of the same cards, so a pupil who makes a different number from the same cards still gets a letter, but not the right one. A box left blank gives no letter and the check cannot see it.")
+        "Six sets of four digit cards: largest, smallest, largest even, smallest even, largest odd and smallest odd. A zero card cannot be the thousands digit. The decoy letters stand for the other arrangements of the same cards, so a pupil who makes a different number from the same cards still gets a letter, but not the right one. A box left blank gives no letter and the check cannot see it.")
     solved = []
     for h in cards_h:
         digs_ = [int(x) for x in re.findall(r'class="dcard">(\d)<', h)]
