@@ -9,3 +9,4 @@ Resume: run `python3 extension/l3/src/uNN.py` for any unit to rewrite its json; 
 | 1 | Number sleuths | written, checked, gates ok, pages viewed |
 | 2 | Cryptarithm crackers | written, checked, gates ok, pages viewed |
 | 3 | Times table treasure | written, checked, gates ok, pages viewed |
+| 4 | Model makers | written, checked, gates ok, pages viewed |

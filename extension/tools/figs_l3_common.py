@@ -143,7 +143,7 @@ def bars(spec, w=None):
     rows = spec['rows']
     u = spec.get('u', 60)
     LAB = spec.get('lab', 120)
-    BH = spec.get('bh', 56)
+    BH = spec.get('bh', 48)
     P = []
     y = 8
     maxx = 0
@@ -182,7 +182,7 @@ def bars(spec, w=None):
             P.append(f'<path d="M{a + 2},{y + 8} q0,16 16,16 H{(a + c) / 2 - 12} q10,0 12,12 q2,-12 12,-12 H{c - 18} q16,0 16,-16" fill="none" stroke="{NAVY}" stroke-width="3"/>')
             P.append(T((a + c) / 2, y + 66, esc(b['t']), 28))
             y += 70
-        y += 22
+        y += 16
     return wrap(P, maxx + 16, y, 'bar model', w)
 
 

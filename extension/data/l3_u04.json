@@ -8,7 +8,7 @@
  "holiday_lesson": 4,
  "goal": "I can draw a bar model for a word problem. I can use it to decide what to add, subtract or divide.",
  "learn": {
-  "intro": "A bar model is a picture of a word problem. Each bar is a length that shows an amount. Longer bar, bigger amount.",
+  "intro": "A bar model is a picture of a word problem. Each bar is a length that shows an amount. Longer bar, greater amount.",
   "example": {
    "problem": "Siti has 260 beads. Ravi has 135 more beads than Siti. How many beads do they have in all?",
    "figure": {
@@ -40,7 +40,7 @@
       ]
      }
     ],
-    "width_mm": 112,
+    "width_mm": 126,
     "u": 60,
     "lab": 120
    },
@@ -69,8 +69,7 @@
    },
    "explanation": "Ben has fewer, so subtract: 480 - 215 = 265. Check: 265 + 215 = 480.",
    "id": "L3U04-L01"
-  },
-  "tight": true
+  }
  },
  "items": [
   {
@@ -211,78 +210,11 @@
    "id": "L3U04-S04",
    "tier": "start",
    "page": 1,
-   "text": "A red ribbon is 35 cm long. A blue ribbon is 3 times as long as the red ribbon.",
+   "text": "Siti has 64 beads. Wei has 29 beads. Each child gets 12 more beads.",
    "parts": [
     {
      "label": "a",
-     "text": "The blue ribbon is {b} cm long.",
-     "answer": {
-      "value": [
-       "105"
-      ],
-      "text": "105"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Together they are {b} cm long.",
-     "answer": {
-      "value": [
-       "140"
-      ],
-      "text": "140"
-     }
-    }
-   ],
-   "explanation": "The blue bar is 3 boxes of 35: 35 + 35 + 35 = 105. Together: 35 + 105 = 140. That is 4 boxes of 35.",
-   "figure": {
-    "type": "l3_bars",
-    "rows": [
-     {
-      "label": "red",
-      "segs": [
-       {
-        "w": 1,
-        "t": "35",
-        "style": "plain"
-       }
-      ]
-     },
-     {
-      "label": "blue",
-      "segs": [
-       {
-        "w": 1,
-        "t": "",
-        "style": "plain"
-       },
-       {
-        "w": 1,
-        "t": "",
-        "style": "plain"
-       },
-       {
-        "w": 1,
-        "t": "",
-        "style": "plain"
-       }
-      ]
-     }
-    ],
-    "width_mm": 90,
-    "u": 84,
-    "lab": 100
-   }
-  },
-  {
-   "id": "L3U04-S05",
-   "tier": "start",
-   "page": 1,
-   "text": "Mei and Siti have 140 beads in all. Mei has 3 times as many beads as Siti.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "Siti has {b} beads.",
+     "text": "Before, Siti has {b} more beads than Wei.",
      "answer": {
       "value": [
        "35"
@@ -292,7 +224,36 @@
     },
     {
      "label": "b",
-     "text": "Mei has {b} beads.",
+     "text": "After, Siti has {b} more beads than Wei.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    }
+   ],
+   "explanation": "Before: 64 - 29 = 35. After: Siti has 76 and Wei has 41, and 76 - 41 = 35. The gap stays the same because both children get the same number of beads."
+  },
+  {
+   "id": "L3U04-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Ravi and Aisha have 140 coins in all. Ravi has 3 times as many coins as Aisha.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Aisha has {b} coins.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ravi has {b} coins.",
      "answer": {
       "value": [
        "105"
@@ -301,7 +262,7 @@
      }
     }
    ],
-   "explanation": "There are 4 equal boxes in all. 140 ÷ 4 = 35, so 1 box is 35. Siti has 1 box: 35 beads. Mei has 3 boxes: 3 × 35 = 105 beads.",
+   "explanation": "There are 4 equal boxes in all. 140 ÷ 4 = 35, so 1 box is 35. Aisha has 1 box: 35 coins. Ravi has 3 boxes: 3 × 35 = 105 coins.",
    "figure": {
     "type": "l3_bars",
     "rows": [
@@ -309,22 +270,22 @@
       "segs": [
        {
         "w": 1,
-        "t": "Siti",
+        "t": "Aisha",
         "style": "plain"
        },
        {
         "w": 1,
-        "t": "Mei",
+        "t": "Ravi",
         "style": "plain"
        },
        {
         "w": 1,
-        "t": "Mei",
+        "t": "Ravi",
         "style": "plain"
        },
        {
         "w": 1,
-        "t": "Mei",
+        "t": "Ravi",
         "style": "plain"
        }
       ],
@@ -340,6 +301,11 @@
     "width_mm": 96,
     "u": 88,
     "lab": 20
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
    }
   },
   {
@@ -372,7 +338,8 @@
    "explanation": "Take away the extra 18 from the total: 90 - 18 = 72. Share the 72 into 2 equal parts: 36 each. Wei has 36. Kumar has 36 + 18 = 54. Check: 36 + 54 = 90.",
    "space": {
     "rows": [
-     "Draw your model:"
+     "Draw your model:",
+     "Working:"
     ]
    }
   },
@@ -390,44 +357,16 @@
    "explanation": "The gap is 78 - 52 = 26 cm. The piece closes the gap from both sides, so it is half of the gap: 26 ÷ 2 = 13 cm. Check: 78 - 13 = 65 and 52 + 13 = 65.",
    "space": {
     "rows": [
-     "Draw your model:"
+     "Draw your model:",
+     "Working:"
     ]
    }
   },
   {
    "id": "L3U04-S08",
    "tier": "start",
-   "page": 2,
-   "text": "Siti has 64 beads. Wei has 29 beads. Each child gets 12 more beads.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "Before, Siti has {b} more beads than Wei.",
-     "answer": {
-      "value": [
-       "35"
-      ],
-      "text": "35"
-     }
-    },
-    {
-     "label": "b",
-     "text": "After, Siti has {b} more beads than Wei.",
-     "answer": {
-      "value": [
-       "35"
-      ],
-      "text": "35"
-     }
-    }
-   ],
-   "explanation": "Before: 64 - 29 = 35. After: Siti has 76 and Wei has 41, and 76 - 41 = 35. The gap stays the same because both children get the same number of beads."
-  },
-  {
-   "id": "L3U04-S09",
-   "tier": "start",
-   "page": 2,
-   "text": "Ravi reads 85 pages on Monday. He reads 28 more pages on Tuesday than on Monday. On Wednesday he reads 17 fewer pages than on Tuesday.",
+   "page": 3,
+   "text": "Ravi reads 85 pages on Monday. On Tuesday he reads 28 pages more than he does on Monday. On Wednesday he reads 17 pages fewer than on Tuesday.",
    "parts": [
     {
      "label": "a",
@@ -463,7 +402,7 @@
    "explanation": "(a) 85 + 28 = 113. (b) 113 - 17 = 96. (c) 85 + 113 + 96 = 294. Wednesday is compared with Tuesday, not with Monday."
   },
   {
-   "id": "L3U04-S10",
+   "id": "L3U04-S09",
    "tier": "start",
    "page": 3,
    "text": "Mei has $50. She buys a book for $18.40 and a pen for $6.75. How much money does she have left? ${b}",
@@ -476,7 +415,7 @@
    "explanation": "First add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85. Check: 25.15 + 24.85 = 50.00."
   },
   {
-   "id": "L3U04-S11",
+   "id": "L3U04-S10",
    "tier": "start",
    "page": 3,
    "text": "Wei has 3 times as many marbles as Aisha. Wei has 48 marbles.",
@@ -510,7 +449,7 @@
    }
   },
   {
-   "id": "L3U04-S12",
+   "id": "L3U04-S11",
    "tier": "start",
    "page": 3,
    "text": "Ali has 54 stickers. Ben has 18 fewer stickers than Ali. Ravi says Ben has 54 + 18 = 72 stickers.",
@@ -539,7 +478,7 @@
    "explanation": "Ben has fewer stickers than Ali, so Ben has less than 54. Ravi added instead of subtracting. The right answer is 54 - 18 = 36."
   },
   {
-   "id": "L3U04-S13",
+   "id": "L3U04-S12",
    "tier": "start",
    "page": 3,
    "text": "Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${b}",
@@ -560,7 +499,7 @@
    "id": "L3U04-T01",
    "tier": "think",
    "page": 4,
-   "text": "Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. Now they have the same number. How many marbles does Kumar give? {b}",
+   "text": "Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. After that, each boy has the same number of marbles. How many marbles does Kumar give away? {b}",
    "answer": {
     "value": [
      "21"
@@ -571,7 +510,8 @@
    "hint": "Find how many each has at first. Then how many each has later.",
    "space": {
     "rows": [
-     "Draw your model:"
+     "Draw your model:",
+     "Working:"
     ]
    }
   },
@@ -579,7 +519,7 @@
    "id": "L3U04-T02",
    "tier": "think",
    "page": 4,
-   "text": "A pencil box and 2 pens cost $14. A pencil box and 5 pens cost $23.",
+   "text": "Ali buys a pencil box and 2 pens for $14. Mei buys the same box and 5 pens for $23.",
    "parts": [
     {
      "label": "a",
@@ -606,7 +546,9 @@
    "hint": "Compare the 2 bills. What do the 3 extra pens cost?",
    "space": {
     "rows": [
-     "Draw your model:"
+     "Draw your model:",
+     "Working:",
+     ""
     ]
    }
   },
@@ -625,7 +567,8 @@
    "hint": "The age gap never changes. Draw a bar for each age.",
    "space": {
     "rows": [
-     "Draw your model:"
+     "Draw your model:",
+     "Working:"
     ]
    }
   },
@@ -750,25 +693,6 @@
    }
   },
   {
-   "id": "L3U04-G04",
-   "tier": "go",
-   "page": 5,
-   "text": "Beyond Level 3: The same amount taken away.\nAli has $60. Ben has $40. Each child spends the same amount on a gift. Now Ali has 3 times as much money as Ben. How much does each child spend? ${b}",
-   "answer": {
-    "value": [
-     "30"
-    ],
-    "text": "30"
-   },
-   "explanation": "The gap stays $20. After spending, Ali has 3 boxes and Ben has 1 box, so the gap is 2 boxes = $20 and 1 box = $10. Ben has $10 left, so he spent $40 - $10 = $30. Check: Ali has $30, which is 3 times $10.",
-   "hint": "The gap of $20 stays the same. Draw bars for after.",
-   "space": {
-    "rows": [
-     "Draw your model:"
-    ]
-   }
-  },
-  {
    "id": "L3U04-C01",
    "tier": "quiz",
    "page": 6,
@@ -798,7 +722,7 @@
    "id": "L3U04-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Siti has 5 times as many beads as Kumar. They have 72 beads in all. How many beads does Siti have? {b}",
+   "text": "Siti and Kumar have 72 stamps in all. Siti has 5 times the number of stamps that Kumar has. How many stamps does Siti have? {b}",
    "answer": {
     "value": [
      "60"
