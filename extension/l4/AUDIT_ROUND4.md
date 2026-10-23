@@ -97,3 +97,12 @@ Also changed: `extension/verify/l4_u03` to `l4_u10_checks.py` for the same items
 2. Optionally give U6 G2 a working row.
 3. Remove the DRAFT licence line on p2 when the owner and lawyer approve the text (still present, a known open item).
 4. Child trial for pace and reading load.
+
+## Fixes made after round 4 (23 Oct)
+
+Before writing, the holiday items named in the audit were opened and read in `p4/content/l3.js`, `l4.js`, `l7.js` and `l8.js`. Replaced with a different frame, question set and method hook:
+- **U7 T2** is now a wall-painting item (wall less door and window, 2 coats, tins at 9 m² a tin: 12 and 3).
+- **U3 T3** compares two ticket bills at a zoo (2 adults + 3 children = $54, 2 adults + 1 child = $38: $8 and $15).
+- **U8 T2** is paper folded in half again and again and then punched (2 folds, 3 holes: 12; 3 folds, 2 holes: 16; 40 holes after 3 folds: 5). It has no dice and no 3D.
+- **U4 T1** compares fractions with the same top (4/n between 4/9 and 4/5: 3 values, greatest 4/6).
+U7 T3, U9 S4 and U9 S5 were left (borderline). U6 p46: G1 and G3 answers now sit side by side, so G1, G2 and G3 all have a working row. U10 S12 Why reworded. The U5 S09 bar figure is deliberately smaller (row height 32, gap 8) to make room for the working row under S10; it was not restored. 427 answers recomputed by `verify/l4_uNN_checks.py`, 100 pages, all gates re-run.

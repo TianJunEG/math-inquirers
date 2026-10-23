@@ -24,3 +24,4 @@ Resume: nothing left to write. If a unit is edited, rerun `python3 extension/l4/
 
 23 Oct (round 2): 27 holiday-clone items replaced with new stories and frames, U2 G1 and U10 S7 Why lines fixed, protractor stub, wrapped boxes and U9 C1 fixed. 100 pages, 424 answers checked, all gates re-run.
 23 Oct (round 3): 11 too-close items given new frames; Lows done; 100 pages, 425 answers checked, all gates re-run.
+23 Oct (round 4): U7 T2, U3 T3, U8 T2, U4 T1 replaced; working rows on U6 p46; 100 pages, 427 answers checked, all gates re-run.
