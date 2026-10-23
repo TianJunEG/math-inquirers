@@ -285,13 +285,13 @@ def page35():
         items.append((f"The base of a tub measures {l} cm by {w} cm. The tub is {h} cm high and is filled to the brim. How many {LIT} of water are in the tub?", LIT)); ans.append(Fr(l * w * h, 1000))
         l2, w2, h2 = rng.choice([50, 60, 80, 100]), rng.choice([30, 40, 50]), rng.choice([30, 40, 50]); d = rng.choice([10, 15, 20, 25])
         if (l2 * w2 * d) % 1000: continue
-        items.append((f"A pond has a base {l2} cm by {w2} cm and walls {h2} cm high. Water fills it to a height of {d} cm. How many {LIT} of water are in the pond?", LIT)); ans.append(Fr(l2 * w2 * d, 1000))
+        items.append((f"The pond floor is {l2} cm by {w2} cm and the walls are {h2} cm high. After the rain there is water up to {d} cm. How many {LIT} is that?", LIT)); ans.append(Fr(l2 * w2 * d, 1000))
         a = rng.randint(30, 90); b = rng.randint(8, a - 12)
-        items.append((f"A paddling pool holds {a} {LIT} when full. It has {b} {LIT} of water in it. How many more {LIT} are needed to fill it?", LIT)); ans.append(Fr(a - b))
+        items.append((f"A paddling pool holds {a} {LIT} when full. It has {b} {LIT} of water in it. How many more {LIT} will fill it?", LIT)); ans.append(Fr(a - b))
         l4, w4, h4 = rng.randint(8, 15), rng.randint(5, 12), rng.randint(4, 10)
         items.append((f"A box is {l4} cm by {w4} cm by {h4} cm. How many m{LIT} of water does it hold when full?", f"m{LIT}")); ans.append(Fr(l4 * w4 * h4))
         e = rng.choice([20, 30, 40, 50])
-        items.append((f"A storage bin is a cube with edges of {e} cm. How many {LIT} of water does it hold when full?", LIT)); ans.append(Fr(e ** 3, 1000))
+        items.append((f"Each edge of a cubic storage bin is {e} cm long. How many {LIT} of water does it hold when full?", LIT)); ans.append(Fr(e ** 3, 1000))
         A_ = rng.randint(20, 60); l6, w6, h6 = rng.choice([50, 60, 80]), rng.choice([40, 50]), rng.choice([30, 40, 50])
         if (l6 * w6 * h6) % 1000 or l6 * w6 * h6 // 1000 <= A_: continue
         items.append((f"A jug holds {A_} {LIT}. A sink measures {l6} cm by {w6} cm by {h6} cm. How many more {LIT} does the sink hold than the jug?", LIT)); ans.append(Fr(l6 * w6 * h6, 1000) - A_)
@@ -311,10 +311,10 @@ def page35():
         t = t.replace(NB, "")
         n = [int(x) for x in re.findall(r"\d+", t)]
         if t.startswith("The base of a tub"): return Fr(n[0] * n[1] * n[2], 1000)
-        if t.startswith("A pond"): return Fr(n[0] * n[1] * n[3], 1000)
+        if t.startswith("The pond floor"): return Fr(n[0] * n[1] * n[3], 1000)
         if t.startswith("A paddling"): return Fr(n[0] - n[1])
         if t.startswith("A box"): return Fr(n[0] * n[1] * n[2])
-        if t.startswith("A storage bin"): return Fr(n[0] ** 3, 1000)
+        if t.startswith("Each edge"): return Fr(n[0] ** 3, 1000)
         return Fr(n[1] * n[2] * n[3], 1000) - n[0]
     solved = [solve(to_text(re.search(r'<div class="qt">(.*?)</div></div><div class="qa">', c, re.S).group(1))) for c in cards]
     P = code_page(35, 5135, "Tank Tales", 2, "Volume of liquid in a rectangular tank; litres and cm³", STRAND_AR,

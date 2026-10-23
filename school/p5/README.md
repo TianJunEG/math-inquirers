@@ -1,7 +1,7 @@
 # Early Finisher Puzzles, Primary 5: two semester booklets (draft)
 
 Two booklets of 20 single-sided A4 pages (Semester 1 = Terms 1 and 2, Semester 2 = Terms 3 and 4; typical order, schools vary), P5-01 to P5-40, footer `S1-07 (P5-07)`. Every page is self-checking, pure black and white, ten one-star and ten two-star pages per booklet. Cover, licence, teacher notes and keys carry DRAFT stamps; the licence is an annual licence for a lawyer to approve. Pipeline copied from `school/p2` (nothing else edited).
-Plan: `docs/school_books/p5_semester_booklets_plan.md` (outcome gap analysis, page table, exclusions). Build report and weak points: `docs/school_books/p5_semester_booklets_build_report.md`. Outcome lines: `docs/school_books/p5_outcome_wording.md` (our own summary: the syllabus PDF is not in the repository).
+Plan: `docs/school_books/p5_semester_booklets_plan.md` (outcome gap analysis, page table, exclusions). Build report and weak points: `docs/school_books/p5_semester_booklets_build_report.md`. Outcome lines: `docs/school_books/p5_outcome_wording.md` (copied from the syllabus PDF, pp. 41-42).
 
 ## Regenerate
 

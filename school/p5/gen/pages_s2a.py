@@ -35,7 +35,7 @@ def read_bar(h):
 def page21():
     rng = random.Random(5121)
     TX = ["{k} out of {n} seeds in a tray grew. What percentage of the seeds grew?",
-          "A jar has {n} marbles. {k} of them are green. What percentage of the marbles are green?"]
+          "A box has {n} pencils. {k} of them are red. What percentage of the pencils are red?"]
     for _ in range(8000):
         items = []
         bar_ns = [10, 20, 10, 20]; rng.shuffle(bar_ns)
@@ -221,7 +221,7 @@ def page26():
 def page27():
     rng = random.Random(5127)
     T27 = [("A bus uses {a} ℓ of fuel in {b} hours. How many ℓ does it use in {c} hours?", "ℓ", lambda a, b, c: Fr(a, b) * c),
-           ("A printer prints {a} pages in {b} minutes. How many minutes does it take to print {c} pages?", "min", lambda a, b, c: Fr(b, a) * c),
+           ("A tailor sews {a} shirts in {b} hours. How many hours does the tailor need to sew {c} shirts?", "hours", lambda a, b, c: Fr(b, a) * c),
            ("{a} pens cost ${b}. How much do {c} pens cost?", "$", lambda a, b, c: Fr(b, a) * c),
            ("A farmer packs {a} eggs in {b} minutes. How many eggs does he pack in {c} minutes?", "eggs", lambda a, b, c: Fr(a, b) * c),
            ("A cleaner washes {a} windows in {b} hours. How many hours does the cleaner need to wash {c} windows?", "hours", lambda a, b, c: Fr(b, a) * c),
@@ -229,7 +229,7 @@ def page27():
     for _ in range(8000):
         items = []; ans = []
         for t, u, f in T27:
-            if t.startswith(("A printer", "A cleaner")):
+            if t.startswith(("A tailor", "A cleaner")):
                 a = rng.randint(2, 9) * rng.choice([5, 6, 8, 10]); b = rng.randint(2, 9); c = a * rng.randint(2, 7)
                 # time for c units: b * c / a
             elif t.startswith("{a} pens"):
@@ -253,7 +253,7 @@ def page27():
     cards = [qc(i + 1, f'<p class="qt">{t}</p>', abx("w4") + f'<span class="unit">{"" if u == "$" else u}</span>', cls="inl") for i, (t, u) in enumerate(items)]
     def solve(t):
         n = [int(x) for x in re.findall(r"\d+", t)]; a, b, c = n
-        if t.startswith(("A printer", "A cleaner")): return Fr(b * c, a)
+        if t.startswith(("A tailor", "A cleaner")): return Fr(b * c, a)
         if "pens cost" in t: return Fr(b * c, a)
         return Fr(a * c, b)
     solved = [solve(to_text(re.search(r'<div class="qt">(.*?)</div></div><div class="qa">', c, re.S).group(1))) for c in cards]

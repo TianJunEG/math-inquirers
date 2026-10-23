@@ -8,54 +8,59 @@ Owner decisions (`docs/terms/owner_decisions.md`): two booklets per level, Semes
 
 Reading load (plan.md section 11): Primary 5 = at most 16 words a sentence, at most 4 instruction sentences, check strip at most 24 words; checked in `validate.py`.
 
-**Syllabus source and a wording limit (important).** The syllabus PDF is not in the repository. The outcome lines come from the repository's own summary (`docs/moe/syllabus_by_level.md`, "Primary 5, Standard", pages 41 and 42). Their wording is therefore our own, and outcome numbers are printed only where that summary prints them. This is stated in `docs/school_books/p5_outcome_wording.md`, in `school/p5/gen/outcomes.py` and in the key.
+**Syllabus source.** The outcome lines and their numbers are copied as printed in the Primary Mathematics Syllabus P1 to P6 (2021 edition, updated October 2025), Primary 5 Standard, pages 41 and 42 (the PDF was read after the first build; the first build had used the repository summary `docs/moe/syllabus_by_level.md`). Only the outcome-line wording is copied; everything else is our own. See `docs/school_books/p5_outcome_wording.md`.
 
-**Differences between the brief and the summary (decided by the summary, as the brief asked to confirm).** The brief lists "average" and "pie charts" as Primary 5. The summary says: no Statistics strand in Primary 5 Standard; pie charts are a Primary 4 outcome; average is Primary 6; ratio is Primary 6. None of the four is used. The 2020 to 2024 school papers (`docs/books/p5_school_paper_patterns.md`) set ratio and average at Primary 5; that is the old syllabus and is not used here.
+**Differences between the brief and the syllabus (decided by the syllabus, as the brief asked to confirm).** The brief lists "average" and "pie charts" as Primary 5. The syllabus has no Statistics strand in Primary 5 Standard; pie charts are Primary 4; average is Primary 6; ratio is Primary 6. None of the four is used. The 2020 to 2024 school papers (`docs/books/p5_school_paper_patterns.md`) set ratio and average at Primary 5; that is the old syllabus and is not used here.
 
 ## 1. Gap analysis: every Primary 5 outcome line against the pages
 
-32 lines (the summary's lines, each of fractions 2.1 to 2.5 and geometry 1.1 to 1.4 counted once). Every line is practised by at least one page.
+One row per outcome line of the syllabus (numbered as the PDF numbers them). Every line is practised by at least one page.
 
-| Outcome line (our summary) | Pages | Coverage |
+| Outcome line (syllabus number and wording) | Pages | Coverage |
 |---|---|---|
-| Whole Numbers: numbers to 10 million: reading and writing numbers up to 10 million | S1-01, S1-02 | Part: reading and choosing numerals and words; writing number words by hand is not checked (P5-01, P5-02) |
-| Whole Numbers: multiply and divide by 10, 100, 1000 and multiples: multiplying and dividing by 10, 100, 1000 and their multiples, without a calculator | S1-03, S1-04 | Full |
-| Whole Numbers 2.2: order of operations, without a calculator | S1-05, S1-06, S1-07 | Full |
-| Whole Numbers 2.3: use of brackets, without a calculator | S1-05, S1-06, S1-07 | Full |
-| Fractions 1.1: dividing a whole number by a whole number, with a fraction as the quotient | S1-08 | Full (one page) |
+| Whole Numbers 1.1: reading and writing numbers in numerals and in words (numbers up to 10 million) | S1-01, S1-02 | Part: reading and choosing numerals and words; writing number words by hand is not checked |
+| Whole Numbers 2.1: multiplying and dividing by 10, 100, 1000 and their multiples without calculator | S1-03, S1-04 | Full |
+| Whole Numbers 2.2: order of operations without calculator | S1-05, S1-06, S1-07 | Full |
+| Whole Numbers 2.3: use of brackets without calculator | S1-05, S1-06, S1-07 | Full |
+| Fractions 1.1: dividing a whole number by a whole number with quotient as a fraction | S1-08 | Full (one page) |
 | Fractions 1.2: expressing fractions as decimals | S1-09 | Full, terminating decimals only (one page) |
 | Fractions 2.1: adding and subtracting mixed numbers | S1-10, S1-11 | Full |
-| Fractions 2.2: multiplying a proper or improper fraction by a whole number | S1-12, S1-13, S1-16 | Full |
-| Fractions 2.3: multiplying a proper fraction by a proper or improper fraction | S1-14, S1-15, S1-16 | Full |
+| Fractions 2.2: multiplying a proper/improper fraction and a whole number without calculator | S1-12, S1-13, S1-16 | Full |
+| Fractions 2.3: multiplying a proper fraction and a proper/improper fraction without calculator | S1-14, S1-15, S1-16 | Full |
 | Fractions 2.4: multiplying two improper fractions | S1-15 | Full (inside P5-15) |
-| Fractions 2.5: multiplying a mixed number by a whole number | S1-15 | Full (inside P5-15) |
-| Decimals 1.1: multiplying and dividing decimals (up to 3 decimal places) by 10, 100, 1000 and their multiples | S1-17, S1-18 | Full |
-| Decimals 1.2: converting a measure to a larger or smaller unit in decimal form (km and m, m and cm, kg and g, ℓ and mℓ) | S1-19, S1-20 | Full |
-| Percentage: a part of a whole as a percentage: expressing a part of a whole as a percentage, and the sign % | S2-01, S2-02 | Full |
-| Percentage: a percentage part of a whole: finding a percentage part of a whole | S2-02, S2-03, S2-04, S2-05 | Full |
-| Percentage 1.4: finding discount, GST and annual interest | S2-02, S2-03, S2-04, S2-05 | Full: discount, GST at 9%, simple annual interest (compound interest not used) |
-| Rate: rate as the amount of one quantity per unit of another quantity; finding the rate, the total or the number of units | S2-06, S2-07 | Full: rate, total, number of units; no speed wording |
-| Area of triangle: base, height and area: area of a triangle (base and height) | S2-08, S2-09, S2-10, S2-11 | Full |
-| Area of triangle: composite figures: area of composite figures made of rectangles, squares and triangles | S2-11 | Full for rectangle plus or minus a triangle (one page only) |
-| Volume 2.1: building cubes and cuboids with unit cubes | S2-12 | Part: counting cubes in a drawing; building with real cubes cannot be checked |
-| Volume: cubic units (cm³, m³): cubic units cm³ and m³ | S2-13 | Full (one page); no conversion between cm3 and m3, as in the summary |
-| Volume 2.3: drawing cubes and cuboids on an isometric grid | S2-12 | Part: reading isometric drawings only; drawing on an isometric grid is not checked |
-| Volume 2.4: volume of a cube or cuboid | S2-12, S2-13, S2-14, S2-15 | Full |
-| Volume 2.5: volume of liquid in a rectangular tank | S2-15 | Full |
-| Volume 2.6: the relationship between ℓ or mℓ and cm³ | S2-14, S2-15 | Full |
+| Fractions 2.5: multiplying a mixed number and a whole number | S1-15 | Full (inside P5-15) |
+| Decimals 1.1: multiplying and dividing decimals (up to 3 decimal places) by 10, 100, 1000 and their multiples without calculator | S1-17, S1-18 | Full |
+| Decimals 1.2: converting a measurement from a smaller unit to a larger unit in decimal form, and vice versa (kilometres and metres; metres and centimetres; kilograms and grams; litres and millilitres) | S1-19, S1-20 | Full |
+| Percentage 1.1: expressing a part of a whole as a percentage | S2-01, S2-02 | Full |
+| Percentage 1.2: use of % | S2-01, S2-02 | Full |
+| Percentage 1.3: finding a percentage part of a whole | S2-02, S2-03, S2-04, S2-05 | Full |
+| Percentage 1.4: finding discount, GST and annual interest | S2-02, S2-03, S2-04, S2-05 | Full: discount, GST at 9%, one year of simple interest (compound interest not used) |
+| Rate 1.1: rate as the amount of a quantity per unit of another quantity | S2-06, S2-07 | Full: no speed wording |
+| Rate 1.2: finding rate, total amount or number of units given the other two quantities | S2-06, S2-07 | Full: rate, total, number of units |
+| Area of Triangle 1.1: concepts of base and height of a triangle | S2-08, S2-09 | Full |
+| Area of Triangle 1.2: area of triangle | S2-09, S2-10, S2-11 | Full |
+| Area of Triangle 1.3: finding the area of composite figures made up of rectangles, squares and triangles | S2-11 | Full for a rectangle plus or minus a triangle (one page only) |
+| Volume 2.1: building solids with unit cubes | S2-12 | Part: counting cubes in a drawing; building with real cubes cannot be checked |
+| Volume 2.2: measuring volume in cubic units, cm³/m³, excluding conversion between cm³ and m³ | S2-13 | Full (one page); no conversion between cm3 and m3, as in the syllabus line |
+| Volume 2.3: drawing cubes and cuboids on isometric grid | S2-12 | Part: reading isometric drawings only; drawing on an isometric grid is not checked |
+| Volume 2.4: volume of a cube/cuboid | S2-12, S2-13, S2-14, S2-15 | Full |
+| Volume 2.5: finding the volume of liquid in a rectangular tank | S2-15 | Full |
+| Volume 2.6: relationship between ℓ (or mℓ) with cm³ | S2-14, S2-15 | Full |
 | Geometry 1.1: angles on a straight line | S2-16, S2-17, S2-20 | Full |
 | Geometry 1.2: angles at a point | S2-16, S2-17 | Full |
 | Geometry 1.3: vertically opposite angles | S2-16, S2-17, S2-20 | Full |
-| Geometry 1.4: finding unknown angles | S2-16, S2-17, S2-18, S2-19, S2-20 | Full |
-| Geometry: properties of triangles: properties of isosceles, equilateral and right-angled triangles | S2-18, S2-20 | Full |
-| Geometry: angle sum of a triangle: angle sum of a triangle; unknown angles of a triangle | S2-18, S2-20 | Full |
-| Geometry: parallelogram, rhombus, trapezium: properties of a parallelogram, rhombus and trapezium; their unknown angles | S2-19 | Part: statements and angles; no drawing, no diagonals |
+| Geometry 1.4: finding unknown angles | S2-16, S2-17, S2-18, S2-20 | Full |
+| Geometry 2.1: properties of isosceles triangle, equilateral triangle, right-angled triangle | S2-18, S2-20 | Full |
+| Geometry 2.2: angle sum of a triangle | S2-18, S2-20 | Full |
+| Geometry 2.3: finding unknown angles without additional construction of lines | S2-18, S2-20 | Full |
+| Geometry 3.1: properties of parallelogram, rhombus, trapezium | S2-19 | Part: statements and angles; no drawing, no diagonals |
+| Geometry 3.2: finding unknown angles without additional construction of lines | S2-19 | Part: statements and angles; no drawing, no diagonals |
 
-**Not covered, or only in part (for the owner).** Pupil drawing cannot be checked on a printed page: drawing cubes and cuboids on an isometric grid (VO 2.3), drawing a triangle of a given area, completing figures; building with real unit cubes (VO 2.1); writing number words by hand. Printed substitutes read a drawing instead. Fraction pages use denominators to 12 (to 50 for fraction-to-decimal); percentage uses simple interest only (the summary names "annual interest" without saying whether compound; compound interest would be an extra and is not used). Word problems "with a model" (bar models) are not drawn: the syllabus summary does not name bar models.
+**Not covered, or only in part (for the owner).** Pupil drawing cannot be checked on a printed page: drawing cubes and cuboids on an isometric grid (VO 2.3), drawing a triangle of a given area, completing figures; building with real unit cubes (VO 2.1); writing number words by hand. Printed substitutes read a drawing instead. Fraction pages use denominators to 12 (to 50 for fraction-to-decimal); percentage uses simple interest only (the syllabus says "annual interest" only; P5-25 uses one year of simple interest, on the auditor's reading of school papers; compound interest would be an extra and is not used). Word problems "with a model" (bar models) are not drawn: the syllabus summary does not name bar models.
 
 ## 2. Primary 6 and other content excluded (never used)
 
-From the summary: ratio in any form (a:b, "for every"); average, mean, pie charts and any statistics; fraction division (a fraction by a whole number or by a fraction); finding the whole from a percentage and percentage increase or decrease as a topic (GST and a price after a percentage added are Primary 5 "finding GST"); algebra and letters for unknowns (boxes and "?" only; angles are named by points as in the summary's "∠" use); circles, radius, circumference, pi; finding a missing dimension of a cuboid from its volume, a water level from a volume, cube roots; speed (the word is never used); prime numbers, negative numbers, probability, coordinates, surface area, median and mode, pentagon and hexagon. `validate.py` scans the pupil pages and the key for these words.
+From the syllabus: ratio in any form (a:b, "for every"); average, mean, pie charts and any statistics; fraction division (a fraction by a whole number or by a fraction); finding the whole from a percentage and percentage increase or decrease as a topic (GST and a price after a percentage added are Primary 5 "finding GST"); algebra and letters for unknowns (boxes and "?" only; angles are named by points as in the syllabus "∠" use); circles, radius, circumference, pi; finding a missing dimension of a cuboid from its volume, a water level from a volume, cube roots; speed (the word is never used); prime numbers, negative numbers, probability, coordinates, surface area, median and mode, pentagon and hexagon. `validate.py` scans the pupil pages and the key for these words.
 
 ## 3. Mechanisms (the audits of P1 and P2 asked for more variety)
 
