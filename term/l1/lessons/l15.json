@@ -17,7 +17,7 @@
    "The multiplication sign × and multiplying within 40",
    "Rows and columns of an array: 3 × 4 = 4 × 3"
   ],
-  "note": "Strand label for the tutor only. Equal groups, the × sign and multiplying within 40 are in the school Primary 1 syllabus (p. 31), so nothing in this lesson goes beyond Primary 1: products stay within 20 at Start here and within 40 at Go further. The holiday course has no multiplication, so this is new for every child. Reading order (owner default, 22 Oct 2026): \"3 groups of 4\" is written 3 × 4, groups first, the usual school convention; either order is accepted as correct in an answer, and Think harder shows that 3 × 4 = 4 × 3. Sharing and the division sign are Lesson 17, not here. Do not describe the lesson as MOE-aligned or syllabus-aligned. Contest tag (tutor only): list all the ways (Go further G3)."
+  "note": "Strand label for the tutor only. Equal groups, the × sign and multiplying within 40 are in the school Primary 1 syllabus (p. 31), so the lesson stays inside Primary 1 except for one named beyond-syllabus challenge item (owner decision, 22 Oct 2026): Go further G2 part (c), which uses doubling the number of groups (6 groups of 5 = 30, so 12 groups of 5 = 60), a product above the school range of 40. Products stay within 20 at Start here and within 40 elsewhere. The holiday course has no multiplication, so this is new for every child. Reading order (owner default, 22 Oct 2026): \"3 groups of 4\" is written 3 × 4, groups first, the usual school convention; either order is accepted as correct in an answer, and Think harder shows that 3 × 4 = 4 × 3. Sharing and the division sign are Lesson 17, not here. Do not describe the lesson as MOE-aligned or syllabus-aligned. Contest tag (tutor only): list all the ways (Go further G3)."
  },
  "contest_moves": [
   "list the ways to make equal groups of 24 (G3)",
@@ -2311,20 +2311,28 @@
       "text": "Jamie needs [2] more marbles.",
       "ans": "10",
       "val": 10
+     },
+     {
+      "l": "c",
+      "text": "Jamie's sister has double the jars: 12 jars with 5 marbles in each jar. Use part (a). 12 groups of 5 = [2]",
+      "ans": "60",
+      "val": 60
      }
     ],
-    "answer": "6 × 5 = 30; 10 more marbles",
+    "answer": "6 × 5 = 30; 10 more marbles; 12 × 5 = 60",
     "val": [
      30,
-     10
+     10,
+     60
     ],
-    "hint": "Find how many marbles are in the jars now. Then see how many more make 40.",
-    "solution": "6 jars with 5 marbles in each jar: 5 + 5 + 5 + 5 + 5 + 5 = 30 marbles. 40 - 30 = 10 more marbles.",
+    "hint": "Find how many marbles are in the jars now. Then see how many more make 40. For (c), 12 groups is double 6 groups.",
+    "solution": "6 jars with 5 marbles in each jar: 5 + 5 + 5 + 5 + 5 + 5 = 30 marbles. 40 - 30 = 10 more marbles. (c) 12 groups is double 6 groups, so double 30: 30 + 30 = 60 marbles. This is above the school Primary 1 range of 40: doubling the number of groups doubles the total.",
     "mistakes": [
      "Writing 40 - 6.",
-     "Stopping after finding 30."
+     "Stopping after finding 30.",
+     "Part (c): doubling both numbers, or adding 12 + 5 = 17."
     ],
-    "mins": 5
+    "mins": 7
    },
    {
     "id": "G3",

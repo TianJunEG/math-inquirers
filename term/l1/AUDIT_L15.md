@@ -59,3 +59,7 @@ Total: 18 / 24
 ## Fix pass (independent audits, Term 2 batch 4)
 
 Validator 0 FAIL 0 WARN; 109 answer checks; workbook fill 98/95/94/85/97%; slow-class model 82:27 (warm-up 5:47, mini 11:42 of 12). Changes: reveal slides for s-m1 and s-m2 (s-opt answer left off the slide), warm-up cut to five questions, Your turn cut to three new items, T1 now a 2 x 8 array (no class numbers), T3 parts swapped, G3 two-digit boxes and "different number of groups", either order accepted in the key, home sheet and parent page, greeting then notice then recording, ticks instead of colours or stars, stacked pictures on s-explore2, hand-off says how next workbook arrives. See audit/FIXES_L15.md.
+
+## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
+
+Added Go further G2 part (c) (page 4): Jamie's sister has double the jars, 12 jars with 5 marbles each; use 6 groups of 5 = 30 to find 12 groups of 5 = 60. A product above the school range of 40, reached by doubling the number of groups. Start here untouched (products within 20). Verified by laying out the groups in `verify/l15_checks.py`. `moe.note` names it. Real PDF workbook fill 98, 95, 97, 92, 97, 82, 53% (page 7 is the kit page, pre-existing warning); parts still sum to 90; validator 0 FAIL.

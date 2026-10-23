@@ -97,7 +97,10 @@ def run(d):
     # ---- Go further
     it = T['G1']['visual']['items']; eq([(x['icon'], x['n']) for x in it], [('bike', 3), ('car', 4)], 'G1 picture')
     eq((repeated_add(2, 3), repeated_add(4, 4), repeated_add(2, 3) + repeated_add(4, 4)), (6, 16, 22), 'G1'); eq(T['G1']['val'], [6, 16, 22], 'G1 val')
-    eq((total(6, 5), 40 - total(6, 5)), (30, 10), 'G2'); eq(T['G2']['val'], [30, 10], 'G2 val')
+    eq((total(6, 5), 40 - total(6, 5)), (30, 10), 'G2'); eq(T['G2']['val'][:2], [30, 10], 'G2 val')
+    # G2 part (c): beyond the school range, by doubling the number of groups (checked by laying out the groups)
+    eq(total(12, 5), 2 * total(6, 5), 'G2c doubling the groups doubles the total'); eq(total(12, 5), 60, 'G2c value'); eq(total(12, 5) > 40, True, 'G2c above the school range of 40')
+    eq(T['G2']['val'], [30, 10, 60], 'G2 val with part c')
     pairs = [(a, b) for a in range(1, 25) for b in range(1, 25) if total(a, b) == 24]
     eq([(2, 12), (3, 8), (4, 6)] == [p for p in [(2, 12), (3, 8), (4, 6)] if p in pairs], True, 'G3 examples work'); eq(len(pairs), 8, 'G3 there are 8 ordered ways to make 24')
     eq([p['text'] for p in T['G3']['parts']], ['[2] groups of [2] = 24'] * 3, 'G3 two-digit boxes'); eq('different number of groups' in T['G3']['text'], True, 'G3 says what counts as different')
