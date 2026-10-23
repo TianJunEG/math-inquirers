@@ -99,10 +99,15 @@ for p in pages:
         if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 20: bad.append((p["no"], cl))
     if len(p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction sentences (P4 limit)"))
-    for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]) + re.findall(r'class="(?:st|ptxt)">(.*?)</(?:div|p)>', p["body"]):
-        sent = re.sub(r"<[^>]+>", " ", sent)
-        for one in re.split(r"(?<=\.)\s+", sent.strip()):
-            if len(one.split()) > 14: bad.append((p["no"], one))
+    if not p.get("cbc"):
+        txt_ = re.sub(r"<svg.*?</svg>", "\n", p["body"], flags=re.S)
+        txt_ = re.sub(r'<span class="fr">.*?</i></span>', " F ", txt_, flags=re.S)        # a fraction counts as one word
+        txt_ = re.sub(r"</?(?:div|p|li|ul|tr|td|th|table|br)[^>]*>", "\n", txt_)
+        txt_ = re.sub(r"<[^>]+>", " ", txt_)
+        for line_ in txt_.split("\n"):
+            for one in re.split(r"(?<=[.?!;:])\s+", line_.strip()):
+                words_ = [w for w in one.split() if re.search(r"\w", w)]
+                if len(words_) > 14: bad.append((p["no"], one))
 rec("V8 reading level: instruction and clue sentences <= 14 words, <= 4 sentences", not bad, str(bad[:4]))
 chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > (34 if p.get("check_lines") else 18) and not p.get("cbc")]
 rec("check strip text <= 18 words (pages with several check lines: 34)", not chk, str(chk))

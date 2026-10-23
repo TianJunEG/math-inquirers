@@ -84,6 +84,10 @@ def page31():
 SHAPES32 = [((4, 0), (0, 3), "rectangle"), ((0, 4), (3, 0), "rectangle"), ((2, 2), (-1, 1), "rectangle"), ((2, 1), (-2, 4), "rectangle"), ((3, 1), (-1, 3), "square"),
             ((3, 3), (-3, 3), "square"), ((3, 0), (0, 3), "square"), ((2, 1), (-1, 2), "square"), ((4, 0), (0, 4), "square"), ((1, 1), (-3, 3), "rectangle"), ((3, 0), (0, 5), "rectangle")]
 
+def _segd(q, a, b):
+    ax, ay = a; bx, by = b; dx, dy = bx - ax, by - ay; t = max(0, min(1, ((q[0] - ax) * dx + (q[1] - ay) * dy) / (dx * dx + dy * dy)))
+    return math.dist(q, (ax + t * dx, ay + t * dy))
+
 def page32():
     rng = random.Random(7232)
     n = 8
@@ -112,7 +116,7 @@ def page32():
             tries = 0
             while len(dec) < 2 and tries < 400:
                 tries += 1; q = (rng.randint(0, n - 1), rng.randint(0, n - 1))
-                if all(max(abs(q[0] - t[0]), abs(q[1] - t[1])) >= 2 for t in taken + dec) and math.dist(q, c3) <= 6: dec.append(q)
+                if all(max(abs(q[0] - t[0]), abs(q[1] - t[1])) >= 2 for t in taken + dec) and math.dist(q, c3) <= 3.7 and min(_segd(q, c0, c1), _segd(q, c0, c2)) >= 1.4: dec.append(q)
             if len(dec) < 2: ok = False; break
             pts = [c3] + dec; order = [0, 1, 2]; rng.shuffle(order)
             cands.append([(pts[j], word[i] if j == 0 else lay[i][j]) for j in order])
@@ -203,7 +207,7 @@ def page33():
         "3.1 (identifying symmetric figures), 3.2 (determining whether a straight line is a line of symmetry of a symmetric figure)", ["LS3.1", "LS3.2"], "Choice cards (symmetry)",
         ["Look at each figure.", "Circle the letter of the right answer.", "Write the six letters in the boxes."], rows, word, rows_l, [word[i] for i in range(6)],
         "; ".join(f"{i+1}) {'Yes' if t else 'No'} ({f}{' with the line ' + a if k == 'axis' else ' without a line'})" for i, ((k, f, a), t) in enumerate(zip(items, truths))),
-        "Six figures. Four show a dashed line and ask whether it is a line of symmetry (a rectangle cut along its middle, along its diagonal, a triangle cut from a corner to the middle of the opposite side, a figure with the line off centre, and similar). Two show no line and ask whether any line of symmetry exists (a scalene triangle and a trapezium with a right angle have none). The right answer was found by reflecting every figure in the line, or in every possible line through its middle, with a separate program. Each row has a Yes and a No, each with a letter. The letters of the right answers, read down the cards, spell the word; every other way of choosing was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.")
+        "Six figures. Four show a dashed line and ask whether it is a line of symmetry: a triangle with a line from a corner that is not an axis, a kite and a pentagon with their vertical axis, and a T with a horizontal line through the bar (not an axis). Two show no line and ask whether the figure has a line of symmetry: an isosceles trapezium and a T, which each have one. The right answer was found by reflecting every figure in the line, or in every possible line through its middle, with a separate program. Each row has a Yes and a No, each with a letter. The letters of the right answers, read down the cards, spell the word; every other way of choosing was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.")
     P["body"] = P["body"].replace('class="srows3 tallrows"', 'class="srows3 tallrows grid2"')
     solved = []
     for content, opts in rows_of(P["body"]):
@@ -481,7 +485,7 @@ def page38():
         "1.2 (reading and interpreting data from line graphs)", ["ST1.2"], "Code-breaker (line graph)",
         ["Read the line graph.", "Write each answer in its box.", INSTR_CODE], body, ans, table, word, 0, 120,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)) + f". Data: " + ", ".join(f"{c} {v}" for c, v in zip(cats, vals)),
-        "A line graph of the pupils who joined a club in six months, scale 0 to 60 with a dotted line half way between the numbers (so every point is a multiple of 5). Six questions: two readings, a difference between two days, a rise between two neighbouring days, a total of two days and the difference between the busiest and the quietest day. The decoy letters stand for the usual slips: reading one line too high or too low, or adding when the question asks for the difference. A box left blank gives no letter and the check cannot see it.",
+        "A line graph of the pupils who joined a club in six months, scale 0 to 60 with a dashed line half way between the numbers (so every point is a multiple of 5). Six questions: two readings, a difference between two months, a rise between two neighbouring months, a total of two months and the difference between the busiest and the quietest month. The decoy letters stand for the usual slips: reading one line too high or too low, or adding when the question asks for the difference. A box left blank gives no letter and the check cannot see it.",
         domain=dom, mk=("code",))
     gdata = A7.read_line_graph(re.search(r"<svg.*?</svg>", body, re.S)[0])
     solved = []
@@ -526,7 +530,7 @@ def page39():
         "1.2 (reading and interpreting data from pie charts)", ["ST1.2", "FS2.1"], "Code-breaker (pie chart)",
         ["The pie chart is cut into 8 equal slices.", "Use the number of pupils to answer.", INSTR_CODE], body, ans, table, word, 0, 600,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)) + f". Slices: " + ", ".join(f"{n} {w}" for n, w in sec) + f"; one slice is {unit} pupils",
-        "A pie chart cut into 8 equal slices (thin dotted lines) with four or five sectors, and the total number of pupils. The pupil counts the slices of a sector, finds what fraction of the pie it is, and finds that fraction of the total. Six questions: two sectors, a difference between two sectors, two sectors together, the pupils who did not choose one food and half of the pie. The decoy letters stand for the usual slips: giving the number of slices instead of pupils, or one slice too many or too few. A box left blank gives no letter and the check cannot see it.",
+        "A pie chart cut into 8 equal slices (thin dashed lines) with four or five sectors, and the total number of pupils. The pupil counts the slices of a sector, finds what fraction of the pie it is, and finds that fraction of the total. Six questions: two sectors, a difference between two sectors, two sectors together, the pupils who did not choose one food and half of the pie. The decoy letters stand for the usual slips: giving the number of slices instead of pupils, or one slice too many or too few. A box left blank gives no letter and the check cannot see it.",
         domain=dom, ps=True, mk=("code",))
     pie = A7.read_pie(re.search(r"<svg.*?</svg>", body, re.S)[0]); tot = int(re.search(r"There are (\d+) pupils", body)[1])
     cnt = {n: tot * a // 360 for n, a in pie}

@@ -43,10 +43,10 @@ CLAIMED = {}      # page number -> code word, so that no two pages of one build 
 # words of those booklets that appear in the safe pools): a school that buys the series should not meet a word twice (audit L3)
 REPEATS = set("BANDIT CAMPUS COUSIN DONKEY FATHOM FIGURE FRUITY PEANUT TEACUP BOTANY BOUNCE MAGNET SHADOW BACKUP BEHIND BUDGIE CLOUDS COBALT CREAMY CURFEW DAINTY FAMILY FROZEN GUITAR HUNGRY LENGTH MONKEY NUMBER SAILOR SPONGE SQUARE STRING TONGUE TURKEY WIZARD ANSWER".split())
 
-# the nine pages that changed their word, and the words of the other pages as first built: a replacement word comes only from the words no page used,
+# pages that may change their word to one no page used in the first build (nine pages repeated a P1 or P2 word; 29 and 38 are cascade pages); a page with no usable new word keeps its word
 # so no other page has to change its word
 import os as _os
-REPLACED = {int(x) for x in _os.environ.get('P3_REPLACE', '4,6,8,13,21,23,30,31,32').split(',') if x}
+REPLACED = {int(x) for x in _os.environ.get('P3_REPLACE', '4,6,8,13,21,23,29,30,31,32,38').split(',') if x}
 ORIG_FULL = {4: 'COUSIN', 6: 'TEACUP', 8: 'FATHOM', 13: 'FIGURE', 21: 'DONKEY', 23: 'FRUITY', 30: 'CAMPUS', 31: 'PEANUT', 32: 'BANDIT'}
 ORIG_WORD = {13: 'FIGURE', 6: 'TEACUP', 8: 'FATHOM', 21: 'DONKEY', 23: 'FRUITY', 30: 'CAMPUS', 31: 'PEANUT', 32: 'BANDIT'}     # pages that use code_table_any (page 4 is an ordering page)
 USED_FIRST_BUILD = set("BANDIT BIRCH BLUNT CAMPUS CANOPY COUSIN DEVOUR DONKEY FATHOM FIGURE FRUITY GOPHER JUNIOR PEANUT POLICE PUBLIC QUIVER SAUCY SCRIBE SHRIMP SPRUCE SWIVEL TEACUP THRIVE TUXEDO UPDATE VOLUME WALNUT WISDOM WOMBAT WORKS".split())

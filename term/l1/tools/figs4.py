@@ -299,7 +299,7 @@ def story_steps(piles=None, steps=None, title=None):
     """The steps of a story as card piles joined by arrows. piles = ['30', '?', '?'] (a '?' is a pile the child works out, shown dashed);
     steps = ['gives away|20', 'gets|6 more'] (the words above each arrow, '|' starts a new line). Only the story's own words are on the arrows,
     never a plus or minus sign and never the result, so the child still chooses the operation and finds the number."""
-    piles = piles or ['?', '?']; steps = steps or []
+    piles = [str(x) for x in (piles or ['?', '?'])]; steps = [str(x) for x in (steps or [])]
     pw, gap = 120, 180
     top = 62 if title else 32
     W = 40 + len(piles) * pw + (len(piles) - 1) * gap; H = top + 84 + 14

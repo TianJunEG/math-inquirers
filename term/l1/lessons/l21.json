@@ -2925,7 +2925,20 @@
       "Count in 5s up to the {n}.",
       "Count {n} steps of 5. You reach {ans}.",
       "It is {ans} minutes past the hour."
-     ]
+     ],
+     "derive": {
+      "m": "5*n"
+     }
+    },
+    "fig": {
+     "type": "clock",
+     "h": 3,
+     "m": "{m}"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 15
     }
    },
    {

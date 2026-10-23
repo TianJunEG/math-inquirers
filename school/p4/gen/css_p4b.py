@@ -86,3 +86,6 @@ CSS_P4B = CSS_P4B + """.srows3.grid2.solids .afig{flex:none;width:33mm;margin-le
 """
 CSS_P4B = CSS_P4B + """.afig.mir>svg{width:44mm;height:32.5mm;margin-left:5mm}.afig.mir .aq{margin-top:2mm}
 """
+CSS_P4B = CSS_P4B + """.qg.work .qc{min-height:23mm}.vcards.vc3 .vcard .vans{margin-top:9mm}
+"""
+CSS_P4B = CSS_P4B + """.qc.fgq2 .fgc{padding:5mm 0 0 0}\n"""

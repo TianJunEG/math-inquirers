@@ -28,7 +28,7 @@ h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.0
 .check .ct2{flex:1;font-size:14pt;line-height:1.25}
 .check .ct2 b{font-family:'Fredoka';font-weight:600;font-size:15pt}
 .check .lb{display:flex;gap:1.5mm;align-items:center;flex-wrap:nowrap}
-.check .ab{width:11mm;height:12mm}
+.check .ab{width:12mm;height:12mm;flex:none}
 footer.pf{display:flex;justify-content:space-between;gap:6mm;font-size:8pt;padding-top:2mm;line-height:1.2}
 footer.pf b{font-weight:800}
 footer.pf .fl{display:flex;gap:1.2mm;flex:1;min-width:0}footer.pf .fx{white-space:nowrap;flex:none}footer.pf .sn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:800}footer.pf .pc{flex:none}
@@ -288,8 +288,8 @@ def teacher_notes(pages, bk):
         ("cbc", '<li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'),
         ("route", '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes, and every box on it must follow the rule on the page.</li>'),
         ("logic", '<li><b>Letters in an order, a grid or a choice.</b> Each number, card, picture or choice carries a letter; the letters, read in the order asked, must spell a word. Where one item is left out, its letter is a decoy that is not part of the word.</li>'),
-        ("total", '<li><b>Total.</b> The whole count must make the total printed in the strip (the graph pages add a second sum).</li>'),
-        ("loop", '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop.</li>'),
+        ("total", '<li><b>Totals.</b> Every row and every line must add up to the total printed on the page (the magic square, the table with totals).</li>'),
+        ("loop", '<li><b>Loop.</b> Following the arrows round the ring, the last arrow must bring the pupil back to the start number.</li>'),
     ]
     blt = "".join(t for need, t in bullets if need in mks)
     ps_ex = {1: 'stories with more than one step, remainders and unequal sharing', 2: 'stories with fractions, decimals, perimeter and area and several steps'}[bk["n"]]
@@ -318,7 +318,7 @@ def coverage_table(pages, bk):
     for p in pages:
         for o in PAGE_OC[p["no"]]:
             pos.setdefault(o, []).append(p["code"].split(" ")[0])
-    items = "".join(f'<div class="covi"><b>{html.escape(oc_label(o))}</b> {html.escape(OUTCOMES[o][1])} <span class="covp">{", ".join(pos[o])}</span></div>' for o in OUTCOMES if o in pos)
+    items = "".join(f'<div class="covi"><b>{html.escape(oc_label(o))}</b> {html.escape(OUTCOMES[o][1])}{' (partly: the pupil only chooses the corner)' if o == 'RS2.2' else ''} <span class="covp">{", ".join(pos[o])}</span></div>' for o in OUTCOMES if o in pos)
     GAPS = ("AN1.3", "NT4.2")
     grp = {}
     for o in OUTCOMES:
@@ -354,7 +354,7 @@ def key_pages(pages, school, packing, bk):
         pg[0] += 1; return key_footer(f"KEY page {pg[0]} of {total}")
     out = [f'<section class="page fm"><h2>Teacher answer key: Primary 4, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 4 content in the Mathematics Syllabus, Primary (2021 edition, pages 33 and 34). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 4 content in the Mathematics Syllabus, Primary (2021 edition, pages 37 to 40). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
            + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + key_footer(f"KEY page 1 of {total}") + '</section>']

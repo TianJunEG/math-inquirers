@@ -447,7 +447,7 @@ def page27():
         if k == "A":
             fig, _ = rect_fig(l, w, {"left": f"{w} cm"}, ["bottom"], [(f"area {v} cm{SQ}", 0)], unit_w=25.0)
         elif k == "B":
-            fig, _ = rect_fig(l, w, {"bottom": f"{l} cm"}, ["left"], [(f"perimeter {v} cm", 0)], unit_w=30.0)
+            fig, _ = rect_fig(l, w, {"bottom": f"{l} cm"}, ["left"], [("perimeter", -2.4), (f"{v} cm", 2.4)], unit_w=30.0)
         elif k == "C":
             fig, _ = rect_fig(w, w, {}, ["bottom"], [("square", -4.5), ("perimeter", 0), (f"{v} cm", 4.5)], unit_w=26.0)
         else:

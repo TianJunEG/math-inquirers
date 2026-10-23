@@ -174,8 +174,8 @@ def page02():
     return P
 
 # =============================================================================== P3-03 Digit Cards
-QTXT = {"greatest": "Build the largest number you can.", "smallest": "Build the smallest number you can.", "greatest even": "Build the largest even number you can.",
-        "smallest odd": "Build the smallest odd number you can.", "smallest even": "Build the smallest even number you can.", "greatest odd": "Build the largest odd number you can."}
+QTXT = {"greatest": "Build the largest number.", "smallest": "Build the smallest number.", "greatest even": "Build the largest even number.",
+        "smallest odd": "Build the smallest odd number.", "smallest even": "Build the smallest even number.", "greatest odd": "Build the largest odd number."}
 
 def best_numbers(cards, kind):
     perms = sorted({int("".join(map(str, p))) for p in itertools.permutations(cards) if p[0] != 0})

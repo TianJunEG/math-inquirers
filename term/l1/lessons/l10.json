@@ -2937,6 +2937,30 @@
             "Step 2: {c} get on, so add: {m} + {c} = {ans}.",
             "There are {ans} children."
           ]
+        },
+        "fig": {
+          "type": "story_steps",
+          "piles": [
+            "{a}",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "get off|{b}",
+            "get on|{c}"
+          ]
+        },
+        "fig_base": {
+          "type": "story_steps",
+          "piles": [
+            "30",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "get off|10",
+            "get on|4"
+          ]
         }
       },
       {
@@ -3066,7 +3090,19 @@
             ],
             "say": "Buying 6 more is Step 2, and it starts from the beads she has left."
           }
-        ]
+        ],
+        "fig": {
+          "type": "story_steps",
+          "piles": [
+            "30",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "uses|10",
+            "buys|6 more"
+          ]
+        }
       },
       {
         "id": "c5",
@@ -3563,7 +3599,35 @@
             "The box comes in: {n} + {c} = {ans}."
           ]
         },
-        "easier": "t4"
+        "easier": "t4",
+        "fig": {
+          "type": "story_steps",
+          "piles": [
+            "{s}",
+            "?",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "sells|{a}",
+            "sells|{b}",
+            "a box of|{c} comes in"
+          ]
+        },
+        "fig_base": {
+          "type": "story_steps",
+          "piles": [
+            "60",
+            "?",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "sells|24",
+            "sells|15",
+            "a box of|30 comes in"
+          ]
+        }
       },
       {
         "id": "g2",

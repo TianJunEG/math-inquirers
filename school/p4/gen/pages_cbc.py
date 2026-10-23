@@ -80,10 +80,11 @@ def mirror_truth(pic):
     return bad
 
 def cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
-    old = L.BOX_SIDE
-    L.BOX_SIDE = 12.6                       # larger answer boxes (audit M4 and round 2: three-digit answers)
+    old = (L.BOX_SIDE, L.BOX_W)
+    L.BOX_W = 15.6
+    L.BOX_SIDE = 12.3                       # larger answer boxes (audit M4 and round 2: three-digit answers)
     try: return _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc)
-    finally: L.BOX_SIDE = old
+    finally: L.BOX_SIDE, L.BOX_W = old
 
 def _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     sh = S.make_sheet(spec, "")

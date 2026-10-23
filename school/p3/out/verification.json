@@ -65,18 +65,7 @@
    1.0,
    59994,
    59994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    59994,
-    59994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -123,18 +112,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -197,18 +175,7 @@
    1.0,
    53994,
    53994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    53994,
-    53994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -228,7 +195,7 @@
    {
     "name": "V1 independent solver (numbers read back and sorted by value) gets the word",
     "ok": true,
-    "detail": "COUSIN"
+    "detail": "FLIGHT"
    },
    {
     "name": "V1b every number has the digits asked: Set A made from the same four digits, Set B two 4-digit and one 3-digit number",
@@ -238,7 +205,7 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['cousin']"
+    "detail": "['flight']"
    },
    {
     "name": "V3 none of the 719 wrong orders of the six letters spells a word",
@@ -250,21 +217,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 5,
@@ -312,18 +265,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -341,7 +283,7 @@
   "seed": 3606,
   "checks": [
    {
-    "name": "V2 code word spells TEACUP",
+    "name": "V2 code word spells MELODY",
     "ok": true,
     "detail": ""
    },
@@ -358,12 +300,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['teacup']"
+    "detail": "['melody']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['packet', 'teacup', 'uptake']"
+    "detail": "['deploy', 'employ', 'melody']"
    },
    {
     "name": "V1 independent solver reads the printed columns back and equals the key",
@@ -385,18 +327,7 @@
    1.0,
    59994,
    59994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    59994,
-    59994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -443,18 +374,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -472,7 +392,7 @@
   "seed": 3808,
   "checks": [
    {
-    "name": "V2 code word spells FATHOM",
+    "name": "V2 code word spells TRICKY",
     "ok": true,
     "detail": ""
    },
@@ -489,17 +409,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['fathom']"
+    "detail": "['tricky']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fathom', 'gotcha', 'gotham']"
+    "detail": "['quirky', 'tricky', 'turkic']"
    },
    {
     "name": "V1 independent solver (every digit tried in the printed sum) finds exactly one digit and it equals the key",
     "ok": true,
-    "detail": "[4, 2, 5, 8, 1, 6]"
+    "detail": "[8, 9, 1, 3, 4, 2]"
    },
    {
     "name": "V7 every number has 4 digits (an answer may have 4)",
@@ -511,18 +431,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    45,
-    45
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -571,18 +480,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -631,18 +529,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -704,18 +591,7 @@
    1.0,
    90,
    90
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    49,
-    49
-   ],
-   "all_other_values_rejected": [
-    90,
-    90
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -758,18 +634,7 @@
    1.0,
    486,
    486
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    62,
-    62
-   ],
-   "all_other_values_rejected": [
-    486,
-    486
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -809,12 +674,12 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['cirque', 'figure', 'juicer']"
+    "detail": "['cirque', 'figure', 'fucker']"
    },
    {
     "name": "V1 independent solver reads the printed items back and equals the key",
     "ok": true,
-    "detail": "[71, 106, 1971, 3045, 1944, 142]"
+    "detail": "[95, 105, 1230, 149, 1208, 2115]"
    },
    {
     "name": "V7 3-digit numbers by 1-digit numbers; every division is exact",
@@ -831,18 +696,7 @@
    1.0,
    59994,
    59994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    59994,
-    59994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -921,18 +775,7 @@
    1.0,
    1600,
    1600
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    180,
-    180
-   ],
-   "all_other_values_rejected": [
-    1600,
-    1600
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -979,18 +822,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1032,25 +864,14 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
   "code": "S1-17 (P3-17)",
   "title": "Fraction Gaps",
   "tier": 2,
-  "topic": "Fractions: finding an equivalent fraction when the top or bottom number is given",
+  "topic": "Fractions: finding an equal fraction",
   "strand": "Number and Algebra - Fractions",
   "syll": "1.1, 1.4 (equivalent fractions; finding an equivalent fraction given the denominator or numerator)",
   "outcomes": [
@@ -1106,18 +927,7 @@
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    48,
-    48
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1160,21 +970,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 19,
@@ -1231,18 +1027,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    54,
-    54
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1282,12 +1067,12 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['deputy', 'update', 'uptake']"
+    "detail": "['upbeat', 'update', 'uptake']"
    },
    {
     "name": "V1 independent solver (prices read from the text, coins and notes read from their printed values) equals the key",
     "ok": true,
-    "detail": "[570, 815, 840, 1180, 194, 780]"
+    "detail": "[685, 450, 585, 467, 945, 780]"
    },
    {
     "name": "V7 every amount is below $100 and written with two decimal places",
@@ -1299,18 +1084,7 @@
    1.0,
    59994,
    59994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    59994,
-    59994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1355,7 +1129,7 @@
    {
     "name": "V1 independent solver reads the tick marks and the level line of each container and equals the key",
     "ok": true,
-    "detail": "[100, 700, 300, 450, 150, 500]"
+    "detail": "[700, 500, 300, 450, 350, 100]"
    },
    {
     "name": "V7 levels are on a mark that has no number; scales to 500 or 1000",
@@ -1367,25 +1141,14 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 22,
   "code": "S2-02 (P3-22)",
   "title": "Equal Measures",
   "tier": 1,
-  "topic": "Converting between km and m, m and cm, kg and g, \u2113 and m\u2113",
+  "topic": "Changing units: km, m, cm, kg, g, \u2113 and m\u2113",
   "strand": "Measurement and Geometry - Measurement",
   "syll": "1.2, 1.3 (compound units; converting km and m, m and cm, kg and g, \u2113 and m\u2113)",
   "outcomes": [
@@ -1421,18 +1184,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1478,7 +1230,7 @@
    {
     "name": "V1 independent solver reads the needle angle and the printed unit of each dial and equals the key (in grams)",
     "ok": true,
-    "detail": "[650, 950, 9000, 4000, 8000, 850]"
+    "detail": "[8000, 7000, 450, 9000, 850, 950]"
    },
    {
     "name": "V7 masses: g readings are odd multiples of 50 up to 950; kg readings 2 to 9",
@@ -1490,25 +1242,14 @@
    1.0,
    60000,
    60000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    60000,
-    60000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 24,
   "code": "S2-04 (P3-24)",
   "title": "Road Trip",
   "tier": 2,
-  "topic": "Compound units: adding and subtracting km and m, kg and g, \u2113 and m\u2113",
+  "topic": "Adding and subtracting km and m, kg and g, \u2113 and m\u2113",
   "strand": "Measurement and Geometry - Measurement",
   "syll": "1.1, 1.2 (measuring length in kilometres and volume in millilitres; compound units)",
   "outcomes": [
@@ -1560,18 +1301,7 @@
    1.0,
    59994,
    59994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    59994,
-    59994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 25,
@@ -1614,21 +1344,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 26,
@@ -1685,18 +1401,7 @@
    1.0,
    3600,
    3600
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    3600,
-    3600
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1738,25 +1443,14 @@
    1.0,
    10,
    10
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    10,
-    10
-   ],
-   "all_other_values_rejected": [
-    10,
-    10
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
   "code": "S2-08 (P3-28)",
   "title": "Start and Finish",
   "tier": 2,
-  "topic": "Time: finding the starting time, the finishing time or how long it takes",
+  "topic": "Time: start, finish and how long it takes",
   "strand": "Measurement and Geometry - Measurement",
   "syll": "2.2 (finding the starting time, finishing time or duration given the other two quantities)",
   "outcomes": [
@@ -1774,12 +1468,12 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['volume']"
+    "detail": "['voyage']"
    },
    {
     "name": "V1 independent solver (times and lengths read back from the printed story) gets the word",
     "ok": true,
-    "detail": "VOLUME"
+    "detail": "VOYAGE"
    },
    {
     "name": "V7 every duration is under 3 hours and every time is between 6:00 am and 8:00 pm",
@@ -1796,18 +1490,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 29,
@@ -1826,7 +1509,7 @@
   "seed": 4929,
   "checks": [
    {
-    "name": "V2 code word spells WISDOM",
+    "name": "V2 code word spells MEADOW",
     "ok": true,
     "detail": ""
    },
@@ -1843,17 +1526,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['wisdom']"
+    "detail": "['meadow']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['podium', 'sodium', 'wisdom']"
+    "detail": "['daemon', 'meadow', 'modena']"
    },
    {
     "name": "V1 independent solver (timetable and questions read back, clock arithmetic done in minutes) equals the key",
     "ok": true,
-    "detail": "[85, 80, 1635, 805, 150, 55]"
+    "detail": "[95, 100, 1715, 640, 170, 55]"
    },
    {
     "name": "V7 times are real times of the 24-hour clock; the six answers are all different; no journey is longer than 4 hours",
@@ -1865,18 +1548,7 @@
    1.0,
    14154,
    14154
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    14154,
-    14154
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 30,
@@ -1895,7 +1567,7 @@
   "seed": 5030,
   "checks": [
    {
-    "name": "V2 code word spells CAMPUS",
+    "name": "V2 code word spells COUGAR",
     "ok": true,
     "detail": ""
    },
@@ -1912,17 +1584,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['campus']"
+    "detail": "['cougar']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['asylum', 'campus', 'clumps', 'clumsy']"
+    "detail": "['cougar', 'ocular', 'vulgar']"
    },
    {
     "name": "V1 independent solver (unit squares read from the drawing; the perimeter found by counting the edges between a square and a gap) equals the key",
     "ok": true,
-    "detail": "[8, 14, 9, 16, 12, 18]"
+    "detail": "[8, 14, 9, 18, 11, 20]"
    },
    {
     "name": "V7 every figure fits 5 squares by 4 and has no hole; areas 6 to 12",
@@ -1934,18 +1606,7 @@
    1.0,
    240,
    240
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    240,
-    240
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 31,
@@ -1964,7 +1625,7 @@
   "seed": 5131,
   "checks": [
    {
-    "name": "V2 code word spells PEANUT",
+    "name": "V2 code word spells BOWMAN",
     "ok": true,
     "detail": ""
    },
@@ -1981,12 +1642,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['peanut']"
+    "detail": "['bowman']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['butane', 'peanut', 'upbeat']"
+    "detail": "['botany', 'bowman', 'wombat']"
    },
    {
     "name": "V1 independent solver (printed side lengths read back and added; a rectangle doubled, a square times 4) equals the key",
@@ -2008,18 +1669,7 @@
    1.0,
    1200,
    1200
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1200,
-    1200
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 32,
@@ -2060,7 +1710,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['bandit', 'danzig', 'dating', 'fading']"
+    "detail": "['bandit', 'dating', 'taxing']"
    },
    {
     "name": "V1 independent solver (printed sides read back and multiplied) equals the key",
@@ -2077,18 +1727,7 @@
    1.0,
    1200,
    1200
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1200,
-    1200
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
@@ -2132,18 +1771,7 @@
    1.0,
    10,
    10
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    10,
-    10
-   ],
-   "all_other_values_rejected": [
-    10,
-    10
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
@@ -2191,18 +1819,7 @@
    1.0,
    10,
    10
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    10,
-    10
-   ],
-   "all_other_values_rejected": [
-    10,
-    10
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 35,
@@ -2227,12 +1844,12 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['blunt']"
+    "detail": "['blimp']"
    },
    {
     "name": "V1 independent solver (the line ends read from the drawing; the dot and cross products of the directions tested) gets the word",
     "ok": true,
-    "detail": "BLUNT"
+    "detail": "BLIMP"
    },
    {
     "name": "V1b in every picture exactly one line is parallel, one perpendicular and one neither",
@@ -2244,18 +1861,7 @@
    1.0,
    10,
    10
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    10,
-    10
-   ],
-   "all_other_values_rejected": [
-    10,
-    10
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 36,
@@ -2280,12 +1886,12 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['swivel']"
+    "detail": "['volume']"
    },
    {
     "name": "V1 independent solver (AB and P read from the drawing, the line found, the letter where it meets the top edge read) gets the word",
     "ok": true,
-    "detail": "SWIVEL"
+    "detail": "VOLUME"
    },
    {
     "name": "V1b the right line ends on a grid point of the top edge and every grid has 5 letters",
@@ -2297,18 +1903,7 @@
    1.0,
    24,
    24
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    24,
-    24
-   ],
-   "all_other_values_rejected": [
-    24,
-    24
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 37,
@@ -2365,18 +1960,7 @@
    1.0,
    1500,
    1500
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1500,
-    1500
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 38,
@@ -2395,7 +1979,7 @@
   "seed": 5838,
   "checks": [
    {
-    "name": "V2 code word spells TUXEDO",
+    "name": "V2 code word spells KNIGHT",
     "ok": true,
     "detail": ""
    },
@@ -2412,17 +1996,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['tuxedo']"
+    "detail": "['knight']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['detour', 'torque', 'tuxedo']"
+    "detail": "['knight', 'mighty', 'thingy']"
    },
    {
     "name": "V1 independent solver (bars read against each graph's own printed scale) equals the key",
     "ok": true,
-    "detail": "[2, 30, 6, 90, 46, 60]"
+    "detail": "[14, 70, 10, 190, 40, 50]"
    },
    {
     "name": "V7 Graph A is in 2s up to 16 and Graph B in 10s up to 100",
@@ -2434,25 +2018,14 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    67,
-    67
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 39,
   "code": "S2-19 (P3-39)",
   "title": "Colour the House",
   "tier": 2,
-  "topic": "Length, mass and volume: km and m, m and cm, kg and g, \u2113 and m\u2113",
+  "topic": "Changing units: km, m, cm, kg, g, \u2113 and m\u2113",
   "strand": "Measurement and Geometry - Measurement",
   "syll": "1.2, 1.3 (compound units; converting km and m, m and cm, kg and g, \u2113 and m\u2113)",
   "outcomes": [
@@ -2523,18 +2096,7 @@
    1.0,
    170000,
    170000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    204,
-    204
-   ],
-   "all_other_values_rejected": [
-    170000,
-    170000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 40,
@@ -2611,17 +2173,6 @@
    1.0,
    42000,
    42000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    168,
-    168
-   ],
-   "all_other_values_rejected": [
-    42000,
-    42000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  }
 ]

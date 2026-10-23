@@ -12,6 +12,7 @@ LH = 1.22                                   # line height in em
 LH_FRAC = 2.2                               # a line that holds a stacked fraction (numerator, bar, denominator)
 FRAC_SCALE = 0.84                           # numerals of a stacked fraction relative to the line font size
 PAD_W, PAD_H = 0.6, 0.2
+BOX_W = None                               # width of the blank box when it differs from its height (P4: wide boxes for 5-digit numbers)
 BOX_SIDE = 6.0                              # the blank box a pupil writes in: a square at least 6 mm wide (audit 3, F-new 14); a blank inside a stacked fraction stays smaller
 BOX_GAP = 0.9                               # space around it in a line
 _TOK = re.compile(f"({FRL}[^{FRR}]*{FRR}|{BOX}|{ANS_L}[^{ANS_R}]*{ANS_R})")
@@ -45,7 +46,7 @@ def part_width(p, f):
 
 def tok_width(tk, f):
     kind, t = tk[0], tk[1]
-    if kind == "box": return BOX_SIDE + BOX_GAP
+    if kind == "box": return (BOX_W or BOX_SIDE) + BOX_GAP
     if kind == "frac": return max(part_width(p, f * FRAC_SCALE) for p in t) + 1.2
     return metrics.width(t, f, 700 if kind == "ans" else 600)
 
@@ -118,8 +119,8 @@ def render(content, place, colour_line=None):
             kind, t, src = tk
             w = tok_width(tk, f)
             if kind == "box":
-                side = BOX_SIDE
-                out.append(f'<rect class="bx" data-l="{i}" data-t="{BOX}" x="{x + (w - side) / 2:.2f}" y="{yc - side / 2 - 0.05:.2f}" width="{side:.2f}" height="{side:.2f}" rx="0.5"/>')
+                side = BOX_SIDE; sw_ = BOX_W or BOX_SIDE
+                out.append(f'<rect class="bx" data-l="{i}" data-t="{BOX}" x="{x + (w - sw_) / 2:.2f}" y="{yc - side / 2 - 0.05:.2f}" width="{sw_:.2f}" height="{side:.2f}" rx="0.5"/>')
             elif kind == "frac":
                 ff = f * FRAC_SCALE; mid = x + w / 2; gap = 0.62 * ff
                 out.append(f'<g data-l="{i}" data-t="{html.escape(src, quote=True)}">')

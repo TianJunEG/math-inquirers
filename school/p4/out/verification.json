@@ -60,18 +60,7 @@
    1.0,
    1566,
    1566
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1566,
-    1566
-   ],
-   "all_other_values_rejected": [
-    1566,
-    1566
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -123,21 +112,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    54,
-    54
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 3,
@@ -194,18 +169,7 @@
    1.0,
    1596,
    1596
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1596,
-    1596
-   ],
-   "all_other_values_rejected": [
-    1596,
-    1596
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -263,18 +227,7 @@
    1.0,
    3,
    3
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    264,
-    264
-   ],
-   "all_other_values_rejected": [
-    264,
-    264
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 5,
@@ -355,18 +308,7 @@
    1.0,
    40000,
    40000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    32,
-    32
-   ],
-   "all_other_values_rejected": [
-    40000,
-    40000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -415,18 +357,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -474,18 +405,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -543,18 +463,7 @@
    1.0,
    600,
    600
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    600,
-    600
-   ],
-   "all_other_values_rejected": [
-    600,
-    600
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -602,7 +511,7 @@
    {
     "name": "V1 independent solver (clues read back, every number from 1 to 999 tried) finds exactly one number in every riddle and equals the key",
     "ok": true,
-    "detail": "[15, 81, 46, 27, 49, 119]"
+    "detail": "[54, 80, 98, 43, 48, 186]"
    },
    {
     "name": "V7 every riddle has three clues and a clue about factors or multiples; the numbers in factor clues are within 100",
@@ -614,18 +523,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    5994,
-    5994
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -682,18 +580,7 @@
    1.0,
    1560,
    1560
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1560,
-    1560
-   ],
-   "all_other_values_rejected": [
-    1560,
-    1560
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -771,18 +658,7 @@
    1.0,
    150000,
    150000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    180,
-    180
-   ],
-   "all_other_values_rejected": [
-    150000,
-    150000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -839,18 +715,7 @@
    1.0,
    1740,
    1740
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1740,
-    1740
-   ],
-   "all_other_values_rejected": [
-    1740,
-    1740
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -893,18 +758,7 @@
    1.0,
    1855,
    1855
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    1850,
-    1850
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -966,18 +820,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    594,
-    594
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1024,18 +867,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1092,18 +924,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    594,
-    594
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
@@ -1166,18 +987,7 @@
    1.0,
    852,
    852
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    852,
-    852
-   ],
-   "all_other_values_rejected": [
-    852,
-    852
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1224,18 +1034,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1253,7 +1052,7 @@
   "seed": 5719,
   "checks": [
    {
-    "name": "V2 code word spells CAMPUS",
+    "name": "V2 code word spells FAMILY",
     "ok": true,
     "detail": ""
    },
@@ -1270,25 +1069,20 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['campus']"
+    "detail": "['family']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['asylum', 'campus', 'clumps', 'clumsy']"
+    "detail": "['family', 'infamy', 'mainly']"
    },
    {
     "name": "V1 independent solver (the two arms read from the drawing: the angle between them) equals the key",
     "ok": true,
-    "detail": "[55, 45, 70, 115, 95, 130]"
+    "detail": "[130, 70, 110, 90, 50, 30]"
    },
    {
-    "name": "V7 angles are multiples of 5 (not of 20) between 35 and 145; arms point both to the right and to the left",
-    "ok": true,
-    "detail": ""
-   },
-   {
-    "name": "V7b no angle is 180 minus another, so a wrong-scale reading is never another answer",
+    "name": "V7 angles are 30, 50, 70, 90, 110, 130 or 150; arms point both to the right and to the left",
     "ok": true,
     "detail": ""
    }
@@ -1297,18 +1091,7 @@
    1.0,
    1080,
    1080
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1080,
-    1080
-   ],
-   "all_other_values_rejected": [
-    1080,
-    1080
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1349,7 +1132,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['coiled', 'copied', 'dipole', 'docile', 'locked', 'picked']"
+    "detail": "['fickle', 'pickle', 'police']"
    },
    {
     "name": "V1 independent solver (fractions and numbers read from the printed stories; each story solved with exact fractions) equals the key",
@@ -1366,18 +1149,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    5994,
-    5994
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1439,24 +1211,13 @@
    1.0,
    1266,
    1266
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1266,
-    1266
-   ],
-   "all_other_values_rejected": [
-    1266,
-    1266
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 22,
   "code": "S2-02 (P4-22)",
   "title": "Order the Decimals",
-  "tier": 2,
+  "tier": 1,
   "topic": "Comparing and ordering decimals up to 3 decimal places",
   "strand": "Number and Algebra - Decimals",
   "syll": "1.2 (comparing and ordering decimals)",
@@ -1492,21 +1253,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 23,
@@ -1554,21 +1301,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    54,
-    54
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 24,
@@ -1620,18 +1353,7 @@
    1.0,
    18,
    18
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    18,
-    18
-   ],
-   "all_other_values_rejected": [
-    18,
-    18
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 25,
@@ -1673,18 +1395,7 @@
    1.0,
    2120,
    2120
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2115,
-    2115
-   ],
-   "all_other_values_rejected": [
-    2115,
-    2115
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1704,7 +1415,7 @@
   "seed": 6626,
   "checks": [
    {
-    "name": "V2 code word spells FAMILY",
+    "name": "V2 code word spells TURKEY",
     "ok": true,
     "detail": ""
    },
@@ -1721,17 +1432,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['family']"
+    "detail": "['turkey']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fairly', 'family', 'firmly']"
+    "detail": "['equity', 'quirky', 'turkey']"
    },
    {
     "name": "V1 independent solver (each printed question worked out exactly, then rounded where asked) equals the key",
     "ok": true,
-    "detail": "['27.04', '6.53', '3.625', '2.56', '11.2', '1.9']"
+    "detail": "['23.52', '2.46', '3.625', '2.82', '6.25', '2.1']"
    },
    {
     "name": "V7 decimals have at most 3 decimal places and every divisor is a 1-digit number",
@@ -1743,18 +1454,7 @@
    1.0,
    1314,
    1314
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1314,
-    1314
-   ],
-   "all_other_values_rejected": [
-    1314,
-    1314
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1812,18 +1512,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    594,
-    594
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -1885,18 +1574,7 @@
    1.0,
    960,
    960
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    960,
-    960
-   ],
-   "all_other_values_rejected": [
-    960,
-    960
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 29,
@@ -1938,21 +1616,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 30,
@@ -1972,14 +1636,14 @@
   "seed": 7030,
   "checks": [
    {
-    "name": "V2 code word spells CANOPY",
+    "name": "V2 code word spells BOTANY",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 241 000 words)",
     "ok": true,
-    "detail": "1116/1116"
+    "detail": "1128/1128"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1989,17 +1653,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['canopy']"
+    "detail": "['botany']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['canopy', 'crayon', 'cyrano']"
+    "detail": "['botany', 'bounty', 'jaunty']"
    },
    {
     "name": "V1 independent solver (each printed story solved with the stated shapes) equals the key",
     "ok": true,
-    "detail": "[192, 68, 24, 128, 32, 48]"
+    "detail": "[400, 64, 32, 156, 40, 48]"
    },
    {
     "name": "V7 every side is a whole number of cm or m and every answer is below 1000",
@@ -2009,20 +1673,9 @@
   ],
   "generator_slip_test": [
    1.0,
-   1116,
-   1116
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    1116,
-    1116
-   ],
-   "all_other_values_rejected": [
-    1116,
-    1116
-   ],
-   "wrong_arrangements_rejected": null
-  }
+   1128,
+   1128
+  ]
  },
  {
   "no": 31,
@@ -2052,12 +1705,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['botany']"
+    "detail": "['devour']"
    },
    {
     "name": "V1 independent solver (each printed statement checked against the properties of a rectangle and a square) gets the word",
     "ok": true,
-    "detail": "['B', 'O', 'T', 'A', 'N', 'Y']"
+    "detail": "['D', 'E', 'V', 'O', 'U', 'R']"
    },
    {
     "name": "V4 between 2 and 4 statements are true",
@@ -2069,18 +1722,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 32,
@@ -2101,7 +1743,7 @@
    {
     "name": "V1 independent solver (the two arms read from the drawing, the fourth corner worked out, the lettered point found) gets the word",
     "ok": true,
-    "detail": "['T', 'U', 'R', 'K', 'E', 'Y']"
+    "detail": "['B', 'O', 'U', 'N', 'T', 'Y']"
    },
    {
     "name": "V3 no other way of choosing one point in every figure spells a word (large word list)",
@@ -2123,18 +1765,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
@@ -2182,18 +1813,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
@@ -2212,7 +1832,7 @@
   "seed": 7434,
   "checks": [
    {
-    "name": "V2 code word spells FATHOM",
+    "name": "V2 code word spells CANOPY",
     "ok": true,
     "detail": ""
    },
@@ -2229,17 +1849,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['fathom']"
+    "detail": "['canopy']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fathom', 'format', 'thorax']"
+    "detail": "['canopy', 'cupola', 'lunacy']"
    },
    {
     "name": "V1 independent solver (shaded squares and the dashed line read from the drawing, the figure completed by reflection, the counts made) equals the key",
     "ok": true,
-    "detail": "[28, 4, 5, 40, 2, 3]"
+    "detail": "[40, 2, 6, 34, 4, 1]"
    },
    {
     "name": "V7 figure 1 has a vertical line and figure 2 a horizontal line, and the row or column asked about lies on the side that was empty",
@@ -2251,18 +1871,7 @@
    1.0,
    360,
    360
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    360,
-    360
-   ],
-   "all_other_values_rejected": [
-    360,
-    360
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 35,
@@ -2292,12 +1901,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['devour']"
+    "detail": "['fathom']"
    },
    {
     "name": "V1 independent solver (each drawing classified from its faces, ellipses and apex; the letter of that name read from the card) gets the word",
     "ok": true,
-    "detail": "['D', 'E', 'V', 'O', 'U', 'R']"
+    "detail": "['F', 'A', 'T', 'H', 'O', 'M']"
    },
    {
     "name": "V7 all six solids of the syllabus list appear once",
@@ -2309,18 +1918,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 36,
@@ -2351,12 +1949,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['bounty']"
+    "detail": "['campus']"
    },
    {
     "name": "V1 independent solver (faces counted from the drawing; six squares folded over a cube) gets the word",
     "ok": true,
-    "detail": "['B', 'O', 'U', 'N', 'T', 'Y']"
+    "detail": "['C', 'A', 'M', 'P', 'U', 'S']"
    },
    {
     "name": "V7 the nets are of a cube (twice), a cuboid, a prism, a pyramid and one that is not a net of a solid",
@@ -2368,24 +1966,13 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 37,
   "code": "S2-17 (P4-37)",
   "title": "Complete the Table",
-  "tier": 1,
+  "tier": 2,
   "topic": "Completing a table from given data",
   "strand": "Statistics - Data Representation and Interpretation",
   "syll": "1.1 (completing a table from given data), 1.2 (reading and interpreting data from tables)",
@@ -2395,10 +1982,10 @@
   ],
   "ptype": "Code-breaker (table with totals)",
   "mech": "K3 rows and columns add to their totals + K1 code word (6 letters)",
-  "seed": 7737,
+  "seed": 7751,
   "checks": [
    {
-    "name": "V2 code word spells FLIGHT",
+    "name": "V2 code word spells COUSIN",
     "ok": true,
     "detail": ""
    },
@@ -2415,17 +2002,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['flight']"
+    "detail": "['cousin']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['filthy', 'flight', 'guilty']"
+    "detail": "['coking', 'cousin', 'joking']"
    },
    {
     "name": "V1 independent solver (printed table read back, every blank found from row and column totals) equals the key, in reading order",
     "ok": true,
-    "detail": "[11, 13, 30, 7, 12, 36]"
+    "detail": "[11, 13, 12, 32, 33, 37]"
    },
    {
     "name": "V2 the right answers make every row and column add up",
@@ -2442,18 +2029,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 38,
@@ -2471,7 +2047,7 @@
   "seed": 7838,
   "checks": [
    {
-    "name": "V2 code word spells COUSIN",
+    "name": "V2 code word spells FLIGHT",
     "ok": true,
     "detail": ""
    },
@@ -2488,17 +2064,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['cousin']"
+    "detail": "['flight']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['coming', 'cousin', 'musing']"
+    "detail": "['filthy', 'flight', 'glitch']"
    },
    {
     "name": "V1 independent solver (every point read from the drawing against the labelled scale) equals the key",
     "ok": true,
-    "detail": "[25, 35, 10, 15, 65, 30]"
+    "detail": "[20, 15, 10, 30, 65, 40]"
    },
    {
     "name": "V7 every value is a multiple of 5 between 10 and 55 and the scale goes to 60",
@@ -2510,18 +2086,7 @@
    1.0,
    720,
    720
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    720,
-    720
-   ],
-   "all_other_values_rejected": [
-    720,
-    720
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 39,
@@ -2579,18 +2144,7 @@
    1.0,
    726,
    726
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    726,
-    726
-   ],
-   "all_other_values_rejected": [
-    726,
-    726
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 40,
@@ -2672,17 +2226,6 @@
    1.0,
    120000,
    120000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120000,
-    120000
-   ],
-   "all_other_values_rejected": [
-    120000,
-    120000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  }
 ]

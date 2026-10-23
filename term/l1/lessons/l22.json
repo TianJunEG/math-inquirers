@@ -2897,7 +2897,20 @@
       "Count in 5s up to the {n}.",
       "Count {n} steps of 5. You reach {ans}.",
       "It is {ans} minutes past the hour."
-     ]
+     ],
+     "derive": {
+      "m": "5*n"
+     }
+    },
+    "fig": {
+     "type": "clock",
+     "h": 3,
+     "m": "{m}"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 25
     }
    },
    {
@@ -3020,6 +3033,16 @@
       "The short hand has passed the {h}, so the hour is {h}.",
       "The time is {h} : {m|mm}."
      ]
+    },
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": "{m}"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 8,
+     "m": 35
     }
    },
    {

@@ -2971,6 +2971,20 @@
             "p": "x*(1-w)+y*w",
             "r": "y*(1-w)+x*w"
           }
+        },
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "{p}",
+            "{r}"
+          ]
+        },
+        "fig_base": {
+          "type": "digit_cards",
+          "cards": [
+            "3",
+            "5"
+          ]
         }
       },
       {
@@ -3025,6 +3039,20 @@
             "p": "x*(1-w)+y*w",
             "r": "y*(1-w)+x*w"
           }
+        },
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "{p}",
+            "{r}"
+          ]
+        },
+        "fig_base": {
+          "type": "digit_cards",
+          "cards": [
+            "3",
+            "5"
+          ]
         }
       },
       {
@@ -3052,7 +3080,14 @@
             ],
             "say": "You have only one 3 and one 8. Each card is used once in a number."
           }
-        ]
+        ],
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "3",
+            "8"
+          ]
+        }
       },
       {
         "id": "c6",
@@ -3129,6 +3164,20 @@
             "Put the {x} on the left and the 0 on the right.",
             "The only two-digit number is {ans}."
           ]
+        },
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "0",
+            "{x}"
+          ]
+        },
+        "fig_base": {
+          "type": "digit_cards",
+          "cards": [
+            "0",
+            "4"
+          ]
         }
       },
       {
@@ -3192,6 +3241,22 @@
             "p": "x*(1-w)+z*w",
             "r": "z*(1-w)+x*w"
           }
+        },
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "{p}",
+            "{y}",
+            "{r}"
+          ]
+        },
+        "fig_base": {
+          "type": "digit_cards",
+          "cards": [
+            "1",
+            "4",
+            "7"
+          ]
         }
       },
       {
@@ -3253,6 +3318,22 @@
             "p": "y*(1-w)+z*w",
             "r": "z*(1-w)+y*w"
           }
+        },
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "{p}",
+            "0",
+            "{r}"
+          ]
+        },
+        "fig_base": {
+          "type": "digit_cards",
+          "cards": [
+            "1",
+            "0",
+            "6"
+          ]
         }
       },
       {
@@ -3275,7 +3356,16 @@
             ],
             "say": "6 includes 57. Check clue 2 for every number."
           }
-        ]
+        ],
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "1",
+            "3",
+            "5",
+            "7"
+          ]
+        }
       },
       {
         "id": "g1",
@@ -3303,7 +3393,16 @@
             ],
             "say": "56 is less than 60, but there is a greater card for the ones digit."
           }
-        ]
+        ],
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "2",
+            "5",
+            "6",
+            "9"
+          ]
+        }
       },
       {
         "id": "g2",
@@ -3371,7 +3470,16 @@
             ],
             "say": "41 and 43 have a ones digit that is smaller than the tens digit. Check the last clue."
           }
-        ]
+        ],
+        "fig": {
+          "type": "digit_cards",
+          "cards": [
+            "1",
+            "3",
+            "4",
+            "7"
+          ]
+        }
       },
       {
         "id": "g4",

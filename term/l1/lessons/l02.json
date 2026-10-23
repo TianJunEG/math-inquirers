@@ -2792,6 +2792,28 @@
             "Count on one step on the line.",
             "One after {n} is {ans}."
           ]
+        },
+        "fig": {
+          "type": "number_line",
+          "start": "{=n-3}",
+          "end": "{=n+3}",
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            "{=n+1}"
+          ],
+          "width": 460
+        },
+        "fig_base": {
+          "type": "number_line",
+          "start": 16,
+          "end": 22,
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            19
+          ],
+          "width": 460
         }
       },
       {
@@ -2842,6 +2864,28 @@
             "Count back one step on the line.",
             "One before {n} is {ans}."
           ]
+        },
+        "fig": {
+          "type": "number_line",
+          "start": "{=n-3}",
+          "end": "{=n+3}",
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            "{=n-1}"
+          ],
+          "width": 460
+        },
+        "fig_base": {
+          "type": "number_line",
+          "start": 17,
+          "end": 23,
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            19
+          ],
+          "width": 460
         }
       },
       {
@@ -3055,6 +3099,36 @@
             "u": "(t+1)*10",
             "r": "((o+4)-(o+4)%10)/10"
           }
+        },
+        "fig": {
+          "type": "jump_lines",
+          "start": "{=t*10}",
+          "end": "{=t*10+10}",
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                "{n}"
+              ]
+            }
+          ],
+          "room": false
+        },
+        "fig_base": {
+          "type": "jump_lines",
+          "start": 30,
+          "end": 40,
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                36
+              ]
+            }
+          ],
+          "room": false
         }
       },
       {
@@ -3114,6 +3188,36 @@
             "u": "(t+1)*10",
             "r": "((o+4)-(o+4)%10)/10"
           }
+        },
+        "fig": {
+          "type": "jump_lines",
+          "start": "{=t*10}",
+          "end": "{=t*10+10}",
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                "{n}"
+              ]
+            }
+          ],
+          "room": false
+        },
+        "fig_base": {
+          "type": "jump_lines",
+          "start": 30,
+          "end": 40,
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                36
+              ]
+            }
+          ],
+          "room": false
         }
       },
       {

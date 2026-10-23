@@ -338,7 +338,7 @@ def bus():
     wheels = C(46, 150, 21).union(C(134, 150, 21))
     b.add("sun", C(24, 22, 19.5))
     for i, (x0, x1) in enumerate([(8, 62), (62, 118), (118, 172)]):
-        b.add(f"roof_{i + 1}", R(x0, 44, x1, 66))
+        b.add(f"roof_{i + 1}", R(x0, 37, x1, 66) - C(24, 22, 19.5))
     for i, (x0, x1) in enumerate([(8, 52), (52, 90), (90, 130), (130, 172)]):
         b.add(f"window_{i + 1}", R(x0, 66, x1, 106))
     body = R(8, 106, 172, 150) - wheels

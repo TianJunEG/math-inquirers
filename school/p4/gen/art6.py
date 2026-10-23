@@ -24,8 +24,8 @@ def corner_svg(n, c0, c1, c2, cands):
     for q in (a, b, c): p.append(f'<circle class="corner" cx="{q[0]:.2f}" cy="{q[1]:.2f}" r="1.25" fill="#000"/>')
     for gx, gy, L in cands:
         x, y = P((gx, gy))
-        p.append(f'<circle class="cand" cx="{x:.2f}" cy="{y:.2f}" r="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-                 f'<text class="cl2" x="{x:.2f}" y="{y:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.4" fill="#000">{L}</text>')
+        p.append(f'<circle class="cand" cx="{x:.2f}" cy="{y:.2f}" r="3.3" fill="#fff" stroke="#000" stroke-width="0.5"/>'
+                 f'<text class="cl2" x="{x:.2f}" y="{y:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="4.8" fill="#000">{L}</text>')
     return svg(round(W, 1), round(H, 1), "".join(p))
 
 def read_corner(s):
@@ -85,7 +85,7 @@ def symm_svg(ncols, nrows, on, axis, cell=5.2):
     for r in range(nrows):
         for c in range(ncols):
             x, y = o + c * cell, 3 + r * cell
-            p.append(f'<rect class="c" x="{x:.2f}" y="{y:.2f}" width="{cell}" height="{cell}" fill="#fff" stroke="#000" stroke-width="0.35"/>')
+            p.append(f'<rect class="c" x="{x:.2f}" y="{y:.2f}" width="{cell}" height="{cell}" fill="#fff" stroke="#000" stroke-width="0.4"/>')
             if (r, c) in on: p.append(f'<rect class="on" x="{x + 0.55:.2f}" y="{y + 0.55:.2f}" width="{cell - 1.1}" height="{cell - 1.1}" fill="#000"/>')
     kind, k = axis
     if kind == "v": x = o + k * cell; p.append(f'<line class="axis" x1="{x:.2f}" y1="1" x2="{x:.2f}" y2="{3 + nrows * cell + 0.5:.2f}" stroke="#000" stroke-width="0.9" stroke-dasharray="2.4 1.4"/>')
@@ -190,8 +190,10 @@ def net_svg(faces):
     """faces: list of polygons in mm; draws each as a closed outline (class nf)"""
     xs = [x for f in faces for x, y in f]; ys = [y for f in faces for x, y in f]
     ox, oy = 2.0 - min(xs), 2.0 - min(ys)
-    p = [f'<polygon class="nf" points="{" ".join(f"{x + ox:.2f},{y + oy:.2f}" for x, y in f)}" fill="#fff" stroke="#000" stroke-width="0.7" stroke-linejoin="round"/>' for f in faces]
-    return svg(round(max(xs) - min(xs) + 4, 1), round(max(ys) - min(ys) + 4, 1), "".join(p))
+    w_, h_ = max(xs) - min(xs) + 4, max(ys) - min(ys) + 4
+    sw = 0.5 / min(34.0 / w_, 29.0 / h_)           # the printed line weight is the same (0.5 mm) whatever the size of the net
+    p = [f'<polygon class="nf" points="{" ".join(f"{x + ox:.2f},{y + oy:.2f}" for x, y in f)}" fill="#fff" stroke="#000" stroke-width="{sw:.2f}" stroke-linejoin="round"/>' for f in faces]
+    return svg(round(w_, 1), round(h_, 1), "".join(p))
 
 def squares_net(cells, cell=CELL):
     return [[(c * cell, r * cell), ((c + 1) * cell, r * cell), ((c + 1) * cell, (r + 1) * cell), (c * cell, (r + 1) * cell)] for (c, r) in sorted(cells)]

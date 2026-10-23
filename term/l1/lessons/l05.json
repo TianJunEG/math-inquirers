@@ -2494,6 +2494,16 @@
             "Take {g} from {b}. That leaves {r}.",
             "10 + {r} = {ans}."
           ]
+        },
+        "fig": {
+          "type": "ten_frame",
+          "filled": "{a}",
+          "extra": "{b}"
+        },
+        "fig_base": {
+          "type": "ten_frame",
+          "filled": 8,
+          "extra": 5
         }
       },
       {

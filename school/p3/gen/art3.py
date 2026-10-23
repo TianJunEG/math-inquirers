@@ -133,7 +133,7 @@ def stopwatch_svg(sec):
     a = math.radians(sec * 6)
     p.append(f'<line class="needle" x1="24" y1="24" x2="{cx+14.2*math.sin(a):.3f}" y2="{cy-14.2*math.cos(a):.3f}" stroke="#000" stroke-width="1.0" stroke-linecap="round"/>')
     p.append(f'<circle cx="{cx}" cy="{cy}" r="1.6" fill="#000"/>')
-    p.append(f'<text x="{cx}" y="{cy+9.5}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.6" fill="#000">seconds</text>')
+    p.append(f'<text x="{cx}" y="{cy + (9.5 if math.cos(a) > -0.2 else -9.5)}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.6" fill="#000">seconds</text>')   # the word goes on the side away from the hand
     return svg(48, 48, "".join(p))
 
 def read_stopwatch(s):

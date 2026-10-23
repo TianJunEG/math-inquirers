@@ -48,7 +48,7 @@ def page12():
     cards = [qcard(i + 1, f"<p>{q}</p>", ABX, cls="span2 inl" if i >= 2 else "") for i, q in enumerate(qs)]
     P = code_page(12, 5112, "Division", 2, "Division: 4 digits divided by 1 digit", STRAND_NU,
         "3.2 (division algorithm, up to 4 digits by 1 digit)", ["FO3.2"], "Code-breaker (division algorithm)",
-        ["Divide. Check with multiplication.", "Write the answer in the box.", INSTR_CODE], qgrid(cards, 2), ans, table, word, 0, 9999,
+        ["Divide. Check with multiplication.", "Write the answer in the box.", INSTR_CODE], qgrid(cards, 2, "work"), ans, table, word, 0, 9999,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
         "Six divisions of a 4-digit number by a 1-digit number: three plain (one with a zero in the answer, one exact and one that asks only for the remainder) and three short stories (share equally, how many days, how many full packs with a remainder). The decoy letters stand for the usual slips: leaving a zero out of the answer, giving the quotient where the remainder was asked, or adding 1 for the left-over stickers when the question asks for full packs. A box left blank gives no letter and the check cannot see it.",
         domain=dom, ps=True)
@@ -219,7 +219,7 @@ def page15():
         "1.1 (mixed numbers, improper fractions and their relationship)", ["MI1.1"], "Choice table (number lines)",
         ["Read the number the arrow points to.", "Circle the letter of the right fraction.", "Write the six letters in the boxes."], rows, word, letters, truth_letters,
         "; ".join(f"{i+1}) {w * d + r}/{d} = {w} {r}/{d}" for i, (a, d, w, r, wr) in enumerate(rows_data)),
-        "Six number lines marked in equal parts (halves, thirds, quarters, fifths, sixths or eighths) from 0, 1, 2 or 3, each three units long with an arrow. The pupil reads the arrow and picks the matching number from three, written as a mixed number or an improper fraction. The two wrong choices are the next or the previous mark, a whole number that is one too many or too few, the fraction part without the whole number, or the part counted from the other end. The letters of the right choices, read down the rows, spell the word; every other way of choosing was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.")
+        "Six number lines, each three units long, from 0 or from 1, marked in equal parts (the printed lines use halves, quarters and eighths) with an arrow. The pupil reads the arrow and picks the matching number from three, written as a mixed number or an improper fraction. The two wrong choices are the next or the previous mark, a whole number that is one too many or too few, the fraction part without the whole number, or the part counted from the other end. The letters of the right choices, read down the rows, spell the word; every other way of choosing was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.")
     solved = []
     for content, opts in rows_of(P["body"]):
         val = A4.read_numline(content)
