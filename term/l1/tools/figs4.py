@@ -1,0 +1,135 @@
+"""Diagram upgrade figures (Diagram fixes batch, 23 Oct 2026): picture-symbol icons batch 3, balance, clock_row, measure strip helpers,
+combos, bead strings, labelled panels. Nothing here replaces figs2 / figs3 / svg.py: those call into this module for the new names.
+
+Conventions as figs2/figs3: an inline <svg> that scales to its container, flat palette, navy outline, nothing depends on colour alone
+(shapes and patterns differ), no bare dots as picture symbols.
+"""
+import math
+
+import figs2
+from figs2 import NAVY, TEAL, YEL, SKY, SOFT, RED, MINT, FONT, SW, _o, _svg, _esc, token_svg, icon, SKIN
+
+GREEN = '#3DBE7A'; BLUE = '#3B6FC9'; ORANGE = '#F28C38'; PINK = '#FF8FB1'; BROWN = '#6B4226'; GREYF = '#C9D2E3'; PURPLE = '#7B4FB5'
+
+
+# ------------------------------------------------------------------ icons batch 3 (64 x 64 box)
+
+def icon_body(n):
+    o = _o
+    if n == 'cat':
+        return (f'<polygon points="12,26 14,4 28,16" {o(ORANGE)}/><polygon points="52,26 50,4 36,16" {o(ORANGE)}/>'
+                f'<ellipse cx="32" cy="36" rx="23" ry="20" {o(ORANGE)}/><circle cx="24" cy="32" r="3.2" fill="{NAVY}"/><circle cx="40" cy="32" r="3.2" fill="{NAVY}"/>'
+                f'<polygon points="29,39 35,39 32,43" fill="{NAVY}"/><path d="M32 43 Q27 48 23 45 M32 43 Q37 48 41 45" fill="none" stroke="{NAVY}" stroke-width="2.2" stroke-linecap="round"/>'
+                f'<path d="M4 38 L18 40 M4 46 L18 44 M60 38 L46 40 M60 46 L46 44" fill="none" stroke="{NAVY}" stroke-width="2" stroke-linecap="round"/>')
+    if n == 'pear':
+        return (f'<path d="M32 10 C42 10 42 24 46 32 C54 42 50 58 32 58 C14 58 10 42 18 32 C22 24 22 10 32 10 Z" {o("#B5D86A")}/>'
+                f'<path d="M32 10 C32 6 34 3 38 2" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round"/><path d="M22 44 C22 50 26 53 30 53" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>')
+    if n == 'plum':
+        return (f'<circle cx="32" cy="36" r="23" {o("#8E4FB8")}/><path d="M32 14 C28 24 28 44 32 58" fill="none" stroke="{NAVY}" stroke-width="2"/>'
+                f'<path d="M32 14 C32 9 34 6 38 4" fill="none" stroke="{NAVY}" stroke-width="3" stroke-linecap="round"/><path d="M36 10 C42 3 52 5 54 8 C50 15 41 15 36 10 Z" {o(GREEN)}/>'
+                f'<path d="M18 30 C19 25 23 22 27 22" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>')
+    if n == 'fig':
+        return (f'<path d="M32 10 C38 10 40 16 42 24 C52 34 52 56 32 58 C12 56 12 34 22 24 C24 16 26 10 32 10 Z" {o("#9C6BB5")}/>'
+                f'<path d="M32 12 V58 M24 28 C22 40 24 50 28 56 M40 28 C42 40 40 50 36 56" fill="none" stroke="{NAVY}" stroke-width="1.8" opacity=".55"/><rect x="29" y="4" width="6" height="8" rx="2" {o(GREEN)}/>')
+    if n == 'orange':
+        return (f'<circle cx="32" cy="34" r="24" {o("#F7A12E")}/><circle cx="32" cy="12" r="2.6" fill="{NAVY}"/><path d="M34 11 C40 4 50 6 52 9 C48 15 40 15 34 11 Z" {o(GREEN)}/>'
+                f'<path d="M16 28 C17 23 21 20 25 20" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>'
+                + ''.join(f'<circle cx="{x}" cy="{y}" r="1.4" fill="{NAVY}" opacity=".5"/>' for x, y in ((24, 36), (38, 30), (42, 44), (28, 48), (34, 40))))
+    if n == 'pawn':       # chess piece
+        return (f'<circle cx="32" cy="16" r="11" {o("#fff")}/><path d="M24 26 H40 L44 46 H20 Z" {o("#fff")}/><rect x="14" y="46" width="36" height="8" rx="3" {o(NAVY)}/>'
+                f'<line x1="22" y1="26" x2="42" y2="26" stroke="{NAVY}" stroke-width="3"/>')
+    if n == 'die':        # ludo die
+        pips = ((20, 20), (44, 20), (32, 32), (20, 44), (44, 44))
+        return f'<rect x="6" y="6" width="52" height="52" rx="9" {o("#fff")}/>' + ''.join(f'<circle cx="{x}" cy="{y}" r="5" fill="{RED}"/>' for x, y in pips)
+    if n == 'card':       # playing card
+        return (f'<rect x="12" y="4" width="40" height="56" rx="6" {o("#fff")}/><text x="20" y="24" font-size="16" font-weight="800" fill="{RED}" font-family="{FONT}">A</text>'
+                f'<path d="M32 50 C20 42 22 32 28 34 C30 35 32 37 32 38 C32 37 34 35 36 34 C42 32 44 42 32 50 Z" fill="{RED}" stroke="{NAVY}" stroke-width="1.6"/>')
+    if n == 'hat':
+        return (f'<ellipse cx="32" cy="46" rx="29" ry="9" {o("#3B6FC9")}/><path d="M14 44 C14 14 50 14 50 44 Z" {o("#3B6FC9")}/><rect x="14" y="36" width="36" height="7" {o(YEL)}/>')
+    if n == 'stone':
+        return (f'<path d="M8 46 C6 32 16 18 30 16 C44 14 58 24 56 40 C56 50 46 54 32 54 C20 54 10 52 8 46 Z" {o("#B8BFCC")}/>'
+                f'<path d="M20 30 C24 26 30 25 34 26" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="42" cy="42" r="1.8" fill="{NAVY}" opacity=".5"/><circle cx="26" cy="44" r="1.8" fill="{NAVY}" opacity=".5"/>')
+    if n == 'feather':
+        return (f'<path d="M12 56 C8 30 26 8 56 6 C54 34 38 52 12 56 Z" {o("#7FC4E8")}/><path d="M10 58 C22 44 34 30 52 10" fill="none" stroke="{NAVY}" stroke-width="2.6" stroke-linecap="round"/>'
+                f'<path d="M24 40 L16 36 M32 32 L22 26 M40 24 L32 16 M30 40 L38 44 M38 32 L46 36" fill="none" stroke="{NAVY}" stroke-width="1.8" stroke-linecap="round"/>')
+    if n == 'mint':
+        return (f'<circle cx="32" cy="32" r="25" {o("#fff")}/>' + ''.join(f'<path d="M32 32 L{32 + 24 * math.cos(math.radians(a)):.1f} {32 + 24 * math.sin(math.radians(a)):.1f} A24 24 0 0 1 {32 + 24 * math.cos(math.radians(a + 30)):.1f} {32 + 24 * math.sin(math.radians(a + 30)):.1f} Z" fill="{RED}"/>' for a in range(0, 360, 60))
+                + f'<circle cx="32" cy="32" r="25" fill="none" stroke="{NAVY}" stroke-width="{SW}"/>')
+    if n == 'toffee':
+        return (f'<polygon points="2,16 18,32 2,48" {o("#C98B3C")}/><polygon points="62,16 46,32 62,48" {o("#C98B3C")}/><rect x="14" y="18" width="36" height="28" rx="6" {o("#E3B15A")}/>'
+                f'<path d="M20 26 H44 M20 32 H44 M20 38 H44" stroke="#fff" stroke-width="2" opacity=".8"/>')
+    if n == 'gum':        # gumball
+        return (f'<circle cx="32" cy="30" r="22" {o("#7ED6C0")}/><path d="M18 24 C20 18 25 14 30 14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>'
+                f'<rect x="22" y="52" width="20" height="8" rx="3" {o(NAVY)}/>')
+    if n == 'rose':
+        return (f'<line x1="32" y1="38" x2="32" y2="62" stroke="#2F9E5B" stroke-width="4"/><path d="M32 52 C40 50 46 54 48 58 C40 60 34 58 32 52 Z" {o(GREEN)}/>'
+                f'<circle cx="32" cy="24" r="20" {o("#E0455F")}/><path d="M32 24 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0" fill="none" stroke="{NAVY}" stroke-width="2.4" stroke-linecap="round"/>')
+    if n == 'daisy':
+        pet = ''.join(f'<ellipse cx="32" cy="12" rx="5.5" ry="11" transform="rotate({a} 32 26)" {o("#fff")}/>' for a in range(0, 360, 40))
+        return f'<line x1="32" y1="38" x2="32" y2="62" stroke="#2F9E5B" stroke-width="4"/>{pet}<circle cx="32" cy="26" r="8" {o(YEL)}/>'
+    if n == 'tulip':
+        return (f'<line x1="32" y1="36" x2="32" y2="62" stroke="#2F9E5B" stroke-width="4"/><path d="M26 54 C18 50 14 42 16 36 C22 40 26 46 28 54 Z" {o(GREEN)}/>'
+                f'<path d="M14 10 L22 20 L32 6 L42 20 L50 10 C54 30 46 40 32 40 C18 40 10 30 14 10 Z" {o("#F2A93B")}/>')
+    if n == 'bowl':
+        return (f'<path d="M4 28 H60 C60 46 48 56 32 56 C16 56 4 46 4 28 Z" {o("#fff")}/><path d="M12 36 H52" stroke="{TEAL}" stroke-width="4"/><ellipse cx="32" cy="28" rx="28" ry="5" {o("#EAF6FB")}/>')
+    if n == 'stamp':
+        holes = ''.join(f'<circle cx="{x}" cy="{y}" r="2.6" fill="#fff" stroke="{NAVY}" stroke-width="1.4"/>' for x, y in [(8 + 8 * k, 4) for k in range(7)] + [(8 + 8 * k, 60) for k in range(7)] + [(4, 8 + 8 * k) for k in range(7)] + [(60, 8 + 8 * k) for k in range(7)])
+        return f'<rect x="4" y="4" width="56" height="56" {o("#FBE9B7")}/>' + holes + f'<rect x="13" y="13" width="38" height="38" {o("#fff")}/><polygon points="32,18 36,28 46,28 38,35 41,45 32,39 23,45 26,35 18,28 28,28" {o(RED)}/>'
+    if n == 'duck':
+        return (f'<ellipse cx="28" cy="42" rx="24" ry="16" {o(YEL)}/><circle cx="42" cy="22" r="13" {o(YEL)}/><polygon points="52,22 63,26 52,30" {o(ORANGE)}/><circle cx="44" cy="19" r="2.6" fill="{NAVY}"/>'
+                f'<path d="M12 42 C18 34 30 34 34 44 C26 48 16 48 12 42 Z" fill="#F2B500" stroke="{NAVY}" stroke-width="2"/>')
+    if n == 'goose':
+        return (f'<ellipse cx="28" cy="46" rx="24" ry="14" {o("#fff")}/><path d="M42 40 C50 34 40 22 42 14" fill="none" stroke="{NAVY}" stroke-width="14" stroke-linecap="round"/><path d="M42 40 C50 34 40 22 42 14" fill="none" stroke="#fff" stroke-width="9.6" stroke-linecap="round"/>'
+                f'<circle cx="42" cy="12" r="8" {o("#fff")}/><polygon points="49,10 60,13 49,16" {o(ORANGE)}/><circle cx="43" cy="10" r="2.2" fill="{NAVY}"/>')
+    if n == 'hen':
+        return (f'<ellipse cx="28" cy="40" rx="23" ry="18" {o("#C98B5A")}/><circle cx="44" cy="20" r="11" {o("#C98B5A")}/><path d="M38 10 L40 4 L44 9 L47 3 L50 10 Z" {o(RED)}/>'
+                f'<polygon points="53,20 62,23 53,26" {o(YEL)}/><circle cx="46" cy="18" r="2.4" fill="{NAVY}"/><path d="M12 38 C20 30 32 32 34 42 C26 48 16 46 12 38 Z" fill="#A66B3C" stroke="{NAVY}" stroke-width="2"/><path d="M4 30 L12 38 L4 46" fill="{RED}" stroke="{NAVY}" stroke-width="2" opacity="0"/>')
+    if n == 'kite':
+        return (f'<polygon points="32,2 54,26 32,50 10,26" {o("#E4572E")}/><path d="M32 2 V50 M10 26 H54" stroke="{NAVY}" stroke-width="2"/><path d="M32 50 C26 54 38 58 30 62" fill="none" stroke="{NAVY}" stroke-width="2.4"/>')
+    if n == 'dog':
+        return (f'<path d="M10 14 C2 16 2 36 12 38 Z" {o("#8A5A2B")}/><path d="M54 14 C62 16 62 36 52 38 Z" {o("#8A5A2B")}/><ellipse cx="32" cy="34" rx="21" ry="22" {o("#D9A15F")}/>'
+                f'<ellipse cx="32" cy="44" rx="11" ry="9" {o("#F3DDB4")}/><ellipse cx="32" cy="40" rx="4.6" ry="3.4" fill="{NAVY}"/><circle cx="23" cy="28" r="3" fill="{NAVY}"/><circle cx="41" cy="28" r="3" fill="{NAVY}"/>'
+                f'<path d="M32 43 V48 M26 49 Q32 54 38 49" fill="none" stroke="{NAVY}" stroke-width="2.2" stroke-linecap="round"/>')
+    if n == 'kite_blue':
+        return (f'<polygon points="32,2 54,26 32,50 10,26" {o("#4D8FE0")}/><path d="M32 2 V50 M10 26 H54" stroke="#fff" stroke-width="2.4"/><circle cx="32" cy="26" r="4" fill="#fff" stroke="{NAVY}" stroke-width="1.6"/><path d="M32 50 C26 54 38 58 30 62" fill="none" stroke="{NAVY}" stroke-width="2.4"/>')
+    if n == 'book_sc':
+        return (f'<rect x="8" y="6" width="48" height="52" rx="4" {o("#7B4FB5")}/><rect x="14" y="10" width="38" height="44" rx="3" {o("#fff")}/>'
+                f'<path d="M28 18 H36 M30 18 V28 L22 42 C20 46 22 48 26 48 H38 C42 48 44 46 42 42 L34 28 V18" fill="#BFE3DC" stroke="{NAVY}" stroke-width="2.2" stroke-linejoin="round"/>')
+    if n == 'egg':
+        return f'<path d="M32 4 C46 4 54 28 54 38 C54 50 44 60 32 60 C20 60 10 50 10 38 C10 28 18 4 32 4 Z" {o("#FFF6E0")}/><path d="M20 30 C21 24 24 18 28 15" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>'
+    if n.startswith('fish_'):
+        col, pat = {'fish_red': (RED, 'stripe'), 'fish_blue': ('#4D8FE0', 'spot'), 'fish_gold': ('#F2B500', 'plain')}[n]
+        deco = ''
+        if pat == 'stripe': deco = f'<path d="M22 18 V46 M30 17 V47 M38 20 V44" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>'
+        if pat == 'spot': deco = ''.join(f'<circle cx="{x}" cy="{y}" r="3" fill="#fff"/>' for x, y in ((24, 36), (32, 26), (36, 38), (28, 44)))
+        return f'<polygon points="46,32 62,18 62,46" {o(col)}/><ellipse cx="28" cy="32" rx="24" ry="16" {o(col)}/>{deco}<circle cx="15" cy="28" r="3.2" fill="{NAVY}"/>'
+    if n.startswith('book_'):
+        cover = {'book_m': BLUE, 'book_s': '#2F9E5B', 'book_a': ORANGE}[n]
+        mark = {'book_m': f'<path d="M32 18 V34 M24 26 H40" stroke="{NAVY}" stroke-width="4" stroke-linecap="round"/><path d="M24 42 H40" stroke="{NAVY}" stroke-width="4" stroke-linecap="round"/>',
+                'book_s': f'<path d="M32 38 C20 30 22 20 28 22 C30 23 32 25 32 26 C32 25 34 23 36 22 C42 20 44 30 32 38 Z" fill="{RED}" stroke="{NAVY}" stroke-width="1.6"/>',
+                'book_a': f'<circle cx="26" cy="26" r="5" fill="{RED}"/><circle cx="38" cy="26" r="5" fill="{BLUE}"/><circle cx="32" cy="38" r="5" fill="{YEL}"/>'}[n]
+        return f'<rect x="8" y="6" width="48" height="52" rx="4" {o(cover)}/><rect x="14" y="10" width="38" height="44" rx="3" {o("#fff")}/>' + mark
+    if n == 'crab':
+        legs = ''.join(f'<line x1="{x}" y1="40" x2="{x + s * 8}" y2="54" stroke="{NAVY}" stroke-width="2.6" stroke-linecap="round"/>' for x in (22, 28, 36, 42) for s in ((-1 if x < 32 else 1),))
+        return (legs + f'<ellipse cx="32" cy="38" rx="20" ry="13" {o("#E4572E")}/><path d="M14 34 C4 30 4 14 14 16 C18 20 16 26 18 30 Z" {o("#E4572E")}/><path d="M50 34 C60 30 60 14 50 16 C46 20 48 26 46 30 Z" {o("#E4572E")}/>'
+                f'<circle cx="26" cy="30" r="3" fill="#fff" stroke="{NAVY}" stroke-width="1.6"/><circle cx="38" cy="30" r="3" fill="#fff" stroke="{NAVY}" stroke-width="1.6"/>')
+    if n == 'snail':
+        return (f'<path d="M4 50 C4 46 10 44 56 44 C60 44 60 50 56 52 L8 52 C5 52 4 51 4 50 Z" {o("#F1D9AE")}/><circle cx="34" cy="30" r="15" {o("#C98B5A")}/><path d="M34 30 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0" fill="none" stroke="{NAVY}" stroke-width="2.2"/>'
+                f'<path d="M54 44 V30 M60 44 V32" stroke="{NAVY}" stroke-width="2.6" stroke-linecap="round"/><circle cx="54" cy="29" r="2.4" fill="{NAVY}"/><circle cx="60" cy="31" r="2.4" fill="{NAVY}"/>')
+    if n == 'crayon':
+        return (f'<g transform="rotate(-45 32 32)"><rect x="8" y="25" width="38" height="14" {o("#E4572E")}/><polygon points="46,25 58,32 46,39" {o("#E4572E")}/><rect x="14" y="25" width="6" height="14" fill="#fff" opacity=".7"/><rect x="26" y="25" width="6" height="14" fill="#fff" opacity=".7"/></g>')
+    if n == 'shirt':
+        return f'<path d="M20 8 L4 20 L12 32 L18 28 V56 H46 V28 L52 32 L60 20 L44 8 C40 14 24 14 20 8 Z" {o("#3B6FC9")}/>'
+    if n == 'shorts':
+        return f'<path d="M10 12 H54 L58 54 H36 L32 34 L28 54 H6 Z" {o("#F28C38")}/><line x1="10" y1="20" x2="54" y2="20" stroke="{NAVY}" stroke-width="2.4"/>'
+    if n == 'seat':
+        return f'<rect x="14" y="6" width="36" height="30" rx="6" {o("#3B6FC9")}/><rect x="8" y="32" width="48" height="14" rx="5" {o("#5C8DDB")}/><line x1="16" y1="46" x2="16" y2="58" stroke="{NAVY}" stroke-width="4" stroke-linecap="round"/><line x1="48" y1="46" x2="48" y2="58" stroke="{NAVY}" stroke-width="4" stroke-linecap="round"/>'
+    if n == 'pocket':
+        return f'<path d="M8 10 H56 V40 C56 52 44 58 32 58 C20 58 8 52 8 40 Z" {o("#5C8DDB")}/><path d="M8 18 H56" stroke="{NAVY}" stroke-width="2.4" stroke-dasharray="5 3"/>'
+    if n == 'page':
+        return f'<path d="M12 4 H42 L54 16 V60 H12 Z" {o("#fff")}/><path d="M42 4 V16 H54" fill="none" stroke="{NAVY}" stroke-width="2.4"/><path d="M20 28 H46 M20 38 H46 M20 48 H38" stroke="{NAVY}" stroke-width="2.4"/>'
+    raise ValueError('unknown icon ' + n)
+
+
+ICONS4 = ['dog', 'kite_blue', 'book_sc', 'cat', 'pear', 'plum', 'fig', 'orange', 'pawn', 'die', 'card', 'hat', 'stone', 'feather', 'mint', 'toffee', 'gum', 'rose', 'daisy', 'tulip', 'bowl', 'stamp', 'duck', 'goose', 'hen',
+          'kite', 'egg', 'fish_red', 'fish_blue', 'fish_gold', 'book_m', 'book_s', 'book_a', 'crab', 'snail', 'crayon', 'shirt', 'shorts', 'seat', 'pocket', 'page']

@@ -224,10 +224,10 @@ def clock_svg(h, m):
         p.append(f'<line x1="{cx+20*math.sin(a_):.2f}" y1="{cy-20*math.cos(a_):.2f}" x2="{cx+17.4*math.sin(a_):.2f}" y2="{cy-17.4*math.cos(a_):.2f}" stroke="#000" stroke-width="0.5"/>')
     for k in range(1, 13):
         a_ = math.radians(k * 30)
-        p.append(f'<text x="{cx+14.2*math.sin(a_):.2f}" y="{cy-14.2*math.cos(a_)+1.3:.2f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="3.7" fill="#000">{k}</text>')
+        p.append(f'<text x="{cx+13.9*math.sin(a_):.2f}" y="{cy-13.9*math.cos(a_):.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="4.4" fill="#000">{k}</text>')
     ha = math.radians(30 * (h % 12) + m * 0.5); ma = math.radians(m * 6)
-    p.append(f'<line class="hour" x1="{cx}" y1="{cy}" x2="{cx+8*math.sin(ha):.3f}" y2="{cy-8*math.cos(ha):.3f}" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>')
-    p.append(f'<line class="minute" x1="{cx}" y1="{cy}" x2="{cx+12*math.sin(ma):.3f}" y2="{cy-12*math.cos(ma):.3f}" stroke="#000" stroke-width="0.7" stroke-linecap="round"/>')
+    p.append(f'<line class="hour" x1="{cx}" y1="{cy}" x2="{cx+7*math.sin(ha):.3f}" y2="{cy-7*math.cos(ha):.3f}" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>')
+    p.append(f'<line class="minute" x1="{cx}" y1="{cy}" x2="{cx+11.6*math.sin(ma):.3f}" y2="{cy-11.6*math.cos(ma):.3f}" stroke="#000" stroke-width="0.7" stroke-linecap="round"/>')
     p.append(f'<circle cx="{cx}" cy="{cy}" r="1.2" fill="#000"/>')
     return svg(44, 44, "".join(p))
 

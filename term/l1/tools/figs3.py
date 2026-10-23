@@ -68,7 +68,8 @@ def icon_body(n):
         return f'<circle cx="28" cy="28" r="16" {o("#fff")}/><line x1="40" y1="40" x2="56" y2="56" stroke="{NAVY}" stroke-width="7" stroke-linecap="round"/>'
     if n == 't_steps':
         return f'<polyline points="8,52 8,40 22,40 22,28 36,28 36,16 52,16" fill="none" stroke="{NAVY}" stroke-width="5" stroke-linejoin="round"/><polygon points="48,8 58,16 48,24" {o(TEAL)}/>'
-    raise ValueError('unknown icon ' + n)
+    import figs4
+    return figs4.icon_body(n)
 
 
 ICONS3 = ['sun', 'moon', 'bed', 'bus', 'house', 'school', 'shop', 'bath', 'rubber', 'ruler', 'glue', 'shell', 'spoon', 'sock', 'shoe', 'button',
@@ -538,7 +539,7 @@ def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows
     cell=None picks the largest picture that keeps the figure about 640 units wide (at most 76, so a short graph has big pictures)."""
     rows = rows or []
     body = []; mx = max([math.ceil(r.get('n', 0)) for r in rows] + [1])
-    if label_w is None: label_w = max(100, 15 * max([len(str(r.get('label', ''))) for r in rows] + [4]) + 18) if orient == 'rows' else 0
+    if label_w is None: label_w = max(110, 19 * max([len(str(r.get('label', ''))) for r in rows] + [4]) + 22) if orient == 'rows' else 0
     if cell is None:
         cell = min(76, (640 - label_w) / mx) if orient == 'rows' else min(76, 640 / max(len(rows), 1) - 20)
         cell = max(cell, 44)
@@ -546,16 +547,17 @@ def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows
     def pic(i, x, y, r, k):
         if k in r.get('hide', ()):
             return f'<rect x="{x - cell * .4:.1f}" y="{y - cell * .4:.1f}" width="{cell * .8:.1f}" height="{cell * .8:.1f}" rx="8" fill="#fff" stroke="#8A94AD" stroke-width="2.6" stroke-dasharray="6 5"/>'
+        ic = r.get('icon', icon_name)
         frac = r['n'] - k
         if 0 < frac < 1:
             cid = f'cl{i}_{k}'
-            return f'<clipPath id="{cid}"><rect x="{x - cell / 2:.1f}" y="{y - cell / 2:.1f}" width="{cell / 2:.1f}" height="{cell:.1f}"/></clipPath><g clip-path="url(#{cid})">{icon(icon_name, x, y, cell * .9)}</g>'
-        return icon(icon_name, x, y, cell * .9)
+            return f'<clipPath id="{cid}"><rect x="{x - cell / 2:.1f}" y="{y - cell / 2:.1f}" width="{cell / 2:.1f}" height="{cell:.1f}"/></clipPath><g clip-path="url(#{cid})">{icon(ic, x, y, cell * .9)}</g>'
+        return icon(ic, x, y, cell * .9)
     if title: body.append(f'<text x="{(label_w + mx * cell) / 2 + 10:.0f}" y="32" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(title)}</text>')
     if orient == 'rows':
         for i, r in enumerate(rows):
             y = top + i * (cell + 10) + cell / 2
-            body.append(f'<text x="{label_w - 12}" y="{y + 9:.1f}" font-size="26" font-weight="800" text-anchor="end" fill="{NAVY}" font-family="{FONT}">{_esc(r["label"])}</text>')
+            body.append(f'<text x="{label_w - 12}" y="{y + 11:.1f}" font-size="32" font-weight="800" text-anchor="end" fill="{NAVY}" font-family="{FONT}">{_esc(r["label"])}</text>')
             body.append(f'<line x1="{label_w}" y1="{y + cell / 2 + 4:.1f}" x2="{label_w + mx * cell + 8}" y2="{y + cell / 2 + 4:.1f}" stroke="#C9D2E3" stroke-width="2"/>')
             if tally:
                 for g in range(math.ceil(r['n'] / 5)):
@@ -572,13 +574,17 @@ def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows
         for i, r in enumerate(rows):
             x = 20 + i * bw + bw / 2
             for k in range(math.ceil(r['n'])): body.append(pic(i, x, base - k * cell - cell / 2, r, k))
-            body.append(f'<text x="{x:.1f}" y="{base + 32}" font-size="24" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(r["label"])}</text>')
+            body.append(f'<text x="{x:.1f}" y="{base + 32}" font-size="28" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(r["label"])}</text>')
         body.append(f'<line x1="14" y1="{base + 2}" x2="{26 + len(rows) * bw}" y2="{base + 2}" stroke="{NAVY}" stroke-width="3"/>')
         W = 40 + len(rows) * bw; H = base + 48
     if key:
         kx = 12; ky = H + 6
-        body.append(icon(icon_name, kx + 24, ky + 26, 40) if not tally else '')
-        body.append(f'<text x="{kx + 54}" y="{ky + 34}" font-size="24" font-weight="800" fill="{NAVY}" font-family="{FONT}">{"each tally = 1" if tally else "= " + str(each)}</text>')
+        mixed = len({r.get('icon', icon_name) for r in rows}) > 1
+        if mixed and not tally:
+            body.append(f'<text x="{kx}" y="{ky + 34}" font-size="28" font-weight="800" fill="{NAVY}" font-family="{FONT}">Each picture = {each}</text>')
+        else:
+            body.append(icon(icon_name, kx + 24, ky + 26, 44) if not tally else '')
+            body.append(f'<text x="{kx + 58}" y="{ky + 36}" font-size="28" font-weight="800" fill="{NAVY}" font-family="{FONT}">{"each tally = 1" if tally else "= " + str(each)}</text>')
         H += 56
     return _svg(max(W, 300), H, ''.join(body), 'picture graph')
 

@@ -72,3 +72,18 @@ Page counts match the build report: Book 1 workbook/key/home pack 46/22/12, Book
 
 ## 7. Checks not done
 Did not view every answer-key and home-pack page of Books 6-8 as images (text content checked by script and read); did not solve the L29 kit mistake cards against a key (cards 45+28=63, 84-6=82, 53-20=73, 17+5=21 are wrong as printed; the other four are right, which fits "some right, some wrong").
+
+## 8. Fixes (23 Oct 2026, after the audit)
+Rebuilt L21, L25, L27, L30, L32, L35, L36, L39, L40 (validate 0 FAIL), then all 24 term books (colour) and their B&W versions. All page counts even.
+
+| Item | Status | What was done |
+|---|---|---|
+| 1 Book 7 p47 pair cards | Fixed | Cards now drawn to match: set 1 is 2 suns x3 and 5 suns x1 (same size), set 2 is 3 big suns and 1 small, set 3 is 3 striped suns and 1 dotted. The words were removed from the cards (they would also have told the answer). Lesson 35 verify check updated to read the card specs and check each set differs in exactly one thing. |
+| 2 Book 7 pp41-45 pattern fills | Fixed | Stripes, dots and hatch are now coarser and solid navy, and each pattern is anchored to its own tile, so identical tiles show identical dots (S6 A and D agree). Pattern ids are unique per figure. Same engine also rebuilt L27, L32 and L40 (they use tile patterns). |
+| 3 Book 6 p42-43 Quest gate 6 | Fixed | Text: "1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks." Picture shows 3 triangles numbered 1 2 3. Questions: 4 triangles use ___ sticks (9), 5 triangles use ___ sticks (11). Re-solved: 3, 5, 7, 9, 11. Key, tutor notes and read-aloud text updated; answers unchanged. |
+| 4 B&W bar-model numbers | Fixed | Numbers on bars now sit on a white pill (colour and B&W). Applied in the figure engine; rebuilt L25 and L39 (Book 5 pp35-38, Book 8 pp25, 28). Other lessons with bar models pick it up when next rebuilt. |
+| 5 Contents: Quest Log | Fixed | Contents pages list "Quest: Mi's Challenge Quest, page N, 4 pages" (Books 2, 4, 6, 8; the key and home pack list their Quest notes too). |
+| 6 L21 S3 duplicate labels | Fixed | The extra "Clock (1) Clock (2) Clock (3)" row is no longer printed; the (1)(2)(3) under the clocks stay. |
+| 7 Blue and purple paper people in B&W | Fixed | Blue shirt has white stripes, purple shirt white dots (also in colour). |
+| 8 Book 6 double blank end pages | Fixed | A stray extra blank after the Quest Log was removed: Books 2 and 6 workbooks are now 44 pages (22 sheets), was 46. Book 4 keeps its one blank (Quest Log starts on a front page). Kit backs still blank. docs/printing/quote_request.md updated for Books 2 and 6. |
+| Not touched | Not fixed | Items 9 to 16 and the L23 source `parts[].ans` note (Low, outside this brief). |

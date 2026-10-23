@@ -41,7 +41,7 @@ CSS_NEW += """
 .qrow .qt{flex:1}.qrow .ab{flex:none}
 .legend2{display:flex;align-items:center;gap:4mm;font-size:13pt;font-weight:700;justify-content:center}
 .purses{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm 4mm}
-.purse{border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2mm;display:flex;flex-direction:column;align-items:center;gap:1mm}
+.purse{border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2mm;display:flex;align-items:center;gap:1mm}
 .purse .ab{width:12mm;height:12mm}
 .board{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm 4mm}
 .bitem{border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2mm;display:flex;align-items:center;gap:2.5mm}
@@ -56,3 +56,10 @@ CSS_NEW += """
 .tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid #000;height:13mm;font-size:14pt;text-align:center;padding:0 3mm}.tt th{font-size:11pt;font-weight:800;height:9mm}.tt td .ab{width:20mm;height:12mm}
 .tm{font-family:'Fredoka';font-weight:600;font-size:19pt}.ev{font-size:11.5pt;font-weight:700}
 """
+CSS_NEW += """
+.purse{flex-direction:row;justify-content:space-between}.purse .ab{width:11mm;height:12mm}.qrow{padding:1mm 0}
+.bitem{padding:3mm 3mm}.bitem .bn{font-size:14pt}.bitem .bp{font-size:20pt}
+.buyer{padding:5mm 0;font-size:15pt}.buyer .wk{display:flex;align-items:center;gap:1.5mm;font-size:14pt}.buyer .wk .ab{width:13mm}.buyer .lt{font-size:10pt;font-weight:700}
+"""
+CSS_NEW += """.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 6mm}.qgrid .qrow{font-size:13.5pt}"""
+CSS_NEW += """.tcard svg{width:36mm;height:36mm}.tt td .no{margin:0 auto}.tt th,.tt td{padding:0 2.5mm}"""

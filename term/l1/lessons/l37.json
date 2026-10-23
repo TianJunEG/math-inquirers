@@ -464,21 +464,24 @@
         "rows": [
          {
           "label": "Shell",
-          "n": 4
+          "n": 4,
+          "icon": "shell"
          },
          {
           "label": "Crab",
-          "n": 2
+          "n": 2,
+          "icon": "crab"
          },
          {
           "label": "Fish",
-          "n": 3
+          "n": 3,
+          "icon": "fish"
          }
         ],
-        "icon": "counter",
         "title": "Mi's finds",
         "orient": "rows",
-        "size": "m"
+        "size": "m",
+        "icon": "shell"
        }
       ],
       [
@@ -633,7 +636,8 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "ball"
       },
       {
        "label": "Cars",
@@ -645,7 +649,8 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "car"
       },
       {
        "label": "Bikes",
@@ -657,12 +662,13 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "bike"
       }
      ],
-     "icon": "counter",
      "title": "Toys in the box",
-     "size": "m"
+     "size": "m",
+     "icon": "ball"
     },
     {
      "t": "chip",
@@ -683,20 +689,23 @@
      "rows": [
       {
        "label": "Balls",
-       "n": 5
+       "n": 5,
+       "icon": "ball"
       },
       {
        "label": "Cars",
-       "n": 3
+       "n": 3,
+       "icon": "car"
       },
       {
        "label": "Bikes",
-       "n": 4
+       "n": 4,
+       "icon": "bike"
       }
      ],
-     "icon": "counter",
      "title": "Toys in the box",
-     "size": "m"
+     "size": "m",
+     "icon": "ball"
     },
     {
      "t": "answer",
@@ -717,20 +726,23 @@
      "rows": [
       {
        "label": "Balls",
-       "n": 5
+       "n": 5,
+       "icon": "ball"
       },
       {
        "label": "Cars",
-       "n": 3
+       "n": 3,
+       "icon": "car"
       },
       {
        "label": "Bikes",
-       "n": 4
+       "n": 4,
+       "icon": "bike"
       }
      ],
-     "icon": "counter",
      "title": "Toys in the box",
-     "size": "m"
+     "size": "m",
+     "icon": "ball"
     },
     {
      "t": "chip",
@@ -751,20 +763,23 @@
      "rows": [
       {
        "label": "Balls",
-       "n": 5
+       "n": 5,
+       "icon": "ball"
       },
       {
        "label": "Cars",
-       "n": 3
+       "n": 3,
+       "icon": "car"
       },
       {
        "label": "Bikes",
-       "n": 4
+       "n": 4,
+       "icon": "bike"
       }
      ],
-     "icon": "counter",
      "title": "Toys in the box",
-     "size": "m"
+     "size": "m",
+     "icon": "ball"
     },
     {
      "t": "answer",
@@ -785,20 +800,23 @@
      "rows": [
       {
        "label": "Balls",
-       "n": 5
+       "n": 5,
+       "icon": "ball"
       },
       {
        "label": "Cars",
-       "n": 3
+       "n": 3,
+       "icon": "car"
       },
       {
        "label": "Bikes",
-       "n": 4
+       "n": 4,
+       "icon": "bike"
       }
      ],
-     "icon": "counter",
      "title": "Toys in the box",
-     "size": 62
+     "size": 62,
+     "icon": "ball"
     },
     {
      "t": "list",
@@ -841,11 +859,13 @@
      "rows": [
       {
        "label": "Plums",
-       "n": 6
+       "n": 6,
+       "icon": "plum"
       },
       {
        "label": "Figs",
-       "n": 5
+       "n": 5,
+       "icon": "fig"
       },
       {
        "label": "Pears",
@@ -858,12 +878,13 @@
         4,
         5,
         6
-       ]
+       ],
+       "icon": "pear"
       }
      ],
-     "icon": "counter",
      "title": "Fruit in a bowl",
-     "size": "m"
+     "size": "m",
+     "icon": "plum"
     },
     {
      "t": "chip",
@@ -884,20 +905,23 @@
      "rows": [
       {
        "label": "Plums",
-       "n": 6
+       "n": 6,
+       "icon": "plum"
       },
       {
        "label": "Figs",
-       "n": 5
+       "n": 5,
+       "icon": "fig"
       },
       {
        "label": "Pears",
-       "n": 3
+       "n": 3,
+       "icon": "pear"
       }
      ],
-     "icon": "counter",
      "title": "Fruit in a bowl",
-     "size": "m"
+     "size": "m",
+     "icon": "plum"
     },
     {
      "t": "answer",
@@ -1175,13 +1199,14 @@
      "rows": [
       {
        "label": "Shells",
-       "n": 5
+       "n": 5,
+       "icon": "shell"
       }
      ],
-     "icon": "counter",
      "title": "Mi's shells",
      "each": 2,
-     "size": "m"
+     "size": "m",
+     "icon": "shell"
     },
     {
      "t": "chip",
@@ -2014,7 +2039,7 @@
      "icon": "counter",
      "tally": true,
      "key": false,
-     "size": 56
+     "size": 62
     }
    },
    {
@@ -2053,21 +2078,24 @@
      "rows": [
       {
        "label": "Cats",
-       "n": 7
+       "n": 7,
+       "icon": "cat"
       },
       {
        "label": "Fish",
-       "n": 4
+       "n": 4,
+       "icon": "fish"
       },
       {
        "label": "Birds",
-       "n": 6
+       "n": 6,
+       "icon": "bird"
       }
      ],
-     "icon": "counter",
      "title": "Pets in a shop",
      "key": false,
-     "size": 46
+     "size": 60,
+     "icon": "cat"
     }
    },
    {
@@ -2101,7 +2129,8 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "apple"
       },
       {
        "label": "Pears",
@@ -2113,7 +2142,8 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "pear"
       },
       {
        "label": "Plums",
@@ -2125,12 +2155,13 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "plum"
       }
      ],
-     "icon": "counter",
      "title": "Fruit Ali ate",
-     "size": 72
+     "size": 72,
+     "icon": "apple"
     }
    },
    {
@@ -2174,21 +2205,24 @@
      "rows": [
       {
        "label": "Chess",
-       "n": 3
+       "n": 3,
+       "icon": "pawn"
       },
       {
        "label": "Ludo",
-       "n": 5
+       "n": 5,
+       "icon": "die"
       },
       {
        "label": "Cards",
-       "n": 8
+       "n": 8,
+       "icon": "card"
       }
      ],
-     "icon": "counter",
      "title": "Games children play",
      "key": false,
-     "size": 50
+     "size": 62,
+     "icon": "pawn"
     }
    },
    {
@@ -2343,21 +2377,24 @@
      "rows": [
       {
        "label": "Shells",
-       "n": 6
+       "n": 6,
+       "icon": "shell"
       },
       {
        "label": "Stones",
-       "n": 2
+       "n": 2,
+       "icon": "stone"
       },
       {
        "label": "Feathers",
-       "n": 4
+       "n": 4,
+       "icon": "feather"
       }
      ],
-     "icon": "counter",
      "title": "Mi's beach box",
      "key": false,
-     "size": 40
+     "size": 56,
+     "icon": "shell"
     }
    },
    {
@@ -2396,11 +2433,13 @@
      "rows": [
       {
        "label": "Maths",
-       "n": 4
+       "n": 4,
+       "icon": "book_m"
       },
       {
        "label": "Story",
-       "n": 7
+       "n": 7,
+       "icon": "book_s"
       },
       {
        "label": "Art",
@@ -2414,13 +2453,14 @@
         5,
         6,
         7
-       ]
+       ],
+       "icon": "book_a"
       }
      ],
-     "icon": "counter",
      "title": "Books on a shelf",
      "key": false,
-     "size": 50
+     "size": 62,
+     "icon": "book_m"
     }
    }
   ],
@@ -2461,7 +2501,8 @@
      "rows": [
       {
        "label": "Mints",
-       "n": 4
+       "n": 4,
+       "icon": "mint"
       },
       {
        "label": "Toffees",
@@ -2472,17 +2513,19 @@
         2,
         3,
         4
-       ]
+       ],
+       "icon": "toffee"
       },
       {
        "label": "Gums",
-       "n": 3.5
+       "n": 3.5,
+       "icon": "gum"
       }
      ],
-     "icon": "counter",
      "title": "Mei's sweets",
      "each": 2,
-     "size": 52
+     "size": 62,
+     "icon": "mint"
     }
    },
    {
@@ -2539,20 +2582,23 @@
      "rows": [
       {
        "label": "Roses",
-       "n": 5
+       "n": 5,
+       "icon": "rose"
       },
       {
        "label": "Daisies",
-       "n": 3
+       "n": 3,
+       "icon": "daisy"
       },
       {
        "label": "Tulips",
-       "n": 9
+       "n": 9,
+       "icon": "tulip"
       }
      ],
-     "icon": "counter",
      "title": "Flowers in a garden",
-     "size": 48
+     "size": 60,
+     "icon": "rose"
     }
    }
   ],
@@ -2782,32 +2828,36 @@
      "rows": [
       {
        "label": "Cats",
-       "n": "{a}"
+       "n": "{a}",
+       "icon": "cat"
       },
       {
        "label": "Dogs",
-       "n": "{b}"
+       "n": "{b}",
+       "icon": "dog"
       }
      ],
-     "icon": "counter",
      "title": "Pets",
-     "size": "m"
+     "size": "m",
+     "icon": "cat"
     },
     "fig_base": {
      "type": "picture_graph",
      "rows": [
       {
        "label": "Cats",
-       "n": 7
+       "n": 7,
+       "icon": "cat"
       },
       {
        "label": "Dogs",
-       "n": 4
+       "n": 4,
+       "icon": "dog"
       }
      ],
-     "icon": "counter",
      "title": "Pets",
-     "size": "m"
+     "size": "m",
+     "icon": "cat"
     },
     "tpl": {
      "vars": {
@@ -2859,40 +2909,46 @@
      "rows": [
       {
        "label": "Row 1",
-       "n": "{a}"
+       "n": "{a}",
+       "icon": "child1"
       },
       {
        "label": "Row 2",
-       "n": "{b}"
+       "n": "{b}",
+       "icon": "child2"
       },
       {
        "label": "Row 3",
-       "n": "{c}"
+       "n": "{c}",
+       "icon": "child3"
       }
      ],
-     "icon": "counter",
      "title": "Children",
-     "size": "m"
+     "size": "m",
+     "icon": "child1"
     },
     "fig_base": {
      "type": "picture_graph",
      "rows": [
       {
        "label": "Row 1",
-       "n": 3
+       "n": 3,
+       "icon": "child1"
       },
       {
        "label": "Row 2",
-       "n": 2
+       "n": 2,
+       "icon": "child2"
       },
       {
        "label": "Row 3",
-       "n": 4
+       "n": 4,
+       "icon": "child3"
       }
      ],
-     "icon": "counter",
      "title": "Children",
-     "size": "m"
+     "size": "m",
+     "icon": "child1"
     },
     "tpl": {
      "vars": {
@@ -2956,20 +3012,23 @@
      "rows": [
       {
        "label": "Spoons",
-       "n": 5
+       "n": 5,
+       "icon": "spoon"
       },
       {
        "label": "Socks",
-       "n": 2
+       "n": 2,
+       "icon": "sock"
       },
       {
        "label": "Shoes",
-       "n": 4
+       "n": 4,
+       "icon": "shoe"
       }
      ],
-     "icon": "counter",
      "title": "Things in a bag",
-     "size": "m"
+     "size": "m",
+     "icon": "spoon"
     }
    },
    {
@@ -3083,11 +3142,13 @@
      "rows": [
       {
        "label": "Plums",
-       "n": "{a}"
+       "n": "{a}",
+       "icon": "plum"
       },
       {
        "label": "Figs",
-       "n": "{b}"
+       "n": "{b}",
+       "icon": "fig"
       },
       {
        "label": "Pears",
@@ -3099,23 +3160,26 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "pear"
       }
      ],
-     "icon": "counter",
      "title": "Fruit",
-     "size": "m"
+     "size": "m",
+     "icon": "plum"
     },
     "fig_base": {
      "type": "picture_graph",
      "rows": [
       {
        "label": "Plums",
-       "n": 6
+       "n": 6,
+       "icon": "plum"
       },
       {
        "label": "Figs",
-       "n": 5
+       "n": 5,
+       "icon": "fig"
       },
       {
        "label": "Pears",
@@ -3127,12 +3191,13 @@
         3,
         4,
         5
-       ]
+       ],
+       "icon": "pear"
       }
      ],
-     "icon": "counter",
      "title": "Fruit",
-     "size": "m"
+     "size": "m",
+     "icon": "plum"
     },
     "tpl": {
      "vars": {
@@ -3219,26 +3284,28 @@
      "rows": [
       {
        "label": "Shells",
-       "n": "{n}"
+       "n": "{n}",
+       "icon": "shell"
       }
      ],
-     "icon": "counter",
      "title": "Mi's shells",
      "each": 2,
-     "size": "m"
+     "size": "m",
+     "icon": "shell"
     },
     "fig_base": {
      "type": "picture_graph",
      "rows": [
       {
        "label": "Shells",
-       "n": 3
+       "n": 3,
+       "icon": "shell"
       }
      ],
-     "icon": "counter",
      "title": "Mi's shells",
      "each": 2,
-     "size": "m"
+     "size": "m",
+     "icon": "shell"
     },
     "tpl": {
      "vars": {
@@ -3287,13 +3354,14 @@
      "rows": [
       {
        "label": "Shells",
-       "n": 3.5
+       "n": 3.5,
+       "icon": "shell"
       }
      ],
-     "icon": "counter",
      "title": "Mi's shells",
      "each": 2,
-     "size": "m"
+     "size": "m",
+     "icon": "shell"
     },
     "easier": "t3"
    },

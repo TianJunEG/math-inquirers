@@ -75,18 +75,7 @@
    1.0,
    150,
    150
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    118,
-    118
-   ],
-   "all_other_values_rejected": [
-    150,
-    150
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -144,18 +133,7 @@
    1.0,
    495,
    495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    495,
-    495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -213,18 +191,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    56,
-    56
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -286,21 +253,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 5,
@@ -359,18 +312,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    65,
-    65
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -432,18 +374,7 @@
    1.0,
    138,
    138
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    138,
-    138
-   ],
-   "all_other_values_rejected": [
-    138,
-    138
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -500,21 +431,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 8,
@@ -558,18 +475,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -601,18 +507,7 @@
    1.0,
    48,
    48
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    48,
-    48
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -676,18 +571,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    63,
-    63
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -745,18 +629,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -833,18 +706,7 @@
    1.0,
    204,
    204
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    204,
-    204
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -903,18 +765,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -991,18 +842,7 @@
    1.0,
    1300,
    1300
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    1300,
-    1300
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1059,18 +899,7 @@
    1.0,
    475,
    475
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    59,
-    59
-   ],
-   "all_other_values_rejected": [
-    475,
-    475
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1133,21 +962,7 @@
    1.0,
    119,
    119
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    58,
-    58
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 17,
@@ -1205,18 +1020,7 @@
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1284,18 +1088,7 @@
    1.0,
    715,
    715
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    715,
-    715
-   ],
-   "all_other_values_rejected": [
-    715,
-    715
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1358,18 +1151,7 @@
    1.0,
    40,
    40
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    34,
-    34
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1446,18 +1228,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    40,
-    40
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1526,18 +1297,7 @@
    1.0,
    120,
    120
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    64,
-    64
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 22,
@@ -1607,18 +1367,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1681,18 +1430,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 24,
@@ -1745,18 +1483,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 25,
@@ -1819,18 +1546,7 @@
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1889,17 +1605,228 @@
    1.0,
    594,
    594
+  ]
+ },
+ {
+  "no": 27,
+  "code": "S2-13 (P1-27)",
+  "title": "Which Two Items?",
+  "tier": 2,
+  "topic": "Money in dollars: which two things cost exactly the amount paid",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money 1.1 (dollars up to $100), 2.5 (adding within 100); guess and check, problem solving",
+  "outcomes": [
+   "MO1.1",
+   "AS2.5"
   ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  "ptype": "Logic (price board)",
+  "mech": "K1 letters of the chosen items, cheaper first, spell a word (6 letters)",
+  "seed": 2707,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed board and amounts: exactly one pair per amount, and the letters read cheaper first spell the code word",
+    "ok": true,
+    "detail": "MAGNET"
+   },
+   {
+    "name": "V1b the three pairs are different things (all six used once)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 87 single wrong pairs spells a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['magnet']"
+   },
+   {
+    "name": "V7 prices whole dollars, all within $100",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   87,
+   87
+  ]
+ },
+ {
+  "no": 28,
+  "code": "S2-11 (P1-28)",
+  "title": "Fewest Coins",
+  "tier": 1,
+  "topic": "Money: counting coins in cents; fewest coins and ways to pay",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money 1.1 (counting amount of money in cents up to $1; fewest coins and ways to pay come from school tests: problem solving)",
+  "outcomes": [
+   "MO1.1"
+  ],
+  "ptype": "Code-breaker (coins)",
+  "mech": "K1 code word (5 letters)",
+  "seed": 2808,
+  "checks": [
+   {
+    "name": "V1 independent solver (coin-change search over the printed amounts; coin values summed from each drawn purse) equals the key",
+    "ok": true,
+    "detail": "[2, 3, 7, 8, 4]"
+   },
+   {
+    "name": "V1b the coins shown beside questions 3 and 4 have the values asked",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct and within 12",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1d the purses show 2 to 4 exact ones and several near-miss ones",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells STAMP",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "55/55"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['stamp']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['pasty', 'patsy', 'stamp']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   55,
+   55
+  ]
+ },
+ {
+  "no": 29,
+  "code": "S2-16 (P1-29)",
+  "title": "How Long Does It Last?",
+  "tier": 1,
+  "topic": "Time: how long a thing lasts (1 h or 30 min) and when it ends",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1, 2.3, 2.4 (telling time to 5 minutes; abbreviations h and min; duration of one hour or half hour)",
+  "outcomes": [
+   "TI2.3",
+   "TI2.4",
+   "TI2.1"
+  ],
+  "ptype": "Code-breaker (clocks and a timetable)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 2909,
+  "checks": [
+   {
+    "name": "V1 independent solver: clock hands read back from the drawings give the durations, the table rows are solved from their printed times; all equal the key",
+    "ok": true,
+    "detail": "['1 h', '30 min', '12:15', '2:05', '8:15', '12:10']"
+   },
+   {
+    "name": "V1b every clock shows a 5-minute time with hands at least 25 degrees apart",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at least one 30 min step passes the next whole hour",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells SAILOR",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "870/870"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['sailor']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['carlos', 'jarvis', 'jovial', 'sailor', 'savior', 'slavic']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   870,
+   870
+  ]
+ },
+ {
+  "no": 30,
+  "code": "S2-15 (P1-30)",
+  "title": "Morning or Evening?",
+  "tier": 1,
+  "topic": "Time: am and pm with times to 5 minutes",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1, 2.2 (telling time to 5 minutes; use of am and pm)",
+  "outcomes": [
+   "TI2.1",
+   "TI2.2"
+  ],
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH through the stated number of boxes",
+  "seed": 3030,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish over the boxes that make sense (times read back from the printed text, own 24-hour table, exhaustive DFS)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 dead-end boxes that make sense exist, and every off-route box does not",
+    "ok": true,
+    "detail": "2"
+   },
+   {
+    "name": "V3c a shortcut that ignores the rule is shorter than the route",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d no time is written with full stops or o'clock/half past wording; all times are digits with am or pm",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2,
+   2
+  ]
  }
 ]

@@ -144,7 +144,7 @@ const mT1 = () => machine([{ t: '?', k: 'q' }, { t: '− 5', k: 'op' }, { t: '+ 
 const mT2 = () => machine([{ t: '?', k: 'q' }, { t: '− 6', k: 'op' }, { t: '+ 4', k: 'op' }, { t: '− 3', k: 'op' }, { t: '10', k: 'out' }]);
 // C2 snail: a wall scale 0..9 cm, drawn tall
 const snailWall = () => {
-  let s = '', y0 = 254, k = 24; s += R(60, y0 - 9 * k, 56, 9 * k, '#F4F1E8', { sw: 2.6 });
+  let s = '', y0 = 236, k = 21; s += R(60, y0 - 9 * k, 56, 9 * k, '#F4F1E8', { sw: 2.6 });
   for (let v = 0; v <= 9; v++) { s += L(52, y0 - v * k, 116, y0 - v * k, { sw: v % 3 ? 1.4 : 2.4 }) + T(40, y0 - v * k + 6, v, 16, { a: 'end' }); }
   s += T(88, y0 - 9 * k - 10, 'top', 15, { c: TEAL }) + T(88, y0 + 20, 'bottom', 15, { c: TEAL });
   s += `<ellipse cx="150" cy="${y0 - 12}" rx="26" ry="14" fill="${GR}" stroke="${NAVY}" stroke-width="2.4"/>` + C(150, y0 - 14, 8, '#fff', { sw: 2.4 }) + T(150, y0 - 10, '·', 20) + L(172, y0 - 22, 184, y0 - 38, { sw: 2.4 }) + C(184, y0 - 40, 3, NAVY, { sw: 1 });

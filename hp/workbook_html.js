@@ -294,7 +294,7 @@ W.push(sub('a', 'Ali is taller than Ben. Ben is taller than Mei.   Tallest: ____
 W.push(sub('b', 'The cat is heavier than the dog. The hen is lighter than the dog.   Heaviest: ________   Lightest: ________'));
 W.push(sub('c', [t('The red ribbon is longer than the blue one.'), NL(), t('The green one is shorter than the blue one.'), NL(), t('The yellow one is longer than the red one.'), NL(), t('Write them from longest to shortest:')]));
 W.push(p([t('______________,  ______________,  ______________,  ______________')], { indent: { left: 1000 }, after: 100 }));
-W.push(q(2, 'Write the numbers 1 to 10 in the two-loop picture.', { keepNext: true }));
+W.push(q(2, 'Write 1 to 10 in the loops “Numbers less than 6” and “Odd numbers”.', { keepNext: true }));
 W.push(`<div class="p kn" style="border:2px solid #1F7A6F;border-radius:10px;background:#E8F5F2;padding:6px 14px;margin:2px 0 8px;font-size:15.5px"><b>Odd</b> numbers end in 1, 3, 5, 7 or 9. <b>Even</b> numbers end in 0, 2, 4, 6 or 8.</div>`);
 W.push(img('venn.png', 320, 180));
 W.push(sub('a', 'Numbers in BOTH circles: ____________________'));

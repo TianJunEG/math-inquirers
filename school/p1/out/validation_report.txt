@@ -200,6 +200,32 @@ PASS  S1-15 (P1-26) V3 no single slip spells another word (large word list, 129 
 PASS  S1-15 (P1-26) V3c no swap of two answers spells a word  []
 PASS  S1-15 (P1-26) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['peanut']
 PASS  S1-15 (P1-26) V4 guess resistance: at least 3 common words fit the table letters  ['nature', 'panzer', 'parent', 'peanut', 'punter', 'quartz']
+PASS  S2-13 (P1-27) V1 independent solver reads the printed board and amounts: exactly one pair per amount, and the letters read cheaper first spell the code word  MAGNET
+PASS  S2-13 (P1-27) V1b the three pairs are different things (all six used once)  
+PASS  S2-13 (P1-27) V3 none of the 87 single wrong pairs spells a word  
+PASS  S2-13 (P1-27) V3d the code word's letters have exactly ONE arrangement that is a word  ['magnet']
+PASS  S2-13 (P1-27) V7 prices whole dollars, all within $100  
+PASS  S2-11 (P1-28) V1 independent solver (coin-change search over the printed amounts; coin values summed from each drawn purse) equals the key  [2, 3, 7, 8, 4]
+PASS  S2-11 (P1-28) V1b the coins shown beside questions 3 and 4 have the values asked  
+PASS  S2-11 (P1-28) V1c answers distinct and within 12  
+PASS  S2-11 (P1-28) V1d the purses show 2 to 4 exact ones and several near-miss ones  
+PASS  S2-11 (P1-28) V2 code word spells STAMP  
+PASS  S2-11 (P1-28) V3 no single slip spells another word (large word list, 129 000 words)  55/55
+PASS  S2-11 (P1-28) V3c no swap of two answers spells a word  []
+PASS  S2-11 (P1-28) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['stamp']
+PASS  S2-11 (P1-28) V4 guess resistance: at least 3 common words fit the table letters  ['pasty', 'patsy', 'stamp']
+PASS  S2-16 (P1-29) V1 independent solver: clock hands read back from the drawings give the durations, the table rows are solved from their printed times; all equal the key  ['1 h', '30 min', '12:15', '2:05', '8:15', '12:10']
+PASS  S2-16 (P1-29) V1b every clock shows a 5-minute time with hands at least 25 degrees apart  
+PASS  S2-16 (P1-29) V1c at least one half-hour step crosses the hour  
+PASS  S2-16 (P1-29) V2 code word spells SAILOR  
+PASS  S2-16 (P1-29) V3 no single slip spells another word (large word list, 129 000 words)  870/870
+PASS  S2-16 (P1-29) V3c no swap of two answers spells a word  []
+PASS  S2-16 (P1-29) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['sailor']
+PASS  S2-16 (P1-29) V4 guess resistance: at least 3 common words fit the table letters  ['carlos', 'jarvis', 'jovial', 'sailor', 'savior', 'slavic']
+PASS  S2-15 (P1-30) V1 exactly one route start->finish over the boxes that make sense (times read back from the printed text, own 24-hour table, exhaustive DFS)  
+PASS  S2-15 (P1-30) V3 dead-end boxes that make sense exist, and every off-route box does not  2
+PASS  S2-15 (P1-30) V3c a shortcut that ignores the rule is shorter than the route  
+PASS  S2-15 (P1-30) V3d no time is written with full stops or o'clock/half past wording; all times are digits with am or pm  
 PASS  S1-02 (P1-01) has a self-check model for the enumeration  
 PASS  S1-02 (P1-01) check passes the right answers  
 PASS  S1-02 (P1-01) enumeration: plausible single slips rejected 118/118 = 100.0% (needs >= 95%)  
@@ -307,9 +333,25 @@ PASS  S1-15 (P1-26) has a self-check model for the enumeration
 PASS  S1-15 (P1-26) check passes the right answers  
 PASS  S1-15 (P1-26) enumeration: plausible single slips rejected 71/71 = 100.0% (needs >= 95%)  
 PASS  S1-15 (P1-26) enumeration: every other value of one answer rejected 594/594 = 100.0% (needs >= 95%)  
+PASS  S2-13 (P1-27) has a self-check model for the enumeration  
+PASS  S2-13 (P1-27) check passes the right answers  
+PASS  S2-13 (P1-27) enumeration: plausible single slips rejected 87/87 = 100.0% (needs >= 95%)  
+PASS  S2-13 (P1-27) enumeration: every other value of one answer rejected 87/87 = 100.0% (needs >= 95%)  
+PASS  S2-11 (P1-28) has a self-check model for the enumeration  
+PASS  S2-11 (P1-28) check passes the right answers  
+PASS  S2-11 (P1-28) enumeration: plausible single slips rejected 41/41 = 100.0% (needs >= 95%)  
+PASS  S2-11 (P1-28) enumeration: every other value of one answer rejected 55/55 = 100.0% (needs >= 95%)  
+PASS  S2-16 (P1-29) has a self-check model for the enumeration  
+PASS  S2-16 (P1-29) check passes the right answers  
+PASS  S2-16 (P1-29) enumeration: plausible single slips rejected 870/870 = 100.0% (needs >= 95%)  
+PASS  S2-16 (P1-29) enumeration: every other value of one answer rejected 870/870 = 100.0% (needs >= 95%)  
+PASS  S2-15 (P1-30) has a self-check model for the enumeration  
+PASS  S2-15 (P1-30) check passes the right answers  
+PASS  S2-15 (P1-30) enumeration: plausible single slips rejected 120/120 = 100.0% (needs >= 95%)  
+PASS  S2-15 (P1-30) enumeration: every other value of one answer rejected 120/120 = 100.0% (needs >= 95%)  
 PASS  3 colour-by-code pages (P1-01, P1-12, P1-14) across the two booklets  
 PASS  S1: 15 pages in the order of gen/outcomes.py  [25, 1, 24, 12, 19, 7, 8, 10, 21, 9, 2, 4, 26, 17, 13]
-PASS  S2: 11 pages in the order of gen/outcomes.py  [3, 14, 5, 11, 23, 6, 15, 16, 18, 20, 22]
+PASS  S2: 15 pages in the order of gen/outcomes.py  [3, 14, 5, 11, 23, 6, 15, 28, 16, 27, 18, 30, 29, 20, 22]
 PASS  every page has a self-check strip text  
 PASS  every page names a self-check mechanism  
 PASS  every page has outcome numbers from the 32 syllabus lines  
@@ -318,7 +360,7 @@ PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
 PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
-PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
+FAIL  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  [(29, 'cross the hour'), (29, 'half-hour')]
 PASS  the P1-18 note does not claim half-hour additions cross the hour unless one does  
 PASS  F28: every outcome id of every page has its PDF wording in the Primary 1 section of docs/moe/syllabus_by_level.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P1 strand  
@@ -361,7 +403,7 @@ PASS  no division sign in S2_key.html (P2 syllabus)
 PASS  answer boxes at least 12 mm high in S2_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_key.html  []
 PASS  S2: no bare black dot is drawn as a countable thing  
-PASS  S2: every coin shows its value and the word cents (P1-15, P1-28)  20 coins
+PASS  S2: every coin shows its value and the word cents (P1-15, P1-28)  42 coins
 PASS  S2: P1-20 uses the smiley face symbol  
 PASS  P1_S1_Puzzles.pdf has 15 pages  15
 PASS  P1_S1_Puzzles.pdf fonts all embedded  7 fonts
@@ -381,23 +423,23 @@ PASS  P1_S1_Answer_Key.pdf size < 20 MB  0.11 MB
 PASS  P1_S1_Answer_Key.pdf A4 page size  
 PASS  S1: school name printed on all 15 page footers  ________________________ (school name)
 PASS  S1: every pupil page shows its code in the footer, for example S1-07 (P1-08)  []
-PASS  P1_S2_Puzzles.pdf has 11 pages  11
-PASS  P1_S2_Puzzles.pdf fonts all embedded  6 fonts
-PASS  P1_S2_Puzzles.pdf size < 20 MB  0.32 MB
+PASS  P1_S2_Puzzles.pdf has 15 pages  15
+PASS  P1_S2_Puzzles.pdf fonts all embedded  8 fonts
+PASS  P1_S2_Puzzles.pdf size < 20 MB  0.48 MB
 PASS  P1_S2_Puzzles.pdf A4 page size  
 PASS  P1_S2_FrontMatter.pdf has 5 pages  5
 PASS  P1_S2_FrontMatter.pdf fonts all embedded  5 fonts
 PASS  P1_S2_FrontMatter.pdf size < 20 MB  0.06 MB
 PASS  P1_S2_FrontMatter.pdf A4 page size  
-PASS  P1_S2_Complete_Pack.pdf has 16 pages  16
-PASS  P1_S2_Complete_Pack.pdf fonts all embedded  11 fonts
-PASS  P1_S2_Complete_Pack.pdf size < 20 MB  0.38 MB
+PASS  P1_S2_Complete_Pack.pdf has 20 pages  20
+PASS  P1_S2_Complete_Pack.pdf fonts all embedded  13 fonts
+PASS  P1_S2_Complete_Pack.pdf size < 20 MB  0.54 MB
 PASS  P1_S2_Complete_Pack.pdf A4 page size  
-PASS  P1_S2_Answer_Key.pdf has 6 pages  6
-PASS  P1_S2_Answer_Key.pdf fonts all embedded  5 fonts
-PASS  P1_S2_Answer_Key.pdf size < 20 MB  0.09 MB
+PASS  P1_S2_Answer_Key.pdf has 7 pages  7
+PASS  P1_S2_Answer_Key.pdf fonts all embedded  6 fonts
+PASS  P1_S2_Answer_Key.pdf size < 20 MB  0.11 MB
 PASS  P1_S2_Answer_Key.pdf A4 page size  
-PASS  S2: school name printed on all 11 page footers  ________________________ (school name)
+PASS  S2: school name printed on all 15 page footers  ________________________ (school name)
 PASS  S2: every pupil page shows its code in the footer, for example S1-07 (P1-08)  []
 PASS  no division sign in any printed text (P2 syllabus)  
 PASS  money is written 50¢, never 50c, in all printed text  []
@@ -512,17 +554,29 @@ PASS  S2 pupil page 07 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 07 page-fill: puzzle content 173 of 183 mm  0.94
 PASS  S2 pupil page 07 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 08 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 08 page-fill: puzzle content 174 of 183 mm  0.95
+PASS  S2 pupil page 08 page-fill: puzzle content 167 of 183 mm  0.91
 PASS  S2 pupil page 08 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 09 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 09 page-fill: puzzle content 154 of 183 mm  0.84
+PASS  S2 pupil page 09 page-fill: puzzle content 174 of 183 mm  0.95
 PASS  S2 pupil page 09 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 10 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 10 page-fill: puzzle content 155 of 181 mm  0.85
+PASS  S2 pupil page 10 page-fill: puzzle content 127 of 183 mm  0.69
 PASS  S2 pupil page 10 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 11 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 11 page-fill: puzzle content 175 of 183 mm  0.96
+PASS  S2 pupil page 11 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S2 pupil page 11 min text size >= 8 pt  8.0 pt
+PASS  S2 pupil page 12 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 12 page-fill: puzzle content 154 of 183 mm  0.84
+PASS  S2 pupil page 12 min text size >= 8 pt  8.0 pt
+PASS  S2 pupil page 13 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 13 page-fill: puzzle content 169 of 183 mm  0.92
+PASS  S2 pupil page 13 min text size >= 8 pt  8.0 pt
+PASS  S2 pupil page 14 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 14 page-fill: puzzle content 155 of 181 mm  0.85
+PASS  S2 pupil page 14 min text size >= 8 pt  8.0 pt
+PASS  S2 pupil page 15 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 15 page-fill: puzzle content 175 of 183 mm  0.96
+PASS  S2 pupil page 15 min text size >= 8 pt  8.0 pt
 PASS  S2 front page 01 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 01 min text size >= 8 pt  12.0 pt
 PASS  S2 front page 02 layout (no overflow/clipping/margin breach)  
@@ -545,21 +599,23 @@ PASS  S2 key page 05 layout (no overflow/clipping/margin breach)
 PASS  S2 key page 05 min text size >= 8 pt  8.0 pt
 PASS  S2 key page 06 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 06 min text size >= 8 pt  8.0 pt
+PASS  S2 key page 07 layout (no overflow/clipping/margin breach)  
+PASS  S2 key page 07 min text size >= 8 pt  8.0 pt
 PASS  S1_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 15), (4, 0, 17)]
 PASS  S1_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(7, 0, 15), (8, 0, 17)]
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 13)]
-PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(6, 0, 13)]
+PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(7, 0, 13)]
 PASS  P1_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.84% vs greyscale)  15 pages
 PASS  P1_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 124, limit 40 per page)  
 PASS  P1_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 23.66% vs greyscale)  5 pages
 PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 116, limit 40 per page)  
 PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 32.91% vs greyscale)  8 pages
 PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 390, limit 75 per page)  
-PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.15% vs greyscale)  11 pages
-PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 89, limit 40 per page)  
-PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 23.10% vs greyscale)  5 pages
-PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 123, limit 40 per page)  
-PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.82% vs greyscale)  6 pages
-PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 298, limit 75 per page)  
+PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.15% vs greyscale)  15 pages
+PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 124, limit 40 per page)  
+PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 23.34% vs greyscale)  5 pages
+PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 134, limit 40 per page)  
+PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.02% vs greyscale)  7 pages
+PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 424, limit 75 per page)  
 
-TOTAL 563 checks, 0 failed
+TOTAL 619 checks, 1 failed
