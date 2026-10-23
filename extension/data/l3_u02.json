@@ -223,7 +223,7 @@
    "id": "L3U02-S06",
    "tier": "start",
    "page": 2,
-   "text": "In this magic square, every row, column and diagonal adds up to the same total.",
+   "text": "Every row, column and diagonal has the same total.",
    "parts": [
     {
      "label": "a",
@@ -291,7 +291,7 @@
    "id": "L3U02-S07",
    "tier": "start",
    "page": 2,
-   "text": "Add each pair of side-by-side bricks to get the brick above them.",
+   "text": "A brick is made by adding the 2 bricks below it.",
    "parts": [
     {
      "label": "a",
@@ -478,7 +478,7 @@
   {
    "id": "L3U02-S10",
    "tier": "start",
-   "page": 3,
+   "page": 2,
    "text": "Each letter stands for a digit. The same letter always means the same digit. Find the digit.",
    "parts": [
     {
@@ -585,6 +585,35 @@
      8
     ]
    }
+  },
+  {
+   "id": "L3U02-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "A school collects 1875 cans in Week 1, 2430 cans in Week 2 and 1790 cans in Week 3.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "It collects {b} cans in all.",
+     "answer": {
+      "value": [
+       "6095"
+      ],
+      "text": "6095"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It collects {b} more cans in Week 2 than in Week 3.",
+     "answer": {
+      "value": [
+       "640"
+      ],
+      "text": "640"
+     }
+    }
+   ],
+   "explanation": "(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640. Check: 1790 + 640 = 2430."
   },
   {
    "id": "L3U02-T01",
@@ -809,7 +838,7 @@
    "id": "L3U02-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Pyramids with a hidden number.\nAdd each pair of side-by-side bricks to get the brick above them. The 2 bricks marked X are equal. Find X. {b}",
+   "text": "Beyond Level 3: Pyramids with a hidden number.\nA brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}",
    "answer": {
     "value": [
      "440"
@@ -839,13 +868,12 @@
       440
      ]
     ],
-    "width_mm": 110
+    "width_mm": 92
    },
    "hint": "Guess a number for X. Fill the pyramid. Is the top too big?",
    "space": {
     "rows": [
-     "My guesses:",
-     ""
+     "My guesses:"
     ]
    }
   },
@@ -915,7 +943,7 @@
    "hint": "Make a full pyramid first. Then hide 3 bricks.",
    "space": {
     "rows": [
-     "{ll}"
+     "Draw my pyramid:"
     ]
    }
   },
@@ -949,7 +977,7 @@
    "id": "L3U02-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Add each pair of side-by-side bricks to get the brick above them. The brick M is {b}.",
+   "text": "A brick is made by adding the 2 bricks below it. The brick M is {b}.",
    "answer": {
     "value": [
      "520"
@@ -973,7 +1001,7 @@
       360
      ]
     ],
-    "width_mm": 70
+    "width_mm": 60
    },
    "figright": true
   },

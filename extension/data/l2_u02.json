@@ -107,7 +107,7 @@
        "4",
        "9"
       ],
-      "text": "4 and 9 (444... see Why)",
+      "text": "4 and 9",
       "list": true
      }
     },
@@ -389,7 +389,7 @@
     ],
     "text": "155"
    },
-   "explanation": "Work backwards: 210 beads are left and 135 were used for the bracelet, so 210 + 135 = 345 beads were not used for the necklace... 500 - 345 = 155 beads were used for the necklace. Check: 155 + 135 + 210 = 500.",
+   "explanation": "Take away what she used and what was left: 500 - 135 - 210 = 155. Check: 155 + 135 + 210 = 500.",
    "space": {
     "rows": [
      "Working:"
@@ -433,7 +433,7 @@
      }
     }
    ],
-   "explanation": "(a) 346 + 278 = 624. (b) A right answer would give 614 when you add back, so Ben is wrong. (c) 614 - 278: ones 14 - 8 = 6, tens 0 lent 1 so borrow again 10 + 0 - 1 - 7 = 2... in short 614 - 278 = 336. Check: 336 + 278 = 614."
+   "explanation": "(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben forgot that the tens had lent 1 ten, so his tens digit was 1 too big."
   },
   {
    "id": "L2U02-S08",
@@ -797,7 +797,7 @@
      }
     }
    ],
-   "explanation": "Add 40 to Siti and take 60 off Ali: now all three have the same as Ben, and the total is 530 + 40 - 60 = 510... so 3 equal parts do not add to 510. Check again: Siti has 40 fewer, so adding 40 makes her equal to Ben (530 + 40 = 570). Ali has 60 more, so take 60 away (570 - 60 = 510). Three Bens are 510, so Ben has 170. Ali has 170 + 60 = 230 and Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.",
+   "explanation": "Ali has 60 more than Ben and Siti has 40 fewer, so the 3 children have 60 - 40 = 20 more than 3 Bens. 530 - 20 = 510 is 3 Bens. 510 shared into 3 is 170, so Ben has 170. Ali has 170 + 60 = 230. Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.",
    "hint": "Make all 3 bars the same length as Ben's bar."
   },
   {

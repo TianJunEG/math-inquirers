@@ -46,13 +46,13 @@ u.S(1, 'Siti works out 5000 - 1768 = 3342.', parts=[
     why='The check should give back 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232. Check: 3232 + 1768 = 5000.')
 
 # ---------------- page 2
-u.S(2, 'In this magic square, every row, column and diagonal adds up to the same total.', parts=[
+u.S(2, 'Every row, column and diagonal has the same total.', parts=[
     P('a', 'The magic total is {b}.', A('1050')),
     P('b', 'A = {b}   B = {b}   C = {b}', A(['400', '250', '500'], 'A = 400, B = 250, C = 500', list=True))],
     why='The middle row is complete: 550 + 350 + 150 = 1050. Top row: 200 + 450 + A = 1050, so A = 400. Left column: 200 + 550 + 300 = 1050. Middle column: 450 + 350 + B = 1050, so B = 250. Bottom row: 300 + 250 + C = 1050, so C = 500.',
     figure={'type': 'l3_grid', 'rows': [[200, 450, {'t': 'A', 'fill': 'none', 'dash': True}], [550, 350, 150], [300, {'t': 'B', 'fill': 'none', 'dash': True}, {'t': 'C', 'fill': 'none', 'dash': True}]],
             'cw': 90, 'ch': 64, 'width_mm': 56}, figside=True)
-u.S(2, 'Add each pair of side-by-side bricks to get the brick above them.', parts=[
+u.S(2, 'A brick is made by adding the 2 bricks below it.', parts=[
     P('a', 'P = {b}', A('750')), P('b', 'Q = {b}', A('480'))],
     why='P and 830 make the top brick: 830 + P = 1580, so P = 750. Q and 270 make P: Q + 270 = 750, so Q = 480. Check: 350 + 480 = 830.',
     figure={'type': 'l3_pyramid', 'rows': [[1580], [830, '@P'], [350, '@Q', 270]], 'width_mm': 78}, figside=True)
@@ -68,7 +68,7 @@ u.S(3, 'Find the 2 missing digits.', parts=[
     figure=vs([6, None, 0, 2], '-', [2, 8, None, 5], [3, 6, 5, 7], 60), figside=True)
 
 # ---------------- page 3
-u.S(3, 'Each letter stands for a digit. The same letter always means the same digit. Find the digit.', parts=[
+u.S(2, 'Each letter stands for a digit. The same letter always means the same digit. Find the digit.', parts=[
     P('a', 'A3 + 2A = 56    A = {b}', A('3')),
     P('b', 'C5 + C5 = 90    C = {b}', A('4'))],
     why='(a) Try A = 3: 33 + 23 = 56. It works. (b) Two equal numbers add up to 90, so each is 45. Then C = 4.')
@@ -81,6 +81,9 @@ u.S(3, 'Use the cards once each to make two 3-digit numbers.', parts=[
     P('a', 'The greatest sum is {b}.', A('1595')), P('b', 'The smallest sum is {b}.', A('605'))],
     why='For the greatest sum, put the 2 greatest digits in the hundreds places. Then the next 2 in the tens places, and the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. For the smallest sum, do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.',
     figure={'type': 'l3_cards', 'items': [2, 3, 4, 5, 7, 8]})
+u.S(3, 'A school collects 1875 cans in Week 1, 2430 cans in Week 2 and 1790 cans in Week 3.', parts=[
+    P('a', 'It collects {b} cans in all.', A('6095')), P('b', 'It collects {b} more cans in Week 2 than in Week 3.', A('640'))],
+    why='(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640. Check: 1790 + 640 = 2430.')
 
 # ---------------- Think harder
 u.T('Letters hide digits. The same letter is the same digit. Different letters are different digits.\nAB + AC = BBD', parts=[
@@ -107,12 +110,12 @@ u.G('Letters hide digits. The same letter is the same digit. Different letters a
     hint='Look at the ones: C + C ends in B. List the choices for C.',
     why='Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: then B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. Hundreds: 2 + 1 = 3 = C. Check: 263 + 63 = 326. No other digits work.',
     partsrow=True, space={'rows': ['My tries:']})
-u.G('Beyond Level 3: Pyramids with a hidden number.\nAdd each pair of side-by-side bricks to get the brick above them. The 2 bricks marked X are equal. Find X. {b}',
+u.G('Beyond Level 3: Pyramids with a hidden number.\nA brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}',
     A('440'),
-    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 110},
+    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 92},
     hint='Guess a number for X. Fill the pyramid. Is the top too big?',
     why='In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440. Check: the next row is 640, 880, 880; then 1520, 1760; then 3280.',
-    space={'rows': ['My guesses:', '']})
+    space={'rows': ['My guesses:']})
 u.G('Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the 2 numbers.', parts=[
     P('a', '36 + 63 = {b}', A('99')), P('b', '58 + 85 = {b}', A('143')), P('c', '47 + 74 = {b}', A('121')),
     P('d', 'Each answer is in the {b} times table.', A('11'))],
@@ -123,15 +126,15 @@ u.G('Make up a number pyramid puzzle of your own. The bottom row has 3 bricks. S
     A('800', 'Answers vary. Example: top brick 800, middle left brick 370, bottom right brick 180 shown. The hidden bricks are 430 (middle right), 250 (bottom middle) and 120 (bottom left).'),
     hint='Make a full pyramid first. Then hide 3 bricks.',
     why='Check that your pyramid adds up correctly and that the 3 shown bricks fix all the others. In the example: 800 - 370 = 430, then 430 - 180 = 250, then 370 - 250 = 120.',
-    space={'rows': ['{ll}']})
+    space={'rows': ['Draw my pyramid:']})
 
 # ---------------- Check yourself
 u.C('Find the missing digit. {b}\n4?72 + 2519 = 7091', A('5'),
     why='Ones: 2 + 9 = 11, carry 1. Tens: 7 + 1 + 1 = 9. Hundreds: ? + 5 ends in 0, so ? is 5 and 1 is carried. Thousands: 4 + 2 + 1 = 7.')
 u.C('Find the missing digit. {b}\n8?04 - 3569 = 4635', A('2'),
     why='Turn it round: 4635 + 3569 = 8204, so the missing digit is 2.')
-u.C('Add each pair of side-by-side bricks to get the brick above them. The brick M is {b}.', A('520'),
-    figure={'type': 'l3_pyramid', 'rows': [[1160], ['@M', 640], [240, 280, 360]], 'width_mm': 70}, figright=True,
+u.C('A brick is made by adding the 2 bricks below it. The brick M is {b}.', A('520'),
+    figure={'type': 'l3_pyramid', 'rows': [[1160], ['@M', 640], [240, 280, 360]], 'width_mm': 60}, figright=True,
     why='M is the sum of 240 and 280: 240 + 280 = 520. Check: 520 + 640 = 1160.')
 u.C('A zoo has 9000 visitors in 3 days. On Friday 2845 visitors come. On Saturday 3260 come. How many come on Sunday? {b}', A('2895'),
     why='2845 + 3260 = 6105. Then 9000 - 6105 = 2895. Check: 6105 + 2895 = 9000.')

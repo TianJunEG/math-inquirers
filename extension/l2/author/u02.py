@@ -25,7 +25,7 @@ def vs(op, rows, label=None):
 items = [
  I('start', 1, 'Find the missing digits. Write one digit in each empty box.',
    figure={'type': 'l2_vsum', 'sums': [vs('+', ['2?4', '35?', '603'], '(a)'), vs('+', ['4?8', '?26', '874'], '(b)'), vs('+', ['?65', '2?8', '703'], '(c)')], 'width_mm': 150},
-   parts=[P('a', 'Sum (a): write the missing digits, top number first.', ['4', '9'], '4 and 9 (444... see Why)', lst=True),
+   parts=[P('a', 'Sum (a): write the missing digits, top number first.', ['4', '9'], '4 and 9', lst=True),
           P('b', 'Sum (b): write the missing digits, top number first.', ['4', '4'], '4 and 4', lst=True),
           P('c', 'Sum (c): write the missing digits, top number first.', ['4', '3'], '4 and 3', lst=True)],
    why='(a) Ones: 4 + 9 = 13, carry 1. Tens: 4 + 5 + 1 = 10, carry 1. Hundreds: 2 + 3 + 1 = 6. So 244 + 359 = 603. (b) Ones: 8 + 6 = 14, carry 1. Tens: 4 + 2 + 1 = 7. Hundreds: 4 + 4 = 8. So 448 + 426 = 874. (c) Ones: 5 + 8 = 13, carry 1. Tens: 6 + 3 + 1 = 10, carry 1. Hundreds: 4 + 2 + 1 = 7. So 465 + 238 = 703.'),
@@ -47,10 +47,10 @@ items = [
    parts=[P('a', 'Take away the extra 80: 460 - 80 = {b}', '380'), P('b', 'Ben has {b} stickers.', '190'), P('c', 'Ali has {b} stickers.', '270')],
    why='Without the extra 80, both have the same, and together they have 380. Half of 380 is 190, so Ben has 190. Ali has 190 + 80 = 270. Check: 190 + 270 = 460.'),
  I('start', 2, 'Mei had 500 beads. She used some for a necklace and 135 for a bracelet. 210 beads were left. How many beads did she use for the necklace? {b}', value='155',
-   space={'rows': ['Working:']}, why='Work backwards: 210 beads are left and 135 were used for the bracelet, so 210 + 135 = 345 beads were not used for the necklace... 500 - 345 = 155 beads were used for the necklace. Check: 155 + 135 + 210 = 500.'),
+   space={'rows': ['Working:']}, why='Take away what she used and what was left: 500 - 135 - 210 = 155. Check: 155 + 135 + 210 = 500.'),
  I('start', 2, 'Ben wrote 614 - 278 = 346. He checks by adding.', parts=[
    P('a', '346 + 278 = {b}', '624'), P('b', 'Is Ben right?   {circ:Yes|No}', 'No'), P('c', 'The correct answer is {b}', '336')],
-   why='(a) 346 + 278 = 624. (b) A right answer would give 614 when you add back, so Ben is wrong. (c) 614 - 278: ones 14 - 8 = 6, tens 0 lent 1 so borrow again 10 + 0 - 1 - 7 = 2... in short 614 - 278 = 336. Check: 336 + 278 = 614.'),
+   why='(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben forgot that the tens had lent 1 ten, so his tens digit was 1 too big.'),
  I('start', 3, 'Ali had 345 stickers. He gave some away. Now he has 128 stickers.\n(1) 345 + [ ] = 128      (2) 345 - [ ] = 128\n(3) [ ] - 345 = 128      (4) 128 - [ ] = 345', parts=[
    P('a', 'Which number sentence matches the story?   {circ:(1)|(2)|(3)|(4)}', '(2)'), P('b', 'How many stickers did Ali give away? {b}', '217')],
    why='(a) He starts with 345 and takes some away, so 345 - [ ] = 128, which is (2). (b) 345 - 128 = 217. Check: 128 + 217 = 345.'),
@@ -78,7 +78,7 @@ items = [
    figure={'type': 'l2_bar', 'rows': [{'label': 'Ali', 'segs': [{'w': 5, 'unknown': True, 't': '?'}, {'w': 2, 't': '60'}]}, {'label': 'Ben', 'segs': [{'w': 5, 'unknown': True, 't': '?'}]}, {'label': 'Siti', 'segs': [{'w': 3, 'unknown': True, 't': '?'}]}], 'brace': {'text': '530', 'rows': [0, 2]}, 'width_units': 400, 'width_mm': 112},
    parts=[P('a', 'Ben has {b} stickers.', '170'), P('b', 'Ali has {b} stickers.', '230'), P('c', 'Siti has {b} stickers.', '130')],
    hint='Make all 3 bars the same length as Ben\'s bar.',
-   why='Add 40 to Siti and take 60 off Ali: now all three have the same as Ben, and the total is 530 + 40 - 60 = 510... so 3 equal parts do not add to 510. Check again: Siti has 40 fewer, so adding 40 makes her equal to Ben (530 + 40 = 570). Ali has 60 more, so take 60 away (570 - 60 = 510). Three Bens are 510, so Ben has 170. Ali has 170 + 60 = 230 and Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.'),
+   why='Ali has 60 more than Ben and Siti has 40 fewer, so the 3 children have 60 - 40 = 20 more than 3 Bens. 530 - 20 = 510 is 3 Bens. 510 shared into 3 is 170, so Ben has 170. Ali has 170 + 60 = 230. Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.'),
  # Go further
  I('go', 5, 'Ali and Mei have 540 stickers together. Mei and Ravi have 610 together. Ali and Ravi have 450 together. How many stickers does each child have?', parts=[
    P('a', 'Ali has {b}', '190'), P('b', 'Mei has {b}', '350'), P('c', 'Ravi has {b}', '260')],

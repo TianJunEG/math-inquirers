@@ -70,9 +70,9 @@ def _tok(text):
 class _Code:
     def __init__(self, fs):
         self.fs = fs
-        self.H = fs * 2.15           # 36 units = 9 mm
+        self.H = fs * 2.0            # 32 units = 8 mm
         self.arm = fs * 1.2
-        self.bot = fs * 1.0
+        self.bot = fs * 0.8
         self.cw = fs * 0.6
         self.pad = fs * 0.6
         self.out = []
@@ -226,13 +226,23 @@ def code(spec, w=None):
     yend = c.walk(spec['prog'], 3 + off, 3)
     W = c.mx + 6
     H = yend + 6
-    if c.nums:
-        W += 0
-    return wrap(''.join(c.out), W, H, spec.get('label', 'code blocks'), w or round(W / U, 1))
+    out = c.out
+    if spec.get('trace'):          # an empty trace table to the right of the code, top aligned
+        tr = spec['trace']
+        rows = [[''] * len(tr['cols']) for _ in range(tr['rows'])]
+        if tr.get('first'):         # first column pre-filled (e.g. loop numbers)
+            for i, r in enumerate(rows):
+                r[0] = str(tr['first'][i]) if i < len(tr['first']) else ''
+        tp, tw, th = grid_parts({'rows': rows, 'head': tr['cols'], 'cw': tr.get('cw', 22), 'ch': tr.get('ch', 8.5), 'fs': tr.get('fs', 15)}, W + tr.get('gap', 8) * U, 3)
+        out = out + tp
+        W = W + tr.get('gap', 8) * U + tw + 3
+        H = max(H, th + 6)
+    return wrap(''.join(out), W, H, spec.get('label', 'code blocks'), w or round(W / U, 1))
 
 
 # ================================================================================================ grid / table
-def grid(spec, w=None):
+def grid_parts(spec, ox=3, oy=3):
+    """the drawing elements of a table placed at (ox, oy); returns (elements, width, height) in drawing units."""
     rows = spec['rows']
     head = spec.get('head')
     ncol = max(len(r) for r in rows + ([head] if head else []))
@@ -241,13 +251,11 @@ def grid(spec, w=None):
     ch = spec.get('ch', 9)
     fs = spec.get('fs', 17)
     rowhead = spec.get('rowhead', False)
-    colhead_fill = SKY
     P = []
-    y = 3
+    y = oy
     allrows = ([('H', head)] if head else []) + [('R', r) for r in rows]
-    W = sum(cws) * U + 6
     for kind, r in allrows:
-        x = 3
+        x = ox
         rh = ch * U
         for j in range(ncol):
             cell = r[j] if j < len(r) else ''
@@ -264,7 +272,12 @@ def grid(spec, w=None):
                 P.append(T(x + wj / 2, y + rh / 2 + fs * 0.35, _signs(tx), d.get('fs', fs), weight=800 if (kind == 'H' or (rowhead and j == 0) or d.get('bold')) else 600))
             x += wj
         y += rh
-    return wrap(''.join(P), W, y + 3, spec.get('label', 'table'), w)
+    return P, sum(cws) * U, y - oy
+
+
+def grid(spec, w=None):
+    P, W, H = grid_parts(spec)
+    return wrap(''.join(P), W + 6, H + 6, spec.get('label', 'table'), w)
 
 
 # ================================================================================================ number line
