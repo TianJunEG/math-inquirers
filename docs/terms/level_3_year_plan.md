@@ -1,5 +1,7 @@
 # Level 3 term-time year plan (ages 8-10, builds on Primary 3)
 
+> **Update, 23 Oct 2026 (night), owner decision TERM-ALL-RECOMMENDED (`docs/terms/owner_decisions.md`):** lesson 10 of each term (lessons 10, 20, 30 and 40) is the **choose-the-tool consolidation + Challenge Quest lesson**. Lessons are **not renumbered**: lesson 10 stays lesson 10. Any new idea that this plan places in a lesson 10 moves to an earlier slot when the lesson is built. Tables below are not yet edited. Plan and effort: `docs/pedagogy/lesson_x10_consolidation_plan.md`. Level 3 specifics: lesson 10 Price per Piece becomes the consolidation lesson and its unit-price idea merges into lesson 8; lessons 20, 30 and 40 are already projects or showcases.
+
 ## Revision for 10-week terms and new Term 1 (22 Oct 2026)
 
 Source: `docs/terms/owner_decisions.md` (owner decisions of 22 Oct 2026). What changed in this plan:

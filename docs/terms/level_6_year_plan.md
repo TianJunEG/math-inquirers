@@ -1,5 +1,7 @@
 # Level 6 term-time year plan (ages 11-13, maths + coding bridge)
 
+> **Update, 23 Oct 2026 (night), owner decision TERM-ALL-RECOMMENDED (`docs/terms/owner_decisions.md`):** lesson 10 of each term (lessons 10, 20, 30 and 40) is the **choose-the-tool consolidation + Challenge Quest lesson**. Lessons are **not renumbered**: lesson 10 stays lesson 10. Any new idea that this plan places in a lesson 10 moves to an earlier slot when the lesson is built. Tables below are not yet edited. Plan and effort: `docs/pedagogy/lesson_x10_consolidation_plan.md`. Level 6 specifics: lesson 20 (Scale Models) moves to slot 19 and lesson 20 becomes a Term 2 Studio; lessons 10, 30 and 40 already are studios or capstones. **Term 3 is a bridge block** (owner decision 5, 23 Oct 2026): lessons 21 to 29 bridge primary reasoning to secondary-style algebra, graphs and code, at depth and not as acceleration, with no PSLE-preparation claim; the PSLE intake question (open question 1) is still open.
+
 ## Revision for 10-week terms and new Term 1
 
 Revised 2026-10-22 to match `docs/terms/owner_decisions.md` (owner decisions of 22 Oct 2026). Still a plan, not lessons; nothing here has been tried with children.
@@ -166,6 +168,8 @@ All new. This is where Level 6 touches P6 strands, as reasoning lessons, not dri
 **Exam period.** Safest to skip or make up: **lesson 19** (stand-alone; lesson 20 does not use it).
 
 ### Term 3: Say it for every case (algebra, graphs, powers, factors, binary; Python bridge)
+
+**Bridge block (owner decision, 23 Oct 2026, night):** Term 3 is a bridge block, not an acceleration block. It connects Primary 6 reasoning to secondary-style algebra, graphs and code, taught for understanding (why the rule works, checked by hand and by a small program). The "Beyond MOE" labels stay, and nothing here is promised as PSLE preparation. Lesson 30 (Term 3 Studio) is the term's choose-the-tool and Quest lesson. How P6 children manage Terms 3 and 4 around the PSLE is still open question 1.
 
 All new. Python starts here, always next to the Scratch version. Old 19-26 are 21-28; old 27 (Studio) is 30.
 

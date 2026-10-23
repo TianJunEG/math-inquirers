@@ -1,5 +1,7 @@
 # Level 5 (Primary 5, ages 10-12) term-time year plan
 
+> **Update, 23 Oct 2026 (night), owner decision TERM-ALL-RECOMMENDED (`docs/terms/owner_decisions.md`):** lesson 10 of each term (lessons 10, 20, 30 and 40) is the **choose-the-tool consolidation + Challenge Quest lesson**. Lessons are **not renumbered**: lesson 10 stays lesson 10. Any new idea that this plan places in a lesson 10 moves to an earlier slot when the lesson is built. Tables below are not yet edited. Plan and effort: `docs/pedagogy/lesson_x10_consolidation_plan.md`. Level 5 specifics: lessons 10, 20 and 30 (Review and Challenge) and 40 (Year Showcase) already are consolidation lessons; they host the Quest.
+
 ## Revision for 10-week terms and new Term 1 (22 Oct 2026)
 
 Reworked to match `docs/terms/owner_decisions.md` (owner decisions of 22 Oct 2026). Plan only: no lesson is written, nothing has been tried with children.

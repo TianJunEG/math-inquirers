@@ -1,5 +1,7 @@
 # Level 4 (Ages 9-11, Primary 4) term-time year plan
 
+> **Update, 23 Oct 2026 (night), owner decision TERM-ALL-RECOMMENDED (`docs/terms/owner_decisions.md`):** lesson 10 of each term (lessons 10, 20, 30 and 40) is the **choose-the-tool consolidation + Challenge Quest lesson**. Lessons are **not renumbered**: lesson 10 stays lesson 10. Any new idea that this plan places in a lesson 10 moves to an earlier slot when the lesson is built. Tables below are not yet edited. Plan and effort: `docs/pedagogy/lesson_x10_consolidation_plan.md`. Level 4 specifics: the four Challenge Days (1.10 to 4.10) already are consolidation lessons; they host the Quest and drop the old "Term N check" wording.
+
 ## Revision for 10-week terms and new Term 1 (22 Oct 2026)
 
 Source: `docs/terms/owner_decisions.md` (22 Oct 2026). Planning only; no lesson is written. This section is the newest and wins over anything below that disagrees.

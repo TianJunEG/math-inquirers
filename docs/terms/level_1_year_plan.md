@@ -1,5 +1,7 @@
 # Level 1 term-time year plan (Primary 1, ages 6-8)
 
+> **Update, 23 Oct 2026 (night), owner decision TERM-ALL-RECOMMENDED (`docs/terms/owner_decisions.md`):** lesson 10 of each term (lessons 10, 20, 30 and 40) is the **choose-the-tool consolidation + Challenge Quest lesson**. Lessons are **not renumbered**: lesson 10 stays lesson 10. Any new idea that this plan places in a lesson 10 moves to an earlier slot when the lesson is built. Tables below are not yet edited. Plan and effort: `docs/pedagogy/lesson_x10_consolidation_plan.md`. Level 1 specifics: Terms 2 to 4 first, Term 1 later. Proposed (not applied): Picture Equations 19 to 13 (Doubles and Near Doubles retired), Find One First 20 to 19, Calendar Detective 30 to 27 (Fill the Grid retired); lessons 20 and 30 become new choose-the-tool lessons; lesson 40 keeps the Showcase. Lesson 10 (Story Steps) stays in place for now (plan option B).
+
 ## Revision for 10-week terms and new Term 1 (22 Oct 2026)
 
 Reworked to match `docs/terms/owner_decisions.md`. What changed:

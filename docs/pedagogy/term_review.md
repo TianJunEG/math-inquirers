@@ -964,6 +964,8 @@ This is observation, not assessment. It respects the owner's rules: no test, no 
 
 A three-word scale is optional and is **an owner decision** because the Quest privacy checklist rules out scores and tallies: *with help, with a prompt, on their own*. Used per habit across the year for one child, it shows direction without ranking children. If the owner prefers, use words only.
 
+**Status, 23 Oct 2026 (night): accepted by the owner (TERM-ALL-RECOMMENDED, decision 3), as an optional item in PRIVATE tutor notes only.** The three words (*with help, with a prompt, on their own*) are written per habit, per child, per block, in the tutor's own notes; never shown to children or parents, never counted or tabulated, never compared between children. No code or lesson file has been changed. When Quest v2 is built (`docs/pedagogy/lesson_x10_consolidation_plan.md`, section 1), the line in every Quest's `challenge_quest.privacy_checklist` that says "no tally ... not even in your own notes" must be reworded to allow a word per habit while still banning counts and tallies, and the `b_quest.py` tutor-note check (which bans "record sheet") must not be tripped by the wording.
+
 ### 11.3 Parent report lines (replacing the generic `term_line`)
 
 The built lessons carry one boilerplate term line per term (for example Term 1: "Your child is learning to see numbers as tens and ones, to notice patterns and to say why."), repeated in every lesson. Proposed lines name the habits and one observed example:
@@ -987,10 +989,10 @@ Not a promise, not a pass mark: the child names at least three tools; picks one 
 | # | Decision | Status |
 |---|---|---|
 | 1 | Adopt the toolbox spine and the tool schedule | YES. Already adopted and built: holiday decks, workbooks, tutor guides and the Toolbox Card (owner decision of 23 Oct, `docs/pedagogy/spine_routine_spec.md`). The term lessons are not yet changed. |
-| 2 | Lesson x.0 as a choose-the-tool consolidation lesson hosting the Quest | Awaiting an explicit owner answer. Not decided. |
-| 3 | A three-word independence scale in private tutor notes | Awaiting an explicit owner answer. Not decided. |
-| 4 | Level 1 Term 1: keep the stronger arithmetic, or move some lessons to Think harder only | Awaiting an explicit owner answer. Not decided (the 22 Oct stronger-arithmetic decision stands until the owner says otherwise). |
-| 5 | Level 6 intake and Terms 3 and 4 around the PSLE; bridge or acceleration | Awaiting an explicit owner answer. Not decided. |
+| 2 | Lesson x.0 as a choose-the-tool consolidation lesson hosting the Quest | YES (23 Oct 2026, night, TERM-ALL-RECOMMENDED), all levels, Terms 2 to 4 first. Change plan: `docs/pedagogy/lesson_x10_consolidation_plan.md`; not yet applied. |
+| 3 | A three-word independence scale in private tutor notes | YES, private tutor notes only (see 11.2 status). No code yet. |
+| 4 | Level 1 Term 1: keep the stronger arithmetic, or move some lessons to Think harder only | KEEP the 22 Oct stronger-arithmetic decision as is (23 Oct 2026, night). |
+| 5 | Level 6 intake and Terms 3 and 4 around the PSLE; bridge or acceleration | Term 3 is a BRIDGE block, not acceleration (23 Oct 2026, night). The intake and PSLE-clash question stays open. |
 | 6 | The holiday course: confirm the toolbox stays out of it | Superseded. The owner chose to add the strategy card and the common look-back to the holiday materials. |
 
 The data fixes listed after the decisions were applied on 23 Oct 2026 as plan hygiene, except the Level 1 `term_line` fields, which are noted in `docs/terms/level_1_year_plan.md` section 5 but not yet replaced in the lesson files.
