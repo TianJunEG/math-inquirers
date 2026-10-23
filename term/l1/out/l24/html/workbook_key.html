@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:14mm 14mm 16mm 14mm}
+*{box-sizing:border-box}
+html{background:#fff}
+body{margin:0;font-family:'Fredoka','Inter',Arial,sans-serif;color:#1B2A49;font-size:17.5px;line-height:1.38;background-color:#fff;background-image:linear-gradient(#E3ECF6 1px,transparent 1px),linear-gradient(90deg,#E3ECF6 1px,transparent 1px);background-size:22px 22px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.p{break-inside:avoid}
+.pb{break-before:page}
+.kn{break-after:avoid}
+.lh{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.lbadge{background:#1F7A6F;color:#FFF9EC;border-radius:999px;padding:6px 18px;font-weight:700;font-size:17px}
+.ltopic{font-weight:600;color:#1F7A6F;font-size:16px;letter-spacing:.3px}
+.ltitle{font-size:38px;font-weight:700;line-height:1.05;margin:2px 0 10px;color:#1B2A49}
+.namer{display:flex;align-items:flex-end;gap:8px;font-size:14px;color:#3B4A6B;margin-bottom:14px}
+.namer span{flex:1;border-bottom:2px dotted #8A94AD;height:18px}
+.q{display:flex;align-items:flex-start;gap:10px;font-weight:600}
+.qn{flex:none;width:30px;height:30px;border-radius:50%;background:#FFC93C;color:#1B2A49;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;position:relative;top:-1px}
+.qt{flex:1}
+.sub{display:flex;gap:8px;padding-left:40px;align-items:baseline}
+.sl{flex:none;width:24px;height:24px;border-radius:7px;background:#FFF0C2;color:#1B2A49;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.ans{display:flex;gap:8px;align-items:flex-end}
+.al{flex:1;max-width:300px;border-bottom:2px dotted #8A94AD;height:20px}
+.ln{border-bottom:2px dotted #8A94AD;height:28px;margin:4px 0 0 40px;break-inside:avoid}
+.banner{background:#1F7A6F;color:#FFF9EC;border-radius:14px;padding:7px 18px;font-weight:700;font-size:19px;margin:8px 0 6px}
+table.tb{width:100%;border-collapse:separate;border-spacing:0;border:2px solid #1B2A49;border-radius:14px;overflow:hidden;margin:6px 0;break-inside:avoid}
+table.tb td{border:1px solid #C9D4EC;vertical-align:middle;font-size:16px}
+.img{margin:6px 0}
+.img img{height:auto}
+.badge{display:inline-block;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:8px 22px;font-weight:700;font-size:16px;letter-spacing:.5px}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:28px;height:262mm;padding:44px 40px;position:relative;break-inside:avoid}
+.ctitle{font-size:96px;font-weight:700;line-height:.95;margin-top:40px}
+.ctitle span{color:#FFC93C}
+.cslogan{font-size:28px;font-weight:600;color:#FFC93C;margin-top:26px}
+.cname{margin-top:34px;font-size:18px;display:flex;gap:8px;align-items:flex-end;color:#C9D4EC}
+.cname i{flex:1;border-bottom:2px dotted #C9D4EC;height:20px}
+.rules{position:absolute;left:40px;right:40px;bottom:44px;background:#fff;color:#1B2A49;border-radius:22px;padding:20px 26px}
+.rt{font-size:24px;font-weight:700;color:#1F7A6F;margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:17px;font-weight:600}
+.rg b{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#FFC93C;align-items:center;justify-content:center;margin-right:8px}
+.jt{font-size:40px;font-weight:700}
+.jsub{color:#3B4A6B;margin-bottom:16px;font-size:17px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stamp{background:#fff;border-radius:18px;border:2px solid #1B2A49;padding:12px 16px;height:128px;position:relative}
+.sn{font-weight:700;color:#1F7A6F;font-size:15px}
+.st{font-weight:600;font-size:17px;margin-top:2px}
+.sc{position:absolute;right:14px;bottom:12px;width:58px;height:58px;border:3px dashed #8A94AD;border-radius:50%}
+.cert{height:262mm;display:flex;align-items:center;justify-content:center}
+.ci{border:6px double #1B2A49;border-radius:24px;padding:48px 40px;text-align:center;background:#fff;width:100%}
+.ct{font-size:40px;font-weight:700;color:#1B2A49;margin-bottom:24px}
+.cp{font-size:30px;font-weight:700;color:#1F7A6F}
+.cs{font-size:20px;margin-bottom:28px}
+.cl{font-size:19px;margin:12px 0}
+.cn{border-bottom:3px dotted #1B2A49;height:44px;max-width:420px;margin:12px auto}
+.cq{font-size:30px;font-weight:700;color:#1F7A6F;margin:26px 0 36px}
+
+.brk{break-before:page;height:0;margin:0;padding:0}
+
+.kt{font-family:Fredoka,sans-serif;font-size:34px;font-weight:600;color:#1B2A49;text-align:center}.ks{text-align:center;font-size:16px;margin:4px 0 10px}.kl{font-weight:800;font-size:18px;color:#1B2A49;margin:12px 0 4px}
+
+/* ===== A + D combined style ===== */
+.lh{gap:0;margin:0 0 4px;border-bottom:3px solid #1F7A6F}
+.lbadge{border-radius:0;background:#1F7A6F;color:#fff;padding:8px 18px;font-weight:600}
+.ltopic{background:#fff;padding:8px 14px;flex:1;text-transform:uppercase;font-size:13px;letter-spacing:.08em;font-family:'Nunito Sans',sans-serif;font-weight:800}
+.ltitle{text-decoration:underline wavy #FFC93C 4px;text-underline-offset:10px;margin:10px 0 16px}
+.namer{background:#fff;border:2px dashed #1B2A49;border-radius:8px;padding:8px 12px}
+.namer span{border-bottom:1.5px solid #1B2A49}
+.qbox{background:#fff;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49;padding:24px 14px 10px;margin:22px 4px 16px 4px;position:relative;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.qbox .q{margin-top:0!important}
+.qbox .qn{position:absolute;left:-9px;top:-15px;width:auto;height:auto;border-radius:2px;background:#FFC93C;border:2px solid #1B2A49;padding:1px 11px;font-size:16px;transform:rotate(-4deg);top:-15px}
+.qbox .qn:before{content:"No. "}
+.qn{border-radius:3px}
+.sub{padding-left:2px}
+.sl{width:auto;height:auto;background:none;border-radius:0;color:#1F7A6F;font-weight:800;font-size:16px;font-family:'Nunito Sans',sans-serif}
+.ln{margin-left:4px}
+.ans{padding-left:4px!important}
+.al{border-bottom:2px dashed #1B2A49}
+.banner{border-radius:3px;display:inline-block;padding:5px 16px;transform:rotate(-1deg);border:2px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49}
+table.tb{border-radius:4px}
+.cover{background:none;color:#1B2A49;border-radius:0;padding:10px 0 0}
+.ccard{background:#fff;border:3px solid #1B2A49;box-shadow:6px 6px 0 #1B2A49;padding:26px 30px;margin-top:6px}
+.cover .badge{background:#1F7A6F;color:#fff;border-radius:0;font-family:'Nunito Sans',sans-serif;font-weight:800;letter-spacing:.1em;font-size:14px;padding:6px 12px}
+.ctitle{color:#1B2A49;margin-top:14px;font-weight:600}
+.ctitle span{color:#1B2A49;background:linear-gradient(transparent 55%,#FFC93C 55%)}
+.cslogan{color:#1F7A6F;margin-top:16px}
+.cover .cname{color:#1B2A49;background:#fff;border:2px dashed #1B2A49;border-radius:10px;padding:14px 18px;margin-top:30px}
+.cover .cname i{border-bottom:1.5px solid #1B2A49}
+.cover .rules{position:static;margin-top:24px;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49}
+.rg b{border-radius:3px;border:2px solid #1B2A49;transform:rotate(-4deg)}
+.sc{border-radius:6px}
+.stamp{border-radius:4px;box-shadow:3px 3px 0 #1B2A49}
+body{font-size:16.5px}
+.qbox{padding:20px 12px 8px;margin:18px 4px 12px 4px}
+.ln{height:25px;margin-top:2px}
+.ltitle{margin:8px 0 12px}
+.namer{margin-bottom:8px}
+.qbox{break-inside:avoid}
+.qwrap{padding-top:16px;break-inside:avoid}.qwrap>.qbox{margin-top:2px}
+
+body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
+
+.pv{border-collapse:collapse;font-family:Fredoka;margin:4px 0}.pv th{background:#FFC93C;border:2px solid #1B2A49;padding:1px 16px;font-size:13px}.pv td{border:2px solid #1B2A49;padding:2px 16px;min-width:60px;height:26px;background:#fff;font-size:18px;text-align:center}
+.draw{border:2.5px dashed #1B2A49;border-radius:10px;height:105px;background:#fff;margin:6px 0 6px 4px}
+.vis{width:310px;margin:6px 0 6px 4px}
+.al{display:inline-block;min-width:17mm;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
+.choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm{padding-left:3mm}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:3px!important;font-size:15.5px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
+.lbk .r{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:6px;font-size:16.5px;align-items:center}.lbk .r b{flex:none;width:165px}
+.bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
+.wl{border-bottom:2px dotted #8A94AD;height:24px}
+.boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
+.qbox:has(svg.h100){display:grid;grid-template-columns:1fr 310px;column-gap:8px;align-items:start}
+.qbox:has(svg.h100)>.q{grid-column:1 / span 2}
+.qbox:has(svg.h100)>.vis{grid-column:2;grid-row:2 / span 8;width:310px!important;margin:0!important}
+.qbox:has(svg.h100)>.sub,.qbox:has(svg.h100)>.ln,.qbox:has(svg.h100)>.draw{grid-column:1}
+.qbox:has(svg.h100.wide){display:block}
+.qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
+.p1 .qbox:has(svg.h100)>.vis{width:296px!important}
+.tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
+.tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
+.tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .qt,.tight3 .sub{font-size:15px!important}.tight3 .lbk .r{font-size:13px!important}.tight3 .banner{font-size:15px!important}
+.hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
+.yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
+.banner{break-after:avoid;display:block;width:fit-content}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
+.visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
+.tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
+.mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
+.stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
+.keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
+.keybox .a{font-weight:800;color:#1F7A6F}
+body{background-image:none}</style></head><body><h1 style="font-family:Fredoka;margin:0;color:#1B2A49">Answer key: Lesson 4, Dollars and Change</h1><p style="font-size:13px;margin:2px 0 8px"><b>For the tutor and grown-ups.</b> Keep this page away from the child until they have finished and checked their own work. Ask <i>how do you know?</i> before saying right or wrong.</p><div class="banner">Start here (pages 1 and 2)</div><div class="keybox"><b>S1.</b> Count the money. Fill in the blank.<div class="a">Answer: 80¢</div><div style="font-size:12.5px">The coins are 50¢, 20¢, 5¢ and 5¢. 50 and 20 make 70. 70 and 5 make 75. 75 and 5 make 80. The total is 80¢.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 4 (counting the coins).; Writing 75 (leaving out the last 5¢ coin).</div></div><div class="keybox"><b>S2.</b> Count the notes. Fill in the blank.<div class="a">Answer: $19</div><div style="font-size:12.5px">The notes are $10, $5, $2 and $2. 10 and 5 make 15. 15 and 2 make 17. 17 and 2 make 19. The total is $19.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 4 (counting the notes).; Writing $17 (leaving out one $2 note).</div></div><div class="keybox"><b>S3.</b> Look at the fifty-cent coin.<div class="a">Answer: 5; 10</div><div style="font-size:12.5px">Five 10¢ coins make 50¢: 10, 20, 30, 40, 50. Ten 5¢ coins make 50¢: 5, 10, 15, up to 50.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 50 or 1 (the coin itself).; Writing 5 for the five-cent coins (the same as the ten-cent answer).</div></div><div class="keybox"><b>S4.</b> Circle the coins that make 55¢.<div class="a">Answer: 50¢ and 5¢</div><div style="font-size:12.5px">The 50¢ coin and one 5¢ coin make 55¢. 50 and 5 make 55. Either 5¢ coin may be circled.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Circling the 20¢ coin first (it leaves 35¢ and the coins that are left cannot make it).; Circling every coin.</div></div><div class="keybox"><b>S5.</b> Look at the two pieces of money.<div class="a">Answer: $2 note</div><div style="font-size:12.5px">A two-dollar note is worth $2. A one-dollar coin is worth $1. 2 is greater than 1, so the $2 note is worth more.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Circling the $1 coin because it is bigger (the value is the number, not the size).; Thinking they are worth the same.</div></div><div class="keybox"><b>S6.</b> Ravi buys a toy car for $3. He pays with a five-dollar note. How much change does he get?<div class="a">Answer: $2</div><div style="font-size:12.5px">Count up from $3 to $5: $4, $5. That is 2 dollars. The change is $2. Check: 3 and 2 make 5.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing $5 (the note) or $3 (the price).; Writing $8 (adding).</div></div><div class="banner">Think harder (page 3)</div><div class="keybox"><b>T1.</b> A ruler costs $4. A book costs $5. Mei pays with a ten-dollar note.<div class="a">Answer: $9; $1</div><div style="font-size:12.5px">4 and 5 make 9, so the two things cost $9 together. Count up from $9 to $10: the change is $1. Check: 9 and 1 make 10.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing $1 for the cost (giving the change first).; Writing $6 (10 minus 4).</div></div><div class="keybox"><b>T2.</b> Ali makes 50¢ with ten-cent coins and twenty-cent coins. One way is shown. Find the other 2 ways.<div class="a">Answer: 3 and 1; 1 and 2</div><div style="font-size:12.5px">Five 10¢ coins make 50¢ (shown). With one 20¢ coin, 30¢ is left, which is three 10¢ coins. With two 20¢ coins, 10¢ is left, which is one 10¢ coin. The two ways are 3 and 1, and 1 and 2, in either order.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing a way that makes more or less than 50¢.; Using three 20¢ coins (60¢ is too much).</div></div><div class="keybox"><b>T3.</b> Siti buys a pencil for 60¢. She pays with a one-dollar coin.<div class="a">Answer: 100¢; 40¢</div><div style="font-size:12.5px">A one-dollar coin is worth 100¢. Count up from 60 to 100 in 10s: 70, 80, 90, 100. That is 40. The change is 40¢. Check: 60 and 40 make 100.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing $1 or 1¢ for the coin.; Writing 60¢ or 160¢ for the change.</div></div><div class="keybox"><b>T4.</b> Look at the three sets of coins.<div class="a">Answer: Set A; 20¢</div><div style="font-size:12.5px">Set A is 50, 70, 80: 80¢. Set B is 20, 40, 60, 70: 70¢. Set C is 50, 55, 60: 60¢. Set A has the most money, even though Set B has the most coins. Set A has 20¢ more than Set C: 80 minus 60.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Circling Set B because it has the most coins.; Writing 80¢ or 3¢ for the difference.</div></div><div class="banner">Go further (page 4)</div><div class="keybox"><b>G1.</b> Use these notes and coins. You may use each one as many times as you like.<div class="a">Answer: 5; 3</div><div style="font-size:12.5px">$73: $50 leaves $23; $10 and $10 leave $3; $2 and $1 leave nothing. That is $50, $10, $10, $2 and $1, which is 5 pieces. $50 minus $37 is $13: $10, $2 and $1, which is 3 pieces.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 12 (using $5 and $1 pieces only).; Using a $20 note (there is no $20 note).</div></div><div class="keybox"><b>G2.</b> Mei has a $5 note, a $2 note and a $1 coin. She uses one, two or all three pieces.<div class="a">Answer: 7; $1, $2, $3, $5, $6, $7, $8</div><div style="font-size:12.5px">One piece: $1, $2, $5. Two pieces: $1 and $2 make $3, $1 and $5 make $6, $2 and $5 make $7. All three: $8. That is 7 different amounts: $1, $2, $3, $5, $6, $7, $8.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 3 (only one piece at a time).; Forgetting the three-piece amount, $8, or writing $4 (which cannot be made).</div></div><div class="keybox"><b>G3.</b> A sticker costs 30¢. Ben has a one-dollar coin.<div class="a">Answer: 3; 10¢</div><div style="font-size:12.5px">30, 60 and 90 are three stickers, 90¢. Four stickers would cost 120¢, which is more than 100¢. Ben buys 3 stickers. Count up from 90¢ to 100¢: the change is 10¢.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 4 (120¢ is more than he has).; Writing 70¢ (100 minus 30, for one sticker).</div></div><div class="banner">Investigation (page 5): Coin detective</div><div class="keybox"><div class="a">First: any way that makes 35¢, for example 20¢, 10¢ and 5¢. Exactly 3 coins: one way only, 20¢, 10¢ and 5¢. Exactly 4 coins: two ways, 10¢, 10¢, 10¢ and 5¢; or 20¢, 5¢, 5¢ and 5¢. Two coins cannot make 35¢.</div><div style="font-size:12px"><b>Look for:</b> A child who tries a big coin first and then fills in the rest; a child who checks each way by counting back to 35; a child who finds the second 4-coin way by swapping a 20¢ coin for ten and ten, or three 5s. Credit any clear reason. Do not mark a child down for stopping at one way.</div></div><div class="banner">Exit ticket (page 5)</div><div class="keybox"><b>E1.</b> Count the money. Fill in the blank.<div class="a">Answer: 90¢</div><div style="font-size:12.5px">The coins are 50¢, 20¢, 10¢ and 10¢. 50 and 20 make 70. 70 and 10 make 80. 80 and 10 make 90. The total is 90¢.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 4 (counting the coins).; Writing 80 (leaving out one 10¢ coin).</div></div><div class="keybox"><b>E2.</b> Mei pays $10 for a pen that costs $4. How much change does she get? Choose the correct answer. Write its number in the bracket.<div class="a">Answer: (3) $6</div><div style="font-size:12.5px">Count up from $4 to $10: $5, $6, $7, $8, $9, $10. That is 6 dollars. The change is $6. Check: 4 and 6 make 10.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Choosing (1) $4, the price.; Choosing (4) $14, which adds the price and the note.</div></div><div class="keybox"><b>E3.</b> Ali has a $10 note, two $2 notes and one $1 coin. How much money does he have?<div class="a">Answer: $15</div><div style="font-size:12.5px">Start with the biggest: $10. Two $2 notes make $4, so 10 and 4 make $14. Add the $1 coin: $15.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing $14 (leaving out the $1 coin).; Writing 4 (counting the pieces).</div></div><div class="banner">Sneak-peek puzzles (not in the workbook)</div><div class="keybox">1. 40 cents (40¢)<br>2. No. 10 ten-cent coins make 100 cents, and a one-dollar coin is 100 cents. They have the same money.</div></body></html>
