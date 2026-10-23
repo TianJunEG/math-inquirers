@@ -2641,7 +2641,7 @@
      ]
     ],
     "mode": "iso",
-    "size": 28
+    "size": 24
    }
   },
   {
@@ -2675,7 +2675,7 @@
      ]
     ],
     "mode": "top",
-    "size": 30
+    "size": 24
    }
   },
   {
@@ -2702,7 +2702,7 @@
     "type": "shapes2d",
     "shape": "square",
     "parts": 1,
-    "size": 26
+    "size": 20
    }
   }
  ],

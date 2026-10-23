@@ -25,7 +25,7 @@ Owner decisions that bind this plan: `docs/terms/owner_decisions.md`, entries of
 | 10 units | 70 | 7 pages each, see 1.2 |
 | My progress | 1 | tick table, Check yourself score, date, look-back lines |
 | Certificate | 1 | name line, date, "signed by a grown-up", Mi with trophies |
-| Answers divider | 1 | starts on a right-hand page; dashed tear line in the margin and a note (1.5) |
+| Answers divider | 1 | starts on a right-hand page; no tear line (1.5) |
 | Answers | about 17 | short worked explanation for every item ("Why:") |
 | Blank back | 0 or 1 | only to make the page count even |
 
@@ -41,7 +41,7 @@ Total about 94 pages (target 80 to 100). Measured on the proof: 2 units gave 3.3
 | 6 Go further | 3 to 4 items (beyond-syllabus items live here and in Think harder only), upside-down hints |
 | 7 Check yourself | 4 quick items with a working line, score box (out of 4), "What next?" advice, look-back lines |
 
-Weekly pace (printed in the book): session 1 = pages 1-2, session 2 = pages 3-4, session 3 = pages 5-7. Session 3 may be partly skipped.
+Weekly pace (printed in the book): session 1 = pages 1-2, session 2 = pages 3-4, session 3 = Think harder and Check yourself (pages 5 and 7). Go further (page 6) is a weekend page (audit M5, fixed 23 Oct).
 Self-study devices: a worked example at the start of every unit; hints printed upside down (no tutor needed, a peek is a choice); a Check yourself score with a rule for what to do next; answers with a short "Why" a parent or child can follow.
 Items per unit: about 24 (13-14 Start here, 3 Think harder, 3-4 Go further, 4 Check yourself) plus the try-it. Per level about 245 items; for six levels about 1,470 items.
 Unit titles are the 10 holiday lesson topics of the level. Level 1: Number patterns, Number bonds, Picture graphs, Repeating and growing patterns, Working backwards, Money, 2D shapes, Logic and sorting, Length, Puzzle day. Levels 2 to 6: `extension/config/levels.json` (taken from `p2..p6/content/lN.js` headers).
@@ -77,7 +77,7 @@ Unit titles are the 10 holiday lesson topics of the level. Level 1: Number patte
 
 ### 1.5 Answers inside the book, and the perforation note
 
-- Answers are the last section of the same book (one file, one purchase). The divider page sits on a right-hand page; the answer section carries a dashed line in the binding margin on every page and a vertical note on the divider ("Answer pages: tear or cut along the dashed line to take them out").
+- Answers are the last section of the same book (one file, one purchase). The divider page sits on a right-hand page; the answer section carries no margin dash and no tear note (audit L17: a double-sided sheet cannot be torn out); the divider says to print the answer pages on their own and keep them in an envelope.
 - **(default)** No real perforation: a dashed line and a note only. Real perforation needs the printer (D4).
 - The Welcome page tells the grown-up which page the answers start on.
 
@@ -203,3 +203,7 @@ Level-level extras: new figure types for each of Levels 2 to 6 (1 to 2 agent-day
 - Outputs: `outputs/extension/L1/Math_Inquirers_L1_Extension_Workbook_Soft_Copy_Colour.pdf` (25 pages) and `..._Print_BW.pdf` (26 pages, even; the last page is blank).
 - Both PDFs were viewed page by page.
 - Not done: units 3 to 10; the type map notes; the cross-unit duplicate check; a full cold-read audit of units 1 and 2; any trial with children.
+
+
+## 8. Level 1 audit fixes (23 Oct 2026)
+See `extension/l1/FIXES.md`. Print edition: the native vector PDF is now converted by `print/make_bw_print.py` (1-bit, 600 dpi) inside `extension/tools/build.py` and checked by `print/check_bw.py`; the vector file stays as `..._Print_BW_vector.pdf`.

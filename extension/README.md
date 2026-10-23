@@ -9,7 +9,7 @@ extension/
   tools/figs.py             figure specs -> SVG (colour, or black and white with patterns); reuses term/l1/tools/svg.py
   tools/render.py           unit data -> page HTML
   tools/ext.css             stylesheet (palette from hp/wb_style.css; two themes: colour, bw)
-  tools/build.py            builds the colour soft copy and the black-and-white print PDF
+  tools/build.py            builds the colour soft copy and the black-and-white print PDF (vector), then converts it with print/make_bw_print.py to the 1-bit 600 dpi print file
   verify/lN_uXX_checks.py   independent per-item answer checks (recompute, never copy)
   verify/run_checks.py      schema + answer runner (fails on any mismatch or missing check)
   verify/dup_check.py       7-word overlap against the holiday banks, private source texts, term lessons
@@ -19,7 +19,7 @@ extension/
   verify_all.sh [level]     all gates, then the PDFs are in outputs/extension/L<level>/
 ```
 
-Build one level: `python3 extension/tools/build.py --level 1` (units found in `data/`, or `--units 1,2`).
+Build one level (add `--no-bw` for a quick build without the 1-bit 600 dpi conversion, which takes a few minutes): `python3 extension/tools/build.py --level 1` (units found in `data/`, or `--units 1,2`).
 Run every gate: `extension/verify_all.sh 1`.
 
 Needs: python3 with playwright (chromium), pypdf, PyMuPDF (fitz), Pillow, numpy, scipy; fonts from `fonts/node_modules/@fontsource` (run `npm install` in `fonts/`).

@@ -185,7 +185,7 @@ L.lessons.forEach(l => {
   stuck(s.hints);
   doo(['Choosing (printed on page 1: “' + l.gaps.p1 + '”): every child may carry on or try Think harder. Make the offer to the whole group, never to one child by name, and never by private message. The Think harder page, the Go further page and the Investigation have no fixed time slot: any child may choose them when they have finished Start here, and they are good for take-home. Page 2 is on your own and has a printed note about which questions to do first, so nobody has to rush. Every lesson has an Investigation on page 3, with an easy first step and a model answer in the answer key below: it has several valid answers, so ask “How did you decide?” and “Is there another way?” rather than marking it right or wrong.']);
   G.push(h2('Think harder and Go further questions'));
-  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + 1) + ': ' + x.q, x.a])], 'Question', 'Answer');
+  ask([...(q.stretch || []).slice(0, 4).map((x, i) => ['Workbook Think harder ' + (i + 1) + ': ' + x.q, x.a]), ...(q.challenge || []).slice(-3).map((x, i) => ['Workbook Go further ' + (i + 5) + ': ' + x.q, x.a])], 'Question', 'Answer');
   G.push(tx('These are the questions on the Think harder page and the Go further page in the workbook. More are in the separate Question Bank.', { size: 19, color: '666666' }));
 
   ps('Talk time', 'Talk time');

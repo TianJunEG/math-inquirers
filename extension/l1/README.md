@@ -5,10 +5,10 @@ Product: owner decisions of 22-23 Oct 2026 (docs/terms/owner_decisions.md). Ten 
 ## Output
 `outputs/extension/L1/`
 - `Math_Inquirers_L1_Extension_Workbook_Soft_Copy_Colour.pdf` (96 pages, colour, bookmarks)
-- `Math_Inquirers_L1_Extension_Workbook_Print_BW.pdf` (96 pages, even, mirrored 12 mm gutter, answers start on a right-hand page, blank page 78 only for parity)
+- `Math_Inquirers_L1_Extension_Workbook_Print_BW.pdf` (96 pages, 1-bit 600 dpi from the project B&W pipeline, even, mirrored 12 mm gutter, answers start on a right-hand page, blank page 78 only for parity); `..._Print_BW_vector.pdf` is the native vector source of it
 - `build_report.json` (page fill and overflow per page)
 
-Page order: cover (name box), About this book (copyright and personal-use licence, DRAFT wording for the owner and lawyer; business email and registered office are placeholders), Welcome, Contents, Pace plan (11 weeks, 3 sessions), 10 units of 7 pages, My progress, Certificate, (blank), Answers divider, Answers (17 pages, short "Why" for every item).
+Page order: cover (name box), About this book (copyright and personal-use licence, DRAFT wording for the owner and lawyer; business email and registered office are placeholders), Welcome, Contents, Pace plan (11 weeks, 3 sessions plus a Go further weekend page), 10 units of 7 pages, My progress, Certificate, (blank), Answers divider, Answers (17 pages, short "Why" for every item).
 
 ## Build
 ```
@@ -44,3 +44,5 @@ Items per tier = Start here / Think harder / Go further / Check yourself (plus o
 
 ## Open for the owner
 Licence wording, contact details, price (none printed), printer proof, child trial, independent cold-read audit.
+
+Audit of 23 Oct: `AUDIT.md`; what was fixed and what was left: `FIXES.md`.
