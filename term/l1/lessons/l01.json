@@ -9,6 +9,14 @@
   "big_idea": "A number is tens and ones",
   "child_idea": "Ten single sticks make one bundle. A two-digit number tells us how many bundles and how many singles.",
   "skill": "Structure of numbers",
+  "spine": {
+    "main": "actout",
+    "also": [
+      "draw"
+    ],
+    "role": "I",
+    "reason": "Children bundle real sticks first; Start here then asks them to draw bundles and singles."
+  },
   "ages": "6-8",
   "moe": {
     "strand": "Whole Numbers",
@@ -261,6 +269,11 @@
           {
             "k": "NOTE",
             "text": "Lesson 1 only: show the routine slide for 20 seconds and name the phases; do not read the table. Say the recording notice in your own words: the recording has the tutor, the shared screen and any voice that is unmuted; children may mute and keep their camera off. Standing routine for every lesson: children are muted unless invited; for a group answer they say it quietly to their own room on a count of three."
+          },
+          {
+            "k": "NOTE",
+            "text": "Eight tools: see your Toolbox card. Point at it when you point at the tool on page 1. If the card is not printed, send the PDF with the welcome message.",
+            "spine": "opening"
           }
         ]
       },
@@ -275,6 +288,17 @@
           {
             "k": "REC",
             "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+            "spine": "remember"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the tool on page 1 of the workbook.",
+            "s": 4,
+            "spine": "remember"
           },
           {
             "k": "SAY",
@@ -816,6 +840,17 @@
             "resp": 20
           },
           {
+            "k": "ASK",
+            "text": "Where did you use Act it out today?",
+            "resp": 10,
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+            "spine": "talk"
+          },
+          {
             "k": "NOTE",
             "text": "Model answer: No. 40 is 4 bundles of ten and no singles. 4 is only 4 singles. 40 has more sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
@@ -880,12 +915,14 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
           },
           {
             "k": "WORK",
-            "text": "Children fill in the look-back box on page 5.",
-            "s": 90
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 90,
+            "spine": "look"
           }
         ]
       },
@@ -1754,7 +1791,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -3189,7 +3226,8 @@
     "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups. Small things stay away from mouths and from younger children.",
     "Have the slides open and check the timer slide and the kit page are visible on screen share.",
     "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
-    "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch."
+    "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch.",
+    "Toolbox card: print the A5 card for ages 6-8 (outputs/kit/Math_Inquirers_Toolbox_Card_A_6-8_PRINT_BW.pdf), one for each child, or send the colour PDF (..._SCREEN_colour.pdf) with the welcome message. Children use it from Lesson 1."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",

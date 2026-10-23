@@ -9,6 +9,15 @@
  "big_idea": "Ask a question, sort the answers, then picture the answer",
  "child_idea": "A graph answers a question. First sort the things into kinds and count each kind. Then draw one picture for each thing, and give the graph a title and a key.",
  "skill": "Data collection",
+ "spine": {
+  "main": "table",
+  "also": [
+   "backwards"
+  ],
+  "role": "A",
+  "reason": "Tally marks go into a table before the graph; a missing bar comes from the total.",
+  "chip": "compact"
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Statistics: picture graphs (read and interpret, Primary 1, p. 32). Collecting, sorting and drawing a graph is the plan's reading of the outcome; tally marks are not named in the syllabus; a picture graph with a scale (each picture stands for more than 1) is Primary 2 (p. 34)",
@@ -1156,7 +1165,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1318,6 +1327,17 @@
      {
       "k": "REC",
       "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Make a table. Put what you know in rows and columns.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
      },
      {
       "k": "SAY",
@@ -1786,6 +1806,17 @@
       "resp": 12
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Make a table today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: no, we do not agree. The graph shows the pets in the shop, not what children like. To find out which pet children like best we ask the children and sort their answers. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -1849,12 +1880,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
      }
     ]
    },

@@ -15,6 +15,12 @@
  "big_idea": "Pick a tool, say why, and check your answer another way",
  "child_idea": "We have seven tools. Look at a problem, pick the tool you would start with, say why, and check. If one tool gets stuck, try another.",
  "skill": "Choosing a method",
+ "spine": {
+  "main": "choose",
+  "also": [],
+  "role": "C",
+  "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the seven tools met by Term 3 and hosts Mi's Challenge Quest."
+ },
  "moe": {
   "strand": "Processes and heuristics (pp. 13 to 14 of the syllabus pages we hold: problem solving, representing, reasoning and communicating; no list of named heuristics); Mi's Challenge Quest for the term",
   "topics": [
@@ -1113,7 +1119,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session at the start of next term. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session at the start of next term. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -3062,6 +3068,17 @@
      },
      {
       "k": "SAY",
+      "text": "Today you choose the tool.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the row of tools on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
       "text": "These are our seven tools. Each tool is a way to start a problem. Put your tool cards in a row."
      },
      {
@@ -3664,6 +3681,11 @@
      },
      {
       "k": "NOTE",
+      "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
       "text": "Model answer: both tools can work, but a table is quicker for the 20th picture because we add the same each time. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. Ask once: which tool did you pick first today, and why?"
      }
     ]
@@ -3682,12 +3704,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to photograph this page after class."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 60
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 60,
+      "spine": "look"
      }
     ]
    },

@@ -9,6 +9,12 @@
   "big_idea": "Pick the tool that fits the problem, say why, then check the answer a second way",
   "child_idea": "We have eight tools. Look at the problem, pick a tool that fits, say why, solve it, and check the answer another way.",
   "skill": "Choosing a method",
+  "spine": {
+    "main": "choose",
+    "also": [],
+    "role": "C",
+    "reason": "Teaches how to choose a tool: all eight tool names of the toolbox card, with a tool card and a problem card for each."
+  },
   "ages": "6-8",
   "moe": {
     "strand": "Processes and heuristics (pp. 13 to 14 of the syllabus pages we hold: problem solving, representing, reasoning and communicating; no list of named heuristics). The tools come from Terms 1 to 4 of this program; the eight names are the names on the toolbox card",
@@ -1167,7 +1173,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1288,6 +1294,17 @@
           {
             "k": "SAY",
             "text": "Today we open the problem-solving toolbox. We meet eight tools, we pick the tool that fits a problem, and we check our answer a second way."
+          },
+          {
+            "k": "SAY",
+            "text": "Today you choose the tool.",
+            "spine": "opening"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the row of tools on page 1 of the workbook.",
+            "s": 4,
+            "spine": "opening"
           },
           {
             "k": "NOTE",
@@ -1874,6 +1891,11 @@
           },
           {
             "k": "NOTE",
+            "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
             "text": "Model answer: no, we do not agree. Check forwards: if Wei has twelve, Amelia has twenty-four, and together they have thirty-six, not twenty-four. Check with a strip: Wei has one part and Amelia has two parts, so there are three equal parts, and twenty-four shared into three is eight: Wei has eight and Amelia has sixteen. The child shared into two parts but there are three. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
@@ -1936,12 +1958,14 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
           },
           {
             "k": "WORK",
-            "text": "Children fill in the look-back box on page 5.",
-            "s": 80
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 110,
+            "spine": "look"
           }
         ]
       },

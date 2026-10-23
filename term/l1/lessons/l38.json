@@ -9,6 +9,14 @@
  "big_idea": "Scales save space, and a graph can answer some questions and not others",
  "child_idea": "Read the key first: it says what one picture stands for. Count in 2s or 3s when a picture stands for more than 1. A graph can answer some questions and not others.",
  "skill": "Critical reading",
+ "spine": {
+  "main": "backwards",
+  "also": [
+   "draw"
+  ],
+  "role": "A",
+  "reason": "A missing bar is the total take away the bars you know; graphs are drawn from clues."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Statistics: picture graphs (read and interpret, Primary 1, p. 32). A picture graph where each picture stands for more than 1 (a scale of 2 or 3) is Primary 2 (p. 34); saying what a graph cannot tell us is critical reading and not a listed outcome",
@@ -1070,7 +1078,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1206,6 +1214,17 @@
      {
       "k": "SAY",
       "text": "Today we are graph detectives. We read the key first, we find a missing bar, and we ask what a graph can and cannot tell us."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Work backwards. Start at the end and undo each step.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
      },
      {
       "k": "NOTE",
@@ -1704,6 +1723,17 @@
       "resp": 12
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Work backwards today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: no, we do not agree. We can check by adding the three bars back up: six, nine and eight make twenty-three, not twenty-one. Six and nine make fifteen, and twenty-one take away fifteen is six, so the third bar has six books. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -1767,12 +1797,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
      }
     ]
    },

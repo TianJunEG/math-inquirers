@@ -4,6 +4,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 E = Ef      # family-facing pages: one lesson numbering scheme
 import svg
+import spine_term as SPT      # tool of the day + common look-back (term/l1/SPINE_TERM_DESIGN.md)
 
 WB_CSS = open(os.path.join(ROOT, 'hp', 'wb_style.css'), encoding='utf-8').read()
 PARENT_CSS = open(os.path.join(ROOT, 'hp', 'parent_style.css'), encoding='utf-8').read()
@@ -53,7 +54,7 @@ def hdr(d, tag, title=None, mi=False):
         return head
     i = head.index('<div class="ltitle">') if '<div class="ltitle">' in head else head.index('<div class="namer">')
     img = f'<img alt="Mi the dolphin" src="{mi_uri()}" style="width:22mm;height:auto;flex:none;margin:-2px 0 -8px 8px">'
-    return head[:i] + f'<div style="display:flex;align-items:flex-start"><div style="flex:1;min-width:0">' + head[i:] + f'</div>{img}</div>'
+    return head[:i] + f'<div style="display:flex;align-items:flex-start"><div style="flex:1;min-width:0">' + head[i:] + SPT.wb_chip(d, (d.get('spine') or {}).get('chip') == 'compact') + f'</div>{img}</div>'
 
 
 CHOICE_PATTERNS = [(r'circle (yes or no|yes/no)', ('Yes', 'No')), (r'circle (right or wrong|right/wrong)', ('Right', 'Wrong')),
@@ -174,6 +175,7 @@ def workbook_html(d, key=False):
             f'<div class="r"><b>What helped me:</b>{bx(lb["helped"])}</div>'
             f'<div class="r"><b>Next time I will try:</b>{bx(lb["next"])}</div>'
             '<div class="r"><b></b><span><i class="bx"></i>I am still stuck (my grown-up will photograph this page for my tutor)</span><span><i class="bx"></i>I would like to pass</span></div></div>')
+    look = SPT.wb_lookback(d) or look      # spine: the common look-back box replaces the old one when the lesson has a `spine` object
     if wb(d, 'exit_page', False):      # opt-in: the Investigation has page 5 to itself; the exit ticket and look-back share the next page (more room for 35 mm clocks and a drawing face)
         P.append(f'<div class="page p5">{hdr(d, "Choose")}<div class="banner">Investigation: {E(inv["title"])}</div><p style="font-style:italic;margin:2px 0">{E(wb(d, "inv_intro", "Try this any time. You do not have to finish."))}</p>'
                  f'<p style="margin:3px 0"><b>{E(wb(d, "inv_first_label", "First, try this."))}</b> {E(inv["first"])}</p>{inv_vis(inv)}<p style="margin:3px 0"><b>{E(wb(d, "inv_then_label", "Next, try this."))}</b> {E(inv["text"])}</p>' + inv_draw(inv) + '<div class="ln"></div>' * max(d.get('_inv_lines', 4), 8) + '</div>')
@@ -188,7 +190,7 @@ def workbook_html(d, key=False):
         parts = body.split('<div class="page')
         if i + 1 < len(parts): parts[i + 1] = (' tight tight2 tight3' if i in d.get('_tight3', ()) else (' tight tight2' if i in d.get('_tight2', ()) else ' tight')) + parts[i + 1]
         body = '<div class="page'.join(parts)
-    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{body}</body></html>'
+    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}{SPT.CSS}</style></head><body>{body}</body></html>'
 
 
 def key_html(d):
@@ -230,7 +232,7 @@ def home_html(d, answers=False):
         page = (f'<div class="page">{hdr(d, "Answers", d["title"] + ": home practice answers")}<p style="font-size:13px">For grown-ups. Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
                 f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link.</p></div>')
     else:
-        page = f'<div class="page hm {("t" + str(d.get("_home_tight"))) if d.get("_home_tight") else ""}">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next. The answers are on a separate sheet, so they never print on the back of this one.</p>{qs}</div>'
+        page = f'<div class="page hm {("t" + str(d.get("_home_tight"))) if d.get("_home_tight") else ""}">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} {E(SPT.home_line(d))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next. The answers are on a separate sheet, so they never print on the back of this one.</p>{qs}</div>'
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{page}</body></html>'
 
 

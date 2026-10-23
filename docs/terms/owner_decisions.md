@@ -244,3 +244,11 @@ Owner replied: LOOKBACK-RETIRE, ACCEPT-NOTE, CARD-BOOK1, P39-TWO, WORD-UNUSED.
 
 ## 23 Oct 2026 (night): PUBLISHER-OK and LICENCE-ANNUAL
 Owner approved the cover publisher line "Preciouslyours Pte Ltd, trading as Math Inquirers" and an ANNUAL licence term for the school-book products (P1 semester booklets first). Licence wording itself is still a draft for a lawyer to approve before any school receives a booklet. Owner is the contact: pypteltd@gmail.com until a business email is given.
+
+## 23 Oct 2026 (night): TERM-FINE, GRAPH-ACCEPT, REWRITE-AFTER-6NOV, extension books Levels 2-6
+- TERM-FINE: term review decisions 2-5 as applied are what the owner meant.
+- GRAPH-ACCEPT: Level 3 holiday Lesson 10 No.1 drinks graph keeps the short dashed base with a "?" (no bar drawn to 50).
+- REWRITE-AFTER-6NOV: rewrite git history to drop old build outputs (repo about 4.5 GB) AFTER the 6 Nov print order, not before.
+- Build the Level 2-6 extension workbooks (same pipeline as Level 1: extension/; one book per level, 10 units following the 10 holiday lessons, with answers).
+- "Swop address": the registered office address 66 Tannery Ln, Singapore 347805 replaces the placeholder on the extension book licence page (and publisher line "Preciouslyours Pte Ltd, trading as Math Inquirers").
+- SASMO rule (owner): do NOT copy SASMO questions; the SKILLS needed to answer such questions must be covered in the HOLIDAY program. Action: a skill-coverage map (SASMO skill types by grade against holiday lessons), gaps flagged, holiday additions proposed; extension books stay 100% original items.

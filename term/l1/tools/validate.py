@@ -816,9 +816,27 @@ def check_foreign(d):
     else: ok('template leak: no other lesson title or stray Lesson 1 text in the built files')
 
 
+def check_spine(d):
+    """A lesson with a `spine` object: valid tool ids, at most 2 'also', the same row as spine_term.json, the Opening and look-back words present."""
+    sp = d.get('spine')
+    if not sp: return
+    import spine_term as SPT
+    ids = {t['id'] for t in SPT.TOOLS}
+    tr = SPT._TERM['lessons'].get(str(d['lesson']))
+    if sp.get('main') not in ids | {'choose'}: fail(f"spine: unknown main tool {sp.get('main')!r}")
+    if any(a not in ids for a in sp.get('also', [])) or len(sp.get('also', [])) > 2 or sp.get('main') in sp.get('also', []): fail('spine: also must be 0-2 other tool ids')
+    mt = set(SPT._TERM['tools_met'][str(d['term'])])
+    if (sp.get('main') != 'choose' and sp.get('main') not in mt) or any(a not in mt for a in sp.get('also', [])): fail(f"spine: tools must be among those met in Term {d['term']}: {sorted(mt)}")
+    if tr and (tr['main'] != sp.get('main') or tr['also'] != sp.get('also')): fail('spine: differs from term/l1/spine_term.json (rerun tools/apply_spine_term.py)')
+    marks = {ln.get('spine') for seg in d['script']['segments'] for ln in seg['lines'] if 'spine' in ln}
+    if 'look' not in marks: fail('spine: the common look-back words are missing from the look-back script')
+    if not marks & {'opening', 'remember'}: warn('spine: no Opening line about the tool of the day (timing was full: see SPINE_TERM_DESIGN.md)')
+    ok('spine: tool of the day ' + sp['main'] + ', common look-back present')
+
+
 def check_all(num, built=True):
     d = load(num)
-    for fn in (check_schema, check_identity, check_figures, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers, check_beyond, check_kit_contract, check_handoff, check_plural_guard):
+    for fn in (check_schema, check_identity, check_figures, check_timing, check_slides_links, check_tiers, check_workbook_items, check_words, check_pages, check_next_materials, check_slide_privacy, check_mascot, check_rec, check_spare, check_copy, check_answers, check_beyond, check_kit_contract, check_handoff, check_plural_guard, check_spine):
         try:
             fn(d)
         except Exception as e:

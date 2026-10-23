@@ -9,6 +9,14 @@
  "big_idea": "One test is not a proof",
  "child_idea": "An even number makes pairs with none left over. An odd number has one left over. Test many examples, then use a picture of pairs to see why.",
  "skill": "Conjecture and test",
+ "spine": {
+  "main": "actout",
+  "also": [
+   "pattern"
+  ],
+  "role": "P",
+  "reason": "Counters in pairs show why odd and even behave as they do; then children test many sums."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Whole Numbers",
@@ -251,6 +259,17 @@
      {
       "k": "REC",
       "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
      },
      {
       "k": "SAY",
@@ -763,6 +782,17 @@
       "resp": 15
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Act it out today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: one test is not enough, because a different pair might give a different answer. Test more pairs, and use a picture of pairs to see why: each odd number has one left over, and two left-over counters make a pair. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -824,12 +854,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
      }
     ]
    },
@@ -1751,7 +1783,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."

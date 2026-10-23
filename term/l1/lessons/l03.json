@@ -9,6 +9,14 @@
   "big_idea": "The order of the digits changes the number",
   "child_idea": "Two digit cards make two different numbers. The left card counts the tens, so the card on the left matters most.",
   "skill": "Systematic cases",
+  "spine": {
+    "main": "list",
+    "also": [
+      "actout"
+    ],
+    "role": "I",
+    "reason": "Children make every number from two cards in order, then three cards, then four, moving the kit cards."
+  },
   "ages": "6-8",
   "moe": {
     "strand": "Whole Numbers",
@@ -298,6 +306,17 @@
           {
             "k": "REC",
             "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today's tool is List every way. Write each way down, in order, so none is missed.",
+            "spine": "remember"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the tool on page 1 of the workbook.",
+            "s": 4,
+            "spine": "remember"
           },
           {
             "k": "SAY",
@@ -833,6 +852,11 @@
           },
           {
             "k": "NOTE",
+            "text": "Ask the group where they used List every way today (about 20 seconds, no time modelled). Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
             "text": "Model answer: (a) yes, 38 is smaller than 83. (b) no: 0 can not go on the left because 05 is just 5, so 50 is the only two-digit number. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
@@ -893,12 +917,14 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
           },
           {
             "k": "WORK",
-            "text": "Children fill in the look-back box on page 5.",
-            "s": 100
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 100,
+            "spine": "look"
           }
         ]
       },
@@ -1828,7 +1854,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."

@@ -9,6 +9,14 @@
  "big_idea": "A grid lets us say exactly where things are and copy them exactly",
  "child_idea": "On a grid of dots we count the steps between the dots. Then we can say exactly where to go and copy a figure exactly.",
  "skill": "Describing position and copying exactly",
+ "spine": {
+  "main": "list",
+  "also": [
+   "simpler"
+  ],
+  "role": "A",
+  "reason": "Routes are listed in order so none is missed; the 3 by 1 and 2 by 2 grids come before bigger ones."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Geometry: 2D shapes, copy figures on a dot or square grid (Primary 1, p. 32)",
@@ -1357,7 +1365,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1523,6 +1531,17 @@
      },
      {
       "k": "SAY",
+      "text": "Today's tool is List every way. Write each way down, in order, so none is missed.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
       "text": "Counters in a grid. Rows go across. Columns go down."
      },
      {
@@ -1646,7 +1665,7 @@
      },
      {
       "k": "SAY",
-      "text": "Today the grid page is our tool. Look at the house on the screen. Copy it on the right-hand side of a copy grid, so that it is exactly the same. A ruler or the edge of a card helps with straight lines."
+      "text": "Today the grid page is our helper. Look at the house on the screen. Copy it on the right-hand side of a copy grid, so that it is exactly the same. A ruler or the edge of a card helps with straight lines."
      },
      {
       "k": "WORK",
@@ -2059,6 +2078,17 @@
       "resp": 12
      },
      {
+      "k": "ASK",
+      "text": "Where did you use List every way today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: yes, they stop at the same dot, and they both walk 5 steps. Both go 3 right and 2 up. Only the order is different. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. The names in the story are not children in the group."
      }
@@ -2122,12 +2152,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
      }
     ]
    },

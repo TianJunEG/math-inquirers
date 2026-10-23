@@ -9,6 +9,12 @@
   "big_idea": "Read it twice, choose a tool, check",
   "child_idea": "Read a story twice. Choose a tool. Write one number sentence for each step: add, or take away. Then check.",
   "skill": "Choosing a tool and checking",
+  "spine": {
+    "main": "choose",
+    "also": [],
+    "role": "C",
+    "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the four tools met in Term 1 (Draw it, Act it out, Spot the pattern, List every way) for each story, and ticks I checked."
+  },
   "ages": "6-8",
   "moe": {
     "strand": "Addition and Subtraction",
@@ -231,6 +237,11 @@
           {
             "k": "SAY",
             "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+          },
+          {
+            "k": "NOTE",
+            "text": "Say: Today you choose the tool. (no time modelled: the opening is full).",
+            "spine": "opening"
           },
           {
             "k": "DO",
@@ -867,6 +878,11 @@
           },
           {
             "k": "NOTE",
+            "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
             "text": "Model answer: No. Fewer means less. Ali has 20 - 5 = 15. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
@@ -884,12 +900,14 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick the tool you used, and tick I checked. Tick what helped you. Write or draw one thing you did well. Still stuck? Tick that box. You can pass. Nobody reads it out."
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
           },
           {
             "k": "WORK",
-            "text": "Children fill in the look-back box on page 5.",
-            "s": 55
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 55,
+            "spine": "look"
           }
         ]
       },

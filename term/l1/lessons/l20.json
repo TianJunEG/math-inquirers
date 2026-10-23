@@ -9,6 +9,12 @@
  "big_idea": "Pick a tool, say why, and check your answer",
  "child_idea": "Many problems can be solved in more than one way. We pick a tool, say why we picked it, and check the answer another way.",
  "skill": "Choosing a method and checking it",
+ "spine": {
+  "main": "choose",
+  "also": [],
+  "role": "C",
+  "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the six tools met by Term 2 and hosts Mi's Challenge Quest."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Whole Numbers; Addition and Subtraction; Multiplication and Division; Money (Term 2 spiral, problem solving)",
@@ -1046,7 +1052,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide); open next term with one catch-up question for the whole group; never a direct message.",
+   "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide); open next term with one catch-up question for the whole group; never a direct message.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1216,6 +1222,17 @@
      {
       "k": "SAY",
       "text": "Today we choose our tool. For each problem we pick a tool, say why, and check. After our break we play Mi's Challenge Quest, a game with Mi, on our own paper. It is not a race, and nobody sees your answers."
+     },
+     {
+      "k": "SAY",
+      "text": "Today you choose the tool.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the row of tools on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
      },
      {
       "k": "NOTE",
@@ -1816,6 +1833,11 @@
      },
      {
       "k": "NOTE",
+      "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
       "text": "Model answer: no. Draw it is good for a story with a whole and parts. A table is quicker for counting in 5s. Work backwards is quicker for I think of a number. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
     ]
@@ -1833,12 +1855,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 35
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 40,
+      "spine": "look"
      }
     ]
    },

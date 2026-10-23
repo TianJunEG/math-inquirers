@@ -9,6 +9,14 @@
  "big_idea": "Tables are skip counts, and the last digits show a pattern",
  "child_idea": "A table is counting in jumps: the 5s are 5, 10, 15 and so on. 6 jumps of 5 is 6 × 5 = 30. The last digits make a pattern.",
  "skill": "Patterns to facts",
+ "spine": {
+  "main": "pattern",
+  "also": [
+   "actout"
+  ],
+  "role": "P",
+  "reason": "Last digits of the 2s, 5s and 10s repeat; a counter hops along the line as the frog."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Multiplication and Division",
@@ -1031,7 +1039,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1185,6 +1193,17 @@
      {
       "k": "REC",
       "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Spot the pattern. Look for what repeats or grows.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
      },
      {
       "k": "SAY",
@@ -1648,6 +1667,17 @@
       "resp": 15
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Spot the pattern today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: it works for the numbers we tested (15 and 40 are in the table, 28 and 33 are not); the 5s end in 5 and 0 one after the other, so a number that ends in 5 or 0 is in the table and one that ends in any other digit is not. We tested a few numbers and the jumps show why. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -1709,12 +1739,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick ‘I am still stuck’, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
      }
     ]
    },

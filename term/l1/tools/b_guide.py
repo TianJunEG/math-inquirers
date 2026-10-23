@@ -3,6 +3,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 import svg
+import spine_term as SPT
 
 CSS = """
 @page{size:A4;margin:15mm 14mm 17mm 14mm}
@@ -112,8 +113,11 @@ def build_html(d):
             ('Tiers', 'Start here (' + str(len(d['tiers']['start'])) + ' questions, pages 1 and 2), Think harder (' + str(len(d['tiers']['think'])) + ', page 3), Go further (' + str(len(d['tiers']['go'])) + ', page 4), Investigation and look-back (page 5)' + (f', kit page{"s" if len(kits(d)) > 1 else ""} (page{"s" if len(kits(d)) > 1 else ""} 6' + (f'-{5 + len(kits(d))}' if len(kits(d)) > 1 else '') + ')' if kits(d) else '') + '. Labels are neutral; nobody is told which page they are on.'),
             *([('Beyond Primary 1 (tutor only)', E(d['beyond']['name']) + ' at ' + ', '.join(E(x) for x in d['beyond']['where']) + ': ' + E(d['beyond']['text']) + ' Never in Start here, never advertised to children.')] if d.get('beyond') else []),
             ('Contest-style move', 'Used at ' + E(d.get('contest_where') or 'Think harder only') + ': ' + '; '.join(E(x) for x in d['contest_moves']) + '. Never advertised to children or parents.')]
+    _sr = SPT.guide_row(d)
+    if _sr: rows.insert(1, _sr)      # spine: Tool of the day row
     for a, b in rows: H.append(f'<tr><th style="width:110px">{a}</th><td>{b}</td></tr>')
     H.append('</table>')
+    if SPT.row(d): H.append(SPT.guide_toolbox(d))      # spine: the eight tools and the three look-back questions
     H.append('<div class="box t"><b>Before the lesson</b><ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['tutor_prep']) + '</ul></div>')
     H.append('<div class="box r"><b>Safeguarding and recording (this lesson)</b><ul>' + ''.join(f'<li>{E(x)}</li>' for x in d['safeguarding']) + '</ul></div>')
     # timing table
@@ -156,6 +160,7 @@ def build_html(d):
     for q in d['exit']: H.append(q_html(dict(q, hint='', mins=None)))
     lb = d['look_back']
     H.append(f'<h3>Look-back ({rng("look")})</h3><div class="q">Children tick or write: <i>Something I did well</i>; <i>The hardest part was</i> (' + '; '.join(E(x) for x in lb['hardest']) + '); <i>What helped me</i> (' + '; '.join(E(x) for x in lb['helped']) + '); <i>Next time I will try</i> (' + '; '.join(E(x) for x in lb['next']) + '); <i>I am still stuck (my grown-up will photograph this page for my tutor)</i> and <i>I would like to pass</i>. Never collected or read out in front of the group. A child who ticks still stuck gets a check-in in the open session next lesson.</div>')
+    if SPT.row(d): H[-1] = f'<h3>Look-back ({rng("look")})</h3><div class="q">{SPT.guide_lookback(d)}</div>'      # spine: the three common prompts
     H.append('<h2>5. Home practice and online practice</h2><table><tr><th>#</th><th>Tier</th><th>Question</th><th>Answer</th></tr>')
     for h in d['home_practice']: H.append(f'<tr><td>{h["id"]}</td><td>{TIER_NAME[h["tier"]]}</td><td>{E(h["text"])}</td><td>{E(h["answer"])}</td></tr>')
     H.append('</table>')

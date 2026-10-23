@@ -9,6 +9,14 @@
  "big_idea": "Time can be added: one hour later, half an hour later",
  "child_idea": "A clock can look forward. One hour later, the short hand moves on one number. Half an hour later, the long hand goes half way round.",
  "skill": "Measuring how long",
+ "spine": {
+  "main": "backwards",
+  "also": [
+   "draw"
+  ],
+  "role": "A",
+  "reason": "From the end time, count back to find the start; a time line shows the jumps."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Measurement: Time (1 hour and half an hour)",
@@ -1150,7 +1158,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1265,6 +1273,17 @@
      {
       "k": "SAY",
       "text": "Today we look forward on the clock. If a film starts now, when does it end? We add one hour, and we add half an hour."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Work backwards. Start at the end and undo each step.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
      },
      {
       "k": "DO",
@@ -1798,6 +1817,17 @@
       "resp": 12
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Work backwards today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: the first child is right. Half an hour is 30 minutes; from 7:30 the long hand goes from the 6 to the 12 and the short hand moves on to 8, so it is 8:00. 8:30 is a whole hour after 7:30. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -1859,12 +1889,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
      }
     ]
    },

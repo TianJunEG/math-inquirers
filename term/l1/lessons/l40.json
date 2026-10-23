@@ -9,6 +9,12 @@
   "big_idea": "Pick the tool that fits, teach what you found, and write a puzzle with one answer and a check",
   "child_idea": "We have eight tools. Pick the tool that fits, say why, and check. Teach a favourite idea in a minute. A good puzzle has a story, numbers, one question and one answer.",
   "skill": "Choosing a method and communicating",
+  "spine": {
+    "main": "choose",
+    "also": [],
+    "role": "C",
+    "reason": "Choose-the-tool lesson with the Showcase and Mi's Challenge Quest: children teach their favourite idea, name the tool they would start with, and check."
+  },
   "ages": "6-8",
   "moe": {
     "strand": "Processes: communicating, reasoning and a look back over the year (pp. 13 to 14 of the syllabus pages we hold); Mi's Challenge Quest of the year",
@@ -892,7 +898,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page and send it to the business WhatsApp (the number is in the parent summary, never on a slide); you then help in the open session when the next program starts. Never a direct message to a child. The Next time I will try row is optional.",
+      "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page and send it to the business WhatsApp (the number is in the parent summary, never on a slide); you then help in the open session when the next program starts. Never a direct message to a child.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -1054,6 +1060,17 @@
           {
             "k": "SAY",
             "text": "Today is the last lesson of the year. We teach one idea we found, we write a puzzle, and we play Mi's Challenge Quest."
+          },
+          {
+            "k": "SAY",
+            "text": "Today you choose the tool.",
+            "spine": "opening"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the row of tools on page 1 of the workbook.",
+            "s": 4,
+            "spine": "opening"
           },
           {
             "k": "NOTE",
@@ -1671,6 +1688,11 @@
           },
           {
             "k": "NOTE",
+            "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
             "text": "Volunteers only, up to five, one at a time; about a minute each. Repeat each idea in your own words for the recording. Never call a child by name to answer; no voting, no best, no ranking, no counting of claps. A child who does not want to be recorded teaches a grown-up with the microphone muted. Puzzles stay inside the group; nothing is collected or compiled; a puzzle leaves the group only if the grown-up agrees. If fewer children volunteer, finish early: the time goes to the flex buffer. Praise the reason, not the speed. A volunteer whose idea has a small mistake: say the right idea in your own words without naming the mistake."
           }
         ]
@@ -1689,12 +1711,14 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page and send it to our business WhatsApp. Then we will help you."
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
           },
           {
             "k": "WORK",
-            "text": "Children fill in the look-back box on page 5.",
-            "s": 50
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 60,
+            "spine": "look"
           }
         ]
       },

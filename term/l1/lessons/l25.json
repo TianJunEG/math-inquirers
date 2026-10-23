@@ -9,6 +9,14 @@
  "big_idea": "Which costs more, and by how much? The difference is the gap.",
  "child_idea": "A price tag says how much one thing costs. To find how much more one costs than another, count up from the smaller price to the bigger price. That gap is how much more.",
  "skill": "Comparing",
+ "spine": {
+  "main": "guess",
+  "also": [
+   "draw"
+  ],
+  "role": "I",
+  "reason": "Try two tags, check the total or the gap, then try again; strips show how much more."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Money: compare prices, add and subtract money in dollars (Primary 1)",
@@ -1266,7 +1274,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1412,6 +1420,17 @@
      {
       "k": "REC",
       "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Guess and check. Pick a number, test it, then try a better one.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
      },
      {
       "k": "SAY",
@@ -1938,6 +1957,17 @@
       "resp": 12
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Guess and check today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: the second child is right. 17 is greater than 12, so the kite costs more; counting up from 12 to 17 is 5 steps, so the kite costs $5 more. The first child swapped them. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -2002,12 +2032,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
      }
     ]
    },

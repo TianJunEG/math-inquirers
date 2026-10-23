@@ -9,6 +9,15 @@
  "big_idea": "Find one, then find many",
  "child_idea": "When we know what a group costs, we can find what one costs by sharing equally. Then we can find what any number of them cost.",
  "skill": "Unit method",
+ "spine": {
+  "main": "draw",
+  "also": [
+   "table"
+  ],
+  "role": "P",
+  "reason": "A strip of equal parts shows the cost of one, and a table of 1, 2, 3 ... items shows the cost of many.",
+  "chip": "compact"
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Multiplication and Division; Money",
@@ -1085,7 +1094,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide); open the next lesson with one catch-up question for the whole group; never a direct message.",
+   "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide); open the next lesson with one catch-up question for the whole group; never a direct message.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1228,6 +1237,17 @@
      {
       "k": "SAY",
       "text": "Today we find one first, and then we find many. We use tokens: one token is one dollar."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Draw it. Draw a picture or a bar of what the story says.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
      },
      {
       "k": "NOTE",
@@ -1759,6 +1779,17 @@
       "resp": 25
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Draw it today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Or 6 books are 2 lots of 3 books, so 2 lots of $12. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -1820,12 +1851,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
      }
     ]
    },

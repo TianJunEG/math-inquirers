@@ -9,6 +9,14 @@
  "big_idea": "Share equally, or put into groups",
  "child_idea": "To share equally, we deal one at a time until everything is gone. To put into groups, we make groups of the same size and count them. We can check by multiplying.",
  "skill": "Two models of one operation",
+ "spine": {
+  "main": "actout",
+  "also": [
+   "list"
+  ],
+  "role": "P",
+  "reason": "Children deal counters onto plates; Go further lists every number of friends that share 12."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Multiplication and Division",
@@ -1026,7 +1034,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1190,6 +1198,17 @@
      {
       "k": "REC",
       "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
      },
      {
       "k": "SAY",
@@ -1713,6 +1732,17 @@
       "resp": 15
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Act it out today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: yes for these pairs, the number is the same each time (12 and 4 gives 3 and 3; 10 and 5 gives 2 and 2), but the meaning is different (3 each, or 3 groups). Turn the rows of counters and the picture shows why: 3 rows of 4 and 4 rows of 3 use the same counters (equal groups, earlier this term). Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. Do not claim it is proved for every pair of numbers: we tested a few and used a picture."
      }
@@ -1774,12 +1804,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick ‘I am still stuck’, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 80
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
      }
     ]
    },

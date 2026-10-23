@@ -547,6 +547,42 @@
         }
       },
       "description": "Terms 3 and 4 (any lesson may carry it): the tutor-only beyond-P1 field. Never in Start here."
+    },
+    "spine": {
+      "type": "object",
+      "required": [
+        "main"
+      ],
+      "properties": {
+        "main": {
+          "type": "string"
+        },
+        "also": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "I",
+            "P",
+            "A",
+            "C"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "chip": {
+          "type": "string",
+          "enum": [
+            "compact"
+          ]
+        }
+      }
     }
   },
   "$defs": {

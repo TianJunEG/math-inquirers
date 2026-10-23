@@ -7,6 +7,7 @@ import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 import svg
+import spine_term as SPT
 
 BF = "'Nunito Sans', Arial, sans-serif"
 HF = "'Fredoka', Arial, sans-serif"
@@ -149,6 +150,8 @@ def answers_block(d, ids):
 
 
 def lookback(d):
+    _sp = SPT.deck_lookback(d, NAVY, TEAL, MUTED, CARD, chip)      # spine: three common prompts, Tool I used row, stuck and pass
+    if _sp: return _sp
     lb = d['look_back']
     def opts(items):
         return ''.join(f'<span style="display:inline-flex;align-items:center;margin-right:30px;white-space:nowrap"><span style="display:inline-block;width:0.8em;height:0.8em;border:3px solid {NAVY};border-radius:8px;background:#fff;margin-right:12px"></span>{E(o)}</span>' for o in items)
@@ -213,7 +216,7 @@ def slide_html(d, s):
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
                 f'<h1 style="font-family:{HF};font-size:{title_px(s["title"])}px;font-weight:600;line-height:1.08;max-width:1300px;text-wrap:balance">{E(s["title"])}</h1>'
                 f'<p style="font-size:44px;color:#C9D4EC">{E(s.get("subtitle", ""))}</p>'
-                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:30px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card'))
+                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:30px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card') + SPT.deck_chip(d))      # spine: TODAY'S TOOL chip (absolute, bottom left)
         style = f'{bg};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px;position:relative;overflow:hidden'
     else:
         if dark:

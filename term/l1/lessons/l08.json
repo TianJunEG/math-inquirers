@@ -9,6 +9,14 @@
  "big_idea": "Adjust one side, adjust the other",
  "child_idea": "An equals sign means both sides are the same amount, like a balanced see-saw. If one number goes up, another goes down by the same amount to keep the balance.",
  "skill": "Reasoning about equality",
+ "spine": {
+  "main": "actout",
+  "also": [
+   "draw"
+  ],
+  "role": "P",
+  "reason": "Children move real small things between two plates and see what stays equal."
+ },
  "ages": "6-8",
  "moe": {
   "strand": "Addition and Subtraction",
@@ -254,6 +262,17 @@
      {
       "k": "REC",
       "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
      },
      {
       "k": "SAY",
@@ -787,6 +806,17 @@
       "resp": 20
      },
      {
+      "k": "ASK",
+      "text": "Where did you use Act it out today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
       "k": "NOTE",
       "text": "Model answer: No. 6 + 4 is 10 but 7 + 5 is 12. Ali added 1 to both numbers, so the total went up by 2. To keep 10, add 1 to one number and take 1 from the other: 7 + 3. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
@@ -856,12 +886,14 @@
      },
      {
       "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. If you still need help, tick I am still stuck and show your grown-up. You can pass. Nobody reads it out."
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
      },
      {
       "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 100
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 100,
+      "spine": "look"
      }
     ]
    },
@@ -1626,7 +1658,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next lesson with one catch-up question for the whole group. Never a direct message. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next lesson with one catch-up question for the whole group. Never a direct message.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."

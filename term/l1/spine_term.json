@@ -12,7 +12,7 @@
  "choose_lessons_extra": [
   39
  ],
- "choose_note": "Lessons 10, 20, 30 and 40 are choose-the-tool lessons (owner decision 2; docs/pedagogy/lesson_x10_consolidation_plan.md). Lesson 39 (The Problem-Solving Toolbox) is also marked choose because its whole job is picking the tool; the owner may set it to a single tool instead. The tool chip says Choose one and shows the tools met so far.",
+ "choose_note": "Lessons 10, 20, 30 and 40 are choose-the-tool lessons (owner decision X10; docs/pedagogy/lesson_x10_consolidation_plan.md) and host Mi's Challenge Quest (Quest tool row = tools_met for the term). Lesson 39 (The Problem-Solving Toolbox) is also marked choose because its whole job is picking the tool; the owner may set it to a single tool instead. The tool chip says Choose one and shows the tools met so far.",
  "tools_met": {
   "1": [
    "draw",
@@ -153,7 +153,7 @@
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the four tools met in Term 1 for each story."
+   "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the four tools met in Term 1 (Draw it, Act it out, Spot the pattern, List every way) for each story, and ticks I checked."
   },
   "11": {
    "title": "Who Is Where?",
@@ -174,13 +174,13 @@
    "reason": "The strip is the picture of the story; sum-and-difference items are solved by undoing the gap."
   },
   "13": {
-   "title": "Doubles and Near Doubles",
-   "main": "pattern",
+   "title": "Picture Equations",
+   "main": "backwards",
    "also": [
     "actout"
    ],
-   "role": "P",
-   "reason": "Each near double is one more or one less than a double; counters show the extra one."
+   "role": "I",
+   "reason": "A shape is a hidden number: start from the total, undo the known shape to find the other, and put the number back to check; counters stand in for the shapes."
   },
   "14": {
    "title": "Odd + Odd: Always, Sometimes, Never",
@@ -229,20 +229,20 @@
    "reason": "Equal strips show 'twice as many'; the hidden-unit items are solved by undoing the total."
   },
   "19": {
-   "title": "Picture Equations",
-   "main": "backwards",
+   "title": "Find One First",
+   "main": "draw",
    "also": [
-    "list"
+    "table"
    ],
-   "role": "I",
-   "reason": "Start from the total and undo to find each shape; the Investigation lists the pairs that fit a line."
+   "role": "P",
+   "reason": "A strip of equal parts shows the cost of one, and a table of 1, 2, 3 ... items shows the cost of many."
   },
   "20": {
-   "title": "Find One First",
+   "title": "Choose Your Tool",
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson (consolidation plan, Tool Market): the child picks one of the six tools met by Term 2."
+   "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the six tools met by Term 2 and hosts Mi's Challenge Quest."
   },
   "21": {
    "title": "What Time Is It?",
@@ -300,13 +300,13 @@
    "reason": "Every way to spend exactly $20 is listed in order, with a row for each number of books."
   },
   "27": {
-   "title": "Fill the Grid",
-   "main": "guess",
+   "title": "Calendar Detective",
+   "main": "pattern",
    "also": [
     "actout"
    ],
    "role": "A",
-   "reason": "Place a tile, check its row and column, and change it if it breaks a rule."
+   "reason": "The week repeats every 7 days, so a day later or a week later follows the pattern; children act it out with the 7 day cards and the month page."
   },
   "28": {
    "title": "Make a Table",
@@ -326,11 +326,11 @@
    "reason": "Add back, or take away, to check a sum; the wrong step is found by undoing the working."
   },
   "30": {
-   "title": "Calendar Detective",
+   "title": "Tool Detectives",
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson (consolidation plan, Tool Detectives): the child picks one of the seven tools met by Term 3."
+   "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the seven tools met by Term 3 and hosts Mi's Challenge Quest."
   },
   "31": {
    "title": "Half and Quarter",
@@ -410,14 +410,14 @@
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Teaches how to choose a tool. Its tool cards still use the lesson's own seven names; the plan rebalances them to the eight card names."
+   "reason": "Teaches how to choose a tool: all eight tool names of the toolbox card, with a tool card and a problem card for each."
   },
   "40": {
    "title": "Inquirers' Showcase",
    "main": "choose",
    "also": [],
    "role": "C",
-   "reason": "Choose-the-tool lesson with the Showcase and the Quest: children teach their favourite idea and pick the tool that fits."
+   "reason": "Choose-the-tool lesson with the Showcase and Mi's Challenge Quest: children teach their favourite idea, name the tool they would start with, and check."
   }
  },
  "chip_compact_lessons": [
