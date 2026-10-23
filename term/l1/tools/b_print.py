@@ -130,12 +130,12 @@ def qbox(q, label=None, draw=False):
 NONCUT_KITS = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates', 'grid_mat', 'graph_mat'}
 
 
-def kit_note(k):
+def kit_note(k, d=None):
     """The same practical advice on every kit page: one side only, who cuts, where the pieces live. "We use them again" only when a later lesson does."""
     if k.get('type') in NONCUT_KITS:
         return 'No cutting needed: keep this page flat to use in the lesson. Print it on its own sheet, or on one side only.'
     import figs3
-    reuse = figs3.kit_reused(k) if k.get('type') in figs3.KITS3 else True        # Term 1 and 2 kits keep the old sentence
+    reuse = figs3.kit_reused(k) if (k.get('type') in figs3.KITS3 or (d or {}).get('term', 1) >= 3) else True        # Term 1 and 2 kits keep the old sentence
     return ('Print this page on its own sheet, or on one side only, so cutting never spoils another page. A grown-up cuts; children do not use scissors. '
             'Keep the pieces in an envelope with your name.' + (' We use them again.' if reuse else ''))
 
@@ -149,7 +149,7 @@ def kit_pages(d):
         style = figs3.kit_style(k) if k.get('type') in figs3.KITS3 else f'width:{k.get("width", 84)}%'
         for i, fg in enumerate(figs):
             title = k.get('title', 'Kit page') + (f' (page {i + 1} of {len(figs)})' if len(figs) > 1 else '')
-            intro = f'<p style="font-size:13.5px;margin:2px 0 3px">{E(k.get("intro", "A grown-up cuts these out before the lesson."))}</p><p style="font-size:12px;margin:0 0 6px;color:#3B4A6B"><b>{E(kit_note(k))}</b></p>' if i == 0 else \
+            intro = f'<p style="font-size:13.5px;margin:2px 0 3px">{E(k.get("intro", "A grown-up cuts these out before the lesson."))}</p><p style="font-size:12px;margin:0 0 6px;color:#3B4A6B"><b>{E(kit_note(k, d))}</b></p>' if i == 0 else \
                 '<p style="font-size:12px;margin:2px 0 6px;color:#3B4A6B"><b>More pieces: the same kit, cut out the same way.</b></p>'
             out.append(f'<div class="page kit">{hdr(d, "Kit")}<div class="ltitle" style="font-size:24px">{E(title)}</div>{intro}<div style="{style}">{fg}</div></div>')
     return out

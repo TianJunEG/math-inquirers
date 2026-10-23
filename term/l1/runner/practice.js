@@ -44,7 +44,7 @@
     var t = item.tpl, names = Object.keys(t.vars), env, tries = 0;
     do { env = {}; names.forEach(function (n) { var a = t.vars[n]; env[n] = a[Math.floor(Math.random() * a.length)]; }); tries++; } while (avoid && JSON.stringify(env) === avoid && tries < 12);
     var all = Object.assign({}, env); Object.keys(t.derive || {}).forEach(function (k) { all[k] = calc(t.derive[k], all); });
-    var v = { id: item.id, tier: item.tier, q: fill(t.q, all), hint: fill(t.hint, all), slips: [], easier: item.easier, variantKey: JSON.stringify(env), isVariant: true, base: item };
+    var v = { id: item.id, tier: item.tier, q: fill(t.q, all), hint: fill(t.hint, all), slips: (t.slips || []).map(function (s) { return { a: s.a.map(function (x) { return typeof x === 'number' ? x : calc(String(x), all); }), say: fill(s.say, all) }; }), easier: item.easier, variantKey: JSON.stringify(env), isVariant: true, base: item };
     if (t.answers) {                                    // several ordered boxes
       v.type = 'fields'; v.frame = fill(t.frame, all, Object.keys(t.answers));     // box names stay as boxes even when a number has the same name
       v.fields = Object.keys(t.answers).map(function (k) { return { id: k, answer: calc(t.answers[k], all), pad: t.pad && t.pad[k] ? t.pad[k] : 0 }; });
@@ -61,7 +61,7 @@
   }
 
   // ---- reading an answer
-  function nums(s) { return (String(s).replace(/,/g, ' ').match(/-?\d+(\.\d+)?/g) || []).map(Number); }
+  function nums(s) { return (String(s).replace(/,/g, ' ').replace(/(\d)\s*[-\u2013\u2014]\s*(?=\d)/g, '$1 ').match(/-?\d+(\.\d+)?/g) || []).map(Number); }
   function sameSet(a, b) { var x = a.slice().sort(function (p, r) { return p - r; }), y = b.slice().sort(function (p, r) { return p - r; }); return x.length === y.length && x.every(function (v, i) { return v === y[i]; }); }
   function readAnswer(item) {
     var f = document.querySelector('#ans input, #ans textarea');
@@ -82,14 +82,16 @@
   }
   function slipFor(item, a) {
     var out = null;
+    if (item.type === 'fields' && a && !Array.isArray(a)) a = item.fields.map(function (f) { return a[f.id]; });
     (item.slips || []).forEach(function (s) {
       var vals = s.a, hit = Array.isArray(a) ? (vals.length === a.length && (item.ordered ? vals.every(function (v, i) { return a[i] === v; }) : vals.every(function (v) { return a.indexOf(v) > -1; }))) : vals.indexOf(a) > -1;
       if (hit && !out) out = s.say;
     });
     return out;
   }
-  function show(a, item) { if (item && item.type === 'fields') return item.frame.replace(/\{(\w+)\}/g, function (m, k) { var f = item.fields.filter(function (f) { return f.id === k; })[0]; return f ? (f.pad && String(f.answer).length < f.pad ? ('0000'.slice(0, f.pad - String(f.answer).length) + f.answer) : f.answer) : m; }); return Array.isArray(a) ? a.join(', ') : String(a); }
+  function show(a, item) { if (item && item.type === 'fields') return tidy(item.frame.replace(/\{(\w+)\}/g, function (m, k) { var f = item.fields.filter(function (f) { return f.id === k; })[0]; return f ? (f.pad && String(f.answer).length < f.pad ? ('0000'.slice(0, f.pad - String(f.answer).length) + f.answer) : f.answer) : m; })); return Array.isArray(a) ? a.join(', ') : String(a); }
 
+  function tidy(t) { return String(t).replace(/(\d)\s*:\s*(\d)/g, '$1:$2').replace(/\.+\s*$/, ''); }
   function items() { return L.items.filter(function (i) { return i.tier === tier; }); }
   function current() { var it = items()[idx]; return st[it.id] && st[it.id].variant ? st[it.id].variant : it; }
   function ensure(it) { st[it.id] = st[it.id] || { tries: 0 }; return st[it.id]; }
@@ -136,7 +138,7 @@
       row.appendChild(h('button', { type: 'button', class: 'act quiet', text: 'Give me a hint', on: { click: function () { fb.textContent = ''; fb.appendChild(box('plain', h('p', { text: 'Hint: ' + item.hint }))); } } }));
     }
     card.appendChild(row); card.appendChild(fb);
-    if (done) { fb.appendChild(box(s.state === 'ok' ? 'ok' : 'try', s.state === 'ok' ? [h('h2', { text: 'Yes, that is right.' }), stepsBlock(item)] : [h('h2', { text: 'Let us look at it together.' }), h('p', { text: 'The answer is ' + show(item.answer, item) + '.' }), stepsBlock(item, 'Here is how to get it')])); extra(row, base, item, false); }
+    if (done) { fb.appendChild(box(s.state === 'ok' ? 'ok' : 'try', s.state === 'ok' ? [h('h2', { text: 'Yes, that is right.' }), stepsBlock(item)] : [h('h2', { text: 'Let us look at it together.' }), h('p', { text: (item.type === 'fields' ? 'It says: ' : 'The answer is ') + show(item.answer, item) + '.' }), stepsBlock(item, 'Here is how to get it')])); extra(row, base, item, false); }
     var inp = card.querySelector('input[type=text],textarea'); if (inp && !done) { try { inp.focus({ preventScroll: true }); } catch (e) {} }
     if (inp && !done) inp.addEventListener('keydown', function (e) { if (e.key === 'Enter' && inp.tagName === 'INPUT') check(base, item, s, fb, row); });
   }
@@ -149,6 +151,9 @@
       if (!/\d/.test(raw)) { fb.appendChild(box('plain', h('p', { text: 'Please type the answer with number digits, like 54.' }))); return; }
       if (nums(raw).length > 1) { fb.appendChild(box('plain', h('p', { text: 'Please type just the answer number.' }))); return; }
     }
+    if (item.type === 'fields') { var bad59 = item.fields.some(function (f) { return /^(m|mm|min|mins|minutes)$/.test(f.id) && a[f.id] > 59; }); if (bad59) { fb.appendChild(box('plain', h('p', { text: 'The minutes go from 0 to 59. Check the long hand.' }))); return; } }
+    var anyRaw = Array.prototype.map.call(document.querySelectorAll('#ans input[type=text]'), function (i) { return i.value; }).join(' ');
+    if ((item.type === 'fields' || item.type === 'set') && anyRaw.trim() && !/\d/.test(anyRaw)) { fb.appendChild(box('plain', h('p', { text: 'Please type the answer with number digits, like 54.' }))); return; }
     if (j.empty && item.type === 'fields') { fb.appendChild(box('plain', h('p', { text: 'Type a number in every box. It is fine to guess.' }))); return; }
     if (j.empty) { fb.appendChild(box('plain', h('p', { text: 'Type or choose an answer first. It is fine to guess.' }))); return; }
     if (j.ok) { s.state = 'ok'; saved[base.id] = 1; persist(); render(); return; }
@@ -169,7 +174,7 @@
 
   fetch('data/' + key + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (d) {
     L = d; document.title = 'Practice: ' + L.title + ' | Math Inquirers';
-    $('title').textContent = L.title + ' practice'; $('sub').textContent = 'Level ' + L.level + ' · Lesson ' + L.lesson + ' · ' + L.topic;
+    $('title').textContent = L.title + ' practice'; $('sub').textContent = 'Level ' + L.level + (L.term ? ' · Term ' + L.term : '') + ' · Lesson ' + L.lesson + ' · ' + L.topic;
     if (!TIER[tier]) tier = 'core'; render();
   }).catch(function () {
     $('title').textContent = 'Practice'; $('card').textContent = 'This practice link is not complete. Please ask your tutor for the right link.';

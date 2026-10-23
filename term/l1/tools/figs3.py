@@ -837,7 +837,7 @@ def fold_shapes(circles=4, squares=4, rects=2, d_mm=FOLD_D_MM, u=None):
     if cur: pages.append(cur)
     out = []
     for pi, pg in enumerate(pages):
-        b = [_head('Shapes to fold: a grown-up cuts them out. Children only fold.' + (f'   (page {pi + 1} of {len(pages)})' if len(pages) > 1 else ''))]
+        b = [_head('Shapes to fold: a grown-up cuts them out.' + (f' (page {pi + 1} of {len(pages)})' if len(pages) > 1 else ''))]
         for kind, k, ymm_, hmm in pg:
             x0 = (700 - (k * d + (k - 1) * gap)) / 2
             for c in range(k):

@@ -202,12 +202,12 @@ def slide_html(d, s):
         bg = f'background:linear-gradient(135deg,{NAVY} 0%,#101B33 100%);color:{CREAM}'
         deco = bubbles() if kind == 'title' else bar()
         pill = f'<p style="position:absolute;right:128px;top:64px;font-size:32px;font-weight:700;letter-spacing:2px;color:{YEL}">{time}</p>'
-        foot = f'<p style="position:absolute;left:128px;bottom:60px;width:1400px;font-size:28px;color:#B7C3DD">{E(foot_text(d))}</p>'
+        foot = f'<p style="position:absolute;left:128px;bottom:22px;width:1400px;font-size:22px;color:#B7C3DD">{E(foot_text(d))}</p>'
     else:
         bg = f'background:{SOFTBG};color:{NAVY}'
         deco = bar()
         pill = f'<p style="position:absolute;right:128px;top:52px;font-size:30px;font-weight:800;letter-spacing:2px;color:{TEAL};background:#FFFFFF;border:2px solid {TEAL};border-radius:999px;padding:6px 22px">{time}</p>'
-        foot = f'<p style="position:absolute;left:128px;bottom:44px;width:1400px;font-size:28px;color:#5B6785">{E(foot_text(d))}</p>'
+        foot = f'<p style="position:absolute;left:128px;bottom:22px;width:1400px;font-size:22px;color:#5B6785">{E(foot_text(d))}</p>'
     if not time: pill = ''
     if kind == 'title':
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
