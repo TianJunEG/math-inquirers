@@ -79,7 +79,7 @@ def _():
     return {'a': s([sticks(4)]), 'b': s([sticks(6)]), 'c': s([sticks(8)])}
 
 
-@check('S07')
+@check('S08')
 def _():
     a = steps(7, 5, 6)
     b = steps(50, -6, 5)
@@ -89,7 +89,7 @@ def _():
     return {'a': s(a[4:]) + ['add 5'], 'b': s(b[3:]) + ['subtract 6']}
 
 
-@check('S08')
+@check('S07')
 def _():
     siti = set(steps(3, 3, 14)) & set(range(1, 41))
     ravi = set(steps(5, 5, 8))

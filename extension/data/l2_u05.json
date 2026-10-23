@@ -10,7 +10,7 @@
  "learn": {
   "intro": "A number machine changes a number, one step at a time. To find what went IN, work backwards. Undo the LAST step first. Use the opposite: + and - undo each other, and so do × and ÷.",
   "example": {
-   "problem": "I think of a number. I multiply it by 3, then add 5. I get 29. What is my number?",
+   "problem": "Ali picks a secret number. He multiplies it by 3, then adds 5. He gets 29. What is his number?",
    "figure": {
     "type": "l2_machine",
     "steps": [
@@ -26,7 +26,7 @@
     "Undo the first step. It was × 3, so divide by 3: 24 ÷ 3 = 8.",
     "Check going forwards: 8 × 3 = 24, then 24 + 5 = 29."
    ],
-   "answer": "My number is 8."
+   "answer": "The secret number is 8."
   },
   "howto": {
    "title": "How to work backwards",
@@ -47,7 +47,7 @@
   },
   "try": {
    "id": "L2U05-L01",
-   "text": "I think of a number. I multiply it by 5, then take away 8. I get 32. What is my number? {b}",
+   "text": "Mei picks a secret number. She multiplies it by 5, then takes away 8. She gets 32. What is her number? {b}",
    "answer": {
     "value": [
      "8"
@@ -234,6 +234,46 @@
   {
    "id": "L2U05-S04",
    "tier": "start",
+   "page": 1,
+   "text": "Fill in the missing number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} ÷ 2 + 7 = 15",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 × {b} - 5 = 19",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "{b} × 10 + 8 = 78",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "Undo the last step first. (a) 15 - 7 = 8, then 8 × 2 = 16. (b) 19 + 5 = 24, then 24 ÷ 4 = 6. (c) 78 - 8 = 70, then 70 ÷ 10 = 7.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-S05",
+   "tier": "start",
    "page": 2,
    "text": "This machine does × 4, then - 1. Fill in the table.",
    "figure": {
@@ -283,10 +323,10 @@
    "explanation": "IN 3: 3 × 4 = 12, 12 - 1 = 11. IN 6: 6 × 4 = 24, 24 - 1 = 23. OUT 31: 31 + 1 = 32, 32 ÷ 4 = 8. OUT 39: 39 + 1 = 40, 40 ÷ 4 = 10."
   },
   {
-   "id": "L2U05-S05",
+   "id": "L2U05-S06",
    "tier": "start",
    "page": 2,
-   "text": "A machine multiplies by a number, then adds a number. IN 3 gives OUT 11. IN 6 gives OUT 17.",
+   "text": "A machine multiplies by one number and then adds another. IN 3 gives OUT 11. IN 6 gives OUT 17.",
    "figure": {
     "type": "l2_table",
     "cols": [
@@ -347,7 +387,7 @@
    "explanation": "Try × 2 on IN 3: 6, and 11 - 6 = 5, so + 5. Test IN 6: 12 + 5 = 17. It fits. × 3 and × 4 do not fit both numbers. IN 10: 10 × 2 = 20, 20 + 5 = 25."
   },
   {
-   "id": "L2U05-S06",
+   "id": "L2U05-S07",
    "tier": "start",
    "page": 2,
    "text": "Ali had some marbles. He lost 18 in a game. Then he won 25 marbles. Now he has 60.",
@@ -397,7 +437,7 @@
    "explanation": "Undo the last step: 60 - 25 = 35. Undo the first step: 35 + 18 = 53. Check: 53 - 18 = 35, then 35 + 25 = 60."
   },
   {
-   "id": "L2U05-S07",
+   "id": "L2U05-S08",
    "tier": "start",
    "page": 3,
    "text": "Kumar puts his stickers into 4 boxes. Every box has the same number. He takes 3 stickers out of box 4. Now box 4 has 7 stickers.",
@@ -477,7 +517,7 @@
    "explanation": "Box 4 had 7 + 3 = 10 stickers before he took 3 out. Every box had the same, so each box had 10. 4 boxes: 4 × 10 = 40 stickers."
   },
   {
-   "id": "L2U05-S08",
+   "id": "L2U05-S09",
    "tier": "start",
    "page": 3,
    "text": "Mei had some stickers. She bought 12 more. Then she put them equally into 4 albums, 5 in each album.",
@@ -514,46 +554,6 @@
     }
    ],
    "explanation": "4 albums with 5 stickers each: 4 × 5 = 20 stickers. That is after buying 12 more, so at first she had 20 - 12 = 8. Check: 8 + 12 = 20 and 20 ÷ 4 = 5."
-  },
-  {
-   "id": "L2U05-S09",
-   "tier": "start",
-   "page": 1,
-   "text": "Fill in the missing number.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "{b} ÷ 2 + 7 = 15",
-     "answer": {
-      "value": [
-       "16"
-      ],
-      "text": "16"
-     }
-    },
-    {
-     "label": "b",
-     "text": "4 × {b} - 5 = 19",
-     "answer": {
-      "value": [
-       "6"
-      ],
-      "text": "6"
-     }
-    },
-    {
-     "label": "c",
-     "text": "{b} × 10 + 8 = 78",
-     "answer": {
-      "value": [
-       "7"
-      ],
-      "text": "7"
-     }
-    }
-   ],
-   "explanation": "Undo the last step first. (a) 15 - 7 = 8, then 8 × 2 = 16. (b) 19 + 5 = 24, then 24 ÷ 4 = 6. (c) 78 - 8 = 70, then 70 ÷ 10 = 7.",
-   "partsrow": true
   },
   {
    "id": "L2U05-S10",
@@ -639,7 +639,7 @@
      ]
     },
     "width_units": 400,
-    "width_mm": 100
+    "width_mm": 94
    },
    "parts": [
     {
@@ -909,7 +909,7 @@
    "id": "L2U05-G04",
    "tier": "go",
    "page": 5,
-   "text": "A machine does + 5, then × 2. Ravi puts a number in. Then he puts the OUT straight back in. The final OUT is 70. What number did he put in first? {b}",
+   "text": "A machine does + 5, then × 2. Ravi puts a number in. Then he puts the OUT straight back in. The final OUT is 70. Which number went in first? {b}",
    "answer": {
     "value": [
      "10"
@@ -927,7 +927,7 @@
   {
    "id": "L2U05-C01",
    "tier": "quiz",
-   "text": "I think of a number. I multiply by 4, then add 6. I get 38. What is it? {b}",
+   "text": "I multiply a number by 4, then add 6. I get 38. My number: {b}",
    "answer": {
     "value": [
      "8"
@@ -939,7 +939,7 @@
   {
    "id": "L2U05-C02",
    "tier": "quiz",
-   "text": "Kumar gave away 14 stickers and bought 9. Now he has 31. At first he had {b}",
+   "text": "Kumar gave away 14 stickers, then bought 9. Now 31. At first: {b}",
    "answer": {
     "value": [
      "36"
@@ -963,7 +963,7 @@
   {
    "id": "L2U05-C04",
    "tier": "quiz",
-   "text": "5 bags hold the same number of pens. 6 pens are taken out of bag 5, which leaves 4. How many pens were there? {b}",
+   "text": "5 equal bags. Bag 5 has 4 left after losing 6. Pens in all: {b}",
    "answer": {
     "value": [
      "50"

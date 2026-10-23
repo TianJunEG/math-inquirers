@@ -99,24 +99,24 @@ PASS  V8 reading level: instruction and clue sentences <= 10 words, <= 3 lines  
 PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
-PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
-FAIL  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  [(1, 'more than')]
+FAIL  every number of 11 or more quoted in a teacher note is found on the page or in its answers  [(1, ['11'])]
+PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P2 strand  
 PASS  B/W colours only in S1_pupil.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_pupil.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S1_pupil.html  min 0.25
-FAIL  answer boxes at least 12 mm high in S1_pupil.html  min 9.5
+PASS  answer boxes at least 12 mm high in S1_pupil.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_pupil.html  []
 PASS  B/W colours only in S1_front.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_front.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S1_front.html  min 0.25
-FAIL  answer boxes at least 12 mm high in S1_front.html  min 9.5
+PASS  answer boxes at least 12 mm high in S1_front.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_front.html  []
 PASS  B/W colours only in S1_key.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_key.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S1_key.html  min 0.25
-FAIL  answer boxes at least 12 mm high in S1_key.html  min 9.5
+PASS  answer boxes at least 12 mm high in S1_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S1_key.html  []
 PASS  S1: no bare black dot is drawn as a countable thing  
 PASS  S1: no drawn object is clipped by the edge of its own svg  []
@@ -124,17 +124,17 @@ PASS  S1: every coin shows its value and the word cents  0 coins
 PASS  B/W colours only in S2_pupil.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S2_pupil.html  min 0.3
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S2_pupil.html  min 0.25
-FAIL  answer boxes at least 12 mm high in S2_pupil.html  min 9.5
+PASS  answer boxes at least 12 mm high in S2_pupil.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_pupil.html  []
 PASS  B/W colours only in S2_front.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S2_front.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S2_front.html  min 0.25
-FAIL  answer boxes at least 12 mm high in S2_front.html  min 9.5
+PASS  answer boxes at least 12 mm high in S2_front.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_front.html  []
 PASS  B/W colours only in S2_key.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S2_key.html  min 0.4
 PASS  CSS rule widths >= 0.25 mm (0.7 pt) in S2_key.html  min 0.25
-FAIL  answer boxes at least 12 mm high in S2_key.html  min 9.5
+PASS  answer boxes at least 12 mm high in S2_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_key.html  []
 PASS  S2: no bare black dot is drawn as a countable thing  
 PASS  S2: no drawn object is clipped by the edge of its own svg  []
@@ -203,13 +203,13 @@ PASS  S1 pupil page 01 layout (no overflow/clipping/margin breach)
 PASS  S1 pupil page 01 page-fill: puzzle content 178 of 183 mm  0.97
 PASS  S1 pupil page 01 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 02 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 02 page-fill: puzzle content 144 of 183 mm  0.79
+PASS  S1 pupil page 02 page-fill: puzzle content 152 of 183 mm  0.83
 PASS  S1 pupil page 02 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 03 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 03 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S1 pupil page 03 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 04 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
-PASS  S1 pupil page 04 page-fill: puzzle content 185 of 183 mm  1.01
+PASS  S1 pupil page 04 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 04 page-fill: puzzle content 146 of 183 mm  0.80
 PASS  S1 pupil page 04 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 05 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 05 page-fill: puzzle content 142 of 183 mm  0.78
@@ -258,11 +258,11 @@ PASS  S1_key.html: colour-by-code pictures: 0 found (expected 0); every label of
 PASS  S2_pupil.html: colour-by-code pictures: 0 found (expected 0); every label of every part lies inside its region and clear of outlines and decorations  []
 PASS  S2_key.html: colour-by-code pictures: 0 found (expected 0); every label of every part lies inside its region and clear of outlines and decorations  []
 PASS  P2_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 9.88% vs greyscale)  5 pages
-PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 38, limit 40 per page)  
+PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 39, limit 40 per page)  
 PASS  P2_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.34% vs greyscale)  5 pages
 PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 94, limit 40 per page)  
 PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.95% vs greyscale)  3 pages
-FAIL  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 325, limit 90 per page)  
+FAIL  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 323, limit 90 per page)  
 PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 7.19% vs greyscale)  3 pages
 PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 36, limit 40 per page)  
 PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.00% vs greyscale)  5 pages
@@ -270,4 +270,4 @@ PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 84, limit 4
 PASS  P2_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.93% vs greyscale)  2 pages
 FAIL  P2_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 254, limit 90 per page)  
 
-TOTAL 271 checks, 10 failed
+TOTAL 271 checks, 3 failed

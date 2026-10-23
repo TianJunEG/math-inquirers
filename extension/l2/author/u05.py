@@ -15,13 +15,13 @@ def mrows(rows, **kw):
 learn = {
  'intro': 'A number machine changes a number, one step at a time. To find what went IN, work backwards. Undo the LAST step first. Use the opposite: + and - undo each other, and so do × and ÷.',
  'example': {
-  'problem': 'I think of a number. I multiply it by 3, then add 5. I get 29. What is my number?',
+  'problem': 'Ali picks a secret number. He multiplies it by 3, then adds 5. He gets 29. What is his number?',
   'figure': mach('?', '× 3', '+ 5', '29', width_mm=150),
   'steps': ['Undo the last step. It was + 5, so take away 5: 29 - 5 = 24.', 'Undo the first step. It was × 3, so divide by 3: 24 ÷ 3 = 8.', 'Check going forwards: 8 × 3 = 24, then 24 + 5 = 29.'],
-  'answer': 'My number is 8.'},
+  'answer': 'The secret number is 8.'},
  'howto': {'title': 'How to work backwards', 'steps': ['Draw the machine.', 'Start at the OUT. Undo the last step first.', 'Use the opposite step.', 'Check going forwards.']},
  'facts': {'title': 'Opposites', 'lines': ['+ 6 is undone by - 6.', '× 4 is undone by ÷ 4.', 'Undo in the opposite order.']},
- 'try': {'text': 'I think of a number. I multiply it by 5, then take away 8. I get 32. What is my number? {b}', 'answer': A('8'),
+ 'try': {'text': 'Mei picks a secret number. She multiplies it by 5, then takes away 8. She gets 32. What is her number? {b}', 'answer': A('8'),
          'explanation': 'Undo - 8 with + 8: 32 + 8 = 40. Undo × 5 with ÷ 5: 40 ÷ 5 = 8. Check: 8 × 5 = 40 and 40 - 8 = 32.'}}
 
 items = [
@@ -37,7 +37,7 @@ items = [
  I('start', 2, 'This machine does × 4, then - 1. Fill in the table.', figure={'type': 'l2_table', 'cols': ['IN', '3', '6', None, None], 'rows': [['OUT', None, None, '31', '39']], 'first_bold': True, 'widths': [1.4, 1, 1, 1, 1], 'width_mm': 120},
    parts=[P('a', 'Write the 4 missing numbers. Do the OUT of IN 3 and 6 first, then work backwards for 31 and 39.', ['11', '23', '8', '10'], '11, 23, 8, 10', lst=True)],
    why='IN 3: 3 × 4 = 12, 12 - 1 = 11. IN 6: 6 × 4 = 24, 24 - 1 = 23. OUT 31: 31 + 1 = 32, 32 ÷ 4 = 8. OUT 39: 39 + 1 = 40, 40 ÷ 4 = 10.'),
- I('start', 2, 'A machine multiplies by a number, then adds a number. IN 3 gives OUT 11. IN 6 gives OUT 17.', figure={'type': 'l2_table', 'cols': ['IN', '3', '6', '10'], 'rows': [['OUT', '11', '17', None]], 'first_bold': True, 'widths': [1.4, 1, 1, 1], 'width_mm': 100},
+ I('start', 2, 'A machine multiplies by one number and then adds another. IN 3 gives OUT 11. IN 6 gives OUT 17.', figure={'type': 'l2_table', 'cols': ['IN', '3', '6', '10'], 'rows': [['OUT', '11', '17', None]], 'first_bold': True, 'widths': [1.4, 1, 1, 1], 'width_mm': 100},
    parts=[P('a', 'The machine multiplies by   {circ:2|3|4}', '2'), P('b', 'Then it adds {b}', '5'), P('c', 'IN 10 gives OUT {b}', '25')],
    why='Try × 2 on IN 3: 6, and 11 - 6 = 5, so + 5. Test IN 6: 12 + 5 = 17. It fits. × 3 and × 4 do not fit both numbers. IN 10: 10 × 2 = 20, 20 + 5 = 25.'),
  I('start', 2, 'Ali had some marbles. He lost 18 in a game. Then he won 25 marbles. Now he has 60.', figure=mach('?', '- 18', '+ 25', '60', width_mm=150),
@@ -60,7 +60,7 @@ items = [
  # Think harder
  I('think', 4, 'Mei, Lily and Aisha have 51 beads altogether. Lily has 6 more than Mei. Aisha has 9 more than Mei.',
    figure={'type': 'l2_bar', 'rows': [{'label': 'Mei', 'segs': [{'w': 5, 'unknown': True, 't': '?'}]}, {'label': 'Lily', 'segs': [{'w': 5, 'unknown': True, 't': '?'}, {'w': 2, 't': '6'}]}, {'label': 'Aisha', 'segs': [{'w': 5, 'unknown': True, 't': '?'}, {'w': 3, 't': '9'}]}],
-           'brace': {'text': '51', 'rows': [0, 2]}, 'width_units': 400, 'width_mm': 100},
+           'brace': {'text': '51', 'rows': [0, 2]}, 'width_units': 400, 'width_mm': 94},
    partsrow=True, parts=[P('a', 'Mei has {b} beads.', '12'), P('b', 'Lily has {b} beads.', '18'), P('c', 'Aisha has {b} beads.', '21')],
    hint='Take off the extra bits. Then share the rest equally.',
    why='Take away the extra 6 and 9: 51 - 6 - 9 = 36. Now 3 equal bars share 36, so each is 36 ÷ 3 = 12. Mei has 12, Lily 12 + 6 = 18 and Aisha 12 + 9 = 21. Check: 12 + 18 + 21 = 51.'),
@@ -87,13 +87,13 @@ items = [
    atext='Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)',
    space={'rows': ['My riddle:', 'Check going forwards:']}, hint='Start at 12. Do 2 steps forwards. Then write the riddle.',
    why='Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.'),
- I('go', 5, 'A machine does + 5, then × 2. Ravi puts a number in. Then he puts the OUT straight back in. The final OUT is 70. What number did he put in first? {b}', value='10',
+ I('go', 5, 'A machine does + 5, then × 2. Ravi puts a number in. Then he puts the OUT straight back in. The final OUT is 70. Which number went in first? {b}', value='10',
    hint='Work backwards twice. Undo × 2 first each time.', space={'rows': ['Working:']},
    why='Undo the second run: 70 ÷ 2 = 35, 35 - 5 = 30. So the first OUT was 30. Undo the first run: 30 ÷ 2 = 15, 15 - 5 = 10. Check: 10 + 5 = 15, × 2 = 30; 30 + 5 = 35, × 2 = 70.'),
  # Check yourself
- I('quiz', 0, 'I think of a number. I multiply by 4, then add 6. I get 38. What is it? {b}', value='8', why='38 - 6 = 32, then 32 ÷ 4 = 8. Check: 8 × 4 = 32, 32 + 6 = 38.'),
- I('quiz', 0, 'Kumar gave away 14 stickers and bought 9. Now he has 31. At first he had {b}', value='36', why='Undo buying 9: 31 - 9 = 22. Undo giving away 14: 22 + 14 = 36. Check: 36 - 14 = 22, 22 + 9 = 31.'),
+ I('quiz', 0, 'I multiply a number by 4, then add 6. I get 38. My number: {b}', value='8', why='38 - 6 = 32, then 32 ÷ 4 = 8. Check: 8 × 4 = 32, 32 + 6 = 38.'),
+ I('quiz', 0, 'Kumar gave away 14 stickers, then bought 9. Now 31. At first: {b}', value='36', why='Undo buying 9: 31 - 9 = 22. Undo giving away 14: 22 + 14 = 36. Check: 36 - 14 = 22, 22 + 9 = 31.'),
  I('quiz', 0, 'A machine does × 5, then - 3. The OUT is 32. What went IN? {b}', value='7', why='32 + 3 = 35, then 35 ÷ 5 = 7. Check: 7 × 5 = 35, 35 - 3 = 32.'),
- I('quiz', 0, '5 bags hold the same number of pens. 6 pens are taken out of bag 5, which leaves 4. How many pens were there? {b}', value='50', why='Bag 5 had 4 + 6 = 10 pens before. Every bag had 10, so 5 × 10 = 50 pens.'),
+ I('quiz', 0, '5 equal bags. Bag 5 has 4 left after losing 6. Pens in all: {b}', value='50', why='Bag 5 had 4 + 6 = 10 pens before. Every bag had 10, so 5 × 10 = 50 pens.'),
 ]
 build(5, 'Mystery number machines', 'Working backwards', 'I can find a mystery number by working backwards. I undo the last step first. I can use bars for before-and-after stories.', learn, items, snug=['start1', 'start2', 'start3'])

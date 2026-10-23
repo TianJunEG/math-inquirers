@@ -69,7 +69,7 @@ def page01():
         ["Look at each item.", "Write the number in the box.", INSTR_CODE],
         body, ans, table, word, 0, 999,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "Three place-value charts (discs marked 100, 10 and 1), then the value of a digit, a regrouped number (with 11 to 15 tens) and a number with a zero tens place. The wrong numbers a pupil gets by writing the digits in a different order, or by giving the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
+        "Three place-value charts (discs marked 100, 10 and 1), then the value of a digit, a regrouped number (tens that make a hundred or more) and a number with a zero tens place. The wrong numbers a pupil gets by writing the digits in a different order, or by giving the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
     # independent solver: read the discs and the printed words back
     solved = []
     ci = 0

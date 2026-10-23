@@ -383,39 +383,6 @@
   {
    "id": "L2U04-S07",
    "tier": "start",
-   "page": 3,
-   "text": "Find the rule. Then write the next 2 numbers.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "7, 12, 17, 22, {b}, {b}    The rule is   {circ:add 4|add 5|add 7}",
-     "answer": {
-      "value": [
-       "27",
-       "32",
-       "add 5"
-      ],
-      "text": "27, 32 and add 5"
-     }
-    },
-    {
-     "label": "b",
-     "text": "50, 44, 38, {b}, {b}    The rule is   {circ:subtract 5|subtract 6|subtract 7}",
-     "answer": {
-      "value": [
-       "32",
-       "26",
-       "subtract 6"
-      ],
-      "text": "32, 26 and subtract 6"
-     }
-    }
-   ],
-   "explanation": "(a) Each number is 5 more: 22 + 5 = 27 and 27 + 5 = 32. (b) Each number is 6 less: 38 - 6 = 32 and 32 - 6 = 26."
-  },
-  {
-   "id": "L2U04-S08",
-   "tier": "start",
    "page": 2,
    "text": "Siti counts in 3s from 3. Ravi counts in 5s from 5. Write each list up to 40 on the lines below the questions.",
    "parts": [
@@ -449,6 +416,39 @@
      "Ravi: 5, 10, 15,"
     ]
    }
+  },
+  {
+   "id": "L2U04-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Find the rule. Then write the next 2 numbers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "7, 12, 17, 22, {b}, {b}    The rule is   {circ:add 4|add 5|add 7}",
+     "answer": {
+      "value": [
+       "27",
+       "32",
+       "add 5"
+      ],
+      "text": "27, 32 and add 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "50, 44, 38, {b}, {b}    The rule is   {circ:subtract 5|subtract 6|subtract 7}",
+     "answer": {
+      "value": [
+       "32",
+       "26",
+       "subtract 6"
+      ],
+      "text": "32, 26 and subtract 6"
+     }
+    }
+   ],
+   "explanation": "(a) Each number is 5 more: 22 + 5 = 27 and 27 + 5 = 32. (b) Each number is 6 less: 38 - 6 = 32 and 32 - 6 = 26."
   },
   {
    "id": "L2U04-S09",

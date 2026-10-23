@@ -44,6 +44,8 @@ def build(n, title, topic, goal, learn, items, **extra):
     count = {'start': 0, 'think': 0, 'go': 0, 'quiz': 0}
     code = {'start': 'S', 'think': 'T', 'go': 'G', 'quiz': 'C'}
     out = []
+    order = {'start': 0, 'think': 1, 'go': 2, 'quiz': 3}
+    items = sorted(items, key=lambda it: (order[it['tier']], it.get('page', 0)))   # numbering and answer order follow the printed page order
     for it in items:
         count[it['tier']] += 1
         d = {'id': f'{pre}-{code[it["tier"]]}{count[it["tier"]]:02d}'}
