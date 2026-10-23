@@ -91,7 +91,7 @@ def figs_in(blocks):
 CLASS_TRAYS = {'s-rem3': {'sock': 5, 'shoe': 3}, 's-sneak': {'spoon': 4, 'button': 3, 'shell': 2}, 's-m1': {'ball': 5, 'car': 3, 'bike': 4}}
 CLASS_GRAPHS = {'s-rem1': (6, 4, 5), 's-explore2': (4, 2, 3), 's-m1-ans': (5, 3, 4), 's-m2-ans': (5, 3, 4), 's-m3': (5, 3, 4), 's-m4': (5, 3, 4), 's-m5-ans': (6, 5, 3), 's-opt': (5,)}
 WB_TRAYS = {'S1': {'button': 5, 'shell': 4, 'spoon': 3}, 'E1': {'pencil': 4, 'rubber': 3}}
-WB_GRAPHS = {'S2': (6, 3, 8), 'S4': (7, 4, 6), 'S5': (3, 5, 8), 'S6': (5, 5, 2), 'T1': (9, 5, 6), 'T2': (6, 2, 4), 'T3': (4, 7, 5), 'T4': (6, 3, 7), 'G1': (4, 3, 2, 7), 'G3': (5, 3, 9), 'E2': (7, 2, 4)}
+WB_GRAPHS = {'S2': (6, 3, 8), 'S3': (7, 4, 6), 'S5': (3, 5, 8), 'S6': (5, 5, 2), 'T1': (9, 5, 6), 'T2': (6, 2, 4), 'T3': (4, 7, 5), 'G1': (4, 3, 7), 'G3': (5, 3, 9), 'E2': (7, 2, 4)}
 
 
 # ---------------------------------------------------------------- online practice oracles (brute force)
@@ -211,14 +211,14 @@ def run(d):
     eq(WB_TRAYS['S1'], tc, 'S1 registry'); eq(len(vis(q)['rows']) * len(vis(q)['rows'][0]), 12, 'S1 cells')
     q = T['S2']; f = vis(q); eq(f.get('tally'), True, 'S2 is a tally'); g = drawn(f); eq((tally_reads(tally_marks(g['Pens'])), tally_reads(tally_marks(g['Rubbers']))), (6, 8), 'S2 pens and rubbers'); eq(q['val'], [6, 8], 'S2 val'); eq(tuple(g.values()), WB_GRAPHS['S2'], 'S2 registry')
     eq(len(tally_marks(6)), 2, 'S2 pens are one group of 5 and 1 stroke'); eq(len(tally_marks(8)), 2, 'S2 rubbers are one group of 5 and 3 strokes')
-    q = T['S3']; f = vis(q); eq([len(r['hide']) for r in f['rows']], [7, 7, 7], 'S3 boxes'); eq(nums(q['text']), [4, 6, 3], 'S3 text numbers'); eq(q['val'], [4, 6, 3], 'S3 val'); eq(max(q['val']) < 7, True, 'S3 boxes are more than needed'); eq(sum(q['val']), 13, 'S3 pictures')
-    eq([r['label'] for r in f['rows']], ['Apples', 'Pears', 'Plums'], 'S3 labels')
-    q = T['S4']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['S4'], 'S4 registry'); eq(more(g['Cats'], g['Fish']), 3, 'S4 more cats than fish'); eq(sum(g.values()), 17, 'S4 total'); eq(q['val'], [3, 17], 'S4 val')
+    q = T['S3']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['S3'], 'S3 registry'); eq(more(g['Cats'], g['Fish']), 3, 'S3 more cats than fish'); eq(sum(g.values()), 17, 'S3 total'); eq(q['val'], [3, 17], 'S3 val'); eq(nums(q['text']), [1], 'S3 key is 1')
+    q = T['S4']; f = vis(q); eq([len(r['hide']) for r in f['rows']], [6, 6, 6], 'S4 boxes'); eq(nums(q['text']), [2, 5, 3], 'S4 text numbers'); eq(q['val'], [2, 5, 3], 'S4 val'); eq(max(q['val']) < 6, True, 'S4 boxes are more than needed'); eq(sum(q['val']), 10, 'S4 pictures')
+    eq([r['label'] for r in f['rows']], ['Apples', 'Pears', 'Plums'], 'S4 labels'); eq(f['each'] if 'each' in f else 1, 1, 'S4 key is 1')
     q = T['S5']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['S5'], 'S5 registry'); eq(min(g, key=g.get), 'Chess', 'S5 fewest'); eq(g['Ludo'] + g['Cards'], 13, 'S5 ludo and cards'); eq(q['val'], ['Chess', 13], 'S5 val'); eq(q['parts'][0]['choices'], ['Chess', 'Ludo', 'Cards'], 'S5 choices')
     q = T['S6']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['S6'], 'S6 registry'); st = [g['Ali'] == g['Mei'], max(g, key=g.get) == 'Ben', more(g['Mei'], g['Ben']) == 3, sum(g.values()) == 12]
     eq(['True' if x else 'False' for x in st], q['val'], 'S6 true or false'); eq([s['s'] for s in q['tf']][2], 'Mei has 3 more stamps than Ben.', 'S6 statement 3'); eq(len(q['tf']), 4, 'S6 four statements')
     eq(len([x for x in st if x]) > 0 and len([x for x in st if not x]) > 0, True, 'S6 has true and false statements')
-    eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here fits in 20 minutes')
+    eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here fits in 20 minutes'); eq([x['page'] for x in d['tiers']['start']], [1, 1, 1, 2, 2, 2], 'Start here pages')
     # ---------------------------------------------------------------- Think harder
     q = T['T1']; f = vis(q, 0); g = drawn(f); eq(f.get('tally'), True, 'T1 tally'); got = [tally_reads(tally_marks(g[k])) for k in ('Hats', 'Bags', 'Shoes')]; eq(got, [9, 5, 6], 'T1 numbers'); eq(sum(got), 20, 'T1 total'); eq(q['val'], [9, 5, 6, 20], 'T1 val')
     tb = vis(q, 1); eq(sum(1 for r in tb['rows'] if r[1] == '[]'), 3, 'T1 table has 3 boxes'); eq([r[0] for r in tb['rows']], ['Hats', 'Bags', 'Shoes'], 'T1 table rows match the tally'); eq(tuple(g.values()), WB_GRAPHS['T1'], 'T1 registry')
@@ -226,33 +226,29 @@ def run(d):
     can = [False, True, False, False]; eq(q['val'], [2], 'T2 val'); eq(can.index(True) + 1, 2, 'T2 only option 2 can be read from the graph'); eq(more(g['Shells'], g['Stones']), 4, 'T2 option 2 has an answer on the graph'); eq('more shells than stones' in opts[1], True, 'T2 option 2 text')
     q = T['T3']; f = vis(q); rr = graph_rows(f); eq([(l, h) for l, _, h in rr], [('Maths', False), ('Story', False), ('Art', True)], 'T3 rows'); a, b = rr[0][1], rr[1][1]; total = 16
     sols = [c for c in range(0, 9) if a + b + c == total]; eq(sols, [5], 'T3 exactly 5 art books'); eq(a + b, 11, 'T3 maths and story'); eq(q['val'], [11, 5], 'T3 val'); eq(nums(q['text']), [16], 'T3 text'); eq(rr[2][1], 8, 'T3 8 empty boxes, more than needed'); eq((a, b, sols[0]), WB_GRAPHS['T3'][:2] + (5,), 'T3 registry')
-    q = T['T4']; tf = drawn(vis(q, 0)); gf = drawn(vis(q, 1)); tallies = {k: tally_reads(tally_marks(v)) for k, v in tf.items()}; wrong = [k for k in tallies if tallies[k] != gf[k]]
-    eq(wrong, ['Vans'], 'T4 exactly one row is wrong'); eq(tallies['Vans'], 3, 'T4 the wrong row should have 3'); eq(q['val'], ['Vans', 3], 'T4 val'); eq(tuple(tf.values()), WB_GRAPHS['T4'], 'T4 registry'); eq(vis(q, 0).get('tally'), True, 'T4 tally')
+    eq(len(d['tiers']['think']), 3, 'three Think harder items')
     # ---------------------------------------------------------------- Go further
     q = T['G1']; f = vis(q); eq(f['each'], 2, 'G1 key is 2'); rr = f['rows']; eq(rr[0]['n'], 4, 'G1 mints drawn'); mints = rr[0]['n'] * f['each']; eq(mints, 8, 'G1 mints are 8 sweets')
     toff = 0
     for _ in range(3): toff += 2
-    loll = 0
-    for _ in range(2): loll += 2
-    eq((toff, loll), (6, 4), 'G1 3 pictures are 6 toffees and 2 pictures are 4 lollies'); eq([q['parts'][0]['val'], q['parts'][1]['val']], [3, 2], 'G1 pictures'); gums = 3 * 2 + 1; eq(gums, 7, 'G1 gums'); eq(rr[3]['n'], 3.5, 'G1 gums row shows 3 and a half pictures'); eq(rr[3]['n'] * f['each'], 7, 'G1 half picture is half of 2')
-    eq(len(rr[1]['hide']), 5, 'G1 toffees: 5 boxes, more than 3'); eq(len(rr[2]['hide']), 5, 'G1 lollies: 5 boxes, more than 2'); eq(q['val'], [3, 2, 7], 'G1 val'); eq(nums(q['parts'][0]['text'] + q['parts'][1]['text']), [6, 4], 'G1 part text'); eq(d['beyond']['where'], ['G1'], 'G1 is the beyond item')
-    eq((things({'rows': [rr[0]], 'each': 2})['Mints'], 8), (8, 8), 'G1 mints'); eq(WB_GRAPHS['G1'], (4, 3, 2, 7), 'G1 registry (pictures drawn or needed: 4, 3, 2 and 7 gums)')
+    eq(toff, 6, 'G1 3 pictures are 6 toffees'); eq(q['parts'][0]['val'], 3, 'G1 pictures'); gums = 3 * 2 + 1; eq(gums, 7, 'G1 gums'); eq(rr[2]['n'], 3.5, 'G1 gums row shows 3 and a half pictures'); eq(rr[2]['n'] * f['each'], 7, 'G1 half picture is half of 2')
+    eq(len(rr[1]['hide']), 5, 'G1 toffees: 5 boxes, more than 3'); eq(rr[1]['label'], 'Toffees', 'G1 toffees row'); eq(q['val'], [3, 7], 'G1 val'); eq(nums(q['parts'][0]['text']), [6], 'G1 part text'); eq(d['beyond']['where'], ['G1'], 'G1 is the beyond item')
+    eq(WB_GRAPHS['G1'], (4, 3, 7), 'G1 registry (pictures drawn or needed: 4, 3 and 7 gums)'); eq([r['label'] for r in rr], ['Mints', 'Toffees', 'Gums'], 'G1 labels')
     q = T['G2']; sols = []
     for ben in range(0, 22):
         for lily in range(0, 22):
             for jamie in range(0, 22):
                 for ravi in range(0, 22):
                     if ben == 4 and lily == ben + 3 and jamie == lily - 2 and ben + lily + jamie + ravi == 21: sols.append((ben, lily, jamie, ravi))
-    eq(sols, [(4, 7, 5, 5)], 'G2 exactly one set of numbers fits every clue'); eq(q['val'], [7, 5, 5], 'G2 val'); eq(nums(q['text']), [21, 4, 3, 2], 'G2 text')
+    eq(sols, [(4, 7, 5, 5)], 'G2 exactly one set of numbers fits every clue'); eq(q['val'], [sols[0][1], sols[0][3]], 'G2 val: Lily and Ravi'); eq(nums(q['text']), [21, 4, 3, 2], 'G2 text')
     q = T['G3']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['G3'], 'G3 registry'); eq(more(g['Tulips'], g['Daisies']), 6, 'G3 example answer: 6 more tulips than daisies'); eq(sum(g.values()), 17, 'G3 example answer: 17 flowers'); eq(min(g, key=g.get), 'Daisies', 'G3 fewest is daisies')
     eq(('6 more' in q['solution'] and '17' in q['solution'] and 'Daisies' in q['solution']), True, 'G3 solution examples match the graph'); eq(q['val'], ['open'], 'G3 open')
     # ---------------------------------------------------------------- Investigation
-    eq(inv['val'], ['open'], 'I1 open'); eq(inv.get('draw'), 1, 'I1 has a drawing box'); eq(nums(inv['first'] + ' ' + inv['text']), [6, 2, 12, 3], 'I1 numbers')
+    eq(inv['val'], ['open'], 'I1 open'); eq(inv.get('draw'), 0, 'I1 draws on paper at home'); eq(nums(inv['first'] + ' ' + inv['text']), [6, 2, 12, 3], 'I1 numbers')
     # ---------------------------------------------------------------- Exit ticket
-    q = X['E1']; tc = tray_counts(vis(q)); eq((tc['pencil'], tc['rubber']), (4, 3), 'E1 counts'); eq(q['val'], [4, 3], 'E1 val'); eq(WB_TRAYS['E1'], tc, 'E1 registry')
+    q = X['E1']; tc = tray_counts(vis(q)); eq(tc['rubber'], 3, 'E1 rubbers'); eq(q['val'], 3, 'E1 val'); eq(WB_TRAYS['E1'], tc, 'E1 registry'); eq(sum(tc.values()), 7, 'E1 total')
     q = X['E2']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['E2'], 'E2 registry'); eq(more(g['Ali'], g['Mei']), 5, 'E2 more biscuits'); eq(q['val'], 5, 'E2 val')
-    q = X['E3']; g = drawn(vis(q)); eq(tuple(g.values()), WB_GRAPHS['E2'], 'E3 uses the same graph as E2'); eq(q['val'], [1], 'E3 val'); eq(g['Siti'], 4, 'E3 option 1 has an answer on the graph (Siti ate 4)'); eq(q['mcq']['options'][0], 'How many biscuits did Siti eat?', 'E3 option 1')
-    eq(len(q['mcq']['options']), 2, 'E3 two options')
+    q = X['E3']; eq(q['val'], [1], 'E3 val'); eq(len(q['mcq']['options']), 2, 'E3 two options'); eq(q['mcq']['options'][0], 'How many cars are in the box?', 'E3 option 1 can be read from a graph of toys'); eq('best' in q['mcq']['options'][1], True, 'E3 option 2 is about liking')
     # ---------------------------------------------------------------- home practice
     q = H['H1']; eq(nums(q['text'])[:3], [10, 4, 3], 'H1 text'); eq(10 - (4 + 3), 3, 'H1'); eq(q['val'], 3, 'H1 val')
     q = H['H2']; eq(nums(q['text'])[:3], [8, 5, 1], 'H2 text'); eq(more(8, 5), 3, 'H2'); eq(q['val'], 3, 'H2 val')

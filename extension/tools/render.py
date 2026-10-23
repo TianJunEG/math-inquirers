@@ -142,7 +142,8 @@ def unit_pages(unit, theme, cfg):
     howto = ('<div class="howto"><span class="tab">' + esc(L["howto"]["title"]) + '</span><ol>'
              + ''.join(f'<li>{mk(s)}</li>' for s in L['howto']['steps']) + '</ol></div>')
     if L.get('facts'):
-        row = f'<div class="two hf">{howto}{facts_html(L["facts"], theme)}</div>'
+        cols = ' style="grid-template-columns:minmax(0,1fr) auto"' if L['facts'].get('figure') else ''   # a figure in the box sets its width
+        row = f'<div class="two hf"{cols}>{howto}{facts_html(L["facts"], theme)}</div>'
     else:
         row = howto
     learn = [head(unit, cfg), '<div class="pbody learn' + (' tight' if L.get('tight') else '') + '">',
@@ -194,7 +195,7 @@ def unit_pages(unit, theme, cfg):
     body.append('<div class="score"><span>My score:</span><span class="abox"></span><span>out of 4. Check the answers at the back.</span></div>')
     body.append('<div class="box"><h3>What next?</h3><ul class="adv"><li><b>4 or 3:</b> well done! Go on to the next unit.</li>'
                 '<li><b>2:</b> read Learn it again. Then try a Start here page once more.</li>'
-                '<li><b>1 or 0:</b> do Learn it and Start here again, with a helper if you like. Then try Check yourself again.</li></ul></div>')
+                '<li><b>1 or 0:</b> do Learn it and Start here again with a helper. Then try Check yourself again.</li></ul></div>')
     body.append('<div class="box grow"><h3>Look back</h3><div class="rows"><div class="rw free">This unit was &nbsp;<span class="tickl"><span class="tick"></span> easy</span><span class="tickl"><span class="tick"></span> just right</span><span class="tickl"><span class="tick"></span> hard</span></div>'
                 '<div class="rw"><span class="rl">The idea I want to remember:</span><span class="rln"></span></div>'
                 '<div class="rw"><span class="rl">Something I want to ask or try:</span><span class="rln"></span></div></div></div>')

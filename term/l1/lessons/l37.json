@@ -926,7 +926,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count each kind on the tray. Question 2: read the tally. Question 3: draw the pictures in the graph."
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count each kind on the tray. Question 2: read the tally. Question 3: read the graph, how many more and how many in all."
   },
   {
    "id": "s-ws1ans",
@@ -943,7 +943,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 4 shells, 5 buttons, 3 spoons. Q2 6 pens and 8 rubbers. Q3 apples 4 pictures, pears 6 pictures, plums 3 pictures."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 4 shells, 5 buttons, 3 spoons. Q2 6 pens and 8 rubbers. Q3 3 more cats than fish and 17 pets in all."
   },
   {
    "id": "s-ws2",
@@ -965,7 +965,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: how many more, and how many in all. Question 5: which game the fewest children play, and how many children play two of the games. Question 6: tick True or False for four sentences about a graph. Wait 10 seconds before helping."
+   "note": "Read questions 4 to 6 aloud. Question 4: draw one picture for each fruit. Question 5: which game the fewest children play, and how many children play two of the games. Question 6: tick True or False for four sentences about a graph. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -982,7 +982,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 3 more cats than fish and 17 pets in all. Q5 chess and 13 children. Q6 True, False, True, True."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 apples 2 pictures, pears 5 pictures, plums 3 pictures. Q5 chess and 13 children. Q6 True, False, True, True."
   },
   {
    "id": "s-choice",
@@ -1099,7 +1099,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 4 pencils and 3 rubbers; E2 5 more biscuits; E3 question (1)."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 3 rubbers; E2 5 more biscuits; E3 question (1)."
   },
   {
    "id": "s-look",
@@ -1618,7 +1618,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: look at the tray. Count and write how many of each kind. Question 2: the tally shows how many things Ali counted. How many pens? How many rubbers? Question 3: Ali ate 4 apples, 6 pears and 3 plums. Draw the pictures in the graph."
+      "text": "Page 1, Start here. Question 1: look at the tray. Count and write how many of each kind. Question 2: the tally shows how many things Ali counted. How many pens? How many rubbers? Question 3: look at the graph. How many more cats than fish? How many pets in all?"
      },
      {
       "k": "WORK",
@@ -1632,7 +1632,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: four shells, five buttons, three spoons. Question 2: six pens and eight rubbers. Question 3: four pictures for apples, six for pears and three for plums. Tick your own page with a tick."
+      "text": "Question 1: four shells, five buttons, three spoons. Question 2: six pens and eight rubbers. Question 3: three more cats than fish, and seventeen pets in all. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1645,7 +1645,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: look at the graph. How many more cats than fish? How many pets in all? Question 5: which game do the fewest children play? How many children play ludo and cards altogether? Question 6: tick True or False for each sentence."
+      "text": "Page 2. Question 4: Ali ate 2 apples, 5 pears and 3 plums. Draw one picture in a box for each fruit. Question 5: which game do the fewest children play? How many children play ludo and cards altogether? Question 6: tick True or False for each sentence."
      },
      {
       "k": "WORK",
@@ -1659,7 +1659,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: three more cats than fish, and seventeen pets in all. Question 5: chess, and thirteen children. Question 6: true, false, true, true. Tick your own page."
+      "text": "Question 4: two pictures for apples, five for pears and three for plums. Question 5: chess, and thirteen children. Question 6: true, false, true, true. Tick your own page."
      },
      {
       "k": "SLIDE",
@@ -1682,7 +1682,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: cross out each thing as you count it. Q2: a group of 5 is four strokes with one across. Q3: one picture in each box, the same size. Q4: match the rows to see how many more. Q5: which row is the shortest? Q6: look at the rows for each sentence."
+      "text": "Q1: cross out each thing as you count it. Q2: a group of 5 is four strokes with one across. Q3: match the rows to see how many more. Q4: one picture in each box, the same size. Q5: which row is the shortest? Q6: look at the rows for each sentence."
      },
      {
       "k": "STUCK",
@@ -1690,7 +1690,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder has a tally and a table, a question the graph can answer, a missing row from a total, and a graph with one wrong row. Go further has one picture is two (beyond Primary 1 on purpose), a graph from clues and a question to write. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+      "text": "Think harder has a tally and a table, a question the graph can answer, and a missing row from a total. Go further has one picture is two (beyond Primary 1 on purpose), a graph from clues and a question to write. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -1763,7 +1763,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Look at the tray. How many pencils? How many rubbers? E2. Look at the graph. How many more biscuits did Ali eat than Mei? E3. Which question can the graph answer? Write its number in the brackets."
+      "text": "E1. Look at the tray. How many rubbers? E2. Look at the graph. How many more biscuits did Ali eat than Mei? E3. A child counts the toys in a box and draws a graph. Which question can the graph answer? One: how many cars are in the box? Two: which toy is the best? Write its number in the brackets."
      },
      {
       "k": "WORK",
@@ -1777,7 +1777,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: four pencils and three rubbers. E2: five more biscuits. E3: question one."
+      "text": "E1: three rubbers. E2: five more biscuits. E3: question one."
      },
      {
       "k": "SAY",
@@ -1996,79 +1996,13 @@
      ],
      "icon": "counter",
      "tally": true,
-     "size": 55
+     "key": false,
+     "size": 50
     }
    },
    {
     "id": "S3",
     "page": 1,
-    "tier": "start",
-    "text": "Ali ate 4 apples, 6 pears and 3 plums. Draw one picture in a box for each fruit.",
-    "answer": "Apples 4 pictures; pears 6 pictures; plums 3 pictures",
-    "val": [
-     4,
-     6,
-     3
-    ],
-    "hint": "Start at the left of each row. Draw the same size every time.",
-    "solution": "Draw 4 pictures in the apples row, 6 in the pears row and 3 in the plums row. Some boxes are left empty. The three rows have 4 + 6 + 3 = 13 pictures, one for each fruit.",
-    "mistakes": [
-     "Filling every box in a row.",
-     "Drawing the pictures in different sizes."
-    ],
-    "mins": 3.5,
-    "draw": true,
-    "visual": {
-     "type": "picture_graph",
-     "rows": [
-      {
-       "label": "Apples",
-       "n": 7,
-       "hide": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-       ]
-      },
-      {
-       "label": "Pears",
-       "n": 7,
-       "hide": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-       ]
-      },
-      {
-       "label": "Plums",
-       "n": 7,
-       "hide": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-       ]
-      }
-     ],
-     "icon": "counter",
-     "title": "Fruit Ali ate",
-     "size": 78
-    }
-   },
-   {
-    "id": "S4",
-    "page": 2,
     "tier": "start",
     "text": "Look at the graph. Each picture stands for 1 pet.",
     "answer": "3 more cats than fish; 17 pets in all",
@@ -2115,7 +2049,70 @@
      ],
      "icon": "counter",
      "title": "Pets in a shop",
-     "size": 58
+     "size": 50
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Ali ate 2 apples, 5 pears and 3 plums. Draw one picture in a box for each fruit.",
+    "answer": "Apples 2 pictures; pears 5 pictures; plums 3 pictures",
+    "val": [
+     2,
+     5,
+     3
+    ],
+    "hint": "Start at the left of each row. Draw the same size every time.",
+    "solution": "Draw 2 pictures in the apples row, 5 in the pears row and 3 in the plums row. Some boxes are left empty. The three rows have 2 + 5 + 3 = 10 pictures, one for each fruit.",
+    "mistakes": [
+     "Filling every box in a row.",
+     "Drawing the pictures in different sizes."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Apples",
+       "n": 6,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ]
+      },
+      {
+       "label": "Pears",
+       "n": 6,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ]
+      },
+      {
+       "label": "Plums",
+       "n": 6,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ]
+      }
+     ],
+     "icon": "counter",
+     "title": "Fruit Ali ate",
+     "size": 72
     }
    },
    {
@@ -2172,7 +2169,7 @@
      ],
      "icon": "counter",
      "title": "Games children play",
-     "size": 58
+     "size": 50
     }
    },
    {
@@ -2226,7 +2223,7 @@
      ],
      "icon": "counter",
      "title": "Stamps",
-     "size": 58
+     "size": 46
     }
    }
   ],
@@ -2269,6 +2266,7 @@
       ],
       "icon": "counter",
       "tally": true,
+      "key": false,
       "size": 100
      },
      {
@@ -2359,7 +2357,7 @@
      ],
      "icon": "counter",
      "title": "Mi's beach box",
-     "size": 58
+     "size": 44
     }
    },
    {
@@ -2421,87 +2419,8 @@
      ],
      "icon": "counter",
      "title": "Books on a shelf",
-     "size": 62
+     "size": 56
     }
-   },
-   {
-    "id": "T4",
-    "page": 3,
-    "tier": "think",
-    "text": "A child in another class made a graph from the tally. One row is wrong.",
-    "answer": "Vans; 3",
-    "val": [
-     "Vans",
-     3
-    ],
-    "hint": "Match each row of the graph with its tally.",
-    "solution": "Cars 6 matches 6. Buses 7 matches 7. Vans have 3 strokes in the tally but 4 pictures in the graph. The vans row is wrong and should have 3 pictures.",
-    "mistakes": [
-     "Choosing the longest row.",
-     "Counting the tally group as 4."
-    ],
-    "mins": 4,
-    "visuals": [
-     {
-      "type": "picture_graph",
-      "rows": [
-       {
-        "label": "Cars",
-        "n": 6
-       },
-       {
-        "label": "Vans",
-        "n": 3
-       },
-       {
-        "label": "Buses",
-        "n": 7
-       }
-      ],
-      "icon": "counter",
-      "tally": true,
-      "size": 100
-     },
-     {
-      "type": "picture_graph",
-      "rows": [
-       {
-        "label": "Cars",
-        "n": 6
-       },
-       {
-        "label": "Vans",
-        "n": 4
-       },
-       {
-        "label": "Buses",
-        "n": 7
-       }
-      ],
-      "icon": "counter",
-      "title": "Vehicles",
-      "size": 100
-     }
-    ],
-    "parts": [
-     {
-      "l": "a",
-      "text": "The wrong row is (circle one).",
-      "ans": "Vans",
-      "val": "Vans",
-      "choices": [
-       "Cars",
-       "Vans",
-       "Buses"
-      ]
-     },
-     {
-      "l": "b",
-      "text": "It should have [] pictures.",
-      "ans": "3",
-      "val": 3
-     }
-    ]
    }
   ],
   "go": [
@@ -2509,15 +2428,14 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Mei's graph uses a key. Each picture stands for 2 sweets. Draw the pictures in the empty boxes.",
-    "answer": "3 pictures; 2 pictures; 7 gums",
+    "text": "Mei's graph uses a key. Each picture stands for 2 sweets. Draw the pictures for the toffees in the empty boxes.",
+    "answer": "3 pictures; 7 gums",
     "val": [
      3,
-     2,
      7
     ],
     "hint": "Count in 2s to find how many pictures. Half a picture is 1 sweet.",
-    "solution": "6 toffees: 2, 4, 6 is 3 pictures. 4 lollies: 2, 4 is 2 pictures. The gums row has 3 whole pictures, 6 sweets, and half a picture, 1 more: 7 gums.",
+    "solution": "6 toffees: 2, 4, 6 is 3 pictures. The gums row has 3 whole pictures, 6 sweets, and half a picture, 1 more: 7 gums.",
     "mistakes": [
      "Drawing 6 pictures for 6 toffees.",
      "Counting half a picture as 2 or as 0."
@@ -2532,12 +2450,6 @@
      },
      {
       "l": "b",
-      "text": "4 lollies need [] pictures.",
-      "ans": "2",
-      "val": 2
-     },
-     {
-      "l": "c",
       "text": "The gums row has 3 pictures and half a picture. There are [] gums.",
       "ans": "7",
       "val": 7
@@ -2562,17 +2474,6 @@
        ]
       },
       {
-       "label": "Lollies",
-       "n": 5,
-       "hide": [
-        0,
-        1,
-        2,
-        3,
-        4
-       ]
-      },
-      {
        "label": "Gums",
        "n": 3.5
       }
@@ -2580,7 +2481,7 @@
      "icon": "counter",
      "title": "Mei's sweets",
      "each": 2,
-     "size": 64
+     "size": 52
     }
    },
    {
@@ -2588,10 +2489,9 @@
     "page": 4,
     "tier": "go",
     "text": "Four children have 21 stickers in all. Ben has 4 stickers. Lily has 3 more than Ben. Jamie has 2 fewer than Lily. Ravi has the rest.",
-    "answer": "Lily 7; Jamie 5; Ravi 5",
+    "answer": "Lily 7; Ravi 5",
     "val": [
      7,
-     5,
      5
     ],
     "hint": "Find Lily first. Then Jamie. Add Ben, Lily and Jamie to find the rest.",
@@ -2610,12 +2510,6 @@
      },
      {
       "l": "b",
-      "text": "Jamie has [] stickers.",
-      "ans": "5",
-      "val": 5
-     },
-     {
-      "l": "c",
       "text": "Ravi has [] stickers.",
       "ans": "5",
       "val": 5
@@ -2638,7 +2532,7 @@
      "Writing a question with no answer."
     ],
     "mins": 4,
-    "lines": 3,
+    "lines": 2,
     "visual": {
      "type": "picture_graph",
      "rows": [
@@ -2657,7 +2551,7 @@
      ],
      "icon": "counter",
      "title": "Flowers in a garden",
-     "size": 55
+     "size": 40
     }
    }
   ],
@@ -2667,9 +2561,9 @@
    "tier": "investigation",
    "title": "Sort, draw and ask",
    "first": "Find 6 small things at home. Sort them into 2 kinds. How many of each? ____ and ____",
-   "text": "Now sort 12 things into 3 kinds. Draw your picture graph in the box. Write one question your graph can answer.",
+   "text": "Now sort 12 things into 3 kinds. Draw your picture graph on paper. Write one question it can answer.",
    "lines": 3,
-   "draw": 1,
+   "draw": 0,
    "answer": "Many answers are right. A good graph has a title, the kinds named, one picture for each thing, all the pictures the same size, and a key. The numbers on the graph match the piles.",
    "val": [
     "open"
@@ -2694,27 +2588,18 @@
    "text": "Look at the tray.",
    "parts": [
     {
-     "l": "a",
-     "text": "There are [] pencils.",
-     "ans": "4",
-     "val": 4
-    },
-    {
-     "l": "b",
+     "l": "",
      "text": "There are [] rubbers.",
      "ans": "3",
      "val": 3
     }
    ],
-   "answer": "4 pencils; 3 rubbers",
-   "val": [
-    4,
-    3
-   ],
-   "solution": "Cross out each thing as you count it: 4 pencils and 3 rubbers. 4 + 3 = 7, the same as the things on the tray.",
+   "answer": "3 rubbers",
+   "val": 3,
+   "solution": "Cross out each rubber as you count it: 3 rubbers. The other 4 things are pencils. 4 + 3 = 7, the same as the things on the tray.",
    "mistakes": [
     "Counting a thing twice.",
-    "Missing a thing."
+    "Counting the pencils as well."
    ],
    "visual": {
     "type": "table",
@@ -2743,7 +2628,7 @@
       }
      ]
     ],
-    "size": 100
+    "size": 70
    }
   },
   {
@@ -2781,47 +2666,27 @@
      }
     ],
     "icon": "cookie",
-    "title": "Biscuits eaten",
-    "size": 100
+    "key": false,
+    "size": 36
    }
   },
   {
    "id": "E3",
-   "text": "The graph shows the biscuits eaten. Which question can the graph answer? Write its number in the brackets.",
+   "text": "A child counts the toys in a box and draws a graph. Which question can the graph answer? Write its number in the brackets.",
    "answer": "(1)",
    "val": [
     1
    ],
-   "solution": "The graph shows how many biscuits each child ate, so question (1) can be answered: Siti ate 4. The graph does not say which biscuit tastes best.",
+   "solution": "The graph shows how many toys of each kind are in the box, so question (1) can be answered. The graph does not say which toy is the best.",
    "mistakes": [
-    "Choosing (2): the graph does not show likes."
+    "Choosing (2): the graph does not show what a child likes."
    ],
    "mcq": {
     "options": [
-     "How many biscuits did Siti eat?",
-     "Which biscuit tastes best?"
+     "How many cars are in the box?",
+     "Which toy is the best?"
     ],
     "bracket": true
-   },
-   "visual": {
-    "type": "picture_graph",
-    "rows": [
-     {
-      "label": "Ali",
-      "n": 7
-     },
-     {
-      "label": "Mei",
-      "n": 2
-     },
-     {
-      "label": "Siti",
-      "n": 4
-     }
-    ],
-    "icon": "cookie",
-    "title": "Biscuits eaten",
-    "size": 60
    }
   }
  ],
@@ -3596,7 +3461,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 4, 5 and 3; S2 6 and 8; S3 4, 6 and 3 pictures; S4 3 and 17; S5 chess and 13; S6 True, False, True, True; T1 9, 5, 6 and 20; T2 (2); T3 11 and 5; T4 vans and 3; G1 3, 2 and 7; G2 7, 5 and 5; G3 any question the graph can answer; I1 open.",
+  "Solve every workbook question yourself first. Check the answers: S1 4, 5 and 3; S2 6 and 8; S3 3 and 17; S4 2, 5 and 3 pictures; S5 chess and 13; S6 True, False, True, True; T1 9, 5, 6 and 20; T2 (2); T3 11 and 5; G1 3 and 7; G2 7 and 5; G3 any question the graph can answer; I1 open.",
   "Tell parents a week before: the family finds 12 to 20 small things from the house in 3 or 4 kinds (spoons, socks, shoes, buttons; not food), no more than 8 of one kind. The graph mat is page 6 of Book 8 and needs no cutting. A family with nothing to sort draws 12 things on paper. The next lesson needs only a pencil and paper.",
   "Have the slides open. Have your own 12 small things in 3 kinds to show on camera if you wish. Practise the sort-and-move break. Say the fixed question forms every time: How many more ___ than ___? How many in all? Which has the fewest?",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",

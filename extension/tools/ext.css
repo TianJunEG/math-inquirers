@@ -112,7 +112,7 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 .legend div{display:flex;gap:3mm;align-items:center;font-weight:600}
 .legend svg{width:8mm;height:8mm;flex:none}
 .toc{width:100%;border-collapse:collapse}
-.toc td{padding:2.3mm 2mm;border-bottom:0.3mm solid var(--rule);vertical-align:middle}
+.toc td{padding:1.65mm 2mm;border-bottom:0.3mm solid var(--rule);vertical-align:middle}
 .toc td.n{width:12mm;font:700 18pt Fredoka,sans-serif}
 .toc td.t b{font:700 14pt Fredoka,sans-serif;display:block}
 .toc td.t small{font:600 10pt 'Nunito Sans',sans-serif}
@@ -212,4 +212,4 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 .learn.tight .steps li:before{width:6mm;height:6mm}
 
 /* audit 2: the intro line must not touch the tab of the worked example (tab sticks out 4.2 mm above its box) */
-.learn>.lead+.wex,.learn>.lead+.wexpair,.learn>.goal+.wex,.learn>.goal+.wexpair{margin-top:2.6mm}
+.learn>.lead+.wex,.learn>.lead+.wexpair,.learn>.goal+.wex,.learn>.goal+.wexpair{margin-top:1.8mm}

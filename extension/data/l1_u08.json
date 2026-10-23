@@ -23,7 +23,7 @@
      "juice",
      "tea"
     ],
-    "width_mm": 46,
+    "width_mm": 58,
     "marks": {
      "0,0": "no",
      "0,1": "no",
@@ -41,8 +41,7 @@
     "Jenny does not pick milk. Cross out that box.",
     "Jenny's last empty box is juice. Wei gets milk."
    ],
-   "answer": "Ravi: tea. Jenny: juice. Wei: milk.",
-   "side": true
+   "answer": "Ravi: tea. Jenny: juice. Wei: milk."
   },
   "howto": {
    "title": "How to use grids and loops",
@@ -67,7 +66,7 @@
      "kite",
      "drum"
     ],
-    "width_mm": 44
+    "width_mm": 52
    },
    "parts": [
     {
@@ -90,7 +89,7 @@
     "type": "loops",
     "a": "even",
     "b": "more than 6",
-    "width_mm": 56,
+    "width_mm": 68,
     "regions": {
      "a": [
       2,
@@ -110,7 +109,6 @@
      ]
     }
    },
-   "side": true,
    "steps": [
     "Test each number against both rules.",
     "8 is even and more than 6. It goes in the middle.",
@@ -126,6 +124,7 @@
     "Counting in 4s: 4, 8, 12, 16 ..."
    ]
   },
+  "pair": true,
   "tight": true
  },
  "items": [

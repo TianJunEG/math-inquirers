@@ -71,6 +71,8 @@ def _one_graph(g, y0):
     """Draw a picture graph with its top at y0.  Returns (svg parts, height)."""
     LAB, CELL, RH = 150, 50, 56
     rows = g['rows']
+    if max(len(r['label']) for r in rows) >= 9:
+        LAB = 172   # room for 'Wednesday' at 10 pt or more (audit 2)
     slots = max(int(r.get('n', 0) + 0.99) + r.get('slots', 0) for r in rows)
     slots = max(slots, g.get('min_slots', 8))
     W = LAB + slots * CELL + 4

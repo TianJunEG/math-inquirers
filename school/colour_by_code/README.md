@@ -1,4 +1,4 @@
-# Colour by Code: picture and topic generator (Primary 1 and Primary 2; levels 3 to 6 plug in)
+# Colour by Code: picture and topic generator (Primary 1: 14 sheets, Primary 2: 15 sheets; levels 3 to 6 plug in)
 
 A worksheet is an outline picture cut into 12 to 18 regions. Each region holds one question for the level. The answers are
 five key values and each value has a colour word (yellow, red, blue, green, orange). The page is printed black and white and
@@ -20,12 +20,13 @@ python3 preview.py fish owl                                                # deb
 
 Needs: python3 with `shapely`, `fonttools` and `brotli`, `playwright` (chromium), `pillow`, `numpy`, `scipy`; poppler (`pdftoppm`, `pdftotext`, `pdfinfo`, `pdffonts`);
 the repo fonts folder (`fonts/node_modules/@fontsource`: Fredoka 600 and 700, Nunito Sans). Without `--school` the footer prints a blank "School name: ____" line to fill in.
-Outputs: `out/p1/` (Primary 1, ten sheets) and `out/p2/` (Primary 2, twelve sheets), each with `contact_sheet.pdf`, `verification.txt/.json`, `inventory.md`, `compat.md`.
+Outputs: `out/p1/` (Primary 1, fourteen sheets) and `out/p2/` (Primary 2, fifteen sheets), each with `contact_sheet.pdf`, `verification.txt/.json`, `inventory.md`, `compat.md`.
 
 ## Files
 
 | file | what it does |
 |---|---|
+| `textcheck.py` | the independent evaluator: re-solves every printed question from its text (and, for picture questions, from what a reader decodes from the picture: clock hands, ruler ends, coins, dots, graph rows, tally, solids, fraction parts). Does not import a bank. A new question form needs a new rule here or `verify.py` fails |
 | `qcore.py` | the question core for every level: `Q`, `EQ`, `SEM`, `Tier`, `Bank`, `T()`; the equation re-evaluator (plain, money in $ and ¢, x and the division sign) |
 | `banks.py` | the level registry: finds every `banks_pN.py` in this folder, exposes `banks(level)`, `gallery(level)`, `rules(level)` |
 | `banks_p1.py`, `banks_p2.py` | one file per level: `LEVEL`, `RULES`, `BANKS` (topic banks) and `GALLERY` (the worksheets of that level) |

@@ -3405,8 +3405,8 @@
    "page": 5,
    "tier": "investigation",
    "title": "Change just one thing",
-   "first": "Draw a small striped circle. Next to it, draw the same circle, but bigger. What is different? ____",
-   "text": "Draw a third tile that differs from the first in two things. Write them.",
+   "first": "Draw a small striped circle, then the same circle bigger. What is different? ____",
+   "text": "Draw a tile that differs from the first in two things. Write them.",
    "lines": 4,
    "draw": 1,
    "answer": "The bigger circle is different in size only. A tile with two things different, for example a big circle with dots, is different in size and pattern. Many answers are right.",
@@ -3473,7 +3473,7 @@
     ],
     "cell": 80,
     "cols": 2,
-    "size": 45
+    "size": 38
    }
   },
   {
@@ -3534,7 +3534,7 @@
      "C",
      "D"
     ],
-    "size": 55
+    "size": 45
    }
   },
   {
@@ -3582,7 +3582,7 @@
      ],
      "cell": 70,
      "cols": 3,
-     "size": 60
+     "size": 50
     },
     {
      "type": "panel",
@@ -3607,7 +3607,7 @@
      ],
      "cell": 70,
      "cols": 3,
-     "size": 60
+     "size": 50
     }
    ]
   }
