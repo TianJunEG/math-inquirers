@@ -50,15 +50,33 @@
   },
   "try": {
    "id": "L1U10-L01",
-   "text": "Count in 4s. Fill in the blanks. 4, 8, 12, {b}, {b}",
+   "text": "A plant is 5 cm tall. It grows 2 cm every week. Write its height after each week in the tiles.",
    "answer": {
     "value": [
-     "16",
-     "20"
+     "7",
+     "9",
+     "11",
+     "13"
     ],
-    "text": "16, 20"
+    "text": "7, 9, 11, 13"
    },
-   "explanation": "Each number is 4 more. 12 + 4 = 16 and 16 + 4 = 20."
+   "explanation": "Add 2 each week: 5 + 2 = 7, 7 + 2 = 9, 9 + 2 = 11, 11 + 2 = 13. After 4 weeks the plant is 13 cm tall.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     5,
+     null,
+     null,
+     null,
+     null
+    ],
+    "gaps": [
+     "+2",
+     "+2",
+     "+2",
+     "+2"
+    ]
+   }
   }
  },
  "items": [
@@ -304,7 +322,7 @@
     "text": "16, 18, 24",
     "list": true
    },
-   "explanation": "An even number can be shared into 2 equal groups with none left. 16, 18 and 24 are even. 13 and 21 are odd."
+   "explanation": "An even number ends in 0, 2, 4, 6 or 8. 16, 18 and 24 are even. 13 and 21 end in 3 and 1: odd."
   },
   {
    "id": "L1U10-S10",
@@ -440,19 +458,37 @@
    "id": "L1U10-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ray, Lily, Jason and Siti sit on chairs 1 to 4. Ray is on chair 4 and Lily is next to Ray. Jason has a lower chair number than Siti. Write the names from chair 1 to chair 4.\n{ll}",
-   "answer": {
-    "value": [
-     "Jason",
-     "Siti",
-     "Lily",
-     "Ray"
-    ],
-    "text": "Jason, Siti, Lily, Ray",
-    "list": true
+   "text": "Ravi puts 1 sticker on each side of 1 square and 2 triangles. Each sticker costs 5¢.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 3 shapes have {b} sides altogether.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The stickers cost {b}¢ altogether.",
+     "answer": {
+      "value": [
+       "50"
+      ],
+      "text": "50"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Sides:",
+     "Cost:"
+    ]
    },
-   "hint": "Put Ray on chair 4 first. Then place Lily. Two names are left.",
-   "explanation": "Ray is on chair 4, so Lily is on chair 3. Jason and Siti have chairs 1 and 2. Jason has the lower number, so Jason is on chair 1 and Siti on chair 2."
+   "hint": "Count the sides first. Then count in 5s.",
+   "explanation": "A square has 4 sides and each triangle has 3: 4 + 3 + 3 = 10 sides. That is 10 stickers. Counting in 5s ten times gives 50, so the stickers cost 50¢."
   },
   {
    "id": "L1U10-T03",

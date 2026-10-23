@@ -41,14 +41,25 @@
   },
   "try": {
    "id": "L1U09-L01",
-   "text": "A ribbon is 11 cubes long. A string is 7 cubes long. The ribbon is {b} cubes longer than the string.",
+   "text": "A marker lies on the ruler. How long is the marker? {b} cm",
    "answer": {
     "value": [
-     "4"
+     "6"
     ],
-    "text": "4"
+    "text": "6 cm"
    },
-   "explanation": "11 - 7 = 4. Check: 7 + 4 = 11."
+   "explanation": "The marker starts at 2 and ends at 8. Subtract: 8 - 2 = 6. Check by counting the spaces from 2 to 8: 6 hops.",
+   "figure": {
+    "type": "ruler",
+    "max": 10,
+    "objects": [
+     {
+      "label": "marker",
+      "start": 2,
+      "end": 8
+     }
+    ]
+   }
   }
  },
  "items": [
@@ -167,10 +178,19 @@
    "id": "L1U09-S05",
    "tier": "start",
    "page": 1,
-   "text": "Mei and Ben measure a pencil with cubes.",
+   "text": "Mei and Ben measure a pencil with cubes. Look at the pencil and the 2 rows.",
    "figure": {
     "type": "bars",
     "rows": [
+     {
+      "label": "pencil",
+      "segs": [
+       {
+        "n": 1,
+        "w": 7
+       }
+      ]
+     },
      {
       "label": "Mei",
       "segs": [
@@ -215,7 +235,7 @@
      }
     }
    ],
-   "explanation": "Ben's cubes touch with no gaps, so his row is fair. Mei's row has a gap. A gap makes the pencil look longer than it is, or hides cubes."
+   "explanation": "Ben's 7 cubes touch each other and fit the pencil exactly. Mei's cubes have a gap in the middle, so her row runs past the end of the pencil. Cubes must be end to end with no gaps."
   },
   {
    "id": "L1U09-S06",
@@ -533,41 +553,37 @@
    "id": "L1U09-T03",
    "tier": "think",
    "page": 4,
-   "text": "Ali's tape is 10 cubes long. Mei's tape is 4 cubes shorter than Ali's. Ben's tape is 3 cubes longer than Mei's.",
+   "text": "A pencil lies from the 3 cm mark to the 10 cm mark of a ruler. A crayon is 2 cm longer than the pencil. It starts at the 2 cm mark.",
    "parts": [
     {
      "label": "a",
-     "text": "Mei's tape is {b} cubes long.",
+     "text": "The pencil is {b} cm long.",
      "answer": {
       "value": [
-       "6"
+       "7"
       ],
-      "text": "6"
+      "text": "7"
      }
     },
     {
      "label": "b",
-     "text": "Ben's tape is {b} cubes long.",
+     "text": "The crayon ends at the {b} cm mark.",
      "answer": {
       "value": [
-       "9"
+       "11"
       ],
-      "text": "9"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The longest tape is   {circ:Ali's|Mei's|Ben's}",
-     "answer": {
-      "value": [
-       "Ali's"
-      ],
-      "text": "Ali's"
+      "text": "11"
      }
     }
    ],
-   "hint": "Find Mei's tape first. Then use Mei's tape to find Ben's.",
-   "explanation": "Mei's tape is 10 - 4 = 6 cubes. Ben's tape is 6 + 3 = 9 cubes. 10 is the greatest, so Ali has the longest tape."
+   "space": {
+    "rows": [
+     "Pencil:",
+     "Crayon:"
+    ]
+   },
+   "hint": "Find the pencil's length first. Then the crayon's.",
+   "explanation": "The pencil is 10 - 3 = 7 cm long. The crayon is 2 cm longer, so it is 9 cm long. It starts at 2, so it ends at 2 + 9 = 11. Check: 11 - 2 = 9."
   },
   {
    "id": "L1U09-G01",

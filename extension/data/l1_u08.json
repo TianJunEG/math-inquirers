@@ -6,9 +6,9 @@
  "title": "Clues and sorting",
  "topic": "Logic and sorting",
  "holiday_lesson": 8,
- "goal": "I can use clues to find answers. I can sort things and fill in a logic grid.",
+ "goal": "I can use clues, fill in a logic grid and sort numbers into loops.",
  "learn": {
-  "intro": "Clues help us find an answer without guessing. In a logic grid, a tick means yes and a cross means no.",
+  "intro": "Clues help us find an answer without guessing. A logic grid uses a tick for yes and a cross for no. Two loops sort numbers by two rules.",
   "example": {
    "problem": "Ravi, Jenny and Wei each pick a different drink: milk, juice or tea. Ravi picks tea. Jenny does not pick milk. Who picks what?",
    "figure": {
@@ -23,7 +23,7 @@
      "juice",
      "tea"
     ],
-    "width_mm": 42,
+    "width_mm": 58,
     "marks": {
      "0,0": "no",
      "0,1": "no",
@@ -41,14 +41,15 @@
     "Jenny does not pick milk. Cross out that box.",
     "Jenny's row has 1 empty box left: juice. Wei gets milk."
    ],
-   "answer": "Ravi: tea. Jenny: juice. Wei: milk."
+   "answer": "Ravi: tea. Jenny: juice. Wei: milk.",
+   "side": true
   },
   "howto": {
-   "title": "How to use a logic grid",
+   "title": "How to use grids and loops",
    "steps": [
     "Read one clue at a time. Tick or cross the boxes.",
-    "If a row has 1 empty box, tick it.",
-    "Check every clue at the end."
+    "A row with 1 empty box gets a tick.",
+    "Test each number against both rules."
    ]
   },
   "try": {
@@ -66,7 +67,7 @@
      "kite",
      "drum"
     ],
-    "width_mm": 38
+    "width_mm": 50
    },
    "parts": [
     {
@@ -81,7 +82,51 @@
     }
    ],
    "explanation": "Ben has the drum. Mei does not have the ball or the drum, so Mei has the kite. The ball is left for Kumar."
-  }
+  },
+  "example2": {
+   "problem": "Sort the numbers 2 to 9 into the loops. One loop is even numbers. The other loop is more than 6.",
+   "figure": {
+    "type": "loops",
+    "a": "even",
+    "b": "more than 6",
+    "width_mm": 78,
+    "regions": {
+     "a": [
+      2,
+      4,
+      6
+     ],
+     "ab": [
+      8
+     ],
+     "b": [
+      7,
+      9
+     ],
+     "out": [
+      3,
+      5
+     ]
+    }
+   },
+   "side": true,
+   "steps": [
+    "Test each number against both rules.",
+    "8 is even and more than 6. It goes in the middle, where the loops meet.",
+    "2, 4 and 6 are only even. 7 and 9 are only more than 6.",
+    "3 and 5 are neither. They go outside both loops."
+   ],
+   "answer": "In both loops: 8. Outside both loops: 3 and 5."
+  },
+  "facts": {
+   "title": "Odd and even",
+   "lines": [
+    "Even numbers end in 0, 2, 4, 6 or 8.",
+    "Odd numbers end in 1, 3, 5, 7 or 9.",
+    "Counting in 4s, we say 4, 8, 12, 16 ..."
+   ]
+  },
+  "tight": true
  },
  "items": [
   {
@@ -218,7 +263,7 @@
    "id": "L1U08-S05",
    "tier": "start",
    "page": 1,
-   "text": "An even number has a last digit of 0, 2, 4, 6 or 8. An odd number has a last digit of 1, 3, 5, 7 or 9. Write each of these numbers in the right list: 4, 7, 10, 13, 16, 9.",
+   "text": "Write each of these numbers in the right list: 4, 7, 10, 13, 16, 9.",
    "parts": [
     {
      "label": "a",
@@ -281,7 +326,7 @@
    "explanation": "The line is Aisha, Ravi, Ben, Siti, Mei (fewest to most). So Aisha has 5, Ravi 6, Ben 7, Siti 8 and Mei 9.",
    "space": {
     "rows": [
-     "Line them up:"
+     "Fewest to most:"
     ]
    }
   },
@@ -294,7 +339,7 @@
     "type": "loops",
     "a": "odd",
     "b": "more than 10",
-    "width_mm": 82,
+    "width_mm": 100,
     "regions": {
      "a": [
       3,
@@ -375,7 +420,7 @@
      "bun",
      "pear"
     ],
-    "width_mm": 68
+    "width_mm": 74
    },
    "parts": [
     {
@@ -488,7 +533,7 @@
      "piano",
      "bell"
     ],
-    "width_mm": 52
+    "width_mm": 64
    },
    "parts": [
     {
@@ -554,7 +599,7 @@
     "type": "loops",
     "a": "more than 8",
     "b": "odd",
-    "width_mm": 96
+    "width_mm": 100
    },
    "parts": [
     {
@@ -728,7 +773,7 @@
       null
      ]
     ],
-    "width_mm": 44
+    "width_mm": 52
    },
    "answer": {
     "value": [
@@ -741,7 +786,7 @@
     "list": true
    },
    "hint": "A row 3, 1, _, 4 needs a 2 in the gap. Find a line like that.",
-   "explanation": "Column 1 has 2, 4 and 3, so its empty box is 1. Row 1 needs 3 and 4. Column 3 already has a 4, so row 1 ends with 3 and 4. Always fill a box that has only 1 number possible."
+   "explanation": "Column 1 has 2, 4 and 3, so its empty box is 1. Row 1 needs 3 and 4: column 3 already has a 4, so row 1 is 2 1 3 4. Row 4 needs 1 and 2: column 2 already has a 1, so row 4 is 3 2 4 1. Then fill each box that has only 1 number possible."
   },
   {
    "id": "L1U08-G03",

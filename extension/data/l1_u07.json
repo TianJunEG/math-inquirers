@@ -45,7 +45,7 @@
   },
   "try": {
    "id": "L1U07-L01",
-   "text": "How many pentagons are in the picture? A pentagon has 5 sides. {b}",
+   "text": "How many pentagons are in the picture?   {b}",
    "figure": {
     "type": "shapes",
     "items": [
@@ -66,7 +66,21 @@
     ],
     "text": "3"
    },
-   "explanation": "Touch each pentagon once. There are 3 of them. The circle, the triangle and the square do not have 5 sides."
+   "explanation": "A pentagon has 5 sides. Touch each pentagon once. There are 3 of them. The circle, the triangle and the square do not have 5 sides."
+  },
+  "facts": {
+   "title": "Shape names",
+   "figure": {
+    "type": "names_table",
+    "items": [
+     "triangle",
+     "square",
+     "pentagon",
+     "hexagon",
+     "octagon"
+    ],
+    "width_mm": 84
+   }
   }
  },
  "items": [
@@ -101,7 +115,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Shape A is a   {circ:pentagon|hexagon|octagon}",
+     "text": "Shape A is:     {circ:pentagon|hexagon|octagon}",
      "answer": {
       "value": [
        "pentagon"
@@ -111,7 +125,7 @@
     },
     {
      "label": "b",
-     "text": "Shape B is a   {circ:pentagon|hexagon|octagon}",
+     "text": "Shape B is:     {circ:pentagon|hexagon|octagon}",
      "answer": {
       "value": [
        "hexagon"
@@ -121,7 +135,7 @@
     },
     {
      "label": "c",
-     "text": "Shape C is an   {circ:pentagon|hexagon|octagon}",
+     "text": "Shape C is:     {circ:pentagon|hexagon|octagon}",
      "answer": {
       "value": [
        "octagon"
@@ -131,7 +145,7 @@
     },
     {
      "label": "d",
-     "text": "Shape D is a   {circ:triangle|square|circle}",
+     "text": "Shape D is:     {circ:triangle|square|circle}",
      "answer": {
       "value": [
        "triangle"

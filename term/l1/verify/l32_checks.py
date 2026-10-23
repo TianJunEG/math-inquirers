@@ -12,6 +12,7 @@ Nothing here reuses the lesson's own sentences or formulas. A figure is turned i
 - Panels (rows of picture tiles) are counted from the tiles. The kit is read back from the kit builder (its cut outlines are counted and measured in the SVG).
 """
 import itertools
+import math
 import os
 import re
 import sys
@@ -301,7 +302,7 @@ def run(d):
     eq((2, 0, 2) in cs, True, 'explore 2: the house is 2 squares and 2 triangles'); eq(min(len(t) for t in tl), 3, 'explore 2: the fewest pieces for the house is 3 (a rectangle and 2 triangles)')
     eq(cs, {(2, 0, 2), (0, 1, 2), (1, 0, 4), (0, 0, 6)}, 'explore 2: every way to build the house')
     bt = gr(sl['s-explore1-ans']['blocks'])[0]; reg2 = region_of(bt); eq(counts(tilings(reg2, ('triangle',))), {(0, 0, 2)}, 'explore 1: the bigger triangle is made of exactly 2 kit triangles')
-    eq(len(reg2), 8, 'explore 1: the bigger triangle covers 2 half-squares = 8 quarters')
+    eq(len(reg2), 4, 'explore 1: the bigger triangle covers 2 half-squares = 4 quarter-cells (half a cell each x 2)')
     # m1: 2 squares make a rectangle (4 corners, sides not all equal); 2 half circles of the same size make a circle
     two_sq = [(0, 0), (2, 0), (2, 1), (0, 1)]; eq((corners(two_sq), sorted({sq_len(two_sq[i], two_sq[(i + 1) % 4]) for i in range(4)})), (4, [1, 4]), 'm1: 2 squares make a 4-cornered shape with 2 long and 2 short sides')
     eq(F(1, 2) + F(1, 2), 1, 'm1: 2 half circles make 1 whole circle')
@@ -337,7 +338,10 @@ def run(d):
     seen = set()
     for (p1, p2) in itertools.combinations(dots, 2):
         a = p2[1] - p1[1]; b = p1[0] - p2[0]; c = a * p1[0] + b * p1[1]
-        if (a, b, c) in seen or (-a, -b, -c) in seen: continue
+        g = math.gcd(math.gcd(abs(a), abs(b)), abs(c)) or 1
+        a, b, c = a // g, b // g, c // g
+        if a < 0 or (a == 0 and b < 0): a, b, c = -a, -b, -c
+        if (a, b, c) in seen: continue
         seen.add((a, b, c))
         P1, P2 = cut_poly(TP, F(a), F(b), F(c))
         if len(P1) >= 3 and len(P2) >= 3 and area(P1) > 0 and area(P2) > 0:
@@ -352,7 +356,6 @@ def run(d):
     t2 = pn(T['T2'])[0]; pc2 = panel_counts(t2); eq([pc2['triangle'], pc2['square'], pc2['circle']], T['T2']['val'], 'T2 triangles, squares, circles'); eq(sum(pc2.values()), 14, 'T2 14 shapes in all')
     eq(len(t2['tiles']), 6, 'T2 6 tiles'); tb = figs_in(T['T2'], 'table')[0]; eq((tb['head'], tb['rows']), (['Triangles', 'Squares', 'Circles'], [['[]', '[]', '[]']]), 'T2 table matches the order of the answers')
     diag = []
-    import math
     pts = [(F(round(math.cos(-math.pi / 2 + 2 * math.pi * k / 4))), F(round(math.sin(-math.pi / 2 + 2 * math.pi * k / 4)))) for k in range(4)]
     segs = [(pts[a_], pts[b_]) for a_ in range(4) for b_ in range(a_ + 1, 4)]
     tri = triangles_in(segs); small = [t for t in tri if (F(0), F(0)) in t]; big = [t for t in tri if (F(0), F(0)) not in t]

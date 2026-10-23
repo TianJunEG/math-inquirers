@@ -8,7 +8,7 @@
  "holiday_lesson": 4,
  "goal": "I can find the core of a pattern and use it to find a shape far along. I can follow a growing pattern and find the rule.",
  "learn": {
-  "intro": "A repeating pattern has a core that goes round and round. We can count in the size of the core to find a far place. A growing pattern gets larger by the same amount each time.",
+  "intro": "A repeating pattern has a core that goes round and round. We can count in the size of the core to find a far place. A growing pattern gets larger by the same amount each time. A table helps.",
   "example": {
    "problem": "The pattern keeps going. What is the 14th shape?",
    "figure": {
@@ -67,7 +67,32 @@
     "text": "square"
    },
    "explanation": "The core has 4 shapes. Place 8 ends a core. Place 9 is a circle and place 10 is a square."
-  }
+  },
+  "example2": {
+   "problem": "Ali has 4 marbles on day 1. Each day he has 5 more marbles than the day before. How many marbles does he have on day 5?",
+   "figure": {
+    "type": "grow_table",
+    "head": "Day",
+    "label": "Marbles",
+    "values": [
+     4,
+     9,
+     14,
+     19,
+     24
+    ],
+    "step": "+5",
+    "width_mm": 92
+   },
+   "steps": [
+    "Make a table. Write the days 1 to 5. Write 4 under day 1.",
+    "Find the rule. Each day has 5 more. The rule is add 5.",
+    "Add 5 each time: 9, 14, 19, 24.",
+    "Check: from day 1 to day 5 there are 4 hops of 5. 4 + 20 = 24."
+   ],
+   "answer": "On day 5 he has 24 marbles."
+  },
+  "tight": true
  },
  "items": [
   {

@@ -1115,7 +1115,7 @@
    "id": "s-break",
    "part": "break",
    "kind": "dark",
-   "title": "Shape stretch",
+   "title": "Shape moves",
    "blocks": [
     {
      "t": "p",
@@ -1771,6 +1771,11 @@
       "resp": 12
      },
      {
+      "k": "ASK",
+      "text": "How do you know the window is a square?",
+      "resp": 18
+     },
+     {
       "k": "SLIDE",
       "slide": "s-m2-ans",
       "s": 8
@@ -1797,6 +1802,11 @@
       "k": "ASK",
       "text": "How many circles? How many squares?",
       "resp": 15
+     },
+     {
+      "k": "WORK",
+      "text": "Children touch each shape once on their screen and count each kind quietly.",
+      "s": 25
      },
      {
       "k": "ASK",
@@ -1843,7 +1853,7 @@
      {
       "k": "WORK",
       "text": "Children write or say the two answers. Wait 10 seconds before helping.",
-      "s": 45
+      "s": 60
      },
      {
       "k": "SLIDE",
