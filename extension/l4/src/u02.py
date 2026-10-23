@@ -103,7 +103,7 @@ G.append(item(U+'-G01', 'go', 5, 'Ravi rounds 36 449 in 3 steps. First to the ne
   parts=[P('a', 'After the 3 steps he gets {b}', A(37000)),
          P('b', 'Round 36 449 to the nearest 1000 in one go: {b}', A(36000)),
          P('c', 'Rounding 1 step at a time gives a wrong answer for some 4-digit numbers. What is the least 4-digit number where it does? {b}', A(1445))],
-  hint='Which numbers end in 4 and 5 just before a change?',
+  hint='Round a few numbers just below 1500 in steps.',
   why='36 449 becomes 36 450, then 36 500, then 37 000. In one go it is 36 000, because 449 is below 500. For part (c), 1445 becomes 1450, then 1500, then 2000, but in one go it is 1000. Any 4-digit number below 1445 gives the same answer both ways.'))
 G.append(item(U+'-G02', 'go', 5, 'Beyond Level 4: Counting by place\nBen writes the whole numbers from 1 to 1000. How many of them contain at least one 7?\n{b}',
   ans=A(271), hint='Count the numbers with no 7. Choose each digit in turn.',

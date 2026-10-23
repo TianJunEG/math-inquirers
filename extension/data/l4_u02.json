@@ -784,7 +784,7 @@
      }
     }
    ],
-   "hint": "Which numbers end in 4 and 5 just before a change?",
+   "hint": "Round a few numbers just below 1500 in steps.",
    "explanation": "36 449 becomes 36 450, then 36 500, then 37 000. In one go it is 36 000, because 449 is below 500. For part (c), 1445 becomes 1450, then 1500, then 2000, but in one go it is 1000. Any 4-digit number below 1445 gives the same answer both ways."
   },
   {

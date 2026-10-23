@@ -5,6 +5,7 @@ Pipeline: unit sources are `extension/l4/src/uNN.py` (helpers in `lib.py`); `pyt
 | Unit | Status |
 |---|---|
 | 1 Factor Hunters | written, checked, gates ok, viewed |
-| 2-10 | not started |
+| 2 Big Number Puzzles | written, checked, gates ok, viewed |
+| 3-10 | not started |
 
-Resume: next unit is 2 (Big Number Puzzles).
+Resume: next unit is 3 (Operation Detectives).
