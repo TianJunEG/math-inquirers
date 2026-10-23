@@ -244,12 +244,12 @@ def page11():
 # ---------------------------------------------------------------- P13
 def groups_svg(g, m, kind="apple"):
     p = []; x = 0.5
-    cols = min(m, 4); rows = (m + cols - 1) // cols
-    bw = cols * 6.6 + 2.4; h = rows * 6.6 + 2.4
+    cols = max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
+    bw = cols * 7.6 + 2.4; h = rows * 7.6 + 2.4
     for _ in range(g):
         p.append(f'<rect class="bag" x="{x:.1f}" y="0.5" width="{bw:.1f}" height="{h:.1f}" rx="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
         for i in range(m):
-            p.append(obj_g(kind, x + 1.2 + (i % cols) * 6.6, 1.7 + (i // cols) * 6.6, 6.2))
+            p.append(obj_g(kind, x + 1.2 + (i % cols) * 7.6, 1.7 + (i // cols) * 7.6, 7.2))
         x += bw + 3.0
     return svg(x, h + 1, "".join(p)), h + 1
 
@@ -257,9 +257,9 @@ def page13():
     rng = random.Random(1313)
     word = "NUMBER"
     while True:
-        items = [(rng.randint(2, 5), rng.randint(2, 8)) for _ in range(6)]
+        items = [(rng.randint(2, 4), rng.randint(2, 6)) for _ in range(6)]
         tot = [g * m for g, m in items]
-        if len(set(tot)) == 6 and max(tot) <= 40 and min(tot) >= 6 and len(set(items)) == 6:
+        if len(set(tot)) == 6 and max(tot) <= 24 and min(tot) >= 6 and len(set(items)) == 6:
             table = make_code_table(tot, word, rng, 1, 40, n_decoy=5, tries=60)
             if table: break
     rows = ""; svgs = []
@@ -274,7 +274,7 @@ def page13():
              instr=["Each bag has the same number of things.", "Write the bags, the things and the total.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {g} bags of {m} = {g*m}" for i, (g, m) in enumerate(items)), check_result=f"Code word: {word}"),
-             note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 40. Repeated addition (4 bags of 3 is 3 + 3 + 3 + 3) is the bridge to the sharing pages in the other semester.",
+             note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 24 and the objects are drawn large. Repeated addition (4 bags of 3 is 3 + 3 + 3 + 3) is the bridge to the sharing pages in the other semester.",
              seed=1313)
     ok = True
     for s, (g, m) in zip(svgs, items):
@@ -292,10 +292,10 @@ def page13():
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
 def share_svg(kind, n, g, per, mode):
     """objects in rows of 10 on the left; for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
-    pitch = 7.0; prow = 12 if n <= 12 else 10; rows = (n + prow - 1) // prow; H = rows * 7.8 + 1.6
+    pitch = 7.4; prow = 12 if n <= 12 else 10; rows = (n + prow - 1) // prow; H = rows * 8.4 + 1.6
     inner = []
     for i in range(n):
-        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 7.8, 6.2))
+        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 8.4, 7.0))
     W = 1 + min(n, prow) * pitch + 1
     if mode == "share":
         x0 = W + 5; cw, chh = 14, 9.5
@@ -306,7 +306,7 @@ def share_svg(kind, n, g, per, mode):
         H = max(H, 1 + lines * (chh + 2) + 1)
     else:
         # the example loop: a dashed rounded frame round the first group of `per` objects (first row only, per <= 10)
-        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="7.6" rx="3.4" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
+        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="8.2" rx="3.6" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
         W = max(W, 76)
     return svg(round(W, 1), round(H, 1), "".join(inner)), (round(W, 1), round(H, 1))
 
@@ -318,7 +318,7 @@ def read_share(s, mode):
     inside = None
     if loop:
         lx, ly, lw, lh = (float(v) for v in loop.groups())
-        inside = sum(1 for x, y in objs if lx <= x + 3.3 <= lx + lw and ly <= y + 3.3 <= ly + lh)
+        inside = sum(1 for x, y in objs if lx <= x + 3.5 <= lx + lw and ly <= y + 3.5 <= ly + lh)
     return len(objs), conts, inside
 
 def page03():
