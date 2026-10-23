@@ -95,7 +95,13 @@
     ],
     "text": "10"
    },
-   "explanation": "Work backwards, undoing the last step first. Undo halve: 19 × 2 = 38. Undo add 8: 38 - 8 = 30. Undo multiply by 3: 30 ÷ 3 = 10. Check: 10 × 3 = 30, 30 + 8 = 38, 38 ÷ 2 = 19."
+   "explanation": "Work backwards, undoing the last step first. Undo halve: 19 × 2 = 38. Undo add 8: 38 - 8 = 30. Undo multiply by 3: 30 ÷ 3 = 10. Check: 10 × 3 = 30, 30 + 8 = 38, 38 ÷ 2 = 19.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   }
   },
   {
    "id": "L5U10-S02",
@@ -269,7 +275,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "explanation": "Try each child. If Ali broke it: Ali lies, Ben tells the truth, Siti lies (Ben is not lying). That is 1 truth. Good. If Ben broke it: Ali is true, Ben lies, Siti is true. That is 2 truths, which is wrong. If Siti broke it: Ali is true, Ben lies, Siti is true: 2 truths, wrong. Only Ali fits."
@@ -287,7 +295,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "explanation": "The difference in their ages is always 40 - 8 = 32 years. When Dad is 3 times as old as Ali, the difference is 2 times Ali's age, so Ali is 16. That is 16 - 8 = 8 years from now. Check: Dad 48 = 3 × 16."
@@ -305,7 +315,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "explanation": "Work backwards. The 12 left are half of the rest, so the rest was 24. The 24 is 2/3 of his stickers, so 1/3 is 12 and he had 36. Check: 36 - 12 = 24, 24 - 12 = 12."
@@ -339,7 +351,9 @@
    ],
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "explanation": "Suppose all 20 are hens: 40 legs. That is 56 - 40 = 16 legs short. Each cow instead of a hen adds 2 legs, so 16 ÷ 2 = 8 cows. Then 20 - 8 = 12 hens. Check: 32 + 24 = 56."
@@ -366,6 +380,8 @@
    "space": {
     "rows": [
      "Working:",
+     "",
+     "",
      ""
     ]
    },
@@ -422,7 +438,10 @@
    ],
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     "",
+     ""
     ]
    },
    "explanation": "List in order: 123, 132, 213, 231, 312, 321. That is 6 numbers. (b) Even numbers end in 2: 132 and 312. (c) The differences from 250 are 127, 118, 37, 19, 62 and 71. The smallest is 19, so 231."
@@ -441,6 +460,8 @@
    "space": {
     "rows": [
      "Working:",
+     "",
+     "",
      ""
     ]
    },
@@ -491,7 +512,7 @@
      ]
     ],
     "width_mm": 130,
-    "rowh": 38,
+    "rowh": 32,
     "size": 20,
     "first_bold": true,
     "alt": "blank logic grid"
@@ -636,9 +657,7 @@
    },
    "space": {
     "rows": [
-     "Working:",
-     "",
-     ""
+     "Working:"
     ]
    },
    "hint": "Undo the last step first. 14 is what part of the number before?",
