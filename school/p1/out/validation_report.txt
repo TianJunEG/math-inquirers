@@ -466,7 +466,7 @@ PASS  S1: 20 pages in the order of gen/outcomes.py  [25, 1, 24, 12, 19, 7, 8, 37
 PASS  S1: tier mix 10 one-star / 10 two-star  [1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1]
 PASS  S1: footer codes use the form S1-07 (P1-08) with the right pair of numbers  
 PASS  S2: 20 pages in the order of gen/outcomes.py  [3, 39, 14, 5, 40, 11, 23, 32, 6, 15, 28, 16, 27, 18, 30, 29, 35, 20, 36, 22]
-PASS  S2: tier mix 10 one-star / 10 two-star  [1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2]
+PASS  S2: tier mix 9 one-star / 11 two-star  [1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2]
 PASS  S2: footer codes use the form S1-07 (P1-08) with the right pair of numbers  
 PASS  every page has a self-check strip text  
 PASS  every page names a self-check mechanism  
