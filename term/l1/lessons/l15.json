@@ -1940,7 +1940,8 @@
      "n": 5,
      "each": 2,
      "icon": "sweet",
-     "per_row": 3
+     "per_row": 3,
+     "size": 82
     }
    },
    {
