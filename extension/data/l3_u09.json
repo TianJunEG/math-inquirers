@@ -448,7 +448,12 @@
     ],
     "text": "300"
    },
-   "explanation": "2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g."
+   "explanation": "2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L3U09-S09",

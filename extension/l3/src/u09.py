@@ -55,6 +55,7 @@ u.S(2, 'Siti has $20 and buys the first 3 things on the list.', parts=[
     figure={'type': 'l3_grid', 'head_row': True, 'cw': 118, 'ch': 42, 'fs': 26, 'width_mm': 76, 'rows': [['Book', 'Puzzle', 'Bottle', 'Stickers'], ['$6.20', '$4.85', '$3.40', '$1.75']]},
     why='(a) 6.20 + 4.85 = 11.05, and 11.05 + 3.40 = 14.45. (b) 20.00 - 14.45 = 5.55. (c) All 4 things cost 14.45 + 1.75 = 16.20, which is less than $20. So she can.')
 u.S(2, 'A box with 6 books weighs 2 kg 250 g. The empty box weighs 450 g. All the books have the same mass. One book weighs {b} g.', A('300'),
+    space={'rows': ['Working:']},
     why='2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g.')
 u.S(3, 'Write the time in the other kind of time.', parts=[
     P('a', '6:15 am = {b}', A('06:15')), P('b', '1:40 pm = {b}', A('13:40')), P('c', '9:05 pm = {b}', A('21:05')),
