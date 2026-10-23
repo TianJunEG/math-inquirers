@@ -590,7 +590,7 @@
     },
     {
      "t": "chip",
-     "text": "Right, up, right, up. The button is on the top right dot."
+     "text": "2 right, 2 up, 1 right, 1 up. The button is on the top right dot."
     }
    ],
    "note": "Children check their own line. The path goes 2 right, then 2 up, then 1 right, then 1 up and ends on the top right dot E. In all that is 3 right and 3 up. Say: we said the moves in order, and the order matters for the line, but look at where the button stopped. Do not ask about other routes yet. Ticks only."
@@ -819,7 +819,7 @@
      "text": "How do we get from S to E? ___ right, ___ up."
     }
    ],
-   "note": "Worked example. S is at the bottom left and E is at the top right of a grid 4 steps across and 2 steps up. We say a move as how many right and how many up: 4 right, 2 up. Ask: how do we get from S to E (4 right, 2 up). The answer is on the next slide. Say: right, then up. Accept 2 up then 4 right as well. Then the your-turn: how do we get from E back to S: 4 left and 2 down."
+   "note": "Worked example. S is at the bottom left and E is at the top right of a grid 4 steps across and 2 steps up. We say a move as how many right and how many up: 4 right, 2 up. Ask: how do we get from S to E (4 right, 2 up). The answer is on the next slide. Say: right, then up. Accept 2 up then 4 right as well. Then the your-turn, no picture: a counter moves 3 right and then 2 up; how far right and how far up is it from S (3 right, 2 up)."
   },
   {
    "id": "s-m3-ans",
@@ -829,7 +829,7 @@
    "blocks": [
     {
      "t": "answer",
-     "text": "4 right, 2 up. To come back: 4 left, 2 down."
+     "text": "4 right, 2 up."
     },
     {
      "t": "visual",
@@ -862,7 +862,7 @@
      "size": "m"
     }
    ],
-   "note": "The answer for the example on the slide before. 4 right, 2 up. Left and right are opposites and up and down are opposites, so the way back is 4 left and 2 down. Read it aloud so that children can tick their own work. A child who says 6 steps has counted every step: that is the total length of the way, and it is also right; the move is said in two parts, right and up."
+   "note": "The answer for the example on the slide before. 4 right, 2 up. Read it aloud so that children can tick their own work. A child who says 6 steps has counted every step: that is the total length of the way, and it is also right; the move is said in two parts, right and up."
   },
   {
    "id": "s-m4",
@@ -1819,16 +1819,16 @@
      },
      {
       "k": "SAY",
-      "text": "Four right, two up. Right and left are opposites. Up and down are opposites."
+      "text": "Four right, two up. We say right first, then up."
      },
      {
       "k": "ASK",
-      "text": "Your turn. How do we go from E back to S?",
+      "text": "Your turn, no picture. A counter moves three right and then two up. How far right and how far up is it from S?",
       "resp": 25
      },
      {
       "k": "SAY",
-      "text": "Four left and two down."
+      "text": "Three right, two up."
      },
      {
       "k": "SLIDE",
@@ -2633,7 +2633,7 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "A counter goes from S to E. It moves only right or up. The grid is 3 steps across and 1 step up.",
+    "text": "Count the Routes. A counter goes from S to E. It moves only right or up. The grid is 3 steps across and 1 step up.",
     "parts": [
      {
       "l": "a",
@@ -2950,8 +2950,20 @@
     "text": "Draw a shape with 4 corners on the grid. A is its bottom left corner. Many answers are right.",
     "parts": [
      {
-      "l": "",
-      "text": "B is [] right and [] up from A. C is [] right and [] up from A. D is [] right and [] up from A.",
+      "l": "a",
+      "text": "B is [] right and [] up from A.",
+      "ans": "any moves right and up",
+      "val": "open"
+     },
+     {
+      "l": "b",
+      "text": "C is [] right and [] up from A.",
+      "ans": "any moves right and up",
+      "val": "open"
+     },
+     {
+      "l": "c",
+      "text": "D is [] right and [] up from A.",
       "ans": "any moves right and up",
       "val": "open"
      }
@@ -2996,7 +3008,7 @@
      3,
      0
     ],
-    "size": 38
+    "size": 100
    },
    "lines": 4,
    "draw": 0,
@@ -3057,7 +3069,7 @@
      4,
      0
     ],
-    "size": 40
+    "size": 100
    }
   },
   {
@@ -3161,13 +3173,10 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "A line goes from the 1st dot to the 9th dot in a row. Is it 9 steps long? Circle Yes or No. It is ___ steps long.",
-   "answer": "No. 8 steps.",
-   "val": [
-    "No",
-    8
-   ],
-   "solution": "The 9th dot is 8 jumps after the 1st dot, so the line is 8 steps long."
+   "text": "A line goes from the 1st dot to the 9th dot in a row. It is ___ steps long.",
+   "answer": "8 steps",
+   "val": 8,
+   "solution": "The 9th dot is 8 jumps after the 1st dot, so the line is 8 steps long. The line is not 9 steps: count the jumps, not the dots."
   },
   {
    "id": "H4",
@@ -3655,7 +3664,7 @@
     "tier": "stretch",
     "type": "number",
     "q": "A counter goes 5 right, 2 up and 2 left. How many steps right of S does it stop?",
-    "hint": "Left undoes some of the steps right.",
+    "hint": "Left is the opposite of right: it takes back some of the steps right.",
     "steps": [
      "5 right.",
      "2 left takes back 2 of them.",
@@ -3690,7 +3699,7 @@
      "derive": {},
      "q": "A counter goes {a} right, {b} up and {c} left. How many steps right of S does it stop?",
      "answer": "a-c",
-     "hint": "Left undoes some of the steps right.",
+     "hint": "Left is the opposite of right: it takes back some of the steps right.",
      "steps": [
       "{a} right.",
       "{c} left takes back {c} of them.",

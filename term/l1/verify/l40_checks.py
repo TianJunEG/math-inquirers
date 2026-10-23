@@ -201,7 +201,7 @@ def run(d):
     covered = []
     for g in cq['questions']: covered += g['lesson'] if isinstance(g['lesson'], list) else [g['lesson']]
     eq(sorted(covered), list(range(31, 41)), 'every lesson of Term 4 (31 to 40) is visited by exactly one gate'); eq(cave['lesson'], 'beyond', 'the cave is the unseen puzzle')
-    g = C['C1']; circle = vis(g); rect = dict(rows=nums(g['text'])[0], cols=nums(g['text'])[1]); eq(circle['parts'], 4, 'C1 the circle has 4 equal parts'); eq(circle['shape'], 'circle', 'C1 circle')
+    g = C['C1']; circle = vis(g); rect = dict(rows=nums(g['text'])[0], cols=nums(g['text'])[1]); eq(circle['parts'], 1, 'C1 the picture is a plain circle: the child works out the 4 parts from the fold'); eq(circle['shape'], 'circle', 'C1 circle')
     parts = 1
     for _ in range(2): parts *= 2
     eq(parts, 4, 'C1 half and half again'); eq(g['val'], [4, 'quarter', 9], 'C1 val'); total = 0

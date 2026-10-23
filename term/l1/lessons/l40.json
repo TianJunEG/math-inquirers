@@ -1393,7 +1393,7 @@
           },
           {
             "k": "READ",
-            "text": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Look at the folded paper. It is folded in half once and one hole is punched. Part b: when the paper is opened there are blank holes. Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern."
+            "text": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Now look at the paper with its dashed fold line, and the paper folded once on that line with one hole punched in it. Part b: when the folded paper is opened there are blank holes. Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern."
           },
           {
             "k": "WORK",
@@ -1469,7 +1469,7 @@
           },
           {
             "k": "SAY",
-            "text": "The recording has started again, for the workbook. It has me, the shared screen and any voice that is not muted. A child may keep the camera off."
+            "text": "The recording is on again, for the workbook."
           },
           {
             "k": "REC",
@@ -3070,10 +3070,7 @@
         "visual": {
           "type": "shapes2d",
           "shape": "circle",
-          "parts": 4,
-          "shade": [
-            1
-          ],
+          "parts": 1,
           "size": 30
         }
       },
@@ -3135,7 +3132,7 @@
         "page": 2,
         "tier": "start",
         "skill": "Cubes in a stack, and a paper folded once and punched once (Lesson 34)",
-        "text": "Look at the stack of cubes. Then look at the folded paper.",
+        "text": "Look at the stack of cubes. Then look at the paper with its dashed fold line, and the folded paper with one hole.",
         "parts": [
           {
             "l": "a",
@@ -3145,12 +3142,12 @@
           },
           {
             "l": "b",
-            "text": "The paper is folded in half once and one hole is punched. When it is opened there are ___ holes.",
+            "text": "The paper is folded once on the dashed line and one hole is punched. When it is opened there are ___ holes.",
             "ans": "2",
             "val": 2
           }
         ],
-        "say": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Look at the folded paper. It is folded in half once and one hole is punched. Part b: when the paper is opened there are blank holes.",
+        "say": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Now look at the paper with its dashed fold line, and the paper folded once on that line with one hole punched in it. Part b: when the folded paper is opened there are blank holes.",
         "answer": "6; 2",
         "val": [
           6,
@@ -3181,6 +3178,13 @@
           },
           {
             "type": "fold_punch",
+            "stage": "paper",
+            "fold": "h",
+            "size": 30,
+            "draw": 110
+          },
+          {
+            "type": "fold_punch",
             "stage": "folded",
             "fold": "h",
             "holes": [
@@ -3189,7 +3193,8 @@
                 0.7
               ]
             ],
-            "size": 30
+            "size": 30,
+            "draw": 110
           }
         ]
       },
@@ -3221,7 +3226,7 @@
           "C",
           "shape"
         ],
-        "solution": "Tiles A, B and D each have 2 triangles. Tile C has 2 squares, so it is the odd one out, and the shape is different.",
+        "solution": "Tiles A, B and D each have 2 triangles. Tile C has 2 circles, so it is the odd one out, and the shape is different.",
         "right": "Both correct.",
         "partly": "One of the two correct.",
         "mistakes": [
@@ -3244,7 +3249,7 @@
               "pattern": 2
             },
             {
-              "shape": "square",
+              "shape": "circle",
               "n": 2,
               "size": "m",
               "pattern": 2
@@ -3264,7 +3269,7 @@
             "C",
             "D"
           ],
-          "size": 55
+          "size": 75
         }
       },
       {
@@ -3398,7 +3403,7 @@
           "icon": "flower",
           "title": "Flowers",
           "each": 2,
-          "size": 55
+          "size": 85
         }
       },
       {
