@@ -39,7 +39,7 @@ Before: workbooks 46/44/44/48/42/44/48/42, keys 22/30/22/28/22/30/22/30. Changes
 - Timing warnings: slow-class overrun of single parts in many lessons (buffer absorbs); lesson 10 totals exactly 90:00 slow class. First trial lesson should time the Quest.
 - Lesson 3, 6, 9, 10: written note only, no spoken tool line.
 - Choose lessons (10, 20, 30, 40) show the tool chip as icons with tick boxes but without names on the workbook page; the names are on the Toolbox Card and in the Quest tool row.
-- Term 4 look-back and Quest pills carry eight icons at about 7 mm; B&W legibility spot-checked (see below).
+- Term 4 look-back and Quest pills carry eight icons at about 7 mm; B&W legibility spot-checked at 300 dpi crops (Book 2 four icons, Book 8 eight icons): all icons readable; the dotted circle of Spot the pattern and the small dots of List every way are the weakest, still distinguishable.
 
 ## Items for an independent audit
 1. Read the chip and look-back on page 1 and last page of lessons 7, 13, 19, 20, 27, 29, 30, 39, 40 (new rows) in colour and B&W.
@@ -51,3 +51,6 @@ Before: workbooks 46/44/44/48/42/44/48/42, keys 22/30/22/28/22/30/22/30. Changes
 7. Toolbox Card is loose and not in any PDF book: confirm the printer pack includes `outputs/kit/Math_Inquirers_Toolbox_Card_A_6-8_PRINT_BW.pdf` with Book 1 (one per child).
 8. `term/l1/audit/retired_L13_doubles` and old audits for 13, 19, 20 still carry "re-audit pending" banners: workbook, home and wording audits for 13, 19, 20, 27, 30 are not re-run.
 9. Dated tables in `docs/terms/level_1_year_plan.md`, `l1_term2_preflight.md`, `l1_term3_term4_preflight.md` and `term_review.md` still list old slots (banner added only to the year plan).
+
+## B&W
+`print/make_bw_print.py --only L1_T` then `check_bw.py`: all 24 term PDFs ok, max non-grey 0.00000, every embedded image 1-bit, page counts equal the colour books. (The converter's worker pool stalled twice in this sandbox; the run was resumed with `--resume` and Book 8 converted separately; `bw_spec.json` was then rebuilt from the 24 files, so `pale_tint_dropped_max` is null for rows converted in an earlier partial run.)
