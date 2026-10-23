@@ -103,7 +103,7 @@ def beaker_svg(level, vmax, step, label_step, unit="m\u2113"):
     yy = bot - 0.7
     while yy > y(level):
         p.append(f'<line x1="{x0+0.4}" y1="{yy:.2f}" x2="{x1-0.4}" y2="{yy:.2f}" stroke="#000" stroke-width="0.5"/>'); yy -= 2.4
-    p.append(f'<line class="level" x1="{x0}" y1="{y(level):.2f}" x2="{x1}" y2="{y(level):.2f}" stroke="#000" stroke-width="0.9"/>')
+    p.append(f'<line class="level" x1="{x0}" y1="{y(level):.2f}" x2="{x1}" y2="{y(level):.2f}" stroke="#000" stroke-width="1.4"/>')
     v = 0
     while v <= vmax:
         major = v % label_step == 0

@@ -5,7 +5,7 @@ Every page is self-checking, pure black and white, with the school name line and
 Not for sale as is: a pilot for owner review. Cover, licence, teacher notes and keys carry DRAFT stamps, the business email pypteltd@gmail.com and the registered office address (66 Tannery Ln, Singapore 347805); the licence is an annual licence whose wording is for a lawyer to approve.
 Plan: `docs/school_books/p3_semester_booklets_plan.md`; build report and open items: `docs/school_books/p3_semester_booklets_build_report.md`; outcome wording: `docs/school_books/p3_outcome_wording.md`; owner decisions: `docs/terms/owner_decisions.md`.
 
-This pipeline was copied from `school/p2` (P1, P2 and `school/colour_by_code` are not touched by it) and parameterised for Primary 3: 34 outcome lines, reading load 18 words a sentence, numbers to 10 000, tables 6 to 9, division with remainder, equivalent fractions and simplest form, money in decimal notation, km, m, cm, kg, g, ℓ, mℓ, seconds, the 24-hour clock, start, finish and duration, area and perimeter, right angles, perpendicular and parallel lines and bar graphs.
+This pipeline was copied from `school/p2` (P1, P2 and `school/colour_by_code` are not touched by it) and parameterised for Primary 3: 34 outcome lines, reading load 12 words a sentence (check strips up to 18), numbers to 10 000, tables 6 to 9, division with remainder, equivalent fractions and simplest form, money in decimal notation, km, m, cm, kg, g, ℓ, mℓ, seconds, the 24-hour clock, start, finish and duration, area and perimeter, right angles, perpendicular and parallel lines and bar graphs.
 
 ## Regenerate
 
@@ -80,4 +80,4 @@ Outputs in `out/`: `P3_S1_Puzzles.pdf`, `P3_S2_Puzzles.pdf` (20 pages each, phot
 
 ## Rules every page keeps
 
-Black and white only (#000/#fff, strokes at least 0.57 pt); A4 with 15 mm margins; instruction and clue sentences at most 18 words, at most 3 lines; answer boxes at least 12 mm high; counted squares 8 mm; money as $3.45 (two decimal places); no Mi, MOE, alignment or price wording (the cover has the one not-affiliated sentence, the licence page the factual syllabus sentence). Code words: exactly one arrangement of the letters is a word, tested against 262 542 words. Wrong-answer enumeration at 95% or better on every page. See `validate.py` for the full list.
+Black and white only (#000/#fff, strokes at least 0.5 mm (1.4 pt) for drawn lines); A4 with 15 mm margins; instruction, stem and clue sentences at most 12 words (check strips at most 18), at most 3 lines; answer boxes at least 12 mm high; counted squares 8 mm; money as $3.45 (two decimal places); no Mi, MOE, alignment or price wording (the cover has the one not-affiliated sentence, the licence page the factual syllabus sentence). Code words: exactly one arrangement of the letters is a word, tested against 262 542 words. Wrong-answer enumeration at 95% or better on every page. See `validate.py` for the full list.
