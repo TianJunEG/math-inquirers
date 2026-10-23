@@ -204,7 +204,7 @@ const clockF = (cx, cy, r, h, m, o = {}) => {
 const timeLineF = (o, y0) => {
   const W = o.W || 600, pad = o.pad || 26, dx = (W - 2 * pad) / (o.t1 - o.t0), X = t => pad + (t - o.t0) * dx;
   let s = L(pad - 10, y0, W - pad + 10, y0, { sw: 3 }) + arrowHead(W - pad + 14, y0, 'r', 9);
-  (o.ticks || []).forEach(k => { s += L(X(k.t), y0 - (k.big === false ? 6 : 10), X(k.t), y0 + (k.big === false ? 6 : 10), { sw: 2.6 }) + (k.label !== undefined ? T(X(k.t), y0 + 30, k.label, o.size || 16) : ''); });
+  (o.ticks || []).forEach(k => { s += L(X(k.t), y0 - (k.big === false ? 6 : 10), X(k.t), y0 + (k.big === false ? 6 : 10), { sw: 2.6 }) + (k.label !== undefined ? T(X(k.t), y0 + 30 + (k.dy || 0), k.label, o.size || 16) : ''); });
   (o.jumps || []).forEach(j => { s += hopF(X(j.from), X(j.to), y0 - 10, j.h || 36, j.label || '', { size: 15, dash: j.dash }); });
   (o.marks || []).forEach(m => { s += C(X(m.t), y0, 6, NAVY) + (m.label ? T(X(m.t), y0 - 16, m.label, 15, { c: TEAL }) : ''); });
   return s;

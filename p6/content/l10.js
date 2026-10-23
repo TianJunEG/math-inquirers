@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 (post-PSLE maths + coding bridge) — Lesson 10: Showcase Challenge (mixed challenge round, then each child builds and shows a small puzzle program)
 // Every answer below was worked out by hand and checked; every Python program was run.
 
@@ -176,7 +177,7 @@ module.exports = {
       { q: 'A turtle repeats [move 100, turn ↻ 150]. After how many repeats does it first face the way it started? What does it draw, and how many times does it go round?', a: '12 repeats (12 × 150° = 1800° = 5 × 360°, and no smaller number of repeats gives a multiple of 360°). It draws a 12-point star going round 5 times.' },
       { q: 'Three numbers have a mean of 8 and a median of 7. The biggest is 9 more than the smallest. Find the three numbers.', a: '4, 7 and 13 (the total is 24, so the smallest and biggest add to 17 and differ by 9)' },
       { q: 'Make up a challenge question that mixes TWO topics from the programme (for example primes and the clock, or sequences and negative numbers). Write the question, the answer and the working. Swap with a partner and solve each other’s.', a: 'Open. Example: “The nth term of a sequence is 7n − 3. Which is the first term that is a multiple of 5?” The terms are 4, 11, 18, 25, so it is the 4th term, 25. Check that the answer is correct and that both topics are really needed.' },
-      { q: 'A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9? Plan a program that tests it 1000 times.', a: '8/64 = 1/8 (1 + 8, 2 + 7, … , 8 + 1), so about 125 in 1000. Program: set nines to 0; repeat 1000 (if pick random 1 to 8 + pick random 1 to 8 = 9 then change nines by 1); say nines.' },
+      { q: 'A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9? Plan a program that tests it 1000 times.', fig: FG.grid({ rows: [1, 2, 3, 4, 5, 6, 7, 8], cols: [1, 2, 3, 4, 5, 6, 7, 8], rowTitle: 'first spin', colTitle: 'second spin', cell: 30, label: 'An empty 8 by 8 grid: first spin down the side, second spin across the top, to fill in each total.' }), a: '8/64 = 1/8 (1 + 8, 2 + 7, … , 8 + 1), so about 125 in 1000. Program: set nines to 0; repeat 1000 (if pick random 1 to 8 + pick random 1 to 8 = 9 then change nines by 1); say nines.' },
       { q: 'The nth term of a sequence is 6n − 1. Is 2027 in the sequence? Which is the first term bigger than 2027?', a: 'Yes: it is the 338th term (6 × 338 − 1 = 2027). The first term bigger than 2027 is the 339th, 2033.' }
     ]
   },

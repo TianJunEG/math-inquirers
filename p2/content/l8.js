@@ -72,12 +72,14 @@ const q4svg = () => {
 // Q4: six nets; Q4b: a shape of 5 squares on a dotted grid
 const NETS = [['A', ['.#..', '####', '.#..']], ['B', ['###', '###']], ['C', ['#...', '####', '...#']], ['D', ['.##.', '####']], ['E', ['##..', '.##.', '..##']], ['F', ['#....', '#####']]];
 const q5svg = (from = 0, to = 4) => {
-  const c = 26; let s = '';
+  // nets drawn big enough to fold in the head: 36-unit squares (about 9.5 mm), two per row
+  const c = 36; let s = ''; const n = to - from, rowH = 138;
   NETS.slice(from, to).forEach(([l, rows], i) => {
-    const x = 10 + i * (to - from === 4 ? 148 : 196), y = 12;
-    s += text(x, y + 22, l, 20, N, 'start') + net(rows, x + 24, y + 6, c);
+    const x = 10 + (i % 2) * 300, y = 6 + Math.floor(i / 2) * rowH;
+    s += text(x, y + 24, l, 22, N, 'start') + net(rows, x + 30, y + 6, c);
   });
-  return svg(600, 110, s, (to - from) + ' shapes made of 6 squares, labelled ' + NETS[from][0] + ' to ' + NETS[to - 1][0], 470);
+  const H = 6 + Math.ceil(n / 2) * rowH - (n <= 2 ? 0 : 0);
+  return svg(600, n <= 2 ? 150 : H, s, n + ' shapes made of 6 squares, labelled ' + NETS[from][0] + ' to ' + NETS[to - 1][0], 600);
 };
 const q5bsvg = () => {
   const c = 30, x0 = 195, y0 = 6; let s = '';

@@ -238,14 +238,14 @@ const queueRow = (sp) => {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // grid: sample-space grid. {rows:[labels], cols:[labels], rowTitle, colTitle, cell (px), fill(i,j)->text}
 const grid = (sp) => {
-  const nr = sp.rows.length, nc = sp.cols.length, cell = sp.cell || 56, lx = 96, ty = 66;
+  const nr = sp.rows.length, nc = sp.cols.length, cell = sp.cell || 56, lx = 80, ty = 56;
   const w = lx + nc * cell + 20, h = ty + nr * cell + 14;
   let s = '';
   if (sp.colTitle) s += T(lx + nc * cell / 2, 22, sp.colTitle, { size: 18, fill: TEAL });
   if (sp.rowTitle) s += `<text transform="translate(18 ${ty + nr * cell / 2}) rotate(-90)" font-size="18" font-weight="700" text-anchor="middle" fill="${TEAL}" font-family="${F}">${sp.rowTitle}</text>`;
   sp.cols.forEach((c, j) => { s += R(lx + j * cell, ty - 36, cell, 34, { fill: SKY, w: 2.5 }) + T(lx + j * cell + cell / 2, ty - 12, c, { size: 19 }); });
   sp.rows.forEach((rr, i) => {
-    s += R(lx - 46, ty + i * cell, 46, cell, { fill: SKY, w: 2.5 }) + T(lx - 23, ty + i * cell + cell / 2 + 7, rr, { size: 19 });
+    s += R(lx - 40, ty + i * cell, 40, cell, { fill: SKY, w: 2.5 }) + T(lx - 20, ty + i * cell + cell / 2 + 7, rr, { size: 19 });
     sp.cols.forEach((c, j) => {
       const tx = sp.fill ? sp.fill(i, j) : '';
       const hi = sp.hi && sp.hi(i, j);
@@ -253,7 +253,7 @@ const grid = (sp) => {
       if (tx !== '' && tx !== undefined) s += (hi ? `<rect x="${lx + j * cell + cell / 2 - 17}" y="${ty + i * cell + cell / 2 - 14}" width="34" height="26" rx="5" fill="#fff"/>` : '') + T(lx + j * cell + cell / 2, ty + i * cell + cell / 2 + 7, tx, { size: 19 });
     });
   });
-  return svg(w, h, s, sp.label || 'A grid', sp.width);
+  return svg(w, h, s, sp.label || 'A grid', sp.width || w);
 };
 
 // ---------------------------------------------------------------------------------------------------------------------------------

@@ -4,23 +4,25 @@ const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size ||
 
 // Bar graph drawn to scale: 4 px per cup, gridlines every 10 cups, Lime juice bar left for the child to draw.
 const drinksGraph = () => {
-  const data = [['Milo', 45], ['Teh', 30], ['Kopi', 55], ['Bandung', 20], ['Lime juice', null]];
-  const x0 = 80, y0 = 290, k = 4, slot = 100, bw = 58;
-  let s = '';
+  // bars use hatch patterns (never colour alone) and carry value labels; the missing Lime juice slot is a dashed outline
+  const data = [['Milo', 45, 'hz'], ['Teh', 30, 'dt'], ['Kopi', 55, 'hx'], ['Bandung', 20, 'hh'], ['Lime juice', null]];
+  const x0 = 96, y0 = 290, k = 4, slot = 100, bw = 62;
+  let s = `<defs><pattern id="hz" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="${NAVY}" stroke-width="2.2"/></pattern><pattern id="dt" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="4" cy="4" r="1.7" fill="${NAVY}"/></pattern><pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#fff"/><path d="M0 0L9 9M9 0L0 9" stroke="${NAVY}" stroke-width="1.6"/></pattern><pattern id="hh" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="4" x2="8" y2="4" stroke="${NAVY}" stroke-width="2.2"/></pattern></defs>`;
   for (let v = 0; v <= 60; v += 10) {
     const y = y0 - v * k;
-    s += `<line x1="${x0}" y1="${y}" x2="${x0 + 5 * slot + 10}" y2="${y}" stroke="${v ? '#C9D4EC' : NAVY}" stroke-width="${v ? 1.5 : 3}"/>`;
-    s += txt(x0 - 10, y + 5, String(v), { anchor: 'end', size: 15 });
+    s += `<line x1="${x0}" y1="${y}" x2="${x0 + 5 * slot + 10}" y2="${y}" stroke="${v ? '#9AA6C4' : NAVY}" stroke-width="${v ? 1.2 : 3}"/>`;
+    s += txt(x0 - 10, y + 6, String(v), { anchor: 'end', size: 18 });
   }
   s += `<line x1="${x0}" y1="${y0}" x2="${x0}" y2="${y0 - 62 * k}" stroke="${NAVY}" stroke-width="3"/>`;
-  data.forEach(([n, v], i) => {
-    const x = x0 + 21 + i * slot;
-    if (v !== null) s += `<rect x="${x}" y="${y0 - v * k}" width="${bw}" height="${v * k}" fill="${[YEL, SKY, TEAL, RED][i]}" stroke="${NAVY}" stroke-width="2.5"/>`;
-    s += txt(x + bw / 2, y0 + 22, n, { size: 15 });
+  data.forEach(([n, v, pat], i) => {
+    const x = x0 + 19 + i * slot;
+    if (v !== null) s += `<rect x="${x}" y="${y0 - v * k}" width="${bw}" height="${v * k}" fill="url(#${pat})" stroke="${NAVY}" stroke-width="2.5"/>` + `<rect x="${x + bw / 2 - 18}" y="${y0 - v * k - 26}" width="36" height="22" fill="#fff"/>` + txt(x + bw / 2, y0 - v * k - 8, String(v), { size: 18 });
+    else s += `<rect x="${x}" y="${y0 - 60 * k}" width="${bw}" height="${60 * k}" fill="none" stroke="${NAVY}" stroke-width="2.4" stroke-dasharray="7 6"/>` + txt(x + bw / 2, y0 - 60 * k + 28, '?', { size: 24 });
+    s += txt(x + bw / 2, y0 + 24, n, { size: 17 });
   });
-  s += txt(22, y0 - 120, 'Number of cups', { size: 15, extra: ` transform="rotate(-90 22 ${y0 - 120})"` });
-  s += txt(x0 + 255, y0 + 46, 'Drink', { size: 15 });
-  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 600 345" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">${s}</svg>`;
+  s += txt(26, y0 - 120, 'Number of cups', { size: 17, extra: ` transform="rotate(-90 26 ${y0 - 120})"` });
+  s += txt(x0 + 255, y0 + 54, 'Drink', { size: 17 });
+  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 640 352" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:450px">${s}</svg>`;
 };
 // Matchstick squares: 1, 2 and 3 squares in a row
 const sticks = () => {

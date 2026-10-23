@@ -1619,5 +1619,287 @@
    ],
    "wrong_arrangements_rejected": null
   }
+ },
+ {
+  "no": 23,
+  "code": "S2-07 (P1-23)",
+  "title": "Stack It Up",
+  "tier": 1,
+  "topic": "Adding and subtracting tens and ones, written in boxes (within 100)",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.5, 2.6 (adding and subtracting within 100 using algorithms; tens and ones, no renaming)",
+  "outcomes": [
+   "AS2.5",
+   "AS2.6"
+  ],
+  "ptype": "Code-breaker (written sums)",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 2303,
+  "checks": [
+   {
+    "name": "V1 independent reader of the printed boxes solves every sum and equals the key",
+    "ok": true,
+    "detail": "[32, 65, 6, 40, 9, 48]"
+   },
+   {
+    "name": "V1b no renaming: ones digits of adding sums total 9 or less; taking away never needs a borrow",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every number within 100",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells DONKEY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['donkey']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['banked', 'beyond', 'donkey']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    70,
+    70
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 24,
+  "code": "S1-03 (P1-24)",
+  "title": "Words and Numbers",
+  "tier": 1,
+  "topic": "Number words, numerals and ordinals",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.3, 1.7 (reading and writing numbers in numerals and in words; ordinal numbers and symbols)",
+  "outcomes": [
+   "WN1.3",
+   "WN1.7"
+  ],
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH through the stated number of boxes",
+  "seed": 2404,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish when every word and numeral is read back from the printed text (exhaustive DFS)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1b the printed words and numerals mean what the generator meant (round trip for all 32 strings)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 wrong turns exist (route boxes with a legal step to an off-route box)",
+    "ok": true,
+    "detail": "2"
+   },
+   {
+    "name": "V3b at least two ordinal steps and at least four number-word steps on the route",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3c a shortcut that ignores the rule is shorter than the route, so the box count rejects it",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 numbers within 99 and ordinals to 10th",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2,
+   2
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 25,
+  "code": "S1-01 (P1-25)",
+  "title": "Count the Crowd",
+  "tier": 1,
+  "topic": "Counting a set and comparing two sets",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.1, 1.4 (counting to tell the number of objects in a given set; comparing the number of objects in two sets)",
+  "outcomes": [
+   "WN1.1",
+   "WN1.4"
+  ],
+  "ptype": "Code-breaker (counting)",
+  "mech": "K1 code word (5 letters)",
+  "seed": 2505,
+  "checks": [
+   {
+    "name": "V1 objects counted in the drawings (and unmatched objects in the two comparing pictures) equal the key",
+    "ok": true,
+    "detail": "[8, 10, 17, 7, 1]"
+   },
+   {
+    "name": "V1b the questions name the sets the right way round (more than: the longer row first; fewer than: the shorter row first)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at most one set has more than 12 objects",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells CLOTH",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "100/100"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['cloth']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['cloth', 'clout', 'cough', 'ghoul', 'gulch', 'lough']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   100,
+   100
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    50,
+    50
+   ],
+   "all_other_values_rejected": [
+    100,
+    100
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 26,
+  "code": "S1-15 (P1-26)",
+  "title": "Chart Patterns",
+  "tier": 2,
+  "topic": "Number patterns on a chart: 10 more, 10 less, and a growing table",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.6, 1.2, 1.5 (patterns in number sequences; tens and ones; comparing and ordering numbers)",
+  "outcomes": [
+   "WN1.6",
+   "WN1.2",
+   "WN1.5"
+  ],
+  "ptype": "Code-breaker (chart and pattern)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 2606,
+  "checks": [
+   {
+    "name": "V1 independent reader: each box in the chart is deduced from its printed neighbours (all agree), 10 more and 10 less are read from the chart, the table continues its pattern; all equal the key",
+    "ok": true,
+    "detail": "[43, 76, 70, 44, 9, 15]"
+   },
+   {
+    "name": "V1b the 10 more and 10 less answers are printed cells (not boxes), answers distinct and within 100",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells PEANUT",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['peanut']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['nature', 'panzer', 'parent', 'peanut', 'punter', 'quartz']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
  }
 ]

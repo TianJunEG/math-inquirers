@@ -10,7 +10,7 @@ const fracBars = (rows, o = {}) => {
   const bw = o.bw || 380, x0 = o.x0 || 90, rh = o.rh || 30, gap = o.gap || 12; let s = '', y = 6;
   rows.forEach(r => {
     if (r.head) { s += T(10, y + 14, r.head, 18, { a: 'start', c: TEAL }); y += 24; }
-    s += T(x0 - 12, y + rh / 2 + 6, r.label, 20, { a: 'end' });
+    s += T(x0 - 12, y + rh / 2 + 6, r.label, r.label.length > 5 ? 16 : 20, { a: 'end' });
     for (let i = 0; i < r.n; i++) s += R(x0 + i * bw / r.n, y, bw / r.n, rh, i < r.s ? 'url(#hz)' : (i < r.s + (r.s2 || 0) ? 'url(#dt)' : '#fff'), { sw: 2.4 });
     if (r.tail) s += T(x0 + bw + 14, y + rh / 2 + 6, r.tail, 17, { a: 'start', c: TEAL });
     y += rh + gap;
@@ -82,7 +82,63 @@ const fracQ3 = () => fracBars([
   { head: 'b  Smallest first', label: '1/5', n: 5, s: 1 }, { label: '1/2', n: 2, s: 1 }, { label: '1/10', n: 10, s: 1 }, { label: '1/4', n: 4, s: 1 }], { gap: 8, label: 'Bars of the same length cut into equal parts, for comparing fractions' });
 const fracT2 = () => fracBars([{ label: '3/8', n: 8, s: 3 }, { label: '3/5', n: 5, s: 3 }], { label: 'Two bars of the same length: 3 of 8 equal parts and 3 of 5 equal parts shaded' });
 const fracT3 = () => fracBars([{ label: '3/8 + 2/8', n: 8, s: 3, s2: 2, tail: '= ?' }], { label: 'A bar cut into 8 equal parts with 3 parts and then 2 parts shaded' });
+// ---- balance scales: items 'apple','lemon','pomelo','cube','ball','w:<label>' ----
+const itemShape = (name, cx, cy, sz) => {
+  if (name === 'apple') return icon('apple', cx, cy, sz);
+  if (name === 'lemon') return `<ellipse cx="${cx}" cy="${cy}" rx="${sz * .42}" ry="${sz * .3}" fill="${Y}" stroke="${NAVY}" stroke-width="2.4"/>` + P([[cx - sz * .42, cy], [cx - sz * .52, cy - 3], [cx - sz * .52, cy + 3]], Y, { sw: 1.6 }) + P([[cx + sz * .42, cy], [cx + sz * .52, cy - 3], [cx + sz * .52, cy + 3]], Y, { sw: 1.6 });
+  if (name === 'pomelo') return C(cx, cy, sz * .56, GR, { sw: 2.6 }) + `<path d="M${cx - sz * .3} ${cy - sz * .15} Q${cx} ${cy - sz * .4} ${cx + sz * .3} ${cy - sz * .15}" fill="none" stroke="${NAVY}" stroke-width="1.8"/>`;
+  if (name === 'cube') return R(cx - sz * .36, cy - sz * .36, sz * .72, sz * .72, BL, { sw: 2.4 }) + L(cx - sz * .36, cy - sz * .36 + 8, cx + sz * .36, cy - sz * .36 + 8, { sw: 1.4 });
+  if (name === 'ball') return C(cx, cy, sz * .42, RD, { sw: 2.4 }) + `<path d="M${cx - sz * .4} ${cy} Q${cx} ${cy + sz * .2} ${cx + sz * .4} ${cy}" fill="none" stroke="${NAVY}" stroke-width="1.8"/>`;
+  if (name.startsWith('w:')) return P([[cx - sz * .5, cy + sz * .36], [cx + sz * .5, cy + sz * .36], [cx + sz * .3, cy - sz * .36], [cx - sz * .3, cy - sz * .36]], '#E6E9F0', { sw: 2.4 }) + T(cx, cy + sz * .2, name.slice(2), 12, { w: 800 });
+  return '';
+};
+const scaleF = (cx, left, right, o = {}) => {
+  const arm = o.arm || 130, y = 40, sz = o.sz || 34; let s = '';
+  s += L(cx, y, cx, y + 96, { sw: 3 }) + P([[cx - 22, y + 96], [cx + 22, y + 96], [cx, y + 6]], '#fff', { sw: 2.4 }) + L(cx - arm, y, cx + arm, y, { sw: 4 });
+  [[cx - arm, left], [cx + arm, right]].forEach(([px, items]) => {
+    s += L(px, y, px - 46, y + 38, { sw: 1.8 }) + L(px, y, px + 46, y + 38, { sw: 1.8 }) + `<path d="M${px - 50} ${y + 38} Q${px} ${y + 56} ${px + 50} ${y + 38}" fill="#fff" stroke="${NAVY}" stroke-width="2.6"/>`;
+    const per = 3, n = items.length;
+    items.forEach((it, i) => { const row = Math.floor(i / per), col = i % per, inRow = Math.min(per, n - row * per); s += itemShape(it, px + (col - (inRow - 1) / 2) * (sz * .95), y + 30 - row * (sz * .9), sz); });
+  });
+  return s;
+};
+const balances = (defs, label, h) => W(svg(600, h || 166, defs.map((d, i) => scaleF(160 + i * 280, d[0], d[1], { arm: 88, sz: 30 })).join('') + defs.map((d, i) => T(160 + i * 280, 156, 'Scale ' + (i + 1), 16)).join(''), label), 2);
+const balT1 = () => balances([[['apple', 'apple', 'lemon'], ['pomelo']], [['pomelo'], ['lemon', 'lemon', 'lemon', 'lemon', 'lemon']]], 'Two level scales: 2 apples and a lemon balance a pomelo; a pomelo balances 5 lemons', 150);
+const balT3 = () => balances([[['apple', 'apple', 'apple'], ['pomelo']], [['pomelo', 'apple', 'apple'], ['w:500 g']]], 'Two level scales: 3 apples balance a pomelo; a pomelo and 2 apples balance 500 g', 150);
+const balC6 = () => balances([[['cube', 'cube', 'ball'], ['ball', 'ball']], [['ball', 'cube'], ['w:300 g']]], 'Two level scales: 2 cubes and a ball balance 2 balls; a ball and a cube balance 300 g', 150);
+
+// ---- towers (C6 Lesson 4): tower k has 3k - 1 cubes ----
+const towers = () => { let s = '', x = 30; const c = 30;
+  [2, 5, 8].forEach((n, i) => { for (let k = 0; k < n; k++) s += R(x, 250 - (k + 1) * c, c, c, Y, { sw: 2.4 }); s += T(x + c / 2, 272, 'Tower ' + (i + 1), 15); x += c + 70; });
+  s += T(x + 10, 150, '… keeps growing the same way', 15, { a: 'start', w: 600, i: true, c: '#44506F' });
+  return W(svg(600, 282, s, 'Towers of cubes with 2, 5 and 8 cubes'), 2); };
+const frogs = () => {
+  const mk = (start, jump, name) => numberLineF({ min: 0, max: 30, W: 600, labelEvery: 2, size: 15, hops: [{ from: start, to: start + jump, label: '' + jump, h: 26 }], frog: start }, 72);
+  return W(svg(600, 106, T(8, 14, 'Frog A: starts at 0, jumps 4', 15, { a: 'start', w: 600 }) + mk(0, 4), 'Number line 0 to 30 with frog A on 0 and its first jump of 4'), 0) + W(svg(600, 106, T(8, 14, 'Frog B: starts at 2, jumps 3', 15, { a: 'start', w: 600 }) + mk(2, 3), 'Number line 0 to 30 with frog B on 2 and its first jump of 3'), 0);
+};
+// time lines
+const tl = (t0, t1, ticks, hops, label, H = 80) => W(svg(600, H, timeLineF({ t0, t1, W: 600, pad: 40, ticks, jumps: hops.map(h => ({ from: h[0], to: h[1], label: h[2], h: 22 })), marks: [] }, 48), label), 0);
+const l9t2 = () => tl(632, 745, [{ t: 645, label: '10:45 am', dy: 20 }, { t: 660, label: '11:00' }, { t: 720, label: '12:00' }, { t: 730, label: '12:10 pm', dy: 20 }], [[645, 660, '? min'], [660, 720, '? h'], [720, 730, '? min']], 'Time line from 10:45 am to 12:10 pm with 11:00 and 12:00 marked', 100);
+const l9c7 = () => tl(485, 650, [{ t: 495, label: '8:15 am' }], [], 'Time line starting at 8:15 am for three lessons and two breaks', 70);
+// base-ten blocks: rod = 10, flat = 100
+const rod = (x, y) => { let s = ''; for (let i = 0; i < 10; i++) s += R(x, y + i * 5.2, 11, 5.2, '#fff', { sw: 1.1 }); return s + R(x, y, 11, 52, 'none', { sw: 2 }); };
+const flat = (x, y) => { let s = R(x, y, 52, 52, '#fff', { sw: 2 }); for (let i = 1; i < 10; i++) s += L(x + i * 5.2, y, x + i * 5.2, y + 52, { sw: .8 }) + L(x, y + i * 5.2, x + 52, y + i * 5.2, { sw: .8 }); return s; };
+const blocksT3 = () => {
+  let s = T(6, 16, 'Ali: 46 ten-blocks', 16, { a: 'start' });
+  for (let i = 0; i < 46; i++) s += rod(8 + (i % 23) * 24, 24 + Math.floor(i / 23) * 62);
+  s += T(6, 168, 'Siti: 3 hundred-blocks and 15 ten-blocks', 16, { a: 'start' });
+  for (let i = 0; i < 3; i++) s += flat(8 + i * 62, 178);
+  for (let i = 0; i < 15; i++) s += rod(210 + i * 24, 178);
+  return W(svg(600, 240, s, 'Ali has 46 ten-blocks. Siti has 3 hundred-blocks and 15 ten-blocks.'), 2);
+};
+const strip12 = () => fracBars([{ label: 'one whole', n: 12, s: 0 }], { label: 'A strip cut into 12 equal parts' });
+const strip10 = () => fracBars([{ label: 'one whole', n: 10, s: 0 }], { label: 'A strip cut into 10 equal parts' });
+const kiteBar = () => bm({ rows: [{ label: 'Ben’s money', segs: [{ u: 2, t: 'kite (half)', k: 'a', size: 15 }, { u: .8, t: '$4', k: 'h' }, { u: 1.2, t: '$6 left', k: 'b', size: 15 }], brace: { from: 0, to: 4, t: '? at first', pos: 'top' } }], unit: 100, labelW: 90, rowH: 36 }, 'Ben’s money as a bar cut in half');
+const FX2 = {
+  '4.c6': towers, '4.c7': frogs, '9.t2': l9t2, '9.c7': l9c7, '9.t1': balT1, '9.t3': balT3, '9.c6': balC6, '1.t3': blocksT3, '7.c5': strip12, '7.c6': strip10, '6.t1': kiteBar,
+};
 const FX = {
+  ...FX2,
   '7.3': fracQ3, '7.t2': fracT2, '7.t3': fracT3,
   '2.6': bars700,
   '3.4': sharing23,

@@ -185,3 +185,7 @@ Owner-side session applied portal/supabase/product_interest.sql to the math-inqu
 
 ## 23 Oct 2026 (evening): format of the "What you need to do" list
 Every item gives (a) the file, (b) my recommendation, (c) a one-word reply the owner can send to proceed. Files attached in the same reply.
+
+## 23 Oct 2026 (night): owner replies KEEP and DIAGRAMS
+- P1 code words JUICE, SHADOW, FRUIT, ENJOY, COUSIN, FROZEN, CLIMB, BUILD: KEEP all eight.
+- DIAGRAMS: go on the diagram order of work: shared figure library, then the top items from each audit (holiday workbooks already running; Level 1 term workbooks, P1 pack figures and extension leftovers now).

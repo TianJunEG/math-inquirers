@@ -25,7 +25,7 @@ const l4t4 = () => bm({ rows: [{ label: 'Flour', segs: [{ u: 3, t: Q, k: 'a' }] 
 const l4c7 = () => bm({ rows: [{ label: '1st piece', segs: [{ u: 1, t: Q, k: 'a' }] }, { label: '2nd piece', segs: [{ u: 1, t: Q, k: 'a' }, { u: 1, t: Q, k: 'a' }] }, { label: '3rd piece', segs: [{ u: 1, t: Q, k: 'a' }, { u: 1, t: Q, k: 'a' }, { u: .8, t: '25 cm', k: 'h', size: 14 }] }], vbrace: { from: 0, to: 2, t: '475 cm' }, unit: 80, labelW: 100, rowH: 28, gap: 8 }, 'A ribbon cut in 3 pieces: the 2nd is twice the 1st, the 3rd is 25 cm longer than the 2nd');
 
 // ---------------- Lesson 6: empty bars cut into equal parts (the child shades) ----------------
-const empty = (rows, label) => fracBars(rows.map(r => ({ ...r, s: 0 })), { label, gap: 10, bw: 360, x0: 120 });
+const empty = (rows, label) => fracBars(rows.map(r => ({ ...r, s: 0 })), { label, gap: 10, bw: 360, x0: 128 });
 const l6q5 = () => empty([{ label: 'whole fence', n: 6 }], 'A bar for the fence cut into 6 equal parts');
 const l6t2 = () => empty([{ label: 'fifths', n: 5 }, { label: 'tenths', n: 10 }], 'Two bars of the same length, one cut into fifths and one into tenths');
 const l6t3 = () => empty([{ label: 'the book', n: 4 }], 'A bar for the book cut into 4 equal parts');

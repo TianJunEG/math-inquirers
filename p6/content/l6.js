@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 6: Fair or Unfair? (probability as a fraction; random numbers; running a game 1000 times)
 // Every probability below was computed exactly with fractions by listing all equally likely outcomes, and sanity-checked by simulation.
 
@@ -160,8 +161,8 @@ module.exports = {
       { q: 'A bag has 4 red and 6 blue counters. Ali picks a red counter and keeps it. What is the probability that the next counter picked is red?', a: '3/9 = 1/3 (3 red left out of 9)' },
       { q: 'Ben says: “When you flip two coins you get two heads, two tails, or one of each, so the chance of one of each is 1/3.” Is he right?', a: 'No: HH, HT, TH, TT are the 4 equally likely outcomes, and one of each happens 2 ways: 2/4 = 1/2.' },
       { q: 'Design a FAIR game for two players using one dice, two coins or a spinner. Write the rules and show with a list or table that each player has the same chance of winning. Then change ONE rule to make the game unfair, and say who is favoured.', a: 'Open. Example: roll one dice; Player A wins on 1, 2 or 3 and Player B wins on 4, 5 or 6 (3/6 each). Change: A also wins on 4. Now A has 4/6 and B has 2/6, so A is favoured. Check that every outcome is listed and the winning outcomes add up to the whole.' },
-      { q: 'Mei and Ali each roll one dice. Mei wins if her number is bigger. Ali wins if his number is bigger or the same. Is the game fair? What is the probability that Mei wins?', a: 'Not fair. Mei wins 15/36 = 5/12; Ali wins 21/36 = 7/12 (15 bigger + 6 the same). Fair version: the same number means roll again.' },
-      { q: 'Spinner A has 3 equal parts: 1, 2, 3. Spinner B has 4 equal parts: 1, 2, 3, 4. Spin both and multiply. Even wins if the answer is even, Odd wins if it is odd. Is the game fair?', a: 'Not fair. There are 3 × 4 = 12 outcomes; the answer is odd only when both are odd: 2 × 2 = 4 ways. P(Odd) = 4/12 = 1/3, P(Even) = 8/12 = 2/3.' }
+      { q: 'Mei and Ali each roll one dice. Mei wins if her number is bigger. Ali wins if his number is bigger or the same. Is the game fair? What is the probability that Mei wins?', fig: FG.grid({ rows: [1, 2, 3, 4, 5, 6], cols: [1, 2, 3, 4, 5, 6], rowTitle: 'Mei', colTitle: 'Ali', cell: 30, label: 'An empty 6 by 6 grid for the two dice: Mei down the side, Ali across the top, to fill in each total.' }), a: 'Not fair. Mei wins 15/36 = 5/12; Ali wins 21/36 = 7/12 (15 bigger + 6 the same). Fair version: the same number means roll again.' },
+      { q: 'Spinner A has 3 equal parts: 1, 2, 3. Spinner B has 4 equal parts: 1, 2, 3, 4. Spin both and multiply. Even wins if the answer is even, Odd wins if it is odd. Is the game fair?', fig: FG.grid({ rows: [1, 2, 3], cols: [1, 2, 3, 4], rowTitle: 'spinner A', colTitle: 'spinner B', cell: 40, label: 'An empty 3 by 4 grid: spinner A down the side, spinner B across the top, to fill in each product.' }), a: 'Not fair. There are 3 × 4 = 12 outcomes; the answer is odd only when both are odd: 2 × 2 = 4 ways. P(Odd) = 4/12 = 1/3, P(Even) = 8/12 = 2/3.' }
     ]
   },
 
