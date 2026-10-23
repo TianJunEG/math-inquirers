@@ -696,14 +696,9 @@
      ],
      "size": 62,
      "reveal": true
-    },
-    {
-     "t": "chip",
-     "text": "Two 50¢ coins make $1. Ten 10¢ coins make $1.",
-     "reveal": true
     }
    ],
-   "note": "One dollar is the same as 100 cents. Two 50-cent coins make 100 cents. Ten 10-cent coins make 100 cents: count in tens to 100 with the children on their fingers (the kit has six 10-cent coins, so nobody needs ten); the ten coins and the sentence appear on the answer slide after the children have counted. So a one-dollar coin is worth the same as two fifty-cent coins or ten ten-cent coins. Children check on the table with their own coins: put two 50¢ coins next to a $1 token. A 50-cent coin is worth less than a one-dollar coin even though 50 is more than 1: the dollar sign and the cent sign are different units. Do not write $1.00 or 1.50 anywhere: we never use a decimal point for money in this lesson."
+   "note": "One dollar is the same as 100 cents. Two 50-cent coins make 100 cents. Ten 10-cent coins make 100 cents: count in tens to 100 with the children on their fingers (the kit has six 10-cent coins, so nobody needs ten); the ten coins and the sentence appear on the answer slide after the children have counted. So a one-dollar coin is worth the same as two fifty-cent coins or ten ten-cent coins. Children check on the table with their own coins: put two 50¢ coins next to a $1 token. A 50-cent coin is worth less than a one-dollar coin even though 50 is more than 1: the dollar sign and the cent sign are different units. Do not write $1.00 or 1.50 anywhere: we never use a decimal point for money in this lesson. The answer slide shows the ten coins: say 'two 50¢ coins make $1, ten 10¢ coins make $1' after the children have counted."
   },
   {
    "id": "s-m4",
@@ -852,11 +847,11 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 1 to 3. Take your time."
+     "text": "Questions 1 to 3."
     },
     {
      "t": "p",
-     "text": "Question 1. Count the money. How many cents?"
+     "text": "Q1. Count the money. How many cents?"
     },
     {
      "t": "visual",
@@ -877,7 +872,7 @@
     },
     {
      "t": "p",
-     "text": "Question 2. Count the notes. How many dollars?"
+     "text": "Q2. Count the notes. How many dollars?"
     },
     {
      "t": "visual",
@@ -898,7 +893,7 @@
     },
     {
      "t": "p",
-     "text": "Question 3. Look at the fifty-cent coin. Count in 10s, then in 5s."
+     "text": "Q3. The fifty-cent coin. Count in 10s, then in 5s."
     }
    ],
    "note": "Read questions 1 to 3 aloud. Children work on their own with their play money; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count the coins, biggest first. Question 2: count the notes. Question 3: a fifty-cent coin is worth the same as how many ten-cent coins, and how many five-cent coins."

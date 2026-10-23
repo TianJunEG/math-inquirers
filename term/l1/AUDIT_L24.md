@@ -7,9 +7,9 @@ Table from the final validator run (`python3 term/l1/tools/validate.py 24`, buil
 | Criterion | Result | Evidence |
 |---|---|---|
 | Schema valid | PASS | schema: all keys present, passes `lesson.schema.json` |
-| Every answer verified independently | PASS | verify: 184 checks (money in whole cents; ways and fewest-pieces by brute force and dynamic programming; kit pages read back from the kit builder) |
+| Every answer verified independently | PASS | verify: 187 checks (money in whole cents; ways and fewest-pieces by brute force and dynamic programming; kit pages read back from the kit builder) |
 | Online practice variants verified | PASS | 63 template variants verified three ways |
-| Timing | PASS | 2+6+4+11+11+4+32+6+6+3+5 = 90; scripted 67:53, slow-class 80:23; no part OVER (mini 10:40 of 11:00 slow-class) |
+| Timing | PASS | 2+6+4+11+11+4+32+6+6+3+5 = 90; scripted 68:12, slow-class 80:44; no part OVER (mini 10:53 of 11:00 slow-class) |
 | Slides and script linked | PASS | 28 slides each shown once |
 | Tier counts and completeness | PASS | Start here 6, Think harder 4, Go further 3, exit 3, home 5 |
 | Neutral labels, no overclaims, no private chat | PASS | no banned wording |
@@ -19,7 +19,7 @@ Table from the final validator run (`python3 term/l1/tools/validate.py 24`, buil
 | Mascot | PASS | Mi on 4 slides |
 | Beyond item | PASS | Fewest Notes and Coins at G1, G2 |
 | Kit contract and hand-off | PASS | 16 coins + 13 notes printed and counted from the kit builder; supplied covers the most any task uses; $1 coins are the 30 Term 2 tokens; `next_materials` names the 12 price tags, the money and the tokens |
-| Real PDF page count and fill | PASS with warning | Workbook 5 pages + 2 kit pages: 96%, 96%, 87%, 96%, 99%; kit pages 49% and 47% (short by design, a kit page is not held to the fill rule); home 1 page, parent 1 page |
+| Real PDF page count and fill | PASS with warning | Workbook 5 pages + 2 kit pages: 100%, 96%, 88%, 96%, 99%; kit pages 49% and 47% (short by design, a kit page is not held to the fill rule); home 1 page, parent 1 page |
 | Template leak | PASS | none |
 
 Validator: 0 FAIL, 2 WARN (the two kit pages are short).
@@ -46,3 +46,7 @@ Total: 18 / 24
 - The play money is stylised and marked PLAY MONEY; the rules on reproducing real notes and coins have not been checked (decision D1).
 - Quest gate 3 (50c, 20c, 20c, 5c; $7 toy paid with $10) is avoided in all class and workbook numbers, checked in verify. Its "50c" should read 50¢ on child pages.
 - Online practice has no rewind items (the runner cannot assemble them yet); g1 has no picture; the 12-tag hand-off to Lesson 25 depends on that author's kit.
+
+## Fix pass (Term 3, 23 Oct 2026)
+
+After the three independent audits (`audit/WORKBOOK_AUDIT_L24.md`, `GUIDE_DECK_AUDIT_L24.md`, `HOME_PARENT_PRACTICE_AUDIT_L24.md`) the Medium findings that sit in lesson data were fixed; see `audit/FIXES_T3_L24.md`. What changed in the scores: the missing non-routine type (work backwards, paid and change given, find the price) is now Think harder T3, and `contest_moves` and `moe.note` name it; the answer to "how many ten-cent coins make a dollar" is no longer on the slide while it is asked (`reveal`); the optional slide no longer pictures the 4-coin answer; the S3 task no longer implies ten 5-cent coins that the kit does not hold; the opening, camera and microphone wording follow the final Term 1 text; the online t3 is a one-number item. Validator 0 FAIL (29 pass, 2 WARN: the two kit pages are short by design); script 68:12, slow class 80:44, mini 10:53 of 11:00. Still open and not in lesson data: kit piece size and cut-line gaps, one coin scale across figures (`FINAL_FIXES_T3.md`, shared tools); the owner decision on play-money reproduction (D1).
