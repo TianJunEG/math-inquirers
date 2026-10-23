@@ -183,6 +183,8 @@ svg.pic .fb{stroke:#000;stroke-width:0.45}
 from gen.css_new import CSS_NEW
 CSS += CSS_NEW
 
+DRAFT = True                      # front matter, key and footers: DRAFT until the owner (and a lawyer) approve the wording; build.py --final turns it off
+
 def stars_svg(n):
     one = ('<svg xmlns="http://www.w3.org/2000/svg" width="8mm" height="8mm" viewBox="-10 -10 20 20"><polygon fill="#000" stroke="#000" stroke-width="0.6" points="'
            + " ".join(f"{(10 if i%2==0 else 4.2)*__import__('math').cos(-__import__('math').pi/2+i*__import__('math').pi/5):.2f},{(10 if i%2==0 else 4.2)*__import__('math').sin(-__import__('math').pi/2+i*__import__('math').pi/5):.2f}" for i in range(10))
@@ -196,7 +198,9 @@ def tick_svg():
 def footer(code, school):
     name = html.escape(school) if school.strip() else "________________________"
     tail = "only. Not for resale." if school.strip() else "(school name) only. Not for resale."
-    return (f'<footer class="pf"><span class="fl"><span class="fx">&copy; 2026 Preciouslyours Pte Ltd. Photocopy licence:</span> <span class="sn">{name}</span> <span class="fx">{tail}</span></span>'
+    # until the owner confirms the entity and year (licence page placeholder) the (c) line is left out; a --final build prints it
+    cr = "" if DRAFT else '<span class="fx">&copy; 2026 Preciouslyours Pte Ltd.</span> '
+    return (f'<footer class="pf"><span class="fl">{cr}<span class="fx">Photocopy licence:</span> <span class="sn">{name}</span> <span class="fx">{tail}</span></span>'
             f'<span class="pc"><b>{code}</b></span></footer>')
 
 def pupil_page(p, school):
@@ -331,20 +335,26 @@ def key_entry(p):
             f'<div><b>Teacher note:</b> {html.escape(p["note"])}</div></div>')
 
 def key_pages(pages, school, packing, bk):
-    out = [f'<section class="page fm"><h2>Teacher answer key: Primary 1, {html.escape(bk["name"])}</h2>'
+    from gen.outcomes import code_of
+    code_ex = code_of(bk["order"][6])
+    total = 1 + len(packing) + sum(1 for p in pages if p.get("cbc"))
+    pg = [1]
+    def kf():
+        pg[0] += 1; return footer(f"KEY page {pg[0]} of {total}", school).replace("Photocopy licence", "Teacher key. Photocopy licence")
+    out = [f'<section class="page fm"><h2>Teacher answer key: Primary 1, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
            '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 1 content in the Mathematics Syllabus, Primary (2021 edition, pages 31 and 32). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
-           + '</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example S1-07 (P1-08), gives the page in this booklet and, in brackets, its number in the full set of 40.</p></section>']
+           + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + footer(f"KEY page 1 of {total}", school).replace("Photocopy licence", "Teacher key. Photocopy licence") + '</section>']
     for g in packing:
-        out.append('<section class="page fm" >' + "".join(key_entry(p) for p in g) + footer("KEY", school).replace("Photocopy licence", "Teacher key. Photocopy licence") + "</section>")
+        out.append('<section class="page fm" >' + "".join(key_entry(p) for p in g) + kf() + "</section>")
     for p in pages:
         if p.get("cbc"):
             out.append(f'<section class="page fm cbcans" ><h2>Answers: {p["code"]} {html.escape(p["title"])}</h2>'
                        f'<p style="margin:0 0 2mm;font-size:10.5pt">Every part shows the question, the answer underlined and the colour in brackets. Pupils colour their own copy. '
                        f'Colour key: {html.escape(p["key"]["answers"].replace("Colour key: ", ""))}.</p>{p["teacher_svg"]}'
-                       + footer("KEY", school).replace("Photocopy licence", "Teacher key. Photocopy licence") + "</section>")
+                       + kf() + "</section>")
     return "".join(out)
 
 def strand_map(pages):
