@@ -287,8 +287,16 @@ def _time(tier):
         h, m = a
         if m == 0: return SEM([f"It is half past {h}.", f"Half an hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="half an hour before half past")
         return SEM([f"It is half past {cyc(h - 1)}.", f"1 hour later: {BOX}"], lambda v, t=a: v == t, tword(a), form="1 hour after half past")
+    def short_plus(a, r):
+        h, m = a
+        if m == 0: return SEM([f"{cyc(h - 1)} o'clock", f"+ 1 hour = {BOX}"], lambda v, t=a: v == t, tword(a), form="o'clock plus 1 hour")
+        return SEM([f"{h} o'clock", f"+ half hour = {BOX}"], lambda v, t=a: v == t, tword(a), form="o'clock plus half hour")
+    def short_plus2(a, r):
+        h, m = a
+        if m == 0: return SEM([f"half past {cyc(h - 1)}", f"+ half hour = {BOX}"], lambda v, t=a: v == t, tword(a), form="half past plus half hour")
+        return SEM([f"half past {cyc(h - 1)}", f"+ 1 hour = {BOX}"], lambda v, t=a: v == t, tword(a), form="half past plus 1 hour")
     for f_ in (clock_stack, clock_row, clock_alone, clock_short): f_.pref = 1          # a clock sheet shows clock faces wherever one fits (one face per time)
-    forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1, earlier, spare]
+    forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1, earlier, spare, short_plus, short_plus2]
     if tier == 2:
         def later2(a, r):
             h, m = a

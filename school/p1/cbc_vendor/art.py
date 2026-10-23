@@ -14,19 +14,29 @@ class Art:
 
 K = 'fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"'
 
+CLOCK_MIN_GAP = 40.0                # degrees: a clock a pupil must read keeps its two hands at least this far apart (audit 3, M5)
+def hand_gap(h, m):
+    """angle in degrees between the hour hand and the minute hand of h:m"""
+    d = abs(((h % 12) + m / 60.0) * 30.0 - m * 6.0) % 360.0
+    return min(d, 360.0 - d)
+
 def clock(h, m):
-    r = 9.0; cx = cy = r + 0.5
-    s = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.55"/>']
+    """a clock face 25 mm across: numerals 3.4 mm, a short thick hour hand and a long thin minute hand"""
+    r = 12.0; cx = cy = r + 0.5
+    s = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.6"/>']
+    for k in range(60):                                  # minute ticks: long every five minutes (the numerals sit inside them)
+        a = math.radians(k * 6); l = 1.6 if k % 5 == 0 else 0.8
+        s.append(f'<line x1="{cx + (r - l) * math.sin(a):.2f}" y1="{cy - (r - l) * math.cos(a):.2f}" x2="{cx + r * math.sin(a):.2f}" y2="{cy - r * math.cos(a):.2f}" stroke="#000" stroke-width="{0.5 if k % 5 == 0 else 0.3}"/>')
     for k in range(1, 13):
         a = math.radians(k * 30)
-        s.append(f'<text x="{cx + 6.75 * math.sin(a):.2f}" y="{cy - 6.75 * math.cos(a):.2f}" style="font-size:2.5px;font-weight:600;text-anchor:middle;dominant-baseline:central">{k}</text>')
+        s.append(f'<text x="{cx + 7.9 * math.sin(a):.2f}" y="{cy - 7.9 * math.cos(a):.2f}" style="font-size:3.5px;font-weight:700;text-anchor:middle;dominant-baseline:central">{k}</text>')
     ha = ((h % 12) + m / 60.0) * 30.0
     ma = m * 6.0
     def hand(ang, ln, wd):
         a = math.radians(ang)
         return f'<line x1="{cx}" y1="{cy}" x2="{cx + ln * math.sin(a):.2f}" y2="{cy - ln * math.cos(a):.2f}" stroke="#000" stroke-width="{wd}" stroke-linecap="round"/>'
-    s.append(hand(ha, 3.3, 1.25)); s.append(hand(ma, 5.0, 0.75))
-    s.append(f'<circle cx="{cx}" cy="{cy}" r="0.9" fill="#000"/>')
+    s.append(hand(ma, 9.6, 0.7)); s.append(hand(ha, 5.0, 1.5))
+    s.append(f'<circle cx="{cx}" cy="{cy}" r="1.0" fill="#000"/>')
     return Art("".join(s), 2 * r + 1, 2 * r + 1, 0.9, dict(kind="clock", hour_angle=ha, minute_angle=ma))
 
 def decode_clock(meta):
@@ -35,44 +45,56 @@ def decode_clock(meta):
     hh = int(round(meta["hour_angle"] - mm * 0.5) / 30) % 12 or 12
     return hh, mm
 
-COIN_R = {5: 4.2, 10: 4.6, 20: 5.0, 50: 5.5, 100: 5.8}
+COIN_R = {5: 4.2, 10: 4.8, 20: 5.6, 50: 6.4, 100: 6.4}      # radii in the real ratio of the diameters (5c 16.2, 10c 18.5, 20c 21.4, 50c 24.7, $1 24.65 mm), drawn much larger than real size
+def _coin(cx, cy, v, r):
+    """an ORIGINAL coin (not a copy of any real coin): a ring, a dashed ridge ring as an edge hint, the value large and a small cents sign under it ($1 has no cents sign)"""
+    s = [f'<circle cx="{cx:.2f}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>',
+         f'<circle cx="{cx:.2f}" cy="{cy}" r="{r - 0.75:.2f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.7 0.5"/>']
+    if v < 100:
+        s.append(f'<text x="{cx:.2f}" y="{cy - 0.7:.2f}" style="font-size:3.4px;font-weight:700;text-anchor:middle;dominant-baseline:central">{v}</text>')
+        s.append(f'<text x="{cx:.2f}" y="{cy + r * 0.52:.2f}" style="font-size:2.3px;font-weight:700;text-anchor:middle;dominant-baseline:central">¢</text>')
+    else:
+        s.append(f'<text x="{cx:.2f}" y="{cy}" style="font-size:3.8px;font-weight:700;text-anchor:middle;dominant-baseline:central">$1</text>')
+    return "".join(s)
 def coins(values):
-    x = 0.0; s = []; h = 2 * 5.8 + 1
+    x = 0.0; s = []; h = 2 * 6.4 + 1
     for v in values:
         r = COIN_R[v]; x += r
-        label = f"{v}¢" if v < 100 else "$1"
-        s.append(f'<circle cx="{x:.2f}" cy="{h / 2}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-                 f'<text x="{x:.2f}" y="{h / 2}" style="font-size:3.2px;font-weight:700;text-anchor:middle;dominant-baseline:central">{label}</text>')
+        s.append(_coin(x, h / 2, v, r))
         x += r + 1.2
     return Art("".join(s), x - 1.2, h, 0.85, dict(kind="coins", values=list(values)))
 
 def notes(values):
     """dollar notes ($2, $5, $10) drawn as small rectangles; a $1 coin is a circle"""
-    x = 0.0; s = []; h = 8.0
+    x = 0.0; s = []; h = 12.8
     for v in values:
         if v == 1:
-            s.append(f'<circle cx="{x + 4:.2f}" cy="{h / 2}" r="4" fill="#fff" stroke="#000" stroke-width="0.5"/><text x="{x + 4:.2f}" y="{h / 2}" style="font-size:3.2px;font-weight:700;text-anchor:middle;dominant-baseline:central">$1</text>')
-            x += 8 + 1.2
+            s.append(_coin(x + 6.4, 6.4, 100, 6.4))
+            x += 12.8 + 1.2
         else:
-            s.append(f'<rect x="{x:.2f}" y="0.5" width="13" height="7" rx="0.8" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-                     f'<text x="{x + 6.5:.2f}" y="4" style="font-size:3.6px;font-weight:700;text-anchor:middle;dominant-baseline:central">${v}</text>')
+            s.append(f'<rect x="{x:.2f}" y="2.9" width="13" height="7" rx="0.8" fill="#fff" stroke="#000" stroke-width="0.5"/>'
+                     f'<text x="{x + 6.5:.2f}" y="6.4" style="font-size:3.6px;font-weight:700;text-anchor:middle;dominant-baseline:central">${v}</text>')
             x += 13 + 1.2
     return Art("".join(s), x - 1.2, h, 0.85, dict(kind="notes", values=list(values)))
 
 def ruler(start, end, top=None):
-    """a strip lying on a ruler marked in cm; the strip runs from `start` to `end` (not to scale)"""
+    """a strip lying on a ruler marked in cm (not to scale). A bold arrow above the left end of the strip and a bold tick on the ruler show where it starts:
+    the length is the number of cm from the arrow to the other end, whether the strip starts at 0 or at another mark."""
     top = top or max(end + 1, 6)
-    u, pad = 3.7, 2.0
+    u, pad = 3.9, 2.0
     w = top * u + 2 * pad + 1.0
     s = []
-    s.append(f'<rect x="{0.5 + pad + start * u:.2f}" y="0.5" width="{(end - start) * u:.2f}" height="3.6" rx="0.6" fill="#fff" stroke="#000" stroke-width="0.5"/>')
-    y0 = 5.2
-    s.append(f'<rect x="0.5" y="{y0}" width="{top * u + 2 * pad:.2f}" height="6.6" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    xs = 0.5 + pad + start * u
+    s.append(f'<polygon points="{xs - 1.5:.2f},0.4 {xs + 1.5:.2f},0.4 {xs:.2f},3.2" fill="#000"/>')                 # start arrow
+    s.append(f'<rect x="{xs:.2f}" y="3.6" width="{(end - start) * u:.2f}" height="3.8" rx="0.6" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    y0 = 8.6
+    s.append(f'<rect x="0.5" y="{y0}" width="{top * u + 2 * pad:.2f}" height="7.0" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(0, top + 1):
         x = 0.5 + pad + k * u
-        s.append(f'<line x1="{x:.2f}" y1="{y0}" x2="{x:.2f}" y2="{y0 + 1.7}" stroke="#000" stroke-width="0.4"/>')
-        s.append(f'<text x="{x:.2f}" y="{y0 + 4.5}" style="font-size:2.7px;font-weight:600;text-anchor:middle;dominant-baseline:central">{k}</text>')
-    return Art("".join(s), w, 12.0, 0.9, dict(kind="ruler", start=start, end=end, top=top))
+        bold = k == start
+        s.append(f'<line x1="{x:.2f}" y1="{y0}" x2="{x:.2f}" y2="{y0 + (3.0 if bold else 1.7)}" stroke="#000" stroke-width="{1.0 if bold else 0.4}"/>')
+        s.append(f'<text x="{x:.2f}" y="{y0 + 5.0}" style="font-size:{3.0}px;font-weight:{700 if bold else 600};text-anchor:middle;dominant-baseline:central">{k}</text>')
+    return Art("".join(s), w, 16.2, 0.9, dict(kind="ruler", start=start, end=end, top=top, arrow=True))
 
 def _shape(kind):
     st = 'fill="#fff" stroke="#000" stroke-width="0.55" stroke-linejoin="round"'
@@ -137,24 +159,30 @@ def fraction(a, b, shape="bar"):
         s.append(f'<path d="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 {1 if (a1 - a0) > math.pi else 0} 1 {x1:.2f},{y1:.2f} Z" fill="none" {_ST}/>')
     return Art("".join(s), 2 * r + 1, 2 * r + 1, 0.9, dict(kind="fraction", parts=b, shaded=a, shape="circle"))
 
+def _star(cx, cy, r=1.5):
+    """a small outline star: the countable object used instead of a bare black dot (audit 3 follow-up: friendlier pictures for 6 and 7 year olds)"""
+    pts = " ".join(f"{cx + (r if i % 2 == 0 else r * 0.42) * math.sin(i * math.pi / 5):.2f},{cy - (r if i % 2 == 0 else r * 0.42) * math.cos(i * math.pi / 5):.2f}" for i in range(10))
+    return f'<polygon points="{pts}" fill="#fff" stroke="#000" stroke-width="0.32" stroke-linejoin="round"/>'
+
 def groups(n, per):
-    """n boxes with `per` dots in each (equal groups)"""
+    """n boxes with `per` stars in each (equal groups)"""
+    P_ = 3.3                                                   # star pitch
     cols = max(1, math.ceil(per / 2)); rows = 2 if per > 1 else 1
-    bw, bh = cols * 2.6 + 1.8, rows * 2.6 + 1.8
-    per_row = max(1, min(n, int(46 // (bw + 2.0))))
+    bw, bh = cols * P_ + 1.6, rows * P_ + 1.6
+    per_row = max(1, min(n, int(50 // (bw + 2.2))))
     s = []
     for g in range(n):
-        gx = (g % per_row) * (bw + 2.0) + 0.5; gy = (g // per_row) * (bh + 2.0) + 0.5
+        gx = (g % per_row) * (bw + 2.2) + 0.5; gy = (g // per_row) * (bh + 2.2) + 0.5
         s.append(f'<rect x="{gx:.2f}" y="{gy:.2f}" width="{bw:.2f}" height="{bh:.2f}" rx="1.2" fill="#fff" {_ST}/>')
         for k in range(per):
-            s.append(f'<circle cx="{gx + 1.5 + (k % cols) * 2.6 + 0.4:.2f}" cy="{gy + 1.5 + (k // cols) * 2.6 + 0.4:.2f}" r="0.85" fill="#000"/>')
+            s.append(_star(gx + 0.8 + P_ / 2 + (k % cols) * P_, gy + 0.8 + P_ / 2 + (k // cols) * P_))
     nrows = math.ceil(n / per_row)
-    return Art("".join(s), per_row * (bw + 2.0) - 1.0, nrows * (bh + 2.0) - 1.0, 0.9, dict(kind="groups", n=n, per=per))
+    return Art("".join(s), per_row * (bw + 2.2) - 1.2, nrows * (bh + 2.2) - 1.2, 0.9, dict(kind="groups", n=n, per=per))
 
 def array(r, c):
-    """r rows of c dots"""
-    s = [f'<circle cx="{1.6 + j * 3.0:.2f}" cy="{1.6 + i * 3.0:.2f}" r="1.0" fill="#000"/>' for i in range(r) for j in range(c)]
-    return Art("".join(s), c * 3.0 + 0.2, r * 3.0 + 0.2, 0.9, dict(kind="array", rows=r, cols=c))
+    """r rows of c stars"""
+    s = [_star(1.8 + j * 3.6, 1.8 + i * 3.6) for i in range(r) for j in range(c)]
+    return Art("".join(s), c * 3.6 + 0.2, r * 3.6 + 0.2, 0.9, dict(kind="array", rows=r, cols=c))
 
 def balance(n, total, unit):
     """n identical objects on the left pan balance one block of `total` units on the right pan"""
@@ -279,11 +307,11 @@ def blocks(h, t, o):
 
 def cash(values):
     """money in cents: coins 5, 10, 20, 50, 100 and notes 200, 500, 1000, drawn as plain labelled shapes"""
-    x = 0.0; s = []; hh = 11.6
+    x = 0.0; s = []; hh = 13.8
     for v in sorted(values, reverse=True):
         if v >= 200:
-            s.append(f'<rect x="{x + 0.5:.2f}" y="2.3" width="13" height="7" rx="0.8" fill="#fff" {_ST}/>' + _text(x + 7, 5.9, f"${v // 100}", 3.6)); x += 14.2
+            s.append(f'<rect x="{x + 0.5:.2f}" y="3.4" width="13" height="7" rx="0.8" fill="#fff" {_ST}/>' + _text(x + 7, 6.9, f"${v // 100}", 3.6)); x += 14.2
         else:
             r = COIN_R[v]; x += r
-            s.append(f'<circle cx="{x:.2f}" cy="{hh / 2}" r="{r}" fill="#fff" {_ST}/>' + _text(x, hh / 2, f"{v}¢" if v < 100 else "$1", 3.1)); x += r + 1.2
+            s.append(_coin(x, hh / 2, v, r)); x += r + 1.2
     return Art("".join(s), x - 1.2, hh, 0.85, dict(kind="cash", values=sorted(values, reverse=True)))

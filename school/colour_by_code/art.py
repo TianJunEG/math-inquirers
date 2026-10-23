@@ -49,7 +49,7 @@ COIN_R = {5: 4.2, 10: 4.8, 20: 5.6, 50: 6.4, 100: 6.4}      # radii in the real 
 def _coin(cx, cy, v, r):
     """an ORIGINAL coin (not a copy of any real coin): a ring, a dashed ridge ring as an edge hint, the value large and a small cents sign under it ($1 has no cents sign)"""
     s = [f'<circle cx="{cx:.2f}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>',
-         f'<circle cx="{cx:.2f}" cy="{cy}" r="{r - 0.75:.2f}" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="0.7 0.5"/>']
+         f'<circle cx="{cx:.2f}" cy="{cy}" r="{r - 0.75:.2f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.7 0.5"/>']
     if v < 100:
         s.append(f'<text x="{cx:.2f}" y="{cy - 0.7:.2f}" style="font-size:3.4px;font-weight:700;text-anchor:middle;dominant-baseline:central">{v}</text>')
         s.append(f'<text x="{cx:.2f}" y="{cy + r * 0.52:.2f}" style="font-size:2.3px;font-weight:700;text-anchor:middle;dominant-baseline:central">¢</text>')

@@ -190,18 +190,16 @@ def butterfly():
 # ---------------------------------------------------------------- ice-cream cone (symmetric)
 @picture
 def icecream():
-    b = Builder("icecream", "Ice Cream", symmetric=True, blurb="two scoops on a cone with a cherry, two diamonds and two circles")
-    cherry = C(90, 20, 17.5)
-    cone = P((31, 142), (149, 142), (90, 199))
-    s1 = E(90, 70, 44, 33) - cherry
-    s2 = E(90, 114, 64, 30) - E(90, 70, 44, 33) - cone
-    b.add("cherry", cherry)
-    b.pair("scoop1", s1 & R(0, 0, AXIS, 200))
-    b.pair("scoop2", s2 & R(0, 0, AXIS, 200))
-    b.pair("cone_a", cone & R(0, 0, AXIS, 168))
-    b.add("cone_b", cone & R(0, 168, 180, 200))
-    b.pair("diamond", P((26, 12), (51, 34), (26, 56), (1, 34)))
-    b.pair("ball", C(26, 172, 20))
+    """a waffle cone (about 38% of the height, narrow, point down) under two round scoops that overlap a little (about 58%), with a wavy drip edge"""
+    b = Builder("icecream", "Ice Cream", symmetric=True, blurb="a tall narrow cone under two round scoops with a drip edge, and four pairs of circles")
+    sc1 = C(90, 42, 33)
+    sc2 = C(90, 88, 35) | C(68, 120, 8.5) | C(90, 124, 9.5) | C(112, 120, 8.5)           # second scoop with three drips
+    cone = P((56, 118), (124, 118), (90, 199)) - sc2 - sc1
+    b.add("scoop1", sc1)
+    b.pair("scoop2", ((sc2 - sc1) & R(0, 0, AXIS, 200)))
+    b.add("cone_top", cone & R(0, 0, 180, 148))
+    b.add("cone_bottom", cone & R(0, 148, 180, 200))
+    for k, y in enumerate((24, 76, 128, 176)): b.pair("ball%d" % k, C(24, y, 20))
     return b.done()
 
 # ---------------------------------------------------------------- owl (symmetric)

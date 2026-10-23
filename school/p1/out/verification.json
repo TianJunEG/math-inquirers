@@ -5,7 +5,7 @@
   "tier": 1,
   "topic": "Place value: tens and ones",
   "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.1 to 1.3 (count a set, tens and ones)",
+  "syll": "1.1, 1.2 (count a set, tens and ones)",
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
   "seed": 201,
@@ -70,18 +70,7 @@
    1.0,
    150,
    150
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    118,
-    118
-   ],
-   "all_other_values_rejected": [
-    150,
-    150
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -89,7 +78,7 @@
   "tier": 2,
   "topic": "Numbers to 100: tens digit, ones digit, more and less",
   "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.1 to 1.5 (numbers to 100, compare)",
+  "syll": "1.2, 1.5 (tens and ones, compare and order numbers)",
   "ptype": "Number riddles",
   "mech": "K1 code word + K7 test the clues (5 letters)",
   "seed": 202,
@@ -129,18 +118,7 @@
    1.0,
    495,
    495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    495,
-    495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -154,9 +132,9 @@
   "seed": 303,
   "checks": [
    {
-    "name": "V1 dots counted in the drawing divide exactly and the quotient equals the key",
+    "name": "V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key",
     "ok": true,
-    "detail": "[6, 3, 8, 5, 4, 2]"
+    "detail": "[4, 2, 7, 5, 3, 6]"
    },
    {
     "name": "V2 code word spells FRIEND",
@@ -176,10 +154,10 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['finder', 'friend', 'rewind', 'winder']"
+    "detail": "['finder', 'finery', 'friend', 'kidney']"
    },
    {
-    "name": "V7 every number of dots is within 20",
+    "name": "V7 every number of objects is within 20",
     "ok": true,
     "detail": ""
    }
@@ -188,18 +166,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    56,
-    56
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -207,7 +174,7 @@
   "tier": 2,
   "topic": "Comparing numbers to 100 (more, fewer, greatest, smallest)",
   "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.4, 1.5 (compare and order numbers)",
+  "syll": "1.5 (compare and order numbers)",
   "ptype": "Logic grid",
   "mech": "K4 grid + K1 letter beside each number spells a word (5 letters)",
   "seed": 404,
@@ -233,6 +200,16 @@
     "detail": "2/119"
    },
    {
+    "name": "V3b no swap of two children's numbers spells a word (all 10 swaps)",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V3c the arrangements that do spell a word are listed in the teacher note (the note does not claim there are none)",
+    "ok": true,
+    "detail": "['BOWEL', 'ELBOW']"
+   },
+   {
     "name": "V4 guess resistance: the five letters can be arranged into at least 2 common words",
     "ok": true,
     "detail": "2 other words"
@@ -242,21 +219,7 @@
    0.9832,
    117,
    119
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    20,
-    20
-   ],
-   "all_other_values_rejected": [
-    20,
-    20
-   ],
-   "wrong_arrangements_rejected": [
-    117,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 5,
@@ -304,18 +267,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    65,
-    65
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -368,24 +320,13 @@
    1.0,
    138,
    138
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    138,
-    138
-   ],
-   "all_other_values_rejected": [
-    138,
-    138
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
   "title": "The Queue",
   "tier": 2,
-  "topic": "Ordinal numbers: 1st to 5th, in front of and behind",
+  "topic": "Ordinal numbers: 1st to 5th, behind and next to",
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "1.7 (ordinal numbers first to tenth)",
   "ptype": "Logic (queue)",
@@ -417,21 +358,7 @@
    0.9832,
    117,
    119
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    20,
-    20
-   ],
-   "all_other_values_rejected": [
-    20,
-    20
-   ],
-   "wrong_arrangements_rejected": [
-    117,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 8,
@@ -469,18 +396,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -508,18 +424,7 @@
    1.0,
    48,
    48
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    48,
-    48
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -572,18 +477,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    63,
-    63
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -599,7 +493,7 @@
    {
     "name": "V1 solver reads the printed items back and equals the key",
     "ok": true,
-    "detail": "[21, 81, 94, 34, 27, 23]"
+    "detail": "[21, 81, 94, 30, 17, 88]"
    },
    {
     "name": "V1b answers are distinct and within 10..99",
@@ -624,25 +518,14 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['family', 'infamy', 'mainly']"
+    "detail": "['family', 'infamy', 'mainly', 'malkin']"
    }
   ],
   "generator_slip_test": [
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -653,7 +536,7 @@
   "syll": "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
-  "seed": 114,
+  "seed": 128,
   "checks": [
    {
     "name": "V1 every question has exactly one answer in the bank's domain",
@@ -673,7 +556,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 4, 'red': 2, 'blue': 4, 'green': 3, 'orange': 4}"
+    "detail": "{'yellow': 3, 'red': 4, 'blue': 3, 'green': 3, 'orange': 4}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -703,30 +586,19 @@
    {
     "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
     "ok": true,
-    "detail": "2174/2176"
+    "detail": "2173/2176"
    },
    {
     "name": "V3c swaps of two parts' colours rejected (>=95%)",
     "ok": true,
-    "detail": "112/114"
+    "detail": "112/115"
    }
   ],
   "generator_slip_test": [
    1.0,
    204,
    204
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    204,
-    204
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -774,18 +646,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -804,7 +665,7 @@
     "detail": "[]"
    },
    {
-    "name": "V1a the independent evaluator (textcheck) re-solves all 12 printed questions from their text and picture and gets the coloured answer",
+    "name": "V1a the independent evaluator (textcheck) re-solves all 13 printed questions from their text and picture and gets the coloured answer",
     "ok": true,
     "detail": "[]"
    },
@@ -816,7 +677,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 2, 'red': 2, 'blue': 3, 'green': 3, 'orange': 2}"
+    "detail": "{'yellow': 2, 'red': 3, 'blue': 3, 'green': 3, 'orange': 2}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -831,7 +692,7 @@
    {
     "name": "V7 regions 12 to 18, every label found a box",
     "ok": true,
-    "detail": "12"
+    "detail": "13"
    },
    {
     "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
@@ -841,35 +702,24 @@
    {
     "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
-    "detail": "1200/1200"
+    "detail": "1300/1300"
    },
    {
     "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
     "ok": true,
-    "detail": "1055/1056"
+    "detail": "1245/1248"
    },
    {
     "name": "V3c swaps of two parts' colours rejected (>=95%)",
     "ok": true,
-    "detail": "56/57"
+    "detail": "64/67"
    }
   ],
   "generator_slip_test": [
    1.0,
-   1200,
-   1200
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    144,
-    144
-   ],
-   "all_other_values_rejected": [
-    1200,
-    1200
-   ],
-   "wrong_arrangements_rejected": null
-  }
+   1300,
+   1300
+  ]
  },
  {
   "no": 15,
@@ -917,18 +767,7 @@
    1.0,
    475,
    475
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    59,
-    59
-   ],
-   "all_other_values_rejected": [
-    475,
-    475
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -981,21 +820,7 @@
    1.0,
    119,
    119
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    58,
-    58
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 17,
@@ -1003,7 +828,7 @@
   "tier": 1,
   "topic": "Length: measure in centimetres",
   "strand": "Measurement and Geometry - Measurement",
-  "syll": "Length 1.1 to 1.3 (measure in cm, abbreviation cm)",
+  "syll": "Length 1.1, 1.2 (measure in cm, abbreviation cm)",
   "ptype": "Code-breaker",
   "mech": "K1 code word (6 letters)",
   "seed": 1717,
@@ -1011,7 +836,12 @@
    {
     "name": "V1 strip widths read against the 10 mm/cm scale equal the key",
     "ok": true,
-    "detail": "[4, 5, 10, 2, 8, 6]"
+    "detail": "[4, 5, 3, 2, 7, 8]"
+   },
+   {
+    "name": "V1c every strip starts at its arrow (read from the drawing); two start at 0, four start at 1 to 4 and every strip ends on the ruler",
+    "ok": true,
+    "detail": "[3, 0, 4, 4, 0, 3]"
    },
    {
     "name": "V2 code word spells LENGTH",
@@ -1031,25 +861,14 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['gluten', 'length', 'nutmeg']"
+    "detail": "['gluten', 'jungle', 'length']"
    }
   ],
   "generator_slip_test": [
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1107,18 +926,7 @@
    1.0,
    715,
    715
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    715,
-    715
-   ],
-   "all_other_values_rejected": [
-    715,
-    715
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1171,18 +979,7 @@
    1.0,
    40,
    40
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    34,
-    34
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1192,7 +989,7 @@
   "strand": "Statistics - Data Analysis",
   "syll": "Picture graphs (read and interpret picture graphs)",
   "ptype": "Graph detective",
-  "mech": "K3 the total of all circles, and a second sum that uses the answers to a) and b) (neither is a clue)",
+  "mech": "K3 the total of all faces, and a second sum that uses the answers to a) and b) (neither is a clue)",
   "seed": 2020,
   "checks": [
    {
@@ -1239,23 +1036,22 @@
     "name": "V3e reading more as fewer (or fewer as more) on any set of clues never passes the total",
     "ok": true,
     "detail": "[True, True, True, True, True, True, True]"
+   },
+   {
+    "name": "V3f every misreading of the three clues (more/fewer exchanged, Apple and Banana exchanged, any mix: 63 readings) fails the total or the second sum",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3g the first two clues read with Apple and Banana exchanged do not pass both checks (the +4 and +2 clues differ)",
+    "ok": true,
+    "detail": ""
    }
   ],
   "generator_slip_test": [
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    40,
-    40
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  }
 ]

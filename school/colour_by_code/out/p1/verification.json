@@ -1,7 +1,10 @@
 {
- "passed": 706,
- "failed": 0,
- "failures": [],
+ "passed": 760,
+ "failed": 2,
+ "failures": [
+  "CBC-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm",
+  "CBC-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm"
+ ],
  "worksheets": {
   "CBC-01": {
    "single_slip": {
@@ -64,7 +67,7 @@
    "min_pupil_font_mm": 4.9,
    "min_teacher_font_mm": 4.9,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.6
+   "narrowest_region_width_at_label_mm": 34.9
   },
   "CBC-04": {
    "single_slip": {
@@ -83,30 +86,30 @@
     "caught_by_structure_checks": 0.8235
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.8,
+   "min_teacher_font_mm": 4.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
   "CBC-05": {
    "single_slip": {
-    "double_cases": 1056,
-    "double_detected": 1055,
-    "double_rate": 0.9991,
-    "swap_cases": 57,
-    "swap_detected": 56,
-    "swap_rate": 0.9825,
-    "wrong_values": 1200,
-    "in_key": 48,
-    "detected_all": 1200,
+    "double_cases": 1248,
+    "double_detected": 1245,
+    "double_rate": 0.9976,
+    "swap_cases": 67,
+    "swap_detected": 64,
+    "swap_rate": 0.9552,
+    "wrong_values": 1300,
+    "in_key": 52,
+    "detected_all": 1300,
     "rate_all": 1.0,
-    "detected_in_key": 48,
+    "detected_in_key": 52,
     "rate_in_key": 1.0,
-    "caught_by_structure_checks": 0.8333
+    "caught_by_structure_checks": 0.7692
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.0,
+   "min_pupil_font_mm": 4.5,
+   "min_teacher_font_mm": 4.5,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 35.0
+   "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-06": {
    "single_slip": {
@@ -124,10 +127,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8571
    },
-   "min_pupil_font_mm": 4.8,
-   "min_teacher_font_mm": 4.3,
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 39.9
+   "narrowest_region_width_at_label_mm": 39.8
   },
   "CBC-07": {
    "single_slip": {
@@ -145,10 +148,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8462
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 4.1,
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 4.2,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.2
+   "narrowest_region_width_at_label_mm": 36.2
   },
   "CBC-08": {
    "single_slip": {
@@ -166,40 +169,40 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.7,
+   "min_pupil_font_mm": 4.8,
    "min_teacher_font_mm": 3.4,
-   "teacher_short_labels": 3,
-   "narrowest_region_width_at_label_mm": 34.6
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.2
   },
   "CBC-09": {
    "single_slip": {
-    "double_cases": 1056,
-    "double_detected": 1055,
-    "double_rate": 0.9991,
-    "swap_cases": 57,
-    "swap_detected": 56,
-    "swap_rate": 0.9825,
-    "wrong_values": 240,
-    "in_key": 48,
-    "detected_all": 240,
+    "double_cases": 1248,
+    "double_detected": 1245,
+    "double_rate": 0.9976,
+    "swap_cases": 67,
+    "swap_detected": 64,
+    "swap_rate": 0.9552,
+    "wrong_values": 260,
+    "in_key": 52,
+    "detected_all": 260,
     "rate_all": 1.0,
-    "detected_in_key": 48,
+    "detected_in_key": 52,
     "rate_in_key": 1.0,
-    "caught_by_structure_checks": 0.8333
+    "caught_by_structure_checks": 0.7692
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.6,
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 35.0
+   "narrowest_region_width_at_label_mm": 34.7
   },
   "CBC-10": {
    "single_slip": {
     "double_cases": 2176,
-    "double_detected": 2174,
-    "double_rate": 0.9991,
-    "swap_cases": 114,
+    "double_detected": 2173,
+    "double_rate": 0.9986,
+    "swap_cases": 115,
     "swap_detected": 112,
-    "swap_rate": 0.9825,
+    "swap_rate": 0.9739,
     "wrong_values": 204,
     "in_key": 68,
     "detected_all": 204,
@@ -208,8 +211,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.3,
-   "min_teacher_font_mm": 3.6,
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 4.2,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -230,18 +233,18 @@
     "caught_by_structure_checks": 0.8462
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.7,
+   "min_teacher_font_mm": 4.8,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.0
   },
   "CBC-12": {
    "single_slip": {
     "double_cases": 2176,
-    "double_detected": 2173,
-    "double_rate": 0.9986,
-    "swap_cases": 115,
+    "double_detected": 2174,
+    "double_rate": 0.9991,
+    "swap_cases": 114,
     "swap_detected": 112,
-    "swap_rate": 0.9739,
+    "swap_rate": 0.9825,
     "wrong_values": 340,
     "in_key": 68,
     "detected_all": 340,
@@ -251,30 +254,30 @@
     "caught_by_structure_checks": 0.8235
    },
    "min_pupil_font_mm": 4.2,
-   "min_teacher_font_mm": 3.7,
+   "min_teacher_font_mm": 4.1,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 38.0
   },
   "CBC-13": {
    "single_slip": {
-    "double_cases": 1056,
-    "double_detected": 1055,
-    "double_rate": 0.9991,
-    "swap_cases": 57,
-    "swap_detected": 56,
-    "swap_rate": 0.9825,
-    "wrong_values": 240,
-    "in_key": 48,
-    "detected_all": 240,
+    "double_cases": 1680,
+    "double_detected": 1678,
+    "double_rate": 0.9988,
+    "swap_cases": 88,
+    "swap_detected": 86,
+    "swap_rate": 0.9773,
+    "wrong_values": 300,
+    "in_key": 60,
+    "detected_all": 300,
     "rate_all": 1.0,
-    "detected_in_key": 48,
+    "detected_in_key": 60,
     "rate_in_key": 1.0,
-    "caught_by_structure_checks": 0.8333
+    "caught_by_structure_checks": 0.8
    },
-   "min_pupil_font_mm": 4.3,
-   "min_teacher_font_mm": 3.6,
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 3.4,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 35.0
+   "narrowest_region_width_at_label_mm": 34.0
   },
   "CBC-14": {
    "single_slip": {
@@ -295,7 +298,7 @@
    "min_pupil_font_mm": 4.9,
    "min_teacher_font_mm": 4.4,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 32.9
+   "narrowest_region_width_at_label_mm": 34.2
   }
  },
  "banks_and_pictures": {
@@ -420,7 +423,7 @@
    "bad": 0
   },
   "bank compare tier 1": {
-   "questions": 875,
+   "questions": 775,
    "forms": [
     "between",
     "greatest",
@@ -433,7 +436,7 @@
    "bad": 0
   },
   "bank compare tier 2": {
-   "questions": 1125,
+   "questions": 975,
    "forms": [
     "greatest",
     "less1",
@@ -473,20 +476,24 @@
    "bad": 0
   },
   "bank time tier 1": {
-   "questions": 875,
+   "questions": 1375,
    "forms": [
     "clock_alone",
     "clock_row",
     "clock_short",
     "clock_stack",
     "digital",
+    "earlier",
     "later",
-    "later1"
+    "later1",
+    "short_plus",
+    "short_plus2",
+    "spare"
    ],
    "bad": 0
   },
   "bank time tier 2": {
-   "questions": 1125,
+   "questions": 1525,
    "forms": [
     "before",
     "clock_alone",
@@ -494,9 +501,13 @@
     "clock_short",
     "clock_stack",
     "digital",
+    "earlier",
     "later",
     "later1",
-    "later2"
+    "later2",
+    "short_plus",
+    "short_plus2",
+    "spare"
    ],
    "bad": 0
   },
@@ -691,7 +702,7 @@
    "twins": 0
   },
   "picture icecream": {
-   "regions": 12,
+   "regions": 13,
    "pairs": 5,
    "twins": 0
   },

@@ -218,9 +218,9 @@ def before(kind, n): p = 1 if kind == "odd" else 0; return n - 1 if (n - 1) % 2 
 def oe_after(m, c): return after(m[1], I(m[2]))
 @R(r"The (odd|even) number just before (\d+) is " + B)
 def oe_before(m, c): return before(m[1], I(m[2]))
-@R(r"(Odd|Even) after (\d+): " + B)
-def oe_after1(m, c): return after(m[1].lower(), I(m[2]))
-@R(r"(Odd|Even) before (\d+): " + B)
+@R(r"Next (odd|even) after (\d+): " + B)
+def oe_after1(m, c): return after(m[1], I(m[2]))
+@R(r"(Odd|Even) just before (\d+): " + B)
 def oe_before1(m, c): return before(m[1].lower(), I(m[2]))
 @R(r"Smallest (odd|even) number greater than (\d+): " + B)
 def oe_small(m, c): return after(m[1], I(m[2]))
@@ -293,7 +293,7 @@ def to_cents(m, c): return cents(m[1])
 def to_dollars(m, c): return I(m[1])                          # cents; the blank is written in dollars (0.65) and compared as cents
 
 # ---- time
-@R(r"(?:Which time is |Say the time: |Match the time: |Time: )?(\d{1,2}):(\d\d)(?: is which time\? " + B + r"| is the same as which time\?| Which key time\?|\?)?")
+@R(r"(?:Which time is |Say the time: |Match the time: |Time: )?(\d{1,2}):(\d\d)(?: is which time\? " + B + r"| is the same as which time\?(?: " + B + r")?| Which key time\?|\?(?: " + B + r")?)?")
 def digital_time(m, c): return hmin(I(m[1]), I(m[2]))
 @R(r"It is (\d+) o'clock\. (1 hour|Half an hour) (later|before): " + B)
 def shift_oclock(m, c): return add_minutes((I(m[1]), 0), (60 if m[2] == "1 hour" else 30) * (1 if m[3] == "later" else -1))
@@ -301,6 +301,18 @@ def shift_oclock(m, c): return add_minutes((I(m[1]), 0), (60 if m[2] == "1 hour"
 def shift_half(m, c): return add_minutes((I(m[1]), 30), (60 if m[2] == "1 hour" else 30) * (1 if m[3] == "later" else -1))
 @R(r"It is (\d{1,2}):(\d\d)\. (\d+) hours? later: " + B)
 def hours_later(m, c): return add_minutes((I(m[1]), I(m[2])), 60 * I(m[3]))
+@R(r"(\d+) o'clock \+ (1 hour|half hour) = " + B)
+def oclock_plus(m, c): return add_minutes((I(m[1]), 0), 60 if m[2] == "1 hour" else 30)
+@R(r"half past (\d+) \+ (1 hour|half hour) = " + B)
+def half_plus(m, c): return add_minutes((I(m[1]), 30), 60 if m[2] == "1 hour" else 30)
+@R(r"(\d{1,2}):(\d\d) ([+\u2212]) (\d+) min = " + B)
+def time_pm(m, c): return add_minutes((I(m[1]), I(m[2])), I(m[4]) * (1 if m[3] == "+" else -1))
+@R(r"It is (\d{1,2}):(\d\d)\. (\d+) h (\d+) min later: " + B)
+def hm_later(m, c): return add_minutes((I(m[1]), I(m[2])), 60 * I(m[3]) + I(m[4]))
+@R(r"(\d+) minutes (after|before) (\d{1,2}):00 is " + B)
+def min_ab(m, c): return add_minutes((I(m[3]), 0), I(m[1]) * (1 if m[2] == "after" else -1))
+@R(r"Which time is (\d+) minutes (after|before) (\d{1,2}):00\? " + B)
+def which_ab(m, c): return add_minutes((I(m[3]), 0), I(m[1]) * (1 if m[2] == "after" else -1))
 @R(r"It is (\d{1,2}):(\d\d)\. (\d+) minutes later: " + B)
 def minutes_later(m, c): return add_minutes((I(m[1]), I(m[2])), I(m[3]))
 @R(r"It is (\d{1,2}):(\d\d)\. (\d+) minutes before: " + B)
@@ -447,7 +459,7 @@ def tally_marks(m, c):
 
 
 # ---- sharing from a picture, ordinals (Primary 1)
-@R(r"How many dots in each box\? " + B)
+@R(r"How many stars in each box\? " + B)
 def dots_each(m, c):
     if not meta_is(c, "groups"): return NOT_ME
     return c["meta"]["per"]
@@ -481,7 +493,7 @@ def just_before(m, c): return I(m[1]) - 1
 def ord_between(m, c): return I(m[1]) + 1 if I(m[2]) - I(m[1]) == 2 else None
 
 # ---- pictures that carry the whole question (the text is only a blank or a caption)
-@R(r"(?:What time is it\?|What number\?|How much\?|How much money\?|How long\?|How many dots\?|How many dots in all\?|Tally marks:)? ?(?:\$)?" + B + "?" + CENT + "?(?: cm)?")
+@R(r"(?:What time is it\?|What number\?|How much\?|How much money\?|How long\?|How many dots\?|How many stars\?|How many dots in all\?|How many stars in all\?|Tally marks:)? ?(?:\$)?" + B + "?" + CENT + "?(?: cm)?")
 def picture_only(m, c):
     k = c["meta"]
     if k is None: return NOT_ME

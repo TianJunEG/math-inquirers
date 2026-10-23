@@ -1,7 +1,10 @@
 {
- "passed": 741,
- "failed": 0,
- "failures": [],
+ "passed": 795,
+ "failed": 2,
+ "failures": [
+  "CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm",
+  "CBC-P2-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm"
+ ],
  "worksheets": {
   "CBC-P2-01": {
    "single_slip": {
@@ -19,8 +22,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8
    },
-   "min_pupil_font_mm": 4.4,
-   "min_teacher_font_mm": 3.7,
+   "min_pupil_font_mm": 4.3,
+   "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -41,7 +44,7 @@
     "caught_by_structure_checks": 0.8462
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.4,
+   "min_teacher_font_mm": 4.6,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.0
   },
@@ -62,7 +65,7 @@
     "caught_by_structure_checks": 0.8571
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.2,
+   "min_teacher_font_mm": 4.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 39.8
   },
@@ -82,8 +85,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.8,
-   "min_teacher_font_mm": 4.4,
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.6,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -104,9 +107,9 @@
     "caught_by_structure_checks": 0.8235
    },
    "min_pupil_font_mm": 4.8,
-   "min_teacher_font_mm": 4.2,
+   "min_teacher_font_mm": 4.8,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 38.0
+   "narrowest_region_width_at_label_mm": 34.2
   },
   "CBC-P2-06": {
    "single_slip": {
@@ -145,7 +148,7 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8667
    },
-   "min_pupil_font_mm": 4.3,
+   "min_pupil_font_mm": 4.6,
    "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.9
@@ -166,10 +169,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 3.7,
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 4.4,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.6
+   "narrowest_region_width_at_label_mm": 35.2
   },
   "CBC-P2-09": {
    "single_slip": {
@@ -187,10 +190,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8462
    },
-   "min_pupil_font_mm": 4.5,
+   "min_pupil_font_mm": 4.2,
    "min_teacher_font_mm": 3.7,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 36.2
+   "narrowest_region_width_at_label_mm": 37.0
   },
   "CBC-P2-10": {
    "single_slip": {
@@ -208,10 +211,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 4.5,
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 3.6,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.6
+   "narrowest_region_width_at_label_mm": 34.9
   },
   "CBC-P2-11": {
    "single_slip": {
@@ -229,31 +232,31 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.4,
-   "min_teacher_font_mm": 4.2,
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 37.0
+   "narrowest_region_width_at_label_mm": 36.2
   },
   "CBC-P2-12": {
    "single_slip": {
-    "double_cases": 1056,
-    "double_detected": 1055,
-    "double_rate": 0.9991,
-    "swap_cases": 57,
-    "swap_detected": 56,
-    "swap_rate": 0.9825,
-    "wrong_values": 12000,
-    "in_key": 48,
-    "detected_all": 12000,
+    "double_cases": 1248,
+    "double_detected": 1245,
+    "double_rate": 0.9976,
+    "swap_cases": 67,
+    "swap_detected": 64,
+    "swap_rate": 0.9552,
+    "wrong_values": 13000,
+    "in_key": 52,
+    "detected_all": 13000,
     "rate_all": 1.0,
-    "detected_in_key": 48,
+    "detected_in_key": 52,
     "rate_in_key": 1.0,
-    "caught_by_structure_checks": 0.8333
+    "caught_by_structure_checks": 0.7692
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 3.9,
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 35.0
+   "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-P2-13": {
    "single_slip": {
@@ -272,7 +275,7 @@
     "caught_by_structure_checks": 0.875
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 3.7,
+   "min_teacher_font_mm": 4.3,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 35.0
   },
@@ -293,7 +296,7 @@
     "caught_by_structure_checks": 0.8667
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.2,
+   "min_teacher_font_mm": 4.3,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.9
   },
@@ -321,7 +324,7 @@
  },
  "banks_and_pictures": {
   "bank numbers tier 1": {
-   "questions": 1475,
+   "questions": 1375,
    "forms": [
     "between",
     "blocks",
@@ -339,7 +342,7 @@
    "bad": 0
   },
   "bank numbers tier 2": {
-   "questions": 1875,
+   "questions": 1775,
    "forms": [
     "between",
     "blocks",
@@ -496,7 +499,7 @@
    "bad": 0
   },
   "bank mult tier 2": {
-   "questions": 1240,
+   "questions": 1245,
    "forms": [
     "arr",
     "bags",
@@ -573,27 +576,22 @@
    "bad": 0
   },
   "bank money tier 1": {
-   "questions": 1023,
+   "questions": 412,
    "forms": [
-    "add",
     "cash_short",
     "cashq",
-    "change",
     "convert",
     "great",
-    "great_min",
-    "more",
-    "two"
+    "great_min"
    ],
    "bad": 0
   },
   "bank money tier 2": {
-   "questions": 1052,
+   "questions": 849,
    "forms": [
     "add",
     "cash_short",
     "cashq",
-    "change",
     "comp",
     "convert",
     "great",
@@ -604,16 +602,19 @@
    "bad": 0
   },
   "bank time tier 1": {
-   "questions": 925,
+   "questions": 1375,
    "forms": [
     "before",
+    "clock_alone",
     "clock_row",
     "clock_short",
     "clock_stack",
-    "digital",
+    "hmlater",
     "hour",
     "later",
-    "pastto"
+    "pastto",
+    "short_add",
+    "short_sub"
    ],
    "bad": 0
   },
@@ -649,13 +650,12 @@
    "bad": 0
   },
   "bank measure tier 2": {
-   "questions": 682,
+   "questions": 632,
    "forms": [
     "bal",
     "cm_add",
     "cm_cut",
     "g_add",
-    "kg_g",
     "l_add",
     "l_left",
     "l_share",
@@ -746,7 +746,7 @@
    "twins": 0
   },
   "picture icecream": {
-   "regions": 12,
+   "regions": 13,
    "pairs": 5,
    "twins": 0
   },

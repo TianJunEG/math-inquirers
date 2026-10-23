@@ -28,6 +28,7 @@ class Q:
     eq_money: bool = False            # equation lines are in money notation ($1.20, 65¢; the blank is in cents)
     a_text: str = None                # the answer as printed in the teacher page
     extra: object = None              # optional callable(answer) -> bool: bank-specific independent check (e.g. decode the picture)
+    sig: object = None                # what the exercise IS (e.g. ("mult", 3, 5), ("div", 12, 2)); two questions of one sheet with the same sig are the same exercise however they are worded
 
 def mark(s, a_text):
     if FBOX in s and "/" in a_text:                  # a fraction answer "n/d" fills the two blanks of the stacked box
@@ -82,6 +83,7 @@ class Tier:
     disp: object = str
     instr: str = None                 # overrides the bank's instruction line for this tier
     kind: str = None                  # 'dollars' when a money key is stored in whole dollars (textcheck.py); None = cents or plain numbers
+    maxuse: dict = None               # optional {key value: most regions of one sheet that can hold it} where a value has few distinct exercises
 
 @dataclass
 class Bank:
@@ -101,5 +103,5 @@ class Bank:
         said = [p for p, pred in self.parts if any(pred(f, a) for f, a in used)]
         return self.prefix + ", ".join(said) if said else self.topic_for(tier)
 
-def T(key, domain, forms, disp=str, instr=None, kind=None):
-    return Tier(list(key), list(domain), forms, disp, instr, kind)
+def T(key, domain, forms, disp=str, instr=None, kind=None, maxuse=None):
+    return Tier(list(key), list(domain), forms, disp, instr, kind, maxuse)

@@ -22,7 +22,7 @@ def components(pic):
     for r in pic.regions: comp.setdefault(find(r.id), []).append(r.id)
     return list(comp.values())
 
-def assign(pic, rng):
+def assign(pic, rng, limit=None):
     """answer index 0..4 for every region: matching sets (mirror pairs, twin marks) share one; every colour used 2 or 3 times (4 on big pictures).
     Balanced random fill: the sets, largest first, go to a random colour among those with room, so no colour is crowded."""
     comps = components(pic); n = len(pic.regions)
@@ -31,7 +31,7 @@ def assign(pic, rng):
         order = sorted(comps, key=lambda c: (-len(c), rng.random()))
         cnt = [0] * 5; idx = {}
         for c in order:
-            room = [k for k in range(5) if cnt[k] + len(c) <= cap]
+            room = [k for k in range(5) if cnt[k] + len(c) <= min(cap, (limit or {}).get(k, 99))]
             if not room: break
             low = min(cnt[k] for k in room); k = rng.choice([k for k in room if cnt[k] <= low + 1])
             cnt[k] += len(c)
@@ -43,10 +43,11 @@ def assign(pic, rng):
 def canon(q):
     """what a question is, ignoring how it is worded or laid out: the numbers in it (sorted) and what its picture shows.
     Two questions of one sheet with the same canon are the same exercise (7 + 3 and 3 + 7, the same clock twice, 17 - 5 - 4 and 17 - 4 - 5)."""
+    if getattr(q, "sig", None) is not None: return ((), "", (("sig", q.sig),))
     text = " ".join(q.lines)
     facts = [("clock", int(h) % 12, int(m)) for h, m in re.findall(r"(\d{1,2}):(\d\d)", text)]
     rest = re.sub(r"\d{1,2}:\d\d", " ", text)
-    if facts and q.art is None and re.fullmatch(r"[\sA-Za-z?:]*", rest) and not re.search(r"later|before|after|minute|hour|past|\bto\b|lasts|starts|film", rest, re.I):
+    if facts and q.art is None and re.fullmatch(r"[\sA-Za-z?:\u25a1]*", rest) and not re.search(r"later|before|after|minute|hour|past|\bto\b|lasts|starts|film", rest, re.I):
         return ((), "", tuple(facts))                    # a bare digital time: the same time in another wording is the same exercise
     text = rest
     nums = tuple(sorted(re.findall(r"\d+(?:\.\d+)?", text)))
@@ -70,8 +71,8 @@ def make_sheet(spec, school=""):
     level = spec.get("level", 1)
     bank = get_bank(level, spec["bank"]); tier = bank.tiers[spec["tier"]]
     rng = random.Random(spec["seed"])
-    idx = assign(pic, rng)
     key = tier.key
+    idx = assign(pic, rng, {i: (tier.maxuse or {}).get(v, 99) for i, v in enumerate(key)})
     order = list(pic.regions); rng.shuffle(order)
     use = Counter(); seen = set(); items = {}; dups = 0
     for reg in order:
