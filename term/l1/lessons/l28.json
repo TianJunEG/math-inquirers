@@ -39,7 +39,7 @@
    "Double a number: 6 and 6, 7 and 7 (spiral: Term 2 Lesson 13, taught again with pictures of two groups)",
    "Read a table with two rows: fill in a missing number in a row (taught again with a small table)"
   ],
-  "assumes": "Only counting to 20 and adding two small numbers. Nothing from the lessons before is needed: the warm-up counts in 2s with a number row, doubles two numbers and fills a missing number in a table of days and stickers. The words table, picture and more each time are taught in Explore and the Mini-lesson.",
+  "assumes": "Only counting to 20, adding two small numbers and the words odd and even (Term 2 Lesson 14; the Mini-lesson says them once). Nothing from the lessons before is needed: the warm-up counts in 2s with a number row, doubles two numbers and fills a missing number in a table of days and stickers. The words table, picture and more each time are taught in Explore and the Mini-lesson.",
   "holiday_topics_revisited": [
    "Pattern Inquiry: growing stick patterns (spiral only)",
    "Skip counting in 2s"
@@ -146,7 +146,7 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the strips: build 1, 2 and 3 triangles in a row and count, guess and build 4, and guess 5 without building. The mini-lesson has 11: the table, how it grows, using it for the 6th, why the sticks are shared, and a rule in words. The workbook has 32 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the strips: build 1, 2 and 3 triangles in a row and count, guess and build 4, and guess 5 without building. The mini-lesson has 11: the table, how it grows, using it for the 6th, why the sticks are shared, and a rule in words. The workbook has 32 minutes: Start here takes a middle child about 18 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
   "skip_order": [
    "Start with: shorten Explore round 3 (guess the 5th) to one volunteer answer",
    "Then: cut the second item of the Your turn slide (s-m5)",
@@ -384,7 +384,7 @@
         "items": [
          "Make 1 triangle with 3 strips.",
          "Count the strips.",
-         "Make a second triangle that joins the first. Count all your strips.",
+         "Make a second triangle that joins the first and shares one strip. Count all your strips.",
          "Make a third. Count all your strips."
         ],
         "ordered": true
@@ -405,7 +405,7 @@
      ]
     }
    ],
-   "note": "Round 1, about 4 minutes. Children build with paper strips on the table: one triangle uses 3 strips. A second triangle joined to the first shares one strip, so only 2 more strips are needed: 5 strips in all. A third triangle needs 2 more: 7 strips. Children say each total aloud. The picture on the slide shows two joined triangles only to show what joined means; it never shows a count. Do not write the numbers on the slide: children write them on their own paper as a list. A child who counts 3 more each time is asked to look at the shared strip. A child without strips draws the sticks as lines."
+   "note": "Round 1, about 4 minutes. Children build with paper strips on the table: one triangle uses 3 strips. Say aloud that the second triangle shares one strip with the first. A second triangle joined to the first shares one strip, so only 2 more strips are needed: 5 strips in all. A third triangle needs 2 more: 7 strips. Children say each total aloud. The picture on the slide shows two joined triangles only to show what joined means; it never shows a count. Do not write the numbers on the slide: children write them on their own paper as a list. A child who counts 3 more each time is asked to look at the shared strip. A child without strips draws the sticks as lines."
   },
   {
    "id": "s-explore2",
@@ -527,7 +527,7 @@
      "text": "The same number more each time."
     }
    ],
-   "note": "Look at how the sticks grow: 3 to 5 is 2 more, 5 to 7 is 2 more, 7 to 9 is 2 more, 9 to 11 is 2 more. The sticks grow by 2 each time. Ask: how many more sticks each time (2); why only 2 and not 3 (the new triangle shares one stick with the one before). Children trace the plus 2 arrows with a finger. The number of pictures goes up by 1, and the number of sticks goes up by 2."
+   "note": "Look at how the sticks grow: 3 to 5 is 2 more, 5 to 7 is 2 more, 7 to 9 is 2 more, 9 to 11 is 2 more. The sticks grow by 2 each time. Ask: how many more sticks each time (2); why only 2 and not 3 (the new triangle shares one stick with the one before). Children trace the plus 2 arrows with a finger. The number of pictures goes up by 1, and the number of sticks goes up by 2. Say once: 3, 5, 7, 9, 11 are odd numbers, every time (odd and even are from Term 2 Lesson 14); this is used again at Think harder."
   },
   {
    "id": "s-m3",
@@ -731,9 +731,47 @@
       "S2"
      ],
      "short": true
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "Groups",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "rows": [
+      [
+       "Red beads",
+       "3",
+       "6",
+       "[]",
+       "12",
+       ""
+      ],
+      [
+       "Blue beads",
+       "2",
+       "4",
+       "6",
+       "[]",
+       ""
+      ]
+     ],
+     "col_w": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
     }
    ],
-   "note": "Read questions 1 and 2 aloud. Children work on their own with their strips; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder. Question 1: count the sticks in squares in a row and fill in the table. Question 2: a table of red and blue beads: for every 3 red beads there are 2 blue beads."
+   "note": "Read questions 1 and 2 aloud. Children work on their own with their strips; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder. Question 1: count the sticks in squares in a row and fill in the table. Question 2: a table of red and blue beads: for every 3 red beads there are 2 blue beads. The table for question 2 is repeated large under the questions so it can be read from the screen."
   },
   {
    "id": "s-ws1ans",
@@ -769,9 +807,68 @@
       "S5"
      ],
      "short": true
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "table",
+        "head": [
+         "Squares",
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7"
+        ],
+        "rows": [
+         [
+          "Sticks",
+          "4",
+          "7",
+          "10",
+          "[]",
+          "[]",
+          "[]",
+          ""
+         ]
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "table",
+        "head": [
+         "Day",
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6"
+        ],
+        "rows": [
+         [
+          "Pages",
+          "5",
+          "10",
+          "[]",
+          "20",
+          "[]",
+          "[]"
+         ]
+        ]
+       }
+      ]
+     ]
     }
    ],
-   "note": "Read questions 3 to 5 aloud. Question 3: continue the squares table, say how many more each time, and find 7 squares. Question 4: pages read each day, a table for 6 days. Question 5: tick True or False for three statements about the squares. Children may use their strips to check. Wait 10 seconds before helping."
+   "note": "Read questions 3 to 5 aloud. Question 3: continue the squares table, say how many more each time, and find 7 squares. Question 4: pages read each day, a table for 6 days. Question 5: tick True or False for three statements about the squares. Children may use their strips to check. Wait 10 seconds before helping. The tables for questions 3 and 4 are repeated large under the questions so they can be read from the screen."
   },
   {
    "id": "s-ws2ans",
@@ -903,7 +1000,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 21 cups; option 3, 15 pages; No. Do not read out any child result."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 21 cups; option 3, 15 pages; 17 sticks. Do not read out any child result."
   },
   {
    "id": "s-look",
@@ -954,7 +1051,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "Squares in a row: 1 square uses 4 sticks, 2 squares use 7, 3 squares use 10."
+     "text": "Squares in a row: 1 square uses 4 sticks, 2 squares use 7, 3 squares use 10, 4 squares use 13, 5 squares use 16."
     },
     {
      "t": "visual",
@@ -964,7 +1061,8 @@
       "1",
       "2",
       "3",
-      "4"
+      "4",
+      "5"
      ],
      "rows": [
       [
@@ -972,16 +1070,17 @@
        "4",
        "7",
        "10",
-       "[]"
+       "13",
+       "16"
       ]
      ]
     },
     {
      "t": "p",
-     "text": "How many sticks for 4 squares?"
+     "text": "How many sticks for 9 squares?"
     }
    ],
-   "note": "Optional, only if you are on time. A table of squares in a row: 4, 7, 10 and the next number is 13 (3 more each time). Take two answers; ask: how many more sticks does each new square need (3, one square shares a side). Then ask: why 3 and not 4. This is the same move as the triangles. Take the idea, not the speed.",
+   "note": "Optional, only if you are on time. A table of squares in a row: 4, 7, 10, 13, 16, going up by 3 each time (one side is shared). Nine squares: 16 and 4 more squares of 3 sticks each is 16 + 12 = 28; or 3 times 9 is 27 and 1 more is 28. Take two answers; ask: how many more sticks does each new square need (3, one side is shared). Then ask: why 3 and not 4. This is the same move as the triangles. Take the idea, not the speed.",
    "optional": true
   },
   {
@@ -1036,25 +1135,29 @@
       "text": "@rec"
      },
      {
-      "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
-      "s": 12
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your paper strips on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your paper strips on the table."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
       "text": "Today we make a table. A table helps us find a picture that is far away, without drawing every one."
      },
      {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1208,7 +1311,7 @@
      },
      {
       "k": "SAY",
-      "text": "Today your strips are the sticks. Make one triangle with three strips. Count them. Now make a second triangle that joins the first one. Count all your strips. Then a third."
+      "text": "Today your strips are the sticks. Make one triangle with three strips. Count them. Now make a second triangle that joins the first one and shares one strip with it, like the picture. Count all your strips. Then a third."
      },
      {
       "k": "WORK",
@@ -1262,7 +1365,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say what they have made and may tilt the camera to the table. Answers: 3, 5, 7, then 9 strips for four triangles; guess 11 for five triangles. Do not say the rule before the children do. Do not confirm 11 until the Mini-lesson."
+      "text": "Main room only; children say what they have made. Tilting the camera to the table is allowed; a face need not be in view; nothing is held up to the camera. Answers: 3, 5, 7, then 9 strips for four triangles; guess 11 for five triangles. Do not say the rule before the children do. Do not confirm 11 until the Mini-lesson."
      }
     ]
    },
@@ -1312,6 +1415,10 @@
      {
       "k": "SAY",
       "text": "The new triangle shares one stick with the one before it."
+     },
+     {
+      "k": "SAY",
+      "text": "Three, five, seven, nine, eleven: every number is odd. Remember that word, odd."
      },
      {
       "k": "SLIDE",
@@ -1499,7 +1606,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder has the 10th and 20th picture, why a row of triangles never uses an even number of sticks and a wrong number in a table. Go further has Picture 100, working back from a total and the squares against the triangles (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 16 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder has the 10th and 20th picture, why a row of triangles never uses an even number of sticks and a wrong number in a table. Go further has Picture 100, working back from a total and the squares against the triangles (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -1569,7 +1676,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Each tray holds 7 cups. 1 tray: 7 cups. 2 trays: 14 cups. 3 trays: blank cups. E2. Mei reads 3 pages each day. How many pages does she read in 5 days? Choose the correct answer. Option 1: 8. Option 2: 12. Option 3: 15. Option 4: 35. Write its number in the bracket. E3. Can exactly 12 sticks make a row of triangles with none left over? Circle Yes or No.",
+      "text": "E1. Each tray holds 7 cups. 1 tray: 7 cups. 2 trays: 14 cups. 3 trays: blank cups. E2. Mei reads 3 pages each day. How many pages does she read in 5 days? Choose the correct answer. Option 1: 8. Option 2: 12. Option 3: 15. Option 4: 35. Write its number in the bracket. E3. Rows of triangles use 3, 5, 7 and 9 sticks for 1, 2, 3 and 4 triangles. Each new triangle needs 2 more sticks. How many sticks for 8 triangles?",
       "s": 70
      },
      {
@@ -1583,7 +1690,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: 21 cups. E2: option 3, 15 pages. E3: No."
+      "text": "E1: 21 cups. E2: option 3, 15 pages. E3: 17 sticks."
      },
      {
       "k": "SAY",
@@ -1635,7 +1742,7 @@
      },
      {
       "k": "SAY",
-      "text": "Optional, only if you are on time: squares in a row use 4, 7 and 10 sticks. How many sticks for 4 squares?",
+      "text": "Optional, only if you are on time: squares in a row use 4, 7, 10, 13 and 16 sticks. How many sticks for 9 squares?",
       "optional": true
      },
      {
@@ -1656,7 +1763,7 @@
      },
      {
       "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 13 sticks (3 more each time). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 28 sticks (3 more each time: 16 and 4 more squares of 3 each is 28). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
      }
     ]
    }
@@ -1668,7 +1775,7 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Squares in a row are made with sticks. Look at the picture. Count the sticks.",
+    "text": "Squares in a row are made with sticks. Look at the three pictures. Count the sticks in each.",
     "parts": [
      {
       "l": "a",
@@ -1702,17 +1809,29 @@
      "Writing 12 for 3 squares."
     ],
     "mins": 3.5,
-    "visual": {
-     "type": "stick_pattern",
-     "shape": "square",
-     "n": 3
-    }
+    "visuals": [
+     {
+      "type": "stick_pattern",
+      "shape": "square",
+      "n": 1
+     },
+     {
+      "type": "stick_pattern",
+      "shape": "square",
+      "n": 2
+     },
+     {
+      "type": "stick_pattern",
+      "shape": "square",
+      "n": 3
+     }
+    ]
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "For every 3 red beads there are 2 blue beads. Fill in the table.",
+    "text": "For every 3 red beads there are 2 blue beads. Fill in the table. The last column is spare.",
     "parts": [
      {
       "l": "",
@@ -1741,7 +1860,8 @@
       "1",
       "2",
       "3",
-      "4"
+      "4",
+      "5"
      ],
      "rows": [
       [
@@ -1749,18 +1869,21 @@
        "3",
        "6",
        "[]",
-       "12"
+       "12",
+       ""
       ],
       [
        "Blue beads",
        "2",
        "4",
        "6",
-       "[]"
+       "[]",
+       ""
       ]
      ],
      "col_w": [
       3,
+      1,
       1,
       1,
       1,
@@ -1772,7 +1895,7 @@
     "id": "S3",
     "page": 2,
     "tier": "start",
-    "text": "Siti keeps adding squares to the row. Fill in the table.",
+    "text": "Siti keeps adding squares to the row. Fill in the table. The last column is spare.",
     "parts": [
      {
       "l": "a",
@@ -1811,7 +1934,8 @@
       "3",
       "4",
       "5",
-      "6"
+      "6",
+      "7"
      ],
      "rows": [
       [
@@ -1821,7 +1945,8 @@
        "10",
        "[]",
        "[]",
-       "[]"
+       "[]",
+       ""
       ]
      ]
     }
@@ -1978,7 +2103,7 @@
      },
      {
       "l": "b",
-      "text": "The number of sticks in a row of triangles is always odd or even? Circle one.",
+      "text": "Are the sticks in a row of triangles always odd, or always even? Circle one.",
       "ans": "odd",
       "val": "odd",
       "choices": [
@@ -2015,7 +2140,7 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Ben made a table for squares in a row. One number is wrong.",
+    "text": "A child made a table for squares in a row. One number is wrong.",
     "parts": [
      {
       "l": "a",
@@ -2299,20 +2424,23 @@
   },
   {
    "id": "E3",
-   "text": "Can exactly 12 sticks make a row of triangles with none left over? Circle Yes or No.",
-   "parts": [],
-   "answer": "No",
+   "text": "Rows of triangles use 3, 5, 7 and 9 sticks for 1, 2, 3 and 4 triangles. Each new triangle needs 2 more sticks.",
+   "parts": [
+    {
+     "l": "",
+     "text": "8 triangles need ____ sticks.",
+     "ans": "17",
+     "val": 17
+    }
+   ],
+   "answer": "17",
    "val": [
-    "No"
+    17
    ],
-   "choices": [
-    "Yes",
-    "No"
-   ],
-   "solution": "A row of triangles uses an odd number of sticks: 3, 5, 7, 9, 11, 13. 12 is even, so it is not possible.",
+   "solution": "Go on in twos: 4 triangles 9, 5 triangles 11, 6 triangles 13, 7 triangles 15, 8 triangles 17. Or double 8 is 16 and 1 more is 17.",
    "mistakes": [
-    "Saying Yes because 12 is near 11 and 13.",
-    "Counting 3 sticks for each triangle: 4 triangles."
+    "Writing 24 (8 times 3): the shared sticks are counted twice.",
+    "Stopping early at 15 (7 triangles) or 16."
    ]
   }
  ],
@@ -2370,7 +2498,7 @@
    "text": "Squares in a row use 4 sticks for 1 square, 7 sticks for 2 squares and 10 sticks for 3 squares. A row uses 40 sticks. How many squares? ____",
    "answer": "13",
    "val": 13,
-   "solution": "Take away the first square: 40 minus 4 is 36. Each other square adds 3: 36 shared into groups of 3 is 12. So there are 12 and 1 more squares: 13."
+   "solution": "Take away the first square: 40 minus 4 is 36. Each other square adds 3: 36 shared into groups of 3 is 12. So the first square and 12 more make 13 squares."
   },
   {
    "id": "H5",
@@ -2896,7 +3024,7 @@
    "rule: what the table does, said in words"
   ],
   "try_home": [
-   "Make a table: 1 cup, 2 cups, 3 cups of water, with spoons of sugar for each. Ask: what is the next number?",
+   "Make a table: 2 spoons of sugar in each cup. 1 cup 2 spoons, 2 cups 4 spoons, 3 cups ___. How many spoons for 5 cups?",
    "Stick game: build triangles in a row with 14 paper strips or straws, never matches or toothpicks.",
    "Ask: how do you know? How many more each time?"
   ],
@@ -2906,13 +3034,13 @@
    "Can you find the next number without drawing?"
   ],
   "when_stuck": "Let your child use the strips and wait 10 seconds before helping. Asking \"how many more sticks did the last triangle need?\" works better than giving the number. Please do not teach letters for a rule: we say it in words. If the look-back page says \"I am still stuck\", photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Spot the Mistake. Online practice: your tutor will share the link.",
+  "next": "Next lesson: Spot the Mistake. Online practice: your tutor will share the link. Please do not share the recording.",
   "quote": "A table shows how the numbers grow. Then we can go on without drawing.",
   "report_line": "Your child is learning to find a pattern in a table and use it to go further. This week: sticks in rows of triangles and squares, and tables of equal groups.",
-  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "term_line": "Your child is learning to give a reason for each step.",
   "next_materials": [
    "Your Term 3 book (Book 6): tear out the mistake-card page along the dashed line, then a grown-up cuts out the 8 cards (the mat is not cut)",
-   "Keep the paper strips in their envelope",
+   "The paper strips are not needed again",
    "A pencil, a rubber and paper"
   ]
  },
@@ -2929,7 +3057,7 @@
   "Solve every workbook question yourself first, with your own strips. Check: S1 4, 7, 10; S2 9, 8 and 15; S3 13, 16, 19, 3 and 22; S4 15, 25, 30 and day 5; S5 true, false, true; T1 21, 41 and add 1; T2 No, odd and Yes; T3 4, 13 and 3; G1 201, 301 and 151; G2 15 and 12; G3 10, 20 and 5; I1 6 and 4.",
   "Tell parents a week before: tear out the strip page (page 6) along the dashed line; a grown-up cuts out the 14 strips and keeps them in an envelope. With no printer: 14 short strips of paper or straws of the same length. Never matches or toothpicks.",
   "Have the slides open. Have your own strips to show on camera if you wish. Say sticks in the table and strips on the desk, and say the rule in words (double and add 1): never a letter, never the word formula.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly without first names, then say the recording notice; do not use first names while the recording runs. Nobody holds paper up to the camera.",
   "Be plain with families: completing a table of equal groups is Primary 1 work; the stick pattern, the 10th and 20th picture, working back from a total and the 100th picture go beyond Primary 1 on purpose. The topic is new, so a tutor or the owner should confirm the placement. Do not call the lesson MOE-aligned.",
   "Slides s-explore3, s-m3 and s-m6 keep the answers off the screen while you ask: the answer is confirmed on the slide after. Read every question, every table and the four options of E2 aloud."
  ],
@@ -2948,7 +3076,7 @@
    {
     "type": "stick_strips",
     "title": "Kit page: paper strips",
-    "intro": "A grown-up cuts out all 14 strips before the lesson. They are the sticks for triangles and squares in a row. We build up to 4 triangles in class and use up to 13 strips in the Investigation. Keep the strips in an envelope. Never use matches or toothpicks."
+    "intro": "A grown-up cuts out all 14 strips before the lesson. They are the sticks for triangles and squares in a row. We build up to 4 triangles in class and use up to 13 strips in the Investigation. No printer or no cutting? Use 14 short strips of paper or straws of the same length. Keep the strips in an envelope. Never use matches or toothpicks."
    }
   ]
  },

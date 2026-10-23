@@ -99,13 +99,13 @@ def run(d):
     t = tabs(sl['s-m3']['blocks'])[0]; eq((nums(t['head'][1:]), t['rows'][0][1], tri_sticks(6), tri_sticks(7)), ([5, 6, 7], '11', 13, 15), 's-m3: 6th is 13, 7th is 15')
     t = tabs(sl['s-m5']['blocks'])[0]; eq((nums(t['rows'][0][1:]), nums(t['rows'][1][1:])), ([2 * k for k in range(1, 5)], [2 * k + 1 for k in range(1, 5)]), 's-m5 double and add 1'); eq(2 * 6 + 1, tri_sticks(6), 's-m5 rule for 6')
     t = tabs(sl['s-m6']['blocks'])[0]; eq((nums(t['rows'][0][1:3]), 6 * 3, 6 * 4), ([6, 12], 18, 24), 's-m6 table of equal groups'); eq([b for b in sl['s-m6a']['blocks'] if b.get('t') == 'answer'][0]['text'], 'Jars 3: 18 sweets. Jars 4: 24 sweets.', 's-m6a')
-    t = tabs(sl['s-opt']['blocks'])[0]; eq((nums(t['rows'][0][1:4]), sq_sticks(4)), ([4, 7, 10], 13), 'optional slide: 4 squares use 13')
+    t = tabs(sl['s-opt']['blocks'])[0]; eq((nums(t['head'][1:]), nums(t['rows'][0][1:]), sq_sticks(9)), ([1, 2, 3, 4, 5], [sq_sticks(k) for k in range(1, 6)], 28), 'optional slide: 5 squares are given, 9 squares use 28'); eq('28 sticks' in ' '.join(l.get('text', '') for sg_ in d['script']['segments'] for l in sg_['lines'] if sg_['part'] == 'flex'), True, 'optional answer 28 is in the guide')
     # ---------------------------------------------------------------- Start here
-    q = T['S1']; f = q['visual']; eq((f['shape'], f['n']), ('square', 3), 'S1 picture'); eq([sq_sticks(k) for k in (1, 2, 3)], q['val'], 'S1'); eq(svg_sticks('square', 3), 10, 'S1 picture draws 10 sticks')
-    q = T['S2']; t = q['visual']; red, blue = t['rows']; eq((nums(red[1:]), nums(blue[1:])), ([3, 6, '[]', 12], [2, 4, 6, '[]']), 'S2 table'); groups = [(3 * k, 2 * k) for k in range(1, 8)]
+    q = T['S1']; fs = q['visuals']; eq([(f['shape'], f['n']) for f in fs], [('square', 1), ('square', 2), ('square', 3)], 'S1 pictures: 1, 2 and 3 squares'); eq([sq_sticks(k) for k in (1, 2, 3)], q['val'], 'S1'); eq([svg_sticks('square', f['n']) for f in fs], q['val'], 'S1 pictures draw 4, 7 and 10 sticks')
+    q = T['S2']; t = q['visual']; red, blue = t['rows']; eq((nums(red[1:]), nums(blue[1:]), t['head'][1:]), ([3, 6, '[]', 12, ''], [2, 4, 6, '[]', ''], ['1', '2', '3', '4', '5']), 'S2 table (the fifth column is spare, for 10 blue beads)'); groups = [(3 * k, 2 * k) for k in range(1, 8)]
     eq(([g for g in groups if g[0] == 9][0][1], [g for g in groups if g[1] == 8][0][0], [g for g in groups if g[1] == 10][0][0], q['val']), (6, 12, 15, [9, 8, 15]), 'S2: 9 red goes with 6 blue (check), 8 blue goes with 12 red (check), 10 blue goes with 15 red')
     eq((3 * 3, 2 * 4, q['val'][:2]), (9, 8, [9, 8]), 'S2 boxes: 3 groups of red, 4 groups of blue')
-    q = T['S3']; t = q['visual']; eq((nums(t['rows'][0][1:4]), nums(t['head'][1:])), ([4, 7, 10], [1, 2, 3, 4, 5, 6]), 'S3 table given'); eq([sq_sticks(k) for k in (4, 5, 6)], [13, 16, 19], 'S3 boxes'); eq((sq_sticks(7) - sq_sticks(6), sq_sticks(7), q['val']), (3, 22, [13, 16, 19, 3, 22]), 'S3 parts')
+    q = T['S3']; t = q['visual']; eq((nums(t['rows'][0][1:4]), nums(t['head'][1:]), t['rows'][0][4:]), ([4, 7, 10], [1, 2, 3, 4, 5, 6, 7], ['[]', '[]', '[]', '']), 'S3 table given (the seventh column is spare, for 7 squares)'); eq([sq_sticks(k) for k in (4, 5, 6)], [13, 16, 19], 'S3 boxes'); eq((sq_sticks(7) - sq_sticks(6), sq_sticks(7), q['val']), (3, 22, [13, 16, 19, 3, 22]), 'S3 parts')
     q = T['S4']; t = q['visual']; eq([5 * k for k in range(1, 7)], [5, 10, 15, 20, 25, 30], 'S4 days'); eq((t['rows'][0], q['val']), (['Pages', '5', '10', '[]', '20', '[]', '[]'], [15, 25, 30, 5]), 'S4 table and answers'); eq([k for k in range(1, 7) if 5 * k == 25], [5], 'S4 part: 25 pages is day 5')
     q = T['S5']; eq([sq_sticks(2) - sq_sticks(1) == 3 and sq_sticks(5) - sq_sticks(4) == 3, sq_sticks(4) == 16, sq_sticks(6) == 19], [True, False, True], 'S5 statements'); eq(q['val'], ['True', 'False', 'True'], 'S5 val')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes'); eq(len(d['tiers']['start']), 5, 'five Start here questions')
@@ -127,7 +127,7 @@ def run(d):
     eq((tri_sticks(5), 5 * 3, tri_sticks(3)), (11, 15, 7), 'talk: 5 triangles need 11, not 15; 3 triangles need 7'); eq(d['talk']['answer'].startswith('No.'), True, 'talk answer')
     # ---------------------------------------------------------------- exit
     q = X['E1']; eq((7 * 3, q['val']), (21, [21]), 'E1'); q = X['E2']; eq(([3 * k for k in range(1, 6)][4], q['mcq']['options'][q['val'][0] - 1]), (15, '15'), 'E2')
-    q = X['E3']; eq(([k for k in range(1, 100) if tri_sticks(k) == 12], q['val']), ([], ['No']), 'E3 no row of triangles uses 12 sticks')
+    q = X['E3']; eq((tri_sticks(8), q['val'], 2 * 8 + 1, [tri_sticks(k) for k in (1, 2, 3, 4)]), (17, [17], 17, [3, 5, 7, 9]), 'E3: 8 triangles use 17 sticks (a taught step: 2 more each time, never the odd and even idea)'); eq(8 not in (6, 7, 5), True, 'E3 asks for a number the class does not (the class goes to 7 triangles)')
     # ---------------------------------------------------------------- home
     eq((5 * 3, 5 * 4, H['H1']['val']), (15, 20, [15, 20]), 'H1'); eq(([3 * k for k in range(1, 5)][3], H['H2']['val']), (12, 12), 'H2: 8 pens is 4 groups of 2, so 12 pencils')
     eq((tri_sticks(15), H['H3']['val']), (31, 31), 'H3'); eq(([k for k in range(1, 100) if sq_sticks(k) == 40], H['H4']['val']), ([13], 13), 'H4'); eq((27 + 16 - 9, H['H5']['val'], H['H5'].get('rewind_of')), (34, 34, 'Term 1 Lesson 8'), 'H5 rewind')
@@ -152,4 +152,11 @@ def run(d):
     nm = ' '.join(d['parent']['next_materials'])
     eq(('8' in nm, 'mistake-card' in nm, 'cut' in nm, 'mat' in nm), (True, True, True, True), 'hand-off to Lesson 29 names the 8 mistake cards and the mat')
     eq(d['workbook']['kits'][0]['type'], 'stick_strips', 'kit type')
+    op = [x['text'] for x in d['script']['segments'][0]['lines'] if x['k'] in ('SAY', 'DO')]; ot = ' '.join(op)
+    eq(('Nobody holds paper up to the camera' in ot, 'any voice that is not muted' in ot, 'Do not use children' in ot, 'by first name as they arrive' in ot), (True, True, True, False), 'opening carries the Term 1 recording and camera wording')
+    eq('Ben' in json.dumps(d['tiers']), False, 'no child is named with wrong working in Think harder')
+    eq(any('odd' in l.get('text', '') and 'Remember that word' in l.get('text', '') for sg_ in d['script']['segments'] for l in sg_['lines']), True, 'the Mini-lesson says odd once before Think harder uses it')
+    eq(d['parent']['term_line'], 'Your child is learning to give a reason for each step.', 'term line fits the lesson')
+    eq(('2 spoons' in d['parent']['try_home'][0], 2 * 5), (True, 10), 'parent try-at-home 1 gives the rule (2 spoons a cup)')
+    eq((tri_sticks(8) not in [tri_sticks(k) for k in range(1, 8)], 28 in [sq_sticks(k) for k in range(1, 10)]), (True, True), 'new exit and optional numbers are not class numbers')
     return n

@@ -31,3 +31,20 @@ Details: `FIXES_T3_L25.md`, `FIXES_T3_L26.md`.
 4. `qs` slides show table and bar-model thumbnails too small (L25 S2, L26 S6): size option.
 5. Runner: "Term 3" in the sub line; a `set`/list item for "which two tags cost exactly $N" and "list every way" (L25 and L26 online).
 6. L24 hand-off to L25 (price tags) checked true; `l26.json` hand-off to L27 now names the last page of the Lesson 27 workbook.
+
+## Lessons 27 and 28 (Term 3 Lessons 7 and 8): needs outside the lesson files
+
+Lesson fix details: `FIXES_T3_L27.md`, `FIXES_T3_L28.md`.
+
+**Owned by another agent (report only)**
+
+1. `lessons/l20.json` hand-off to Term 3 (clock page cut out by a grown-up, $1 tokens kept): still not corrected; reported in both lessons.
+2. `l30.json` Quest gate for Lesson 27 (a 3 by 3 grid with five boxes filled) and for Lesson 28 (triangles 3, 5, 7 sticks): the numbers and grids must differ from the class and workbook ones (`verify/l27_checks.py` lists every Lesson 27 grid).
+
+**Shared tools (not edited)**
+
+3. `tools/figs3.py grid_tiles` (Lesson 27): mat 2 (4 by 4) loses its last column (the table is wider than the page, 3 columns and a stump); tile cut cells 2.7 mm apart (rule 6 mm, page 62% full, so tiles can be 22 mm with 6 mm gaps).
+4. `tools/figs3.py stick_strips` (Lesson 28): strips 6 mm tall with 3.7 mm between cut cells; make 8 mm strips and 6 mm gaps (page about 50% full). `stick_pattern`: collinear sticks merge into single lines in print, deck and online; draw each stick as a separate bar with a small gap or alternating tone, at least 25 mm tall.
+5. `tools/b_print.py`: kit sentence "We use them again" is wrong for the grid tiles and the strips (no later lesson uses them); home practice items cannot carry a picture (Lesson 27 H3 and H4 need a small grid, Lesson 28 H3 and H4 a stick picture); look-back boxes wrap and orphan "I would like to pass".
+6. `tools/b_guide.py`: timing assumptions still print "papers to the camera 30 s".
+7. `tools/b_deck.py`: a one-column `panel` is drawn at the full slide width (it cannot show a column of tiles); the tiny box label in `panel` cannot be enlarged; `qs` rows draw table thumbnails far too small (Lesson 28 slides s-ws1 and s-ws2: the tables are now repeated large as separate blocks).
