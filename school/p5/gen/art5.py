@@ -53,8 +53,7 @@ def tri_base_height(b, h, foot=0.5, side=None, w=62, hh=40, name=None, pts_named
     o.append(T((B[0] + C[0]) / 2, y0 + 4.0, f"{b} cm", size=4.0, attrs='data-r="base"'))
     o.append(TB(fx + (1.0 if foot <= 0.5 else -1.0), (A[1] + y0) / 2 + 2.0, f"{h} cm", anchor="start" if foot <= 0.5 else "end", size=3.9, attrs='data-r="height"'))
     if side is not None:
-        if foot > 0.15 and foot < 0.9: o.append(T((A[0] + B[0]) / 2 - 1.8, (A[1] + B[1]) / 2 - 0.5, f"{side} cm", anchor="end", size=3.9, attrs='data-r="side"'))
-        else: o.append(T((A[0] + C[0]) / 2 + 1.8, (A[1] + C[1]) / 2 - 0.5, f"{side} cm", anchor="start", size=3.9, attrs='data-r="side"'))
+        if 0.2 < foot < 0.8 and b >= 9: o.append(T((A[0] + B[0]) / 2 - 1.8, (A[1] + B[1]) / 2 - 0.5, f"{side} cm", anchor="end", size=3.9, attrs='data-r="side"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="tri"')
 
 def read_tri(h):

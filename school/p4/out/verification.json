@@ -1052,7 +1052,7 @@
   "seed": 5719,
   "checks": [
    {
-    "name": "V2 code word spells FAMILY",
+    "name": "V2 code word spells TURKEY",
     "ok": true,
     "detail": ""
    },
@@ -1069,20 +1069,20 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['family']"
+    "detail": "['turkey']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['family', 'infamy', 'mainly']"
+    "detail": "['equity', 'quirky', 'turkey']"
    },
    {
     "name": "V1 independent solver (the two arms read from the drawing: the angle between them) equals the key",
     "ok": true,
-    "detail": "[130, 40, 60, 95, 80, 105]"
+    "detail": "[165, 30, 55, 155, 35, 110]"
    },
    {
-    "name": "V7 angles are multiples of 5 between 25 and 165; arms point both to the right and to the left",
+    "name": "V7 angles are multiples of 5 (not of 20) between 25 and 165; arms point both to the right and to the left",
     "ok": true,
     "detail": ""
    },
@@ -1137,7 +1137,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fickle', 'pickle', 'police']"
+    "detail": "['coiled', 'copied', 'dipole', 'docile', 'locked', 'picked']"
    },
    {
     "name": "V1 independent solver (fractions and numbers read from the printed stories; each story solved with exact fractions) equals the key",
@@ -1420,14 +1420,14 @@
   "seed": 6626,
   "checks": [
    {
-    "name": "V2 code word spells TURKEY",
+    "name": "V2 code word spells FAMILY",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 241 000 words)",
     "ok": true,
-    "detail": "1314/1314"
+    "detail": "1296/1296"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1437,17 +1437,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['turkey']"
+    "detail": "['family']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['equity', 'quirky', 'turkey']"
+    "detail": "['family', 'infamy', 'mainly']"
    },
    {
     "name": "V1 independent solver (each printed question worked out exactly, then rounded where asked) equals the key",
     "ok": true,
-    "detail": "['23.52', '2.46', '3.625', '2.82', '6.25', '2.1']"
+    "detail": "['29.26', '8.4', '2.625', '2.45', '1.6', '6.3']"
    },
    {
     "name": "V7 decimals have at most 3 decimal places and every divisor is a 1-digit number",
@@ -1457,8 +1457,8 @@
   ],
   "generator_slip_test": [
    1.0,
-   1314,
-   1314
+   1296,
+   1296
   ]
  },
  {

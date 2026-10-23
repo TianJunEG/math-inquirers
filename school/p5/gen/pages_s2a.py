@@ -38,7 +38,7 @@ def page21():
           "A box has {n} pens. {k} of them are blue. What percentage of the pens are blue?"]
     for _ in range(8000):
         items = []
-        bar_ns = [10, 20, 25, rng.choice([10, 20, 25])]; rng.shuffle(bar_ns)
+        bar_ns = [10, 20, 10, 20]; rng.shuffle(bar_ns)
         for kd in ["bar", "bar", "bar", "bar", "txt", "txt"]:
             if kd == "bar":
                 n = bar_ns.pop(); k = rng.randint(1, n - 1)
@@ -49,7 +49,7 @@ def page21():
         if len(items) < 6 or any(it[3] is None for it in items): continue
         ans = [Fr(it[3]) for it in items]
         if not distinct(ans): continue
-        if sum(1 for it in items if it[1] == 25) > 2 or len({it[1] for it in items if it[0] == 'bar'}) < 3: continue
+        if sum(1 for it in items if it[1] == 25) > 2 or False: continue
         pool = []
         for kd, n, k, a in items: pool += [Fr(k), Fr(100 - a), Fr(n - k), Fr(a + 10), Fr(a - 10) if a > 10 else Fr(a + 5), Fr(a * 2)]
         pool = [p for p in dict.fromkeys(pool) if p not in ans and 0 < p <= 100]

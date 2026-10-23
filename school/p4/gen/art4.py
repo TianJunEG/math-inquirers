@@ -158,7 +158,7 @@ def protractor_svg(angle, base="right", R=28.0, size=72):
         x3, y3 = pol(cx, cy, Ri, k); x4, y4 = pol(cx, cy, Ri + (3.0 if major else 1.7), k)
         p.append(f'<line x1="{x3:.2f}" y1="{y3:.2f}" x2="{x4:.2f}" y2="{y4:.2f}" stroke="#000" stroke-width="{0.5 if major else 0.35}"/>')
         if k % 20 == 0 and k not in (0, 180): p.append(label(k, R - 5.9, k))
-        if k % 20 == 0 and 40 <= k <= 140: p.append(label(k, Ri - 5.0, 180 - k))
+        if k in (40, 60, 120, 140): p.append(label(k, Ri - 5.0, 180 - k))
     def flat(x, y, txt):
         return (f'<text x="{x:.2f}" y="{y:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="700" font-size="3.0" fill="#000">{txt}</text>')
     p.append(flat(cx + R - 4.2, cy - 2.6, 0)); p.append(flat(cx - R + 4.6, cy - 2.6, 180))          # outer scale: 0 at the right end, 180 at the left end

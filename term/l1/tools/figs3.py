@@ -327,7 +327,7 @@ def shapes2d(shape='circle', parts=1, shade=(), fold=None, compose=None, size=15
 
 # ------------------------------------------------------------------ grid
 
-def grid(rows=3, cols=3, kind='dots', poly=None, route=None, start=None, end=None, squares=(), counts=None, mirror=None, mark=(), cell=64, blank=False):
+def grid(rows=3, cols=3, kind='dots', poly=None, route=None, start=None, end=None, squares=(), counts=None, mirror=None, mark=(), cell=64, blank=False, compass=False):
     """kind='dots': (cols+1) x (rows+1) dots; kind='squares': rows x cols squares. Coordinates are (x, y) from the top-left dot.
     poly=[[x,y],...] a filled polygon through dots; route=[[x,y],...] arrows along a path; start/end=[x,y] markers; squares=[[r,c],...] yellow;
     counts={'r,c': text} written in a square ('[]' for an answer box); mirror=k draws a dashed mirror line after column k; blank=True leaves the right half empty."""
@@ -364,6 +364,8 @@ def grid(rows=3, cols=3, kind='dots', poly=None, route=None, start=None, end=Non
         x, y = P(*end); body.append(f'<rect x="{x - 16}" y="{y - 16}" width="32" height="32" rx="5" fill="{YEL}" stroke="{NAVY}" stroke-width="2.6"/><text x="{x}" y="{y + 7.5}" font-size="21" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">E</text>')
     if mirror is not None:
         x = pad + mirror * cell; body.append(f'<line x1="{x}" y1="{pad - 16}" x2="{x}" y2="{pad + rows * cell + 16}" stroke="{TEAL}" stroke-width="4" stroke-dasharray="10 7"/>')
+    if compass:
+        body.append(_compass_words(pad, pad, pad + cols * cell, pad + rows * cell))
     return _svg(W, H, ''.join(body), f'{kind} grid {cols} by {rows}')
 
 
@@ -386,7 +388,16 @@ def _tagged(svgtxt, letter):
 
 # ------------------------------------------------------------------ cube stack
 
-def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False):
+def _compass_words(x0, y0, w, h):
+    """BACK above, FRONT below, LEFT and RIGHT at the sides of a top view or of a square answer grid whose top-left corner is (x0, y0) and bottom-right (w, h)."""
+    cx, cy = (x0 + w) / 2, (y0 + h) / 2
+    st = f'font-size="19" font-weight="800" fill="{TEAL}" font-family="{FONT}" text-anchor="middle"'
+    return (f'<text x="{cx:.1f}" y="{y0 - 8}" {st}>BACK</text><text x="{cx:.1f}" y="{h + 22}" {st}>FRONT</text>'
+            f'<text x="{x0 - 10}" y="{cy:.1f}" {st} transform="rotate(-90 {x0 - 10} {cy:.1f})">LEFT</text>'
+            f'<text x="{w + 10}" y="{cy:.1f}" {st} transform="rotate(90 {w + 10} {cy:.1f})">RIGHT</text>')
+
+
+def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False, compass=False):
     """heights: rows (back to front) of columns (left to right), each 0-3. mode 'iso' = isometric picture; 'top' = numbered top view; 'views' = front view
     (tallest in each column) beside a numbered top view."""
     R = len(heights); C = max(len(r) for r in heights)
@@ -398,6 +409,11 @@ def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False):
                 body.append(f'<rect x="{x0 + k * c}" y="{y0 + r * c}" width="{c}" height="{c}" fill="#fff" stroke="{NAVY}" stroke-width="2.4"/><text x="{x0 + k * c + c / 2}" y="{y0 + r * c + c / 2 + 9}" font-size="26" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{h}</text>')
         return x0 + C * c, y0 + R * c
     if mode == 'top':
+        if compass:
+            x0, y0 = 40, 34
+            w, h = top_view(x0, y0)
+            body.append(_compass_words(x0, y0, w, h))
+            return _svg(w + 40, h + 40, ''.join(body), 'top view of a stack: back at the top, front at the bottom')
         w, h = top_view(10, 10)
         return _svg(w + 10, h + 10, ''.join(body), 'top view of a stack')
     if mode == 'views':
@@ -423,6 +439,15 @@ def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False):
             right = f'M{x + w3:.1f} {y - s + h3:.1f} l{-w3:.1f} {h3:.1f} v{s:.1f} l{w3:.1f} {-h3:.1f} Z'
             body.append(f'<path d="{left}" fill="#9FB6DE" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="{right}" fill="#C8D6EF" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="{top}" fill="#EEF3FB" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/>')
     W = 40 + (R + C) * w3; H = oy + (R + C) * h3 + 20        # tight to the stack: a low stack is drawn larger
+    if compass:      # a compass at the left: arrows on the floor directions (back = up right, left = up left, front = down left, right = down right)
+        cx, cy = 104, H * 0.5; L1 = 40; cw, ch = L1 * 0.866, L1 * 0.5
+        comp = []
+        for word, dx, dy, lx, ly, anc in (('BACK', cw, -ch, 4, -6, 'start'), ('LEFT', -cw, -ch, -4, -6, 'end'), ('FRONT', -cw, ch, -4, 17, 'end'), ('RIGHT', cw, ch, 4, 17, 'start')):
+            ex, ey = cx + dx, cy + dy; ang = math.atan2(dy, dx)
+            comp.append(f'<line x1="{cx}" y1="{cy:.1f}" x2="{ex:.1f}" y2="{ey:.1f}" stroke="{TEAL}" stroke-width="3.4" stroke-linecap="round"/>'
+                        f'<polygon points="{ex:.1f},{ey:.1f} {ex - 11 * math.cos(ang) + 6 * math.sin(ang):.1f},{ey - 11 * math.sin(ang) - 6 * math.cos(ang):.1f} {ex - 11 * math.cos(ang) - 6 * math.sin(ang):.1f},{ey - 11 * math.sin(ang) + 6 * math.cos(ang):.1f}" fill="{TEAL}"/>'
+                        f'<text x="{ex + lx:.1f}" y="{ey + ly:.1f}" font-size="17" font-weight="800" text-anchor="{anc}" fill="{TEAL}" font-family="{FONT}">{word}</text>')
+        return _svg(W + 170, H, ''.join(comp) + f'<g transform="translate(170,0)">' + ''.join(body) + '</g>', 'a stack of cubes with a compass: back is up right, left is up left')
     return _svg(W, H, ''.join(body), 'a stack of cubes')
 
 
@@ -611,8 +636,8 @@ def render(v):
     if t == 'calendar': return calendar(v.get('start', 'Wed'), v.get('days', 31), v.get('highlight', ()), v.get('hide', ()), v.get('mark', ()), v.get('week'))
     if t == 'stick_pattern': return stick_pattern(v.get('shape', 'triangle'), v.get('n', 3), v.get('hide_last', False), v.get('label_each', False), handle=v.get('handle', False))
     if t == 'shapes2d': return _tagged(shapes2d(v.get('shape', 'circle'), v.get('parts', 1), v.get('shade', ()), v.get('fold'), v.get('compose'), _draw_size(v), label=v.get('label')), v.get('tag'))
-    if t == 'grid': return _tagged(grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64)), v.get('tag'))
-    if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso')), v.get('tag'))
+    if t == 'grid': return _tagged(grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64), compass=v.get('compass', False)), v.get('tag'))
+    if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso'), compass=v.get('compass', False)), v.get('tag'))
     if t == 'fold_punch': return _tagged(fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())], v.get('draw') or 150), v.get('tag'))
     if t == 'panel': return _tagged(panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130), title=v.get('title')), v.get('tag'))
     if t == 'network': return network(v.get('n', 4), v.get('lines'), v.get('all', False), v.get('labels'), count=v.get('count'), tag=v.get('tag'))
