@@ -11,6 +11,7 @@ Pipeline: unit sources are `extension/l4/src/uNN.py` (helpers in `lib.py`); `pyt
 | 5 Decimal Detectives | written, checked, gates ok, viewed |
 | 6 Angle Turns | written, checked, gates ok, viewed |
 | 7 Area Architects II | written, checked, gates ok, viewed |
-| 8-10 | not started |
+| 8 Symmetry and Nets | written, checked, gates ok, viewed |
+| 9-10 | not started |
 
-Resume: next unit is 8 (Symmetry and Nets).
+Resume: next unit is 9 (Data Detectives).

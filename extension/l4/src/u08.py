@@ -69,7 +69,7 @@ S.append(item(U+'-S07', 'start', 3, 'A dice sits on a table. The top face shows 
 S.append(item(U+'-S08', 'start', 3, 'A box is 4 cm long, 3 cm wide and 2 cm high. Its net is cut from card. Find the area of the card. {b} cm²',
   ans=A(52), why='The 6 faces are 2 of 4 by 3 (12 each), 2 of 4 by 2 (8 each) and 2 of 3 by 2 (6 each). 24 + 16 + 12 = 52 cm².',
   space={'rows': ['Working:']}))
-S.append(item(U+'-S09', 'start', 3, 'Fold on the dashed line. Shade squares so the 2 halves match. How many squares are shaded in all? {b}',
+S.append(item(U+'-S09', 'start', 3, 'Shade squares so the top and bottom halves match on the dashed line. How many are shaded in all? {b}',
   fig=GRID(8, 6, 40, shade=[[3, 0], [3, 1], [3, 2], [3, 3], [2, 1], [2, 2], [2, 4], [1, 2], [1, 3], [0, 2]], axis={'kind': 'h', 'at': 4}, width_mm=60),
   ans=A(20), why='There are 10 shaded squares above the line. Each needs a partner below the line, so 10 more squares are shaded. 10 + 10 = 20.'))
 S.append(item(U+'-S10', 'start', 3, 'A cube has edges of 5 cm.',
@@ -86,7 +86,7 @@ T.append(item(U+'-T02', 'think', 4, 'Mei sees 3 faces of a dice at the same corn
   hint='At a corner, the 3 faces are from 3 different opposite pairs.',
   why='The pairs are 1 and 6, 2 and 5, 3 and 4. She sees one number from each pair, so no two of the 3 numbers add up to 7. The only choice with a total of 10 is 1, 5 and 4. The hidden faces are opposite: 6, 2 and 3.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 3 squares. The up-down line through the middle must be a line of symmetry. How many patterns can you make? {b}',
+T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 3 squares. A fold down the middle must make the halves match. How many patterns can you make? {b}',
   fig=GRID(3, 3, 44, axis={'kind': 'v', 'at': 1.5}, width_mm=42),
   ans=A(10), hint='Middle-column squares match themselves. The others come in pairs.',
   why='The 3 shaded squares are 3 from the middle column, or 1 from the middle column and 1 pair. 3 in the middle column: 1 way. 1 in the middle column (3 choices) and 1 pair (3 rows to choose): 3 × 3 = 9 ways. 1 + 9 = 10.',
@@ -109,7 +109,7 @@ G.append(item(U+'-G03', 'go', 5, 'A dice has 1 on top, 2 facing north and 3 faci
   space={'rows': ['Top, north, east:', '', '']}))
 
 C.append(item(U+'-C01', 'quiz', None, 'Does this net fold into a cube? {circ:Yes|No}',
-  fig=TILES([net(NET_C)], cell=34, width_mm=40), ans=A('Yes'), figright=True,
+  fig=TILES([net(NET_C)], cell=34, width_mm=34), ans=A('Yes'), figright=True,
   why='The staircase of 2, 2, 2 squares folds into a cube. Each step wraps round to make the base, walls and lid with no overlaps.'))
 C.append(item(U+'-C02', 'quiz', None, 'A rectangle has a different length and width. How many lines of symmetry does it have? {b}', ans=A(2),
   why='It can be folded along the middle in 2 ways, and the halves match. The diagonals do not work.'))
