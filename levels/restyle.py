@@ -53,4 +53,7 @@ for d in sys.argv[1:]:
     for f in glob.glob(os.path.join(d,'project','slides','*.html')):
         a=open(f).read(); b=fix(a,lv)
         if a!=b: open(f,'w').write(b); n+=1
+    try:
+        sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import mi_deco; n+=mi_deco.apply(d)   # Mi the dolphin (levels 1-3), idempotent
+    except ImportError: pass
     print(d,n)
