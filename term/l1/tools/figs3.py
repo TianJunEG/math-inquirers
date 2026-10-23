@@ -80,7 +80,7 @@ ICONS3 = ['sun', 'moon', 'bed', 'bus', 'house', 'school', 'shop', 'bath', 'rubbe
 def clock(h=12, m=0, hide_hands=False, labels='all', digital=None, sector=None, mirror=False, ampm=None, ticks=True):
     """Analog clock. The hour hand sits at h + m/60 of the way round (the picture does not lie). Hour hand short and wide, minute hand long and thin.
     labels: 'all' (1-12) | 'quarters' (12, 3, 6, 9) | 'none'. sector=[from_min, to_min] shades that part of the face. mirror reflects the face left-right.
-    digital: True or text under the clock ('[]' = an answer box 130 x 60 units: about 25 x 11 mm at the usual clock size); ampm adds 'a.m.' or 'p.m.'.
+    digital: True or text under the clock ('[]' = an answer box 124 x 48 units: about 24 x 9 mm at the usual clock size); ampm adds 'a.m.' or 'p.m.'.
     Numerals are drawn after the hands with a white halo, and when numerals are printed the minute hand stops just inside the numeral ring, so the
     numeral a hand points at is never covered."""
     cx = cy = 110; R = 98
@@ -113,9 +113,9 @@ def clock(h=12, m=0, hide_hands=False, labels='all', digital=None, sector=None, 
     if digital:
         txt = digital if isinstance(digital, str) else f'{h}:{m:02d}'
         if ampm: txt += f' {ampm}'
-        H = 292
+        H = 280
         if txt == '[]':
-            body.append(f'<rect x="{cx - 65}" y="228" width="130" height="60" rx="9" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
+            body.append(f'<rect x="{cx - 62}" y="228" width="124" height="48" rx="9" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
         else:
             body.append(f'<text x="{cx}" y="270" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(txt)}</text>')
     return _svg(220, H, ''.join(body), 'clock' if hide_hands else f'clock showing {h}:{m:02d}')

@@ -301,6 +301,8 @@ def shift_oclock(m, c): return add_minutes((I(m[1]), 0), (60 if m[2] == "1 hour"
 def shift_half(m, c): return add_minutes((I(m[1]), 30), (60 if m[2] == "1 hour" else 30) * (1 if m[3] == "later" else -1))
 @R(r"It is (\d{1,2}):(\d\d)\. (\d+) hours? later: " + B)
 def hours_later(m, c): return add_minutes((I(m[1]), I(m[2])), 60 * I(m[3]))
+@R(r"(\d{1,2}):(\d\d) ([+\u2212]) (\d+) min = " + B)
+def time_pm(m, c): return add_minutes((I(m[1]), I(m[2])), I(m[4]) * (1 if m[3] == "+" else -1))
 @R(r"It is (\d{1,2}):(\d\d)\. (\d+) h (\d+) min later: " + B)
 def hm_later(m, c): return add_minutes((I(m[1]), I(m[2])), 60 * I(m[3]) + I(m[4]))
 @R(r"(\d+) minutes (after|before) (\d{1,2}):00 is " + B)

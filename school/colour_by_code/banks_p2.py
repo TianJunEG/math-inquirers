@@ -479,7 +479,18 @@ def _time(tier):
         def hmlater(a, r):
             k = ch(r, [1, 2]); d = ch(r, [5, 10, 15, 20, 25, 30, 40, 45]); s = addm(a, -(60 * k + d))
             return SEM([f"It is {hm(s)}.", f"{k} h {d} min later: {BOX}"], lambda v, t_=a: v == t_, hm(a), form="hours and minutes later")
-        return [wrap(clock_stack), wrap(clock_row), wrap(clock_short), pastto, later, before, hour, hmlater]
+        def clock_alone(a, r):
+            if A.hand_gap(*a) < A.CLOCK_MIN_GAP: return None
+            q = SEM([], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), form="clock face alone")
+            q.sol = ["\u27e6" + hm(a) + "\u27e7"]
+            return q
+        def short_add(a, r):
+            d = ch(r, [5, 10, 15, 20, 25, 30]); s_ = addm(a, -d)
+            return SEM([f"{hm(s_)} + {d} min", f"= {BOX}"], lambda v, t_=a: v == t_, hm(a), form="time plus minutes")
+        def short_sub(a, r):
+            d = ch(r, [5, 10, 15, 20, 25]); s_ = addm(a, d)
+            return SEM([f"{hm(s_)} {MINUS} {d} min", f"= {BOX}"], lambda v, t_=a: v == t_, hm(a), form="time minus minutes")
+        return [wrap(clock_stack), wrap(clock_row), wrap(clock_short), wrap(clock_alone), pastto, later, before, hour, hmlater, short_add, short_sub]
     def conv(a, r):
         h, m = divmod(a, 60)
         if h == 0: return None
