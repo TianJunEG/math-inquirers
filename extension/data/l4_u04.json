@@ -1075,7 +1075,7 @@
     }
    ],
    "hint": "How far is each fraction from 1?",
-   "explanation": "(a) 7/9 is 2/9 short of 1 and 8/10 is 2/10 short of 1. Ninths are larger pieces than tenths, so 2/9 is more than 2/10 and 7/9 is less. (b) 1/12 is less than 1/10, so 11/12 is closer to 1: greater. (c) 1/15 is more than 1/20, so 14/15 is less than 19/20."
+   "explanation": "(a) 7/9 is 2/9 short of 1 and 8/10 is 2/10 short of 1. 2/9 is more than 2/10, so 7/9 is less. (b) 1/12 is less than 1/10, so 11/12 is greater. (c) 1/15 is more than 1/20, so 14/15 is less."
   },
   {
    "id": "L4U04-C01",

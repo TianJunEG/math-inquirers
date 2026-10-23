@@ -273,7 +273,7 @@
           {
             "k": "ASK",
             "text": "I take away 2, and I get 6. What was my number?",
-            "resp": 12
+            "resp": 10
           },
           {
             "k": "SLIDE",
@@ -286,12 +286,12 @@
           {
             "k": "ASK",
             "text": "Siti eats 3 sweets. Add or take away?",
-            "resp": 6
+            "resp": 5
           },
           {
             "k": "ASK",
             "text": "Ali finds 5 more shells. Add or take away?",
-            "resp": 6
+            "resp": 5
           },
           {
             "k": "SLIDE",
@@ -327,12 +327,12 @@
           {
             "k": "ASK",
             "text": "Which one fits? And what is the answer?",
-            "resp": 14
+            "resp": 12
           },
           {
             "k": "ASK",
             "text": "Siti has 9 beads and loses 3. Which sentence, and the answer?",
-            "resp": 14
+            "resp": 12
           },
           {
             "k": "SLIDE",
@@ -345,7 +345,7 @@
           {
             "k": "ASK",
             "text": "Siti has 9 beads and loses 3. Which tool would you start with? There is no wrong tool.",
-            "resp": 15
+            "resp": 12
           },
           {
             "k": "STUCK",
@@ -426,7 +426,7 @@
           {
             "k": "WORK",
             "text": "Round 1: children act out story A with counters or the kit squares and show a thumbs up when done.",
-            "s": 70
+            "s": 50
           },
           {
             "k": "ASK",
@@ -448,7 +448,7 @@
           {
             "k": "WORK",
             "text": "Round 2: children act out story B with counters, one step at a time.",
-            "s": 60
+            "s": 45
           },
           {
             "k": "ASK",
@@ -470,7 +470,7 @@
           {
             "k": "WORK",
             "text": "Round 3: children build Ben's pile, then Mei's pile that is 4 more, then put both together.",
-            "s": 70
+            "s": 50
           },
           {
             "k": "ASK",
@@ -543,7 +543,7 @@
           {
             "k": "WORK",
             "text": "Children write two number sentences on their own paper. Wait until most have stopped writing.",
-            "s": 55
+            "s": 40
           },
           {
             "k": "SLIDE",
@@ -577,7 +577,7 @@
           {
             "k": "WORK",
             "text": "Children write one number sentence on their own paper. Wait until most have stopped writing.",
-            "s": 60
+            "s": 45
           },
           {
             "k": "SLIDE",
@@ -603,7 +603,7 @@
           {
             "k": "WORK",
             "text": "Children line up counters on the table: 5 in front, one for Ravi, 2 behind. They count every counter and show a thumbs up.",
-            "s": 40
+            "s": 30
           },
           {
             "k": "ASK",
@@ -814,7 +814,7 @@
           {
             "k": "WORK",
             "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
-            "s": 170
+            "s": 120
           },
           {
             "k": "STUCK",

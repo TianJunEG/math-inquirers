@@ -368,7 +368,7 @@
     "text": "5.025, 5.052, 5.205, 5.25, 5.5",
     "list": true
    },
-   "explanation": "Write each with 3 decimal places: 5.205, 5.250, 5.052, 5.500, 5.025. All have 5 ones. Compare the tenths: 5.025 and 5.052 have 0 tenths, then 5.205 and 5.250 have 2 tenths, then 5.500. 5.025 comes before 5.052, and 5.205 comes before 5.250."
+   "explanation": "With 3 decimal places: 5.205, 5.250, 5.052, 5.500, 5.025. Compare the tenths: 0 (5.025, 5.052), then 2 (5.205, 5.250), then 5 (5.500). Then compare the hundredths."
   },
   {
    "id": "L4U05-S06",
@@ -739,7 +739,7 @@
     ]
    },
    "hint": "List the numbers that start with 1 and with 9. Which are near 20?",
-   "explanation": "Numbers just below 20 start with 19: 19.64 and 19.46. 19.64 is 0.36 below 20 and 19.46 is 0.54 below. Numbers that start with 14 or 16 are further away, and the numbers above 20 start with 41, 46, 49, 61 and so on, which are much further."
+   "explanation": "Just below 20 start with 19: 19.64 is 0.36 below 20 and 19.46 is 0.54 below. Numbers starting 14 or 16 are further away, and numbers above 20 (41.69, 46.19, 49.16 and so on) are much further."
   },
   {
    "id": "L4U05-T03",
@@ -776,7 +776,7 @@
     ]
    },
    "hint": "Change the 3 mugs into cups. How much extra is that?",
-   "explanation": "If every mug cost the same as a cup, the 5 items would cost $17.20 − 3 × $2.40 = $17.20 − $7.20 = $10.00. So a cup costs $10.00 ÷ 5 = $2.00 and a mug costs $4.40. Check: 3 × $4.40 + 2 × $2.00 = $13.20 + $4.00 = $17.20."
+   "explanation": "If every mug cost the same as a cup, the 5 items would cost $17.20 − 3 × $2.40 = $17.20 − $7.20 = $10.00. So a cup costs $10.00 ÷ 5 = $2.00 and a mug costs $4.40."
   },
   {
    "id": "L4U05-G01",
@@ -816,7 +816,7 @@
     ]
    },
    "hint": "Suppose all 12 coins are 10¢. How much money is that?",
-   "explanation": "If all 12 coins were 10¢, the total would be $1.20. The real total is $2.40 more. Changing a 10¢ coin into a 50¢ coin adds 40¢. $2.40 ÷ 40¢ = 6 coins. So she has 6 coins of 50¢ and 6 coins of 10¢. Check: $3.00 + $0.60 = $3.60."
+   "explanation": "If all 12 coins were 10¢, the total would be $1.20. The real total is $2.40 more. Changing a 10¢ coin into a 50¢ coin adds 40¢. $2.40 ÷ 40¢ = 6 coins. So she has 6 coins of 50¢ and 6 coins of 10¢."
   },
   {
    "id": "L4U05-G03",
@@ -851,7 +851,7 @@
     ]
    },
    "hint": "Take away the extras first: 0.60, 1.20 and 1.80.",
-   "explanation": "The extras are $0 + $0.60 + $1.20 + $1.80 = $3.60. Without them the 4 children share $20.40 − $3.60 = $16.80, so the youngest gets $16.80 ÷ 4 = $4.20. The oldest gets $4.20 + $1.80 = $6.00. The amounts are $4.20, $4.80, $5.40 and $6.00."
+   "explanation": "The extras are $0 + $0.60 + $1.20 + $1.80 = $3.60. The rest, $20.40 − $3.60 = $16.80, is shared equally: $4.20 each. The amounts are $4.20, $4.80, $5.40 and $6.00."
   },
   {
    "id": "L4U05-G04",

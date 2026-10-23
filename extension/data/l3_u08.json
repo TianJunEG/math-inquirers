@@ -690,7 +690,7 @@
      }
     }
    ],
-   "explanation": "At each end of a rung, the rung and the rail make 2 right angles (one above the rung and one below it). A rung has 2 ends, so 4 right angles. 3 rungs make 3 × 4 = 12 right angles.",
+   "explanation": "At each end of a rung, the rung and the rail make 2 right angles (above and below the rung). A rung has 2 ends: 4 right angles. 3 rungs: 3 × 4 = 12.",
    "figure": {
     "type": "l3_segs",
     "k": 40,
@@ -866,7 +866,7 @@
      }
     }
    ],
-   "explanation": "(a) That is what perpendicular means. (b) Parallel lines never meet. (c) A line across 2 rails of a ladder is perpendicular to both. (d) Lines can cross at any angle."
+   "explanation": "(a) That is what perpendicular means. (b) Parallel lines never meet. (c) A line across the 2 rails of a ladder is perpendicular to both. (d) Lines can cross at any angle."
   },
   {
    "id": "L3U08-S10",
@@ -999,7 +999,7 @@
      }
     }
    ],
-   "explanation": "AB goes 2 across for every 1 up. A perpendicular line goes 1 across and 2 down. From C, that reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.",
+   "explanation": "AB goes 2 across for every 1 up. A perpendicular line goes 1 across and 2 down. From C, that reaches the dot at 3 across, 4 up, then (4, 2), then the bottom row at R.",
    "figure": {
     "type": "l3_segs",
     "k": 44,
@@ -1333,7 +1333,7 @@
      }
     }
    ],
-   "explanation": "(a) 2 lines across and 2 lines up: 2 pairs of parallel lines. (b) 2 × 2 = 4 crossings, each with 4 right angles: 16. (c) 3 × 3 = 9 crossings, 9 × 4 = 36 right angles.",
+   "explanation": "(a) 2 lines across and 2 lines up: 2 pairs. (b) 2 × 2 = 4 crossings, each with 4 right angles: 16. (c) 3 × 3 = 9 crossings, 9 × 4 = 36 right angles.",
    "figure": {
     "type": "l3_segs",
     "k": 40,
@@ -1380,7 +1380,7 @@
     ],
     "text": "greater than"
    },
-   "explanation": "The second line sticks out past the corner of the checker, so the angle is greater than a right angle.",
+   "explanation": "The second line sticks out past the corner of the checker: the angle is greater than a right angle.",
    "figure": {
     "type": "l3_angles",
     "items": [

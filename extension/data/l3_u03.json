@@ -405,7 +405,7 @@
     "text": "Columns 6 and 7. Rows 9 and 8.",
     "list": true
    },
-   "explanation": "54 and 63 are both in the 9 times table: 54 = 9 × 6 and 63 = 9 × 7. So the row number is 9 and the columns are 6 and 7. Second row: 48 = 8 × 6 and 56 = 8 × 7, so the row number is 8.",
+   "explanation": "54 and 63 are both in the 9 times table: 54 = 9 × 6, 63 = 9 × 7. So the row is 9 and the columns are 6 and 7. Second row: 48 = 8 × 6 and 56 = 8 × 7, so the row is 8.",
    "figure": {
     "type": "l3_grid",
     "head_row": true,
@@ -747,7 +747,7 @@
      }
     }
    ],
-   "explanation": "The seats go 7, 9, 11, 13, 15, 17, 19, 21. Row 8 has 21 seats. Pair them: 7 + 21 = 28, 9 + 19 = 28, 11 + 17 = 28, 13 + 15 = 28. There are 4 pairs, so 4 × 28 = 112 seats.",
+   "explanation": "The seats go 7, 9, 11, 13, 15, 17, 19, 21. Row 8 has 21 seats. Pair them: 7 + 21 = 28, 9 + 19 = 28, 11 + 17 = 28, 13 + 15 = 28. 4 pairs: 4 × 28 = 112 seats.",
    "figure": {
     "type": "l3_grid",
     "head_col": true,

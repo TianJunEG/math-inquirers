@@ -661,7 +661,7 @@
     ]
    },
    "hint": "At half past, the hour hand is halfway between 2 numbers.",
-   "explanation": "At 7:30 the minute hand is on the 6. The hour hand is halfway between 7 and 8, which is 1 and a half spaces from the 6: 45°. At 1:30 the hour hand is halfway between 1 and 2, which is 4 and a half spaces from the 6: 4 × 30° + 15° = 135°."
+   "explanation": "At 7:30 the minute hand is on the 6 and the hour hand is halfway between 7 and 8, 1 and a half spaces away: 45°. At 1:30 the hour hand is 4 and a half spaces from the 6: 4 × 30° + 15° = 135°."
   },
   {
    "id": "L4U06-T03",

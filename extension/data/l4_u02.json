@@ -785,7 +785,7 @@
     }
    ],
    "hint": "Round a few numbers just below 1500 in steps.",
-   "explanation": "36 449 becomes 36 450, then 36 500, then 37 000. In one go it is 36 000, because 449 is below 500. For part (c), 1445 becomes 1450, then 1500, then 2000, but in one go it is 1000. Any 4-digit number below 1445 gives the same answer both ways."
+   "explanation": "36 449 becomes 36 450, 36 500, then 37 000. In one go it is 36 000, because 449 is below 500. (c) 1445 becomes 1450, 1500, 2000, but in one go it is 1000. Any 4-digit number below 1445 gives the same answer both ways."
   },
   {
    "id": "L4U02-G02",
@@ -806,7 +806,7 @@
     ]
    },
    "hint": "Count the numbers with no 7. Choose each digit in turn.",
-   "explanation": "Count the numbers with no 7. Think of 3 digits, from 000 to 999. Each digit can be any of 9 digits (not 7): 9 × 9 × 9 = 729. That includes 000, which is not in the list, and it leaves out 1000, which has no 7, so 729 numbers from 1 to 1000 have no 7. So 1000 − 729 = 271 have a 7."
+   "explanation": "Count the numbers with no 7. Each of 3 digits (000 to 999) can be any of 9 digits: 9 × 9 × 9 = 729, which includes 000 and leaves out 1000, which has no 7. So 729 numbers from 1 to 1000 have no 7, and 1000 − 729 = 271 have a 7."
   },
   {
    "id": "L4U02-G03",

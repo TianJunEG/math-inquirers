@@ -173,7 +173,7 @@
      }
     }
    ],
-   "explanation": "(a) 3 × 100 = 300. (b) 4 kg = 4000 g, and 4000 + 50 = 4050. (c) 5 ℓ = 5000 ml, and 5000 + 300 = 5300. (d) 2000 g is 2 kg, and 750 g is left. (e) 300 cm is 3 m, and 65 cm is left.",
+   "explanation": "(a) 3 × 100 = 300. (b) 4 kg = 4000 g, and 4000 + 50 = 4050. (c) 5 ℓ = 5000 ml, 5000 + 300 = 5300. (d) 2000 g is 2 kg, 750 g left. (e) 300 cm is 3 m, 65 cm left.",
    "partsrow": true
   },
   {
@@ -275,7 +275,7 @@
      }
     }
    ],
-   "explanation": "2 ℓ 500 ml = 2500 ml. 2500 ÷ 400 = 6 remainder 100. He fills 6 cups, and 100 ml are left over."
+   "explanation": "2 ℓ 500 ml = 2500 ml. 2500 ÷ 400 = 6 remainder 100. He fills 6 cups, with 100 ml left."
   },
   {
    "id": "L3U09-S05",
@@ -598,7 +598,7 @@
      }
     }
    ],
-   "explanation": "The short hand shows the hour and the long hand the minutes. A: long hand at 2 is 10 minutes, short hand just past 4. B: long hand at 9 is 45 minutes. C: long hand at 5 is 25 minutes.",
+   "explanation": "The short hand shows the hour, the long hand the minutes. A: long hand at 2 is 10 minutes, short hand just past 4. B: long hand at 9 is 45 minutes. C: at 5 is 25 minutes.",
    "partsrow": true,
    "figure": {
     "type": "l3_clock",
@@ -724,7 +724,7 @@
      }
     }
    ],
-   "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. One pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70.",
+   "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. A pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70.",
    "hint": "How much more do 2 notebooks cost than 2 pens?",
    "space": {
     "rows": [

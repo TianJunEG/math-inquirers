@@ -237,7 +237,7 @@
      "Changes: {ll}"
     ]
    },
-   "explanation": "The changes are +15, −20, +35, −5 and +40. The greatest increase is Friday to Saturday: 95 − 55 = 40. The greatest decrease is Tuesday to Wednesday: 45 − 25 = 20. The steepest line going up and the steepest line going down show these."
+   "explanation": "The changes are +15, −20, +35, −5 and +40. The greatest increase is Friday to Saturday: 95 − 55 = 40. The greatest decrease is Tuesday to Wednesday: 45 − 25 = 20."
   },
   {
    "id": "L4U09-S03",
@@ -419,7 +419,7 @@
      }
     }
    ],
-   "explanation": "(a) The Mei line (dashed, square points) is on 60 in Week 3. (b) Ali's line goes up by 10 each week. (c) The lines meet in Week 7, where both have $80. (d) Ali has $90 in Week 8 and Mei has $85, so Week 8 is the first week Ali has more.",
+   "explanation": "(a) The dashed Mei line is on 60 in Week 3. (b) Ali's line goes up by 10 each week. (c) The lines meet in Week 7 at $80. (d) In Week 8 Ali has $90 and Mei has $85, so Week 8 is the first week Ali has more.",
    "partsrow": true
   },
   {
@@ -740,7 +740,7 @@
     ]
    },
    "hint": "Start with a bar for Day 1. Compare the other days with it.",
-   "explanation": "Take away Day 4 and the extra 15: 200 − 25 − 15 = 160. Day 1 is 1 unit, Day 2 is 2 units and Day 3 is 2 units: 5 units = 160. 1 unit = 32. Check: 32 + 64 + 79 + 25 = 200."
+   "explanation": "Take away Day 4 and the extra 15: 200 − 25 − 15 = 160. Day 1 is 1 unit, Day 2 is 2 units and Day 3 is 2 units: 5 units = 160. 1 unit = 32."
   },
   {
    "id": "L4U09-T03",
@@ -777,7 +777,7 @@
     ]
    },
    "hint": "Make a table of both fares for 1 km, 2 km, 3 km.",
-   "explanation": "Taxi A: $6, $8, $10, $12, $14, $16 for 1 to 6 km. Taxi B: $11, $12, $13, $14, $15, $16 for 1 to 6 km. The fares are equal at 6 km: $4 + 6 × $2 = $16 and $10 + 6 × $1 = $16. Taxi B costs $6 more to start, and Taxi A gains $1 on B for each km, so 6 km."
+   "explanation": "Taxi A: $6, $8, $10, $12, $14, $16 for 1 to 6 km. Taxi B: $11, $12, $13, $14, $15, $16. The fares are equal at 6 km: $4 + 6 × $2 = $16 and $10 + 6 × $1 = $16."
   },
   {
    "id": "L4U09-G01",

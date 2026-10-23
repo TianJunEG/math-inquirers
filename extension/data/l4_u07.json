@@ -238,7 +238,7 @@
      }
     }
    ],
-   "explanation": "(a) The top is 11 cm and the bottom is 7 cm, so a = 11 − 7 = 4 cm. The left is 8 cm and the right is 3 cm, so b = 8 − 3 = 5 cm. (b) Split: 11 × 3 + 7 × 5 = 33 + 35 = 68 cm². Or take away: 11 × 8 − 4 × 5 = 88 − 20 = 68 cm². (c) Push the steps out: 2 × (11 + 8) = 38 cm.",
+   "explanation": "(a) a = 11 − 7 = 4 cm and b = 8 − 3 = 5 cm. (b) Split: 11 × 3 + 7 × 5 = 68 cm². Or 11 × 8 − 4 × 5 = 68 cm². (c) Push the steps out: 2 × (11 + 8) = 38 cm.",
    "figside": true
   },
   {
@@ -851,7 +851,7 @@
      }
     }
    ],
-   "explanation": "(a) 10 × 3 = 30 cm² and 5 × 6 = 30 cm². Cutting and moving pieces does not change the area. (b) Strip: 2 × (10 + 3) = 26 cm. Rectangle: 2 × (5 + 6) = 22 cm. The perimeter changed from 26 cm to 22 cm, so moving pieces can change the perimeter."
+   "explanation": "(a) 10 × 3 = 30 cm² and 5 × 6 = 30 cm². Moving pieces does not change the area. (b) Strip: 2 × (10 + 3) = 26 cm. Rectangle: 2 × (5 + 6) = 22 cm. The perimeter changed."
   },
   {
    "id": "L4U07-S08",
@@ -1020,7 +1020,7 @@
     ]
    },
    "hint": "For (b), the fence makes 2 short sides and 1 long side.",
-   "explanation": "(a) The 4 sides use 28 m, so length + width = 14. The greatest area is a 7 m square: 7 × 7 = 49 m². (b) The fence is 2 widths and 1 length: 2w + l = 28. Try w = 7 and l = 14: area 98 m². Try w = 6, l = 16: 96. Try w = 8, l = 12: 96. The greatest is 98 m²."
+   "explanation": "(a) length + width = 14, so the greatest area is a 7 m square: 49 m². (b) The fence is 2 widths and 1 length: 2w + l = 28. w = 7, l = 14 gives 98 m². w = 6 or w = 8 gives 96 m². The greatest is 98 m²."
   },
   {
    "id": "L4U07-T03",
@@ -1041,7 +1041,7 @@
     ]
    },
    "hint": "Slide the paths to the edge. The grass makes 1 rectangle.",
-   "explanation": "Move the paths to the edges. The grass is then one rectangle that is 12 − 2 = 10 m long and 9 − 2 = 7 m wide: 10 × 7 = 70 m². Check: 108 − 24 − 18 + 4 = 70, because the crossing square is counted twice."
+   "explanation": "Move the paths to the edges. The grass is then one rectangle that is 12 − 2 = 10 m long and 9 − 2 = 7 m wide: 10 × 7 = 70 m²."
   },
   {
    "id": "L4U07-G01",
@@ -1099,7 +1099,7 @@
     ]
    },
    "hint": "Try a width of 1, then 2, then 3. Does the area equal the perimeter?",
-   "explanation": "Try width 3: length 6 gives an area of 18 cm² and a perimeter of 2 × 9 = 18 cm. For width 1 and width 2, no length works: width 2 gives 2l and 2l + 4. Widths of 4 or more give only the 4 by 4 square. So the other rectangle is 6 cm by 3 cm."
+   "explanation": "Width 3, length 6: area 18 cm² and perimeter 2 × 9 = 18 cm. Width 1 or 2 never works (width 2 gives 2l and 2l + 4). Widths of 4 or more give only the 4 by 4 square. So 6 cm by 3 cm."
   },
   {
    "id": "L4U07-G03",
@@ -1222,7 +1222,7 @@
     }
    ],
    "hint": "Take the light block away from the whole floor.",
-   "explanation": "(a) The light tiles make a 6 by 6 block: 36. The floor has 64 tiles, so 64 − 36 = 28 dark tiles. (b) A floor n tiles long has 4 × n − 4 dark tiles. 4 × n − 4 = 60 gives n = 16. Check: 16 × 16 = 256 and 14 × 14 = 196, and 256 − 196 = 60."
+   "explanation": "(a) The light tiles make a 6 by 6 block: 36. 64 − 36 = 28 dark tiles. (b) A floor n tiles long has 4 × n − 4 dark tiles. 4 × n − 4 = 60 gives n = 16."
   },
   {
    "id": "L4U07-C01",

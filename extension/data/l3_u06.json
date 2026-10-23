@@ -352,7 +352,7 @@
      }
     }
    ],
-   "explanation": "(a) Same bottom number: 5 parts are more than 3 parts. (b) Thirds are larger pieces than quarters. (c) 2/4 = 4/8. (d) 3/4 = 9/12 and 5/6 = 10/12, and 9 is less than 10."
+   "explanation": "(a) Same bottom number: 5 parts are more than 3. (b) Thirds are larger pieces than quarters. (c) 2/4 = 4/8. (d) 3/4 = 9/12 and 5/6 = 10/12, and 9 is less than 10."
   },
   {
    "id": "L3U06-S05",
@@ -506,7 +506,7 @@
      }
     }
    ],
-   "explanation": "(a) 3/12 + 4/12 = 7/12. (b) The whole cake is 12/12, so 12/12 - 7/12 = 5/12. (c) 4/12 - 3/12 = 1/12."
+   "explanation": "(a) 3/12 + 4/12 = 7/12. (b) 12/12 - 7/12 = 5/12. (c) 4/12 - 3/12 = 1/12."
   },
   {
    "id": "L3U06-S09",
@@ -735,7 +735,7 @@
      }
     }
    ],
-   "explanation": "1/4 = 3/12 and 1/3 = 4/12. (a) 3/12 + 4/12 = 7/12. (b) 12/12 - 7/12 = 5/12 of the jug is left.",
+   "explanation": "1/4 = 3/12 and 1/3 = 4/12. (a) 3/12 + 4/12 = 7/12. (b) 12/12 - 7/12 = 5/12 is left.",
    "hint": "Change quarters and thirds into twelfths first.",
    "space": {
     "rows": [

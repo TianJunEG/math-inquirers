@@ -169,7 +169,7 @@
      }
     }
    ],
-   "explanation": "The labelled lines go up in 20s and there is a thin line halfway between them, so each thin line is 10. A is at 70, B is at 110 and C is at 90. Together: 70 + 110 + 90 = 270.",
+   "explanation": "The labelled lines go up in 20s and a thin line is halfway between them, so each thin line is 10. A is 70, B is 110, C is 90. Together: 70 + 110 + 90 = 270.",
    "figure": {
     "type": "l3_bargraph",
     "cats": [
@@ -218,7 +218,7 @@
      }
     }
    ],
-   "explanation": "(a) From the 3rd to the 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) From the 3rd to the 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.",
+   "explanation": "(a) 3rd to 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) 3rd to 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.",
    "space": {
     "rows": [
      "Working:"
@@ -405,7 +405,7 @@
      }
     }
    ],
-   "explanation": "Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700. The others are much farther away.",
+   "explanation": "Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700; the others are much farther.",
    "space": {
     "rows": [
      "My list:"
@@ -708,7 +708,7 @@
      }
     }
    ],
-   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. In all: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.",
+   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. In all: 6 boxes + 5 = 185, so 1 box = 30. Mon 30, Tue 45, Wed 60, Thu 50.",
    "partsrow": true,
    "hint": "Draw Monday as 1 bar. Then draw the other days with it.",
    "space": {
@@ -765,7 +765,7 @@
      }
     }
    ],
-   "explanation": "There are 16 small squares. A 2 by 2 square fits in 3 places across and 3 down: 9. A 3 by 3 square fits in 2 places across and 2 down: 4. There is 1 big square. 16 + 9 + 4 + 1 = 30.",
+   "explanation": "There are 16 small squares. A 2 by 2 square fits in 3 places across and 3 down: 9. A 3 by 3 square fits 2 across and 2 down: 4. There is 1 big square. 16 + 9 + 4 + 1 = 30.",
    "partsrow": true,
    "hint": "A 2 by 2 square can sit in 3 places across and 3 down."
   },
@@ -827,7 +827,7 @@
      }
     }
    ],
-   "explanation": "If all 8 coins were 10¢, they would be worth 80¢. They are worth 150¢, which is 70¢ more. Changing one 10¢ coin to a 20¢ coin adds 10¢, so 7 coins are 20¢ and 1 coin is 10¢.",
+   "explanation": "If all 8 coins were 10¢, they would be worth 80¢. They are worth 150¢, 70¢ more. Changing one 10¢ coin to a 20¢ coin adds 10¢, so 7 coins are 20¢ and 1 coin is 10¢.",
    "hint": "Try 4 of each. How much are they worth?",
    "space": {
     "table": {

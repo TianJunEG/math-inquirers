@@ -604,7 +604,7 @@
     ],
     "text": "30"
    },
-   "explanation": "Red is 4 boxes and blue is 1 box. After selling 18 red balloons, red is 1 box. So 3 boxes are 18, and 1 box is 6. At first there were 6 blue and 24 red: 30 balloons in all.",
+   "explanation": "Red is 4 boxes and blue is 1 box. After selling 18 red, red is 1 box. So 3 boxes are 18 and 1 box is 6. At first there were 6 blue and 24 red: 30 balloons.",
    "hint": "Draw blue as 1 box and red as 4 boxes. Selling 18 leaves 1 box.",
    "space": {
     "rows": [
@@ -623,7 +623,7 @@
     ],
     "text": "Answers vary. Example: Ali and Ben have 60 stickers in all. Ben has 12 more stickers than Ali. Ali has 24 stickers and Ben has 36 stickers."
    },
-   "explanation": "In the example, take away the 12: 60 - 12 = 48, and 48 ÷ 2 = 24. Ali has 24 and Ben has 24 + 12 = 36.",
+   "explanation": "In the example, take away the 12: 60 - 12 = 48 and 48 ÷ 2 = 24. Ali has 24 and Ben has 36.",
    "figure": {
     "type": "l3_bars",
     "rows": [
@@ -704,7 +704,7 @@
     ],
     "text": "60"
    },
-   "explanation": "There are 6 equal boxes in all. 72 ÷ 6 = 12, so 1 box is 12. Siti has 5 boxes: 5 × 12 = 60."
+   "explanation": "There are 6 equal boxes. 72 ÷ 6 = 12, so 1 box is 12. Siti has 5 boxes: 5 × 12 = 60."
   },
   {
    "id": "L3U04-C04",

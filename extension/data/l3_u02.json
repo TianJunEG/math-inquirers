@@ -217,7 +217,7 @@
      }
     }
    ],
-   "explanation": "The check should give back 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232."
+   "explanation": "The check should give 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232."
   },
   {
    "id": "L3U02-S06",
@@ -343,7 +343,7 @@
      }
     }
    ],
-   "explanation": "P and 830 make the top brick: 830 + P = 1580, so P = 750. Q and 270 make P: Q + 270 = 750, so Q = 480.",
+   "explanation": "830 + P = 1580, so P = 750. Q + 270 = 750, so Q = 480.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [
@@ -461,7 +461,7 @@
      }
     }
    ],
-   "explanation": "(a) Try A = 3: 33 + 23 = 56. It works. (b) Two equal numbers add up to 90, so each is 45. Then C = 4."
+   "explanation": "(a) Try A = 3: 33 + 23 = 56. It works. (b) Two equal numbers add to 90, so each is 45. Then C = 4."
   },
   {
    "id": "L3U02-S11",
@@ -578,7 +578,7 @@
      }
     }
    ],
-   "explanation": "Greatest sum: the 2 greatest digits go in the hundreds places, the next 2 in the tens places, the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. Smallest sum: do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
+   "explanation": "Greatest sum: the 2 greatest digits go in the hundreds places, the next 2 in the tens, the last 2 in the ones: 800 + 700 + 50 + 40 + 3 + 2 = 1595. Smallest: do the same with the smallest digits: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -932,7 +932,7 @@
      }
     }
    ],
-   "explanation": "99 = 9 × 11, 143 = 13 × 11, 121 = 11 × 11. A number with digits A and B is 10 A + B, and its reverse is 10 B + A. Together they are 11 × (A + B), always in the 11 times table.",
+   "explanation": "99 = 9 × 11, 143 = 13 × 11, 121 = 11 × 11. A number with digits A and B is 10 A + B and its reverse is 10 B + A. Together: 11 × (A + B), always in the 11 times table.",
    "hint": "Add the tens digit and ones digit. Compare with the answers.",
    "partsrow": true
   },

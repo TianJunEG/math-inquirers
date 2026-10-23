@@ -395,7 +395,7 @@
      }
     }
    ],
-   "explanation": "a = 8 - 4 = 4 cm and b = 6 - 3 = 3 cm. Area: a 4 by 6 rectangle and a 4 by 3 rectangle: 24 + 12 = 36 cm². Perimeter: push the steps out to a box 8 by 6: 2 × (8 + 6) = 28 cm.",
+   "explanation": "a = 8 - 4 = 4 cm and b = 6 - 3 = 3 cm. Area: a 4 by 6 rectangle and a 4 by 3 rectangle: 24 + 12 = 36 cm². Perimeter: push the steps out to an 8 by 6 box: 2 × (8 + 6) = 28 cm.",
    "partsrow": true,
    "figure": {
     "type": "l3_poly",
@@ -504,7 +504,7 @@
      }
     }
    ],
-   "explanation": "(a) 6 + 4 + 2 = 12 cm². (b) Same as its 6 by 3 box: 2 × (6 + 3) = 18 cm. (c) The rectangle has 18 squares: 18 - 12 = 6 more. (d) 18 cm: filling the steps does not change the perimeter.",
+   "explanation": "(a) 6 + 4 + 2 = 12 cm². (b) Same as its 6 by 3 box: 2 × (6 + 3) = 18 cm. (c) The rectangle has 18 squares: 18 - 12 = 6 more. (d) 18 cm: filling the steps keeps the perimeter.",
    "figure": {
     "type": "l3_cells",
     "rows": [
@@ -554,7 +554,7 @@
      }
     }
    ],
-   "explanation": "(a) Mei’s perimeter is 2 × (10 + 2) = 24 cm, so Ben’s side is 24 ÷ 4 = 6 cm. (b) Ben’s area is 6 × 6 = 36 cm² and Mei’s area is 10 × 2 = 20 cm². (c) 36 - 20 = 16 cm²."
+   "explanation": "(a) Mei’s perimeter is 2 × (10 + 2) = 24 cm, so Ben’s side is 24 ÷ 4 = 6 cm. (b) Ben 6 × 6 = 36 cm², Mei 10 × 2 = 20 cm². (c) 36 - 20 = 16 cm²."
   },
   {
    "id": "L3U07-S10",
@@ -665,7 +665,7 @@
      }
     }
    ],
-   "explanation": "Each rectangle is 8 cm by 4 cm: perimeter 24 cm, so 48 cm together. The square has 32 cm, and 48 - 32 = 16. The 8 cm cut appears on both pieces, adding 2 × 8 = 16 cm.",
+   "explanation": "Each rectangle is 8 cm by 4 cm: perimeter 24 cm, so 48 cm in all. The square has 32 cm, and 48 - 32 = 16. The 8 cm cut is on both pieces: 2 × 8 = 16 cm.",
    "hint": "Draw the square. Draw the cut.",
    "space": {
     "rows": [
@@ -746,7 +746,7 @@
      }
     }
    ],
-   "explanation": "(a) 16 + 9 = 25 cm². (b) The figure has no dents, so its perimeter equals its box, 7 cm by 4 cm: 2 × (7 + 4) = 22 cm. (c) The new figure fits a 4 by 7 box and has no dents: 22 cm again.",
+   "explanation": "(a) 16 + 9 = 25 cm². (b) No dents, so the perimeter equals its 7 cm by 4 cm box: 2 × (7 + 4) = 22 cm. (c) A 4 by 7 box and no dents: 22 cm again.",
    "figure": {
     "type": "l3_poly",
     "pts": [

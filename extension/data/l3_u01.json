@@ -278,7 +278,7 @@
      }
     }
    ],
-   "explanation": "(a) Greatest digits first: 8752. (b) Smallest digits first, no 0 here: 2578. (c) The ones digit must be 7 or 5. With 5 last, 8725 beats 8527. (d) With 7 last, 2587 beats 2785.",
+   "explanation": "(a) Greatest digits first: 8752. (b) Smallest first, no 0 here: 2578. (c) The ones digit is 7 or 5. With 5 last, 8725 beats 8527. (d) With 7 last, 2587 beats 2785.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -306,7 +306,7 @@
     "text": "3005, 3050, 3500, 5003, 5030, 5300",
     "list": true
    },
-   "explanation": "The first digit is 3 or 5, never 0. After 3, the 5 can go in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same way: 5003, 5030, 5300. That is 6 numbers.",
+   "explanation": "The first digit is 3 or 5, never 0. After 3, the 5 goes in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same: 5003, 5030, 5300. That is 6 numbers.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -365,7 +365,7 @@
      }
     }
    ],
-   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8 each time: 30 + 8 = 38 and 38 + 8 = 46."
+   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8: 30 + 8 = 38, 38 + 8 = 46."
   },
   {
    "id": "L3U01-S09",
@@ -546,7 +546,7 @@
      }
     }
    ],
-   "explanation": "The first 7 is in the hundreds place: 700. The second 7 is in the ones place: 7. 700 - 7 = 693."
+   "explanation": "The first 7 is in the hundreds place: 700. The second is in the ones place: 7. 700 - 7 = 693."
   },
   {
    "id": "L3U01-T01",
@@ -575,7 +575,7 @@
      }
     }
    ],
-   "explanation": "Only two sets of 4 different digits add up to 8: 0, 1, 2, 5 and 0, 1, 3, 4. Even numbers need an even last digit. The greatest even number is 5210. The smallest is 1034.",
+   "explanation": "Only two sets of 4 different digits add up to 8: 0, 1, 2, 5 and 0, 1, 3, 4. Even numbers need an even last digit. Greatest even: 5210. Smallest: 1034.",
    "hint": "Find the sets of 4 different digits that add up to 8 first.",
    "space": {
     "rows": [
@@ -597,7 +597,7 @@
     ],
     "text": "10"
    },
-   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. The set 1, 1, 8 makes 118, 181, 811: 3 numbers. The set 1, 2, 4 makes 6 numbers. The set 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
+   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. Set 1, 1, 8 makes 118, 181, 811: 3 numbers. Set 1, 2, 4 makes 6 numbers. Set 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
    "hint": "List the sets of 3 digits first. Then arrange each set.",
    "space": {
     "rows": [
@@ -673,7 +673,7 @@
      }
     }
    ],
-   "explanation": "Sum 4: first digit 4 gives 1 number (400), 3 gives 2 (310, 301), 2 gives 3, 1 gives 4. That is 1 + 2 + 3 + 4 = 10. Sum 5 goes up to 5 numbers for first digit 1: 1 + 2 + 3 + 4 + 5 = 15.",
+   "explanation": "Sum 4: first digit 4 gives 1 number (400), 3 gives 2 (310, 301), 2 gives 3, 1 gives 4: 1 + 2 + 3 + 4 = 10. Sum 5, first digit 1 gives 5 numbers: 1 + 2 + 3 + 4 + 5 = 15.",
    "hint": "Fix the first digit. See how the counts grow: 1, 2, 3, ...",
    "space": {
     "rows": [
@@ -715,7 +715,7 @@
     ],
     "text": "Answers vary. Example: I am between 7000 and 8000. My hundreds digit is double my tens digit. My ones digit is 1 more than my tens digit. My digits add up to 16. The only number is 7423."
    },
-   "explanation": "Then list the numbers that fit clue 1, and cross out those that fail clue 2, and so on. In the example, the tens digit t gives 7 + 2t + t + (t + 1) = 16, so t = 2 and the number is 7423.",
+   "explanation": "List the numbers that fit clue 1, then cross out those that fail clue 2, and so on. In the example, tens digit t gives 7 + 2t + t + (t + 1) = 16, so t = 2 and the number is 7423.",
    "hint": "Pick the number first. Then write clues about its digits.",
    "space": {
     "rows": [
@@ -736,7 +736,7 @@
     ],
     "text": "3804"
    },
-   "explanation": "The thousands digit is 3 and the tens digit is 0. If the ones digit is o, the hundreds digit is 2o, so 3 + 2o + 0 + o = 15 and o = 4. The hundreds digit is 8. The number is 3804.",
+   "explanation": "The thousands digit is 3 and the tens digit is 0. If the ones digit is o, the hundreds digit is 2o, so 3 + 2o + o = 15 and o = 4. The hundreds digit is 8. The number is 3804.",
    "hint": "Try ones digit 1, 2, 3 and 4. Check each sum."
   },
   {

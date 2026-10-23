@@ -144,20 +144,20 @@ I.append(IT(U, 'G', 1, 5,
             'A taxi fare is 7 dollars for 2 km and 16 dollars for 5 km, by one rule. Plan the meter.',
             f'From 2 km to 5 km is 3 km more, and the fare rises by 16 {M} 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 {X} 2 + 1, so there is a 1 dollar start fee. The rule is n {X} 3 + 1. '
             f'A 20 km ride costs 3 {X} 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, test with a ride you can price by hand first.)',
-            fig=code([['look', 'ask (km?) and wait'], ['var', 'set n to (answer)'], ['look', f'say (n {X} ? + ?)']]),
+            fig=code([['look', 'ask (km?) and wait'], ['look', f'say (answer {X} ? + ?)']]),
             parts=[P('a', f'say (n {X} {{b}} + {{b}})', [3, 1], '3, 1'),
                    P('b', 'A 20 km ride costs {b} dollars.', [61]),
                    P('c', 'A fare of 49 dollars is a ride of {b} km.', [16])],
             hint='How many km apart are 2 km and 5 km? How much more is the fare?', figright=True, partsrow=True))
 I.append(IT(U, 'G', 2, 5,
-            'A spinner has 8 equal parts numbered 1 to 8. This program spins it 800 times and counts the multiples of 3.',
-            f'The multiples of 3 from 1 to 8 are 3 and 6, which is 2 results out of 8, so 1/4. 1/4 {X} 800 = 200. The even numbers 2, 4, 6 and 8 are 4 out of 8, so the count would be 1/2 {X} 800 = 400. '
+            'A spinner has 8 equal parts numbered 1 to 8. This program spins it 800 times and counts the numbers greater than 6.',
+            f'The numbers greater than 6 are 7 and 8, which is 2 results out of 8, so 1/4. 1/4 {X} 800 = 200. The numbers greater than 4 are 5, 6, 7 and 8, which is 4 out of 8, so the count would be 1/2 {X} 800 = 400. '
             f'A real run is near these numbers, not exactly equal.',
-            fig=code([['var', 'set count to (0)'], ['ctl', 'repeat (800)', [['var', 'set spin to (pick random 1 to 8)'], ['ctl', 'if <(spin mod 3) = (0)> then', [['var', 'change count by (1)']]]]], ['look', 'say (count)']]),
-            parts=[P('a', 'P(multiple of 3) = {b}/8', [2]),
+            fig=code([['var', 'set count to (0)'], ['ctl', 'repeat (800)', [['ctl', 'if <(pick random 1 to 8) {gt} (6)> then', [['var', 'change count by (1)']]]]], ['look', 'say (count)']]),
+            parts=[P('a', 'P(greater than 6) = {b}/8', [2]),
                    P('b', 'The program says about {b}.', [200]),
-                   P('c', 'If the test counted even numbers, it would say about {b}.', [400])],
-            hint='Which numbers from 1 to 8 are multiples of 3?', figside=True))
+                   P('c', 'If the test were greater than 4, it would say about {b}.', [400])],
+            figside=True))
 I.append(IT(U, 'G', 3, 5,
             'This code stops when n reaches 1. Run it by hand.',
             f'n = 6: 6, 3, 10, 5, 16, 8, 4, 2, 1. That is 8 steps (halve if even, or 3n + 1 if odd). n = 7: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 is 16 steps. '

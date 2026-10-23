@@ -387,7 +387,7 @@
     ],
     "text": "17"
    },
-   "explanation": "Work backwards. 31 × 3 = 93. 93 + 9 = 102. 102 ÷ 6 = 17. Check: 17 × 6 = 102, 102 − 9 = 93, 93 ÷ 3 = 31."
+   "explanation": "Work backwards. 31 × 3 = 93. 93 + 9 = 102. 102 ÷ 6 = 17."
   },
   {
    "id": "L4U03-S08",
@@ -530,7 +530,7 @@
      "Working:"
     ]
    },
-   "explanation": "(a) 4 + 9 = 13. Then 9 + 13 = 22 and 13 + 22 = 35. (b) 11 + 6 = 17 and 6 + 11 = 17. The first number is 11 − 6 = 5. Check: 5 + 6 = 11, 6 + 11 = 17 and 11 + 17 = 28."
+   "explanation": "(a) 4 + 9 = 13. Then 9 + 13 = 22 and 13 + 22 = 35. (b) 11 + 6 = 17 and 6 + 11 = 17. The first number is 11 − 6 = 5."
   },
   {
    "id": "L4U03-S12",
@@ -644,7 +644,7 @@
     ]
    },
    "hint": "Before the gift, how many more does Mei have than Lily?",
-   "explanation": "Mei is 5 units and Lily is 1 unit. After the gift they are equal, so Mei had 4 units more than Lily, and 4 units is 36 + 36 = 72. 1 unit = 18. Lily had 18 and Mei had 90. Check: 90 − 36 = 54 and 18 + 36 = 54."
+   "explanation": "Mei is 5 units and Lily is 1 unit. After the gift they are equal, so Mei had 4 units more than Lily, and 4 units is 36 + 36 = 72. 1 unit = 18. Lily had 18 and Mei had 90."
   },
   {
    "id": "L4U03-G01",

@@ -70,6 +70,13 @@ def _fmt(o, key=None):
 
 def write(n, unit):
     unit = _fmt(unit)
+    from trims import T as _TR
+    for it in [unit['learn']['try']] + unit['items']:
+        if it['id'] in _TR:
+            it['explanation'] = _TR[it['id']]
+        e2 = re.sub(r' Check: [^.]*(?:\.(?! [A-Z(])[^.]*)*\.?$', '', it['explanation'])      # the closing "Check" sentence is dropped (answers section length)
+        if len(e2) > 40:
+            it['explanation'] = e2
 
     def widen(holder, ans):
         """Blanks whose answer has 5 or more characters get the wide answer box {bw}."""

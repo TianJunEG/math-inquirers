@@ -233,8 +233,8 @@ def _():
 def _():
     prog = prog_of('L6U10-G02')
     spins = range(1, 9)
-    mult3 = len([n for n in spins if n % 3 == 0])
-    evens = len([n for n in spins if n % 2 == 0])
+    mult3 = len([n for n in spins if n > 6])
+    evens = len([n for n in spins if n > 4])
     rep = [b for b in prog if b[1].startswith('repeat')][0][1]
     times = int(rep.split('(')[1].rstrip(')'))
     return {'a': [mult3], 'b': [round(times * Fraction(mult3, 8))], 'c': [round(times * Fraction(evens, 8))]}

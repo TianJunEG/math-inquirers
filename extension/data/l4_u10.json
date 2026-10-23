@@ -112,7 +112,7 @@
     ],
     "text": "3"
    },
-   "explanation": "Suppose all 10 are bees: 60 legs. That is 6 short. Each swap to a spider adds 2 legs, so 3 swaps. There are 3 spiders and 7 bees. Check: 3 × 8 + 7 × 6 = 66."
+   "explanation": "Suppose all 10 are bees: 60 legs. That is 6 short. Each swap to a spider adds 2 legs, so 3 swaps. There are 3 spiders and 7 bees."
   }
  },
  "items": [
@@ -214,7 +214,7 @@
      "My answer: {l}"
     ]
    },
-   "explanation": "Try the number of notebooks: 1 notebook leaves $36, which is 12 pens. 2 leaves $31 (no). 3 leaves $26 (no). 4 leaves $21, which is 7 pens. 5 leaves $16 (no). 6 leaves $11 (no). 7 leaves $6, which is 2 pens. 8 notebooks cost $40 and leave $1 (no). So the ways are 12 pens and 1 notebook, 7 pens and 4 notebooks, and 2 pens and 7 notebooks."
+   "explanation": "Try the number of notebooks. 1 leaves $36 = 12 pens. 4 leaves $21 = 7 pens. 7 leaves $6 = 2 pens. The other numbers (0, 2, 3, 5, 6, 8) leave amounts that are not multiples of $3. So there are 3 ways, and the fewest pens is 2 with 7 notebooks."
   },
   {
    "id": "L4U10-S03",
@@ -258,7 +258,7 @@
      "Check:"
     ]
    },
-   "explanation": "(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens. Check: 8 × 4 + 9 × 2 = 32 + 18 = 50."
+   "explanation": "(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens."
   },
   {
    "id": "L4U10-S04",
@@ -292,7 +292,7 @@
      "Working:"
     ]
    },
-   "explanation": "Suppose all 13 are bicycles: 26 wheels. That is 7 short. Each swap to a tricycle adds 1 wheel, so 7 tricycles and 13 − 7 = 6 bicycles. Check: 7 × 3 + 6 × 2 = 33.",
+   "explanation": "Suppose all 13 are bicycles: 26 wheels. That is 7 short. Each swap to a tricycle adds 1 wheel, so 7 tricycles and 13 − 7 = 6 bicycles.",
    "partsrow": true
   },
   {
@@ -321,7 +321,7 @@
     ],
     "text": "40"
    },
-   "explanation": "Work backwards. Undo the loss of 7: 25 + 7 = 32. Undo the 12 she bought: 32 − 12 = 20. Undo giving away half: 20 × 2 = 40. Check: half of 40 is 20, 20 + 12 = 32, 32 − 7 = 25."
+   "explanation": "Work backwards. Undo the loss of 7: 25 + 7 = 32. Undo the 12 she bought: 32 − 12 = 20. Undo giving away half: 20 × 2 = 40."
   },
   {
    "id": "L4U10-S06",
@@ -340,7 +340,7 @@
      ""
     ]
    },
-   "explanation": "Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13. Check: 13 × 2 = 26, 26 + 14 = 40, 40 ÷ 4 = 10."
+   "explanation": "Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13."
   },
   {
    "id": "L4U10-S07",
@@ -495,7 +495,7 @@
      ""
     ]
    },
-   "explanation": "The sister is 1 unit and Kumar is 4 units: 5 units = 45, so 1 unit = 9. The sister is 9 and Kumar is 36. Check: 9 + 36 = 45 and 36 = 4 × 9."
+   "explanation": "The sister is 1 unit and Kumar is 4 units: 5 units = 45, so 1 unit = 9. The sister is 9 and Kumar is 36."
   },
   {
    "id": "L4U10-S10",
@@ -513,7 +513,7 @@
      "Working:"
     ]
    },
-   "explanation": "Suppose all 9 are 20¢: 180¢. That is 120¢ short. Each swap to a 50¢ coin adds 30¢. 120 ÷ 30 = 4 swaps. So 4 coins of 50¢ and 5 coins of 20¢. Check: 200¢ + 100¢ = 300¢."
+   "explanation": "Suppose all 9 are 20¢: 180¢. That is 120¢ short. Each swap to a 50¢ coin adds 30¢. 120 ÷ 30 = 4 swaps. So 4 coins of 50¢ and 5 coins of 20¢."
   },
   {
    "id": "L4U10-S11",
@@ -533,7 +533,7 @@
      "Working:"
     ]
    },
-   "explanation": "The middle number is the one in the middle of the 3, so 87 ÷ 3 = 29. The numbers are 28, 29 and 30. Check: 28 + 29 + 30 = 87."
+   "explanation": "The middle number is the one in the middle of the 3, so 87 ÷ 3 = 29. The numbers are 28, 29 and 30."
   },
   {
    "id": "L4U10-S12",
@@ -587,7 +587,7 @@
     ]
    },
    "hint": "Suppose all 12 boxes hold 2 pens. How many pens are missing?",
-   "explanation": "If all 12 boxes held 2 pens, there would be 24 pens. 45 − 24 = 21 pens are missing. Each box of 5 instead of 2 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 12 − 7 = 5 boxes hold 2. Check: 35 + 10 = 45.",
+   "explanation": "If all 12 boxes held 2 pens, there would be 24 pens. 45 − 24 = 21 pens are missing. Each box of 5 instead of 2 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 12 − 7 = 5 boxes hold 2.",
    "partsrow": true
   },
   {
@@ -619,7 +619,7 @@
     ]
    },
    "hint": "Write what you know in 3 groups. Which group can go last?",
-   "explanation": "Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so the pair Siti, Kumar cannot come before Ben and leave Ben last. The pair must be last: Ali, Mei, Ben, Siti, Kumar. Check each clue."
+   "explanation": "Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so Siti and Kumar must come after Ben: Ali, Mei, Ben, Siti, Kumar."
   },
   {
    "id": "L4U10-T03",
@@ -717,7 +717,7 @@
     ]
    },
    "hint": "Mei may be left or right of Ben.",
-   "explanation": "If Mei is to the right of Ben, she is 6 places after him: 11 + 6 = 17th from the left. She is 8th from the right, so there are 17 + 7 = 24 children. If Mei is to the left of Ben, she is 11 − 6 = 5th from the left, so there are 5 + 7 = 12 children. Both fit: the 5 children in between are places 6 to 10 in the line of 12, or places 12 to 16 in the line of 24."
+   "explanation": "Mei right of Ben: she is 6 places after him, 11 + 6 = 17th from the left, so there are 17 + 7 = 24 children. Mei left of Ben: she is 11 − 6 = 5th from the left, so there are 5 + 7 = 12 children. Both fit."
   },
   {
    "id": "L4U10-G04",
@@ -753,7 +753,7 @@
     ]
    },
    "hint": "Write the ones digits of the first 6 products. Look for the cycle.",
-   "explanation": "The products are 3, 9, 27, 81, 243, 729, 2187. The ones digits are 3, 9, 7, 1, 3, 9, 7 and go round in a cycle of 4. (a) The 5th product ends in 3. (b) 20 is 5 whole cycles of 4, so the 20th product ends in the last digit of the cycle, which is 1."
+   "explanation": "The products are 3, 9, 27, 81, 243, 729, 2187. The ones digits 3, 9, 7, 1 go round in a cycle of 4. (a) The 5th product ends in 3. (b) 20 is 5 whole cycles, so the 20th ends in 1."
   },
   {
    "id": "L4U10-C01",
@@ -765,7 +765,7 @@
     ],
     "text": "4"
    },
-   "explanation": "Suppose all 10 are bikes: 20 wheels, 8 short. Each swap to a car adds 2 wheels, so 4 cars and 6 bikes. Check: 16 + 12 = 28."
+   "explanation": "Suppose all 10 are bikes: 20 wheels, 8 short. Each swap to a car adds 2 wheels, so 4 cars and 6 bikes."
   },
   {
    "id": "L4U10-C02",
@@ -777,7 +777,7 @@
     ],
     "text": "10"
    },
-   "explanation": "Work backwards. 30 + 6 = 36. 36 ÷ 2 = 18. 18 − 8 = 10. Check: 10 + 8 = 18, 18 × 2 = 36, 36 − 6 = 30."
+   "explanation": "Work backwards. 30 + 6 = 36. 36 ÷ 2 = 18. 18 − 8 = 10."
   },
   {
    "id": "L4U10-C03",

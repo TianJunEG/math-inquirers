@@ -283,7 +283,7 @@
     "text": "A and C",
     "unordered": true
    },
-   "explanation": "Fold each net in your head. A: the row of 4 makes the walls, and one square above and one below make the lid and the base. It folds. B: the 2 by 2 block of squares has 4 squares meeting at a corner, but only 3 faces of a cube meet at a corner. D: 5 squares in a row wrap round and the 5th covers the 1st. C: the staircase folds into a cube."
+   "explanation": "A: the row of 4 makes the walls, with a lid above and a base below. It folds. B: a 2 by 2 block puts 4 squares at one corner, but a cube has only 3 faces at a corner. D: 5 in a row wrap round and the 5th covers the 1st. C folds."
   },
   {
    "id": "L4U08-S02",
@@ -650,7 +650,7 @@
      }
     }
    ],
-   "explanation": "A has 1 line (down the middle). B has 2 lines (along its length and across its middle). C, the plus sign, has 4 lines (up-down, across and the 2 diagonals). D has none: it looks the same when turned half way round, but no fold makes the halves match.",
+   "explanation": "A has 1 line (down the middle). B has 2 (along its length and across). C, the plus sign, has 4 (up-down, across and 2 diagonals). D has none: no fold makes its halves match.",
    "partsrow": true
   },
   {
@@ -713,7 +713,7 @@
      }
     }
    ],
-   "explanation": "Look for a shaded square with no partner. Only the one in the bottom row has none. For the up-down line, its partner is in the bottom row on the right. For the across line, its partner is in the top row, above it. Each fix works for one line, so there are 2 ways.",
+   "explanation": "Only the shaded square in the bottom row has no partner. For the up-down line its partner is in the bottom row on the right. For the across line its partner is in the top row. Each fix works for one line: 2 ways.",
    "figside": true
   },
   {
@@ -898,7 +898,7 @@
     ]
    },
    "hint": "Which faces share an edge with a given face?",
-   "explanation": "(a) A face shares an edge with 4 faces and is opposite just 1. Two opposite red faces do not share an edge. A third red face would touch one of them. So the most is 2. (b) Take 3 faces that meet at one corner. They are not opposite each other, so 3 red faces work. A 4th red face would be opposite one of them. So the most is 3."
+   "explanation": "(a) A face shares an edge with 4 faces. Two opposite red faces do not share an edge, but a third red face would touch one of them. So the most is 2. (b) 3 faces at one corner are not opposite each other, but a 4th face would be opposite one of them. So the most is 3."
   },
   {
    "id": "L4U08-T02",
@@ -1022,7 +1022,7 @@
     }
    ],
    "hint": "Corners, edges and faces of the big cube. Count each kind.",
-   "explanation": "3 painted faces: the 8 corner cubes. 2 painted faces: 1 cube in the middle of each of the 12 edges, so 12. 1 painted face: 1 cube in the middle of each of the 6 faces, so 6. No paint: the cube in the very middle, so 1. Check: 8 + 12 + 6 + 1 = 27."
+   "explanation": "3 painted faces: the 8 corner cubes. 2 faces: 1 in the middle of each of the 12 edges. 1 face: 1 in the middle of each of the 6 faces. No paint: the 1 cube in the middle. 8 + 12 + 6 + 1 = 27."
   },
   {
    "id": "L4U08-G02",
@@ -1069,7 +1069,7 @@
     }
    ],
    "hint": "Try a corner square, then an edge square, then the middle.",
-   "explanation": "A single square has a line of symmetry when it lies on the middle row, the middle column or a diagonal. Middle row: 5 squares. Middle column: 5 squares, with 1 shared. That is 9. Each diagonal has 5 squares, and the middle is shared again, so the diagonals add 8 more squares. In all 9 + 8 = 17. The middle square has 4 lines. Every other one has exactly 1: 17 − 1 = 16.",
+   "explanation": "A single square has a line of symmetry when it is on the middle row, the middle column or a diagonal. Middle row and column: 5 + 5 − 1 = 9 squares. The diagonals add 8 more: 17. The middle square has 4 lines, so the other 16 have exactly 1.",
    "figright": true
   },
   {
@@ -1100,7 +1100,7 @@
     }
    ],
    "hint": "Write the top, north and east faces after each roll.",
-   "explanation": "Start: top 1, bottom 6, north 2, south 5, east 3, west 4. Roll north: the north face 2 lands on the table, so the top is 5, the bottom is 2, the north face is 1 and the south face is 6. Roll east: the east face 3 lands on the table, so the top is 4, the bottom is 3, the east face is 5 and the west face is 2. Roll north: the north face 1 lands on the table, so the bottom is 1 and the top is the old south face, 6."
+   "explanation": "Start: top 1, bottom 6, north 2, south 5, east 3, west 4. Roll north: top 5, bottom 2, north 1, south 6. Roll east: top 4, bottom 3, east 5, west 2. Roll north: the north face 1 lands down, so the bottom is 1 and the top is the old south face, 6."
   },
   {
    "id": "L4U08-C01",
