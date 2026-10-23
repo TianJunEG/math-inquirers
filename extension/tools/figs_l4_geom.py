@@ -101,8 +101,12 @@ def l4_proto(spec, w=None):
 def l4_fan(spec, w=None):
     rays = spec['rays']
     L = spec.get('len', 330)
-    ox, oy = 50, 60 + L * 0.62
-    W, H = 50 + L + 70, oy + 60
+    xs = [L * math.cos(math.radians(r['d'])) for r in rays]
+    ys = [L * math.sin(math.radians(r['d'])) for r in rays]
+    ox = 60 + max(0, -min(xs)) + 10
+    oy = 60 + max(ys)
+    W = ox + max(max(xs), 0) + 70
+    H = oy + 70
     P = []
     for r in rays:
         x, y = _pt(ox, oy, L, r['d'])

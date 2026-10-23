@@ -62,7 +62,9 @@ def _():
     for a in f['arcs']:
         r1, r2 = f['rays'][a['i']]['d'], f['rays'][a['j']]['d']
         assert a['text'] == f'{r2 - r1}°', (a, r1, r2)
-    return {'a': s([d['C'] - d['A']]), 'b': s([d['D'] - d['B']]), 'c': s([d['D'] - d['A']])}
+    n_rays = len(f['rays'])
+    pairs = sum(1 for i in range(n_rays) for j in range(i + 1, n_rays))
+    return {'a': s([d['C'] - d['A']]), 'b': s([d['D'] - d['B']]), 'c': s([d['D'] - d['A']]), 'd': s([pairs])}
 
 
 @check('L4U06-S04')

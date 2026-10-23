@@ -25,23 +25,23 @@ learn = {
          'explanation': '135° is 3 steps of 45°. Clockwise from NE: E, SE, S. He faces S.'}}
 
 S, T, G, C = [], [], [], []
-S.append(item(U+'-S01', 'start', 1, 'Estimate each angle. Then measure it with your protractor. The arms are short, so draw them longer with a ruler first.',
+S.append(item(U+'-S01', 'start', 1, 'Estimate each angle. Then measure it with your protractor. Use a ruler to make the arms longer first.',
   fig=ANG([{'d1': 0, 'd2': 25, 'label': 'a'}, {'d1': 0, 'd2': 65, 'label': 'b'}, {'d1': 0, 'd2': 130, 'label': 'c'}], cols=3, len=150, width_mm=160),
   parts=[P('a', 'a = {b}°', A(25)), P('b', 'b = {b}°', A(65)), P('c', 'c = {b}°', A(130))], partsrow=True,
-  why='Each angle starts at 0 on the horizontal arm. a = 25°, b = 65° and c = 130°. Answers within 2° are fine. Angle c is bigger than a right angle, so a good estimate is more than 90°.'))
+  why='Each angle starts at 0 on the horizontal arm. a = 25°, b = 65° and c = 130°. Answers within 2° are fine. Angle c is greater than a right angle, so a good estimate is more than 90°.'))
 S.append(item(U+'-S02', 'start', 1, 'Read the angle from the protractor.',
   fig={'type': 'l4_proto', 'angle': 52, 'flip': True, 'width_mm': 88},
   parts=[P('a', 'The angle is {b}°', A(52)), P('b', 'Is it smaller or greater than a right angle? {circ:smaller|greater}', A('smaller'))],
   figside=True,
   why='One arm lies along the baseline at 0 on the left. Read the scale that starts at 0 on the left arm: 52°. A right angle is 90°, and 52° is smaller. The other scale says 128°, which is the angle measured from the other arm.'))
-S.append(item(U+'-S03', 'start', 1, 'Four rays OA, OB, OC and OD make 3 angles side by side. Find each angle.',
+S.append(item(U+'-S03', 'start', 1, 'Rays OA, OB, OC and OD leave O. The 3 small angles lie side by side. Find the angles.',
   fig={'type': 'l4_fan', 'rays': [{'d': 20, 'label': 'A'}, {'d': 45, 'label': 'B'}, {'d': 80, 'label': 'C'}, {'d': 120, 'label': 'D'}],
        'arcs': [{'i': 0, 'j': 1, 'text': '25°'}, {'i': 1, 'j': 2, 'text': '35°'}, {'i': 2, 'j': 3, 'text': '40°'}], 'width_mm': 70, 'len': 320},
   parts=[P('a', '∠AOC = {b}°', A(60)), P('b', '∠BOD = {b}°', A(75)), P('c', '∠AOD = {b}°', A(100)),
          P('d', 'How many angles are there in all? {b}', A(6))], partsrow=True,
   figside=True,
   why='The angles add. ∠AOC = 25° + 35° = 60°. ∠BOD = 35° + 40° = 75°. ∠AOD = 25° + 35° + 40° = 100°. The angles are AOB, BOC, COD, AOC, BOD and AOD: 6 angles.'))
-S.append(item(U+'-S04', 'start', 2, 'One step from a direction to the next is 45°. Find the direction.',
+S.append(item(U+'-S04', 'start', 2, 'Each step round the compass is 45°. Find the direction.',
   fig={'type': 'l4_compass', 'width_mm': 50},
   parts=[P('a', 'Ali faces W. He turns 90° clockwise. He now faces {b}', A('N')),
          P('b', 'Mei faces SE. She turns 180°. She now faces {b}', A('NW')),
@@ -56,7 +56,7 @@ S.append(item(U+'-S05', 'start', 2, 'Find the smaller angle between the clock ha
 S.append(item(U+'-S06', 'start', 2, 'Ben faces W. He wants to face NE. What is his smallest turn?',
   parts=[P('a', 'The turn is {b}°', A(135)), P('b', 'The direction is {circ:clockwise|anticlockwise}', A('clockwise'))],
   why='Clockwise from W: NW, N, NE is 3 steps, 135°. Anticlockwise from W: SW, S, SE, E, NE is 5 steps, 225°. The smallest turn is 135° clockwise.'))
-S.append(item(U+'-S07', 'start', 3, 'A corner of a rectangle is 90°. A line splits it. Find the angles a and b. The drawings are not to scale.',
+S.append(item(U+'-S07', 'start', 3, 'Each rectangle corner is 90°. Lines split the corners. Find the angles a and b. The drawings are not to scale.',
   fig={'type': 'l4_corner', 'figs': [{'parts': [{'deg': 53, 'text': 'a'}, {'deg': 37, 'text': '37°'}]}, {'parts': [{'deg': 43, 'text': 'b'}, {'deg': 19, 'text': '19°'}, {'deg': 28, 'text': '28°'}]}], 'width_mm': 120, 'len': 200},
   parts=[P('a', 'a = {b}°', A(53)), P('b', 'b = {b}°', A(43))], partsrow=True,
   why='(a) a + 37° = 90°, so a = 90° − 37° = 53°. (b) The three angles add to 90°: b = 90° − 19° − 28° = 43°.'))
@@ -88,22 +88,22 @@ T.append(item(U+'-T03', 'think', 4, 'A robot faces N. It turns 90° clockwise, t
   why='In steps of 45°: +2, −3, +5, −1. From N: 2 steps is E, then 3 steps back is NW, then 5 steps forward is S, then 1 step back is SE. The turns add to 90° + 135° + 225° + 45° = 495°.',
   space={'rows': ['Working:', '']}))
 
-G.append(item(U+'-G01', 'go', 5, 'Six rays come out of one point and make 5 equal angles side by side. The angle between the 2 outside rays is 150°.',
-  parts=[P('a', 'How many angles can you find in all? {b}', A(15)), P('b', 'How many of them are right angles? {b}', A(3))],
-  hint='One small angle is 30°. Count the angles made of 1 part, 2 parts, and so on.',
+G.append(item(U+'-G01', 'go', 5, 'Six rays leave one point. They make 5 equal angles in a row. The 2 outside rays are 150° apart.',
+  parts=[P('a', 'How many angles can you find in all? {b}', A(15)), P('b', 'Count the right angles among them. {b}', A(3))],
+  hint='One small angle is 30°. Count 1-part, 2-part, 3-part angles.',
   why='Each small angle is 150° ÷ 5 = 30°. Angles made of 1 part: 5. Of 2 parts: 4. Of 3 parts: 3. Of 4 parts: 2. Of 5 parts: 1. In all 5 + 4 + 3 + 2 + 1 = 15. A right angle is 3 parts of 30°, and there are 3 of them.',
   space={'rows': ['Working:']}))
 G.append(item(U+'-G02', 'go', 5, 'A robot faces N. It turns 135° clockwise again and again.',
-  parts=[P('a', 'After how many turns does it first face N again? {b}', A(8)), P('b', 'After 50 turns it faces {b}', A('W'))],
+  parts=[P('a', 'How many turns until it faces N again? {b}', A(8)), P('b', 'After 50 turns it faces {b}', A('W'))],
   hint='135° is 3 steps of 45°. Write the directions after each turn.',
   why='Each turn is 3 steps. The directions are SE, W, NE, S, NW, E, SW, N. It faces N again after 8 turns. 50 turns is 6 lots of 8, which is 48 turns, and 2 more turns. After 48 turns it faces N. 2 more turns take it to SE and then W.',
   space={'rows': ['List:']}))
-G.append(item(U+'-G03', 'go', 5, 'A corner of a rectangle is 90°. It is split into 3 angles. The middle angle is twice the smallest. The greatest is 6 times the smallest.',
+G.append(item(U+'-G03', 'go', 5, 'A rectangle corner of 90° is cut by 2 lines. The middle angle is 2 times the smallest. The greatest is 6 times the smallest.',
   parts=[P('a', 'The smallest angle is {b}°', A(10)), P('b', 'The greatest angle is {b}°', A(60))],
   hint='Count the equal parts. 1 + 2 + 6 = 9.',
   why='The 3 angles are 1, 2 and 6 equal parts. That is 9 parts in all, and 9 parts = 90°, so 1 part = 10°. The smallest is 10°, the middle is 20° and the greatest is 60°.',
   space={'rows': ['Working:']}))
-G.append(item(U+'-G04', 'go', 5, 'At which o\'clock times (from 1 o\'clock to 12 o\'clock) is the smaller angle between the clock hands more than 100° and less than 160°?',
+G.append(item(U+'-G04', 'go', 5, 'Think about the smaller angle between the clock hands at each o\'clock time. Which times give an angle between 100° and 160°?',
   parts=[P('a', 'How many times are there? {b}', A(4)), P('b', 'Write the times: {b} {b} {b} {b}', A(4, 5, 7, 8, text='4, 5, 7 and 8 o\'clock'))],
   hint='Write the angle for every o\'clock time first.',
   why='The angle at 1 to 12 o\'clock is 30°, 60°, 90°, 120°, 150°, 180°, 150°, 120°, 90°, 60°, 30°, 0°. Those between 100° and 160° are 120°, 150°, 150° and 120°, at 4, 5, 7 and 8 o\'clock.',
@@ -115,7 +115,7 @@ C.append(item(U+'-C02', 'quiz', None, 'Aisha faces S and turns 135° clockwise. 
   why='135° is 3 steps of 45°. Clockwise from S: SW, W, NW.'))
 C.append(item(U+'-C03', 'quiz', None, 'A corner of a square is split into 2 angles. One angle is 41°. How big is the other? {b}°', ans=A(49),
   why='The corner is 90°. 90° − 41° = 49°.'))
-C.append(item(U+'-C04', 'quiz', None, 'How many degrees does the minute hand turn from 5:10 to 5:35? {b}°', ans=A(150),
+C.append(item(U+'-C04', 'quiz', None, 'The minute hand moves from 5:10 to 5:35. How many degrees does it turn? {b}°', ans=A(150),
   why='From 5:10 to 5:35 is 25 minutes. 25 × 6° = 150°.'))
 
 unit = {'schema_version': 1, 'level': 4, 'unit': 6, 'id': U, 'title': 'Angle Turns', 'topic': 'Angles', 'holiday_lesson': 6,

@@ -78,7 +78,7 @@
    "id": "L4U06-S01",
    "tier": "start",
    "page": 1,
-   "text": "Estimate each angle. Then measure it with your protractor. The arms are short, so draw them longer with a ruler first.",
+   "text": "Estimate each angle. Then measure it with your protractor. Use a ruler to make the arms longer first.",
    "figure": {
     "type": "l4_angle",
     "angles": [
@@ -134,7 +134,7 @@
      }
     }
    ],
-   "explanation": "Each angle starts at 0 on the horizontal arm. a = 25°, b = 65° and c = 130°. Answers within 2° are fine. Angle c is bigger than a right angle, so a good estimate is more than 90°.",
+   "explanation": "Each angle starts at 0 on the horizontal arm. a = 25°, b = 65° and c = 130°. Answers within 2° are fine. Angle c is greater than a right angle, so a good estimate is more than 90°.",
    "partsrow": true
   },
   {
@@ -177,7 +177,7 @@
    "id": "L4U06-S03",
    "tier": "start",
    "page": 1,
-   "text": "Four rays OA, OB, OC and OD make 3 angles side by side. Find each angle.",
+   "text": "Rays OA, OB, OC and OD leave O. The 3 small angles lie side by side. Find the angles.",
    "figure": {
     "type": "l4_fan",
     "rays": [
@@ -268,7 +268,7 @@
    "id": "L4U06-S04",
    "tier": "start",
    "page": 2,
-   "text": "One step from a direction to the next is 45°. Find the direction.",
+   "text": "Each step round the compass is 45°. Find the direction.",
    "figure": {
     "type": "l4_compass",
     "width_mm": 50
@@ -413,7 +413,7 @@
    "id": "L4U06-S07",
    "tier": "start",
    "page": 3,
-   "text": "A corner of a rectangle is 90°. A line splits it. Find the angles a and b. The drawings are not to scale.",
+   "text": "Each rectangle corner is 90°. Lines split the corners. Find the angles a and b. The drawings are not to scale.",
    "figure": {
     "type": "l4_corner",
     "figs": [
@@ -701,7 +701,7 @@
    "id": "L4U06-G01",
    "tier": "go",
    "page": 5,
-   "text": "Six rays come out of one point and make 5 equal angles side by side. The angle between the 2 outside rays is 150°.",
+   "text": "Six rays leave one point. They make 5 equal angles in a row. The 2 outside rays are 150° apart.",
    "parts": [
     {
      "label": "a",
@@ -715,7 +715,7 @@
     },
     {
      "label": "b",
-     "text": "How many of them are right angles? {b}",
+     "text": "Count the right angles among them. {b}",
      "answer": {
       "value": [
        "3"
@@ -729,7 +729,7 @@
      "Working:"
     ]
    },
-   "hint": "One small angle is 30°. Count the angles made of 1 part, 2 parts, and so on.",
+   "hint": "One small angle is 30°. Count 1-part, 2-part, 3-part angles.",
    "explanation": "Each small angle is 150° ÷ 5 = 30°. Angles made of 1 part: 5. Of 2 parts: 4. Of 3 parts: 3. Of 4 parts: 2. Of 5 parts: 1. In all 5 + 4 + 3 + 2 + 1 = 15. A right angle is 3 parts of 30°, and there are 3 of them."
   },
   {
@@ -740,7 +740,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "After how many turns does it first face N again? {b}",
+     "text": "How many turns until it faces N again? {b}",
      "answer": {
       "value": [
        "8"
@@ -771,7 +771,7 @@
    "id": "L4U06-G03",
    "tier": "go",
    "page": 5,
-   "text": "A corner of a rectangle is 90°. It is split into 3 angles. The middle angle is twice the smallest. The greatest is 6 times the smallest.",
+   "text": "A rectangle corner of 90° is cut by 2 lines. The middle angle is 2 times the smallest. The greatest is 6 times the smallest.",
    "parts": [
     {
      "label": "a",
@@ -806,7 +806,7 @@
    "id": "L4U06-G04",
    "tier": "go",
    "page": 5,
-   "text": "At which o'clock times (from 1 o'clock to 12 o'clock) is the smaller angle between the clock hands more than 100° and less than 160°?",
+   "text": "Think about the smaller angle between the clock hands at each o'clock time. Which times give an angle between 100° and 160°?",
    "parts": [
     {
      "label": "a",
@@ -874,7 +874,7 @@
   {
    "id": "L4U06-C04",
    "tier": "quiz",
-   "text": "How many degrees does the minute hand turn from 5:10 to 5:35? {b}°",
+   "text": "The minute hand moves from 5:10 to 5:35. How many degrees does it turn? {b}°",
    "answer": {
     "value": [
      "150"
