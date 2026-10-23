@@ -209,7 +209,7 @@ def _():
 @check('L4U08-T02')
 def _():
     pairs = [(1, 6), (2, 5), (3, 4)]
-    sols = [c for c in itertools.product(*pairs) if sum(c) == 10]
+    sols = [c for c in itertools.product(*pairs) if c[0] * c[1] * c[2] == 36]
     assert len(sols) == 1
     seen = sorted(sols[0])
     hidden = sorted(7 - x for x in seen)
@@ -218,11 +218,12 @@ def _():
 
 @check('L4U08-T03')
 def _():
+    assert ITEM['L4U08-T03']['figure']['axis']['kind'] == 'd'
     cells = [(r, c) for r in range(3) for c in range(3)]
     n = 0
-    for sub in itertools.combinations(cells, 3):
+    for sub in itertools.combinations(cells, 4):
         S = set(sub)
-        if all((r, 2 - c) in S for r, c in S):
+        if all((c, r) in S for r, c in S):
             n += 1
     return s([n])
 

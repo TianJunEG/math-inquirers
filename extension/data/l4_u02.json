@@ -785,7 +785,7 @@
     }
    ],
    "hint": "Round a few numbers just below 1500 in steps.",
-   "explanation": "36 449 becomes 36 450, 36 500, then 37 000. In one go it is 36 000. (c) 1445 becomes 1450, 1500, 2000, but in one go it is 1000. Any 4-digit number below 1445 does this."
+   "explanation": "36 449 becomes 36 450, 36 500, then 37 000. In one go it is 36 000. (c) 1445 becomes 1450, 1500, 2000, but in one go it is 1000. No 4-digit number below 1445 does this."
   },
   {
    "id": "L4U02-G02",

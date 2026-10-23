@@ -39,21 +39,21 @@ def _():
 
 @check('L4U10-S02')
 def _():
-    ways = [(p, n) for p in range(1, 20) for n in range(1, 10) if 3 * p + 5 * n == 41]
-    fewest = min(ways)
+    ways = [(b, c) for b in range(1, 20) for c in range(1, 10) if 3 * b + 8 * c == 50]
+    fewest = min(ways, key=lambda w: w[0] + w[1])
     return {'a': s([len(ways)]), 'b': s(fewest)}
 
 
 @check('L4U10-S03')
 def _():
-    sol = two_kinds(17, 50, 4, 2)          # (cows, hens)
+    sol = [(t10, 17 - t10) for t10 in range(18) if 10 * t10 + 6 * (17 - t10) == 134]
     assert len(sol) == 1
-    return {'a': s([17 * 2]), 'b': s([50 - 17 * 2]), 'c': s([sol[0][0]])}
+    return {'a': s([17 * 6]), 'b': s([134 - 17 * 6]), 'c': s([sol[0][0]])}
 
 
 @check('L4U10-S04')
 def _():
-    sol = two_kinds(13, 33, 3, 2)          # (tricycles, bicycles)
+    sol = two_kinds(13, 49, 5, 3)          # (5 kg bags, 3 kg bags)
     assert len(sol) == 1
     return {'a': s([sol[0][0]]), 'b': s([sol[0][1]])}
 
@@ -61,8 +61,8 @@ def _():
 @check('L4U10-S05')
 def _():
     ops = ITEM['L4U10-S05']['figure']['ops']
-    assert ops == ['÷ 2', '+ 12', '− 7']
-    sol = [x for x in range(2, 1000, 2) if x // 2 + 12 - 7 == 25]
+    assert ops == ['× 3', '− 8', '÷ 2']
+    sol = [x for x in range(1, 1000) if (3 * x - 8) % 2 == 0 and (3 * x - 8) // 2 == 20]
     assert len(sol) == 1
     return s(sol)
 
@@ -118,7 +118,7 @@ def _():
 
 @check('L4U10-S12')
 def _():
-    sol = [10 * a + b for a in range(1, 10) for b in range(10) if a + b == 12 and 10 * b + a == 10 * a + b + 18]
+    sol = [n for n in range(10, 100) if abs(n // 10 - n % 10) == 4 and n % 7 == 0]
     assert len(sol) == 1
     return s(sol)
 

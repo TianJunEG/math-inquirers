@@ -81,7 +81,7 @@ S.append(item(U+'-S09', 'start', 3, 'A hall floor is 12 m long and 8 m wide. It 
 T.append(item(U+'-T01', 'think', 4, 'A rectangle has a perimeter of 42 cm. Its length is 5 cm more than its width. What is its area? {b} cm²',
   ans=A(104), hint='Length + width is half of the perimeter.',
   why='Half of the perimeter is length + width = 21 cm. The length is 5 more than the width, so 21 − 5 = 16 cm is 2 widths. The width is 8 cm and the length is 13 cm: 13 × 8 = 104 cm².',
-  space={'rows': ['Working:', '']}))
+  space={'rows': ['Working:', '', '']}))
 T.append(item(U+'-T02', 'think', 4, 'Rectangles have an area of 36 cm² and whole-cm sides. A 2 by 18 rectangle is the same as an 18 by 2 rectangle.',
   parts=[P('a', 'How many different rectangles are there? {b}', A(5)),
          P('b', 'The greatest perimeter of these rectangles: {b} cm', A(74))],
@@ -90,7 +90,7 @@ T.append(item(U+'-T02', 'think', 4, 'Rectangles have an area of 36 cm² and whol
   space={'rows': ['List:', '', '']}))
 T.append(item(U+'-T03', 'think', 4, 'A tray is 15 cm long and 9 cm wide. A square of side 3 cm is cut off each of the 4 corners.',
   parts=[P('a', 'The area of the shape that is left: {b} cm²', A(99)),
-         P('b', 'The perimeter of the shape that is left: {b} cm', A(48))],
+         P('b', 'Perimeter of the new shape: {b} cm', A(48))],
   hint='For (b), slide each cut edge back to the corner.',
   why='(a) 15 × 9 = 135 cm². The 4 squares are 4 × 9 = 36 cm². 135 − 36 = 99 cm². (b) Each cut keeps the perimeter the same, so it is 2 × (15 + 9) = 48 cm.',
   space={'rows': ['Working:', '']}))

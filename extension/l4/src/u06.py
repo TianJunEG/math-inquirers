@@ -88,11 +88,10 @@ T.append(item(U+'-T03', 'think', 4, 'A robot faces N. It turns 90° clockwise, t
   why='In steps of 45°: +2, −3, +5, −1. From N: 2 steps is E, then 3 steps back is NW, then 5 steps forward is S, then 1 step back is SE. The turns add to 90° + 135° + 225° + 45° = 495°.',
   space={'rows': ['Working:', '']}))
 
-G.append(item(U+'-G01', 'go', 5, 'Four rays leave a point O on a straight line and make 4 angles on one side of the line. Each angle is 10° greater than the one before it.',
+G.append(item(U+'-G01', 'go', 5, 'Four rays leave a point O on a straight line. They make 4 angles. Each angle is 10° greater than the one before it.',
   parts=[P('a', 'The smallest angle is {b}°', A(30)), P('b', 'The greatest angle is {b}°', A(60))],
   hint='The 4 angles add up to 180°. Take away the extra degrees first.',
-  why='The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.',
-  space={'rows': ['Working:']}))
+  why='The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.'))
 G.append(item(U+'-G02', 'go', 5, 'A dancer faces N. She turns 90° clockwise and then 45° anticlockwise. She does these 2 turns again and again.',
   parts=[P('a', 'After how many pairs of turns does she face N again? {b}', A(8)), P('b', 'After 21 pairs she faces {b}', A('SW'))],
   hint='One pair of turns is 1 step of 45°. Write the directions.',

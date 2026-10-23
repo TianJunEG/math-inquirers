@@ -184,67 +184,67 @@
    "id": "L4U10-S02",
    "tier": "start",
    "page": 1,
-   "text": "Mei buys some $3 pens and some $5 notebooks. She buys at least 1 of each. She pays exactly $41.",
+   "text": "A farmer fills a 50 litre tank with a 3 litre bucket and an 8 litre can. He uses at least 1 of each. The tank is filled exactly.",
    "parts": [
     {
      "label": "a",
-     "text": "How many different ways can she do it? {b}",
+     "text": "How many different ways can he do it? {b}",
      "answer": {
       "value": [
-       "3"
+       "2"
       ],
-      "text": "3"
+      "text": "2"
      }
     },
     {
      "label": "b",
-     "text": "The way with the fewest pens: {b} pens and {b} notebooks",
+     "text": "The way with the fewest trips: {b} buckets and {b} cans",
      "answer": {
       "value": [
-       "2",
-       "7"
+       "6",
+       "4"
       ],
-      "text": "2 pens and 7 notebooks"
+      "text": "6 buckets and 4 cans"
      }
     }
    ],
    "space": {
     "rows": [
-     "Notebooks, money left, pens: {ll}",
+     "Cans, litres left, buckets: {ll}",
      "My answer: {l}"
     ]
    },
-   "explanation": "1 notebook leaves $36 = 12 pens. 4 leave $21 = 7 pens. 7 leave $6 = 2 pens. Other numbers leave amounts that are not multiples of $3. 3 ways, fewest pens 2."
+   "explanation": "Try the cans: 1 can leaves 42 L = 14 buckets. 4 cans leave 18 L = 6 buckets. 2, 3, 5 and 6 cans leave amounts that are not in 3s. 2 ways. Fewest trips: 6 + 4 = 10."
   },
   {
    "id": "L4U10-S03",
    "tier": "start",
    "page": 1,
-   "text": "A farm has hens (2 legs) and cows (4 legs). There are 17 animals with 50 legs.",
+   "text": "A concert sold 17 tickets. Some cost $6 and some cost $10. The takings were $134.",
    "parts": [
     {
      "label": "a",
-     "text": "Suppose all 17 are hens. They have {b} legs.",
+     "text": "Suppose all 17 cost $6. They cost ${b}.",
      "answer": {
       "value": [
-       "34"
+       "102"
       ],
-      "text": "34"
+      "text": "102"
      }
     },
     {
      "label": "b",
-     "text": "That is {b} legs short.",
+     "text": "That is ${b} too little.",
      "answer": {
       "value": [
-       "16"
+       "32"
       ],
-      "text": "16"
+      "text": "32"
      }
     },
     {
      "label": "c",
-     "text": "Each swap to a cow adds 2 legs. There are {b} cows.",
+     "text": "Each swap to a $10 ticket adds $4. There are {b} tickets at $10.",
      "answer": {
       "value": [
        "8"
@@ -258,32 +258,32 @@
      "Check:"
     ]
    },
-   "explanation": "(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens."
+   "explanation": "(a) 17 × 6 = 102. (b) 134 − 102 = 32. (c) 32 ÷ 4 = 8 swaps, so 8 tickets at $10 and 9 at $6."
   },
   {
    "id": "L4U10-S04",
    "tier": "start",
    "page": 2,
-   "text": "A shed has bicycles (2 wheels) and tricycles (3 wheels). There are 13 of them with 33 wheels.",
+   "text": "A shop has 13 bags of rice. Some bags are 3 kg and some are 5 kg. They have a mass of 49 kg in all.",
    "parts": [
     {
      "label": "a",
-     "text": "The number of tricycles is {b}",
+     "text": "The number of 5 kg bags is {b}",
      "answer": {
       "value": [
-       "7"
+       "5"
       ],
-      "text": "7"
+      "text": "5"
      }
     },
     {
      "label": "b",
-     "text": "The number of bicycles is {b}",
+     "text": "The number of 3 kg bags is {b}",
      "answer": {
       "value": [
-       "6"
+       "8"
       ],
-      "text": "6"
+      "text": "8"
      }
     }
    ],
@@ -292,36 +292,36 @@
      "Working:"
     ]
    },
-   "explanation": "Suppose all 13 are bicycles: 26 wheels. That is 7 short. Each swap to a tricycle adds 1 wheel, so 7 tricycles and 13 − 7 = 6 bicycles.",
+   "explanation": "Suppose all 13 are 3 kg: 39 kg. That is 10 kg short. Each swap to a 5 kg bag adds 2 kg, so 5 bags of 5 kg and 13 − 5 = 8 bags of 3 kg.",
    "partsrow": true
   },
   {
    "id": "L4U10-S05",
    "tier": "start",
    "page": 2,
-   "text": "Mei had some stickers. She gave half of them to Ali. Then she bought 12 more. Then she lost 7. Now she has 25 stickers. Find how many she had at the start. {b}",
+   "text": "A magic pot triples the coins put into it. Then 8 coins are taken out. Then the pot halves the coins that are left. Now there are 20 coins. How many coins were put in at the start? {b}",
    "figure": {
     "type": "l4_flow",
     "items": [
      null,
      null,
      null,
-     25
+     20
     ],
     "ops": [
-     "÷ 2",
-     "+ 12",
-     "− 7"
+     "× 3",
+     "− 8",
+     "÷ 2"
     ],
     "width_mm": 130
    },
    "answer": {
     "value": [
-     "40"
+     "16"
     ],
-    "text": "40"
+    "text": "16"
    },
-   "explanation": "Work backwards. Undo the loss of 7: 25 + 7 = 32. Undo the 12 she bought: 32 − 12 = 20. Undo giving away half: 20 × 2 = 40."
+   "explanation": "Work backwards. Undo halving: 20 × 2 = 40. Undo taking out 8: 40 + 8 = 48. Undo tripling: 48 ÷ 3 = 16."
   },
   {
    "id": "L4U10-S06",
@@ -440,7 +440,7 @@
      }
     }
    ],
-   "explanation": "Ali's pet barks: the dog. The fish is the only pet with no fur: Ben. Mei does not have the rabbit, so Mei has the cat and Siti has the rabbit.",
+   "explanation": "Ali's pet barks: the dog. The fish is the only pet with no fur: Ben. A rabbit hops, so Mei does not have the rabbit. Mei has the cat and Siti has the rabbit.",
    "partsrow": true
   },
   {
@@ -539,19 +539,20 @@
    "id": "L4U10-S12",
    "tier": "start",
    "page": 3,
-   "text": "Who am I? My 2 digits add up to 12. Swapping them gives a number 18 greater than me. {b}",
+   "text": "Who am I? My 2 digits differ by 4. I am a multiple of 7. {b}",
    "answer": {
     "value": [
-     "57"
+     "84"
     ],
-    "text": "57"
+    "text": "84"
    },
    "space": {
     "rows": [
-     "Try:"
+     "List:"
     ]
    },
-   "explanation": "Digit pairs that add to 12 give 39, 48, 57, 66, 75, 84, 93. The swap is 18 more only for 57, which swaps to 75."
+   "hint": "List the 2-digit multiples of 7. Check the digits.",
+   "explanation": "The 2-digit multiples of 7 are 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91 and 98. Only 84 has digits that differ by 4."
   },
   {
    "id": "L4U10-T01",
@@ -618,7 +619,7 @@
      ""
     ]
    },
-   "hint": "Write what you know in 3 groups. Which group can go last?",
+   "hint": "Join the clues into 2 groups. Which group can go last?",
    "explanation": "Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so Siti and Kumar must come after Ben: Ali, Mei, Ben, Siti, Kumar."
   },
   {

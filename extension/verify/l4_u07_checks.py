@@ -126,8 +126,8 @@ def _():
     outer, hole = sh['pts'], sh['hole']
     ow, oh = max(p[0] for p in outer), max(p[1] for p in outer)
     hw, hh = max(p[0] for p in hole) - min(p[0] for p in hole), max(p[1] for p in hole) - min(p[1] for p in hole)
-    assert (hw, hh) == (12, 9)
-    return {'a': s([ow, oh]), 'b': s([area(outer) - area(hole)])}
+    assert (ow, oh, hw, hh) == (16, 10, 4, 4)
+    return {'a': s([area(outer) - area(hole)]), 'b': s([perim(outer) + perim(hole)])}
 
 
 @check('L4U07-S07')
@@ -154,26 +154,26 @@ def _():
 
 @check('L4U07-T01')
 def _():
-    f = ITEM['L4U07-T01']['figure']['shapes'][0]
-    assert area(f['pts']) == 64 and f['dashed'][0] == [[4, 0], [4, 8]]   # a square cut into two equal rectangles
-    sides = [side for side in range(1, 100) if 2 * (side + side / 2) == 30]
-    assert len(sides) == 1
-    return s([sides[0] ** 2])
+    sol = [(l, w) for w in range(1, 40) for l in range(1, 40) if 2 * (l + w) == 42 and l == w + 5]
+    assert len(sol) == 1
+    return s([sol[0][0] * sol[0][1]])
 
 
 @check('L4U07-T02')
 def _():
-    best_a = max(l * w for l in range(1, 15) for w in range(1, 15) if 2 * (l + w) == 28)
-    best_b = max(l * w for l in range(1, 30) for w in range(1, 30) if l + 2 * w == 28)
-    return {'a': s([best_a]), 'b': s([best_b])}
+    rects = [(l, w) for l in range(1, 37) for w in range(1, l + 1) if l * w == 36]
+    return {'a': s([len(rects)]), 'b': s([max(2 * (l + w) for l, w in rects)])}
 
 
 @check('L4U07-T03')
 def _():
-    L, W, p = 12, 9, 2
-    grid = [[(x not in range(0, p)) and (y not in range(0, p)) for x in range(L)] for y in range(W)]
-    # paths: first p columns and first p rows (slid to the edge); count by cell
-    return s([sum(1 for y in range(W) for x in range(L) if grid[y][x])])
+    L, W, k = 15, 9, 3
+    cells = {(x, y) for x in range(L) for y in range(W)}
+    corners = {(x, y) for x in range(L) for y in range(W) if (x < k or x >= L - k) and (y < k or y >= W - k)}
+    left = cells - corners
+    # perimeter by counting the edges of cells that border a cell outside the shape
+    edges = sum(1 for (x, y) in left for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + dx, y + dy) not in left)
+    return {'a': s([len(left)]), 'b': s([edges])}
 
 
 @check('L4U07-G01')
@@ -196,8 +196,13 @@ def _():
 @check('L4U07-G03')
 def _():
     f = ITEM['L4U07-G03']['figure']['shapes'][0]
-    # plus made of two 10 by 2 rectangles crossing in the middle
-    return {'a': s([area(f['pts'])]), 'b': s([perim(f['pts'])])}
+    sq = lambda x0, y0: {(x, y) for x in range(x0, x0 + 6) for y in range(y0, y0 + 6)}
+    cells = sq(0, 0) | sq(4, 4)            # two 6 by 6 squares overlapping in a 2 by 2 corner
+    assert len(sq(0, 0) & sq(4, 4)) == 4
+    assert area(f['pts']) == len(cells)
+    edges = sum(1 for (x, y) in cells for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + dx, y + dy) not in cells)
+    assert perim(f['pts']) == edges
+    return {'a': s([len(cells)]), 'b': s([edges])}
 
 
 @check('L4U07-G04')

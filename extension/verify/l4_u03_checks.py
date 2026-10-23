@@ -135,22 +135,21 @@ def _():
 @check('L4U03-T02')
 def _():
     found = []
-    for a in range(1, 100):
-        for b in range(1, 100):
-            ch = [a, b]
-            while len(ch) < 6:
-                ch.append(ch[-1] + ch[-2])
-            if ch[4] == 41 and ch[5] == 66:
-                found.append(a)
+    for m in range(1, 200):
+        mid = (5 + m, m + 11)
+        if mid[0] + mid[1] == 52:
+            found.append(m)
     assert len(found) == 1
     return s(found)
 
 
 @check('L4U03-T03')
 def _():
-    c = [(l, 5 * l) for l in range(1, 500) if 5 * l - 36 == l + 36]
+    c = [(sit, 90 - sit) for sit in range(1, 90) if 90 - sit == 5 * sit]
     assert len(c) == 1
-    return {'a': s([c[0][0]]), 'b': s([c[0][1]])}
+    g = [k for k in range(0, c[0][1] + 1) if c[0][1] - k == c[0][0] + k]
+    assert len(g) == 1
+    return {'a': s([c[0][0]]), 'b': s(g)}
 
 
 @check('L4U03-G01')

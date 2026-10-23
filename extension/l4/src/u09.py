@@ -103,7 +103,7 @@ G.append(item(U+'-G03', 'go', 5, 'Beyond Level 4: Average\nThe average is the to
   space={'rows': ['Working:', '']}))
 
 C.append(item(U+'-C01', 'quiz', None, 'The graph shows the cakes a shop sold. Each line is worth 10. How many cakes were sold on Wednesday? {b}',
-  fig=LINE([{'ymin': 0, 'ymax': 80, 'step': 10, 'label_every': 2, 'series': [{'values': [30, 50, 70, 40]}]}], ['Mon', 'Tue', 'Wed', 'Thu'], width_mm=70, plot_w=320, plot_h=210),
+  fig=LINE([{'ymin': 0, 'ymax': 80, 'step': 10, 'label_every': 2, 'series': [{'values': [30, 50, 70, 40]}]}], ['Mon', 'Tue', 'Wed', 'Thu'], width_mm=64, plot_w=320, plot_h=190),
   ans=A(70), figright=True, why='The Wednesday point is on the 70 line: 70 cakes.'))
 C.append(item(U+'-C02', 'quiz', None, 'A shop sold 28 pens on Monday and 35 on Tuesday. The 3-day total was 99. Wednesday: {b} pens', ans=A(36),
   why='28 + 35 = 63 pens on Monday and Tuesday. 99 − 63 = 36 pens on Wednesday.'))

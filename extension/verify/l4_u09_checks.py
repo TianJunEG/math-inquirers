@@ -98,12 +98,12 @@ def _():
 @check('L4U09-S04')
 def _():
     f = ITEM['L4U09-S04']['figure']['panels'][0]['series']
-    ali, mei = f[0]['values'], f[1]['values']
-    steps = {ali[i + 1] - ali[i] for i in range(len(ali) - 1)}
+    kum, ais = f[0]['values'], f[1]['values']
+    steps = {ais[i + 1] - ais[i] for i in range(len(ais) - 1)}
     assert len(steps) == 1
-    same = [i + 1 for i in range(len(ali)) if ali[i] == mei[i]]
-    first_more = next(i + 1 for i in range(len(ali)) if ali[i] > mei[i])
-    return {'a': s([mei[2]]), 'b': s(steps), 'c': s(same), 'd': s([first_more])}
+    meet = [kum[i] for i in range(len(kum)) if kum[i] == ais[i]]
+    assert len(meet) == 1
+    return {'a': s([ais[0]]), 'b': s(steps), 'c': s([ais[4] - kum[4]]), 'd': s(meet)}
 
 
 @check('L4U09-S05')
@@ -113,8 +113,8 @@ def _():
     (i0, v0), (i1, v1) = sorted(known.items())[0], sorted(known.items())[-1]
     d = (v1 - v0) / (i1 - i0)
     assert d == int(d)
-    seq = [v0 + int(d) * (i - i0) for i in range(5)]
-    return {'a': s([int(d)]), 'b': s([sum(seq)])}
+    first = v0 - int(d) * i0
+    return {'a': s([int(d)]), 'b': s([first + int(d) * 8])}
 
 
 @check('L4U09-S06')

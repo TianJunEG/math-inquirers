@@ -30,7 +30,7 @@ S.append(item(U+'-S01', 'start', 1, 'Two next-door numbers multiply to make 506.
   ans=A(22, 23, text='22 and 23'), partsrow=False,
   why='20 × 21 = 420 is too small. 25 × 26 = 650 is too big. 22 × 23 = 506. Use each try to decide the next one: 21 × 22 = 462 is too small, so go up.',
   space={'rows': ['The numbers are {b} and {b}']}))
-S.append(item(U+'-S02', 'start', 1, 'A farmer fills a 50 litre tank with a 3 litre bucket and an 8 litre can. He uses at least 1 of each and fills the tank exactly.',
+S.append(item(U+'-S02', 'start', 1, 'A farmer fills a 50 litre tank with a 3 litre bucket and an 8 litre can. He uses at least 1 of each. The tank is filled exactly.',
   parts=[P('a', 'How many different ways can he do it? {b}', A(2)), P('b', 'The way with the fewest trips: {b} buckets and {b} cans', A(6, 4, text='6 buckets and 4 cans'))],
   why='Try the cans: 1 can leaves 42 L = 14 buckets. 4 cans leave 18 L = 6 buckets. 2, 3, 5 and 6 cans leave amounts that are not in 3s. 2 ways. Fewest trips: 6 + 4 = 10.',
   space={'rows': ['Cans, litres left, buckets: {ll}', 'My answer: {l}']}))

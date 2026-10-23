@@ -103,10 +103,10 @@ def _():
 
 @check('L4U04-S11')
 def _():
-    pieces = int((Fr(2) + Fr(2, 3)) / Fr(1, 3))
-    left = (pieces - 5) * Fr(1, 3)
+    cups = int(Fr(5, 2) / Fr(1, 4))
+    left = Fr(5, 2) - 6 * Fr(1, 4)
     assert left.denominator == 1
-    return {'a': s([pieces]), 'b': s([left.numerator])}
+    return {'a': s([cups]), 'b': s([left.numerator])}
 
 
 @check('L4U04-S12')
@@ -124,21 +124,21 @@ def _():
 
 @check('L4U04-T01')
 def _():
-    c = [n for n in range(1, 60) if Fr(3) < Fr(n, 7) < Fr(4) and n % 2 == 0 and abs(Fr(n, 7) - 4) < abs(Fr(n, 7) - 3)]
+    c = [(a, b) for b in range(1, 100) for a in range(1, 100) if Fr(a, b) == Fr(2, 3) and a + b == 35]
     assert len(c) == 1
-    return s([c[0], 7])
+    return s(c[0])
 
 
 @check('L4U04-T02')
 def _():
-    c = [m for m in range(1, 1000) if m - m * Fr(2, 5) - m * Fr(1, 3) == 24]
+    c = [g for g in range(1, 1000) if g - g * Fr(2, 5) - g * Fr(1, 4) == 21 and (g * Fr(2, 5)).denominator == 1 and (g * Fr(1, 4)).denominator == 1]
     assert len(c) == 1
     return s(c)
 
 
 @check('L4U04-T03')
 def _():
-    c = [m for m in range(1, 2000) if (m - m * Fr(1, 3)) * (1 - Fr(3, 4)) == 20]
+    c = [n for n in range(1, 2000) if (n - n * Fr(1, 3)) * Fr(3, 4) == 18 and (n * Fr(1, 3)).denominator == 1 and (n * Fr(2, 3) * Fr(3, 4)).denominator == 1]
     assert len(c) == 1
     return s(c)
 

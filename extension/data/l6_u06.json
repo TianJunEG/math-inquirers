@@ -380,7 +380,7 @@
     ],
     "r": 19
    },
-   "explanation": "The primes up to 10 are 2, 3, 5, 7: Ali wins on 4 numbers and Ben on the other 6. 4 is not 6, so it is not fair: Ben is favoured.",
+   "explanation": "The multiples of 3 up to 12 are 3, 6, 9 and 12: Ali wins on 4 numbers and Ben on the other 8. 4 is not 8, so it is not fair: Ben is favoured.",
    "figside": true
   },
   {

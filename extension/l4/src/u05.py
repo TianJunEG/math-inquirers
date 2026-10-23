@@ -65,8 +65,7 @@ S.append(item(U+'-S09', 'start', 3, 'Siti\'s bag and Ali\'s bag have a mass of 8
 S.append(item(U+'-S10', 'start', 3, '4 identical books have a mass of 2.8 kg. A pencil case has a mass of 0.35 kg.',
   parts=[P('a', 'One book: {b} kg', A('0.7')), P('b', 'One book and the pencil case: {b} kg', A('1.05')),
          P('c', '3 books and the pencil case: {b} kg', A('2.45'))],
-  why='(a) 2.8 ÷ 4 = 0.7 kg. (b) 0.7 + 0.35 = 1.05 kg. (c) 3 × 0.7 = 2.1, and 2.1 + 0.35 = 2.45 kg.',
-  space={'rows': ['Working:']}))
+  why='(a) 2.8 ÷ 4 = 0.7 kg. (b) 0.7 + 0.35 = 1.05 kg. (c) 3 × 0.7 = 2.1, and 2.1 + 0.35 = 2.45 kg.'))
 S.append(item(U+'-S11', 'start', 3, 'Find the value of each.',
   parts=[P('a', '4.7 + 2.35 = {b}', A('7.05')), P('b', '9.2 − 3.64 = {b}', A('5.56')),
          P('c', '2.5 × 4 = {b}', A(10)), P('d', '7.2 ÷ 6 = {b}', A('1.2'))],

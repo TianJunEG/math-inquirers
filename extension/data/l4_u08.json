@@ -904,23 +904,11 @@
    "id": "L4U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Mei sees 3 faces of a dice at the same corner. Their numbers add up to 10.",
+   "text": "Ravi sees 3 faces of a dice at the same corner. The 3 numbers multiply to make 36.",
    "parts": [
     {
      "label": "a",
-     "text": "The numbers she can see, smallest first: {b} {b} {b}",
-     "answer": {
-      "value": [
-       "1",
-       "4",
-       "5"
-      ],
-      "text": "1, 4, 5"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The numbers she cannot see, smallest first: {b} {b} {b}",
+     "text": "The numbers he can see, smallest first: {b} {b} {b}",
      "answer": {
       "value": [
        "2",
@@ -928,6 +916,18 @@
        "6"
       ],
       "text": "2, 3, 6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The numbers he cannot see, smallest first: {b} {b} {b}",
+     "answer": {
+      "value": [
+       "1",
+       "4",
+       "5"
+      ],
+      "text": "1, 4, 5"
      }
     }
    ],
@@ -938,13 +938,13 @@
     ]
    },
    "hint": "At a corner, the 3 faces are from 3 different opposite pairs.",
-   "explanation": "The pairs are 1 and 6, 2 and 5, 3 and 4. She sees one from each pair. The only choice with total 10 is 1, 5 and 4. The hidden faces are opposite: 6, 2 and 3."
+   "explanation": "The pairs are 1 and 6, 2 and 5, 3 and 4. He sees one from each pair. Only 6 × 2 × 3 gives 36. The hidden faces are opposite: 1, 5 and 4."
   },
   {
    "id": "L4U08-T03",
    "tier": "think",
    "page": 4,
-   "text": "On a 3 by 3 grid, shade exactly 3 squares. A fold down the middle must make the halves match. How many patterns can you make? {b}",
+   "text": "On a 3 by 3 grid, shade exactly 4 squares. A fold along the dotted diagonal must make the halves match. How many patterns can you make? {b}",
    "figure": {
     "type": "l4_grid",
     "rows": 3,
@@ -952,15 +952,15 @@
     "cell": 44,
     "width_mm": 42,
     "axis": {
-     "kind": "v",
-     "at": 1.5
+     "kind": "d",
+     "at": 0
     }
    },
    "answer": {
     "value": [
-     "10"
+     "12"
     ],
-    "text": "10"
+    "text": "12"
    },
    "space": {
     "rows": [
@@ -969,8 +969,8 @@
      ""
     ]
    },
-   "hint": "Middle-column squares match themselves. The others come in pairs.",
-   "explanation": "3 shaded squares: all 3 in the middle column is 1 way. 1 in the middle column (3 choices) and 1 pair (3 rows): 3 × 3 = 9 ways. 1 + 9 = 10.",
+   "hint": "Squares on the diagonal match themselves. The others come in pairs.",
+   "explanation": "Squares on the diagonal: 3. The others make 3 pairs. 2 pairs: 3 ways. 2 diagonal squares (3 ways) and 1 pair (3 ways): 9 ways. 3 + 9 = 12.",
    "figright": true
   },
   {

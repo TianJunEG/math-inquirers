@@ -76,8 +76,8 @@ def _():
 
 @check('L4U01-S08')
 def _():
-    t = next(d for d in range(1, 200) if d % 10 == 0 and d % 15 == 0)
-    return {'a': s([t]), 'b': s([sum(1 for d in range(1, 101) if d % t == 0)])}
+    t = next(d for d in range(1, 200) if d % 12 == 0 and d % 18 == 0)
+    return {'a': s([t]), 'b': s([sum(1 for d in range(1, 101) if d % 12 == 0 and d % 18 == 0)])}
 
 
 

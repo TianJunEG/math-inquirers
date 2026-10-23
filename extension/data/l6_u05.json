@@ -294,7 +294,7 @@
      }
     ]
    },
-   "explanation": "Each new friend shakes hands with all the earlier friends. 6 friends: 1 + 2 + 3 + 4 + 5 = 15. 8 friends: 1 + ... + 7 = 28. 36 = 1 + ... + 8, so 9 friends.",
+   "explanation": "Each new player plays all the earlier players. 8 players: 1 + 2 + ... + 7 = 28. 11 players: 1 + 2 + ... + 10 = 55. 66 = 1 + 2 + ... + 11, so there are 12 players.",
    "figside": true
   },
   {

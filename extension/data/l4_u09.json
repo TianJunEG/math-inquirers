@@ -323,7 +323,7 @@
    "id": "L4U09-S04",
    "tier": "start",
    "page": 2,
-   "text": "The graph shows money in Ali's box and in Mei's box. The amounts are at the end of each week.",
+   "text": "The graph shows the stickers in Kumar's album and in Aisha's album. The numbers are at the end of each week.",
    "figure": {
     "type": "l4_line",
     "panels": [
@@ -334,7 +334,7 @@
       "label_every": 2,
       "series": [
        {
-        "name": "Ali",
+        "name": "Kumar",
         "values": [
          20,
          30,
@@ -347,7 +347,7 @@
         ]
        },
        {
-        "name": "Mei",
+        "name": "Aisha",
         "values": [
          50,
          55,
@@ -380,17 +380,27 @@
    "parts": [
     {
      "label": "a",
-     "text": "Mei's money in Week 3: ${b}",
+     "text": "Aisha's stickers in Week 1: {b}",
      "answer": {
       "value": [
-       "60"
+       "50"
       ],
-      "text": "60"
+      "text": "50"
      }
     },
     {
      "label": "b",
-     "text": "Each week Ali adds ${b}.",
+     "text": "Each week Aisha adds {b} stickers.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "In Week 5 Kumar has {b} fewer stickers than Aisha.",
      "answer": {
       "value": [
        "10"
@@ -399,38 +409,28 @@
      }
     },
     {
-     "label": "c",
-     "text": "Both have equal money in Week {b}.",
-     "answer": {
-      "value": [
-       "7"
-      ],
-      "text": "7"
-     }
-    },
-    {
      "label": "d",
-     "text": "Ali first has more than Mei in Week {b}.",
+     "text": "The 2 lines meet at {b} stickers.",
      "answer": {
       "value": [
-       "8"
+       "80"
       ],
-      "text": "8"
+      "text": "80"
      }
     }
    ],
-   "explanation": "(a) Mei is on 60 in Week 3. (b) Ali goes up by 10 each week. (c) The lines meet in Week 7 at $80. (d) In Week 8 Ali has $90 and Mei $85: the first week Ali has more.",
+   "explanation": "(a) The Aisha line (dashed, square points) starts on 50. (b) It goes up by 5 each week. (c) In Week 5 Kumar has 60 and Aisha has 70. (d) The lines meet in Week 7 at 80.",
    "partsrow": true
   },
   {
    "id": "L4U09-S05",
    "tier": "start",
    "page": 2,
-   "text": "Siti reads more pages each day. She reads the same number more each day. Fill in the table.",
+   "text": "A tank fills at a steady rate. The table shows the litres of water at some minutes. Fill in the table.",
    "figure": {
     "type": "l4_table",
     "head": [
-     "Day",
+     "Minute",
      "1",
      "2",
      "3",
@@ -439,12 +439,12 @@
     ],
     "rows": [
      [
-      "Pages",
-      "12",
+      "Litres",
+      "",
+      "31",
       "",
       "",
-      "27",
-      ""
+      "55"
      ]
     ],
     "widths": [
@@ -463,22 +463,22 @@
    "parts": [
     {
      "label": "a",
-     "text": "She reads {b} more pages each day.",
+     "text": "The tank gains {b} litres each minute.",
      "answer": {
       "value": [
-       "5"
+       "8"
       ],
-      "text": "5"
+      "text": "8"
      }
     },
     {
      "label": "b",
-     "text": "In the 5 days she reads {b} pages.",
+     "text": "At minute 9 the tank holds {b} litres.",
      "answer": {
       "value": [
-       "110"
+       "87"
       ],
-      "text": "110"
+      "text": "87"
      }
     }
    ],
@@ -487,7 +487,7 @@
      "Working:"
     ]
    },
-   "explanation": "Day 1 to Day 4 is 3 days, and 27 − 12 = 15, so she reads 15 ÷ 3 = 5 more each day. The days are 12, 17, 22, 27 and 32. The total is 12 + 17 + 22 + 27 + 32 = 110 pages."
+   "explanation": "Minute 2 to minute 5 is 3 minutes, and 55 − 31 = 24, so the tank gains 24 ÷ 3 = 8 litres a minute. Minute 1 is 23. Minute 9 is 8 minutes later: 23 + 8 × 8 = 87."
   },
   {
    "id": "L4U09-S06",
@@ -915,7 +915,7 @@
         "values": [
          30,
          50,
-         65,
+         70,
          40
         ]
        }
@@ -934,11 +934,11 @@
    },
    "answer": {
     "value": [
-     "65"
+     "70"
     ],
-    "text": "65"
+    "text": "70"
    },
-   "explanation": "The Wednesday point is halfway between the 60 line and the 70 line: 65 cakes.",
+   "explanation": "The Wednesday point is on the 70 line: 70 cakes.",
    "figright": true
   },
   {

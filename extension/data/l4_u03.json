@@ -592,12 +592,12 @@
    "id": "L4U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "In a chain, add the last 2 numbers to make the next number. The 5th number is 41 and the 6th is 66. What is the 1st number? {b}",
+   "text": "A number tower has 3 numbers at the bottom: 5, a missing number and 11. Each number above is the sum of the 2 numbers just below it. The top number is 52. What is the missing number? {b}",
    "answer": {
     "value": [
-     "7"
+     "18"
     ],
-    "text": "7"
+    "text": "18"
    },
    "space": {
     "rows": [
@@ -606,33 +606,33 @@
      ""
     ]
    },
-   "hint": "Work backwards. The 4th number is 66 − 41.",
-   "explanation": "The 4th number is 66 − 41 = 25. The 3rd is 41 − 25 = 16. The 2nd is 25 − 16 = 9. The 1st is 16 − 9 = 7. The chain is 7, 9, 16, 25, 41, 66."
+   "hint": "Write the 2 numbers in the middle row. They add up to 52.",
+   "explanation": "The middle row is 5 + ? and ? + 11, and these add up to 52. So 5 + 11 + 2 × ? = 52, 2 × ? = 36 and ? = 18. The middle row is 23 and 29."
   },
   {
    "id": "L4U03-T03",
    "tier": "think",
    "page": 4,
-   "text": "Mei has 5 times as many stickers as Lily. Mei gives 36 of hers to Lily. Then both girls have equal amounts.",
+   "text": "Kumar and Siti have 90 stickers altogether. Kumar has 5 times as many as Siti. Kumar gives some stickers to Siti. Then they have equal amounts.",
    "parts": [
     {
      "label": "a",
-     "text": "Lily at first: {b} stickers",
+     "text": "Siti at first: {b} stickers",
      "answer": {
       "value": [
-       "18"
+       "15"
       ],
-      "text": "18"
+      "text": "15"
      }
     },
     {
      "label": "b",
-     "text": "Mei at first: {b} stickers",
+     "text": "Kumar gives Siti {b} stickers",
      "answer": {
       "value": [
-       "90"
+       "30"
       ],
-      "text": "90"
+      "text": "30"
      }
     }
    ],
@@ -643,8 +643,8 @@
      ""
     ]
    },
-   "hint": "Before the gift, how many more does Mei have than Lily?",
-   "explanation": "Mei is 5 units and Lily is 1 unit. After the gift they are equal, so Mei had 4 units more than Lily, and 4 units is 36 + 36 = 72. 1 unit = 18. Lily had 18 and Mei had 90."
+   "hint": "Each of them ends with half of the 90 stickers.",
+   "explanation": "Siti is 1 unit and Kumar is 5 units. 6 units = 90, so 1 unit = 15. Siti has 15 and Kumar has 75. Equal shares are 45 each, so Kumar gives 75 − 45 = 30."
   },
   {
    "id": "L4U03-G01",

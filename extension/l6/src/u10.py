@@ -65,7 +65,7 @@ I.append(IT(U, 'S', 6, 2,
                    P('b', 'A dice is rolled 1200 times. About {b} of the rolls are 4s.', [200]),
                    P('c', 'Ali wins on an even number. Ben wins on 1, 3 or 5. Is it fair?   {circ:Yes|No}', ['Yes'])]))
 I.append(IT(U, 'S', 7, 2,
-            'Each inside angle of a regular polygon is 165°.',
+            'A regular polygon has inside angles of 165° each.',
             f'The turn is 180 {M} 165 = 15{D}, and 360 ÷ 15 = 24 sides.',
             parts=[P('a', 'Each turn is {b}°.', [15]),
                    P('b', 'The polygon has {b} sides.', [24])],

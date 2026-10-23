@@ -141,32 +141,30 @@ def _():
 
 @check('L4U06-G01')
 def _():
-    parts = 5
-    n_angles = sum(1 for i in range(parts + 1) for j in range(i + 1, parts + 1))
-    each = 150 / parts
-    right = sum(1 for i in range(parts + 1) for j in range(i + 1, parts + 1) if (j - i) * each == 90)
-    return {'a': s([n_angles]), 'b': s([right])}
+    sol = [a for a in range(1, 100) if a + (a + 10) + (a + 20) + (a + 30) == 180]
+    assert len(sol) == 1
+    return {'a': s(sol), 'b': s([sol[0] + 30])}
 
 
 @check('L4U06-G02')
 def _():
     d, n = 'N', 0
     while True:
-        d = turn(d, 135, True)
+        d = turn(turn(d, 90, True), 45, False)
         n += 1
         if d == 'N':
             break
-    d50 = 'N'
-    for _ in range(50):
-        d50 = turn(d50, 135, True)
-    return {'a': s([n]), 'b': [d50]}
+    d21 = 'N'
+    for _ in range(21):
+        d21 = turn(turn(d21, 90, True), 45, False)
+    return {'a': s([n]), 'b': [d21]}
 
 
 @check('L4U06-G03')
 def _():
-    sol = [(x, 2 * x, 6 * x) for x in range(1, 90) if x + 2 * x + 6 * x == 90]
+    sol = [(x, 2 * x, 3 * x, 3 * x) for x in range(1, 361) if x + 2 * x + 3 * x + 3 * x == 360]
     assert len(sol) == 1
-    return {'a': s([sol[0][0]]), 'b': s([sol[0][2]])}
+    return {'a': s([sol[0][0]]), 'b': s([sol[0][3]])}
 
 
 @check('L4U06-G04')

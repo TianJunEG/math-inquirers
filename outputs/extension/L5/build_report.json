@@ -67,9 +67,9 @@
    "kind": "learn",
    "label": "Unit 1 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.922486483007209,
+   "fill": 0.9460446704428425,
    "over": false,
-   "excess_mm": -19.9,
+   "excess_mm": -13.9,
    "edition": "soft"
   },
   {
@@ -97,9 +97,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.9885588311019567,
+   "fill": 0.9668190010298661,
    "over": false,
-   "excess_mm": -2.9,
+   "excess_mm": -8.5,
    "edition": "soft"
   },
   {
@@ -137,9 +137,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.8834642121524202,
+   "fill": 0.9070223995880535,
    "over": false,
-   "excess_mm": -29.9,
+   "excess_mm": -23.9,
    "edition": "soft"
   },
   {
@@ -147,9 +147,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9644535272914521,
+   "fill": 0.9427136972193615,
    "over": false,
-   "excess_mm": -9.1,
+   "excess_mm": -14.7,
    "edition": "soft"
   },
   {
@@ -157,9 +157,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.9477182028836252,
+   "fill": 0.991294412976313,
    "over": false,
-   "excess_mm": -13.4,
+   "excess_mm": -2.2,
    "edition": "soft"
   },
   {
@@ -217,9 +217,9 @@
    "kind": "practice",
    "label": "Unit 3 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.8620783985581875,
+   "fill": 0.883818228630278,
    "over": false,
-   "excess_mm": -35.4,
+   "excess_mm": -29.8,
    "edition": "soft"
   },
   {
@@ -287,9 +287,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9775521369721936,
+   "fill": 0.9887358393408857,
    "over": false,
-   "excess_mm": -5.8,
+   "excess_mm": -2.9,
    "edition": "soft"
   },
   {
@@ -297,9 +297,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.9613961122554068,
+   "fill": 0.994303553038105,
    "over": false,
-   "excess_mm": -9.9,
+   "excess_mm": -1.5,
    "edition": "soft"
   },
   {
@@ -307,9 +307,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8812596549948507,
+   "fill": 0.9029994850669413,
    "over": false,
-   "excess_mm": -30.5,
+   "excess_mm": -24.9,
    "edition": "soft"
   },
   {
@@ -337,9 +337,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 0.9999517250257467,
+   "fill": 1.0009172245108136,
    "over": false,
-   "excess_mm": -0.0,
+   "excess_mm": 0.2,
    "edition": "soft"
   },
   {
@@ -347,9 +347,9 @@
    "kind": "learn",
    "label": "Unit 5 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9267990473738414,
+   "fill": 0.9770532955715757,
    "over": false,
-   "excess_mm": -18.8,
+   "excess_mm": -5.9,
    "edition": "soft"
   },
   {
@@ -357,9 +357,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9501641349124614,
+   "fill": 0.9595616632337796,
    "over": false,
-   "excess_mm": -12.8,
+   "excess_mm": -10.4,
    "edition": "soft"
   },
   {
@@ -387,9 +387,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8963053553038105,
+   "fill": 0.893923789907312,
    "over": false,
-   "excess_mm": -26.6,
+   "excess_mm": -27.3,
    "edition": "soft"
   },
   {
@@ -457,9 +457,9 @@
    "kind": "practice",
    "label": "Unit 6 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.8577497425334707,
+   "fill": 0.8794895726055613,
    "over": false,
-   "excess_mm": -36.5,
+   "excess_mm": -31,
    "edition": "soft"
   },
   {
@@ -477,9 +477,9 @@
    "kind": "practice",
    "label": "Unit 6 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 0.9999517250257467,
+   "fill": 1.0004827497425335,
    "over": false,
-   "excess_mm": -0.0,
+   "excess_mm": 0.1,
    "edition": "soft"
   },
   {
@@ -537,9 +537,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9001029866117405,
+   "fill": 0.9218428166838311,
    "over": false,
-   "excess_mm": -25.7,
+   "excess_mm": -20.1,
    "edition": "soft"
   },
   {
@@ -557,9 +557,9 @@
    "kind": "learn",
    "label": "Unit 8 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.992082904222451,
+   "fill": 0.9688465499485067,
    "over": false,
-   "excess_mm": -2,
+   "excess_mm": -8,
    "edition": "soft"
   },
   {
@@ -567,9 +567,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.990859938208033,
-   "over": false,
-   "excess_mm": -2.3,
+   "fill": 1.012503218331617,
+   "over": true,
+   "excess_mm": 3.2,
    "edition": "soft"
   },
   {
@@ -577,9 +577,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.9959449021627188,
+   "fill": 0.9950598609680742,
    "over": false,
-   "excess_mm": -1,
+   "excess_mm": -1.3,
    "edition": "soft"
   },
   {
@@ -627,9 +627,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.964984552008239,
+   "fill": 0.9827336508753862,
    "over": false,
-   "excess_mm": -9,
+   "excess_mm": -4.4,
    "edition": "soft"
   },
   {
@@ -667,9 +667,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9423596807415036,
+   "fill": 0.9939978115345005,
    "over": false,
-   "excess_mm": -14.8,
+   "excess_mm": -1.5,
    "edition": "soft"
   },
   {
@@ -707,9 +707,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9123004634397528,
+   "fill": 0.8688208032955715,
    "over": false,
-   "excess_mm": -22.5,
+   "excess_mm": -33.7,
    "edition": "soft"
   },
   {
@@ -737,7 +737,7 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9695545829042225,
+   "fill": 0.9695706745623069,
    "over": false,
    "excess_mm": -7.8,
    "edition": "soft"
@@ -747,9 +747,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.8876319515962925,
+   "fill": 0.8658921215242018,
    "over": false,
-   "excess_mm": -28.9,
+   "excess_mm": -34.5,
    "edition": "soft"
   },
   {
@@ -804,9 +804,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.929936920700309,
+   "fill": 0.9833129505664263,
    "over": false,
-   "excess_mm": -18,
+   "excess_mm": -4.3,
    "edition": "soft"
   },
   {
@@ -814,9 +814,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.934490859938208,
+   "fill": 0.954878990731205,
    "over": false,
-   "excess_mm": -16.8,
+   "excess_mm": -11.6,
    "edition": "soft"
   },
   {
@@ -844,9 +844,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9235485324407827,
+   "fill": 0.9769245623069001,
    "over": false,
-   "excess_mm": -19.6,
+   "excess_mm": -5.9,
    "edition": "soft"
   },
   {
@@ -854,9 +854,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9491181771369722,
+   "fill": 0.9267024974253347,
    "over": false,
-   "excess_mm": -13.1,
+   "excess_mm": -18.8,
    "edition": "soft"
   },
   {
@@ -864,9 +864,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.941909114315139,
+   "fill": 0.9847129248197735,
    "over": false,
-   "excess_mm": -14.9,
+   "excess_mm": -3.9,
    "edition": "soft"
   },
   {
@@ -874,9 +874,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.989894438722966,
+   "fill": 0.9470906282183316,
    "over": false,
-   "excess_mm": -2.6,
+   "excess_mm": -13.6,
    "edition": "soft"
   },
   {
@@ -884,9 +884,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9467205200823893,
+   "fill": 0.9361483007209063,
    "over": false,
-   "excess_mm": -13.7,
+   "excess_mm": -16.4,
    "edition": "soft"
   },
   {
@@ -894,9 +894,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9161302780638517,
+   "fill": 0.9470906282183316,
    "over": false,
-   "excess_mm": -21.5,
+   "excess_mm": -13.6,
    "edition": "soft"
   },
   {
@@ -904,9 +904,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9341207518022657,
+   "fill": 0.9565364315139032,
    "over": false,
-   "excess_mm": -16.9,
+   "excess_mm": -11.2,
    "edition": "soft"
   },
   {
@@ -914,9 +914,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9491181771369722,
+   "fill": 0.9267024974253347,
    "over": false,
-   "excess_mm": -13.1,
+   "excess_mm": -18.8,
    "edition": "soft"
   },
   {
@@ -924,9 +924,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9748970133882595,
+   "fill": 0.9439366632337796,
    "over": false,
-   "excess_mm": -6.4,
+   "excess_mm": -14.4,
    "edition": "soft"
   },
   {
@@ -934,9 +934,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9083419155509783,
+   "fill": 0.9393022657054583,
    "over": false,
-   "excess_mm": -23.5,
+   "excess_mm": -15.6,
    "edition": "soft"
   },
   {
@@ -944,9 +944,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9874967816683831,
+   "fill": 0.9439366632337796,
    "over": false,
-   "excess_mm": -3.2,
+   "excess_mm": -14.4,
    "edition": "soft"
   },
   {
@@ -954,9 +954,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9807704685890835,
+   "fill": 0.9681707003089598,
    "over": false,
-   "excess_mm": -4.9,
+   "excess_mm": -8.2,
    "edition": "soft"
   },
   {
@@ -964,9 +964,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9643247940267765,
+   "fill": 0.9769245623069001,
    "over": false,
-   "excess_mm": -9.2,
+   "excess_mm": -5.9,
    "edition": "soft"
   },
   {
@@ -994,9 +994,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.876110324407827,
+   "fill": 0.9372747167868177,
    "over": false,
-   "excess_mm": -31.8,
+   "excess_mm": -16.1,
    "edition": "soft"
   },
   {
@@ -1053,9 +1053,9 @@
    "kind": "learn",
    "label": "Unit 1 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.926605947476828,
+   "fill": 0.9501641349124614,
    "over": false,
-   "excess_mm": -18.9,
+   "excess_mm": -12.8,
    "edition": "print"
   },
   {
@@ -1083,9 +1083,9 @@
    "kind": "practice",
    "label": "Unit 1 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.9885588311019567,
+   "fill": 0.9668190010298661,
    "over": false,
-   "excess_mm": -2.9,
+   "excess_mm": -8.5,
    "edition": "print"
   },
   {
@@ -1123,9 +1123,9 @@
    "kind": "learn",
    "label": "Unit 2 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.8875836766220392,
+   "fill": 0.9111418640576725,
    "over": false,
-   "excess_mm": -28.9,
+   "excess_mm": -22.8,
    "edition": "print"
   },
   {
@@ -1133,9 +1133,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9644535272914521,
+   "fill": 0.9427136972193615,
    "over": false,
-   "excess_mm": -9.1,
+   "excess_mm": -14.7,
    "edition": "print"
   },
   {
@@ -1143,9 +1143,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.9477182028836252,
+   "fill": 0.991294412976313,
    "over": false,
-   "excess_mm": -13.4,
+   "excess_mm": -2.2,
    "edition": "print"
   },
   {
@@ -1203,9 +1203,9 @@
    "kind": "practice",
    "label": "Unit 3 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.8620783985581875,
+   "fill": 0.883818228630278,
    "over": false,
-   "excess_mm": -35.4,
+   "excess_mm": -29.8,
    "edition": "print"
   },
   {
@@ -1273,9 +1273,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9775521369721936,
+   "fill": 0.9887358393408857,
    "over": false,
-   "excess_mm": -5.8,
+   "excess_mm": -2.9,
    "edition": "print"
   },
   {
@@ -1283,9 +1283,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.9613961122554068,
+   "fill": 0.994303553038105,
    "over": false,
-   "excess_mm": -9.9,
+   "excess_mm": -1.5,
    "edition": "print"
   },
   {
@@ -1293,9 +1293,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8812596549948507,
+   "fill": 0.9029994850669413,
    "over": false,
-   "excess_mm": -30.5,
+   "excess_mm": -24.9,
    "edition": "print"
   },
   {
@@ -1323,9 +1323,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 0.9999517250257467,
+   "fill": 1.0009172245108136,
    "over": false,
-   "excess_mm": -0.0,
+   "excess_mm": 0.2,
    "edition": "print"
   },
   {
@@ -1333,9 +1333,9 @@
    "kind": "learn",
    "label": "Unit 5 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9309185118434603,
+   "fill": 0.9811727600411947,
    "over": false,
-   "excess_mm": -17.7,
+   "excess_mm": -4.8,
    "edition": "print"
   },
   {
@@ -1343,9 +1343,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9501641349124614,
+   "fill": 0.9595616632337796,
    "over": false,
-   "excess_mm": -12.8,
+   "excess_mm": -10.4,
    "edition": "print"
   },
   {
@@ -1373,9 +1373,9 @@
    "kind": "practice",
    "label": "Unit 5 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.902484552008239,
+   "fill": 0.9001029866117405,
    "over": false,
-   "excess_mm": -25.1,
+   "excess_mm": -25.7,
    "edition": "print"
   },
   {
@@ -1443,9 +1443,9 @@
    "kind": "practice",
    "label": "Unit 6 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.863928939237899,
+   "fill": 0.8856687693099897,
    "over": false,
-   "excess_mm": -35,
+   "excess_mm": -29.4,
    "edition": "print"
   },
   {
@@ -1463,9 +1463,9 @@
    "kind": "practice",
    "label": "Unit 6 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 0.9999517250257467,
+   "fill": 1.0004827497425335,
    "over": false,
-   "excess_mm": -0.0,
+   "excess_mm": 0.1,
    "edition": "print"
   },
   {
@@ -1523,9 +1523,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9001029866117405,
+   "fill": 0.9218428166838311,
    "over": false,
-   "excess_mm": -25.7,
+   "excess_mm": -20.1,
    "edition": "print"
   },
   {
@@ -1543,9 +1543,9 @@
    "kind": "learn",
    "label": "Unit 8 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.99620236869207,
+   "fill": 0.9729660144181257,
    "over": false,
-   "excess_mm": -1,
+   "excess_mm": -6.9,
    "edition": "print"
   },
   {
@@ -1553,9 +1553,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.990859938208033,
-   "over": false,
-   "excess_mm": -2.3,
+   "fill": 1.012503218331617,
+   "over": true,
+   "excess_mm": 3.2,
    "edition": "print"
   },
   {
@@ -1563,9 +1563,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.9959449021627188,
+   "fill": 0.9950598609680742,
    "over": false,
-   "excess_mm": -1,
+   "excess_mm": -1.3,
    "edition": "print"
   },
   {
@@ -1613,9 +1613,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.9691040164778579,
+   "fill": 0.9868531153450052,
    "over": false,
-   "excess_mm": -7.9,
+   "excess_mm": -3.4,
    "edition": "print"
   },
   {
@@ -1653,9 +1653,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.948538877445932,
+   "fill": 1.000177008238929,
    "over": false,
-   "excess_mm": -13.2,
+   "excess_mm": 0,
    "edition": "print"
   },
   {
@@ -1693,9 +1693,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9123004634397528,
+   "fill": 0.8688208032955715,
    "over": false,
-   "excess_mm": -22.5,
+   "excess_mm": -33.7,
    "edition": "print"
   },
   {
@@ -1723,7 +1723,7 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9757337796086509,
+   "fill": 0.9757498712667353,
    "over": false,
    "excess_mm": -6.2,
    "edition": "print"
@@ -1733,9 +1733,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.8876319515962925,
+   "fill": 0.8658921215242018,
    "over": false,
-   "excess_mm": -28.9,
+   "excess_mm": -34.5,
    "edition": "print"
   },
   {
@@ -1790,9 +1790,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.929936920700309,
+   "fill": 0.9833129505664263,
    "over": false,
-   "excess_mm": -18,
+   "excess_mm": -4.3,
    "edition": "print"
   },
   {
@@ -1800,9 +1800,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.934490859938208,
+   "fill": 0.954878990731205,
    "over": false,
-   "excess_mm": -16.8,
+   "excess_mm": -11.6,
    "edition": "print"
   },
   {
@@ -1830,9 +1830,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9235485324407827,
+   "fill": 0.9769245623069001,
    "over": false,
-   "excess_mm": -19.6,
+   "excess_mm": -5.9,
    "edition": "print"
   },
   {
@@ -1840,9 +1840,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9491181771369722,
+   "fill": 0.9267024974253347,
    "over": false,
-   "excess_mm": -13.1,
+   "excess_mm": -18.8,
    "edition": "print"
   },
   {
@@ -1850,9 +1850,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.941909114315139,
+   "fill": 0.9847129248197735,
    "over": false,
-   "excess_mm": -14.9,
+   "excess_mm": -3.9,
    "edition": "print"
   },
   {
@@ -1860,9 +1860,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.989894438722966,
+   "fill": 0.9470906282183316,
    "over": false,
-   "excess_mm": -2.6,
+   "excess_mm": -13.6,
    "edition": "print"
   },
   {
@@ -1870,9 +1870,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9467205200823893,
+   "fill": 0.9361483007209063,
    "over": false,
-   "excess_mm": -13.7,
+   "excess_mm": -16.4,
    "edition": "print"
   },
   {
@@ -1880,9 +1880,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9161302780638517,
+   "fill": 0.9470906282183316,
    "over": false,
-   "excess_mm": -21.5,
+   "excess_mm": -13.6,
    "edition": "print"
   },
   {
@@ -1890,9 +1890,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9341207518022657,
+   "fill": 0.9565364315139032,
    "over": false,
-   "excess_mm": -16.9,
+   "excess_mm": -11.2,
    "edition": "print"
   },
   {
@@ -1900,9 +1900,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9491181771369722,
+   "fill": 0.9267024974253347,
    "over": false,
-   "excess_mm": -13.1,
+   "excess_mm": -18.8,
    "edition": "print"
   },
   {
@@ -1910,9 +1910,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9748970133882595,
+   "fill": 0.9439366632337796,
    "over": false,
-   "excess_mm": -6.4,
+   "excess_mm": -14.4,
    "edition": "print"
   },
   {
@@ -1920,9 +1920,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9083419155509783,
+   "fill": 0.9393022657054583,
    "over": false,
-   "excess_mm": -23.5,
+   "excess_mm": -15.6,
    "edition": "print"
   },
   {
@@ -1930,9 +1930,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9874967816683831,
+   "fill": 0.9439366632337796,
    "over": false,
-   "excess_mm": -3.2,
+   "excess_mm": -14.4,
    "edition": "print"
   },
   {
@@ -1940,9 +1940,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9807704685890835,
+   "fill": 0.9681707003089598,
    "over": false,
-   "excess_mm": -4.9,
+   "excess_mm": -8.2,
    "edition": "print"
   },
   {
@@ -1950,9 +1950,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9643247940267765,
+   "fill": 0.9769245623069001,
    "over": false,
-   "excess_mm": -9.2,
+   "excess_mm": -5.9,
    "edition": "print"
   },
   {
@@ -1980,9 +1980,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.876110324407827,
+   "fill": 0.9372747167868177,
    "over": false,
-   "excess_mm": -31.8,
+   "excess_mm": -16.1,
    "edition": "print"
   },
   {
@@ -1995,13 +1995,16 @@
    "edition": "print"
   }
  ],
- "problems": [],
+ "problems": [
+  "soft page 56 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 3.2 mm)",
+  "print page 56 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 3.2 mm)"
+ ],
  "soft_pages": 99,
  "print_pages": 100,
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 13.39,
+  "mb": 13.34,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }

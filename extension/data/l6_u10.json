@@ -35,7 +35,7 @@
    "steps": [
     "Idea: a week is a clock with 7 days, so we need n mod 7.",
     "By hand: 10 days after Monday. 10 mod 7 = 3, so the day is Thursday.",
-    "Blocks: a list starts at item 1, so set r to n mod 7, then pos to r + 1.",
+    "Blocks: lists start at item 1. Set r to n mod 7, then pos to r + 1.",
     "Test with known values: n = 10 gives Thursday, n = 0 and n = 7 give Monday."
    ],
    "answer": "The program says item 4 of days, Thursday, when n = 10."
@@ -282,7 +282,7 @@
   {
    "id": "L6U10-S07",
    "tier": "start",
-   "text": "Each inside angle of a regular polygon is 165°.",
+   "text": "A regular polygon has inside angles of 165° each.",
    "page": 2,
    "parts": [
     {
@@ -768,8 +768,7 @@
    },
    "hint": "How many km apart are 2 km and 5 km? How much more is the fare?",
    "explanation": "From 2 km to 5 km is 3 km more, and the fare rises by 16 − 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 × 2 + 1, so there is a 1 dollar start fee. The rule is n × 3 + 1. A 20 km ride costs 3 × 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16.",
-   "figright": true,
-   "partsrow": true
+   "figright": true
   },
   {
    "id": "L6U10-G02",

@@ -790,21 +790,21 @@
    "id": "L4U04-S11",
    "tier": "start",
    "page": 3,
-   "text": "A rope is 2 2/3 m long. It is cut into pieces that are each 1/3 m long.",
+   "text": "A jug holds 2 1/2 litres of juice. Each cup holds 1/4 litre.",
    "parts": [
     {
      "label": "a",
-     "text": "How many pieces are there? {b} pieces",
+     "text": "How many cups can a full jug fill? {b} cups",
      "answer": {
       "value": [
-       "8"
+       "10"
       ],
-      "text": "8"
+      "text": "10"
      }
     },
     {
      "label": "b",
-     "text": "Siti uses 5 pieces. How much rope is left? {b} m",
+     "text": "Ravi fills 6 cups. How much juice is left? {b} litre",
      "answer": {
       "value": [
        "1"
@@ -818,7 +818,7 @@
      "Working:"
     ]
    },
-   "explanation": "Each metre has 3 thirds. 2 2/3 m is 8 thirds, so there are 8 pieces. After 5 pieces, 3 pieces are left, and 3 thirds make 1 m."
+   "explanation": "Each litre has 4 quarters. 2 1/2 litres is 10 quarters, so 10 cups. After 6 cups, 4 quarters are left, and 4 quarters make 1 litre."
   },
   {
    "id": "L4U04-S12",
@@ -882,13 +882,13 @@
    "id": "L4U04-T01",
    "tier": "think",
    "page": 4,
-   "text": "Find the fraction. It has 7 on the bottom. It lies between 3 and 4, closer to 4 than to 3. Its top number is even.\n{b}/{b}",
+   "text": "A fraction is equal to 2/3. Its top and bottom numbers add up to 35. Find the fraction.\n{b}/{b}",
    "answer": {
     "value": [
-     "26",
-     "7"
+     "14",
+     "21"
     ],
-    "text": "26/7"
+    "text": "14/21"
    },
    "space": {
     "rows": [
@@ -897,19 +897,19 @@
      ""
     ]
    },
-   "hint": "List the fractions between 3 and 4. Cross out those that do not fit.",
-   "explanation": "Between 3 and 4 with denominator 7: 22/7, 23/7, 24/7, 25/7, 26/7, 27/7. Even numerators: 22, 24, 26. 3 1/2 is 24.5/7, so closer to 4 means 25/7 or more. Only 26/7 fits."
+   "hint": "Write 2/3, 4/6, 6/9 and so on. Add the top and bottom each time.",
+   "explanation": "The fractions equal to 2/3 are 4/6, 6/9, 8/12 and so on. Their top and bottom add up to 10, 15, 20 and so on, in fives. 35 = 7 × 5, so the fraction is 2 × 7 over 3 × 7 = 14/21."
   },
   {
    "id": "L4U04-T02",
    "tier": "think",
    "page": 4,
-   "text": "A book took 2/5 of Mei's money. A toy took 1/3 of her money. She has $24 left. How much money did Mei start with? ${b}",
+   "text": "A team scored some goals. Ali scored 2/5 of them and Ben scored 1/4 of them. Kumar scored the other 21 goals. How many goals did the team score? {b}",
    "answer": {
     "value": [
-     "90"
+     "60"
     ],
-    "text": "90"
+    "text": "60"
    },
    "space": {
     "rows": [
@@ -919,19 +919,19 @@
      ""
     ]
    },
-   "hint": "Which number do 5 and 3 both go into?",
-   "explanation": "2/5 = 6/15 and 1/3 = 5/15, so she spent 11/15. 4/15 is left. 4 units = $24, so 1 unit = $6 and 15 units = $90."
+   "hint": "Which number do 5 and 4 both go into?",
+   "explanation": "2/5 = 8/20 and 1/4 = 5/20, so Ali and Ben scored 13/20. Kumar scored 7/20. 7 units = 21, so 1 unit = 3 and 20 units = 60 goals."
   },
   {
    "id": "L4U04-T03",
    "tier": "think",
    "page": 4,
-   "text": "Siti reads 1/3 of a book on Monday, then 3/4 of the pages that remain on Tuesday. 20 pages are still unread. How long is the book? {b} pages",
+   "text": "In a class, 1/3 of the children are boys. 3/4 of the girls wear glasses. 18 girls wear glasses. How many children are in the class? {b}",
    "answer": {
     "value": [
-     "120"
+     "36"
     ],
-    "text": "120"
+    "text": "36"
    },
    "space": {
     "rows": [
@@ -940,8 +940,8 @@
      ""
     ]
    },
-   "hint": "After Monday, 2/3 of the book is left. 1/4 of that is 20 pages.",
-   "explanation": "After Monday, 2/3 of the book is left. On Tuesday she reads 3/4 of that, so 1/4 of it is left. 1/4 of 2/3 is 1/6 of the book. 1/6 = 20 pages, so the book has 6 × 20 = 120 pages."
+   "hint": "The girls are 2/3 of the class. Find 3/4 of 2/3.",
+   "explanation": "The girls are 2/3 of the class. 3/4 of 2/3 is 6/12 = 1/2 of the class. 1/2 of the class is 18, so the class has 2 × 18 = 36 children."
   },
   {
    "id": "L4U04-G01",

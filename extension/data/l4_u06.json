@@ -703,86 +703,16 @@
    "id": "L4U06-G01",
    "tier": "go",
    "page": 5,
-   "text": "Six rays leave one point. They make 5 equal angles in a row. The 2 outside rays are 150° apart.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "How many angles can you find in all? {b}",
-     "answer": {
-      "value": [
-       "15"
-      ],
-      "text": "15"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Count the right angles among them. {b}",
-     "answer": {
-      "value": [
-       "3"
-      ],
-      "text": "3"
-     }
-    }
-   ],
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
-   "hint": "One small angle is 30°. Count 1-part, 2-part, 3-part angles.",
-   "explanation": "Each small angle is 150° ÷ 5 = 30°. Angles of 1 part: 5, of 2 parts: 4, of 3: 3, of 4: 2, of 5: 1. In all 15. A right angle is 3 parts, and there are 3 of them."
-  },
-  {
-   "id": "L4U06-G02",
-   "tier": "go",
-   "page": 5,
-   "text": "A robot faces N. It turns 135° clockwise again and again.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "How many turns until it faces N again? {b}",
-     "answer": {
-      "value": [
-       "8"
-      ],
-      "text": "8"
-     }
-    },
-    {
-     "label": "b",
-     "text": "After 50 turns it faces {b}",
-     "answer": {
-      "value": [
-       "W"
-      ],
-      "text": "W"
-     }
-    }
-   ],
-   "space": {
-    "rows": [
-     "List:"
-    ]
-   },
-   "hint": "135° is 3 steps of 45°. Write the directions after each turn.",
-   "explanation": "Each turn is 3 steps: SE, W, NE, S, NW, E, SW, N. It faces N again after 8 turns. 50 = 6 × 8 + 2, so after 48 turns it faces N, and 2 more turns take it to SE and then W."
-  },
-  {
-   "id": "L4U06-G03",
-   "tier": "go",
-   "page": 5,
-   "text": "A rectangle corner of 90° is cut by 2 lines. The middle angle is 2 times the smallest. The greatest is 6 times the smallest.",
+   "text": "Four rays leave a point O on a straight line. They make 4 angles. Each angle is 10° greater than the one before it.",
    "parts": [
     {
      "label": "a",
      "text": "The smallest angle is {b}°",
      "answer": {
       "value": [
-       "10"
+       "30"
       ],
-      "text": "10"
+      "text": "30"
      }
     },
     {
@@ -796,13 +726,78 @@
      }
     }
    ],
+   "hint": "The 4 angles add up to 180°. Take away the extra degrees first.",
+   "explanation": "The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°."
+  },
+  {
+   "id": "L4U06-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "A dancer faces N. She turns 90° clockwise and then 45° anticlockwise. She does these 2 turns again and again.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "After how many pairs of turns does she face N again? {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After 21 pairs she faces {b}",
+     "answer": {
+      "value": [
+       "SW"
+      ],
+      "text": "SW"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "List:"
+    ]
+   },
+   "hint": "One pair of turns is 1 step of 45°. Write the directions.",
+   "explanation": "Each pair is 90° − 45° = 45°, 1 step clockwise: NE, E, SE, S, SW, W, NW, N. After 8 pairs she faces N. 21 = 2 × 8 + 5, so she faces the same way as after 5 pairs: SW."
+  },
+  {
+   "id": "L4U06-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A round pizza is cut from the centre into 4 slices. The 2nd slice is 2 times the 1st. The 3rd and 4th slices are each 3 times the 1st.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The smallest slice has an angle of {b}°",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 4th slice has an angle of {b}°",
+     "answer": {
+      "value": [
+       "120"
+      ],
+      "text": "120"
+     }
+    }
+   ],
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "hint": "Count the equal parts. 1 + 2 + 6 = 9.",
-   "explanation": "The 3 angles are 1, 2 and 6 equal parts. That is 9 parts in all, and 9 parts = 90°, so 1 part = 10°. The smallest is 10°, the middle is 20° and the greatest is 60°."
+   "hint": "Count the equal parts: 1 + 2 + 3 + 3. All round is 360°.",
+   "explanation": "The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°."
   },
   {
    "id": "L4U06-G04",

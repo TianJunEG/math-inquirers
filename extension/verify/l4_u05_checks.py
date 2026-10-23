@@ -101,16 +101,16 @@ def _():
 
 @check('L4U05-S09')
 def _():
-    total, extra = D('12.60'), D('2.40')
-    k = next(D(c) / 100 for c in range(0, 1261) if D(c) / 100 + (D(c) / 100 + extra) == total)
-    return {'a': [q(k, 2)], 'b': [q(k + extra, 2)]}
+    total = D('8.8')
+    k = next(D(c) / 10 for c in range(0, 89) if D(c) / 10 + 3 * (D(c) / 10) == total)
+    return {'a': [q(k, 1)], 'b': [q(3 * k, 1)]}
 
 
 @check('L4U05-S10')
 def _():
-    packs = D('4.1') - D('0.5')
-    one = next(D(c) / 10 for c in range(0, 100) if 4 * D(c) / 10 == packs)
-    return {'a': [q(packs, 1)], 'b': [q(one, 1)], 'c': [q(D('4.1') - one, 1)]}
+    book = next(D(c) / 100 for c in range(0, 281) if 4 * D(c) / 100 == D('2.8'))
+    case = D('0.35')
+    return {'a': [q(book, 1)], 'b': [q(book + case, 2)], 'c': [q(3 * book + case, 2)]}
 
 
 @check('L4U05-S11')
@@ -153,9 +153,10 @@ def _():
 
 @check('L4U05-G01')
 def _():
-    sol = [D(c) / 100 for c in range(0, 126) if (D('1.26') - D(c) / 100) / 3 + D(c) / 100 == D('0.58')]
+    sol = [(c, d, r) for c in range(1, 94) for d in range(1, 94) for r in range(1, 94)
+           if D(c + d) == D('9.3') * 10 and D(d + r) == D('8.2') * 10 and D(c + r) == D('5.9') * 10]
     assert len(sol) == 1
-    return [q(sol[0], 2)]
+    return [q(D(sol[0][2]) / 10, 1)]
 
 
 @check('L4U05-G02')

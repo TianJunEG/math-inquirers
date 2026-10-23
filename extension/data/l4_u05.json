@@ -477,36 +477,37 @@
    "id": "L4U05-S09",
    "tier": "start",
    "page": 3,
-   "text": "Ravi and Kumar have $12.60 altogether. Ravi has $2.40 more than Kumar.",
+   "text": "Siti's bag and Ali's bag have a mass of 8.8 kg together. Ali's bag is 3 times as heavy as Siti's bag.",
    "figure": {
     "type": "l4_bars",
     "rows": [
      {
-      "label": "Kumar",
+      "label": "Siti",
       "segs": [
        {
-        "u": 2
+        "u": 1
        }
       ]
      },
      {
-      "label": "Ravi",
+      "label": "Ali",
       "segs": [
        {
-        "u": 2
+        "u": 1
        },
        {
-        "u": 1.5,
-        "k": "q",
-        "t": "$2.40"
+        "u": 1
+       },
+       {
+        "u": 1
        }
       ]
      }
     ],
     "width_mm": 120,
-    "unit": 52,
+    "unit": 40,
     "vbrace": {
-     "text": "$12.60"
+     "text": "8.8 kg"
     },
     "row_h": 38,
     "gap": 14
@@ -514,71 +515,66 @@
    "parts": [
     {
      "label": "a",
-     "text": "Kumar has ${b}",
+     "text": "Siti's bag: {b} kg",
      "answer": {
       "value": [
-       "5.10"
+       "2.2"
       ],
-      "text": "5.10"
+      "text": "2.2"
      }
     },
     {
      "label": "b",
-     "text": "Ravi has ${b}",
+     "text": "Ali's bag: {b} kg",
      "answer": {
       "value": [
-       "7.50"
+       "6.6"
       ],
-      "text": "7.50"
+      "text": "6.6"
      }
     }
    ],
-   "explanation": "Take away the extra $2.40: $12.60 − $2.40 = $10.20. Two equal parts are $10.20, so Kumar has $10.20 ÷ 2 = $5.10. Ravi has $5.10 + $2.40 = $7.50.",
+   "explanation": "Siti's bag is 1 unit and Ali's bag is 3 units. 4 units = 8.8 kg, so 1 unit = 8.8 ÷ 4 = 2.2 kg. Ali's bag is 3 × 2.2 = 6.6 kg.",
    "partsrow": true
   },
   {
    "id": "L4U05-S10",
    "tier": "start",
    "page": 3,
-   "text": "A box holds 4 packs of rice. All the packs have the same mass. The box and packs together have a mass of 4.1 kg. The empty box has a mass of 0.5 kg.",
+   "text": "4 identical books have a mass of 2.8 kg. A pencil case has a mass of 0.35 kg.",
    "parts": [
     {
      "label": "a",
-     "text": "The 4 packs together: {b} kg",
+     "text": "One book: {b} kg",
      "answer": {
       "value": [
-       "3.6"
+       "0.7"
       ],
-      "text": "3.6"
+      "text": "0.7"
      }
     },
     {
      "label": "b",
-     "text": "One pack: {b} kg",
+     "text": "One book and the pencil case: {b} kg",
      "answer": {
       "value": [
-       "0.9"
+       "1.05"
       ],
-      "text": "0.9"
+      "text": "1.05"
      }
     },
     {
      "label": "c",
-     "text": "Kumar takes out 1 pack. The box and packs now have a mass of {b} kg",
+     "text": "3 books and the pencil case: {b} kg",
      "answer": {
       "value": [
-       "3.2"
+       "2.45"
       ],
-      "text": "3.2"
+      "text": "2.45"
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
-   "explanation": "4.1 − 0.5 = 3.6 kg for the 4 packs. 3.6 ÷ 4 = 0.9 kg for 1 pack. After 1 pack is taken out, the mass is 4.1 − 0.9 = 3.2 kg."
+   "explanation": "(a) 2.8 ÷ 4 = 0.7 kg. (b) 0.7 + 0.35 = 1.05 kg. (c) 3 × 0.7 = 2.1, and 2.1 + 0.35 = 2.45 kg."
   },
   {
    "id": "L4U05-S11",
@@ -782,12 +778,12 @@
    "id": "L4U05-G01",
    "tier": "go",
    "page": 5,
-   "text": "A full bottle of juice has a mass of 1.26 kg. When one third of the juice is left, the bottle has a mass of 0.58 kg. Find the mass of the bottle when it is empty.\n{b} kg",
+   "text": "A cat and a dog have a mass of 9.3 kg together. The dog and a rabbit have a mass of 8.2 kg. The cat and the rabbit have a mass of 5.9 kg. Find the mass of the rabbit.\n{b} kg",
    "answer": {
     "value": [
-     "0.24"
+     "2.4"
     ],
-    "text": "0.24"
+    "text": "2.4"
    },
    "space": {
     "rows": [
@@ -795,8 +791,8 @@
      ""
     ]
    },
-   "hint": "The juice drunk is 2/3 of the juice. Its mass is 1.26 − 0.58.",
-   "explanation": "The juice that was drunk has a mass of 1.26 − 0.58 = 0.68 kg, and that is 2 thirds of the juice. 1 third is 0.34 kg, so all the juice is 1.02 kg. The empty bottle is 1.26 − 1.02 = 0.24 kg."
+   "hint": "Add the 3 totals. Each animal is counted twice.",
+   "explanation": "Each animal is counted twice in 9.3 + 8.2 + 5.9 = 23.4 kg, so all three together are 11.7 kg. The rabbit is 11.7 − 9.3 = 2.4 kg."
   },
   {
    "id": "L4U05-G02",
