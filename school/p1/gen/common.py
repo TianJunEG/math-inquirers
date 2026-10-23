@@ -23,6 +23,7 @@ castle candle carrot cherry circus coffee cookie cotton dragon eagle engine flow
 jacket jungle kettle ladder locket magnet marble market mitten monkey muffin needle orange parrot pencil pepper
 pickle planet pocket potato puzzle rabbit ribbon rocket saddle sailor shovel silver spider spring summer sunset
 tennis ticket tomato basket button butter bubble candy comet drawer dinner doctor family finger flute island
+house train jacket basket
 """.split())
 
 def ordinal(n):
@@ -141,3 +142,41 @@ class Page(dict):
     """Page record; verify holds (name, ok, detail) tuples."""
     def v(self, name, ok, detail=""):
         self.setdefault("verify", []).append((name, bool(ok), str(detail)))
+
+
+# ---------------- model helpers (used by validate.py's wrong-answer enumeration) ----------------
+def code_check(table):
+    """Pupil's check for a code-word page: every letter is found and the letters spell a real word."""
+    def chk(ans):
+        if any(a not in table for a in ans): return False
+        return "".join(table[a] for a in ans).lower() in WORDS
+    return chk
+
+def code_model(answers, table, lo, hi):
+    return dict(truth=list(answers), domains=[list(range(lo, hi + 1))] * len(answers), check=code_check(table), numeric=True)
+
+def letters_check():
+    def chk(ans):
+        return "".join(ans).lower() in WORDS
+    return chk
+
+# ---------------- small HTML pictures for the teacher key ----------------
+def mini_route(n, path, grid_text=None):
+    on = {tuple(c): i for i, c in enumerate(path)}
+    cells = "".join(f'<i class="{"on" if (r, c) in on else ""}">{(on[(r, c)] + 1) if (r, c) in on else ""}</i>' for r in range(n) for c in range(n))
+    return f'<div class="kmini kroute" style="grid-template-columns:repeat({n},5mm)">{cells}</div>'
+
+def mini_ticks(nrows, ncols, picks):
+    """picks: list of (row, col) ticked."""
+    cells = "".join(f'<i class="{"tk" if (r, c) in picks else ""}"></i>' for r in range(nrows) for c in range(ncols))
+    return f'<div class="kmini kgrid" style="grid-template-columns:repeat({ncols},5mm)">{cells}</div>'
+
+def mini_magic(sol):
+    cells = "".join(f'<i class="num">{v}</i>' for v in sol)
+    return f'<div class="kmini kmagic" style="grid-template-columns:repeat(3,6mm)">{cells}</div>'
+
+def mini_graph(rows):
+    out = ""
+    for name, k in rows:
+        out += f'<div class="kg"><span>{name}</span>' + "".join('<b></b>' for _ in range(k)) + "</div>"
+    return f'<div class="kgraph">{out}</div>'

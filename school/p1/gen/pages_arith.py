@@ -31,13 +31,16 @@ def page08():
         if count_routes(ok, n, start, finish) == 1 and dead >= 2: break
     else: raise RuntimeError("p08")
     body = maze_html(n, texts, start, finish)
+    onroute = set(path)
+    decoy_sums = sorted({sum(grid[r][c]) for r in range(n) for c in range(n) if (r, c) not in onroute and sum(grid[r][c]) != T})
     P = Page(no=8, title="Make Twelve", tier=1, topic="Addition within 20",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.4, 2.7 (add within 20, mental calculation)",
+             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.7 (add within 20, mental calculation)",
              ptype="Maze / path", mech="K6 route closes at FINISH",
              instr=["Start at START.", "Step only on sums that make 12.", "Move up, down, left or right.", "Draw a line to FINISH."],
-             body=body, check="Your line must reach FINISH. If you get stuck, go back and look again.", check_boxes=None,
-             key=dict(answers="Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[r][c][0]}+{grid[r][c][1]}" for r, c in path), check_result="Route reaches FINISH; every box on it adds to 12."),
-             note=f"All sums are within 20. Decoy boxes make 10, 11, 13 or 14 so a slip in adding sends the pupil off the route. {dead} extra boxes that do make 12 are dead ends.",
+             mech_plain="Route: the line must reach FINISH through the right number of boxes, every box making 12",
+             body=body, check=f"Your line reaches FINISH. Count its boxes: are there {len(path)}? Does every box make 12?", check_boxes=None,
+             key=dict(answers="Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[r][c][0]}+{grid[r][c][1]}" for r, c in path), check_result=f"Route reaches FINISH through {len(path)} boxes; every box on it adds to 12."),
+             note=f"All sums are within 20. Boxes off the route make {', '.join(str(x) for x in decoy_sums)} and a slip in adding sends the pupil there. {dead} extra boxes that do make 12 are dead ends. Counting the boxes shows a line that takes a shortcut.",
              seed=808)
     cnt = count_routes(lambda c: sum(grid[c[0]][c[1]]) == T, n, start, finish)
     P.v("V1 exactly one route start->finish (exhaustive DFS)", cnt == 1, cnt)
@@ -45,6 +48,13 @@ def page08():
     P.v("V7 all sums within 20", all(a + b <= 20 for row in grid for a, b in row))
     P["cv"] = dict(rate=1.0, single_total=dead, single_detected=dead)
     P["route"] = path; P["grid"] = grid
+    P["facts"] = " ".join(str(x) for x in decoy_sums)
+    cells = [(r, c) for r in range(n) for c in range(n)]
+    def legal(rt):
+        if len(rt) != len(path) or len(set(rt)) != len(rt) or rt[0] != start or rt[-1] != finish: return False
+        return all(sum(grid[r][c]) == T for r, c in rt) and all(abs(a[0]-b[0]) + abs(a[1]-b[1]) == 1 for a, b in zip(rt, rt[1:]))
+    P["model"] = dict(truth=list(path), domains=[cells] * len(path), check=legal, numeric=False)
+    P["mini"] = mini_route(n, path)
     return P
 
 # ---------------------------------------------------------------- P09
@@ -80,9 +90,9 @@ def page09():
             f'<div class="diag">Corner to corner: <span class="ab sm"></span> and <span class="ab sm"></span></div>'
             f'<div class="blk"><p class="lead">Numbers to use. Cross out each one you use.</p><div class="ovals">{nums}</div></div>')
     P = Page(no=9, title="Magic Square", tier=2, topic="Adding three 1-digit numbers",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.4 (add more than two 1-digit numbers)",
+             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.7 (adding more than two 1-digit numbers)",
              ptype="Magic square", mech="K3 every line makes 15 (8 line totals)",
-             instr=["Use the numbers 1 to 9 once.", "Every row makes 15.", "Every column makes 15.", "Both corner lines make 15."],
+             instr=["Use the numbers 1 to 9 once.", "Every line across makes 15.", "Every line down makes 15.", "Both corner lines make 15."],
              body=body, check="Write each line total in the small boxes. Are all eight totals 15?", check_boxes=None,
              key=dict(answers="Rows: " + " / ".join(" ".join(map(str, sol[3*r:3*r+3])) for r in range(3)), check_result="All 8 totals = 15"),
              note="Only three numbers are given. The solver shows the other six are forced. The sum boxes let a pupil see which line is wrong. Each number 1 to 9 must be used once.",
@@ -101,6 +111,14 @@ def page09():
     P.v("V3 every single wrong entry breaks a line total", bad == tot, f"{bad}/{tot}")
     P["cv"] = dict(rate=bad / tot, single_total=tot, single_detected=bad)
     P["sol"] = sol; P["givens"] = g
+    free = [i for i in range(9) if i not in g]
+    def magic_ok(vals):
+        t = list(sol)
+        for i, v in zip(free, vals): t[i] = v
+        return len(set(t)) == 9 and all(t[a] + t[b] + t[c] == 15 for a, b, c in lines)
+    P["model"] = dict(truth=[sol[i] for i in free], domains=[list(range(1, 10))] * len(free), check=magic_ok, numeric=True)
+    P["mech_plain"] = "All eight line totals make 15"
+    P["mini"] = mini_magic(sol)
     return P
 
 # ---------------------------------------------------------------- P10
@@ -124,7 +142,7 @@ def page10():
     table = build_table(answers, word, rng, 0, 19, n_decoy=5)
     body = f'<div class="sumrows two">{rows}</div>{code_block(table)}'
     P = Page(no=10, title="Take Away Code", tier=1, topic="Subtraction within 20; missing numbers",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.3, 2.7 (subtract within 20, inverse)",
+             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.7 (subtract within 20, inverse relationship)",
              ptype="Code-breaker", mech="K1 code word (6 letters) + K7 put the number back",
              instr=["Find the missing numbers.", "Use the code table."],
              body=body, check="Write the letters in order. They spell a word. Is it where a king lives?", check_boxes=6,
@@ -142,12 +160,13 @@ def page10():
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P.v("V7 all numbers within 20", all(big <= 20 for big, *_ in items))
     P["cv"] = cv
+    P["model"] = code_model(answers, table, 0, 19)
+    P["mech_plain"] = "Code word (6 letters) and putting the number back"
     return P
 
-def page10_retry():
-    raise RuntimeError("p10 duplicates")
-
 # ---------------------------------------------------------------- P11
+SHAPE_NAME = {"circle": "circle", "square": "square", "tri": "triangle", "star": "star", "diamond": "diamond", "pent": "five-sided shape"}
+
 def shape_icon(kind, s=9):
     return svg(s, s, shape_svg(kind, s / 2, s / 2, s * 0.9, fill="#000" if kind in ("circle", "star") else "#fff", sw=0.45))
 
@@ -192,11 +211,11 @@ def page11():
         pass
     body = f'{blocks}{code_block(table)}'
     P = Page(no=11, title="Shape Sums", tier=2, topic="Add and subtract within 20: find the missing number",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.4 (add, subtract, inverse, more than two 1-digit numbers)",
+             strand="Number and Algebra - Addition and Subtraction", syll="2.1 to 2.7 (add, subtract, inverse relationship)",
              ptype="Balance / picture equations", mech="K7 put the numbers back + K1 code word (6 letters)",
              instr=["Each shape stands for a number.", "Same shape, same number.", "Find the number for each shape.", "Use the code table."],
              body=body, check="Put your numbers back in each sum. Then write the letters. Is it a season?", check_boxes=6,
-             key=dict(answers="; ".join(f"Set {k+1}: " + ", ".join(f"{shp[i]}={sv[i]}" for i in range(3)) for k, (shp, sv) in enumerate(zip(sets, setvals))), check_result=f"Code word: {word}"),
+             key=dict(answers="; ".join(f"Set {k+1}: " + ", ".join(f"{SHAPE_NAME[shp[i]]}={sv[i]}" for i in range(3)) for k, (shp, sv) in enumerate(zip(sets, setvals))), check_result=f"Code word: {word}"),
              note="Each set has three sums and three shapes; the three sums fix all three numbers. All six numbers are different so the code table has one letter per number.",
              seed=1111)
     ok = all(solve_shapes(eqs) == [tuple(sv)] for eqs, sv in zip(eqsets, setvals))
@@ -206,109 +225,8 @@ def page11():
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P.v("V7 all sums within 20", all(n <= 20 for eqs in eqsets for _, n in eqs))
     P["cv"] = cv
-    return P
-
-# ---------------------------------------------------------------- colour-by-answer (P12, P14)
-def evaluate(expr):
-    e = expr.replace("&minus;", "-").replace("&times;", "*").replace("&divide;", "/")
-    a = re.match(r"^(\d+) ([-+*/]) (\d+)$", e)
-    x, op, y = int(a.group(1)), a.group(2), int(a.group(3))
-    return {"+": x + y, "-": x - y, "*": x * y, "/": x / y}[op]
-
-def exprs_for_add(v, rng):
-    o = []
-    for b in range(1, v % 10 + 1): o.append(f"{v-b} + {b}")
-    for k in range(1, 8):
-        if v - 10 * k >= 10: o.append(f"{v-10*k} + {10*k}")
-    for b in range(1, 10):
-        if v % 10 + b <= 9 and v + b <= 99: o.append(f"{v+b} &minus; {b}")
-    for k in range(1, 8):
-        if v + 10 * k <= 99: o.append(f"{v+10*k} &minus; {10*k}")
-    return o
-
-def exprs_for_muldiv(v, rng):
-    o = []
-    for a in range(2, 11):
-        if v % a == 0 and 2 <= v // a <= 10: o.append(f"{a} &times; {v//a}")
-    for q in range(2, 11):
-        if v * q <= 20: o.append(f"{v*q} &divide; {q}")
-    return o
-
-def colour_page(rng, mask, S, mkexprs, near_vals):
-    n = len(mask)
-    cells, exprs = [], []
-    for r in range(n):
-        for c in range(n):
-            if mask[r][c] == "#":
-                v = rng.choice(S)
-            else:
-                v = rng.choice(near_vals)
-            e = rng.choice(mkexprs(v, rng))
-            exprs.append(e)
-    return exprs
-
-def colour_body(mask, exprs):
-    n = len(mask)
-    cells = "".join(f'<div class="ccell"><span class="ex">{e}</span><span class="eqsign">=</span><span class="ln"></span></div>' for e in exprs)
-    return f'<div class="cgrid" style="grid-template-columns:repeat({n},1fr)">{cells}</div>'
-
-def solve_colour(exprs, S, n):
-    vals = [evaluate(e) for e in exprs]
-    return ["".join("#" if vals[r * n + c] in S else "." for c in range(n)) for r in range(n)], vals
-
-def colour_verify(P, mask, exprs, S, n, slip_vals):
-    got, vals = solve_colour(exprs, S, n)
-    P.v("V1 evaluating every box gives exactly the intended picture", got == mask)
-    flips = tot = 0
-    for v in vals:
-        for d in slip_vals:
-            tot += 1
-            if (v in S) != ((v + d) in S): flips += 1
-    P.v("V3 slips of +-1 or +-10 that change the picture (informational, see README)", flips / tot >= .15, f"{flips}/{tot} = {flips/tot:.2f}")
-    P["cv"] = dict(rate=flips / tot, single_total=tot, single_detected=flips)
-    P["mask"] = mask; P["exprs"] = exprs; P["S"] = S
-
-HEART = [".#.#.", "#####", "#####", ".###.", "..#.."]
-HOUSE = ["..##..", ".####.", "######", "######", "##..##", "##..##"]
-
-def page12():
-    rng = random.Random(1212)
-    S = [35, 46, 58]
-    mask = HEART
-    near = [34, 36, 45, 47, 57, 59, 25, 56, 48, 68, 36, 44, 49, 38, 55]
-    exprs = colour_page(rng, mask, S, exprs_for_add, near)
-    body = colour_body(mask, exprs)
-    shaded = sum(r.count("#") for r in mask)
-    P = Page(no=12, title="Shade the Picture", tier=1, topic="Add and subtract within 100 (no renaming)",
-             strand="Number and Algebra - Addition and Subtraction", syll="2.5 to 2.7 (add and subtract within 100, 2-digit and ones, 2-digit and tens)",
-             ptype="Picture-fill (colour by answer)", mech="K2 hidden picture appears",
-             instr=["Work out each sum.", "Write the answer on the line.", "Shade boxes with answer 35, 46 or 58."],
-             body=body, check=f"A picture appears. It has {shaded} shaded boxes. Is it a shape for love?", check_boxes=None,
-             key=dict(answers="Answers by row: " + " | ".join(", ".join(str(int(evaluate(e))) for e in exprs[r*5:r*5+5]) for r in range(5)), check_result=f"Picture: heart, {shaded} shaded boxes"),
-             note="Only 2-digit plus or minus a 1-digit number or a whole ten, with no renaming. Distractor answers sit next to the shaded values (such as 34, 36, 45, 47) so a slip leaves a gap or an extra box in the picture.",
-             seed=1212)
-    colour_verify(P, mask, exprs, S, 5, [1, -1, 10, -10])
-    P.v("V7 all answers within 100", all(0 <= evaluate(e) <= 100 for e in exprs))
-    return P
-
-def page14():
-    rng = random.Random(1414)
-    S = [8, 12, 20]
-    mask = HOUSE
-    near = [6, 7, 9, 10, 14, 15, 16, 18, 24, 5, 4, 21, 9, 7, 16]
-    exprs = colour_page(rng, mask, S, exprs_for_muldiv, near)
-    body = colour_body(mask, exprs)
-    shaded = sum(r.count("#") for r in mask)
-    P = Page(no=14, title="Times and Share", tier=2, topic="Multiplication within 40 and division within 20",
-             strand="Number and Algebra - Multiplication and Division", syll="3.2 to 3.4 (multiplying within 40, dividing within 20)",
-             ptype="Picture-fill (colour by answer)", mech="K2 hidden picture appears",
-             instr=["Work out each box.", "Write the answer on the line.", "Shade boxes with answer 8, 12 or 20."],
-             body=body, check=f"A picture appears. It has {shaded} shaded boxes. Is it a place to live?", check_boxes=None,
-             key=dict(answers="Answers by row: " + " | ".join(", ".join(str(int(evaluate(e))) for e in exprs[r*6:r*6+6]) for r in range(6)), check_result=f"Picture: house with a door gap, {shaded} shaded boxes"),
-             note="Products are within 40 and every division has a dividend within 20. Decoy answers such as 7, 9, 10, 14 and 16 sit near the shaded values.",
-             seed=1414)
-    colour_verify(P, mask, exprs, S, 6, [1, -1, 2, -2])
-    P.v("V7 products <= 40, dividends <= 20", all((("&times;" in e) and evaluate(e) <= 40) or (("&divide;" in e) and int(e.split()[0]) <= 20) for e in exprs))
+    P["model"] = code_model(vals, table, 1, 9)
+    P["mech_plain"] = "Putting the numbers back in the sums, then a code word (6 letters)"
     return P
 
 # ---------------------------------------------------------------- P13
@@ -336,14 +254,14 @@ def page13():
     for i, (g, m) in enumerate(items):
         s, h = groups_svg(g, m); svgs.append(s)
         rows += (f'<div class="grow"><span class="no">{i+1}</span><div class="gsvg">{s}</div>'
-                 f'<div class="geq"><span class="ab"></span> <span class="op">&times;</span> <span class="ab"></span> <span class="op">=</span> <span class="ab"></span></div></div>')
+                 f'<div class="geq"><span class="lbx"><span class="ab"></span><small>bags</small></span> <span class="op">&times;</span> <span class="lbx"><span class="ab"></span><small>dots</small></span> <span class="op">=</span> <span class="lbx"><span class="ab"></span><small>total</small></span></div></div>')
     body = f'<div class="grows">{rows}</div>{code_block(table)}'
     P = Page(no=13, title="Equal Groups", tier=1, topic="Multiplication: equal groups",
-             strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.2 (concept of multiplication, multiplying within 40)",
+             strand="Number and Algebra - Multiplication and Division", syll="3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
-             instr=["Each bag has the same number of dots.", "Write: bags, dots in each bag, total.", "Use the code table."],
+             instr=["Each bag has the same number of dots.", "Write the bags, the dots and the total.", "Use the code table."],
              body=body, check="Write the letters in order. They spell a word. Is it in space?", check_boxes=6,
-             key=dict(answers=", ".join(f"{i+1}) {g} x {m} = {g*m}" for i, (g, m) in enumerate(items)), check_result=f"Code word: {word}"),
+             key=dict(answers=", ".join(f"{i+1}) {g} bags of {m} = {g*m}" for i, (g, m) in enumerate(items)), check_result=f"Code word: {word}"),
              note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 40.",
              seed=1313)
     ok = True
@@ -356,6 +274,8 @@ def page13():
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P.v("V7 totals within 40", max(tot) <= 40)
     P["cv"] = cv
+    P["model"] = code_model(tot, table, 1, 40)
+    P["mech_plain"] = "Code word (6 letters)"
     return P
 
-PAGES = [page08, page09, page10, page11, page12, page13, page14]
+PAGES = [page08, page09, page10, page11, page13]

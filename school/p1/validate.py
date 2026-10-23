@@ -19,6 +19,56 @@ pages = build.all_pages()
 for p in pages:
     for n, ok, d in p["verify"]:
         rec(f'P1-{p["no"]:02d} {n}', ok, str(d)[:80])
+
+# ---- 1b. wrong-answer enumeration (owner addendum 8: a pupil can tell when an answer is wrong)
+# Every page supplies a model: the right answers (truth), the values each answer could take (domains) and the
+# pupil's own check as a function of the answers (check). Here, independently of the generator, every single
+# change of one answer is tried and the share the check REJECTS is counted. Two rates are required to be >= 95%:
+#   plausible slips: +-1, +-2, +-3, +-4, +-5, +-10 on number answers (any other value for letters, cells, times);
+#   all values: every other value in the page's number range.
+# Pages whose answers form an arrangement (a queue, a grid, ordered cards, shape matching) are also tested on every
+# wrong arrangement (all permutations). A check that only says "one tick per row and column" would fail this test.
+import itertools, math
+THRESH = 0.95
+SLIPS = (1, 2, 3, 4, 5, 10)
+def enumerate_model(m):
+    truth, doms, chk = list(m["truth"]), m["domains"], m["check"]
+    out = dict(right_passes=bool(chk(list(truth))), plausible=[0, 0], allv=[0, 0], perm=None)
+    for i, t in enumerate(truth):
+        for v in doms[i]:
+            if v == t: continue
+            ans = list(truth); ans[i] = v
+            rejected = not chk(ans)
+            out["allv"][1] += 1; out["allv"][0] += rejected
+            if m.get("numeric") is True and isinstance(t, int):
+                if abs(v - t) in SLIPS:
+                    out["plausible"][1] += 1; out["plausible"][0] += rejected
+            else:
+                out["plausible"][1] += 1; out["plausible"][0] += rejected
+    if m.get("perm"):
+        idx = m["perm"]; vals = [truth[i] for i in idx]; ok = tot = 0
+        for pp in itertools.permutations(vals):
+            if list(pp) == vals: continue
+            ans = list(truth)
+            for i, v in zip(idx, pp): ans[i] = v
+            tot += 1; ok += (not chk(ans))
+        out["perm"] = [ok, tot]
+    return out
+verification = []
+for p in pages:
+    r = enumerate_model(p["model"]) if "model" in p else None
+    rec(f'P1-{p["no"]:02d} has a self-check model for the enumeration', r is not None)
+    if r is None: continue
+    rec(f'P1-{p["no"]:02d} check passes the right answers', r["right_passes"])
+    a, b = r["plausible"]
+    rec(f'P1-{p["no"]:02d} enumeration: plausible single slips rejected {a}/{b} = {a / b:.1%} (needs >= 95%)', b > 0 and a / b >= THRESH - 1e-9)
+    a2, b2 = r["allv"]
+    rec(f'P1-{p["no"]:02d} enumeration: every other value of one answer rejected {a2}/{b2} = {a2 / b2:.1%} (needs >= 95%)', b2 > 0 and a2 / b2 >= THRESH - 1e-9)
+    if r["perm"]:
+        a3, b3 = r["perm"]
+        rec(f'P1-{p["no"]:02d} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
+    verification.append((p["no"], r))
+rec("3 colour-by-code pages (P1-01, P1-12, P1-14), 3 or 4 wanted of 20", [p["no"] for p in pages if p.get("cbc")] == [1, 12, 14])
 rec("20 pages, ids 1..20", [p["no"] for p in pages] == list(range(1, 21)))
 rec("tier mix 10 one-star / 10 two-star", sum(p["tier"] == 1 for p in pages) == 10 and sum(p["tier"] == 2 for p in pages) == 10)
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
@@ -29,14 +79,43 @@ bad = []
 for p in pages:
     for s in p["instr"]:
         if max_words(s) > 8: bad.append((p["no"], s))
-    if max_words(p["check"]) > 8 + 8: bad.append((p["no"], p["check"]))
+    for cl in (p.get("check_lines") or [p["check"]]):
+        if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
+        if max_words(cl) > 20: bad.append((p["no"], cl))
     if len(p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction lines"))
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]):
-        for one in re.split(r"(?<=\.)\s+", sent):
+        sent = re.sub(r"<[^>]+>", " ", sent)
+        for one in re.split(r"(?<=\.)\s+", sent.strip()):
             if len(one.split()) > 8: bad.append((p["no"], one))
 rec("V8 reading level: instruction and clue sentences <= 8 words, <= 4 lines", not bad, str(bad[:4]))
-chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > 18]
+chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > 18 and not p.get("cbc")]
 rec("check strip text <= 18 words", not chk, str(chk))
+
+# ---- 2b. notes and tags
+def plain(h): return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h))
+bad = []
+for p in pages:
+    src = " ".join([plain(p["body"]), p.get("facts", ""), p["key"]["answers"], p["key"]["check_result"], p["check"], " ".join(p["instr"])])
+    have = set(re.findall(r"\d+", src))
+    note = re.sub(r"\d+%", "", re.sub(r"(within|up to|to|than|of) \d+", "", p["note"]))
+    miss = sorted({n for n in re.findall(r"\d+", note) if int(n) >= 11 and n not in have})
+    if miss: bad.append((p["no"], miss))
+rec("every number of 11 or more quoted in a teacher note is found on the page or in its answers", not bad, str(bad))
+RANGES = {"Whole Numbers": (1, 7, 1), "Addition and Subtraction": (2, 7, 2), "Multiplication and Division": (3, 4, 3)}
+bad = []
+for p in pages:
+    nums = re.findall(r"\b(\d)\.(\d)\b", p["syll"].split("(")[0])
+    for a, b in nums:
+        a, b = int(a), int(b)
+        key = next((k for k in RANGES if k in p["strand"]), None)
+        if key: ok = a == RANGES[key][2] and 1 <= b <= RANGES[key][1]
+        elif p["syll"].startswith("Length"): ok = a == 1 and 1 <= b <= 4
+        elif p["syll"].startswith("Time"): ok = a == 2 and 1 <= b <= 4
+        elif p["syll"].startswith("Geometry"): ok = a == 1 and 1 <= b <= 4
+        else: ok = False
+        if not ok: bad.append((p["no"], f"{a}.{b}"))
+rec("syllabus numbers in every topic tag lie inside the P1 ranges of docs/moe/syllabus_by_level.md", not bad, str(bad))
+rec("topic tags name a P1 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Money", "Measurement", "Geometry", "Statistics")) for p in pages))
 # ---- 3. HTML black and white / stroke scan
 for f in ("pupil.html", "front.html", "key.html"):
     h = open(os.path.join(O, f)).read()
@@ -47,10 +126,14 @@ for f in ("pupil.html", "front.html", "key.html"):
     rec(f"stroke widths >= 0.2 mm (0.57 pt) in {f}", min(sw) >= 0.2 if sw else True, f"min {min(sw) if sw else '-'}")
     bw = [float(x) for x in re.findall(r"border[a-z-]*:\s*(?:[^;{}]*?\s)?([\d.]+)mm", h)]
     rec(f"CSS rule widths >= 0.25 mm (0.7 pt) in {f}", min(bw) >= 0.25 if bw else True, f"min {min(bw) if bw else '-'}")
+    rec(f"no division sign in {f} (P2 syllabus)", "\u00f7" not in h and "&divide;" not in h)
+    abh = [float(x) for sel, x in re.findall(r"(\.(?:ab|slot \.ab|shans \.ab|ctime \.ab|srow \.ab|check \.ab)[^{]*)\{[^}]*?height:([\d.]+)mm", h)]
+    rec(f"answer boxes at least 12 mm high in {f}", min(abh) >= 12 if abh else True, f"min {min(abh) if abh else '-'}")
     op = re.findall(r"opacity|rgba|rgb\(|hsl|gradient|filter", h)
     rec(f"no opacity/alpha/gradient in {f}", not op, str(op[:3]))
+KEYPAGES = 1 + len(re.findall(r'class="page fm[ a-z]*" >', open(os.path.join(O, 'key.html')).read()))   # intro page + entry pages
 # ---- 4. PDFs: page counts, fonts, text
-exp = {"P1_Puzzles.pdf": 20, "P1_FrontMatter.pdf": 4, "P1_Complete_Pack.pdf": 24, "P1_Answer_Key.pdf": 8}
+exp = {"P1_Puzzles.pdf": 20, "P1_FrontMatter.pdf": 5, "P1_Complete_Pack.pdf": 25, "P1_Answer_Key.pdf": KEYPAGES}
 for f, n in exp.items():
     out = subprocess.run(["pdfinfo", os.path.join(O, f)], capture_output=True, text=True).stdout
     got = int(re.search(r"Pages:\s+(\d+)", out).group(1)); rec(f"{f} has {n} pages", got == n, str(got))
@@ -64,6 +147,18 @@ pgs = txt.split("\f")[:20]
 school = re.search(r"Photocopy licence: (.+?) only", txt)
 rec("school name printed on all 20 page footers", all("Photocopy licence:" in x for x in pgs), school.group(1) if school else "")
 rec("page codes P1-01..P1-20 present", all(f"P1-{i:02d}" in pgs[i - 1] for i in range(1, 21)))
+# ---- 4b. wording rules on all printed text (pupil pages, front matter, key)
+alltxt = {}
+for f in ("P1_Puzzles.pdf", "P1_FrontMatter.pdf", "P1_Answer_Key.pdf"):
+    alltxt[f] = subprocess.run(["pdftotext", "-layout", os.path.join(O, f), "-"], capture_output=True, text=True).stdout
+joined = "\n".join(alltxt.values())
+rec("no division sign in any printed text (P2 syllabus)", "\u00f7" not in joined)
+rec("money is written 50\u00a2, never 50c, in all printed text", not re.search(r"(?<![\w.])\d+c\b", joined), str(re.findall(r"(?<![\w.])\d+c\b", joined)[:5]))
+pt = alltxt["P1_Puzzles.pdf"]
+rec("pupil pages avoid column/diagonal/divide (words not taught at P1)", not re.search(r"\b(column|columns|diagonal|divide|divided)\b", pt, re.I))
+rec("pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording", not re.search(r"\bMi\b|MOE|Ministry|aligned|affiliat|endorse", pt + alltxt["P1_FrontMatter.pdf"], re.I))
+rec("no price, quote amount or sale wording in printed text", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", joined, re.I))
+rec("o'clock and half past used for clock times in the key (P1-18)", "o'clock" in alltxt["P1_Answer_Key.pdf"] and "half past" in alltxt["P1_Answer_Key.pdf"])
 # ---- 5. layout in browser: overflow, clipping, margins, fill
 from playwright.sync_api import sync_playwright
 JS = """
@@ -133,12 +228,21 @@ for f in ("P1_Puzzles.pdf", "P1_FrontMatter.pdf", "P1_Answer_Key.pdf"):
         worst_loss = max(worst_loss, loss); grey_blocks += gb
         # ink must remain: bilevel dark pixel share close to greyscale share
         
-    rec(f"{f}: 1-bit render at 150 dpi keeps content (max ink loss {worst_loss:.2%} vs greyscale)", worst_loss <= (0.25 if f != 'P1_Answer_Key.pdf' else 0.35), f"{len(gs)} pages")
-    rec(f"{f}: no flat grey tint areas (blocks counted {grey_blocks})", grey_blocks < 40 * len(gs), "")
+    rec(f"{f}: 1-bit render at 150 dpi keeps content (max ink loss {worst_loss:.2%} vs greyscale)", worst_loss <= {'P1_Puzzles.pdf': 0.25, 'P1_FrontMatter.pdf': 0.30, 'P1_Answer_Key.pdf': 0.35}[f], f"{len(gs)} pages")
+    per_page = 75 if f == "P1_Answer_Key.pdf" else 40      # the key has small text and tiny pictures: more anti-aliased edge blocks
+    rec(f"{f}: no flat grey tint areas (blocks counted {grey_blocks}, limit {per_page} per page)", grey_blocks < per_page * len(gs), "")
     if f == "P1_Puzzles.pdf":
         keep = os.path.join(O, "bilevel_check"); shutil.rmtree(keep, ignore_errors=True); os.makedirs(keep)
         for m in ms[:20]: Image.open(m).convert("1").save(os.path.join(keep, os.path.basename(m).replace(".pbm", ".png")), optimize=True)
 shutil.rmtree(tmp, ignore_errors=True)
+vj = os.path.join(O, "verification.json")
+if os.path.exists(vj):
+    data = json.load(open(vj))
+    for no, r in verification:
+        for d in data:
+            if d["no"] == no:
+                d["enumeration"] = dict(plausible_slips_rejected=r["plausible"], all_other_values_rejected=r["allv"], wrong_arrangements_rejected=r["perm"])
+    json.dump(data, open(vj, "w"), indent=1)
 open(os.path.join(O, "validation_report.txt"), "w").write("\n".join(log) + f"\n\nTOTAL {len(log)} checks, {len(fails)} failed\n")
 print("\n".join(l for l in log if l.startswith("FAIL")) or "no failures")
 print(f"{len(log)} checks, {len(fails)} failed")

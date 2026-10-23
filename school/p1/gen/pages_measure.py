@@ -1,4 +1,4 @@
-"""Pages 15-20: money, length, time, shapes, picture graph."""
+"""Pages 6 and 15-20: shape riddles, money, length, time, shape count, picture graph."""
 import random, itertools, re, math
 from .common import *
 from .pages_numbers import grid_table
@@ -32,8 +32,8 @@ def page15():
              ptype="Code-breaker", mech="K1 code word (5 letters)",
              instr=["Add the coins in each purse.", "Write the total in cents.", "Use the code table."],
              body=body, check="Write the letters in order. They spell a word. Is it a music maker?", check_boxes=5,
-             key=dict(answers=", ".join(f"{i+1}) {t}c" for i, t in enumerate(tot)), check_result=f"Code word: {word}"),
-             note="Coins used: 5c, 10c, 20c, 50c, drawn by value as printed numbers. Totals stay below $1. Coin sizes grow with value but the number is what matters.",
+             key=dict(answers=", ".join(f"{i+1}) {t}\u00a2" for i, t in enumerate(tot)), check_result=f"Code word: {word}"),
+             note="Coins used: 5\u00a2, 10\u00a2, 20\u00a2, 50\u00a2, drawn by value as printed numbers. Totals stay below $1. Coin sizes grow with value but the number is what matters.",
              seed=1515)
     solved = [sum(int(m) for m in re.findall(r'class="coinval"[^>]*>(\d+)<', s)) for s in svgs]
     P.v("V1 coin values read from the drawing add to the key", solved == tot, solved)
@@ -42,6 +42,8 @@ def page15():
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P.v("V7 totals below $1", max(tot) < 100)
     P["cv"] = cv
+    P["model"] = code_model(tot, table, 5, 100)
+    P["mech_plain"] = "Code word (5 letters)"
     return P
 
 # ---------------------------------------------------------------- P16
@@ -69,9 +71,10 @@ def solve_prices(items, prices, clues):
 def page16():
     rng = random.Random(1616)
     items = ["pen", "book", "ball", "kite", "cup"]
+    word = "BASKET"            # letters 1-5 sit beside the prices; letter 6 comes from the total
     while True:
-        prices = sorted(rng.sample([2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 25, 30], 5))
-        if prices[-1] - prices[0] >= 14: break
+        prices = sorted(rng.sample([3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 18, 20], 5))
+        if prices[-1] - prices[0] >= 10: break
     perm = prices[:]; rng.shuffle(perm)
     truth = dict(zip(items, perm))
     while True:
@@ -88,44 +91,63 @@ def page16():
             rest = [x for x in cl if x != c]
             if len(solve_prices(items, prices, rest)) == 1: cl = rest
         if 4 <= len(cl) <= 6 and len(solve_prices(items, prices, cl)) == 1 and any(c[0] == "diff" for c in cl): break
-    chips = "".join(f'<span class="chip">${p}</span>' for p in prices)
+    letter_of = {truth[it]: word[i] for i, it in enumerate(items)}
+    chips = "".join(f'<span class="chip">${p} <i class="cl">{letter_of[p]}</i></span>' for p in prices)
     clues = "".join(f"<li>{price_text(c)}</li>" for c in cl)
     a, b = rng.sample(items, 2)
-    q = f'<div class="ansline">The {a} and the {b} cost $<span class="ab"></span> together.</div>'
-    body = (f'<div class="blk"><p class="lead">The prices are:</p><div class="chips">{chips}</div></div><ul class="clues">{clues}</ul>'
-            f'<div class="twocol"><div>{grid_table(items, ["$%d" % p for p in prices])}</div><div>{q}</div></div>')
+    total = truth[a] + truth[b]
+    ttab = build_table([total], word[5], rng, 2, 40, n_decoy=3, near=(1, -1, 2, -2, 10, -10))
+    ans = ('<div class="ansgrid"><span></span><b>price</b><b>letter</b>' +
+           "".join(f'<span class="nm">{it}</span><span class="ab"></span><span class="ab"></span>' for it in items) + '</div>')
+    q = (f'<div class="ansline">The {a} and the {b} cost $<span class="ab"></span> together. Code letter <span class="ab"></span></div>'
+         f'<div class="codetable"><b class="ctl">Code table</b>' + "".join(f'<div class="ct"><span class="n">${k}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in ttab.items()) + '</div>')
+    body = (f'<div class="blk"><p class="lead">The prices are:</p><div class="chips">{chips}</div></div>'
+            f'<ul class="clues">{clues}</ul>'
+            f'<div class="twocol"><div>{grid_table(items, ["$%d" % p for p in prices])}</div><div>{ans}</div></div>{q}')
+    diffs = [c for c in cl if c[0] == "diff"]
     P = Page(no=16, title="Shop Prices", tier=2, topic="Money: dollars, more and less",
-             strand="Number and Algebra - Money", syll="Money (dollars up to $100) with 2.1 to 2.3 (add, subtract)",
-             ptype="Logic grid", mech="K4 grid: one tick in each row and column",
-             instr=["Read the clues.", "Tick the grid.", "Then answer the question."],
-             body=body, check="Each row has one tick. Each column has one tick. Is that true?", check_boxes=None,
-             key=dict(answers=", ".join(f"{i}: ${truth[i]}" for i in items) + f"; {a} + {b} = ${truth[a]+truth[b]}", check_result="One tick per row and column; all clues true."),
-             note="Five items, five prices. 'Costs $5 more than' needs a subtraction or add-on; pupils test each price against it. The final question depends on the grid being right.",
+             strand="Number and Algebra - Money", syll="Money (dollars up to $100) with 2.1 to 2.7 (add, subtract)",
+             ptype="Logic grid + total", mech="K4 grid + K1 letter beside each price + code letter for the total (6 letters)",
+             mech_plain="Letters beside the prices, then a code letter for the total, spell a word (6 letters)",
+             instr=["Read the clues.", "Cross a box if a clue says no.", "Tick a box if it must be yes.", "Write each price, then its letter."],
+             body=body, check="Read your six letters in order. Do they spell a word? You carry shopping in it.", check_boxes=6,
+             key=dict(answers=", ".join(f"{i}: ${truth[i]} ({letter_of[truth[i]]})" for i in items) + f"; the {a} and the {b} cost ${total} together (code letter {word[5]})", check_result=f"Letters in order: {word}"),
+             note="Five items, five prices, each price with a letter. " + " ".join(f"'${c[3]} more than' means a price ${c[3]} higher: pupils test each price against it." for c in diffs[:1]) + " The last answer is added from the grid and looked up in a small code table, so a wrong grid or a wrong sum changes the word.",
              seed=1616)
     sols = solve_prices(items, prices, cl)
     P.v("V1 exactly one price assignment satisfies all clues", len(sols) == 1 and sols[0] == truth, len(sols))
     P.v("V1b every clue needed", all(len(solve_prices(items, prices, [x for x in cl if x != c])) > 1 for c in cl))
-    P.v("V3 all 119 other placements break a clue", len(sols) == 1)
-    P.v("V7 prices within $100", max(prices) <= 100)
-    P["cv"] = dict(rate=1.0, single_total=119, single_detected=119)
+    P.v("V2 letters beside the prices (item order) plus total letter spell BASKET", "".join(letter_of[truth[i]] for i in items) + ttab[total] == word)
+    wrong = [pp for pp in itertools.permutations(prices) if list(pp) != perm]
+    real = sum(("".join(letter_of[v] for v in pp) + word[5]).lower() in WORDS for pp in wrong)
+    P.v("V3 wrong placements that still spell a word <= 5%", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
+    P.v("V7 prices within $100, total within $40", max(prices) <= 100 and total <= 40)
+    P["cv"] = dict(rate=1 - real / len(wrong), single_total=len(wrong), single_detected=len(wrong) - real)
+    letters = [letter_of[truth[i]] for i in items]
+    def chk(ans):
+        t = ttab.get(ans[5])
+        return t is not None and ("".join(ans[:5]) + t).lower() in WORDS
+    P["model"] = dict(truth=letters + [total], domains=[list(letter_of.values())] * 5 + [list(range(2, 41))], check=chk, perm=list(range(5)), numeric=False)
+    P["mini"] = mini_ticks(5, 5, {(i, prices.index(truth[it])) for i, it in enumerate(items)})
     return P
 
 # ---------------------------------------------------------------- P17
 RULER_CM = 12
 
 def ruler_unit(L):
-    """strip of length L cm over a ruler 0..12 cm; scale 10 mm per cm."""
-    x0 = 4; p = []
+    """strip of length L cm over a ruler 0..12 cm; scale 10 mm per cm. The ruler body extends 4.5 mm past 0 and 12
+    so the labels 0 and 12 are not crossed by the ruler's border."""
+    x0 = 5; p = []
     p.append(f'<rect class="strip" x="{x0}" y="0.5" width="{L*10}" height="5.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(0, L * 10, 3):
         p.append(f'<line x1="{x0+k}" y1="6" x2="{x0+min(k+3, L*10)}" y2="0.5" stroke="#000" stroke-width="0.25"/>')
-    p.append(f'<rect x="{x0}" y="7" width="{RULER_CM*10}" height="8" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    p.append(f'<rect x="0.5" y="7" width="{RULER_CM*10 + 2*x0 - 1}" height="8.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(RULER_CM * 10 + 1):
-        h = 4 if k % 10 == 0 else (2.8 if k % 5 == 0 else 1.5)
+        h = 4.2 if k % 10 == 0 else (2.8 if k % 5 == 0 else 1.3)
         p.append(f'<line x1="{x0+k}" y1="7" x2="{x0+k}" y2="{7+h}" stroke="#000" stroke-width="{0.45 if k%10==0 else 0.3}"/>')
     for k in range(RULER_CM + 1):
-        p.append(f'<text x="{x0+k*10}" y="14.3" text-anchor="middle" font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{k}</text>')
-    return svg(x0 + RULER_CM * 10 + 4, 15.5, "".join(p))
+        p.append(f'<text x="{x0+k*10}" y="14.4" text-anchor="middle" font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{k}</text>')
+    return svg(RULER_CM * 10 + 2 * x0, 16, "".join(p))
 
 def page17():
     rng = random.Random(1717)
@@ -141,7 +163,7 @@ def page17():
              instr=["Each strip starts at 0 on its ruler.", "Write how long it is in cm.", "Use the code table."],
              body=body, check="Write the letters in order. They spell a word. Is it used for writing?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {x} cm" for i, x in enumerate(L)), check_result=f"Code word: {word}"),
-             note="A ruler is drawn under each strip at 10 mm to 1 cm. If the page is copied at a different scale the strip and ruler change together, so the reading stays right. All strips start at 0 and are whole numbers of cm.",
+             note="A ruler is drawn under each strip at 10 mm to 1 cm. If the page is copied at a different scale the strip and ruler change together, so the reading from the drawn ruler stays right, but a real ruler laid on the page will not match: print at 100% (actual size) if pupils will use a real ruler. All strips start at 0 and are whole numbers of cm.",
              seed=1717)
     meas = []
     for s in svgs:
@@ -152,6 +174,8 @@ def page17():
     P.v("V2 code word spells PENCIL", cv["spelled_ok"])
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P["cv"] = cv
+    P["model"] = code_model(L, table, 1, 12)
+    P["mech_plain"] = "Code word (6 letters)"
     return P
 
 # ---------------------------------------------------------------- P18
@@ -164,7 +188,7 @@ def clock_svg(h, m):
         a = math.radians(k * 30)
         p.append(f'<text x="{cx+14.6*math.sin(a):.2f}" y="{cy-14.6*math.cos(a)+1.3:.2f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="3.7" fill="#000">{k}</text>')
     ha = math.radians(30 * (h % 12) + m * 0.5); ma = math.radians(m * 6)
-    p.append(f'<line class="hour" x1="{cx}" y1="{cy}" x2="{cx+8*math.sin(ha):.3f}" y2="{cy-8*math.cos(ha):.3f}" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>')
+    p.append(f'<line class="hour" x1="{cx}" y1="{cy}" x2="{cx+8*math.sin(ha):.3f}" y2="{cy-8*math.cos(ha):.3f}" stroke="#000" stroke-width="2.0" stroke-linecap="round"/>')
     p.append(f'<line class="minute" x1="{cx}" y1="{cy}" x2="{cx+12*math.sin(ma):.3f}" y2="{cy-12*math.cos(ma):.3f}" stroke="#000" stroke-width="0.7" stroke-linecap="round"/>')
     p.append(f'<circle cx="{cx}" cy="{cy}" r="1.2" fill="#000"/>')
     return svg(44, 44, "".join(p))
@@ -181,13 +205,27 @@ def read_clock(s):
 
 def tstr(h, m): return f"{(h-1) % 12 + 1}:{m:02d}"
 
+def tkey(h, m):
+    """time in digits, with o'clock / half past in words when it applies (used in the teacher key)"""
+    h = (h - 1) % 12 + 1
+    if m == 0: return f"{h}:00 ({h} o'clock)"
+    if m == 30: return f"{h}:30 (half past {h})"
+    return f"{h}:{m:02d}"
+
+def hands_apart(h, m):
+    ha = 30 * (h % 12) + m * 0.5; ma = m * 6
+    return abs((ha - ma + 180) % 360 - 180)
+
 def page18():
     rng = random.Random(1818)
     word = "TIMER"
     while True:
         qs = []
         for k in range(5):
-            h = rng.randint(1, 12); m = rng.choice(range(0, 60, 5)); kind = "hour" if k % 2 == 0 else "half"
+            while True:
+                h = rng.randint(1, 12); m = rng.choice([0, 30, 0, 30, 5, 10, 15, 20, 25, 35, 40, 45, 50, 55])
+                if hands_apart(h, m) >= 25: break          # keep the two hands easy to tell apart
+            kind = "hour" if k % 2 == 0 else "half"
             qs.append((h, m, kind))
         ans = []
         for h, m, kind in qs:
@@ -209,7 +247,7 @@ def page18():
     for i, (h, m, kind) in enumerate(qs):
         s = clock_svg(h, m); svgs.append(s)
         q = "1 hour later" if kind == "hour" else "half an hour later"
-        items += (f'<div class="citem"><span class="no">{i+1}</span>{s}<div class="cmid"><div class="cq">What time is it<br><b>{q}</b>?</div>'
+        items += (f'<div class="citem"><span class="no">{i+1}</span>{s}<div class="cmid"><div class="cq">What is the time<br><b>{q}</b>?</div>'
                   f'<div class="ctime"><span class="ab"></span> : <span class="ab"></span></div></div></div>')
     keys = list(table.items()); rng.shuffle(keys)
     ct = "".join(f'<div class="ct"><span class="n">{k}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in keys)
@@ -218,9 +256,9 @@ def page18():
              strand="Measurement and Geometry - Measurement", syll="Time 2.1 to 2.4 (tell time to 5 minutes, durations of 1 hour or half an hour)",
              ptype="Code-breaker", mech="K1 code word (5 letters)",
              instr=["Read each clock.", "Find the time later.", "Write it in the boxes.", "Use the code table."],
-             body=body, check="Write the letters in order. They spell a word. Is it a clock helper?", check_boxes=5,
-             key=dict(answers=", ".join(f"{i+1}) shows {tstr(h,m)}, later {tstr(*a)}" for i, ((h, m, k), a) in enumerate(zip(qs, ans))), check_result=f"Code word: {word}"),
-             note="Tell the time to 5 minutes, then add 1 hour or half an hour. The decoy times in the table are the time shown, the wrong hour and the wrong minute, so a misread clock or a missed step gives a letter that does not belong. a.m. and p.m. are not used on this page.",
+             body=body, check="Write the letters in order. They spell a word. Does it count the time?", check_boxes=5,
+             key=dict(answers=", ".join(f"{i+1}) shows {tkey(h,m)}, {'1 hour' if k == 'hour' else 'half an hour'} later {tkey(*a)}" for i, ((h, m, k), a) in enumerate(zip(qs, ans))), check_result=f"Code word: {word}"),
+             note="Tell the time to 5 minutes, then add 1 hour or half an hour. This is the two-star step: some half-hour additions cross the hour. The decoy times in the table are the time shown, the wrong hour and the wrong minute, so a misread clock or a missed step gives a letter that does not belong. The hands are never closer than 25 degrees (except at o'clock). a.m. and p.m. are not used on this page.",
              seed=1818)
     read = [read_clock(s) for s in svgs]
     P.v("V1 clock hands read back from the drawing equal the intended times", read == [(((h - 1) % 12) + 1, m) for h, m, _ in qs], read)
@@ -243,6 +281,8 @@ def page18():
             if w != word and w.lower() not in WORDS: det += 1
     P.v("V3 single-slip detection >=98%", det / tot >= .98, f"{det}/{tot}")
     P["cv"] = dict(rate=det / tot, single_total=tot, single_detected=det)
+    P["model"] = dict(truth=[tstr(*a) for a in ans], domains=[alltimes] * 5, check=code_check(table), numeric=False)
+    P["mech_plain"] = "Code word (5 letters)"
     return P
 
 # ---------------------------------------------------------------- P19
@@ -266,7 +306,7 @@ def page19():
         rows += f'<div class="srow">{svg(14, 14, shape_svg(t, 7, 7, 12, fill="#fff", sw=0.5))}<span class="op">=</span><span class="ab"></span></div>'
     body = (f'<div class="figwrap">{fig}</div><div class="srows">{rows}</div>'
             f'{code_block(table)}')
-    P = Page(no=19, title="Shape Count", tier=2, topic="2D shapes: rectangle, triangle, circle, half circle, quarter circle",
+    P = Page(no=19, title="Shape Count", tier=1, topic="2D shapes: rectangle, triangle, circle, half circle, quarter circle",
              strand="Measurement and Geometry - Geometry", syll="Geometry 1.1, 1.3 (name 2D shapes; identify the shapes in a figure)",
              ptype="Count + code-breaker", mech="K3 the five counts add to 15 + K1 code word (5 letters)",
              instr=["Count each kind of shape in the picture.", "Write how many in the box.", "Use the code table."],
@@ -282,6 +322,81 @@ def page19():
     P.v("V2 code word spells SHAPE", cv["spelled_ok"])
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P["cv"] = cv
+    chk_code = code_check(table)
+    P["model"] = dict(truth=list(counts), domains=[list(range(1, 10))] * 5, check=lambda ans: sum(ans) == 15 and chk_code(ans), numeric=True)
+    P["mech_plain"] = "The five counts add to 15, and a code word (5 letters)"
+    return P
+
+# ---------------------------------------------------------------- P06 (placed here with the other geometry page)
+SHAPE_PROPS = {   # straight sides, curved sides, corners, all sides equal, two long + two short
+    "circle":  dict(straight=0, curved=1, corners=0, equal=False, longshort=False),
+    "half":    dict(straight=1, curved=1, corners=2, equal=False, longshort=False),
+    "quarter": dict(straight=2, curved=1, corners=3, equal=False, longshort=False),
+    "tri":     dict(straight=3, curved=0, corners=3, equal=False, longshort=False),
+    "square":  dict(straight=4, curved=0, corners=4, equal=True,  longshort=False),
+    "rect":    dict(straight=4, curved=0, corners=4, equal=False, longshort=True),
+}
+SHAPE_WORD = {"circle": "circle", "half": "half circle", "quarter": "quarter circle", "tri": "triangle", "square": "square", "rect": "rectangle"}
+
+def sclause(c):
+    k, v = c
+    if k == "straight": return "I have no straight sides." if v == 0 else (f"I have {v} straight side." if v == 1 else f"I have {v} straight sides.")
+    if k == "curved": return "I have 1 curved side."
+    if k == "corners": return "I have no corners." if v == 0 else f"I have {v} corners."
+    if k == "equal": return "All my sides are the same length."
+    if k == "longshort": return "Two sides are long and two are short."
+
+def sclause_ok(shape, c):
+    k, v = c
+    return SHAPE_PROPS[shape][k] == v
+
+RIDDLES = {   # two clauses each, chosen so that the pair names exactly one shape
+    "circle":  [("curved", 1), ("straight", 0)],
+    "square":  [("straight", 4), ("equal", True)],
+    "rect":    [("straight", 4), ("longshort", True)],
+    "half":    [("curved", 1), ("straight", 1)],
+    "quarter": [("curved", 1), ("straight", 2)],
+    "tri":     [("corners", 3), ("straight", 3)],
+}
+
+def solve_riddle_shape(clauses):
+    return [sh for sh in SHAPE_PROPS if all(sclause_ok(sh, c) for c in clauses)]
+
+def page06():
+    rng = random.Random(606)
+    word = "JACKET"
+    order = list(SHAPE_PROPS); rng.shuffle(order)               # riddle i is about order[i]
+    letter = dict(zip(order, word))
+    shown = list(SHAPE_PROPS); rng.shuffle(shown)
+    rots = {"circle": [0], "half": [0, 90, 180, 270], "quarter": [0, 90, 180, 270], "tri": [0, 180], "square": [0, 45], "rect": [0, 90]}
+    cards = ""
+    for sh in shown:
+        rot = rng.choice(rots[sh])
+        cards += (f'<div class="card"><span class="shp">{svg(22, 22, shape_svg(sh, 11, 11, 19, rot=rot, fill="#fff", sw=0.6))}</span>'
+                  f'<span class="cl">{letter[sh]}</span></div>')
+    rows = ""
+    for i, sh in enumerate(order):
+        txt = "<br>".join(sclause(c) for c in RIDDLES[sh])
+        rows += f'<div class="riddle"><span class="no">{i+1}</span><div class="rtext">{txt}</div><span class="ab"></span></div>'
+    body = f'<div class="cards">{cards}</div><div class="riddles">{rows}</div>'
+    P = Page(no=6, title="Shape Riddles", tier=2, topic="2D shapes: name and describe (straight and curved sides)",
+             strand="Measurement and Geometry - Geometry", syll="Geometry 1.1 (identify, name, describe and classify 2D shapes)",
+             ptype="Riddles + code-breaker", mech="K1 shape letters in riddle order spell a word (6 letters)",
+             mech_plain="Letters of the six shapes, in riddle order, spell a word (6 letters)",
+             instr=["Each riddle is about one shape.", "Find the shape it describes.", "Write that shape's letter in the box."],
+             body=body, check="Read your six letters in order. Do they spell a word? You can wear it.", check_boxes=6,
+             key=dict(answers=", ".join(f"{i+1}) {SHAPE_WORD[sh]} ({letter[sh]})" for i, sh in enumerate(order)), check_result=f"Word: {word}"),
+             note="Pupils match each description to a shape picture. Each description has two parts, and both are needed to tell similar shapes apart (for example square and rectangle, half circle and quarter circle). The shapes are turned so pupils read the shape, not its position.",
+             seed=606)
+    P.v("V1 every riddle names exactly one shape", all(solve_riddle_shape(RIDDLES[sh]) == [sh] for sh in order))
+    P.v("V1b the first part of every riddle alone fits more than one shape", all(len(solve_riddle_shape([c])) > 1 for sh in order for c in RIDDLES[sh][:1]))
+    P.v("V2 letters in riddle order spell JACKET", "".join(letter[sh] for sh in order) == word)
+    wrong = [pp for pp in itertools.permutations(word) if "".join(pp) != word]
+    real = sum("".join(pp).lower() in WORDS for pp in wrong)
+    P.v("V3 wrong orders that still spell a word <= 5%", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
+    P.v("V5 word on safe list", word.lower() in WORDS)
+    P["cv"] = dict(rate=1 - real / len(wrong), single_total=len(wrong), single_detected=len(wrong) - real)
+    P["model"] = dict(truth=list(word), domains=[list(word)] * 6, check=letters_check(), perm=list(range(6)))
     return P
 
 # ---------------------------------------------------------------- P20
@@ -313,20 +428,18 @@ def solve_graph(known, clues):
 def page20():
     rng = random.Random(2020)
     while True:
-        cnt = {f: rng.randint(2, 9) for f in FRUIT}
-        known = {"Apple": cnt["Apple"], "Banana": cnt["Banana"]}
-        cl = []
-        d = cnt["Orange"] - cnt["Apple"]
-        cl.append(("same", "Orange", "Apple") if d == 0 else (("more", "Orange", "Apple", d) if d > 0 else ("less", "Orange", "Apple", -d)))
-        d = cnt["Grape"] - cnt["Banana"]
-        if d == 0: continue
-        cl.append(("more", "Grape", "Banana", d) if d > 0 else ("less", "Grape", "Banana", -d))
-        cl.append(("total", sum(cnt.values())))
-        if len(solve_graph(known, cl)) != 1: continue
+        a = rng.randint(2, 5); b = rng.randint(3, 5)
+        d1 = rng.randint(2, 4); d2 = rng.randint(1, 2); d3 = rng.randint(1, 2)
+        cnt = {"Apple": a, "Banana": b, "Orange": a + d1, "Grape": b + d2, "Pear": b - d3}
+        if min(cnt.values()) < 1 or max(cnt.values()) > 9: continue
         vals = sorted(cnt.values())
         if vals[-1] == vals[-2] or vals[0] == vals[1]: continue
-        if abs(cnt["Orange"] - cnt["Apple"]) > 3 or abs(cnt["Grape"] - cnt["Banana"]) > 3: continue
+        known = {"Apple": a, "Banana": b}
+        # three difference clues, one for each missing row; the total is NOT a clue (it is the check)
+        cl = [("more", "Orange", "Apple", d1), ("more", "Grape", "Banana", d2), ("less", "Pear", "Banana", d3)]
+        if len(solve_graph(known, cl)) != 1: continue
         break
+    total = sum(cnt.values())
     most = max(cnt, key=cnt.get); least = min(cnt, key=cnt.get)
     rows = ""
     for f in FRUIT:
@@ -339,27 +452,32 @@ def page20():
             f'<div class="ansline">b) <b>{most}</b> has <span class="ab"></span> more than <b>{least}</b>.</div>')
     P = Page(no=20, title="Fruit Graph", tier=2, topic="Picture graphs: read, complete and answer",
              strand="Statistics - Data Analysis", syll="Picture graphs (read and interpret picture graphs)",
-             ptype="Graph detective", mech="K3 total circles equals the stated total",
+             ptype="Graph detective", mech="K3 total circles equals the stated total (the total is not a clue)",
+             mech_plain="Total of all the circles must equal the stated total (the total is not used to find any row)",
              instr=["Two rows are done.", "Use the clues to draw the other rows.", "Draw one circle for each child.", "Then answer a and b."],
-             body=body, check=f"Count all the circles. Is the total {sum(cnt.values())}?", check_boxes=None,
-             key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {cnt[most]-cnt[least]}", check_result=f"Total {sum(cnt.values())} circles"),
-             note="Each circle stands for one child (a scale of 1, as in the Primary 1 syllabus). The clues are the only way to find the three missing rows. If a pupil's total is wrong, one of the first two clues was misread.",
+             body=body, check=f"Count all the circles. Is the total {total}?", check_boxes=None,
+             key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {cnt[most]-cnt[least]}", check_result=f"Total {total} circles"),
+             note=f"Each circle stands for one child (a scale of 1). The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total.",
              seed=2020)
     sols = solve_graph(known, cl)
-    P.v("V1 exactly one set of row counts satisfies the clues (all 1000 combinations tested)", len(sols) == 1 and sols[0] == cnt, len(sols))
+    P.v("V1 exactly one set of row counts satisfies the clues (total not used; all combinations tested)", len(sols) == 1 and sols[0] == cnt, len(sols))
     P.v("V1b the most/least answers are unique", sorted(cnt.values())[-1] != sorted(cnt.values())[-2] and sorted(cnt.values())[0] != sorted(cnt.values())[1])
-    P.v("V2 total of all rows equals the stated total", sum(sols[0].values()) == cl[2][1])
+    P.v("V2 total of all rows equals the total in the check strip", sum(sols[0].values()) == total)
+    P.v("V2b the total is not one of the clues", all(c[0] != "total" for c in cl))
     P.v("V7 every row fits in 9 boxes", max(cnt.values()) <= 9)
-    # V3: changing any one unknown row by +-1 breaks the total
+    # V3: a clue misread by 1 or 2 changes the total
     tot = det = 0
     for f in ["Orange", "Grape", "Pear"]:
         for dlt in (-1, 1, -2, 2):
             tot += 1
             alt = dict(cnt); alt[f] += dlt
-            if sum(alt.values()) != cl[2][1]: det += 1
+            if sum(alt.values()) != total: det += 1
     P.v("V3 one wrong row breaks the total", det == tot, f"{det}/{tot}")
     P["cv"] = dict(rate=det / tot, single_total=tot, single_detected=det)
     P["counts"] = cnt
+    unk = ["Orange", "Grape", "Pear"]
+    P["model"] = dict(truth=[cnt[f] for f in unk], domains=[list(range(0, 10))] * 3, check=lambda ans: sum(ans) + a + b == total, numeric=True)
+    P["mini"] = mini_graph([(f, cnt[f]) for f in FRUIT])
     return P
 
-PAGES = [page15, page16, page17, page18, page19, page20]
+PAGES = [page06, page15, page16, page17, page18, page19, page20]

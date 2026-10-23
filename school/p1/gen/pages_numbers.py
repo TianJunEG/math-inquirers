@@ -1,52 +1,8 @@
-"""Pages 1-7: numbers to 100, comparing, patterns, ordinals."""
+"""Pages 1-5 and 7: numbers to 100, comparing, patterns, ordinals (page 6 is in pages_measure.py)."""
 import random, itertools, re
 from .common import *
 
 NAMES = ["Ali", "Mei", "Siti", "Ben", "Kumar", "Aisha", "Wei", "Ravi", "Jenny", "Lily"]
-
-# ---------------------------------------------------------------- P01
-def rods_svg(tens, ones):
-    p = []
-    x = 1.0
-    for _ in range(tens):
-        p.append(f'<rect class="ten" x="{x:.1f}" y="2" width="3.4" height="30" fill="#fff" stroke="#000" stroke-width="0.4"/>')
-        for k in range(1, 10):
-            p.append(f'<line class="tick" x1="{x:.1f}" x2="{x+3.4:.1f}" y1="{2+k*3}" y2="{2+k*3}" stroke="#000" stroke-width="0.3"/>')
-        x += 4.4
-    x += 3
-    for i in range(ones):
-        cx = x + 2 + (i % 3) * 4.2
-        cy = 6 + (i // 3) * 4.6
-        p.append(f'<circle class="one" cx="{cx:.1f}" cy="{cy:.1f}" r="1.7" fill="#000"/>')
-    return svg(58, 34, "".join(p))
-
-def solve_p01_count(svgs):
-    """independent solver: count rods and dots in the drawn pictures"""
-    return [10 * s.count('class="ten"') + s.count('class="one"') for s in svgs]
-
-def page01():
-    rng = random.Random(101)
-    word = "ROCKET"
-    nums = rng.sample([n for n in range(12, 100) if n % 10 != 0], 6)
-    svgs = [rods_svg(n // 10, n % 10) for n in nums]
-    table = build_table(nums, word, rng, 10, 99, n_decoy=4)
-    items = "".join(f'<div class="item"><span class="no">{i+1}</span>{s}<div class="ans"><span class="ab"></span></div></div>' for i, s in enumerate(svgs))
-    body = f'<div class="items g3">{items}</div>{code_block(table)}'
-    P = Page(no=1, title="Tens and Ones", tier=1, topic="Counting: tens and ones",
-             strand="Number and Algebra - Whole Numbers", syll="1.1 to 1.3 (count a set, tens and ones)",
-             ptype="Code-breaker", mech="K1 code word (6 letters)",
-             instr=["Count the tens and the ones.", "Write each number in the box.", "Use the code table."],
-             body=body, check="Write the letters in order. They spell a word. Is it a toy to fly?", check_boxes=6,
-             key=dict(answers=", ".join(map(str, nums)), check_result=f"Code word: {word}"),
-             note="Each picture shows tens as long rods of ten squares and ones as dots. Typical slip: counting a rod as 1 or reading tens and ones the wrong way round, which gives a number that is not in the table.",
-             seed=101)
-    ans = solve_p01_count(svgs)
-    P.v("V1 unique answer (count of drawn rods/dots)", ans == nums, ans)
-    cv = code_verify(nums, table, word, 10, 99)
-    P.v("V2 code word spells ROCKET", cv["spelled_ok"], "")
-    P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
-    P["cv"] = cv
-    return P
 
 # ---------------------------------------------------------------- P02
 def riddle_clues(t, rng):
@@ -85,7 +41,7 @@ def page02():
     table = build_table(targets, word, rng, 1, 100, n_decoy=5)
     rows = ""
     for i, cl in enumerate(riddles):
-        rows += f'<div class="riddle"><span class="no">{i+1}</span><div class="rtext">{" ".join(clue_text(c) for c in cl)}</div><span class="ab"></span></div>'
+        rows += f'<div class="riddle"><span class="no">{i+1}</span><div class="rtext">{"<br>".join(clue_text(c) for c in cl)}</div><span class="ab"></span></div>'
     body = f'<div class="riddles">{rows}</div>{code_block(table)}'
     P = Page(no=2, title="Mystery Numbers", tier=2, topic="Numbers to 100: tens digit, ones digit, more and less",
              strand="Number and Algebra - Whole Numbers", syll="1.1 to 1.5 (numbers to 100, compare)",
@@ -101,6 +57,8 @@ def page02():
     P.v("V2 code word spells CLOUD", cv["spelled_ok"])
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P["cv"] = cv
+    P["model"] = code_model(targets, table, 1, 100)
+    P["mech_plain"] = "Code word (5 letters) and testing each clue"
     return P
 
 # ---------------------------------------------------------------- P03
@@ -117,14 +75,15 @@ def page03():
         order = cards[:]; rng.shuffle(order)
         if [c[0] for c in order] != nums and all(order[i][0] != nums[i] for i in range(6)): break
     cds = "".join(f'<div class="card"><span class="cn">{n}</span><span class="cl">{l}</span></div>' for n, l in order)
-    slots = "".join(f'<div class="slot"><span class="ab"></span><span class="ab letter"></span></div>' for _ in range(6))
+    nrow = '<span class="rl">number</span>' + "".join('<span class="ab"></span>' for _ in range(6))
+    lrow = '<span class="rl">letter</span>' + "".join('<span class="ab letter"></span>' for _ in range(6))
     body = (f'<div class="cards">{cds}</div>'
             f'<div class="orderrow"><span class="end">smallest</span><span class="arrowline"></span><span class="end">greatest</span></div>'
-            f'<div class="slots">{slots}</div><div class="slotlabels"><span>numbers</span><span>letters</span></div>')
+            f'<div class="slots">{nrow}{lrow}</div>')
     P = Page(no=3, title="Number Cards", tier=1, topic="Ordering numbers to 100 (smallest to greatest)",
              strand="Number and Algebra - Whole Numbers", syll="1.4, 1.5 (compare and order numbers)",
              ptype="Ordering cards", mech="K1 letters read in order spell a word (6 letters)",
-             instr=["Look at the six cards.", "Put the numbers in order.", "Begin with the smallest.", "Write the number, then its letter."],
+             instr=["Look at the six cards.", "Arrange the numbers in order.", "Begin with the smallest.", "Write each number, then its letter below."],
              body=body, check="Read the letters in your boxes. Do they spell a word? It crosses a river.", check_boxes=None,
              key=dict(answers=" , ".join(f"{n}{l}" for n, l in cards) + " (smallest to greatest)", check_result=f"Word: {word}"),
              note="Cards are shown out of order and no card is in its right place. Several numbers share a tens digit so pupils must compare ones digits. Swapping any two neighbouring cards breaks the word.",
@@ -139,6 +98,8 @@ def page03():
     P.v("V3 every neighbour swap breaks the word", all(swaps), swaps)
     P.v("V5 word on safe list", word.lower() in WORDS)
     P["cv"] = dict(rate=sum(swaps) / len(swaps), single_total=len(swaps), single_detected=sum(swaps))
+    P["model"] = dict(truth=list(word), domains=[list(word)] * 6, check=letters_check(), perm=list(range(6)))
+    P["mech_plain"] = "Code word from the letters in order (6 letters)"
     return P
 
 # ---------------------------------------------------------------- P04
@@ -167,9 +128,20 @@ def compare_text(c):
             "gt": f"{c[1]} has more than {c[2]}.", "lt": f"{c[1]} has fewer than {c[2]}.",
             "second": f"{c[1]} has the second greatest number."}[c[0]]
 
+def howto_grid():
+    """Small worked example that teaches how to use a logic grid (no content from the real puzzle)."""
+    tick = '<svg viewBox="0 0 10 10" width="5mm" height="5mm"><polyline points="1.5,5.5 4,8 8.5,2" fill="none" stroke="#000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    cross = '<svg viewBox="0 0 10 10" width="4mm" height="4mm"><path d="M2,2 L8,8 M8,2 L2,8" stroke="#000" stroke-width="1.2" stroke-linecap="round"/></svg>'
+    t = (f'<table class="lgrid mini"><tr><th></th><th>5</th><th>9</th></tr>'
+         f'<tr><th class="rh">Zed</th><td>{tick}</td><td>{cross}</td></tr>'
+         f'<tr><th class="rh">Yan</th><td>{cross}</td><td></td></tr></table>')
+    return ('<div class="howto"><b>How to use the grid</b><div class="hw">' + t +
+            '<div class="hwt"><p>Clue: Zed has 5.</p><p>Tick Zed under 5.</p><p>Cross out the rest of that line across and down.</p></div></div></div>')
+
 def page04():
     rng = random.Random(404)
     names = ["Ali", "Mei", "Siti", "Ben", "Kumar"]
+    word = "HOUSE"
     while True:
         nums = sorted(rng.sample(range(12, 100), 5))
         if nums[4] - nums[0] > 30: break
@@ -195,25 +167,34 @@ def page04():
                 rest = [x for x in cl if x != c]
                 if len(solve_compare(names, nums, rest)) == 1: cl = rest
             if len(cl) >= 4: break
-    chips = "".join(f'<span class="chip">{n}</span>' for n in nums)
+    letter_of = {truth[n]: word[i] for i, n in enumerate(names)}     # letter printed beside each number
+    chips = "".join(f'<span class="chip">{n} <i class="cl">{letter_of[n]}</i></span>' for n in nums)
     clues = "".join(f'<li>{compare_text(c)}</li>' for c in cl)
-    ans = "".join(f'<div class="ansline">{n} has <span class="ab"></span> stickers.</div>' for n in names)
+    ans = ('<div class="ansgrid"><span></span><b>number</b><b>letter</b>' +
+           "".join(f'<span class="nm">{n}</span><span class="ab"></span><span class="ab"></span>' for n in names) + '</div>')
     body = (f'<div class="blk"><p class="lead">The numbers of stickers are:</p><div class="chips">{chips}</div></div>'
-            f'<ul class="clues">{clues}</ul><div class="twocol"><div>{grid_table(names, nums)}</div><div>{ans}</div></div>')
+            f'<div class="twocol"><ul class="clues">{clues}</ul>{howto_grid()}</div>'
+            f'<div class="twocol"><div>{grid_table(names, nums)}</div><div>{ans}</div></div>')
     P = Page(no=4, title="Sticker Grid", tier=2, topic="Comparing numbers to 100 (more, fewer, greatest, smallest)",
              strand="Number and Algebra - Whole Numbers", syll="1.4, 1.5 (compare and order numbers)",
-             ptype="Logic grid", mech="K4 grid: one tick in each row and column",
-             instr=["Read the clues.", "Tick the grid.", "Write each number in the sentences."],
-             body=body, check="Each row has one tick. Each column has one tick. Is that true?", check_boxes=None,
-             key=dict(answers=", ".join(f"{n}: {truth[n]}" for n in names), check_result="Grid has exactly one tick per row and column."),
-             note="Five children, five numbers. Clues only use more than, fewer than, greatest, smallest. Pupils mark a cross where a clue rules a number out. The 'one tick in each row and column' rule exposes most mistakes.",
+             ptype="Logic grid", mech="K4 grid + K1 letter beside each number spells a word (5 letters)",
+             mech_plain="Letters beside the numbers, read down the list, spell a word (5 letters)",
+             instr=["Read the clues.", "Cross a box if a clue says no.", "Tick a box if it must be yes.", "Write each number, then its letter."],
+             body=body, check="Read the five letters down your list. Do they spell a word? You live in it.", check_boxes=5,
+             key=dict(answers=", ".join(f"{n}: {truth[n]} ({letter_of[truth[n]]})" for n in names), check_result=f"Letters down the list: {word}"),
+             note="Five children, five numbers, and each number has a letter. A wrong placement puts the letters in the wrong order, so the word does not appear. The page shows a worked example of crosses and ticks. Clues use more than, fewer than, greatest, smallest, second greatest.",
              seed=404)
     sols = solve_compare(names, nums, cl)
     P.v("V1 exactly one assignment satisfies all clues", len(sols) == 1 and sols[0] == truth, f"{len(sols)} solution(s)")
     P.v("V1b every clue needed", all(len(solve_compare(names, nums, [x for x in cl if x != c])) > 1 for c in cl))
-    # V3: every permutation different from truth violates some clue
-    P.v("V3 all 119 other placements break a clue", len(sols) == 1)
-    P["cv"] = dict(rate=1.0, single_total=119, single_detected=119)
+    P.v("V2 letters beside the numbers, read in name order, spell HOUSE", "".join(letter_of[truth[n]] for n in names) == word)
+    # V3: of the 119 wrong placements, count those that spell a real word (must be <=5%)
+    wrong = [pp for pp in itertools.permutations(nums) if list(pp) != perm]
+    real = sum("".join(letter_of[v] for v in pp).lower() in WORDS for pp in wrong)
+    P.v("V3 wrong placements that still spell a word <= 5%", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
+    P["cv"] = dict(rate=1 - real / len(wrong), single_total=len(wrong), single_detected=len(wrong) - real)
+    P["model"] = dict(truth=list(word), domains=[list(word)] * 5, check=letters_check(), perm=list(range(5)))
+    P["mini"] = mini_ticks(5, 5, {(i, nums.index(truth[n])) for i, n in enumerate(names)})
     return P
 
 # ---------------------------------------------------------------- P05
@@ -267,6 +248,8 @@ def page05():
     P.v("V2 code word spells FLOWER", cv["spelled_ok"])
     P.v("V3 single-slip detection >=98%", cv["rate"] >= .98, f'{cv["rate"]:.3f}')
     P["cv"] = cv
+    P["model"] = code_model(answers, table, 0, 100)
+    P["mech_plain"] = "Code word (6 letters)"
     return P
 
 # ---------------------------------------------------------------- grid path helpers (P06, P08)
@@ -310,53 +293,6 @@ def maze_html(n, texts, start, finish, cell_cls="mcell"):
             if (r, c) == finish: tag = '<i class="flag">FINISH</i>'
             rows += f'<div class="{cell_cls}">{tag}<span>{t}</span></div>'
     return f'<div class="maze" style="grid-template-columns:repeat({n},1fr)">{rows}</div>'
-
-# ---------------------------------------------------------------- P06
-def page06():
-    rng = random.Random(606)
-    n = 5; step = 5
-    for attempt in range(5000):
-        path = random_walk(rng, n, 9)
-        s0 = rng.randint(3, 30)
-        vals = {p: s0 + step * i for i, p in enumerate(path)}
-        grid = [[None] * n for _ in range(n)]
-        for p, v in vals.items(): grid[p[0]][p[1]] = v
-        pv = set(vals.values())
-        # dead-end branches: neighbours of path cells given value cur+step
-        dead = 0
-        for i, p in enumerate(path[:-1]):
-            if dead >= 3: break
-            opts = [q for q in neighbours(*p, n) if grid[q[0]][q[1]] is None]
-            if opts and rng.random() < .6:
-                q = rng.choice(opts); grid[q[0]][q[1]] = vals[p] + step; dead += 1
-        free = [(r, c) for r in range(n) for c in range(n) if grid[r][c] is None]
-        for (r, c) in free:
-            while True:
-                v = rng.choice([x for x in range(1, 70)])
-                if v not in pv and v - step not in pv and v + step not in pv: break
-            grid[r][c] = v
-        start, finish = path[0], path[-1]
-        rule = lambda a, b: grid[b[0]][b[1]] == grid[a[0]][a[1]] + step
-        if count_routes(lambda c: True, n, start, finish, rule) == 1 and dead >= 2:
-            break
-    else:
-        raise RuntimeError("p06")
-    texts = [[str(grid[r][c]) for c in range(n)] for r in range(n)]
-    body = maze_html(n, texts, start, finish)
-    P = Page(no=6, title="Count On Maze", tier=2, topic="Number patterns: counting on by 5",
-             strand="Number and Algebra - Whole Numbers", syll="1.6 (number patterns)",
-             ptype="Maze / path", mech="K6 route closes at FINISH",
-             instr=["Start at START.", "Count on by 5 each step.", "Move up, down, left or right.", "Draw a line to FINISH."],
-             body=body, check="Your line must reach FINISH. If you get stuck, go back and look again.", check_boxes=None,
-             key=dict(answers="Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[r][c]}" for r, c in path), check_result="Route reaches FINISH; last number is " + str(grid[finish[0]][finish[1]])),
-             note=f"Rule: each next box is 5 more than the box before. There are {dead} tempting dead ends (a box that is 5 more but leads nowhere). A pupil who steps on one is stuck and must go back; that is the self-check.",
-             seed=606)
-    cnt = count_routes(lambda c: True, n, start, finish, lambda a, b: grid[b[0]][b[1]] == grid[a[0]][a[1]] + step)
-    P.v("V1 exactly one route start->finish (exhaustive DFS)", cnt == 1, cnt)
-    P.v("V3 dead-end decoys present (wrong turn is detectable)", dead >= 2, dead)
-    P["cv"] = dict(rate=1.0, single_total=dead, single_detected=dead)
-    P["route"] = path; P["grid"] = grid
-    return P
 
 # ---------------------------------------------------------------- P07
 def queue_text(c):
@@ -411,10 +347,11 @@ def page07():
     slots = "".join(f'<div class="qslot"><span class="qn">{ordinal(i+1)}</span><span class="ab wide"></span></div>' for i in range(5))
     body = (f'<div class="kids">{kids}</div><ul class="clues">{clues}</ul>'
             f'<div class="blk"><p class="lead">The queue. The front is 1st.</p><div class="qslots">{slots}</div></div>')
-    P = Page(no=7, title="The Queue", tier=1, topic="Ordinal numbers: 1st to 5th, before and behind",
+    P = Page(no=7, title="The Queue", tier=2, topic="Ordinal numbers: 1st to 5th, before and behind",
              strand="Number and Algebra - Whole Numbers", syll="1.7 (ordinal numbers first to tenth)",
              ptype="Logic (queue)", mech="K1 shirt letters read 1st to 5th spell a word + K4 each child used once",
              instr=["The children stand in a queue.", "Read the clues.", "Write each name in its place.", "Then read the shirt letters."],
+             mech_plain="Shirt letters read from 1st to 5th spell a word (5 letters)",
              body=body, check="Read the shirt letters from 1st to 5th. They spell a word. Is it an animal?", check_boxes=5,
              key=dict(answers=", ".join(f"{ordinal(i+1)} {n}" for i, n in enumerate(order)), check_result=f"Word: {word}"),
              note="The children in the top row are not in queue order. Clues use ordinal numbers, in front of, behind and next to. Syllabus ordinals go to 10th; this page uses 1st to 5th.",
@@ -431,6 +368,7 @@ def page07():
         if w.lower() not in WORDS: bad += 1
     P.v("V3 other queue orders do not spell a real word (>=98%)", bad / tot >= .98, f"{bad}/{tot}")
     P["cv"] = dict(rate=bad / tot, single_total=tot, single_detected=bad)
+    P["model"] = dict(truth=list(word), domains=[list(word)] * 5, check=letters_check(), perm=list(range(5)))
     return P
 
-PAGES = [page01, page02, page03, page04, page05, page06, page07]
+PAGES = [page02, page03, page04, page05, page07]

@@ -5,15 +5,34 @@ Outputs (in out/): P1_Puzzles.pdf (20 pupil pages), P1_FrontMatter.pdf (4), P1_C
 P1_Answer_Key.pdf, verification.json."""
 import argparse, json, os, sys, re, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-from gen import pages_numbers, pages_arith, pages_measure
+from gen import pages_numbers, pages_arith, pages_measure, pages_cbc
 import render
 
 def all_pages():
     ps = []
-    for m in (pages_numbers, pages_arith, pages_measure):
+    for m in (pages_numbers, pages_arith, pages_measure, pages_cbc):
         ps += [f() for f in m.PAGES]
     ps.sort(key=lambda p: p["no"])
     return ps
+
+def pack_key(pages, school, outdir, capacity_mm=257):
+    """Measure every key entry in the browser and pack as many as fit on each key page (no half-empty pages)."""
+    from playwright.sync_api import sync_playwright
+    tmp = os.path.join(outdir, "keymeasure.html")
+    open(tmp, "w").write(render.doc('<section class="page fm" style="height:auto;overflow:visible">' + "".join(render.key_entry(p) for p in pages) + "</section>", "measure"))
+    with sync_playwright() as pw:
+        br = pw.chromium.launch(); pg = br.new_page(viewport={"width": 900, "height": 1200})
+        pg.goto("file://" + os.path.abspath(tmp)); pg.wait_for_timeout(500)
+        hs = pg.evaluate("() => [...document.querySelectorAll('.kentry')].map(e => e.getBoundingClientRect().height * 25.4 / 96)")
+        br.close()
+    os.remove(tmp)
+    groups, cur, h = [], [], 0
+    for p, e in zip(pages, hs):
+        e += 3                                  # margin below each entry
+        if cur and h + e > capacity_mm: groups.append(cur); cur, h = [], 0
+        cur.append(p); h += e
+    if cur: groups.append(cur)
+    return groups
 
 def to_pdf(html_path, pdf_path):
     from playwright.sync_api import sync_playwright
@@ -34,7 +53,7 @@ def main():
     W = lambda name, h: open(os.path.join(a.outdir, name), "w").write(h)
     W("pupil.html", render.doc("".join(render.pupil_page(p, a.school) for p in pages), "Early Finisher Puzzles P1"))
     W("front.html", render.doc(render.cover(a.school) + render.licence(a.school) + render.teacher_notes(pages) + render.contents(pages), "Early Finisher Puzzles P1 front matter"))
-    W("key.html", render.doc(render.key_pages(pages, a.school), "Early Finisher Puzzles P1 answer key"))
+    W("key.html", render.doc(render.key_pages(pages, a.school, pack_key(pages, a.school, a.outdir)), "Early Finisher Puzzles P1 answer key"))
     for n in ("pupil", "front", "key"):
         to_pdf(os.path.join(a.outdir, n + ".html"), os.path.join(a.outdir, {"pupil": "P1_Puzzles", "front": "P1_FrontMatter", "key": "P1_Answer_Key"}[n] + ".pdf"))
     from pypdf import PdfWriter, PdfReader
@@ -45,7 +64,7 @@ def main():
     # verification record
     rec = [dict(no=p["no"], title=p["title"], tier=p["tier"], topic=p["topic"], strand=p["strand"], syll=p["syll"], ptype=p["ptype"], mech=p["mech"],
                 seed=p["seed"], checks=[dict(name=n, ok=o, detail=d) for n, o, d in p["verify"]],
-                slip_detect=(round(p["cv"]["rate"], 4), p["cv"]["single_detected"], p["cv"]["single_total"])) for p in pages]
+                generator_slip_test=(round(p["cv"]["rate"], 4), p["cv"]["single_detected"], p["cv"]["single_total"])) for p in pages]
     json.dump(rec, open(os.path.join(a.outdir, "verification.json"), "w"), indent=1)
     print("built", a.outdir)
 

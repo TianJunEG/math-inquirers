@@ -68,7 +68,7 @@ Sources used: `docs/terms/owner_decisions.md` (all addenda, including 5 to 8 of 
 | Path / maze (route of correct answers) | Facts and conversions, equivalent fractions, tables, units | Unique route; wrong turn gets stuck |
 | Balance / equation puzzle | Add/subtract, mult/div relationships, P6 simple equations, P5 brackets | Pans or boxes |
 | Shape and measurement puzzle | Geometry, area, perimeter, volume, angles | Grid drawing, tile fitting, find missing side |
-| Picture-fill / colour-by-answer | Graphs, 2D shapes, P1-P2 number | Answers decide colour; picture is the check |
+| Picture-fill / colour-by-answer (colour by code) | Graphs, 2D shapes, P1-P2 number | Answers choose a crayon colour from a key; pupils colour the printed black-and-white outline; colour tally and matching parts are the check. P1 pilot uses 3 of 20 pages (P1-01, 12, 14) from `school/colour_by_code` |
 | Graph detective | Picture/bar/line/pie graphs, average | Complete the graph from clues; totals must match |
 
 ## 6. Topic-to-page mapping (draft)
@@ -208,14 +208,16 @@ Recommended coverage per book: at least 6 different templates, no template more 
 
 **Rule SC-3.** The check must not be a copy of the answers printed upside down on the page (no printed answer key on the page; that defeats the puzzle).
 
+**Rule SC-4 (added after the P1 audit).** A check is accepted only when an enumeration of every single wrong answer and every wrong arrangement is run and at least 95% are rejected. The total or the final answer may not be derived from the clue that the check then tests (circular checks, such as a graph total used both as clue and as check, are forbidden). Signs and words above the pupil's level are banned per level (no division sign at P1).
+
 ### 8.1 Mechanism catalogue
 
 | Code | Mechanism | How it works | Fits |
 |---|---|---|---|
 | K1 | Code word | Each answer maps to a letter; the letters spell a word | T04, T06, T11 |
-| K2 | Hidden picture | Answers decide which cells to colour; a clear picture appears if all are right | T09, T06 |
+| K2 | Hidden picture | Answers decide the mark in every cell (three marks, for example black, one dot, empty, with a closed set of three answers); a clear picture appears if all are right. Never shade some cells and leave others unmarked: a slip in an unmarked cell is invisible (tested: 72 to 76% detection in the P1 pilot) | T09, T06 |
 | K3 | Check-sum | A stated total (row total, grand total, magic number) must match | T02, T10, T12 |
-| K4 | Grid consistency | The answer must satisfy every clue/row/column; contradictions are visible | T01, T11 |
+| K4 | Grid consistency | The answer must satisfy every clue/row/column; contradictions are visible. "One tick per row and column" alone is NOT a check (all 120 arrangements pass it); pair the grid with letters or a code word read from the final cells | T01, T11 |
 | K5 | Unlock | The answer to puzzle part 1 is needed to read clue 2; a wrong first answer makes clue 2 impossible | T03, T08 |
 | K6 | Route closes | The path from Start must reach Finish; a wrong cell dead-ends | T06 |
 | K7 | Built-in verification | Reverse operation: "Put your answer back: does it make the two pans equal?" | T07, T03 |
@@ -226,7 +228,7 @@ Recommended coverage per book: at least 6 different templates, no template more 
 
 | Template | Primary check | Secondary check |
 |---|---|---|
-| T01 logic grid | K4 (each row and column has exactly one tick) | K1 (final cells spell a short word) |
+| T01 logic grid | K1 (a letter beside each number or name; the letters in order spell a word) with K4 as a hint | a printed how-to (cross and tick example) |
 | T02 magic square | K3 (all lines equal the printed magic number) | none needed |
 | T03 number riddle | K5 or K7 (check by testing all clues) | K1 (letter of answer) |
 | T04 code-breaker | K1 | K3 optional |
@@ -252,7 +254,7 @@ For every puzzle the generator outputs the puzzle, answers and check data. `veri
 
 - **V1 uniqueness:** an independent exhaustive/solver search finds exactly one solution (section 9).
 - **V2 check-correctness:** with the correct answers the check passes (code word spells the intended word; sum matches; picture is the intended one).
-- **V3 error detection:** all single-answer errors (every cell replaced by every other plausible value) and a sample of double errors are tested; the check must fail for at least 98% of single errors and 90% of double errors. Cases where the check still passes are logged; if above threshold, the puzzle is redesigned.
+- **V3 error detection (one enumeration in the pack's `validate.py`, run on every page; wrong arrangements are enumerated too):** all single-answer errors (every cell replaced by every other plausible value) and a sample of double errors are tested; the check must fail for at least 98% of single errors and 90% of double errors. Cases where the check still passes are logged; if above threshold, the puzzle is redesigned.
 - **V4 guess-resistance:** the check cannot be satisfied by a shortcut (e.g. code word guessable from the first three letters: test by simulated guesses with a dictionary; the word must not be inferable from fewer than half the letters).
 - **V5 word safety:** every code word is on a child-safe word list, in plain spelling for the school market (British spelling, as in `school_paper_wording_patterns.md`), no ambiguous or offensive words, and a wrong-letter mix does not form another safe word more than 5% of the time.
 - **V6 independence:** the check uses only information printed on the page.

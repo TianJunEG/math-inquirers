@@ -1,36 +1,67 @@
 [
  {
   "no": 1,
-  "title": "Tens and Ones",
+  "title": "Colour the Rocket",
   "tier": 1,
-  "topic": "Counting: tens and ones",
+  "topic": "Place value: tens and ones",
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "1.1 to 1.3 (count a set, tens and ones)",
-  "ptype": "Code-breaker",
-  "mech": "K1 code word (6 letters)",
-  "seed": 101,
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 201,
   "checks": [
    {
-    "name": "V1 unique answer (count of drawn rods/dots)",
+    "name": "V1 every question has exactly one answer in the bank's domain",
     "ok": true,
-    "detail": "[94, 38, 88, 62, 77, 18]"
+    "detail": "[]"
    },
    {
-    "name": "V2 code word spells ROCKET",
+    "name": "V1b every answer is one of the five key values",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "1.000"
+    "detail": "{'yellow': 2, 'red': 2, 'blue': 3, 'green': 4, 'orange': 4}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "name": "V3 wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "150/150"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
-   534,
-   534
-  ]
+   150,
+   150
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    126,
+    126
+   ],
+   "all_other_values_rejected": [
+    150,
+    150
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 2,
@@ -64,11 +95,22 @@
     "detail": "1.000"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    495,
    495
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    60,
+    60
+   ],
+   "all_other_values_rejected": [
+    495,
+    495
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 3,
@@ -102,11 +144,25 @@
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    5,
    5
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    30,
+    30
+   ],
+   "all_other_values_rejected": [
+    30,
+    30
+   ],
+   "wrong_arrangements_rejected": [
+    719,
+    719
+   ]
+  }
  },
  {
   "no": 4,
@@ -116,7 +172,7 @@
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "1.4, 1.5 (compare and order numbers)",
   "ptype": "Logic grid",
-  "mech": "K4 grid: one tick in each row and column",
+  "mech": "K4 grid + K1 letter beside each number spells a word (5 letters)",
   "seed": 404,
   "checks": [
    {
@@ -130,16 +186,35 @@
     "detail": ""
    },
    {
-    "name": "V3 all 119 other placements break a clue",
+    "name": "V2 letters beside the numbers, read in name order, spell HOUSE",
     "ok": true,
     "detail": ""
+   },
+   {
+    "name": "V3 wrong placements that still spell a word <= 5%",
+    "ok": true,
+    "detail": "0/119"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    119,
    119
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    20,
+    20
+   ],
+   "all_other_values_rejected": [
+    20,
+    20
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 5,
@@ -173,44 +248,84 @@
     "detail": "1.000"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    600,
    600
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    72,
+    72
+   ],
+   "all_other_values_rejected": [
+    600,
+    600
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 6,
-  "title": "Count On Maze",
+  "title": "Shape Riddles",
   "tier": 2,
-  "topic": "Number patterns: counting on by 5",
-  "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.6 (number patterns)",
-  "ptype": "Maze / path",
-  "mech": "K6 route closes at FINISH",
+  "topic": "2D shapes: name and describe (straight and curved sides)",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.1 (identify, name, describe and classify 2D shapes)",
+  "ptype": "Riddles + code-breaker",
+  "mech": "K1 shape letters in riddle order spell a word (6 letters)",
   "seed": 606,
   "checks": [
    {
-    "name": "V1 exactly one route start->finish (exhaustive DFS)",
+    "name": "V1 every riddle names exactly one shape",
     "ok": true,
-    "detail": "1"
+    "detail": ""
    },
    {
-    "name": "V3 dead-end decoys present (wrong turn is detectable)",
+    "name": "V1b the first part of every riddle alone fits more than one shape",
     "ok": true,
-    "detail": "3"
+    "detail": ""
+   },
+   {
+    "name": "V2 letters in riddle order spell JACKET",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 wrong orders that still spell a word <= 5%",
+    "ok": true,
+    "detail": "0/719"
+   },
+   {
+    "name": "V5 word on safe list",
+    "ok": true,
+    "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
-   3,
-   3
-  ]
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    30,
+    30
+   ],
+   "all_other_values_rejected": [
+    30,
+    30
+   ],
+   "wrong_arrangements_rejected": [
+    719,
+    719
+   ]
+  }
  },
  {
   "no": 7,
   "title": "The Queue",
-  "tier": 1,
+  "tier": 2,
   "topic": "Ordinal numbers: 1st to 5th, before and behind",
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "1.7 (ordinal numbers first to tenth)",
@@ -234,11 +349,25 @@
     "detail": "119/119"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    119,
    119
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    20,
+    20
+   ],
+   "all_other_values_rejected": [
+    20,
+    20
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 8,
@@ -246,7 +375,7 @@
   "tier": 1,
   "topic": "Addition within 20",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.1 to 2.4, 2.7 (add within 20, mental calculation)",
+  "syll": "2.1 to 2.7 (add within 20, mental calculation)",
   "ptype": "Maze / path",
   "mech": "K6 route closes at FINISH",
   "seed": 808,
@@ -267,11 +396,22 @@
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    3,
    3
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    240,
+    240
+   ],
+   "all_other_values_rejected": [
+    240,
+    240
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 9,
@@ -279,7 +419,7 @@
   "tier": 2,
   "topic": "Adding three 1-digit numbers",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.4 (add more than two 1-digit numbers)",
+  "syll": "2.1 to 2.7 (adding more than two 1-digit numbers)",
   "ptype": "Magic square",
   "mech": "K3 every line makes 15 (8 line totals)",
   "seed": 909,
@@ -295,11 +435,22 @@
     "detail": "48/48"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    48,
    48
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    42,
+    42
+   ],
+   "all_other_values_rejected": [
+    48,
+    48
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 10,
@@ -307,7 +458,7 @@
   "tier": 1,
   "topic": "Subtraction within 20; missing numbers",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.1 to 2.3, 2.7 (subtract within 20, inverse)",
+  "syll": "2.1 to 2.7 (subtract within 20, inverse relationship)",
   "ptype": "Code-breaker",
   "mech": "K1 code word (6 letters) + K7 put the number back",
   "seed": 1010,
@@ -338,11 +489,22 @@
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    114,
    114
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    63,
+    63
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 11,
@@ -350,7 +512,7 @@
   "tier": 2,
   "topic": "Add and subtract within 20: find the missing number",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.1 to 2.4 (add, subtract, inverse, more than two 1-digit numbers)",
+  "syll": "2.1 to 2.7 (add, subtract, inverse relationship)",
   "ptype": "Balance / picture equations",
   "mech": "K7 put the numbers back + K1 code word (6 letters)",
   "seed": 1111,
@@ -376,44 +538,86 @@
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    48,
    48
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    41,
+    41
+   ],
+   "all_other_values_rejected": [
+    48,
+    48
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 12,
-  "title": "Shade the Picture",
+  "title": "Colour the House",
   "tier": 1,
-  "topic": "Add and subtract within 100 (no renaming)",
-  "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.5 to 2.7 (add and subtract within 100, 2-digit and ones, 2-digit and tens)",
-  "ptype": "Picture-fill (colour by answer)",
-  "mech": "K2 hidden picture appears",
-  "seed": 1212,
+  "topic": "Shapes: corners and straight sides",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 114,
   "checks": [
    {
-    "name": "V1 evaluating every box gives exactly the intended picture",
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 slips of +-1 or +-10 that change the picture (informational, see README)",
+    "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "72/100 = 0.72"
+    "detail": "{'yellow': 3, 'red': 4, 'blue': 4, 'green': 3, 'orange': 3}"
    },
    {
-    "name": "V7 all answers within 100",
+    "name": "V2 the right answers pass every check (tally, matching parts)",
     "ok": true,
     "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "17"
+   },
+   {
+    "name": "V3 wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "204/204"
    }
   ],
-  "slip_detect": [
-   0.72,
-   72,
-   100
-  ]
+  "generator_slip_test": [
+   1.0,
+   204,
+   204
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    157,
+    157
+   ],
+   "all_other_values_rejected": [
+    204,
+    204
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 13,
@@ -421,7 +625,7 @@
   "tier": 1,
   "topic": "Multiplication: equal groups",
   "strand": "Number and Algebra - Multiplication and Division",
-  "syll": "3.1, 3.2 (concept of multiplication, multiplying within 40)",
+  "syll": "3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
   "ptype": "Code-breaker",
   "mech": "K1 code word (6 letters)",
   "seed": 1313,
@@ -447,44 +651,86 @@
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    234,
    234
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 14,
-  "title": "Times and Share",
+  "title": "Colour the Ice Cream",
   "tier": 2,
-  "topic": "Multiplication within 40 and division within 20",
-  "strand": "Number and Algebra - Multiplication and Division",
-  "syll": "3.2 to 3.4 (multiplying within 40, dividing within 20)",
-  "ptype": "Picture-fill (colour by answer)",
-  "mech": "K2 hidden picture appears",
-  "seed": 1414,
+  "topic": "Counting in 2s, 5s and 10s",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.6 (number patterns); counting in 2s, 5s and 10s leads to multiplication",
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 105,
   "checks": [
    {
-    "name": "V1 evaluating every box gives exactly the intended picture",
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 slips of +-1 or +-10 that change the picture (informational, see README)",
+    "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "110/144 = 0.76"
+    "detail": "{'yellow': 2, 'red': 2, 'blue': 4, 'green': 2, 'orange': 2}"
    },
    {
-    "name": "V7 products <= 40, dividends <= 20",
+    "name": "V2 the right answers pass every check (tally, matching parts)",
     "ok": true,
     "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "12"
+   },
+   {
+    "name": "V3 wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "1200/1200"
    }
   ],
-  "slip_detect": [
-   0.7639,
-   110,
-   144
-  ]
+  "generator_slip_test": [
+   1.0,
+   1200,
+   1200
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    144,
+    144
+   ],
+   "all_other_values_rejected": [
+    1200,
+    1200
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 15,
@@ -518,11 +764,22 @@
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    475,
    475
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    59,
+    59
+   ],
+   "all_other_values_rejected": [
+    475,
+    475
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 16,
@@ -530,9 +787,9 @@
   "tier": 2,
   "topic": "Money: dollars, more and less",
   "strand": "Number and Algebra - Money",
-  "syll": "Money (dollars up to $100) with 2.1 to 2.3 (add, subtract)",
-  "ptype": "Logic grid",
-  "mech": "K4 grid: one tick in each row and column",
+  "syll": "Money (dollars up to $100) with 2.1 to 2.7 (add, subtract)",
+  "ptype": "Logic grid + total",
+  "mech": "K4 grid + K1 letter beside each price + code letter for the total (6 letters)",
   "seed": 1616,
   "checks": [
    {
@@ -546,21 +803,40 @@
     "detail": ""
    },
    {
-    "name": "V3 all 119 other placements break a clue",
+    "name": "V2 letters beside the prices (item order) plus total letter spell BASKET",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V7 prices within $100",
+    "name": "V3 wrong placements that still spell a word <= 5%",
+    "ok": true,
+    "detail": "0/119"
+   },
+   {
+    "name": "V7 prices within $100, total within $40",
     "ok": true,
     "detail": ""
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    119,
    119
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    58,
+    58
+   ],
+   "all_other_values_rejected": [
+    58,
+    58
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 17,
@@ -589,11 +865,22 @@
     "detail": "1.000"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    66,
    66
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    50,
+    50
+   ],
+   "all_other_values_rejected": [
+    66,
+    66
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 18,
@@ -609,12 +896,12 @@
    {
     "name": "V1 clock hands read back from the drawing equal the intended times",
     "ok": true,
-    "detail": "[(2, 25), (7, 50), (8, 25), (7, 35), (6, 0)]"
+    "detail": "[(8, 10), (1, 25), (1, 30), (11, 25), (11, 0)]"
    },
    {
     "name": "V1b later times computed from drawing equal the key",
     "ok": true,
-    "detail": "['3:25', '8:20', '9:25', '8:05', '7:00']"
+    "detail": "['9:10', '1:55', '2:30', '11:55', '12:00']"
    },
    {
     "name": "V2 code word spells TIMER",
@@ -624,19 +911,30 @@
    {
     "name": "V3 single-slip detection >=98%",
     "ok": true,
-    "detail": "714/715"
+    "detail": "715/715"
    }
   ],
-  "slip_detect": [
-   0.9986,
-   714,
+  "generator_slip_test": [
+   1.0,
+   715,
    715
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    715,
+    715
+   ],
+   "all_other_values_rejected": [
+    715,
+    715
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 19,
   "title": "Shape Count",
-  "tier": 2,
+  "tier": 1,
   "topic": "2D shapes: rectangle, triangle, circle, half circle, quarter circle",
   "strand": "Measurement and Geometry - Geometry",
   "syll": "Geometry 1.1, 1.3 (name 2D shapes; identify the shapes in a figure)",
@@ -665,11 +963,22 @@
     "detail": "1.000"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    40,
    40
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    34,
+    34
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 20,
@@ -679,11 +988,11 @@
   "strand": "Statistics - Data Analysis",
   "syll": "Picture graphs (read and interpret picture graphs)",
   "ptype": "Graph detective",
-  "mech": "K3 total circles equals the stated total",
+  "mech": "K3 total circles equals the stated total (the total is not a clue)",
   "seed": 2020,
   "checks": [
    {
-    "name": "V1 exactly one set of row counts satisfies the clues (all 1000 combinations tested)",
+    "name": "V1 exactly one set of row counts satisfies the clues (total not used; all combinations tested)",
     "ok": true,
     "detail": "1"
    },
@@ -693,7 +1002,12 @@
     "detail": ""
    },
    {
-    "name": "V2 total of all rows equals the stated total",
+    "name": "V2 total of all rows equals the total in the check strip",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b the total is not one of the clues",
     "ok": true,
     "detail": ""
    },
@@ -708,10 +1022,21 @@
     "detail": "12/12"
    }
   ],
-  "slip_detect": [
+  "generator_slip_test": [
    1.0,
    12,
    12
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    23,
+    23
+   ],
+   "all_other_values_rejected": [
+    27,
+    27
+   ],
+   "wrong_arrangements_rejected": null
+  }
  }
 ]
