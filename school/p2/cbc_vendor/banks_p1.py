@@ -378,11 +378,11 @@ def _shapes(tier):
     def bothq(a): return ["Corners + sides?"], [f"Corners + sides: \u27e6{a}\u27e7"]
     def both_short(a): return ["Corners and sides:", f"{BOX}"], ["Corners and sides:", f"\u27e6{a}\u27e7"]
     def blank(a): return [f"{BOX}"], [f"\u27e6{a}\u27e7"]
-    plan = ((corners_short, "stack"), (corners_short, "row"), (blank, "row"), (blank, "stack")) if tier == 1 else \
+    plan = ((corners2, "stack"), (corners1, "stack"), (corners1, "row"), (cornersq, "stack"), (corners_short, "row"), (blank, "row"), (blank, "stack")) if tier == 1 else \
            ((both2, "stack"), (both1, "stack"), (both1, "row"), (bothq, "stack"), (both_short, "row"), (blank, "row"), (blank, "stack"))
     forms = []
     for words, layout in plan:
-        f = mk(words, layout); f.__name__ = f"{words.__name__}_{layout}"; f.attempts = 40; forms.append(f)
+        f = mk(words, layout); f.__name__ = f"{words.__name__}_{layout}"; forms.append(f)
     return forms
 
 # ------------------------------------------------------------------ multiplication within 40 (equal groups, repeated addition, tables of 2, 3, 4, 5, 10)
@@ -464,7 +464,7 @@ def _share1(tier):
 # ------------------------------------------------------------------ picture graphs (one face is one child, pet or thing), read and compare
 P1_GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
 def _pgraph(tier):
-    PG = dict(pitch=3.6, font=3.5)
+    PG = dict(pitch=5.8, font=3.5)
     def pick(r, n):
         labs = list(_ch(r, P1_GRAPH_SETS)); r.shuffle(labs); return labs[:n]
     def G(rows): return A.picgraph(rows, 1, **PG)
@@ -585,6 +585,6 @@ GALLERY = [
     dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=128),
     dict(id="CBC-11", picture="car",       bank="mult",    tier=2, seed=3),
     dict(id="CBC-12", picture="castle",    bank="share",   tier=1, seed=3),
-    dict(id="CBC-13", picture="rocket",    bank="pgraph",  tier=1, seed=23),
+    dict(id="CBC-13", picture="butterfly", bank="pgraph",  tier=1, seed=11),
     dict(id="CBC-14", picture="sailboat",  bank="ordinal", tier=1, seed=1),
 ]

@@ -84,7 +84,7 @@ def make_sheet(spec, school=""):
         for allow_dup in (False, True):
             forms = sorted(tier.forms, key=lambda f: (-getattr(f, 'pref', 0), use[f.__name__], rng.random()))
             for form in forms:
-                for attempt in range(getattr(form, 'attempts', 6)):
+                for attempt in range(6):
                     q = form(a, rng)
                     if q is None: break
                     sig = canon(q)

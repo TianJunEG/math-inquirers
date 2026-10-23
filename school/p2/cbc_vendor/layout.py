@@ -119,11 +119,7 @@ def render(content, place, colour_line=None):
             w = tok_width(tk, f)
             if kind == "box":
                 side = BOX_SIDE
-                if BOX_SIDE > 7:       # P1-12: a thick write-on line (a box would look like one of the squares being counted)
-                    ly = yc + side / 2 - 0.4
-                    out.append(f'<line class="bx big" data-l="{i}" data-t="{BOX}" x1="{x + (w - side) / 2 - 0.8:.2f}" y1="{ly:.2f}" x2="{x + (w + side) / 2 + 0.8:.2f}" y2="{ly:.2f}" stroke-linecap="round"/>')
-                else:
-                    out.append(f'<rect class="bx" data-l="{i}" data-t="{BOX}" x="{x + (w - side) / 2:.2f}" y="{yc - side / 2 - 0.05:.2f}" width="{side:.2f}" height="{side:.2f}" rx="0.5"/>')
+                out.append(f'<rect class="bx" data-l="{i}" data-t="{BOX}" x="{x + (w - side) / 2:.2f}" y="{yc - side / 2 - 0.05:.2f}" width="{side:.2f}" height="{side:.2f}" rx="0.5"/>')
             elif kind == "frac":
                 ff = f * FRAC_SCALE; mid = x + w / 2; gap = 0.62 * ff
                 out.append(f'<g data-l="{i}" data-t="{html.escape(src, quote=True)}">')

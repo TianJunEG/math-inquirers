@@ -582,7 +582,7 @@
    "id": "L5U01-S13",
    "tier": "start",
    "page": 3,
-   "text": "A stadium has 48 000 seats. On Monday 3 100 people came. On Tuesday twice as many came. On Wednesday 1 250 fewer people came than on Tuesday. How many people came in all? {b} people",
+   "text": "A stadium has 48 000 seats. On Monday 3 100 people came. On Tuesday twice as many came. On Wednesday 1 250 fewer people came than on Tuesday. How many people came in all? {l} people",
    "answer": {
     "value": [
      "14250"
@@ -648,11 +648,6 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
    "hint": "Clues 2 and 3 fix the first 3 digits. Then use Clue 6.",
    "explanation": "Clue 2: from 6 350 000 to 6 449 999, so it starts 6 3 5 or more, or 6 4. Clue 3: the ten-thousands digit is 1 less than the hundred-thousands digit. 6 3 5 does not fit (5 is not 2). So it starts 6 4 3. Digits so far: 6, 4, 3 and 0 (the tens). Clue 6: the other three digits add to 33 - 6 - 4 - 3 - 0 = 20. The thousands digit t and the hundreds digit t + 2: t + (t + 2) + ones = 20. Try t = 5: 5 + 7 = 12, ones = 8. All different: 6, 4, 3, 5, 7, 0, 8. So 6 435 708."
   },
