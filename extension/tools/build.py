@@ -115,7 +115,7 @@ def welcome(book, theme, ctx):
             'and the page of the question. A child who reads slowly may like a helper to read the Why with them. '
             f'The answers start on page {ctx["divider_pg"]}: please ask your child to try first.</li>'
             '<li>Check yourself score 2 or less? Read the Learn it page again and redo one Start here page.</li>'
-            + extra + (f'<li>{pn["colour"]}</li>' if theme == 'colour' else f'<li>{pn["bw"]}</li>') + '</ul></div>'
+            + extra + (f'<li>{pn[theme == "colour" and "colour" or "bw"]}</li>' if pn[theme == "colour" and "colour" or "bw"] else '') + '</ul></div>'
             '<div class="box"><h3>The four page names</h3>' + legend() + '</div>'
             '</div>')
 

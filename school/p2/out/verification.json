@@ -64,18 +64,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -137,18 +126,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -195,18 +173,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -269,18 +236,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    69,
-    69
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 5,
@@ -338,18 +294,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    61,
-    61
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -407,18 +352,7 @@
    1.0,
    2994,
    2994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2994,
-    2994
-   ],
-   "all_other_values_rejected": [
-    2994,
-    2994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -480,18 +414,7 @@
    1.0,
    4314,
    4314
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    4314,
-    4314
-   ],
-   "all_other_values_rejected": [
-    4314,
-    4314
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -549,18 +472,7 @@
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    52,
-    52
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -607,18 +519,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -682,18 +583,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -761,18 +651,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -814,18 +693,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -882,18 +750,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    45,
-    45
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -942,18 +799,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    105,
-    105
-   ],
-   "all_other_values_rejected": [
-    105,
-    105
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1016,18 +862,7 @@
    1.0,
    390,
    390
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    390,
-    390
-   ],
-   "all_other_values_rejected": [
-    390,
-    390
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1085,18 +920,7 @@
    1.0,
    5988,
    5988
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    5988,
-    5988
-   ],
-   "all_other_values_rejected": [
-    5988,
-    5988
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
@@ -1160,18 +984,7 @@
    1.0,
    4495,
    4495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    4495,
-    4495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1234,18 +1047,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1294,18 +1096,7 @@
    1.0,
    360,
    360
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    360,
-    360
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1360,18 +1151,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1414,21 +1194,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 22,
@@ -1485,18 +1251,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    49,
-    49
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1539,21 +1294,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 24,
@@ -1596,21 +1337,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 25,
@@ -1673,18 +1400,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6000,
-    6000
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1742,18 +1458,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    53,
-    53
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1795,18 +1500,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -1844,90 +1538,55 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 29,
   "code": "S2-12 (P2-29)",
-  "title": "Time Taken",
+  "title": "Match the Times",
   "tier": 2,
-  "topic": "Time: finding how long in hours and minutes",
+  "topic": "Time: matching clocks and times to the minute",
   "strand": "Measurement and Geometry - Measurement",
-  "syll": "2.1, 2.2 (telling time to the minute; measuring time in hours and minutes)",
+  "syll": "2.1, 2.2 (telling time to the minute; hours and minutes)",
   "outcomes": [
    "TI2.1",
    "TI2.2"
   ],
-  "ptype": "Code-breaker (start and end times)",
-  "mech": "K1 code word (5 letters)",
+  "ptype": "Matching (lettered clocks)",
+  "mech": "K1 letters of the matching clocks spell a word (6 letters) + K4 each clock used once",
   "seed": 8529,
   "checks": [
    {
-    "name": "V2 code word spells MAIZE",
+    "name": "V1 independent solver (hand end points of each clock read, each printed time matched to exactly one clock) gets the word",
+    "ok": true,
+    "detail": "SHADOW"
+   },
+   {
+    "name": "V1b the six clocks show six different times",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "2095/2095"
+    "detail": ""
    },
    {
-    "name": "V3c no swap of two answers spells a word",
+    "name": "V3 none of the 719 wrong matchings spells a word",
     "ok": true,
     "detail": "[]"
    },
    {
-    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
-    "ok": true,
-    "detail": "['maize']"
-   },
-   {
-    "name": "V4 guess resistance: at least 3 common words fit the table letters",
-    "ok": true,
-    "detail": "['jaime', 'jamie', 'maize']"
-   },
-   {
-    "name": "V1 independent solver (clock hands read from the drawings, digital times parsed) equals the key",
-    "ok": true,
-    "detail": "[(1, 25), (0, 42), (3, 7), (4, 9), (0, 45)]"
-   },
-   {
-    "name": "V7 every time taken is under 5 hours",
+    "name": "V7 no clock has its hands within 45 degrees of each other and no time is within 5 minutes of the hour",
     "ok": true,
     "detail": ""
    }
   ],
   "generator_slip_test": [
    1.0,
-   2095,
-   2095
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2095,
-    2095
-   ],
-   "all_other_values_rejected": [
-    2095,
-    2095
-   ],
-   "wrong_arrangements_rejected": null
-  }
+   719,
+   719
+  ]
  },
  {
   "no": 30,
@@ -1984,27 +1643,16 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    69,
-    69
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 31,
   "code": "S2-13 (P2-31)",
   "title": "Time Detective",
   "tier": 2,
-  "topic": "Time: a timetable, minutes and hours",
+  "topic": "Time: a timetable with hours and minutes",
   "strand": "Measurement and Geometry - Measurement",
-  "syll": "2.1, 2.2, 2.3 (telling time to the minute; measuring time in hours and minutes; converting to minutes)",
+  "syll": "2.1, 2.2, 2.3 (telling time to the minute; hours and minutes; converting hours and minutes to minutes)",
   "outcomes": [
    "TI2.1",
    "TI2.2",
@@ -2022,7 +1670,7 @@
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1800/1800"
+    "detail": "1200/1200"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -2037,35 +1685,29 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['bandit', 'dating', 'fading']"
+    "detail": "['bandit', 'dating', 'taxing']"
    },
    {
     "name": "V1 independent solver (timetable and questions read back from the printed page) equals the key",
     "ok": true,
-    "detail": "[55, 35, 5, 80, 90, 15]"
+    "detail": "[45, 85, 100, 10, 2, 25]"
    },
    {
-    "name": "V7 six different lessons, all lessons start after 8 am and end before 2 pm",
+    "name": "V7 six different lessons, every lesson starts after 8 am and ends before 5 pm",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7b no question asks for a start or end time to be found from the other two (Primary 3)",
     "ok": true,
     "detail": ""
    }
   ],
   "generator_slip_test": [
    1.0,
-   1800,
-   1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+   1200,
+   1200
+  ]
  },
  {
   "no": 32,
@@ -2112,18 +1754,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
@@ -2170,18 +1801,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
@@ -2223,18 +1843,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 35,
@@ -2291,18 +1900,7 @@
    1.0,
    75,
    75
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    45,
-    45
-   ],
-   "all_other_values_rejected": [
-    75,
-    75
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 36,
@@ -2364,18 +1962,7 @@
    1.0,
    1200,
    1200
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    1200,
-    1200
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 37,
@@ -2437,18 +2024,7 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 38,
@@ -2528,18 +2104,7 @@
    1.0,
    15000,
    15000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    180,
-    180
-   ],
-   "all_other_values_rejected": [
-    15000,
-    15000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 39,
@@ -2620,35 +2185,25 @@
    1.0,
    1700,
    1700
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    204,
-    204
-   ],
-   "all_other_values_rejected": [
-    1700,
-    1700
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 40,
   "code": "S2-20 (P2-40)",
   "title": "Colour the Butterfly",
   "tier": 2,
-  "topic": "Time: hours, minutes and how long",
-  "strand": "Measurement and Geometry - Measurement",
-  "syll": "2.2, 2.3 (measuring time in hours and minutes; converting hours and minutes to minutes only)",
+  "topic": "Money: cents and dollars, decimal notation",
+  "strand": "Number and Algebra - Money",
+  "syll": "1.1, 1.2, 1.3, 1.4 (counting money in dollars and cents; decimal notation; comparing amounts; converting decimal notation to cents)",
   "outcomes": [
-   "TI2.1",
-   "TI2.2",
-   "TI2.3"
+   "MO1.1",
+   "MO1.2",
+   "MO1.3",
+   "MO1.4"
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
-  "seed": 308,
+  "seed": 311,
   "checks": [
    {
     "name": "V1 every question has exactly one answer in the bank's domain",
@@ -2668,7 +2223,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 2, 'red': 4, 'blue': 4, 'green': 2, 'orange': 2}"
+    "detail": "{'yellow': 2, 'red': 4, 'blue': 2, 'green': 2, 'orange': 4}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -2693,7 +2248,7 @@
    {
     "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
-    "detail": "8400/8400"
+    "detail": "28000/28000"
    },
    {
     "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
@@ -2708,19 +2263,8 @@
   ],
   "generator_slip_test": [
    1.0,
-   8400,
-   8400
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    168,
-    168
-   ],
-   "all_other_values_rejected": [
-    8400,
-    8400
-   ],
-   "wrong_arrangements_rejected": null
-  }
+   28000,
+   28000
+  ]
  }
 ]

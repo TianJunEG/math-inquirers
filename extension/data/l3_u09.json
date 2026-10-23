@@ -355,7 +355,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "They cost ${b} in all.",
+     "text": "They cost ${bw} in all.",
      "answer": {
       "value": [
        "4.05"
@@ -365,7 +365,7 @@
     },
     {
      "label": "b",
-     "text": "Her change is ${b}.",
+     "text": "Her change is ${bw}.",
      "answer": {
       "value": [
        "0.95"
@@ -384,7 +384,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "They cost ${b} in all.",
+     "text": "They cost ${bw} in all.",
      "answer": {
       "value": [
        "14.45"
@@ -394,7 +394,7 @@
     },
     {
      "label": "b",
-     "text": "Her change is ${b}.",
+     "text": "Her change is ${bw}.",
      "answer": {
       "value": [
        "5.55"
@@ -441,14 +441,14 @@
    "id": "L3U09-S08",
    "tier": "start",
    "page": 2,
-   "text": "A box with 6 books weighs 2 kg 250 g. The empty box weighs 450 g. All the books have the same mass. One book weighs {b} g.",
+   "text": "3 melons with the same mass weigh 2 kg 400 g. An apple weighs 150 g. 1 melon and 2 apples weigh {b} g.",
    "answer": {
     "value": [
-     "300"
+     "1100"
     ],
-    "text": "300"
+    "text": "1100"
    },
-   "explanation": "2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g.",
+   "explanation": "2 kg 400 g = 2400 g. 1 melon: 2400 ÷ 3 = 800 g. 2 apples: 2 × 150 = 300 g. Together: 800 + 300 = 1100 g.",
    "space": {
     "rows": [
      "Working:"
@@ -463,7 +463,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "6:15 am = {b}",
+     "text": "6:15 am = {bw}",
      "answer": {
       "value": [
        "06:15"
@@ -473,7 +473,7 @@
     },
     {
      "label": "b",
-     "text": "1:40 pm = {b}",
+     "text": "1:40 pm = {bw}",
      "answer": {
       "value": [
        "13:40"
@@ -483,7 +483,7 @@
     },
     {
      "label": "c",
-     "text": "9:05 pm = {b}",
+     "text": "9:05 pm = {bw}",
      "answer": {
       "value": [
        "21:05"
@@ -493,7 +493,7 @@
     },
     {
      "label": "d",
-     "text": "16:50 = {b} pm",
+     "text": "16:50 = {bw} pm",
      "answer": {
       "value": [
        "4:50"
@@ -503,7 +503,7 @@
     },
     {
      "label": "e",
-     "text": "20:25 = {b} pm",
+     "text": "20:25 = {bw} pm",
      "answer": {
       "value": [
        "8:25"
@@ -535,7 +535,7 @@
     },
     {
      "label": "b",
-     "text": "Ben’s class starts at 3:40 pm and lasts 55 minutes. It ends at {b}.",
+     "text": "Ben’s class starts at 3:40 pm and lasts 55 minutes. It ends at {bw}.",
      "answer": {
       "value": [
        "4:35 pm"
@@ -545,7 +545,7 @@
     },
     {
      "label": "c",
-     "text": "A show ends at 8:15 pm. It is 1 h 45 min long. It starts at {b}.",
+     "text": "A show ends at 8:15 pm. It is 1 h 45 min long. It starts at {bw}.",
      "answer": {
       "value": [
        "6:30 pm"
@@ -569,7 +569,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "A: {b}",
+     "text": "A: {bw}",
      "answer": {
       "value": [
        "4:10"
@@ -579,7 +579,7 @@
     },
     {
      "label": "b",
-     "text": "B: {b}",
+     "text": "B: {bw}",
      "answer": {
       "value": [
        "7:45"
@@ -589,7 +589,7 @@
     },
     {
      "label": "c",
-     "text": "C: {b}",
+     "text": "C: {bw}",
      "answer": {
       "value": [
        "11:25"
@@ -631,7 +631,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The stamps cost ${b}.",
+     "text": "The stamps cost ${bw}.",
      "answer": {
       "value": [
        "5.20"
@@ -641,7 +641,7 @@
     },
     {
      "label": "b",
-     "text": "He pays with a $10 note. His change is ${b}.",
+     "text": "He pays with a $10 note. His change is ${bw}.",
      "answer": {
       "value": [
        "4.80"
@@ -656,19 +656,19 @@
    "id": "L3U09-T01",
    "tier": "think",
    "page": 4,
-   "text": "The buses leave the interchange every 20 minutes, starting at 06:50. The ride takes 25 minutes. Mei must reach school by 08:15. When does the latest bus she can take leave? {b}",
+   "text": "A pool has 4 swimming lessons in a row. Each lesson is 45 minutes. There is a 10 minute break between lessons. The first lesson starts at 07:30. When does the 4th lesson end? {bw}",
    "answer": {
     "value": [
-     "07:50"
+     "11:00"
     ],
-    "text": "07:50"
+    "text": "11:00"
    },
-   "explanation": "Mei must leave by 08:15 - 25 min = 07:50. The buses leave at 06:50, 07:10, 07:30, 07:50, 08:10. The latest bus that gets her to school in time is the 07:50 bus.",
-   "hint": "Find the latest leaving time first: 08:15 minus 25 minutes.",
+   "explanation": "Lesson 1: 07:30 to 08:15. Break. Lesson 2: 08:25 to 09:10. Break. Lesson 3: 09:20 to 10:05. Break. Lesson 4: 10:15 to 11:00. The 4th lesson ends at 11:00.",
+   "hint": "Write the start and the end of each lesson.",
    "space": {
     "rows": [
-     "Bus times: 06:50,",
-     "",
+     "Lesson 1:",
+     "Lesson 2:",
      ""
     ]
    }
@@ -677,21 +677,20 @@
    "id": "L3U09-T02",
    "tier": "think",
    "page": 4,
-   "text": "A night bus leaves at 22:50 and arrives at 02:10 the next day. How long is the trip? {b} h {b} min",
+   "text": "Ali starts his homework at 18:35 and stops at 20:10. He has a 15 minute break. How long does he work? {b} h {b} min",
    "answer": {
     "value": [
-     "3",
+     "1",
      "20"
     ],
-    "text": "3 h 20 min",
+    "text": "1 h 20 min",
     "list": true
    },
-   "explanation": "From 22:50 to 24:00 (midnight) is 1 h 10 min. From midnight to 02:10 is 2 h 10 min. 1 h 10 min + 2 h 10 min = 3 h 20 min.",
-   "hint": "Jump to midnight first. Then jump to 02:10.",
+   "explanation": "From 18:35 to 19:00 is 25 min. From 19:00 to 20:00 is 1 h. From 20:00 to 20:10 is 10 min. The whole time is 1 h 35 min. Take away the 15 min break: 1 h 20 min.",
+   "hint": "Find the whole time first. Then take away the break.",
    "space": {
     "rows": [
      "Time line:",
-     "",
      ""
     ]
    }
@@ -704,7 +703,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "A pen costs ${b}.",
+     "text": "A pen costs ${bw}.",
      "answer": {
       "value": [
        "1.20"
@@ -714,7 +713,7 @@
     },
     {
      "label": "b",
-     "text": "A notebook costs ${b}.",
+     "text": "A notebook costs ${bw}.",
      "answer": {
       "value": [
        "2.70"
@@ -724,7 +723,7 @@
     }
    ],
    "explanation": "The 2 notebooks cost $3 more than 2 pens in all (2 × $1.50). Take that away: $9 - $3 = $6 for 5 pens. One pen costs $6 ÷ 5 = $1.20. A notebook costs $1.20 + $1.50 = $2.70. Check: 2 × 2.70 + 3 × 1.20 = 5.40 + 3.60 = 9.00.",
-   "hint": "Take away the extra $1.50 for each notebook first.",
+   "hint": "How much more do 2 notebooks cost than 2 pens?",
    "space": {
     "rows": [
      "Working:",
@@ -737,7 +736,8 @@
    "id": "L3U09-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: A water puzzle.\nYou have a 3 ℓ jug, a 5 ℓ jug and a tap. The jugs have no marks. You want exactly 4 ℓ.",
+   "beyond": "A water puzzle",
+   "text": "You have a 3 ℓ jug, a 5 ℓ jug and a tap. The jugs have no marks. You want exactly 4 ℓ.",
    "parts": [
     {
      "label": "a",
@@ -771,7 +771,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Her watch shows 4:20 pm. The real time is {b}.",
+     "text": "Her watch shows 4:20 pm. The real time is {bw}.",
      "answer": {
       "value": [
        "4:28 pm"
@@ -781,7 +781,7 @@
     },
     {
      "label": "b",
-     "text": "A film starts at 4:45 pm. When it starts, her watch shows {b}.",
+     "text": "A film starts at 4:45 pm. When it starts, her watch shows {bw}.",
      "answer": {
       "value": [
        "4:37 pm"
@@ -818,15 +818,15 @@
    "id": "L3U09-G04",
    "tier": "go",
    "page": 5,
-   "text": "A film lasts 1 h 55 min. It ends at 00:20, just after midnight. At what time did it start? Write it in 24-hour time. {b}",
+   "text": "A night shift starts at 22:30 and lasts 8 h 45 min. At what time does it end? Write it in 24-hour time. {bw}",
    "answer": {
     "value": [
-     "22:25"
+     "07:15"
     ],
-    "text": "22:25"
+    "text": "07:15"
    },
-   "explanation": "From 00:20 go back 20 min to midnight (24:00). 1 h 55 min - 20 min = 1 h 35 min is left. 24:00 - 1 h 35 min = 22:25. Check: 22:25 + 1 h 55 min = 00:20.",
-   "hint": "Go back to midnight first. Then go back the rest.",
+   "explanation": "From 22:30 to 24:00 (midnight) is 1 h 30 min. The rest of the shift is 8 h 45 min - 1 h 30 min = 7 h 15 min after midnight. So it ends at 07:15. Check: 22:30 + 8 h = 06:30, and 45 min more is 07:15.",
+   "hint": "How long is it from 22:30 to midnight?",
    "space": {
     "rows": [
      "Time line:"
@@ -863,22 +863,22 @@
    "id": "L3U09-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "A film starts at 6:45 pm and ends at 8:10 pm. It lasts {b} h {b} min.",
+   "text": "A bus trip starts at 9:40 am and ends at 11:10 am. It lasts {b} h {b} min.",
    "answer": {
     "value": [
      "1",
-     "25"
+     "30"
     ],
-    "text": "1 h 25 min",
+    "text": "1 h 30 min",
     "list": true
    },
-   "explanation": "6:45 to 7:00 is 15 min. 7:00 to 8:00 is 1 h. 8:00 to 8:10 is 10 min. In all: 1 h 25 min."
+   "explanation": "9:40 to 10:00 is 20 min. 10:00 to 11:00 is 1 h. 11:00 to 11:10 is 10 min. In all: 1 h 30 min."
   },
   {
    "id": "L3U09-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "Kumar buys a snack for $2.35. He pays with a $5 note. His change is ${b}.",
+   "text": "Kumar buys a snack for $2.35. He pays with a $5 note. His change is ${bw}.",
    "answer": {
     "value": [
      "2.65"

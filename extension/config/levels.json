@@ -100,8 +100,8 @@
     10
    ],
    "welcome_print_note": {
-    "colour": "Printing this soft copy? Print at 100 percent so the figures stay the right size.",
-    "bw": "The figures are printed at their real size."
+    "colour": "",
+    "bw": ""
    },
    "welcome_notes": [
     "Beyond Level 2 means ahead of the school year. It is fine to skip these."
@@ -253,8 +253,8 @@
     "Beyond Level 5 means ahead of the school year. It is fine to skip these."
    ],
    "welcome_print_note": {
-    "colour": "Printing this soft copy? Print at 100 percent so the figures stay the right size.",
-    "bw": "The figures are printed at their real size."
+    "colour": "",
+    "bw": ""
    }
   },
   "6": {
@@ -302,8 +302,8 @@
     "Beyond Level 6 means ahead of the school year. It is fine to skip these."
    ],
    "welcome_print_note": {
-    "colour": "Printing this soft copy? Print at 100 percent so the figures stay the right size.",
-    "bw": "The figures are printed at their real size."
+    "colour": "",
+    "bw": ""
    }
   }
  }

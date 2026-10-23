@@ -100,9 +100,9 @@ def _():
 
 @check('L3U09-S08')
 def _():
-    total = 2 * 1000 + 250
-    books = total - 450
-    return s([only(g for g in range(1, 2000) if 6 * g == books)])
+    melons = 2 * 1000 + 400
+    melon = only(g for g in range(1, 3000) if 3 * g == melons)
+    return s([melon + 2 * 150])
 
 
 @check('L3U09-S09')
@@ -139,17 +139,17 @@ def _():
 
 @check('L3U09-T01')
 def _():
-    first, gap, ride, must = mins(6, 50), 20, 25, mins(8, 15)
-    times = [first + gap * k for k in range(0, 10)]
-    ok = [t for t in times if t + ride <= must]
-    return [hhmm(max(ok))]
+    t = mins(7, 30)
+    for k in range(4):
+        end = t + 45
+        t = end + 10      # the next lesson starts after the break
+    return [hhmm(end)]
 
 
 @check('L3U09-T02')
 def _():
-    start = mins(22, 50)
-    arrive = mins(2, 10) + 1440
-    return s(divmod(arrive - start, 60))
+    whole = mins(20, 10) - mins(18, 35)
+    return s(divmod(whole - 15, 60))
 
 
 @check('L3U09-T03')
@@ -192,8 +192,7 @@ def _():
 
 @check('L3U09-G04')
 def _():
-    start = (0 * 60 + 20) - (60 + 55)
-    return [hhmm(start)]
+    return [hhmm(mins(22, 30) + 8 * 60 + 45)]
 
 
 @check('L3U09-C01')
@@ -208,7 +207,7 @@ def _():
 
 @check('L3U09-C03')
 def _():
-    return s(divmod(mins(8, 10, True) - mins(6, 45, True), 60))
+    return s(divmod(mins(11, 10, False) - mins(9, 40, False), 60))
 
 
 @check('L3U09-C04')
