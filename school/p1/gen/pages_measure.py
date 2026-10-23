@@ -146,44 +146,52 @@ def page16():
 # ---------------------------------------------------------------- P17
 RULER_CM = 12
 
-def ruler_unit(L):
-    """strip of length L cm over a ruler 0..12 cm; scale 10 mm per cm. The ruler body extends 4.5 mm past 0 and 12
-    so the labels 0 and 12 are not crossed by the ruler's border."""
-    x0 = 5; p = []
-    p.append(f'<rect class="strip" x="{x0}" y="0.5" width="{L*10}" height="5.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+def ruler_unit(L, start=0):
+    """strip of length L cm lying on a ruler 0..12 cm from the arrow at `start`; scale 10 mm per cm. A bold arrow above the left end of the strip and a bold
+    tick on the ruler show where it starts. The ruler body extends 4.5 mm past 0 and 12 so the labels 0 and 12 are not crossed by the ruler's border."""
+    x0 = 5; p = []; xs = x0 + start * 10
+    p.append(f'<polygon class="arrow" points="{xs-2.2},0.5 {xs+2.2},0.5 {xs},4.4" fill="#000"/>')
+    p.append(f'<rect class="strip" x="{xs}" y="4.8" width="{L*10}" height="5.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(0, L * 10, 3):
-        p.append(f'<line x1="{x0+k}" y1="6" x2="{x0+min(k+3, L*10)}" y2="0.5" stroke="#000" stroke-width="0.25"/>')
-    p.append(f'<rect x="0.5" y="7" width="{RULER_CM*10 + 2*x0 - 1}" height="8.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+        p.append(f'<line x1="{xs+k}" y1="10.3" x2="{xs+min(k+3, L*10)}" y2="4.8" stroke="#000" stroke-width="0.25"/>')
+    p.append(f'<rect x="0.5" y="11.3" width="{RULER_CM*10 + 2*x0 - 1}" height="8.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(RULER_CM * 10 + 1):
         h = 4.2 if k % 10 == 0 else (2.8 if k % 5 == 0 else 1.3)
-        p.append(f'<line x1="{x0+k}" y1="7" x2="{x0+k}" y2="{7+h}" stroke="#000" stroke-width="{0.45 if k%10==0 else 0.3}"/>')
+        bold = k == start * 10
+        p.append(f'<line x1="{x0+k}" y1="11.3" x2="{x0+k}" y2="{11.3+h+(1.5 if bold else 0)}" stroke="#000" stroke-width="{1.1 if bold else (0.45 if k%10==0 else 0.3)}"/>')
     for k in range(RULER_CM + 1):
-        p.append(f'<text x="{x0+k*10}" y="14.4" text-anchor="middle" font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{k}</text>')
-    return svg(RULER_CM * 10 + 2 * x0, 16, "".join(p))
+        p.append(f'<text x="{x0+k*10}" y="18.7" text-anchor="middle" font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{k}</text>')
+    return svg(RULER_CM * 10 + 2 * x0, 20.5, "".join(p))
 
 def page17():
     rng = random.Random(1717)
     word = "LENGTH"
     while True:
-        L = rng.sample(range(2, 12), 6)
+        L = rng.sample(range(2, 11), 6)
+        zero = set(rng.sample(range(6), 2))                                   # two strips start at 0; the other four start at 1, 2, 3 or 4
+        starts = [0 if i in zero else rng.randint(1, min(4, 12 - L[i])) for i in range(6)]
+        if sorted(starts)[2] == 0 or len(set(starts[i] for i in range(6) if i not in zero)) < 2: continue
         table = make_code_table(L, word, rng, 1, 12, n_decoy=4, near=(1, -1, 2, -2), tries=200)
         if table: break
-    svgs = [ruler_unit(x) for x in L]
+    svgs = [ruler_unit(x, st) for x, st in zip(L, starts)]
     rows = "".join(f'<div class="lrow"><span class="no">{i+1}</span><div class="lsvg">{s}</div><span class="ab"></span> <span class="unit">cm</span></div>' for i, s in enumerate(svgs))
     body = f'<div class="lrows">{rows}</div>{code_block(table)}'
     P = Page(no=17, title="How Long?", tier=1, topic="Length: measure in centimetres",
              strand="Measurement and Geometry - Measurement", syll="Length 1.1, 1.2 (measure in cm, abbreviation cm)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
-             instr=["Each strip starts at 0 on its ruler.", "Write how long it is in cm.", "Use the code table."],
+             instr=["Each strip starts at the arrow.", "Count the cm to the other end.", "Write the length. Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {x} cm" for i, x in enumerate(L)), check_result=f"Code word: {word}"),
-             note="A ruler is drawn under each strip at 10 mm to 1 cm. If the page is copied at a different scale the strip and ruler change together, so the reading from the drawn ruler stays right, but a real ruler laid on the page will not match: print at 100% (actual size) if pupils will use a real ruler. All strips start at 0 and are whole numbers of cm.",
+             note="A ruler is drawn under each strip at 10 mm to 1 cm. If the page is copied at a different scale the strip and ruler change together, so the reading from the drawn ruler stays right, but a real ruler laid on the page will not match: print at 100% (actual size) if pupils will use a real ruler. Two strips start at 0 and four start at 1 to 4 on the ruler; a bold arrow and a bold tick show the start. The Primary 1 length outcomes list measuring in cm and do not list measuring from a mark other than 0, so the offset strips are a small extension: the pupil counts the cm from the arrow to the end of the strip. Every length is a whole number of cm.",
              seed=1717)
     meas = []
     for s in svgs:
         w = float(re.search(r'class="strip"[^>]*? width="([\d.]+)"', s).group(1))
         meas.append(round(w / 10))
     P.v("V1 strip widths read against the 10 mm/cm scale equal the key", meas == L, meas)
+    def _start(s_): return (float(re.search(r'class="strip" x="([\d.]+)"', s_).group(1)) - 5) / 10
+    ar = [(float(re.search(r'class="arrow" points="([\d.]+),', s_).group(1)) + 2.2 - 5) / 10 for s_ in svgs]
+    P.v("V1c every strip starts at its arrow (read from the drawing); two start at 0, four start at 1 to 4 and every strip ends on the ruler", [round(_start(s_)) for s_ in svgs] == starts == [round(a_) for a_ in ar] and starts.count(0) == 2 and max(st + x for st, x in zip(starts, L)) <= 12, starts)
     cv = code_verify(L, table, word, 1, 12)
     code_checks(P, cv, word)
     P["cv"] = cv
