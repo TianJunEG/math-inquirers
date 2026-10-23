@@ -18,7 +18,7 @@
       "Guess and check with a table of tries; make equal by sharing out (Primary 1 school papers use both)",
       "Beyond Primary 1 on purpose: solve one problem two ways and say why the two answers agree (Two Roads, One Answer), with 3 times as many and a total"
     ],
-    "note": "Strand label for the tutor only. Every tool in this lesson was met earlier in the year (strips in Lessons 12 and 18, find one first in 20, list in 26 and 36, table in 28, check another way in 29, work backwards and one step at a time in 10, draw it from Lesson 4 on), and the syllabus pages we hold name no list of heuristics, so this lesson teaches the seven tools itself (decision D10): no earlier lesson has a toolbox page. Start here names the tool every time and stays within 100. At Think harder the tool is not named. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: choosing the tool, a guess-and-check table, make equal two ways, and Two Roads, One Answer: Jo has 3 times as many stickers as Kit and they have 36 in all, solved with a strip and checked with a table of tries (a bar model with times as many is used from Primary 2 and later at school; Lesson 18 met it at Go further, the new part here is checking by a second method). Named puzzle: Two Roads, One Answer. Non-routine types (tutor only): work backwards with the tool not named (T2), draw it (T3), guess and check or a table of tries (T4), make equal (G2), table or work backwards for the day of a pattern (G3). Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always a child or a child in another class, never a cast name."
+    "note": "Strand label for the tutor only. Every tool in this lesson was met earlier in the year (strips in Lessons 12 and 18, find one first in 20, list in 26 and 36, table in 28, check another way in 29, work backwards and one step at a time in 10, draw it from Lesson 4 on), and the syllabus pages we hold name no list of heuristics, so this lesson teaches the seven tools itself (decision D10): no earlier lesson has a toolbox page. Start here names the tool every time and stays within 100. At Think harder the tool is not named. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: choosing the tool, a guess-and-check table, make equal two ways, and Two Roads, One Answer: Jenny has 3 times as many stickers as Jason and they have 36 in all, solved with a strip and checked with a table of tries (a bar model with times as many is used from Primary 2 and later at school; Lesson 18 met it at Go further, the new part here is checking by a second method). Named puzzle: Two Roads, One Answer. Non-routine types (tutor only): work backwards with the tool not named (T2), draw it (T3), guess and check or a table of tries (T4), make equal (G2), table or work backwards for the day of a pattern (G3). Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always a child or a child in another class, never a cast name."
   },
   "contest_moves": [
     "choose the tool that fits (strip, table, list, draw, work backwards, find one first, steps) and say why",
@@ -424,8 +424,8 @@
               ""
             ]
           ],
-          "cell_h": 84,
-          "font": 30,
+          "cell_h": 96,
+          "font": 24,
           "size": 100
         },
         {
@@ -628,7 +628,7 @@
                 "icon": "t_strip"
               },
               "Strip",
-              "Compare two amounts, or find a total."
+              "Compare, or find a total."
             ],
             [
               {
@@ -697,12 +697,12 @@
           "mode": "compare",
           "bars": [
             {
-              "name": "Pip",
+              "name": "Jamie",
               "len": 14,
               "text": "14"
             },
             {
-              "name": "Rae",
+              "name": "Lily",
               "len": 8,
               "text": "?"
             }
@@ -718,16 +718,16 @@
         },
         {
           "t": "chip",
-          "text": "Pip has 14 cards. Rae has 6 fewer cards than Pip. How many cards do they have in all?"
+          "text": "Jamie has 14 cards. Lily has 6 fewer cards than Jamie. How many cards do they have in all?"
         }
       ],
-      "note": "Worked example, strip. Pip has 14 cards. Rae has 6 fewer cards than Pip. Children work out how many cards Rae has and then how many cards in all, on their own paper. Ask: how many cards does Rae have (8); how many in all (22). The answer is on the next slide. Say: draw the long strip first, then a shorter one, and the gap is the 6 fewer. A child who answers 20 has added 14 and 6: the 6 is how many fewer, not how many cards. Check: 14 take away 8 is 6."
+      "note": "Worked example, strip. Jamie has 14 cards. Lily has 6 fewer cards than Jamie. Children work out how many cards Lily has and then how many cards in all, on their own paper. Ask: how many cards does Lily have (8); how many in all (22). The answer is on the next slide. Say: draw the long strip first, then a shorter one, and the gap is the 6 fewer. A child who answers 20 has added 14 and 6: the 6 is how many fewer, not how many cards. Check: 14 take away 8 is 6."
     },
     {
       "id": "s-m2-ans",
       "part": "mini",
       "kind": "light",
-      "title": "Rae has 8 cards, 22 in all",
+      "title": "Lily has 8 cards, 22 in all",
       "blocks": [
         {
           "t": "visual",
@@ -735,12 +735,12 @@
           "mode": "compare",
           "bars": [
             {
-              "name": "Pip",
+              "name": "Jamie",
               "len": 14,
               "text": "14"
             },
             {
-              "name": "Rae",
+              "name": "Lily",
               "len": 8,
               "text": "8"
             }
@@ -760,10 +760,10 @@
         },
         {
           "t": "answer",
-          "text": "14 take away 6 is 8 cards for Rae. 14 + 8 = 22 cards in all."
+          "text": "14 take away 6 is 8 cards for Lily. 14 + 8 = 22 cards in all."
         }
       ],
-      "note": "The answer for the example on the slide before. Rae: 14 take away 6 is 8. In all: 14 and 8 make 22. Read it aloud so that children can tick their own work. Say: the strip showed us the 6 fewer, so we knew to take 6 away."
+      "note": "The answer for the example on the slide before. Lily: 14 take away 6 is 8. In all: 14 and 8 make 22. Read it aloud so that children can tick their own work. Say: the strip showed us the 6 fewer, so we knew to take 6 away."
     },
     {
       "id": "s-m3",
@@ -921,12 +921,12 @@
           "mode": "compare",
           "bars": [
             {
-              "name": "Rae",
+              "name": "Wei",
               "len": 1,
               "text": "?"
             },
             {
-              "name": "Pip",
+              "name": "Amelia",
               "len": 2,
               "text": "?"
             }
@@ -939,10 +939,10 @@
         },
         {
           "t": "chip",
-          "text": "Pip has twice as many marbles as Rae. They have 18 marbles in all. How many marbles does Rae have?"
+          "text": "Amelia has twice as many marbles as Wei. They have 18 marbles in all. How many marbles does Wei have?"
         }
       ],
-      "note": "Worked example, two roads. Pip has twice as many marbles as Rae and they have 18 marbles in all. Road 1: the strip. Rae has 1 part and Pip has 2 parts, so there are 3 equal parts, and 18 shared into 3 parts is 6 marbles for Rae. Children work out how many marbles Rae has on their own paper. Ask: how many marbles does Rae have (6). The answer is on the next slide, with a second road: a table of tries. Say: twice as many is a Primary 2 and later idea at school; we try it because the strip shows it. A child who writes 9 has shared 18 into 2 equal parts: ask, how many parts does Pip have?"
+      "note": "Worked example, two roads. Amelia has twice as many marbles as Wei and they have 18 marbles in all. Road 1: the strip. Wei has 1 part and Amelia has 2 parts, so there are 3 equal parts, and 18 shared into 3 parts is 6 marbles for Wei. Children work out how many marbles Wei has on their own paper. Ask: how many marbles does Wei have (6). The answer is on the next slide, with a second road: a table of tries. Say: twice as many is a Primary 2 and later idea at school; we try it because the strip shows it. A child who writes 9 has shared 18 into 2 equal parts: ask, how many parts does Amelia have?"
     },
     {
       "id": "s-m5-ans",
@@ -954,8 +954,8 @@
           "t": "visual",
           "type": "table",
           "head": [
-            "Rae",
-            "Pip",
+            "Wei",
+            "Amelia",
             "In all"
           ],
           "rows": [
@@ -981,10 +981,10 @@
         },
         {
           "t": "answer",
-          "text": "Road 1, the strip: 3 equal parts, 18 shared into 3 is 6. Road 2, the table: Rae 6 and Pip 12 make 18. Both roads say Rae has 6 marbles."
+          "text": "Road 1, the strip: 3 equal parts, 18 shared into 3 is 6. Road 2, the table: Wei 6 and Amelia 12 make 18. Both roads say Wei has 6 marbles."
         }
       ],
-      "note": "The answer for the example on the slide before. Road 1, the strip: 3 equal parts, so Rae has 6 and Pip has 12. Road 2, a table of tries: try Rae 4 (Pip 8, in all 12, too few), Rae 5 (Pip 10, in all 15, still too few), Rae 6 (Pip 12, in all 18, just right). Both roads agree. Ask: why do the two roads agree (they use the same story, so a right answer must fit every part of it). Say: when two tools agree, we can trust the answer. A child who tries numbers at random is guessing; a table of tries goes up in order and gets closer."
+      "note": "The answer for the example on the slide before. Road 1, the strip: 3 equal parts, so Wei has 6 and Amelia has 12. Road 2, a table of tries: try Wei 4 (Amelia 8, in all 12, too few), Wei 5 (Amelia 10, in all 15, still too few), Wei 6 (Amelia 12, in all 18, just right). Both roads agree. Ask: why do the two roads agree (they use the same story, so a right answer must fit every part of it). Say: when two tools agree, we can trust the answer. A child who tries numbers at random is guessing; a table of tries goes up in order and gets closer."
     },
     {
       "id": "s-break",
@@ -1134,9 +1134,9 @@
           "t": "card",
           "head": "A CHILD IN ANOTHER CLASS SAYS",
           "items": [
-            "Pip has twice as many marbles as Rae.",
+            "Amelia has twice as many marbles as Wei.",
             "They have 24 marbles in all.",
-            "24 shared into 2 is 12, so Rae has 12 marbles."
+            "24 shared into 2 is 12, so Wei has 12 marbles."
           ]
         },
         {
@@ -1148,7 +1148,7 @@
           "text": "I think ... because ..."
         }
       ],
-      "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. Check forwards: if Rae has 12 then Pip has twice as many, 24, and together they have 36, not 24. Check with a strip: Rae has 1 part and Pip has 2 parts, so there are 3 equal parts, and 24 shared into 3 is 8. Rae has 8 and Pip has 16. The child shared into 2 parts but there are 3. Link to the mini-lesson: two roads, one answer. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. Check forwards: if Wei has 12 then Amelia has twice as many, 24, and together they have 36, not 24. Check with a strip: Wei has 1 part and Amelia has 2 parts, so there are 3 equal parts, and 24 shared into 3 is 8. Wei has 8 and Amelia has 16. The child shared into 2 parts but there are 3. Link to the mini-lesson: two roads, one answer. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
     },
     {
       "id": "s-sneakans",
@@ -1655,11 +1655,11 @@
           },
           {
             "k": "SAY",
-            "text": "A strip. Pip has fourteen cards. Rae has six fewer cards than Pip."
+            "text": "A strip. Jamie has fourteen cards. Lily has six fewer cards than Jamie."
           },
           {
             "k": "ASK",
-            "text": "How many cards does Rae have? How many cards do they have in all?",
+            "text": "How many cards does Lily have? How many cards do they have in all?",
             "resp": 70
           },
           {
@@ -1669,7 +1669,7 @@
           },
           {
             "k": "SAY",
-            "text": "Fourteen take away six is eight cards for Rae. Fourteen and eight make twenty-two cards in all. The strip showed us the six fewer."
+            "text": "Fourteen take away six is eight cards for Lily. Fourteen and eight make twenty-two cards in all. The strip showed us the six fewer."
           },
           {
             "k": "SLIDE",
@@ -1724,11 +1724,11 @@
           },
           {
             "k": "SAY",
-            "text": "Two roads, one answer. Pip has twice as many marbles as Rae. They have eighteen marbles in all."
+            "text": "Two roads, one answer. Amelia has twice as many marbles as Wei. They have eighteen marbles in all."
           },
           {
             "k": "ASK",
-            "text": "How many marbles does Rae have? Use the strip.",
+            "text": "How many marbles does Wei have? Use the strip.",
             "resp": 90
           },
           {
@@ -1751,7 +1751,7 @@
           },
           {
             "k": "STUCK",
-            "text": "If a child writes 20 for Rae's cards, say the 6 is how many fewer, not how many cards. If a child writes 21 for the table, check how many steps of 3: from the 1st path to the 7th path there are 6 steps. If a child writes 25 for working backwards, say: undo the add with a take away. If a child writes 9 for Rae's marbles, ask: how many parts does Pip have?"
+            "text": "If a child writes 20 for Lily's cards, say the 6 is how many fewer, not how many cards. If a child writes 21 for the table, check how many steps of 3: from the 1st path to the 7th path there are 6 steps. If a child writes 25 for working backwards, say: undo the add with a take away. If a child writes 9 for Wei's marbles, ask: how many parts does Pip have?"
           },
           {
             "k": "NOTE",
@@ -1886,7 +1886,7 @@
           },
           {
             "k": "READ",
-            "text": "A child in another class says: Pip has twice as many marbles as Rae. They have twenty-four marbles in all. Twenty-four shared into two is twelve, so Rae has twelve marbles. Do you agree? How could we check a second way?"
+            "text": "A child in another class says: Amelia has twice as many marbles as Wei. They have twenty-four marbles in all. Twenty-four shared into two is twelve, so Wei has twelve marbles. Do you agree? How could we check a second way?"
           },
           {
             "k": "WORK",
@@ -1919,7 +1919,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Model answer: no, we do not agree. Check forwards: if Rae has twelve, Pip has twenty-four, and together they have thirty-six, not twenty-four. Check with a strip: Rae has one part and Pip has two parts, so there are three equal parts, and twenty-four shared into three is eight: Rae has eight and Pip has sixteen. The child shared into two parts but there are three. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+            "text": "Model answer: no, we do not agree. Check forwards: if Wei has twelve, Amelia has twenty-four, and together they have thirty-six, not twenty-four. Check with a strip: Wei has one part and Amelia has two parts, so there are three equal parts, and twenty-four shared into three is eight: Wei has eight and Amelia has sixteen. The child shared into two parts but there are three. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
           }
         ]
       },
@@ -1941,7 +1941,7 @@
           },
           {
             "k": "READ",
-            "text": "E1. Mei thinks of a number. She adds four and gets fifteen. Circle the tool that fits best: Table, Work backwards or List. E2. Use a strip. Ali has eleven stickers. Mei has four fewer stickers than Ali. Part a: Mei has blank stickers. Part b: they have blank stickers in all. E3. Five buns cost twenty dollars. A child in another class says one bun costs five dollars. Circle True or False."
+            "text": "E1. Mei thinks of a number. She adds four and gets fifteen. Circle the tool that fits best: Table, Work backwards or List. E2. Ali has eleven stickers. Mei has four fewer stickers than Ali. Part a: Mei has blank stickers. Part b: they have blank stickers in all. E3. Five buns cost twenty dollars. A child in another class says one bun costs five dollars. Circle True or False."
           },
           {
             "k": "WORK",
@@ -2488,30 +2488,30 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Jo has 3 times as many stickers as Kit. They have 36 stickers in all. Solve it two ways: a strip and a table of tries.",
+        "text": "Jenny has 3 times as many stickers as Jason. They have 36 stickers in all. Solve it two ways: a strip and a table of tries.",
         "answer": "9 stickers; 27 stickers; Yes",
         "val": [
           9,
           27,
           "Yes"
         ],
-        "hint": "The strip has 4 equal parts. In the table, 36 is between 32 and 40. Try Kit 9.",
-        "solution": "Road 1, the strip: Kit has 1 part and Jo has 3 parts, so there are 4 equal parts. 36 shared into 4 is 9, so Kit has 9 stickers. Road 2, the table: Kit 8 gives 32 in all, and Kit 10 gives 40 in all. Try Kit 9: Jo has 27 and 9 + 27 = 36. Both roads say Kit has 9. Jo has 27.",
+        "hint": "The strip has 4 equal parts. In the table, 36 is between 32 and 40. Try Jason 9.",
+        "solution": "Road 1, the strip: Jason has 1 part and Jenny has 3 parts, so there are 4 equal parts. 36 shared into 4 is 9, so Jason has 9 stickers. Road 2, the table: Jason 8 gives 32 in all, and Jason 10 gives 40 in all. Try Jason 9: Jenny has 27 and 9 + 27 = 36. Both roads say Jason has 9. Jenny has 27.",
         "mistakes": [
-          "Writing 12 for Kit (36 shared into 3 parts).",
+          "Writing 12 for Jason (36 shared into 3 parts).",
           "Trying numbers in a different order and losing track."
         ],
         "mins": 7,
         "parts": [
           {
             "l": "a",
-            "text": "Road 1, the strip: Kit has [] stickers.",
+            "text": "Road 1, the strip: Jason has [] stickers.",
             "ans": "9",
             "val": 9
           },
           {
             "l": "b",
-            "text": "Road 2, the table of tries. Kit 8 and Jo 24 make 32 in all. Kit 10 and Jo 30 make 40 in all. Try Kit 9: Jo has [] stickers.",
+            "text": "Road 2, the table of tries. Jason 8 and Jenny 24 make 32 in all. Jason 10 and Jenny 30 make 40 in all. Try Jason 9: Jenny has [] stickers.",
             "ans": "27",
             "val": 27
           },
@@ -2530,12 +2530,12 @@
           "type": "bar_model",
           "bars": [
             {
-              "name": "Kit",
+              "name": "Jason",
               "len": 1,
               "text": "?"
             },
             {
-              "name": "Jo",
+              "name": "Jenny",
               "len": 3,
               "text": "?"
             }
@@ -2655,9 +2655,9 @@
     }
   },
   "talk": {
-    "question": "A child in another class says: Pip has twice as many marbles as Rae. They have 24 marbles in all. 24 shared into 2 is 12, so Rae has 12 marbles. Do you agree? How could we check a second way?",
+    "question": "A child in another class says: Amelia has twice as many marbles as Wei. They have 24 marbles in all. 24 shared into 2 is 12, so Wei has 12 marbles. Do you agree? How could we check a second way?",
     "starter": "I think ... because ...",
-    "answer": "No. If Rae has 12, then Pip has twice as many, which is 24, and together they have 36, not 24. A strip has 3 equal parts, and 24 shared into 3 is 8, so Rae has 8 and Pip has 16.",
+    "answer": "No. If Wei has 12, then Amelia has twice as many, which is 24, and together they have 36, not 24. A strip has 3 equal parts, and 24 shared into 3 is 8, so Wei has 8 and Amelia has 16.",
     "look_for": "A child who checks forwards (12 and 24 make 36, not 24) or who draws the strip with 3 equal parts. Not just yes or no."
   },
   "exit": [
@@ -2689,7 +2689,7 @@
     },
     {
       "id": "E2",
-      "text": "Use a strip. Ali has 11 stickers. Mei has 4 fewer stickers than Ali.",
+      "text": "Ali has 11 stickers. Mei has 4 fewer stickers than Ali.",
       "parts": [
         {
           "l": "a",
@@ -3163,12 +3163,12 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "Pip has 3 times as many shells as Rae. They have 24 shells in all. How many shells does Rae have?",
+        "q": "Amelia has 3 times as many shells as Wei. They have 24 shells in all. How many shells does Wei have?",
         "hint": "A strip has 4 equal parts.",
         "steps": [
-          "Rae has 1 part and Pip has 3 parts.",
+          "Wei has 1 part and Amelia has 3 parts.",
           "That is 4 equal parts.",
-          "24 shared into 4 is 6 shells for Rae."
+          "24 shared into 4 is 6 shells for Wei."
         ],
         "answer": 6,
         "slips": [
@@ -3176,7 +3176,7 @@
             "a": [
               8
             ],
-            "say": "That shares 24 into 3 parts. Count the parts of Rae and Pip together."
+            "say": "That shares 24 into 3 parts. Count the parts of Wei and Amelia together."
           }
         ],
         "easier": "t1",
@@ -3193,13 +3193,13 @@
           "derive": {
             "t": "4*r"
           },
-          "q": "Pip has 3 times as many shells as Rae. They have {t} shells in all. How many shells does Rae have?",
+          "q": "Amelia has 3 times as many shells as Wei. They have {t} shells in all. How many shells does Wei have?",
           "answer": "r",
           "hint": "A strip has 4 equal parts.",
           "steps": [
-            "Rae has 1 part and Pip has 3 parts.",
+            "Wei has 1 part and Amelia has 3 parts.",
             "That is 4 equal parts.",
-            "{t} shared into 4 is {ans} shells for Rae."
+            "{t} shared into 4 is {ans} shells for Wei."
           ]
         }
       },
@@ -3207,12 +3207,12 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "Pip has 3 times as many shells as Rae. They have 24 shells in all. How many shells does Pip have?",
-        "hint": "Find Rae first. Then count 3 parts.",
+        "q": "Amelia has 3 times as many shells as Wei. They have 24 shells in all. How many shells does Amelia have?",
+        "hint": "Find Wei first. Then count 3 parts.",
         "steps": [
           "24 shared into 4 equal parts is 6.",
-          "Rae has 6 shells.",
-          "Pip has 3 parts of 6, which is 18 shells."
+          "Wei has 6 shells.",
+          "Amelia has 3 parts of 6, which is 18 shells."
         ],
         "answer": 18,
         "slips": [
@@ -3220,7 +3220,7 @@
             "a": [
               6
             ],
-            "say": "That is Rae. Pip has 3 times as many."
+            "say": "That is Wei. Amelia has 3 times as many."
           }
         ],
         "easier": "g1",
@@ -3237,13 +3237,13 @@
           "derive": {
             "t": "4*r"
           },
-          "q": "Pip has 3 times as many shells as Rae. They have {t} shells in all. How many shells does Pip have?",
+          "q": "Amelia has 3 times as many shells as Wei. They have {t} shells in all. How many shells does Amelia have?",
           "answer": "3*r",
-          "hint": "Find Rae first. Then count 3 parts.",
+          "hint": "Find Wei first. Then count 3 parts.",
           "steps": [
-            "{t} shared into 4 equal parts is Rae's shells.",
-            "Pip has 3 parts of that number.",
-            "Pip has {ans} shells."
+            "{t} shared into 4 equal parts is Wei's shells.",
+            "Amelia has 3 parts of that number.",
+            "Amelia has {ans} shells."
           ]
         }
       },
@@ -3439,7 +3439,7 @@
         "id": "M3",
         "title": "Teach it back",
         "minutes": 3,
-        "tutor": "Tell a toy why we check an answer a second way. Use the Pip and Rae marbles: one road is a strip and one road is a table of tries.",
+        "tutor": "Tell a toy why we check an answer a second way. Use the Amelia and Wei marbles: one road is a strip and one road is a table of tries.",
         "rec": "Recording: pause. Tell a toy why we check an answer a second way.",
         "answer": "If two different tools give the same answer, we can trust it. If they give different answers, one of them has a mistake and we look again."
       }
@@ -3509,7 +3509,7 @@
     "where": [
       "G1"
     ],
-    "text": "Jo has 3 times as many stickers as Kit and they have 36 in all. Road 1, a strip: 4 equal parts, so Kit has 9 and Jo has 27. Road 2, a table of tries: Kit 8 gives 32 in all, Kit 10 gives 40, Kit 9 gives 36. Both roads agree. Choosing the tool with no name (Think harder) and make equal (G2) are the steps before it. Bar models with times as many are used at school from Primary 2 and later; Lesson 18 met 3 times as many at Go further, and the new part here is checking by a second method. Named puzzle: Two Roads, One Answer.",
+    "text": "Jenny has 3 times as many stickers as Jason and they have 36 in all. Road 1, a strip: 4 equal parts, so Jason has 9 and Jenny has 27. Road 2, a table of tries: Jason 8 gives 32 in all, Jason 10 gives 40, Jason 9 gives 36. Both roads agree. Choosing the tool with no name (Think harder) and make equal (G2) are the steps before it. Bar models with times as many are used at school from Primary 2 and later; Lesson 18 met 3 times as many at Go further, and the new part here is checking by a second method. Named puzzle: Two Roads, One Answer.",
     "parent": "Solving one problem two ways, with 3 times as many and a total, goes past the Primary 1 syllabus on purpose."
   }
 }
