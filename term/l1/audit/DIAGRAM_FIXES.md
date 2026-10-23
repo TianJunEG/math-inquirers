@@ -39,3 +39,9 @@ Source: audit/DIAGRAM_AUDIT.md. Owner approved ("DIAGRAMS: go"). Only term/l1 fi
 - Home sheets: only the 7 clock/100-square items above; the other ~85 B home items still have no figure.
 - Online practice: L02, L03, L05, L10 story items and L21-L23 clock items have no figure yet.
 - L06 T1, T2, T4, G3, I1 and L24 S6 figures kept at the old size or omitted for page room.
+
+## Wrap-up (stopped early on the coordinator's request)
+- L13 items (S1 domino pips, S2/T1 ten-frame size) are moot: lesson 13 is being retired by the x.10 consolidation. Also L10, L19, L20, L27, L30, L39 and L40 are being rewritten: the L10 bar models (T3, G3), L10 online figures, L40 S6 apples and L06/L08-L10 changes may need re-doing on the new lessons.
+- All touched lessons (01, 04, 06-10, 13, 15-17, 20-40) were rebuilt after the last tool change: validate 0 FAIL. L17 T1 (larger sweets) was rebuilt after the books ran.
+- Books were rebuilt once (Books 1-8, 24 PDFs, page counts unchanged, B&W check 0 non-grey) from the lesson PDFs of that moment. The Book 4 workbook still holds the old L17 T1 sweets: rebuild books with print/make_term_books.py then print/make_bw_print.py --check. The tracked specs (term_books_spec.json, bw_spec.json) were restored with git checkout.
+- Not started: everything in the "Not done" list above.
