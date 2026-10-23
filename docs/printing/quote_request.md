@@ -65,3 +65,17 @@ Page counts follow the current lesson builds; re-run the script (and re-check `t
 Send the printer ONLY the files in `outputs/print/bw/` (holiday workbooks) and `outputs/print/bw/term/` (term books). They are 1-bit 600 dpi, so they print identically on any mono laser, digital press or photocopier, with no colour-management surprises. The colour print files in `outputs/print/` and `outputs/print/term/` and the designed PDFs are the SOFT COPIES (downloads) and stay colour. Page counts, sheets, blank backs, kit-page positions and the 12 mm binding gutter are identical in both versions.
 
 **Guidance, B&W vs colour:** mono double-sided on 80 to 100 gsm is the default for every posted workbook (lowest cost; one-bit files print crisply and do not smudge). Choose colour only for a soft-copy buyer who prints at home, or for the covers if the printer offers a colour cover at small extra cost (the cover is a separate decision; ask for both prices). Colours in the books are never the only carrier of meaning: tier chips, counters, graph keys and kit shapes carry a pattern (hatching, dots, lines) in B&W. Crayons on the B&W page are fine for "colour it" tasks. Rebuild: see `docs/printing/README_bw.md`.
+
+---
+
+## Inquirer Kit: A5 strategy toolbox card (one per child)
+
+A small card that goes in the Inquirer Kit envelope with the workbook (the Level 1 to 6 decks say "Eight tools: see your Inquirer Kit card"). Front: the eight strategies with icon and a one-line definition. Back: the three look-back prompts, a "My tool today" line and a name line. One design per age band, so three files; the same card is not used across bands.
+
+| File (`outputs/kit/`, printer files are the `_PRINT_BW` ones) | Band | Issued with |
+|---|---|---|
+| Math_Inquirers_Toolbox_Card_A_6-8_PRINT_BW.pdf | A, ages 6-8 | Level 1 and Level 2 workbooks |
+| Math_Inquirers_Toolbox_Card_B_8-10_PRINT_BW.pdf | B, ages 8-10 | Level 3 and Level 4 workbooks |
+| Math_Inquirers_Toolbox_Card_C_10-13_PRINT_BW.pdf | C, ages 10-13 | Level 5 and Level 6 workbooks |
+
+**Spec:** A5 portrait (148 x 210 mm), 2 pages per file (page 1 front, page 2 back), double-sided, flip on the long edge. No bleed, no crop marks. Black and white only (1-bit, 600 dpi, no grey). Quantity: 1 card per child per workbook issued (a child doing two levels gets two cards; siblings in different bands get one each), plus about 10 percent spare per band for late registrations. **Stock (suggestions, please quote both):** 250 gsm card, printed both sides (preferred: it is handled every lesson); or 170 gsm silk/uncoated as a cheaper option; optional matt lamination (please quote as an extra). Please quote per 50, 100 and 250 copies per band. The `_SCREEN_colour` PDFs are soft copies (parent welcome message, downloads) and are not for the printer. Rebuild: `python3 print/make_toolbox_card.py`.
