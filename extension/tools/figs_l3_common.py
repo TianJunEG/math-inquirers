@@ -138,7 +138,8 @@ def nline(spec, w=None):
 # ------------------------------------------------------------------------------------------------ bar model
 def bars(spec, w=None):
     """rows: [{label, segs: [{w, t, style: fill|sky|plain|blank|q}], braces: [{a, b, t, side: top|bottom}]}]
-    seg w is a relative width (1 = unit); u = drawing units per width unit.  style blank = dashed empty box; q = '?' in a dashed box."""
+    seg w is a relative width (1 = unit); u = drawing units per width unit.  style blank = dashed empty box; q = '?' in a dashed box;
+    ghost = dashed box with its text (the missing part of a comparison).  A row may have a `note` written after the bar."""
     rows = spec['rows']
     u = spec.get('u', 60)
     LAB = spec.get('lab', 120)
@@ -158,13 +159,16 @@ def bars(spec, w=None):
             wd = s['w'] * u
             st = s.get('style', 'plain')
             fill = {'fill': SOFT, 'sky': SKY}.get(st, '#fff')
-            dash = ' stroke-dasharray="9 6"' if st in ('blank', 'q') else ''
+            dash = ' stroke-dasharray="9 6"' if st in ('blank', 'q', 'ghost') else ''
             P.append(f'<rect x="{x}" y="{y}" width="{wd}" height="{BH}" fill="{fill}" stroke="{NAVY}" stroke-width="{SW}"{dash}/>')
             t = '?' if st == 'q' else s.get('t', '')
             if t != '':
                 P.append(T(x + wd / 2, y + BH / 2 + 10, esc(t), s.get('size', 28)))
             x += wd
         xs.append(x)
+        if row.get('note'):
+            P.append(T(x + 14, y + BH / 2 + 10, esc(row['note']), 28, anchor='start'))
+            x += 14 + 17 * len(str(row['note']))
         maxx = max(maxx, x)
         if row.get('label'):
             P.append(T(LAB - 12, y + BH / 2 + 10, esc(row['label']), 28, anchor='end'))

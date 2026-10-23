@@ -2,6 +2,8 @@
 
 > **Update, 23 Oct 2026 (night), owner decision TERM-ALL-RECOMMENDED (`docs/terms/owner_decisions.md`):** lesson 10 of each term (lessons 10, 20, 30 and 40) is the **choose-the-tool consolidation + Challenge Quest lesson**. Lessons are **not renumbered**: lesson 10 stays lesson 10. Any new idea that this plan places in a lesson 10 moves to an earlier slot when the lesson is built. Tables below are not yet edited. Plan and effort: `docs/pedagogy/lesson_x10_consolidation_plan.md`. Level 1 specifics: Terms 2 to 4 first, Term 1 later. Proposed (not applied): Picture Equations 19 to 13 (Doubles and Near Doubles retired), Find One First 20 to 19, Calendar Detective 30 to 27 (Fill the Grid retired); lessons 20 and 30 become new choose-the-tool lessons; lesson 40 keeps the Showcase. Lesson 10 (Story Steps) stays in place for now (plan option B).
 
+> **Applied, 23 Oct 2026 (night), integration build:** the moves above are built. Final slot map (the tables below still show the old slots): Term 2 = 11 Who Is Where?, 12 Bar Strips, **13 Picture Equations** (Doubles retired and absorbed), 14 Odd + Odd, 15 Equal Groups, 16 Skip-Count Tables, 17 Sharing and Grouping, 18 Times Stories, **19 Find One First**, **20 Choose Your Tool** (Quest). Term 3 = 21 to 26 unchanged, **27 Calendar Detective** (Fill the Grid retired), 28 Make a Table, 29 Spot the Mistake, **30 Tool Detectives** (Quest). Term 4: 39 The Problem-Solving Toolbox (eight tool cards) and 40 Inquirers' Showcase (Quest). Lesson 10 Story Steps carries Quest v2. Report: `term/l1/audit/INTEGRATION_REPORT.md`.
+
 ## Revision for 10-week terms and new Term 1 (22 Oct 2026)
 
 Reworked to match `docs/terms/owner_decisions.md`. What changed:

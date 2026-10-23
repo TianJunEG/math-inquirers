@@ -46,20 +46,22 @@ Printing is triggered by payment. Each paid term, the child receives that term's
 |---|---|---|---|
 | L1_T1_Book1_Lessons01-05_Workbook | 46 | 23 | child, Term 1 |
 | L1_T1_Book2_Lessons06-10_Workbook | 44 | 22 | child, Term 1 |
-| L1_T2_Book3_Lessons01-05_Workbook | 44 | 22 | child, Term 2 |
-| L1_T2_Book4_Lessons06-10_Workbook | 48 | 24 | child, Term 2 |
+| L1_T2_Book3_Lessons01-05_Workbook | 46 | 23 | child, Term 2 |
+| L1_T2_Book4_Lessons06-10_Workbook | 46 | 23 | child, Term 2 |
 | L1_T3_Book5_Lessons01-05_Workbook | 42 | 21 | child, Term 3 |
 | L1_T3_Book6_Lessons06-10_Workbook | 44 | 22 | child, Term 3 |
 | L1_T4_Book7_Lessons01-05_Workbook | 48 | 24 | child, Term 4 |
 | L1_T4_Book8_Lessons06-10_Workbook | 42 | 21 | child, Term 4 |
-| Book1-4 AnswerKey_TUTOR | 22 / 30 / 22 / 28 | 11 / 15 / 11 / 14 | tutor only |
-| Book5-8 AnswerKey_TUTOR | 22 / 30 / 22 / 30 | 11 / 15 / 11 / 15 | tutor only |
+| Book1-4 AnswerKey_TUTOR | 22 / 32 / 22 / 30 | 11 / 16 / 11 / 15 | tutor only |
+| Book5-8 AnswerKey_TUTOR | 22 / 32 / 22 / 32 | 11 / 16 / 11 / 16 | tutor only |
 | Book1-4 HomePack (optional) | 12 / 14 / 12 / 14 | 6 / 7 / 6 / 7 | loose, stapled |
 | Book5-8 HomePack (optional) | 12 / 14 / 12 / 14 | 6 / 7 / 6 / 7 | loose, stapled |
 
 **Numbering.** Lessons are numbered within the term everywhere in the books: covers, contents, page headers, answer keys and home packs all say "Term 2, Lessons 1 to 5" (Book 3), "Term 2, Lessons 6 to 10" (Book 4), "Term 3, Lessons 1 to 5" (Book 5), "Term 3, Lessons 6 to 10" (Book 6), "Term 4, Lessons 1 to 5" (Book 7) and "Term 4, Lessons 6 to 10" (Book 8). File names follow the same numbers (Book3_Lessons01-05 is Term 2 Lessons 1 to 5; internally lessons 11 to 15 of Level 1; Book5 is lessons 21 to 25, Book6 26 to 30, Book7 31 to 35, Book8 36 to 40).
 
-**Quest Log.** The Quest Log is printed inside the workbook books: 4 pages at the end of Book 2 (after Term 1 Lesson 10) and 3 pages at the end of Book 4 (after Term 2 Lesson 10), 4 pages at the end of Book 6 (after Term 3 Lesson 10) and 4 pages at the end of Book 8 (after Term 4 Lesson 10), already counted in the page numbers above. Tutors also send each family a loose copy (L10_Quest_Log.pdf, L20_Quest_Log.pdf, L30_Quest_Log.pdf, L40_Quest_Log.pdf) a week before the quest lesson, with the grown-up note, for families who prefer to print their own or who need it earlier.
+**Toolbox Card (owner decision CARD-BOOK1, 23 Oct 2026).** The Inquirer Kit A5 Toolbox Card (band A, ages 6-8; `outputs/kit/Math_Inquirers_Toolbox_Card_A_6-8_PRINT_BW.pdf`, 1 card printed both sides, flip on the long edge) ships printed, loose, in the pack with Book 1 (one per child, once). It is not a bound page and is not in the page counts above; Book 1's contents page lists it.
+
+**Quest Log.** The Quest Log is printed inside the workbook books: 4 pages at the end of Book 2 (after Term 1 Lesson 10) and 4 pages at the end of Book 4 (after Term 2 Lesson 10), 4 pages at the end of Book 6 (after Term 3 Lesson 10) and 4 pages at the end of Book 8 (after Term 4 Lesson 10), already counted in the page numbers above. Tutors also send each family a loose copy (L10_Quest_Log.pdf, L20_Quest_Log.pdf, L30_Quest_Log.pdf, L40_Quest_Log.pdf) a week before the quest lesson, with the grown-up note, for families who prefer to print their own or who need it earlier.
 
 Page counts follow the current lesson builds; re-run the script (and re-check `term_books_spec.json`) after any rebuild before sending a quote.
 
