@@ -35,6 +35,12 @@ def main():
             b2 = pw2.chromium.launch(); okc = b_check.build_check(d, b2); b2.close()
         if not okc: sys.exit('end-of-term check build FAILED (see above)')
         validate.check_term_check(d)
+    if 'challenge_quest' in d:       # Mi's Challenge Quest: Quest Log, tutor notes, grown-up note (replaces the old check files)
+        import b_quest
+        with sync_playwright() as pw3:
+            b3 = pw3.chromium.launch(); okq = b_quest.build_quest(d, b3); b3.close()
+        if not okq: sys.exit('Challenge Quest build FAILED (see above)')
+        validate.check_quest(d)
     validate.check_foreign(d)   # after every output (including the term-check files) exists
     for f in validate.FAILS: print('FAIL ', f)
     if validate.FAILS: sys.exit(1)

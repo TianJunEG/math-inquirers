@@ -40,6 +40,7 @@ def text_of(path, p):
                           capture_output=True, text=True).stdout
 
 
+EXTRAS = {'workbook': ['Quest_Log'], 'key': ['Home_Answers', 'Quest_Tutor_Notes'], 'home': ['Quest_Parent_Note']}
 NONCUT = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates'}
 
 
@@ -176,6 +177,13 @@ def build_book(level, term, bookno, lessons, kind, ages=''):
                 cut = not (kn < len(ktypes) and ktypes[kn] in NONCUT); kn += 1
             # kit pages and real-size pages (a ruler picture) print at 100%: the page already has 14 mm margins, more than the 12 mm binding strip
             seq.append(('src', rd, i, kit, cut, bool(kit or (realsize and kind == 'workbook'))))
+        for extra in EXTRAS.get(kind, []):          # Quest Log (child, 100%), tutor notes (key book), grown-up note and home answers
+            xp = os.path.join(ROOT, 'term', f'l{level}', 'out', f'l{ln:02d}', f'L{ln:02d}_{extra}.pdf')
+            if not os.path.exists(xp): continue
+            xr = PdfReader(xp)
+            if recto and len(seq) % 2 == 1: seq.append(None)
+            for j in range(len(xr.pages)):
+                seq.append(('src', xr, j, False, True, extra == 'Quest_Log'))
             if kit:
                 seq.append(None)
     if len(seq) % 2:

@@ -102,7 +102,7 @@ def token_svg(tok, x, y, w, h, size=34, anchor='middle'):
     """Draw a cell token centred at (x, y): '[]' box, '()' circle, '[ ]' tick box, else text."""
     t = str(tok)
     if t == '[]':
-        bw = min(w - 8, 56); bh = min(h - 8, 46)
+        bw = min(w - 6, 72); bh = min(h - 6, 58)
         return f'<rect x="{x - bw / 2:.1f}" y="{y - bh / 2:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="8" fill="#fff" stroke="{NAVY}" stroke-width="3"/>'
     if t == '()':
         r = min(w, h) / 2 - 6
@@ -273,7 +273,7 @@ def line_up(n=8, names=None, front='left', marker='door', labels='ordinal', high
         elif labels == 'number': lab = str(k)
         elif labels == 'box': lab = '[]'
         if lab:
-            body.append(token_svg(lab, cx, 170, cell, 48, 34))
+            body.append(token_svg(lab, cx, 172, cell, 62, 36))
         if k in names:
             body.append(f'<text x="{cx:.1f}" y="{26:.0f}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(names[k])}</text>')
     if between:

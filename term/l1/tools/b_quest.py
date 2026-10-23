@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Mi's Challenge Quest builder (replaces the old end-of-term check files).
 
-Usage:  bash term/l1/build.sh 10 && python3 term/l1/assets/quest_build.py 10      (also 20, and any later last-lesson-of-term)
+Usage:  bash term/l1/build.sh 10      (build.py runs this for any lesson with a `challenge_quest` block: 10, 20, and later last lessons of a term)
+Stand-alone:  python3 term/l1/tools/b_quest.py 10
 
 Owner decision of 22 Oct 2026 (late): the end-of-term slot is a game with Mi, not a test. No score or mark is shown to the child,
 no ranking, no visible timer, and no test / exam / check-sheet wording on any child or parent page.

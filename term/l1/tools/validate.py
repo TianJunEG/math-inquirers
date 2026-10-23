@@ -6,7 +6,7 @@ question completeness, tier rules, banned wording, REC cue length, link check, n
 against docs/sasmo and docs/books), per-lesson answer verification (term/l1/verify/lNN_checks.py), practice-variant
 verification (python oracle vs expression vs the runner's own JavaScript calc).
 """
-import importlib.util, itertools, json, os, re, subprocess, sys
+import glob, importlib.util, itertools, json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
@@ -26,7 +26,7 @@ Q_KEYS = ['id', 'tier', 'text', 'answer', 'val', 'hint', 'solution', 'mistakes',
 LINE_KINDS = {'SAY', 'READ', 'ASK', 'DO', 'SLIDE', 'WORK', 'HOLD', 'MOVE', 'REC', 'STUCK', 'NOTE'}
 BLOCKS = {'chip', 'p', 'list', 'card', 'visual', 'qs', 'answers', 'say', 'cols', 'table', 'numrow', 'answer', 'lookback'}
 BANNED_CHILD = [r'early finisher', r'gifted', r'genius', r'strong thinker', r'fast[- ]track', r'MOE[- ]aligned', r'\baligned\b', r'\bGEP\b',
-                r'SASMO', r'olympiad', r'exam prep', r'\bchallenge\b', r'\bstretch\b', r'\bcore\b', r'high[- ]ability', r'ahead of', r'\branked?\b', r'top of the class']
+                r'SASMO', r'olympiad', r'exam prep', r'\bchallenge\b(?!\s+Quest)', r'\bstretch\b', r'\bcore\b', r'high[- ]ability', r'ahead of', r'\branked?\b', r'top of the class']
 MAX_REC_WORDS = 26
 
 
@@ -249,6 +249,13 @@ def check_words(d):
             if re.search(pat, s, re.I): bad.append((pat, s[:70]))
         for m in re.finditer(r'private (chat|message)', s, re.I):
             if not re.search(r'\b(no|never|not)\b[^.]*private (chat|message)', s, re.I): bad.append(('private chat', s[:70]))
+    if 'challenge_quest' in d:      # the end-of-term slot is a game: no test / exam / score wording on child or parent pages (the program motto stays)
+        QBAN = [r'\b(term|end-of-term|final|school|unit)\s+tests?\b', r'\btests?\s+(paper|sheet|day|score|result)s?\b', r'\btake (a|the) test\b', r'\bexams?\b', r'check[- ]?sheet', r'end-of-term check', r'\btimer\b', r'\bscored?\b|\bscores\b', r'\bmarked\b|\bmarks\b|\bmarking\b', r'\bgrades?\b', r'\bout of\b']
+        for s in child_strings(d):
+            t = re.sub(r'Notice it\. Test it\. Explain why\.?', ' ', s)
+            for pat in QBAN:
+                m = re.search(pat, t, re.I)
+                if m and not re.search(r'\b(no|never|not|without)\b[^.]{0,40}' + pat, t, re.I): bad.append((pat, s[:70]))
     if bad: fail('wording: banned or risky child-facing phrases: ' + '; '.join(f'{p!r} in "{t}"' for p, t in bad[:8]))
     else: ok('wording: no banned labels or claims in child and parent text')
     # tutor-facing notes: no public naming, no boards, no private chat instructions
@@ -351,7 +358,7 @@ def check_outputs(d):
     """Measure the REAL rendered PDFs (page count and ink fill), if built. FAIL on orphan or near-empty pages."""
     import pdfcheck, b_print
     od = os.path.join(OUT, f"l{d['_num']}")
-    want = {'Workbook': (b_print.workbook_html(d).count('<div class="page'), (14, 16)), 'Home_Practice': (2, (14, 16)), 'Parent_Summary': (1, (12, 12))}
+    want = {'Workbook': (b_print.workbook_html(d).count('<div class="page'), (14, 16)), 'Home_Practice': (1, (14, 16)), 'Home_Answers': (1, (14, 16)), 'Parent_Summary': (1, (12, 12))}
     for name, (n, mg) in want.items():
         path = os.path.join(od, f"L{d['_num']}_{name}.pdf")
         if not os.path.exists(path):
@@ -361,7 +368,7 @@ def check_outputs(d):
         if got != n: fail(f'outputs: {name} PDF has {got} pages but {n} are designed (a question block spilled onto an orphan page); fill {txt}')
         for i, f in enumerate(fills, 1):
             if f < 0.40: fail(f'outputs: {name} page {i} is only {f:.0%} full (orphan or near-empty page)')
-            elif f < 0.80 and not (name == 'Home_Practice' and i == 2): warn(f'outputs: {name} page {i} is {f:.0%} full (target at least 85%)')
+            elif f < 0.80 and name != 'Home_Answers': warn(f'outputs: {name} page {i} is {f:.0%} full (target at least 85%)')
         if name == 'Workbook':
             import subprocess
             for pgno in range(1, got + 1):
@@ -571,6 +578,27 @@ def check_term_check(d):
         ok(f"term check: student sheet {n} pages, key {pdfcheck.pdf_pages(key)} pages, note 1 page" + (f"; printed bar {bar:.2f} mm (want {c['sheet_check_bar_mm']}), measured on the PDF" if bar else ''))
 
 
+def check_quest(d):
+    """Mi's Challenge Quest lessons: the three Quest files exist, the Quest Log has its designed pages, no test/exam/score words in the child and parent PDFs."""
+    c = d.get('challenge_quest')
+    if not c: return
+    import pdfcheck, subprocess, b_quest
+    od = os.path.join(OUT, f"l{d['_num']}")
+    log, notes, note = (os.path.join(od, f"L{d['_num']}_Quest_{x}.pdf") for x in ('Log', 'Tutor_Notes', 'Parent_Note'))
+    if not all(os.path.exists(p) for p in (log, notes, note)):
+        fail('quest: Quest_Log / Quest_Tutor_Notes / Quest_Parent_Note PDFs not built (run build.sh)'); return
+    n = pdfcheck.pdf_pages(log)
+    if n != c['sheet_pages']: fail(f"quest: Quest Log has {n} pages, designed {c['sheet_pages']}")
+    if pdfcheck.pdf_pages(note) != 1: fail('quest: grown-up note must be one page')
+    for p in glob.glob(os.path.join(od, f"L{d['_num']}_Check_*.pdf")): fail('quest: old check file still present: ' + os.path.basename(p))
+    for p in (log, note):
+        tx = subprocess.run(['pdftotext', p, '-'], capture_output=True, text=True).stdout
+        for pat in b_quest.BAN_FAMILY:
+            m = re.search(pat, tx, re.I)
+            if m: fail(f"quest: {os.path.basename(p)} contains banned wording {pat!r}")
+    if not [f for f in FAILS if f.startswith('quest')]: ok(f"quest: Quest Log {n} pages, tutor notes {pdfcheck.pdf_pages(notes)}, grown-up note 1 page, no test/exam/score wording")
+
+
 def check_cover(d):
     import b_guide
     from playwright.sync_api import sync_playwright
@@ -697,7 +725,7 @@ def check_all(num, built=True):
         except Exception as e:
             fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     if built:
-        for fn in (check_outputs, check_glyphs, check_key_pdf, check_cover, check_term_check, check_foreign):
+        for fn in (check_outputs, check_glyphs, check_key_pdf, check_cover, check_term_check, check_quest, check_foreign):
             try: fn(d)
             except Exception as e: fail(f'{fn.__name__} crashed: {type(e).__name__}: {e}')
     return d

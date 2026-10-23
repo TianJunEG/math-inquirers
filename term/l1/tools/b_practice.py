@@ -4,8 +4,19 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 
 
+def _expr(s, env):
+    """{=a+1} in a figure spec: arithmetic on the template numbers (+ - * // %)."""
+    t = s
+    for k in sorted(env, key=len, reverse=True): t = re.sub(r'\b%s\b' % re.escape(k), str(env[k]), t)
+    assert re.fullmatch(r'[\d\s+\-*/%().]*', t), s
+    return eval(t)
+
+
 def _subst(obj, env):
     if isinstance(obj, str):
+        m = re.fullmatch(r'\{=([^{}]+)\}', obj)
+        if m: return _expr(m.group(1), env)
+        obj = re.sub(r'\{=([^{}]+)\}', lambda mm: str(_expr(mm.group(1), env)), obj)
         m = re.fullmatch(r'\{(\w+)\}', obj)
         if m and m.group(1) in env: return env[m.group(1)]
         return re.sub(r'\{(\w+)\}', lambda mm: str(env.get(mm.group(1), mm.group(0))), obj)

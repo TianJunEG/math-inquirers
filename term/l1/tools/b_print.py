@@ -15,26 +15,26 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .vis{width:310px;margin:6px 0 6px 4px}
 .al{display:inline-block;min-width:17mm;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
 .choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
-.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:3px!important;font-size:15.5px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm{padding-left:3mm}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:3px!important;font-size:15.5px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
 .lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
 .lbk .r{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:6px;font-size:16.5px;align-items:center}.lbk .r b{flex:none;width:165px}
 .bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
 .wl{border-bottom:2px dotted #8A94AD;height:24px}
 .boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
-.qbox:has(svg.h100){display:grid;grid-template-columns:1fr 292px;column-gap:8px;align-items:start}
+.qbox:has(svg.h100){display:grid;grid-template-columns:1fr 310px;column-gap:8px;align-items:start}
 .qbox:has(svg.h100)>.q{grid-column:1 / span 2}
-.qbox:has(svg.h100)>.vis{grid-column:2;grid-row:2 / span 8;width:292px!important;margin:0!important}
+.qbox:has(svg.h100)>.vis{grid-column:2;grid-row:2 / span 8;width:310px!important;margin:0!important}
 .qbox:has(svg.h100)>.sub,.qbox:has(svg.h100)>.ln,.qbox:has(svg.h100)>.draw{grid-column:1}
 .qbox:has(svg.h100.wide){display:block}
 .qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
-.p1 .qbox:has(svg.h100)>.vis{width:292px!important}
+.p1 .qbox:has(svg.h100)>.vis{width:296px!important}
 .tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
 .tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
 .tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .qt,.tight3 .sub{font-size:15px!important}.tight3 .lbk .r{font-size:13px!important}.tight3 .banner{font-size:15px!important}
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .banner{break-after:avoid;display:block;width:fit-content}
-.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.nar{width:150px!important}.vis.nar.rt{width:175px!important}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
 .visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
 .tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
@@ -76,8 +76,10 @@ def _vis_html(v):
     if v.get('type') == 'ruler':   # true 1:1 scale on paper
         return f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True)}</div>'
     wide = v.get('type') in ('table', 'bar_model', 'line_up')
-    nar = v.get('type') in ('round_table', 'domino', 'array')
-    return f'<div class="vis{" wide" if wide else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
+    xw = v.get('type') in ('number_line', 'seq')
+    arr = v.get('type') == 'array'
+    nar = v.get('type') in ('round_table', 'domino')
+    return f'<div class="vis{" wide" if wide else ""}{" xw" if xw else ""}{" arr" if arr else ""}{" nar" if nar else ""}{" bm" if v.get("type") == "bar_model" else ""}{" rt" if v.get("type") == "round_table" else ""}">{svg.render_visual(v)}</div>'
 
 
 def inv_draw(inv):
@@ -184,17 +186,25 @@ def key_html(d):
     return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}body{{background-image:none}}</style></head><body>{"".join(P)}</body></html>'
 
 
-def home_html(d):
+def part_breaks(h):
+    """Each part (b), (c), ... of a home question starts on its own line."""
+    return re.sub(r'\s+\(([b-f])\)\s', r'<br>(\1) ', h)
+
+
+def home_html(d, answers=False):
+    """answers=False: the question sheet (one page). answers=True: the grown-up answers (one page), a separate PDF so a double-sided print never puts answers on the back of the questions."""
     H = d['home_practice']
     qs = ''
     for h in H:
         tag = {'start': 'Start here', 'think': 'Think harder', 'go': 'Go further'}[h['tier']]
-        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{blanks(h["text"])}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
+        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}</span><br>{part_breaks(blanks(h["text"]))}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>'
-            f'<div class="page hm {("t" + str(d.get("_home_tight"))) if d.get("_home_tight") else ""}">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next.</p>{qs}</div>'
-            f'<div class="page"><div class="ltitle">Answers for grown-ups</div><p style="font-size:13px">Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
-            f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link.</p></div></body></html>')
+    if answers:
+        page = (f'<div class="page">{hdr(d, "Answers", d["title"] + ": home practice answers")}<p style="font-size:13px">For grown-ups. Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'
+                f'<p style="font-size:12.5px;margin-top:10px">More practice online (no timers, no scores): ask your tutor for the practice link.</p></div>')
+    else:
+        page = f'<div class="page hm {("t" + str(d.get("_home_tight"))) if d.get("_home_tight") else ""}">{hdr(d, "Home practice", d["title"] + ": practice at home")}<p style="margin:2px 0 6px;font-size:14.5px">About 15 minutes, a few days after the lesson. {E(wb(d, "home_hint", "Use real things or draw it."))} A grown-up may read the questions aloud. Wrong answers are fine: they show what to try next. The answers are on a separate sheet, so they never print on the back of this one.</p>{qs}</div>'
+    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{font_css()}{WB_CSS}{EXTRA}</style></head><body>{page}</body></html>'
 
 
 def parent_html(d):
@@ -254,7 +264,8 @@ def build_print(d, pw):
     for lvl in (0, 1, 2):
         d['_home_tight'] = lvl
         path = render('home', home_html(d), f + ' \u2022 Home practice', f'L{n}_Home_Practice.pdf')
-        if pdfcheck.pdf_pages(path) == 2: break
+        if pdfcheck.pdf_pages(path) == 1: break
+    render('home_answers', home_html(d, True), f + ' \u2022 Home practice answers (grown-ups)', f'L{n}_Home_Answers.pdf')
     for lvl in (0, 1, 2):          # the one-page parent summary: shrink the type a little until it is one page
         d['_parent_tight'] = lvl
         path = render('parent', parent_html(d), '', f'L{n}_Parent_Summary.pdf')

@@ -196,7 +196,7 @@ def title_px(t):
 def slide_html(d, s):
     kind = s['kind']
     time = slide_time(d, s) if not s.get('optional') else 'OPTIONAL'
-    if s['kind'] == 'title': time = ''
+    if s['kind'] == 'title' or s.get('no_record') or s.get('no_time'): time = ''      # no minute tag on the title slide or a quest slide (no visible timer for children)
     dark = kind in ('title', 'dark')
     if dark:
         bg = f'background:linear-gradient(135deg,{NAVY} 0%,#101B33 100%);color:{CREAM}'
@@ -208,6 +208,7 @@ def slide_html(d, s):
         deco = bar()
         pill = f'<p style="position:absolute;right:128px;top:52px;font-size:30px;font-weight:800;letter-spacing:2px;color:{TEAL};background:#FFFFFF;border:2px solid {TEAL};border-radius:999px;padding:6px 22px">{time}</p>'
         foot = f'<p style="position:absolute;left:128px;bottom:44px;width:1400px;font-size:28px;color:#5B6785">{E(foot_text(d))}</p>'
+    if not time: pill = ''
     if kind == 'title':
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
                 f'<h1 style="font-family:{HF};font-size:{title_px(s["title"])}px;font-weight:600;line-height:1.08;max-width:1300px;text-wrap:balance">{E(s["title"])}</h1>'

@@ -27,7 +27,10 @@ term/l1/
 | Slide deck (1920x1080 `<section>` slides + `deck.json`, same format as `split/*/project`) | `deck/project/`, plus `LNN_Deck.pdf` and `.html` to view | `rebuild/slidekit.py` and `levels/restyle.py` look |
 | Student workbook (Start here, Think harder, Go further, Investigation, exit ticket, look-back, kit cut-outs) | `LNN_Workbook.pdf` | `hp/wb_style.css` (A + D) |
 | Answer key (separate PDF) | `LNN_Workbook_Answer_Key.pdf` | same |
-| Home practice sheet (5 questions, answers on page 2) | `LNN_Home_Practice.pdf` | same |
+| Home practice sheet (5 questions, one page) | `LNN_Home_Practice.pdf` | same |
+| Home practice answers for grown-ups (separate sheet, so a double-sided print never shows answers on the back) | `LNN_Home_Answers.pdf` | same |
+| Kit pages only, one side (Term 1 and 2 lessons with a kit) | `LNN_Kit_Pages.pdf` | same |
+| Mi's Challenge Quest (last lesson of a term): Quest Log, tutor notes, grown-up note | `LNN_Quest_Log.pdf`, `LNN_Quest_Tutor_Notes.pdf`, `LNN_Quest_Parent_Note.pdf` | built by `tools/b_quest.py` from `build.sh` |
 | One-page parent summary | `LNN_Parent_Summary.pdf` | `hp/parent_style.css` |
 | Online practice (runner + data, brute-force verified variants) | `practice/` (serve it: `python3 -m http.server -d term/l1/out/l01/practice 8790`, open `/?lesson=t1l01`) | `practice/public` runner, unchanged |
 

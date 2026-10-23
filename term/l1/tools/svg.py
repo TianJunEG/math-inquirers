@@ -267,7 +267,7 @@ def kit_figure(spec):
     if t == 'base_ten': return kit_page_svg()
     if t == 'ten_frame': return ten_frame_kit()
     if t == 'plates': return plates_mat(tuple(spec.get('labels', ('LEFT', 'RIGHT'))))
-    if t == 'hundred': return hundred(cell=spec.get('cell', 64))
+    if t == 'hundred': return hundred(cell=spec.get('cell', 64), zero=spec.get('zero', False))
     if t == 'hundred_square': return hundred_square(spec.get('blank', False))
     if t == 'number_strip': return number_strip_kit(spec.get('start', 0), spec.get('end', 50))
     if t == 'cards': return cards_kit([str(x) for x in spec['labels']], spec.get('cols', 5), spec.get('w', 130), spec.get('h', 90), spec.get('round', False))
