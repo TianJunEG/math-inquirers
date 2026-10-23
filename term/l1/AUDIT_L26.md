@@ -56,3 +56,8 @@ Total: 19 / 24
 - The Quest cave idea in the pre-flight ($14 with $2 and $5 notes) is kept out of this lesson on purpose; if the Quest author changes the cave this lesson is unaffected.
 - A way that needs six or ten $2 notes cannot be laid out with the 5 two-dollar notes of the kit: the lesson says to write it (guide, slide notes).
 - Page 3 and 4 tables use many answer boxes (G1 has 15); the boxes are 36 px and fit, but a small child may need the grown-up to rule the table on spare paper.
+
+
+## Fix pass (Term 3 fix agent)
+
+Independent audits answered in `audit/FIXES_T3_L26.md`: S1 two different tags and kit prices, T1 stopping row, G1 spare row, break amounts payable, final recording wording, no-calculator Mi, online variants corrected. Validator 0 FAIL, 0 WARN.

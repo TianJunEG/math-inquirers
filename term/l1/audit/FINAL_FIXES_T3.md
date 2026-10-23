@@ -20,3 +20,14 @@ Lesson fix details: `FIXES_T3_L21.md`, `FIXES_T3_L22.md`.
 7. `tools/b_guide.py`: the timing assumptions line still prints "papers to the camera 30 s" (default 9 says no paper hold-ups).
 8. Runner: "4-5-6" is read as 4, minus 5, minus 6 (treat a hyphen between digits as a separator or say "Use commas"); non-digit input in set and box items says "Type or choose an answer first" instead of the digit message used by number items; a minute above 59 has no range hint.
 9. Answer key header reads "Lesson 1, What Time Is It?" and "Lesson 2" without "Term 3" (the workbook, home and parent headers do say "Term 3 . Lesson N").
+
+## Lessons 25 and 26 (Term 3 Lessons 5 and 6): needs outside the lesson files
+
+Details: `FIXES_T3_L25.md`, `FIXES_T3_L26.md`.
+
+1. `tools/figs2.py` icon `ball` reads as a globe: redraw (panels or stripes). L25 and L26 now use a jar and other items; `lessons/l24.json` (not mine) still pictures a ball.
+2. `tools/figs3.py price_tags`: 6 mm gaps between cut cells, centre the grid, larger tags (page 15% empty).
+3. `tools/b_guide.py`: remove "papers to the camera 30 s". `tools/b_print.py`: rewind label "Practice from earlier: Term 1 Lesson N" on Term 3 child sheets; look-back check boxes wrap; no figures on the home sheet.
+4. `qs` slides show table and bar-model thumbnails too small (L25 S2, L26 S6): size option.
+5. Runner: "Term 3" in the sub line; a `set`/list item for "which two tags cost exactly $N" and "list every way" (L25 and L26 online).
+6. L24 hand-off to L25 (price tags) checked true; `l26.json` hand-off to L27 now names the last page of the Lesson 27 workbook.

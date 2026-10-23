@@ -187,7 +187,7 @@
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your play money. Pause or rewind any time.",
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your price tags and your play money. Pause or rewind any time.",
    "action": "Gather your workbook, price tags, play money, pencil and paper. Press play when ready."
   },
   "remember": {
@@ -246,7 +246,7 @@
      ]
     }
    ],
-   "note": "Lesson 6 of Term 3, 90 minutes. Objective: choose items that make an exact amount or fit a budget, find the total and the change, and list every way in order so that none is missed. Plain statement for families: which two items cost exactly an amount, the total, the change and the cost of equal items are Primary 1 work; listing every way to make an amount, and paying with three kinds of note, go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "note": "Lesson 6 of Term 3, 90 minutes. Objective: choose items that make an exact amount or fit a budget, find the total and the change, and list every way in order so that none is missed. Plain statement for families: which two items cost exactly an amount, the total, the change and the cost of equal items are Primary 1 work; listing every way to make an amount, and paying with three kinds of note, go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: the recording has the tutor, the shared screen and any voice that is not muted; a child may keep the microphone and camera off.",
    "subtitle": "A plan that fits the money",
    "mascot": {
     "size": "l",
@@ -412,12 +412,12 @@
      "ordered": true,
      "items": [
       "Take the rubber, pencil, pen, glue, ruler and cup tags.",
-      "Find two tags that cost exactly $12 together.",
+      "Find two different tags that cost exactly $12 together.",
       "There are two answers. How do you know you have them all?"
      ]
     }
    ],
-   "note": "Round 1, about 5 minutes. Each child lays out six tags: rubber $2, pencil $3, pen $4, glue $5, ruler $7 and cup $8. They find two tags that cost exactly $12 together. There are two answers: pen $4 and cup $8, and glue $5 and ruler $7. Ask: how do you know you have them all? Model the way to be sure: start with the cheapest tag and ask what partner it needs. Rubber $2 needs $10 (no tag); pencil $3 needs $9 (no tag); pen $4 needs $8 (the cup, yes); glue $5 needs $7 (the ruler, yes); the ruler and cup are already found. The prices are on the tags, so the slide shows no price. The answer appears on the next slide. A child with no tags writes the prices 2, 3, 4, 5, 7, 8 on paper. Answers: $4 and $8, $5 and $7."
+   "note": "Round 1, about 5 minutes. Each child lays out six tags: rubber $2, pencil $3, pen $4, glue $5, ruler $7 and cup $8. They find two tags that cost exactly $12 together. There are two answers: pen $4 and cup $8, and glue $5 and ruler $7. Ask: how do you know you have them all? Model the way to be sure: start with the tag that costs the least and ask what partner it needs. Rubber $2 needs $10 (no tag); pencil $3 needs $9 (no tag); pen $4 needs $8 (the cup, yes); glue $5 needs $7 (the ruler, yes); the ruler and cup are already found. The prices are on the tags, so the slide shows no price. The answer appears on the next slide. A child with no tags writes the prices 2, 3, 4, 5, 7, 8 on paper. Answers: $4 and $8, $5 and $7."
   },
   {
    "id": "s-explore1-ans",
@@ -468,10 +468,10 @@
     },
     {
      "t": "chip",
-     "text": "$4 and $8. $5 and $7. Start with the cheapest tag and ask what partner it needs."
+     "text": "$4 and $8. $5 and $7. Start with the tag that costs the least and ask what partner it needs."
     }
    ],
-   "note": "The answers for round 1: $4 and $8 (pen and cup), and $5 and $7 (glue and ruler). Say: starting with the cheapest tag and asking what it needs means we do not miss one. Children check against their own tags and tick. Nobody holds tags up to the camera: children say the pair and show a thumb when they agree."
+   "note": "The answers for round 1: $4 and $8 (pen and cup), and $5 and $7 (glue and ruler). Say: starting with the tag that costs the least and asking what it needs means we do not miss one. Children check against their own tags and tick. Nobody holds tags up to the camera: children say the pair and show a thumb when they agree."
   },
   {
    "id": "s-explore2",
@@ -537,12 +537,12 @@
      "ordered": false,
      "items": [
       "How did you know there were only two ways?",
-      "Why start with the cheapest tag, or the biggest note?",
+      "Why start with the tag that costs the least, or the biggest note?",
       "Is 5 two-dollar notes then 2 five-dollar notes a new way, or the same two ways in a different order?"
      ]
     }
    ],
-   "note": "Take one or two answers from volunteers. Key ideas: working in order (cheapest first, or biggest note first) means no way is missed; checking what is left shows when a way is impossible; the same pieces in a different order is the same way. Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it."
+   "note": "Take one or two answers from volunteers. Key ideas: working in order (the tag that costs the least first, or the biggest note first) means no way is missed; checking what is left shows when a way is impossible; the same pieces in a different order is the same way. Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it."
   },
   {
    "id": "s-m1",
@@ -566,7 +566,7 @@
        {
         "t": "visual",
         "type": "price_tag",
-        "item": "ball",
+        "item": "shoe",
         "price": "$6",
         "size": 40
        }
@@ -575,10 +575,10 @@
     },
     {
      "t": "chip",
-     "text": "Mei has $15. Does she have enough for the toy car and the ball? Circle Yes or No on your paper."
+     "text": "Mei has $15. Does she have enough for the toy car and the shoe? Circle Yes or No on your paper."
     }
    ],
-   "note": "Worked example. Mei has $15. The toy car costs $11 and the ball costs $6. Ask: how much do they cost altogether (17); is $17 more than $15 (yes); so is $15 enough (No). How much more money does she need (2)? Say: a budget is the money you have. Enough means the total is the same as the budget or less. Children answer aloud. The answer is on the next slide. A child who says Yes because both prices are less than 15 forgot to add: ask what altogether means."
+   "note": "Worked example. Mei has $15. The toy car costs $11 and the shoe costs $6. Ask: how much do they cost altogether (17); is $17 more than $15 (yes); so is $15 enough (No). How much more money does she need (2)? Say: a budget is the money you have. Enough means the total is the same as the budget or less. Children answer aloud. The answer is on the next slide. A child who says Yes because both prices are less than 15 forgot to add: ask what altogether means."
   },
   {
    "id": "s-m1a",
@@ -595,7 +595,7 @@
      "text": "Mei needs $2 more."
     }
    ],
-   "note": "The answer: the car and the ball cost $17, which is more than $15, so $15 is not enough and Mei needs $2 more (15 up to 17). Say: enough means the total is not more than the money you have."
+   "note": "The answer: the car and the shoe cost $17, which is more than $15, so $15 is not enough and Mei needs $2 more (15 up to 17). Say: enough means the total is not more than the money you have."
   },
   {
    "id": "s-m2",
@@ -771,7 +771,7 @@
        {
         "t": "visual",
         "type": "price_tag",
-        "item": "pen",
+        "item": "pencil",
         "price": "$3",
         "size": 40
        }
@@ -793,10 +793,10 @@
     },
     {
      "t": "chip",
-     "text": "Mei buys the cup and the pen. She gives the cashier two ten-dollar notes. How much change?"
+     "text": "Mei buys the cup and the pencil. She gives the cashier two ten-dollar notes. How much change?"
     }
    ],
-   "note": "Two steps. First the total: the cup costs $8 and the pen costs $3, so they cost $11. Then the change from $20: count up from 11 to 20, which is 9. Ask: how much altogether (11); how much change (9). Children answer aloud. The answer is on the next slide. A child who gives 12 took away only the cup: ask what else she bought."
+   "note": "Two steps. First the total: the cup costs $8 and the pencil costs $3, so they cost $11. Then the change from $20: count up from 11 to 20, which is 9. Ask: how much altogether (11); how much change (9). Children answer aloud. The answer is on the next slide. A child who gives 12 took away only the cup: ask what else she bought."
   },
   {
    "id": "s-m4a",
@@ -830,7 +830,7 @@
      "text": "Sip some water."
     }
    ],
-   "note": "Four minutes. Stand up on camera with a little clear space. Call an amount and children make it with claps ($2 each) and stamps ($5 each): $7 is one stamp and one clap, $9 is a stamp and two claps, $4 is two claps, $10 is two stamps (or five claps). Ask: can you make $3? (no) $1? (no). No equipment, no running. A child may stay seated and tap the desk softly. Do not give prizes or compare children."
+   "note": "Four minutes. Stand up on camera with a little clear space. Call an amount and children make it with claps ($2 each) and stamps ($5 each): $7 is one stamp and one clap, $9 is a stamp and two claps, $4 is two claps, $10 is two stamps (or five claps). Then call $6, $11 and $14. No equipment, no running. A child may stay seated and tap the desk softly. Do not give prizes or compare children."
   },
   {
    "id": "s-ws1",
@@ -852,7 +852,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: four tags, which two cost exactly $10. Question 2: a ruler $6 and a glue stick $5, how much altogether. Question 3: Wei has $20 and buys a book for $14; how much is left."
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: four tags, which two cost exactly $10. Question 2: a ruler $7 and a cup $8, how much altogether. Question 3: Wei has $20 and buys a jar for $14; how much is left."
   },
   {
    "id": "s-ws1ans",
@@ -869,7 +869,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 $3 and $7; Q2 $11; Q3 $6."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 $3 and $7; Q2 $15; Q3 $6."
   },
   {
    "id": "s-ws2",
@@ -891,7 +891,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: Ali has $10; a ruler costs $7 and a book costs $5; enough or not, and how much more. Question 5: 3 rulers at $7. Question 6: a table of money had, spent and left. Wait 10 seconds before helping."
+   "note": "Read questions 4 to 6 aloud. Question 4: Ali has $10; a ruler costs $7 and a glue stick costs $5; enough or not, and how much more. Question 5: 3 rulers at $7. Question 6: a table of money had, spent and left. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -986,7 +986,7 @@
      "text": "Puzzle 1: $5. Puzzle 2: $2 and $7, or $4 and $5."
     }
    ],
-   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: 3 and 2 make 5. Puzzle 2: two answers. 2 needs 7 (yes), 4 needs 5 (yes), 5 is already used, 7 is already used. It was the same idea as round 1: start with the cheapest and ask what partner it needs."
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: 3 and 2 make 5. Puzzle 2: two answers. 2 needs 7 (yes), 4 needs 5 (yes), 5 is already used, 7 is already used. It was the same idea as round 1: start with the one that costs the least and ask what partner it needs."
   },
   {
    "id": "s-exit",
@@ -1072,7 +1072,7 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "title": "Go further: three ways",
+   "title": "Go further: pens and rubbers",
    "blocks": [
     {
      "t": "p",
@@ -1102,7 +1102,7 @@
       ],
       [
        "Is it always true?",
-       "Starting with the most expensive item finds every way. Try it for $12."
+       "Starting at the smallest number and going up finds every way. Try it for $12."
       ],
       [
        "Make a puzzle",
@@ -1138,25 +1138,29 @@
       "text": "@rec"
      },
      {
-      "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
-      "s": 22
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your price tags and play money on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your price tags and play money on the table."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
       "text": "Today we are in the school shop. We plan what to buy with the money we have. And we find every way, so we do not miss one."
      },
      {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1281,7 +1285,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: $5. Puzzle 2 answer: $2 and $7, or $4 and $5 (two answers). Look for good ideas to praise later (a child who tried pairs from the cheapest tag, or found both). Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: $5. Puzzle 2 answer: $2 and $7, or $4 and $5 (two answers). Look for good ideas to praise later (a child who tried pairs from the tag that costs the least, or found both). Do not write scores or keep a list."
      }
     ]
    },
@@ -1299,7 +1303,7 @@
      },
      {
       "k": "SAY",
-      "text": "The tags and the notes are the teachers today. Take the rubber, pencil, pen, glue, ruler and cup tags. Find two tags that cost exactly twelve dollars together. There are two answers."
+      "text": "The tags and the notes are the teachers today. Take the rubber, pencil, pen, glue, ruler and cup tags. Find two different tags that cost exactly twelve dollars together. There are two answers."
      },
      {
       "k": "WORK",
@@ -1313,7 +1317,7 @@
      },
      {
       "k": "SAY",
-      "text": "Here is a way to be sure. Start with the cheapest tag, and ask what partner it needs. Two dollars needs ten. No tag. Three needs nine. No tag. Four needs eight: the cup. Five needs seven: the ruler."
+      "text": "Here is a way to be sure. Start with the tag that costs the least, and ask what partner it needs. Two dollars needs ten. No tag. Three needs nine. No tag. Four needs eight: the cup. Five needs seven: the ruler."
      },
      {
       "k": "SLIDE",
@@ -1322,7 +1326,7 @@
      },
      {
       "k": "SAY",
-      "text": "Four and eight, and five and seven. Two ways. Starting with the cheapest means we do not miss one."
+      "text": "Four and eight, and five and seven. Two ways. Starting with the tag that costs the least means we do not miss one."
      },
      {
       "k": "SLIDE",
@@ -1390,7 +1394,7 @@
      },
      {
       "k": "SAY",
-      "text": "A budget is the money you have. Mei has fifteen dollars. The toy car costs eleven dollars and the ball costs six dollars."
+      "text": "A budget is the money you have. Mei has fifteen dollars. The toy car costs eleven dollars and the shoe costs six dollars."
      },
      {
       "k": "ASK",
@@ -1481,7 +1485,7 @@
      },
      {
       "k": "SAY",
-      "text": "Two steps. Mei buys the cup for eight dollars and the pen for three dollars. She gives the cashier two ten-dollar notes."
+      "text": "Two steps. Mei buys the cup for eight dollars and the pencil for three dollars. She gives the cashier two ten-dollar notes."
      },
      {
       "k": "ASK",
@@ -1525,7 +1529,7 @@
      },
      {
       "k": "WORK",
-      "text": "Call amounts: $7, $9, $4, $10, $12. Then ask: can you make $3? $1? Children clap and stamp; seated children tap the desk softly.",
+      "text": "Call amounts: $7, $9, $4, $10, $12. Then call $6, $11 and $14. Children clap and stamp; seated children tap the desk softly.",
       "s": 160
      }
     ]
@@ -1544,12 +1548,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: Ben has exactly ten dollars. He buys two things. Look at the four tags. Which two cost ten dollars? Question 2: Siti buys a ruler for six dollars and a glue stick for five dollars. How much does she pay altogether? Question 3: Wei has twenty dollars. He buys a book for fourteen dollars. How much money does he have left?"
+      "text": "Page 1, Start here. Question 1: Ben has exactly ten dollars. He buys two different things. Look at the four tags. Which two cost ten dollars? Question 2: Siti buys a ruler for seven dollars and a cup for eight dollars. How much does she pay altogether? Question 3: Wei has twenty dollars. He buys a jar for fourteen dollars. How much money does he have left?"
      },
      {
       "k": "WORK",
       "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 490
+      "s": 510
      },
      {
       "k": "SLIDE",
@@ -1558,7 +1562,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: three dollars and seven dollars. Question 2: eleven dollars. Question 3: six dollars. Tick your own page with a tick."
+      "text": "Question 1: three dollars and seven dollars. Question 2: fifteen dollars. Question 3: six dollars. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1571,12 +1575,12 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: Ali has ten dollars. A ruler costs seven dollars and a book costs five dollars. Does Ali have enough money for both? Circle Yes or No. How much more money does he need? Question 5: a ruler costs seven dollars. Mei buys three rulers. Write the number sentence, then how much they cost. Question 6: fill in the blanks in the table."
+      "text": "Page 2. Question 4: Ali has ten dollars. A ruler costs seven dollars and a glue stick costs five dollars. Does Ali have enough money for both? Circle Yes or No. How much more money does he need? Question 5: a ruler costs seven dollars. Mei buys three rulers. Write the number sentence, then how much they cost. Question 6: fill in the blanks in the table."
      },
      {
       "k": "WORK",
       "text": "Page 2, questions 4 to 6.",
-      "s": 520
+      "s": 630
      },
      {
       "k": "SLIDE",
@@ -1604,11 +1608,11 @@
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 240
+      "s": 130
      },
      {
       "k": "STUCK",
-      "text": "Q1: start with the cheapest tag and ask what partner it needs. Q2: add the two prices. Q3: count up from 14 to 20. Q4: add the two prices and compare with 10. Q5: add the same price three times. Q6: had take away spent is left; use it each way round."
+      "text": "Q1: start with the tag that costs the least and ask what partner it needs. Q2: add the two prices. Q3: count up from 14 to 20. Q4: add the two prices and compare with 10. Q5: add the same price three times. Q6: had take away spent is left; use it each way round."
      },
      {
       "k": "STUCK",
@@ -1689,7 +1693,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Mei spends exactly eleven dollars on two things. The tags say three dollars, four dollars, five dollars and eight dollars. Which two did she buy? Choose the correct answer. Option 1: three dollars and four dollars. Option 2: three dollars and eight dollars. Option 3: four dollars and five dollars. Option 4: five dollars and eight dollars. Write its number in the bracket. E2. Ben has twelve dollars. He wants a pen for five dollars and a book for eight dollars. Does he have enough money? Circle Yes or No. E3. A cup costs three dollars. Ali buys four cups. How much do the cups cost altogether?",
+      "text": "E1. Mei spends exactly eleven dollars on two things. The tags say three dollars, four dollars, five dollars and eight dollars. Which two did she buy? Choose the correct answer. Option 1: three dollars and four dollars. Option 2: three dollars and eight dollars. Option 3: four dollars and five dollars. Option 4: five dollars and eight dollars. Write its number in the bracket. E2. Ben has twelve dollars. He wants a pen for six dollars and a book for eight dollars. Does he have enough money? Circle Yes or No. E3. A cup costs three dollars. Ali buys four cups. How much do the cups cost altogether?",
       "s": 70
      },
      {
@@ -1793,7 +1797,7 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Ben has exactly $10. He buys two things. Look at the four tags.",
+    "text": "Ben has exactly $10. He buys two different things. Look at the four tags.",
     "parts": [
      {
       "l": "",
@@ -1810,8 +1814,8 @@
      3,
      7
     ],
-    "hint": "Start with the cheapest tag. What partner does it need to make 10?",
-    "solution": "3 needs 7 to make 10, and there is a $7 tag. 5 needs 5, but there is only one $5 tag. 9 needs 1, and there is no $1 tag. So the two tags are $3 and $7.",
+    "hint": "Start with the tag that costs the least. What partner does it need to make 10?",
+    "solution": "3 needs 7 to make 10, and there is a $7 tag. 5 needs 5, but there is only one $5 tag and the two things must be different. 8 needs 2, and there is no $2 tag. So the two tags are $3 and $7.",
     "mistakes": [
      "Using the $5 tag twice.",
      "Choosing $3 and $5 or $5 and $7 without adding."
@@ -1838,8 +1842,8 @@
      },
      {
       "type": "price_tag",
-      "item": "ball",
-      "price": "$9",
+      "item": "cup",
+      "price": "$8",
       "size": 55
      }
     ]
@@ -1848,37 +1852,37 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Siti buys a ruler for $6 and a glue stick for $5. How much does she pay altogether?",
+    "text": "Siti buys a ruler for $7 and a cup for $8. How much does she pay altogether?",
     "parts": [
      {
       "l": "",
       "text": "She pays $____ altogether.",
-      "ans": "$11",
-      "val": 11
+      "ans": "$15",
+      "val": 15
      }
     ],
-    "answer": "$11",
+    "answer": "$15",
     "val": [
-     11
+     15
     ],
-    "hint": "Altogether means add the two prices. 6 and 4 make 10.",
-    "solution": "6 and 5: 6 and 4 make 10, and 1 more makes 11. Siti pays $11 altogether.",
+    "hint": "Altogether means add the two prices. 7 and 3 make 10.",
+    "solution": "7 and 8: 7 and 3 make 10, and 5 more makes 15. Siti pays $15 altogether.",
     "mistakes": [
-     "Taking away: 6 take away 5 is 1.",
-     "Writing $65 by joining the digits."
+     "Taking away: 8 take away 7 is 1.",
+     "Writing $78 by joining the digits."
     ],
     "mins": 2.5,
     "visuals": [
      {
       "type": "price_tag",
       "item": "ruler",
-      "price": "$6",
+      "price": "$7",
       "size": 55
      },
      {
       "type": "price_tag",
-      "item": "glue",
-      "price": "$5",
+      "item": "cup",
+      "price": "$8",
       "size": 55
      }
     ]
@@ -1887,7 +1891,7 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Wei has $20. He buys a book for $14. How much money does he have left?",
+    "text": "Wei has $20. He buys a jar for $14. How much money does he have left?",
     "parts": [
      {
       "l": "",
@@ -1904,12 +1908,12 @@
     "solution": "Count up from 14 to 20. That is 6 steps. Wei has $6 left.",
     "mistakes": [
      "Adding 20 and 14.",
-     "Writing 14, the price of the book."
+     "Writing 14, the price of the jar."
     ],
     "mins": 3,
     "visual": {
      "type": "price_tag",
-     "item": "book",
+     "item": "jar",
      "price": "$14",
      "size": 55
     }
@@ -1918,7 +1922,7 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Ali has $10. A ruler costs $7 and a book costs $5.",
+    "text": "Ali has $10. A ruler costs $7 and a glue stick costs $5.",
     "parts": [
      {
       "l": "a",
@@ -1958,7 +1962,7 @@
      },
      {
       "type": "price_tag",
-      "item": "book",
+      "item": "glue",
       "price": "$5",
       "size": 55
      }
@@ -2071,16 +2075,17 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Exactly $20. Pens cost $2 each and books cost $7 each. Ali spends exactly $20 on pens and books. He may buy only pens.",
+    "text": "Exactly $20. Pens cost $2 each and books cost $7 each. Ali spends exactly $20 on pens and books. He may buy 0 books.",
     "parts": [
      {
       "l": "a",
-      "text": "Fill in the table. Write X if the money cannot be spent exactly.",
-      "ans": "10; X; 3",
+      "text": "Fill in the table. Write X if the money cannot be spent exactly or is not enough.",
+      "ans": "10; X; 3; X",
       "val": [
        10,
        "X",
-       3
+       3,
+       "X"
       ]
      },
      {
@@ -2090,15 +2095,16 @@
       "val": 2
      }
     ],
-    "answer": "10; X; 3; 2 ways",
+    "answer": "10; X; 3; X; 2 ways",
     "val": [
      10,
      "X",
      3,
+     "X",
      2
     ],
     "hint": "For each number of books, work out what is left for pens.",
-    "solution": "0 books: $20 is left, which is 10 pens. 1 book: $13 is left, and $2 pens cannot make 13 (X). 2 books cost $14. 20 take away 14 is 6, which is 3 pens. 3 books cost $21, too much. So there are 2 ways: 10 pens, or 2 books and 3 pens.",
+    "solution": "0 books: $20 is left, which is 10 pens. 1 book: $13 is left, and $2 pens cannot make 13 (X). 2 books cost $14. 20 take away 14 is 6, which is 3 pens. 3 books cost $21, which is too much (X). So there are 2 ways: 10 pens, or 2 books and 3 pens.",
     "mistakes": [
      "Stopping after the first way.",
      "Counting 2 books and 3 pens and 3 pens and 2 books as two ways."
@@ -2121,6 +2127,10 @@
       ],
       [
        "2",
+       "[]"
+      ],
+      [
+       "3",
        "[]"
       ]
      ],
@@ -2174,31 +2184,31 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Ravi buys a book for $12, a ball for $8 and a pen for $3. He pays with a fifty-dollar note.",
+    "text": "Ravi buys a book for $9, a hat for $4 and a pen for $2. He pays with a fifty-dollar note.",
     "parts": [
      {
       "l": "a",
       "text": "The three things cost $____.",
-      "ans": "$23",
-      "val": 23
+      "ans": "$15",
+      "val": 15
      },
      {
       "l": "b",
       "text": "His change is $____.",
-      "ans": "$27",
-      "val": 27
+      "ans": "$35",
+      "val": 35
      }
     ],
-    "answer": "$23; $27",
+    "answer": "$15; $35",
     "val": [
-     23,
-     27
+     15,
+     35
     ],
     "hint": "Add the three prices first. Then count up to 50.",
-    "solution": "12 and 8 make 20. 20 and 3 make 23. Count up from 23 to 30: 7. Then from 30 to 50: 20. 7 and 20 make 27. Ravi gets $27 change.",
+    "solution": "9 and 4 make 13. 13 and 2 make 15. Count up from 15 to 20: 5. Then from 20 to 50: 30. 5 and 30 make 35. Ravi gets $35 change.",
     "mistakes": [
      "Adding only two of the prices.",
-     "Writing 23 as the change."
+     "Writing 15 as the change."
     ],
     "mins": 5
    },
@@ -2243,7 +2253,7 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Pay exactly $20 with $10 notes, $5 notes and $2 notes. Find every way. Way 1 is shown. Any order of the ways is fine.",
+    "text": "Pay exactly $20 with $10 notes, $5 notes and $2 notes. Write how many of each note. Find every way. Way 1 is shown. Any order of the ways is fine.",
     "parts": [],
     "answer": "Six ways: (2, 0, 0), (1, 2, 0), (1, 0, 5), (0, 4, 0), (0, 2, 5), (0, 0, 10) as ten-dollar, five-dollar, two-dollar notes",
     "val": [
@@ -2297,6 +2307,12 @@
       ],
       [
        "6",
+       "[]",
+       "[]",
+       "[]"
+      ],
+      [
+       "7",
        "[]",
        "[]",
        "[]"
@@ -2459,11 +2475,11 @@
   },
   {
    "id": "E2",
-   "text": "Ben has $12. He wants a pen for $5 and a book for $8. Does he have enough money? Circle Yes or No.",
+   "text": "Ben has $12. He wants a pen for $6 and a book for $8. Does he have enough money?",
    "parts": [
     {
      "l": "",
-     "text": "Circle one.",
+     "text": "Circle Yes or No.",
      "ans": "No",
      "val": "No",
      "choices": [
@@ -2476,10 +2492,10 @@
    "val": [
     "No"
    ],
-   "solution": "5 and 8 make 13. 13 is more than 12, so $12 is not enough.",
+   "solution": "6 and 8 make 14. 14 is more than 12, so $12 is not enough.",
    "mistakes": [
     "Saying Yes because each price is less than 12.",
-    "Adding and getting 12."
+    "Taking away: 8 take away 6 is 2."
    ]
   },
   {
@@ -2553,7 +2569,7 @@
    "id": "H4",
    "tier": "think",
    "text": "Pay exactly $18 with $2 notes and $5 notes. Write both ways. Way 1: ____ five-dollar notes and ____ two-dollar notes. Way 2: ____ five-dollar notes and ____ two-dollar notes.",
-   "answer": "0 five-dollar and 9 two-dollar; 2 five-dollar and 4 two-dollar",
+   "answer": "0 five-dollar and 9 two-dollar; 2 five-dollar and 4 two-dollar (either way can come first)",
    "val": [
     0,
     9,
@@ -2587,8 +2603,8 @@
     "id": "M1",
     "title": "Is it always true?",
     "minutes": 4,
-    "tutor": "Mei says: to find every way, start with the most expensive item and go down one at a time. Is that always true? Try it for exactly $12 with $2 notes and $5 notes, then with $3 and $4 items.",
-    "rec": "Recording: pause. Mei says start with the biggest item and go down. Try it for $12 with $2 and $5 notes.",
+    "tutor": "Mei says: to find every way, start at the smallest number and go up one at a time. Is that always true? Try it for exactly $12 with $2 notes and $5 notes, then with $3 and $4 items.",
+    "rec": "Recording: pause. Mei says start at the smallest number and go up. Try it for $12 with $2 and $5 notes.",
     "answer": "Yes. Going in order means no case is missed. For $12 with $2 and $5 notes: 2 five-dollar notes and 1 two-dollar note, or 6 two-dollar notes."
    },
    {
@@ -2610,7 +2626,7 @@
   ]
  },
  "parent": {
-  "summary": "We planned what to buy in the school shop. Your child chose two tags for an exact amount, found the total and the change, and listed every way to pay with a table. The total, the change and which two items cost exactly an amount are Primary 1 work.",
+  "summary": "We planned what to buy in the school shop. Your child chose two tags for an exact amount, found the total and the change, and listed every way to pay. The total, the change and which two items cost exactly an amount are Primary 1 work.",
   "words": [
    "budget: the money you have",
    "exactly: no more and no less",
@@ -2620,7 +2636,7 @@
   ],
   "try_home": [
    "Pick two items from a leaflet. Ask: how much altogether? With $20, how much is left?",
-   "Ask: which two items cost exactly $10? Start with the cheapest.",
+   "Ask: which two items cost exactly $10? Start with the one that costs the least.",
    "Pay exactly $10 with $2 and $5 notes. How many ways?"
   ],
   "ask": [
@@ -2629,12 +2645,12 @@
    "Is the money enough?"
   ],
   "when_stuck": "Let your child use the tags and play money and wait 10 seconds before helping. Asking 'What partner does this price need?' works better than giving the answer. Please do not teach a rule; going in order is the method. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Fill the Grid. Online practice: your tutor will share the link.",
+  "next": "Next lesson: Fill the Grid. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. Please keep the link private.",
   "quote": "Go in order, so that no way is missed. The same things in a different order are the same way.",
   "report_line": "Your child is learning to plan within a budget and to list every way in order. This week: two items for an exact amount, total and change, and listing every way to pay $12.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
   "next_materials": [
-   "The grid-tile page (page 6 of your book), cut out by a grown-up: 16 tiles. The two mats on it are not cut",
+   "16 grid tiles: the last page of your Lesson 27 workbook, cut out by a grown-up",
    "Your price tags and play money, kept in their envelope for the Quest",
    "A coloured pencil is optional",
    "Pencil, rubber and paper"
@@ -2650,19 +2666,19 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 $3 and $7; S2 $11; S3 $6; S4 No and $2; S5 $21; S6 8, 9, 17; T1 10, X, 3 and 2 ways; T2 No, 2 five-dollar and 3 two-dollar notes; T3 $23 and $27; T4 True, True, False, False; G1 six ways; G2 5 stickers and 2 pads; I1 $1 and $3.",
+  "Solve every workbook question yourself first. Check the answers: S1 $3 and $7; S2 $15; S3 $6; S4 No and $2; S5 $21; S6 8, 9, 17; T1 10, X, 3 and 2 ways; T2 No, 2 five-dollar and 3 two-dollar notes; T3 $15 and $35; T4 True, True, False, False; G1 six ways; G2 5 stickers and 2 pads; I1 $1 and $3.",
   "Tell parents a week before: no new cutting this lesson. The price tags and the play money from the two lessons before must be in their envelope (a way that needs more than five $2 notes is written, not laid out). The next lesson needs the 16 grid tiles cut out.",
   "Have the slides open. Have your own tags and notes to show on camera if you wish. Practise the clap-and-stamp break.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
   "Be plain with families: which two items cost exactly an amount, the total, the change and equal items are Primary 1 work; listing every way to make an amount and paying with three kinds of note are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. Whole dollars only. There is no $20 note: a $20 payment is two ten-dollar notes.",
   "Slides s-m1 to s-m4 keep the answers off the screen while you ask. Read every question with its prices, and the four options of E1, aloud: the figures on the slides are small."
  ],
  "workbook": {
   "header": "Money: the school shop",
-  "hint_p1": "Use your price tags or your fingers. Start with the cheapest tag.",
+  "hint_p1": "Use your price tags or your fingers. Each tag only once. Start with the tag that costs the least.",
   "hint_p2": "Add the prices first. Then compare with the money you have.",
-  "hint_p3": "Go in order, so that no way is missed. Choose any question, in any order.",
-  "hint_p4": "Go in order and check each way. Choose any question. You do not have to finish them all.",
+  "hint_p3": "Go in order, so that no way is missed. This page is for home too.",
+  "hint_p4": "Go in order and check each way. This page is for home too.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",
@@ -2891,7 +2907,7 @@
      "hint": "Add the two prices. Is the total more than $10?",
      "steps": [
       "{x} and {y} make the total.",
-      "Compare the total with 10.",
+      "Compare the total with $10.",
       "Enough only if the total is not more than $10."
      ]
     }
@@ -2900,7 +2916,7 @@
     "id": "c5",
     "tier": "core",
     "type": "number",
-    "q": "Aisha has $10. A book costs $13. How much more money does she need?",
+    "q": "Aisha has $10. A book costs $13. How much more money does Aisha need?",
     "hint": "Count up from what she has to the price.",
     "steps": [
      "Count up from 10 to 13.",
@@ -2913,7 +2929,7 @@
       "a": [
        23
       ],
-      "say": "23 is the total. The question asks how much more money he needs."
+      "say": "23 is the total. The question asks how much more money she needs."
      }
     ],
     "tpl": {
@@ -2935,7 +2951,7 @@
       ]
      },
      "derive": {},
-     "q": "Aisha has {a|usd}. A book costs {b|usd}. How much more money does she need?",
+     "q": "Aisha has {a|usd}. A book costs {b|usd}. How much more money does Aisha need?",
      "answer": "b-a",
      "hint": "Count up from {a} to {b}.",
      "steps": [
@@ -2949,7 +2965,7 @@
     "id": "t1",
     "tier": "stretch",
     "type": "number",
-    "q": "A book costs $12, a ball costs $8 and a pen costs $3. Ravi pays with a fifty-dollar note. How much change does he get?",
+    "q": "A book costs $12, a cap costs $8 and a pen costs $3. How much change does Ravi get when he pays with a fifty-dollar note?",
     "hint": "Add the three prices first. Then count up to 50.",
     "steps": [
      "12 and 8 make 20. 20 and 3 make 23.",
@@ -2986,7 +3002,7 @@
       ]
      },
      "derive": {},
-     "q": "A book costs {a|usd}, a ball costs {b|usd} and a pen costs {c|usd}. Ravi pays with a fifty-dollar note. How much change does he get?",
+     "q": "A book costs {a|usd}, a cap costs {b|usd} and a pen costs {c|usd}. How much change does Ravi get when he pays with a fifty-dollar note?",
      "answer": "50-a-b-c",
      "hint": "Add the three prices first. Then count up to 50.",
      "steps": [
@@ -3001,11 +3017,11 @@
     "tier": "stretch",
     "type": "number",
     "q": "Pay exactly $16 with $2 notes and $5 notes. How many different ways are there?",
-    "hint": "Go in order: no $5 notes, then one, then two, then three.",
+    "hint": "Go in order: no $5 notes, one, two, and so on until the notes are too much.",
     "steps": [
-     "No $5 notes: 8 two-dollar notes.",
-     "Two $5 notes: 3 two-dollar notes.",
-     "One or three $5 notes leave an odd amount, so there are 2 ways."
+     "No $5 notes: 8 two-dollar notes. Two $5 notes: 3 two-dollar notes.",
+     "One $5 note leaves $11 and three leave $1: $2 notes cannot make those.",
+     "So there are 2 ways."
     ],
     "answer": 2,
     "slips": [
@@ -3030,10 +3046,10 @@
      "derive": {},
      "q": "Pay exactly {t|usd} with $2 notes and $5 notes. How many different ways are there?",
      "answer": "t//10+1",
-     "hint": "Go in order: no $5 notes, then one, then two, then three.",
+     "hint": "Go in order: no $5 notes, one, two, and so on until the notes are too much.",
      "steps": [
-      "Try each number of $5 notes in order.",
-      "Count the ones where the rest is a whole number of $2 notes.",
+      "Try 0, 1, 2 five-dollar notes and so on, until the notes are too much.",
+      "Keep a way when the money left is a whole number of $2 notes (an even amount).",
       "There are {ans} ways."
      ]
     }
@@ -3062,8 +3078,8 @@
     "tpl": {
      "vars": {
       "b": [
-       0,
        2,
+       3,
        4
       ],
       "k": [
@@ -3076,15 +3092,17 @@
       ]
      },
      "derive": {
-      "t": "5*b+2*k"
+      "t": "5*b+2*k",
+      "five": "5*b",
+      "rest": "2*k"
      },
      "q": "Ali pays exactly {t|usd} with {b} five-dollar notes and some two-dollar notes. How many two-dollar notes?",
      "answer": "k",
      "hint": "Take the five-dollar notes away first. Then share the rest into $2 notes.",
      "steps": [
-      "{b} five-dollar notes are the first part.",
-      "Take that away from {t}.",
-      "The rest is {k} two-dollar notes."
+      "{b} five-dollar notes make {five|usd}.",
+      "{t} take away {five} is {rest}.",
+      "{rest} shared into two-dollar notes is {k}."
      ]
     }
    },
@@ -3141,7 +3159,7 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "A pen costs $8. Mei buys 4 pens and pays with a fifty-dollar note. How much change does she get?",
+    "q": "A pen costs $8. Mei buys 4 pens and pays with a fifty-dollar note. What change does she get?",
     "hint": "Find the cost of 4 pens first. Then count up to 50.",
     "steps": [
      "4 pens cost 8 and 8 and 8 and 8, which is $32.",
@@ -3171,7 +3189,7 @@
       ]
      },
      "derive": {},
-     "q": "A pen costs {p|usd}. Mei buys 4 pens and pays with a fifty-dollar note. How much change does she get?",
+     "q": "A pen costs {p|usd}. Mei buys 4 pens and pays with a fifty-dollar note. What change does she get?",
      "answer": "50-4*p",
      "hint": "Find the cost of 4 pens first. Then count up to 50.",
      "steps": [

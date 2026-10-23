@@ -70,10 +70,10 @@ CLASS = {
     'opt': [('ways', 10, (4, 2))],
 }
 WORKBOOK = {
-    'S1': [('exact', 10, (3, 5, 7, 9))], 'S2': [('total', 6, 5)], 'S3': [('left', 20, 14)], 'S4': [('enough', 10, 7, 5)], 'S5': [('times', 7, 3)], 'S6': [('left', 20, 12), ('left', 15, 9), ('left', 17, 8)],
-    'T1': [('ways', 20, (2, 7))], 'T2': [('ways', 16, (2, 5))], 'T3': [('change3', 12, 8, 3, 50)], 'T4': [('ways', 18, (3, 4))],
+    'S1': [('exact', 10, (3, 5, 7, 8))], 'S2': [('total', 7, 8)], 'S3': [('left', 20, 14)], 'S4': [('enough', 10, 7, 5)], 'S5': [('times', 7, 3)], 'S6': [('left', 20, 12), ('left', 15, 9), ('left', 17, 8)],
+    'T1': [('ways', 20, (2, 7))], 'T2': [('ways', 16, (2, 5))], 'T3': [('change3', 9, 4, 2, 50)], 'T4': [('ways', 18, (3, 4))],
     'G1': [('ways', 20, (2, 5, 10))], 'G2': [('seven', 20)], 'G3': [('open',)], 'I1': [('cannot', (2, 5))],
-    'E1': [('exact', 11, (3, 4, 5, 8))], 'E2': [('enough', 12, 5, 8)], 'E3': [('times', 3, 4)],
+    'E1': [('exact', 11, (3, 4, 5, 8))], 'E2': [('enough', 12, 6, 8)], 'E3': [('times', 3, 4)],
     'H1': [('enough', 10, 3, 4)], 'H2': [('times', 3, 5)], 'H3': [('left2', 20, 8, 5)], 'H4': [('ways', 18, (2, 5))],
 }
 
@@ -150,7 +150,7 @@ def run(d):
     w = ways(10, (2, 5)); eq(sorted(w), [(0, 2), (5, 0)], 'explore 2 exactly two ways for $10 with $2 and $5 notes'); eq((5 <= 5, 2 <= 4), (True, True), 'explore 2 fits the notes of the money pages (5 two-dollar, 4 five-dollar)')
     mo = [b['items'] for b in sl['s-explore2-ans']['blocks'] if b.get('type') == 'money']; eq(mo, [[dict(v='$2', n=5)], [dict(v='$5', n=2)]], 's-explore2-ans notes')
     # ---------------------------------------------------------------- Mini-lesson
-    t = tags_of(sl['s-m1']['blocks']); eq(t, [('car', 11), ('ball', 6)], 's-m1 tags'); eq(total(11, 6), 17, 's-m1 total'); eq(17 > 15, True, 's-m1 not enough'); eq(count_up(15, 17), 2, 's-m1 needs 2 more')
+    t = tags_of(sl['s-m1']['blocks']); eq(t, [('car', 11), ('shoe', 6)], 's-m1 tags'); eq(total(11, 6), 17, 's-m1 total'); eq(17 > 15, True, 's-m1 not enough'); eq(count_up(15, 17), 2, 's-m1 needs 2 more')
     eq(total(4, 9) > 12 and count_up(12, 13) == 1, True, 's-m1 your turn: $12 is not enough for 4 and 9, 1 more')
     t = tags_of(sl['s-m2']['blocks']); eq(t, [('glue', 5)] * 3, 's-m2 tags'); eq(total(5, 5, 5), 15, 's-m2'); eq(total(2, 2, 2, 2, 2), 10, 's-m2 your turn')
     rows = [b for b in sl['s-m3']['blocks'] if b.get('type') == 'table'][0]['rows']; eq([r[:2] for r in rows], [['0', '12'], ['1', '7'], ['2', '2']], 's-m3 money left after 0, 1, 2 five-dollar notes')
@@ -160,31 +160,32 @@ def run(d):
     eq([(left // 2 if left % 2 == 0 else 'X') for left in (12, 7, 2)], [6, 'X', 1], 's-m3a recomputed'); eq(sorted(ways(12, (2, 5))), [(1, 2), (6, 0)], 's-m3 exactly two ways for $12')
     eq(5 * 3 > 12, True, 's-m3 a third five-dollar note is too much'); eq(6 > 5, True, 's-m3 six two-dollar notes is more than the 5 in the kit: written, not laid out')
     eq([b for b in sl['s-m3']['blocks'] if b.get('type') == 'table'][0]['rows'][0][2], '[]', 's-m3 hides the answers')
-    t = tags_of(sl['s-m4']['blocks']); eq(t, [('cup', 8), ('pen', 3)], 's-m4 tags'); eq((total(8, 3), count_up(total(8, 3), total(10, 10))), (11, 9), 's-m4 total then change')
+    t = tags_of(sl['s-m4']['blocks']); eq(t, [('cup', 8), ('pencil', 3)], 's-m4 tags'); eq((total(8, 3), count_up(total(8, 3), total(10, 10))), (11, 9), 's-m4 total then change')
     # ---------------------------------------------------------------- Start here
-    q = T['S1']; tg = tags_of(q); eq([p for _, p in tg], [3, 5, 7, 9], 'S1 tags'); w = [c for c in itertools.combinations([p for _, p in tg], 2) if total(*c) == 10]; eq(w, [(3, 7)], 'S1 exactly one pair'); eq(q['val'], [3, 7], 'S1 val'); eq(nums(q['text']), [10], 'S1 budget')
-    q = T['S2']; eq(nums(q['text']), [6, 5], 'S2 text'); eq(total(6, 5), 11, 'S2'); eq(q['val'], [11], 'S2 val'); eq(tags_of(q), [('ruler', 6), ('glue', 5)], 'S2 tags')
-    q = T['S3']; eq(nums(q['text']), [20, 14], 'S3 text'); eq(count_up(14, 20), 6, 'S3'); eq(q['val'], [6], 'S3 val'); eq(tags_of(q), [('book', 14)], 'S3 tag')
-    q = T['S4']; a = nums(q['text']); eq(a, [10, 7, 5], 'S4 text'); eq((total(7, 5) <= 10, count_up(10, total(7, 5))), (False, 2), 'S4'); eq(q['val'], ['No', 2], 'S4 val'); eq([p for _, p in tags_of(q)], [7, 5], 'S4 tags')
+    q = T['S1']; tg = tags_of(q); eq([p for _, p in tg], [3, 5, 7, 8], 'S1 tags'); w = [c for c in itertools.combinations([p for _, p in tg], 2) if total(*c) == 10]; eq(w, [(3, 7)], 'S1 exactly one pair of different tags')
+    eq(all(kit[i] == p for i, p in tg), True, 'S1 tags are kit tags with the kit prices'); eq('different' in q['text'], True, 'S1 says two different things'); eq(q['val'], [3, 7], 'S1 val'); eq(nums(q['text']), [10], 'S1 budget')
+    q = T['S2']; eq(nums(q['text']), [7, 8], 'S2 text'); eq(total(7, 8), 15, 'S2'); eq(q['val'], [15], 'S2 val'); eq(tags_of(q), [('ruler', 7), ('cup', 8)], 'S2 tags')
+    q = T['S3']; eq(nums(q['text']), [20, 14], 'S3 text'); eq(count_up(14, 20), 6, 'S3'); eq(q['val'], [6], 'S3 val'); eq(tags_of(q), [('jar', 14)], 'S3 tag')
+    q = T['S4']; a = nums(q['text']); eq(a, [10, 7, 5], 'S4 text'); eq((total(7, 5) <= 10, count_up(10, total(7, 5))), (False, 2), 'S4'); eq(q['val'], ['No', 2], 'S4 val'); eq(tags_of(q), [('ruler', 7), ('glue', 5)], 'S4 tags')
     q = T['S5']; eq(nums(q['text']), [7], 'S5 text'); eq(total(7, 7, 7), 21, 'S5'); eq(q['val'], [7, 7, 7, 21, 21], 'S5 val')
     q = T['S6']; rows = q['visual']['rows']; had = {r[0]: r[1:] for r in rows}
     eq(count_up(12, 20), 8, 'S6 Ravi left'); eq(count_up(6, 15), 9, 'S6 Aisha spent'); eq(total(8, 9), 17, 'S6 Kumar had'); eq(q['val'], [8, 9, 17], 'S6 val')
     eq([r[1:] for r in rows], [['20', '12', '[]'], ['15', '[]', '6'], ['[]', '8', '9']], 'S6 table')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes'); eq(max(max(nums(x['text']) or [0]) for x in d['tiers']['start']) <= 20, True, 'Start here money within $20')
     # ---------------------------------------------------------------- Think harder
-    q = T['T1']; eq(nums(q['text']), [20, 2, 7, 20], 'T1 text'); w = ways(20, (2, 7)); eq(sorted(w), [(3, 2), (10, 0)], 'T1 exactly two ways (pens, books)'); eq(q['val'], [10, 'X', 3, 2], 'T1 val')
-    tbl = [(books, (20 - 7 * books) // 2 if (20 - 7 * books) % 2 == 0 else 'X') for books in (0, 1, 2)]; eq(tbl, [(0, 10), (1, 'X'), (2, 3)], 'T1 table rows'); eq(7 * 3 > 20, True, 'T1 three books are too much')
-    eq([r[0] for r in q['visual']['rows']], ['0', '1', '2'], 'T1 table is by number of books')
+    q = T['T1']; eq(nums(q['text']), [20, 2, 7, 20], 'T1 text'); w = ways(20, (2, 7)); eq(sorted(w), [(3, 2), (10, 0)], 'T1 exactly two ways (pens, books)'); eq(q['val'][:3], [10, 'X', 3], 'T1 val')
+    tbl = [(books, (20 - 7 * books) // 2 if (20 - 7 * books) % 2 == 0 else 'X') for books in (0, 1, 2)]; eq(tbl, [(0, 10), (1, 'X'), (2, 3)], 'T1 table rows'); eq(7 * 3 > 20, True, 'T1 three books are too much (X)')
+    eq([r[0] for r in q['visual']['rows']], ['0', '1', '2', '3'], 'T1 table is by number of books, to the stopping point'); eq(q['val'], [10, 'X', 3, 'X', 2], 'T1 val with the last row')
     q = T['T2']; eq(nums(q['text']), [16, 2, 5, 2], 'T2 text'); w = ways(16, (2, 5)); eq(sorted(w), [(3, 2), (8, 0)], 'T2 exactly two ways'); eq(q['val'], ['No', 2, 3], 'T2 val')
     eq(len(w) == 1, False, 'T2 the child list (eight 2s only) is not complete'); eq((8 * 2, 2 * 5 + 3 * 2), (16, 16), 'T2 both ways make 16')
-    q = T['T3']; eq(nums(q['text']), [12, 8, 3], 'T3 text'); eq((total(12, 8, 3), count_up(total(12, 8, 3), 50)), (23, 27), 'T3'); eq(q['val'], [23, 27], 'T3 val')
+    q = T['T3']; eq(nums(q['text']), [9, 4, 2], 'T3 text'); eq((total(9, 4, 2), count_up(total(9, 4, 2), 50)), (15, 35), 'T3'); eq(q['val'], [15, 35], 'T3 val')
     q = T['T4']; eq(nums(q['text']), [3, 4, 18], 'T4 text'); w = ways(18, (3, 4)); eq(sorted(w), [(2, 3), (6, 0)], 'T4 exactly two ways (rubbers, pencils)')
     st = [s['s'] for s in q['tf']]; eq(len(st), 4, 'T4 four statements')
     claims = [(6, 0) in w, (2, 3) in w, False, (4, 2) in w]      # statement 3 is about the same way in another order: not a new way
     eq(claims, [True, True, False, False], 'T4 truth values'); eq(q['val'], ['True', 'True', 'False', 'False'], 'T4 val'); eq((total(12, 8)), 20, 'T4 statement 4 costs 20, not 18')
     # ---------------------------------------------------------------- Go further
     q = T['G1']; w = ways(20, (10, 5, 2)); eq(sorted(w), [(0, 0, 10), (0, 2, 5), (0, 4, 0), (1, 0, 5), (1, 2, 0), (2, 0, 0)], 'G1 exactly six ways'); eq(len(w), 6, 'G1 count')
-    eq([r[1:] for r in q['visual']['rows']][0], ['2', '0', '0'], 'G1 way 1 is shown'); eq(sum(1 for r in q['visual']['rows'] if r[1] == '[]'), 5, 'G1 five empty rows'); eq(q['val'], [6], 'G1 val')
+    eq([r[1:] for r in q['visual']['rows']][0], ['2', '0', '0'], 'G1 way 1 is shown'); eq(sum(1 for r in q['visual']['rows'] if r[1] == '[]'), 6, 'G1 six empty rows: one more than there are ways to find'); eq(q['val'], [6], 'G1 val')
     q = T['G2']; sols = [(s, p) for s in range(0, 8) for p in range(0, 8) if s + p == 7 and 2 * s + 5 * p == 20]; eq(sols, [(5, 2)], 'G2 exactly one answer'); eq(q['val'], [5, 2], 'G2 val'); eq(nums(q['text']), [2, 5, 20], 'G2 text')
     q = T['G3']; eq([p for _, p in tags_of(q)], [2, 3, 5, 7, 8], 'G3 tags are kit tags'); eq(all(kit[i] == p for i, p in tags_of(q)), True, 'G3 prices match the kit page'); eq(q['val'], ['open'], 'G3 is open')
     # ---------------------------------------------------------------- Investigation: amounts from $1 to $12 that $2 and $5 notes cannot make
@@ -194,7 +195,7 @@ def run(d):
     eq(d['talk']['answer'].startswith('The second child is right'), True, 'talk names the second child')
     q = X['E1']; opts = [nums(o) for o in q['mcq']['options']]; right = [i + 1 for i, o in enumerate(opts) if total(*o) == 11]; eq(right, [2], 'E1 one correct option'); eq(q['val'], right, 'E1 val'); eq(nums(q['text']), [11, 3, 4, 5, 8], 'E1 text')
     eq([total(*o) for o in opts], [7, 11, 9, 13], 'E1 option totals')
-    q = X['E2']; eq(nums(q['text']), [12, 5, 8], 'E2 text'); eq(total(5, 8) > 12, True, 'E2 is No'); eq(q['val'], ['No'], 'E2 val')
+    q = X['E2']; eq(nums(q['text']), [12, 6, 8], 'E2 text'); eq(total(6, 8) > 12, True, 'E2 is No'); eq(q['val'], ['No'], 'E2 val')
     q = X['E3']; eq(nums(q['text']), [3], 'E3 text'); eq(total(3, 3, 3, 3), 12, 'E3'); eq(q['val'], [12], 'E3 val')
     # ---------------------------------------------------------------- home
     eq(nums(H['H1']['text']), [10, 3, 4], 'H1 numbers'); eq(total(3, 4) <= 10, True, 'H1 is Yes'); eq(H['H1']['val'], 'Yes', 'H1 val')
@@ -223,6 +224,9 @@ def run(d):
     kc = {r['piece']: r for r in d['materials']['kit_contract']}
     for r in kc.values(): eq(r['supplied'] >= r['max_used'], True, 'kit contract ' + r['piece'])
     eq(d['workbook']['kits'], [], 'no kit page in this lesson'); eq(len(six), 6, 'six tags at once is the most'); eq(kc['price tags with a price (from the lesson before)']['max_used'], 6, 'tag contract max_used')
+    for where, ob in (('slides', d['slides']), ('tiers', d['tiers']), ('exit', d['exit']), ('home', d['home_practice'])):
+        for it, pr in tags_of(ob):
+            if it in kit: eq(kit[it], pr, f'{where}: the {it} tag shows the Lesson 25 kit price')
     nm = ' '.join(d['parent']['next_materials']).lower(); eq(('16' in nm, 'tiles' in nm), (True, True), 'hand-off to Lesson 27 names the 16 grid tiles')
     pm = ' '.join(p25['parent']['next_materials']).lower(); eq(('price tags' in pm and 'play money' in pm and 'nothing new' in pm), True, 'Lesson 25 hands off the tags and the money with nothing new to cut')
     return n
