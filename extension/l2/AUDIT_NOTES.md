@@ -39,3 +39,9 @@ Written by the author agent. The author did not audit its own work: every point 
 - Gates after rebuild: 100 pages, 497 answers checked, dup_check, wording_lint, bw_check, fill_check, print/check_bw all OK.
 - OPEN (shared tool, not mine): Welcome page rulers sentence, "Beyond Level N" label, wider answer boxes (M7). The Level 4 fix has not landed in build.py, render.py or levels.json; requests are in TOOL_REQUESTS.md.
 - Declined/deferred: M5/M6 tier moves, M9 pace plan, shared-template Lows (Contents titles twice, Welcome hint wording, certificate plaque, DRAFT line).
+
+## Phase 3: shared fix landed
+- {bw} wide answer box now used for money, fraction, decimal and 4-digit answers (done in lib.build, so every unit gets it); a few labels shortened so rows fit.
+- The "Beyond Level 2" label now comes from the renderer (the `beyond` key); no text workaround was in use.
+- Rebuilt at 100 pages; run_checks (497), dup_check, wording_lint, bw_check and check_bw OK.
+- OPEN: the Welcome page (page 3) overflows by 12.4 mm in the soft copy and 6.1 mm in print, so fill_check fails on that one page. It comes from the Level 2 entry in extension/config/levels.json (welcome_notes plus the longer print note). I may not edit levels.json (edit was blocked). Suggested fix: shorten or remove the Level 2 welcome_notes entry ("Beyond Level 2 is ahead of school. You may skip it.") and the colour print note.

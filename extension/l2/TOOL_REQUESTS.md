@@ -6,3 +6,5 @@
 4. Fractions: only plain text `3/8` is available. A stacked fraction markup (for example `{f:3|8}`) in `render.mk` would read better at ages 7 to 9.
 5. `wording_lint.py` bans the word "price" everywhere (book price rule). For a money unit this blocks natural words ("half price", "price tag", "price list"). Suggested: ban only a currency amount next to "price" or a whitelist for shop contexts.
 6. `figs.min_text` raises small figure text to 10 pt, but a figure placed at a small width_mm can still have objects under 8 mm. Level 2 plug-ins therefore choose widths so objects are about 8 mm or more.
+
+Phase 3: the Beyond label, per-level Welcome keys and {bw} landed and are in use. Remaining: the Level 2 Welcome page overflows (see AUDIT_NOTES.md Phase 3).
