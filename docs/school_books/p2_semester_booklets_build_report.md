@@ -82,3 +82,20 @@ validate.py: 747 checks, 0 failed. Page counts unchanged (20 / 5 / 25; keys 11 a
 | M3, L8, L9, L12 | Not changed (M3 awaits the owner; L8 is a library sheet without a unit after two boxes; L9 info; L12 owner: the not-affiliated sentence is also on the P2 licence pages). |
 
 Because the word list changed, several pages got new puzzles or new code words (P2-11, 13 letters, 20, 21 BOTANY, 22, 24 CAMPUS, 25, 27, 28 PEANUT, 30 TONGUE, 31 BANDIT with a new timetable, 32 BEHIND, 33 COBALT, 34 BACKUP, 36, 37 FAMILY with new graph, 38). Re-solved by hand from the final render: P2-04, 06, 07 (TEACUP), 13 (CREAMY), 15, 20 (WIZARD), 21, 24, 28, 30, 31, 32, 33, 34, 37, 38, 39. Pages 11, 22, 25, 27, 36 kept their answers and only the letters changed (their solvers and the word tests pass). The earlier hand-solve list in this report refers to the previous build for those pages.
+
+## Audit round 2: fixes made, and owner decisions
+
+validate.py: 747 checks, 0 failed. Page counts unchanged (20 / 5 / 25; keys 11 and 9).
+
+Owner decisions applied: **P2-REMOVE-P3**, **P2-LOWS-FIX**, **P2-NOTAFFIL-FRONT** (the "Not affiliated with or endorsed by the Ministry of Education, Singapore." sentence is removed from the P2 licence page and printed on the cover instead, small, below the publisher line; the licence page keeps only the sentence that the syllabus is published by the Ministry), **P2-GREY-OK** (the raised key grey limit, 130 blocks a page as a budget, stays) and **P2-FRACTIONS-KEEP** (fractions stay in Semester 1).
+
+| Item | Change |
+|---|---|
+| Primary 3 duration content | P2-29 is now "Match the Times": six clocks (to the minute) and six digital times, the pupil writes the letter of the clock for each time (letters spell a word; every wrong matching tested). P2-31 Time Detective is a timetable with the start time and how long each lesson lasts (hours and minutes); questions change hours and minutes to minutes, add two lessons, read the minutes past the hour, count lessons starting before 10 am, and give the minutes over 1 h; no question asks for an end, start or duration to be found from the other two. P2-40 is now a money sheet (Colour the Butterfly, money bank tier 2, seed 311) instead of the time sheet. The division by 9 on P2-20 was already replaced in round 1 (divisors 2, 3, 4, 5 only). |
+| Outcomes now less covered | Time 2.2 "measuring time in hours and minutes": practised only by P2-31 (reading hours and minutes) and no longer by durations from a start and finish time. Time 2.1 is practised by P2-07, 29 and 31; Time 2.3 by P2-30 and 31. Money gains P2-40. The plan's gap table and "excluded" list say so. |
+| 5 cent coin | The dashed inner ring is removed from every coin, so "cents" no longer touches anything. |
+| P2-33 key | Internal labels replaced by "shape and colour", "size and colour", "shape and size", "turn"; "half circle" removed from the note (turning rows use triangles only). |
+| Colour pages | Answer box 9 mm on P2-38, 39 and 40. |
+| P2-40 unit | Moot: the new sheet prints the cent sign after every box. |
+
+Re-solved by hand from the final render: P2-29 SHADOW (9:32 S, 10:26 H, 4:06 A, 6:12 D, 10:34 O, 7:16 W), P2-31 BANDIT (45, 85, 100, 10, 2, 25), P2-40 (yellow 2, red 4, blue 2, green 2, orange 4; every part solved). 1-bit copies of P2-06, 29, 31, 38 and 40 were viewed: legible, coins clean. All other pages have the same answers as the previous build (compared by key text); P2-33 changed only its key labels.

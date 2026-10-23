@@ -64,7 +64,7 @@ Outputs in `out/`: `P2_S1_Puzzles.pdf`, `P2_S2_Puzzles.pdf` (20 pages each, phot
 | S2-07 (P2-26) | Litres | 1 | K1 code word (6 letters) |
 | S2-08 (P2-27) | Which Unit? | 1 | K1 the letter of the right unit in each row spells a word (6 letters,  |
 | S2-09 (P2-28) | Order the Measures | 2 | K1 letters in order spell a word (6 letters) + K4 each card used once |
-| S2-12 (P2-29) | Time Taken | 2 | K1 code word (5 letters) |
+| S2-12 (P2-29) | Match the Times | 2 | K1 letters of the matching clocks spell a word (6 letters) + K4 each c |
 | S2-11 (P2-30) | Hours and Minutes | 1 | K1 code word (6 letters) |
 | S2-13 (P2-31) | Time Detective | 2 | K1 code word (6 letters) |
 | S2-14 (P2-32) | Shape Patterns | 1 | K1 the letter of the shape that comes next spells a word (6 letters, t |
