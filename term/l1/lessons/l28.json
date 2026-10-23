@@ -26,7 +26,7 @@
    "A growing pattern of shapes made with sticks, and the 10th and 20th picture, is beyond Primary 1",
    "Make a table is a Primary heuristic (p. 13 to 14)"
   ],
-  "note": "Strand label for the tutor only. NEW TOPIC: the plan has no Primary 1 outcome for a growing shape pattern (shape patterns are Primary 2, p. 34), so a tutor or the owner should confirm the placement. Two school-paper items are close to Start here (a two-row table of equal groups, such as 3 red beads for every 2 blue, and a day-by-day table of pages read): both are Primary 1 and sit at Start here, with new numbers and new contexts. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: the 10th and 20th picture of a growing stick pattern from a table (the rule double and add 1, said in words), why no row of triangles uses an even number of sticks, and the beyond item Picture 100 (the 100th picture, and working back from a total of sticks, a Primary 4 or 5 pattern idea). Letters for an unknown are Primary 6 (p. 43), so every rule is said in words. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type (here TAB: a ratio table and a growing-pattern table; PAT: the 10th and 20th term; BACK: work back from a total). Do not describe the lesson as MOE-aligned. Paper strips are used for sticks: never matches or toothpicks."
+  "note": "Strand label for the tutor only. NEW TOPIC: the plan has no Primary 1 outcome for a growing shape pattern (shape patterns are Primary 2, p. 34), so a tutor or the owner should confirm the placement. Two school-paper items are close to Start here (a two-row table of equal groups, such as 3 red beads for every 2 blue, and a day-by-day table of pages read): both are Primary 1 and sit at Start here, with new numbers and new contexts. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: the 10th and 20th picture of a growing stick pattern from a table (the rule double and add 2, said in words), why no row of triangles with a handle uses an odd number of sticks, and the beyond item Picture 100 (the 100th picture, and working back from a total of sticks, a Primary 4 or 5 pattern idea). Letters for an unknown are Primary 6 (p. 43), so every rule is said in words. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type (here TAB: a ratio table and a growing-pattern table; PAT: the 10th and 20th term; BACK: work back from a total). Do not describe the lesson as MOE-aligned. Paper strips are used for sticks: never matches or toothpicks."
  },
  "contest_moves": [
   "make a table: growing stick pattern and a two-row ratio table",
@@ -798,7 +798,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 4, 7, 10; Q2 9 red beads and 8 blue beads, and 15 red beads for 10 blue beads."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 5, 8, 11; Q2 9 red beads and 8 blue beads, and 15 red beads for 10 blue beads."
   },
   {
    "id": "s-ws2",
@@ -1573,7 +1573,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 4, 7, 10. Question 2: 9 red beads and 8 blue beads, and 15 red beads for 10 blue beads. Tick your own page with a tick."
+      "text": "Question 1: 5, 8, 11. Question 2: 9 red beads and 8 blue beads, and 15 red beads for 10 blue beads. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -2339,17 +2339,17 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Work back from the number of sticks. Every row has a handle.",
+    "text": "Mi uses every stick in a pile to make a row with a handle. Work back from the number of sticks.",
     "parts": [
      {
       "l": "a",
-      "text": "32 sticks make a row of triangles, with none left over. How many triangles? ____",
+      "text": "Mi has 32 sticks. She makes a row of triangles. How many triangles? ____",
       "ans": "15",
       "val": 15
      },
      {
       "l": "b",
-      "text": "38 sticks make a row of squares, with none left over. How many squares? ____",
+      "text": "Ali has 38 sticks. He makes a row of squares. How many squares? ____",
       "ans": "12",
       "val": 12
      }
@@ -2933,7 +2933,7 @@
     "id": "g1",
     "tier": "challenge",
     "type": "number",
-    "q": "32 sticks make a row of triangles with a handle, with none left over. How many triangles?",
+    "q": "Mi has 32 sticks and uses every one for a row of triangles with a handle. How many triangles?",
     "hint": "Take away 2, then halve.",
     "steps": [
      "32 take away 2 is 30.",
@@ -2964,7 +2964,7 @@
      "derive": {
       "n": "(t-2)//2"
      },
-     "q": "{t} sticks make a row of triangles with a handle, with none left over. How many triangles?",
+     "q": "Mi has {t} sticks and uses every one for a row of triangles with a handle. How many triangles?",
      "answer": "n",
      "hint": "Take away 2, then halve.",
      "steps": [
@@ -2978,7 +2978,7 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "38 sticks make a row of squares with a handle, with none left over. How many squares?",
+    "q": "Ali has 38 sticks and uses every one for a row of squares with a handle. How many squares?",
     "hint": "Take away 2, then share into groups of 3.",
     "steps": [
      "38 take away 2 is 36.",
@@ -3010,7 +3010,7 @@
      "derive": {
       "n": "(t-2)//3"
      },
-     "q": "{t} sticks make a row of squares with a handle, with none left over. How many squares?",
+     "q": "Ali has {t} sticks and uses every one for a row of squares with a handle. How many squares?",
      "answer": "n",
      "hint": "Take away 2, then share into groups of 3.",
      "steps": [

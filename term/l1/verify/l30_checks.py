@@ -93,6 +93,7 @@ def triangle_sticks(n):
     for j in range(n):
         for a, b in ((j, j + 1), (j + 1, j + 2), (j, j + 2)):
             edges.add((a, b))
+    edges.add(('handle', 0))       # one handle stick
     return len(edges)
 
 
@@ -119,7 +120,7 @@ CLASS = {
     'remember': [('diff', 9, 5), ('back', 4, 11), ('next', 3, 3)],
     'sneak': [('days', 'Monday', 3), ('back', 6, 15)],
     'explore': [('film', 3, 30, 60), ('pair', 12), ('stars', 2, 8), ('back', 7, 12), ('coins', 4, 30), ('days', 'Wednesday', 10)],
-    'mini': [('left', 15, 10), ('squares', 4, 8)],
+    'mini': [('left', 15, 10), ('squares', 5, 8)],
     'talk': [('pattern20',)],
     'opt': [('notes', 3, 2, 10)],
 }
@@ -172,8 +173,8 @@ def run(d):
     eq(coin_splits(4, 30), [(2, 2)], 'explore card 5: one split'); eq(later('Wednesday', 10), 'Saturday', 'explore card 6')
     # ---------------------------------------------------------------- Mini-lesson
     eq(minus(minus(15, 6), 4), 5, 'm2 backwards'); eq(plus(plus(6, 4), 5), 15, 'm2 third check'); b = sl['s-m1']['blocks'][0]['bars'][0]['segments']; eq([x['v'] for x in b], [6, 4, 5], 's-m1 strip parts'); eq(sum(x['v'] for x in b), 15, 's-m1 strip total')
-    eq([triangle_sticks(1) + 0], [3], 'triangle row check (gate 5 uses it)')
-    sq = [linear(4, 3, k) for k in range(1, 9)]; eq(sq, [4, 7, 10, 13, 16, 19, 22, 25], 's-m3 table'); eq(sl['s-m3-ans']['blocks'][0]['rows'][0][1:], [str(x) for x in sq], 's-m3-ans row'); eq(plus(4, 21), 25, 's-m3 check another way')
+    eq([triangle_sticks(1) + 0], [4], 'triangle row with a handle check (gate 5 uses it)')
+    sq = [linear(5, 3, k) for k in range(1, 9)]; eq(sq, [5, 8, 11, 14, 17, 20, 23, 26], 's-m3 table (squares with a handle)'); eq(sl['s-m3-ans']['blocks'][0]['rows'][0][1:], [str(x) for x in sq], 's-m3-ans row'); eq(plus(5, 21), 26, 's-m3 check another way')
     eq((sl['s-m3']['blocks'][0]['shape'], sl['s-m3']['blocks'][0]['n']), ('square', 3), 's-m3 picture')
     # ---------------------------------------------------------------- Start here
     q = T['S1']; eq((fmt(add_minutes(7, 30, 60)), fmt(add_minutes(3, 0, 30))), ('8:30', '3:30'), 'S1'); eq((q['visual']['h'], q['visual']['m']), (7, 30), 'S1 clock'); eq(q['val'], ['8:30', '3:30'], 'S1 val')
@@ -212,7 +213,7 @@ def run(d):
     q = G['C4']; month = {1: 'Wednesday'}
     for k in range(2, 32): month[k] = later(month[k - 1], 1)
     eq(later('Friday', 3), 'Monday', 'C4a'); eq((plus(3, 7), month[3], month[10]), (10, 'Friday', 'Friday'), 'C4b'); eq(q['val'], ['Monday', 10], 'C4 val'); eq(q['visual']['highlight'], [3], 'C4 highlight')
-    q = G['C5']; eq([triangle_sticks(k) for k in (1, 2, 3, 4, 5)], [3, 5, 7, 9, 11], 'C5 sticks counted from the drawing'); eq(q['val'], [9, 11], 'C5 val')
+    q = G['C5']; eq([triangle_sticks(k) for k in (1, 2, 3, 4, 5)], [4, 6, 8, 10, 12], 'C5 sticks counted from the drawing (with the handle)'); eq(q['val'], [10, 12], 'C5 val')
     q = G['C6']; eq(plus(49, 38), 87, 'C6'); eq(plus(49, 38) == 77, False, 'C6 77 is wrong'); eq(minus(77, 38), 39, 'C6 check'); eq(q['val'], ['No', 87], 'C6 val')
     q = G['C7']; eq((plus(9, 6), minus(15, 6)), (15, 9), 'C7'); eq(q['val'], [15], 'C7 val')
     q = G['C8']; eq(coin_splits(4, 25), [(3, 1)], 'C8 exactly one split'); eq(q['val'], [3, 1], 'C8 val')

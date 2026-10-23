@@ -791,11 +791,12 @@
      "shape": "square",
      "n": 3,
      "label_each": true,
-     "t": "visual"
+     "t": "visual",
+     "handle": true
     },
     {
      "t": "chip",
-     "text": "1 square uses 4 sticks. 2 squares use 7 sticks. 3 squares use 10 sticks. How many sticks do 8 squares use?"
+     "text": "1 square with a handle uses 5 sticks. 2 squares use 8 sticks. 3 squares use 11 sticks. How many sticks do 8 squares use?"
     }
    ],
    "note": "A problem where the first tool gets stuck. Say: try draw it. Children start to draw 8 squares with sticks on paper. After about a minute stop them: it is slow, we may slip, and the picture is huge. Say: Wait. Try a tool. Ask: which tool could be quicker? Take volunteers (a table or a pattern). Do not say the answer yet."
@@ -804,7 +805,7 @@
    "id": "s-m3-ans",
    "part": "mini",
    "kind": "light",
-   "title": "Make a table: 25 sticks",
+   "title": "Make a table: 26 sticks",
    "blocks": [
     {
      "type": "table",
@@ -822,14 +823,14 @@
      "rows": [
       [
        "Sticks",
-       "4",
-       "7",
-       "10",
-       "13",
-       "16",
-       "19",
-       "22",
-       "25"
+       "5",
+       "8",
+       "11",
+       "14",
+       "17",
+       "20",
+       "23",
+       "26"
       ]
      ],
      "cell_h": 70,
@@ -839,10 +840,10 @@
     },
     {
      "t": "answer",
-     "text": "Each square adds 3 sticks. 8 squares use 25 sticks."
+     "text": "Each square adds 3 sticks. 8 squares use 26 sticks."
     }
    ],
-   "note": "The table: 4, 7, 10, then add 3 each time: 13, 16, 19, 22, 25. Check another way: the first square uses 4, and 7 more squares each add 3 sticks: 4 and 21 make 25. Say: when a tool is too slow, we change tool. We did not do anything wrong: drawing was a good start."
+   "note": "The table: 5, 8, 11, then add 3 each time: 14, 17, 20, 23, 26. Check another way: the first square and its handle use 5, and 7 more squares each add 3 sticks: 5 and 21 make 26. Say: when a tool is too slow, we change tool. We did not do anything wrong: drawing was a good start."
   },
   {
    "id": "s-m4",
@@ -2614,40 +2615,41 @@
     "page": 3,
     "tier": "start",
     "skill": "A growing stick pattern (Term 3 Lesson 8)",
-    "text": "1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks.",
+    "text": "1 triangle with a handle uses 4 sticks. 2 triangles use 6 sticks. The picture shows 3 triangles: 8 sticks.",
     "parts": [
      {
       "l": "a",
       "text": "4 triangles use ___ sticks.",
-      "ans": "9",
-      "val": 9
+      "ans": "10",
+      "val": 10
      },
      {
       "l": "b",
       "text": "5 triangles use ___ sticks.",
-      "ans": "11",
-      "val": 11
+      "ans": "12",
+      "val": 12
      }
     ],
-    "say": "Gate 5. 1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks.",
-    "answer": "9; 11",
+    "say": "Gate 5. 1 triangle with a handle uses 4 sticks. 2 triangles use 6 sticks. The picture shows 3 triangles: 8 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks.",
+    "answer": "10; 12",
     "val": [
-     9,
-     11
+     10,
+     12
     ],
-    "solution": "Each new triangle adds 2 sticks: 3, 5, 7, 9, 11. A row of 4 triangles uses 9 sticks and a row of 5 triangles uses 11 sticks.",
+    "solution": "Each new triangle adds 2 sticks: 4, 6, 8, 10, 12. A row of 4 triangles uses 10 sticks and a row of 5 triangles uses 12 sticks.",
     "right": "Both correct.",
     "partly": "One of the two correct.",
     "mistakes": [
-     "(a) 8 (adding 1).",
-     "(b) 15 (5 times 3)."
+     "(a) 9 (adding 1).",
+     "(b) 16 (5 times 3 and 1 more)."
     ],
     "visual": {
      "type": "stick_pattern",
      "shape": "triangle",
      "n": 3,
      "label_each": true,
-     "size": 28
+     "size": 28,
+     "handle": true
     },
     "tools": [
      "draw",
@@ -3349,7 +3351,7 @@
      },
      {
       "k": "SAY",
-      "text": "A new problem. Squares in a row, made of sticks. One square uses four sticks, two squares use seven, three squares use ten. How many sticks do eight squares use? Try draw it."
+      "text": "A new problem. Squares in a row with a handle, made of sticks. One square uses five sticks, two squares use eight, three squares use eleven. How many sticks do eight squares use? Try draw it."
      },
      {
       "k": "WORK",
@@ -3372,11 +3374,11 @@
      },
      {
       "k": "SAY",
-      "text": "Make a table. Four, seven, ten. Each square adds three sticks: thirteen, sixteen, nineteen, twenty-two, twenty-five. Eight squares use twenty-five sticks."
+      "text": "Make a table. Five, eight, eleven. Each square adds three sticks: fourteen, seventeen, twenty, twenty-three, twenty-six. Eight squares use twenty-six sticks."
      },
      {
       "k": "ASK",
-      "text": "How can we check twenty-five another way?",
+      "text": "How can we check twenty-six another way?",
       "resp": 30
      },
      {
@@ -3500,7 +3502,7 @@
      },
      {
       "k": "READ",
-      "text": "Gate 5. 1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks. Gate 6. A child in another class writes 49 plus 38 equals 77. Part a: is the answer right? Circle Yes or No. Part b: the right answer is blank."
+      "text": "Gate 5. 1 triangle with a handle uses 4 sticks. 2 triangles use 6 sticks. The picture shows 3 triangles: 8 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks. Gate 6. A child in another class writes 49 plus 38 equals 77. Part a: is the answer right? Circle Yes or No. Part b: the right answer is blank."
      },
      {
       "k": "WORK",
