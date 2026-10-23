@@ -581,7 +581,9 @@ def people_strip(n=10):
 def render(v):
     """Dispatch for figure types added in Term 2 (and, through figs3, Terms 3 and 4); returns None if v['type'] is not one of them."""
     t = v['type']
-    import figs3
+    import figs3, figs4
+    r4 = figs4.render(v)
+    if r4 is not None: return r4
     if t in figs3.FIGURES3: return figs3.render(v)
     if t == 'objects':
         return objects(v.get('icon'), v.get('n', 0), v.get('per_row', 5), v.get('size', 'm'), tuple(v.get('cross', ())), tuple(v.get('hide', ())), v.get('label'), v.get('items'))

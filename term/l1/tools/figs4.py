@@ -133,3 +133,61 @@ def icon_body(n):
 
 ICONS4 = ['dog', 'kite_blue', 'book_sc', 'cat', 'pear', 'plum', 'fig', 'orange', 'pawn', 'die', 'card', 'hat', 'stone', 'feather', 'mint', 'toffee', 'gum', 'rose', 'daisy', 'tulip', 'bowl', 'stamp', 'duck', 'goose', 'hen',
           'kite', 'egg', 'fish_red', 'fish_blue', 'fish_gold', 'book_m', 'book_s', 'book_a', 'crab', 'snail', 'crayon', 'shirt', 'shorts', 'seat', 'pocket', 'page']
+
+
+# ------------------------------------------------------------------ jump lines (number line rows with points, empty arc room, route arcs)
+
+def jump_lines(start=0, end=100, step=1, label_every=10, rows=None, room=True, width=1000, label_w=0):
+    """One or more number-line rows that share a scale. Each row = {'label': 'Frog A', 'points': [12, {'v': 46, 'box': True}], 'jumps': [[12, 42, '3 tens']], 'hide': []}.
+    A point is a yellow tile under the line joined to its tick by a short stem ({'box': True} draws an empty box to fill instead of the number).
+    jumps are curved arrows above the line (the label sits on top of the arc). room=True leaves clear space above the line so a child can draw
+    her own jumps. Ticks every `step`, a number under every `label_every`; a label that would touch a point tile is left out."""
+    rows = rows or [{}]
+    if any(r.get('label') for r in rows): label_w = max(label_w, 130)
+    pad = 40 + label_w
+    x = lambda v: pad + (v - start) / (end - start) * (width - pad - 40)
+    n_rows = len(rows)
+    P = []
+    y = 0
+    for ri, row in enumerate(rows):
+        jumps = row.get('jumps') or []
+        top = 140 if (jumps or room) else 40
+        base = y + top
+        pts = [({'v': q} if not isinstance(q, dict) else q) for q in row.get('points', [])]
+        P.append(f'<line x1="{pad - 14}" y1="{base}" x2="{width - 26}" y2="{base}" stroke="{NAVY}" stroke-width="5" stroke-linecap="round"/>')
+        if row.get('label'):
+            P.append(f'<text x="8" y="{base + 12}" font-size="36" font-weight="800" fill="{NAVY}" font-family="{FONT}">{_esc(row["label"])}</text>')
+        hide = set(row.get('hide', []))
+        v = start
+        while v <= end:
+            major = (v - start) % label_every == 0
+            P.append(f'<line x1="{x(v):.1f}" y1="{base - (18 if major else 9)}" x2="{x(v):.1f}" y2="{base + (18 if major else 9)}" stroke="{NAVY}" stroke-width="{4 if major else 2.2}"/>')
+            if major and v not in hide:
+                clash = any(abs(x(v) - x(p['v'])) < 54 for p in pts)
+                if not clash:
+                    P.append(f'<text x="{x(v):.1f}" y="{base + 56}" font-size="36" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>')
+            v += step
+        for p in pts:
+            xv = x(p['v'])
+            P.append(f'<line x1="{xv:.1f}" y1="{base}" x2="{xv:.1f}" y2="{base + 28}" stroke="{NAVY}" stroke-width="3.6"/>')
+            P.append(f'<circle cx="{xv:.1f}" cy="{base}" r="9" fill="{RED}" stroke="{NAVY}" stroke-width="2.6"/>')
+            if p.get('box'):
+                P.append(f'<rect x="{xv - 30:.1f}" y="{base + 28}" width="60" height="56" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3.6"/>')
+            else:
+                P.append(f'<rect x="{xv - 33:.1f}" y="{base + 28}" width="66" height="56" rx="12" fill="{YEL}" stroke="{NAVY}" stroke-width="3.2"/>'
+                         f'<text x="{xv:.1f}" y="{base + 68}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{p.get("text", p["v"])}</text>')
+        for (a, b, lab) in jumps:
+            xa, xb = x(a), x(b); mid = (xa + xb) / 2; hg = min(70, 22 + abs(xb - xa) * 0.25)
+            P.append(f'<path d="M{xa:.1f} {base - 16} Q{mid:.1f} {base - 16 - 2 * hg:.1f} {xb:.1f} {base - 40}" fill="none" stroke="{TEAL}" stroke-width="5" stroke-linecap="round"/>')
+            P.append(f'<polygon points="{xb:.1f},{base - 14} {xb - 13:.1f},{base - 40} {xb + 13:.1f},{base - 40}" fill="{TEAL}"/>')
+            P.append(f'<text x="{mid:.1f}" y="{base - 16 - hg - 12:.1f}" font-size="32" font-weight="800" text-anchor="middle" fill="{TEAL}" stroke="#fff" stroke-width="6" paint-order="stroke" font-family="{FONT}">{_esc(lab)}</text>')
+        y = base + 100
+    return (f'<svg viewBox="0 0 {width} {y}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line from {start} to {end}" style="width:100%;height:auto;display:block">{"".join(P)}</svg>')
+
+
+def render(v):
+    """Dispatch for the new figure types; None if v['type'] is not one of them (called first from figs2.render)."""
+    t = v['type']
+    if t == 'jump_lines':
+        return jump_lines(v.get('start', 0), v.get('end', 100), v.get('step', 1), v.get('label_every', 10), v.get('rows'), v.get('room', True))
+    return None

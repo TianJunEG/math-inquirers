@@ -31,3 +31,12 @@ def count_objs(svg_text):
     out = {}
     for k in re.findall(r'class="obj" data-k="(\w+)"', svg_text): out[k] = out.get(k, 0) + 1
     return out
+
+# pets for the picture-graph row labels (not counted symbols)
+OBJ_PATHS.update({
+    "cat": f'<polygon points="3.5,9 3.5,2.5 8,6" {OBJ_ST}/><polygon points="16.5,9 16.5,2.5 12,6" {OBJ_ST}/><circle cx="10" cy="11" r="7" {OBJ_ST}/><circle cx="7.3" cy="10" r="0.9" fill="#000"/><circle cx="12.7" cy="10" r="0.9" fill="#000"/><path d="M9,12.5 L11,12.5 L10,13.5 Z" fill="#000"/><path d="M1.5,11.5 L6,12.3 M1.5,14.5 L6,13.5 M18.5,11.5 L14,12.3 M18.5,14.5 L14,13.5" {OBJ_ST} fill="none"/>',
+    "dog": f'<path d="M5,5 C1,4 1,12 4.5,13 C5.5,10 5.5,7 5,5 Z" {OBJ_ST}/><path d="M15,5 C19,4 19,12 15.5,13 C14.5,10 14.5,7 15,5 Z" {OBJ_ST}/><ellipse cx="10" cy="10.5" rx="6" ry="7" {OBJ_ST}/><circle cx="7.5" cy="9" r="0.9" fill="#000"/><circle cx="12.5" cy="9" r="0.9" fill="#000"/><ellipse cx="10" cy="13" rx="1.6" ry="1.1" fill="#000"/>',
+    "rabbit": f'<ellipse cx="7" cy="5" rx="2" ry="4.5" {OBJ_ST}/><ellipse cx="13" cy="5" rx="2" ry="4.5" {OBJ_ST}/><circle cx="10" cy="13" r="6" {OBJ_ST}/><circle cx="7.8" cy="12" r="0.9" fill="#000"/><circle cx="12.2" cy="12" r="0.9" fill="#000"/><path d="M9,14.5 L11,14.5 L10,15.6 Z" fill="#000"/>',
+    "turtle": f'<path d="M3,12 C3,5 17,5 17,12 Z" {OBJ_ST}/><circle cx="18" cy="11" r="2" {OBJ_ST}/><path d="M5,12 L4,16 M9,12 L8.5,16 M13,12 L13.5,16" {OBJ_ST} fill="none"/><path d="M6,9 L9,7.5 L12,9 L15,8" {OBJ_ST} fill="none"/>',
+})
+NAMES.update({"cat": ("cat", "cats"), "dog": ("dog", "dogs"), "rabbit": ("rabbit", "rabbits"), "turtle": ("turtle", "turtles")})

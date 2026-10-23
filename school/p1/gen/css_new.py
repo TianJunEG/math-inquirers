@@ -63,3 +63,9 @@ CSS_NEW += """
 """
 CSS_NEW += """.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 6mm}.qgrid .qrow{font-size:13.5pt}"""
 CSS_NEW += """.tcard svg{width:36mm;height:36mm}.tt td .no{margin:0 auto}.tt th,.tt td{padding:0 2.5mm}"""
+CSS_NEW += """
+.lrow .lcl{display:inline-flex;align-items:center;justify-content:center;width:9mm;height:9mm;border:0.5mm solid #000;border-radius:50%;font-weight:800;font-size:14pt;flex:none}
+.rr{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:1.5mm}.rr .rs{flex:none}.rr .rs svg{max-width:none;display:block}.rr .rt{flex:1;font-size:12pt;line-height:1.2}.rr .rb{display:flex;align-items:center;gap:2mm;font-size:12pt;font-weight:700}
+.rrows{display:flex;flex-direction:column;gap:2.2mm}
+"""
+CSS_NEW += """.srows.s5{gap:3mm}.srow .sn{font-size:9.5pt;line-height:1.15;width:22mm}.srow .sn b{font-size:10.5pt}.srows.s5 .srow svg{width:13mm}"""

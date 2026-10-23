@@ -216,7 +216,7 @@ PASS  S2-11 (P1-28) V3d the code word's letters have exactly ONE arrangement tha
 PASS  S2-11 (P1-28) V4 guess resistance: at least 3 common words fit the table letters  ['pasty', 'patsy', 'stamp']
 PASS  S2-16 (P1-29) V1 independent solver: clock hands read back from the drawings give the durations, the table rows are solved from their printed times; all equal the key  ['1 h', '30 min', '12:15', '2:05', '8:15', '12:10']
 PASS  S2-16 (P1-29) V1b every clock shows a 5-minute time with hands at least 25 degrees apart  
-PASS  S2-16 (P1-29) V1c at least one half-hour step crosses the hour  
+PASS  S2-16 (P1-29) V1c at least one 30 min step passes the next whole hour  
 PASS  S2-16 (P1-29) V2 code word spells SAILOR  
 PASS  S2-16 (P1-29) V3 no single slip spells another word (large word list, 129 000 words)  870/870
 PASS  S2-16 (P1-29) V3c no swap of two answers spells a word  []
@@ -360,7 +360,7 @@ PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
 PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
-FAIL  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  [(29, 'cross the hour'), (29, 'half-hour')]
+PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  the P1-18 note does not claim half-hour additions cross the hour unless one does  
 PASS  F28: every outcome id of every page has its PDF wording in the Primary 1 section of docs/moe/syllabus_by_level.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P1 strand  
@@ -616,6 +616,6 @@ PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 124, limit 40 p
 PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 23.34% vs greyscale)  5 pages
 PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 134, limit 40 per page)  
 PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.02% vs greyscale)  7 pages
-PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 424, limit 75 per page)  
+PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 421, limit 75 per page)  
 
-TOTAL 619 checks, 1 failed
+TOTAL 619 checks, 0 failed

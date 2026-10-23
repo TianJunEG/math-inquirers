@@ -293,6 +293,8 @@ def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(
     W = pad * 2 + (c1 - c0 + 1) * cell + (cell * 0.9 if vert else 0)
     H = pad * 2 + (r1 - r0 + 1) * cell + (cell * 0.45 if arrows else 0)
     P = []
+    if shade2:      # mint cells carry a diagonal hatch, so yellow (solid) and mint (hatched) are different in black and white
+        P.append(f'<defs><pattern id="hm" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="{MINT}"/><line x1="0" y1="0" x2="0" y2="9" stroke="{NAVY}" stroke-width="2.6"/></pattern></defs>')
     centre = {}
     for r in range(r0, r1 + 1):
         for c in range(c0, c1 + 1):
@@ -301,7 +303,7 @@ def hundred(shade=(), shade2=(), hide=(), mark=(), outline=(), arrows=(), rows=(
             centre[n] = (x + cell / 2, y + cell / 2)
             fill = '#FFFFFF'
             if n in shade: fill = YEL
-            elif n in shade2: fill = MINT
+            elif n in shade2: fill = 'url(#hm)'
             if n in hide: fill = '#F3F6FB'
             P.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" fill="{fill}" stroke="{NAVY}" stroke-width="1.8"/>')
             fs = cell * (0.37 if n >= 100 else 0.43)
@@ -396,7 +398,7 @@ def ruler(start=0, end=15, objects=None, mark=None, true_scale=False):
             f'style="{size}display:block">{"".join(p)}</svg>')
 
 
-SIZE_TYPES = {'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation', 'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
+SIZE_TYPES = {'jump_lines', 'line_up', 'round_table', 'bar_model', 'seq', 'number_line', 'table', 'picture_equation', 'clock', 'money', 'price_tag', 'calendar', 'stick_pattern', 'shapes2d', 'grid', 'cube_stack', 'fold_punch', 'panel', 'network', 'picture_graph'}
 # money: its canvas is a fixed width so every coin has one scale in every picture; only the words s, m, l shrink it (a number is ignored)
 SIZE_PCT = {'s': 55, 'm': 78, 'l': 100}
 
