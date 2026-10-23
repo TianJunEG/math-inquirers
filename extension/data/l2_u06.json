@@ -1,0 +1,862 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 6,
+ "id": "L2U06",
+ "title": "Market day",
+ "topic": "Money",
+ "holiday_lesson": 6,
+ "goal": "I can read and write money in dollars and cents. I can pay exactly, find every way, give change and work backwards.",
+ "learn": {
+  "intro": "Money is written in dollars and cents. $1 is 100¢, so $3.45 is 345¢. To pay exactly with the fewest pieces, take the greatest note or coin that fits, again and again.",
+  "example": {
+   "problem": "A cake costs $4.35. Pay the exact amount with as few notes and coins as you can.",
+   "figure": {
+    "type": "l2_money",
+    "items": [
+     "$2",
+     "$2",
+     "20¢",
+     "10¢",
+     "5¢"
+    ],
+    "width_mm": 112
+   },
+   "side": false,
+   "steps": [
+    "Dollars first: $4 is $2 + $2. That is 2 notes.",
+    "Now the cents: 35¢. The greatest coin that fits is 20¢. 15¢ is left.",
+    "The greatest coin that fits 15¢ is 10¢. Then 5¢ is left: one 5¢ coin.",
+    "Check: 4.00 + 0.20 + 0.10 + 0.05 = 4.35. That is 5 pieces."
+   ],
+   "answer": "$2, $2, 20¢, 10¢ and 5¢. That is 5 pieces."
+  },
+  "howto": {
+   "title": "How to pay exactly",
+   "steps": [
+    "Split the cost into dollars and cents.",
+    "Take the greatest note or coin that fits.",
+    "Repeat with what is left.",
+    "Add to check. Count the pieces."
+   ]
+  },
+  "facts": {
+   "title": "Our money",
+   "lines": [
+    "Coins: 5¢, 10¢, 20¢, 50¢, $1.",
+    "Notes: $2, $5, $10, $50, $100.",
+    "There is no $20 note."
+   ]
+  },
+  "try": {
+   "id": "L2U06-L01",
+   "text": "Pay exactly $6.85 with as few notes and coins as you can. How many pieces? {b}",
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6"
+   },
+   "explanation": "$6 is $5 + $1 (2 pieces). 85¢ is 50¢ + 20¢ + 10¢ + 5¢ (4 pieces). 2 + 4 = 6 pieces. Check: 5 + 1 + 0.50 + 0.20 + 0.10 + 0.05 = 6.85."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U06-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Change dollars and cents.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "$3.45 = {b} ¢",
+     "answer": {
+      "value": [
+       "345"
+      ],
+      "text": "345"
+     }
+    },
+    {
+     "label": "b",
+     "text": "275¢ = $ {b}",
+     "answer": {
+      "value": [
+       "2.75"
+      ],
+      "text": "2.75"
+     }
+    },
+    {
+     "label": "c",
+     "text": "6 dollars and 5 cents = $ {b}",
+     "answer": {
+      "value": [
+       "6.05"
+      ],
+      "text": "6.05"
+     }
+    },
+    {
+     "label": "d",
+     "text": "1 dollar and 30 cents = {b} ¢",
+     "answer": {
+      "value": [
+       "130"
+      ],
+      "text": "130"
+     }
+    }
+   ],
+   "explanation": "$1 is 100¢. (a) 3 dollars is 300¢, and 300 + 45 = 345. (b) 275¢ is 2 dollars and 75 cents: $2.75. (c) 6 dollars and 5 cents is $6.05, not $6.50. (d) 100¢ + 30¢ = 130¢.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U06-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Count the money. How much is there altogether?",
+   "figure": {
+    "type": "l2_money",
+    "items": [
+     "$5",
+     "$2",
+     "$2",
+     "$1",
+     "50¢",
+     "20¢",
+     "10¢"
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The total is $ {b}",
+     "answer": {
+      "value": [
+       "10.80"
+      ],
+      "text": "10.80"
+     }
+    }
+   ],
+   "explanation": "Notes and $1: $5 + $2 + $2 + $1 = $10. Coins: 50¢ + 20¢ + 10¢ = 80¢. $10 + $0.80 = $10.80."
+  },
+  {
+   "id": "L2U06-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Pay the exact amount with as few notes and coins as you can. Write them on the lines. Then count the pieces.",
+   "figure": {
+    "type": "l2_tags",
+    "items": [
+     {
+      "name": "Marker pen",
+      "price": "$2.85"
+     },
+     {
+      "name": "Kite",
+      "price": "$7.40"
+     },
+     {
+      "name": "Backpack",
+      "price": "$23.65"
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Marker pen: {b} pieces",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Kite: {b} pieces",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Backpack: {b} pieces",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "Marker pen: $2 + 50¢ + 20¢ + 10¢ + 5¢ is 5 pieces. Kite: $5 + $2 + 20¢ + 20¢ is 4 pieces. Backpack: $10 + $10 + $2 + $1 + 50¢ + 10¢ + 5¢ is 7 pieces (there is no $20 note).",
+   "space": {
+    "rows": [
+     "Marker pen:",
+     "Kite:",
+     "Backpack:"
+    ]
+   },
+   "partsrow": true
+  },
+  {
+   "id": "L2U06-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Find EVERY way to pay exactly $7 using $1 coins, $2 notes and $5 notes. Begin with as many $5 notes as you can. Write each way in a row. Some rows may stay empty.",
+   "figure": {
+    "type": "l2_table",
+    "cols": [
+     "Way",
+     "$5",
+     "$2",
+     "$1",
+     "Pieces"
+    ],
+    "rows": [
+     [
+      "A",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "B",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "C",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "D",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "E",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "F",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "G",
+      null,
+      null,
+      null,
+      null
+     ]
+    ],
+    "first_bold": true,
+    "widths": [
+     1,
+     1.2,
+     1.2,
+     1.2,
+     1.6
+    ],
+    "row_h": 56,
+    "head_h": 56,
+    "size": 32,
+    "width_mm": 132
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many ways are there? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The way with exactly 4 pieces has {b} $2 notes and {b} $1 coin.",
+     "answer": {
+      "value": [
+       "3",
+       "1"
+      ],
+      "text": "3 $2 notes and 1 $1 coin"
+     }
+    }
+   ],
+   "explanation": "Ways ($5, $2, $1): 1, 1, 0 / 1, 0, 2 / 0, 3, 1 / 0, 2, 3 / 0, 1, 5 / 0, 0, 7. That is 6 ways. Their pieces are 2, 3, 4, 5, 6 and 7. Only 0, 3, 1 has 4 pieces: three $2 notes and one $1 coin."
+  },
+  {
+   "id": "L2U06-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Find the change.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A ruler costs 70¢. Kumar pays with a $1 coin. Change: {b} ¢",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A book costs $4.30. Mei pays with a $10 note. Change: $ {b}",
+     "answer": {
+      "value": [
+       "5.70"
+      ],
+      "text": "5.70"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A bag costs $37. Ali pays with a $50 note. Change: $ {b}",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "d",
+     "text": "The fewest notes and coins for the $13 change: {b} pieces",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "Change is what you pay minus the cost. (a) 100¢ - 70¢ = 30¢. (b) $10 - $4.30 = $5.70. Count on: $4.30 to $5 is 70¢, then $5 more makes $10. (c) $50 - $37 = $13. (d) $13 is $10 + $2 + $1: 3 pieces.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U06-S06",
+   "tier": "start",
+   "page": 3,
+   "text": "Ravi has $30.",
+   "figure": {
+    "type": "l2_tags",
+    "items": [
+     {
+      "name": "Shoes",
+      "price": "$17.50"
+     },
+     {
+      "name": "T-shirt",
+      "price": "$9.90"
+     },
+     {
+      "name": "Hat",
+      "price": "$4.60"
+     }
+    ],
+    "width_mm": 140
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The shoes and the T-shirt cost $ {b} together.",
+     "answer": {
+      "value": [
+       "27.40"
+      ],
+      "text": "27.40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Can Ravi buy all 3 things? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "He needs $ {b} more to buy all 3.",
+     "answer": {
+      "value": [
+       "2.00"
+      ],
+      "text": "2.00"
+     }
+    }
+   ],
+   "explanation": "(a) $17.50 + $9.90 = $27.40. (b) All 3 cost $27.40 + $4.60 = $32.00. Ravi has only $30, so no. (c) $32.00 - $30 = $2.00 more."
+  },
+  {
+   "id": "L2U06-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha spent $3.50 on lunch and $1.25 on a drink. She has $4.75 left. At first she had $ {b}",
+   "answer": {
+    "value": [
+     "9.50"
+    ],
+    "text": "9.50"
+   },
+   "explanation": "Work backwards: put back what she spent. $4.75 + $1.25 = $6.00, and $6.00 + $3.50 = $9.50. Check: 9.50 - 3.50 = 6.00 and 6.00 - 1.25 = 4.75."
+  },
+  {
+   "id": "L2U06-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Shop deals.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "4 pencils cost $1. 12 pencils cost $ {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 stickers cost $2. 20 stickers cost $ {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "$6 buys {b} stickers.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "explanation": "(a) 12 pencils is 3 groups of 4, so 3 × $1 = $3. (b) 20 stickers is 4 groups of 5, so 4 × $2 = $8. (c) $6 is 3 groups of $2, so 3 × 5 = 15 stickers.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U06-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Ali buys 2 toys for exactly $12.50. Which 2 toys? {b} and {b}",
+   "figure": {
+    "type": "l2_tags",
+    "items": [
+     {
+      "name": "Car",
+      "price": "$4.50"
+     },
+     {
+      "name": "Ball",
+      "price": "$6.25"
+     },
+     {
+      "name": "Top",
+      "price": "$8.00"
+     },
+     {
+      "name": "Kite",
+      "price": "$3.75"
+     }
+    ],
+    "width_mm": 150
+   },
+   "answer": {
+    "value": [
+     "Car",
+     "Top"
+    ],
+    "text": "Car and Top",
+    "unordered": true
+   },
+   "explanation": "$4.50 + $8.00 = $12.50. Check the others: Car + Ball = $10.75, Car + Kite = $8.25, Ball + Top = $14.25, Ball + Kite = $10.00, Top + Kite = $11.75. Only Car and Top."
+  },
+  {
+   "id": "L2U06-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Mei pays exactly 95¢ with 4 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Write the coins. {b}¢ + {b}¢ + {b}¢ + {b}¢",
+   "answer": {
+    "value": [
+     "50",
+     "20",
+     "20",
+     "5"
+    ],
+    "text": "50¢ + 20¢ + 20¢ + 5¢",
+    "unordered": true
+   },
+   "explanation": "Start with 50¢. 45¢ is left for 3 coins. 20¢ + 20¢ = 40¢, and 5¢ makes 45¢. Check: 50 + 20 + 20 + 5 = 95. No other 4 coins make 95¢."
+  },
+  {
+   "id": "L2U06-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Pay 35¢ with 5¢, 10¢ and 20¢ coins. List EVERY way in the table.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many ways are there? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 5-coin way: {b} coins of 10¢ and {b} of 5¢.",
+     "answer": {
+      "value": [
+       "2",
+       "3"
+      ],
+      "text": "2 coins of 10¢ and 3 coins of 5¢"
+     }
+    }
+   ],
+   "explanation": "With one 20¢: 15¢ is left, as 10 + 5 or 5 + 5 + 5. With no 20¢: 35¢ is 10+10+10+5, 10+10+5+5+5, 10+5+5+5+5+5 or seven 5¢. Ways (20, 10, 5): 1,1,1 / 1,0,3 / 0,3,1 / 0,2,3 / 0,1,5 / 0,0,7. That is 6 ways. Only 0, 2, 3 uses 5 coins.",
+   "hint": "Try 1 coin of 20¢ first. Then none. Fill the rest with 10¢ and 5¢.",
+   "space": {
+    "table": {
+     "cols": [
+      "20¢",
+      "10¢",
+      "5¢"
+     ],
+     "rows": 6
+    }
+   }
+  },
+  {
+   "id": "L2U06-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Lollipops cost 20¢ each. Cookies cost 50¢ each. Siti buys 7 things and spends exactly $2.60. How many lollipops and how many cookies?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Lollipops: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Cookies: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "7 lollipops cost $1.40. Each swap of a lollipop for a cookie adds 30¢: $1.70, $2.00, $2.30, $2.60. That is 4 swaps. So 3 lollipops and 4 cookies. Check: 60¢ + $2.00 = $2.60 and 3 + 4 = 7.",
+   "hint": "Start with 7 lollipops. Swap one for a cookie each time."
+  },
+  {
+   "id": "L2U06-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A book costs $4 more than a puzzle. Together they cost $13.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Puzzle",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Book",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 2,
+        "t": "$4"
+       }
+      ]
+     }
+    ],
+    "brace": {
+     "text": "$13",
+     "rows": [
+      0,
+      1
+     ]
+    },
+    "width_units": 300,
+    "width_mm": 84
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The puzzle costs $ {b}",
+     "answer": {
+      "value": [
+       "4.50"
+      ],
+      "text": "4.50"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The book costs $ {b}",
+     "answer": {
+      "value": [
+       "8.50"
+      ],
+      "text": "8.50"
+     }
+    }
+   ],
+   "explanation": "Take away the extra $4: $13 - $4 = $9. Two equal bars share $9, so each is $4.50. The puzzle costs $4.50 and the book costs $4.50 + $4 = $8.50. Check: 4.50 + 8.50 = 13.00.",
+   "hint": "Take away the extra $4. Share what is left equally.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U06-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond: a shop sign says PAY HALF. You pay half of the amount on the tag.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A ball has a tag of $9.60. You pay $ {b}",
+     "answer": {
+      "value": [
+       "4.80"
+      ],
+      "text": "4.80"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A hat has a tag of $14.50. You pay $ {b}",
+     "answer": {
+      "value": [
+       "7.25"
+      ],
+      "text": "7.25"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A kite costs $5.80 with PAY HALF. The tag says $ {b}",
+     "answer": {
+      "value": [
+       "11.60"
+      ],
+      "text": "11.60"
+     }
+    }
+   ],
+   "explanation": "(a) Half of $9.60 is $4.80. (b) Half of $14 is $7 and half of 50¢ is 25¢: $7.25. (c) The tag is double: $5.80 + $5.80 = $11.60.",
+   "hint": "Half of dollars first. Then half of cents. Go back with double.",
+   "beyond": "Halving money"
+  },
+  {
+   "id": "L2U06-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Mei has 5 coins. Each coin is 20¢ or 50¢.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many different amounts could she have? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With exactly 3 coins of 50¢, she has $ {b}",
+     "answer": {
+      "value": [
+       "1.90"
+      ],
+      "text": "1.90"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Could she have $1.40? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "5 coins of 20¢ is $1.00. Each swap of a 20¢ for a 50¢ adds 30¢: $1.00, $1.30, $1.60, $1.90, $2.20, $2.50. That is 6 amounts. (b) 3 coins of 50¢ and 2 of 20¢: $1.50 + $0.40 = $1.90. (c) $1.40 is not in the list: no.",
+   "hint": "Start with 5 coins of 20¢. Swap one for 50¢ each time."
+  },
+  {
+   "id": "L2U06-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own coin riddle. Choose 3 coins from 5¢, 10¢, 20¢ and 50¢ (a coin can be used twice). Write how much they are worth, so that only ONE set of 3 coins fits. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: 3 coins are worth 80¢. Only 50¢, 20¢ and 10¢ fit."
+   },
+   "explanation": "Example: 3 coins worth 80¢. The only set is 50¢ + 20¢ + 10¢. Any other 3 coins make a different total. A riddle is good if no other set fits.",
+   "hint": "Try all the sets of 3 coins. Does another set make the same total?",
+   "space": {
+    "rows": [
+     "My riddle:"
+    ]
+   }
+  },
+  {
+   "id": "L2U06-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Shop A sells 3 pens for $2. Shop B sells 4 pens for $3. Ben wants 12 pens.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "At shop A, 12 pens cost $ {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At shop B, 12 pens cost $ {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which shop is cheaper? {circ:A|B}",
+     "answer": {
+      "value": [
+       "A"
+      ],
+      "text": "A"
+     }
+    }
+   ],
+   "explanation": "(a) 12 pens is 4 groups of 3, so 4 × $2 = $8. (b) 12 pens is 3 groups of 4, so 3 × $3 = $9. (c) $8 is less than $9, so shop A is cheaper by $1.",
+   "hint": "12 pens is how many groups of 3? Of 4?"
+  },
+  {
+   "id": "L2U06-C01",
+   "tier": "quiz",
+   "text": "$4.05 = {b} ¢",
+   "answer": {
+    "value": [
+     "405"
+    ],
+    "text": "405"
+   },
+   "explanation": "4 dollars is 400¢. 400¢ + 5¢ = 405¢."
+  },
+  {
+   "id": "L2U06-C02",
+   "tier": "quiz",
+   "text": "Pay exactly $6.35 using the fewest pieces. Pieces: {b}",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5"
+   },
+   "explanation": "$6 is $5 + $1 (2 pieces). 35¢ is 20¢ + 10¢ + 5¢ (3 pieces). 2 + 3 = 5 pieces."
+  },
+  {
+   "id": "L2U06-C03",
+   "tier": "quiz",
+   "text": "A cake costs $7.40. Ravi pays with a $10 note. Change: $ {b}",
+   "answer": {
+    "value": [
+     "2.60"
+    ],
+    "text": "2.60"
+   },
+   "explanation": "$10 - $7.40 = $2.60. Count on: $7.40 + 60¢ = $8, then $2 more makes $10."
+  },
+  {
+   "id": "L2U06-C04",
+   "tier": "quiz",
+   "text": "Ali spent $2.40 on a drink and $3.10 on a snack. He has $4.50 left. At first: $ {b}",
+   "answer": {
+    "value": [
+     "10.00"
+    ],
+    "text": "10.00"
+   },
+   "explanation": "Put back what he spent: $4.50 + $3.10 = $7.60, and $7.60 + $2.40 = $10.00."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}
