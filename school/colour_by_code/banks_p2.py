@@ -582,7 +582,7 @@ def _measure(tier):
 # ------------------------------------------------------------------ picture graphs and tally
 GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
 def _graph(tier):
-    keys = [2, 5] if tier == 1 else [3, 4, 5, 10]
+    keys = [2, 5] if tier == 1 else [2, 3, 4, 5]
     def pick(r, n):
         labs = list(ch(r, GRAPH_SETS)); r.shuffle(labs); return labs[:n]
     def read(a, r, n=3):
@@ -594,6 +594,13 @@ def _graph(tier):
         q = SEM([f"How many {labs[i].lower()}?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="read one row")
         q.extra = lambda ans, rows=rows, k=k, i=i: rows[i][1] * k == ans; return q
     def read4(a, r): return read(a, r, 4)
+    def read2(a, r):          # two rows of at most 3 faces: small enough for the smaller regions
+        ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 3]
+        if not ks: return None
+        k = r.choice(ks); labs = pick(r, 2); i = r.randrange(2)
+        rows = [(l, a // k if j == i else r.randint(1, 3)) for j, l in enumerate(labs)]
+        q = SEM([f"How many {labs[i].lower()}?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.picgraph(rows, k), form="read one row of two")
+        q.extra = lambda ans, rows=rows, k=k, i=i: rows[i][1] * k == ans; return q
     def more(a, r):
         ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 5]
         if not ks: return None
@@ -641,7 +648,7 @@ def _graph(tier):
         q = SEM([], lambda v, t_=a: v == t_, str(a), art=art, form="one row with answer box")
         q.sol = [f"⟦{a}⟧"]
         q.extra = lambda ans, art=art: art.meta["rows"][0][1] * art.meta["key"] == ans; return q
-    return [read, read4, more, two, total, tallyf, tally1, row1]
+    return [read, read2, read4, more, two, total, tallyf, tally1, row1]
 
 # ------------------------------------------------------------------ shapes, solids and patterns
 SOLIDS = list(A.SOLID_FLAT)
@@ -782,7 +789,7 @@ def build_banks():
     B["measure"] = Bank("measure", "Measures", "Length, mass and volume: cm, m, g, kg and l", "Find the measure. Find it in the key. Colour the part with that colour.",
         {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}"), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")})
     B["graph"] = Bank("graph", "Graphs", "Picture graphs and tally marks", "Read the graph. Find the answer in the key. Colour the part with that colour.",
-        {1: T([6, 8, 10, 15, 20], range(0, 101), _graph(1)), 2: T([12, 15, 20, 30, 40], range(0, 101), _graph(2))})
+        {1: T([4, 6, 8, 10, 12], range(0, 101), _graph(1)), 2: T([6, 8, 10, 12, 15], range(0, 101), _graph(2))})
     B["shape"] = Bank("shape", "Shapes", "2D and 3D shapes and shape patterns", "Look at the shapes. Find the answer in the key. Colour the part with that colour.",
         {1: T([1, 2, 3, 4, 6], range(0, 21), _shape(1)), 2: T([5, 7, 8, 9, 12], range(0, 21), _shape(2))})
     return B

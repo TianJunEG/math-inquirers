@@ -109,6 +109,7 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--rebuild', action='store_true')
     ap.add_argument('--check', action='store_true')
+    ap.add_argument('--resume', action='store_true', help='skip outputs that already exist and are newer than their source')
     ap.add_argument('--only', default='', help='substring filter on file names')
     a = ap.parse_args()
     if a.rebuild:
@@ -121,6 +122,9 @@ if __name__ == '__main__':
         rel = os.path.relpath(src, PRINT)
         dst = os.path.join(BW, rel)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
+        if a.resume and os.path.exists(dst) and os.path.getmtime(dst) > os.path.getmtime(src):
+            n = len(fitz.open(dst)); rows.append(dict(file=os.path.relpath(dst, ROOT), pages=n, sheets=n // 2, mb=round(os.path.getsize(dst) / 1e6, 2), pale_tint_dropped_max=None))
+            print('skip (up to date)', rel); continue
         n, dropped = convert_pdf(src, dst)
         rows.append(dict(file=os.path.relpath(dst, ROOT), pages=n, sheets=n // 2, mb=round(os.path.getsize(dst) / 1e6, 2),
                          pale_tint_dropped_max=max(dropped)))
