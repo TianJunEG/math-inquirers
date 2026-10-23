@@ -9,15 +9,36 @@ var MC=window.MI_CONFIG||{},SB=/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(MC.SU
 var LEVELS=INTEREST.levels,BANDS=INTEREST.bands;
 $("itModeNote").textContent=SB?"Your request is stored securely and used only to plan new class times.":"Sending opens WhatsApp with your request written out, so you can check it before you send it to "+CONFIG.whatsappShow+".";
 function checked(name){return Array.prototype.slice.call(form.querySelectorAll('input[name="'+name+'"]:checked'))}
+var showAll=false;
+function each(sel,fn){Array.prototype.forEach.call(form.querySelectorAll(sel),fn)}
+function refresh(){
+  var lv=$("itLevel").value,any=false;
+  each(".slotchip",function(l){var c=l.querySelector("input"),ok=showAll||c.checked||(" "+l.dataset.levels+" ").indexOf(" "+lv+" ")>=0;l.hidden=!ok});
+  each(".srow",function(r){r.hidden=!r.querySelector(".slotchip:not([hidden])")});
+  each(".sgroup",function(g){var v=!g.querySelector(".srow:not([hidden])");g.hidden=v;if(!v)any=true});
+  var none=$("itNone");if(none)none.hidden=any;
+  var n=checked("itslot").length+checked("itwin").length;
+  $("itCount").textContent=n+(n===1?" time selected":" times selected");$("itClear").hidden=!n;
+  $("itAll").textContent=showAll?"Show times for this level":"Show all times";$("itAll").setAttribute("aria-pressed",showAll?"true":"false");
+}
+$("itBar").hidden=false;
+$("itLevel").addEventListener("change",refresh);
+$("itAll").addEventListener("click",function(){showAll=!showAll;refresh()});
+$("itClear").addEventListener("click",function(){each('input[name="itslot"],input[name="itwin"]',function(c){c.checked=false});refresh()});
+form.addEventListener("change",function(e){if(e.target.name==="itslot"||e.target.name==="itwin")refresh()});
+form.addEventListener("reset",function(){setTimeout(refresh,0)});
 function setSlot(id){
   Array.prototype.forEach.call(form.querySelectorAll('input[name="itslot"]'),function(c){if(c.value===id){c.checked=true}});
+  refresh();
 }
 function applyParams(q){
   var lv=parseInt(q.level,10);if(lv>=1&&lv<=6)$("itLevel").value=String(lv);
+  refresh();
   if(q.interest)setSlot(q.interest);
 }
 (function(){try{var p=new URLSearchParams(location.search),o={};p.forEach(function(v,k){o[k]=v});applyParams(o);
   if(o.interest){var s=$("request-time");if(s&&s.scrollIntoView)setTimeout(function(){s.scrollIntoView()},0)}}catch(e){}})();
+refresh();
 /* the "I'm interested" buttons on this page preselect the slot without reloading */
 document.addEventListener("click",function(e){
   var a=e.target.closest&&e.target.closest("a[data-level][data-interest]");if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey)return;
@@ -48,7 +69,7 @@ function valid(){
   v.wd=v.wa?wd:"";return v;
 }
 function message(v){
-  var times=v.slots.map(function(c){return c.dataset.label+" ("+c.value+")"}).concat(v.wins.map(function(c){return c.dataset.label}));
+  var times=v.slots.map(function(c){return c.dataset.label}).concat(v.wins.map(function(c){return c.dataset.label}));
   if(v.other)times.push("Other: "+v.other);
   var lv=LEVELS[v.level];
   return "Hi! I'd like to request another class time for Math Inquirers.\n\nLevel: "+lv+"\nChild's age: "+BANDS[v.age]+"\nTimes: "+times.join("; ")+"\nParent: "+v.name+"\nContact: "+[v.wa?"WhatsApp "+v.wa:"",v.email?"email "+v.email:""].filter(Boolean).join(", ")+(v.note?"\nNote: "+v.note:"")+"\nI agree you may use these details only to plan new class times and contact me about them.";

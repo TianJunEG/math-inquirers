@@ -60,6 +60,32 @@ with sync_playwright() as pw:
         href = p3.locator('.othertimes a[data-interest="R3"]').get_attribute('href'); assert href == '/?level=3&interest=R3#request-time', href; p3.close()
     check('level page shows placeholders linking to the form', level_page)
 
+
+    # ---- reorganised slot picker ----
+    def picker():
+        q = c.new_page(); q.goto(BASE + '/?level=6#request-time')
+        expect(q.locator('.sgroup h3')).to_have_text(['Holiday program (Nov to Dec 2026)', 'Term time (2027)'])
+        expect(q.locator('.gnote:visible').first).to_have_text('Not open yet: tell us which you would join.')
+        want = [s['id'] for s in slots if 6 in s['levels']]
+        vis = q.locator('.slotchip:visible input').evaluate_all('e=>e.map(x=>x.value)'); assert sorted(vis) == sorted(want), vis
+        assert 'not open yet' not in q.locator('#itSlots').inner_text().lower().replace('not open yet: tell us which you would join.', '')
+        assert '2027 term time' not in q.locator('#itSlots').inner_text()
+        expect(q.locator('#itCount')).to_have_text('0 times selected')
+        q.locator('.slotchip:visible').first.click(); expect(q.locator('#itCount')).to_have_text('1 time selected')
+        q.locator('#itLevel').select_option('1'); expect(q.locator('.slotchip:visible')).to_have_count(len([s for s in slots if 1 in s['levels'] or s['id'] == vis[0]]))
+        q.click('#itAll'); expect(q.locator('.slotchip:visible')).to_have_count(len(slots)); q.click('#itAll')
+        q.click('#itClear'); expect(q.locator('#itCount')).to_have_text('0 times selected')
+        q.check('input[name=itwin][value=sat]'); expect(q.locator('#itCount')).to_have_text('1 time selected')
+        hs = q.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth'); assert hs <= 0, hs
+        for h in q.locator('.slotchip:visible').evaluate_all('e=>e.map(x=>x.getBoundingClientRect().height)'): assert h >= 44, h
+        q.close()
+    check('slots grouped, filtered by level, count/clear/show-all work', picker)
+    def phone_fit():
+        c3 = ctx(400); q = c3.new_page(); q.goto(BASE + '/?level=3#request-time')
+        assert q.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth') <= 0
+        c3.close()
+    check('no horizontal scroll at 400px', phone_fit)
+
     # ---- validation ----
     def validation():
         p.goto(BASE + '/'); p.click('#itSubmit')
@@ -77,7 +103,7 @@ with sync_playwright() as pw:
         href = p.locator('#itWaLink').get_attribute('href'); assert href.startswith('https://wa.me/6598805962?text='), href
         from urllib.parse import unquote
         txt = unquote(href.split('text=')[1])
-        for s in ['Level: Level 2 (ages 7-9)', "Child's age: 8 to 9", 'Wed & Thu mornings', '(R1)', 'Saturday', 'Other: Tue after 4pm', 'Parent: Mei', 'WhatsApp 9123 4567', 'Note: Sibling too']:
+        for s in ['Level: Level 2 (ages 7-9)', "Child's age: 8 to 9", 'Holiday: Wed & Thu 9:00-10:30am', 'Saturday', 'Other: Tue after 4pm', 'Parent: Mei', 'WhatsApp 9123 4567', 'Note: Sibling too']:
             assert s in txt, (s, txt)
         assert 'child' not in txt.lower().replace("child's age", ''), txt     # no child name field anywhere
         expect(p.locator('#itPre')).to_contain_text('Hi! I')
@@ -140,7 +166,7 @@ with sync_playwright() as pw:
     sys.path.insert(0, os.path.join(HERE, '..')); import interest_ui
     def empty():
         h = interest_ui.other_times_block(1, []); assert '<li>' not in h and 'Request another time' in h and 'None of the Level 1 times' in h
-        assert 'class="chips slotchips"' in interest_ui.form_section('1', '1') and 'Placeholder groups' not in interest_ui.form_section.__doc__
+        f = interest_ui.form_section('1', '1'); assert 'id="itSlots"' in f and 'class="slotchip"' in f
     check('empty slot list renders a generic request link', empty)
 
     # ---- screenshots ----

@@ -35,6 +35,52 @@ def load_slots():
     return out
 
 
+DAY_ORDER = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+GROUPS = [('hol', 'Holiday program (Nov to Dec 2026)'), ('term', 'Term time (2027)')]
+GROUP_NOTE = 'Not open yet: tell us which you would join.'
+
+
+def slot_group(s):
+    return s.get('group') or ('term' if s['id'].startswith('T27-') else 'hol')
+
+
+def t_short(t):
+    h, m = map(int, t.split(':'))
+    return '%d:%02d' % ((h % 12) or 12, m), ('pm' if h >= 12 else 'am')
+
+
+def span(x):
+    """'9:00-10:30am' (the suffix is repeated only when am/pm differ)."""
+    a, ap = t_short(x['start']); b, bp = t_short(x['end'])
+    return '%s-%s%s' % (a, b, bp) if ap == bp else '%s%s-%s%s' % (a, ap, b, bp)
+
+
+def slot_row(s):
+    """Row heading in the grid: 'Wed & Thu'."""
+    days = []
+    for x in s['sessions']:
+        if x['day'] not in days:
+            days.append(x['day'])
+    return ' & '.join(days)
+
+
+def slot_chip_text(s):
+    """Short time text for the chip: '9:00-10:30am', 'Between 1:15-5:00pm', or per-day text when the times differ."""
+    ss = s['sessions']
+    if s.get('window'):
+        return 'Between ' + span(ss[0])
+    if len({span(x) for x in ss}) == 1:
+        return span(ss[0])
+    return ', '.join('%s %s' % (x['day'], span(x)) for x in ss)
+
+
+def slot_readable(s):
+    """Label used in the WhatsApp message: 'Holiday: Wed & Thu 9:00-10:30am' / 'Term 2027: Thu 5:45-7:15pm'."""
+    pre = 'Term 2027: ' if slot_group(s) == 'term' else 'Holiday: '
+    t = slot_chip_text(s)
+    return pre + (t if t[:3] in DAY_ORDER else slot_row(s) + ' ' + t)
+
+
 def slot_when(s):
     """'Wed 9:00am–10:30am & Thu 9:00am–10:30am' (a window slot reads 'Mon between 1:15pm and 5:00pm')."""
     if s.get('window'):
@@ -74,15 +120,52 @@ CSS = '''
 .othertimes a.small{justify-self:start}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips label{display:inline-flex;gap:8px;align-items:center;border:2px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--bg);font-weight:600;font-size:15px;cursor:pointer}
-.chips label:has(input:checked){background:var(--mint);border-color:var(--ink)}
-.chips input{width:auto;accent-color:var(--teal)}
-.chips.slotchips label{border-radius:14px;border-style:dashed;align-items:flex-start}
-.chips.slotchips label:has(input:checked){border-style:solid}
-.chips.slotchips input{margin-top:4px}
+.chips label,.slotchip{display:inline-flex;gap:8px;align-items:center;min-height:44px;box-sizing:border-box;border:2px solid var(--line);border-radius:12px;padding:6px 12px;background:var(--bg);font-weight:600;font-size:15px;line-height:1.25;cursor:pointer}
+.chips label:has(input:checked){background:var(--mint);border-color:var(--ink);font-weight:700}
+.chips label:has(input:focus-visible){outline:3px solid var(--teal);outline-offset:2px}
+.chips input{width:20px;height:20px;flex:none;margin:0;accent-color:var(--teal)}
+.chips label[hidden]{display:none}
+#itWins label{border-radius:999px}
+.slotbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:2px 0 12px}
+.slotbar[hidden],.slotbar [hidden],.sgroup[hidden],#itNone[hidden],.srow[hidden]{display:none}
+.slotbar .count{font-weight:700;font-size:15px;margin-right:auto}
+.linkbtn{font:600 15px var(--body,inherit);color:var(--teal);background:none;border:0;padding:0 4px;min-height:44px;cursor:pointer;text-decoration:underline}
+.sgroup{margin:0 0 16px}
+.gh,.gh2{font:700 16px var(--head);margin:0 0 2px}
+.gnote{font-size:14px;color:var(--muted);margin:0 0 8px}
+.srow{display:grid;grid-template-columns:84px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-top:1px solid var(--line)}
+.rday{font-weight:700;font-size:15px;padding-top:10px}
+.winwrap{margin-top:6px;border-top:2px solid var(--line);padding-top:12px}
+.winwrap .gh2{margin-bottom:8px}
+@media(max-width:420px){.srow{grid-template-columns:70px 1fr;gap:6px}.chips label,.slotchip{padding:6px 10px}}
 .fine2{font-size:13px;color:var(--muted)}
 .field .err{color:var(--red);font-weight:700;font-size:14px}
 '''
+
+
+def slot_groups_html(slots):
+    """Slots grouped by program, then rows by day(s), each slot a short time chip (data-levels drives the level filter in interest.js)."""
+    out = []
+    for gid, gname in GROUPS:
+        mine = [s for s in slots if slot_group(s) == gid]
+        if not mine:
+            continue
+        rows = {}
+        for s in mine:
+            rows.setdefault(slot_row(s), []).append(s)
+        def key(item):
+            d = item[1][0]['sessions'][0]['day']
+            return (DAY_ORDER.index(d) if d in DAY_ORDER else 9, item[0])
+        body = ''
+        for n, (rname, rs) in enumerate(sorted(rows.items(), key=key)):
+            rs.sort(key=lambda s: s['sessions'][0]['start'])
+            chips = ''.join(
+                '<label class="slotchip" data-levels="%s"><input type="checkbox" name="itslot" value="%s" data-label="%s"><span>%s</span></label>'
+                % (' '.join(str(l) for l in s.get('levels', [])), esc(s['id']), esc(slot_readable(s)), esc(slot_chip_text(s))) for s in rs)
+            rid = 'itRow-%s-%d' % (gid, n)
+            body += '<div class="srow" role="group" aria-labelledby="%s"><span class="rday" id="%s">%s</span><div class="chips">%s</div></div>' % (rid, rid, esc(rname), chips)
+        out.append('<div class="sgroup" data-group="%s"><h3 class="gh" id="itG-%s">%s</h3><p class="gnote">%s</p>%s</div>' % (gid, gid, esc(gname), GROUP_NOTE, body))
+    return '<div id="itSlots">%s<p class="gnote" id="itNone" hidden>No suggested times for this level yet. Choose \'Show all times\', a general window below, or write your own.</p></div>' % ''.join(out)
 
 
 def form_section(wa_num, wa_show):
@@ -90,9 +173,7 @@ def form_section(wa_num, wa_show):
     slots = load_slots()
     lv = ''.join('<option value="%d">Level %d (ages %s)</option>' % (n, n, a) for n, a in LEVEL_AGES.items())
     ab = '<option value="">Choose…</option>' + ''.join('<option value="%s">%s</option>' % (c, l) for c, l in AGE_BANDS)
-    sl = ''.join(
-        '<label><input type="checkbox" name="itslot" value="%s" data-label="%s"><span><b>%s</b><br><span class="small muted">%s · not open yet</span></span></label>'
-        % (esc(s['id']), esc(s['label'] + ', ' + slot_when(s)), esc(s['label']), esc(slot_when(s))) for s in slots)
+    sl = slot_groups_html(slots)
     wn = ''.join('<label><input type="checkbox" name="itwin" value="%s" data-label="%s"><span>%s</span></label>' % (c, l, l) for c, l in WINDOWS)
     wa_lbl = ''
     return '''<section class="band peach" id="request-time" style="display:block"><div class="sec"><span class="eyebrow">Other times</span><h2>Request another time</h2>
@@ -102,8 +183,9 @@ def form_section(wa_num, wa_show):
 <div class="grid2"><div class="field"><label for="itLevel">Level</label><select id="itLevel" name="level">%(lv)s</select></div>
 <div class="field"><label for="itAge">Child's age range</label><select id="itAge" name="age" required>%(ab)s</select><span class="fine2">An age range only. Please do not give your child's name.</span></div></div>
 <fieldset class="field" style="border:0;padding:0;margin:0 0 12px"><legend class="flabel">Times you are interested in <span class="muted" style="font-weight:600">(tick any)</span></legend>
-%(slhead)s<div class="chips slotchips" id="itSlots">%(sl)s</div>
-<div class="small muted" style="margin:10px 0 6px">Or a general window</div><div class="chips" id="itWins">%(wn)s</div></fieldset>
+<div class="slotbar" id="itBar" hidden><span class="count" id="itCount" aria-live="polite">0 times selected</span><button type="button" class="linkbtn" id="itClear" hidden>Clear selection</button><button type="button" class="linkbtn" id="itAll" aria-pressed="false">Show all times</button></div>
+%(sl)s
+<div class="winwrap"><div class="gh2" id="itWinH">Or a general window</div><div class="chips" id="itWins" role="group" aria-labelledby="itWinH">%(wn)s</div></div></fieldset>
 <div class="field"><label for="itOther">Another day or time <span class="muted" style="font-weight:600">(optional)</span></label><input id="itOther" name="other" maxlength="200" placeholder="For example: Tuesday after 4pm"></div>
 <div class="grid2"><div class="field"><label for="itName">Your first name</label><input id="itName" name="name" maxlength="40" autocomplete="given-name" required></div>
 <div class="field"><label for="itNote">Anything else? <span class="muted" style="font-weight:600">(optional)</span></label><input id="itNote" name="note" maxlength="400"></div></div>
@@ -115,5 +197,4 @@ def form_section(wa_num, wa_show):
 <div id="itMsg" aria-live="polite"></div>
 <button class="btn" type="submit" id="itSubmit">Send my request</button>
 <p class="fine2" style="margin-top:10px" id="itModeNote"></p></form></section>''' % dict(
-        wa_num=wa_num, wa_show=esc(wa_show), lv=lv, ab=ab, sl=sl, wn=wn, wa_lbl=wa_lbl,
-        slhead=('<div class="small muted" style="margin-bottom:6px">Placeholder groups we are considering (not open yet)</div>' if slots else ''))
+        wa_num=wa_num, wa_show=esc(wa_show), lv=lv, ab=ab, sl=sl, wn=wn, wa_lbl=wa_lbl)

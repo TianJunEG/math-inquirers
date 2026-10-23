@@ -216,12 +216,24 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 .othertimes a.small{justify-self:start}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips label{display:inline-flex;gap:8px;align-items:center;border:2px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--bg);font-weight:600;font-size:15px;cursor:pointer}
-.chips label:has(input:checked){background:var(--mint);border-color:var(--ink)}
-.chips input{width:auto;accent-color:var(--teal)}
-.chips.slotchips label{border-radius:14px;border-style:dashed;align-items:flex-start}
-.chips.slotchips label:has(input:checked){border-style:solid}
-.chips.slotchips input{margin-top:4px}
+.chips label,.slotchip{display:inline-flex;gap:8px;align-items:center;min-height:44px;box-sizing:border-box;border:2px solid var(--line);border-radius:12px;padding:6px 12px;background:var(--bg);font-weight:600;font-size:15px;line-height:1.25;cursor:pointer}
+.chips label:has(input:checked){background:var(--mint);border-color:var(--ink);font-weight:700}
+.chips label:has(input:focus-visible){outline:3px solid var(--teal);outline-offset:2px}
+.chips input{width:20px;height:20px;flex:none;margin:0;accent-color:var(--teal)}
+.chips label[hidden]{display:none}
+#itWins label{border-radius:999px}
+.slotbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin:2px 0 12px}
+.slotbar[hidden],.slotbar [hidden],.sgroup[hidden],#itNone[hidden],.srow[hidden]{display:none}
+.slotbar .count{font-weight:700;font-size:15px;margin-right:auto}
+.linkbtn{font:600 15px var(--body,inherit);color:var(--teal);background:none;border:0;padding:0 4px;min-height:44px;cursor:pointer;text-decoration:underline}
+.sgroup{margin:0 0 16px}
+.gh,.gh2{font:700 16px var(--head);margin:0 0 2px}
+.gnote{font-size:14px;color:var(--muted);margin:0 0 8px}
+.srow{display:grid;grid-template-columns:84px 1fr;gap:6px 10px;align-items:start;padding:8px 0;border-top:1px solid var(--line)}
+.rday{font-weight:700;font-size:15px;padding-top:10px}
+.winwrap{margin-top:6px;border-top:2px solid var(--line);padding-top:12px}
+.winwrap .gh2{margin-bottom:8px}
+@media(max-width:420px){.srow{grid-template-columns:70px 1fr;gap:6px}.chips label,.slotchip{padding:6px 10px}}
 .fine2{font-size:13px;color:var(--muted)}
 .field .err{color:var(--red);font-weight:700;font-size:14px}
 </style>
@@ -287,8 +299,9 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 <div class="grid2"><div class="field"><label for="itLevel">Level</label><select id="itLevel" name="level"><option value="1">Level 1 (ages 6-8)</option><option value="2">Level 2 (ages 7-9)</option><option value="3">Level 3 (ages 8-10)</option><option value="4">Level 4 (ages 9-11)</option><option value="5">Level 5 (ages 10-12)</option><option value="6">Level 6 (ages 11-13)</option></select></div>
 <div class="field"><label for="itAge">Child's age range</label><select id="itAge" name="age" required><option value="">Choose…</option><option value="under-6">Under 6</option><option value="6-7">6 to 7</option><option value="8-9">8 to 9</option><option value="10-11">10 to 11</option><option value="12-13">12 to 13</option><option value="14-plus">14 or older</option></select><span class="fine2">An age range only. Please do not give your child's name.</span></div></div>
 <fieldset class="field" style="border:0;padding:0;margin:0 0 12px"><legend class="flabel">Times you are interested in <span class="muted" style="font-weight:600">(tick any)</span></legend>
-<div class="small muted" style="margin-bottom:6px">Placeholder groups we are considering (not open yet)</div><div class="chips slotchips" id="itSlots"><label><input type="checkbox" name="itslot" value="R1" data-label="Wed &amp; Thu mornings, Wed 9:00am–10:30am &amp; Thu 9:00am–10:30am"><span><b>Wed &amp; Thu mornings</b><br><span class="small muted">Wed 9:00am–10:30am &amp; Thu 9:00am–10:30am · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="R2" data-label="Wed &amp; Thu late mornings, Wed 10:45am–12:15pm &amp; Thu 10:45am–12:15pm"><span><b>Wed &amp; Thu late mornings</b><br><span class="small muted">Wed 10:45am–12:15pm &amp; Thu 10:45am–12:15pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="R3" data-label="Wed &amp; Thu afternoons, Wed 1:15pm–2:45pm &amp; Thu 1:15pm–2:45pm"><span><b>Wed &amp; Thu afternoons</b><br><span class="small muted">Wed 1:15pm–2:45pm &amp; Thu 1:15pm–2:45pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="R4" data-label="Weekend: Sat morning &amp; Sun afternoon, Sat 9:00am–10:30am &amp; Sun 2:00pm–3:30pm"><span><b>Weekend: Sat morning &amp; Sun afternoon</b><br><span class="small muted">Sat 9:00am–10:30am &amp; Sun 2:00pm–3:30pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="MON-PM" data-label="Monday afternoon, Mon between 1:15pm and 5:00pm"><span><b>Monday afternoon</b><br><span class="small muted">Mon between 1:15pm and 5:00pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="MON-EVE" data-label="Monday evening, Mon between 5:00pm and 9:00pm"><span><b>Monday evening</b><br><span class="small muted">Mon between 5:00pm and 9:00pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-FRI-1500" data-label="2027 term time: Friday after school, Fri 3:00pm–4:30pm"><span><b>2027 term time: Friday after school</b><br><span class="small muted">Fri 3:00pm–4:30pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-THU-1745" data-label="2027 term time: Thursday early evening, Thu 5:45pm–7:15pm"><span><b>2027 term time: Thursday early evening</b><br><span class="small muted">Thu 5:45pm–7:15pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-THU-1930" data-label="2027 term time: Thursday late evening, Thu 7:30pm–9:00pm"><span><b>2027 term time: Thursday late evening</b><br><span class="small muted">Thu 7:30pm–9:00pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-SAT-1715" data-label="2027 term time: Saturday early evening, Sat 5:15pm–6:45pm"><span><b>2027 term time: Saturday early evening</b><br><span class="small muted">Sat 5:15pm–6:45pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-SAT-1900" data-label="2027 term time: Saturday evening, Sat 7:00pm–8:30pm"><span><b>2027 term time: Saturday evening</b><br><span class="small muted">Sat 7:00pm–8:30pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-SUN-1545" data-label="2027 term time: Sunday late afternoon, Sun 3:45pm–5:15pm"><span><b>2027 term time: Sunday late afternoon</b><br><span class="small muted">Sun 3:45pm–5:15pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-SUN-1730" data-label="2027 term time: Sunday evening, Sun 5:30pm–7:00pm"><span><b>2027 term time: Sunday evening</b><br><span class="small muted">Sun 5:30pm–7:00pm · not open yet</span></span></label><label><input type="checkbox" name="itslot" value="T27-SUN-1915" data-label="2027 term time: Sunday late evening, Sun 7:15pm–8:45pm"><span><b>2027 term time: Sunday late evening</b><br><span class="small muted">Sun 7:15pm–8:45pm · not open yet</span></span></label></div>
-<div class="small muted" style="margin:10px 0 6px">Or a general window</div><div class="chips" id="itWins"><label><input type="checkbox" name="itwin" value="wkday-am" data-label="Weekday mornings"><span>Weekday mornings</span></label><label><input type="checkbox" name="itwin" value="wkday-pm" data-label="Weekday afternoons"><span>Weekday afternoons</span></label><label><input type="checkbox" name="itwin" value="wkday-eve" data-label="Weekday evenings"><span>Weekday evenings</span></label><label><input type="checkbox" name="itwin" value="sat" data-label="Saturday"><span>Saturday</span></label><label><input type="checkbox" name="itwin" value="sun" data-label="Sunday"><span>Sunday</span></label></div></fieldset>
+<div class="slotbar" id="itBar" hidden><span class="count" id="itCount" aria-live="polite">0 times selected</span><button type="button" class="linkbtn" id="itClear" hidden>Clear selection</button><button type="button" class="linkbtn" id="itAll" aria-pressed="false">Show all times</button></div>
+<div id="itSlots"><div class="sgroup" data-group="hol"><h3 class="gh" id="itG-hol">Holiday program (Nov to Dec 2026)</h3><p class="gnote">Not open yet: tell us which you would join.</p><div class="srow" role="group" aria-labelledby="itRow-hol-0"><span class="rday" id="itRow-hol-0">Mon</span><div class="chips"><label class="slotchip" data-levels="1 2 3 4 5 6"><input type="checkbox" name="itslot" value="MON-PM" data-label="Holiday: Mon Between 1:15-5:00pm"><span>Between 1:15-5:00pm</span></label><label class="slotchip" data-levels="3 4 5 6"><input type="checkbox" name="itslot" value="MON-EVE" data-label="Holiday: Mon Between 5:00-9:00pm"><span>Between 5:00-9:00pm</span></label></div></div><div class="srow" role="group" aria-labelledby="itRow-hol-1"><span class="rday" id="itRow-hol-1">Wed &amp; Thu</span><div class="chips"><label class="slotchip" data-levels="1 2"><input type="checkbox" name="itslot" value="R1" data-label="Holiday: Wed &amp; Thu 9:00-10:30am"><span>9:00-10:30am</span></label><label class="slotchip" data-levels="1 2 3"><input type="checkbox" name="itslot" value="R2" data-label="Holiday: Wed &amp; Thu 10:45am-12:15pm"><span>10:45am-12:15pm</span></label><label class="slotchip" data-levels="3 4"><input type="checkbox" name="itslot" value="R3" data-label="Holiday: Wed &amp; Thu 1:15-2:45pm"><span>1:15-2:45pm</span></label></div></div><div class="srow" role="group" aria-labelledby="itRow-hol-2"><span class="rday" id="itRow-hol-2">Sat &amp; Sun</span><div class="chips"><label class="slotchip" data-levels="5 6"><input type="checkbox" name="itslot" value="R4" data-label="Holiday: Sat 9:00-10:30am, Sun 2:00-3:30pm"><span>Sat 9:00-10:30am, Sun 2:00-3:30pm</span></label></div></div></div><div class="sgroup" data-group="term"><h3 class="gh" id="itG-term">Term time (2027)</h3><p class="gnote">Not open yet: tell us which you would join.</p><div class="srow" role="group" aria-labelledby="itRow-term-0"><span class="rday" id="itRow-term-0">Thu</span><div class="chips"><label class="slotchip" data-levels="3 4 5"><input type="checkbox" name="itslot" value="T27-THU-1745" data-label="Term 2027: Thu 5:45-7:15pm"><span>5:45-7:15pm</span></label><label class="slotchip" data-levels="5 6"><input type="checkbox" name="itslot" value="T27-THU-1930" data-label="Term 2027: Thu 7:30-9:00pm"><span>7:30-9:00pm</span></label></div></div><div class="srow" role="group" aria-labelledby="itRow-term-1"><span class="rday" id="itRow-term-1">Fri</span><div class="chips"><label class="slotchip" data-levels="1 2"><input type="checkbox" name="itslot" value="T27-FRI-1500" data-label="Term 2027: Fri 3:00-4:30pm"><span>3:00-4:30pm</span></label></div></div><div class="srow" role="group" aria-labelledby="itRow-term-2"><span class="rday" id="itRow-term-2">Sat</span><div class="chips"><label class="slotchip" data-levels="3 4 5"><input type="checkbox" name="itslot" value="T27-SAT-1715" data-label="Term 2027: Sat 5:15-6:45pm"><span>5:15-6:45pm</span></label><label class="slotchip" data-levels="5 6"><input type="checkbox" name="itslot" value="T27-SAT-1900" data-label="Term 2027: Sat 7:00-8:30pm"><span>7:00-8:30pm</span></label></div></div><div class="srow" role="group" aria-labelledby="itRow-term-3"><span class="rday" id="itRow-term-3">Sun</span><div class="chips"><label class="slotchip" data-levels="1 2 3"><input type="checkbox" name="itslot" value="T27-SUN-1545" data-label="Term 2027: Sun 3:45-5:15pm"><span>3:45-5:15pm</span></label><label class="slotchip" data-levels="3 4 5"><input type="checkbox" name="itslot" value="T27-SUN-1730" data-label="Term 2027: Sun 5:30-7:00pm"><span>5:30-7:00pm</span></label><label class="slotchip" data-levels="5 6"><input type="checkbox" name="itslot" value="T27-SUN-1915" data-label="Term 2027: Sun 7:15-8:45pm"><span>7:15-8:45pm</span></label></div></div></div><p class="gnote" id="itNone" hidden>No suggested times for this level yet. Choose 'Show all times', a general window below, or write your own.</p></div>
+<div class="winwrap"><div class="gh2" id="itWinH">Or a general window</div><div class="chips" id="itWins" role="group" aria-labelledby="itWinH"><label><input type="checkbox" name="itwin" value="wkday-am" data-label="Weekday mornings"><span>Weekday mornings</span></label><label><input type="checkbox" name="itwin" value="wkday-pm" data-label="Weekday afternoons"><span>Weekday afternoons</span></label><label><input type="checkbox" name="itwin" value="wkday-eve" data-label="Weekday evenings"><span>Weekday evenings</span></label><label><input type="checkbox" name="itwin" value="sat" data-label="Saturday"><span>Saturday</span></label><label><input type="checkbox" name="itwin" value="sun" data-label="Sunday"><span>Sunday</span></label></div></div></fieldset>
 <div class="field"><label for="itOther">Another day or time <span class="muted" style="font-weight:600">(optional)</span></label><input id="itOther" name="other" maxlength="200" placeholder="For example: Tuesday after 4pm"></div>
 <div class="grid2"><div class="field"><label for="itName">Your first name</label><input id="itName" name="name" maxlength="40" autocomplete="given-name" required></div>
 <div class="field"><label for="itNote">Anything else? <span class="muted" style="font-weight:600">(optional)</span></label><input id="itNote" name="note" maxlength="400"></div></div>
@@ -387,15 +400,36 @@ var MC=window.MI_CONFIG||{},SB=/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(MC.SU
 var LEVELS=INTEREST.levels,BANDS=INTEREST.bands;
 $("itModeNote").textContent=SB?"Your request is stored securely and used only to plan new class times.":"Sending opens WhatsApp with your request written out, so you can check it before you send it to "+CONFIG.whatsappShow+".";
 function checked(name){return Array.prototype.slice.call(form.querySelectorAll('input[name="'+name+'"]:checked'))}
+var showAll=false;
+function each(sel,fn){Array.prototype.forEach.call(form.querySelectorAll(sel),fn)}
+function refresh(){
+  var lv=$("itLevel").value,any=false;
+  each(".slotchip",function(l){var c=l.querySelector("input"),ok=showAll||c.checked||(" "+l.dataset.levels+" ").indexOf(" "+lv+" ")>=0;l.hidden=!ok});
+  each(".srow",function(r){r.hidden=!r.querySelector(".slotchip:not([hidden])")});
+  each(".sgroup",function(g){var v=!g.querySelector(".srow:not([hidden])");g.hidden=v;if(!v)any=true});
+  var none=$("itNone");if(none)none.hidden=any;
+  var n=checked("itslot").length+checked("itwin").length;
+  $("itCount").textContent=n+(n===1?" time selected":" times selected");$("itClear").hidden=!n;
+  $("itAll").textContent=showAll?"Show times for this level":"Show all times";$("itAll").setAttribute("aria-pressed",showAll?"true":"false");
+}
+$("itBar").hidden=false;
+$("itLevel").addEventListener("change",refresh);
+$("itAll").addEventListener("click",function(){showAll=!showAll;refresh()});
+$("itClear").addEventListener("click",function(){each('input[name="itslot"],input[name="itwin"]',function(c){c.checked=false});refresh()});
+form.addEventListener("change",function(e){if(e.target.name==="itslot"||e.target.name==="itwin")refresh()});
+form.addEventListener("reset",function(){setTimeout(refresh,0)});
 function setSlot(id){
   Array.prototype.forEach.call(form.querySelectorAll('input[name="itslot"]'),function(c){if(c.value===id){c.checked=true}});
+  refresh();
 }
 function applyParams(q){
   var lv=parseInt(q.level,10);if(lv>=1&&lv<=6)$("itLevel").value=String(lv);
+  refresh();
   if(q.interest)setSlot(q.interest);
 }
 (function(){try{var p=new URLSearchParams(location.search),o={};p.forEach(function(v,k){o[k]=v});applyParams(o);
   if(o.interest){var s=$("request-time");if(s&&s.scrollIntoView)setTimeout(function(){s.scrollIntoView()},0)}}catch(e){}})();
+refresh();
 /* the "I'm interested" buttons on this page preselect the slot without reloading */
 document.addEventListener("click",function(e){
   var a=e.target.closest&&e.target.closest("a[data-level][data-interest]");if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey)return;
@@ -426,7 +460,7 @@ function valid(){
   v.wd=v.wa?wd:"";return v;
 }
 function message(v){
-  var times=v.slots.map(function(c){return c.dataset.label+" ("+c.value+")"}).concat(v.wins.map(function(c){return c.dataset.label}));
+  var times=v.slots.map(function(c){return c.dataset.label}).concat(v.wins.map(function(c){return c.dataset.label}));
   if(v.other)times.push("Other: "+v.other);
   var lv=LEVELS[v.level];
   return "Hi! I'd like to request another class time for Math Inquirers.\n\nLevel: "+lv+"\nChild's age: "+BANDS[v.age]+"\nTimes: "+times.join("; ")+"\nParent: "+v.name+"\nContact: "+[v.wa?"WhatsApp "+v.wa:"",v.email?"email "+v.email:""].filter(Boolean).join(", ")+(v.note?"\nNote: "+v.note:"")+"\nI agree you may use these details only to plan new class times and contact me about them.";
