@@ -113,12 +113,13 @@ def reflect_slide(old, lv, ln, sid):
     tools = ''.join(f'<span style="display:inline-flex;align-items:center;gap:8px">{si.icon(x["id"], NAVY, 76)}{box(32)}</span>' for x in si.SPINE['tools'])
     foot2 = (f'<div style="display:flex;align-items:center;gap:20px;border-top:2px solid #DCE4F0;padding-top:24px;font-size:32px;font-weight:700"><span style="white-space:nowrap">{esc(L["footer_tools"])}:</span>{tools}</div>'
              f'<div style="display:flex;gap:56px;font-size:32px;font-weight:600;color:#3B4A6B;margin-top:14px"><span style="display:inline-flex;align-items:center;gap:12px">{box(32)}{esc(L["stuck"])}</span><span style="display:inline-flex;align-items:center;gap:12px">{box(32)}{esc(L["pass"])}</span></div>')
-    timer = f'Timer: {L["timer_seconds"][band]} seconds'
+    tsec = L.get("timer_by_level", {}).get(lv, L["timer_seconds"][band])   # Level 2 uses 90 s (spec timing table)
+    timer = f'Timer: {tsec} seconds'
     card = (f'<div data-spine="reflect" style="background:#FFFFFF;border:2px solid #DCE4F0;box-shadow:0 6px 18px rgba(27,42,73,0.08);border-radius:24px;padding:14px 40px 22px;display:flex;flex-direction:column;gap:6px;width:1520px">{rows}{foot2}</div><!--/spine-->')
     sub = f'<div style="display:flex;gap:20px;align-items:center"><p style="background:{YEL};color:{NAVY};border-radius:999px;padding:8px 24px;font-size:28px;font-weight:700">{timer}</p><p style="font-size:28px;color:#3B4A6B">{esc(L["intro"])}</p></div>'
     S = si.SPINE['script']
     flex = f' After the look-back, minutes {s1} to 90 are flex time (the buffer): finish stamps, then goodbye. Do not start anything new.' if float(s1) < 90 else ''
-    note = ('SPINE: ' + f'Minutes {s0} to {s1}. Start the timer ({L["timer_seconds"][band]} seconds). Say: "{S["lookback_say"]}" '
+    note = ('SPINE: ' + f'Minutes {s0} to {s1}. Start the timer ({tsec} seconds). Say: "{S["lookback_say"]}" '
             'Children tick the Look back box on the Choose and look-back page of their workbook, or just tick on paper. A pass is always allowed. It is never marked, never collected in front of the group and never read out; the tutor may look at it afterwards. '
             'If a child ticks "I am still stuck", check in during the open session next lesson (a quick visit to the shared breakout room or a hand signal, with a parent nearby; never a direct message). Do not ask children to share. '
             'Praise a check you saw, not speed. Then stamp the journals.' + flex)

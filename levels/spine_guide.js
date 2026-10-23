@@ -14,7 +14,7 @@ function info(level, n) {
     talkAsk: choose ? S.choose_ask : fill(S.talk_ask, t, band),
     talkListen: choose ? 'Listen for a tool being named and a reason for choosing it.' : S.talk_listen,
     lookSay: S.lookback_say, lookDo: S.lookback_do, checkTogether: S.check_together,
-    timer: DATA.lookback.timer_seconds[band],
+    timer: (DATA.lookback.timer_by_level || {})[String(level)] || DATA.lookback.timer_seconds[band],
     kitLine: n === 1 ? DATA.kit_line : ''
   };
 }
