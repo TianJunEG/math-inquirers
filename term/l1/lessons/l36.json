@@ -155,9 +155,9 @@
   ]
  },
  "sneak_peek": {
-  "q1": "How many squares are in the picture? Write the number.",
+  "q1": "How many small squares are in the picture? Write the number.",
   "q2": "Ali has 2 hats and 3 scarves. He wears one hat and one scarf. How many different ways can he do it? Write or draw them.",
-  "a1": "8 squares.",
+  "a1": "8 small squares.",
   "a2": "6 ways: each of the 2 hats goes with each of the 3 scarves."
  },
  "rec": {
@@ -307,7 +307,7 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "How many squares are in the picture?",
+         "How many small squares are in the picture?",
          "Write the number."
         ]
        },
@@ -336,7 +336,7 @@
      ]
     }
    ],
-   "note": "Puzzle 1 is an access question: a grid of 2 rows of 4 squares, 8 in all. Puzzle 2 is a thinking question on the lesson idea: 2 hats and 3 scarves make 6 ways, because each hat goes with each scarf. A child who writes pairs such as hat 1 with scarf 1, hat 1 with scarf 2 and so on has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 8; 6 ways. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 is an access question: a grid of 2 rows of 4 small squares, 8 in all. The question says small squares on purpose: the grid also holds bigger squares (the 2 by 2 ones), and the children find those later in the lesson. Puzzle 2 is a thinking question on the lesson idea: 2 hats and 3 scarves make 6 ways, because each hat goes with each scarf. A child who writes pairs such as hat 1 with scarf 1, hat 1 with scarf 2 and so on has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 8 small squares; 6 ways. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
@@ -845,10 +845,10 @@
    "blocks": [
     {
      "t": "answer",
-     "text": "Puzzle 1: 8 squares. Puzzle 2: 6 ways. Each of the 2 hats goes with each of the 3 scarves."
+     "text": "Puzzle 1: 8 small squares. Puzzle 2: 6 ways. Each of the 2 hats goes with each of the 3 scarves."
     }
    ],
-   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: 2 rows of 4 squares make 8. Puzzle 2: hat 1 with each of 3 scarves is 3 ways, and hat 2 with each of 3 scarves is 3 more ways, so 6. It was the same idea as the table of outfits."
+   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: 2 rows of 4 small squares make 8. (The picture also holds bigger squares, which we count later today.) Puzzle 2: hat 1 with each of 3 scarves is 3 ways, and hat 2 with each of 3 scarves is 3 more ways, so 6. It was the same idea as the table of outfits."
   },
   {
    "id": "s-exit",
@@ -1161,7 +1161,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle one. How many squares are in the picture? Write the number."
+      "text": "Puzzle one. How many small squares are in the picture? Write the number."
      },
      {
       "k": "WORK",
@@ -1183,7 +1183,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: 8 squares. Puzzle 2 answer: 6 ways (each hat with each scarf). Look for good ideas to praise later (a child who listed hat 1 with every scarf first). Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: 8 small squares. Puzzle 2 answer: 6 ways (each hat with each scarf). Look for good ideas to praise later (a child who listed hat 1 with every scarf first). Do not write scores or keep a list."
      }
     ]
    },

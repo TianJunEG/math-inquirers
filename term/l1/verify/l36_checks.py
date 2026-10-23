@@ -130,7 +130,7 @@ def run(d):
     eq(sum([7, 3, 6, 4]), 20, 's-rem2 total'); eq([a + b for a, b in ((7, 3), (6, 4))], [10, 10], 's-rem2 tens'); eq(sum([8, 2, 5, 5]), 20, 's-rem2 your turn')
     eq(pairs_total(6), [(1, 5), (2, 4), (3, 3)], 's-rem3 pairs that make 6'); eq((4, 2) in pairs_total(6), False, 's-rem3 4 and 2 is a repeat')
     # ---------------------------------------------------------------- sneak-peek
-    sp = d['sneak_peek']; g = F('s-sneak', 0, 'grid'); eq(len(small_squares(g['rows'], g['cols'])), 8, 'sneak 1'); eq(sp['a1'], '8 squares.', 'sneak a1'); eq(len(ways(2, 3)), 6, 'sneak 2'); eq(nums(sp['q2']), [2, 3], 'sneak q2')
+    sp = d['sneak_peek']; g = F('s-sneak', 0, 'grid'); eq(len(small_squares(g['rows'], g['cols'])), 8, 'sneak 1'); eq(sp['a1'], '8 small squares.', 'sneak a1'); eq(len(ways(2, 3)), 6, 'sneak 2'); eq(nums(sp['q2']), [2, 3], 'sneak q2')
     # ---------------------------------------------------------------- Explore
     eq(len(handshakes(3)), 3, 'explore 3 people: 3 handshakes'); eq(len(lines_of(F('s-explore1-ans'))), 3, 's-explore1-ans lines'); eq(lines_of(F('s-explore1-ans')), handshakes(3), 's-explore1-ans shows every handshake')
     sq = all_squares(2, 2); eq(len(sq), 5, 'explore squares'); eq(len([s for s in sq if s[2] == 1]), 4, 'explore small'); eq(len([s for s in sq if s[2] == 2]), 1, 'explore big')
