@@ -115,3 +115,5 @@ validate.py: 747 checks, 0 failed. Teacher notes: "durations" in the problem-sol
 
 Follow-up to the independent coin check (3 Lows fixed): (1) wording "drawn larger than real" replaced by "not actual size (smaller than real)" in the P2 front matter (S1 and S2) and in the S2-01 and S2-04 teacher notes of the S2 answer key, and in the code comments; (2) P2-24 Purse Match (S2-04): one coin scale for every purse (printed at 0.96 of the S2-01 size, so a $1 coin is 19.0 mm in all six purses; the purses no longer shrink to fit; the page is not scaled for any other reason); (3) every seeded puzzle and answer unchanged (answer-key text identical to the version before the coin work apart from the wording lines).
 validate.py rerun: 747 checks, 0 failed.
+
+NOTE-COLOURS-ADD: the Photocopying paragraph of the S1 and S2 front matter (teacher notes, next to "Pictures are not actual size.") now says "Real $2 notes are purple, $5 green, $10 red." (colours as listed on the MAS notes page). Front matter and packs rebuilt; answer keys unchanged; validate.py 747 checks, 0 failed.
