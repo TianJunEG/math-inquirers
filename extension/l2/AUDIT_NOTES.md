@@ -45,3 +45,4 @@ Written by the author agent. The author did not audit its own work: every point 
 - The "Beyond Level 2" label now comes from the renderer (the `beyond` key); no text workaround was in use.
 - Rebuilt at 100 pages; run_checks (497), dup_check, wording_lint, bw_check and check_bw OK.
 - OPEN: the Welcome page (page 3) overflows by 12.4 mm in the soft copy and 6.1 mm in print, so fill_check fails on that one page. It comes from the Level 2 entry in extension/config/levels.json (welcome_notes plus the longer print note). I may not edit levels.json (edit was blocked). Suggested fix: shorten or remove the Level 2 welcome_notes entry ("Beyond Level 2 is ahead of school. You may skip it.") and the colour print note.
+- Welcome overflow resolved by the coordinator's levels.json edit; rebuilt, fill_check and all gates OK (100 pages).
