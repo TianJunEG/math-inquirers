@@ -329,7 +329,7 @@ for sh in sheets:
         cols = set(c.lower() for c in re.findall(r"#[0-9a-fA-F]{3,6}\b", h))
         rec(f"{wid} {kind}: html uses only black and white (#000, #fff)", cols <= {"#000", "#fff", "#000000", "#ffffff"} and not re.search(r"(?:fill|stroke|color|background)\s*[:=]\s*[\"']?(red|blue|green|gray|grey|orange|yellow)", h, re.I), str(sorted(cols))[:60])
         bxw = [float(x) for x in re.findall(r'<rect class="bx" data-l="\d+" data-t="\u25a1"[^>]*? width="([\d.]+)"', h)]
-        if kind == "pupil": rec(f"{wid} pupil: every blank box a pupil writes in is at least 5 mm wide ({len(bxw)} boxes, smallest {min(bxw) if bxw else '-'} mm)", all(w >= 5.0 for w in bxw))
+        if kind == "pupil": rec(f"{wid} pupil: every blank box a pupil writes in is at least 6 mm wide ({len(bxw)} boxes, smallest {min(bxw) if bxw else '-'} mm)", all(w >= 6.0 for w in bxw))
         sw = [float(x) for x in re.findall(r'stroke-width[=:]\s*"?([\d.]+)', h)]
         rec(f"{wid} {kind}: outline width 0.9 mm and no line thinner than 0.3 mm", "stroke-width:0.9" in h and min(sw) >= 0.3, f"min {min(sw)}")
         # 1-bit legibility at 150 dpi

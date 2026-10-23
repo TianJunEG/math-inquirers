@@ -147,24 +147,30 @@ def fraction(a, b, shape="bar"):
         s.append(f'<path d="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 {1 if (a1 - a0) > math.pi else 0} 1 {x1:.2f},{y1:.2f} Z" fill="none" {_ST}/>')
     return Art("".join(s), 2 * r + 1, 2 * r + 1, 0.9, dict(kind="fraction", parts=b, shaded=a, shape="circle"))
 
+def _star(cx, cy, r=1.5):
+    """a small outline star: the countable object used instead of a bare black dot (audit 3 follow-up: friendlier pictures for 6 and 7 year olds)"""
+    pts = " ".join(f"{cx + (r if i % 2 == 0 else r * 0.42) * math.sin(i * math.pi / 5):.2f},{cy - (r if i % 2 == 0 else r * 0.42) * math.cos(i * math.pi / 5):.2f}" for i in range(10))
+    return f'<polygon points="{pts}" fill="#fff" stroke="#000" stroke-width="0.32" stroke-linejoin="round"/>'
+
 def groups(n, per):
-    """n boxes with `per` dots in each (equal groups)"""
+    """n boxes with `per` stars in each (equal groups)"""
+    P_ = 3.3                                                   # star pitch
     cols = max(1, math.ceil(per / 2)); rows = 2 if per > 1 else 1
-    bw, bh = cols * 2.6 + 1.8, rows * 2.6 + 1.8
-    per_row = max(1, min(n, int(46 // (bw + 2.0))))
+    bw, bh = cols * P_ + 1.6, rows * P_ + 1.6
+    per_row = max(1, min(n, int(50 // (bw + 2.2))))
     s = []
     for g in range(n):
-        gx = (g % per_row) * (bw + 2.0) + 0.5; gy = (g // per_row) * (bh + 2.0) + 0.5
+        gx = (g % per_row) * (bw + 2.2) + 0.5; gy = (g // per_row) * (bh + 2.2) + 0.5
         s.append(f'<rect x="{gx:.2f}" y="{gy:.2f}" width="{bw:.2f}" height="{bh:.2f}" rx="1.2" fill="#fff" {_ST}/>')
         for k in range(per):
-            s.append(f'<circle cx="{gx + 1.5 + (k % cols) * 2.6 + 0.4:.2f}" cy="{gy + 1.5 + (k // cols) * 2.6 + 0.4:.2f}" r="0.85" fill="#000"/>')
+            s.append(_star(gx + 0.8 + P_ / 2 + (k % cols) * P_, gy + 0.8 + P_ / 2 + (k // cols) * P_))
     nrows = math.ceil(n / per_row)
-    return Art("".join(s), per_row * (bw + 2.0) - 1.0, nrows * (bh + 2.0) - 1.0, 0.9, dict(kind="groups", n=n, per=per))
+    return Art("".join(s), per_row * (bw + 2.2) - 1.2, nrows * (bh + 2.2) - 1.2, 0.9, dict(kind="groups", n=n, per=per))
 
 def array(r, c):
-    """r rows of c dots"""
-    s = [f'<circle cx="{1.6 + j * 3.0:.2f}" cy="{1.6 + i * 3.0:.2f}" r="1.0" fill="#000"/>' for i in range(r) for j in range(c)]
-    return Art("".join(s), c * 3.0 + 0.2, r * 3.0 + 0.2, 0.9, dict(kind="array", rows=r, cols=c))
+    """r rows of c stars"""
+    s = [_star(1.8 + j * 3.6, 1.8 + i * 3.6) for i in range(r) for j in range(c)]
+    return Art("".join(s), c * 3.6 + 0.2, r * 3.6 + 0.2, 0.9, dict(kind="array", rows=r, cols=c))
 
 def balance(n, total, unit):
     """n identical objects on the left pan balance one block of `total` units on the right pan"""
