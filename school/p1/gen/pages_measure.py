@@ -20,15 +20,15 @@ def _motif(v, cx, cy, u):
         return petals + f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{k*0.45:.2f}" {st}/>'
     return (f'<path d="M{cx:.2f},{cy-k*1.5:.2f} L{cx+k*1.2:.2f},{cy+k*0.5:.2f} L{cx:.2f},{cy+k*0.5:.2f} Z M{cx-k*1.5:.2f},{cy+k*0.9:.2f} L{cx+k*1.5:.2f},{cy+k*0.9:.2f} L{cx+k*0.9:.2f},{cy+k*1.6:.2f} L{cx-k*0.9:.2f},{cy+k*1.6:.2f} Z" {st}/>')
 
-def coins_svg(coins):
-    p = []; x = 1; H = COIN_D[50] + 2; cy = H / 2
+def coins_svg(coins, scale=1.0):
+    p = []; x = 1; H = COIN_D[50] * scale + 2; cy = H / 2
     for v in coins:
-        d = COIN_D[v]; r = d / 2; cx = x + r
+        d = COIN_D[v] * scale; r = d / 2; cx = x + r
         p.append(f'<circle class="coin" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
                  f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
                  + _motif(v, cx, cy - r * 0.60, r) +
                  f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.22:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{v}</text>'
-                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.68:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.28:.1f}" fill="#000">cents</text>')
+                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.68:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.34:.1f}" fill="#000">cents</text>')
         x += d + 2.0
     return svg(x + 1, H + 1, "".join(p))
 

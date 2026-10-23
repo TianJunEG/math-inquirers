@@ -224,7 +224,7 @@ def page24():
 
 
 # ---------------------------------------------------------------- N05 Count the Crowd (P1-25)
-def scene_svg(kind, n, rng, cols=5, rows=3, pitch=10.2, size=8.0):
+def scene_svg(kind, n, rng, cols=4, rows=3, pitch=11.0, size=10.0):
     cells = rng.sample([(r, c) for r in range(rows) for c in range(cols)], n)
     inner = "".join(art.obj_g(kind, 1 + c * pitch + rng.uniform(-0.6, 0.6), 1 + r * (pitch - 1.2) + rng.uniform(-0.5, 0.5), size) for r, c in cells)
     return common_svg(cols * pitch + 1, rows * (pitch - 1.2) + 1.5, inner)
@@ -233,7 +233,7 @@ def common_svg(w, h, inner):
     from .common import svg
     return svg(round(w, 1), round(h, 1), inner)
 
-def frame_svg(kind, k, pitch=9.0, size=7.4):
+def frame_svg(kind, k, pitch=9.6, size=9.0):
     """a ten frame (5 by 2, full of objects) and k loose objects below"""
     inner = '<rect class="frame" x="0.8" y="0.8" width="%.1f" height="%.1f" fill="#fff" stroke="#000" stroke-width="0.6"/>' % (5 * pitch, 2 * pitch)
     inner += '<line x1="0.8" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#000" stroke-width="0.35"/>' % (pitch + 0.8, 5 * pitch + 0.8, pitch + 0.8)
@@ -242,7 +242,7 @@ def frame_svg(kind, k, pitch=9.0, size=7.4):
     for i in range(k): inner += art.obj_g(kind, 1 + i * (pitch - 1), 2 * pitch + 3.2, size)
     return common_svg(max(5 * pitch + 2, 1 + k * (pitch - 1) + 1), 2 * pitch + 3.2 + size + 1.5, inner)
 
-def compare_svg(ka, a, kb, b, pitch=8.0, size=6.6, gap=11):
+def compare_svg(ka, a, kb, b, pitch=9.6, size=9.0, gap=11):
     top = "".join(art.obj_g(ka, 1 + i * pitch, 0.5, size) for i in range(a))
     bot = "".join(art.obj_g(kb, 1 + i * pitch, size + gap, size) for i in range(b))
     lines = "".join('<line class="mline" x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#000" stroke-width="0.4" stroke-dasharray="1 0.8"/>' % (1 + i * pitch + size / 2, size + 1.2, 1 + i * pitch + size / 2, size + gap - 0.6) for i in range(min(a, b)))
@@ -260,11 +260,11 @@ def page25():
     while True:
         k = rng.sample(kinds, 7)
         c1, c2 = rng.randint(6, 9), rng.randint(10, 12); fk = rng.randint(3, 6)
-        a1, b1 = rng.randint(6, 10), rng.randint(2, 5); a2, b2 = rng.randint(5, 10), rng.randint(2, 4)
+        a1, b1 = rng.randint(6, 8), rng.randint(2, 5); a2, b2 = rng.randint(5, 8), rng.randint(2, 4)
         d1, d2 = a1 - b1, a2 - b2
         ans = [c1, c2, 10 + fk, d1, d2]
         if len(set(ans)) != 5 or d1 == d2: continue
-        table = make_code_table(ans, word, rng, 0, 20, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=80)
+        table = make_code_table(ans, word, rng, 0, 20, n_decoy=3, near=(1, -1, 2, -2, 3, -3), tries=200)
         if table: break
     s1 = scene_svg(k[0], c1, rng); s2 = scene_svg(k[1], c2, rng); s3 = frame_svg(k[2], fk)
     cmp1 = compare_svg(k[3], a1, k[4], b1); cmp2 = compare_svg(k[5], a2, k[6], b2)
@@ -378,7 +378,7 @@ def bond_chain_svg(tiles, blank):
     p = []; R = 5.4
     for k, (w, l, r) in enumerate(tiles):
         x = k * 30
-        p.append(f'<line x1="{x+15}" y1="{8+R}" x2="{x+7}" y2="{31-R}" stroke="#000" stroke-width="0.5"/><line x1="{x+15}" y1="{8+R}" x2="{x+23}" y2="{31-R}" stroke="#000" stroke-width="0.5"/><text x="{x+2}" y="3.5" font-family="Nunito Sans" font-weight="800" font-size="4" fill="#000">tile {k+1}</text>')
+        p.append(f'<line x1="{x+15}" y1="{8+R}" x2="{x+7}" y2="{31-R}" stroke="#000" stroke-width="0.5"/><line x1="{x+15}" y1="{8+R}" x2="{x+23}" y2="{31-R}" stroke="#000" stroke-width="0.5"/><text x="{x+0.3}" y="3.2" font-family="Nunito Sans" font-weight="800" font-size="3.3" fill="#000">tile {k+1}</text>')
         for cx, cy, v, role in ((x + 15, 8, w, "w"), (x + 7, 31, l, "l"), (x + 23, 31, r, "r")):
             isb = (role == blank[k])
             p.append(f'<circle class="pc{" blank" if isb else ""}" data-k="{k}" data-role="{role}" cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.6"/>')
@@ -463,7 +463,7 @@ def _more_ok(val, c, chosen):
 def more_text(c):
     c = tuple(c) + (0, 0, 0)
     return {"none": f"Nobody has {c[1]}.", "more": f"{c[1]} has {c[3]} more than {c[2]}.", "fewer": f"{c[1]} has {c[3]} fewer than {c[2]}.",
-            "equal": f"{c[1]} gives {c[2]} {c[3]}: the same.", "gt": f"{c[1]} has more than {c[2]}."}[c[0]]
+            "equal": f"{c[1]} gives {c[3]} stickers to {c[2]}. Then they have the same number.", "gt": f"{c[1]} has more than {c[2]}."}[c[0]]
 
 def solve_more(names, nums, clues):
     sols = []
@@ -519,7 +519,7 @@ def page38():
     real = sorted({"".join(letter_of[v] for v in pp) for pp in itertools.permutations(nums, 5) if list(pp) != perm and "".join(letter_of[v] for v in pp).lower() in BIG})
     n_wrong = len(list(itertools.permutations(nums, 5))) - 1
     P = Page(no=38, title="More or Fewer", tier=2, topic="Comparing amounts: more than, fewer than and making the same",
-             strand="Number and Algebra - Whole Numbers", syll="1.4, 2.1 (comparing the number of objects in sets; concepts of addition and subtraction; make equal and fewer than: problem solving)",
+             strand="Number and Algebra - Whole Numbers", syll="1.5, 2.1 (comparing and ordering numbers; concepts of addition and subtraction; make equal and fewer than: problem solving)",
              ptype="Logic grid", mech="K4 grid + K1 letter beside each amount spells a word (5 letters, one decoy letter)",
              mech_plain="Letters beside the amounts, read down the list, spell a word (5 letters; one of the six amounts is not used)",
              instr=["Read the clues.", "Use the grid to cross and tick.", "Write each amount, then its letter."],

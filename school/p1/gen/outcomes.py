@@ -41,7 +41,7 @@ assert len(OUTCOMES) == 32
 
 # page number (P1-nn) -> outcome ids exercised (plan 2a and 2b)
 PAGE_OC = {
-    1: ["WN1.1", "WN1.2"], 2: ["WN1.2", "WN1.5"], 3: ["MD3.1", "MD3.4"], 4: ["WN1.5"], 5: ["MD3.1", "MD3.2", "MD3.3"],
+    1: ["WN1.2"], 2: ["WN1.2", "WN1.5"], 3: ["MD3.1", "MD3.4"], 4: ["WN1.5"], 5: ["MD3.1", "MD3.2", "MD3.3"],
     6: ["TI2.1"], 7: ["WN1.7"], 8: ["AS2.1", "AS2.2", "AS2.7"], 9: ["AS2.4"], 10: ["AS2.1", "AS2.3", "AS2.7"],
     11: ["AS2.5", "AS2.7"], 12: ["GE1.1"], 13: ["MD3.1", "MD3.2", "MD3.3"], 14: ["WN1.6"], 15: ["MO1.1"],
     16: ["MO1.1", "AS2.7"], 17: ["LE1.1", "LE1.2"], 18: ["TI2.1", "TI2.4"], 19: ["GE1.1", "GE1.3"], 20: ["ST1.1"],
@@ -62,7 +62,7 @@ PAGE_OC = {
     35: ["ST1.1"],                                     # N21 Read the Picture Graph
     36: ["ST1.1"],                                     # N22 Graph Detective Two
     37: ["AS2.1", "AS2.2", "AS2.3"],                   # N09 Bonds and Families
-    38: ["WN1.4", "AS2.1"],                            # N03 More or Fewer
+    38: ["WN1.5", "AS2.1"],                            # N03 More or Fewer
     39: ["MD3.1", "MD3.4"],                            # N11 Share and Group Stories
     40: ["MD3.1", "MD3.2", "MD3.3"],                   # N12 True or False Groups
 }

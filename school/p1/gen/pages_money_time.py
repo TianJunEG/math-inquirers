@@ -28,13 +28,13 @@ def page28():
         target = rng.choice([20, 25, 30])
         right_pool = {20: [(20,), (10, 10), (10, 5, 5), (5, 5, 5, 5)], 25: [(20, 5), (10, 10, 5), (10, 5, 5, 5)], 30: [(20, 10), (10, 10, 10), (20, 5, 5), (10, 10, 5, 5)]}[target]
         wrong_pool = [c for c in [(10, 5), (20, 5), (10, 10, 5), (20, 10), (5, 5, 5), (10, 5, 5), (20, 20), (10, 10, 10), (20, 5, 5), (5, 5, 5, 5), (50,), (10, 10, 20)] if sum(c) != target and len(c) <= 4]
-        nright = rng.randint(2, 4)
+        nright = rng.randint(1, 3)
         right = rng.sample(right_pool, min(nright, len(right_pool))); nright = len(right)
-        wrong = rng.sample(wrong_pool, 6 - nright)
+        wrong = rng.sample(wrong_pool, 4 - nright)
         purses = right + wrong; rng.shuffle(purses)
         ans = [fewest_dp(fa), fewest_dp(fb), k5 // 5, k10 // 10, nright]
-        if len(set(ans)) != 5 or min(ans) < 2 or max(ans) > 12: continue
-        table = make_code_table(ans, word, rng, 1, 12, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=80)
+        if len(set(ans)) != 5 or min(ans) < 1 or max(ans) > 12: continue
+        table = make_code_table(ans, word, rng, 1, 12, n_decoy=3, near=(1, -1, 2, -2, 3, -3), tries=300)
         if table: break
     legend = coins_svg([5, 10, 20, 50])
     order = [(fa, "F"), (fb, "F")]
@@ -44,12 +44,12 @@ def page28():
     k5c = coins_svg([5]); k10c = coins_svg([10])
     rows += f'<div class="qrow"><span class="no">3</span><span class="qt">How many 5\u00a2 coins make {k5}\u00a2?</span>{k5c}<span class="ab"></span></div>'
     rows += f'<div class="qrow"><span class="no">4</span><span class="qt">How many 10\u00a2 coins make {k10}\u00a2?</span>{k10c}<span class="ab"></span></div>'
-    pcs = [coins_svg(list(p)) for p in purses]
+    pcs = [coins_svg(list(p), 1.2) for p in purses]
     pur = "".join(f'<div class="purse">{s}<span class="ab"></span></div>' for s in pcs)
     rows = f'<div class="qgrid">{rows}</div>'
     rows += (f'<div class="qrow" style="border-bottom:none"><span class="no">5</span><span class="qt">Tick each purse that holds exactly {target}¢. How many ticks?</span><span class="ab"></span></div>'
              f'<div class="purses">{pur}</div>')
-    body = f'<div class="legend2"><span>Coins:</span>{legend}</div><div>{rows}</div>{code_block(table)}'
+    body = f'<div class="legend2"><span>Coins:</span>{legend}</div><div>{rows}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=28, title="Fewest Coins", tier=1, topic="Money: counting coins in cents; fewest coins and ways to pay",
              strand="Number and Algebra - Money", syll="Money 1.1 (counting amount of money in cents up to $1; fewest coins and ways to pay come from school tests: problem solving)",
              ptype="Code-breaker (coins)", mech="K1 code word (5 letters)",
@@ -66,7 +66,7 @@ def page28():
     P.v("V1 independent solver (coin-change search over the printed amounts; coin values summed from each drawn purse) equals the key", solved == ans, solved)
     P.v("V1b the coins shown beside questions 3 and 4 have the values asked", purse_sum(k5c) == 5 and purse_sum(k10c) == 10)
     P.v("V1c answers distinct and within 12", len(set(ans)) == 5 and max(ans) <= 12)
-    P.v("V1d the purses show 2 to 4 exact ones and several near-miss ones", 2 <= nright <= 4 and all(sum(p) != target for p in wrong))
+    P.v("V1d the purses show 1 to 3 exact ones and several near-miss ones", 1 <= nright <= 3 and all(sum(p) != target for p in wrong))
     finish_code(P, ans, table, word, 1, 12, plain="Code word (5 letters)")
     return P
 
@@ -212,12 +212,12 @@ def page29():
 # ---------------------------------------------------------------- N18 Morning or Evening? (P1-30)
 # the solver's own table: event -> (suffix, earliest minute, latest minute) on a 24-hour count of minutes after midnight
 SENSIBLE = {"wake up": ("am", 5 * 60, 8 * 60), "breakfast": ("am", 6 * 60, 9 * 60 + 30), "school starts": ("am", 7 * 60, 8 * 60 + 30),
-            "recess": ("am", 9 * 60 + 30, 11 * 60), "lunch": ("pm", 12 * 60, 14 * 60), "play outside": ("pm", 15 * 60, 17 * 60 + 30),
+            "lunch": ("pm", 12 * 60 + 30, 14 * 60 + 30), "play outside": ("pm", 15 * 60, 17 * 60 + 30),
             "dinner": ("pm", 18 * 60, 20 * 60), "bedtime": ("pm", 20 * 60, 21 * 60 + 30)}
 # the generator's own table: event -> (suffix, list of (hour, minute) times as written)
 GEN_TIMES = {"wake up": ("am", [(5, 30), (6, 0), (6, 30), (7, 0), (7, 30)]), "breakfast": ("am", [(6, 30), (7, 0), (7, 30), (8, 0), (8, 30), (9, 0)]),
-             "school starts": ("am", [(7, 30), (8, 0), (8, 30)]), "recess": ("am", [(9, 30), (10, 0), (10, 30)]),
-             "lunch": ("pm", [(12, 0), (12, 30), (1, 0), (1, 30)]), "play outside": ("pm", [(3, 0), (3, 30), (4, 0), (4, 30), (5, 0)]),
+             "school starts": ("am", [(7, 30), (8, 0), (8, 30)]),
+             "lunch": ("pm", [(1, 0), (1, 30), (2, 0)]), "play outside": ("pm", [(3, 0), (3, 30), (4, 0), (4, 30), (5, 0)]),
              "dinner": ("pm", [(6, 0), (6, 30), (7, 0), (7, 30), (8, 0)]), "bedtime": ("pm", [(8, 0), (8, 30), (9, 0)])}
 
 def parse_cell(text):

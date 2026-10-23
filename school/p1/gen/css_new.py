@@ -91,3 +91,6 @@ CSS_NEW += """.sumrows.arrs{gap:3mm 6mm}.sumcell{display:flex;flex-direction:col
 CSS_NEW += """.ctc .codetable{gap:2mm;flex-wrap:nowrap}.ctc .ct{min-width:0;flex:1;padding:0.6mm 1.5mm;font-size:14pt}.ctc .ct b{font-size:16pt}.sumrows.arrs .sumrow{font-size:21pt}"""
 CSS_NEW += """.shrows{gap:0.3mm}.shrow{padding:0.2mm 0 0.8mm}.shtxt{margin:0 0 0.6mm}.shrow .ab{height:13mm}"""
 CSS_NEW += """.formtask{display:flex;align-items:center;gap:6mm;border:0.4mm solid #000;border-radius:2mm;padding:2mm 4mm}.formtask .fg small{font-size:9pt;font-weight:700}.fopts{display:flex;gap:6mm;margin:1mm 0}.fopt{display:flex;align-items:center;gap:2mm}.fopt i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8mm;height:8mm;border:0.5mm solid #000;border-radius:50%;font-size:13pt;font-weight:700}.formtask svg{max-width:none}"""
+CSS_NEW += """.gsvg{width:110mm}.geq .ab{width:12mm}"""
+CSS_NEW += """.purses{grid-template-columns:1fr 1fr}.purse svg{max-width:none}"""
+CSS_NEW += """.frows{gap:2mm}.frow{padding-bottom:1mm}"""

@@ -84,7 +84,7 @@ def page21():
         for it in items:
             wrong |= {it["a"] + it["b"], it["a"] - it["b"]}
         wrong = sorted(w for w in wrong if 0 <= w <= 20 and w not in ans)
-        table = make_code_table(ans, word, rng, 0, 20, n_decoy=5, near=(1, -1, 2, -2, 10, -10), tries=80, pool=wrong)
+        table = make_code_table(ans, word, rng, 0, 20, n_decoy=3, near=(1, -1, 2, -2, 10, -10), tries=300, pool=wrong)
         if table: break
     cards = []; texts = []; picobjs = []
     for i, it in enumerate(items):
@@ -96,7 +96,7 @@ def page21():
             s2, _, _ = row_svg(it["obj"], it["b"], size=10.0, pitch=10.8, per_row=7); pics.append(s2); cnt.append(it["b"])
         picobjs.append(pics)
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
-    body = f'<div class="stories">{"".join(cards)}</div>{code_block(table)}'
+    body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
     kd_names = {"add": "adds", "sub": "takes away", "more": "has more than", "fewer": "has fewer than (the reversal)", "diff": "how many more", "total": "in all"}
     P = Page(no=21, title="Story Sums", tier=2, topic="Add and take away stories within 20",
              strand="Number and Algebra - Whole Numbers", syll="2.1, 2.2, 2.7 (concepts of addition and subtraction, +, - and =, mental calculation within 20)",
@@ -235,11 +235,11 @@ def page39():
         k_ = rng.randint(2, 5); items.append(dict(k="car", N=names[3], w=4 * k_, ans=k_))
         k2 = rng.randint(3, 9); items.append(dict(k="bird", N=names[4], l=2 * k2, ans=k2))
         pl = rng.randint(2, 4); pp = rng.randint(2, 6); items.append(dict(k="plates", N=names[5], obj=o[5], n=pl * pp, p=pl, ans=pp))
-        if any(it.get("n", 0) > 20 for it in items): continue
+        if any(it.get("n", 0) > 12 for it in items): continue
         rng.shuffle(items)
         ans = [it["ans"] for it in items]
-        if len(set(ans)) != 6 or max(ans) > 12 or sum(1 for it in items if it.get("n", 0) > 12) > 1: continue
-        table = make_code_table(ans, word, rng, 1, 20, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=60)
+        if len(set(ans)) != 6 or max(ans) > 12: continue
+        table = make_code_table(ans, word, rng, 1, 20, n_decoy=2, near=(1, -1, 2, -2, 3, -3), tries=200)
         if table: break
     cards = []; texts = []
     for i, it in enumerate(items):
@@ -255,11 +255,11 @@ def page39():
         if k in ("car", "bird"): pics = [row_svg(k if k == "car" else "bird", 1, size=10.0, pitch=11)[0]]
         else: pics = [row_svg(it["obj"], it["n"], size=9.0, pitch=9.6, per_row=8)[0]]
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
-    body = f'<div class="stories">{"".join(cards)}</div>{code_block(table)}<p class="lead" style="margin:0;font-size:11pt">The sharer gets a share too.</p>'
+    body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=39, title="Share and Group", tier=1, topic="Sharing and grouping stories within 20, and printed facts",
              strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.4 (concepts of multiplication and division, dividing within 20; sharing stories, hidden facts: problem solving)",
              ptype="Code-breaker (stories)", mech="K1 code word (6 letters)",
-             instr=["Read each story.", "Write how many.", "Use the code table."],
+             instr=["Read each story.", "The sharer gets a share too.", "Write how many. Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
              note=("Six stories with pictures. In two the sharer is one of the children: Ali shares 12 sweets with 3 friends, so 4 children share (the page prints that a person who shares also counts). One story groups, one shares among plates, and two give a printed fact (1 car has 4 wheels, 1 bird has 2 legs) "

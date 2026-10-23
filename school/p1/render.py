@@ -248,7 +248,7 @@ def cover(school, bk):
             '<p class="sub" style="margin-top:12mm">Maths puzzles for early finishers</p>'
             '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 1</div>'
             f'<div class="big" style="font-size:28pt;margin-top:5mm">{html.escape(bk["name"])}</div><p class="sub" style="margin-top:2mm">{html.escape(bk["terms"])}</p></div>'
-            '<div class="box">20 single-page puzzles<br>Every puzzle checks itself<br>One star and two star pages<br>Teacher answer key included</div>'
+            '<div class="box">20 single-page puzzles<br>Almost every puzzle checks itself<br>One star and two star pages<br>Teacher answer key included</div>'
             f'<div><p style="font-size:13pt;margin:0 0 2mm">This booklet belongs to</p><span class="school">{s}</span>'
             + pub + '</div></section>')
 
@@ -285,24 +285,28 @@ def teacher_notes(pages, bk):
         ({7, 8, 24, 30}, '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes, and every box on it must follow the rule on the page.</li>'),
         ({4, 7, 31, 34, 38}, '<li><b>Logic grid, queue, strips and matching pictures.</b> Each number, child, strip or picture has a letter; the letters, read in the order asked, must spell a word. Where one item is left out, its letter is a decoy that is not part of the word.</li>'),
         ({9, 19, 20, 36}, '<li><b>Total.</b> The whole count must make the total printed in the strip (the graph pages add a second sum).</li>'),
-        ({37}, '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop, and the top numbers must add to the printed total.</li>'),
+        ({37}, '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop.</li>'),
     ]
     blt = "".join(t for need, t in bullets if need is None or _has(pages, need))
+    draw_note = (' On the Finish the Figure page the check tests whether the pupil can tell which printed half matches; look at the pupil\'s drawing at a glance.' if _has(pages, {34}) else '') + (' On the Measure and Draw page the check tests reading the ruler and finding the end mark; look at the line the pupil draws at a glance.' if _has(pages, {32}) else '')
+    ps_ex = 'comparing amounts and making them equal' if bk['n'] == 1 else 'stories with more than one step, fewest coins, choosing two things for an exact price and printed facts'
+    ruler_li = ('<li><b>Rulers.</b> Some strips start away from 0 (an arrow shows the start); this is a small extension of measuring in cm. Print at 100% so a real ruler matches.</li>' if _has(pages, {17, 31, 32}) else '')
     return ('<section class="page fm notes"><h2>Teacher notes' + (" (DRAFT)"if DRAFT else "") + '</h2>'
             + draft_banner("teacher notes are for owner review.")
             + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
             f'<h3>Which terms</h3><p>The pages are grouped by the order in which Primary 1 topics are typically taught: this booklet follows {html.escape(bk["terms"])}, the other booklet follows {other}. Schools vary, so check your scheme of work: use a page whenever its topic has been taught, from either booklet.</p>'
             f'<h3>Stars</h3><p>One star pages practise a topic as it is usually taught ({n1} pages). Two star pages use the same topics with two steps or two clues to combine ({n2} pages).</p>'
-            '<h3>Every page checks itself</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer, and it asks the pupil to see whether the answer makes sense.</p>'
+            '<h3>How the pages check themselves</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer, and it asks the pupil to see whether the answer makes sense.' + draw_note + '</p>'
             f'<ul>{blt}</ul>'
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
-            '<h3>How the checks were tested</h3><p>A script tried every single wrong answer and every wrong arrangement on every page. Each check rejected at least 95% of them. A wrong answer that spells any of about 129 000 English words counts as not rejected.</p>'
+            '<h3>How the checks were tested</h3><p>A script tried every single wrong answer and every wrong arrangement on every page. Each check rejected at least 95% of them. A wrong answer that spells any of about 129 000 English words counts as not rejected. Two wrong answers at once were not all tested.</p>'
             '</section>'
             '<section class="page fm notes"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
             '<h3>Using the pages</h3><ul>'
-            + ('<li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). For a pencil-only copy the pupil writes Y, R, B, G or O in each part; the tally and the matching parts are checked the same way.</li>' if cbc else '<li><b>Time.</b> Most pages take 5 to 15 minutes.</li>')
+            + ('<li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). For a pencil-only copy the pupil writes Y, R, B, G or O in each part; the tally and the matching parts are checked the same way. Light crayons work best: a dark crayon hides the number in the part on a photocopy.</li>' if cbc else '<li><b>Time.</b> Most pages take 5 to 15 minutes.</li>')
             + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
-            + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as stories with more than one step or fewest coins, rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
+            + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else ''
+            + ruler_li)
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li></ul>'
             '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size); on the ruler pages a real ruler matches the drawn ruler only at 100%.</p>'
             '</section>')

@@ -263,7 +263,7 @@ def page33():
     silh = silhouette_svg(target, 10.0)
     opts = "".join(f'<div class="fopt"><i class="cl">{opt_letters[s_]}</i>{option_pieces_svg([k for k, x, y, r in FORM_TEMPLATES[order[s_]]])}</div>' for s_ in range(3))
     form = (f'<div class="formtask"><div class="fg"><small>make this figure</small>{silh}</div><div class="fo"><p class="ptxt">Which pieces make this figure? Write that letter last.</p><div class="fopts">{opts}</div></div></div>')
-    body = f'<div class="figwrap">{figsvg}</div><div class="srows s5">{srows}</div><div class="ctc">{code_block(table)}</div>{form}'
+    body = f'<div class="figwrap">{figsvg}</div><p class="lead" style="margin:0;font-size:11pt;text-align:center">Squares and rectangles are different kinds here.</p><div class="srows s5">{srows}</div><div class="ctc">{code_block(table)}</div>{form}'
     chk_code = code_check(table)
     P = Page(no=33, title="Shape Builder", tier=2, topic="2D shapes: count the shapes in a figure and form a figure",
              strand="Measurement and Geometry - Geometry", syll="Geometry 1.1, 1.2, 1.3 (naming and classifying 2D shapes; forming a figure from rectangle, square, triangle, half circle, quarter circle; the shapes in a figure)",
@@ -313,7 +313,8 @@ def page33():
 # ---------------------------------------------------------------- N20 Finish the Figure (P1-34): complete the half figure, with a printed match
 TRI = {"bl": [(0, 0), (1, 0), (0, 1)], "br": [(0, 0), (1, 0), (1, 1)], "tl": [(0, 0), (0, 1), (1, 1)], "tr": [(1, 0), (1, 1), (0, 1)]}
 FULL = [(0, 0), (1, 0), (1, 1), (0, 1)]
-GC, GR = 6, 4                      # grid columns and rows; the left half is columns 0 to 2, the right half columns 3 to 5
+GC, GR = 4, 3                      # grid columns and rows; the left half is columns 0 and 1, the right half columns 2 and 3
+HALF = 2
 
 def figure_edges(cells):
     """boundary edges of a figure given {(col,row): 'full'|'bl'|'br'|'tl'|'tr'} (row 0 at the bottom): edges shared by two cells cancel"""
@@ -327,18 +328,18 @@ def figure_edges(cells):
 def random_figure(rng):
     while True:
         cells = {(rng.randrange(GC), rng.randrange(GR)): "full"}
-        target = rng.randint(9, 13)
+        target = rng.randint(6, 8)
         while len(cells) < target:
             c, r = rng.choice(list(cells))
             nb = [(c + dc, r + dr) for dc, dr in ((1, 0), (-1, 0), (0, 1), (0, -1)) if 0 <= c + dc < GC and 0 <= r + dr < GR and (c + dc, r + dr) not in cells]
             if nb: cells[rng.choice(nb)] = "full"
         for _ in range(rng.randint(2, 3)):                       # turn some cells into half squares (a triangle)
             k = rng.choice(list(cells)); cells[k] = rng.choice(list(TRI))
-        left = sum(1 for (c, r) in cells if c < 3); right = sum(1 for (c, r) in cells if c >= 3)
-        if left >= 3 and right >= 4 and any(c >= 3 and t != "full" for (c, r), t in cells.items()): return cells
+        left = sum(1 for (c, r) in cells if c < HALF); right = sum(1 for (c, r) in cells if c >= HALF)
+        if left >= 2 and right >= 3 and any(c >= HALF and t != "full" for (c, r), t in cells.items()): return cells
 
-def edges_right(e): return {x for x in e if all(p[0] >= 3 for p in x)}
-def edges_left(e): return {x for x in e if all(p[0] <= 3 for p in x)}
+def edges_right(e): return {x for x in e if all(p[0] >= HALF for p in x)}
+def edges_left(e): return {x for x in e if all(p[0] <= HALF for p in x)}
 
 def edge_svg(edges, cell, cols, x0, rows=GR, grid=True, thick=0.9, cls="edge"):
     """edges on a grid of `cols` x `rows` unit cells drawn `cell` mm each; x0 = first grid column shown (shifts x); y up"""
@@ -363,7 +364,7 @@ def page34():
     rng = random.Random(3434)
     word = "FROG"
     assert anagrams(word) == [word.lower()]
-    NF = 4; cell_big = 6.0; cell_opt = 6.0
+    NF = 4; cell_big = 9.0; cell_opt = 9.0
     while True:
         figs = []; ok = True
         for i in range(NF):
@@ -373,9 +374,9 @@ def page34():
             while len(wrongs) < 2 and tries < 200:
                 tries += 1
                 c2 = dict(cells)
-                k = rng.choice([(c, r) for c in range(3, GC) for r in range(GR)])
+                k = rng.choice([(c, r) for c in range(HALF, GC) for r in range(GR)])
                 if k in c2 and c2[k] != "full" and rng.random() < .6: c2[k] = rng.choice([t for t in TRI if t != c2[k]])
-                elif k in c2 and len(c2) > 8 and rng.random() < .5: del c2[k]
+                elif k in c2 and len(c2) > 5 and rng.random() < .5: del c2[k]
                 elif k not in c2:
                     c2[k] = rng.choice(["full"] + list(TRI))
                 else: continue
@@ -406,7 +407,7 @@ def page34():
         wi = iter(f["wrongs"]); osv = []
         for s in range(3):
             R = f["R"] if s == f["slot"] else next(wi)[1]
-            osv.append(edge_svg(R, cell_opt, 3, 3))
+            osv.append(edge_svg(R, cell_opt, GC - HALF, HALF))
             opts.append(f'<div class="opt">{osv[-1]}<i class="cl">{letters[i][s]}</i></div>')
         opt_svgs.append(osv)
         rows += (f'<div class="frow"><span class="no">{i+1}</span><div class="fg"><small>copy this</small>{ms}</div><div class="fg"><small>finish it here</small>{cs}</div>'
@@ -426,12 +427,12 @@ def page34():
     # independent solver: read the thick edges of the drawn model and options back from the svg text
     solved = ""
     for i, f in enumerate(figs):
-        Rm = {e for e in read_edges(model_svgs[i], cell_big, 0) if all(p[0] >= 3 for p in e)}
-        hit = [s for s in range(3) if read_edges(opt_svgs[i][s], cell_opt, 3) == Rm]
+        Rm = {e for e in read_edges(model_svgs[i], cell_big, 0) if all(p[0] >= HALF for p in e)}
+        hit = [s for s in range(3) if read_edges(opt_svgs[i][s], cell_opt, HALF) == Rm]
         assert len(hit) == 1
         solved += letters[i][hit[0]]
     P.v("V1 independent reader: exactly one printed right half matches the right half of each drawn figure (edges read back from the drawings); its letters spell the code word", solved == word, solved)
-    P.v("V1b the three options of every figure are all different", all(len({frozenset(read_edges(o, cell_opt, 3)) for o in os_}) == 3 for os_ in opt_svgs))
+    P.v("V1b the three options of every figure are all different", all(len({frozenset(read_edges(o, cell_opt, HALF)) for o in os_}) == 3 for os_ in opt_svgs))
     P.v("V1c the copy grid shows exactly the left half of the figure (the edges up to column 3)", all(read_edges(copy_svgs[i], cell_big, 0) == edges_left(f["E"]) for i, f in enumerate(figs)))
     n_combo = 3 ** NF - 1
     P.v(f"V3 none of the {n_combo} wrong picks (one option per figure) spells a word (large word list)", not bad, bad[:3])
@@ -439,7 +440,7 @@ def page34():
     P.v("V4 guess resistance: twelve letters shown, 3 per figure; shorter common words can be spelt from them", len(small_words("".join(sum(letters, [])))) >= 3)
     P["cv"] = dict(rate=1.0, single_total=n_combo, single_detected=n_combo)
     P["model"] = dict(truth=list(word), domains=[sorted(letters[i]) for i in range(NF)], check=letters_check(), numeric=False)
-    P["facts"] = "3 4"
+    P["facts"] = "2 3 4"
     return P
 
 

@@ -214,6 +214,10 @@ for k in BK:
     rec(f"{k}: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and a registered-office placeholder (until built with --final)", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "[registered office address" in fm and "to be confirmed by the owner" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
     rec(f"{k}: front matter has the 'typical order, schools vary' sentence and the booklet's terms", "Schools vary" in fm_flat and OC.BOOKLETS[k]["terms"] in fm_flat)
     rec(f"{k}: pupil pages carry no DRAFT stamp", "DRAFT" not in pt)
+    kt = alltxt[f"P1_{k}_Answer_Key.pdf"]
+    rec(f"{k}: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)", ("DRAFT" in kt and "pypteltd@gmail.com" in kt) or not render.DRAFT)
+    rec(f"{k}: the cover does not claim that every puzzle checks itself", "Every puzzle checks itself" not in fm_flat and "Almost every puzzle checks itself" in fm_flat)
+    rec(f"{k}: no (c) line in pupil footers while the entity and year are unconfirmed (DRAFT build)", ("Preciouslyours" not in pt) or not render.DRAFT)
 if not ARGS.partial or 6 in [p["no"] for p in BK["S2"]]:
     rec("o'clock and half past used for clock times in the Semester 2 key", "o'clock" in alltxt["P1_S2_Answer_Key.pdf"] and "half past" in alltxt["P1_S2_Answer_Key.pdf"])
 # ---- 4c. a 68-character school name must not wrap the footer or split the page code

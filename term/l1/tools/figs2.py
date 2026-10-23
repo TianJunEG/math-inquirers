@@ -588,7 +588,7 @@ def render(v):
     if r4 is not None: return r4
     if t in figs3.FIGURES3: return figs3.render(v)
     if t == 'objects':
-        return objects(v.get('icon'), v.get('n', 0), v.get('per_row', 5), v.get('size', 'm'), tuple(v.get('cross', ())), tuple(v.get('hide', ())), v.get('label'), v.get('items'))
+        return objects(v.get('icon'), v.get('n', 0), v.get('per_row', 5), v.get('size', 'm'), tuple(v.get('cross', ())), tuple(v.get('hide', ())), v.get('label'), v.get('items'), v.get('cell'))
     if t == 'groups':
         return groups(v.get('container', 'plate'), v.get('n', 3), v.get('each', 3), v.get('icon', 'apple'), v.get('counts'), v.get('empty', False), v.get('label_each'), v.get('total'), v.get('per_row', 4))
     if t == 'array':

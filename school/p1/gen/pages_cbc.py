@@ -133,8 +133,8 @@ def cbc_page(no, spec, title, instr, strand, syll, topic_note):
 
 def page01():
     return cbc_page(1, dict(id="CBC-11", picture="rocket", bank="place", tier=1, seed=201), "Colour the Rocket",
-        ["Find the missing number in each part.", "Find it in the key.", "Colour the part with that colour."],
-        "Number and Algebra - Whole Numbers", "1.1, 1.2 (count a set, tens and ones)",
+        ["Find the missing number in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
+        "Number and Algebra - Whole Numbers", "1.2 (tens and ones)",
         "Every part asks a tens-and-ones question: how many ones or tens a number has, or the missing part of a number made of tens and ones. The answers are 1 to 5.")
 
 def page12():
@@ -145,13 +145,13 @@ def page12():
 
 def _page12():
     return cbc_page(12, dict(id="CBC-10", picture="house", bank="shapes", tier=1, seed=128), "Colour the House",
-        ["Count the corners. Write it in the thick box.", "Find the number in the key.", "Colour the part with that colour."],
+        ["Count the corners. Write it in the thick box.", "Find the number in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Measurement and Geometry - Geometry", "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
         "Shapes are triangle, square, rectangle and circle only. A circle has no corners.")
 
 def page14():
     return cbc_page(14, dict(id="CBC-05", picture="icecream", bank="count", tier=2, seed=105), "Colour the Ice Cream",
-        ["Find the missing number in each pattern.", "Find it in the key.", "Colour the part with that colour."],
+        ["Find the missing number in each pattern.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Whole Numbers", "1.6 (number patterns); counting in 2s, 5s and 10s leads to multiplication",
         "Patterns count in 2s, 5s or 10s, forwards or back, and the answers are 60 to 80.")
 

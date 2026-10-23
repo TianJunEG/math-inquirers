@@ -245,11 +245,11 @@ def page11():
 def groups_svg(g, m, kind="apple"):
     p = []; x = 0.5
     cols = max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
-    bw = cols * 7.6 + 2.4; h = rows * 7.6 + 2.4
+    bw = cols * 9.6 + 2.4; h = rows * 9.6 + 2.4
     for _ in range(g):
         p.append(f'<rect class="bag" x="{x:.1f}" y="0.5" width="{bw:.1f}" height="{h:.1f}" rx="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
         for i in range(m):
-            p.append(obj_g(kind, x + 1.2 + (i % cols) * 7.6, 1.7 + (i // cols) * 7.6, 7.2))
+            p.append(obj_g(kind, x + 1.2 + (i % cols) * 9.6, 1.7 + (i // cols) * 9.6, 9.0))
         x += bw + 3.0
     return svg(x, h + 1, "".join(p)), h + 1
 
@@ -257,24 +257,24 @@ def page13():
     rng = random.Random(1313)
     word = "NUMBER"
     while True:
-        items = [(rng.randint(2, 4), rng.randint(2, 6)) for _ in range(6)]
+        items = [(rng.randint(2, 4), rng.randint(2, 5)) for _ in range(6)]
         tot = [g * m for g, m in items]
-        if len(set(tot)) == 6 and max(tot) <= 24 and min(tot) >= 6 and len(set(items)) == 6:
-            table = make_code_table(tot, word, rng, 1, 40, n_decoy=5, tries=60)
+        if len(set(tot)) == 6 and max(tot) <= 16 and min(tot) >= 6 and len(set(items)) == 6 and all(g * (max(2, (m + 1) // 2) * 9.6 + 5.4) <= 108 for g, m in items):
+            table = make_code_table(tot, word, rng, 1, 40, n_decoy=2, tries=400)
             if table: break
     rows = ""; svgs = []
     for i, (g, m) in enumerate(items):
         s, h = groups_svg(g, m, ["apple", "star", "fish", "balloon"][i % 4]); svgs.append(s)
         rows += (f'<div class="grow"><span class="no">{i+1}</span><div class="gsvg">{s}</div>'
                  f'<div class="geq"><span class="lbx"><span class="ab"></span><small>bags</small></span> <span class="op">&times;</span> <span class="lbx"><span class="ab"></span><small>things</small></span> <span class="op">=</span> <span class="lbx"><span class="ab"></span><small>total</small></span></div></div>')
-    body = f'<div class="grows">{rows}</div>{code_block(table)}'
+    body = f'<div class="grows">{rows}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=13, title="Equal Groups", tier=1, topic="Multiplication: equal groups and repeated addition",
              strand="Number and Algebra - Multiplication and Division", syll="3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
              ptype="Code-breaker", mech="K1 code word (6 letters)",
              instr=["Each bag has the same number of things.", "Write the bags, the things and the total.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {g} bags of {m} = {g*m}" for i, (g, m) in enumerate(items)), check_result=f"Code word: {word}"),
-             note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 24 and the objects are drawn large. Repeated addition (4 bags of 3 is 3 + 3 + 3 + 3) is the bridge to the sharing pages in the other semester.",
+             note="Pictures of equal groups. Pupils write the number of groups, the number in each group and the total. Totals are within 16 and the objects are drawn large (about 8 mm). Repeated addition (4 bags of 3 is 3 + 3 + 3 + 3) is the bridge to the sharing pages in the other semester.",
              seed=1313)
     ok = True
     for s, (g, m) in zip(svgs, items):
@@ -292,10 +292,10 @@ def page13():
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
 def share_svg(kind, n, g, per, mode):
     """objects in rows of 10 on the left; for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
-    pitch = 7.4; prow = 12 if n <= 12 else 10; rows = (n + prow - 1) // prow; H = rows * 8.4 + 1.6
+    pitch = 9.6; prow = 8; rows = (n + prow - 1) // prow; H = rows * 10.6 + 1.6
     inner = []
     for i in range(n):
-        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 8.4, 7.0))
+        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 10.6, 9.0))
     W = 1 + min(n, prow) * pitch + 1
     if mode == "share":
         x0 = W + 5; cw, chh = 14, 9.5
@@ -306,7 +306,7 @@ def share_svg(kind, n, g, per, mode):
         H = max(H, 1 + lines * (chh + 2) + 1)
     else:
         # the example loop: a dashed rounded frame round the first group of `per` objects (first row only, per <= 10)
-        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="8.2" rx="3.6" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
+        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="10.2" rx="4.6" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
         W = max(W, 76)
     return svg(round(W, 1), round(H, 1), "".join(inner)), (round(W, 1), round(H, 1))
 
@@ -318,7 +318,7 @@ def read_share(s, mode):
     inside = None
     if loop:
         lx, ly, lw, lh = (float(v) for v in loop.groups())
-        inside = sum(1 for x, y in objs if lx <= x + 3.5 <= lx + lw and ly <= y + 3.5 <= ly + lh)
+        inside = sum(1 for x, y in objs if lx <= x + 4.5 <= lx + lw and ly <= y + 4.5 <= ly + lh)
     return len(objs), conts, inside
 
 def page03():
@@ -330,13 +330,13 @@ def page03():
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
             lim = 20 if k == big else 12
-            g = rng.randint(2, 6 if kind == "group" else 3); per = rng.randint(2, 9 if kind == "group" else 10)
+            g = rng.randint(2, 6 if kind == "group" else 3); per = rng.randint(2, 8 if kind == "group" else 10)
             if g * per > lim: continue
             items.append((kind, g * per, g, per))
         if len(items) != 6: continue
         ans = [per if kind == "share" else g for kind, n, g, per in items]
         if len(set(ans)) != 6 or len({(n, g if kind == "share" else per) for kind, n, g, per in items}) != 6: continue
-        table = make_code_table(ans, word, rng, 1, 20, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=60)
+        table = make_code_table(ans, word, rng, 1, 20, n_decoy=3, near=(1, -1, 2, -2, 3, -3), tries=300)
         if table: break
     objk = [kinds_[(i + rng.randrange(4)) % 4] for i in range(6)]
     if len(set(objk)) < 4: objk = [kinds_[i % 4] for i in range(6)]
@@ -350,7 +350,7 @@ def page03():
             t1 = f"Put {n} {nm} in groups of {per}."; t2 = "How many groups?"
         texts.append((t1, t2))
         rows += (f'<div class="shrow"><span class="no">{i+1}</span><div class="shmid"><p class="shtxt">{t1} {t2}</p><div class="shsvg">{s_}</div></div><span class="ab"></span></div>')
-    body = f'<p class="lead" style="margin:0;font-size:11pt">Share equally: each plate, box, bowl or bag gets the same.</p><div class="shrows">{rows}</div>{code_block(table)}'
+    body = f'<p class="lead" style="margin:0;font-size:11pt">Share equally: each plate, box, bowl or bag gets the same.</p><div class="shrows">{rows}</div><div class="ctc">{code_block(table)}</div>'
     solved = []; drawn = []
     for (t1, t2), s_, (kind, n, g, per) in zip(texts, svgs, items):
         n_obj, n_cont, inside = read_share(s_, kind)
@@ -391,7 +391,7 @@ def solve_times(text):
     if m: return int(m[2]) // int(m[1])
     raise ValueError(text)
 
-def array_svg(kind, rows, cols, size=5.6, pitch=6.2):
+def array_svg(kind, rows, cols, size=8.0, pitch=8.6):
     """rows x cols objects as an array (rows = groups, cols = the number in each group)"""
     inner = "".join(obj_g(kind, 0.6 + c * pitch, 0.6 + r * pitch, size) for r in range(rows) for c in range(cols))
     return svg(round(cols * pitch + 1.2, 1), round(rows * pitch + 1.2, 1), inner)
@@ -405,14 +405,14 @@ def page05():
         rng.shuffle(kinds)
         items = []
         for k in kinds:
-            a = rng.choice([2, 3, 4, 5]); b = rng.choice([2, 3, 4, 5])
+            a = rng.choice([2, 3, 4]); b = rng.choice([2, 3, 4, 5])
             if k == "x": items.append((f"{a} &times; {b} = {BOX}", a * b, a, b))
             elif k == "groups": items.append((f"{a} groups of {b} = {BOX}", a * b, a, b))
             elif k == "missA": items.append((f"{BOX} &times; {b} = {a * b}", a, a, b))
             else: items.append((f"{a} &times; {BOX} = {a * b}", b, a, b))
         ans = [x for _, x, _, _ in items]
-        if len(set(ans)) != 6 or len({t for t, _, _, _ in items}) != 6 or len({(a_, b_) for _, _, a_, b_ in items}) != 6 or max(ans) > 25 or min(ans) < 4: continue
-        table = make_code_table(ans, word, rng, 1, 40, n_decoy=2, near=(1, -1, 2, -2, 5, -5, 10, -10), tries=200)
+        if len(set(ans)) != 6 or len({t for t, _, _, _ in items}) != 6 or len({(a_, b_) for _, _, a_, b_ in items}) != 6 or max(ans) > 20 or min(ans) < 2: continue
+        table = make_code_table(ans, word, rng, 1, 40, n_decoy=3, near=(1, -1, 2, -2, 5, -5, 10, -10), tries=300)
         if table: break
     okind = [okinds[i % 4] for i in range(6)]; rng.shuffle(okind)
     pics = [array_svg(okind[i], a_, b_) for i, (_, _, a_, b_) in enumerate(items)]
@@ -424,7 +424,7 @@ def page05():
              instr=["3 \u00d7 4 means 3 groups of 4.", "Find the missing numbers.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Second multiplication page (the equal groups page uses bags). Every item has an array of objects: the rows are the groups and the objects in a row are the number in each group, so a pupil can count. Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4 and 5 and every product is within 25.",
+             note="Second multiplication page (the equal groups page uses bags). Every item has an array of objects: the rows are the groups and the objects in a row are the number in each group, so a pupil can count. Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. The number of groups is 2, 3 or 4, the number in a group is 2 to 5, and every product is within 20.",
              seed=505)
     sol = [solve_times(t) for t, _, _, _ in items]
     P.v("V1 solver reads the printed items back and equals the key", sol == ans, sol)

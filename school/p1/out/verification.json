@@ -6,9 +6,8 @@
   "tier": 1,
   "topic": "Place value: tens and ones",
   "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.1, 1.2 (count a set, tens and ones)",
+  "syll": "1.2 (tens and ones)",
   "outcomes": [
-   "WN1.1",
    "WN1.2"
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
@@ -75,18 +74,7 @@
    1.0,
    150,
    150
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    118,
-    118
-   ],
-   "all_other_values_rejected": [
-    150,
-    150
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -144,18 +132,7 @@
    1.0,
    495,
    495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    495,
-    495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -176,7 +153,7 @@
    {
     "name": "V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key",
     "ok": true,
-    "detail": "[6, 4, 3, 2, 8, 5]"
+    "detail": "[4, 6, 5, 2, 10, 3]"
    },
    {
     "name": "V2 code word spells SHADOW",
@@ -201,7 +178,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['adolph', 'oswald', 'shadow']"
+    "detail": "['boards', 'howard', 'shadow']"
    },
    {
     "name": "V7 every number of objects is within 20",
@@ -213,18 +190,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    56,
-    56
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -286,21 +252,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 5,
@@ -322,7 +274,7 @@
    {
     "name": "V1 solver reads the printed items back and equals the key",
     "ok": true,
-    "detail": "[8, 5, 9, 4, 10, 20]"
+    "detail": "[4, 15, 12, 2, 6, 16]"
    },
    {
     "name": "V1b answers distinct, every product within 40",
@@ -332,7 +284,7 @@
    {
     "name": "V1c the array objects counted in each drawing equal the product of the two numbers in the sentence (the total printed for a missing-number item)",
     "ok": true,
-    "detail": "[8, 25, 9, 16, 10, 20]"
+    "detail": "[8, 15, 12, 6, 6, 16]"
    },
    {
     "name": "V2 code word spells SQUARE",
@@ -364,18 +316,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    64,
-    64
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -437,18 +378,7 @@
    1.0,
    138,
    138
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    138,
-    138
-   ],
-   "all_other_values_rejected": [
-    138,
-    138
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -505,21 +435,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 8,
@@ -563,18 +479,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -606,18 +511,7 @@
    1.0,
    48,
    48
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    48,
-    48
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -681,18 +575,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    63,
-    63
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -750,18 +633,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -838,18 +710,7 @@
    1.0,
    204,
    204
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    204,
-    204
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -896,7 +757,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['bunker', 'frenzy', 'number']"
+    "detail": "['bumper', 'bunker', 'number']"
    },
    {
     "name": "V7 totals within 40",
@@ -908,18 +769,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -996,18 +846,7 @@
    1.0,
    1300,
    1300
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    1300,
-    1300
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1064,18 +903,7 @@
    1.0,
    475,
    475
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    59,
-    59
-   ],
-   "all_other_values_rejected": [
-    475,
-    475
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1138,21 +966,7 @@
    1.0,
    119,
    119
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    58,
-    58
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 17,
@@ -1210,18 +1024,7 @@
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1289,18 +1092,7 @@
    1.0,
    715,
    715
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    715,
-    715
-   ],
-   "all_other_values_rejected": [
-    715,
-    715
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1363,18 +1155,7 @@
    1.0,
    40,
    40
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    34,
-    34
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1451,18 +1232,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    40,
-    40
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1484,7 +1254,7 @@
    {
     "name": "V1 independent solver reads the printed sentences back and equals the key",
     "ok": true,
-    "detail": "[13, 2, 11, 7, 5, 10]"
+    "detail": "[3, 13, 14, 7, 9, 5]"
    },
    {
     "name": "V1b the picture shows the first group: objects counted in the drawing equal the first number in the text",
@@ -1524,25 +1294,14 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['bygone', 'monkey', 'oxygen']"
+    "detail": "['convey', 'jockey', 'monkey']"
    }
   ],
   "generator_slip_test": [
    1.0,
    120,
    120
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    64,
-    64
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 22,
@@ -1612,18 +1371,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1686,18 +1434,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 24,
@@ -1750,18 +1487,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 25,
@@ -1782,7 +1508,7 @@
    {
     "name": "V1 objects counted in the drawings (and unmatched objects in the two comparing pictures) equal the key",
     "ok": true,
-    "detail": "[8, 10, 16, 4, 7]"
+    "detail": "[8, 10, 16, 6, 1]"
    },
    {
     "name": "V1b the questions name the sets the right way round (more than: the longer row first; fewer than: the shorter row first)",
@@ -1817,25 +1543,14 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['cloth', 'clout', 'touch', 'vouch']"
+    "detail": "['cloth', 'clout', 'touch']"
    }
   ],
   "generator_slip_test": [
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    54,
-    54
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1894,18 +1609,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1953,18 +1657,7 @@
    1.0,
    87,
    87
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    87,
-    87
-   ],
-   "all_other_values_rejected": [
-    87,
-    87
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -1984,7 +1677,7 @@
    {
     "name": "V1 independent solver (coin-change search over the printed amounts; coin values summed from each drawn purse) equals the key",
     "ok": true,
-    "detail": "[2, 3, 7, 8, 4]"
+    "detail": "[2, 3, 9, 4, 1]"
    },
    {
     "name": "V1b the coins shown beside questions 3 and 4 have the values asked",
@@ -1997,7 +1690,7 @@
     "detail": ""
    },
    {
-    "name": "V1d the purses show 2 to 4 exact ones and several near-miss ones",
+    "name": "V1d the purses show 1 to 3 exact ones and several near-miss ones",
     "ok": true,
     "detail": ""
    },
@@ -2031,18 +1724,7 @@
    1.0,
    55,
    55
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    41,
-    41
-   ],
-   "all_other_values_rejected": [
-    55,
-    55
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 29,
@@ -2106,18 +1788,7 @@
    1.0,
    870,
    870
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    870,
-    870
-   ],
-   "all_other_values_rejected": [
-    870,
-    870
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 30,
@@ -2160,18 +1831,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 31,
@@ -2219,21 +1879,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 32,
@@ -2302,40 +1948,29 @@
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    47,
-    47
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
   "code": "S1-16 (P1-33)",
   "title": "Shape Builder",
   "tier": 2,
-  "topic": "2D shapes: form figures, count the pieces, curved and straight sides",
+  "topic": "2D shapes: count the shapes in a figure and form a figure",
   "strand": "Measurement and Geometry - Geometry",
-  "syll": "Geometry 1.1, 1.2, 1.3 (naming and classifying 2D shapes; figures made from rectangle, square, triangle, half circle, quarter circle; the shapes in a figure)",
+  "syll": "Geometry 1.1, 1.2, 1.3 (naming and classifying 2D shapes; forming a figure from rectangle, square, triangle, half circle, quarter circle; the shapes in a figure)",
   "outcomes": [
    "GE1.1",
    "GE1.2",
    "GE1.3"
   ],
-  "ptype": "Count + code-breaker",
-  "mech": "K3 the five counts add to 16 + K1 code word (5 letters)",
+  "ptype": "Count + form a figure + code-breaker",
+  "mech": "K3 the five counts add to 18 + K1 code word (6 letters: five counts and the letter of the pieces that form the figure)",
   "seed": 3333,
   "checks": [
    {
     "name": "V1 shapes counted in the drawn figure equal the key",
     "ok": true,
-    "detail": "[4, 6, 1, 2, 3]"
+    "detail": "[4, 6, 2, 1, 5]"
    },
    {
     "name": "V1b counts all different, total is not 15 (the other shape page) and is within 20",
@@ -2343,37 +1978,37 @@
     "detail": ""
    },
    {
-    "name": "V1c every piece is inside the 9 by 4 grid and no two pieces overlap (bounding boxes)",
+    "name": "V1c forming task: exactly one option's pieces have the same total area as the drawn outline, and its letter is the sixth letter of the word",
+    "ok": true,
+    "detail": "[1.5, 1.79, 3.57] vs 3.56"
+   },
+   {
+    "name": "V1d the two wrong sets differ from the right one in kinds of pieces and in area (by at least 0.2)",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V2 code word spells TRUNK",
+    "name": "V2 the five count letters then the form letter spell BUDGIE",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "name": "V3 no single slip of a count spells another word (large word list)",
     "ok": true,
     "detail": "40/40"
    },
    {
-    "name": "V3c no swap of two answers spells a word",
+    "name": "V3c no swap of two counts spells a word",
     "ok": true,
     "detail": "[]"
    },
    {
-    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['trunk']"
+    "detail": "['budgie']"
    },
    {
-    "name": "V4 guess resistance: at least 3 common words fit the table letters",
-    "ok": true,
-    "detail": "['brunt', 'burnt', 'trunk']"
-   },
-   {
-    "name": "V3d a swap of two counts keeps the total but spells no word",
+    "name": "V4 guess resistance: at least 3 common words fit the table letters and the three option letters",
     "ok": true,
     "detail": ""
    }
@@ -2382,18 +2017,7 @@
    1.0,
    40,
    40
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    34,
-    34
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
@@ -2445,18 +2069,7 @@
    1.0,
    80,
    80
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    8,
-    8
-   ],
-   "all_other_values_rejected": [
-    8,
-    8
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 35,
@@ -2518,18 +2131,7 @@
    1.0,
    306,
    306
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    306,
-    306
-   ],
-   "all_other_values_rejected": [
-    306,
-    306
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 36,
@@ -2576,18 +2178,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    40,
-    40
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 37,
@@ -2631,18 +2222,7 @@
    1.0,
    120,
    120
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    61,
-    61
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 38,
@@ -2651,9 +2231,9 @@
   "tier": 2,
   "topic": "Comparing amounts: more than, fewer than and making the same",
   "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.4, 2.1 (comparing the number of objects in sets; concepts of addition and subtraction; make equal and fewer than: problem solving)",
+  "syll": "1.5, 2.1 (comparing and ordering numbers; concepts of addition and subtraction; make equal and fewer than: problem solving)",
   "outcomes": [
-   "WN1.4",
+   "WN1.5",
    "AS2.1"
   ],
   "ptype": "Logic grid",
@@ -2700,21 +2280,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 39,
@@ -2735,7 +2301,7 @@
    {
     "name": "V1 independent solver reads the printed sentences back and equals the key",
     "ok": true,
-    "detail": "[2, 6, 8, 3, 4, 5]"
+    "detail": "[3, 8, 4, 6, 5, 2]"
    },
    {
     "name": "V1b the picture shows the objects in the story (counted in the drawing)",
@@ -2770,25 +2336,14 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['pigeon', 'posing', 'sponge']"
+    "detail": "['skopje', 'spoken', 'sponge']"
    }
   ],
   "generator_slip_test": [
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    56,
-    56
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 40,
@@ -2837,17 +2392,6 @@
    1.0,
    63,
    63
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  }
 ]

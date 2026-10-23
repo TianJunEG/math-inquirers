@@ -197,16 +197,67 @@ def balance(n, total, unit):
     return Art("".join(s), 44, 20, 0.9, dict(kind="balance", n=n, total=total, unit=unit))
 
 GRAPH_FONT = 3.8                                  # mm: row labels and the key of a picture graph (never smaller than 3.5 mm on the page; the art is not scaled down)
+SYM_R = 2.3                                       # half the size of one picture symbol: a symbol is 4.6 mm across
+
+def _sym(name, cx, cy, r=SYM_R):
+    """one ORIGINAL picture symbol (a simple black-line drawing of the thing counted, white inside) about 2r mm across; no two things share a drawing"""
+    w = 0.38
+    def P(x, y): return f"{cx + x * r:.2f},{cy + y * r:.2f}"
+    def C(x, y, rr, fill="#fff"): return f'<circle cx="{cx + x * r:.2f}" cy="{cy + y * r:.2f}" r="{rr * r:.2f}" fill="{fill}" stroke="#000" stroke-width="{w}"/>'
+    def dot(x, y, rr=0.13): return C(x, y, rr, "#000")
+    def poly(pts, fill="#fff"): return f'<polygon points="{" ".join(P(x, y) for x, y in pts)}" fill="{fill}" stroke="#000" stroke-width="{w}" stroke-linejoin="round"/>'
+    def line(x1, y1, x2, y2, sw=w): return f'<line x1="{cx + x1 * r:.2f}" y1="{cy + y1 * r:.2f}" x2="{cx + x2 * r:.2f}" y2="{cy + y2 * r:.2f}" stroke="#000" stroke-width="{sw}" stroke-linecap="round"/>'
+    def path(d, fill="none"): return f'<path d="{d}" fill="{fill}" stroke="#000" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round"/>'
+    def E(x, y, rx, ry, fill="#fff"): return f'<ellipse cx="{cx + x * r:.2f}" cy="{cy + y * r:.2f}" rx="{rx * r:.2f}" ry="{ry * r:.2f}" fill="{fill}" stroke="#000" stroke-width="{w}"/>'
+    def rect(x, y, ww, hh, fill="#fff"): return f'<rect x="{cx + x * r:.2f}" y="{cy + y * r:.2f}" width="{ww * r:.2f}" height="{hh * r:.2f}" rx="{0.12 * r:.2f}" fill="{fill}" stroke="#000" stroke-width="{w}" stroke-linejoin="round"/>'
+    if name == "cat":                     # round head, two pointed ears, eyes, whiskers
+        return poly([(-0.85, -0.05), (-0.8, -1.0), (-0.2, -0.55)]) + poly([(0.85, -0.05), (0.8, -1.0), (0.2, -0.55)]) + C(0, 0.2, 0.85) + dot(-0.33, 0.05) + dot(0.33, 0.05) + line(-1.0, 0.45, -0.45, 0.4, 0.25) + line(1.0, 0.45, 0.45, 0.4, 0.25)
+    if name == "dog":                     # head with two long black hanging ears and a black nose
+        return poly([(-0.6, -0.8), (-1.05, 0.35), (-0.4, -0.05)], "#000") + poly([(0.6, -0.8), (1.05, 0.35), (0.4, -0.05)], "#000") + C(0, 0.1, 0.72) + dot(-0.27, -0.05) + dot(0.27, -0.05) + E(0, 0.38, 0.26, 0.18, "#000")
+    if name == "fish":                    # body, three-corner tail, eye
+        return E(-0.2, 0, 0.7, 0.5) + poly([(0.45, 0), (1.0, -0.55), (1.0, 0.55)]) + dot(-0.55, -0.1, 0.12)
+    if name == "hen":                     # round body, small head with comb and beak, tail
+        return poly([(0.55, 0.25), (1.0, -0.4), (0.9, 0.55)]) + C(0.05, 0.3, 0.7) + C(-0.5, -0.45, 0.35) + poly([(-0.65, -0.78), (-0.5, -1.05), (-0.35, -0.78)], "#000") + poly([(-0.82, -0.45), (-1.1, -0.35), (-0.82, -0.28)], "#000") + dot(-0.45, -0.5, 0.07)
+    if name == "pie":                     # round pie with a wavy crust ring and three cut lines
+        return C(0, 0, 0.95) + C(0, 0, 0.65) + line(0, -0.65, 0, 0.65, 0.3) + line(-0.56, -0.32, 0.56, 0.32, 0.3) + line(-0.56, 0.32, 0.56, -0.32, 0.3)
+    if name == "bun":                     # dome on a flat base with a black dot top
+        return path(f"M{P(-0.95, 0.6)} A{0.95 * r:.2f},{1.2 * r:.2f} 0 0 1 {P(0.95, 0.6)} Z", "#fff") + dot(0, -0.55, 0.16) + line(-0.3, 0.05, 0.3, 0.05, 0.3)
+    if name == "cake":                    # two layers and a candle with a flame
+        return rect(-0.95, 0.0, 1.9, 0.85) + rect(-0.6, -0.55, 1.2, 0.55) + line(0, -0.55, 0, -0.95, 0.5) + poly([(0, -1.2), (-0.15, -0.95), (0.15, -0.95)], "#000")
+    if name == "tart":                    # a small cup shape with a black cherry on top
+        return poly([(-0.95, -0.1), (0.95, -0.1), (0.6, 0.85), (-0.6, 0.85)]) + path(f"M{P(-0.95, -0.1)} Q{P(0, -0.8)} {P(0.95, -0.1)}") + dot(0, -0.62, 0.2)
+    if name == "car":                     # body, cabin with window, two black wheels
+        return poly([(-1.0, 0.45), (-1.0, 0.0), (-0.55, -0.1), (-0.3, -0.6), (0.4, -0.6), (0.7, -0.1), (1.0, 0.0), (1.0, 0.45)]) + line(0.05, -0.6, 0.05, -0.1, 0.3) + C(-0.55, 0.5, 0.3, "#000") + C(0.55, 0.5, 0.3, "#000")
+    if name == "doll":                    # round head with hair dots and a triangle dress
+        return poly([(0, -0.1), (-0.8, 1.0), (0.8, 1.0)]) + C(0, -0.65, 0.4) + dot(-0.12, -0.7, 0.06) + dot(0.12, -0.7, 0.06) + line(-0.4, -0.4, -0.85, 0.2, 0.4) + line(0.4, -0.4, 0.85, 0.2, 0.4)
+    if name == "ball":                    # a ball with two curved seams
+        return C(0, 0, 0.95) + path(f"M{P(-0.67, -0.67)} Q{P(0, 0)} {P(-0.67, 0.67)}") + path(f"M{P(0.67, -0.67)} Q{P(0, 0)} {P(0.67, 0.67)}")
+    if name == "kite":                    # diamond, cross and a tail with bows
+        return poly([(0, -1.0), (0.7, -0.2), (0, 0.5), (-0.7, -0.2)]) + line(0, -1.0, 0, 0.5, 0.25) + line(-0.7, -0.2, 0.7, -0.2, 0.25) + path(f"M{P(0, 0.5)} Q{P(0.4, 0.7)} {P(0, 0.85)} T{P(0, 1.1)}") + dot(0.18, 0.72, 0.1)
+    if name == "pen":                     # a slanted pen: body, clip line and a black tip
+        return poly([(-0.95, 0.95), (-0.95, 0.55), (0.55, -0.95), (0.95, -0.55), (-0.55, 0.95)], "#fff") + poly([(-0.95, 0.95), (-0.95, 0.55), (-0.55, 0.95)], "#000") + line(0.35, -0.75, 0.75, -0.35, 0.3)
+    if name == "cup":                     # tall cup with a handle
+        return path(f"M{P(0.7, -0.4)} Q{P(1.3, -0.4)} {P(1.0, 0.25)} Q{P(0.9, 0.5)} {P(0.5, 0.4)}") + poly([(-0.85, -0.7), (0.75, -0.7), (0.55, 0.85), (-0.65, 0.85)]) + line(-0.8, -0.3, 0.7, -0.3, 0.3)
+    if name == "hat":                     # a hat: tall crown with a black band and a wide brim
+        return rect(-0.55, -0.85, 1.1, 1.1) + rect(-0.55, -0.1, 1.1, 0.35, "#000") + E(0, 0.45, 1.05, 0.3)
+    if name == "bag":                     # a bag with a handle arc and a flap line
+        return path(f"M{P(-0.45, -0.35)} C{P(-0.45, -1.2)} {P(0.45, -1.2)} {P(0.45, -0.35)}") + poly([(-0.85, -0.35), (0.85, -0.35), (0.95, 0.95), (-0.95, 0.95)]) + line(-0.9, 0.1, 0.9, 0.1, 0.3)
+    return _face(cx, cy, r * 0.8)
+
 def _face(cx, cy, r=1.8):
-    """the icon of a picture graph: a small face (circle, two eyes, a smile), easy to count and not mistaken for a black dot"""
+    """a small face: the fallback symbol for a label without a drawing"""
     return (f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.4"/>'
             f'<circle cx="{cx - r * 0.38:.2f}" cy="{cy - r * 0.22:.2f}" r="0.28" fill="#000"/><circle cx="{cx + r * 0.38:.2f}" cy="{cy - r * 0.22:.2f}" r="0.28" fill="#000"/>'
             f'<path d="M{cx - r * 0.5:.2f},{cy + r * 0.25:.2f} Q{cx:.2f},{cy + r * 0.85:.2f} {cx + r * 0.5:.2f},{cy + r * 0.25:.2f}" fill="none" stroke="#000" stroke-width="0.3" stroke-linecap="round"/>')
 
-def picgraph(rows, key, blank=False, pitch=4.3, font=None):
-    """picture graph: rows = [(label, icons)]; every face stands for `key`. Labels and key are 3.8 mm; one row is 5.4 mm high."""
+SYM_NAME = {"cats": "cat", "dogs": "dog", "fish": "fish", "hens": "hen", "pies": "pie", "buns": "bun", "cakes": "cake", "tarts": "tart",
+            "cars": "car", "dolls": "doll", "balls": "ball", "kites": "kite", "pens": "pen", "cups": "cup", "hats": "hat", "bags": "bag"}
+
+def picgraph(rows, key, blank=False, pitch=5.2, font=None):
+    """picture graph: rows = [(label, icons)]; every row is drawn with the thing it counts (a car for Cars, a pie for Pies), 4.6 mm across, and each symbol stands for `key`.
+    Labels are 3.5 to 3.8 mm; one row is 6.0 mm high. The key reads "Each picture = key" under the rows, with the first row's symbol drawn once as an example."""
     import metrics
-    RH, PITCH, F = 5.4, pitch, (font or GRAPH_FONT)
+    RH, PITCH, F = 6.0, pitch, (font or GRAPH_FONT)
     LW = max(metrics.width(lab, F, 600) for lab, _ in rows) + 1.6
     mx = max(c for _, c in rows)
     w = LW + mx * PITCH + 0.8
@@ -214,15 +265,17 @@ def picgraph(rows, key, blank=False, pitch=4.3, font=None):
     for i, (lab, c) in enumerate(rows):
         y = 0.5 + i * RH + RH / 2
         s.append(_text(0.5, y, lab, F, 600, "start"))
-        for k in range(c): s.append(_face(LW + 2.0 + k * PITCH, y))
+        sym = SYM_NAME.get(lab.lower(), "")
+        for k in range(c): s.append(_sym(sym, LW + 2.8 + k * PITCH, y))
         s.append(f'<line x1="0.5" y1="{0.5 + (i + 1) * RH:.2f}" x2="{w:.2f}" y2="{0.5 + (i + 1) * RH:.2f}" stroke="#000" stroke-width="0.3"/>')
-    if blank:       # a drawn answer box after the last faces (a one-row graph whose answer is written beside it)
-        bx = LW + 2.0 + (rows[0][1] - 0.5) * PITCH + 1.6
+    if blank:       # a drawn answer box after the last symbols (a one-row graph whose answer is written beside it)
+        bx = LW + 2.8 + (rows[0][1] - 0.5) * PITCH + 1.8
         s.append(f'<rect x="{bx:.2f}" y="{0.5 + RH / 2 - 2.0:.2f}" width="4.0" height="4.0" rx="0.5" fill="#fff" stroke="#000" stroke-width="0.45"/>')
         w = max(w, bx + 4.6)
-    yk = 0.5 + len(rows) * RH + 3.2
-    s.append(_face(2.4, yk) + _text(5.2, yk, f"= {key}", F, 700, "start"))
-    return Art("".join(s), w, len(rows) * RH + 6.4, 1.0, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank, font=F))
+    yk = 0.5 + len(rows) * RH + 3.4
+    s.append(_text(0.5, yk, f"Each picture = {key}", F, 700, "start"))
+    w = max(w, 0.5 + metrics.width(f"Each picture = {key}", F, 700) + 0.5)
+    return Art("".join(s), w, len(rows) * RH + 7.0, 1.0, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank, font=F))
 
 def queue(n, k):
     """a row of n children (small squares with a round head), the k-th from the left drawn black: ordinal position"""
