@@ -125,7 +125,7 @@
    "id": "L5U10-S03",
    "tier": "start",
    "page": 1,
-   "text": "Ali, Mei and Siti ran a race. Ali did not win. Siti was not last. Mei finished after Siti. Who won the race? {b}",
+   "text": "Ali, Mei and Siti ran a race. Ali did not win. Mei finished after Siti. Who won the race? {b}",
    "answer": {
     "value": [
      "Siti"
@@ -266,12 +266,12 @@
    "id": "L5U10-S06",
    "tier": "start",
    "page": 2,
-   "text": "One of 3 children ate the last slice of cake. Exactly one of the 3 children is telling the truth.\nKai says, \"Mo ate it.\"\nLin says, \"I did not eat it.\"\nMo says, \"Kai is lying.\" Who ate the slice? {b}",
+   "text": "One of 3 boxes holds a prize. Exactly one of the 3 labels is true.\nBox A: \"The prize is in this box.\"\nBox B: \"The prize is not in this box.\"\nBox C: \"The prize is not in box A.\" Which box holds the prize? {b}",
    "answer": {
     "value": [
-     "Lin"
+     "B"
     ],
-    "text": "Lin"
+    "text": "Box B"
    },
    "space": {
     "rows": [
@@ -280,18 +280,18 @@
      ""
     ]
    },
-   "explanation": "If Lin ate it: 1 truth (Mo). If Kai ate it: 2 truths. If Mo ate it: 2 truths. Only Lin fits."
+   "explanation": "If the prize is in A: 2 truths. If in B: 1 truth. If in C: 2 truths. Only B fits."
   },
   {
    "id": "L5U10-S07",
    "tier": "start",
    "page": 2,
-   "text": "Mum is 36 years old. Dev is 8 years old. In how many years will Dev be half as old as Mum? {b} years",
+   "text": "Dev is 8 years old and his sister is 14. How old will Dev be when their ages add up to 50? {b}",
    "answer": {
     "value": [
-     "20"
+     "22"
     ],
-    "text": "20 years"
+    "text": "22 years old"
    },
    "space": {
     "rows": [
@@ -300,7 +300,7 @@
      ""
     ]
    },
-   "explanation": "The age difference stays 28. When Dev is half as old, he is 28: 20 years from now."
+   "explanation": "Now the ages add up to 22. Each year adds 2: 14 years. Dev will be 22."
   },
   {
    "id": "L5U10-S08",
@@ -450,12 +450,12 @@
    "id": "L5U10-S12",
    "tier": "start",
    "page": 3,
-   "text": "Ali writes the whole numbers from 1 to 80. How many times does he write the digit 7? {b}",
+   "text": "How many 2-digit numbers have a tens digit that is greater than the ones digit? {b}",
    "answer": {
     "value": [
-     "18"
+     "45"
     ],
-    "text": "18 times"
+    "text": "45 numbers"
    },
    "space": {
     "rows": [
@@ -465,7 +465,7 @@
      ""
     ]
    },
-   "explanation": "Ones place: 7, 17, ..., 77 is 8. Tens place: 70 to 79 is 10. Total 18."
+   "explanation": "Tens digit 1: 1 number. Tens digit 2: 2 numbers, ..., tens digit 9: 9. 1 + 2 + ... + 9 = 45."
   },
   {
    "id": "L5U10-T01",

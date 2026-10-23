@@ -130,9 +130,9 @@ def _():
 
 @check('L5U06-S13')
 def _():
-    for visits in range(1, 100):
-        if 1800 + 200 * visits == 500 * visits:
-            return [str(visits)]
+    for weeks in range(0, 200):
+        if 60 + 5 * weeks == 20 + 10 * weeks:
+            return [str(weeks)]
 
 
 @check('L5U06-S14')
@@ -160,8 +160,10 @@ def _():
 
 @check('L5U06-T03')
 def _():
-    one_worker_one_minute = Fr(400, 5) / 8
-    return [fmt(one_worker_one_minute * 8 * 6)]
+    per_machine_minute = Fr(400, 5) / 4
+    for m in range(1, 200):
+        if m * per_machine_minute * 3 == 900:
+            return [str(m)]
 
 
 @check('L5U06-G01')

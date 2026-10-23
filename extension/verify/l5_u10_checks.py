@@ -51,9 +51,9 @@ def _():
 def _():
     runners = ['Ali', 'Mei', 'Siti']
     wins = set()
-    for order in itertools.permutations(runners):                  # order[0] won, order[2] was last
+    for order in itertools.permutations(runners):                  # order[0] won
         pos = {r: i for i, r in enumerate(order)}
-        if pos['Ali'] != 0 and pos['Siti'] != 2 and pos['Mei'] > pos['Siti']:
+        if pos['Ali'] != 0 and pos['Mei'] > pos['Siti']:
             wins.add(order[0])
     assert len(wins) == 1
     return sorted(wins)
@@ -78,14 +78,11 @@ def _():
 
 @check('L5U10-S06')
 def _():
-    kids = ['Kai', 'Lin', 'Mo']
     ok = []
-    for culprit in kids:
-        said = {'Kai': culprit == 'Mo'}                       # "Mo ate it."
-        said['Lin'] = culprit != 'Lin'                        # "I did not eat it."
-        said['Mo'] = not said['Kai']                          # "Kai is lying."
-        if sum(said.values()) == 1:
-            ok.append(culprit)
+    for box in 'ABC':
+        labels = [box == 'A', box != 'B', box != 'A']          # A: here. B: not here. C: not in A.
+        if sum(labels) == 1:
+            ok.append(box)
     assert len(ok) == 1
     return ok
 
@@ -93,8 +90,8 @@ def _():
 @check('L5U10-S07')
 def _():
     for years in range(0, 200):
-        if 2 * (8 + years) == 36 + years:
-            return [str(years)]
+        if (8 + years) + (14 + years) == 50:
+            return [str(8 + years)]
 
 
 @check('L5U10-S08')
@@ -131,7 +128,7 @@ def _():
 
 @check('L5U10-S12')
 def _():
-    return [str(sum(str(n).count('7') for n in range(1, 81)))]
+    return [str(sum(1 for n in range(10, 100) if int(str(n)[0]) > int(str(n)[1])))]
 
 
 @check('L5U10-T01')

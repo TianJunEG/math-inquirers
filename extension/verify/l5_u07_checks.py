@@ -126,10 +126,10 @@ def _():
 
 @check('L5U07-S13')
 def _():
-    money = Fr(240)
-    money -= percent_of(30, money)
-    money -= percent_of(25, money)
-    return [m(money)]
+    pages = Fr(240)
+    pages -= percent_of(30, pages)
+    pages -= percent_of(25, pages)
+    return [pc(pages)]
 
 
 @check('L5U07-S14')
@@ -149,32 +149,31 @@ def _():
 
 @check('L5U07-T02')
 def _():
-    # search the old cost (in cents) whose 20% discount gives $60
-    for cents in range(1, 100000):
-        old = Fr(cents, 100)
-        if old - percent_of(25, old) == 60:
-            return [m(old)]
+    for tenths in range(1, 100000):
+        old = Fr(tenths, 10)
+        if old + percent_of(20, old) == 72:
+            return [pc(old)]
 
 
 @check('L5U07-T03')
 def _():
     for cents in range(1, 100000):
         before = Fr(cents, 100)
-        if before + percent_of(8, before) == 432:
-            return [m(percent_of(8, before))]
+        if before + percent_of(9, before) == 545:
+            return [m(percent_of(9, before))]
 
 
 @check('L5U07-G01')
 def _():
-    return {'a': [pc(as_percent(75 - 60, 60))], 'b': [pc(as_percent(75 - 60, 75))]}
+    return {'a': [pc(as_percent(50 - 40, 50))], 'b': [pc(as_percent(50 - 40, 40))]}
 
 
 @check('L5U07-G02')
 def _():
-    girls = percent_of(60, 50)
-    boys = 50 - girls
-    badges = percent_of(30, girls) + percent_of(20, boys)
-    return [pc(as_percent(badges, 50))]
+    children = percent_of(40, 50)
+    adults = 50 - children
+    seats = percent_of(50, children) + percent_of(20, adults)
+    return [pc(as_percent(seats, 50))]
 
 
 @check('L5U07-G03')

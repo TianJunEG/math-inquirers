@@ -325,14 +325,14 @@
    "id": "L5U02-S06",
    "tier": "start",
    "page": 2,
-   "text": "Sam has 72 cards. He gives 3/8 of them to Mei. Then he gives 2/3 of the cards that are left to Ben. How many cards does Sam have now? {b}",
+   "text": "Sam has 72 cards. He gives 3/8 of them to Mei and 1/6 of them to Ben. How many cards does Sam have now? {b}",
    "answer": {
     "value": [
-     "15"
+     "33"
     ],
-    "text": "15 cards"
+    "text": "33 cards"
    },
-   "explanation": "3/8 of 72 = 27, so 72 - 27 = 45 are left. 2/3 of 45 = 30 go to Ben. 45 - 30 = 15."
+   "explanation": "3/8 of 72 = 27 and 1/6 of 72 = 12. 72 - 27 - 12 = 33."
   },
   {
    "id": "L5U02-S07",

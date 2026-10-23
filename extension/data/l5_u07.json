@@ -610,19 +610,19 @@
    "id": "L5U07-S13",
    "tier": "start",
    "page": 3,
-   "text": "Nina has $240. She spends 30% of it on a bag. She spends 25% of the rest on a book. How much money does she have left? $ {b}",
+   "text": "Ravi reads 30% of a 240-page book on Monday. On Tuesday he reads 25% of the pages that are left. How many pages are still to read? {b}",
    "answer": {
     "value": [
      "126"
     ],
-    "text": "$126"
+    "text": "126 pages"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "30% of $240 = $72 for the bag, so $168 is left. 25% of $168 = $42 for the book. $168 - $42 = $126."
+   "explanation": "30% of 240 = 72 pages on Monday, so 168 are left. 25% of 168 = 42 pages on Tuesday. 168 - 42 = 126 pages are still to read."
   },
   {
    "id": "L5U07-S14",
@@ -684,12 +684,12 @@
    "id": "L5U07-T02",
    "tier": "think",
    "page": 4,
-   "text": "After a 25% discount, a bag costs $60. What was the cost before the discount? $ {b}",
+   "text": "A plant grows 20% taller and is now 72 cm tall. How tall was the plant before? {b} cm",
    "answer": {
     "value": [
-     "80"
+     "60"
     ],
-    "text": "$80"
+    "text": "60 cm"
    },
    "space": {
     "rows": [
@@ -699,20 +699,20 @@
      ""
     ]
    },
-   "hint": "$60 is what percentage of the old cost?",
-   "explanation": "$60 is 75% of the old cost. 25% = $20, so 100% = $80.",
+   "hint": "72 cm is what percentage of the old height?",
+   "explanation": "120% = 72 cm, so 10% = 6 cm and 100% = 60 cm.",
    "beyond": "Working back from a percentage"
   },
   {
    "id": "L5U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "In this question GST is 8% of the cost before GST. A fridge costs $432 with GST. How much GST is in $432? $ {b}",
+   "text": "A table costs $545 with GST. GST is 9% of the cost before GST. How much GST is in $545? $ {b}",
    "answer": {
     "value": [
-     "32"
+     "45"
     ],
-    "text": "$32"
+    "text": "$45"
    },
    "space": {
     "rows": [
@@ -722,34 +722,34 @@
      ""
     ]
    },
-   "hint": "$432 is what percentage of the cost before GST?",
-   "explanation": "$432 is 108% of the cost before GST, so 1% = $4. The GST is 8 × $4 = $32.",
+   "hint": "$545 is what percentage of the cost before GST?",
+   "explanation": "$545 is 109% of the cost before GST, so 1% = $5. The GST is 9 × $5 = $45.",
    "beyond": "GST in the cost"
   },
   {
    "id": "L5U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "A cost goes up from $60 to $75. Later it comes back down from $75 to $60. Work each percentage out from the amount that the change starts from.",
+   "text": "The number of visitors to a park falls from 50 to 40 on a rainy day. The next day it rises from 40 back to 50. Work each percentage out from the number that the change starts from.",
    "parts": [
     {
      "label": "a",
-     "text": "The percentage increase from $60 to $75 is {b}%.",
-     "answer": {
-      "value": [
-       "25"
-      ],
-      "text": "25"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The percentage decrease from $75 to $60 is {b}%.",
+     "text": "The percentage decrease from 50 to 40 is {b}%.",
      "answer": {
       "value": [
        "20"
       ],
       "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The percentage increase from 40 to 50 is {b}%.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
      }
     }
    ],
@@ -760,20 +760,20 @@
      ""
     ]
    },
-   "hint": "Which amount does each change start from?",
-   "explanation": "(a) $15 out of the start $60 = 25%. (b) $15 out of the start $75 = 20%. The start amounts differ.",
+   "hint": "Which number does each change start from?",
+   "explanation": "(a) 10 out of the start 50 = 20%. (b) 10 out of the start 40 = 25%. The start numbers differ.",
    "beyond": "Percentage change"
   },
   {
    "id": "L5U07-G02",
    "tier": "go",
    "page": 5,
-   "text": "A club has 50 members. 60% of them are girls. 30% of the girls and 20% of the boys wear a badge. What percentage of all the members wear a badge? {b}%",
+   "text": "A bus has 50 passengers. 40% of them are children. 50% of the children and 20% of the adults have a seat. What percentage of all the passengers have a seat? {b}%",
    "answer": {
     "value": [
-     "26"
+     "32"
     ],
-    "text": "26%"
+    "text": "32%"
    },
    "space": {
     "rows": [
@@ -783,8 +783,8 @@
      ""
     ]
    },
-   "hint": "Find the number of girls and boys first. Then count badges.",
-   "explanation": "Girls 30, boys 20. Badges: 9 + 4 = 13 of 50 = 26%."
+   "hint": "Find the number of children and adults first. Then count seats.",
+   "explanation": "Children 20, adults 30. Seats: 10 + 6 = 16 of 50 = 32%."
   },
   {
    "id": "L5U07-G03",

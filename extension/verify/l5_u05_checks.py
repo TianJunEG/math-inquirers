@@ -112,8 +112,9 @@ def _():
 
 @check('L5U05-S13')
 def _():
+    b_water = Fr(3, 4) * 40
     for cap in range(1, 1000):
-        if Fr(7, 12) * cap - Fr(3, 8) * cap == 35:
+        if Fr(3, 5) * cap == b_water:
             return [str(cap)]
 
 
@@ -171,11 +172,9 @@ def _():
 
 @check('L5U05-G03')
 def _():
-    sols = [(a, b, c) for a in range(1, 40) for b in range(a, 40) for c in range(b, 40)
-            if sorted([a * b, a * c, b * c]) == [20, 28, 35]]
+    sols = [s for s in range(1, 100) if s * s * (s + 4) == 225]
     assert len(sols) == 1
-    a, b, c = sols[0]
-    return [str(a * b * c)]
+    return [str(sols[0])]
 
 
 @check('L5U05-C01')

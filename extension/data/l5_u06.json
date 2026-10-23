@@ -463,19 +463,19 @@
    "id": "L5U06-S13",
    "tier": "start",
    "page": 3,
-   "text": "Gym plan A costs $18 a month and then $2 for each visit. Plan B costs $5 for each visit and has no monthly fee. For how many visits in a month do the 2 plans cost the same? {b}",
+   "text": "Ali has $60 and saves $5 each week. Ben has $20 and saves $10 each week. After how many weeks do they have the same amount of money? {b}",
    "answer": {
     "value": [
-     "6"
+     "8"
     ],
-    "text": "6 visits"
+    "text": "8 weeks"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "Plan B costs $3 more a visit. The $18 fee is paid back after 18 ÷ 3 = 6 visits (both $30)."
+   "explanation": "At first Ali has $40 more. Each week the gap closes by $5: 8 weeks (both have $100)."
   },
   {
    "id": "L5U06-S14",
@@ -536,19 +536,19 @@
      ""
     ]
    },
-   "hint": "Pretend the pool holds a number that 20 and 30 both go into.",
+   "hint": "Try a pool size that suits both hoses.",
    "explanation": "Pretend 60 litres. P: 3 a minute. Q: 2 a minute. Together 5 a minute. 60 ÷ 5 = 12 minutes."
   },
   {
    "id": "L5U06-T03",
    "tier": "think",
    "page": 4,
-   "text": "5 workers pack 400 boxes in 8 minutes. All the workers pack at the same rate. How many boxes do 8 workers pack in 6 minutes? {b}",
+   "text": "5 identical machines make 400 bolts in 4 minutes. How many of these machines are needed to make 900 bolts in 3 minutes? {b}",
    "answer": {
     "value": [
-     "480"
+     "15"
     ],
-    "text": "480 boxes"
+    "text": "15 machines"
    },
    "space": {
     "rows": [
@@ -558,8 +558,8 @@
      ""
     ]
    },
-   "hint": "Find the boxes for 1 worker in 1 minute first.",
-   "explanation": "1 worker packs 400 ÷ 5 ÷ 8 = 10 boxes a minute. 8 × 6 × 10 = 480 boxes."
+   "hint": "Find the bolts for 1 machine in 1 minute first.",
+   "explanation": "1 machine makes 400 ÷ 5 ÷ 4 = 20 bolts a minute. 900 ÷ 3 = 300 a minute, so 15 machines."
   },
   {
    "id": "L5U06-G01",

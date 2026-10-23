@@ -577,7 +577,7 @@
      }
     }
    ],
-   "explanation": "Clue 2: 465 000 to 474 999. Clue 3: thousands digit 2, so 472 (462 is too low). Clue 5: ones 0. Clue 4: tens and hundreds are 3 and 6 (1 and 2 or 4 and 8 repeat a digit). So 472 630."
+   "explanation": "Clue 2: 465 000 to 474 999. Clue 3: thousands digit 2, so 472 (462 is too low). Clue 5: ones 0. Clue 4: tens and hundreds are 3 and 6 (1 and 2 or 2 and 4 repeat the 2; 4 and 8 repeat the 4). So 472 630."
   },
   {
    "id": "L5U01-S13",
@@ -650,7 +650,7 @@
     }
    ],
    "hint": "Clues 2 and 3 fix the first 3 digits. Then use Clue 6.",
-   "explanation": "Clue 2: 6 350 000 to 6 449 999. Clue 3 leaves 6 4 3, and the tens digit is 0. The other 3 digits add to 33 - 6 - 4 - 3 = 20. With thousands t and hundreds t + 2, only t = 5 keeps all digits different: 5, 7 and ones 8. So 6 435 708."
+   "explanation": "Clue 2: 6 350 000 to 6 449 999. Clue 3 leaves 6 4 3, and the tens digit is 0. The other 3 digits add to 33 - 6 - 4 - 3 = 20. The thousands digit is 2 less than the hundreds digit: 5 and 7 with ones 8 is the only way with all digits different. So 6 435 708."
   },
   {
    "id": "L5U01-T02",

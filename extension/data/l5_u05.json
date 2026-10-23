@@ -675,19 +675,19 @@
    "id": "L5U05-S13",
    "tier": "start",
    "page": 3,
-   "text": "A tank is 3/8 full of water. Then 35 litres more go in and the tank is 7/12 full. Find the capacity of the full tank. {bw} litres",
+   "text": "Tank A and tank B hold the same amount of water. Tank A is 3/5 full. Tank B is 3/4 full and holds 40 litres when full. Find the capacity of tank A. {b} litres",
    "answer": {
     "value": [
-     "168"
+     "50"
     ],
-    "text": "168 litres"
+    "text": "50 litres"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "7/12 - 3/8 = 14/24 - 9/24 = 5/24 of the tank is 35 litres. So 1/24 is 7 litres and the full tank is 24 × 7 = 168 litres."
+   "explanation": "Tank B holds 3/4 of 40 = 30 litres. Tank A holds 30 litres too, and that is 3/5 of its capacity. 1/5 = 10 litres, so the capacity is 5 × 10 = 50 litres."
   },
   {
    "id": "L5U05-S14",
@@ -904,12 +904,12 @@
    "id": "L5U05-G03",
    "tier": "go",
    "page": 5,
-   "text": "The areas of 3 faces of a cuboid that meet at one corner are 20 cm², 28 cm² and 35 cm². Find the volume of the cuboid. {b} cm³",
+   "text": "A cuboid has a square base. Its height is 4 cm more than the side of its base. Its volume is 225 cm³. Find the side of the base. {b} cm",
    "answer": {
     "value": [
-     "140"
+     "5"
     ],
-    "text": "140 cm³"
+    "text": "5 cm"
    },
    "space": {
     "rows": [
@@ -919,8 +919,8 @@
      ""
     ]
    },
-   "hint": "Try small whole-number edges. Which pairs multiply to 20?",
-   "explanation": "Try edges 4, 5 and 7: 4 × 5 = 20, 4 × 7 = 28 and 5 × 7 = 35. They fit. The volume is 4 × 5 × 7 = 140 cm³."
+   "hint": "Try whole-number sides 1, 2, 3 ... Does the volume fit?",
+   "explanation": "Side 5: height 9, and 5 × 5 × 9 = 225. Side 4 gives 128 and side 6 gives 360, so only 5 fits."
   },
   {
    "id": "L5U05-C01",

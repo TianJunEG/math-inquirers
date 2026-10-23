@@ -69,7 +69,7 @@ def _():
 def _():
     cards = 72
     cards -= cards * 3 // 8
-    cards -= cards * 2 // 3
+    cards -= 72 // 6
     return [str(cards)]
 
 
