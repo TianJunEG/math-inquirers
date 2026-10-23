@@ -10,8 +10,9 @@ Items below need the owner or live-system access. Everything else from the sched
 5. Not done (need design or live access): F4 per-parent cap on open reservations and server-side email confirmation, F5 prorated fee/instalments/5% discount, F7 child PIN strength, F8 server-side child session, F9 checkout idempotency key, F10 interest-form abuse, L1 webhook body size cap, L2 Cloudflare rate rules, L4 CSPRNG for codes. Auth settings (email confirmation) must be checked in the live dashboard.
 
 ## Schedule
-6. R1-R3 vs Levels 1-3 clash on Thu 24 Dec (reserve groups share the published last-lesson times). Decide the week-5 times for reserves (suggestion: Wed 23 Dec same times) and store them in `docs/schedule/beta_reserved.json`.
-7. R4 (Sun 2:00pm) has no buffer after church/lunch: move to 2:15pm or confirm.
+6. DECIDED 23 Oct 2026: R1-R3 week-5 lessons move from Thu 24 Dec to Wed 23 Dec at the same times (stored in `docs/schedule/beta_reserved.json`). STILL OPEN: their own Wednesday lesson of week 5 is the same day and time, so one of the two needs another slot.
+7. DECIDED 23 Oct 2026: Sunday 2:00pm is not available; R4 withdrawn. PROPOSED R4B (Sat 9:00-10:30am + Sun 6:00-7:30pm, Levels 5-6) awaits the owner's yes.
+7a. REPLACE LATER: pypteltd@gmail.com is the business and data-protection contact FOR NOW (owner, 23 Oct 2026). It appears in `website/privacy.html` and `website/terms.html` (marked with a bracket note). Replace it with the business address when the owner gives one, and give the registered office address (still a placeholder in `website/terms.html`).
 8. Thu 7:30pm and Sun 7:15pm 2027 options are offered to Level 5 (age 10-12): keep or make Level 6 only.
 9. Verify MOE 2026 and 2027 term dates on moe.gov.sg (only secondary sources were available).
 

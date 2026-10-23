@@ -64,7 +64,7 @@ def cover(book, theme):
 def legend():
     return ('<div class="legend">'
             f'<div>{ICON["start"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Start here.</b> The main path. Do these first.</span></div>'
-            f'<div>{ICON["think"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Think harder.</b> Longer problems. Hints are upside down.</span></div>'
+            f'<div>{ICON["think"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Think harder.</b> Longer problems. Hints are printed upside down.</span></div>'
             f'<div>{ICON["go"].replace("<svg", "<svg fill=\"currentColor\" stroke=\"currentColor\"")}<span><b>Go further.</b> A weekend page. Big challenges, just for fun.</span></div>'
             f'<div>{ICON["quiz"].replace("<svg", "<svg fill=\"none\" stroke=\"currentColor\"")}<span><b>Check yourself.</b> Four quick questions at the end.</span></div></div>')
 
@@ -90,13 +90,13 @@ def licence(book, theme, ctx):
 
 
 def welcome(book, theme, ctx):
-    ic = lambda k: ICON[k].replace('<svg', '<svg fill="' + ('none' if k == 'quiz' else 'currentColor') + '" stroke="currentColor"')
-    kid = ('<div class="box kid"><h3>For you</h3><div class="legend">'
-           f'<div>{ic("start")}<span>Read <b>Learn it</b>. Then do <b>Start here</b>.</span></div>'
-           f'<div>{ic("think")}<span>Stuck? Read the hint. It is upside down!</span></div>'
-           f'<div>{ic("quiz")}<span>Do <b>Check yourself</b>. Then look at the answers at the back. Read the <b>Why</b> if you got one wrong.</span></div></div></div>')
+    steps = ['Open the <b>Learn it</b> page first. Read how the idea works.',
+             'Do the <b>Start here</b> pages. Take your time.',
+             'Stuck? Find the hint. It is printed upside down, so you do not see it by accident.',
+             'Do <b>Check yourself</b>. Then look at the answers at the back. Read the <b>Why</b> if one is wrong.']
+    kid = ('<div class="box kid"><h3>How to use this book</h3><ol class="steps">' + ''.join(f'<li><span>{t}</span></li>' for t in steps) + '</ol></div>')
     return (f'<div class="pbody"><div style="display:flex;align-items:flex-end"><div><div class="h1">Welcome!</div>'
-            f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You do not need a teacher.</div></div>'
+            f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You can start on your own. A grown-up can help if you like.</div></div>'
             f'<img class="welcome-mi" alt="Mi the dolphin" src="{mi_uri("mi_writing_desk", theme)}"></div>'
             + kid +
             '<div class="box"><h3>For the grown-up</h3><ul>'
@@ -106,9 +106,9 @@ def welcome(book, theme, ctx):
             '<li>This is a self-study book. Your child marks their own work: each answer at the back says the answer first, then a short reason (Why) in plain words, '
             'and the page of the question. A child who reads slowly may like a helper to read the Why with them.</li>'
             f'<li>Answers are at the back, from page {ctx["divider_pg"]}. Please ask your child to try first.</li>'
-            '<li>Check yourself score 2 or less? Repeat Learn it and one Start here page.</li>'
+            '<li>Check yourself score 2 or less? Read the Learn it page again and redo one Start here page.</li>'
             + ('<li>Printing the soft copy? Print at 100 percent (actual size) so the rulers are true size.</li>' if theme == 'colour' else '<li>The rulers in Unit 9 are printed at real size.</li>') + '</ul></div>'
-            '<div class="box"><h3>The four labels</h3>' + legend() + '</div>'
+            '<div class="box"><h3>The four page names</h3>' + legend() + '</div>'
             '<p class="note" style="margin:0"><b>Tip:</b> use a pencil. Mistakes help you learn. Read each question twice before you write.</p></div>')
 
 

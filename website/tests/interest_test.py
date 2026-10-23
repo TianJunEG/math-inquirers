@@ -52,8 +52,8 @@ with sync_playwright() as pw:
         expect(p.locator('#itLevel')).to_have_value('2')
     check("I'm interested preselects slot and level", preselect)
     def deep_link():
-        p2 = c.new_page(); p2.goto(BASE + '/?level=5&interest=R4#request-time')
-        expect(p2.locator('input[name=itslot][value=R4]')).to_be_checked(); expect(p2.locator('#itLevel')).to_have_value('5'); p2.close()
+        p2 = c.new_page(); p2.goto(BASE + '/?level=5&interest=R4B#request-time')
+        expect(p2.locator('input[name=itslot][value=R4B]')).to_be_checked(); expect(p2.locator('#itLevel')).to_have_value('5'); p2.close()
     check('deep link from a level page preselects', deep_link)
     def level_page():
         p3 = c.new_page(); p3.goto(BASE + '/ages-8-10/'); p3.locator('.othertimes summary').click(); expect(p3.locator('.othertimes li').first).to_contain_text('Not open yet')

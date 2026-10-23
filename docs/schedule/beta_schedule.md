@@ -8,7 +8,7 @@ Source data: `website/data/beta_schedule.json` (published groups, feeds the sign
 - 90-minute online lessons, two a week for 5 weeks, first week starting Mon 23 Nov 2026. Singapore time.
 - Sessions start no earlier than 9:00am and end by 9:00pm.
 - Breaks: at least 15 minutes between consecutive classes on the same day (Jasmine's request, 23 Oct 2026).
-- Lunch: a 60-minute lunch break (default chosen) sits between 12:00 and 2:00pm on any day with several classes. On Tue/Thu/Fri/Wed it is 12:15-1:15pm. No class overlaps it. Sunday has no class before 2:00pm.
+- Lunch: a 60-minute lunch break (default chosen) sits between 12:00 and 2:00pm on any day with several classes. On Tue/Thu/Fri/Wed it is 12:15-1:15pm. No class overlaps it. Sunday has no class before 4:15pm (church to about 11:15am, lunch 12:30-2:00pm, and 2:00pm is not available).
 - Every session is at least 45 minutes clear of any existing event on either calendar (re-checked on 23 Oct 2026 for 24 Nov - 27 Dec; re-check before publishing).
 - Each group is capped at 8 children. Each group keeps the same two weekly times for all 5 weeks.
 - One tutor (you), all lessons online, so no travel between classes (default chosen). No overlaps.
@@ -34,8 +34,8 @@ Level 5 Friday moved from 3:00pm to 4:45pm (default chosen: Friday's daytime cha
 | R1 | Wed 9:00-10:30am | Thu 9:00-10:30am | Levels 1-2 |
 | R2 | Wed 10:45am-12:15pm | Thu 10:45am-12:15pm | Levels 1-3 |
 | R3 | Wed 1:15-2:45pm | Thu 1:15-2:45pm | Levels 3-4 |
-| R4 | Sat 9:00-10:30am | Sun 2:00-3:30pm | Levels 5-6 |
-(R4 re-derived: Level 6 now ends 8:15pm on Saturday, so a 15-minute break would push a Saturday evening class past 9:00pm. R4 uses Sat morning (the orchestra practice starts 2:00pm) and Sun 2:00-3:30pm, avoiding Sunday church time and leaving 45 minutes before Level 5. Default chosen.)
+| R4B (PROPOSED, replaces R4) | Sat 9:00-10:30am | Sun 6:00-7:30pm | Levels 5-6 |
+(Owner, 23 Oct 2026: Sunday 2:00pm is NOT available, so the old R4 (Sat 9:00am + Sun 2:00-3:30pm) is withdrawn and kept out of the live pages. R4B is a proposal, not confirmed: Sat morning is unchanged; Sunday moves to 6:00-7:30pm, which follows Level 5 (4:15-5:45pm) with a 15-minute break, ends before 9:00pm and avoids Sunday church (to about 11:15am) and lunch (12:30-2:00pm). Alternative if the owner prefers the afternoon: Sun 2:15-3:45pm.)
 
 ## Release rule
 When a published group reaches 8 children, release the best-fitting reserve for that level: publish its two times as "Group B", add it to the sign-up page, and mark the full group "Full". Never publish a reserve before a group is full. If more than four groups fill, the next step is to free more of your own time, not to overlap.
@@ -52,13 +52,15 @@ No lessons on Fri 25 Dec. The five Friday sessions of week 5 move to Wed 23 and 
 | Level 5 | Wed 23 Dec 4:45-6:15pm (lesson 9; lesson 10 stays Sun 27 Dec) |
 Thursday 24 Dec holds Levels 1-4 then Level 6 at 6:15pm (105 minutes after Level 4 ends). Level 5 goes to Wednesday because a fifth Thursday class would end at 6:15pm, touching Level 6. Wednesday 23 Dec has the 8:00pm P5M event, so the 6:15pm finish leaves well over 45 minutes. Level 6 is unaffected (Thu 24 and Sat 26 Dec); Level 5 lesson 10 is Sun 27 Dec 4:15-5:45pm, nothing else that day. Reserved Wed/Thu groups released later share Wed 23 and Thu 24 Dec with these sessions in week 5 (R1-R3 Thursday times equal Levels 1-3), so a released reserve needs its own week-5 times.
 
+**Owner decision 23 Oct 2026:** the reserve groups R1-R3 have their week-5 Thursday lesson on **Wed 23 Dec** at the same times (9:00, 10:45am, 1:15pm), not Thu 24 Dec. Data: `docs/schedule/beta_reserved.json` (`week5`). Open point: their own Wednesday lesson of week 5 is also Wed 23 Dec at that time, so both week-5 lessons would share one slot; the owner must choose another time or day for one of them. The published groups (Levels 1-4 on Thu 24 Dec) are unchanged.
+
 ## Open points
 - Assumed school holidays from mid-November (weekday daytime slots for children). Confirm against the MOE 2026 calendar.
 - Beta fee confirmed: S$25 a lesson, S$250 for all 10 lessons. Still to write before taking money: the terms and refund page and the consent wording for recording and children's work.
 - Tutors: the schedule assumes one tutor (you) for all 12 weekly sessions, about 18 teaching hours a week, plus a daily lunch hour.
 
 ## Corrections and open decisions (appended 23 Oct 2026, after the final audit)
-- OPEN OWNER DECISION: the reserved groups R1, R2 and R3 (Thu 9:00, 10:45 and 1:15) sit at the same times as Levels 1, 2 and 3 on Thu 24 Dec (their published last lesson). If a reserve is released, its week-5 lesson needs its own time (Wed 23 Dec 9:00, 10:45 and 1:15 are free, but this is not decided) . Also R4 (Sun 2:00pm) starts exactly when the owner's church and lunch block ends; a 15-minute buffer (2:15pm) is suggested. Tracked in `docs/audit_final/open_owner_items.md`.
+- RESOLVED 23 Oct 2026 (owner): R1-R3 week-5 lessons move to Wed 23 Dec at the same times (see Christmas Day section; the same-day clash with their own Wednesday lesson is still open). R4 (Sun 2:00pm) is withdrawn because Sunday 2:00pm is not available; R4B (Sat 9:00-10:30am + Sun 6:00-7:30pm) is PROPOSED. Tracked in `docs/audit_final/open_owner_items.md`.
 - Sign-up page wording fixed: "Lessons start in the week of Mon 23 Nov (first lessons Tue 24 to Fri 27 Nov)". No group meets on Monday 23 Nov.
 - School holidays: MOE 2026 Term 4 ends 20 Nov and the year-end holidays run 21 Nov-31 Dec (from search results quoting the MOE press release of 30 Jul 2025; the MOE page itself was not opened). Verify on moe.gov.sg.
 - "20 usable weekly sessions" means 12 published plus 8 reserved weekly sessions.

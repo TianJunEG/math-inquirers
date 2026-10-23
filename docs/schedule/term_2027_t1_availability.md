@@ -102,3 +102,8 @@ DEFAULT draft assignment (for Jasmine to change), one weekly slot per level:
 Spares: Thu 7:30-9:00pm and Sun 7:15-8:45pm (Levels 5-6), nothing early for a second Level 1-2 group.
 
 Open questions 1 (slot length) is closed: 90 minutes. Questions 2-4 and 6 still apply.
+
+## 8. UPDATE 23 Oct 2026 (owner answers 16 and 17)
+- The Thu 7:30-9:00pm (`T27-THU-1930`) and Sun 7:15-8:45pm (`T27-SUN-1915`) options are offered to LEVELS 5 AND 6 ONLY. This was already the case in `website/data/interest_slots.json` and is now locked by `website/tests/slots_data_test.py`. No SQL source holds slot ids or levels, so nothing in `portal/supabase/*.sql` changed.
+- Sunday 2:00pm is NOT available (owner). Sunday stays blocked until about 11:15am (church), with lunch 12:30-2:00pm on Sat and Sun. The 2027 Sunday slots above start at 3:45pm and are unaffected.
+- The 2026 reserve R4 (Sun 2:00pm) is withdrawn; PROPOSED replacement R4B (Sat 9:00-10:30am + Sun 6:00-7:30pm, Levels 5-6) is in `docs/schedule/beta_schedule.md`.
