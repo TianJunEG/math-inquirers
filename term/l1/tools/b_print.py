@@ -41,7 +41,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
 .stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
-.keybox .a{font-weight:800;color:#1F7A6F}\n.qbox:has(.hvis){position:relative}.hvis{position:absolute;right:10px;top:2px;display:flex;gap:6px}.hvis .hv{width:25mm}.qbox:has(.hvis) .qt{display:block;margin-right:27mm}.hm.t2 .hv,.hm.t3 .hv{width:22mm}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:16px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}
+.keybox .a{font-weight:800;color:#1F7A6F}\n.qbox:has(.hvis){position:relative}.hvis{position:absolute;right:10px;top:2px;display:flex;gap:6px}.hvis .hv{width:25mm}.qbox:has(.hvis) .qt{display:block;margin-right:27mm}.hm.t2 .hv,.hm.t3 .hv{width:22mm}.hm.t3 .hvis:has(svg[aria-label*=clock]) .hv{width:31mm}.hm.t3 .qbox:has(svg[aria-label*=clock]) .qt{margin-right:34mm}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:16px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}
 """
 
 
@@ -81,6 +81,7 @@ def _vis_html(v):
     arr = v.get('type') == 'array'
     gw = v.get('type') == 'groups'
     if v.get('type') == 'objects' and v.get('n', 0) > 12 and v.get('size') == 'l' and not v.get('items'): wide = True
+    if v.get('wide') and v.get('type') != 'hundred': wide = True       # a figure that asks for the full column width
     nar = v.get('type') in ('round_table', 'domino')
     sm = v.get('type') in ('clock', 'price_tag', 'fold_punch', 'network', 'shapes2d')
     md = v.get('type') in ('cube_stack', 'grid', 'calendar')

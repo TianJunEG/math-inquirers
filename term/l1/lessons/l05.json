@@ -1890,7 +1890,8 @@
           "type": "bundles",
           "tens": 2,
           "ones": 8,
-          "style": "kit"
+          "style": "kit",
+          "wide": true
         },
         "parts": [
           {

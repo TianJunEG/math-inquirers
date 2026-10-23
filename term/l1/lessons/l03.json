@@ -2079,7 +2079,8 @@
           "type": "bundles",
           "tens": 3,
           "ones": 8,
-          "style": "kit"
+          "style": "kit",
+          "wide": true
         }
       },
       {
