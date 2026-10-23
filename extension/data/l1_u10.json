@@ -320,6 +320,11 @@
     "text": "20¢ + 10¢ + 10¢",
     "unordered": true
    },
+   "space": {
+    "rows": [
+     "Try:"
+    ]
+   },
    "explanation": "20¢ + 10¢ + 10¢ = 40¢. This is the only way: 50¢ is too big, and 5¢ coins would need 35¢ from 2 coins, which no 2 coins make."
   },
   {

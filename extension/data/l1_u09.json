@@ -670,7 +670,7 @@
     ]
    },
    "hint": "Try one piece of 4 cubes. Can 3-cube pieces fill what is left? Then try two.",
-   "explanation": "Try the number of 4-cube pieces: one 4 leaves 10 (not a 3 count), two 4s leave 6 = 3 + 3. So 4 + 4 + 3 + 3 = 14. Three 4s leave 2, which a 3 cannot fill."
+   "explanation": "One 4-cube piece leaves 10 cubes, and 3-cube pieces cannot fill 10. Two 4-cube pieces leave 6 cubes, and 3 + 3 = 6. So 4 + 4 + 3 + 3 = 14. Three 4-cube pieces leave 2 cubes, which a 3-cube piece cannot fill."
   },
   {
    "id": "L1U09-C01",
