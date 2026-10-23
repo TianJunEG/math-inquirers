@@ -94,3 +94,4 @@ CSS_NEW += """.formtask{display:flex;align-items:center;gap:6mm;border:0.4mm sol
 CSS_NEW += """.gsvg{width:110mm}.geq .ab{width:12mm}"""
 CSS_NEW += """.purses{grid-template-columns:1fr 1fr}.purse svg{max-width:none}"""
 CSS_NEW += """.frows{gap:2mm}.frow{padding-bottom:1mm}"""
+CSS_NEW += """.sumrows.arrs .sumrow{font-size:20pt}.shsvg svg{max-width:none}"""

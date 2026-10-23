@@ -244,7 +244,7 @@ def page11():
 # ---------------------------------------------------------------- P13
 def groups_svg(g, m, kind="apple"):
     p = []; x = 0.5
-    cols = max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
+    cols = m if g * (m * 9.6 + 5.4) <= 108 else max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
     bw = cols * 9.6 + 2.4; h = rows * 9.6 + 2.4
     for _ in range(g):
         p.append(f'<rect class="bag" x="{x:.1f}" y="0.5" width="{bw:.1f}" height="{h:.1f}" rx="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
@@ -292,13 +292,13 @@ def page13():
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
 def share_svg(kind, n, g, per, mode):
     """objects in rows of 10 on the left; for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
-    pitch = 9.6; prow = 8; rows = (n + prow - 1) // prow; H = rows * 10.6 + 1.6
+    pitch = 9.0; prow = 10; rows = (n + prow - 1) // prow; H = rows * 10.0 + 1.6
     inner = []
     for i in range(n):
-        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 10.6, 9.0))
+        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 0.9 + (i // prow) * 10.0, 8.6))
     W = 1 + min(n, prow) * pitch + 1
     if mode == "share":
-        x0 = W + 5; cw, chh = 14, 9.5
+        x0 = W + 5; cw, chh = 12, 9.5
         per_line = 3; lines = (g + per_line - 1) // per_line
         for j in range(g):
             inner.append(container_g(kind, x0 + (j % per_line) * (cw + 2.5), 0.8 + (j // per_line) * (chh + 2), cw, chh))
@@ -306,7 +306,7 @@ def share_svg(kind, n, g, per, mode):
         H = max(H, 1 + lines * (chh + 2) + 1)
     else:
         # the example loop: a dashed rounded frame round the first group of `per` objects (first row only, per <= 10)
-        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="10.2" rx="4.6" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
+        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="9.8" rx="4.4" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
         W = max(W, 76)
     return svg(round(W, 1), round(H, 1), "".join(inner)), (round(W, 1), round(H, 1))
 
@@ -318,7 +318,7 @@ def read_share(s, mode):
     inside = None
     if loop:
         lx, ly, lw, lh = (float(v) for v in loop.groups())
-        inside = sum(1 for x, y in objs if lx <= x + 4.5 <= lx + lw and ly <= y + 4.5 <= ly + lh)
+        inside = sum(1 for x, y in objs if lx <= x + 4.3 <= lx + lw and ly <= y + 4.3 <= ly + lh)
     return len(objs), conts, inside
 
 def page03():
@@ -330,7 +330,7 @@ def page03():
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
             lim = 20 if k == big else 12
-            g = rng.randint(2, 6 if kind == "group" else 3); per = rng.randint(2, 8 if kind == "group" else 10)
+            g = rng.randint(2, 6 if kind == "group" else 3); per = rng.randint(2, 9 if kind == "group" else 10)
             if g * per > lim: continue
             items.append((kind, g * per, g, per))
         if len(items) != 6: continue
@@ -391,7 +391,7 @@ def solve_times(text):
     if m: return int(m[2]) // int(m[1])
     raise ValueError(text)
 
-def array_svg(kind, rows, cols, size=8.0, pitch=8.6):
+def array_svg(kind, rows, cols, size=8.0, pitch=8.4):
     """rows x cols objects as an array (rows = groups, cols = the number in each group)"""
     inner = "".join(obj_g(kind, 0.6 + c * pitch, 0.6 + r * pitch, size) for r in range(rows) for c in range(cols))
     return svg(round(cols * pitch + 1.2, 1), round(rows * pitch + 1.2, 1), inner)
@@ -412,11 +412,11 @@ def page05():
             else: items.append((f"{a} &times; {BOX} = {a * b}", b, a, b))
         ans = [x for _, x, _, _ in items]
         if len(set(ans)) != 6 or len({t for t, _, _, _ in items}) != 6 or len({(a_, b_) for _, _, a_, b_ in items}) != 6 or max(ans) > 20 or min(ans) < 2: continue
-        table = make_code_table(ans, word, rng, 1, 40, n_decoy=3, near=(1, -1, 2, -2, 5, -5, 10, -10), tries=300)
+        table = make_code_table(ans, word, rng, 1, 40, n_decoy=2, near=(1, -1, 2, -2, 5, -5, 10, -10), tries=400)
         if table: break
     okind = [okinds[i % 4] for i in range(6)]; rng.shuffle(okind)
     pics = [array_svg(okind[i], a_, b_) for i, (_, _, a_, b_) in enumerate(items)]
-    rows = "".join(f'<div class="sumcell"><div class="sumrow" style="height:16mm;border-bottom:none"><span class="no">{i+1}</span>{t.replace(BOX, ABOX)}</div><div class="arr">{pics[i]}</div></div>' for i, (t, _, _, _) in enumerate(items))
+    rows = "".join(f'<div class="sumcell"><div class="sumrow" style="height:13mm;border-bottom:none"><span class="no">{i+1}</span>{t.replace(BOX, ABOX)}</div><div class="arr">{pics[i]}</div></div>' for i, (t, _, _, _) in enumerate(items))
     body = f'<div class="sumrows two arrs">{rows}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=5, title="Times Code", tier=2, topic="Multiplication within 40: groups of, and the missing number",
              strand="Number and Algebra - Multiplication and Division", syll="3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",

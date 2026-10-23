@@ -197,7 +197,7 @@ def balance(n, total, unit):
     return Art("".join(s), 44, 20, 0.9, dict(kind="balance", n=n, total=total, unit=unit))
 
 GRAPH_FONT = 3.8                                  # mm: row labels and the key of a picture graph (never smaller than 3.5 mm on the page; the art is not scaled down)
-SYM_R = 2.3                                       # half the size of one picture symbol: a symbol is 4.6 mm across
+SYM_R = 2.1                                       # half the size of one picture symbol: a symbol is 4.2 mm across
 
 def _sym(name, cx, cy, r=SYM_R):
     """one ORIGINAL picture symbol (a simple black-line drawing of the thing counted, white inside) about 2r mm across; no two things share a drawing"""
@@ -254,10 +254,10 @@ SYM_NAME = {"cats": "cat", "dogs": "dog", "fish": "fish", "hens": "hen", "pies":
             "cars": "car", "dolls": "doll", "balls": "ball", "kites": "kite", "pens": "pen", "cups": "cup", "hats": "hat", "bags": "bag"}
 
 def picgraph(rows, key, blank=False, pitch=5.2, font=None):
-    """picture graph: rows = [(label, icons)]; every row is drawn with the thing it counts (a car for Cars, a pie for Pies), 4.6 mm across, and each symbol stands for `key`.
-    Labels are 3.5 to 3.8 mm; one row is 6.0 mm high. The key reads "Each picture = key" under the rows, with the first row's symbol drawn once as an example."""
+    """picture graph: rows = [(label, icons)]; every row is drawn with the thing it counts (a car for Cars, a pie for Pies), 4.2 mm across, and each symbol stands for `key`.
+    Labels are 3.5 to 3.8 mm; one row is 5.2 mm high. The key reads "Each picture = key" under the rows, with the first row's symbol drawn once as an example."""
     import metrics
-    RH, PITCH, F = 6.0, pitch, (font or GRAPH_FONT)
+    RH, PITCH, F = 5.2, pitch, (font or GRAPH_FONT)
     LW = max(metrics.width(lab, F, 600) for lab, _ in rows) + 1.6
     mx = max(c for _, c in rows)
     w = LW + mx * PITCH + 0.8
@@ -272,10 +272,10 @@ def picgraph(rows, key, blank=False, pitch=5.2, font=None):
         bx = LW + 2.8 + (rows[0][1] - 0.5) * PITCH + 1.8
         s.append(f'<rect x="{bx:.2f}" y="{0.5 + RH / 2 - 2.0:.2f}" width="4.0" height="4.0" rx="0.5" fill="#fff" stroke="#000" stroke-width="0.45"/>')
         w = max(w, bx + 4.6)
-    yk = 0.5 + len(rows) * RH + 3.4
+    yk = 0.5 + len(rows) * RH + 3.0
     s.append(_text(0.5, yk, f"Each picture = {key}", F, 700, "start"))
     w = max(w, 0.5 + metrics.width(f"Each picture = {key}", F, 700) + 0.5)
-    return Art("".join(s), w, len(rows) * RH + 7.0, 1.0, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank, font=F))
+    return Art("".join(s), w, len(rows) * RH + 6.0, 0.95, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank, font=F))
 
 def queue(n, k):
     """a row of n children (small squares with a round head), the k-th from the left drawn black: ordinal position"""

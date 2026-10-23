@@ -79,11 +79,11 @@ const benTwo = () => {
 const FRUIT = [['Apple', 6, 'apple'], ['Banana', 5, 'banana'], ['Orange', 8, 'orange'], ['Grape', 3, 'grape'], ['Watermelon', 5, 'melon']];
 const fruitGraph = () => { const o = { rows: FRUIT.map(r => ({ name: r[0], n: r[1], icon: r[2] })), key: '1 child', maxN: 8, size: 30, labelW: 124, rowPad: 5, keyH: 40, keyGap: 8 }; const r = pictographF(o, 3); return W(svg(124 + 37 * 8 + 18, r.h + 2, r.s, 'Picture graph of fruit votes, one picture for each child'), 2); };
 const PETS = [['Dog', 4, 'dog'], ['Cat', 7, 'cat'], ['Fish', 3, 'fish'], ['Bird', 5, 'bird']];
-const petGraph = () => { const o = { rows: PETS.map(r => ({ name: r[0], n: r[1], icon: r[2] })), key: '1 pet', maxN: 7, size: 30, labelW: 80, rowPad: 3, keyRight: true }; const r = pictographF(o, 3); return W(svg(80 + 38 * 7 + 18 + 150, r.h + 2, r.s, 'Picture graph of pets in a street, one picture for each pet'), 2); };
+const petGraph = () => { const o = { rows: PETS.map(r => ({ name: r[0], n: r[1], icon: r[2] })), key: '1 pet', maxN: 7, size: 30, gap: 12, labelW: 80, rowPad: 3, keyRight: true }; const r = pictographF(o, 3); return W(svg(80 + 42 * 7 + 18 + 150, r.h + 2, r.s, 'Picture graph of pets in a street, one picture for each pet'), 2); };
 // Think harder: 1 picture = 2 children. Red 3, Blue 5, Green 4.
 const starGraph = () => {
   const o = { rows: [{ name: 'Red', n: 3, icon: 'star' }, { name: 'Blue', n: 5, icon: 'star' }, { name: 'Green', n: 4, icon: 'star' }], key: '2 children', halfKey: '1 child', maxN: 6, size: 30, labelW: 80, rowPad: 3, keyH: 36, keyGap: 6 };
-  const r = pictographF(o, 3); return W(svg(80 + 38 * 6 + 18, r.h + 2, r.s, 'Picture graph: one star is 2 children, half a star is 1 child'), 2);
+  const r = pictographF(o, 3); return W(svg(400, r.h + 2, r.s, 'Picture graph: one star is 2 children, half a star is 1 child'), 2);
 };
 const blankRow = (name) => { const o = { rows: [{ name, n: 0, icon: 'star' }], noKey: true, key: '2 children', maxN: 6, size: 30, rowPad: 4, labelW: 80 }; const r = pictographF(o, 3); return W(svg(80 + 38 * 6 + 18, r.h + 2, r.s, 'Empty row for ' + name + ' with the key one star is 2 children'), 2); };
 const appleRow = () => { const o = { rows: [{ name: 'Apple', n: 3.5, icon: 'star' }], noKey: true, key: '2 children', maxN: 5, size: 30, rowPad: 4, labelW: 80 }; const r = pictographF(o, 3); return W(svg(80 + 38 * 5 + 18, r.h + 2, r.s, 'Apple row: 3 stars and half a star; one star is 2 children'), 2); };
@@ -121,12 +121,12 @@ const ruler6 = () => { // L9 No.6: ruler 0-12 with pencil from 0 to 12 and crayo
 const queue20 = () => {
   const s0 = 28, pitch = 33; let o = '';
   for (let r = 0; r < 2; r++) for (let i = 0; i < 10; i++) {
-    const n = r * 10 + i + 1, cx = 40 + i * pitch * 1.5 + 0, cy = 24 + r * 52;
+    const n = r * 10 + i + 1, cx = 40 + i * pitch * 1.5 + 0, cy = 38 + r * 52;
     o += C(cx, cy, s0 / 2, n === 7 ? Y : '#fff', { sw: 2.4 }) + T(cx, cy + 27, n, 14, { c: '#44506F' });
-    if (n === 7) o += T(cx, cy + 6, 'Mei', 13, { w: 800 });
+    if (n === 7) o += T(cx, cy + 6, 'Mei', 14, { w: 800 });
   }
-  o += T(10, 12, 'front', 14, { a: 'start', c: TEAL, i: true });
-  return W(svg(560, 112, o, 'A queue of 20 children in two rows of 10, numbered 1 to 20 from the front; Mei is the 7th'), 2);
+  o += T(10, 14, 'front', 15, { a: 'start', c: TEAL, i: true });
+  return W(svg(560, 126, o, 'A queue of 20 children in two rows of 10, numbered 1 to 20 from the front; Mei is the 7th'), 2);
 };
 // L2 No.6: two bars, one is 2 more, total 10
 const bars10 = () => { const r = barModelF({ unit: 40, labelW: 90, rowH: 34, gap: 14, rows: [{ label: 'smaller', segs: [{ u: 3, t: '?', k: 'a' }] }, { label: 'bigger', segs: [{ u: 3, t: '?', k: 'a' }, { u: 1, t: '2', k: 'h' }] }], vbrace: { from: 0, to: 1, t: '10 altogether' } }, 4); return W(svg(520, r.y + 6, r.s, 'Two bars: the bigger number is 2 more than the smaller; together 10'), 2); };

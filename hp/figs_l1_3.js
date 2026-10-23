@@ -165,7 +165,7 @@ const pictureRow = (o) => {
 
 // ---------------------------------------------------------------- picture graph (pictograph): rows [{name, n, icon}], key text, optional half
 const pictographF = (o, y0) => {
-  const s = o.size || 36, pitch = s + 6, lw = o.labelW || 130, rh = s + (o.rowPad === undefined ? 12 : o.rowPad); let out = '';
+  const s = o.size || 36, pitch = s + (o.gap === undefined ? 6 : o.gap), lw = o.labelW || 130, rh = s + (o.rowPad === undefined ? 12 : o.rowPad); let out = '';
   o.rows.forEach((r, i) => {
     const y = y0 + i * rh, cy = y + rh / 2;
     out += R(0, y, lw, rh, '#EDEDED', { sw: 2 }) + T(lw / 2, cy + 6, r.name, 17) + R(lw, y, pitch * (o.maxN || 9) + 14, rh, '#fff', { sw: 2 });
@@ -178,7 +178,7 @@ const pictographF = (o, y0) => {
     return { s: out, h: y0 + o.rows.length * rh + 4 }; }
   if (o.noKey) return { s: out, h: y0 + o.rows.length * rh + 4 };
   const ky = y0 + o.rows.length * rh + (o.keyGap === undefined ? 12 : o.keyGap), kh = o.keyH || 50, kc = ky + kh / 2;
-  out += R(0, ky, lw + pitch * (o.maxN || 9) + 14, kh, '#FFF4D1', { sw: 2, rx: 6 }) + T(14, kc + 6, 'Key:', 17, { a: 'start' }) + icon(o.icon || o.rows[0].icon, 92, kc, Math.min(32, kh - 8)) + T(116, kc + 6, '= ' + o.key, 17, { a: 'start' });
+  out += R(0, ky, Math.max(lw + pitch * (o.maxN || 9) + 14, o.halfKey ? 392 : 0), kh, '#FFF4D1', { sw: 2, rx: 6 }) + T(14, kc + 6, 'Key:', 17, { a: 'start' }) + icon(o.icon || o.rows[0].icon, 92, kc, Math.min(32, kh - 8)) + T(116, kc + 6, '= ' + o.key, 17, { a: 'start' });
   if (o.halfKey) out += icon(o.icon || o.rows[0].icon, 262, kc, Math.min(32, kh - 8), { half: true }) + T(284, kc + 6, '= ' + o.halfKey, 17, { a: 'start' });
   return { s: out, h: ky + kh + 4 };
 };
