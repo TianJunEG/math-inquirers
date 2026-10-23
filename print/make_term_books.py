@@ -126,7 +126,8 @@ def contents_page(W, H, lvl, term, kind, bookno, rows, kitnote, cardnote=False):
             c.setFillColor(INK); c.setFont('Helvetica-Bold', 12); c.drawString(70, 232, 'Toolbox Card (comes with this book)')
             c.setFont('Helvetica', 11)
             for i, t in enumerate(['The Toolbox Card is a loose A5 card, printed on both sides, that comes in the pack with this book.',
-                                   'It shows the tools we use all year. Keep it where you do your maths and point to it in class.']):
+                                   'It shows the tools we use all year. Keep it where you do your maths and point to it in class.',
+                                   'Four tools carry a small Term 1 tag: they are our four tools this term.']):
                 c.drawString(70, 214 - 15 * i, t)
         if kitnote:
             c.setFillColor(INK); c.setFont('Helvetica-Bold', 12); c.drawString(70, 150, 'Kit pages (cut-outs)')

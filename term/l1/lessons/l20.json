@@ -55,7 +55,7 @@
  },
  "materials": {
   "child": [
-   "The printed workbook with the tool cards kit page (page 6): a grown-up cuts out the 7 tool cards and the 8 problem cards beforehand",
+   "The printed workbook with the tool cards kit page (page 6): a grown-up cuts out the 7 tool cards (the six tools and No tool) and the 8 problem cards beforehand",
    "About 20 small things of one kind (counters, buttons, dry beans or pasta) for acting it out",
    "The Quest Log, printed at 100% and kept folded or closed in an envelope (sent a week before, with the grown-up note), a quest partner (a grown-up or a brother or sister), and a pencil and rubber",
    "A pencil, a rubber and spare paper"
@@ -66,7 +66,7 @@
    "Your own watch or clock, out of sight of the camera. No timer or clock is shown during the quest"
   ],
   "kit_pages": [
-   "Tool cards (page 6): 6 tool cards (picture and name) and 6 problem cards to cut out. The problem cards have short labels; your tutor reads each problem aloud. No cutting? Write the 7 tool names on 7 scraps of paper"
+   "Tool cards (page 6): 7 tool cards (the six tools and No tool, picture and name) and 8 problem cards to cut out. The problem cards have short labels; your tutor reads each problem aloud. No cutting? Write the six tool names and No tool on 7 scraps of paper"
   ],
   "ruler": false,
   "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. No real money is needed."
@@ -3300,7 +3300,7 @@
      ],
      [
       "sun",
-      "In my head"
+      "No tool"
      ]
     ],
     "problems": [
@@ -3314,7 +3314,7 @@
      "My own problem"
     ],
     "title": "Kit page: tool cards and problem cards",
-    "intro": "A grown-up cuts out the 15 cards before the lesson: 7 tool cards and 8 problem cards. Each problem card has a short label; your tutor reads the whole problem aloud. Two cards are blank for your own problem. No cutting? Write the 7 tool names on 7 scraps of paper."
+    "intro": "A grown-up cuts out the 15 cards before the lesson: 7 tool cards (the six tools and No tool) and 8 problem cards. Each problem card has a short label; your tutor reads the whole problem aloud. Two cards are blank for your own problem. No cutting? Write the six tool names and No tool on 7 scraps of paper."
    }
   ]
  },

@@ -109,3 +109,16 @@ The TERMCHECK private-source items for lessons 10, 21, 23, 24, 28 (S2 ratio tabl
 - M5 shrunk pages (above); M6 remainder; the DIAGRAM list; figure-less home sheets.
 - L28 is a full lesson re-authoring (about 150 strings); the 6-word and frame check is clean, but the lesson has not had a read-through by a person, and the tutor guide timing was not re-measured (validate: unchanged structure, 0 FAIL).
 - The L28 handle looks like one stick sticking out at the bottom left; check it on paper.
+
+
+## 10. REWRITE-NOW (TERMCHECK too-close items) and Toolbox Card follow-through
+**Rewrite (lessons 10, 21, 23, 24, 28, 36).** Closed and not closed per item: `audit/TERMCHECK.md` section 7. Summary: every TC item is replaced (L10 T2 and online t2; L21 mirror clock family; L23 E3, T3, G1, H4, online g1 and t3; L24 T3 and online t1; L28 S2 and, earlier, the stick sequences; L36 T2, H2, online c5 and, earlier, H4). Verify scripts, registries (class and workbook pair lists), spine and contest_moves, beyond items and tutor notes updated; validate 0 FAIL for all six lessons. The RV (review) items were not rewritten. Similarity method: my own re-implementation (7-word runs and content-word overlap) against docs/books/private_*, docs/sasmo/private_*, hp/ and extension/data/l1_*.json: no 7-word run for any new item.
+
+**Toolbox Card follow-through (TOOLBOX_CARD_FIXES.md).**
+- (a) "In my head" is now "No tool" in `tools/b_quest.py` (tool row, tutor notes and the grown-up note text), `l10.json`, `l20.json` (kit tool list and notes) and `l30.json`; the four Quest Log PDFs were rebuilt (checked: 9 "No tool" and 0 "In my head" in each). The lesson 20 kit page now says 7 tool cards (the six tools and No tool) and 8 problem cards, consistently (l20.json lines 58, 69, 3256, 3317; the old "6 tool cards and 6 problem cards" line was wrong). The cut-outs stay "tool cards"; the A5 card is "Toolbox Card" everywhere (lowercase variants fixed in l01, l10, l30, l39, l40).
+- (b) The L20 and L30 notes "in the same words as the Toolbox Card" (Wait. Try a tool. Try a smaller case. Ask.) are now true: the card back carries exactly that routine. L01 tutor prep now says to keep the card open at the Look back side and how to send the soft copy (PRINT_BW, 100 percent, both sides, flip on the long edge).
+- (c) Book 1 contents page uses the single name "Toolbox Card" (it already did).
+- (d) Term 1: the Toolbox Card marks Spot the pattern, List every way, Draw it and Act it out with a small Term 1 tag. L01 and L10 tutor text and the Book 1 contents page now say so ("Four tools carry a small Term 1 tag: they are our four tools this term").
+- Docs: `SPINE_TERM_DESIGN.md` 4.6, `docs/pedagogy/toolbox_card_notes.md` and `docs/pedagogy/spine_routine_spec.md` section 3 updated to the new card back.
+- **levels/spine.json (one line, for the card owner):** `kit_line` changed from "Eight tools: see your Inquirer Kit card" to "Eight tools: see your Toolbox Card". It is read by `levels/spine_guide.js` and `levels/spine_deco.py` (holiday decks and guides, Lesson 1 only) at their next build; the card builder does not read it, so the card needs no rebuild for this.
+- L19 hand-off line "Quest Log (3 pages ..." (second copy at l19.json ~3360) fixed to 4 pages.

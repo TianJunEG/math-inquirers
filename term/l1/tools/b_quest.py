@@ -19,7 +19,7 @@ and runs its own checks (page counts, printed 10 cm bar when present, banned wor
 QUEST V2 (owner decisions of 23 Oct 2026, night: X10-BEFORE, PRIVACY-REWORD; plan docs/pedagogy/lesson_x10_consolidation_plan.md section 1). The Quest is hosted by lesson x.10, a
 choose-the-tool lesson. Everything below is OPT-IN through the lesson data, so a lesson whose block has no `tool_row` builds exactly as before:
   challenge_quest.tool_row   list of tool ids from levels/spine.json (pattern, list, draw, table, backwards, guess, simpler, actout) or the string "term" for the default row of
-                             the tools met by that term (TERM_TOOLS). Turns on: a tool row under every gate ("Tool I used (circle one)", the eight card names, plus "In my head"),
+                             the tools met by that term (TERM_TOOLS). Turns on: a tool row under every gate ("Tool I used (circle one)", the eight card names, plus "No tool"),
                              an "I checked" tick, a Mi-says rule line, a "because" line in the secret cave, and in the tutor notes a Tool column, the four habits and the PRIVATE
                              three-word scale (with help / with a prompt / on their own), the tool-words pattern for the line to the grown-up and one sentence in the grown-up note.
   challenge_quest.questions[].lesson == "mixed"     an unlabelled mixed gate (no lesson tag). Works with or without tool_row. `strand` may be omitted or "mixed".
@@ -139,7 +139,7 @@ TOOL_CSS = ('.tstrip{margin:5px 0 0;padding-top:3px;border-top:1.5px dashed #C9D
 def tool_strip_html(ids, cave=False):
     """One compact row under a gate: the tool cards met so far (icon + card name) for the child to circle, then the "I checked" tick."""
     sp = spine_tools()
-    pills = ''.join(f'<span class="tp">{icon_svg(i, 13 if len(ids) > 5 else 16)}{E(sp[i]["name"])}</span>' for i in ids) + '<span class="tp">In my head</span>'
+    pills = ''.join(f'<span class="tp">{icon_svg(i, 13 if len(ids) > 5 else 16)}{E(sp[i]["name"])}</span>' for i in ids) + '<span class="tp">No tool</span>'
     tick = '' if cave else '<span class="ck"><i class="cb"></i>I checked</span>'
     return f'<div class="tstrip{" tmany" if len(ids) > 5 else ""}"><span class="tl">{"My tool" if cave else "Tool I used"}</span>{pills}{tick}</div>'
 
@@ -212,7 +212,7 @@ def tutor_notes_html(d):
              f'<div class="k">TUTOR NOTES • LEVEL {d["level"]} • TERM {d["term"]} • {NAME.upper()}</div><h1>{E(c["title"])}</h1>'
              f'<p>{len(qs)} gates, one from each lesson of the {'year' if c.get('scope') == 'year' else 'term'}, all at Start here level, plus one optional secret cave item. {c["minutes"]} minutes after the break, played in pairs or as a group quest with Mi, working on private paper. '
              f'It is a game: no score or mark is shown to the child, no ranking, no visible timer. You keep private notes only. For the tutor: do not hand these notes to families.'
-             + (f' Under every gate the child circles the tool they used ({tname(tools)}, or In my head) and ticks I checked: a choose-the-tool habit, not a mark.' if tools else '') + '</p></div>')
+             + (f' Under every gate the child circles the tool they used ({tname(tools)}, or No tool) and ticks I checked: a choose-the-tool habit, not a mark.' if tools else '') + '</p></div>')
     H.append(f'<div class="box t"><b>Where it sits.</b> {E(c["where"])}. <span class="small">{E(c["plan_note"])}</span></div>')
     H.append('<h2>1. The gates at a glance</h2><table><tr><th>Gate</th><th>From</th><th>Area (tutor label)</th><th>What it uses (Start here level)</th><th>Answer</th></tr>')
     for q in qs:
@@ -223,7 +223,7 @@ def tutor_notes_html(d):
     H.append('<h2>2. Playing it: before and during</h2><ol>' + ''.join(f'<li>{E(x)}</li>' for x in c['give']) + '</ol>')
     if tools:
         H.append('<div class="box t"><b>The tool row and the I checked tick (on every gate).</b><ul>'
-                 f'<li>The row shows only the tools this class has met: {E(tname(tools))}, and In my head. The child circles one. There is no right tool: two gates can be solved well in more than one way, and a child who circles In my head is telling you the truth.</li>'
+                 f'<li>The row shows only the tools this class has met: {E(tname(tools))}, and No tool. The child circles one. There is no right tool: two gates can be solved well in more than one way, and a child who circles In my head is telling you the truth.</li>'
                  '<li>Do not say or hint a tool while the quest is on. No gate question names a tool (the names fade at Start here and Think harder; the quest is where the child chooses).</li>'
                  '<li>The circle and the tick are never marked, added up or compared. They tell you what to ask in the lesson look-back and what to write in your notes, in words.</li>'
                  '<li>A gate with no circle is fine: write nothing about it.</li></ul></div>')

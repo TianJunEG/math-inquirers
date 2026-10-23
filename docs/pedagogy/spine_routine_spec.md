@@ -102,6 +102,8 @@ Coverage as main: Spot the pattern 7; List every way 13; Draw it 12; Make a tabl
 
 ## 3. The COMMON LOOK-BACK
 
+> Update 24 Oct 2026: the A5 Toolbox Card back is now a reusable reference (the same three prompts, one drawing box, the stuck chant "Wait. Try a tool. Try a smaller case. Ask.") and no longer a write-on sheet with tick boxes. See `term/l1/audit/TOOLBOX_CARD_FIXES.md`.
+
 **Three prompts, same meaning at every level, wording by band.** They are about ONE problem the child picks from today (the last or the hardest).
 
 | # | A (6-8) | B (8-10) | C (10-13) |

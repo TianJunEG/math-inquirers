@@ -25,7 +25,7 @@
       "Mi's Challenge Quest of the year: 8 short gates, one for each part of Term 4, and an optional secret cave (all at Start here level; a key where each picture stands for 2 goes beyond Primary 1)",
       "Beyond Primary 1 on purpose: Puzzle With a Proof, writing a puzzle with a rule and showing why its answer must be right by listing every case (Think harder and Go further only)"
     ],
-    "note": "Strand label for the tutor only. This is the last lesson of the year. It holds Mi's Challenge Quest (20 minutes at minutes 35 to 55, a game with Mi on private paper with a quest partner, never a test) and the Showcase: volunteers teach a favourite idea from the year in about a minute (a pass is always fine, no voting, no ranking). Start here is approachable and light: choose a favourite page, tick what you know well, pick the clear puzzle, check a puzzle answer, and make a ten. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: writing a puzzle with a rule and an answer that is the only answer, listing every case to prove it (Puzzle With a Proof), and finding the wrong step in a puzzle a child in another class wrote. The Quest gate on picture graphs reads a key where each picture stands for 2, which is a Primary 2 idea taught in Term 4 Lesson 8, and the plain statement is on the grown-up note. Non-routine types (tutor only): write a puzzle with a rule and check it (CHAL), check a friend's puzzle and say what is wrong (EXP). Owner decisions, 22 and 23 Oct 2026: Mi's Challenge Quest replaces the end-of-term check, no scores; strong content with scaffolding, said plainly to families; every lesson names a beyond item; puzzles are shared inside the group only and nothing is compiled into a book (D9). Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, D18): wrong working is always a child or a child in another class, never a cast name. REFRAMED (owner decision X10-BEFORE, 23 Oct 2026): this is a choose-the-tool consolidation lesson. It keeps the Showcase and the puzzle-writing content and adds the eight tool names (the toolbox card): the Remember part shows the whole toolbox, Start here asks the child to write the tool used and tick I checked, and the Quest has two mixed gates (gates 4 and 7, no lesson tag, so Term 4 Lessons 5 and 9 are no longer visited by a tagged gate: Term 4 Lesson 9 is the toolbox lesson and the whole Quest is a choose-the-tool task)."
+    "note": "Strand label for the tutor only. This is the last lesson of the year. It holds Mi's Challenge Quest (20 minutes at minutes 35 to 55, a game with Mi on private paper with a quest partner, never a test) and the Showcase: volunteers teach a favourite idea from the year in about a minute (a pass is always fine, no voting, no ranking). Start here is approachable and light: choose a favourite page, tick what you know well, pick the clear puzzle, check a puzzle answer, and make a ten. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: writing a puzzle with a rule and an answer that is the only answer, listing every case to prove it (Puzzle With a Proof), and finding the wrong step in a puzzle a child in another class wrote. The Quest gate on picture graphs reads a key where each picture stands for 2, which is a Primary 2 idea taught in Term 4 Lesson 8, and the plain statement is on the grown-up note. Non-routine types (tutor only): write a puzzle with a rule and check it (CHAL), check a friend's puzzle and say what is wrong (EXP). Owner decisions, 22 and 23 Oct 2026: Mi's Challenge Quest replaces the end-of-term check, no scores; strong content with scaffolding, said plainly to families; every lesson names a beyond item; puzzles are shared inside the group only and nothing is compiled into a book (D9). Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, D18): wrong working is always a child or a child in another class, never a cast name. REFRAMED (owner decision X10-BEFORE, 23 Oct 2026): this is a choose-the-tool consolidation lesson. It keeps the Showcase and the puzzle-writing content and adds the eight tool names (the Toolbox Card): the Remember part shows the whole toolbox, Start here asks the child to write the tool used and tick I checked, and the Quest has two mixed gates (gates 4 and 7, no lesson tag, so Term 4 Lessons 5 and 9 are no longer visited by a tagged gate: Term 4 Lesson 9 is the toolbox lesson and the whole Quest is a choose-the-tool task)."
   },
   "contest_moves": [
     "write a puzzle with a rule, solve it, and show why the answer must be right by listing every case (Puzzle With a Proof)",
@@ -36,7 +36,7 @@
   "contest_where": "Think harder, Go further and the Investigation",
   "objectives": [
     "Choose a favourite idea from the year and teach it in about a minute with the frame: my idea, my tool and why, an example and a check.",
-    "Name the eight tools of the toolbox card and pick the one you would start with for a mixed problem, then say why and check.",
+    "Name the eight tools of the Toolbox Card and pick the one you would start with for a mixed problem, then say why and check.",
     "Say what a good puzzle needs: a story, numbers, one question and one answer.",
     "Think harder: write a puzzle with an answer, swap it with a partner and solve it, and spot which puzzle has exactly one answer.",
     "Go further: write a puzzle with a rule and show why its answer must be right; check a friend's puzzle and say what is wrong.",
@@ -365,7 +365,7 @@
           "text": "Which tool have you used the most this year?"
         }
       ],
-      "note": "The whole toolbox, the same eight names as the toolbox card (taught again for anyone who joins cold). Read each row aloud. Ask: which tool have you used the most this year. Volunteers first; a pass is always fine. Say: today we do not learn a new tool; we choose one, say why, and check. A child with the toolbox card from the kit may point to it. No writing."
+      "note": "The whole toolbox, the same eight names as the Toolbox Card (taught again for anyone who joins cold). Read each row aloud. Ask: which tool have you used the most this year. Volunteers first; a pass is always fine. Say: today we do not learn a new tool; we choose one, say why, and check. A child with the Toolbox Card from the kit may point to it. No writing."
     },
     {
       "id": "s-sneak",
@@ -1142,7 +1142,7 @@
           },
           {
             "k": "ASK",
-            "text": "Which tool have you used the most this year? Say it, or point to it on your toolbox card.",
+            "text": "Which tool have you used the most this year? Say it, or point to it on your Toolbox Card.",
             "resp": 30
           },
           {
