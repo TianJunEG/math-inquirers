@@ -7,9 +7,9 @@ X = '×'
 M = '−'
 
 learn = {
-    'intro': 'A good puzzle program starts with maths. Work out the answer by hand first, then turn the rule into blocks, then test it with a number you already know the answer for.',
+    'intro': 'A good puzzle program starts with maths. Find the answer by hand first, then turn the rule into blocks, then test it with a number you already know the answer for.',
     'example': {
-        'problem': 'Plan a program that asks for a number n of days and says the day of the week n days after Monday. The list days holds Monday, Tuesday, ..., Sunday.',
+        'problem': 'Plan a program. It asks for n and says the day n days after Monday. The list days holds Monday to Sunday.',
         'figure': code([['look', 'ask (n?) and wait'], ['var', 'set pos to (answer mod 7 + 1)'], ['look', 'say (item pos of days)']]),
         'steps': ['Idea: a week is a clock with 7 days, so we need n mod 7.',
                   'By hand: 10 days after Monday. 10 mod 7 = 3, so the day is Thursday.',
@@ -17,7 +17,7 @@ learn = {
                   'Test with known values: n = 10 gives Thursday, n = 0 and n = 7 give Monday.'],
         'answer': 'The program says item 4 of days, Thursday, when n = 10.'},
     'howto': {'title': 'How to plan a puzzle program',
-              'steps': ['Pick a maths idea and work out an answer by hand.',
+              'steps': ['Pick a maths idea and find an answer by hand.',
                         'Turn the rule into blocks: input, rule, output.',
                         'Test with a value you know. Also try 0 or 1.',
                         'Add a twist, then explain why it works.']},
@@ -80,7 +80,7 @@ I.append(IT(U, 'S', 9, 3,
             parts=[P('a', 'The mean of 5 numbers is 14. Four of them are 10, 12, 18 and 20. The 5th is {b}.', [10]),
                    P('b', 'The median of 3, 11, 7, 9 is {b}.', [8])]))
 I.append(IT(U, 'S', 10, 3,
-            'The program picks a secret n from 1 to 20 and shows a number. Read the code.',
+            'The program chooses a secret number n between 1 and 20 and displays an answer. Read the code.',
             f'The program shows 4n + 3. If it shows 31, then 4n = 28 and n = 7. The smallest output is 4 {X} 1 + 3 = 7. The largest is 4 {X} 20 + 3 = 83.',
             fig=code([['var', 'set n to (pick random 1 to 20)'], ['look', f'say (n {X} 4 + 3)']]),
             parts=[P('a', 'It shows 31. The secret n was {b}.', [7]),
@@ -88,8 +88,8 @@ I.append(IT(U, 'S', 10, 3,
                    P('c', 'The largest number it can show is {b}.', [83])],
             figside=True))
 I.append(IT(U, 'S', 11, 3,
-            'The steps of planning a program are mixed up. A: Test with a value you know. B: Work out the maths by hand. C: Build the blocks. D: Pick a maths idea. E: Add a twist.',
-            'You need an idea (D) before you can work out the maths (B). You build the blocks (C) after the maths, test them (A) once they exist, and add a twist (E) when the basic version works.',
+            'The steps of planning a program are mixed up. A: Test with a value you know. B: Do the maths by hand. C: Build the blocks. D: Pick a maths idea. E: Add a twist.',
+            'You need an idea (D) before you can do the maths (B). You build the blocks (C) after the maths, test them (A) once they exist, and add a twist (E) when the basic version works.',
             answer=A(['D', 'B', 'C', 'A', 'E'], 'D, B, C, A, E', list=True),
             space={'rows': ['The order is {ll}']}))
 
@@ -101,7 +101,7 @@ I.append(IT(U, 'S', 12, 3,
                    P('c', f'The rule for the sequence is {{b}} {X} n + {{b}}.', [6, 5], '6, 5')],
             partsrow=True))
 I.append(IT(U, 'S', 13, 3,
-            'Two dice are rolled and the numbers are multiplied. There are 36 equally likely results.',
+            'Roll 2 dice and multiply the numbers. There are 36 equally likely results.',
             f'A product of 12 comes from 2 and 6, 3 and 4, 4 and 3, 6 and 2: 4 results. The product is odd only when both numbers are odd: 3 {X} 3 = 9 results, 9/36 = 1/4. '
             f'1/4 {X} 360 = 90.',
             parts=[P('a', '{b} of the 36 products are 12.', [4]),
@@ -116,7 +116,7 @@ I.append(IT(U, 'S', 14, 3,
 
 # ---------------------------------------------------------------- Think harder
 I.append(IT(U, 'T', 1, 4,
-            'The nth term of a sequence is 6n − 1. Look at its first 10 terms.',
+            'A sequence has the rule 6n − 1. Look at its first 10 terms.',
             '5, 11, 17, 23, 29, 35, 41, 47, 53, 59. 35 = 5 × 7 is the only one that is not prime, so 9 of the 10 are prime. '
             '6n is even and an even number take away 1 is odd, so every term is odd.',
             parts=[P('a', '{b} of the first 10 terms are prime.', [9]),
@@ -135,14 +135,14 @@ I.append(IT(U, 'T', 3, 4,
             '19, 28, 37, 46, 55, 64, 73, 82, 91 have digits adding to 10. The primes are 19, 37 and 73 (the others are even, or 55 and 91 = 7 × 13). '
             'Reversed: 19 gives 91, which is not prime. 37 gives 73 and 73 gives 37, both prime.',
             parts=[P('a', 'The primes with digits that add to 10 are {l}', [19, 37, 73], '19, 37, 73', list=True),
-                   P('b', 'The two whose reversed number is also prime are {b} and {b}.', [37, 73], '37 and 73')],
+                   P('b', 'Those whose reverse is also prime are {b} and {b}.', [37, 73], '37 and 73')],
             hint='List all numbers with digit sum 10. Cross out the non-primes.', space={'rows': ['Working:', '', '']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Plan a Mystery Machine. The computer picks n from 1 to 20 and shows 5n \u2212 2. Fill in the rule.',
+            'Plan a Mystery Machine. A random n from 1 to 20 goes in, and the machine shows 5n \u2212 2. Fill in the rule.',
             f'The rule is n {X} 5 {M} 2. The smallest output is 5 {X} 1 {M} 2 = 3 and the largest is 5 {X} 20 {M} 2 = 98. If the player sees 48, then 5n = 50 and n = 10. '
-            f'(For your twist, any rule that can be undone is fine. Work out a test by hand first, for example n = 4 shows 18, then check the program gives it.)',
+            f'(For your twist, any rule that can be undone is fine. Find a test answer by hand first, for example n = 4 shows 18, then check the program gives it.)',
             fig=code([['var', 'set n to (pick random 1 to 20)'], ['look', f'say (n {X} ? {M} ?)']]),
             parts=[P('a', f'say (n {X} {{b}} {M} {{b}})', [5, 2], '5, 2'),
                    P('b', 'The smallest and largest numbers it shows are {b} and {b}.', [3, 98], '3 and 98'),
@@ -178,7 +178,7 @@ I.append(IT(U, 'C', 2, 6,
             f'{M}7 + 12 = 5. Then 5 {M} 9 = {M}4.',
             answer=A([-4], f'{M}4')))
 I.append(IT(U, 'C', 3, 6,
-            'A bag has 4 red and 6 blue counters. P(red) = {b}/{b} in simplest form.',
+            'A bag holds 4 red counters and 6 blue counters. P(red) = {b}/{b} in simplest form.',
             '4 red out of 10 counters is 4/10 = 2/5.',
             answer=A([2, 5], '2/5')))
 I.append(IT(U, 'C', 4, 6,
@@ -186,6 +186,5 @@ I.append(IT(U, 'C', 4, 6,
             f'3 + 100 = 103. 103 mod 12 = 7, because 8 {X} 12 = 96. It will be 7 o\'clock.',
             answer=A([7], '7')))
 
-learn['tight'] = True
 write_unit(10, 'Showcase challenge', 'Mixed maths and code',
            'I can use ideas from all the units in a mixed challenge, and plan a small puzzle program: maths first, then blocks, then tests.', learn, I)

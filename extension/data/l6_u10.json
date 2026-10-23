@@ -8,9 +8,9 @@
  "holiday_lesson": 10,
  "goal": "I can use ideas from all the units in a mixed challenge, and plan a small puzzle program: maths first, then blocks, then tests.",
  "learn": {
-  "intro": "A good puzzle program starts with maths. Work out the answer by hand first, then turn the rule into blocks, then test it with a number you already know the answer for.",
+  "intro": "A good puzzle program starts with maths. Find the answer by hand first, then turn the rule into blocks, then test it with a number you already know the answer for.",
   "example": {
-   "problem": "Plan a program that asks for a number n of days and says the day of the week n days after Monday. The list days holds Monday, Tuesday, ..., Sunday.",
+   "problem": "Plan a program. It asks for n and says the day n days after Monday. The list days holds Monday to Sunday.",
    "figure": {
     "type": "l6_code",
     "prog": [
@@ -39,7 +39,7 @@
   "howto": {
    "title": "How to plan a puzzle program",
    "steps": [
-    "Pick a maths idea and work out an answer by hand.",
+    "Pick a maths idea and find an answer by hand.",
     "Turn the rule into blocks: input, rule, output.",
     "Test with a value you know. Also try 0 or 1.",
     "Add a twist, then explain why it works."
@@ -56,8 +56,7 @@
     "text": "Saturday"
    },
    "explanation": "19 mod 7 = 5, because 19 = 2 × 7 + 5. pos = 5 + 1 = 6, and item 6 of days is Saturday."
-  },
-  "tight": true
+  }
  },
  "items": [
   {
@@ -198,49 +197,10 @@
    "explanation": "(a) OUT 43: 43 + 7 = 50, and 50 ÷ 5 = 10. (b) 6n + 1 = 79 gives 6n = 78 and n = 13."
   },
   {
-   "id": "L6U10-S05",
-   "tier": "start",
-   "text": "Count every possible way.",
-   "page": 1,
-   "parts": [
-    {
-     "label": "a",
-     "text": "A menu has 3 starters, 5 mains and 2 drinks. A meal is one of each: {b} meals.",
-     "answer": {
-      "value": [
-       "30"
-      ],
-      "text": "30"
-     }
-    },
-    {
-     "label": "b",
-     "text": "9 friends: every pair shakes hands once: {b} handshakes.",
-     "answer": {
-      "value": [
-       "36"
-      ],
-      "text": "36"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Cards 2, 4, 6 and 8: {b} different 3-digit numbers, using no card twice.",
-     "answer": {
-      "value": [
-       "24"
-      ],
-      "text": "24"
-     }
-    }
-   ],
-   "explanation": "(a) 3 × 5 × 2 = 30. (b) 9 friends: 9 × 8 ÷ 2 = 36. (c) 4 choices, then 3, then 2: 4 × 3 × 2 = 24."
-  },
-  {
    "id": "L6U10-S06",
    "tier": "start",
    "text": "Think about fair and likely.",
-   "page": 2,
+   "page": 1,
    "parts": [
     {
      "label": "a",
@@ -277,34 +237,43 @@
    "explanation": "(a) 8 counters, 5 red: 5/8. (b) 1/6 × 1200 = 200. (c) An even number is 2, 4 or 6, and 1, 3 or 5 is the other 3 numbers: 3 out of 6 each, so the game is fair."
   },
   {
-   "id": "L6U10-S07",
+   "id": "L6U10-S05",
    "tier": "start",
-   "text": "A turtle turns 4° at every corner of a regular polygon.",
+   "text": "Count every possible way.",
    "page": 2,
    "parts": [
     {
      "label": "a",
-     "text": "The polygon has {b} sides.",
+     "text": "A menu has 3 starters, 5 mains and 2 drinks. A meal is one of each: {b} meals.",
      "answer": {
       "value": [
-       "90"
+       "30"
       ],
-      "text": "90"
+      "text": "30"
      }
     },
     {
      "label": "b",
-     "text": "Each inside angle is {b}°.",
+     "text": "9 friends: every pair shakes hands once: {b} handshakes.",
      "answer": {
       "value": [
-       "176"
+       "36"
       ],
-      "text": "176"
+      "text": "36"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Cards 2, 4, 6 and 8: {b} different 3-digit numbers, using no card twice.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
      }
     }
    ],
-   "explanation": "360 ÷ 4 = 90 sides. The inside angle is 180 − 4 = 176°.",
-   "partsrow": true
+   "explanation": "(a) 3 × 5 × 2 = 30. (b) 9 friends: 9 × 8 ÷ 2 = 36. (c) 4 choices, then 3, then 2: 4 × 3 × 2 = 24."
   },
   {
    "id": "L6U10-S08",
@@ -365,51 +334,10 @@
    "explanation": "(a) The total of 5 numbers is 5 × 14 = 70. 10 + 12 + 18 + 20 = 60, so the 5th is 10. (b) In order: 3, 7, 9, 11. The middle two are 7 and 9, so the median is 8."
   },
   {
-   "id": "L6U10-S12",
-   "tier": "start",
-   "text": "A program runs: set n to 11, then repeat 25 times: change n by 6. Then it says n.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "The program says {b}.",
-     "answer": {
-      "value": [
-       "161"
-      ],
-      "text": "161"
-     }
-    },
-    {
-     "label": "b",
-     "text": "That is term number {b} of 11, 17, 23, ...",
-     "answer": {
-      "value": [
-       "26"
-      ],
-      "text": "26"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The rule for the sequence is {b} × n + {b}.",
-     "answer": {
-      "value": [
-       "6",
-       "5"
-      ],
-      "text": "6, 5"
-     }
-    }
-   ],
-   "explanation": "n goes 11, 17, 23, ... and after 25 jumps it is 11 + 25 × 6 = 161. From the 1st term to the 26th term is 25 jumps, so 161 is the 26th term. The rule is 6n + 5 (6 × 26 + 5 = 161).",
-   "partsrow": true
-  },
-  {
    "id": "L6U10-S10",
    "tier": "start",
-   "text": "The program picks a secret n from 1 to 20 and shows a number. Read the code.",
-   "page": 3,
+   "text": "The program chooses a secret number n between 1 and 20 and displays an answer. Read the code.",
+   "page": 2,
    "parts": [
     {
      "label": "a",
@@ -459,9 +387,39 @@
    "figside": true
   },
   {
+   "id": "L6U10-S07",
+   "tier": "start",
+   "text": "A turtle turns 4° at every corner of a regular polygon.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The polygon has {b} sides.",
+     "answer": {
+      "value": [
+       "90"
+      ],
+      "text": "90"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each inside angle is {b}°.",
+     "answer": {
+      "value": [
+       "176"
+      ],
+      "text": "176"
+     }
+    }
+   ],
+   "explanation": "360 ÷ 4 = 90 sides. The inside angle is 180 − 4 = 176°.",
+   "partsrow": true
+  },
+  {
    "id": "L6U10-S11",
    "tier": "start",
-   "text": "The steps of planning a program are mixed up. A: Test with a value you know. B: Work out the maths by hand. C: Build the blocks. D: Pick a maths idea. E: Add a twist.",
+   "text": "The steps of planning a program are mixed up. A: Test with a value you know. B: Do the maths by hand. C: Build the blocks. D: Pick a maths idea. E: Add a twist.",
    "page": 3,
    "answer": {
     "value": [
@@ -479,12 +437,53 @@
      "The order is {ll}"
     ]
    },
-   "explanation": "You need an idea (D) before you can work out the maths (B). You build the blocks (C) after the maths, test them (A) once they exist, and add a twist (E) when the basic version works."
+   "explanation": "You need an idea (D) before you can do the maths (B). You build the blocks (C) after the maths, test them (A) once they exist, and add a twist (E) when the basic version works."
+  },
+  {
+   "id": "L6U10-S12",
+   "tier": "start",
+   "text": "A program runs: set n to 11, then repeat 25 times: change n by 6. Then it says n.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The program says {b}.",
+     "answer": {
+      "value": [
+       "161"
+      ],
+      "text": "161"
+     }
+    },
+    {
+     "label": "b",
+     "text": "That is term number {b} of 11, 17, 23, ...",
+     "answer": {
+      "value": [
+       "26"
+      ],
+      "text": "26"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The rule for the sequence is {b} × n + {b}.",
+     "answer": {
+      "value": [
+       "6",
+       "5"
+      ],
+      "text": "6, 5"
+     }
+    }
+   ],
+   "explanation": "n goes 11, 17, 23, ... and after 25 jumps it is 11 + 25 × 6 = 161. From the 1st term to the 26th term is 25 jumps, so 161 is the 26th term. The rule is 6n + 5 (6 × 26 + 5 = 161).",
+   "partsrow": true
   },
   {
    "id": "L6U10-S13",
    "tier": "start",
-   "text": "Two dice are rolled and the numbers are multiplied. There are 36 equally likely results.",
+   "text": "Roll 2 dice and multiply the numbers. There are 36 equally likely results.",
    "page": 3,
    "parts": [
     {
@@ -559,7 +558,7 @@
   {
    "id": "L6U10-T01",
    "tier": "think",
-   "text": "The nth term of a sequence is 6n − 1. Look at its first 10 terms.",
+   "text": "A sequence has the rule 6n − 1. Look at its first 10 terms.",
    "page": 4,
    "parts": [
     {
@@ -671,7 +670,7 @@
     },
     {
      "label": "b",
-     "text": "The two whose reversed number is also prime are {b} and {b}.",
+     "text": "Those whose reverse is also prime are {b} and {b}.",
      "answer": {
       "value": [
        "37",
@@ -694,7 +693,7 @@
   {
    "id": "L6U10-G01",
    "tier": "go",
-   "text": "Plan a Mystery Machine. The computer picks n from 1 to 20 and shows 5n − 2. Fill in the rule.",
+   "text": "Plan a Mystery Machine. A random n from 1 to 20 goes in, and the machine shows 5n − 2. Fill in the rule.",
    "page": 5,
    "parts": [
     {
@@ -744,7 +743,7 @@
     ]
    },
    "hint": "Check with n = 1 and n = 20 by hand first.",
-   "explanation": "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. If the player sees 48, then 5n = 50 and n = 10. (For your twist, any rule that can be undone is fine. Work out a test by hand first, for example n = 4 shows 18, then check the program gives it.)",
+   "explanation": "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. If the player sees 48, then 5n = 50 and n = 10. (For your twist, any rule that can be undone is fine. Find a test answer by hand first, for example n = 4 shows 18, then check the program gives it.)",
    "figright": true,
    "partsrow": true
   },
@@ -896,7 +895,7 @@
   {
    "id": "L6U10-C03",
    "tier": "quiz",
-   "text": "A bag has 4 red and 6 blue counters. P(red) = {b}/{b} in simplest form.",
+   "text": "A bag holds 4 red counters and 6 blue counters. P(red) = {b}/{b} in simplest form.",
    "page": 6,
    "answer": {
     "value": [
