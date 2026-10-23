@@ -72,7 +72,7 @@ const coinF = (v, cx, cy, o = {}) => {
   return C(cx, cy, r, d.f, { sw: 2.6 }) + C(cx, cy, r - 3.6, 'none', { sw: 1.1 }) + T(cx, cy + (v >= 100 ? 6 : 5.5), lab, v >= 50 || v === 20 ? 16 : 14.5, { w: 800 });
 };
 const coinRow = (vals, o = {}) => { // horizontal row of coins; returns svg
-  const gap = o.gap || 10, h = 62; let x = 6, inner = '';
+  const gap = o.gap || 10, h = o.h || 52; let x = 6, inner = '';
   vals.forEach(v => { const r = (v === '?' ? 22 : COIN[v].r); inner += v === '?' ? coinF(20, x + r, h / 2, { empty: true, q: true, r }) : coinF(v, x + r, h / 2); x += 2 * r + gap; });
   return svg(Math.max(x, 60), h, inner, o.label || 'coins', o.maxw || x);
 };
@@ -165,6 +165,9 @@ const pictographF = (o, y0) => {
     if (r.n % 1) out += icon(r.icon || o.icon, lw + 10 + pitch * Math.floor(r.n) + pitch / 2, cy, s, { half: true });
     if (r.blank) out += T(lw + 14, cy + 6, r.blank, 15, { a: 'start', i: true, c: '#8A94AD' });
   });
+  if (o.keyRight) { const kx = lw + pitch * (o.maxN || 9) + 30, kh = 74, ky = y0 + o.rows.length * rh / 2 - kh / 2;
+    out += R(kx, ky, 128, kh, '#FFF4D1', { sw: 2, rx: 6 }) + T(kx + 64, ky + 22, 'Key', 17) + icon(o.icon || o.rows[0].icon, kx + 30, ky + 50, 30) + T(kx + 52, ky + 56, '= ' + o.key, 16, { a: 'start' });
+    return { s: out, h: y0 + o.rows.length * rh + 4 }; }
   if (o.noKey) return { s: out, h: y0 + o.rows.length * rh + 4 };
   const ky = y0 + o.rows.length * rh + (o.keyGap === undefined ? 12 : o.keyGap), kh = o.keyH || 50, kc = ky + kh / 2;
   out += R(0, ky, lw + pitch * (o.maxN || 9) + 14, kh, '#FFF4D1', { sw: 2, rx: 6 }) + T(14, kc + 6, 'Key:', 17, { a: 'start' }) + icon(o.icon || o.rows[0].icon, 92, kc, Math.min(32, kh - 8)) + T(116, kc + 6, '= ' + o.key, 17, { a: 'start' });

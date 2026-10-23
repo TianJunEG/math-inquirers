@@ -79,7 +79,7 @@ const benTwo = () => {
 const FRUIT = [['Apple', 6, 'apple'], ['Banana', 5, 'banana'], ['Orange', 8, 'orange'], ['Grape', 3, 'grape'], ['Watermelon', 5, 'melon']];
 const fruitGraph = () => { const o = { rows: FRUIT.map(r => ({ name: r[0], n: r[1], icon: r[2] })), key: '1 child', maxN: 8, size: 30, labelW: 124, rowPad: 5, keyH: 40, keyGap: 8 }; const r = pictographF(o, 3); return W(svg(124 + 37 * 8 + 18, r.h + 2, r.s, 'Picture graph of fruit votes, one picture for each child'), 2); };
 const PETS = [['Dog', 4, 'dog'], ['Cat', 7, 'cat'], ['Fish', 3, 'fish'], ['Bird', 5, 'bird']];
-const petGraph = () => { const o = { rows: PETS.map(r => ({ name: r[0], n: r[1], icon: r[2] })), key: '1 pet', maxN: 7, size: 32, labelW: 80, rowPad: 6, keyH: 40, keyGap: 8 }; const r = pictographF(o, 3); return W(svg(80 + 38 * 7 + 18, r.h + 2, r.s, 'Picture graph of pets in a street, one picture for each pet'), 2); };
+const petGraph = () => { const o = { rows: PETS.map(r => ({ name: r[0], n: r[1], icon: r[2] })), key: '1 pet', maxN: 7, size: 30, labelW: 80, rowPad: 3, keyRight: true }; const r = pictographF(o, 3); return W(svg(80 + 38 * 7 + 18 + 150, r.h + 2, r.s, 'Picture graph of pets in a street, one picture for each pet'), 2); };
 // Think harder: 1 picture = 2 children. Red 3, Blue 5, Green 4.
 const starGraph = () => {
   const o = { rows: [{ name: 'Red', n: 3, icon: 'star' }, { name: 'Blue', n: 5, icon: 'star' }, { name: 'Green', n: 4, icon: 'star' }], key: '2 children', halfKey: '1 child', maxN: 6, size: 30, labelW: 80, rowPad: 3, keyH: 36, keyGap: 6 };
