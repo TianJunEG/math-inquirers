@@ -1,51 +1,54 @@
-"""The 30 Primary 2 outcome lines, in the wording of the syllabus PDF (Primary Mathematics Syllabus P1 to P6, 2021 edition,
-updated Oct 2025, pages 33 and 34), the two semester booklets and the page order of each.
-Plan: docs/school_books/p2_semester_booklets_plan.md. Wording copied from the PDF (also in docs/school_books/p2_outcome_wording.md)."""
+"""The Primary 5 (Standard) outcome lines, the two semester booklets and the page order of each.
+Plan: docs/school_books/p5_semester_booklets_plan.md.
 
-# id -> (strand heading used on the key, outcome wording as printed in the PDF)
+IMPORTANT (honest note): the syllabus PDF itself is not in the repository. The wording below is the repository's own summary of pages 41 and 42
+(docs/moe/syllabus_by_level.md, section "Primary 5, Standard"), in our own words, with the outcome numbers that summary prints (Whole Numbers 2.2 and 2.3,
+Fractions 1.1 to 2.5, Decimals 1.1 and 1.2, Percentage 1.4, Volume 2.1 to 2.6, Geometry 1.1 to 1.4). Lines whose number the summary does not print carry no number
+here. Nothing in this file is a copy of the PDF's wording and the key says so. Before any use of the PDF's own wording, the owner must supply the PDF."""
+
+# id -> (strand heading used on the key, outcome line in our own words, label printed on the key)
 OUTCOMES = {
-    "WN1.1": ("Whole Numbers", "counting in tens/hundreds"),
-    "WN1.2": ("Whole Numbers", "number notation, representations and place values (hundreds, tens, ones)"),
-    "WN1.3": ("Whole Numbers", "reading and writing numbers in numerals and in words"),
-    "WN1.4": ("Whole Numbers", "comparing and ordering numbers"),
-    "WN1.5": ("Whole Numbers", "patterns in number sequences"),
-    "WN1.6": ("Whole Numbers", "odd and even numbers"),
-    "AS2.1": ("Addition and Subtraction", "addition and subtraction algorithms (up to 3 digits)"),
-    "AS2.2": ("Addition and Subtraction", "mental calculation involving addition and subtraction of a 3-digit number and ones/tens/hundreds"),
-    "MD3.1": ("Multiplication and Division", "multiplication tables of 2, 3, 4, 5 and 10"),
-    "MD3.2": ("Multiplication and Division", "use of ÷"),
-    "MD3.3": ("Multiplication and Division", "relationship between multiplication and division"),
-    "MD3.4": ("Multiplication and Division", "multiplying and dividing within the multiplication tables"),
-    "MD3.5": ("Multiplication and Division", "mental calculation involving multiplication and division within multiplication tables of 2, 3, 4, 5 and 10"),
-    "FR1.1": ("Fractions", "fraction as part of a whole"),
-    "FR1.2": ("Fractions", "notation and representations of fractions"),
-    "FR1.3": ("Fractions", "comparing and ordering fractions with denominators of given fractions not exceeding 12 (unit fractions; like fractions)"),
-    "FR2.1": ("Fractions", "adding and subtracting like fractions within one whole with denominators of given fractions not exceeding 12"),
-    "MO1.1": ("Money", "counting amount of money in dollars and cents"),
-    "MO1.2": ("Money", "reading and writing money in decimal notation"),
-    "MO1.3": ("Money", "comparing two or three amounts of money"),
-    "MO1.4": ("Money", "converting an amount of money in decimal notation to cents only, and vice versa"),
-    "ME1.1": ("Length, Mass and Volume", "measuring (length in metres; mass in kilograms/grams; volume of liquid in litres)"),
-    "ME1.2": ("Length, Mass and Volume", "using appropriate units of measurement and their abbreviations m, g, kg, ℓ"),
-    "ME1.3": ("Length, Mass and Volume", "comparing and ordering (lengths; masses; volumes)"),
-    "TI2.1": ("Time", "telling time to the minute"),
-    "TI2.2": ("Time", "measuring time in hours and minutes"),
-    "TI2.3": ("Time", "converting time in hours and minutes to minutes only, and vice versa"),
-    "GE1.1": ("2D Shapes", "making/completing patterns with 2D shapes according to one or two of the following attributes (size; shape; colour; orientation)"),
-    "GE2.1": ("3D Shapes", "identifying, naming, describing and classifying 3D shapes (cube, cuboid, cone, cylinder, sphere)"),
-    "ST1.1": ("Picture Graphs with Scales", "reading and interpreting data from picture graphs with scales"),
+    "WN.NUM": ("Whole Numbers", "reading and writing numbers up to 10 million", "Whole Numbers: numbers to 10 million"),
+    "WN.X10": ("Whole Numbers", "multiplying and dividing by 10, 100, 1000 and their multiples, without a calculator", "Whole Numbers: multiply and divide by 10, 100, 1000 and multiples"),
+    "WN2.2": ("Whole Numbers", "order of operations, without a calculator", "Whole Numbers 2.2"),
+    "WN2.3": ("Whole Numbers", "use of brackets, without a calculator", "Whole Numbers 2.3"),
+    "FR1.1": ("Fractions", "dividing a whole number by a whole number, with a fraction as the quotient", "Fractions 1.1"),
+    "FR1.2": ("Fractions", "expressing fractions as decimals", "Fractions 1.2"),
+    "FR2.1": ("Fractions", "adding and subtracting mixed numbers", "Fractions 2.1"),
+    "FR2.2": ("Fractions", "multiplying a proper or improper fraction by a whole number", "Fractions 2.2"),
+    "FR2.3": ("Fractions", "multiplying a proper fraction by a proper or improper fraction", "Fractions 2.3"),
+    "FR2.4": ("Fractions", "multiplying two improper fractions", "Fractions 2.4"),
+    "FR2.5": ("Fractions", "multiplying a mixed number by a whole number", "Fractions 2.5"),
+    "DE1.1": ("Decimals", "multiplying and dividing decimals (up to 3 decimal places) by 10, 100, 1000 and their multiples", "Decimals 1.1"),
+    "DE1.2": ("Decimals", "converting a measure to a larger or smaller unit in decimal form (km and m, m and cm, kg and g, ℓ and mℓ)", "Decimals 1.2"),
+    "PC.PART": ("Percentage", "expressing a part of a whole as a percentage, and the sign %", "Percentage: a part of a whole as a percentage"),
+    "PC.OF": ("Percentage", "finding a percentage part of a whole", "Percentage: a percentage part of a whole"),
+    "PC1.4": ("Percentage", "finding discount, GST and annual interest", "Percentage 1.4"),
+    "RA": ("Rate", "rate as the amount of one quantity per unit of another quantity; finding the rate, the total or the number of units", "Rate"),
+    "AR.TRI": ("Area and Volume", "area of a triangle (base and height)", "Area of triangle: base, height and area"),
+    "AR.COMP": ("Area and Volume", "area of composite figures made of rectangles, squares and triangles", "Area of triangle: composite figures"),
+    "VO2.1": ("Area and Volume", "building cubes and cuboids with unit cubes", "Volume 2.1"),
+    "VO.UNIT": ("Area and Volume", "cubic units cm³ and m³", "Volume: cubic units (cm³, m³)"),
+    "VO2.3": ("Area and Volume", "drawing cubes and cuboids on an isometric grid", "Volume 2.3"),
+    "VO2.4": ("Area and Volume", "volume of a cube or cuboid", "Volume 2.4"),
+    "VO2.5": ("Area and Volume", "volume of liquid in a rectangular tank", "Volume 2.5"),
+    "VO2.6": ("Area and Volume", "the relationship between ℓ or mℓ and cm³", "Volume 2.6"),
+    "GE1.1": ("Geometry", "angles on a straight line", "Geometry 1.1"),
+    "GE1.2": ("Geometry", "angles at a point", "Geometry 1.2"),
+    "GE1.3": ("Geometry", "vertically opposite angles", "Geometry 1.3"),
+    "GE1.4": ("Geometry", "finding unknown angles", "Geometry 1.4"),
+    "GE.TRI": ("Geometry", "properties of isosceles, equilateral and right-angled triangles", "Geometry: properties of triangles"),
+    "GE.SUM": ("Geometry", "angle sum of a triangle; unknown angles of a triangle", "Geometry: angle sum of a triangle"),
+    "GE.QUAD": ("Geometry", "properties of a parallelogram, rhombus and trapezium; their unknown angles", "Geometry: parallelogram, rhombus, trapezium"),
 }
-assert len(OUTCOMES) == 30
 
-# page number (P2-nn, build order) -> outcome ids exercised
+# page number (P5-nn, the number in the full set of 40) -> outcome ids exercised (filled when build.py runs)
 PAGE_OC = {}
 
 # the two booklets: page numbers in booklet order (S1-01 .. S1-20, S2-01 .. S2-20)
 BOOKLETS = {
-    "S1": dict(name="Semester 1", terms="Terms 1 and 2", n=1,
-               order=[1, 38, 9, 12, 10, 11, 17, 2, 3, 13, 18, 4, 5, 14, 19, 20, 39, 15, 21, 22]),
-    "S2": dict(name="Semester 2", terms="Terms 3 and 4", n=2,
-               order=[6, 16, 23, 24, 8, 25, 26, 27, 28, 7, 30, 29, 31, 32, 33, 34, 35, 36, 37, 40]),
+    "S1": dict(name="Semester 1", terms="Terms 1 and 2", n=1, order=list(range(1, 21))),
+    "S2": dict(name="Semester 2", terms="Terms 3 and 4", n=2, order=list(range(21, 41))),
 }
 assert sorted(BOOKLETS["S1"]["order"] + BOOKLETS["S2"]["order"]) == list(range(1, 41))
 
@@ -55,10 +58,9 @@ def booklet_of(no):
     raise KeyError(no)
 
 def code_of(no):
-    """footer / key code with both numbers, e.g. 'S1-07 (P2-17)'"""
+    """footer / key code with both numbers, e.g. 'S2-07 (P5-27)'"""
     k, pos = booklet_of(no)
-    return f"{k}-{pos:02d} (P2-{no:02d})"
+    return f"{k}-{pos:02d} (P5-{no:02d})"
 
 def oc_label(i):
-    """short outcome label for the key: 'Whole Numbers 1.3'"""
-    return f"{OUTCOMES[i][0]} {i[2:]}"
+    return OUTCOMES[i][2]

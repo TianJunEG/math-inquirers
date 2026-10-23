@@ -2263,31 +2263,31 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Siti buys a pencil. She pays with a one-dollar coin and gets 40¢ change.",
+    "text": "Ali buys a rubber. He pays with a 50¢ coin. The shop gives him back a 10¢ coin and a 5¢ coin.",
     "parts": [
      {
       "l": "a",
-      "text": "A one-dollar coin is worth ____¢.",
-      "ans": "100¢",
-      "val": 100
+      "text": "The change is ____¢.",
+      "ans": "15¢",
+      "val": 15
      },
      {
       "l": "b",
-      "text": "The pencil costs ____¢.",
-      "ans": "60¢",
-      "val": 60
+      "text": "The rubber costs ____¢.",
+      "ans": "35¢",
+      "val": 35
      }
     ],
-    "answer": "100¢; 60¢",
+    "answer": "15¢; 35¢",
     "val": [
-     100,
-     60
+     15,
+     35
     ],
-    "hint": "A one-dollar coin is worth 100¢. The price and the change make 100¢. Count back 40 from 100.",
-    "solution": "A one-dollar coin is worth 100¢. The price and the change together make the 100¢ she paid. Count back 40 from 100 in 10s: 90, 80, 70, 60. The pencil costs 60¢. Check: count up from 60¢ to 100¢ and you get 40¢ change.",
+    "hint": "Add the two coins to find the change. The price and the change make the 50¢ he paid. Count back from 50.",
+    "solution": "The change is 10¢ and 5¢, which is 15¢. The price and the change together make the 50¢ he paid. Count back 15 from 50: 40, then 35. The rubber costs 35¢. Check: count up from 35¢ to 50¢ and you get 15¢ change.",
     "mistakes": [
-     "Writing 40¢ (the change) for the price.",
-     "Writing 140¢ (adding the change to the coin)."
+     "Writing 15¢ (the change) for the price.",
+     "Writing 65¢ (adding the change to the coin)."
     ],
     "mins": 4
    },
@@ -3042,67 +3042,64 @@
     "id": "t1",
     "tier": "stretch",
     "type": "number",
-    "q": "A pencil costs 60¢. You pay with a $1 coin. How many cents is your change?",
-    "hint": "A $1 coin is worth 100¢. Count up from the price to 100¢.",
+    "q": "A rubber costs 30¢. You pay with a 50¢ coin. How many cents is your change?",
+    "hint": "Count up from the price to 50¢.",
     "steps": [
-     "A $1 coin is worth 100¢.",
-     "Count up from 60¢ to 100¢: that is 40¢.",
-     "The change is 40¢."
+     "You pay 50¢.",
+     "Count up from 30¢ to 50¢: that is 20¢.",
+     "The change is 20¢."
     ],
-    "answer": 40,
+    "answer": 20,
     "easier": "c3",
     "slips": [
      {
       "a": [
-       60
+       30
       ],
-      "say": "60 is the price. The change is what the shop gives back."
+      "say": "30 is the price. The change is what the shop gives back."
      },
      {
       "a": [
-       160
+       80
       ],
-      "say": "Do not add. Count up from the price to 100."
+      "say": "Do not add. Count up from the price to 50."
      }
     ],
     "fig": {
      "type": "price_tag",
-     "item": "pencil",
+     "item": "rubber",
      "price": "{p}¢",
      "size": "m"
     },
     "fig_base": {
      "type": "price_tag",
-     "item": "pencil",
-     "price": "60¢",
+     "item": "rubber",
+     "price": "30¢",
      "size": "m"
     },
     "tpl": {
      "vars": {
       "p": [
+       5,
+       10,
        15,
+       20,
        25,
        30,
        35,
        40,
-       45,
-       55,
-       60,
-       65,
-       70,
-       75,
-       80
+       45
       ]
      },
      "derive": {
-      "t": "100-p"
+      "t": "50-p"
      },
-     "q": "A pencil costs {p}¢. You pay with a $1 coin. How many cents is your change?",
+     "q": "A rubber costs {p}¢. You pay with a 50¢ coin. How many cents is your change?",
      "answer": "t",
-     "hint": "A $1 coin is worth 100¢. Count up from the price to 100¢.",
+     "hint": "Count up from the price to 50¢.",
      "steps": [
-      "A $1 coin is worth 100¢.",
-      "Count up from {p}¢ to 100¢: that is {t}¢.",
+      "You pay 50¢.",
+      "Count up from {p}¢ to 50¢: that is {t}¢.",
       "The change is {t}¢."
      ]
     }

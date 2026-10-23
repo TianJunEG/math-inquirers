@@ -1,16 +1,17 @@
-"""Shared kit of the Primary 2 pages: safe code words, the standard code-word record, small HTML builders, route helpers.
+"""Shared kit of the Primary 5 pages: safe code words, the standard code-word record, small HTML builders, route helpers.
 Everything is pure black and white. Each page module builds a puzzle from a seed, re-solves it with separate solver code that reads
 the PRINTED text or drawing, and hands validate.py a `model` for the independent wrong-answer enumeration."""
 import random, itertools, re, html as _html
 from .common import *
 
-BIG.update({"siring", "jailor"})      # words found by the P1 and P2 audits that the 129 000-word list lacked
+BIG.update({"siring", "jailor", "sonic"})      # words found by the P1 and P2 audits that earlier lists lacked (the P5 list has about 242 000 words)
 
 # --------------------------------------------------------------------------- code words
 # child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
 # making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
-SAFE5 = "audio blank blimp blown blunt bound chimp climb cloth clown count cramp crazy crumb curve decoy depth doubt drank drift drown dwarf enjoy fable fault flank flask flora flown fluid force forum frank fruit gleam glory graph gravy grind growl grunt guild hound humid image ivory jumpy juice juicy knife logic maize mixed moved noisy omega opera piano picky pivot plank pound print prize quick round scowl shaft shove skimp sling smack snuck spicy squid stamp swamp swift swung thief think thumb trunk tulip uncle valet video vital voice wafer waltz width woman works wound woven yield young".split()
-SAFE6 = "answer backup bounce bright buckle budgie campus canopy clouds cousin crafty creamy donkey dainty family figure flight fridge frozen fruity guitar hungry length magnet mighty monkey number peanut police safety sailor shadow shrimp sponge square string strong studio subway sunday teacup tongue turkey walnut walrus wizard wombat bandit behind botany bowman cherub cobalt cougar curfew devour fabric fathom".split()
+SAFE5 = "build quick doubt count fruit bound vital glory juice pound climb blown swift blank graph cloth thumb clown blunt vault ivory swamp flown drift omega dwarf drown noisy woven humid juicy enjoy wound birch rhino query forum guild works audio chimp crazy crumb curve decoy fable flora fluid frank gleam gravy grind growl knife maize piano pivot prize round scowl shaft squid stamp trunk tulip uncle valet video voice wafer waltz width woman young".split()
+SAFE6 = "family police behind strong figure flight studio turkey campus hungry shadow cousin frozen wisdom knight backup trophy fabric fruits fridge shrimp wizard peanut canopy donkey walnut bricks melody bounty thirds crafts answer bounce bright buckle budgie clouds crafty creamy dainty guitar length magnet mighty monkey number safety sailor sponge square string subway teacup tongue walrus bandit botany bowman cherub cobalt cougar curfew devour fathom".split()
+SAFE7 = "product formula journey courage uniform rainbow harvest blanket harmony crystal careful factory display victory balcony pyramid falcons dragons knights lengths graphic younger".split()
 _SAFE = {}
 
 def inner_ok(w):
@@ -34,7 +35,7 @@ def word_ok(w):
     return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON and inner_ok(w) and swap_ok(w)
 
 def safe_pool(n):
-    if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6}[n] if word_ok(w)]
+    if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6, 7: SAFE7}[n] if word_ok(w)]
     return _SAFE[n]
 
 CLAIMED = {}      # page number -> code word, so that no two pages of one build share a word
