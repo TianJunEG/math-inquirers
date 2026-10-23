@@ -147,6 +147,6 @@ def page40():
     return cbc_page(40, dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=2, seed=308, level=2), "Colour the Butterfly",
         ["Find the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Measurement and Geometry - Measurement", "2.2, 2.3 (measuring time in hours and minutes; converting hours and minutes to minutes only)",
-        "Every part changes hours and minutes to minutes, or finds how many minutes there are from one time to another (including across the hour).", oc=["TI2.1", "TI2.2", "TI2.3"])
+        "Every part changes hours and minutes to minutes, or finds how many minutes there are from one time to another (including from before one hour to after it).", oc=["TI2.1", "TI2.2", "TI2.3"])
 
 PAGES = [page38, page39, page40]

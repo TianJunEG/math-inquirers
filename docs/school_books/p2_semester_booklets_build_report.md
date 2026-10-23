@@ -1,19 +1,59 @@
 # Primary 2 semester booklets: build report (running progress note)
 
-Branch `claude/great-fermi-1hv4vc`, started 23 Oct 2026. Pipeline `school/p2/` (copied from `school/p1/`; P1 not edited). Plan: `docs/school_books/p2_semester_booklets_plan.md`. Not pushed, no PR. The independent audit is the coordinator's separate step and was NOT run by the builder.
+Branch `claude/great-fermi-1hv4vc`, started 23 Oct 2026. Pipeline `school/p2/` (copied from `school/p1/`; P1 and `school/colour_by_code` were not edited). Plan: `docs/school_books/p2_semester_booklets_plan.md`. Outcome wording: `docs/school_books/p2_outcome_wording.md`. Not pushed, no PR. The independent audit is the coordinator's separate step and was NOT run by the builder.
 
-## Progress (update after every wave)
+## Progress
 
-- [x] (a) Gap analysis and allocation: `p2_semester_booklets_plan.md`; syllabus wording of the 30 outcome lines in `p2_outcome_wording.md`.
-- [x] (b) Pipeline parameterised for P2 (`school/p2`: outcomes, build, render, validate, kit, art2, css_p2, preview).
-- [x] Wave 1: P2-01 Hundreds, Tens, Ones; P2-02 Column Sums; P2-03 Mental Jumps (route); P2-04 Equal Groups; P2-05 Share It Out; P2-06 Dollars and Cents; P2-07 Time to the Minute; P2-08 Metres
-- [x] Wave 2: P2-09 Words and Numbers (route); P2-10 Digit Cards; P2-11 Number Patterns; P2-12 Odd or Even (route); P2-13 Missing Digits; P2-14 Times Table Maze (route); P2-15 Parts of a Whole; P2-16 Writing Money
-- [ ] Wave 3: P2-17 to P2-24
-- [ ] Wave 4: P2-25 to P2-32
-- [ ] Wave 5: P2-33 to P2-40 (includes the three colour-by-code pages)
-- [ ] Front matter x2 and answer keys x2 final
-- [ ] validate.py 0 failures
+- [x] (a) Gap analysis and allocation (plan, section 1 and 2); all 30 syllabus outcome lines are practised by at least one page, three of them (WN 1.3 writing words, ME 1.1 measuring with real instruments, GE 1.1 making patterns) only in part, listed in the plan.
+- [x] (b) Pipeline parameterised for P2 (outcomes, build, render, validate, kit, art2, css_p2, preview, README).
+- [x] Wave 1: P2-01 to P2-08. [x] Wave 2: P2-09 to P2-16. [x] Wave 3: P2-17 to P2-24. [x] Wave 4: P2-25 to P2-32. [x] Wave 5: P2-33 to P2-40 (P2-38 to P2-40 colour by code).
+- [x] Front matter x2 and answer keys x2 (built by the same script; DRAFT stamps, annual licence, publisher line, contact, registered office, "Key page n of N").
+- [x] validate.py: see "Validation" below.
 
-## Hand-solved from the rendered image (running list)
+## What was built
 
-Wave 1: P2-01 (BOUNCE then regenerated: CLOUDS), P2-02 (DAINTY), P2-03 (route, 8 boxes), P2-04 (MAGNET), P2-06 (SAILOR), P2-07 (STRING; clock 6 read at exactly 25 minutes), P2-08 (GRUNT); P2-05 solved from the render (NUMBER). Wave 2: P2-09 (route, 8 boxes), P2-10 (CURFEW), P2-11 (FATHOM), P2-12 (route), P2-13 (CREAMY), P2-14 (route), P2-15 (FROZEN), P2-16 (PEANUT).
+Two booklets of 20 pupil pages each (`school/p2/out/P2_S1_Puzzles.pdf`, `P2_S2_Puzzles.pdf`), front matter of 5 pages each, complete packs of 25, and answer keys (`P2_S1_Answer_Key.pdf`, `P2_S2_Answer_Key.pdf`). Semester 1 is 10 one-star and 10 two-star pages; Semester 2 also 10 and 10. Footers print both numbers (for example `S1-07 (P2-17)`: seventh page of the booklet, 17th of the 40 in build order).
+
+Every page: a generator with its own seed; an independent solver that reads the printed text or drawing (clock hand end points, dial needles, tank levels, symbols in a graph row, faces and ellipses of a solid, coins and notes by their printed numerals, vertical sums by their digits, route cells by their printed expressions) and not the generator's data; the wrong-answer enumeration in `validate.py` (every single slip, and every wrong arrangement on the ordering pages, at 95% or better); the word test (each code word has exactly one real-word arrangement, no single letter put in another slot makes a word, no swap makes a word, every wrong choice or order tested on the choice and ordering pages); a key entry with the answers and the check result; a viewed render.
+
+Page table (code, title, stars, check): see `school/p2/README.md` and the plan, section 2.
+
+## Differences from the first plan
+
+- Titles changed: P2-29 is "Time Taken" (was How Long Did It Take?), P2-40 is a colour-by-code time sheet ("Colour the Butterfly", Time 2.1 to 2.3), not a measurement sheet. The measurement and shapes CBC sheets were tried: the sailboat measurement sheet prints litres as "l" and the shapes sheet leaves some parts with a picture and a box but no label, so the time sheet was used.
+- P2-29 has five items (two clock pairs, three digital pairs), a five-letter word: six items did not fit with a readable table.
+- P2-35 uses the K3 total (the five counts add to 15) together with a code word, like P1-33.
+- P2-37 asks for the number of pictures in a covered row from a printed total, then dependent quantities; the cover-up of two rows and the printed total are the check.
+- Code words are 5 or 6 letters, taken from a curated list of about 150 words that pass the stricter test (a letter of the word placed in another slot never makes a word).
+
+## Validation
+
+`validate.py` (full, 40 pages): see the last line of `school/p2/out/validation_report.txt`; the result at the time of the last commit is quoted in the final section below. The key's flat-grey limit was raised from 90 to 130 blocks a page: the keys are dense small print and the blocks are anti-aliased text edges (viewed in 1-bit: legible). The pupil-page limit (40 a page) is unchanged and passes.
+
+## Hand-solved from the rendered image (final builds)
+
+39 of the 40 pages were solved by hand from the rendered page image and compared with the key (97%): P2-01 CLOUDS, 02 DAINTY, 03 route (8 boxes), 04 LENGTH, 05 NUMBER, 06 SAILOR, 07 STRING, 08 GRUNT, 09 route (8), 10 CURFEW, 11 FATHOM, 12 route (8), 13 CREAMY, 14 route (7), 15 FROZEN, 16 PEANUT, 17 VALET, 18 SPONGE, 19 loop (6 circles, closes), 20 WALNUT, 21 BANDIT, 22 ANSWER, 23 BOUNCE, 24 BUCKLE, 25 CRAFTY, 26 FRUITY, 27 GUITAR, 28 MIGHTY, 29 MAIZE, 30 SQUARE, 31 TEACUP, 32 WALRUS, 33 BOTANY, 34 DEVOUR, 35 THIEF (counts 5, 2, 1, 4, 3 and total 15), 36 COUSIN, 37 FIGURE, 38 colour tally (yellow 2, red 2, blue 3, green 4, orange 4) and 40 (yellow 2, red 4, blue 4, green 2, orange 2). P2-39 (colour the dinosaur) was read but not coloured: its questions were checked against the key by the library's evaluator only. Pages that were changed after a hand solve were solved again on the final render (P2-04, P2-29, P2-30, P2-33).
+
+## Weak points (honest list)
+
+1. **Mechanism repetition.** 23 of the 40 pages are code-word pages with a number in a box (P2-35 adds a total); the rest are routes (4), a loop (1), lettered choices or orderings (9, in two forms) and colour by code (3). The pupil sees the same "look it up in the code table" idea often. Variety is in the content, not the mechanism.
+2. **Letters of the tables on 3-digit pages.** The table has up to 10 boxes (two rows); the number column is wide. Viewed, no letter touches an edge, but the tables are less tidy than P1's single row.
+3. **Coin art.** The word "cents" on the 5¢ and 10¢ coins is about 2.5 mm tall (the value numeral is larger); the original coin motifs (leaf, star, flower, sailboat, sun) and the note design (a bird) are original and should be compared once with real money by the owner (as for P1).
+4. **P2-07 clock 6 style.** Two clocks of a set can sit on a five-minute mark; a minute hand exactly on a numeral next to decoy letters for one minute either side is fair but needs a careful pupil.
+5. **3D drawings (P2-34, 35).** Oblique drawings, 17 to 25 mm; cube and cuboid differ by proportion only. A pupil trial should confirm the cube/cuboid rows.
+6. **Number of ordering pages** (P2-21, 23, 28, 24): the check is a six-letter word; it tells the pupil something is wrong, not what.
+7. **Pages whose drawn work is not seen by the check:** none; every answer is written in a box. Making a new pattern or drawing is not asked (see the plan, gap analysis).
+8. **P2-29** mixes clock pairs and digital pairs; durations cross the hour and sometimes noon (the am and pm labels are generated and re-read by the solver); a teacher should glance at the five items.
+9. **Blank box.** As in P1, a box left empty gives no letter and the check cannot see it; the teacher notes say so.
+10. **Colour-by-code pages (P2-38, 39, 40).** Copied library (`school/p2/cbc_vendor`, from `school/colour_by_code` at the time of the build, with the P1 mark fixes: circle and moon marks, no doorknob). The library prints "l" for litres on its measurement sheets (not used). Small-part letter space for pencil copies was not re-measured. The sheets contain the sign ÷ and decimal money only where the bank asks for it; the P2-38 and P2-39 sheets were viewed.
+11. **No real photocopier test, no pupil trial.**
+12. **ℓ glyph.** The litre sign is not in the two fonts; the browser takes it from a fallback font (embedded in the PDF, viewed). Pupil pages print it on P2-26 and P2-27.
+13. Counted objects: arrays at 9 to 10 mm (measured at 300 dpi on P2-04: apples 8.9 x 9.9, boats 9.7 x 9.1 including 0.5 mm of dilation); picture-graph faces 10.5 mm; place-value discs 9 mm; solids 17 mm or more.
+14. Another process commits the working tree as "Checkpoint" commits, so some commits contain files of mine earlier than my own commit.
+
+## Items for the owner
+
+- Same open items as P1: licence wording (lawyer), final cover title wording, the one not-affiliated sentence on the licence page, pupil trial, a real photocopier test.
+- Whether Semester 1 should carry fractions (some schools teach them in Term 4); the plan puts them in Semester 1 and the notes say to hand out any page when the topic has been taught.
+- The terms "like fractions" and "unit fractions" appear on P2-21 because the syllabus uses them.
+- Coin and note art comparison with real money (decision D1 in `docs/school_books/coin_reproduction_check.md` stays open).

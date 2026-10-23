@@ -261,12 +261,12 @@ PASS  S1-17 (P2-39) V3c swaps of two parts' colours rejected (>=95%)  88/89
 PASS  S2-20 (P2-40) V1 every question has exactly one answer in the bank's domain  []
 PASS  S2-20 (P2-40) V1a the independent evaluator (textcheck) re-solves all 14 printed questions from their text and picture and gets the coloured answer  []
 PASS  S2-20 (P2-40) V1b every answer is one of the five key values  
-PASS  S2-20 (P2-40) V1c all five colours used at least twice  {'yellow': 4, 'red': 4, 'blue': 2, 'green': 2, 'orange': 2}
+PASS  S2-20 (P2-40) V1c all five colours used at least twice  {'yellow': 2, 'red': 4, 'blue': 4, 'green': 2, 'orange': 2}
 PASS  S2-20 (P2-40) V2 the right answers pass every check (tally, matching parts)  
 PASS  S2-20 (P2-40) V2b questions are not repeated  0
 PASS  S2-20 (P2-40) V7 regions 12 to 18, every label found a box  14
 PASS  S2-20 (P2-40) V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair  []
-PASS  S2-20 (P2-40) V3 single wrong answers rejected by the page's checks (>=95%)  280/280
+PASS  S2-20 (P2-40) V3 single wrong answers rejected by the page's checks (>=95%)  8400/8400
 PASS  S2-20 (P2-40) V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)  1456/1456
 PASS  S2-20 (P2-40) V3c swaps of two parts' colours rejected (>=95%)  76/76
 PASS  S1-01 (P2-01) has a self-check model for the enumeration  
@@ -431,8 +431,8 @@ PASS  S1-17 (P2-39) enumeration: plausible single slips rejected 180/180 = 100.0
 PASS  S1-17 (P2-39) enumeration: every other value of one answer rejected 1500/1500 = 100.0% (needs >= 95%)  
 PASS  S2-20 (P2-40) has a self-check model for the enumeration  
 PASS  S2-20 (P2-40) check passes the right answers  
-PASS  S2-20 (P2-40) enumeration: plausible single slips rejected 154/154 = 100.0% (needs >= 95%)  
-PASS  S2-20 (P2-40) enumeration: every other value of one answer rejected 280/280 = 100.0% (needs >= 95%)  
+PASS  S2-20 (P2-40) enumeration: plausible single slips rejected 168/168 = 100.0% (needs >= 95%)  
+PASS  S2-20 (P2-40) enumeration: every other value of one answer rejected 8400/8400 = 100.0% (needs >= 95%)  
 PASS  3 colour-by-code pages (P2-38, P2-39, P2-40) across the two booklets  
 PASS  40 pages, ids 1..40, each in exactly one booklet  
 PASS  every one of the 32 syllabus outcome lines is practised by at least one page across the two booklets  []
@@ -450,7 +450,7 @@ PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
 PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
-PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
+FAIL  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  [(40, 'cross the hour')]
 PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P2 strand  
 PASS  B/W colours only in S1_pupil.html  ['#000', '#fff']
@@ -517,7 +517,7 @@ PASS  P2_S2_FrontMatter.pdf size < 20 MB  0.06 MB
 PASS  P2_S2_FrontMatter.pdf A4 page size  
 PASS  P2_S2_Complete_Pack.pdf has 25 pages  25
 PASS  P2_S2_Complete_Pack.pdf fonts all embedded  13 fonts
-PASS  P2_S2_Complete_Pack.pdf size < 20 MB  0.73 MB
+PASS  P2_S2_Complete_Pack.pdf size < 20 MB  0.74 MB
 PASS  P2_S2_Complete_Pack.pdf A4 page size  
 PASS  P2_S2_Answer_Key.pdf has 9 pages  9
 PASS  P2_S2_Answer_Key.pdf fonts all embedded  7 fonts
@@ -699,7 +699,7 @@ PASS  S2 pupil page 19 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 19 page-fill: puzzle content 176 of 181 mm  0.97
 PASS  S2 pupil page 19 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 20 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 20 page-fill: puzzle content 192 of 193 mm  0.99
+PASS  S2 pupil page 20 page-fill: puzzle content 197 of 198 mm  0.99
 PASS  S2 pupil page 20 min text size >= 8 pt  8.0 pt
 PASS  S2 front page 01 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 01 min text size >= 8 pt  12.0 pt
@@ -731,8 +731,8 @@ PASS  S2 key page 09 layout (no overflow/clipping/margin breach)
 PASS  S2 key page 09 min text size >= 8 pt  8.0 pt
 PASS  S1_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 15), (17, 0, 15)]
 PASS  S1_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(10, 0, 15), (11, 0, 15)]
-PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(20, 0, 13)]
-PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
+PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(20, 0, 14)]
+PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14)]
 PASS  P2_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 14.23% vs greyscale)  20 pages
 PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 232, limit 40 per page)  
 PASS  P2_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.39% vs greyscale)  5 pages
@@ -740,10 +740,10 @@ PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 111, limit 
 PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.50% vs greyscale)  11 pages
 PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 818, limit 130 per page)  
 PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.66% vs greyscale)  20 pages
-PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 186, limit 40 per page)  
+PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 192, limit 40 per page)  
 PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.33% vs greyscale)  5 pages
 PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 122, limit 40 per page)  
 PASS  P2_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.36% vs greyscale)  9 pages
-PASS  P2_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 812, limit 130 per page)  
+PASS  P2_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 733, limit 130 per page)  
 
-TOTAL 747 checks, 0 failed
+TOTAL 747 checks, 1 failed
