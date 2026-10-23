@@ -26,7 +26,7 @@ learn = {
          'explanation': '1 × 45, 3 × 15 and 5 × 9 are the pairs. 2 and 4 do not go into 45. After 5 comes 9, which is already used, so stop.'}}
 
 S, T, G, C = [], [], [], []
-S.append(item(U+'-S01', 'start', 1, 'Fill in the factor pairs of 56. Try 1, 2, 3 in order.',
+S.append(item(U+'-S01', 'start', 1, 'Fill in the factor pairs of 56. Some numbers do not go in.',
   parts=[P('a', '1 × 56   2 × {b}   4 × {b}   7 × {b}', A(28, 14, 8, text='2 × 28, 4 × 14, 7 × 8')),
          P('b', 'How many factors does 56 have? {b} factors', A(8, text='8 factors'))],
   why='3, 5 and 6 do not go into 56. The pairs 1 × 56, 2 × 28, 4 × 14 and 7 × 8 give 8 factors. The next number, 8, is already used.'))
@@ -43,7 +43,7 @@ S.append(item(U+'-S04', 'start', 1, 'Circle True or False.',
          P('c', '9 is a factor of 108. {circ:True|False}', A('True')),
          P('d', '65 is a multiple of 13. {circ:True|False}', A('True'))],
   why='(a) 7 × 13 = 91. (b) The multiples of 8 are 48, 56, so 54 is not one. (c) 9 × 12 = 108. (d) 13 × 5 = 65.'))
-S.append(item(U+'-S05', 'start', 1, 'Write the first 6 multiples of each number. Then find the least number that is a multiple of both 9 and 12.',
+S.append(item(U+'-S05', 'start', 1, 'Write the first 6 multiples of each number. Then find the least number that is in both lists.',
   parts=[P('a', 'Multiples of 9: {ll}', A(9, 18, 27, 36, 45, 54)),
          P('b', 'Multiples of 12: {ll}', A(12, 24, 36, 48, 60, 72)),
          P('c', 'Least common multiple: {b}', A(36))],
@@ -54,8 +54,8 @@ S.append(item(U+'-S06', 'start', 2, 'Find the common factors of 28 and 42.',
          P('c', 'Common factors: {ll}', A(1, 2, 7, 14)),
          P('d', 'Greatest common factor: {b}', A(14))],
   why='28 = 1 × 28, 2 × 14, 4 × 7. 42 = 1 × 42, 2 × 21, 3 × 14, 6 × 7. The numbers in both lists are 1, 2, 7 and 14. The greatest is 14.'))
-S.append(item(U+'-S07', 'start', 2, 'Ravi has 30 red marbles and 45 blue marbles. He packs them into identical bags with none left over. Every bag has the same number of red marbles and the same number of blue marbles.',
-  parts=[P('a', 'What is the greatest number of bags he can make? {b} bags', A(15, text='15 bags')),
+S.append(item(U+'-S07', 'start', 2, 'Ravi has 30 red marbles and 45 blue marbles. He fills equal bags and no marble is left out. Each bag holds the same number of red marbles, and the same number of blue marbles.',
+  parts=[P('a', 'What is the most bags he can fill? {b} bags', A(15, text='15 bags')),
          P('b', 'Then each bag has {b} red and {b} blue.', A(2, 3, text='2 red and 3 blue'))],
   why='The number of bags is a common factor of 30 and 45. The common factors are 1, 3, 5 and 15, so the greatest is 15. Each bag has 30 ÷ 15 = 2 red and 45 ÷ 15 = 3 blue.',
   space={'rows': ['Factors of 30: {ll}', 'Factors of 45: {ll}']}))
@@ -64,7 +64,7 @@ S.append(item(U+'-S08', 'start', 2, 'Bus A leaves a stop every 8 minutes. Bus B 
          P('b', 'How many more times do they leave together after 9:00 am and before 11:00 am? {b} times', A(4, text='4 times'))],
   why='The least common multiple of 8 and 12 is 24, so they meet at 9:24 am. They meet every 24 minutes: 9:24, 9:48, 10:12 and 10:36. The next, 11:00, is not before 11:00. That is 4 times.',
   space={'rows': ['Bus A: 9:00, 9:08, {l}', 'Bus B: 9:00, 9:12, {l}']}))
-S.append(item(U+'-S09', 'start', 2, 'I am a number between 50 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.',
+S.append(item(U+'-S09', 'start', 2, 'Who am I? I am between 50 and 100. Both 6 and 7 go into me exactly.\nI am {b}.',
   ans=A(84),
   why='A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 50 and 100.'))
 S.append(item(U+'-S10', 'start', 3, 'Count the factors of each number.',
@@ -81,13 +81,13 @@ S.append(item(U+'-S11', 'start', 3, 'Mei buys pens in packs of 6 and rubbers in 
 S.append(item(U+'-S12', 'start', 3, 'I am a factor of 60. I am a multiple of 5. I am greater than 10 and less than 30. Write every number that fits.\n{l} {l}',
   ans=A(15, 20, unordered=True),
   why='The factors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60. Of these, 15 and 20 are multiples of 5 between 10 and 30.'))
-S.append(item(U+'-S13', 'start', 3, 'Some numbers have an odd number of factors.',
+S.append(item(U+'-S13', 'start', 3, 'Find out which numbers have an odd count of factors.',
   parts=[P('a', 'How many factors does 64 have? {b}', A(7)),
          P('b', 'How many factors does 81 have? {b}', A(5)),
-         P('c', 'Which has an odd number of factors, 72 or 49? {circ:72|49}', A(49))],
+         P('c', 'Which has an odd count of factors, 72 or 49? {circ:72|49}', A(49))],
   why='64: 1, 2, 4, 8, 16, 32, 64 is 7 factors. 81: 1, 3, 9, 27, 81 is 5 factors. 49 = 7 × 7 pairs with itself, so it has 3 factors (odd). 72 has 12 factors.'))
 
-T.append(item(U+'-T01', 'think', 4, 'A 2-digit number is a multiple of 3 and a multiple of 8. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}',
+T.append(item(U+'-T01', 'think', 4, 'A number between 10 and 100 is in the 3 times table and in the 8 times table. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}',
   ans=A(72), hint='List the multiples of 24. Then use the digit clues.', space={'rows': ['Working:', '']},
   why='A multiple of 3 and 8 is a multiple of 24: 24, 48, 72, 96. The digits add to 9 only for 72 (7 + 2). 7 is greater than 2.'))
 T.append(item(U+'-T02', 'think', 4, 'Ben has more than 50 stickers and fewer than 100. He packs them in 4s and 3 are left over. He packs them in 5s and 3 are left over. He packs them in 6s and 3 are left over. How many stickers does he have?\n{b}',
@@ -120,7 +120,7 @@ C.append(item(U+'-C01', 'quiz', None, 'Write all the factors of 52, in order.\n{
   why='1 × 52, 2 × 26 and 4 × 13. Then 5 to 12 do not go into 52, and 13 is already used.'))
 C.append(item(U+'-C02', 'quiz', None, 'Siti swims every 6 days. Wei swims every 9 days. They both swim today. In how many days will they next swim on the same day? {b} days',
   ans=A(18), why='Multiples of 6: 6, 12, 18. Multiples of 9: 9, 18. The first number in both lists is 18.'))
-C.append(item(U+'-C03', 'quiz', None, 'Kumar has 40 red pens and 64 blue pens. He makes identical sets with none left over. What is the greatest number of sets he can make? {b} sets',
+C.append(item(U+'-C03', 'quiz', None, 'Kumar has 40 red pens and 64 blue pens. He makes identical sets with none left over. How many sets can he make at most? {b} sets',
   ans=A(8), why='The factors of 40 and 64 that are in both lists are 1, 2, 4, 8. The greatest is 8 (5 red and 8 blue in each set).'))
 C.append(item(U+'-C04', 'quiz', None, 'I am a multiple of 7. I am a factor of 84. My digits add up to 5. Who am I? {b}',
   ans=A(14), why='The factors of 84 that are multiples of 7 are 7, 14, 21, 28, 42 and 84. Only 14 has digits that add up to 5 (1 + 4).'))

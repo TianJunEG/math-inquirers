@@ -130,7 +130,7 @@
    "id": "L4U01-S01",
    "tier": "start",
    "page": 1,
-   "text": "Fill in the factor pairs of 56. Try 1, 2, 3 in order.",
+   "text": "Fill in the factor pairs of 56. Some numbers do not go in.",
    "parts": [
     {
      "label": "a",
@@ -253,7 +253,7 @@
    "id": "L4U01-S05",
    "tier": "start",
    "page": 1,
-   "text": "Write the first 6 multiples of each number. Then find the least number that is a multiple of both 9 and 12.",
+   "text": "Write the first 6 multiples of each number. Then find the least number that is in both lists.",
    "parts": [
     {
      "label": "a",
@@ -371,11 +371,11 @@
    "id": "L4U01-S07",
    "tier": "start",
    "page": 2,
-   "text": "Ravi has 30 red marbles and 45 blue marbles. He packs them into identical bags with none left over. Every bag has the same number of red marbles and the same number of blue marbles.",
+   "text": "Ravi has 30 red marbles and 45 blue marbles. He fills equal bags and no marble is left out. Each bag holds the same number of red marbles, and the same number of blue marbles.",
    "parts": [
     {
      "label": "a",
-     "text": "What is the greatest number of bags he can make? {b} bags",
+     "text": "What is the most bags he can fill? {b} bags",
      "answer": {
       "value": [
        "15"
@@ -443,7 +443,7 @@
    "id": "L4U01-S09",
    "tier": "start",
    "page": 2,
-   "text": "I am a number between 50 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.",
+   "text": "Who am I? I am between 50 and 100. Both 6 and 7 go into me exactly.\nI am {b}.",
    "answer": {
     "value": [
      "84"
@@ -586,7 +586,7 @@
    "id": "L4U01-S13",
    "tier": "start",
    "page": 3,
-   "text": "Some numbers have an odd number of factors.",
+   "text": "Find out which numbers have an odd count of factors.",
    "parts": [
     {
      "label": "a",
@@ -610,7 +610,7 @@
     },
     {
      "label": "c",
-     "text": "Which has an odd number of factors, 72 or 49? {circ:72|49}",
+     "text": "Which has an odd count of factors, 72 or 49? {circ:72|49}",
      "answer": {
       "value": [
        "49"
@@ -625,7 +625,7 @@
    "id": "L4U01-T01",
    "tier": "think",
    "page": 4,
-   "text": "A 2-digit number is a multiple of 3 and a multiple of 8. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}",
+   "text": "A number between 10 and 100 is in the 3 times table and in the 8 times table. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}",
    "answer": {
     "value": [
      "72"
@@ -816,7 +816,7 @@
   {
    "id": "L4U01-C03",
    "tier": "quiz",
-   "text": "Kumar has 40 red pens and 64 blue pens. He makes identical sets with none left over. What is the greatest number of sets he can make? {b} sets",
+   "text": "Kumar has 40 red pens and 64 blue pens. He makes identical sets with none left over. How many sets can he make at most? {b} sets",
    "answer": {
     "value": [
      "8"
