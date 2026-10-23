@@ -2570,6 +2570,16 @@
             "Count on {o} singles after {tt}.",
             "There are {ans} sticks."
           ]
+        },
+        "fig": {
+          "type": "bundles",
+          "tens": "{t}",
+          "ones": "{o}"
+        },
+        "fig_base": {
+          "type": "bundles",
+          "tens": 2,
+          "ones": 2
         }
       },
       {
@@ -2847,6 +2857,16 @@
             "Now Mei has {u} bundles and {r} singles.",
             "{u} tens and {r} ones is {ans}."
           ]
+        },
+        "fig": {
+          "type": "bundles",
+          "tens": "{t}",
+          "ones": "{o}"
+        },
+        "fig_base": {
+          "type": "bundles",
+          "tens": 3,
+          "ones": 12
         }
       },
       {

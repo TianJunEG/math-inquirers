@@ -2511,6 +2511,46 @@
       "So {b} goes up by {k}.",
       "The blank is {ans}."
      ]
+    },
+    "fig": {
+     "type": "balance",
+     "left": [
+      {
+       "text": "{a}"
+      },
+      {
+       "text": "{b}"
+      }
+     ],
+     "right": [
+      {
+       "text": "{c}"
+      },
+      {
+       "text": "?"
+      }
+     ],
+     "size": 80
+    },
+    "fig_base": {
+     "type": "balance",
+     "left": [
+      {
+       "text": 5
+      },
+      {
+       "text": 3
+      }
+     ],
+     "right": [
+      {
+       "text": 4
+      },
+      {
+       "text": "?"
+      }
+     ],
+     "size": 80
     }
    },
    {
@@ -2567,6 +2607,46 @@
       "So {b} goes down by {k}.",
       "The blank is {ans}."
      ]
+    },
+    "fig": {
+     "type": "balance",
+     "left": [
+      {
+       "text": "{a}"
+      },
+      {
+       "text": "{b}"
+      }
+     ],
+     "right": [
+      {
+       "text": "{c}"
+      },
+      {
+       "text": "?"
+      }
+     ],
+     "size": 80
+    },
+    "fig_base": {
+     "type": "balance",
+     "left": [
+      {
+       "text": 3
+      },
+      {
+       "text": 6
+      }
+     ],
+     "right": [
+      {
+       "text": 4
+      },
+      {
+       "text": "?"
+      }
+     ],
+     "size": 80
     }
    },
    {
@@ -2644,6 +2724,46 @@
       "So {b} goes down by 10.",
       "The blank is {ans}."
      ]
+    },
+    "fig": {
+     "type": "balance",
+     "left": [
+      {
+       "text": "{a}"
+      },
+      {
+       "text": "{b}"
+      }
+     ],
+     "right": [
+      {
+       "text": "{c}"
+      },
+      {
+       "text": "?"
+      }
+     ],
+     "size": 80
+    },
+    "fig_base": {
+     "type": "balance",
+     "left": [
+      {
+       "text": 20
+      },
+      {
+       "text": 20
+      }
+     ],
+     "right": [
+      {
+       "text": 30
+      },
+      {
+       "text": "?"
+      }
+     ],
+     "size": 80
     }
    },
    {

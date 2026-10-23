@@ -53,8 +53,9 @@ def segment(d, part):
 
 
 def strip_spine_lines(d):
+    """Remove the lines this tool inserted earlier (marked "spine") except the rewritten look-back lines, which are edited in place."""
     for seg in d['script']['segments']:
-        seg['lines'] = [ln for ln in seg['lines'] if MARK not in ln]
+        seg['lines'] = [ln for ln in seg['lines'] if MARK not in ln or ln[MARK] == 'look']
 
 
 def line(k, text, **kw):
@@ -74,7 +75,7 @@ def spine_obj(n):
     o = {'main': r['main'], 'also': list(r['also']), 'role': r['role'], 'reason': r['reason']}
     if r.get('lean_now'):
         o['lean_now'] = list(r['lean_now'])
-    if str(n) in TERM.get('chip_compact', {}) or n in TERM.get('chip_compact_lessons', []):
+    if n in TERM.get('chip_compact_lessons', []):
         o['chip'] = 'compact'
     return o
 
@@ -165,13 +166,15 @@ def build_variant(d, n, variant):
                 ln[MARK] = 'remember'
             rem['lines'][pos:pos] = lines
             place = 'remember'
+    if variant == 'notes only':
+        insert_after_last(segment(d2, 'opening'), ('SAY', 'ASK', 'READ'), [line('NOTE', 'Say: ' + say + ' (no time modelled: the opening is full).', **{MARK: 'opening'})])
     # --- tool note for Lesson 1: the Toolbox card
     if n == 1:
         segment(d2, 'opening')['lines'].append(line('NOTE', 'Toolbox card: ' + SPINE['kit_line'] + '. Point at it when you point at the tool on page 1. If the card is not printed, send the PDF with the welcome message.', **{MARK: 'opening'}))
     # --- talk
     tk = segment(d2, 'talk')
     if variant == 'say+do, ask' and not choose:
-        new = [line('ASK', ask, resp=15, **{MARK: 'talk'})]
+        new = [line('ASK', ask, resp=15, **{MARK: 'talk'}), line('NOTE', S['talk_note'], **{MARK: 'talk'})]
     else:
         new = [line('NOTE', note_t if choose else 'Ask the group where they used ' + t['name'] + ' today (about 20 seconds, no time modelled). ' + S['talk_note'], **{MARK: 'talk'})]
     last = max([i for i, ln in enumerate(tk['lines']) if ln['k'] not in ('NOTE', 'STUCK')] or [0])
@@ -187,8 +190,6 @@ def plan_lesson(n):
     if dump_like(raw, d) != raw:
         return path, raw, raw, {'n': n, 'status': 'SKIPPED: the file is not re-dumpable byte for byte (format changed); fix by hand'}
     strip_spine_lines(d)
-    for s in d['slides']:                    # undo the look-back words so the same text is regenerated
-        pass
     base_ok, base_why, u0, s0 = fits(d)
     rep = {'n': n, 'baseline_ok': base_ok}
     chosen = None
@@ -219,7 +220,6 @@ def plan_lesson(n):
         tp[:] = [x for x in tp if not x.startswith('Toolbox card:')] + [item]
     new = dump_like(raw, d3)
     rep.update({'variant': v, 'place': place, 'used_before': round(u0 / 60, 2), 'used_after': round(u / 60, 2), 'slow_before': round(s0 / 60, 2), 'slow_after': round(sl / 60, 2)})
-    said, notes = look_text(d3)
     rep['status'] = 'changed' if new != raw else 'unchanged'
     return path, raw, new, rep
 
@@ -281,26 +281,29 @@ def plan_tools():
     out = {}
     for e in TOOL_EDITS:
         p = e['path']
-        txt, rep = out.get(p, (None, None, []))[0:3] if p in out else (open(p, encoding='utf-8').read(), None, [])
-        cur = out[p][1] if p in out else txt
+        if p not in out:
+            t = open(p, encoding='utf-8').read()
+            out[p] = [t, t, []]
+        orig, cur, rep = out[p]
         if e['marker'] in cur:
             rep.append(f"already applied: {e['marker']!r}")
         elif cur.count(e['old']) != 1:
             rep.append(f"ANCHOR MISSING or not unique ({cur.count(e['old'])}x): {e['old'][:70]!r}")
         else:
             cur = cur.replace(e['old'], e['new']); rep.append(f"edit: {e['marker']!r}")
-        out[p] = (txt, cur, rep)
-    # schema
+        out[p] = [orig, cur, rep]
     raw = open(SCHEMA_PATH, encoding='utf-8').read()
     sc = json.loads(raw)
-    sc2 = copy.deepcopy(sc)
-    sc2['properties']['spine'] = SCHEMA_PROP
-    out[SCHEMA_PATH] = (raw, dump_like(raw, sc2) if dump_like(raw, sc) == raw else raw, ['schema: spine property' if dump_like(raw, sc) == raw else 'schema NOT re-dumpable: add the property by hand'])
-    # authoring notes
+    if dump_like(raw, sc) != raw:
+        out[SCHEMA_PATH] = (raw, raw, ['schema NOT re-dumpable: add the "spine" property by hand'])
+    else:
+        sc2 = copy.deepcopy(sc)
+        sc2['properties']['spine'] = SCHEMA_PROP
+        out[SCHEMA_PATH] = (raw, dump_like(raw, sc2), ['schema: spine property'])
     ap = os.path.join(L1, 'AUTHORING.md')
     a = open(ap, encoding='utf-8').read()
     out[ap] = (a, a if AUTH_MARK in a else a.rstrip('\n') + '\n' + AUTH_TEXT, ['authoring note'])
-    return out
+    return {k: tuple(v) for k, v in out.items()}
 
 # ---------------------------------------------------------------------------------------------- main
 

@@ -3053,6 +3053,20 @@
             "A row has ten squares, so down is 10 more.",
             "10 more than {n} is {ans}."
           ]
+        },
+        "fig": {
+          "type": "hundred",
+          "mark": [
+            "{n}"
+          ],
+          "cell": 36
+        },
+        "fig_base": {
+          "type": "hundred",
+          "mark": [
+            12
+          ],
+          "cell": 36
         }
       },
       {
@@ -3102,6 +3116,20 @@
             "1 more than {n} is {ans}.",
             "The counter is on {ans}."
           ]
+        },
+        "fig": {
+          "type": "hundred",
+          "mark": [
+            "{n}"
+          ],
+          "cell": 36
+        },
+        "fig_base": {
+          "type": "hundred",
+          "mark": [
+            12
+          ],
+          "cell": 36
         }
       },
       {
@@ -3231,6 +3259,20 @@
             "{r} rows down is {m} more.",
             "{m} more than {n} is {ans}."
           ]
+        },
+        "fig": {
+          "type": "hundred",
+          "mark": [
+            "{n}"
+          ],
+          "cell": 36
+        },
+        "fig_base": {
+          "type": "hundred",
+          "mark": [
+            3
+          ],
+          "cell": 36
         }
       },
       {

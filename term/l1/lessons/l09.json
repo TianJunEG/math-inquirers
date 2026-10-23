@@ -2346,6 +2346,32 @@
       "The tip is at the {n} mark.",
       "So the pencil is {ans} cm long."
      ]
+    },
+    "fig": {
+     "type": "ruler",
+     "start": 0,
+     "end": 18,
+     "objects": [
+      {
+       "label": "pencil",
+       "from": 0,
+       "to": "{n}",
+       "kind": "pencil"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "ruler",
+     "start": 0,
+     "end": 18,
+     "objects": [
+      {
+       "label": "pencil",
+       "from": 0,
+       "to": 5,
+       "kind": "pencil"
+      }
+     ]
     }
    },
    {
@@ -2400,6 +2426,46 @@
       "Ali's line is {a} cm. Mei's line is {b} cm.",
       "Find the gap: take {b} from {a}.",
       "Ali's line is {ans} cm longer."
+     ]
+    },
+    "fig": {
+     "type": "ruler",
+     "start": 0,
+     "end": 15,
+     "objects": [
+      {
+       "label": "Ali",
+       "from": 0,
+       "to": "{a}",
+       "kind": "bar"
+      },
+      {
+       "label": "Mei",
+       "from": 0,
+       "to": "{b}",
+       "kind": "bar",
+       "color": "#BFE8DC"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "ruler",
+     "start": 0,
+     "end": 15,
+     "objects": [
+      {
+       "label": "Ali",
+       "from": 0,
+       "to": 9,
+       "kind": "bar"
+      },
+      {
+       "label": "Mei",
+       "from": 0,
+       "to": 3,
+       "kind": "bar",
+       "color": "#BFE8DC"
+      }
      ]
     }
    },
@@ -2578,6 +2644,32 @@
       "The line starts at the {s} mark, not at 0.",
       "Take {s} from {e}.",
       "The line is {ans} cm long."
+     ]
+    },
+    "fig": {
+     "type": "ruler",
+     "start": 0,
+     "end": 12,
+     "objects": [
+      {
+       "label": "line",
+       "from": "{s}",
+       "to": "{e}",
+       "kind": "bar"
+      }
+     ]
+    },
+    "fig_base": {
+     "type": "ruler",
+     "start": 0,
+     "end": 12,
+     "objects": [
+      {
+       "label": "line",
+       "from": 1,
+       "to": 8,
+       "kind": "bar"
+      }
      ]
     }
    },

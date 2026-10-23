@@ -2802,6 +2802,36 @@
       "Jump forward {m} tens from {n}.",
       "So the answer is {ans}."
      ]
+    },
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        21
+       ]
+      }
+     ],
+     "size": 100
     }
    },
    {
@@ -2868,6 +2898,36 @@
       "Jump back {m} tens from {n}.",
       "So the answer is {ans}."
      ]
+    },
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        41
+       ]
+      }
+     ],
+     "size": 100
     }
    },
    {
@@ -2925,6 +2985,36 @@
       "Hop forward {p} from {n}.",
       "So the answer is {ans}."
      ]
+    },
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        21
+       ]
+      }
+     ],
+     "size": 100
     }
    },
    {
@@ -2983,6 +3073,36 @@
       "Hop back {p} from {n}.",
       "So the answer is {ans}."
      ]
+    },
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        25
+       ]
+      }
+     ],
+     "size": 100
     }
    },
    {
@@ -3069,6 +3189,36 @@
       "{n} + {k} = {ans}.",
       "Mei has {ans} stickers."
      ]
+    },
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        21
+       ]
+      }
+     ],
+     "size": 100
     }
    },
    {
@@ -3139,7 +3289,37 @@
       "Hop: {w} + {p} = {ans}."
      ]
     },
-    "easier": "c1"
+    "easier": "c1",
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        21
+       ]
+      }
+     ],
+     "size": 100
+    }
    },
    {
     "id": "t2",
@@ -3212,7 +3392,37 @@
       "Hop back: {w} - {p} = {ans}."
      ]
     },
-    "easier": "c2"
+    "easier": "c2",
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        55
+       ]
+      }
+     ],
+     "size": 100
+    }
    },
    {
     "id": "t3",
@@ -3307,7 +3517,37 @@
       "Ali started on {ans}."
      ]
     },
-    "easier": "c2"
+    "easier": "c2",
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{n}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        50
+       ]
+      }
+     ],
+     "size": 100
+    }
    },
    {
     "id": "g1",
@@ -3366,7 +3606,39 @@
       "There are {ans} jumps."
      ]
     },
-    "easier": "t1"
+    "easier": "t1",
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{a}",
+        "{b}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        3,
+        53
+       ]
+      }
+     ],
+     "size": 100
+    }
    },
    {
     "id": "g2",
@@ -3483,7 +3755,37 @@
       "Hop forward {c}. You land on {ans}."
      ]
     },
-    "easier": "t1"
+    "easier": "t1",
+    "fig": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        "{s}"
+       ]
+      }
+     ],
+     "size": 100
+    },
+    "fig_base": {
+     "type": "jump_lines",
+     "start": 0,
+     "end": 100,
+     "step": 10,
+     "label_every": 10,
+     "rows": [
+      {
+       "points": [
+        21
+       ]
+      }
+     ],
+     "size": 100
+    }
    },
    {
     "id": "g4",

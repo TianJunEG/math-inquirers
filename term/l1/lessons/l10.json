@@ -2794,6 +2794,58 @@
             "{a} + {b}.",
             "Ali has {ans} cards."
           ]
+        },
+        "fig": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ben",
+              "len": "{a}",
+              "text": "{a}"
+            },
+            {
+              "name": "Ali",
+              "len": "{=a+b}",
+              "segments": [
+                {
+                  "v": "{a}",
+                  "text": ""
+                },
+                {
+                  "v": "{b}",
+                  "text": "+{b}",
+                  "colour": "mint"
+                }
+              ]
+            }
+          ],
+          "size": "m"
+        },
+        "fig_base": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ben",
+              "len": 12,
+              "text": 12
+            },
+            {
+              "name": "Ali",
+              "len": 17,
+              "segments": [
+                {
+                  "v": 12,
+                  "text": ""
+                },
+                {
+                  "v": 5,
+                  "text": "+5",
+                  "colour": "mint"
+                }
+              ]
+            }
+          ],
+          "size": "m"
         }
       },
       {
@@ -2872,6 +2924,58 @@
             "{a} - {b}.",
             "Ben has {ans} marbles."
           ]
+        },
+        "fig": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ali",
+              "len": "{a}",
+              "text": "{a}"
+            },
+            {
+              "name": "Ben",
+              "len": "{a}",
+              "segments": [
+                {
+                  "v": "{=a-b}",
+                  "text": "?"
+                },
+                {
+                  "v": "{b}",
+                  "text": "-{b}",
+                  "colour": "rose"
+                }
+              ]
+            }
+          ],
+          "size": "m"
+        },
+        "fig_base": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ali",
+              "len": 24,
+              "text": 24
+            },
+            {
+              "name": "Ben",
+              "len": 24,
+              "segments": [
+                {
+                  "v": 19,
+                  "text": "?"
+                },
+                {
+                  "v": 5,
+                  "text": "-5",
+                  "colour": "rose"
+                }
+              ]
+            }
+          ],
+          "size": "m"
         }
       },
       {
@@ -3126,7 +3230,89 @@
             "Siti has {ans} marbles."
           ]
         },
-        "easier": "c5"
+        "easier": "c5",
+        "fig": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ben",
+              "len": "{a}",
+              "text": "{a}"
+            },
+            {
+              "name": "Mei",
+              "len": "{=a+b}",
+              "segments": [
+                {
+                  "v": "{a}",
+                  "text": ""
+                },
+                {
+                  "v": "{b}",
+                  "text": "+{b}",
+                  "colour": "mint"
+                }
+              ]
+            },
+            {
+              "name": "Siti",
+              "len": "{=a+b}",
+              "segments": [
+                {
+                  "v": "{=a+b-c}",
+                  "text": "?"
+                },
+                {
+                  "v": "{c}",
+                  "text": "-{c}",
+                  "colour": "rose"
+                }
+              ]
+            }
+          ],
+          "size": "m"
+        },
+        "fig_base": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ben",
+              "len": 12,
+              "text": 12
+            },
+            {
+              "name": "Mei",
+              "len": 17,
+              "segments": [
+                {
+                  "v": 12,
+                  "text": ""
+                },
+                {
+                  "v": 5,
+                  "text": "+5",
+                  "colour": "mint"
+                }
+              ]
+            },
+            {
+              "name": "Siti",
+              "len": 17,
+              "segments": [
+                {
+                  "v": 14,
+                  "text": "?"
+                },
+                {
+                  "v": 3,
+                  "text": "-3",
+                  "colour": "rose"
+                }
+              ]
+            }
+          ],
+          "size": "m"
+        }
       },
       {
         "id": "g1",

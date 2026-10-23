@@ -2627,6 +2627,54 @@
             "Then take away the ones.",
             "{ans} seats are empty."
           ]
+        },
+        "fig": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Seats",
+              "len": "{a}",
+              "segments": [
+                {
+                  "v": "{b}",
+                  "text": "{b}"
+                },
+                {
+                  "v": "{=a-b}",
+                  "text": "?"
+                }
+              ]
+            }
+          ],
+          "brace": {
+            "text": "{a}",
+            "over": 0
+          },
+          "size": "m"
+        },
+        "fig_base": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Seats",
+              "len": 64,
+              "segments": [
+                {
+                  "v": 21,
+                  "text": 21
+                },
+                {
+                  "v": 43,
+                  "text": "?"
+                }
+              ]
+            }
+          ],
+          "brace": {
+            "text": 64,
+            "over": 0
+          },
+          "size": "m"
         }
       },
       {
