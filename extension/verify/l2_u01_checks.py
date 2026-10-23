@@ -35,41 +35,41 @@ def _():
     return s([3 * 100 + 12 * 10 + 4])
 
 
-@check('S03')
+@check('S05')
 def _():
     return s(perms([8, 1, 5]))
 
 
-@check('S04')
+@check('S06')
 def _():
     L = perms([8, 1, 5])
     return {'a': s([max(L), min(L)]), 'b': s([min(L, key=lambda n: abs(n - 600))]), 'c': s([sum(1 for n in L if n % 2)])}
 
 
-@check('S05')
+@check('S07')
 def _():
     L = perms([6, 0, 4])
     return {'a': s(L), 'b': s([len(L)])}
 
 
-@check('S06')
+@check('S03')
 def _():
     f = lambda a, b: '<' if a < b else ('>' if a > b else '=')
     return {'a': [f(745, 754)], 'b': [f(306, 296)], 'c': [f(5 * 100 + 2 * 10, 502)], 'd': [f(88 * 10, 880)]}
 
 
-@check('S07')
+@check('S04')
 def _():
     return s(sorted([508, 85, 580, 805]))
 
 
-@check('S08')
+@check('S09')
 def _():
     A, B = 300 + 4 * 10, 300 + 7 * 10      # arrows sit on the 4th and 7th tick after 300 (ticks every 10)
     return {'a': s([A]), 'b': s([B]), 'c': s([B - A])}
 
 
-@check('S09')
+@check('S10')
 def _():
     val = lambda r, c: 571 + c + 10 * r      # one step right +1, one step down +10
     given = {(0, 0): 571, (0, 1): 572, (1, 1): 582, (1, 2): 583, (2, 0): 591}
@@ -77,7 +77,7 @@ def _():
     return {'a': s([val(0, 2), val(1, 0), val(2, 1), val(2, 2)]), 'b': s([645 - 10, 645 - 1, 645 + 1, 645 + 10]), 'c': s([612 + 3 * 10])}
 
 
-@check('S10')
+@check('S08')
 def _():
     a = [n for n in range(100, 1000) if n // 100 == 6 and n % 10 == n // 10 % 10 - 2 and digsum(n) == 14]
     b = [n for n in range(301, 310) if n % 2 and digsum(n) == 8]
