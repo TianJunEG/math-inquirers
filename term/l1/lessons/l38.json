@@ -1813,7 +1813,7 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Study the graph. Each picture stands for 1 book. Answer questions 1 to 3.",
+    "text": "Study the graph. Each picture stands for 1 book. Answer S1, S2 and S3.",
     "answer": "Mei; Siti",
     "val": [
      "Mei",
@@ -1876,7 +1876,7 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Look at the graph in question 1.",
+    "text": "Look at the graph in S1.",
     "answer": "5 more books; 25 books in all",
     "val": [
      5,
@@ -1908,7 +1908,7 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Look at the graph in question 1.",
+    "text": "Look at the graph in S1.",
     "answer": "True, True, False, False",
     "val": [
      "True",
@@ -1942,7 +1942,7 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Study the graph. Each picture stands for 1 fruit. Answer questions 4 to 6.",
+    "text": "Study the graph. Each picture stands for 1 fruit. Answer S4, S5 and S6.",
     "answer": "4 kinds; Oranges",
     "val": [
      4,
@@ -2004,7 +2004,7 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Look at the graph in question 4.",
+    "text": "Look at the graph in S4.",
     "answer": "2 fewer plums than pears; 11 fruits",
     "val": [
      2,
@@ -2036,7 +2036,7 @@
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Look at the graph in question 4.",
+    "text": "Look at the graph in S4.",
     "answer": "21 fruits in all; Apples",
     "val": [
      21,

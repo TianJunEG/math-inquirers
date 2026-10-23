@@ -1,0 +1,702 @@
+{
+ "_doc": "Single source for the strategy card, tool slide, look-back and guide lines (docs/pedagogy/spine_routine_spec.md). Read by levels/spine_wb.js, levels/spine_guide.js and levels/spine_deco.py. Edit wording here only.",
+ "bands": {
+  "1": "A",
+  "2": "A",
+  "3": "B",
+  "4": "B",
+  "5": "C",
+  "6": "C"
+ },
+ "tools": [
+  {
+   "n": 1,
+   "id": "pattern",
+   "name": "Spot the pattern",
+   "def": {
+    "A": "Look for what repeats or grows.",
+    "B": "Look for what repeats or changes by the same amount, then say the rule.",
+    "C": "Find the rule, test it on a new case, then use it to jump far."
+   },
+   "icon_concept": "A row of four shapes (circle, triangle, circle, triangle) and a fifth place drawn as a dotted outline circle."
+  },
+  {
+   "n": 2,
+   "id": "list",
+   "name": "List every way",
+   "def": {
+    "A": "Write each way down, in order, so none is missed.",
+    "B": "List all the possibilities in an organised order and say how you know you have them all.",
+    "C": "Count every case once with a systematic order; rule out repeats."
+   },
+   "icon_concept": "Three ruled lines, each starting with a small tick box, each with a different pair of dots (filled/empty swapped)."
+  },
+  {
+   "n": 3,
+   "id": "draw",
+   "name": "Draw it",
+   "def": {
+    "A": "Draw a picture or a bar of what the story says.",
+    "B": "Draw a picture, bar model or number line that shows what is known and what is asked.",
+    "C": "Sketch and label a model; let the picture show what stays the same."
+   },
+   "icon_concept": "A pencil drawn diagonally, finishing a long bar that is split into three parts."
+  },
+  {
+   "n": 4,
+   "id": "table",
+   "name": "Make a table",
+   "def": {
+    "A": "Put what you know in rows and columns.",
+    "B": "Make a table, fill it row by row and look down the columns.",
+    "C": "Tabulate cases, find the change in each column, extend or generalise."
+   },
+   "icon_concept": "A 3 by 3 grid with a thick top row and one dot in the centre cell."
+  },
+  {
+   "n": 5,
+   "id": "backwards",
+   "name": "Work backwards",
+   "def": {
+    "A": "Start at the end and undo each step.",
+    "B": "Start from the answer and undo each step in reverse order, then check forwards.",
+    "C": "Reverse the operations from the result, then confirm by running forwards."
+   },
+   "icon_concept": "Two boxes with a long arrow curving from the right box back to the left box."
+  },
+  {
+   "n": 6,
+   "id": "guess",
+   "name": "Guess and check",
+   "def": {
+    "A": "Pick a number, test it, then try a better one.",
+    "B": "Make a sensible guess, check it against every clue, improve it.",
+    "C": "Guess, check, adjust using how far off you were; stop when every condition holds."
+   },
+   "icon_concept": "Two stacked small boxes, top box with a cross, bottom box with a tick, joined by a curved arrow."
+  },
+  {
+   "n": 7,
+   "id": "simpler",
+   "name": "Try something simpler",
+   "def": {
+    "A": "Try it with smaller numbers first.",
+    "B": "Solve a smaller version first, then see what changes as it grows.",
+    "C": "Solve 1, 2, 3 cases first, find how the answer grows, then handle the real size."
+   },
+   "icon_concept": "A large square on the left, an arrow, a small square with a 2 by 2 grid on the right."
+  },
+  {
+   "n": 8,
+   "id": "actout",
+   "name": "Act it out",
+   "def": {
+    "A": "Use counters, paper or people to show it.",
+    "B": "Use objects, folding or a role-play to see what happens, then record it.",
+    "C": "Model or simulate the situation (objects, fold, cut, dice) and record the outcomes."
+   },
+   "icon_concept": "Two round-headed simple figures facing each other with one round counter between them."
+  }
+ ],
+ "lookback": {
+  "prompts": {
+   "A": [
+    "Did I answer the question?",
+    "Does my answer make sense?",
+    "Can I check it another way?"
+   ],
+   "B": [
+    "Did I answer what was asked?",
+    "Does my answer make sense? (Is it about the right size?)",
+    "Can I check it another way?"
+   ],
+   "C": [
+    "Did I answer the question that was asked (with units or a reason)?",
+    "Is my answer reasonable? (Estimate or compare.)",
+    "How can I check it another way? (Go backwards, estimate or try a smaller case.)"
+   ]
+  },
+  "answer3": {
+   "A": "draw or write one word",
+   "B": "I checked by ...",
+   "C": "I checked by ..."
+  },
+  "intro": "Pick one problem from today. There are no right answers. You can pass. Nobody reads it out.",
+  "timer_seconds": {
+   "A": 120,
+   "B": 90,
+   "C": 75
+  },
+  "footer_tools": "Tool I used",
+  "stuck": "I am still stuck (my tutor will come)",
+  "pass": "pass"
+ },
+ "script": {
+  "opening_say": "Today's tool is {name}. {def} Look for where you use it.",
+  "opening_do": "Point at the card on page 1 of the workbook.",
+  "choose_say": "Today you choose the tool.",
+  "choose_do": "Point at the row of eight tools on page 1 of the workbook.",
+  "talk_ask": "Where did you use {name} today? What did it help you see?",
+  "talk_listen": "Listen for the tool being named, not the answer.",
+  "choose_ask": "Which tool did you choose, and why?",
+  "lookback_say": "Pick one problem from today. Question 1: did I answer the question? Question 2: does my answer make sense? Question 3: can I check it another way? Tick, write one line, or pass. If you are still stuck, tick the box and I will come.",
+  "lookback_do": "Start the timer. Nobody reads theirs out. Praise a check you saw, not speed. Then stamp journals.",
+  "check_together": "That is what we did in check together."
+ },
+ "kit_line": "Eight tools: see your Inquirer Kit card",
+ "card_labels": {
+  "tool_of_day": "TOOL OF THE DAY",
+  "used": "I used it",
+  "choose_one": "Choose one",
+  "chose": "I chose",
+  "also": "Also useful: "
+ },
+ "lessons": {
+  "1.1": {
+   "level": 1,
+   "lesson": 1,
+   "title": "Count with the Frog",
+   "main": "pattern",
+   "also": [
+    "actout"
+   ],
+   "hint": "Y: find the 5th jump first, then the 50th"
+  },
+  "1.2": {
+   "level": 1,
+   "lesson": 2,
+   "title": "Number Bond Inquiry",
+   "main": "list",
+   "also": [
+    "guess"
+   ],
+   "hint": ""
+  },
+  "1.3": {
+   "level": 1,
+   "lesson": 3,
+   "title": "Let's Plan the Fruit Party",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "1.4": {
+   "level": 1,
+   "lesson": 4,
+   "title": "Pattern Inquiry",
+   "main": "simpler",
+   "also": [
+    "pattern"
+   ],
+   "hint": "in content (build 1, 2, 3)"
+  },
+  "1.5": {
+   "level": 1,
+   "lesson": 5,
+   "title": "Mystery Number",
+   "main": "backwards",
+   "also": [
+    "actout"
+   ],
+   "hint": ""
+  },
+  "1.6": {
+   "level": 1,
+   "lesson": 6,
+   "title": "Coin Combos",
+   "main": "list",
+   "also": [
+    "table"
+   ],
+   "hint": ""
+  },
+  "1.7": {
+   "level": 1,
+   "lesson": 7,
+   "title": "Shape Safari",
+   "main": "actout",
+   "also": [
+    "list"
+   ],
+   "hint": ""
+  },
+  "1.8": {
+   "level": 1,
+   "lesson": 8,
+   "title": "Logic Lab",
+   "main": "table",
+   "also": [],
+   "hint": ""
+  },
+  "1.9": {
+   "level": 1,
+   "lesson": 9,
+   "title": "Measure It!",
+   "main": "actout",
+   "also": [],
+   "hint": ""
+  },
+  "1.10": {
+   "level": 1,
+   "lesson": 10,
+   "title": "Puzzle Day",
+   "main": "choose",
+   "also": [],
+   "hint": ""
+  },
+  "2.1": {
+   "level": 2,
+   "lesson": 1,
+   "title": "Digit Detectives",
+   "main": "list",
+   "also": [],
+   "hint": "Y: 2-digit numbers from 2 cards first"
+  },
+  "2.2": {
+   "level": 2,
+   "lesson": 2,
+   "title": "Missing Digit Mysteries",
+   "main": "backwards",
+   "also": [
+    "guess"
+   ],
+   "hint": ""
+  },
+  "2.3": {
+   "level": 2,
+   "lesson": 3,
+   "title": "Legs, Wheels and Arrays",
+   "main": "table",
+   "also": [
+    "draw",
+    "guess"
+   ],
+   "hint": ""
+  },
+  "2.4": {
+   "level": 2,
+   "lesson": 4,
+   "title": "Pattern Machines",
+   "main": "pattern",
+   "also": [
+    "table"
+   ],
+   "hint": "Y: first 6 cubes, then the 20th"
+  },
+  "2.5": {
+   "level": 2,
+   "lesson": 5,
+   "title": "Mystery Number Machines",
+   "main": "backwards",
+   "also": [],
+   "hint": ""
+  },
+  "2.6": {
+   "level": 2,
+   "lesson": 6,
+   "title": "Market Day",
+   "main": "list",
+   "also": [
+    "backwards"
+   ],
+   "hint": ""
+  },
+  "2.7": {
+   "level": 2,
+   "lesson": 7,
+   "title": "Fair Shares",
+   "main": "draw",
+   "also": [
+    "actout"
+   ],
+   "hint": ""
+  },
+  "2.8": {
+   "level": 2,
+   "lesson": 8,
+   "title": "Shape Builders",
+   "main": "list",
+   "also": [
+    "simpler"
+   ],
+   "hint": "Y: squares in 2x2, then 3x3, then 5x5"
+  },
+  "2.9": {
+   "level": 2,
+   "lesson": 9,
+   "title": "Measure Masters",
+   "main": "table",
+   "also": [
+    "actout"
+   ],
+   "hint": ""
+  },
+  "2.10": {
+   "level": 2,
+   "lesson": 10,
+   "title": "Puzzle Day",
+   "main": "choose",
+   "also": [],
+   "hint": ""
+  },
+  "3.1": {
+   "level": 3,
+   "lesson": 1,
+   "title": "Number Sleuths",
+   "main": "list",
+   "also": [],
+   "hint": "Y: 3 digit cards, then 4"
+  },
+  "3.2": {
+   "level": 3,
+   "lesson": 2,
+   "title": "Cryptarithm Crackers",
+   "main": "guess",
+   "also": [
+    "backwards"
+   ],
+   "hint": ""
+  },
+  "3.3": {
+   "level": 3,
+   "lesson": 3,
+   "title": "Times Table Treasure",
+   "main": "pattern",
+   "also": [],
+   "hint": "Y: 6x1, 6x2, 6x3 last digits"
+  },
+  "3.4": {
+   "level": 3,
+   "lesson": 4,
+   "title": "Model Makers",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "3.5": {
+   "level": 3,
+   "lesson": 5,
+   "title": "Remainder Riddles",
+   "main": "backwards",
+   "also": [
+    "list"
+   ],
+   "hint": ""
+  },
+  "3.6": {
+   "level": 3,
+   "lesson": 6,
+   "title": "Fraction Walls",
+   "main": "draw",
+   "also": [
+    "actout"
+   ],
+   "hint": ""
+  },
+  "3.7": {
+   "level": 3,
+   "lesson": 7,
+   "title": "Area Architects",
+   "main": "list",
+   "also": [
+    "simpler"
+   ],
+   "hint": "Y: 4 squares, then 12"
+  },
+  "3.8": {
+   "level": 3,
+   "lesson": 8,
+   "title": "Angle and Line Detectives",
+   "main": "list",
+   "also": [
+    "pattern"
+   ],
+   "hint": "Y: 1 stair, 2 stairs, 3 stairs"
+  },
+  "3.9": {
+   "level": 3,
+   "lesson": 9,
+   "title": "Measure and Money Masters",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "3.10": {
+   "level": 3,
+   "lesson": 10,
+   "title": "Puzzle Day",
+   "main": "choose",
+   "also": [],
+   "hint": ""
+  },
+  "4.1": {
+   "level": 4,
+   "lesson": 1,
+   "title": "Factor Hunters",
+   "main": "list",
+   "also": [],
+   "hint": "Y: factors of 12 before 24"
+  },
+  "4.2": {
+   "level": 4,
+   "lesson": 2,
+   "title": "Big Number Puzzles",
+   "main": "backwards",
+   "also": [
+    "list"
+   ],
+   "hint": "Y: round to tens before thousands"
+  },
+  "4.3": {
+   "level": 4,
+   "lesson": 3,
+   "title": "Operation Detectives",
+   "main": "guess",
+   "also": [],
+   "hint": ""
+  },
+  "4.4": {
+   "level": 4,
+   "lesson": 4,
+   "title": "Fraction Frontier",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "4.5": {
+   "level": 4,
+   "lesson": 5,
+   "title": "Decimal Detectives",
+   "main": "list",
+   "also": [],
+   "hint": ""
+  },
+  "4.6": {
+   "level": 4,
+   "lesson": 6,
+   "title": "Angle Turns",
+   "main": "draw",
+   "also": [
+    "backwards"
+   ],
+   "hint": ""
+  },
+  "4.7": {
+   "level": 4,
+   "lesson": 7,
+   "title": "Area Architects II",
+   "main": "pattern",
+   "also": [
+    "list"
+   ],
+   "hint": "Y: cut 4 tiles, then 12"
+  },
+  "4.8": {
+   "level": 4,
+   "lesson": 8,
+   "title": "Symmetry and Nets",
+   "main": "actout",
+   "also": [
+    "list"
+   ],
+   "hint": ""
+  },
+  "4.9": {
+   "level": 4,
+   "lesson": 9,
+   "title": "Data Detectives",
+   "main": "table",
+   "also": [
+    "draw"
+   ],
+   "hint": ""
+  },
+  "4.10": {
+   "level": 4,
+   "lesson": 10,
+   "title": "Puzzle Day",
+   "main": "choose",
+   "also": [],
+   "hint": ""
+  },
+  "5.1": {
+   "level": 5,
+   "lesson": 1,
+   "title": "Million Puzzles",
+   "main": "list",
+   "also": [],
+   "hint": "Y: closest number below 100 000 first"
+  },
+  "5.2": {
+   "level": 5,
+   "lesson": 2,
+   "title": "Fraction Feats",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "5.3": {
+   "level": 5,
+   "lesson": 3,
+   "title": "Before and After",
+   "main": "backwards",
+   "also": [
+    "draw"
+   ],
+   "hint": ""
+  },
+  "5.4": {
+   "level": 5,
+   "lesson": 4,
+   "title": "Triangle Areas",
+   "main": "actout",
+   "also": [],
+   "hint": ""
+  },
+  "5.5": {
+   "level": 5,
+   "lesson": 5,
+   "title": "Volume Vault",
+   "main": "list",
+   "also": [
+    "simpler"
+   ],
+   "hint": "Y: 2x2x2 cube first"
+  },
+  "5.6": {
+   "level": 5,
+   "lesson": 6,
+   "title": "Rate Racers",
+   "main": "table",
+   "also": [],
+   "hint": ""
+  },
+  "5.7": {
+   "level": 5,
+   "lesson": 7,
+   "title": "Percentage Puzzles",
+   "main": "draw",
+   "also": [
+    "table"
+   ],
+   "hint": ""
+  },
+  "5.8": {
+   "level": 5,
+   "lesson": 8,
+   "title": "Angle Chasers",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "5.9": {
+   "level": 5,
+   "lesson": 9,
+   "title": "Pattern Generalisers",
+   "main": "simpler",
+   "also": [
+    "pattern",
+    "table"
+   ],
+   "hint": "in content (start small)"
+  },
+  "5.10": {
+   "level": 5,
+   "lesson": 10,
+   "title": "Challenge Day",
+   "main": "choose",
+   "also": [],
+   "hint": ""
+  },
+  "6.1": {
+   "level": 6,
+   "lesson": 1,
+   "title": "Code the Pattern",
+   "main": "pattern",
+   "also": [],
+   "hint": "in content (nth term, small n)"
+  },
+  "6.2": {
+   "level": 6,
+   "lesson": 2,
+   "title": "Prime Hunters",
+   "main": "list",
+   "also": [
+    "simpler"
+   ],
+   "hint": "Y: primes below 20 first"
+  },
+  "6.3": {
+   "level": 6,
+   "lesson": 3,
+   "title": "Below Zero",
+   "main": "draw",
+   "also": [],
+   "hint": ""
+  },
+  "6.4": {
+   "level": 6,
+   "lesson": 4,
+   "title": "Algebra Machines",
+   "main": "backwards",
+   "also": [
+    "pattern"
+   ],
+   "hint": "Y: small n first"
+  },
+  "6.5": {
+   "level": 6,
+   "lesson": 5,
+   "title": "Every Possible Way",
+   "main": "simpler",
+   "also": [
+    "list"
+   ],
+   "hint": "in content (2, 3, 4 friends)"
+  },
+  "6.6": {
+   "level": 6,
+   "lesson": 6,
+   "title": "Fair or Unfair?",
+   "main": "actout",
+   "also": [
+    "list"
+   ],
+   "hint": ""
+  },
+  "6.7": {
+   "level": 6,
+   "lesson": 7,
+   "title": "Turtle Geometry",
+   "main": "pattern",
+   "also": [],
+   "hint": "Y: triangle and square before hexagon"
+  },
+  "6.8": {
+   "level": 6,
+   "lesson": 8,
+   "title": "Secret Codes",
+   "main": "pattern",
+   "also": [],
+   "hint": "Y: 4-hour clock before 12"
+  },
+  "6.9": {
+   "level": 6,
+   "lesson": 9,
+   "title": "Data Detectives",
+   "main": "draw",
+   "also": [
+    "backwards"
+   ],
+   "hint": ""
+  },
+  "6.10": {
+   "level": 6,
+   "lesson": 10,
+   "title": "Showcase Challenge",
+   "main": "choose",
+   "also": [],
+   "hint": ""
+  }
+ }
+}

@@ -1965,7 +1965,7 @@
        }
       ]
      ],
-     "size": 84
+     "size": 72
     }
    },
    {
@@ -2014,7 +2014,7 @@
      "icon": "counter",
      "tally": true,
      "key": false,
-     "size": 62
+     "size": 56
     }
    },
    {
@@ -2067,7 +2067,7 @@
      "icon": "counter",
      "title": "Pets in a shop",
      "key": false,
-     "size": 54
+     "size": 46
     }
    },
    {
@@ -2137,7 +2137,7 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Study the graph. Each picture stands for 1 child. Answer questions 5 and 6.",
+    "text": "Study the graph. Each picture stands for 1 child. Answer S5 and S6.",
     "answer": "Chess; 13 children",
     "val": [
      "Chess",
@@ -2195,7 +2195,7 @@
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Look at the graph in question 5.",
+    "text": "Look at the graph in S5.",
     "answer": "False, True, True, False",
     "val": [
      "False",
@@ -3527,7 +3527,7 @@
   "where": [
    "G1"
   ],
-  "text": "Draw a graph where each picture stands for 2 sweets (8 mints, 6 toffees, 4 lollies: 4, 3 and 2 pictures), and read half a picture as 1 (3 pictures and half a picture are 7). Picture graphs with a scale are Primary 2 (p. 34); school papers at Primary 1 always use 1 picture for 1 thing. Choosing a question the data can answer and the missing row from a total are the Think harder steps. Named puzzle: One Picture Is Two.",
+  "text": "Draw a graph where each picture stands for 2 sweets (8 mints, 6 toffees, 7 gums: 4, 3 and 3 and a half pictures), and read half a picture as 1 (3 pictures and half a picture are 7). Picture graphs with a scale are Primary 2 (p. 34); school papers at Primary 1 always use 1 picture for 1 thing. Choosing a question the data can answer and the missing row from a total are the Think harder steps. Named puzzle: One Picture Is Two.",
   "parent": "A key where each picture stands for 2 goes past the Primary 1 syllabus on purpose."
  }
 }
