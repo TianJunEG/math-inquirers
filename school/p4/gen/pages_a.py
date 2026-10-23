@@ -434,7 +434,7 @@ def page08():
           f"Add all the common factors of {a3} and {b3}.",
           f"What is the second greatest common factor of {a5} and {b5}?",
           f"Two ribbons are {a4} cm and {b4} cm long. Cut them into equal pieces, as long as possible. How long is each piece?",
-          f"A common factor of {a6} and {b6} is greater than {lo6} and less than {hi6}. What is it?"]
+          f"Pick the common factor of {a6} and {b6} between {lo6} and {hi6}."]
     cards = [qcard(i + 1, f"<p>{q}</p>", ABX + (" cm" if i == 4 else ""), cls="span2 inl" if i >= 4 else "") for i, q in enumerate(qs)]
     P = code_page(8, 4808, "Common Factors", 2, "Common factors of two numbers", STRAND_NU,
         "2.3 (finding the common factors of two given numbers), 2.1 (factors, multiples and their relationship)", ["FM2.1", "FM2.3"], "Code-breaker (common factors)",
@@ -500,7 +500,7 @@ def make_riddle(rng, a):
     if ms: pool.append(("mult", rng.choice(ms)))
     fs = [N_ for N_ in range(a + 1, 101) if N_ % a == 0]
     if fs and a <= 50: pool.append(("factor", rng.choice(fs)))
-    cms = [(p, q) for p in range(2, 10) for q in range(p + 1, 10) if a % p == 0 and a % q == 0]
+    cms = [(p, q) for p in range(2, 10) for q in range(p + 1, 10) if a % p == 0 and a % q == 0 and q % p != 0]
     if cms: pool.append(("cm",) + rng.choice(cms))
     cfs = [(p, q) for p in range(a, 101, a) for q in range(p + a, 101, a) if p != q]
     if cfs and a >= 4: pool.append(("cf",) + rng.choice(cfs))
@@ -525,6 +525,7 @@ def page09():
         riddles = [make_riddle(rng, a) for a in answers]
         if any(r is None for r in riddles) or not distinct(answers): continue
         if sum(1 for r in riddles if any(c[0] in ("cm", "cf") for c in r)) < 2: continue
+        if not any(c[0] == "cm" for r in riddles for c in r): continue
         pool = set()
         for r, a in zip(riddles, answers):
             for x in range(1, 1000):

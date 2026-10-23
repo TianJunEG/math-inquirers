@@ -139,18 +139,18 @@ def read_angle_fig(s):
     return v, rays, arcs
 
 # ---------------------------------------------------------------- protractor
-def protractor_svg(angle, base="right", R=28.0, size=72):
+def protractor_svg(angle, base="right", R=30.0, size=72):
     """a protractor (outer scale 0 to 180 from the right, inner scale 0 to 180 from the left, a tick every 5 degrees, numbers every 20 degrees on both scales, all printed along the radius) with an angle drawn from its centre.
     base='right': the arm along the base points to the right and the other arm is `angle` degrees above it; base='left': the base arm points to the left."""
     W = size; H = R + 4.5 + 15.0; cx = W / 2; cy = R + 4.5
     Ri = R - 12.5
     p = [f'<path d="M{cx - R:.2f},{cy:.2f} A{R},{R} 0 0 1 {cx + R:.2f},{cy:.2f} Z" fill="#fff" stroke="#000" stroke-width="0.55"/>']
     p.append(f'<path d="M{cx - Ri:.2f},{cy:.2f} A{Ri},{Ri} 0 0 1 {cx + Ri:.2f},{cy:.2f}" fill="none" stroke="#000" stroke-width="0.35"/>')
-    def label(k, r, txt):
+    def label(k, r, txt, fsz=3.3):
         lx, ly = pol(cx, cy, r, k)
         rot = -k if k <= 90 else 180 - k
         return (f'<text x="{lx:.2f}" y="{ly:.2f}" transform="rotate({rot} {lx:.2f} {ly:.2f})" text-anchor="middle" dominant-baseline="central" '
-                f'font-family="Nunito Sans" font-weight="700" font-size="3.3" fill="#000">{txt}</text>')
+                f'font-family="Nunito Sans" font-weight="700" font-size="{fsz}" fill="#000">{txt}</text>')
     for k in range(0, 181, 5):
         major = k % 10 == 0
         x1, y1 = pol(cx, cy, R, k); x2, y2 = pol(cx, cy, R - (3.0 if major else 1.7), k)
@@ -158,7 +158,7 @@ def protractor_svg(angle, base="right", R=28.0, size=72):
         x3, y3 = pol(cx, cy, Ri, k); x4, y4 = pol(cx, cy, Ri + (3.0 if major else 1.7), k)
         p.append(f'<line x1="{x3:.2f}" y1="{y3:.2f}" x2="{x4:.2f}" y2="{y4:.2f}" stroke="#000" stroke-width="{0.5 if major else 0.35}"/>')
         if k % 20 == 0 and k not in (0, 180): p.append(label(k, R - 5.9, k))
-        if k in (40, 60, 120, 140): p.append(label(k, Ri - 5.0, 180 - k))
+        if k % 20 == 0 and 40 <= k <= 140: p.append(label(k, Ri - 5.2, 180 - k, 2.9))
     def flat(x, y, txt):
         return (f'<text x="{x:.2f}" y="{y:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="700" font-size="3.0" fill="#000">{txt}</text>')
     p.append(flat(cx + R - 4.2, cy - 2.6, 0)); p.append(flat(cx - R + 4.6, cy - 2.6, 180))          # outer scale: 0 at the right end, 180 at the left end
@@ -167,8 +167,8 @@ def protractor_svg(angle, base="right", R=28.0, size=72):
     if base == "right": a_base, a_other = 0, angle
     else: a_base, a_other = 180, 180 - angle
     bx, by = pol(cx, cy, R + 4.0, a_base); ox, oy = pol(cx, cy, R + 4.0, a_other)
-    p.append(f'<line class="base" x1="{cx:.2f}" y1="{cy:.2f}" x2="{bx:.2f}" y2="{by:.2f}" stroke="#000" stroke-width="1.0"/>')
-    p.append(f'<line class="arm" x1="{cx:.2f}" y1="{cy:.2f}" x2="{ox:.2f}" y2="{oy:.2f}" stroke="#000" stroke-width="1.0"/>')
+    p.append(f'<line class="base" x1="{cx:.2f}" y1="{cy:.2f}" x2="{bx:.2f}" y2="{by:.2f}" stroke="#000" stroke-width="0.7"/>')
+    p.append(f'<line class="arm" x1="{cx:.2f}" y1="{cy:.2f}" x2="{ox:.2f}" y2="{oy:.2f}" stroke="#000" stroke-width="0.7"/>')
     return svg(W, round(H, 1), "".join(p))
 
 def read_protractor(s):

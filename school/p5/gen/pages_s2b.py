@@ -110,7 +110,7 @@ def page29():
         "area of a triangle from its base and height", ["AR1.1", "AR1.2"], "Code-breaker (areas of triangles)",
         ["Find the area of each triangle.", "The height is the length at a right angle to the base. Write the area in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} cm² (base {b}, height {h})" for i, (a, (b, h, f, s)) in enumerate(zip(ans, items))),
-        "Six triangles with the base and the height (dashed, at a right angle to the base) labelled in cm; some figures have a length beside a slanted side that is not needed, and some have the height outside the triangle. The decoy letters stand for the usual slips: forgetting to halve, adding the base and the height, or using the slanted side instead of the height. A box left blank gives no letter and the check cannot see it. Figures are not drawn to scale (the page does not rely on the drawing).",
+        "Six triangles with the base and the height (dashed, at a right angle to the base) labelled in cm; some figures have a length beside a slanted side that is not needed, and some have the height outside the triangle. The decoy letters stand for the usual slips: forgetting to halve, adding the base and the height, or using the slanted side instead of the height. A box left blank gives no letter and the check cannot see it. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers.",
         solved, cols=4, layout="c3", checks=[("V7 every product base x height is even and every area is below 100 cm²", all((b * h) % 2 == 0 for b, h, _, _ in items) and max(ans) < 100, "")])
     return P
 
@@ -141,7 +141,7 @@ def page30():
         "area of a triangle from its base and height", ["AR1.2"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on triangles with area {T} cm{SQ}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
-        f"A 4 by 4 grid of sixteen triangles, each with its base and its height (dashed) labelled in cm. The boxes on the route have area {T} cm{SQ}; some have a length beside a slanted side that is not needed. The boxes off the route have a product base x height that gives the area without halving, or an area a little more or less than {T} cm{SQ}; some extra boxes that do have area {T} cm{SQ} are dead ends. Counting the boxes shows a line that takes a shortcut. Figures are not drawn to scale (the page does not rely on the drawing).",
+        f"A 4 by 4 grid of sixteen triangles, each with its base and its height (dashed) labelled in cm. The boxes on the route have area {T} cm{SQ}; some have a length beside a slanted side that is not needed. The boxes off the route have a product base x height that gives the area without halving, or an area a little more or less than {T} cm{SQ}; some extra boxes that do have area {T} cm{SQ} are dead ends. Counting the boxes shows a line that takes a shortcut. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers.",
         lambda c: "{} x {} / 2 = {}".format(*read_tri(c)[:2], read_tri(c)[0] * read_tri(c)[1] // 2) if True else "", f"Does your line reach FINISH? Count its boxes: are there {L}? Does every triangle have area {T} cm{SQ}?", extra_facts=str(T), cls="maze tall tri")
     return P
 
@@ -175,7 +175,7 @@ def page31():
         "area of composite figures made of rectangles and triangles", ["AR1.2", "AR1.3"], "Code-breaker (composite areas)",
         ["Find the area of each whole figure.", "Dashed lines are not edges. Write the area in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} cm² ({kd})" for i, (a, (kd, wd, ln, th)) in enumerate(zip(ans, items))),
-        "Six figures: a rectangle with a triangle on top (two figures), a rectangle with a triangular notch cut from its top edge (two figures) and a rectangle with a right-angled triangle joined to one side (two figures). The pupil finds the area of the rectangle and of the triangle and adds or subtracts. The decoy letters stand for the usual slips: forgetting to halve the triangle, or adding where the notch must be taken away. Dashed lines are not edges of the figure. Figures are not drawn to scale (the page does not rely on the drawing). A box left blank gives no letter and the check cannot see it.",
+        "Six figures: a rectangle with a triangle on top (two figures), a rectangle with a triangular notch cut from its top edge (two figures) and a rectangle with a right-angled triangle joined to one side (two figures). The pupil finds the area of the rectangle and of the triangle and adds or subtracts. The decoy letters stand for the usual slips: forgetting to halve the triangle, or adding where the notch must be taken away. Dashed lines are not edges of the figure. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3")
     return P
 
@@ -240,7 +240,7 @@ def page33():
         "volume of a cube or cuboid in cubic units (cm³ and m³)", ["VO2.4", "VO2.2"], "Code-breaker (volumes)",
         ["Find the volume of each solid.", "Write the number in the box. The unit is printed.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} {u}³" for i, (a, (_, _, _, u)) in enumerate(zip(ans, items))),
-        "Six solids with their edges labelled: four cuboids and one cube in cm (the cube has the same edge on all three labels) and, on two figures, in m. The pupil multiplies the three edges; the unit of the answer is cm³ or m³ (the page prints it; there is no conversion between them). The decoy letters stand for the usual slips: adding the edges, the area of a face, or leaving one edge out. Figures are not drawn to scale (the page does not rely on the drawing). A box left blank gives no letter and the check cannot see it.",
+        "Six solids with their edges labelled: four cuboids and one cube in cm (the cube has the same edge on all three labels) and, on two figures, in m. The pupil multiplies the three edges; the unit of the answer is cm³ or m³ (the page prints it; there is no conversion between them). The decoy letters stand for the usual slips: adding the edges, the area of a face, or leaving one edge out. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3", checks=[("V7 every volume is below 1800 and in a single unit", max(ans) < 1800, "")])
     return P
 
@@ -271,7 +271,7 @@ def page34():
         "volume of a cuboid; the relationship between litres and cm³ (1 ℓ = 1000 cm³)", ["VO2.4", "VO2.6"], "Matching (lettered cards)",
         ["1 ℓ = 1000 cm³. Each tank is full.", "Find how many ℓ each tank holds.", "Write the card's letter in the box under the matching tile."],
         rng, pairs, word, "; ".join(f"{w}: {ds[k][0]} x {ds[k][1]} x {ds[k][2]} = {ds[k][3]} cm³ = {dec(Fr(ds[k][3], 1000))} ℓ" for w, k in zip(word, order)),
-        "Six tanks drawn with their length, width and height in cm, and six tiles with a capacity in litres, in order of size. The pupil multiplies the three edges to find the volume in cm³ and changes it to litres (1 ℓ = 1000 cm³). The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. Figures are not drawn to scale (the page does not rely on the drawing). A box left blank gives no letter and the check cannot see it.",
+        "Six tanks drawn with their length, width and height in cm, and six tiles with a capacity in litres, in order of size. The pupil multiplies the three edges to find the volume in cm³ and changes it to litres (1 ℓ = 1000 cm³). The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. The figures are sketches and the page does not rely on the drawing: the pupil uses the printed numbers. A box left blank gives no letter and the check cannot see it.",
         None, None, left_title="Tanks", right_title="Capacities", raw_left=lambda h: (lambda d: Fr(Decimal_(d[0][0])) * Fr(Decimal_(d[1][0])) * Fr(Decimal_(d[2][0])) / 1000)(read_dims(h)), raw_right=lambda t: evaluate(t.replace(LIT, "").strip()))
     return P
 

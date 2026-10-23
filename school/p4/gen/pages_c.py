@@ -138,7 +138,7 @@ def page22():
     body = (f'<div class="blk"><p class="lead">Set A: smallest first.</p><div class="dcs big">{"".join(dc_card(dstr(v), lab[("A", v)]) for v in shA)}</div></div>'
             f'<div class="blk"><p class="lead">Set B: greatest first.</p><div class="dcs big">{"".join(dc_card(dstr(v), lab[("B", v)]) for v in shB)}</div></div>'
             f'<div class="blk"><p class="lead">Write the letters in order: Set A, then Set B.</p>{write_boxes(6)}</div>')
-    P = new_page(22, 6222, "Order the Decimals", 2, "Comparing and ordering decimals up to 3 decimal places", STRAND_DE,
+    P = new_page(22, 6222, "Order the Decimals", 1, "Comparing and ordering decimals up to 3 decimal places", STRAND_DE,
         "1.2 (comparing and ordering decimals)", ["DP1.2"], "Ordering (lettered decimal cards)", "K1 letters in order spell a word (6 letters) + each card used once",
         ["Put each set of decimals in order.", "Write the letter of each card in its place.", "Set A: smallest first. Set B: greatest first."],
         body, "Set A (smallest first): " + ", ".join(f"{lab[('A', v)]} = {dstr(v)}" for v in orderA) + "; Set B (greatest first): " + ", ".join(f"{lab[('B', v)]} = {dstr(v)}" for v in orderB), f"Word: {word}",
@@ -380,7 +380,7 @@ def page26():
         if res: word, table = res; break
     else: raise RuntimeError("p26")
     qs = [f"Work out {dstr(x1)} × {d1}.", f"Work out {dstr(x2)} ÷ {d2}.", f"Divide {n3} by {m3}. Write the answer as a decimal.",
-          f"A {obj} {dstr(L4)} m long is cut into {d4} equal pieces. How long is each piece?", f"Divide {w5} by {d5}. Write the answer as a decimal.",
+          f"{dstr(L4)} m of {obj} is shared equally among {d4} children. How long is each share?", f"Divide {w5} by {d5}. Write the answer as a decimal.",
           f"Divide {w6} by {d6}. Round the answer to 1 decimal place."]
     cards = [qcard(i + 1, f"<p>{q}</p>", ABX + (" m" if i == 3 else ""), cls="span2 inl" if i in (2, 3, 5) else "") for i, q in enumerate(qs)]
     P = code_page(26, 6626, "Decimal Shares", 2, "Multiplying and dividing decimals by a 1-digit number", STRAND_DE,
@@ -632,10 +632,10 @@ def page30():
         if res: word, table = res; break
     else: raise RuntimeError("p30")
     qs = [f"{n1} identical squares are joined in a row to make a rectangle. Its perimeter is {P1} cm. Find its area.",
-          f"A rectangle is {A2} cm long and {B2} cm wide. A square of side {C2} cm is cut from one corner. Find the perimeter of the shape left.",
+          f"A card is {A2} cm by {B2} cm. A corner piece, a square of side {C2} cm, is cut off. Find the perimeter of the card left.",
           f"A square has perimeter {P3} cm. It is cut into 4 identical small squares. Find the perimeter of one small square.",
-          f"A garden is {A4} m long and {B4} m wide. A path 2 m wide goes round the outside. Find the area of the path.",
-          f"Two identical rectangles, {L5} cm by {W5} cm, are joined along their long sides to make one rectangle. Find its perimeter.",
+          f"A pool is {A4} m long and {B4} m wide. Tiles 2 m wide surround it. Find the area of the tiles.",
+          f"Two {L5} cm by {W5} cm cards are joined along their long sides. Find the perimeter of the new rectangle.",
           f"The length of a rectangle is 3 times its width. Its perimeter is {P6} cm. Find its area."]
     units = [f"cm{SQ}", "cm", "cm", f"m{SQ}", "cm", f"cm{SQ}"]
     cards = [qcard(i + 1, f'<div class="ptxt2">{q}</div>', ABX + " " + units[i], cls="span2 inl") for i, q in enumerate(qs)]
@@ -650,9 +650,9 @@ def page30():
         nums = [int(x) for x in re.findall(r"\d+", q)]
         if q.startswith("The length of a rectangle"): w = nums[1] // 8; solved.append(3 * w * w)
         elif "identical squares are joined in a row" in q: n, per = nums[0], nums[1]; s_ = per // (2 * (n + 1)); solved.append(n * s_ * s_)
-        elif "cut from one corner" in q: solved.append(2 * (nums[0] + nums[1]))
+        elif "corner piece" in q: solved.append(2 * (nums[0] + nums[1]))
         elif "cut into 4 identical" in q: solved.append(4 * (nums[0] // 4 // 2))
-        elif "path" in q: solved.append((nums[0] + 4) * (nums[1] + 4) - nums[0] * nums[1])
+        elif "Tiles" in q: solved.append((nums[0] + 4) * (nums[1] + 4) - nums[0] * nums[1])
         else: solved.append(2 * (nums[0] + 2 * nums[1]))
     P.v("V1 independent solver (each printed story solved with the stated shapes) equals the key", solved == ans, solved)
     P.v("V7 every side is a whole number of cm or m and every answer is below 1000", all(a < 1000 for a in ans))

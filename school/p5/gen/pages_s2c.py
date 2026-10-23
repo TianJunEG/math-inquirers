@@ -145,7 +145,7 @@ def page38():
         "angle sum of a triangle; properties of isosceles, equilateral and right-angled triangles; finding unknown angles", ["GE2.1", "GE2.2", "GE2.3", "GE1.4"], "Code-breaker (angles in triangles)",
         ["Find the angle marked ? in each triangle.", "Ticks show sides of equal length. A square shows a right angle.", "Write the angle in the box. Use the code table."],
         cards, ans, word, table, dom, lambda k: f"{int(k)}{DEG}", "; ".join(f"{i+1}) {int(a)}{DEG} ({kd})" for i, (a, (kd, g)) in enumerate(zip(ans, items))),
-        f"Six triangles: two with two angles given (the three angles of a triangle make a straight angle), an isosceles triangle with the angle at the top given, an isosceles triangle with a base angle given, an equilateral triangle and a right-angled triangle with one other angle given. Equal sides carry tick marks. The decoy letters stand for the usual slips: giving a straight angle minus one angle only, adding the angles, or not halving the base angles. Figures are not drawn to scale (the page does not rely on the drawing): the pupil should use the angle facts, not a protractor. A box left blank gives no letter and the check cannot see it.",
+        f"Six triangles: two with two angles given (the three angles of a triangle make a straight angle), an isosceles triangle with the angle at the top given, an isosceles triangle with a base angle given, an equilateral triangle and a right-angled triangle with one other angle given. Equal sides carry tick marks. The decoy letters stand for the usual slips: giving a straight angle minus one angle only, adding the angles, or not halving the base angles. The page does not rely on the drawing: the pupil should use the angle facts, not a protractor. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3")
     return P
 
@@ -207,10 +207,10 @@ def page39():
     def solve_row(q, opts, qh): return right[judge39(q.replace(NB, " "))]
     P = mc_page(39, 5139, "Shape Statements", 2, "Geometry: parallelogram, rhombus and trapezium", STRAND_GE,
         "properties of a parallelogram, rhombus and trapezium; finding unknown angles", ["GE3.1", "GE3.2"], "True or false table (three choices)",
-        ["Use the shape and the given angle.", "Is the claim true, false or not possible to tell?", "T = true. F = false. N = not possible to tell.", "Circle the letter. Write the six letters in the boxes."],
+        ["Use the shape and the given angle.", "Is the claim true (T), false (F) or not possible to tell (N)?", "Circle the letter. Write the six letters in the boxes."],
         rng, rows, 3, word, "; ".join(f"{i+1}) {t} ({s})" for i, (s, t) in enumerate(zip(sts, truth))),
         f"Six rows, each with a shape, one given angle and a claim about a second angle. The pupil decides whether the claim must be true, must be false, or cannot be told from the given facts. In a parallelogram or rhombus opposite angles are equal and neighbouring angles make a straight angle; in a trapezium the two angles on the same non-parallel side make a straight angle (the page names the parallel sides and the other two sides), and two angles that are not on the same non-parallel side cannot be found from each other, so the answer is N. Each choice (T, F, N) has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
-        solve_row, ps=False)
+        solve_row, ps=False, rows_cls="tfrows tight")
     return P
 
 # =============================================================================== P5-40 Angle Chains (code word)

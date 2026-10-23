@@ -352,7 +352,7 @@ def page36():
     return P
 
 # =============================================================================== P4-37 Complete the Table
-ROWS37 = ["4A", "4B", "4C"]; COLS37 = ["Chess", "Art", "Drama"]
+ROWS37 = ["Red", "Blue", "Green"]; COLS37 = ["Week 1", "Week 2", "Week 3"]
 
 def solve_table(cells, row_tot, col_tot, grand):
     """independent solver: cells[r][c], row_tot[r], col_tot[c], grand are numbers or None; fills every blank by using the sums of rows and columns. Returns the filled tables or None"""
@@ -396,7 +396,7 @@ def read_table(h):
     return grid
 
 def page37():
-    rng = random.Random(7737)
+    rng = random.Random(7751)
     for _ in range(20000):
         cells = [[rng.randint(4, 15) for _ in range(3)] for _ in range(3)]
         rt = [sum(r) for r in cells]; ct = [sum(cells[r][c] for r in range(3)) for c in range(3)]; g = sum(rt)
@@ -417,12 +417,12 @@ def page37():
         if res: word, table = res; break
     else: raise RuntimeError("p37")
     th = table_html(cells, rt, ct, g, set(blank))
-    body = f'<p class="lead">Pupils in three classes who chose each club</p>{th}'
-    P = code_page(37, 7737, "Complete the Table", 1, "Completing a table from given data", STRAND_ST,
+    body = f'<p class="lead">Stickers won by three teams in three weeks</p>{th}'
+    P = code_page(37, 7751, "Complete the Table", 2, "Completing a table from given data", STRAND_ST,
         "1.1 (completing a table from given data), 1.2 (reading and interpreting data from tables)", ["ST1.1", "ST1.2"], "Code-breaker (table with totals)",
         ["Some numbers in the table are missing.", "Use the totals to find them.", "Write the six numbers in order, row by row. " + INSTR_CODE], body, ans, table, word, 0, 99,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "A table of three classes and three clubs with a total for each row, each column and the whole table. Six of the sixteen numbers are missing (never the grand total, at least three inside the table). Every missing number can be found by subtracting or adding along a row or a column. The pupil writes the six numbers in reading order and looks them up in the code table. A wrong number makes the rows or columns fail to add up and a letter that does not spell the word. The decoy letters stand for the numbers one or ten away. A box left blank gives no letter and the check cannot see it.",
+        "A table of three teams and three weeks with a total for each row, each column and the whole table. Six of the sixteen numbers are missing (never the grand total, at least three inside the table). Every missing number can be found by subtracting or adding along a row or a column. The pupil writes the six numbers in reading order and looks them up in the code table. A wrong number makes the rows or columns fail to add up and a letter that does not spell the word. The decoy letters stand for the numbers one or ten away. A box left blank gives no letter and the check cannot see it.",
         domain=dom, mk=("code", "total"), check="Do all rows and columns add up to their totals? Do the six letters spell a word?",
         mech="K3 rows and columns add to their totals + K1 code word (6 letters)", plain="Totals and code word (6 letters)")
     P["check_boxes"] = 6
@@ -453,11 +453,11 @@ def page37():
 
 # =============================================================================== P4-38 Line Graph Detective
 def page38():
-    rng = random.Random(7838)
-    cats = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    rng = random.Random(7861)
+    cats = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
     for _ in range(20000):
         vals = [rng.randrange(10, 60, 5) for _ in range(6)]
-        if len(set(vals)) < 5: continue
+        if len(set(vals)) < 5 or vals[0] in (30, 45) or vals[1] in (30, 45): continue
         ia, ib, ic, id_ = rng.sample(range(6), 4); ix, iy = rng.sample(range(6), 2)
         q = [vals[ia], vals[ib], abs(vals[ic] - vals[id_]), None, vals[ix] + vals[iy], max(vals) - min(vals)]
         # a rise between two neighbouring days
@@ -473,23 +473,23 @@ def page38():
         if res: word, table = res; break
     else: raise RuntimeError("p38")
     fig = A7.line_graph_svg(cats, vals, h=66.0)
-    qs = [f"How many books were borrowed on {cats[ia]}?", f"How many books were borrowed on {cats[ib]}?", f"How many more books were borrowed on {cats[max((ic, id_), key=lambda i: vals[i])]} than on {cats[min((ic, id_), key=lambda i: vals[i])]}?",
-          f"From {cats[ri[0]]} to {cats[ri[1]]}, the number of books went up by how many?", f"How many books were borrowed on {cats[ix]} and {cats[iy]} together?", "How many more books were borrowed on the busiest day than on the quietest day?"]
+    qs = [f"How many pupils joined in {cats[ia]}?", f"How many pupils joined in {cats[ib]}?", f"How many more pupils joined in {cats[max((ic, id_), key=lambda i: vals[i])]} than in {cats[min((ic, id_), key=lambda i: vals[i])]}?",
+          f"From {cats[ri[0]]} to {cats[ri[1]]}, the number went up by how many?", f"How many pupils joined in {cats[ix]} and {cats[iy]} together?", "How many more joined in the busiest month than the quietest?"]
     lines = "".join(f'<div class="qrow2"><span class="no">{i+1}</span><span class="qt">{q_}</span>{ABS}</div>' for i, q_ in enumerate(qs))
-    body = f'<p class="lead">Books borrowed from a school library in one week</p><div class="lgraph">{fig}</div><div class="lqs">{lines}</div>'
+    body = f'<p class="lead">Pupils who joined the swimming club each month</p><div class="lgraph">{fig}</div><div class="lqs">{lines}</div>'
     P = code_page(38, 7838, "Line Graph Detective", 1, "Reading a line graph", STRAND_ST,
         "1.2 (reading and interpreting data from line graphs)", ["ST1.2"], "Code-breaker (line graph)",
         ["Read the line graph.", "Write each answer in its box.", INSTR_CODE], body, ans, table, word, 0, 120,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)) + f". Data: " + ", ".join(f"{c} {v}" for c, v in zip(cats, vals)),
-        "A line graph of the books borrowed on six days, scale 0 to 60 with a dotted line half way between the numbers (so every point is a multiple of 5). Six questions: two readings, a difference between two days, a rise between two neighbouring days, a total of two days and the difference between the busiest and the quietest day. The decoy letters stand for the usual slips: reading one line too high or too low, or adding when the question asks for the difference. A box left blank gives no letter and the check cannot see it.",
+        "A line graph of the pupils who joined a club in six months, scale 0 to 60 with a dotted line half way between the numbers (so every point is a multiple of 5). Six questions: two readings, a difference between two days, a rise between two neighbouring days, a total of two days and the difference between the busiest and the quietest day. The decoy letters stand for the usual slips: reading one line too high or too low, or adding when the question asks for the difference. A box left blank gives no letter and the check cannot see it.",
         domain=dom, mk=("code",))
     gdata = A7.read_line_graph(re.search(r"<svg.*?</svg>", body, re.S)[0])
     solved = []
     for q_ in re.findall(r'<span class="qt">(.*?)</span>', body):
-        days = re.findall(r"\b(Mon|Tue|Wed|Thu|Fri|Sat)\b", q_)
-        if q_.startswith("How many books were borrowed on") and "together" not in q_: solved.append(gdata[days[0]])
+        days = re.findall(r"\b(Jan|Feb|Mar|Apr|May|Jun)\b", q_)
+        if q_.startswith("How many pupils joined in") and "together" not in q_: solved.append(gdata[days[0]])
         elif "together" in q_: solved.append(gdata[days[0]] + gdata[days[1]])
-        elif "How many more books were borrowed on the busiest" in q_: solved.append(max(gdata.values()) - min(gdata.values()))
+        elif "the busiest month" in q_: solved.append(max(gdata.values()) - min(gdata.values()))
         elif "went up" in q_: solved.append(gdata[days[1]] - gdata[days[0]])
         else: solved.append(gdata[days[0]] - gdata[days[1]])
     P.v("V1 independent solver (every point read from the drawing against the labelled scale) equals the key", solved == ans, solved)
