@@ -432,7 +432,7 @@ PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
 PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
-FAIL  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  [(3, 'greatest')]
+PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p3_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P3 strand  
 PASS  B/W colours only in S1_pupil.html  ['#000', '#fff']
@@ -743,4 +743,4 @@ PASS  P3_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels coun
 PASS  P3_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.78% vs greyscale)  10 pages
 PASS  P3_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 754, budget 130 on average per page)  
 
-TOTAL 744 checks, 1 failed
+TOTAL 744 checks, 0 failed
