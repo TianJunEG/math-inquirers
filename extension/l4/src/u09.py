@@ -95,7 +95,7 @@ G.append(item(U+'-G02', 'go', 5, 'A stall sold 340 plates in 5 days, Monday to F
   hint='Take away the extras: 0, 8, 16, 24 and 32.',
   why='The extras over Monday are 0 + 8 + 16 + 24 + 32 = 80. Without them, 5 equal days make 340 − 80 = 260, so Monday is 260 ÷ 5 = 52. Friday is 52 + 32 = 84. The days are 52, 60, 68, 76 and 84.',
   space={'rows': ['Working:', '']}))
-G.append(item(U+'-G03', 'go', 5, 'Beyond Level 4: Average\nThe average of some numbers is their total divided by how many numbers there are.',
+G.append(item(U+'-G03', 'go', 5, 'Beyond Level 4: Average\nThe average is the total divided by the count of numbers.',
   parts=[P('a', 'The average of 3, 6 and 9 is {b}', A(6)),
          P('b', 'A stall\'s average over 4 days is 45 plates. Three days were 40, 50 and 38 plates. The fourth day was {b} plates.', A(52))],
   hint='Total = average × the number of days.',

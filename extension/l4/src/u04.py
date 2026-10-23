@@ -100,7 +100,7 @@ G.append(item(U+'-G01', 'go', 5, 'Think about fractions with denominator 20 that
   parts=[P('a', 'How many are there? {b}', A(6)), P('b', 'Which one is equal to 1/2? {b}/20', A(10))],
   hint='Write 1/4 and 3/5 as twentieths. List the ones in between.',
   why='1/4 = 5/20 and 3/5 = 12/20. The fractions in between are 6/20, 7/20, 8/20, 9/20, 10/20 and 11/20: 6 fractions. 10/20 = 1/2.'))
-G.append(item(U+'-G02', 'go', 5, 'Beyond Level 4: Unit fractions\nWrite each fraction as the sum of 2 different unit fractions (fractions with 1 on top).',
+G.append(item(U+'-G02', 'go', 5, 'Beyond Level 4: Unit fractions\nWrite each fraction as a sum of 2 different unit fractions. A unit fraction has 1 on top.',
   parts=[P('a', '5/6 = 1/{b} + 1/{b}', A(2, 3, text='1/2 + 1/3')), P('b', '3/4 = 1/{b} + 1/{b}', A(2, 4, text='1/2 + 1/4')),
          P('c', '7/10 = 1/{b} + 1/{b}', A(2, 5, text='1/2 + 1/5'))],
   hint='Try 1/2 first. What is left?',

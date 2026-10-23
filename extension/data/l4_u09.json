@@ -866,7 +866,7 @@
    "tier": "go",
    "beyond": "Average",
    "page": 5,
-   "text": "The average of some numbers is their total divided by how many numbers there are.",
+   "text": "The average is the total divided by the count of numbers.",
    "parts": [
     {
      "label": "a",

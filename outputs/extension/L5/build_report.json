@@ -37,9 +37,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9638903192584964,
+   "fill": 0.9378701081359423,
    "over": false,
-   "excess_mm": -9.3,
+   "excess_mm": -16,
    "edition": "soft"
   },
   {
@@ -567,9 +567,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.979965885684861,
+   "fill": 0.990859938208033,
    "over": false,
-   "excess_mm": -5.1,
+   "excess_mm": -2.3,
    "edition": "soft"
   },
   {
@@ -597,9 +597,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9470423532440783,
+   "fill": 0.9666902677651905,
    "over": false,
-   "excess_mm": -13.6,
+   "excess_mm": -8.6,
    "edition": "soft"
   },
   {
@@ -1023,9 +1023,9 @@
    "kind": "front",
    "label": "Welcome",
    "exempt": true,
-   "fill": 0.9638903192584964,
+   "fill": 0.9378701081359423,
    "over": false,
-   "excess_mm": -9.3,
+   "excess_mm": -16,
    "edition": "print"
   },
   {
@@ -1553,9 +1553,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.979965885684861,
+   "fill": 0.990859938208033,
    "over": false,
-   "excess_mm": -5.1,
+   "excess_mm": -2.3,
    "edition": "print"
   },
   {
@@ -1583,9 +1583,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9532215499485067,
+   "fill": 0.972869464469619,
    "over": false,
-   "excess_mm": -12,
+   "excess_mm": -7,
    "edition": "print"
   },
   {
@@ -2001,7 +2001,7 @@
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 13.45,
+  "mb": 13.39,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }

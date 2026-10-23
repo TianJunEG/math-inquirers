@@ -871,7 +871,7 @@
   {
    "id": "L4U02-C01",
    "tier": "quiz",
-   "text": "Round 25 962.   To the nearest 10: {bw}   100: {bw}   1000: {bw}",
+   "text": "Round 25 962 to the nearest 10 {bw}, 100 {bw}, 1000 {bw}",
    "answer": {
     "value": [
      "25960",
@@ -885,7 +885,7 @@
   {
    "id": "L4U02-C02",
    "tier": "quiz",
-   "text": "To the nearest 100, 8300 people came to a show. The least could be {b} and the greatest could be {b}.",
+   "text": "To the nearest 100, 8300 people came. Least: {b} Greatest: {b}",
    "answer": {
     "value": [
      "8250",
@@ -898,7 +898,7 @@
   {
    "id": "L4U02-C03",
    "tier": "quiz",
-   "text": "Cards: 4, 0, 7, 1, 8. Use each card once. Make the least odd 5-digit number. {bw}",
+   "text": "Cards: 4, 0, 7, 1, 8. Make the least odd 5-digit number. {bw}",
    "answer": {
     "value": [
      "10487"
@@ -910,7 +910,7 @@
   {
    "id": "L4U02-C04",
    "tier": "quiz",
-   "text": "Find the rule. Write the next 2 numbers. 53 200, 51 700, 50 200, {bw}, {bw}",
+   "text": "Next 2 numbers: 53 200, 51 700, 50 200, {bw}, {bw}",
    "answer": {
     "value": [
      "48700",

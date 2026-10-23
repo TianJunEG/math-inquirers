@@ -119,15 +119,15 @@ G.append(item(U+'-G04', 'go', 5, 'Some numbers round to 7000 to the nearest 1000
   hint='Find the first and last numbers for each rounding.',
   why='To the nearest 1000, the numbers are 6500 to 7499. To the nearest 100, they are 6950 to 7049. For example, 7400 is in the first list but rounds to 7400 to the nearest 100. The numbers in both lists are 6950 to 7049: 100 numbers.'))
 
-C.append(item(U+'-C01', 'quiz', None, 'Round 25 962.   To the nearest 10: {b}   100: {b}   1000: {b}',
+C.append(item(U+'-C01', 'quiz', None, 'Round 25 962 to the nearest 10 {b}, 100 {b}, 1000 {b}',
   ans=A(25960, 26000, 26000, text='25 960, 26 000, 26 000'),
   why='25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000.'))
-C.append(item(U+'-C02', 'quiz', None, 'To the nearest 100, 8300 people came to a show. The least could be {b} and the greatest could be {b}.',
+C.append(item(U+'-C02', 'quiz', None, 'To the nearest 100, 8300 people came. Least: {b} Greatest: {b}',
   ans=A(8250, 8349, text='Least 8250, greatest 8349'),
   why='8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the greatest is 8349.'))
-C.append(item(U+'-C03', 'quiz', None, 'Cards: 4, 0, 7, 1, 8. Use each card once. Make the least odd 5-digit number. {b}',
+C.append(item(U+'-C03', 'quiz', None, 'Cards: 4, 0, 7, 1, 8. Make the least odd 5-digit number. {b}',
   ans=A(10487), why='The ones digit must be 7 or 1. Ending in 7 lets 1 go first: 10 487. Ending in 1 needs 4 first: 40 781. 10 487 is less.'))
-C.append(item(U+'-C04', 'quiz', None, 'Find the rule. Write the next 2 numbers. 53 200, 51 700, 50 200, {b}, {b}',
+C.append(item(U+'-C04', 'quiz', None, 'Next 2 numbers: 53 200, 51 700, 50 200, {b}, {b}',
   ans=A(48700, 47200), why='Each number is 1500 less than the one before: 50 200 − 1500 = 48 700, then 47 200.'))
 
 unit = {'schema_version': 1, 'level': 4, 'unit': 2, 'id': U, 'title': 'Big Number Puzzles', 'topic': 'Numbers to 100 000', 'holiday_lesson': 2,

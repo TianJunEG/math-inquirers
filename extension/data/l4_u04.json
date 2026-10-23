@@ -978,7 +978,7 @@
    "tier": "go",
    "beyond": "Unit fractions",
    "page": 5,
-   "text": "Write each fraction as the sum of 2 different unit fractions (fractions with 1 on top).",
+   "text": "Write each fraction as a sum of 2 different unit fractions. A unit fraction has 1 on top.",
    "parts": [
     {
      "label": "a",
