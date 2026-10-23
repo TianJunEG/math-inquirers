@@ -566,23 +566,25 @@ PASS  S1: pupil pages name no part a pupil cannot find (no window, wall or scale
 PASS  S1: pupil pages avoid column/diagonal/divide (words not taught at P1)  
 PASS  S1: pupil pages, key and front matter name no price, quote or sale wording  
 PASS  S1: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)  
-PASS  S1: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address  6 DRAFT stamps
+PASS  S1: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line  6 DRAFT stamps
 PASS  S1: front matter has the 'typical order, schools vary' sentence and the booklet's terms  
 PASS  S1: pupil pages carry no DRAFT stamp  
 PASS  S1: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)  
 PASS  S1: the cover does not claim that every puzzle checks itself  
 PASS  S1: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)  
+PASS  S1: the licence page says it is an annual licence (one school year, renewable) and that a lawyer must approve the wording  
 PASS  S1: the licence page no longer calls the entity or year unconfirmed, and prints the registered office address  
 PASS  S2: pupil pages name no part a pupil cannot find (no window, wall or scale wording)  
 PASS  S2: pupil pages avoid column/diagonal/divide (words not taught at P1)  
 PASS  S2: pupil pages, key and front matter name no price, quote or sale wording  
 PASS  S2: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)  
-PASS  S2: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address  6 DRAFT stamps
+PASS  S2: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line  6 DRAFT stamps
 PASS  S2: front matter has the 'typical order, schools vary' sentence and the booklet's terms  
 PASS  S2: pupil pages carry no DRAFT stamp  
 PASS  S2: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)  
 PASS  S2: the cover does not claim that every puzzle checks itself  
 PASS  S2: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)  
+PASS  S2: the licence page says it is an annual licence (one school year, renewable) and that a lawyer must approve the wording  
 PASS  S2: the licence page no longer calls the entity or year unconfirmed, and prints the registered office address  
 PASS  o'clock and half past used for clock times in the Semester 2 key  
 PASS  S1: a 74-character school name keeps the footer on one line with the page code on every pupil page  []
@@ -772,14 +774,14 @@ PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of
 PASS  P1_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.81% vs greyscale)  20 pages
 PASS  P1_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 180, limit 40 per page)  
 PASS  P1_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 29.88% vs greyscale)  5 pages
-PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 141, limit 40 per page)  
+PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 134, limit 40 per page)  
 PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.92% vs greyscale)  10 pages
 PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 596, limit 90 per page)  
 PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.06% vs greyscale)  20 pages
 PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 176, limit 40 per page)  
 PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.03% vs greyscale)  5 pages
-PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 140, limit 40 per page)  
+PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 133, limit 40 per page)  
 PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.67% vs greyscale)  9 pages
 PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 708, limit 90 per page)  
 
-TOTAL 783 checks, 0 failed
+TOTAL 785 checks, 0 failed

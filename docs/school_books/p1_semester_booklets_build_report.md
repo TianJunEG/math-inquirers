@@ -24,7 +24,7 @@ Two booklets of 20 pupil pages each, built by `school/p1/build.py` and checked b
 | `P1_S1_Complete_Pack.pdf`, `P1_S2_Complete_Pack.pdf` | 25 and 25 |
 | `P1_S1_Answer_Key.pdf`, `P1_S2_Answer_Key.pdf` | 10 and 9 |
 
-Each booklet is 10 one-star and 10 two-star pages. Footers print both numbers, for example `S1-07 (P1-08)`. All 32 syllabus outcome lines (wording copied from the PDF, now also in `docs/moe/syllabus_by_level.md`) are exercised by at least one page; validate.py checks this and that every tag number belongs to the page's own outcome ids.
+Semester 1 is 10 one-star and 10 two-star pages. Semester 2 is 9 one-star and 11 two-star pages since the owner made P1-39 a two-star page (P39-TWO); no other page was rebalanced. Footers print both numbers, for example `S1-07 (P1-08)`. All 32 syllabus outcome lines (wording copied from the PDF, now also in `docs/moe/syllabus_by_level.md`) are exercised by at least one page; validate.py checks this and that every tag number belongs to the page's own outcome ids.
 
 The 20 new pages (final ids in build order):
 
@@ -141,3 +141,11 @@ validate.py: 783 checks, 0 failed; page counts unchanged. Changed pages viewed i
 - **Blank box:** the teacher notes now say that a box left blank gives no letter and the check cannot see it (MONEY from MONKEY on S1-10 and CLOT from CLOTH on S1-01 are only reachable that way); the P1-21 note no longer claims the wrong operation never spells the word without that condition. The pages themselves were not changed.
 - **Object margin:** counted pictures sized about 4% larger (apple 11.5, flower 10.9, star 9.6, ball 9.4, cat 10.2, drum 10.6, boat 10.9 mm cells), so every glyph is now about 8.3 mm or more rather than 8.0 to 8.1. P1-13 was regenerated (bag pitch 11.0 mm, totals from 6 to 16, new code table and key) to fit.
 - **S1-04 marks:** NOT changed. Marks of 2.0 mm half-size (about 25% larger) were tried; every seed tried then produced a repeated question in the colour library (V2b), and 1.9 is the size at which the page is unique and clear. The marks in the check strip are larger, as before.
+
+## Owner decisions after round 3
+
+- **P39-TWO:** P1-39 Share and Group (S2-02) is now two stars on the page header, the contents table and the key. Semester 2 therefore has 9 one-star and 11 two-star pages (was 10 / 10); Semester 1 is unchanged at 10 / 10. validate.py now expects 10 / 10 for Semester 1 and 9 / 11 for Semester 2. No other page was changed; tell me if you want a two-star page swapped to one star to restore the balance.
+- **PUBLISHER-OK:** both covers print "Preciouslyours Pte Ltd, trading as Math Inquirers".
+- **LICENCE-ANNUAL:** the licence page has a Term section: an annual licence covering one school year, renewable; wording to be approved by a lawyer before any school receives the booklet. The DRAFT banner on the licence page now lists only the licence wording (lawyer approval) as open; the cover banner lists only that the cover wording and title are not final. validate.py asserts the publisher line, the annual licence sentence and the lawyer sentence (785 checks, 0 failed).
+
+Items for the owner now still open: licence wording (lawyer approval), the final cover title wording, pupil trial, coin-art comparison, CBC gallery diagram fixes, and the one not-affiliated sentence (kept on the licence page only).
