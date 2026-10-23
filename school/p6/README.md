@@ -5,7 +5,7 @@ Every page is self-checking, pure black and white, with the school name line and
 Not for sale as is: a pilot for owner review. Cover, licence, teacher notes and keys carry DRAFT stamps, the business email pypteltd@gmail.com and the registered office address (66 Tannery Ln, Singapore 347805); the licence is an annual licence (one school year, renewable) whose wording is for a lawyer to approve.
 Plan: `docs/school_books/p6_semester_booklets_plan.md`; build report and open items: `docs/school_books/p6_semester_booklets_build_report.md`; outcome wording: `docs/school_books/p6_outcome_wording.md`; owner decisions: `docs/terms/owner_decisions.md`.
 
-This pipeline was copied from `school/p2` (P2 is not touched by it) and parameterised for Primary 6: the Standard-track outcomes of our summary (docs/moe/syllabus_by_level.md pages 43 and 44; the Ministry PDF is not in the repository), reading load of 18 words a sentence, fractions divided by whole numbers and fractions, ratio, percentage, algebra with one letter, circles and composite figures, volume with square and cube roots, angles in figures, average, and a vendored colour-by-code library (`cbc_vendor`).
+This pipeline was copied from `school/p2` (P2 is not touched by it) and parameterised for Primary 6: the Standard-track outcomes of our summary (Primary 6 pages 43 and 44 and the Foundation pages 49 and 50 of the syllabus PDF, read 23 Oct 2026), reading load of 18 words a sentence, fractions divided by whole numbers and fractions, ratio, percentage, algebra with one letter, circles and composite figures, volume with square and cube roots, angles in figures, average, and a vendored colour-by-code library (`cbc_vendor`).
 
 ## Regenerate
 
@@ -28,7 +28,7 @@ Outputs in `out/`: `P6_S1_Puzzles.pdf`, `P6_S2_Puzzles.pdf` (20 pages each, phot
 
 - `gen/outcomes.py`: the Primary 6 outcome lines (our summary wording, the Ministry PDF is not in the repository), the revision lines, and the page order of each booklet (the only place the semester split lives).
 - `gen/kit.py` and `gen/kit6.py`: safe code words (distinct letters, one arrangement, no wrong placement spells another word), code-word, route, choice, matching, ordering and domino-loop page makers with their checks. `gen/common.py`: code tables and word lists. `gen/figs.py`, `gen/angles.py`: circle, composite, cuboid, pie, net and angle figures with readers that re-measure the printed drawing. `gen/css_p6.py`: CSS.
-- Page modules: `gen/pages_a.py` to `pages_f.py` (P6-01 to P6-40, except the colour pages), `gen/pages_cbc.py` (P6-09, 32, 40, colour by code via the vendored copy in `cbc_vendor`, with a P6 bank `banks_p6.py`).
+- Page modules: `gen/pages_a.py` to `pages_g.py` (P6-01 to P6-40, except the colour pages), `gen/pages_cbc.py` (P6-09, 32, 40, colour by code via the vendored copy in `cbc_vendor`, with a P6 bank `banks_p6.py`).
   Each page is made from a seed, re-solved by separate solver code that reads the PRINTED text or drawing, and handed to `validate.py` with a `model` of its wrong answers.
 - `render.py` HTML/CSS, page frame, front matter and key per booklet. `build.py` makes the PDFs. `validate.py` runs all checks. `similarity_check.py` compares the pupil text with the private, gitignored sources (counts only). `devcheck.py` quick layout check.
 
@@ -59,7 +59,7 @@ Outputs in `out/`: `P6_S1_Puzzles.pdf`, `P6_S2_Puzzles.pdf` (20 pages each, phot
 | S2-01 (P6-21) | Shaded Shapes | 1 | Code-breaker (composite areas) |
 | S2-02 (P6-22) | Perimeter Pick | 2 | Choice table (perimeters) |
 | S2-03 (P6-23) | Cuboid Corners | 1 | Code-breaker (missing dimension) |
-| S2-04 (P6-24) | Roots and Edges | 1 | Maze / path |
+| S2-04 (P6-24) | Root Maze | 1 | Maze / path |
 | S2-05 (P6-25) | Base and Height | 2 | Matching (base area, height, face) |
 | S2-06 (P6-26) | Tank Stories | 2 | Code-breaker (tanks) |
 | S2-07 (P6-27) | Angles in Figures | 1 | Code-breaker (unknown angles) |
@@ -69,9 +69,9 @@ Outputs in `out/`: `P6_S1_Puzzles.pdf`, `P6_S2_Puzzles.pdf` (20 pages each, phot
 | S2-11 (P6-31) | Missing Value | 2 | Code-breaker (average, total and number) |
 | S2-12 (P6-32) | Colour the Butterfly | 2 | Colour by code (pupils colour with their own crayons) |
 | S2-13 (P6-33) | Pie Chart | 2 | Code-breaker (pie chart) |
-| S2-14 (P6-34) | Net or Not | 1 | Choice table (nets of a cube) |
-| S2-15 (P6-35) | Taps and Rates | 2 | Code-breaker (rates) |
-| S2-16 (P6-36) | Mixed Numbers | 1 | Ordering (mixed number answers) |
+| S2-14 (P6-34) | Fraction Order | 1 | Ordering (fraction divisions) |
+| S2-15 (P6-35) | Ratio Stories | 2 | Code-breaker (ratio stories) |
+| S2-16 (P6-36) | Circle Choices | 1 | Choice table (circles) |
 | S2-17 (P6-37) | Decimal Maze | 1 | Maze / path |
 | S2-18 (P6-38) | GST and Discount | 1 | Code-breaker (GST, discount, interest) |
 | S2-19 (P6-39) | Mixed Bag | 2 | Domino loop (mixed) |
