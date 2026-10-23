@@ -87,7 +87,7 @@ def solve_prices(items, prices, clues):
 def page16():
     rng = random.Random(1616)
     items = ["pen", "book", "ball", "kite", "cup"]
-    word = "MONDAY"            # letters 1-5 sit beside the prices; letter 6 comes from the total
+    word = "FROZEN"            # letters 1-5 sit beside the prices; letter 6 comes from the total
     while True:
         prices = sorted(rng.sample([3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 18, 20], 5))
         if prices[-1] - prices[0] >= 10: break
@@ -318,7 +318,7 @@ def page06():
 # ---------------------------------------------------------------- P18 (two stars: times to 5 minutes, 1 hour or half an hour later)
 def page18():
     rng = random.Random(1818)
-    word = "CROWN"
+    word = "FRESH"
     domain = [tstr(h, m) for h in range(1, 13) for m in range(0, 60, 5)]
     while True:
         qs = []
@@ -383,7 +383,7 @@ def page18():
 # ---------------------------------------------------------------- P19
 def page19():
     rng = random.Random(1919)
-    word = "PLANT"
+    word = "ABOVE"
     types = ["rect", "tri", "circle", "half", "quarter"]
     while True:
         counts = [1, 2, 3, 4, 5]; rng.shuffle(counts)

@@ -25,7 +25,7 @@ def solve_riddle(clues, lo=1, hi=100):
 
 def page02():
     rng = random.Random(202)
-    word = "BRICK"
+    word = "JUICE"
     targets, riddles = [], []
     while len(riddles) < 5:
         t = rng.randint(23, 97)

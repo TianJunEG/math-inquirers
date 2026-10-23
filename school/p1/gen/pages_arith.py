@@ -135,7 +135,7 @@ def page09():
 # ---------------------------------------------------------------- P10
 def page10():
     rng = random.Random(1010)
-    word = "PENCIL"
+    word = "COUSIN"
     while True:
         while True:
             items = []
@@ -323,7 +323,7 @@ def read_share(s, mode):
 
 def page03():
     rng = random.Random(303)
-    word = "MONKEY"
+    word = "SHADOW"
     kinds_ = ["apple", "star", "fish", "balloon"]
     while True:
         items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
