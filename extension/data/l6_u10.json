@@ -713,7 +713,7 @@
   {
    "id": "L6U10-G01",
    "tier": "go",
-   "text": "A taxi fare is 7 dollars for 2 km and 16 dollars for 5 km, by one rule. Plan the meter.",
+   "text": "A taxi costs 7 dollars for 2 km and 16 dollars for 5 km, by one rule.",
    "page": 5,
    "parts": [
     {
@@ -759,17 +759,18 @@
       "look",
       "say (answer × ? + ?)"
      ]
-    ]
+    ],
+    "fs": 15
    },
    "hint": "How many km apart are 2 km and 5 km? How much more is the fare?",
-   "explanation": "From 2 km to 5 km is 3 km more, and the fare rises by 16 − 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 × 2 + 1, so there is a 1 dollar start fee. The rule is n × 3 + 1. A 20 km ride costs 3 × 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, test with a ride you can price by hand first.)",
+   "explanation": "From 2 km to 5 km is 3 km more, and the fare rises by 16 − 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 × 2 + 1, so there is a 1 dollar start fee. The rule is n × 3 + 1. A 20 km ride costs 3 × 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, start with a ride you can check by hand.)",
    "figright": true,
    "partsrow": true
   },
   {
    "id": "L6U10-G02",
    "tier": "go",
-   "text": "A spinner has 8 equal parts numbered 1 to 8. This program spins it 800 times and counts the numbers greater than 6.",
+   "text": "A program spins an 8-part spinner (1 to 8) 800 times and counts the numbers over 6.",
    "page": 5,
    "parts": [
     {
@@ -830,8 +831,10 @@
       "look",
       "say (count)"
      ]
-    ]
+    ],
+    "fs": 15
    },
+   "hint": "Count the numbers that pass the test.",
    "explanation": "The numbers greater than 6 are 7 and 8, which is 2 results out of 8, so 1/4. 1/4 × 800 = 200. The numbers greater than 4 are 5, 6, 7 and 8, which is 4 out of 8, so the count would be 1/2 × 800 = 400. A real run is near these numbers, not exactly equal.",
    "figside": true
   },
@@ -909,8 +912,10 @@
       "look",
       "say (steps)"
      ]
-    ]
+    ],
+    "fs": 15
    },
+   "hint": "Write n after every step.",
    "explanation": "n = 6: 6, 3, 10, 5, 16, 8, 4, 2, 1. That is 8 steps (halve if even, or 3n + 1 if odd). n = 7: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 is 16 steps. The largest number reached from 7 is 52.",
    "figside": true
   },

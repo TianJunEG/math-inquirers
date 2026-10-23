@@ -434,7 +434,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Ali has the {b}",
+     "text": "Ali has the {bw}",
      "answer": {
       "value": [
        "banana"
@@ -444,7 +444,7 @@
     },
     {
      "label": "b",
-     "text": "Mei has the {b}",
+     "text": "Mei has the {bw}",
      "answer": {
       "value": [
        "mango"
@@ -454,7 +454,7 @@
     },
     {
      "label": "c",
-     "text": "Ravi has the {b}",
+     "text": "Ravi has the {bw}",
      "answer": {
       "value": [
        "apple"
@@ -588,7 +588,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Ali: {b}",
+     "text": "Ali: {bw}",
      "answer": {
       "value": [
        "tennis"
@@ -598,7 +598,7 @@
     },
     {
      "label": "b",
-     "text": "Mei: {b}",
+     "text": "Mei: {bw}",
      "answer": {
       "value": [
        "chess"
@@ -608,7 +608,7 @@
     },
     {
      "label": "c",
-     "text": "Siti: {b}",
+     "text": "Siti: {bw}",
      "answer": {
       "value": [
        "art"
@@ -618,7 +618,7 @@
     },
     {
      "label": "d",
-     "text": "Ben: {b}",
+     "text": "Ben: {bw}",
      "answer": {
       "value": [
        "swimming"
@@ -691,11 +691,11 @@
    "id": "L2U10-T03",
    "tier": "think",
    "page": 4,
-   "text": "Mei saves $2 on day 1, $4 on day 2, $6 on day 3, and so on. Ali saves $5 every day. Compare the totals saved so far.",
+   "text": "Pump A adds 2 l in minute 1, 4 l in minute 2, 6 l in minute 3, and so on. Pump B adds 5 l every minute. Compare the totals in the tank.",
    "parts": [
     {
      "label": "a",
-     "text": "Mei first has more than Ali on day {b}.",
+     "text": "Pump A first adds more than pump B by minute {b}.",
      "answer": {
       "value": [
        "5"
@@ -705,7 +705,7 @@
     },
     {
      "label": "b",
-     "text": "Then Mei has $ {b} more.",
+     "text": "Then pump A has {b} l more.",
      "answer": {
       "value": [
        "5"
@@ -714,8 +714,8 @@
      }
     }
    ],
-   "explanation": "Mei saves 2, 4, 6, 8, 10 so her totals are 2, 6, 12, 20, 30. Ali saves 5 a day: 5, 10, 15, 20, 25. On day 4 they are level at $20. On day 5 Mei has $30 and Ali has $25, so Mei has $5 more.",
-   "hint": "Add each day to the total of the day before.",
+   "explanation": "Pump A adds 2, 4, 6, 8, 10 so its totals are 2, 6, 12, 20, 30. Pump B adds 5 a minute: 5, 10, 15, 20, 25. At minute 4 they are level at 20 l. At minute 5 pump A has 30 l and pump B has 25 l, so pump A has 5 l more.",
+   "hint": "Add each minute to the total of the minute before.",
    "partsrow": true
   },
   {

@@ -51,7 +51,7 @@ items = [
  I('start', 3, 'Shop deals.', partsrow=True, parts=[
    P('a', '4 pencils cost $1. 12 pencils cost $ {b}', '3'), P('b', '5 stickers cost $2. 20 stickers cost $ {b}', '8'), P('c', '$6 buys {b} stickers.', '15')],
    why='(a) 12 pencils is 3 groups of 4, so 3 × $1 = $3. (b) 20 stickers is 4 groups of 5, so 4 × $2 = $8. (c) $6 is 3 groups of $2, so 3 × 5 = 15 stickers.'),
- I('start', 3, 'Ali buys 2 toys for exactly $12.50. Which 2 toys? {b} and {b}', figure=tags([('Car', '$4.50'), ('Ball', '$6.25'), ('Top', '$8.00'), ('Kite', '$3.75')], width_mm=150), value=['Car', 'Top'], atext='Car and Top', unordered=True,
+ I('start', 3, 'Ali buys 2 toys for exactly $12.50. Which 2? {bw} {bw}', figure=tags([('Car', '$4.50'), ('Ball', '$6.25'), ('Top', '$8.00'), ('Kite', '$3.75')], width_mm=150), value=['Car', 'Top'], atext='Car and Top', unordered=True,
    why='$4.50 + $8.00 = $12.50. Check the others: Car + Ball = $10.75, Car + Kite = $8.25, Ball + Top = $14.25, Ball + Kite = $10.00, Top + Kite = $11.75. Only Car and Top.'),
  I('start', 3, 'Mei pays exactly 95¢ with 4 coins. Use 5¢, 10¢, 20¢ or 50¢ coins. Write the coins. {b}¢ + {b}¢ + {b}¢ + {b}¢', value=['50', '20', '20', '5'], atext='50¢ + 20¢ + 20¢ + 5¢ (any order)', unordered=True,
    why='Start with 50¢. 45¢ is left for 3 coins. 20¢ + 20¢ = 40¢, and 5¢ makes 45¢. Check: 50 + 20 + 20 + 5 = 95. No other 4 coins make 95¢.'),

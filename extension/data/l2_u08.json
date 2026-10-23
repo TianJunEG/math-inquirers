@@ -42,11 +42,11 @@
      {
       "heights": [
        [
-        2,
+        3,
         1
        ],
        [
-        2,
+        3,
         1
        ]
       ]
@@ -55,10 +55,10 @@
     "width_mm": 36
    },
    "steps": [
-    "Count one row: 2 + 1 = 3 cubes.",
-    "The 2 rows are the same: 3 + 3 = 6 cubes."
+    "Count one row: 3 + 1 = 4 cubes.",
+    "The 2 rows are the same: 4 + 4 = 8 cubes."
    ],
-   "answer": "The stack has 6 cubes."
+   "answer": "The stack has 8 cubes."
   },
   "pair": true,
   "howto": {

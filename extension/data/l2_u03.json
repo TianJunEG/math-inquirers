@@ -627,11 +627,11 @@
    "id": "L2U03-T01",
    "tier": "think",
    "page": 4,
-   "text": "A shop has bicycles (2 wheels) and tricycles (3 wheels), at least 1 of each. There are 21 wheels altogether. Find ALL the ways.",
+   "text": "A yard has scooters (2 wheels) and trikes (3 wheels), at least 1 of each. Altogether the vehicles have 21 wheels. List ALL the ways.",
    "figure": {
     "type": "l2_table",
     "cols": [
-     "Tricycles",
+     "Trikes",
      "1",
      "2",
      "3",
@@ -693,8 +693,8 @@
      }
     }
    ],
-   "explanation": "Tricycles have 3 wheels. 1 tricycle leaves 18 wheels: 9 bicycles. 3 leave 12: 6 bicycles. 5 leave 6: 3 bicycles. 2, 4 and 6 leave an odd number and 7 leaves none. So 3 ways, with 10, 9 and 8 vehicles. The fewest is 8.",
-   "hint": "Bicycles use 2 wheels each. So wheels left must be even."
+   "explanation": "Trikes have 3 wheels. 1 trike leaves 18 wheels: 9 scooters. 3 leave 12: 6 scooters. 5 leave 6: 3 scooters. 2, 4 and 6 leave an odd number and 7 leaves none. So 3 ways, with 10, 9 and 8 vehicles. The fewest is 8.",
+   "hint": "Scooters use 2 wheels each. So wheels left must be even."
   },
   {
    "id": "L2U03-T02",

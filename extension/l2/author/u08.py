@@ -19,9 +19,9 @@ learn = {
   'answer': '5 squares in all.'},
  'example2': {
   'problem': 'Count the cubes in this stack. It is 2 cubes deep. The back is like the front.',
-  'figure': {'type': 'l2_cubes', 'stacks': [{'heights': [[2, 1], [2, 1]]}], 'width_mm': 36},
-  'steps': ['Count one row: 2 + 1 = 3 cubes.', 'The 2 rows are the same: 3 + 3 = 6 cubes.'],
-  'answer': 'The stack has 6 cubes.'},
+  'figure': {'type': 'l2_cubes', 'stacks': [{'heights': [[3, 1], [3, 1]]}], 'width_mm': 36},
+  'steps': ['Count one row: 3 + 1 = 4 cubes.', 'The 2 rows are the same: 4 + 4 = 8 cubes.'],
+  'answer': 'The stack has 8 cubes.'},
  'pair': True,
  'howto': {'title': 'How to count shapes', 'steps': ['Count the smallest shapes first.', 'Then count the next size up.', 'Keep going to the largest.', 'Add the counts.']},
  'facts': {'title': 'Solids', 'lines': ['Cube: 6 flat square faces.', 'Cylinder: 2 flat circles and 1 curved face.', 'Cone: 1 flat circle and 1 curved face.', 'Sphere: no flat face.', 'Stacks: count row by row.']},

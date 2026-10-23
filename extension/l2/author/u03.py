@@ -54,11 +54,11 @@ items = [
    P('d', 'Siti shares them with her 3 friends. Each person gets {b}', '6')],
    why='(a) 24 ÷ 3 = 8. (b) 24 ÷ 4 = 6. (c) 10 × 2 = 20, so each gets 2 and 24 - 20 = 4 are left. (d) Siti and her 3 friends are 4 people, so 24 ÷ 4 = 6.'),
  # Think harder
- I('think', 4, 'A shop has bicycles (2 wheels) and tricycles (3 wheels), at least 1 of each. There are 21 wheels altogether. Find ALL the ways.', parts=[
+ I('think', 4, 'A yard has scooters (2 wheels) and trikes (3 wheels), at least 1 of each. Altogether the vehicles have 21 wheels. List ALL the ways.', parts=[
    P('a', 'How many different ways are there? {b}', '3'), P('b', 'What is the fewest number of vehicles you can have? {b}', '8')],
-   figure={'type': 'l2_table', 'cols': ['Tricycles', '1', '2', '3', '4', '5', '6'], 'rows': [['Their wheels', '3', '6', '9', '12', '15', '18'], ['Wheels left', None, None, None, None, None, None]], 'first_bold': True, 'widths': [2.2, 1, 1, 1, 1, 1, 1], 'width_mm': 150},
-   hint='Bicycles use 2 wheels each. So wheels left must be even.',
-   why='Tricycles have 3 wheels. 1 tricycle leaves 18 wheels: 9 bicycles. 3 leave 12: 6 bicycles. 5 leave 6: 3 bicycles. 2, 4 and 6 leave an odd number and 7 leaves none. So 3 ways, with 10, 9 and 8 vehicles. The fewest is 8.'),
+   figure={'type': 'l2_table', 'cols': ['Trikes', '1', '2', '3', '4', '5', '6'], 'rows': [['Their wheels', '3', '6', '9', '12', '15', '18'], ['Wheels left', None, None, None, None, None, None]], 'first_bold': True, 'widths': [2.2, 1, 1, 1, 1, 1, 1], 'width_mm': 150},
+   hint='Scooters use 2 wheels each. So wheels left must be even.',
+   why='Trikes have 3 wheels. 1 trike leaves 18 wheels: 9 scooters. 3 leave 12: 6 scooters. 5 leave 6: 3 scooters. 2, 4 and 6 leave an odd number and 7 leaves none. So 3 ways, with 10, 9 and 8 vehicles. The fewest is 8.'),
  I('think', 4, 'A pen has 6 animals. Each is a hen (2 legs) or a pig (4 legs). All 6 may be hens. Mei counts the legs. Could she count this number?', partsrow=True, parts=[
    P('a', '18 legs   {circ:Yes|No}', 'Yes'), P('b', '25 legs   {circ:Yes|No}', 'No'), P('c', '26 legs   {circ:Yes|No}', 'No'), P('d', '12 legs   {circ:Yes|No}', 'Yes')],
    space={'rows': ['Why 25 is not possible:']}, hint='All hens is 12 legs. Each swap adds 2 legs. All pigs is 24.',

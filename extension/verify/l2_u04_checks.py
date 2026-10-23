@@ -107,8 +107,8 @@ def _():
 
 @check('S10')
 def _():
-    t = steps(4, 2, 10)
-    return {'a': s(t[3:6]), 'b': s([t[9]]), 'c': s([t.index(18) + 1])}
+    t = steps(5, 2, 10)
+    return {'a': s(t[3:6]), 'b': s([t[9]]), 'c': s([t.index(19) + 1])}
 
 
 @check('T01')
@@ -119,7 +119,7 @@ def _():
         lands.add(pos)
         hop = 1 if hop == 3 else 3
     Y = lambda n: 'Yes' if n in lands else 'No'
-    return {'a': [Y(27)], 'b': [Y(30)], 'c': [Y(40)]}
+    return {'a': [Y(27)], 'b': [Y(26)], 'c': [Y(40)]}
 
 
 @check('T02')

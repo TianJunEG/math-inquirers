@@ -9,7 +9,7 @@
  "goal": "I can solve balance puzzles and pouring puzzles. I can change units. I can tell the time to 5 minutes and find how long.",
  "learn": {
   "tight": true,
-  "intro": "A level balance has the same mass on both sides, so you can swap a thing for what balances it. On a clock the short hand shows the hour and the long hand shows the minutes. Pour jugs one step at a time.",
+  "intro": "A level balance has the same mass on both sides, so you can swap things. The short hand shows hours. The long hand shows minutes.",
   "example": {
    "problem": "The scale is level. 1 melon balances 3 plums. 1 plum has a mass of 50 g. Find the mass of the melon.",
    "figure": {
@@ -36,23 +36,23 @@
    "answer": "The melon is 150 g."
   },
   "example2": {
-   "problem": "A lesson starts at 8:50 am and lasts 25 minutes. When does it end?",
+   "problem": "A concert starts at 7:55 pm and lasts 30 minutes. When does it end?",
    "figure": {
     "type": "l2_clock",
     "clocks": [
      {
-      "h": 8,
-      "m": 50
+      "h": 7,
+      "m": 55
      }
     ],
     "width_mm": 30
    },
    "steps": [
-    "8:50 to 9:00 is 10 minutes.",
-    "25 - 10 = 15 minutes more.",
-    "So it ends at 9:15 am."
+    "7:55 to 8:00 is 5 minutes.",
+    "30 - 5 = 25 minutes more.",
+    "So it ends at 8:25 pm."
    ],
-   "answer": "It ends at 9:15 am."
+   "answer": "It ends at 8:25 pm."
   },
   "pair": true,
   "howto": {
@@ -69,7 +69,8 @@
    "lines": [
     "am: midnight to noon. pm: noon to midnight.",
     "1 kg = 1000 g.   1 m = 100 cm.",
-    "The long hand on 7 means 35 minutes.",
+    "Long hand: count in 5s.",
+    "Short hand: read the smaller number.",
     "60 minutes = 1 hour."
    ]
   },

@@ -2010,5 +2010,12 @@
   "soft page 3 (Welcome): content overflows the page (natural height minus body 3 mm)"
  ],
  "soft_pages": 100,
- "print_pages": 100
+ "print_pages": 100,
+ "bw_pipeline": {
+  "pages": 100,
+  "dpi": 600,
+  "mb": 13.03,
+  "check_bw_failures": 0,
+  "pale_tint_dropped_max": 0.0036
+ }
 }

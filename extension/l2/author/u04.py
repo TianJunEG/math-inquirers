@@ -22,7 +22,7 @@ learn = {
 TB = lambda cols, rows, w=150, ws=None, **kw: {'type': 'l2_table', 'cols': cols, 'rows': rows, 'first_bold': True, 'widths': ws or [2.2] + [1] * (len(cols) - 1), 'width_mm': w, **kw}
 
 items = [
- I('start', 1, 'Count back in 5s. Fill in the next numbers.   60,   55,   50,   {b},   {b},   {b}', value=['45', '40', '35'], atext='45, 40, 35', why='Take away 5 each time: 50 - 5 = 45, 45 - 5 = 40, 40 - 5 = 35. These numbers are in the 5 times table.'),
+ I('start', 1, 'Each step takes away 5. Write the next numbers.   60,   55,   50,   {b},   {b},   {b}', value=['45', '40', '35'], atext='45, 40, 35', why='Take away 5 each time: 50 - 5 = 45, 45 - 5 = 40, 40 - 5 = 35. These numbers are in the 5 times table.'),
  I('start', 1, 'This pattern repeats. Here are places 1 to 10.', figure=pat(['star', 'square', 'square', 'circle', 'star', 'square', 'square', 'circle', 'star', 'square'], width_mm=150),
    partsrow=True, parts=[P('a', 'Place 16 is a   {circ:star|square|circle}', 'circle'), P('b', 'Place 22 is a   {circ:star|square|circle}', 'square'), P('c', 'Place 33 is a   {circ:star|square|circle}', 'star')],
    why='One group has 4 shapes. (a) 16 ends a group: a circle. (b) 20 ends a group, so 21 is a star and 22 is a square. (c) 32 ends a group, so 33 is a star.'),
@@ -50,15 +50,15 @@ items = [
  I('start', 3, 'A pattern goes triangle, circle, circle, again and again. Here are places 1 to 9.', figure=pat(['triangle', 'circle', 'circle'] * 3, width_mm=130),
    partsrow=True, parts=[P('a', '24 shapes make {b} groups of 3.', '8'), P('b', 'There are {b} circles in the first 24 shapes.', '16'), P('c', 'There are {b} triangles in the first 24 shapes.', '8')],
    why='(a) 24 ÷ 3 = 8 groups. (b) Each group has 2 circles: 8 × 2 = 16. (c) Each group has 1 triangle: 8 × 1 = 8. Check: 16 + 8 = 24.'),
- I('start', 3, 'Towers of cubes grow in the same way. Tower 1 is 4 cubes tall. Tower 2 is 6 cubes tall. Tower 3 is 8 cubes tall.', figure=TB(['Tower', '1', '2', '3', '4', '5', '6'], [['Cubes', '4', '6', '8', None, None, None]]),
-   parts=[P('a', 'Fill in the table.', ['10', '12', '14'], '10, 12, 14', lst=True), P('b', 'Tower 10 has {b} cubes.', '22'), P('c', 'Tower {b} has 18 cubes.', '8')],
+ I('start', 3, 'Towers of cubes grow in the same way. Tower 1 is 5 cubes tall. Tower 2 is 7 cubes tall. Tower 3 is 9 cubes tall.', figure=TB(['Tower', '1', '2', '3', '4', '5', '6'], [['Cubes', '5', '7', '9', None, None, None]]),
+   parts=[P('a', 'Fill in the table.', ['11', '13', '15'], '11, 13, 15', lst=True), P('b', 'Tower 10 has {b} cubes.', '23'), P('c', 'Tower {b} has 19 cubes.', '8')],
    space={'rows': ['Working:']},
-   why='Each tower has 2 more cubes: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22. Tower 10 has 22 cubes and tower 8 has 18 cubes. Another way: tower n has n × 2 + 2 cubes, so tower 10 has 20 + 2 = 22.'),
+   why='Each tower has 2 more cubes: 5, 7, 9, 11, 13, 15, 17, 19, 21, 23. Tower 10 has 23 cubes and tower 8 has 19 cubes. Another way: tower n has n × 2 + 3 cubes, so tower 10 has 20 + 3 = 23.'),
  # Think harder
- I('think', 4, 'A frog starts at 0. It hops 3, then 1, then 3, then 1 ... It lands on 3, 4, 7, 8, 11 ...', parts=[
-   P('a', 'Will it land on 27? {circ:Yes|No}', 'Yes'), P('b', 'Will it land on 30? {circ:Yes|No}', 'No'), P('c', 'Will it land on 40? {circ:Yes|No}', 'Yes')],
+ I('think', 4, 'A beetle starts at 0. It hops 3, then 1, then 3, then 1 ... It lands on 3, 4, 7, 8, 11 ...', parts=[
+   P('a', 'Will it land on 27? {circ:Yes|No}', 'Yes'), P('b', 'Will it land on 26? {circ:Yes|No}', 'No'), P('c', 'Will it land on 40? {circ:Yes|No}', 'Yes')],
    space={'rows': ['Working:']}, hint='Write the landing places. Look at the 4 times table.',
-   why='Every 2 hops the frog goes 4 further: 3, 4, 7, 8, 11, 12, 15, 16 ... It lands on the 4 times table and on the number 3 before each one. 27 = 24 + 3: yes. 30 is between 28 and 31: no. 40 = 4 × 10: yes.'),
+   why='Every 2 hops the frog goes 4 further: 3, 4, 7, 8, 11, 12, 15, 16 ... It lands on the 4 times table and on the number 3 before each one. 27 = 24 + 3: yes. 26 is between 24 and 27: no. 40 = 4 × 10: yes.'),
  I('think', 4, 'This pattern repeats. Here are places 1 to 10. Could a star be in this place?', figure=pat(['square', 'star', 'circle', 'circle', 'triangle'] * 2, width_mm=140),
    partsrow=True, parts=[P('a', 'Place 17   {circ:Yes|No}', 'Yes'), P('b', 'Place 22   {circ:Yes|No}', 'Yes'), P('c', 'Place 35   {circ:Yes|No}', 'No'), P('d', 'Place 47   {circ:Yes|No}', 'Yes')],
    hint='Stars are 2 more than a number in the 5 times table.',

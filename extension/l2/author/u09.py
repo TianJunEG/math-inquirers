@@ -9,20 +9,20 @@ def scales(*sc, **kw):
 
 learn = {
  'tight': True,
- 'intro': 'A level balance has the same mass on both sides, so you can swap a thing for what balances it. On a clock the short hand shows the hour and the long hand shows the minutes. Pour jugs one step at a time.',
+ 'intro': 'A level balance has the same mass on both sides, so you can swap things. The short hand shows hours. The long hand shows minutes.',
  'example': {
   'problem': 'The scale is level. 1 melon balances 3 plums. 1 plum has a mass of 50 g. Find the mass of the melon.',
   'figure': {'type': 'l2_scale', 'scales': [{'left': ['melon'], 'right': ['plum', 'plum', 'plum']}], 'width_mm': 50},
   'steps': ['The melon is as heavy as 3 plums.', '3 plums: 3 × 50 g = 150 g.', 'So the melon is 150 g.'],
   'answer': 'The melon is 150 g.'},
  'example2': {
-  'problem': 'A lesson starts at 8:50 am and lasts 25 minutes. When does it end?',
-  'figure': {'type': 'l2_clock', 'clocks': [{'h': 8, 'm': 50}], 'width_mm': 30},
-  'steps': ['8:50 to 9:00 is 10 minutes.', '25 - 10 = 15 minutes more.', 'So it ends at 9:15 am.'],
-  'answer': 'It ends at 9:15 am.'},
+  'problem': 'A concert starts at 7:55 pm and lasts 30 minutes. When does it end?',
+  'figure': {'type': 'l2_clock', 'clocks': [{'h': 7, 'm': 55}], 'width_mm': 30},
+  'steps': ['7:55 to 8:00 is 5 minutes.', '30 - 5 = 25 minutes more.', 'So it ends at 8:25 pm.'],
+  'answer': 'It ends at 8:25 pm.'},
  'pair': True,
  'howto': {'title': 'How to start', 'steps': ['Balance: both sides are equal. Swap things.', 'Time: count on to the next hour first.', 'Jugs: write both amounts after each pour.', 'Check your answer.']},
- 'facts': {'title': 'Units and time', 'lines': ['am: midnight to noon. pm: noon to midnight.', '1 kg = 1000 g.   1 m = 100 cm.', 'The long hand on 7 means 35 minutes.', '60 minutes = 1 hour.']},
+ 'facts': {'title': 'Units and time', 'lines': ['am: midnight to noon. pm: noon to midnight.', '1 kg = 1000 g.   1 m = 100 cm.', 'Long hand: count in 5s.', 'Short hand: read the smaller number.', '60 minutes = 1 hour.']},
  'try': {'text': 'One tin balances 4 pens. One pen has a mass of 25 g. Find the mass of the tin. {b} g', 'answer': A('100'),
          'explanation': 'The tin is as heavy as 4 pens. 4 × 25 g = 100 g. Check: 25 + 25 + 25 + 25 = 100.'}}
 

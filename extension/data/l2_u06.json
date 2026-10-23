@@ -475,7 +475,7 @@
    "id": "L2U06-S09",
    "tier": "start",
    "page": 3,
-   "text": "Ali buys 2 toys for exactly $12.50. Which 2 toys? {b} and {b}",
+   "text": "Ali buys 2 toys for exactly $12.50. Which 2? {bw} {bw}",
    "figure": {
     "type": "l2_tags",
     "items": [
