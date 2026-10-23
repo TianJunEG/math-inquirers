@@ -158,3 +158,8 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 
 .legend svg{color:var(--ink)}
 .legend svg *{fill:inherit;stroke:inherit}
+
+.stem,.part>span:last-child{white-space:pre-wrap}
+
+.rw.free{height:auto;min-height:var(--line,9.5mm);margin:0}
+.rw.free .abox{width:13mm;height:10mm;margin:0.3mm 1mm}

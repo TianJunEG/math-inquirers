@@ -412,7 +412,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "How many more stickers does he need to get 10 stickers? {b} stickers",
+     "text": "He wants 10 stickers. How many more does he need? {b} stickers",
      "answer": {
       "value": [
        "2"
@@ -422,7 +422,7 @@
     },
     {
      "label": "b",
-     "text": "How many more stickers does he need to get 20 stickers? {b} stickers",
+     "text": "He wants 20 stickers. How many more does he need? {b} stickers",
      "answer": {
       "value": [
        "12"

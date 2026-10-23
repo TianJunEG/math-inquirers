@@ -683,7 +683,7 @@
        "n": 2
       }
      ],
-     "size": "m"
+     "size": "s"
     },
     {
      "t": "visual",
@@ -694,7 +694,7 @@
        "n": 10
       }
      ],
-     "size": "m",
+     "size": 62,
      "reveal": true
     },
     {
@@ -855,55 +855,46 @@
      "text": "Questions 1 to 3. Take your time."
     },
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "p",
-        "text": "Question 1. Count the money. How many cents?"
-       },
-       {
-        "t": "visual",
-        "type": "money",
-        "items": [
-         {
-          "v": "50c"
-         },
-         {
-          "v": "20c"
-         },
-         {
-          "v": "5c",
-          "n": 2
-         }
-        ],
-        "size": "m"
-       }
-      ],
-      [
-       {
-        "t": "p",
-        "text": "Question 2. Count the notes. How many dollars?"
-       },
-       {
-        "t": "visual",
-        "type": "money",
-        "items": [
-         {
-          "v": "$10"
-         },
-         {
-          "v": "$5"
-         },
-         {
-          "v": "$2",
-          "n": 2
-         }
-        ],
-        "size": "m"
-       }
-      ]
-     ]
+     "t": "p",
+     "text": "Question 1. Count the money. How many cents?"
+    },
+    {
+     "t": "visual",
+     "type": "money",
+     "items": [
+      {
+       "v": "50c"
+      },
+      {
+       "v": "20c"
+      },
+      {
+       "v": "5c",
+       "n": 2
+      }
+     ],
+     "size": "m"
+    },
+    {
+     "t": "p",
+     "text": "Question 2. Count the notes. How many dollars?"
+    },
+    {
+     "t": "visual",
+     "type": "money",
+     "items": [
+      {
+       "v": "$10"
+      },
+      {
+       "v": "$5"
+      },
+      {
+       "v": "$2",
+       "n": 2
+      }
+     ],
+     "size": "m"
     },
     {
      "t": "p",
@@ -2324,7 +2315,7 @@
        }
       ],
       "label": "Set A",
-      "size": 55
+      "size": 90
      },
      {
       "type": "money",
@@ -2338,7 +2329,7 @@
        }
       ],
       "label": "Set B",
-      "size": 55
+      "size": 90
      },
      {
       "type": "money",
@@ -2352,7 +2343,7 @@
        }
       ],
       "label": "Set C",
-      "size": 55
+      "size": 90
      }
     ]
    }
@@ -3353,8 +3344,8 @@
   "header": "Money: dollars and change",
   "hint_p1": "Use your play money. Start with the biggest coin or note.",
   "hint_p2": "Use your play money to check your answer.",
-  "hint_p3": "Use your play money or draw. Choose any question, in any order. Not finished? These pages are for home too.",
-  "hint_p4": "There is no $20 note. Choose any question. You do not have to finish them all. Not finished? These pages are for home too.",
+  "hint_p3": "Use your play money or draw. Choose any question, in any order. Not finished? This page is for home too.",
+  "hint_p4": "There is no $20 note. Choose any question. Not finished? This page is for home too.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",

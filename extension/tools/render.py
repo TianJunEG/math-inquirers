@@ -42,7 +42,7 @@ def badge(tier, n, theme):
     shape = {
         'start': '<circle cx="12" cy="12" r="11" />',
         'think': '<path d="M12 .8 23.2 12 12 23.2.8 12Z"/>',
-        'go': '<path d="M12 .8l3.4 7.4 8 .9-6 5.4 1.7 8L12 18.5 4.9 22.5l1.7-8-6-5.4 8-.9z"/>',
+        'go': '<path d="M12 .8l3.4 7.4 8 .9-6 5.4 1.7 8L12 18.5 4.9 22.5l1.7-8-6-5.4 8-.9z"/><circle cx="12" cy="13" r="6.2" fill="#fff" stroke="none"/>',
         'quiz': '<rect x="1.5" y="1.5" width="21" height="21" rx="4"/>',
     }[tier]
     fill = '#FFC93C' if theme == 'colour' else '#fff'

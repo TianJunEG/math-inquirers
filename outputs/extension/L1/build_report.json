@@ -136,7 +136,7 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.9888484809474768,
+   "fill": 0.9412815396498455,
    "over": false,
    "edition": "soft"
   },
@@ -145,8 +145,8 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.968106333676622,
-   "over": false,
+   "fill": 1.0299465756951596,
+   "over": true,
    "edition": "soft"
   },
   {
@@ -163,8 +163,8 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 0.9999517250257467,
-   "over": false,
+   "fill": 1.0014160659114315,
+   "over": true,
    "edition": "soft"
   },
   {
@@ -361,7 +361,7 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.9888484809474768,
+   "fill": 0.9412815396498455,
    "over": false,
    "edition": "print"
   },
@@ -370,8 +370,8 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9742855303810505,
-   "over": false,
+   "fill": 1.036125772399588,
+   "over": true,
    "edition": "print"
   },
   {
@@ -388,8 +388,8 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 0.9999517250257467,
-   "over": false,
+   "fill": 1.0014160659114315,
+   "over": true,
    "edition": "print"
   },
   {
@@ -465,7 +465,12 @@
    "edition": "print"
   }
  ],
- "problems": [],
+ "problems": [
+  "soft page 16 (Unit 2 \u00b7 Think harder): content overflows the page",
+  "soft page 18 (Unit 2 \u00b7 Check yourself): content overflows the page",
+  "print page 16 (Unit 2 \u00b7 Think harder): content overflows the page",
+  "print page 18 (Unit 2 \u00b7 Check yourself): content overflows the page"
+ ],
  "soft_pages": 25,
  "print_pages": 26
 }
