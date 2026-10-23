@@ -133,7 +133,7 @@
      }
     }
    ],
-   "explanation": "Add column by column from the ones. (a) 4 + 9 = 13, 4 + 5 + 1 = 10, 2 + 3 + 1 = 6: 244 + 359 = 603. (b) 8 + 6 = 14, 4 + 2 + 1 = 7, 4 + 4 = 8: 448 + 426 = 874. (c) 5 + 8 = 13, 6 + 3 + 1 = 10, 4 + 2 + 1 = 7: 465 + 238 = 703.",
+   "explanation": "Work from the ones. (a) 4 + 9 = 13, so the bottom digit is 9 (carry 1). 4 + 5 + 1 = 10, so the top digit is 4. (b) 8 + 6 = 14 (carry 1). 4 + 2 + 1 = 7, so the top digit is 4. 4 + 4 = 8, so the bottom digit is 4. (c) 5 + 8 = 13 (carry 1). 6 + 3 + 1 = 10, so the bottom digit is 3. 4 + 2 + 1 = 7, so the top digit is 4.",
    "partsrow": true
   },
   {
@@ -412,7 +412,7 @@
      }
     }
    ],
-   "explanation": "(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben forgot that the tens had lent 1 ten, so his tens digit was 1 too big."
+   "explanation": "(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben may have forgotten that the tens had lent 1 ten, so his tens digit is 1 too big."
   },
   {
    "id": "L2U02-S07",
@@ -508,7 +508,7 @@
      }
     }
    ],
-   "explanation": "(a) 368 + 457 = 825. (b) 702 - 385 = 317. (c) 249 + 394 = 643. (d) 910 - 466 = 444. Check each answer by doing the opposite.",
+   "explanation": "Add the ones, then the tens, then the hundreds, and carry. (a) 8 + 7 = 15, 6 + 5 + 1 = 12, 3 + 4 + 1 = 8: 825. (b) 702 - 385 = 317 (check 317 + 385 = 702). (c) 9 + 4 = 13, 4 + 9 + 1 = 14, 2 + 3 + 1 = 6: 643. (d) 910 - 466 = 444 (check 444 + 466 = 910).",
    "partsrow": true
   },
   {
@@ -588,7 +588,7 @@
      }
     }
    ],
-   "explanation": "(a) 500 - 287 = 213. (b) 213 - 120 = 93."
+   "explanation": "(a) Count on: 287 + 13 = 300 and 300 + 200 = 500, so 13 + 200 = 213 pages are left. (b) 213 - 120 = 93 pages."
   },
   {
    "id": "L2U02-T01",
@@ -634,7 +634,7 @@
     }
    ],
    "explanation": "450: corners 120, 135, 150, and the sides are 195, 165 and 180. 495: the corners are the 3 greatest numbers 165, 180, 195, and the sides are 150, 120 and 135.",
-   "hint": "Corner numbers are used in 2 sides. Try the 3 smallest corners.",
+   "hint": "Which numbers are used in 2 sides?",
    "figright": true,
    "partsrow": true
   },
@@ -857,7 +857,7 @@
      }
     }
    ],
-   "explanation": "(a) 495. (b) 693. (c) Both have 9 in the middle. (d) The answer is always a multiple of 99: 954 - 459 = 495 (5 × 99, and 9 - 4 = 5).",
+   "explanation": "(a) 742 - 247 = 495 and 831 - 138 = 693. (b) Both have 9 in the middle. (c) The answer is always a multiple of 99: 954 - 459 = 495 (5 × 99, and 9 - 4 = 5).",
    "hint": "Look at the middle digit. Add the digits of each answer.",
    "beyond": "Patterns in subtraction"
   },
@@ -884,32 +884,31 @@
    "id": "L2U02-G04",
    "tier": "go",
    "page": 5,
-   "text": "The same number goes in both boxes. Find it. Check your answer.",
+   "text": "Mei adds 198 to her number. Ali takes 102 away from 900. They get the same answer.",
    "parts": [
     {
      "label": "a",
-     "text": "[ ] + 175 = 625 - [ ]    The number is {b}",
+     "text": "Mei's number is {b}",
      "answer": {
       "value": [
-       "225"
+       "600"
       ],
-      "text": "225"
+      "text": "600"
      }
     },
     {
      "label": "b",
-     "text": "[ ] + 240 = 800 - [ ]    The number is {b}",
+     "text": "Ravi adds 299 to his number. Siti takes 201 away from 1000. Same answer. Ravi's number is {b}",
      "answer": {
       "value": [
-       "280"
+       "500"
       ],
-      "text": "280"
+      "text": "500"
      }
     }
    ],
-   "explanation": "(a) Move the box: 2 boxes = 625 - 175 = 450, so one box is 225. Check: 225 + 175 = 400 and 625 - 225 = 400. (b) 2 boxes = 800 - 240 = 560, so one box is 280. Check: 280 + 240 = 520 and 800 - 280 = 520.",
-   "hint": "Both sides must be equal. Try a number and check it.",
-   "partsrow": true
+   "explanation": "(a) Ali gets 900 - 102 = 798. Mei's number plus 198 is 798, so it is 798 - 198 = 600. (b) Siti gets 1000 - 201 = 799. Ravi's number is 799 - 299 = 500. Check: 500 + 299 = 799.",
+   "hint": "Work out the answer Ali gets first."
   },
   {
    "id": "L2U02-C01",

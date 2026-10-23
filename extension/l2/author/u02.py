@@ -28,7 +28,7 @@ items = [
    partsrow=True, parts=[P('a', 'Sum (a):  {b}  {b}', ['4', '9'], '4 and 9'),
           P('b', 'Sum (b):  {b}  {b}', ['4', '4'], '4 and 4'),
           P('c', 'Sum (c):  {b}  {b}', ['4', '3'], '4 and 3')],
-   why='Add column by column from the ones. (a) 4 + 9 = 13, 4 + 5 + 1 = 10, 2 + 3 + 1 = 6: 244 + 359 = 603. (b) 8 + 6 = 14, 4 + 2 + 1 = 7, 4 + 4 = 8: 448 + 426 = 874. (c) 5 + 8 = 13, 6 + 3 + 1 = 10, 4 + 2 + 1 = 7: 465 + 238 = 703.'),
+   why='Work from the ones. (a) 4 + 9 = 13, so the bottom digit is 9 (carry 1). 4 + 5 + 1 = 10, so the top digit is 4. (b) 8 + 6 = 14 (carry 1). 4 + 2 + 1 = 7, so the top digit is 4. 4 + 4 = 8, so the bottom digit is 4. (c) 5 + 8 = 13 (carry 1). 6 + 3 + 1 = 10, so the bottom digit is 3. 4 + 2 + 1 = 7, so the top digit is 4.'),
  I('start', 1, 'Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away. Write the digits top number first.',
    figure={'type': 'l2_vsum', 'sums': [vs('-', ['8?5', '26?', '568'], '(a)'), vs('-', ['5?2', '?47', '265'], '(b)')], 'width_mm': 110},
    partsrow=True, parts=[P('a', 'Sum (a):  {b}  {b}', ['3', '7'], '3 and 7'), P('b', 'Sum (b):  {b}  {b}', ['1', '2'], '1 and 2')],
@@ -48,7 +48,7 @@ items = [
    why='Without the extra 80, both have the same, and together they have 380. Half of 380 is 190, so Ben has 190. Ali has 190 + 80 = 270. Check: 190 + 270 = 460.'),
  I('start', 2, 'Ben wrote 614 - 278 = 346. He checks by adding.', parts=[
    P('a', '346 + 278 = {b}', '624'), P('b', 'Is Ben right?   {circ:Yes|No}', 'No'), P('c', 'The correct answer is {b}', '336')],
-   why='(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben forgot that the tens had lent 1 ten, so his tens digit was 1 too big.'),
+   why='(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben may have forgotten that the tens had lent 1 ten, so his tens digit is 1 too big.'),
  I('start', 3, 'Ali had 345 stickers. He gave some away. Now he has 128 stickers.\n(1) 345 + [ ] = 128      (2) 345 - [ ] = 128\n(3) [ ] - 345 = 128      (4) 128 - [ ] = 345', parts=[
    P('a', 'Which number sentence matches the story?   {circ:(1)|(2)|(3)|(4)}', '(2)'), P('b', 'How many stickers did Ali give away? {b}', '217')],
    why='(a) He starts with 345 and takes some away, so 345 - [ ] = 128, which is (2). (b) 345 - 128 = 217. Check: 128 + 217 = 345.'),
@@ -56,19 +56,19 @@ items = [
    space={'rows': ['Working:']}, why='Take away what she used and what was left: 500 - 135 - 210 = 155. Check: 155 + 135 + 210 = 500.'),
  I('start', 3, 'Add or subtract.', partsrow=True, parts=[
    P('a', '368 + 457 = {b}', '825'), P('b', '702 - 385 = {b}', '317'), P('c', '249 + 394 = {b}', '643'), P('d', '910 - 466 = {b}', '444')],
-   why='(a) 368 + 457 = 825. (b) 702 - 385 = 317. (c) 249 + 394 = 643. (d) 910 - 466 = 444. Check each answer by doing the opposite.'),
+   why='Add the ones, then the tens, then the hundreds, and carry. (a) 8 + 7 = 15, 6 + 5 + 1 = 12, 3 + 4 + 1 = 8: 825. (b) 702 - 385 = 317 (check 317 + 385 = 702). (c) 9 + 4 = 13, 4 + 9 + 1 = 14, 2 + 3 + 1 = 6: 643. (d) 910 - 466 = 444 (check 444 + 466 = 910).'),
  I('start', 3, 'Make 1000. Fill in the missing number.', partsrow=True, parts=[
    P('a', '340 + {b} = 1000', '660'), P('b', '485 + {b} = 1000', '515'), P('c', '1000 - 755 = {b}', '245'), P('d', '{b} + 75 = 1000', '925')],
    why='(a) 1000 - 340 = 660. (b) 1000 - 485 = 515. (c) 1000 - 755 = 245. (d) 1000 - 75 = 925. Tip: make the ones 10, the tens 9 and the hundreds 9 to reach 999, then add 1.'),
  I('start', 3, "Lily's book has 500 pages. She has read 287 pages.", parts=[
    P('a', 'How many pages are left? {b}', '213'), P('b', 'Then she reads 120 more pages. How many pages are left now? {b}', '93')],
-   why='(a) 500 - 287 = 213. (b) 213 - 120 = 93.'),
+   why='(a) Count on: 287 + 13 = 300 and 300 + 200 = 500, so 13 + 200 = 213 pages are left. (b) 213 - 120 = 93 pages.'),
  # Think harder
  I('think', 4, 'Fill the 6 circles with 120, 135, 150, 165, 180 and 195. Use each number once. Each side must add to 450.',
    figure={'type': 'l2_triangle', 'values': [None] * 6, 'width_mm': 56}, figright=True,
    partsrow=True, parts=[P('a', 'Corners: {b}, {b}, {b}.', ['120', '135', '150'], '120, 135, 150'),
           P('b', 'Sides add up to 495. Corners: {b}, {b}, {b}.', ['165', '180', '195'], '165, 180, 195')],
-   hint='Corner numbers are used in 2 sides. Try the 3 smallest corners.',
+   hint='Which numbers are used in 2 sides?',
    why='450: corners 120, 135, 150, and the sides are 195, 165 and 180. 495: the corners are the 3 greatest numbers 165, 180, 195, and the sides are 150, 120 and 135.'),
  I('think', 4, 'Circle True or False. Do not add both sides.', partsrow=True, parts=[
    P('a', '468 + 199 = 467 + 200   {circ:True|False}', 'True'), P('b', '350 + 240 = 340 + 260   {circ:True|False}', 'False'),
@@ -88,15 +88,15 @@ items = [
  I('go', 5, 'Reverse a 3-digit number by swapping its first digit and last digit. Then take the smaller number from the greater.', beyond='Patterns in subtraction', parts=[
    P('a', '742 - 247 = {b}      831 - 138 = {b}', ['495', '693'], '495 and 693'), P('b', 'What is the middle digit of both answers? {b}', '9'), P('c', 'Use the pattern: 954 - 459 = {b}', '495')],
    hint='Look at the middle digit. Add the digits of each answer.',
-   why='(a) 495. (b) 693. (c) Both have 9 in the middle. (d) The answer is always a multiple of 99: 954 - 459 = 495 (5 × 99, and 9 - 4 = 5).'),
+   why='(a) 742 - 247 = 495 and 831 - 138 = 693. (b) Both have 9 in the middle. (c) The answer is always a multiple of 99: 954 - 459 = 495 (5 × 99, and 9 - 4 = 5).'),
  I('go', 5, 'Make your own missing-digit sum. Add two 3-digit numbers and hide 2 digits. Only ONE pair of digits may work. Many answers are right.', value='open',
    atext='Open. Example: 4?6 + 37? = 801 (426 + 375). Test every digit for each box: only 2 and 5 work.',
    space={'rows': ['My sum:']}, hint='Start with a full sum. Then hide a digit in each number.',
    why='Example: 426 + 375 = 801. Ones: 6 + ? must end in 1, so the ones box is 5. That carries 1. Tens: ? + 7 + 1 must end in 0, so the tens box is 2. Check that no other digit fits in each box.'),
- I('go', 5, 'The same number goes in both boxes. Find it. Check your answer.', parts=[
-   P('a', '[ ] + 175 = 625 - [ ]    The number is {b}', '225'), P('b', '[ ] + 240 = 800 - [ ]    The number is {b}', '280')], partsrow=True,
-   hint='Both sides must be equal. Try a number and check it.',
-   why='(a) Move the box: 2 boxes = 625 - 175 = 450, so one box is 225. Check: 225 + 175 = 400 and 625 - 225 = 400. (b) 2 boxes = 800 - 240 = 560, so one box is 280. Check: 280 + 240 = 520 and 800 - 280 = 520.'),
+ I('go', 5, 'Mei adds 198 to her number. Ali takes 102 away from 900. They get the same answer.', parts=[
+   P('a', 'Mei\'s number is {b}', '600'), P('b', 'Ravi adds 299 to his number. Siti takes 201 away from 1000. Same answer. Ravi\'s number is {b}', '500')],
+   hint='Work out the answer Ali gets first.',
+   why='(a) Ali gets 900 - 102 = 798. Mei\'s number plus 198 is 798, so it is 798 - 198 = 600. (b) Siti gets 1000 - 201 = 799. Ravi\'s number is 799 - 299 = 500. Check: 500 + 299 = 799.'),
  # Check yourself
  I('quiz', 0, 'Write the 2 missing digits.', figure={'type': 'l2_vsum', 'op': '+', 'rows': ['2?6', '43?', '689'], 'width_mm': 26}, figright=True, value=['5', '3'], atext='5 and 3', lst=True,
    why='Ones: 6 + 3 = 9, so the bottom box is 3. Tens: 5 + 3 = 8, so the top box is 5. Check: 256 + 433 = 689.'),

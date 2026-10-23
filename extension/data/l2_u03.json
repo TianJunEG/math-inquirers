@@ -111,7 +111,7 @@
        "3",
        "21"
       ],
-      "text": "3 × 7 = 21 and 7 × 3 = 21"
+      "text": "3 × 7 = 21 and 7 × 3 = 21 (either order)"
      }
     },
     {
@@ -126,7 +126,7 @@
        "7",
        "3"
       ],
-      "text": "21 ÷ 3 = 7 and 21 ÷ 7 = 3"
+      "text": "21 ÷ 3 = 7 and 21 ÷ 7 = 3 (either order)"
      }
     }
    ],
@@ -265,7 +265,7 @@
      }
     ],
     "names": true,
-    "width_mm": 112
+    "width_mm": 130
    },
    "parts": [
     {
@@ -425,7 +425,7 @@
      }
     }
    ],
-   "explanation": "(a) 6 × 4 = 24. (b) 30 ÷ 5 = 6. (c) 45 ÷ 5 = 9. (d) 6 × 4 = 24.",
+   "explanation": "(a) 6 boxes of 4 pencils: 6 × 4 = 24. (b) Share 30 into 5 equal bags: 30 ÷ 5 = 6. (c) How many groups of 5 in 45? 45 ÷ 5 = 9. (d) 6 cars with 4 wheels each: 6 × 4 = 24.",
    "partsrow": true
   },
   {
@@ -436,7 +436,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "What is the most number of boxes she can fill? {b}",
+     "text": "What is the greatest number of boxes she can fill? {b}",
      "answer": {
       "value": [
        "7"
@@ -700,7 +700,7 @@
    "id": "L2U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "A pen has 6 animals, hens (2 legs) and pigs (4 legs). Mei counts the legs. Could she count this number of legs?",
+   "text": "A pen has 6 animals. Each is a hen (2 legs) or a pig (4 legs). All 6 may be hens. Mei counts the legs. Could she count this number?",
    "parts": [
     {
      "label": "a",
@@ -883,7 +883,7 @@
    "id": "L2U03-G04",
    "tier": "go",
    "page": 5,
-   "text": "Ali has 24 counters. He makes arrays with 2 rows or more and 2 counters or more in each row. How many different arrays can he make? {b}",
+   "text": "Ali has 24 counters. He makes arrays with 2 rows or more and 2 counters or more in each row. A 2 by 12 array and a 12 by 2 array are different. How many different arrays can he make? {b}",
    "answer": {
     "value": [
      "6"

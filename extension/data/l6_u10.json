@@ -688,7 +688,7 @@
      ""
     ]
    },
-   "explanation": "19, 28, 37, 46, 55, 64, 73, 82, 91 have digits adding to 10. The primes are 19, 37 and 73 (the others are even, or 55 and 91 = 7 × 13). Reversed: 19 gives 91, which is not prime. 37 gives 73 and 73 gives 37, both prime."
+   "explanation": "Digits adding to 10: 19, 28, 37, 46, 55, 64, 73, 82, 91. Primes: 19, 37, 73. Reversed: 91 = 7 × 13 is not prime, but 73 and 37 both are."
   },
   {
    "id": "L6U10-G01",

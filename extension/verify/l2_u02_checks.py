@@ -181,8 +181,10 @@ def _():
 
 @check('G04')
 def _():
-    f = lambda a, b, c: s([x for x in range(0, 1001) if x + a == b - x])
-    return {'a': f(175, 625, 0), 'b': f(240, 800, 0)}
+    a = [x for x in range(0, 1001) if x + 198 == 900 - 102]
+    b = [x for x in range(0, 1001) if x + 299 == 1000 - 201]
+    assert len(a) == len(b) == 1
+    return {'a': s(a), 'b': s(b)}
 
 
 @check('C01')

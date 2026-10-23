@@ -95,10 +95,10 @@ def _trike(x, y):
 def legs(spec, w=None):
     P = []
     x = 20
-    gap = spec.get('gap', 108)
+    gap = spec.get('gap', 150)
     for it in spec['items']:
         for _ in range(it.get('n', 1)):
-            cx = x + 64
+            cx = x + 70
             k = it['kind']
             if k == 'dog':
                 P += _dog(cx, 70, 4)
@@ -109,9 +109,9 @@ def legs(spec, w=None):
             elif k == 'trike':
                 P += _trike(cx, 70)
             if spec.get('names'):
-                P.append(T(cx, 142, {'dog': 'dog', 'duck': 'duck', 'bike': 'bicycle', 'trike': 'tricycle'}[k], 26, weight=700))
+                P.append(T(cx, 160, {'dog': 'dog', 'duck': 'duck', 'bike': 'bicycle', 'trike': 'tricycle'}[k], 26, weight=700))
             x += gap
-    return wrap(P, x + 40, 160 if spec.get('names') else 150, 'animals or cycles in a row', w, 0.2)
+    return wrap(P, x + 10, 176 if spec.get('names') else 150, 'animals or cycles in a row', w, 0.2)
 
 
 FIGS = {'l2_array': array, 'l2_groups': groups, 'l2_legs': legs}
