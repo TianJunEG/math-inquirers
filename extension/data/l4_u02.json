@@ -30,7 +30,7 @@
       "text": "46 382"
      }
     ],
-    "width_mm": 76,
+    "width_mm": 70,
     "W": 520
    },
    "steps": [
@@ -65,7 +65,7 @@
       "kind": "ring"
      }
     ],
-    "width_mm": 76,
+    "width_mm": 70,
     "shade": [
      [
       7500,
@@ -112,7 +112,7 @@
     ],
     "cell_h": 54,
     "font": 26,
-    "width_mm": 78
+    "width_mm": 70
    },
    "lines": [
     "35 206 = 30 000 + 5000 + 200 + 6",
@@ -121,7 +121,7 @@
   },
   "try": {
    "id": "L4U02-L01",
-   "text": "Round 52 718 to the nearest 100. {b}",
+   "text": "Round 52 718 to the nearest 100. {bw}",
    "answer": {
     "value": [
      "52700"
@@ -211,7 +211,7 @@
     },
     {
      "label": "b",
-     "text": "60 912: {b}",
+     "text": "60 912: {bw}",
      "answer": {
       "value": [
        "60000"
@@ -330,7 +330,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "A is {b}",
+     "text": "A is {bw}",
      "answer": {
       "value": [
        "24300"
@@ -340,7 +340,7 @@
     },
     {
      "label": "b",
-     "text": "B is {b}",
+     "text": "B is {bw}",
      "answer": {
       "value": [
        "24800"
@@ -350,7 +350,7 @@
     },
     {
      "label": "c",
-     "text": "Which thousand is B closer to? {b}",
+     "text": "Which thousand is B closer to? {bw}",
      "answer": {
       "value": [
        "25000"
@@ -369,7 +369,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Nearest 1000: {b}",
+     "text": "Nearest 1000: {bw}",
      "answer": {
       "value": [
        "36000"
@@ -379,7 +379,7 @@
     },
     {
      "label": "b",
-     "text": "Nearest 100: {b}",
+     "text": "Nearest 100: {bw}",
      "answer": {
       "value": [
        "36500"
@@ -399,7 +399,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Least: {b}",
+     "text": "Least: {bw}",
      "answer": {
       "value": [
        "11500"
@@ -409,7 +409,7 @@
     },
     {
      "label": "b",
-     "text": "Greatest: {b}",
+     "text": "Greatest: {bw}",
      "answer": {
       "value": [
        "12499"
@@ -474,7 +474,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Round 4018 to the nearest 1000. Estimate the total: {b}",
+     "text": "Round 4018 to the nearest 1000. Estimate the total: {bw}",
      "answer": {
       "value": [
        "20000"
@@ -484,7 +484,7 @@
     },
     {
      "label": "b",
-     "text": "Find the exact total: {b}",
+     "text": "Find the exact total: {bw}",
      "answer": {
       "value": [
        "20090"
@@ -514,7 +514,7 @@
    "id": "L4U02-S10",
    "tier": "start",
    "page": 3,
-   "text": "I have 5 digits. Round me to the nearest 1000 and you get 52 000. My hundreds digit is 7. My tens digit is 5 and my ones digit is 2. Who am I?\nI am {b}.",
+   "text": "I have 5 digits. Round me to the nearest 1000 and you get 52 000. My hundreds digit is 7. My tens digit is 5 and my ones digit is 2. Who am I?\nI am {bw}.",
    "answer": {
     "value": [
      "51752"
@@ -531,7 +531,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The greatest number: {b}",
+     "text": "The greatest number: {bw}",
      "answer": {
       "value": [
        "97420"
@@ -541,7 +541,7 @@
     },
     {
      "label": "b",
-     "text": "The least number: {b}",
+     "text": "The least number: {bw}",
      "answer": {
       "value": [
        "20479"
@@ -551,7 +551,7 @@
     },
     {
      "label": "c",
-     "text": "The greatest odd number: {b}",
+     "text": "The greatest odd number: {bw}",
      "answer": {
       "value": [
        "94207"
@@ -570,7 +570,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "31 600, 32 600, 33 600, {b}, {b}",
+     "text": "31 600, 32 600, 33 600, {bw}, {bw}",
      "answer": {
       "value": [
        "34600",
@@ -581,7 +581,7 @@
     },
     {
      "label": "b",
-     "text": "70 400, 68 900, 67 400, {b}, {b}",
+     "text": "70 400, 68 900, 67 400, {bw}, {bw}",
      "answer": {
       "value": [
        "65900",
@@ -657,7 +657,7 @@
    "id": "L4U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Cards: 1, 3, 4, 6, 8. Use each card once. Make the 5-digit number nearest to 40 000.\n{b}",
+   "text": "Cards: 1, 3, 4, 6, 8. Use each card once. Make the 5-digit number nearest to 40 000.\n{bw}",
    "answer": {
     "value": [
      "38641"
@@ -682,7 +682,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The smallest possible total of both crowds: {b}",
+     "text": "The smallest possible total of both crowds: {bw}",
      "answer": {
       "value": [
        "68000"
@@ -692,7 +692,7 @@
     },
     {
      "label": "b",
-     "text": "The largest possible total of both crowds: {b}",
+     "text": "The largest possible total of both crowds: {bw}",
      "answer": {
       "value": [
        "69998"
@@ -719,7 +719,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The greatest it can be: {b}",
+     "text": "The greatest it can be: {bw}",
      "answer": {
       "value": [
        "74986"
@@ -729,7 +729,7 @@
     },
     {
      "label": "b",
-     "text": "The least it can be: {b}",
+     "text": "The least it can be: {bw}",
      "answer": {
       "value": [
        "65012"
@@ -755,7 +755,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "After the 3 steps he gets {b}",
+     "text": "After the 3 steps he gets {bw}",
      "answer": {
       "value": [
        "37000"
@@ -765,7 +765,7 @@
     },
     {
      "label": "b",
-     "text": "Round 36 449 to the nearest 1000 in one go: {b}",
+     "text": "Round 36 449 to the nearest 1000 in one go: {bw}",
      "answer": {
       "value": [
        "36000"
@@ -790,8 +790,9 @@
   {
    "id": "L4U02-G02",
    "tier": "go",
+   "beyond": "Counting by place",
    "page": 5,
-   "text": "Beyond Level 4: Counting by place\nBen writes the whole numbers from 1 to 1000. How many of them contain at least one 7?\n{b}",
+   "text": "Ben writes the whole numbers from 1 to 1000. How many of them contain at least one 7?\n{b}",
    "answer": {
     "value": [
      "271"
@@ -870,7 +871,7 @@
   {
    "id": "L4U02-C01",
    "tier": "quiz",
-   "text": "Round 25 962.   To the nearest 10: {b}   100: {b}   1000: {b}",
+   "text": "Round 25 962.   To the nearest 10: {bw}   100: {bw}   1000: {bw}",
    "answer": {
     "value": [
      "25960",
@@ -897,7 +898,7 @@
   {
    "id": "L4U02-C03",
    "tier": "quiz",
-   "text": "Cards: 4, 0, 7, 1, 8. Use each card once. Make the least odd 5-digit number. {b}",
+   "text": "Cards: 4, 0, 7, 1, 8. Use each card once. Make the least odd 5-digit number. {bw}",
    "answer": {
     "value": [
      "10487"
@@ -909,7 +910,7 @@
   {
    "id": "L4U02-C04",
    "tier": "quiz",
-   "text": "Find the rule. Write the next 2 numbers. 53 200, 51 700, 50 200, {b}, {b}",
+   "text": "Find the rule. Write the next 2 numbers. 53 200, 51 700, 50 200, {bw}, {bw}",
    "answer": {
     "value": [
      "48700",

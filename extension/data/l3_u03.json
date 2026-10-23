@@ -405,7 +405,7 @@
     "text": "Columns 6 and 7. Rows 9 and 8.",
     "list": true
    },
-   "explanation": "54 and 63 are in the same row. Both are in the 9 times table: 54 = 9 × 6 and 63 = 9 × 7. So the row number is 9 and the columns are 6 and 7. The second row: 48 = 8 × 6 and 56 = 8 × 7, so the row number is 8.",
+   "explanation": "54 and 63 are both in the 9 times table: 54 = 9 × 6 and 63 = 9 × 7. So the row number is 9 and the columns are 6 and 7. Second row: 48 = 8 × 6 and 56 = 8 × 7, so the row number is 8.",
    "figure": {
     "type": "l3_grid",
     "head_row": true,
@@ -828,7 +828,7 @@
     "text": "2, 3, 7 and 8",
     "list": true
    },
-   "explanation": "The last digits of 1 × 1 up to 9 × 9 are 1, 4, 9, 6, 5, 6, 9, 4, 1. Only the last digit of the number matters, so the last digit can only be 0, 1, 4, 5, 6 or 9. So 2, 3, 7 and 8 can never be the last digit.",
+   "explanation": "The last digits of 1 × 1 up to 9 × 9 are 1, 4, 9, 6, 5, 6, 9, 4, 1. Only the last digit matters, so a square can end only in 0, 1, 4, 5, 6 or 9. 2, 3, 7 and 8 never.",
    "hint": "Find 1 × 1, 2 × 2, ... 9 × 9. Write the last digits.",
    "space": {
     "rows": [

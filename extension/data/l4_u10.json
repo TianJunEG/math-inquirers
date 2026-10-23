@@ -431,7 +431,7 @@
     },
     {
      "label": "d",
-     "text": "Siti: {b}",
+     "text": "Siti: {bw}",
      "answer": {
       "value": [
        "rabbit"
@@ -598,7 +598,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Places 1 to 5, in order: {b} {b} {b} {b} {b}",
+     "text": "Places 1 to 5, in order: {b} {b} {b} {b} {bw}",
      "answer": {
       "value": [
        "Ali",
@@ -607,7 +607,8 @@
        "Siti",
        "Kumar"
       ],
-      "text": "Ali, Mei, Ben, Siti, Kumar"
+      "text": "Ali, Mei, Ben, Siti, Kumar",
+      "list": true
      }
     }
    ],
@@ -721,8 +722,9 @@
   {
    "id": "L4U10-G04",
    "tier": "go",
+   "beyond": "Number cycles",
    "page": 5,
-   "text": "Beyond Level 4: Number cycles\nThe ones digits of 3, 3 × 3, 3 × 3 × 3 and so on go round in a cycle.",
+   "text": "The ones digits of 3, 3 × 3, 3 × 3 × 3 and so on go round in a cycle.",
    "parts": [
     {
      "label": "a",

@@ -31,6 +31,9 @@ def item(id_, tier, page, text, ans=None, parts=None, why='', fig=None, hint=Non
     if ans is not None and '{ll}' in text:
         ans = dict(ans, list=True)
     d = {'id': id_, 'tier': tier}
+    if text.startswith('Beyond Level 4: '):          # printed by the renderer as a label above the question
+        first, _, text = text.partition('\n')
+        d['beyond'] = first[len('Beyond Level 4: '):]
     if tier != 'quiz':
         d['page'] = page
     d['text'] = text
@@ -67,6 +70,29 @@ def _fmt(o, key=None):
 
 def write(n, unit):
     unit = _fmt(unit)
+
+    def widen(holder, ans):
+        """Blanks whose answer has 5 or more characters get the wide answer box {bw}."""
+        if not ans or ans.get('list'):
+            return
+        vals = ans['value']
+        n = holder['text'].count('{b}')
+        if n != len(vals) or n == 0:
+            return
+        out, k = [], 0
+        for piece in holder['text'].split('{b}')[:-1]:
+            out.append(piece + ('{bw}' if len(str(vals[k])) >= 5 else '{b}'))
+            k += 1
+        holder['text'] = ''.join(out) + holder['text'].split('{b}')[-1]
+        left = ''.join(out).count('{b}') + holder['text'].split('{b}')[-1].count('{b}')
+        if 0 < left < n:      # the shared answer runner counts only {b}: mark the mixed answer as a list
+            ans['list'] = True
+    for it in [unit['learn']['try']] + unit['items']:
+        if it.get('parts'):
+            for p in it['parts']:
+                widen(p, p['answer'])
+        else:
+            widen(it, it.get('answer'))
     for k in ('example', 'example2', 'facts'):       # Learn it figures sit in a column about 73 mm wide: keep their text at 10 pt or more
         f = unit['learn'].get(k, {}).get('figure')
         if f and f.get('width_mm', 0) > 70:

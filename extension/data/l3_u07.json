@@ -665,7 +665,7 @@
      }
     }
    ],
-   "explanation": "Each rectangle is 8 cm by 4 cm, so its perimeter is 2 × (8 + 4) = 24 cm. Together: 48 cm. The square’s perimeter is 32 cm, and 48 - 32 = 16. The cut is 8 cm long and it appears on both pieces, so it adds 2 × 8 = 16 cm.",
+   "explanation": "Each rectangle is 8 cm by 4 cm: perimeter 24 cm, so 48 cm together. The square has 32 cm, and 48 - 32 = 16. The 8 cm cut appears on both pieces, adding 2 × 8 = 16 cm.",
    "hint": "Draw the square. Draw the cut.",
    "space": {
     "rows": [
@@ -953,7 +953,7 @@
      }
     }
    ],
-   "explanation": "The side must divide both 12 and 10 exactly. 1 and 2 do. 3 does not divide 10, 4 does not, 5 does not divide 12, and 6 does not divide 10. So the largest side is 2 m. There are 6 tiles along and 5 tiles across: 30 tiles.",
+   "explanation": "The side must divide both 12 and 10. 1 and 2 do; 3, 4, 5 and 6 each fail one of them. So the largest side is 2 m: 6 tiles along and 5 across, 30 tiles.",
    "hint": "The tile side must fit exactly in 12 and in 10.",
    "space": {
     "rows": [

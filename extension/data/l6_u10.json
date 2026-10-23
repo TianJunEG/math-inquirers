@@ -713,21 +713,11 @@
   {
    "id": "L6U10-G01",
    "tier": "go",
-   "text": "Plan a taxi meter. The same rule is used for every ride: the fare is 7 dollars for 2 km and 16 dollars for 5 km. Fill in the code.",
+   "text": "Plan a taxi meter. The fare is 7 dollars for 2 km and 16 dollars for 5 km, with the same rule for every ride.",
    "page": 5,
    "parts": [
     {
      "label": "a",
-     "text": "Each extra km costs {b} dollars.",
-     "answer": {
-      "value": [
-       "3"
-      ],
-      "text": "3"
-     }
-    },
-    {
-     "label": "b",
      "text": "say (n × {b} + {b})",
      "answer": {
       "value": [
@@ -738,7 +728,7 @@
      }
     },
     {
-     "label": "c",
+     "label": "b",
      "text": "A 20 km ride costs {b} dollars.",
      "answer": {
       "value": [
@@ -748,7 +738,7 @@
      }
     },
     {
-     "label": "d",
+     "label": "c",
      "text": "A fare of 49 dollars is a ride of {b} km.",
      "answer": {
       "value": [
@@ -778,8 +768,7 @@
    "hint": "How many km apart are 2 km and 5 km? How much more is the fare?",
    "explanation": "From 2 km to 5 km is 3 km more, and the fare rises by 16 − 7 = 9 dollars, so each km costs 9 ÷ 3 = 3 dollars. Then 7 = 3 × 2 + 1, so there is a 1 dollar start fee. The rule is n × 3 + 1. A 20 km ride costs 3 × 20 + 1 = 61 dollars. A fare of 49 dollars means 3n = 48, so n = 16. (For your twist, test with a ride you can price by hand first.)",
    "figright": true,
-   "partsrow": true,
-   "beyond": "Plan a program"
+   "partsrow": true
   },
   {
    "id": "L6U10-G02",
@@ -933,8 +922,7 @@
    },
    "hint": "Write n after every step. Stop when n is 1.",
    "explanation": "n = 6: 6, 3, 10, 5, 16, 8, 4, 2, 1. That is 8 steps (halve if even, or 3n + 1 if odd). n = 7: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 is 16 steps. The largest number reached from 7 is 52.",
-   "figside": true,
-   "beyond": "A famous loop"
+   "figside": true
   },
   {
    "id": "L6U10-C01",

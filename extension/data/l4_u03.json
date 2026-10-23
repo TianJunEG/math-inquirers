@@ -113,7 +113,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "3706 × 4 = {b}",
+     "text": "3706 × 4 = {bw}",
      "answer": {
       "value": [
        "14824"
@@ -168,7 +168,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "4986 × 4 is about {b}",
+     "text": "4986 × 4 is about {bw}",
      "answer": {
       "value": [
        "20000"
@@ -554,8 +554,9 @@
   {
    "id": "L4U03-T01",
    "tier": "think",
+   "beyond": "Order of operations",
    "page": 4,
-   "text": "Beyond Level 4: Order of operations\nRule: do brackets first, then × and ÷, then + and −. Work from the left.",
+   "text": "Rule: do brackets first, then × and ÷, then + and −. Work from the left.",
    "parts": [
     {
      "label": "a",
@@ -648,8 +649,9 @@
   {
    "id": "L4U03-G01",
    "tier": "go",
+   "beyond": "Signs and brackets",
    "page": 5,
-   "text": "Beyond Level 4: Signs and brackets\nRule: brackets first, then × and ÷, then + and −.",
+   "text": "Rule: brackets first, then × and ÷, then + and −.",
    "parts": [
     {
      "label": "a",
@@ -792,13 +794,14 @@
   {
    "id": "L4U03-C01",
    "tier": "quiz",
-   "text": "Find the value.   4728 × 5 = {b}   9135 ÷ 7 = {b}",
+   "text": "Find the value.   4728 × 5 = {bw}   9135 ÷ 7 = {b}",
    "answer": {
     "value": [
      "23640",
      "1305"
     ],
-    "text": "23 640 and 1305"
+    "text": "23 640 and 1305",
+    "list": true
    },
    "explanation": "4728 × 5 = 23 640 (4728 × 10 = 47 280, then half). 9135 ÷ 7 = 1305, because 7 × 1305 = 9135."
   },

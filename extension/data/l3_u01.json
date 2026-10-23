@@ -597,7 +597,7 @@
     ],
     "text": "10"
    },
-   "explanation": "The sets of 3 digits are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. The set 1, 1, 8 makes 118, 181, 811: 3 numbers. The set 1, 2, 4 makes 124, 142, 214, 241, 412, 421: 6 numbers. The set 2, 2, 2 makes 222: 1 number. 3 + 6 + 1 = 10.",
+   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. The set 1, 1, 8 makes 118, 181, 811: 3 numbers. The set 1, 2, 4 makes 6 numbers. The set 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
    "hint": "List the sets of 3 digits first. Then arrange each set.",
    "space": {
     "rows": [

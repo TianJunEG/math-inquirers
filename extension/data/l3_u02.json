@@ -278,7 +278,7 @@
      }
     }
    ],
-   "explanation": "The middle row is complete: 550 + 350 + 150 = 1050. Top row: 200 + 450 + A = 1050, so A = 400. Left column: 200 + 550 + 300 = 1050. Middle column: 450 + 350 + B = 1050, so B = 250. Bottom row: 300 + 250 + C = 1050, so C = 500.",
+   "explanation": "Middle row: 550 + 350 + 150 = 1050. Top row: 200 + 450 + A = 1050, so A = 400. Middle column: 450 + 350 + B = 1050, so B = 250. Bottom row: 300 + 250 + C = 1050, so C = 500.",
    "figure": {
     "type": "l3_grid",
     "rows": [
@@ -490,7 +490,7 @@
      }
     }
    ],
-   "explanation": "Turn it round: 3657 + 2845 = 6502 (the missing digit of the number taken away is its tens digit 4). Or subtract by columns: 12 - 5 = 7, then 10 - 1 - 4 = 5, then 15 - 1 - 8 = 6, then 6 - 1 - 2 = 3. The top number is 6502.",
+   "explanation": "Turn it round: 3657 + 2845 = 6502. Or subtract by columns: 12 - 5 = 7, 10 - 1 - 4 = 5, 15 - 1 - 8 = 6, 6 - 1 - 2 = 3. The top number is 6502.",
    "figure": {
     "type": "l3_vsum",
     "heads": [
@@ -672,7 +672,7 @@
      }
     }
    ],
-   "explanation": "Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: B + C = 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C must be 10, so C = 9 and D = 0.",
+   "explanation": "Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C = 10, so C = 9, D = 0.",
    "hint": "Look at the left digit of the answer. Which digit can it be?",
    "partsrow": true,
    "space": {
@@ -836,7 +836,7 @@
      }
     }
    ],
-   "explanation": "Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: then B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. Hundreds: 2 + 1 = 3 = C. No other digits work.",
+   "explanation": "Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. 2 + 1 = 3 = C. No other digits work.",
    "hint": "Look at the ones: C + C ends in B. List the choices for C.",
    "partsrow": true,
    "space": {
@@ -857,7 +857,7 @@
     ],
     "text": "440"
    },
-   "explanation": "In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440.",
+   "explanation": "The end bricks of the bottom row count once in the top brick and the 2 middle bricks 3 times each. So 200 + 3 X + 3 X + 440 = 3280, 6 X = 2640 and X = 440.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [

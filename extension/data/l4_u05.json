@@ -292,7 +292,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "E = {b}",
+     "text": "E = {bw}",
      "answer": {
       "value": [
        "3.427"
@@ -398,7 +398,7 @@
     },
     {
      "label": "c",
-     "text": "0.936: {b}",
+     "text": "0.936: {bw}",
      "answer": {
       "value": [
        "0.006"
@@ -692,7 +692,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The least it can be: {b}",
+     "text": "The least it can be: {bw}",
      "answer": {
       "value": [
        "4.265"
@@ -702,7 +702,7 @@
     },
     {
      "label": "b",
-     "text": "The greatest it can be: {b}",
+     "text": "The greatest it can be: {bw}",
      "answer": {
       "value": [
        "4.274"
@@ -724,7 +724,7 @@
    "id": "L4U05-T02",
    "tier": "think",
    "page": 4,
-   "text": "Use the digit cards 1, 4, 6 and 9 and a decimal point. Use every card once. The point goes between 2 digits. Make the number that is closest to 20.\n{b}",
+   "text": "Use the digit cards 1, 4, 6 and 9 and a decimal point. Use every card once. The point goes between 2 digits. Make the number that is closest to 20.\n{bw}",
    "answer": {
     "value": [
      "19.64"

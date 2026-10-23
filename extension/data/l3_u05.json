@@ -409,7 +409,7 @@
      }
     }
    ],
-   "explanation": "Between 30 and 40, 6 × 5 = 30 and 6 × 6 = 36, so the numbers are 30 + 1 = 31 and 36 + 1 = 37. Now test them with 4: 31 ÷ 4 = 7 remainder 3 (right). 37 ÷ 4 = 9 remainder 1 (not right). The number is 31."
+   "explanation": "Between 30 and 40: 6 × 5 = 30 and 6 × 6 = 36, so the numbers are 31 and 37. Test with 4: 31 ÷ 4 = 7 remainder 3 (right). 37 ÷ 4 = 9 remainder 1 (not right). The number is 31."
   },
   {
    "id": "L3U05-S09",
@@ -477,7 +477,7 @@
      }
     }
    ],
-   "explanation": "The pattern repeats every 4 letters. 30 ÷ 4 = 7 remainder 2, so the 30th letter is the 2nd letter of the pattern: B. 32 ÷ 4 = 8 with no remainder, so the 32nd letter is the last letter of the pattern: D.",
+   "explanation": "The pattern repeats every 4 letters. 30 ÷ 4 = 7 remainder 2, so the 30th letter is the 2nd of the pattern: B. 32 ÷ 4 = 8 with none left, so the 32nd is the last: D.",
    "figure": {
     "type": "l3_grid",
     "head_col": true,
@@ -630,7 +630,7 @@
     ],
     "text": "67"
    },
-   "explanation": "The 2-digit numbers that leave remainder 2 when divided by 5 end in 2 or 7. Test them with 3 and 4. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other number works.",
+   "explanation": "Numbers with remainder 2 when divided by 5 end in 2 or 7. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other number works.",
    "hint": "Begin with the clue that gives the fewest numbers to list.",
    "space": {
     "rows": [

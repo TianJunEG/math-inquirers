@@ -864,8 +864,9 @@
   {
    "id": "L4U09-G03",
    "tier": "go",
+   "beyond": "Average",
    "page": 5,
-   "text": "Beyond Level 4: Average\nThe average of some numbers is their total divided by how many numbers there are.",
+   "text": "The average of some numbers is their total divided by how many numbers there are.",
    "parts": [
     {
      "label": "a",

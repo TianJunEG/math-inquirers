@@ -592,8 +592,9 @@
   {
    "id": "L4U06-T01",
    "tier": "think",
+   "beyond": "Angles on a line and at a point",
    "page": 4,
-   "text": "Beyond Level 4: Angles on a line and at a point\nAngles on a straight line add up to 180°. Angles around a point add up to 360°.",
+   "text": "Angles on a straight line add up to 180°. Angles around a point add up to 360°.",
    "parts": [
     {
      "label": "a",

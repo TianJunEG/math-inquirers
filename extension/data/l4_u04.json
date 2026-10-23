@@ -976,8 +976,9 @@
   {
    "id": "L4U04-G02",
    "tier": "go",
+   "beyond": "Unit fractions",
    "page": 5,
-   "text": "Beyond Level 4: Unit fractions\nWrite each fraction as the sum of 2 different unit fractions (fractions with 1 on top).",
+   "text": "Write each fraction as the sum of 2 different unit fractions (fractions with 1 on top).",
    "parts": [
     {
      "label": "a",

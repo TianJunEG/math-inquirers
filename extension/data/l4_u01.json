@@ -721,8 +721,9 @@
   {
    "id": "L4U01-G02",
    "tier": "go",
+   "beyond": "Three common multiples",
    "page": 5,
-   "text": "Beyond Level 4: Three common multiples\nThree lighthouses flash at 12:00:00. Lighthouse A flashes every 6 seconds, B every 8 seconds and C every 9 seconds.",
+   "text": "Three lighthouses flash at 12:00:00. Lighthouse A flashes every 6 seconds, B every 8 seconds and C every 9 seconds.",
    "parts": [
     {
      "label": "a",

@@ -194,7 +194,7 @@
      }
     }
    ],
-   "explanation": "Shape A is an L. It has 5 right angles, and its dent is greater than a right angle. Shape B has 6 right angles and 2 dents. Shape C has right angles only at its 2 left corners. Its 2 sloping corners do not fit the checker.",
+   "explanation": "A is an L: 5 right angles, and its dent is greater than a right angle. B has 6 right angles and 2 dents. C has right angles only at its 2 left corners; its 2 sloping corners do not fit the checker.",
    "partsrow": true,
    "figure": {
     "type": "l3_segs",
@@ -579,7 +579,7 @@
      }
     }
    ],
-   "explanation": "Line AB goes 4 across and 2 up. R goes 4 across and 2 up too, so it never meets AB: parallel. P goes 2 across and 4 down, which turns AB through a right angle: perpendicular. Q and S slope in other ways.",
+   "explanation": "AB goes 4 across and 2 up. R goes 4 across and 2 up too, so it never meets AB: parallel. P goes 2 across and 4 down, a right angle to AB: perpendicular.",
    "figure": {
     "type": "l3_segs",
     "k": 44,
@@ -768,7 +768,7 @@
      }
     }
    ],
-   "explanation": "Going round to the right, north is followed by east, south and west. (a) 1 turn: east. (b) 3 turns: west. (c) 2 turns to the left from north: west, then south. Two right angles in either direction face the opposite way: south."
+   "explanation": "Turning right from north: east, south, west. (a) 1 turn: east. (b) 3 turns: west. (c) 2 turns left: west, then south. Two right angles either way face the opposite way: south."
   },
   {
    "id": "L3U08-S08",
@@ -866,7 +866,7 @@
      }
     }
    ],
-   "explanation": "(a) That is what perpendicular means. (b) Parallel lines never meet. (c) A line across 2 rails of a ladder is perpendicular to both. (d) Lines can cross at any angle. Only some crossings make right angles."
+   "explanation": "(a) That is what perpendicular means. (b) Parallel lines never meet. (c) A line across 2 rails of a ladder is perpendicular to both. (d) Lines can cross at any angle."
   },
   {
    "id": "L3U08-S10",
@@ -999,7 +999,7 @@
      }
     }
    ],
-   "explanation": "AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C, 1 across and 2 down reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.",
+   "explanation": "AB goes 2 across for every 1 up. A perpendicular line goes 1 across and 2 down. From C, that reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.",
    "figure": {
     "type": "l3_segs",
     "k": 44,
@@ -1333,7 +1333,7 @@
      }
     }
    ],
-   "explanation": "(a) The 2 lines across are parallel and the 2 lines up are parallel: 2 pairs. (b) The lines cross in 2 × 2 = 4 places, and each crossing has 4 right angles: 16. (c) 3 × 3 = 9 crossings, 9 × 4 = 36 right angles.",
+   "explanation": "(a) 2 lines across and 2 lines up: 2 pairs of parallel lines. (b) 2 × 2 = 4 crossings, each with 4 right angles: 16. (c) 3 × 3 = 9 crossings, 9 × 4 = 36 right angles.",
    "figure": {
     "type": "l3_segs",
     "k": 40,

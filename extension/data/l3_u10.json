@@ -272,7 +272,7 @@
      }
     }
    ],
-   "explanation": "Only Lily has a name with 4 letters, so Lily has the orange. Kumar has neither the apple nor the banana, and the orange is taken, so Kumar has the grapes. Wei does not have the apple, so Wei has the banana. Aisha has the apple.",
+   "explanation": "Only Lily has a 4-letter name: orange. Kumar has neither apple nor banana, so grapes. Wei does not have the apple, so banana. Aisha has the apple.",
    "figure": {
     "type": "l3_grid",
     "head_row": true,

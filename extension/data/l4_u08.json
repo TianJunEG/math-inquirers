@@ -976,8 +976,9 @@
   {
    "id": "L4U08-G01",
    "tier": "go",
+   "beyond": "Painted cubes",
    "page": 5,
-   "text": "Beyond Level 4: Painted cubes\nPaint all the outside faces of a big cube that is 3 by 3 by 3. Then cut it into 27 small cubes.",
+   "text": "Paint all the outside faces of a big cube that is 3 by 3 by 3. Then cut it into 27 small cubes.",
    "parts": [
     {
      "label": "a",
