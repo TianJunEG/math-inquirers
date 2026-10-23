@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 7: Turtle Geometry (angles in polygons; pen drawing with turns)
 // Every answer below was worked out and checked: turn = 360 ÷ sides, inside = 180 − turn,
 // star turn = 360 × times round ÷ points, angle sum = (sides − 2) × 180. The Python program was run.
@@ -231,6 +232,7 @@ module.exports = {
       H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),
       H.q(4, 'Plan a star, then test it (move 120 for the 9-point star). Fill in the 9-point row.   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
       t4,
+      H.fig(FG.rings([{ n: 5, labels: [0, 1, 2, 3, 4], star: { k: 2 }, cap: '5 points, 2 times round', solid: true, dotR: 8, size: 16 }, { n: 9, labels: [0, 1, 2, 3, 4, 5, 6, 7, 8], cap: '9 points: draw your star', dotR: 8, size: 16 }], { r: 42, cw: 250, label: 'Left: a 5-point star already drawn by joining every second dot of 5 dots. Right: 9 dots numbered 0 to 8 round a circle, empty, to draw the 9-point star.' })),
       H.q(5, '★ Take-home. Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
       t5,
       H.sub('a', 'One more side adds  ______ °      (b)  For n sides:  total = ______________'),
