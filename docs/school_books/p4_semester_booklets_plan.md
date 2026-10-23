@@ -28,7 +28,7 @@ Branch `claude/great-fermi-1hv4vc`. Pipeline: `school/p4` (copied from `school/p
 | FM2.2 | is a 1-digit number a factor of a number within 100 | S1-06 | Covered |
 | FM2.3 | common factors of two numbers | S1-08, S1-09 | Covered |
 | FM2.4 | is a number a multiple of a 1-digit number | S1-06, 07, 09 | Covered |
-| FM2.5 | common multiples of two 1-digit numbers | S1-09 | Covered, one page (clues name a common multiple of 3 and 9, and 7) |
+| FM2.5 | common multiples of two 1-digit numbers | S1-09 | Covered on one page, with pairs that are not multiples of each other (2 and 9, 2 and 7, 2 and 3) |
 | FO3.1 | multiplication algorithm (4 digits by 1 digit; 3 digits by 2 digits) | S1-10, 11, 13 | Covered. The working is not seen: only the product is checked. |
 | FO3.2 | division algorithm (4 digits by 1 digit) | S1-11, 12, 13 | Covered, including remainders in stories |
 | MI1.1 | mixed numbers, improper fractions and their relationship | S1-14, 15, 17 | Covered |
@@ -50,7 +50,7 @@ Branch `claude/great-fermi-1hv4vc`. Pipeline: `school/p4` (copied from `school/p
 | AN1.2 | measuring angles in degrees | S1-19 | Covered for reading a protractor drawn on the page. Using a real protractor on a real angle cannot be checked on paper. |
 | AN1.3 | drawing an angle of given size | none | **Honest gap.** A drawing made with a pencil cannot be read by a self-check printed on the page. |
 | RS2.1 | properties of rectangle and square (no diagonal properties) | S2-11, S2-12 | Covered |
-| RS2.2 | drawing rectangles and squares | S2-12 | Partly: the pupil chooses the fourth corner on a dot grid; the drawing itself is not checked |
+| RS2.2 | drawing rectangles and squares | S2-12 | Partly (and marked partly in the front matter): the pupil chooses the fourth corner on a dot grid; the drawing itself is not checked |
 | LS3.1 | identifying symmetric figures | S2-13, S2-14 | Covered |
 | LS3.2 | is a line a line of symmetry | S2-13 | Covered |
 | LS3.3 | completing a symmetric figure on a square grid | S2-14 | Partly: the pupil shades the mirror image and then counts squares; the counts check the shading, a wrong shading gives a wrong count |
@@ -101,7 +101,7 @@ Page numbers are build numbers (P4-01 to P4-40). The footer prints both, for exa
 | Page | Title | Stars | Outcomes | Mechanism |
 |---|---|---|---|---|
 | S2-01 (P4-21) | Decimal Place Value | 1 | DP1.1 | code word |
-| S2-02 (P4-22) | Order the Decimals | 2 | DP1.2 | ordering cards, 720 orders tested for a second word |
+| S2-02 (P4-22) | Order the Decimals | 1 | DP1.2 | ordering cards, 720 orders tested for a second word |
 | S2-03 (P4-23) | Decimal Match | 1 | DP1.3, 1.4 | matching with decoy cards |
 | S2-04 (P4-24) | Rounding Decimals | 1 | DP1.5 | lettered choices |
 | S2-05 (P4-25) | Magic Decimals | 2 | DA2.1 | totals: every line of a magic square makes the same sum |
@@ -116,7 +116,7 @@ Page numbers are build numbers (P4-01 to P4-40). The footer prints both, for exa
 | S2-14 (P4-34) | Complete the Figure | 2 | LS3.1, 3.3 | code word from counts of shaded squares |
 | S2-15 (P4-35) | Name the Solid | 1 | NT4.1 | lettered choices, drawings of solids |
 | S2-16 (P4-36) | Which Net? | 2 | NT4.3, 4.4 | lettered choices, nets |
-| S2-17 (P4-37) | Complete the Table | 1 | ST1.1, 1.2 | totals (rows and columns) and code word |
+| S2-17 (P4-37) | Complete the Table | 2 | ST1.1, 1.2 | totals (rows and columns) and code word |
 | S2-18 (P4-38) | Line Graph Detective | 1 | ST1.2 | code word, line graph |
 | S2-19 (P4-39) | Pie Chart | 2 | ST1.2, FS2.1 | code word, pie chart in 8 equal slices |
 | S2-20 (P4-40) | Colour the Ferry | 2 | DP1.2, 1.4, 1.5, DA2.1, DM3.1, 3.2 | colour by code |
@@ -125,7 +125,7 @@ Mechanism variety (the brief asked for it where the level allows): code word (20
 
 ## 3. Ranges and wording
 
-Sentences of at most 14 words, at most 4 instruction sentences, a check strip of at most 18 words. Numbers to 100 000 (a thin gap in 5-digit numbers). Decimals to 3 places. Fractions with denominators up to 12 (and 20, 25, 50 and 100, which are factors of 100, only for converting to decimals, DP1.3 and DP1.4). Shapes use cm and cm², paths and gardens m and m². Names in stories come from a short mixed list.
+Every sentence of at most 14 words (a fraction counts as one word; the validator splits at . ? ! ; and :), at most 4 instruction sentences, a check strip of at most 18 words. Numbers to 100 000 (a thin gap in 5-digit numbers). Decimals to 3 places. Fractions with denominators up to 12 (and 20, 25, 50 and 100, which are factors of 100, only for converting to decimals, DP1.3 and DP1.4). Shapes use cm and cm², paths and gardens m and m². Names in stories come from a short mixed list.
 
 ## 4. Mechanics for self-checking (the answer must be shown wrong, not shown right)
 

@@ -57,7 +57,7 @@ Outputs in `out/`: `P4_S1_Puzzles.pdf`, `P4_S2_Puzzles.pdf` (20 pages each, phot
 | S1-19 (P4-19) | Protractor Readings | 2 | K1 code word (6 letters) |
 | S1-20 (P4-20) | Fraction Stories | 2 | K1 code word (6 letters) |
 | S2-01 (P4-21) | Decimal Place Value | 1 | K1 code word (6 letters) |
-| S2-02 (P4-22) | Order the Decimals | 2 | K1 letters in order spell a word (6 letters) + each card used once |
+| S2-02 (P4-22) | Order the Decimals | 1 | K1 letters in order spell a word (6 letters) + each card used once |
 | S2-03 (P4-23) | Decimal Match | 1 | K1 letters of the matching cards spell a word (6 letters), 4 decoy car |
 | S2-04 (P4-24) | Rounding Decimals | 1 | K1 the letter of the right choice in each row spells a word (6 letters |
 | S2-05 (P4-25) | Magic Decimals | 2 | K3 every row, column and corner-to-corner line makes the same total |
@@ -72,11 +72,11 @@ Outputs in `out/`: `P4_S1_Puzzles.pdf`, `P4_S2_Puzzles.pdf` (20 pages each, phot
 | S2-14 (P4-34) | Complete the Figure | 2 | K1 code word (6 letters) |
 | S2-15 (P4-35) | Name the Solid | 1 | K1 the letter of the right choice in each row spells a word (6 letters |
 | S2-16 (P4-36) | Which Net? | 2 | K1 the letter of the right choice in each row spells a word (6 letters |
-| S2-17 (P4-37) | Complete the Table | 1 | K3 rows and columns add to their totals + K1 code word (6 letters) |
+| S2-17 (P4-37) | Complete the Table | 2 | K3 rows and columns add to their totals + K1 code word (6 letters) |
 | S2-18 (P4-38) | Line Graph Detective | 1 | K1 code word (6 letters) |
 | S2-19 (P4-39) | Pie Chart | 2 | K1 code word (6 letters) |
 | S2-20 (P4-40) | Colour the Ferry | 2 | K1 colour key + K3 tally of colours (+ matching parts) |
 
 ## Rules every page keeps
 
-Black and white only (#000/#fff, strokes at least 0.57 pt); A4 with 15 mm margins; instruction sentences at most 14 words, at most 4 sentences; answer boxes at least 12 mm high (9 mm on the colour-by-code pages); no Mi, MOE, alignment or price wording (the cover has one not-affiliated sentence). Code words: exactly one arrangement of the letters is a word, so no wrong placement of the answers spells a word, tested against the 241 000-word list. Wrong-answer enumeration at 95% or better on every page. See `validate.py` for the full list.
+Black and white only (#000/#fff, strokes at least 0.57 pt); A4 with 15 mm margins; every sentence on a page at most 14 words (a fraction counts as one word), at most 4 instruction sentences; answer boxes at least 12 mm high (14 by 11 mm on the colour-by-code pages); no Mi, MOE, alignment or price wording (the cover has one not-affiliated sentence). Code words: exactly one arrangement of the letters is a word, so no wrong placement of the answers spells a word, tested against the 241 000-word list. Wrong-answer enumeration at 95% or better on every page. See `validate.py` for the full list.
