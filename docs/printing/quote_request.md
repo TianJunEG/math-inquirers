@@ -8,6 +8,7 @@ Hello, we are a small maths enrichment program in Singapore and would like a quo
 - Binding: spiral (plastic coil) or wire-o on the LEFT long edge. Please tell us which you offer and the cost difference.
 - Cover: please quote (a) no separate cover, the first page is the cover, and (b) a clear front cover and card back.
 - Pages that are intentionally blank are included in the file. Please do not remove them.
+- The cut-out (kit) pages are meant for cutting out, each with a blank back (keep it): Level 1 pages 57, 59, 61, 63, 65, 67; Level 2 pages 59, 61, 63, 65, 67, 69, 71, 73; Level 3 pages 59, 61, 63, 65, 67, 69; Level 4 pages 59, 61, 63, 65, 67, 69, 71, 73; Level 5 pages 53, 55, 57, 59, 61; Level 6 pages 57, 59, 61..
 - Delivery: to home addresses in Singapore, one workbook per parcel (or a parcel for 2 siblings' workbooks). Please state the delivery time from our order, the packaging, and the cost per parcel.
 
 | Workbook | Pages in the file | Sheets (double-sided) |

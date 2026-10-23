@@ -230,7 +230,7 @@ Google Meet recording and its settings, camera and mute rules, the Meet link and
 | Venue hire | Five mornings of 3.5 hours with set-up; deposit; cleaning fee | |
 | Public liability insurance | Per event or per period | |
 | Accident insurance for children (if any) | | |
-| Printing: 8 workbooks plus spares (P1, 64 print pages, black and white, double-sided) | Quote from the printers asked in `quote_request.md`; add to the 9 Nov order if the timing fits | |
+| Printing: 8 workbooks plus spares (P1, 68 print pages, black and white, double-sided) | Quote from the printers asked in `quote_request.md`; add to the 9 Nov order if the timing fits | |
 | Printing: tutor answer key, tutor notes sheet, observation sheets, timed item sheets | Office or library printing | |
 | Printing: forms, sign-in sheets, name tags | | |
 | Kit cutting supplies and bags/envelopes | Section 3.3 | |
