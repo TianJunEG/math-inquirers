@@ -657,7 +657,7 @@
      }
     }
    ],
-   "hint": "How far is it from the second number up to the first number?",
+   "hint": "Picture both numbers on a number line.",
    "space": {
     "rows": [
      "Number line:",
@@ -920,7 +920,7 @@
      }
     }
    ],
-   "hint": "A number line with 0 would be 1 step too short.",
+   "hint": "Which year comes straight after 1 BC? Count carefully.",
    "space": {
     "rows": [
      "Working:",
