@@ -70,7 +70,7 @@
       "text": "3 cm"
      }
     ],
-    "width_mm": 58
+    "width_mm": 84
    },
    "answer": {
     "value": [
@@ -426,7 +426,7 @@
      ]
     ],
     "k": 34,
-    "width_mm": 88,
+    "width_mm": 80,
     "labels": [
      {
       "side": 0,
@@ -735,7 +735,7 @@
     },
     {
      "label": "c",
-     "text": "The same 3 m by 2 m piece is cut from the MIDDLE of a long side. The perimeter is then {b} m.",
+     "text": "The same piece is cut from the MIDDLE of a long side. The perimeter is then {b} m.",
      "answer": {
       "value": [
        "34"
@@ -774,7 +774,7 @@
      ]
     ],
     "k": 30,
-    "width_mm": 78,
+    "width_mm": 66,
     "labels": [
      {
       "side": 0,
@@ -832,7 +832,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The pond and the path together make a rectangle {b} m by {b} m.",
+     "text": "Pond and path make a rectangle {b} m by {b} m.",
      "answer": {
       "value": [
        "8",
@@ -899,8 +899,14 @@
     "texts": [
      {
       "x": 4,
-      "y": 3,
-      "text": "pond 6 m by 4 m"
+      "y": 3.4,
+      "text": "pond"
+     },
+     {
+      "x": 4,
+      "y": 2.4,
+      "text": "6 m by 4 m",
+      "size": 28
      }
     ],
     "labels": [
@@ -909,8 +915,8 @@
       "text": "path 1 m wide"
      }
     ],
-    "k": 26,
-    "width_mm": 78
+    "k": 34,
+    "width_mm": 84
    },
    "figside": true,
    "hint": "Find the area of the whole rectangle. Take away the pond."

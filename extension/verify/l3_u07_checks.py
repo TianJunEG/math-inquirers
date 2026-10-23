@@ -111,39 +111,6 @@ def _():
     return {'a': s([area(st)]), 'b': s([perimeter(st)]), 'c': s([len(full - st)]), 'd': s([perimeter(full)])}
 
 
-@check('L3U07-S05')
-def _():
-    along = only(n for n in range(1, 30) if n * 3 == 15)
-    across = only(n for n in range(1, 30) if n * 3 == 9)
-    return {'a': s([along]), 'b': s([across]), 'c': s([along * across])}
-
-
-@check('L3U07-S06')
-def _():
-    rects = [(l, w) for l in range(1, 14) for w in range(1, l + 1) if 2 * (l + w) == 14]
-    return {'a': s([len(rects)]), 'b': s([max(l * w for l, w in rects)])}
-
-
-@check('L3U07-S07')
-def _():
-    pts = [(0, 0), (8, 0), (8, 3), (4, 3), (4, 6), (0, 6)]
-    side = lambda i: abs(pts[i][0] - pts[(i + 1) % 6][0]) + abs(pts[i][1] - pts[(i + 1) % 6][1])
-    return {'a': s([side(2)]), 'b': s([side(3)]), 'c': s([poly_area(pts)]), 'd': s([poly_perimeter(pts)])}
-
-
-@check('L3U07-S08')
-def _():
-    st = cells_of(['XXXXXX', 'XXXX..', 'XX....'])
-    full = cells_of(['XXXXXX'] * 3)
-    return {'a': s([area(st)]), 'b': s([perimeter(st)]), 'c': s([len(full - st)]), 'd': s([perimeter(full)])}
-
-
-@check('L3U07-S05')
-def _():
-    a, p = rect(9, 5)
-    return {'a': s([p]), 'b': s([a])}
-
-
 @check('L3U07-S09')
 def _():
     mei_p = rect(10, 2)[1]

@@ -21,11 +21,11 @@ u.learn(
     {'title': 'How to find area and perimeter',
      'steps': ['Area: count the squares, or length × width.', 'Perimeter: add all the sides.',
                'Rectangle: perimeter = 2 × (length + width).', 'Write cm for the perimeter and cm² for the area.']},
-    {'text': 'A rectangle is 8 cm long and 3 cm wide.', 'figure': rect(8, 3, 58), 'figright': True,
+    {'text': 'A rectangle is 8 cm long and 3 cm wide.', 'figure': rect(8, 3, 84), 'figright': True,
      'answer': None, 'explanation': ''})
 tr = u.u['learn']['try']
 tr.pop('answer'); tr.pop('text')
-u.u['learn']['try'] = {'id': 'L3U07-L01', 'text': 'A rectangle is 8 cm long and 3 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.', 'figure': rect(8, 3, 58),
+u.u['learn']['try'] = {'id': 'L3U07-L01', 'text': 'A rectangle is 8 cm long and 3 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.', 'figure': rect(8, 3, 84),
                        'answer': A(['24', '22'], 'Area 24 cm². Perimeter 22 cm.', list=True),
                        'explanation': 'Area: 8 × 3 = 24 cm². Perimeter: 8 + 3 + 8 + 3 = 22 cm, or 2 × (8 + 3) = 22 cm.'}
 
@@ -63,7 +63,7 @@ u.S(2, 'Find the missing sides a and b first. Then find the area, and then the p
     P('a', 'a = {b} cm', A('4')), P('b', 'b = {b} cm', A('3')),
     P('c', 'The area is {b} cm².', A('36')), P('d', 'The perimeter is {b} cm.', A('28'))],
     partsrow=True,
-    figure={'type': 'l3_poly', 'pts': [[0, 0], [8, 0], [8, 3], [4, 3], [4, 6], [0, 6]], 'k': 34, 'width_mm': 88,
+    figure={'type': 'l3_poly', 'pts': [[0, 0], [8, 0], [8, 3], [4, 3], [4, 6], [0, 6]], 'k': 34, 'width_mm': 80,
             'labels': [{'side': 0, 'text': '8 cm'}, {'side': 1, 'text': '3 cm'}, {'side': 2, 'text': 'a'}, {'side': 3, 'text': 'b'}, {'side': 4, 'text': '4 cm'}, {'side': 5, 'text': '6 cm'}]},
     why='a is the top of the lower part: 8 - 4 = 4 cm. b is the rest of the left height: 6 - 3 = 3 cm. Area: cut into a 4 by 6 rectangle and a 4 by 3 rectangle: 24 + 12 = 36 cm². Perimeter: push the steps out to a box 8 by 6: 2 × (8 + 6) = 28 cm.')
 u.S(3, 'Every square in the picture has sides of 1 cm.', parts=[
@@ -101,8 +101,8 @@ u.T('A rectangle has area 36 cm² and perimeter 26 cm.', parts=[
     why='Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36 are 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9. Check: area 9 × 4 = 36 and perimeter 2 × 13 = 26.')
 u.T('A rectangle is 9 m long and 6 m wide. A rectangle 3 m by 2 m is cut out of one corner, as shown.', parts=[
     P('a', 'The area that is left is {b} m².', A('48')), P('b', 'The perimeter of the figure is {b} m.', A('30')),
-    P('c', 'The same 3 m by 2 m piece is cut from the MIDDLE of a long side. The perimeter is then {b} m.', A('34'))],
-    figure={'type': 'l3_poly', 'pts': [[0, 0], [9, 0], [9, 4], [6, 4], [6, 6], [0, 6]], 'k': 30, 'width_mm': 78,
+    P('c', 'The same piece is cut from the MIDDLE of a long side. The perimeter is then {b} m.', A('34'))],
+    figure={'type': 'l3_poly', 'pts': [[0, 0], [9, 0], [9, 4], [6, 4], [6, 6], [0, 6]], 'k': 30, 'width_mm': 66,
             'labels': [{'side': 0, 'text': '9 m'}, {'side': 5, 'text': '6 m'}]}, figside=True,
     hint='Push the corner out. Then think about a notch in the middle.',
     why='(a) 9 × 6 = 54, and 54 - 6 = 48 m². (b) Cutting a corner does not change the perimeter: 2 × (9 + 6) = 30 m. (c) A notch in the middle of a side takes away 3 m of edge. It adds 3 + 2 + 2 = 7 m of new edge. So the perimeter grows by 4 m: 34 m.')
@@ -114,10 +114,10 @@ u.G('Beyond Level 3: Perimeter patterns.\nSquares with sides of 1 cm are joined 
     space={'rows': ['My pattern:']},
     why='Each new square adds 2 cm (1 cm on top and 1 cm below). The perimeter is 4 + 2 for every extra square. For 10 squares: 4 + 9 × 2 = 22 cm. For 30 cm: (30 - 4) ÷ 2 = 13 extra squares, so 14 squares.')
 u.G('Beyond Level 3: A path round a pond.\nA pond is 6 m long and 4 m wide. A path 1 m wide goes all round the pond.', parts=[
-    P('a', 'The pond and the path together make a rectangle {b} m by {b} m.', A(['8', '6'], '8 m by 6 m', list=True)),
+    P('a', 'Pond and path make a rectangle {b} m by {b} m.', A(['8', '6'], '8 m by 6 m', list=True)),
     P('b', 'The area of the path is {b} m².', A('24'))],
-    figure={'type': 'l3_poly', 'pts': [[0, 0], [8, 0], [8, 6], [0, 6]], 'extra': [{'pts': [[1, 1], [7, 1], [7, 5], [1, 5]]}], 'texts': [{'x': 4, 'y': 3, 'text': 'pond 6 m by 4 m'}],
-            'labels': [{'side': 0, 'text': 'path 1 m wide'}], 'k': 26, 'width_mm': 78}, figside=True,
+    figure={'type': 'l3_poly', 'pts': [[0, 0], [8, 0], [8, 6], [0, 6]], 'extra': [{'pts': [[1, 1], [7, 1], [7, 5], [1, 5]]}], 'texts': [{'x': 4, 'y': 3.4, 'text': 'pond'}, {'x': 4, 'y': 2.4, 'text': '6 m by 4 m', 'size': 28}],
+            'labels': [{'side': 0, 'text': 'path 1 m wide'}], 'k': 34, 'width_mm': 84}, figside=True,
     hint='Find the area of the whole rectangle. Take away the pond.',
     why='The path adds 1 m on each side, so both lengths grow by 2 m: 6 + 2 = 8 and 4 + 2 = 6. The whole rectangle has an area of 8 × 6 = 48 m². The pond has 6 × 4 = 24 m². The path is 48 - 24 = 24 m².')
 u.G('Beyond Level 3: The largest square tile.\nA floor is 12 m long and 10 m wide. It is covered exactly with square tiles of one size. The side of a tile is a whole number of metres.', parts=[

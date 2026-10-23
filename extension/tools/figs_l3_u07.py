@@ -75,9 +75,9 @@ def poly(spec, w=None):
         nx, ny = sgn * dy / ln, -sgn * dx / ln      # outward normal in y-up coordinates
         cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
         if abs(ny) > 0.5:
-            P.append(T(X(cx), Y(cy) - ny * 36 + 10, esc(lab['text']), 30))
+            P.append(T(X(cx), Y(cy) - ny * 36 + 10, esc(lab['text']), lab.get('size', 34)))
         else:
-            P.append(T(X(cx) + nx * 18, Y(cy) + 10, esc(lab['text']), 30, anchor='end' if nx < 0 else 'start'))
+            P.append(T(X(cx) + nx * 18, Y(cy) + 10, esc(lab['text']), lab.get('size', 34), anchor='end' if nx < 0 else 'start'))
     H = my + (max(ys) - min(ys)) * k + 60
     if spec.get('label'):
         P.append(T(mx + (max(xs) - min(xs)) * k / 2, H + 18, esc(spec['label']), 30)); H += 40
