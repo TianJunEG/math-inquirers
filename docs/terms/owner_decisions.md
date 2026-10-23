@@ -83,3 +83,4 @@ Addendum (23 Oct 2026): Saturday 12:30-2:00pm is the owner's lunch time (not fre
 
 ## 23 Oct 2026: TERM-TIME LESSONS ARE 75 MINUTES (owner decision)
 Owner: "term time 75 mins". Term-time lessons (all levels, all terms) are 75 minutes, matching the 2027 slot grid (75-minute slots with 15-minute breaks). The holiday program stays 90 minutes. Consequences: the 20 written Level 1 lessons (90 minutes) need re-timing to 75; the Term 3 and later lessons are written at 75 minutes; timing model, validator, guide, deck, parent/home pages, the Challenge Quest slot (lessons 10, 20, 30, 40; currently 20 minutes after the break) and any "90-minute" wording on term pages must change; term pricing/website term copy must say 75 minutes.
+Addendum (23 Oct 2026): Sunday 12:30pm is also lunch time (owner), so no Sunday class from 10:30am to about 2:00pm in the 2027 grid. Sunday slots stay 4:30pm, 6:00pm, 7:45pm.
