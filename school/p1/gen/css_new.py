@@ -35,3 +35,24 @@ CSS_NEW += """
 .dtable td .ab{width:16mm;height:12mm;border-width:0.5mm}
 .mq{display:flex;gap:6mm;justify-content:center;font-size:14.5pt;flex-wrap:wrap}.mq .mqi{display:flex;align-items:center;gap:2mm}
 """
+CSS_NEW += """
+/* money and time pages */
+.qrow{display:flex;align-items:center;gap:3mm;font-size:14.5pt;padding:1.5mm 0;border-bottom:0.3mm solid #000;line-height:1.2}
+.qrow .qt{flex:1}.qrow .ab{flex:none}
+.legend2{display:flex;align-items:center;gap:4mm;font-size:13pt;font-weight:700;justify-content:center}
+.purses{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm 4mm}
+.purse{border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2mm;display:flex;flex-direction:column;align-items:center;gap:1mm}
+.purse .ab{width:12mm;height:12mm}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm 4mm}
+.bitem{border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2mm;display:flex;align-items:center;gap:2.5mm}
+.bitem svg{flex:none}.bitem .bn{flex:1;font-size:12.5pt;font-weight:700;line-height:1.15}.bitem .bp{font-family:'Fredoka';font-weight:700;font-size:17pt}
+.bitem i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;font-weight:700;flex:none}
+.buyer{display:flex;align-items:center;gap:3mm;font-size:14.5pt;padding:2mm 0;border-bottom:0.3mm solid #000}.buyer .bt{flex:1}.buyer .ab{width:14mm}
+.tcards{display:grid;grid-template-columns:1fr 1fr;gap:3mm 5mm}
+.tcard{border:0.4mm solid #000;border-radius:2mm;padding:2mm 3mm;display:flex;flex-direction:column;gap:1mm}
+.tcard .th{display:flex;align-items:center;gap:2mm;font-size:12.5pt;font-weight:700}
+.tcard .tclk{display:flex;align-items:center;gap:2mm;justify-content:center}.tcard .tclk small{font-size:10pt;font-weight:700;text-align:center;display:block}
+.tcard .ta{display:flex;align-items:center;gap:2mm;justify-content:flex-end;font-size:12.5pt}
+.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid #000;height:13mm;font-size:14pt;text-align:center;padding:0 3mm}.tt th{font-size:11pt;font-weight:800;height:9mm}.tt td .ab{width:20mm;height:12mm}
+.tm{font-family:'Fredoka';font-weight:600;font-size:19pt}.ev{font-size:11.5pt;font-weight:700}
+"""

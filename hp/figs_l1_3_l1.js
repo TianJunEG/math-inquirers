@@ -128,6 +128,36 @@ const queue20 = () => {
   o += T(10, 12, 'front', 14, { a: 'start', c: TEAL, i: true });
   return W(svg(560, 112, o, 'A queue of 20 children in two rows of 10, numbered 1 to 20 from the front; Mei is the 7th'), 2);
 };
+// L2 No.6: two bars, one is 2 more, total 10
+const bars10 = () => { const r = barModelF({ unit: 40, labelW: 90, rowH: 34, gap: 14, rows: [{ label: 'smaller', segs: [{ u: 3, t: '?', k: 'a' }] }, { label: 'bigger', segs: [{ u: 3, t: '?', k: 'a' }, { u: 1, t: '2', k: 'h' }] }], vbrace: { from: 0, to: 1, t: '10 altogether' } }, 4); return W(svg(520, r.y + 6, r.s, 'Two bars: the bigger number is 2 more than the smaller; together 10'), 2); };
+// number machine strip: cells [{t, k:'q'|'op'|'out'}]
+const machine = (cells) => {
+  let s = '', x = 6; const w = 86, h = 46, gap = 34;
+  cells.forEach((c, i) => {
+    s += R(x, 10, w, h, c.k === 'q' ? Y : c.k === 'out' ? BL : '#EDEDED', { sw: 2.6, rx: 6 }) + T(x + w / 2, 10 + h / 2 + 9, c.t, 26, { w: 800 });
+    if (i < cells.length - 1) s += L(x + w + 4, 33, x + w + gap - 8, 33, { sw: 2.6 }) + F.arrowHead(x + w + gap - 4, 33, 'r', 8);
+    x += w + gap;
+  });
+  return W(svg(x - gap + 12, 66, s, 'A number machine strip: ' + cells.map(c => c.t).join(', ')), 2);
+};
+const mT1 = () => machine([{ t: '?', k: 'q' }, { t: '− 5', k: 'op' }, { t: '+ 3', k: 'op' }, { t: '12', k: 'out' }]);
+const mT2 = () => machine([{ t: '?', k: 'q' }, { t: '− 6', k: 'op' }, { t: '+ 4', k: 'op' }, { t: '− 3', k: 'op' }, { t: '10', k: 'out' }]);
+// C2 snail: a wall scale 0..9 cm, drawn tall
+const snailWall = () => {
+  let s = '', y0 = 236, k = 24; s += R(60, y0 - 9 * k, 56, 9 * k, '#F4F1E8', { sw: 2.6 });
+  for (let v = 0; v <= 9; v++) { s += L(52, y0 - v * k, 116, y0 - v * k, { sw: v % 3 ? 1.4 : 2.4 }) + T(40, y0 - v * k + 6, v, 16, { a: 'end' }); }
+  s += T(88, y0 - 9 * k - 10, 'top', 15, { c: TEAL }) + T(88, y0 + 20, 'bottom', 15, { c: TEAL });
+  s += `<ellipse cx="150" cy="${y0 - 12}" rx="26" ry="14" fill="${GR}" stroke="${NAVY}" stroke-width="2.4"/>` + C(150, y0 - 14, 8, '#fff', { sw: 2.4 }) + T(150, y0 - 10, '·', 20) + L(172, y0 - 22, 184, y0 - 38, { sw: 2.4 }) + C(184, y0 - 40, 3, NAVY, { sw: 1 });
+  s += T(210, y0 - 100, 'The snail starts at the bottom.', 16, { a: 'start', w: 600 }) + T(210, y0 - 76, 'Day: up 3 cm.   Night: back 1 cm.', 16, { a: 'start', w: 600 });
+  return W(svg(520, y0 + 30, s, 'A wall 9 cm high with a scale from 0 to 9 and a snail at the bottom'), 2);
+};
+// L6 T5: dollar notes and price tags
+const dollars = () => {
+  let s = '', x = 6; [[2], [5], [10], [50]].forEach(([v], i) => { s += noteF(v, x, 8, 84, 42); x += 94; }); s += coinF(100, x + 22, 30); s += T(x + 54, 36, '= $1 coin', 15, { a: 'start', w: 600 });
+  const tag = (x0, nm, pr) => P([[x0 + 14, 74], [x0 + 130, 74], [x0 + 130, 112], [x0 + 14, 112], [x0, 93]], Y, { sw: 2.4 }) + C(x0 + 14, 93, 4, '#fff', { sw: 1.6 }) + T(x0 + 74, 90, nm, 14, {}) + T(x0 + 74, 108, pr, 17, {});
+  s += tag(10, 'toy', '$17') + tag(160, 'bicycle', '$65') + tag(310, 'helmet', '$8');
+  return W(svg(590, 124, s, 'Dollar notes of 2, 5, 10 and 50, a 1 dollar coin, and price tags: toy 17 dollars, bicycle 65 dollars, helmet 8 dollars'), 2);
+};
 // extra (Think harder / Go further) figures by '<lesson>.<T|C><n>'
 const FX = {
   '3.T1': Object.assign(() => starGraph(), { lines: 1 }),
@@ -139,5 +169,8 @@ const FX = {
   '4.T3': Object.assign(() => t3(), { lines: 1 }),
   '4.T4': Object.assign(() => stickSquares(), { lines: 1 }),
   '4.C2': Object.assign(() => dotTriangles(), { lines: 3 }),
+  '5.T1': Object.assign(() => mT1(), { lines: 1 }),
+  '5.T2': Object.assign(() => mT2(), { lines: 1 }),
+  '5.C2': Object.assign(() => snailWall(), { lines: 2 }),
 };
-module.exports = { p1, queue20, FX, frogLines, stickerBoxes, p2, p3, p4, p5, p6, t1, t3, stickSquares, dotTriangles, coinCell, coinsRow, purse, trayRow, benTwo, fruitGraph, petGraph, starGraph, blankRow, appleRow, clipEraser, pencilCubes, ruler6, W };
+module.exports = { bars10, dollars, p1, queue20, FX, frogLines, stickerBoxes, p2, p3, p4, p5, p6, t1, t3, stickSquares, dotTriangles, coinCell, coinsRow, purse, trayRow, benTwo, fruitGraph, petGraph, starGraph, blankRow, appleRow, clipEraser, pencilCubes, ruler6, W };
