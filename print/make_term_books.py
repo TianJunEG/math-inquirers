@@ -152,7 +152,7 @@ def gutter_mark(W, H, g, cut=True):
 def folio(W, H, n, g, odd):
     def draw(c):
         c.setFillColor(HexColor('#444444')); c.setFont('Helvetica-Bold', 9)
-        c.drawCentredString(g + (W - g) / 2 if odd else (W - g) / 2, 10, f'- {n} -')
+        c.drawCentredString(g + (W - g) / 2 if odd else (W - g) / 2, 15.5, f'- {n} -')
     return overlay(W, H, draw)
 
 
@@ -196,7 +196,7 @@ def build_book(level, term, bookno, lessons, kind, ages='', per_term=10):
             xr = PdfReader(xp)
             if recto and len(seq) % 2 == 1: seq.append(None)
             if extra in QUEST_TOC:                      # the Quest pages are listed on the contents page
-                toc.append(('Quest', (QUEST_TOC[extra], f'{len(xr.pages)} pages'), len(seq) + 1))
+                toc.append(('Quest', (QUEST_TOC[extra], f'{len(xr.pages)} page' + ('' if len(xr.pages) == 1 else 's')), len(seq) + 1))
             for j in range(len(xr.pages)):
                 seq.append(('src', xr, j, False, True, extra == 'Quest_Log'))
     if len(seq) % 2:

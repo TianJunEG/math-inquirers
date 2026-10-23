@@ -42,11 +42,22 @@ from common import E, mi_uri, font_css          # noqa: E402
 NAME = "Mi's Challenge Quest"
 
 
+_TERM = {'n': 0, 'off': 0}     # set per build: term-local lesson numbers (the books say "Term 3 Lesson 8")
+
+
+def set_term(d):
+    _TERM['n'] = d['term']; _TERM['off'] = (d['term'] - 1) * 10
+
+
 def lesson_lab(x):
-    """Lesson label for a gate: 21, [21, 22] (gate covers two lessons) or 'beyond' (the cave: an unseen puzzle)."""
-    if isinstance(x, (list, tuple)): return 'L' + ', '.join(str(i) for i in x)
+    """Lesson label for a gate: term-local, e.g. 'Term 3 Lesson 4', 'Term 3 Lessons 1, 2' (gate covers two lessons), 'mixed' or 'unseen' (the cave)."""
     if str(x) == 'mixed': return 'mixed'
-    return 'unseen' if str(x) == 'beyond' else f'L{x}'
+    if str(x) == 'beyond': return 'unseen'
+    t, off = _TERM['n'], _TERM['off']
+    if isinstance(x, (list, tuple)): return f'Term {t} Lesson' + ('s ' if len(x) > 1 else ' ') + ', '.join(str(int(i) - off) for i in x)
+    return f'Term {t} Lesson {int(x) - off}'
+
+
 # words that must never appear in the text of the child or parent PDFs (the tutor notes may say "no scores" etc.)
 BAN_FAMILY = [r'\btests?\b', r'\bexams?\b', r'check[- ]?sheet', r'\bend-of-term check\b', r'\btimer\b', r'\bpass(ed)? or fail', r'\branked?\b|\branking\b',
               r'\bscored?\b|\bscores\b', r'\bmarked\b|\bmarks\b|\bmarking\b', r'\bout of\b', r'\bgrades?\b']
@@ -134,6 +145,7 @@ def tool_strip_html(ids, cave=False):
 
 
 def quest_log_html(d):
+    set_term(d)
     q = d['challenge_quest']
     t = d['term']
     shim = dict(d); shim['end_of_term_check'] = q            # b_check reads this key; the data lives under challenge_quest
@@ -186,6 +198,7 @@ def quest_log_html(d):
 # ------------------------------------------------------------------ tutor notes
 
 def tutor_notes_html(d):
+    set_term(d)
     c = d['challenge_quest']
     qs = c['questions']
     o = c['optional']
@@ -276,6 +289,7 @@ def tutor_notes_html(d):
 # ------------------------------------------------------------------ the grown-up note
 
 def parent_note_html(d):
+    set_term(d)
     c = d['challenge_quest']
     n = c['parent_note']
     sl = c['saw_line']

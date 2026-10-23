@@ -164,7 +164,7 @@ def jump_lines(start=0, end=100, step=1, label_every=10, rows=None, room=True, w
             P.append(f'<line x1="{x(v):.1f}" y1="{base - (18 if major else 9)}" x2="{x(v):.1f}" y2="{base + (18 if major else 9)}" stroke="{NAVY}" stroke-width="{4 if major else 2.2}"/>')
             if major and v not in hide:
                 hw = 10 * len(str(v)) + 10
-                clash = any(abs(x(v) - x(p['v'])) < hw + 8 for p in pts)
+                clash = any(abs(x(v) - x(p['v'])) < hw / 2 + 6 for p in pts)
                 if not clash:
                     P.append(f'<text x="{x(v):.1f}" y="{base + 56}" font-size="36" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>')
             v += step

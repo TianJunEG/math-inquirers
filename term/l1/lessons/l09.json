@@ -2119,11 +2119,11 @@
      "end": 15,
      "objects": [
       {
-       "label": "The snail's way forward",
+       "label": "The snail's way forward: 4 to 13",
        "from": 4,
        "to": 13,
        "color": "#BFE8DC",
-       "kind": "snail"
+       "kind": "bar"
       }
      ]
     }

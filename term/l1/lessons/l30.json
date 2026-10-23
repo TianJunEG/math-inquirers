@@ -25,10 +25,10 @@
   "strand": "Processes and heuristics (pp. 13 to 14 of the syllabus pages we hold: problem solving, representing, reasoning and communicating; no list of named heuristics); Mi's Challenge Quest for the term",
   "topics": [
    "Choosing a way to start a one- or two-step problem and saying why (process skills, Primary 1)",
-   "Revisiting the content of the term in fresh numbers: reading a clock and adding half an hour or an hour, coins, change and prices, the calendar, a growing pattern and checking a sum (Primary 1 time, money and number patterns; see Lessons 21 to 29)",
+   "Revisiting the content of the term in fresh numbers: reading a clock and adding half an hour or an hour, coins, change and prices, the calendar, a growing pattern and checking a sum (Primary 1 time, money and number patterns; see Term 3 Lessons 1 to 9)",
    "Mi's Challenge Quest: 8 short gates (6 visit the lessons of the term and 2 are mixed gates with no lesson tag) and an optional secret cave (all at Start here level)"
   ],
-  "note": "Strand label for the tutor only. This is a consolidation lesson (owner decision X10-BEFORE, 23 Oct 2026): it teaches no new idea and spirals Term 3 in fresh numbers. The syllabus pages we hold name no list of heuristics, so the seven tool names are this program's own (the same names as the toolbox card; Try something simpler joins in Term 4). Start here names the tool only on the answer line (the child writes the tool used and ticks I checked) and never in the question. Think harder names the tools. Go further names none. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: switching tool when the first one gets stuck, a table of tries, elimination with a table, a pattern with a rule of 4 more each time, and a cycle of 3 days on a week of 7. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes, am or pm and half an hour later (Lessons 21 to 23), 2 coins and change (24), 3 compare prices and exactly $10 (25 and 26), 4 days later and a week on the month page (27, moved here from the old Lesson 30), 5 sticks (28), 6 a wrong sum (29), 7 and 8 mixed gates (work backwards with money, and coins by guess and check) with no lesson tag; the secret cave is an unseen puzzle joining money and listing. Fill the Grid is retired: its elimination idea survives as Think harder T3, solved with a table. Non-routine types (tutor only): a pattern (add the same each time), work backwards (stickers given away), guess and check (5-cent and 10-cent coins), logic by elimination with a table (pets), list every way (two tags that cost exactly an amount), a cycle (swims every 3 days)."
+  "note": "Strand label for the tutor only. This is a consolidation lesson (owner decision X10-BEFORE, 23 Oct 2026): it teaches no new idea and spirals Term 3 in fresh numbers. The syllabus pages we hold name no list of heuristics, so the seven tool names are this program's own (the same names as the toolbox card; Try something simpler joins in Term 4). Start here names the tool only on the answer line (the child writes the tool used and ticks I checked) and never in the question. Think harder names the tools. Go further names none. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: switching tool when the first one gets stuck, a table of tries, elimination with a table, a pattern with a rule of 4 more each time, and a cycle of 3 days on a week of 7. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes, am or pm and half an hour later (Term 3 Lessons 1 to 3), 2 coins and change (24), 3 compare prices and exactly $10 (25 and 26), 4 days later and a week on the month page (27, moved here from the old Term 3 Lesson 10), 5 sticks (28), 6 a wrong sum (29), 7 and 8 mixed gates (work backwards with money, and coins by guess and check) with no lesson tag; the secret cave is an unseen puzzle joining money and listing. Fill the Grid is retired: its elimination idea survives as Think harder T3, solved with a table. Non-routine types (tutor only): a pattern (add the same each time), work backwards (stickers given away), guess and check (5-cent and 10-cent coins), logic by elimination with a table (pets), list every way (two tags that cost exactly an amount), a cycle (swims every 3 days)."
  },
  "contest_moves": [
   "choose the tool that fits and say why, then check a second way",
@@ -162,7 +162,7 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Lesson 30 is the last lesson of Term 3, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (the tool market: six problem cards, nobody solves, point to a tool and say why); the Mini-lesson has 9 (one problem with two tools and a check, then a problem where the first tool is too slow). The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 4 minutes are the standing buffer; nothing new is started in it.",
+  "notes": "Term 3 Lesson 10 is the last lesson of Term 3, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (the tool market: six problem cards, nobody solves, point to a tool and say why); the Mini-lesson has 9 (one problem with two tools and a check, then a problem where the first tool is too slow). The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 4 minutes are the standing buffer; nothing new is started in it.",
   "skip_order": [
    "In a slow class the workbook part runs over: take the time from the 4-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
    "the optional slide and the optional exit ticket",
@@ -2355,8 +2355,8 @@
   "minutes": 20,
   "tool_row": "term",
   "quest_map": false,
-  "where": "Lesson 30 (the last lesson of the term), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
-  "plan_note": "The end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level. Six gates visit the lessons of the term (Lessons 21 to 23 share gate 1, Lessons 25 and 26 share gate 3); gates 7 and 8 are mixed gates with no lesson tag. Under each gate the child circles the tool they used and ticks I checked: the quest is where the child chooses the tool, so no gate names one. Gate 6 asks the child to check a sum a friend wrote. The secret cave joins two ideas the group has met (money and listing) in an unseen way and asks why the child chose a tool. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The Quest Log carries the Term 3 pictures (a clock, coins, price tags, a calendar and a stick pattern). Time is written as digits with am or pm; money with the cent sign.",
+  "where": "Term 3 Lesson 10 (the last lesson of the term), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
+  "plan_note": "The end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level. Six gates visit the lessons of the term (Term 3 Lessons 1 to 3 share gate 1, Term 3 Lessons 5 and 6 share gate 3); gates 7 and 8 are mixed gates with no lesson tag. Under each gate the child circles the tool they used and ticks I checked: the quest is where the child chooses the tool, so no gate names one. Gate 6 asks the child to check a sum a friend wrote. The secret cave joins two ideas the group has met (money and listing) in an unseen way and asks why the child chose a tool. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The Quest Log carries the Term 3 pictures (a clock, coins, price tags, a calendar and a stick pattern). Time is written as digits with am or pm; money with the cent sign.",
   "sheet_pages": 4,
   "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
   "child_rules": [
@@ -2381,7 +2381,7 @@
     "strand": "time",
     "page": 1,
     "tier": "start",
-    "skill": "Read a clock to 5 minutes, am or pm, and half an hour later (Lessons 21 to 23)",
+    "skill": "Read a clock to 5 minutes, am or pm, and half an hour later (Term 3 Lessons 1 to 3)",
     "text": "Look at the clock.",
     "parts": [
      {
@@ -2435,7 +2435,7 @@
     "strand": "money",
     "page": 1,
     "tier": "start",
-    "skill": "Count coins and find the change (Lesson 24)",
+    "skill": "Count coins and find the change (Term 3 Lesson 4)",
     "text": "Look at the coins.",
     "parts": [
      {
@@ -2495,7 +2495,7 @@
     "strand": "money",
     "page": 2,
     "tier": "start",
-    "skill": "Compare two prices, and two items that cost exactly $10 (Lessons 25 and 26)",
+    "skill": "Compare two prices, and two items that cost exactly $10 (Term 3 Lessons 5 and 6)",
     "text": "A pen costs $6 and a ruler costs $9. The tags say $4, $5 and $6 in part c.",
     "parts": [
      {
@@ -2561,7 +2561,7 @@
     "strand": "time",
     "page": 2,
     "tier": "start",
-    "skill": "Days later and a week on the month page (Lesson 27)",
+    "skill": "Days later and a week on the month page (Term 3 Lesson 7)",
     "text": "Today is Friday. Look at the calendar. The day with a ring round it is the 3rd.",
     "parts": [
      {
@@ -2613,7 +2613,7 @@
     "strand": "puzzles",
     "page": 3,
     "tier": "start",
-    "skill": "A growing stick pattern (Lesson 28)",
+    "skill": "A growing stick pattern (Term 3 Lesson 8)",
     "text": "1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks.",
     "parts": [
      {
@@ -2661,7 +2661,7 @@
     "strand": "reasoning",
     "page": 3,
     "tier": "start",
-    "skill": "Check a sum a friend wrote (Lesson 29)",
+    "skill": "Check a sum a friend wrote (Term 3 Lesson 9)",
     "text": "A child in another class writes 49 + 38 = 77.",
     "parts": [
      {
@@ -2928,7 +2928,7 @@
   ],
   "after": [
    "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
-   "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you; accept 5 or 5th for gate 1 part a, and either order of 3 and 5 in gate 4. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
+   "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
    "Write ONE line for each grown-up from your notes (section 7): what we saw, in plain words, and one small next step if it helps. It is sent to the parent only. No marks, no x out of 8, no ranking, no comparison with other children, no prediction.",
    "Fill in the group advice sheet (section 6): what several children were still working on, with no names, and what you will do in the first lessons of next term. It is kept for next term's tutor and is never shown to families.",
    "Once the line is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete each child's notes sheet when the line is sent (keep only the line in the family file, and the group advice sheet). Never forward the photos or save them to a personal phone or any other device.",
@@ -2937,7 +2937,7 @@
   "late": [
    "A child who was away or whose family prefers another time: plays the quest at the make-up slot BEFORE watching the recording (the quest is not on the recording, so no gate is given away). It is a small group or a pair with Mi, with a parent beside the child on camera. The tutor never sits alone with one child on a private call.",
    "A child who joined late: the family may choose to leave out gates for lessons the child did not attend. Write nothing for those gates; if no gate of an area was taught, the line for the grown-up says nothing about that area.",
-   "A family that does not want the quest: no problem. The child does the Lesson 30 work as usual and the line for the grown-up uses your own notes from the lessons only.",
+   "A family that does not want the quest: no problem. The child does the Term 3 Lesson 10 work as usual and the line for the grown-up uses your own notes from the lessons only.",
    "A child who is upset or stuck: remind the group (open session) that every gate can be skipped and Mi swims round it. Do not single the child out. The grown-up may stop the quest at any time.",
    "A family whose Quest Log is missing or damaged: tell the family to say so a week before and arrange another way (for example the make-up slot, with L30_Quest_Log.pdf sent to the family another way). Never ask a child about it in front of the group."
   ],
@@ -2975,7 +2975,7 @@
   },
   "parent_note": {
    "title": "Mi's Challenge Quest: a note for grown-ups",
-   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. The gates look back over Term 3: clocks, money, the calendar, a pattern and checking a sum, and two gates mix the ideas. Reading a clock to 5 minutes with am and pm, and a growing pattern of sticks, go past the school Primary 1 syllabus on purpose, so a few gates may be new.",
+   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. The gates look back over Term 3: clocks, money, the calendar, a pattern and checking a sum, and two gates mix the ideas. Every gate is at Start here level, in fresh numbers, so no gate needs a Think harder idea.",
    "before": [
     "The Quest Log (4 pages) is in your child's Term 3 book. Keep it closed, in an envelope, until the tutor says to open it. If your book has not arrived or is damaged, message us on WhatsApp within 7 days and we will send you the PDF straight away.",
     "We send you this note a week before the lesson.",

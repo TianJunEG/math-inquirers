@@ -2464,7 +2464,7 @@
     "4",
     "4"
    ],
-   "look_for": "A child who finds $3 for both packs, or who says 1 pen costs the same in both. Credit any clear reason. A child who says the bigger pack costs more is right about the total but has not compared one pen.",
+   "look_for": "A child who finds $4 for both packs, or who says 1 pen costs the same in both. Credit any clear reason. A child who says the bigger pack costs more is right about the total but has not compared one pen.",
    "mistakes": [
     "Saying 1 pen costs less in the pack of 5 because it has more pens.",
     "Comparing $6 and $15 without finding 1 pen."
@@ -3367,7 +3367,7 @@
   "header": "Division and money: find one first",
   "hint_p1": "A token is $1. Share the tokens to find 1. Count groups to find many.",
   "hint_p2": "Find 1 first. Then find many. Each means for one.",
-  "hint_p3": "Use tokens or draw a strip. Find 1 first. A dozen is 12. Such cups are cups the same. Choose any question.",
+  "hint_p3": "Use tokens or draw a strip. Find 1 first. A dozen is 12. Such means the same kind.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "choice_after": 3,
   "inv_intro": "",

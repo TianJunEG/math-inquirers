@@ -2303,15 +2303,15 @@
         "page": 3,
         "tier": "think",
         "text": "Read the story. 3 rulers cost $15. All the rulers cost the same. Siti buys 5 rulers.",
-        "answer": "Try something simpler; $25",
+        "answer": "Try something simpler or Make a table; $25",
         "val": [
-          "Try something simpler",
+          "open",
           25
         ],
         "hint": "Which tool shares $15 into 3 equal parts? Then count 5 of them.",
-        "solution": "Try something simpler: find one first. $15 shared into 3 rulers is $5 for 1 ruler. 5 rulers cost 5 groups of $5, which is $25.",
+        "solution": "Try something simpler: find one first. $15 shared into 3 rulers is $5 for 1 ruler. 5 rulers cost 5 groups of $5, which is $25. A table of 1 to 5 rulers ($5, $10, $15, $20, $25) also works.",
         "mistakes": [
-          "Choosing Make a table (the number of rulers asked, 5, is not in the pattern 3, 6, 9).",
+          "Choosing List every way (there is only one answer to find).",
           "Writing $20 (15 + 5)."
         ],
         "mins": 4,
@@ -2319,8 +2319,8 @@
           {
             "l": "a",
             "text": "Circle the tool that fits best.",
-            "ans": "Try something simpler",
-            "val": "Try something simpler",
+            "ans": "Try something simpler (Make a table also fits: $5, $10, $15, $20, $25)",
+            "val": "open",
             "choices": [
               "Make a table",
               "List every way",
@@ -2468,8 +2468,9 @@
         "page": 4,
         "tier": "go",
         "text": "Jenny has 3 times as many stickers as Jason. They have 36 stickers in all. Solve it two ways: a strip and a table of tries.",
-        "answer": "9 stickers; 27 stickers; Yes",
+        "answer": "9 stickers; 9 stickers; 27 stickers; Yes",
         "val": [
+          9,
           9,
           27,
           "Yes"
@@ -2490,13 +2491,19 @@
           },
           {
             "l": "b",
-            "text": "Road 2, the table of tries. Jason 8 and Jenny 24 make 32 in all. Jason 10 and Jenny 30 make 40 in all. Try Jason 9: Jenny has [] stickers.",
+            "text": "Road 2, the table of tries. Jason 8 and Jenny 24 make 32 in all. Jason 10 and Jenny 30 make 40 in all. For 36 in all, Jason has [] stickers.",
+            "ans": "9",
+            "val": 9
+          },
+          {
+            "l": "c",
+            "text": "Jenny has [] stickers.",
             "ans": "27",
             "val": 27
           },
           {
-            "l": "c",
-            "text": "Do both roads give the same answer? Circle Yes or No.",
+            "l": "d",
+            "text": "Do both roads give the same answer for Jason? Circle Yes or No.",
             "ans": "Yes",
             "val": "Yes",
             "choices": [
@@ -2509,14 +2516,19 @@
           "type": "bar_model",
           "bars": [
             {
-              "name": "Jason",
-              "len": 1,
-              "text": "?"
-            },
-            {
-              "name": "Jenny",
-              "len": 3,
-              "text": "?"
+              "name": "In all",
+              "len": 4,
+              "segments": [
+                {
+                  "v": 1,
+                  "text": "Jason"
+                },
+                {
+                  "v": 3,
+                  "text": "Jenny",
+                  "colour": "mint"
+                }
+              ]
             }
           ],
           "brace": {

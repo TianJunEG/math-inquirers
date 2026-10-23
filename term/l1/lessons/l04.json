@@ -2718,8 +2718,9 @@
             35,
             44
           ],
-          "wide": false,
-          "cell": 46
+          "wide": true,
+          "cell": 46,
+          "size": 34
         },
         "answer": "Both add up to 79, and 52 + 63 and 53 + 62 both make 115. It always works: 1 and 10 are added in both pairs.",
         "val": [

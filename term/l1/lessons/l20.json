@@ -863,7 +863,7 @@
      ]
     }
    ],
-   "note": "Say thank you. The grown-up takes one clear photo of each of the 3 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use a few minutes of the workbook time to finish. Restart the recording for the workbook. The number is in the grown-up note, never on a slide.",
+   "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use a few minutes of the workbook time to finish. Restart the recording for the workbook. The number is in the grown-up note, never on a slide.",
    "no_record": true
   },
   {
@@ -3263,7 +3263,7 @@
   "header": "Choose your tool: say why and check",
   "hint_p1": "Choose a tool. You may draw, use counters, or make a table. Write the tool you used. Tick I checked.",
   "hint_p2": "There is no wrong tool. Pick one, say why, and check your answer.",
-  "hint_p3": "Solve it with one tool, then check it with another. Many answers are right where it says Choose.",
+  "hint_p3": "Solve it with one tool, then check it with another. Say why you chose it.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "choice_after": 3,
   "inv_intro": "",
@@ -3761,7 +3761,7 @@
    }
   ],
   "give": [
-   "A week before: send the grown-up note (L20_Quest_Parent_Note.pdf) and the Quest Log (L20_Quest_Log.pdf, 3 pages) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
+   "A week before: send the grown-up note (L20_Quest_Parent_Note.pdf) and the Quest Log (L20_Quest_Log.pdf, 4 pages) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
    "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. Under each gate they circle the tool they used and tick I checked: there is no wrong tool. It is not a race, a gate may be skipped, and nothing is shown to the group.",
    "Start at minute 35 (straight after the brain break) and finish by minute 55. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
    "Read each page aloud, one gate at a time (the script has the words), then leave quiet working time: about 3 minutes for page 1, 4 for page 2, 3 for page 3 and 3 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
@@ -3769,7 +3769,7 @@
    "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, drawing, a table, talking to the partner, and which tool they circle."
   ],
   "after": [
-   "Same day: the grown-up takes ONE clear photo of each of the 3 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
+   "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
    "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you; accept either order of 4 and 6 in gate 4. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
    "Write ONE line for each grown-up from your notes (section 7): what we saw, in plain words, and one small next step if it helps. It is sent to the parent only. No marks, no x out of 8, no ranking, no comparison with other children, no prediction.",
    "Fill in the group advice sheet (section 6): what several children were still working on, with no names, and what you will do in the first lessons of next term. It is kept for next term's tutor and is never shown to families.",
@@ -3818,9 +3818,9 @@
   },
   "parent_note": {
    "title": "Mi's Challenge Quest: a note for grown-ups",
-   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. Term 2 goes beyond the school Primary 1 syllabus on purpose (odd and even numbers, the 3 and 4 tables, and stories about groups), so a few gates may be new.",
+   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. Every gate is at Start here level, in fresh numbers, so no gate needs a Think harder idea.",
    "before": [
-    "We send you this note and a loose copy of the Quest Log a week before. The Quest Log is also printed on the last pages of the Term 2 workbook book (Book 4); if you use the book, keep it closed until the tutor says to open it. If you print the loose copy, print it at 100% (actual size, not fit to page). It has 3 pages. No printer? Tell us a week before and we will find another way.",
+    "We send you this note and a loose copy of the Quest Log a week before. The Quest Log is also printed on the last pages of the Term 2 workbook book (Book 4); if you use the book, keep it closed until the tutor says to open it. If you print the loose copy, print it at 100% (actual size, not fit to page). It has 4 pages. No printer? Tell us a week before and we will find another way.",
     "Keep the Quest Log folded or in an envelope until the tutor says to open it.",
     "Have a pencil, a rubber and a quiet table. Counters and fingers are fine."
    ],
@@ -3830,7 +3830,7 @@
     "The paper stays flat on the table. Cameras may be on or off."
    ],
    "after": [
-    "The same day, take ONE clear photo of each of the 3 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
+    "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
     "Send the photos to the program's business WhatsApp, +65 9880 5962. Please send them to this number only: not to a tutor's own phone, not to the class chat, and never through a child.",
     "We use the photos only to write one line about your child. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
    ],
