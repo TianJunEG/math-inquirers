@@ -1,16 +1,16 @@
-# Early Finisher Puzzles, Primary 2: two semester booklets (pilot)
+# Early Finisher Puzzles, Primary 6: two semester booklets (pilot)
 
-Two booklets of 20 single-sided A4 pages each (Semester 1 = Terms 1 and 2, Semester 2 = Terms 3 and 4; the split follows the typical order, schools vary), 40 pages in all, P2-01 to P2-40 (build order; the footer code prints both numbers, for example `S1-07 (P2-17)`).
+Two booklets of 20 single-sided A4 pages each (Semester 1 = Terms 1 and 2, Semester 2 = Terms 3 and 4; the split follows the typical order, schools vary), 40 pages in all, P6-01 to P6-40 (build order; the footer code prints both numbers, for example `S1-07 (P6-17)`).
 Every page is self-checking, pure black and white, with the school name line and the copyright line in the footer, and each booklet has its own teacher answer key with outcome tags in the syllabus PDF's wording. Each booklet is 10 one-star and 10 two-star pages.
 Not for sale as is: a pilot for owner review. Cover, licence, teacher notes and keys carry DRAFT stamps, the business email pypteltd@gmail.com and the registered office address (66 Tannery Ln, Singapore 347805); the licence is an annual licence (one school year, renewable) whose wording is for a lawyer to approve.
-Plan: `docs/school_books/p2_semester_booklets_plan.md`; build report and open items: `docs/school_books/p2_semester_booklets_build_report.md`; outcome wording: `docs/school_books/p2_outcome_wording.md`; owner decisions: `docs/terms/owner_decisions.md`.
+Plan: `docs/school_books/p6_semester_booklets_plan.md`; build report and open items: `docs/school_books/p6_semester_booklets_build_report.md`; outcome wording: `docs/school_books/p6_outcome_wording.md`; owner decisions: `docs/terms/owner_decisions.md`.
 
-This pipeline was copied from `school/p1` (P1 is not touched by it) and parameterised for Primary 2: outcomes (30 lines of pages 33 and 34 of the syllabus PDF), reading load (10 words a sentence), numbers to 1000, money in decimal notation, minutes, kg, g, litres, fractions, tables of 2, 3, 4, 5, 10 and the sign ÷, 3D solids, picture graphs with scales.
+This pipeline was copied from `school/p2` (P2 is not touched by it) and parameterised for Primary 6: the Standard-track outcomes of our summary (docs/moe/syllabus_by_level.md pages 43 and 44; the Ministry PDF is not in the repository), reading load of 18 words a sentence, fractions divided by whole numbers and fractions, ratio, percentage, algebra with one letter, circles and composite figures, volume with square and cube roots, angles in figures, average, and a vendored colour-by-code library (`cbc_vendor`).
 
 ## Regenerate
 
 ```
-cd school/p2
+cd school/p6
 python3 build.py --school "Name of School"   # both booklets; omit --school to print a blank line to write the name on
 python3 build.py --booklet S1                # one booklet
 python3 build.py --final                     # leave out the DRAFT stamps (only after the owner and a lawyer approve the front matter)
@@ -22,61 +22,57 @@ python3 preview.py 1 2 3 --dpi 75 --bw       # developer preview: PNGs of pupil 
 Needs: python3 with `playwright` (chromium), `pypdf`, `Pillow`, `shapely`, `fonttools`, `brotli`, `numpy`, `scipy`; poppler (`pdftoppm`, `pdfinfo`, `pdffonts`, `pdftotext`); fonts from `fonts/node_modules/@fontsource` (Fredoka, Nunito Sans).
 All puzzles come from fixed seeds, so a rebuild gives identical puzzles. Only the footer changes with `--school`.
 
-Outputs in `out/`: `P2_S1_Puzzles.pdf`, `P2_S2_Puzzles.pdf` (20 pages each, photocopy these), `P2_S?_FrontMatter.pdf` (5 pages), `P2_S?_Complete_Pack.pdf`, `P2_S?_Answer_Key.pdf`, `verification.json`, `validation_report.txt` (committed); `out/*.html` and `out/bilevel_check/` are not committed.
+Outputs in `out/`: `P6_S1_Puzzles.pdf`, `P6_S2_Puzzles.pdf` (20 pages each, photocopy these), `P6_S?_FrontMatter.pdf` (5 pages), `P6_S?_Complete_Pack.pdf`, `P6_S?_Answer_Key.pdf`, `verification.json`, `validation_report.txt` (committed); `out/*.html` and `out/bilevel_check/` are not committed.
 
 ## Code layout
 
-- `gen/outcomes.py`: the 30 outcome lines in the syllabus PDF's wording, the outcomes of each page (filled from the pages when `build.py` runs) and the page order of each booklet (the only place the split is defined).
-- `gen/common.py` code tables, word lists (about 129 000 words), SVG shapes, object art; `gen/kit.py` safe code words (distinct letters, one arrangement, no single letter placed in another slot making a word), the standard code-word record, route helpers, vertical sums, lettered-choice rows; `gen/art.py` objects; `gen/art2.py` place-value discs, coins and notes (original art), clocks to the minute; `gen/css_p2.py` CSS.
-- Page modules: `gen/pages_w1.py` (P2-01 to 08), `pages_w2.py` (09 to 16), `pages_w3.py` (17 to 24), `pages_w4.py` (25 to 32), `pages_w5.py` (33 to 37), `pages_cbc.py` (38 to 40, colour by code from `cbc_vendor/`, a copy of `school/colour_by_code`).
-  Each `pageNN()` makes the puzzle from a seed, re-solves it with separate solver code that reads the PRINTED text or drawing (not the generator's data), and hands `validate.py` a `model` for the independent wrong-answer enumeration.
-- `render.py` HTML/CSS, page frame, front matter and key per booklet. `build.py` makes the PDFs. `validate.py` runs all checks.
+- `gen/outcomes.py`: the Primary 6 outcome lines (our summary wording, the Ministry PDF is not in the repository), the revision lines, and the page order of each booklet (the only place the semester split lives).
+- `gen/kit.py` and `gen/kit6.py`: safe code words (distinct letters, one arrangement, no wrong placement spells another word), code-word, route, choice, matching, ordering and domino-loop page makers with their checks. `gen/common.py`: code tables and word lists. `gen/figs.py`, `gen/angles.py`: circle, composite, cuboid, pie, net and angle figures with readers that re-measure the printed drawing. `gen/css_p6.py`: CSS.
+- Page modules: `gen/pages_a.py` to `pages_f.py` (P6-01 to P6-40, except the colour pages), `gen/pages_cbc.py` (P6-09, 32, 40, colour by code via the vendored copy in `cbc_vendor`, with a P6 bank `banks_p6.py`).
+  Each page is made from a seed, re-solved by separate solver code that reads the PRINTED text or drawing, and handed to `validate.py` with a `model` of its wrong answers.
+- `render.py` HTML/CSS, page frame, front matter and key per booklet. `build.py` makes the PDFs. `validate.py` runs all checks. `similarity_check.py` compares the pupil text with the private, gitignored sources (counts only). `devcheck.py` quick layout check.
 
 ## The 40 pages
 
 | Code | Title | Stars | Check |
 |---|---|---|---|
-| S1-01 (P2-01) | Hundreds, Tens, Ones | 1 | K1 code word (6 letters) |
-| S1-08 (P2-02) | Column Sums | 1 | K1 code word (6 letters) |
-| S1-09 (P2-03) | Mental Jumps | 1 | K6 route closes at FINISH |
-| S1-12 (P2-04) | Equal Groups | 1 | K1 code word (6 letters) |
-| S1-13 (P2-05) | Share It Out | 1 | K1 code word (6 letters) |
-| S2-01 (P2-06) | Dollars and Cents | 1 | K1 code word (6 letters) |
-| S2-10 (P2-07) | Time to the Minute | 1 | K1 code word (6 letters) |
-| S2-05 (P2-08) | Metres | 1 | K1 code word (5 letters) |
-| S1-03 (P2-09) | Words and Numbers | 1 | K6 route closes at FINISH through the stated number of boxes |
-| S1-05 (P2-10) | Digit Cards | 2 | K1 code word (6 letters) |
-| S1-06 (P2-11) | Number Patterns | 2 | K1 code word (6 letters) |
-| S1-04 (P2-12) | Odd or Even | 1 | K6 route closes at FINISH |
-| S1-10 (P2-13) | Missing Digits | 2 | K1 code word (6 letters) |
-| S1-14 (P2-14) | Times Table Maze | 1 | K6 route closes at FINISH |
-| S1-18 (P2-15) | Parts of a Whole | 1 | K1 code word (6 letters) |
-| S2-02 (P2-16) | Writing Money | 2 | K1 code word (6 letters) |
-| S1-07 (P2-17) | Mystery Numbers | 2 | K1 code word (5 letters) |
-| S1-11 (P2-18) | Story Sums to 1000 | 2 | K1 code word (6 letters) |
-| S1-15 (P2-19) | Fact Families | 2 | K8 the loop closes: every number joined by = matches |
-| S1-16 (P2-20) | True or False Tables | 2 | K1 the letter of the right choice in each row spells a word (6 letters |
-| S1-19 (P2-21) | Fraction Order | 2 | K1 letters in order spell a word (6 letters) + K4 each card used once |
-| S1-20 (P2-22) | Fraction Sums | 2 | K1 code word (6 letters) |
-| S2-03 (P2-23) | Which Costs More? | 2 | K1 letters in order spell a word (6 letters) + K4 each card used once |
-| S2-04 (P2-24) | Purse Match | 2 | K1 letters of the matching purses spell a word (6 letters) + K4 each p |
-| S2-06 (P2-25) | Kilograms and Grams | 1 | K1 code word (6 letters) |
-| S2-07 (P2-26) | Litres | 1 | K1 code word (6 letters) |
-| S2-08 (P2-27) | Which Unit? | 1 | K1 the letter of the right unit in each row spells a word (6 letters,  |
-| S2-09 (P2-28) | Order the Measures | 2 | K1 letters in order spell a word (6 letters) + K4 each card used once |
-| S2-12 (P2-29) | Match the Times | 2 | K1 letters of the matching clocks spell a word (6 letters) + K4 each c |
-| S2-11 (P2-30) | Hours and Minutes | 1 | K1 code word (6 letters) |
-| S2-13 (P2-31) | Time Detective | 2 | K1 code word (6 letters) |
-| S2-14 (P2-32) | Shape Patterns | 1 | K1 the letter of the shape that comes next spells a word (6 letters, t |
-| S2-15 (P2-33) | Pattern Rules | 2 | K1 the letter of the shape that comes next spells a word (6 letters, t |
-| S2-16 (P2-34) | Meet the Solids | 1 | K1 the letter of the right name in each row spells a word (6 letters,  |
-| S2-17 (P2-35) | Solid Sort | 2 | K3 the five counts add to 15 + K1 code word (5 letters) |
-| S2-18 (P2-36) | Picture Graph Scales | 1 | K1 code word (6 letters) |
-| S2-19 (P2-37) | Graph Detective Two | 2 | K1 code word (6 letters) |
-| S1-02 (P2-38) | Colour the Rocket | 1 | K1 colour key + K3 tally of colours (+ matching parts) |
-| S1-17 (P2-39) | Colour the House | 2 | K1 colour key + K3 tally of colours (+ matching parts) |
-| S2-20 (P2-40) | Colour the Butterfly | 2 | K1 colour key + K3 tally of colours (+ matching parts) |
-
-## Rules every page keeps
-
-Black and white only (#000/#fff, strokes at least 0.57 pt); A4 with 15 mm margins; instruction sentences at most 10 words, at most 3 lines; answer boxes at least 12 mm high; money as 50¢ and $2.50 (two decimal places); no Mi, MOE, alignment or price wording (the licence page has one not-affiliated sentence). Code words: exactly one arrangement of the letters is a word, so no wrong placement of the answers spells a word, tested against the 129 000-word list. Wrong-answer enumeration at 95% or better on every page. See `validate.py` for the full list.
+| S1-01 (P6-01) | Fraction Shares | 1 | Code-breaker (fractions) |
+| S1-02 (P6-02) | Dividing by Fractions | 1 | Maze / path |
+| S1-03 (P6-03) | Fraction Stories | 2 | Choice table (stories) |
+| S1-04 (P6-04) | Equal Ratios | 1 | Matching (equal ratios) |
+| S1-05 (P6-05) | Missing Terms | 1 | Code-breaker (equivalent ratios) |
+| S1-06 (P6-06) | Share in a Ratio | 1 | Code-breaker (sharing in a ratio) |
+| S1-07 (P6-07) | Three Quantities | 2 | Code-breaker (ratio of three quantities) |
+| S1-08 (P6-08) | Fractions and Ratios | 2 | Choice table (ratio and fraction) |
+| S1-09 (P6-09) | Colour the Car | 2 | Colour by code (pupils colour with their own crayons) |
+| S1-10 (P6-10) | Find the Whole | 1 | Code-breaker (percentage) |
+| S1-11 (P6-11) | Percent Up and Down | 1 | Maze / path |
+| S1-12 (P6-12) | Percent Stories | 2 | Code-breaker (percentage stories) |
+| S1-13 (P6-13) | Letters for Numbers | 1 | Choice table (expressions) |
+| S1-14 (P6-14) | Simplify | 1 | Matching (simplest form) |
+| S1-15 (P6-15) | Substitute | 2 | Domino loop (substituting) |
+| S1-16 (P6-16) | Find the Letter | 2 | Code-breaker (equations) |
+| S1-17 (P6-17) | Round and Round | 1 | Code-breaker (circumference) |
+| S1-18 (P6-18) | Circle Areas | 2 | Code-breaker (area) |
+| S1-19 (P6-19) | Half and Quarter | 2 | Matching (areas and perimeters) |
+| S1-20 (P6-20) | Curves and Corners | 2 | Ordering (areas of composite figures) |
+| S2-01 (P6-21) | Shaded Shapes | 1 | Code-breaker (composite areas) |
+| S2-02 (P6-22) | Perimeter Pick | 2 | Choice table (perimeters) |
+| S2-03 (P6-23) | Cuboid Corners | 1 | Code-breaker (missing dimension) |
+| S2-04 (P6-24) | Roots and Edges | 1 | Maze / path |
+| S2-05 (P6-25) | Base and Height | 2 | Matching (base area, height, face) |
+| S2-06 (P6-26) | Tank Stories | 2 | Code-breaker (tanks) |
+| S2-07 (P6-27) | Angles in Figures | 1 | Code-breaker (unknown angles) |
+| S2-08 (P6-28) | More Angles | 2 | Code-breaker (unknown angles) |
+| S2-09 (P6-29) | Angle Match | 1 | Matching (angles) |
+| S2-10 (P6-30) | Average | 1 | Code-breaker (average) |
+| S2-11 (P6-31) | Missing Value | 2 | Code-breaker (average, total and number) |
+| S2-12 (P6-32) | Colour the Butterfly | 2 | Colour by code (pupils colour with their own crayons) |
+| S2-13 (P6-33) | Pie Chart | 2 | Code-breaker (pie chart) |
+| S2-14 (P6-34) | Net or Not | 1 | Choice table (nets of a cube) |
+| S2-15 (P6-35) | Taps and Rates | 2 | Code-breaker (rates) |
+| S2-16 (P6-36) | Mixed Numbers | 1 | Ordering (mixed number answers) |
+| S2-17 (P6-37) | Decimal Maze | 1 | Maze / path |
+| S2-18 (P6-38) | GST and Discount | 1 | Code-breaker (GST, discount, interest) |
+| S2-19 (P6-39) | Mixed Bag | 2 | Domino loop (mixed) |
+| S2-20 (P6-40) | Colour the Elephant | 2 | Colour by code (pupils colour with their own crayons) |
