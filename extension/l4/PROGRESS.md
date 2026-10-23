@@ -10,6 +10,7 @@ Pipeline: unit sources are `extension/l4/src/uNN.py` (helpers in `lib.py`); `pyt
 | 4 Fraction Frontier | written, checked, gates ok, viewed |
 | 5 Decimal Detectives | written, checked, gates ok, viewed |
 | 6 Angle Turns | written, checked, gates ok, viewed |
-| 7-10 | not started |
+| 7 Area Architects II | written, checked, gates ok, viewed |
+| 8-10 | not started |
 
-Resume: next unit is 7 (Area Architects II).
+Resume: next unit is 8 (Symmetry and Nets).
