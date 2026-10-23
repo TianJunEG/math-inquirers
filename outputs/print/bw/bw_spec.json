@@ -24,22 +24,22 @@
   "file": "outputs/print/bw/Math_Inquirers_P4_Workbook_PRINT.pdf",
   "pages": 76,
   "sheets": 38,
-  "mb": 11.89,
-  "pale_tint_dropped_max": null
+  "mb": 11.98,
+  "pale_tint_dropped_max": 0.4205
  },
  {
   "file": "outputs/print/bw/Math_Inquirers_P5_Workbook_PRINT.pdf",
   "pages": 62,
   "sheets": 31,
-  "mb": 10.46,
+  "mb": 10.47,
   "pale_tint_dropped_max": 0.2575
  },
  {
   "file": "outputs/print/bw/Math_Inquirers_P6_Workbook_PRINT.pdf",
-  "pages": 58,
-  "sheets": 29,
-  "mb": 11.25,
-  "pale_tint_dropped_max": 0.177
+  "pages": 60,
+  "sheets": 30,
+  "mb": 11.27,
+  "pale_tint_dropped_max": 0.2265
  },
  {
   "file": "outputs/print/bw/term/Math_Inquirers_L1_T1_Book1_Lessons01-05_AnswerKey_TUTOR_PRINT.pdf",
