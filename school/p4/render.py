@@ -181,7 +181,8 @@ svg.pic .fb{stroke:#000;stroke-width:0.45}
 .page.cbc .check svg{width:9mm;height:9mm}
 """
 from gen.css_p4 import CSS_P4
-CSS += CSS_P4
+from gen.css_p4b import CSS_P4B
+CSS += CSS_P4 + CSS_P4B
 
 DRAFT = True                      # front matter, key and footers: DRAFT until the owner (and a lawyer) approve the wording; build.py --final turns it off
 

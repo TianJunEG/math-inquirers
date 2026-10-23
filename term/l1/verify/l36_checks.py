@@ -86,7 +86,7 @@ def lines_of(fig):
 # ---------------------------------------------------------------- online practice oracles (brute force)
 def _c1(e): return len([1 for r in range(e['r']) for c in range(e['c'])])
 def _c2(e): return len([1 for b in range(e['a']) for s in range(e['b'])])
-def _c5(e): return len(ways(e['h'], e['s']))
+def _c5(e): return len(ways(e['c'], e['c']))
 def _t1(e): return len(handshakes(e['n']))
 def _t2(e): return len(all_squares(e['k'], e['k']))
 def _t3(e): return len(pairs_total(e['t']))
@@ -96,7 +96,7 @@ def _r2(e): return len([1 for _ in range(3) for _ in range(e['p'])])
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c5': _c5, 't1': _t1, 't2': _t2, 't3': _t3, 'g1': _g1, 'r1': _r1, 'r2': _r2}
-BASE_ENV = {'c1': dict(r=3, c=4), 'c2': dict(a=4, b=3), 'c5': dict(h=2, s=3), 't1': dict(n=5), 't2': dict(k=2), 't3': dict(t=8), 'g1': dict(a=2, b=4), 'r1': dict(a=6, b=5), 'r2': dict(p=7)}
+BASE_ENV = {'c1': dict(r=3, c=4), 'c2': dict(a=4, b=3), 'c5': dict(c=2), 't1': dict(n=5), 't2': dict(k=2), 't3': dict(t=8), 'g1': dict(a=2, b=4), 'r1': dict(a=6, b=5), 'r2': dict(p=7)}
 
 
 def run(d):
@@ -159,7 +159,7 @@ def run(d):
     # ---------------------------------------------------------------- Think harder
     q = T['T1']; v = q['visual']; eq(lines_of(v), {frozenset((0, k)) for k in (1, 2, 3)}, 'T1 A has shaken hands with B, C and D'); nh = new_handshakes(4); eq(nh, [3, 2, 1, 0], 'T1 the new ones'); eq(nh[1], 2, 'T1 (a)'); eq(nh[2], 1, 'T1 (b)'); eq(len(handshakes(4)), 6, 'T1 (c)')
     eq(q['val'], [2, 1, 6], 'T1 val'); eq(4 * 3 == 6, False, 'T1 4 times 3 is not the answer')
-    q = T['T2']; eq(nums(q['text']), [4, 2], 'T2 text'); eq(len(ways(4, 2)), 8, 'T2'); eq(len(ways(2, 4)), 8, 'T2 the other way round'); eq(q['val'], 8, 'T2 val')
+    q = T['T2']; flags = [(x, y) for x, y in ways(3, 3) if x != y]; eq(nums(q['text']), [2], 'T2 text'); eq(len(flags), 6, 'T2 flags with two different colours'); eq(len(ways(3, 3)) - 3, 6, 'T2 9 boxes less the 3 same-colour boxes'); eq(q['val'], 6, 'T2 val')
     q = T['T3']; v = q['visual']; sq = all_squares(v['rows'], v['cols']); eq(len([s for s in sq if s[2] == 1]), 6, 'T3 small'); eq(len([s for s in sq if s[2] == 2]), 2, 'T3 big'); eq(len(sq), 8, 'T3 all'); eq(len(v['squares']), 4, 'T3 the yellow example is a 2 by 2 square'); eq(q['val'], [6, 2, 8], 'T3 val')
     q = T['T4']; vals = nums(q['text'])[:6]; found = [(a, b) for a, b in itertools.combinations(vals, 2) if a + b == 14]; eq(sorted(found), [(3, 11), (5, 9), (6, 8)], 'T4 every pair'); eq(len(found), 3, 'T4 three pairs')
     eq([14 - 3, 14 - 5, 14 - 6], [11, 9, 8], 'T4 answers'); eq(all(14 - x in vals for x in (3, 5, 6)), True, 'T4 each partner exists'); eq(len(vals), 6, 'T4 six children'); eq(q['val'], [11, 9, 8], 'T4 val'); eq(nums(q['text']), [3, 5, 6, 8, 9, 11, 14, 3], 'T4 text')
@@ -176,7 +176,7 @@ def run(d):
     q = X['E3']; listed = {frozenset(p) for p in ('AB', 'AC', 'AD', 'BC', 'BD')}; allp = {frozenset(p) for p in itertools.combinations('ABCD', 2)}; eq(allp - listed, {frozenset('CD')}, 'E3 missing pair'); eq(len(allp), 6, 'E3 six pairs'); eq(q['val'], ['CD'], 'E3 val')
     # ---------------------------------------------------------------- home practice
     q = H['H1']; eq(nums(q['text'])[:2], [4, 4], 'H1 text'); eq(len(small_squares(4, 4)), 16, 'H1'); eq(q['val'], 16, 'H1 val')
-    q = H['H2']; eq(nums(q['text'])[:2], [3, 4], 'H2 text'); eq(len(ways(3, 4)), 12, 'H2'); eq(q['val'], 12, 'H2 val')
+    q = H['H2']; eq(nums(q['text'])[:2], [2, 3], 'H2 text'); eq(len(ways(3, 3)), 9, 'H2'); eq(q['val'], 9, 'H2 val')
     q = H['H3']; eq([10 - 2, 10 - 3], [8, 7], 'H3'); eq(q['val'], [8, 7], 'H3 val')
     q = H['H4']; h4w = [(r, 8 - r) for r in range(1, 8)]; eq(len(h4w), 7, 'H4 red 1 to 7 (blue 7 to 1)'); eq(all(r >= 1 and b >= 1 and r + b == 8 for r, b in h4w), True, 'H4 every way has at least 1 in each cup'); eq(q['val'], 7, 'H4 val'); eq(nums(q['text']), [8, 1, 1], 'H4 text')
     q = H['H5']; l16 = json.load(open(os.path.join(L1, 'lessons', 'l16.json')))['home_practice']; src = [h for h in l16 if h['id'] == 'H3'][0]

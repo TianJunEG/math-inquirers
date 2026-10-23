@@ -301,7 +301,7 @@ def teacher_notes(pages, bk):
             '<h3>How the pages check themselves</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer, and it asks the pupil to see whether the answer makes sense. Every answer box and every letter box must be filled: a box left blank gives no letter, and the check cannot see it.</p>'
             f'<ul>{blt}</ul>'
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
-            '<h3>How the checks were tested</h3><p>A script tried every single wrong answer and every wrong arrangement on every page. Each check rejected at least 95% of them. A wrong answer that spells any of about 129 000 English words counts as not rejected. Two wrong answers at once were not all tested.</p>'
+            '<h3>How the checks were tested</h3><p>A script tried every single wrong answer and every wrong arrangement on every page. Each check rejected at least 95% of them. A wrong answer that spells any of about 207 000 English words of two to nine letters counts as not rejected. Two wrong answers at once were not all tested.</p>'
             '</section>'
             '<section class="page fm notes"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
             '<h3>Using the pages</h3><ul>'
@@ -309,8 +309,11 @@ def teacher_notes(pages, bk):
             + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
-            '<li><b>Drawings.</b> Pictures of rulers, scales, clocks, coins and notes are original drawings, not to scale unless a page says so. Coins and notes are inspired by Singapore money, not actual size (smaller than real) and in black and white.</li></ul>'
-            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting: on the coin pages (Dollars and Cents, Purse Match) a light setting can fill in the small word cents on the coins. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size. Real $2 notes are purple, $5 green, $10 red.</p>'
+            '<li><b>Drawings.</b> Pictures of circles, solids, graphs and angle figures are original drawings, drawn accurately to help the pupil see the shape. Pupils should work out the answer, not measure it. Pictures are not actual size.</li>'
+            '<li><b>Notation.</b> Ratios are written 3 : 5 and answers in simplest form. Where a page uses \u03c0 it says whether to take 3.14 or 22/7 (22 over 7). Letters such as n, p and a stand for numbers; there are no brackets with letters. Money is written $12.50. Litres are written \u2113 and cube centimetres cm\u00b3.</li>'
+            '<li><b>Calculators.</b> Every number is chosen so that the working can be done by hand; a pupil may use a calculator if your school allows it, but the check does not need one.</li>'
+            '<li><b>Revision pages.</b> Pages whose key tag begins with Revisits practise outcomes from Primary 4 or 5 that Primary 6 pupils meet again in revision. Primary 6 content only is practised on every other page.</li></ul>'
+            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting. Each page is one side only. Pupils write on the page: the boxes are large. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size.</p>'
             '</section>')
 
 def coverage_table(pages, bk):
@@ -349,7 +352,7 @@ def key_pages(pages, school, packing, bk):
         pg[0] += 1; return key_footer(f"KEY page {pg[0]} of {total}")
     out = [f'<section class="page fm"><h2>Teacher answer key: Primary 6, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 2 content in the Mathematics Syllabus, Primary (2021 edition, pages 33 and 34). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 6 Standard content in the Mathematics Syllabus, Primary (2021 edition, pages 43 and 44). The outcome wording in this booklet is a summary in our own words, not the syllabus text; where the summary gave no outcome number the key gives none. The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
            + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + key_footer(f"KEY page 1 of {total}") + '</section>']

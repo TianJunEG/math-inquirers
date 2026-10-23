@@ -23,14 +23,14 @@
   "strand": "Not a listed Primary 1 outcome as a lesson. Counting a set and equal groups (Whole Numbers, p. 31) are Primary 1; shapes in a figure (Geometry, p. 32) are Primary 1; listing all possibilities is not in the syllabus (a problem-solving heuristic, pp. 13-14)",
   "topics": [
    "Counting squares in a grid by rows, and the squares of every size (counting a set and shapes in a figure are Primary 1; every size is beyond)",
-   "Equal groups and a table of outfits (equal groups are Primary 1; a table of all the pairs is a heuristic, pp. 13-14)",
+   "Equal groups and a table of flags (equal groups are Primary 1; a table of all the pairs is a heuristic, pp. 13-14)",
    "Handshakes: every pair once, counted by the new ones each time (beyond Primary 1: a counting-ways idea)",
    "Listing every pair that makes a total without repeats; routes in two stages (beyond Primary 1)"
   ],
   "note": "Strand label for the tutor only. This is a Primary 1 plan lesson on counting with a system (cross-strand: figures, ways and routes). It is not a listed content outcome. Start here is counting by rows, equal groups, counting lines and listing the pairs that make a total, with the fixed forms of Primary 1 papers. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: Handshake Party (four children, every pair once: 3 + 2 + 1 = 6), a table of outfits, squares of every size in a grid, every pair with a total, handshakes for 5 and 6 children, squares of every size in a 3 by 3 grid, and routes in two stages. Named puzzle: Handshake Party. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. No Primary 1 paper in the 32 files read holds these counting items, so the wording is unverified. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Non-routine types (tutor only): ways (outfits and handshakes), table (all the pairs that make a total), list (every pair without repeats)."
  },
  "contest_moves": [
-  "ways: outfits from two lists, every top with every pair of shorts, counted in a table",
+  "ways: flags with two stripes of different colours, counted in a table (every top stripe with every other bottom stripe)",
   "ways: handshakes, every pair once; a group of 4 gives 3 + 2 + 1 = 6, because each child counts only the new ones",
   "table and list: every pair that makes a total, found by starting at the smallest and stopping when the pairs repeat",
   "count the squares of every size in a grid: small ones first, then the bigger ones",
@@ -40,7 +40,7 @@
  "objectives": [
   "Count a set by rows or by equal groups, and count the lines in a picture, so that none is missed.",
   "Fill in a list of the pairs that make a total, starting at 1 and stopping when the pairs repeat.",
-  "Think harder: Handshake Party (every pair once), a table of outfits, the squares of every size in a 2 by 3 grid, and every pair of stickers that makes a total.",
+  "Think harder: Handshake Party (every pair once), a table of flags, the squares of every size in a 2 by 3 grid, and every pair of stickers that makes a total.",
   "Go further: handshakes for 5 and 6 children, the squares of every size in a 3 by 3 grid, and routes in two stages with a direct way."
  ],
  "joining_cold": {
@@ -2014,30 +2014,24 @@
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Mei has 4 tops and 2 pairs of shorts. Each top goes with each pair of shorts.",
+    "text": "Mi paints a flag with 2 stripes, a top stripe and a bottom stripe. Each stripe is red, blue or green. The two stripes must be different colours.",
     "parts": [
      {
       "l": "",
-      "text": "There are [] outfits in all.",
-      "ans": "8",
-      "val": 8
+      "text": "There are [] different flags in all.",
+      "ans": "6",
+      "val": 6
      }
     ],
-    "answer": "8 outfits",
-    "val": 8,
-    "hint": "Draw a table with a row for each top and a column for each pair of shorts. Count the boxes.",
-    "solution": "Each of the 4 tops goes with 2 pairs of shorts. 2 and 2 and 2 and 2 make 8 outfits. There are 8 boxes.",
+    "answer": "6 flags",
+    "val": 6,
+    "hint": "Draw a table with a row for the top stripe and a column for the bottom stripe. Cross out the boxes with the same colour twice. Count the other boxes.",
+    "solution": "Each of the 3 top stripes goes with 2 different bottom stripes. 2 and 2 and 2 make 6 flags. In the table there are 9 boxes, and 3 of them have the same colour twice, so 6 boxes are left.",
     "mistakes": [
-     "Writing 6 (4 and 2).",
-     "Writing 4, the number of tops."
+     "Writing 9 (counting the flags with the same colour twice).",
+     "Writing 3, the number of colours."
     ],
-    "mins": 4,
-    "visual": {
-     "type": "combos",
-     "tops": 4,
-     "bottoms": 2,
-     "size": 70
-    }
+    "mins": 4
    },
    {
     "id": "T3",
@@ -2466,10 +2460,10 @@
   {
    "id": "H2",
    "tier": "start",
-   "text": "Ben has 3 shirts and 4 caps. Each shirt goes with each cap. How many ways can he wear one shirt and one cap? There are ___ ways.",
-   "answer": "12",
-   "val": 12,
-   "solution": "Each of the 3 shirts goes with 4 caps. 4 and 4 and 4 make 12 ways."
+   "text": "Mei buys an ice cream with 2 scoops, a top scoop and a bottom scoop. She picks each scoop from 3 flavours: vanilla, mango or berry. The scoops can be the same. How many ways can she choose? There are ___ ways.",
+   "answer": "9",
+   "val": 9,
+   "solution": "The top scoop can be any of 3 flavours. Each top scoop goes with 3 bottom scoops. 3 and 3 and 3 make 9 ways."
   },
   {
    "id": "H3",
@@ -2659,44 +2653,38 @@
     "id": "c5",
     "tier": "core",
     "type": "number",
-    "q": "Ali has 2 hats and 3 scarves. Each hat goes with each scarf. How many ways can he wear one hat and one scarf?",
-    "hint": "Each hat goes with every scarf.",
+    "q": "Ben picks a top scoop and a bottom scoop from 2 flavours. The scoops can be the same. How many ways can he choose?",
+    "hint": "Each top scoop goes with every bottom scoop.",
     "steps": [
-     "One hat goes with 3 scarves.",
-     "There are 2 hats.",
-     "3 and 3 make 6 ways."
+     "One top scoop goes with 2 bottom scoops.",
+     "There are 2 top scoops.",
+     "2 and 2 make 4 ways."
     ],
-    "answer": 6,
+    "answer": 4,
     "slips": [
      {
       "a": [
-       5
+       3
       ],
-      "say": "Do not add 2 and 3. Each hat goes with every scarf."
+      "say": "Do not add 2 and 1. Each top scoop goes with every bottom scoop."
      }
     ],
     "tpl": {
      "vars": {
-      "h": [
-       2,
-       3,
-       4,
-       5
-      ],
-      "s": [
+      "c": [
        2,
        3,
        4
       ]
      },
      "derive": {},
-     "q": "Ali has {h} hats and {s} scarves. Each hat goes with each scarf. How many ways can he wear one hat and one scarf?",
-     "answer": "h*s",
-     "hint": "Each hat goes with every scarf.",
+     "q": "Ben picks a top scoop and a bottom scoop from {c} flavours. The scoops can be the same. How many ways can he choose?",
+     "answer": "c*c",
+     "hint": "Each top scoop goes with every bottom scoop.",
      "steps": [
-      "One hat goes with {s} scarves.",
-      "There are {h} hats.",
-      "Add {s} once for each hat: {ans} ways."
+      "One top scoop goes with {c} bottom scoops.",
+      "There are {c} top scoops.",
+      "Add {c} once for each top scoop: {ans} ways."
      ]
     }
    },
