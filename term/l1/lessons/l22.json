@@ -1,0 +1,3494 @@
+{
+ "schema_version": 1,
+ "id": "l1-t3-02",
+ "level": 1,
+ "term": 3,
+ "lesson": 22,
+ "lesson_in_term": 2,
+ "title": "Five Minutes at a Time",
+ "big_idea": "Minutes live between the hours: each number the long hand passes is 5 more minutes",
+ "child_idea": "The long hand counts the minutes in 5s: the 1 is 5 minutes, the 2 is 10 minutes, the 3 is 15 minutes, and so on. We write the hour, a colon and two digits for the minutes, like 4:10.",
+ "skill": "Reading a scale",
+ "ages": "6-8",
+ "moe": {
+  "strand": "Measurement: Time (Primary 1)",
+  "topics": [
+   "Telling time to 5 minutes, written as digits such as 4:10 and 8:35 (Primary 1, Measurement, Time 2.1, p. 32)",
+   "am and pm for events in a day (Time 2.2, p. 32)",
+   "Hours and minutes: 1 h 20 min (Time 2.3, p. 32)",
+   "How many minutes between two times, found in chunks: finding a duration in general is Primary 3 (p. 36)"
+  ],
+  "note": "Strand label for the tutor only. NEW TOPIC in the plan (split from the old What Time lesson): the syllabus label is the plan's best reading and is flagged for tutor review. Start here is school Primary 1 work: read and write times to 5 minutes as digits, draw the hands, count the minutes in 5s, choose am or pm for a clear daily event. In the Primary 1 school papers we have seen, 5-minute times appear only as digits with am or pm, so this lesson says 4:10 and not ten past 4; 'ten past', 'twenty to' and 'quarter' words are not on any child page. Think harder uses am and pm where the hour is tricky (12:30 is pm), 1 h 20 min, the short hand just before the next hour (3:50 is not 4:50) and a timetable of start times. BEYOND PRIMARY 1 ON PURPOSE: the Chunk the Gap puzzles in Go further (how many minutes from 3:10 to 4:05, found in chunks: to the next hour, then the rest); finding a duration in general is Primary 3, p. 36. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Do not describe the lesson as MOE-aligned. Contest tag (tutor only): clock chunks (time and calendar)."
+ },
+ "contest_moves": [
+  "count the minutes in 5s round the face",
+  "context: the short hand just before the next hour (3:50 is not 4:50)",
+  "context: a timetable of start times, which show is on and how long to wait",
+  "compare: minutes between two times found in chunks (to the next hour, then the rest)"
+ ],
+ "contest_where": "Think harder (am and pm, 1 h 20 min, the timetable) and Go further (Chunk the Gap)",
+ "objectives": [
+  "Count the minutes in 5s round the face and say what the long hand shows (the 1 is 5 minutes, the 2 is 10, ... the 11 is 55).",
+  "Read and write times to 5 minutes as digits (4:10, 7:25, 9:50), with two digits for the minutes (4:05, not 4:5).",
+  "Know that the short hand stays on the same hour until the long hand has been all the way round (8:55 is still 8).",
+  "Choose am or pm for an event in the day, and read 1 h 20 min as 1 hour and 20 minutes.",
+  "Go further (Chunk the Gap): find how many minutes between two times in chunks (to the next hour, then the rest)."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Count in 5s to 60 (Term 1 Lesson 4 and the holiday course, taught again with claps and 12 steps round a clock)",
+   "Read o'clock and half past (the first lesson of Term 3, taught again with two clocks)",
+   "Pairs that make 60: 50 and 10, 40 and 20 (Term 1 Lesson 5, make a ten, taught again on a number line)"
+  ],
+  "assumes": "Only counting in 5s and the cut-out clock page (or a real clock, or a paper plate clock). Nothing from the first lesson of Term 3 is needed except the idea that the short hand names the hour and the long hand counts the minutes, and the warm-up teaches that again with two clocks.",
+  "holiday_topics_revisited": [
+   "Skip counting in 2s, 5s and 10s (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Not safe to miss: the next lesson (Time Passes) and Mi's Challenge Quest in Term 3 Lesson 10 use 5-minute times. A child who misses it watches the recording and does workbook pages 1 and 2 before the next lesson. A child who joins here without the first lesson of Term 3 can follow: the warm-up re-teaches the two hands, and a real clock or a paper plate clock replaces the cut-out one."
+ },
+ "materials": {
+  "child": [
+   "Your Term 3 book: workbook pages 1 to 5 and the event cards page (page 6), which a grown-up cuts out before the lesson: 8 event cards. The morning and afternoon mat on the page is not cut",
+   "The clock from the first lesson of Term 3: 2 clock faces, 3 short hour hands and 3 long minute hands, kept in their envelope. A real clock also works",
+   "No clock pieces? A paper plate with 1 to 12 written round the edge and two strips of card for hands",
+   "A ruler for drawing the hands (a straight card edge works too)",
+   "A pencil, a rubber and spare paper",
+   "No printer: draw 8 small cards on paper (wake up, breakfast, go to school, morning break, come home, play ball, have a bath, go to bed)"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own cut-out clock and the 8 event cards, to show on camera if you wish",
+   "A visible clock or watch for yourself (not shown to the group)"
+  ],
+  "kit_pages": [
+   "Event cards (page 6): 8 cards to cut out, four morning events and four afternoon or evening events, and a morning and afternoon mat that is not cut. Keep the cards in an envelope. The clock pieces from the first lesson of Term 3 are used again."
+  ],
+  "ruler": true,
+  "notes": "Nothing needs to be bought: a real clock is a help, not a need. No pins, fasteners, matches, toothpicks or anything sharp: the clock hands are loose paper pieces that lie flat on the face. Nobody cuts during the lesson: a grown-up cuts the kit beforehand. The mat says a.m. and p.m., the same as am and pm.",
+  "kit_contract": [
+   {
+    "piece": "event cards",
+    "supplied": 8,
+    "max_used": 8,
+    "used_by": [
+     "explore"
+    ]
+   },
+   {
+    "piece": "clock faces (from the first lesson of Term 3)",
+    "supplied": 2,
+    "max_used": 1,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "hour hands (short, wide)",
+    "supplied": 3,
+    "max_used": 1,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "minute hands (long, thin)",
+    "supplied": 3,
+    "max_used": 1,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 24
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 24,
+    "end": 36
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 36,
+    "end": 40
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 40,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes: set two 5-minute times with the child's own clock, find that the short hand is still on the hour at 9:50, and sort the 8 event cards into morning and afternoon. The mini-lesson has 12 minutes because it reads minutes in 5s, writes two digits for the minutes, shows the short hand just before the next hour, gives am and pm, and 1 h and min. The workbook has 30 minutes because Start here takes a middle child about 17 minutes: pages 3 to 5 are for home for most children. Answers are asked, then shown, so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun.",
+  "skip_order": [
+   "Start with: cut the event cards round of Explore to four cards (two morning and two afternoon)",
+   "Then: shorten choice time (pages 3 to 5 can go home)",
+   "Then: take the extra minutes from the flex time",
+   "Never shorten the exit ticket reading or the look-back"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Look at the clock. Write the time.",
+  "q2": "Look at the second clock. Write the time.",
+  "a1": "3:15",
+  "a2": "11:50 (the short hand has not reached the 12 yet, so the hour is still 11)",
+  "val1": 3
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your clock pieces and the event cards. Pause or rewind any time.",
+   "action": "Gather your workbook, clock, event cards, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say each answer out loud before I do. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. Press play to check it. Then page 2.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Pages 3 to 5 are for any time."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+   "action": "Pause. Explain your answer to someone at home, with a reason."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  },
+  "explore": {
+   "say": "Recording: pause now. Use your clock hands and event cards to follow each step. Press play when you have tried.",
+   "action": "Pause. Set your clock and sort your cards as each step says, then play to check."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Count in 5s with big arm circles.",
+   "action": "Stand up. Count in 5s and move your arms round like a clock hand."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Five Minutes at a Time",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Read the minutes on a clock.",
+      "Count in 5s: 5, 10, 15 ..."
+     ]
+    }
+   ],
+   "note": "Lesson 2 of Term 3, 90 minutes. Objective: read and write times to 5 minutes as digits (4:10, 7:25, 9:50), know that the short hand stays on the hour until the long hand has been all the way round, choose am or pm for a daily event, and (Go further) find how many minutes between two times in chunks. Plain statement for families: reading and writing 5-minute times is school Primary 1 work; the Chunk the Gap puzzles go past Primary 1 on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice in one line: the tutor, the shared screen and any voice that is not muted are recorded; a child may keep the camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "subtitle": "Minutes live between the hours",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: count in 5s round the clock",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Clap and count in 5s. How many claps make 1 hour?"
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 60,
+     "step": 5,
+     "label_every": 5
+    }
+   ],
+   "note": "Children clap and count in fives to 60: 5, 10, 15 ... 60. Ask: how many claps get us to 60 (12); how many claps get us to 30 (6). The clock has 12 numbers, so the long hand takes 12 steps of 5 minutes to go once round. This is the count in 5s from Term 1 Lesson 4 and from the first lesson of Term 3, taught again. A child who is unsure counts on the fingers of one hand, then the other, or touches the numbers on the line. Answers: 12 claps; 6 claps. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Let's clap and count!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: two hands, two jobs",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Which hand names the hour? Read each clock."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 9,
+        "m": 0,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 2,
+        "m": 30,
+        "size": "s"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Two clocks from the first lesson of Term 3. Ask: which hand names the hour (the short hand); which hand counts the minutes (the long hand). First clock: the long hand is on the 12, so it is an o'clock time: 9:00. Second clock: the long hand is on the 6, so it is half past: 2:30. Children answer aloud or with fingers. A child who has not met the clock lesson follows the two hand jobs here, and a child with a cut-out clock sets each time. Answers: 9:00 and 2:30."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: pairs that make 60",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Look at the number line. What goes with each number to make 60?"
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 60,
+     "step": 10,
+     "label_every": 10,
+     "jumps": [
+      [
+       50,
+       60,
+       "+10"
+      ]
+     ]
+    }
+   ],
+   "note": "The number line shows 50 and a jump of 10 to 60. Ask: 50 and what make 60 (10); 40 and what make 60 (20); 55 and what make 60 (5). This is make a ten from Term 1 Lesson 5, taught again: later in the lesson we move to the next hour in the same way (from 3:50 to 4:00 is 10 minutes). Children answer with a whisper or fingers. A child who is unsure counts up from the first number on the line. Answers: 10, 20, 5."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Look at the clock.",
+         "Write the time."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 3,
+        "m": 15,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Look at the second clock.",
+         "Write the time."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 11,
+        "m": 50,
+        "size": "s"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: the long hand is on the 3, count in 5s: 15 minutes past 3, so 3:15. Puzzle 2 is a thinking question on the lesson idea: the long hand is on the 10, count in 5s to 50 minutes; the short hand is close to the 12 but has not reached it, so the hour is still 11: 11:50. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 3:15 and 11:50. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: set the minutes",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 4 o'clock.",
+         "Move the long hand to the 2.",
+         "Count in 5s from the 12. What time is it?"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Children set their cut-out clock (or a real clock) to 4 o'clock, then move the long hand to the 2 and count 5, 10: 10 minutes past 4, written 4:10. Then the same for 7 o'clock and the long hand on the 5: count 5, 10, 15, 20, 25: 7:25. Ask each time: where is the short hand (just past the hour); what time is it. The picture appears on the next slide, after the children have answered. Answers: 4:10 and 7:25. A child who reads the 2 as 2 minutes counts in 5s with a finger on each number."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: set the minutes",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 4 o'clock.",
+         "Move the long hand to the 2.",
+         "Count in 5s from the 12. What time is it?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 4,
+        "m": 10,
+        "digital": "4:10",
+        "size": "m"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Children set their cut-out clock (or a real clock) to 4 o'clock, then move the long hand to the 2 and count 5, 10: 10 minutes past 4, written 4:10. Then the same for 7 o'clock and the long hand on the 5: count 5, 10, 15, 20, 25: 7:25. Ask each time: where is the short hand (just past the hour); what time is it. (answer slide: shown after the children have answered)"
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: the short hand waits",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 9 o'clock.",
+         "Move the long hand to the 10. Count in 5s.",
+         "Where is the short hand? Is it 9 or 10?"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 2, about 3 minutes. Children set 9 o'clock, then move the long hand round to the 10: count 5 ... 50. The short hand has crept almost to the 10 but it is not there yet. Ask: what is the time (9:50); is it 9 or 10 (still 9: the short hand has not reached the 10; the hour changes when the long hand is back on the 12). Say: the short hand waits at the hour until the long hand has been all the way round. The picture appears on the next slide. Answer: 9:50, not 10:50. This is the hour-hand trap that the Think harder page asks about again with a different time."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: the short hand waits",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 9 o'clock.",
+         "Move the long hand to the 10. Count in 5s.",
+         "Where is the short hand? Is it 9 or 10?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 9,
+        "m": 50,
+        "digital": "9:50",
+        "size": "m"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 2, about 3 minutes. Children set 9 o'clock, then move the long hand round to the 10: count 5 ... 50. The short hand has crept almost to the 10 but it is not there yet. Ask: what is the time (9:50); is it 9 or 10 (still 9: the short hand has not reached the 10; the hour changes when the long hand is back on the 12). Say: the short hand waits at the hour until the long hand has been all the way round. (answer slide: shown after the children have answered)"
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: morning or afternoon?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take your 8 event cards and the mat.",
+      "Put each card in the morning pocket (am) or the afternoon and evening pocket (pm).",
+      "Which cards were hard to place?"
+     ]
+    }
+   ],
+   "note": "Round 3, about 4 minutes. Each child has the 8 event cards (wake up, have breakfast, go to school, morning break; come home, play ball, have a bath, go to bed) and the morning and afternoon mat from the kit page. They sort the cards into am (morning) and pm (afternoon and evening). Ask: which event is the first in the day; which is the last. Nobody holds cards to the camera: children say which pocket and show a thumb. The card with the rule appears on the next slide, after the children have sorted. Answers: wake up, have breakfast, go to school, morning break are am; come home, play ball, have a bath, go to bed are pm."
+  },
+  {
+   "id": "s-explore3-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: morning or afternoon?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take your 8 event cards and the mat.",
+      "Put each card in the morning pocket (am) or the afternoon and evening pocket (pm).",
+      "Which cards were hard to place?"
+     ]
+    },
+    {
+     "t": "card",
+     "head": "AM AND PM",
+     "items": [
+      "am is from the middle of the night to noon.",
+      "pm is from noon to the middle of the night.",
+      "We write 7:30 am and 6:15 pm."
+     ]
+    }
+   ],
+   "note": "Round 3, about 4 minutes. Each child has the 8 event cards (wake up, have breakfast, go to school, morning break; come home, play ball, have a bath, go to bed) and the morning and afternoon mat from the kit page. They sort the cards into am (morning) and pm (afternoon and evening). Ask: which event is the first in the day; which is the last. Nobody holds cards to the camera: children say which pocket and show a thumb. (answer slide: shown after the children have answered)"
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Each number is 5 minutes",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 1,
+        "m": 5,
+        "digital": "1:05",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 6,
+        "m": 35,
+        "digital": "6:35",
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Count in 5s from the 12 to the long hand."
+    }
+   ],
+   "note": "Read the minutes in 5s. First clock: the long hand is on the 1: 5 minutes past 1, written 1:05. Second clock: the long hand is on the 7: count 5, 10, 15, 20, 25, 30, 35: 35 minutes past 6, written 6:35. Say: each number the long hand passes is 5 more minutes. Children answer aloud. Ask them to point to the number on their own clock face. Answers: 1:05 and 6:35."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Two digits for the minutes",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "WRITE THE TIME",
+     "items": [
+      "The hour, a colon, then 2 digits for the minutes.",
+      "5 minutes is 05, so we write 1:05.",
+      "We do not write 1:5."
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 1,
+        "m": 5,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 10,
+        "m": 5,
+        "digital": "[]",
+        "size": "s"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Minutes always take two digits: 5 minutes is 05, so 1:05, never 1:5 (which looks like 1 and 5 minutes but is not how times are written). Ask: how do we write 10 minutes past 2 (2:10); 5 minutes past 10 (10:05). Children write in the air or on their paper. Common slip: writing 1:5. Answers: 2:10 and 10:05; the second clock on the slide shows 10:05 for the children to write."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "The short hand waits",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "The long hand is on the 11. What is the time?"
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 8,
+        "m": 55,
+        "size": 60
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "The short hand is close to the 9 but the long hand has not finished its round, so the hour is still 8: 8:55. Ask: what is the time (8:55); why is it not 9:55 (the short hand has not reached the 9; it gets there when the long hand is back on the 12). The card appears on the next slide, after the children have answered. Answer: 8:55. This is the trap in Think harder with a different time."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "The short hand waits",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "The long hand is on the 11. What is the time?"
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 8,
+        "m": 55,
+        "size": 60
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "STILL 8",
+        "items": [
+         "The long hand is on the 11: 55 minutes.",
+         "The short hand is almost on the 9, but it has not reached it.",
+         "The time is 8:55, not 9:55."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "The short hand is close to the 9 but the long hand has not finished its round, so the hour is still 8: 8:55. Ask: what is the time (8:55); why is it not 9:55 (the short hand has not reached the 9; it gets there when the long hand is back on the 12). (answer slide: shown after the children have answered)"
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "am and pm",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "objects",
+        "icon": "sun",
+        "n": 1,
+        "size": "s"
+       },
+       {
+        "t": "card",
+        "head": "AM",
+        "items": [
+         "From the middle of the night to noon.",
+         "Wake up, breakfast, school."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "objects",
+        "icon": "moon",
+        "n": 1,
+        "size": "s"
+       },
+       {
+        "t": "card",
+        "head": "PM",
+        "items": [
+         "From noon to the middle of the night.",
+         "Lunch after noon, tea, bedtime."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "am is the morning: from the middle of the night (12 at night) to noon. pm is the afternoon and evening: from noon to the middle of the night. We write the time, a space, then am or pm, without full stops: 7:30 am, 6:15 pm. Ask: is breakfast at 7:30 am or pm (am); is bedtime at 8:30 am or pm (pm). Careful: 12:30 is just after noon, so it is pm; pm is not only night. Children answer on three. Answers: am, pm."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Hours and minutes",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "H AND MIN",
+     "items": [
+      "h is hour. min is minutes.",
+      "1 h 20 min is 1 hour and 20 minutes.",
+      "A film from 4:00 to 5:20 lasts 1 h 20 min."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "How long is 2 h 10 min? Say it in words."
+    }
+   ],
+   "note": "h stands for hour and min stands for minutes: 1 h 20 min is 1 hour and 20 minutes. Ask: say 2 h 10 min in words (2 hours and 10 minutes); how many minutes are in 1 hour (60). We only read hours and minutes this way, and we do not change them into minutes today. Answer: 2 hours and 10 minutes."
+  },
+  {
+   "id": "s-m6",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 2:20.",
+         "Then set it to 5:40.",
+         "Write both times with digits."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Each child works with their own clock. 2:20: the long hand on the 4 (count 5, 10, 15, 20) and the short hand just past the 2. 5:40: the long hand on the 8 (40 minutes) and the short hand about two thirds of the way from the 5 to the 6. Walk the cameras; do not ask children to hold their clock up. Wait 10 seconds before helping. The pictures appear on the next slide. Answers: 2:20 and 5:40. Children tick their own work."
+  },
+  {
+   "id": "s-m6-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 2:20.",
+         "Then set it to 5:40.",
+         "Write both times with digits."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "cols",
+        "cols": [
+         [
+          {
+           "t": "visual",
+           "type": "clock",
+           "h": 2,
+           "m": 20,
+           "digital": "2:20",
+           "size": "s"
+          }
+         ],
+         [
+          {
+           "t": "visual",
+           "type": "clock",
+           "h": 5,
+           "m": 40,
+           "digital": "5:40",
+           "size": "s"
+          }
+         ]
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Each child works with their own clock. 2:20: the long hand on the 4 (count 5, 10, 15, 20) and the short hand just past the 2. 5:40: the long hand on the 8 (40 minutes) and the short hand about two thirds of the way from the 5 to the 6. Walk the cameras; do not ask children to hold their clock up. Wait 10 seconds before helping. (answer slide: shown after the children have answered)"
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Five at a time",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Count in 5s with me."
+    },
+    {
+     "t": "p",
+     "text": "Make a big circle with one arm for each 5."
+    },
+    {
+     "t": "p",
+     "text": "Stop at 60: that is 1 whole hour."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Count in 5s from 5 to 60 with one big, slow arm circle for each count, like the long hand going round: 12 steps make 1 hour. Then count back from 60 to 30 in 5s and sip some water. No running, no equipment. A child may stay seated and move one hand. No prizes and no comparing."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 and 2. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 and 2 aloud. Children work on their own with their clock; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. Question 1: read three clocks and write the times as digits. Question 2: the long hand is on a number; count in 5s to say the minutes."
+  },
+  {
+   "id": "s-ws1b",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read question 3 aloud: draw the hands to show 3:20. Use a ruler. After question 3 any child may choose to carry on or try Think harder. Children draw the long hand on the 4 and the short hand a little past the 3."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 2:35, 9:05, 7:55; Q2 40 minutes; Q3 the long hand on the 4 and the short hand a little past the 3."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud with the options. Question 4: choose the correct answer for a clock and write its number in the bracket. Question 5: circle am or pm for two events. Question 6: two clocks with names; who leaves home first."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 option (2), 5:25; Q5 am, then pm; Q6 Mei."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "am and pm, hours and minutes, a timetable"
+      ],
+      [
+       "Go further (page 4)",
+       "Chunk the Gap"
+      ],
+      [
+       "Investigation (page 5)",
+       "Why 12 steps?"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD SAYS",
+     "items": [
+      "The long hand is on the 2.",
+      "So it is 2 minutes past the hour."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is the child right? How could we check with our clock?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test the claim with their clock: move the long hand from the 12 to the 2 and count in 5s. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Each number is 5 minutes: 5, 10. The 2 means 10 minutes past the hour. Repeat each child answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 3,
+        "m": 15,
+        "digital": "3:15",
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 11,
+        "m": 50,
+        "digital": "11:50",
+        "size": "s"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "The first clock shows 3:15. The second shows 11:50."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. Puzzle 1: the long hand is on the 3: count in 5s, 5, 10, 15: 3:15. Puzzle 2: the long hand is on the 10: 50 minutes. The short hand is close to the 12 but has not reached it, so the hour is still 11: 11:50. It was the same idea: count the minutes in 5s, and the short hand waits at the hour."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud with the clock and the options. The figures on the slide are small. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 1:45; pm; for 9:25 the long hand is on the 5 and the short hand is a little past the 9."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Time Passes",
+      "Have ready: your clock from the first lesson of Term 3 in its envelope, a pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families to keep the clock pieces in an envelope: the next lesson uses them again. If the whole class is ahead, show the optional slide and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: the next hour",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "p",
+        "text": "It is 5:50."
+       },
+       {
+        "t": "p",
+        "text": "How many minutes until 6:00?"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 5,
+        "m": 50,
+        "size": "m"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Optional, only if you are on time. From 5:50 to 6:00 is 10 minutes (the long hand goes from the 10 to the 12: two steps of 5). Take two answers and move on. This links to Chunk the Gap: go to the next hour first. Answer: 10 minutes.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Clock hunt",
+       "Find a clock at home. Read the minutes in 5s."
+      ],
+      [
+       "Make a puzzle",
+       "Set your clock. Ask your grown-up for the time."
+      ],
+      [
+       "Teach it back",
+       "Show a toy why the 2 means 10 minutes."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your clock pieces and event cards on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we read the minutes on a clock, five at a time. Each number is 5 more minutes."
+     },
+     {
+      "k": "ASK",
+      "text": "Look at a clock near you if you can. Which hand counts the minutes?",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: reading and writing times to 5 minutes is school Primary 1 work. The Chunk the Gap puzzles in Go further go beyond Primary 1 on purpose. In school papers the times are written as digits, so we say 4:10 as four ten, not ten past four."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Count in fives with me. Clap once for each count: five, ten, fifteen, and on to sixty."
+     },
+     {
+      "k": "WORK",
+      "text": "Count in fives together to 60 with one clap each; slow and clear.",
+      "s": 30
+     },
+     {
+      "k": "ASK",
+      "text": "How many claps did we need to reach sixty?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many claps to reach thirty?",
+      "resp": 15
+     },
+     {
+      "k": "WORK",
+      "text": "Count back from 60 in fives, whispering, with a soft clap each time.",
+      "s": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two hands, two jobs. The short hand names the hour. The long hand counts the minutes."
+     },
+     {
+      "k": "WORK",
+      "text": "Children find the short hand and the long hand on their own clock and hold each up in turn for you to see with a thumb.",
+      "s": 30
+     },
+     {
+      "k": "ASK",
+      "text": "What time is the first clock?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "What time is the second clock?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Which hand counts the minutes?",
+      "resp": 10
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Look at the line. Fifty and ten make sixty."
+     },
+     {
+      "k": "ASK",
+      "text": "Forty and what make sixty?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Fifty-five and what make sixty?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Thirty and what make sixty?",
+      "resp": 12
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about the count in fives, count on one hand, then the other. If the two hands are mixed up, hold the short hand up on the kit clock and say it names the hour. For pairs that make sixty, count up on the line from the first number."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 12 claps, 6 claps; 9:00, 2:30, the long hand; 10, 20, 5. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting in 5s and the two hands."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Look at the clock. Write the time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the time on their own paper.",
+      "s": 60
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Look at the second clock. Write the time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 90
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 3:15. Puzzle 2 answer: 11:50. Look for good ideas to praise later (a child who counted in fives, or who noticed the short hand has not reached the 12). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Set your clock to four o'clock. Now move the long hand to the two. Count in fives from the twelve."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set 4 o'clock, move the long hand to the 2 and count in 5s.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it? Say it on three.",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Five, ten: ten minutes past four, written four ten. Now set seven o'clock and move the long hand to the five."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set 7 o'clock, move the long hand to the 5 and count in fives.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it now?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Set nine o'clock. Move the long hand round to the ten, counting in fives, and watch the short hand."
+     },
+     {
+      "k": "WORK",
+      "text": "Children move the long hand to the 10 and watch the short hand creep.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "What is the time?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Is the hour still nine, or has it become ten?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Nine fifty. The short hand waits for the long hand to come all the way round. The hour is still nine."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Take your eight event cards and the mat. Sort each card: morning goes in the am pocket, afternoon and evening go in the pm pocket."
+     },
+     {
+      "k": "WORK",
+      "text": "Children sort the 8 event cards into the am and pm pockets.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "Which card is the first one in the day?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Which card is the last one in the day?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Which card was the hardest to place?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Am is from the middle of the night to noon. Pm is from noon to the middle of the night. We write seven thirty am, and six fifteen pm."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who reads the 2 as 2 minutes counts in 5s with a finger on each number. A child with no cut-out hands uses a real clock, or a paper plate with two strips of card. A child with no cards says each event aloud and points to morning or afternoon on the mat or a piece of paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say answers quietly on three and show fingers. You cannot see small clocks or cards on tiles: ask for a thumb when a child has set the time or sorted the cards. Answers: 4:10, 7:25; 9:50, still 9; wake up, breakfast, go to school and morning break are am; come home, play ball, bath and bed are pm. Do not name a child with a wrong answer."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Each number is five more minutes. Count in fives from the twelve to the long hand."
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes past one is the first clock?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes past six is the second clock?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "One oh five, and six thirty-five. We write the hour, a colon, then the minutes."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set their clock to 1:05 and then 6:35 and check the long hand on the 1 and on the 7.",
+      "s": 50
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The minutes always take two digits. Five minutes is zero five, so one oh five. We never write one colon five."
+     },
+     {
+      "k": "ASK",
+      "text": "How do we write ten minutes past two?",
+      "resp": 12
+     },
+     {
+      "k": "WORK",
+      "text": "Children write 2:10 and 10:05 with digits on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The long hand is on the eleven. The short hand is almost on the nine."
+     },
+     {
+      "k": "ASK",
+      "text": "What is the time?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Is it eight fifty-five or nine fifty-five?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Eight fifty-five. The short hand has not reached the nine yet: it gets there when the long hand is back on the twelve."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set 8:55 on their clock: the long hand on the 11, the short hand just before the 9.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Am is the morning. Pm is the afternoon and evening. We write seven thirty am and six fifteen pm, with a space and no full stops."
+     },
+     {
+      "k": "ASK",
+      "text": "Breakfast at seven thirty: am or pm?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "Bedtime at eight thirty: am or pm?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "Lunch at twelve thirty: am or pm? Say it on three.",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "H means hour and min means minutes. One h twenty min is one hour and twenty minutes."
+     },
+     {
+      "k": "ASK",
+      "text": "Say two h ten min in words.",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes are in one hour?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m6",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Set your clock to two twenty. Then set it to five forty. Write both times with digits."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set their clocks and write the times on their own paper. Wait 10 seconds before helping.",
+      "s": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m6-ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Two twenty and five forty. Tick your own work with a tick."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: short hand, long hand, minutes, count in fives, am, pm. We say 4:10 as four ten, not ten past four: the school papers write times as digits. Do not teach a rule to recite; the clock is the method."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child reads the long hand number as the minutes (the 2 as 2), count in 5s together. If a child writes 4:5, ask: how many digits for the minutes? If a child says 9:50 is ten to ten, say it is nine fifty and move on: digits first."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We count in fives with big arm circles, like the long hand going round."
+     },
+     {
+      "k": "WORK",
+      "text": "Count 5 to 60 with one slow arm circle for each count, then back from 60 to 30 in fives. Children may stay seated and move one hand.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: write the time for each clock. There are three clocks. Question 2: count in fives. How many minutes past the hour is the long hand showing?"
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1b",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 3: draw the hands to show three twenty. Use a ruler."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 520
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 2:35, 9:05, 7:55. Question 2: 40 minutes. Question 3: the long hand on the four and the short hand a little past the three. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: look at the clock. Choose the correct answer. Option 1: four oh four. Option 2: five twenty-five. Option 3: six twenty-five. Option 4: five fifty-two. Question 5: circle am or pm. Question 6: Ben and Mei leave home at different times. Who leaves first?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 520
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: option 2, five twenty-five. Question 5: am, then pm. Question 6: Mei leaves first."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 270
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count in 5s from the 12 to the long hand. Q2: count in 5s up to the number. Q3: draw the long hand to the 4 first. Q4: find the clock with the long hand on the 5 and read the minutes. Q5: is it the morning or the afternoon and evening? Q6: read both times, then find the earlier."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has am and pm with a tricky 12:30, 1 h 20 min, the short hand just before the next hour and a timetable. Go further is Chunk the Gap (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 17 minutes, so for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child says: the long hand is on the two, so it is two minutes past the hour. Is the child right? How could we check with our clock?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test the claim with your clock: move the long hand from the 12 to the 2 and count in fives.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? The first clock is three fifteen: the long hand is on the three, so five, ten, fifteen. The second is eleven fifty. The short hand has not reached the twelve, so the hour is still eleven."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no. Each number is 5 minutes: 5, 10. The 2 means 10 minutes past the hour. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Write the time for the clock. E2. Mei goes to bed at eight thirty at night. Circle am or pm. E3. Draw the hands to show nine twenty-five. Use a ruler."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 230
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: 1:45. E2: pm. E3: the long hand on the five and the short hand a little past the nine."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Time Passes. Please have your clock from the first lesson of Term 3, with its hands, in its envelope, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: it is five fifty. How many minutes until six o'clock?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 10 minutes, from the 10 to the 12 on the clock is two steps of 5. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Write the time for each clock.",
+    "parts": [],
+    "answer": "2:35; 9:05; 7:55",
+    "val": [
+     "2:35",
+     "9:05",
+     "7:55"
+    ],
+    "hint": "Count in 5s from the 12 to the long hand. Then look at the short hand: has it reached the next number?",
+    "solution": "First clock: the long hand is on the 7, so 35 minutes; the short hand has passed the 2: 2:35. Second clock: the long hand is on the 1, so 5 minutes: 9:05 (two digits for the minutes). Third clock: the long hand is on the 11, so 55 minutes; the short hand has not reached the 8, so it is 7:55.",
+    "mistakes": [
+     "Writing 2:7 (the number the long hand points to).",
+     "Writing 9:5 (one digit for the minutes).",
+     "Writing 8:55 (reading the number the short hand is going towards)."
+    ],
+    "mins": 4,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 2,
+      "m": 35,
+      "digital": "[]",
+      "size": 75
+     },
+     {
+      "type": "clock",
+      "h": 9,
+      "m": 5,
+      "digital": "[]",
+      "size": 75
+     },
+     {
+      "type": "clock",
+      "h": 7,
+      "m": 55,
+      "digital": "[]",
+      "size": 75
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Count in 5s from the 12. How many minutes past the hour is the long hand showing?",
+    "parts": [
+     {
+      "l": "",
+      "text": "___ minutes",
+      "ans": "40",
+      "val": 40
+     }
+    ],
+    "answer": "40",
+    "val": [
+     40
+    ],
+    "hint": "Touch each number from the 12 and count 5, 10, 15 ... Stop at the long hand.",
+    "solution": "The long hand is on the 8. Count in 5s: 5, 10, 15, 20, 25, 30, 35, 40. It is 40 minutes past the hour.",
+    "mistakes": [
+     "Writing 8 (the number the long hand points to).",
+     "Writing 35 or 45 (a slip in counting)."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "clock",
+     "h": 3,
+     "m": 40,
+     "size": 62
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Draw the hands to show 3:20. Use a ruler.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Draw the short hand and the long hand.",
+      "ans": "long hand on the 4, short hand a little past the 3",
+      "val": "draw"
+     }
+    ],
+    "answer": "The long hand on the 4 and the short hand a little past the 3",
+    "val": [
+     "draw"
+    ],
+    "hint": "Count in 5s: 5, 10, 15, 20. Which number is that? Draw the long hand there first.",
+    "solution": "The minutes are 20: count 5, 10, 15, 20, so the long hand is on the 4. The hour is 3, so the short hand is a little past the 3.",
+    "mistakes": [
+     "Drawing the long hand to the 3 or the 20.",
+     "Drawing the short hand exactly on the 3 or on the 4."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "clock",
+     "h": 3,
+     "m": 20,
+     "hide_hands": true,
+     "digital": "3:20",
+     "size": 80
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the clock. Choose the correct answer. Write its number in the bracket.",
+    "parts": [],
+    "answer": "(2) 5:25",
+    "val": [
+     2
+    ],
+    "hint": "Find the long hand first. Count in 5s from the 12.",
+    "solution": "The long hand is on the 5. Count in 5s: 25 minutes. The short hand is a little past the 5. The time is 5:25.",
+    "mistakes": [
+     "Choosing (1) 5:05 (reading the 5 as 5 minutes).",
+     "Choosing (3) 6:25 (the hour the short hand is going towards)."
+    ],
+    "mins": 3,
+    "mcq": {
+     "options": [
+      "5:05",
+      "5:25",
+      "6:25",
+      "5:52"
+     ],
+     "bracket": true
+    },
+    "visual": {
+     "type": "clock",
+     "h": 5,
+     "m": 25
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Circle am or pm.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ali wakes up at 6:30.",
+      "ans": "am",
+      "val": "am",
+      "choices": [
+       "am",
+       "pm"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Mei goes to bed at 8:30.",
+      "ans": "pm",
+      "val": "pm",
+      "choices": [
+       "am",
+       "pm"
+      ]
+     }
+    ],
+    "answer": "am; pm",
+    "val": [
+     "am",
+     "pm"
+    ],
+    "hint": "Is it the morning, or the afternoon and evening?",
+    "solution": "Waking up at 6:30 is in the morning, so it is 6:30 am. Going to bed at 8:30 is in the evening, so it is 8:30 pm.",
+    "mistakes": [
+     "Writing pm for waking up because 6 is a small number.",
+     "Writing am for bedtime."
+    ],
+    "mins": 2.5
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Ben and Mei leave home at different times. Look at the clocks.",
+    "parts": [
+     {
+      "l": "",
+      "text": "___ leaves first.",
+      "ans": "Mei",
+      "val": "Mei"
+     }
+    ],
+    "answer": "Mei",
+    "val": [
+     "Mei"
+    ],
+    "hint": "Read the time on each clock. The earlier time is first.",
+    "solution": "Ben leaves at 6:50 and Mei leaves at 6:15. Both are the same hour, so the one with fewer minutes is earlier. 6:15 is earlier than 6:50, so Mei leaves first.",
+    "mistakes": [
+     "Choosing Ben because 50 is a bigger number.",
+     "Comparing the short hands only (they look alike)."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 6,
+      "m": 50,
+      "digital": "Ben",
+      "size": 70
+     },
+     {
+      "type": "clock",
+      "h": 6,
+      "m": 15,
+      "digital": "Mei",
+      "size": 70
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Circle am or pm.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "School starts at 7:30.",
+      "ans": "am",
+      "val": "am",
+      "choices": [
+       "am",
+       "pm"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Break time is at 10:20.",
+      "ans": "am",
+      "val": "am",
+      "choices": [
+       "am",
+       "pm"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "Lunch is at 12:30.",
+      "ans": "pm",
+      "val": "pm",
+      "choices": [
+       "am",
+       "pm"
+      ]
+     },
+     {
+      "l": "d",
+      "text": "Siti goes to sleep at 9:15.",
+      "ans": "pm",
+      "val": "pm",
+      "choices": [
+       "am",
+       "pm"
+      ]
+     }
+    ],
+    "answer": "am; am; pm; pm",
+    "val": [
+     "am",
+     "am",
+     "pm",
+     "pm"
+    ],
+    "hint": "Noon is 12 o'clock in the middle of the day. Times just after noon are pm.",
+    "solution": "School starts in the morning: 7:30 am. Break at 10:20 is before noon: am. 12:30 is just after noon, so it is pm. Going to sleep at 9:15 at night is pm.",
+    "mistakes": [
+     "Writing am for 12:30 because 12 is a small hour.",
+     "Thinking pm is only for night time."
+    ],
+    "mins": 3.5
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "A film lasts 1 h 20 min.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 h 20 min is ___ hour and ___ minutes.",
+      "ans": "1; 20",
+      "val": [
+       1,
+       20
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Which is longer, 50 min or 1 h? Circle one.",
+      "ans": "1 h",
+      "val": "1 h",
+      "choices": [
+       "50 min",
+       "1 h"
+      ]
+     }
+    ],
+    "answer": "1 hour and 20 minutes; 1 h",
+    "val": [
+     1,
+     20,
+     "1 h"
+    ],
+    "hint": "h is hour and min is minutes. How many minutes are in 1 hour?",
+    "solution": "h means hour and min means minutes, so 1 h 20 min is 1 hour and 20 minutes. 1 hour is 60 minutes, which is more than 50 minutes, so 1 h is longer.",
+    "mistakes": [
+     "Writing 120 minutes (reading 1 h 20 min as 120).",
+     "Choosing 50 min because 50 is a bigger number than 1."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "A child says this clock shows 4:50.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is the child correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The time is ___.",
+      "ans": "3:50",
+      "val": "3:50"
+     }
+    ],
+    "answer": "No; 3:50",
+    "val": [
+     "No",
+     "3:50"
+    ],
+    "hint": "Count in 5s for the long hand. Has the short hand reached the 4?",
+    "solution": "The long hand is on the 10, so it is 50 minutes past. The short hand is almost on the 4, but it has not reached it. The hour is still 3, so the time is 3:50.",
+    "mistakes": [
+     "Saying Yes because the short hand is near the 4.",
+     "Writing 4:10 (reading the 10 as the minutes)."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "clock",
+     "h": 3,
+     "m": 50,
+     "size": 70
+    }
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "The shows start at the times in the table. Ravi arrives at 10:35.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The ___ show is on.",
+      "ans": "fish",
+      "val": "fish"
+     },
+     {
+      "l": "b",
+      "text": "Ravi waits ___ minutes for the next show.",
+      "ans": "15",
+      "val": 15
+     }
+    ],
+    "answer": "fish; 15",
+    "val": [
+     "fish",
+     15
+    ],
+    "hint": "Which show started before 10:35? When does the next show start?",
+    "solution": "The fish show started at 10:20, and the birds show starts at 10:50. Ravi arrives at 10:35, between the two, so the fish show is on. From 10:35 to 10:50 is 15 minutes (10:35 to 10:40 is 5, then 10 more).",
+    "mistakes": [
+     "Choosing the birds show (the next start time).",
+     "Writing 50 or 35 (a time, not the wait)."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Show",
+      "Starts"
+     ],
+     "rows": [
+      [
+       "Fish",
+       "10:20"
+      ],
+      [
+       "Birds",
+       "10:50"
+      ],
+      [
+       "Seals",
+       "11:25"
+      ]
+     ],
+     "col_w": [
+      1,
+      1
+     ],
+     "size": 85
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Mi starts to swim at 3:10 and stops at 4:05. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "From 3:10 to 4:00 is ___ minutes.",
+      "ans": "50",
+      "val": 50
+     },
+     {
+      "l": "b",
+      "text": "From 4:00 to 4:05 is ___ minutes.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "c",
+      "text": "Mi swims for ___ minutes.",
+      "ans": "55",
+      "val": 55
+     }
+    ],
+    "answer": "50; 5; 55",
+    "val": [
+     50,
+     5,
+     55
+    ],
+    "hint": "Go to the next hour first. Then add the minutes after it.",
+    "solution": "From 3:10 to 4:00 is 50 minutes (the 10 and the 50 make 60). From 4:00 to 4:05 is 5 minutes. 50 + 5 = 55, so Mi swims for 55 minutes.",
+    "mistakes": [
+     "Subtracting digit by digit and writing 1:05 or 95.",
+     "Stopping at 4:00 and writing 50."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "number_line",
+     "start": 0,
+     "end": 70,
+     "step": 5,
+     "label_every": 10,
+     "labels": {
+      "10": "3:10",
+      "60": "4:00",
+      "65": "4:05"
+     },
+     "marks": [
+      10,
+      60,
+      65
+     ]
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A show starts at 2:45 and ends at 3:20. How many minutes does the show last?",
+    "parts": [
+     {
+      "l": "",
+      "text": "The show lasts ___ minutes.",
+      "ans": "35",
+      "val": 35
+     }
+    ],
+    "answer": "35",
+    "val": [
+     35
+    ],
+    "hint": "Go to the next hour first: 2:45 to 3:00. Then add the rest.",
+    "solution": "From 2:45 to 3:00 is 15 minutes. From 3:00 to 3:20 is 20 minutes. 15 + 20 = 35, so the show lasts 35 minutes.",
+    "mistakes": [
+     "Writing 75 or 25 (taking 20 and 45 away from each other).",
+     "Writing 15 (stopping at the next hour)."
+    ],
+    "mins": 4,
+    "lines": 2
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Ali reads from 5:35 to 6:20. Mei reads from 6:05 to 6:55.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Who reads for longer? Circle one.",
+      "ans": "Mei",
+      "val": "Mei",
+      "choices": [
+       "Ali",
+       "Mei"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "She reads ___ minutes longer.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "Mei; 5",
+    "val": [
+     "Mei",
+     5
+    ],
+    "hint": "Find how long each child reads. Go to the next hour first for Ali.",
+    "solution": "Ali: 5:35 to 6:00 is 25 minutes, then 20 more: 45 minutes. Mei: 6:05 to 6:55 is 50 minutes. 50 is more than 45, so Mei reads for longer, by 5 minutes.",
+    "mistakes": [
+     "Comparing only the start times or only the end times.",
+     "Writing 50 (Mei's time, not the difference)."
+    ],
+    "mins": 5,
+    "lines": 2
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Why 12 steps?",
+   "first": "The long hand goes from the 12 to the 3. How many steps of 5 minutes is that?",
+   "text": "How many steps of 5 minutes make 1 whole hour? Why?",
+   "answer": "12 steps. Each number the long hand passes is 5 minutes, and there are 12 numbers, so 12 fives make 60 minutes, which is 1 hour.",
+   "val": [
+    "12"
+   ],
+   "look_for": "A child who says 12 and gives a reason: there are 12 numbers and each one is 5 minutes, or 12 fives make 60. Credit any clear reason. Do not mark a child down for stopping at 12.",
+   "mistakes": [
+    "Saying 60 (the minutes, not the steps).",
+    "Saying 5 (the size of one step)."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child says: the long hand is on the 2, so it is 2 minutes past the hour. Is the child right? How could we check with our clock?",
+  "starter": "I think ... because ...",
+  "answer": "No. Each number the long hand passes is 5 minutes. From the 12 to the 2 is 5, then 10, so it is 10 minutes past the hour. We can check by moving the long hand on the clock and counting in 5s.",
+  "look_for": "A child who counts in 5s or says each number is 5 minutes. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Write the time for the clock.",
+   "parts": [],
+   "answer": "1:45",
+   "val": [
+    "1:45"
+   ],
+   "solution": "The long hand is on the 9: count in 5s to 45 minutes. The short hand has passed the 1. The time is 1:45.",
+   "mistakes": [
+    "Writing 1:9 (the number the long hand points to).",
+    "Writing 2:45 (the number the short hand is going towards)."
+   ],
+   "visual": {
+    "type": "clock",
+    "h": 1,
+    "m": 45,
+    "digital": "[]",
+    "size": 48
+   }
+  },
+  {
+   "id": "E2",
+   "text": "Mei goes to bed at 8:30 at night. Circle am or pm.",
+   "parts": [],
+   "choices": [
+    "am",
+    "pm"
+   ],
+   "answer": "pm",
+   "val": [
+    "pm"
+   ],
+   "solution": "Night time after noon is pm, so 8:30 at night is 8:30 pm.",
+   "mistakes": [
+    "Writing am because 8 is a small number."
+   ]
+  },
+  {
+   "id": "E3",
+   "text": "Draw the hands to show 9:25. Use a ruler.",
+   "parts": [
+    {
+     "l": "",
+     "text": "Draw the short hand and the long hand.",
+     "ans": "long hand on the 5, short hand a little past the 9",
+     "val": "draw"
+    }
+   ],
+   "answer": "Long hand on the 5; short hand a little past the 9",
+   "val": [
+    "draw"
+   ],
+   "solution": "25 minutes is 5 fives, so the long hand is on the 5. The hour is 9, so the short hand is a little past the 9.",
+   "mistakes": [
+    "Drawing the long hand on the 25 or the 4.",
+    "Drawing the short hand on the 10."
+   ],
+   "visual": {
+    "type": "clock",
+    "h": 9,
+    "m": 25,
+    "hide_hands": true,
+    "digital": "9:25",
+    "size": 40
+   }
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "counting in 5s",
+   "writing two digits",
+   "the short hand and the hour",
+   "something else"
+  ],
+  "helped": [
+   "my clock and hands",
+   "counting in 5s",
+   "drawing it",
+   "I was not stuck"
+  ],
+  "next": [
+   "using my clock",
+   "counting in 5s",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "The long hand is on the 4. Count in 5s. How many minutes past the hour is that? ___ minutes",
+   "answer": "20",
+   "val": 20,
+   "solution": "Count in 5s from the 12: 5, 10, 15, 20. The 4 is 20 minutes past the hour."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "The long hand is on the 5. The short hand is a little past the 7. Write the time in digits. ___",
+   "answer": "7:25",
+   "val": "7:25",
+   "solution": "The long hand on the 5 is 25 minutes. The short hand is past the 7, so the time is 7:25."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Which is the correct way to write 5 minutes past 9? Circle one.",
+   "choices": [
+    "9:5",
+    "9:05"
+   ],
+   "answer": "9:05",
+   "val": "9:05",
+   "solution": "The minutes always have two digits: 5 minutes is 05, so 9:05."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Lunch is at 12:30. Circle am or pm.",
+   "choices": [
+    "am",
+    "pm"
+   ],
+   "answer": "pm",
+   "val": "pm",
+   "solution": "12:30 is just after noon, so it is pm."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 2",
+   "text": "Fill in the missing numbers: 46 | 47 | ___ | 49 | ___",
+   "answer": "48 and 50",
+   "val": [
+    48,
+    50
+   ],
+   "solution": "Count on: 47, 48, 49, 50."
+  }
+ ],
+ "online_practice": {
+  "key": "t3l22",
+  "title": "Five Minutes at a Time",
+  "topic": "Reading minutes to 5 minutes, am and pm",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "fields",
+    "q": "What time is it?",
+    "hint": "Count in 5s from the 12 to the long hand. The short hand names the hour.",
+    "steps": [
+     "Count in 5s from the 12 to the long hand.",
+     "The short hand has just passed the hour.",
+     "The time is 3 : 20."
+    ],
+    "slips": [],
+    "frame": "{h} : {mm}",
+    "fields": [
+     {
+      "id": "h",
+      "answer": 3
+     },
+     {
+      "id": "mm",
+      "answer": 20,
+      "pad": 2
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": "{m}"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 20
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ],
+      "m": [
+       5,
+       10,
+       20,
+       25,
+       35,
+       40,
+       50,
+       55
+      ]
+     },
+     "q": "What time is it?",
+     "frame": "{h} : {mm}",
+     "answers": {
+      "h": "h",
+      "mm": "m"
+     },
+     "pad": {
+      "mm": 2
+     },
+     "hint": "Count in 5s from the 12 to the long hand. The short hand names the hour.",
+     "steps": [
+      "Count in 5s from the 12 to the long hand: {m|min}.",
+      "The short hand has just passed the {h}.",
+      "The time is {h} : {m|mm}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "The long hand is on the 3. Count in 5s. How many minutes past the hour is that?",
+    "answer": 15,
+    "hint": "Count in 5s from the 12: one 5 for each number.",
+    "steps": [
+     "Count in 5s: 5, 10, 15.",
+     "The 3 is the third number after the 12.",
+     "It is 15 minutes past the hour."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "The long hand is on the 3, but each number is 5 minutes. Count in 5s."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "q": "The long hand is on the {n}. Count in 5s. How many minutes past the hour is that?",
+     "answer": "5*n",
+     "hint": "Count in 5s from the 12: one 5 for each number.",
+     "steps": [
+      "Count in 5s up to the {n}.",
+      "{n} fives make {ans}.",
+      "It is {ans} minutes past the hour."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Ben has breakfast at 7:30. Is it am or pm?",
+    "options": [
+     "am",
+     "pm"
+    ],
+    "answer": "am",
+    "hint": "Breakfast is in the morning.",
+    "steps": [
+     "Breakfast is in the morning.",
+     "The morning is am."
+    ],
+    "slips": [
+     {
+      "a": [
+       "pm"
+      ],
+      "say": "pm is the afternoon and evening. Is breakfast then?"
+     }
+    ]
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "Mei goes to bed at 8:30 at night. Is it am or pm?",
+    "options": [
+     "am",
+     "pm"
+    ],
+    "answer": "pm",
+    "hint": "Bedtime is in the evening.",
+    "steps": [
+     "Bedtime at night is after noon.",
+     "After noon is pm."
+    ],
+    "slips": [
+     {
+      "a": [
+       "am"
+      ],
+      "say": "am is the morning. Is bedtime then?"
+     }
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "fields",
+    "q": "The short hand is just past the hour. The long hand is on a number. Write the time in digits.",
+    "hint": "Count in 5s from the 12 to the long hand.",
+    "steps": [
+     "Count in 5s to find the minutes.",
+     "The short hand gives the hour."
+    ],
+    "slips": [],
+    "frame": "{h} : {mm}",
+    "fields": [
+     {
+      "id": "h",
+      "answer": 6
+     },
+     {
+      "id": "mm",
+      "answer": 25,
+      "pad": 2
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "n": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "derive": {
+      "m": "5*n"
+     },
+     "q": "The short hand is just past the {h}. The long hand is on the {n}. Write the time in digits.",
+     "frame": "{h} : {mm}",
+     "answers": {
+      "h": "h",
+      "mm": "m"
+     },
+     "pad": {
+      "mm": 2
+     },
+     "hint": "Count in 5s from the 12 to the long hand.",
+     "steps": [
+      "Count in 5s to the {n}: {m|min}.",
+      "The short hand is just past the {h}.",
+      "The time is {h} : {m|mm}."
+     ]
+    }
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "choice",
+    "q": "Mei leaves at 6:15. Ben leaves at 6:40. Who leaves first?",
+    "options": [
+     "Mei",
+     "Ben"
+    ],
+    "answer": "Mei",
+    "hint": "Both are the same hour. Which has fewer minutes?",
+    "steps": [
+     "The hour is 6 for both.",
+     "15 minutes is less than 40 minutes.",
+     "Mei leaves first."
+    ],
+    "slips": [
+     {
+      "a": [
+       "Ben"
+      ],
+      "say": "40 is more than 15, so 6:40 is later. Who has the earlier time?"
+     }
+    ]
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "choice",
+    "q": "Mei has 9 stickers. Ali has 5 stickers. Which sentence finds how many more stickers Mei has than Ali?",
+    "options": [
+     "9 - 5",
+     "9 + 5",
+     "5 - 9",
+     "9 + 9"
+    ],
+    "answer": "9 - 5",
+    "hint": "Mei's strip is longer. The gap is the long strip take away the short strip.",
+    "steps": [
+     "Mei has more, so her strip is longer.",
+     "How many more is the gap: the long strip take away the short strip.",
+     "9 - 5 finds the gap."
+    ],
+    "slips": [
+     {
+      "a": [
+       "9 + 5"
+      ],
+      "say": "9 + 5 joins the strips. How many more asks for the gap."
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "number",
+    "q": "Siti has 10 beads. Jamie has 4 more beads than Siti. How many beads do they have altogether?",
+    "answer": 24,
+    "hint": "Find Jamie's beads first. Then join the two strips.",
+    "steps": [
+     "Jamie has Siti's 10 beads and 4 more: 14.",
+     "Join the strips: 10 + 14.",
+     "They have 24 beads altogether."
+    ],
+    "slips": [
+     {
+      "a": [
+       14
+      ],
+      "say": "14 is only Jamie's beads. Altogether means both strips joined."
+     },
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is how many more Jamie has. Altogether is the whole line of strips."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       10,
+       12,
+       15,
+       20,
+       25
+      ],
+      "d": [
+       4,
+       5,
+       6,
+       8
+      ]
+     },
+     "q": "Siti has {a} beads. Jamie has {d} more beads than Siti. How many beads do they have altogether?",
+     "answer": "2*a+d",
+     "hint": "Find Jamie's beads first. Then join the two strips.",
+     "steps": [
+      "Jamie has Siti's {a} beads and {d} more.",
+      "Join the strips: Siti's {a} and Jamie's beads.",
+      "They have {ans} beads altogether."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "fields",
+    "q": "What time is it?",
+    "easier": "c1",
+    "hint": "Count in 5s. The short hand has not reached the next number.",
+    "steps": [
+     "Count in 5s from the 12 to the long hand.",
+     "The short hand is close to the next number but has not reached it.",
+     "The time is {h} : {mm}."
+    ],
+    "slips": [],
+    "frame": "{h} : {mm}",
+    "fields": [
+     {
+      "id": "h",
+      "answer": 8
+     },
+     {
+      "id": "mm",
+      "answer": 55,
+      "pad": 2
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": "{m}"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 8,
+     "m": 55
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "m": [
+       50,
+       55
+      ]
+     },
+     "q": "What time is it?",
+     "frame": "{h} : {mm}",
+     "answers": {
+      "h": "h",
+      "mm": "m"
+     },
+     "pad": {
+      "mm": 2
+     },
+     "hint": "Count in 5s. The short hand has not reached the next number.",
+     "steps": [
+      "Count in 5s from the 12 to the long hand: {m|min}.",
+      "The short hand has not reached the next number, so the hour is still {h}.",
+      "The time is {h} : {m|mm}."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "A child says this clock shows 4:50. Is the child correct?",
+    "easier": "c2",
+    "options": [
+     "yes",
+     "no"
+    ],
+    "answer": "no",
+    "hint": "Count in 5s for the long hand. Has the short hand reached the 4?",
+    "steps": [
+     "The long hand shows 50 minutes.",
+     "The short hand has not reached the 4.",
+     "So the child is not correct."
+    ],
+    "slips": [
+     {
+      "a": [
+       "yes"
+      ],
+      "say": "The short hand is near the 4 but has not reached it. What is the hour?"
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 50
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 50
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "k": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "n": "h+k"
+     },
+     "q": "A child says this clock shows {n}:50. Is the child correct?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "k",
+     "hint": "Count in 5s for the long hand. Has the short hand reached the next number?",
+     "steps": [
+      "The long hand shows 50 minutes.",
+      "The short hand is near the next number but has not reached it, so the hour is {h}.",
+      "The answer is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A show starts at 3:10 and ends at 3:55. How many minutes does it last?",
+    "easier": "c2",
+    "answer": 45,
+    "hint": "Both times are in the same hour. Take the start minutes away from the end minutes.",
+    "steps": [
+     "The hour is the same, 3.",
+     "55 minutes take away 10 minutes is 45 minutes.",
+     "The show lasts 45 minutes."
+    ],
+    "slips": [
+     {
+      "a": [
+       55
+      ],
+      "say": "55 is when the show ends, not how long it lasts."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       5,
+       10,
+       15,
+       20,
+       25
+      ],
+      "b": [
+       35,
+       40,
+       45,
+       50,
+       55
+      ]
+     },
+     "q": "A show starts at 3:{a|mm} and ends at 3:{b|mm}. How many minutes does it last?",
+     "answer": "b-a",
+     "hint": "Both times are in the same hour. Take the start minutes away from the end minutes.",
+     "steps": [
+      "The hour is the same, 3.",
+      "{b} minutes take away {a} minutes is {ans} minutes.",
+      "The show lasts {ans} minutes."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Mi starts to swim at 3:10 and stops at 4:05. How many minutes does Mi swim?",
+    "easier": "t3",
+    "answer": 55,
+    "hint": "Go to the next hour first. Then add the minutes after it.",
+    "steps": [
+     "3:10 to 4:00 is 50 minutes.",
+     "4:00 to 4:05 is 5 minutes.",
+     "50 + 5 = 55 minutes."
+    ],
+    "slips": [
+     {
+      "a": [
+       95
+      ],
+      "say": "Go to 4:00 first. How many minutes is that from 3:10?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       10,
+       15,
+       20,
+       40,
+       45,
+       50,
+       55
+      ],
+      "b": [
+       5,
+       10,
+       15,
+       20
+      ]
+     },
+     "derive": {
+      "s": "60-a"
+     },
+     "q": "Mi starts to swim at 3:{a} and stops at 4:{b|mm}. How many minutes does Mi swim?",
+     "answer": "s+b",
+     "hint": "Go to the next hour first. Then add the minutes after it.",
+     "steps": [
+      "3:{a} to 4:00 is {s} minutes.",
+      "4:00 to 4:{b|mm} is {b} minutes.",
+      "{s} + {b} = {ans} minutes."
+     ]
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Ali reads from 5:35 to 6:20. Mei reads from 6:05 to 6:55. How many minutes longer does Mei read?",
+    "easier": "t3",
+    "answer": 5,
+    "hint": "Find how long each child reads. Then find the gap.",
+    "steps": [
+     "Ali: 5:35 to 6:00 is 25 minutes, then 20 more: 45 minutes.",
+     "Mei: 6:05 to 6:55 is 50 minutes.",
+     "50 - 45 = 5 minutes longer."
+    ],
+    "slips": [
+     {
+      "a": [
+       50
+      ],
+      "say": "50 is how long Mei reads. How much longer than Ali?"
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make your own Chunk the Gap puzzle. Choose a start time and an end time in the next hour. Ask a grown-up how many minutes. Many answers are right.",
+    "easier": "c1",
+    "hint": "Start with a time like 3:40. Then choose an end time after 4:00.",
+    "steps": [
+     "Choose a start time such as 3:40.",
+     "Choose an end time such as 4:10.",
+     "Ask a grown-up: go to 4:00 first, then add the rest."
+    ],
+    "slips": []
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 42, use one menu activity then.",
+   "A few children ahead: a few children may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask \"How do you know?\" and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Clock hunt",
+    "minutes": 4,
+    "tutor": "Find a clock or a watch at home. Read the minutes in 5s. What time is it? Is it am or pm?",
+    "rec": "Recording: pause. Find a clock at home. Count the minutes in 5s and say the time.",
+    "answer": "Any clock will do. Check: count in 5s from the 12 to the long hand; the short hand names the hour; the time of day tells am or pm."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Set your clock to a time in 5s, such as 6:25. Ask your grown-up what time it is. Then ask them to set a time for you to read.",
+    "rec": "Recording: pause. Set a 5-minute time on your clock and ask a grown-up to read it. Then swap.",
+    "answer": "No single answer. Check the long hand with counting in 5s and check that the short hand has not reached the next number."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend a toy has never read minutes. Show it why the 2 on the clock means 10 minutes, not 2.",
+    "rec": "Recording: pause. Show a toy or a grown-up why the 2 on the clock means 10 minutes.",
+    "answer": "Each number the long hand passes is 5 more minutes: from the 12 to the 2 is 5, then 10."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We learned to read the minutes on a clock. The long hand counts in 5s: the 1 is 5 minutes, the 2 is 10, the 3 is 15. Your child read and wrote times such as 4:10 and 7:25, noticed that the short hand waits at the hour until the long hand has gone all the way round, and chose am or pm for events in a day. Reading and writing 5-minute times is Primary 1 school work.",
+  "words": [
+   "minutes: counted by the long hand, 5 for each number",
+   "colon and two digits: 4:05 (not 4:5)",
+   "am: morning, from the middle of the night to noon",
+   "pm: afternoon and evening, from noon to the middle of the night",
+   "h and min: 1 h 20 min is 1 hour and 20 minutes"
+  ],
+  "try_home": [
+   "Clock talk: at a few times in the day, ask your child to read your clock or a watch in digits, then say am or pm.",
+   "Count in 5s: point the long hand at each number on the cut-out clock and count 5, 10, 15 together. How many minutes is it at the 8?",
+   "Set and swap: you set a time on the cut-out clock, your child reads it. Swap, and make a mistake on purpose for your child to find."
+  ],
+  "ask": [
+   "Which hand counts the minutes?",
+   "How do you know it is not the next hour?",
+   "Is that am or pm?"
+  ],
+  "when_stuck": "Let your child move the hands and count in 5s, and wait 10 seconds before helping. Please do not say 'ten past' or 'quarter to' yet: digits are the main thing. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson, Term 3 Lesson 3: Time Passes. Online practice: your tutor will share the link.",
+  "quote": "The long hand counts the minutes in 5s. The short hand waits at the hour.",
+  "report_line": "Your child is learning to read the minutes on a clock in 5s and to write times such as 4:10. This week: reading 5-minute times and am and pm.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your clock from the first lesson of Term 3 (2 faces and 6 hands), kept in its envelope; a real clock also helps",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The clock hands are loose paper pieces with no pin, so nothing is sharp. A grown-up cuts the kit and the event cards beforehand: nobody cuts during the lesson. Small things stay on the table and never go near the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp.",
+  "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
+  "Never read out a child’s name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child’s page on the recording.",
+  "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program’s business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room. Photos are kept for 90 days after the program ends.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed.",
+  "The gallery shows faces and fingers, not tables or papers. Ask for a finger answer when you need to see something. Answers on three are said quietly with the microphone off; a child who is invited to share switches the microphone on, then off again. The still-stuck photo is of the whole of workbook page 5 (Investigation, exit ticket and look-back)."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself with a real cut-out clock first. Check that no workbook time repeats a time shown in the warm-up, sneak-peek, Explore, mini-lesson or Talk (9:00, 2:30, 3:15, 11:50, 4:10, 7:25, 9:50, 1:05, 6:35, 10:05, 8:55, 2:20, 5:40, 5:50).",
+  "Tell parents a week before: your Term 3 book is at the second lesson; tear out the event cards page along the dashed line and a grown-up cuts out the 8 event cards (the morning and afternoon mat is not cut); keep the clock from the first lesson (2 faces and 6 hands) in its envelope; a ruler for drawing the hands. No printer: draw 8 small cards on paper. Keep the cards in an envelope.",
+  "Have the slides open. Have your own cut-out clock and event cards to show on camera if you wish. Draw nothing under the webcam: the recording cannot show it.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Be plain with families: reading and writing 5-minute times as digits is Primary 1 school work, so we say 4:10 and not 'ten past four' (the school papers write times as digits with am or pm, without full stops). The Chunk the Gap puzzles (Go further) are beyond Primary 1 on purpose: finding a duration in general is Primary 3. Do not call the lesson MOE-aligned. This lesson is a new topic in the plan: ask a tutor to confirm the strand.",
+  "The kit mat prints a.m. and p.m. with full stops while the lesson writes am and pm: tell children they are the same. Slides s-explore1, s-explore2, s-explore3, s-m3 and s-m6 keep the picture or the answer off the screen while you ask: it appears on the slide after. Read every question with its options aloud (S4, S5, T1, T4): the clocks and table on the slides are small."
+ ],
+ "workbook": {
+  "header": "Reading a scale: minutes on the clock",
+  "hint_p1": "Use your clock. Count in 5s from the 12 to the long hand. Write the time with digits.",
+  "hint_p2": "Read every clock first. The minutes always have two digits.",
+  "hint_p3": "Use your clock or draw. Choose any question.",
+  "hint_p4": "Go to the next hour first, then add the rest. Choose any question.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use the cut-out clock or a real clock.",
+  "kits": [
+   {
+    "type": "event_cards",
+    "title": "Kit page: event cards",
+    "events": [
+     [
+      "sun",
+      "wake up"
+     ],
+     [
+      "cup",
+      "have breakfast"
+     ],
+     [
+      "bus",
+      "go to school"
+     ],
+     [
+      "apple",
+      "morning break"
+     ],
+     [
+      "house",
+      "come home"
+     ],
+     [
+      "ball",
+      "play ball"
+     ],
+     [
+      "bath",
+      "have a bath"
+     ],
+     [
+      "bed",
+      "go to bed"
+     ]
+    ],
+    "intro": "A grown-up cuts out the 8 event cards before the lesson: four morning events and four afternoon or evening events. The morning and afternoon mat is not cut. Keep the cards in an envelope. The mat says a.m. and p.m., the same as am and pm."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Chunk the Gap",
+  "where": [
+   "G1",
+   "G2",
+   "G3"
+  ],
+  "text": "How many minutes between two times when the end is in the next hour: go to the next hour first, then add the rest (3:10 to 4:05 is 50 + 5 = 55; 2:45 to 3:20 is 15 + 20 = 35; compare two readers). Level note: finding a duration in general is Primary 3 (p. 36, Time 2.2); 1 h 20 min as hours and minutes is Primary 2 conversion only in the other direction and is read, not converted, here.",
+  "parent": "The Go further page has Chunk the Gap puzzles (how many minutes from 3:10 to 4:05?). Finding how long something lasts is not part of Primary 1; it is on the page for children who enjoy a puzzle."
+ }
+}
