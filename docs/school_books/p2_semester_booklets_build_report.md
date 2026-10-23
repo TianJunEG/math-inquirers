@@ -57,3 +57,7 @@ Page table (code, title, stars, check): see `school/p2/README.md` and the plan, 
 - Whether Semester 1 should carry fractions (some schools teach them in Term 4); the plan puts them in Semester 1 and the notes say to hand out any page when the topic has been taught.
 - The terms "like fractions" and "unit fractions" appear on P2-21 because the syllabus uses them.
 - Coin and note art comparison with real money (decision D1 in `docs/school_books/coin_reproduction_check.md` stays open).
+
+## Final state
+
+`school/p2/validate.py` (full, 40 pages): 747 checks, 0 failed (about 10 minutes). Page counts: pupil booklets 20 and 20, front matter 5 and 5, complete packs 25 and 25, answer keys as printed in `out/` (see `pdfinfo`). Committed: the PDFs, `verification.json`, `validation_report.txt`; not committed: `out/*.html`, `out/bilevel_check/`.
