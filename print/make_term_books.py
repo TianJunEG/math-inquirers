@@ -25,7 +25,9 @@ from reportlab.lib.utils import ImageReader
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'outputs', 'print', 'term')
-MASCOT = os.path.join(ROOT, 'mascot', 'mi_dolphin_transparent.png')
+MASCOT = os.path.join(ROOT, 'mascot', 'mi_dolphin_nocalc_transparent.png')   # owner-supplied Mi without the calculator
+if not os.path.exists(MASCOT):
+    MASCOT = os.path.join(ROOT, 'mascot', 'mi_dolphin_transparent.png')
 GUTTER_MM = 12.0
 TEAL, GOLD, INK = HexColor('#1B5E5A'), HexColor('#F2B705'), HexColor('#222222')
 KINDS = {  # kind: (file suffix, label, recto-start, kit pages tear-out)
