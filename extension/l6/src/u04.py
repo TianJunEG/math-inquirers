@@ -54,7 +54,7 @@ I.append(IT(U, 'S', 3, 1,
                    P('b', 'IN 10:  P gives {b}  and Q gives {b}.', [26, 32], '26, 32'),
                    P('c', 'Do P and Q give the same OUT?   {circ:Yes|No}', ['No'])]))
 I.append(IT(U, 'S', 4, 1,
-            'A machine does two steps. Look at the first IN and OUT.',
+            'A machine does 2 steps. Look at the first IN and OUT.',
             f'IN 5 times 3 is 15, so the middle box is 15. 15 + 4 = 19, so the last step is add 4. IN 9: 9 {X} 3 = 27, then 27 + 4 = 31.',
             fig={'type': 'l6_machine', 'chain': ['5', f'{X} 3', '', '+ ?', '19']},
             parts=[P('a', 'The middle box is {b}.', [15]),
@@ -89,10 +89,10 @@ I.append(IT(U, 'S', 7, 2,
                    P('d', 'It says {b}.', [11])],
             figside=True))
 I.append(IT(U, 'S', 8, 3,
-            'Ali has n stickers. Mei has 5 more than Ali. Wei has 3 times as many as Ali.',
-            f'Mei has n + 5 and Wei has 3 {X} n. When n = 8: Mei has 13, Wei has 24, and all 3 together have 8 + 13 + 24 = 45. '
+            'Siti has n marbles. Kumar has 5 marbles more. Jenny has 3 times as many marbles as Siti.',
+            f'Kumar has n + 5 and Jenny has 3 {X} n. When n = 8: Kumar has 13, Jenny has 24, and all 3 together have 8 + 13 + 24 = 45. '
             f'In general n + (n + 5) + 3n = 5n + 5.',
-            parts=[P('a', 'When n = 8, Mei has {b} and Wei has {b}.', [13, 24], '13, 24'),
+            parts=[P('a', 'When n = 8, Kumar has {b} and Jenny has {b}.', [13, 24], '13, 24'),
                    P('b', 'When n = 8, all 3 together have {b} stickers.', [45]),
                    P('c', f'All 3 together have {{b}} {X} n + {{b}} stickers.', [5, 5], '5, 5')]))
 I.append(IT(U, 'S', 9, 3,
@@ -102,7 +102,7 @@ I.append(IT(U, 'S', 9, 3,
                    P('b', f'The cost is {{b}} {X} n + {{b}} dollars.', [3, 12], '3, 12'),
                    P('c', 'With 60 dollars you can buy {b} extra GB.', [16])]))
 I.append(IT(U, 'S', 10, 3,
-            'Think of a number. Add 4. Multiply by 3. Take away 9. Divide by 3. Take away the number you first thought of.',
+            'Pick a number. Add 4. Multiply by 3. Subtract 9. Divide by 3. Subtract the number you picked.',
             f'Start with 7: 11, 33, 24, 8, then 8 {M} 7 = 1. Start with 12: 16, 48, 39, 13, then 13 {M} 12 = 1. With n the steps give n + 4, 3n + 12, 3n + 3, n + 1, and n + 1 {M} n = 1. '
             f'The answer is always 1.',
             parts=[P('a', 'Start with 7. You get {b}.', [1]),
@@ -137,9 +137,9 @@ I.append(IT(U, 'T', 2, 4,
             parts=[P('a', f'Together: {{b}} {X} n + {{b}} = 64', [5, 4], '5, 4'),
                    P('b', 'Ali is {b} years old.', [12]),
                    P('c', 'Their mother is {b} years old.', [36])],
-            hint='Add up the n boxes first. Then add the extra 4.', figside=True))
+            hint='Add up the n boxes first. Then add the extra 4.', figright=True, partsrow=True))
 I.append(IT(U, 'T', 3, 4,
-            f'A machine does {X} a number, then + or {M} a number. IN 3 gives OUT 13. IN 8 gives OUT 38.',
+            f'A machine multiplies IN by a whole number, then adds or subtracts a whole number. IN 3 gives OUT 13 and IN 8 gives OUT 38.',
             f'IN goes up 5 (3 to 8) and OUT goes up 25 (13 to 38), so the {X} part is 25 ÷ 5 = 5. 5 {X} 3 = 15, but OUT is 13, so take away 2: OUT = 5n {M} 2. '
             f'For OUT 98: 5n = 100 and n = 20.',
             parts=[P('a', 'When IN goes up by 5, OUT goes up by {b}.', [25]),
@@ -153,18 +153,17 @@ I.append(IT(U, 'G', 1, 5,
             f'IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 on B for every 1 that IN goes up (4 {M} 2 = 2). B\'s lead of 8 is gone after 4 more steps, at IN 6. '
             f'Both give 25: 4 {X} 6 + 1 = 25 and 2 {X} 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.',
             parts=[P('a', 'IN 2: A gives {b} and B gives {b}.', [9, 17], '9, 17'),
-                   P('b', 'The OUT numbers are the same when IN is {b}.', [6]),
-                   P('c', 'That OUT is {b}.', [25])],
-            hint='Make a table of IN, A and B. Look at how the gap changes.', space={'table': {'cols': ['IN', 'A', 'B'], 'rows': 3}}))
+                   P('b', 'A and B give the same OUT when IN is {b}. That OUT is {b}.', [6, 25], '6, 25')],
+            hint='Make a table of IN, A and B. Look at how the gap changes.', space={'table': {'cols': ['IN', 'A', 'B'], 'rows': 4}}))
 I.append(IT(U, 'G', 2, 5,
             'Call the smallest number n.',
             f'(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so 4n = 124 and n = 31 (31, 32, 33, 34). '
             f'(b) Odd numbers go up by 2: n + (n + 2) + (n + 4) + (n + 6) + (n + 8) = 5n + 20 = 125, so n = 21. '
             f'(c) 4n + 6 = 100 gives 4n = 94 and n = 23.5, which is not a whole number: No.',
-            parts=[P('a', '4 whole numbers in a row add up to 130. The smallest is {b}.', [31]),
-                   P('b', '5 odd numbers in a row add up to 125. The smallest is {b}.', [21]),
-                   P('c', 'Can 4 whole numbers in a row add up to 100?   {circ:Yes|No}', ['No'])],
-            hint='Write each number with n. Add them up.', space={'rows': ['Working:', '']}))
+            parts=[P('a', '4 whole numbers that follow each other make a total of 130. The smallest is {b}.', [31]),
+                   P('b', '5 odd numbers that follow each other make a total of 125. The smallest is {b}.', [21]),
+                   P('c', 'Can 4 whole numbers that follow each other make a total of 100?   {circ:Yes|No}', ['No'])],
+            hint='Write each number with n. Add them up.', space={'rows': ['Working:']}))
 I.append(IT(U, 'G', 3, 5,
             f'A search program tries n = 0, 1, 2, ... It stops when 7n {M} 3 is greater than 120.',
             f'7n {M} 3 > 120 needs 7n > 123, so n > 17.57: n = 18 gives 123. It says 18, and OUT is 123. If 120 changes to 123, then 123 is not greater than 123, so it keeps going to n = 19.',
@@ -192,5 +191,5 @@ I.append(IT(U, 'C', 4, 6,
             f'n + (n + 4) = 2n + 4 = 30. So 2n = 26 and n = 13. Check: 13 + 17 = 30.',
             answer=A([13], '13')))
 
-write_unit(4, 'Algebra machines', 'Rules with a letter and simple equations',
+write_unit(4, 'Algebra machines', 'Machines and equations',
            'I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.', learn, I)

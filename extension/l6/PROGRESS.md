@@ -11,7 +11,7 @@ Per-unit status (G = gates: answers checked, wording lint, dup gate, build, page
 | 1 | Code the pattern | done, gates pass, viewed |
 | 2 | Prime hunters | done, gates pass, viewed |
 | 3 | Below zero | done, gates pass, viewed |
-| 4 | Algebra machines | not started |
+| 4 | Algebra machines | done, gates pass, viewed |
 | 5 | Every possible way | not started |
 | 6 | Fair or unfair? | not started |
 | 7 | Turtle geometry | not started |

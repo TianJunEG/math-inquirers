@@ -4,7 +4,7 @@
  "unit": 4,
  "id": "L6U04",
  "title": "Algebra machines",
- "topic": "Rules with a letter and simple equations",
+ "topic": "Machines and equations",
  "holiday_lesson": 4,
  "goal": "I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.",
  "learn": {
@@ -207,7 +207,7 @@
   {
    "id": "L6U04-S04",
    "tier": "start",
-   "text": "A machine does two steps. Look at the first IN and OUT.",
+   "text": "A machine does 2 steps. Look at the first IN and OUT.",
    "page": 1,
    "parts": [
     {
@@ -432,12 +432,12 @@
   {
    "id": "L6U04-S08",
    "tier": "start",
-   "text": "Ali has n stickers. Mei has 5 more than Ali. Wei has 3 times as many as Ali.",
+   "text": "Siti has n marbles. Kumar has 5 marbles more. Jenny has 3 times as many marbles as Siti.",
    "page": 2,
    "parts": [
     {
      "label": "a",
-     "text": "When n = 8, Mei has {b} and Wei has {b}.",
+     "text": "When n = 8, Kumar has {b} and Jenny has {b}.",
      "answer": {
       "value": [
        "13",
@@ -468,7 +468,7 @@
      }
     }
    ],
-   "explanation": "Mei has n + 5 and Wei has 3 × n. When n = 8: Mei has 13, Wei has 24, and all 3 together have 8 + 13 + 24 = 45. In general n + (n + 5) + 3n = 5n + 5."
+   "explanation": "Kumar has n + 5 and Jenny has 3 × n. When n = 8: Kumar has 13, Jenny has 24, and all 3 together have 8 + 13 + 24 = 45. In general n + (n + 5) + 3n = 5n + 5."
   },
   {
    "id": "L6U04-S05",
@@ -568,7 +568,7 @@
   {
    "id": "L6U04-S10",
    "tier": "start",
-   "text": "Think of a number. Add 4. Multiply by 3. Take away 9. Divide by 3. Take away the number you first thought of.",
+   "text": "Pick a number. Add 4. Multiply by 3. Subtract 9. Divide by 3. Subtract the number you picked.",
    "page": 3,
    "parts": [
     {
@@ -810,12 +810,13 @@
    },
    "hint": "Add up the n boxes first. Then add the extra 4.",
    "explanation": "Ali n, brother n + 4, mother 3n. Together: n + (n + 4) + 3n = 5n + 4 = 64. So 5n = 60 and n = 12. Ali is 12, his brother is 16 and their mother is 36. Check: 12 + 16 + 36 = 64.",
-   "figside": true
+   "figright": true,
+   "partsrow": true
   },
   {
    "id": "L6U04-T03",
    "tier": "think",
-   "text": "A machine does × a number, then + or − a number. IN 3 gives OUT 13. IN 8 gives OUT 38.",
+   "text": "A machine multiplies IN by a whole number, then adds or subtracts a whole number. IN 3 gives OUT 13 and IN 8 gives OUT 38.",
    "page": 4,
    "parts": [
     {
@@ -878,22 +879,13 @@
     },
     {
      "label": "b",
-     "text": "The OUT numbers are the same when IN is {b}.",
+     "text": "A and B give the same OUT when IN is {b}. That OUT is {b}.",
      "answer": {
       "value": [
-       "6"
-      ],
-      "text": "6"
-     }
-    },
-    {
-     "label": "c",
-     "text": "That OUT is {b}.",
-     "answer": {
-      "value": [
+       "6",
        "25"
       ],
-      "text": "25"
+      "text": "6, 25"
      }
     }
    ],
@@ -905,7 +897,7 @@
       "A",
       "B"
      ],
-     "rows": 3
+     "rows": 4
     }
    },
    "explanation": "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 on B for every 1 that IN goes up (4 − 2 = 2). B's lead of 8 is gone after 4 more steps, at IN 6. Both give 25: 4 × 6 + 1 = 25 and 2 × 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12."
@@ -918,7 +910,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "4 whole numbers in a row add up to 130. The smallest is {b}.",
+     "text": "4 whole numbers that follow each other make a total of 130. The smallest is {b}.",
      "answer": {
       "value": [
        "31"
@@ -928,7 +920,7 @@
     },
     {
      "label": "b",
-     "text": "5 odd numbers in a row add up to 125. The smallest is {b}.",
+     "text": "5 odd numbers that follow each other make a total of 125. The smallest is {b}.",
      "answer": {
       "value": [
        "21"
@@ -938,7 +930,7 @@
     },
     {
      "label": "c",
-     "text": "Can 4 whole numbers in a row add up to 100?   {circ:Yes|No}",
+     "text": "Can 4 whole numbers that follow each other make a total of 100?   {circ:Yes|No}",
      "answer": {
       "value": [
        "No"
@@ -950,8 +942,7 @@
    "hint": "Write each number with n. Add them up.",
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "explanation": "(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so 4n = 124 and n = 31 (31, 32, 33, 34). (b) Odd numbers go up by 2: n + (n + 2) + (n + 4) + (n + 6) + (n + 8) = 5n + 20 = 125, so n = 21. (c) 4n + 6 = 100 gives 4n = 94 and n = 23.5, which is not a whole number: No."
