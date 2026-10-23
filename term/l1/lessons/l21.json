@@ -2579,14 +2579,14 @@
      "h": 6,
      "m": 0,
      "digital": "[]",
-     "size": 80
+     "size": 62
     },
     {
      "type": "clock",
      "h": 6,
      "m": 30,
      "digital": "[]",
-     "size": 80
+     "size": 62
     }
    ]
   },
@@ -2616,7 +2616,7 @@
     "m": 30,
     "hide_hands": true,
     "digital": "5:30",
-    "size": 70
+    "size": 58
    }
   },
   {
