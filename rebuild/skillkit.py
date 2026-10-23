@@ -50,7 +50,7 @@ def iso(heights, s=44, walls=False, label='Stack of cubes', pad=14):
     walls=True draws a floor and two walls behind (a room corner): wall A on the i=0 side, wall B on the j=0 side."""
     ni = len(heights); nj = len(heights[0]); H = max(max(r) for r in heights)
     c = s * 0.866; hh = s * 0.5
-    wallh = H + (1 if walls else 0)
+    wallh = H + (2 if walls else 0)
     # origin so that everything fits
     minx = -nj * c; maxx = ni * c
     miny = -wallh * s if walls else -H * s
@@ -64,9 +64,9 @@ def iso(heights, s=44, walls=False, label='Stack of cubes', pad=14):
         out += f'<polygon points="{pts([P(0,0,0),P(0,nj,0),P(ni,nj,0),P(ni,0,0)])}" fill="#F4E9C8" stroke="{NAVY}" stroke-width="3"/>'
         out += f'<polygon points="{pts([P(0,0,0),P(0,nj,0),P(0,nj,wallh),P(0,0,wallh)])}" fill="#CFE3F5" stroke="{NAVY}" stroke-width="3"/>'
         out += f'<polygon points="{pts([P(0,0,0),P(ni,0,0),P(ni,0,wallh),P(0,0,wallh)])}" fill="#E1ECF8" stroke="{NAVY}" stroke-width="3"/>'
-        lx, ly = P(0, nj * 0.5, wallh * 0.85); rx, ry = P(ni * 0.5, 0, wallh * 0.85)
-        out += f'<text x="{lx:.0f}" y="{ly:.0f}" font-size="22" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">left wall</text>'
-        out += f'<text x="{rx:.0f}" y="{ry:.0f}" font-size="22" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="Nunito Sans, Arial">right wall</text>'
+        lx, ly = P(0, nj, wallh - 0.8); rx, ry = P(ni, 0, wallh - 0.8)
+        out += f'<text x="{lx+8:.0f}" y="{ly:.0f}" font-size="20" font-weight="800" text-anchor="start" fill="{TEAL}" font-family="Nunito Sans, Arial">left wall</text>'
+        out += f'<text x="{rx-8:.0f}" y="{ry:.0f}" font-size="20" font-weight="800" text-anchor="end" fill="{TEAL}" font-family="Nunito Sans, Arial">right wall</text>'
     cubes = [(i, j, k) for i in range(ni) for j in range(nj) for k in range(heights[i][j])]
     cubes.sort(key=lambda t: (t[0] + t[1], t[2], t[0]))
     for i, j, k in cubes:
