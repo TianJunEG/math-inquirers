@@ -400,7 +400,7 @@
     },
     {
      "label": "b",
-     "text": "Ben has {b} coin of 10¢ and {b} coins of 20¢.",
+     "text": "Ben has {b} coins of 10¢ and {b} coins of 20¢.",
      "answer": {
       "value": [
        "1",
@@ -470,7 +470,7 @@
    "id": "L2U10-S08",
    "tier": "start",
    "page": 3,
-   "text": "Mei cuts a pizza into 6 equal slices. She eats 1/6 and Ali eats 2/6. Each slice is 100 g.",
+   "text": "Mei cuts a pizza into 6 equal slices. She eats 1/6 and Ali eats 2/6. Each slice is 100 g. Write fractions in sixths.",
    "parts": [
     {
      "label": "a",
@@ -914,7 +914,7 @@
   {
    "id": "L2U10-C04",
    "tier": "quiz",
-   "text": "A pizza has 12 slices. 5/12 is eaten. What fraction is left? {b}",
+   "text": "A pizza has 12 slices. 5/12 is eaten. What is left, in twelfths? {b}",
    "answer": {
     "value": [
      "7/12"

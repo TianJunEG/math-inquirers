@@ -299,7 +299,7 @@
     },
     {
      "label": "b",
-     "text": "The way with exactly 4 pieces has {b} $2 notes and {b} $1 coin.",
+     "text": "The way with exactly 4 pieces has {b} $2 notes and {b} $1 coins.",
      "answer": {
       "value": [
        "3",
@@ -520,7 +520,7 @@
      "20",
      "5"
     ],
-    "text": "50¢ + 20¢ + 20¢ + 5¢",
+    "text": "50¢ + 20¢ + 20¢ + 5¢ (any order)",
     "unordered": true
    },
    "explanation": "Start with 50¢. 45¢ is left for 3 coins. 20¢ + 20¢ = 40¢, and 5¢ makes 45¢. Check: 50 + 20 + 20 + 5 = 95. No other 4 coins make 95¢."

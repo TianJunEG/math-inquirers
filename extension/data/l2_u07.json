@@ -21,7 +21,7 @@
       "w": 400
      }
     ],
-    "width_mm": 96
+    "width_mm": 60
    },
    "side": false,
    "steps": [
@@ -32,6 +32,33 @@
    ],
    "answer": "He ate 3/8. 5/8 is left."
   },
+  "example2": {
+   "problem": "The number line goes from 0 to 1 in 4 equal steps. What fraction does the arrow show?",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "line",
+      "n": 4,
+      "arrows": [
+       {
+        "k": 3,
+        "label": "?"
+       }
+      ],
+      "w": 320
+     }
+    ],
+    "width_mm": 62
+   },
+   "steps": [
+    "Each step is 1/4.",
+    "The arrow is 3 steps from 0: 3/4."
+   ],
+   "answer": "The arrow shows 3/4."
+  },
+  "pair": true,
+  "tight": true,
   "howto": {
    "title": "How to name a fraction",
    "steps": [
@@ -782,7 +809,7 @@
    "id": "L2U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond: equal fractions. Different fractions can cover the same length. 1/2 and 2/4 and 4/8 are equal.",
+   "text": "Equal fractions. Different fractions can cover the same length. 1/2 and 2/4 and 4/8 are equal.",
    "parts": [
     {
      "label": "a",
@@ -963,7 +990,7 @@
   {
    "id": "L2U07-C04",
    "tier": "quiz",
-   "text": "A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. How much is left? {b}",
+   "text": "A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. What is left, in twelfths? {b}",
    "answer": {
     "value": [
      "4/12"

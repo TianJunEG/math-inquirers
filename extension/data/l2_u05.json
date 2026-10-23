@@ -315,7 +315,7 @@
        "8",
        "10"
       ],
-      "text": "11, 23, 8, 10",
+      "text": "11 and 23 in the OUT row, 8 and 10 in the IN row",
       "list": true
      }
     }
@@ -326,18 +326,18 @@
    "id": "L2U05-S06",
    "tier": "start",
    "page": 2,
-   "text": "A machine multiplies by one number and then adds another. IN 3 gives OUT 11. IN 6 gives OUT 17.",
+   "text": "A fair machine gives stickers for tokens. Each token gives the same number of stickers, plus a bonus. 3 tokens give 11 stickers. 6 tokens give 17.",
    "figure": {
     "type": "l2_table",
     "cols": [
-     "IN",
+     "Tokens",
      "3",
      "6",
      "10"
     ],
     "rows": [
      [
-      "OUT",
+      "Stickers",
       "11",
       "17",
       null
@@ -355,7 +355,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The machine multiplies by   {circ:2|3|4}",
+     "text": "Each token gives   {circ:2|3|4}   stickers.",
      "answer": {
       "value": [
        "2"
@@ -365,7 +365,7 @@
     },
     {
      "label": "b",
-     "text": "Then it adds {b}",
+     "text": "The bonus is {b} stickers.",
      "answer": {
       "value": [
        "5"
@@ -375,7 +375,7 @@
     },
     {
      "label": "c",
-     "text": "IN 10 gives OUT {b}",
+     "text": "10 tokens give {b} stickers.",
      "answer": {
       "value": [
        "25"
@@ -384,7 +384,7 @@
      }
     }
    ],
-   "explanation": "Try × 2 on IN 3: 6, and 11 - 6 = 5, so + 5. Test IN 6: 12 + 5 = 17. It fits. × 3 and × 4 do not fit both numbers. IN 10: 10 × 2 = 20, 20 + 5 = 25."
+   "explanation": "Try 2 stickers a token: 3 tokens give 6, and 11 - 6 = 5 is the bonus. Test 6 tokens: 12 + 5 = 17. It fits. 3 and 4 a token do not fit both. 10 tokens: 20 + 5 = 25."
   },
   {
    "id": "L2U05-S07",
@@ -909,20 +909,44 @@
    "id": "L2U05-G04",
    "tier": "go",
    "page": 5,
-   "text": "A machine does + 5, then × 2. Ravi puts a number in. Then he puts the OUT straight back in. The final OUT is 70. Which number went in first? {b}",
-   "answer": {
-    "value": [
-     "10"
+   "text": "Machine A does × 2, then + 3. Machine B does - 5, then × 3. A number goes into A. The OUT of A goes into B. The final OUT is 36.",
+   "figure": {
+    "type": "l2_machine",
+    "steps": [
+     "?",
+     "× 2",
+     "+ 3",
+     "- 5",
+     "× 3",
+     "36"
     ],
-    "text": "10"
+    "width_mm": 150
    },
-   "explanation": "Undo the second run: 70 ÷ 2 = 35, 35 - 5 = 30. So the first OUT was 30. Undo the first run: 30 ÷ 2 = 15, 15 - 5 = 10. Check: 10 + 5 = 15, × 2 = 30; 30 + 5 = 35, × 2 = 70.",
-   "hint": "Work backwards twice. Undo × 2 first each time.",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   }
+   "parts": [
+    {
+     "label": "a",
+     "text": "The OUT of machine A was {b}",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number that went into A was {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "Undo B: 36 ÷ 3 = 12, then 12 + 5 = 17. That is the OUT of A. Undo A: 17 - 3 = 14, then 14 ÷ 2 = 7. Check: 7 → 14 → 17 → 12 → 36.",
+   "hint": "Undo machine B first. Then undo machine A.",
+   "figside": false
   },
   {
    "id": "L2U05-C01",
@@ -951,14 +975,14 @@
   {
    "id": "L2U05-C03",
    "tier": "quiz",
-   "text": "A machine does × 5, then - 3. The OUT is 32. What went IN? {b}",
+   "text": "Kumar doubles his number, then adds 9. He gets 25. His number: {b}",
    "answer": {
     "value": [
-     "7"
+     "8"
     ],
-    "text": "7"
+    "text": "8"
    },
-   "explanation": "32 + 3 = 35, then 35 ÷ 5 = 7. Check: 7 × 5 = 35, 35 - 3 = 32."
+   "explanation": "25 - 9 = 16, then 16 ÷ 2 = 8. Check: 8 × 2 = 16, 16 + 9 = 25."
   },
   {
    "id": "L2U05-C04",

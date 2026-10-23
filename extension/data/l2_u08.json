@@ -8,6 +8,7 @@
  "holiday_lesson": 8,
  "goal": "I can name half circles and quarter circles. I can count shapes and cubes in order. I can use layers to count a stack.",
  "learn": {
+  "tight": true,
   "intro": "Shapes can be put together and taken apart. A half circle has 1 straight side. A quarter circle has 2 straight sides. To count shapes, work in order and count one kind at a time.",
   "example": {
    "problem": "Count every square in this grid, big and small. It has 2 rows and 2 columns.",
@@ -24,9 +25,8 @@
      ]
     ],
     "cell": 80,
-    "width_mm": 50
+    "width_mm": 36
    },
-   "side": true,
    "steps": [
     "Count the small squares first: 4.",
     "Look for larger squares. One square is 2 by 2: the whole grid. That is 1.",
@@ -34,6 +34,33 @@
    ],
    "answer": "5 squares in all."
   },
+  "example2": {
+   "problem": "Count the cubes in this stack. It is 2 cubes deep. The back is like the front.",
+   "figure": {
+    "type": "l2_cubes",
+    "stacks": [
+     {
+      "heights": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ]
+     }
+    ],
+    "width_mm": 36
+   },
+   "steps": [
+    "Count one row: 2 + 1 = 3 cubes.",
+    "The 2 rows are the same: 3 + 3 = 6 cubes."
+   ],
+   "answer": "The stack has 6 cubes."
+  },
+  "pair": true,
   "howto": {
    "title": "How to count shapes",
    "steps": [
@@ -48,7 +75,9 @@
    "lines": [
     "Cube: 6 flat square faces.",
     "Cylinder: 2 flat circles and 1 curved face.",
-    "Cubes in a stack: count layer by layer."
+    "Cone: 1 flat circle and 1 curved face.",
+    "Sphere: no flat face.",
+    "Stacks: count row by row."
    ]
   },
   "try": {
@@ -646,7 +675,7 @@
    "id": "L2U08-T01",
    "tier": "think",
    "page": 4,
-   "text": "Beyond: a net folds up into a solid. Which nets fold up into a cube? Every square must become a different face.",
+   "text": "A net folds up into a solid. Which nets fold into a cube? Each square must be a new face.",
    "figure": {
     "type": "l2_nets",
     "nets": [
@@ -812,7 +841,7 @@
     }
    ],
    "explanation": "A is a cross and B is a staircase of 3 pairs: both fold into a cube. C has a row of 5 squares: the 5th lands on the 1st face. D has a 2 by 2 block: 4 squares cannot all be different faces. So C and D do not fold.",
-   "hint": "A line of 5 squares cannot fold into a cube.",
+   "hint": "Fold in your head. Where does each square land?",
    "beyond": "Cube nets",
    "partsrow": true
   },
@@ -820,7 +849,7 @@
    "id": "L2U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Count the rectangles in a row of 4 squares. A square is a rectangle too.",
+   "text": "A strip has 5 stamps in a row. Mei tears off 1 or more stamps that touch.",
    "figure": {
     "type": "l2_grid",
     "values": [
@@ -828,16 +857,27 @@
       "",
       "",
       "",
+      "",
       ""
      ]
     ],
-    "cell": 76,
+    "cell": 70,
     "width_mm": 52
    },
    "parts": [
     {
      "label": "a",
-     "text": "1 square long: {b}",
+     "text": "Pieces of 1 stamp: {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Pieces of 2 stamps: {b}",
      "answer": {
       "value": [
        "4"
@@ -846,8 +886,8 @@
      }
     },
     {
-     "label": "b",
-     "text": "2 squares long: {b}",
+     "label": "c",
+     "text": "Pieces of 3 stamps: {b}",
      "answer": {
       "value": [
        "3"
@@ -856,29 +896,19 @@
      }
     },
     {
-     "label": "c",
-     "text": "3 squares long: {b}",
-     "answer": {
-      "value": [
-       "2"
-      ],
-      "text": "2"
-     }
-    },
-    {
      "label": "d",
-     "text": "4 squares long: {b}   All: {b}",
+     "text": "Pieces of 4 or 5 stamps: {b}   All the pieces: {b}",
      "answer": {
       "value": [
-       "1",
-       "10"
+       "3",
+       "15"
       ],
-      "text": "1 and 10 in all"
+      "text": "3 and 15 in all"
      }
     }
    ],
-   "explanation": "1 square long: 4. 2 squares long: they start at square 1, 2 or 3, so 3. 3 squares long: they start at square 1 or 2, so 2. 4 squares long: 1. Total: 4 + 3 + 2 + 1 = 10.",
-   "hint": "A rectangle 2 squares long can start in 3 places.",
+   "explanation": "1 stamp: 5 pieces. 2 stamps: they start at stamp 1, 2, 3 or 4, so 4. 3 stamps: 3. 4 stamps: 2. 5 stamps: 1. So 4 or 5 stamps: 2 + 1 = 3. All the pieces: 5 + 4 + 3 + 2 + 1 = 15.",
+   "hint": "A piece of 2 stamps can start at stamp 1, 2, 3 or 4.",
    "partsrow": true
   },
   {
@@ -933,32 +963,42 @@
    "id": "L2U08-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond: a pyramid of cubes has 5 layers. The top layer is 1 by 1, then 2 by 2, then 3 by 3, then 4 by 4. The bottom layer is 5 by 5.",
+   "text": "A shop stacks cans in a triangle. The top row has 1 can, the next row has 2 cans, then 3 cans, and so on.",
    "parts": [
     {
      "label": "a",
-     "text": "The bottom layer has {b} cubes.",
+     "text": "6 rows: the bottom row has {b} cans.",
      "answer": {
       "value": [
-       "25"
+       "6"
       ],
-      "text": "25"
+      "text": "6"
      }
     },
     {
      "label": "b",
-     "text": "The pyramid has {b} cubes.",
+     "text": "6 rows: {b} cans in all.",
      "answer": {
       "value": [
-       "55"
+       "21"
       ],
-      "text": "55"
+      "text": "21"
+     }
+    },
+    {
+     "label": "c",
+     "text": "8 rows: {b} cans in all.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
      }
     }
    ],
-   "explanation": "(a) 5 by 5 = 25 cubes. (b) 1 + 4 + 9 + 16 + 25 = 55 cubes.",
-   "hint": "Add the layers: 1 + 4 + 9 ...",
-   "beyond": "Square numbers in a pyramid"
+   "explanation": "(a) Row 6 has 6 cans. (b) 1 + 2 + 3 + 4 + 5 + 6 = 21. (c) 21 + 7 + 8 = 36 (the rows 7 and 8 have 7 and 8 cans).",
+   "hint": "Add the rows: 1 + 2 + 3 ...",
+   "beyond": "Triangle numbers"
   },
   {
    "id": "L2U08-G02",
@@ -1009,6 +1049,7 @@
    ],
    "explanation": "3 faces: the 8 corners. 2 faces: 12 edges with 2 cubes each: 24. 1 face: 6 faces with a 2 by 2 middle: 24. No paint: the 2 by 2 by 2 middle: 8. Check: 8 + 24 + 24 + 8 = 64.",
    "hint": "Corners, edges, faces, inside. Check they make 64.",
+   "beyond": "Painted cubes",
    "partsrow": true
   },
   {
@@ -1050,7 +1091,7 @@
      ]
     ],
     "cell": 66,
-    "width_mm": 50
+    "width_mm": 42
    },
    "answer": {
     "value": [

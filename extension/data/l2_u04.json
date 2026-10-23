@@ -73,16 +73,16 @@
    "id": "L2U04-S01",
    "tier": "start",
    "page": 1,
-   "text": "Count in 4s. Fill in the next numbers.   4,   8,   12,   {b},   {b},   {b}",
+   "text": "Count back in 5s. Fill in the next numbers.   60,   55,   50,   {b},   {b},   {b}",
    "answer": {
     "value": [
-     "16",
-     "20",
-     "24"
+     "45",
+     "40",
+     "35"
     ],
-    "text": "16, 20, 24"
+    "text": "45, 40, 35"
    },
-   "explanation": "Add 4 each time: 12 + 4 = 16, 16 + 4 = 20, 20 + 4 = 24. These are in the 4 times table."
+   "explanation": "Take away 5 each time: 50 - 5 = 45, 45 - 5 = 40, 40 - 5 = 35. These numbers are in the 5 times table."
   },
   {
    "id": "L2U04-S02",
@@ -174,7 +174,7 @@
     },
     {
      "label": "b",
-     "text": "The 6th letter E is in place {b}",
+     "text": "The 6th E is in place {b}",
      "answer": {
       "value": [
        "28"
@@ -590,11 +590,11 @@
    "id": "L2U04-T01",
    "tier": "think",
    "page": 4,
-   "text": "A pattern starts at 3. It goes up 2, then up 4, then up 2, then up 4, and so on: 3, 5, 9, 11, 15 ...",
+   "text": "A frog starts at 0. It hops 3, then 1, then 3, then 1, and so on. It lands on 3, 4, 7, 8, 11 ...",
    "parts": [
     {
      "label": "a",
-     "text": "Will it say 41? {circ:Yes|No}",
+     "text": "Will it land on 27? {circ:Yes|No}",
      "answer": {
       "value": [
        "Yes"
@@ -604,17 +604,27 @@
     },
     {
      "label": "b",
-     "text": "Will it say 40? {circ:Yes|No}",
+     "text": "Will it land on 30? {circ:Yes|No}",
      "answer": {
       "value": [
        "No"
       ],
       "text": "No"
      }
+    },
+    {
+     "label": "c",
+     "text": "Will it land on 40? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
     }
    ],
-   "explanation": "Every 2 steps the number goes up by 6: 3, 5, 9, 11, 15, 17, 21, 23, 27, 29, 33, 35, 39, 41. So 41 is in the pattern. All the numbers are odd (odd + 2 and odd + 4 stay odd), so it never says 40.",
-   "hint": "Write more numbers. Are they odd or even?",
+   "explanation": "Every 2 hops the frog goes 4 further: 3, 4, 7, 8, 11, 12, 15, 16 ... It lands on the 4 times table and on the number 3 before each one. 27 = 24 + 3: yes. 30 is between 28 and 31: no. 40 = 4 × 10: yes.",
+   "hint": "Write the landing places. Look at the 4 times table.",
    "space": {
     "rows": [
      "Working:"
@@ -692,51 +702,70 @@
    "id": "L2U04-T03",
    "tier": "think",
    "page": 4,
-   "text": "Sticks make a chain of triangles. 1 triangle uses 3 sticks, 2 triangles use 5 sticks and 3 triangles use 7 sticks.",
+   "text": "A toy train has an engine and carriages. The engine holds 2 children. Each carriage holds 5 children.",
    "figure": {
-    "type": "l2_sticks",
-    "kind": "tri",
-    "counts": [
-     1,
-     2,
-     3
+    "type": "l2_table",
+    "cols": [
+     "Carriages",
+     "0",
+     "1",
+     "2",
+     "3"
     ],
-    "width_mm": 100
+    "rows": [
+     [
+      "Children",
+      "2",
+      "7",
+      "12",
+      null
+     ]
+    ],
+    "first_bold": true,
+    "widths": [
+     1.8,
+     1,
+     1,
+     1,
+     1
+    ],
+    "width_mm": 110,
+    "size": 30
    },
    "parts": [
     {
      "label": "a",
-     "text": "10 triangles use {b} sticks.",
+     "text": "4 carriages hold {b} children.",
      "answer": {
       "value": [
-       "21"
+       "22"
       ],
-      "text": "21"
+      "text": "22"
      }
     },
     {
      "label": "b",
-     "text": "Ben has 40 sticks. The most triangles he can make is {b}",
+     "text": "8 carriages hold {b} children.",
      "answer": {
       "value": [
-       "19"
+       "42"
       ],
-      "text": "19"
+      "text": "42"
      }
     },
     {
      "label": "c",
-     "text": "Sticks left over: {b}",
+     "text": "37 children fill {b} carriages.",
      "answer": {
       "value": [
-       "1"
+       "7"
       ],
-      "text": "1"
+      "text": "7"
      }
     }
    ],
-   "explanation": "Each new triangle adds 2 sticks, and the first stick adds 1. 10 triangles: 10 × 2 + 1 = 21. 19 triangles use 19 × 2 + 1 = 39 sticks, and 20 triangles need 41. So Ben makes 19 triangles with 40 - 39 = 1 stick left.",
-   "hint": "Each triangle adds 2 sticks. Find the rule."
+   "explanation": "Each carriage adds 5 children, and the engine holds 2: 2, 7, 12, 17, 22 ... (a) 4 carriages: 2 + 20 = 22. (b) 8 carriages: 2 + 40 = 42. (c) 37 - 2 = 35 children are in carriages, and 35 ÷ 5 = 7 carriages.",
+   "hint": "Each carriage adds 5. The engine is extra."
   },
   {
    "id": "L2U04-G01",
