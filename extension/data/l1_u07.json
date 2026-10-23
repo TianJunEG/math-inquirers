@@ -24,7 +24,7 @@
     ],
     "per_row": 7,
     "labels": false,
-    "width_mm": 125
+    "width_mm": 112
    },
    "steps": [
     "A shape with 4 corners has 4 straight sides.",

@@ -29,7 +29,8 @@
      "+3",
      "+3",
      "+3"
-    ]
+    ],
+    "width_mm": 116
    },
    "steps": [
     "Say what we know. It starts at 4 cm and grows 3 cm a week.",

@@ -34,14 +34,15 @@
       "n": 2
      }
     ],
-    "scale": 0.15
+    "scale": 0.17
    },
    "steps": [
     "Read the key. 1 picture is 1 book.",
     "Tuesday has 7 books. Thursday has 2 books.",
     "\"How many more\" asks for the gap. Subtract: 7 - 2 = 5. Check: 2 + 5 = 7."
    ],
-   "answer": "5 more books are borrowed on Tuesday. 7 - 2 = 5."
+   "answer": "5 more books are borrowed on Tuesday. 7 - 2 = 5.",
+   "side": true
   },
   "howto": {
    "title": "How to read a picture graph",
@@ -67,7 +68,8 @@
       "label": "Kumar",
       "n": 2
      }
-    ]
+    ],
+    "scale": 0.19
    },
    "answer": {
     "value": [

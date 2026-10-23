@@ -59,8 +59,12 @@ def numstrip(start, end, per_row=16, circle=(), width_mm=None):
     return _wrap(''.join(parts), W, H, f'number strip {start} to {end}', width_mm)
 
 
-def dot_boxes(counts, labels=None, shape='square', width_mm=None):
-    """Boxes of small squares (blocks) or dots, one box per step, for growing-pattern pictures."""
+def dot_boxes(counts, labels=None, shape='square', width_mm=None, layout=None):
+    """Boxes of small squares (blocks) or dots, one box per step, for growing-pattern pictures.
+    layout='ell': step k is an L of k blocks up and k-1 blocks along the bottom (1, 3, 5, 7 ... blocks); every frame is the same size
+    (as wide as the last step needs); a None count is an empty dashed frame of the same size for the child to fill."""
+    if layout == 'ell':
+        return _ell_boxes(counts, labels, width_mm)
     bw, gap = 150, 40
     parts = []
     for i, n in enumerate(counts):
@@ -77,6 +81,27 @@ def dot_boxes(counts, labels=None, shape='square', width_mm=None):
         parts.append(_t(x0 + bw / 2, 196, (labels[i] if labels else f'Step {i + 1}'), 30))
     W = len(counts) * (bw + gap) - gap + 12
     return _wrap(''.join(parts), W, 212, 'growing pattern boxes', width_mm)
+
+
+def _ell_boxes(counts, labels, width_mm):
+    C, B, PAD, gap = 44, 38, 10, 34
+    kmax = len(counts)
+    side = kmax * C + 2 * PAD
+    parts = []
+    for i, n in enumerate(counts):
+        x0 = 6 + i * (side + gap)
+        dash = ' stroke-dasharray="9 6"' if n is None else ''
+        parts.append(f'<rect x="{x0}" y="6" width="{side}" height="{side}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3"{dash}/>')
+        if n is not None:
+            k = (n + 1) // 2
+            cells = [(0, r) for r in range(k)] + [(c, 0) for c in range(1, k)]
+            for c, r in cells:
+                bx = x0 + PAD + c * C + (C - B) / 2
+                by = 6 + side - PAD - (r + 1) * C + (C - B) / 2
+                parts.append(f'<rect x="{bx}" y="{by}" width="{B}" height="{B}" fill="{YEL}" stroke="{NAVY}" stroke-width="2.6"/>')
+        parts.append(_t(x0 + side / 2, side + 44, (labels[i] if labels else f'Step {i + 1}'), 30))
+    W = len(counts) * (side + gap) - gap + 12
+    return _wrap(''.join(parts), W, side + 58, 'growing pattern of blocks', width_mm)
 
 
 def tri_dots(counts, width_mm=None):
@@ -176,7 +201,7 @@ def render(spec, theme='colour'):
     elif t == 'numstrip':
         s = numstrip(spec['start'], spec['end'], spec.get('per_row', 16), tuple(spec.get('circle', ())), w)
     elif t == 'dot_boxes':
-        s = dot_boxes(spec['counts'], spec.get('labels'), spec.get('shape', 'square'), w)
+        s = dot_boxes(spec['counts'], spec.get('labels'), spec.get('shape', 'square'), w, spec.get('layout'))
     elif t == 'tri_dots':
         s = tri_dots(spec['counts'], w)
     elif t == 'bonds':
