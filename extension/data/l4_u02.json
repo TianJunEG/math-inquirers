@@ -85,7 +85,7 @@
   "howto": {
    "title": "How to round",
    "steps": [
-    "Find the two neighbours, such as 46 000 and 47 000.",
+    "Find the 2 neighbours, such as 46 000 and 47 000.",
     "Find the halfway number. Halfway rounds up.",
     "To work backwards, find where the rounding changes."
    ]
@@ -115,7 +115,7 @@
     "width_mm": 78
    },
    "lines": [
-    "35 206 is 3 ten thousands, 5 thousands, 2 hundreds and 6 ones."
+    "35 206 = 30 000 + 5000 + 200 + 6"
    ]
   },
   "try": {
@@ -229,36 +229,53 @@
      }
     }
    ],
-   "explanation": "46 281 has 6 in the thousands place, so it is worth 6000. In 60 912 it is in the ten thousands place: 60 000. In 83 062 it is in the tens place: 60."
+   "explanation": "46 281 has 6 in the thousands place, so it is worth 6000. In 60 912 it is in the ten thousands place: 60 000. In 83 062 it is in the tens place: 60.",
+   "partsrow": true
   },
   {
    "id": "L4U02-S03",
    "tier": "start",
    "page": 1,
    "text": "Write each number in figures.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "forty-two thousand and seven: {b}",
-     "answer": {
-      "value": [
-       "42007"
-      ],
-      "text": "42 007"
-     }
-    },
-    {
-     "label": "b",
-     "text": "9 ten thousands, 4 hundreds and 3 ones: {b}",
-     "answer": {
-      "value": [
-       "90403"
-      ],
-      "text": "90 403"
-     }
-    }
-   ],
-   "explanation": "42 007 has 4 ten thousands, 2 thousands, no hundreds, no tens and 7 ones. 9 ten thousands is 90 000, then 400 and 3: 90 403."
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "In words",
+     "In figures"
+    ],
+    "rows": [
+     [
+      "forty-two thousand and seven",
+      ""
+     ],
+     [
+      "sixty thousand, nine hundred",
+      ""
+     ],
+     [
+      "eight thousand and thirty",
+      ""
+     ]
+    ],
+    "widths": [
+     3,
+     1.4
+    ],
+    "cell_h": 62,
+    "font": 28,
+    "first_col_head": true,
+    "width_mm": 150
+   },
+   "answer": {
+    "value": [
+     "42007",
+     "60900",
+     "8030"
+    ],
+    "text": "42 007, 60 900, 8030",
+    "list": true
+   },
+   "explanation": "forty-two thousand and seven is 42 007: 42 thousands, no hundreds, no tens and 7 ones. sixty thousand, nine hundred is 60 900. eight thousand and thirty is 8030."
   },
   {
    "id": "L4U02-S04",
@@ -370,17 +387,18 @@
      }
     }
    ],
-   "explanation": "36 482 is between 36 000 and 37 000, and it is before the halfway mark 36 500, so it rounds to 36 000. To the nearest 100 it is between 36 400 and 36 500, and 82 is more than 50, so 36 500."
+   "explanation": "36 482 is between 36 000 and 37 000, and it is before the halfway mark 36 500, so it rounds to 36 000. To the nearest 100 it is between 36 400 and 36 500, and 82 is more than 50, so 36 500.",
+   "partsrow": true
   },
   {
    "id": "L4U02-S07",
    "tier": "start",
    "page": 2,
-   "text": "The population of a town is 12 000 when rounded to the nearest 1000. What is the smallest it could be? What is the largest?",
+   "text": "A town has 12 000 people after rounding to the nearest 1000. Find the least number of people it could have, and the greatest.",
    "parts": [
     {
      "label": "a",
-     "text": "Smallest: {b}",
+     "text": "Least: {b}",
      "answer": {
       "value": [
        "11500"
@@ -390,7 +408,7 @@
     },
     {
      "label": "b",
-     "text": "Largest: {b}",
+     "text": "Greatest: {b}",
      "answer": {
       "value": [
        "12499"
@@ -404,7 +422,8 @@
      "Working:"
     ]
    },
-   "explanation": "11 500 is halfway between 11 000 and 12 000 and rounds up to 12 000. 12 500 would round up to 13 000, so the largest is 12 499."
+   "explanation": "11 500 is halfway between 11 000 and 12 000 and rounds up to 12 000. 12 500 would round up to 13 000, so the largest is 12 499.",
+   "partsrow": true
   },
   {
    "id": "L4U02-S08",
@@ -443,7 +462,8 @@
      }
     }
    ],
-   "explanation": "4650 is halfway between 4600 and 4700, so it rounds up. 4750 would round to 4800, so the largest is 4749. From 4650 to 4749 there are 100 numbers."
+   "explanation": "4650 is halfway between 4600 and 4700, so it rounds up. 4750 would round to 4800, so the largest is 4749. From 4650 to 4749 there are 100 numbers.",
+   "partsrow": true
   },
   {
    "id": "L4U02-S09",
@@ -473,7 +493,7 @@
     },
     {
      "label": "c",
-     "text": "Is the exact total more or less than the estimate? {circ:more|less}",
+     "text": "The exact total is {circ:more|less} than the estimate.",
      "answer": {
       "value": [
        "more"
@@ -493,7 +513,7 @@
    "id": "L4U02-S10",
    "tier": "start",
    "page": 3,
-   "text": "I am a 5-digit number. Rounded to the nearest 1000 I am 52 000. My hundreds digit is 7. My tens digit is 5 and my ones digit is 2. Who am I?\nI am {b}.",
+   "text": "I have 5 digits. Round me to the nearest 1000 and you get 52 000. My hundreds digit is 7. My tens digit is 5 and my ones digit is 2. Who am I?\nI am {b}.",
    "answer": {
     "value": [
      "51752"
@@ -544,7 +564,7 @@
      }
     }
    ],
-   "explanation": "Greatest: put the biggest digits first, 97 420. Least: 0 cannot go first, so start with 2: 20 479. Odd: the ones digit must be 7 or 9. Ending in 7 gives 94 207 and ending in 9 gives 74 209, so 94 207 is greater."
+   "explanation": "Greatest: put the greatest digits first, 97 420. Least: 0 cannot go first, so start with 2: 20 479. Odd: the ones digit must be 7 or 9. Ending in 7 gives 94 207 and ending in 9 gives 74 209, so 94 207 is greater."
   },
   {
    "id": "L4U02-S12",
@@ -626,7 +646,7 @@
     },
     {
      "label": "d",
-     "text": "3 ten thousands and 7 hundreds  {circ:>|<}  30 070",
+     "text": "30 000 + 700  {circ:>|<}  30 070",
      "answer": {
       "value": [
        ">"
@@ -635,13 +655,13 @@
      }
     }
    ],
-   "explanation": "(a) 45 009 has 0 tens, 45 090 has 9 tens, so it is smaller. (b) 8999 has 4 digits. (c) 62 100 has 1 hundred, 62 010 has none. (d) 3 ten thousands and 7 hundreds is 30 700, which is greater than 30 070."
+   "explanation": "(a) 45 009 has 0 tens, 45 090 has 9 tens, so it is smaller. (b) 8999 has 4 digits. (c) 62 100 has 1 hundred, 62 010 has none. (d) 30 000 + 700 is 30 700, which is greater than 30 070."
   },
   {
    "id": "L4U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Use the digit cards 1, 3, 4, 6 and 8. Use each card once to make the 5-digit number that is closest to 40 000.\n{b}",
+   "text": "Cards: 1, 3, 4, 6, 8. Use each card once. Make the 5-digit number nearest to 40 000.\n{b}",
    "answer": {
     "value": [
      "38641"
@@ -691,7 +711,7 @@
      ""
     ]
    },
-   "hint": "Add the two smallest numbers. Then add the two largest.",
+   "hint": "Add the 2 smallest numbers. Then add the 2 largest.",
    "explanation": "The smallest crowds are 40 500 and 27 500: 68 000. The largest are 41 499 and 28 499: 69 998."
   },
   {
@@ -774,7 +794,7 @@
    "id": "L4U02-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 4: Counting by place\nBen writes the whole numbers from 1 to 1000. How many of them have the digit 7 in them at least once?\n{b}",
+   "text": "Beyond Level 4: Counting by place\nBen writes the whole numbers from 1 to 1000. How many of them contain at least one 7?\n{b}",
    "answer": {
     "value": [
      "271"
@@ -824,7 +844,7 @@
    "id": "L4U02-G04",
    "tier": "go",
    "page": 5,
-   "text": "Siti says: \"A number that rounds to 7000 to the nearest 1000 also rounds to 7000 to the nearest 100.\"",
+   "text": "Some numbers round to 7000 to the nearest 1000. Siti says they all round to 7000 to the nearest 100 too.",
    "parts": [
     {
      "label": "a",
@@ -886,7 +906,8 @@
      }
     }
    ],
-   "explanation": "25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000."
+   "explanation": "25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000.",
+   "partsrow": true
   },
   {
    "id": "L4U02-C02",
@@ -914,12 +935,13 @@
      }
     }
    ],
-   "explanation": "8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the largest is 8349."
+   "explanation": "8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the largest is 8349.",
+   "partsrow": true
   },
   {
    "id": "L4U02-C03",
    "tier": "quiz",
-   "text": "Use the digit cards 4, 0, 7, 1 and 8 once each to make the least odd 5-digit number. {b}",
+   "text": "Cards: 4, 0, 7, 1, 8. Use each card once. Make the least odd 5-digit number. {b}",
    "answer": {
     "value": [
      "10487"

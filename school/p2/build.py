@@ -1,35 +1,32 @@
 #!/usr/bin/env python3
-"""Build the two Primary 1 early-finisher booklets (Semester 1 and Semester 2).
+"""Build the two Primary 2 early-finisher booklets (Semester 1 and Semester 2).
   python3 build.py [--school "Name of School"] [--outdir out] [--booklet S1|S2|both] [--final]
-Outputs (in out/), for each booklet X in S1, S2: P1_X_Puzzles.pdf (20 pupil pages), P1_X_FrontMatter.pdf (5), P1_X_Complete_Pack.pdf (25),
-P1_X_Answer_Key.pdf, plus verification.json (all pages). Page order and the two page numbers (S1-07 and P1-08) come from gen/outcomes.py."""
+Outputs (in out/), for each booklet X in S1, S2: P2_X_Puzzles.pdf (20 pupil pages), P2_X_FrontMatter.pdf (5), P2_X_Complete_Pack.pdf (25),
+P2_X_Answer_Key.pdf, plus verification.json (all pages). Page order and the two page numbers (S1-07 and P2-17) come from gen/outcomes.py."""
 import argparse, json, os, sys, re, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-from gen import pages_numbers, pages_arith, pages_measure, pages_cbc
 from gen import outcomes
 import render
 
-# modules that hold the 20 new pages (P1-21 to P1-40); a module not written yet is skipped, so a half-built tree still builds
-NEW_MODULES = []
-for _m in ("pages_stories", "pages_num2", "pages_money_time", "pages_meas2"):
+# page modules (P2-01 to P2-40); a module not written yet is skipped, so a half-built tree still builds (validate.py --partial)
+MODULES = []
+for _m in ("pages_w1", "pages_w2", "pages_w3", "pages_w4", "pages_w5"):
     try:
-        NEW_MODULES.append(__import__("gen." + _m, fromlist=["PAGES"]))
+        MODULES.append(__import__("gen." + _m, fromlist=["PAGES"]))
     except ModuleNotFoundError as e:
         if e.name != "gen." + _m: raise
 
-# problem-solving pages: questions that come from school-test types rather than one numbered outcome (plan section 7, item 9)
-PROBLEM_SOLVING = {16, 22, 27, 28, 38, 39}
-
 def all_pages():
     ps = []
-    for m in (pages_numbers, pages_arith, pages_measure, pages_cbc, *NEW_MODULES):
+    for m in MODULES:
         ps += [f() for f in m.PAGES]
     ps.sort(key=lambda p: p["no"])
     assert len({p["no"] for p in ps}) == len(ps), "duplicate page numbers"
     for p in ps:
+        outcomes.PAGE_OC[p["no"]] = list(p["oc"])
         p["code"] = outcomes.code_of(p["no"])
         p["bk"], p["pos"] = outcomes.booklet_of(p["no"])
-        p["ps"] = p["no"] in PROBLEM_SOLVING
+        p["ps"] = bool(p.get("ps"))
     return ps
 
 def booklet_pages(pages, key):
@@ -67,18 +64,18 @@ def build_booklet(key, pages, school, outdir):
     bk = outcomes.BOOKLETS[key]
     bp = booklet_pages(pages, key)
     W = lambda name, h: open(os.path.join(outdir, name), "w").write(h)
-    title = f"Early Finisher Puzzles P1 {bk['name']}"
+    title = f"Early Finisher Puzzles P2 {bk['name']}"
     W(f"{key}_pupil.html", render.doc("".join(render.pupil_page(p, school) for p in bp), title))
     W(f"{key}_front.html", render.doc(render.cover(school, bk) + render.licence(school, bk) + render.teacher_notes(bp, bk) + render.contents(bp, bk), title + " front matter"))
     W(f"{key}_key.html", render.doc(render.key_pages(bp, school, pack_key(bp, school, outdir), bk), title + " answer key"))
     names = {"pupil": "Puzzles", "front": "FrontMatter", "key": "Answer_Key"}
     for n in ("pupil", "front", "key"):
-        to_pdf(os.path.join(outdir, f"{key}_{n}.html"), os.path.join(outdir, f"P1_{key}_{names[n]}.pdf"))
+        to_pdf(os.path.join(outdir, f"{key}_{n}.html"), os.path.join(outdir, f"P2_{key}_{names[n]}.pdf"))
     from pypdf import PdfWriter, PdfReader
     w = PdfWriter()
-    for f in (f"P1_{key}_FrontMatter.pdf", f"P1_{key}_Puzzles.pdf"):
+    for f in (f"P2_{key}_FrontMatter.pdf", f"P2_{key}_Puzzles.pdf"):
         for pg in PdfReader(os.path.join(outdir, f)).pages: w.add_page(pg)
-    w.write(os.path.join(outdir, f"P1_{key}_Complete_Pack.pdf"))
+    w.write(os.path.join(outdir, f"P2_{key}_Complete_Pack.pdf"))
 
 def main():
     ap = argparse.ArgumentParser()

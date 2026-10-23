@@ -1,78 +1,51 @@
-"""The 32 Primary 1 outcome lines, in the wording of the syllabus PDF (Primary Mathematics Syllabus P1 to P6, 2021 edition,
-updated Oct 2025, pages 31 and 32), the two semester booklets and the page order of each.
-Plan: docs/school_books/p1_semester_booklets_plan.md (sections 1a and 2). Wording copied from the PDF."""
+"""The 30 Primary 2 outcome lines, in the wording of the syllabus PDF (Primary Mathematics Syllabus P1 to P6, 2021 edition,
+updated Oct 2025, pages 33 and 34), the two semester booklets and the page order of each.
+Plan: docs/school_books/p2_semester_booklets_plan.md. Wording copied from the PDF (also in docs/school_books/p2_outcome_wording.md)."""
 
 # id -> (strand heading used on the key, outcome wording as printed in the PDF)
 OUTCOMES = {
-    "WN1.1": ("Whole Numbers", "counting to tell the number of objects in a given set"),
-    "WN1.2": ("Whole Numbers", "number notation, representations and place values (tens, ones)"),
+    "WN1.1": ("Whole Numbers", "counting in tens/hundreds"),
+    "WN1.2": ("Whole Numbers", "number notation, representations and place values (hundreds, tens, ones)"),
     "WN1.3": ("Whole Numbers", "reading and writing numbers in numerals and in words"),
-    "WN1.4": ("Whole Numbers", "comparing the number of objects in two or more sets"),
-    "WN1.5": ("Whole Numbers", "comparing and ordering numbers"),
-    "WN1.6": ("Whole Numbers", "patterns in number sequences"),
-    "WN1.7": ("Whole Numbers", "ordinal numbers (first, second, up to tenth) and symbols (1st, 2nd, 3rd, etc.)"),
-    "AS2.1": ("Addition and Subtraction", "concepts of addition and subtraction"),
-    "AS2.2": ("Addition and Subtraction", "use of +, - and ="),
-    "AS2.3": ("Addition and Subtraction", "relationship between addition and subtraction"),
-    "AS2.4": ("Addition and Subtraction", "adding more than two 1-digit numbers"),
-    "AS2.5": ("Addition and Subtraction", "adding and subtracting within 100"),
-    "AS2.6": ("Addition and Subtraction", "adding and subtracting using algorithms"),
-    "AS2.7": ("Addition and Subtraction", "mental calculation involving addition and subtraction (within 20; 2-digit number and ones without renaming; 2-digit number and tens)"),
-    "MD3.1": ("Multiplication and Division", "concepts of multiplication and division"),
-    "MD3.2": ("Multiplication and Division", "use of x"),
-    "MD3.3": ("Multiplication and Division", "multiplying within 40"),
-    "MD3.4": ("Multiplication and Division", "dividing within 20"),
-    "MO1.1": ("Money", "counting amount of money (in cents up to $1; in dollars up to $100)"),
-    "LE1.1": ("Length", "measuring length in centimetres"),
-    "LE1.2": ("Length", "use of abbreviation cm"),
-    "LE1.3": ("Length", "comparing and ordering lengths in cm"),
-    "LE1.4": ("Length", "measuring and drawing a line segment to the nearest cm"),
-    "TI2.1": ("Time", "telling time to 5 minutes"),
-    "TI2.2": ("Time", "use of 'am' and 'pm'"),
-    "TI2.3": ("Time", "use of abbreviations h and min"),
-    "TI2.4": ("Time", "duration of one hour/half hour"),
-    "GE1.1": ("2D Shapes", "identifying, naming, describing and classifying 2D shapes (rectangle, square, triangle, circle, half circle, quarter circle)"),
-    "GE1.2": ("2D Shapes", "forming different 2D figures with rectangle, square, triangle, half circle, quarter circle"),
-    "GE1.3": ("2D Shapes", "identifying the 2D shapes that make up a given figure"),
-    "GE1.4": ("2D Shapes", "copying figures on dot grid or square grid"),
-    "ST1.1": ("Picture Graphs", "reading and interpreting data from picture graphs"),
+    "WN1.4": ("Whole Numbers", "comparing and ordering numbers"),
+    "WN1.5": ("Whole Numbers", "patterns in number sequences"),
+    "WN1.6": ("Whole Numbers", "odd and even numbers"),
+    "AS2.1": ("Addition and Subtraction", "addition and subtraction algorithms (up to 3 digits)"),
+    "AS2.2": ("Addition and Subtraction", "mental calculation involving addition and subtraction of a 3-digit number and ones/tens/hundreds"),
+    "MD3.1": ("Multiplication and Division", "multiplication tables of 2, 3, 4, 5 and 10"),
+    "MD3.2": ("Multiplication and Division", "use of ÷"),
+    "MD3.3": ("Multiplication and Division", "relationship between multiplication and division"),
+    "MD3.4": ("Multiplication and Division", "multiplying and dividing within the multiplication tables"),
+    "MD3.5": ("Multiplication and Division", "mental calculation involving multiplication and division within multiplication tables of 2, 3, 4, 5 and 10"),
+    "FR1.1": ("Fractions", "fraction as part of a whole"),
+    "FR1.2": ("Fractions", "notation and representations of fractions"),
+    "FR1.3": ("Fractions", "comparing and ordering fractions with denominators of given fractions not exceeding 12 (unit fractions; like fractions)"),
+    "FR2.1": ("Fractions", "adding and subtracting like fractions within one whole with denominators of given fractions not exceeding 12"),
+    "MO1.1": ("Money", "counting amount of money in dollars and cents"),
+    "MO1.2": ("Money", "reading and writing money in decimal notation"),
+    "MO1.3": ("Money", "comparing two or three amounts of money"),
+    "MO1.4": ("Money", "converting an amount of money in decimal notation to cents only, and vice versa"),
+    "ME1.1": ("Length, Mass and Volume", "measuring (length in metres; mass in kilograms/grams; volume of liquid in litres)"),
+    "ME1.2": ("Length, Mass and Volume", "using appropriate units of measurement and their abbreviations m, g, kg, ℓ"),
+    "ME1.3": ("Length, Mass and Volume", "comparing and ordering (lengths; masses; volumes)"),
+    "TI2.1": ("Time", "telling time to the minute"),
+    "TI2.2": ("Time", "measuring time in hours and minutes"),
+    "TI2.3": ("Time", "converting time in hours and minutes to minutes only, and vice versa"),
+    "GE1.1": ("2D Shapes", "making/completing patterns with 2D shapes according to one or two of the following attributes (size; shape; colour; orientation)"),
+    "GE2.1": ("3D Shapes", "identifying, naming, describing and classifying 3D shapes (cube, cuboid, cone, cylinder, sphere)"),
+    "ST1.1": ("Picture Graphs with Scales", "reading and interpreting data from picture graphs with scales"),
 }
-assert len(OUTCOMES) == 32
+assert len(OUTCOMES) == 30
 
-# page number (P1-nn) -> outcome ids exercised (plan 2a and 2b)
-PAGE_OC = {
-    1: ["WN1.2"], 2: ["WN1.2", "WN1.5"], 3: ["MD3.1", "MD3.4"], 4: ["WN1.5"], 5: ["MD3.1", "MD3.2", "MD3.3"],
-    6: ["TI2.1"], 7: ["WN1.7"], 8: ["AS2.1", "AS2.2", "AS2.7"], 9: ["AS2.4"], 10: ["AS2.1", "AS2.3", "AS2.7"],
-    11: ["AS2.5", "AS2.7"], 12: ["GE1.1"], 13: ["MD3.1", "MD3.2", "MD3.3"], 14: ["WN1.6"], 15: ["MO1.1"],
-    16: ["MO1.1", "AS2.7"], 17: ["LE1.1", "LE1.2"], 18: ["TI2.1", "TI2.4"], 19: ["GE1.1", "GE1.3"], 20: ["ST1.1"],
-    21: ["AS2.1", "AS2.2", "AS2.7"],                   # N01 Story Sums
-    22: ["AS2.1", "AS2.2", "AS2.5", "AS2.7"],          # N02 Two-Step Stories
-    23: ["AS2.5", "AS2.6"],                            # N10 Stack It Up
-    24: ["WN1.3", "WN1.7"],                            # N04 Words and Numbers
-    25: ["WN1.1", "WN1.4"],                            # N05 Count the Crowd
-    26: ["WN1.6", "WN1.2", "WN1.5"],                   # N06 Hundred Chart Patterns
-    27: ["MO1.1", "AS2.5"],                            # N13 Which Two Items?
-    28: ["MO1.1"],                                     # N14 Fewest Coins
-    29: ["TI2.3", "TI2.4", "TI2.1"],                   # N17 How Long Does It Last?
-    30: ["TI2.1", "TI2.2"],                            # N18 Morning or Evening?
-    31: ["LE1.2", "LE1.3"],                            # N15 Longer, Shorter, Longest
-    32: ["LE1.1", "LE1.2", "LE1.4"],                   # N16 Measure and Draw a Line
-    33: ["GE1.1", "GE1.2", "GE1.3"],                   # N19 Shape Builder
-    34: ["GE1.4"],                                     # N20 Finish the Figure (replaces "copy on the grid")
-    35: ["ST1.1"],                                     # N21 Read the Picture Graph
-    36: ["ST1.1"],                                     # N22 Graph Detective Two
-    37: ["AS2.1", "AS2.2", "AS2.3"],                   # N09 Bonds and Families
-    38: ["WN1.5", "AS2.1"],                            # N03 More or Fewer
-    39: ["MD3.1", "MD3.4"],                            # N11 Share and Group Stories
-    40: ["MD3.1", "MD3.2", "MD3.3"],                   # N12 True or False Groups
-}
+# page number (P2-nn, build order) -> outcome ids exercised
+PAGE_OC = {}
 
-# the two booklets: final page numbers in booklet order (S1-01 .. S1-20, S2-01 .. S2-20)
+# the two booklets: page numbers in booklet order (S1-01 .. S1-20, S2-01 .. S2-20)
 BOOKLETS = {
     "S1": dict(name="Semester 1", terms="Terms 1 and 2", n=1,
-               order=[25, 1, 24, 12, 19, 7, 8, 37, 10, 21, 9, 38, 2, 4, 26, 33, 34, 31, 17, 13]),
+               order=[1, 38, 9, 12, 10, 11, 17, 2, 3, 13, 18, 4, 5, 14, 19, 20, 39, 15, 21, 22]),
     "S2": dict(name="Semester 2", terms="Terms 3 and 4", n=2,
-               order=[3, 39, 14, 5, 40, 11, 23, 32, 6, 15, 28, 16, 27, 18, 30, 29, 35, 20, 36, 22]),
+               order=[6, 16, 23, 24, 8, 25, 26, 27, 28, 7, 30, 29, 31, 32, 33, 34, 35, 36, 37, 40]),
 }
 assert sorted(BOOKLETS["S1"]["order"] + BOOKLETS["S2"]["order"]) == list(range(1, 41))
 
@@ -82,9 +55,9 @@ def booklet_of(no):
     raise KeyError(no)
 
 def code_of(no):
-    """footer / key code with both numbers, e.g. 'S1-07 (P1-08)'"""
+    """footer / key code with both numbers, e.g. 'S1-07 (P2-17)'"""
     k, pos = booklet_of(no)
-    return f"{k}-{pos:02d} (P1-{no:02d})"
+    return f"{k}-{pos:02d} (P2-{no:02d})"
 
 def oc_label(i):
     """short outcome label for the key: 'Whole Numbers 1.3'"""

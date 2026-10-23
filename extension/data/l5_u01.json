@@ -8,7 +8,7 @@
  "holiday_lesson": 1,
  "goal": "I can read, compare and round numbers up to 10 million. I can test both sides of a target and check every clue.",
  "learn": {
-  "intro": "Read a big number in groups of three from the right. The groups are millions, thousands and ones. To find the number closest to a target, test the best number just below it and the best number just above it.",
+  "intro": "Read a big number in groups of three from the right. To find the number closest to a target, test the best number just below it and just above it.",
   "example": {
    "problem": "Use the cards to make a 7-digit number as close as you can to 3 000 000. Use every card once. A number cannot start with 0.",
    "steps": [
@@ -876,7 +876,7 @@
    "id": "L5U01-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "A bus company has 18 buses. Each bus carries 1 250 passengers in a week. How many passengers do the buses carry in 12 weeks? {b} passengers",
+   "text": "18 buses each carry 1 250 passengers in a week. How many passengers is that in 12 weeks? {l}",
    "answer": {
     "value": [
      "270000"
