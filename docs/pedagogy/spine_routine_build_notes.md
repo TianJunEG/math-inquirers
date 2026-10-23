@@ -126,3 +126,5 @@ Files changed
 Other medium audit items
 - M2 fixed: `hp/guide.js` timing-table look-back sentence no longer lists "Something I did well", "The hardest part was ..." or "What helped me"; it now describes the three questions, the "Tool I used" row and the stuck/pass footer. Level 1 guide rebuilt (94 pages, 0 hits for the retired wording).
 - M4: see the B&W line below.
+- B&W for the five lessons' levels: `make_bw_print.py --only P1_Workbook` (and P3, P5, P6), each `check_bw.py` ok: pages 64, 64, 62, 58 (same as `print_spec.json`), non-grey 0, light-tint cells 0.133, 0.147, 0.142, 0.123.
+- M4 fixed: `outputs/print/bw/bw_spec.json` now has rows for P1 (64 pages) and P4 (76 pages), both checked with `pdfinfo` against `print_spec.json` (and P2, P3, P5, P6). Another job (`make_bw_print.py --only L1_T...`) also rewrites this file (it overwrites it with only the matched rows), so re-check it after that job.
