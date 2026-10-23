@@ -608,7 +608,7 @@ PASS  CBC-P2-07 pupil: wording rules (no price, Mi, alignment claim, division si
 PASS  CBC-P2-07 pupil: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-07 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-P2-07 pupil: every blank box a pupil writes in is at least 6 mm wide (11 boxes, smallest 6.0 mm)  
-FAIL  CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.25
+PASS  CBC-P2-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
 PASS  CBC-P2-07 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.1%, needs <= 25%)  
 PASS  CBC-P2-07 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-07 pupil: all 15 regions stay separate white areas in the 1-bit render (35 large white areas incl. background and boxes)  
@@ -618,7 +618,7 @@ PASS  CBC-P2-07 teacher: fonts embedded  3 fonts
 PASS  CBC-P2-07 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
 PASS  CBC-P2-07 teacher: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-07 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
-FAIL  CBC-P2-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.25
+PASS  CBC-P2-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.3
 PASS  CBC-P2-07 teacher: 1-bit render at 150 dpi keeps the ink (loss 8.9%, needs <= 25%)  
 PASS  CBC-P2-07 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-07 teacher: all 15 regions stay separate white areas in the 1-bit render (24 large white areas incl. background and boxes)  
@@ -796,4 +796,4 @@ PASS  contact sheet PDF exists with 2 pages
 PASS  Primary 2 gallery has 14 to 16 worksheets, at least 5 pictures, at least 6 topics, mixed stars, unique ids  15 worksheets, 10 pictures, 13 topics
 PASS  library has at least 5 pictures and 6 topic banks  11 pictures, 13 banks
 
-795 passed, 2 failed
+797 passed, 0 failed

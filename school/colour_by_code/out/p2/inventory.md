@@ -6,7 +6,7 @@
 | CBC-P2-04 | House | Multiplication: tables of 2, 3, 4, 5 and 10 | 1 | 12, 15, 18, 20, 30 | 17 | tally, small marks (parts with the same mark share a colour) | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.9 mm | PASS |
 | CBC-P2-05 | Castle | Division: sharing and grouping | 1 | 2, 3, 4, 5, 6 | 17 | tally, mirror pairs | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.8 mm | PASS |
 | CBC-P2-06 | Owl | Fractions: parts, compare, add and subtract like fractions | 1 | ⟨1|2⟩, ⟨1|3⟩, ⟨1|4⟩, ⟨2|3⟩, ⟨3|4⟩ | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 910/910 = 100.0% | 99.9% / 98.7% | 4.6 mm | PASS |
-| CBC-P2-07 | Dinosaur | Money: cents and dollars, decimal notation | 2 | 35¢, 65¢, 135¢, 185¢, 250¢ | 15 | tally, small marks (parts with the same mark share a colour) | 30000/30000 = 100.0% | 99.9% / 98.9% | 4.6 mm | FAIL |
+| CBC-P2-07 | Dinosaur | Money: cents and dollars, decimal notation | 2 | 35¢, 65¢, 135¢, 185¢, 250¢ | 15 | tally, small marks (parts with the same mark share a colour) | 30000/30000 = 100.0% | 99.9% / 98.9% | 4.6 mm | PASS |
 | CBC-P2-08 | Butterfly | Time: hours and minutes | 1 | 2:40, 4:55, 6:45, 8:35, 10:15 | 14 | tally, mirror pairs | 10066/10066 = 100.0% | 100.0% / 100.0% | 4.8 mm | PASS |
 | CBC-P2-09 | Sailboat | Length, mass and volume | 2 | 35 cm, 60 cm, 250 g, 450 g, 12 l | 13 | tally, small marks (parts with the same mark share a colour) | 65052/65052 = 100.0% | 99.9% / 98.5% | 4.2 mm | PASS |
 | CBC-P2-10 | Butterfly | Picture graphs and tally marks | 2 | 6, 8, 10, 12, 15 | 14 | tally, mirror pairs | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.9 mm | PASS |
