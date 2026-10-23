@@ -260,7 +260,7 @@ W.push(...coreEnd(6));
 W.push(...extra(6));
 W.push(...hdr(7, 'Shapes', 'SHAPE SAFARI')); W.push(fast());
 W.push(q(1, 'Count the shapes in the house picture.', { before: 40, keepNext: true }));
-W.push(img('house.png', 270, 171));
+W.push(img('house.png', 270, 172));
 W.push(tbl([2475, 2475, 2475, 2475], [row(['Circle', 'Triangle', 'Square', 'Rectangle'].map(s => cell(s, 2475, { bold: true, fill: 'EDEDED' }))), row(['', '', '', ''].map(s => cell(s, 2475, { h: 60 })))]));
 W.push(sub('a', 'Which shape is there the most of?   ____________      (b)  How many shapes altogether?   ____'));
 W.push(q(2, 'Sides and corners. Look at the shapes, then fill in the table.', { keepNext: true }));
@@ -295,7 +295,7 @@ W.push(sub('c', [t('The red ribbon is longer than the blue one.'), NL(), t('The 
 W.push(p([t('______________,  ______________,  ______________,  ______________')], { indent: { left: 1000 }, after: 100 }));
 W.push(q(2, 'Write 1 to 10 in the loops “Numbers less than 6” and “Odd numbers”.', { keepNext: true }));
 W.push(`<div class="p kn" style="border:2px solid #1F7A6F;border-radius:10px;background:#E8F5F2;padding:6px 14px;margin:2px 0 8px;font-size:15.5px"><b>Odd</b> numbers end in 1, 3, 5, 7 or 9. <b>Even</b> numbers end in 0, 2, 4, 6 or 8.</div>`);
-W.push(img('venn.png', 320, 180));
+W.push(img('venn.png', 380, 211));
 W.push(sub('a', 'Numbers in BOTH circles: ____________________'));
 W.push(sub('b', 'Why are they in the middle?'));
 W.push(...lines(2));
