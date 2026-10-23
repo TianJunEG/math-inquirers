@@ -55,3 +55,6 @@ Total: 21 / 24
 ## Fix pass (Term 3 independent audits)
 
 See `audit/FIXES_T3_L29.md`. After the fix pass: validator 22 pass, 0 FAIL; script 67:40 of 90, slow class 79:54; workbook page fill 94, 99, 97, 94, 99% (kit page 69%); T1 made unambiguous, S5 and E1 and the G3 example no longer reuse class numbers, online static items replaced, hand-off to Lesson 30 aligned. Open: kit page spacing and labels, black and white build, L20 hand-off (shared tools or other owner).
+
+## X10 change note (23 Oct 2026, night)
+Re-validated and rebuilt after the Terms 3 and 4 consolidation (owner decisions RETIRE-YES, X10-BEFORE, L39-YES); see `term/l1/audit/X10_TERM34_HANDOFF.md`. The earlier audit above was written before the change and is not re-scored.

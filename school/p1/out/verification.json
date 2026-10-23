@@ -175,7 +175,7 @@
    {
     "name": "V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key",
     "ok": true,
-    "detail": "[4, 6, 8, 3, 2, 5]"
+    "detail": "[7, 3, 6, 2, 5, 4]"
    },
    {
     "name": "V2 code word spells SHADOW",
@@ -200,7 +200,7 @@
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['adolph', 'oswald', 'shadow']"
+    "detail": "['boards', 'howard', 'shadow']"
    },
    {
     "name": "V7 every number of objects is within 20",
@@ -910,8 +910,8 @@
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    68,
-    68
+    69,
+    69
    ],
    "all_other_values_rejected": [
     234,

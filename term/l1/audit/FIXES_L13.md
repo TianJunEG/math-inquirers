@@ -1,26 +1,37 @@
-# Fix pass, Lesson 13 (Doubles and Near Doubles; Term 2 lesson 3)
+> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 9 Picture Equations; the lesson was renumbered and changed. Not a pass for the new file: re-audit pending.
 
-Inputs: WORKBOOK, GUIDE_DECK and HOME_PARENT_PRACTICE audits of L13, owner decisions, TERM_WIDE_AUDIT, AUTHORING batch 4. Changed: `lessons/l13.json`, `verify/l13_checks.py` (80 checks), `AUDIT_L13.md`, `out/l13/`. Validator 0 FAIL 0 WARN; workbook fill 99/91/93/94/97%; slow class 84:34.
+# Fix pass, Lesson 19 (Picture Equations; Term 2 lesson 9)
+
+Changed: `lessons/l19.json`, `verify/l19_checks.py` (127 checks), `AUDIT_L19.md`, `out/l19/`. Validator 0 FAIL, leak check clean; workbook fill 99/95/95/96/99%, kit 72%; slow class 82:27, no part OVER.
 
 | Finding | Action |
 |---|---|
-| WB1 Investigation no drawing space | `draw` box added; instruction shortened, pairs no longer repeated |
-| WB2 T2 copies class sums | New sums 3+4, 8+7, 10+11, 2+3; check asserts no overlap with Your turn |
-| WB3 T1 picture/solution mismatch | Redrawn 5 red, 6 yellow with the 6th ringed; solution rewritten (also new numbers) |
-| WB4 / talk model answer garbled | Rewritten (7 is one less than 8) |
-| WB5 T4 "Check Step 2" | Removed |
-| WB7, WB8 | Intro example 2 + 2; page 2 hint mentions bars |
-| WB9, G4, P1 numbering | Family pages use Term 2 Lesson 4; tutor joining-cold note uses in-term numbers |
-| G1 answers on slides | s-explore2 picture, s-m3 working line, s-m3c table are reveal blocks; script asks first |
-| G2 s-m3b captions | Ringed counter (1 more) and dashed counter (1 less) |
-| G3 hand-off | s-end, SAY line, parent list: next workbook with number cards cut out |
-| G5 recording order | Greet by name first, then start recording, then notice |
-| G6 colour pencil | Tick your own with a tick |
-| G7 camera, G10 star | "so I can see you"; tick not star |
-| G8, G9 | Warm-up answer note and break slide match the script |
-| G12 slow mini OVER | Mini 12 min, flex 4, waits trimmed, skip order starts with s-m5; no OVER |
-| P3 c2 hint | Reworded (no frame referred to) |
-| P5 | "Do not teach double and add 2" added |
-| WB6 box count, WB10 sticker rows, WB11 G1 repeat, WB12-14, G11, G13, G14, P2, P4, P7 | Not changed: Low; template/printing (P2, P4, P7, WB12, G13), owner artwork (Mi), or a design choice (two boxes for a 2-digit slot; G1 kept as the calculation beside G2's claim). G11: S3/S6 content is read aloud. |
+| WB1 T2, T3, G3 repeat class numbers | T2 15/21 (Kumar 8 and 7; truth 6, 9), T3 hearts 6, heart x circle 15 (3, 5), G3 sum 9 product 20 (5, 4); S3 16, E1 18, E2 13, H1, H3, H4 changed so none repeats class or sneak-peek numbers |
+| WB2 small pictures | Shapes drawn at size 80 on pages 1 to 4; row width is template |
+| WB3 / G2 Start here time | Explore 12, work 30; page 1 and 2 about 9 min each; guide says pages 3 to 5 are home for most |
+| WB4 / G6 / L19-2 numbering | Term 2 Lesson 5 and Term 2 Lesson 10 everywhere |
+| WB5 "different shapes" law | "In our puzzles" on page 2 and slide; key accepts 5 and 5 for line 1 and says it fails line 2 |
+| WB6 page 5 | Investigation shorter, "Do any pairs fit both lines?"; picture rows tried but page 5 spilled, kept words only |
+| WB7 | S1 loose counters yellow; star card not needed (stated), keeps the L18 hand-off true |
+| WB8 minus sign | Not changed: shared template |
+| WB9 / G10 | contest_where corrected |
+| WB10 | "x means groups of" on pages 3 and 4 and home H5 |
+| WB11 | T1 two working lines |
+| WB13, G15 Mi calculator | Not changed: owner artwork |
+| G1 Explore 3 = sneak-peek | Now circle 3, triangle 6 (6 and 9) |
+| G3 totals not read | READ lines give every total and E2 options; thumbnail size is template |
+| G4 recording order | Greet, record, then notice |
+| G5 method printed early | reveal on s-explore3, s-m2, s-m3 |
+| G7 "safe to miss" | Note and parent page now mention the Lesson 10 check question |
+| G8, G9 | Camera "so I can see you"; tick instead of colour or star |
+| G11 | Break slide, note and cue say clap on 5, 10, 15, 20 |
+| G12 | M1 now "Can a shape change?" |
+| G13 | Envelope "kept closed" |
+| L19-1 runner | Already fixed by template batch 4 (box ids kept); not changed |
+| L19-3, 6, 10, 11 | Not changed: runner/template (alt text, shown-answer sentence, generated slips, wrap) |
+| L19-4 | Do-not-teach line and x word on parent page |
+| L19-5 | H4, H5 written as Line 1 / Line 2 |
+| L19-7, 8, 9, 12 | Base steps carry numbers; c4 and t3 redesigned (about half yes, claim differs by 0 or 1); g3 step says different numbers |
+| L19-13 | Not changed: home working lines are template |
 
-Template needs: home sheet part line breaks, left gutter and footer lift, look-back size, runner slips for double answers.
+Template needs: bold minus; larger question-slide thumbnails and MCQ options; picture alt text and per-variant slips in the runner; home working lines per question.

@@ -63,10 +63,10 @@
  },
  {
   "level": 4,
-  "source_pages": 66,
-  "print_pages": 76,
-  "sheets": 38,
-  "blank_pages": 10,
+  "source_pages": 65,
+  "print_pages": 74,
+  "sheets": 37,
+  "blank_pages": 9,
   "cutout_pages": [
    58,
    59,
@@ -75,8 +75,7 @@
    62,
    63,
    64,
-   65,
-   66
+   65
   ],
   "content_scale": 0.9429,
   "file": "outputs/print/Math_Inquirers_P4_Workbook_PRINT.pdf",

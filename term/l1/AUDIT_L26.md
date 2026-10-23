@@ -61,3 +61,6 @@ Total: 19 / 24
 ## Fix pass (Term 3 fix agent)
 
 Independent audits answered in `audit/FIXES_T3_L26.md`: S1 two different tags and kit prices, T1 stopping row, G1 spare row, break amounts payable, final recording wording, no-calculator Mi, online variants corrected. Validator 0 FAIL, 0 WARN.
+
+## X10 change note (23 Oct 2026, night)
+Re-validated and rebuilt after the Terms 3 and 4 consolidation (owner decisions RETIRE-YES, X10-BEFORE, L39-YES); see `term/l1/audit/X10_TERM34_HANDOFF.md`. The earlier audit above was written before the change and is not re-scored.

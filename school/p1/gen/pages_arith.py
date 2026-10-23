@@ -246,24 +246,25 @@ def page11():
 # ---------------------------------------------------------------- P13
 def groups_svg(g, m, kind="apple"):
     p = []; x = 0.5
-    cols = m if g * (m * 10.8 + 5.4) <= 108 else max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
-    bw = cols * 10.8 + 2.4; h = rows * 10.8 + 2.4
+    cols = m if g * (m * 11.0 + 5.4) <= 112 else max(2, (m + 1) // 2); rows = (m + cols - 1) // cols
+    bw = cols * 11.0 + 2.4; h = rows * 11.0 + 2.4
     for _ in range(g):
         p.append(f'<rect class="bag" x="{x:.1f}" y="0.5" width="{bw:.1f}" height="{h:.1f}" rx="2.5" fill="#fff" stroke="#000" stroke-width="0.5"/>')
         for i in range(m):
-            p.append(obj_g(kind, x + 1.2 + (i % cols) * 10.8, 1.7 + (i // cols) * 10.8, _osz(kind)))
+            p.append(obj_g(kind, x + 1.2 + (i % cols) * 11.0, 1.7 + (i // cols) * 11.0, _osz(kind)))
         x += bw + 3.0
     return svg(x, h + 1, "".join(p)), h + 1
 
 def page13():
     rng = random.Random(1313)
     word = "NUMBER"
+    combos = {6: [(2, 3), (3, 2)], 8: [(2, 4), (4, 2)], 9: [(3, 3)], 10: [(2, 5)], 12: [(3, 4), (4, 3)], 15: [(3, 5)], 16: [(4, 4)]}
     while True:
-        items = [(rng.randint(2, 4), rng.randint(2, 5)) for _ in range(6)]
+        items = [rng.choice(combos[t]) for t in rng.sample(list(combos), 6)]; rng.shuffle(items)
         tot = [g * m for g, m in items]
-        if len(set(tot)) == 6 and max(tot) <= 16 and min(tot) >= 6 and len(set(items)) == 6 and all(g * (max(2, (m + 1) // 2) * 10.8 + 5.4) <= 108 for g, m in items):
-            table = make_code_table(tot, word, rng, 1, 40, n_decoy=2, tries=400)
-            if table: break
+        if not all(g * (max(2, (m + 1) // 2) * 11.0 + 5.4) <= 116 for g, m in items): continue
+        table = make_code_table(tot, word, rng, 1, 40, n_decoy=2, tries=60)
+        if table: break
     rows = ""; svgs = []
     for i, (g, m) in enumerate(items):
         s, h = groups_svg(g, m, ["star", "ball", "cat", "drum"][i % 4]); svgs.append(s)
@@ -309,7 +310,7 @@ def share_svg(kind, n, g, per, mode):
         W = x0 + per_line * (cw + 2.5)
         H = max(H, 1 + lines * (chh + 2) + 1)
     else:
-        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch + 0.2:.2f}" height="{size + 1.2:.2f}" rx="{(size + 1.2) / 2:.2f}" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
+        inner.append(f'<rect class="loop" x="0.2" y="0.2" width="{per * pitch - 0.6:.2f}" height="{size + 1.2:.2f}" rx="{(size + 1.2) / 2:.2f}" fill="none" stroke="#000" stroke-width="0.6" stroke-dasharray="2 1.2"/>')
         W = max(W, 76)
     return svg(round(W, 1), round(H, 1), "".join(inner)), (round(W, 1), round(H, 1))
 

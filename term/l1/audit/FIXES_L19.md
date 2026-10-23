@@ -1,35 +1,33 @@
-# Fix pass, Lesson 19 (Picture Equations; Term 2 lesson 9)
+> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 10 Find One First (with the Quest); the lesson was renumbered and changed. Not a pass for the new file: re-audit pending.
 
-Changed: `lessons/l19.json`, `verify/l19_checks.py` (127 checks), `AUDIT_L19.md`, `out/l19/`. Validator 0 FAIL, leak check clean; workbook fill 99/95/95/96/99%, kit 72%; slow class 82:27, no part OVER.
+# Fix pass, Lesson 20 (Find One First; Term 2 lesson 10)
+
+Changed: `lessons/l20.json`, `verify/l20_checks.py` (126 checks), `AUDIT_L20.md`, `out/l20/`. Validator 0 FAIL, leak check clean; workbook fill 96/84/93/94/96%, kit 74%; slow class 83:37, no part OVER.
 
 | Finding | Action |
 |---|---|
-| WB1 T2, T3, G3 repeat class numbers | T2 15/21 (Kumar 8 and 7; truth 6, 9), T3 hearts 6, heart x circle 15 (3, 5), G3 sum 9 product 20 (5, 4); S3 16, E1 18, E2 13, H1, H3, H4 changed so none repeats class or sneak-peek numbers |
-| WB2 small pictures | Shapes drawn at size 80 on pages 1 to 4; row width is template |
-| WB3 / G2 Start here time | Explore 12, work 30; page 1 and 2 about 9 min each; guide says pages 3 to 5 are home for most |
-| WB4 / G6 / L19-2 numbering | Term 2 Lesson 5 and Term 2 Lesson 10 everywhere |
-| WB5 "different shapes" law | "In our puzzles" on page 2 and slide; key accepts 5 and 5 for line 1 and says it fails line 2 |
-| WB6 page 5 | Investigation shorter, "Do any pairs fit both lines?"; picture rows tried but page 5 spilled, kept words only |
-| WB7 | S1 loose counters yellow; star card not needed (stated), keeps the L18 hand-off true |
-| WB8 minus sign | Not changed: shared template |
-| WB9 / G10 | contest_where corrected |
-| WB10 | "x means groups of" on pages 3 and 4 and home H5 |
-| WB11 | T1 two working lines |
-| WB13, G15 Mi calculator | Not changed: owner artwork |
-| G1 Explore 3 = sneak-peek | Now circle 3, triangle 6 (6 and 9) |
-| G3 totals not read | READ lines give every total and E2 options; thumbnail size is template |
+| WB1 / G1 repeated numbers | S1 4 pens $16, S2 7 pens at $2, S5 5 pens $15, S6 $4 x 3, T1 4 cups $12 (7 cups), T3 $24 for 6 cups, T4 4 pens $8 and $10, G2 8 pens $24 and $30, Investigation $8 and $20 packs, H4 dozen $36, exit E2 and E3 new; check C6 5 bags of 3 and C8 8 buns $16 (not L18 or class numbers); price of one no longer $3 in most items |
+| WB2 / G6 / L20-4 numbering | Next lesson is "the first lesson of Term 3" (the leak check rejects "Lesson 1" text); Term 2 Lessons 5 to 8 in tutor notes |
+| WB3 / G2 Start here time | Explore 10, check 35 to 55, workbook 25 (page 1 7 min, page 2 8 min, choice 1.5), talk 4, look 2, flex 4; guide says pages 3 to 5 are home |
+| WB4 page 5 exit ticket | Not changed: shared template (listed below) |
+| WB5 dozen and such | Gloss on the page 3 instruction line |
+| WB6 | S1 pens kept as Start here strip; S4 kept (explored in class, noted) |
+| WB7 / G7 | Row corrected: Think harder, Go further and Investigation |
+| WB8 drawing cue | "Use tokens or draw" in S1 and S6 |
+| WB10, G14 Mi calculator | Not changed: owner artwork |
+| G3 recording carries the check | s-check1 and s-check2 `no_record`, `rec_pause_say`, REC cue says skip to the workbook, prep and joining-cold note: pause the recording for the whole check, make-up child takes the check before the recording |
 | G4 recording order | Greet, record, then notice |
-| G5 method printed early | reveal on s-explore3, s-m2, s-m3 |
-| G7 "safe to miss" | Note and parent page now mention the Lesson 10 check question |
-| G8, G9 | Camera "so I can see you"; tick instead of colour or star |
-| G11 | Break slide, note and cue say clap on 5, 10, 15, 20 |
-| G12 | M1 now "Can a shape change?" |
-| G13 | Envelope "kept closed" |
-| L19-1 runner | Already fixed by template batch 4 (box ids kept); not changed |
-| L19-3, 6, 10, 11 | Not changed: runner/template (alt text, shown-answer sentence, generated slips, wrap) |
-| L19-4 | Do-not-teach line and x word on parent page |
-| L19-5 | H4, H5 written as Line 1 / Line 2 |
-| L19-7, 8, 9, 12 | Base steps carry numbers; c4 and t3 redesigned (about half yes, claim differs by 0 or 1); g3 step says different numbers |
-| L19-13 | Not changed: home working lines are template |
+| G5 method early | reveal on s-explore3 and s-m1; thumbnails are template |
+| G8 camera, G9 colour | "so I can see you"; tick with a tick |
+| G10 optional E2 options | Read aloud in the optional exit READ line and slide note |
+| G11 s-look "Three minutes" | Not changed: shared template text |
+| G12 M1 | "Does 1 cost more if we buy more?" |
+| G13 check wording | "Fill in the blanks."; dashed lines vs boxes are template |
+| L20-1 (High) t1 | Base frame says "7 books"; variants keep m; question gives the story |
+| L20-2 (High) runner | Already fixed by template batch 4; not changed |
+| L20-3 | Questions of c3 and t1 now state the story and total |
+| L20-5, L20-9 | Do-not-teach line, x word, "may also have taken the check" |
+| L20-8 | c4 now half yes (claim differs by 0 or 1); t2 no longer a dozen at $1; generated slips are template |
+| L20-6, 7, 10, 11 | Base steps carry numbers; others runner/template, not changed |
 
-Template needs: bold minus; larger question-slide thumbnails and MCQ options; picture alt text and per-variant slips in the runner; home working lines per question.
+Template needs: exit ticket block "for home" label; bar_model thumbnail size on question slides; look-back slide time; aligned blank styles on the check sheet; runner alt text and slips; home working lines.

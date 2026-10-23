@@ -42,3 +42,6 @@ Total: 21 / 24
 - More than one tool can fit most problems. The workbook asks for a tool only where one tool clearly fits and the other options clearly do not (T1, E1); Explore and the Talk question take any tool with a good reason.
 - The shared `tool_cards` kit prints a problem card on one line (about 33 characters fit); the problem cards therefore carry short labels and the tutor reads the whole problem aloud. A kit that wraps long text would let the cards carry the full problem (a shared-tool note for the report).
 - Hand-offs: Lesson 38's `next_materials` names the 15 cards (checked by the verify script). This lesson's hand-off to Lesson 40 names the Quest Log (Book 8), a quest partner, a favourite page and plain paper, and says nothing about a Lesson 1; Lesson 40's opening statement is written to match.
+
+## X10 change note (23 Oct 2026, night)
+Re-validated and rebuilt after the Terms 3 and 4 consolidation (owner decisions RETIRE-YES, X10-BEFORE, L39-YES); see `term/l1/audit/X10_TERM34_HANDOFF.md`. The earlier audit above was written before the change and is not re-scored.

@@ -39,3 +39,6 @@ Total: 20 / 24
 - No Primary 1 paper asks a child to write or check a puzzle; wording is unverified. Gate 6 (key of 2) and gate 7 (choose a tool) go beyond the papers.
 - The Quest gates for Lessons 31 to 40 were written from the lesson files; gate 3 assumes one punched hole on a folded paper makes 2 holes (the figure is drawn by the shared `fold_punch` figure).
 - Lesson 40 does not hand over a kit, so there is no kit check.
+
+## X10 change note (23 Oct 2026, night)
+Re-validated and rebuilt after the Terms 3 and 4 consolidation (owner decisions RETIRE-YES, X10-BEFORE, L39-YES); see `term/l1/audit/X10_TERM34_HANDOFF.md`. The earlier audit above was written before the change and is not re-scored.

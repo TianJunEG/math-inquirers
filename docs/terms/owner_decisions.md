@@ -233,3 +233,11 @@ Owner approved the fixed colour-by-code gallery (CBC-13 picture symbols, bigger 
 
 ## 23 Oct 2026 (night): registered office address
 Owner gave the registered office address: 66 Tannery Ln, Singapore 347805. Applied to website/terms.html (site rebuilt). To apply to: P1 semester booklet licence pages (school/p1/render.py REG_OFFICE), Level 1 extension book licence page (extension/tools/build.py). Still open: publisher line, licence wording and term (lawyer), and replacing the contact email pypteltd@gmail.com later.
+
+## 23 Oct 2026 (night): spine-in-term and misc decisions
+Owner replied: LOOKBACK-RETIRE, ACCEPT-NOTE, CARD-BOOK1, P39-TWO, WORD-UNUSED.
+- LOOKBACK-RETIRE: the Level 1 term lessons' old look-back ("something I did well / hardest part / next time") is retired and replaced by the common spine look-back (as in the holiday books).
+- ACCEPT-NOTE: in the few term lessons whose script is too full (3, 6, 9), a written note replaces the spoken tool line instead of trimming time.
+- CARD-BOOK1: the Toolbox Card ships printed with Book 1.
+- P39-TWO: P1 semester booklet page P1-39 (Share and Group) is a two-star page.
+- WORD-UNUSED: the Level 1 holiday Word workbook (hp/workbook.js) is not used; ignore it (PDF is the only version).

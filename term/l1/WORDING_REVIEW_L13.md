@@ -1,19 +1,27 @@
-# Wording review, Lesson 13 (Doubles and Near Doubles)
+> X10 NOTE (23 Oct 2026): carried over from old Term 2 Lesson 9 Picture Equations; the lesson was renumbered and changed. Not a pass for the new file: re-audit pending.
 
-Every child-facing sentence (workbook S1-S6, T1-T4, G1-G3, I1, E1-E3, home H1-H5, sneak-peek, talk, slide text, online practice, parent page) was read aloud against WORDING_GUIDE rules 1-25 and the school-paper patterns. Maths and answers unchanged by the review; checks 75 answer checks and 73 practice variants pass; 0 FAIL.
+# Wording review, Lesson 19 (Picture Equations)
+
+Every child-facing sentence (sneak-peek, workbook S1-S7, T1-T3, G1-G3, I1, exit E1-E3, home H1-H5, slides, talk, look-back, online practice, parent page) was read aloud against WORDING_GUIDE rules 1-25 and the school-paper patterns. Maths and answers unchanged by the review; 122 answer checks and 129 practice variants pass; 0 FAIL.
 
 ## Changes made during review (old -> new, reason)
-1. S6: "Read each statement. Tick True or False." -> "Read each statement. Decide if it is True or False." The builder detects "Tick True or False" as a circle choice and printed a stray True/False pair under the tick table (confusing); the table itself already says "Put a tick in the correct box."
-2. Title slide: "Doubles and Near Doubles" -> "Doubles", with the full name in the subtitle (the long title ran under Mi's speech bubble).
-3. G3: added "Show your working on the lines." (parts (a) to (c) are the only scaffold; no method sentence in the stem, rule 24).
-4. T4: kept the wrong working visible and added "Check Step 2." (rule 4: say which part to check; exactly one mistake). The error-spotter is Kumar (not Siti).
-5. T3: "near double" is used only after the mini-lesson defines it ("two numbers that are next to each other"); it never appears in Start here.
-6. Start here has no unfamiliar word: "double" is defined on workbook page 1 ("two of the same number, like 3 + 3") and taught in Explore.
-7. Parent page: sentences shortened to fit one page; the beyond-school statement (double 35, five almost-equal numbers) is plain.
+1. S1 and S7: the story now says the loose items ("3 counters are outside the cup.", "3 sweets are outside the bags.") so the text and the picture agree and no number is left to be guessed from the picture (rule 5). Three short story sentences, then the command, then the frame "The cup holds [] counters." (rules 1, 11, 16).
+2. S2 to S4, E3, practice c1 and t2: one fixed command for the one job: "Find the number for the circle." (rule 2, same words for the same job). The question form "What number is ...?" is kept only in tutor ASK lines. Exit E1, E2 and home H1, H4, H5 were changed from "What number is ...?" to the same command.
+3. T2: "Tick True or False." printed the choice words twice under the tick table; it is now "Decide if each statement is True or False." as in the Lesson 16 pattern. The statement rows are full sentences ("Line 1 is true with Kumar's numbers."), as in the Henry Park true/false table (rule 23).
+4. S6: "Ben says the circle is 7. Look at the picture." then (a) "Is Ben correct? Circle Yes or No." and (b) "The circle is []." The claim is stated, the wrong reasoning is not (rule 19); one question per part (rule 18).
+5. T3 and G3: the times line never uses the square symbol (its drawn cross looks like the times sign); G3 gives the clue in words ("The heart is greater than the triangle.") and uses "greater", not "bigger" (rule 13).
+6. E2: "The heart + the square = 12. The square is 5. Find the number for the heart. Choose the correct answer. Write its number in the bracket." with options (1) to (4) and a bracket at the right, school style (rule 23). The picture was dropped from E1 and E2 (words only) so the page fits; the equation is written with the same signs as the slides.
+7. Investigation: labels First: and Next:, "The circle + the triangle = 10. One pair: circle 2, triangle 8. Write 2 more." then "Also: the circle + the circle + the triangle = 14. Which pairs fit both lines? Why?" The sentence frame is the first pair; the reason prompt is only "Why?" and no written reason is asked in Start here (rule 25).
+8. Error-spotter varies: Ben (S6, c4), Kumar (T2, t3) and Aisha (Talk). Siti is not used. Names in the lesson: Ben, Kumar, Aisha.
+9. Mini steps cards on the slides no longer print the numbers ("Take the square away from the total.") so the tutor question comes before the answer (rule 24: the slide teaches, the question never does).
+10. The words "stretch", "challenge" and "core" are not on any child or parent page; the report line says "finding one shape, then two shapes from two lines".
+11. Mi's lines contain no numbers or answers.
+12. Parent summary shortened to 87 words (reading load warning), and the box in "4 + box = 10" is written as the word box because a bracket token does not print on the parent page or in the guide.
 
 ## Checked and left as is
-- Fixed question words: "How many stickers do they have altogether?", "Add.", "Fill in the missing numbers.", "Circle Yes or No.", brackets for the multiple choice, options (1) to (4).
-- Numerals for every quantity; "Double 6 is 12" style frames end with the box then a full stop.
-- Rule 25: Think harder T3 and T4 ask for no written reasons; the only "write how you know" prompts are the sneak-peek puzzle and the Investigation (enrichment, not Start here, exit or check).
-- Names: Mei, Ali, Ben, Kumar (error-spotter), Ravi in none; cast mixed boys and girls.
-- Mi's lines contain no numbers or answers.
+- Fixed words: "Each shape is a number.", "Find the number for ...", "Fill in the blanks.", "Fill in the boxes." (online), "Circle Yes or No.", "True or False" tick table, "How many ... altogether" is not needed in this lesson, "in all" for totals in the cup and bag stories (rule 12).
+- Numbers: every quantity is a numeral in a sentence ("11 counters", "13 sweets"); number words appear only in tutor SAY and READ lines, which are spoken (rule 15).
+- Sentences with an equation are written as the slide prints them ("The star + the star = 16") so a child reading and a child hearing see the same line.
+- Names and things: counters, cups, bags, sweets; no brands; no money.
+- Beyond-P1 statement: the parent page, the tutor guide opening, the moe note and tutor prep say plainly that one hidden number in a line is Primary 1 work and the rest (same shape in two lines, taking one line from another, times lines) is beyond Primary 1 on purpose; the lesson is never called MOE-aligned.
+- Shape words: circle, square, triangle, star and heart only (no diamond). Different shapes are different numbers is stated once as rule 3 of the lesson and every puzzle is verified to obey it.

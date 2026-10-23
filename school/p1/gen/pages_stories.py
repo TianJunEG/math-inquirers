@@ -106,7 +106,7 @@ def page21():
              key=dict(answers=", ".join(f"{i+1}) {it['a']} {'-' if ans[i] == it['a'] - it['b'] else '+'} {it['b']} = {ans[i]}" for i, it in enumerate(items)), check_result=f"Code word: {word}"),
              note=("Six short stories within 20, each with a picture of the first group. The pupil chooses add or take away from the story. "
                    "One story says 'fewer than' about the other child: the child asked about has more, so the answer is an addition. Where possible the table decoys are the answers a pupil gets by using the wrong operation, "
-                   "and any other value has no letter at all, so the wrong operation never spells the word. The stories use more than and fewer than and 'how many more'."),
+                   "and any other value has no letter at all, so a wrong operation that is written down never spells the word. A box left blank is not seen by the check: every box must get a letter. The stories use more than and fewer than and 'how many more'."),
              seed=2101)
     solved = [solve_story(l) for l in texts]
     P.v("V1 independent solver reads the printed sentences back and equals the key", solved == ans, solved)

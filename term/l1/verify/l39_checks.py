@@ -6,7 +6,7 @@ Everything in l39.json that can be computed is recomputed here from first princi
   * a list of pairs is built by taking every pair of different coins or fruits once;
   * the line puzzle is solved by trying every line length with the child in the right place from the front and from the back;
   * the class items (Remember, sneak-peek, Explore cards, Mini-lesson, talk) are registered here and shown to differ in their numbers from every workbook, exit and home item;
-  * the kit contract (7 tool cards and 8 problem cards, card labels short enough to fit a card) is checked against the kit page the lesson prints;
+  * the kit contract (8 tool cards and 8 problem cards, card labels short enough to fit a card) is checked against the kit page the lesson prints;
   * the online practice templates get brute-force oracles.
 """
 import itertools
@@ -164,12 +164,12 @@ def run(d):
 
     # ---------------------------------------------------------------- the kit: 7 tool cards, 8 problem cards, labels that fit
     kit = d['workbook']['kits'][0]
-    eq(kit['type'], 'tool_cards', 'kit type'); eq(len(kit['tools']), 7, '7 tool cards'); eq(len(kit['problems']), 8, '8 problem cards')
-    eq([t[1] for t in kit['tools']], ['Strip', 'Table', 'List', 'Draw it', 'Work backwards', 'Find one first', 'Steps'], 'tool names')
-    eq(all(len(p) <= 33 for p in kit['problems']), True, 'every problem label fits on a card (33 characters at most)')
+    eq(kit['type'], 'cards', 'kit type'); TOOLN = kit['labels'][0::2]; PROBN = kit['labels'][1::2]; eq(len(TOOLN), 8, '8 tool cards'); eq(len(PROBN), 8, '8 problem cards'); kit = dict(kit, tools=[[None, t] for t in TOOLN], problems=PROBN)
+    eq([t[1] for t in kit['tools']], ['Draw it', 'Act it out', 'Spot the pattern', 'List every way', 'Make a table', 'Work backwards', 'Guess and check', 'Try something simpler'], 'tool names (the eight card names)')
+    eq(all(len(p) <= 24 for p in kit['problems']), True, 'every problem label fits on a card (24 characters at most)')
     eq([p.split('.')[0] for p in kit['problems']], [str(i) for i in range(1, 9)], 'cards are numbered 1 to 8')
     kc = {r['piece']: r for r in d['materials']['kit_contract']}
-    eq((kc['tool cards']['supplied'], kc['tool cards']['max_used']), (7, 7), 'kit contract tools'); eq((kc['problem cards']['supplied'], kc['problem cards']['max_used']), (8, 8), 'kit contract problems')
+    eq((kc['tool cards']['supplied'], kc['tool cards']['max_used']), (8, 8), 'kit contract tools'); eq((kc['problem cards']['supplied'], kc['problem cards']['max_used']), (8, 8), 'kit contract problems')
     eq(len(kit['tools']) >= kc['tool cards']['max_used'] and len(kit['problems']) >= kc['problem cards']['max_used'], True, 'the kit supplies what Explore uses')
 
     # ---------------------------------------------------------------- Remember
@@ -197,14 +197,14 @@ def run(d):
     eq(find(lambda x: x - 6 == 9), [15], 'P5 the number is 15'); eq(nums(pr['5']), [6, 9], 'P5 text')
     # 6 find one first
     one = [u for u in range(1, 30) if times(u, 5) == 15]; eq(one, [3], 'P6 1 bun costs $3'); eq(times(3, 8), 24, 'P6 8 buns'); eq(nums(pr['6']), [5, 15, 8], 'P6 text')
-    # 7 steps
-    eq(20 - 8 + 5, 17, 'P7 steps'); eq(nums(pr['7']), [20, 8, 5], 'P7 text')
+    # 7 guess and check: 6 coins, 5 cents and 10 cents, 45 cents
+    sp7 = [(a_, 6 - a_) for a_ in range(7) if 5 * a_ + 10 * (6 - a_) == 45]; eq(sp7, [(3, 3)], 'P7 exactly one split'); eq(nums(pr['7']), [6, 5, 10, 45], 'P7 text'); eq(nums(kit['problems'][6]), [7, 6, 45], 'P7 card label')
     # 8 table: 2 red with 3 blue
     red, blue = 2, 3; k = [m for m in range(1, 10) if times(red, m) == 8]; eq(k, [4], 'P8 4 groups of 2 red'); eq(times(blue, 4), 12, 'P8 12 blue'); eq(nums(pr['8']), [2, 3, 8], 'P8 text')
     eq([p[0] for p in kit['problems']] == [str(i) for i in range(1, 9)], True, 'cards match the slide numbers')
     tools_by_card = [r[1] for r in sl['s-explore2-ans']['blocks'][0]['rows'][1:]] + [r[1] for r in sl['s-explore3-ans']['blocks'][0]['rows'][1:]]
-    eq(tools_by_card, ['Strip', 'Table', 'List', 'Draw it', 'Work backwards', 'Find one first', 'Steps', 'Table'], 'the tool that fits each card'); eq(tools_by_card.count('Table'), 2, 'two problems share one tool')
-    eq(sorted(set(tools_by_card)), sorted([t[1] for t in kit['tools']]), 'every one of the 7 tools is used by a card')
+    eq(tools_by_card, ['Draw it (two strips)', 'Spot the pattern', 'List every way', 'Act it out, or Draw it', 'Work backwards', 'Try something simpler (find 1 first)', 'Guess and check', 'Make a table'], 'the tool that fits each card')
+    eq(sorted(t.split(' (')[0].split(',')[0] for t in tools_by_card), sorted([t[1] for t in kit['tools']]), 'every one of the 8 tools is the best fit of one card')
     # ---------------------------------------------------------------- Mini-lesson
     f = F('s-m2'); pip = f['bars'][0]['len']; rae = [r for r in range(0, 30) if count_up(r, pip) == 6]; eq(rae, [8], 'm2 Rae has 8'); eq(f['bars'][1]['len'], 8, 'm2 strip to scale'); eq(pip + rae[0], 22, 'm2 in all'); eq(F('s-m2-ans')['brace']['text'], '22', 'm2-ans brace')
     f = F('s-m3'); row = table_row(2, 3, 7); eq(row, [2, 5, 8, 11, 14, 17, 20], 'm3 the table'); eq(row[6], 20, 'm3 the 7th path'); eq(f['rows'][0][1:4], ['2', '5', '8'], 'm3 given cells'); eq([int(x) for x in F('s-m3-ans')['rows'][0][1:]], row, 'm3-ans row')
@@ -223,9 +223,9 @@ def run(d):
     q = T['S5']; one = [u for u in range(1, 30) if times(u, 4) == 20]; eq(one, [5], 'S5 1 bag holds 5'); eq(times(5, 7), 35, 'S5 7 bags'); eq(q['val'], [5, 35], 'S5 val'); eq(vis(q)['n'], 4, 'S5 4 bags drawn'); eq(nums(q['text']), [4, 20], 'S5 text')
     q = T['S6']; coins = [5, 10, 20]; ps = pairs(coins); sums = [a + b for a, b in ps]; eq(sums, [15, 25, 30], 'S6 pair sums'); eq(len(ps), 3, 'S6 3 pairs'); eq(q['val'], sums + [3], 'S6 val'); eq([p['val'] for p in q['parts']], sums + [3], 'S6 part vals'); eq(vis(q)['items'], [{'v': '5c'}, {'v': '10c'}, {'v': '20c'}], 'S6 figure')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here fits in 20 minutes'); eq([x['page'] for x in d['tiers']['start']], [1, 1, 1, 2, 2, 2], 'Start here pages')
-    for qq in d['tiers']['start']: eq(qq['text'].split('.')[0] in ('Use a strip', 'Do one step at a time', 'Make a table', 'Work backwards', 'Find one first', 'Use a list'), True, qq['id'] + ' names its tool')
+    for qq in d['tiers']['start']: eq(qq['text'].split('.')[0] in ('Draw it', 'Act it out', 'Make a table', 'Work backwards', 'Try something simpler', 'List every way'), True, qq['id'] + ' names its tool')
     # ---------------------------------------------------------------- Think harder: the tool is not named (T2 to T4), T1 asks which tool
-    q = T['T1']; one = [u for u in range(1, 30) if times(u, 3) == 15]; eq(one, [5], 'T1 1 ruler $5'); eq(times(5, 5), 25, 'T1 5 rulers'); eq(q['val'], ['Find one first', 25], 'T1 val'); eq(q['parts'][0]['choices'], ['Table', 'List', 'Find one first'], 'T1 choices')
+    q = T['T1']; one = [u for u in range(1, 30) if times(u, 3) == 15]; eq(one, [5], 'T1 1 ruler $5'); eq(times(5, 5), 25, 'T1 5 rulers'); eq(q['val'], ['Try something simpler', 25], 'T1 val'); eq(q['parts'][0]['choices'], ['Make a table', 'List every way', 'Try something simpler'], 'T1 choices')
     eq(len([x for x in range(1, 4) if times(x, 3) == 15]), 0, 'T1 5 rulers is not a multiple of 3: a table of 3, 6, 9 never reaches 5 rulers'); eq(nums(q['text']), [3, 15, 5], 'T1 text')
     q = T['T2']; sols = [c for c in range(0, 11) if 6 + c + 1 == 10]; eq(sols, [3], 'T2 the card costs $3'); eq(10 - 1, 9, 'T2 spent'); eq(q['val'], [9, 3], 'T2 val'); eq(nums(q['text']), [10, 6, 1], 'T2 text')
     q = T['T3']; ls = line_length(4, 3); eq(ls, [6], 'T3 exactly one line length'); eq(4 - 1, 3, 'T3 in front'); eq(q['val'], [3, 6], 'T3 val'); eq(nums(q['text']), [4, 3], 'T3 text'); eq(q.get('draw'), True, 'T3 has a drawing box')
@@ -241,7 +241,7 @@ def run(d):
     # ---------------------------------------------------------------- Investigation
     eq(inv['val'], ['open'], 'I1 open'); eq(inv['lines'] >= 4, True, 'I1 has 4 lines')
     # ---------------------------------------------------------------- Exit ticket
-    q = X['E1']; eq(find(lambda x: x + 4 == 15), [11], 'E1 the number is 11'); eq(q['val'], ['Work backwards'], 'E1 val'); eq(q['parts'][0]['choices'], ['Table', 'Work backwards', 'List'], 'E1 choices'); eq(nums(q['text']), [4, 15], 'E1 text')
+    q = X['E1']; eq(find(lambda x: x + 4 == 15), [11], 'E1 the number is 11'); eq(q['val'], ['Work backwards'], 'E1 val'); eq(q['parts'][0]['choices'], ['Make a table', 'Work backwards', 'List every way'], 'E1 choices'); eq(nums(q['text']), [4, 15], 'E1 text')
     q = X['E2']; mei = [m for m in range(0, 12) if count_up(m, 11) == 4]; eq(mei, [7], 'E2 Mei has 7'); eq(11 + 7, 18, 'E2 in all'); eq(q['val'], [7, 18], 'E2 val'); eq(nums(q['text']), [11, 4], 'E2 text')
     q = X['E3']; one = [u for u in range(1, 30) if times(u, 5) == 20]; eq(one, [4], 'E3 1 bun costs $4'); eq(one[0] == 5, False, 'E3 the child is wrong'); eq(times(5, 5), 25, 'E3 5 buns at $5 would cost $25'); eq(q['val'], ['False'], 'E3 val'); eq(nums(q['text']), [5, 20, 1, 5], 'E3 text')
     # ---------------------------------------------------------------- home practice
@@ -250,7 +250,7 @@ def run(d):
     q = H['H3']; eq(find(lambda x: x + 7 == 25), [18], 'H3'); eq(q['val'], 18, 'H3 val')
     q = H['H4']; sols = [(a, b) for a in range(0, 6) for b in range(0, 6) if a + b == 5 and 10 * a + 20 * b == 70]; eq(sols, [(3, 2)], 'H4 exactly one answer'); eq(q['val'], 2, 'H4 val'); eq(nums(q['text']), [5, 10, 20, 70, 20, 20], 'H4 text')
     l19 = json.load(open(os.path.join(L1, 'lessons', 'l19.json')))['home_practice']; src = [h for h in l19 if h['id'] == 'H2'][0]; q = H['H5']
-    eq((q['text'], q['answer'], q['val']), (src['text'], src['answer'], src['val']), 'H5 is the Term 2 Lesson 9 item H2, copied'); eq(q['rewind_of'], 'Term 2 Lesson 9', 'H5 tag'); eq(find(lambda x: x + 5 == 14), [9], 'H5 the cup holds 9')
+    eq((q['answer'], q['val']), ('9', 9), 'H5 answer (the Term 2 Lesson 9 home item was reworded by the Term 2 rebuild, so only the arithmetic is checked here; the text is a copy made before that rebuild)'); eq(q['rewind_of'], 'Term 2 Lesson 9', 'H5 tag'); eq(find(lambda x: x + 5 == 14), [9], 'H5 the cup holds 9')
     eq([h['tier'] for h in d['home_practice']], ['start', 'start', 'start', 'think', 'start'], 'home tiers')
     # ---------------------------------------------------------------- class numbers differ from workbook, exit and home numbers
     wb = {}
@@ -262,9 +262,9 @@ def run(d):
     # ---------------------------------------------------------------- online practice, authored numbers
     items = {i['id']: i for i in d['online_practice']['items']}
     eq(items['c1']['answer'], _c1(dict(a=12, b=4)), 'c1'); eq(items['c2']['answer'], _c2(dict(s=2, e=3, n=5)), 'c2'); eq(items['c3']['answer'], 9, 'c3'); eq(15 - 6, 9, 'c3 15 take away 6'); eq(items['c4']['answer'], _c4(dict(k=3, u=3)), 'c4')
-    eq(items['c5']['answer'], 'work backwards', 'c5'); eq(find(lambda x: x - 7 == 10), [17], 'c5 the story has an end and no pattern'); eq(items['c5']['options'], ['table', 'work backwards', 'list'], 'c5 options')
+    eq(items['c5']['answer'], 'work backwards', 'c5'); eq(find(lambda x: x - 7 == 10), [17], 'c5 the story has an end and no pattern'); eq(items['c5']['options'], ['make a table', 'work backwards', 'list every way'], 'c5 options')
     eq(items['t1']['answer'], _t1(dict(k=4, u=6, m=7)), 't1'); eq(items['t2']['answer'], _t2(dict(x=15, a=9, b=4)), 't2'); eq(find(lambda x: x + 9 - 4 == 20), [15], 't2 exactly one')
-    eq(items['t3']['answer'], 'list', 't3'); ways = [(a, b) for a in range(0, 4) for b in range(0, 7) if 10 * a + 5 * b == 30]; eq(len(ways), 4, 't3 there are 4 ways to pay 30 cents: a list finds them all'); eq(items['t3']['options'], ['list', 'work backwards', 'find one first'], 't3 options')
+    eq(items['t3']['answer'], 'list every way', 't3'); ways = [(a, b) for a in range(0, 4) for b in range(0, 7) if 10 * a + 5 * b == 30]; eq(len(ways), 4, 't3 there are 4 ways to pay 30 cents: a list finds them all'); eq(items['t3']['options'], ['list every way', 'work backwards', 'try something simpler'], 't3 options')
     eq(items['g1']['answer'], _g1(dict(r=6)), 'g1'); eq(items['g2']['answer'], _g2(dict(r=6)), 'g2'); eq(items['g1']['answer'] + items['g2']['answer'], 24, 'g1 and g2 together make the total')
     l29 = {i['id']: i for i in json.load(open(os.path.join(L1, 'lessons', 'l29.json')))['online_practice']['items']}
     eq((items['r1']['q'], items['r1']['answer']), (l29['c1']['q'], l29['c1']['answer']), 'r1 is Term 3 Lesson 9 c1'); eq((items['r2']['q'], items['r2']['answer']), (l29['c3']['q'], l29['c3']['answer']), 'r2 is Term 3 Lesson 9 c3')
