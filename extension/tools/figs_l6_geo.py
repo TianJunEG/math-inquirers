@@ -354,7 +354,7 @@ def bars(spec, w=None):
     gap = spec.get('gap_mm', 5) * U
     X0, Y0 = 60, 20
     H = Y0 + ymax * um + 52
-    W = X0 + len(vals) * (bw + gap) + 16
+    W = X0 + len(vals) * (bw + gap) + 16 + (70 if spec.get('mean') is not None else 0)
     base = Y0 + ymax * um
     P = [L(X0, Y0 - 6, X0, base, 3), L(X0, base, W - 10, base, 3)]
     t = 0
@@ -374,8 +374,8 @@ def bars(spec, w=None):
         P.append(T(x + bw / 2, base + 24, labs[i], 17, weight=700))
     if spec.get('mean') is not None:
         y = base - spec['mean'] * um
-        P.append(L(X0, y, W - 10, y, 3, dash='10 6'))
-        P.append(T(W - 12, y - 8, 'mean', 16, 'end', 800))
+        P.append(L(X0, y, W - 72, y, 3, dash='10 6'))
+        P.append(T(W - 66, y + 6, 'mean', 17, 'start', 800))
     return wrap(''.join(P), W, H, 'bar chart', w)
 
 

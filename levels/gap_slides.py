@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, '..
 sys.path.insert(0, HERE); sys.path.insert(0, os.path.join(ROOT, 'rebuild'))
 import slidekit
 from slidekit import NAVY, CREAM, TEAL, YEL, WHITE, MUTED, SOFT, SKY, GREY, HF, BF, E, sec, h2, p, card, pin
-RENDER_VERSION = 'r3'
+RENDER_VERSION = 'r4'
 PILL = 'Optional, if you finish early'
 RED = '#D64545'
 BEFORE = ('talk', 'showcase', 'exit', 'reflect', 'end')
@@ -40,7 +40,7 @@ def fig_pie(parts, label):
         s += f'<path d="M{cx} {cy} L{x0:.1f} {y0:.1f} A{R} {R} 0 {big} 1 {x1:.1f} {y1:.1f} Z" fill="{col}" stroke="{NAVY}" stroke-width="5" stroke-linejoin="round"/>'
         ang += 360 * frac
     s += f'<circle cx="{cx}" cy="{cy}" r="10" fill="{NAVY}"/>'
-    return _svg(label, 400, 400, s)
+    return _svg(label, 400, 400, s).replace('width:400px;height:400px', 'width:330px;height:330px')
 
 def fig_fan(npts):
     """apex above a base with npts marked points (a fan of lines)"""

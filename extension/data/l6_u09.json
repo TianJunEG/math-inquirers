@@ -61,7 +61,8 @@
     "text": "14"
    },
    "explanation": "The total of 4 numbers is 4 × 12 = 48. The 3 known numbers add to 9 + 15 + 10 = 34. The 4th number is 48 − 34 = 14."
-  }
+  },
+  "tight": true
  },
  "items": [
   {
@@ -214,6 +215,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "Total of 4 scores = 4 × 82 = 328. The known scores add to 78 + 90 + 85 = 253. The 4th score is 328 − 253 = 75. A 5th score equal to the mean, 82, keeps the mean at 82."
   },
   {
@@ -345,10 +351,54 @@
    "explanation": "Total: 1500 + 1600 + 1600 + 1700 + 1800 + 1900 + 9500 = 19600, and 19600 ÷ 7 = 2800. In order the middle (4th) value is 1700. Only the owner earns 9500. The mean is pulled up by that one value, so the median 1700 is more typical."
   },
   {
+   "id": "L6U09-S11",
+   "tier": "start",
+   "text": "The mean mass of 5 children is 40 kg. A 6th child of mass 52 kg joins them.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 5 children weigh {b} kg in all.",
+     "answer": {
+      "value": [
+       "200"
+      ],
+      "text": "200"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With the 6th child the total is {b} kg.",
+     "answer": {
+      "value": [
+       "252"
+      ],
+      "text": "252"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The new mean is {b} kg.",
+     "answer": {
+      "value": [
+       "42"
+      ],
+      "text": "42"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Total of 5 children = 5 × 40 = 200 kg. With the 6th child: 200 + 52 = 252 kg. New mean = 252 ÷ 6 = 42 kg."
+  },
+  {
    "id": "L6U09-S08",
    "tier": "start",
    "text": "The bar chart shows the number of stickers 6 pupils have.",
-   "page": 2,
+   "page": 3,
    "parts": [
     {
      "label": "a",
@@ -507,46 +557,12 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "Add 5 to each: 9, 13, 17. 39 ÷ 3 = 13, which is the old mean + 5. Double each: 8, 16, 24. 48 ÷ 3 = 16, which is the old mean × 2."
-  },
-  {
-   "id": "L6U09-S11",
-   "tier": "start",
-   "text": "The mean mass of 5 children is 40 kg. A 6th child of mass 52 kg joins them.",
-   "page": 3,
-   "parts": [
-    {
-     "label": "a",
-     "text": "The 5 children weigh {b} kg in all.",
-     "answer": {
-      "value": [
-       "200"
-      ],
-      "text": "200"
-     }
-    },
-    {
-     "label": "b",
-     "text": "With the 6th child the total is {b} kg.",
-     "answer": {
-      "value": [
-       "252"
-      ],
-      "text": "252"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The new mean is {b} kg.",
-     "answer": {
-      "value": [
-       "42"
-      ],
-      "text": "42"
-     }
-    }
-   ],
-   "explanation": "Total of 5 children = 5 × 40 = 200 kg. With the 6th child: 200 + 52 = 252 kg. New mean = 252 ÷ 6 = 42 kg."
   },
   {
    "id": "L6U09-T01",

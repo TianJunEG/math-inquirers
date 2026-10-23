@@ -18,6 +18,7 @@ GROUPS = {
     (1, 1, 'g1'): 'Think harder: what comes next?',
     (1, 2, 'g1'): 'Think harder: tens and ones',
     (1, 2, 'g2'): 'Think harder: add in your head',
+    (1, 2, 'g3'): 'Think harder: shapes that stand for numbers',
     (1, 3, 'g1'): 'Think harder: twice as many',
     (1, 4, 'g1'): 'Think harder: days of the week',
     (1, 5, 'g1'): 'Think harder: ages',
@@ -120,7 +121,7 @@ add(id='L1-MA3', level=1, lesson=2, slot='bank', skill='Mental addition: make th
     parts=['a) 8 + 7 = 10 + [ ]', 'b) 38 + 5 = 40 + [ ]', 'c) 46 + 8 = 50 + [ ]'],
     a='a) 5. b) 3. c) 4.', p=dict(rows=[(8, 7, 10), (38, 5, 40), (46, 8, 50)]), ans=[5, 3, 4],
     say='Both sides of the equals sign must be the same.', ask='How many did you give to the first number to reach the next ten?', listen='"Take 2 from the 5 to make 40, 3 are left."')
-add(id='L1-SYM1', level=1, lesson=2, slot='slide', group='g2', skill='Picture equations with two symbols', tool='guess',
+add(id='L1-SYM1', level=1, lesson=2, slot='slide', group='g3', skill='Picture equations with two symbols', tool='guess',
     stem='Each shape stands for a number. The same shape is the same number.',
     parts=['a) Take line 2 away from line 1. What number is the triangle?', 'b) What number is the circle?'],
     fig=('sym', dict(lines=[['tri', '+', 'tri', '+', 'circ', '= 11'], ['tri', '+', 'circ', '= 8']])),
@@ -204,7 +205,7 @@ add(id='L2-LETTER1', level=2, lesson=2, slot='slide', group='g1', skill='Letter-
     stem='Each letter stands for one digit. Different letters stand for different digits. Find A, B and C.',
     fig=('letters', dict(top='A8', bot='C9', res='BC')),
     parts=['A = [ ]    B = [ ]    C = [ ]'],
-    a='A = 1, B = 9, C = 7 (18 + 79 = 97). Ones: 8 + 9 = 17, so C = 7 and carry 1. Tens: A + C + 1 = 10 + B... only A = 1, B = 9 works.', p=dict(top='A8', bot='C9', res='BC'), ans=[1, 9, 7],
+    a='A = 1, B = 9, C = 7 (18 + 79 = 97). Ones: 8 + 9 = 17, so C = 7 and carry 1. Tens: A + 7 + 1 = B, so A + 8 = B. A digit stops at 9, so only A = 1 and B = 9 fit.', p=dict(top='A8', bot='C9', res='BC'), ans=[1, 9, 7],
     say='Start with the ones column, just like the missing-digit sums.', ask='What must 8 + 9 make in the ones? What is the carry? Which letter is it?', listen='The ones column shows C = 7 and a carry. Then test the tens. Ask them to check the whole sum.')
 add(id='L2-SEQ1', level=2, lesson=4, slot='slide', group='g1', skill='Sequences: the gap grows by 1 each time', tool='table',
     stem='Ali writes a pattern: 6, 7, 9, 12, 16, __, __',
