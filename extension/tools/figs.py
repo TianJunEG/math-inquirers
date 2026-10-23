@@ -99,13 +99,14 @@ def tri_dots(counts, width_mm=None):
         while rows * (rows + 1) // 2 < n:
             rows += 1
         w = rows * sp
+        W = max(w, 110)
         for r in range(rows):
             for c in range(r + 1):
-                cx = x0 + w / 2 + (c - r / 2) * sp
+                cx = x0 + W / 2 + (c - r / 2) * sp
                 cy = 24 + r * sp
                 parts.append(f'<circle cx="{cx:.1f}" cy="{cy}" r="11" fill="{YEL}" stroke="{NAVY}" stroke-width="2.4"/>')
-        parts.append(_t(x0 + w / 2, base_y + 26, f'Triangle {counts.index(n) + 1}', 24))
-        x0 += w + 50
+        parts.append(_t(x0 + W / 2, base_y + 26, f'Triangle {counts.index(n) + 1}', 24))
+        x0 += W + 50
     return _wrap(''.join(parts), x0, base_y + 40, 'triangles of dots', width_mm)
 
 
@@ -145,6 +146,7 @@ def render(spec, theme='colour'):
     t = spec['type']
     w = spec.get('width_mm')
     if t == 'tiles':
+        w = w or 150
         s = tiles(spec['items'], spec.get('gaps'), spec.get('hl', ()), w)
     elif t == 'numstrip':
         s = numstrip(spec['start'], spec['end'], spec.get('per_row', 16), tuple(spec.get('circle', ())), w)

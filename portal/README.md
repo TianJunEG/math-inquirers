@@ -51,6 +51,16 @@ The public site has an "Other times" area on each level card (placeholder slots,
 - **Modes:** the form saves to Supabase only in a build made with `--with-portal` and `SUPABASE_URL` / `SUPABASE_ANON_KEY` set (the home page then loads `/portal/config.js`, and the site CSP `connect-src` allows your Supabase origin). Otherwise, or if saving fails, it builds a prefilled WhatsApp message to the business number. The anon key is public by design; nothing secret is in the page.
 - **Tests:** `python3 website/tests/interest_test.py` (Playwright, RPC mocked), `bash portal/supabase/test/run_sql_test.sh` (includes `test/interest_test.sql`).
 
+## Shop interest ("Tell me when it's ready")
+
+The public `/shop/` page lists the extension workbooks as coming soon, with no prices, and a visitor builds a list and leaves a name and a WhatsApp number or email so we can tell them when it is ready. How the shop works and how the owner sets products, prices and status: `docs/shop/README.md`.
+
+- **Review, then apply `portal/supabase/product_interest.sql`** in the Supabase SQL editor (after schema.sql and policies.sql; idempotent; re-run it after any re-run of policies.sql). It creates `public.product_interest` (RLS on, no policy: anon and logged-in users cannot select), the anon-callable `submit_product_interest()` (validates every field and the `{product, format, qty}` items, one request per contact per 24 hours, 300 per hour site-wide, honeypot, no input echoed in errors) and admin-only `admin_product_interest_tally()`, `admin_list_product_interest()`, `admin_set_product_interest_status()`, `admin_delete_product_interest()`, `admin_purge_expired_product_interest()`. It has not been applied by the author.
+- **Retention default: 12 months** (`expires_at`), a default for the owner and a lawyer to confirm; if you change it, change the column default, the consent wording in `website/shop_build.py` and `website/privacy.html`.
+- **Admin view:** `/portal/admin/` > Shop interest tab: tally by product and copy type, the list, mark notified, delete, delete expired. Without the portal, in the SQL editor: `select i->>'product' as product, i->>'format' as format, count(*) as requests, sum((i->>'qty')::int) as copies from public.product_interest, jsonb_array_elements(items) i group by 1, 2 order by 1, 2;`
+- **Build:** the form saves to Supabase only in a `--with-portal` build with real `SUPABASE_URL` / `SUPABASE_ANON_KEY` (same switch as the timing form); otherwise it writes a WhatsApp message to +65 9880 5962.
+- **Tests:** `python3 website/tests/interest_test.py` (also runs `website/tests/shop_test.py`; Playwright, RPC mocked), `bash portal/supabase/test/run_sql_test.sh` (includes `test/product_interest_test.sql`).
+
 ## Local tests
 
 ```

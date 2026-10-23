@@ -54,7 +54,7 @@ def cart(p): return p.evaluate("JSON.parse(localStorage.getItem('mi_cart_v1')||'
 with sync_playwright() as pw:
     b = pw.chromium.launch()
     def ctx(w=1280, portal=False, scheme='light', base=None):
-        c = b.new_context(viewport={'width': w, 'height': 900}, color_scheme=scheme)
+        c = b.new_context(viewport={'width': w, 'height': 900}, color_scheme=scheme); c.set_default_timeout(8000)
         if portal: c.add_init_script("window.MI_CONFIG={SUPABASE_URL:'https://mock.supabase.co',ANON_KEY:'mock-anon-key'};")
         return c
     def page(c):
@@ -143,8 +143,8 @@ with sync_playwright() as pw:
         p.click('#notifyBtn'); expect(p.locator('#notify')).to_be_visible(); p.click('#nfSubmit')
         for t in ['add your first name', 'Give a WhatsApp number or an email', 'Please tick the box']:
             expect(p.locator('#nfForm')).to_contain_text(t)
-        p.uncheck('input[name=nfitem]'); p.click('#nfSubmit'); expect(p.locator('#nfForm')).to_contain_text('Tick at least one workbook')
-        p.check('input[name=nfitem]'); p.fill('#nfName', 'Mei'); p.fill('#nfEmail', 'nope'); p.check('#nfConsent'); p.click('#nfSubmit')
+        p.locator('input[name=nfitem]').evaluate_all('e=>e.forEach(x=>x.checked=false)'); p.click('#nfSubmit'); expect(p.locator('#nfForm')).to_contain_text('Tick at least one workbook')
+        p.locator('input[name=nfitem]').evaluate_all('e=>e.forEach(x=>x.checked=true)'); p.fill('#nfName', 'Mei'); p.fill('#nfEmail', 'nope'); p.check('#nfConsent'); p.click('#nfSubmit')
         expect(p.locator('#nfForm')).to_contain_text('does not look right')
         p.fill('#nfEmail', ''); p.fill('#nfWa', '12'); p.click('#nfSubmit'); expect(p.locator('#nfForm')).to_contain_text('8 or more digits')
         assert p.locator('#nfWaLink').count() == 0, 'nothing may be sent while invalid'

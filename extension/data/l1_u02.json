@@ -1,132 +1,698 @@
 {
- "schema_version": 1, "level": 1, "unit": 2, "id": "L1U02",
- "title": "Make 10 and 20", "topic": "Number bonds", "holiday_lesson": 2,
+ "schema_version": 1,
+ "level": 1,
+ "unit": 2,
+ "id": "L1U02",
+ "title": "Make 10 and 20",
+ "topic": "Number bonds",
+ "holiday_lesson": 2,
  "goal": "I can find the missing partner of a number bond to 10 and to 20, and I can tell when two sides are equal.",
  "learn": {
   "intro": "A number bond is two numbers that make a whole. 6 and 4 make 10. So 6 + 4 = 10 and 10 = 6 + 4. Bonds to 10 help us find bonds to 20.",
   "example": {
    "problem": "Aisha has 20 beads. 14 beads are blue and the rest are white. How many beads are white?",
-   "figure": {"type": "bonds", "items": [{"whole": 20, "a": 14, "b": 6, "label": "20 = 14 + 6"}], "width_mm": 60},
-   "steps": ["The whole is 20. One part is 14. We want the other part.", "14 is 10 and 4 more. We need 4 and some more to make 10: 4 + 6 = 10.", "So 14 + 6 = 20. The other part is 6.", "Check: 14 + 6 = 20."],
+   "figure": {
+    "type": "bonds",
+    "items": [
+     {
+      "whole": 20,
+      "a": 14,
+      "b": 6,
+      "label": "20 = 14 + 6"
+     }
+    ],
+    "width_mm": 60
+   },
+   "steps": [
+    "The whole is 20. One part is 14. We want the other part.",
+    "14 is 10 and 4 more. We need 4 and some more to make 10: 4 + 6 = 10.",
+    "So 14 + 6 = 20. The other part is 6.",
+    "Check: 14 + 6 = 20."
+   ],
    "answer": "6 beads are white. 20 = 14 + 6."
   },
-  "howto": {"title": "How to find the missing partner", "steps": ["Find the whole (the biggest number).", "Look at the ones digit of the part you know. What makes 10 with it?", "Add the partners. Do they make the whole?"]},
+  "howto": {
+   "title": "How to find the missing partner",
+   "steps": [
+    "Find the whole (the biggest number).",
+    "Look at the ones digit of the part you know. What makes 10 with it?",
+    "Add the partners. Do they make the whole?"
+   ]
+  },
   "try": {
-   "id": "L1U02-L01", "text": "Fill in the blank. 20 = 17 + {b}",
-   "answer": {"value": ["3"], "text": "3"},
+   "id": "L1U02-L01",
+   "text": "Fill in the blank. 20 = 17 + {b}",
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3"
+   },
    "explanation": "7 and 3 make 10, so 17 and 3 make 20. Check: 17 + 3 = 20."
   }
  },
  "items": [
-  {"id": "L1U02-S01", "tier": "start", "page": 1, "text": "Look at the ten-frame.",
-   "figure": {"type": "ten_frame", "filled": 4, "width_mm": 70},
+  {
+   "id": "L1U02-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the ten-frame.",
+   "figure": {
+    "type": "ten_frame",
+    "filled": 4,
+    "width_mm": 70
+   },
    "parts": [
-    {"label": "a", "text": "How many more counters fill the frame? {b} counters", "answer": {"value": ["6"], "text": "6 counters"}},
-    {"label": "b", "text": "10 = 4 + {b}", "answer": {"value": ["6"], "text": "10 = 4 + 6"}}],
-   "explanation": "The frame has 10 spaces. 4 are full, so 6 are empty. 4 + 6 = 10."},
-  {"id": "L1U02-S02", "tier": "start", "page": 1, "text": "Fill in the missing numbers.",
+    {
+     "label": "a",
+     "text": "How many more counters fill the frame? {b} counters",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6 counters"
+     }
+    },
+    {
+     "label": "b",
+     "text": "10 = 4 + {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "10 = 4 + 6"
+     }
+    }
+   ],
+   "explanation": "The frame has 10 spaces. 4 are full, so 6 are empty. 4 + 6 = 10."
+  },
+  {
+   "id": "L1U02-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the missing numbers.",
    "parts": [
-    {"label": "a", "text": "10 = 8 + {b}", "answer": {"value": ["2"], "text": "2"}},
-    {"label": "b", "text": "10 = {b} + 3", "answer": {"value": ["7"], "text": "7"}},
-    {"label": "c", "text": "10 = 5 + {b}", "answer": {"value": ["5"], "text": "5"}},
-    {"label": "d", "text": "10 = 1 + {b}", "answer": {"value": ["9"], "text": "9"}}],
-   "explanation": "Think of the partner that makes 10: 8 and 2, 7 and 3, 5 and 5, 1 and 9."},
-  {"id": "L1U02-S03", "tier": "start", "page": 1, "text": "Kumar has 10 marbles. 6 marbles are in his pocket. The rest are in a bag. How many marbles are in the bag? {b} marbles",
-   "answer": {"value": ["4"], "text": "4 marbles"},
-   "explanation": "6 and 4 make 10, so 4 marbles are in the bag."},
-  {"id": "L1U02-S04", "tier": "start", "page": 1, "text": "Write the partner that makes 10.\n1 and {b}     3 and {b}     6 and {b}     8 and {b}",
-   "answer": {"value": ["9", "7", "4", "2"], "text": "9, 7, 4, 2"},
-   "explanation": "1 + 9 = 10, 3 + 7 = 10, 6 + 4 = 10, 8 + 2 = 10."},
-  {"id": "L1U02-S05", "tier": "start", "page": 2, "text": "Write the missing number in each bond.",
-   "figure": {"type": "bonds", "items": [{"whole": 12, "a": 7, "b": null}, {"whole": null, "a": 6, "b": 8}], "width_mm": 120},
-   "answer": {"value": ["5", "14"], "text": "5 and 14"},
-   "explanation": "First bond: 12 = 7 + 5. Second bond: the two parts 6 and 8 make 14."},
-  {"id": "L1U02-S06", "tier": "start", "page": 2, "text": "Fill in the missing numbers.",
+    {
+     "label": "a",
+     "text": "10 = 8 + {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "10 = {b} + 3",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "10 = 5 + {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "d",
+     "text": "10 = 1 + {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
+   "explanation": "Think of the partner that makes 10: 8 and 2, 7 and 3, 5 and 5, 1 and 9."
+  },
+  {
+   "id": "L1U02-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Kumar has 10 marbles. 6 marbles are in his pocket. The rest are in a bag. How many marbles are in the bag? {b} marbles",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4 marbles"
+   },
+   "explanation": "6 and 4 make 10, so 4 marbles are in the bag."
+  },
+  {
+   "id": "L1U02-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Write the partner that makes 10.\n1 and {b}     3 and {b}     6 and {b}     8 and {b}",
+   "answer": {
+    "value": [
+     "9",
+     "7",
+     "4",
+     "2"
+    ],
+    "text": "9, 7, 4, 2"
+   },
+   "explanation": "1 + 9 = 10, 3 + 7 = 10, 6 + 4 = 10, 8 + 2 = 10."
+  },
+  {
+   "id": "L1U02-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Write the missing number in each bond.",
+   "figure": {
+    "type": "bonds",
+    "items": [
+     {
+      "whole": 12,
+      "a": 7,
+      "b": null
+     },
+     {
+      "whole": null,
+      "a": 6,
+      "b": 8
+     }
+    ],
+    "width_mm": 120
+   },
+   "answer": {
+    "value": [
+     "5",
+     "14"
+    ],
+    "text": "5 and 14"
+   },
+   "explanation": "First bond: 12 = 7 + 5. Second bond: the two parts 6 and 8 make 14."
+  },
+  {
+   "id": "L1U02-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Fill in the missing numbers.",
    "parts": [
-    {"label": "a", "text": "20 = 15 + {b}", "answer": {"value": ["5"], "text": "5"}},
-    {"label": "b", "text": "20 = {b} + 14", "answer": {"value": ["6"], "text": "6"}},
-    {"label": "c", "text": "20 = 18 + {b}", "answer": {"value": ["2"], "text": "2"}},
-    {"label": "d", "text": "20 = 11 + {b}", "answer": {"value": ["9"], "text": "9"}}],
+    {
+     "label": "a",
+     "text": "20 = 15 + {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "20 = {b} + 14",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "20 = 18 + {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "d",
+     "text": "20 = 11 + {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
    "hint": "Look at the ones digit. What makes 10 with it?",
-   "explanation": "5 + 5 = 10, 4 + 6 = 10, 8 + 2 = 10, 1 + 9 = 10. So the partners to 20 are 5, 6, 2 and 9."},
-  {"id": "L1U02-S07", "tier": "start", "page": 2, "text": "7 + 3 = 10. Use it to fill in the blanks.\n17 + {b} = 20     27 + {b} = 30     47 + {b} = 50",
-   "answer": {"value": ["3", "3", "3"], "text": "3, 3, 3"},
-   "explanation": "The ones digit is 7 each time. 7 + 3 = 10, so each number needs 3 more to reach the next ten."},
-  {"id": "L1U02-S08", "tier": "start", "page": 2, "text": "Mei has a shelf for 20 books. There are 16 books on the shelf. How many more books fit? {b} books",
-   "answer": {"value": ["4"], "text": "4 books"},
-   "explanation": "16 + 4 = 20, because 6 + 4 = 10."},
-  {"id": "L1U02-S09", "tier": "start", "page": 3, "text": "Fill in the missing number. Both sides must be equal.",
+   "explanation": "5 + 5 = 10, 4 + 6 = 10, 8 + 2 = 10, 1 + 9 = 10. So the partners to 20 are 5, 6, 2 and 9."
+  },
+  {
+   "id": "L1U02-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "7 + 3 = 10. Use it to fill in the blanks.\n17 + {b} = 20     27 + {b} = 30     47 + {b} = 50",
+   "answer": {
+    "value": [
+     "3",
+     "3",
+     "3"
+    ],
+    "text": "3, 3, 3"
+   },
+   "explanation": "The ones digit is 7 each time. 7 + 3 = 10, so each number needs 3 more to reach the next ten."
+  },
+  {
+   "id": "L1U02-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Mei has a shelf for 20 books. There are 16 books on the shelf. How many more books fit? {b} books",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4 books"
+   },
+   "explanation": "16 + 4 = 20, because 6 + 4 = 10."
+  },
+  {
+   "id": "L1U02-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Fill in the missing number. Both sides must be equal.",
    "parts": [
-    {"label": "a", "text": "6 + 5 = 7 + {b}", "answer": {"value": ["4"], "text": "4"}},
-    {"label": "b", "text": "8 + 2 = 5 + {b}", "answer": {"value": ["5"], "text": "5"}},
-    {"label": "c", "text": "9 + 4 = {b} + 5", "answer": {"value": ["8"], "text": "8"}}],
-   "explanation": "The sign = means both sides have the same value. 6 + 5 = 11, and 7 + 4 = 11. 8 + 2 = 10, and 5 + 5 = 10. 9 + 4 = 13, and 8 + 5 = 13."},
-  {"id": "L1U02-S10", "tier": "start", "page": 3, "text": "Look at the pairs that make 9.",
+    {
+     "label": "a",
+     "text": "6 + 5 = 7 + {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "8 + 2 = 5 + {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "9 + 4 = {b} + 5",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "The sign = means both sides have the same value. 6 + 5 = 11, and 7 + 4 = 11. 8 + 2 = 10, and 5 + 5 = 10. 9 + 4 = 13, and 8 + 5 = 13."
+  },
+  {
+   "id": "L1U02-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the pairs that make 9.",
    "parts": [
-    {"label": "a", "text": "1 + 8 = 9     2 + {b} = 9     3 + {b} = 9     4 + {b} = 9", "answer": {"value": ["7", "6", "5"], "text": "7, 6, 5"}},
-    {"label": "b", "text": "The first numbers go up by 1. The second numbers go {circ:up|down} by 1.", "answer": {"value": ["down"], "text": "down"}}],
-   "explanation": "2 + 7, 3 + 6 and 4 + 5 all make 9. When one number goes up by 1, the other goes down by 1, so the total stays 9."},
-  {"id": "L1U02-S11", "tier": "start", "page": 3, "text": "Circle True or False.",
+    {
+     "label": "a",
+     "text": "1 + 8 = 9     2 + {b} = 9     3 + {b} = 9     4 + {b} = 9",
+     "answer": {
+      "value": [
+       "7",
+       "6",
+       "5"
+      ],
+      "text": "7, 6, 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The first numbers go up by 1. The second numbers go {circ:up|down} by 1.",
+     "answer": {
+      "value": [
+       "down"
+      ],
+      "text": "down"
+     }
+    }
+   ],
+   "explanation": "2 + 7, 3 + 6 and 4 + 5 all make 9. When one number goes up by 1, the other goes down by 1, so the total stays 9."
+  },
+  {
+   "id": "L1U02-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
    "parts": [
-    {"label": "a", "text": "4 + 6 = 10   {circ:True|False}", "answer": {"value": ["True"], "text": "True"}},
-    {"label": "b", "text": "8 + 3 = 10   {circ:True|False}", "answer": {"value": ["False"], "text": "False"}},
-    {"label": "c", "text": "13 + 7 = 20   {circ:True|False}", "answer": {"value": ["True"], "text": "True"}},
-    {"label": "d", "text": "15 + 6 = 20   {circ:True|False}", "answer": {"value": ["False"], "text": "False"}}],
-   "explanation": "8 + 3 = 11, not 10. 15 + 6 = 21, not 20. The other two are correct bonds."},
-  {"id": "L1U02-S12", "tier": "start", "page": 3, "text": "There are 20 children in a club. 7 children are girls. The rest are boys. How many boys are in the club? {b} boys",
-   "answer": {"value": ["13"], "text": "13 boys"},
-   "explanation": "7 + 3 = 10, so 7 + 13 = 20. There are 13 boys."},
-  {"id": "L1U02-S13", "tier": "start", "page": 3, "text": "Kumar has 8 stickers.",
+    {
+     "label": "a",
+     "text": "4 + 6 = 10   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "8 + 3 = 10   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "13 + 7 = 20   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "d",
+     "text": "15 + 6 = 20   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "8 + 3 = 11, not 10. 15 + 6 = 21, not 20. The other two are correct bonds."
+  },
+  {
+   "id": "L1U02-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "There are 20 children in a club. 7 children are girls. The rest are boys. How many boys are in the club? {b} boys",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 boys"
+   },
+   "explanation": "7 + 3 = 10, so 7 + 13 = 20. There are 13 boys."
+  },
+  {
+   "id": "L1U02-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Kumar has 8 stickers.",
    "parts": [
-    {"label": "a", "text": "How many more stickers does he need to get 10 stickers? {b} stickers", "answer": {"value": ["2"], "text": "2 stickers"}},
-    {"label": "b", "text": "How many more stickers does he need to get 20 stickers? {b} stickers", "answer": {"value": ["12"], "text": "12 stickers"}}],
-   "explanation": "8 + 2 = 10. From 10 to 20 is 10 more, so 8 + 12 = 20."},
-
-  {"id": "L1U02-T01", "tier": "think", "page": 4, "text": "Ravi puts 14 marbles into two bags. The first bag has fewer marbles than the second bag. Each bag has at least 1 marble. Write every way in the table.",
-   "parts": [{"label": "", "text": "How many ways are there? {b}", "answer": {"value": ["6"], "text": "6 ways"}}],
-   "space": {"table": {"cols": ["First bag", "Second bag"], "rows": 6}},
+    {
+     "label": "a",
+     "text": "How many more stickers does he need to get 10 stickers? {b} stickers",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2 stickers"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many more stickers does he need to get 20 stickers? {b} stickers",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12 stickers"
+     }
+    }
+   ],
+   "explanation": "8 + 2 = 10. From 10 to 20 is 10 more, so 8 + 12 = 20."
+  },
+  {
+   "id": "L1U02-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Ravi puts 14 marbles into two bags. The first bag has fewer marbles than the second bag. Each bag has at least 1 marble. Write every way in the table.",
+   "parts": [
+    {
+     "label": "",
+     "text": "How many ways are there? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6 ways"
+     }
+    }
+   ],
+   "space": {
+    "table": {
+     "cols": [
+      "First bag",
+      "Second bag"
+     ],
+     "rows": 6
+    }
+   },
    "hint": "Start with 1 marble in the first bag. Then 2. Keep going until the first bag is not fewer than the second.",
-   "explanation": "The ways are 1 and 13, 2 and 12, 3 and 11, 4 and 10, 5 and 9, 6 and 8. 7 and 7 is not allowed because the first bag must have fewer."},
-  {"id": "L1U02-T02", "tier": "think", "page": 4, "text": "Each shape stands for a number. The same shape is always the same number.",
+   "explanation": "The ways are 1 and 13, 2 and 12, 3 and 11, 4 and 10, 5 and 9, 6 and 8. 7 and 7 is not allowed because the first bag must have fewer."
+  },
+  {
+   "id": "L1U02-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Each shape stands for a number. The same shape is always the same number.",
    "parts": [
-    {"label": "a", "text": "★ + ★ + 5 = 17.   ★ = {b}", "answer": {"value": ["6"], "text": "★ = 6"}},
-    {"label": "b", "text": "● + ● + ● = 21.   ● = {b}", "answer": {"value": ["7"], "text": "● = 7"}}],
+    {
+     "label": "a",
+     "text": "★ + ★ + 5 = 17.   ★ = {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "★ = 6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "● + ● + ● = 21.   ● = {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "● = 7"
+     }
+    }
+   ],
    "hint": "Take 5 away from 17 first. Then share what is left between the two stars.",
-   "explanation": "(a) 17 - 5 = 12, and 6 + 6 = 12, so ★ = 6. (b) Three equal numbers make 21: 7 + 7 + 7 = 21, so ● = 7."},
-  {"id": "L1U02-T03", "tier": "think", "page": 4, "text": "Three different numbers from 1 to 6 add up to 9. Find every set of three.",
-   "answer": {"value": ["1,2,6", "1,3,5", "2,3,4"], "text": "1 + 2 + 6, 1 + 3 + 5 and 2 + 3 + 4"},
-   "space": {"rows": ["{b} + {b} + {b} = 9", "{b} + {b} + {b} = 9", "{b} + {b} + {b} = 9"]},
+   "explanation": "(a) 17 - 5 = 12, and 6 + 6 = 12, so ★ = 6. (b) Three equal numbers make 21: 7 + 7 + 7 = 21, so ● = 7."
+  },
+  {
+   "id": "L1U02-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Three different numbers from 1 to 6 add up to 9. Find every set of three.",
+   "answer": {
+    "value": [
+     "1,2,6",
+     "1,3,5",
+     "2,3,4"
+    ],
+    "text": "1 + 2 + 6, 1 + 3 + 5 and 2 + 3 + 4"
+   },
+   "space": {
+    "rows": [
+     "{b} + {b} + {b} = 9",
+     "{b} + {b} + {b} = 9",
+     "{b} + {b} + {b} = 9"
+    ]
+   },
    "hint": "Write the numbers from smallest to biggest. Start with 1 as the smallest number.",
-   "explanation": "With 1 as the smallest: 1 + 2 + 6 and 1 + 3 + 5. With 2 as the smallest: 2 + 3 + 4. The smallest number cannot be 3 or more, because 3 + 4 + 5 = 12."},
-  {"id": "L1U02-T04", "tier": "think", "page": 4, "text": "Ali has 16 stickers. Mei has 8 stickers. Ali gives some stickers to Mei. Then they have the same number.",
+   "explanation": "With 1 as the smallest: 1 + 2 + 6 and 1 + 3 + 5. With 2 as the smallest: 2 + 3 + 4. The smallest number cannot be 3 or more, because 3 + 4 + 5 = 12."
+  },
+  {
+   "id": "L1U02-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali has 16 stickers. Mei has 8 stickers. Ali gives some stickers to Mei. Then they have the same number.",
    "parts": [
-    {"label": "a", "text": "How many stickers does Ali give Mei? {b} stickers", "answer": {"value": ["4"], "text": "4 stickers"}},
-    {"label": "b", "text": "How many stickers does each child have now? {b} stickers", "answer": {"value": ["12"], "text": "12 stickers"}}],
+    {
+     "label": "a",
+     "text": "How many stickers does Ali give Mei? {b} stickers",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4 stickers"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many stickers does each child have now? {b} stickers",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12 stickers"
+     }
+    }
+   ],
    "hint": "Put all the stickers together. Share them equally between two children.",
-   "explanation": "16 + 8 = 24 stickers. Shared equally, each child has 12. Ali goes from 16 to 12, so he gives 4."},
-
-  {"id": "L1U02-G01", "tier": "go", "page": 5, "text": "Mei puts 17 sweets in two jars. Jar A has 5 more sweets than Jar B.",
+   "explanation": "16 + 8 = 24 stickers. Shared equally, each child has 12. Ali goes from 16 to 12, so he gives 4."
+  },
+  {
+   "id": "L1U02-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Mei puts 17 sweets in two jars. Jar A has 5 more sweets than Jar B.",
    "parts": [
-    {"label": "a", "text": "Jar A has {b} sweets.", "answer": {"value": ["11"], "text": "11 sweets"}},
-    {"label": "b", "text": "Jar B has {b} sweets.", "answer": {"value": ["6"], "text": "6 sweets"}}],
+    {
+     "label": "a",
+     "text": "Jar A has {b} sweets.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11 sweets"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Jar B has {b} sweets.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6 sweets"
+     }
+    }
+   ],
    "hint": "Take away the 5 extra sweets. Share what is left between the two jars.",
-   "explanation": "17 - 5 = 12. Shared equally, each jar gets 6. Jar A also has the 5 extra: 6 + 5 = 11. Check: 11 + 6 = 17."},
-  {"id": "L1U02-G02", "tier": "go", "page": 5, "text": "I am a number. Add 7 to me. The answer ends in 0 and is between 15 and 45. What can I be? Find them all.",
-   "answer": {"value": ["13", "23", "33"], "text": "13, 23 and 33"},
-   "space": {"rows": ["The answer can be:", "So I can be:"]},
+   "explanation": "17 - 5 = 12. Shared equally, each jar gets 6. Jar A also has the 5 extra: 6 + 5 = 11. Check: 11 + 6 = 17."
+  },
+  {
+   "id": "L1U02-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "I am a number. Add 7 to me. The answer ends in 0 and is between 15 and 45. What can I be? Find them all.",
+   "answer": {
+    "value": [
+     "13",
+     "23",
+     "33"
+    ],
+    "text": "13, 23 and 33"
+   },
+   "space": {
+    "rows": [
+     "The answer can be:",
+     "So I can be:"
+    ]
+   },
    "hint": "First write the numbers between 15 and 45 that end in 0.",
-   "explanation": "The numbers that end in 0 between 15 and 45 are 20, 30 and 40. Take away 7 from each: 13, 23 and 33."},
-  {"id": "L1U02-G03", "tier": "go", "page": 5, "text": "Pick two different numbers from 1, 2, 3, 4, 5 and add them.",
+   "explanation": "The numbers that end in 0 between 15 and 45 are 20, 30 and 40. Take away 7 from each: 13, 23 and 33."
+  },
+  {
+   "id": "L1U02-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Pick two different numbers from 1, 2, 3, 4, 5 and add them.",
    "parts": [
-    {"label": "a", "text": "Write every total you can make, from smallest to biggest. {l}", "answer": {"value": ["3", "4", "5", "6", "7", "8", "9"], "text": "3, 4, 5, 6, 7, 8, 9"}},
-    {"label": "b", "text": "Which totals can you make in only one way? {l}", "answer": {"value": ["3", "4", "8", "9"], "text": "3, 4, 8 and 9"}}],
-   "space": {"rows": ["My pairs:", ""]},
+    {
+     "label": "a",
+     "text": "Write every total you can make, from smallest to biggest. {l}",
+     "answer": {
+      "value": [
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8",
+       "9"
+      ],
+      "text": "3, 4, 5, 6, 7, 8, 9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which totals can you make in only one way? {l}",
+     "answer": {
+      "value": [
+       "3",
+       "4",
+       "8",
+       "9"
+      ],
+      "text": "3, 4, 8 and 9"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "My pairs:",
+     ""
+    ]
+   },
    "hint": "List the pairs in order: 1 + 2, 1 + 3, 1 + 4, 1 + 5, then 2 + 3 ...",
-   "explanation": "The pairs are 1+2=3, 1+3=4, 1+4=5, 1+5=6, 2+3=5, 2+4=6, 2+5=7, 3+4=7, 3+5=8, 4+5=9. The totals are 3 to 9. 5, 6 and 7 can each be made two ways. 3, 4, 8 and 9 only one way."},
-
-  {"id": "L1U02-C01", "tier": "quiz", "page": 5, "text": "10 = 2 + {b}", "answer": {"value": ["8"], "text": "8"}, "explanation": "2 and 8 make 10."},
-  {"id": "L1U02-C02", "tier": "quiz", "page": 5, "text": "20 = 6 + {b}", "answer": {"value": ["14"], "text": "14"}, "explanation": "6 and 4 make 10, so 6 and 14 make 20."},
-  {"id": "L1U02-C03", "tier": "quiz", "page": 5, "text": "7 + 5 = 9 + {b}", "answer": {"value": ["3"], "text": "3"}, "explanation": "7 + 5 = 12. 9 and 3 make 12."},
-  {"id": "L1U02-C04", "tier": "quiz", "page": 5, "text": "There are 20 flowers. 11 are red. The rest are yellow. How many flowers are yellow? {b} flowers", "answer": {"value": ["9"], "text": "9 flowers"}, "explanation": "11 + 9 = 20, because 1 + 9 = 10."}
+   "explanation": "The pairs are 1+2=3, 1+3=4, 1+4=5, 1+5=6, 2+3=5, 2+4=6, 2+5=7, 3+4=7, 3+5=8, 4+5=9. The totals are 3 to 9. 5, 6 and 7 can each be made two ways. 3, 4, 8 and 9 only one way."
+  },
+  {
+   "id": "L1U02-C01",
+   "tier": "quiz",
+   "page": 5,
+   "text": "10 = 2 + {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "2 and 8 make 10."
+  },
+  {
+   "id": "L1U02-C02",
+   "tier": "quiz",
+   "page": 5,
+   "text": "20 = 6 + {b}",
+   "answer": {
+    "value": [
+     "14"
+    ],
+    "text": "14"
+   },
+   "explanation": "6 and 4 make 10, so 6 and 14 make 20."
+  },
+  {
+   "id": "L1U02-C03",
+   "tier": "quiz",
+   "page": 5,
+   "text": "7 + 5 = 9 + {b}",
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3"
+   },
+   "explanation": "7 + 5 = 12. 9 and 3 make 12."
+  },
+  {
+   "id": "L1U02-C04",
+   "tier": "quiz",
+   "page": 5,
+   "text": "There are 20 flowers. 11 are red. The rest are yellow. How many flowers are yellow? {b} flowers",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9 flowers"
+   },
+   "explanation": "11 + 9 = 20, because 1 + 9 = 10."
+  }
  ]
 }

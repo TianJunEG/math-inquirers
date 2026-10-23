@@ -139,7 +139,7 @@ def run(d):
     q = T['S3']; eq((50 // 10, 50 // 5, q['val']), (5, 10, [5, 10]), 'S3'); eq(pieces(q['visual']), [50], 'S3 picture is one 50c coin')
     q = T['S4']; row = pieces(q['visual']); eq(tuple(sorted(row)), WORKBOOK_SETS['S4 row'], 'S4 row')
     subs = sorted({tuple(sorted(row[i] for i in idx)) for r in range(1, len(row) + 1) for idx in itertools.combinations(range(len(row)), r) if sum(row[i] for i in idx) == 55})
-    eq(subs, [(5, 50)], 'S4 only one set of coin values makes 55c'); eq(q['val'], [55], 'S4 val'); eq(sum(row), 100, 'S4 row is larger than needed (it holds 100c)')
+    eq(subs, [(5, 50)], 'S4 only one set of coin values makes 55c'); eq(q['val'], [50, 5], 'S4 val (the two coins circled)'); eq(sum(row), 100, 'S4 row is larger than needed (it holds 100c)')
     q = T['S5']; fs = M(q); eq([total(x) for x in fs], [200, 100], 'S5 pictures'); eq(('$2 note' if total(fs[0]) > total(fs[1]) else '$1 coin', q['val']), ('$2 note', ['$2 note']), 'S5'); eq(q['parts'][0]['choices'], ['$2 note', '$1 coin'], 'S5 choices')
     q = T['S6']; eq((tags(q)[0]['price'], total(M(q)[0]), (total(M(q)[0]) - 300) // 100, q['val']), ('$3', 500, 2, [2]), 'S6'); eq(WORKBOOK_CHANGE['S6'], (300, 500), 'registry')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes')
@@ -149,7 +149,7 @@ def run(d):
     q = T['T2']; ways = [(a, b) for a in range(0, 6) for b in range(0, 3) if 10 * a + 20 * b == 50]
     eq(ways, [(1, 2), (3, 1), (5, 0)], 'T2 brute force: exactly 3 ways to make 50c from 10c and 20c coins'); rows = q['visual']['rows']
     eq((int(rows[0][0]), int(rows[0][1]), rows[1], rows[2]), (5, 0, ['[]', '[]'], ['[]', '[]']), 'T2 one row given, two to find'); eq(sorted(q['val']), [[1, 2], [3, 1]], 'T2 val = the other two ways')
-    q = T['T3']; eq((cents('$1'), cents('$1') - 60, q['val']), (100, 40, [100, 40]), 'T3'); eq('60¢' in q['text'], True, 'T3 text'); eq(WORKBOOK_CHANGE['T3'], (60, 100), 'registry')
+    q = T['T3']; eq((cents('$1'), cents('$1') - 40, q['val']), (100, 60, [100, 60]), 'T3 works backwards: $1 paid, 40c change, the price is 60c'); eq('40¢' in q['text'], True, 'T3 text'); eq(WORKBOOK_CHANGE['T3'], (60, 100), 'registry')
     q = T['T4']; sets_ = {f['label']: f for f in M(q)}; tot = {k: total(v) for k, v in sets_.items()}
     eq(tot, {'Set A': 80, 'Set B': 70, 'Set C': 60}, 'T4 totals'); eq(max(tot, key=tot.get), 'Set A', 'T4 most money'); eq(max(sets_, key=lambda k: len(pieces(sets_[k]))), 'Set B', 'T4 Set B has the most coins but not the most money')
     eq((tot['Set A'] - tot['Set C'], q['val']), (20, ['A', 20]), 'T4 difference'); eq([cat(sets_['Set A']), cat(sets_['Set B']), cat(sets_['Set C'])], [WORKBOOK_SETS['T4 A'], WORKBOOK_SETS['T4 B'], WORKBOOK_SETS['T4 C']], 'T4 registry')
@@ -185,7 +185,7 @@ def run(d):
     items = {i['id']: i for i in d['online_practice']['items']}
     for cid, want in (('c1', 35), ('c2', 17), ('c3', 2), ('c4', 4), ('t1', 40), ('t2', 1), ('g1', 5), ('g2', 7)):
         eq(items[cid]['answer'] if 'answer' in items[cid] else None, want, cid + ' authored answer')
-    eq(items['t3']['answer'], [3, 1], 't3'); eq(10 * 3 + 20 * 1, 50, 't3 coins make 50c'); eq(items['c5']['answer'], 'the $2 note', 'c5')
+    eq(items['t3']['answer'], 3, 't3'); eq(items['t3']['type'], 'number', 't3 is one number'); eq(10 * 3 + 20 * 1, 50, 't3 coins make 50c'); eq(items['c5']['answer'], 'the $2 note', 'c5')
     for cid, env in BASE_ENV.items():
         eq(ORACLES[cid](env), items[cid]['answer'], cid + ' oracle at the authored numbers')
     eq(total(items['c1']['fig_base']), 35, 'c1 picture')

@@ -79,11 +79,11 @@ CLASS = {
     'opt': [('wrong', 8, '+', 7, 14)],
 }
 WORKBOOK = {
-    'S1': [('right', 41, '-', 17, 24)], 'S2': [('wrong', 50, '-', 23, 37)], 'S3': [('steps3', 36, 28)], 'S4': [('time', 2, 30, 60)], 'S5': [('money', 9, 4, 12)],
+    'S1': [('right', 41, '-', 17, 24)], 'S2': [('wrong', 50, '-', 23, 37)], 'S3': [('steps3', 36, 28)], 'S4': [('time', 2, 30, 60)], 'S5': [('money', 7, 5, 10)],
     'S6': [('tf', 25, '+', 30, 55), ('tf', 56, '-', 20, 46), ('tf', 24, '+', 9, 33), ('tf', 80, '-', 5, 85)],
     'T1': [('steps2c', 74, 29)], 'T2': [('two', 58, 27, 75, 85)], 'T3': [('fewer', 28, 6)], 'T4': [('time', 7, 30, 30)],
     'G1': [('big', 52, 39, 191)], 'G2': [('column', 47, 38, 75)], 'I1': [('wrong', 25, '+', 19, 34), ('wrong', 36, '+', 27, 53), ('wrong', 48, '+', 35, 73)],
-    'E1': [('wrong', 63, '-', 28, 45)], 'E2': [('steps3b', 28, 15)], 'E3': [('left', 20, 12, 9)],
+    'E1': [('wrong', 82, '-', 47, 45)], 'G3': [('wrong', 38, '+', 15, 43)], 'E2': [('steps3b', 28, 15)], 'E3': [('left', 20, 12, 9)],
     'H1': [('wrong', 34, '+', 18, 42)], 'H2': [('time', 3, 30, 30)], 'H3': [('left', 15, 6, 11)], 'H4': [('two', 46, 38, 74, 84)], 'H5': [('longer', 14, 9)],
 }
 
@@ -154,7 +154,7 @@ def _g2(e):
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c3': _c3, 't1': _t1, 't2': _t2, 't3': _t3, 'g1': _g1, 'g2': _g2}
-BASE_ENV = {'c1': dict(a=40, b=30), 'c3': dict(a=45, b=28), 't1': dict(a=42, b=8), 't3': dict(a=28, b=6), 'g1': dict(m=50, a=12, b=9), 'g2': dict(a=74)}
+BASE_ENV = {'c1': dict(a=40, b=30), 'c3': dict(a=39, b=24), 't1': dict(a=42, b=8), 't3': dict(a=36, b=7), 'g1': dict(m=50, a=12, b=9), 'g2': dict(a=63)}
 
 
 def run(d):
@@ -233,7 +233,8 @@ def run(d):
     st = [sums_in(r)[0] for r in rows]; eq([is_true(*s) for s in st], [True, False, True], 'S3 exactly one wrong step (step 2); step 3 is right work from the wrong number'); eq(plus(36, 28), 64, 'S3 right answer'); eq((plus(36, 4), plus(40, 20), plus(60, 4)), (40, 60, 64), 'S3 fixed steps'); eq(q['val'], ['2', 64], 'S3 val')
     q = T['S4']; eq((q['visual']['h'], q['visual']['m']), (2, 30), 'S4 clock'); eq(clock_after(2, 30, 60), (3, 30), 'S4 one hour later'); eq(fmt(3, 0) == fmt(*clock_after(2, 30, 60)), False, 'S4 3:00 is wrong'); eq(q['val'], ['No', '3:30'], 'S4 val')
     eq(clock_after(2, 30, 60)[1] in (0, 30), True, 'S4 o\'clock or half past only')
-    q = T['S5']; eq(sorted((v['item'], v['price']) for v in q['visuals']), [('bag', '$9'), ('cup', '$4')], 'S5 tags'); eq(plus(9, 4), 13, 'S5'); eq(plus(9, 4) == 12, False, 'S5 12 is wrong'); eq(minus(12, 9), 3, 'S5 check'); eq(q['val'], ['No', 13], 'S5 val')
+    q = T['S5']; eq(sorted((v['item'], v['price']) for v in q['visuals']), [('bag', '$7'), ('cup', '$5')], 'S5 tags'); eq(plus(7, 5), 12, 'S5'); eq(plus(7, 5) == 10, False, 'S5 10 is wrong'); eq(minus(10, 7), 3, 'S5 check'); eq(minus(10, 7) == 5, False, 'S5 check fails'); eq(nums(q['text']), [7, 5, 10], 'S5 text'); eq(q['val'], ['No', 12], 'S5 val')
+    eq(sorted({4, 9, 15} & set(nums(q['text']))), [], 'S5 shares no number with the Mini-lesson wrong-total example (pen 4, book 9, 15)')
     q = T['S6']; st = [sums_in(s['s'])[0] for s in q['tf']]; eq([is_true(*s) for s in st], [True, False, True, False], 'S6 truth values'); eq(q['val'], ['True', 'False', 'True', 'False'], 'S6 val')
     eq(minus(56, 20), 36, 'S6 56-20'); eq(minus(80, 5), 75, 'S6 80-5')
     eq(sum(x['mins'] for x in d['tiers']['start']) <= 20, True, 'Start here within 20 minutes')
@@ -260,7 +261,9 @@ def run(d):
     eq((plus(29, 14), plus(9, 4) >= 10), (43, True), 'I1 answer example 29 + 14')
     # ---------------------------------------------------------------- talk, exit
     eq(sums_in(d['talk']['question']), [(45, '+', 28, 63)], 'talk sum'); eq(minus(63, 28), 35, 'talk check'); eq(plus(45, 28), 73, 'talk right answer')
-    q = X['E1']; eq(sums_in(q['text']), [(63, '-', 28, 45)], 'E1'); eq(plus(45, 28), 73, 'E1 add back'); eq(is_true(63, '-', 28, 45), False, 'E1 is wrong'); eq(minus(63, 28), 35, 'E1 right'); eq(q['val'], [73, 'No'], 'E1 val')
+    q = X['E1']; eq(sums_in(q['text']), [(82, '-', 47, 45)], 'E1'); eq(plus(45, 47), 92, 'E1 add back'); eq(is_true(82, '-', 47, 45), False, 'E1 is wrong'); eq(minus(82, 47), 35, 'E1 right'); eq(plus(35, 47), 82, 'E1 right checks'); eq(q['val'], [92, 'No'], 'E1 val')
+    eq(set(nums(q['text'])) & {63, 28, 45 + 28}, set(), 'E1 does not turn the Talk sum (45 + 28 = 63) round')
+    eq(sums_in(T['G3']['solution'])[0], (38, '+', 15, 43), 'G3 example sum'); eq(plus(38, 15), 53, 'G3 example right answer'); eq(minus(43, 15), 28, 'G3 example add-back check'); eq(set(nums(T['G3']['solution'])) & {36, 27, 53 - 0} - {53}, set(), 'G3 example is not the Investigation sum')
     q = X['E2']; opts = q['mcq']['options']
     parsed2 = [sums_in(o)[0] for o in opts]
     eq([is_true(*s) for s in parsed2], [True, False, True], 'E2 truth of each written step (step 3 is right work from the wrong 12)' if False else 'E2 truth of each written step'); eq(minus(15, 2), 13, 'E2 step 2 right is 13'); eq(plus(30, 13), 43, 'E2 final'); eq(plus(28, 15), 43, 'E2 right answer'); eq(plus(30, 12) == 42, True, 'E2 step 3 is right work from the wrong number 12')
@@ -278,9 +281,13 @@ def run(d):
     for cid, env in BASE_ENV.items():
         eq(items[cid]['answer'], ORACLES[cid](env), cid + ' authored answer')
     eq(items['c2']['answer'], 'No', 'c2 authored'); eq(take_back_ok(37, 25, 52), False, 'c2 authored sum is wrong'); eq(plus(37, 25), 62, 'c2 authored right answer')
-    eq(items['c4']['answer'], 'Step 2', 'c4 authored'); eq([plus(36, 4) == 40, plus(40, 20) == 50, plus(50, 4) == 54], [True, False, True], 'c4 steps')
+    eq(items['c4']['answer'], 'Step 1', 'c4 authored'); eq([plus(58, 2) == 61, plus(61, 10) == 71, plus(71, 3) == 74], [False, True, True], 'c4 steps: only step 1 is wrong, the others are right work from the wrong number'); eq((plus(58, 2), plus(60, 10), plus(70, 3), plus(58, 15)), (60, 70, 73, 73), 'c4 fixed')
+    eq(items['t2']['answer'], 'too big', 't2 authored'); eq((plus(48, 41), 50 + 40, 189 > 90 + 20), (89, 90, True), 't2 static: 189 is much bigger than 90')
+    eq(items['t3']['answer'], 43, 't3 authored'); eq(items['g2']['answer'], 34, 'g2 authored')
     eq(items['c5']['answer'], '5:00', 'c5 authored'); eq(clock_after(4, 30, 30), (5, 0), 'c5')
-    eq(items['g1']['answer'], 29, 'g1 authored'); eq(items['g2']['answer'], 45, 'g2 authored')
+    eq(items['g1']['answer'], 29, 'g1 authored'); eq((minus(63, 29), plus(minus(63, 30), 1)), (34, 34), 'g2 static fix')
+    eq(items['c3']['answer'], 63, 'c3 authored'); eq(plus(39, 24) - 53, 10, 'c3 static is a lost ten')
+    for a, b in itertools.product(items['c3']['tpl']['vars']['a'], items['c3']['tpl']['vars']['b']): eq(plus(a, b) <= 99, True, f'c3 {a}+{b} stays within 100')
     for it in items.values():
         for s_ in it.get('slips', []):
             if it['type'] == 'number': eq(it['answer'] in s_['a'], False, it['id'] + ' slip is wrong')

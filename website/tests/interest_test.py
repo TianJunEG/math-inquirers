@@ -182,4 +182,7 @@ with sync_playwright() as pw:
             c.close()
     b.close()
 if errors: print('page errors:', errors); fails.append('page errors')
+# the shop tests (cart, interest form, price rule) live in shop_test.py and run with this file
+import subprocess
+if subprocess.run([sys.executable, os.path.join(HERE, 'shop_test.py')] + (['--shots', os.path.join(SHOTS, 'shop')] if SHOTS else [])).returncode: fails.append('shop tests')
 print('FAILED' if fails else 'ALL PASSED'); sys.exit(1 if fails else 0)

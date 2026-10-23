@@ -9,7 +9,7 @@
   "bottom_mm": 15,
   "soft_side_mm": 19,
   "min_fill": 0.85,
-  "pages_per_unit": 6,
+  "pages_per_unit": 7,
   "target_pages": [
    80,
    100
@@ -19,7 +19,7 @@
   "1": {
    "ages": "6-8",
    "grade": "Primary 1",
-   "font_px": 19,
+   "font_px": 17.5,
    "line_mm": 9.5,
    "box_mm": [
     16,

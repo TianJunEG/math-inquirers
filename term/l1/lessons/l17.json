@@ -2282,7 +2282,7 @@
      },
      {
       "l": "c",
-      "text": "Now Jenny has 18 sweets. Write every number of friends who can share them equally, with none left over. _______ _______",
+      "text": "Now Jenny has 18 sweets. Write every number of friends who can share them equally, with none left over. ______ ______ ______ ______ ______ ______",
       "ans": "1, 2, 3, 6, 9, 18",
       "val": [
        1,

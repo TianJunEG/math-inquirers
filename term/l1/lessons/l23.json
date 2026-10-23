@@ -2495,7 +2495,7 @@
    "title": "Plan the afternoon",
    "first": "Start at 12:30 pm. Swim for 1 hour. What time is it now? It is ____ pm.",
    "text": "Mi has from 12:30 pm to 3:00 pm. Jobs: swim 1 hour, painting 1 hour, story half an hour, snack half an hour. Use each job once at most. Fill the time exactly. Write each start and end.",
-   "lines": 5,
+   "lines": 4,
    "answer": "First: 1:30 pm. From 12:30 pm to 3:00 pm is 2 hours and half an hour. Only 1 hour + 1 hour + half an hour fits: swim and painting plus either the story or the snack, in any order. For example: swim 12:30 to 1:30, painting 1:30 to 2:30, story 2:30 to 3:00. Or swim, painting, snack. There are 2 different sets of jobs. Using all four jobs needs 3 hours, which is too long.",
    "val": [
     "2"
@@ -2520,7 +2520,7 @@
      "4": "2:30",
      "5": "3:00"
     },
-    "width": 520
+    "size": 50
    }
   }
  },

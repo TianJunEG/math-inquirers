@@ -98,6 +98,7 @@ def card(p):
 
 
 CSS = '''
+[hidden]{display:none!important}
 .shophero{grid-template-columns:1.3fr 1fr}
 .miwrap{justify-self:center;display:grid;justify-items:center;gap:6px;background:#D6E9FB;border:2.5px solid #1B2A49;border-radius:26px;padding:14px 20px 8px;box-shadow:5px 5px 0 #1B2A49;color:#1B2A49;max-width:220px}
 .miwrap img{display:block;height:150px;width:auto}
