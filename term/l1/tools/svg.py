@@ -130,7 +130,7 @@ def number_line(start, end, step=1, label_every=None, marks=None, hide=None, jum
         label_every = step * max(1, -(-n // 10))
     pad = 40
     x = lambda v: pad + (v - start) / (end - start) * (width - 2 * pad)
-    jh = 130 if jumps else 30
+    jh = (130 + (36 if any('|' in str(j[2]) for j in jumps) else 0)) if jumps else 30
     base = jh + 40
     h = base + 110
     fs = 34 if big else 26
@@ -152,7 +152,9 @@ def number_line(start, end, step=1, label_every=None, marks=None, hide=None, jum
         xa, xb = x(a), x(b); mid = (xa + xb) / 2; hg = min(80, 24 + abs(xb - xa) * 0.25)
         p.append(f'<path d="M{xa:.1f} {base - 20} Q{mid:.1f} {base - 20 - 2 * hg:.1f} {xb:.1f} {base - 44}" fill="none" stroke="{TEAL}" stroke-width="5" stroke-linecap="round"/>')
         p.append(f'<polygon points="{xb:.1f},{base - 18} {xb - 13:.1f},{base - 44} {xb + 13:.1f},{base - 44}" fill="{TEAL}"/>')
-        p.append(f'<text x="{mid:.1f}" y="{base - 20 - hg - 12:.1f}" font-size="{fs - 4}" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">{lab}</text>')
+        ls = str(lab).split('|')          # '|' starts a new line (the first line is the top one)
+        for k, ln in enumerate(ls):
+            p.append(f'<text x="{mid:.1f}" y="{base - 20 - hg - 12 - (len(ls) - 1 - k) * (fs - 2):.1f}" font-size="{fs - 4}" font-weight="800" text-anchor="middle" fill="{TEAL}" font-family="{FONT}">{ln}</text>')
     return f'<svg viewBox="0 0 {width} {h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line from {start} to {end}" style="width:100%;height:auto;display:block">{"".join(p)}</svg>'
 
 

@@ -2451,17 +2451,17 @@
       [
        0,
        2,
-       "painting: 1 hour"
+       "painting|1 hour"
       ],
       [
        2,
        3,
-       "story: 30 min"
+       "story|30 min"
       ],
       [
        3,
        4,
-       "snack: 30 min"
+       "snack|30 min"
       ]
      ],
      "width": 640
