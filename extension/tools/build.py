@@ -277,7 +277,7 @@ def build(level, unit_ids, outdir, bw=True):
                 Array.from(pb.children).forEach(c => { bottom = Math.max(bottom, c.getBoundingClientRect().bottom); });
                 const hasSpace = pb.classList.contains('practice');
                 const over = (bottom - top) > pb.clientHeight + 1 || pg.scrollHeight > pg.clientHeight + 1;
-                return {no: +s.dataset.no, kind: s.dataset.kind, label: s.dataset.label, exempt: s.dataset.exempt === '1', fill: (bottom - top) / pb.clientHeight, over: over};
+                return {no: +s.dataset.no, kind: s.dataset.kind, label: s.dataset.label, exempt: s.dataset.exempt === '1', fill: (bottom - top) / pb.clientHeight, over: over, excess_mm: Math.round(((bottom - top) - pb.clientHeight) / 3.7795 * 10) / 10};
             })''')
             # the page is a flex column: natural heights (children are not stretched yet)
             page.evaluate("document.body.classList.add('stretch')"); page.wait_for_timeout(200)
@@ -285,7 +285,7 @@ def build(level, unit_ids, outdir, bw=True):
             for m in meas:
                 m['edition'] = edition
                 if m['over'] or m['no'] in after_over:
-                    report['problems'].append(f'{edition} page {m["no"]} ({m["label"]}): content overflows the page')
+                    report['problems'].append(f'{edition} page {m["no"]} ({m["label"]}): content overflows the page (natural height minus body {m.get("excess_mm")} mm)')
                 if m['fill'] is not None and not m['exempt'] and m['fill'] < PG['min_fill']:
                     report['problems'].append(f'{edition} page {m["no"]} ({m["label"]}): natural fill {m["fill"]:.2f} < {PG["min_fill"]}')
             report['pages'] += meas

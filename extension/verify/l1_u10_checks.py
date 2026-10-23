@@ -39,8 +39,7 @@ def coin_sets(total, k, coins=(5, 10, 20, 50)):
 
 @check('L1U10-L01')
 def _():
-    return s(run_rule(4, 4, 5)[3:])
-
+    return s(run_rule(5, 2, 5)[1:])   # a plant 5 cm tall, +2 each week: the 4 tiles after the start
 
 @check('L1U10-S01')
 def _():
@@ -137,12 +136,12 @@ def _():
 
 @check('L1U10-T02')
 def _():
-    kids = ['Ray', 'Lily', 'Jason', 'Siti']
-    sols = [p for p in itertools.permutations(kids)          # p[i] sits on chair i+1
-            if p[3] == 'Ray' and abs(p.index('Lily') - p.index('Ray')) == 1 and p.index('Jason') < p.index('Siti')]
-    assert len(sols) == 1
-    return list(sols[0])
-
+    sides = {'square': 4, 'triangle': 3}
+    n = sides['square'] + 2 * sides['triangle']
+    cost = 0
+    for _ in range(n):      # one 5c sticker for each side
+        cost += 5
+    return {'a': s([n]), 'b': s([cost])}
 
 @check('L1U10-T03')
 def _():

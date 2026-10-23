@@ -40,8 +40,7 @@ def longer_by(a, b):
 
 @check('L1U09-L01')
 def _():
-    return s([longer_by(11, 7)])
-
+    return s([count_spaces(2, 8)])   # the marker on the ruler (figure: marks 2 to 8)
 
 @check('L1U09-S01')
 def _():
@@ -145,12 +144,10 @@ def _():
 
 @check('L1U09-T03')
 def _():
-    ali = 10
-    mei = ali - 4
-    ben = mei + 3
-    lens = {"Ali's": ali, "Mei's": mei, "Ben's": ben}
-    return {'a': s([mei]), 'b': s([ben]), 'c': [max(lens, key=lens.get)]}
-
+    # pencil from mark 3 to mark 10; crayon 2 cm longer than the pencil, starting at mark 2
+    pencil = count_spaces(3, 10)
+    crayon = pencil + 2
+    return {'a': s([pencil]), 'b': s([end_mark(2, crayon)])}
 
 @check('L1U09-G01')
 def _():

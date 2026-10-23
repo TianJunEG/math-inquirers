@@ -144,12 +144,11 @@ def _():
 
 @check('L1U05-T03')
 def _():
-    # all queue lengths n where place 7 from the front is also place 4 from the back
-    ns = [n for n in range(1, 60) if n - 7 + 1 == 4]
-    assert len(ns) == 1
-    n = ns[0]
-    return {'a': s([7 - 1]), 'b': s([n - 7]), 'c': s([n])}
-
+    # Ali gives 4 to Mei and both then have 10: try every start for each child
+    ali = [a for a in range(0, 40) if a - 4 == 10]
+    mei = [m for m in range(0, 40) if m + 4 == 10]
+    assert len(ali) == 1 and len(mei) == 1
+    return {'a': s(ali), 'b': s(mei)}
 
 @check('L1U05-G01')
 def _():
