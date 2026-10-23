@@ -1,6 +1,6 @@
-"""CSS of the Primary 2 pages (added to render.CSS)."""
-CSS_P2 = """
-/* ---- Primary 2 pages ---- */
+"""CSS of the Primary 4 pages (added to render.CSS)."""
+CSS_P4 = """
+/* ---- Primary 4 pages ---- */
 .ab.w3{width:23mm}.ab.w4{width:30mm}.ab.w5{width:38mm}
 .qg{display:grid;gap:3.5mm 5mm}.qg.c1{grid-template-columns:1fr}.qg.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.qg.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .qc{border:0.4mm solid #000;border-radius:2mm;padding:2mm 3mm;display:flex;flex-direction:column;gap:1.5mm;justify-content:space-between}

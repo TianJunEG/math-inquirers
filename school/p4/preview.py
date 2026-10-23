@@ -13,7 +13,7 @@ pages = build.all_pages()
 sel = [p for p in pages if (not a.nos or p["no"] in a.nos)]
 for p in sel:
     bad = [(n, d) for n, o, d in p["verify"] if not o]
-    print(f'P2-{p["no"]:02d} {p["title"]}: {len(p["verify"])} checks, {len(bad)} failed', bad[:3])
+    print(f'P4-{p["no"]:02d} {p["title"]}: {len(p["verify"])} checks, {len(bad)} failed', bad[:3])
 html = render.doc("".join(render.pupil_page(p, "") for p in sel), "preview")
 hp = os.path.join(a.out, "prev.html"); open(hp, "w").write(html)
 pdf = os.path.join(a.out, "prev.pdf"); build.to_pdf(hp, pdf)

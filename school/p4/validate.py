@@ -75,7 +75,7 @@ for p in pages:
         rec(f'{L(p)} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
     verification.append((p["no"], r))
 
-rec("3 colour-by-code pages (P2-38, P2-39, P2-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [38, 39, 40])
+rec("3 colour-by-code pages (P4-38, P4-39, P4-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [38, 39, 40])
 if not ARGS.partial:
     rec("40 pages, ids 1..40, each in exactly one booklet", [p["no"] for p in pages] == list(range(1, 41)))
     covered = {o for p in pages for o in OC.PAGE_OC[p["no"]]}
@@ -85,7 +85,7 @@ for k in BK:
     if not ARGS.partial:
         want1 = 10
         rec(f"{k}: tier mix {want1} one-star / {20 - want1} two-star", sum(p["tier"] == 1 for p in BK[k]) == want1 and sum(p["tier"] == 2 for p in BK[k]) == 20 - want1, str([p["tier"] for p in BK[k]]))
-        rec(f"{k}: footer codes use the form S1-07 (P2-17) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P2-{p["no"]:02d})" for i, p in enumerate(BK[k])))
+        rec(f"{k}: footer codes use the form S1-07 (P4-17) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P4-{p["no"]:02d})" for i, p in enumerate(BK[k])))
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
 mech = [p["mech"] for p in pages]; rec("every page names a self-check mechanism", all(mech))
 rec("every page has outcome numbers from the 32 syllabus lines", all(OC.PAGE_OC[p["no"]] for p in pages))
@@ -127,7 +127,7 @@ for p in pages:
         if ph in note and ph not in page_text and not (ph == "greatest" and "second greatest" in note and "second greatest" in page_text) and not (ph == "ordinal" and "1st" in page_text + " 2nd"):
             bad.append((p["no"], ph))
 rec("every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page", not bad, str(bad))
-SYL = open(os.path.join(HERE, "..", "..", "docs", "school_books", "p2_outcome_wording.md")).read().lower()
+SYL = open(os.path.join(HERE, "..", "..", "docs", "school_books", "p4_outcome_wording.md")).read().lower()
 bad = []
 for p in pages:
     ids = OC.PAGE_OC[p["no"]]
@@ -138,7 +138,7 @@ for p in pages:
     # the numbers written in the tag must belong to the page's outcome ids
     for a_, b_ in re.findall(r"\b(\d)\.(\d)\b", p["syll"].split("(")[0]):
         if not any(o.endswith(f"{a_}.{b_}") for o in ids): bad.append((p["no"], f"{a_}.{b_} in tag but not in outcome ids"))
-rec("F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids", not bad, str(bad[:5]))
+rec("F28: every outcome id of every page has its PDF wording in docs/school_books/p4_outcome_wording.md, and the numbers in each tag are the page's own outcome ids", not bad, str(bad[:5]))
 rec("topic tags name a P2 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Fractions", "Money", "Measurement", "Geometry", "Statistics")) for p in pages))
 # ---- 3. HTML black and white / stroke scan
 for k in BK:
@@ -172,7 +172,7 @@ alltxt = {}
 for k in BK:
     keyhtml = open(os.path.join(O, f"{k}_key.html")).read()
     KEYPAGES = 1 + len(re.findall(r'class="page fm[ a-z]*" >', keyhtml))
-    exp = {f"P2_{k}_Puzzles.pdf": NP[k], f"P2_{k}_FrontMatter.pdf": 5, f"P2_{k}_Complete_Pack.pdf": NP[k] + 5, f"P2_{k}_Answer_Key.pdf": KEYPAGES}
+    exp = {f"P4_{k}_Puzzles.pdf": NP[k], f"P4_{k}_FrontMatter.pdf": 5, f"P4_{k}_Complete_Pack.pdf": NP[k] + 5, f"P4_{k}_Answer_Key.pdf": KEYPAGES}
     for f, n in exp.items():
         out = subprocess.run(["pdfinfo", os.path.join(O, f)], capture_output=True, text=True).stdout
         got = int(re.search(r"Pages:\s+(\d+)", out).group(1)); rec(f"{f} has {n} pages", got == n, str(got))
@@ -180,26 +180,26 @@ for k in BK:
         rec(f"{f} fonts all embedded", all(l.split()[-5] == "yes" for l in fo if l.strip()), f"{len(fo)} fonts")
         sz = os.path.getsize(os.path.join(O, f)); rec(f"{f} size < 20 MB", sz < 20e6, f"{sz/1e6:.2f} MB")
         rec(f"{f} A4 page size", "(A4)" in out, "")
-    txt = pdf_text(f"P2_{k}_Puzzles.pdf")
+    txt = pdf_text(f"P4_{k}_Puzzles.pdf")
     pgs = txt.split("\f")[:NP[k]]
     school = re.search(r"Photocopy licence: (.+?) only", txt)
     rec(f"{k}: school name printed on all {NP[k]} page footers", all("Photocopy licence" in x for x in pgs), school.group(1) if school else "")
-    rec(f"{k}: every pupil page shows its code in the footer, for example S1-07 (P2-17)", all(BK[k][i]["code"] in pgs[i] for i in range(len(pgs))), str([i + 1 for i in range(len(pgs)) if BK[k][i]["code"] not in pgs[i]]))
-    for f in (f"P2_{k}_Puzzles.pdf", f"P2_{k}_FrontMatter.pdf", f"P2_{k}_Answer_Key.pdf"):
+    rec(f"{k}: every pupil page shows its code in the footer, for example S1-07 (P4-17)", all(BK[k][i]["code"] in pgs[i] for i in range(len(pgs))), str([i + 1 for i in range(len(pgs)) if BK[k][i]["code"] not in pgs[i]]))
+    for f in (f"P4_{k}_Puzzles.pdf", f"P4_{k}_FrontMatter.pdf", f"P4_{k}_Answer_Key.pdf"):
         alltxt[f] = pdf_text(f)
 joined = "\n".join(alltxt.values())
 rec("money is written 50¢, never 50c, in all printed text", not re.search(r"(?<![\w.])\d+c\b", joined), str(re.findall(r"(?<![\w.])\d+c\b", joined)[:5]))
 rec("dollar amounts with cents always have two decimal places ($3.50, never $3.5)", not re.search(r"\$\d+\.\d(?!\d)", joined), str(re.findall(r"\$\d+\.\d(?!\d)", joined)[:3]))
 for k in BK:
-    pt = alltxt[f"P2_{k}_Puzzles.pdf"]; fm = alltxt[f"P2_{k}_FrontMatter.pdf"]
-    rec(f"{k}: pupil pages, key and front matter name no price, quote or sale wording", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", pt + fm + alltxt[f"P2_{k}_Answer_Key.pdf"], re.I))
+    pt = alltxt[f"P4_{k}_Puzzles.pdf"]; fm = alltxt[f"P4_{k}_FrontMatter.pdf"]
+    rec(f"{k}: pupil pages, key and front matter name no price, quote or sale wording", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", pt + fm + alltxt[f"P4_{k}_Answer_Key.pdf"], re.I))
     fm_flat = re.sub(r"\s+", " ", fm)
     fm_wo = fm_flat.replace("Not affiliated with or endorsed by the Ministry of Education, Singapore.", "").replace("The mathematics syllabus is published by the Ministry of Education, Singapore.", "")
     rec(f"{k}: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)", not re.search(r"\bMi\b|MOE|Ministry|aligned|affiliat|endorse", pt + fm_wo, re.I) and ("Not affiliated with or endorsed by the Ministry of Education, Singapore." in fm_flat) == render.DRAFT or not render.DRAFT)
     rec(f"{k}: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "66 Tannery Ln, Singapore 347805" in fm and "Preciouslyours Pte Ltd, trading as Math Inquirers" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
     rec(f"{k}: front matter has the 'typical order, schools vary' sentence and the booklet's terms", "Schools vary" in fm_flat and OC.BOOKLETS[k]["terms"] in fm_flat)
     rec(f"{k}: pupil pages carry no DRAFT stamp", "DRAFT" not in pt)
-    kt = alltxt[f"P2_{k}_Answer_Key.pdf"]
+    kt = alltxt[f"P4_{k}_Answer_Key.pdf"]
     rec(f"{k}: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)", ("DRAFT" in kt and "pypteltd@gmail.com" in kt) or not render.DRAFT)
     rec(f"{k}: the cover does not claim that every puzzle checks itself", "Every puzzle checks itself" not in fm_flat and "Almost every puzzle checks itself" in fm_flat)
     rec(f"{k}: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)", pt.count("2026 Preciouslyours Pte Ltd.") == NP[k])
@@ -211,7 +211,7 @@ _td = _tf.mkdtemp()
 _long = "Saint Gabriel's Presbyterian Primary School (Junior Section, Annex Campus)"
 subprocess.run([sys.executable, os.path.join(HERE, "build.py"), "--school", _long, "--outdir", _td], check=True, capture_output=True)
 for k in BK:
-    _t = pdf_text.__call__ if False else subprocess.run(["pdftotext", "-layout", os.path.join(_td, f"P2_{k}_Puzzles.pdf"), "-"], capture_output=True, text=True).stdout.split("\f")[:NP[k]]
+    _t = pdf_text.__call__ if False else subprocess.run(["pdftotext", "-layout", os.path.join(_td, f"P4_{k}_Puzzles.pdf"), "-"], capture_output=True, text=True).stdout.split("\f")[:NP[k]]
     _ok = []
     for i, pg_ in enumerate(_t):
         lines = [l for l in pg_.splitlines() if l.strip()]
@@ -302,7 +302,7 @@ for k in BK:
 import tempfile, glob, shutil
 tmp = tempfile.mkdtemp()
 for k in BK:
-  for f in (f"P2_{k}_Puzzles.pdf", f"P2_{k}_FrontMatter.pdf", f"P2_{k}_Answer_Key.pdf"):
+  for f in (f"P4_{k}_Puzzles.pdf", f"P4_{k}_FrontMatter.pdf", f"P4_{k}_Answer_Key.pdf"):
     d = os.path.join(tmp, f[:-4]); os.makedirs(d)
     subprocess.run(["pdftoppm", "-r", "150", "-gray", os.path.join(O, f), os.path.join(d, "g")], check=True)
     subprocess.run(["pdftoppm", "-r", "150", "-mono", os.path.join(O, f), os.path.join(d, "m")], check=True)

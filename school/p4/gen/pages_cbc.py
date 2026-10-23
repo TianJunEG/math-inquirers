@@ -1,4 +1,4 @@
-"""Colour-by-code pages (P2-38, P2-39, P2-40): the pupil works out a small answer in every part of an outline picture,
+"""Colour-by-code pages (P4-38, P4-39, P4-40): the pupil works out a small answer in every part of an outline picture,
 finds the answer in the key and colours the part with their own crayon. Pictures, topic banks and the question layout come from
 school/colour_by_code, copied unchanged from commit ebff080 into ../cbc_vendor so that later changes there cannot alter this pack. Printed black and white; the check is the tally of colours."""
 import os, sys, html
@@ -138,19 +138,19 @@ def _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     return P
 
 def page38():
-    return cbc_page(38, dict(id="CBC-P2-01", picture="rocket", bank="numbers", tier=1, seed=306, level=2), "Colour the Rocket",
+    return cbc_page(38, dict(id="CBC-P4-01", picture="rocket", bank="numbers", tier=1, seed=306, level=2), "Colour the Rocket",
         ["Find the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Whole Numbers", "1.2, 1.3, 1.4 (place values, numbers in words, comparing and ordering numbers to 1000)",
         "Every part asks a question about numbers to 1000: place value, a number in words or numerals, or the greater or smaller of numbers.", oc=["WN1.1", "WN1.2", "WN1.3", "WN1.4"])
 
 def page39():
-    return cbc_page(39, dict(id="CBC-P2-14", picture="house", bank="mult", tier=2, seed=1, level=2), "Colour the House",
+    return cbc_page(39, dict(id="CBC-P4-14", picture="house", bank="mult", tier=2, seed=1, level=2), "Colour the House",
         ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Multiplication and Division", "3.1, 3.2, 3.3, 3.4, 3.5 (tables of 2, 3, 4, 5, 10; \u00f7; relationship between multiplication and division)",
         "Every part asks a multiplication or division fact from the tables of 2, 3, 4, 5 and 10; some parts use the sign \u00f7, a missing number or a story.", oc=["MD3.1", "MD3.2", "MD3.3", "MD3.4", "MD3.5"])
 
 def page40():
-    return cbc_page(40, dict(id="CBC-P2-07", picture="butterfly", bank="money", tier=2, seed=311, level=2), "Colour the Butterfly",
+    return cbc_page(40, dict(id="CBC-P4-07", picture="butterfly", bank="money", tier=2, seed=311, level=2), "Colour the Butterfly",
         ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Money", "1.1, 1.2, 1.3, 1.4 (counting money in dollars and cents; decimal notation; comparing amounts; converting decimal notation to cents)",
         "Every part works with money in cents and dollars: changing $ to cents, adding or taking away cents, finding what makes $1, comparing amounts or counting coins from a small drawing.", oc=["MO1.1", "MO1.2", "MO1.3", "MO1.4"])

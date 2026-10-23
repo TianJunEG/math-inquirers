@@ -1,16 +1,16 @@
-"""Shared kit of the Primary 2 pages: safe code words, the standard code-word record, small HTML builders, route helpers.
+"""Shared kit of the Primary 4 pages: safe code words, the standard code-word record, small HTML builders, route helpers.
 Everything is pure black and white. Each page module builds a puzzle from a seed, re-solves it with separate solver code that reads
 the PRINTED text or drawing, and hands validate.py a `model` for the independent wrong-answer enumeration."""
 import random, itertools, re, html as _html
 from .common import *
 
-BIG.update({"siring", "jailor"})      # words found by the P1 and P2 audits that the 129 000-word list lacked
+BIG.update({"siring", "jailor"})      # words found by the P1 and P2 audits; the P4 list is the union of web2, gcide and the 150 000 most frequent words (about 241 000 words)
 
 # --------------------------------------------------------------------------- code words
 # child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
-# making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
-SAFE5 = "audio blank blimp blown blunt bound chimp climb cloth clown count cramp crazy crumb curve decoy depth doubt drank drift drown dwarf enjoy fable fault flank flask flora flown fluid force forum frank fruit gleam glory graph gravy grind growl grunt guild hound humid image ivory jumpy juice juicy knife logic maize mixed moved noisy omega opera piano picky pivot plank pound print prize quick round scowl shaft shove skimp sling smack snuck spicy squid stamp swamp swift swung thief think thumb trunk tulip uncle valet video vital voice wafer waltz width woman works wound woven yield young".split()
-SAFE6 = "answer backup bounce bright buckle budgie campus canopy clouds cousin crafty creamy donkey dainty family figure flight fridge frozen fruity guitar hungry length magnet mighty monkey number peanut police safety sailor shadow shrimp sponge square string strong studio subway sunday teacup tongue turkey walnut walrus wizard wombat bandit behind botany bowman cherub cobalt cougar curfew devour fabric fathom".split()
+# making another word (tested against the 241 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
+SAFE5 = "enjoy quick doubt fruit climb count build juice glory blown wound pound forum vital swift blank graph cloth thumb clown drift flown shove swung noisy juicy humid ivory gravy tulip waltz drown dwarf blunt blimp crumb cramp bound flask guild omega swamp works woven".split()
+SAFE6 = "family police figure flight studio hungry shadow cousin frozen fabric fridge backup wizard peanut canopy donkey crafty creamy fruity walnut walrus bandit botany cobalt curfew devour fathom shrimp turkey campus bounty strong teacup wombat".split()
 _SAFE = {}
 
 def inner_ok(w):
