@@ -150,7 +150,12 @@
    ],
    "welcome_notes": [
     "Beyond Level 3 means ahead of the school year. It is fine to skip these."
-   ]
+   ],
+   "welcome_equipment": "a pencil, a rubber, a ruler and a paper corner (Unit 8)",
+   "welcome_print_note": {
+    "colour": "Printing this soft copy? Print at 100 percent so the ruler in Unit 9 is true size.",
+    "bw": "The ruler in Unit 9 is printed at real size."
+   }
   },
   "4": {
    "ages": "9-11",
