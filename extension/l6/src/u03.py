@@ -124,7 +124,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', f'6 {M} ({M}4) = {{b}}', [10]),
                    P('b', f'{M}2 {M} ({M}5) = {{b}}', [3]),
                    P('c', f'So taking away {M}4 gives the same result as adding {{b}}.', [4])],
-            hint='How far is it from the second number up to the first number?', partsrow=True, space={'rows': ['Number line:', '']}))
+            hint='How far is it from the second number up to the first number?', partsrow=True, space={'rows': ['Number line:', '']}, beyond='Subtracting a negative number'))
 I.append(IT(U, 'T', 2, 4,
             f'A sprite starts at x = {M}90. The loop stops as soon as x is greater than 40 at the start of a repeat.',
             f'Each repeat changes x by 35 {M} 10 = 25. After the repeats x is {M}65, {M}40, {M}15, 10, 35, 60. After 5 repeats x = 35, which is not greater than 40, so it repeats a 6th time. '

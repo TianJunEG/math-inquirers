@@ -863,7 +863,7 @@
   {
    "id": "L6U04-G01",
    "tier": "go",
-   "text": "Beyond Level 6: n on both sides.\nMachine A does × 4, then + 1. Machine B does × 2, then + 13.",
+   "text": "Machine A does × 4, then + 1. Machine B does × 2, then + 13.",
    "page": 5,
    "parts": [
     {
@@ -900,7 +900,8 @@
      "rows": 4
     }
    },
-   "explanation": "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 for every 1 of IN, so the lead is gone in 4 steps, at IN 6. Both give 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12."
+   "explanation": "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 for every 1 of IN, so the lead is gone in 4 steps, at IN 6. Both give 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.",
+   "beyond": "n on both sides"
   },
   {
    "id": "L6U04-G02",

@@ -1309,7 +1309,7 @@
   {
    "id": "L6U08-G01",
    "tier": "go",
-   "text": "Beyond Level 6: A code with a changing shift.\nThe 1st letter moves 1, the 2nd moves 2, the 3rd moves 3, then the shifts repeat 1, 2, 3, ... ",
+   "text": "The 1st letter moves 1, the 2nd moves 2 and the 3rd moves 3. Then the shifts repeat.",
    "page": 5,
    "parts": [
     {
@@ -1344,7 +1344,8 @@
     }
    ],
    "hint": "Use the shifts 1, 2, 3, 1, 2 in turn, one for each letter.",
-   "explanation": "MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 gives 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 gives 2, 14, 3, 4, 18: CODES. A letter can be coded in different ways."
+   "explanation": "MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 gives 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 gives 2, 14, 3, 4, 18: CODES. A letter can be coded in different ways.",
+   "beyond": "A code with a changing shift"
   },
   {
    "id": "L6U08-G02",
@@ -1413,7 +1414,7 @@
   {
    "id": "L6U08-G03",
    "tier": "go",
-   "text": "Beyond Level 6: Check digits.\nA code of 4 digits ends with a check digit. The 4 digits must add up to a multiple of 10. The check digit is the last digit.",
+   "text": "A code of 4 digits ends with a check digit. The 4 digits must add up to a multiple of 10. The check digit is the last digit.",
    "page": 5,
    "parts": [
     {
@@ -1453,7 +1454,8 @@
      "Working:"
     ]
    },
-   "explanation": "4 + 7 + 2 = 13, and 20 is the next multiple of 10: check digit 7. 9 + 8 + 1 = 18: check digit 2. 5 + 3 + 6 = 14 needs 6, not 9: not valid."
+   "explanation": "4 + 7 + 2 = 13, and 20 is the next multiple of 10: check digit 7. 9 + 8 + 1 = 18: check digit 2. 5 + 3 + 6 = 14 needs 6, not 9: not valid.",
+   "beyond": "Check digits"
   },
   {
    "id": "L6U08-C01",

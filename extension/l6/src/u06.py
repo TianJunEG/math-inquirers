@@ -155,7 +155,7 @@ I.append(IT(U, 'G', 1, 5,
             parts=[P('a', 'There are {b} equally likely outcomes.', [16]),
                    P('b', 'P(exactly 2 heads) = {b}/16', [6]),
                    P('c', 'P(at least one tail) = {b}/16', [15])],
-            hint='Which single outcome has no tails? Take it from all 16.', partsrow=True, space={'rows': ['Working:']}))
+            hint='Which single outcome has no tails? Take it from all 16.', partsrow=True, space={'rows': ['Working:']}, beyond='Probability of at least one'))
 I.append(IT(U, 'G', 2, 5,
             'This code rolls 2 dice 600 times. Predict what it says.',
             'For any a, only 1 of the 6 values of b matches it: 1 out of 6. So we expect 1/6 × 600 = 100 doubles. '
@@ -172,7 +172,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'You win about {b} times.', [100]),
                    P('b', 'You pay {b} dollars. With a 5-dollar prize you win about {b} dollars.', [1200, 500], '1200, 500'),
                    P('c', 'The game is fair when the prize for a 6 is {b} dollars.', [12])],
-            hint='Fair means the money won equals the money paid.', space={'rows': ['Working:']}))
+            hint='Fair means the money won equals the money paid.', space={'rows': ['Working:']}, beyond='Expected winnings'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

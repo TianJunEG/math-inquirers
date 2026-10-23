@@ -853,7 +853,7 @@
   {
    "id": "L6U06-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Probability of at least one.\nA coin is flipped 4 times.",
+   "text": "A coin is flipped 4 times.",
    "page": 5,
    "parts": [
     {
@@ -894,7 +894,8 @@
     ]
    },
    "explanation": "Each flip has 2 results, so 2 × 2 × 2 × 2 = 16 equally likely outcomes. Exactly 2 heads: HHTT, HTHT, HTTH, THHT, THTH, TTHH is 6, so 6/16. At least one tail is every outcome except HHHH: 15/16.",
-   "partsrow": true
+   "partsrow": true,
+   "beyond": "Probability of at least one"
   },
   {
    "id": "L6U06-G02",
@@ -977,7 +978,7 @@
   {
    "id": "L6U06-G03",
    "tier": "go",
-   "text": "Beyond Level 6: Expected winnings.\nA game costs 2 dollars to play. You roll a dice and win a prize if you roll a 6. You play 600 times.",
+   "text": "A game costs 2 dollars to play. You roll a dice and win a prize if you roll a 6. You play 600 times.",
    "page": 5,
    "parts": [
     {
@@ -1018,7 +1019,8 @@
      "Working:"
     ]
    },
-   "explanation": "A 6 comes up about 1/6 × 600 = 100 times. You pay 600 × 2 = 1200 dollars. With a 5-dollar prize you win about 500, so you lose. Fair means 100 × prize = 1200: the prize is 12 dollars."
+   "explanation": "A 6 comes up about 1/6 × 600 = 100 times. You pay 600 × 2 = 1200 dollars. With a 5-dollar prize you win about 500, so you lose. Fair means 100 × prize = 1200: the prize is 12 dollars.",
+   "beyond": "Expected winnings"
   },
   {
    "id": "L6U06-C01",

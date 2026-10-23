@@ -674,7 +674,7 @@
    "id": "L5U07-T02",
    "tier": "think",
    "page": 4,
-   "text": "Beyond Level 5: Working back from a percentage\nAfter a 20% discount, a bag costs $60. What was the cost before the discount? $ {b}",
+   "text": "After a 20% discount, a bag costs $60. What was the cost before the discount? $ {b}",
    "answer": {
     "value": [
      "75"
@@ -690,13 +690,14 @@
     ]
    },
    "hint": "$60 is 80% of the old cost. What is 10% of the old cost?",
-   "explanation": "The bag now costs 80% of the old cost. 80% is $60, so 10% is $60 ÷ 8 = $7.50. The old cost is 100% = 10 × $7.50 = $75. Check: 20% of $75 = $15 and $75 - $15 = $60. (Adding 20% of $60 would give $72, which is wrong.)"
+   "explanation": "The bag now costs 80% of the old cost. 80% is $60, so 10% is $60 ÷ 8 = $7.50. The old cost is 100% = 10 × $7.50 = $75. (Adding 20% of $60 would give $72, which is wrong.)",
+   "beyond": "Working back from a percentage"
   },
   {
    "id": "L5U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "Beyond Level 5: GST in the cost\nA table costs $218 with GST. GST is 9% of the cost before GST. How much GST is in $218? $ {b}",
+   "text": "A table costs $218 with GST. GST is 9% of the cost before GST. How much GST is in $218? $ {b}",
    "answer": {
     "value": [
      "18"
@@ -712,13 +713,14 @@
     ]
    },
    "hint": "$218 is 109% of the cost before GST. What is 1%?",
-   "explanation": "The cost before GST is 100%. With GST it is 109%. 109% is $218, so 1% is $218 ÷ 109 = $2. The GST is 9 × $2 = $18. (9% of $218 would be $19.62, which is wrong because GST is 9% of the cost BEFORE GST.)"
+   "explanation": "The cost before GST is 100%. With GST it is 109%. 109% is $218, so 1% is $218 ÷ 109 = $2. The GST is 9 × $2 = $18. (9% of $218 would be $19.62, which is wrong because GST is 9% of the cost BEFORE GST.)",
+   "beyond": "GST in the cost"
   },
   {
    "id": "L5U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Percentage change\nA cost goes up from $20 to $50, and then it goes back down from $50 to $20. The change is always compared with the amount you start from.",
+   "text": "A cost goes up from $20 to $50, and then it goes back down from $50 to $20. The change is always compared with the amount you start from.",
    "parts": [
     {
      "label": "a",
@@ -749,7 +751,8 @@
     ]
    },
    "hint": "Increase = change out of the starting amount. Which is the start?",
-   "explanation": "(a) The change is $30. Out of the starting amount $20: 30/20 = 150/100 = 150%. (b) The change is $30 again. Out of the starting amount $50: 30/50 = 60/100 = 60%. The same $30 change gives different percentages because the starting amounts are different."
+   "explanation": "(a) The change is $30. Out of the starting amount $20: 30/20 = 150/100 = 150%. (b) The change is $30 again. Out of the starting amount $50: 30/50 = 60/100 = 60%. The same $30 change gives different percentages because the starting amounts are different.",
+   "beyond": "Percentage change"
   },
   {
    "id": "L5U07-G02",

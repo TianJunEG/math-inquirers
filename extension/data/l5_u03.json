@@ -110,7 +110,7 @@
     ],
     "text": "25 stickers"
    },
-   "explanation": "The total stays the same: 70 + 50 = 120. After, Jason has 3 units and Amelia has 5 units. 8 units = 120, so 1 unit = 15. Jason now has 3 × 15 = 45. Jason gives 70 - 45 = 25 stickers. Check: Amelia has 50 + 25 = 75 = 5 × 15."
+   "explanation": "The total stays the same: 70 + 50 = 120. After, Jason has 3 units and Amelia has 5 units. 8 units = 120, so 1 unit = 15. Jason now has 3 × 15 = 45. Jason gives 70 - 45 = 25 stickers."
   }
  },
  "items": [
@@ -234,7 +234,7 @@
     ],
     "text": "7 stamps"
    },
-   "explanation": "The total stays 38 + 24 = 62. Each has 62 ÷ 2 = 31. Ali has 38 - 31 = 7 stamps too many, so he gives 7. Check: Mei has 24 + 7 = 31."
+   "explanation": "The total stays 38 + 24 = 62. Each has 62 ÷ 2 = 31. Ali has 38 - 31 = 7 stamps too many, so he gives 7."
   },
   {
    "id": "L5U03-S05",
@@ -613,7 +613,7 @@
     ]
    },
    "hint": "The total stays the same. Find each child's beads after.",
-   "explanation": "After: Siti 3 units, Mei 5 units. 8 units = 120, so 1 unit = 15. Siti has 45 now. She gave away 10, so at first she had 45 + 10 = 55. Check: Mei had 75 - 10 = 65 and 55 + 65 = 120."
+   "explanation": "After: Siti 3 units, Mei 5 units. 8 units = 120, so 1 unit = 15. Siti has 45 now. She gave away 10, so at first she had 45 + 10 = 55."
   },
   {
    "id": "L5U03-T03",
@@ -636,7 +636,7 @@
     ]
    },
    "hint": "The difference in their ages never changes. How many units is it?",
-   "explanation": "The difference is 38 - 10 = 28 years, and it stays 28. When the son is 1 unit the father is 3 units, so the difference is 2 units. 2 units = 28, so 1 unit = 14. The son is 14, which is 4 years from now. Check: father 42 = 3 × 14."
+   "explanation": "The difference is 38 - 10 = 28 years, and it stays 28. When the son is 1 unit the father is 3 units, so the difference is 2 units. 2 units = 28, so 1 unit = 14. The son is 14, which is 4 years from now."
   },
   {
    "id": "L5U03-G01",
@@ -681,7 +681,7 @@
     ]
    },
    "hint": "Call Cara's stickers 1 unit. Draw bars for Ben and for Ali.",
-   "explanation": "Let Cara have 1 unit. Ben has 1 unit + 10. Ali has twice Ben: 2 units + 20. Altogether: 4 units + 30 = 150. So 4 units = 120 and 1 unit = 30. Cara 30, Ben 40, Ali 80. Check: 30 + 40 + 80 = 150."
+   "explanation": "Let Cara have 1 unit. Ben has 1 unit + 10. Ali has twice Ben: 2 units + 20. Altogether: 4 units + 30 = 150. So 4 units = 120 and 1 unit = 30. Cara 30, Ben 40, Ali 80."
   },
   {
    "id": "L5U03-G02",
@@ -700,7 +700,7 @@
     ]
    },
    "hint": "The total stays the same. How much more of the total is children?",
-   "explanation": "The number of people stays the same. At first children are 2/5 of the total. Now they are 1/2. 1/2 - 2/5 = 1/10 of the total is 15 children. So the total is 10 × 15 = 150. Check: children 60 at first, 75 now = half of 150."
+   "explanation": "The number of people stays the same. At first children are 2/5 of the total. Now they are 1/2. 1/2 - 2/5 = 1/10 of the total is 15 children. So the total is 10 × 15 = 150."
   },
   {
    "id": "L5U03-G03",
@@ -719,7 +719,7 @@
     ]
    },
    "hint": "The white beads do not change. What fraction of each total is white?",
-   "explanation": "The white beads did not change. At first white is 5/7 of the beads. Now white is 5/6 of the beads. Let the white beads be 5 parts: at first the total is 7 parts, now it is 6 parts. 1 part = 24 beads, because 24 red beads were taken out. At first 7 × 24 = 168 beads. Check: red 48, then 24 of 144 beads is 1/6."
+   "explanation": "The white beads did not change. At first white is 5/7 of the beads. Now white is 5/6 of the beads. Let the white beads be 5 parts: at first the total is 7 parts, now it is 6 parts. 1 part = 24 beads, because 24 red beads were taken out. At first 7 × 24 = 168 beads."
   },
   {
    "id": "L5U03-G04",
@@ -738,7 +738,7 @@
     ]
    },
    "hint": "After giving, Ali has 2/3 of his marbles. Ben has 3 times that.",
-   "explanation": "Let Ali have 3 units at first. He gives 1 unit and keeps 2 units. Now Ben has 3 times as many: 6 units. After, the total is 2 + 6 = 8 units = 120, so 1 unit = 15. Ali had 3 × 15 = 45. Ben had 6 units - 1 unit = 5 units = 75 at first. Check: 45 + 75 = 120."
+   "explanation": "Let Ali have 3 units at first. He gives 1 unit and keeps 2 units. Now Ben has 3 times as many: 6 units. After, the total is 2 + 6 = 8 units = 120, so 1 unit = 15. Ali had 3 × 15 = 45. Ben had 6 units - 1 unit = 5 units = 75 at first."
   },
   {
    "id": "L5U03-C01",
@@ -777,7 +777,7 @@
     ],
     "text": "$30"
    },
-   "explanation": "The difference stays $20. After the gift Ray has 3 units and Amelia has 4 units, so the difference is 1 unit. 1 unit = $20. Amelia has $80 now, so the gift is 80 - 50 = $30. Check: Ray $60 = 3/4 of $80."
+   "explanation": "The difference stays $20. After the gift Ray has 3 units and Amelia has 4 units, so the difference is 1 unit. 1 unit = $20. Amelia has $80 now, so the gift is 80 - 50 = $30."
   },
   {
    "id": "L5U03-C04",

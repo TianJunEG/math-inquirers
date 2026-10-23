@@ -147,7 +147,7 @@ I.append(IT(U, 'G', 1, 5,
             parts=[P('a', 'There are {b} codes in all.', [125]),
                    P('b', '{b} codes have no 5.', [64]),
                    P('c', '{b} codes have at least one 5.', [61])],
-            hint='Count the codes with no 5. Take them from the total.'))
+            hint='Count the codes with no 5. Take them from the total.', beyond='Count the opposite'))
 I.append(IT(U, 'G', 2, 5,
             'This code checks every pair of numbers a and b. Predict what it says.',
             f'The outer and inner repeats each run 4 times, so 4 {X} 4 = 16 pairs are checked. a {X} b is odd only when both a and b are odd: 2 {X} 2 = 4 pairs (1 and 3 with 1 and 3). '
@@ -169,7 +169,7 @@ I.append(IT(U, 'G', 3, 5,
                    P('b', '4 steps: {b} ways.', [5]),
                    P('c', '6 steps: {b} ways.', [13]),
                    P('d', '8 steps: {b} ways.', [34])],
-            hint='Look at the last move. It was 1 step or 2 steps.', partsrow=True))
+            hint='Look at the last move. It was 1 step or 2 steps.', partsrow=True, beyond='A counting chain'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

@@ -683,7 +683,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "4 thousands, 2 hundreds, 0 tens and 7 ones = {b}",
+     "text": "4 thousands, 2 hundreds, 0 tens and 7 ones = {bw}",
      "answer": {
       "value": [
        "4207"
@@ -693,7 +693,7 @@
     },
     {
      "label": "b",
-     "text": "1000 more than 2650 = {b}",
+     "text": "1000 more than 2650 = {bw}",
      "answer": {
       "value": [
        "3650"
@@ -703,7 +703,7 @@
     },
     {
      "label": "c",
-     "text": "25 hundreds = {b}",
+     "text": "25 hundreds = {bw}",
      "answer": {
       "value": [
        "2500"

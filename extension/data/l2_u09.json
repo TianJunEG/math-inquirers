@@ -502,7 +502,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "3 kg = {b} g",
+     "text": "3 kg = {bw} g",
      "answer": {
       "value": [
        "3000"
@@ -523,7 +523,7 @@
     },
     {
      "label": "c",
-     "text": "A bag has 2 kg of rice. Mei uses 750 g. Rice left: {b} g",
+     "text": "A bag has 2 kg of rice. Mei uses 750 g. Rice left: {bw} g",
      "answer": {
       "value": [
        "1250"
@@ -932,7 +932,7 @@
   {
    "id": "L2U09-C02",
    "tier": "quiz",
-   "text": "2 kg 300 g = {b} g",
+   "text": "2 kg 300 g = {bw} g",
    "answer": {
     "value": [
      "2300"

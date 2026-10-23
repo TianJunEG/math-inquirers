@@ -78,7 +78,7 @@
   },
   "try": {
    "id": "L2U07-L01",
-   "text": "Mei cuts a cake into 10 equal slices and eats 3. The part of the cake left is {b}",
+   "text": "Mei cuts a cake into 10 equal slices and eats 3. The part of the cake left is {bw}",
    "answer": {
     "value": [
      "7/10"
@@ -264,7 +264,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "A: shaded {b}   not shaded {b}",
+     "text": "A: shaded {bw}   not shaded {bw}",
      "answer": {
       "value": [
        "2/5",
@@ -275,7 +275,7 @@
     },
     {
      "label": "b",
-     "text": "B: shaded {b}   not shaded {b}",
+     "text": "B: shaded {bw}   not shaded {bw}",
      "answer": {
       "value": [
        "6/8",
@@ -286,7 +286,7 @@
     },
     {
      "label": "c",
-     "text": "C: shaded {b}   not shaded {b}",
+     "text": "C: shaded {bw}   not shaded {bw}",
      "answer": {
       "value": [
        "5/12",
@@ -467,7 +467,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "3/12 + 6/12 = {b}",
+     "text": "3/12 + 6/12 = {bw}",
      "answer": {
       "value": [
        "9/12"
@@ -477,7 +477,7 @@
     },
     {
      "label": "b",
-     "text": "7/8 - 2/8 = {b}",
+     "text": "7/8 - 2/8 = {bw}",
      "answer": {
       "value": [
        "5/8"
@@ -487,7 +487,7 @@
     },
     {
      "label": "c",
-     "text": "1 - 3/5 = {b}",
+     "text": "1 - 3/5 = {bw}",
      "answer": {
       "value": [
        "2/5"
@@ -497,7 +497,7 @@
     },
     {
      "label": "d",
-     "text": "4/9 + {b} = 1",
+     "text": "4/9 + {bw} = 1",
      "answer": {
       "value": [
        "5/9"
@@ -538,7 +538,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "They eat {b} of the pizza altogether.",
+     "text": "They eat {bw} of the pizza altogether.",
      "answer": {
       "value": [
        "7/10"
@@ -548,7 +548,7 @@
     },
     {
      "label": "b",
-     "text": "{b} of the pizza is left.",
+     "text": "{bw} of the pizza is left.",
      "answer": {
       "value": [
        "3/10"
@@ -568,7 +568,7 @@
     },
     {
      "label": "d",
-     "text": "Ravi eats {b} more than Siti.",
+     "text": "Ravi eats {bw} more than Siti.",
      "answer": {
       "value": [
        "1/10"
@@ -587,7 +587,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Each child gets {b} of the cake.",
+     "text": "Each child gets {bw} of the cake.",
      "answer": {
       "value": [
        "1/5"
@@ -597,7 +597,7 @@
     },
     {
      "label": "b",
-     "text": "Kumar and Mei are 2 of the children. Together they get {b}.",
+     "text": "Kumar and Mei are 2 of the children. Together they get {bw}.",
      "answer": {
       "value": [
        "2/5"
@@ -607,7 +607,7 @@
     },
     {
      "label": "c",
-     "text": "The other children get {b} together.",
+     "text": "The other children get {bw} together.",
      "answer": {
       "value": [
        "3/5"
@@ -647,7 +647,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Arrow A shows {b}",
+     "text": "Arrow A shows {bw}",
      "answer": {
       "value": [
        "3/8"
@@ -657,7 +657,7 @@
     },
     {
      "label": "b",
-     "text": "Arrow B shows {b}",
+     "text": "Arrow B shows {bw}",
      "answer": {
       "value": [
        "7/8"
@@ -707,7 +707,7 @@
     },
     {
      "label": "b",
-     "text": "How much more? {b}",
+     "text": "How much more? {bw}",
      "answer": {
       "value": [
        "1/8"
@@ -741,7 +741,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "After Mei, {b} is left.",
+     "text": "After Mei, {bw} is left.",
      "answer": {
       "value": [
        "3/4"
@@ -751,7 +751,7 @@
     },
     {
      "label": "b",
-     "text": "Ali eats {b} of the pizza.",
+     "text": "Ali eats {bw} of the pizza.",
      "answer": {
       "value": [
        "3/8"
@@ -761,7 +761,7 @@
     },
     {
      "label": "c",
-     "text": "Now {b} is left.",
+     "text": "Now {bw} is left.",
      "answer": {
       "value": [
        "3/8"
@@ -782,7 +782,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The smaller fraction is {b}",
+     "text": "The smaller fraction is {bw}",
      "answer": {
       "value": [
        "3/12"
@@ -792,7 +792,7 @@
     },
     {
      "label": "b",
-     "text": "The greater fraction is {b}",
+     "text": "The greater fraction is {bw}",
      "answer": {
       "value": [
        "9/12"
@@ -941,7 +941,7 @@
   {
    "id": "L2U07-C01",
    "tier": "quiz",
-   "text": "What fraction is shaded? {b}",
+   "text": "What fraction is shaded? {bw}",
    "figure": {
     "type": "l2_frac",
     "items": [
@@ -978,7 +978,7 @@
   {
    "id": "L2U07-C03",
    "tier": "quiz",
-   "text": "2/7 + 4/7 = {b}",
+   "text": "2/7 + 4/7 = {bw}",
    "answer": {
     "value": [
      "6/7"
@@ -990,7 +990,7 @@
   {
    "id": "L2U07-C04",
    "tier": "quiz",
-   "text": "A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. What is left, in twelfths? {b}",
+   "text": "A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. What is left, in twelfths? {bw}",
    "answer": {
     "value": [
      "4/12"

@@ -646,7 +646,7 @@
   {
    "id": "L6U03-T01",
    "tier": "think",
-   "text": "Beyond Level 6: Subtracting a negative number.\nTo find 6 − (−4), count the steps from −4 up to 6.",
+   "text": "To find 6 − (−4), count the steps from −4 up to 6.",
    "page": 4,
    "parts": [
     {
@@ -688,7 +688,8 @@
     ]
    },
    "explanation": "(a) 6 − (−4): from −4 to 6 is 10 steps. (b) −2 − (−5): from −5 to −2 is 3 steps. (c) In both, subtracting a negative number gave the same answer as adding the matching positive number: 6 + 4 and −2 + 5.",
-   "partsrow": true
+   "partsrow": true,
+   "beyond": "Subtracting a negative number"
   },
   {
    "id": "L6U03-T02",
@@ -908,7 +909,7 @@
   {
    "id": "L6U03-G03",
    "tier": "go",
-   "text": "Beyond Level 6: A calendar with no year 0.\nThere is no year 0. The year after 1 BC is AD 1. Count the years one by one.",
+   "text": "There is no year 0. The year after 1 BC is AD 1. Count the years one by one.",
    "page": 5,
    "parts": [
     {
@@ -950,6 +951,7 @@
     ]
    },
    "explanation": "(a) 5, 4, 3, 2, 1 BC: 4 steps. (b) 3 BC, 2 BC, 1 BC, AD 1, 2, 3, 4: 6 steps. (c) 10 BC to 1 BC is 9 steps, 1 more to AD 1, then 11 to AD 12: 21 years.",
+   "beyond": "A calendar with no year 0",
    "partsrow": true
   },
   {

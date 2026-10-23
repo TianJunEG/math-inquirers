@@ -154,7 +154,7 @@ I.append(IT(U, 'G', 1, 5,
             f'Both give 25: 4 {X} 6 + 1 = 25 and 2 {X} 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.',
             parts=[P('a', 'IN 2: A gives {b} and B gives {b}.', [9, 17], '9, 17'),
                    P('b', 'A and B give the same OUT when IN is {b}. That OUT is {b}.', [6, 25], '6, 25')],
-            hint='Make a table of IN, A and B. Look at how the gap changes.', space={'table': {'cols': ['IN', 'A', 'B'], 'rows': 4}}))
+            hint='Make a table of IN, A and B. Look at how the gap changes.', space={'table': {'cols': ['IN', 'A', 'B'], 'rows': 4}}, beyond='n on both sides'))
 I.append(IT(U, 'G', 2, 5,
             'Call the smallest number n.',
             f'(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so 4n = 124 and n = 31 (31, 32, 33, 34). '

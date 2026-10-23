@@ -492,7 +492,7 @@
      "Working:"
     ]
    },
-   "explanation": "5 minutes is 300 seconds, which is 15 lots of 20 seconds. 15 × 1.5 = 22.5 litres. (Or: 3 × 1.5 = 4.5 litres in 1 minute, and 5 × 4.5 = 22.5.)"
+   "explanation": "5 minutes is 300 seconds, which is 15 lots of 20 seconds. 15 × 1.5 = 22.5 litres."
   },
   {
    "id": "L5U06-T01",

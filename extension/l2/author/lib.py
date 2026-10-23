@@ -39,6 +39,21 @@ def I(tier, page, text, value=None, atext=None, why='', figure=None, parts=None,
     return it
 
 
+def _wide(its):
+    # money, fractions, decimals and 4-digit answers get the wide answer box {bw}
+    import re
+    def fix(o):
+        a = o.get('answer')
+        if isinstance(a, dict) and '{b}' in o.get('text', ''):
+            v = a['value'] if isinstance(a['value'], list) else [a['value']]
+            if any(re.search(r'\.|/|\d{4}|\d,\d', str(x)) for x in v):
+                o['text'] = o['text'].replace('{b}', '{bw}')
+    for it in its:
+        fix(it)
+        for p in it.get('parts', []):
+            fix(p)
+
+
 def build(n, title, topic, goal, learn, items, **extra):
     pre = f'L2U{n:02d}'
     count = {'start': 0, 'think': 0, 'go': 0, 'quiz': 0}
@@ -61,6 +76,7 @@ def build(n, title, topic, goal, learn, items, **extra):
     learn['try'] = dict({'id': f'{pre}-L01'}, **learn['try'])
     unit = {'schema_version': 1, 'level': 2, 'unit': n, 'id': pre, 'title': title, 'topic': topic, 'holiday_lesson': n, 'goal': goal, 'learn': learn, 'items': out}
     unit.update(extra)
+    _wide(unit['items'] + [unit['learn']['try']])
     path = os.path.join(DATA, f'l2_u{n:02d}.json')
     json.dump(unit, open(path, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     print('wrote', path, {k: v for k, v in count.items()})

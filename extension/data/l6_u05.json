@@ -853,7 +853,7 @@
   {
    "id": "L6U05-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Count the opposite.\nA code has 3 digits. Each digit is 1, 2, 3, 4 or 5, and digits may repeat.",
+   "text": "A code has 3 digits. Each digit is 1, 2, 3, 4 or 5, and digits may repeat.",
    "page": 5,
    "parts": [
     {
@@ -888,7 +888,8 @@
     }
    ],
    "hint": "Count the codes with no 5. Take them from the total.",
-   "explanation": "All codes: 5 × 5 × 5 = 125. Codes with no 5 use only 1, 2, 3 or 4: 4 × 4 × 4 = 64. Every other code has at least one 5: 125 − 64 = 61."
+   "explanation": "All codes: 5 × 5 × 5 = 125. Codes with no 5 use only 1, 2, 3 or 4: 4 × 4 × 4 = 64. Every other code has at least one 5: 125 − 64 = 61.",
+   "beyond": "Count the opposite"
   },
   {
    "id": "L6U05-G02",
@@ -985,7 +986,7 @@
   {
    "id": "L6U05-G03",
    "tier": "go",
-   "text": "Beyond Level 6: A counting chain.\nA child climbs a staircase. Each move goes up 1 step or 2 steps. Count the ways to reach the top.",
+   "text": "A child climbs a staircase. Each move goes up 1 step or 2 steps. Count the ways to reach the top.",
    "page": 5,
    "parts": [
     {
@@ -1031,7 +1032,8 @@
    ],
    "hint": "Look at the last move. It was 1 step or 2 steps.",
    "explanation": "The last move onto step n is 1 step from step n − 1 or 2 steps from step n − 2, so ways(n) = ways(n − 1) + ways(n − 2). For 1 to 8 steps: 1, 2, 3, 5, 8, 13, 21, 34.",
-   "partsrow": true
+   "partsrow": true,
+   "beyond": "A counting chain"
   },
   {
    "id": "L6U05-C01",

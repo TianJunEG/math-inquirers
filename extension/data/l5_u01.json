@@ -576,7 +576,7 @@
      }
     }
    ],
-   "explanation": "Clue 2: the number is from 465 000 to 474 999. With Clue 3 the thousands digit is 2, so it starts 472 (465 and 474 do not fit). Clue 5: ones 0. Clue 4: the tens and hundreds digits are 3 and 6, or 1 and 2 (2 is already used), or 4 and 8 (4 is used). So 472 630. Check all digits differ: 4, 7, 2, 6, 3, 0."
+   "explanation": "Clue 2: the number is from 465 000 to 474 999. With Clue 3 the thousands digit is 2, so it starts 472 (465 and 474 do not fit). Clue 5: ones 0. Clue 4: the tens and hundreds digits are 3 and 6, or 1 and 2 (2 is already used), or 4 and 8 (4 is used). So 472 630."
   },
   {
    "id": "L5U01-S13",

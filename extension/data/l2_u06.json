@@ -79,7 +79,7 @@
     },
     {
      "label": "b",
-     "text": "275¢ = $ {b}",
+     "text": "275¢ = $ {bw}",
      "answer": {
       "value": [
        "2.75"
@@ -89,7 +89,7 @@
     },
     {
      "label": "c",
-     "text": "6 dollars and 5 cents = $ {b}",
+     "text": "6 dollars and 5 cents = $ {bw}",
      "answer": {
       "value": [
        "6.05"
@@ -132,7 +132,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The total is $ {b}",
+     "text": "The total is $ {bw}",
      "answer": {
       "value": [
        "10.80"
@@ -329,7 +329,7 @@
     },
     {
      "label": "b",
-     "text": "A book costs $4.30. Mei pays with a $10 note. Change: $ {b}",
+     "text": "A book costs $4.30. Mei pays with a $10 note. Change: $ {bw}",
      "answer": {
       "value": [
        "5.70"
@@ -387,7 +387,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The shoes and the T-shirt cost $ {b} together.",
+     "text": "The shoes and the T-shirt cost $ {bw} together.",
      "answer": {
       "value": [
        "27.40"
@@ -407,7 +407,7 @@
     },
     {
      "label": "c",
-     "text": "He needs $ {b} more to buy all 3.",
+     "text": "He needs $ {bw} more to buy all 3.",
      "answer": {
       "value": [
        "2.00"
@@ -422,7 +422,7 @@
    "id": "L2U06-S07",
    "tier": "start",
    "page": 3,
-   "text": "Aisha spent $3.50 on lunch and $1.25 on a drink. She has $4.75 left. At first she had $ {b}",
+   "text": "Aisha spent $3.50 on lunch and $1.25 on a drink. She has $4.75 left. At first she had $ {bw}",
    "answer": {
     "value": [
      "9.50"
@@ -642,7 +642,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The puzzle costs $ {b}",
+     "text": "The puzzle costs $ {bw}",
      "answer": {
       "value": [
        "4.50"
@@ -652,7 +652,7 @@
     },
     {
      "label": "b",
-     "text": "The book costs $ {b}",
+     "text": "The book costs $ {bw}",
      "answer": {
       "value": [
        "8.50"
@@ -673,7 +673,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "A ball has a tag of $9.60. You pay $ {b}",
+     "text": "A ball has a tag of $9.60. You pay $ {bw}",
      "answer": {
       "value": [
        "4.80"
@@ -683,7 +683,7 @@
     },
     {
      "label": "b",
-     "text": "A hat has a tag of $14.50. You pay $ {b}",
+     "text": "A hat has a tag of $14.50. You pay $ {bw}",
      "answer": {
       "value": [
        "7.25"
@@ -693,7 +693,7 @@
     },
     {
      "label": "c",
-     "text": "A kite costs $5.80 with PAY HALF. The tag says $ {b}",
+     "text": "A kite costs $5.80 with PAY HALF. The tag says $ {bw}",
      "answer": {
       "value": [
        "11.60"
@@ -724,7 +724,7 @@
     },
     {
      "label": "b",
-     "text": "With exactly 3 coins of 50¢, she has $ {b}",
+     "text": "With exactly 3 coins of 50¢, she has $ {bw}",
      "answer": {
       "value": [
        "1.90"
@@ -832,7 +832,7 @@
   {
    "id": "L2U06-C03",
    "tier": "quiz",
-   "text": "A cake costs $7.40. Ravi pays with a $10 note. Change: $ {b}",
+   "text": "A cake costs $7.40. Ravi pays with a $10 note. Change: $ {bw}",
    "answer": {
     "value": [
      "2.60"
@@ -844,7 +844,7 @@
   {
    "id": "L2U06-C04",
    "tier": "quiz",
-   "text": "Ali spent $2.40 on a drink and $3.10 on a snack. He has $4.50 left. At first: $ {b}",
+   "text": "Ali spent $2.40 on a drink and $3.10 on a snack. He has $4.50 left. At first: $ {bw}",
    "answer": {
     "value": [
      "10.00"

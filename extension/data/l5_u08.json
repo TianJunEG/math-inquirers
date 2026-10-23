@@ -1640,7 +1640,7 @@
     ]
    },
    "hint": "Find D first. Then use the isosceles triangle ADC.",
-   "explanation": "(a) The angles between the parallel sides add up to 180°. D = 180° - 70° = 110°. (b) AD = DC, so triangle ADC is isosceles. DAC = DCA = (180° - 110°) ÷ 2 = 35°. (c) Angle C of the trapezium = 180° - 80° = 100°. ACB = 100° - 35° = 65°. Check in triangle ABC: CAB = 70° - 35° = 35°, and 35° + 80° + 65° = 180°.",
+   "explanation": "(a) The angles between the parallel sides add up to 180°. D = 180° - 70° = 110°. (b) AD = DC, so triangle ADC is isosceles. DAC = DCA = (180° - 110°) ÷ 2 = 35°. (c) Angle C of the trapezium = 180° - 80° = 100°. ACB = 100° - 35° = 65°.",
    "figside": true
   },
   {
@@ -1807,7 +1807,7 @@
    "id": "L5U08-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Angles of a regular pentagon\nThe dashed lines split the pentagon into 3 triangles. A regular pentagon has 5 equal sides and 5 equal angles.",
+   "text": "The dashed lines split the pentagon into 3 triangles. A regular pentagon has 5 equal sides and 5 equal angles.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1896,13 +1896,14 @@
    },
    "hint": "Each triangle has angles that add up to 180°. Count the triangles.",
    "explanation": "(a) The 3 triangles fill the pentagon exactly, so the angles of the pentagon are the angles of the 3 triangles: 3 × 180° = 540°. (b) All 5 angles are equal: 540° ÷ 5 = 108°.",
-   "figside": true
+   "figside": true,
+   "beyond": "Angles of a regular pentagon"
   },
   {
    "id": "L5U08-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Clock angles\nThe minute hand turns 6° each minute. The hour hand turns 0.5° each minute. At 4 o'clock the angle between the hands is 120°. Find the smaller angle between the hands at 4:20. {b}°",
+   "text": "The minute hand turns 6° each minute. The hour hand turns 0.5° each minute. At 4 o'clock the angle between the hands is 120°. Find the smaller angle between the hands at 4:20. {b}°",
    "answer": {
     "value": [
      "10"
@@ -1916,7 +1917,8 @@
     ]
    },
    "hint": "At 4:20, how far has each hand turned from 12?",
-   "explanation": "From 12: the hour hand is at 4 × 30° = 120° at 4 o'clock, and 20 minutes later it has moved 20 × 0.5° = 10° more, so it is at 130°. The minute hand is at 20 × 6° = 120°. The angle between them is 130° - 120° = 10°."
+   "explanation": "From 12: the hour hand is at 4 × 30° = 120° at 4 o'clock, and 20 minutes later it has moved 20 × 0.5° = 10° more, so it is at 130°. The minute hand is at 20 × 6° = 120°. The angle between them is 130° - 120° = 10°.",
+   "beyond": "Clock angles"
   },
   {
    "id": "L5U08-G03",

@@ -688,7 +688,7 @@
   {
    "id": "L6U09-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Pairing up.\nThe numbers 7, 12, 17, 22, ..., 102 go up by 5 each time. There are 20 of them.",
+   "text": "The numbers 7, 12, 17, 22, ..., 102 go up by 5 each time. There are 20 of them.",
    "page": 5,
    "parts": [
     {
@@ -724,7 +724,8 @@
    ],
    "hint": "Pair the 1st with the last, the 2nd with the 2nd last.",
    "explanation": "The 1st and last add to 7 + 102 = 109. So do the 2nd and the 2nd last (12 + 97). 20 numbers make 10 pairs of 109, so the total is 1090. The mean is 1090 ÷ 20 = 54.5, which is halfway between 7 and 102.",
-   "partsrow": true
+   "partsrow": true,
+   "beyond": "Pairing up"
   },
   {
    "id": "L6U09-G02",
@@ -801,7 +802,7 @@
   {
    "id": "L6U09-G03",
    "tier": "go",
-   "text": "Beyond Level 6: A frequency table.\nIn 10 matches a team scored goals as shown.",
+   "text": "In 10 matches a team scored goals as shown.",
    "page": 5,
    "parts": [
     {
@@ -865,7 +866,8 @@
    },
    "hint": "2 matches with 0 goals, 4 with 1 goal: count goals for each column.",
    "explanation": "Total goals: 0 × 2 + 1 × 4 + 2 × 3 + 3 × 1 = 13. Mean = 13 ÷ 10 = 1.3. In order, the 5th and 6th of the 10 values are both 1, so the median is 1.",
-   "partsrow": true
+   "partsrow": true,
+   "beyond": "A frequency table"
   },
   {
    "id": "L6U09-C01",

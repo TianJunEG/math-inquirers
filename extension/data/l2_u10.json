@@ -474,7 +474,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "They eat {b} of the pizza.",
+     "text": "They eat {bw} of the pizza.",
      "answer": {
       "value": [
        "3/6"
@@ -484,7 +484,7 @@
     },
     {
      "label": "b",
-     "text": "{b} of the pizza is left.",
+     "text": "{bw} of the pizza is left.",
      "answer": {
       "value": [
        "3/6"
@@ -513,7 +513,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The pens cost $ {b}",
+     "text": "The pens cost $ {bw}",
      "answer": {
       "value": [
        "3.60"
@@ -523,7 +523,7 @@
     },
     {
      "label": "b",
-     "text": "Her change is $ {b}",
+     "text": "Her change is $ {bw}",
      "answer": {
       "value": [
        "1.40"
@@ -914,7 +914,7 @@
   {
    "id": "L2U10-C04",
    "tier": "quiz",
-   "text": "A pizza has 12 slices. 5/12 is eaten. What is left, in twelfths? {b}",
+   "text": "A pizza has 12 slices. 5/12 is eaten. What is left, in twelfths? {bw}",
    "answer": {
     "value": [
      "7/12"

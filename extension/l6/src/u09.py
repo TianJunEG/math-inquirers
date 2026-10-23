@@ -133,7 +133,7 @@ I.append(IT(U, 'G', 1, 5,
             parts=[P('a', 'The 1st and the last add up to {b}.', [109]),
                    P('b', 'The 20 numbers make {b} such pairs.', [10]),
                    P('c', 'The mean of the 20 numbers is {b}.', [54.5])],
-            hint='Pair the 1st with the last, the 2nd with the 2nd last.', partsrow=True))
+            hint='Pair the 1st with the last, the 2nd with the 2nd last.', partsrow=True, beyond='Pairing up'))
 I.append(IT(U, 'G', 2, 5,
             'The list marks holds 4, 8, 6, 10 and 7. This program adds up the items and says the mean.',
             f'Total = 4 + 8 + 6 + 10 + 7 = 35, and 35 ÷ 5 = 7. With repeat 4 the loop adds only 4 + 8 + 6 + 10 = 28, and 28 ÷ 5 = 5.6. '
@@ -151,7 +151,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'The team scored {b} goals in all.', [13]),
                    P('b', 'The mean number of goals is {b}.', [1.3]),
                    P('c', 'The median number of goals is {b}.', [1])],
-            hint='2 matches with 0 goals, 4 with 1 goal: count goals for each column.', partsrow=True))
+            hint='2 matches with 0 goals, 4 with 1 goal: count goals for each column.', partsrow=True, beyond='A frequency table'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

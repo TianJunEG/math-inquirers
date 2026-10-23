@@ -144,13 +144,13 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'The 1st letter moves 1, the 2nd moves 2, the 3rd moves 3, then the shifts repeat 1, 2, 3, ... ',
+            'The 1st letter moves 1, the 2nd moves 2 and the 3rd moves 3. Then the shifts repeat.',
             f'MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 is 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 is 2, 14, 3, 4, 18: CODES. '
             f'The same letter can be coded in different ways, so counting the commonest letter does not work.',
             parts=[P('a', 'Code MATHS: {l}', ['NCWIU']),
                    P('b', 'Decode DQGFU: {l}', ['CODES']),
                    P('c', 'Why is this code harder to crack than a Caesar code?   {circ:the same letter is coded in different ways|every letter moves the same amount}', ['the same letter is coded in different ways'])],
-            hint='Use the shifts 1, 2, 3, 1, 2 in turn, one for each letter.'))
+            hint='Use the shifts 1, 2, 3, 1, 2 in turn, one for each letter.', beyond='A code with a changing shift'))
 I.append(IT(U, 'G', 2, 5,
             'A sprite goes round a 12-hour clock in jumps of 5 hours. Predict where it ends.',
             f'The 1st jump goes from 9 to 14, which is more than 12, so 12 is taken away: 2. After 100 jumps it has moved 500 hours: 9 + 500 = 509. '
@@ -165,7 +165,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'The first 3 digits are 4, 7, 2. The check digit is {b}.', [7]),
                    P('b', 'The first 3 digits are 9, 8, 1. The check digit is {b}.', [2]),
                    P('c', 'Is the code 5 3 6 9 valid?   {circ:Yes|No}', ['No'])],
-            hint='What must you add to the first 3 digits to reach a multiple of 10?', space={'rows': ['Working:']}))
+            hint='What must you add to the first 3 digits to reach a multiple of 10?', space={'rows': ['Working:']}, beyond='Check digits'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

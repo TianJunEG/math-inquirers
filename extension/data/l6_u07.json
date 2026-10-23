@@ -746,7 +746,7 @@
   {
    "id": "L6U07-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Where does it end?\nThe turtle starts at x = 0, y = 0, facing right.",
+   "text": "The turtle starts at x = 0, y = 0, facing right.",
    "page": 5,
    "parts": [
     {
@@ -800,12 +800,13 @@
     ]
    },
    "hint": "Make a table. Write x and y after each repeat.",
-   "explanation": "Right 10, down 20, left 30, up 40 ends at x = 10 − 30 = −20, y = −20 + 40 = 20. The next 4 moves (50, 60, 70, 80) end at x = −40, y = 40. Each 4 repeats adds −20 to x and 20 to y, so 12 repeats end at (−60, 60)."
+   "explanation": "Right 10, down 20, left 30, up 40 ends at x = 10 − 30 = −20, y = −20 + 40 = 20. The next 4 moves (50, 60, 70, 80) end at x = −40, y = 40. Each 4 repeats adds −20 to x and 20 to y, so 12 repeats end at (−60, 60).",
+   "beyond": "Where does it end?"
   },
   {
    "id": "L6U07-G02",
    "tier": "go",
-   "text": "Beyond Level 6: Points of a star.\nThe angle at each point of a star is 180° − the turn. Add up all the point angles.",
+   "text": "The angle at each point of a star is 180° − the turn. Add up all the point angles.",
    "page": 5,
    "parts": [
     {
@@ -841,12 +842,13 @@
     }
    ],
    "hint": "Find each turn first. Then subtract it from 180 and multiply.",
-   "explanation": "5-point star: turn 144, point angle 36, and 5 × 36 = 180. 8-point star going round 3 times: turn 135, point angle 45, and 8 × 45 = 360. 10-point star going round 3 times: turn 108, point angle 72, and 10 × 72 = 720."
+   "explanation": "5-point star: turn 144, point angle 36, and 5 × 36 = 180. 8-point star going round 3 times: turn 135, point angle 45, and 8 × 45 = 360. 10-point star going round 3 times: turn 108, point angle 72, and 10 × 72 = 720.",
+   "beyond": "Points of a star"
   },
   {
    "id": "L6U07-G03",
    "tier": "go",
-   "text": "Beyond Level 6: A polygon that looks like a circle.\nThe turtle runs repeat 360 [move 1, turn ↻ 1].",
+   "text": "The turtle runs repeat 360 [move 1, turn ↻ 1].",
    "page": 5,
    "parts": [
     {
@@ -871,7 +873,8 @@
     }
    ],
    "hint": "The path round the shape is about 3.14 times the distance across.",
-   "explanation": "360 turns of 1° make one full turn, so the path closes. Inside angle 180 − 1 = 179°. The path is 360 steps long. Round ≈ 3.14 × across, so across ≈ 360 ÷ 3.14 = 114.6, about 115."
+   "explanation": "360 turns of 1° make one full turn, so the path closes. Inside angle 180 − 1 = 179°. The path is 360 steps long. Round ≈ 3.14 × across, so across ≈ 360 ÷ 3.14 = 114.6, about 115.",
+   "beyond": "A polygon that looks like a circle"
   },
   {
    "id": "L6U07-C01",

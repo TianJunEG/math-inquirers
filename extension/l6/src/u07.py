@@ -146,13 +146,13 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Beyond Level 6: Where does it end?\nThe turtle starts at x = 0, y = 0, facing right.',
+            'The turtle starts at x = 0, y = 0, facing right.',
             f'Right 10, down 20, left 30, up 40 gives x = 10 {M} 30 = {M}20 and y = {M}20 + 40 = 20 after 4 repeats. The next 4 moves are right 50, down 60, left 70, up 80: x = {M}20 + 50 {M} 70 = {M}40 and y = 20 {M} 60 + 80 = 40. '
             f'Every 4 repeats adds {M}20 to x and 20 to y, so after 12 repeats it is at ({M}60, 60).',
             fig=code([['var', 'set n to (10)'], ['ctl', 'repeat (4)', [mv('n'), tn(90), ['var', 'change n by (10)']]]]),
             parts=[P('a', 'After 4 repeats: x = {b}, y = {b}', [-20, 20], f'{M}20, 20'),
                    P('b', 'After 12 repeats: x = {b}, y = {b}', [-60, 60], f'{M}60, 60')],
-            hint='Make a table. Write x and y after each repeat.'))
+            hint='Make a table. Write x and y after each repeat.', beyond='Where does it end?'))
 I.append(IT(U, 'G', 2, 5,
             'The angle at each point of a star is 180° − the turn. Add up all the point angles.',
             f'5-point star: turn 144, point angle 36, and 5 {X} 36 = 180. 8-point star going round 3 times: turn 135, point angle 45, and 8 {X} 45 = 360. '
@@ -160,14 +160,14 @@ I.append(IT(U, 'G', 2, 5,
             parts=[P('a', '5-point star (turn 144°): the 5 point angles add to {b}°.', [180]),
                    P('b', '8-point star, 3 times round: the 8 point angles add to {b}°.', [360]),
                    P('c', '10-point star, 3 times round: each point angle is {b}° and they add to {b}°.', [72, 720], '72°, 720°')],
-            hint='Find each turn first. Then subtract it from 180 and multiply.'))
+            hint='Find each turn first. Then subtract it from 180 and multiply.', beyond='Points of a star'))
 I.append(IT(U, 'G', 3, 5,
             f'The turtle runs repeat 360 [move 1, turn {TURN} 1].',
             f'360 turns of 1{D} add to 360{D}, one full turn, so the path closes. Inside angle: 180 {M} 1 = 179{D}. The path is 360 steps long. For a circle, the distance round is about 3.14 {X} the distance across, '
             f'so the distance across is about 360 ÷ 3.14 = 114.6, which is 115 to the nearest whole number.',
             parts=[P('a', 'The path is {b} steps long.', [360]),
                    P('b', 'The distance across the shape is about {b} steps (use 3.14, nearest whole number).', [115])],
-            hint='The path round the shape is about 3.14 times the distance across.'))
+            hint='The path round the shape is about 3.14 times the distance across.', beyond='A polygon that looks like a circle'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

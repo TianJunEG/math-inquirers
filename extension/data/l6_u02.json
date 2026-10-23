@@ -781,7 +781,7 @@
   {
    "id": "L6U02-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Counting factors.\nBreak a number into primes, then count its factors. Each factor uses some of the primes.",
+   "text": "Break a number into primes, then count its factors. Each factor uses some of the primes.",
    "page": 5,
    "parts": [
     {
@@ -821,7 +821,8 @@
      "Factors of 72:"
     ]
    },
-   "explanation": "(a) 72 has 12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. A factor uses 0 to 3 twos and 0 to 2 threes: 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5 gives 3 × 3 × 2 = 18. (c) 60 = 2 × 2 × 3 × 5 gives 3 × 2 × 2 = 12, and no smaller number has 12."
+   "explanation": "(a) 72 has 12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. A factor uses 0 to 3 twos and 0 to 2 threes: 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5 gives 3 × 3 × 2 = 18. (c) 60 = 2 × 2 × 3 × 5 gives 3 × 2 × 2 = 12, and no smaller number has 12.",
+   "beyond": "Counting factors"
   },
   {
    "id": "L6U02-G02",

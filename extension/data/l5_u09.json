@@ -651,7 +651,7 @@
      "Working:"
     ]
    },
-   "explanation": "Try 10 adults and 5 children: $90 + $25 = $115, too much. Try 8 adults and 7 children: $72 + $35 = $107. Right. (Another way: all 15 child tickets cost $75. Each adult ticket instead of a child ticket adds $4. $107 - $75 = $32, and 32 ÷ 4 = 8 adult tickets.)"
+   "explanation": "Try 10 adults and 5 children: $90 + $25 = $115, too much. Try 8 adults and 7 children: $72 + $35 = $107. Right."
   },
   {
    "id": "L5U09-S07",
@@ -685,7 +685,7 @@
      "Working:"
     ]
    },
-   "explanation": "Suppose all 17 are stools: 17 × 3 = 51 legs. That is 61 - 51 = 10 legs short. Each chair instead of a stool adds 1 leg, so there are 10 chairs. Then 17 - 10 = 7 stools. Check: 40 + 21 = 61."
+   "explanation": "Suppose all 17 are stools: 17 × 3 = 51 legs. That is 61 - 51 = 10 legs short. Each chair instead of a stool adds 1 leg, so there are 10 chairs. Then 17 - 10 = 7 stools."
   },
   {
    "id": "L5U09-S08",
@@ -719,7 +719,7 @@
      "Working:"
     ]
    },
-   "explanation": "All 12 right would score 12 × 5 = 60 marks. Each wrong answer costs 5 marks and also loses 2 marks: 7 marks. 60 - 39 = 21, and 21 ÷ 7 = 3 wrong. Then 12 - 3 = 9 right. Check: 45 - 6 = 39."
+   "explanation": "All 12 right would score 12 × 5 = 60 marks. Each wrong answer costs 5 marks and also loses 2 marks: 7 marks. 60 - 39 = 21, and 21 ÷ 7 = 3 wrong. Then 12 - 3 = 9 right."
   },
   {
    "id": "L5U09-S09",
@@ -1249,7 +1249,7 @@
    "id": "L5U09-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Adding a pattern\nAdd 4 + 7 + 10 + 13 + ... + 100. The numbers go up by 3 each time. {b}",
+   "text": "Add 4 + 7 + 10 + 13 + ... + 100. The numbers go up by 3 each time. {b}",
    "answer": {
     "value": [
      "1716"
@@ -1265,13 +1265,14 @@
     ]
    },
    "hint": "How many numbers are there? Pair the first with the last.",
-   "explanation": "From 4 to 100 there are (100 - 4) ÷ 3 = 32 jumps, so 33 numbers. Pair them: 4 + 100 = 104, 7 + 97 = 104, and so on. Each pair makes 104. There are 33 numbers, which is 16 pairs and a middle number 52. 16 × 104 + 52 = 1716. (Or: 33 × 104 ÷ 2 = 1716.)"
+   "explanation": "From 4 to 100 there are (100 - 4) ÷ 3 = 32 jumps, so 33 numbers. Pair them: 4 + 100 = 104, 7 + 97 = 104, and so on. Each pair makes 104. There are 33 numbers, which is 16 pairs and a middle number 52. 16 × 104 + 52 = 1716.",
+   "beyond": "Adding a pattern"
   },
   {
    "id": "L5U09-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Handshakes\nEvery person in a group shakes hands once with every other person.",
+   "text": "Every person in a group shakes hands once with every other person.",
    "parts": [
     {
      "label": "a",
@@ -1303,7 +1304,8 @@
     ]
    },
    "hint": "n people each shake n - 1 hands. Each handshake counts twice.",
-   "explanation": "(a) Each of the 5 people shakes 4 hands: 5 × 4 = 20. Each handshake is counted twice (once for each person), so 20 ÷ 2 = 10. (b) 12 × 11 = 132, and 132 ÷ 2 = 66 handshakes."
+   "explanation": "(a) Each of the 5 people shakes 4 hands: 5 × 4 = 20. Each handshake is counted twice (once for each person), so 20 ÷ 2 = 10. (b) 12 × 11 = 132, and 132 ÷ 2 = 66 handshakes.",
+   "beyond": "Handshakes"
   },
   {
    "id": "L5U09-G03",
@@ -1325,7 +1327,7 @@
     ]
    },
    "hint": "Only answered questions count. Suppose all of them are right.",
-   "explanation": "Ali answers 30 - 3 = 27 questions. All 27 right would score 108 marks. Each wrong answer loses 4 marks and has 1 mark taken away: 5 marks. 108 - 73 = 35, and 35 ÷ 5 = 7 wrong. Right: 27 - 7 = 20. Check: 80 - 7 = 73."
+   "explanation": "Ali answers 30 - 3 = 27 questions. All 27 right would score 108 marks. Each wrong answer loses 4 marks and has 1 mark taken away: 5 marks. 108 - 73 = 35, and 35 ÷ 5 = 7 wrong. Right: 27 - 7 = 20."
   },
   {
    "id": "L5U09-C01",
@@ -1351,7 +1353,7 @@
     ],
     "text": "Figure 13"
    },
-   "explanation": "41 - 2 = 39, and 39 ÷ 3 = 13. Check: 3 × 13 + 2 = 41."
+   "explanation": "41 - 2 = 39, and 39 ÷ 3 = 13."
   },
   {
    "id": "L5U09-C03",

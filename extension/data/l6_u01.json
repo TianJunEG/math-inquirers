@@ -867,7 +867,7 @@
   {
    "id": "L6U01-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Second differences.\nMatchsticks make staircases. Look at staircases 1, 2 and 3.",
+   "text": "Matchsticks make staircases. Look at staircases 1, 2 and 3.",
    "page": 5,
    "parts": [
     {
@@ -915,6 +915,7 @@
    },
    "hint": "Find how many extra sticks each staircase adds. Look for a pattern.",
    "explanation": "The extra sticks are 6, 8, then 10 and 12 (they go up by 2): 18 + 10 = 28 and 28 + 12 = 40. Staircase 10: 4 + 6 + 8 + ... + 22 = 130. (The rule is n × n + 3n.)",
+   "beyond": "Second differences",
    "figright": true
   },
   {
@@ -962,7 +963,7 @@
   {
    "id": "L6U01-G03",
    "tier": "go",
-   "text": "Beyond Level 6: Triangle numbers.\nWhat does this code say? Write t after each repeat.",
+   "text": "What does this code say? Write t after each repeat.",
    "page": 5,
    "parts": [
     {
@@ -1019,6 +1020,7 @@
    },
    "hint": "Write t after every repeat: 1, 3, 6, ... Where does it pass 100?",
    "explanation": "t after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. It stops when t is above 100, after repeat 14: k = 14, t = 105. (Triangle numbers.)",
+   "beyond": "Triangle numbers",
    "figside": true
   },
   {
