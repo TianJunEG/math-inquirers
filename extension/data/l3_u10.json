@@ -10,19 +10,19 @@
  "learn": {
   "intro": "To start a puzzle, try one of 3 ways. Draw it, list it, or make a table. Then check every clue.",
   "example": {
-   "problem": "Mei is 6th from the front and 3rd from the back of a line. Count the children in the whole line.",
+   "problem": "Kumar is 6th from the front and 3rd from the back of a line. Count the children in the whole line.",
    "figure": {
     "type": "l3_queue",
     "n": 8,
     "marks": {
-     "6": "Mei"
+     "6": "Kumar"
     },
     "width_mm": 120
    },
    "steps": [
-    "Draw the line. Put Mei in 6th place from the front.",
-    "Mei is 3rd from the back, so 2 children are behind her.",
-    "5 children are in front of Mei, then Mei, then 2 behind: 5 + 1 + 2 = 8.",
+    "Draw the line. Put Kumar in 6th place from the front.",
+    "Kumar is 3rd from the back, so 2 children are behind him.",
+    "5 children are in front of Kumar, then Kumar, then 2 behind: 5 + 1 + 2 = 8.",
     "Check: 6 + 3 - 1 = 8."
    ],
    "answer": "There are 8 children in the line."
@@ -37,14 +37,14 @@
    ]
   },
   "try": {
-   "text": "Siti is 2nd from the front and 7th from the back of a line. The line has {b} children.",
+   "text": "Lily is 2nd from the front and 7th from the back of a line. The line has {b} children.",
    "answer": {
     "value": [
      "8"
     ],
     "text": "8"
    },
-   "explanation": "1 child is in front of Siti and 6 are behind her. 1 + 1 + 6 = 8. Check: 2 + 7 - 1 = 8.",
+   "explanation": "1 child is in front of Lily and 6 are behind her. 1 + 1 + 6 = 8. Check: 2 + 7 - 1 = 8.",
    "id": "L3U10-L01"
   },
   "tight": true
@@ -370,7 +370,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "{ll}",
+     "text": "Write the list below.",
      "answer": {
       "value": [
        "369",
@@ -405,7 +405,12 @@
      }
     }
    ],
-   "explanation": "Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700. The others are much farther away."
+   "explanation": "Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700. The others are much farther away.",
+   "space": {
+    "rows": [
+     "My list:"
+    ]
+   }
   },
   {
    "id": "L3U10-S07",
@@ -569,19 +574,17 @@
    "id": "L3U10-S09",
    "tier": "start",
    "page": 3,
-   "text": "Two numbers add up to 60. The greater number is 14 more than the smaller one. Find the 2 numbers. {b} and {b}",
+   "text": "I think of a number. I multiply it by 3 and take away 4. The answer is 17. My number is {b}.",
    "answer": {
     "value": [
-     "23",
-     "37"
+     "7"
     ],
-    "text": "23 and 37",
-    "list": true
+    "text": "7"
    },
-   "explanation": "Take away the extra 14: 60 - 14 = 46. Share it into 2 equal parts: 23 each. The numbers are 23 and 23 + 14 = 37. Check: 23 + 37 = 60.",
+   "explanation": "Work backwards. Add 4 to 17: 21. Divide by 3: 7. Check: 7 × 3 = 21, and 21 - 4 = 17.",
    "space": {
     "rows": [
-     "Guess, check, improve:"
+     "Working backwards:"
     ]
    }
   },
@@ -589,7 +592,7 @@
    "id": "L3U10-S10",
    "tier": "start",
    "page": 3,
-   "text": "Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 2 juices and 1 sandwich. Her change is ${b}.",
+   "text": "Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 2 juices and 1 sandwich. Her change is ${bw}.",
    "answer": {
     "value": [
      "2.90"
@@ -602,22 +605,41 @@
    "id": "L3U10-T01",
    "tier": "think",
    "page": 4,
-   "text": "7 friends meet. Each friend shakes hands once with every other friend. How many handshakes are there? {b}",
+   "text": "A grid is made of 2 rows of 3 small squares. Count the rectangles of every size, squares included. {b}",
    "answer": {
     "value": [
-     "21"
+     "18"
     ],
-    "text": "21"
+    "text": "18"
    },
-   "explanation": "With 2 friends: 1 handshake. With 3: 3. With 4: 6. Each new friend shakes hands with all the friends already there: 5 friends add 4 (10), 6 add 5 (15) and 7 add 6 (21).",
-   "hint": "Try 2, 3, 4 friends first. Make a table.",
+   "explanation": "1 by 1: 6. 1 by 2 (2 wide, 1 tall): 2 in each row, so 4. 1 by 3: 2. 2 by 1 (1 wide, 2 tall): 3. 2 by 2: 2. 2 by 3: 1. In all: 6 + 4 + 2 + 3 + 2 + 1 = 18.",
+   "figure": {
+    "type": "l3_grid",
+    "rows": [
+     [
+      null,
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null
+     ]
+    ],
+    "cw": 70,
+    "ch": 60,
+    "width_mm": 50
+   },
+   "figside": true,
+   "hint": "Count 1 by 1 first. Then 1 by 2. Make a table.",
    "space": {
     "table": {
      "cols": [
-      "friends",
-      "handshakes"
+      "size",
+      "how many"
      ],
-     "rows": 3
+     "rows": 4
     }
    }
   },
@@ -633,12 +655,12 @@
     "text": "Aisha"
    },
    "explanation": "If Ben did it: Aisha tells the truth, and Wei tells the truth (Ben’s words are a lie). That is 2 true statements. If Wei did it: Ben and Aisha both tell the truth. If Aisha did it: Ben lies, Aisha lies and Wei tells the truth. That is exactly 1. So Aisha did it.",
-   "hint": "Test each child as the one who broke the cup.",
+   "hint": "Pick one child. Are exactly 1 of the 3 sayings true?",
    "space": {
     "rows": [
-     "If Ben did it:",
-     "If Aisha did it:",
-     "If Wei did it:"
+     "My tests:",
+     "",
+     ""
     ]
    }
   },
@@ -646,7 +668,7 @@
    "id": "L3U10-T03",
    "tier": "think",
    "page": 4,
-   "text": "A graph shows the pencils sold on 4 days. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday. They sold 185 pencils in all.",
+   "text": "A shop sold pencils on 4 days. Draw a bar graph if you like. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday. They sold 185 pencils in all.",
    "parts": [
     {
      "label": "a",
@@ -754,7 +776,8 @@
    "id": "L3U10-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: A balance puzzle.\n9 coins look the same. One is lighter. You have a balance scale.",
+   "beyond": "A balance puzzle",
+   "text": "9 coins look the same. One is lighter. You have a balance scale.",
    "parts": [
     {
      "label": "a",
@@ -890,14 +913,14 @@
    "id": "L3U10-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Use the cards 1, 4 and 7 once each to make 3-digit numbers. {b} of the numbers are even.",
+   "text": "Use the cards 2, 5 and 6 once each to make 3-digit numbers. {b} of the numbers are odd.",
    "answer": {
     "value": [
      "2"
     ],
     "text": "2"
    },
-   "explanation": "The numbers are 147, 174, 417, 471, 714 and 741. The even ones end in 4: 174 and 714."
+   "explanation": "The numbers are 256, 265, 526, 562, 625 and 652. The odd ones end in 5: 265 and 625."
   },
   {
    "id": "L3U10-C04",

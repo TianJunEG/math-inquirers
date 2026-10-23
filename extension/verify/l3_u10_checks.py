@@ -91,8 +91,7 @@ def _():
 
 @check('L3U10-S09')
 def _():
-    sols = [(a, b) for a in range(0, 61) for b in range(0, 61) if a + b == 60 and b == a + 14]
-    return s(only(sols))
+    return s([only(n for n in range(0, 100) if n * 3 - 4 == 17)])
 
 
 @check('L3U10-S03')
@@ -114,8 +113,14 @@ def _():
 
 @check('L3U10-T01')
 def _():
-    n = 7
-    return s([sum(1 for a, b in itertools.combinations(range(n), 2))])
+    cells = [(r, c0) for r in range(2) for c0 in range(3)]
+    count = 0
+    for r1 in range(2):
+        for r2 in range(r1, 2):
+            for c1 in range(3):
+                for c2 in range(c1, 3):
+                    count += 1
+    return s([count])
 
 
 @check('L3U10-T02')
@@ -203,8 +208,8 @@ def _():
 
 @check('L3U10-C03')
 def _():
-    nums = {int(''.join(p)) for p in itertools.permutations('147')}
-    return s([sum(1 for n in nums if n % 2 == 0)])
+    nums = {int(''.join(p)) for p in itertools.permutations('256')}
+    return s([sum(1 for n in nums if n % 2 == 1)])
 
 
 @check('L3U10-C04')

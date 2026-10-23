@@ -24,15 +24,15 @@ def graph(cats, vals, mx, step, w=118, **kw):
 
 u.learn(
     'To start a puzzle, try one of 3 ways. Draw it, list it, or make a table. Then check every clue.',
-    {'problem': 'Mei is 6th from the front and 3rd from the back of a line. Count the children in the whole line.',
-     'figure': {'type': 'l3_queue', 'n': 8, 'marks': {'6': 'Mei'}, 'width_mm': 120},
-     'steps': ['Draw the line. Put Mei in 6th place from the front.', 'Mei is 3rd from the back, so 2 children are behind her.',
-               '5 children are in front of Mei, then Mei, then 2 behind: 5 + 1 + 2 = 8.', 'Check: 6 + 3 - 1 = 8.'],
+    {'problem': 'Kumar is 6th from the front and 3rd from the back of a line. Count the children in the whole line.',
+     'figure': {'type': 'l3_queue', 'n': 8, 'marks': {'6': 'Kumar'}, 'width_mm': 120},
+     'steps': ['Draw the line. Put Kumar in 6th place from the front.', 'Kumar is 3rd from the back, so 2 children are behind him.',
+               '5 children are in front of Kumar, then Kumar, then 2 behind: 5 + 1 + 2 = 8.', 'Check: 6 + 3 - 1 = 8.'],
      'answer': 'There are 8 children in the line.'},
     {'title': 'Three ways to start',
      'steps': ['Draw it: make a picture of the puzzle.', 'List it: write every case in order.', 'Table: write what you know in rows and columns.', 'Check your answer against every clue.']},
-    {'text': 'Siti is 2nd from the front and 7th from the back of a line. The line has {b} children.', 'answer': A('8'),
-     'explanation': '1 child is in front of Siti and 6 are behind her. 1 + 1 + 6 = 8. Check: 2 + 7 - 1 = 8.'})
+    {'text': 'Lily is 2nd from the front and 7th from the back of a line. The line has {b} children.', 'answer': A('8'),
+     'explanation': '1 child is in front of Lily and 6 are behind her. 1 + 1 + 6 = 8. Check: 2 + 7 - 1 = 8.'})
 u.u['learn']['tight'] = True
 
 # ---------------- Start here (pages 1 to 3)
@@ -64,9 +64,10 @@ u.S(2, 'Draw it. Count the children in each line.', parts=[
     space={'rows': ['Draw it:']},
     why='(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 7 children are in front of Aisha and 1 is behind her: 7 + 1 + 1 = 9.')
 u.S(2, 'Make every 3-digit number from the cards 3, 6 and 9. Use each card once in a number. List them from the smallest.', parts=[
-    P('a', '{ll}', A(['369', '396', '639', '693', '936', '963'], '369, 396, 639, 693, 936, 963', list=True)),
+    P('a', 'Write the list below.', A(['369', '396', '639', '693', '936', '963'], '369, 396, 639, 693, 936, 963', list=True)),
     P('b', 'There are {b} even numbers in your list.', A('2')),
     P('c', 'The number closest to 700 is {b}.', A('693'))],
+    space={'rows': ['My list:']},
     why='Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700. The others are much farther away.')
 u.S(3, 'Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 hexagons need 11 sticks. 3 hexagons need 16 sticks. Make a table.', parts=[
     P('a', '6 hexagons need {b} sticks.', A('31')), P('b', '41 sticks make {b} hexagons.', A('8'))],
@@ -76,22 +77,23 @@ u.S(3, 'Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 he
 u.S(3, 'Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is more than the ones digit.\n{ll}',
     A(['162', '252', '342'], '162, 252 and 342', list=True),
     why='The hundreds digit is 1, 2 or 3. The ones digit is even and not 0, so it is 2, 4 or 6, and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: tens + ones = 7, so 5 and 2. With 3: tens + ones = 6, so 4 and 2. The numbers are 162, 252 and 342.')
-u.S(3, 'Two numbers add up to 60. The greater number is 14 more than the smaller one. Find the 2 numbers. {b} and {b}', A(['23', '37'], '23 and 37', list=True),
-    space={'rows': ['Guess, check, improve:']},
-    why='Take away the extra 14: 60 - 14 = 46. Share it into 2 equal parts: 23 each. The numbers are 23 and 23 + 14 = 37. Check: 23 + 37 = 60.')
-u.S(3, 'Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 2 juices and 1 sandwich. Her change is ${b}.', A('2.90'),
+u.S(3, 'I think of a number. I multiply it by 3 and take away 4. The answer is 17. My number is {b}.', A('7'),
+    space={'rows': ['Working backwards:']},
+    why='Work backwards. Add 4 to 17: 21. Divide by 3: 7. Check: 7 × 3 = 21, and 21 - 4 = 17.')
+u.S(3, 'Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 2 juices and 1 sandwich. Her change is ${bw}.', A('2.90'),
     why='2 juices cost 2 × 1.85 = 3.70. With the sandwich: 3.70 + 3.40 = 7.10. Change: 10.00 - 7.10 = 2.90.')
 
 # ---------------- Think harder
-u.T('7 friends meet. Each friend shakes hands once with every other friend. How many handshakes are there? {b}', A('21'),
-    hint='Try 2, 3, 4 friends first. Make a table.',
-    space={'table': {'cols': ['friends', 'handshakes'], 'rows': 3}},
-    why='With 2 friends: 1 handshake. With 3: 3. With 4: 6. Each new friend shakes hands with all the friends already there: 5 friends add 4 (10), 6 add 5 (15) and 7 add 6 (21).')
+u.T('A grid is made of 2 rows of 3 small squares. Count the rectangles of every size, squares included. {b}', A('18'),
+    figure={'type': 'l3_grid', 'rows': [[None, None, None], [None, None, None]], 'cw': 70, 'ch': 60, 'width_mm': 50}, figside=True,
+    hint='Count 1 by 1 first. Then 1 by 2. Make a table.',
+    space={'table': {'cols': ['size', 'how many'], 'rows': 4}},
+    why='1 by 1: 6. 1 by 2 (2 wide, 1 tall): 2 in each row, so 4. 1 by 3: 2. 2 by 1 (1 wide, 2 tall): 3. 2 by 2: 2. 2 by 3: 1. In all: 6 + 4 + 2 + 3 + 2 + 1 = 18.')
 u.T('One of Ben, Aisha and Wei broke a cup. They each say 1 thing: Ben “Wei did it”, Aisha “Not me”, Wei “Ben is lying”. Exactly 1 of them tells the truth. Who broke the cup?   {circ:Ben|Aisha|Wei}', A('Aisha'),
-    hint='Test each child as the one who broke the cup.',
-    space={'rows': ['If Ben did it:', 'If Aisha did it:', 'If Wei did it:']},
+    hint='Pick one child. Are exactly 1 of the 3 sayings true?',
+    space={'rows': ['My tests:', '', '']},
     why='If Ben did it: Aisha tells the truth, and Wei tells the truth (Ben’s words are a lie). That is 2 true statements. If Wei did it: Ben and Aisha both tell the truth. If Aisha did it: Ben lies, Aisha lies and Wei tells the truth. That is exactly 1. So Aisha did it.')
-u.T('A graph shows the pencils sold on 4 days. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday. They sold 185 pencils in all.', parts=[
+u.T('A shop sold pencils on 4 days. Draw a bar graph if you like. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday. They sold 185 pencils in all.', parts=[
     P('a', 'Monday: {b}', A('30')), P('b', 'Tuesday: {b}', A('45')), P('c', 'Wednesday: {b}', A('60')), P('d', 'Thursday: {b}', A('50'))],
     partsrow=True,
     hint='Draw Monday as 1 bar. Then draw the other days with it.',
@@ -126,8 +128,8 @@ u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils t
     why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
 u.C('In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.', A('8'),
     why='3 + 1 + 4 = 8. Do not forget Ben.')
-u.C('Use the cards 1, 4 and 7 once each to make 3-digit numbers. {b} of the numbers are even.', A('2'),
-    why='The numbers are 147, 174, 417, 471, 714 and 741. The even ones end in 4: 174 and 714.')
+u.C('Use the cards 2, 5 and 6 once each to make 3-digit numbers. {b} of the numbers are odd.', A('2'),
+    why='The numbers are 256, 265, 526, 562, 625 and 652. The odd ones end in 5: 265 and 625.')
 u.C('Look for a pattern. 2, 6, 10, 14, ... The 8th number is {b}.', A('30'),
     why='The numbers go up by 4. The 8th number is 2 + 7 × 4 = 30.')
 u.save()
