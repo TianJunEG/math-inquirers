@@ -59,7 +59,7 @@ This file is only a record of the syllabus wording. It makes no claim about any 
 
 ## Angles
 
-- Angles 1.1: concept of an angle
+- Angles 1.1: concepts of angle
 - Angles 1.2: right angles, angles greater than/smaller than a right angle
 
 ## Perpendicular and Parallel Lines

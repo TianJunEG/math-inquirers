@@ -145,7 +145,7 @@ Mechanism count over the 40 pages: 19 code-word pages (47.5%; P2 had 23 of 40), 
 | Area and Perimeter 1.2 | measuring area in square units, cm2 and m2, excluding conversion between cm2 and m2 | P3-30, P3-32, P3-33 |
 | Area and Perimeter 1.3 | perimeter of rectilinear figure, rectangle, square | P3-31, P3-33 |
 | Area and Perimeter 1.4 | area of rectangle/square | P3-32 |
-| Angles 1.1 | concept of an angle | P3-34 |
+| Angles 1.1 | concepts of angle | P3-34 |
 | Angles 1.2 | right angles, angles greater than/smaller than a right angle | P3-34 |
 | Perpendicular and Parallel Lines 2.1 | perpendicular and parallel lines | P3-35 |
 | Perpendicular and Parallel Lines 2.2 | drawing perpendicular and parallel lines | P3-36 |

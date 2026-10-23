@@ -33,7 +33,7 @@ OUTCOMES = {
     "AP1.2": ("Area and Perimeter", "measuring area in square units, cm2 and m2, excluding conversion between cm2 and m2"),
     "AP1.3": ("Area and Perimeter", "perimeter of rectilinear figure, rectangle, square"),
     "AP1.4": ("Area and Perimeter", "area of rectangle/square"),
-    "AN1.1": ("Angles", "concept of an angle"),
+    "AN1.1": ("Angles", "concepts of angle"),
     "AN1.2": ("Angles", "right angles, angles greater than/smaller than a right angle"),
     "PP2.1": ("Perpendicular and Parallel Lines", "perpendicular and parallel lines"),
     "PP2.2": ("Perpendicular and Parallel Lines", "drawing perpendicular and parallel lines"),

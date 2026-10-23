@@ -51,12 +51,22 @@ ORIG_FULL = {4: 'COUSIN', 6: 'TEACUP', 8: 'FATHOM', 13: 'FIGURE', 21: 'DONKEY', 
 ORIG_WORD = {13: 'FIGURE', 6: 'TEACUP', 8: 'FATHOM', 21: 'DONKEY', 23: 'FRUITY', 30: 'CAMPUS', 31: 'PEANUT', 32: 'BANDIT'}     # pages that use code_table_any (page 4 is an ordering page)
 USED_FIRST_BUILD = set("BANDIT BIRCH BLUNT CAMPUS CANOPY COUSIN DEVOUR DONKEY FATHOM FIGURE FRUITY GOPHER JUNIOR PEANUT POLICE PUBLIC QUIVER SAUCY SCRIBE SHRIMP SPRUCE SWIVEL TEACUP THRIVE TUXEDO UPDATE VOLUME WALNUT WISDOM WOMBAT WORKS".split())
 
+# round 2 (audit): COUGAR, FLIGHT and MELODY collide with P6-23, P4-38 and P5-31; these three pages take a word that no level uses
+PREFER = {4: ["TUXEDO", "WISDOM", "SWIVEL"], 6: ["WISDOM", "SWIVEL", "TUXEDO"], 30: ["SWIVEL", "TUXEDO", "WISDOM"]}
+GHOST = {4: "FLIGHT", 6: "MELODY", 30: "COUGAR"}
+
 def word_candidates(no, n, avoid=()):
-    avoid = set(avoid) | ((REPEATS | USED_FIRST_BUILD) if no in REPLACED else set())      # other pages keep their first-build word lists
+    avoid = set(avoid) | ((REPEATS | USED_FIRST_BUILD) if no in REPLACED else set())
+    if no in PREFER: avoid |= {"COUGAR", "FLIGHT", "MELODY"}      # other pages keep their first-build word lists
     pool = safe_pool(n); k = (no * 5) % len(pool)
-    taken = {w for p, w in CLAIMED.items() if p != no}
+    taken = {w for p, w in CLAIMED.items() if p != no and (p not in PREFER or no in PREFER)}
+    taken |= {w for q, w in GHOST.items() if q < no and no not in PREFER}      # the earlier words of the pages in PREFER stay "taken" for the other pages, so none of them changes
     taken |= {w for q, w in ORIG_FULL.items() if q < no and q != no and no not in REPLACED}      # the nine words stay reserved, so the pages after them choose as they did
-    return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
+    base = [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
+    if no in PREFER:
+        first = [w for w in PREFER[no] if w not in taken and w in {x.upper() for x in pool}]
+        return first + [w for w in base if w not in first]
+    return base
 
 def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
     """(word, table): the first word of this page's sequence for which a code table with no undetected slip exists"""

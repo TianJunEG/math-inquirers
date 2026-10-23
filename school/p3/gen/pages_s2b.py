@@ -222,7 +222,7 @@ def page29():
           f"Bus D arrives at {t24(d_a)} h. The journey takes {hm_text(d_dur)}. At what time did it leave?",
           f"How many minutes does Bus E take?", f"Bus B leaves after Bus A arrives. How many minutes is the wait?"]
     cards = [qcard(i + 1, f"<p>{q}</p>", f'<span class="ab w4"></span> <b>{"h" if i in (2, 3) else "min"}</b>') for i, q in enumerate(qs)]
-    pre = f'<div class="blk"><p class="lead">The 24-hour clock timetable. Times are four digits, for example 0915 h.</p>{table_html}</div>'
+    pre = f'<div class="blk" style="margin-bottom:3.5mm"><p class="lead">The 24-hour clock timetable. Times are four digits, for example 0915 h.</p>{table_html}</div>'
     P = code_items_page(29, 4929, "Time Detective", 2, "Time: the 24-hour clock, start, finish and how long", STRAND_ME,
         "2.2, 2.3 (starting time, finishing time or duration; 24-hour clock)", ["TI2.2", "TI2.3"], "Code-breaker (timetable)",
         ["Use the timetable and the questions.", "Write each answer in the box.", INSTR_CODE],

@@ -95,7 +95,7 @@ def page35():
         labs = "".join(f'<text x="{lx:.1f}" y="{ly + fs * 0.35:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="{fs}" fill="#000">{l}</text>' for l, lx, ly, fs, own in labpos)
         fig = svg(66, 28, "".join(parts) + labs)
         right_letter = [l for l, i, s in cands if i == 0][0]
-        specs.append(dict(q=f'<div class="lnfig">{fig}</div><p class="qs2">Which line is {kd} to line AB?</p>', opts=[f'<b class="on">{l}</b>' for l in letters], ri=letters.index(right_letter), fixed=True, kd=kd))
+        specs.append(dict(q=f'<div class="lnfig">{fig}</div><p class="qs2">Choose the line that is {kd} to AB.</p>', opts=[f'<b class="on">{l}</b>' for l in letters], ri=letters.index(right_letter), fixed=True, kd=kd))
     P = lettered_choice_page(35, 5535, "Line Detective", 1, "Perpendicular and parallel lines: identifying them", STRAND_GE,
         "2.1 (identifying perpendicular and parallel lines)", ["PP2.1"], "Lettered choice (lines)",
         ["Line AB is the thick line.", "Circle the letter beside the line that is asked for.", "Write the five letters in the boxes."],
@@ -104,7 +104,7 @@ def page35():
         word_len=5, rng=rng, row_cls="lnrow")
     def solver(q, opts):
         ref, cands = A3.read_lines(q)
-        kd = re.search(r"Which line is (parallel|perpendicular) to", q).group(1)
+        kd = re.search(r"Choose the line that is (parallel|perpendicular) to AB", q).group(1)
         hits = [l for l, c in cands.items() if A3.relation(ref, c) == kd]
         assert len(hits) == 1, hits
         return [re.search(r">([^<]*)<", o).group(1) for o in opts].index(hits[0])
