@@ -154,7 +154,7 @@ I.append(IT(U, 'G', 1, 5,
                    P('b', 'After 12 repeats: x = {b}, y = {b}', [-60, 60], f'{M}60, 60')],
             hint='Make a table. Write x and y after each repeat.'))
 I.append(IT(U, 'G', 2, 5,
-            'Beyond Level 6: Points of a star.\nThe angle at each point of a star is 180° − the turn. Add up all the point angles.',
+            'The angle at each point of a star is 180° − the turn. Add up all the point angles.',
             f'5-point star: turn 144, point angle 36, and 5 {X} 36 = 180. 8-point star going round 3 times: turn 135, point angle 45, and 8 {X} 45 = 360. '
             f'10-point star going round 3 times: turn 108, point angle 72, and 10 {X} 72 = 720.',
             parts=[P('a', '5-point star (turn 144°): the 5 point angles add to {b}°.', [180]),
@@ -162,7 +162,7 @@ I.append(IT(U, 'G', 2, 5,
                    P('c', '10-point star, 3 times round: each point angle is {b}° and they add to {b}°.', [72, 720], '72°, 720°')],
             hint='Find each turn first. Then subtract it from 180 and multiply.'))
 I.append(IT(U, 'G', 3, 5,
-            f'Beyond Level 6: A polygon that looks like a circle.\nThe turtle runs repeat 360 [move 1, turn {TURN} 1].',
+            f'The turtle runs repeat 360 [move 1, turn {TURN} 1].',
             f'360 turns of 1{D} add to 360{D}, one full turn, so the path closes. Inside angle: 180 {M} 1 = 179{D}. The path is 360 steps long. For a circle, the distance round is about 3.14 {X} the distance across, '
             f'so the distance across is about 360 ÷ 3.14 = 114.6, which is 115 to the nearest whole number.',
             parts=[P('a', 'The path is {b} steps long.', [360]),

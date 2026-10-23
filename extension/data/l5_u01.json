@@ -717,7 +717,7 @@
    "id": "L5U01-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Counting choices\nThe first digit is never 0. How many 7-digit numbers have 7 different digits? {l}",
+   "text": "The first digit is never 0. How many 7-digit numbers have 7 different digits? {l}",
    "answer": {
     "value": [
      "544320"
@@ -732,7 +732,8 @@
     ]
    },
    "hint": "Count the choices for the first digit, then the second.",
-   "explanation": "The first digit has 9 choices (1 to 9). The second digit can be any digit except the first: 9 choices (0 is allowed now). The third has 8, then 7, 6, 5, 4. Multiply: 9 × 9 × 8 × 7 × 6 × 5 × 4 = 544 320."
+   "explanation": "The first digit has 9 choices (1 to 9). The second digit can be any digit except the first: 9 choices (0 is allowed now). The third has 8, then 7, 6, 5, 4. Multiply: 9 × 9 × 8 × 7 × 6 × 5 × 4 = 544 320.",
+   "beyond": "Counting choices"
   },
   {
    "id": "L5U01-G02",

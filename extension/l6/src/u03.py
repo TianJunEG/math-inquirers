@@ -118,7 +118,7 @@ I.append(IT(U, 'S', 11, 3,
 
 # ---------------------------------------------------------------- Think harder
 I.append(IT(U, 'T', 1, 4,
-            f'Beyond Level 6: Subtracting a negative number.\nTo find 6 {M} ({M}4), count the steps from {M}4 up to 6.',
+            f'To find 6 {M} ({M}4), count the steps from {M}4 up to 6.',
             f'(a) 6 {M} ({M}4): from {M}4 to 6 is 10 steps. (b) {M}2 {M} ({M}5): from {M}5 to {M}2 is 3 steps. '
             f'(c) In both, subtracting a negative number gave the same answer as adding the matching positive number: 6 + 4 and {M}2 + 5.',
             parts=[P('a', f'6 {M} ({M}4) = {{b}}', [10]),

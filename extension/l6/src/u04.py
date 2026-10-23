@@ -149,7 +149,7 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            f'Beyond Level 6: n on both sides.\nMachine A does {X} 4, then + 1. Machine B does {X} 2, then + 13.',
+            f'Machine A does {X} 4, then + 1. Machine B does {X} 2, then + 13.',
             f'IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 on B for every 1 that IN goes up (4 {M} 2 = 2). B\'s lead of 8 is gone after 4 more steps, at IN 6. '
             f'Both give 25: 4 {X} 6 + 1 = 25 and 2 {X} 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.',
             parts=[P('a', 'IN 2: A gives {b} and B gives {b}.', [9, 17], '9, 17'),

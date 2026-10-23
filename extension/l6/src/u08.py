@@ -144,7 +144,7 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Beyond Level 6: A code with a changing shift.\nThe 1st letter moves 1, the 2nd moves 2, the 3rd moves 3, then the shifts repeat 1, 2, 3, ... ',
+            'The 1st letter moves 1, the 2nd moves 2, the 3rd moves 3, then the shifts repeat 1, 2, 3, ... ',
             f'MATHS: 12, 0, 19, 7, 18 plus 1, 2, 3, 1, 2 is 13, 2, 22, 8, 20: NCWIU. DQGFU: 3, 16, 6, 5, 20 minus 1, 2, 3, 1, 2 is 2, 14, 3, 4, 18: CODES. '
             f'The same letter can be coded in different ways, so counting the commonest letter does not work.',
             parts=[P('a', 'Code MATHS: {l}', ['NCWIU']),
@@ -160,7 +160,7 @@ I.append(IT(U, 'G', 2, 5,
                    P('b', 'After 100 jumps the hour is {b}.', [5])],
             hint='Find 9 + 500, then take away full turns of 12.', figside=True))
 I.append(IT(U, 'G', 3, 5,
-            'Beyond Level 6: Check digits.\nA code of 4 digits ends with a check digit. The 4 digits must add up to a multiple of 10. The check digit is the last digit.',
+            'A code of 4 digits ends with a check digit. The 4 digits must add up to a multiple of 10. The check digit is the last digit.',
             f'4 + 7 + 2 = 13, and the next multiple of 10 is 20, so the check digit is 7. 9 + 8 + 1 = 18, so the check digit is 2. 5 + 3 + 6 = 14, so the last digit must be 6, not 9: the code is not valid.',
             parts=[P('a', 'The first 3 digits are 4, 7, 2. The check digit is {b}.', [7]),
                    P('b', 'The first 3 digits are 9, 8, 1. The check digit is {b}.', [2]),

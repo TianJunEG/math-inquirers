@@ -149,7 +149,7 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Beyond Level 6: Probability of at least one.\nA coin is flipped 4 times.',
+            'A coin is flipped 4 times.',
             'Each flip has 2 results, so 2 × 2 × 2 × 2 = 16 equally likely outcomes. Exactly 2 heads: HHTT, HTHT, HTTH, THHT, THTH, TTHH is 6, so 6/16. '
             'At least one tail is every outcome except HHHH: 15/16.',
             parts=[P('a', 'There are {b} equally likely outcomes.', [16]),
@@ -166,7 +166,7 @@ I.append(IT(U, 'G', 2, 5,
                    P('c', 'Change a = b to a + b = 4. It says about {b}.', [50])],
             hint='List the pairs (a, b) that add to 4.', figside=True))
 I.append(IT(U, 'G', 3, 5,
-            'Beyond Level 6: Expected winnings.\nA game costs 2 dollars to play. You roll a dice and win a prize if you roll a 6. You play 600 times.',
+            'A game costs 2 dollars to play. You roll a dice and win a prize if you roll a 6. You play 600 times.',
             'A 6 comes up about 1/6 × 600 = 100 times. You pay 600 × 2 = 1200 dollars. If the prize is 5 dollars you win about 100 × 5 = 500 dollars, so you lose money. '
             'The game is fair when the winnings equal what you paid: 100 × prize = 1200, so the prize is 12 dollars.',
             parts=[P('a', 'You win about {b} times.', [100]),

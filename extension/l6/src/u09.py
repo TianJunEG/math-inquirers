@@ -128,7 +128,7 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Beyond Level 6: Pairing up.\nThe numbers 7, 12, 17, 22, ..., 102 go up by 5 each time. There are 20 of them.',
+            'The numbers 7, 12, 17, 22, ..., 102 go up by 5 each time. There are 20 of them.',
             'The 1st and last add to 7 + 102 = 109. So do the 2nd and the 2nd last (12 + 97). 20 numbers make 10 pairs of 109, so the total is 1090. The mean is 1090 ÷ 20 = 54.5, which is halfway between 7 and 102.',
             parts=[P('a', 'The 1st and the last add up to {b}.', [109]),
                    P('b', 'The 20 numbers make {b} such pairs.', [10]),
@@ -144,7 +144,7 @@ I.append(IT(U, 'G', 2, 5,
                    P('c', 'With 13 added to the list it says {b}.', [8])],
             hint='Add up the items the loop reaches. Then divide.', figside=True))
 I.append(IT(U, 'G', 3, 5,
-            'Beyond Level 6: A frequency table.\nIn 10 matches a team scored goals as shown.',
+            'In 10 matches a team scored goals as shown.',
             f'Total goals = 0 {X} 2 + 1 {X} 4 + 2 {X} 3 + 3 {X} 1 = 0 + 4 + 6 + 3 = 13. Mean = 13 ÷ 10 = 1.3. In order the 10 values are 0, 0, 1, 1, 1, 1, 2, 2, 2, 3. '
             f'The 5th and 6th values are 1 and 1, so the median is 1.',
             fig=grid([['Goals', '0', '1', '2', '3'], ['Matches', '2', '4', '3', '1']], [30, 18, 18, 18, 18], rowhead=True, ch=9),

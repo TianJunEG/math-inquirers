@@ -142,7 +142,7 @@ I.append(IT(U, 'T', 3, 4,
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Beyond Level 6: Count the opposite.\nA code has 3 digits. Each digit is 1, 2, 3, 4 or 5, and digits may repeat.',
+            'A code has 3 digits. Each digit is 1, 2, 3, 4 or 5, and digits may repeat.',
             f'All codes: 5 {X} 5 {X} 5 = 125. Codes with no 5 use only 1, 2, 3 or 4: 4 {X} 4 {X} 4 = 64. Every other code has at least one 5: 125 − 64 = 61.',
             parts=[P('a', 'There are {b} codes in all.', [125]),
                    P('b', '{b} codes have no 5.', [64]),
@@ -162,7 +162,7 @@ I.append(IT(U, 'G', 2, 5,
                    P('c', 'Both repeats change to 6. It says {b}.', [27])],
             hint='When is a × b odd? Count those pairs first.', figside=True))
 I.append(IT(U, 'G', 3, 5,
-            'Beyond Level 6: A counting chain.\nA child climbs a staircase. Each move goes up 1 step or 2 steps. Count the ways to reach the top.',
+            'A child climbs a staircase. Each move goes up 1 step or 2 steps. Count the ways to reach the top.',
             '3 steps: 1+1+1, 1+2, 2+1 is 3 ways. The last move onto step n is 1 step from step n − 1 or 2 steps from step n − 2, so ways(n) = ways(n − 1) + ways(n − 2). '
             'Ways for 1, 2, 3, 4, 5, 6, 7, 8 steps: 1, 2, 3, 5, 8, 13, 21, 34. So 4 steps: 5, 6 steps: 13, 8 steps: 34.',
             parts=[P('a', '3 steps: {b} ways.', [3]),

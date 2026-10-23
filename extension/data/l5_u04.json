@@ -1563,7 +1563,7 @@
    "id": "L5U04-G03",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Corner triangles\nTriangle ABC has an area of 96 cm². D is on AB with AD = 1/4 of AB. E is on AC with AE = 1/3 of AC. Find the area of triangle ADE. {b} cm²",
+   "text": "Triangle ABC has an area of 96 cm². D is on AB with AD = 1/4 of AB. E is on AC with AE = 1/3 of AC. Find the area of triangle ADE. {b} cm²",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -1636,7 +1636,8 @@
    },
    "hint": "Join D to C. Compare ADC with ABC first.",
    "explanation": "Join D to C. Triangles ADC and ABC have the same height from C, and AD is 1/4 of AB, so ADC = 1/4 of 96 = 24 cm². Now triangles ADE and ADC have the same height from D, and AE is 1/3 of AC, so ADE = 1/3 of 24 = 8 cm². The small triangle is 1/4 × 1/3 = 1/12 of the whole.",
-   "figright": true
+   "figright": true,
+   "beyond": "Corner triangles"
   },
   {
    "id": "L5U04-C01",

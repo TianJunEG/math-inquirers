@@ -855,7 +855,7 @@
    "id": "L5U05-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Cubes with tunnels\nA solid cube has edges of 6 cm. A tunnel 2 cm by 2 cm goes straight through the middle from the front to the back. 2 more tunnels of the same size go through the middle from left to right and from top to bottom. What is the volume of the solid that is left? {b} cm³",
+   "text": "A solid cube has edges of 6 cm. A tunnel 2 cm by 2 cm goes straight through the middle from the front to the back. 2 more tunnels of the same size go through the middle from left to right and from top to bottom. What is the volume of the solid that is left? {b} cm³",
    "answer": {
     "value": [
      "160"
@@ -871,7 +871,8 @@
     ]
    },
    "hint": "Count the tunnel cubes. The middle cubes are in all 3 tunnels.",
-   "explanation": "The cube is 6 × 6 × 6 = 216 small cubes. 1 tunnel has 2 × 2 × 6 = 24 cubes. 3 tunnels have 72 cubes, but the 8 cubes in the middle (2 × 2 × 2) were counted 3 times. The tunnels take away 72 - 2 × 8 = 56 cubes. The solid has 216 - 56 = 160 cm³."
+   "explanation": "The cube is 6 × 6 × 6 = 216 small cubes. 1 tunnel has 2 × 2 × 6 = 24 cubes. 3 tunnels have 72 cubes, but the 8 cubes in the middle (2 × 2 × 2) were counted 3 times. The tunnels take away 72 - 2 × 8 = 56 cubes. The solid has 216 - 56 = 160 cm³.",
+   "beyond": "Cubes with tunnels"
   },
   {
    "id": "L5U05-G02",

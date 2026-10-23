@@ -744,7 +744,7 @@
    "id": "L5U02-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Dividing a fraction\n5/6 of a cake is shared equally among 10 children. What fraction of the whole cake does each child get? {b}",
+   "text": "5/6 of a cake is shared equally among 10 children. What fraction of the whole cake does each child get? {b}",
    "answer": {
     "value": [
      "1/12"
@@ -758,7 +758,8 @@
     ]
    },
    "hint": "Cut each sixth into 2 equal parts. How many parts are there?",
-   "explanation": "Cut every sixth into 2 equal parts. Then 5/6 becomes 10 parts, and each part is 1/12 of the cake. So 5/6 ÷ 10 = 1/12. Check: 10 × 1/12 = 10/12 = 5/6."
+   "explanation": "Cut every sixth into 2 equal parts. Then 5/6 becomes 10 parts, and each part is 1/12 of the cake. So 5/6 ÷ 10 = 1/12. Check: 10 × 1/12 = 10/12 = 5/6.",
+   "beyond": "Dividing a fraction"
   },
   {
    "id": "L5U02-G02",
