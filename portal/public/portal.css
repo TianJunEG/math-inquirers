@@ -80,3 +80,10 @@ ul.plain{list-style:none;padding:0;margin:0}
   table.stack .bar{min-width:0}
 }
 @media (max-width:520px){.card{padding:16px;border-radius:16px}.btn{width:100%;text-align:center}.row .btn.sm{width:auto}}
+
+.linkbtn{font:inherit;font-weight:800;background:none;border:0;padding:12px 0;min-height:44px;color:var(--fg);text-decoration:underline;cursor:pointer}
+.linkbtn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.check{display:flex;align-items:center;gap:10px;min-height:44px}
+.check input{width:22px;height:22px;flex:none}
+label.inline{display:inline;margin:0;font-weight:700}
+#recovery-title:focus{outline:none}

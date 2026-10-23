@@ -81,7 +81,7 @@ QA=[
 ('mi','price','How much does Math Inquirers cost?',
  'The November beta is S$25 a lesson, S$250 for all 10 lessons of 90 minutes, with the printed workbook and all materials included. We have not set the regular price yet; an introductory price is planned for the first families after the beta, and we tell you the details after the beta.',
  ['Founding-family pricing, if any, will be confirmed after the beta.', 'There is no payment at registration: we confirm your child\'s group first, then send payment details.']),
-('mi','refund','What if we need to cancel?',
- 'You can cancel within 60 days of paying. Before the first lesson, we refund everything you have paid. After lessons start, we refund what you have paid for the lessons your child has not attended yet.',
- ['For example, with 7 of 10 lessons left you get 7/10 of the fee back. If you pay in instalments, any instalment not yet due is simply cancelled. The workbook and kit are yours to keep.', 'After 60 days, fees are not refundable. To cancel, message us on WhatsApp or email and we refund by PayNow.']),
+('mi','refund','What if we need to cancel, or miss a lesson?',
+ 'The November beta fee is not refunded. If your child cannot come to a lesson, they can make it up once by joining the same lesson in another class of the same level, if a seat is free.',
+ ['Every lesson is also recorded, so your child can watch it and use the online practice. The printed workbook and kit are yours to keep. If we cancel a lesson or a group and cannot reschedule, we refund every lesson not held.', 'To arrange a make-up, message us on WhatsApp or email.']),
 ]

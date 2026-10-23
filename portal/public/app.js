@@ -2,7 +2,7 @@
 (function () {
   var M = window.MI, h = M.h, app = document.getElementById('app');
   document.getElementById('top').appendChild(M.header('Parent portal'));
-  var S = { session: null, parent: null, children: [], groups: [], fill: {}, enrols: [], consents: {}, tab: 'login', flash: null };
+  var S = { session: null, parent: null, children: [], groups: [], fill: {}, enrols: [], consents: {}, tab: 'login', flash: null, recovery: false };
 
   var CONSENT_TEXT = [ // wording copied from privacy.html "Wording used on the registration form"
     ['contact', true, 'I agree to Math Inquirers (Preciouslyours Pte Ltd) using my details to arrange the class and contact me about it.'],
@@ -50,13 +50,19 @@
     var name = h('input', { type: 'text', id: 'fullname', autocomplete: 'name', maxlength: 100 });
     var form = h('form', { novalidate: true, onsubmit: async function (ev) {
       ev.preventDefault(); var sb = M.sb(); var em = email.value.trim();
-      if (!em) return M.notice(box, 'err', 'Please enter your email.');
+      if (!em) { M.notice(box, 'err', 'Please enter your email.'); return email.focus(); }
       try {
+        if (S.tab === 'forgot') {
+          var f = await sb.auth.resetPasswordForEmail(em, { redirectTo: location.origin + '/portal/' });
+          // Same message whether or not the email has an account. Only real trouble (rate limit, no network) is shown.
+          if (f.error && /rate limit|too many|failed to fetch|network|load failed/i.test(String(f.error.message || ''))) throw f.error;
+          return M.notice(box, 'ok', 'If that email has an account, a reset link is on its way. Check your inbox (and spam), then click the link on this device.');
+        }
         if (S.tab === 'magic') {
           var r = await sb.auth.signInWithOtp({ email: em, options: { emailRedirectTo: location.origin + '/portal/' } });
           if (r.error) throw r.error; return M.notice(box, 'ok', 'Check your email for a log-in link.');
         }
-        if (pw.value.length < 8) return M.notice(box, 'err', 'Password needs at least 8 characters.');
+        if (pw.value.length < 8) { M.notice(box, 'err', 'Password needs at least 8 characters.'); return pw.focus(); }
         if (S.tab === 'signup') {
           if (!name.value.trim()) return M.notice(box, 'err', 'Please enter your name.');
           var s = await sb.auth.signUp({ email: em, password: pw.value, options: { data: { full_name: name.value.trim() }, emailRedirectTo: location.origin + '/portal/' } });
@@ -71,9 +77,13 @@
     } },
       S.tab === 'signup' ? h('p', null, h('label', { for: 'fullname', text: 'Your name (parent or guardian)' }), name) : null,
       h('p', null, h('label', { for: 'email', text: 'Email' }), email),
-      S.tab !== 'magic' ? h('p', null, h('label', { for: 'password', text: 'Password' }), pw, h('span', { class: 'small muted', text: S.tab === 'signup' ? 'At least 8 characters.' : 'Forgot it? Use the "Magic link" tab to get a log-in link by email.' })) : null,
+      S.tab === 'login' || S.tab === 'signup' ? h('p', null, h('label', { for: 'password', text: 'Password' }), pw, S.tab === 'signup' ? h('span', { class: 'small muted', text: 'At least 8 characters.' }) : null) : null,
+      S.tab === 'login' ? h('p', { class: 'small' }, h('button', { class: 'linkbtn', type: 'button', id: 'forgot-link', text: 'Forgot password?', onclick: function () { S.tab = 'forgot'; draw(); var e = document.getElementById('email'); if (e) e.focus(); } }),
+        h('span', { class: 'muted', text: ' We will email you a link to choose a new one. You can also use the Magic link tab.' })) : null,
+      S.tab === 'forgot' ? h('p', { class: 'small muted', text: 'Enter the email you signed up with. We will send a link to choose a new password.' }) : null,
       S.tab === 'magic' ? h('p', { class: 'small muted', text: 'We email you a link. Click it on this device to log in, with no password.' }) : null,
-      h('p', null, h('button', { class: 'btn', type: 'submit', text: { login: 'Log in', signup: 'Create parent account', magic: 'Email me a link' }[S.tab] })));
+      h('p', null, h('button', { class: 'btn', type: 'submit', text: { login: 'Log in', signup: 'Create parent account', magic: 'Email me a link', forgot: 'Email me a reset link' }[S.tab] }),
+        S.tab === 'forgot' ? h('button', { class: 'btn alt', type: 'button', id: 'forgot-back', text: 'Back to log in', onclick: function () { S.tab = 'login'; draw(); } }) : null));
     var tabs = h('div', { class: 'tabs', role: 'group', 'aria-label': 'Account' }, ['login', 'signup', 'magic'].map(function (t) {
       return h('button', { type: 'button', 'aria-pressed': String(S.tab === t), text: { login: 'Log in', signup: 'Sign up', magic: 'Magic link' }[t],
         onclick: function () { S.tab = t; draw(); } });
@@ -82,6 +92,33 @@
       h('h1', { text: 'Parent portal' }),
       h('p', { class: 'muted', text: 'Parents create the account and add their child. Your child gets a display name and a PIN, with no email of their own.' }),
       tabs, form, box)]);
+  }
+
+  // ---------------- password recovery (arrived from the reset email) ----------------
+  function drawRecovery() {
+    var box = h('div');
+    var p1 = h('input', { type: 'password', id: 'newpw', autocomplete: 'new-password', minlength: 8 });
+    var p2 = h('input', { type: 'password', id: 'newpw2', autocomplete: 'new-password', minlength: 8 });
+    var show = h('input', { type: 'checkbox', id: 'showpw', onchange: function () { p1.type = p2.type = show.checked ? 'text' : 'password'; } });
+    var form = h('form', { novalidate: true, onsubmit: async function (ev) {
+      ev.preventDefault();
+      if (p1.value.length < 8) { M.notice(box, 'err', 'Your new password needs at least 8 characters.'); return p1.focus(); }
+      if (p1.value !== p2.value) { M.notice(box, 'err', 'The two passwords are not the same. Please type them again.'); return p2.focus(); }
+      var btn = form.querySelector('button[type=submit]'); btn.disabled = true;
+      try {
+        var r = await M.sb().auth.updateUser({ password: p1.value });
+        if (r.error) throw r.error;
+        S.recovery = false; flash('ok', 'Your password is changed. You are logged in.');
+        await refresh();
+      } catch (e) { btn.disabled = false; M.notice(box, 'err', M.errText(e)); p1.focus(); }
+    } },
+      h('p', null, h('label', { for: 'newpw', text: 'New password' }), p1, h('span', { class: 'small muted', text: 'At least 8 characters.' })),
+      h('p', null, h('label', { for: 'newpw2', text: 'Type it again' }), p2),
+      h('p', { class: 'check' }, show, h('label', { for: 'showpw', class: 'inline', text: 'Show passwords' })),
+      h('p', null, h('button', { class: 'btn', type: 'submit', text: 'Save new password' })));
+    render([h('section', { class: 'card pop' }, h('h1', { id: 'recovery-title', tabindex: -1, text: 'Choose a new password' }),
+      h('p', { class: 'muted', text: 'Pick a password you will remember. After saving, you are logged in.' }), form, box)]);
+    var t = document.getElementById('recovery-title'); if (t) t.focus();
   }
 
   // ---------------- signed in ----------------
@@ -270,6 +307,7 @@
   }
   function draw() {
     if (!M.configured()) return render(h('section', { class: 'card pop' }, h('h1', { text: 'Portal not set up yet' }), h('p', { text: 'The owner still needs to put the Supabase URL and anon key in portal/config.js (see portal/README.md).' })));
+    if (S.recovery && S.session) return drawRecovery();
     if (S.session && !S.parent) return render([flashBox(), h('section', { class: 'card pop' }, h('h1', { text: 'We could not load your account' }),
       h('p', { text: 'This is usually a weak connection. Your details are safe. Try again, or log out and log back in.' }),
       h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', id: 'retry', text: 'Try again', onclick: function () { flash(null); refresh(); } }),
@@ -285,6 +323,10 @@
   }
 
   if (!M.configured()) return draw();
-  M.sb().auth.onAuthStateChange(function (ev) { if (ev === 'SIGNED_IN' || ev === 'SIGNED_OUT') refresh(); });
+  M.sb().auth.onAuthStateChange(function (ev) {
+    if (ev === 'PASSWORD_RECOVERY') { S.recovery = true; refresh(); }
+    else if (ev === 'SIGNED_OUT') { S.recovery = false; refresh(); }
+    else if (ev === 'SIGNED_IN') refresh();
+  });
   refresh();
 })();

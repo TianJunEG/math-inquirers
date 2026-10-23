@@ -2993,7 +2993,7 @@
    "page": 5,
    "tier": "investigation",
    "title": "Same steps, different routes",
-   "first": "Draw two different routes from S to E. Count the steps in each route: ____ and ____.",
+   "first": "Draw two different routes from S to E. Count the steps: ____ and ____.",
    "text": "Do all the routes from S to E have the same number of steps? Write why.",
    "visual": {
     "type": "grid",
@@ -3008,9 +3008,9 @@
      3,
      0
     ],
-    "size": 55
+    "size": 50
    },
-   "lines": 4,
+   "lines": 2,
    "draw": 0,
    "answer": "Both routes have 5 steps. Every route from S to E needs 3 steps right and 2 steps up, so every route has 5 steps. Only the order of the steps changes. (There are 10 routes on this grid.)",
    "val": [
@@ -3069,7 +3069,7 @@
      4,
      0
     ],
-    "size": 55
+    "size": 45
    }
   },
   {

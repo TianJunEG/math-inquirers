@@ -1,6 +1,7 @@
 const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
+const SG = require('../levels/spine_guide.js');   // strategy card + common look-back lines (levels/spine.json)
 const BUD = require('./budget.json').lessons;   // written by rebuild/p6_budget.py: the minute plan of every lesson
 const fm = x => String(x);
 const TAKEHOME = { 1: 'Q5', 2: 'Q5', 4: 'Q7', 5: 'Q5', 7: 'Q5', 8: 'Q5', 9: 'Q6', 10: 'Q2' };   // the worksheet question moved to take-home (starred in the workbook)
@@ -63,6 +64,11 @@ G.push(tx('Every lesson has a flex buffer (1.5 to 4 minutes) right after the wor
 G.push(h2('Teaching habits that matter'));
 ['Ask “How do you know?” after every answer, right or wrong.', 'Wait 10 seconds before helping. Let children struggle a little.', 'Praise the thinking (“You checked it two ways”), not just the answer.', 'Let children disagree with each other and settle it with objects or a drawing.', 'If a child finishes early, point to Think harder, Go further or the Investigation on the Finish page, not extra drill. Never say who is on which page, and never split a pair unless both children agree.'].forEach(s => G.push(bu(s)));
 
+G.push(h2('Toolbox and look-back (every lesson)'));
+G.push(tx('Every lesson has one TOOL OF THE DAY, shown on the workbook card on page 1, on the title slide (with a small badge on the talk slide) and named in your script. It is one of eight tools a child can choose for any problem. Say its name, point at the card, and at talk time ask where the tool helped. Lesson 10: children choose their own tool. Passing is always allowed.'));
+G.push(tbl([2500, 7400], [row([hd('Tool', 2500), hd('What we say (ages 10 to 13)', 7400)]), ...SG.DATA.tools.map(t => row([c2(t.name, 2500, { bold: true }), c2(t.def.C, 7400)]))]));
+G.push(gap(40));
+G.push(tx('The look-back is the same every lesson: pick ONE problem from today and ask three things. ' + SG.DATA.lookback.prompts.C.map((q, i) => (i + 1) + ') ' + q).join(' ') + ' Children tick yes or not yet for questions 1 and 2, write one short line for question 3 (I checked by ...), and tick the tools they used. The timer is ' + SG.info(6, 1).timer + ' seconds, then stamp the journals. Nothing is collected, read aloud or marked.'));
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Each child needs a computer or tablet with Scratch 3 (free online). Python is optional (any online Python editor). Scratch starter files: lessons 1 to 9 each have one .sb3 file and Lesson 10 has four (L10A to L10D), kept in the folder p6/scratch/starters. Send the lesson’s file to parents with the workbook; the child opens it with File, Load from your computer. No Scratch account, log-in or sharing is needed, and the tutor answer versions in p6/scratch/answers are never sent to families. Cut-outs used: unplugged code cards (Lessons 1, 4, 7), square grid (Lessons 7, 9).', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
@@ -131,6 +137,7 @@ L.lessons.forEach(l => {
   pushSeg(BP('Opening'), 'Opening');
   say(s.hook);
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud.']);
+  { const sp = SG.info(6, l.n); say([sp.openSay]); doo([sp.openDo + (sp.kitLine ? ' Say: “' + sp.kitLine + '.”' : '')]); }
 
   pushSeg(BP('Sneak'), 'Sneak-peek puzzles');
   say(['Two sneak-peek puzzles. They are ideas we have not learnt yet, so guessing is welcome and “I do not know” is welcome. Nobody is marked. Write your answers on your own paper. When I say “say it”, after BOTH puzzles, everyone says the answers together on three, once.']);
@@ -188,16 +195,18 @@ L.lessons.forEach(l => {
   doo(['Bring the group back to a circle (or camera on, mics on). Ask for volunteers first and choose two or three of them, not only the fastest. Never cold-call a child by name. “Pass” is always fine, and the next person helps. No public tallies, points or rankings.']);
   say(s.talk);
   if (s.talkNext) doo(['Second talk question (cut-first ladder: only if flex is left, otherwise it is the opener of the next lesson): ' + s.talkNext]);
-  ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
+  { const sp = SG.info(6, l.n); ask([[l.share, s.talkAns], [sp.talkAsk, sp.talkListen]], 'Discussion question', 'Listen for'); }
 
   const xp = BP('Exit slip');
   pushSeg({ start: xp.start, end: 90 }, 'Exit slip, looking back and closing');
   doo(['Minutes ' + fm(xp.start) + ' to 86: exit slip. Children write on the exit slip box of the Finish page (or a slip of paper). No talking, no helping. Show the exit ticket slide. When most children are done, everyone ticks the slip against the answer slide; nothing is held up to the camera.']);
   ask([[l.exit.q, l.exit.a]], 'Exit slip', 'Answer');
   say(s.close);
-  G.push(h2('Looking back (2 minutes, minutes 86 to 88)'));
-  say(['Two minutes, just for you, in the Looking back box: something I did well, the hardest part, and what helped. You can write pass. Nobody marks this. If you are still stuck, tick that box and I will check in with you in the open session.']);
-  doo(['Everyone reaches this box: it is on the Finish page, not on the Think harder pages. Collect nothing in front of the group and never read an answer out. Never ask a child to show the box to the camera; a child who ticks “I am still stuck” is followed up after class through the parent. Praise the strategy, not the speed: “' + gp.reflectEx + ', and that is what got you unstuck”, never “you were quick”.', 'If a child ticks “I am still stuck”, check in during the open session the same day: visit the shared breakout room or use a hand signal, with a parent nearby. Never by private message. If a child writes “everything” or “I am bad at maths”, say quietly in the open session: “Thank you for telling me. Let’s find one small thing that worked today,” and point to a specific item they got right. If a child writes “nothing was hard”, ask what would make it harder.']);
+  G.push(h2('Look back (2 minutes, minutes 86 to 88: timer ' + SG.info(6, l.n).timer + ' seconds, then stamps)'));
+  { const sp = SG.info(6, l.n);
+    say([sp.lookSay, 'Thank you. Drawing it, listing, trying a smaller case or checking another way: those are all good ways to get unstuck.']);
+    doo(['Show the look-back slide and start its timer (' + sp.timer + ' seconds); the Look back box is on the Finish page, not on the Think harder pages. ' + sp.lookDo.replace(/^Start the timer\. /, '').replace(/ Then stamp journals\.$/, '') + ' Never mark or grade the box, never collect it in front of the group and never read an answer out. Never ask a child to show the box to the camera. Praise the strategy, not the speed: \u201c' + gp.reflectEx + ', and that is what got you unstuck\u201d, never \u201cyou were quick\u201d. If a child ticks \u201cI am still stuck\u201d, check in during the open session the same day: visit the shared breakout room or use a hand signal, with a parent nearby, never by private message.']);
+  }
   doo(['Minutes 88 to 90: stamp the inquiry journal when a child shows you the exit slip. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
   } else {
     const cp = BP('Challenge'), sp = BP('Starter'), bk = BP('Brain break'), pb = BP('Plan and build'), fp = BP('Flex'), sh = BP('Showcase'), xp = BP('Exit slip'), lb = BP('Looking back'), cl = BP('Certificates');
@@ -244,8 +253,11 @@ L.lessons.forEach(l => {
     ask([[l.exit.q, l.exit.a]], 'Exit slip', 'Answer');
 
     pushSeg(lb, 'Looking back');
-    say(['Two minutes, just for you, in the Looking back box: something I did well, the hardest part, and what helped. You can write pass. Nobody marks this. If you are still stuck, tick that box and I will check in with you in the open session.']);
-    doo(['Everyone reaches this box: it is on the Finish page. Collect nothing in front of the group and never read an answer out. Praise the strategy, not the speed: “' + gp.reflectEx + ', and that is what got you unstuck”. Looking back stays 2 minutes.']);
+    { const sp = SG.info(6, l.n);
+      say([sp.lookSay, 'Thank you. Drawing it, listing, trying a smaller case or checking another way: those are all good ways to get unstuck.']);
+      doo(['Show the look-back slide and start its timer (' + sp.timer + ' seconds); the Look back box is on the Finish page. ' + sp.lookDo.replace(/^Start the timer\. /, '').replace(/ Then stamp journals\.$/, '') + ' Never mark or grade the box, never collect it in front of the group and never read an answer out. Never ask a child to show the box to the camera. Praise the strategy, not the speed: \u201c' + gp.reflectEx + ', and that is what got you unstuck\u201d, never \u201cyou were quick\u201d. If a child ticks \u201cI am still stuck\u201d, check in during the open session the same day: visit the shared breakout room or use a hand signal, with a parent nearby, never by private message.']);
+      doo(['Tool question: ' + sp.talkAsk + ' ' + sp.talkListen]);
+    }
 
     pushSeg(cl, 'Certificates and closing');
     say(s.close);
