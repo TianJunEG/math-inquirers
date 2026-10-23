@@ -252,3 +252,8 @@ Owner approved the cover publisher line "Preciouslyours Pte Ltd, trading as Math
 - Build the Level 2-6 extension workbooks (same pipeline as Level 1: extension/; one book per level, 10 units following the 10 holiday lessons, with answers).
 - "Swop address": the registered office address 66 Tannery Ln, Singapore 347805 replaces the placeholder on the extension book licence page (and publisher line "Preciouslyours Pte Ltd, trading as Math Inquirers").
 - SASMO rule (owner): do NOT copy SASMO questions; the SKILLS needed to answer such questions must be covered in the HOLIDAY program. Action: a skill-coverage map (SASMO skill types by grade against holiday lessons), gaps flagged, holiday additions proposed; extension books stay 100% original items.
+
+## 23 Oct 2026 (night): BALANCE-KEEP, EXT-ADDRESS-YES, EXT-COPYCHECK-YES
+- BALANCE-KEEP: P1 Semester 2 stays at 9 one-star / 11 two-star pages (P1-39 two stars).
+- EXT-ADDRESS-YES and EXT-COPYCHECK-YES: extension book Level 1 gets the registered office address and publisher line; the external duplicate gate is re-run with the private files and its review list read by hand (running).
+- Owner question (open): can the workbooks be printed with perforated, tear-out pages? See answer in the 23 Oct chat; to be asked of the printer (quote_request.md).
