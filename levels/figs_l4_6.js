@@ -34,7 +34,7 @@ const svg = (vw, vh, inner, label, width) =>
 // fit: make sure the smallest text in a figure prints at >= minPt (default 9) on the A4 print.
 // Scale from CSS px to printed pt: 0.75 (px to pt) x 0.943 (print gutter shrink); Level 5's page is laid out 850 px wide and shrunk by 0.81.
 const fit = (s, level, opt = {}) => {
-  const minPt = opt.minPt || 9.2, k = 0.75 * 0.943 * (level === 5 ? 0.81 : 1);
+  const minPt = s.includes('id="mi-hatch"') ? 9.2 : (opt.minPt || 9.2), k = 0.75 * 0.943 * (level === 5 ? 0.81 : 1);
   const maxW = opt.maxW || (level === 5 ? 790 : 650);
   const m = s.match(/<svg[^>]*>/);
   if (!m) return s;

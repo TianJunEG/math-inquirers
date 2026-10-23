@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 3: Below Zero (negative numbers; a sprite on a number line; variables below 0)
 // Every answer below was worked out and checked (number line jumps, and the code traced by hand and run in Python).
 
@@ -169,7 +170,7 @@ module.exports = {
     ],
     stretch: [
       { q: 'Work out −7 + 12 and 5 − 13.', a: '5 and −8' },
-      { q: 'A diver is at −14 m. A seagull is flying at 9 m. How far apart are they?', a: '23 m (14 up to sea level, then 9 more)' },
+      { q: 'A diver is at −14 m. A seagull is flying at 9 m. How far apart are they?', fig: FG.vline({ min: -15, max: 10, step: 5, h: 250, w: 300, fmt: v => String(v).replace('-', '−') + ' m', marks: [{ v: 9, t: 'seagull' }, { v: 0, t: 'sea level' }, { v: -14, t: 'diver' }], label: 'A vertical number line in metres from minus 15 to 10 with the seagull at 9, sea level at 0 and the diver at minus 14.' }), a: '23 m (14 up to sea level, then 9 more)' },
       { q: 'Work out 4 − (−6). Hint: how far is it from −6 to 4?', a: '10' },
       { q: 'Find the missing number: −3 + ____ = −10.', a: '−7 (adding −7 moves 7 to the left)' },
       { q: 'At 6 a.m. it was −4 °C. By 2 p.m. it was 7 °C. By 10 p.m. it had fallen 9 degrees. How much did it rise from 6 a.m. to 2 p.m.? What was the temperature at 10 p.m.?', a: 'It rose 11 degrees; at 10 p.m. it was −2 °C (7 − 9).' },
@@ -192,7 +193,7 @@ module.exports = {
 
   workbook: H0 => { const H = Object.assign({}, H0, { sub: (l, t, o) => H0.sub(l, typeof t === 'string' ? t.replace(/ {2,}/g, m => '\u00A0'.repeat(m.length)) : t, o) }); return [
     H.q(1, 'The number line. Numbers get bigger to the right.', { before: 40, keepNext: true }),
-    H.fig(numline(-10, 10, { h: 70, ly: 36, marks: [[-8, 'A', SKY], [-3, 'B', SKY], [4, 'C', YEL]], label: 'Number line from minus 10 to 10 with points A, B and C' })),
+    H.fig(FG.numberLine({ min: -10, max: 10, major: 2, minor: 1, fmt: v => String(v).replace('-', '−'), size: 18, marks: [{ v: -8, t: 'A' }, { v: -3, t: 'B' }, { v: 4, t: 'C' }], label: 'Number line from minus 10 to 10 with every second number labelled, and arrows A, B and C pointing at three points' })),
     H.sub('a', 'Write the number at each letter.      A = ______      B = ______      C = ______'),
     H.sub('b', 'Smallest first:   3,  −5,  0,  −1,  −12,  7   →  ______________________'),
     H.sub('c', 'Write < or > in each gap.       −4  ____  −9          −1  ____  0          −15  ____  2'),
@@ -211,7 +212,7 @@ module.exports = {
     H.fig(seaFig()),
 
     H.q(4, 'Work these out. Draw the jumps on the number line to help you.', { pb: true, before: 0, keepNext: true }),
-    H.fig(numline(-12, 12, { h: 42, ly: 12, labEvery: 2, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
+    H.fig(FG.numberLine({ min: -12, max: 12, major: 2, minor: 1, fmt: v => String(v).replace('-', '−'), size: 18, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
     H.sub('a', '−6 + 9 = ________       (b)  4 − 11 = ________       (c)  −3 − 5 = ________'),
     H.sub('d', '−2 + (−6) = ______     (e)  5 − (−3) = ______      (f)  −1 − (−7) = ______'),
     H.q(5, 'Trace the code. Fill in the table to show x after each repeat.', { keepNext: true }),
