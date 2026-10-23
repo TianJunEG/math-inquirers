@@ -67,11 +67,11 @@ def page21():
         names = rng.sample(PEOPLE, 6)
         o = rng.sample(objs, 6)
         for i, kd in enumerate(kinds):
-            if kd == "add": a = rng.randint(4, 12); b = rng.randint(2, min(8, 20 - a))
-            elif kd == "sub": a = rng.randint(7, 12); b = rng.randint(2, a - 2)
-            elif kd in ("more", "fewer"): a = rng.randint(3, 10); b = rng.randint(2, 7)
-            elif kd == "diff": a = rng.randint(6, 10); b = rng.randint(2, a - 2)
-            else: a = rng.randint(3, 9); b = rng.randint(3, 9)
+            if kd == "add": a = rng.randint(4, 7); b = rng.randint(2, 8)
+            elif kd == "sub": a = rng.randint(6, 8); b = rng.randint(2, a - 2)
+            elif kd in ("more", "fewer"): a = rng.randint(3, 7); b = rng.randint(2, 8)
+            elif kd == "diff": a = rng.randint(6, 8); b = rng.randint(2, a - 2)
+            else: a = rng.randint(3, 7); b = rng.randint(3, 7)
             N = names[i]; M = rng.choice([x for x in PEOPLE if x != N])
             items.append(dict(kind=kd, a=a, b=b, N=N, M=M, obj=o[i]))
         ans = []
@@ -90,10 +90,10 @@ def page21():
     for i, it in enumerate(items):
         pl = OBJN[it["obj"]][1]
         lines = story_text(it["kind"], it["a"], it["b"], it["N"], it["M"], pl, it["obj"]); texts.append(lines)
-        s1, _, _ = row_svg(it["obj"], it["a"], size=5.6, pitch=6.2)
+        s1, _, _ = row_svg(it["obj"], it["a"], size=10.0, pitch=10.8, per_row=7)
         pics = [s1]; cnt = [it["a"]]
         if it["kind"] in ("diff", "total"):
-            s2, _, _ = row_svg(it["obj"], it["b"], size=5.6, pitch=6.2); pics.append(s2); cnt.append(it["b"])
+            s2, _, _ = row_svg(it["obj"], it["b"], size=10.0, pitch=10.8, per_row=7); pics.append(s2); cnt.append(it["b"])
         picobjs.append(pics)
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div>{code_block(table)}'
@@ -177,8 +177,7 @@ def page22():
             lab = ("all the wheels", "wheels that work")
         texts.append(lines)
         pics = []
-        if it["k"] == "fwd" and it.get("obj"):
-            s1, _, _ = row_svg(it["obj"], it["a"], size=5.2, pitch=5.8); pics = [s1]
+        pics = []
         if it["k"] == "fact":
             pics = []
         boxes = "".join(f'<span class="lbx"><span class="ab"></span><small>{l}</small></span>' for l in lab)
@@ -253,8 +252,8 @@ def page39():
         elif k == "car": lines = ["Fact: 1 car has 4 wheels.", f"{N} counts {it['w']} wheels.", "How many cars?"]
         else: lines = ["Fact: 1 bird has 2 legs.", f"{N} counts {it['l']} legs.", "How many birds?"]
         texts.append(lines)
-        if k in ("car", "bird"): pics = [row_svg(k if k == "car" else "bird", 1, size=7.5, pitch=8)[0]]
-        else: pics = [row_svg(it["obj"], it["n"], size=5.6, pitch=6.2)[0]]
+        if k in ("car", "bird"): pics = [row_svg(k if k == "car" else "bird", 1, size=10.0, pitch=11)[0]]
+        else: pics = [row_svg(it["obj"], it["n"], size=9.0, pitch=9.6, per_row=8)[0]]
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div>{code_block(table)}<p class="lead" style="margin:0;font-size:11pt">The sharer gets a share too.</p>'
     P = Page(no=39, title="Share and Group", tier=1, topic="Sharing and grouping stories within 20, and printed facts",

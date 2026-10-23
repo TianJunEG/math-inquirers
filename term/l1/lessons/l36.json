@@ -1998,7 +1998,22 @@
      "Writing 6 (4 and 2).",
      "Writing 4, the number of tops."
     ],
-    "mins": 4
+    "mins": 4,
+    "visual": {
+     "type": "objects",
+     "items": [
+      {
+       "icon": "shirt",
+       "n": 4
+      },
+      {
+       "icon": "shorts",
+       "n": 2
+      }
+     ],
+     "per_row": 4,
+     "size": "l"
+    }
    },
    {
     "id": "T3",
