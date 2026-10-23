@@ -16,7 +16,7 @@
    "backwards"
   ],
   "role": "A",
-  "reason": "A table of sticks per picture finds the 10th picture; Go further works back from a total."
+  "reason": "A table of sticks per picture (rows with a handle) finds the 10th picture; Go further works back from a total."
  },
  "ages": "6-8",
  "moe": {
@@ -32,14 +32,14 @@
   "make a table: growing stick pattern and a two-row ratio table",
   "pattern: the 10th and 20th term of a growing pattern from a rule in words",
   "work backwards: from a total number of sticks to the number of pictures",
-  "odd or even: why no row of triangles uses an even number of sticks"
+  "odd or even: why every row of triangles with a handle uses an even number of sticks"
  ],
  "contest_where": "Think harder, Go further and the Investigation",
  "objectives": [
-  "Build a growing stick pattern, count the sticks, and put the numbers in a table of pictures and sticks.",
+  "Build a growing stick pattern (a row of shapes with one handle stick), count the sticks, and put the numbers in a table of pictures and sticks.",
   "Say how a table grows (the same number more each time) and use it to find the next numbers.",
   "Complete a two-row table of equal groups, such as 3 red beads for every 2 blue beads.",
-  "Think harder: find the 10th and 20th picture from a table, say the rule in words, spot a number that does not fit, and say why a row of triangles never uses an even number of sticks.",
+  "Think harder: find the 10th and 20th picture from a table, say the rule in words, spot a number that does not fit, and say why a row of triangles with a handle never uses an odd number of sticks.",
   "Go further: the 100th picture, and working back from a total number of sticks to the number of pictures."
  ],
  "joining_cold": {
@@ -54,7 +54,7 @@
    "Skip counting in 2s"
   ],
   "safe_to_miss": false,
-  "note": "Fairly safe to miss: no later lesson needs the stick pattern, but Mi's Challenge Quest has a gate on it (triangles in a row use 3, 5, 7 sticks; the next number and the sticks for 5 triangles), and Lesson 29 uses a table of two ways to check a sum. A child who misses it watches the recording, does workbook pages 1 and 2 and cuts out the strips if they want to play. A child who joins here cold can follow: the warm-up re-teaches counting in 2s and a small table, Explore is hands-on with strips, and Start here keeps to squares in a row, a bead table and a day table."
+  "note": "Fairly safe to miss: no later lesson needs the stick pattern, but Mi's Challenge Quest has a gate on it (triangles in a row with a handle use 4, 6, 8 sticks; the next number and the sticks for 5 triangles), and Lesson 29 uses a table of two ways to check a sum. A child who misses it watches the recording, does workbook pages 1 and 2 and cuts out the strips if they want to play. A child who joins here cold can follow: the warm-up re-teaches counting in 2s and a small table, Explore is hands-on with strips, and Start here keeps to squares in a row with a handle, a bead table and a day table."
  },
  "materials": {
   "child": [
@@ -68,7 +68,7 @@
    "A visible clock"
   ],
   "kit_pages": [
-   "Strip page (page 6): 14 paper strips, each about 6 cm long, cut out by a grown-up. In class we build up to 4 triangles in a row with 9 strips; the Investigation uses up to 13. Keep the strips in an envelope."
+   "Strip page (page 6): 14 paper strips, each about 6 cm long, cut out by a grown-up. In class we build up to 4 triangles in a row with a handle (10 strips); the Investigation uses up to 14. Keep the strips in an envelope."
   ],
   "ruler": false,
   "notes": "No ruler is needed. Nothing needs to be bought. The strips are paper: never matches, toothpicks or anything sharp. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. Nobody cuts during the lesson: a grown-up cuts the strips beforehand.",
@@ -76,7 +76,7 @@
    {
     "piece": "paper strips",
     "supplied": 14,
-    "max_used": 13,
+    "max_used": 14,
     "used_by": [
      "explore",
      "I1"
@@ -155,7 +155,7 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the strips: build 1, 2 and 3 triangles in a row and count, guess and build 4, and guess 5 without building. The mini-lesson has 11: the table, how it grows, using it for the 6th, why the sticks are shared, and a rule in words. The workbook has 32 minutes: Start here takes a middle child about 18 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes with the strips: build 1, 2 and 3 triangles in a row, each with a handle stick, and count, guess and build 4, and guess 5 without building. The mini-lesson has 11: the table, how it grows, using it for the 6th, why the sticks are shared, and a rule in words. The workbook has 32 minutes: Start here takes a middle child about 18 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
   "skip_order": [
    "Start with: shorten Explore round 3 (guess the 5th) to one volunteer answer",
    "Then: cut the second item of the Your turn slide (s-m5)",
@@ -391,7 +391,7 @@
        {
         "t": "list",
         "items": [
-         "Make 1 triangle with 3 strips.",
+         "Make 1 triangle with 3 strips. Put 1 more strip beside it as a handle.",
          "Count the strips.",
          "Make a second triangle that joins the first and shares one strip. Count all your strips.",
          "Make a third. Count all your strips."
@@ -404,7 +404,8 @@
         "t": "visual",
         "type": "stick_pattern",
         "shape": "triangle",
-        "n": 2
+        "n": 2,
+        "handle": true
        }
       ]
      ],
@@ -414,7 +415,7 @@
      ]
     }
    ],
-   "note": "Round 1, about 4 minutes. Children build with paper strips on the table: one triangle uses 3 strips. Say aloud that the second triangle shares one strip with the first. A second triangle joined to the first shares one strip, so only 2 more strips are needed: 5 strips in all. A third triangle needs 2 more: 7 strips. Children say each total aloud. The picture on the slide shows two joined triangles only to show what joined means; it never shows a count. Do not write the numbers on the slide: children write them on their own paper as a list. A child who counts 3 more each time is asked to look at the shared strip. A child without strips draws the sticks as lines."
+   "note": "Round 1, about 4 minutes. Children build with paper strips on the table: one triangle uses 3 strips and the handle is 1 more strip, so 4 strips. Say aloud that the second triangle shares one strip with the first. A second triangle joined to the first shares one strip, so only 2 more strips are needed: 6 strips in all with the handle. A third triangle needs 2 more: 8 strips. Children say each total aloud. The picture on the slide shows two joined triangles with the handle only to show what joined means; it never shows a count. Do not write the numbers on the slide: children write them on their own paper as a list. A child who counts 3 more each time is asked to look at the shared strip. A child without strips draws the sticks as lines."
   },
   {
    "id": "s-explore2",
@@ -436,7 +437,7 @@
      "text": "A guess is a great start."
     }
    ],
-   "note": "Round 2, about 3 minutes, main room. Children guess first (take volunteers: say your guess and why), then build the fourth triangle and count: 9 strips. Ask: how many more strips did the fourth triangle need (2); how many more did the third need (2). Do not say the rule before the children do. Take a different guess without comment: 12 (3 for each triangle) and 9 are both worth hearing. Strips used: 9 of the 14 in the kit. A child who has run out of strips draws the last triangle."
+   "note": "Round 2, about 3 minutes, main room. Children guess first (take volunteers: say your guess and why), then build the fourth triangle and count: 10 strips. Ask: how many more strips did the fourth triangle need (2); how many more did the third need (2). Do not say the rule before the children do. Take a different guess without comment: 12 (3 for each triangle) and 9 are both worth hearing. Strips used: 10 of the 14 in the kit. A child who has run out of strips draws the last triangle."
   },
   {
    "id": "s-explore3",
@@ -457,7 +458,7 @@
      "text": "Use what you have found. Tell your grown-up how you know."
     }
    ],
-   "note": "Round 3, about 3 minutes. Children do not build: they use what they found (3, 5, 7, 9, always 2 more) to guess for 5 triangles: 11. Ask: how many strips for 5 triangles; how did you work it out. Some will say 15 (5 times 3): do not say it is wrong; ask them to look back at the number for 4 triangles. Confirm 11 on the next slide, not here. The answer is not on the slide."
+   "note": "Round 3, about 3 minutes. Children do not build: they use what they found (4, 6, 8, 10, always 2 more) to guess for 5 triangles: 12. Ask: how many strips for 5 triangles; how did you work it out. Some will say 15 or 16 (5 times 3, and the handle): do not say it is wrong; ask them to look back at the number for 4 triangles. Confirm 12 on the next slide, not here. The answer is not on the slide."
   },
   {
    "id": "s-m1",
@@ -479,10 +480,10 @@
      "rows": [
       [
        "Sticks",
-       "3",
-       "5",
-       "7",
-       "9",
+       "4",
+       "6",
+       "8",
+       "10",
        "[]"
       ]
      ]
@@ -492,7 +493,7 @@
      "text": "Write what you found in a table."
     }
    ],
-   "note": "Show the table that children found in Explore: 1 triangle 3 sticks, 2 triangles 5, 3 triangles 7, 4 triangles 9, and an empty box for 5 triangles. We call the strips sticks in a table: the strips are our sticks. Say: a table keeps the numbers in order so that we can see how they grow. Children write the same table on their own paper. Ask: what goes in the last box (11, as we guessed). Confirm it: this is the answer to Explore round 3."
+   "note": "Show the table that children found in Explore: 1 triangle 4 sticks, 2 triangles 6, 3 triangles 8, 4 triangles 10, and an empty box for 5 triangles. We call the strips sticks in a table: the strips are our sticks. Say: a table keeps the numbers in order so that we can see how they grow. Children write the same table on their own paper. Ask: what goes in the last box (12, as we guessed). Confirm it: this is the answer to Explore round 3."
   },
   {
    "id": "s-m2",
@@ -514,11 +515,11 @@
      "rows": [
       [
        "Sticks",
-       "3",
-       "5",
-       "7",
-       "9",
-       "11"
+       "4",
+       "6",
+       "8",
+       "10",
+       "12"
       ]
      ]
     },
@@ -536,7 +537,7 @@
      "text": "The same number more each time."
     }
    ],
-   "note": "Look at how the sticks grow: 3 to 5 is 2 more, 5 to 7 is 2 more, 7 to 9 is 2 more, 9 to 11 is 2 more. The sticks grow by 2 each time. Ask: how many more sticks each time (2); why only 2 and not 3 (the new triangle shares one stick with the one before). Children trace the plus 2 arrows with a finger. The number of pictures goes up by 1, and the number of sticks goes up by 2. Say once: 3, 5, 7, 9, 11 are odd numbers, every time (odd and even are from Term 2 Lesson 4); this is used again at Think harder."
+   "note": "Look at how the sticks grow: 4 to 6 is 2 more, 6 to 8 is 2 more, 8 to 10 is 2 more, 10 to 12 is 2 more. The sticks grow by 2 each time. Ask: how many more sticks each time (2); why only 2 and not 3 (the new triangle shares one stick with the one before). Children trace the plus 2 arrows with a finger. The number of pictures goes up by 1, and the number of sticks goes up by 2. Say once: 4, 6, 8, 10, 12 are even numbers, every time (odd and even are from Term 2 Lesson 4); this is used again at Think harder."
   },
   {
    "id": "s-m3",
@@ -556,7 +557,7 @@
      "rows": [
       [
        "Sticks",
-       "11",
+       "12",
        "[]",
        "[]"
       ]
@@ -567,7 +568,7 @@
      "text": "2 more each time. What are the next two numbers?"
     }
    ],
-   "note": "Use the table without building. Start at 11 sticks for 5 triangles and add 2: 13 sticks for 6 triangles, then 15 sticks for 7 triangles. Ask first: how many sticks for 6 triangles; for 7 triangles. Children say the numbers aloud and write them on their paper. The empty boxes show the answers only after they have tried: the next slide does not repeat them. The numbers 13 and 15 are not on the slide."
+   "note": "Use the table without building. Start at 12 sticks for 5 triangles and add 2: 14 sticks for 6 triangles, then 16 sticks for 7 triangles. Ask first: how many sticks for 6 triangles; for 7 triangles. Children say the numbers aloud and write them on their paper. The empty boxes show the answers only after they have tried: the next slide does not repeat them. The numbers 14 and 16 are not on the slide."
   },
   {
    "id": "s-m4",
@@ -583,15 +584,16 @@
         "t": "visual",
         "type": "stick_pattern",
         "shape": "triangle",
-        "n": 2
+        "n": 2,
+        "handle": true
        }
       ],
       [
        {
         "t": "card",
-        "head": "3 + 3 = 6?",
+        "head": "3 + 3 + 1 = 7?",
         "items": [
-         "Two triangles need 5 sticks, not 6.",
+         "Two triangles with a handle need 6 sticks, not 7.",
          "They share 1 stick."
         ]
        }
@@ -603,7 +605,7 @@
      "text": "Shared sticks are counted once."
     }
    ],
-   "note": "The usual wrong idea: 5 triangles need 5 times 3 sticks, which is 15. That counts the shared sticks twice. Show the picture of 2 triangles: 3 sticks and 3 sticks make 6, but the middle stick is shared, so only 5 sticks are really there. Ask: which stick is counted twice (the middle one). Say: the first triangle needs 3 sticks, and each new triangle needs only 2 more. Children who guessed 15 in Explore round 3 are welcome to say so; no name is used."
+   "note": "The usual wrong idea: 5 triangles need 5 times 3 sticks and the handle, which is 16. That counts the shared sticks twice. Show the picture of 2 triangles: 3 sticks and 3 sticks and the handle make 7, but the middle stick is shared, so only 6 sticks are really there. Ask: which stick is counted twice (the middle one). Say: the first triangle needs 3 sticks and the handle 1 more, and each new triangle needs only 2 more. Children who guessed 15 or 16 in Explore round 3 are welcome to say so; no name is used."
   },
   {
    "id": "s-m5",
@@ -616,7 +618,7 @@
      "head": "THE RULE",
      "items": [
       "Double the number of triangles.",
-      "Then add 1."
+      "Then add 2."
      ]
     },
     {
@@ -638,16 +640,16 @@
        "8"
       ],
       [
-       "Add 1",
-       "3",
-       "5",
-       "7",
-       "9"
+       "Add 2",
+       "4",
+       "6",
+       "8",
+       "10"
       ]
      ]
     }
    ],
-   "note": "A rule in words, with no letters. Look at the table: double 1 is 2, and 2 and 1 more is 3; double 2 is 4, and 1 more is 5; double 3 is 6, and 1 more is 7; double 4 is 8, and 1 more is 9. So the sticks are double the triangles, and 1 more. Ask: how many sticks for 6 triangles using the rule (double 6 is 12, and 1 is 13); does it match the table (yes). Say: now we can find any number without drawing. Do not use the word formula; say the rule in words."
+   "note": "A rule in words, with no letters. Look at the table: double 1 is 2, and 2 more is 4; double 2 is 4, and 2 more is 6; double 3 is 6, and 2 more is 8; double 4 is 8, and 2 more is 10. So the sticks are double the triangles, and 2 more (the handle makes the extra 1). Ask: how many sticks for 6 triangles using the rule (double 6 is 12, and 2 is 14); does it match the table (yes). Say: now we can find any number without drawing. Do not use the word formula; say the rule in words."
   },
   {
    "id": "s-m6",
@@ -721,7 +723,7 @@
      "text": "Sip some water."
     }
    ],
-   "note": "Four minutes. Stand up on camera with a little clear space. Call a number of pictures (3, 5, 2, 4) and children hop twice for each picture, counting aloud in 2s: for 4 pictures that is 8 hops. Then call the number of triangles (2, 3) and hop the sticks: 3 hops, then 2 more. No equipment, no running; a child may stay seated and tap the table twice for each picture. Do not give prizes or compare children."
+   "note": "Four minutes. Stand up on camera with a little clear space. Call a number of pictures (3, 5, 2, 4) and children hop twice for each picture, counting aloud in 2s: for 4 pictures that is 8 hops. Then call the number of triangles (2, 3) and hop double and 2 more: for 2 triangles 4 hops, then 2 more. No equipment, no running; a child may stay seated and tap the table twice for each picture. Do not give prizes or compare children."
   },
   {
    "id": "s-ws1",
@@ -837,9 +839,9 @@
         "rows": [
          [
           "Sticks",
-          "4",
-          "7",
-          "10",
+          "5",
+          "8",
+          "11",
           "[]",
           "[]",
           "[]",
@@ -894,7 +896,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q3 13 and 16 in the table, 3 more each time, 22 sticks for 7 squares; Q4 15, 25 and 30; Q5 true, false, true."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q3 14, 17 and 20 in the table, 3 more each time, 23 sticks for 7 squares; Q4 15, 25 and 30; Q5 true, false, true."
   },
   {
    "id": "s-choice",
@@ -912,7 +914,7 @@
       ],
       [
        "Think harder (page 3)",
-       "The 10th and 20th picture, odd sticks, a wrong number"
+       "The 10th and 20th picture, even sticks, a wrong number"
       ],
       [
        "Go further (page 4)",
@@ -920,7 +922,7 @@
       ],
       [
        "Investigation (page 5)",
-       "Strips left over"
+       "How far do 14 strips go?"
       ],
       [
        "Check",
@@ -945,7 +947,7 @@
      "t": "card",
      "head": "A CHILD SAYS",
      "items": [
-      "5 triangles in a row need 15 sticks, because 5 times 3 is 15."
+      "5 triangles in a row with a handle need 16 sticks, because 5 times 3 is 15 and 1 more is 16."
      ]
     },
     {
@@ -957,7 +959,7 @@
      "text": "I think ... because ..."
     }
    ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test it with their strips: build 3 triangles in a row and count (7, not 9). Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. The triangles share sticks. The first triangle needs 3 sticks and each new one needs only 2 more, so 5 triangles need 11 sticks. Repeat each child answer in your own words for the recording. The child who is wrong is a child in another class: no cast name is given the wrong answer."
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test it with their strips: build 3 triangles in a row with a handle and count (8, not 10). Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. The triangles share sticks. The first triangle needs 3 sticks and the handle 1 more, and each new one needs only 2 more, so 5 triangles need 12 sticks. Repeat each child answer in your own words for the recording. The child who is wrong is a child in another class: no cast name is given the wrong answer."
   },
   {
    "id": "s-sneakans",
@@ -1009,7 +1011,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 21 cups; option 3, 15 pages; 17 sticks. Do not read out any child result."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 21 cups; option 3, 15 pages; 18 sticks. Do not read out any child result."
   },
   {
    "id": "s-look",
@@ -1060,7 +1062,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "Squares in a row: 1 square uses 4 sticks, 2 squares use 7, 3 squares use 10, 4 squares use 13, 5 squares use 16."
+     "text": "Squares in a row with a handle: 1 square uses 5 sticks, 2 squares use 8, 3 squares use 11, 4 squares use 14, 5 squares use 17."
     },
     {
      "t": "visual",
@@ -1076,11 +1078,11 @@
      "rows": [
       [
        "Sticks",
-       "4",
-       "7",
-       "10",
-       "13",
-       "16"
+       "5",
+       "8",
+       "11",
+       "14",
+       "17"
       ]
      ]
     },
@@ -1089,7 +1091,7 @@
      "text": "How many sticks for 9 squares?"
     }
    ],
-   "note": "Optional, only if you are on time. A table of squares in a row: 4, 7, 10, 13, 16, going up by 3 each time (one side is shared). Nine squares: 16 and 4 more squares of 3 sticks each is 16 + 12 = 28; or 3 times 9 is 27 and 1 more is 28. Take two answers; ask: how many more sticks does each new square need (3, one side is shared). Then ask: why 3 and not 4. This is the same move as the triangles. Take the idea, not the speed.",
+   "note": "Optional, only if you are on time. A table of squares in a row with a handle: 5, 8, 11, 14, 17, going up by 3 each time (one side is shared). Nine squares: 17 and 4 more squares of 3 sticks each is 17 + 12 = 29; or 3 times 9 is 27 and 2 more is 29. Take two answers; ask: how many more sticks does each new square need (3, one side is shared). Then ask: why 3 and not 4. This is the same move as the triangles. Take the idea, not the speed.",
    "optional": true
   },
   {
@@ -1108,7 +1110,7 @@
       ],
       [
        "Is it always true?",
-       "Every row of triangles has an odd number of sticks. Test it."
+       "Every row of triangles with a handle has an even number of sticks. Test it."
       ],
       [
        "Make a puzzle",
@@ -1331,11 +1333,11 @@
      },
      {
       "k": "SAY",
-      "text": "Today your strips are the sticks. Make one triangle with three strips. Count them. Now make a second triangle that joins the first one and shares one strip with it, like the picture. Count all your strips. Then a third."
+      "text": "Today your strips are the sticks. Make one triangle with three strips and put one more strip beside it as a handle, like the picture. Count your strips: four. Now make a second triangle that joins the first one and shares one strip with it. Count all your strips. Then a third."
      },
      {
       "k": "WORK",
-      "text": "Children build 1, 2 and 3 triangles in a row, counting all the strips each time, and write the three numbers on their paper. Tutor scans the cameras and the tables.",
+      "text": "Children build 1, 2 and 3 triangles in a row, each row with its handle, counting all the strips each time, and write the three numbers on their paper. Tutor scans the cameras and the tables.",
       "s": 150
      },
      {
@@ -1381,11 +1383,11 @@
      },
      {
       "k": "STUCK",
-      "text": "A child who counts 3 for each new triangle: ask them to look at the strip the two triangles share. A child who has too few strips draws the sticks as lines. A child who guesses 15: ask what the number for four triangles was."
+      "text": "A child who counts 3 for each new triangle: ask them to look at the strip the two triangles share. A child who has too few strips draws the sticks as lines. A child who guesses 15 or 16: ask what the number for four triangles was."
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say what they have made. Tilting the camera to the table is allowed; a face need not be in view; nothing is held up to the camera. Answers: 3, 5, 7, then 9 strips for four triangles; guess 11 for five triangles. Do not say the rule before the children do. Do not confirm 11 until the Mini-lesson."
+      "text": "Main room only; children say what they have made. Tilting the camera to the table is allowed; a face need not be in view; nothing is held up to the camera. Answers: 4, 6, 8, then 10 strips for four triangles; guess 12 for five triangles. Do not say the rule before the children do. Do not confirm 12 until the Mini-lesson."
      }
     ]
    },
@@ -1402,7 +1404,7 @@
      },
      {
       "k": "SAY",
-      "text": "Here is a table of what we found. One triangle, three sticks. Two triangles, five. Three triangles, seven. Four triangles, nine. Copy it on your paper."
+      "text": "Here is a table of what we found. One triangle with its handle, four sticks. Two triangles, six. Three triangles, eight. Four triangles, ten. Copy it on your paper."
      },
      {
       "k": "WORK",
@@ -1420,7 +1422,7 @@
      },
      {
       "k": "SAY",
-      "text": "Now look at how the sticks grow. Three to five is two more. Five to seven is two more. The sticks go up by two each time."
+      "text": "Now look at how the sticks grow. Four to six is two more. Six to eight is two more. The sticks go up by two each time."
      },
      {
       "k": "WORK",
@@ -1438,7 +1440,7 @@
      },
      {
       "k": "SAY",
-      "text": "Three, five, seven, nine, eleven: every number is odd. Remember that word, odd."
+      "text": "Four, six, eight, ten, twelve: every number is even. Remember that word, even."
      },
      {
       "k": "SLIDE",
@@ -1446,7 +1448,7 @@
      },
      {
       "k": "SAY",
-      "text": "Use the table to go on. Five triangles, eleven sticks. Two more each time."
+      "text": "Use the table to go on. Five triangles, twelve sticks. Two more each time."
      },
      {
       "k": "ASK",
@@ -1464,7 +1466,7 @@
      },
      {
       "k": "SAY",
-      "text": "Some people say five triangles need five threes. Look at two triangles. Three sticks and three sticks make six, but only five are there."
+      "text": "Some people say five triangles need five threes. Look at two triangles. Three sticks and three sticks and the handle make seven, but only six are there."
      },
      {
       "k": "ASK",
@@ -1473,7 +1475,7 @@
      },
      {
       "k": "SAY",
-      "text": "Shared sticks are counted once. The first triangle needs three sticks. Each new triangle needs only two more."
+      "text": "Shared sticks are counted once. The first triangle needs three sticks, and the handle one more. Each new triangle needs only two more."
      },
      {
       "k": "SLIDE",
@@ -1481,7 +1483,7 @@
      },
      {
       "k": "SAY",
-      "text": "A rule in words. Double the number of triangles. Then add one. Four triangles: double four is eight, and one more is nine."
+      "text": "A rule in words. Double the number of triangles. Then add two. Four triangles: double four is eight, and two more is ten."
      },
      {
       "k": "ASK",
@@ -1515,7 +1517,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Key words to use every time: table, picture, sticks, more each time, rule. Say double and add one in words; never a formula and never a letter. Do not say wrong for a child, only for a number or a table."
+      "text": "Key words to use every time: table, picture, sticks, more each time, rule. Say double and add two in words; never a formula and never a letter. Do not say wrong for a child, only for a number or a table."
      },
      {
       "k": "STUCK",
@@ -1540,7 +1542,7 @@
      },
      {
       "k": "WORK",
-      "text": "Call 3, 5, 2 and 4 pictures, then 2 and 3 triangles (hop 3, then 2 more). Children hop twice for each picture; a child who sits taps the table twice.",
+      "text": "Call 3, 5, 2 and 4 pictures, then 2 and 3 triangles (hop double and 2 more: 4 hops, then 2 more). Children hop twice for each picture; a child who sits taps the table twice.",
       "s": 150
      }
     ]
@@ -1596,7 +1598,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 3: 13 and 16, then 3 more each time, then 22 sticks for 7 squares. Question 4: 15, 25 and 30. Question 5: true, false, true."
+      "text": "Question 3: 14 and 17 and 20, then 3 more each time, then 23 sticks for 7 squares. Question 4: 15, 25 and 30. Question 5: true, false, true."
      },
      {
       "k": "SLIDE",
@@ -1626,7 +1628,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder has the 10th and 20th picture, why a row of triangles never uses an even number of sticks and a wrong number in a table. Go further has Picture 100, working back from a total and the squares against the triangles (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder has the 10th and 20th picture, why a row of triangles with a handle never uses an odd number of sticks and a wrong number in a table. Go further has Picture 100, working back from a total and the squares against the triangles (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -1643,11 +1645,11 @@
      },
      {
       "k": "READ",
-      "text": "A child says: 5 triangles in a row need 15 sticks, because 5 times 3 is 15. Is the child right? Test it with your strips."
+      "text": "A child says: 5 triangles in a row with a handle need 16 sticks, because 5 times 3 is 15 and 1 more is 16. Is the child right? Test it with your strips."
      },
      {
       "k": "WORK",
-      "text": "Test it with your strips: build 3 triangles in a row and count the sticks.",
+      "text": "Test it with your strips: build 3 triangles in a row with a handle and count the sticks.",
       "s": 45
      },
      {
@@ -1686,7 +1688,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Model answer: no. The triangles share sticks. The first triangle needs 3 sticks and each new triangle needs only 2 more, so 5 triangles need 11 sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+      "text": "Model answer: no. The triangles share sticks. The first triangle needs 3 sticks and the handle 1 more, and each new triangle needs only 2 more, so 5 triangles need 12 sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
      }
     ]
    },
@@ -1707,7 +1709,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Each tray holds 7 cups. 1 tray: 7 cups. 2 trays: 14 cups. 3 trays: blank cups. E2. Mei reads 3 pages each day. How many pages does she read in 5 days? Choose the correct answer. Option 1: 8. Option 2: 12. Option 3: 15. Option 4: 35. Write its number in the bracket. E3. Rows of triangles use 3, 5, 7 and 9 sticks for 1, 2, 3 and 4 triangles. Each new triangle needs 2 more sticks. How many sticks for 8 triangles?",
+      "text": "E1. Each tray holds 7 cups. 1 tray: 7 cups. 2 trays: 14 cups. 3 trays: blank cups. E2. Mei reads 3 pages each day. How many pages does she read in 5 days? Choose the correct answer. Option 1: 8. Option 2: 12. Option 3: 15. Option 4: 35. Write its number in the bracket. E3. Rows of triangles with a handle use 4, 6, 8 and 10 sticks for 1, 2, 3 and 4 triangles. Each new triangle needs 2 more sticks. How many sticks for 8 triangles?",
       "s": 70
      },
      {
@@ -1721,7 +1723,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: 21 cups. E2: option 3, 15 pages. E3: 17 sticks."
+      "text": "E1: 21 cups. E2: option 3, 15 pages. E3: 18 sticks."
      },
      {
       "k": "SAY",
@@ -1775,7 +1777,7 @@
      },
      {
       "k": "SAY",
-      "text": "Optional, only if you are on time: squares in a row use 4, 7, 10, 13 and 16 sticks. How many sticks for 9 squares?",
+      "text": "Optional, only if you are on time: squares in a row with a handle use 5, 8, 11, 14 and 17 sticks. How many sticks for 9 squares?",
       "optional": true
      },
      {
@@ -1796,7 +1798,7 @@
      },
      {
       "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 28 sticks (3 more each time: 16 and 4 more squares of 3 each is 28). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 29 sticks (3 more each time: 17 and 4 more squares of 3 each is 29). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
      }
     ]
    }
@@ -1808,55 +1810,58 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Squares in a row are made with sticks. Look at the three pictures. Count the sticks in each.",
+    "text": "Squares in a row are made with sticks. The row has one handle stick. Look at the three pictures. Count the sticks in each.",
     "parts": [
      {
       "l": "a",
       "text": "1 square uses ____ sticks.",
-      "ans": "4",
-      "val": 4
+      "ans": "5",
+      "val": 5
      },
      {
       "l": "b",
       "text": "2 squares use ____ sticks.",
-      "ans": "7",
-      "val": 7
+      "ans": "8",
+      "val": 8
      },
      {
       "l": "c",
       "text": "3 squares use ____ sticks.",
-      "ans": "10",
-      "val": 10
+      "ans": "11",
+      "val": 11
      }
     ],
-    "answer": "4; 7; 10",
+    "answer": "5; 8; 11",
     "val": [
-     4,
-     7,
-     10
+     5,
+     8,
+     11
     ],
-    "hint": "Count the sticks in the first square. Then count the sticks you add for the next square.",
-    "solution": "The first square has 4 sticks. The second square shares one side, so it adds 3 more sticks: 7 in all. The third square adds 3 more: 10 in all.",
+    "hint": "Count the sticks in the first square and its handle. Then count the sticks you add for the next square.",
+    "solution": "The first square has 4 sticks and the handle is 1 more: 5 in all. The second square shares one side, so it adds 3 more sticks: 8 in all. The third square adds 3 more: 11 in all.",
     "mistakes": [
-     "Writing 8 for 2 squares (4 + 4): the squares share a side.",
-     "Writing 12 for 3 squares."
+     "Writing 10 for 2 squares (5 + 5): the squares share a side.",
+     "Writing 15 for 3 squares."
     ],
     "mins": 3.5,
     "visuals": [
      {
       "type": "stick_pattern",
       "shape": "square",
-      "n": 1
+      "n": 1,
+      "handle": true
      },
      {
       "type": "stick_pattern",
       "shape": "square",
-      "n": 2
+      "n": 2,
+      "handle": true
      },
      {
       "type": "stick_pattern",
       "shape": "square",
-      "n": 3
+      "n": 3,
+      "handle": true
      }
     ]
    },
@@ -1939,23 +1944,23 @@
      {
       "l": "b",
       "text": "7 squares need ____ sticks.",
-      "ans": "22",
-      "val": 22
+      "ans": "23",
+      "val": 23
      }
     ],
-    "answer": "13, 16, 19; 3; 22",
+    "answer": "14, 17, 20; 3; 23",
     "val": [
-     13,
-     16,
-     19,
+     14,
+     17,
+     20,
      3,
-     22
+     23
     ],
-    "hint": "Look at how many sticks you add each time: 4, 7, 10 goes up by the same number. Keep going.",
-    "solution": "The sticks go up by 3 each time, because each new square shares a side: 4, 7, 10, 13, 16, 19. 7 squares: 19 and 3 more is 22 sticks.",
+    "hint": "Look at how many sticks you add each time: 5, 8, 11 goes up by the same number. Keep going.",
+    "solution": "The sticks go up by 3 each time, because each new square shares a side: 5, 8, 11, 14, 17, 20. 7 squares: 20 and 3 more is 23 sticks.",
     "mistakes": [
      "Adding 4 each time.",
-     "Stopping at 19 for 7 squares (that is 6 squares)."
+     "Stopping at 20 for 7 squares (that is 6 squares)."
     ],
     "mins": 4.5,
     "visual": {
@@ -1973,9 +1978,9 @@
      "rows": [
       [
        "Sticks",
-       "4",
-       "7",
-       "10",
+       "5",
+       "8",
+       "11",
        "[]",
        "[]",
        "[]",
@@ -2048,9 +2053,9 @@
      "True"
     ],
     "hint": "Use your table from question 3. Find each number of squares in it.",
-    "solution": "Each new square shares a side, so it adds 3 sticks: True. 4 squares need 13 sticks, not 16: False. 6 squares need 19 sticks: True.",
+    "solution": "Each new square shares a side, so it adds 3 sticks: True. 4 squares need 14 sticks, not 17: False. 6 squares need 20 sticks: True.",
     "mistakes": [
-     "Saying 4 squares need 4 times 4 = 16 sticks.",
+     "Saying 4 squares need 4 times 5 = 20 sticks.",
      "Not checking the statement against the table."
     ],
     "mins": 3,
@@ -2059,10 +2064,10 @@
       "s": "Each new square needs 3 more sticks."
      },
      {
-      "s": "4 squares need 16 sticks."
+      "s": "4 squares need 17 sticks."
      },
      {
-      "s": "6 squares need 19 sticks."
+      "s": "6 squares need 20 sticks."
      }
     ]
    }
@@ -2072,25 +2077,25 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Mi makes triangles in a row with sticks. Fill in the table. Then finish the rule.",
+    "text": "Mi makes triangles in a row with sticks. The row has one handle stick. Fill in the table. Then finish the rule.",
     "parts": [
      {
       "l": "",
       "text": "Double the number of triangles, then add ____ .",
-      "ans": "1",
-      "val": 1
+      "ans": "2",
+      "val": 2
      }
     ],
-    "answer": "21 and 41; add 1",
+    "answer": "22 and 42; add 2",
     "val": [
-     21,
-     41,
-     1
+     22,
+     42,
+     2
     ],
     "hint": "The sticks go up by 2 for each new triangle. How many new triangles from 4 to 10? Or double the number of triangles and see how many more you need.",
-    "solution": "From 4 to 10 triangles there are 6 more triangles, and each adds 2 sticks: 9 and 12 make 21. Or double 10 is 20, and 1 more is 21. For 20 triangles: double 20 is 40, and 1 more is 41. The rule is: double the number of triangles, then add 1.",
+    "solution": "From 4 to 10 triangles there are 6 more triangles, and each adds 2 sticks: 10 and 12 make 22. Or double 10 is 20, and 2 more is 22. For 20 triangles: double 20 is 40, and 2 more is 42. The rule is: double the number of triangles, then add 2.",
     "mistakes": [
-     "Writing 30 or 60 (3 sticks for every triangle).",
+     "Writing 30 or 60 (3 sticks for every triangle), or 21 and 41 (forgetting the handle).",
      "Writing 11 for the 10th picture (counting on only one step)."
     ],
     "mins": 5,
@@ -2108,10 +2113,10 @@
      "rows": [
       [
        "Sticks",
-       "3",
-       "5",
-       "7",
-       "9",
+       "4",
+       "6",
+       "8",
+       "10",
        "[]",
        "[]"
       ]
@@ -2124,7 +2129,8 @@
       "n": 3,
       "hide_last": true,
       "label_each": true,
-      "size": 58
+      "size": 58,
+      "handle": true
      }
     ]
    },
@@ -2132,11 +2138,11 @@
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Look at rows of triangles made with sticks.",
+    "text": "Look at rows of triangles with a handle, made with sticks.",
     "parts": [
      {
       "l": "a",
-      "text": "Can exactly 20 sticks make a row of triangles with none left over? Circle Yes or No.",
+      "text": "Can exactly 21 sticks make a row of triangles with a handle, with none left over? Circle Yes or No.",
       "ans": "No",
       "val": "No",
       "choices": [
@@ -2146,9 +2152,9 @@
      },
      {
       "l": "b",
-      "text": "Are the sticks in a row of triangles always odd, or always even? Circle one.",
-      "ans": "odd",
-      "val": "odd",
+      "text": "Are the sticks in a row of triangles with a handle always odd, or always even? Circle one.",
+      "ans": "even",
+      "val": "even",
       "choices": [
        "odd",
        "even"
@@ -2156,7 +2162,7 @@
      },
      {
       "l": "c",
-      "text": "Can exactly 25 sticks make a row of triangles with none left over? Circle Yes or No.",
+      "text": "Can exactly 26 sticks make a row of triangles with a handle, with none left over? Circle Yes or No.",
       "ans": "Yes",
       "val": "Yes",
       "choices": [
@@ -2165,16 +2171,16 @@
       ]
      }
     ],
-    "answer": "No; odd; Yes",
+    "answer": "No; even; Yes",
     "val": [
      "No",
-     "odd",
+     "even",
      "Yes"
     ],
-    "hint": "Look at 3, 5, 7, 9 and 11 sticks. Are they odd or even?",
-    "solution": "Each row has double the triangles and then 1 more, so the number of sticks is an even number plus 1, which is odd. 20 is even, so no row of triangles uses exactly 20 sticks. 25 is odd: 25 take away 1 is 24, and half of 24 is 12, so 12 triangles use exactly 25 sticks.",
+    "hint": "Look at 4, 6, 8, 10 and 12 sticks. Are they odd or even?",
+    "solution": "Each row has double the triangles and then 2 more, so the number of sticks is an even number plus 2, which is even. 21 is odd, so no row of triangles uses exactly 21 sticks. 26 is even: 26 take away 2 is 24, and half of 24 is 12, so 12 triangles use exactly 26 sticks.",
     "mistakes": [
-     "Saying Yes after finding a close number such as 21.",
+     "Saying Yes after finding a close number such as 20.",
      "Thinking that every number of sticks is possible."
     ],
     "mins": 4,
@@ -2184,14 +2190,15 @@
      "n": 4,
      "hide_last": true,
      "label_each": true,
-     "size": 100
+     "size": 100,
+     "handle": true
     }
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "A child made a table for squares in a row. One number is wrong.",
+    "text": "A child made a table for squares in a row with a handle. One number is wrong.",
     "parts": [
      {
       "l": "a",
@@ -2207,8 +2214,8 @@
      {
       "l": "b",
       "text": "The right number is ____ .",
-      "ans": "13",
-      "val": 13
+      "ans": "14",
+      "val": 14
      },
      {
       "l": "c",
@@ -2217,14 +2224,14 @@
       "val": 3
      }
     ],
-    "answer": "4; 13; 3",
+    "answer": "4; 14; 3",
     "val": [
      "4",
-     13,
+     14,
      3
     ],
     "hint": "Look at how much the numbers go up each time. Which step is different?",
-    "solution": "The numbers go up by 3 each time: 4, 7, 10, then 13, 16, 19. The number for 4 squares is 12, but it should be 13.",
+    "solution": "The numbers go up by 3 each time: 5, 8, 11, then 14, 17, 20. The number for 4 squares is 13, but it should be 14.",
     "mistakes": [
      "Choosing 5 because 16 comes after the wrong number.",
      "Writing 11 or 14."
@@ -2244,12 +2251,12 @@
      "rows": [
       [
        "Sticks",
-       "4",
-       "7",
-       "10",
-       "12",
-       "16",
-       "19"
+       "5",
+       "8",
+       "11",
+       "13",
+       "17",
+       "20"
       ]
      ]
     }
@@ -2260,38 +2267,38 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Picture 100. Look at the tables for rows of triangles and rows of squares.",
+    "text": "Picture 100. Look at the tables for rows of triangles and rows of squares, each with a handle.",
     "parts": [
      {
       "l": "a",
       "text": "100 triangles in a row need ____ sticks.",
-      "ans": "201",
-      "val": 201
+      "ans": "202",
+      "val": 202
      },
      {
       "l": "b",
       "text": "100 squares in a row need ____ sticks.",
-      "ans": "301",
-      "val": 301
+      "ans": "302",
+      "val": 302
      },
      {
       "l": "c",
       "text": "50 squares in a row need ____ sticks.",
-      "ans": "151",
-      "val": 151
+      "ans": "152",
+      "val": 152
      }
     ],
-    "answer": "201; 301; 151",
+    "answer": "202; 302; 152",
     "val": [
-     201,
-     301,
-     151
+     202,
+     302,
+     152
     ],
-    "hint": "Triangles: double the number, then add 1. For squares, how many sticks does each new square add? How many sticks does the first square have?",
-    "solution": "Triangles: double 100 is 200, and 1 more is 201. Squares: the first square has 4 sticks and each of the other 99 squares adds 3: 99 times 3 is 297, and 4 more is 301. Or 100 times 3 is 300, and 1 more is 301. 50 squares: 50 times 3 is 150, and 1 more is 151.",
+    "hint": "Triangles: double the number, then add 2. For squares, how many sticks does each new square add? How many sticks does the first square have, with its handle?",
+    "solution": "Triangles: double 100 is 200, and 2 more is 202. Squares: the first square has 5 sticks with its handle and each of the other 99 squares adds 3: 99 times 3 is 297, and 5 more is 302. Or 100 times 3 is 300, and 2 more is 302. 50 squares: 50 times 3 is 150, and 2 more is 152.",
     "mistakes": [
      "Writing 300 or 400 (3 or 4 sticks for every picture).",
-     "Writing 200 for the triangles and forgetting the 1."
+     "Writing 200 for the triangles and forgetting the 2."
     ],
     "mins": 6,
     "visual": {
@@ -2306,17 +2313,17 @@
      "rows": [
       [
        "Triangle sticks",
-       "3",
-       "5",
-       "7",
-       "9"
+       "4",
+       "6",
+       "8",
+       "10"
       ],
       [
        "Square sticks",
-       "4",
-       "7",
-       "10",
-       "13"
+       "5",
+       "8",
+       "11",
+       "14"
       ]
      ],
      "col_w": [
@@ -2332,17 +2339,17 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Work back from the number of sticks.",
+    "text": "Work back from the number of sticks. Every row has a handle.",
     "parts": [
      {
       "l": "a",
-      "text": "31 sticks make a row of triangles, with none left over. How many triangles? ____",
+      "text": "32 sticks make a row of triangles, with none left over. How many triangles? ____",
       "ans": "15",
       "val": 15
      },
      {
       "l": "b",
-      "text": "37 sticks make a row of squares, with none left over. How many squares? ____",
+      "text": "38 sticks make a row of squares, with none left over. How many squares? ____",
       "ans": "12",
       "val": 12
      }
@@ -2352,10 +2359,10 @@
      15,
      12
     ],
-    "hint": "Triangles: take away 1, then halve. Squares: take away 1, then share into groups of 3.",
-    "solution": "Triangles: 31 minus 1 is 30, and half of 30 is 15. Squares: 37 minus 1 is 36, and 36 shared into groups of 3 is 12.",
+    "hint": "Triangles: take away 2, then halve. Squares: take away 2, then share into groups of 3.",
+    "solution": "Triangles: 32 minus 2 is 30, and half of 30 is 15. Squares: 38 minus 2 is 36, and 36 shared into groups of 3 is 12.",
     "mistakes": [
-     "Dividing 31 by 3 for the triangles.",
+     "Dividing 32 by 3 for the triangles.",
      "Forgetting to take away the 1 first."
     ],
     "mins": 5
@@ -2364,7 +2371,7 @@
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "A row of squares and a row of triangles have the same number of pictures.",
+    "text": "A row of squares and a row of triangles have the same number of pictures. Each row has a handle.",
     "parts": [
      {
       "l": "a",
@@ -2392,7 +2399,7 @@
      5
     ],
     "hint": "Find the sticks for 10 squares and for 10 triangles, then take away. Use the tables on this page.",
-    "solution": "10 squares need 31 sticks and 10 triangles need 21 sticks: 10 more. 20 squares need 61 sticks and 20 triangles need 41 sticks: 20 more. 5 squares need 16 sticks and 5 triangles need 11 sticks: 5 more. Each new picture needs 1 more stick for a square than for a triangle.",
+    "solution": "10 squares need 32 sticks and 10 triangles need 22 sticks: 10 more. 20 squares need 62 sticks and 20 triangles need 42 sticks: 20 more. 5 squares need 17 sticks and 5 triangles need 12 sticks: 5 more. Each new picture needs 1 more stick for a square than for a triangle.",
     "mistakes": [
      "Comparing the first pictures only (4 and 3).",
      "Subtracting 10 and 20 from each other."
@@ -2404,28 +2411,28 @@
    "id": "I1",
    "page": 5,
    "tier": "investigation",
-   "title": "Strips left over",
-   "first": "Make 3 triangles in a row. How many strips do you use? ____",
-   "text": "You have 14 strips. What is the most triangles in a row you can make? What is the most squares? Can you use all 14 strips?",
+   "title": "How far do 14 strips go?",
+   "first": "Make 3 triangles in a row with a handle. How many strips do you use? ____",
+   "text": "You have 14 strips. Every row has a handle. What is the most triangles in a row you can make? What is the most squares? Can you use all 14 strips?",
    "lines": 4,
    "draw": false,
-   "answer": "First: 7 strips. The most triangles is 6 (13 strips, 1 left over). The most squares is 4 (13 strips, 1 left over). No: a row of triangles uses an odd number of strips, so 14 never works, and the squares use 4, 7, 10, 13 or 16 strips, so 14 does not work either.",
+   "answer": "First: 8 strips. The most triangles is 6 (14 strips, none left over). The most squares is 4 (14 strips, none left over). Yes: both use all 14 strips, because 6 triangles use 2 times 6 and 2 more, which is 14, and 4 squares use 3 times 4 and 2 more, which is 14.",
    "val": [
     "6",
     "4"
    ],
-   "look_for": "A child who builds with the strips and counts; a child who uses the table to find how far 14 goes; a child who says why 14 never fits (odd numbers for triangles; 13 then 16 for squares). Credit any clear reason. Do not mark a child down for stopping at one shape.",
+   "look_for": "A child who builds with the strips and counts; a child who uses the table to find how far 14 goes; a child who says why 14 fits (the triangles use 4, 6, 8, 10, 12, 14 and the squares use 5, 8, 11, 14). Credit any clear reason. Do not mark a child down for stopping at one shape.",
    "mistakes": [
     "Saying 4 triangles (counting 3 strips each: 12).",
-    "Saying 14 strips make 5 squares (5 squares need 16)."
+    "Saying 14 strips make 5 squares (5 squares need 17)."
    ],
    "mins": 8
   }
  },
  "talk": {
-  "question": "A child says: 5 triangles in a row need 15 sticks, because 5 times 3 is 15. Is the child right? Test it with your strips.",
+  "question": "A child says: 5 triangles in a row with a handle need 16 sticks, because 5 times 3 is 15 and 1 more is 16. Is the child right? Test it with your strips.",
   "starter": "I think ... because ...",
-  "answer": "No. The triangles share sticks. The first triangle needs 3 sticks and each new triangle needs only 2 more, so 5 triangles need 11 sticks. We can test it by building 3 triangles: they need 7 sticks, not 9.",
+  "answer": "No. The triangles share sticks. The first triangle needs 3 sticks and the handle 1 more, and each new triangle needs only 2 more, so 5 triangles need 12 sticks. We can test it by building 3 triangles with a handle: they need 8 sticks, not 10.",
   "look_for": "A child who tests it with the strips, or says the triangles share sticks, or says each new triangle adds 2. Not just yes or no."
  },
  "exit": [
@@ -2475,23 +2482,23 @@
   },
   {
    "id": "E3",
-   "text": "Rows of triangles use 3, 5, 7 and 9 sticks for 1, 2, 3 and 4 triangles. Each new triangle needs 2 more sticks.",
+   "text": "Rows of triangles with a handle use 4, 6, 8 and 10 sticks for 1, 2, 3 and 4 triangles. Each new triangle needs 2 more sticks.",
    "parts": [
     {
      "l": "",
      "text": "8 triangles need ____ sticks.",
-     "ans": "17",
-     "val": 17
+     "ans": "18",
+     "val": 18
     }
    ],
-   "answer": "17",
+   "answer": "18",
    "val": [
-    17
+    18
    ],
-   "solution": "Go on in twos: 4 triangles 9, 5 triangles 11, 6 triangles 13, 7 triangles 15, 8 triangles 17. Or double 8 is 16 and 1 more is 17.",
+   "solution": "Go on in twos: 4 triangles 10, 5 triangles 12, 6 triangles 14, 7 triangles 16, 8 triangles 18. Or double 8 is 16 and 2 more is 18.",
    "mistakes": [
     "Writing 24 (8 times 3): the shared sticks are counted twice.",
-    "Stopping early at 15 (7 triangles) or 16."
+    "Stopping early at 16 (7 triangles) or 17."
    ]
   }
  ],
@@ -2538,18 +2545,18 @@
   {
    "id": "H3",
    "tier": "think",
-   "text": "Triangles in a row use 3 sticks for 1 triangle, 5 sticks for 2 triangles and 7 sticks for 3 triangles. How many sticks for 15 triangles? ____",
-   "answer": "31",
-   "val": 31,
-   "solution": "Double 15 is 30, and 1 more is 31. Or: 3 and 14 more triangles, each adding 2: 3 and 28 make 31."
+   "text": "Triangles in a row with a handle use 4 sticks for 1 triangle, 6 sticks for 2 triangles and 8 sticks for 3 triangles. How many sticks for 15 triangles? ____",
+   "answer": "32",
+   "val": 32,
+   "solution": "Double 15 is 30, and 2 more is 32. Or: 4 and 14 more triangles, each adding 2: 4 and 28 make 32."
   },
   {
    "id": "H4",
    "tier": "go",
-   "text": "Squares in a row use 4 sticks for 1 square, 7 sticks for 2 squares and 10 sticks for 3 squares. A row uses 40 sticks. How many squares? ____",
+   "text": "Squares in a row with a handle use 5 sticks for 1 square, 8 sticks for 2 squares and 11 sticks for 3 squares. A row uses 41 sticks. How many squares? ____",
    "answer": "13",
    "val": 13,
-   "solution": "Take away the first square: 40 minus 4 is 36. Each other square adds 3: 36 shared into groups of 3 is 12. So the first square and 12 more make 13 squares."
+   "solution": "Take away the first square and its handle: 41 minus 5 is 36. Each other square adds 3: 36 shared into groups of 3 is 12. So the first square and 12 more make 13 squares."
   },
   {
    "id": "H5",
@@ -2570,18 +2577,18 @@
     "id": "c1",
     "tier": "core",
     "type": "number",
-    "q": "Triangles in a row are made with sticks. How many sticks make 4 triangles?",
-    "hint": "The first triangle has 3 sticks. Each new triangle adds 2 sticks.",
+    "q": "Triangles in a row with a handle are made with sticks. How many sticks make 4 triangles?",
+    "hint": "The first triangle has 3 sticks and the handle is 1 more. Each new triangle adds 2 sticks.",
     "steps": [
-     "1 triangle uses 3 sticks, and each new triangle adds 2.",
-     "3 and 2 and 2 and 2 make 9.",
-     "4 triangles use 9 sticks."
+     "1 triangle uses 4 sticks with its handle, and each new triangle adds 2.",
+     "4 and 2 and 2 and 2 make 10.",
+     "4 triangles use 10 sticks."
     ],
-    "answer": 9,
+    "answer": 10,
     "slips": [
      {
       "a": [
-       12
+       13
       ],
       "say": "The triangles share sticks. Each new triangle adds only 2."
      }
@@ -2589,12 +2596,14 @@
     "fig": {
      "type": "stick_pattern",
      "shape": "triangle",
-     "n": "{n}"
+     "n": "{n}",
+     "handle": true
     },
     "fig_base": {
      "type": "stick_pattern",
      "shape": "triangle",
-     "n": 4
+     "n": 4,
+     "handle": true
     },
     "tpl": {
      "vars": {
@@ -2607,14 +2616,14 @@
       ]
      },
      "derive": {
-      "t": "2*n+1"
+      "t": "2*n+2"
      },
-     "q": "Triangles in a row are made with sticks. How many sticks make {n} triangles?",
+     "q": "Triangles in a row with a handle are made with sticks. How many sticks make {n} triangles?",
      "answer": "t",
-     "hint": "The first triangle has 3 sticks. Each new triangle adds 2 sticks.",
+     "hint": "The first triangle has 3 sticks and the handle is 1 more. Each new triangle adds 2 sticks.",
      "steps": [
-      "1 triangle uses 3 sticks, and each new triangle adds 2.",
-      "Count on in 2s from 3 until you have {n} triangles.",
+      "1 triangle uses 4 sticks with its handle, and each new triangle adds 2.",
+      "Count on in 2s from 4 until you have {n} triangles.",
       "{n} triangles use {t} sticks."
      ]
     }
@@ -2623,18 +2632,18 @@
     "id": "c2",
     "tier": "core",
     "type": "number",
-    "q": "Squares in a row are made with sticks. How many sticks make 3 squares?",
-    "hint": "The first square has 4 sticks. Each new square adds 3 sticks.",
+    "q": "Squares in a row with a handle are made with sticks. How many sticks make 3 squares?",
+    "hint": "The first square has 4 sticks and the handle is 1 more. Each new square adds 3 sticks.",
     "steps": [
-     "1 square uses 4 sticks, and each new square adds 3.",
-     "4 and 3 and 3 make 10.",
-     "3 squares use 10 sticks."
+     "1 square uses 5 sticks with its handle, and each new square adds 3.",
+     "5 and 3 and 3 make 11.",
+     "3 squares use 11 sticks."
     ],
-    "answer": 10,
+    "answer": 11,
     "slips": [
      {
       "a": [
-       12
+       13
       ],
       "say": "The squares share a side. Each new square adds only 3."
      }
@@ -2642,12 +2651,14 @@
     "fig": {
      "type": "stick_pattern",
      "shape": "square",
-     "n": "{n}"
+     "n": "{n}",
+     "handle": true
     },
     "fig_base": {
      "type": "stick_pattern",
      "shape": "square",
-     "n": 3
+     "n": 3,
+     "handle": true
     },
     "tpl": {
      "vars": {
@@ -2659,14 +2670,14 @@
       ]
      },
      "derive": {
-      "t": "3*n+1"
+      "t": "3*n+2"
      },
-     "q": "Squares in a row are made with sticks. How many sticks make {n} squares?",
+     "q": "Squares in a row with a handle are made with sticks. How many sticks make {n} squares?",
      "answer": "t",
-     "hint": "The first square has 4 sticks. Each new square adds 3 sticks.",
+     "hint": "The first square has 4 sticks and the handle is 1 more. Each new square adds 3 sticks.",
      "steps": [
-      "1 square uses 4 sticks, and each new square adds 3.",
-      "Count on in 3s from 4 until you have {n} squares.",
+      "1 square uses 5 sticks with its handle, and each new square adds 3.",
+      "Count on in 3s from 5 until you have {n} squares.",
       "{n} squares use {t} sticks."
      ]
     }
@@ -2723,11 +2734,11 @@
     "id": "c4",
     "tier": "core",
     "type": "choice",
-    "q": "Triangles in a row use 3, 5, 7 and 9 sticks. How many more sticks does each new triangle need?",
+    "q": "Triangles in a row with a handle use 4, 6, 8 and 10 sticks. How many more sticks does each new triangle need?",
     "hint": "Look at how much each number goes up.",
     "steps": [
-     "3 to 5 is 2 more.",
-     "5 to 7 is 2 more.",
+     "4 to 6 is 2 more.",
+     "6 to 8 is 2 more.",
      "Each new triangle needs 2 more sticks."
     ],
     "options": [
@@ -2741,13 +2752,14 @@
       "a": [
        "3"
       ],
-      "say": "3 is the first triangle. The sticks go up by 2 each time."
+      "say": "3 is the sticks of the first triangle. The sticks go up by 2 each time."
      }
     ],
     "fig": {
      "type": "stick_pattern",
      "shape": "triangle",
-     "n": 4
+     "n": 4,
+     "handle": true
     }
    },
    {
@@ -2804,21 +2816,21 @@
     "id": "t1",
     "tier": "stretch",
     "type": "number",
-    "q": "How many sticks make 10 triangles in a row?",
-    "hint": "Double the number of triangles, then add 1.",
+    "q": "How many sticks make 10 triangles in a row with a handle?",
+    "hint": "Double the number of triangles, then add 2.",
     "steps": [
      "Double 10 is 20.",
-     "20 and 1 more is 21.",
-     "10 triangles use 21 sticks."
+     "20 and 2 more is 22.",
+     "10 triangles use 22 sticks."
     ],
-    "answer": 21,
+    "answer": 22,
     "easier": "c1",
     "slips": [
      {
       "a": [
        30
       ],
-      "say": "The triangles share sticks. Double the number, then add 1."
+      "say": "The triangles share sticks. Double the number, then add 2."
      }
     ],
     "tpl": {
@@ -2832,15 +2844,15 @@
       ]
      },
      "derive": {
-      "t": "2*n+1",
+      "t": "2*n+2",
       "h": "2*n"
      },
-     "q": "How many sticks make {n} triangles in a row?",
+     "q": "How many sticks make {n} triangles in a row with a handle?",
      "answer": "t",
-     "hint": "Double the number of triangles, then add 1.",
+     "hint": "Double the number of triangles, then add 2.",
      "steps": [
       "Double {n} is {h}.",
-      "{h} and 1 more is {t}.",
+      "{h} and 2 more is {t}.",
       "{n} triangles use {t} sticks."
      ]
     }
@@ -2849,11 +2861,11 @@
     "id": "t2",
     "tier": "stretch",
     "type": "choice",
-    "q": "Can exactly 16 sticks make a row of triangles, with none left over?",
-    "hint": "Rows of triangles use 3, 5, 7, 9 sticks. Are those odd or even?",
+    "q": "Can exactly 21 sticks make a row of triangles with a handle, with none left over?",
+    "hint": "Rows of triangles with a handle use 4, 6, 8, 10 sticks. Are those odd or even?",
     "steps": [
-     "A row of triangles uses an odd number of sticks.",
-     "16 is even.",
+     "A row of triangles with a handle uses an even number of sticks.",
+     "21 is odd.",
      "So no."
     ],
     "options": [
@@ -2867,7 +2879,7 @@
       "a": [
        "Yes"
       ],
-      "say": "The numbers of sticks are 3, 5, 7, 9 and so on. Are they odd or even?"
+      "say": "The numbers of sticks are 4, 6, 8, 10 and so on. Are they odd or even?"
      }
     ]
    },
@@ -2875,19 +2887,19 @@
     "id": "t3",
     "tier": "stretch",
     "type": "number",
-    "q": "How many sticks make 8 squares in a row?",
-    "hint": "The first square has 4 sticks. Each of the others adds 3.",
+    "q": "How many sticks make 8 squares in a row with a handle?",
+    "hint": "The first square has 4 sticks and the handle is 1 more. Each of the others adds 3.",
     "steps": [
      "The other 7 squares add 3 each: 21.",
-     "4 and 21 make 25.",
-     "8 squares use 25 sticks."
+     "5 and 21 make 26.",
+     "8 squares use 26 sticks."
     ],
-    "answer": 25,
+    "answer": 26,
     "easier": "c2",
     "slips": [
      {
       "a": [
-       32
+       33
       ],
       "say": "The squares share sides. Each new square adds 3."
      }
@@ -2903,16 +2915,16 @@
       ]
      },
      "derive": {
-      "t": "3*n+1",
+      "t": "3*n+2",
       "m": "n-1",
       "u": "3*(n-1)"
      },
-     "q": "How many sticks make {n} squares in a row?",
+     "q": "How many sticks make {n} squares in a row with a handle?",
      "answer": "t",
-     "hint": "The first square has 4 sticks. Each of the others adds 3.",
+     "hint": "The first square has 4 sticks and the handle is 1 more. Each of the others adds 3.",
      "steps": [
       "The other {m} squares add 3 each: {u}.",
-      "4 and {u} make {t}.",
+      "5 and {u} make {t}.",
       "{n} squares use {t} sticks."
      ]
     }
@@ -2921,10 +2933,10 @@
     "id": "g1",
     "tier": "challenge",
     "type": "number",
-    "q": "31 sticks make a row of triangles, with none left over. How many triangles?",
-    "hint": "Take away 1, then halve.",
+    "q": "32 sticks make a row of triangles with a handle, with none left over. How many triangles?",
+    "hint": "Take away 2, then halve.",
     "steps": [
-     "31 take away 1 is 30.",
+     "32 take away 2 is 30.",
      "Half of 30 is 15.",
      "There are 15 triangles."
     ],
@@ -2933,30 +2945,30 @@
     "slips": [
      {
       "a": [
-       31
+       32
       ],
-      "say": "Take away 1 first, then halve."
+      "say": "Take away 2 first, then halve."
      }
     ],
     "tpl": {
      "vars": {
       "t": [
-       9,
-       15,
-       21,
-       31,
-       41,
-       51
+       10,
+       16,
+       22,
+       32,
+       42,
+       52
       ]
      },
      "derive": {
-      "n": "(t-1)//2"
+      "n": "(t-2)//2"
      },
-     "q": "{t} sticks make a row of triangles, with none left over. How many triangles?",
+     "q": "{t} sticks make a row of triangles with a handle, with none left over. How many triangles?",
      "answer": "n",
-     "hint": "Take away 1, then halve.",
+     "hint": "Take away 2, then halve.",
      "steps": [
-      "{t} take away 1 leaves an even number.",
+      "{t} take away 2 leaves an even number.",
       "Half of it is {n}.",
       "There are {n} triangles."
      ]
@@ -2966,10 +2978,10 @@
     "id": "g2",
     "tier": "challenge",
     "type": "number",
-    "q": "37 sticks make a row of squares, with none left over. How many squares?",
-    "hint": "Take away 1, then share into groups of 3.",
+    "q": "38 sticks make a row of squares with a handle, with none left over. How many squares?",
+    "hint": "Take away 2, then share into groups of 3.",
     "steps": [
-     "37 take away 1 is 36.",
+     "38 take away 2 is 36.",
      "36 shared into groups of 3 is 12.",
      "There are 12 squares."
     ],
@@ -2978,31 +2990,31 @@
     "slips": [
      {
       "a": [
-       37
+       38
       ],
-      "say": "Take away 1 first, then share into groups of 3."
+      "say": "Take away 2 first, then share into groups of 3."
      }
     ],
     "tpl": {
      "vars": {
       "t": [
-       10,
-       13,
-       16,
-       22,
-       31,
-       37,
-       40
+       11,
+       14,
+       17,
+       23,
+       32,
+       38,
+       41
       ]
      },
      "derive": {
-      "n": "(t-1)//3"
+      "n": "(t-2)//3"
      },
-     "q": "{t} sticks make a row of squares, with none left over. How many squares?",
+     "q": "{t} sticks make a row of squares with a handle, with none left over. How many squares?",
      "answer": "n",
-     "hint": "Take away 1, then share into groups of 3.",
+     "hint": "Take away 2, then share into groups of 3.",
      "steps": [
-      "{t} take away 1 leaves a number that 3 goes into.",
+      "{t} take away 2 leaves a number that 3 goes into.",
       "Share it into groups of 3: {n}.",
       "There are {n} squares."
      ]
@@ -3012,21 +3024,21 @@
     "id": "g3",
     "tier": "challenge",
     "type": "number",
-    "q": "How many sticks make 100 triangles in a row?",
-    "hint": "Double the number of triangles, then add 1.",
+    "q": "How many sticks make 100 triangles in a row with a handle?",
+    "hint": "Double the number of triangles, then add 2.",
     "steps": [
      "Double 100 is 200.",
-     "200 and 1 more is 201.",
-     "100 triangles use 201 sticks."
+     "200 and 2 more is 202.",
+     "100 triangles use 202 sticks."
     ],
-    "answer": 201,
+    "answer": 202,
     "easier": "t1",
     "slips": [
      {
       "a": [
        300
       ],
-      "say": "The triangles share sticks. Double 100, then add 1."
+      "say": "The triangles share sticks. Double 100, then add 2."
      }
     ]
    }
@@ -3044,9 +3056,9 @@
     "id": "M1",
     "title": "Is it always true?",
     "minutes": 4,
-    "tutor": "Every row of triangles uses an odd number of sticks. Is that always true? Test it with your strips: build 2, 3 and 4 triangles and count.",
-    "rec": "Recording: pause. Is it always true that a row of triangles uses an odd number of sticks? Test it with your strips.",
-    "answer": "Yes. The sticks are double the triangles, and 1 more. Double a number is even, and 1 more makes it odd: 3, 5, 7, 9."
+    "tutor": "Every row of triangles with a handle uses an even number of sticks. Is that always true? Test it with your strips: build 2, 3 and 4 triangles with a handle and count.",
+    "rec": "Recording: pause. Is it always true that a row of triangles with a handle uses an even number of sticks? Test it with your strips.",
+    "answer": "Yes. The sticks are double the triangles, and 2 more. Double a number is even, and 2 more keeps it even: 4, 6, 8, 10."
    },
    {
     "id": "M2",
@@ -3060,14 +3072,14 @@
     "id": "M3",
     "title": "Teach it back",
     "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never seen a table. Teach them how a table of triangles finds the number of sticks for 6 triangles.",
+    "tutor": "Pretend your grown-up or a toy has never seen a table. Teach them how a table of triangles with a handle finds the number of sticks for 6 triangles.",
     "rec": "Recording: pause. Teach a grown-up how a table finds the sticks for 6 triangles without building them.",
-    "answer": "Write 1 triangle 3 sticks, 2 triangles 5 sticks, 3 triangles 7 sticks. It goes up by 2 each time, so 4 is 9, 5 is 11 and 6 is 13."
+    "answer": "Write 1 triangle 4 sticks, 2 triangles 6 sticks, 3 triangles 8 sticks. It goes up by 2 each time, so 4 is 10, 5 is 12 and 6 is 14."
    }
   ]
  },
  "parent": {
-  "summary": "We built triangles and squares in a row with paper strips and counted the sticks. Your child put the numbers in a table, saw that they grow by the same number each time, and used the table to find numbers further along. Completing a table of equal groups is Primary 1 work. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "summary": "We built triangles and squares in a row, each row with one handle stick, with paper strips and counted the sticks. Your child put the numbers in a table, saw that they grow by the same number each time, and used the table to find numbers further along. Completing a table of equal groups is Primary 1 work. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
   "words": [
    "table: numbers in rows, to see how they grow",
    "picture: one step of the pattern, such as 2 triangles",
@@ -3105,9 +3117,9 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, with your own strips. Check: S1 4, 7, 10; S2 9, 8 and 15; S3 13, 16, 19, 3 and 22; S4 15, 25, 30 and day 5; S5 true, false, true; T1 21, 41 and add 1; T2 No, odd and Yes; T3 4, 13 and 3; G1 201, 301 and 151; G2 15 and 12; G3 10, 20 and 5; I1 6 and 4.",
+  "Solve every workbook question yourself first, with your own strips. Check: S1 5, 8, 11; S2 9, 8 and 15; S3 14, 17, 20, 3 and 23; S4 15, 25, 30 and day 5; S5 true, false, true; T1 22, 42 and add 2; T2 No, even and Yes; T3 4, 14 and 3; G1 202, 302 and 152; G2 15 and 12; G3 10, 20 and 5; I1 6 and 4.",
   "Tell parents a week before: tear out the strip page (page 6) along the dashed line; a grown-up cuts out the 14 strips and keeps them in an envelope. With no printer: 14 short strips of paper or straws of the same length. Never matches or toothpicks.",
-  "Have the slides open. Have your own strips to show on camera if you wish. Say sticks in the table and strips on the desk, and say the rule in words (double and add 1): never a letter, never the word formula.",
+  "Have the slides open. Have your own strips to show on camera if you wish. Say sticks in the table and strips on the desk, and say the rule in words (double and add 2): never a letter, never the word formula.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly without first names, then say the recording notice; do not use first names while the recording runs. Nobody holds paper up to the camera.",
   "Be plain with families: completing a table of equal groups is Primary 1 work; the stick pattern, the 10th and 20th picture, working back from a total and the 100th picture go beyond Primary 1 on purpose. The topic is new, so a tutor or the owner should confirm the placement. Do not call the lesson MOE-aligned.",
   "Slides s-explore3, s-m3 and s-m6 keep the answers off the screen while you ask: the answer is confirmed on the slide after. Read every question, every table and the four options of E2 aloud."
@@ -3127,7 +3139,7 @@
    {
     "type": "stick_strips",
     "title": "Kit page: paper strips",
-    "intro": "A grown-up cuts out all 14 strips before the lesson. They are the sticks for triangles and squares in a row. We build up to 4 triangles in class and use up to 13 strips in the Investigation. No printer or no cutting? Use 14 short strips of paper or straws of the same length. Keep the strips in an envelope. Never use matches or toothpicks."
+    "intro": "A grown-up cuts out all 14 strips before the lesson. They are the sticks for triangles and squares in a row. We build up to 4 triangles with a handle in class and use up to 14 strips in the Investigation. No printer or no cutting? Use 14 short strips of paper or straws of the same length. Keep the strips in an envelope. Never use matches or toothpicks."
    }
   ]
  },
@@ -3138,7 +3150,7 @@
    "G1",
    "G2"
   ],
-  "text": "The 10th and 20th picture from a table with the rule double and add 1 (T1), the 100th picture of triangles and of squares (G1), and working back from a total number of sticks to the number of pictures (G2). Finding the 100th term of a pattern from a rule is Primary 4 or 5 pattern thinking; letters for an unknown are Primary 6, so every rule is said in words. Named puzzle: Picture 100. T2 (no row of triangles uses an even number of sticks) is an odd and even reasoning item, also beyond the syllabus.",
+  "text": "The 10th and 20th picture from a table with the rule double and add 2 (T1), the 100th picture of triangles and of squares (G1), and working back from a total number of sticks to the number of pictures (G2). Finding the 100th term of a pattern from a rule is Primary 4 or 5 pattern thinking; letters for an unknown are Primary 6, so every rule is said in words. Named puzzle: Picture 100. T2 (no row of triangles uses an even number of sticks) is an odd and even reasoning item, also beyond the syllabus.",
   "parent": "Finding the 10th, 20th and 100th picture of a growing stick pattern, and working back from a total number of sticks, go past the school Primary 1 syllabus on purpose."
  }
 }
