@@ -64,7 +64,7 @@
    "id": "L2U02-S01",
    "tier": "start",
    "page": 1,
-   "text": "Find the missing digits. Write one digit in each empty box.",
+   "text": "Find the missing digits. Each sum has 2. Write them in the answer boxes, top number first.",
    "figure": {
     "type": "l2_vsum",
     "sums": [
@@ -101,48 +101,46 @@
    "parts": [
     {
      "label": "a",
-     "text": "Sum (a): write the missing digits, top number first.",
+     "text": "Sum (a): the missing digits are {b} and {b}.",
      "answer": {
       "value": [
        "4",
        "9"
       ],
-      "text": "4 and 9",
-      "list": true
+      "text": "4 and 9"
      }
     },
     {
      "label": "b",
-     "text": "Sum (b): write the missing digits, top number first.",
+     "text": "Sum (b): the missing digits are {b} and {b}.",
      "answer": {
       "value": [
        "4",
        "4"
       ],
-      "text": "4 and 4",
-      "list": true
+      "text": "4 and 4"
      }
     },
     {
      "label": "c",
-     "text": "Sum (c): write the missing digits, top number first.",
+     "text": "Sum (c): the missing digits are {b} and {b}.",
      "answer": {
       "value": [
        "4",
        "3"
       ],
-      "text": "4 and 3",
-      "list": true
+      "text": "4 and 3"
      }
     }
    ],
-   "explanation": "(a) Ones: 4 + 9 = 13, carry 1. Tens: 4 + 5 + 1 = 10, carry 1. Hundreds: 2 + 3 + 1 = 6. So 244 + 359 = 603. (b) Ones: 8 + 6 = 14, carry 1. Tens: 4 + 2 + 1 = 7. Hundreds: 4 + 4 = 8. So 448 + 426 = 874. (c) Ones: 5 + 8 = 13, carry 1. Tens: 6 + 3 + 1 = 10, carry 1. Hundreds: 4 + 2 + 1 = 7. So 465 + 238 = 703."
+   "explanation": "(a) Ones: 4 + 9 = 13, carry 1. Tens: 4 + 5 + 1 = 10, carry 1. Hundreds: 2 + 3 + 1 = 6. So 244 + 359 = 603. (b) Ones: 8 + 6 = 14, carry 1. Tens: 4 + 2 + 1 = 7. Hundreds: 4 + 4 = 8. So 448 + 426 = 874. (c) Ones: 5 + 8 = 13, carry 1. Tens: 6 + 3 + 1 = 10, carry 1. Hundreds: 4 + 2 + 1 = 7. So 465 + 238 = 703.",
+   "partsrow": true
   },
   {
    "id": "L2U02-S02",
    "tier": "start",
    "page": 1,
-   "text": "Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away.",
+   "text": "Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away. Write the digits top number first.",
    "figure": {
     "type": "l2_vsum",
     "sums": [
@@ -170,30 +168,29 @@
    "parts": [
     {
      "label": "a",
-     "text": "Sum (a): write the missing digits, top number first.",
+     "text": "Sum (a): the missing digits are {b} and {b}.",
      "answer": {
       "value": [
        "3",
        "7"
       ],
-      "text": "3 and 7",
-      "list": true
+      "text": "3 and 7"
      }
     },
     {
      "label": "b",
-     "text": "Sum (b): write the missing digits, top number first.",
+     "text": "Sum (b): the missing digits are {b} and {b}.",
      "answer": {
       "value": [
        "1",
        "2"
       ],
-      "text": "1 and 2",
-      "list": true
+      "text": "1 and 2"
      }
     }
    ],
-   "explanation": "Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265."
+   "explanation": "Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265.",
+   "partsrow": true
   },
   {
    "id": "L2U02-S03",
@@ -342,7 +339,7 @@
      ]
     },
     "width_units": 400,
-    "width_mm": 110
+    "width_mm": 100
    },
    "parts": [
     {
@@ -382,24 +379,6 @@
    "id": "L2U02-S06",
    "tier": "start",
    "page": 2,
-   "text": "Mei had 500 beads. She used some for a necklace and 135 for a bracelet. 210 beads were left. How many beads did she use for the necklace? {b}",
-   "answer": {
-    "value": [
-     "155"
-    ],
-    "text": "155"
-   },
-   "explanation": "Take away what she used and what was left: 500 - 135 - 210 = 155. Check: 155 + 135 + 210 = 500.",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   }
-  },
-  {
-   "id": "L2U02-S07",
-   "tier": "start",
-   "page": 2,
    "text": "Ben wrote 614 - 278 = 346. He checks by adding.",
    "parts": [
     {
@@ -436,7 +415,7 @@
    "explanation": "(a) 346 + 278 = 624. (b) A right answer would add back to 614, so Ben is wrong. (c) 614 - 278 = 336. Check: 336 + 278 = 614. Ben forgot that the tens had lent 1 ten, so his tens digit was 1 too big."
   },
   {
-   "id": "L2U02-S08",
+   "id": "L2U02-S07",
    "tier": "start",
    "page": 3,
    "text": "Ali had 345 stickers. He gave some away. Now he has 128 stickers.\n(1) 345 + [ ] = 128      (2) 345 - [ ] = 128\n(3) [ ] - 345 = 128      (4) 128 - [ ] = 345",
@@ -463,6 +442,24 @@
     }
    ],
    "explanation": "(a) He starts with 345 and takes some away, so 345 - [ ] = 128, which is (2). (b) 345 - 128 = 217. Check: 128 + 217 = 345."
+  },
+  {
+   "id": "L2U02-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Mei had 500 beads. She used some for a necklace and 135 for a bracelet. 210 beads were left. How many beads did she use for the necklace? {b}",
+   "answer": {
+    "value": [
+     "155"
+    ],
+    "text": "155"
+   },
+   "explanation": "Take away what she used and what was left: 500 - 135 - 210 = 155. Check: 155 + 135 + 210 = 500.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L2U02-S09",
@@ -597,71 +594,55 @@
    "id": "L2U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Put the numbers 120, 135, 150, 165, 180 and 195 in the circles of each triangle, once each. In triangle A every side adds up to 450. In triangle B every side adds up to 495.",
+   "text": "Put the numbers 120, 135, 150, 165, 180 and 195 in the circles, once each, so that every side adds up to 450.",
    "figure": {
     "type": "l2_triangle",
-    "triangles": [
-     {
-      "values": [
-       null,
-       null,
-       null,
-       null,
-       null,
-       null
-      ],
-      "caption": "Triangle A: sides 450"
-     },
-     {
-      "values": [
-       null,
-       null,
-       null,
-       null,
-       null,
-       null
-      ],
-      "caption": "Triangle B: sides 495"
-     }
+    "values": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
     ],
-    "width_mm": 160
+    "width_mm": 70
    },
    "parts": [
     {
      "label": "a",
-     "text": "Triangle A: the 3 corner numbers are {ll}",
+     "text": "Corners: {b}, {b}, {b}.",
      "answer": {
       "value": [
        "120",
        "135",
        "150"
       ],
-      "text": "120, 135, 150",
-      "list": true
+      "text": "120, 135, 150"
      }
     },
     {
      "label": "b",
-     "text": "Triangle B: the 3 corner numbers are {ll}",
+     "text": "Sides add up to 495. Corners: {b}, {b}, {b}.",
      "answer": {
       "value": [
        "165",
        "180",
        "195"
       ],
-      "text": "165, 180, 195",
-      "list": true
+      "text": "165, 180, 195"
      }
     }
    ],
-   "explanation": "A: corners 120, 135, 150. Between 120 and 135: 450 - 255 = 195. Between 135 and 150: 450 - 285 = 165. Between 150 and 120: 450 - 270 = 180. B: corners 165, 180, 195. Between 165 and 180: 150. Between 180 and 195: 120. Between 195 and 165: 135. Each side adds up to 495.",
-   "hint": "Corner numbers are used in 2 sides. Try the 3 smallest corners."
+   "explanation": "450: corners 120, 135, 150. Between 120 and 135: 450 - 255 = 195. Between 135 and 150: 450 - 285 = 165. Between 150 and 120: 450 - 270 = 180. 495: the corners must be the 3 greatest numbers 165, 180, 195. Between 165 and 180: 150. Between 180 and 195: 120. Between 195 and 165: 135.",
+   "hint": "Corner numbers are used in 2 sides. Try the 3 smallest corners.",
+   "figright": true,
+   "partsrow": true
   },
   {
    "id": "L2U02-T02",
    "tier": "think",
    "page": 4,
-   "text": "Circle True or False. Do not add both sides. Say why on the line.",
+   "text": "Circle True or False. Do not add both sides.",
    "parts": [
     {
      "label": "a",
@@ -706,11 +687,7 @@
    ],
    "explanation": "(a) 468 is 1 more than 467 and 199 is 1 less than 200: true. (b) 350 is 10 more than 340, but 240 is 20 less than 260, so the sides are 590 and 600: false. (c) 502 is 2 more than 500 and 99 is 2 less than 101: true. (d) 275 + 275 = 550 and 250 + 310 = 560: false.",
    "hint": "Move the same amount from one number to the other.",
-   "space": {
-    "rows": [
-     "Why (b):"
-    ]
-   }
+   "partsrow": true
   },
   {
    "id": "L2U02-T03",
@@ -763,7 +740,7 @@
      ]
     },
     "width_units": 400,
-    "width_mm": 112
+    "width_mm": 100
    },
    "parts": [
     {
@@ -798,7 +775,8 @@
     }
    ],
    "explanation": "Ali has 60 more than Ben and Siti has 40 fewer, so the 3 children have 60 - 40 = 20 more than 3 Bens. 530 - 20 = 510 is 3 Bens. 510 shared into 3 is 170, so Ben has 170. Ali has 170 + 60 = 230. Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.",
-   "hint": "Make all 3 bars the same length as Ben's bar."
+   "hint": "Make all 3 bars the same length as Ben's bar.",
+   "partsrow": true
   },
   {
    "id": "L2U02-G01",
@@ -839,11 +817,7 @@
    ],
    "explanation": "Add the 3 totals: 540 + 610 + 450 = 1600. Each child is counted twice, so all 3 together have 800. Ravi = 800 - 540 = 260. Ali = 800 - 610 = 190. Mei = 800 - 450 = 350. Check: 190 + 350 = 540, 350 + 260 = 610, 190 + 260 = 450.",
    "hint": "Add the 3 totals, then halve. That is all 3 children together.",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   }
+   "partsrow": true
   },
   {
    "id": "L2U02-G02",
@@ -853,26 +827,17 @@
    "parts": [
     {
      "label": "a",
-     "text": "742 and 247:  742 - 247 = {b}",
+     "text": "742 - 247 = {b}      831 - 138 = {b}",
      "answer": {
       "value": [
-       "495"
+       "495",
+       "693"
       ],
-      "text": "495"
+      "text": "495 and 693"
      }
     },
     {
      "label": "b",
-     "text": "831 and 138:  831 - 138 = {b}",
-     "answer": {
-      "value": [
-       "693"
-      ],
-      "text": "693"
-     }
-    },
-    {
-     "label": "c",
      "text": "What is the middle digit of both answers? {b}",
      "answer": {
       "value": [
@@ -882,7 +847,7 @@
      }
     },
     {
-     "label": "d",
+     "label": "c",
      "text": "Use the pattern: 954 - 459 = {b}",
      "answer": {
       "value": [
@@ -911,8 +876,7 @@
    "hint": "Start with a full sum. Then hide a digit in each number.",
    "space": {
     "rows": [
-     "My sum:",
-     "My answer:"
+     "My sum:"
     ]
    }
   },
@@ -944,7 +908,8 @@
     }
    ],
    "explanation": "(a) Move the box: 2 boxes = 625 - 175 = 450, so one box is 225. Check: 225 + 175 = 400 and 625 - 225 = 400. (b) 2 boxes = 800 - 240 = 560, so one box is 280. Check: 280 + 240 = 520 and 800 - 280 = 520.",
-   "hint": "Both sides must be equal. Try a number and check it."
+   "hint": "Both sides must be equal. Try a number and check it.",
+   "partsrow": true
   },
   {
    "id": "L2U02-C01",
@@ -958,7 +923,7 @@
      "43?",
      "689"
     ],
-    "width_mm": 56
+    "width_mm": 36
    },
    "answer": {
     "value": [
@@ -968,7 +933,8 @@
     "text": "5 and 3",
     "list": true
    },
-   "explanation": "Ones: 6 + 3 = 9, so the bottom box is 3. Tens: 5 + 3 = 8, so the top box is 5. Check: 256 + 433 = 689."
+   "explanation": "Ones: 6 + 3 = 9, so the bottom box is 3. Tens: 5 + 3 = 8, so the top box is 5. Check: 256 + 433 = 689.",
+   "figright": true
   },
   {
    "id": "L2U02-C02",

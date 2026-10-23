@@ -360,7 +360,7 @@
       270
      ]
     ],
-    "width_mm": 78
+    "width_mm": 66
    },
    "figside": true
   },
@@ -544,7 +544,12 @@
     ],
     "text": "5525"
    },
-   "explanation": "9000 - 3475 = 5525. Check: 3475 + 5525 = 9000."
+   "explanation": "9000 - 3475 = 5525. Check: 3475 + 5525 = 9000.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
   },
   {
    "id": "L3U02-S13",
@@ -868,14 +873,9 @@
       440
      ]
     ],
-    "width_mm": 92
+    "width_mm": 66
    },
-   "hint": "Guess a number for X. Fill the pyramid. Is the top too big?",
-   "space": {
-    "rows": [
-     "My guesses:"
-    ]
-   }
+   "hint": "Guess a number for X. Fill the pyramid. Is the top too big?"
   },
   {
    "id": "L3U02-G03",
@@ -1001,7 +1001,7 @@
       360
      ]
     ],
-    "width_mm": 60
+    "width_mm": 52
    },
    "figright": true
   },

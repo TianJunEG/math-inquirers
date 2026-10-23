@@ -56,7 +56,7 @@ u.S(2, 'Every row, column and diagonal has the same total.', parts=[
 u.S(2, 'A brick is made by adding the 2 bricks below it.', parts=[
     P('a', 'P = {b}', A('750')), P('b', 'Q = {b}', A('480'))],
     why='P and 830 make the top brick: 830 + P = 1580, so P = 750. Q and 270 make P: Q + 270 = 750, so Q = 480. Check: 350 + 480 = 830.',
-    figure={'type': 'l3_pyramid', 'rows': [[1580], [830, '@P'], [350, '@Q', 270]], 'width_mm': 78}, figside=True)
+    figure={'type': 'l3_pyramid', 'rows': [[1580], [830, '@P'], [350, '@Q', 270]], 'width_mm': 66}, figside=True)
 u.S(2, 'Find the 2 missing digits.', parts=[
     P('a', 'The digit in the hundreds place of the top number is {b}.', A('6')),
     P('b', 'The digit in the tens place of the number being added is {b}.', A('9'))],
@@ -72,7 +72,7 @@ u.S(3, 'Find the 2 missing digits.', parts=[
     why='Turn it round: 3657 + 2845 = 6502 (the missing digit of the number taken away is its tens digit 4). Or subtract by columns: 12 - 5 = 7, then 10 - 1 - 4 = 5, then 15 - 1 - 8 = 6, then 6 - 1 - 2 = 3. The top number is 6502.',
     figure=vs([6, None, 0, 2], '-', [2, 8, None, 5], [3, 6, 5, 7], 60), figside=True)
 u.S(3, 'The sum of 2 numbers is 9000. One number is 3475. What is the other number? {b}', A('5525'),
-    why='9000 - 3475 = 5525. Check: 3475 + 5525 = 9000.')
+    why='9000 - 3475 = 5525. Check: 3475 + 5525 = 9000.', space={'rows': ['Working:']})
 u.S(3, 'Use the cards once each to make two 3-digit numbers.', parts=[
     P('a', 'The greatest sum is {b}.', A('1595')), P('b', 'The smallest sum is {b}.', A('605'))],
     why='For the greatest sum, put the 2 greatest digits in the hundreds places. Then the next 2 in the tens places, and the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. For the smallest sum, do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.',
@@ -108,10 +108,9 @@ u.G('Letters hide digits. The same letter is the same digit. Different letters a
     partsrow=True, space={'rows': ['My tries:']})
 u.G('Beyond Level 3: Pyramids with a hidden number.\nA brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}',
     A('440'),
-    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 92},
+    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 66},
     hint='Guess a number for X. Fill the pyramid. Is the top too big?',
-    why='In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440. Check: the next row is 640, 880, 880; then 1520, 1760; then 3280.',
-    space={'rows': ['My guesses:']})
+    why='In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440. Check: the next row is 640, 880, 880; then 1520, 1760; then 3280.')
 u.G('Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the 2 numbers.', parts=[
     P('a', '36 + 63 = {b}', A('99')), P('b', '58 + 85 = {b}', A('143')), P('c', '47 + 74 = {b}', A('121')),
     P('d', 'Each answer is in the {b} times table.', A('11'))],
@@ -130,7 +129,7 @@ u.C('Find the missing digit. {b}\n4?72 + 2519 = 7091', A('5'),
 u.C('Find the missing digit. {b}\n8?04 - 3569 = 4635', A('2'),
     why='Turn it round: 4635 + 3569 = 8204, so the missing digit is 2.')
 u.C('A brick is made by adding the 2 bricks below it. The brick M is {b}.', A('520'),
-    figure={'type': 'l3_pyramid', 'rows': [[1160], ['@M', 640], [240, 280, 360]], 'width_mm': 60}, figright=True,
+    figure={'type': 'l3_pyramid', 'rows': [[1160], ['@M', 640], [240, 280, 360]], 'width_mm': 52}, figright=True,
     why='M is the sum of 240 and 280: 240 + 280 = 520. Check: 520 + 640 = 1160.')
 u.C('A zoo has 9000 visitors in 3 days. On Friday 2845 visitors come. On Saturday 3260 come. How many come on Sunday? {b}', A('2895'),
     why='2845 + 3260 = 6105. Then 9000 - 6105 = 2895. Check: 6105 + 2895 = 9000.')

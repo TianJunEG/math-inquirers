@@ -244,3 +244,9 @@ def _():
 @check('L3U02-C04')
 def _():
     return s([9000 - 2845 - 3260])
+
+
+@check('L3U02-S14')
+def _():
+    wk = [1875, 2430, 1790]
+    return {'a': s([sum(wk)]), 'b': s([wk[1] - wk[2]])}

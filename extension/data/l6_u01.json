@@ -729,6 +729,11 @@
     }
    ],
    "hint": "The terms go down by 5. Take 5 × n away from a start number.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "(a) The terms go down by 5, so take 5n from a number. 5 × 1 = 5 and 58 + 5 = 63, so the rule is 63 − 5n. (b) 63 − 50 = 13. (c) 63 − 5n stays above 0 while 5n is less than 63. 5 × 12 = 60 gives 3 and 5 × 13 = 65 would be below 0, so term 12.",
    "partsrow": true
   },
@@ -849,13 +854,18 @@
     }
    ],
    "hint": "Count the jumps between the 2 terms. Share the rise equally.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "From the 4th to the 9th term is 9 − 4 = 5 jumps. The terms rose by 30, so each jump is 30 ÷ 5 = 6. Going back 3 jumps from the 4th term: 23 − 18 = 5. The rule is 6n − 1 (6 × 4 − 1 = 23).",
    "partsrow": true
   },
   {
    "id": "L6U01-G01",
    "tier": "go",
-   "text": "Beyond Level 6: Second differences.\nMatchsticks make staircases. Staircase 1 has 1 square, staircase 2 has 3 squares and staircase 3 has 6 squares.",
+   "text": "Beyond Level 6: Second differences.\nMatchsticks make staircases. Look at staircases 1, 2 and 3.",
    "page": 5,
    "parts": [
     {
@@ -941,20 +951,10 @@
       ],
       "text": "65"
      }
-    },
-    {
-     "label": "d",
-     "text": "The number 60 is in place {b}.",
-     "answer": {
-      "value": [
-       "18"
-      ],
-      "text": "18"
-     }
     }
    ],
    "hint": "Split it into two sequences. Which one is place 15 in?",
-   "explanation": "Places 1, 3, 5, ... say 3, 7, 11, 15: they go up by 4. Places 2, 4, 6, ... say 20, 25, 30, 35: they go up by 5. Place 15 is the 8th of the first kind: 3 + 7 × 4 = 31. Place 20 is the 10th of the second kind: 20 + 9 × 5 = 65. 60 is in the second kind: 20 + 8 × 5 = 60 is its 9th number, which is place 18.",
+   "explanation": "Places 1, 3, 5, ... say 3, 7, 11, 15: they go up by 4. Places 2, 4, 6, ... say 20, 25, 30, 35: they go up by 5. Place 15 is the 8th of the first kind: 3 + 7 × 4 = 31. Place 20 is the 10th of the second kind: 20 + 9 × 5 = 65.",
    "partsrow": true
   },
   {
@@ -1020,11 +1020,6 @@
     ]
    },
    "hint": "Write t after every repeat: 1, 3, 6, ... Where does it pass 100?",
-   "space": {
-    "rows": [
-     "t after each repeat:"
-    ]
-   },
    "explanation": "t after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. The repeat stops the first time t is above 100, which is after repeat 14, so k is 14 and t is 105. (These are the triangle numbers 1, 3, 6, 10, ...: the amount added is 1 more each time.)",
    "figside": true
   },
@@ -1059,7 +1054,7 @@
   {
    "id": "L6U01-C03",
    "tier": "quiz",
-   "text": "Predict what the code says.",
+   "text": "The code is: set n to 8, then repeat 20 times: change n by 6.",
    "page": 6,
    "parts": [
     {
@@ -1083,31 +1078,7 @@
      }
     }
    ],
-   "figure": {
-    "type": "l6_code",
-    "prog": [
-     [
-      "hat",
-      "when green flag clicked"
-     ],
-     [
-      "var",
-      "set n to (8)"
-     ],
-     [
-      "ctl",
-      "repeat (20)",
-      [
-       [
-        "var",
-        "change n by (6)"
-       ]
-      ]
-     ]
-    ]
-   },
-   "explanation": "8 + 20 × 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 × 21 + 2 = 128.",
-   "figside": true
+   "explanation": "8 + 20 × 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 × 21 + 2 = 128."
   },
   {
    "id": "L6U01-C04",

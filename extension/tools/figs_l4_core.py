@@ -70,6 +70,9 @@ def l4_bars(spec, w=None):
     for r in rows:
         longest = max(longest, r.get('offset', 0) + sum(s['u'] for s in r['segs']))
     note_w = max([len(r.get('note', '')) for r in rows] + [0]) * 14 + (18 if any(r.get('note') for r in rows) else 0)
+    vb = spec.get('vbrace')
+    if vb:
+        note_w = max(note_w, 36 + len(vb['text']) * 15)
     W = lab_w + longest * U + note_w + 16
     top = 8
     gap = spec.get('gap', 30)
@@ -122,6 +125,11 @@ def l4_bars(spec, w=None):
                 P.append(_t(f'{(a + e) / 2:.1f}', yb + 40, _esc(b['text']), fs, weight=800))
         if r.get('note'):
             P.append(_t(f'{x + 14:.1f}', y0 + RH / 2 + fs * 0.35, _esc(r['note']), fs, anchor='start', weight=800))
+    if vb:
+        xr = lab_w + longest * U + 14
+        ya, yz = ys[vb.get('a', 0)], ys[vb.get('b', len(rows) - 1)] + RH
+        P.append(f'<path d="M{xr},{ya} L{xr + 12},{ya} L{xr + 12},{yz} L{xr},{yz}" fill="none" stroke="{NAVY}" stroke-width="3"/>')
+        P.append(_t(f'{xr + 22:.1f}', (ya + yz) / 2 + fs * 0.35, _esc(vb['text']), fs, anchor='start', weight=800))
     return F._wrap(''.join(P), W, H, spec.get('label', 'bar model'), w or spec.get('width_mm', 150))
 
 
@@ -248,4 +256,40 @@ def l4_grid(spec, w=None):
     return F._wrap(''.join(P), W, H, spec.get('label', 'grid'), w or spec.get('width_mm', 100))
 
 
-FIGS = {'l4_table': l4_table, 'l4_bars': l4_bars, 'l4_numline': l4_numline, 'l4_grid': l4_grid}
+# ------------------------------------------------------------------------------------------------ flow
+def l4_flow(spec, w=None):
+    """A chain of boxes joined by arrows: items [value | None (empty box)], ops [label above each arrow], back [labels of the undo arrows drawn
+    underneath, right to left, dashed] (back is drawn only when given)."""
+    items, ops = spec['items'], spec['ops']
+    n = len(items)
+    BW, BH, GAP = 120, 70, 120
+    W = 20 + n * BW + (n - 1) * GAP + 20
+    top = 56
+    P = []
+    back = spec.get('back')
+    xs = [20 + i * (BW + GAP) for i in range(n)]
+    for i, v in enumerate(items):
+        dash = ' stroke-dasharray="9 6"' if v is None else ''
+        P.append(f'<rect x="{xs[i]}" y="{top}" width="{BW}" height="{BH}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3.4"{dash}/>')
+        if v is not None:
+            P.append(_t(xs[i] + BW / 2, top + BH / 2 + 11, _esc(v), 34, weight=800))
+    for i, o in enumerate(ops):
+        a, b = xs[i] + BW + 6, xs[i + 1] - 8
+        y = top + BH / 2
+        P.append(f'<line x1="{a}" y1="{y}" x2="{b - 6}" y2="{y}" stroke="{NAVY}" stroke-width="4"/>')
+        P.append(f'<polygon points="{b},{y} {b - 18},{y - 11} {b - 18},{y + 11}" fill="{NAVY}"/>')
+        P.append(_t((a + b) / 2, top + 16, _esc(o), 30, weight=800))
+    H = top + BH + 20
+    if back:
+        yb = top + BH + 24
+        for i, o in enumerate(back):       # back[i] undoes ops[len-1-i]; arrows run right to left
+            j = n - 1 - i
+            a, b = xs[j] + BW / 2, xs[j - 1] + BW / 2
+            P.append(f'<path d="M{a},{yb} Q{(a + b) / 2},{yb + 60} {b + 6},{yb + 6}" fill="none" stroke="{NAVY}" stroke-width="3.6" stroke-dasharray="9 6"/>')
+            P.append(f'<polygon points="{b},{yb} {b + 17},{yb + 20} {b + 22},{yb - 2}" fill="{NAVY}"/>')
+            P.append(_t((a + b) / 2, yb + 62, _esc(o), 28, weight=800))
+        H = yb + 90
+    return F._wrap(''.join(P), W, H, spec.get('label', 'number machine'), w or spec.get('width_mm', 150))
+
+
+FIGS = {'l4_flow': l4_flow, 'l4_table': l4_table, 'l4_bars': l4_bars, 'l4_numline': l4_numline, 'l4_grid': l4_grid}

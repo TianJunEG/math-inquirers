@@ -129,7 +129,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', 'The rule for the nth term is {b} − 5n.', [63]),
                    P('b', 'The 10th term is {b}.', [13]),
                    P('c', 'The last term above 0 is term number {b}.', [12])],
-            hint='The terms go down by 5. Take 5 × n away from a start number.', partsrow=True))
+            hint='The terms go down by 5. Take 5 × n away from a start number.', partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'T', 2, 4,
             'Program P starts at the 1st term of 6, 10, 14, 18, ... Program Q starts at the 5th term of the same sequence. Both change by 4 each repeat.',
             'The 5th term is 4 × 5 + 2 = 22. Q adds 4 sixteen times: 22 + 64 = 86. Q has moved 16 terms on, so it ends at term 5 + 16 = 21. '
@@ -147,11 +147,11 @@ I.append(IT(U, 'T', 3, 4,
                    P('b', 'Each jump is {b}.', [6]),
                    P('c', 'The 1st term is {b}.', [5]),
                    P('d', 'The rule is {b} × n − {b}.', [6, 1], '6, 1')],
-            hint='Count the jumps between the 2 terms. Share the rise equally.', partsrow=True))
+            hint='Count the jumps between the 2 terms. Share the rise equally.', partsrow=True, space={'rows': ['Working:']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'Matchsticks make staircases. Staircase 1 has 1 square, staircase 2 has 3 squares and staircase 3 has 6 squares.',
+            'Matchsticks make staircases. Look at staircases 1, 2 and 3.',
             'The extra sticks each time are 6 (4 to 10), then 8 (10 to 18). They go up by 2 each time, so the next extras are 10 and 12: 18 + 10 = 28 and 28 + 12 = 40. '
             'For staircase 10 add the extras 6, 8, ..., 22 to 4: 4 + 126 = 130. (The rule is n × n + 3n, which is not a times table plus a number.)',
             fig={'type': 'l6_sticks', 'shape': 'stairs', 'ks': [1, 2, 3], 'side': 8},
@@ -163,12 +163,10 @@ I.append(IT(U, 'G', 1, 5,
 I.append(IT(U, 'G', 2, 5,
             'A sprite says these numbers in order: 3, 20, 7, 25, 11, 30, 15, 35, ...',
             'Places 1, 3, 5, ... say 3, 7, 11, 15: they go up by 4. Places 2, 4, 6, ... say 20, 25, 30, 35: they go up by 5. '
-            'Place 15 is the 8th of the first kind: 3 + 7 × 4 = 31. Place 20 is the 10th of the second kind: 20 + 9 × 5 = 65. '
-            '60 is in the second kind: 20 + 8 × 5 = 60 is its 9th number, which is place 18.',
+            'Place 15 is the 8th of the first kind: 3 + 7 × 4 = 31. Place 20 is the 10th of the second kind: 20 + 9 × 5 = 65.',
             parts=[P('a', 'Places 1, 3, 5, ... go up by {b}. Places 2, 4, 6, ... go up by {b}.', [4, 5], '4, 5'),
                    P('b', 'The number in place 15 is {b}.', [31]),
-                   P('c', 'The number in place 20 is {b}.', [65]),
-                   P('d', 'The number 60 is in place {b}.', [18])],
+                   P('c', 'The number in place 20 is {b}.', [65])],
             hint='Split it into two sequences. Which one is place 15 in?', partsrow=True))
 I.append(IT(U, 'G', 3, 5,
             'What does this code say? Write t after each repeat.',
@@ -177,7 +175,6 @@ I.append(IT(U, 'G', 3, 5,
             fig=code([HAT, ['var', 'set t to (0)'], ['var', 'set k to (0)'], ['ctl', 'repeat until <(t) {gt} (100)>', [['var', 'change k by (1)'], ['var', 'change t by (k)']]], ['look', 'say (k)']]),
             parts=[P('a', 'The code says {b}.', [14]),
                    P('b', 'When it stops, t is {b}.', [105])],
-            space={'rows': ['t after each repeat:']},
             hint='Write t after every repeat: 1, 3, 6, ... Where does it pass 100?',
             beyond='Triangle numbers', figside=True))
 
@@ -191,12 +188,10 @@ I.append(IT(U, 'C', 2, 6,
             'The rule is 5n + 2. 125 − 2 = 123 is not a multiple of 5. The terms end in 2 or 7, so 125 is not a term.',
             answer=A(['No'], 'No')))
 I.append(IT(U, 'C', 3, 6,
-            'Predict what the code says.',
-            '8 + 20 × 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 × 21 + 2 = 128.',
-            fig=code([HAT, ['var', 'set n to (8)'], ['ctl', 'repeat (20)', [['var', 'change n by (6)']]]]),
+            'The code is: set n to 8, then repeat 20 times: change n by 6.',
+            '8 + 20 \u00d7 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 \u00d7 21 + 2 = 128.',
             parts=[P('a', 'The sprite ends with n = {b}.', [128]),
-                   P('b', 'That is term number {b} of 8, 14, 20, ...', [21])],
-            figside=True))
+                   P('b', 'That is term number {b} of 8, 14, 20, ...', [21])]))
 I.append(IT(U, 'C', 4, 6,
             'Mei starts at n = 5. She repeats 4 times: change n by 3, then say n. What is the first number it says?  {b}',
             'The code changes n before it says it. 5 + 3 = 8, so the first number said is 8, not the 1st term 5. To say 5 first, say n before changing it.',

@@ -277,3 +277,7 @@ Owner chose to start the Primary 3 school puzzle booklets (Semester 1 and 2) in 
 ## 23 Oct 2026 (night): TERM-INSTALMENTS-REMOVE, SCHOOLBOOKS-WAIT
 - TERM-INSTALMENTS-REMOVE: the terms page no longer offers three instalments; the term fee is one payment before lesson 1. Open: whether the 5% full-term discount still applies (the wording is a marked placeholder; prices on hold).
 - SCHOOLBOOKS-WAIT (overrides SCHOOLBOOKS-P3-NEXT): Primary 3-6 school booklets wait until the Primary 2 booklets are audited and schools show interest. Primary 2 continues. The Primary 3 agent was told to stop and leave a PAUSED note.
+
+## 23 Oct 2026 (night): DISCOUNT-DROP and sibling/friend discount
+- DISCOUNT-DROP: the 5% full-term discount is dropped (no instalments, one payment before lesson 1).
+- Owner wants a discount for siblings / friends. Amount, which products (beta fee? term fee?), who qualifies (siblings in the same household, a friend who joins with a referral code?), whether the discount is for both children or the new one only, and whether it stacks with the existing referral credit prototype (website/referral.html) are NOT yet decided. Terms page has a marked placeholder; no number published.
