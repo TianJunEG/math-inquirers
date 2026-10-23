@@ -58,3 +58,7 @@ Total: 18 / 24
 - The look-back line now reads "my grown-up will photograph this page for my tutor" and the contest-style row reads "Used at Think harder, Go further and the Investigation" (`contest_where`).
 - Template limits left: the Investigation has no names table (page 5 is full), drawing boxes have no guide lines, the kit page strips have no mark at 6 cells, and the online runner has the c1 "Try a similar one" defect (see FIXES_L18.md).
 - The step tables in the Mini-lesson hold question marks, so the printed guide does not list the step answers there; they are in the slide notes and the answer slide.
+
+## Update (fourth fix pass, 23 Oct 2026): hand-off to Lesson 19
+
+Parent `next_materials`, the goodbye script line and the `s-end` slide no longer say "4 shape cards drawn by a grown-up". They now say the shape cards come in the Lesson 19 workbook (kit page 7: 15 cards, circle, square, triangle, heart, star), with the counters page (page 6, 20 counters) and about 30 small counters, 2 cups, pencil and paper. Validator 0 FAIL; parent page 1 page (99%).
