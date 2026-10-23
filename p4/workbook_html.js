@@ -3,7 +3,8 @@ const C = require('../hp/common_html.js');
 const { fs, t, p, q, lines, banner, AlignmentType } = C;
 const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
-const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
+const FIG = require('../levels/figs_l4_6.js');
+const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + FIG.fit(s, 4) + '</div>' });
 const W = [];
 const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
 const LEVEL = 4;
