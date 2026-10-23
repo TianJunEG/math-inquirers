@@ -230,3 +230,6 @@ Owner replied: RETIRE-YES, X10-BEFORE, T1-REFRAME-NOW, L39-YES, PRIVACY-REWORD, 
 
 ## 23 Oct 2026 (night): CBC-OK
 Owner approved the fixed colour-by-code gallery (CBC-13 picture symbols, bigger coins with cents, rulers not always from 0). Remaining picture additions on CBC-11, CBC-12 and CBC-14 are deferred (not needed for the P1 booklets).
+
+## 23 Oct 2026 (night): registered office address
+Owner gave the registered office address: 66 Tannery Ln, Singapore 347805. Applied to website/terms.html (site rebuilt). To apply to: P1 semester booklet licence pages (school/p1/render.py REG_OFFICE), Level 1 extension book licence page (extension/tools/build.py). Still open: publisher line, licence wording and term (lawyer), and replacing the contact email pypteltd@gmail.com later.
