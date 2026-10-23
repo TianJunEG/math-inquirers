@@ -19,7 +19,15 @@ def bubbles(kind,a):
      '<text x="1750" y="868" font-size="120" font-weight="800" text-anchor="middle" fill="#1B2A49" font-family="Fredoka, Arial, sans-serif">!</text></g></g></svg></div>')
 OLDB=re.compile(r'<div data-deco="bubbles".*?</svg></div>',re.S)
 OLD=re.compile(r'<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden"><div style="position:absolute;right:-180px.*?</div></div>',re.S)
+PILL=re.compile(r'<p style="position:absolute;right:128px;top:\d+px;[^"]*">[^<]*MIN</p>\n?')
+def dedupe_pills(s):
+    """Keep one time pill per slide (a gen_* re-run on a patched deck can stack identical pills)."""
+    seen=[0]
+    def f(m):
+        seen[0]+=1; return m.group(0) if seen[0]==1 else ''
+    return PILL.sub(f,s)
 def fix(s,lv):
+    s=dedupe_pills(s)
     a,ad=ACC[lv]
     m=re.search(r'<section ([^>]*)style="([^"]*)"',s)
     if not m: return s
