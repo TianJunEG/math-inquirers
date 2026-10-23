@@ -11,4 +11,6 @@ L1 CpsbcBG7fSWGLD4CUnayrU | L2 M7yiFV8xGfVMM1RKDQebb4 | L3 4q3zF6YdSAEbJW21ArCMF
 L6 72QFCVitzrebZbPhUbBoeG | L7 FUuPskuuqaDx2ZVzpt5u5u | L8 8kbz6bXBusNwpuycR9RfZk | L9 Y2Kq6m6QNo8pDoGYjjMm7L | L10 8mvbEm2VpKRXG7phVgMjfQ
 ## Status 2026-10-23: all 60 decks (P1-P6, L1-L10 each) republished in place from split/ with the current slides, time pills, budgets and notes. Still private. split/l6s (60-minute trial deck) not republished.
 
-## Update 2026-10-23: Mi the dolphin added to the L1-L3 holiday decks (split/l1-l10, p2l1-p2l10, p3l1-p3l10); URLs unchanged, still private. See docs/audit/mi_in_decks_L1_3.md. P4-P6 not yet.
+## Update 2026-10-23: Mi the dolphin added to the L1-L3 holiday decks (split/l1-l10, p2l1-p2l10, p3l1-p3l10); URLs unchanged, still private. See docs/audit/mi_in_decks_L1_3.md. P4-P6: see next line.
+
+## Update 2026-10-23: Mi the dolphin added to the L4-L6 holiday decks (split/p4l1-p6l10); URLs unchanged, still private. See docs/audit/mi_in_decks_L4_6.md.
