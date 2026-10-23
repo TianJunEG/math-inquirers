@@ -543,7 +543,7 @@ PASS  S1: school name printed on all 20 page footers
 PASS  S1: every pupil page shows its code in the footer, for example S1-07 (P1-08)  []
 PASS  P1_S2_Puzzles.pdf has 20 pages  20
 PASS  P1_S2_Puzzles.pdf fonts all embedded  8 fonts
-PASS  P1_S2_Puzzles.pdf size < 20 MB  0.57 MB
+PASS  P1_S2_Puzzles.pdf size < 20 MB  0.48 MB
 PASS  P1_S2_Puzzles.pdf A4 page size  
 PASS  P1_S2_FrontMatter.pdf has 5 pages  5
 PASS  P1_S2_FrontMatter.pdf fonts all embedded  5 fonts
@@ -551,7 +551,7 @@ PASS  P1_S2_FrontMatter.pdf size < 20 MB  0.06 MB
 PASS  P1_S2_FrontMatter.pdf A4 page size  
 PASS  P1_S2_Complete_Pack.pdf has 25 pages  25
 PASS  P1_S2_Complete_Pack.pdf fonts all embedded  13 fonts
-PASS  P1_S2_Complete_Pack.pdf size < 20 MB  0.63 MB
+PASS  P1_S2_Complete_Pack.pdf size < 20 MB  0.54 MB
 PASS  P1_S2_Complete_Pack.pdf A4 page size  
 PASS  P1_S2_Answer_Key.pdf has 9 pages  9
 PASS  P1_S2_Answer_Key.pdf fonts all embedded  6 fonts
@@ -656,7 +656,7 @@ PASS  S1 front page 02 min text size >= 8 pt  12.0 pt
 PASS  S1 front page 03 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 03 min text size >= 8 pt  11.0 pt
 PASS  S1 front page 04 layout (no overflow/clipping/margin breach)  
-PASS  S1 front page 04 min text size >= 8 pt  11.0 pt
+PASS  S1 front page 04 min text size >= 8 pt  8.5 pt
 PASS  S1 front page 05 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 05 min text size >= 8 pt  8.0 pt
 PASS  S1 key page 01 layout (no overflow/clipping/margin breach)  
@@ -707,10 +707,10 @@ PASS  S2 pupil page 09 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 09 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S2 pupil page 09 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 10 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 10 page-fill: puzzle content 173 of 183 mm  0.94
+PASS  S2 pupil page 10 page-fill: puzzle content 171 of 183 mm  0.93
 PASS  S2 pupil page 10 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 11 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 11 page-fill: puzzle content 158 of 183 mm  0.86
+PASS  S2 pupil page 11 page-fill: puzzle content 156 of 183 mm  0.85
 PASS  S2 pupil page 11 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 12 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 12 page-fill: puzzle content 174 of 183 mm  0.95
@@ -746,7 +746,7 @@ PASS  S2 front page 02 min text size >= 8 pt  12.0 pt
 PASS  S2 front page 03 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 03 min text size >= 8 pt  11.0 pt
 PASS  S2 front page 04 layout (no overflow/clipping/margin breach)  
-PASS  S2 front page 04 min text size >= 8 pt  11.0 pt
+PASS  S2 front page 04 min text size >= 8 pt  8.5 pt
 PASS  S2 front page 05 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 05 min text size >= 8 pt  8.0 pt
 PASS  S2 key page 01 layout (no overflow/clipping/margin breach)  
@@ -778,8 +778,8 @@ PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 134, limit 
 PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.92% vs greyscale)  10 pages
 PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 596, limit 90 per page)  
 PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.06% vs greyscale)  20 pages
-PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 176, limit 40 per page)  
-PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.03% vs greyscale)  5 pages
+PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 175, limit 40 per page)  
+PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.07% vs greyscale)  5 pages
 PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 133, limit 40 per page)  
 PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.67% vs greyscale)  9 pages
 PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 708, limit 90 per page)  

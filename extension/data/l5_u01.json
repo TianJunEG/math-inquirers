@@ -110,12 +110,12 @@
    "parts": [
     {
      "label": "a",
-     "text": "Write the number: 6 million, 205 thousand and 30. {l}",
+     "text": "Write the number: 9 million, 40 thousand and 7. {l}",
      "answer": {
       "value": [
-       "6205030"
+       "9040007"
       ],
-      "text": "6 205 030"
+      "text": "9 040 007"
      }
     },
     {
@@ -130,16 +130,16 @@
     },
     {
      "label": "c",
-     "text": "How many thousands make 8 604 000? {b} thousands",
+     "text": "How many hundreds make 5 300 000? {bw} hundreds",
      "answer": {
       "value": [
-       "8604"
+       "53000"
       ],
-      "text": "8604"
+      "text": "53 000"
      }
     }
    ],
-   "explanation": "(a) 6 million, 205 thousand, 30: the hundreds place is empty, so 6 205 030. (b) The 7 is in the ten thousands place: 70 000. (c) 8 604 000 ÷ 1000 = 8604."
+   "explanation": "(a) 9 million, 040 thousand, 007: 9 040 007. (b) The 7 is in the ten thousands place: 70 000. (c) 5 300 000 ÷ 100 = 53 000."
   },
   {
    "id": "L5U01-S02",
@@ -244,7 +244,7 @@
    "id": "L5U01-S05",
    "tier": "start",
    "page": 1,
-   "text": "Ben has the number below. He adds 2 hundred-thousands. Then he takes away 5 ten-thousands. What is Ben's new number?",
+   "text": "Mei has the number below. She adds 3 hundred-thousands. Then she takes away 6 ten-thousands. What is Mei's new number?",
    "figure": {
     "type": "l5_table",
     "cols": [
@@ -258,13 +258,13 @@
     ],
     "rows": [
      [
-      6,
-      4,
-      8,
-      2,
+      5,
+      7,
       3,
       1,
-      5
+      9,
+      4,
+      6
      ]
     ],
     "width_mm": 100,
@@ -277,19 +277,19 @@
      "text": "{l}",
      "answer": {
       "value": [
-       "6632315"
+       "5971946"
       ],
-      "text": "6 632 315"
+      "text": "5 971 946"
      }
     }
    ],
-   "explanation": "6 482 315 + 200 000 = 6 682 315. Then 6 682 315 - 50 000 = 6 632 315."
+   "explanation": "3 hundred thousands is 300 000, and 6 ten thousands is 60 000. 5 731 946 + 300 000 = 6 031 946. Then 6 031 946 - 60 000 = 5 971 946."
   },
   {
    "id": "L5U01-S06",
    "tier": "start",
    "page": 2,
-   "text": "Estimate each answer by rounding. Circle one choice for each.",
+   "text": "Round each number to 1 digit to check. Circle one choice for each.",
    "parts": [
     {
      "label": "a",
@@ -338,7 +338,7 @@
    "id": "L5U01-S07",
    "tier": "start",
    "page": 2,
-   "text": "Put ONE pair of brackets in each line to make it true. Write the new line.",
+   "text": "Add ONE pair of brackets to each line to make it true. Write the new line.",
    "parts": [
     {
      "label": "a",
@@ -576,7 +576,7 @@
      }
     }
    ],
-   "explanation": "Clue 2: from 465 000 to 474 999. Clue 3 gives 472. Clue 5: ones 0. Clue 4: tens 3 and hundreds 6 (the pairs 1 and 2, or 4 and 8, repeat a digit). So 472 630."
+   "explanation": "Clue 2: 465 000 to 474 999. Clue 3: thousands digit 2, so 472 (462 is too low). Clue 5: ones 0. Clue 4: tens and hundreds are 3 and 6 (1 and 2 or 4 and 8 repeat a digit). So 472 630."
   },
   {
    "id": "L5U01-S13",
@@ -595,7 +595,7 @@
    "id": "L5U01-S14",
    "tier": "start",
    "page": 3,
-   "text": "Circle every number that rounds to 5 000 000 when rounded to the nearest million.\n{circ:4 499 999|4 500 000|5 499 999|5 500 000}",
+   "text": "Which of these round to 5 000 000 to the nearest million? Circle them.\n{circ:4 499 999|4 500 000|5 499 999|5 500 000}",
    "answer": {
     "value": [
      "4500000",
@@ -864,7 +864,7 @@
    "id": "L5U01-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Put ONE pair of brackets in 8 + 12 ÷ 4 × 2 = 10 to make it true. Write the new line. {ll}",
+   "text": "Add ONE pair of brackets to 8 + 12 ÷ 4 × 2 = 10 to make it true. Write the new line. {ll}",
    "answer": {
     "value": [
      "(8 + 12) ÷ 4 × 2"

@@ -762,7 +762,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both. T5: draw the beads she gave away and the beads she kept, then put them together."
+            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both. T5: draw the plums he gave away and the plums he kept, then put them together."
           },
           {
             "k": "STUCK",
@@ -2138,24 +2138,24 @@
         "id": "T5",
         "page": 3,
         "tier": "think",
-        "text": "Mei had some beads. She gave away 23 beads. Now Mei has 45 beads. How many beads did Mei have at first?",
+        "text": "Kumar had some plums. He gave away 23 plums. Now Kumar has 45 plums. How many plums did Kumar have at first?",
         "parts": [
           {
             "l": "",
-            "text": "Mei had ___ beads at first.",
+            "text": "Kumar had ___ plums at first.",
             "ans": "68",
             "val": 68
           }
         ],
-        "answer": "68 beads (45 + 23 = 68)",
+        "answer": "68 plums (45 + 23 = 68)",
         "val": [
           68
         ],
-        "hint": "Mei gave 23 beads away and still has 45. Draw the beads she gave away next to the beads she kept. Put them together.",
-        "solution": "Mei gave away 23 beads and has 45 left. The beads she gave away and the beads she kept were all her beads at first. 45 + 23 = 68. Check: 68 take away 23 is 45.",
+        "hint": "Kumar gave 23 plums away and still has 45. Draw the plums he gave away next to the plums he kept. Put them together.",
+        "solution": "Kumar gave away 23 plums and has 45 left. The plums he gave away and the plums he kept were all his plums at first. 45 + 23 = 68. Check: 68 take away 23 is 45.",
         "mistakes": [
           "Taking away: writing 45 - 23 = 22.",
-          "Writing 45 (the beads she has now).",
+          "Writing 45 (the plums he has now).",
           "Adding the tens and ones wrongly (45 + 23 = 58 or 78)."
         ],
         "mins": 4,

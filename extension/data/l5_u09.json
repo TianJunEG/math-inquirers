@@ -8,13 +8,12 @@
  "holiday_lesson": 9,
  "goal": "I can find the rule of a growing pattern and say it in words. I can use the rule for a far figure and backwards.",
  "learn": {
-  "intro": "Look at what stays the same and what grows each time. Make a table. Say the rule in words. Use the rule for any figure, and backwards from a total.",
+  "intro": "Find what grows each time. Make a table. Say the rule in words. Use it for any figure, and backwards.",
   "example": {
    "problem": "Tiles make a plus sign. Figure 1 has 5 tiles and figure 2 has 9 tiles. Figure 3 has arms of 3 tiles. How many tiles are in figure 10? Which figure has 81 tiles?",
    "steps": [
-    "Each figure has 4 arms and 1 middle tile. In figure n each arm has n tiles.",
-    "Rule: tiles = 4 × figure number + 1.",
-    "Figure 10: 4 × 10 + 1 = 41 tiles.",
+    "Each figure has 4 arms and 1 middle tile. In figure 3 each arm has 3 tiles.",
+    "Rule: tiles = 4 × figure number + 1. Figure 10: 4 × 10 + 1 = 41 tiles.",
     "Backwards: 81 - 1 = 80, and 80 ÷ 4 = 20. Figure 20 has 81 tiles."
    ],
    "answer": "Figure 10 has 41 tiles. Figure 20 has 81 tiles.",
@@ -96,6 +95,14 @@
     "Count the figures. Make a table.",
     "See what each new figure adds, and why.",
     "Say the rule in words. Use it forwards and backwards."
+   ]
+  },
+  "facts": {
+   "title": "Two kinds of thing",
+   "lines": [
+    "Suppose all are the cheaper kind.",
+    "Find how far short the total is.",
+    "Divide by the price difference."
    ]
   },
   "tight": true,
@@ -406,16 +413,16 @@
     },
     {
      "label": "b",
-     "text": "20 hexagons need {b} sticks.",
+     "text": "35 hexagons need {b} sticks.",
      "answer": {
       "value": [
-       "101"
+       "176"
       ],
-      "text": "101"
+      "text": "176"
      }
     }
    ],
-   "explanation": "(a) 6 = 5 + 1 and each hexagon adds 5. (b) 5 × 20 + 1 = 101 (not double 51)."
+   "explanation": "(a) 6 = 5 + 1 and each hexagon adds 5. (b) 5 × 35 + 1 = 176."
   },
   {
    "id": "L5U09-S03",
@@ -501,7 +508,7 @@
    "id": "L5U09-S05",
    "tier": "start",
    "page": 2,
-   "text": "Tiles make a plus sign. Figure n has a middle tile and 4 arms of n tiles each.",
+   "text": "Tiles make U shapes. The bottom row of figure 1 has 3 tiles and a tile above each end. Each new figure has a bottom row 1 tile longer. Its two sides are 1 tile taller.",
    "figure": {
     "type": "l5_pat",
     "mm": 8,
@@ -509,69 +516,65 @@
      {
       "cells": [
        [
+        0,
+        0
+       ],
+       [
         1,
-        1
+        0
        ],
        [
         2,
-        1
+        0
        ],
        [
         0,
         1
        ],
        [
-        1,
-        2
-       ],
-       [
-        1,
-        0
+        2,
+        1
        ]
       ]
      },
      {
       "cells": [
        [
-        2,
-        2
-       ],
-       [
-        3,
-        2
+        0,
+        0
        ],
        [
         1,
-        2
+        0
        ],
        [
         2,
-        3
+        0
        ],
        [
-        2,
+        3,
+        0
+       ],
+       [
+        0,
         1
        ],
        [
-        4,
-        2
+        3,
+        1
        ],
        [
         0,
         2
        ],
        [
-        2,
-        4
-       ],
-       [
-        2,
-        0
+        3,
+        2
        ]
       ]
      }
     ],
-    "alt": "plus patterns"
+    "alt": "U shapes of tiles"
    },
    "parts": [
     {
@@ -579,9 +582,9 @@
      "text": "Figure 4 has {b} tiles.",
      "answer": {
       "value": [
-       "17"
+       "14"
       ],
-      "text": "17"
+      "text": "14"
      }
     },
     {
@@ -589,60 +592,60 @@
      "text": "Figure 15 has {b} tiles.",
      "answer": {
       "value": [
-       "61"
+       "47"
       ],
-      "text": "61"
+      "text": "47"
      }
     },
     {
      "label": "c",
-     "text": "tiles = {b} × figure number + {b}",
+     "text": "tiles = {b} × figure + {b}",
      "answer": {
       "value": [
-       "4",
-       "1"
+       "3",
+       "2"
       ],
-      "text": "4, 1"
+      "text": "3, 2"
      }
     },
     {
      "label": "d",
-     "text": "The figure with 81 tiles is figure {b}.",
+     "text": "Figure {b} has 98 tiles.",
      "answer": {
       "value": [
-       "20"
+       "32"
       ],
-      "text": "20"
+      "text": "32"
      }
     }
    ],
-   "explanation": "Each figure has 4 arms of n tiles and 1 middle tile. (a) 4 × 4 + 1 = 17. (b) 4 × 15 + 1 = 61. (c) The rule is tiles = 4 × figure number + 1. (d) 81 - 1 = 80, and 80 ÷ 4 = 20.",
+   "explanation": "Figure 1 has 5 tiles, figure 2 has 8: each figure adds 3. (a) 3 × 4 + 2 = 14. (b) 3 × 15 + 2 = 47. (c) 3 and 2. (d) 96 ÷ 3 = 32.",
    "figside": true
   },
   {
    "id": "L5U09-S06",
    "tier": "start",
    "page": 2,
-   "text": "Adult tickets cost $9 each. Child tickets cost $5 each. A group buys 15 tickets and pays $107 altogether. Make a table to guess and check.",
+   "text": "Small badges cost $3 each and large badges cost $7 each. Dev buys 18 badges and pays $82 altogether.",
    "parts": [
     {
      "label": "a",
-     "text": "Adult tickets: {b}",
-     "answer": {
-      "value": [
-       "8"
-      ],
-      "text": "8"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Child tickets: {b}",
+     "text": "Large badges: {b}",
      "answer": {
       "value": [
        "7"
       ],
       "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Small badges: {b}",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
      }
     }
    ],
@@ -651,7 +654,7 @@
      "Working:"
     ]
    },
-   "explanation": "Try 10 adults and 5 children: $90 + $25 = $115, too much. Try 8 adults and 7 children: $72 + $35 = $107. Right."
+   "explanation": "All small: 18 × $3 = $54, which is $28 short. Each large badge adds $4. 28 ÷ 4 = 7 large, so 11 small."
   },
   {
    "id": "L5U09-S07",
@@ -1029,28 +1032,27 @@
    "id": "L5U09-T01",
    "tier": "think",
    "page": 4,
-   "text": "A purse has 24 coins. Some are 20¢ coins and the rest are 50¢ coins. The coins are worth $9.60 altogether. How many 50¢ coins are there? {b}",
+   "text": "A tin has 24 coins. Some are 10¢ coins and the rest are $1 coins. The coins are worth $7.80 altogether. How many $1 coins are there? {b}",
    "answer": {
     "value": [
-     "16"
+     "6"
     ],
-    "text": "16 coins"
+    "text": "6 coins"
    },
    "space": {
     "rows": [
      "Working:",
-     "",
      ""
     ]
    },
-   "hint": "Suppose all are 20¢ coins. How many cents short is that?",
-   "explanation": "All 20¢ coins: $4.80, which is $4.80 short. Each 50¢ coin adds 30¢. $4.80 ÷ 30¢ = 16 coins of 50¢."
+   "hint": "Suppose all are 10¢ coins. How many cents short is that?",
+   "explanation": "All 10¢: $2.40, which is $5.40 short. Each $1 coin adds 90¢. 540 ÷ 90 = 6 coins."
   },
   {
    "id": "L5U09-T02",
    "tier": "think",
    "page": 4,
-   "text": "Tiles make staircases. Figure 1 has 1 tile, figure 2 has 3 tiles, figure 3 has 6 tiles and figure 4 has 10 tiles.",
+   "text": "Tiles make double staircases. Figure 1 has 2 tiles, figure 2 has 6 tiles, figure 3 has 12 tiles and figure 4 has 20 tiles.",
    "figure": {
     "type": "l5_pat",
     "mm": 8,
@@ -1060,18 +1062,6 @@
        [
         0,
         0
-       ]
-      ]
-     },
-     {
-      "cells": [
-       [
-        0,
-        0
-       ],
-       [
-        1,
-        0
        ],
        [
         0,
@@ -1086,29 +1076,81 @@
         0
        ],
        [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
         1,
         0
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        0,
+        5
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
        ],
        [
         2,
         0
        ],
        [
-        0,
+        2,
         1
-       ],
-       [
-        1,
-        1
-       ],
-       [
-        0,
-        2
        ]
       ]
      }
     ],
-    "alt": "staircases of tiles"
+    "alt": "double staircases of tiles"
    },
    "parts": [
     {
@@ -1116,19 +1158,19 @@
      "text": "Figure 10 has {b} tiles.",
      "answer": {
       "value": [
-       "55"
+       "110"
       ],
-      "text": "55"
+      "text": "110"
      }
     },
     {
      "label": "b",
-     "text": "The figure with 105 tiles is figure {b}.",
+     "text": "The figure with 156 tiles is figure {b}.",
      "answer": {
       "value": [
-       "14"
+       "12"
       ],
-      "text": "14"
+      "text": "12"
      }
     }
    ],
@@ -1137,8 +1179,8 @@
      "Working:"
     ]
    },
-   "hint": "Figure n adds a column of n tiles. Two staircases make a rectangle.",
-   "explanation": "1 + 2 + ... + 10: two staircases make a 10 by 11 rectangle, so 55. (b) 14 × 15 ÷ 2 = 105.",
+   "hint": "Each figure adds a column 2 taller than the last. Use pairs.",
+   "explanation": "Figure 10 adds columns of 2, 4, ..., 20. Pairs make 22: 5 pairs = 110. (b) 12 × 13 = 156.",
    "figside": true
   },
   {
@@ -1303,20 +1345,20 @@
      ""
     ]
    },
-   "hint": "n people each shake n - 1 hands. Each handshake counts twice.",
-   "explanation": "(a) 5 × 4 ÷ 2 = 10. (b) 12 × 11 ÷ 2 = 66.",
+   "hint": "Count each person's handshakes. Each one is counted twice.",
+   "explanation": "(a) 5 people each shake 4 hands: 20, but every handshake is counted twice, so 10. (b) 12 × 11 ÷ 2 = 66.",
    "beyond": "Handshakes"
   },
   {
    "id": "L5U09-G03",
    "tier": "go",
    "page": 5,
-   "text": "A quiz has 30 questions. Each right answer scores 4 marks. A wrong answer loses 1 mark. A blank scores 0. Ali leaves 3 questions blank and scores 73 marks. How many questions does he get right? {b}",
+   "text": "A test has 25 questions. A right answer scores 6 marks. A wrong answer loses 2 marks. A blank scores 0. Dev leaves 5 blank and scores 64 marks. How many questions does he get right? {b}",
    "answer": {
     "value": [
-     "20"
+     "13"
     ],
-    "text": "20 right"
+    "text": "13 right"
    },
    "space": {
     "rows": [
@@ -1327,7 +1369,7 @@
     ]
    },
    "hint": "Only answered questions count. Suppose all of them are right.",
-   "explanation": "He answers 27. All right: 108. Each wrong costs 5: (108 - 73) ÷ 5 = 7 wrong. 27 - 7 = 20."
+   "explanation": "He answers 20. All right: 120. Each wrong answer costs 6 + 2 = 8. (120 - 64) ÷ 8 = 7 wrong, so 13 right."
   },
   {
    "id": "L5U09-C01",
@@ -1346,14 +1388,14 @@
    "id": "L5U09-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "The rule for a pattern is: dots = 3 × figure number + 2. Which figure has 41 dots? {b}",
+   "text": "The rule for a pattern is: dots = 4 × figure number + 3. Which figure has 51 dots? {b}",
    "answer": {
     "value": [
-     "13"
+     "12"
     ],
-    "text": "Figure 13"
+    "text": "Figure 12"
    },
-   "explanation": "41 - 2 = 39, and 39 ÷ 3 = 13."
+   "explanation": "51 - 3 = 48, and 48 ÷ 4 = 12."
   },
   {
    "id": "L5U09-C03",

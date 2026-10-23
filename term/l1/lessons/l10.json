@@ -2410,22 +2410,22 @@
         "id": "T5",
         "page": 3,
         "tier": "think",
-        "text": "Lily had some stamps. She gave 8 stamps to Ravi. Then her aunt gave her 5 stamps. Now Lily has 20 stamps. Go backwards from 20 to find how many stamps Lily had at first.",
+        "text": "Lily had some badges. She gave 8 badges to Ravi. Then her aunt gave her 5 badges. Now Lily has 20 badges. Go backwards from 20 to find how many badges Lily had at first.",
         "parts": [
           {
             "l": "a",
-            "text": "Before her aunt gave her 5 stamps, Lily had ___ stamps.",
+            "text": "Before her aunt gave her 5 badges, Lily had ___ badges.",
             "ans": "15",
             "val": 15
           },
           {
             "l": "b",
-            "text": "At first Lily had ___ stamps.",
+            "text": "At first Lily had ___ badges.",
             "ans": "23",
             "val": 23
           }
         ],
-        "answer": "15 stamps, then 23 stamps at first (20 - 5 = 15, 15 + 8 = 23)",
+        "answer": "15 badges, then 23 badges at first (20 - 5 = 15, 15 + 8 = 23)",
         "val": [
           15,
           23

@@ -47,6 +47,19 @@ def chairs_for_tables(n):
     return len(chairs)
 
 
+def u_tiles(n):
+    """U shape: bottom row of n + 2 tiles and a column of n tiles above each end."""
+    cells = {(c, 0) for c in range(n + 2)}
+    for r in range(1, n + 1):
+        cells |= {(0, r), (n + 1, r)}
+    return len(cells)
+
+
+def double_stair_tiles(n):
+    """Column k (k = 0..n-1) has 2 * (n - k) tiles."""
+    return sum(1 for c in range(n) for r in range(2 * (n - c)))
+
+
 def frame_tiles(n):
     m = n + 2
     return sum(1 for c in range(m) for r in range(m) if c in (0, m - 1) or r in (0, m - 1))
@@ -75,7 +88,7 @@ def _():
     # find (m, c) with sticks = m * n + c for all n from 1 to 30, by testing every pair
     sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(hexagon_sticks(n) == m * n + c for n in range(1, 31))]
     assert len(sol) == 1
-    return {'a': [str(sol[0][0]), str(sol[0][1])], 'b': [str(hexagon_sticks(20))]}
+    return {'a': [str(sol[0][0]), str(sol[0][1])], 'b': [str(hexagon_sticks(35))]}
 
 
 @check('L5U09-S03')
@@ -86,9 +99,10 @@ def _():
 
 @check('L5U09-S05')
 def _():
-    sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(plus_tiles(n) == m * n + c for n in range(1, 30))]
+    assert [u_tiles(k) for k in (1, 2, 3)] == [5, 8, 11]
+    sol = [(m, c) for m in range(0, 10) for c in range(0, 10) if all(u_tiles(n) == m * n + c for n in range(1, 30))]
     assert len(sol) == 1
-    return {'a': [str(plus_tiles(4))], 'b': [str(plus_tiles(15))], 'c': [str(sol[0][0]), str(sol[0][1])], 'd': [str(first_figure(plus_tiles, 81))]}
+    return {'a': [str(u_tiles(4))], 'b': [str(u_tiles(15))], 'c': [str(sol[0][0]), str(sol[0][1])], 'd': [str(first_figure(u_tiles, 98))]}
 
 
 @check('L5U09-S04')
@@ -108,7 +122,7 @@ def _():
 
 @check('L5U09-S06')
 def _():
-    sols = [(a, 15 - a) for a in range(0, 16) if 9 * a + 5 * (15 - a) == 107]
+    sols = [(a, 18 - a) for a in range(0, 19) if 7 * a + 3 * (18 - a) == 82]
     assert len(sols) == 1
     return {'a': [str(sols[0][0])], 'b': [str(sols[0][1])]}
 
@@ -150,14 +164,15 @@ def _():
 
 @check('L5U09-T01')
 def _():
-    sols = [k for k in range(0, 25) if 50 * k + 20 * (24 - k) == 960]
+    sols = [k for k in range(0, 25) if 100 * k + 10 * (24 - k) == 780]
     assert len(sols) == 1
     return [str(sols[0])]
 
 
 @check('L5U09-T02')
 def _():
-    return {'a': [str(stair_tiles(10))], 'b': [str(first_figure(stair_tiles, 105))]}
+    assert [double_stair_tiles(k) for k in (1, 2, 3, 4)] == [2, 6, 12, 20]
+    return {'a': [str(double_stair_tiles(10))], 'b': [str(first_figure(double_stair_tiles, 156))]}
 
 
 @check('L5U09-T03')
@@ -188,8 +203,8 @@ def _():
 
 @check('L5U09-G03')
 def _():
-    answered = 30 - 3
-    sols = [right for right in range(0, answered + 1) if 4 * right - (answered - right) == 73]
+    answered = 25 - 5
+    sols = [right for right in range(0, answered + 1) if 6 * right - 2 * (answered - right) == 64]
     assert len(sols) == 1
     return [str(sols[0])]
 
@@ -204,7 +219,7 @@ def _():
 
 @check('L5U09-C02')
 def _():
-    return [str(next(n for n in range(1, 500) if 3 * n + 2 == 41))]
+    return [str(next(n for n in range(1, 500) if 4 * n + 3 == 51))]
 
 
 @check('L5U09-C03')

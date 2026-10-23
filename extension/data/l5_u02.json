@@ -79,7 +79,8 @@
    "lines": [
     "a ÷ b = a/b. For example, 3 ÷ 4 = 3/4.",
     "A unit fraction has 1 on top, such as 1/5.",
-    "To add or subtract, use the same bottom number."
+    "To add or subtract, use the same bottom number.",
+    "A fraction of a fraction: multiply the tops and the bottoms."
    ]
   },
   "try": {
@@ -103,12 +104,12 @@
    "parts": [
     {
      "label": "a",
-     "text": "7 pizzas are shared equally among 10 children. Each child gets {b} of a pizza.",
+     "text": "5 litres of juice fill 6 equal bottles. Each bottle holds {b} litre.",
      "answer": {
       "value": [
-       "7/10"
+       "5/6"
       ],
-      "text": "7/10"
+      "text": "5/6"
      }
     },
     {
@@ -123,7 +124,7 @@
     },
     {
      "label": "c",
-     "text": "9 ÷ 4 = {b}  (write a mixed number)",
+     "text": "9 ÷ 4 = {bw}  (write a mixed number)",
      "answer": {
       "value": [
        "2 1/4"
@@ -132,7 +133,7 @@
      }
     }
    ],
-   "explanation": "a ÷ b = a/b. (a) 7/10. (b) 3/8. (c) 9 ÷ 4 = 2 and 1/4."
+   "explanation": "a ÷ b = a/b. (a) 5/6. (b) 3/8. (c) 9 ÷ 4 = 2 and 1/4."
   },
   {
    "id": "L5U02-S02",
@@ -311,7 +312,7 @@
    "id": "L5U02-S05",
    "tier": "start",
    "page": 2,
-   "text": "Ravi walks 3/4 km each day. He does this for 6 days. How far does he walk in all? Write a mixed number. {b} km",
+   "text": "Ravi walks 3/4 km each day. He does this for 6 days. How far does he walk in all? Write a mixed number. {bw} km",
    "answer": {
     "value": [
      "4 1/2"
@@ -324,20 +325,20 @@
    "id": "L5U02-S06",
    "tier": "start",
    "page": 2,
-   "text": "Sam has 72 cards. He gives 1/3 of them to Mei. Then he gives 3/4 of the cards that are left to Ben. How many cards does Sam have now? {b}",
+   "text": "Sam has 72 cards. He gives 3/8 of them to Mei. Then he gives 2/3 of the cards that are left to Ben. How many cards does Sam have now? {b}",
    "answer": {
     "value": [
-     "12"
+     "15"
     ],
-    "text": "12 cards"
+    "text": "15 cards"
    },
-   "explanation": "1/3 of 72 = 24, so 72 - 24 = 48 are left. 3/4 of 48 = 36 go to Ben. 48 - 36 = 12."
+   "explanation": "3/8 of 72 = 27, so 72 - 27 = 45 are left. 2/3 of 45 = 30 go to Ben. 45 - 30 = 15."
   },
   {
    "id": "L5U02-S07",
    "tier": "start",
    "page": 2,
-   "text": "Write 7/12 as a sum of 2 different unit fractions. A unit fraction has 1 on top.\nTake away 1/3 first: 7/12 - 1/3 = {b}. So 7/12 = 1/3 + {b}.",
+   "text": "Write 7/12 as a sum of 2 different unit fractions. A unit fraction has 1 on top.\nTake away 1/3 first: 7/12 - 1/3 = {b} (simplest form). So 7/12 = 1/3 + {b}.",
    "answer": {
     "value": [
      "1/4",
@@ -385,7 +386,7 @@
      }
     }
    ],
-   "explanation": "The top is the position and the bottom is 2n + 1. (a) 5/11 and 6/13. (b) 10/21. (c) 13/27: 2 × 13 + 1 = 27, so the 13th."
+   "explanation": "The top is the position and the bottom is 2 × position + 1. (a) 5/11 and 6/13. (b) 10/21. (c) 13/27: 2 × 13 + 1 = 27."
   },
   {
    "id": "L5U02-S09",
@@ -404,7 +405,7 @@
    "id": "L5U02-S10",
    "tier": "start",
    "page": 2,
-   "text": "Mark Mei's points A and B on the number line. Write each as a mixed number.",
+   "text": "Read the points A and B on the number line. Write each as a mixed number.",
    "figure": {
     "type": "l5_numline",
     "min": 0,
@@ -463,7 +464,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "A = {b}",
+     "text": "A = {bw}",
      "answer": {
       "value": [
        "1 1/4"
@@ -473,7 +474,7 @@
     },
     {
      "label": "b",
-     "text": "B = {b}",
+     "text": "B = {bw}",
      "answer": {
       "value": [
        "1 3/4"
@@ -512,7 +513,7 @@
     },
     {
      "label": "c",
-     "text": "4/9 × 3 = {b}  (mixed number)",
+     "text": "4/9 × 3 = {bw}  (mixed number)",
      "answer": {
       "value": [
        "1 1/3"
@@ -527,24 +528,15 @@
    "id": "L5U02-S12",
    "tier": "start",
    "page": 3,
-   "text": "Mei buys a book with 1/3 of her money. Then she pays 1/2 of the rest for lunch. She has $18 left. Use the model.",
+   "text": "Mei buys a book with 1/3 of her money. Then she pays 1/2 of the rest for lunch. She has $18 left. Cut the bar to show each step.",
    "figure": {
     "type": "l5_bars",
     "rows": [
      {
       "cells": [
        {
-        "n": 1,
-        "text": "book",
-        "shade": true
-       },
-       {
-        "n": 1,
-        "text": "lunch"
-       },
-       {
-        "n": 1,
-        "text": "left"
+        "n": 3,
+        "text": "Mei's money"
        }
       ],
       "brace": {
@@ -555,7 +547,7 @@
      }
     ],
     "width_mm": 100,
-    "alt": "bar of 3 equal parts"
+    "alt": "bar for the money, not yet cut"
    },
    "parts": [
     {
@@ -647,7 +639,7 @@
    "id": "L5U02-T01",
    "tier": "think",
    "page": 4,
-   "text": "Write 2/5 as the sum of 2 different unit fractions. Try 1/3 first, then 1/4, then 1/5. Stop when the first fraction is less than half of 2/5.",
+   "text": "Write 2/5 as the sum of 2 different unit fractions. Test each unit fraction that is less than 2/5 but greater than 1/5.",
    "parts": [
     {
      "label": "",
@@ -670,7 +662,7 @@
     ]
    },
    "hint": "Take away a unit fraction. Is what is left a unit fraction?",
-   "explanation": "2/5 - 1/3 = 1/15, so 2/5 = 1/3 + 1/15. 2/5 - 1/4 = 3/20 is not a unit fraction. 1/5 is half of 2/5, so stop. Only this way."
+   "explanation": "2/5 - 1/3 = 1/15: a unit fraction. 2/5 - 1/4 = 3/20: no. No other unit fraction is between 1/5 and 2/5, so 1/3 + 1/15."
   },
   {
    "id": "L5U02-T02",
@@ -711,7 +703,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The greatest sum is {b}",
+     "text": "The greatest sum is {bw} (mixed number)",
      "answer": {
       "value": [
        "5 1/6"
@@ -721,7 +713,7 @@
     },
     {
      "label": "b",
-     "text": "The smallest sum is {b}",
+     "text": "The smallest sum is {bw}",
      "answer": {
       "value": [
        "29/35"
@@ -799,12 +791,12 @@
     },
     {
      "label": "b",
-     "text": "The first bounce that is under half the first height is bounce {b}.",
+     "text": "The 3rd bounce is {b} cm lower than the 1st bounce.",
      "answer": {
       "value": [
-       "3"
+       "21"
       ],
-      "text": "3"
+      "text": "21"
      }
     }
    ],
@@ -814,7 +806,7 @@
     ]
    },
    "hint": "After 3 bounces the height is 3/4 of 3/4 of 3/4 of the start.",
-   "explanation": "Work backwards: 27 ÷ 3/4 = 36, 36 ÷ 3/4 = 48, 48 ÷ 3/4 = 64. Heights 64, 48, 36, 27. Half of 64 is 32, so 27 is the first under it: bounce 3."
+   "explanation": "Work backwards: 27 ÷ 3/4 = 36, 36 ÷ 3/4 = 48, 48 ÷ 3/4 = 64. Heights 64, 48, 36, 27. (b) 48 - 27 = 21."
   },
   {
    "id": "L5U02-G04",
@@ -840,21 +832,21 @@
    "id": "L5U02-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "5 pizzas are shared equally among 6 children. Write the answers as fractions.",
+   "text": "4 loaves are shared equally among 9 children. Write the answers as fractions.",
    "parts": [
     {
      "label": "a",
-     "text": "Each child gets {b} of a pizza.",
+     "text": "Each child gets {b} of a loaf.",
      "answer": {
       "value": [
-       "5/6"
+       "4/9"
       ],
-      "text": "5/6"
+      "text": "4/9"
      }
     },
     {
      "label": "b",
-     "text": "7 ÷ 3 = {b}  (mixed number)",
+     "text": "7 ÷ 3 = {bw}  (mixed number)",
      "answer": {
       "value": [
        "2 1/3"
@@ -863,7 +855,10 @@
      }
     }
    ],
-   "explanation": "(a) 5 ÷ 6 = 5/6. (b) 7 ÷ 3: 3 goes into 7 two times with 1 left, so 2 and 1/3.",
+   "space": {
+    "rows": []
+   },
+   "explanation": "(a) 4 ÷ 9 = 4/9. (b) 7 ÷ 3: 3 goes into 7 two times with 1 left, so 2 and 1/3.",
    "partsrow": true
   },
   {

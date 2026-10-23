@@ -35,7 +35,7 @@ def _():
 
 @check('L5U02-S01')
 def _():
-    return {'a': [fmt(share(7, 10))], 'b': [fmt(share(3, 8))], 'c': [fmt(share(9, 4))]}
+    return {'a': [fmt(share(5, 6))], 'b': [fmt(share(3, 8))], 'c': [fmt(share(9, 4))]}
 
 
 @check('L5U02-S02')
@@ -68,8 +68,8 @@ def _():
 @check('L5U02-S06')
 def _():
     cards = 72
-    cards -= cards // 3
-    cards -= cards * 3 // 4
+    cards -= cards * 3 // 8
+    cards -= cards * 2 // 3
     return [str(cards)]
 
 
@@ -168,8 +168,7 @@ def _():
             h = h * Fr(3, 4)
             heights.append(h)
         if h == 27:
-            first_under = next(i for i, x in enumerate(heights) if x < Fr(start, 2))
-            return {'a': [str(start)], 'b': [str(first_under)]}
+            return {'a': [str(start)], 'b': [str(int(heights[1] - heights[3]))]}
 
 
 @check('L5U02-G04')
@@ -179,7 +178,7 @@ def _():
 
 @check('L5U02-C01')
 def _():
-    return {'a': [fmt(share(5, 6))], 'b': [fmt(share(7, 3))]}
+    return {'a': [fmt(share(4, 9))], 'b': [fmt(share(7, 3))]}
 
 
 @check('L5U02-C02')
