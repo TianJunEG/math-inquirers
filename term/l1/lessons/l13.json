@@ -2748,7 +2748,24 @@
    "text": "Each shape is a number. The star + the star = 8. Find the number for the star. ___",
    "answer": "4",
    "val": 4,
-   "solution": "4 + 4 = 8, so the star is 4."
+   "solution": "4 + 4 = 8, so the star is 4.",
+   "visual": {
+    "type": "picture_equation",
+    "rows": [
+     {
+      "items": [
+       {
+        "sym": "star",
+        "n": 2
+       }
+      ],
+      "op": "+",
+      "total": "8"
+     }
+    ],
+    "sym": 80,
+    "hw": 40
+   }
   },
   {
    "id": "H2",
@@ -2772,7 +2789,42 @@
    "text": "Line 1: the circle + the circle + the triangle = 15. Line 2: the circle + the triangle = 9. Find the number for the triangle. ___",
    "answer": "3",
    "val": 3,
-   "solution": "Line 1 has one more circle than line 2, and 15 - 9 = 6, so the circle is 6. Then 6 + triangle = 9, so the triangle is 3."
+   "solution": "Line 1 has one more circle than line 2, and 15 - 9 = 6, so the circle is 6. Then 6 + triangle = 9, so the triangle is 3.",
+   "visual": {
+    "type": "picture_equation",
+    "rows": [
+     {
+      "items": [
+       {
+        "sym": "circle",
+        "n": 2
+       },
+       {
+        "sym": "triangle",
+        "n": 1
+       }
+      ],
+      "op": "+",
+      "total": "15"
+     },
+     {
+      "items": [
+       {
+        "sym": "circle",
+        "n": 1
+       },
+       {
+        "sym": "triangle",
+        "n": 1
+       }
+      ],
+      "op": "+",
+      "total": "9"
+     }
+    ],
+    "sym": 80,
+    "hw": 54
+   }
   },
   {
    "id": "H5",

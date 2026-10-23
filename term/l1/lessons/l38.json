@@ -2584,7 +2584,25 @@
    "text": "In a graph, each picture stands for 1 stamp. Kumar's row has 8 pictures and Aisha's row has 5 pictures. How many stamps do they have altogether? They have ___ stamps.",
    "answer": "13",
    "val": 13,
-   "solution": "8 and 5 make 13 stamps."
+   "solution": "8 and 5 make 13 stamps.",
+   "visual": {
+    "type": "picture_graph",
+    "rows": [
+     {
+      "label": "Kumar",
+      "n": 8,
+      "icon": "stamp"
+     },
+     {
+      "label": "Aisha",
+      "n": 5,
+      "icon": "stamp"
+     }
+    ],
+    "icon": "counter",
+    "key": false,
+    "hw": 62
+   }
   },
   {
    "id": "H2",

@@ -2303,7 +2303,21 @@
    "text": "A line starts at the 4 mark and ends at the 15 mark. How long is the line? Write: I know because ...",
    "answer": "11 cm (15 take away 4)",
    "val": 11,
-   "solution": "Count the jumps from 4 to 15: 11 jumps. Or take 4 from 15, which is 11. It is not 15 cm, because the line starts at the 4 mark."
+   "solution": "Count the jumps from 4 to 15: 11 jumps. Or take 4 from 15, which is 11. It is not 15 cm, because the line starts at the 4 mark.",
+   "visual": {
+    "type": "ruler",
+    "start": 3,
+    "end": 16,
+    "objects": [
+     {
+      "label": "line",
+      "from": 4,
+      "to": 15,
+      "color": "#FFC93C"
+     }
+    ],
+    "hw": 72
+   }
   },
   {
    "id": "H5",

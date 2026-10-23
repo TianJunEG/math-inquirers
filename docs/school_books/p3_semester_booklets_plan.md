@@ -108,7 +108,7 @@ Mechanisms: K1 code word, K1 letters of the right choices (lettered choice), K1 
 | S2-16 | P3-36 | Draw the Lines | Perpendicular and Parallel Lines 2.2 | 2 | K1 the letter on the top edge where the drawn line ends spells a word (6 letters, 4 decoy letters on each edge) |
 | S2-17 | P3-37 | Bar Graph Detective | Bar Graphs 1.1 | 1 | K1 code word (6 letters) |
 | S2-18 | P3-38 | Different Scales | Bar Graphs 1.1, Bar Graphs 1.2 | 2 | K1 code word (6 letters) |
-| S2-19 | P3-39 | Colour the Sailboat | Length, Mass and Volume 1.2, Length, Mass and Volume 1.3 | 2 | CBC colour by code (tally and matching parts) |
+| S2-19 | P3-39 | Colour the House | Length, Mass and Volume 1.2, Length, Mass and Volume 1.3 | 2 | CBC colour by code (tally and matching parts) |
 | S2-20 | P3-40 | Colour the Butterfly | Money 1.1 | 2 | CBC colour by code (tally and matching parts) |
 
 Mechanism count over the 40 pages: 19 code-word pages (47.5%; P2 had 23 of 40), 8 lettered-choice pages, 3 ordering pages, 5 routes, 1 loop, 3 colour-by-code pages and 1 draw-and-read-off page (P3-36).

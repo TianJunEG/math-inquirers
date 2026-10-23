@@ -2500,7 +2500,13 @@
       "text": "Mei has 3 bundles of ten pencils and 8 single pencils. How many pencils does she have?",
       "answer": "38",
       "val": 38,
-      "solution": "3 tens is 30, and 8 more is 38."
+      "solution": "3 tens is 30, and 8 more is 38.",
+      "visual": {
+        "type": "bundles",
+        "tens": 3,
+        "ones": 8,
+        "hw": 36
+      }
     },
     {
       "id": "H2",

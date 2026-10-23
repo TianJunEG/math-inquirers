@@ -1937,7 +1937,33 @@
     4,
     9
    ],
-   "solution": "4 and 9 make 13. The other pairs make 9, 11, 12, 14 and 16."
+   "solution": "4 and 9 make 13. The other pairs make 9, 11, 12, 14 and 16.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$4",
+     "hw": 24
+    },
+    {
+     "type": "price_tag",
+     "item": "book",
+     "price": "$5",
+     "hw": 24
+    },
+    {
+     "type": "price_tag",
+     "item": "bag",
+     "price": "$7",
+     "hw": 24
+    },
+    {
+     "type": "price_tag",
+     "item": "hat",
+     "price": "$9",
+     "hw": 24
+    }
+   ]
   },
   {
    "id": "H3",

@@ -2864,7 +2864,13 @@
    "text": "Siti has $12. A toy costs $18. How much more money does Siti need? She needs $____ more.",
    "answer": "6",
    "val": 6,
-   "solution": "Count up from 12 to 18. That is 6 steps, so Siti needs $6 more."
+   "solution": "Count up from 12 to 18. That is 6 steps, so Siti needs $6 more.",
+   "visual": {
+    "type": "price_tag",
+    "item": "ball",
+    "price": "$18",
+    "hw": 28
+   }
   },
   {
    "id": "H2",
@@ -2872,7 +2878,21 @@
    "text": "Lily buys a pen for $4 and a book for $10. How much does she pay altogether? She pays $____ altogether.",
    "answer": "14",
    "val": 14,
-   "solution": "Altogether means add. 4 and 10 make 14."
+   "solution": "Altogether means add. 4 and 10 make 14.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$4",
+     "hw": 26
+    },
+    {
+     "type": "price_tag",
+     "item": "book",
+     "price": "$10",
+     "hw": 26
+    }
+   ]
   },
   {
    "id": "H3",

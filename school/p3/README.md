@@ -75,7 +75,7 @@ Outputs in `out/`: `P3_S1_Puzzles.pdf`, `P3_S2_Puzzles.pdf` (20 pages each, phot
 | S2-16 (P3-36) | Draw the Lines | 2 | K1 the letter on the top edge where the drawn line ends spells a word  |
 | S2-17 (P3-37) | Bar Graph Detective | 1 | K1 code word (6 letters) |
 | S2-18 (P3-38) | Different Scales | 2 | K1 code word (6 letters) |
-| S2-19 (P3-39) | Colour the Sailboat | 2 | CBC colour by code (tally and matching parts) |
+| S2-19 (P3-39) | Colour the House | 2 | CBC colour by code (tally and matching parts) |
 | S2-20 (P3-40) | Colour the Butterfly | 2 | CBC colour by code (tally and matching parts) |
 
 ## Rules every page keeps

@@ -2390,7 +2390,13 @@
         4,
         14
       ],
-      "solution": "Move 1 counter from the 5 to the 9. That makes 10, and 4 are left. 10 + 4 = 14."
+      "solution": "Move 1 counter from the 5 to the 9. That makes 10, and 4 are left. 10 + 4 = 14.",
+      "visual": {
+        "type": "ten_frame",
+        "filled": 9,
+        "extra": 5,
+        "hw": 36
+      }
     },
     {
       "id": "H2",

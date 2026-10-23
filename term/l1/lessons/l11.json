@@ -2565,7 +2565,13 @@
    "text": "Put 6 toys in a row. Put a coin on the 4th toy from the front. The coin is on the toy that is ___ from the back.",
    "answer": "3rd",
    "val": "3rd",
-   "solution": "From the front the coin is on the 4th toy. Count from the back: the last toy is 1st, then 2nd, then the coin toy is 3rd."
+   "solution": "From the front the coin is on the 4th toy. Count from the back: the last toy is 1st, then 2nd, then the coin toy is 3rd.",
+   "visual": {
+    "type": "line_up",
+    "n": 6,
+    "labels": "none",
+    "hw": 62
+   }
   },
   {
    "id": "H2",
@@ -2573,7 +2579,13 @@
    "text": "Kumar is 7th in the line. There are ___ children in front of Kumar.",
    "answer": "6 children",
    "val": 6,
-   "solution": "The children in front are the 1st to the 6th. That is 6 children. Kumar himself is the 7th."
+   "solution": "The children in front are the 1st to the 6th. That is 6 children. Kumar himself is the 7th.",
+   "visual": {
+    "type": "line_up",
+    "n": 8,
+    "labels": "none",
+    "hw": 62
+   }
   },
   {
    "id": "H3",

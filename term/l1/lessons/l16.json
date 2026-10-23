@@ -2519,7 +2519,13 @@
    "text": "A bundle has 10 straws. How many straws are in 3 bundles? 3 × 10 = [2]",
    "answer": "30",
    "val": 30,
-   "solution": "3 jumps of 10: 10, 20, 30."
+   "solution": "3 jumps of 10: 10, 20, 30.",
+   "visual": {
+    "type": "bundles",
+    "tens": 3,
+    "ones": 0,
+    "hw": 34
+   }
   },
   {
    "id": "H4",

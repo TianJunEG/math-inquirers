@@ -2455,7 +2455,15 @@
    "text": "A grid has 4 rows of 4 squares. How many squares are in the grid? There are ___ squares.",
    "answer": "16",
    "val": 16,
-   "solution": "Each row has 4 squares. 4 and 4 and 4 and 4 make 16."
+   "solution": "Each row has 4 squares. 4 and 4 and 4 and 4 make 16.",
+   "visual": {
+    "type": "grid",
+    "rows": 4,
+    "cols": 4,
+    "kind": "squares",
+    "cell": 50,
+    "hw": 34
+   }
   },
   {
    "id": "H2",

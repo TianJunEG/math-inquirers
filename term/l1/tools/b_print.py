@@ -41,7 +41,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
 .stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
-.keybox .a{font-weight:800;color:#1F7A6F}\n.qbox:has(.hvis){position:relative}.hvis{position:absolute;right:10px;top:2px;display:flex;gap:6px}.hvis .hv{width:25mm}.qbox:has(.hvis) .qt{display:block;margin-right:27mm}.hm.t2 .hv,.hm.t3 .hv{width:22mm}.hm.t3 .hvis:has(svg[aria-label*=clock]) .hv{width:31mm}.hm.t3 .qbox:has(svg[aria-label*=clock]) .qt{margin-right:34mm}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:16px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}
+.keybox .a{font-weight:800;color:#1F7A6F}\n.hvis{float:right;display:flex;gap:6px;margin:-2px 0 3px 8px}.hvis .hv{flex:none}.qbox:has(.hvis)::after{content:'';display:block;clear:both}.qbox:has(.hvis) .ln{margin-right:calc(var(--hw, 0mm) + 4mm)}.qbox:has(.hvis) .sub{margin-right:calc(var(--hw, 0mm) + 4mm)}.hm.t2 .hvis{zoom:.9}.hm.t3 .hvis{zoom:.8}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:16px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}
 """
 
 
@@ -225,10 +225,15 @@ def part_breaks(h):
 
 
 def home_vis(h):
-    """A home question may carry `visual` (one figure) or `visuals` (a row of small figures), drawn small under the question."""
+    """A home question may carry `visual` (one figure) or `visuals` (a row of small figures); each figure is 28 mm wide unless it sets `hw` (mm). The figures float at the right of the question text."""
     vs = ([h['visual']] if h.get('visual') else []) + list(h.get('visuals') or [])
     if not vs: return ''
-    return f'<div class="hvis" style="--n:{len(vs)}">' + ''.join(f'<div class="hv">{svg.render_visual({k: v for k, v in x.items() if k != "size"})}</div>' for x in vs) + '</div>'
+    return ''.join(f'<div class="hv" style="width:{x.get("hw", 28)}mm">{svg.render_visual({k: v for k, v in x.items() if k not in ("size", "hw")})}</div>' for x in vs)
+
+
+def home_w(h):
+    vs = ([h['visual']] if h.get('visual') else []) + list(h.get('visuals') or [])
+    return sum(x.get('hw', 28) for x in vs) + 2 * max(0, len(vs) - 1)
 
 
 def home_html(d, answers=False):
@@ -237,7 +242,8 @@ def home_html(d, answers=False):
     qs = ''
     for h in H:
         tag = {'start': 'Start here', 'think': 'Think harder', 'go': 'Go further'}[h['tier']]
-        qs += f'<div class="qbox"><div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}{(" \u2022 Practice from earlier: " + E(h["rewind_of"])) if h.get("rewind_of") else ""}</span><br>{part_breaks(blanks(h["text"]))}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + home_vis(h) + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
+        hv = home_vis(h)
+        qs += (f'<div class="qbox" style="--hw:{home_w(h)}mm">' if hv else '<div class="qbox">') + (f'<div class="hvis">{hv}</div>' if hv else '') + f'<div class="q"><span class="qn">{h["id"][1:]}</span><span class="qt"><span style="font-size:12px;color:#1F7A6F;font-weight:800">{tag}{(" \u2022 Practice from earlier: " + E(h["rewind_of"])) if h.get("rewind_of") else ""}</span><br>{part_breaks(blanks(h["text"]))}</span></div>' + (f'<div class="sub">{choice_html(choice_words(h["text"], h.get("choices")))}</div>' if choice_words(h["text"], h.get("choices")) else '') + '<div class="ln"></div>' * (2 if h['id'] == 'H5' else 1) + '</div>'
     ans = ''.join(f'<div class="keybox"><b>{h["id"][1:]}.</b> <span class="a">{E(h["answer"])}</span><div style="font-size:12.5px">{E(h["solution"])}</div></div>' for h in H)
     if answers:
         page = (f'<div class="page">{hdr(d, "Answers", d["title"] + ": home practice answers")}<p style="font-size:13px">For grown-ups. Please let your child try first, then check together. Ask <i>how do you know?</i> If your child is stuck, wait 10 seconds, then suggest drawing it.</p>{ans}'

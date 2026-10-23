@@ -2687,7 +2687,16 @@
     8,
     8
    ],
-   "solution": "4 bags with 2 sweets in each bag: 2 + 2 + 2 + 2 = 8."
+   "solution": "4 bags with 2 sweets in each bag: 2 + 2 + 2 + 2 = 8.",
+   "visual": {
+    "type": "groups",
+    "container": "bag",
+    "n": 4,
+    "each": 2,
+    "icon": "sweet",
+    "per_row": 4,
+    "hw": 58
+   }
   },
   {
    "id": "H2",
@@ -2707,7 +2716,16 @@
    "val": [
     13
    ],
-   "solution": "4 bags of 4 stickers is 16. 16 take away 3 is 13."
+   "solution": "4 bags of 4 stickers is 16. 16 take away 3 is 13.",
+   "visual": {
+    "type": "groups",
+    "container": "bag",
+    "n": 4,
+    "each": 4,
+    "icon": "sticker",
+    "per_row": 4,
+    "hw": 58
+   }
   },
   {
    "id": "H4",

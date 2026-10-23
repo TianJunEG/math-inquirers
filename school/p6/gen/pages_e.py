@@ -7,13 +7,13 @@ from .kit import *
 from .kit6 import *
 from . import angles as AN
 
-def ang_make(rng, spec):
+def ang_make(rng, spec, keepout=False):
     """spec = (family, params...) -> (svg html, caption, answer, mirrored)"""
     fam = spec[0]; args = spec[1:]
     fn = dict(iso_line=AN.iso_line, rhombus_diag=AN.rhombus_diag, rhombus_opp=AN.rhombus_opp, sq_tri=AN.sq_tri, para_iso=AN.para_iso, trapezium=AN.trapezium, tri_ext=AN.tri_ext)[fam]
     f, cap, ans = fn(*args)
     mirror = rng.random() < 0.5
-    return AN.render(f, mirror=mirror), cap, int(ans)
+    return AN.render(f, mirror=mirror, keepout=keepout), cap, int(ans)
 
 def rand_spec(rng, fam):
     if fam == "iso_line": return ("iso_line", rng.choice(range(24, 101, 2)), "exterior")
@@ -26,11 +26,11 @@ def rand_spec(rng, fam):
     if fam == "trapezium": return ("trapezium", rng.choice([x for x in range(55, 126, 5) if x != 90]))
     return ("tri_ext", rng.randint(25, 80), rng.randint(25, 70))
 
-def ang_set(rng, fams, tries=400):
+def ang_set(rng, fams, tries=400, keepout=False):
     for _ in range(tries):
         items = []
         for fam in fams:
-            spec = rand_spec(rng, fam); svg, cap, ans = ang_make(rng, spec); items.append(dict(fam=fam, svg=svg, cap=cap, ans=ans, spec=spec))
+            spec = rand_spec(rng, fam); svg, cap, ans = ang_make(rng, spec, keepout); items.append(dict(fam=fam, svg=svg, cap=cap, ans=ans, spec=spec))
         if len({it["ans"] for it in items}) == len(fams) and all(10 <= it["ans"] <= 170 for it in items): return items
     raise RuntimeError("angle set")
 
@@ -77,19 +77,19 @@ def page_angles(no, seed, title, tier, fams, note, instr):
 
 def page27():
     return page_angles(27, 8727, "Angles in Figures", 1, ["trapezium", "tri_ext", "iso_line", "rhombus_diag", "tri_ext", "trapezium"],
-        "Six figures in one or two steps: a trapezium (the angles between the parallel sides add to 180 degrees), a triangle with a straight line (the angle sum of a triangle and angles on a straight line), an isosceles triangle with a straight line, and a rhombus with a diagonal (all four sides are equal, so a triangle is isosceles). The decoy numbers are what a pupil gets by using 180 minus the answer, by using the given angle, or by halving or doubling. The figures are drawn accurately so the pupil could measure, but the aim is to work the angle out. A box left blank gives no letter and the check cannot see it.",
-        ["Find each angle. Marks show equal sides and parallel lines.", "Do not measure. Work it out.", "Write the answer in the box. Use the code table."])
+        "Six figures in one or two steps: a trapezium (the angles between the parallel sides add to 180 degrees), a triangle with a straight line (the angle sum of a triangle and angles on a straight line), an isosceles triangle with a straight line, and a rhombus with a diagonal (all four sides are equal, so a triangle is isosceles). The decoy numbers are what a pupil gets by using 180 minus the answer, by using the given angle, or by halving or doubling. The figures are deliberately NOT drawn to scale (the drawn angles differ from the true ones by at least 9 degrees for the unknown angle) and each page says so, so measuring does not give the answer. A box left blank gives no letter and the check cannot see it.",
+        ["Find each angle. Marks show equal sides and parallel lines.", "Not drawn to scale: work it out, do not measure.", "Write the answer in the box. Use the code table."])
 
 def page28():
     return page_angles(28, 8828, "More Angles", 2, ["para_iso", "iso_apex", "rhombus_opp", "sq_out", "sq_in", "rhombus_diag"],
-        "Six figures that need two or three steps: a parallelogram with an isosceles triangle (opposite angles of a parallelogram are equal), an isosceles triangle where the exterior angle is given, a rhombus where the opposite angle is given, and a square with an equilateral triangle on one side, outside and inside. In the square figures the pupil finds an angle of a triangle whose two equal sides are the side of the square and the side of the triangle. The decoy numbers are what a pupil gets by using 180 minus the answer, by using the given angle, or by halving or doubling. The figures are drawn accurately, but the aim is to work the angle out. A box left blank gives no letter and the check cannot see it.",
-        ["Find each angle. Marks show equal sides and parallel lines.", "Do not measure. Work it out.", "Write the answer in the box. Use the code table."])
+        "Six figures that need two or three steps: a parallelogram with an isosceles triangle (opposite angles of a parallelogram are equal), an isosceles triangle where the exterior angle is given, a rhombus where the opposite angle is given, and a square with an equilateral triangle on one side, outside and inside. In the square figures the pupil finds an angle of a triangle whose two equal sides are the side of the square and the side of the triangle. The decoy numbers are what a pupil gets by using 180 minus the answer, by using the given angle, or by halving or doubling. The figures are deliberately NOT drawn to scale and the page says so. A box left blank gives no letter and the check cannot see it.",
+        ["Find each angle. Marks show equal sides and parallel lines.", "Not drawn to scale: work it out, do not measure.", "Write the answer in the box. Use the code table."])
 
 # =============================================================================== P6-29 Angle Match  (GE1.1, match)
 def page29():
     rng = random.Random(8929)
     for _ in range(300):
-        items = ang_set(rng, ["iso_line", "rhombus_diag", "trapezium", "tri_ext", "iso_apex", "para_iso"])
+        items = ang_set(rng, ["iso_line", "rhombus_diag", "trapezium", "tri_ext", "iso_apex", "para_iso"], keepout=True)
         ans = [it["ans"] for it in items]
         decs = []
         for it in rng.sample(items, 2):
@@ -111,9 +111,9 @@ def page29():
         return -1
     P = match_page(29, 8929, "Angle Match", 1, "Unknown angles in composite figures", STRAND_GE,
         "1.1 (finding unknown angles in composite figures; no additional construction)", ["GE1.1"], "Matching (angles)",
-        ["Find each angle. Do not measure. Work it out.", "Find the card with that angle.", "Write the card letter in the box. Use each card once."],
+        ["Find each angle, then find its card. Not drawn to scale: work it out, do not measure.", "Write the card letter in the box.", "Use each card once. Two cards are not used."],
         rng, item_html, card_html, right, solve_item,
-        "Six figures (an isosceles triangle with a straight line, a rhombus with a diagonal, a trapezium, a triangle with a straight line, an isosceles triangle with the exterior angle given, and a parallelogram with an isosceles triangle) matched to eight cards of degrees. Two cards are decoys: 180 minus the answer to one figure. The letters of the matching cards, read in the order of the items, spell the word. Every way of giving each item a different card, and every single changed letter, was tested against a very large word list: none spells another word. The figures are drawn accurately but the aim is to work the angle out. A box left blank gives no letter and the check cannot see it.",
+        "Six figures (an isosceles triangle with a straight line, a rhombus with a diagonal, a trapezium, a triangle with a straight line, an isosceles triangle with the exterior angle given, and a parallelogram with an isosceles triangle) matched to eight cards of degrees. Two cards are decoys: 180 minus the answer to one figure. The letters of the matching cards, read in the order of the items, spell the word. Every way of giving each item a different card, and every single changed letter, was tested against a very large word list: none spells another word. The figures are deliberately NOT drawn to scale and the page says so. A box left blank gives no letter and the check cannot see it.",
         item_cols=3, card_cols=4, compact=True, vert=True)
     res = [ang_solve(ih) for ih in item_html]
     P.v("V1b every given angle printed in an arc equals the drawn angle (within 0.6 degrees)", all(not b for _, b, _ in res))

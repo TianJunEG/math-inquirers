@@ -2783,7 +2783,23 @@
       "text": "Draw it. Use a strip. Aisha has 15 shells. Kumar has 6 fewer shells than Aisha. How many shells do they have in all? They have ___ shells.",
       "answer": "24",
       "val": 24,
-      "solution": "Kumar has 15 take away 6, which is 9 shells. In all: 15 + 9 = 24."
+      "solution": "Kumar has 15 take away 6, which is 9 shells. In all: 15 + 9 = 24.",
+      "visual": {
+        "type": "bar_model",
+        "bars": [
+          {
+            "name": "Aisha",
+            "len": 15,
+            "text": "15"
+          },
+          {
+            "name": "Kumar",
+            "len": 9,
+            "text": "?"
+          }
+        ],
+        "hw": 62
+      }
     },
     {
       "id": "H2",
@@ -2799,7 +2815,18 @@
       "text": "Work backwards. Lily thinks of a number. She adds 7 and gets 25. Her number is ___ .",
       "answer": "18",
       "val": 18,
-      "solution": "25 take away 7 is 18. Check: 18 + 7 = 25."
+      "solution": "25 take away 7 is 18. Check: 18 + 7 = 25.",
+      "visual": {
+        "type": "story_steps",
+        "piles": [
+          "?",
+          "25"
+        ],
+        "steps": [
+          "adds|7"
+        ],
+        "hw": 48
+      }
     },
     {
       "id": "H4",

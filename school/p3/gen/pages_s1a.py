@@ -45,8 +45,8 @@ def page01():
             cards.append(qcard(i + 1, s, '<span class="ab w4"></span>', cls="inl span2"))
         else:
             if it["k"] == "digit": t = f"In {it['n']}, what is the value of the digit {it['d']}?"
-            elif it["k"] == "regroup": t = f"{it['th']} thousands, {it['h']} hundreds and {it['o']} ones make which number?"
-            elif it["k"] == "zero": t = f"{it['th']} thousands and {it['t']} tens make which number?"
+            elif it["k"] == "regroup": t = f"Write the number: {it['th']} thousands, {it['h']} hundreds and {it['o']} ones."
+            elif it["k"] == "zero": t = f"Write the number: {it['th']} thousands and {it['t']} tens."
             else: t = f"How many hundreds are in {it['n']}?"
             texts.append(t); cards.append(qcard(i + 1, f"<p>{t}</p>", '<span class="ab w4"></span>'))
     P = code_items_page(1, 3101, "Place Value", 1, "Place value: thousands, hundreds, tens and ones, numbers to 10 000", STRAND_WN,
@@ -63,9 +63,9 @@ def page01():
             tx = texts[ti]; ti += 1
             m = re.match(r"In (\d+), what is the value of the digit (\d)\?", tx)
             if m: solved.append(int(m.group(2)) * 10 ** (len(m.group(1)) - 1 - m.group(1).index(m.group(2)))); continue
-            m = re.match(r"(\d) thousands, (\d+) hundreds and (\d+) ones", tx)
+            m = re.match(r"Write the number: (\d) thousands, (\d+) hundreds and (\d+) ones", tx)
             if m: a_, b_, c_ = map(int, m.groups()); solved.append(1000 * a_ + 100 * b_ + c_); continue
-            m = re.match(r"(\d) thousands and (\d) tens", tx)
+            m = re.match(r"Write the number: (\d) thousands and (\d) tens", tx)
             if m: a_, b_ = map(int, m.groups()); solved.append(1000 * a_ + 10 * b_); continue
             m = re.match(r"How many hundreds are in (\d+)\?", tx)
             solved.append(int(m.group(1)) // 100)
@@ -146,7 +146,7 @@ def page02():
     body = maze_html(n, texts, start, finish)
     P = new_page(2, 3202, "Words and Numbers", 1, "Reading and writing numbers in words and in numerals", STRAND_WN,
         "1.3 (reading and writing numbers in numerals and in words)", ["WN1.3"], "Maze / path", "K6 route closes at FINISH through the stated number of boxes",
-        ["Start at START. Move up, down, left or right.", "Go to the box with the words for the number at the foot of your box.", "Do not step on a box twice."],
+        ["Start at START. Move up, down, left or right.", "Read the number at the foot of your box. Go to the box that has it in words.", "Do not step on a box twice."],
         body, "Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {words4(top[(r, c)])} / {bot[(r, c)]}" for r, c in path),
         f"Route reaches FINISH through {L} boxes; every top word names the number at the foot of the box before it.",
         f"A 4 by 4 grid. Each box has a number in words on top and a numeral at the foot. From a box the pupil moves to a touching box whose top words say the numeral at the foot of the box being left. All numbers are 4-digit. Wrong turns are boxes that look right but are not: digits swapped, teen and ty mixed up, a zero in the wrong place, a hundred or a thousand more or less. Sometimes two touching boxes have the same words on top, so the pupil may meet two choices; only one leads on to FINISH. {dead} wrong turns can be entered from the route and lead nowhere, so the box count and the words matter. Pupils read numbers in words and match them with numerals; writing number words by hand is not checked by this page.",
@@ -174,8 +174,8 @@ def page02():
     return P
 
 # =============================================================================== P3-03 Digit Cards
-QTXT = {"greatest": "Make the greatest number.", "smallest": "Make the smallest number.", "greatest even": "Make the greatest even number.",
-        "smallest odd": "Make the smallest odd number.", "smallest even": "Make the smallest even number.", "greatest odd": "Make the greatest odd number."}
+QTXT = {"greatest": "Build the largest number you can.", "smallest": "Build the smallest number you can.", "greatest even": "Build the largest even number you can.",
+        "smallest odd": "Build the smallest odd number you can.", "smallest even": "Build the smallest even number you can.", "greatest odd": "Build the largest odd number you can."}
 
 def best_numbers(cards, kind):
     perms = sorted({int("".join(map(str, p))) for p in itertools.permutations(cards) if p[0] != 0})
@@ -219,14 +219,14 @@ def page03():
         cards_h.append(qcard(i + 1, dc + f"<p>{QTXT[kd]}</p>", '<span class="ab w4"></span>'))
     P = code_items_page(3, 3303, "Digit Cards", 2, "Numbers to 10 000: make, compare and order numbers from digit cards", STRAND_WN,
         "1.2, 1.4 (place values; comparing and ordering numbers)", ["WN1.2", "WN1.4"], "Code-breaker (digit cards)",
-        ["Use all four cards once each.", "Make a 4-digit number. A number cannot start with 0.", INSTR_CODE],
+        ["Build each number from its four digit cards.", "Use every card once. A number cannot start with 0.", INSTR_CODE],
         qgrid(cards_h, 2), ans, table, word, 1000, 9999,
         "; ".join(f"{i+1}) {k}: {a}" for i, ((k, c), a) in enumerate(zip(items, ans))),
         "Six sets of four digit cards: greatest, smallest, greatest even, smallest even, greatest odd and smallest odd. A zero card cannot be the thousands digit. The decoy letters stand for the other arrangements of the same cards, so a pupil who makes a different number from the same cards still gets a letter, but not the right one. A box left blank gives no letter and the check cannot see it.")
     solved = []
     for h in cards_h:
         digs_ = [int(x) for x in re.findall(r'class="dcard">(\d)<', h)]
-        q = re.search(r"Make the ([a-z ]+) number", h).group(1)
+        q = re.search(r"Build the ([a-z ]+) number", h).group(1).replace("largest", "greatest")
         solved.append(best_numbers(digs_, q))
     P.v("V1 independent solver (every arrangement of the printed cards tried) equals the key", solved == ans, solved)
     P.v("V1b cards in one item are all different digits", all(len(set(c)) == 4 for k, c in items))

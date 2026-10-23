@@ -2676,7 +2676,13 @@
    "text": "A film starts at 9:30 am. It lasts 1 hour. It ends at ____ am.",
    "answer": "10:30",
    "val": "10:30",
-   "solution": "One hour later is the next hour with the same minutes: 9:30 am and 1 hour is 10:30 am."
+   "solution": "One hour later is the next hour with the same minutes: 9:30 am and 1 hour is 10:30 am.",
+   "visual": {
+    "type": "clock",
+    "h": 9,
+    "m": 30,
+    "hw": 30
+   }
   },
   {
    "id": "H2",
@@ -2684,7 +2690,13 @@
    "text": "The swimming lesson starts at 5 o'clock. It lasts half an hour. It ends at ____ .",
    "answer": "5:30",
    "val": "5:30",
-   "solution": "Half an hour after 5 o'clock is half past 5, written 5:30."
+   "solution": "Half an hour after 5 o'clock is half past 5, written 5:30.",
+   "visual": {
+    "type": "clock",
+    "h": 5,
+    "m": 0,
+    "hw": 30
+   }
   },
   {
    "id": "H3",
@@ -2692,7 +2704,13 @@
    "text": "Ben starts to paint at 3:45 pm. He paints for half an hour. He stops at ____ pm.",
    "answer": "4:15",
    "val": "4:15",
-   "solution": "3:45 and 15 minutes is 4:00. 15 more minutes makes 30 in all, so he stops at 4:15 pm."
+   "solution": "3:45 and 15 minutes is 4:00. 15 more minutes makes 30 in all, so he stops at 4:15 pm.",
+   "visual": {
+    "type": "clock",
+    "h": 3,
+    "m": 45,
+    "hw": 30
+   }
   },
   {
    "id": "H4",
@@ -2704,7 +2722,8 @@
    "visual": {
     "type": "clock",
     "h": 5,
-    "m": 0
+    "m": 0,
+    "hw": 30
    }
   },
   {

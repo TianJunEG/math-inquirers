@@ -2923,7 +2923,13 @@
    "text": "A circle is cut into 4 equal parts. Each part is a ____ . Write half or quarter.",
    "answer": "quarter",
    "val": "quarter",
-   "solution": "4 equal parts: each part is a quarter."
+   "solution": "4 equal parts: each part is a quarter.",
+   "visual": {
+    "type": "shapes2d",
+    "shape": "circle",
+    "parts": 4,
+    "hw": 30
+   }
   },
   {
    "id": "H2",
@@ -2939,7 +2945,15 @@
    "text": "A rectangle has 12 small squares. A half of it is ____ small squares.",
    "answer": "6",
    "val": 6,
-   "solution": "Share the 12 squares into 2 groups that match: 6 and 6. A half is 6 small squares."
+   "solution": "Share the 12 squares into 2 groups that match: 6 and 6. A half is 6 small squares.",
+   "visual": {
+    "type": "grid",
+    "rows": 2,
+    "cols": 6,
+    "kind": "squares",
+    "cell": 60,
+    "hw": 50
+   }
   },
   {
    "id": "H4",
@@ -2950,7 +2964,15 @@
     4,
     8
    ],
-   "solution": "A quarter is 1 of 4 equal parts: 16 shared into 4 equal groups is 4. A half is 2 quarters: 4 and 4 make 8."
+   "solution": "A quarter is 1 of 4 equal parts: 16 shared into 4 equal groups is 4. A half is 2 quarters: 4 and 4 make 8.",
+   "visual": {
+    "type": "grid",
+    "rows": 4,
+    "cols": 4,
+    "kind": "squares",
+    "cell": 50,
+    "hw": 36
+   }
   },
   {
    "id": "H5",

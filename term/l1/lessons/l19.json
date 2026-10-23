@@ -2579,7 +2579,25 @@
    "text": "5 pens cost $10. How much does 1 pen cost? $___",
    "answer": "$2",
    "val": 2,
-   "solution": "$10 shared equally among 5 pens is $2 each."
+   "solution": "$10 shared equally among 5 pens is $2 each.",
+   "visual": {
+    "type": "bar_model",
+    "bars": [
+     {
+      "name": "5 pens",
+      "len": 5
+     }
+    ],
+    "units": {
+     "n": 5,
+     "text": "?"
+    },
+    "brace": {
+     "text": "$10",
+     "over": "all"
+    },
+    "hw": 64
+   }
   },
   {
    "id": "H2",

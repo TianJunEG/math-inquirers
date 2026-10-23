@@ -2540,7 +2540,16 @@
     12,
     12
    ],
-   "solution": "4 plates with 3 sweets on each: 3 + 3 + 3 + 3 = 12."
+   "solution": "4 plates with 3 sweets on each: 3 + 3 + 3 + 3 = 12.",
+   "visual": {
+    "type": "groups",
+    "container": "plate",
+    "n": 4,
+    "each": 3,
+    "icon": "sweet",
+    "per_row": 4,
+    "hw": 58
+   }
   },
   {
    "id": "H2",
@@ -2550,7 +2559,19 @@
    "val": [
     "No"
    ],
-   "solution": "The bags have 3, 3 and 4 sweets. The groups are not equal."
+   "solution": "The bags have 3, 3 and 4 sweets. The groups are not equal.",
+   "visual": {
+    "type": "groups",
+    "container": "bag",
+    "counts": [
+     3,
+     3,
+     4
+    ],
+    "icon": "sweet",
+    "per_row": 3,
+    "hw": 58
+   }
   },
   {
    "id": "H3",

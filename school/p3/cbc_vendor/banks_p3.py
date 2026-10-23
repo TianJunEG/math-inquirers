@@ -137,7 +137,7 @@ def build_banks():
     B = {}
     B["mult3"] = Bank("mult3", "Tables", "Multiplication and division: tables of 6, 7, 8 and 9", "Work out the answer. Find it in the key. Colour the part with that colour.",
         {2: T([6, 7, 9, 24, 36], range(0, 101), _mult3(2), maxuse={24: 2, 36: 2})})
-    B["conv3"] = Bank("conv3", "Measures", "Length, mass and volume: km and m, m and cm, kg and g, ℓ and mℓ", "Change the units. Find the answer in the key. Colour the part with that colour.",
+    B["conv3"] = Bank("conv3", "Measures", "Changing units: km, m, cm, kg, g, ℓ and mℓ", "Change the units. Find the answer in the key. Colour the part with that colour.",
         {2: T([1500, 2500, 3000, 4500, 6000], range(0, 10001), _conv3(2), lambda v: str(v))})
     B["money3"] = Bank("money3", "Money", "Money: adding and subtracting in dollars and cents", "Find how much. Find it in the key. Colour the part with that colour.",
         {2: T([235, 450, 680, 805, 1275], range(0, 3001), _money3(2), lambda v: f"${dec(v)}")})

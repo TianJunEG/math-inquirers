@@ -2453,7 +2453,24 @@
       "text": "Ben has 47 cards. Ali has 71 cards. How many more cards does Ali have than Ben?",
       "answer": "Ali has 24 more (47 to 50 is 3, 50 to 70 is 20, 70 to 71 is 1)",
       "val": 24,
-      "solution": "47 to 50 is 3. 50 to 70 is 20. 70 to 71 is 1. 3 + 20 + 1 = 24."
+      "solution": "47 to 50 is 3. 50 to 70 is 20. 70 to 71 is 1. 3 + 20 + 1 = 24.",
+      "visual": {
+        "type": "jump_lines",
+        "start": 44,
+        "end": 74,
+        "step": 1,
+        "label_every": 10,
+        "rows": [
+          {
+            "points": [
+              47,
+              71
+            ]
+          }
+        ],
+        "room": false,
+        "hw": 66
+      }
     },
     {
       "id": "H5",

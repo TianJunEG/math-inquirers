@@ -15,7 +15,7 @@ PIP = "π"
 LITRE = SY("ℓ")
 MLITRE = "m" + SY("ℓ")
 SQRT = SY("√")
-CBRT = SY("∛")
+CBRT = '<span class="sy cbrt">∛</span>'
 FSL = "⁄"          # fraction slash used in plain-text readings of stacked fractions
 
 PEOPLE = ["Ali", "Mei", "Siti", "Ben", "Kumar", "Aisha", "Wei", "Ravi", "Jenny", "Lily", "Hana", "Tom", "Farid", "Grace", "Hui", "Nadia", "Daniel", "Priya", "Jun", "Alex"]

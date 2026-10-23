@@ -2374,7 +2374,19 @@
     21,
     28
    ],
-   "solution": "A week is 7 days: 14 and 7 make 21. A fortnight is 14 days: 14 and 14 make 28."
+   "solution": "A week is 7 days: 14 and 7 make 21. A fortnight is 14 days: 14 and 14 make 28.",
+   "visual": {
+    "type": "calendar",
+    "start": "Wed",
+    "days": 31,
+    "highlight": [
+     14
+    ],
+    "mark": [
+     14
+    ],
+    "hw": 52
+   }
   },
   {
    "id": "H4",

@@ -27,8 +27,8 @@ h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.0
 .check{border:0.8mm solid #000;border-radius:3mm;padding:2.5mm 4mm;display:flex;align-items:center;gap:4mm;min-height:24mm;margin-top:2mm}
 .check .ct2{flex:1;font-size:14pt;line-height:1.25}
 .check .ct2 b{font-family:'Fredoka';font-weight:600;font-size:15pt}
-.check .lb{display:flex;gap:1.5mm;align-items:center;flex-wrap:nowrap}
-.check .ab{width:11mm;height:12mm}
+.check .lb{display:flex;gap:1mm;align-items:center;flex-wrap:nowrap}
+.check .ab{width:12mm;height:12mm;box-sizing:border-box}
 footer.pf{display:flex;justify-content:space-between;gap:6mm;font-size:8pt;padding-top:2mm;line-height:1.2}
 footer.pf b{font-weight:800}
 footer.pf .fl{display:flex;gap:1.2mm;flex:1;min-width:0}footer.pf .fx{white-space:nowrap;flex:none}footer.pf .sn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:800}footer.pf .pc{flex:none}
@@ -309,7 +309,7 @@ def teacher_notes(pages, bk):
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
             '<li><b>Drawings.</b> Pictures of rulers, scales, clocks, coins and notes are original drawings, not to scale unless a page says so. Coins and notes are inspired by Singapore money, not actual size (smaller than real) and in black and white.</li></ul>'
-            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting: on the page with coins and notes (Money Sums, S1-20) a light setting can fill in the small word cents on the coins. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size. Real $2 notes are purple, $5 green, $10 red.</p>'
+            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting: ' + ('on the page with coins and notes (Money Sums, S1-20) a light setting can fill in the small word cents on the coins. ' if any(p["no"] == 20 for p in pages) else 'a light setting can thin the fine lines of the scales, grids and graphs. ') + 'Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size. Real $2 notes are purple, $5 green, $10 red.</p>'
             '<h3>What a printed page cannot check</h3><p>Real measuring (a ruler, a jug, a scale, a stopwatch) cannot be done on paper: the pages show drawn scales, containers, dials and stopwatch faces to read, and the pupil reads them. The idea of an angle is met by comparing drawn angles with a right angle. Drawing perpendicular and parallel lines (Draw the Lines, S2-16) is checked only through the letter where the drawn line ends, so look at the lines if you wish. Mental calculation cannot be enforced on a page: the route and code pages ask for answers, not for the method. Figures with marked lengths are drawn to scale on the page, but pictures are not actual size.</p>'
             '</section>')
 
@@ -349,7 +349,7 @@ def key_pages(pages, school, packing, bk):
         pg[0] += 1; return key_footer(f"KEY page {pg[0]} of {total}")
     out = [f'<section class="page fm"><h2>Teacher answer key: Primary 3, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 3 content in the Mathematics Syllabus, Primary (2021 edition, pages 35 and 36). The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 3 content in the Mathematics Syllabus, Primary (2021 edition, pages 35 and 36). The references are for your planning only and are not printed on the pupil pages.' + (' "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.' if any(p.get("ps") for p in pages) else '') + '</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
            + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + key_footer(f"KEY page 1 of {total}") + '</section>']

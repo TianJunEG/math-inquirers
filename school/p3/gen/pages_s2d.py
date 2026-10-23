@@ -22,10 +22,10 @@ def page34():
         degs.append((deg, rot))
         right = {"small": 0, "right": 1, "great": 2}[c]
         specs.append(dict(q=f'<div class="angfig">{A3.angle_svg(deg, rot)}</div>', opts=['<b class="on">Smaller</b>', '<b class="on">Right angle</b>', '<b class="on">Greater</b>'], ri=right, fixed=True, deg=deg))
-    pre = '<div class="howto"><p>A right angle is the corner of a square. Compare the marked angle with a right angle.</p></div>'
+    pre = '<div class="howto"><p>A square has four right angles. A smaller angle fits inside a square corner. A greater angle does not.</p></div>'
     P = lettered_choice_page(34, 5434, "Right Angles", 1, "Angles: right angles, smaller and greater than a right angle", STRAND_GE,
         "1.1, 1.2 (concept of an angle; right angles; angles greater than or smaller than a right angle)", ["AN1.1", "AN1.2"], "Lettered choice (angles)",
-        ["Is each angle smaller than, equal to or greater than a right angle?", "Circle the letter of the right choice.", "Write the five letters in the boxes."],
+        ["Compare each marked angle with a square corner.", "Circle the letter of the right choice.", "Write the five letters in the boxes."],
         specs, 3, "; ".join(f"{i+1}) {['smaller than a right angle', 'a right angle', 'greater than a right angle'][s['ri']]}" for i, s in enumerate(specs)),
         "Five angles, each drawn with a small arc. Each angle is clearly smaller than a right angle, exactly a right angle or clearly greater: none is close to a right angle, so a pupil can compare with the corner of a sheet of paper or a set square. Degrees are not named on the page: the page asks only for right angles and smaller or greater. The angles are turned to different positions, so a right angle is not always a horizontal and a vertical line. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         word_len=5, rng=rng, pre_html=pre, row_cls="angrow")
@@ -287,7 +287,7 @@ def page38():
     texts = [f"Graph A. How many books were read on {days[i1]}?", f"Graph B. How many {items_b[j1].lower()}s were sold?",
              f"Graph A. How many more books were read on {days[i1]} than on {days[i2]}?" if va[i1] > va[i2] else f"Graph A. How many fewer books were read on {days[i1]} than on {days[i2]}?",
              f"Graph B. How many {items_b[j2].lower()}s and {items_b[j3].lower()}s were sold in all?", "Graph A. How many books were read in all?",
-             "Graph B. How many more were sold of the most than of the least?"]
+             "Graph B. What is the difference between the longest and shortest bar?"]
     cards = [qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span>', cls="inl") for i, t in enumerate(texts)]
     pre = f'<div class="gtwo"><div>{ga}</div><div>{gb}</div></div>'
     P = code_items_page(38, 5838, "Different Scales", 2, "Bar graphs with different scales on the axis", STRAND_ST,

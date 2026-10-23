@@ -2713,7 +2713,13 @@
    "text": "A box has 4 bundles of 10 pencils and 5 single pencils. Ali puts in 3 more bundles of 10. How many pencils are in the box now?",
    "answer": "75",
    "val": 75,
-   "solution": "4 tens and 3 tens make 7 tens. The 5 loose pencils stay: 75."
+   "solution": "4 tens and 3 tens make 7 tens. The 5 loose pencils stay: 75.",
+   "visual": {
+    "type": "bundles",
+    "tens": 4,
+    "ones": 5,
+    "hw": 36
+   }
   },
   {
    "id": "H2",

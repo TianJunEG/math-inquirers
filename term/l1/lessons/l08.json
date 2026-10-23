@@ -2509,7 +2509,27 @@
    "text": "Fill in the missing number: 6 + 3 = 5 + []",
    "answer": "4",
    "val": 4,
-   "solution": "6 + 3 is 9, and 5 + 4 is 9. The 6 became 5 (1 less), so the 3 becomes 4 (1 more)."
+   "solution": "6 + 3 is 9, and 5 + 4 is 9. The 6 became 5 (1 less), so the 3 becomes 4 (1 more).",
+   "visual": {
+    "type": "balance",
+    "left": [
+     {
+      "text": "6"
+     },
+     {
+      "text": "3"
+     }
+    ],
+    "right": [
+     {
+      "text": "5"
+     },
+     {
+      "text": "?"
+     }
+    ],
+    "hw": 54
+   }
   },
   {
    "id": "H2",
@@ -2517,7 +2537,27 @@
    "text": "Fill in the missing number: 10 + 4 = 9 + []",
    "answer": "5",
    "val": 5,
-   "solution": "10 went down by 1 to 9, so 4 goes up by 1 to 5. Both sides make 14."
+   "solution": "10 went down by 1 to 9, so 4 goes up by 1 to 5. Both sides make 14.",
+   "visual": {
+    "type": "balance",
+    "left": [
+     {
+      "text": "10"
+     },
+     {
+      "text": "4"
+     }
+    ],
+    "right": [
+     {
+      "text": "9"
+     },
+     {
+      "text": "?"
+     }
+    ],
+    "hw": 54
+   }
   },
   {
    "id": "H3",
@@ -2525,7 +2565,27 @@
    "text": "Fill in the missing number: 20 + 30 = 40 + []",
    "answer": "10",
    "val": 10,
-   "solution": "20 went up by 20 to 40, so 30 goes down by 20 to 10. Both sides make 50."
+   "solution": "20 went up by 20 to 40, so 30 goes down by 20 to 10. Both sides make 50.",
+   "visual": {
+    "type": "balance",
+    "left": [
+     {
+      "text": "20"
+     },
+     {
+      "text": "30"
+     }
+    ],
+    "right": [
+     {
+      "text": "40"
+     },
+     {
+      "text": "?"
+     }
+    ],
+    "hw": 54
+   }
   },
   {
    "id": "H4",

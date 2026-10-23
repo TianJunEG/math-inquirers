@@ -2686,7 +2686,14 @@
    "text": "Ali has 13 counters. He puts them in pairs. How many counters are left over? ___ counter is left over.",
    "answer": "1",
    "val": 1,
-   "solution": "13 counters make 6 pairs and 1 is left over."
+   "solution": "13 counters make 6 pairs and 1 is left over.",
+   "visual": {
+    "type": "objects",
+    "icon": "counter_red",
+    "n": 13,
+    "per_row": 5,
+    "hw": 34
+   }
   },
   {
    "id": "H3",

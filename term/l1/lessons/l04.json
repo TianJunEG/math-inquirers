@@ -2871,7 +2871,20 @@
         60,
         65
       ],
-      "solution": "Each number is 5 more: 50, 55, 60, 65."
+      "solution": "Each number is 5 more: 50, 55, 60, 65.",
+      "visual": {
+        "type": "number_line",
+        "start": 40,
+        "end": 65,
+        "step": 5,
+        "label_every": 5,
+        "hide": [
+          55,
+          60,
+          65
+        ],
+        "hw": 66
+      }
     },
     {
       "id": "H2",

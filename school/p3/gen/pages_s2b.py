@@ -170,7 +170,7 @@ def page28():
             cand = hm_text(r["d"] + k) if r["k"] == "dur" else ampm((r["t2"] if r["k"] == "finish" else r["t1"]) + k)
             if cand != right and cand not in wrongs: wrongs.append(cand)
         specs.append(dict(q=q, opts=[f'<b class="on">{right}</b>'] + [f'<b class="on">{w}</b>' for w in wrongs[:2]], row=r, right=right))
-    P = lettered_choice_page(28, 4828, "Start and Finish", 2, "Time: finding the starting time, the finishing time or how long it takes", STRAND_ME,
+    P = lettered_choice_page(28, 4828, "Start and Finish", 2, "Time: start, finish and how long it takes", STRAND_ME,
         "2.2 (finding the starting time, finishing time or duration given the other two quantities)", ["TI2.2"], "Lettered choice (start, finish, duration)",
         ["Find the time or how long.", "Circle the letter of the right choice.", "Write the six letters in the boxes."],
         specs, 3, "; ".join(f"{i+1}) {s['right']}" for i, s in enumerate(specs)),
@@ -199,7 +199,7 @@ def page29():
         b_d = a_a + rng.choice([55, 70, 80, 95]); b_dur = rng.choice([65, 75, 80, 100]); b_a = b_d + b_dur
         c_d = rng.randrange(13 * 60, 15 * 60, 5); c_dur = rng.choice([115, 125, 135, 145]); c_a = c_d + c_dur
         d_a = rng.randrange(9 * 60, 11 * 60, 5); d_dur = rng.choice([140, 155, 165, 100]); d_d = d_a - d_dur
-        e_d = rng.randrange(22 * 60 + 10, 22 * 60 + 55, 5); e_dur = rng.choice([150, 170, 185, 205]); e_a = (e_d + e_dur) % 1440
+        e_d = rng.randrange(18 * 60 + 10, 20 * 60, 5); e_dur = rng.choice([150, 170, 185, 205]); e_a = e_d + e_dur      # same day: no journey crosses midnight (audit L4)
         wait = b_d - a_a
         items = [("dur", "A", a_dur, "min"), ("dur", "B", b_dur, "min"), ("arr", "C", c_a, "h"), ("dep", "D", d_d, "h"), ("dur", "E", e_dur, "min"), ("wait", "AB", wait, "min")]
         tm = lambda m: ((m // 60) % 24) * 100 + m % 60
@@ -215,7 +215,7 @@ def page29():
     fmtv = lambda v: f"{v:04d} h" if (v in timeset or v >= 400) else f"{v} min"
     t24 = lambda m: f"{(m // 60) % 24:02d}{m % 60:02d}"
     rows_t = (f'<tr><td>A</td><td>{t24(a_d)} h</td><td>{t24(a_a)} h</td></tr><tr><td>B</td><td>{t24(b_d)} h</td><td>{t24(b_a)} h</td></tr>'
-              f'<tr><td>E</td><td>{t24(e_d)} h</td><td>{t24(e_a)} h (next day)</td></tr>')
+              f'<tr><td>E</td><td>{t24(e_d)} h</td><td>{t24(e_a)} h</td></tr>')
     table_html = f'<table class="tt"><tr><th>Bus</th><th>Leaves</th><th>Arrives</th></tr>{rows_t}</table>'
     qs = [f"How many minutes does Bus A take?", f"How many minutes does Bus B take?",
           f"Bus C leaves at {t24(c_d)} h. The journey takes {hm_text(c_dur)}. At what time does it arrive?",
@@ -228,7 +228,7 @@ def page29():
         ["Use the timetable and the questions.", "Write each answer in the box.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 0, 2359,
         "; ".join(f"{i+1}) {fmtv(a)}" for i, a in enumerate(ans)),
-        "A timetable of buses in the 24-hour clock (four digits, with h). Questions: how long three journeys take (one crosses midnight), when a journey that leaves at a given time and takes a given time arrives, when a journey that arrives at a given time and takes a given time left, and the wait between two buses. Answers that are times are written with four digits (a leading zero for the early hours); answers that are lengths are in minutes. The decoy letters stand for counting a hundred minutes in an hour, or for an hour out. A box left blank gives no letter and the check cannot see it.",
+        "A timetable of buses in the 24-hour clock (four digits, with h). Questions: how long three journeys take, when a journey that leaves at a given time and takes a given time arrives, when a journey that arrives at a given time and takes a given time left, and the wait between two buses. Answers that are times are written with four digits (a leading zero for the early hours); answers that are lengths are in minutes. The decoy letters stand for counting a hundred minutes in an hour, or for an hour out. A box left blank gives no letter and the check cannot see it.",
         pre_body=pre, fmt=fmtv, domain=None)
     P["instr"] = ["Use the timetable and the questions.", "Write each answer in the box. A time has four digits.", INSTR_CODE]
     tt = {}

@@ -2781,7 +2781,20 @@
       "text": "Ali has 28 marbles. He wins 10 more marbles. Then he gives 5 marbles away. Write one number sentence for each step. Step 1: _______ Step 2: _______ Ali has ___ marbles now.",
       "answer": "33",
       "val": 33,
-      "solution": "Step 1: 28 + 10 = 38. Step 2: 38 - 5 = 33."
+      "solution": "Step 1: 28 + 10 = 38. Step 2: 38 - 5 = 33.",
+      "visual": {
+        "type": "story_steps",
+        "piles": [
+          "28",
+          "?",
+          "?"
+        ],
+        "steps": [
+          "wins|10 more",
+          "gives|5 away"
+        ],
+        "hw": 68
+      }
     },
     {
       "id": "H2",

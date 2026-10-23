@@ -39,7 +39,12 @@ def safe_pool(n):
 
 CLAIMED = {}      # page number -> code word, so that no two pages of one build share a word
 
+# code words already used as the answer word of a Primary 1 or Primary 2 booklet page (the nine that P3 once repeated, and the other
+# words of those booklets that appear in the safe pools): a school that buys the series should not meet a word twice (audit L3)
+REPEATS = set("BANDIT CAMPUS COUSIN DONKEY FATHOM FIGURE FRUITY PEANUT TEACUP BOTANY BOUNCE MAGNET SHADOW BACKUP BEHIND BUDGIE CLOUDS COBALT CREAMY CURFEW DAINTY FAMILY FROZEN GUITAR HUNGRY LENGTH MONKEY NUMBER SAILOR SPONGE SQUARE STRING TONGUE TURKEY WIZARD ANSWER".split())
+
 def word_candidates(no, n, avoid=()):
+    avoid = set(avoid) | REPEATS
     pool = safe_pool(n); k = (no * 5) % len(pool)
     taken = {w for p, w in CLAIMED.items() if p != no}
     return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]

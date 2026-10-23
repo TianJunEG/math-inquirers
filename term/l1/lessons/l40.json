@@ -2476,7 +2476,25 @@
       "answer": "$2",
       "val": 2,
       "solution": "$10 shared equally among 5 pens is $2 each.",
-      "rewind_of": "Term 2 Lesson 9"
+      "rewind_of": "Term 2 Lesson 9",
+      "visual": {
+        "type": "bar_model",
+        "bars": [
+          {
+            "name": "5 pens",
+            "len": 5
+          }
+        ],
+        "units": {
+          "n": 5,
+          "text": "?"
+        },
+        "brace": {
+          "text": "$10",
+          "over": "all"
+        },
+        "hw": 64
+      }
     }
   ],
   "online_practice": {

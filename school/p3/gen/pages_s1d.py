@@ -134,7 +134,7 @@ def page17():
         if it["kind"] == "top": eq = f'{fr(k, n)} = <span class="fr"><i>{box}</i><i>{n * m}</i></span>'
         else: eq = f'{fr(k, n)} = <span class="fr"><i>{k * m}</i><i>{box}</i></span>'
         texts.append(eq); cards.append(qcard(i + 1, f'<div class="fsum">{eq}</div>', ""))
-    P = code_items_page(17, 3717, "Fraction Gaps", 2, "Fractions: finding an equivalent fraction when the top or bottom number is given", STRAND_FR,
+    P = code_items_page(17, 3717, "Fraction Gaps", 2, "Fractions: finding an equal fraction", STRAND_FR,
         "1.1, 1.4 (equivalent fractions; finding an equivalent fraction given the denominator or numerator)", ["FR1.1", "FR1.4"], "Code-breaker (equivalent fractions)",
         ["Write the missing number in each box.", "The two fractions are equal.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 1, 12,

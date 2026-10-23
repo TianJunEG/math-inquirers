@@ -2801,7 +2801,25 @@
    "text": "In a graph, the cat row has 8 pictures and the dog row has 5 pictures. Each picture stands for 1 pet. How many more cats than dogs? There are ___ more cats.",
    "answer": "3",
    "val": 3,
-   "solution": "Match 5 dogs with 5 cats. 3 cats are left over. 8 take away 5 is 3."
+   "solution": "Match 5 dogs with 5 cats. 3 cats are left over. 8 take away 5 is 3.",
+   "visual": {
+    "type": "picture_graph",
+    "rows": [
+     {
+      "label": "Cats",
+      "n": 8,
+      "icon": "cat"
+     },
+     {
+      "label": "Dogs",
+      "n": 5,
+      "icon": "dog"
+     }
+    ],
+    "icon": "counter",
+    "key": false,
+    "hw": 62
+   }
   },
   {
    "id": "H3",

@@ -2579,7 +2579,21 @@
    "text": "Aisha has $10. A rubber costs $3 and a pencil costs $4. Does she have enough money for both? Circle Yes or No. I know because ___.",
    "answer": "Yes. 3 and 4 make 7, and 7 is less than 10.",
    "val": "Yes",
-   "solution": "Add the prices: 3 and 4 make 7. 7 is less than 10, so $10 is enough."
+   "solution": "Add the prices: 3 and 4 make 7. 7 is less than 10, so $10 is enough.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "rubber",
+     "price": "$3",
+     "hw": 26
+    },
+    {
+     "type": "price_tag",
+     "item": "pencil",
+     "price": "$4",
+     "hw": 26
+    }
+   ]
   },
   {
    "id": "H2",
@@ -2595,7 +2609,21 @@
    "text": "Mei has $20. She buys a cup for $8 and a pen for $5. How much money does she have left? She has $____ left.",
    "answer": "7",
    "val": 7,
-   "solution": "8 and 5 make 13. Count up from 13 to 20: 7. Mei has $7 left."
+   "solution": "8 and 5 make 13. Count up from 13 to 20: 7. Mei has $7 left.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "cup",
+     "price": "$8",
+     "hw": 26
+    },
+    {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$5",
+     "hw": 26
+    }
+   ]
   },
   {
    "id": "H4",

@@ -2548,7 +2548,14 @@
    "text": "Triangles in a row with a handle use 4 sticks for 1 triangle, 6 sticks for 2 triangles and 8 sticks for 3 triangles. How many sticks for 15 triangles? ____",
    "answer": "32",
    "val": 32,
-   "solution": "Double 15 is 30, and 2 more is 32. Or: 4 and 14 more triangles, each adding 2: 4 and 28 make 32."
+   "solution": "Double 15 is 30, and 2 more is 32. Or: 4 and 14 more triangles, each adding 2: 4 and 28 make 32.",
+   "visual": {
+    "type": "stick_pattern",
+    "shape": "triangle",
+    "n": 3,
+    "handle": true,
+    "hw": 56
+   }
   },
   {
    "id": "H4",
@@ -2556,7 +2563,14 @@
    "text": "Squares in a row with a handle use 5 sticks for 1 square, 8 sticks for 2 squares and 11 sticks for 3 squares. A row uses 41 sticks. How many squares? ____",
    "answer": "13",
    "val": 13,
-   "solution": "Take away the first square and its handle: 41 minus 5 is 36. Each other square adds 3: 36 shared into groups of 3 is 12. So the first square and 12 more make 13 squares."
+   "solution": "Take away the first square and its handle: 41 minus 5 is 36. Each other square adds 3: 36 shared into groups of 3 is 12. So the first square and 12 more make 13 squares.",
+   "visual": {
+    "type": "stick_pattern",
+    "shape": "square",
+    "n": 3,
+    "handle": true,
+    "hw": 56
+   }
   },
   {
    "id": "H5",

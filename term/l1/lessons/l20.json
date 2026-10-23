@@ -2665,7 +2665,16 @@
    "text": "Each bag has 5 sweets. How many sweets are in 6 bags? ___",
    "answer": "30",
    "val": 30,
-   "solution": "Counting in 5s: 5, 10, 15, 20, 25, 30. 6 bags have 30 sweets."
+   "solution": "Counting in 5s: 5, 10, 15, 20, 25, 30. 6 bags have 30 sweets.",
+   "visual": {
+    "type": "groups",
+    "container": "bag",
+    "n": 6,
+    "each": 5,
+    "icon": "sweet",
+    "per_row": 3,
+    "hw": 58
+   }
   },
   {
    "id": "H4",

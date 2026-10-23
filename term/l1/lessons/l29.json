@@ -2623,7 +2623,30 @@
    "text": "Line A is 14 cm long. Line B is 9 cm long. Line A is ____ cm longer than Line B.",
    "answer": "5",
    "val": 5,
-   "solution": "Count up from 9 to 14. That is 5 steps, so Line A is 5 cm longer."
+   "solution": "Count up from 9 to 14. That is 5 steps, so Line A is 5 cm longer.",
+   "visual": {
+    "type": "bar_model",
+    "bars": [
+     {
+      "name": "Line A",
+      "len": 14,
+      "text": "14"
+     },
+     {
+      "name": "Line B",
+      "len": 9,
+      "text": "9"
+     }
+    ],
+    "gap": {
+     "between": [
+      0,
+      1
+     ],
+     "text": "?"
+    },
+    "hw": 62
+   }
   }
  ],
  "online_practice": {

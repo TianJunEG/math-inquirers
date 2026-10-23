@@ -2727,7 +2727,32 @@
    "text": "Siti has 25 stickers. Wei has 15 more stickers than Siti. How many stickers do they have altogether?",
    "answer": "65 stickers",
    "val": 65,
-   "solution": "Wei has 25 + 15 = 40 stickers. Altogether: 25 + 40 = 65."
+   "solution": "Wei has 25 + 15 = 40 stickers. Altogether: 25 + 40 = 65.",
+   "visual": {
+    "type": "bar_model",
+    "bars": [
+     {
+      "name": "Siti",
+      "len": 25,
+      "text": "25"
+     },
+     {
+      "name": "Wei",
+      "len": 40,
+      "segments": [
+       {
+        "v": 25,
+        "text": "25"
+       },
+       {
+        "v": 15,
+        "text": "15"
+       }
+      ]
+     }
+    ],
+    "hw": 64
+   }
   },
   {
    "id": "H4",
@@ -2735,7 +2760,32 @@
    "text": "Ali and Ben have 30 sweets altogether. Ali has 6 more sweets than Ben. How many sweets does Ben have? Write: I know because ...",
    "answer": "12 sweets",
    "val": 12,
-   "solution": "Take the extra 6 away from 30: 24 is left. Two equal strips share 24: 12 each. Ben has 12 and Ali has 18. Check: 12 + 18 = 30."
+   "solution": "Take the extra 6 away from 30: 24 is left. Two equal strips share 24: 12 each. Ben has 12 and Ali has 18. Check: 12 + 18 = 30.",
+   "visual": {
+    "type": "bar_model",
+    "bars": [
+     {
+      "name": "Ben",
+      "len": 12,
+      "text": "?"
+     },
+     {
+      "name": "Ali",
+      "len": 18,
+      "segments": [
+       {
+        "v": 12,
+        "text": "?"
+       },
+       {
+        "v": 6,
+        "text": "6"
+       }
+      ]
+     }
+    ],
+    "hw": 64
+   }
   },
   {
    "id": "H5",

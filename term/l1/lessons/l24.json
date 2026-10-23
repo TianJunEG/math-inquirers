@@ -2682,7 +2682,23 @@
    "text": "Ali has two 20¢ coins, a 10¢ coin and a 5¢ coin. How much does he have in all? ____¢",
    "answer": "55",
    "val": 55,
-   "solution": "Start with the biggest: 20 and 20 make 40. 40 and 10 make 50. 50 and 5 make 55. He has 55¢."
+   "solution": "Start with the biggest: 20 and 20 make 40. 40 and 10 make 50. 50 and 5 make 55. He has 55¢.",
+   "visual": {
+    "type": "money",
+    "items": [
+     {
+      "v": "20c",
+      "n": 2
+     },
+     {
+      "v": "10c"
+     },
+     {
+      "v": "5c"
+     }
+    ],
+    "hw": 58
+   }
   },
   {
    "id": "H2",
@@ -2690,7 +2706,24 @@
    "text": "A bun costs $2. Siti pays with a five-dollar note. How much change does she get? $____",
    "answer": "3",
    "val": 3,
-   "solution": "Count up from $2 to $5: $3, $4, $5. That is 3 dollars. The change is $3."
+   "solution": "Count up from $2 to $5: $3, $4, $5. That is 3 dollars. The change is $3.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "cookie",
+     "price": "$2",
+     "hw": 26
+    },
+    {
+     "type": "money",
+     "items": [
+      {
+       "v": "$5"
+      }
+     ],
+     "hw": 30
+    }
+   ]
   },
   {
    "id": "H3",

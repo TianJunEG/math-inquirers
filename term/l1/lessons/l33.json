@@ -3194,7 +3194,19 @@
     6,
     4
    ],
-   "solution": "4 and 2 make 6 right. 1 and 3 make 4 up."
+   "solution": "4 and 2 make 6 right. 1 and 3 make 4 up.",
+   "visual": {
+    "type": "grid",
+    "rows": 4,
+    "cols": 6,
+    "kind": "dots",
+    "start": [
+     0,
+     4
+    ],
+    "cell": 60,
+    "hw": 50
+   }
   },
   {
    "id": "H2",
@@ -3202,7 +3214,15 @@
    "text": "A row has 8 dots. How many steps is it from the first dot to the last dot? It is ___ steps.",
    "answer": "7",
    "val": 7,
-   "solution": "There is one fewer step than dots. Count the jumps between the dots: 7."
+   "solution": "There is one fewer step than dots. Count the jumps between the dots: 7.",
+   "visual": {
+    "type": "grid",
+    "rows": 0,
+    "cols": 7,
+    "kind": "dots",
+    "cell": 60,
+    "hw": 54
+   }
   },
   {
    "id": "H3",
@@ -3218,7 +3238,23 @@
    "text": "A grid is 1 step across and 4 steps up. A counter goes from the bottom left to the top right. It moves only right or up. How many different routes are there? There are ___ routes.",
    "answer": "5",
    "val": 5,
-   "solution": "Every route has 1 right step and 4 up steps. The right step can be first, second, third, fourth or last: 5 places, so 5 routes."
+   "solution": "Every route has 1 right step and 4 up steps. The right step can be first, second, third, fourth or last: 5 places, so 5 routes.",
+   "visual": {
+    "type": "grid",
+    "rows": 4,
+    "cols": 1,
+    "kind": "dots",
+    "start": [
+     0,
+     4
+    ],
+    "end": [
+     1,
+     0
+    ],
+    "cell": 60,
+    "hw": 20
+   }
   },
   {
    "id": "H5",

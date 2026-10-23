@@ -53,6 +53,7 @@ def conv_cell(a, kind, extra=None):
     raise ValueError(kind)
 
 def solve_conv(t):
+    t = t.replace("\u00a0", " ")
     m = re.fullmatch(r"(\d+) (km|kg|ℓ|m) = \? (m|g|mℓ|cm)", t)
     if m: return int(m.group(1)) * {"km": 1000, "kg": 1000, "ℓ": 1000, "m": 100}[m.group(2)]
     m = re.fullmatch(r"(\d+) (km|kg|ℓ) \+ (\d+) (m|g|mℓ) = \? (m|g|mℓ)", t)
@@ -101,9 +102,9 @@ def page22():
         else: continue
         break
     else: raise RuntimeError("p22")
-    texts = [[grid[(r, c)].replace("? ", "□ ") for c in range(n)] for r in range(n)]
+    texts = [[grid[(r, c)].replace(" = ? ", " = □\u00a0") for c in range(n)] for r in range(n)]   # the unit stays with the box (audit L8)
     body = maze_html(n, texts, start, finish, cls="maze tall conv")
-    P = new_page(22, 4222, "Equal Measures", 1, "Converting between km and m, m and cm, kg and g, ℓ and mℓ", STRAND_ME,
+    P = new_page(22, 4222, "Equal Measures", 1, "Changing units: km, m, cm, kg, g, ℓ and mℓ", STRAND_ME,
         "1.2, 1.3 (compound units; converting km and m, m and cm, kg and g, ℓ and mℓ)", ["ME1.2", "ME1.3"], "Maze / path", "K6 route closes at FINISH",
         ["Start at START. Move up, down, left or right.", f"Step only on boxes where the missing number is {T}.", "Do not step on a box twice."],
         body, "Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[(r, c)]}" for r, c in path),
@@ -202,12 +203,12 @@ def page24():
         A_, B_ = cu(big, small, *a), cu(big, small, *b)
         if big == "km" and it["k"] == "add": t = f"{it['n']} rides {A_} and then {B_}. How many metres is that in all?"
         elif big == "km": t = f"A path is {A_} long. {it['n']} has walked {B_}. How many metres are left?"
-        elif big == "kg" and it["k"] == "add": t = f"A bag has {A_} of rice and {B_} of flour. How many grams is that in all?"
+        elif big == "kg" and it["k"] == "add": t = f"Rice weighs {A_}. Flour weighs {B_}. How many grams is that in all?"
         elif big == "kg": t = f"A box weighs {a[0]} kg. {B_} are taken out. How many grams are left in the box?"
         elif it["k"] == "add": t = f"A tank has {A_}. {B_} more is poured in. How many mℓ is in the tank now?"
         else: t = f"A jug holds {A_}. {b[1]} {small} is poured out. How many mℓ is left?"
         texts.append(t); cards.append(qcard(i + 1, f"<p>{t}</p>", f'<span class="ab w4"></span> <b>{small}</b>'))
-    P = code_items_page(24, 4424, "Road Trip", 2, "Compound units: adding and subtracting km and m, kg and g, ℓ and mℓ", STRAND_ME,
+    P = code_items_page(24, 4424, "Road Trip", 2, "Adding and subtracting km and m, kg and g, ℓ and mℓ", STRAND_ME,
         "1.1, 1.2 (measuring length in kilometres and volume in millilitres; compound units)", ["ME1.1", "ME1.2", "ME1.3"], "Code-breaker (compound units)",
         ["Work out each answer in the smaller unit.", "Write it in the box.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 0, 9999,
@@ -253,6 +254,7 @@ def page25():
         if k == k2: continue
         break
     CLAIMED[25] = word
+    SETB = "heaviest" if unit[0] == "kg" else "greatest"
     A_s = sorted(A_, key=parse_measure); B_s = sorted(B_, key=lambda s: -parse_measure(s))
     lab = {}
     for i, v in enumerate(A_s): lab[("A", v)] = word[i]
@@ -260,11 +262,11 @@ def page25():
     shA = A_[:]; shB = B_[:]; rng.shuffle(shA); rng.shuffle(shB)
     def card_html(g, v): return f'<div class="fcard"><div class="fnum"><span class="bignum m">{v}</span></div><i class="cl">{lab[(g, v)]}</i></div>'
     body = (f'<div class="blk"><p class="lead">Set A: shortest first.</p><div class="fcards">{"".join(card_html("A", v) for v in shA)}</div></div>'
-            f'<div class="blk"><p class="lead">Set B: heaviest or most liquid first.</p><div class="fcards">{"".join(card_html("B", v) for v in shB)}</div></div>'
+            f'<div class="blk"><p class="lead">Set B: {SETB} first.</p><div class="fcards">{"".join(card_html("B", v) for v in shB)}</div></div>'
             f'<div class="blk"><p class="lead">Write the letters in order: Set A, then Set B.</p><div class="ansgrid2" style="margin-top:2mm">' + "".join('<span class="ab"></span>' for _ in range(6)) + '</div></div>')
     P = new_page(25, 4525, "Order the Measures", 2, "Length, mass and volume: comparing and ordering measures in different units", STRAND_ME,
         "1.2, 1.3 (compound units; converting km and m, kg and g, ℓ and mℓ)", ["ME1.2", "ME1.3"], "Ordering (lettered cards)", "K1 letters in order spell a word (6 letters) + K4 each card used once",
-        ["Put each set of measures in order.", "Write the letter of each card in its place.", "Set A: shortest first. Set B: greatest first."],
+        ["Put each set of measures in order.", "Write the letter of each card in its place.", f"Set A: shortest first. Set B: {SETB} first."],
         body, "Set A (shortest first): " + ", ".join(f"{lab[('A', v)]} = {v}" for v in A_s) + "; Set B (greatest first): " + ", ".join(f"{lab[('B', v)]} = {v}" for v in B_s), f"Word: {word}",
         "Each set has three measures of the same kind written in different ways (a mixed unit such as km and m, or only the smaller unit). To compare them the pupil changes them all to the smaller unit. The traps are the zeros in the middle (50 m, 5 m) and the number of thousands. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (every wrong order was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=None, mk=("logic",),

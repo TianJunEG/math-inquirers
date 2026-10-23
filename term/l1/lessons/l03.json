@@ -2720,7 +2720,15 @@
         47,
         74
       ],
-      "solution": "With 4 on the left the number is 47. With 7 on the left the number is 74. 7 tens is more than 4 tens, so 74 is greater."
+      "solution": "With 4 on the left the number is 47. With 7 on the left the number is 74. 7 tens is more than 4 tens, so 74 is greater.",
+      "visual": {
+        "type": "digit_cards",
+        "cards": [
+          "4",
+          "7"
+        ],
+        "hw": 22
+      }
     },
     {
       "id": "H2",
@@ -2752,7 +2760,16 @@
         60,
         96
       ],
-      "solution": "The 0 can not go on the left. The numbers are 60, 69, 90 and 96. The smallest is 60 and the greatest is 96."
+      "solution": "The 0 can not go on the left. The numbers are 60, 69, 90 and 96. The smallest is 60 and the greatest is 96.",
+      "visual": {
+        "type": "digit_cards",
+        "cards": [
+          "0",
+          "6",
+          "9"
+        ],
+        "hw": 32
+      }
     },
     {
       "id": "H5",

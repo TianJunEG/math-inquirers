@@ -140,7 +140,7 @@ def fish():
     b.add("bubble_3", C(160, 24, 17.5))
     for i, (x0, x1) in enumerate([(0, 60), (60, 120), (120, 180)]):
         b.add(f"sand_{i + 1}", R(x0, 183, x1, 200))
-    b.decor('<circle cx="25" cy="82" r="3.2" fill="#000"/>', C(25, 82, 3.2))
+    b.decor('<circle cx="25" cy="82" r="3.4" fill="#fff" stroke="#000" stroke-width="1.1"/>', C(25, 82, 3.6))   # eye: a ring, not the solid dot used for marks (audit L6)
     b.twin(["tail_up", "tail_dn"]).twin(["fin_top", "fin_bot"]).twin(["bubble_1", "bubble_2", "bubble_3"]).twin(["sand_1", "sand_2", "sand_3"])
     b.twin(["scale_1a", "scale_3b"]).twin(["scale_1b", "scale_3a"])
     return b.done()

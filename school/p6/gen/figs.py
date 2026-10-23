@@ -17,7 +17,7 @@ def _hatch_id(tag):
     return f"h{tag}"
 
 def hatch_def(tag):
-    return f'<pattern id="{_hatch_id(tag)}" width="1.6" height="1.6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="1.6" stroke="#000" stroke-width="0.35"/></pattern>'
+    return f'<pattern id="{_hatch_id(tag)}" width="2.0" height="2.0" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="2.0" stroke="#000" stroke-width="0.55"/></pattern>'
 
 def lab(v, unit="cm", kind=""):
     return f"{kind}{v} {unit}"
@@ -58,12 +58,16 @@ def rect_semi_fig(L, W, unit="cm", box=(48, 29)):
     return _svg(bw, bh, inner, "fig-svg fig-rsemi")
 
 def sq_semi_fig(s, unit="cm", box=(36, 38)):
-    """a square of side s with a semicircle of diameter s on top"""
-    bw, bh = box; k = min((bw - 8) / s, (bh - 8) / (1.5 * s)); a = s * k; x0 = (bw - a) / 2; y0 = bh - 4 - a
+    """a square of side s with a semicircle of diameter s on top; the side is dimensioned on the left and the lower part is labelled 'square'"""
+    bw, bh = box; a = min(bw - 17, (bh - 8) / 1.5); x0 = bw - 3.5 - a; y0 = bh - 4 - a
     d = f"M{x0},{y0+a} L{x0},{y0} A{a/2},{a/2} 0 0 1 {x0+a},{y0} L{x0+a},{y0+a} Z"
+    xd = x0 - 2.2
     inner = (f'<path class="ssemi" d="{d}" fill="#fff" stroke="#000" stroke-width="{SW}" stroke-linejoin="round"/>'
              f'<line x1="{x0}" y1="{y0}" x2="{x0+a}" y2="{y0}" stroke="#000" stroke-width="0.35" stroke-dasharray="1.2 1"/>'
-             + _t(x0 + a / 2, y0 + a / 2 + 1, f"{s} {unit}", cls="lab top"))
+             f'<line x1="{xd}" y1="{y0}" x2="{xd}" y2="{y0+a}" stroke="#000" stroke-width="0.4"/>'
+             f'<line x1="{xd-1}" y1="{y0}" x2="{xd+1}" y2="{y0}" stroke="#000" stroke-width="0.4"/><line x1="{xd-1}" y1="{y0+a}" x2="{xd+1}" y2="{y0+a}" stroke="#000" stroke-width="0.4"/>'
+             + _t(xd - 1.3, y0 + a / 2, f"{s} {unit}", anchor="end", cls="lab top", size=3.7)
+             + f'<text class="sqw" x="{x0 + a / 2:.2f}" y="{y0 + a / 2 + 0.5:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="700" font-size="3.6" fill="#000">square</text>')
     return _svg(bw, bh, inner, "fig-svg fig-ssemi")
 
 def sq_minus_quarter_fig(s, tag, unit="cm", box=(36, 36)):

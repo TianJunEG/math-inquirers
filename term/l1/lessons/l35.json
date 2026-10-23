@@ -3705,7 +3705,35 @@
    "text": "Ali makes a row of 4 shapes: big, big, small, big. Which shape is the odd one out? It is the ___ shape. (Write first, second, third or fourth.)",
    "answer": "third",
    "val": "third",
-   "solution": "The big shapes are the 1st, 2nd and 4th. The 3rd shape is small, so it is the odd one out."
+   "solution": "The big shapes are the 1st, 2nd and 4th. The 3rd shape is small, so it is the odd one out.",
+   "visual": {
+    "type": "panel",
+    "tiles": [
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "l"
+     },
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "l"
+     },
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "s"
+     },
+     {
+      "shape": "circle",
+      "n": 1,
+      "size": "l"
+     }
+    ],
+    "cell": 80,
+    "cols": 4,
+    "hw": 58
+   }
   },
   {
    "id": "H2",
@@ -3729,7 +3757,39 @@
    "text": "A pattern goes: star, circle, circle, star, circle, circle, and keeps going. What is the 10th shape? It is a ___. (Write star or circle.)",
    "answer": "star",
    "val": "star",
-   "solution": "The part that repeats is star, circle, circle. The stars are the 1st, 4th, 7th and 10th shapes, so the 10th shape is a star."
+   "solution": "The part that repeats is star, circle, circle. The stars are the 1st, 4th, 7th and 10th shapes, so the 10th shape is a star.",
+   "visual": {
+    "type": "panel",
+    "tiles": [
+     {
+      "shape": "star",
+      "n": 1
+     },
+     {
+      "shape": "circle",
+      "n": 1
+     },
+     {
+      "shape": "circle",
+      "n": 1
+     },
+     {
+      "shape": "star",
+      "n": 1
+     },
+     {
+      "shape": "circle",
+      "n": 1
+     },
+     {
+      "shape": "circle",
+      "n": 1
+     }
+    ],
+    "cell": 80,
+    "cols": 6,
+    "hw": 66
+   }
   },
   {
    "id": "H5",
