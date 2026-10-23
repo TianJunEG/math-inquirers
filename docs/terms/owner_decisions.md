@@ -195,3 +195,6 @@ Owner chose FRIDAY: place the holiday-workbook print order on Fri 6 Nov 2026 (no
 
 ## 23 Oct 2026 (night): TERM-YES
 Owner replied TERM-YES to the term-plan review (docs/pedagogy/term_review.md). Applied: the section 12 data fixes (plan hygiene) and the status of Decision 1 (toolbox spine adopted, built) and Decision 6 (superseded). Decisions 2 to 5 of section 12 were NOT individually answered and stay open until the owner answers them.
+
+## 23 Oct 2026 (night): KEEP-PAGES
+Owner chose to keep all the added holiday workbook pages. Print pages: Level 1 68, Level 2 74, Level 3 68, Level 4 76, Level 5 62, Level 6 62 (see docs/audit_final/holiday_diagram_fixes_L1_3.md and _L4_6.md; counts in outputs/print/print_spec.json and docs/printing/quote_request.md).

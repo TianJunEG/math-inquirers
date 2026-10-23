@@ -273,122 +273,87 @@ Answered and dropped: cohort and start term for holiday graduates (they start Te
 
 ## Non-routine assignments (owner decision, 23 Oct 2026)
 
-The owner asked that the non-routine question types found in school papers sit inside every term plan. Source: `docs/books/p5_non_routine_catalogue.md` (text-free summary of 2279 non-routine questions in 166 Primary 5 papers from 19 schools, 2020 to 2025; the questions themselves are in a private, gitignored file) and `docs/books/p5_school_paper_patterns.md` (wording, ranges, pictures, marks and the fit/gap table). **Every one of the 40 lessons now names its non-routine work: a heuristic or reasoning type, the tier where it sits (Think harder or Go further, never Start here) and, where one exists, an original example item.** The Level 1, 2 and 4 versions are `docs/terms/level_1_year_plan.md` section 8, `docs/terms/level_2_year_plan.md` and `docs/terms/level_4_year_plan.md`.
+**Correction, 23 Oct 2026 (TERM-YES, data fix).** This section previously held Primary 5 text by mistake (lessons "Shifting Places", "Factor Finders" and so on; `docs/terms/l3_preflight.md` finding 1). It is replaced by the Level 3 text rebuilt in `docs/terms/l3_preflight.md` section 4 from `docs/books/p3_non_routine_catalogue.md` and `docs/books/p3_school_paper_patterns.md`. Lesson numbers and titles match this plan's own lesson tables above. Check ids such as V1.4 point to the verification appendix of `l3_preflight.md`; the preflight is the working copy if the two ever differ. The Primary 5 assignments belong in `docs/terms/level_5_year_plan.md` and are not repeated here.
 
-How to read this section.
 
-- Type codes (16 types, as at Primary 4): LOG, CMP, BACK, CTX, LIST, EXP, GC, PAT, DIAG, MULTI, TAB, EQ, WAYS, CHAL, GEO, POSE. At Primary 5, **EQ** is the unit-and-equal-share model (the biggest group), **GEO** is the angle and area chain, **WAYS** is mostly "most or least" (buy more get free, cut the most), and **CMP** carries the average items.
-- **T** = Think harder, **G** = Go further. Status **N** = new assignment: no Level 5 term lesson is written yet, so every entry is a plan. The contest-style item named in the lesson's table row above is the lesson's Beyond MOE puzzle; the types below are the school-paper question types that sit beside it.
-- Example IDs (`EX-EQ-1` and so on) are original questions with scripted answers in `docs/books/p5_non_routine_catalogue.md`. Authors write their own items of the same kind and their own `verify/` check; they never copy a school or contest question. An entry with no ID is a plan line for the author to write.
-- **Previews.** Ratio notation, average, percentage change and "find the whole" are Primary 6 in the 2021 syllabus. The 2020 to 2024 papers set ratio and average at Primary 5; the 2025 papers do not. They stay as labelled previews at Think harder or Go further (owner decision 6); entries marked "P6 preview" are in that class.
-- Papers do not name the heuristic in the stem. Think harder items may name the tool ("draw a model") for a new type; Go further drops it.
+**Why this section exists.** The owner decided on 23 Oct that every term plan names, for each lesson, the non-routine question types it carries, the tier (Think harder or Go further, never Start here) and original example items, with the spiral shown as a type-by-lesson matrix. Source: `docs/books/p3_non_routine_catalogue.md` (1098 non-routine questions from 197 tests, 28 school labels, 2019 to 2025, 16 types; its per-type 'Where it belongs for us' lists) and `docs/books/p3_school_paper_patterns.md`. Examples are original and script-verified (`l3_preflight.md` appendix); no school text is copied.
 
-### Non-routine lesson by lesson
+How to read it. Types: CMP comparison (difference, sum, times as many, simultaneous prices); MULTI multi-step; BACK work backwards; EQ make equal or transfer; LOG number clues, ordering, missing digits; CTX unfamiliar context (offers, hidden fact, slow and fast watches); DIAG draw a model or diagram; GC guess and check, least or most; LIST systematic list; GEO area and perimeter reasoning; PAT pattern; EXP explain, true or false, not possible to tell; CHAL build a graph or answer from clues; WAYS how many ways; TAB table; POSE pose a question, what if, find the mistake. T = Think harder, G = Go further. Every entry is status N (planned; no Level 3 term lesson is written). The lesson's named Beyond puzzle (section 1 of `l3_preflight.md`) sits beside these types and takes one of the Think harder or Go further slots. Papers do not name the heuristic in the stem: a Think harder item may name the tool for a type new to that term, Go further drops it. 366 of the 1098 school items need the picture, so every picture-dependent item needs a drawn figure on the page (section 5 of `l3_preflight.md`).
 
-| # | Lesson | Non-routine types (tier, status): what | Catalogue items |
-|---|---|---|---|
-| 1 | Shifting Places | LIST (T, N): digit cards: smallest or greatest even number using every digit; EQ (T, N): a total with "times as many" and a change, in 5- and 6-digit numbers; POSE (G, N): write one possible number that rounds to a stated value and meets a second clue | EX-LIST-1 |
-| 2 | Factor Finders | LIST (T, N): pack two kinds of item into as many equal bags as possible; LIST (G, N): smallest number over 100 that shares equally among 6 or 8; LOG (T, N): true, false or not possible to tell: a number with exactly six factors; LOG (T, N): two-condition riddle with a multiple, a digit sum and a remainder; EXP (G, N): find a counterexample to a claim about multiples | EX-LIST-2, EX-LIST-3, EX-LOG-1, EX-LOG-2, EX-EXP-3 |
-| 3 | Smart Calculation | EXP (T, N): choose or write one expression for a shopping story, then find the change; LOG (T, N): true or false: odd or even result without calculating; POSE (G, N): place brackets or operations so a calculation makes 24; one possible way | EX-EXP-2 |
-| 4 | Mixed Numbers and Sharing | MULTI (T, N): fraction of the rest, then what is left; CTX (T, N): mixed numbers in a measurement story (ribbon, paint, hours and minutes); EQ (G, N): a fraction of one quantity equals a fraction of another; a difference given | EX-MULTI-1, EX-EQ-4 |
-| 5 | Fractions of Fractions | MULTI (T, N): fraction of a fraction in a bar model, then a difference; BACK (G, N): three-step fraction chain run backwards (give half and 3 more, twice); EQ (T, N): fraction relation between two bars, whole numbers in the answer | EX-MULTI-1, EX-BACK-3, EX-EQ-4 |
-| 6 | Decimal Sense | EQ (G, N): decimal unit chain: a difference, a spend, then "3 times as much"; CMP (T, N): sum and difference of two decimals; LIST (T, N): correct to the nearest tenth; greatest and least that round to a value; POSE (T, N): write one decimal between two others | EX-EQ-3, EX-CMP-1 |
-| 7 | Boxed-In Triangles | GEO (T, N): any point on a side: total area of two triangles; GEO (G, N): overlap of a square and a triangle in the ratio shaded : whole; CHAL (G, N): draw a rectangle with twice the area of a given triangle on a grid; EXP (T, N): true, false or not possible to tell: triangles with equal heights | EX-GEO-2, EX-CHAL-2 |
-| 8 | Angles and Triangle Families | GEO (T, N): isosceles triangle with an extended side: exterior angle; GEO (G, N): angles in two joined isosceles triangles with an equal-sides clue; LOG (T, N): true, false or not possible to tell about the angles of a figure; EXP (G, N): circle "is" or "is not" a parallelogram, with a reason | EX-GEO-1, EX-GEO-3 |
-| 9 | Two Groups and the Overlap | CMP (T, N): three pair totals, find one amount; TAB (T, N): two-way table with a missing entry and a percentage; MULTI (G, N): two groups (girls and boys) with different fractions; find the class size; LOG (T, N): who is where: order from clues | EX-CMP-3, EX-TAB-1, EX-MULTI-3, EX-LOG-3 |
-| 10 | Term 1 Review and Challenge | EQ (T, N): "times as many", then a transfer so they are equal; BACK (T, N): spent a fraction, then a fixed amount; money left; CHAL (G, N): design a puzzle that has exactly one answer; LOG (G, N): a four-person ordering puzzle; PAT (T, N): a repeating pattern: the 117th term and the sum of the first n | EX-EQ-1, EX-BACK-1, EX-LOG-3 |
-| 11 | Solid Views and Dice | DIAG (T, N): cubes in each square of the top view: total and front-view heights; LIST (G, N): greatest number of cubes that can be added without changing two views; LOG (T, N): dice: which faces touch, which view cannot be right | EX-DIAG-1 |
-| 12 | Boxes and Bricks | LIST (T, N): greatest number of small cubes that fit in a box; WAYS (G, N): list every cuboid of a given volume; which has least surface; EQ (T, N): volume story: two boxes, one is "twice as long" | EX-LIST-4 |
-| 13 | Tank Tales | BACK (T, N): a tank 3/8 full; 2250 ml more fills it to 7/8; DIAG (G, N): a solid block laid in a tank: new water depth; CTX (T, N): water poured from one tank into another: depth in the second | EX-BACK-2, EX-DIAG-3 |
-| 14 | Decimal Measures | CTX (T, N): mixed-unit bill: m and cm, kg and g; TAB (T, N): water bill table: July is 2500 more than June; POSE (G, N): write down one possible set of values for two unknown readings | (author's own items) |
-| 15 | Cut and Rearrange | GEO (G, N): folded corner of a rectangle: area of the unshaded part; EXP (T, N): true, false or not possible to tell: parallelogram and rectangle on the same base; CHAL (T, N): draw a parallelogram with the same area as a given triangle | (author's own items) |
-| 16 | Rate and Working Together | CTX (T, N): car park: first hour, then every half hour or part of it; CTX (G, N): taxi: greatest distance for a stated fare; TAB (T, N): charge table with steps (postage, delivery); GC (T, N): two taps or workers: how long together | EX-CTX-1, EX-CTX-3 |
-| 17 | Fair Shares | CMP (G, N): average of five, a sixth is added (P6 preview); CHAL (T, N): draw the missing bar so the average is a stated value; TAB (T, N): bar graph: which class is closest to the average; EXP (G, N): two groups combined: why the average is not the middle | EX-CMP-4, EX-CHAL-1 |
-| 18 | Graph Stories | TAB (G, N): line graph: in which hour was water drained fastest; CHAL (T, N): draw a line graph from a table and a story; EXP (T, N): spot a misleading axis; TAB (T, N): pie chart with one count: find the total | EX-TAB-2 |
-| 19 | Isometric Builders | DIAG (T, N): cuboid on isometric dot paper: faces you can see; LIST (G, N): greatest number of cubes to add so the top and front views stay the same; DIAG (G, N): match a rotated block figure to its original | EX-DIAG-2 |
-| 20 | Term 2 Review and Challenge | CTX (T, N): buy 3 get 1 free: least cost for a class; GEO (G, N): a composite figure with a perimeter given and an area asked; EQ (G, N): bar model with a fraction and a difference | EX-CTX-2, EX-EQ-2 |
-| 21 | Percent Sense | POSE (T, N): why a percentage of a whole number of pupils cannot be right; EXP (T, N): 25% of 80 and 80% of 25: equal? explain; TAB (T, N): percentage of items from a two-way table, to the nearest whole number; LOG (T, N): which class collected 40% of all the items | EX-POSE-1, EX-EXP-1, EX-TAB-1 |
-| 22 | Shop Smart | CTX (T, N): buy 3 get 1 free: least cost; MULTI (T, N): discount, then GST at 9%; WAYS (T, N): least cost of packages and singles for a group; CTX (G, N): compare two shops with different pack sizes | EX-CTX-2, EX-MULTI-2 |
-| 23 | One Number as a Percent of Another | MULTI (G, N): percentage of a remainder, then a difference; LOG (T, N): true, false or not possible to tell: 52% of the cars are red; BACK (G, N): find the whole from a percentage (P6 preview) | (author's own items) |
-| 24 | Unequal Parts | EQ (T, N): a bag costs $9 more than a cap; two bags and three caps; EQ (G, N): ratio before and after a gift (P6 preview); CMP (G, N): three people in a chain, one is twice another; EQ (T, N): ages: "in how many years will he be 4 times as old" | EX-EQ-2, EX-EQ-5, EX-CMP-2 |
-| 25 | Balance and Undo | BACK (G, N): undo three steps: give half and 3 more, twice; GC (T, N): heads and legs, two kinds of animal; EXP (T, N): find the error in a worked solution; EQ (T, N): balance with shapes and a total | EX-BACK-3, EX-GC-1 |
-| 26 | Number Stories | PAT (T, N): matchstick figures: the nth figure and which figure; PAT (T, N): repeating colours: the 100th bead and a count; PAT (G, N): triangle numbers: first figure over 200; TAB (T, N): a table for a growing pattern | EX-PAT-1, EX-PAT-2, EX-PAT-3 |
-| 27 | Count Without Counting | WAYS (T, N): a line of four with two who must not be next to each other; WAYS (G, N): handshakes among nine children; LIST (T, N): every pair of numbers with a stated sum and product | EX-WAYS-2, EX-WAYS-3 |
-| 28 | Supposition Studio | GC (T, N): supposition: two ticket prices; GC (G, N): two scenarios: left over and short; WAYS (T, N): coins: how many ways to make a total; WAYS (G, N): least cost with two pack sizes and a budget | EX-GC-2, EX-GC-3, EX-WAYS-1 |
-| 29 | Money Grows | CTX (T, N): interest for several years: compare two saving plans; MULTI (T, N): discount, GST and interest in one bill; POSE (G, N): could he be right? pens sold only in packs of 3 for $2 | EX-POSE-2 |
-| 30 | Term 3 Review and Challenge | MULTI (T, N): a fraction-then-percent chain; GC (T, N): quiz scoring: points for a correct and a wrong answer; CHAL (G, N): a contest-style item the child sets up alone; PAT (T, N): savings that grow by a fixed step: the week with $60 | (author's own items) |
-| 31 | Angles in Shapes | GEO (T, N): angle chain in a pentagon with equal sides; LOG (T, N): true, false or not possible to tell: angle statements; CHAL (T, N): draw a regular polygon from its angle | (author's own items) |
-| 32 | Triangles and Quadrilaterals | EXP (T, N): always, sometimes or never: parallelogram, rhombus, trapezium; DIAG (T, N): complete a symmetric figure about a line; LOG (T, N): which shape am I? clues about sides and angles; GEO (G, N): angles in a trapezium with a rhombus on one side | (author's own items) |
-| 33 | Clocks and Calendars | BACK (T, N): find the start from the end across noon; TAB (T, N): timetable with a break: duration; PAT (G, N): the day of the week after n days; CTX (G, N): 24-hour clock and pay by the hour | (author's own items) |
-| 34 | Logic Grids and Digit Puzzles | LOG (T, N): ordering puzzle with four runners; LOG (G, N): one liar among four; a short cryptarithm; EXP (T, N): find the error in a digit puzzle solution | EX-LOG-3 |
-| 35 | Odd, Even, Remainders and Extremes | LOG (T, N): parity: can the total be odd?; LIST (G, N): extreme case: least and greatest possible; EXP (T, N): counterexample for a claim about remainders | EX-EXP-3 |
-| 36 | Working Backwards | BACK (T, N): fraction then a fixed amount: money at first; BACK (G, N): three-stage chain with halves; EQ (G, N): make equal, then find the start | EX-BACK-1, EX-BACK-3, EX-EQ-1 |
-| 37 | The Long Question | MULTI (T, N): a three-step story with a percentage; EQ (G, N): a four-step unit chain with decimals; CTX (G, N): a charge in steps inside a longer story | EX-MULTI-2, EX-EQ-3, EX-CTX-1 |
-| 38 | Children Set the Problem | POSE (T, N): write a new question with the same model and check it; CHAL (G, N): write one with a unique answer and prove it; EXP (T, N): find the error in a classmate's solution | (author's own items) |
-| 39 | Colouring, Cycles and Choices | WAYS (T, N): count colourings by choosing one colour at a time; PAT (T, N): a cycle: the nth term of a repeating colouring; LIST (G, N): least colours with a proof it cannot be fewer | (author's own items) |
-| 40 | Year Showcase | EXP (T, N): choose a move for a mixed set and say why; POSE (G, N): explain why a claim cannot be right; CHAL (G, N): a showcase problem the child sets and solves | EX-POSE-1 |
+### Lesson by lesson
+
+| # | Lesson | Non-routine types (tier): what (check) |
+|---|---|---|
+| 1 | Number Lines to 10 000 | LOG T: riddle on a line between 6400 and 6700 (V1.4); EXP T: true, false or not possible to tell about points on a line; PAT G: alternating steps (V1.3) |
+| 2 | Write It Down, Check It | BACK T: a number plus 2583 is 6479 (V2.2); EXP T: find the slip in a worked column (V2.3); LOG G: two missing digits in a subtraction, one item (V2.4) |
+| 3 | Multiply by Splitting | MULTI T: boxes, sales and packs (V3.2); EXP T: 6 x 48 = 6 x 50 - 6 x 2; TAB T: tricycle wheels; CMP T: times as many with a difference |
+| 4 | Divide It Up | GC T: least number of buses, round up (V4.2); EXP T: true, false or not possible to tell about bags of 54 (V4.3); BACK T: dividend from quotient and remainder (V4.4); LOG G: smallest and biggest with remainder 5 (V4.5) |
+| 5 | Mental Maths Moves | LIST T: pairs that make 1000 in a list (V5.5); EQ T: a balanced equation without adding both sides (V5.4); PAT G: total of a stepping list by pairing (V5.2, V5.6) |
+| 6 | The Hidden Question | CMP T: reversal trap and sum and difference (V6.2); MULTI T: boxes, sale, packs (V6.4); BACK T: undo a story (V6.1); LOG G: a story that cannot work (V6.5) |
+| 7 | Fractions on the Number Line | EQ T: missing numerator and parts to shade (V7.4); EXP T: same point on the line (V7.1); LOG G: fractions between two fractions (V7.5) |
+| 8 | Dollars and Cents | CTX T: offers, exactly 11 pens (V8.2); LIST T: which two items make exactly $8.30 (V8.3); GC T: exactly $59 with a count limit (V8.4); WAYS G: all ways to pay $26 (V8.5) |
+| 9 | Time Detectives | CTX T: slow watch (V9.4); BACK T: start from end and duration (V9.3); BACK G: fast watch read twice (V9.5); CMP G: two watches |
+| 10 | Price per Piece (and the Quest) | CMP T: simultaneous prices (V10.2); CTX T: free items (V10.3, V10.4); TAB T: rate table; BACK T: price of one from paid and change; CTX G: free pen price (V10.5, V10.6) |
+| 11 | Length and Distance | DIAG T: posts and gaps (V11.1, V11.2); GEO T: circuit (V11.4); CMP T: routes (V11.5); MULTI G: three-day distance (V11.3); DIAG G: gaps in time (V11.7) |
+| 12 | Mass and Volume | DIAG T: balance with identical objects (V12.3, V12.4); MULTI T: tank of jugs (V12.5); BACK T: cup from plate and cups (V12.6); CMP T: heavier by a multiple; DIAG G: weighed twice (V12.7) |
+| 13 | Fences and Floors | GEO T: perimeter to area, same perimeter (V13.1, V13.2, V13.4); EXP T: statements about two figures; GEO G: wire bent twice, stretched side (V13.3, V13.5) |
+| 14 | Cut, Slide, Count | GEO T: half squares and an L-shape (V14.1, V14.3); EXP T: same area?; LIST G: which pieces make the figure; MULTI G: floor cost (V14.2) |
+| 15 | Lines and Corners | LOG T: letters with both kinds of line; LIST T: list the perpendicular pairs; EXP G: a counterexample about crossing lines (Beyond item: V15.1) |
+| 16 | Bar Graphs that Tell Stories | EXP T: true, false or not possible to tell from a graph (V16.3); CMP T: differences; EQ T: make two bars equal; CHAL G: missing bar, missing scale (V16.1, V16.2) |
+| 17 | Patterns That Grow | PAT T: seats, growing gaps, alternating steps (V17.1, V17.2, V17.4); LOG T: two-number sign from four examples (V17.3); PAT G: two patterns that meet (V17.5) |
+| 18 | Balance and Swap | DIAG T: chained balances (V18.1); CMP T: baskets that differ by one item (V18.3); EQ T: a box used twice (V18.2); EQ G: gap after a gift (V18.4) |
+| 19 | Cube Stacks and Views | LOG T: match the views; DIAG T: draw the top view; LIST G: fewest and most cubes (V19.2) |
+| 20 | The Class Shop (and the Quest) | CMP T: compare two plans; MULTI T: a budget; GC T: guess and check a purchase; BACK G: a backwards sales story; WAYS G: every plan listed |
+| 21 | Fold, Flip, Mirror | LOG T: mirror image feature by feature; EXP T: statements about mirror images; PAT G: fold counts and pieces (V21.1, V21.2) |
+| 22 | Picture Patterns | PAT T: bead cycle (V22.1); LOG T: combine-and-remove grid (V22.2); CHAL G: invent a grid |
+| 23 | Turns and Corners | LOG T: sequence of turns (V23.1); LIST T: quarter-hour clock angles (V23.2); CTX G: directions without a compass |
+| 24 | Model Makers: Times As Many | CMP T: times as many with a difference or total (V24.1, V24.4); DIAG T: four-bar model; MULTI T: prices with times as much (V24.5); CMP G: three in a chain (V24.2) |
+| 25 | Before and After | BACK T: paid and change (V25.2); EQ T: gap shrinks by twice a gift, unchanged sum (V25.1, V25.3); EQ G: gap to equal (V25.4) |
+| 26 | Magic Totals | LOG T: plus shape (V26.2), the 3 by 3 square (V26.3); LOG G: impossible totals (V26.1); CHAL G: design a magic figure |
+| 27 | Fractions Everywhere | CTX T: fractions of measures (V27.1); MULTI T: fractions left; CMP G: related sums; EQ G: the missing fraction (V27.2) |
+| 28 | Jugs, Scales and Balances | BACK T: pour out in steps; DIAG T: draw both jugs; GC G: fewest moves (V28.1); DIAG G: which amounts are possible |
+| 29 | Who Sat Where? | LOG T: four in a row (V29.1); EXP T: true, false or not possible to tell (V29.3); LOG G: is the answer unique (V29.2); EXP G: one clue is false |
+| 30 | The Playground Plan (and the Quest) | GEO T: fence and area; MULTI T: cost; CMP T: compare two plans; CHAL G: biggest playground (V30.1) |
+| 31 | Factors, Multiples and Tests | LOG T: digit riddles with the 3s test (V31.1, V31.2); EXP T: statements about the 6s table; PAT G: exactly three or four factors (V31.3) |
+| 32 | Cycles and Remainders | LOG T: weekday after 95 days, multiples in a range, 4s or 6s (V32.3, V32.2, V32.1); PAT T: last digit cycle (V32.6); GC G: round up and round down (V32.5) |
+| 33 | Counting Carefully | WAYS T: outfits, teams, a banned pair (V33.1, V33.2); LIST T: list the teams; DIAG G: ring of trees and lamps (V33.4) |
+| 34 | Counting Digits and Pages | LOG T: nth number with only even digits (V34.1); LIST T: list numbers by digit rule; CHAL G: pages from digits (V34.2) |
+| 35 | Timetable Puzzles | BACK T: start from end across noon; MULTI T: timetable steps; TAB T: both orders (V35.1); CMP G: two journeys; CTX G: three legs with a delay |
+| 36 | Target Practice | GC T: reach a target; EQ T: brackets that keep both sides equal; LOG G: every number 1 to 10 (V36.1) |
+| 37 | Most for the Least | GC T: heads and legs (V37.3); CTX T: sticker ink, offers under a budget (V37.1, V37.4); WAYS G: a second limit (V37.5) |
+| 38 | Contest Lab | LOG T: possible or impossible (V38.1, V38.2); EXP T: find the error; MULTI T: a two-step problem; CHAL G: an impossible puzzle designed; CMP G: two moves |
+| 39 | Problem-Solving Studio | POSE T: a question for a given answer (V39.2); EXP T: find the mistake (V39.1); POSE G: change one number (V39.1) |
+| 40 | Mathematicians' Fair (and the Quest) | POSE T: write a problem with its solution; POSE G: a puzzle with a rule; CHAL G: a proof; WAYS G: a family of problems |
 
 ### Matrix: type by lesson (the spiral across the year)
 
-`N` = planned in a lesson not yet written; `.` = not planned. Lessons 1 to 40 in four groups of ten (one group per term).
+`T` = Think harder only, `G` = Go further only, `B` = both; `.` = not planned. Lessons 1 to 40 in four groups of ten (one group per term). No type sits at Start here.
 
 ```
 Lesson   1234567890 1234567890 1234567890 1234567890
 Term     1111111111 2222222222 3333333333 4444444444
-EQ       N..NNN...N .N.......N ...NN..... .....NN...
-GEO      ......NN.. ....N....N .......... NN........
-LOG      .NN....NNN N......... N.N....... NN.NN.....
-CTX      ...N...... ..NN.N...N .N......N. ..N...N...
-LIST     NN...N.... NN......N. ......N... ....N...N.
-MULTI    ...NN...N. .......... .NN.....NN ......N...
-BACK     ....N....N ..N....... ..N.N..... ..N..N....
-CHAL     ......N..N ....N.NN.. .........N N......N.N
-EXP      .NN...NN.. ....N.NN.. N...N..... .N.NN..N.N
-TAB      ........N. ...N.NNN.. N....N.... ..N.......
-GC       .......... .....N.... ....N..N.N ..........
-PAT      .........N .......... .....N...N ..N.....N.
-DIAG     .......... N.N.....N. .......... .N........
-CMP      .....N..N. ......N... ...N...... ..........
-WAYS     .......... .N........ .N....NN.. ........N.
-POSE     N.N..N.... ...N...... N.......N. .......N.N
+EQ       ....T.T... .....T.B.. ....B.G... .....T....
+GEO      .......... T.BT...... .........T ..........
+LOG      TG.G.GG... ....T.T.T. TTT..B..B. TT.T.G.T..
+CTX      .......TTB .......... ..G...T... ....G.T...
+LIST     ....T..T.. ...GT...G. ..T....... ..TT......
+MULTI    ..T..T.... GT.G.....T ...T..T..T ....T..T..
+BACK     .T.T.T..BT .T.......G ....T..T.. ....T.....
+CHAL     .......... .....G.... .G...G...G ...G...G.G
+EXP      TTTT..T... ..TTGT.... T.......B. T......TT.
+TAB      ..T......T .......... .......... ....T.....
+GC       ...T...T.. .........T .......G.. .G...TT...
+PAT      G...G..... ......B... GT........ GT........
+DIAG     .......... BB.....TT. ...T...B.. ..G.......
+CMP      ..T..T..GT TT...T.T.T ...B..G..T ....G..G..
+WAYS     .......G.. .........G .......... ..T...G..G
+POSE     .......... .......... .......... ........BB
 ```
 
-| Type | Lessons | Terms with it | School items (2279) |
-|---|---|---|---|
-| EQ | 11 | T1, T2, T3, T4 | 492 |
-| GEO | 6 | T1, T2, T4 | 382 |
-| LOG | 12 | T1, T2, T3, T4 | 164 |
-| CTX | 9 | T1, T2, T3, T4 | 300 |
-| LIST | 9 | T1, T2, T3, T4 | 45 |
-| MULTI | 8 | T1, T3, T4 | 80 |
-| BACK | 7 | T1, T2, T3, T4 | 193 |
-| CHAL | 9 | T1, T2, T3, T4 | 23 |
-| EXP | 14 | T1, T2, T3, T4 | 93 |
-| TAB | 8 | T1, T2, T3, T4 | 99 |
-| GC | 4 | T2, T3 | 30 |
-| PAT | 5 | T1, T3, T4 | 98 |
-| DIAG | 4 | T2, T4 | 127 |
-| CMP | 4 | T1, T2, T3 | 97 |
-| WAYS | 5 | T2, T3, T4 | 49 |
-| POSE | 8 | T1, T2, T3, T4 | 7 |
+Lessons per type (of 40): EQ 7; GEO 4; LOG 18; CTX 7; LIST 8; MULTI 11; BACK 10; CHAL 7; EXP 14; TAB 3; GC 7; PAT 7; DIAG 7; CMP 14; WAYS 5; POSE 2.
 
-EQ and BACK are in all four terms, MULTI in Terms 1, 3 and 4, because the first weighted assessments of the school year already test fraction-of-remainder and transfer stories while the unit-model lesson (24) is in Term 3: the Term 1 and Term 2 lessons carry the early unit-chain practice. GEO is in Terms 1, 2 and 4, where the angle, area and fold lessons are. WAYS, GC and CMP are small groups in the papers (49, 30 and 97 items) and sit only where the plan already has a home.
+**Departures from the catalogue's own lesson lists** (and why): (a) LIST Think harder at lesson 1 (digit cards, EX-LIST-1) is dropped because it is holiday lesson H1's core; digit-card listing lives at lesson 34 only as a sorted list under a digit rule, never as 'smallest or greatest from cards'. (b) EQ Go further at lesson 24 (a gift so two amounts are equal) is dropped because H4 sets it; lessons 25 and 27 keep the EQ Go further. (c) CMP Go further at lesson 5 has no natural home and is dropped. (d) Added: LOG at 6, 17, 38; LIST at 33; MULTI at 14; EXP at 1 and 13; GC at 8; PAT at 5; CMP at 3. The catalogue's per-type verdicts (CMP 14 lessons, MULTI 10, BACK 10, EQ 8, LOG 15, CTX 7, DIAG 7, GC 6, LIST 8, GEO 4, PAT 6, EXP 12, CHAL 7, WAYS 5, TAB 3, POSE 2) are met or exceeded except EQ (7 against 8, because lesson 24's EQ is H4's); POSE (2) and TAB (3) equal them and match the thin paper counts (2 and 5 items).
 
-### Notes: what the Primary 5 papers change in this plan
+### Paper-based changes this plan adopts (from `p3_school_paper_patterns.md` section 6)
 
-Evidence is in `docs/books/p5_school_paper_patterns.md` (sections 0, 3 and 4). These are plan changes for the lesson authors; the lesson tables above are not edited here, so the wording below overrides them where they differ.
-
-- **Unit chains arrive in Term 1 in school, not Term 3.** The first weighted assessment already has fraction-of-remainder and transfer stories (EQ 492, BACK 193, MULTI 80 items overall). The plan teaches the bar model in lesson 24 only. Put a unit-chain Think harder item in lessons 4, 5, 6, 9 and 10 (whole numbers, fractions, decimals), and keep the lesson 24 content as the full treatment.
-- **True, false or not possible to tell** is the school wording for a statement item and is not in the plan (72 items in LOG and EXP, every year from 2020). Use it in lessons 2, 7, 8, 15, 23, 31 and 32, with all three choices in the stem; accept a reason in words.
-- **Angle chains are the largest geometry group** (GEO 382; most are angles in isosceles, equilateral, parallelogram and trapezium figures, and in folded paper). Lesson 8 should carry two-triangle chains at Think harder; 31 and 32 carry quadrilateral chains; every Review lesson (10, 20, 30) gets an angle warm-up.
-- **Area items are "ratio of areas" and "any point on a side"**, not formulas: overlapping squares and triangles, a shaded part, a rectangle with a triangle inside. Add them to lessons 7 and 15 (Think harder), and draw-on-a-grid tasks (a triangle or rectangle with a stated area) to lesson 7.
-- **Views of cubes with "greatest number that can be added"** (LIST, 2025) and "draw the top, front and side view" belong in lessons 11 and 19; isometric drawing of a cuboid is a 2025 item (lesson 19).
-- **Charges in steps, buy-more-get-free and least-cost packages** (about 80 items) are not in the plan. Put "every additional half hour or part thereof" and "greatest distance for a fare" in lesson 16, buy 3 get 1 free and discount then GST in lesson 22, and least cost with two pack sizes in lesson 28.
-- **Packing and sharing with HCF and LCM** ("as many bags as possible", "smallest number shared among 6 or 8") are 2025 items in lesson 2, at Think harder.
-- **Tanks with a block or a second tank** (59 CTX items) go in lesson 13 as Go further: depth after a block is laid in, depth after pouring.
-- **GST is 9 percent** in the 2025 papers (7 percent before). Child pages state 9 percent; practice from older papers may say 7 percent. Annual interest is in lesson 29 and is on the 2025 list.
-- **Ratio and average stay previews.** They are 174 and 87 items in the 2020 to 2024 papers and absent in 2025. Keep lesson 17 (average) and the notation in lesson 24 as labelled previews; the 2025 wording ("times as many", "for every") is taught at Start here in lesson 24.
-- **Draw-it items** (complete a symmetric figure, draw a triangle with a stated area, draw the missing bar) need a drawing on the page and a marking rule; add symmetry drawing to lesson 32 and a missing-bar item to lessons 17 and 18. There is no symmetry lesson at Level 5.
-- **Marks and form.** Paper 2 problems are 3 to 5 marks with (a) and (b), where (b) uses (a); Think harder two-part items follow that form, and Go further may add a third part. In 2025 Paper 2 Questions 1 to 5 are single 2-mark items.
-- **Picture dependence.** Many items need a figure (angle diagrams, overlapping shapes on a grid, graphs, views); every picture-dependent item needs a drawn figure on the page. Figures were not seen in this analysis, only their wording.
-- **Not seen in the papers read:** painted cubes, colouring and cycles (lesson 39), cryptarithms (lesson 34), clock-hand angles and calendars (lesson 33), pigeonhole (lesson 35), and logic grids beyond ordering puzzles. They stay as optional Beyond MOE items.
+1. Times as many at Start here in lessons 3 and 6, with the Think harder 'with a difference' (lessons 3, 6, 24). 2. Round-up 'least number of boxes' at Think harder in lessons 4 and 32, true or false for 'none left' in lesson 4. 3. Offers, 'which two items', the one-extra-item bill: lessons 8, 10, 18, 37. 4. Fast and slow watches and a drawn timeline: lessons 9 and 35. 5. Posts and gaps on a line in lesson 11; the ring in 33. 6. 'Same perimeter, different area', 'wire bent into', 'made up of identical rectangles', 'area of one tile': lessons 13 and 14. 7. Bar graph with the scale removed, a missing bar, a picture key of 5 or 6: lesson 16. 8. True, false or not possible to tell in lessons 4, 14, 16 and 29 (and 1, 7, 13, 21, 31, 38, 39). 9. A list-all-the-ways routine in a Term 2 warm-up (section 9 of `l3_preflight.md`). 10. Posing and error analysis (lessons 2, 38, 39, 40). 11. Lessons 19, 21, 22, 23, 26, 34 and 36 keep their contest-style content and are labelled beyond school (no paper evidence).
