@@ -349,7 +349,7 @@
      "Working:"
     ]
    },
-   "explanation": "The first hour is $2.00. After that 1 hour 20 minutes is left. That is 2 full half hours and 20 minutes more, which counts as one more half hour: 3 lots. 3 × $0.80 = $2.40. Total: $2.00 + $2.40 = $4.40."
+   "explanation": "First hour $2.00. Then 1 hour 20 minutes is 2 half hours and a part, so 3 lots: 3 × $0.80 = $2.40. Total $4.40."
   },
   {
    "id": "L5U06-S10",
@@ -474,7 +474,7 @@
      "Working:"
     ]
    },
-   "explanation": "Each visit costs Plan B $4 more than Plan A. The $20 monthly fee of Plan A is paid back after 20 ÷ 4 = 5 visits. At 5 visits: Plan A costs 20 + 20 = $40 and Plan B costs 5 × 8 = $40."
+   "explanation": "Plan B costs $4 more a visit. The $20 fee is paid back after 20 ÷ 4 = 5 visits (both $40)."
   },
   {
    "id": "L5U06-S14",
@@ -514,7 +514,7 @@
     ]
    },
    "hint": "List every way to make 32 pens with whole packs.",
-   "explanation": "Find the ways to make exactly 32 pens: 1 pack B + 2 packs C (8 + 24), 4 packs B (32), and 4 packs A + 1 pack C (20 + 12). Costs: $4.70 + 2 × $6.90 = $18.50; 4 × $4.70 = $18.80; 4 × $3.00 + $6.90 = $18.90. The least is $18.50."
+   "explanation": "Ways to make 32 pens: B + 2C = $18.50; 4B = $18.80; 4A + C = $18.90. The least is $18.50."
   },
   {
    "id": "L5U06-T02",
@@ -536,7 +536,7 @@
     ]
    },
    "hint": "Pretend the job has 60 pages. How many pages a minute for each?",
-   "explanation": "Pretend the job has 60 pages (a number that 12 and 20 both go into). P prints 60 ÷ 12 = 5 pages a minute. Q prints 60 ÷ 20 = 3 pages a minute. Together: 8 pages a minute. 60 ÷ 8 = 7.5 minutes."
+   "explanation": "Pretend 60 pages. P: 5 a minute. Q: 3 a minute. Together 8 a minute. 60 ÷ 8 = 7.5 minutes."
   },
   {
    "id": "L5U06-T03",
@@ -558,7 +558,7 @@
     ]
    },
    "hint": "Find the sheets for 1 printer in 1 minute first.",
-   "explanation": "4 printers print 480 sheets in 6 minutes, so 1 printer in 6 minutes prints 480 ÷ 4 = 120 sheets. In 1 minute 1 printer prints 120 ÷ 6 = 20 sheets. 6 printers in 5 minutes: 6 × 5 × 20 = 600 sheets."
+   "explanation": "1 printer prints 480 ÷ 4 ÷ 6 = 20 sheets a minute. 6 × 5 × 20 = 600 sheets."
   },
   {
    "id": "L5U06-G01",
@@ -580,7 +580,7 @@
     ]
    },
    "hint": "Find the minutes for each half first. Then add the minutes.",
-   "explanation": "First half: 60 ÷ 6 = 10 minutes. Second half: 60 ÷ 12 = 5 minutes. The whole tank takes 15 minutes. The average rate is 120 ÷ 15 = 8 litres a minute. It is not (6 + 12) ÷ 2 = 9, because more time is spent at the slow rate.",
+   "explanation": "First half 60 ÷ 6 = 10 minutes. Second half 60 ÷ 12 = 5 minutes. 120 ÷ 15 = 8 litres a minute (not 9: more time is spent at the slow rate).",
    "beyond": "Average rate"
   },
   {
@@ -603,7 +603,7 @@
     ]
    },
    "hint": "How many litres does the gap between the tanks close each minute?",
-   "explanation": "At first A has 80 litres more than B. Each minute A loses 5 and B gains 3, so the gap closes by 8 litres. 80 ÷ 8 = 10 minutes. Then A has 90 - 50 = 40 litres and B has 10 + 30 = 40 litres."
+   "explanation": "A has 80 litres more. The gap closes by 5 + 3 = 8 a minute: 10 minutes (40 litres each)."
   },
   {
    "id": "L5U06-G03",
@@ -625,7 +625,7 @@
     ]
    },
    "hint": "How many litres has tap A put in before tap B starts?",
-   "explanation": "In the first 5 minutes tap A puts in 5 × 8 = 40 litres. 200 - 40 = 160 litres are left. Together the taps put in 8 + 12 = 20 litres a minute. 160 ÷ 20 = 8 more minutes. The tank is full 5 + 8 = 13 minutes after the start."
+   "explanation": "Tap A alone: 5 × 8 = 40 litres. 160 left at 20 a minute: 8 minutes. 5 + 8 = 13 minutes."
   },
   {
    "id": "L5U06-C01",
@@ -694,7 +694,7 @@
     ],
     "text": "$3.90"
    },
-   "explanation": "The first hour is $1.50. 1 hour 45 minutes is left: 3 full half hours and 15 minutes more, so 4 lots. 4 × $0.60 = $2.40. Total: $1.50 + $2.40 = $3.90."
+   "explanation": "First hour $1.50. 1 hour 45 minutes is 4 lots: 4 × $0.60 = $2.40. Total $3.90."
   }
  ]
 }

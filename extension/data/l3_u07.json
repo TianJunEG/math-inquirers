@@ -236,7 +236,7 @@
      }
     }
    ],
-   "explanation": "(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 cm.",
+   "explanation": "(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 m.",
    "partsrow": true
   },
   {
@@ -664,7 +664,7 @@
     }
    ],
    "explanation": "Each rectangle is 8 cm by 4 cm, so its perimeter is 2 × (8 + 4) = 24 cm. Together: 48 cm. The square’s perimeter is 32 cm, and 48 - 32 = 16. The cut is 8 cm long and it appears on both pieces, so it adds 2 × 8 = 16 cm.",
-   "hint": "Each rectangle is 8 cm by 4 cm. Draw it.",
+   "hint": "Draw the square. Draw the cut.",
    "space": {
     "rows": [
      "Working:"
@@ -711,40 +711,40 @@
    "id": "L3U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "A rectangle is 9 m long and 6 m wide. A rectangle 3 m by 2 m is cut out of one corner, as shown.",
+   "text": "A square with sides of 4 cm and a square with sides of 3 cm are joined side by side. Their bottom edges are level, as shown.",
    "parts": [
     {
      "label": "a",
-     "text": "The area that is left is {b} m².",
+     "text": "The area of the figure is {b} cm².",
      "answer": {
       "value": [
-       "48"
+       "25"
       ],
-      "text": "48"
+      "text": "25"
      }
     },
     {
      "label": "b",
-     "text": "The perimeter of the figure is {b} m.",
+     "text": "The perimeter of the figure is {b} cm.",
      "answer": {
       "value": [
-       "30"
+       "22"
       ],
-      "text": "30"
+      "text": "22"
      }
     },
     {
      "label": "c",
-     "text": "The same piece is cut from the MIDDLE of a long side. The perimeter is then {b} m.",
+     "text": "The 3 cm square is moved on top of the 4 cm square, with their left edges level. The perimeter is then {b} cm.",
      "answer": {
       "value": [
-       "34"
+       "22"
       ],
-      "text": "34"
+      "text": "22"
      }
     }
    ],
-   "explanation": "(a) 9 × 6 = 54, and 54 - 6 = 48 m². (b) Cutting a corner does not change the perimeter: 2 × (9 + 6) = 30 m. (c) A notch in the middle of a side takes away 3 m of edge. It adds 3 + 2 + 2 = 7 m of new edge. So the perimeter grows by 4 m: 34 m.",
+   "explanation": "(a) 4 × 4 = 16 and 3 × 3 = 9, so 25 cm². (b) The figure has no dents, so its perimeter is the same as its box: the box is 7 cm by 4 cm, 2 × (7 + 4) = 22 cm. (c) The new figure fits in a box 4 cm by 7 cm and has no dents: 2 × (4 + 7) = 22 cm. The perimeter does not change.",
    "figure": {
     "type": "l3_poly",
     "pts": [
@@ -753,47 +753,48 @@
       0
      ],
      [
-      9,
+      7,
       0
      ],
      [
-      9,
-      4
+      7,
+      3
      ],
      [
-      6,
-      4
+      4,
+      3
      ],
      [
-      6,
-      6
+      4,
+      4
      ],
      [
       0,
-      6
+      4
      ]
     ],
-    "k": 30,
-    "width_mm": 66,
+    "k": 34,
+    "width_mm": 74,
     "labels": [
      {
-      "side": 0,
-      "text": "9 m"
+      "side": 4,
+      "text": "4 cm"
      },
      {
-      "side": 5,
-      "text": "6 m"
+      "side": 1,
+      "text": "3 cm"
      }
     ]
    },
    "figside": true,
-   "hint": "Push the corner out. Then think about a notch in the middle."
+   "hint": "Push the steps out to make a box. What is its perimeter?"
   },
   {
    "id": "L3U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Perimeter patterns.\nSquares with sides of 1 cm are joined in a row. 1 square has a perimeter of 4 cm. 2 squares have 6 cm. 3 squares have 8 cm.",
+   "beyond": "Perimeter patterns",
+   "text": "Squares with sides of 1 cm are joined in a row. 1 square has a perimeter of 4 cm. 2 squares have 6 cm. 3 squares have 8 cm.",
    "parts": [
     {
      "label": "a",
@@ -828,7 +829,8 @@
    "id": "L3U07-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: A path round a pond.\nA pond is 6 m long and 4 m wide. A path 1 m wide goes all round the pond.",
+   "beyond": "A path round a pond",
+   "text": "A pond is 6 m long and 4 m wide. A path 1 m wide goes all round the pond.",
    "parts": [
     {
      "label": "a",
@@ -925,7 +927,8 @@
    "id": "L3U07-G03",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: The largest square tile.\nA floor is 12 m long and 10 m wide. It is covered exactly with square tiles of one size. The side of a tile is a whole number of metres.",
+   "beyond": "The largest square tile",
+   "text": "A floor is 12 m long and 10 m wide. It is covered exactly with square tiles of one size. The side of a tile is a whole number of metres.",
    "parts": [
     {
      "label": "a",

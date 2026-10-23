@@ -741,7 +741,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "After Mei, {bw} is left.",
+     "text": "Left: {bw}",
      "answer": {
       "value": [
        "3/4"
@@ -751,7 +751,7 @@
     },
     {
      "label": "b",
-     "text": "Ali eats {bw} of the pizza.",
+     "text": "Ali eats: {bw}",
      "answer": {
       "value": [
        "3/8"
@@ -761,7 +761,7 @@
     },
     {
      "label": "c",
-     "text": "Now {bw} is left.",
+     "text": "Now left: {bw}",
      "answer": {
       "value": [
        "3/8"
@@ -782,7 +782,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The smaller fraction is {bw}",
+     "text": "Smaller: {bw}",
      "answer": {
       "value": [
        "3/12"
@@ -792,7 +792,7 @@
     },
     {
      "label": "b",
-     "text": "The greater fraction is {bw}",
+     "text": "Greater: {bw}",
      "answer": {
       "value": [
        "9/12"

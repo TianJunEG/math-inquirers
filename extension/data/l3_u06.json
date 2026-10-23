@@ -31,7 +31,7 @@
       4
      ]
     },
-    "width_mm": 112
+    "width_mm": 100
    },
    "steps": [
     "Shade 5/8 on the row of eighths.",
@@ -44,7 +44,7 @@
   "howto": {
    "title": "How to compare and add fractions",
    "steps": [
-    "Make the parts the same size. Use the wall.",
+    "Equal fractions: multiply top and bottom by the same number. 1/3 = 2/6 = 4/12.",
     "To add or subtract, change both to the same bottom number.",
     "Add or subtract the top numbers. Keep the bottom number."
    ]
@@ -78,7 +78,7 @@
       2
      ]
     },
-    "width_mm": 112
+    "width_mm": 100
    },
    "steps": [
     "On the wall, 1/2 is the same length as 2/4.",
@@ -689,7 +689,7 @@
    "id": "L3U06-T02",
    "tier": "think",
    "page": 4,
-   "text": "I am a fraction equal to 2/5. My bottom number is 9 more than my top number. Which fraction am I? {b}/{b}",
+   "text": "A fraction is equal to 2/5. Its bottom number is 9 more than its top number. Write the fraction. {b}/{b}",
    "answer": {
     "value": [
      "6",
@@ -749,7 +749,8 @@
    "id": "L3U06-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Adding fractions with top number 1.\nWrite each fraction as a sum of 2 fractions that each have top number 1.",
+   "beyond": "Adding fractions with top number 1",
+   "text": "Write each fraction as a sum of 2 fractions that each have top number 1.",
    "parts": [
     {
      "label": "a",

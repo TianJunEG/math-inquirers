@@ -106,4 +106,8 @@ ul.clues{font-size:13.5pt;margin:1mm 0;padding-left:6mm}
 .grow3{height:10.2mm}
 ul.clues{margin:0.5mm 0;font-size:12.5pt}.grow3{height:9.6mm}.gkey{font-size:12pt}.qc.tq{padding:1mm 2.5mm}
 .qg.c1{gap:1.3mm}.qc.inl{padding:0.6mm 3mm}
+.mclks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3mm}
+.mclk{position:relative;border:0.4mm solid #000;border-radius:2mm;display:flex;justify-content:center;padding:1.5mm}.mclk svg{width:40mm;height:40mm;max-width:none}.mclk i.cl{position:absolute;left:2mm;top:2mm}
+.tmcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5mm 4mm}
+.tmc{display:flex;align-items:center;gap:2.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2.5mm}.tmc b{font-family:'Fredoka';font-weight:600;font-size:19pt;flex:1}
 """

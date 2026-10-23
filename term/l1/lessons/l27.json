@@ -1783,10 +1783,13 @@
        "Monday",
        "Tuesday",
        "[]",
-       "Thursday",
+       "Thursday"
+      ],
+      [
        "Friday",
        "[]",
-       "Sunday"
+       "Sunday",
+       ""
       ]
      ]
     }

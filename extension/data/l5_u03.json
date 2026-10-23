@@ -221,7 +221,7 @@
      }
     }
    ],
-   "explanation": "(a) 12 + 6 = 18 and 41 + 6 = 47. (b) 41 - 12 = 29 and 47 - 18 = 29. When both get older by the same number of years, the difference stays the same."
+   "explanation": "(a) 18 and 47. (b) 29 and 29: equal years added keep the difference."
   },
   {
    "id": "L5U03-S04",
@@ -286,7 +286,7 @@
      }
     }
    ],
-   "explanation": "(a) Only yellow beads were added, so the 15 green beads did not change. (b) At first there are 24 beads: 15/24 = 5/8. (c) Now there are 30 beads: 15/30 = 1/2. The green beads stay the same but they are a smaller part of the bag."
+   "explanation": "(a) Only yellow beads were added. (b) 15 of 24 = 5/8. (c) 15 of 30 = 1/2."
   },
   {
    "id": "L5U03-S07",
@@ -453,7 +453,7 @@
      }
     }
    ],
-   "explanation": "(a) Ben gains what Ali loses, so the total is the same. (b) Both gain $5, so the gap between them is the same, but the total goes up by $10. (c) Only red beads are put in, so the number of blue beads does not change."
+   "explanation": "(a) Ben gains what Ali loses: the total. (b) Both gain $5: the difference. (c) Only red beads go in: the blue beads."
   },
   {
    "id": "L5U03-S11",
@@ -510,7 +510,7 @@
      "Working:"
     ]
    },
-   "explanation": "The shirt is 1 unit and the rest is 3 units. The shoes are 1/3 of the rest, which is 1 unit. So 4 - 1 - 1 = 2 units are left. 2 units = $30, so 1 unit = $15. At first she had 4 × 15 = $60."
+   "explanation": "Shirt 1 unit, shoes 1 unit, left 2 units = $30. 1 unit = $15, so $60."
   },
   {
    "id": "L5U03-S13",
@@ -590,7 +590,7 @@
     ]
    },
    "hint": "Cut the whole into 15 equal units. Count the units spent.",
-   "explanation": "2/5 = 6/15, so Monday takes 6 of 15 units. The rest is 9 units. Tuesday is 1/3 of 9 = 3 units. In all 6 + 3 = 9 units are spent. 9 units = $90, so 1 unit = $10. At first Siti had 15 × 10 = $150."
+   "explanation": "2/5 = 6/15, so Monday takes 6 units of 15. The rest is 9 units and Tuesday takes 3. 9 units = $90, so 1 unit = $10 and the total is $150."
   },
   {
    "id": "L5U03-T02",
@@ -636,7 +636,7 @@
     ]
    },
    "hint": "The difference in their ages never changes. How many units is it?",
-   "explanation": "The difference is 38 - 10 = 28 years, and it stays 28. When the son is 1 unit the father is 3 units, so the difference is 2 units. 2 units = 28, so 1 unit = 14. The son is 14, which is 4 years from now."
+   "explanation": "The difference stays 28 years. The son is 1 unit and the father 3 units, so 2 units = 28. 1 unit = 14, which is 4 years from now."
   },
   {
    "id": "L5U03-G01",
@@ -681,7 +681,7 @@
     ]
    },
    "hint": "Call Cara's stickers 1 unit. Draw bars for Ben and for Ali.",
-   "explanation": "Let Cara have 1 unit. Ben has 1 unit + 10. Ali has twice Ben: 2 units + 20. Altogether: 4 units + 30 = 150. So 4 units = 120 and 1 unit = 30. Cara 30, Ben 40, Ali 80."
+   "explanation": "Cara 1 unit, Ben 1 unit + 10, Ali 2 units + 20. 4 units + 30 = 150, so 1 unit = 30. Cara 30, Ben 40, Ali 80."
   },
   {
    "id": "L5U03-G02",
@@ -700,7 +700,7 @@
     ]
    },
    "hint": "The total stays the same. How much more of the total is children?",
-   "explanation": "The number of people stays the same. At first children are 2/5 of the total. Now they are 1/2. 1/2 - 2/5 = 1/10 of the total is 15 children. So the total is 10 × 15 = 150."
+   "explanation": "The total is the same. 1/2 - 2/5 = 1/10 of the total is 15, so the total is 150."
   },
   {
    "id": "L5U03-G03",
@@ -719,7 +719,7 @@
     ]
    },
    "hint": "The white beads do not change. What fraction of each total is white?",
-   "explanation": "The white beads did not change. At first white is 5/7 of the beads. Now white is 5/6 of the beads. Let the white beads be 5 parts: at first the total is 7 parts, now it is 6 parts. 1 part = 24 beads, because 24 red beads were taken out. At first 7 × 24 = 168 beads."
+   "explanation": "The white beads stay the same: 5/7 of the start and 5/6 of the end. White is 5 parts, so the total goes from 7 parts to 6 parts. 1 part = 24, so 7 × 24 = 168."
   },
   {
    "id": "L5U03-G04",
@@ -738,7 +738,7 @@
     ]
    },
    "hint": "After giving, Ali has 2/3 of his marbles. Ben has 3 times that.",
-   "explanation": "Let Ali have 3 units at first. He gives 1 unit and keeps 2 units. Now Ben has 3 times as many: 6 units. After, the total is 2 + 6 = 8 units = 120, so 1 unit = 15. Ali had 3 × 15 = 45. Ben had 6 units - 1 unit = 5 units = 75 at first."
+   "explanation": "Ali has 3 units and keeps 2. Ben then has 6 units. 2 + 6 = 8 units = 120, so 1 unit = 15 and Ali had 45."
   },
   {
    "id": "L5U03-C01",
@@ -751,7 +751,7 @@
     ],
     "text": "$60"
    },
-   "explanation": "The book is 1 unit and the rest is 4 units. The bag is 1/2 of 4 = 2 units. 5 - 1 - 2 = 2 units are left. 2 units = $24, so 1 unit = $12. At first Jenny had 5 × 12 = $60."
+   "explanation": "Book 1 unit, bag 2 units, left 2 units = $24. 1 unit = $12, so $60."
   },
   {
    "id": "L5U03-C02",
@@ -777,7 +777,7 @@
     ],
     "text": "$30"
    },
-   "explanation": "The difference stays $20. After the gift Ray has 3 units and Amelia has 4 units, so the difference is 1 unit. 1 unit = $20. Amelia has $80 now, so the gift is 80 - 50 = $30."
+   "explanation": "The difference stays $20 = 1 unit. Amelia now has $80, so the gift is $30."
   },
   {
    "id": "L5U03-C04",

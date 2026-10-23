@@ -119,7 +119,7 @@
      "Working:"
     ]
    },
-   "explanation": "Work backwards. Before the $6 he had $15 + $6 = $21. The $21 is the 3/4 left after spending 1/4. So 1/4 is $7 and the whole is 4 × $7 = $28."
+   "explanation": "Before the $6: $21 = 3/4 of the money. 1/4 = $7, so $28."
   },
   {
    "id": "L5U10-S03",
@@ -132,7 +132,7 @@
     ],
     "text": "Aisha"
    },
-   "explanation": "Ravi owns neither the parrot nor the goldfish, so Ravi owns the turtle. Aisha does not own the goldfish and the turtle is taken, so Aisha owns the parrot. Wei owns the goldfish."
+   "explanation": "Ravi has the turtle. Aisha does not have the goldfish, so she has the parrot."
   },
   {
    "id": "L5U10-S04",
@@ -259,7 +259,7 @@
      }
     }
    ],
-   "explanation": "(a) The grid has 9 small squares. (b) A 2 by 2 square can start in 2 columns and 2 rows: 2 × 2 = 4. (c) There is 1 big square. (d) 9 + 4 + 1 = 14.",
+   "explanation": "(a) 9. (b) 2 × 2 = 4. (c) 1. (d) 14.",
    "figside": true
   },
   {
@@ -280,7 +280,7 @@
      ""
     ]
    },
-   "explanation": "Try each child. If Ali broke it: Ali lies, Ben tells the truth, Siti lies (Ben is not lying). That is 1 truth. Good. If Ben broke it: Ali is true, Ben lies, Siti is true. That is 2 truths, which is wrong. If Siti broke it: Ali is true, Ben lies, Siti is true: 2 truths, wrong. Only Ali fits."
+   "explanation": "If Ali broke it: 1 truth (Ben). If Ben broke it: 2 truths. If Siti broke it: 2 truths. Only Ali fits."
   },
   {
    "id": "L5U10-S07",
@@ -300,7 +300,7 @@
      ""
     ]
    },
-   "explanation": "The difference in their ages is always 40 - 8 = 32 years. When Dad is 3 times as old as Ali, the difference is 2 times Ali's age, so Ali is 16. That is 16 - 8 = 8 years from now."
+   "explanation": "The age difference stays 32. When Dad is 3 times as old, Ali is 16: 8 years from now."
   },
   {
    "id": "L5U10-S08",
@@ -356,7 +356,7 @@
      ""
     ]
    },
-   "explanation": "Suppose all 20 are hens: 40 legs. That is 56 - 40 = 16 legs short. Each cow instead of a hen adds 2 legs, so 16 ÷ 2 = 8 cows. Then 20 - 8 = 12 hens."
+   "explanation": "All hens: 40 legs, 16 short. Each cow adds 2: 8 cows, 12 hens."
   },
   {
    "id": "L5U10-S10",
@@ -385,7 +385,7 @@
      ""
     ]
    },
-   "explanation": "List the pairs with product 72: 1 and 72, 2 and 36, 3 and 24, 4 and 18, 6 and 12, 8 and 9. Their sums are 73, 38, 27, 22, 18 and 17. Only 8 and 9 have a sum of 17."
+   "explanation": "Pairs with product 72 have sums 73, 38, 27, 22, 18, 17. Only 8 and 9 give 17."
   },
   {
    "id": "L5U10-S11",
@@ -444,7 +444,7 @@
      ""
     ]
    },
-   "explanation": "List in order: 123, 132, 213, 231, 312, 321. That is 6 numbers. (b) Even numbers end in 2: 132 and 312. (c) The differences from 250 are 127, 118, 37, 19, 62 and 71. The smallest is 19, so 231."
+   "explanation": "123, 132, 213, 231, 312, 321: 6. (b) Even: 132 and 312. (c) The differences from 250 are 127, 118, 37, 19, 62, 71: 231."
   },
   {
    "id": "L5U10-S12",
@@ -465,7 +465,7 @@
      ""
     ]
    },
-   "explanation": "In the ones place: 5, 15, 25, 35, 45 and 55 is 6 times. In the tens place: 50 to 59 is 10 times. 6 + 10 = 16. (55 has the digit 5 twice and is counted in both places.)"
+   "explanation": "Ones place: 5, 15, 25, 35, 45, 55 is 6. Tens place: 50 to 59 is 10. Total 16."
   },
   {
    "id": "L5U10-T01",
@@ -560,7 +560,7 @@
     }
    ],
    "hint": "Which child has the most clues? Start with Wei.",
-   "explanation": "Wei does not play swimming, badminton or tennis, so Wei plays football (clue 3). Ben does not play tennis or badminton, and football is taken, so Ben plays swimming. Kumar does not play swimming or tennis, so Kumar plays badminton. Aisha plays tennis.",
+   "explanation": "Wei: football. Ben: swimming. Kumar: badminton. Aisha: tennis.",
    "partsrow": true
   },
   {
@@ -641,7 +641,7 @@
     ]
    },
    "hint": "Count by size: 1 by 1, 2 by 1, 3 by 1, 4 by 1 ... and then 2 high.",
-   "explanation": "(a) 1 by 1: 8. 2 by 2: 3 (3 places across, 1 place up). Total 8 + 3 = 11. (b) Count by size, width by height. Height 1: widths 1, 2, 3, 4 give 8, 6, 4, 2 rectangles = 20. Height 2: widths 1, 2, 3, 4 give 4, 3, 2, 1 = 10. Total 30.",
+   "explanation": "(a) 8 + 3 = 11. (b) Height 1: 8 + 6 + 4 + 2 = 20. Height 2: 4 + 3 + 2 + 1 = 10. Total 30.",
    "figside": true
   },
   {
@@ -661,7 +661,7 @@
     ]
    },
    "hint": "Undo the last step first. 14 is what part of the number before?",
-   "explanation": "Work backwards. After the last step 14 are left, and that is 2/3 of the number before it, so there were 14 ÷ 2 × 3 = 21. Before 3 arrived: 21 - 3 = 18. The 18 is 3/4 of the first number, so 1/4 is 6 and at first there were 24."
+   "explanation": "14 is 2/3 of 21. 21 - 3 = 18. 18 is 3/4 of 24."
   },
   {
    "id": "L5U10-G01",
@@ -682,7 +682,7 @@
     ]
    },
    "hint": "Sort by the first digit: 1__, 2__, ... How many for each?",
-   "explanation": "Sort by the hundreds digit. If it is 1, the other 2 digits add up to 6: 06, 15, 24, 33, 42, 51, 60 is 7 numbers. If it is 2, the others add up to 5: 6 numbers. If it is 3, add up to 4: 5 numbers. If 4: 4 numbers. If 5: 3 numbers. If 6: 2 numbers. If 7: 1 number (700). Total: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28."
+   "explanation": "By hundreds digit 1 to 7: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28."
   },
   {
    "id": "L5U10-G02",
@@ -729,7 +729,7 @@
     ]
    },
    "hint": "Join a 10¢ coin and a 50¢ coin as a pair. How much is a pair?",
-   "explanation": "A 10¢ coin and a 50¢ coin make a pair worth 60¢. Suppose all 24 coins are 20¢: $4.80. That is $2.20 short. Replace two 20¢ coins (40¢) with 1 pair (60¢): it adds 20¢. $2.20 ÷ 20¢ = 11 pairs. So 11 coins of 50¢, 11 coins of 10¢ and 24 - 22 = 2 coins of 20¢. Check: $5.50 + $1.10 + $0.40 = $7.00."
+   "explanation": "A 10¢ and 50¢ pair is 60¢. All 20¢ is $4.80, $2.20 short. A pair in place of two 20¢ coins adds 20¢: 11 pairs. 24 - 22 = 2 coins of 20¢."
   },
   {
    "id": "L5U10-G03",
@@ -750,7 +750,7 @@
     ]
    },
    "hint": "Think of the worst luck. How many socks can you take with no pair?",
-   "explanation": "In the worst case you take 1 red, 1 blue and 1 black sock: 3 socks and no pair. The 4th sock must match one of them. So 4 socks make sure of a pair. (3 socks are not enough because they could be 3 different colours.)",
+   "explanation": "Worst case: 1 red, 1 blue, 1 black, no pair. The 4th sock matches one.",
    "beyond": "The worst case"
   },
   {

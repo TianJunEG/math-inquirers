@@ -311,7 +311,7 @@
      }
     }
    ],
-   "explanation": "(a) AOB is a straight line, so BOC = 180° - 64° = 116° (angles on a straight line). (b) BOD is opposite AOC, so BOD = 64° (vertically opposite angles are equal). (c) AOD is opposite BOC, so AOD = 116° (vertically opposite).",
+   "explanation": "(a) Straight line: 180° - 64° = 116°. (b) Vertically opposite: 64°. (c) Vertically opposite BOC: 116°.",
    "figside": true
   },
   {
@@ -494,7 +494,7 @@
      }
     }
    ],
-   "explanation": "(a) Angles on a straight line add up to 180°. 47° + 85° = 132°, and 180° - 132° = 48°. (b) Angles at a point add up to 360°. 125° + 90° + 105° = 320°, and 360° - 320° = 40°.",
+   "explanation": "(a) 180° - 47° - 85° = 48°. (b) 360° - 125° - 90° - 105° = 40°.",
    "figside": true
   },
   {
@@ -628,7 +628,7 @@
      }
     }
    ],
-   "explanation": "The angles of a triangle add up to 180°. (a) 58° + 67° = 125°, and 180° - 125° = 55°. (b) The right angle is 90°. 90° + 38° = 128°, and 180° - 128° = 52°.",
+   "explanation": "(a) 180° - 58° - 67° = 55°. (b) 180° - 90° - 38° = 52°.",
    "figside": true
   },
   {
@@ -734,7 +734,7 @@
      }
     }
    ],
-   "explanation": "(a) PQ = PR, so the angles opposite them are equal: R = Q = 72°. (b) The angles of a triangle add up to 180°. P = 180° - 72° - 72° = 36°.",
+   "explanation": "(a) PQ = PR, so R = Q = 72°. (b) 180° - 72° - 72° = 36°.",
    "figside": true
   },
   {
@@ -985,7 +985,7 @@
      }
     }
    ],
-   "explanation": "(a) A rhombus has 4 equal sides, so AB = BC and triangle ABC is isosceles. Angles BAC and BCA are equal. (180° - 124°) ÷ 2 = 28°. (b) Neighbouring angles of a rhombus add up to 180°. BAD = 180° - 124° = 56°.",
+   "explanation": "(a) AB = BC, so triangle ABC is isosceles: (180° - 124°) ÷ 2 = 28°. (b) Neighbouring angles add up to 180°: 56°.",
    "figside": true
   },
   {
@@ -1106,7 +1106,7 @@
      }
     }
    ],
-   "explanation": "The angles between the parallel sides add up to 180°. (a) B and C are on the same slanting side: C = 180° - 110° = 70°. (b) A and D are on the other slanting side: D = 180° - 75° = 105°.",
+   "explanation": "Angles between parallel sides add to 180°. (a) C = 180° - 110° = 70°. (b) D = 180° - 75° = 105°.",
    "figside": true
   },
   {
@@ -1271,7 +1271,7 @@
      }
     }
    ],
-   "explanation": "(a) AB = AD, so ADB = ABD = 55° (equal base angles). (b) In triangle ABD: 180° - 55° - 55° = 70°. (c) BDC is a straight line: ADC = 180° - 55° = 125°. (d) In triangle ADC: 180° - 125° - 30° = 25°.",
+   "explanation": "(a) AB = AD: 55°. (b) 180° - 55° - 55° = 70°. (c) Straight line: 180° - 55° = 125°. (d) 180° - 125° - 30° = 25°.",
    "figside": true
   },
   {
@@ -1385,7 +1385,7 @@
      }
     }
    ],
-   "explanation": "(a) An equilateral triangle has 3 equal angles that add up to 180°: 180° ÷ 3 = 60°. (b) BCD is a straight line, so ACD = 180° - 60° = 120°.",
+   "explanation": "(a) 180° ÷ 3 = 60°. (b) Straight line: 180° - 60° = 120°.",
    "figside": true
   },
   {
@@ -1425,7 +1425,7 @@
      }
     }
    ],
-   "explanation": "(a) The 2 equal angles are 70° and 70°. 180° - 140° = 40°. The angles are 70°, 70°, 40°. (b) The other two angles share 180° - 70° = 110°, so each is 55°. The angles are 70°, 55°, 55°. (c) Both triangles are possible, so there are 2."
+   "explanation": "(a) 180° - 70° - 70° = 40°. (b) 180° - 70° = 110°, so 55° each. (c) Both work: 2."
   },
   {
    "id": "L5U08-S11",
@@ -1464,7 +1464,7 @@
      }
     }
    ],
-   "explanation": "(a) 360° ÷ 60 = 6° each minute, and 20 × 6° = 120°. (b) The hour numbers are 30° apart (360° ÷ 12). At 4 o'clock the hands point at 12 and 4: 4 × 30° = 120°. (c) At 7 o'clock the hands are 7 × 30° = 210° apart one way. The smaller angle is 360° - 210° = 150°."
+   "explanation": "(a) 6° a minute: 20 × 6° = 120°. (b) Hours are 30° apart: 4 × 30° = 120°. (c) 7 × 30° = 210°, so the smaller angle is 150°."
   },
   {
    "id": "L5U08-S12",
@@ -1503,7 +1503,7 @@
      }
     }
    ],
-   "explanation": "(a) P, Q and R are the 3 angles of a triangle: 55° + 75° + 50° = 180°. (b) The angles on a straight line add up to 180°. (c) A and B are neighbours, not opposite, and neighbouring angles of a parallelogram add up to 180°."
+   "explanation": "(a) 55° + 75° + 50° = 180°: a triangle. (b) A straight line: 180°. (c) A and B are neighbours."
   },
   {
    "id": "L5U08-T01",
@@ -1640,7 +1640,7 @@
     ]
    },
    "hint": "Find D first. Then use the isosceles triangle ADC.",
-   "explanation": "(a) The angles between the parallel sides add up to 180°. D = 180° - 70° = 110°. (b) AD = DC, so triangle ADC is isosceles. DAC = DCA = (180° - 110°) ÷ 2 = 35°. (c) Angle C of the trapezium = 180° - 80° = 100°. ACB = 100° - 35° = 65°.",
+   "explanation": "(a) 180° - 70° = 110°. (b) AD = DC: (180° - 110°) ÷ 2 = 35°. (c) C = 100°, so ACB = 100° - 35° = 65°.",
    "figside": true
   },
   {
@@ -1677,7 +1677,7 @@
     ]
    },
    "hint": "Make 3 equal parts and the extra 24° (or 2 extra 24°s).",
-   "explanation": "(a) Let each equal angle be 1 part. Then the top angle is 1 part + 24°. 3 parts + 24° = 180°, so 3 parts = 156° and 1 part = 52°. The top angle is 52° + 24° = 76°. (b) Let the top angle be 1 part. Each equal angle is 1 part + 24°. 3 parts + 48° = 180°, so 3 parts = 132° and 1 part = 44°. The top angle is 44°."
+   "explanation": "(a) 3 parts + 24° = 180°: 1 part = 52°, top 76°. (b) 3 parts + 48° = 180°: 1 part = 44°, top 44°."
   },
   {
    "id": "L5U08-T03",
@@ -1800,7 +1800,7 @@
     ]
    },
    "hint": "AD = AB = AE. What kind of triangle is ADE?",
-   "explanation": "A rhombus has 4 equal sides and ABE has 3 equal sides, so AD = AB = AE. Triangle ADE is isosceles. Angle DAE = DAB + BAE = 80° + 60° = 140°. The other 2 angles are equal: AED = (180° - 140°) ÷ 2 = 20°.",
+   "explanation": "AD = AB = AE. DAE = 80° + 60° = 140°. AED = (180° - 140°) ÷ 2 = 20°.",
    "figright": true
   },
   {
@@ -1895,7 +1895,7 @@
     ]
    },
    "hint": "Each triangle has angles that add up to 180°. Count the triangles.",
-   "explanation": "(a) The 3 triangles fill the pentagon exactly, so the angles of the pentagon are the angles of the 3 triangles: 3 × 180° = 540°. (b) All 5 angles are equal: 540° ÷ 5 = 108°.",
+   "explanation": "(a) 3 triangles: 3 × 180° = 540°. (b) 540° ÷ 5 = 108°.",
    "figside": true,
    "beyond": "Angles of a regular pentagon"
   },
@@ -1917,7 +1917,7 @@
     ]
    },
    "hint": "At 4:20, how far has each hand turned from 12?",
-   "explanation": "From 12: the hour hand is at 4 × 30° = 120° at 4 o'clock, and 20 minutes later it has moved 20 × 0.5° = 10° more, so it is at 130°. The minute hand is at 20 × 6° = 120°. The angle between them is 130° - 120° = 10°.",
+   "explanation": "The hour hand is at 120° + 20 × 0.5° = 130°. The minute hand is at 20 × 6° = 120°. The difference is 10°.",
    "beyond": "Clock angles"
   },
   {
@@ -2023,7 +2023,7 @@
     ]
    },
    "hint": "Call angle A one unit. Use the isosceles triangles one at a time.",
-   "explanation": "Let angle A = 1 unit. AD = DC, so angle DCA = 1 unit. Angle BDC = 2 units (the 2 angles on the other side add up to it: angles of a triangle, or a straight line ADB). DC = CB, so angle DBC = 2 units. AB = AC, so angle ACB = angle ABC = 2 units. Then angle DCB = 2 - 1 = 1 unit. Triangle DBC has angles 2, 2 and 1 units, which add up to 180°: 5 units = 180°, so 1 unit = 36°. Angle A = 36°.",
+   "explanation": "Let angle A be 1 unit. DCA = 1, BDC = 2, DBC = 2, ACB = ABC = 2, so DCB = 1. Triangle DBC: 5 units = 180°, so 1 unit = 36°.",
    "figright": true
   },
   {
@@ -2131,7 +2131,7 @@
     ],
     "text": "115°"
    },
-   "explanation": "Opposite angles of a parallelogram are equal. D is opposite B, so D = 115°. (Neighbouring angles add up to 180°: A = 65°, and D = 180° - 65° = 115°.)"
+   "explanation": "Opposite angles are equal, so D = B = 115°."
   },
   {
    "id": "L5U08-C04",

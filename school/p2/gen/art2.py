@@ -56,7 +56,6 @@ def coin_g(v, x, cy):
     lab = str(v) if v < 100 else "$1"
     unit = "cents" if v < 100 else "dollar"
     return (f'<g class="coin" data-v="{v}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
-            f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
             + _motif(v, cx, cy - r * 0.62, r) +
             f'<text class="coinval" x="{cx:.1f}" y="{cy-r*0.08:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.58:.1f}" fill="#000">{lab}</text>'
             f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.50:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="2.7" fill="#000">{unit}</text></g>')

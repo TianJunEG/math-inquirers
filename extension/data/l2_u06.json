@@ -329,7 +329,7 @@
     },
     {
      "label": "b",
-     "text": "A book costs $4.30. Mei pays with a $10 note. Change: $ {bw}",
+     "text": "A book costs $4.30. Mei pays $10. Change: $ {bw}",
      "answer": {
       "value": [
        "5.70"
@@ -642,7 +642,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The puzzle costs $ {bw}",
+     "text": "Puzzle: $ {bw}",
      "answer": {
       "value": [
        "4.50"
@@ -652,7 +652,7 @@
     },
     {
      "label": "b",
-     "text": "The book costs $ {bw}",
+     "text": "Book: $ {bw}",
      "answer": {
       "value": [
        "8.50"

@@ -69,11 +69,11 @@ items = [
    why='The bars are the same length. 3/4 of the first bar covers 6 of the small eighths, because each quarter is 2 eighths. Siti eats 5 eighths. Ravi eats 6 eighths, so Ravi eats 1/8 more.'),
  I('think', 4, 'Mei eats 1/4 of a pizza. Then Ali eats half of what is left.',
    figure=fr({'kind': 'bar', 'n': 8, 'shaded': [], 'w': 420, 'label': 'Pizza bar'}, width_mm=70),
-   partsrow=True, parts=[P('a', 'After Mei, {b} is left.', '3/4'), P('b', 'Ali eats {b} of the pizza.', '3/8'), P('c', 'Now {b} is left.', '3/8')],
+   partsrow=True, parts=[P('a', 'Left: {b}', '3/4'), P('b', 'Ali eats: {b}', '3/8'), P('c', 'Now left: {b}', '3/8')],
    hint='Cut each part in 2 equal parts to make eighths.',
    why='(a) 1/4 eaten, so 3/4 is left. On the bar of 8 parts, 1/4 is 2 parts, and 6 parts are left. (b) Half of 6 parts is 3 parts: Ali eats 3/8. (c) 6 - 3 = 3 parts are left: 3/8.'),
  I('think', 4, 'Two fractions have the bottom number 12. Together they make 1 whole. The greater one is 6/12 more.', partsrow=True, parts=[
-   P('a', 'The smaller fraction is {b}', '3/12'), P('b', 'The greater fraction is {b}', '9/12')],
+   P('a', 'Smaller: {b}', '3/12'), P('b', 'Greater: {b}', '9/12')],
    hint='Take away the extra 6/12. Share what is left.',
    why='The whole is 12/12. Take away the extra 6/12: 6/12 is left. Share it between the two equal parts: 3/12 and 3/12. Give the extra back to one of them: 3/12 and 9/12. Check: 3/12 + 9/12 = 12/12.'),
  # Go further

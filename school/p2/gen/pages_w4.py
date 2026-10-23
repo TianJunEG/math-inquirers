@@ -183,61 +183,49 @@ def page28():
     P["model"] = dict(truth=list(word), domains=[sorted(set(word))] * 6, check=letters_check(), perm=list(range(6)))
     return P
 
-# =============================================================================== P2-29 How Long Did It Take?
-def mins(h, m): return ((h % 12) * 60 + m)
-
+# =============================================================================== P2-29 Match the Times
 def page29():
     rng = random.Random(8529)
+    word = word_candidates(29, 6)[0]; CLAIMED[29] = word
     while True:
-        items = []
-        for k in range(5):
-            sh = rng.randint(1, 12); sm = rng.choice(range(0, 60, 5)) if k < 2 else rng.randint(1, 55)
-            dur = rng.choice(range(20, 300, 5)) if k < 2 else rng.randint(20, 280)
-            tot = mins(sh, sm) + dur
-            eh = (tot // 60) % 12 or 12; em = tot % 60
-            if k < 2 and (em % 5): continue
-            items.append(dict(k="clock" if k < 2 else "digital", sh=sh, sm=sm, eh=eh, em=em, dur=dur, ampm=rng.choice(["am", "pm"])))
-        if len(items) < 5: continue
-        rng.shuffle(items)
-        if any(it["k"] == "clock" and A.hands_apart(it["sh"], it["sm"]) < 40 or A.hands_apart(it["eh"], it["em"]) < 40 for it in items if it["k"] == "clock"): continue
-        ans = [(it["dur"] // 60, it["dur"] % 60) for it in items]
-        if not distinct(ans): continue
-        pool = set()
-        for h, m in ans:
-            pool |= {(h, (m + 10) % 60), (h, (m - 10) % 60), (h + 1, m), (h - 1, m) if h > 0 else (h + 1, m), (h, m + 5 if m < 55 else m - 5), (m // 5 if m % 5 == 0 and m // 5 < 7 else h, h * 5 if h * 5 < 60 else 0)}
-        pool = sorted(x for x in pool if x not in ans and 0 <= x[0] <= 6 and 0 <= x[1] < 60)
-        domain = [(h, m) for h in range(0, 7) for m in range(60)]
-        res = code_table_any(29, 5, ans, rng, 0, 0, n_decoy=2, tries=60, pool=pool, domain=domain)
-        if res: word, table = res; break
-    rows = []; texts = []
-    for i, it in enumerate(items):
-        if it["k"] == "clock":
-            s1 = A.clock_svg(it["sh"], it["sm"]); s2 = A.clock_svg(it["eh"], it["em"]); texts.append((s1, s2))
-            mid = f'<div class="ckp"><div class="clk30">{s1}</div><span class="arr">→</span><div class="clk30">{s2}</div></div>'
-        else:
-            t = f'Start {A.tstr(it["sh"], it["sm"])} {it["ampm"]}. End {A.tstr(it["eh"], it["em"])} {it["ampm"] if (mins(it["sh"], it["sm"]) + it["dur"]) < 720 else ("pm" if it["ampm"] == "am" else "am")}.'
-            texts.append(t); mid = f'<div class="dgt">{t}</div>'
-        rows.append(f'<div class="hrow"><span class="no">{i+1}</span>{mid}<div class="hans"><span class="ab w2"></span> h <span class="ab w2"></span> min</div></div>')
-    P = code_items_page(29, 8529, "Time Taken", 2, "Time: finding how long in hours and minutes", "Measurement and Geometry - Measurement",
-        "2.1, 2.2 (telling time to the minute; measuring time in hours and minutes)", ["TI2.1", "TI2.2"], "Code-breaker (start and end times)",
-        ["Find how long it took.", "Write the hours and the minutes.", INSTR_CODE],
-        '<div class="hrows">' + "".join(rows) + '</div>', ans, table, word, 0, 0,
-        "; ".join(f"{i+1}) {A.tstr(it['sh'], it['sm'])} to {A.tstr(it['eh'], it['em'])}: {a[0]} h {a[1]} min" for i, (it, a) in enumerate(zip(items, ans))),
-        "Two clock pairs (start and end on clock faces, on a five-minute mark) and three pairs of digital times. The time taken is under 5 hours; the pupil writes hours and minutes, which may cross an hour. The decoy letters stand for a wrong number of minutes or hours. Times use am and pm. A box left blank gives no letter and the check cannot see it.",
-        domain=domain, fmt=lambda t: (f"{t[0]} h " if t[0] else "") + (f"{t[1]} min" if t[1] or not t[0] else ""), cols=4)
-    def solve(t):
-        if isinstance(t, tuple):
-            (h1, m1), (h2, m2) = A.read_clock(t[0]), A.read_clock(t[1])
-            d = (mins(h2, m2) - mins(h1, m1)) % 720
-        else:
-            m = re.fullmatch(r"Start (\d+):(\d\d) (am|pm)\. End (\d+):(\d\d) (am|pm)\.", t)
-            h1, m1, a1, h2, m2, a2 = int(m.group(1)), int(m.group(2)), m.group(3), int(m.group(4)), int(m.group(5)), m.group(6)
-            s = mins(h1, m1) + (720 if a1 == "pm" else 0); e = mins(h2, m2) + (720 if a2 == "pm" else 0)
-            d = (e - s) % 1440
-        return (d // 60, d % 60)
-    solved = [solve(t) for t in texts]
-    P.v("V1 independent solver (clock hands read from the drawings, digital times parsed) equals the key", solved == ans, solved)
-    P.v("V7 every time taken is under 5 hours", all(a[0] < 5 for a in ans))
+        times = []
+        while len(times) < 6:
+            h = rng.randint(1, 12); m = rng.randint(6, 54)
+            if A.hands_apart(h, m) < 45 or (h, m) in times: continue
+            times.append((h, m))
+        # two pairs of times share the hour or the minute, so each clock must be read carefully
+        if len({h for h, m in times}) > 5 or len({m for h, m in times}) < 6: continue
+        break
+    order = list(range(6)); rng.shuffle(order)                 # the printed order of the digital times; time k belongs to the clock with letter word[k]
+    clock_order = list(range(6)); rng.shuffle(clock_order)      # printed order of the clocks
+    clocks = "".join(f'<div class="mclk"><i class="cl">{word[j]}</i>{A.clock_svg(*times[j])}</div>' for j in clock_order)
+    tcards = "".join(f'<div class="tmc"><span class="no">{k+1}</span><b>{A.tstr(*times[j])}</b><span class="ab"></span></div>' for k, j in enumerate(order))
+    # letters are written in the order of the digital times: time order[k] -> its clock's letter; the letters of the clocks are word[order position]
+    body = f'<div class="mclks">{clocks}</div><p class="lead" style="margin-top:2mm">Which clock shows each time? Write its letter.</p><div class="tmcs">{tcards}</div>'
+    # relabel so that reading down the digital times spells the word: the clock of the k-th printed time carries word[k]
+    letter_of = {j: word[k] for k, j in enumerate(order)}
+    clocks = "".join(f'<div class="mclk"><i class="cl">{letter_of[j]}</i>{A.clock_svg(*times[j])}</div>' for j in clock_order)
+    body = f'<div class="mclks">{clocks}</div><p class="lead" style="margin-top:2mm">Which clock shows each time? Write its letter.</p><div class="tmcs">{tcards}</div>'
+    P = new_page(29, 8529, "Match the Times", 2, "Time: matching clocks and times to the minute", "Measurement and Geometry - Measurement",
+        "2.1, 2.2 (telling time to the minute; hours and minutes)", ["TI2.1", "TI2.2"], "Matching (lettered clocks)",
+        "K1 letters of the matching clocks spell a word (6 letters) + K4 each clock used once",
+        ["Read each clock.", "Match each time to its clock.", "Write the letter of the clock."],
+        body, "; ".join(f"{k+1}) {A.tstr(*times[j])} is clock {letter_of[j]}" for k, j in enumerate(order)), f"Word: {word}",
+        "Six clock faces with a mark for every minute and six digital times that are close to each other (some share an hour or a minute, so the pupil must read the hour hand and the minute hand). Each time belongs to exactly one clock. The letters of the clocks, written in the order of the digital times, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (every wrong matching was tested against a very large word list). Times are read to the minute and written in hours and minutes; no duration is asked. A box left blank gives no letter and the check cannot see it.",
+        check="Write the letters in order. Do they spell a word?", check_boxes=6, mk=("logic",),
+        mech_plain="Letters of the clocks matched to the times, in order, spell a word (6 letters)")
+    clock_svgs = re.findall(r'<div class="mclk"><i class="cl">(\w)</i>(<svg.*?</svg>)</div>', clocks)
+    read = {l: A.read_clock(sv) for l, sv in clock_svgs}
+    digital = [tuple(int(x) for x in re.findall(r"\d+", t)) for t in re.findall(r"<b>([\d:]+)</b>", tcards)]
+    solved = "".join(next(l for l, hm in read.items() if hm == d) for d in digital)
+    P.v("V1 independent solver (hand end points of each clock read, each printed time matched to exactly one clock) gets the word", solved == word, solved)
+    P.v("V1b the six clocks show six different times", len(set(read.values())) == 6)
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()])
+    bad = sorted(w for w in ("".join(p) for p in itertools.permutations(word)) if w != word and w.lower() in BIG)
+    P.v("V3 none of the 719 wrong matchings spells a word", not bad, bad[:3])
+    P.v("V7 no clock has its hands within 45 degrees of each other and no time is within 5 minutes of the hour", all(A.hands_apart(h, m) >= 45 and 6 <= m <= 54 for h, m in times))
+    P["cv"] = dict(rate=1.0, single_total=719, single_detected=719)
+    P["model"] = dict(truth=list(word), domains=[sorted(set(word))] * 6, check=letters_check(), perm=list(range(6)))
     return P
 
 # =============================================================================== P2-30 Hours and Minutes
@@ -294,70 +282,77 @@ def page30():
 # =============================================================================== P2-31 Time Detective
 ACTS = ["Reading", "Maths", "Art", "Music", "PE", "Science", "Story time", "Drawing"]
 
+def lasts_text(d):
+    h, m = divmod(d, 60)
+    return (f"{h} h " if h else "") + (f"{m} min" if m else "").strip() if (h or m) else "0 min"
+
 def page31():
     rng = random.Random(8731)
     while True:
         acts = rng.sample(ACTS, 6); t = 8 * 60 + rng.choice([0, 15, 30]); tab = []
         for a in acts:
-            gap = rng.choice([0, 5, 10, 15]) if tab else 0
-            s = t + gap; d = rng.choice([25, 30, 35, 40, 45, 50, 55, 60, 70, 75, 80]); tab.append((a, s, s + d)); t = s + d
-        qs = []
-        a_ = rng.sample(tab, 6)
-        qs.append(("dur", a_[0])); qs.append(("dur", a_[1]))
-        i = rng.randrange(0, 5); qs.append(("gap", tab[i], tab[i + 1]))
-        qs.append(("sum", a_[2], a_[3] if a_[3] != a_[2] else a_[4]))
-        j = rng.randrange(0, 4); qs.append(("span", tab[j], tab[j + rng.randint(1, 5 - j)]))
-        qs.append(("diff", a_[5], a_[0] if a_[0] != a_[5] else a_[1]))
-        def val(q):
-            k = q[0]
-            if k == "dur": return q[1][2] - q[1][1]
-            if k == "gap": return q[2][1] - q[1][2]
-            if k == "sum": return (q[1][2] - q[1][1]) + (q[2][2] - q[2][1])
-            if k == "span": return q[2][2] - q[1][1]
-            if k == "diff": return abs((q[1][2] - q[1][1]) - (q[2][2] - q[2][1]))
-        ans = [val(q) for q in qs]
-        if not distinct(ans) or min(ans) <= 0 or max(ans) > 300 or len({q[0] for q in qs}) < 5: continue
-        if qs[2][0] == "gap" and val(qs[2]) == 0: continue
+            s0 = t + (rng.choice([5, 10, 15]) if tab else 0); d = rng.choice([30, 35, 40, 45, 55, 65, 75, 80, 85]); tab.append((a, s0, d)); t = s0 + d
+        if any(s0 % 60 in (0,) for a, s0, d in tab[:1]): continue
+        names = [a for a, s0, d in tab]
+        long_ = [x for x in tab if x[2] >= 60]; q = rng.sample(tab, 6)
+        qs = [("lasts", q[0]), ("lasts", q[1]), ("two", q[2], q[3] if q[3] != q[2] else q[4]),
+              ("past", q[4]), ("count", None), ("left", q[5])]
+        def val(x):
+            k = x[0]
+            if k == "lasts": return x[1][2]
+            if k == "two": return x[1][2] + x[2][2]
+            if k == "past": return x[1][1] % 60
+            if k == "count": return sum(1 for a, s0, d in tab if s0 < 10 * 60)
+            if k == "left": return x[1][2] - 60 if x[1][2] > 60 else x[1][2]
+        qs[5] = ("left", rng.choice(long_)) if long_ else None
+        if qs[5] is None: continue
+        ans = [val(x) for x in qs]
+        if not distinct(ans) or min(ans) <= 0 or max(ans) > 200: continue
+        if any(x[0] == "past" and x[1][1] % 60 == 0 for x in qs): continue
         pool = set()
-        for q, a in zip(qs, ans): pool |= {a + 5, a - 5, a + 10, a - 10, a + 60 if a < 100 else a - 60}
-        pool = sorted(x for x in pool if x not in ans and 0 < x <= 300)
-        res = code_table_any(31, 6, ans, rng, 0, 300, n_decoy=2, tries=60, pool=pool)
+        for x, a in zip(qs, ans): pool |= {a + 5, a - 5, a + 10, a - 10, a + 60 if a < 100 else a - 60}
+        pool = sorted(v for v in pool if v not in ans and 0 < v <= 200)
+        res = code_table_any(31, 6, ans, rng, 0, 200, n_decoy=2, tries=60, pool=pool)
         if res: word, table = res; break
     f12 = lambda m: f"{(m // 60) % 12 or 12}:{m % 60:02d} {'am' if m < 720 else 'pm'}"
-    tbl = '<table class="tt"><tr><th>Lesson</th><th>Start</th><th>End</th></tr>' + "".join(f'<tr><td>{a}</td><td>{f12(s)}</td><td>{f12(e)}</td></tr>' for a, s, e in tab) + '</table>'
-    def qtext(q):
-        k = q[0]
-        if k == "dur": return f"How many minutes is {q[1][0]}?"
-        if k == "gap": return f"How many minutes from the end of {q[1][0]} to the start of {q[2][0]}?"
-        if k == "sum": return f"How many minutes are {q[1][0]} and {q[2][0]} together?"
-        if k == "span": return f"How many minutes from the start of {q[1][0]} to the end of {q[2][0]}?"
-        if k == "diff": return f"How many more minutes is {q[1][0]} than {q[2][0]}?" if val(q) == q[1][2] - q[1][1] - (q[2][2] - q[2][1]) else f"How many fewer minutes is {q[1][0]} than {q[2][0]}?"
-    qtxts = [qtext(q) for q in qs]
-    cards = [qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span> min', cls="inl tq") for i, t in enumerate(qtxts)]
-    P = code_items_page(31, 8731, "Time Detective", 2, "Time: a timetable, minutes and hours", "Measurement and Geometry - Measurement",
-        "2.1, 2.2, 2.3 (telling time to the minute; measuring time in hours and minutes; converting to minutes)", ["TI2.1", "TI2.2", "TI2.3"], "Code-breaker (timetable)",
-        ["Read the timetable.", "Answer each question in minutes.", INSTR_CODE],
-        '<div class="blk">' + tbl + '</div>' + qgrid(cards, 2), ans, table, word, 0, 300,
-        "; ".join(f"{i+1}) {t} {a} min" for i, (t, a) in enumerate(zip(qtxts, ans))),
-        "A timetable of six lessons (start and end times, am and pm) and six questions: how long a lesson lasts (twice), the wait between two lessons, two lessons together, the time from the start of one lesson to the end of a later one, and how much longer one lesson is than another. Lessons are all under an hour and a half; one question asks from the start of one lesson to the end of a later one. The decoy letters stand for being 5 or 10 minutes out, or an hour out. A box left blank gives no letter and the check cannot see it.", ps=True)
-    # independent solver: read the table back from the printed HTML
-    rows_ = re.findall(r"<tr><td>([^<]+)</td><td>(\d+):(\d\d) (am|pm)</td><td>(\d+):(\d\d) (am|pm)</td></tr>", tbl)
-    tb = {r[0]: ((int(r[1]) % 12) * 60 + int(r[2]) + (720 if r[3] == "pm" else 0), (int(r[4]) % 12) * 60 + int(r[5]) + (720 if r[6] == "pm" else 0)) for r in rows_}
+    def lt(d):
+        h, m = divmod(d, 60)
+        return f"{h} h {m} min" if h and m else (f"{h} h" if h else f"{m} min")
+    tbl = '<table class="tt"><tr><th>Lesson</th><th>Starts</th><th>Lasts</th></tr>' + "".join(f'<tr><td>{a}</td><td>{f12(s0)}</td><td>{lt(d)}</td></tr>' for a, s0, d in tab) + '</table>'
+    def qtext(x):
+        k = x[0]
+        if k == "lasts": return f"How many minutes does {x[1][0]} last?"
+        if k == "two": return f"How many minutes do {x[1][0]} and {x[2][0]} last together?"
+        if k == "past": return f"{x[1][0]} starts at {f12(x[1][1])}. How many minutes past the hour?"
+        if k == "count": return "How many lessons start before 10:00 am?"
+        return f"{x[1][0]} lasts {lt(x[1][2])}. How many minutes is that after 1 h?" if False else f"{x[1][0]} lasts more than 1 h. How many minutes more than 1 h?"
+    qtxts = [qtext(x) for x in qs]
+    cards = [qcard(i + 1, f"<p>{t_}</p>", '<span class="ab w3"></span>', cls="inl tq") for i, t_ in enumerate(qtxts)]
+    P = code_items_page(31, 8731, "Time Detective", 2, "Time: a timetable with hours and minutes", "Measurement and Geometry - Measurement",
+        "2.1, 2.2, 2.3 (telling time to the minute; hours and minutes; converting hours and minutes to minutes)", ["TI2.1", "TI2.2", "TI2.3"], "Code-breaker (timetable)",
+        ["Read the timetable.", "Answer each question.", INSTR_CODE],
+        '<div class="blk">' + tbl + '</div>' + qgrid(cards, 2), ans, table, word, 0, 200,
+        "; ".join(f"{i+1}) {t_} {a}" for i, (t_, a) in enumerate(zip(qtxts, ans))),
+        "A timetable of six lessons with the time each starts (am and pm) and how long each lasts, in minutes or hours and minutes. Questions: hours and minutes changed to minutes (twice), two lessons together, the minutes past the hour at which a lesson starts, a count of lessons starting before 10 am, and the minutes a long lesson lasts over 1 h. The pupil is never asked to find an end time or a start time from the other two. The decoy letters stand for being 5 or 10 minutes out, or an hour out. A box left blank gives no letter and the check cannot see it.", ps=True, cols=4)
+    rows_ = re.findall(r"<tr><td>([^<]+)</td><td>(\d+):(\d\d) (am|pm)</td><td>([^<]+)</td></tr>", tbl)
+    def mins_of(t_):
+        h = re.search(r"(\d+) h", t_); m = re.search(r"(\d+) min", t_)
+        return (int(h.group(1)) * 60 if h else 0) + (int(m.group(1)) if m else 0)
+    tb = {r[0]: (((int(r[1]) % 12) * 60 + int(r[2]) + (720 if r[3] == "pm" else 0)), mins_of(r[4])) for r in rows_}
     solved = []
-    for t in qtxts:
-        m = re.fullmatch(r"How many minutes from the start of (.+?) to the end of (.+?)\?", t)
-        if m: solved.append(tb[m.group(2)][1] - tb[m.group(1)][0]); continue
-        m = re.fullmatch(r"How many minutes is (.+?)\?", t)
-        if m: s, e = tb[m.group(1)]; solved.append(e - s); continue
-        m = re.fullmatch(r"How many minutes from the end of (.+?) to the start of (.+?)\?", t)
-        if m: solved.append(tb[m.group(2)][0] - tb[m.group(1)][1]); continue
-        m = re.fullmatch(r"How many minutes are (.+?) and (.+?) together\?", t)
-        if m: solved.append(sum(tb[x][1] - tb[x][0] for x in m.groups())); continue
-        m = re.fullmatch(r"How many (more|fewer) minutes is (.+?) than (.+?)\?", t)
-        d1 = tb[m.group(2)][1] - tb[m.group(2)][0]; d2 = tb[m.group(3)][1] - tb[m.group(3)][0]
-        solved.append(d1 - d2 if m.group(1) == "more" else d2 - d1)
+    for t_ in qtxts:
+        m = re.fullmatch(r"How many minutes does (.+?) last\?", t_)
+        if m: solved.append(tb[m.group(1)][1]); continue
+        m = re.fullmatch(r"How many minutes do (.+?) and (.+?) last together\?", t_)
+        if m: solved.append(tb[m.group(1)][1] + tb[m.group(2)][1]); continue
+        m = re.fullmatch(r"(.+?) starts at .*\. How many minutes past the hour\?", t_)
+        if m: solved.append(tb[m.group(1)][0] % 60); continue
+        if t_.startswith("How many lessons start before"): solved.append(sum(1 for s0, d in tb.values() if s0 < 600)); continue
+        m = re.fullmatch(r"(.+?) lasts more than 1 h\. How many minutes more than 1 h\?", t_)
+        solved.append(tb[m.group(1)][1] - 60)
     P.v("V1 independent solver (timetable and questions read back from the printed page) equals the key", solved == ans, solved)
-    P.v("V7 six different lessons, all lessons start after 8 am and end before 2 pm", len(tb) == 6 and all(480 <= s and e <= 14 * 60 for s, e in tb.values()))
+    P.v("V7 six different lessons, every lesson starts after 8 am and ends before 5 pm", len(tb) == 6 and all(480 <= s0 and s0 + d <= 17 * 60 for s0, d in tb.values()))
+    P.v("V7b no question asks for a start or end time to be found from the other two (Primary 3)", not any("end" in t_.lower().split() or "finish" in t_.lower() for t_ in qtxts))
     return P
 
 # =============================================================================== P2-32 Shape Patterns
@@ -403,7 +398,7 @@ def make_pattern(rng, attrs):
         while len(set(cyc)) == 1: cyc = [rng.choice([True, False]) for _ in range(period)]
         seq = [el(kd, cyc[i % period]) for i in range(7)]
     elif attrs == "turn":
-        kd = rng.choice(["tri", "half"]); rots = rng.sample([0, 90, 180, 270], period)
+        kd = rng.choice(["tri", "half"]); kd = "tri"; rots = rng.sample([0, 90, 180, 270], period)
         seq = [el(kd, True, "w", rots[i % period]) for i in range(7)]
     elif attrs == "sizecol":
         kd = rng.choice(["circle", "square", "tri"])
@@ -434,6 +429,8 @@ def wrong_options(rng, seq, right):
         if vsig(c) != vsig(right) and all(vsig(c) != vsig(o) for o in out): out.append(c)
     return out
 
+LABEL = {"shape": "shape", "colour": "colour", "size": "size", "turn": "turn", "two": "shape and colour", "sizecol": "size and colour", "shapesize": "shape and size"}
+
 def page32(no=32, attrs_list=("shape", "colour", "size", "turn", "shape", "colour"), seed=8932, title="Shape Patterns", tier=1, two=False):
     rng = random.Random(seed)
     word = word_candidates(no, 6)[0]; CLAIMED[no] = word
@@ -457,8 +454,8 @@ def page32(no=32, attrs_list=("shape", "colour", "size", "turn", "shape", "colou
         "1.1 (making/completing patterns with 2D shapes by size, shape, colour or orientation)", ["GE1.1"], "Choice table (shape patterns)",
         "K1 the letter of the shape that comes next spells a word (6 letters, two decoy letters in each row)",
         ["Look at each pattern.", "Circle the letter of the shape that comes next.", "Write the six letters in the boxes."],
-        '<div class="prows">' + "".join(rows_h) + '</div>', "; ".join(f"{i+1}) {r[0]}: {next(l for e, l in r[3] if e == r[2])}" for i, r in enumerate(rows)), f"Word: {word}",
-        "Six patterns of 2D shapes (circle, square, triangle, rectangle, half circle) that change by shape, by colour (black or white), by size (big or small), by the way a shape is turned, or by two of these together. Each pattern shows two full turns of its repeat. Each row offers three shapes; the wrong ones change one attribute, or repeat the previous shape. The letters of the right shapes, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. The pupil completes patterns; making a new pattern is not checked by this page. A box left blank gives no letter and the check cannot see it.",
+        '<div class="prows">' + "".join(rows_h) + '</div>', "; ".join(f"{i+1}) {LABEL[r[0]]}: {next(l for e, l in r[3] if e == r[2])}" for i, r in enumerate(rows)), f"Word: {word}",
+        "Six patterns of 2D shapes (circle, square, triangle, rectangle) that change by shape, by colour (black or white), by size (big or small), by the way a shape is turned, or by two of these together. Each pattern shows two full turns of its repeat. Each row offers three shapes; the wrong ones change one attribute, or repeat the previous shape. The letters of the right shapes, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. The pupil completes patterns; making a new pattern is not checked by this page. A box left blank gives no letter and the check cannot see it.",
         check="Write the six letters in order. Do they spell a word?", check_boxes=6, mk=("code",),
         mech_plain="Word from the letters of the shapes that come next (6 letters)")
     solved = []

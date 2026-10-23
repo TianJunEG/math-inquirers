@@ -139,7 +139,7 @@
      }
     }
    ],
-   "explanation": "(a) Read the groups: 6 million, 205 thousand, 30. The hundreds place of the last group is empty, so write 6 205 030. (b) The 7 is in the ten thousands place, so it stands for 70 000. (c) 8 604 000 ÷ 1000 = 8604."
+   "explanation": "(a) 6 million, 205 thousand, 30: the hundreds place is empty, so 6 205 030. (b) The 7 is in the ten thousands place: 70 000. (c) 8 604 000 ÷ 1000 = 8604."
   },
   {
    "id": "L5U01-S02",
@@ -156,7 +156,7 @@
     "text": "940 621, 4 096 213, 4 096 231, 4 906 213",
     "list": true
    },
-   "explanation": "940 621 has only 6 digits, so it is the smallest. The other three start 4 million. Compare the next digits: 0 comes before 9, so 4 906 213 is last. Then 213 is less than 231."
+   "explanation": "940 621 has 6 digits, so it is smallest. Then compare 4 096 213, 4 096 231 and 4 906 213 digit by digit."
   },
   {
    "id": "L5U01-S03",
@@ -195,7 +195,7 @@
      }
     }
    ],
-   "explanation": "Look at the digit just after the place you round to. (a) 849 520: the hundreds digit is 5, round up to 850 000. (b) 49 520 is less than 50 000, round down to 7 800 000. (c) 849 520 is more than 500 000, round up to 8 000 000."
+   "explanation": "Look at the digit after the place. (a) 849 520: the hundreds digit is 5, so 7 850 000. (b) 49 520 is under 50 000, so 7 800 000. (c) 849 520 is over 500 000, so 8 000 000."
   },
   {
    "id": "L5U01-S04",
@@ -238,7 +238,7 @@
      }
     }
    ],
-   "explanation": "(a) A multiple of 5 ends in 0 or 5. Ending in 0 gives 9 875 410. Ending in 5 gives only 9 874 105, which is less. (b) The first digit cannot be 0, so start with 1. Then 0, 4, 5, 7, 8, 9 in order: 1 045 789."
+   "explanation": "(a) A multiple of 5 ends in 0 or 5. Ending in 0: 9 875 410. Ending in 5 gives only 9 874 105. (b) Start with 1, then 0, 4, 5, 7, 8, 9: 1 045 789."
   },
   {
    "id": "L5U01-S05",
@@ -283,7 +283,7 @@
      }
     }
    ],
-   "explanation": "2 hundred thousands is 200 000, and 5 ten thousands is 50 000. 6 482 315 + 200 000 = 6 682 315. Then 6 682 315 - 50 000 = 6 632 315. Only the hundred thousands and ten thousands digits change."
+   "explanation": "6 482 315 + 200 000 = 6 682 315. Then 6 682 315 - 50 000 = 6 632 315."
   },
   {
    "id": "L5U01-S06",
@@ -332,7 +332,7 @@
      }
     }
    ],
-   "explanation": "(a) 4000 × 50 = 200 000, but the answer shown is only about 20 000. (b) 4 000 000 + 3 000 000 = 7 000 000, and 6 912 005 is close. (c) 8000 × 300 = 2 400 000, close to the answer. (d) 6000 ÷ 15 = 400, but 4050 is ten times too big."
+   "explanation": "(a) 4000 × 50 = 200 000, but 20 722 is far too small. (b) 4 million + 3 million is about 7 million: close. (c) 8000 × 300 = 2 400 000: close. (d) 6000 ÷ 15 = 400, so 4050 is 10 times too big."
   },
   {
    "id": "L5U01-S07",
@@ -371,7 +371,7 @@
      }
     }
    ],
-   "explanation": "Brackets first. (a) (9 - 2) × 3 + 1 = 7 × 3 + 1 = 22. (b) 9 - 2 × (3 + 1) = 9 - 2 × 4 = 9 - 8 = 1. (c) 300 + 100 = 400. Then 2 400 000 ÷ 400 = 6000, and 6000 × 2 = 12 000."
+   "explanation": "(a) (9 - 2) × 3 + 1 = 22. (b) 9 - 2 × (3 + 1) = 1. (c) 300 + 100 = 400, 2 400 000 ÷ 400 = 6000, × 2 = 12 000."
   },
   {
    "id": "L5U01-S08",
@@ -442,7 +442,7 @@
      }
     }
    ],
-   "explanation": "A number rounds to 8700 when it is from halfway below to just before halfway above. Halfway marks are 8650 and 8750. 8650 rounds up to 8700, so it counts. 8750 rounds up to 8800, so the greatest is 8749."
+   "explanation": "The halfway marks are 8650 and 8750. 8650 rounds up to 8700, so it counts. 8750 rounds up to 8800, so the greatest is 8749."
   },
   {
    "id": "L5U01-S10",
@@ -481,7 +481,7 @@
      }
     }
    ],
-   "explanation": "(a) 54 × 100 000 = 5 400 000, so it is true. (b) 1 000 000 - 1 = 999 999, which has 6 nines, so it is false. (c) The greatest 6-digit number is 999 999 and the smallest 7-digit number is 1 000 000, so it is true."
+   "explanation": "(a) 54 × 100 000 = 5 400 000: true. (b) 1 000 000 - 1 = 999 999: false. (c) 999 999 is 1 less than 1 000 000: true."
   },
   {
    "id": "L5U01-S11",
@@ -540,7 +540,7 @@
      }
     }
    ],
-   "explanation": "(a) All four numbers have 7 digits. Compare the hundred thousands: Dune has 4, the others 2 or 0. Dune is the greatest. (b) Cedar is smallest. 1 420 050 - 1 024 500 = 395 550."
+   "explanation": "(a) Compare the hundred thousands: Dune has 4. (b) Cedar is smallest: 1 420 050 - 1 024 500 = 395 550."
   },
   {
    "id": "L5U01-S12",
@@ -576,7 +576,7 @@
      }
     }
    ],
-   "explanation": "Clue 2: the number is from 465 000 to 474 999. With Clue 3 the thousands digit is 2, so it starts 472 (465 and 474 do not fit). Clue 5: ones 0. Clue 4: the tens and hundreds digits are 3 and 6, or 1 and 2 (2 is already used), or 4 and 8 (4 is used). So 472 630."
+   "explanation": "Clue 2: from 465 000 to 474 999. Clue 3 gives 472. Clue 5: ones 0. Clue 4: tens 3 and hundreds 6 (the pairs 1 and 2, or 4 and 8, repeat a digit). So 472 630."
   },
   {
    "id": "L5U01-S13",
@@ -589,7 +589,7 @@
     ],
     "text": "14 250 people"
    },
-   "explanation": "Monday: 3100. Tuesday: 2 × 3100 = 6200. Wednesday: 6200 - 1250 = 4950. Total: 3100 + 6200 + 4950 = 14 250. The 48 000 seats are not needed."
+   "explanation": "Monday 3100, Tuesday 6200, Wednesday 4950. Total 14 250. The 48 000 is not needed."
   },
   {
    "id": "L5U01-S14",
@@ -605,7 +605,7 @@
     "list": true,
     "unordered": true
    },
-   "explanation": "Numbers from 4 500 000 up to 5 499 999 round to 5 000 000. 4 499 999 is just below, so it rounds to 4 000 000. 5 500 000 rounds up to 6 000 000."
+   "explanation": "Numbers from 4 500 000 to 5 499 999 round to 5 000 000."
   },
   {
    "id": "L5U01-T01",
@@ -649,7 +649,7 @@
     }
    ],
    "hint": "Clues 2 and 3 fix the first 3 digits. Then use Clue 6.",
-   "explanation": "Clue 2: from 6 350 000 to 6 449 999, so it starts 6 3 5 or more, or 6 4. Clue 3: the ten-thousands digit is 1 less than the hundred-thousands digit. 6 3 5 does not fit (5 is not 2). So it starts 6 4 3. Digits so far: 6, 4, 3 and 0 (the tens). Clue 6: the other three digits add to 33 - 6 - 4 - 3 - 0 = 20. The thousands digit t and the hundreds digit t + 2: t + (t + 2) + ones = 20. Try t = 5: 5 + 7 = 12, ones = 8. All different: 6, 4, 3, 5, 7, 0, 8. So 6 435 708."
+   "explanation": "Clue 2: 6 350 000 to 6 449 999. Clue 3 leaves 6 4 3. The tens digit is 0. The other 3 digits add to 33 - 6 - 4 - 3 - 0 = 20. Thousands t and hundreds t + 2: t = 5 gives 5, 7 and ones 8. So 6 435 708."
   },
   {
    "id": "L5U01-T02",
@@ -674,7 +674,7 @@
     ]
    },
    "hint": "Numbers from 195 000 to 199 999 have a digit sum over 4.",
-   "explanation": "From 195 000 to 199 999 the digits 1 + 9 are already 10, too big. So the number is 20 _ _ _ _ with the other four digits adding to 2. The thousands digit is at most 4. The ways: 2 in one place (4 ways: 200 002, 200 020, 200 200, 202 000) or 1 and 1 in two places (6 ways: 200 011, 200 101, 200 110, 201 001, 201 010, 201 100). Total 10."
+   "explanation": "Below 200 000 the digits 1 + 9 are already 10. So the number is 20 _ _ _ _ with the other digits adding to 2: 4 ways with one 2 and 6 ways with two 1s. Total 10."
   },
   {
    "id": "L5U01-T03",
@@ -711,7 +711,7 @@
     ]
    },
    "hint": "The greatest digits go first. Try both ways.",
-   "explanation": "Put the greatest digits first: 9 and 7 lead the two numbers. Try 9__ × 7_ and 7__ × 9_ with the other digits 5, 3, 2 in order. 752 × 93 = 69 936 beats 953 × 72 = 68 616 and 732 × 95 = 69 540. The best is 752 × 93 = 69 936."
+   "explanation": "Put the greatest digits first: 9 and 7. 752 × 93 = 69 936 beats 953 × 72 = 68 616 and 732 × 95 = 69 540."
   },
   {
    "id": "L5U01-G01",
@@ -732,7 +732,7 @@
     ]
    },
    "hint": "Count the choices for the first digit, then the second.",
-   "explanation": "The first digit has 9 choices (1 to 9). The second digit can be any digit except the first: 9 choices (0 is allowed now). The third has 8, then 7, 6, 5, 4. Multiply: 9 × 9 × 8 × 7 × 6 × 5 × 4 = 544 320.",
+   "explanation": "First digit: 9 choices (1 to 9). Second: 9 choices (0 is allowed). Then 8, 7, 6, 5, 4. 9 × 9 × 8 × 7 × 6 × 5 × 4 = 544 320.",
    "beyond": "Counting choices"
   },
   {
@@ -754,7 +754,7 @@
     ]
    },
    "hint": "Write 7 as 007. Each digit 0 to 9 appears equally often.",
-   "explanation": "Write every number with 3 digits, so 7 becomes 007. Adding extra zeros does not change the total. The numbers 000 to 999 are 1000 numbers. In each of the 3 places, every digit 0 to 9 appears 100 times. One place adds (0 + 1 + ... + 9) × 100 = 4500. Three places add 3 × 4500 = 13 500."
+   "explanation": "Write 7 as 007. The numbers 000 to 999 are 1000 numbers. In each of the 3 places every digit 0 to 9 appears 100 times, adding 4500. 3 × 4500 = 13 500."
   },
   {
    "id": "L5U01-G03",
@@ -775,7 +775,7 @@
     ]
    },
    "hint": "9 × 11 is 99, but 11 is hard to make. Try 3 × 4 × 9.",
-   "explanation": "3 × 4 × 9 = 108. Then 108 - 7 = 101, which is 1 away from 100. Trying every way, 99 and 100 cannot be made, and 102 is 2 away (9 × (4 + 7) + 3). So the closest is 101."
+   "explanation": "3 × 4 × 9 - 7 = 101, which is 1 away. 99 and 100 cannot be made, and 102 is 2 away. So 101."
   },
   {
    "id": "L5U01-G04",
@@ -796,7 +796,7 @@
     ]
    },
    "hint": "Sheets in one day first. Then divide. Is the answer a whole number?",
-   "explanation": "In 1 day it prints 2400 × 8 = 19 200 sheets. 1 000 000 ÷ 19 200 = 52.08... days. After 52 days it has printed 998 400 sheets, which is not enough. So it needs 53 days."
+   "explanation": "2400 × 8 = 19 200 sheets a day. 52 days give 998 400, not enough, so 53 days."
   },
   {
    "id": "L5U01-C01",
@@ -858,7 +858,7 @@
      }
     }
    ],
-   "explanation": "Just below: start with 3, then greatest order: 3 976 520 (23 480 away). Just above: start with 5, then smallest order: 5 023 679 (1 023 679 away). The number just below is much closer."
+   "explanation": "Just below: 3 976 520 (23 480 away). Just above: 5 023 679 (1 023 679 away). The first is closer."
   },
   {
    "id": "L5U01-C03",

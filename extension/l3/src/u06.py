@@ -14,17 +14,17 @@ def bars(items, cols=2, w=120, **kw):
 u.learn(
     'A fraction wall shows one whole cut into equal parts. A longer piece of the wall is a greater fraction. To compare fractions, look at where the pieces end.',
     {'problem': 'Which is greater, 5/8 or 3/4? Use the fraction wall.',
-     'figure': {'type': 'l3_wall', 'dens': [4, 8], 'shade': {'4': [0, 1, 2], '8': [0, 1, 2, 3, 4]}, 'width_mm': 112},
+     'figure': {'type': 'l3_wall', 'dens': [4, 8], 'shade': {'4': [0, 1, 2], '8': [0, 1, 2, 3, 4]}, 'width_mm': 100},
      'steps': ['Shade 5/8 on the row of eighths.', 'Shade 3/4 on the row of quarters.',
                'The end of 3/4 lines up with the end of 6/8.', '6/8 is more than 5/8, so 3/4 is greater.'],
      'answer': '3/4 is greater than 5/8.'},
     {'title': 'How to compare and add fractions',
-     'steps': ['Make the parts the same size. Use the wall.', 'To add or subtract, change both to the same bottom number.',
+     'steps': ['Equal fractions: multiply top and bottom by the same number. 1/3 = 2/6 = 4/12.', 'To add or subtract, change both to the same bottom number.',
                'Add or subtract the top numbers. Keep the bottom number.']},
     {'text': 'Circle <, = or >.   7/12 ' + CMP + ' 2/3', 'answer': A('<'),
      'explanation': '2/3 = 8/12 on the wall. 7/12 is less than 8/12, so 7/12 < 2/3.'})
 u.u['learn']['example2'] = {'problem': 'What is 1/2 + 1/4? Use the fraction wall.',
-    'figure': {'type': 'l3_wall', 'dens': [2, 4], 'shade': {'2': [0], '4': [0, 1, 2]}, 'width_mm': 112},
+    'figure': {'type': 'l3_wall', 'dens': [2, 4], 'shade': {'2': [0], '4': [0, 1, 2]}, 'width_mm': 100},
     'steps': ['On the wall, 1/2 is the same length as 2/4.', 'Add the quarters: 2/4 + 1/4 = 3/4.'], 'answer': '1/2 + 1/4 = 3/4.'}
 u.u['learn']['tight'] = True
 
@@ -83,7 +83,7 @@ u.T('Look at the fractions with bottom number 12. List every one between 1/3 and
     hint='Change 1/3 and 2/3 into twelfths first.',
     why='1/3 = 4/12 and 2/3 = 8/12. The twelfths between 4/12 and 8/12 are 5/12, 6/12 and 7/12. The fractions 4/12 and 8/12 are not between.',
     space={'rows': ['Working:', '', '', '']})
-u.T('I am a fraction equal to 2/5. My bottom number is 9 more than my top number. Which fraction am I? {b}/{b}', A(['6', '15'], '6/15', list=True),
+u.T('A fraction is equal to 2/5. Its bottom number is 9 more than its top number. Write the fraction. {b}/{b}', A(['6', '15'], '6/15', list=True),
     hint='Write fractions equal to 2/5. Look at the gap each time.',
     why='Equal fractions of 2/5 are 4/10, 6/15, 8/20. The gap between bottom and top is 3, 6, 9, 12. The gap is 9 for 6/15. Check: 15 - 6 = 9.',
     space={'rows': ['My list:', '', '']})

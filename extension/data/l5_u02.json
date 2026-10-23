@@ -132,7 +132,7 @@
      }
     }
    ],
-   "explanation": "Sharing means dividing. a ÷ b = a/b. (a) 7 ÷ 10 = 7/10. (b) 3 ÷ 8 = 3/8. (c) 9 ÷ 4 = 9/4. 4 goes into 9 two times with 1 left, so 2 and 1/4."
+   "explanation": "a ÷ b = a/b. (a) 7/10. (b) 3/8. (c) 9 ÷ 4 = 2 and 1/4."
   },
   {
    "id": "L5U02-S02",
@@ -171,7 +171,7 @@
      }
     }
    ],
-   "explanation": "(a) 4/5 is 1/5 short of 1, and 5/6 is 1/6 short of 1. 1/6 is less than 1/5, so 5/6 is greater. (b) 5/9 = 35/63 and 4/7 = 36/63, so 4/7 is greater. (c) 3/4 of 20 = 15 and 2/3 of 24 = 16."
+   "explanation": "(a) 1/6 is less than 1/5 (shortfall from 1), so 5/6. (b) 35/63 and 36/63: 4/7. (c) 15 and 16: 2/3 of 24."
   },
   {
    "id": "L5U02-S03",
@@ -385,7 +385,7 @@
      }
     }
    ],
-   "explanation": "The top number is the position. The bottom number goes up by 2 each time: 2n + 1 for position n. (a) 5/11 and 6/13. (b) 2 × 10 + 1 = 21, so 10/21. (c) 13/27 has 13 on top, and 2 × 13 + 1 = 27, so it is the 13th."
+   "explanation": "The top is the position and the bottom is 2n + 1. (a) 5/11 and 6/13. (b) 10/21. (c) 13/27: 2 × 13 + 1 = 27, so the 13th."
   },
   {
    "id": "L5U02-S09",
@@ -482,7 +482,7 @@
      }
     }
    ],
-   "explanation": "The line from 0 to 1 is cut into 4 equal parts, so each mark is 1/4. A is 1 whole and 1 more quarter: 1 1/4. B is 1 whole and 3 quarters: 1 3/4."
+   "explanation": "Each mark is 1/4. A is 1 and 1 quarter: 1 1/4. B is 1 3/4."
   },
   {
    "id": "L5U02-S11",
@@ -584,7 +584,7 @@
      "Working:"
     ]
    },
-   "explanation": "The book is 1 part. The rest is 2 parts, and lunch is half of the rest, which is 1 part. The $18 left is also 1 part. So lunch cost $18 and 3 parts = 3 × $18 = $54."
+   "explanation": "The book is 1 part, lunch is 1 part and the $18 left is 1 part. So 3 parts = $54."
   },
   {
    "id": "L5U02-S13",
@@ -670,7 +670,7 @@
     ]
    },
    "hint": "Take away a unit fraction. Is what is left a unit fraction?",
-   "explanation": "Test 1/3: 2/5 - 1/3 = 6/15 - 5/15 = 1/15. That is a unit fraction, so 2/5 = 1/3 + 1/15. Test 1/4: 2/5 - 1/4 = 3/20, not a unit fraction. 1/5 is half of 2/5, so we stop (the 2 parts would be equal). So 1/3 + 1/15 is the only way."
+   "explanation": "2/5 - 1/3 = 1/15, so 2/5 = 1/3 + 1/15. 2/5 - 1/4 = 3/20 is not a unit fraction. 1/5 is half of 2/5, so stop. Only this way."
   },
   {
    "id": "L5U02-T02",
@@ -691,7 +691,7 @@
     ]
    },
    "hint": "Find the fraction of ALL the eggs that is left at each step.",
-   "explanation": "After the morning 2/3 of the eggs are left. In the afternoon 1/4 of those are sold, so 3/4 of 2/3 = 1/2 are left. In the evening 2/5 of those are sold, so 3/5 of 1/2 = 3/10 are left. 36 eggs are 3/10 of the whole. 1/10 is 12 eggs, so the whole is 120 eggs."
+   "explanation": "After the morning 2/3 are left. Then 3/4 of 2/3 = 1/2. Then 3/5 of 1/2 = 3/10. 36 is 3/10, so 1/10 is 12 and the whole is 120."
   },
   {
    "id": "L5U02-T03",
@@ -738,7 +738,7 @@
     ]
    },
    "hint": "A big top and a small bottom make a big fraction.",
-   "explanation": "Greatest: put the greatest card on top with the smallest card below: 7/2 + 5/3 = 21/6 + 10/6 = 31/6 = 5 1/6. Smallest: put the small cards on top and the big cards below: 2/5 + 3/7 = 14/35 + 15/35 = 29/35. Testing every way shows no other sum is greater or smaller."
+   "explanation": "Greatest: big top, small bottom: 7/2 + 5/3 = 31/6 = 5 1/6. Smallest: small tops, big bottoms: 2/5 + 3/7 = 29/35."
   },
   {
    "id": "L5U02-G01",
@@ -779,7 +779,7 @@
     ]
    },
    "hint": "Test 1/7, 1/8, 1/9 ... Stop when the first is under half of 1/6.",
-   "explanation": "Test 1/7: 1/6 - 1/7 = 1/42, so 1/7 + 1/42. Test 1/8: 1/6 - 1/8 = 1/24, so 1/8 + 1/24. Test 1/9: 1/6 - 1/9 = 1/18, so 1/9 + 1/18. Test 1/10: 1/6 - 1/10 = 1/15, so 1/10 + 1/15. Test 1/11: 1/6 - 1/11 = 5/66, not a unit fraction. 1/12 is half of 1/6, so stop. There are 4 ways."
+   "explanation": "Test 1/7, 1/8, 1/9 and 1/10: each leaves a unit fraction (1/42, 1/24, 1/18, 1/15). 1/11 leaves 5/66: no. 1/12 is half of 1/6, so stop. 4 ways."
   },
   {
    "id": "L5U02-G03",
@@ -814,7 +814,7 @@
     ]
    },
    "hint": "After 3 bounces the height is 3/4 of 3/4 of 3/4 of the start.",
-   "explanation": "Work backwards. Before the 3rd bounce it was 27 ÷ 3/4 = 36 cm. Before that 36 ÷ 3/4 = 48 cm. Before that 48 ÷ 3/4 = 64 cm. Heights: 64, 48, 36, 27. Half of 64 is 32. 36 is more than 32, and 27 is less, so it is bounce 3."
+   "explanation": "Work backwards: 27 ÷ 3/4 = 36, 36 ÷ 3/4 = 48, 48 ÷ 3/4 = 64. Heights 64, 48, 36, 27. Half of 64 is 32, so 27 is the first under it: bounce 3."
   },
   {
    "id": "L5U02-G04",
@@ -834,7 +834,7 @@
     ]
    },
    "hint": "1/3 = 1/2 × (1 - 1/3). Write each as a difference.",
-   "explanation": "1/3 = 1/2 × (1 - 1/3), 1/15 = 1/2 × (1/3 - 1/5), 1/35 = 1/2 × (1/5 - 1/7) and 1/63 = 1/2 × (1/7 - 1/9). In the sum the middle parts cancel, leaving 1/2 × (1 - 1/9) = 1/2 × 8/9 = 4/9."
+   "explanation": "Write each as 1/2 × (a difference). The middle parts cancel, leaving 1/2 × (1 - 1/9) = 4/9."
   },
   {
    "id": "L5U02-C01",

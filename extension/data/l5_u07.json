@@ -345,7 +345,7 @@
      }
     }
    ],
-   "explanation": "(a) 10% of 40 = 4, 5% = 2, so 35% = 12 + 2 = 14. (b) 25% = 10 (a quarter of 40). (c) 40 - 14 - 10 = 16. (Check: 100% - 35% - 25% = 40%, and 40% of 40 = 16.)"
+   "explanation": "(a) 10% = 4, 5% = 2: 12 + 2 = 14. (b) 25% = 10. (c) 40 - 14 - 10 = 16."
   },
   {
    "id": "L5U07-S08",
@@ -423,7 +423,7 @@
      }
     }
    ],
-   "explanation": "(a) She pays for 2 T-shirts: 2 × $20 = $40. (b) 30% of $20 = $6 off each, so $14 each. 3 × $14 = $42. (c) $40 is less than $42, so Shop P."
+   "explanation": "(a) She pays for 2: $40. (b) $14 each: $42. (c) Shop P."
   },
   {
    "id": "L5U07-S10",
@@ -462,7 +462,7 @@
      }
     }
    ],
-   "explanation": "(a) 20% of $50 = $10, so $60. (b) 20% of $60 = $12, so $60 - $12 = $48. (c) No. The second 20% is taken from $60, not from $50, so the cost does not come back to $50."
+   "explanation": "(a) $50 + $10 = $60. (b) 20% of $60 = $12, so $48. (c) No: the second 20% is of $60."
   },
   {
    "id": "L5U07-S11",
@@ -594,7 +594,7 @@
      }
     }
    ],
-   "explanation": "(a) 50% is a half: 40. (b) 90 ÷ 10 = 9. (c) False. Test with $100: 20% off gives $80. Then 10% of $80 is $8 off, so $72. A 30% discount gives $70."
+   "explanation": "(a) True. (b) True. (c) False: $100 → $80 → $72, but 30% off gives $70."
   },
   {
    "id": "L5U07-S13",
@@ -668,7 +668,7 @@
     ]
    },
    "hint": "Take the 20% off the new cost, not off $200.",
-   "explanation": "(a) 10% of $200 = $20, so the new cost is $180. 20% of $180 = $36, so the coat costs $180 - $36 = $144. (b) The total discount is $200 - $144 = $56. $56 out of $200 = 28 out of 100 = 28%. It is not 30%."
+   "explanation": "10% of 200 = 20, so 180. 20% of 180 = 36, so 144. The 2 discounts total $56 of $200 = 28%."
   },
   {
    "id": "L5U07-T02",
@@ -690,7 +690,7 @@
     ]
    },
    "hint": "$60 is 80% of the old cost. What is 10% of the old cost?",
-   "explanation": "The bag now costs 80% of the old cost. 80% is $60, so 10% is $60 ÷ 8 = $7.50. The old cost is 100% = 10 × $7.50 = $75. (Adding 20% of $60 would give $72, which is wrong.)",
+   "explanation": "$60 is 80% of the old cost. 10% = $7.50, so 100% = $75.",
    "beyond": "Working back from a percentage"
   },
   {
@@ -713,7 +713,7 @@
     ]
    },
    "hint": "$218 is 109% of the cost before GST. What is 1%?",
-   "explanation": "The cost before GST is 100%. With GST it is 109%. 109% is $218, so 1% is $218 ÷ 109 = $2. The GST is 9 × $2 = $18. (9% of $218 would be $19.62, which is wrong because GST is 9% of the cost BEFORE GST.)",
+   "explanation": "$218 is 109% of the cost before GST, so 1% = $2. The GST is 9 × $2 = $18.",
    "beyond": "GST in the cost"
   },
   {
@@ -751,7 +751,7 @@
     ]
    },
    "hint": "Increase = change out of the starting amount. Which is the start?",
-   "explanation": "(a) The change is $30. Out of the starting amount $20: 30/20 = 150/100 = 150%. (b) The change is $30 again. Out of the starting amount $50: 30/50 = 60/100 = 60%. The same $30 change gives different percentages because the starting amounts are different.",
+   "explanation": "(a) $30 out of the start $20 = 150%. (b) $30 out of the start $50 = 60%. The start amounts differ.",
    "beyond": "Percentage change"
   },
   {
@@ -774,7 +774,7 @@
     ]
    },
    "hint": "Find the number of boys and girls first. Then count glasses.",
-   "explanation": "Boys: 40% of 40 = 16. Girls: 24. Glasses: 25% of 16 = 4 boys and 50% of 24 = 12 girls. That is 16 children out of 40. 16/40 = 40/100 = 40%."
+   "explanation": "Boys 16, girls 24. Glasses: 4 + 12 = 16 of 40 = 40%."
   },
   {
    "id": "L5U07-G03",
@@ -796,7 +796,7 @@
     ]
    },
    "hint": "The red beads stay the same. Find their share of the new total.",
-   "explanation": "Red beads: 40% of 50 = 20, and they do not change. After adding blue beads, red is 20% of all the beads. So 20 beads are 20%, and 100% is 100 beads. Blue now: 80. Blue at first: 30. Added: 80 - 30 = 50."
+   "explanation": "Red: 40% of 50 = 20, unchanged. Later red is 20% of all, so the total is 100 and blue is 80. Added: 80 - 30 = 50."
   },
   {
    "id": "L5U07-C01",

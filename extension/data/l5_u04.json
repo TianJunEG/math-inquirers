@@ -365,7 +365,7 @@
      }
     }
    ],
-   "explanation": "Use the dashed height with the base it meets at a right angle. (a) 1/2 × 6 × 4 = 12. (b) 1/2 × 10 × 12 = 60. The slanting sides (5 and 5, 13 and 13) are not used.",
+   "explanation": "(a) 1/2 × 6 × 4 = 12. (b) 1/2 × 10 × 12 = 60. Slanting sides are not used.",
    "partsrow": true,
    "figside": true
   },
@@ -465,7 +465,7 @@
      }
     }
    ],
-   "explanation": "(a) 1/2 × 8 × 6 = 24. (b) PQ meets QR at the right angle Q, so the height is PQ = 6 cm. (c) With PQ as the base, the height is QR, because QR meets PQ at a right angle. PR is slanting.",
+   "explanation": "(a) 1/2 × 8 × 6 = 24. (b) PQ meets QR at Q: 6 cm. (c) With base PQ the height is QR.",
    "figside": true
   },
   {
@@ -583,7 +583,7 @@
      }
     }
    ],
-   "explanation": "(a) The base AB is 12 cm and the height is 7 cm, the distance between the 2 lines. 1/2 × 12 × 7 = 42. (b) Wherever P is on DC, the base is still 12 cm and the height is still 7 cm, so the area stays the same.",
+   "explanation": "(a) The base is 12 cm and the height is 7 cm: 1/2 × 12 × 7 = 42. (b) Wherever P is, the base and height stay the same.",
    "figside": true
   },
   {
@@ -919,7 +919,7 @@
     ],
     "text": "66 cm²"
    },
-   "explanation": "Use BC as the base. The height from A meets the line BC extended at a right angle at H, and it is 12 cm. The base is only BC = 11 cm, not BH. 1/2 × 11 × 12 = 66. The slanting sides 20 and 13 are not used.",
+   "explanation": "Use BC as the base. The height AH is 12 cm. 1/2 × 11 × 12 = 66. The sides 20 and 13 are not used.",
    "figright": true
   },
   {
@@ -1053,7 +1053,7 @@
      "Working:"
     ]
    },
-   "explanation": "Think of the full rectangle 12 by 9 = 108 cm². The cut-off corner is a right-angled triangle. Its legs are 12 - 8 = 4 cm along the top and 9 - 4 = 5 cm down the right side. Its area is 1/2 × 4 × 5 = 10. The shape is 108 - 10 = 98 cm².",
+   "explanation": "The full rectangle is 12 × 9 = 108. The cut corner has legs 4 and 5: area 10. 108 - 10 = 98 cm².",
    "figright": true
   },
   {
@@ -1127,7 +1127,7 @@
      }
     }
    ],
-   "explanation": "(a) True: that is what makes it the height. (b) False: a slanting side does not meet the base at a right angle. (c) True: both have area 1/2 × 10 × 6 = 30 cm²."
+   "explanation": "(a) True. (b) False: a slanting side is not at a right angle. (c) True: both are 30 cm²."
   },
   {
    "id": "L5U04-T01",
@@ -1205,7 +1205,7 @@
     ]
    },
    "hint": "Find the area first. Then use the 10 cm side as the base.",
-   "explanation": "The area does not depend on which side is the base. Use the 2 sides at the right angle: 1/2 × 8 × 6 = 24 cm². Now the base is 10 cm: 1/2 × 10 × height = 24, so 5 × height = 24 and the height is 4.8 cm.",
+   "explanation": "1/2 × 8 × 6 = 24. With base 10: 1/2 × 10 × height = 24, so the height is 4.8 cm.",
    "figright": true
   },
   {
@@ -1318,7 +1318,7 @@
     ]
    },
    "hint": "Take the 3 white triangles away from the rectangle.",
-   "explanation": "The rectangle is 14 × 10 = 140 cm². White triangle ABM: 1/2 × 14 × 5 = 35. White triangle MCN: legs 5 and 7, 1/2 × 5 × 7 = 17.5. White triangle ADN: 1/2 × 10 × 7 = 35. White total: 35 + 17.5 + 35 = 87.5. Shaded: 140 - 87.5 = 52.5 cm².",
+   "explanation": "Rectangle 14 × 10 = 140. White triangles: 35 + 17.5 + 35 = 87.5. 140 - 87.5 = 52.5 cm².",
    "figright": true
   },
   {
@@ -1409,7 +1409,7 @@
     ]
    },
    "hint": "ABD and ABC have the same height. Compare their bases.",
-   "explanation": "(a) Triangles ABD and ABC have the same height from A. The base BD is 1/3 of BC, so ABD is 1/3 of 72 = 24 cm². (b) Triangles BDE and ABD have the same height from B to the line AD. The base DE is half of DA, so BDE is half of 24 = 12 cm².",
+   "explanation": "(a) Same height, and BD is 1/3 of BC: 1/3 of 72 = 24. (b) Same height from B, and DE is half of DA: half of 24 = 12.",
    "figside": true
   },
   {
@@ -1495,7 +1495,7 @@
     ]
    },
    "hint": "Take away the 3 white right-angled triangles.",
-   "explanation": "The square is 16 × 16 = 256 cm². White triangle ADE: 1/2 × 16 × 4 = 32. White triangle EBF: EB = 12 and BF = 8, so 1/2 × 12 × 8 = 48. White triangle FCD: 1/2 × 16 × 8 = 64. White total: 32 + 48 + 64 = 144. Shaded: 256 - 144 = 112 cm².",
+   "explanation": "Square 16 × 16 = 256. White triangles: 32 + 48 + 64 = 144. 256 - 144 = 112 cm².",
    "figright": true
   },
   {
@@ -1556,7 +1556,7 @@
     ]
    },
    "hint": "Draw a rectangle round the triangle. Take away 3 triangles.",
-   "explanation": "The rectangle round the triangle goes from 1 to 7 across and 1 to 6 up: 6 × 5 = 30 cm². Three right-angled triangles are outside the shape: 1/2 × 6 × 2 = 6, 1/2 × 4 × 3 = 6 and 1/2 × 2 × 5 = 5. Together 17. The triangle is 30 - 17 = 13 cm².",
+   "explanation": "The rectangle round it is 6 × 5 = 30. The 3 outside triangles are 6, 6 and 5: 17. 30 - 17 = 13 cm².",
    "figright": true
   },
   {
@@ -1635,7 +1635,7 @@
     ]
    },
    "hint": "Join D to C. Compare ADC with ABC first.",
-   "explanation": "Join D to C. Triangles ADC and ABC have the same height from C, and AD is 1/4 of AB, so ADC = 1/4 of 96 = 24 cm². Now triangles ADE and ADC have the same height from D, and AE is 1/3 of AC, so ADE = 1/3 of 24 = 8 cm². The small triangle is 1/4 × 1/3 = 1/12 of the whole.",
+   "explanation": "Join D to C. ADC = 1/4 of 96 = 24. ADE = 1/3 of ADC = 8 cm².",
    "figright": true,
    "beyond": "Corner triangles"
   },
@@ -1728,7 +1728,7 @@
     ],
     "text": "60 cm²"
    },
-   "explanation": "The base is 24 cm and the height that meets it at a right angle is 5 cm. 1/2 × 24 × 5 = 60. The slanting sides (13 and 13) are not used.",
+   "explanation": "1/2 × 24 × 5 = 60. The sides 13 and 13 are not used.",
    "figright": true
   },
   {
@@ -1841,7 +1841,7 @@
     ],
     "text": "72 cm²"
    },
-   "explanation": "The rectangle is 10 × 6 = 60 cm². The triangle on the right has a base of 6 cm (the side BC) and a height of 4 cm. 1/2 × 6 × 4 = 12. Total: 60 + 12 = 72 cm².",
+   "explanation": "Rectangle 60 + triangle 1/2 × 6 × 4 = 12. Total 72 cm².",
    "figright": true
   },
   {

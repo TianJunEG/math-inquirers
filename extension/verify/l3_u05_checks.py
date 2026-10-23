@@ -62,14 +62,14 @@ def _():
 
 @check('L3U05-S05')
 def _():
-    marbles = 9 * 6 + 4
-    return {'a': s([marbles]), 'b': s(divmod_sub(marbles, 7))}
+    coins = 9 * 5 + 4
+    return {'a': s([coins]), 'b': s(divmod_sub(coins, 6))}
 
 
 @check('L3U05-S06')
 def _():
     rems = sorted({divmod_sub(n, 5)[1] for n in range(5, 200)} | {0})
-    big = [n for n in range(71, 80) if divmod_sub(n, 9)[1] == max(divmod_sub(m, 9)[1] for m in range(9, 200))]
+    big = [n for n in range(51, 60) if divmod_sub(n, 7)[1] == 6]
     return {'a': s(rems), 'b': s([only(big)])}
 
 
@@ -113,8 +113,8 @@ def _():
 
 @check('L3U05-S13')
 def _():
-    q, r = divmod_sub(53, 8)
-    return {'a': s([q]), 'b': s([8 - r])}
+    rems = {d: divmod_sub(47, d)[1] for d in (4, 5, 6, 7, 8)}
+    return s([only(d for d, r in rems.items() if r == max(rems.values()))])
 
 
 DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']

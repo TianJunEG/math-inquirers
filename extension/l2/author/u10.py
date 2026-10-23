@@ -88,6 +88,6 @@ items = [
  I('quiz', 0, 'Each picture stands for 10 children. How many children chose Tuesday? {b}', figure=pg([('Monday', 3), ('Tuesday', 5)], {'value': 10}, width_mm=84), figright=True, value='50', why='Tuesday has 5 pictures. Each picture is 10 children. 5 × 10 = 50 children.'),
  I('quiz', 0, 'Use the digit cards 1, 0 and 4 once each. How many 3-digit numbers can you make? {b}', value='4', why='0 cannot be first. Start with 1: 104, 140. Start with 4: 401, 410. That is 4 numbers.'),
  I('quiz', 0, 'Ali, Ben and Mei have red, blue and green. Mei has blue. Ali does not have red. Ben has {b}', value='red', why='Mei has blue. Ali does not have red, so Ali has green. Ben has red.'),
- I('quiz', 0, 'A pizza has 12 slices. 5/12 is eaten. What is left, in twelfths? {b}', value='7/12', why='12/12 - 5/12 = 7/12 is left.'),
+ I('quiz', 0, 'A pizza has 12 slices. 5/12 is eaten. Left, in twelfths: {b}', value='7/12', why='12/12 - 5/12 = 7/12 is left.'),
 ]
 build(10, 'Puzzle day', 'Mixed puzzles', 'I can choose a way to start a puzzle. I can read picture graphs and logic grids. I can check my answer against every clue.', learn, items, snug=['start1', 'start2', 'start3'])

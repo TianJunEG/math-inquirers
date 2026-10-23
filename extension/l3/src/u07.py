@@ -45,7 +45,7 @@ u.S(1, 'Look at squares.', parts=[
     P('a', 'A square has sides of 7 cm. Its perimeter is {b} cm.', A('28')), P('b', 'Its area is {b} cm².', A('49')),
     P('c', 'A square garden has a fence 36 m long all round. Each side is {b} m.', A('9'))],
     partsrow=True,
-    why='(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 cm.')
+    why='(a) 4 × 7 = 28. (b) 7 × 7 = 49. (c) The 4 sides are equal, so each is 36 ÷ 4 = 9 m.')
 u.S(1, 'A rectangle has a perimeter of 30 cm. Its length is 9 cm.', parts=[
     P('a', 'Its width is {b} cm.', A('6')), P('b', 'Its area is {b} cm².', A('54'))],
     partsrow=True,
@@ -91,7 +91,7 @@ u.S(3, 'A square room has a floor area of 64 m².', parts=[
 u.T('A square has sides of 8 cm. One straight cut makes it into 2 equal rectangles.', parts=[
     P('a', 'Each rectangle has a perimeter of {b} cm.', A('24')), P('b', 'The 2 rectangles together have a perimeter of {b} cm.', A('48')),
     P('c', 'That is {b} cm more than the perimeter of the square.', A('16'))],
-    hint='Each rectangle is 8 cm by 4 cm. Draw it.',
+    hint='Draw the square. Draw the cut.',
     space={'rows': ['Working:']},
     why='Each rectangle is 8 cm by 4 cm, so its perimeter is 2 × (8 + 4) = 24 cm. Together: 48 cm. The square’s perimeter is 32 cm, and 48 - 32 = 16. The cut is 8 cm long and it appears on both pieces, so it adds 2 × 8 = 16 cm.')
 u.T('A rectangle has area 36 cm² and perimeter 26 cm.', parts=[
@@ -99,13 +99,13 @@ u.T('A rectangle has area 36 cm² and perimeter 26 cm.', parts=[
     hint='List pairs that multiply to 36. Then add each pair.',
     space={'rows': ['Pairs that multiply to 36:', '']},
     why='Length + width is 26 ÷ 2 = 13. The pairs that multiply to 36 are 1 and 36, 2 and 18, 3 and 12, 4 and 9, 6 and 6. The pair that adds up to 13 is 4 and 9. Check: area 9 × 4 = 36 and perimeter 2 × 13 = 26.')
-u.T('A rectangle is 9 m long and 6 m wide. A rectangle 3 m by 2 m is cut out of one corner, as shown.', parts=[
-    P('a', 'The area that is left is {b} m².', A('48')), P('b', 'The perimeter of the figure is {b} m.', A('30')),
-    P('c', 'The same piece is cut from the MIDDLE of a long side. The perimeter is then {b} m.', A('34'))],
-    figure={'type': 'l3_poly', 'pts': [[0, 0], [9, 0], [9, 4], [6, 4], [6, 6], [0, 6]], 'k': 30, 'width_mm': 66,
-            'labels': [{'side': 0, 'text': '9 m'}, {'side': 5, 'text': '6 m'}]}, figside=True,
-    hint='Push the corner out. Then think about a notch in the middle.',
-    why='(a) 9 × 6 = 54, and 54 - 6 = 48 m². (b) Cutting a corner does not change the perimeter: 2 × (9 + 6) = 30 m. (c) A notch in the middle of a side takes away 3 m of edge. It adds 3 + 2 + 2 = 7 m of new edge. So the perimeter grows by 4 m: 34 m.')
+u.T('A square with sides of 4 cm and a square with sides of 3 cm are joined side by side. Their bottom edges are level, as shown.', parts=[
+    P('a', 'The area of the figure is {b} cm².', A('25')), P('b', 'The perimeter of the figure is {b} cm.', A('22')),
+    P('c', 'The 3 cm square is moved on top of the 4 cm square, with their left edges level. The perimeter is then {b} cm.', A('22'))],
+    figure={'type': 'l3_poly', 'pts': [[0, 0], [7, 0], [7, 3], [4, 3], [4, 4], [0, 4]], 'k': 34, 'width_mm': 74,
+            'labels': [{'side': 4, 'text': '4 cm'}, {'side': 1, 'text': '3 cm'}]}, figside=True,
+    hint='Push the steps out to make a box. What is its perimeter?',
+    why='(a) 4 × 4 = 16 and 3 × 3 = 9, so 25 cm². (b) The figure has no dents, so its perimeter is the same as its box: the box is 7 cm by 4 cm, 2 × (7 + 4) = 22 cm. (c) The new figure fits in a box 4 cm by 7 cm and has no dents: 2 × (4 + 7) = 22 cm. The perimeter does not change.')
 
 # ---------------- Go further
 u.G('Beyond Level 3: Perimeter patterns.\nSquares with sides of 1 cm are joined in a row. 1 square has a perimeter of 4 cm. 2 squares have 6 cm. 3 squares have 8 cm.', parts=[

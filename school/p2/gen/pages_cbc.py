@@ -81,7 +81,7 @@ def mirror_truth(pic):
 
 def cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     old = L.BOX_SIDE
-    L.BOX_SIDE = 7.5                       # larger answer boxes (audit M4: three-digit answers)
+    L.BOX_SIDE = 9.0                       # larger answer boxes (audit M4 and round 2: three-digit answers)
     try: return _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc)
     finally: L.BOX_SIDE = old
 
@@ -150,9 +150,9 @@ def page39():
         "Every part asks a multiplication or division fact from the tables of 2, 3, 4, 5 and 10; some parts use the sign \u00f7, a missing number or a story.", oc=["MD3.1", "MD3.2", "MD3.3", "MD3.4", "MD3.5"])
 
 def page40():
-    return cbc_page(40, dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=2, seed=308, level=2), "Colour the Butterfly",
-        ["Find the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
-        "Measurement and Geometry - Measurement", "2.2, 2.3 (measuring time in hours and minutes; converting hours and minutes to minutes only)",
-        "Every part changes hours and minutes to minutes, or finds how many minutes there are from one time to another (including from before one hour to after it).", oc=["TI2.1", "TI2.2", "TI2.3"])
+    return cbc_page(40, dict(id="CBC-P2-07", picture="butterfly", bank="money", tier=2, seed=311, level=2), "Colour the Butterfly",
+        ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
+        "Number and Algebra - Money", "1.1, 1.2, 1.3, 1.4 (counting money in dollars and cents; decimal notation; comparing amounts; converting decimal notation to cents)",
+        "Every part works with money in cents and dollars: changing $ to cents, adding or taking away cents, finding what makes $1, comparing amounts or counting coins from a small drawing.", oc=["MO1.1", "MO1.2", "MO1.3", "MO1.4"])
 
 PAGES = [page38, page39, page40]

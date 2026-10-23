@@ -149,10 +149,9 @@ def _():
 
 @check('L3U07-T03')
 def _():
-    corner = [(0, 0), (9, 0), (9, 4), (6, 4), (6, 6), (0, 6)]
-    notch = [(0, 0), (9, 0), (9, 6), (6, 6), (6, 4), (3, 4), (3, 6), (0, 6)]    # a 3 by 2 piece cut from the middle of the top (long) side
-    assert poly_area(corner) == poly_area(notch) == 48
-    return {'a': s([poly_area(corner)]), 'b': s([poly_perimeter(corner)]), 'c': s([poly_perimeter(notch)])}
+    side = [(0, 0), (7, 0), (7, 3), (4, 3), (4, 4), (0, 4)]
+    stack = [(0, 0), (4, 0), (4, 4), (3, 4), (3, 7), (0, 7)]     # the 3 cm square on top of the 4 cm square, left edges level
+    return {'a': s([poly_area(side)]), 'b': s([poly_perimeter(side)]), 'c': s([poly_perimeter(stack)])}
 
 
 @check('L3U07-G01')

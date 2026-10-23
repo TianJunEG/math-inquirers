@@ -40,7 +40,7 @@ items = [
    parts=[P('a', 'How many ways are there? {b}', '6'), P('b', 'The way with exactly 4 pieces has {b} $2 notes and {b} $1 coins.', ['3', '1'], '3 $2 notes and 1 $1 coin')],
    why='Ways ($5, $2, $1): 1, 1, 0 / 1, 0, 2 / 0, 3, 1 / 0, 2, 3 / 0, 1, 5 / 0, 0, 7. That is 6 ways. Their pieces are 2, 3, 4, 5, 6 and 7. Only 0, 3, 1 has 4 pieces: three $2 notes and one $1 coin.'),
  I('start', 2, 'Find the change.', partsrow=True, parts=[
-   P('a', 'A ruler costs 70¢. Kumar pays with a $1 coin. Change: {b} ¢', '30'), P('b', 'A book costs $4.30. Mei pays with a $10 note. Change: $ {b}', '5.70'), P('c', 'A bag costs $37. Ali pays with a $50 note. Change: $ {b}', '13'),
+   P('a', 'A ruler costs 70¢. Kumar pays with a $1 coin. Change: {b} ¢', '30'), P('b', 'A book costs $4.30. Mei pays $10. Change: $ {b}', '5.70'), P('c', 'A bag costs $37. Ali pays with a $50 note. Change: $ {b}', '13'),
    P('d', 'The fewest notes and coins for the $13 change: {b} pieces', '3')],
    why='Change is what you pay minus the cost. (a) 100¢ - 70¢ = 30¢. (b) $10 - $4.30 = $5.70. Count on: $4.30 to $5 is 70¢, then $5 more makes $10. (c) $50 - $37 = $13. (d) $13 is $10 + $2 + $1: 3 pieces.'),
  I('start', 3, 'Ravi has $30.', figure=tags([('Shoes', '$17.50'), ('T-shirt', '$9.90'), ('Hat', '$4.60')], width_mm=140),
@@ -67,7 +67,7 @@ items = [
    why='7 lollipops cost $1.40. Each swap of a lollipop for a cookie adds 30¢: $1.70, $2.00, $2.30, $2.60. That is 4 swaps. So 3 lollipops and 4 cookies. Check: 60¢ + $2.00 = $2.60 and 3 + 4 = 7.'),
  I('think', 4, 'A book costs $4 more than a puzzle. Together they cost $13.',
    figure={'type': 'l2_bar', 'rows': [{'label': 'Puzzle', 'segs': [{'w': 5, 'unknown': True, 't': '?'}]}, {'label': 'Book', 'segs': [{'w': 5, 'unknown': True, 't': '?'}, {'w': 2, 't': '$4'}]}], 'brace': {'text': '$13', 'rows': [0, 1]}, 'width_units': 300, 'width_mm': 84},
-   partsrow=True, parts=[P('a', 'The puzzle costs $ {b}', '4.50'), P('b', 'The book costs $ {b}', '8.50')],
+   partsrow=True, parts=[P('a', 'Puzzle: $ {b}', '4.50'), P('b', 'Book: $ {b}', '8.50')],
    hint='Take away the extra $4. Share what is left equally.',
    why='Take away the extra $4: $13 - $4 = $9. Two equal bars share $9, so each is $4.50. The puzzle costs $4.50 and the book costs $4.50 + $4 = $8.50. Check: 4.50 + 8.50 = 13.00.'),
  # Go further

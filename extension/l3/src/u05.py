@@ -15,9 +15,9 @@ u.learn(
      'answer': '7 full bags, with 3 stickers left over.'},
     {'title': 'How to divide with a remainder',
      'steps': ['Find the greatest table fact that fits in the number.',
-               'Subtract it to find the remainder.', 'Check: groups × size + remainder = start.']},
-    {'text': 'Mei has 43 beads. She makes bracelets with 6 beads each. She makes {b} full bracelets and has {b} beads left over.',
-     'answer': A(['7', '1'], '7 full bracelets, 1 bead left over', list=True),
+               'Subtract it to find the remainder.', 'Check: groups × size + remainder = start.', 'A leftover person still needs a seat: use 1 more group.']},
+    {'text': 'A baker packs 43 buns into boxes of 6. She fills {b} boxes and has {b} buns left over.',
+     'answer': A(['7', '1'], '7 full boxes, 1 bun left over', list=True),
      'explanation': '6 × 7 = 42 and 43 - 42 = 1. So 43 ÷ 6 = 7 remainder 1. Check: 7 × 6 + 1 = 43.'})
 u.u['learn']['tight'] = True
 
@@ -44,14 +44,14 @@ u.S(1, 'Kumar says 59 ÷ 7 = 7 remainder 10.', parts=[
     P('b', 'The right answer is {b} remainder {b}.', A(['8', '3'], '8 remainder 3', list=True))],
     why='A remainder must be smaller than the number we divide by. 10 is greater than 7, so another group of 7 fits. 7 × 8 = 56 and 59 - 56 = 3. So 59 ÷ 7 = 8 remainder 3.')
 
-u.S(2, 'Ravi puts marbles into bags of 6. He fills 9 bags and has 4 marbles left over.', parts=[
-    P('a', 'Ravi has {b} marbles.', A('58')),
-    P('b', 'He packs all the marbles again into bags of 7. He fills {b} bags and has {b} marbles left.', A(['8', '2'], '8 bags, 2 marbles left', list=True))],
-    why='(a) 9 × 6 = 54, and 54 + 4 = 58. (b) 58 ÷ 7: 7 × 8 = 56 and 58 - 56 = 2. So 8 full bags and 2 marbles left.')
+u.S(2, 'Ali stacks coins in piles of 5. He makes 9 full piles and has 4 coins left over.', parts=[
+    P('a', 'Ali has {b} coins.', A('49')),
+    P('b', 'He stacks all the coins again in piles of 6. He makes {b} piles and has {b} coins left.', A(['8', '1'], '8 piles, 1 coin left', list=True))],
+    why='(a) 9 × 5 = 45, and 45 + 4 = 49. (b) 49 ÷ 6: 6 × 8 = 48 and 49 - 48 = 1. So 8 full piles and 1 coin left.')
 u.S(2, 'Think about remainders.', parts=[
     P('a', 'List every remainder that is possible when a number is divided by 5.\n{ll}', A(['0', '1', '2', '3', '4'], '0, 1, 2, 3, 4', list=True)),
-    P('b', 'A number between 70 and 80 is divided by 9. The remainder is as great as it can be. The number is {b}.', A('71'))],
-    why='(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) The greatest remainder for 9 is 8. The numbers with remainder 8 are 8, 17, 26, ... 62, 71, 80. Only 71 is between 70 and 80.')
+    P('b', 'A number between 50 and 60 is divided by 7. The remainder is as great as it can be. The number is {b}.', A('55'))],
+    why='(a) A remainder is always smaller than 5, so it can be 0, 1, 2, 3 or 4. (b) The greatest remainder for 7 is 6. The numbers with remainder 6 are 6, 13, 20, ... 48, 55, 62. Only 55 is between 50 and 60.')
 u.S(2, 'Look for a pattern. Write the remainder when each number is divided by 4.', parts=[
     P('a', 'Fill in the empty cells.', A(['0', '1', '2', '3', '0', '1', '2', '3'], '0, 1, 2, 3, 0, 1, 2, 3', list=True)),
     P('b', 'When 30 is divided by 4 the remainder is {b}.', A('2')),
@@ -80,10 +80,8 @@ u.S(3, 'Mei has 8 bags with 9 beads in each bag, and 5 loose beads. She shares a
     why='(a) 8 × 9 = 72, and 72 + 5 = 77. (b) 77 ÷ 9: 9 × 8 = 72 and 77 - 72 = 5. Each friend gets 8 beads and 5 beads are left over.')
 u.S(3, 'Circle each number that has remainder 3 when you divide it by 5.\n{circ:18|23|33|41|48}', A(['18', '23', '33', '48'], '18, 23, 33 and 48', list=True),
     why='A number leaves remainder 3 when it is 3 more than a number in the 5 times table. 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3 and 48 = 45 + 3. 41 is 1 more than 40, so it leaves remainder 1.')
-u.S(3, 'Siti has 53 stickers. She puts 8 stickers on each card.', parts=[
-    P('a', 'She makes {b} full cards.', A('6')),
-    P('b', 'She needs {b} more stickers to make one more full card.', A('3'))],
-    why='(a) 53 ÷ 8 = 6 remainder 5, so she makes 6 full cards. (b) 5 stickers are left over, so she needs 8 - 5 = 3 more to fill another card.')
+u.S(3, 'Divide 47 by each of 4, 5, 6, 7 and 8. Which number gives the greatest remainder?   {circ:4|5|6|7|8}', A('8'),
+    why='47 ÷ 4 = 11 remainder 3. 47 ÷ 5 = 9 remainder 2. 47 ÷ 6 = 7 remainder 5. 47 ÷ 7 = 6 remainder 5. 47 ÷ 8 = 5 remainder 7. The greatest remainder is 7, from dividing by 8.')
 
 # ---------------- Think harder
 u.T('Today is Tuesday.', parts=[
@@ -120,7 +118,7 @@ u.G('Make up your own number riddle: a range and 2 remainder clues. Only ONE num
     space={'rows': ['My riddle:', 'The numbers I tested:']})
 u.G('Beyond Level 3: Making numbers with 2 sizes.\nBen sells eggs in boxes of 3 and boxes of 5. An order must be whole boxes.', parts=[
     P('a', 'Can he fill an order for 11 eggs?   {circ:Yes|No}', A('Yes')),
-    P('b', 'Orders from 1 to 15 he CANNOT fill: {b} {b} {b} {b}', A(['1', '2', '4', '7'], '1, 2, 4 and 7', list=True))],
+    P('b', 'Orders from 1 to 15 he CANNOT fill:\n{ll}', A(['1', '2', '4', '7'], '1, 2, 4 and 7', list=True))],
     hint='List the orders he can fill. Which numbers are missing?',
     why='Orders he can fill: 3, 5, 6 (3 + 3), 8 (3 + 5), 9, 10, 11 (3 + 3 + 5), 12, 13 (3 + 5 + 5), 14 (3 + 3 + 3 + 5), 15. So the orders he cannot fill are 1, 2, 4 and 7.')
 

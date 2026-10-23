@@ -914,7 +914,7 @@
   {
    "id": "L2U10-C04",
    "tier": "quiz",
-   "text": "A pizza has 12 slices. 5/12 is eaten. What is left, in twelfths? {bw}",
+   "text": "A pizza has 12 slices. 5/12 is eaten. Left, in twelfths: {bw}",
    "answer": {
     "value": [
      "7/12"
