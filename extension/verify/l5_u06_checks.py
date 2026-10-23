@@ -160,10 +160,9 @@ def _():
 
 @check('L5U06-T03')
 def _():
-    per_machine_minute = Fr(400, 5) / 4
-    for m in range(1, 200):
-        if m * per_machine_minute * 3 == 900:
-            return [str(m)]
+    sols = [t for t in range(0, 201) if Fr(9, 100) * (200 - t) + Fr(12, 100) * t == Fr(39, 2)]
+    assert len(sols) == 1
+    return [str(sols[0])]
 
 
 @check('L5U06-G01')

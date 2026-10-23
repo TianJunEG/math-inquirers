@@ -196,31 +196,31 @@
       0
      ],
      "B": [
-      12,
+      18,
       0
      ],
      "C": [
-      6,
-      8
+      9,
+      12
      ],
      "S": [
-      6,
+      9,
       0
      ],
      "P": [
-      16,
+      21,
       0
      ],
      "Q": [
-      30,
+      46,
       0
      ],
      "R": [
-      21,
+      30,
       12
      ],
      "H": [
-      21,
+      30,
       0
      ]
     },
@@ -270,57 +270,57 @@
      {
       "a": "A",
       "b": "B",
-      "text": "12 cm",
+      "text": "18 cm",
       "ref": "C"
      },
      {
       "a": "A",
       "b": "C",
-      "text": "10 cm",
+      "text": "15 cm",
       "ref": "B",
       "dist": 26
      },
      {
       "a": "B",
       "b": "C",
-      "text": "10 cm",
+      "text": "15 cm",
       "ref": "A",
       "dist": 26
      },
      {
       "a": "P",
       "b": "Q",
-      "text": "14 cm",
+      "text": "25 cm",
       "ref": "R"
      },
      {
       "a": "P",
       "b": "R",
-      "text": "13 cm",
+      "text": "15 cm",
       "ref": "Q",
       "dist": 26
      },
      {
       "a": "Q",
       "b": "R",
-      "text": "15 cm",
+      "text": "20 cm",
       "ref": "P",
       "dist": 26
      }
     ],
     "texts": [
      {
-      "t": "8 cm",
+      "t": "12 cm",
       "at": [
-       7.7,
-       3.2
+       12.6,
+       4.8
       ],
       "size": 18
      },
      {
       "t": "12 cm",
       "at": [
-       24.2,
+       34.6,
        5
       ],
       "size": 18
@@ -328,45 +328,45 @@
      {
       "t": "(a)",
       "at": [
-       6,
-       9.8
+       9,
+       14.2
       ]
      },
      {
       "t": "(b)",
       "at": [
-       21,
-       14.3
+       30,
+       14.2
       ]
      }
     ],
     "vlab": false,
     "alt": "two triangles with their heights",
-    "mm": 3.0
+    "mm": 2.5
    },
    "parts": [
     {
      "label": "a",
-     "text": "Triangle (a): {b} cm²",
+     "text": "Area (a): {b} cm²",
      "answer": {
       "value": [
-       "48"
+       "108"
       ],
-      "text": "48"
+      "text": "108"
      }
     },
     {
      "label": "b",
-     "text": "Triangle (b): {b} cm²",
+     "text": "Area (b): {b} cm²",
      "answer": {
       "value": [
-       "84"
+       "150"
       ],
-      "text": "84"
+      "text": "150"
      }
     }
    ],
-   "explanation": "(a) 1/2 × 12 × 8 = 48. (b) 1/2 × 14 × 12 = 84. Slanting sides are not used.",
+   "explanation": "(a) 1/2 × 18 × 12 = 108. (b) 1/2 × 25 × 12 = 150. Slanting sides are not used.",
    "partsrow": true,
    "figside": true
   },
@@ -680,7 +680,7 @@
    "id": "L5U04-S06",
    "tier": "start",
    "page": 2,
-   "text": "ABCD is a rectangle. Point E lies on the top edge DC. Triangle ABE is shaded.",
+   "text": "ABCD is a parallelogram. E is on DC. Triangle ABE is shaded.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 110,
@@ -690,20 +690,24 @@
       0
      ],
      "B": [
-      14,
+      16,
       0
      ],
      "C": [
-      14,
+      20,
       9
      ],
      "D": [
-      0,
+      4,
       9
      ],
      "E": [
-      5,
+      11,
       9
+     ],
+     "H": [
+      4,
+      0
      ]
     },
     "polys": [
@@ -725,19 +729,45 @@
       "fill": "shade"
      }
     ],
+    "lines": [
+     {
+      "a": "D",
+      "b": "H"
+     }
+    ],
+    "rights": [
+     {
+      "at": "H",
+      "a": "B",
+      "b": "D",
+      "size": 12
+     }
+    ],
     "dims": [
      {
       "a": "A",
       "b": "B",
-      "text": "14 cm"
-     },
-     {
-      "a": "B",
-      "b": "C",
-      "text": "9 cm"
+      "text": "16 cm"
      }
     ],
-    "alt": "rectangle with a shaded triangle",
+    "texts": [
+     {
+      "t": "9 cm",
+      "at": [
+       5.9,
+       4.5
+      ],
+      "size": 18
+     }
+    ],
+    "vlab": {
+     "A": "bl",
+     "B": "br",
+     "C": "tr",
+     "D": "tl",
+     "E": "t"
+    },
+    "alt": "parallelogram with a shaded triangle",
     "mm": 3.0
    },
    "parts": [
@@ -746,14 +776,14 @@
      "text": "The shaded area is {b} cm².",
      "answer": {
       "value": [
-       "63"
+       "72"
       ],
-      "text": "63"
+      "text": "72"
      }
     },
     {
      "label": "b",
-     "text": "The rectangle is {b} times as large as the shaded triangle.",
+     "text": "The parallelogram is {b} times the triangle.",
      "answer": {
       "value": [
        "2"
@@ -762,7 +792,7 @@
      }
     }
    ],
-   "explanation": "(a) 1/2 × 14 × 9 = 63. (b) The rectangle is 14 × 9 = 126 cm², and 126 ÷ 63 = 2.",
+   "explanation": "(a) The base AB is 16 cm and the height is 9 cm: 1/2 × 16 × 9 = 72. (b) The parallelogram is 16 × 9 = 144 cm², and 144 ÷ 72 = 2.",
    "figside": true
   },
   {
@@ -927,26 +957,36 @@
    "id": "L5U04-S09",
    "tier": "start",
    "page": 3,
-   "text": "A triangle has a base of 15 cm and a height of 8 cm. A rectangle has the same area as the triangle. The rectangle is 5 cm wide.",
+   "text": "A triangle has a base of 1.2 m and a height of 80 cm.",
    "parts": [
     {
      "label": "a",
-     "text": "The area of the triangle is {b} cm².",
+     "text": "The base is {b} cm.",
      "answer": {
       "value": [
-       "60"
+       "120"
       ],
-      "text": "60"
+      "text": "120"
      }
     },
     {
      "label": "b",
-     "text": "The rectangle is {b} cm long.",
+     "text": "The area is {bw} cm².",
      "answer": {
       "value": [
-       "12"
+       "4800"
       ],
-      "text": "12"
+      "text": "4800"
+     }
+    },
+    {
+     "label": "c",
+     "text": "That is {bw} m².",
+     "answer": {
+      "value": [
+       "0.48"
+      ],
+      "text": "0.48"
      }
     }
    ],
@@ -955,7 +995,7 @@
      "Working:"
     ]
    },
-   "explanation": "(a) 1/2 × 15 × 8 = 60. (b) The rectangle has area 60 too: 5 × length = 60, so the length is 12 cm."
+   "explanation": "(a) 1.2 m = 120 cm. (b) 1/2 × 120 × 80 = 4800 cm². (c) 1 m² = 10 000 cm², so 4800 ÷ 10 000 = 0.48 m²."
   },
   {
    "id": "L5U04-S10",
@@ -1707,8 +1747,8 @@
      {
       "t": "6 cm",
       "at": [
-       10.4,
-       3.2
+       10.9,
+       3.0
       ],
       "size": 18
      }
@@ -1783,14 +1823,6 @@
        "D"
       ],
       "fill": "light"
-     },
-     {
-      "v": [
-       "B",
-       "E",
-       "C"
-      ],
-      "fill": "shade"
      }
     ],
     "lines": [

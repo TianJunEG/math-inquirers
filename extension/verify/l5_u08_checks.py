@@ -236,10 +236,10 @@ def _():
 @check('L5U08-C01')
 def _():
     O = (0, 0)
-    for aoc in range(1, 180):
-        A, B, C = pol(O, 1, 0), pol(O, 1, 180), pol(O, 1, aoc)       # AOB straight, OC at angle aoc from OA
-        if abs(ang(O, A, C) - 3 * ang(O, C, B)) < 1e-9:
-            return [r(ang(O, C, B))]
+    A, B, C = pol(O, 1, 0), pol(O, 1, 180), pol(O, 1, 110)         # AOB straight line, COB = 70 so OC is at 110 from OA
+    assert abs(ang(O, C, B) - 70) < 1e-9
+    D = pol(O, 1, ang(O, A, C) / 2)                                  # OD halves angle AOC
+    return [r(ang(O, D, C))]
 
 
 @check('L5U08-C02')

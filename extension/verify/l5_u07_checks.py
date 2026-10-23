@@ -126,10 +126,10 @@ def _():
 
 @check('L5U07-S13')
 def _():
-    pages = Fr(240)
-    pages -= percent_of(30, pages)
-    pages -= percent_of(25, pages)
-    return [pc(pages)]
+    for pages in range(1, 2000):
+        tue = Fr(28)
+        if percent_of(30, pages) + tue + percent_of(35, pages) == pages:
+            return [str(pages)]
 
 
 @check('L5U07-S14')
@@ -158,22 +158,25 @@ def _():
 @check('L5U07-T03')
 def _():
     for cents in range(1, 100000):
-        before = Fr(cents, 100)
-        if before + percent_of(9, before) == 545:
-            return [m(percent_of(9, before))]
+        food = Fr(cents, 100)
+        if food + percent_of(10, food) == 275:
+            return [m(percent_of(10, food))]
 
 
 @check('L5U07-G01')
 def _():
-    return {'a': [pc(as_percent(50 - 40, 50))], 'b': [pc(as_percent(50 - 40, 40))]}
+    cost = Fr(200)
+    cost2 = cost + percent_of(10, cost)
+    cost3 = cost2 + percent_of(10, cost2)
+    return {'a': [m(cost3)], 'b': [pc(as_percent(cost3 - cost, cost))]}
 
 
 @check('L5U07-G02')
 def _():
-    children = percent_of(40, 50)
-    adults = 50 - children
-    seats = percent_of(50, children) + percent_of(20, adults)
-    return [pc(as_percent(seats, 50))]
+    salt = percent_of(5, 400)
+    for grams in range(1, 400):
+        if salt == percent_of(8, grams):
+            return [str(400 - grams)]
 
 
 @check('L5U07-G03')

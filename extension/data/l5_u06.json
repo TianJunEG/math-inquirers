@@ -543,12 +543,12 @@
    "id": "L5U06-T03",
    "tier": "think",
    "page": 4,
-   "text": "5 identical machines make 400 bolts in 4 minutes. How many of these machines are needed to make 900 bolts in 3 minutes? {b}",
+   "text": "A car uses 9 litres of fuel for every 100 km on open roads and 12 litres for every 100 km in town. A trip of 200 km uses 19.5 litres altogether. How many km of the trip are in town? {b}",
    "answer": {
     "value": [
-     "15"
+     "50"
     ],
-    "text": "15 machines"
+    "text": "50 km"
    },
    "space": {
     "rows": [
@@ -558,8 +558,8 @@
      ""
     ]
    },
-   "hint": "Find the bolts for 1 machine in 1 minute first.",
-   "explanation": "1 machine makes 400 ÷ 5 ÷ 4 = 20 bolts a minute. 900 ÷ 3 = 300 a minute, so 15 machines."
+   "hint": "Start by supposing the whole trip is on open roads.",
+   "explanation": "All open road: 18 litres, 1.5 short. Each 100 km in town adds 3 litres: 1.5 ÷ 3 = 0.5 of 100 km = 50 km."
   },
   {
    "id": "L5U06-G01",

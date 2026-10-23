@@ -477,19 +477,19 @@
    "id": "L5U03-S12",
    "tier": "start",
    "page": 3,
-   "text": "Hana buys a shirt with 1/5 of her money. Shoes take 3/8 of the rest. She keeps $40. How much money did Hana start with? $ {b}",
+   "text": "Hana spends 1/5 of her money on a shirt. She spends $36 on shoes. Then she has 1/2 of her money left. How much money did Hana start with? $ {b}",
    "answer": {
     "value": [
-     "80"
+     "120"
     ],
-    "text": "$80"
+    "text": "$120"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "Shirt 2 units, shoes 3 units, left 5 units of 10 = $40. 1 unit = $8, so $80."
+   "explanation": "Shirt 1/5 and left 1/2 make 7/10. So the $36 shoes are 3/10. 1/10 = $12, so $120."
   },
   {
    "id": "L5U03-S13",

@@ -774,36 +774,36 @@
    "id": "L5U05-T03",
    "tier": "think",
    "page": 4,
-   "text": "A tank floor is 50 cm × 30 cm and the water is 8 cm deep. A block 20 cm × 15 cm × 12 cm stands upright on the floor, with its 20 cm × 15 cm face down. Find the new water depth. {b} cm",
+   "text": "A tank floor is 60 cm × 40 cm. A thin wall splits the tank into 2 parts, 20 cm and 40 cm long. The 20 cm part holds water 24 cm deep. The other part is empty. The wall is lifted out. Find the new depth. {b} cm",
    "figure": {
     "type": "l5_solid",
-    "mm": 1.3,
+    "mm": 1.0,
     "boxes": [
      {
       "x": 0,
       "y": 0,
       "z": 0,
-      "l": 50,
-      "w": 30,
-      "h": 8,
+      "l": 20,
+      "w": 40,
+      "h": 24,
       "kind": "water"
      },
      {
       "x": 0,
       "y": 0,
       "z": 0,
-      "l": 50,
-      "w": 30,
-      "h": 22,
+      "l": 60,
+      "w": 40,
+      "h": 30,
       "kind": "tank"
      },
      {
-      "x": 15,
-      "y": 7.5,
+      "x": 20,
+      "y": 0,
       "z": 0,
-      "l": 20,
-      "w": 15,
-      "h": 12,
+      "l": 1,
+      "w": 40,
+      "h": 30,
       "kind": "solid",
       "fill": "shade"
      }
@@ -811,48 +811,38 @@
     "texts": [
      {
       "at": [
-       25,
+       30,
        0,
        0
       ],
-      "t": "50 cm",
+      "t": "60 cm",
       "dy": 22
      },
      {
       "at": [
        0,
        0,
-       8
+       24
       ],
-      "t": "8 cm",
+      "t": "24 cm",
       "dx": -28
-     },
-     {
-      "at": [
-       35,
-       7.5,
-       12
-      ],
-      "t": "12 cm",
-      "dx": 44,
-      "dy": -12
      }
     ],
-    "alt": "tank with a block standing in it"
+    "alt": "tank split by a thin wall, water in the left part"
    },
    "answer": {
     "value": [
-     "10"
+     "8"
     ],
-    "text": "10 cm"
+    "text": "8 cm"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "hint": "Water cannot go where the block is. Find the free floor area.",
-   "explanation": "Water 50 × 30 × 8 = 12 000 cm³. Free floor 1500 - 300 = 1200 cm². 12 000 ÷ 1200 = 10 cm (the block is 12 cm tall, so this works).",
+   "hint": "The water spreads out. How much water is there?",
+   "explanation": "Water 20 × 40 × 24 = 19 200 cm³. It now covers 60 × 40 = 2400 cm². 19 200 ÷ 2400 = 8 cm.",
    "figright": true
   },
   {
@@ -904,12 +894,12 @@
    "id": "L5U05-G03",
    "tier": "go",
    "page": 5,
-   "text": "A cuboid has a square base. Its height is 4 cm more than the side of its base. Its volume is 225 cm³. Find the side of the base. {b} cm",
+   "text": "The volume of cube B is 8 times the volume of cube A. Cube A has edges of 5 cm. How long are the edges of cube B? {b} cm",
    "answer": {
     "value": [
-     "5"
+     "10"
     ],
-    "text": "5 cm"
+    "text": "10 cm"
    },
    "space": {
     "rows": [
@@ -919,8 +909,8 @@
      ""
     ]
    },
-   "hint": "Try whole-number sides 1, 2, 3 ... Does the volume fit?",
-   "explanation": "Side 5: height 9, and 5 × 5 × 9 = 225. Side 4 gives 128 and side 6 gives 360, so only 5 fits."
+   "hint": "Find the volume of cube A first.",
+   "explanation": "Cube A: 125 cm³. Cube B: 8 × 125 = 1000 cm³ = 10 × 10 × 10. Each edge is 10 cm."
   },
   {
    "id": "L5U05-C01",

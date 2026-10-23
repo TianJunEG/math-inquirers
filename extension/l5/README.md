@@ -22,12 +22,12 @@ All type names start with `l5_` so they cannot clash with another level's plug-i
 | Unit | Title (book) | Holiday lesson | Items | Beyond items (label "Beyond Level 5: ...") |
 |---|---|---|---|---|
 | 1 | Big number puzzles | 1 Million puzzles | 26 | G1 counting choices |
-| 2 | Fractions at work | 2 Fraction feats | 26 | G1 dividing a fraction |
+| 2 | Fractions at work | 2 Fraction feats | 26 | G1 dividing a fraction, G4 a sum that collapses |
 | 3 | Change and compare | 3 Before and after | 26 | none |
 | 4 | Half the box | 4 Triangle areas | 23 | G3 corner triangles |
 | 5 | Fill it up | 5 Volume vault | 25 | G1 cubes with tunnels |
 | 6 | Rates and deals | 6 Rate racers | 25 | G1 average rate |
-| 7 | Out of 100 | 7 Percentage puzzles | 25 | T2 working back from a percentage, T3 GST in the cost, G1 percentage change |
+| 7 | Out of 100 | 7 Percentage puzzles | 25 | T2 working back from a percentage, T3 a charge in the total, G1 two rises in a row, G2 boiling away |
 | 8 | Chase the angle | 8 Angle chasers | 23 | G1 angles of a regular pentagon, G2 clock angles |
 | 9 | Rules for patterns | 9 Pattern generalisers | 22 | G1 adding a pattern, G2 handshakes |
 | 10 | Pick a start | 10 Challenge day | 23 | G3 the worst case |
@@ -47,7 +47,7 @@ All type names start with `l5_` so they cannot clash with another level's plug-i
 9. Growing patterns (matchstick hexagons, plus-shaped tiles (Learn), U-shaped tiles, tables and chairs, double staircases, L-layers), the rule in words, far figures and backwards, number patterns, guess and check with a table, supposition (legs), marks with a penalty, adding a pattern.
 10. Logic grids (worked example and a 4 by 4), working backwards (number and fraction versions), two numbers from a sum and a difference, counting squares and rectangles by size, who is lying, age difference, supposition, systematic listing, digit counting, worst-case thinking.
 
-Same skills as the holiday program, with new numbers and contexts. After the independent audit (`AUDIT.md`, H2) every item that shared a key number, name, rule or answer with a holiday item was replaced by a new story, new numbers and often a different question (for example unit 9 double staircase, unit 5 tub and tank, unit 10 race and cake puzzles). Many items are still "same type, new numbers" (class A in the audit): that is the design, and the Welcome text promises only new numbers and stories.
+Same skills as the holiday program, with new numbers and contexts. After three audit rounds the items whose story, question and numbers matched a holiday item were replaced with new frames (each audit's class B list was checked against the holiday lines in `p5/content`). Many items are still "same type, new numbers" (class A): that is the design, and the Welcome text promises only new numbers and stories.
 
 ## Answer checks (`verify/l5_uNN_checks.py`)
 
@@ -106,7 +106,10 @@ Every item and every part has a function that recomputes the answer without read
 - Whys: unit 1 S12 lists all three pairs, unit 1 T01 has no letter variable, unit 4 C03 uses only the 4 cm shown. Unit 7 T03 is back to 9 percent GST ($545). Unit 2 G04 now has the Beyond label. Unit 10 S03 lost the redundant clue.
 
 
-## Open points for the owner or the next agent
+## Changes after audit round 3 (`AUDIT_ROUND3.md`)
+
+- New frames (holiday lines read first): unit 4 S01 (triangles 18 by 12 and 25 by 12) and S06 (parallelogram 16 by 9), S09 (metres and centimetres); unit 5 G03 (cube volumes) and T03 (wall lifted out of a tank); unit 6 T03 (fuel, supposition); unit 7 S13 (percent of the whole from a part), T03 (service charge), G01 (two rises), G02 (salt water); unit 8 C01 (OD halves an angle); unit 3 S12 (parts of money).
+- Unit 4 Check yourself 3 no longer hatches the triangle, so the dashed height shows; the Learn Reasons box in unit 8 has the equilateral line and a clearer trapezium line; the unit 9 marks line says "costs its marks plus the penalty"; unit 10 S12 reads "greater than".
 
 1. Page count is 100 after shortening about 140 Why lines (owner decision L5-TRIM). The Why texts are now very short; some units explain less than the holiday program does.
 2. Child trial and a cold read audit have not been done for Level 5. The hints are one line of at most 68 characters (checked); the Go further and Think harder difficulty is untested with children.

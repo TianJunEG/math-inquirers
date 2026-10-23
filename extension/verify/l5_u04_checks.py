@@ -64,9 +64,9 @@ def _():
 @check('L5U04-S01')
 def _():
     import math
-    A, B, C = (0, 0), (12, 0), (6, 8)
-    P, Q, R = (16, 0), (30, 0), (21, 12)
-    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [10, 10, 13, 15]   # the labelled slanting sides
+    A, B, C = (0, 0), (18, 0), (9, 12)
+    P, Q, R = (21, 0), (46, 0), (30, 12)
+    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [15, 15, 15, 20]   # the labelled slanting sides
     return {'a': [fmt(area([A, B, C]))], 'b': [fmt(area([P, Q, R]))]}
 
 
@@ -105,9 +105,9 @@ def _():
 
 @check('L5U04-S06')
 def _():
-    rect = 14 * 9
-    tri = area([(0, 0), (14, 0), (5, 9)])
-    return {'a': [fmt(tri)], 'b': [fmt(Fr(rect) / tri)]}
+    A, B, C, D, E = (0, 0), (16, 0), (20, 9), (4, 9), (11, 9)       # parallelogram ABCD, E on DC
+    tri = area([A, B, E])
+    return {'a': [fmt(tri)], 'b': [fmt(Fr(area([A, B, C, D])) / tri)]}
 
 
 @check('L5U04-S07')
@@ -124,9 +124,9 @@ def _():
 
 @check('L5U04-S09')
 def _():
-    tri = Fr(15 * 8, 2)
-    length = next(l for l in range(1, 500) if 5 * l == tri)
-    return {'a': [str(tri)], 'b': [str(length)]}
+    base_cm, height_cm = 120, 80
+    a_cm2 = Fr(base_cm * height_cm, 2)
+    return {'a': [str(base_cm)], 'b': [fmt(a_cm2)], 'c': [fmt(a_cm2 / 10000)]}
 
 
 @check('L5U04-S10')

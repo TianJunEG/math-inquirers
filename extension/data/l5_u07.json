@@ -610,19 +610,19 @@
    "id": "L5U07-S13",
    "tier": "start",
    "page": 3,
-   "text": "Ravi reads 30% of a 240-page book on Monday. On Tuesday he reads 25% of the pages that are left. How many pages are still to read? {b}",
+   "text": "Ravi reads 30% of a book on Monday and 28 pages on Tuesday. Then 35% of the book is left to read. How many pages are in the book? {b}",
    "answer": {
     "value": [
-     "126"
+     "80"
     ],
-    "text": "126 pages"
+    "text": "80 pages"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "30% of 240 = 72 pages on Monday, so 168 are left. 25% of 168 = 42 pages on Tuesday. 168 - 42 = 126 pages are still to read."
+   "explanation": "Monday 30% and left 35% make 65%. So the 28 pages are 35%: 1% = 0.8 pages and the book has 80 pages."
   },
   {
    "id": "L5U07-S14",
@@ -707,12 +707,12 @@
    "id": "L5U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "A table costs $545 with GST. GST is 9% of the cost before GST. How much GST is in $545? $ {b}",
+   "text": "A restaurant adds a 10% service charge to the cost of the food. A family pays $275 altogether. How much of the $275 is the service charge? $ {b}",
    "answer": {
     "value": [
-     "45"
+     "25"
     ],
-    "text": "$45"
+    "text": "$25"
    },
    "space": {
     "rows": [
@@ -722,34 +722,34 @@
      ""
     ]
    },
-   "hint": "$545 is what percentage of the cost before GST?",
-   "explanation": "$545 is 109% of the cost before GST, so 1% = $5. The GST is 9 × $5 = $45.",
-   "beyond": "GST in the cost"
+   "hint": "$275 is what percentage of the cost of the food?",
+   "explanation": "110% = $275, so 10% = $25.",
+   "beyond": "A charge in the total"
   },
   {
    "id": "L5U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "The number of visitors to a park falls from 50 to 40 on a rainy day. The next day it rises from 40 back to 50. Work each percentage out from the number that the change starts from.",
+   "text": "A bike costs $200. The cost goes up by 10%. A month later the new cost goes up by another 10%.",
    "parts": [
     {
      "label": "a",
-     "text": "The percentage decrease from 50 to 40 is {b}%.",
+     "text": "The bike now costs $ {b}",
      "answer": {
       "value": [
-       "20"
+       "242"
       ],
-      "text": "20"
+      "text": "242"
      }
     },
     {
      "label": "b",
-     "text": "The percentage increase from 40 to 50 is {b}%.",
+     "text": "The total rise is {b}% of $200.",
      "answer": {
       "value": [
-       "25"
+       "21"
       ],
-      "text": "25"
+      "text": "21"
      }
     }
    ],
@@ -760,20 +760,20 @@
      ""
     ]
    },
-   "hint": "Which number does each change start from?",
-   "explanation": "(a) 10 out of the start 50 = 20%. (b) 10 out of the start 40 = 25%. The start numbers differ.",
-   "beyond": "Percentage change"
+   "hint": "Take the second 10% from the new cost.",
+   "explanation": "(a) $200 + $20 = $220, then $220 + $22 = $242. (b) $42 out of $200 = 21%.",
+   "beyond": "Two rises in a row"
   },
   {
    "id": "L5U07-G02",
    "tier": "go",
    "page": 5,
-   "text": "A bus has 50 passengers. 40% of them are children. 50% of the children and 20% of the adults have a seat. What percentage of all the passengers have a seat? {b}%",
+   "text": "A bowl holds 400 g of salt water. 5% of it is salt. Some water is boiled away. Now 8% of what is in the bowl is salt. How many grams of water are boiled away? {b}",
    "answer": {
     "value": [
-     "32"
+     "150"
     ],
-    "text": "32%"
+    "text": "150 g"
    },
    "space": {
     "rows": [
@@ -783,8 +783,9 @@
      ""
     ]
    },
-   "hint": "Find the number of children and adults first. Then count seats.",
-   "explanation": "Children 20, adults 30. Seats: 10 + 6 = 16 of 50 = 32%."
+   "hint": "The salt does not change. How many grams is it?",
+   "explanation": "Salt 5% of 400 = 20 g, unchanged. 20 g = 8% of the mixture, so it is 250 g. 400 - 250 = 150 g boiled away.",
+   "beyond": "Boiling away"
   },
   {
    "id": "L5U07-G03",

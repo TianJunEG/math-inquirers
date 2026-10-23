@@ -101,7 +101,7 @@
    "title": "Two kinds: suppose",
    "lines": [
     "5 cars and bikes, 14 wheels. All bikes: 10 wheels, 4 short. A car adds 2: 2 cars.",
-    "Marks: suppose all are right. Each wrong loses marks and the penalty."
+    "Marks: suppose all are right. Each wrong answer costs its marks plus the penalty."
    ]
   },
   "tight": true,

@@ -139,10 +139,9 @@ def _():
 
 @check('L5U05-T03')
 def _():
-    water = 50 * 30 * 8
-    free_floor = 50 * 30 - 20 * 15
-    depth = Fr(water, free_floor)
-    assert depth < 12          # the block sticks out of the water, so the free-floor rule applies all the way up
+    water = 20 * 40 * 24
+    depth = Fr(water, 60 * 40)
+    assert depth < 30                      # the water stays below the top of the tank
     return [fmt(depth)]
 
 
@@ -172,7 +171,8 @@ def _():
 
 @check('L5U05-G03')
 def _():
-    sols = [s for s in range(1, 100) if s * s * (s + 4) == 225]
+    vol_b = 8 * 5 ** 3
+    sols = [e for e in range(1, 200) if e ** 3 == vol_b]
     assert len(sols) == 1
     return [str(sols[0])]
 
