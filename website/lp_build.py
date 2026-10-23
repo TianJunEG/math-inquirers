@@ -80,7 +80,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <label class="check" for="r8"><input type="checkbox" id="r8"><span>I have read and agree to the <a href="/terms/" target="_blank">terms and refund policy</a>.</span></label>
 <label class="check" for="r9"><input type="checkbox" id="r9"><span>I understand lessons are recorded (the tutor and the shared screen) and shared only with enrolled families of my child's group. See the <a href="/privacy/" target="_blank">privacy and recording notice</a>.</span></label>
 <label class="check" for="r10"><input type="checkbox" id="r10"><span>I am the parent or guardian, and I agree to my child's work and answers being kept for the program as described in the privacy notice.</span></label>
-<label class="check" for="r12"><input type="checkbox" id="r12"><span>I agree to Math Inquirers giving my delivery name, address and phone number to our printer and courier, only to print and deliver my child's workbook. See the <a href="/privacy/" target="_blank">privacy notice</a>.</span></label>
+<label class="check" for="r12"><input type="checkbox" id="r12"><span>I agree to Math Inquirers giving my delivery name, address and phone number to our printer and courier, only to print and deliver my child's workbook, and to delete them 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later. See the <a href="/privacy/" target="_blank">privacy notice</a>.</span></label>
 <label class="check" for="r11"><input type="checkbox" id="r11"><span>Optional: you may quote my feedback without my child's name.</span></label>
 <div id="regMsg"></div><button class="btn" type="submit">Send on WhatsApp</button></form></section>
 

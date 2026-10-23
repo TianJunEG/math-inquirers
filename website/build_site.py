@@ -133,8 +133,10 @@ def main():
             hdr += pth + '\n' + site_csp
         origin = os.environ.get('SUPABASE_URL', '').rstrip('/')
         origin = origin if re.fullmatch(r'https://[a-z0-9-]+\.supabase\.co', origin) else 'https://*.supabase.co'
-        # HitPay needs no entry: the browser only navigates to its hosted checkout (top-level navigation is not governed by connect-src);
-        # card/PayNow details never touch our pages. Payment calls go to our own /api/*, i.e. 'self'.
+        # Stripe needs no entry: the Pay button calls our own /api/stripe-create-checkout ('self') and then does a top-level navigation
+        # (location.href) to checkout.stripe.com, which connect-src, form-action and frame-src do not govern. We use Stripe-hosted Checkout,
+        # not Stripe.js or an embedded element, so js.stripe.com is NOT allowed. Card/PayNow details never touch our pages.
+        # If an embedded Stripe element is ever added, script-src/frame-src/connect-src must be widened deliberately (js.stripe.com, api.stripe.com).
         hdr += ('/portal/*\n  Content-Security-Policy: default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data:; font-src \'self\'; '
                 'connect-src \'self\' %s; form-action \'self\'; base-uri \'self\'; frame-ancestors \'none\'\n  Cache-Control: no-store\n' % origin)
         hdr += '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
@@ -153,12 +155,14 @@ def main():
             todo.append(('portal/config.js', 'SUPABASE_URL / ANON_KEY still placeholders (set env SUPABASE_URL and SUPABASE_ANON_KEY for the build)'))
     open(os.path.join(DIST, '_redirects'), 'w').write('/syllabus /syllabus/ 301\n/terms /terms/ 301\n/privacy /privacy/ 301\n/parent-questions /parent-questions/ 301\n/weekly-dose /weekly-dose/ 301\n'
                                                   + ''.join('/%s /%s/ 301\n' % (L['slug'], L['slug']) for L in LEVELS))
+    todo.append(('payments', 'Payment gateway is STRIPE (owner decision, replaces HitPay). Beta default stays manual PayNow (PORTAL_PAYMENT_MODE unset = paynow_manual). To go online: follow the Stripe checklist in portal/README.md, review and apply portal/supabase/stripe_migration.sql, set Cloudflare secrets STRIPE_SECRET_KEY / STRIPE_WEBHOOK_SECRET / SUPABASE_SERVICE_ROLE_KEY, test in Stripe test mode, then set PORTAL_PAYMENT_MODE=stripe. Fees: check Stripe\'s current Singapore pricing (not stated anywhere on the site).'))
+    todo.append(('terms.html / privacy.html', 'Stripe wording is a draft for the lawyer: Stripe as payment processor, card details handled by Stripe and never stored by us, possible processing outside Singapore (see the [bracket] notes); who is the PDPA data intermediary/controller for payment data'))
     todo.append(('index.html', 'Request-another-time form: retention default (12 months) and consent wording are drafts for the owner/lawyer; privacy.html carries the matching [bracket] note. Placeholder slots live in data/interest_slots.json.'))
     todo.append(('index.html', 'Request-another-time form mode: ' + ('saves to Supabase (submit_interest_request); apply portal/supabase/interest_requests.sql first' if INTEREST_PORTAL else 'WhatsApp fallback only (build with --with-portal and SUPABASE_URL/SUPABASE_ANON_KEY to save requests)')))
     for t in ('[register-by date] not set: set delivery.register_by once in data/beta_schedule.json (shown on the home page, level pages, terms and the FAQ); default: order the print run by about 9 Nov for a 24 Nov start, from the printer lead time' if not REGBY_SET else None,
               '[who pays printing/postage] owner to confirm; pages default to "included in the S$250 beta fee" (terms.html section 3, home, level pages, FAQ)',
               '[parcel policy] draft default: report within 7 days, we reprint and resend once at no cost; a lawyer to confirm (terms.html section 3, home FAQ)',
-              '[address retention] draft default: delivery name/address/phone deleted within 90 days after the program ends; lawyer to confirm; also name the printer and courier in privacy.html',
+              '[address retention] draft default: delivery name/address/phone deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later (owner decision 23 Oct); lawyer to confirm; also name the printer and courier in privacy.html',
               'delivery fields (address, postal code, parcel phone) and the delivery consent are on the WhatsApp registration form only; the portal sign-up does not collect them yet (see portal/README.md)'):
         if t:
             todo.append(('delivery', t))

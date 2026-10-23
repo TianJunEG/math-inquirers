@@ -20,4 +20,4 @@ Used by the owner's staff. One row per parcel. Template: `docs/printing/dispatch
 2. Registrations after the register-by date: send the PDF to print at home today, and still list the parcel with note `late: PDF sent`.
 3. Group rows by workbook_file, send one batch order to the printer by the cutoff, and record the tracking numbers in notes.
 4. Report any late or damaged parcel to the printer for one free reprint (family must report within 7 days).
-5. Delete the sheet (and the printer's copy) within 90 days after the program ends. Do not share it for any other purpose.
+5. Delete the sheet (and the printer's copy) 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later. Do not share it for any other purpose.

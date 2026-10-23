@@ -206,8 +206,8 @@
           h('span', { class: 'pill ' + e.payment_status, 'data-pay-status': '1', text: 'payment ' + e.payment_status })),
         h('p', { text: 'Fee ' + M.money(e.amount_cents) + (e.paid_at ? ', paid ' + M.fmtDate(e.paid_at) : '') }));
       if (e.payment_status === 'pending') {
-        if (M.CFG.PAYMENT_MODE === 'hitpay') {
-          d.appendChild(h('button', { class: 'btn', type: 'button', text: 'Pay online (card or PayNow)', onclick: function () { payOnline(e.enrolment_id, d); } }));
+        if (M.CFG.PAYMENT_MODE === 'stripe') {
+          d.appendChild(h('button', { class: 'btn', type: 'button', text: 'Pay ' + M.money(e.amount_cents) + ' online (card or PayNow)', 'data-pay-online': '1', onclick: function (ev) { payOnline(e.enrolment_id, d, ev.currentTarget); } }));
         } else {
           d.appendChild(h('div', { class: 'msg info' },
             h('div', null, 'Pay ' + M.money(e.amount_cents) + ' by PayNow to ' + M.CFG.PAYNOW_TO + '.'),
@@ -223,14 +223,15 @@
     });
     return c;
   }
-  async function payOnline(enrolmentId, box) {
+  async function payOnline(enrolmentId, box, btn) {
+    if (btn) { btn.disabled = true; btn.textContent = 'Opening secure payment page...'; }
     try {
       var tok = S.session.access_token;
-      var r = await fetch('/api/hitpay-create', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok }, body: JSON.stringify({ enrolment_id: enrolmentId }) });
+      var r = await fetch('/api/stripe-create-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok }, body: JSON.stringify({ enrolment_id: enrolmentId }) });
       var j = await r.json().catch(function () { return {}; });
       if (!r.ok || !j.url) throw new Error(j.error || 'Could not start the payment. Please try again.');
-      location.href = j.url;
-    } catch (e) { M.notice(box.appendChild(h('div')), 'err', M.errText(e)); }
+      location.href = j.url;   // top-level redirect to Stripe Checkout; card details never touch our pages
+    } catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Try again'; } M.notice(box.appendChild(h('div')), 'err', M.errText(e)); }
   }
 
   function accountCard() {
@@ -258,7 +259,8 @@
     if (!M.configured()) return render(h('section', { class: 'card pop' }, h('h1', { text: 'Portal not set up yet' }), h('p', { text: 'The owner still needs to put the Supabase URL and anon key in portal/config.js (see portal/README.md).' })));
     if (!S.session || !S.parent) return drawAuth();
     var q = new URLSearchParams(location.search);
-    var back = q.get('paid') ? h('div', { class: 'msg info', text: 'Thanks. We confirm your payment when HitPay tells us it has gone through; the status below updates by itself (refresh in a minute if it still says pending).' }) : null;
+    var back = q.get('paid') ? h('div', { class: 'msg info', 'data-return': 'paid', text: 'Thanks. We confirm your place when Stripe tells us the payment has gone through. For a card this takes a few seconds; PayNow can take a little longer. Refresh this page in a minute if it still says pending.' })
+      : q.get('cancelled') ? h('div', { class: 'msg info', 'data-return': 'cancelled', text: 'Payment cancelled, nothing was charged. Your place is still held while payment is pending; use the Pay button below to try again.' }) : null;
     render([flashBox(), back,
       h('div', { class: 'row' }, h('h1', { text: 'Hello' + (S.parent.full_name ? ', ' + S.parent.full_name : '') }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); flash(null); await refresh(); } })),

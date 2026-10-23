@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LEVEL_AGES = {1: '6-8', 2: '7-9', 3: '8-10', 4: '9-11', 5: '10-12', 6: '11-13'}
 AGE_BANDS = [('under-6', 'Under 6'), ('6-7', '6 to 7'), ('8-9', '8 to 9'), ('10-11', '10 to 11'), ('12-13', '12 to 13'), ('14-plus', '14 or older')]
 WINDOWS = [('wkday-am', 'Weekday mornings'), ('wkday-pm', 'Weekday afternoons'), ('wkday-eve', 'Weekday evenings'), ('sat', 'Saturday'), ('sun', 'Sunday')]
-CONSENT_VERSION = 'privacy-2026-10b-draft'   # same version string as portal/public/common.js VERSIONS.privacy; bump with privacy.html
+CONSENT_VERSION = 'privacy-2026-10c-draft'   # same version string as portal/public/common.js VERSIONS.privacy; bump with privacy.html
 
 
 def esc(s):

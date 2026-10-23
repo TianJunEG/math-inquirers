@@ -11,7 +11,8 @@ sched = json.load(open(os.path.join(HERE, '..', '..', 'website', 'data', 'beta_s
 groups = [dict(id=g['id'], level=g['level'], name=g['name'], ages=g['ages'], seats=g['seats'], sessions=g['sessions'], first_label=g['first'], last_label=g['last'], fee_cents=25000) for g in sched['groups']]
 SEED = 'window.__SEED__=%s;' % json.dumps(dict(groups=groups, extraTaken={'L2A': 8, 'L3A': 7}))
 MOCK = open(os.path.join(HERE, 'mock_supabase.js')).read()
-CONFIG = "window.MI_CONFIG={SUPABASE_URL:'https://mock.supabase.co',ANON_KEY:'mock-anon',PAYMENT_MODE:'paynow_manual',PAYNOW_TO:'UEN 000TEST',SITE_NAME:'Math Inquirers'};"
+MODE = ['paynow_manual']
+CONFIG = lambda: "window.MI_CONFIG={SUPABASE_URL:'https://mock.supabase.co',ANON_KEY:'mock-anon',PAYMENT_MODE:'%s',PAYNOW_TO:'UEN 000TEST',SITE_NAME:'Math Inquirers'};" % MODE[0]
 
 root = tempfile.mkdtemp(); os.symlink(os.path.abspath(PUB), os.path.join(root, 'portal'))
 class Q(http.server.SimpleHTTPRequestHandler):
@@ -32,7 +33,7 @@ def check(name, fn):
 def new_ctx(b, w=375):
     ctx = b.new_context(viewport={'width': w, 'height': 800})
     ctx.add_init_script(SEED + MOCK)
-    ctx.route('**/portal/config.js', lambda r: r.fulfill(body=CONFIG, content_type='application/javascript'))
+    ctx.route('**/portal/config.js', lambda r: r.fulfill(body=CONFIG(), content_type='application/javascript'))
     ctx.route('**/portal/vendor/supabase.js', lambda r: r.fulfill(body='', content_type='application/javascript'))
     ctx.route('https://mock.supabase.co/**', lambda r: r.abort())
     return ctx
@@ -105,6 +106,22 @@ with sync_playwright() as pw:
         expect(page.locator('[data-pay-status]')).to_contain_text('pending'); expect(page.locator('[data-enrolment]')).to_contain_text('S$250.00')
         expect(page.locator('[data-enrolment]')).to_contain_text('UEN 000TEST')
     check('reserve L1A: pending payment with PayNow reference shown', reserve)
+    def stripe_mode():
+        MODE[0] = 'stripe'
+        seen = []
+        def fake(r):
+            seen.append(r.request.post_data_json); r.fulfill(status=200, content_type='application/json', body=json.dumps({'url': BASE + '/portal/stripe-fake-checkout'}))
+        page.route('**/api/stripe-create-checkout', fake)
+        page.goto(BASE + '/portal/?cancelled=x')
+        expect(page.locator('[data-return="cancelled"]')).to_contain_text('nothing was charged')
+        expect(page.locator('[data-ref]')).to_have_count(0)            # no manual PayNow reference in stripe mode
+        page.locator('[data-pay-online]').click()
+        page.wait_for_url('**/stripe-fake-checkout'); assert len(seen) == 1 and 'enrolment_id' in seen[0], seen
+        page.goto(BASE + '/portal/?paid=x&session_id=cs_test')
+        expect(page.locator('[data-return="paid"]')).to_contain_text('Stripe')
+        MODE[0] = 'paynow_manual'; page.unroute('**/api/stripe-create-checkout'); page.goto(BASE + '/portal/')
+        expect(page.locator('[data-ref]')).to_have_count(1)            # manual PayNow stays the default
+    check('stripe mode: Pay button calls our function and redirects; return pages; manual mode intact', stripe_mode)
     def fullgrp():
         # child 'Ben' is level 3: L3A has 7 extra taken -> 1 left; the xss-named child moved to level 3 already. Level 2 group is full (8 extra)
         txt = page.locator('[data-enrol-for]').first.inner_text(); assert 'seats left' in txt, txt

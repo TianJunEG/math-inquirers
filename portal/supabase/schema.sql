@@ -75,7 +75,7 @@ create index enrolments_parent_idx on public.enrolments (parent_id);
 create table public.payments (
   id                        uuid primary key default gen_random_uuid(),
   enrolment_id              uuid not null unique references public.enrolments(id),
-  method                    text not null default 'paynow_manual' check (method in ('paynow_manual','hitpay')),
+  method                    text not null default 'paynow_manual' check (method in ('paynow_manual','stripe','hitpay')),   -- provider; 'hitpay' kept for history only
   reference                 text not null unique,     -- PayNow reference code the parent types in the transfer
   status                    text not null default 'pending' check (status in ('pending','paid','failed','refunded','cancelled')),
   amount_cents              int  not null check (amount_cents > 0),
@@ -83,8 +83,11 @@ create table public.payments (
   paid_at                   timestamptz,
   marked_by                 uuid,                     -- admin who ticked a manual payment
   note                      text,
-  hitpay_payment_request_id text,
-  hitpay_payment_id         text,
+  provider_ref              text,                     -- Stripe Checkout Session id (cs_...)
+  provider_payment_ref      text,                     -- Stripe PaymentIntent id (pi_...)
+  provider_attempt          int  not null default 0,  -- bumped when a Checkout Session expires/fails; part of the Stripe idempotency key
+  hitpay_payment_request_id text,                     -- retired (HitPay replaced by Stripe 22 Oct 2026), unused
+  hitpay_payment_id         text,                     -- retired, unused
   created_at                timestamptz not null default now(),
   updated_at                timestamptz not null default now(),
   check (status <> 'paid' or paid_at is not null)
@@ -350,38 +353,62 @@ begin
 end $$;
 
 -- ---------- service-role only (Cloudflare Functions) ----------
--- Look up a payable enrolment for a given parent (the function has verified the parent's JWT).
-create or replace function public.service_begin_hitpay(p_enrolment uuid, p_parent uuid)
-returns table (amount_cents int, reference text, payment_status text, enrolment_status text, parent_email text, parent_name text)
+-- Look up a payable enrolment for a parent (the Cloudflare Function has already verified the parent's JWT).
+-- Returns the payment id, the amount agreed at reservation (payments.amount_cents, copied from groups.fee_cents when the seat was reserved),
+-- the group's current fee_cents (for logging; the function charges amount_cents), and the retry counter used in the Stripe idempotency key.
+create or replace function public.service_begin_payment(p_enrolment uuid, p_parent uuid)
+returns table (payment_id uuid, amount_cents int, currency text, group_fee_cents int, group_name text, reference text,
+               payment_status text, enrolment_status text, parent_email text, parent_name text, attempt int)
 language sql stable security definer set search_path = public as $$
-  select p.amount_cents, p.reference, p.status, e.status, pa.email, pa.full_name
-    from public.enrolments e join public.payments p on p.enrolment_id = e.id join public.parents pa on pa.id = e.parent_id
+  select p.id, p.amount_cents, p.currency, g.fee_cents, g.name, p.reference, p.status, e.status, pa.email, pa.full_name, p.provider_attempt
+    from public.enrolments e
+    join public.payments p on p.enrolment_id = e.id
+    join public.parents pa on pa.id = e.parent_id
+    join public.groups g on g.id = e.group_id
    where e.id = p_enrolment and e.parent_id = p_parent;
 $$;
 
-create or replace function public.service_attach_hitpay(p_enrolment uuid, p_request_id text) returns void
+-- Remember which Checkout Session belongs to the payment. Only touches a payment that is still pending.
+create or replace function public.service_attach_session(p_payment uuid, p_session_id text) returns void
 language sql security definer set search_path = public as $$
-  update public.payments set method = 'hitpay', hitpay_payment_request_id = p_request_id, updated_at = now()
-   where enrolment_id = p_enrolment and status = 'pending';
+  update public.payments set method = 'stripe', provider_ref = p_session_id, updated_at = now()
+   where id = p_payment and status = 'pending';
 $$;
 
--- Idempotent. Returns: paid | already_paid | paid_enrolment_cancelled | amount_mismatch | not_found
-create or replace function public.service_mark_hitpay_paid(p_enrolment uuid, p_request_id text, p_payment_id text, p_amount_cents int)
+-- Idempotent. Returns: paid | already_paid | paid_enrolment_cancelled | amount_mismatch | currency_mismatch | not_found
+-- A mismatch changes nothing: the owner sees it in the Cloudflare log and handles it by hand.
+create or replace function public.service_mark_paid(p_payment uuid, p_session_id text, p_payment_intent text, p_amount_cents int, p_currency text)
 returns text language plpgsql security definer set search_path = public as $$
 declare pay public.payments; est text;
 begin
-  select p.* into pay from public.payments p where p.enrolment_id = p_enrolment for update;
+  select p.* into pay from public.payments p where p.id = p_payment for update;
   if not found then return 'not_found'; end if;
   if pay.status = 'paid' then return 'already_paid'; end if;
+  if upper(coalesce(p_currency, '')) <> pay.currency then return 'currency_mismatch'; end if;
   if pay.amount_cents <> p_amount_cents then return 'amount_mismatch'; end if;
-  update public.payments set status = 'paid', method = 'hitpay', paid_at = now(), hitpay_payment_request_id = coalesce(p_request_id, hitpay_payment_request_id),
-         hitpay_payment_id = p_payment_id, updated_at = now() where id = pay.id;
-  select status into est from public.enrolments where id = p_enrolment;
+  update public.payments set status = 'paid', method = 'stripe', paid_at = now(),
+         provider_ref = coalesce(p_session_id, provider_ref), provider_payment_ref = p_payment_intent, updated_at = now()
+   where id = pay.id;
+  select status into est from public.enrolments where id = pay.enrolment_id;
   if est = 'pending_payment' then
-    update public.enrolments set status = 'confirmed' where id = p_enrolment;
+    update public.enrolments set status = 'confirmed' where id = pay.enrolment_id;
     return 'paid';
   end if;
   return 'paid_enrolment_cancelled';   -- money arrived for a cancelled enrolment: owner must refund by hand
+end $$;
+
+-- Checkout Session expired or an async (PayNow) payment failed: the payment stays 'pending' so the parent can try again,
+-- but the session reference is cleared and the retry counter moves on so the next attempt gets a fresh idempotency key.
+-- Returns: reset | ignored (not pending, or a different/newer session) | not_found
+create or replace function public.service_mark_session_failed(p_payment uuid, p_session_id text) returns text
+language plpgsql security definer set search_path = public as $$
+declare pay public.payments;
+begin
+  select p.* into pay from public.payments p where p.id = p_payment for update;
+  if not found then return 'not_found'; end if;
+  if pay.status <> 'pending' or pay.provider_ref is distinct from p_session_id then return 'ignored'; end if;
+  update public.payments set provider_ref = null, provider_attempt = provider_attempt + 1, updated_at = now() where id = pay.id;
+  return 'reset';
 end $$;
 
 -- ---------- PDPA: delete my data ----------

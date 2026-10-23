@@ -1,3 +1,4 @@
+-- NOTE (23 Oct 2026): this one-off snapshot still contains the retired HitPay service functions. After running it, run stripe_migration.sql.
 -- finish_setup.sql: for the Supabase project already created by Claude (tables, gen_code, is_admin, _require_parent, add_child already exist).
 -- Paste this whole file into the Supabase SQL Editor and click Run. It adds the remaining functions, row level security and the six beta groups.
 

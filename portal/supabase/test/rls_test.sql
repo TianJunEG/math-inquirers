@@ -150,24 +150,44 @@ do $$ declare pid uuid; begin
 end $$;
 reset role;
 
--- ===== service role / HitPay =====
+-- ===== service role / Stripe =====
 set role service_role;
-do $$ declare e uuid; r text; begin
+do $$ declare e uuid; p uuid; begin
   select id into e from public.enrolments where child_label = 'K1';
-  assert (select amount_cents from public.service_begin_hitpay(e, (select parent_id from public.enrolments where id=e))) = 25000;
-  assert (select count(*) from public.service_begin_hitpay(e, 'aaaaaaaa-0000-0000-0000-000000000001')) = 0, 'wrong parent sees nothing';
-  perform public.service_attach_hitpay(e, 'REQ1');
-  assert public.service_mark_hitpay_paid(e, 'REQ1', 'p1', 100) = 'amount_mismatch';
-  assert public.service_mark_hitpay_paid(e, 'REQ1', 'p1', 25000) = 'paid';
-  assert public.service_mark_hitpay_paid(e, 'REQ1', 'p1', 25000) = 'already_paid';
+  assert (select amount_cents from public.service_begin_payment(e, (select parent_id from public.enrolments where id=e))) = 25000;
+  assert (select group_fee_cents from public.service_begin_payment(e, (select parent_id from public.enrolments where id=e))) = 25000;
+  assert (select count(*) from public.service_begin_payment(e, 'aaaaaaaa-0000-0000-0000-000000000001')) = 0, 'wrong parent sees nothing';
+  select payment_id into p from public.service_begin_payment(e, (select parent_id from public.enrolments where id=e));
+  perform public.service_attach_session(p, 'cs_test_1');
+  assert (select method from public.payments where id = p) = 'stripe' and (select provider_ref from public.payments where id = p) = 'cs_test_1';
+  -- expired session: stays pending, reference cleared, attempt bumped; a stale/other session id is ignored
+  assert public.service_mark_session_failed(p, 'cs_other') = 'ignored';
+  assert public.service_mark_session_failed(p, 'cs_test_1') = 'reset';
+  assert (select provider_attempt from public.payments where id = p) = 1 and (select status from public.payments where id = p) = 'pending';
+  assert public.service_mark_session_failed(p, 'cs_test_1') = 'ignored', 'second expiry event is harmless';
+  perform public.service_attach_session(p, 'cs_test_2');
+  assert public.service_mark_paid(p, 'cs_test_2', 'pi_1', 100, 'sgd') = 'amount_mismatch';
+  assert public.service_mark_paid(p, 'cs_test_2', 'pi_1', 25000, 'usd') = 'currency_mismatch';
+  assert (select status from public.payments where id = p) = 'pending', 'mismatches change nothing';
+  assert public.service_mark_paid(p, 'cs_test_2', 'pi_1', 25000, 'sgd') = 'paid';
+  assert public.service_mark_paid(p, 'cs_test_2', 'pi_1', 25000, 'sgd') = 'already_paid';
   assert (select status from public.enrolments where id = e) = 'confirmed';
-  assert public.service_mark_hitpay_paid(gen_random_uuid(), 'x', 'y', 25000) = 'not_found';
+  assert (select provider_payment_ref from public.payments where id = p) = 'pi_1';
+  assert public.service_mark_session_failed(p, 'cs_test_2') = 'ignored', 'paid payment is never reset';
+  assert public.service_mark_paid(gen_random_uuid(), 'x', 'y', 25000, 'sgd') = 'not_found';
 end $$;
 reset role;
 set role authenticated; select set_config('request.jwt.claim.sub','bbbbbbbb-0000-0000-0000-000000000002',false);
 do $$ begin
-  assert pg_temp.fails($q$select public.service_mark_hitpay_paid(gen_random_uuid(),'x','y',1)$q$, 'permission denied'), 'parents cannot call service fns';
-  assert pg_temp.fails($q$select * from public.service_begin_hitpay(gen_random_uuid(), auth.uid())$q$, 'permission denied');
+  assert pg_temp.fails($q$select public.service_mark_paid(gen_random_uuid(),'x','y',1,'sgd')$q$, 'permission denied'), 'parents cannot call service fns';
+  assert pg_temp.fails($q$select * from public.service_begin_payment(gen_random_uuid(), auth.uid())$q$, 'permission denied');
+  assert pg_temp.fails($q$select public.service_attach_session(gen_random_uuid(),'x')$q$, 'permission denied');
+  assert pg_temp.fails($q$select public.service_mark_session_failed(gen_random_uuid(),'x')$q$, 'permission denied');
+end $$;
+reset role;
+set role anon;
+do $$ begin
+  assert pg_temp.fails($q$select public.service_mark_paid(gen_random_uuid(),'x','y',1,'sgd')$q$, 'permission denied'), 'anon cannot call service fns';
 end $$;
 reset role;
 

@@ -2,7 +2,7 @@
 (function () {
   var CFG = window.MI_CONFIG || {};
   // Bump these whenever the text of terms.html / privacy.html changes: they are stored with every consent record.
-  var VERSIONS = { terms: 'terms-2026-10b-draft', privacy: 'privacy-2026-10b-draft' };
+  var VERSIONS = { terms: 'terms-2026-10c-draft', privacy: 'privacy-2026-10c-draft' };
 
   function h(tag, attrs) {
     var e = document.createElement(tag);
