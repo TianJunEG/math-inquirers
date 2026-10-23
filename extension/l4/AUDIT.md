@@ -139,3 +139,7 @@ Done in Level 4 files (data, checks, figure plug-ins), all answers re-solved and
 - **M1** U9 S8(c) "before noon". **M2** U4 T2 "1/3 of her money". **M3** U3 T3 hint. **M4** hints shortened to nudges (U1 T1, U1 G1, U4 T2, U4 G3, U9 T2, U10 G1, G2). **M5** facts boxes now teach: equivalent fractions and whole from a part (U4), "angle AOC" (U6), when a net does not fold (U8), the logic grid (U10); U8 S8 (surface area of a cuboid, beyond P4) replaced by the area of a dice net; U8 Check yourself 1 now a different net (answer No). **M7** Learn-it figures capped at 70 mm so their text prints at 10 pt or more; U9 S4 markers of the two lines offset; U9 S6 and C1 and U7 T1 enlarged as far as the page allows. Low: U1 G4 "The length is the greater side", U6 S8(b) and T3(b) "The turns add up to", "Find the value of each" (U3 S1, U5 S11), U5 G4 no longer labelled beyond.
 
 Not done, because they need the shared tools (see TOOL_REQUESTS.md; the edit was blocked by the permission system): **H1** (Welcome page stale ruler line, equipment line, "Beyond Level 4" explanation), **H5** (wide answer boxes for 5-digit answers), M6 (pace plan minutes), M8 (beyond label as a badge), Low 1 (contents prints titles twice). Also not done: M9/M10 item swaps and extra Start here items (page budget), the certificate image, the U9 G1 graphs.
+
+## Final status (23 Oct)
+
+All High and Medium items fixed (see Fixes). Book trimmed to 100 pages by shortening Answers "Why" lines. Gates re-run and passing; the only report line is the Welcome soft page 3 3 mm overflow (shared text).

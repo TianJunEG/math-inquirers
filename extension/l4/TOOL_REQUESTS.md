@@ -13,3 +13,8 @@ The coordinator authorised one minimal edit of `extension/tools/build.py` and `r
 3. `render.py`: `item_html` prints "Beyond Level 1" (hard-coded): use the level of the unit being rendered (set a module variable in `unit_pages`). Level 4 can then switch to the `beyond` key.
 4. Answer boxes: `.abox` is 16 x 10 mm from `levels.json` (`box_mm`); 5-digit answers need about 24 mm. A new markup (for example `{bw}` for a wide box) or a per-item option is needed; Level 4 cannot do it from its own files.
 5. Contents page prints each unit title twice (title and lower-case topic).
+
+
+## Status (23 Oct)
+
+All requests above were landed by the coordinator (levels.json keys, `beyond` label by level, `{bw}` wide box). Level 4 now uses them. Remaining: the Welcome soft page 3 overflows by 3 mm with the new shared text (equipment line); a shorter equipment or notes string in levels.json would fix it.
