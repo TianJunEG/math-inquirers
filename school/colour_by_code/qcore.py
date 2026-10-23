@@ -9,6 +9,9 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 
 BOX = "□"
+FBOX = "⟨□|□⟩"                    # a stacked fraction with two blanks (numerator over denominator)
+def FRAC(a, b): return f"⟨{a}|{b}⟩"                 # a stacked fraction printed in a text line
+def AFRAC(a, b): return f"⟨⟦{a}⟧|⟦{b}⟧⟩"           # the same with its numbers as teacher answers
 MINUS = "−"
 TIMES = "×"
 DIVIDE = "÷"
@@ -27,6 +30,8 @@ class Q:
     extra: object = None              # optional callable(answer) -> bool: bank-specific independent check (e.g. decode the picture)
 
 def mark(s, a_text):
+    if FBOX in s and "/" in a_text:                  # a fraction answer "n/d" fills the two blanks of the stacked box
+        n, d = a_text.split("/"); return s.replace(FBOX, AFRAC(n, d), 1)
     return s.replace(BOX, "⟦" + a_text + "⟧", 1) if BOX in s else s
 
 _code = {}
@@ -76,6 +81,7 @@ class Tier:
     forms: list
     disp: object = str
     instr: str = None                 # overrides the bank's instruction line for this tier
+    kind: str = None                  # 'dollars' when a money key is stored in whole dollars (textcheck.py); None = cents or plain numbers
 
 @dataclass
 class Bank:
@@ -85,8 +91,15 @@ class Bank:
     instr: str
     tiers: dict
     topic_by_tier: dict = None         # optional more exact topic name per tier
+    parts: list = None                 # optional [(phrase, predicate(form_name, answer))]: the footer tag then names only what a sheet really contains
+    prefix: str = ""                   # footer tag text before the phrases, e.g. "Fractions: "
 
     def topic_for(self, tier): return (self.topic_by_tier or {}).get(tier, self.topic)
+    def topic_used(self, tier, used):
+        """footer tag of one worksheet; `used` is a list of (form_name, answer) of its questions. Without `parts` this is the plain topic name."""
+        if not self.parts: return self.topic_for(tier)
+        said = [p for p, pred in self.parts if any(pred(f, a) for f, a in used)]
+        return self.prefix + ", ".join(said) if said else self.topic_for(tier)
 
-def T(key, domain, forms, disp=str, instr=None):
-    return Tier(list(key), list(domain), forms, disp, instr)
+def T(key, domain, forms, disp=str, instr=None, kind=None):
+    return Tier(list(key), list(domain), forms, disp, instr, kind)

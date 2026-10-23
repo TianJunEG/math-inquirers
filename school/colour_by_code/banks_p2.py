@@ -310,41 +310,40 @@ def _div(tier):
         forms.append(most)
     return forms
 
-# ------------------------------------------------------------------ fractions
-def fr(a, b): return f"{a}/{b}"
+# ------------------------------------------------------------------ fractions (stacked: numerator over denominator)
+def frs(a, b): return f"{a}/{b}"                      # answer text for the teacher page
 def _frac(tier):
-    dens = (2, 3, 4) if tier == 1 else (6, 8, 10, 12)
     def shaded(a, r, shape=None):
         n, b = a
         sh = shape or ("bar" if r.random() < 0.6 else "circle")
-        q = SEM(["Shaded:", f"{BOX}"], lambda v, t_=a: v == t_, fr(n, b), art=A.fraction(n, b, sh), form=f"shaded {sh}")
+        q = SEM(["Shaded:", FBOX], lambda v, t_=a: v == t_, frs(n, b), art=A.fraction(n, b, sh), form=f"shaded {sh}")
         q.extra = lambda ans, n=n, b=b: ans == (q.art.meta["shaded"], q.art.meta["parts"])
         return q
     def shaded_bar(a, r): return shaded(a, r, "bar")
     def shaded_row(a, r):
-        q = shaded(a, r, "bar"); q.layout = "row"; q.lines = [f"{BOX}"]; q.sol = [f"⟦{fr(*a)}⟧"]; q.form = "shaded, answer only"; return q
+        q = shaded(a, r, "bar"); q.layout = "row"; q.lines = [FBOX]; q.sol = [AFRAC(*a)]; q.form = "shaded, answer only"; return q
     def unshaded(a, r):
         n, b = a
         art = A.fraction(b - n, b, "bar")
-        q = SEM(["Not shaded:", f"{BOX}"], lambda v, t_=a: v == t_, fr(n, b), art=art, form="not shaded")
+        q = SEM(["Not shaded:", FBOX], lambda v, t_=a: v == t_, frs(n, b), art=art, form="not shaded")
         q.extra = lambda ans, art=art: ans == (art.meta["parts"] - art.meta["shaded"], art.meta["parts"])
         return q
     def parts(a, r):
-        n, b = a; return SEM([f"{n} of {b} equal parts", f"is {BOX}"], lambda v, t_=a: v == t_, fr(n, b), form="words") 
+        n, b = a; return SEM([f"{n} of {b} equal parts", f"is {FBOX}"], lambda v, t_=a: v == t_, frs(n, b), form="words")
     def whole(a, r):
         n, b = a
-        return SEM([f"{fr(b - n, b)} and {BOX}", "make 1 whole"], lambda v, t_=a: v == t_, fr(n, b), form="make 1 whole")
+        return SEM([f"{FRAC(b - n, b)} and {FBOX}", "make 1 whole"], lambda v, t_=a: v == t_, frs(n, b), form="make 1 whole")
     def add(a, r):
         n, b = a
         if n < 2: return None
         k = r.randint(1, n - 1)
-        q = SEM([f"{fr(k, b)} + {fr(n - k, b)}", f"= {BOX}"], lambda v, t_=a: v == t_, fr(n, b), form="add like fractions")
+        q = SEM([f"{FRAC(k, b)} + {FRAC(n - k, b)}", f"= {FBOX}"], lambda v, t_=a: v == t_, frs(n, b), form="add like fractions")
         q.extra = lambda ans, k=k, n=n, b=b: ans == (k + (n - k), b); return q
     def sub(a, r):
         n, b = a; ks = [k for k in range(1, b - n)]
         if not ks: return None
         k = r.choice(ks)
-        q = SEM([f"{fr(n + k, b)} {MINUS} {fr(k, b)}", f"= {BOX}"], lambda v, t_=a: v == t_, fr(n, b), form="subtract like fractions")
+        q = SEM([f"{FRAC(n + k, b)} {MINUS} {FRAC(k, b)}", f"= {FBOX}"], lambda v, t_=a: v == t_, frs(n, b), form="subtract like fractions")
         q.extra = lambda ans, k=k, n=n, b=b: ans == (n + k - k, b); return q
     def cmp_unit(a, r):
         n, b = a
@@ -352,8 +351,8 @@ def _frac(tier):
         greater = r.random() < 0.5
         o = r.randint(b + 1, min(12, b + 4)) if greater else (r.randint(max(2, b - 3), b - 1) if b > 2 else None)
         if not o: return None
-        q = SEM([f"Which is {'greater' if greater else 'smaller'}:", f"{fr(1, b)} or {fr(1, o)}?"], lambda v, t_=a: v == t_, fr(n, b), form="compare unit fractions")
-        q.sol = [q.lines[0], f"⟦{fr(1, b)}⟧ or {fr(1, o)}?"]
+        q = SEM([f"Which is {'greater' if greater else 'smaller'}:", f"{FRAC(1, b)} or {FRAC(1, o)}?"], lambda v, t_=a: v == t_, frs(n, b), form="compare unit fractions")
+        q.sol = [q.lines[0], f"{AFRAC(1, b)} or {FRAC(1, o)}?"]
         q.extra = lambda ans, b=b, o=o, g=greater: ans == (1, b) and ((b < o) == g)
         return q
     def cmp_like(a, r):
@@ -361,8 +360,8 @@ def _frac(tier):
         greater = r.random() < 0.5
         o = (r.randint(1, n - 1) if n > 1 else None) if greater else (r.randint(n + 1, b - 1) if n + 1 < b else None)
         if not o: return None
-        q = SEM([f"Which is {'greater' if greater else 'smaller'}:", f"{fr(n, b)} or {fr(o, b)}?"], lambda v, t_=a: v == t_, fr(n, b), form="compare like fractions")
-        q.sol = [q.lines[0], f"⟦{fr(n, b)}⟧ or {fr(o, b)}?"]
+        q = SEM([f"Which is {'greater' if greater else 'smaller'}:", f"{FRAC(n, b)} or {FRAC(o, b)}?"], lambda v, t_=a: v == t_, frs(n, b), form="compare like fractions")
+        q.sol = [q.lines[0], f"{AFRAC(n, b)} or {FRAC(o, b)}?"]
         q.extra = lambda ans, n=n, o=o, g=greater: (n > o) == g
         return q
     return [shaded, shaded_bar, shaded_row, unshaded, parts, whole, add, sub, cmp_unit, cmp_like]
@@ -581,60 +580,68 @@ def _measure(tier):
     return [ruler, cm_cut, cm_add, m_cm, kg_add, kg_heavier, bal, g_add, kg_g, l_left, l_add, l_share, short, less, one]
 
 # ------------------------------------------------------------------ picture graphs and tally
-LABELS = [["Cat", "Dog", "Fish", "Bird"], ["Red", "Blue", "Pink", "Green"], ["Rice", "Noodle", "Bread", "Pasta"], ["Swim", "Run", "Jump", "Ski"]]
+GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
 def _graph(tier):
     keys = [2, 5] if tier == 1 else [3, 4, 5, 10]
-    def make(r, k, n_rows=None):
-        labs = list(ch(r, LABELS)); r.shuffle(labs); n = n_rows or r.randint(3, 4)
-        return labs[:n]
-    def read(a, r):
-        ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 8]
-        if not ks: return None
-        k = r.choice(ks); labs = make(r, k); i = r.randrange(len(labs))
-        rows = [(l, a // k if j == i else r.randint(1, 8)) for j, l in enumerate(labs)]
-        art = A.picgraph(rows, k)
-        q = SEM([f"How many for {labs[i]}?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="read one row")
-        q.extra = lambda ans, rows=rows, k=k, i=i: rows[i][1] * k == ans; return q
-    def more(a, r):
+    def pick(r, n):
+        labs = list(ch(r, GRAPH_SETS)); r.shuffle(labs); return labs[:n]
+    def read(a, r, n=3):
         ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 6]
         if not ks: return None
-        k = r.choice(ks); labs = make(r, k); d = a // k
-        cb = r.randint(1, 8 - d); ca = cb + d; i, j = r.sample(range(len(labs)), 2)
-        rows = [(l, r.randint(1, 8)) for l in labs]; rows[i] = (labs[i], ca); rows[j] = (labs[j], cb)
+        k = r.choice(ks); labs = pick(r, n); i = r.randrange(n)
+        rows = [(l, a // k if j == i else r.randint(1, 6)) for j, l in enumerate(labs)]
         art = A.picgraph(rows, k)
-        q = SEM([f"How many more for {labs[i]}", f"than {labs[j]}? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="how many more")
-        q.extra = lambda ans, rows=rows, k=k, i=i, j=j: (rows[i][1] - rows[j][1]) * k == ans; return q
-    def total(a, r):
-        ks = [k for k in keys if a % k == 0 and 3 <= a // k <= 18]
+        q = SEM([f"How many {labs[i].lower()}?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="read one row")
+        q.extra = lambda ans, rows=rows, k=k, i=i: rows[i][1] * k == ans; return q
+    def read4(a, r): return read(a, r, 4)
+    def more(a, r):
+        ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 5]
         if not ks: return None
-        k = r.choice(ks); labs = make(r, k, 3); s = a // k
+        k = r.choice(ks); labs = pick(r, 3); d = a // k
+        cb = r.randint(1, 6 - d); ca = cb + d; i, j = r.sample(range(3), 2)
+        rows = [(l, r.randint(1, 6)) for l in labs]; rows[i] = (labs[i], ca); rows[j] = (labs[j], cb)
+        art = A.picgraph(rows, k)
+        q = SEM([f"How many more {labs[i].lower()}", f"than {labs[j].lower()}? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="how many more")
+        q.extra = lambda ans, rows=rows, k=k, i=i, j=j: (rows[i][1] - rows[j][1]) * k == ans; return q
+    def two(a, r):
+        ks = [k for k in keys if a % k == 0 and 2 <= a // k <= 10]
+        if not ks: return None
+        k = r.choice(ks); labs = pick(r, 3); s = a // k
         for _ in range(50):
-            cs = [r.randint(1, min(8, s - 2)) for _ in range(2)]; c3 = s - sum(cs)
-            if 1 <= c3 <= 8: break
+            c1 = r.randint(1, min(6, s - 1)); c2 = s - c1
+            if 1 <= c2 <= 6: break
         else: return None
-        rows = list(zip(labs, cs + [c3])); art = A.picgraph(rows, k)
-        q = SEM(["How many in all?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="total")
+        i, j = r.sample(range(3), 2)
+        rows = [(l, r.randint(1, 6)) for l in labs]; rows[i] = (labs[i], c1); rows[j] = (labs[j], c2)
+        q = SEM([f"How many {labs[i].lower()}", f"and {labs[j].lower()}? {BOX}"], lambda v, t_=a: v == t_, str(a), art=A.picgraph(rows, k), form="two rows")
+        q.extra = lambda ans, rows=rows, k=k, i=i, j=j: (rows[i][1] + rows[j][1]) * k == ans; return q
+    def total(a, r):
+        ks = [k for k in keys if a % k == 0 and 3 <= a // k <= 14]
+        if not ks: return None
+        k = r.choice(ks); labs = pick(r, 3); s = a // k
+        for _ in range(50):
+            cs = [r.randint(1, min(6, s - 2)) for _ in range(2)]; c3 = s - sum(cs)
+            if 1 <= c3 <= 6: break
+        else: return None
+        rows = list(zip(labs, cs + [c3])); r.shuffle(rows)
+        q = SEM(["How many in all?", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=A.picgraph(rows, k), form="total")
         q.extra = lambda ans, rows=rows, k=k: sum(c for _, c in rows) * k == ans; return q
     def tallyf(a, r):
         if a > 30: return None
         art = A.tally(a)
         q = SEM(["Tally marks:", f"{BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="tally")
         q.extra = lambda ans, art=art: art.meta["n"] == ans; return q
-    def short(a, r):
-        q = read(a, r)
-        if q: q.lines = [f"{BOX}"]; q.sol = [f"⟦{a}⟧"]; q.form = "read one row, answer only"; q.layout = "row"
-        return q
-    def row1(a, r):
-        ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 5]
-        if not ks: return None
-        k = r.choice(ks); lab = ch(r, ["Cat", "Dog", "Pear", "Kiwi", "Swim", "Run"]); art = A.picgraph([(lab, a // k)], k, blank=True)
-        q = SEM([], lambda v, t_=a: v == t_, str(a), art=art, form="one row with answer box")
-        q.sol = [f"⟦{a}⟧"]
-        q.extra = lambda ans, art=art: art.meta["rows"][0][1] * art.meta["key"] == ans; return q
     def tally1(a, r):
         q = tallyf(a, r)
         if q and q.art.w <= 36: q.layout = "row"; q.lines = [f"{BOX}"]; q.sol = [f"⟦{a}⟧"]; q.form = "tally, answer only"; return q
-    return [read, more, total, tallyf, row1, tally1]
+    def row1(a, r):
+        ks = [k for k in keys if a % k == 0 and 1 <= a // k <= 6]
+        if not ks: return None
+        k = r.choice(ks); lab = ch(r, [x for g in GRAPH_SETS for x in g]); art = A.picgraph([(lab, a // k)], k, blank=True)
+        q = SEM([], lambda v, t_=a: v == t_, str(a), art=art, form="one row with answer box")
+        q.sol = [f"⟦{a}⟧"]
+        q.extra = lambda ans, art=art: art.meta["rows"][0][1] * art.meta["key"] == ans; return q
+    return [read, read4, more, two, total, tallyf, tally1, row1]
 
 # ------------------------------------------------------------------ shapes, solids and patterns
 SOLIDS = list(A.SOLID_FLAT)
@@ -759,8 +766,10 @@ def build_banks():
     B["div"] = Bank("div", "Sharing", "Division: sharing and grouping", "Share or group. Find the answer in the key. Colour the part with that colour.",
         {1: T([2, 3, 4, 5, 6], range(0, 101), _div(1)), 2: T([6, 7, 8, 9, 10], range(0, 101), _div(2))})
     fr_dom = [(a, b) for b in range(2, 13) for a in range(1, b)]
-    B["frac"] = Bank("frac", "Fractions", "Fractions: compare, add and subtract like fractions", "Find the fraction. Find it in the key. Colour the part with that colour.",
-        {1: T([(1, 2), (1, 3), (1, 4), (2, 3), (3, 4)], fr_dom, _frac(1), lambda v: fr(*v)), 2: T([(1, 6), (3, 8), (5, 8), (7, 10), (5, 12)], fr_dom, _frac(2), lambda v: fr(*v))})
+    B["frac"] = Bank("frac", "Fractions", "Fractions: parts, compare, add and subtract like fractions", "Find the fraction. Find it in the key. Colour the part with that colour.",
+        {1: T([(1, 2), (1, 3), (1, 4), (2, 3), (3, 4)], fr_dom, _frac(1), lambda v: FRAC(*v)), 2: T([(1, 6), (3, 8), (5, 8), (7, 10), (5, 12)], fr_dom, _frac(2), lambda v: FRAC(*v))},
+        parts=[("shaded parts", lambda f, a: f in ("shaded", "shaded_bar", "shaded_row", "unshaded")), ("parts of a whole", lambda f, a: f in ("parts", "whole")),
+               ("add and subtract like fractions", lambda f, a: f in ("add", "sub")), ("compare", lambda f, a: f in ("cmp_unit", "cmp_like"))], prefix="Fractions: ")
     B["money"] = Bank("money", "Money", "Money: dollars, cents, decimal notation", "Find how much. Find it in the key. Colour the part with that colour.",
         {1: T([120, 235, 305, 450, 680], range(0, 2001), _money(1), lambda v: f"${dec(v)}"), 2: T([35, 65, 135, 185, 250], range(0, 2001), _money(2), lambda v: f"{v}¢")},
         {1: "Money in dollars and cents (decimal notation)", 2: "Money: cents, dollars and change"})
@@ -787,7 +796,7 @@ GALLERY = [
     dict(id="CBC-P2-05", picture="castle", bank="div", tier=1, seed=305),
     dict(id="CBC-P2-06", picture="owl", bank="frac", tier=1, seed=318),
     dict(id="CBC-P2-07", picture="dinosaur", bank="money", tier=2, seed=307),
-    dict(id="CBC-P2-08", picture="fish", bank="time", tier=1, seed=308),
+    dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=1, seed=308),
     dict(id="CBC-P2-09", picture="sailboat", bank="measure", tier=1, seed=309),
     dict(id="CBC-P2-10", picture="car", bank="graph", tier=2, seed=310),
     dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=1, seed=311),

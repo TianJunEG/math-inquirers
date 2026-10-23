@@ -119,24 +119,24 @@
     "id": "explore",
     "title": "Explore",
     "start": 14,
-    "end": 27
+    "end": 26
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 27,
-    "end": 38
+    "start": 26,
+    "end": 36
    },
    {
     "id": "break",
     "title": "Brain break",
-    "start": 38,
-    "end": 42
+    "start": 36,
+    "end": 40
    },
    {
     "id": "work",
     "title": "Workbook",
-    "start": 42,
+    "start": 40,
     "end": 70
    },
    {
@@ -166,11 +166,11 @@
   ],
   "optional_slide": "s-opt",
   "include_rules": false,
-  "notes": "Lesson 1 of Term 3 has a 4-minute opening and a 13-minute Explore because it adds a one-minute routine card for children who are new this term (the four things to know) and because every child sets the clock with their own hands before any picture work. The mini-lesson has 11 minutes: it names the two hands, writes o'clock and half past as digits, counts the minutes in 5s and gives quarter past and quarter to. Start here (pages 1 and 2) takes a middle child about 16 minutes, so in class many children reach Think harder only after the choice slide; Think harder, Go further and the Investigation are for every child to choose, for home and for next time. Answers are asked, then shown (answer slides for Explore, the mini-lesson and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun, so do not plan to use the menu in a slow class.",
+  "notes": "Lesson 1 of Term 3 has a 4-minute opening and a 12-minute Explore because it adds a one-minute routine card for children who are new this term (the four things to know) and because every child sets the clock with their own hands before any picture work. The mini-lesson has 10 minutes: it names the two hands, writes o'clock and half past as digits and counts the minutes in 5s (the words quarter past and quarter to wait for Think harder). Start here (pages 1 and 2) takes a middle child about 18 minutes, so page 1 gets 10 minutes and page 2 gets 9, and many children reach Think harder only after the choice slide; Think harder, Go further and the Investigation are for every child to choose, for home and for next time. Answers are asked, then shown (answer slides for Explore, the mini-lesson and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun, so do not plan to use the menu in a slow class.",
   "skip_order": [
    "Start with: take the third Explore round (counting the minutes) into the mini-lesson slide on counting in 5s",
    "Then: shorten choice time (pages 3 to 5 can go home)",
-   "Then: cut the Mirror Clock preview from Talk time (it is in Go further anyway)",
+   "Then: drop the optional slide and the Spare-time menu",
    "Never shorten the exit ticket reading or the look-back"
   ]
  },
@@ -243,7 +243,7 @@
      ]
     }
    ],
-   "note": "Lesson 1 of Term 3, 90 minutes. Objective: name the two hands, read and set o'clock and half past, write the time as digits, count the minutes in 5s, and (Think harder and Go further) read quarter past and quarter to and a clock seen in a mirror. Plain statement for families: o'clock and half past are school Primary 1 work; the Mirror Clock puzzle goes past Primary 1 on purpose. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "note": "Lesson 1 of Term 3, 90 minutes. Objective: name the two hands, read and set o'clock and half past, write the time as digits, count the minutes in 5s, and (Think harder and Go further) read quarter past and quarter to and a clock seen in a mirror. Plain statement for families: o'clock and half past are school Primary 1 work; the Mirror Clock puzzle goes past Primary 1 on purpose. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 26, mini-lesson 26 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice (the tutor, the shared screen and any voice that is not muted are recorded; a child may keep the microphone and camera off) before you start the recording. Think harder, Go further and the Investigation are for every child to choose.",
    "subtitle": "The clock counts in 5s",
    "mascot": {
     "size": "l",
@@ -465,14 +465,15 @@
         "items": [
          "Put both hands on the 12. It is 12 o'clock.",
          "Move the long hand slowly round to the 6.",
-         "Watch the short hand. Where is it now?"
+         "Our paper hands are loose, so slide the short hand half way from the 12 to the 1.",
+         "What time is it now?"
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Round 2, about 4 minutes. Both hands start together on the 12: 12 o'clock, 12:00. Children move the long hand slowly round to the 6, which is half way round the face, and watch the short hand creep: it ends up half way between the 12 and the 1. Ask: where is the short hand now (between the 12 and the 1); what time is it (half past 12, 12:30). Say: when the long hand has gone half way round, the short hand has gone half way to the next number. Answer: 12:30. The picture appears on the next slide. A child who loses the short hand while moving the long one holds the short hand still with a finger and then looks again."
+   "note": "Round 2, about 4 minutes. Both hands start together on the 12: 12 o'clock, 12:00. Show it first on your own clock: move the long hand slowly round to the 6, which is half way round the face, and slide the short hand half way from the 12 to the 1, because on a real clock it creeps by itself but our paper hand does not. Then every child does the same with their own clock. Ask: where is the short hand now (between the 12 and the 1); what time is it (half past 12, 12:30). Say: when the long hand has gone half way round, the short hand has gone half way to the next number. Answer: 12:30. The picture appears on the next slide. A child who loses the short hand while moving the long one holds the short hand still with a finger and then looks again."
   },
   {
    "id": "s-explore2-ans",
@@ -490,7 +491,8 @@
         "items": [
          "Put both hands on the 12. It is 12 o'clock.",
          "Move the long hand slowly round to the 6.",
-         "Watch the short hand. Where is it now?"
+         "Our paper hands are loose, so slide the short hand half way from the 12 to the 1.",
+         "What time is it now?"
         ]
        }
       ],
@@ -507,7 +509,7 @@
      ]
     }
    ],
-   "note": "Round 2, about 4 minutes. Both hands start together on the 12: 12 o'clock, 12:00. Children move the long hand slowly round to the 6, which is half way round the face, and watch the short hand creep: it ends up half way between the 12 and the 1. Ask: where is the short hand now (between the 12 and the 1); what time is it (half past 12, 12:30). Say: when the long hand has gone half way round, the short hand has gone half way to the next number. Answer: 12:30. (answer slide: shown after the children have answered)"
+   "note": "Round 2, about 4 minutes. Both hands start together on the 12: 12 o'clock, 12:00. Show it first on your own clock: move the long hand slowly round to the 6, which is half way round the face, and slide the short hand half way from the 12 to the 1, because on a real clock it creeps by itself but our paper hand does not. Then every child does the same with their own clock. Ask: where is the short hand now (between the 12 and the 1); what time is it (half past 12, 12:30). Say: when the long hand has gone half way round, the short hand has gone half way to the next number. Answer: 12:30. (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-explore3",
@@ -740,7 +742,7 @@
      ]
     }
    ],
-   "note": "Count the minutes in 5s. First clock: the long hand is on the 3; count 5, 10, 15, so 15 minutes past 5, 5:15. Second clock: the long hand is on the 9; count 5, 10, ... 45, so 45 minutes past 5, 5:45. Ask: how many minutes at each (15 and 45). The card appears on the next slide, after the children have answered. Say: a quarter of an hour is 15 minutes, so 5:15 is quarter past 5; 5:45 is 15 minutes before 6, so it is quarter to 6. Quarter past and quarter to are for Think harder; the school papers we have seen use only o'clock and half past, so the digits are the main thing. Answers: 5:15 and 5:45."
+   "note": "Count the minutes in 5s. First clock: the long hand is on the 3; count 5, 10, 15, so 15 minutes past 5, 5:15. Second clock: the long hand is on the 9; count 5, 10, ... 45, so 45 minutes past 5, 5:45. Ask: how many minutes at each (15 and 45). The card appears on the next slide, after the children have answered. Say only the minutes today: 5:15 is 15 minutes past 5 and 5:45 is 45 minutes past 5. The words quarter past and quarter to are for Think harder (page 3 has a one-line gloss); the school papers we have seen use only o'clock and half past, so the digits are the main thing. Answers: 5:15 and 5:45."
   },
   {
    "id": "s-m4-ans",
@@ -779,9 +781,9 @@
      "t": "card",
      "head": "SAME HOUR, TWO TIMES",
      "items": [
-      "5:15 is 15 minutes past 5. We say quarter past 5.",
-      "5:45 is 45 minutes past 5. We say quarter to 6.",
-      "A quarter of an hour is 15 minutes."
+      "5:15 is 15 minutes past 5.",
+      "5:45 is 45 minutes past 5.",
+      "Count in 5s from the 12 to find the minutes."
      ]
     }
    ],
@@ -1108,7 +1110,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 7:00 and 6:30; E2 the long hand on the 6 and the short hand half way between the 8 and the 9; E3 half past."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 6:00 and 6:30; E2 the long hand on the 6 and the short hand half way between the 5 and the 6; E3 half past."
   },
   {
    "id": "s-look",
@@ -1155,7 +1157,7 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "title": "Go further: half past 12",
+   "title": "Optional: half past 1",
    "blocks": [
     {
      "t": "cols",
@@ -1163,7 +1165,7 @@
       [
        {
         "t": "p",
-        "text": "It is half past 12. Where is the short hand?"
+        "text": "It is half past 1. Where is the short hand?"
        },
        {
         "t": "p",
@@ -1174,7 +1176,7 @@
        {
         "t": "visual",
         "type": "clock",
-        "h": 12,
+        "h": 1,
         "m": 30,
         "size": "m",
         "hide_hands": true
@@ -1183,7 +1185,7 @@
      ]
     }
    ],
-   "note": "Optional, only if you are on time. At half past 12 the long hand is on the 6 and the short hand is half way between the 12 and the 1, just past the 12. Children point with a finger or place their hands on their kit clock. Take two answers and move on. This links to the Investigation. Answer: long hand on the 6; short hand between the 12 and the 1.",
+   "note": "Optional, only if you are on time. At half past 1 the long hand is on the 6 and the short hand is half way between the 1 and the 2. Children point with a finger or place their hands on their kit clock. Take two answers and move on. This links to the Investigation. Answer: long hand on the 6; short hand between the 1 and the 2.",
    "optional": true
   },
   {
@@ -1234,12 +1236,8 @@
       "s": 8
      },
      {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
       "k": "DO",
-      "text": "Greet the whole group warmly. Do not use children's first names on the recording. Welcome anyone who is new this term: every idea today is taught from the start, and nobody needs Term 2.",
+      "text": "Greet each child by first name as they arrive, before the recording starts. Welcome anyone who is new this term: every idea today is taught from the start, and nobody needs Term 2.",
       "s": 25
      },
      {
@@ -1251,8 +1249,17 @@
       "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
       "k": "SAY",
-      "text": "Microphones stay off. When I say on three, say the answer quietly to your own room and show it with fingers or a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
      },
      {
       "k": "SLIDE",
@@ -1283,7 +1290,7 @@
      },
      {
       "k": "NOTE",
-      "text": "New this term? The routine slide takes about one minute and covers what a child who missed Terms 1 and 2 needs. Say the recording statement and the microphone routine in the same words every lesson. Do not read out a child's name with an answer. The gallery shows faces and fingers, not tables: ask for a finger answer when you need to see something. The still-stuck route is the tick on the look-back page: a grown-up may photograph that page and send it to the business WhatsApp after class (the number is in the grown-up note, never on a slide)."
+      "text": "New this term? The routine slide takes about one minute and covers what a child who missed Terms 1 and 2 needs. Say the recording notice before you start the recording, and do not use children's first names once it is running. Say the recording statement and the microphone routine in the same words every lesson. Do not read out a child's name with an answer. The gallery shows faces and fingers, not tables: ask for a finger answer when you need to see something. The still-stuck route is the tick on the look-back page: a grown-up may photograph that page and send it to the business WhatsApp after class (the number is in the grown-up note, never on a slide)."
      },
      {
       "k": "NOTE",
@@ -1510,16 +1517,21 @@
      },
      {
       "k": "SAY",
-      "text": "Round two. Put both hands on the twelve. It is twelve o'clock. Now move the long hand slowly round to the six, and watch the short hand."
+      "text": "Round two. Put both hands on the twelve. It is twelve o'clock. Now move the long hand slowly round to the six. Watch how I do it first."
+     },
+     {
+      "k": "DO",
+      "text": "Show it on your own clock: long hand slowly to the 6, then slide the short hand half way from the 12 to the 1. Say: a real clock does this by itself; our paper hand needs a nudge from us.",
+      "s": 25
      },
      {
       "k": "WORK",
-      "text": "Children move the long hand slowly to the 6 and watch the short hand creep.",
-      "s": 90
+      "text": "Children move the long hand to the 6, then slide the short hand half way from the 12 to the 1.",
+      "s": 75
      },
      {
       "k": "ASK",
-      "text": "Where is the short hand now?",
+      "text": "Where is the short hand now? Say it on three.",
       "resp": 15
      },
      {
@@ -1585,7 +1597,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Main room only; children say answers quietly on three and show fingers. You cannot see small clocks on tiles: ask for a thumb when a child has set the time. Answers: 3:00, 10:00; the long hand stays on the 12; short hand between the 12 and the 1, 12:30; 15, 30, 45, 60 minutes. Do not name a child with a wrong answer."
+      "text": "Main room only; children say answers quietly on three and show fingers. You cannot see small clocks on tiles: ask children to say the time on three, then show the hour with fingers (a fist for 11, two fists for 12) so you can spot a swapped pair of hands, and ask for a thumb when the clock is set. Answers: 3:00, 10:00; the long hand stays on the 12; short hand between the 12 and the 1, 12:30; 15, 30, 45, 60 minutes. Do not name a child with a wrong answer."
      }
     ]
    },
@@ -1693,7 +1705,7 @@
      },
      {
       "k": "SAY",
-      "text": "Fifteen minutes is a quarter of an hour. Five fifteen is quarter past five. Five forty-five is quarter to six. We write the digits first."
+      "text": "Five fifteen is fifteen minutes past five. Five forty-five is forty-five minutes past five. We write the digits first, and count in fives to find the minutes."
      },
      {
       "k": "SLIDE",
@@ -1765,7 +1777,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: write the time for each clock. There are four clocks. Question 2: draw the hands to show four o'clock. Use a ruler."
+      "text": "Page 1, Start here. Question 1: write the time for each clock. There are four clocks. Question 2: draw the hands to show four o'clock. Use a ruler. The short hand is shorter."
      },
      {
       "k": "SLIDE",
@@ -1779,7 +1791,7 @@
      {
       "k": "WORK",
       "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 500
+      "s": 600
      },
      {
       "k": "SLIDE",
@@ -1806,7 +1818,7 @@
      {
       "k": "WORK",
       "text": "Page 2, questions 4 to 6.",
-      "s": 520
+      "s": 540
      },
      {
       "k": "SLIDE",
@@ -1825,6 +1837,10 @@
      {
       "k": "SAY",
       "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "SAY",
+      "text": "If you choose the Mirror Clock, here is the idea. A mirror swaps left and right. A hand that points to the three, on the right, points to the nine, on the left, in the mirror. Up and down stay the same."
      },
      {
       "k": "MOVE",
@@ -1846,7 +1862,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder reads quarter past and quarter to by counting in 5s and checks a claim about the short hand at half past. Go further is the Mirror Clock (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 16 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder reads quarter past and quarter to by counting in 5s and checks a claim about the short hand at half past. Go further is the Mirror Clock (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 18 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -1919,7 +1935,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Write the time for each clock. There are two clocks. E2. Draw the hands to show half past eight. Use a ruler. E3. The long hand is on the six. Circle o'clock or half past."
+      "text": "E1. Write the time for each clock. There are two clocks. E2. Draw the hands to show half past five. Use a ruler. The short hand is shorter. E3. The long hand is on the six. Circle o'clock or half past."
      },
      {
       "k": "WORK",
@@ -1933,7 +1949,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: 7:00 and 6:30. E2: the long hand on the six and the short hand half way between the eight and the nine. E3: half past."
+      "text": "E1: 6:00 and 6:30. E2: the long hand on the six and the short hand half way between the five and the six. E3: half past."
      },
      {
       "k": "SAY",
@@ -1987,7 +2003,7 @@
      },
      {
       "k": "SAY",
-      "text": "Optional, only if you are on time: it is half past twelve. Where is the short hand? Where is the long hand?",
+      "text": "Optional, only if you are on time: it is half past one. Where is the short hand? Where is the long hand?",
       "optional": true
      },
      {
@@ -2008,7 +2024,7 @@
      },
      {
       "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the long hand on the 6 and the short hand just past the 12, half way to the 1. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the long hand on the 6 and the short hand half way between the 1 and the 2. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
      }
     ]
    }
@@ -2071,7 +2087,7 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Draw the hands to show 4 o'clock. Use a ruler.",
+    "text": "Draw the hands to show 4 o'clock. Use a ruler. The short hand is shorter.",
     "parts": [
      {
       "l": "",
@@ -2349,17 +2365,17 @@
     "tier": "think",
     "text": "Look at the clock. Decide if each statement is True or False.",
     "parts": [],
-    "answer": "False; False; True",
+    "answer": "False; True; True",
     "val": [
      "F",
-     "F",
+     "T",
      "T"
     ],
-    "hint": "Count in 5s for the long hand. Look at where the short hand is between two numbers.",
-    "solution": "The long hand is on the 3, so it is 15 minutes past. The short hand is just past the 4. The time is 4:15, quarter past 4. So: False (it is not 3:20); False (the short hand is a little past the 4); True.",
+    "hint": "Count in 5s for the long hand. Quarter past means 15 minutes past the hour. Look at where the short hand is between two numbers.",
+    "solution": "The long hand is on the 3, so it is 15 minutes past. The short hand is just past the 4, so it has passed the 4. The time is 4:15, quarter past 4. So: False (it is not 3:20); True; True.",
     "mistakes": [
      "Saying the time is 3:20 because the long hand is on the 3.",
-     "Saying the short hand is exactly on the 4."
+     "Saying the short hand has not passed the 4 because it looks close to the 4."
     ],
     "mins": 3,
     "visual": {
@@ -2373,7 +2389,7 @@
       "s": "The time is 3:20."
      },
      {
-      "s": "The short hand is exactly on the 4."
+      "s": "The short hand has passed the 4."
      },
      {
       "s": "The time is quarter past 4."
@@ -2513,12 +2529,12 @@
    "id": "E1",
    "text": "Write the time for each clock.",
    "parts": [],
-   "answer": "7:00; 6:30",
+   "answer": "6:00; 6:30",
    "val": [
-    "7:00",
+    "6:00",
     "6:30"
    ],
-   "solution": "The first clock has the long hand on the 12, so it is an o'clock time, and the short hand points to the 7: 7:00. The second clock has the long hand on the 6, so it is half past, and the short hand is half way between the 6 and the 7: 6:30.",
+   "solution": "The first clock has the long hand on the 12, so it is an o'clock time, and the short hand points to the 6: 6:00. The second clock has the long hand on the 6, so it is half past, and the short hand is half way between the 6 and the 7: 6:30.",
    "mistakes": [
     "Writing 12:00 for the first clock (reading the long hand as the hour).",
     "Writing 7:30 for the second clock (the number the short hand is going towards)."
@@ -2526,47 +2542,47 @@
    "visuals": [
     {
      "type": "clock",
-     "h": 7,
+     "h": 6,
      "m": 0,
      "digital": "[]",
-     "size": 50
+     "size": 62
     },
     {
      "type": "clock",
      "h": 6,
      "m": 30,
      "digital": "[]",
-     "size": 50
+     "size": 62
     }
    ]
   },
   {
    "id": "E2",
-   "text": "Draw the hands to show half past 8. Use a ruler.",
+   "text": "Draw the hands to show half past 5. Use a ruler. The short hand is shorter.",
    "parts": [
     {
      "l": "",
      "text": "Draw the short hand and the long hand.",
-     "ans": "long hand on the 6, short hand half way between the 8 and the 9",
+     "ans": "long hand on the 6, short hand half way between the 5 and the 6",
      "val": "draw"
     }
    ],
-   "answer": "Long hand on the 6; short hand half way between the 8 and the 9",
+   "answer": "Long hand on the 6; short hand half way between the 5 and the 6",
    "val": [
     "draw"
    ],
-   "solution": "Half past means the long hand points to the 6. The short hand is half way between the 8 and the 9.",
+   "solution": "Half past means the long hand points to the 6. The short hand is half way between the 5 and the 6.",
    "mistakes": [
-    "Drawing the short hand exactly on the 8 or the 9.",
-    "Drawing the long hand to the 8."
+    "Drawing the short hand exactly on the 5 or the 6.",
+    "Drawing the long hand to the 5."
    ],
    "visual": {
     "type": "clock",
-    "h": 8,
+    "h": 5,
     "m": 30,
     "hide_hands": true,
-    "digital": "8:30",
-    "size": 44
+    "digital": "5:30",
+    "size": 56
    }
   },
   {
@@ -2611,14 +2627,14 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "A clock has a short hand and a long hand. Which hand names the hour? Circle short or long.",
+   "text": "The long hand is on the 6. Is it o'clock or half past? Circle one.",
    "choices": [
-    "short",
-    "long"
+    "o'clock",
+    "half past"
    ],
-   "answer": "short",
-   "val": "short",
-   "solution": "The short hand names the hour. The long hand counts the minutes."
+   "answer": "half past",
+   "val": "half past",
+   "solution": "The long hand on the 6 means half past. The long hand on the 12 means an o'clock time."
   },
   {
    "id": "H2",
@@ -2803,7 +2819,7 @@
     "hint": "Count in 5s from the 12: one 5 for each number.",
     "steps": [
      "Count in 5s: 5, 10, 15.",
-     "The 3 is the third number after the 12.",
+     "Count 3 steps of 5. You reach 15.",
      "It is 15 minutes past the hour."
     ],
     "slips": [
@@ -2835,7 +2851,7 @@
      "hint": "Count in 5s from the 12: one 5 for each number.",
      "steps": [
       "Count in 5s up to the {n}.",
-      "{n} fives make {ans}.",
+      "Count {n} steps of 5. You reach {ans}.",
       "It is {ans} minutes past the hour."
      ]
     }
@@ -2868,7 +2884,7 @@
     "id": "c5",
     "tier": "core",
     "type": "fields",
-    "q": "Write the time in digits.",
+    "q": "Half past 7. Write the time in digits.",
     "hint": "Half past means 30 minutes past the hour.",
     "steps": [
      "Half past 7 is 7 and 30 minutes.",
@@ -3014,7 +3030,7 @@
     "hint": "Count in 5s from the 12 to the long hand.",
     "steps": [
      "The long hand is on the 3 or the 9. Count in 5s.",
-     "Find the hour the short hand has just passed.",
+     "The hour is the number the short hand has passed.",
      "The time is {h} : {mm}."
     ],
     "slips": [],
@@ -3073,7 +3089,7 @@
      "hint": "Count in 5s from the 12 to the long hand.",
      "steps": [
       "Count in 5s from the 12 to the long hand: {m} minutes.",
-      "The short hand has just passed the {h}.",
+      "The hour is the number the short hand has passed: {h}.",
       "The time is {h} : {m|mm}."
      ]
     }
@@ -3310,7 +3326,8 @@
     "steps": [
      "Choose an o'clock time for the real clock.",
      "Swap left and right to see the mirror time.",
-     "Ask a grown-up to find the real time from the mirror time."
+     "Ask a grown-up to find the real time from the mirror time.",
+     "For example, if the real clock shows 4 o'clock, the mirror shows 8 o'clock."
     ],
     "slips": []
    }
@@ -3319,7 +3336,7 @@
  "spare_time": {
   "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
   "rules": [
-   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 42, use one menu activity then.",
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 40, use one menu activity then.",
    "A few children ahead: a few children may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
    "Never teach anything the next lesson needs. If the class is ahead, slow down: ask \"How do you know?\" and let children explain, rather than rushing on."
   ],
@@ -3370,7 +3387,7 @@
    "How do you know?"
   ],
   "when_stuck": "Let your child move the hands and watch, and wait 10 seconds before helping. Please do not teach a rule such as clockwise or hurry them: the clock hands are the teacher. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson, Term 3 Lesson 2: Five Minutes at a Time. Online practice: your tutor will share the link.",
+  "next": "Next lesson, Term 3 Lesson 2: Five Minutes at a Time. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it. Recordings are kept 30 days after your group's last lesson.",
   "quote": "The short hand names the hour. The long hand counts the minutes.",
   "report_line": "Your child is learning to read a clock to the half hour and to count minutes in 5s. This week: o'clock and half past.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
@@ -3394,7 +3411,7 @@
   "Solve every workbook question yourself with a real cut-out clock first. Check the hour hand: in the pictures the short hand sits where it really would (at half past 8 it is half way between the 8 and the 9). Check that no workbook time repeats a time shown in the sneak-peek, Explore, mini-lesson or Talk (9:00, 2:30, 3:00, 10:00, 12:00, 12:30, 11:00, 11:30, 5:15, 5:45, 10:30).",
   "Tell families before Term 3 starts (Lesson 20's goodbye says the first Term 3 workbook is needed and a clock is optional; that is not enough): your Term 3 book is in the house; tear out the clock kit page and a grown-up cuts out the 2 clock faces and the 6 hands (3 short, wide, 3 long, thin); keep them in an envelope; a ruler for drawing the hands; a real clock helps. No printer: a paper plate with 1 to 12 written round the edge and two strips of card.",
   "Have the slides open. Have your own cut-out clock to show on camera if you wish. Draw nothing under the webcam: the recording cannot show it.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. Say the recording statement and the microphone routine in the same words every lesson.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive. Say the recording notice, then start the recording; once it is running, avoid first names. Say the recording statement and the microphone routine in the same words every lesson.",
   "Be plain with families: reading o'clock and half past is Primary 1 school work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s; the Primary 1 school papers we have seen use only o'clock and half past, so every time is also shown as digits. The Mirror Clock puzzle (Go further) is beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",
   "Slides s-explore1, s-explore2, s-explore3, s-m3, s-m4 and s-m5 keep the picture or the answer off the screen while you ask: it appears on the slide after. Read every question with its options aloud (S4): the clocks on the slides are small. Do not say clockwise as a rule."
  ],
@@ -3402,7 +3419,7 @@
   "header": "Reading a scale: the clock",
   "hint_p1": "Use your clock. Say the time out loud, then write it with digits.",
   "hint_p2": "Look at both hands. Read the time on every clock before you compare.",
-  "hint_p3": "Count in 5s from the 12. Use your clock or draw. Choose any question.",
+  "hint_p3": "Count in 5s from the 12. Quarter past means 15 minutes past. Use your clock or draw.",
   "hint_p4": "A mirror swaps left and right. Use your two clock faces. Choose any question.",
   "choice_after": 3,
   "inv_intro": "",

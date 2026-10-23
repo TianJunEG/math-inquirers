@@ -46,7 +46,7 @@ def contact_sheet(out, level, sheets):
             subprocess.run(["pdftoppm", "-r", "70", "-png", "-singlefile", "-gray", pdf, base], check=True)
             b64 = base64.b64encode(open(base + ".png", "rb").read()).decode()
             stars = "1 star" if sp["tier"] == 1 else "2 stars"
-            cells.append(f'<figure><img src="data:image/png;base64,{b64}"><figcaption><b>{sp["id"]}</b> {html.escape(sh["pic"].title)} &middot; {html.escape(sh["bank"].topic_for(sp["tier"]))} &middot; {stars}</figcaption></figure>')
+            cells.append(f'<figure><img src="data:image/png;base64,{b64}"><figcaption><b>{sp["id"]}</b> {html.escape(sh["pic"].title)} &middot; {html.escape(sh["topic"])} &middot; {stars}</figcaption></figure>')
         pages.append(f'<div class="sheet"><h1>Colour by Code, Primary {level}: gallery, {"pupil pages" if kind == "pupil" else "teacher answer pages"}</h1><div class="grid">{"".join(cells)}</div></div>')
     doc = ("<!doctype html><meta charset=utf-8><style>@page{size:A4 landscape;margin:0}*{box-sizing:border-box}html,body{margin:0;background:#fff;font-family:Arial,sans-serif;color:#000}"
            ".sheet{width:297mm;height:210mm;padding:8mm 10mm;page-break-after:always;overflow:hidden}h1{font-size:13pt;margin:0 0 3mm}"

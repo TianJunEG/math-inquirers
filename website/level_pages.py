@@ -148,6 +148,11 @@ LEVEL_CSS = '''
 .lvcard[aria-current="page"]{background:var(--soft)}
 @media (max-width:900px){.lvgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.lvgrid{grid-template-columns:1fr}}
+.cartn{display:inline-block;min-width:20px;margin-left:6px;padding:0 6px;border-radius:999px;background:var(--coral);color:#1B2A49;font:800 12px/20px var(--body);text-align:center}
+.cartn[hidden]{display:none}
+.tab[aria-current="true"] .cartn{background:var(--yellow)}
+.shopnote{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;border:2px dashed var(--line);border-radius:16px;padding:12px 16px;background:var(--card)}
+.shopnote p{flex:1 1 260px}
 '''
 PAGE_CSS = '''
 .hero{grid-template-columns:1.2fr 1fr}
@@ -244,7 +249,7 @@ def page(L, lessons, sch):
 <meta name="description" content="%(desc)s">
 <style>%(css)s</style>
 <div class="wrap">
-<header class="bar"><a class="brand" href="/" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Site"><a class="tab" href="/#program" style="text-decoration:none">Program</a><a class="tab" href="/#classes" style="text-decoration:none">Classes</a><a class="tab" href="/#levels" style="text-decoration:none" aria-current="true">Levels</a><a class="tab" href="/#price" style="text-decoration:none">Price</a><a class="tab" href="/#faq" style="text-decoration:none">FAQ</a><a class="btn yel sm" href="/?level=%(n)d#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
+<header class="bar"><a class="brand" href="/" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Site"><a class="tab" href="/#program" style="text-decoration:none">Program</a><a class="tab" href="/#classes" style="text-decoration:none">Classes</a><a class="tab" href="/#levels" style="text-decoration:none" aria-current="true">Levels</a><a class="tab" href="/#price" style="text-decoration:none">Price</a><a class="tab" href="/#faq" style="text-decoration:none">FAQ</a><a class="tab" href="/shop/" style="text-decoration:none" data-shoplink>Shop<span class="cartn" data-cartn hidden></span></a><a class="btn yel sm" href="/?level=%(n)d#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
 <main id="top">
 <p class="crumbs"><a href="/">Home</a> · <a href="/#levels">Levels</a> · Ages %(ages)s</p>
 <section class="hero"><div class="sec"><span class="eyebrow">Level %(n)d · Ages %(ages)s · Builds on %(builds)s</span><h1>Ages %(ages)s <mark>maths</mark> holiday program</h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Ten hands-on lessons where children solve puzzles, test ideas and explain their answers. Live online in small groups of up to 8, from your own home.</p>
@@ -269,10 +274,13 @@ def page(L, lessons, sch):
 
 <section class="band yel" id="register"><div class="sec"><span class="eyebrow">Register</span><h2>Hold a seat</h2><p class="muted">Registration is a short form on our home page. Your level and group are already filled in. You add a delivery address, because we post the printed workbook to your home. We reply within 2 working days with your group and payment details.</p><p class="regby" id="regby">%(regby)s</p></div><div class="row"><a class="btn yel" href="/?level=%(n)d&amp;group=%(gid)s#register">Register for Level %(n)d</a><a class="btn alt" href="/terms/">Terms and refund policy</a><a class="btn alt" href="/privacy/">Privacy and recording notice</a></div></section>
 
+<aside class="shopnote" id="extension"><span class="pill p-wait">Coming soon</span><p><b>Extension workbooks coming soon.</b> <span class="muted">Extra-challenge practice with full answers for Level %(n)d, in print and soft copy. </span><a href="/shop/#level-%(n)d">See the shop</a></p></aside>
+
 <section class="sec" id="levels"><div class="shead"><span class="eyebrow">All levels</span><h2>The six levels</h2></div><div class="lvgrid">%(index)s</div></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An independent maths enrichment program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme. We do not identify or test for giftedness and we do not promise exam or competition results.%(syl)s</p></div><div><b>Register</b><p style="margin-top:6px"><a href="/?level=%(n)d#register">Register for Level %(n)d</a><br><a href="/">Back to the home page</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An independent maths enrichment program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme. We do not identify or test for giftedness and we do not promise exam or competition results.%(syl)s</p></div><div><b>Register</b><p style="margin-top:6px"><a href="/?level=%(n)d#register">Register for Level %(n)d</a><br><a href="/">Back to the home page</a><br><a href="/shop/">Shop: extension workbooks (coming soon)</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
+<script src="/shop/cart.js" defer></script>
 ''' % dict(
         title=esc(title), desc=esc('Math Inquirers Level %d for ages %s, building on %s: 10 live online lessons, three tiers of puzzles, kit contents, placement guidance and November beta class times.' % (n, L['ages'], L['builds'])),
         css=css(), n=n, ages=L['ages'], builds=esc(L['builds']), mins=sch['lesson_minutes'], weeks=sch['weeks'], seats=g['seats'],

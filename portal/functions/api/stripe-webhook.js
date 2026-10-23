@@ -25,6 +25,8 @@ export async function onRequestPost({ request, env }) {
   const handled = ['checkout.session.completed', 'checkout.session.async_payment_succeeded', 'checkout.session.async_payment_failed', 'checkout.session.expired'];
   if (!handled.includes(type)) return json({ ok: true, ignored: type });
   if (session.mode && session.mode !== 'payment') return json({ ok: true, ignored: 'mode' });
+  // MI-DELIVERY-HOOK: shop orders carry metadata.mi_items (soft-copy products); grant download links and email them. Docs: docs/shop/delivery_plan.md
+  if (session.metadata && session.metadata.mi_items) { const shop = await (await import('../_shared/delivery.js')).maybeHandleShopOrder({ env, type, session }); if (shop) return shop; }
   const paymentId = paymentIdOf(session);
   if (!paymentId) return json({ ok: true, ignored: 'unknown reference' });
 

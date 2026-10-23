@@ -722,7 +722,7 @@
         "h": 7,
         "m": 0,
         "digital": "A start",
-        "size": "s"
+        "size": "m"
        }
       ],
       [
@@ -732,9 +732,14 @@
         "h": 8,
         "m": 0,
         "digital": "A end",
-        "size": "s"
+        "size": "m"
        }
-      ],
+      ]
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
       [
        {
         "t": "visual",
@@ -742,7 +747,7 @@
         "h": 7,
         "m": 0,
         "digital": "B start",
-        "size": "s"
+        "size": "m"
        }
       ],
       [
@@ -752,7 +757,7 @@
         "h": 7,
         "m": 30,
         "digital": "B end",
-        "size": "s"
+        "size": "m"
        }
       ]
      ]
@@ -926,18 +931,37 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 4 and 5. Take your time."
+     "text": "Question 4. Take your time."
     },
     {
      "t": "qs",
      "ids": [
-      "S4",
+      "S4"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read question 4 aloud: it is 6 o'clock now; which of three clocks shows half an hour later? The clocks have their own slide so that the hands are large. Children may use their clock to check. Wait 10 seconds before helping. Question 5 is on the next slide and question 6 on the one after."
+  },
+  {
+   "id": "s-ws2c",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: question 5",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 5. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
       "S5"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: it is 6 o'clock now; which of three clocks shows half an hour later? Question 5: two clocks show when the painting starts and ends; how long is it? Question 6 has its own slide after this one. Children may use their clock to check. Wait 10 seconds before helping."
+   "note": "Question 5: two clocks show when the painting starts and ends; how long is it? Read the question aloud and say the two times (10:30 and 11:30) if a child cannot see the hands. Children may use their clock to check. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2b",
@@ -1021,7 +1045,7 @@
       ],
       [
        "Think harder (page 3)",
-       "Quarter times, going back, a zoo timetable"
+       "Starts at 4:15 and 9:45, going back, a zoo timetable"
       ],
       [
        "Go further (page 4)",
@@ -1170,14 +1194,14 @@
    "blocks": [
     {
      "t": "p",
-     "text": "A game lasts 1 hour. Another game lasts half an hour. Both end at 6:00."
+     "text": "A game lasts 1 hour. Another game lasts half an hour. Both end at 8:30."
     },
     {
      "t": "p",
-     "text": "Which game started first?"
+     "text": "Write the time each game started. Who started first?"
     }
    ],
-   "note": "Optional, only if you are on time. Both games end at 6:00. The 1-hour game started at 5:00 and the half-hour game started at 5:30, so the 1-hour game started first. The longer a game lasts, the earlier it must start to end at the same time. Take two answers and move on. This links to Go further and the Investigation.",
+   "note": "Optional, only if you are on time. Both games end at 8:30. The 1-hour game started at 7:30 and the half-hour game started at 8:00, so the 1-hour game started first. The longer a game lasts, the earlier it must start to end at the same time. Take two answers and move on. This links to Go further and the Investigation.",
    "optional": true
   },
   {
@@ -1204,7 +1228,7 @@
       ],
       [
        "Teach it back",
-       "Show a toy why the hour changes at half past."
+       "Show a toy why half an hour after half past 5 is 6 o'clock."
       ]
      ]
     },
@@ -1232,25 +1256,29 @@
       "text": "@rec"
      },
      {
-      "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
-      "s": 12
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your cut-out clock on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your cut-out clock on the table."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
       "text": "Today we look forward on the clock. If a film starts now, when does it end? We add one hour, and we add half an hour."
      },
      {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1668,7 +1696,15 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: it is 6 o'clock now. Which clock shows half an hour later? Circle A, B or C. Question 5: the clocks show when the painting starts and ends. How long does the painting last? Circle one."
+      "text": "Page 2. Question 4: it is 6 o'clock now. Which clock shows half an hour later? Circle A, B or C."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2c"
+     },
+     {
+      "k": "READ",
+      "text": "Question 5: the clocks show when the painting starts and ends. How long does the painting last? Circle one."
      },
      {
       "k": "SLIDE",
@@ -1984,7 +2020,7 @@
     "hint": "The long hand stays on the 6. Only the hour goes on.",
     "solution": "One hour later is the next hour with the same minutes: 8:30 am and 1 hour is 9:30 am.",
     "mistakes": [
-     "Writing 8:30 or 9:00 (half an hour instead of 1 hour).",
+     "Writing 8:30 (the start) or 9:00 (half an hour instead of 1 hour).",
      "Writing 9:30 pm."
     ],
     "mins": 2.5
@@ -2024,21 +2060,21 @@
       "h": 7,
       "m": 0,
       "digital": "A",
-      "size": 75
+      "size": 90
      },
      {
       "type": "clock",
       "h": 6,
       "m": 30,
       "digital": "B",
-      "size": 75
+      "size": 90
      },
      {
       "type": "clock",
       "h": 7,
       "m": 30,
       "digital": "C",
-      "size": 75
+      "size": 90
      }
     ]
    },
@@ -2103,7 +2139,7 @@
     "solution": "Swimming: 3:00 and 1 hour is 4:00. Reading: 8:00 and half an hour is 8:30. Painting: 9:00 and half an hour is 9:30.",
     "mistakes": [
      "Writing 4:30 for swimming (half an hour instead of 1 hour).",
-     "Writing 9:00 for reading (the start)."
+     "Writing 8:00 for reading (the start) or 9:00 for painting (the start)."
     ],
     "mins": 3.5,
     "visual": {
@@ -2200,7 +2236,7 @@
      "4:45",
      "10:15"
     ],
-    "hint": "Half an hour is 30 minutes. Count on 30 minutes from the minutes shown.",
+    "hint": "Half an hour is 30 minutes. Count on 15 minutes to the next hour, then 15 more.",
     "solution": "4:15 and 30 minutes is 4:45. 9:45 and 30 minutes goes past the hour: 15 minutes makes 10:00, and 15 more makes 10:15.",
     "mistakes": [
      "Writing 4:30 or 4:75.",
@@ -2244,7 +2280,7 @@
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "The table shows the shows at a zoo in the afternoon.",
+    "text": "The table shows the zoo shows this afternoon.",
     "parts": [
      {
       "l": "a",
@@ -2383,7 +2419,7 @@
      },
      {
       "l": "b",
-      "text": "Another day the film lasts 1 hour and half an hour. It ends at ____ .",
+      "text": "Another day the film is longer: 1 hour, then half an hour more. It ends at ____ .",
       "ans": "1:00 pm",
       "val": "1:00 pm"
      }
@@ -2457,19 +2493,35 @@
    "page": 5,
    "tier": "investigation",
    "title": "Plan the afternoon",
-   "first": "Start at 12:30 pm. Swim for 1 hour. What time is it now?",
+   "first": "Start at 12:30 pm. Swim for 1 hour. What time is it now? It is ____ pm.",
    "text": "Mi has from 12:30 pm to 3:00 pm. Jobs: swim 1 hour, painting 1 hour, story half an hour, snack half an hour. Use each job once at most. Fill the time exactly. Write each start and end.",
-   "lines": 4,
+   "lines": 5,
    "answer": "First: 1:30 pm. From 12:30 pm to 3:00 pm is 2 hours and half an hour. Only 1 hour + 1 hour + half an hour fits: swim and painting plus either the story or the snack, in any order. For example: swim 12:30 to 1:30, painting 1:30 to 2:30, story 2:30 to 3:00. Or swim, painting, snack. There are 2 different sets of jobs. Using all four jobs needs 3 hours, which is too long.",
    "val": [
     "2"
    ],
-   "look_for": "A child who writes a plan whose times join up (each job starts when the one before ends) and ends exactly at 3:00 pm; a child who finds the second set by swapping the story for the snack; a child who says why all four jobs do not fit. Credit any clear reason. Do not mark a child down for stopping at one plan.",
+   "look_for": "A child who writes a plan whose times join up (each job starts when the one before ends) and ends exactly at 3:00 pm; a child who finds the second set by swapping the story for the snack; a child who says why all four jobs do not fit. Credit any clear reason. Do not mark a child down for stopping at one plan. Any order of the jobs is fine. Do not ask a child how many sets there are: the count is for the tutor.",
    "mistakes": [
     "A gap between two jobs.",
     "Adding up to more than 2 hours and half an hour."
    ],
-   "mins": 8
+   "mins": 8,
+   "visual": {
+    "type": "number_line",
+    "start": 0,
+    "end": 5,
+    "step": 1,
+    "label_every": 1,
+    "labels": {
+     "0": "12:30",
+     "1": "1:00",
+     "2": "1:30",
+     "3": "2:00",
+     "4": "2:30",
+     "5": "3:00"
+    },
+    "width": 520
+   }
   }
  },
  "talk": {
@@ -2481,7 +2533,7 @@
  "exit": [
   {
    "id": "E1",
-   "text": "The game starts at 7:30. It lasts 1 hour. What time does the game end?",
+   "text": "The game starts at 6:30. It lasts 1 hour. What time does the game end?",
    "parts": [
     {
      "l": "",
@@ -2490,14 +2542,14 @@
      "val": "8:30"
     }
    ],
-   "answer": "8:30",
+   "answer": "7:30",
    "val": [
-    "8:30"
+    "7:30"
    ],
-   "solution": "The game starts at 7:30. One hour later is 8:30: the short hand moves on to 8 and the long hand stays on the 6.",
+   "solution": "The game starts at 6:30. One hour later is 7:30: the short hand moves on to 7 and the long hand stays on the 6.",
    "mistakes": [
-    "Writing 7:30.",
-    "Writing 8:00."
+    "Writing 6:30.",
+    "Writing 7:00."
    ]
   },
   {
@@ -2525,7 +2577,7 @@
   },
   {
    "id": "E3",
-   "text": "A film ended at 7:30 pm. It lasted 1 hour. What time did it start?",
+   "text": "A film ended at 10:30 pm. The film lasted 1 hour. What time did it start?",
    "parts": [
     {
      "l": "",
@@ -2534,14 +2586,14 @@
      "val": "6:30 pm"
     }
    ],
-   "answer": "6:30 pm",
+   "answer": "9:30 pm",
    "val": [
-    "6:30 pm"
+    "9:30 pm"
    ],
-   "solution": "Go back 1 hour from 7:30 pm. The long hand stays on the 6 and the hour goes back one: 6:30 pm.",
+   "solution": "Go back 1 hour from 10:30 pm. The long hand stays on the 6 and the hour goes back one: 9:30 pm.",
    "mistakes": [
-    "Writing 8:30 pm (going forward).",
-    "Writing 7:00 pm (half an hour)."
+    "Writing 11:30 pm (going forward).",
+    "Writing 10:00 pm (half an hour)."
    ]
   }
  ],
@@ -2906,7 +2958,7 @@
       "a": [
        15
       ],
-      "say": "15 minutes is a quarter of an hour. Half an hour is 30 minutes."
+      "say": "15 minutes is half of half an hour. Half an hour is 30 minutes."
      }
     ]
    },
@@ -3269,7 +3321,7 @@
    "How could we check on the clock?"
   ],
   "when_stuck": "Let your child move the clock hands and wait 10 seconds before helping. Asking 'where is the long hand now?' works better than giving the answer. Please do not teach a rule such as 'add 60' or 'clockwise'; the clock hands are the method. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Dollars and Change. The play-money pages are the most cutting of the term, so please allow a week. Online practice: your tutor will share the link.",
+  "next": "Next lesson: Dollars and Change. The play-money pages are the most cutting of the term, so please allow a week. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
   "quote": "One hour later, the short hand moves on one number. Half an hour later, the long hand goes half way round.",
   "report_line": "Your child is learning to add an hour or half an hour to a time on the clock and to count back to a start. This week: setting the clock later, reading two clocks and finding a start time.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
@@ -3293,16 +3345,16 @@
   "Solve every workbook question yourself first, on a real clock. Check the pairs: S1 9:00; S3 9:30 am; S4 clock B; S6 4:00, 8:30, 9:30; T1 6:30 and 6:00; T2 4:45 and 10:15; T3 6:30 pm and 4:30 pm; G1 3:30 pm and 2:30 pm; G2 12:30 pm and 1:00 pm; G3 3:30 pm, 4:00 pm and Mei.",
   "Tell parents a week before: your book has the workbook; no new cutting this lesson, but the clock pieces from the first lesson of Term 3 must be in their envelope (a real clock or a paper plate clock also works). The next lesson needs the two play-money pages cut out (29 pieces): it is the most cutting of the term, so give a week's notice.",
   "Have the slides open. Have your own clock to show on camera if you wish. Practise the arm clocks for the break.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
   "Be plain with families: adding 1 hour or half an hour from an o'clock or half past start is Primary 1 work; quarter-time starts, a trip in two stages and crossing noon are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. Say the time both ways every time (half past 7, 7:30). Do not teach the 24-hour clock.",
-  "Slides s-m3, s-m4 and s-m5 keep the answers off the screen while you ask: the filled table appears on s-m5a. Read every question with its times, and the four options of E2, aloud: the figures on the slides are small."
+  "Slides s-m3, s-m4 and s-m5 keep the answers off the screen while you ask: the filled table appears on s-m5a. Read every question with its times, and the four options of E2, aloud. The clocks on the slides are large, but a child cannot see small hands on a phone: say the time out loud too. A child who tilts the camera at the clock tilts it to the table, not the room."
  ],
  "workbook": {
   "header": "Measurement: time passes",
   "hint_p1": "Use your clock. Move the hands to check your answer.",
   "hint_p2": "Read the clocks and the table. Use your clock if you like.",
-  "hint_p3": "Use your clock or a time line. Choose any question, in any order.",
-  "hint_p4": "Write am or pm where it is asked. Choose any question. You do not have to finish them all.",
+  "hint_p3": "Use your clock or a time line. Choose any question, in any order. Not finished? These pages are for home too.",
+  "hint_p4": "Write am or pm where it is asked. Choose any question. You do not have to finish them all. Not finished? These pages are for home too.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",

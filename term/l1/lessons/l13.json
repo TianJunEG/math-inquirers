@@ -18,7 +18,7 @@
    "Near doubles as a mental strategy (7 + 8 is double 7 and 1 more)",
    "Adding more than two numbers (Go further only)"
   ],
-  "note": "Strand label for the tutor only. FLAGGED NEW TOPIC: the plan marks this lesson as a new topic that needs an owner or tutor syllabus check before it is used with children (not yet done). Doubles to 10 + 10, tens doubles (30 + 30) and 'a double and 1 more' sit within the school Primary 1 idea of adding within 20 and 100. Beyond Primary 1 on purpose and only at Go further: doubling a two-digit number that is not a tens number (double 35, which needs renaming) and adding five numbers that are almost the same. Say this plainly to families. Do not describe the lesson as MOE-aligned or syllabus-aligned. Every Start here item is reached with ten-frames, dominoes or tens bars and counters after Explore."
+  "note": "Strand label for the tutor only. The plan marked this lesson as a new topic for an owner or tutor syllabus check. A desk check against docs/moe/syllabus_by_level.md (23 Oct 2026) finds doubles within 20 inside the Primary 1 addition range; the owner may still confirm. Doubles to 10 + 10, tens doubles (30 + 30) and 'a double and 1 more' sit within the school Primary 1 idea of adding within 20 and 100. Beyond Primary 1 on purpose and only at Go further: doubling a two-digit number that is not a tens number (double 35, which needs renaming) and adding five numbers that are almost the same. Say this plainly to families. Do not describe the lesson as MOE-aligned or syllabus-aligned. Every Start here item is reached with ten-frames, dominoes or tens bars and counters after Explore."
  },
  "contest_moves": [
   "double and adjust by one (near doubles)",
@@ -41,7 +41,7 @@
    "Number bonds to 10 (Number Bond Inquiry)"
   ],
   "safe_to_miss": true,
-  "note": "Lesson 3 of Term 2 is fairly safe to miss: it stands alone after the warm-up. A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 4. Doubles help later (Lesson 6 uses the 2 table), but nothing in Lessons 4 or 5 needs them."
+  "note": "Term 2 Lesson 3 is fairly safe to miss: it stands alone after the warm-up. A child who misses it watches the recording and does workbook pages 1 and 2 before Term 2 Lesson 4. Doubles help later (Term 2 Lesson 6 uses the 2 table), but nothing in Term 2 Lessons 4 or 5 needs them."
  },
  "materials": {
   "child": [
@@ -203,21 +203,30 @@
       "s": 15
      },
      {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
       "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
       "s": 12
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your counters, the kit page and your workbook on the table."
+      "text": "Hello, inquirers! Pencil ready, and your counters, the kit page and your workbook on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
@@ -225,7 +234,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Say the recording notice in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -882,7 +891,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Odd plus Odd. Please have your next workbook with the kit page of number cards cut out, 20 counters or small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Odd plus Odd. Please have your Term 2 Lesson 4 workbook with the kit page of number cards cut out, 20 counters or small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -933,7 +942,7 @@
      ]
     }
    ],
-   "note": "Lesson 3 of Term 2, 90 minutes. Objective: know the doubles to 10 + 10 and double a tens number, then add numbers that are next to each other (7 + 8) with a double and 1 more or 1 less. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "note": "Term 2 Lesson 3, 90 minutes. Objective: know the doubles to 10 + 10 and double a tens number, then add numbers that are next to each other (7 + 8) with a double and 1 more or 1 less. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
    "subtitle": "Doubles and Near Doubles: double, then adjust",
    "mascot": {
     "size": "l",
@@ -1853,7 +1862,7 @@
      "head": "NEXT LESSON",
      "items": [
       "Odd + Odd: Always, Sometimes, Never",
-      "Have ready: your Lesson 4 workbook with its kit page of number cards cut out, 20 counters or small things of one kind, pencil and paper."
+      "Have ready: your Term 2 Lesson 4 workbook with its kit page of number cards cut out, 20 counters or small things of one kind, pencil and paper."
      ]
     }
    ],
@@ -3324,21 +3333,20 @@
    "Are the two numbers next to each other?"
   ],
   "when_stuck": "Please do not teach 'double and add 2': the trick is 1 more or 1 less. Let your child use counters or a drawing, and wait 10 seconds before helping. Asking 'what is double the smaller number?' works better than giving the answer. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Lesson 14: Odd + Odd: Always, Sometimes, Never. Online practice: your tutor will share the practice link.",
+  "next": "Term 2 Lesson 4: Odd + Odd: Always, Sometimes, Never. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it. Recordings are kept 30 days after your group's last lesson.",
   "quote": "Double, then adjust: find the double, then move one.",
   "report_line": "Your child is learning to use doubles to add quickly and to say why a near double is 1 more or 1 less. This week: doubles to 10 + 10, tens doubles and near doubles.",
-  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "term_line": "This term: places and strips so far; now doubles; then odd and even, equal groups, sharing and stories.",
   "next_materials": [
-   "20 counters or small things of one kind (this lesson's counters are fine)",
-   "The next workbook, with its kit page of number cards 1 to 20 cut out by a grown-up",
-   "Pencil, rubber and paper"
+   "20 counters or small things of one kind",
+   "Your Term 2 Lesson 4 workbook, with its kit page of number cards 1 to 20 cut out by a grown-up"
   ]
  },
  "safeguarding": [
   "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters.",
   "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
   "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
-  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child's page is never shown.",
   "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
   "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
@@ -3347,8 +3355,8 @@
   "Solve every workbook question yourself first, using a double each time. Check the Go further items (double 35 and the five-number sum) against the key.",
   "Tell parents a week before: print the workbook pages and the kit page, cut out the kit page and find the things listed. Small things stay away from mouths and younger children.",
   "Have the slides open and check the kit page is visible on screen share. Have a paper copy of the kit page and counters to show on camera if you wish.",
-  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
-  "Be plain with families: this lesson is flagged as a new topic and still needs the owner or a tutor syllabus check. Doubles to 20, tens doubles and near doubles sit inside the school Primary 1 idea of adding within 20 and 100. Go further goes beyond school on purpose (double 35, five numbers that are almost the same). Do not call it MOE-aligned."
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
+  "Be plain with families: doubles to 20, tens doubles and near doubles sit inside the school Primary 1 idea of adding within 20 and 100. Go further goes beyond school on purpose (double 35, five numbers that are almost the same). Do not call it MOE-aligned."
  ],
  "workbook": {
   "header": "Addition: doubles and near doubles",
@@ -3365,5 +3373,8 @@
     "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Keep them in an envelope. The frames can stay on the page."
    }
   ]
+ },
+ "limits": {
+  "max_parent_words": 100
  }
 }

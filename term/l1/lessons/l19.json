@@ -59,7 +59,7 @@
    "A visible clock"
   ],
   "kit_pages": [
-   "Ten-frames and counters (page 6): 20 counters to cut out, 10 red and 10 yellow, and four ten-frames to lay counters on. Shape cards (page 7): 15 cards, three each of circle, square, triangle, heart and star, big enough for 6 counters"
+   "Ten-frames and counters (page 6): 20 counters to cut out, 10 red and 10 yellow, and four ten-frames to lay counters on. Shape cards (page 7): 15 drawn shapes, three each of circle, square, triangle, heart and star, each big enough to hold 3 counters"
   ],
   "ruler": false,
   "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. Cups stay on the table."
@@ -210,7 +210,7 @@
      ]
     }
    ],
-   "note": "Lesson 9 of Term 2, 90 minutes. Objective: find a hidden number behind a shape in a picture equation, know that the same shape is always the same number, check the answer in every line, and take one line away from another. Plain statement for families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. Shapes and boxes only, never letters. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "note": "Term 2 Lesson 9, 90 minutes. Objective: find a hidden number behind a shape in a picture equation, know that the same shape is always the same number, check the answer in every line, and take one line away from another. Plain statement for families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and a times line go past the school Primary 1 syllabus on purpose. Shapes and boxes only, never letters. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
    "subtitle": "A shape hides a number",
    "mascot": {
     "size": "l",
@@ -1240,21 +1240,30 @@
       "s": 15
      },
      {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
       "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
       "s": 12
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your shape cards, counters and two cups on the table."
+      "text": "Hello, inquirers! Pencil ready, and your shape cards, counters and two cups on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
@@ -1262,7 +1271,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -3254,7 +3263,6 @@
        8
       ],
       "y": [
-       1,
        2,
        3
       ]
@@ -3952,31 +3960,30 @@
    "How can you check your number in the line?"
   ],
   "when_stuck": "Let your child use counters and two cups, and wait 10 seconds before helping. Asking ‘what is the total?’ works better than giving the answer. Please do not teach a rule or letters: counters and a cup are enough. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Term 2 Lesson 10: Find One First, with Mi's Chal\u00adlenge Quest. It has one picture-equation question: if your child missed this lesson, do workbook pages 1 and 2 first. Online practice: your tutor will share the link.",
+  "next": "Term 2 Lesson 10: Find One First, with Mi's Chal\u00adlenge Quest (one picture-equation question: if your child missed this lesson, do workbook pages 1 and 2 first). Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it. Recordings are kept 30 days after your group's last lesson.",
   "quote": "A shape is a hidden number, and the same shape is always the same number.",
   "report_line": "Your child is learning that a shape can stand for a hidden number and that the same shape is always the same number. This week: finding one shape, then two shapes from two lines.",
-  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "term_line": "This term: strips and stories so far; now picture equations; next, prices and Mi's Challenge Quest.",
   "next_materials": [
-   "The Term 2 Lesson 10 workbook, with its $1 tokens page (cut out 30 tokens)",
+   "Your Term 2 Lesson 10 workbook, with its $1 tokens page (cut out 30 tokens)",
    "3 to 6 small things for a shop",
-   "The Quest Log (3 pages, printed at 100%), kept closed in its envelope; a quest partner",
-   "Pencil, rubber and paper"
+   "The Quest Log (3 pages, printed at 100%), kept closed in its envelope; a quest partner"
   ]
  },
  "safeguarding": [
   "Counters, cups and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Cups stay on the table so that nothing is spilled.",
   "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
   "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
-  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
   "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Counting aloud is quiet; a child may stay seated.",
   "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first. Check that each shape in a puzzle is a different number (T1: 6 and 7; T2: 6 and 9; T3: 3 and 5; G1: 5, 7 and 11; G2: 8 and 6; G3: 5 and 4) so you can answer a child who asks.",
-  "Tell parents a week before: print the workbook pages and both kit pages (a grown-up cuts out the 20 counters and the 15 shape cards: three each of circle, square, triangle, heart and star), and find about 30 counters or buttons and two cups. Keep the cards in an envelope. Small things stay away from mouths and younger children. Next lesson is Mi's Challenge Quest: with this lesson's materials, send the Quest Log (in a closed envelope) and the grown-up note.",
+  "Tell parents a week before: use the workbook pages and both kit pages from the printed term book (send a PDF only if a page is missing, to print at 100%) (a grown-up cuts out the 20 counters and the 15 shape cards: three each of circle, square, triangle, heart and star), and find about 30 counters or buttons and two cups. Keep the cards in an envelope. Small things stay away from mouths and younger children. Next lesson is Mi's Challenge Quest: with this lesson's materials, send the Quest Log (in a closed envelope) and the grown-up note.",
   "Have the slides open. Have your own shape cards, a cup and counters to show on camera if you wish.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
   "Be plain with families: one line with a hidden number is Primary 1 work, but using the same shape in two lines, taking one line from another and the times line are beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Never use letters for unknowns; shapes and boxes only. The counters are the method, not a rule to recite.",
   "Slides s-explore3, s-m2 and s-m3 keep the method off the screen while you ask: the steps appear on the slide after. Read every question with its totals and the four options of E2 aloud: the figures on the slides are small."
  ],
@@ -3999,32 +4006,43 @@
     "intro": "A grown-up cuts out the 20 counters (10 red, 10 yellow) before the lesson. Red counters can hide in a cup; yellow counters can be the loose ones. The ten-frames stay on the page."
    },
    {
-    "type": "cards",
-    "labels": [
-     "circle",
-     "circle",
-     "circle",
-     "square",
-     "square",
-     "square",
-     "triangle",
-     "triangle",
-     "triangle",
-     "heart",
-     "heart",
-     "heart",
-     "star",
-     "star",
-     "star"
+    "type": "shapes",
+    "size": 96,
+    "shapes": [
+     {
+      "kind": "circle",
+      "color": "#FFE08A",
+      "n": 3
+     },
+     {
+      "kind": "square",
+      "color": "#BFE3F5",
+      "n": 3
+     },
+     {
+      "kind": "triangle",
+      "color": "#C8E6B0",
+      "n": 3
+     },
+     {
+      "kind": "heart",
+      "color": "#F7B6C2",
+      "n": 3
+     },
+     {
+      "kind": "star",
+      "color": "#FFD27A",
+      "n": 3
+     }
     ],
-    "cols": 3,
-    "w": 250,
-    "h": 110,
     "width": 100,
     "title": "Kit page: shape cards",
-    "intro": "A grown-up cuts out the 15 shape cards before the lesson: three each of circle, square, triangle, heart and star. Each card is big enough for 6 counters. Children may draw the shape on its card. Keep the cards in an envelope."
+    "intro": "A grown-up cuts out the 15 shapes before the lesson: three each of circle, square, triangle, heart and star. Each shape is drawn, so a child matches pictures, not words. A shape is big enough to hold 3 counters. Keep the shapes in an envelope."
    }
   ]
  },
- "contest_where": "Think harder, Go further and the Investigation"
+ "contest_where": "Think harder, Go further and the Investigation",
+ "limits": {
+  "max_parent_words": 120
+ }
 }

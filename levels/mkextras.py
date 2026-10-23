@@ -182,6 +182,7 @@ def build_email(n, d, tmp):
         else:
             kitp = 'No cut-outs are needed this week. Please keep the Week 1 envelope handy.'
         if w == 5: kitp += ' The Certificate of Completion is the last page of the Week 5 PDF.'
+        if n == 5 and w == 5: kitp += ' Please note the changed day: Friday 25 December is a public holiday, so lesson 9 is on Wednesday 23 December (4:45 to 6:15 pm) and lesson 10 is on Sunday 27 December (4:15 to 5:45 pm). The two lessons are four days apart this week, not two, so there is time for the take-home questions between them.'
         if n == 6 and w == 1: kitp += ' Each child needs a laptop or desktop with internet for the coding parts (a tablet works for Scratch but is slower). Scratch is free at scratch.mit.edu and no account is needed; please let your child open it once before the first lesson. [Attach the Scratch warm-up handout if you have it.]'
         subj_topics = f'{la["topic"]} and {lb["topic"]}'
         learn = ''.join('<p><b>Lesson %d, %s (%s).</b> %s</p>' % (l['n'], E(l['title']), E(l['topic']), E(side[str(l['n'])][0])) for l in (la, lb))
@@ -202,6 +203,7 @@ def build_email(n, d, tmp):
             u = ('https://claude.ai/artifact/' + ids[l['n']]) if l['n'] in ids else '[deck link to add: not yet published]'
             b.append('<li>Lesson %d deck: %s</li>' % (l['n'], E(u)))
         b.append('</ul><p>Before the lesson, please:</p><ol><li>Read both scripts once and try the Go further questions yourself.</li>')
+        if n == 5 and w == 5: b.append('<li>Week 5 has a changed day: lesson 9 is on Wed 23 Dec (4:45 to 6:15 pm) and lesson 10 on Sun 27 Dec, four days apart instead of two. Confirm the Wednesday with every family early, and remind children at the end of lesson 9 that the take-home parts can be done in the four days.</li>')
         b.append('<li>Check your materials are ready. Lesson %d: %s Lesson %d: %s</li>' % (la['n'], E(la['materials']), lb['n'], E(lb['materials'])))
         b.append('<li>After each lesson, tick the Readiness Tracker for each child (four quick ticks) and send me the sheet.</li></ol>')
         b.append('<p>Please do not forward the answer pages to parents.</p><p>Thank you,<br>[Your name]</p></div></div>')

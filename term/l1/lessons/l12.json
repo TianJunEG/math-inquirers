@@ -37,12 +37,12 @@
    "The gap between two numbers, by counting up (how many more is 14 than 9)",
    "A strip of cells is a number: 36 is three strips of 10 and a strip of 6"
   ],
-  "assumes": "Adding a one-digit number to a number up to 20 (15 + 7) and adding or taking away tens and ones that do not regroup (31 + 15, 45 - 30). The warm-up teaches undoing a step, counting up to find a gap, and reading a strip of cells with a picture and with real strips; nothing from Term 1 or Lesson 11 is needed.",
+  "assumes": "Adding a one-digit number to a number up to 20 (15 + 7) and adding or taking away tens and ones that do not regroup (31 + 15, 45 - 30). The warm-up teaches undoing a step, counting up to find a gap, and reading a strip of cells with a picture and with real strips; nothing from Term 1 or Term 2 Lesson 1 is needed.",
   "holiday_topics_revisited": [
    "Mystery Number (undo a step), used as a warm-up only"
   ],
   "safe_to_miss": false,
-  "note": "Lessons 18 and 20 draw strips for times and unit stories, so this is not a safe lesson to miss. A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 18. Lesson 10 (read it twice, one operation per step) and Lesson 7 (a difference is a gap) help most; the warm-up gives both again."
+  "note": "Term 2 Lessons 8 and 10 draw strips for times and unit stories, so this is not a safe lesson to miss. A child who misses it watches the recording and does workbook pages 1 and 2 before Term 2 Lesson 8. Term 1 Lesson 10 (read it twice, one operation per step) and Term 1 Lesson 7 (a difference is a gap) help most; the warm-up gives both again."
  },
  "materials": {
   "child": [
@@ -221,8 +221,9 @@
       "slide": "s-title"
      },
      {
-      "k": "REC",
-      "text": "@rec"
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
      },
      {
       "k": "SAY",
@@ -233,13 +234,22 @@
       "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
       "k": "SAY",
-      "text": "Microphones stay off. When I say on three, say the answer quietly to your own room and show it with fingers or a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "DO",
-      "text": "Greet the whole group warmly. Do not use children's first names on the recording. Hold two paper strips of different lengths side by side and ask: which strip is longer? Take answers on three.",
-      "s": 25
+      "text": "Hold two paper strips of different lengths side by side and ask: which strip is longer? Take answers on three.",
+      "s": 15
      },
      {
       "k": "SLIDE",
@@ -683,7 +693,7 @@
      {
       "k": "WORK",
       "text": "Page 1, questions 1 to 3. Tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
-      "s": 420
+      "s": 450
      },
      {
       "k": "SLIDE",
@@ -708,7 +718,7 @@
      {
       "k": "WORK",
       "text": "Page 2, questions 4 to 7. Move to the answer slide only when most children have stopped writing.",
-      "s": 570
+      "s": 660
      },
      {
       "k": "SLIDE",
@@ -729,7 +739,7 @@
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
-      "s": 140
+      "s": 30
      },
      {
       "k": "STUCK",
@@ -901,7 +911,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Doubles and Near Doubles. Your grown-up prints the workbook with its kit page of ten-frames and counters. If there is no printer, you need about 20 small things of two kinds, such as 10 buttons and 10 coins. And a pencil and paper."
+      "text": "Well done, inquirers. Next lesson is Doubles and Near Doubles. Your grown-up cuts out the ten-frames and counters page of your Term 2 Lesson 3 workbook. If that page is missing, you need about 20 small things of two kinds, such as 10 buttons and 10 coins. And a pencil and paper."
      },
      {
       "k": "SAY",
@@ -928,7 +938,7 @@
      ]
     }
    ],
-   "note": "Lesson 2 of Term 2, 90 minutes. Objective: draw one strip for each person in a story, find how many more from the gap, and find altogether by joining the strips. Time plan: opening 0 to 3, warm-up 3 to 9, sneak-peek 9 to 13, explore 13 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "note": "Term 2 Lesson 2, 90 minutes. Objective: draw one strip for each person in a story, find how many more from the gap, and find altogether by joining the strips. Time plan: opening 0 to 3, warm-up 3 to 9, sneak-peek 9 to 13, explore 13 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may mute and keep the camera off. Think harder, Go further and the Investigation are for every child to choose.",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -1017,7 +1027,7 @@
      "text": "Count up from 9 to 14. How many more is 14 than 9?"
     }
    ],
-   "note": "Count up from 9 to 14 on the number line: 10, 11, 12, 13, 14. Five jumps, so 14 is 5 more than 9. The second question by voice: 13 is 7 more than 6. This is the Lesson 7 idea that a difference is a gap. Children answer with fingers on three."
+   "note": "Count up from 9 to 14 on the number line: 10, 11, 12, 13, 14. Five jumps, so 14 is 5 more than 9. The second question by voice: 13 is 7 more than 6. This is the Term 1 Lesson 7 idea that a difference is a gap. Children answer with fingers on three."
   },
   {
    "id": "s-rem3",
@@ -1877,7 +1887,7 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Doubles and Near Doubles. Have ten-frames and counters ready, or 20 small things of two kinds."
+      "Doubles and Near Doubles. Have your Term 2 Lesson 3 workbook with its ten-frames and counters ready, or 20 small things of two kinds."
      ]
     }
    ],
@@ -3270,13 +3280,12 @@
    "Is it the gap, or the whole line?"
   ],
   "when_stuck": "Let your child lay two strips side by side, or draw boxes in two rows, and count the extra boxes. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class; the tutor replies to the grown-up only. Photos are kept for 90 days after the program ends, then deleted.",
-  "next": "Lesson 13: Doubles and Near Doubles. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to the families in your child's group: please do not share it. Online practice for this lesson (no timers, no scores): your tutor sends the link on the day of the lesson.",
+  "next": "Term 2 Lesson 3: Doubles and Near Doubles. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it. Recordings are kept 30 days after your group's last lesson.",
   "report_line": "Your child is learning to draw a story as strips, to find how many more from the gap and to join strips for altogether. This week: more than, fewer than and how many more.",
   "term_line": "Over this term your child will learn to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The printed Lesson 13 workbook, with its kit page of ten-frames and 20 counters cut out by a grown-up",
-   "If there is no printer: about 20 small things of two kinds, such as 10 buttons and 10 coins",
-   "A pencil, a rubber and spare paper"
+   "Your Term 2 Lesson 3 workbook, with its kit page of ten-frames and 20 counters cut out by a grown-up",
+   "If there is no printer: about 20 small things of two kinds, such as 10 buttons and 10 coins"
   ]
  },
  "safeguarding": [
@@ -3292,7 +3301,7 @@
   "Solve every workbook question yourself with real strips first. Check that the Think harder and Go further totals give whole numbers: Think harder question 1 (40 and 8), Go further question 1 (52 and 7) and question 2 (90 and 10). The kit makes 6, 4, 10 and 14 without cutting; bigger numbers are drawn.",
   "Tell parents a week before: workbook pages 1 to 5 printed on A4; page 6 (the strips) printed on its own sheet (or one side only) and cut into the eleven strips by a grown-up, with two of the strips cut after 6 cells (nobody cuts during the lesson); two colouring pencils in two different colours; a pencil and spare paper. Ask them to print at 100% (actual size) so the strips have equal cells. Keep the pieces in an envelope with the child's name.",
   "Have two paper strips of different lengths (a strip of 10 cells and a piece of 6) and the slides open. Hold the strips side by side and end to end on camera, in front of a plain background. Draw nothing under the webcam: the recording cannot show it.",
-  "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
+  "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
   "Say plainly if a parent asks: Start here is school-level addition and subtraction stories. Strips (called bar models at school), total and difference, and make-equal go beyond Primary 1 on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with strips and a picture."
  ],
  "spare_time": {
@@ -3328,5 +3337,8 @@
     "answer": "3 things move: the rows end at 7 and 7. The gap was 6 and half of 6 is 3."
    }
   ]
+ },
+ "limits": {
+  "max_parent_words": 100
  }
 }

@@ -208,7 +208,7 @@
      ]
     }
    ],
-   "note": "Lesson 7 of Term 2, 90 minutes. Objective: share a set equally and put a set into same-size groups, tell the two apart, check by multiplying, and say what is left over. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 37, brain break 37 to 41, workbook 41 to 71, talk 71 to 77, exit ticket 77 to 83, look-back 83 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line after the greeting: you and the screen only; a child may keep the camera off. Say plainly to grown-ups that sharing within 20 is Primary 1 work and that left over and the grown-up sign go a little further.",
+   "note": "Term 2 Lesson 7, 90 minutes. Objective: share a set equally and put a set into same-size groups, tell the two apart, check by multiplying, and say what is left over. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 37, brain break 37 to 41, workbook 41 to 71, talk 71 to 77, exit ticket 77 to 83, look-back 83 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line after the greeting: you and the screen only; a child may keep the camera off. Say plainly to grown-ups that sharing within 20 is Primary 1 work and that left over and the grown-up sign go a little further.",
    "subtitle": "Sharing and Grouping: equal shares, equal groups",
    "mascot": {
     "size": "l",
@@ -1047,7 +1047,7 @@
      "head": "NEXT LESSON",
      "items": [
       "Times Stories",
-      "Have ready: your next workbook with the strips page cut into strips by a grown-up (three cut after 6 cells), about 20 counters, 3 paper cups or plates, pencil and paper."
+      "Have ready: your Term 2 Lesson 8 workbook with the strips page cut into strips by a grown-up (three cut after 6 cells), about 20 counters, 3 paper cups or plates, pencil and paper."
      ]
     }
    ],
@@ -1141,21 +1141,30 @@
       "s": 15
      },
      {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
       "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
       "s": 12
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your plates, counters and workbook on the table."
+      "text": "Hello, inquirers! Pencil ready, and your plates, counters and workbook on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
@@ -1163,7 +1172,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1783,7 +1792,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Times Stories. Please have your next workbook with the strips page cut into strips by a grown-up, with three of the strips cut after 6 cells, about 20 counters, 3 paper cups or plates, a pencil and paper. Goodbye, and thank you to the grown-ups."
+      "text": "Well done, inquirers. Next lesson is Times Stories. Please have your Term 2 Lesson 8 workbook with the strips page cut into strips by a grown-up, with three of the strips cut after 6 cells, about 20 counters, 3 paper cups or plates, a pencil and paper. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -1838,7 +1847,7 @@
     "val": [
      2
     ],
-    "hint": "Draw one dot on each plate, again and again, until you have drawn 12.",
+    "hint": "Draw one dot on each plate, again and again, until you have drawn 8.",
     "solution": "Deal one dot at a time to each of the 4 plates. After 2 rounds all 8 dots are drawn. Each plate has 2 dots, and 4 groups of 2 is 8.",
     "mistakes": [
      "Putting all the dots on one plate.",
@@ -2253,7 +2262,7 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Jenny has 12 sweets. She shares them equally among some friends. Fill in the table. Then answer (a) and (b).",
+    "text": "Jenny has 12 sweets. She shares them equally among some friends. Fill in the table. Then answer (a), (b) and (c).",
     "parts": [
      {
       "l": "a",
@@ -2273,7 +2282,7 @@
      },
      {
       "l": "c",
-      "text": "Now Jenny has 18 sweets. Write every number of friends who can share them equally, with none left over. _______",
+      "text": "Now Jenny has 18 sweets. Write every number of friends who can share them equally, with none left over. _______ _______",
       "ans": "1, 2, 3, 6, 9, 18",
       "val": [
        1,
@@ -3055,7 +3064,6 @@
        5
       ],
       "c": [
-       1,
        2
       ]
      },
@@ -3291,35 +3299,34 @@
    "How can we check by multiplying?"
   ],
   "when_stuck": "Please say 'left over', not 'remainder', and do not drill the ÷ sign. Let your child deal counters one at a time onto plates, and wait 10 seconds before helping. Asking ‘how many plates?’ and ‘how many on each plate?’ works better than giving the answer. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Lesson 18: Times Stories. Online practice: your tutor will share the practice link.",
+  "next": "Term 2 Lesson 8: Times Stories. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it. Recordings are kept 30 days after your group's last lesson.",
   "quote": "Sharing finds how many each; putting into groups finds how many groups. Check by multiplying.",
   "report_line": "Your child is learning to share things equally, to put them into groups and to tell the two apart. This week: sharing, grouping and checking by multiplying, with totals to 20.",
-  "term_line": "Your child is learning to draw a story, to use groups and sharing, and to test a claim with an example.",
+  "term_line": "This term: groups and tables so far; now sharing and grouping; next, times stories and picture equations.",
   "next_materials": [
-   "The next workbook, with its strips page cut into ten strips by a grown-up (three cut after 6 cells)",
+   "Your Term 2 Lesson 8 workbook, with its strips page cut into ten strips by a grown-up (three cut after 6 cells)",
    "About 20 counters or buttons (not food)",
-   "3 paper cups or plates",
-   "Pencil, rubber and paper"
+   "3 paper cups or plates"
   ]
  },
  "safeguarding": [
   "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Use paper plates or cups, or the printed groups mat, rather than glass or china. Use counters or buttons, not real sweets, so nothing is eaten.",
   "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
   "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers for a choice. There is no private chat.",
-  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
   "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Dealing is done in the air with one arm; a child may stay seated and tap the table.",
   "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first. Check the Go further table (G1: 12, 6, 4, 3, 2, 1) and the left-over pattern in the Investigation (1, 2, 3, 0, 1, 2, 3, 0) so you can answer a child who finds another way.",
-  "Tell parents a week before: print the workbook pages and the groups mat (nothing to cut), and find 5 plates, bowls or paper cups and about 20 small things that are not food. Small things stay away from mouths and younger children.",
+  "Tell parents a week before: use the workbook pages from the printed term book (send a PDF only if a page is missing, to print at 100%); the groups mat needs no cutting, and find 5 plates, bowls or paper cups and about 20 small things that are not food. Small things stay away from mouths and younger children.",
   "Have the slides open and check the groups mat is visible on screen share. Have 3 plates and counters to show on camera if you wish.",
-  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, and avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
   "Say plainly to families that sharing and grouping to 20 are Primary 1 work, and that the grown-up sign, left over and all the ways to share 12 go a little beyond Primary 1 on purpose. Say left over, never remainder, and show the sign only as a grown-up label for both kinds of question. Do not call the lesson MOE-aligned. Term 2 lessons 5 to 8 build on one another. Say the convention once: 'Ben shares with his 3 cousins' counts Ben as one of the sharers; 'Ali shares among 3 friends' does not count Ali."
  ],
  "workbook": {
-  "header": "Multiplication and Division: sharing and grouping",
+  "header": "Division: sharing and grouping",
   "hint_p1": "Use counters and plates, or draw it.",
   "hint_p2": "Deal one at a time, or count in jumps.",
   "hint_p3": "Use counters or draw it. Choose any question, in any order.",
@@ -3337,5 +3344,8 @@
    }
   ]
  },
- "contest_where": "Think harder, Go further and the Investigation"
+ "contest_where": "Think harder, Go further and the Investigation",
+ "limits": {
+  "max_parent_words": 100
+ }
 }

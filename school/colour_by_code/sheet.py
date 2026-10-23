@@ -1,6 +1,6 @@
 """Make one worksheet: assign an answer to each region (keeping the picture's matching rules), make a question for every
 region that fits its label box, and write the pupil and teacher pages as HTML."""
-import html, math, os, random
+import html, math, os, random, re
 from collections import Counter
 import layout as L
 from banks import get_bank, BOX
@@ -16,15 +16,14 @@ def components(pic):
     def find(x):
         while parent[x] != x: parent[x] = parent[parent[x]]; x = parent[x]
         return x
-    for ids in [list(p) for p in pic.mirror_pairs] + [g[0] for g in pic.groups]:
+    for ids in [list(p) for p in pic.mirror_pairs] + [t[0] for t in pic.twins]:
         for i in ids[1:]: parent[find(i)] = find(ids[0])
     comp = {}
     for r in pic.regions: comp.setdefault(find(r.id), []).append(r.id)
     return list(comp.values())
 
 def assign(pic, rng):
-    """answer index 0..4 for every region: matching sets share one; every colour used 2 to 4 times; each counted subset
-    has at least one and not all of some colour"""
+    """answer index 0..4 for every region: matching sets (mirror pairs, twin marks) share one; every colour used 2 to 4 times"""
     comps = components(pic); n = len(pic.regions)
     for _ in range(20000):
         idx = {}
@@ -33,9 +32,27 @@ def assign(pic, rng):
             for rid in c: idx[rid] = k
         cnt = Counter(idx.values())
         if len(cnt) < 5 or min(cnt.values()) < 2 or max(cnt.values()) > max(4, math.ceil(n / 5) + 1): continue
-        if all(any(0 < sum(idx[i] == k for i in ids) < len(ids) for k in range(5)) for ids, _ in pic.subsets):
-            return idx
+        return idx
     raise BuildError("no assignment")
+
+def canon(q):
+    """what a question is, ignoring how it is worded or laid out: the numbers in it (sorted) and what its picture shows.
+    Two questions of one sheet with the same canon are the same exercise (7 + 3 and 3 + 7, the same clock twice, 17 - 5 - 4 and 17 - 4 - 5)."""
+    text = " ".join(q.lines)
+    facts = [("clock", int(h) % 12, int(m)) for h, m in re.findall(r"(\d{1,2}):(\d\d)", text)]
+    text = re.sub(r"\d{1,2}:\d\d", " ", text)
+    nums = tuple(sorted(re.findall(r"\d+(?:\.\d+)?", text)))
+    words = "".join(sorted(re.sub(r"[\d\s.,]", "", text)))              # the wording without digits, spacing or line breaks, in any order (7 + 3 and 3 + 7 agree)
+    k = q.art.meta if q.art is not None else {}
+    kind = k.get("kind")
+    if kind == "clock":
+        mm = round(k["minute_angle"] / 6.0) % 60; hh = round((k["hour_angle"] - mm * 0.5) / 30.0) % 12
+        facts.append(("clock", hh, mm))
+    elif kind in ("coins", "notes", "cash"): facts.append((kind, tuple(sorted(k["values"]))))
+    elif kind in ("shapes", "solids", "shapes_row"): facts.append((kind, tuple(sorted(k["kinds"]))))
+    elif kind == "array": facts.append((kind, tuple(sorted((k["rows"], k["cols"])))))
+    elif kind: facts.append((kind, tuple(sorted((a, str(b)) for a, b in k.items() if a != "kind"))))
+    return (nums, words, tuple(sorted(facts, key=str)))
 
 def make_sheet(spec, school=""):
     pic = PICTURES[spec["picture"]]()
@@ -58,7 +75,7 @@ def make_sheet(spec, school=""):
                 for attempt in range(6):
                     q = form(a, rng)
                     if q is None: break
-                    sig = " / ".join(q.lines) + str(getattr(q.art, "meta", ""))
+                    sig = canon(q)
                     if sig in seen and not allow_dup: continue
                     content = L.Content(q.lines, q.art, q.layout)
                     p = L.fit(content, boxes, ref=ref)
@@ -66,7 +83,7 @@ def make_sheet(spec, school=""):
                     col = f"({COLOURS[idx[reg.id]]})"
                     ta = L.Content(q.sol + [col], q.art, q.layout)
                     tb = L.Content(q.sol[:-1] + [q.sol[-1] + " " + col], q.art, q.layout)
-                    tc_ = L.Content([L.ANS_L + str(tier.disp(a)) + L.ANS_R + " " + col], q.art, "stack" if q.layout == "stack" else "row")
+                    tc_ = L.Content([L.ans_text(str(tier.disp(a))) + " " + col], q.art, "stack" if q.layout == "stack" else "row")
                     fa, fb = L.fit(ta, boxes, fmax=p["f"], fmin=L.F_MIN_TEACHER, ref=ref), L.fit(tb, boxes, fmax=p["f"], fmin=L.F_MIN_TEACHER, ref=ref)
                     opts = [(x["f"], k, x, c, False) for k, (x, c) in enumerate([(fa, ta), (fb, tb)]) if x]
                     if not opts:
@@ -84,19 +101,24 @@ def make_sheet(spec, school=""):
         use[form.__name__] += 1; seen.add(sig)
         items[reg.id] = dict(id=reg.id, answer=a, colour=COLOURS[idx[reg.id]], q=q, form=form.__name__, content=content, place=p, tcontent=tc, tplace=tp, teacher_short=short, dup=dup)
     tally = {COLOURS[k]: sum(1 for r in pic.regions if idx[r.id] == k) for k in range(5)}
-    return dict(spec=spec, level=level, pic=pic, bank=bank, tier=tier, key=key, idx=idx, items=items, tally=tally, dups=sum(1 for i in items.values() if i['dup']), school=school, checks=check_sentences(pic, idx, tally))
+    return dict(spec=spec, level=level, pic=pic, bank=bank, tier=tier, key=key, idx=idx, items=items, tally=tally, dups=sum(1 for i in items.values() if i['dup']), school=school, checks=check_sentences(pic, idx, tally),
+                topic=bank.topic_used(spec["tier"], [(i["form"], i["answer"]) for i in items.values()]))
 
 def check_sentences(pic, idx, tally):
+    """the checks printed in the box under the picture: (kind, text[, symbols]). `tally` is always there; a symmetric picture adds the
+    mirror check and every twin set adds its mark. Together they catch a single wrong colour and, with the marks, a swap of two colours."""
     out = [("tally", "Count the parts of each colour. You should have: " + ", ".join(f"{c} {n}" for c, n in tally.items()) + ".")]
-    if pic.mirror_pairs: out.append(("mirror", f"The two sides of the {pic.title.lower()} match: parts that mirror each other have the same colour."))
-    if pic.groups: out.append(("group", "These must be one colour each: " + "; ".join(g[1] for g in pic.groups) + "."))
-    for ids, template in pic.subsets:
-        best = None
-        for k in range(5):
-            c = sum(idx[i] == k for i in ids)
-            if 0 < c < len(ids) and (best is None or abs(c - len(ids) / 3) < abs(best[1] - len(ids) / 3)): best = (k, c)
-        k, c = best
-        out.append(("subset", template.format(n=len(ids), c=c, colour=COLOURS[k], are="is" if c == 1 else "are"), ids, k, c))
+    if pic.mirror_pairs: out.append(("mirror", "Parts in the same place on the left and on the right have the same colour."))
+    if pic.twins: out.append(("twin", "Parts with the same small mark have the same colour:", [(name, len(ids)) for ids, name in pic.twins]))
+    return out
+
+def flags(sh, col):
+    """names of the printed checks that a colouring `col` (region id -> colour index) fails; [] when it passes all of them"""
+    pic = sh["pic"]; out = []
+    base = {k: sum(1 for v in sh["idx"].values() if v == k) for k in range(5)}
+    if {k: sum(1 for v in col.values() if v == k) for k in range(5)} != base: out.append("tally")
+    if any(col[l] != col[r] for l, r in pic.mirror_pairs): out.append("mirror")
+    if any(len({col[i] for i in ids}) != 1 for ids, _ in pic.twins): out.append("twin")
     return out
 
 # ----------------------------------------------------------------- html
@@ -121,17 +143,37 @@ h1{{font-family:'Fredoka';font-weight:600;font-size:23pt;margin:0;flex:1;line-he
 .instr{{font-size:12pt;line-height:1.2;margin:2mm 0 1.6mm}}
 .key{{display:flex;gap:2mm;justify-content:space-between;margin:0 0 1mm}}
 .k{{flex:1;border:0.6mm solid #000;border-radius:2mm;padding:0.6mm 1.5mm;text-align:center;line-height:1.15}}
-.k b{{display:block;font-family:'Fredoka';font-weight:700;font-size:13.5pt}}.k i{{display:block;font-style:normal;font-size:11pt;border-top:0.3mm solid #000;margin-top:0.4mm;padding-top:0.3mm}}
+.k b{{display:block;font-family:'Fredoka';font-weight:700;font-size:13.5pt}}
+.fr{{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.05;font-size:11.5pt}}.fr i{{font-style:normal;display:block;padding:0 1mm}}.fr i:first-child{{border-bottom:0.35mm solid #000}}.k i{{display:block;font-style:normal;font-size:11pt;border-top:0.3mm solid #000;margin-top:0.4mm;padding-top:0.3mm}}
 svg.pic{{display:block;margin:0 auto;width:181mm;height:auto}}
 svg.pic .r{{fill:#fff;stroke:#000;stroke-width:0.9;stroke-linejoin:round;fill-rule:evenodd}}
 svg.pic text{{font-family:'Fredoka';font-weight:600;dominant-baseline:central;fill:#000;text-anchor:start}}
 svg.pic text.a{{font-weight:700}}
 svg.pic .bx{{fill:#fff;stroke:#000;stroke-width:0.45}}
 svg.pic .ul{{stroke:#000;stroke-width:0.4}}
+svg.pic .fb{{stroke:#000;stroke-width:0.45}}
 .chk{{border:0.8mm solid #000;border-radius:3mm;padding:1.6mm 4mm;margin-top:1mm;font-size:10.5pt;line-height:1.28}}
-.chk b{{font-family:'Fredoka';font-weight:600}}.chk div{{margin-top:0.2mm}}
+.chk b{{font-family:'Fredoka';font-weight:600}}.chk div{{margin-top:0.2mm}}svg.mk{{vertical-align:-0.9mm;margin:0 0.6mm}}
 footer{{margin-top:auto;display:flex;justify-content:space-between;font-size:8pt;padding-top:1mm;gap:6mm}}
 """
+
+def key_html(text):
+    """a key value as HTML: a stacked fraction <n|d> becomes numerator over denominator, any other text is escaped"""
+    import re
+    out, pos = [], 0
+    for m in re.finditer("\u27e8([^|\u27e9]*)\\|([^\u27e9]*)\u27e9", text):
+        out.append(html.escape(text[pos:m.start()])); out.append(f'<span class="fr"><i>{html.escape(m[1])}</i><i>{html.escape(m[2])}</i></span>'); pos = m.end()
+    out.append(html.escape(text[pos:]))
+    return "".join(out)
+
+def mark_html(name, size=3.9):
+    from pictures import symbol_points
+    pts = " ".join(f"{x:.2f},{y:.2f}" for x, y in symbol_points(name, 0, 0, 1.0))
+    return f'<svg class="mk" xmlns="http://www.w3.org/2000/svg" width="{size}mm" height="{size}mm" viewBox="-1.4 -1.4 2.8 2.8"><polygon fill="#000" points="{pts}"/></svg>'
+
+def check_html(c):
+    if c[0] != "twin": return f"<div>{html.escape(c[1])}</div>"
+    return f"<div>{html.escape(c[1])} " + " ".join(mark_html(n) for n, _ in c[2]) + "</div>"
 
 def page_html(sh, teacher=False):
     pic, bank, spec = sh["pic"], sh["bank"], sh["spec"]
@@ -144,8 +186,8 @@ def page_html(sh, teacher=False):
         if teacher: parts.append(f'<g class="lab" data-r="{r.id}">{L.render(it["tcontent"], it["tplace"])}</g>')
         else: parts.append(f'<g class="lab" data-r="{r.id}">{L.render(it["content"], it["place"])}</g>')
     svg = f'<svg class="pic" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 181 201">{"".join(parts)}</svg>'
-    keyhtml = "".join(f'<div class="k"><b>{html.escape(sh["tier"].disp(v))}</b><i>{COLOURS[i]}</i></div>' for i, v in enumerate(sh["key"]))
-    chk = "".join(f"<div>{html.escape(c[1])}</div>" for c in sh["checks"])
+    keyhtml = "".join(f'<div class="k"><b>{key_html(sh["tier"].disp(v))}</b><i>{COLOURS[i]}</i></div>' for i, v in enumerate(sh["key"]))
+    chk = "".join(check_html(c) for c in sh["checks"])
     title = f'{pic.title} {bank.title}' + (" &ndash; Teacher Answers" if teacher else "")
     tsize = 23 if len(title) <= 22 else (19.5 if len(title) <= 30 else 17)
     instr = (sh["tier"].instr or bank.instr) if not teacher else "Teacher answers: each answer is filled in and the colour is shown in brackets. Pupils colour their own copy."
@@ -154,4 +196,4 @@ def page_html(sh, teacher=False):
     head_r = star_svg(spec["tier"]) + ('<div class="nm">Name <span></span><br>Class <span></span></div>' if not teacher else "")
     return (f'<div class="page" data-ws="{spec["id"]}"><header><h1 style="font-size:{tsize}pt">{title}</h1>{head_r}</header><p class="instr">{html.escape(instr)}</p>'
             f'<div class="key">{keyhtml}</div>{svg}<div class="chk"><b>Check your work.</b>{chk}</div>'
-            f'<footer><span>{school}</span><span>{spec["id"]} &middot; Primary {sh["level"]} &middot; {html.escape(bank.topic_for(spec["tier"]))} &middot; {stars}</span></footer></div>')
+            f'<footer><span>{school}</span><span>{spec["id"]} &middot; Primary {sh["level"]} &middot; {html.escape(sh["topic"])} &middot; {stars}</span></footer></div>')

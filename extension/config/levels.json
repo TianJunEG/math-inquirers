@@ -1,0 +1,272 @@
+{
+ "_note": "Per-level product settings. Level 1 is built (units 1-2 as proof). Unit titles = the 10 holiday lesson topics of that level (hp/lessons.js, pN/content/lN.js headers); thresholds are defaults (assistant-chosen), not owner decisions.",
+ "page": {
+  "w_mm": 210,
+  "h_mm": 297,
+  "gutter_mm": 12,
+  "outer_mm": 13,
+  "top_mm": 12,
+  "bottom_mm": 15,
+  "soft_side_mm": 19,
+  "min_fill": 0.85,
+  "pages_per_unit": 6,
+  "target_pages": [
+   80,
+   100
+  ]
+ },
+ "levels": {
+  "1": {
+   "ages": "6-8",
+   "grade": "Primary 1",
+   "font_px": 19,
+   "line_mm": 9.5,
+   "box_mm": [
+    16,
+    12
+   ],
+   "min_hand_pt": 13,
+   "lint": {
+    "max_sentence_words": 14,
+    "mean_sentence_words": 9,
+    "max_stem_sentences": 3,
+    "long_word_letters": 11,
+    "money": "cents-sign"
+   },
+   "units": [
+    "Number patterns",
+    "Number bonds",
+    "Picture graphs",
+    "Repeating and growing patterns",
+    "Working backwards",
+    "Money",
+    "2D shapes",
+    "Logic and sorting",
+    "Length",
+    "Puzzle day"
+   ],
+   "holiday_lessons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "2": {
+   "ages": "7-9",
+   "grade": "Primary 2",
+   "font_px": 18,
+   "line_mm": 9,
+   "box_mm": [
+    16,
+    11
+   ],
+   "min_hand_pt": 12,
+   "lint": {
+    "max_sentence_words": 16,
+    "mean_sentence_words": 10,
+    "max_stem_sentences": 4,
+    "long_word_letters": 12,
+    "money": "decimal-and-cents"
+   },
+   "units": [
+    "Digit detectives (numbers to 1000)",
+    "Missing digit mysteries",
+    "Legs, wheels and arrays",
+    "Pattern machines",
+    "Mystery number machines",
+    "Market day (money)",
+    "Fair shares (fractions)",
+    "Shape builders",
+    "Measure masters",
+    "Puzzle day"
+   ],
+   "holiday_lessons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "3": {
+   "ages": "8-10",
+   "grade": "Primary 3",
+   "font_px": 17,
+   "line_mm": 8.5,
+   "box_mm": [
+    16,
+    10
+   ],
+   "min_hand_pt": 12,
+   "lint": {
+    "max_sentence_words": 18,
+    "mean_sentence_words": 11,
+    "max_stem_sentences": 4,
+    "long_word_letters": 13,
+    "money": "decimal"
+   },
+   "units": [
+    "Number sleuths (numbers to 10 000)",
+    "Cryptarithm crackers",
+    "Times table treasure",
+    "Model makers (bar models)",
+    "Remainder riddles",
+    "Fraction walls",
+    "Area architects",
+    "Angle and line detectives",
+    "Measure and money masters",
+    "Puzzle day"
+   ],
+   "holiday_lessons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "4": {
+   "ages": "9-11",
+   "grade": "Primary 4",
+   "font_px": 16,
+   "line_mm": 8,
+   "box_mm": [
+    16,
+    10
+   ],
+   "min_hand_pt": 11,
+   "lint": {
+    "max_sentence_words": 20,
+    "mean_sentence_words": 12,
+    "max_stem_sentences": 5,
+    "long_word_letters": 14,
+    "money": "decimal"
+   },
+   "units": [
+    "Factor hunters",
+    "Big number puzzles",
+    "Operation detectives",
+    "Fraction frontier",
+    "Decimal detectives",
+    "Angle turns",
+    "Area architects II",
+    "Symmetry and nets",
+    "Data detectives",
+    "Puzzle day"
+   ],
+   "holiday_lessons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "5": {
+   "ages": "10-12",
+   "grade": "Primary 5",
+   "font_px": 16,
+   "line_mm": 7.5,
+   "box_mm": [
+    16,
+    10
+   ],
+   "min_hand_pt": 11,
+   "lint": {
+    "max_sentence_words": 22,
+    "mean_sentence_words": 13,
+    "max_stem_sentences": 5,
+    "long_word_letters": 14,
+    "money": "decimal"
+   },
+   "units": [
+    "Million puzzles",
+    "Fraction feats",
+    "Before and after",
+    "Triangle areas",
+    "Volume vault",
+    "Rate racers",
+    "Percentage puzzles",
+    "Angle chasers",
+    "Pattern generalisers",
+    "Challenge day"
+   ],
+   "holiday_lessons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  "6": {
+   "ages": "11-13",
+   "grade": "Primary 6",
+   "font_px": 16,
+   "line_mm": 7.5,
+   "box_mm": [
+    16,
+    10
+   ],
+   "min_hand_pt": 11,
+   "lint": {
+    "max_sentence_words": 22,
+    "mean_sentence_words": 13,
+    "max_stem_sentences": 5,
+    "long_word_letters": 14,
+    "money": "decimal"
+   },
+   "units": [
+    "Code the pattern",
+    "Prime hunters",
+    "Below zero",
+    "Algebra machines",
+    "Every possible way",
+    "Fair or unfair?",
+    "Turtle geometry",
+    "Secret codes",
+    "Data detectives",
+    "Showcase challenge"
+   ],
+   "holiday_lessons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  }
+ }
+}

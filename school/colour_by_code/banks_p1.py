@@ -183,7 +183,7 @@ def _cmp(tier):
         def two(a, r):
             return SEM([f"10 more than {a - 11},", f"then 1 more: {BOX}"], lambda v, t=a: v == t, str(a), form="10 more then 1 more")
         def two_b(a, r):
-            return SEM([f"10 less than {a + 11},", f"then 1 more: {BOX}"], lambda v, t=a: v == t, str(a), form="10 less then 1 more") if a + 11 <= 100 else None
+            return SEM([f"10 less than {a + 9},", f"then 1 more: {BOX}"], lambda v, t=a: v == t, str(a), form="10 less then 1 more") if a + 9 <= 100 else None   # a + 9 - 10 + 1 = a
         forms += [middle, two, two_b]
     else:
         forms.append(between)
@@ -375,7 +375,7 @@ def build_banks():
         {1: T([20, 30, 40, 50, 60], range(0, 101), _cmp(1)), 2: T([55, 60, 65, 70, 75], range(0, 101), _cmp(2))})
     B["money"] = Bank("money", "Money", "Money: coins and notes, ¢ and $", "Find how much. Find it in the key. Colour the part with that colour.",
         {1: T([10, 20, 30, 40, 50], range(0, 101, 5), _money1(), lambda v: f"{v}¢"),
-         2: T([12, 14, 16, 18, 20], range(0, 31), _money2(), lambda v: f"${v}")})
+         2: T([12, 14, 16, 18, 20], range(0, 31), _money2(), lambda v: f"${v}", kind="dollars")})
     times = lambda: [(h, m) for h in range(1, 13) for m in (0, 30)]
     B["time"] = Bank("time", "Time", "Time: o'clock and half past", "Find the time. Find it in the key. Colour the part with that colour.",
         {1: T([(2, 0), (4, 0), (6, 0), (3, 30), (7, 30)], times(), _time(1), tword),
@@ -397,7 +397,7 @@ GALLERY = [
     dict(id="CBC-05", picture="icecream",  bank="count",   tier=2, seed=105),
     dict(id="CBC-06", picture="owl",       bank="compare", tier=2, seed=106),
     dict(id="CBC-07", picture="sailboat",  bank="money",   tier=1, seed=107),
-    dict(id="CBC-08", picture="fish",      bank="time",    tier=1, seed=108),
+    dict(id="CBC-08", picture="butterfly", bank="time",    tier=1, seed=108),
     dict(id="CBC-09", picture="icecream",  bank="length",  tier=1, seed=109),
     dict(id="CBC-10", picture="house",     bank="shapes",  tier=1, seed=114),
 ]

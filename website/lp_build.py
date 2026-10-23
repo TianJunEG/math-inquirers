@@ -27,7 +27,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap">
 <style>'''+css+extra+'''</style>
 <div class="wrap">
-<header class="bar"><a class="brand" href="#top" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Page"><a class="tab" href="#program" style="text-decoration:none">Program</a><a class="tab" href="#classes" style="text-decoration:none">Classes</a><a class="tab" href="#levels" style="text-decoration:none">Levels</a><a class="tab" href="#price" style="text-decoration:none">Price</a><a class="tab" href="#faq" style="text-decoration:none">FAQ</a><a class="btn yel sm" href="#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
+<header class="bar"><a class="brand" href="#top" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Page"><a class="tab" href="#program" style="text-decoration:none">Program</a><a class="tab" href="#classes" style="text-decoration:none">Classes</a><a class="tab" href="#levels" style="text-decoration:none">Levels</a><a class="tab" href="#price" style="text-decoration:none">Price</a><a class="tab" href="#faq" style="text-decoration:none">FAQ</a><a class="tab" href="/shop/" style="text-decoration:none" data-shoplink>Shop<span class="cartn" data-cartn hidden></span></a><a class="btn yel sm" href="#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
 
 <main id="top">
 <section class="hero"><div class="sec"><span class="eyebrow">November beta 2026 · Ages 6-8 (builds on Primary 1 maths)</span><h1>Math Inquirers <mark>Holiday</mark> Program</h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Ten hands-on lessons where children solve puzzles, test ideas with objects and explain their answers. Live online in small groups of up to 8, from your own home.</p>
@@ -98,7 +98,7 @@ __INTEREST_FORM__
 <details><summary>How do I pay?</summary><p>There is nothing to pay when you register. We confirm the group first, then send payment details.</p></details>
 <details><summary>What if we need to cancel?</summary><p>You can cancel within 60 days of paying. Before the first lesson, we refund everything you have paid. After lessons start, we refund what you have paid for the lessons your child has not attended yet: for example, with 7 of 10 lessons left you get 7/10 of the fee back. If you pay in instalments, any instalment not yet due is simply cancelled. The workbook and kit are yours to keep. After 60 days, fees are not refundable. To cancel, message us on WhatsApp or email and we refund by PayNow.</p></details></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An Ages 6-8 (builds on Primary 1 maths) holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><span id="emLine2"><br>Email: <span id="emFoot"></span></span></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class, post the workbook and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">An Ages 6-8 (builds on Primary 1 maths) holiday program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: <span id="waFoot"></span><span id="emLine2"><br>Email: <span id="emFoot"></span></span></p><p style="margin-top:6px"><a href="/shop/">Shop: extension workbooks (coming soon)</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class, post the workbook and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <!--PORTAL_CONFIG-->
 <script>
@@ -151,7 +151,8 @@ $("reg").addEventListener("submit",function(e){
 });
 '''+interest_js+'''
 })();
-</script>'''
+</script>
+<script src="/shop/cart.js" defer></script>'''
 import json
 sch=json.load(open('data/beta_schedule.json'))
 import datetime as _dt

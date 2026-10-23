@@ -14,7 +14,10 @@
    58
   ],
   "content_scale": 0.9429,
-  "file": "outputs/print/Math_Inquirers_P1_Workbook_PRINT.pdf"
+  "file": "outputs/print/Math_Inquirers_P1_Workbook_PRINT.pdf",
+  "printed_as": "black and white, double-sided, flip on long edge, left binding",
+  "bw_file": "outputs/print/bw/Math_Inquirers_P1_Workbook_PRINT.pdf",
+  "colour_file_use": "soft copy / colour reference only; not for the printer"
  },
  {
   "level": 2,
@@ -33,7 +36,10 @@
    66
   ],
   "content_scale": 0.9429,
-  "file": "outputs/print/Math_Inquirers_P2_Workbook_PRINT.pdf"
+  "file": "outputs/print/Math_Inquirers_P2_Workbook_PRINT.pdf",
+  "printed_as": "black and white, double-sided, flip on long edge, left binding",
+  "bw_file": "outputs/print/bw/Math_Inquirers_P2_Workbook_PRINT.pdf",
+  "colour_file_use": "soft copy / colour reference only; not for the printer"
  },
  {
   "level": 3,
@@ -50,7 +56,10 @@
    58
   ],
   "content_scale": 0.9429,
-  "file": "outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf"
+  "file": "outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf",
+  "printed_as": "black and white, double-sided, flip on long edge, left binding",
+  "bw_file": "outputs/print/bw/Math_Inquirers_P3_Workbook_PRINT.pdf",
+  "colour_file_use": "soft copy / colour reference only; not for the printer"
  },
  {
   "level": 4,
@@ -70,7 +79,10 @@
    66
   ],
   "content_scale": 0.9429,
-  "file": "outputs/print/Math_Inquirers_P4_Workbook_PRINT.pdf"
+  "file": "outputs/print/Math_Inquirers_P4_Workbook_PRINT.pdf",
+  "printed_as": "black and white, double-sided, flip on long edge, left binding",
+  "bw_file": "outputs/print/bw/Math_Inquirers_P4_Workbook_PRINT.pdf",
+  "colour_file_use": "soft copy / colour reference only; not for the printer"
  },
  {
   "level": 5,
@@ -86,7 +98,10 @@
    57
   ],
   "content_scale": 0.9429,
-  "file": "outputs/print/Math_Inquirers_P5_Workbook_PRINT.pdf"
+  "file": "outputs/print/Math_Inquirers_P5_Workbook_PRINT.pdf",
+  "printed_as": "black and white, double-sided, flip on long edge, left binding",
+  "bw_file": "outputs/print/bw/Math_Inquirers_P5_Workbook_PRINT.pdf",
+  "colour_file_use": "soft copy / colour reference only; not for the printer"
  },
  {
   "level": 6,
@@ -100,6 +115,9 @@
    55
   ],
   "content_scale": 0.9429,
-  "file": "outputs/print/Math_Inquirers_P6_Workbook_PRINT.pdf"
+  "file": "outputs/print/Math_Inquirers_P6_Workbook_PRINT.pdf",
+  "printed_as": "black and white, double-sided, flip on long edge, left binding",
+  "bw_file": "outputs/print/bw/Math_Inquirers_P6_Workbook_PRINT.pdf",
+  "colour_file_use": "soft copy / colour reference only; not for the printer"
  }
 ]

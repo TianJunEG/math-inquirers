@@ -10,6 +10,6 @@ run "$PGBIN/initdb -D $D/data -A trust >/dev/null"
 run "$PGBIN/pg_ctl -D $D/data -o '-p $PORT -k $D' -l $D/log -w start >/dev/null"
 trap 'run "$PGBIN/pg_ctl -D $D/data -m immediate stop >/dev/null" || true; rm -rf "$D"' EXIT
 P="$PGBIN/psql -h $D -p $PORT -U postgres -d postgres -v ON_ERROR_STOP=1 -v HERE=$HERE/test -q"
-for f in test/stub_supabase.sql schema.sql policies.sql seed_groups.sql test/rls_test.sql test/interest_test.sql; do
+for f in test/stub_supabase.sql schema.sql policies.sql seed_groups.sql test/rls_test.sql test/interest_test.sql test/product_interest_test.sql; do
   chmod -R a+rX "$HERE"; run "$P -f $HERE/$f" || { echo "FAILED in $f"; exit 1; }
 done

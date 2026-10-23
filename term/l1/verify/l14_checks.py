@@ -75,7 +75,7 @@ def run(d):
     eq([total(3, 5, 7), total(1, 1, 1), total(9, 3, 5)], [15, 3, 17], 'G2 totals'); eq([kind(15), kind(3), kind(17)], ['odd'] * 3, 'G2 kinds')
     all3 = all(kind(a + b + c) == 'odd' for a in range(1, 20) for b in range(1, 20) for c in range(1, 20) if kind(a) == kind(b) == kind(c) == 'odd'); eq(all3, True, 'G2 odd+odd+odd always odd up to 19')
     eq(T['G2']['val'], [15, 'Odd', 3, 'Odd', 17, 'Odd', 'Odd'], 'G2 val')
-    eq((left_over(4), left_over(6), total(4, 6), kind(10)), (0, 0, 10, 'even'), 'G3'); eq(T['G3']['val'][0], 0, 'G3 val')
+    eq((left_over(4), left_over(8), total(4, 8), kind(12)), (0, 0, 12, 'even'), 'G3'); eq(T['G3']['val'][0], 0, 'G3 val')
     ee = all(kind(a + b) == 'even' for a in range(2, 40, 2) for b in range(2, 40, 2)); eq(ee, True, 'G3 even + even always even')
     # Investigation: a number plus the next number
     eq([kind(total(a, a + 1)) for a in (3, 5, 8, 10)], ['odd'] * 4, 'Investigation'); eq([total(a, a + 1) for a in (3, 5, 8, 10)], [7, 11, 17, 21], 'Investigation totals')

@@ -73,7 +73,8 @@ def build(n):
         wr.write(f)
     return dict(level=n, source_pages=total, print_pages=len(seq), sheets=len(seq) // 2,
                 blank_pages=sum(1 for x in seq if x is None), cutout_pages=sorted(single_sided),
-                content_scale=round(s, 4), file=os.path.relpath(out, ROOT))
+                content_scale=round(s, 4), file=os.path.relpath(out, ROOT),
+                printed_as='black and white, double-sided, flip on long edge, left binding', bw_file=os.path.relpath(out, os.path.join(ROOT)).replace('outputs/print/', 'outputs/print/bw/'))
 
 
 if __name__ == '__main__':

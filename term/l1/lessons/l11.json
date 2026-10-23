@@ -43,7 +43,7 @@
    "Ordering and position words (Logic Lab), used as a warm-up only"
   ],
   "safe_to_miss": true,
-  "note": "Nothing later in Term 2 needs the place names, so this is a safe lesson to miss; the plan names Lesson 14 as the safest. A child who misses it watches the recording and does workbook pages 1 and 2. Lesson 20 may include one place-in-a-line question."
+  "note": "Nothing later in Term 2 needs the place names, so this is a safe lesson to miss; the plan names Term 2 Lesson 4 as the safest. A child who misses it watches the recording and does workbook pages 1 and 2. Term 2 Lesson 10 may include one place-in-a-line question."
  },
  "materials": {
   "child": [
@@ -178,7 +178,7 @@
    "the third Explore round (turning the line around) can move into the mini-lesson",
    "never shorten the exit ticket reading or the look-back"
   ],
-  "notes": "Lesson 1 of Term 2 has a 4-minute opening and a 13-minute Explore (the mini-lesson has 11 minutes because the answers are shown on a second slide) because it adds a one-minute routine card for children who are new this term (the four things to know). Start here (pages 1 and 2) takes about 17 minutes for a middle child, so in class a middle child may only just reach Think harder after the choice slide: Think harder, Go further and the Investigation are for children who finish early, for home and for next time, and the page says so. Answers are asked, then shown (the answer slides for Explore round 2, the two previews and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun, so do not plan to use the menu in a slow class. The project rubric allows 30 seconds a child question; this script allows 8 to 15 seconds, so a class that answers slowly will use the buffer: if so, say the answer of each Think harder preview and move on."
+  "notes": "Term 2 Lesson 1 has a 4-minute opening and a 13-minute Explore (the mini-lesson has 11 minutes because the answers are shown on a second slide) because it adds a one-minute routine card for children who are new this term (the four things to know). Start here (pages 1 and 2) takes about 18 minutes for a middle child (the script allows 7 minutes for page 1 and 11 for page 2), so in class a middle child reaches Think harder only after the choice slide, with about a minute and a half left: Think harder, Go further and the Investigation are for children who finish early, for home and for next time, and the page says so. Answers are asked, then shown (the answer slides for Explore round 2, the two previews and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional Go further slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun, so do not plan to use the menu in a slow class. The project rubric allows 30 seconds a child question; this script allows 8 to 15 seconds, so a class that answers slowly will use the buffer: if so, say the answer of each Think harder preview and move on."
  },
  "sneak_peek": {
   "q1": "Draw 5 dots in a line. The door is on the left. Colour the 2nd dot.",
@@ -244,8 +244,9 @@
       "slide": "s-title"
      },
      {
-      "k": "REC",
-      "text": "@rec"
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up. Welcome anyone who is new this term: every idea today is taught from the start, and nobody is expected to know Term 1.",
+      "s": 12
      },
      {
       "k": "SAY",
@@ -256,13 +257,17 @@
       "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
-      "k": "SAY",
-      "text": "Microphones stay off. When I say on three, say the answer quietly to your own room and show it with fingers or a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
      },
      {
-      "k": "DO",
-      "text": "Greet the whole group warmly. Do not use children's first names on the recording. Welcome anyone who is new this term: every idea today is taught from the start, and nobody is expected to know Term 1.",
-      "s": 25
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SLIDE",
@@ -774,7 +779,7 @@
      {
       "k": "WORK",
       "text": "Page 2, questions 4 to 7. Move to the answer slide only when most children have stopped writing.",
-      "s": 600
+      "s": 660
      },
      {
       "k": "SLIDE",
@@ -795,7 +800,7 @@
      {
       "k": "WORK",
       "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
-      "s": 150
+      "s": 90
      },
      {
       "k": "STUCK",
@@ -967,7 +972,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Bar Strips. Ask your grown-up to cut up the strips page from the printed workbook before we start: they cut it into strips and cut two of the strips after 6 cells. Nobody cuts during the lesson. You also need two colouring pencils, a pencil and paper. Your grown-up will see the list in the note."
+      "text": "Well done, inquirers. Next lesson is Bar Strips. Ask your grown-up to cut up the strips page of your Term 2 Lesson 2 workbook before we start: they cut it into strips and cut two of the strips after 6 cells. Nobody cuts during the lesson. You also need two colouring pencils, a pencil and paper. Your grown-up will see the list in the note."
      },
      {
       "k": "SAY",
@@ -994,7 +999,7 @@
      ]
     }
    ],
-   "note": "Lesson 1 of Term 2, 90 minutes. Objective: name places 1st to 10th, count a place from the front and from the back, and find who is where from clues. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "note": "Term 2 Lesson 1, 90 minutes. Objective: name places 1st to 10th, count a place from the front and from the back, and find who is where from clues. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may mute and keep the camera off. Think harder, Go further and the Investigation are for every child to choose.",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -1857,7 +1862,7 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Bar Strips. Bring the strips page already cut up by a grown-up (two strips cut after 6 cells) and 2 colouring pencils."
+      "Bar Strips. Bring your Term 2 Lesson 2 workbook with the strips page already cut up by a grown-up (two strips cut after 6 cells) and 2 colouring pencils."
      ]
     }
    ],
@@ -3044,11 +3049,11 @@
    "How many are in front of you?"
   ],
   "when_stuck": "Let your child touch each toy in order and say the places aloud. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
-  "next": "Lesson 12: Bar Strips: More and Fewer. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to the families in your child's group: please do not share it. Online practice for this lesson (no timers, no scores): your tutor sends the link on the day of the lesson.",
+  "next": "Term 2 Lesson 2: Bar Strips: More and Fewer. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it. Recordings are kept 30 days after your group's last lesson.",
   "report_line": "Your child is learning to name places in a line, to count them from either end and to find who is where from clues. This week: the places 1st to 10th, and counting from the front and from the back.",
   "term_line": "Over this term your child will learn to draw a story, to use groups and sharing, and to test a claim with an example.",
   "next_materials": [
-   "The printed Lesson 12 workbook; before the lesson a grown-up cuts its strips page into 11 strips, two cut after 6 cells",
+   "Your Term 2 Lesson 2 workbook, with its strips page cut into 11 strips by a grown-up before the lesson (two strips cut after 6 cells)",
    "Two colouring pencils, a pencil and spare paper"
   ]
  },
@@ -3066,7 +3071,7 @@
   "Solve every workbook question yourself with a row of real things first. Check the numbers in Go further question 1 against the table picture: seat 1 is at the top and the seats go round clockwise.",
   "Tell parents a week before: workbook pages 1 to 5 printed on A4, page 6 (the place cards and number cards) printed on its own sheet (or one side only) and cut out by a grown-up (no printer: twenty paper scraps with 1st to 10th and 1 to 10), ten small things for a row, a coin or button, a small paper to write FRONT on, a pencil and spare paper.",
   "Have ten small things in a row on your table and a paper marked FRONT, and the slides open. Draw nothing under the webcam: the recording cannot show it.",
-  "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
+  "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
   "Say plainly if a parent asks: Start here is school Primary 1 work (places up to 10th). Think harder and Go further go beyond it on purpose, and the program does not claim to match any school syllabus. Every Start here item is built to be reached with a picture or a row of real things.",
   "This lesson is paced for one tutor with eight tiles and no co-host: do not read the gallery for more than 10 seconds at a time, and use fingers for the checks (a gallery cannot show a table). Print the workbook kit page (page 6): ten place cards and ten number cards, cut out by a grown-up; the top two rows are place cards, the bottom two rows are number cards."
  ],
@@ -3103,5 +3108,8 @@
     "answer": "If the 2nd and the 4th toy swap, the toy that was 2nd is now 4th and the toy that was 4th is now 2nd. The other toys keep their places."
    }
   ]
+ },
+ "limits": {
+  "max_parent_words": 100
  }
 }

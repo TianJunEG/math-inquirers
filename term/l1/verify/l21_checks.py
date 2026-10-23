@@ -153,8 +153,9 @@ def run(d):
     eq((claim == real, fmt(*real)), (False, '8:30'), 'T2 claim is wrong'); eq(T['T2']['val'], ['No', '8:30'], 'T2 val')
     eq(real[0] + 1, claim[0], 'T2 the claim is the next hour')
     f4 = T['T3']['visual']; r4 = clk(f4); ha4, ma4 = hands(f4['h'], f4['m'])
-    st = [r4 == (3, 20), ha4 / 30 == 4.0, r4 == (4, 15)]
+    st = [r4 == (3, 20), ha4 / 30 > 4.0, r4 == (4, 15)]   # statement 2: the short hand has passed the 4
     eq(['T' if x else 'F' for x in st], T['T3']['val'], 'T3 statements'); eq(len(T['T3']['tf']), 3, 'T3 three statements')
+    eq(T['T3']['tf'][1]['s'], 'The short hand has passed the 4.', 'T3 statement 2 is decidable from the picture')
     eq(ma4 / 30, 3.0, 'T3 long hand on the 3'); eq(r4, (4, 15), 'T3 clock is 4:15'); eq(ha4 > 4 * 30, True, 'T3 short hand is a little past the 4')
     eq(len(d['tiers']['think']), 3, 'three Think harder questions')
 
@@ -182,12 +183,14 @@ def run(d):
 
     # ---------------- exit ticket
     eq([fmt(*clk(v)) for v in X['E1']['visuals']], X['E1']['val'], 'E1')
-    e3 = X['E2']['visual']; eq((e3['h'], e3['m'], e3['digital'], 'half past 8' in X['E2']['text']), (8, 30, '8:30', True), 'E2')
-    eq(hands(8, 30), (255.0, 180.0), 'E2 short hand half way between the 8 and the 9, long hand on the 6')
+    e3 = X['E2']['visual']; eq((e3['h'], e3['m'], e3['digital'], 'half past 5' in X['E2']['text']), (5, 30, '5:30', True), 'E2')
+    eq(hands(5, 30), (165.0, 180.0), 'E2 short hand half way between the 5 and the 6, long hand on the 6')
+    eq('between the 5 and the 6' in X['E2']['answer'], True, 'E2 answer text')
+    eq(all('The short hand is shorter.' in q['text'] for q in (T['S2'], X['E2'])), True, 'draw items say which hand is shorter')
     eq((hands(1, 0 + 30)[1] == 180.0, X['E3']['val']), (True, ['half past']), 'E3 long hand on the 6 is half past')
 
     # ---------------- home practice
-    eq(H['H1']['val'], 'short', 'H1')
+    eq((H['H1']['val'], H['H1']['choices']), ('half past', ["o'clock", 'half past']), 'H1'); eq(read(*hands(5, 30))[1], 30, 'H1 the 6 is half past')
     eq(fmt(*read(*hands(5, 0))), H['H2']['val'], 'H2'); eq(fmt(*read(*hands(8, 30))), H['H3']['val'], 'H3')
     eq(sum(5 for _ in range(9)), H['H4']['val'], 'H4 the 9 is 45 minutes')
     eq(2 * 10 + 9, H['H5']['val'], 'H5 rewind: 2 tens and 9 ones')

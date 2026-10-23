@@ -71,7 +71,7 @@ WORKBOOK_PAIRS = {
     'S6': [pair((3, 0), 60), pair((8, 0), 30), pair((9, 0), 30)],
     'T1': [pair((5, 30), 60), pair((5, 30), 30)], 'T2': [pair((4, 15), 30), pair((9, 45), 30)], 'T3': [pair((6, 30), 30), pair((4, 30), 60)], 'T4': [pair((6, 0), 60)],
     'G1': [pair((2, 30), 60), pair((3, 30), 30)], 'G2': [pair((11, 30), 60), pair((11, 30), 90)], 'G3': [pair((3, 30), 60), pair((4, 0), 30)],
-    'E1': [pair((7, 30), 60)], 'E2': [pair((2, 0), 30)], 'E3': [pair((6, 30), 60)],
+    'E1': [pair((6, 30), 60)], 'E2': [pair((2, 0), 30)], 'E3': [pair((9, 30), 60)],
     'I1': [pair((12, 30), 60)],
 }
 
@@ -219,10 +219,10 @@ def run(d):
     # ---------------------------------------------------------------- talk
     eq([show(mins(7, 30) + 30), show(mins(7, 30) + 60)], ['8:00', '8:30'], 'talk: the first child is right, 8:30 is 1 hour later'); eq(d['talk']['answer'].startswith('The first child is right'), True, 'talk answer')
     # ---------------------------------------------------------------- exit
-    q = X['E1']; eq('7:30' in q['text'] and '1 hour' in q['text'], True, 'E1 text'); eq(show(parse(q['text']) + 60), '8:30', 'E1'); eq(q['val'], ['8:30'], 'E1 val')
+    q = X['E1']; eq('6:30' in q['text'] and '1 hour' in q['text'], True, 'E1 text'); eq(show(parse(q['text']) + 60), '7:30', 'E1'); eq(q['val'], ['7:30'], 'E1 val')
     q = X['E2']; opts = q['mcq']['options']; right = [i + 1 for i, o in enumerate(opts) if parse(o) == mins(2, 0) + 30]
     eq(right, [3], 'E2 one option is 2:00 and half an hour'); eq(q['val'], right, 'E2 val'); eq(sorted(parse(o) - mins(2, 0) for o in opts), [5, 15, 30, 60], 'E2 distractors'); eq('2 o\'clock' in q['text'], True, 'E2 text')
-    q = X['E3']; eq(show(parse(q['text']) - 60, True), '6:30 pm', 'E3'); eq(q['val'], ['6:30 pm'], 'E3 val'); eq(show(parse(q['text']) - 60 + 60, True), '7:30 pm', 'E3 forward check')
+    q = X['E3']; eq(show(parse(q['text']) - 60, True), '9:30 pm', 'E3'); eq(q['val'], ['9:30 pm'], 'E3 val'); eq(show(parse(q['text']) - 60 + 60, True), '10:30 pm', 'E3 forward check')
     # ---------------------------------------------------------------- home
     eq(show(parse(H['H1']['text']) + 60), '10:30', 'H1'); eq(H['H1']['val'], '10:30', 'H1 val')
     eq(show(mins(5, 0) + 30), '5:30', 'H2'); eq(H['H2']['val'], '5:30', 'H2 val')

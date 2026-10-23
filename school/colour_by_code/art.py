@@ -99,20 +99,42 @@ _TXT = 'style="font-size:{fs}px;font-weight:{fw};text-anchor:{an};dominant-basel
 def _text(x, y, s, fs=3.0, fw=700, an="middle"):
     return f'<text x="{x:.2f}" y="{y:.2f}" ' + _TXT.format(fs=fs, fw=fw, an=an) + f'>{s}</text>'
 
+def _hatch(poly, spacing=1.2):
+    """diagonal hatch lines clipped to a polygon (shapely), as SVG path data; black and white copies keep hatching, solid black hides the parts"""
+    from shapely.geometry import LineString
+    g = poly.buffer(-0.45)
+    if g.is_empty: return ""
+    minx, miny, maxx, maxy = g.bounds
+    d = []; c = minx + miny + spacing / 2
+    while c < maxx + maxy:
+        seg = g.intersection(LineString([(minx - 1, c - (minx - 1)), (maxx + 1, c - (maxx + 1))]))
+        for ln in ([seg] if seg.geom_type == "LineString" else list(getattr(seg, "geoms", []))):
+            if ln.geom_type == "LineString" and ln.length > 0.4:
+                (x0, y0), (x1, y1) = ln.coords[0], ln.coords[-1]
+                d.append(f"M{x0:.2f},{y0:.2f} L{x1:.2f},{y1:.2f}")
+        c += spacing * 1.4142
+    return f'<path d="{" ".join(d)}" stroke="#000" stroke-width="0.3" fill="none"/>' if d else ""
+
 def fraction(a, b, shape="bar"):
-    """a of b equal parts shaded black (bar or circle)"""
+    """a of b equal parts shaded; every part has its own outline and the shaded parts are hatched (never solid black), so the equal parts can be counted"""
+    from shapely.geometry import box as sbox, Polygon
     s = []
     if shape == "bar":
-        W, H = 24.0, 6.5
+        W, H = max(18.0, min(36.0, 3.4 * b + 8.0)), 7.0
         pw = W / b
         for i in range(b):
-            s.append(f'<rect x="{0.5 + i * pw:.2f}" y="0.5" width="{pw:.2f}" height="{H}" fill="{"#000" if i < a else "#fff"}" {_ST}/>')
+            if i < a: s.append(_hatch(sbox(0.5 + i * pw, 0.5, 0.5 + (i + 1) * pw, 0.5 + H)))
+        for i in range(b):
+            s.append(f'<rect x="{0.5 + i * pw:.2f}" y="0.5" width="{pw:.2f}" height="{H}" fill="none" {_ST}/>')
         return Art("".join(s), W + 1, H + 1, 0.9, dict(kind="fraction", parts=b, shaded=a, shape="bar"))
-    r = 8.0; cx = cy = r + 0.5
+    r = 8.5; cx = cy = r + 0.5
     for i in range(b):
         a0 = -math.pi / 2 + 2 * math.pi * i / b; a1 = -math.pi / 2 + 2 * math.pi * (i + 1) / b
         x0, y0, x1, y1 = cx + r * math.cos(a0), cy + r * math.sin(a0), cx + r * math.cos(a1), cy + r * math.sin(a1)
-        s.append(f'<path d="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 0 1 {x1:.2f},{y1:.2f} Z" fill="{"#000" if i < a else "#fff"}" {_ST}/>')
+        if i < a:
+            pts = [(cx, cy)] + [(cx + r * math.cos(a0 + (a1 - a0) * k / 12), cy + r * math.sin(a0 + (a1 - a0) * k / 12)) for k in range(13)]
+            s.append(_hatch(Polygon(pts)))
+        s.append(f'<path d="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 {1 if (a1 - a0) > math.pi else 0} 1 {x1:.2f},{y1:.2f} Z" fill="none" {_ST}/>')
     return Art("".join(s), 2 * r + 1, 2 * r + 1, 0.9, dict(kind="fraction", parts=b, shaded=a, shape="circle"))
 
 def groups(n, per):
@@ -146,23 +168,33 @@ def balance(n, total, unit):
     s.append(f'<rect x="29" y="7.6" width="14" height="6.4" rx="0.8" fill="#fff" {_ST}/>' + _text(36, 10.9, f"{total} {unit}", 3.1))
     return Art("".join(s), 44, 20, 0.9, dict(kind="balance", n=n, total=total, unit=unit))
 
+GRAPH_FONT = 3.8                                  # mm: row labels and the key of a picture graph (never smaller than 3.5 mm on the page; the art is not scaled down)
+def _face(cx, cy, r=1.8):
+    """the icon of a picture graph: a small face (circle, two eyes, a smile), easy to count and not mistaken for a black dot"""
+    return (f'<circle cx="{cx:.2f}" cy="{cy:.2f}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.4"/>'
+            f'<circle cx="{cx - r * 0.38:.2f}" cy="{cy - r * 0.22:.2f}" r="0.28" fill="#000"/><circle cx="{cx + r * 0.38:.2f}" cy="{cy - r * 0.22:.2f}" r="0.28" fill="#000"/>'
+            f'<path d="M{cx - r * 0.5:.2f},{cy + r * 0.25:.2f} Q{cx:.2f},{cy + r * 0.85:.2f} {cx + r * 0.5:.2f},{cy + r * 0.25:.2f}" fill="none" stroke="#000" stroke-width="0.3" stroke-linecap="round"/>')
+
 def picgraph(rows, key, blank=False):
-    """picture graph: rows = [(label, icons)], every icon stands for `key`"""
-    RH, LW, PITCH = 4.6, (9.5 if blank else 13.0), 3.6
+    """picture graph: rows = [(label, icons)]; every face stands for `key`. Labels and key are 3.8 mm; one row is 5.4 mm high."""
+    import metrics
+    RH, PITCH, F = 5.4, 4.3, GRAPH_FONT
+    LW = max(metrics.width(lab, F, 600) for lab, _ in rows) + 1.6
     mx = max(c for _, c in rows)
-    w = LW + mx * PITCH + 1.0
+    w = LW + mx * PITCH + 0.8
     s = []
     for i, (lab, c) in enumerate(rows):
         y = 0.5 + i * RH + RH / 2
-        s.append(_text(0.5, y, lab, 2.9, 600, "start"))
-        for k in range(c): s.append(f'<circle cx="{LW + 1.6 + k * PITCH:.2f}" cy="{y:.2f}" r="1.35" fill="#000"/>')
+        s.append(_text(0.5, y, lab, F, 600, "start"))
+        for k in range(c): s.append(_face(LW + 2.0 + k * PITCH, y))
         s.append(f'<line x1="0.5" y1="{0.5 + (i + 1) * RH:.2f}" x2="{w:.2f}" y2="{0.5 + (i + 1) * RH:.2f}" stroke="#000" stroke-width="0.3"/>')
-    if blank:       # a drawn answer box after the last icons (one-row graphs in small labels)
-        s.append(f'<rect x="{LW + 1.6 + (rows[0][1] - 0.5) * PITCH + 1.5:.2f}" y="{0.5 + RH / 2 - 1.8:.2f}" width="3.6" height="3.6" rx="0.5" fill="#fff" stroke="#000" stroke-width="0.45"/>')
-        w += 6.0
-    yk = 0.5 + len(rows) * RH + 2.9
-    s.append(f'<circle cx="2.0" cy="{yk:.2f}" r="1.35" fill="#000"/>' + _text(4.6, yk, f"= {key}", 2.9, 700, "start"))
-    return Art("".join(s), w, len(rows) * RH + 5.8, 0.9, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank))
+    if blank:       # a drawn answer box after the last faces (a one-row graph whose answer is written beside it)
+        bx = LW + 2.0 + (rows[0][1] - 0.5) * PITCH + 1.6
+        s.append(f'<rect x="{bx:.2f}" y="{0.5 + RH / 2 - 2.0:.2f}" width="4.0" height="4.0" rx="0.5" fill="#fff" stroke="#000" stroke-width="0.45"/>')
+        w = max(w, bx + 4.6)
+    yk = 0.5 + len(rows) * RH + 3.2
+    s.append(_face(2.4, yk) + _text(5.2, yk, f"= {key}", F, 700, "start"))
+    return Art("".join(s), w, len(rows) * RH + 6.4, 1.0, dict(kind="picgraph", rows=[list(r) for r in rows], key=key, blank=blank, font=F))
 
 def tally(n):
     """tally marks in fives (four strokes and a slash)"""

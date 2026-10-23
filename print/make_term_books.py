@@ -16,7 +16,7 @@ Extra rules: each lesson of a workbook book starts on a right-hand (front) page;
 page and gets a BLANK back, plus a dashed tear line and 'Tear out' note in the gutter strip, so removing it never removes
 lesson content. Writes outputs/print/term/term_books_spec.json (pages and sheets per book) for printer quotes.
 """
-import argparse, json, os, re, subprocess
+import argparse, json, os, re, subprocess, sys
 from io import BytesIO
 from pypdf import PdfReader, PdfWriter, PageObject, Transformation
 from reportlab.pdfgen import canvas
@@ -237,6 +237,7 @@ if __name__ == '__main__':
     ap.add_argument('--per-term', type=int, default=10, help='lessons per term (term number = (lesson-1)//per_term + 1)')
     ap.add_argument('--ages', default=' (ages 6-8)')
     ap.add_argument('--kinds', default='workbook,key,home')
+    ap.add_argument('--bw', action='store_true', help='afterwards also write the black-and-white print versions (outputs/print/bw/term/) via print/make_bw_print.py')
     a = ap.parse_args()
     if not a.last:                       # Terms 3 and 4: stop at the last real built lesson, skipping stubs (data `stub: true`)
         last = 0
@@ -256,3 +257,5 @@ if __name__ == '__main__':
             rows.append(r)
             print(r['file'].split('/')[-1], r['print_pages'], 'pages', r['sheets'], 'sheets', r['blank_pages'], 'blank', 'kit', r['kit_pages'])
     json.dump(rows, open(os.path.join(OUT, 'term_books_spec.json'), 'w'), indent=1)
+    if a.bw:
+        subprocess.run([sys.executable, os.path.join(ROOT, 'print', 'make_bw_print.py'), '--only', 'L%d_T' % a.level, '--check'], check=True)
