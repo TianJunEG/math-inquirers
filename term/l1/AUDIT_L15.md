@@ -63,3 +63,7 @@ Validator 0 FAIL 0 WARN; 109 answer checks; workbook fill 98/95/94/85/97%; slow-
 ## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
 
 Added Go further G2 part (c) (page 4): Jamie's sister has double the jars, 12 jars with 5 marbles each; use 6 groups of 5 = 30 to find 12 groups of 5 = 60. A product above the school range of 40, reached by doubling the number of groups. Start here untouched (products within 20). Verified by laying out the groups in `verify/l15_checks.py`. `moe.note` names it. Real PDF workbook fill 98, 95, 97, 92, 97, 82, 53% (page 7 is the kit page, pre-existing warning); parts still sum to 90; validator 0 FAIL.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

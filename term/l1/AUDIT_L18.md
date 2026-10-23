@@ -62,3 +62,7 @@ Total: 18 / 24
 ## Update (fourth fix pass, 23 Oct 2026): hand-off to Lesson 19
 
 Parent `next_materials`, the goodbye script line and the `s-end` slide no longer say "4 shape cards drawn by a grown-up". They now say the shape cards come in the Lesson 19 workbook (kit page 7: 15 cards, circle, square, triangle, heart, star), with the counters page (page 6, 20 counters) and about 30 small counters, 2 cups, pencil and paper. Validator 0 FAIL; parent page 1 page (99%).
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

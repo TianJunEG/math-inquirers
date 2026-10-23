@@ -66,3 +66,7 @@ See `audit/FIXES_L20.md`. Class, workbook, exit, home and check numbers no longe
 ## Third fix pass, 23 Oct 2026 (Mi's Challenge Quest, tokens)
 
 See `audit/FIXES3_L20.md`. The end-of-term check is now Mi's Challenge Quest (a game, no score or mark shown, no ranking, no visible timer), still minutes 35 to 55 straight after the break, not on the recording, make-up before the recording. Files: `L20_Quest_Log.pdf` (3 pages), `L20_Quest_Tutor_Notes.pdf`, `L20_Quest_Parent_Note.pdf`. The kit page now prints 30 tokens (the lesson needs up to $28). Validator 0 FAIL.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

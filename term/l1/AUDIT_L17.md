@@ -61,3 +61,7 @@ Total: 18 / 24
 ## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
 
 Added Go further G1 part (c) (page 4): with 18 sweets, write every number of friends who can share equally with none left over (1, 2, 3, 6, 9, 18). The table in G1 gave the factors of 12 ready-made; (c) asks the child to find them unaided, which builds toward factors (a later-year idea). `moe.note` names it. Verified by dealing for 1 to 18 friends in `verify/l17_checks.py`. Real PDF workbook fill 93, 84, 94, 94, 97, 82% (was page 4 88%); parts still sum to 90; validator 0 FAIL.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

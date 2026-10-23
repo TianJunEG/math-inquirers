@@ -60,3 +60,7 @@ Total: 20 / 24
 
 ## Fix pass (Term 2 round 2, 22 Oct 2026)
 See `audit/FIXES_L11.md`. Applied: answers no longer on question slides (reveal slides), fingers instead of gallery look-around, one microphone routine, no public exit finger count, G1 "next to", S1/S2/T2/G2/G3/I1 layout fixes, number cards now used, hand-off and parent page wording, online steps rewritten. Template needs are listed in FIXES_L11.md.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

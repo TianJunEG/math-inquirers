@@ -65,3 +65,7 @@ See `audit/FIXES_L19.md`. Changed: Think harder and Go further numbers no longer
 ## Third fix pass, 23 Oct 2026 (cut-out audit)
 
 See `audit/FIXES3_L19.md`. Kit now has a second page of 15 shape cards (three each of circle, square, triangle, heart, star); materials, tutor prep and the hand-off to Lesson 20 (Mi's Challenge Quest, 30 tokens) updated. Validator 0 FAIL.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

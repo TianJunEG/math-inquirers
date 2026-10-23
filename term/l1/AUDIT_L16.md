@@ -59,3 +59,7 @@ Total: 19 / 24
 ## Fix pass (independent audits, Term 2 batch 4)
 
 Validator 0 FAIL 0 WARN; 110 answer checks; workbook fill 94/96/97/89/97%; slow-class model 82:2x with mini 11:50 of 12 and explore 13:14 of 14. Changes: reveal slides for s-m1, s-m2 and the new s-m3c "Double it" (so the doubling in T1 is taught, with different numbers: 2 x 5 and 4 x 5), warm-up cut to five questions with 30 s waits and no answers on s-rem1/s-rem2, T3 new numbers (50, 27, 65), Start here slots 8:00 and 7:30, key accepts either order, G1 and Investigation wording, start position of the frog beside the 1, greeting then notice then recording, ticks not colours or stars, brain break without whispering. See audit/FIXES_L16.md.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

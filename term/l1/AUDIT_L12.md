@@ -62,3 +62,7 @@ Total: 20 / 24
 ## Fix pass (23 Oct 2026)
 
 See `audit/FIXES_L12.md`. Kit is now eleven strips (two cut after 6 cells by a grown-up; nobody cuts in the lesson); Explore uses 10, 6 and 4; Start here has no regrouping and one "fewer than" item (S4); answers are revealed after the question on four slides (explore round 3, mini-lesson 2, 5 and 6) and the Remember strip no longer prints 36; the exit-ticket finger count and the "next lesson catch-up" promise are removed; counters are dropped from the lists; Dev is now Jamie.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

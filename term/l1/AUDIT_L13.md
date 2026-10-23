@@ -59,3 +59,7 @@ Total: 19 / 24
 ## Fix pass (T2 audits, see audit/FIXES_L13.md)
 
 Answers on slides while asking now use `reveal` slides (s-explore2, s-m3, s-m3c); s-m3b pictures show the ringed 1 more and the dashed 1 less; T1 redrawn (5 and 6, ringed counter); T2 and the Think harder numbers are new; Investigation has a drawing box and a shorter instruction; recording order, camera wording, tick-not-star, hand-off (number cards), numbering and the talk model answer fixed. Validator 0 FAIL, 0 WARN, 80 answer checks, 73 practice variants; slow class 84:34 of 90; mini-lesson 12 min, flex 4 min.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.

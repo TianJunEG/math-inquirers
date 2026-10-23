@@ -59,3 +59,7 @@ Total: 19 / 24
 ## Fix pass (T2 audits, see audit/FIXES_L14.md)
 
 T3(c) stem, key, guide and slide polarity now agree (odd + odd is odd: Never). Think harder T1 and T3 use new sums; answers on slides use `reveal` slides (s-explore1, s-explore3, s-m1, s-m3, s-m4) or no longer show answers (s-m2, s-m3b); 7 + 9 is built by the children; the number cards are asked for in the opening; recording order, camera wording, ticks, flat hand, knee taps, numbering fixed. Validator 0 FAIL 0 WARN, 76 answer checks, 178 practice variants; slow class 83:25 of 90; mini-lesson 13 min, flex 4; workbook fill 94, 89, 99, 90, 98%.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T2.md` are listed in `audit/FINAL_FIXES_T2.md`. Rebuilt; validator 0 FAIL. This lesson: recording notice said before the recording starts, with the identical Term 1 wording; identical recording sentence on the parent page; "Term 2 Lesson N" numbering; parent page kept to one sheet.
