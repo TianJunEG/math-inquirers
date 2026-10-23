@@ -779,7 +779,7 @@
           1
          ]
         ],
-        "cell": 60,
+        "cell": 45,
         "size": "m"
        },
        {
@@ -793,7 +793,7 @@
         "type": "shapes2d",
         "shape": "circle",
         "parts": 1,
-        "size": 110
+        "size": 70
        },
        {
         "t": "p",
@@ -806,7 +806,7 @@
         "type": "shapes2d",
         "shape": "square",
         "parts": 1,
-        "size": 110
+        "size": 70
        },
        {
         "t": "p",
