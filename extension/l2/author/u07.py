@@ -16,7 +16,7 @@ learn = {
   'answer': 'He ate 3/8. 5/8 is left.'},
  'howto': {'title': 'How to name a fraction', 'steps': ['Check that the parts are equal.', 'Count all the parts: the bottom number.', 'Count the parts you take: the top number.', 'Same bottom number? Just add or subtract the tops.']},
  'facts': {'title': 'Remember', 'lines': ['More parts means smaller parts: 1/6 is less than 1/4.', 'Like fractions: 2/7 + 3/7 = 5/7. The bottom number stays.', 'All the parts make 1 whole: 7/7 = 1.']},
- 'try': {'text': 'A cake is cut into 10 equal slices. Mei eats 3 slices. What fraction of the cake is left? {b}', 'answer': A('7/10'),
+ 'try': {'text': 'Mei cuts a cake into 10 equal slices and eats 3. The part of the cake left is {b}', 'answer': A('7/10'),
          'explanation': '10 - 3 = 7 slices are left. Each slice is 1/10, so 7/10 is left. Check: 3/10 + 7/10 = 10/10 = 1 whole.'}}
 
 items = [
@@ -25,8 +25,8 @@ items = [
              {'kind': 'circle', 'n': 4, 'shaded': 1, 'label': 'C', 'r': 62}, {'kind': 'circle', 'angles': [120, 90, 90, 60], 'shaded': 1, 'label': 'D', 'r': 62},
              {'kind': 'sq', 'style': 'diag', 'shaded': [0], 'label': 'E', 's': 112}, {'kind': 'sq', 'style': 'unequal', 'widths': [1, 1, 1, 3], 'shaded': [0], 'label': 'F', 's': 112}, max_w=1300, width_mm=150),
    partsrow=True, parts=[P('a', 'A   {circ:Yes|No}', 'Yes'), P('b', 'B   {circ:Yes|No}', 'No'), P('c', 'C   {circ:Yes|No}', 'Yes'), P('d', 'D   {circ:Yes|No}', 'No'), P('e', 'E   {circ:Yes|No}', 'Yes'), P('f', 'F   {circ:Yes|No}', 'No')],
-   why='Quarters must be 4 parts of the SAME size. A, C and E are quarters. In B and F one part is much bigger than the other three. In D the parts are not the same size. In E the four triangles are all the same size.'),
- I('start', 1, 'What fraction is shaded? What fraction is NOT shaded?',
+   why='Quarters must be 4 parts of the SAME size. A, C and E are quarters. In B and F one part is much greater than the other three. In D the parts are not the same size. In E the four triangles are all the same size.'),
+ I('start', 1, 'Write the shaded fraction. Write the fraction not shaded.',
    figure=fr({'kind': 'circle', 'n': 5, 'shaded': 2, 'label': 'A', 'r': 62}, {'kind': 'bar', 'n': 8, 'shaded': 6, 'w': 250, 'label': 'B'}, {'kind': 'bar', 'n': 12, 'shaded': 5, 'w': 300, 'label': 'C'}, max_w=860, width_mm=150),
    parts=[P('a', 'A: shaded {b}   not shaded {b}', ['2/5', '3/5'], '2/5 and 3/5'), P('b', 'B: shaded {b}   not shaded {b}', ['6/8', '2/8'], '6/8 and 2/8'), P('c', 'C: shaded {b}   not shaded {b}', ['5/12', '7/12'], '5/12 and 7/12'), P('d', 'To make 8/12 shaded in C, shade {b} more parts.', '3')],
    why='The bottom number is how many equal parts there are. (a) A has 5 parts and 2 are shaded: 2/5 shaded, 3/5 not shaded. (b) B has 8 parts, 6 shaded: 6/8 and 2/8. (c) C has 12 parts, 5 shaded: 5/12 and 7/12. (d) 8/12 means 8 parts shaded. 5 are shaded, so 8 - 5 = 3 more.'),
@@ -37,7 +37,7 @@ items = [
    parts=[P('a', 'Which is greater?   {circ:1/3|1/4}', '1/3'), P('b', 'Which is smaller?   {circ:1/6|1/8}', '1/8'),
           P('c', 'Smallest first:  1/2,  1/6,  1/4,  1/8      {ll}', ['1/8', '1/6', '1/4', '1/2'], '1/8, 1/6, 1/4, 1/2', lst=True),
           ],
-   why='The more parts a bar is cut into, the smaller each part. (a) Thirds are bigger than quarters. (b) Eighths are smaller than sixths. (c) Order: 1/8, 1/6, 1/4, 1/2.'),
+   why='The more parts a bar is cut into, the smaller each part. (a) Thirds are greater than quarters. (b) Eighths are smaller than sixths. (c) Order: 1/8, 1/6, 1/4, 1/2.'),
  I('start', 2, 'The same bottom number means the same size parts. Circle the greater fraction.', partsrow=True, parts=[
    P('a', 'Circle:  {circ:3/10|6/10}', '6/10'), P('b', 'Circle:  {circ:7/12|5/12}', '7/12'),
    P('c', 'Smallest first:  6/7,  2/7,  4/7     {ll}', ['2/7', '4/7', '6/7'], '2/7, 4/7, 6/7', lst=True)],
@@ -65,30 +65,30 @@ items = [
    partsrow=True, parts=[P('a', 'After Mei, {b} is left.', '3/4'), P('b', 'Ali eats {b} of the pizza.', '3/8'), P('c', 'Now {b} is left.', '3/8')],
    hint='Cut each part in 2 equal parts to make eighths.',
    why='(a) 1/4 eaten, so 3/4 is left. On the bar of 8 parts, 1/4 is 2 parts, and 6 parts are left. (b) Half of 6 parts is 3 parts: Ali eats 3/8. (c) 6 - 3 = 3 parts are left: 3/8.'),
- I('think', 4, 'Two fractions with bottom number 12 add up to 1 whole. One of them is 6/12 more than the other.', partsrow=True, parts=[
+ I('think', 4, 'Two fractions have the bottom number 12. Together they make 1 whole. The greater one is 6/12 more.', partsrow=True, parts=[
    P('a', 'The smaller fraction is {b}', '3/12'), P('b', 'The greater fraction is {b}', '9/12')],
    hint='Take away the extra 6/12. Share what is left.',
    why='The whole is 12/12. Take away the extra 6/12: 6/12 is left. Share it between the two equal parts: 3/12 and 3/12. Give the extra back to one of them: 3/12 and 9/12. Check: 3/12 + 9/12 = 12/12.'),
  # Go further
  I('go', 5, 'Beyond: equal fractions. Different fractions can cover the same length. 1/2 and 2/4 and 4/8 are equal.', beyond='Equal fractions', partsrow=True, parts=[
    P('a', '1/2 = {b}/6', '3'), P('b', '2/3 = {b}/6', '4'), P('c', '3/4 = {b}/8', '6')],
-   hint='Line up two bars of the same length. Cut one into more parts.',
+   hint='Line up 2 bars of the same length. Cut one into more parts.',
    why='(a) A half of 6 sixths is 3 sixths. (b) A third is 2 sixths, so 2 thirds are 4 sixths. (c) A quarter is 2 eighths, so 3 quarters are 6 eighths.'),
- I('go', 5, 'A cake is cut into 9 equal pieces. Three children share all of it. Each child gets a different number of pieces, and at least 1 piece.', parts=[
+ I('go', 5, 'Nine equal pieces of cake are shared by 3 children. The shares must all be different. Each share is 1 piece or more.', parts=[
    P('a', 'How many different ways are there? {b}', '3'), P('b', 'In the way where the greatest share is 6/9, the other shares are {b}/9 and {b}/9.', ['1', '2'], '1/9 and 2/9')],
    space={'rows': ['Working:']}, hint='Start with the smallest share, 1 piece. Then try 2.',
    why='The 3 different numbers of pieces add to 9. With 1 piece for the smallest: 1 + 2 + 6 and 1 + 3 + 5. With 2 pieces: 2 + 3 + 4. 1 + 4 + 4 repeats a number. So 3 ways. The way with 6/9 is 1/9, 2/9 and 6/9.'),
- I('go', 5, 'Make your own fair-share story. A cake is cut into 8 equal pieces. Three people eat different shares and some is left. Write each share as a fraction. Many answers are right.', value='open',
+ I('go', 5, 'Make your own fair-share story. Picture a cake with 8 equal pieces. Three people eat different shares and some is left. Write each share as a fraction. Many answers are right.', value='open',
    atext='Open. Example: Ali eats 3/8, Mei eats 2/8, Ben eats 1/8 and 2/8 is left. 3 + 2 + 1 + 2 = 8 eighths = 1 whole.', space={'rows': ['My story:', 'Check: shares and what is left make 1 whole:']},
    hint='Add all the shares and what is left. Do you get 8/8?',
    why='A good story has shares and leftovers that add to 8/8. Example: 3/8 + 2/8 + 1/8 + 2/8 = 8/8 = 1 whole.'),
- I('go', 5, 'I am a fraction with 1 on top. I am smaller than 1/3 but greater than 1/9. What could I be? Find ALL the answers.', parts=[
+ I('go', 5, 'My top number is 1. I am less than 1/3 and more than 1/9. Which fractions fit? Find ALL of them.', parts=[
    P('a', 'I could be:  {ll}', ['1/4', '1/5', '1/6', '1/7', '1/8'], '1/4, 1/5, 1/6, 1/7, 1/8', lst=True), P('b', 'How many answers are there? {b}', '5')],
    hint='Greater bottom number, smaller part. Try 1/4, 1/5 ...',
-   why='With 1 on top, the bigger the bottom number, the smaller the fraction. 1/3 is too big and 1/9 is too small. 1/4, 1/5, 1/6, 1/7 and 1/8 are in between: 5 answers.'),
+   why='With 1 on top, the greater the bottom number, the smaller the fraction. 1/3 is too big and 1/9 is too small. 1/4, 1/5, 1/6, 1/7 and 1/8 are in between: 5 answers.'),
  # Check yourself
  I('quiz', 0, 'What fraction is shaded? {b}', figure=fr({'kind': 'bar', 'n': 8, 'shaded': 5, 'w': 360}, width_mm=60), figright=True, value='5/8', why='The bar has 8 equal parts. 5 are shaded. The fraction is 5/8.'),
- I('quiz', 0, 'Which is greater?   {circ:1/5|1/9}', value='1/5', why='The more parts a whole is cut into, the smaller each part. 5 parts are bigger than 9 parts, so 1/5 is greater.'),
+ I('quiz', 0, 'Which is greater?   {circ:1/5|1/9}', value='1/5', why='The more parts a whole is cut into, the smaller each part. 5 parts are greater than 9 parts, so 1/5 is greater.'),
  I('quiz', 0, '2/7 + 4/7 = {b}', value='6/7', why='2 sevenths + 4 sevenths = 6 sevenths. The bottom number stays 7.'),
  I('quiz', 0, 'A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. How much is left? {b}', value='4/12', why='5/12 + 3/12 = 8/12 eaten. 12/12 - 8/12 = 4/12 is left.'),
 ]

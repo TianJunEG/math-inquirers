@@ -51,7 +51,7 @@
   },
   "try": {
    "id": "L2U07-L01",
-   "text": "A cake is cut into 10 equal slices. Mei eats 3 slices. What fraction of the cake is left? {b}",
+   "text": "Mei cuts a cake into 10 equal slices and eats 3. The part of the cake left is {b}",
    "answer": {
     "value": [
      "7/10"
@@ -198,14 +198,14 @@
      }
     }
    ],
-   "explanation": "Quarters must be 4 parts of the SAME size. A, C and E are quarters. In B and F one part is much bigger than the other three. In D the parts are not the same size. In E the four triangles are all the same size.",
+   "explanation": "Quarters must be 4 parts of the SAME size. A, C and E are quarters. In B and F one part is much greater than the other three. In D the parts are not the same size. In E the four triangles are all the same size.",
    "partsrow": true
   },
   {
    "id": "L2U07-S02",
    "tier": "start",
    "page": 1,
-   "text": "What fraction is shaded? What fraction is NOT shaded?",
+   "text": "Write the shaded fraction. Write the fraction not shaded.",
    "figure": {
     "type": "l2_frac",
     "items": [
@@ -387,7 +387,7 @@
      }
     }
    ],
-   "explanation": "The more parts a bar is cut into, the smaller each part. (a) Thirds are bigger than quarters. (b) Eighths are smaller than sixths. (c) Order: 1/8, 1/6, 1/4, 1/2."
+   "explanation": "The more parts a bar is cut into, the smaller each part. (a) Thirds are greater than quarters. (b) Eighths are smaller than sixths. (c) Order: 1/8, 1/6, 1/4, 1/2."
   },
   {
    "id": "L2U07-S05",
@@ -751,7 +751,7 @@
    "id": "L2U07-T03",
    "tier": "think",
    "page": 4,
-   "text": "Two fractions with bottom number 12 add up to 1 whole. One of them is 6/12 more than the other.",
+   "text": "Two fractions have the bottom number 12. Together they make 1 whole. The greater one is 6/12 more.",
    "parts": [
     {
      "label": "a",
@@ -816,7 +816,7 @@
     }
    ],
    "explanation": "(a) A half of 6 sixths is 3 sixths. (b) A third is 2 sixths, so 2 thirds are 4 sixths. (c) A quarter is 2 eighths, so 3 quarters are 6 eighths.",
-   "hint": "Line up two bars of the same length. Cut one into more parts.",
+   "hint": "Line up 2 bars of the same length. Cut one into more parts.",
    "beyond": "Equal fractions",
    "partsrow": true
   },
@@ -824,7 +824,7 @@
    "id": "L2U07-G02",
    "tier": "go",
    "page": 5,
-   "text": "A cake is cut into 9 equal pieces. Three children share all of it. Each child gets a different number of pieces, and at least 1 piece.",
+   "text": "Nine equal pieces of cake are shared by 3 children. The shares must all be different. Each share is 1 piece or more.",
    "parts": [
     {
      "label": "a",
@@ -860,7 +860,7 @@
    "id": "L2U07-G03",
    "tier": "go",
    "page": 5,
-   "text": "Make your own fair-share story. A cake is cut into 8 equal pieces. Three people eat different shares and some is left. Write each share as a fraction. Many answers are right.",
+   "text": "Make your own fair-share story. Picture a cake with 8 equal pieces. Three people eat different shares and some is left. Write each share as a fraction. Many answers are right.",
    "answer": {
     "value": [
      "open"
@@ -880,7 +880,7 @@
    "id": "L2U07-G04",
    "tier": "go",
    "page": 5,
-   "text": "I am a fraction with 1 on top. I am smaller than 1/3 but greater than 1/9. What could I be? Find ALL the answers.",
+   "text": "My top number is 1. I am less than 1/3 and more than 1/9. Which fractions fit? Find ALL of them.",
    "parts": [
     {
      "label": "a",
@@ -908,7 +908,7 @@
      }
     }
    ],
-   "explanation": "With 1 on top, the bigger the bottom number, the smaller the fraction. 1/3 is too big and 1/9 is too small. 1/4, 1/5, 1/6, 1/7 and 1/8 are in between: 5 answers.",
+   "explanation": "With 1 on top, the greater the bottom number, the smaller the fraction. 1/3 is too big and 1/9 is too small. 1/4, 1/5, 1/6, 1/7 and 1/8 are in between: 5 answers.",
    "hint": "Greater bottom number, smaller part. Try 1/4, 1/5 ..."
   },
   {
@@ -946,7 +946,7 @@
     ],
     "text": "1/5"
    },
-   "explanation": "The more parts a whole is cut into, the smaller each part. 5 parts are bigger than 9 parts, so 1/5 is greater."
+   "explanation": "The more parts a whole is cut into, the smaller each part. 5 parts are greater than 9 parts, so 1/5 is greater."
   },
   {
    "id": "L2U07-C03",
