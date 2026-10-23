@@ -641,32 +641,19 @@
    "title": "Five things to check",
    "blocks": [
     {
-     "t": "card",
-     "head": "LOOK AT ONE THING AT A TIME",
-     "items": [
-      "What shape is it?",
-      "How many are there?",
-      "How big is it?",
-      "Which pattern: plain, stripes or dots?",
-      "Which way does it face?"
-     ]
-    },
-    {
      "t": "cols",
      "cols": [
       [
        {
-        "t": "visual",
-        "type": "panel",
-        "tiles": [
-         {
-          "shape": "triangle",
-          "n": 1,
-          "size": "l"
-         }
-        ],
-        "cell": 130,
-        "cols": 1
+        "t": "card",
+        "head": "LOOK AT ONE THING AT A TIME",
+        "items": [
+         "What shape is it?",
+         "How many are there?",
+         "How big is it?",
+         "Which pattern: plain, stripes or dots?",
+         "Which way does it face?"
+        ]
        }
       ],
       [
@@ -677,12 +664,22 @@
          {
           "shape": "triangle",
           "n": 1,
+          "size": "l"
+         },
+         {
+          "shape": "triangle",
+          "n": 1,
           "size": "l",
           "turn": 90
          }
         ],
-        "cell": 130,
-        "cols": 1
+        "cell": 140,
+        "cols": 2,
+        "labels": [
+         "A",
+         "B"
+        ],
+        "size": 70
        }
       ]
      ]
@@ -721,7 +718,8 @@
      "labels": [
       "A",
       "B"
-     ]
+     ],
+     "size": 70
     },
     {
      "t": "answer",
@@ -976,7 +974,8 @@
          }
         ],
         "cell": 110,
-        "cols": 2
+        "cols": 2,
+        "size": 45
        }
       ]
      ]
@@ -3405,18 +3404,18 @@
    "page": 5,
    "tier": "investigation",
    "title": "Change just one thing",
-   "first": "Draw a small striped circle, then the same circle bigger. What is different? ____",
-   "text": "Draw a tile that differs from the first in two things. Write them.",
+   "first": "A small striped circle and a bigger striped circle. What is different? ____",
+   "text": "Now write a third tile that is different from the small circle in two things. Which two things?",
    "lines": 4,
-   "draw": 1,
+   "draw": 0,
    "answer": "The bigger circle is different in size only. A tile with two things different, for example a big circle with dots, is different in size and pattern. Many answers are right.",
    "val": [
     "size"
    ],
-   "look_for": "A child who names one thing for the first tile (size) and two different things for the second tile, such as size and pattern. Credit any clear drawing with the right count of differences. A child who changes the shape and the number has found two things too.",
+   "look_for": "A child who names one thing for the pair (size) and two different things for the third tile, such as size and pattern. Credit any clear answer with exactly two things named. A child who changes the shape and the number has found two things too.",
    "mistakes": [
     "Saying the circle is a different shape when it is only bigger.",
-    "Drawing a tile that is different in three things when asked for two."
+    "Naming three things when asked for two."
    ],
    "mins": 8
   }
@@ -3473,7 +3472,7 @@
     ],
     "cell": 80,
     "cols": 2,
-    "size": 38
+    "size": 60
    }
   },
   {
@@ -3534,7 +3533,7 @@
      "C",
      "D"
     ],
-    "size": 45
+    "size": 70
    }
   },
   {
@@ -3582,7 +3581,7 @@
      ],
      "cell": 70,
      "cols": 3,
-     "size": 50
+     "size": 65
     },
     {
      "type": "panel",
@@ -3607,7 +3606,7 @@
      ],
      "cell": 70,
      "cols": 3,
-     "size": 50
+     "size": 65
     }
    ]
   }

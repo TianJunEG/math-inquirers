@@ -226,7 +226,7 @@ def run(d):
     eq(len(labs), 12, 'kit: 12 cards'); eq(d['materials']['kit_contract'][0]['supplied'], 12, 'kit contract supplied'); eq(d['materials']['kit_contract'][0]['max_used'], len(labs), 'kit contract: every card is used in Explore')
     rows = {r[0]: r for r in sl['s-explore1-ans']['blocks'][0]['rows'][1:]}; eq([rows['Set 1'][1], rows['Set 2'][1], rows['Set 3'][1]], ['the cookie', 'the spider', 'the jar'], 's-explore1-ans odd cards')
     # ---------------------------------------------------------------- Mini-lesson
-    pa, pb = P('s-m1', 0), P('s-m1', 1); eq(diffs(tiles(pa)[0], tiles(pb)[0]), ['turn'], 's-m1: only turn'); eq(P('s-m1-ans')['tiles'], pa['tiles'] + pb['tiles'], 's-m1-ans shows both triangles')
+    pab = P('s-m1'); ta, tb = tiles(pab); eq(diffs(ta, tb), ['turn'], 's-m1: only turn'); eq(P('s-m1-ans')['tiles'], pab['tiles'], 's-m1-ans shows both triangles')
     eq(odd_ones(tiles(P('s-m2'))), [(2, 'size')], 's-m2: C is the only odd one, by size'); eq(P('s-m2-ans')['tiles'], P('s-m2')['tiles'], 's-m2-ans same row')
     g, o = P('s-m3', 0), P('s-m3', 1); gt = tiles(g); ot = tiles(o)
     TL, TR, BL = gt[0], gt[1], gt[2]
