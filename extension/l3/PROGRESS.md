@@ -7,3 +7,5 @@ Resume: run `python3 extension/l3/src/uNN.py` for any unit to rewrite its json; 
 | Unit | Title | Status |
 |---|---|---|
 | 1 | Number sleuths | written, checked, gates ok, pages viewed |
+| 2 | Cryptarithm crackers | written, checked, gates ok, pages viewed |
+| 3 | Times table treasure | written, checked, gates ok, pages viewed |
