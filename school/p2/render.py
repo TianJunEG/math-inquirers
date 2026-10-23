@@ -244,7 +244,7 @@ def draft_banner(what):
 
 def cover(school, bk):
     s = html.escape(school) if school.strip() else "&nbsp;"
-    pub = '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd, trading as Math Inquirers</p>'
+    pub = '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd, trading as Math Inquirers</p><p style="font-size:9pt;margin-top:2mm">' + NOT_AFFILIATED + '</p>'
     return ('<section class="page cover fm"><div>' + (draft_banner("cover wording and title are not final.") if DRAFT else "") +
             '<p class="sub" style="margin-top:12mm">Maths puzzles for early finishers</p>'
             '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 2</div>'
@@ -268,7 +268,7 @@ def licence(school, bk):
             '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + html.escape(("Contact: " + CONTACT + ". " if DRAFT else "") + "Registered office: " + REG_OFFICE) + '</p>'
             '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line marked School (write name) at the foot of each page, by hand or when the booklet is made. '
             f'This licence covers {html.escape(bk["name"])} only; the other semester booklet is licensed separately.</p>'
-            f'<p>{NOT_AFFILIATED} The mathematics syllabus is published by the Ministry of Education, Singapore.</p>'
+            f'<p>The mathematics syllabus is published by the Ministry of Education, Singapore.</p>'
             '<p style="margin-top:10mm">&copy; 2026 Preciouslyours Pte Ltd.' + ("" if DRAFT else " All rights reserved.") + '</p></section>')
 
 def _plist(pages, pred):

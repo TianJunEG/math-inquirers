@@ -34,9 +34,9 @@ learn = {
                         'Turn = 360° ÷ number of sides.',
                         'Inside angle = 180° − turn.',
                         'Test it in code: repeat (sides) [move, turn].']},
-    'try': IT(U, 'L', 1, 0, 'A regular polygon has 18 sides. The turn at each corner is {b}° and the inside angle is {b}°.',
-              f'360° ÷ 18 = 20° for the turn. The inside angle is 180° {M} 20° = 160°.',
-              answer=A([20, 160], '20°, 160°')),
+    'try': IT(U, 'L', 1, 0, 'A regular polygon has 9 sides. The turn at each corner is {b}° and the inside angle is {b}°.',
+              f'360° ÷ 9 = 40° for the turn. The inside angle is 180° {M} 40° = 140°.',
+              answer=A([40, 140], '40°, 140°')),
 }
 
 # ---------------------------------------------------------------- Start here
@@ -107,7 +107,7 @@ I.append(IT(U, 'S', 9, 3,
                    P('c', 'Change 50 to 80. It walks {b} steps.', [360])],
             figside=True))
 I.append(IT(U, 'S', 10, 3,
-            'Shapes fit around a point when their inside angles add to 360°. Check each group.',
+            'Regular shapes fit around a point when their inside angles add to 360°. Check each group.',
             f'Triangle angle 60: 6 {X} 60 = 360. Square angle 90: 3 {X} 90 = 270, which is less than 360, so there is a gap of 90. Hexagon angle 120: 2 {X} 120 + 2 {X} 60 = 360.',
             parts=[P('a', '6 triangles: {b}°', [360]),
                    P('b', '3 squares: {b}°. Is there a gap?   {circ:Yes|No}', [270, 'Yes'], '270°, Yes'),
@@ -122,13 +122,13 @@ I.append(IT(U, 'S', 11, 3,
 
 # ---------------------------------------------------------------- Think harder
 I.append(IT(U, 'T', 1, 4,
-            f'A turtle repeats [move 40, turn {TURN} 100] again and again.',
+            f'A turtle repeats [move 40, turn {TURN} 100] again and again until it first faces the start direction again.',
             f'After k repeats the total turned is 100k. It faces the start direction when 100k is a multiple of 360: 100k = 1800 first, at k = 18 (1800 ÷ 100). '
             f'1800 = 5 {X} 360, so it has turned round 5 times and draws an 18-point star.',
-            parts=[P('a', 'After 18 repeats it has turned {b}° in all.', [1800]),
-                   P('b', 'That is {b} full turns.', [5]),
-                   P('c', 'It first faces the start direction after {b} repeats.', [18])],
-            hint='Find the first multiple of 100 that is also a multiple of 360.', partsrow=True, space={'rows': ['Working:', '']}))
+            parts=[P('a', 'It first faces the start direction after {b} repeats.', [18]),
+                   P('b', 'By then it has turned {b}° in all.', [1800]),
+                   P('c', 'That is {b} full turns.', [5])],
+            hint='Try the total turned after 1, 2, 3 ... repeats.', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 2, 4,
             'All the inside angles of a regular polygon total 2340°.',
             f'The sum of the inside angles is (n {M} 2) {X} 180, so n {M} 2 = 2340 ÷ 180 = 13 and n = 15. Each inside angle is 2340 ÷ 15 = 156{D}. The turn is 180 {M} 156 = 24{D}. '
@@ -136,17 +136,17 @@ I.append(IT(U, 'T', 2, 4,
             parts=[P('a', 'The polygon has {b} sides.', [15]),
                    P('b', 'Each inside angle is {b}°.', [156]),
                    P('c', 'Each turn is {b}°.', [24])],
-            hint='A shape with n sides has (n − 2) × 180 in all.', partsrow=True, space={'rows': ['Working:', '']}))
+            hint='What do the inside angles of an n-sided shape add up to?', partsrow=True, space={'rows': ['Working:', '']}))
 I.append(IT(U, 'T', 3, 4,
             'A triangle, 2 squares and one more regular polygon fit around a point with no gap. All the sides are the same length.',
             f'The angles are 60 + 90 + 90 = 240. 360 {M} 240 = 120{D} is left. A regular polygon with inside angle 120{D} has turn 60{D}, so 360 ÷ 60 = 6 sides: a hexagon.',
             parts=[P('a', 'The inside angle of the fourth shape is {b}°.', [120]),
                    P('b', 'It has {b} sides.', [6])],
-            hint='The angles must add to 360. What is left for the fourth?', space={'rows': ['Working:', '']}))
+            hint='The angles must add to 360. What is left for the fourth?', space={'rows': ['Working:', '', '']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            'The turtle starts at x = 0, y = 0, facing right.',
+            'The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y gets bigger.',
             f'Right 10, down 20, left 30, up 40 gives x = 10 {M} 30 = {M}20 and y = {M}20 + 40 = 20 after 4 repeats. The next 4 moves are right 50, down 60, left 70, up 80: x = {M}20 + 50 {M} 70 = {M}40 and y = 20 {M} 60 + 80 = 40. '
             f'Every 4 repeats adds {M}20 to x and 20 to y, so after 12 repeats it is at ({M}60, 60).',
             fig=code([['var', 'set n to (10)'], ['ctl', 'repeat (4)', [mv('n'), tn(90), ['var', 'change n by (10)']]]]),
@@ -175,9 +175,9 @@ I.append(IT(U, 'C', 1, 6,
             f'360 ÷ 40 = 9{D}. The inside angle is 180 {M} 9 = 171{D}.',
             answer=A([9, 171], '9°, 171°')))
 I.append(IT(U, 'C', 2, 6,
-            f'A turtle turns 45° at each corner of a regular polygon. The polygon has {{b}} sides.',
-            f'360 ÷ 45 = 8 sides.',
-            answer=A([8], '8')))
+            f'A turtle turns 10° at each corner of a regular polygon. The polygon has {{b}} sides.',
+            f'360 ÷ 10 = 36 sides.',
+            answer=A([36], '36')))
 I.append(IT(U, 'C', 3, 6,
             f'A regular polygon has inside angles of 156° each. It has {{b}} sides.',
             f'The turn is 180 {M} 156 = 24{D}, and 360 ÷ 24 = 15 sides.',

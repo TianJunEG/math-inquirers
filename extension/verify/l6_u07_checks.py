@@ -58,7 +58,7 @@ def turn_for_sides(n):
 
 @check('L6U07-L01')
 def _():
-    t = turn_for_sides(18)
+    t = turn_for_sides(9)
     return s([t, 180 - t])
 
 
@@ -162,7 +162,7 @@ def _():
     k = 1
     while (100 * k) % 360 != 0:
         k += 1
-    return {'a': [100 * k], 'b': [100 * k // 360], 'c': [k]}
+    return {'a': [k], 'b': [100 * k], 'c': [100 * k // 360]}
 
 
 @check('L6U07-T02')
@@ -215,7 +215,7 @@ def _():
 
 @check('L6U07-C02')
 def _():
-    return s([sides_for_turn(45)])
+    return s([sides_for_turn(10)])
 
 
 @check('L6U07-C03')

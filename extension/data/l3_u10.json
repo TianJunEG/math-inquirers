@@ -279,7 +279,7 @@
     "head_col": true,
     "corner": true,
     "cw": 100,
-    "ch": 50,
+    "ch": 44,
     "fs": 24,
     "col_w": [
      100,
@@ -887,10 +887,10 @@
     ],
     "max": 40,
     "step": 10,
-    "width_mm": 70,
+    "width_mm": 60,
     "minor": 5,
     "unit_label": "pencils",
-    "h": 190
+    "h": 170
    },
    "figright": true
   },

@@ -55,7 +55,7 @@ u.S(1, 'The 3rd of a month is a Tuesday.', parts=[
 u.S(2, 'Each child has a different fruit. Kumar has neither the apple nor the banana. The child with the orange has a name with 4 letters. Wei does not have the apple. Use ticks and crosses in the grid.', parts=[
     P('a', 'Kumar has the {circ:apple|banana|grapes|orange}', A('grapes')), P('b', 'Aisha has the {circ:apple|banana|grapes|orange}', A('apple')),
     P('c', 'Wei has the {circ:apple|banana|grapes|orange}', A('banana')), P('d', 'Lily has the {circ:apple|banana|grapes|orange}', A('orange'))],
-    figure={'type': 'l3_grid', 'head_row': True, 'head_col': True, 'corner': True, 'cw': 100, 'ch': 50, 'fs': 24, 'col_w': [100, 100, 110, 110, 110], 'width_mm': 100,
+    figure={'type': 'l3_grid', 'head_row': True, 'head_col': True, 'corner': True, 'cw': 100, 'ch': 44, 'fs': 24, 'col_w': [100, 100, 110, 110, 110], 'width_mm': 100,
             'rows': [['', 'apple', 'banana', 'grapes', 'orange'], ['Kumar', None, None, None, None], ['Aisha', None, None, None, None], ['Wei', None, None, None, None], ['Lily', None, None, None, None]]},
     why='Only Lily has a name with 4 letters, so Lily has the orange. Kumar has neither the apple nor the banana, and the orange is taken, so Kumar has the grapes. Wei does not have the apple, so Wei has the banana. Aisha has the apple.')
 u.S(2, 'Draw it. Count the children in each line.', parts=[
@@ -124,7 +124,7 @@ u.G('Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE
 
 # ---------------- Check yourself
 u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.', A('15'),
-    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 10, 70, minor=5, unit_label='pencils', h=190), figright=True,
+    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 10, 60, minor=5, unit_label='pencils', h=170), figright=True,
     why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
 u.C('In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.', A('8'),
     why='3 + 1 + 4 = 8. Do not forget Ben.')

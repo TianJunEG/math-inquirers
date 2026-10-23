@@ -32,8 +32,8 @@ def sd(n, p):
 
 @check('L6U06-L01')
 def _():
-    bag = ['yellow'] * 6 + ['blue'] * 9
-    return s(frac(len([c for c in bag if c == 'yellow']), len(bag)))
+    bag = ['white'] * 5 + ['black'] * 15
+    return s(frac(len([c for c in bag if c == 'white']), len(bag)))
 
 
 @check('L6U06-S01')
@@ -79,9 +79,9 @@ def _():
 @check('L6U06-S05')
 def _():
     nums = [int(x) for x in ITEM['L6U06-S05']['figure']['parts']]
-    prime = [n for n in nums if n > 1 and all(n % d for d in range(2, n))]
+    prime = [n for n in nums if n % 3 == 0]
     ali, ben = len(prime), len(nums) - len(prime)
-    assert ali + ben == 10
+    assert ali + ben == 12
     return {'a': [ali], 'b': [ben], 'c': ['Yes' if ali == ben else 'No']}
 
 

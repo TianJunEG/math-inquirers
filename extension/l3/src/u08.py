@@ -66,12 +66,12 @@ u.S(1, 'Use a right angle checker on each angle. Write the letters.', parts=[
 u.S(1, 'Count the right angles INSIDE each shape. Check each corner with your paper corner.', parts=[
     P('a', 'A: {b} right angles', A('5')), P('b', 'B: {b} right angles', A('6')), P('c', 'C: {b} right angles', A('2'))],
     partsrow=True,
-    figure={'type': 'l3_segs', 'k': 30, 'pad': 44, 'width_mm': 98, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
+    figure={'type': 'l3_segs', 'k': 30, 'pad': 44, 'width_mm': 90, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
     why='Shape A is an L. It has 5 right angles, and its dent is greater than a right angle. Shape B has 6 right angles and 2 dents. Shape C has right angles only at its 2 left corners. Its 2 sloping corners do not fit the checker.')
 u.S(1, 'Look at the letters.', parts=[
     P('a', 'Circle each letter with 2 PARALLEL lines.   {circ:F|V|N|L}', A(['F', 'N'], 'F and N', list=True)),
     P('b', 'Circle each letter with 2 PERPENDICULAR lines.   {circ:F|V|N|L}', A(['F', 'L'], 'F and L', list=True))],
-    figure=letters(['F', 'V', 'N', 'L'], 72),
+    figure=letters(['F', 'V', 'N', 'L'], 64),
     why='F has 2 parallel arms and a stem that meets them at right angles. V has 2 sloping lines that are neither parallel nor perpendicular. N has 2 parallel upright lines, but its sloping line is not perpendicular to them. L has 2 lines that meet at a right angle.')
 
 u.S(2, 'These 4 lines all start at point O. Count the angles. Count the small ones first.', parts=[

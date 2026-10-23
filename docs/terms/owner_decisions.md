@@ -304,3 +304,10 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 - P2-NOTAFFIL-FRONT: "not affiliated" sentence on P2 front matter only (not on licence pages).
 - P2-GREY-OK: accept raised flat-grey limit (90 -> 130 blocks, total budget) on P2 answer keys.
 - P2-FRACTIONS-KEEP: keep fractions in P2 Semester 1.
+
+## 2026-10-23 (owner replies, third batch)
+- P2-LAWYER-WAIT: hold P2 booklets (and P1) from printing/sale until the lawyer approves the licence wording.
+- L6-SCRATCH-TUTOR: a tutor runs the Level 6 extension code items in real Scratch before sale.
+- SPINE-CHOICES-OK: accept the spine choices for Level 1 term lessons 13, 19, 27.
+- L10-TRIM: shorten Level 1 term lesson 10 by about 3 minutes (currently exactly 90:00).
+- CHIP-NAMES: add tool names under the icons on the page-1 chip of the choose lessons (10, 20, 30, 40).

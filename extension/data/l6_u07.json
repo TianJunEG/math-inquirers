@@ -55,15 +55,15 @@
   "try": {
    "id": "L6U07-L01",
    "tier": "start",
-   "text": "A regular polygon has 18 sides. The turn at each corner is {b}° and the inside angle is {b}°.",
+   "text": "A regular polygon has 9 sides. The turn at each corner is {b}° and the inside angle is {b}°.",
    "answer": {
     "value": [
-     "20",
-     "160"
+     "40",
+     "140"
     ],
-    "text": "20°, 160°"
+    "text": "40°, 140°"
    },
-   "explanation": "360° ÷ 18 = 20° for the turn. The inside angle is 180° − 20° = 160°."
+   "explanation": "360° ÷ 9 = 40° for the turn. The inside angle is 180° − 40° = 140°."
   }
  },
  "items": [
@@ -531,7 +531,7 @@
   {
    "id": "L6U07-S10",
    "tier": "start",
-   "text": "Shapes fit around a point when their inside angles add to 360°. Check each group.",
+   "text": "Regular shapes fit around a point when their inside angles add to 360°. Check each group.",
    "page": 3,
    "parts": [
     {
@@ -616,12 +616,22 @@
   {
    "id": "L6U07-T01",
    "tier": "think",
-   "text": "A turtle repeats [move 40, turn ↻ 100] again and again.",
+   "text": "A turtle repeats [move 40, turn ↻ 100] again and again until it first faces the start direction again.",
    "page": 4,
    "parts": [
     {
      "label": "a",
-     "text": "After 18 repeats it has turned {b}° in all.",
+     "text": "It first faces the start direction after {b} repeats.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "By then it has turned {b}° in all.",
      "answer": {
       "value": [
        "1800"
@@ -630,7 +640,7 @@
      }
     },
     {
-     "label": "b",
+     "label": "c",
      "text": "That is {b} full turns.",
      "answer": {
       "value": [
@@ -638,19 +648,9 @@
       ],
       "text": "5"
      }
-    },
-    {
-     "label": "c",
-     "text": "It first faces the start direction after {b} repeats.",
-     "answer": {
-      "value": [
-       "18"
-      ],
-      "text": "18"
-     }
     }
    ],
-   "hint": "Find the first multiple of 100 that is also a multiple of 360.",
+   "hint": "Try the total turned after 1, 2, 3 ... repeats.",
    "space": {
     "rows": [
      "Working:",
@@ -697,7 +697,7 @@
      }
     }
    ],
-   "hint": "A shape with n sides has (n − 2) × 180 in all.",
+   "hint": "What do the inside angles of an n-sided shape add up to?",
    "space": {
     "rows": [
      "Working:",
@@ -738,6 +738,7 @@
    "space": {
     "rows": [
      "Working:",
+     "",
      ""
     ]
    },
@@ -746,7 +747,7 @@
   {
    "id": "L6U07-G01",
    "tier": "go",
-   "text": "The turtle starts at x = 0, y = 0, facing right.",
+   "text": "The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y gets bigger.",
    "page": 5,
    "parts": [
     {
@@ -893,15 +894,15 @@
   {
    "id": "L6U07-C02",
    "tier": "quiz",
-   "text": "A turtle turns 45° at each corner of a regular polygon. The polygon has {b} sides.",
+   "text": "A turtle turns 10° at each corner of a regular polygon. The polygon has {b} sides.",
    "page": 6,
    "answer": {
     "value": [
-     "8"
+     "36"
     ],
-    "text": "8"
+    "text": "36"
    },
-   "explanation": "360 ÷ 45 = 8 sides."
+   "explanation": "360 ÷ 10 = 36 sides."
   },
   {
    "id": "L6U07-C03",

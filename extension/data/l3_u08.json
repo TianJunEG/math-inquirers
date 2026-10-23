@@ -200,7 +200,7 @@
     "type": "l3_segs",
     "k": 30,
     "pad": 44,
-    "width_mm": 98,
+    "width_mm": 90,
     "segs": [
      [
       0,
@@ -457,7 +457,7 @@
      }
     ],
     "k": 36,
-    "width_mm": 72,
+    "width_mm": 64,
     "pad": 24
    }
   },

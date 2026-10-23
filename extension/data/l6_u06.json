@@ -49,15 +49,15 @@
   "try": {
    "id": "L6U06-L01",
    "tier": "start",
-   "text": "A bag has 6 yellow and 9 blue counters. One is picked without looking.\nP(yellow) = {b}/{b} in simplest form.",
+   "text": "A bag has 5 white and 15 black counters. One is picked without looking.\nP(white) = {b}/{b} in simplest form.",
    "answer": {
     "value": [
-     "2",
-     "5"
+     "1",
+     "4"
     ],
-    "text": "2/5"
+    "text": "1/4"
    },
-   "explanation": "15 counters in all and 6 are yellow: 6/15. Divide the top and bottom by 3: 2/5."
+   "explanation": "20 counters in all and 5 are white: 5/20. Divide the top and bottom by 5: 1/4."
   }
  },
  "items": [
@@ -210,7 +210,7 @@
     },
     {
      "label": "b",
-     "text": "The code says about {b}.",
+     "text": "To the nearest whole number, the code says about {b}.",
      "answer": {
       "value": [
        "17"
@@ -328,12 +328,12 @@
   {
    "id": "L6U06-S05",
    "tier": "start",
-   "text": "Ali and Ben spin this spinner with the numbers 1 to 10. Ali wins on a prime number. Ben wins on any other number.",
+   "text": "Ali and Ben spin this spinner with the numbers 1 to 12. Ali wins on a multiple of 3. Ben wins on any other number.",
    "page": 2,
    "parts": [
     {
      "label": "a",
-     "text": "P(Ali wins) = {b}/10",
+     "text": "P(Ali wins) = {b}/12",
      "answer": {
       "value": [
        "4"
@@ -343,12 +343,12 @@
     },
     {
      "label": "b",
-     "text": "P(Ben wins) = {b}/10",
+     "text": "P(Ben wins) = {b}/12",
      "answer": {
       "value": [
-       "6"
+       "8"
       ],
-      "text": "6"
+      "text": "8"
      }
     },
     {
@@ -374,7 +374,9 @@
      "7",
      "8",
      "9",
-     "10"
+     "10",
+     "11",
+     "12"
     ],
     "r": 19
    },
@@ -822,7 +824,7 @@
     },
     {
      "label": "b",
-     "text": "The mean of the 5 runs is {b}.",
+     "text": "The mean of the 5 runs is {bw}.",
      "answer": {
       "value": [
        "102.8"

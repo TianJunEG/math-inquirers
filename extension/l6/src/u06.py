@@ -25,9 +25,9 @@ learn = {
                         'Count the outcomes you want.',
                         'Write wanted/all as a fraction and simplify it.',
                         f'Expected number = probability {X} number of tries. A real run is close, not exact.']},
-    'try': IT(U, 'L', 1, 0, 'A bag has 6 yellow and 9 blue counters. One is picked without looking.\nP(yellow) = {b}/{b} in simplest form.',
-              '15 counters in all and 6 are yellow: 6/15. Divide the top and bottom by 3: 2/5.',
-              answer=A([2, 5], '2/5')),
+    'try': IT(U, 'L', 1, 0, 'A bag has 5 white and 15 black counters. One is picked without looking.\nP(white) = {b}/{b} in simplest form.',
+              '20 counters in all and 5 are white: 5/20. Divide the top and bottom by 5: 1/4.',
+              answer=A([1, 4], '1/4')),
 }
 
 # ---------------------------------------------------------------- Start here
@@ -68,12 +68,12 @@ I.append(IT(U, 'S', 4, 2,
                    P('c', 'P(total is 4) = {b}/{b}', [1, 12], '1/12')],
             figside=True))
 I.append(IT(U, 'S', 5, 2,
-            'Ali and Ben spin this spinner with the numbers 1 to 10. Ali wins on a prime number. Ben wins on any other number.',
-            'The primes from 1 to 10 are 2, 3, 5 and 7, so Ali wins on 4 of the 10 numbers. Ben wins on the other 6 (1, 4, 6, 8, 9, 10). '
-            '4 is not equal to 6, so the game is not fair: Ben is more likely to win.',
-            fig={'type': 'l6_spinner', 'parts': [str(k) for k in range(1, 11)], 'r': 19},
-            parts=[P('a', 'P(Ali wins) = {b}/10', [4]),
-                   P('b', 'P(Ben wins) = {b}/10', [6]),
+            'Ali and Ben spin this spinner with the numbers 1 to 12. Ali wins on a multiple of 3. Ben wins on any other number.',
+            'The multiples of 3 are 3, 6, 9 and 12, so Ali wins on 4 of the 12 numbers. Ben wins on the other 8. '
+            '4 is not equal to 8, so the game is not fair: Ben is more likely to win.',
+            fig={'type': 'l6_spinner', 'parts': [str(k) for k in range(1, 13)], 'r': 19},
+            parts=[P('a', 'P(Ali wins) = {b}/12', [4]),
+                   P('b', 'P(Ben wins) = {b}/12', [8]),
                    P('c', 'Is the game fair?   {circ:Yes|No}', ['No'])],
             figside=True))
 I.append(IT(U, 'S', 6, 2,
@@ -91,7 +91,7 @@ I.append(IT(U, 'S', 7, 2,
             'The answers differ because every roll is random, so each run gives a slightly different count.',
             fig=code([['var', 'set hits to (0)'], ['ctl', 'repeat (100)', [['ctl', 'if <(pick random 1 to 6) = (6)> then', [['var', 'change hits by (1)']]]]], ['look', 'say (hits)']]),
             parts=[P('a', 'The chance of a 6 on one roll is {b}/{b}.', [1, 6], '1/6'),
-                   P('b', 'The code says about {b}.', [17]),
+                   P('b', 'To the nearest whole number, the code says about {b}.', [17]),
                    P('c', '5 runs give 14, 19, 17, 21, 15. Why?   {circ:random rolls|broken code}', ['random rolls'])],
             figside=True))
 I.append(IT(U, 'S', 8, 3,
@@ -143,7 +143,7 @@ I.append(IT(U, 'T', 3, 4,
             f'(a) 1/6 {X} 600 = 100. (b) 93 + 108 + 97 + 114 + 102 = 514, and 514 ÷ 5 = 102.8. '
             f'(c) Every run is near 100 and the mean is very close to 100, so the dice looks fair.',
             parts=[P('a', 'The expected number of 3s is {b}.', [100]),
-                   P('b', 'The mean of the 5 runs is {b}.', [102.8]),
+                   P('b', 'The mean of the 5 runs is {bw}.', [102.8]),
                    P('c', 'Does the dice look fair?   {circ:Yes|No}', ['Yes'])],
             hint='Add the 5 numbers, then divide by 5.', partsrow=True, space={'rows': ['Working:']}))
 

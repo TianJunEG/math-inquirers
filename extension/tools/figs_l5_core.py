@@ -16,7 +16,8 @@ U = 4.0   # drawing units per mm
 
 
 def T(x, y, txt, size=22, fill=NAVY, anchor='middle', weight=700):
-    return F._t(round(x, 1), round(y, 1), txt, size, fill, anchor, weight)
+    # white halo: text on a hatched (print) tile stays readable
+    return F._t(round(x, 1), round(y, 1), txt, size, fill, anchor, weight).replace('<text ', '<text stroke="#fff" stroke-width="%d" stroke-linejoin="round" paint-order="stroke" ' % max(6, size // 4), 1)
 
 
 def esc(s):
