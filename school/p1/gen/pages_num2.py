@@ -370,4 +370,169 @@ def page26():
     P["facts"] = "100 " + " ".join(map(str, range(1, 101)))
     return P
 
-PAGES = [page23, page24, page25, page26]
+
+# ---------------------------------------------------------------- N09 Bonds and Families (P1-37)
+def bond_chain_svg(tiles, blank):
+    """six part-whole tiles in a row. tiles[k] = (whole, left, right); blank[k] = 'l' or 'r' (that part is left empty for the pupil).
+    The right part of a tile must match the left part of the next tile (= signs between), and the last right part must match the first left part (loop under the row)."""
+    p = []; R = 5.4
+    for k, (w, l, r) in enumerate(tiles):
+        x = k * 30
+        p.append(f'<line x1="{x+15}" y1="{6+R}" x2="{x+7}" y2="{19-R}" stroke="#000" stroke-width="0.5"/><line x1="{x+15}" y1="{6+R}" x2="{x+23}" y2="{19-R}" stroke="#000" stroke-width="0.5"/>')
+        for cx, cy, v, role in ((x + 15, 6, w, "w"), (x + 7, 19, l, "l"), (x + 23, 19, r, "r")):
+            isb = (role == blank[k])
+            p.append(f'<circle class="pc{" blank" if isb else ""}" data-k="{k}" data-role="{role}" cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.6"/>')
+            if not isb: p.append(f'<text class="pn" data-k="{k}" data-role="{role}" x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="6.2" fill="#000">{v}</text>')
+        if k < 5: p.append(f'<line x1="{x+29}" y1="18" x2="{x+31}" y2="18" stroke="#000" stroke-width="0.7"/><line x1="{x+29}" y1="20" x2="{x+31}" y2="20" stroke="#000" stroke-width="0.7"/>')
+    p.append('<path d="M172,24.6 L172,31 L8,31 L8,24.6" fill="none" stroke="#000" stroke-width="0.6"/><rect x="82" y="28.6" width="16" height="4.8" fill="#fff"/><text x="90" y="31" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="4.6" fill="#000">=</text>')
+    return svg(180, 34, "".join(p))
+
+def read_chain(svg_text):
+    """independent reader: {(tile, role): printed number or None for an empty circle}"""
+    vals = {}
+    for m in re.finditer(r'class="pc( blank)?" data-k="(\d)" data-role="(\w)"', svg_text): vals[(int(m.group(2)), m.group(3))] = None
+    for m in re.finditer(r'class="pn" data-k="(\d)" data-role="(\w)"[^>]*>(\d+)<', svg_text): vals[(int(m.group(1)), m.group(2))] = int(m.group(3))
+    return vals
+
+def solve_chain(vals):
+    """fill each empty part from its tile (whole minus the other part), then test that every touching pair matches"""
+    ans = []
+    full = dict(vals)
+    for k in range(6):
+        for role, other in (("l", "r"), ("r", "l")):
+            if vals[(k, role)] is None:
+                full[(k, role)] = vals[(k, "w")] - vals[(k, other)]; ans.append(full[(k, role)])
+    ok = all(full[(k, "r")] == full[((k + 1) % 6, "l")] for k in range(6))
+    return ans, ok
+
+def page37():
+    rng = random.Random(3737)
+    while True:
+        x = [rng.randint(2, 10) for _ in range(6)]
+        tiles = [(x[k] + x[(k + 1) % 6], x[k], x[(k + 1) % 6]) for k in range(6)]
+        if any(t[0] > 20 for t in tiles) or len(set(x)) < 5: continue
+        blank = [rng.choice("lr") for _ in range(6)]
+        both = sum(1 for k in range(6) if blank[k] == "r" and blank[(k + 1) % 6] == "l")
+        if both > 1: continue
+        ans = [tiles[k][1] if blank[k] == "l" else tiles[k][2] for k in range(6)]
+        break
+    chain = bond_chain_svg(tiles, blank)
+    body = (f'<div class="blk"><p class="lead">Each tile: the top number is the whole. The two below are its parts.</p>{chain}</div>'
+            f'<div class="blk"><p class="lead">Write the numbers for the empty circles, tile 1 to tile 6.</p><div class="ansgrid2">'
+            + "".join(f'<span class="lbx"><span class="ab"></span><small>tile {k+1}</small></span>' for k in range(6)) + '</div></div>')
+    chk = ["Go round the loop. Do the numbers joined by = match?", "Do the six numbers you wrote fill the six empty circles?"]
+    P = Page(no=37, title="Bonds and Families", tier=2, topic="Number bonds to 20: parts, wholes and the loop that closes",
+             strand="Number and Algebra - Whole Numbers", syll="2.1, 2.2, 2.3 (concepts of addition and subtraction; use of +, - and =; relationship between addition and subtraction)",
+             ptype="Chain loop (bond tiles)", mech="K8 the loop closes: every number joined by = matches",
+             mech_plain="Loop: the number in an empty circle must match the circle it is joined to by =, all the way round and back to tile 1",
+             instr=["Find the number in each empty circle.", "Touching circles joined by = match.", "Go round the loop."],
+             body=body, check=" ".join(chk[:1]), check_lines=chk[:1], check_boxes=None,
+             key=dict(answers="Empty circles: " + ", ".join(f"tile {k+1} {'left' if blank[k] == 'l' else 'right'} = {ans[k]}" for k in range(6)) + ". Tiles (whole = left + right): " + ", ".join(f"{t[0]} = {t[1]} + {t[2]}" for t in tiles), check_result="Every touching pair matches, all the way round."),
+             note=("Six tiles, each a whole (the top circle) with two parts. One part of every tile is empty; the pupil finds it from the whole and the other part (adding up to the whole, or taking the part away from it). "
+                   "The right part of a tile is the same number as the left part of the next tile, and the right part of the last tile is the first tile's left part. So every number the pupil writes is tested against a matching circle: a wrong number breaks the loop. "
+                   "The syllabus asks for the relationship between addition and subtraction; the pupil uses it each time a part is found from the whole. The plan also had a list of pairs that make 10 and a second sentence for each tile: both were dropped because a self-check at 95% could not be made for them."),
+             seed=3737)
+    vals = read_chain(chain)
+    got, ok = solve_chain({k: v for k, v in vals.items()})
+    P.v("V1 independent reader: every empty circle is found from its tile (whole minus the other part) and the loop closes with those numbers", got == ans and ok, got)
+    P.v("V1b every tile has exactly one empty part and all wholes are within 20", sum(v is None for v in vals.values()) == 6 and all(t[0] <= 20 for t in tiles))
+    P.v("V1c at most one link has an empty circle on both sides", sum(1 for k in range(6) if blank[k] == "r" and blank[(k + 1) % 6] == "l") <= 1)
+    full0 = {(k, role): tiles[k][i] for k in range(6) for i, role in enumerate("wlr")}
+    def closes(a):
+        f = dict(vals)
+        j = 0
+        for k in range(6):
+            role = blank[k]; f[(k, role)] = a[k]
+        return all(f[(k, "r")] == f[((k + 1) % 6, "l")] for k in range(6)) and all(f[(k, "l")] + f[(k, "r")] == f[(k, "w")] for k in range(6))
+    P.v("V3 every single wrong value in one empty circle (0 to 20) breaks the loop", all(not closes([a if j != k else v for j, a in enumerate(ans)]) for k in range(6) for v in range(0, 21) if v != ans[k]))
+    P["cv"] = dict(rate=1.0, single_total=6 * 20, single_detected=6 * 20)
+    P["model"] = dict(truth=list(ans), domains=[list(range(0, 21))] * 6, check=closes, numeric=True)
+    P["facts"] = "20"
+    return P
+
+# ---------------------------------------------------------------- N03 More or Fewer (P1-38)
+def _more_ok(val, c, chosen):
+    k = c[0]
+    if k == "none": return c[1] not in chosen
+    if k == "more": return val[c[1]] - val[c[2]] == c[3]
+    if k == "fewer": return val[c[2]] - val[c[1]] == c[3]
+    if k == "equal": return val[c[1]] - c[3] == val[c[2]] + c[3]
+    if k == "gt": return val[c[1]] > val[c[2]]
+
+def more_text(c):
+    return {"none": f"Nobody has {c[1]}.", "more": f"{c[1]} has {c[3]} more than {c[2]}.", "fewer": f"{c[1]} has {c[3]} fewer than {c[2]}.",
+            "equal": f"{c[1]} gives {c[2]} {c[3]}: the same.", "gt": f"{c[1]} has more than {c[2]}."}[c[0]]
+
+def solve_more(names, nums, clues):
+    sols = []
+    for perm in itertools.permutations(nums, len(names)):
+        val = dict(zip(names, perm)); chosen = set(perm)
+        if all(_more_ok(val, c, chosen) for c in clues): sols.append(val)
+    return sols
+
+def page38():
+    from .pages_numbers import grid_table, howto_grid
+    rng = random.Random(3838)
+    names = ["Ali", "Mei", "Siti", "Ben", "Kumar"]
+    word = "GLORY"
+    assert anagrams(word) == [word.lower()]
+    while True:
+        nums = sorted(rng.sample(range(2, 21), 6))
+        unused = nums[rng.choice([1, 2, 3])]
+        used = [n for n in nums if n != unused]
+        perm = used[:]; rng.shuffle(perm); truth = dict(zip(names, perm))
+        cl = [("none", unused)]
+        pool = []
+        for a in names:
+            for b in names:
+                if a == b: continue
+                d = truth[a] - truth[b]
+                if d > 0: pool += [("more", a, b, d), ("fewer", b, a, d)]
+                if d > 0 and d % 2 == 0: pool.append(("equal", a, b, d // 2))
+        rng.shuffle(pool)
+        for c in pool:
+            if len(cl) >= 7: break
+            if any(c[:3] == x[:3] for x in cl): continue
+            cl.append(c)
+        if len(solve_more(names, nums, cl)) != 1: continue
+        for c in cl[1:]:
+            rest = [x for x in cl if x != c]
+            if len(solve_more(names, nums, rest)) == 1: cl = rest
+        kinds = {c[0] for c in cl}
+        if len(cl) < 5 or not {"more", "fewer"} <= kinds or "equal" not in kinds: continue
+        break
+    decoy = max(decoy_options(word), key=lambda d: (len(small_words(word + d)), rng.random()))
+    letter_of = {truth[n]: word[i] for i, n in enumerate(names)}; letter_of[unused] = decoy
+    chips = "".join(f'<span class="chip">{n} <i class="cl">{letter_of[n]}</i></span>' for n in nums)
+    clues = "".join(f"<li>{more_text(c)}</li>" for c in cl)
+    ans = ('<div class="ansgrid"><span></span><b>number</b><b>letter</b>' + "".join(f'<span class="nm">{n}</span><span class="ab"></span><span class="ab"></span>' for n in names) + '</div>')
+    body = (f'<div class="blk"><p class="lead">Six amounts of stickers. Five children.</p><div class="chips six">{chips}</div></div>'
+            f'<div class="twocol"><ul class="clues">{clues}</ul>{howto_grid()}</div>'
+            f'<div class="twocol"><div>{grid_table(names, nums)}</div><div>{ans}</div></div>')
+    real = sorted({"".join(letter_of[v] for v in pp) for pp in itertools.permutations(nums, 5) if list(pp) != perm and "".join(letter_of[v] for v in pp).lower() in BIG})
+    n_wrong = len(list(itertools.permutations(nums, 5))) - 1
+    P = Page(no=38, title="More or Fewer", tier=2, topic="Comparing amounts: more than, fewer than and making the same",
+             strand="Number and Algebra - Whole Numbers", syll="1.4, 2.1 (comparing the number of objects in sets; concepts of addition and subtraction; make equal and fewer than: problem solving)",
+             ptype="Logic grid", mech="K4 grid + K1 letter beside each amount spells a word (5 letters, one decoy letter)",
+             mech_plain="Letters beside the amounts, read down the list, spell a word (5 letters; one of the six amounts is not used)",
+             instr=["Read the clues.", "Use the grid to cross and tick.", "Write each amount, then its letter."],
+             body=body, check="Read the five letters down your list. Do they spell a word?", check_boxes=5,
+             key=dict(answers=", ".join(f"{n}: {truth[n]} ({letter_of[truth[n]]})" for n in names) + f"; nobody has {unused} (letter {decoy} is the decoy)", check_result=f"Letters down the list: {word}"),
+             note=("Six amounts are listed but there are only five children: a clue says which amount nobody has, and its letter is a decoy that is not part of the word. The clues are exact (a number more than, a number fewer than) and one clue says what a child gives so that two children have the same. "
+                   "The five letters of the word have exactly one arrangement that is a word, so no wrong placement spells a word: every wrong way to give five children five of the six amounts was tested against a very large word list. "
+                   "A fewer than clue is the other way round from a more than clue, so the pupil must read who has the greater amount. The page shows a worked example of crosses and ticks."),
+             seed=3838)
+    sols = solve_more(names, nums, cl)
+    P.v("V1 exactly one assignment satisfies all clues (the clue texts evaluated by brute force over 720 ways)", len(sols) == 1 and sols[0] == truth, len(sols))
+    P.v("V1b every clue needed", all(len(solve_more(names, nums, [x for x in cl if x != c])) > 1 for c in cl))
+    P.v("V1c the clues include more than, fewer than (the reversed one) and a give-to-make-the-same clue", {"more", "fewer", "equal"} <= {c[0] for c in cl})
+    P.v("V2 letters beside the amounts, in name order, spell " + word, "".join(letter_of[truth[n]] for n in names) == word)
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()], anagrams(word))
+    P.v(f"V3 none of the {n_wrong} wrong placements (5 of the 6 amounts) spells a word (large word list)", not real, real[:3])
+    P.v("V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them", len(small_words(word + decoy)) >= 3, small_words(word + decoy)[:6])
+    P["cv"] = dict(rate=1.0, single_total=n_wrong, single_detected=n_wrong)
+    P["model"] = dict(truth=list(word), domains=[sorted(set(letter_of.values()))] * 5, check=letters_check(), perm=list(range(5)))
+    P["mini"] = mini_ticks(5, 6, {(i, nums.index(truth[n])) for i, n in enumerate(names)})
+    return P
+
+PAGES = [page23, page24, page25, page26, page37, page38]

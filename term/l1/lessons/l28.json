@@ -2083,7 +2083,17 @@
        "[]"
       ]
      ]
-    }
+    },
+    "visuals": [
+     {
+      "type": "stick_pattern",
+      "shape": "triangle",
+      "n": 3,
+      "hide_last": true,
+      "label_each": true,
+      "size": 58
+     }
+    ]
    },
    {
     "id": "T2",
@@ -2134,7 +2144,15 @@
      "Saying Yes after finding a close number such as 21.",
      "Thinking that every number of sticks is possible."
     ],
-    "mins": 4
+    "mins": 4,
+    "visual": {
+     "type": "stick_pattern",
+     "shape": "triangle",
+     "n": 4,
+     "hide_last": true,
+     "label_each": true,
+     "size": 100
+    }
    },
    {
     "id": "T3",

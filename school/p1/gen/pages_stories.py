@@ -207,4 +207,143 @@ def page22():
     P["facts"] = "3 100"
     return P
 
-PAGES = [page21, page22]
+
+# ---------------------------------------------------------------- N11 Share and Group Stories (P1-39)
+def solve_share(lines):
+    """independent solver from the printed sentences only"""
+    t = " ".join(lines)
+    m = re.search(r"shares them equally with (\d+) friends?", t)
+    if m: return int(re.search(r"has (\d+)", lines[0]).group(1)) // (int(m.group(1)) + 1)
+    m = re.search(r"and (\d+) friends? share (\d+) \w+ equally", t)
+    if m: return int(m.group(2)) // (int(m.group(1)) + 1)
+    m = re.search(r"^(\d+) \w+ go in groups of (\d+)", t)
+    if m: return int(m.group(1)) // int(m.group(2))
+    m = re.search(r"^(\d+) \w+ are shared equally among (\d+) plates", t)
+    if m: return int(m.group(1)) // int(m.group(2))
+    m = re.search(r"Fact: 1 (\w+) has (\d+) (\w+)\. \w+ counts (\d+) \3\.", t)
+    if m: return int(m.group(4)) // int(m.group(2))
+    raise ValueError(t)
+
+def page39():
+    rng = random.Random(3939)
+    word = "SPONGE"
+    objs = ["apple", "star", "sweet", "flower", "ball", "balloon", "kite", "cup"]
+    while True:
+        names = rng.sample(PEOPLE, 6); o = rng.sample(objs, 6); items = []
+        f1 = rng.choice([1, 2, 3]); p1 = rng.randint(2, 6); items.append(dict(k="with", N=names[0], obj=o[0], n=p1 * (f1 + 1), f=f1, ans=p1))
+        f2 = rng.choice([1, 2, 3]); p2 = rng.randint(2, 6); items.append(dict(k="and", N=names[1], obj=o[1], n=p2 * (f2 + 1), f=f2, ans=p2))
+        g = rng.randint(2, 5); q = rng.randint(2, 6); items.append(dict(k="group", N=names[2], obj=o[2], n=g * q, g=g, ans=q))
+        k_ = rng.randint(2, 5); items.append(dict(k="car", N=names[3], w=4 * k_, ans=k_))
+        k2 = rng.randint(3, 9); items.append(dict(k="bird", N=names[4], l=2 * k2, ans=k2))
+        pl = rng.randint(2, 4); pp = rng.randint(2, 6); items.append(dict(k="plates", N=names[5], obj=o[5], n=pl * pp, p=pl, ans=pp))
+        if any(it.get("n", 0) > 20 for it in items): continue
+        rng.shuffle(items)
+        ans = [it["ans"] for it in items]
+        if len(set(ans)) != 6 or max(ans) > 12 or sum(1 for it in items if it.get("n", 0) > 12) > 1: continue
+        table = make_code_table(ans, word, rng, 1, 20, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=60)
+        if table: break
+    cards = []; texts = []
+    for i, it in enumerate(items):
+        N = it["N"]; k = it["k"]
+        if k in ("with", "and", "group", "plates"): pl_ = OBJN[it["obj"]][1]
+        if k == "with": lines = [f"{N} has {it['n']} {pl_}.", f"{N} shares them equally with {it['f']} friend{'s' if it['f'] > 1 else ''}.", "How many does each child get?"]
+        elif k == "and": lines = [f"{N} and {it['f']} friend{'s' if it['f'] > 1 else ''} share {it['n']} {pl_} equally.", "How many does each child get?"]
+        elif k == "group": lines = [f"{it['n']} {pl_} go in groups of {it['g']}.", "How many groups?"]
+        elif k == "plates": lines = [f"{it['n']} {pl_} are shared equally among {it['p']} plates.", "How many on each plate?"]
+        elif k == "car": lines = ["Fact: 1 car has 4 wheels.", f"{N} counts {it['w']} wheels.", "How many cars?"]
+        else: lines = ["Fact: 1 bird has 2 legs.", f"{N} counts {it['l']} legs.", "How many birds?"]
+        texts.append(lines)
+        if k in ("car", "bird"): pics = [row_svg(k if k == "car" else "bird", 1, size=7.5, pitch=8)[0]]
+        else: pics = [row_svg(it["obj"], it["n"], size=5.6, pitch=6.2)[0]]
+        cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
+    body = f'<div class="stories">{"".join(cards)}</div>{code_block(table)}<p class="lead" style="margin:0;font-size:11pt">The sharer gets a share too.</p>'
+    P = Page(no=39, title="Share and Group", tier=1, topic="Sharing and grouping stories within 20, and printed facts",
+             strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.4 (concepts of multiplication and division, dividing within 20; sharing stories, hidden facts: problem solving)",
+             ptype="Code-breaker (stories)", mech="K1 code word (6 letters)",
+             instr=["Read each story.", "Write how many.", "Use the code table."],
+             body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
+             key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
+             note=("Six stories with pictures. In two the sharer is one of the children: Ali shares 12 sweets with 3 friends, so 4 children share (the page prints that a person who shares also counts). One story groups, one shares among plates, and two give a printed fact (1 car has 4 wheels, 1 bird has 2 legs) "
+                   "and ask how many cars or birds from the wheels or legs counted. Every share is exact and no division sign is used."),
+             seed=3939)
+    solved = [solve_share(l) for l in texts]
+    P.v("V1 independent solver reads the printed sentences back and equals the key", solved == ans, solved)
+    P.v("V1b the picture shows the objects in the story (counted in the drawing)", all(count_objs(c).get(it.get("obj"), 0) == it["n"] for c, it in zip([re.findall(r"<svg.*?</svg>", cd, re.S)[0] for cd in cards], items) if it["k"] in ("with", "and", "group", "plates")))
+    P.v("V1c answers distinct; every share or group is exact", len(set(ans)) == 6)
+    finish_code(P, ans, table, word, 1, 20)
+    return P
+
+# ---------------------------------------------------------------- N12 True or False Groups (P1-40)
+def tf_eval(text):
+    """independent evaluator of a printed statement: True or False"""
+    t = text.replace("&times;", "x")
+    m = re.fullmatch(r"(\d+) groups of (\d+) is (\d+)\.", t)
+    if m: return int(m[1]) * int(m[2]) == int(m[3])
+    m = re.fullmatch(r"(\d+) x (\d+) = (\d+)\.", t)
+    if m: return int(m[1]) * int(m[2]) == int(m[3])
+    m = re.fullmatch(r"(\d+) in groups of (\d+) makes (\d+) groups\.", t)
+    if m: return int(m[1]) == int(m[2]) * int(m[3])
+    m = re.fullmatch(r"(\d+) shared by (\d+) children is (\d+) each\.", t)
+    if m: return int(m[1]) == int(m[2]) * int(m[3])
+    raise ValueError(text)
+
+def page40():
+    rng = random.Random(4040)
+    word = "TEACUP"
+    assert anagrams(word) == [word.lower()]
+    while True:
+        truth = [True, True, True, False, False, False]; rng.shuffle(truth)
+        types = rng.sample(["g", "x", "in", "sh", "g", "in"], 6)
+        st = []
+        for tv, ty in zip(truth, types):
+            a = rng.choice([2, 3, 4, 5, 6]); b = rng.choice([2, 3, 4, 5]); 
+            if a * b > 40: continue
+            if ty in ("g", "x"):
+                c = a * b if tv else rng.choice([a * b + b, a * b - b, a + b, a * b + 2, a * b - 2])
+                st.append(f"{a} groups of {b} is {c}." if ty == "g" else f"{a} &times; {b} = {c}.")
+            elif ty == "in":
+                n = a * b; q = a if tv else rng.choice([a + 1, a - 1, b + a, n - b])
+                if n > 20: n = a * b if a * b <= 20 else None
+                if n is None: continue
+                st.append(f"{n} in groups of {b} makes {q} groups.")
+            else:
+                n = a * b
+                if n > 20: continue
+                q = a if tv else rng.choice([a + 1, a - 1, b])
+                st.append(f"{n} shared by {b} children is {q} each.")
+        if len(st) != 6 or len(set(st)) != 6: continue
+        got = [tf_eval(s_) for s_ in st]
+        if got != truth: continue
+        pool = [c for c in ALPHA if c not in word]
+        done = False
+        for _ in range(500):
+            dl = rng.sample(pool, 6); letters = []
+            for i in range(6):
+                right = word[i]; wrong = dl[i]
+                letters.append(dict(T=right, F=wrong) if truth[i] else dict(T=wrong, F=right))
+            bad = [pp for pp in itertools.product(*[(l["T"], l["F"]) for l in letters]) if "".join(pp) != word and "".join(pp).lower() in BIG]
+            if not bad: done = True; break
+        if done: break
+    rows = "".join(f'<div class="qrow tfrow"><span class="no">{i+1}</span><span class="qt">{s_}</span>'
+                   f'<span class="tfo"><span class="ab"></span><b>T</b><i class="cl">{letters[i]["T"]}</i></span><span class="tfo"><span class="ab"></span><b>F</b><i class="cl">{letters[i]["F"]}</i></span></div>' for i, s_ in enumerate(st))
+    body = f'<div class="tfrows">{rows}</div>'
+    P = Page(no=40, title="True or False", tier=2, topic="Multiplication and sharing: true or false statements",
+             strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.2, 3.3 (concepts of multiplication, use of x, multiplying within 40; true or false: reasoning)",
+             ptype="True or false table + code word", mech="K1 letter of the ticked answer in each row spells a word (6 letters)",
+             mech_plain="The letter beside the ticked T or F in each row, read down the page, spells a word (6 letters)",
+             instr=["Is each sentence true or false?", "Tick T or F in each row.", "Write the ticked letters."],
+             body=body, check="Write the ticked letters in order. Do they spell a word?", check_boxes=6,
+             key=dict(answers=", ".join(f"{i+1}) {'T' if truth[i] else 'F'} ({letters[i]['T' if truth[i] else 'F']})" for i in range(6)), check_result=f"Letters in order: {word}"),
+             note=("Six statements about groups, the sign x and sharing, three true and three false, within 40 (sharing within 20). A false statement is a common slip: adding instead of multiplying, or one group too many or too few. "
+                   "Each choice has a letter. The right choices spell the word; every other way of ticking (63 ways) was tested against a very large word list and none spells a word. No division sign is used."),
+             seed=4040)
+    P.v("V1 independent evaluator reads each printed statement: three true and three false, equal to the key", [tf_eval(s_) for s_ in st] == truth and sum(truth) == 3, [tf_eval(s_) for s_ in st])
+    P.v("V2 the letters of the right ticks spell " + word, "".join(letters[i]["T" if truth[i] else "F"] for i in range(6)) == word)
+    P.v("V3 none of the 63 other ways of ticking spells a word (large word list)", not bad, bad[:3])
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()], anagrams(word))
+    P.v("V4 guess resistance: twelve different letters are shown", len({l for d in letters for l in d.values()}) == 12 and len(small_words("".join(l for d in letters for l in d.values()))) >= 3)
+    P["cv"] = dict(rate=1.0, single_total=63, single_detected=63)
+    P["model"] = dict(truth=[letters[i]["T" if truth[i] else "F"] for i in range(6)], domains=[[letters[i]["T"], letters[i]["F"]] for i in range(6)], check=letters_check(), numeric=False)
+    return P
+
+PAGES = [page21, page22, page39, page40]

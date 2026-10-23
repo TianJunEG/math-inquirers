@@ -82,3 +82,8 @@ CSS_NEW += """
 """
 CSS_NEW += """.pgraph.sm{gap:1.5mm}.pgraph.sm .gc{width:11.5mm;height:11.5mm}.pgraph.sm .gl{width:30mm;font-size:14pt}.pgraph.sm .gl svg{width:8mm;height:8mm}"""
 CSS_NEW += """.srows.s5 .srow{flex-direction:column;width:33mm;text-align:center;gap:1mm}.srows.s5 .srow .sn{width:auto}.srows.s5 .srow .ab{width:14mm}"""
+CSS_NEW += """
+.tfrows{display:flex;flex-direction:column;gap:2mm}.tfrow{padding:6.5mm 0}.tfrow .qt{font-size:16pt}
+.tfo{display:flex;align-items:center;gap:2mm;font-size:15pt;font-weight:800;margin-left:4mm}.tfo i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;font-weight:700}
+"""
+CSS_NEW += """.ansgrid2{display:flex;gap:6mm;justify-content:center;margin-top:1mm}"""
