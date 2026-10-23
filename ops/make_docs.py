@@ -97,7 +97,7 @@ def parent_calendar():
     s.append(grid(rows, [48 * mm, 134 * mm], head=False))
     s += [P("3. Check it", H2),
           P("You should see <b>10 events</b>, called <i>Math Inquirers Level N Group A: lesson 1 of 10</i> and so on, each 90 minutes. "
-            "Each one lists the Google Meet link, which is the same for all 10 lessons of your group: tap the link to join.", B),
+            "Each one lists the Google Meet link, so you can tap it to join (we confirm the link on WhatsApp before lesson 1).", B),
           P("Good to know", H2)]
     s += bullets([
         "<b>Week 5.</b> Nothing is held on Fri 25 Dec (public holiday). Levels 1 to 4 meet <b>Thu 24 Dec</b> and Level 5 meets <b>Wed 23 Dec</b> at the usual time. The file already has the right date.",
@@ -218,14 +218,14 @@ def tutor_notes():
         rows.append([P(name.replace("\n", "<br/>"), CELL), P("Live ____<br/>Rec. ____", CELL), "", "", "", ""])
     ws = [24 * mm, 22 * mm, 56 * mm, 56 * mm, 56 * mm, W - 214 * mm]
     t = grid(rows, ws, pad=3)
-    t._argH[1:] = [10.5 * mm] * 10
+    t._argH[1:] = [9.5 * mm] * 10
     s += [t, Spacer(1, 5)]
-    s.append(P("End of program (fills the parent report)", H2))
     rows = [[P("<b>What we did, in my words</b>", CELL), P("<b>Strengths to name (2 or 3)</b>", CELL), P("<b>One next step</b>", CELL),
              P("<b>Recommended level</b><br/>%s same level  %s up  %s talk first" % (BOX, BOX, BOX), CELL), P("<b>Practice ideas (2 or 3)</b>", CELL)],
             ["", "", "", "", ""]]
     t2 = grid(rows, [W / 5] * 5)
-    t2._argH[1] = 26 * mm
+    s.append(P("End of program (fills the parent report)", H2))
+    t2._argH[1] = 22 * mm
     s += [t2, Spacer(1, 3),
           P("Safeguarding or wellbeing concern? Do not write details here: tell the owner the same day by phone or in person.", BS)]
     build(OUT / "tutor_notes_sheet.pdf", s, size=pg, footer="PRIVATE: tutor notes", title="Tutor notes sheet")
@@ -247,7 +247,7 @@ def observation():
          Spacer(1, 3),
          P("Fill in <b>clock times</b> (hh:mm) when each part really starts and ends. The planned column is the Level 1 budget; if the lesson's own budget differs, write it over the top "
            "(budgets are in hp/budget.json and pN/budget.json). Over/under = real minutes minus planned minutes.", BS), Spacer(1, 3)]
-    hdr = [P(x, CELLB) for x in ("Part", "Planned min", "Planned from-to", "Real start", "Real end", "Real min", "Over / under", "Stuck points and notes")]
+    hdr = [P(x, CELLB) for x in ("Part", "Plan min", "Plan from-to", "Real start", "Real end", "Real min", "Over / under", "Stuck points and notes")]
     rows = [hdr]
     for n, a, b in PARTS:
         rows.append([P(n, CELL), P(str(b - a), CELL), P("%d to %d" % (a, b), CELL), "", "", "", "", ""])
@@ -260,10 +260,11 @@ def observation():
     s.append(P("Where children got stuck", H2))
     t = grid([[P(x, CELLB) for x in ("Slide / question", "What happened (who, how many)", "What the tutor did", "Fix needed (wording, time, picture)")]] + [["", "", "", ""]] * 5,
              [30 * mm, 52 * mm, 48 * mm, W - 130 * mm]); t._argH[1:] = [10 * mm] * 5
-    s += [KeepTogether([t]), P("Questions too hard or too easy", H2)]
+    s += [KeepTogether([t])]
     t = grid([[P(x, CELLB) for x in ("Question (page / no.)", "Tier (Start here / Think harder / Go further)", "Too hard", "Too easy", "Note")]] + [["", "", BOX, BOX, ""]] * 5,
              [34 * mm, 48 * mm, 16 * mm, 16 * mm, W - 114 * mm]); t._argH[1:] = [9 * mm] * 5
-    s += [KeepTogether([t]), P("Camera, paper and recording rules: seen as planned?", H2)]
+    s += [KeepTogether([P("Questions too hard or too easy", H2), t])]
+    s.append(P("Camera, paper and recording rules: seen as planned?", H2))
     rules = ["No child held paper up to the camera (gallery view, tick-against-answer-slide, choral answers, fingers for choices)",
              "'I am still stuck' used: mark on the child's own look-back page, parent photographs it to the business WhatsApp after class",
              "Children could keep camera off and stay muted without comment",

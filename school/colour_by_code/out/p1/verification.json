@@ -1,19 +1,16 @@
 {
- "passed": 704,
- "failed": 2,
- "failures": [
-  "CBC-01: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)",
-  "CBC-08: no clock face is drawn twice and no digital time is printed twice"
- ],
+ "passed": 706,
+ "failed": 0,
+ "failures": [],
  "worksheets": {
   "CBC-01": {
    "single_slip": {
     "double_cases": 1680,
-    "double_detected": 1677,
-    "double_rate": 0.9982,
-    "swap_cases": 89,
+    "double_detected": 1678,
+    "double_rate": 0.9988,
+    "swap_cases": 88,
     "swap_detected": 86,
-    "swap_rate": 0.9663,
+    "swap_rate": 0.9773,
     "wrong_values": 150,
     "in_key": 60,
     "detected_all": 150,
@@ -23,7 +20,7 @@
     "caught_by_structure_checks": 0.8
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -65,18 +62,18 @@
     "caught_by_structure_checks": 1.0
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.8,
+   "min_teacher_font_mm": 4.9,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.9
+   "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-04": {
    "single_slip": {
     "double_cases": 2176,
     "double_detected": 2173,
     "double_rate": 0.9986,
-    "swap_cases": 113,
-    "swap_detected": 110,
-    "swap_rate": 0.9735,
+    "swap_cases": 114,
+    "swap_detected": 111,
+    "swap_rate": 0.9737,
     "wrong_values": 170,
     "in_key": 68,
     "detected_all": 170,
@@ -86,18 +83,18 @@
     "caught_by_structure_checks": 0.8235
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.5,
+   "min_teacher_font_mm": 4.8,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
   "CBC-05": {
    "single_slip": {
     "double_cases": 1056,
-    "double_detected": 1056,
-    "double_rate": 1.0,
-    "swap_cases": 56,
+    "double_detected": 1055,
+    "double_rate": 0.9991,
+    "swap_cases": 57,
     "swap_detected": 56,
-    "swap_rate": 1.0,
+    "swap_rate": 0.9825,
     "wrong_values": 1200,
     "in_key": 48,
     "detected_all": 1200,
@@ -107,18 +104,18 @@
     "caught_by_structure_checks": 0.8333
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.2,
+   "min_teacher_font_mm": 4.0,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 35.0
   },
   "CBC-06": {
    "single_slip": {
     "double_cases": 1456,
-    "double_detected": 1455,
-    "double_rate": 0.9993,
-    "swap_cases": 77,
+    "double_detected": 1456,
+    "double_rate": 1.0,
+    "swap_cases": 76,
     "swap_detected": 76,
-    "swap_rate": 0.987,
+    "swap_rate": 1.0,
     "wrong_values": 1400,
     "in_key": 56,
     "detected_all": 1400,
@@ -127,19 +124,19 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8571
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.6,
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 4.3,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 39.9
   },
   "CBC-07": {
    "single_slip": {
     "double_cases": 1248,
-    "double_detected": 1248,
-    "double_rate": 1.0,
-    "swap_cases": 66,
+    "double_detected": 1247,
+    "double_rate": 0.9992,
+    "swap_cases": 67,
     "swap_detected": 66,
-    "swap_rate": 1.0,
+    "swap_rate": 0.9851,
     "wrong_values": 260,
     "in_key": 52,
     "detected_all": 260,
@@ -148,10 +145,10 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8462
    },
-   "min_pupil_font_mm": 4.3,
+   "min_pupil_font_mm": 4.5,
    "min_teacher_font_mm": 4.1,
    "teacher_short_labels": 0,
-   "narrowest_region_width_at_label_mm": 34.9
+   "narrowest_region_width_at_label_mm": 34.2
   },
   "CBC-08": {
    "single_slip": {
@@ -169,19 +166,19 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 1.0
    },
-   "min_pupil_font_mm": 4.5,
-   "min_teacher_font_mm": 3.4,
-   "teacher_short_labels": 0,
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 3.7,
+   "teacher_short_labels": 1,
    "narrowest_region_width_at_label_mm": 34.6
   },
   "CBC-09": {
    "single_slip": {
     "double_cases": 1056,
-    "double_detected": 1056,
-    "double_rate": 1.0,
-    "swap_cases": 56,
+    "double_detected": 1055,
+    "double_rate": 0.9991,
+    "swap_cases": 57,
     "swap_detected": 56,
-    "swap_rate": 1.0,
+    "swap_rate": 0.9825,
     "wrong_values": 240,
     "in_key": 48,
     "detected_all": 240,
@@ -190,8 +187,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8333
    },
-   "min_pupil_font_mm": 4.8,
-   "min_teacher_font_mm": 3.9,
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.6,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 35.0
   },
@@ -200,9 +197,9 @@
     "double_cases": 2176,
     "double_detected": 2174,
     "double_rate": 0.9991,
-    "swap_cases": 113,
-    "swap_detected": 111,
-    "swap_rate": 0.9823,
+    "swap_cases": 114,
+    "swap_detected": 112,
+    "swap_rate": 0.9825,
     "wrong_values": 204,
     "in_key": 68,
     "detected_all": 204,
@@ -211,8 +208,8 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.2,
+   "min_pupil_font_mm": 4.3,
+   "min_teacher_font_mm": 3.6,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 34.0
   },
@@ -221,9 +218,9 @@
     "double_cases": 1248,
     "double_detected": 1247,
     "double_rate": 0.9992,
-    "swap_cases": 66,
-    "swap_detected": 65,
-    "swap_rate": 0.9848,
+    "swap_cases": 67,
+    "swap_detected": 66,
+    "swap_rate": 0.9851,
     "wrong_values": 520,
     "in_key": 52,
     "detected_all": 520,
@@ -233,18 +230,18 @@
     "caught_by_structure_checks": 0.8462
    },
    "min_pupil_font_mm": 4.9,
-   "min_teacher_font_mm": 4.1,
+   "min_teacher_font_mm": 4.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 37.0
   },
   "CBC-12": {
    "single_slip": {
     "double_cases": 2176,
-    "double_detected": 2174,
-    "double_rate": 0.9991,
-    "swap_cases": 112,
-    "swap_detected": 110,
-    "swap_rate": 0.9821,
+    "double_detected": 2173,
+    "double_rate": 0.9986,
+    "swap_cases": 115,
+    "swap_detected": 112,
+    "swap_rate": 0.9739,
     "wrong_values": 340,
     "in_key": 68,
     "detected_all": 340,
@@ -253,7 +250,7 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8235
    },
-   "min_pupil_font_mm": 4.3,
+   "min_pupil_font_mm": 4.2,
    "min_teacher_font_mm": 3.7,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 38.0
@@ -274,7 +271,7 @@
     "rate_in_key": 1.0,
     "caught_by_structure_checks": 0.8333
    },
-   "min_pupil_font_mm": 4.4,
+   "min_pupil_font_mm": 4.3,
    "min_teacher_font_mm": 3.6,
    "teacher_short_labels": 0,
    "narrowest_region_width_at_label_mm": 35.0
@@ -348,26 +345,30 @@
    "bad": 0
   },
   "bank bonds tier 1": {
-   "questions": 750,
+   "questions": 1000,
    "forms": [
     "f1",
     "f2",
     "f3",
     "f4",
     "f5",
-    "f6"
+    "f6",
+    "f7",
+    "f8"
    ],
    "bad": 0
   },
   "bank bonds tier 2": {
-   "questions": 750,
+   "questions": 1000,
    "forms": [
     "f1",
     "f2",
     "f3",
     "f4",
     "f5",
-    "f6"
+    "f6",
+    "f7",
+    "f8"
    ],
    "bad": 0
   },
