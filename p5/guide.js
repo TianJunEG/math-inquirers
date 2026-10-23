@@ -39,6 +39,7 @@ G.push(tbl([900, 900, 3000, 2400, 2700], [
   ...L.lessons.map(l => row([c2('Week ' + l.week + (l.session === 'A' ? 'a' : 'b'), 900, { align: AlignmentType.CENTER }), c2(String(l.n), 900, { align: AlignmentType.CENTER }), c2(l.title, 3000, { bold: true }), c2(l.topic, 2400), c2(l.skills.split(',')[0], 2700)]))
 ]));
 G.push(tx('Suggested pairing: two lessons a week, for example Tuesday and Thursday, or Saturday and Sunday. Keep the same time slot all five weeks.', { before: 60 }));
+G.push(tx('Week 5 of the December 2026 beta: lessons 9 and 10 are four days apart. Friday 25 December is skipped, so lesson 9 moves to Wednesday 23 December (4:45 to 6:15 pm) and lesson 10 stays on Sunday 27 December (4:15 to 5:45 pm). In the other weeks the two lessons are two days apart, so tell families early. At the end of lesson 9 remind children that the two days of a normal week become four, and that the Lesson 9 take-home parts can be done in that time.', { before: 60 }));
 
 /* ---------- Routine ---------- */
 G.push(h1('The 90-minute lesson routine', true));

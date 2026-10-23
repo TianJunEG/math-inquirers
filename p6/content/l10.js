@@ -125,7 +125,7 @@ module.exports = {
     hints: ['Hint 1: “Start from a starter project and change one thing: the rule, the numbers, or the question.”', 'Hint 2: “Write the maths on your planning sheet first. Then find one block for each line of your plan.”', 'Hint 3: “If the program disagrees with you, trace it in a table: which value goes in, what does each block do?”'],
     talk: ['“What was the hardest bug you fixed today? How did you find it?”', '“Which maths idea from the program would you like to explore further, and what would you try next?”'],
     talkAns: 'Open answers. Listen for: testing with a value worked out by hand, tracing the code in a table, and maths links (nth term, primes, negative numbers, equations, probability, angles, averages). This is enrichment toward secondary maths and coding, not a preview of exam topics.',
-    close: ['“Ten lessons ago you predicted the 100th term of a pattern and checked it in code. Today you built your own puzzle program and explained the maths to an audience. That is what inquirers do. Here is your certificate. Keep noticing, keep testing, and keep asking why!”', 'Give each child a certificate and tell them one specific thing they did well in their showcase.']
+    close: ['“Ten lessons ago you predicted the 100th term of a pattern and checked it in code. Today you built your own puzzle program and explained the maths to an audience. That is what inquirers do. Here is your certificate. Keep noticing, keep testing, and keep asking why!”']
   },
 
   deck: {
@@ -177,7 +177,7 @@ module.exports = {
       { q: 'Three numbers have a mean of 8 and a median of 7. The biggest is 9 more than the smallest. Find the three numbers.', a: '4, 7 and 13 (the total is 24, so the smallest and biggest add to 17 and differ by 9)' },
       { q: 'Make up a challenge question that mixes TWO topics from the programme (for example primes and the clock, or sequences and negative numbers). Write the question, the answer and the working. Swap with a partner and solve each other’s.', a: 'Open. Example: “The nth term of a sequence is 7n − 3. Which is the first term that is a multiple of 5?” The terms are 4, 11, 18, 25, so it is the 4th term, 25. Check that the answer is correct and that both topics are really needed.' },
       { q: 'A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9? Plan a program that tests it 1000 times.', a: '8/64 = 1/8 (1 + 8, 2 + 7, … , 8 + 1), so about 125 in 1000. Program: set nines to 0; repeat 1000 (if pick random 1 to 8 + pick random 1 to 8 = 9 then change nines by 1); say nines.' },
-      { q: 'The nth term of a sequence is 6n − 1. Is 2027 (the year you start Secondary 1) in the sequence? Which is the first term bigger than 2027?', a: 'Yes: it is the 338th term (6 × 338 − 1 = 2027). The first term bigger than 2027 is the 339th, 2033.' }
+      { q: 'The nth term of a sequence is 6n − 1. Is 2027 in the sequence? Which is the first term bigger than 2027?', a: 'Yes: it is the 338th term (6 × 338 − 1 = 2027). The first term bigger than 2027 is the 339th, 2033.' }
     ]
   },
 

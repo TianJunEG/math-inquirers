@@ -61,9 +61,9 @@ module.exports = {
     key: [
       ['Q1', '(a) Bottles: 16, 48, 80; minutes for 160 bottles: 10; 12 minutes: 192 bottles  (b) 9.25 a.m. (400 ÷ 16 = 25 minutes)'],
       ['Q2', '(a) A 70¢, B 73¢, C 65¢ (Shop C gives 12 cans for $7.80)  (b) Shop C  (Ben needing exactly 20 cans with whole packs is in the Think harder pool: three ways, the cheapest is 1 deal from C + 2 packs from B = $13.64)'],
-      ['Q3', '(a) 20 minutes (240 ÷ 12)  (b) 8 minutes (240 ÷ 30)  (c) 10 minutes (240 ÷ 24)  (d) 20 minutes (120 ÷ 6)'],
+      ['Q3', '(a) 20 minutes (240 ÷ 12)  (b) 8 minutes (240 ÷ 30)  (c) 10 minutes (240 ÷ 24)'],
       ['Q4', '(a) 18 minutes (900 ÷ 50)  (b) 20 minutes (P prints 150 pages alone in 5 min; 750 ÷ 50 = 15 min more)  (Splitting 900 pages so both printers finish together, 540 pages to P, is in the Think harder pool)'],
-      ['Q5', '(a) $4.80 (3 h 35 min: first hour $1.20, then 2 h 35 min is 5 half hours and 5 min, so 6 lots of 60¢ = $3.60)  (b) 3 hours ($3.60 − $1.20 = $2.40 = 4 half hours after the first hour)'],
+      ['Q5', '(a) $4.80 (3 h 35 min: first hour $1.20, then 2 h 35 min is 5 half hours and 5 min, so 6 lots of 60¢ = $3.60)'],
       ['Q6', '(a) Gym A $50, $70, $90; Gym B $35, $70, $105  (b) 10 visits  (c) Gym A, by $12 ($86 and $98)']
     ]
   },
@@ -118,6 +118,8 @@ module.exports = {
       { q: 'A dripping tap drips 5 ml of water every 2 seconds. How many litres of water does it waste in one whole day?', a: '216 ℓ (in 1 day there are 86 400 seconds, 43 200 drips of 5 ml is 216 000 ml).' },
       { q: 'Three shops sell the same can of drink: Shop A, 6 cans for $4.20; Shop B, 4 cans for $2.92; Shop C, a deal of 12 cans for $7.80 (10 cans and 2 free). Ben needs exactly 20 cans. He may buy from more than one shop, but only whole packs. Find the cheapest way and its cost.', a: '$13.64: 1 deal from C (12 cans, $7.80) + 2 packs from B (8 cans, $5.84). The only other ways are 2 packs from A + 2 packs from B = $14.24 and 5 packs from B = $14.60.' },
       { q: 'Printer P prints 30 pages a minute and printer Q prints 20 pages a minute. Mei splits a 900-page job between them so that both printers start together and finish at the same time. How many pages does she give to P?', a: '540 pages (together they print 50 pages a minute, so the job takes 18 minutes; P prints 30 × 18 = 540 and Q prints 20 × 18 = 360)' }
+      ,{ q: 'The 240 ℓ tank is full. Both taps are off, but the crack still lets out 6 ℓ a minute. How long until the tank is half full?', a: '20 minutes (half is 120 ℓ, and 120 ÷ 6 = 20).' }
+      ,{ q: 'A car park charges $1.20 for the first hour and 60¢ for every half hour (or part of a half hour) after that. Mei pays $3.60. What is the longest time she could have parked?', a: '3 hours ($3.60 − $1.20 = $2.40 = 4 half hours after the first hour, so up to 1 h + 2 h = 3 hours).' }
     ],
     challenge: [
       { q: 'Printer P prints a job in 6 minutes. Printer Q prints the same job in 3 minutes. How long do they take working together?', a: '2 minutes (pretend the job is 6 pages: P prints 1 page a minute, Q 2 pages, together 3 a minute)' },
@@ -157,7 +159,7 @@ module.exports = {
       H.sub('b', 'Which shop is the best buy?   ________'),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
       H.tbl([3600, 6300], [H.row([H.cell('<div>' + figTaps() + '</div>', 3600, { h: 20 }),
-        H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + TKP + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + TKP + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________<br>' + L('(d)') + '(try this one if you like) The tank is full. Both taps are off but the crack still leaks. How long until it is half full?   ________'), 6300, { h: 40 })])]),
+        H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + TKP + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + TKP + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________'), 6300, { h: 40 })])]),
 
       H.q(4, 'Printer P prints 30 pages a minute. Printer Q prints 20 pages a minute. A job has 900 pages.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Both printers start together. How long do they take to print the job?   ________'),
@@ -165,11 +167,10 @@ module.exports = {
       ...H.lines(1),
       H.q(5, [TKQ, 'Look at the car park sign.'], { keepNext: true }),
       H.fig(figPark()),
-      H.p(['<b style="color:#1F7A6F">Start here:</b> the time line shows the first hour, then half hours. Circle every half hour that Ali’s car is in the car park (a part of a half hour counts). Count them.'], { after: 10 }),
+      H.p(['<b style="color:#1F7A6F">Start here:</b> circle every half hour that Ali’s car is in the car park on the time line (a part of a half hour counts). Count them.'], { after: 10 }),
       H.fig(figTimeline()),
       H.sub('a', 'Ali parks from 9.40 a.m. to 1.15 p.m. How much does he pay?', { keepNext: true }),
       ...H.lines(1),
-      H.sub('b', '(try this one if you like) Mei pays $3.60. What is the longest time she could have parked?   ________________'),
       H.q(6, 'Gym A charges $30 to join and then $4 for each visit. Gym B has no joining fee and charges $7 for each visit.', { keepNext: true }),
       H.sub('a', 'Complete the table.', { keepNext: true, after: 60 }),
       gymTbl,

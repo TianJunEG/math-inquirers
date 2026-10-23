@@ -74,10 +74,28 @@ class Target:
         d = self.blocks[first]
         d['topLevel'], d['parent'] = True, None
         d['x'], d['y'] = (x if x is not None else self.nextx), (y if y is not None else self.nexty)
-        self.nexty += 60 + 46 * (len(body) + 1) + 40 * sum(1 for _ in body)
-        if self.nexty > 600:
+        # lay scripts out in columns using the real height of each script (measured in the Scratch editor,
+        # see verify/editor_check.py): 48 per block, 64 for a block that holds another block, C blocks add their arm
+        self.nexty += self.height(first) + 40
+        if self.nexty > 640:
             self.nexty = 20
-            self.nextx += 420
+            self.nextx += 760
+
+    def height(self, first):
+        total, cur = 0, first
+        while cur:
+            d = self.blocks[cur]
+            nested = any(isinstance(v, list) and v and v[0] == 3 for v in d['inputs'].values())
+            if d['opcode'] in ('control_repeat', 'control_repeat_until', 'control_if', 'control_if_else', 'control_forever'):
+                inner = d['inputs'].get('SUBSTACK'); inner2 = d['inputs'].get('SUBSTACK2')
+                total += 72 + (self.height(inner[1]) if inner else 24) + 40
+                if inner2: total += 40 + self.height(inner2[1])
+            elif d['opcode'].startswith('event_'):
+                total += 90
+            else:
+                total += 64 if nested else 48
+            cur = d['next']
+        return total
 
     # --- blocks ---
     def flag(self): return self.b('event_whenflagclicked')

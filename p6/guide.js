@@ -82,7 +82,7 @@ const doo = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'DO     ' :
 const REC = require('../levels/reccues.js'); let CURL = null; const SEGS = [];
 const rec = (text) => G.push(p([t('REC   ', { bold: true, size: 19, color: '6B3FA0' }), t(text, { size: S, italics: true })], { after: 40, indent: { left: 900, hanging: 900 }, line: 280 }));
 // a segment is a budget part {start, end} from p6/budget.json; the REC cue gets a whole-minute length (rounded) because reccues.js reads whole minutes
-const pushSeg = (part, title) => { const time = fm(part.start) + '–' + fm(part.end) + ' min'; G.push(seg(time, title)); const c = REC.cue(title, '0–' + (part.end - part.start), CURL); SEGS.push({ time, title, action: c.action }); rec(c.say); };
+const pushSeg = (part, title, over) => { const time = fm(part.start) + '–' + fm(part.end) + ' min'; G.push(seg(time, title)); const c = over || REC.cue(title, '0–' + (part.end - part.start), CURL); SEGS.push({ time, title, action: c.action }); rec(c.say); };
 const ask = (rows, h1c, h2c) => { G.push(tbl([4600, 5300], [row([hd(h1c || 'Ask', 4600), hd(h2c || 'Expect', 5300)]), ...rows.map(r => row([c2(r[0], 4600), c2(r[1], 5300)]))])); G.push(gap(40)); };
 const stuck = (lines) => lines.forEach((s, i) => G.push(p([t(i === 0 ? 'IF STUCK   ' : '                ', { bold: true, size: 19, color: 'A61C00' }), t(s, { size: S })], { after: 40, indent: { left: 1300, hanging: 1300 }, line: 280 })));
 
@@ -197,7 +197,7 @@ L.lessons.forEach(l => {
   say(s.close);
   G.push(h2('Looking back (2 minutes, minutes 86 to 88)'));
   say(['Two minutes, just for you, in the Looking back box: something I did well, the hardest part, and what helped. You can write pass. Nobody marks this. If you are still stuck, tick that box and I will check in with you in the open session.']);
-  doo(['Everyone reaches this box: it is on the Finish page, not on the Think harder pages. Collect nothing in front of the group and never read an answer out. You may look at a child’s box on camera in the open session if the child offers it. Praise the strategy, not the speed: “you ' + gp.reflectEx + ', and that is what got you unstuck”, never “you were quick”.', 'If a child ticks “I am still stuck”, check in during the open session the same day: visit the shared breakout room or use a hand signal, with a parent nearby. Never by private message. If a child writes “everything” or “I am bad at maths”, say quietly in the open session: “Thank you for telling me. Let’s find one small thing that worked today,” and point to a specific item they got right. If a child writes “nothing was hard”, ask what would make it harder.']);
+  doo(['Everyone reaches this box: it is on the Finish page, not on the Think harder pages. Collect nothing in front of the group and never read an answer out. You may look at a child’s box on camera in the open session if the child offers it. Praise the strategy, not the speed: “' + gp.reflectEx + ', and that is what got you unstuck”, never “you were quick”.', 'If a child ticks “I am still stuck”, check in during the open session the same day: visit the shared breakout room or use a hand signal, with a parent nearby. Never by private message. If a child writes “everything” or “I am bad at maths”, say quietly in the open session: “Thank you for telling me. Let’s find one small thing that worked today,” and point to a specific item they got right. If a child writes “nothing was hard”, ask what would make it harder.']);
   doo(['Minutes 88 to 90: stamp the inquiry journal when a child shows you the exit slip. Mark S, D or H in the progress tracker at the back of this guide. If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);
   } else {
     const cp = BP('Challenge'), sp = BP('Starter'), bk = BP('Brain break'), pb = BP('Plan and build'), fp = BP('Flex'), sh = BP('Showcase'), xp = BP('Exit slip'), lb = BP('Looking back'), cl = BP('Certificates');
@@ -221,9 +221,10 @@ L.lessons.forEach(l => {
     pushSeg(bk, 'Brain break');
     doo([d.brk, 'Water at the desk, no toilet round (say so at the start of the break). Keep it to ' + fm(bk.end - bk.start) + ' minutes.']);
 
-    pushSeg(pb, 'Plan and build (workbook page 2, then Scratch)');
+    pushSeg(pb, 'Plan and build (workbook page 2, then Scratch)', { say: 'Pause. Fill in your plan on workbook page 2 (your idea, the answer you worked out by hand, and your twist), then build your program in Scratch and test it with a value you worked out first. This takes about ' + fm(pb.end - pb.start) + ' minutes. Press play to see how the showcase works.', action: 'Pause. Fill in the plan on workbook page 2, build and test the program in Scratch (about ' + fm(pb.end - pb.start) + ' minutes). Press play for the showcase.' });
     doo(['Minute ' + fm(pb.start) + ': children plan on workbook page 2 and then build. Q4: only the part for the starter the child picked (about 2 minutes); Q5: three cells (idea, answer, twist); Q6: three test rows written BEFORE running. Do not read the preview slide aloud. A working copy of one starter with one change is full marks. Think harder, Go further and the Investigation are open to every child, with no label. The build part ends at minute ' + fm(pb.end) + '.']);
     say(['Plan first, on paper. Then build. I am not looking for speed. I am looking for good thinking.']);
+    doo(['Time checks for you (say them aloud): minute 40 “plan finished, start building”; minute 52 “save your file, test with your worked-out value”; minute 58 “stop building, show-and-tell next”. If most children are still building at minute 58, the flex (to ' + fm(fp.end) + ') is for finishing. If you are still behind at ' + fm(fp.end) + ', do not shorten the exit slip, the looking back or the certificates: start the showcase on time and give each child 2 minutes (show 20 s, run 25 s, test 30 s, maths 45 s). A child whose program is not working shows the plan page and the one test worked out by hand, and you run the unchanged starter for the audience. That is a complete showcase.']);
     doo(['Circulate and ask:']);
     s.circulate.forEach(c => G.push(bu(c)));
     stuck(s.hints);
@@ -244,7 +245,7 @@ L.lessons.forEach(l => {
 
     pushSeg(lb, 'Looking back');
     say(['Two minutes, just for you, in the Looking back box: something I did well, the hardest part, and what helped. You can write pass. Nobody marks this. If you are still stuck, tick that box and I will check in with you in the open session.']);
-    doo(['Everyone reaches this box: it is on the Finish page. Collect nothing in front of the group and never read an answer out. Praise the strategy, not the speed: “you ' + gp.reflectEx + ', and that is what got you unstuck”. Looking back stays 2 minutes.']);
+    doo(['Everyone reaches this box: it is on the Finish page. Collect nothing in front of the group and never read an answer out. Praise the strategy, not the speed: “' + gp.reflectEx + ', and that is what got you unstuck”. Looking back stays 2 minutes.']);
 
     pushSeg(cl, 'Certificates and closing');
     say(s.close);

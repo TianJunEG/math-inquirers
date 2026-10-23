@@ -71,7 +71,7 @@ def numcards(sid, time, title, items, notes, size=38):
 notes = (f"Objective: {L['objective']} Materials: {L['materials']} Online: {L['online']} "
          "Time plan: warm-up 0 to 10, explore 10 to 25 (paper only), teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, "
          "worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90. "
-         "Before the lesson: share the starter project “Every Order” as an .sb3 file (a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1). The sprite says the numbers 1, 2, 3, not the tea names: tell children that teas are numbered 1 = milk, 2 = green, 3 = taro and toppings 1 = pearls, 2 = jelly, so \"join tea topping\" saying 21 means green with pearls.")
+         "Before the lesson: share the starter file L5_Every_Order.sb3 (also in the families zip; a sprite with: set tea to 1, repeat 3: say tea for 1 second, change tea by 1). The sprite says the numbers 1, 2, 3, not the tea names: tell children that teas are numbered 1 = milk, 2 = green, 3 = taro and toppings 1 = pearls, 2 = jelly, so \"join tea topping\" saying 21 means green with pearls.")
 body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {N}  •  WEEK 3</p>'
         f'<h1 style="font-family:{HF};font-size:128px;font-weight:600;line-height:1.05">{E(L["title"])}</h1>'
         f'<p style="font-size:44px;color:#C9D4EC">Counting  •  nested loops</p>'

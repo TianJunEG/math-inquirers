@@ -141,8 +141,8 @@ module.exports = {
     W.push(H.p(['<b style="color:' + TEAL + '">Hint:</b> how much of a whole pizza is each child short of? Compare the two shortfalls.'], { after: 10 }));
     W.push(H.fig(shareBars()));
     // Q2 unit fractions
-    W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top). Take away a unit fraction. Is what is left a unit fraction?', { keepNext: true }));
-    W.push(H.p(['<b style="color:' + TEAL + '">Worked example:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + ': write ' + fr(1, 2) + ' as tenths, ' + fr(5, 10) + '. So ' + fr(7, 10) + ' − ' + fr(5, 10) + ' = ' + fr(2, 10) + ' = ' + fr(1, 5) + ', and ' + fr(7, 10) + ' = ' + fr(1, 2) + ' + ' + fr(1, 5) + '. (The fraction wall at the back of the book shows ' + fr(1, 2) + ' = ' + fr(5, 10) + '.)'], { after: 20 }));
+    W.push(H.q(2, 'Write each fraction as the sum of two DIFFERENT unit fractions (1 on top): take away one unit fraction. Is what is left a unit fraction?', { keepNext: true }));
+    W.push(H.p(['<b style="color:' + TEAL + '">Worked example:</b>&nbsp; ' + fr(7, 10) + ' − ' + fr(1, 2) + ': write ' + fr(1, 2) + ' as tenths, ' + fr(5, 10) + '. So ' + fr(7, 10) + ' − ' + fr(5, 10) + ' = ' + fr(2, 10) + ' = ' + fr(1, 5) + ', and ' + fr(7, 10) + ' = ' + fr(1, 2) + ' + ' + fr(1, 5) + '. (See the fraction wall at the back.)'], { after: 20 }));
     W.push(H.sub('a', [fr(9, 20) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr() + '&nbsp;&nbsp;&nbsp; (try 1/3, 1/4, 1/5 … in turn)&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;&nbsp; ' + fr(2, 3) + '&nbsp; = &nbsp;' + ufr() + '&nbsp; + &nbsp;' + ufr()]));
     // Q3 remainder
     W.push(H.q(3, [TKQ, 'Siti had 240 stickers. She gave ' + fr(1, 4) + ' of them to Ben and ' + fr(2, 3) + ' of the REMAINDER to Ali.'], { keepNext: true }));
@@ -159,7 +159,7 @@ module.exports = {
     { const ws = [6600, 3300];
       const sums = [[[1, 2], [1, 6]], [[1, 2], [1, 6], [1, 12]], [[1, 2], [1, 6], [1, 12], [1, 20]]];
       W.push(H.tbl(ws, sums.map(sm => H.row([H.cell(['<div style="text-align:left;padding-left:12px">' + sm.map(([a, b]) => fr(a, b)).join(' + ') + ' &nbsp;=</div>'], ws[0], { h: 36 }), H.cell('', ws[1], { h: 36 })])))); }
-    W.push(H.sub('c', ['(try this one if you like) Predict:&nbsp; ' + fr(1, 2) + ' + ' + fr(1, 6) + ' + ' + fr(1, 12) + ' + … + ' + fr(1, 90) + ' = ________&nbsp;&nbsp; Explain how you know.'], { after: 40 }));
+    W.push(H.sub('c', ['(optional) Predict:&nbsp; ' + fr(1, 2) + ' + ' + fr(1, 6) + ' + ' + fr(1, 12) + ' + … + ' + fr(1, 90) + ' = ________&nbsp;&nbsp; Explain how you know.'], { after: 40 }));
     W.push(...H.lines(1));
     // Q5 backwards
     W.push(H.q(5, ['Ravi spent ' + fr(2, 5) + ' of his money on a game and ' + fr(1, 2) + ' of the remainder on a book. He had $36 left. Draw a model.'], { keepNext: true }));

@@ -49,7 +49,7 @@ module.exports = {
     key: [
       ['Q1', '(a) $20, $10, $30 (book 1/3 of $60 = $20, remainder $40, pen 1/4 of $40 = $10, left $30)  (b) Too little ($30 left is less than $36): Ravi had $72 (3 units = $36 left out of 6 units, 1 unit = $12)  (c) $12 (book $24, pen $12)'],
       ['Q2', '(a) 84 (giving does not change the total)  (b) Siti 48, Mei 36 (after: 7 units = 84, 1 unit = 12; Siti 36 + 12 = 48)'],
-      ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.  (b) 20 (total 80 = 8 units, 1 unit = 10; Ali 30, Ben 50)'],
+      ['Q3', '(a) No. If Ali gives 20, Ali has 30 and Ben has 50. Giving 10 makes them the same (40 each): Ali loses 10 and Ben gains 10, so the gap of 20 closes by 20.'],
       ['Q4', '(a) The difference: $24  (b) $22 (the difference $24 is 1 unit; Ali 2 units = $48, so $48 − $26 = $22)'],
       ['Q5', '(a) Blue (only red beads were added)  (b) 2/5 (8 out of 20); 30 beads now; 4/15 (8 out of 30)  (c) The blue beads are still 8, but the jar has more beads in it, so blue is a smaller part of the whole']
     ]
@@ -104,6 +104,7 @@ module.exports = {
       { q: 'Siti gave 1/3 of her stickers to Mei. Then they had the same number of stickers. Mei had 15 stickers at first. How many did Siti have at first?', a: '45 (Siti 3 units; after giving 1 unit she has 2 units, and Mei has 15 + 1 unit = 2 units, so 1 unit = 15)' },
       { q: 'Ravi had $45 and Ben had $15. Their aunt gave each of them the same amount of money. Then Ben had 1/2 as much as Ravi. How much did the aunt give each boy?', a: '$15 (the difference, $30, is 1 unit; Ben $30, Ravi $60)' },
       { q: 'A box had red pens and blue pens. 2/3 of the pens were blue. After 12 blue pens were taken out, 1/2 of the pens were blue. How many pens were in the box at first?', a: '36 (the red pens did not change: red 1 unit, blue 2 units at first, 1 unit after; 1 unit = 12)' }
+      ,{ q: 'Ali has 50 marbles and Ben has 30 marbles. How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?', a: '20 (the total, 80, stays the same and is 8 units, so 1 unit is 10; Ali ends with 30 and Ben with 50).' }
     ],
     challenge: [
       { q: 'Make up your own before-and-after story in which the total stays the same and a fraction is used in the After (like “Ali has 1/2 as many as Ben”). Solve it with a model, swap with a partner and check each other. What if the fraction in your story were changed?', a: 'Open-ended. Sample: Ali and Ben have 108 stickers altogether. Ali gives Ben 24 stickers. Then Ali has 1/2 as many stickers as Ben. How many did Ali have at first? (After: 3 units = 108, Ali 36, Ben 72; Ali had 36 + 24 = 60, Ben 48.) Check that the total is the same in both models and that every unit is the same size.' },
@@ -123,7 +124,7 @@ module.exports = {
     H.q(1, 'Ravi had some money. He spent 1/3 of it on a book and 1/4 of the remainder on a pen. He had $36 left.', { before: 40, keepNext: true }),
     H.fig(raviBar()),
     H.sub('a', 'Try $60 first. The book costs $______, the pen costs $______, and $______ is left.'),
-    H.sub('b', 'Ravi really had $36 left, not $30. Was $60 too much or too little for the money he had at first? How much money did Ravi have at first?'), H.ans(),
+    H.sub('b', 'Ravi really had $36 left, not $30. Was $60 too much or too little? How much money did Ravi have at first?'), H.ans(),
     H.sub('c', 'How much more did the book cost than the pen?'), H.ans(),
     H.q(2, 'Siti and Mei had 84 stickers altogether. Siti gave Mei 12 stickers. Then Siti had 3/4 as many stickers as Mei.', { keepNext: true }),
     H.p(['<b style="color:' + TEAL + '">Tip:</b> “3/4 as many” means that for every 3 stickers Siti has, Mei has 4. Try 3 and 4, then 6 and 8, then 9 and 12 … until the total is 84.'], { after: 20 }),
@@ -132,7 +133,6 @@ module.exports = {
     H.sub('b', 'How many stickers did Siti have at first? How many did Mei have at first?'), H.ans('Siti: __________     Mei:'),
     H.q(3, [TKQ, 'Ali has 50 marbles and Ben has 30 marbles. Ali gives some of his marbles to Ben (Ali has fewer afterwards and Ben has more).'], { pb: true, before: 0, keepNext: true }),
     H.sub('a', 'Ben says, “If Ali gives me 20 marbles, we will have the same number, because Ali has 20 more than me.” Test it: after Ali gives 20, Ali has ______ and Ben has ______. Is Ben right? Explain.'), ...H.lines(1),
-    H.sub('b', '(try this one if you like) How many marbles must Ali give Ben so that Ali has 3/5 as many marbles as Ben?'), H.ans(),
 
     H.q(4, 'Ravi had $50 and Ali had $26. Their mother gave each of them the same amount of money. Then Ali had 2/3 as much money as Ravi.', { keepNext: true }),
     H.p(['<b style="color:' + TEAL + '">Start here:</b> try a gift of $10 each. How much does each boy have now? Is Ali’s money 2/3 of Ravi’s? Is the gift too big or too small?'], { after: 20 }),

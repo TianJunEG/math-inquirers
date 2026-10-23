@@ -142,7 +142,7 @@ body=h2('Explore: build a secret machine')+f'<div style="display:flex;gap:32px;a
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Screen-share Scratch for 2 minutes and build the machine together: "ask" is in Sensing (light blue), "answer" is the round block under it, the * and + blocks are in Operators (green); put the * block INSIDE the + block. Make a variable called out. Type 4: it says 14. '
  'Then pairs go to breakout rooms. Each pair does ONE direction: one child changes the rule to a secret two-step rule (one × and one + or −), shares their screen and types in the IN numbers the partner calls out; the partner tries to write the rule with n using as few IN numbers as possible. The swap is the Go further what-if (below), so nobody waits. '
- 'If a pair wants more: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. Tutor: build the Machine starter beforehand from the picture and share it through the approved channel (no .sb3 file exists in this repository). The child only has to change the 3 and the 2 to numbers of their own. '
+ 'If a pair wants more: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. Tutor: the Machine starter is the file L4_Function_Machine.sb3 (sent to families with the workbook; share it through the approved channel only). The child only has to change the 3 and the 2 to numbers of their own. '
  +PY_NOTE))
 
 # ---------- 5 explore2 ----------

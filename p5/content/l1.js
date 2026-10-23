@@ -56,7 +56,7 @@ module.exports = {
       ['Q2', '(a) 9 865 320  (b) 2 035 698'],
       ['Q3', '(a) 7 2 5 … and 7 3 6 …  (b) 7 3 is wrong: Clue 4 gives 6 − 3 = 3, so the digit 3 would be used twice  (c) 7 253 609. Rounding gives 7 2 with ten thousands digit 5 or more, or 7 3 with ten thousands digit 4 or less. "3 more" only works for 7 25: 2 + 3 = 5. Then thousands 5 − 2 = 3, hundreds 6, tens 0, and 7 + 2 + 5 + 3 + 6 + 0 = 23, so the ones digit is 32 − 23 = 9.'],
       ['Q4', '(a) about 100 000: could be right  (b) about 60 000: must be wrong  (c) about 6 300 000: must be wrong  (d) about 320 000: could be right'],
-      ['Q5', '(a) (6 + 4) × 5 − 2 = 48  (b) 6 + 4 × (5 − 2) = 18  (c) 1 000 000 ÷ (200 + 300) × 2 = 4000  (d) 5 × (3 × 9 − 7) = 100'],
+      ['Q5', '(a) (6 + 4) × 5 − 2 = 48  (b) 6 + 4 × (5 − 2) = 18  (c) 1 000 000 ÷ (200 + 300) × 2 = 4000'],
       ['Q6', '(a) Circle 2 499 500, 2 500 000 and 2 500 499 (2 499 499 rounds to 2 499 000 and 2 500 500 rounds to 2 501 000)  (b) 2 499 500 and 2 500 499']
     ]
   },
@@ -153,7 +153,7 @@ module.exports = {
       W.push(H.tbl(ws, [H.row(['M', 'HTh', 'TTh', 'Th', 'H', 'T', 'O'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'EDEDED', h: 30 }))),
         H.row(ws.map(w => H.cell('', w, { h: 80 })))])); }
     W.push(H.sub('a', 'Clue 2: I start 7 2 … or 7 3 … Clue 3 gives the next digit.  Try both:  7 2 ____ …   and   7 3 ____ …'));
-    W.push(H.sub('b', 'Clue 4 gives the next digit after that. Now check Clue 1 (all different). Which start breaks it?   7 ___ is wrong.'));
+    W.push(H.sub('b', 'Clue 4 gives the next digit. Check Clue 1 (all different): which start breaks it?   7 ___ is wrong.'));
     W.push(H.sub('c', 'Use Clues 5 and 6 to finish.   I am  ______________________'));
 
     // ---- page 2 ----
@@ -167,7 +167,6 @@ module.exports = {
     W.push(H.sub('a', '6  +  4  ×  5  −  2  =  48'));
     W.push(H.sub('b', '6  +  4  ×  5  −  2  =  18'));
     W.push(H.sub('c', [TKP, H.t('1 000 000  ÷  200  +  300  ×  2  =  4000')]));
-    W.push(H.sub('d', '(try this one if you like) Target 100! Use 3, 5, 7 and 9 once each, with any of +, −, ×, ÷ and brackets, to make 100.  Hint: 100 = 5 × 20.', { after: 40 }));
     W.push(...H.lines(1));
     // Q6 find all
     W.push(H.q(6, [TKQ, H.t('A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?')], { keepNext: true }));

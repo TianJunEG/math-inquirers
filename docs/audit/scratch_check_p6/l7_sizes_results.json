@@ -1,0 +1,485 @@
+[
+ {
+  "key": "a",
+  "label": "triangle",
+  "closes": true,
+  "simExtent": [
+   -50,
+   50,
+   13,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   50,
+   13,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "b",
+  "label": "square",
+  "closes": true,
+  "simExtent": [
+   -50,
+   50,
+   0,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   50,
+   0,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "c",
+  "label": "pentagon",
+  "closes": true,
+  "simExtent": [
+   -81,
+   81,
+   -54,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -81,
+   81,
+   -54,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "d",
+  "label": "hexagon",
+  "closes": true,
+  "simExtent": [
+   -100,
+   100,
+   -73,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -100,
+   100,
+   -73,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "e",
+  "label": "octagon",
+  "closes": true,
+  "simExtent": [
+   -107,
+   87,
+   -93,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -107,
+   87,
+   -93,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "f",
+  "label": "9-gon",
+  "closes": true,
+  "simExtent": [
+   -125,
+   105,
+   -127,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -125,
+   105,
+   -127,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "g",
+  "label": "10-gon",
+  "closes": true,
+  "simExtent": [
+   -139,
+   119,
+   -146,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -139,
+   119,
+   -146,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "h",
+  "label": "12-gon",
+  "closes": true,
+  "simExtent": [
+   -118,
+   68,
+   -87,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -118,
+   68,
+   -87,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "i",
+  "label": "15-gon",
+  "closes": true,
+  "simExtent": [
+   -145,
+   95,
+   -138,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -145,
+   95,
+   -138,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "j",
+  "label": "24-gon",
+  "closes": true,
+  "simExtent": [
+   -149,
+   79,
+   -128,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -149,
+   79,
+   -128,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "k",
+  "label": "36-gon",
+  "closes": true,
+  "simExtent": [
+   -102,
+   12,
+   -14,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -102,
+   12,
+   -14,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "l",
+  "label": "Ben nonagon (turn 120)",
+  "closes": true,
+  "simExtent": [
+   -50,
+   30,
+   31,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   30,
+   31,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "m",
+  "label": "5-point star",
+  "closes": true,
+  "simExtent": [
+   -50,
+   100,
+   12,
+   154
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   100,
+   12,
+   154
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "n",
+  "label": "Q3 program: 9 x (move 150, turn 80)",
+  "closes": true,
+  "simExtent": [
+   -90,
+   140,
+   -99,
+   127
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -90,
+   140,
+   -99,
+   127
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "o",
+  "label": "9-point star, 4 times round",
+  "closes": true,
+  "simExtent": [
+   -50,
+   70,
+   32,
+   150
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   70,
+   32,
+   150
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "p",
+  "label": "20-point star, 3 times round",
+  "closes": true,
+  "simExtent": [
+   -109,
+   109,
+   -107,
+   111
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -109,
+   109,
+   -107,
+   111
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "q",
+  "label": "10-point star (turn 108)",
+  "closes": true,
+  "simExtent": [
+   -68,
+   118,
+   -43,
+   134
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -68,
+   118,
+   -43,
+   134
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "r",
+  "label": "8-point star (turn 135)",
+  "closes": true,
+  "simExtent": [
+   -50,
+   50,
+   29,
+   129
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   50,
+   29,
+   129
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "s",
+  "label": "Ali's pentagon (turn 108, does not close)",
+  "closes": false,
+  "simExtent": [
+   -62,
+   50,
+   5,
+   122
+  ],
+  "editorEnd": [
+   50,
+   27.3
+  ],
+  "editorExtent": [
+   -62,
+   50,
+   5,
+   122
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "t",
+  "label": "hexagon trial: turn 120 x 6",
+  "closes": true,
+  "simExtent": [
+   -50,
+   50,
+   13,
+   100
+  ],
+  "editorEnd": [
+   -50,
+   100
+  ],
+  "editorExtent": [
+   -50,
+   50,
+   13,
+   100
+  ],
+  "inStage": true,
+  "ok": true
+ },
+ {
+  "key": "u",
+  "label": "rosette: 12 x (square, turn 30), from 0,0",
+  "closes": true,
+  "simExtent": [
+   -137,
+   137,
+   -137,
+   137
+  ],
+  "editorEnd": [
+   0,
+   0
+  ],
+  "editorExtent": [
+   -137,
+   137,
+   -137,
+   137
+  ],
+  "inStage": true,
+  "ok": true
+ }
+]
