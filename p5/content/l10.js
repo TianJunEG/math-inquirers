@@ -1,5 +1,6 @@
 // Math Inquirers P5 — Lesson 10: Challenge Day (mixed strategies: working backwards, logic, models, listing, supposition)
 const { TKQ, TKP, LATER } = require('./take.js');
+const FG = require('../../levels/figs_l4_6.js');
 // Choose a start and explain it: draw a model, list it in order, make a table, work backwards, guess and check / suppose, use a logic grid.
 // Every answer below was worked out and checked with a short Python script (exhaustive search for every "find all" and every logic puzzle).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
@@ -10,11 +11,11 @@ const txt = (x, y, s, size = 16, fill = N, anchor = 'middle', weight = 700) =>
 
 // Q4: a 3 by 4 grid of unit squares (3 rows, 4 columns), drawn to scale: 12 small squares
 const gridSvg = () => {
-  const s = 56, x0 = 150, y0 = 14; let g = '';
+  const s = 44, x0 = 150, y0 = 6; let g = '';
   for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++)
     g += `<rect x="${x0 + c * s}" y="${y0 + r * s}" width="${s}" height="${s}" fill="${SKY}" stroke="${N}" stroke-width="3"/>`;
-  g += txt(x0 + 2 * s, y0 + 3 * s + 30, '3 rows of 4 small squares', 16);
-  return `<svg aria-label="A rectangle made of 3 rows of 4 small squares" viewBox="0 0 600 220" width="380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  g += txt(x0 + 2 * s, y0 + 3 * s + 26, '3 rows of 4 small squares', 16);
+  return `<svg aria-label="A rectangle made of 3 rows of 4 small squares" viewBox="100 0 360 170" width="360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 module.exports = {
@@ -124,33 +125,38 @@ module.exports = {
     // Q2 backwards (was Q1)
     W.push(H.q(2, 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?', { before: 20, keepNext: true }));
     W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> write the steps in order. Then undo the LAST step first.'], { after: 20 }));
-    W.push(...H.lines(1));
+    W.push(H.fig(FG.barModel({ rowH: 34, left: 150, rows: [
+      { name: 'Start', segs: [{ u: 2, t: 'book 1/3' }, { u: 4, t: 'the rest' }], note: '' },
+      { name: 'After the book', off: 2, segs: [{ u: 1.2, t: '$12' }, { u: 2.8, t: 'what was left' }] },
+      { name: 'After lunch', off: 3.2, segs: [{ u: 1.4, t: 'gift' }, { u: 1.4, t: '$15 left' }] }],
+      ann: [{ k: 'brace', row: 0, from: 0, to: 6, t: '? at the start' }],
+      label: 'Not to scale. The start bar is cut into a book part (one third) and the rest. The rest is cut into $12 for lunch and what was left. What was left is cut into two halves: the gift and $15 left.' })));
     W.push(H.ans('Answer:  $'));
     // Q3 model
-    W.push(H.q(3, [LATER, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.'], { keepNext: true }));
+    W.push(H.q(3, [LATER, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.'], { pb: true, before: 0, keepNext: true }));
     W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> Mei is 4 equal units. How many units is 3/4 of Mei’s? Where does the $10 go?'], { after: 20 }));
-    W.push(...H.lines(2));
+    W.push(H.fig(FG.barModel({ rowH: 34, left: 70, right: 160, rows: [{ name: 'Mei', segs: [{ u: 1 }, { u: 1 }, { u: 1 }, { u: 1 }] }, { name: 'Ravi', segs: [{ u: 1 }, { u: 1 }, { u: 1 }, { u: 1, f: 'shade', t: '$10' }] }],
+      ann: [{ k: 'rbrace', r1: 0, r2: 1, at: 4, t: '$115' }],
+      label: 'Two bars. Mei has 4 equal units. Ravi has 3 of the same units plus a shaded extra part of $10. A brace on the right marks $115 altogether.' })));
     W.push(H.ans('Mei:  $____________    Ravi:  $____________', 0));
 
     // ---- page 2 ----
-    W.push(H.q(4, 'How many squares of ALL sizes can you find in this 3 by 4 grid? Count by size so you do not miss any.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(4, 'How many squares of ALL sizes can you find in this 3 by 4 grid? Count by size so you do not miss any.', { keepNext: true }));
     W.push(H.fig(gridSvg()));
     W.push(H.sub('a', 'Squares of size 1 by 1:   ____________'));
     W.push(H.sub('b', [TKP, 'Squares of size 2 by 2:   ____________    Squares of size 3 by 3:   ____________']));
-    W.push(H.sub('c', [TKP, 'How many squares altogether? How do you know there are none bigger?'], { after: 20 }));
-    W.push(...H.lines(1));
+    W.push(H.sub('c', [TKP, 'How many squares altogether? How do you know there are none bigger?  ____________'], { after: 20 }));
     // Q5 truth
     W.push(H.q(5, [TKQ, 'Ali, Ben and Mei were playing. One of them broke a vase. Ali says, “Ben broke it.” Ben says, “Mei broke it.” Mei says, “I did not break it.” Exactly ONE of the three children is lying. Who broke the vase? Try each child and count the liars.'], { keepNext: true }));
     { const ws = [2600, 2400, 2400, 2500];
-      W.push(H.tbl(ws, [H.row(['If the vase was broken by …', 'Is Ali lying?', 'Is Ben lying?', 'Is Mei lying?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
-        ...['Ali', 'Ben', 'Mei'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 40 }), ...ws.slice(1).map(w => H.cell('', w, { h: 40 }))]))])); }
+      W.push(H.tbl(ws, [H.row(['If the vase was broken by …', 'Is Ali lying?', 'Is Ben lying?', 'Is Mei lying?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 36 }))),
+        ...['Ali', 'Ben', 'Mei'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 30 }), ...ws.slice(1).map(w => H.cell('', w, { h: 30 }))]))])); }
     W.push(H.p('Answer:  ______________________ broke the vase.', { before: 30, after: 10 }));
     // Q6 ages
     W.push(H.q(6, [TKQ, 'Mum is 41 years old and Mei is 9 years old.'], { keepNext: true }));
     W.push(H.sub('a', 'In how many years will Mum be exactly 3 times as old as Mei? Show your table or working.', { after: 20 }));
-    W.push(...H.lines(2));
-    W.push(H.sub('b', 'Which start did you use? Why did you choose it?', { after: 20 }));
     W.push(...H.lines(1));
+    W.push(H.sub('b', 'Which start did you use? Why did you choose it?  ______________________________', { after: 20 }));
     return W;
   }
 };

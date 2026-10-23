@@ -17,7 +17,7 @@ for line in body.split('\n'):
     if openb: out.append('</div></div>');openb=False
     out.append(line)
 if openb: out.append('</div></div>')
-body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()
+body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()+'.qbox{margin-top:9px!important;margin-bottom:5px!important}.qwrap{padding-top:5px!important}'
 # The old reflection box had lines wider than the page, which made Chrome shrink the whole print to 794/850 and every page was laid out for that scale.
 # The new look-back box fits the page, so keep the same shrink with this hidden 850 px spacer (otherwise first pages overflow).
 html=f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}<div style="position:absolute;left:0;top:0;width:850px;height:1px;visibility:hidden"></div></body></html>'

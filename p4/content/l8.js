@@ -31,12 +31,12 @@ const Q1NETS = [
   ['F', [[0, 0], [1, 0], [0, 1], [1, 1], [2, 1], [3, 1]]]
 ];
 const q1Svg = () => {
-  const c = 20, pw = 200, ph = 84;
+  const c = 30, pw = 200, ph = 108;
   let s = '';
   Q1NETS.forEach(([L, cells], i) => {
     const px = (i % 3) * pw, py = Math.floor(i / 3) * ph, [w, h] = dims(cells);
     s += `<rect x="${px + 4}" y="${py + 4}" width="${pw - 8}" height="${ph - 8}" rx="10" fill="${WH}" stroke="${N}" stroke-width="1.5" opacity="0.9"/>`;
-    s += tx(px + 22, py + 26, L, 20, TEAL) + `<rect x="${px + 12}" y="${py + 36}" width="22" height="22" rx="4" fill="${WH}" stroke="${N}" stroke-width="2"/>`;
+    s += tx(px + 22, py + 30, L, 22, TEAL) + `<rect x="${px + 11}" y="${py + 46}" width="24" height="24" rx="4" fill="${WH}" stroke="${N}" stroke-width="2"/>`;
     s += net(cells, c, px + 44 + (150 - w * c) / 2, py + (ph - h * c) / 2, {}, SKY);
   });
   return svg(600, 2 * ph, 'Six shapes made of 6 squares, labelled A to F, each with a tick box', s);

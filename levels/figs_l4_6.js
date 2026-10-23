@@ -50,7 +50,10 @@ const fit = (s, level, opt = {}) => {
   // ignore a single tiny decorative glyph? no: every text counts
   const mn = Math.min(...fs);
   const need = minPt / (mn * k) * vw;
-  const w = Math.min(maxW, Math.max(w0, Math.ceil(need)));
+  const vh = +vb[2];
+  let w = Math.min(maxW, Math.max(w0, Math.ceil(need)));
+  const capH = opt.maxH || 210;   // do not let one figure eat more than ~55 mm of page height unless its text is tiny
+  if (vh * w / vw > capH && (opt.maxH || mn * w0 / vw * k >= 6.5)) w = Math.max(w0, Math.round(capH * vw / vh));
   if (w === w0) return s;
   let tag2 = wm ? tag.replace(/ width="[\d.]+"/, ` width="${w}"`) : tag.replace('<svg', `<svg width="${w}"`);
   if (sm) tag2 = tag2.replace(/width:\s*[\d.]+px/, `width:${w}px`);
