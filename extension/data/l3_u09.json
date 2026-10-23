@@ -687,7 +687,7 @@
     "text": "1 h 20 min",
     "list": true
    },
-   "explanation": "From 18:35 to 19:00 is 25 min. 19:00 to 20:00 is 1 h. 20:00 to 20:10 is 10 min. The whole time is 1 h 35 min. Take away the 15 min break: 1 h 20 min.",
+   "explanation": "From 18:35 to 19:00 is 25 min. 19:00 to 20:00 is 1 h. 20:00 to 20:10 is 10 min. In all 1 h 35 min. Take away the 15 min break: 1 h 20 min.",
    "hint": "Find the whole time first. Then take away the break.",
    "space": {
     "rows": [

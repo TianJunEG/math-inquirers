@@ -365,7 +365,7 @@
      }
     }
    ],
-   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8: 38, then 46."
+   "explanation": "(a) Add 300. (b) Subtract 250. (c) Add 8: 38, then 46."
   },
   {
    "id": "L3U01-S09",
@@ -596,7 +596,7 @@
     ],
     "text": "10"
    },
-   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. Set 1, 1, 8 makes 118, 181, 811: 3 numbers. Set 1, 2, 4 makes 6. Set 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
+   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. 1, 1, 8 makes 118, 181, 811: 3 numbers. 1, 2, 4 makes 6. 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
    "hint": "List the sets of 3 digits first. Then arrange each set.",
    "space": {
     "rows": [

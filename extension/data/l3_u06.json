@@ -196,7 +196,7 @@
      }
     }
    ],
-   "explanation": "The bottom number is the number of equal parts in the whole. The top number is the number of shaded parts. A: 3 of 8. B: 4 of 6. C: 7 of 10. D: 2 of 5.",
+   "explanation": "The bottom number is the number of equal parts. The top number is the number of shaded parts. A: 3 of 8. B: 4 of 6. C: 7 of 10. D: 2 of 5.",
    "figure": {
     "type": "l3_fshapes",
     "items": [
@@ -352,7 +352,7 @@
      }
     }
    ],
-   "explanation": "(a) Same bottom number: 5 parts are more than 3. (b) Thirds are larger than quarters. (c) 2/4 = 4/8. (d) 3/4 = 9/12 and 5/6 = 10/12, and 9 is less than 10."
+   "explanation": "(a) Same bottom number: 5 parts are more than 3. (b) Thirds are larger than quarters. (c) 2/4 = 4/8. (d) 3/4 = 9/12, 5/6 = 10/12, and 9 is less than 10."
   },
   {
    "id": "L3U06-S05",
@@ -759,7 +759,7 @@
      }
     }
    ],
-   "explanation": "1/4 = 3/12 and 1/3 = 4/12. (a) 3/12 + 4/12 = 7/12. (b) 12/12 - 7/12 = 5/12.",
+   "explanation": "1/4 = 3/12, 1/3 = 4/12. (a) 3/12 + 4/12 = 7/12. (b) 12/12 - 7/12 = 5/12.",
    "hint": "Change quarters and thirds into twelfths first.",
    "space": {
     "rows": [

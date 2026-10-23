@@ -871,7 +871,7 @@
   {
    "id": "L4U02-C01",
    "tier": "quiz",
-   "text": "Round 25 962 to the nearest 10, 100 and 1000.\n{bw} {bw} {bw}",
+   "text": "Round 25 962 to the nearest:\n10 {bw}   100 {bw}   1000 {bw}",
    "answer": {
     "value": [
      "25960",

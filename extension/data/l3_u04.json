@@ -150,7 +150,7 @@
      }
     }
    ],
-   "explanation": "(a) Aisha has fewer: 1450 - 380 = 1070. (b) Together: 1450 + 1070 = 2520.",
+   "explanation": "(a) Fewer, so subtract: 1450 - 380 = 1070. (b) Together: 1450 + 1070 = 2520.",
    "figure": {
     "type": "l3_bars",
     "rows": [
@@ -384,7 +384,7 @@
     ],
     "text": "24.85"
    },
-   "explanation": "First add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85."
+   "explanation": "Add what she spends: 18.40 + 6.75 = 25.15. Then 50.00 - 25.15 = 24.85."
   },
   {
    "id": "L3U04-S10",

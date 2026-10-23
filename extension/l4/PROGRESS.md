@@ -21,3 +21,5 @@ Resume: nothing left to write. If a unit is edited, rerun `python3 extension/l4/
 
 
 23 Oct update: all audit High and Medium items fixed; `beyond` key and `{bw}` wide boxes in use; 100 pages. Gates re-run: run_checks 423 answers OK, dup_check OK, wording_lint 0 errors, bw_check and print/check_bw OK, fill_check OK. Open: Welcome soft page 3 overflows by 3 mm (shared tool text, not Level 4 content).
+
+23 Oct (round 2): 27 holiday-clone items replaced with new stories and frames, U2 G1 and U10 S7 Why lines fixed, protractor stub, wrapped boxes and U9 C1 fixed. 100 pages, 424 answers checked, all gates re-run.

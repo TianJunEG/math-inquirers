@@ -713,7 +713,7 @@
     },
     {
      "label": "b",
-     "text": "Edge of lawn plus edge of pond: {b} m",
+     "text": "Both edges together: {b} m",
      "answer": {
       "value": [
        "68"

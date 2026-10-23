@@ -463,7 +463,7 @@
      }
     }
    ],
-   "explanation": "52 ÷ 9 = 5 remainder 7. 5 full buses are not enough, as 7 children are left. So they need 6 buses. The last bus has 7 children, and 9 - 7 = 2 seats are empty."
+   "explanation": "52 ÷ 9 = 5 remainder 7. 5 full buses are not enough: 7 children are left. So 6 buses. The last bus has 7 children, and 9 - 7 = 2 seats are empty."
   },
   {
    "id": "L3U05-S10",
@@ -583,7 +583,7 @@
     "text": "18, 23, 33 and 48",
     "list": true
    },
-   "explanation": "A number leaves remainder 3 when it is 3 more than a number in the 5 times table: 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3, 48 = 45 + 3. 41 = 40 + 1 leaves 1."
+   "explanation": "A number leaves remainder 3 when it is 3 more than a number in the 5 times table: 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3, 48 = 45 + 3. 41 leaves 1."
   },
   {
    "id": "L3U05-S13",
@@ -645,7 +645,7 @@
     ],
     "text": "67"
    },
-   "explanation": "Numbers with remainder 2 when divided by 5 end in 2 or 7. 67 = 66 + 1 (66 is in the 3 times table) and 67 = 64 + 3 (64 is in the 4 times table). No other.",
+   "explanation": "Numbers with remainder 2 when divided by 5 end in 2 or 7. 67 = 66 + 1 (3 times table) and 67 = 64 + 3 (4 times table). No other works.",
    "hint": "Begin with the clue that gives the fewest numbers to list.",
    "space": {
     "rows": [
@@ -730,7 +730,7 @@
      }
     }
    ],
-   "explanation": "(a) 3 + 5 = 8, and 8 ÷ 7 leaves 1. (b) 3 + 3 = 6, smaller than 7. (c) 5 + 5 = 10, and 10 ÷ 8 leaves 2. Test: 10 + 5 = 15 leaves 1; 20 leaves 6; 26 ÷ 8 leaves 2.",
+   "explanation": "(a) 3 + 5 = 8, and 8 ÷ 7 leaves 1. (b) 3 + 3 = 6, smaller than 7. (c) 5 + 5 = 10, and 10 ÷ 8 leaves 2. Test: 10 + 5 = 15 leaves 1; 20 leaves 6.",
    "hint": "Try a number like 10 (remainder 3 when divided by 7). Test it.",
    "space": {
     "rows": [

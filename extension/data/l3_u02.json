@@ -178,7 +178,7 @@
     ],
     "text": "2375"
    },
-   "explanation": "First add what he used: 2475 + 3150 = 5625. Then 8000 - 5625 = 2375."
+   "explanation": "Add what he used: 2475 + 3150 = 5625. Then 8000 - 5625 = 2375."
   },
   {
    "id": "L3U02-S05",
@@ -857,7 +857,7 @@
     ],
     "text": "440"
    },
-   "explanation": "The end bricks of the bottom row count once in the top brick and the 2 middle bricks 3 times each. So 200 + 6 X + 440 = 3280, 6 X = 2640 and X = 440.",
+   "explanation": "The end bricks count once in the top brick and the 2 middle bricks 3 times each. So 200 + 6 X + 440 = 3280, 6 X = 2640 and X = 440.",
    "figure": {
     "type": "l3_pyramid",
     "rows": [

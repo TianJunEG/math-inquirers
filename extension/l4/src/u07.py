@@ -58,7 +58,7 @@ S.append(item(U+'-S05', 'start', 2, 'The staircase has 4 equal steps. Each step 
 S.append(item(U+'-S06', 'start', 2, 'A lawn is 16 m long and 10 m wide. A square pond with sides of 4 m sits in the lawn.',
   fig=POLY([dict({'pts': [[0, 0], [16, 0], [16, 10], [0, 10]], 'hole': [[6, 3], [10, 3], [10, 7], [6, 7]], 'fill': 'hatch', 'hole_labels': [{'seg': 0, 'text': '4 m'}]})], cell=16, width_mm=70),
   parts=[P('a', 'Area of lawn, not pond: {b} m²', A(144)),
-         P('b', 'Edge of lawn plus edge of pond: {b} m', A(68))],
+         P('b', 'Both edges together: {b} m', A(68))],
   figside=True,
   why='(a) The lawn is 16 × 10 = 160 m². The pond is 4 × 4 = 16 m². 160 − 16 = 144 m². (b) The lawn edge is 2 × (16 + 10) = 52 m. The pond edge is 4 × 4 = 16 m. 52 + 16 = 68 m.',
   space={'rows': ['Working:', '']}))
