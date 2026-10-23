@@ -73,7 +73,14 @@ def note_g(v, x, y):
             f'<text class="noteval" x="{x+2.8:.1f}" y="{y+5.6:.1f}" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text>'
             f'<text class="noteval2" x="{x+W-2.8:.1f}" y="{y+H-2.8:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text></g>')
 
+_OLD_D = {5: 16.2 * 0.78, 10: 18.5 * 0.78, 20: 21.4 * 0.78, 50: 24.7 * 0.78, 100: 24.65 * 0.78}
+
 def money_width(items, gap=2.0):
+    """width used ONLY to choose which seeded purses are allowed: the sizes of the earlier art are kept so the seeded puzzles (and their answers) stay the same.
+    The drawn width is real_money_width(); the pages are checked by eye and by validate.py that it fits."""
+    return sum((_OLD_D[i[1]] if i[0] == "c" else 27.0) + gap for i in items)
+
+def real_money_width(items, gap=2.0):
     return sum((COIN_D[i[1]] if i[0] == "c" else NOTE_WH[i[1]][0]) + gap for i in items)
 
 def money_svg(items, per_row=None, gap=2.0):
