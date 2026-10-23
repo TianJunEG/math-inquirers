@@ -75,18 +75,7 @@
    1.0,
    150,
    150
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    118,
-    118
-   ],
-   "all_other_values_rejected": [
-    150,
-    150
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -144,18 +133,7 @@
    1.0,
    495,
    495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    495,
-    495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -213,18 +191,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    56,
-    56
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -286,21 +253,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 5,
@@ -359,18 +312,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    65,
-    65
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -432,18 +374,7 @@
    1.0,
    138,
    138
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    138,
-    138
-   ],
-   "all_other_values_rejected": [
-    138,
-    138
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -500,21 +431,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 8,
@@ -558,18 +475,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -601,18 +507,7 @@
    1.0,
    48,
    48
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    48,
-    48
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -676,18 +571,7 @@
    1.0,
    114,
    114
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    63,
-    63
-   ],
-   "all_other_values_rejected": [
-    114,
-    114
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -745,18 +629,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -833,18 +706,7 @@
    1.0,
    204,
    204
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    204,
-    204
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -903,18 +765,7 @@
    1.0,
    234,
    234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    234,
-    234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -991,18 +842,7 @@
    1.0,
    1300,
    1300
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    1300,
-    1300
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1059,18 +899,7 @@
    1.0,
    475,
    475
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    59,
-    59
-   ],
-   "all_other_values_rejected": [
-    475,
-    475
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1133,21 +962,7 @@
    1.0,
    119,
    119
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    58,
-    58
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 17,
@@ -1205,18 +1020,7 @@
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1284,18 +1088,7 @@
    1.0,
    715,
    715
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    715,
-    715
-   ],
-   "all_other_values_rejected": [
-    715,
-    715
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1358,18 +1151,7 @@
    1.0,
    40,
    40
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    34,
-    34
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1446,18 +1228,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    40,
-    40
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1526,18 +1297,7 @@
    1.0,
    120,
    120
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    64,
-    64
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 22,
@@ -1607,18 +1367,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1681,18 +1430,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 24,
@@ -1745,18 +1483,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 25,
@@ -1819,18 +1546,7 @@
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    50,
-    50
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1889,18 +1605,7 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1948,18 +1653,7 @@
    1.0,
    87,
    87
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    87,
-    87
-   ],
-   "all_other_values_rejected": [
-    87,
-    87
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -2026,18 +1720,7 @@
    1.0,
    55,
    55
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    41,
-    41
-   ],
-   "all_other_values_rejected": [
-    55,
-    55
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 29,
@@ -2101,18 +1784,7 @@
    1.0,
    870,
    870
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    870,
-    870
-   ],
-   "all_other_values_rejected": [
-    870,
-    870
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 30,
@@ -2155,18 +1827,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 31,
@@ -2214,21 +1875,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    25,
-    25
-   ],
-   "all_other_values_rejected": [
-    25,
-    25
-   ],
-   "wrong_arrangements_rejected": [
-    119,
-    119
-   ]
-  }
+  ]
  },
  {
   "no": 32,
@@ -2297,18 +1944,7 @@
    1.0,
    66,
    66
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    47,
-    47
-   ],
-   "all_other_values_rejected": [
-    66,
-    66
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
@@ -2377,18 +2013,7 @@
    1.0,
    40,
    40
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    34,
-    34
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
@@ -2440,18 +2065,7 @@
    1.0,
    80,
    80
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    8,
-    8
-   ],
-   "all_other_values_rejected": [
-    8,
-    8
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 35,
@@ -2513,18 +2127,7 @@
    1.0,
    306,
    306
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    306,
-    306
-   ],
-   "all_other_values_rejected": [
-    306,
-    306
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 36,
@@ -2571,17 +2174,220 @@
    1.0,
    12,
    12
+  ]
+ },
+ {
+  "no": 37,
+  "code": "S1-08 (P1-37)",
+  "title": "Bonds and Families",
+  "tier": 2,
+  "topic": "Number bonds to 20: parts, wholes and the loop that closes",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.1, 2.2, 2.3 (concepts of addition and subtraction; use of +, - and =; relationship between addition and subtraction)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.3"
   ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    40,
-    40
-   ],
-   "all_other_values_rejected": [
-    40,
-    40
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  "ptype": "Chain loop (bond tiles)",
+  "mech": "K8 the loop closes: every number joined by = matches",
+  "seed": 3737,
+  "checks": [
+   {
+    "name": "V1 independent reader: every empty circle is found from its tile (whole minus the other part) and the loop closes with those numbers",
+    "ok": true,
+    "detail": "[3, 5, 10, 3, 3, 7]"
+   },
+   {
+    "name": "V1b every tile has exactly one empty part and all wholes are within 20",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at most one link has an empty circle on both sides",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 every single wrong value in one empty circle (0 to 20) breaks the loop",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   120,
+   120
+  ]
+ },
+ {
+  "no": 38,
+  "code": "S1-12 (P1-38)",
+  "title": "More or Fewer",
+  "tier": 2,
+  "topic": "Comparing amounts: more than, fewer than and making the same",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.4, 2.1 (comparing the number of objects in sets; concepts of addition and subtraction; make equal and fewer than: problem solving)",
+  "outcomes": [
+   "WN1.4",
+   "AS2.1"
+  ],
+  "ptype": "Logic grid",
+  "mech": "K4 grid + K1 letter beside each amount spells a word (5 letters, one decoy letter)",
+  "seed": 3838,
+  "checks": [
+   {
+    "name": "V1 exactly one assignment satisfies all clues (the clue texts evaluated by brute force over 720 ways)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c the clues include more than, fewer than (the reversed one) and a give-to-make-the-same clue",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 letters beside the amounts, in name order, spell GLORY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['glory']"
+   },
+   {
+    "name": "V3 none of the 719 wrong placements (5 of the 6 amounts) spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them",
+    "ok": true,
+    "detail": "['gol', 'gor', 'gory', 'gym', 'gyro', 'log']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ]
+ },
+ {
+  "no": 39,
+  "code": "S2-02 (P1-39)",
+  "title": "Share and Group",
+  "tier": 1,
+  "topic": "Sharing and grouping stories within 20, and printed facts",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.4 (concepts of multiplication and division, dividing within 20; sharing stories, hidden facts: problem solving)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.4"
+  ],
+  "ptype": "Code-breaker (stories)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 3939,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed sentences back and equals the key",
+    "ok": true,
+    "detail": "[2, 6, 8, 3, 4, 5]"
+   },
+   {
+    "name": "V1b the picture shows the objects in the story (counted in the drawing)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct; every share or group is exact",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells SPONGE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "114/114"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['sponge']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['pigeon', 'posing', 'sponge']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   114,
+   114
+  ]
+ },
+ {
+  "no": 40,
+  "code": "S2-05 (P1-40)",
+  "title": "True or False",
+  "tier": 2,
+  "topic": "Multiplication and sharing: true or false statements",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.2, 3.3 (concepts of multiplication, use of x, multiplying within 40; true or false: reasoning)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.2",
+   "MD3.3"
+  ],
+  "ptype": "True or false table + code word",
+  "mech": "K1 letter of the ticked answer in each row spells a word (6 letters)",
+  "seed": 4040,
+  "checks": [
+   {
+    "name": "V1 independent evaluator reads each printed statement: three true and three false, equal to the key",
+    "ok": true,
+    "detail": "[False, False, True, False, True, True]"
+   },
+   {
+    "name": "V2 the letters of the right ticks spell TEACUP",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 63 other ways of ticking spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['teacup']"
+   },
+   {
+    "name": "V4 guess resistance: twelve different letters are shown",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   63,
+   63
+  ]
  }
 ]

@@ -511,7 +511,7 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p', title=
                 body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid + str(i) + '_', bool(t.get('shadow'))))
         if labels:
             lt = labels[i] if i < len(labels) else ''
-            body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 34}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
+            body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 34}" font-size="32" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
     W = 20 + cols * (cell + 12); H = 20 + top + rows * (cell + 12 + lab_h)
     if title: body.append(f'<text x="12" y="36" font-size="30" font-weight="800" fill="{TEAL}" font-family="{FONT}">{_esc(title)}</text>')
     return _svg(W, H, '<defs>' + ''.join(dl) + '</defs>' + ''.join(body), 'a row of picture tiles')
@@ -902,7 +902,7 @@ def _sun_card(spec, x, y, cw, ch):
     global _SUN_N
     _, n, size, pat = spec.split(':'); n = int(n)
     _SUN_N += 1; pid = f'sunpat{_SUN_N}'
-    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.085}[size] * cw
+    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.095}[size] * cw
     if n == 1: pos = [(0.5, 0.5)]
     elif n == 2: pos = [(0.3, 0.5), (0.7, 0.5)]
     elif n == 5: pos = [(0.17, 0.25), (0.5, 0.25), (0.83, 0.25), (0.33, 0.75), (0.67, 0.75)]

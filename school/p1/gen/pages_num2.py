@@ -378,14 +378,14 @@ def bond_chain_svg(tiles, blank):
     p = []; R = 5.4
     for k, (w, l, r) in enumerate(tiles):
         x = k * 30
-        p.append(f'<line x1="{x+15}" y1="{6+R}" x2="{x+7}" y2="{19-R}" stroke="#000" stroke-width="0.5"/><line x1="{x+15}" y1="{6+R}" x2="{x+23}" y2="{19-R}" stroke="#000" stroke-width="0.5"/>')
-        for cx, cy, v, role in ((x + 15, 6, w, "w"), (x + 7, 19, l, "l"), (x + 23, 19, r, "r")):
+        p.append(f'<line x1="{x+15}" y1="{8+R}" x2="{x+7}" y2="{31-R}" stroke="#000" stroke-width="0.5"/><line x1="{x+15}" y1="{8+R}" x2="{x+23}" y2="{31-R}" stroke="#000" stroke-width="0.5"/><text x="{x+2}" y="3.5" font-family="Nunito Sans" font-weight="800" font-size="4" fill="#000">tile {k+1}</text>')
+        for cx, cy, v, role in ((x + 15, 8, w, "w"), (x + 7, 31, l, "l"), (x + 23, 31, r, "r")):
             isb = (role == blank[k])
             p.append(f'<circle class="pc{" blank" if isb else ""}" data-k="{k}" data-role="{role}" cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.6"/>')
             if not isb: p.append(f'<text class="pn" data-k="{k}" data-role="{role}" x="{cx}" y="{cy}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="6.2" fill="#000">{v}</text>')
-        if k < 5: p.append(f'<line x1="{x+29}" y1="18" x2="{x+31}" y2="18" stroke="#000" stroke-width="0.7"/><line x1="{x+29}" y1="20" x2="{x+31}" y2="20" stroke="#000" stroke-width="0.7"/>')
-    p.append('<path d="M172,24.6 L172,31 L8,31 L8,24.6" fill="none" stroke="#000" stroke-width="0.6"/><rect x="82" y="28.6" width="16" height="4.8" fill="#fff"/><text x="90" y="31" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="4.6" fill="#000">=</text>')
-    return svg(180, 34, "".join(p))
+        if k < 5: p.append(f'<line x1="{x+29}" y1="30" x2="{x+31}" y2="30" stroke="#000" stroke-width="0.7"/><line x1="{x+29}" y1="32" x2="{x+31}" y2="32" stroke="#000" stroke-width="0.7"/>')
+    p.append('<path d="M172,37.6 L172,45 L8,45 L8,37.6" fill="none" stroke="#000" stroke-width="0.6"/><rect x="82" y="42.6" width="16" height="4.8" fill="#fff"/><text x="90" y="45" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="4.6" fill="#000">=</text>')
+    return svg(180, 48, "".join(p))
 
 def read_chain(svg_text):
     """independent reader: {(tile, role): printed number or None for an empty circle}"""
@@ -505,7 +505,7 @@ def page38():
         for c in list(cl[1:]):
             rest = [x for x in cl if x != c]
             if len(solve_more(names, nums, rest)) == 1: cl = rest
-        if len(cl) < 5 or not {"more", "fewer", "equal"} <= {c[0] for c in cl}: continue
+        if len(cl) < 4 or not {"more", "fewer", "equal"} <= {c[0] for c in cl}: continue
         break
     decoy = max(decoy_options(word), key=lambda d: (len(small_words(word + d)), rng.random()))
     letter_of = {truth[n]: word[i] for i, n in enumerate(names)}; letter_of[unused] = decoy
