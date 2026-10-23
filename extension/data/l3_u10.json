@@ -865,14 +865,14 @@
    "id": "L3U10-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.",
+   "text": "The graph shows pencils sold. Tuesday sold {b} more than Monday.",
    "answer": {
     "value": [
-     "15"
+     "30"
     ],
-    "text": "15"
+    "text": "30"
    },
-   "explanation": "Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.",
+   "explanation": "Monday is at 20 and Tuesday is at 50. 50 - 20 = 30.",
    "figure": {
     "type": "l3_bargraph",
     "cats": [
@@ -882,15 +882,15 @@
     ],
     "values": [
      20,
-     35,
-     25
+     50,
+     30
     ],
-    "max": 40,
-    "step": 10,
-    "width_mm": 56,
-    "minor": 5,
+    "max": 60,
+    "step": 20,
+    "width_mm": 68,
+    "minor": 10,
     "unit_label": "pencils",
-    "h": 140
+    "h": 95
    },
    "figright": true
   },

@@ -198,7 +198,7 @@ def _():
 
 @check('L3U10-C01')
 def _():
-    return s([35 - 20])
+    return s([50 - 20])
 
 
 @check('L3U10-C02')

@@ -123,9 +123,9 @@ u.G('Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE
     why='Check that your clues are true for your answer and that every other arrangement breaks a clue. In the example, Wei plays ball (clue 2), then Kumar cannot play chess (clue 3), so Kumar plays cards and Lily plays chess.')
 
 # ---------------- Check yourself
-u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.', A('15'),
-    figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 10, 56, minor=5, unit_label='pencils', h=140), figright=True,
-    why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
+u.C('The graph shows pencils sold. Tuesday sold {b} more than Monday.', A('30'),
+    figure=graph(['Mon', 'Tue', 'Wed'], [20, 50, 30], 60, 20, 68, minor=10, unit_label='pencils', h=95), figright=True,
+    why='Monday is at 20 and Tuesday is at 50. 50 - 20 = 30.')
 u.C('In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.', A('8'),
     why='3 + 1 + 4 = 8. Do not forget Ben.')
 u.C('Use the cards 2, 5 and 6 once each to make 3-digit numbers. {b} of the numbers are odd.', A('2'),
