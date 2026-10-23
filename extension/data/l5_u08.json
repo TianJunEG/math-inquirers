@@ -266,7 +266,7 @@
      "B": "l",
      "C": "t",
      "D": "b",
-     "O": "bl"
+     "O": "br"
     },
     "alt": "two straight lines crossing at O",
     "mm": 2.28
@@ -467,7 +467,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "On the straight line: {b}°",
+     "text": "Straight line: {b}°",
      "answer": {
       "value": [
        "48"
