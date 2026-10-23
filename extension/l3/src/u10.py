@@ -38,18 +38,19 @@ u.u['learn']['tight'] = True
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'The bar graph shows the books 4 children read. Kumar read 15 more books than Siti. Draw Kumar’s bar on the graph.', parts=[
     P('a', 'Who read the most books?   {circ:Ali|Ben|Mei|Siti}', A('Mei')),
-    P('b', 'Mei read {b} more books than Ben.', A('15')),
-    P('c', 'Kumar read {b} books.', A('25')),
-    P('d', 'The 5 children read {b} books in all.', A('105'))],
+    P('b', 'Mei read {b} more than Ben.', A('15')),
+    P('c', 'Kumar read {b}.', A('25')),
+    P('d', 'In all they read {b}.', A('105'))],
     figure=graph(['Ali', 'Ben', 'Mei', 'Siti', 'Kumar'], [25, 15, 30, 10, None], 35, 5, 100, unit_label='books', h=260), figside=True,
     why='(a) The tallest bar is Mei’s. (b) 30 - 15 = 15. (c) Siti read 10 books, so Kumar read 10 + 15 = 25. (d) 25 + 15 + 30 + 10 + 25 = 105.')
 u.S(1, 'The graph shows the stamps 3 clubs collected. Each thin line is 10 stamps.', parts=[
-    P('a', 'Club A collected {b} stamps.', A('70')), P('b', 'Club B collected {b} stamps.', A('110')),
-    P('c', 'Club C collected {b} stamps.', A('90')), P('d', 'All 3 clubs collected {b} stamps.', A('270'))],
+    P('a', 'Club A: {b}', A('70')), P('b', 'Club B: {b}', A('110')),
+    P('c', 'Club C: {b}', A('90')), P('d', 'All 3: {b}', A('270'))],
     figure=graph(['Club A', 'Club B', 'Club C'], [70, 110, 90], 140, 20, 72, minor=10, unit_label='stamps', h=230), figside=True,
     why='The labelled lines go up in 20s and there is a thin line halfway between them, so each thin line is 10. A is at 70, B is at 110 and C is at 90. Together: 70 + 110 + 90 = 270.')
 u.S(1, 'The 3rd of a month is a Tuesday.', parts=[
     P('a', 'The 24th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}', A('Tue')), P('b', 'The 30th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}', A('Mon'))],
+    space={'rows': ['Working:']},
     why='(a) From the 3rd to the 24th is 21 days, which is 3 weeks. So the 24th is a Tuesday again. (b) From the 3rd to the 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.')
 u.S(2, 'Each child has a different fruit. Kumar has neither the apple nor the banana. The child with the orange has a name with 4 letters. Wei does not have the apple. Use ticks and crosses in the grid.', parts=[
     P('a', 'Kumar has the {circ:apple|banana|grapes|orange}', A('grapes')), P('b', 'Aisha has the {circ:apple|banana|grapes|orange}', A('apple')),
@@ -60,7 +61,7 @@ u.S(2, 'Each child has a different fruit. Kumar has neither the apple nor the ba
 u.S(2, 'Draw it. Count the children in each line.', parts=[
     P('a', 'Ravi is 3rd from the front. Mei is last. 5 children stand between them. The line has {b} children.', A('9')),
     P('b', 'Aisha is 8th from the front and 2nd from the back. The line has {b} children.', A('9'))],
-    space={'rows': ['Draw (a):', 'Draw (b):']},
+    space={'rows': ['Draw it:']},
     why='(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 7 children are in front of Aisha and 1 is behind her: 7 + 1 + 1 = 9.')
 u.S(2, 'Make every 3-digit number from the cards 3, 6 and 9. Use each card once in a number. List them from the smallest.', parts=[
     P('a', '{ll}', A(['369', '396', '639', '693', '936', '963'], '369, 396, 639, 693, 936, 963', list=True)),
@@ -74,7 +75,6 @@ u.S(3, 'Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 he
     why='Each new hexagon adds 5 sticks. The table goes 1: 6, 2: 11, 3: 16, 4: 21, 5: 26, 6: 31. For 41 sticks, count on: 7 hexagons need 36 and 8 hexagons need 41.')
 u.S(3, 'Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is more than the ones digit.\n{ll}',
     A(['162', '252', '342'], '162, 252 and 342', list=True),
-    space={'rows': ['My list:']},
     why='The hundreds digit is 1, 2 or 3. The ones digit is even and not 0, so it is 2, 4 or 6, and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: tens + ones = 7, so 5 and 2. With 3: tens + ones = 6, so 4 and 2. The numbers are 162, 252 and 342.')
 u.S(3, 'Two numbers add up to 60. The greater number is 14 more than the smaller one. Find the 2 numbers. {b} and {b}', A(['23', '37'], '23 and 37', list=True),
     space={'rows': ['Guess, check, improve:']},
@@ -105,7 +105,7 @@ u.G('Count the squares of every size in a 4 by 4 grid. Begin with the small ones
     partsrow=True,
     hint='A 2 by 2 square can sit in 3 places across and 3 down.',
     why='There are 16 small squares. A 2 by 2 square fits in 3 places across and 3 down: 9. A 3 by 3 square fits in 2 places across and 2 down: 4. There is 1 big square. 16 + 9 + 4 + 1 = 30.')
-u.G('Beyond Level 3: A balance puzzle.\n9 coins look the same. One coin is lighter than the others. You have a balance scale.', parts=[
+u.G('Beyond Level 3: A balance puzzle.\n9 coins look the same. One is lighter. You have a balance scale.', parts=[
     P('a', 'With 3 coins, you can always find the light coin in {b} weighing.', A('1')),
     P('b', 'With 9 coins, you can always find it in {b} weighings.', A('2'))],
     hint='Put 3 coins on each side. What does the scale tell you?',
@@ -124,8 +124,8 @@ u.G('Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE
 u.C('The graph shows the pencils sold on 3 days. Tuesday sold {b} more pencils than Monday.', A('15'),
     figure=graph(['Mon', 'Tue', 'Wed'], [20, 35, 25], 40, 5, 50, unit_label='pencils', h=150), figright=True,
     why='Monday is at 20 and Tuesday is at 35. 35 - 20 = 15.')
-u.C('Ben stands 3rd from the front and 6th from the back. The line has {b} children.', A('8'),
-    why='2 children are in front of Ben and 5 are behind him. 2 + 1 + 5 = 8.')
+u.C('In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.', A('8'),
+    why='3 + 1 + 4 = 8. Do not forget Ben.')
 u.C('Use the cards 1, 4 and 7 once each to make 3-digit numbers. {b} of the numbers are even.', A('2'),
     why='The numbers are 147, 174, 417, 471, 714 and 741. The even ones end in 4: 174 and 714.')
 u.C('Look for a pattern. 2, 6, 10, 14, ... The 8th number is {b}.', A('30'),
