@@ -11,10 +11,6 @@ ITEM[U['learn']['try']['id']] = U['learn']['try']
 ITEM['EXAMPLE'] = U['learn']['example']
 
 
-def parked(id_):
-    return lambda f: f   # items not (yet) in the unit file
-
-
 def check(id_):
     def deco(f):
         CHECKS[id_] = f
@@ -212,25 +208,10 @@ def _():
     return {'a': s([len(count_triangles(left))]), 'b': s([len(count_triangles(right))])}
 
 
-@parked('L1U07-S10')
-def _():
-    return {'a': s([CORNERS['triangle'] + CORNERS['hexagon']]), 'b': s([3 * CORNERS['square']]),
-            'c': [k for k in ('triangle', 'square', 'pentagon') if 5 * CORNERS[k] == 20]}
 
 
-@parked('L1U07-S11')
-def _():
-    tf = lambda b: 'True' if b else 'False'
-    return {'a': [tf(CORNERS['rectangle'] == 4)], 'b': [tf(CORNERS['circle'] == 1)], 'c': ['True'], 'd': [tf(CORNERS['triangle'] == 4)]}
 
 
-@parked('L1U07-S12')
-def _():
-    ks = kinds(ITEM['L1U07-S12']['figure'])
-    cs = [CORNERS[k] for k in ks]
-    odd = [i for i in range(4) if cs.count(cs[i]) == 1]
-    assert len(odd) == 1
-    return ['ABCD'[odd[0]]]
 
 
 @check('L1U07-T01')

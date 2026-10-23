@@ -1,0 +1,20 @@
+# Level 1 extension units 7 and 8: author notes
+
+Written 23 Oct 2026. Units: `extension/data/l1_u07.json` (Shape detective, holiday lesson 7 Shape Safari) and `l1_u08.json` (Clues and sorting, holiday lesson 8 Logic Lab). Independent checks: `extension/verify/l1_u07_checks.py` and `l1_u08_checks.py` (triangles, squares, rectangles and fold lines are recomputed from the figure specs; logic puzzles are solved by trying every arrangement and each must have exactly 1 solution). New figure plugin: `extension/tools/figs_l1_u07_u08.py` (types shapes, grids, draw, loops, logic_grid, latin). Holiday sources: `hp/lessons.js` lessons 7 and 8 and `hp/qbank.json` keys 7 and 8; original ideas from `docs/books/p1_non_routine_catalogue.md` (types LOG, LIST, WAYS) only as types.
+
+## Type map (extension item type -> holiday type; new numbers, shapes and contexts)
+Unit 7: S01 name shapes by sides (holiday Q2, Q3); S02 sides and corners table (Q2); S03 count each kind in a picture (Q1); S04 riddles (Q3); S05 which shapes have 4 corners; S06 count small squares in grids (mini-lesson); S07 cut a square (fold and cut, Q4); S08 shapes made by joining squares (Q5); S09 count triangles small ones first (Q4); T01 rectangles in a strip of 4 squares (stretch, strip of 3); T02 triangles in a strip with 3 lines (triangle counting, new figure); T03 add sides or corners (new); G01 fold lines (named beyond item); G02 rectangles from 12 and 9 tiles (ways, new); G03 squares in a 5 by 2 grid (stretch 3 by 2, 3 by 3, 4 by 2).
+Unit 8: S01 older and youngest from 2 clues, S02 queue places, S03 line of 4 children (holiday Q1, Q4); S04 true or false on an order; S05 sort odd and even (Q5); S06 two loops, numbers 5 to 14, rules "more than 8" and "odd" (Q2, mini-lesson); S07 find the number in the wrong loop (new); S08 counting in 3s and 4s (stretch, 2s and 3s); S09 logic grid 3 by 3 with "not" clues (Q3); S10 odd one out with a reason built in (Q6); S11 number riddles; T01 logic grid 4 by 4 (stretch: 4 friends, 4 pets); T02 two loops in words, 2s and 5s (challenge: 2s and 3s, 2s and 4s); T03 order of 5 from clues (stretch: five children in a line); G01 truth and lies (named beyond item); G02 4 by 4 number grid (grid filling, original); G03 yes or no questions (named beyond item; holiday warm-up "guess my number").
+
+## Beyond Level 1 items (printed label, Think harder / Go further only)
+U7 G01 Fold lines. U8 G01 Truth and lies, G03 Yes or no questions.
+
+## Choices made
+- Start here has 9 items (unit 7) and 11 (unit 8), Think harder 3, Go further 3, Check yourself 4. A shape or loop picture takes about a third of a page, so 3 or 4 items fit on a Start here page (page fill 0.86 to 1.0 on every unit page; the Check yourself page measures 1.0 because its last box stretches).
+- Unit 7 items S10 to S12 (corner and side totals; true or false; odd shape out) were written and then cut for space; their ideas appear in S02, T03 and unit 8. They are not in the data file.
+- "Bigger" is a banned word in the wording lint, so triangles and squares are "larger".
+- Quantities: a circ choice list counts as a sentence in the lint, so stems with 4 clue sentences ask the question in a part.
+- Dup gate: the holiday rule lines "Odd numbers end in 1, 3, 5, 7 or 9" and "I am a number between ..." are not copied: the extension says "has a last digit of" and "A number is between ... It is ...". The REVIEW lines left for unit 8 (S11, C03 "between # and #") are the same riddle type with new numbers.
+- Loops figure: outlines are drawn on top of the fills (a loop line under a transparent fill printed as grey). Loop A is solid and loop B is dashed, so the print edition needs no colour. Latin square grid: given numbers sit in tinted boxes (white in print), which are still readable.
+- Checks read the figure specs where an answer depends on the picture, so a figure that disagrees with the answer fails the check. The worked example answers are asserted at import time in the checks files.
+- Not done: independent audit by a second agent, owner review, child trial; cross-unit duplicate check inside Level 1.
