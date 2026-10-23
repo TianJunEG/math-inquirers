@@ -48,10 +48,10 @@ const titled = (t, x) => tx(x, 18, t, 18);
 
 const DAYS7 = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const juiceSvg = () => svg(600, 236, titled('Cups of sugarcane juice sold each day', 300) +
-  graph({ x: 0, y: 22, w: 600, h: 214, xl: DAYS7, y0: 0, y1: 80, step: 5, lab: 10, yt: 'Number of cups', series: [{ v: [40, 55, 50, 75, 65, 25, 30], c: N }] }),
+  graph({ x: 0, y: 22, w: 600, h: 214, xl: DAYS7, y0: 0, y1: 80, step: 5, lab: 20, yt: 'Number of cups', series: [{ v: [40, 55, 50, 75, 65, 25, 30], c: N }] }),
   'Line graph of cups of sugarcane juice sold: Monday 40, Tuesday 55, Wednesday 50, Thursday 75, Friday 65, Saturday 25, Sunday 30');
 const moneySvg = () => svg(600, 222, titled('Money in each money box at the end of each week', 300) +
-  graph({ x: 0, y: 22, w: 600, h: 200, xl: ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4', 'Wk 5', 'Wk 6'], y0: 0, y1: 60, step: 5, lab: 10, yt: 'Money ($)', legend: true,
+  graph({ x: 0, y: 22, w: 600, h: 200, xl: ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4', 'Wk 5', 'Wk 6'], y0: 0, y1: 60, step: 5, lab: 20, yt: 'Money ($)', legend: true,
     series: [{ v: [10, 20, 30, 40, 50, 60], c: TEAL, name: 'Ali' }, { v: [30, 35, 40, 45, 50, 55], c: RED, mark: 'sq', dash: true, name: 'Mei' }] }),
   'Two line graphs: Ali has 10, 20, 30, 40, 50, 60 dollars in weeks 1 to 6; Mei has 30, 35, 40, 45, 50, 55 dollars', 500);
 const shopsSvg = () => svg(600, 206,

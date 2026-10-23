@@ -1,17 +1,17 @@
 [
  {
   "level": 1,
-  "source_pages": 60,
-  "print_pages": 66,
-  "sheets": 33,
-  "blank_pages": 6,
+  "source_pages": 61,
+  "print_pages": 68,
+  "sheets": 34,
+  "blank_pages": 7,
   "cutout_pages": [
-   55,
    56,
    57,
    58,
    59,
-   60
+   60,
+   61
   ],
   "content_scale": 0.9429,
   "file": "outputs/print/Math_Inquirers_P1_Workbook_PRINT.pdf",
@@ -105,14 +105,14 @@
  },
  {
   "level": 6,
-  "source_pages": 57,
-  "print_pages": 60,
-  "sheets": 30,
-  "blank_pages": 3,
+  "source_pages": 58,
+  "print_pages": 62,
+  "sheets": 31,
+  "blank_pages": 4,
   "cutout_pages": [
-   55,
    56,
-   57
+   57,
+   58
   ],
   "content_scale": 0.9429,
   "file": "outputs/print/Math_Inquirers_P6_Workbook_PRINT.pdf",
