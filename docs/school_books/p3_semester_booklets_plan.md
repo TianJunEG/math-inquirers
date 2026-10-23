@@ -6,7 +6,7 @@ Date: 24 Oct 2026. Models: `docs/school_books/p2_semester_booklets_plan.md` and 
 
 Owner decisions (`docs/terms/owner_decisions.md`, including SCHOOLBOOKS-P3-6-GO of 24 Oct 2026): two booklets, **Semester 1** (typical school Terms 1 and 2) and **Semester 2** (Terms 3 and 4), 20 single-sided A4 pupil pages each, 10 one-star and 10 two-star, self-checking, pure black and white, photocopy-ready, no Mi; teacher notes say that schools vary; annual licence (wording DRAFT for a lawyer, P2-LAWYER-WAIT); publisher line "Preciouslyours Pte Ltd, trading as Math Inquirers"; registered office and contact email as in the P2 front matter; DRAFT stamps on cover, licence, teacher notes and keys; the sentence "Not affiliated with or endorsed by the Ministry of Education, Singapore." on the **cover only** (P2-NOTAFFIL-FRONT) and the factual "The mathematics syllabus is published by the Ministry of Education, Singapore." on the licence page; no claim of MOE or SASMO affiliation or alignment; "Pictures are not actual size." in the teacher notes; original problems only; coins at real proportions and notes 2:1 (COINS-FIX-SIZE; the real-image variant of the money pages stays held back pending a lawyer); footer codes with both numbers.
 
-**What could not be checked.** The syllabus PDF is not in the repository. The 34 outcome lines were taken from the earlier Primary 3 note (`p3_semester_booklets_build_report.md`, which recorded the wording of PDF pages 35 and 36) and from `docs/moe/syllabus_by_level.md`. Outcome wording beyond those two files (for example the bullets under Length, Mass and Volume 1.3 and under Area and Perimeter) has **not been copied** and could not be compared; the wording in `p3_outcome_wording.md` must be re-read against the PDF before print.
+**Syllabus wording.** The 34 outcome lines were re-read against the syllabus PDF (Primary Mathematics Syllabus P1 to P6, 2021 edition, updated October 2025, Primary 3 on printed pages 35 and 36) on 23 Oct 2026, and the wording in `p3_outcome_wording.md` now follows the PDF's outcome lines (bullets joined into the line). One reading note: Length, Mass and Volume 1.3 says "converting a measurement in compound units to the smaller unit, and vice versa"; the pages mainly go from compound units to the smaller unit, and the vice versa direction (a number of metres written as km and m) is practised only a little, so it is listed as a partial gap.
 
 Sources read: `docs/school_books/plan.md` (templates, reading load: Primary 3 = 18 words a sentence as the brief says; plan.md's own table says 12, the brief overrides), `owner_decisions.md`, `syllabus_by_level.md`, the P2 README, plan, build report and the three P2 audit rounds, the three P1 audit rounds, `docs/books/p3_school_paper_patterns.md` and `p3_non_routine_catalogue.md` (question TYPES only, nothing copied), `coin_note_specs.md`. The private sources (`docs/books/private_*`, `docs/sasmo/private_*`, gitignored) were used only for the similarity check (`school/p3/similarity_check.py`, section 7).
 
@@ -118,7 +118,7 @@ Mechanism count over the 40 pages: 19 code-word pages (47.5%; P2 had 23 of 40), 
 | Outcome line | Wording | Pages |
 |---|---|---|
 | Whole Numbers 1.1 | counting in hundreds/thousands | P3-01, P3-05 |
-| Whole Numbers 1.2 | number notation, representations and place values | P3-01, P3-03 |
+| Whole Numbers 1.2 | number notation, representations and place values (thousands, hundreds, tens, ones) | P3-01, P3-03 |
 | Whole Numbers 1.3 | reading and writing numbers in numerals and in words | P3-02 |
 | Whole Numbers 1.4 | comparing and ordering numbers | P3-03, P3-04 |
 | Whole Numbers 1.5 | patterns in number sequences | P3-05 |
@@ -130,27 +130,27 @@ Mechanism count over the 40 pages: 19 code-word pages (47.5%; P2 had 23 of 40), 
 | Multiplication and Division 3.4 | multiplication and division algorithms (up to 3 digits by 1 digit) | P3-13 |
 | Multiplication and Division 3.5 | mental calculation involving multiplication and division within the multiplication tables | P3-09, P3-10, P3-14 |
 | Fractions 1.1 | equivalent fractions | P3-15, P3-17, P3-18 |
-| Fractions 1.2 | simplest form | P3-16 |
-| Fractions 1.3 | comparing and ordering unlike fractions (denominators not exceeding 12) | P3-18 |
-| Fractions 1.4 | finding an equivalent fraction given the denominator or numerator | P3-17 |
-| Fractions 2.1 | adding and subtracting two related fractions within one whole | P3-19 |
+| Fractions 1.2 | expressing a fraction in its simplest form | P3-16 |
+| Fractions 1.3 | comparing and ordering unlike fractions with denominators of given fractions not exceeding 12 | P3-18 |
+| Fractions 1.4 | writing the equivalent fraction of a fraction given the denominator or the numerator | P3-17 |
+| Fractions 2.1 | adding and subtracting two related fractions within one whole with denominators of given fractions not exceeding 12 | P3-19 |
 | Money 1.1 | adding and subtracting money in decimal notation | P3-20, P3-40 |
-| Length, Mass and Volume 1.1 | measuring length in kilometres and volume in millilitres | P3-21, P3-23, P3-24 |
-| Length, Mass and Volume 1.2 | compound units | P3-22, P3-24, P3-25, P3-39 |
-| Length, Mass and Volume 1.3 | converting units (km and m, m and cm, kg and g, l and ml) | P3-22, P3-23, P3-24, P3-25, P3-39 |
+| Length, Mass and Volume 1.1 | measuring length in kilometres (km) and volume of liquid in millilitres (ml) | P3-21, P3-23, P3-24 |
+| Length, Mass and Volume 1.2 | measuring length/mass/volume (of liquid) in compound units | P3-22, P3-24, P3-25, P3-39 |
+| Length, Mass and Volume 1.3 | converting a measurement in compound units to the smaller unit, and vice versa (kilometres and metres; metres and centimetres; kilograms and grams; litres and millilitres; numbers involved should be within easy manipulation) | P3-22, P3-23, P3-24, P3-25, P3-39 |
 | Time 2.1 | measuring time in seconds | P3-26 |
 | Time 2.2 | finding the starting time, finishing time or duration given the other two quantities | P3-28, P3-29 |
 | Time 2.3 | 24-hour clock | P3-27, P3-29 |
-| Area and Perimeter 1.1 | concepts of area and perimeter | P3-30, P3-31, P3-33 |
-| Area and Perimeter 1.2 | area in square units, cm2 and m2 | P3-30, P3-32, P3-33 |
-| Area and Perimeter 1.3 | perimeter of a rectilinear figure, a rectangle and a square | P3-31, P3-33 |
-| Area and Perimeter 1.4 | area of a rectangle and a square | P3-32 |
+| Area and Perimeter 1.1 | concepts of area and perimeter of a plane figure | P3-30, P3-31, P3-33 |
+| Area and Perimeter 1.2 | measuring area in square units, cm2 and m2, excluding conversion between cm2 and m2 | P3-30, P3-32, P3-33 |
+| Area and Perimeter 1.3 | perimeter of rectilinear figure, rectangle, square | P3-31, P3-33 |
+| Area and Perimeter 1.4 | area of rectangle/square | P3-32 |
 | Angles 1.1 | concept of an angle | P3-34 |
-| Angles 1.2 | right angles; angles greater than or smaller than a right angle | P3-34 |
-| Perpendicular and Parallel Lines 2.1 | identifying perpendicular and parallel lines | P3-35 |
+| Angles 1.2 | right angles, angles greater than/smaller than a right angle | P3-34 |
+| Perpendicular and Parallel Lines 2.1 | perpendicular and parallel lines | P3-35 |
 | Perpendicular and Parallel Lines 2.2 | drawing perpendicular and parallel lines | P3-36 |
-| Bar Graphs 1.1 | reading and interpreting bar graphs | P3-37, P3-38 |
-| Bar Graphs 1.2 | bar graphs with different scales on the axis | P3-38 |
+| Bar Graphs 1.1 | reading and interpreting data from bar graphs | P3-37, P3-38 |
+| Bar Graphs 1.2 | using different scales on axis | P3-38 |
 
 ## 3. Ranges, wording and notation
 

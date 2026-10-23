@@ -1,12 +1,12 @@
 """The 34 Primary 3 outcome lines, the two semester booklets and the page order of each.
-Wording: as recorded in docs/school_books/p3_outcome_wording.md (the syllabus PDF itself is not in the repository; the wording was recorded
-from pages 35 and 36 of the PDF by the paused Primary 3 note and docs/moe/syllabus_by_level.md, and must be re-read against the PDF before print).
+Wording: the outcome lines of the Mathematics Syllabus, Primary (2021, updated October 2025), Primary 3, printed pages 35 and 36, as recorded in
+docs/school_books/p3_outcome_wording.md (re-read against the PDF on 23 Oct 2026; bullets under a line are joined into its wording).
 Plan: docs/school_books/p3_semester_booklets_plan.md."""
 
 # id -> (strand heading used on the key, outcome wording)
 OUTCOMES = {
     "WN1.1": ("Whole Numbers", "counting in hundreds/thousands"),
-    "WN1.2": ("Whole Numbers", "number notation, representations and place values"),
+    "WN1.2": ("Whole Numbers", "number notation, representations and place values (thousands, hundreds, tens, ones)"),
     "WN1.3": ("Whole Numbers", "reading and writing numbers in numerals and in words"),
     "WN1.4": ("Whole Numbers", "comparing and ordering numbers"),
     "WN1.5": ("Whole Numbers", "patterns in number sequences"),
@@ -18,27 +18,27 @@ OUTCOMES = {
     "MD3.4": ("Multiplication and Division", "multiplication and division algorithms (up to 3 digits by 1 digit)"),
     "MD3.5": ("Multiplication and Division", "mental calculation involving multiplication and division within the multiplication tables"),
     "FR1.1": ("Fractions", "equivalent fractions"),
-    "FR1.2": ("Fractions", "simplest form"),
-    "FR1.3": ("Fractions", "comparing and ordering unlike fractions (denominators not exceeding 12)"),
-    "FR1.4": ("Fractions", "finding an equivalent fraction given the denominator or numerator"),
-    "FR2.1": ("Fractions", "adding and subtracting two related fractions within one whole"),
+    "FR1.2": ("Fractions", "expressing a fraction in its simplest form"),
+    "FR1.3": ("Fractions", "comparing and ordering unlike fractions with denominators of given fractions not exceeding 12"),
+    "FR1.4": ("Fractions", "writing the equivalent fraction of a fraction given the denominator or the numerator"),
+    "FR2.1": ("Fractions", "adding and subtracting two related fractions within one whole with denominators of given fractions not exceeding 12"),
     "MO1.1": ("Money", "adding and subtracting money in decimal notation"),
-    "ME1.1": ("Length, Mass and Volume", "measuring length in kilometres and volume in millilitres"),
-    "ME1.2": ("Length, Mass and Volume", "compound units"),
-    "ME1.3": ("Length, Mass and Volume", "converting units (km and m, m and cm, kg and g, l and ml)"),
+    "ME1.1": ("Length, Mass and Volume", "measuring length in kilometres (km) and volume of liquid in millilitres (ml)"),
+    "ME1.2": ("Length, Mass and Volume", "measuring length/mass/volume (of liquid) in compound units"),
+    "ME1.3": ("Length, Mass and Volume", "converting a measurement in compound units to the smaller unit, and vice versa (kilometres and metres; metres and centimetres; kilograms and grams; litres and millilitres; numbers involved should be within easy manipulation)"),
     "TI2.1": ("Time", "measuring time in seconds"),
     "TI2.2": ("Time", "finding the starting time, finishing time or duration given the other two quantities"),
     "TI2.3": ("Time", "24-hour clock"),
-    "AP1.1": ("Area and Perimeter", "concepts of area and perimeter"),
-    "AP1.2": ("Area and Perimeter", "area in square units, cm2 and m2"),
-    "AP1.3": ("Area and Perimeter", "perimeter of a rectilinear figure, a rectangle and a square"),
-    "AP1.4": ("Area and Perimeter", "area of a rectangle and a square"),
+    "AP1.1": ("Area and Perimeter", "concepts of area and perimeter of a plane figure"),
+    "AP1.2": ("Area and Perimeter", "measuring area in square units, cm2 and m2, excluding conversion between cm2 and m2"),
+    "AP1.3": ("Area and Perimeter", "perimeter of rectilinear figure, rectangle, square"),
+    "AP1.4": ("Area and Perimeter", "area of rectangle/square"),
     "AN1.1": ("Angles", "concept of an angle"),
-    "AN1.2": ("Angles", "right angles; angles greater than or smaller than a right angle"),
-    "PP2.1": ("Perpendicular and Parallel Lines", "identifying perpendicular and parallel lines"),
+    "AN1.2": ("Angles", "right angles, angles greater than/smaller than a right angle"),
+    "PP2.1": ("Perpendicular and Parallel Lines", "perpendicular and parallel lines"),
     "PP2.2": ("Perpendicular and Parallel Lines", "drawing perpendicular and parallel lines"),
-    "BG1.1": ("Bar Graphs", "reading and interpreting bar graphs"),
-    "BG1.2": ("Bar Graphs", "bar graphs with different scales on the axis"),
+    "BG1.1": ("Bar Graphs", "reading and interpreting data from bar graphs"),
+    "BG1.2": ("Bar Graphs", "using different scales on axis"),
 }
 assert len(OUTCOMES) == 34
 

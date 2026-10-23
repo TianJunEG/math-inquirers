@@ -1,6 +1,6 @@
 # Primary 3 outcome lines: wording used by the school booklets
 
-Source and limits. The syllabus PDF (Primary Mathematics Syllabus P1 to P6, 2021 edition, updated Oct 2025, Primary 3 on printed pages 35 and 36) is **not in this repository**. The wording below is the wording recorded by the earlier Primary 3 note (`docs/school_books/p3_semester_booklets_build_report.md`, 34 outcome lines "wording from the PDF, pp. 35-36") and the summary in `docs/moe/syllabus_by_level.md`. It could not be re-checked against the PDF in this build, so **outcome wording beyond those two files has not been copied and must be compared with the PDF before print**: where the PDF lists bullets under a line (for example the units under Length, Mass and Volume 1.3, or the figures under Area and Perimeter), the bullets are not reproduced here. The strand heading for the first group is written "Whole Numbers" as in the Primary 2 file; the earlier note headed it "Numbers up to 10 000".
+Source. The wording below was re-read on 23 Oct 2026 against the syllabus PDF (Primary Mathematics Syllabus P1 to P6, 2021 edition, updated October 2025, Primary 3 on printed pages 35 and 36), and only the outcome-line wording was copied. Bullets under a line (the units under Length, Mass and Volume 1.1 and 1.3, the figures under Area and Perimeter 1.3) are joined into that line. Differences found and corrected: the lines for Whole Numbers 1.2, Fractions 1.2, 1.3, 1.4 and 2.1, Length, Mass and Volume 1.1, 1.2 and 1.3, Area and Perimeter 1.1, 1.2, 1.3 and 1.4, Angles 1.2, Perpendicular and Parallel Lines 2.1, and Bar Graphs 1.1 and 1.2 had been recorded in a shortened form. The PDF sub-strand headings are Whole Numbers, Fractions, Money, Measurement, Area and Volume, Geometry and Statistics; the headings here group the lines by topic as the PDF does.
 
 This file is only a record of the syllabus wording. It makes no claim about any school or approval. Used by `school/p3/validate.py` (each outcome id of each page must have its wording here) and by `school/p3/gen/outcomes.py`.
 
@@ -8,7 +8,7 @@ This file is only a record of the syllabus wording. It makes no claim about any 
 ## Whole Numbers
 
 - Whole Numbers 1.1: counting in hundreds/thousands
-- Whole Numbers 1.2: number notation, representations and place values
+- Whole Numbers 1.2: number notation, representations and place values (thousands, hundreds, tens, ones)
 - Whole Numbers 1.3: reading and writing numbers in numerals and in words
 - Whole Numbers 1.4: comparing and ordering numbers
 - Whole Numbers 1.5: patterns in number sequences
@@ -29,10 +29,10 @@ This file is only a record of the syllabus wording. It makes no claim about any 
 ## Fractions
 
 - Fractions 1.1: equivalent fractions
-- Fractions 1.2: simplest form
-- Fractions 1.3: comparing and ordering unlike fractions (denominators not exceeding 12)
-- Fractions 1.4: finding an equivalent fraction given the denominator or numerator
-- Fractions 2.1: adding and subtracting two related fractions within one whole
+- Fractions 1.2: expressing a fraction in its simplest form
+- Fractions 1.3: comparing and ordering unlike fractions with denominators of given fractions not exceeding 12
+- Fractions 1.4: writing the equivalent fraction of a fraction given the denominator or the numerator
+- Fractions 2.1: adding and subtracting two related fractions within one whole with denominators of given fractions not exceeding 12
 
 ## Money
 
@@ -40,9 +40,9 @@ This file is only a record of the syllabus wording. It makes no claim about any 
 
 ## Length, Mass and Volume
 
-- Length, Mass and Volume 1.1: measuring length in kilometres and volume in millilitres
-- Length, Mass and Volume 1.2: compound units
-- Length, Mass and Volume 1.3: converting units (km and m, m and cm, kg and g, l and ml)
+- Length, Mass and Volume 1.1: measuring length in kilometres (km) and volume of liquid in millilitres (ml)
+- Length, Mass and Volume 1.2: measuring length/mass/volume (of liquid) in compound units
+- Length, Mass and Volume 1.3: converting a measurement in compound units to the smaller unit, and vice versa (kilometres and metres; metres and centimetres; kilograms and grams; litres and millilitres; numbers involved should be within easy manipulation)
 
 ## Time
 
@@ -52,22 +52,22 @@ This file is only a record of the syllabus wording. It makes no claim about any 
 
 ## Area and Perimeter
 
-- Area and Perimeter 1.1: concepts of area and perimeter
-- Area and Perimeter 1.2: area in square units, cm2 and m2
-- Area and Perimeter 1.3: perimeter of a rectilinear figure, a rectangle and a square
-- Area and Perimeter 1.4: area of a rectangle and a square
+- Area and Perimeter 1.1: concepts of area and perimeter of a plane figure
+- Area and Perimeter 1.2: measuring area in square units, cm2 and m2, excluding conversion between cm2 and m2
+- Area and Perimeter 1.3: perimeter of rectilinear figure, rectangle, square
+- Area and Perimeter 1.4: area of rectangle/square
 
 ## Angles
 
 - Angles 1.1: concept of an angle
-- Angles 1.2: right angles; angles greater than or smaller than a right angle
+- Angles 1.2: right angles, angles greater than/smaller than a right angle
 
 ## Perpendicular and Parallel Lines
 
-- Perpendicular and Parallel Lines 2.1: identifying perpendicular and parallel lines
+- Perpendicular and Parallel Lines 2.1: perpendicular and parallel lines
 - Perpendicular and Parallel Lines 2.2: drawing perpendicular and parallel lines
 
 ## Bar Graphs
 
-- Bar Graphs 1.1: reading and interpreting bar graphs
-- Bar Graphs 1.2: bar graphs with different scales on the axis
+- Bar Graphs 1.1: reading and interpreting data from bar graphs
+- Bar Graphs 1.2: using different scales on axis
