@@ -44,7 +44,7 @@ def page28():
     k5c = coins_svg([5]); k10c = coins_svg([10])
     rows += f'<div class="qrow"><span class="no">3</span><span class="qt">How many 5\u00a2 coins make {k5}\u00a2?</span>{k5c}<span class="ab"></span></div>'
     rows += f'<div class="qrow"><span class="no">4</span><span class="qt">How many 10\u00a2 coins make {k10}\u00a2?</span>{k10c}<span class="ab"></span></div>'
-    pcs = [coins_svg(list(p), 1.2) for p in purses]
+    pcs = [coins_svg(list(p)) for p in purses]
     pur = "".join(f'<div class="purse">{s}<span class="ab"></span></div>' for s in pcs)
     rows = f'<div class="qgrid">{rows}</div>'
     rows += (f'<div class="qrow" style="border-bottom:none"><span class="no">5</span><span class="qt">Tick each purse that holds exactly {target}¢. How many ticks?</span><span class="ab"></span></div>'

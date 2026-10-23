@@ -45,7 +45,7 @@ def decode_clock(meta):
     hh = int(round(meta["hour_angle"] - mm * 0.5) / 30) % 12 or 12
     return hh, mm
 
-COIN_R = {5: 4.42, 10: 4.88, 20: 5.54, 50: 6.07, 100: 6.5}      # radii in the real ratio of the diameters (MAS, current coins: 5c 16.75, 10c 18.5, 20c 21.0, 50c 23.0, $1 24.65 mm), drawn larger than real size
+COIN_R = {5: 4.42, 10: 4.88, 20: 5.54, 50: 6.07, 100: 6.5}      # radii in the real ratio of the diameters (MAS, current coins: 5c 16.75, 10c 18.5, 20c 21.0, 50c 23.0, $1 24.65 mm), drawn smaller than real size
 NOTE_REAL = {2: (126, 63), 5: (133, 66), 10: (141, 69)}   # real notes in mm (MAS): every note is 2:1 and a higher value is bigger
 NOTE_K = 0.118
 NOTE_WH = {v: (w * NOTE_K, h * NOTE_K) for v, (w, h) in NOTE_REAL.items()}

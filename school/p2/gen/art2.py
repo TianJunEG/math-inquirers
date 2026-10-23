@@ -32,7 +32,7 @@ def pv_chart(h, t, o, per_row=3):
 def read_pv_chart(s):
     return tuple(len(re.findall(r'class="disc %s"' % k, s)) for k in "hto")
 
-# ---------------------------------------------------------------- coins and notes (original line art, inspired by Singapore money; much larger than real)
+# ---------------------------------------------------------------- coins and notes (original line art, inspired by Singapore money; not actual size: coins 0.80 and notes 0.215 of real size)
 COIN_REAL = {5: 16.75, 10: 18.5, 20: 21.0, 50: 23.0, 100: 24.65}        # real diameters (mm, MAS, current coins; see docs/school_books/coin_note_specs.md): only the RATIOS are used (a fact, not a design)
 COIN_D = {v: d * 0.80 for v, d in COIN_REAL.items()}                      # drawn at 0.80 of real size
 NOTE_REAL = {2: (126, 63), 5: (133, 66), 10: (141, 69)}                   # real notes (mm, MAS Portrait series): width x height; every note is 2:1 and a higher value is bigger
@@ -83,7 +83,7 @@ def money_width(items, gap=2.0):
 def real_money_width(items, gap=2.0):
     return sum((COIN_D[i[1]] if i[0] == "c" else NOTE_WH[i[1]][0]) + gap for i in items)
 
-def money_svg(items, per_row=None, gap=2.0):
+def money_svg(items, per_row=None, gap=2.0, scale=1.0):
     """items: list of ('c', cents) coins and ('n', dollars) notes, drawn in reading order; wraps into rows of width <= 78 mm unless per_row"""
     maxw = 118.0
     rows = [[]]; w = 0
@@ -99,7 +99,10 @@ def money_svg(items, per_row=None, gap=2.0):
             if it[0] == "c": p.append(coin_g(it[1], x, y + rh / 2 + 0.8)); x += COIN_D[it[1]] + gap
             else: p.append(note_g(it[1], x, y + (rh - NOTE_WH[it[1]][1]) / 2 + 0.8)); x += NOTE_WH[it[1]][0] + gap
         W = max(W, x); y += rh + 1.6
-    return svg(round(W + 0.8, 1), round(y + 0.4, 1), "".join(p))
+    out = svg(round(W + 0.8, 1), round(y + 0.4, 1), "".join(p))
+    if scale != 1.0:      # the same drawing printed smaller (one scale for a whole page): only the printed size changes, the viewBox stays
+        out = re.sub(r'width="([\d.]+)mm" height="([\d.]+)mm"', lambda m: f'width="{float(m.group(1)) * scale:.1f}mm" height="{float(m.group(2)) * scale:.1f}mm"', out, 1)
+    return out
 
 def read_money(s):
     """independent reader: total in cents from the coins and notes drawn (values read from the printed numerals)"""

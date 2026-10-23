@@ -60,7 +60,7 @@ i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:ce
 .fcard,.pcard{border:0.5mm solid #000;border-radius:2mm;padding:2.5mm 3mm;display:flex;flex-direction:column;align-items:center;gap:2mm;min-width:34mm;position:relative}
 .fcard .fnum .fr{font-size:20pt}.fcard .fnum .fr i{padding:0 2mm}
 .pcard{min-width:44mm}.pname{font-size:14pt;font-weight:700}.pprice{font-family:'Fredoka';font-weight:600;font-size:22pt}
-.pur{border:0.4mm solid #000;border-radius:2mm;padding:2mm 2.5mm;display:flex;align-items:center;gap:3mm}.pur svg{max-width:none}
+.pur{border:0.4mm solid #000;border-radius:2mm;padding:2mm 2.5mm;display:flex;align-items:center;gap:3mm}.pur svg{max-width:none;flex-shrink:0}
 .purses2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5mm 4mm}
 .amts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5mm 4mm}
 .amt{display:flex;align-items:center;gap:2.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2.5mm}.amt b{font-family:'Fredoka';font-weight:600;font-size:17pt;flex:1}

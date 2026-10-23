@@ -501,7 +501,8 @@ def page24():
     order = list(range(6)); rng.shuffle(order)          # printed purse order
     amounts_order = list(range(6)); rng.shuffle(amounts_order)      # amount k belongs to purse amounts_order[k]; that purse carries letter word[k]
     letter_of = {j: word[k] for k, j in enumerate(amounts_order)}
-    pcards = "".join(f'<div class="pur"><i class="cl">{letter_of[j]}</i>{A.money_svg(purses[j], gap=1.4)}</div>' for j in order)
+    PURSE_SCALE = 0.96      # one coin scale for every purse on the page (a $1 coin is 19.0 mm in every purse)
+    pcards = "".join(f'<div class="pur"><i class="cl">{letter_of[j]}</i>{A.money_svg(purses[j], gap=1.4, scale=PURSE_SCALE)}</div>' for j in order)
     acards = "".join(f'<div class="amt"><span class="no">{k+1}</span><b>{A.dollars(tot[j])}</b><span class="ab"></span></div>' for k, j in enumerate(amounts_order))
     body = f'<div class="purses2">{pcards}</div><p class="lead" style="margin-top:2mm">Which purse holds each amount? Write its letter.</p><div class="amts">{acards}</div>'
     P = new_page(24, 7824, "Purse Match", 2, "Money: counting coins and notes, matching amounts", STRAND_MO,
@@ -509,7 +510,7 @@ def page24():
         "K1 letters of the matching purses spell a word (6 letters) + K4 each purse used once",
         ["Count the money in each purse.", "Match each amount to its purse.", "Write the letter of the purse."],
         body, "; ".join(f"{k+1}) {A.dollars(tot[j])} is purse {letter_of[j]}" for k, j in enumerate(amounts_order)), f"Word: {word}",
-        "Six purses of coins and notes (original line drawings, inspired by Singapore money but not copies; larger than real) and six amounts. Each purse holds exactly one of the amounts; the amounts are close to each other, so every purse must be counted. The letters of the purses, written in the order of the amounts, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (every wrong matching was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
+        "Six purses of coins and notes (original line drawings, inspired by Singapore money but not copies; not actual size, smaller than real) and six amounts. Each purse holds exactly one of the amounts; the amounts are close to each other, so every purse must be counted. The letters of the purses, written in the order of the amounts, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (every wrong matching was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=6, mk=("logic",),
         mech_plain="Letters of the purses matched to the amounts, in order, spell a word (6 letters)")
     P["check"] = "Write the six letters in the boxes. Do they spell a word?"

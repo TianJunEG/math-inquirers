@@ -355,7 +355,7 @@ def page06():
         ["Count the money in each row.", "Write the total, like $3.45.", INSTR_CODE],
         qgrid(cards, 1), tot, table, word, 5, 2500,
         "; ".join(f"{i+1}) {A.dollars(t)}" for i, t in enumerate(tot)),
-        "Coins (5¢, 10¢, 20¢, 50¢, $1) and notes ($2, $5, $10) are original line drawings, inspired by Singapore money but not copies of any coin or note, drawn larger than real and in black and white. Each coin shows its value and the word cents; each note shows its value twice. Totals are written in dollars and cents ($3.45). The decoy letters stand for a coin missed or counted twice. A box left blank gives no letter and the check cannot see it.",
+        "Coins (5¢, 10¢, 20¢, 50¢, $1) and notes ($2, $5, $10) are original line drawings, inspired by Singapore money but not copies of any coin or note, not actual size (smaller than real) and in black and white. Each coin shows its value and the word cents; each note shows its value twice. Totals are written in dollars and cents ($3.45). The decoy letters stand for a coin missed or counted twice. A box left blank gives no letter and the check cannot see it.",
         domain=domain, fmt=lambda c: A.dollars(c))
     solved = [A.read_money(s) for s in svgs]
     P.v("V1 independent solver adds the values printed on the drawn coins and notes and equals the key", solved == tot, solved)
