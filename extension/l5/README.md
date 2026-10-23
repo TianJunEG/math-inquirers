@@ -69,11 +69,11 @@ Every item and every part has a function that recomputes the answer without read
 | wording | 0 errors |
 | black and white | print PDF: 0 colour pixels, no flat grey (the soft copy is colour) |
 | fill and overflow | every unit page between 0.85 and 1.00 of the body, no overflow |
-| pages | 104 pages, even; contents and answer page numbers come from the build |
+| pages | print 100 pages (even), soft copy 99; contents and answer page numbers come from the build |
 
 ## Choices and workarounds (shared tools not edited)
 
-- `render.py` prints "Beyond Level 1" for the item key `beyond`. Level 5 does not use that key. Each beyond item starts with a line of its own text "Beyond Level 5: <name>". See `TOOL_REQUESTS.md`.
+- Beyond items use the item key `beyond` (the renderer now prints "Beyond Level 5"). The Welcome text comes from `levels.json` (no ruler line for Level 5).
 - `wording_lint.py` treats "ten thousands" and "two hundred" as quantities written as words. Level 5 writes "ten-thousand" with a hyphen in place-value names and uses numerals in "write the number" items.
 - Titles in the book are child-facing ("Half the box"); the holiday lesson title is in the contents line ("Triangle areas") and the "follows Holiday Program Lesson N" line.
 - Items inside a unit are numbered in page order; the generators sort by page and the checks use the same ids.
@@ -87,7 +87,7 @@ Every item and every part has a function that recomputes the answer without read
 
 ## Open points for the owner or the next agent
 
-1. Page count is 104, four over the 80-100 target. The Answers section is 25 pages (about 250 entries with a short Why). The plan's fallback (D12: 6 pages per unit for this level) was not applied.
+1. Page count is 100 after shortening about 140 Why lines (owner decision L5-TRIM). The Why texts are now very short; some units explain less than the holiday program does.
 2. Child trial and a cold read audit have not been done for Level 5. The hints are one line of at most 68 characters (checked); the Go further and Think harder difficulty is untested with children.
 3. Objects under 8 mm: chairs in the unit 9 tables item, the grid squares in two unit 4 items, the matchstick hexagons in the Try (all 5 mm or more).
 4. The printer proof and the 600 dpi 1-bit file (Print_BW.pdf) are produced by the shared build; the dotted grid and the hatching have only been checked at 200 dpi (`bw_check.py`) and by `print/check_bw.py`.
