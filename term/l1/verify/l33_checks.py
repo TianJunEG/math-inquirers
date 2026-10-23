@@ -263,7 +263,7 @@ def run(d):
     f = F('s-m2'); poly = [tuple(p) for p in f['poly']]; A, B, C = poly
     eq((B[0] - A[0], A[1] - B[1]), (3, 0), 's-m2 corner B is 3 right of A'); eq((C[0] - A[0], A[1] - C[1]), (0, 2), 's-m2 corner C is 2 up from A'); eq(A, (0, 3), 's-m2 A is the bottom left dot of the grid')
     eq(lists_in(sl['s-m2-ans']['blocks'])[0], ['A: the start.', 'B: 3 right.', 'C: 2 up.'], 's-m2-ans text')
-    f = F('s-m3'); sx, sy = f['start']; ex, ey = f['end']; eq((ex - sx, sy - ey), (4, 2), 's-m3 S to E is 4 right 2 up'); eq(sl['s-m3-ans']['blocks'][0]['text'], '4 right, 2 up. To come back: 4 left, 2 down.', 's-m3-ans text')
+    f = F('s-m3'); sx, sy = f['start']; ex, ey = f['end']; eq((ex - sx, sy - ey), (4, 2), 's-m3 S to E is 4 right 2 up'); eq(sl['s-m3-ans']['blocks'][0]['text'], '4 right, 2 up.', 's-m3-ans text')
     back = walk([(ex, ey), (sx, ey), (sx, sy)]); eq(totals(back)['L'], 4, 's-m3 way back: 4 left'); eq(totals(back)['D'], 2, 's-m3 way back: 2 down')
     f = F('s-m4-ans'); m = walk([tuple(p) for p in f['route']]); eq(''.join(m), 'RUURRRU', 's-m4 moves: 1 right, 2 up, 3 right, 1 up'); eq(net_right_up(m), (4, 3), 's-m4 totals'); eq(tuple(f['end']), (f['route'][-1][0], f['route'][-1][1]), 's-m4 ends on E')
     eq(lists_in(sl['s-m4']['blocks'])[0], ['Go 1 right.', 'Go 2 up.', 'Go 3 right.', 'Go 1 up.'], 's-m4 directions'); eq(1 + 3, 4, 's-m4 rights add'); eq(2 + 1, 3, 's-m4 ups add')

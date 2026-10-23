@@ -1,6 +1,7 @@
 const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
+const SG = require('../levels/spine_guide.js');   // strategy card + common look-back lines (levels/spine.json)
 const bx = t => String(t).replace(/\{box\}/g, '[ ]');
 /* Minutes come from p2/budget.json (written by rebuild/p2budget.py, the single source for slide pills, notes and this guide). */
 const BUD = require('./budget.json').lessons;
@@ -61,6 +62,11 @@ G.push(tbl([900, 1450, 2700, 2300, 2550], [row([hd('Minutes', 900), hd('Part', 1
 G.push(h2('Teaching habits that matter'));
 ['Ask “How do you know?” after answers, right or wrong, but invite rather than single out: “Would anyone like to say how they started?” “I am not sure yet” is always a fine answer.', 'Wait 10 seconds before helping. Let children struggle a little.', 'Praise the thinking (“You checked it two ways”), not just the answer.', 'Let children disagree with each other and settle it with objects or a drawing.', 'If a child would like more, offer Think harder, Go further or the Investigation as a choice. Never name who is on which page, and never use extra drill.'].forEach(s => G.push(bu(s)));
 
+G.push(h2('Toolbox and look-back (every lesson)'));
+G.push(tx('Every lesson has one TOOL OF THE DAY, shown on the workbook card on page 1, on the title slide (and a “Strategy of the day” slide) and named in your script. It is one of eight tools a child can choose for any problem. Say its name, point at the card, and at talk time ask where the tool helped. Lesson 10: children choose their own tool. Passing is always allowed.'));
+G.push(tbl([2500, 7400], [row([hd('Tool', 2500), hd('What we say (ages 6 to 8)', 7400)]), ...SG.DATA.tools.map(t => row([c2(t.name, 2500, { bold: true }), c2(t.def.A, 7400)]))]));
+G.push(gap(40));
+G.push(tx('The look-back is the same every lesson: pick ONE problem from today and ask three things. ' + SG.DATA.lookback.prompts.A.map((q, i) => (i + 1) + ') ' + q).join(' ') + ' Children tick yes or not yet, ' + 'write one word or draw for question 3' + ', and tick the tools they used. The timer is ' + SG.DATA.lookback.timer_seconds.A + ' seconds, then stamp the journals. Nothing is collected, read aloud or marked.'));
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Cut-outs used: place-value cards (Lessons 1, 2, 10), digit cards (Lessons 1 and 10), play coins and notes (Lesson 6), fraction strips (Lesson 7), cube nets and paper cube strips (Lesson 8), paper clock (Lesson 9).', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
@@ -132,6 +138,7 @@ L.lessons.forEach(l => {
   pushSeg(sOp.time, 'Opening', sOp.rec);
   say(s.hook);
   doo(['Greet each child by name. Show the lesson title slide. Read “Today we will…” aloud. The kit is on the desk from minute 0: ask everyone to show you the materials for today (a 30-second check; the materials list is above and on the title slide).']);
+  { const sp = SG.info(2, l.n); say([sp.openSay]); doo([sp.openDo]); }
 
   const gp = L.gaps[String(l.n)], GC = L.gaps.common;
   pushSeg(sSn.time, 'Sneak-peek puzzles (' + num(sSn.d) + ' minutes)', sSn.rec);
@@ -190,14 +197,15 @@ L.lessons.forEach(l => {
   pushSeg(sTa.time, 'Talk time', sTa.rec);
   doo(['Bring the group back to a circle (or camera on, mics on). Pairs talk for 90 seconds, then two volunteers share (about ' + num(sTa.d) + ' minutes in all). One question only. ' + GC.talkDo]);
   say(s.talk);
-  ask([[l.share, s.talkAns]], 'Discussion question', 'Listen for');
+  { const sp = SG.info(2, l.n); ask([[l.share, s.talkAns], [sp.talkAsk, sp.talkListen]], 'Discussion question', 'Listen for'); }
 
   pushSeg(sEt.time, 'Exit ticket', sEt.rec);
   doo(['Give each child a slip of paper (or ask them to write on their journal page). No talking, no helping. Show the exit ticket slide. About 2 minutes of child work; then children tick their slips against the answer slide (nothing is held up) and the answer is on the next click.']);
   ask([[bx(l.exit.q), bx(l.exit.a)]], 'Exit ticket', 'Answer');
   pushSeg(sLb.time, 'Looking back (2 minutes)', sLb.rec);
-  say([GC.refSay]);
-  doo([GC.refDo]);
+  { const sp = SG.info(2, l.n);
+    say([sp.lookSay + ' ' + sp.checkTogether, 'Thank you. Drawing it, listing, using counters or checking another way: those are all good ways to get unstuck.']);
+    doo(['Show the look-back slide and start its timer (' + sp.timer + ' seconds); the box is on the “Before you go” page. ' + sp.lookDo.replace(/^Start the timer\. /, '') + ' Nothing is collected in front of the group. If a child ticks “I am still stuck”, check in during the next open session (a quick visit to the shared breakout room or a hand signal, with a parent nearby), never by direct message. Pass is always allowed.']); }
   pushSeg(sCl.time, X ? 'Certificates and closing' : 'Closing and stamps (' + num(sCl.d) + ' minutes)', sCl.rec);
   say(s.close);
   doo(['Stamp the inquiry journal when a child hands in their ticket. Mark S, D or H in the progress tracker at the back of this guide (this is for you only, never shared with the children). If a child marked D or H, plan two minutes of catch-up at the start of the next lesson.']);

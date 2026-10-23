@@ -354,7 +354,7 @@ def run(d):
         a_, b_ = cut_poly(P, F(0), F(1), F(2)); quarters += [a_, b_]
     eq(sorted((area(P), corners(P)) for P in quarters), [(1, 4)] * 4, 'T1 b: 2 more lines make 4 small squares'); eq(len({tuple(sorted({sq_len(P[i], P[(i + 1) % 4]) for i in range(4)})) for P in quarters}), 1, 'T1 b: all the same size')
     t2 = pn(T['T2'])[0]; pc2 = panel_counts(t2); eq([pc2['triangle'], pc2['square'], pc2['circle']], T['T2']['val'], 'T2 triangles, squares, circles'); eq(sum(pc2.values()), 14, 'T2 14 shapes in all')
-    eq(len(t2['tiles']), 6, 'T2 6 tiles'); tb = figs_in(T['T2'], 'table')[0]; eq((tb['head'], tb['rows']), (['Triangles', 'Squares', 'Circles'], [['[]', '[]', '[]']]), 'T2 table matches the order of the answers')
+    eq(len(t2['tiles']), 6, 'T2 6 tiles'); tb = figs_in(T['T2'], 'table')[0]; eq((tb['head'], tb['rows']), (['Triangles', 'Small squares', 'Circles'], [['[]', '[]', '[]']]), 'T2 table matches the order of the answers')
     diag = []
     pts = [(F(round(math.cos(-math.pi / 2 + 2 * math.pi * k / 4))), F(round(math.sin(-math.pi / 2 + 2 * math.pi * k / 4)))) for k in range(4)]
     segs = [(pts[a_], pts[b_]) for a_ in range(4) for b_ in range(a_ + 1, 4)]

@@ -273,7 +273,7 @@ def run(d):
     q = H['H3']; eq(nums(q['text'])[:2], [12, 7], 'H3 text'); k = 0; x = 7
     while x < 12: x += 1; k += 1
     eq(k, 5, 'H3 counting up'); eq(q['val'], 5, 'H3 val')
-    q = H['H4']; eq(nums(q['text']), [3], 'H4 text'); eq(q['val'], 3, 'H4 val'); eq(2 * 4 - (4 - 3), 7, 'H4 holes mirror about the fold at 4: one is 3 left, the other 3 right')
+    q = H['H4']; eq(nums(q['text']), [2, 3], 'H4 text'); eq(q['val'], 3, 'H4 val'); eq(2 * 4 - (4 - 3), 7, 'H4 holes mirror about the fold at 4: one is 3 left, the other 3 right')
     q = H['H5']; l14 = json.load(open(os.path.join(L1, 'lessons', 'l14.json')))['home_practice']; src = [h for h in l14 if h['id'] == 'H2'][0]; eq((q['text'], q['answer'], q['val']), (src['text'], src['answer'], src['val']), 'H5 is the Term 2 Lesson 4 item H2, copied')
     eq(q['rewind_of'], 'Term 2 Lesson 4', 'H5 tag'); eq(13 - 12, 1, 'H5 13 counters in pairs leave 1'); eq([h['tier'] for h in d['home_practice']], ['start', 'start', 'start', 'think', 'start'], 'home tiers')
     # ---------------------------------------------------------------- online practice, authored numbers

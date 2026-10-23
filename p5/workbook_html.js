@@ -5,18 +5,24 @@ const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
-const hdr = (n, topic, title, pb = true) => [
-  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span></div>`,
-  `<div class="p ltitle">${title}</div>`,
-  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
-];
+const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
+const LEVEL = 5;
+const COMPACT = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const hdr = (n, topic, title, pb = true, first = false) => {   // first = the lesson's "Start here" page: it carries the strategy card
+  const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';
+  const compact = first && COMPACT.has(n);
+  const card = first && !compact ? SP.card(LEVEL, n) : '';
+  const chip = compact ? SP.card(LEVEL, n, true) : '';
+  return [
+  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span>${chip}</div>`,
+  choose || !card ? `<div class="p ltitle">${title}</div>` : `<div class="p ltrow" style="display:flex;align-items:center;justify-content:space-between;gap:4mm;margin:4px 0 6px"><div class="ltitle" style="flex:1;min-width:0;margin:0 0 8px;${title.length > 15 ? 'font-size:29px;line-height:1.12' : ''}">${title}</div>${card}</div>`,
+  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`,
+  ...(choose ? [card] : [])
+  ];
+};
 const bx = '<span style="display:inline-block;width:20px;height:20px;border:2.5px solid #1B2A49;border-radius:5px;vertical-align:-4px;margin:0 6px 0 12px"></span>';
 // Reflection: short and safe. A small box on the page every child gets (the Investigation page), never under the Go further page.
-const reflect = () => `<div class="p" style="border:3px solid #1F7A6F;border-radius:14px;padding:8px 16px;margin-top:14px;background:#F3FAF8;page-break-inside:avoid"><div style="font-weight:800;font-size:20px;color:#1F7A6F;margin-bottom:2px">My reflection  <span style="font-weight:400;font-size:15px;color:#444">(2 minutes. Your tutor may read this privately to plan the next lesson. It is never marked or shown to others. &ldquo;Pass&rdquo; is always OK.)</span></div>
-<div style="margin:5px 0">Something I did well ____________________________________________________________</div>
-<div style="margin:5px 0">The hardest part was ______________________________________________________________</div>
-<div style="margin:5px 0">What helped me:${bx}a picture or model${bx}a list or table${bx}a simpler number${bx}my partner${bx}I asked for help${bx}checking my estimate</div>
-<div style="margin:5px 0">${bx}I am still stuck (my tutor will check in with me)${bx}Pass</div></div>`;
+const reflect = () => SP.lookback(LEVEL);   // common look-back (three prompts, tool ticks, still stuck / pass); replaces the old My reflection box
 // Neutral choice line at the top of page 1 (replaces the old printed fast-track criterion).
 // The number is the last question printed on page 1 of that lesson (2 or 3), computed in data.js from the real page break.
 const choose = n => `<div class="p" style="border:2.5px solid #D9662B;border-radius:12px;padding:6px 14px;margin:4px 0 6px;background:#FFF6EE;font-size:17px"><b style="color:#D9662B">After question ${L.choiceQ(n)}</b> you may choose: carry on, or try Think harder. <b style="color:#D9662B">&#9733;</b> = for home.</div>`;
@@ -63,7 +69,7 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
-  W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
+  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, true));
   W.push(banner('Start here'));
   W.push(choose(l.n));
   W.push(...page2(c.workbook(H), l.n));
