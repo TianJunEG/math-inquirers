@@ -10,7 +10,7 @@ import render
 
 # page modules (P3-01 to P3-40); a module not written yet is skipped, so a half-built tree still builds (validate.py --partial)
 MODULES = []
-for _m in ("pages_w1", "pages_w2", "pages_w3", "pages_w4", "pages_w5", "pages_cbc"):
+for _m in ("pages_s1a", "pages_s1b", "pages_s1c", "pages_s1d", "pages_s2a", "pages_s2b", "pages_s2c", "pages_s2d", "pages_cbc"):
     try:
         MODULES.append(__import__("gen." + _m, fromlist=["PAGES"]))
     except ModuleNotFoundError as e:

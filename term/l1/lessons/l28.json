@@ -26,10 +26,10 @@
    "A growing pattern of shapes made with sticks, and the 10th and 20th picture, is beyond Primary 1",
    "Make a table is a Primary heuristic (p. 13 to 14)"
   ],
-  "note": "Strand label for the tutor only. NEW TOPIC: the plan has no Primary 1 outcome for a growing shape pattern (shape patterns are Primary 2, p. 34), so a tutor or the owner should confirm the placement. Two school-paper items are close to Start here (a two-row table of equal groups, such as 3 red beads for every 2 blue, and a day-by-day table of pages read): both are Primary 1 and sit at Start here, with new numbers and new contexts. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: the 10th and 20th picture of a growing stick pattern from a table (the rule double and add 2, said in words), why no row of triangles with a handle uses an odd number of sticks, and the beyond item Picture 100 (the 100th picture, and working back from a total of sticks, a Primary 4 or 5 pattern idea). Letters for an unknown are Primary 6 (p. 43), so every rule is said in words. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type (here TAB: a ratio table and a growing-pattern table; PAT: the 10th and 20th term; BACK: work back from a total). Do not describe the lesson as MOE-aligned. Paper strips are used for sticks: never matches or toothpicks."
+  "note": "Strand label for the tutor only. NEW TOPIC: the plan has no Primary 1 outcome for a growing shape pattern (shape patterns are Primary 2, p. 34), so a tutor or the owner should confirm the placement. Two school-paper items are close to Start here (a two-row table of prices, such as pens at $2 each and rulers at $3 each, and a day-by-day table of pages read): both are Primary 1 and sit at Start here, with new numbers and new contexts. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: the 10th and 20th picture of a growing stick pattern from a table (the rule double and add 2, said in words), why no row of triangles with a handle uses an odd number of sticks, and the beyond item Picture 100 (the 100th picture, and working back from a total of sticks, a Primary 4 or 5 pattern idea). Letters for an unknown are Primary 6 (p. 43), so every rule is said in words. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type (here TAB: a ratio table and a growing-pattern table; PAT: the 10th and 20th term; BACK: work back from a total). Do not describe the lesson as MOE-aligned. Paper strips are used for sticks: never matches or toothpicks."
  },
  "contest_moves": [
-  "make a table: growing stick pattern and a two-row ratio table",
+  "make a table: growing stick pattern and a two-row price table",
   "pattern: the 10th and 20th term of a growing pattern from a rule in words",
   "work backwards: from a total number of sticks to the number of pictures",
   "odd or even: why every row of triangles with a handle uses an even number of sticks"
@@ -38,7 +38,7 @@
  "objectives": [
   "Build a growing stick pattern (a row of shapes with one handle stick), count the sticks, and put the numbers in a table of pictures and sticks.",
   "Say how a table grows (the same number more each time) and use it to find the next numbers.",
-  "Complete a two-row table of equal groups, such as 3 red beads for every 2 blue beads.",
+  "Complete a two-row table of prices, such as pens at $2 each and rulers at $3 each.",
   "Think harder: find the 10th and 20th picture from a table, say the rule in words, spot a number that does not fit, and say why a row of triangles with a handle never uses an odd number of sticks.",
   "Go further: the 100th picture, and working back from a total number of sticks to the number of pictures."
  ],
@@ -747,7 +747,7 @@
      "t": "visual",
      "type": "table",
      "head": [
-      "Groups",
+      "Things",
       "1",
       "2",
       "3",
@@ -756,18 +756,18 @@
      ],
      "rows": [
       [
-       "Red beads",
-       "3",
-       "6",
+       "Pens ($)",
+       "2",
+       "4",
        "[]",
-       "12",
+       "8",
        ""
       ],
       [
-       "Blue beads",
-       "2",
-       "4",
+       "Rulers ($)",
+       "3",
        "6",
+       "9",
        "[]",
        ""
       ]
@@ -782,7 +782,7 @@
      ]
     }
    ],
-   "note": "Read questions 1 and 2 aloud. Children work on their own with their strips; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder. Question 1: count the sticks in squares in a row and fill in the table. Question 2: a table of red and blue beads: for every 3 red beads there are 2 blue beads. The table for question 2 is repeated large under the questions so it can be read from the screen."
+   "note": "Read questions 1 and 2 aloud. Children work on their own with their strips; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder. Question 1: count the sticks in squares in a row and fill in the table. Question 2: a table of prices: pens cost $2 each and rulers cost $3 each. The table for question 2 is repeated large under the questions so it can be read from the screen."
   },
   {
    "id": "s-ws1ans",
@@ -798,7 +798,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 5, 8, 11; Q2 9 red beads and 8 blue beads, and 15 red beads for 10 blue beads."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 5, 8, 11; Q2 6 and 12 in the table, and $15 for 5 rulers."
   },
   {
    "id": "s-ws2",
@@ -1560,7 +1560,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: squares in a row are made with sticks. Count the sticks for 1 square, 2 squares and 3 squares. Fill in the table. Question 2: for every 3 red beads there are 2 blue beads. Fill in the table. Then: Ali uses 10 blue beads. How many red beads?"
+      "text": "Page 1, Start here. Question 1: squares in a row are made with sticks. Count the sticks for 1 square, 2 squares and 3 squares. Fill in the table. Question 2: pens cost 2 dollars each and rulers cost 3 dollars each. Fill in the table. Then: Mei buys 5 rulers. How much do they cost?"
      },
      {
       "k": "WORK",
@@ -1573,7 +1573,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: 5, 8, 11. Question 2: 9 red beads and 8 blue beads, and 15 red beads for 10 blue beads. Tick your own page with a tick."
+      "text": "Question 1: 5, 8, 11. Question 2: 6 and 12 in the table, and 15 dollars for 5 rulers. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1620,7 +1620,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: count the sticks in one square, then add the sticks of the next square. Q2: add 3 more red and 2 more blue each time. Q3: how many more sticks does each new square need? Q4: add 5 each day. Q5: check each statement against your table."
+      "text": "Q1: count the sticks in one square, then add the sticks of the next square. Q2: add 2 more for each pen and 3 more for each ruler. Q3: how many more sticks does each new square need? Q4: add 5 each day. Q5: check each statement against your table."
      },
      {
       "k": "STUCK",
@@ -1869,32 +1869,32 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "For every 3 red beads there are 2 blue beads. Fill in the table. The last column is spare.",
+    "text": "Pens cost $2 each. Rulers cost $3 each. Fill in the table. The last column is spare.",
     "parts": [
      {
       "l": "",
-      "text": "Ali uses 10 blue beads. How many red beads does he use? ____",
+      "text": "Mei buys 5 rulers. How much do the 5 rulers cost? $____",
       "ans": "15",
       "val": 15
      }
     ],
-    "answer": "9 and 8; 15",
+    "answer": "6 and 12; 15",
     "val": [
-     9,
-     8,
+     6,
+     12,
      15
     ],
-    "hint": "Each new group has 3 more red beads and 2 more blue beads. Keep going until you reach 10 blue beads.",
-    "solution": "Red beads go up by 3 each time: 3, 6, 9, 12. Blue beads go up by 2 each time: 2, 4, 6, 8. 10 blue beads is 5 groups, and 5 groups have 15 red beads.",
+    "hint": "Each new pen costs $2 more in all. Each new ruler costs $3 more in all. Keep going to 5 rulers.",
+    "solution": "Pens go up by 2 each time: 2, 4, 6, 8. Rulers go up by 3 each time: 3, 6, 9, 12. 5 rulers cost 12 and 3 more, which is $15.",
     "mistakes": [
-     "Adding 3 to the blue beads, or 2 to the red beads.",
-     "Writing 10 or 12 for the red beads."
+     "Adding 3 to the pens, or 2 to the rulers.",
+     "Writing 10 or 12 for the 5 rulers."
     ],
     "mins": 4,
     "visual": {
      "type": "table",
      "head": [
-      "Groups",
+      "Things",
       "1",
       "2",
       "3",
@@ -1903,18 +1903,18 @@
      ],
      "rows": [
       [
-       "Red beads",
-       "3",
-       "6",
+       "Pens ($)",
+       "2",
+       "4",
        "[]",
-       "12",
+       "8",
        ""
       ],
       [
-       "Blue beads",
-       "2",
-       "4",
+       "Rulers ($)",
+       "3",
        "6",
+       "9",
        "[]",
        ""
       ]
@@ -3117,7 +3117,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, with your own strips. Check: S1 5, 8, 11; S2 9, 8 and 15; S3 14, 17, 20, 3 and 23; S4 15, 25, 30 and day 5; S5 true, false, true; T1 22, 42 and add 2; T2 No, even and Yes; T3 4, 14 and 3; G1 202, 302 and 152; G2 15 and 12; G3 10, 20 and 5; I1 6 and 4.",
+  "Solve every workbook question yourself first, with your own strips. Check: S1 5, 8, 11; S2 6, 12 and 15; S3 14, 17, 20, 3 and 23; S4 15, 25, 30 and day 5; S5 true, false, true; T1 22, 42 and add 2; T2 No, even and Yes; T3 4, 14 and 3; G1 202, 302 and 152; G2 15 and 12; G3 10, 20 and 5; I1 6 and 4.",
   "Tell parents a week before: tear out the strip page (page 6) along the dashed line; a grown-up cuts out the 14 strips and keeps them in an envelope. With no printer: 14 short strips of paper or straws of the same length. Never matches or toothpicks.",
   "Have the slides open. Have your own strips to show on camera if you wish. Say sticks in the table and strips on the desk, and say the rule in words (double and add 2): never a letter, never the word formula.",
   "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly without first names, then say the recording notice; do not use first names while the recording runs. Nobody holds paper up to the camera.",

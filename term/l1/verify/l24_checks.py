@@ -66,7 +66,7 @@ QUEST_CHANGE = (700, 1000)                   # Quest gate: a $7 toy paid with $1
 CLASS_SETS = {'sneak': (5, 5, 10, 10, 10), 'explore A': (10, 10, 50), 'explore B': (5, 20, 20, 20), 'mini worked': (5, 10, 10, 50), 'mini try': (5, 20, 20)}
 WORKBOOK_SETS = {'S1': (5, 5, 20, 50), 'S4 row': (5, 5, 10, 10, 20, 50), 'T4 A': (10, 20, 50), 'T4 B': (10, 20, 20, 20), 'T4 C': (5, 5, 50), 'E1': (10, 10, 20, 50)}
 CLASS_CHANGE = {'explore sweet': (40, 50), 'explore ruler': (600, 1000), 'mini ball': (800, 1000), 'mini pencil': (35, 50), 'mini try': (500, 1000)}
-WORKBOOK_CHANGE = {'S6': (300, 500), 'T1': (900, 1000), 'T3': (35, 50), 'G1b': (3700, 5000), 'G3': (90, 100), 'E2': (400, 1000)}
+WORKBOOK_CHANGE = {'S6': (300, 500), 'T1': (900, 1000), 'T3': (30, 50), 'G1b': (3700, 5000), 'G3': (90, 100), 'E2': (400, 1000)}
 
 # --------------------------------------------------------------------------------- oracles for the online practice templates
 ORACLES = {
@@ -78,7 +78,7 @@ ORACLES = {
     't2': lambda e: next(ch for ch in range(0, 11) if e['a'] + e['b'] + ch == 10),
     'g1': lambda e: fewest(e['n'], [1, 2, 5, 10, 50]),
 }
-BASE_ENV = {'c1': {'a': 1, 'b': 1, 'c': 1}, 'c2': {'a': 1, 'b': 1, 'c': 1}, 'c3': {'p': 3}, 'c4': {'p': 6}, 't1': {'p': 30}, 't2': {'a': 4, 'b': 5}, 'g1': {'n': 73}}
+BASE_ENV = {'c1': {'a': 1, 'b': 1, 'c': 1}, 'c2': {'a': 1, 'b': 1, 'c': 1}, 'c3': {'p': 3}, 'c4': {'p': 6}, 't1': {'p': 25}, 't2': {'a': 4, 'b': 5}, 'g1': {'n': 73}}
 
 
 def run(d):
@@ -149,7 +149,7 @@ def run(d):
     q = T['T2']; ways = [(a, b) for a in range(0, 6) for b in range(0, 3) if 10 * a + 20 * b == 50]
     eq(ways, [(1, 2), (3, 1), (5, 0)], 'T2 brute force: exactly 3 ways to make 50c from 10c and 20c coins'); rows = q['visual']['rows']
     eq((int(rows[0][0]), int(rows[0][1]), rows[1], rows[2]), (5, 0, ['[]', '[]'], ['[]', '[]']), 'T2 one row given, two to find'); eq(sorted(q['val']), [[1, 2], [3, 1]], 'T2 val = the other two ways')
-    q = T['T3']; eq((10 + 5, 50 - (10 + 5), q['val']), (15, 35, [15, 35]), 'T3 works backwards: 50c paid, a 10c and a 5c coin back, the price is 35c'); eq(('50¢' in q['text'], '10¢' in q['text'], '5¢ coin' in q['text']), (True, True, True), 'T3 text'); eq(WORKBOOK_CHANGE['T3'], (35, 50), 'registry')
+    q = T['T3']; eq((10 + 10, 50 - (10 + 10), q['val']), (20, 30, [20, 30]), 'T3 works backwards: 50c paid, two 10c coins back, the price is 30c'); eq(('50¢' in q['text'], 'two 10¢ coins' in q['text']), (True, True), 'T3 text'); eq(WORKBOOK_CHANGE['T3'], (30, 50), 'registry')
     q = T['T4']; sets_ = {f['label']: f for f in M(q)}; tot = {k: total(v) for k, v in sets_.items()}
     eq(tot, {'Set A': 80, 'Set B': 70, 'Set C': 60}, 'T4 totals'); eq(max(tot, key=tot.get), 'Set A', 'T4 most money'); eq(max(sets_, key=lambda k: len(pieces(sets_[k]))), 'Set B', 'T4 Set B has the most coins but not the most money')
     eq((tot['Set A'] - tot['Set C'], q['val']), (20, ['A', 20]), 'T4 difference'); eq([cat(sets_['Set A']), cat(sets_['Set B']), cat(sets_['Set C'])], [WORKBOOK_SETS['T4 A'], WORKBOOK_SETS['T4 B'], WORKBOOK_SETS['T4 C']], 'T4 registry')
@@ -183,7 +183,7 @@ def run(d):
     eq(len([h for h in d['home_practice'] if h['tier'] == 'start']) >= 3, True, 'home has 3 Start here items')
     # ---------------------------------------------------------------- online practice
     items = {i['id']: i for i in d['online_practice']['items']}
-    for cid, want in (('c1', 35), ('c2', 17), ('c3', 2), ('c4', 4), ('t1', 20), ('t2', 1), ('g1', 5), ('g2', 7)):
+    for cid, want in (('c1', 35), ('c2', 17), ('c3', 2), ('c4', 4), ('t1', 25), ('t2', 1), ('g1', 5), ('g2', 7)):
         eq(items[cid]['answer'] if 'answer' in items[cid] else None, want, cid + ' authored answer')
     eq(items['t3']['answer'], 3, 't3'); eq(items['t3']['type'], 'number', 't3 is one number'); eq(10 * 3 + 20 * 1, 50, 't3 coins make 50c'); eq(items['c5']['answer'], 'the $2 note', 'c5')
     for cid, env in BASE_ENV.items():

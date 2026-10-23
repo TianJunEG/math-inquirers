@@ -111,3 +111,18 @@ ul.clues{margin:0.5mm 0;font-size:12.5pt}.grow3{height:9.6mm}.gkey{font-size:12p
 .tmcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5mm 4mm}
 .tmc{display:flex;align-items:center;gap:2.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1.5mm 2.5mm}.tmc b{font-family:'Fredoka';font-weight:600;font-size:19pt;flex:1}
 """
+CSS_P3 += """
+/* ---- Primary 3 additions ---- */
+.vsum .vr i.ab{width:8.5mm;height:12mm}
+.ab.w4{width:30mm}
+.bignum{font-family:'Fredoka';font-weight:600;font-size:23pt}
+.sqm{width:19mm;height:13mm;border:0.6mm solid #000;border-radius:1.5mm;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:20pt}
+.seq .sq{width:19mm;height:13mm;font-size:17pt}
+.crows2{display:flex;flex-direction:column;gap:3mm}
+.crow2{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding:1mm 0 3mm}
+.cq2{flex:1;min-width:0;font-size:14pt;line-height:1.25}.cq2 p{margin:0}
+.copts{display:flex;gap:3mm;flex:none}
+.opt{display:inline-flex;align-items:center;gap:1.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1mm 1.5mm 1mm 2.5mm}
+.opt b.on{font-family:'Fredoka';font-weight:600;font-size:16pt}
+.opt i.cl{margin-left:0.5mm}
+"""
