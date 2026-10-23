@@ -64,7 +64,7 @@ u.S(2, 'Find the missing sides a and b first. Then find the area, and then the p
     P('c', 'The area is {b} cm².', A('36')), P('d', 'The perimeter is {b} cm.', A('28'))],
     partsrow=True,
     figure={'type': 'l3_poly', 'pts': [[0, 0], [8, 0], [8, 3], [4, 3], [4, 6], [0, 6]], 'k': 34, 'width_mm': 80,
-            'labels': [{'side': 0, 'text': '8 cm'}, {'side': 1, 'text': '3 cm'}, {'side': 2, 'text': 'a'}, {'side': 3, 'text': 'b'}, {'side': 4, 'text': '4 cm'}, {'side': 5, 'text': '6 cm'}]},
+            'labels': [{'side': 0, 'text': '8 cm'}, {'side': 1, 'text': '3 cm'}, {'side': 2, 'text': 'a', 'shift': -0.25}, {'side': 3, 'text': 'b', 'shift': 0.2}, {'side': 4, 'text': '4 cm'}, {'side': 5, 'text': '6 cm'}]},
     why='a is the top of the lower part: 8 - 4 = 4 cm. b is the rest of the left height: 6 - 3 = 3 cm. Area: cut into a 4 by 6 rectangle and a 4 by 3 rectangle: 24 + 12 = 36 cm². Perimeter: push the steps out to a box 8 by 6: 2 × (8 + 6) = 28 cm.')
 u.S(3, 'Every square in the picture has sides of 1 cm.', parts=[
     P('a', 'The area is {b} cm².', A('12')), P('b', 'The perimeter is {b} cm.', A('18')),

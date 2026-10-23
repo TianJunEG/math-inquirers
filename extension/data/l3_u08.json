@@ -154,14 +154,14 @@
     ],
     "cols": 3,
     "ch": 176,
-    "width_mm": 100
+    "width_mm": 110
    }
   },
   {
    "id": "L3U08-S02",
    "tier": "start",
    "page": 1,
-   "text": "Count the right angles INSIDE each shape. Check each corner. A dent is greater than a right angle, so leave it out.",
+   "text": "Count the right angles INSIDE each shape. Check each corner with your paper corner.",
    "parts": [
     {
      "label": "a",
@@ -200,7 +200,7 @@
     "type": "l3_segs",
     "k": 30,
     "pad": 44,
-    "width_mm": 90,
+    "width_mm": 98,
     "segs": [
      [
       0,
@@ -929,10 +929,19 @@
     "labels": [],
     "texts": [
      {
-      "x": 1.4,
-      "y": 1.4,
+      "x": 1.2,
+      "y": 1.2,
       "text": "X",
       "size": 36
+     }
+    ],
+    "arcs": [
+     {
+      "x": 2,
+      "y": 2,
+      "r": 0.7,
+      "a0": 90,
+      "a1": 360
      }
     ]
    },
@@ -1061,16 +1070,16 @@
    "id": "L3U08-T03",
    "tier": "think",
    "page": 4,
-   "text": "A staircase has 4 steps.",
+   "text": "Look at the plus sign. All its corners are square.",
    "parts": [
     {
      "label": "a",
      "text": "It has {b} right angles inside.",
      "answer": {
       "value": [
-       "7"
+       "8"
       ],
-      "text": "7"
+      "text": "8"
      }
     },
     {
@@ -1078,43 +1087,43 @@
      "text": "It has {b} dents.",
      "answer": {
       "value": [
-       "3"
+       "4"
       ],
-      "text": "3"
+      "text": "4"
      }
     },
     {
      "label": "c",
-     "text": "A staircase with 8 steps has {b} right angles inside.",
+     "text": "Another shape with square corners has 10 corners and 3 dents. It has {b} right angles inside.",
      "answer": {
       "value": [
-       "11"
+       "7"
       ],
-      "text": "11"
+      "text": "7"
      }
     }
    ],
-   "explanation": "Count the corners that fit a checker: 7. The 3 corners that dent into the shape are greater than a right angle. A staircase with n steps has n - 1 dents and n + 3 right angles. For 8 steps: 8 + 3 = 11 right angles.",
+   "explanation": "The plus has 12 corners. 4 of them dent into the shape: they are greater than a right angle. The other 8 fit a checker. In (c) the 10 corners are right angles or dents. 10 - 3 = 7 right angles.",
    "figure": {
     "type": "l3_segs",
     "k": 30,
     "pad": 20,
-    "width_mm": 50,
+    "width_mm": 44,
     "segs": [
      [
+      1,
       0,
-      0,
-      4,
+      2,
       0
      ],
      [
-      4,
+      2,
       0,
-      4,
+      2,
       1
      ],
      [
-      4,
+      2,
       1,
       3,
       1
@@ -1147,30 +1156,43 @@
       1,
       3,
       1,
-      4
+      2
      ],
      [
       1,
-      4,
+      2,
       0,
-      4
+      2
      ],
      [
       0,
-      4,
+      2,
       0,
+      1
+     ],
+     [
+      0,
+      1,
+      1,
+      1
+     ],
+     [
+      1,
+      1,
+      1,
       0
      ]
     ]
    },
    "figside": true,
-   "hint": "Count the dents first. Each new step adds 1 right angle."
+   "hint": "Count the dents first. Which corners are left?"
   },
   {
    "id": "L3U08-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Degrees.\nA right angle is 90 degrees.",
+   "beyond": "Degrees",
+   "text": "A right angle is 90 degrees.",
    "parts": [
     {
      "label": "a",
@@ -1221,7 +1243,8 @@
    "id": "L3U08-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Lines and a third line.\nTwo upright lines both cross the long line at right angles.",
+   "beyond": "Lines and a third line",
+   "text": "Two upright lines both cross the long line at right angles.",
    "parts": [
     {
      "label": "a",

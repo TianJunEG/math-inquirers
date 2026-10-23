@@ -16,6 +16,7 @@ _ang = [10, 55, 100, 145]
 FAN4 = [[0, 0, round(3.4 * _m.cos(_m.radians(a)), 2), round(3.4 * _m.sin(_m.radians(a)), 2)] for a in _ang]
 GRID1 = [[1, 1, 5, 3], [2, 5, 4, 1], [0, 4, 4, 2], [2, 0, 6, 2], [4, 4, 6, 6]]
 LADDER = [[0, 0, 0, 4], [3, 0, 3, 4], [0, 1, 3, 1], [0, 2, 3, 2], [0, 3, 3, 3]]
+PLUS = [[1, 0, 2, 0], [2, 0, 2, 1], [2, 1, 3, 1], [3, 1, 3, 2], [3, 2, 2, 2], [2, 2, 2, 3], [2, 3, 1, 3], [1, 3, 1, 2], [1, 2, 0, 2], [0, 2, 0, 1], [0, 1, 1, 1], [1, 1, 1, 0]]
 STAIRS = [[0, 0, 4, 0], [4, 0, 4, 1], [4, 1, 3, 1], [3, 1, 3, 2], [3, 2, 2, 2], [2, 2, 2, 3], [2, 3, 1, 3], [1, 3, 1, 4], [1, 4, 0, 4], [0, 4, 0, 0]]
 
 # letters as line segments (x right, y up), 3 wide and 4 high
@@ -60,12 +61,12 @@ u.S(1, 'Use a right angle checker on each angle. Write the letters.', parts=[
     P('b', 'A right angle: {l}', A(['A', 'F'], 'A and F', list=True)),
     P('c', 'Greater than a right angle: {l}', A(['C', 'D'], 'C and D', list=True))],
     figure={'type': 'l3_angles', 'items': [{'deg': 90, 'rot': 20, 'label': 'A'}, {'deg': 55, 'rot': 0, 'label': 'B'}, {'deg': 125, 'rot': 40, 'label': 'C'},
-                                           {'deg': 150, 'rot': 10, 'label': 'D'}, {'deg': 40, 'rot': 60, 'label': 'E'}, {'deg': 90, 'rot': 100, 'label': 'F'}], 'cols': 3, 'ch': 176, 'width_mm': 100},
+                                           {'deg': 150, 'rot': 10, 'label': 'D'}, {'deg': 40, 'rot': 60, 'label': 'E'}, {'deg': 90, 'rot': 100, 'label': 'F'}], 'cols': 3, 'ch': 176, 'width_mm': 110},
     why='A and F fit the checker exactly, so they are right angles. B and E are inside the corner of the checker, so they are smaller. C and D stick out past the corner of the checker, so they are greater.')
-u.S(1, 'Count the right angles INSIDE each shape. Check each corner. A dent is greater than a right angle, so leave it out.', parts=[
+u.S(1, 'Count the right angles INSIDE each shape. Check each corner with your paper corner.', parts=[
     P('a', 'A: {b} right angles', A('5')), P('b', 'B: {b} right angles', A('6')), P('c', 'C: {b} right angles', A('2'))],
     partsrow=True,
-    figure={'type': 'l3_segs', 'k': 30, 'pad': 44, 'width_mm': 90, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
+    figure={'type': 'l3_segs', 'k': 30, 'pad': 44, 'width_mm': 98, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
     why='Shape A is an L. It has 5 right angles, and its dent is greater than a right angle. Shape B has 6 right angles and 2 dents. Shape C has right angles only at its 2 left corners. Its 2 sloping corners do not fit the checker.')
 u.S(1, 'Look at the letters.', parts=[
     P('a', 'Circle each letter with 2 PARALLEL lines.   {circ:F|V|N|L}', A(['F', 'N'], 'F and N', list=True)),
@@ -109,7 +110,7 @@ u.S(3, 'Circle True or False.', parts=[
 u.S(3, 'Siti says angle X is a right angle.', parts=[
     P('a', 'Is she right?   {circ:Yes|No}', A('No')),
     P('b', 'Angle X is   {circ:smaller than|equal to|greater than}   a right angle.', A('greater than'))],
-    figure=poly([[0, 0], [4, 0], [4, 2], [2, 2], [2, 4], [0, 4]], 62, 36, texts=[{'x': 1.4, 'y': 1.4, 'text': 'X', 'size': 36}]), figside=True,
+    figure=poly([[0, 0], [4, 0], [4, 2], [2, 2], [2, 4], [0, 4]], 62, 36, texts=[{'x': 1.2, 'y': 1.2, 'text': 'X', 'size': 36}], arcs=[{'x': 2, 'y': 2, 'r': 0.7, 'a0': 90, 'a1': 360}]), figside=True,
     why='Angle X is a dent. It points into the shape. A checker does not fit inside it: the angle is greater than a right angle.')
 
 # ---------------- Think harder
@@ -126,12 +127,12 @@ u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler. Make it r
     figside=True,
     hint='AB goes 2 across and 1 up. Turn it a quarter turn.',
     why='AB goes 2 across for every 1 up. A line perpendicular to it goes 1 across and 2 down (a quarter turn). From C, 1 across and 2 down reaches the dot at 3 across and 4 up, then (4, 2), then the bottom row at R.')
-u.T('A staircase has 4 steps.', parts=[
-    P('a', 'It has {b} right angles inside.', A('7')), P('b', 'It has {b} dents.', A('3')),
-    P('c', 'A staircase with 8 steps has {b} right angles inside.', A('11'))],
-    figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 50, 'segs': STAIRS}, figside=True,
-    hint='Count the dents first. Each new step adds 1 right angle.',
-    why='Count the corners that fit a checker: 7. The 3 corners that dent into the shape are greater than a right angle. A staircase with n steps has n - 1 dents and n + 3 right angles. For 8 steps: 8 + 3 = 11 right angles.')
+u.T('Look at the plus sign. All its corners are square.', parts=[
+    P('a', 'It has {b} right angles inside.', A('8')), P('b', 'It has {b} dents.', A('4')),
+    P('c', 'Another shape with square corners has 10 corners and 3 dents. It has {b} right angles inside.', A('7'))],
+    figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 44, 'segs': PLUS}, figside=True,
+    hint='Count the dents first. Which corners are left?',
+    why='The plus has 12 corners. 4 of them dent into the shape: they are greater than a right angle. The other 8 fit a checker. In (c) the 10 corners are right angles or dents. 10 - 3 = 7 right angles.')
 
 # ---------------- Go further
 u.G('Beyond Level 3: Degrees.\nA right angle is 90 degrees.', parts=[

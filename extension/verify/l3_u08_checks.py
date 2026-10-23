@@ -196,24 +196,14 @@ def _():
     return {'a': [only(k for k, d in dots.items() if dot(ab, vec(C, d)) == 0)]}
 
 
-def staircase(n):
-    pts = [(0, 0), (n, 0)]
-    for k in range(n):
-        pts += [(n - k, k + 1), (n - k - 1, k + 1)]
-    pts = [pts[0], pts[1]] + pts[2:]
-    # build properly: go up the steps
-    poly = [(0, 0), (n, 0)]
-    for k in range(1, n + 1):
-        poly.append((n - k + 1, k))
-        poly.append((n - k, k))
-    poly = [p for i, p in enumerate(poly) if p != poly[i - 1]]
-    return poly
+PLUS_POLY = [(1, 0), (2, 0), (2, 1), (3, 1), (3, 2), (2, 2), (2, 3), (1, 3), (1, 2), (0, 2), (0, 1), (1, 1)]
 
 
 @check('L3U08-T03')
 def _():
-    p4, p8 = staircase(4), staircase(8)
-    return {'a': s([right_angles(p4)]), 'b': s([reflex(p4)]), 'c': s([right_angles(p8)])}
+    p = PLUS_POLY
+    n_corners, dents = 10, 3
+    return {'a': s([right_angles(p)]), 'b': s([reflex(p)]), 'c': s([n_corners - dents])}
 
 
 @check('L3U08-G01')

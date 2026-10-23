@@ -62,6 +62,13 @@ def poly(spec, w=None):
     for ex in spec.get('extra', []):
         ep = 'M' + ' L'.join(f'{X(x):.1f},{Y(y):.1f}' for x, y in ex['pts']) + 'Z'
         P.append(f'<path d="{ep}" fill="#fff" stroke="{NAVY}" stroke-width="4" stroke-dasharray="10 7"/>')
+    for ar in spec.get('arcs', []):       # arc at a vertex: centre (x, y) in cm, radius r (cm), from angle a0 to a1 degrees anticlockwise (y up)
+        import math as _m
+        cx_, cy_, r_ = X(ar['x']), Y(ar['y']), ar['r'] * k
+        p0 = (cx_ + r_ * _m.cos(_m.radians(ar['a0'])), cy_ - r_ * _m.sin(_m.radians(ar['a0'])))
+        p1 = (cx_ + r_ * _m.cos(_m.radians(ar['a1'])), cy_ - r_ * _m.sin(_m.radians(ar['a1'])))
+        large = 1 if (ar['a1'] - ar['a0']) % 360 > 180 else 0
+        P.append(f'<path d="M{p0[0]:.1f},{p0[1]:.1f} A{r_:.1f},{r_:.1f} 0 {large} 0 {p1[0]:.1f},{p1[1]:.1f}" fill="none" stroke="{NAVY}" stroke-width="4"/>')
     for tx_ in spec.get('texts', []):
         P.append(T(X(tx_['x']), Y(tx_['y']) + 10, esc(tx_['text']), tx_.get('size', 28)))
     n = len(pts)
@@ -73,7 +80,8 @@ def poly(spec, w=None):
         dx, dy = x2 - x1, y2 - y1
         ln = (dx * dx + dy * dy) ** 0.5
         nx, ny = sgn * dy / ln, -sgn * dx / ln      # outward normal in y-up coordinates
-        cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
+        sh = lab.get('shift', 0)
+        cx, cy = (x1 + x2) / 2 + sh * dx, (y1 + y2) / 2 + sh * dy
         if abs(ny) > 0.5:
             P.append(T(X(cx), Y(cy) - ny * 36 + 10, esc(lab['text']), lab.get('size', 34)))
         else:
