@@ -62,3 +62,7 @@ Total: 19 / 24 (self-scored; the independent auditor gave 16/24 before the fix p
 ## Update (second fix pass, 22 Oct 2026)
 
 Machine state: validate 03 = 18 pass, 2 WARN (exit 4:07 of 6:00 loose; page 5 estimate 105%, real PDF fills 91, 94, 85, 91, 96, 89, 84%), 0 FAIL; 301 answer checks, 563 practice variants; leak check clean. Script 75:39, slow class 89:35 (still the tightest slow total). Home 2 pages, parent 1. All pages, key, home, parent and changed slides viewed. Details in `audit/FIXES2_L03.md`.
+
+## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
+
+Added G2 part (c) (Go further, page 4): the cards 1, 2 and 3 make 3-digit numbers, each card once, how many numbers (6). Systematic listing, first card then the rest; three-digit numbers are not taught at school P1. `moe.note` names it. Verified in `verify/l03_checks.py` (permutation count and the six numbers). Real PDF workbook fill now 91, 94, 85, 97, 98, 94, 88%; timing unchanged (parts sum to 90); validator 0 FAIL.

@@ -17,7 +17,7 @@
       "Compare two sets of objects",
       "Tens and ones (place value) used to compare"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Comparing and ordering numbers to 100 and comparing sets of objects are Primary 1 topics. Term 1 goes beyond the school Primary 1 syllabus on purpose: the Go further puzzles use four cards and several clues. This lesson stays within two-digit numbers; three-digit numbers are not used in the workbook."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Comparing and ordering numbers to 100 and comparing sets of objects are Primary 1 topics. Term 1 goes beyond the school Primary 1 syllabus on purpose: the Go further puzzles use four cards and several clues. This lesson stays within two-digit numbers; the one beyond-syllabus challenge item is G2 part c (how many different 3-digit numbers can 3 cards make, each used once: 6), a Go further listing item; no other three-digit numbers are used in the workbook."
   },
   "contest_moves": [
     "digit-card clue puzzle (find every number that fits two clues)",
@@ -2377,20 +2377,28 @@
             "text": "A card used twice is allowed, like 11: ___ numbers",
             "ans": "16",
             "val": 16
+          },
+          {
+            "l": "c",
+            "text": "The cards 1, 2 and 3 make 3-digit numbers, each card once: ___ numbers",
+            "ans": "6",
+            "val": 6
           }
         ],
-        "answer": "12 and 16",
+        "answer": "12, 16 and 6",
         "val": [
           12,
-          16
+          16,
+          6
         ],
-        "hint": "Think about the tens card first. How many choices are there? Then think about the ones card.",
-        "solution": "Each card once: 4 choices for the tens card, then 3 choices for the ones card, so 4 x 3 = 12. A card may be used twice: 4 choices and 4 choices, so 16 (the 12 and the four numbers 11, 22, 33, 44).",
+        "hint": "Think about the tens card first. How many choices are there? Then think about the ones card. For part c, list them in order: 1 first, then 2 first, then 3 first.",
+        "solution": "Each card once: 4 choices for the tens card, then 3 choices for the ones card, so 4 x 3 = 12. A card may be used twice: 4 choices and 4 choices, so 16 (the 12 and the four numbers 11, 22, 33, 44). Part c is beyond what school teaches: 3 cards in a row. 1 first: 123, 132. 2 first: 213, 231. 3 first: 312, 321. That is 3 x 2 x 1 = 6 numbers.",
         "mistakes": [
           "Counting only 8 or 6 numbers.",
-          "Forgetting 11, 22, 33 and 44 in part b."
+          "Forgetting 11, 22, 33 and 44 in part b.",
+          "Part c: listing in a random order and missing one (there are 6, two for each first card)."
         ],
-        "mins": 6,
+        "mins": 8,
         "lines": 3
       },
       {
