@@ -182,3 +182,6 @@ Owner: "Agree for 9-13 yrs." Decision: timed practice is allowed as an OPTIONAL 
 
 ## 23 Oct 2026 (evening): shop "Tell me when it's ready" SQL applied live
 Owner-side session applied portal/supabase/product_interest.sql to the math-inquirers Supabase project (table empty; 6 functions incl. delete-on-request and 12-month cleanup, run in the SQL editor because the MCP connector hangs on SQL containing delete). Quantity check hardened (bracketed case expression); local file updated to match. Tests: qty 1.5 rejected with invalid_input, honeypot reports success and saves nothing. Open: Supabase dashboard showed a technical-issue banner at the time.
+
+## 23 Oct 2026 (evening): format of the "What you need to do" list
+Every item gives (a) the file, (b) my recommendation, (c) a one-word reply the owner can send to proceed. Files attached in the same reply.
