@@ -301,10 +301,10 @@ def build_route(rng, n, length, make_on, make_off, n_dead, tries=8000, min_dist=
         if count_routes(okc, n, path[0], path[-1]) == 1 and dead >= min(n_dead, 2): return path, grid, dead
     raise RuntimeError("route")
 
-def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, grid, path, dead, rule_text, cell_ok, note, key_cells, check, ps=False, checks=(), extra_facts=""):
+def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, grid, path, dead, rule_text, cell_ok, note, key_cells, check, ps=False, checks=(), extra_facts="", cls="maze"):
     """cell_ok(cell html) -> bool is the independent reader of the PRINTED cell: does it follow the rule?"""
     n = len(grid); start, finish = path[0], path[-1]
-    body = route_grid(n, [[grid[r][c] for c in range(n)] for r in range(n)], start, finish)
+    body = route_grid(n, [[grid[r][c] for c in range(n)] for r in range(n)], start, finish, cls)
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, "K6 route closes at FINISH through the stated number of boxes", instr, body,
                  "Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {key_cells(grid[r][c])}" for r, c in path),
                  f"Route reaches FINISH through {len(path)} boxes; every box on it follows the rule.", note, check=check, mk=("route",), ps=ps,

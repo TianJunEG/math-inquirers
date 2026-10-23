@@ -108,7 +108,7 @@ def page01():
 
     key = "; ".join(f"{i+1}) {r['opts'][0]}" for i, r in enumerate(rows))
     P = mc_page(1, 5101, "Millions", 1, "Whole numbers: numbers to 10 million", STRAND_WN,
-        "numbers to 10 million: reading and writing numbers in numerals and words, place value", ["WN.NUM"], "Lettered choices (place value)",
+        "numbers to 10 million: reading and writing numbers in numerals and words, place value", ["WN1.1"], "Lettered choices (place value)",
         ["Read each question.", "Circle the letter of the right choice in each row.", "Write the six letters in the boxes."],
         rng, rows, 3, word, key,
         "Six place-value questions with numbers to 10 million: the value of a digit, a numeral in words, words as a numeral, an expanded number, the greatest of three and the number with a digit in a named place. The wrong choices are the usual slips (a place value one place too high or too low, two neighbouring digits swapped, a zero in the wrong place). Each choice has a letter; the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
@@ -194,7 +194,7 @@ def page02():
         clue = re.search(r'<p class="ptxt">(.*?)</p>', c).group(1)
         solved.append(brute(digs, clue))
     P = code_page(2, 5102, "Seven Digits", 2, "Whole numbers: making numbers to 10 million from digit cards", STRAND_WN,
-        "numbers to 10 million: place value, reading and writing numbers", ["WN.NUM"], "Code-breaker (digit cards)",
+        "numbers to 10 million: place value, reading and writing numbers", ["WN1.1"], "Code-breaker (digit cards)",
         ["Use all seven digit cards once.", "Make the number the question asks for.", "Write it in the box. Use the code table."],
         cards, ans, word, table, dom, lambda k: num(k), "; ".join(f"{i+1}) {num(a)}" for i, a in enumerate(ans)),
         "Six digit-card questions, each with seven different digit cards including a zero. The pupil makes the smallest or greatest number, the greatest even or smallest odd number, or the smallest or greatest number with a stated digit in the thousands or ten thousands place. A number cannot start with 0. The decoy letters stand for the answers a pupil gets by putting the cards in the wrong order, by forgetting the zero rule, or by answering a different question on the same cards. A box left blank gives no letter and the check cannot see it.",
@@ -227,7 +227,7 @@ def page03():
                 break
     else: raise RuntimeError("p03")
     P = order_page(3, 5103, "Zero Hunt", 1, "Whole numbers: multiplying and dividing by 10, 100 and 1000", STRAND_WN,
-        "multiplying and dividing whole numbers by 10, 100 and 1000", ["WN.X10"], "Ordering (lettered cards)",
+        "multiplying and dividing whole numbers by 10, 100 and 1000", ["WN2.1"], "Ordering (lettered cards)",
         ["Work out the answer on each card.", "Put the answers in order, smallest first.", "Write the card letters in the boxes below."],
         rng, cards, word, True,
         "Order (smallest first): " + ", ".join(f"{c[0]} = {num(c[1])}" for c in sorted(cards, key=lambda c: c[1])),
@@ -260,7 +260,7 @@ def page04():
     path, grid, dead = build_route(rng, n, L, make_on, make_off, 3, ok_text=lambda t: evaluate(to_text(t)) == T)
     rule = lambda cell: evaluate(to_text(cell)) == T
     P = route_page(4, 5104, "Multiples Route", 2, "Whole numbers: multiplying and dividing by multiples of 10, 100 and 1000", STRAND_WN,
-        "multiplying and dividing whole numbers by 10, 100, 1000 and their multiples", ["WN.X10"], "Maze / path",
+        "multiplying and dividing whole numbers by 10, 100, 1000 and their multiples", ["WN2.1"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on boxes with the answer {num(T)}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
         f"A 4 by 4 grid of sixteen calculations, each a whole number multiplied or divided by a multiple of 10, 100 or 1000 . The boxes off the route make answers that come from a slip in the zeros (ten or a hundred times too big or too small) and some other near misses; some extra boxes that do make {num(T)} are dead ends. Counting the boxes shows a line that takes a shortcut.",

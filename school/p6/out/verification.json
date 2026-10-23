@@ -59,18 +59,7 @@
    1.0,
    10614,
    10614
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    10614,
-    10614
-   ],
-   "all_other_values_rejected": [
-    10614,
-    10614
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -112,18 +101,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -166,18 +144,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -226,21 +193,7 @@
    1.0,
    42,
    42
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    42,
-    42
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 5,
@@ -303,18 +256,7 @@
    1.0,
    774,
    774
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    774,
-    774
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -372,18 +314,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -442,18 +373,7 @@
    1.0,
    20244,
    20244
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    20244,
-    20244
-   ],
-   "all_other_values_rejected": [
-    20244,
-    20244
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -462,7 +382,7 @@
   "tier": 2,
   "topic": "Ratio and fraction: how they are linked",
   "strand": "Number and Algebra - Ratio",
-  "syll": "1.7 (relationship between fraction and ratio); 1.5",
+  "syll": "1.7 (relationship between fraction and ratio), 1.5 (finding the ratio of two or three given quantities)",
   "outcomes": [
    "RA1.7",
    "RA1.5"
@@ -496,18 +416,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -588,18 +497,7 @@
    1.0,
    5200,
    5200
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    156,
-    156
-   ],
-   "all_other_values_rejected": [
-    5200,
-    5200
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -656,18 +554,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -709,18 +596,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -778,18 +654,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -832,18 +697,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -890,21 +744,7 @@
    1.0,
    42,
    42
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    42,
-    42
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 15,
@@ -913,7 +753,7 @@
   "tier": 2,
   "topic": "Algebra: finding the value of an expression",
   "strand": "Number and Algebra - Algebra",
-  "syll": "1.4 (evaluating a simple expression by substitution)",
+  "syll": "1.4 (evaluating simple linear expressions by substitution), 1.2 (notation of simple algebraic expressions)",
   "outcomes": [
    "AL1.4",
    "AL1.2"
@@ -947,21 +787,7 @@
    1.0,
    36,
    36
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 16,
@@ -970,7 +796,7 @@
   "tier": 2,
   "topic": "Algebra: solving simple equations",
   "strand": "Number and Algebra - Algebra",
-  "syll": "1.5 (simple linear equations with whole-number coefficients)",
+  "syll": "1.5 (simple linear equations involving whole number coefficient only), 1.3 (simplifying simple linear expressions)",
   "outcomes": [
    "AL1.5",
    "AL1.3"
@@ -1024,18 +850,7 @@
    1.0,
    1794,
    1794
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    62,
-    62
-   ],
-   "all_other_values_rejected": [
-    1794,
-    1794
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
@@ -1092,18 +907,7 @@
    1.0,
    2394,
    2394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    2394,
-    2394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1160,18 +964,7 @@
    1.0,
    2394,
    2394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2394,
-    2394
-   ],
-   "all_other_values_rejected": [
-    2394,
-    2394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1218,21 +1011,7 @@
    1.0,
    42,
    42
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    42,
-    42
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 20,
@@ -1241,7 +1020,7 @@
   "tier": 2,
   "topic": "Composite figures with semicircles and quarter circles",
   "strand": "Measurement and Geometry - Area and Volume",
-  "syll": "1.3 (composite figures made of squares, rectangles, semicircles and quarter circles); 1.1",
+  "syll": "1.3 (area and perimeter of composite figures), 1.2 (area and perimeter of a semicircle and a quarter circle)",
   "outcomes": [
    "AV1.3",
    "AV1.2"
@@ -1275,21 +1054,7 @@
    1.0,
    36,
    36
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 21,
@@ -1346,18 +1111,7 @@
    1.0,
    7494,
    7494
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    7494,
-    7494
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 22,
@@ -1400,18 +1154,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1468,30 +1211,18 @@
    1.0,
    594,
    594
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    69,
-    69
-   ],
-   "all_other_values_rejected": [
-    594,
-    594
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 24,
   "code": "S2-04 (P6-24)",
-  "title": "Roots and Edges",
+  "title": "Root Maze",
   "tier": 1,
-  "topic": "Square roots, cube roots and the edge of a cube",
+  "topic": "Square roots and cube roots",
   "strand": "Measurement and Geometry - Area and Volume",
-  "syll": "2.5 (square-root and cube-root signs); 2.2 (the edge of a cube from its volume)",
+  "syll": "2.5 (use of the square-root and cube-root signs)",
   "outcomes": [
-   "VO2.5",
-   "VO2.2"
+   "VO2.5"
   ],
   "ptype": "Maze / path",
   "mech": "K6 route closes at FINISH",
@@ -1522,18 +1253,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 25,
@@ -1582,21 +1302,7 @@
    1.0,
    42,
    42
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    42,
-    42
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 26,
@@ -1605,17 +1311,17 @@
   "tier": 2,
   "topic": "Volume of water in a tank: litres and cm\u00b3",
   "strand": "Measurement and Geometry - Area and Volume",
-  "syll": "2.3 (height from volume and base area); revisits Primary 5 Volume (litres and cm\u00b3)",
+  "syll": "2.3 (height from volume and base area); Primary 6 Foundation Area and Volume 2.2 and 2.3 (liquid in a tank; litres and cm\u00b3)",
   "outcomes": [
    "VO2.3",
-   "RV5.VO"
+   "PF.VO"
   ],
   "ptype": "Code-breaker (tanks)",
   "mech": "K1 code word (6 letters)",
   "seed": 8626,
   "checks": [
    {
-    "name": "V2 code word spells MAGNET",
+    "name": "V2 code word spells NUMBER",
     "ok": true,
     "detail": ""
    },
@@ -1632,17 +1338,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['magnet']"
+    "detail": "['number']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['lament', 'magnet', 'mantel', 'mantle', 'mental', 'tangle']"
+    "detail": "['bumper', 'jumper', 'number']"
    },
    {
     "name": "V1 independent solver reads each printed tank story and finds the answer: equals the key",
     "ok": true,
-    "detail": "[64, 21, 8, 30, 40, 18]"
+    "detail": "[8, 11, 50, 14, 93, 40]"
    },
    {
     "name": "V7 every answer is a whole number of at most 130",
@@ -1654,18 +1360,7 @@
    1.0,
    774,
    774
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    774,
-    774
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1732,18 +1427,7 @@
    1.0,
    1068,
    1068
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1068,
-    1068
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -1761,7 +1445,7 @@
   "seed": 8828,
   "checks": [
    {
-    "name": "V2 code word spells SPONGE",
+    "name": "V2 code word spells WIZARD",
     "ok": true,
     "detail": ""
    },
@@ -1778,17 +1462,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['sponge']"
+    "detail": "['wizard']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['skopje', 'spoken', 'sponge']"
+    "detail": "['midway', 'myriad', 'wizard']"
    },
    {
     "name": "V1 independent solver measures the named angle from the printed figure (vertex points): equals the key",
     "ok": true,
-    "detail": "[36.0, 54.0, 64.0, 15.0, 75.0, 24.0]"
+    "detail": "[35.0, 78.0, 36.0, 15.0, 75.0, 29.0]"
    },
    {
     "name": "V1b every given angle printed in an arc equals the drawn angle (within 0.6 degrees)",
@@ -1810,18 +1494,7 @@
    1.0,
    1068,
    1068
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1068,
-    1068
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 29,
@@ -1878,21 +1551,7 @@
    1.0,
    42,
    42
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    42,
-    42
-   ],
-   "all_other_values_rejected": [
-    42,
-    42
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 30,
@@ -1910,74 +1569,6 @@
   "seed": 9030,
   "checks": [
    {
-    "name": "V2 code word spells CURFEW",
-    "ok": true,
-    "detail": ""
-   },
-   {
-    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
-    "ok": true,
-    "detail": "2394/2394"
-   },
-   {
-    "name": "V3c no swap of two answers spells a word",
-    "ok": true,
-    "detail": "[]"
-   },
-   {
-    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
-    "ok": true,
-    "detail": "['curfew']"
-   },
-   {
-    "name": "V4 guess resistance: at least 3 common words fit the table letters",
-    "ok": true,
-    "detail": "['curfew', 'fucker', 'pucker']"
-   },
-   {
-    "name": "V1 independent solver reads each printed list or total and number and finds the average: equals the key",
-    "ok": true,
-    "detail": "[20, 13, 29, 31, 77, 30]"
-   },
-   {
-    "name": "V7 every total divides exactly by the number of data",
-    "ok": true,
-    "detail": ""
-   }
-  ],
-  "generator_slip_test": [
-   1.0,
-   2394,
-   2394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    2394,
-    2394
-   ],
-   "wrong_arrangements_rejected": null
-  }
- },
- {
-  "no": 31,
-  "code": "S2-11 (P6-31)",
-  "title": "Missing Value",
-  "tier": 2,
-  "topic": "Average: total, number and average",
-  "strand": "Statistics",
-  "syll": "1.2 (relationship between average, total value and number of data)",
-  "outcomes": [
-   "ST1.2"
-  ],
-  "ptype": "Code-breaker (average, total and number)",
-  "mech": "K1 code word (6 letters)",
-  "seed": 9131,
-  "checks": [
-   {
     "name": "V2 code word spells FABRIC",
     "ok": true,
     "detail": ""
@@ -1985,7 +1576,7 @@
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "3234/3234"
+    "detail": "2394/2394"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -2003,9 +1594,66 @@
     "detail": "['fabric', 'pacify', 'piracy']"
    },
    {
+    "name": "V1 independent solver reads each printed list or total and number and finds the average: equals the key",
+    "ok": true,
+    "detail": "[29, 82, 57, 13, 35, 74]"
+   },
+   {
+    "name": "V7 every total divides exactly by the number of data",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2394,
+   2394
+  ]
+ },
+ {
+  "no": 31,
+  "code": "S2-11 (P6-31)",
+  "title": "Missing Value",
+  "tier": 2,
+  "topic": "Average: total, number and average",
+  "strand": "Statistics",
+  "syll": "1.2 (relationship between average, total value and number of data)",
+  "outcomes": [
+   "ST1.2"
+  ],
+  "ptype": "Code-breaker (average, total and number)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 9131,
+  "checks": [
+   {
+    "name": "V2 code word spells DONKEY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "3234/3234"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['donkey']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['convey', 'donkey', 'jockey']"
+   },
+   {
     "name": "V1 independent solver reads each printed story and finds the answer: equals the key",
     "ok": true,
-    "detail": "[78, 21, 35, 15, 135, 45]"
+    "detail": "[36, 17, 73, 186, 33, 37]"
    },
    {
     "name": "V7 every answer is a whole number of at most 540",
@@ -2017,18 +1665,7 @@
    1.0,
    3234,
    3234
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    3234,
-    3234
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 32,
@@ -2109,18 +1746,7 @@
    1.0,
    5600,
    5600
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    168,
-    168
-   ],
-   "all_other_values_rejected": [
-    5600,
-    5600
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
@@ -2128,18 +1754,18 @@
   "title": "Pie Chart",
   "tier": 2,
   "topic": "Pie charts: reading percentages and finding amounts",
-  "strand": "Revision of earlier years",
-  "syll": "Revisits Primary 4 Statistics (reading and interpreting pie charts) with Primary 5 percentage",
+  "strand": "Primary 6 Foundation track (also used with the Standard pages)",
+  "syll": "Primary 6 Foundation (reading and interpreting data from pie charts; finding a percentage part of a whole)",
   "outcomes": [
-   "RV4.ST",
-   "RV5.PC"
+   "PF.ST",
+   "PF.PC"
   ],
   "ptype": "Code-breaker (pie chart)",
   "mech": "K1 code word (6 letters)",
   "seed": 9333,
   "checks": [
    {
-    "name": "V2 code word spells DONKEY",
+    "name": "V2 code word spells FIGURE",
     "ok": true,
     "detail": ""
    },
@@ -2156,22 +1782,22 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['donkey']"
+    "detail": "['figure']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['beyond', 'bygone', 'donkey']"
+    "detail": "['bridge', 'budgie', 'buried', 'figure', 'fridge']"
    },
    {
     "name": "V1 independent solver measures each sector of the printed pie chart from its end points and answers every printed question: equals the key",
     "ok": true,
-    "detail": "[360, 3, 140, 180, 10, 40]"
+    "detail": "[180, 2, 40, 80, 340, 45]"
    },
    {
     "name": "V1b the four printed percentages agree with the drawn sectors, and all five sectors add up to 100%",
     "ok": true,
-    "detail": "{'Football': (15.0, 15), 'Swimming': (20.0, 20), 'Badminton': (10.0, None), 'Tennis': (45.0, 45), 'Others': (10.0, 10)}"
+    "detail": "{'Football': (15.0, 15), 'Swimming': (10.0, 10), 'Badminton': (45.0, None), 'Tennis': (20.0, 20), 'Others': (10.0, 10)}"
    },
    {
     "name": "V7 every answer is a whole number of at most 400",
@@ -2183,170 +1809,28 @@
    1.0,
    2394,
    2394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    67,
-    67
-   ],
-   "all_other_values_rejected": [
-    2394,
-    2394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
   "code": "S2-14 (P6-34)",
-  "title": "Net or Not",
+  "title": "Fraction Order",
   "tier": 1,
-  "topic": "Nets: can it fold to make a cube?",
-  "strand": "Revision of earlier years",
-  "syll": "Revisits Primary 4 Geometry (identifying nets of a cube)",
+  "topic": "Fractions: dividing by a whole number and by a fraction",
+  "strand": "Number and Algebra - Fractions",
+  "syll": "1.1, 1.2 (dividing a proper fraction by a whole number; dividing a whole number or a proper fraction by a proper fraction)",
   "outcomes": [
-   "RV4.NET"
+   "FR1.1",
+   "FR1.2"
   ],
-  "ptype": "Choice table (nets of a cube)",
-  "mech": "K1 the letter of the right choice in each row spells a word (6 letters, decoy letters on the other choices)",
-  "seed": 9434,
-  "checks": [
-   {
-    "name": "V1 independent solver reads each printed row and picks the key's choice",
-    "ok": true,
-    "detail": "[0, 0, 1, 0, 1, 1]"
-   },
-   {
-    "name": "V3 no other way of choosing spells a word (large word list, 207399 words)",
-    "ok": true,
-    "detail": "[]"
-   },
-   {
-    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
-    "ok": true,
-    "detail": ""
-   },
-   {
-    "name": "V2 right choices read down the rows spell the word",
-    "ok": true,
-    "detail": ""
-   },
-   {
-    "name": "V1b exactly three of the six nets fold to a cube (a rolling-cube fold test on the printed squares)",
-    "ok": true,
-    "detail": ""
-   },
-   {
-    "name": "V7 every net has six squares and the six are all different shapes (turning and flipping allowed)",
-    "ok": true,
-    "detail": ""
-   }
-  ],
-  "generator_slip_test": [
-   1.0,
-   6,
-   6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
- },
- {
-  "no": 35,
-  "code": "S2-15 (P6-35)",
-  "title": "Taps and Rates",
-  "tier": 2,
-  "topic": "Rate: the amount of one quantity for each unit of another",
-  "strand": "Revision of earlier years",
-  "syll": "Revisits Primary 5 Rate (finding the rate, the total or the number of units); volume of liquid",
-  "outcomes": [
-   "RV5.RA",
-   "RV5.VO"
-  ],
-  "ptype": "Code-breaker (rates)",
-  "mech": "K1 code word (6 letters)",
-  "seed": 9535,
-  "checks": [
-   {
-    "name": "V2 code word spells NUMBER",
-    "ok": true,
-    "detail": ""
-   },
-   {
-    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
-    "ok": true,
-    "detail": "4194/4194"
-   },
-   {
-    "name": "V3c no swap of two answers spells a word",
-    "ok": true,
-    "detail": "[]"
-   },
-   {
-    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
-    "ok": true,
-    "detail": "['number']"
-   },
-   {
-    "name": "V4 guess resistance: at least 3 common words fit the table letters",
-    "ok": true,
-    "detail": "['bumper', 'jumper', 'number']"
-   },
-   {
-    "name": "V1 independent solver reads each printed rate story and finds the answer: equals the key",
-    "ok": true,
-    "detail": "[22, 405, 198, 7, 120, 480]"
-   },
-   {
-    "name": "V7 every answer is a whole number of at most 700",
-    "ok": true,
-    "detail": ""
-   }
-  ],
-  "generator_slip_test": [
-   1.0,
-   4194,
-   4194
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    71,
-    71
-   ],
-   "all_other_values_rejected": [
-    4194,
-    4194
-   ],
-   "wrong_arrangements_rejected": null
-  }
- },
- {
-  "no": 36,
-  "code": "S2-16 (P6-36)",
-  "title": "Mixed Numbers",
-  "tier": 1,
-  "topic": "Fractions: mixed numbers, adding, subtracting and multiplying",
-  "strand": "Revision of earlier years",
-  "syll": "Revisits Primary 5 Fractions (adding and subtracting mixed numbers; multiplying a fraction by a whole number or a fraction)",
-  "outcomes": [
-   "RV5.FR"
-  ],
-  "ptype": "Ordering (mixed number answers)",
+  "ptype": "Ordering (fraction divisions)",
   "mech": "K1 letters in order spell a word (6 letters) + K4 each card used once",
-  "seed": 9636,
+  "seed": 9134,
   "checks": [
    {
     "name": "V1 independent solver (every printed card read and sorted) gets the key's order",
     "ok": true,
-    "detail": "[5, 4, 3, 0, 2, 1]"
+    "detail": "[5, 4, 3, 2, 0, 1]"
    },
    {
     "name": "V1b all card values are different",
@@ -2364,7 +1848,7 @@
     "detail": "[]"
    },
    {
-    "name": "V7 every answer is a mixed number in simplest form with a whole part from 1 to 20 and a bottom number of at most 12",
+    "name": "V7 every answer is below 12 and has a bottom number of at most 24",
     "ok": true,
     "detail": ""
    }
@@ -2373,21 +1857,110 @@
    1.0,
    36,
    36
+  ]
+ },
+ {
+  "no": 35,
+  "code": "S2-15 (P6-35)",
+  "title": "Ratio Stories",
+  "tier": 2,
+  "topic": "Ratio: finding a quantity from a ratio and one known amount",
+  "strand": "Number and Algebra - Ratio",
+  "syll": "1.2, 1.3, 1.6, 1.7 (equivalent ratios; dividing a quantity in a ratio; finding the missing term; the link between fraction and ratio)",
+  "outcomes": [
+   "RA1.2",
+   "RA1.3",
+   "RA1.6",
+   "RA1.7"
   ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  "ptype": "Code-breaker (ratio stories)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 9235,
+  "checks": [
+   {
+    "name": "V2 code word spells MAGNET",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "2394/2394"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['magnet']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['magnet', 'tandem', 'tanked']"
+   },
+   {
+    "name": "V1 independent solver reads each printed story and equals the key",
+    "ok": true,
+    "detail": "[77, 30, 91, 117, 80, 108]"
+   },
+   {
+    "name": "V7 every ratio uses whole numbers and every answer is a whole number of at most 400",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2394,
+   2394
+  ]
+ },
+ {
+  "no": 36,
+  "code": "S2-16 (P6-36)",
+  "title": "Circle Choices",
+  "tier": 1,
+  "topic": "Circles: area and circumference with pi as 3.14",
+  "strand": "Measurement and Geometry - Area and Volume",
+  "syll": "1.1, 1.2 (area and circumference of a circle; area and perimeter of a semicircle and a quarter circle)",
+  "outcomes": [
+   "AV1.1",
+   "AV1.2"
+  ],
+  "ptype": "Choice table (circles)",
+  "mech": "K1 the letter of the right choice in each row spells a word (6 letters, decoy letters on the other choices)",
+  "seed": 9336,
+  "checks": [
+   {
+    "name": "V1 independent solver reads each printed row and picks the key's choice",
+    "ok": true,
+    "detail": "[1, 0, 0, 0, 2, 1]"
+   },
+   {
+    "name": "V3 no other way of choosing spells a word (large word list, 207399 words)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 right choices read down the rows spell the word",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ]
  },
  {
   "no": 37,
@@ -2395,10 +1968,10 @@
   "title": "Decimal Maze",
   "tier": 1,
   "topic": "Decimals: adding, subtracting, multiplying and dividing",
-  "strand": "Revision of earlier years",
-  "syll": "Revisits Primary 4 Decimals and Primary 5 (multiplying and dividing by 10, 100 and 1000)",
+  "strand": "Primary 6 Foundation track (also used with the Standard pages)",
+  "syll": "Primary 6 Foundation (multiplying and dividing decimals)",
   "outcomes": [
-   "RV4.DE"
+   "PF.DE"
   ],
   "ptype": "Maze / path",
   "mech": "K6 route closes at FINISH",
@@ -2429,18 +2002,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 38,
@@ -2448,10 +2010,10 @@
   "title": "GST and Discount",
   "tier": 1,
   "topic": "Percentage: GST, discount and interest",
-  "strand": "Revision of earlier years",
-  "syll": "Revisits Primary 5 Percentage (a percentage part of a whole; discount, GST and annual interest)",
+  "strand": "Primary 6 Foundation track (also used with the Standard pages)",
+  "syll": "Primary 6 Foundation (finding a percentage part of a whole; finding discount, GST and annual interest)",
   "outcomes": [
-   "RV5.PC"
+   "PF.PC"
   ],
   "ptype": "Code-breaker (GST, discount, interest)",
   "mech": "K1 code word (6 letters)",
@@ -2497,18 +2059,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 39,
@@ -2516,16 +2067,16 @@
   "title": "Mixed Bag",
   "tier": 2,
   "topic": "Mixed practice: percentages, fractions, ratio, average, roots, letters and volume",
-  "strand": "Revision of earlier years",
-  "syll": "Mixed revision: Percentage, Fractions 1.2, Ratio 1.3, Algebra 1.4, Statistics, Volume and revisited Primary 5 percentage",
+  "strand": "Primary 6 Foundation track (also used with the Standard pages)",
+  "syll": "Mixed practice: Fractions 1.2, Ratio 1.3, Algebra 1.4, Statistics 1.1, Volume 2.5 and Primary 6 Foundation percentage and volume",
   "outcomes": [
    "FR1.2",
    "RA1.3",
    "AL1.4",
    "ST1.1",
    "VO2.5",
-   "RV5.PC",
-   "RV5.VO"
+   "PF.PC",
+   "PF.VO"
   ],
   "ptype": "Domino loop (mixed)",
   "mech": "K8 the loop closes (the right half of each domino equals the left half of the next) + K1 letters in order spell a word (6 letters)",
@@ -2556,21 +2107,7 @@
    1.0,
    36,
    36
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 40,
@@ -2579,9 +2116,9 @@
   "tier": 2,
   "topic": "Mixed Primary 6 practice",
   "strand": "Number and Algebra - mixed Primary 6",
-  "syll": "Mixed: percentage of a number (revisits Primary 5), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
+  "syll": "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
   "outcomes": [
-   "RV5.PC",
+   "PF.PC",
    "FR1.2",
    "AL1.4",
    "AL1.5",
@@ -2652,17 +2189,6 @@
    1.0,
    5600,
    5600
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    168,
-    168
-   ],
-   "all_other_values_rejected": [
-    5600,
-    5600
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  }
 ]

@@ -29,8 +29,11 @@ def rand_spec(rng, fam):
 def ang_set(rng, fams, tries=400, keepout=False):
     for _ in range(tries):
         items = []
-        for fam in fams:
-            spec = rand_spec(rng, fam); svg, cap, ans = ang_make(rng, spec, keepout); items.append(dict(fam=fam, svg=svg, cap=cap, ans=ans, spec=spec))
+        try:
+            for fam in fams:
+                spec = rand_spec(rng, fam); svg, cap, ans = ang_make(rng, spec, keepout); items.append(dict(fam=fam, svg=svg, cap=cap, ans=ans, spec=spec))
+        except RuntimeError:
+            continue                                  # a figure that cannot be drawn clearly out of scale: draw a new set
         if len({it["ans"] for it in items}) == len(fams) and all(10 <= it["ans"] <= 170 for it in items): return items
     raise RuntimeError("angle set")
 

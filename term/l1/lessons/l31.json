@@ -2928,7 +2928,7 @@
     "type": "shapes2d",
     "shape": "circle",
     "parts": 4,
-    "hw": 30
+    "hw": 36
    }
   },
   {
@@ -2952,7 +2952,7 @@
     "cols": 6,
     "kind": "squares",
     "cell": 60,
-    "hw": 50
+    "hw": 60
    }
   },
   {
@@ -2971,7 +2971,7 @@
     "cols": 4,
     "kind": "squares",
     "cell": 50,
-    "hw": 36
+    "hw": 43
    }
   },
   {

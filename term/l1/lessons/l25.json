@@ -2869,7 +2869,7 @@
     "type": "price_tag",
     "item": "ball",
     "price": "$18",
-    "hw": 28
+    "hw": 34
    }
   },
   {
@@ -2884,13 +2884,13 @@
      "type": "price_tag",
      "item": "pen",
      "price": "$4",
-     "hw": 26
+     "hw": 31
     },
     {
      "type": "price_tag",
-     "item": "book",
+     "item": "book_m",
      "price": "$10",
-     "hw": 26
+     "hw": 31
     }
    ]
   },

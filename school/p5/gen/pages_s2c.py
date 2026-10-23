@@ -129,7 +129,7 @@ def page38():
         res = code_table_for(38, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p38")
-    cards = [qc(i + 1, tri_angles(kd, g, w=48, hh=38), abx("w3") + f'<span class="unit">{DEG}</span>') for i, (kd, g) in enumerate(items)]
+    cards = [qc(i + 1, tri_angles(kd, g, w=48, hh=42), abx("w3") + f'<span class="unit">{DEG}</span>') for i, (kd, g) in enumerate(items)]
     def solve(h):
         kind, labs, ticks, ra = read_tri_angles(h)
         d = {pos: v for v, pos in labs}
@@ -142,45 +142,49 @@ def page38():
         return 180 - sum(known)
     solved = [Fr(solve(c)) for c in cards]
     P = code_page(38, 5138, "Triangle Angles", 1, "Geometry: angle sum of a triangle; isosceles, equilateral and right-angled triangles", STRAND_GE,
-        "angle sum of a triangle; properties of isosceles, equilateral and right-angled triangles; finding unknown angles", ["GE.SUM", "GE.TRI", "GE1.4"], "Code-breaker (angles in triangles)",
+        "angle sum of a triangle; properties of isosceles, equilateral and right-angled triangles; finding unknown angles", ["GE2.1", "GE2.2", "GE2.3", "GE1.4"], "Code-breaker (angles in triangles)",
         ["Find the angle marked ? in each triangle.", "Ticks show sides of equal length. A square shows a right angle.", "Write the angle in the box. Use the code table."],
         cards, ans, word, table, dom, lambda k: f"{int(k)}{DEG}", "; ".join(f"{i+1}) {int(a)}{DEG} ({kd})" for i, (a, (kd, g)) in enumerate(zip(ans, items))),
-        f"Six triangles: two with two angles given (the three angles of a triangle make a straight angle), an isosceles triangle with the angle at the top given, an isosceles triangle with a base angle given, an equilateral triangle and a right-angled triangle with one other angle given. Equal sides carry tick marks. The decoy letters stand for the usual slips: giving a straight angle minus one angle only, adding the angles, or not halving the base angles. Figures are drawn to scale in these pages but the pupil should use the angle facts, not a protractor. A box left blank gives no letter and the check cannot see it.",
+        f"Six triangles: two with two angles given (the three angles of a triangle make a straight angle), an isosceles triangle with the angle at the top given, an isosceles triangle with a base angle given, an equilateral triangle and a right-angled triangle with one other angle given. Equal sides carry tick marks. The decoy letters stand for the usual slips: giving a straight angle minus one angle only, adding the angles, or not halving the base angles. Figures are not drawn to scale (the page does not rely on the drawing): the pupil should use the angle facts, not a protractor. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3")
     return P
 
 # =============================================================================== P5-39 True, False or Not Sure (lettered choices, three choices)
 def statement39(rng, kind, names):
+    """a shape, what is given and a claim about a second angle: (text, claim angle letter pair)"""
     A, B, C, D = names
-    ang = {A: 0, B: 1, C: 2, D: 3}
-    a = rng.randint(50, 80); small = a
-    if kind == "para_adj_true": x, y = rng.choice([(A, B), (B, C), (C, D), (D, A)]); return f"{names_s(names)} is a parallelogram. ∠{x} = {a}{DEG}. ∠{y} = {180 - a}{DEG}."
-    if kind == "para_adj_false": x, y = rng.choice([(A, B), (B, C), (C, D), (D, A)]); return f"{names_s(names)} is a parallelogram. ∠{x} = {a}{DEG}. ∠{y} = {a}{DEG}."
-    if kind == "para_opp_true": x, y = rng.choice([(A, C), (B, D)]); return f"{names_s(names)} is a parallelogram. ∠{x} = {a}{DEG}. ∠{y} = {a}{DEG}."
-    if kind == "para_opp_false": x, y = rng.choice([(A, C), (B, D)]); return f"{names_s(names)} is a parallelogram. ∠{x} = {a}{DEG}. ∠{y} = {180 - a}{DEG}."
-    if kind == "rho_adj_true": x, y = rng.choice([(A, B), (B, C), (C, D), (D, A)]); return f"{names_s(names)} is a rhombus. ∠{x} = {a}{DEG}. ∠{y} = {180 - a}{DEG}."
-    if kind == "rho_opp_false": x, y = rng.choice([(A, C), (B, D)]); return f"{names_s(names)} is a rhombus. ∠{x} = {a}{DEG}. ∠{y} = {180 - a}{DEG}."
-    if kind == "trap_leg_true": x, y = rng.choice([(A, D), (D, A), (B, C), (C, B)]); return f"{names_s(names)} is a trapezium. {A}{B} is parallel to {D}{C}. ∠{x} = {a}{DEG}. ∠{y} = {180 - a}{DEG}."
-    if kind == "trap_leg_false": x, y = rng.choice([(A, D), (D, A), (B, C), (C, B)]); return f"{names_s(names)} is a trapezium. {A}{B} is parallel to {D}{C}. ∠{x} = {a}{DEG}. ∠{y} = {a}{DEG}."
-    if kind == "trap_unsure": x, y = rng.choice([(A, B), (D, C), (A, C), (B, D)]); return f"{names_s(names)} is a trapezium. {A}{B} is parallel to {D}{C}. ∠{x} = {a}{DEG}. ∠{y} = {a}{DEG}."
-    raise ValueError(kind)
+    a = rng.randint(50, 80)
+    adj = [(A, B), (B, C), (C, D), (D, A)]; opp = [(A, C), (B, D)]
+    shape = {"para": "parallelogram", "rho": "rhombus", "trap": "trapezium"}[kind.split("_")[0]]
+    leg = [(A, D), (D, A), (B, C), (C, B)]
+    if kind == "para_adj_true": (x, y), b = rng.choice(adj), 180 - a
+    elif kind == "para_adj_false": (x, y), b = rng.choice(adj), a
+    elif kind == "para_opp_true": (x, y), b = rng.choice(opp), a
+    elif kind == "para_opp_false": (x, y), b = rng.choice(opp), 180 - a
+    elif kind == "rho_adj_true": (x, y), b = rng.choice(adj), 180 - a
+    elif kind == "rho_opp_false": (x, y), b = rng.choice(opp), 180 - a
+    elif kind == "trap_leg_true": (x, y), b = rng.choice(leg), 180 - a
+    elif kind == "trap_leg_false": (x, y), b = rng.choice(leg), a
+    elif kind == "trap_unsure": (x, y), b = rng.choice([(A, B), (D, C), (A, C), (B, D)]), a
+    else: raise ValueError(kind)
+    par = f" {A}{B} is parallel to {D}{C}. {A}{D} and {B}{C} are the other two sides." if shape == "trapezium" else ""
+    return f"{names_s(names)} is a {shape}.{par} Given: \u2220{x} = {a}{DEG}. Claim: \u2220{y} = {b}{DEG}."
 
 def names_s(n): return "".join(n)
 
 def judge39(t):
-    """independent judge of a printed statement: 'T', 'F' or 'N' (not possible to tell)"""
-    m = re.match(r"(\w{4}) is a (parallelogram|rhombus|trapezium)\.( (\w)(\w) is parallel to (\w)(\w)\.)? ∠(\w) = (\d+)°\. ∠(\w) = (\d+)°\.", t)
-    nm, shape, _, p1, p2, p3, p4, x, vx, y, vy = m.groups()
+    """independent judge of a printed row: is the CLAIM true, false or not possible to tell, from the shape and the given angle"""
+    m = re.match(r"(\w{4}) is a (parallelogram|rhombus|trapezium)\.(?: (\w)(\w) is parallel to (\w)(\w)\. \w\w and \w\w are the other two sides\.)? Given: \u2220(\w) = (\d+)\u00b0\. Claim: \u2220(\w) = (\d+)\u00b0\.", t)
+    nm, shape, p1, p2, p3, p4, x, vx, y, vy = m.groups()
     vx, vy = int(vx), int(vy)
     pos = {c: i for i, c in enumerate(nm)}
     d = (pos[x] - pos[y]) % 4
     if shape in ("parallelogram", "rhombus"):
         if d == 2: return "T" if vx == vy else "F"
         return "T" if vx + vy == 180 else "F"
-    # trapezium: the parallel sides are p1p2 and p4p3 (written AB parallel to DC); angles on the same leg add up to 180
     par = {p1 + p2, p2 + p1, p3 + p4, p4 + p3}
-    legs = [(nm[(i) % 4], nm[(i + 1) % 4]) for i in range(4)]
-    leg_pairs = [pr for pr in legs if "".join(pr) not in par]           # the two sides that are not parallel
+    legs = [(nm[i % 4], nm[(i + 1) % 4]) for i in range(4)]
+    leg_pairs = [pr for pr in legs if "".join(pr) not in par]
     same_leg = any({x, y} == set(pr) for pr in leg_pairs)
     if same_leg: return "T" if vx + vy == 180 else "F"
     return "N"
@@ -202,10 +206,10 @@ def page39():
     rows = [dict(q=f'<span class="qs">{s}</span>', opts=["T", "F", "N"], right=right[t], fixed=True, wide=True) for s, t in zip(sts, truth)]
     def solve_row(q, opts, qh): return right[judge39(q.replace(NB, " "))]
     P = mc_page(39, 5139, "Shape Statements", 2, "Geometry: parallelogram, rhombus and trapezium", STRAND_GE,
-        "properties of a parallelogram, rhombus and trapezium; their unknown angles", ["GE.QUAD", "GE1.4"], "True or false table (three choices)",
-        ["T = true. F = false. N = not possible to tell.", "Circle the letter of the right choice in each row.", "Write the six letters in the boxes."],
+        "properties of a parallelogram, rhombus and trapezium; finding unknown angles", ["GE3.1", "GE3.2"], "True or false table (three choices)",
+        ["Use the shape and the given angle.", "Is the claim true, false or not possible to tell?", "T = true. F = false. N = not possible to tell.", "Circle the letter. Write the six letters in the boxes."],
         rng, rows, 3, word, "; ".join(f"{i+1}) {t} ({s})" for i, (s, t) in enumerate(zip(sts, truth))),
-        f"Six statements about a parallelogram, a rhombus or a trapezium with two angles given. In a parallelogram or rhombus opposite angles are equal and neighbouring angles make a straight angle; in a trapezium the two angles on the same non-parallel side make a straight angle, and two angles that are not on the same side of the trapezium cannot be found from each other, so the answer is N. Each choice (T, F, N) has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
+        f"Six rows, each with a shape, one given angle and a claim about a second angle. The pupil decides whether the claim must be true, must be false, or cannot be told from the given facts. In a parallelogram or rhombus opposite angles are equal and neighbouring angles make a straight angle; in a trapezium the two angles on the same non-parallel side make a straight angle (the page names the parallel sides and the other two sides), and two angles that are not on the same non-parallel side cannot be found from each other, so the answer is N. Each choice (T, F, N) has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
         solve_row, ps=False)
     return P
 
@@ -233,7 +237,7 @@ def page40():
     else: raise RuntimeError("p40")
     figs = []
     for kd, g, v in items:
-        figs.append(ext_fig(*g, w=48, hh=40) if kd == "ext" else isoext_fig(*g, w=48, hh=40) if kd == "isoext" else ext2_fig(*g, w=48, hh=40))
+        figs.append(ext_fig(*g, w=48, hh=44) if kd == "ext" else isoext_fig(*g, w=48, hh=44) if kd == "isoext" else ext2_fig(*g, w=48, hh=44))
     cards = [qc(i + 1, f, abx("w3") + f'<span class="unit">{DEG}</span>') for i, f in enumerate(figs)]
     def solve(h):
         kind, d = read_labels(h)
@@ -243,7 +247,7 @@ def page40():
         return Fr(180 - (180 - e_) - (180 - f_))
     solved = [solve(c) for c in cards]
     P = code_page(40, 5140, "Angle Chains", 2, "Geometry: unknown angles in two steps", STRAND_GE,
-        "finding unknown angles in two steps: angle sum of a triangle with angles on a straight line or vertically opposite angles", ["GE1.4", "GE.SUM", "GE1.1", "GE1.3", "GE.TRI"], "Code-breaker (angle chains)",
+        "finding unknown angles in two steps: angle sum of a triangle with angles on a straight line or vertically opposite angles", ["GE1.4", "GE2.2", "GE2.3", "GE1.1", "GE1.3", "GE2.1"], "Code-breaker (angle chains)",
         ["Find the angle marked ? in each figure.", "Use two steps. Ticks show sides of equal length.", "Write the angle in the box. Use the code table."],
         cards, ans, word, table, dom, lambda k: f"{int(k)}{DEG}", "; ".join(f"{i+1}) {int(a)}{DEG} ({kd})" for i, (a, (kd, g, v)) in enumerate(zip(ans, items))),
         f"Six two-step figures, two of each kind: a triangle with two angles given and one side extended (find the third angle, then the angle on the straight line); an isosceles triangle with the top angle given and the base extended (find the base angle, then the angle on the straight line); and a triangle on a straight line with the two outside angles given (find the two inside angles on the line, then the third angle of the triangle). The decoy letters stand for the usual slips: the angle inside the triangle instead of the angle on the line, or stopping after the first step. Figures are not drawn to scale. A box left blank gives no letter and the check cannot see it.",

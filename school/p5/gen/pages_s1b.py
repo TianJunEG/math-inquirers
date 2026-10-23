@@ -14,7 +14,7 @@ def txt_ints_outside_fractions(t):
 # =============================================================================== P5-08 Sharing Equally (code word)
 STORY8 = [("{n} metres of ribbon are cut into {m} equal pieces. How long is each piece?", "m"),
           ("{n} kg of rice is shared equally among {m} bowls. How much rice is in each bowl?", "kg"),
-          ("{n} litres of juice are poured equally into {m} jugs. How much juice is in each jug?", "ℓ"),
+          ("{n} litres of paint are shared equally among {m} cans. How much paint is in each can?", "ℓ"),
           ("{n} pizzas are shared equally by {m} children. How much pizza does each child get?", "pizza")]
 
 def pick8(rng, kd):
@@ -145,6 +145,7 @@ def page10():
         "A 3 by 3 magic square with mixed numbers in quarters and halves (or in thirds). Four squares are given and the total of every line is printed. Each empty square is found by subtracting the numbers already in a line from the total, one line at a time; every empty square can be reached this way. The check is the total: a wrong number makes at least one of the eight lines wrong. All numbers in the square are different.",
         check=f"Add each row, column and diagonal. Does every line make {frac_txt(S)}?", mk=("total",), ps=False,
         mech_plain="Total: all eight lines of the square must make the printed total")
+    P["check_html_lines"] = [f"Add each row, column and diagonal. Does every line make {FM(S)}?"]
     # independent reader: read the printed grid and the printed total, then propagate
     gh = re.findall(r'<div class="mq3( blank)?">(.*?)</div>(?=<div class="mq3|</div><p)', body, re.S)
     rd = []

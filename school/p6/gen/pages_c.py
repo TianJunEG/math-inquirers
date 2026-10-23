@@ -196,7 +196,7 @@ def page19():
         items.append(hq_item_html(fig, ask))
     P = match_page(19, 7919, "Half and Quarter", 2, "Semicircles and quarter circles: area and perimeter", STRAND_AV,
         "1.2 (area and perimeter of a semicircle and a quarter circle)", ["AV1.2"], "Matching (areas and perimeters)",
-        [f"Take {PIP} as 22/7.", "Find the area or the perimeter of each shape, as the word says.", "Write the card letter in the box. Use each card once."],
+        [f"Take {PIP} as 22/7.", "Find the area or the perimeter of each shape, as the word says.", "Write the card letter in the box. Use each card once. Two cards are not used."],
         rng, items, card_html, right, hq_solve_item,
         "Three semicircles and three quarter circles, three asking for the area and three for the perimeter, with sizes that are multiples of 7 so that every answer is exact. Two cards are decoys: a card with the number of a perimeter but the unit cm², and the length of the curved edge alone. The perimeter of a semicircle or quarter circle includes its straight edges. The letters of the matching cards, read in the order of the items, spell the word. Every way of giving each item a different card, and every single changed letter, was tested against a very large word list: none spells another word. A box left blank gives no letter and the check cannot see it.",
         item_cols=2, card_cols=4)
@@ -234,7 +234,7 @@ def page20():
         else: cards.append(f'<div class="fig">{F.sq_minus_quarter_fig(p[0], str(i))}</div>')
     order_idx = sorted(range(6), key=lambda j: areas[j])
     P = order_page(20, 8020, "Curves and Corners", 2, "Composite figures with semicircles and quarter circles", STRAND_AV,
-        "1.3 (composite figures made of squares, rectangles, semicircles and quarter circles); 1.1", ["AV1.3", "AV1.2"], "Ordering (areas of composite figures)",
+        "1.3 (area and perimeter of composite figures), 1.2 (area and perimeter of a semicircle and a quarter circle)", ["AV1.3", "AV1.2"], "Ordering (areas of composite figures)",
         [f"Take {PIP} as 22/7.", "Find the area of each figure. For a hatched figure, find the hatched part.", "Put the areas in order, smallest first. Write the letters."],
         rng, cards, order_idx, cc_read,
         "Six figures: a rectangle with a semicircle on one end, a square with a semicircle on one side, and a square with a quarter circle cut away (the hatched part). All sizes are chosen so that the areas are exact. The areas of the six figures are all different and differ by at least 6. The letters, read from the smallest area to the greatest, spell the word; every wrong order was tested against a very large word list and none spells a word. A box left blank gives no letter and the check cannot see it.",

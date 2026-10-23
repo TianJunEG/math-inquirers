@@ -46,19 +46,26 @@ REPEATS = set("BANDIT CAMPUS COUSIN DONKEY FATHOM FIGURE FRUITY PEANUT TEACUP BO
 # the nine pages that changed their word, and the words of the other pages as first built: a replacement word comes only from the words no page used,
 # so no other page has to change its word
 REPLACED = {4, 6, 8, 13, 21, 23, 30, 31, 32}
+ORIG_FULL = {4: 'COUSIN', 6: 'TEACUP', 8: 'FATHOM', 13: 'FIGURE', 21: 'DONKEY', 23: 'FRUITY', 30: 'CAMPUS', 31: 'PEANUT', 32: 'BANDIT'}
+ORIG_WORD = {13: 'FIGURE', 6: 'TEACUP', 8: 'FATHOM', 21: 'DONKEY', 23: 'FRUITY', 30: 'CAMPUS', 31: 'PEANUT', 32: 'BANDIT'}     # pages that use code_table_any (page 4 is an ordering page)
 USED_FIRST_BUILD = set("BANDIT BIRCH BLUNT CAMPUS CANOPY COUSIN DEVOUR DONKEY FATHOM FIGURE FRUITY GOPHER JUNIOR PEANUT POLICE PUBLIC QUIVER SAUCY SCRIBE SHRIMP SPRUCE SWIVEL TEACUP THRIVE TUXEDO UPDATE VOLUME WALNUT WISDOM WOMBAT WORKS".split())
 
 def word_candidates(no, n, avoid=()):
-    avoid = set(avoid) | REPEATS | (USED_FIRST_BUILD if no in REPLACED else set())
+    avoid = set(avoid) | ((REPEATS | USED_FIRST_BUILD) if no in REPLACED else set())      # other pages keep their first-build word lists
     pool = safe_pool(n); k = (no * 5) % len(pool)
     taken = {w for p, w in CLAIMED.items() if p != no}
+    taken |= {w for q, w in ORIG_FULL.items() if q < no and q != no and no not in REPLACED}      # the nine words stay reserved, so the pages after them choose as they did
     return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
 
 def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
     """(word, table): the first word of this page's sequence for which a code table with no undetected slip exists"""
+    if no in REPLACED: max_words = 12
     for w in word_candidates(no, n, avoid)[:max_words]:
         t = make_code_table(answers, w, rng, lo, hi, **kw)
         if t: CLAIMED[no] = w; return w, t
+    if no in ORIG_WORD:                      # no unused word gives a table for this page: it keeps the word it had
+        t = make_code_table(answers, ORIG_WORD[no], rng, lo, hi, **kw)
+        if t: CLAIMED[no] = ORIG_WORD[no]; return ORIG_WORD[no], t
     return None
 
 def finish_code(P, answers, table, word, lo, hi, domain=None, plain=None):

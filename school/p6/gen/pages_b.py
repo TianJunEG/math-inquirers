@@ -230,7 +230,7 @@ def page13():
         "1.1, 1.2 (a letter for an unknown number; notation of simple expressions such as a + 3, 3a and a ÷ 3)", ["AL1.1", "AL1.2"], "Choice table (expressions)",
         ["A letter stands for a number.", "Circle the letter beside the right expression.", "Write the six letters in the boxes."],
         rng, crows, al_solve_row,
-        "Six short stories in which a letter stands for an unknown number: a price that is more, a number left after some are taken, the cost of several equal items, a share among friends, an age that is younger, and a number of items in several boxes. The pupil chooses the right expression of three. The wrong expressions use the wrong operation or write the number and the letter in the wrong order (for example K ÷ n for n ÷ K). The notation is the usual one: 3n for n times 3 and n ÷ 3. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.")
+        "Six short stories in which a letter stands for an unknown number: a price that is more, a number left after some are taken, the cost of several equal items, a share among friends, an age that is younger, and a number of items in several boxes. The pupil chooses the right expression of three. The wrong expressions use the wrong operation or write the number and the letter in the wrong order (for example n ÷ 3 written as 3 ÷ n). The notation is the usual one: 3n for n times 3 and n ÷ 3. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.")
     return P
 
 # =============================================================================== P6-14 Simplify  (AL1.3, code with two-box answers)
@@ -306,7 +306,7 @@ def page14():
         return -1
     P = match_page(14, 7414, "Simplify", 1, "Algebra: simplifying expressions with one letter", STRAND_AL,
         "1.3 (simplifying simple linear expressions, no brackets)", ["AL1.3"], "Matching (simplest form)",
-        ["Simplify each expression.", "Find the card with the simplest form.", "Write the card letter in the box. Use each card once."],
+        ["Simplify each expression, then find the card with the simplest form.", "Write the card letter in the box.", "Use each card once. Two cards are not used."],
         rng, item_html, card_html, right, solve_item,
         "Six expressions with one letter and no brackets: adding like terms, subtracting like terms, and expressions where the letter terms and the numbers are mixed up, one with a lone letter (n means 1n). Each is matched to its simplest form among eight cards. Two cards are decoys: a wrong simplification, such as the two numbers swapped or all the terms added together. Every way of giving each item a different card, and every single changed letter, was tested against a very large word list: none spells another word. A box left blank gives no letter and the check cannot see it.",
         item_cols=2, card_cols=4)
@@ -353,7 +353,7 @@ def page15():
             halves.append((a, b))
         break
     P = loop_page(15, 7515, "Substitute", 2, "Algebra: finding the value of an expression", STRAND_AL,
-        "1.4 (evaluating a simple expression by substitution)", ["AL1.4", "AL1.2"], "Domino loop (substituting)",
+        "1.4 (evaluating simple linear expressions by substitution), 1.2 (notation of simple algebraic expressions)", ["AL1.4", "AL1.2"], "Domino loop (substituting)",
         ["Work out the value of each half domino.", "The right half of a domino has the same value as the left half of the next domino.", "Write the letters in order, from START."],
         rng, halves, ev_sub,
         "Six dominoes. Each half shows an expression and the number its letter stands for. The right half of one domino has the same value as the left half of exactly one other domino, so the dominoes make one loop that comes back to START. The pupil finds the value of each half, follows the loop from START and writes the letters in loop order; they spell the word. All twelve values are in two groups of six equal pairs, and every wrong order was tested against a very large word list: none spells a word.")
@@ -409,7 +409,7 @@ def page16():
         else:
             cards.append(qcard(i + 1, f'<p>{it["t"]}</p>', f'{V(it["L"])} = {abx("w3")}'))
     P = code_page(16, 7616, "Find the Letter", 2, "Algebra: solving simple equations", STRAND_AL,
-        "1.5 (simple linear equations with whole-number coefficients)", ["AL1.5", "AL1.3"], "Code-breaker (equations)",
+        "1.5 (simple linear equations involving whole number coefficient only), 1.3 (simplifying simple linear expressions)", ["AL1.5", "AL1.3"], "Code-breaker (equations)",
         ["Find the value of the letter in each equation.", "Write the number in the box.", "Use the code table."],
         cards, ans, table, word, 1, 300, "; ".join(f"{i+1}) {it['L']} = {a}" for i, (it, a) in enumerate(zip(its, ans))),
         "Six equations with one letter and whole-number coefficients: one step with addition, one with subtraction, one with a coefficient only, one that first needs like terms collected, and two stories that the pupil turns into an equation. The decoy numbers are what a pupil gets by adding instead of subtracting the number, by forgetting to divide, or by dividing before subtracting. A pupil can test any answer by putting it back in the equation. A box left blank gives no letter and the check cannot see it.",

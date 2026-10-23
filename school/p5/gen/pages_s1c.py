@@ -93,15 +93,15 @@ def page15():
     return P
 
 # =============================================================================== P5-16 Remainder Stories (code word)
-FRAMES16 = [("stickers", "Ali", "He", "gave {f1} of them to Ben and {f2} of the rest to Cara", "Ben", "Cara", "stickers"),
-            ("sweets", "Mei", "She", "ate {f1} of them on Monday and {f2} of the rest on Tuesday", "Monday", "Tuesday", "sweets"),
-            ("$", "Hana", "She", "spent {f1} of it on a book and {f2} of the rest on a pen", "book", "pen", "money"),
-            ("cm", "Ravi", "He", "cut off {f1} of it, then {f2} of what was left", "", "", "ribbon"),
-            ("pages", "Siti", "She", "read {f1} of the pages on Friday and {f2} of the rest on Saturday", "Friday", "Saturday", "pages"),
-            ("marbles", "Kumar", "He", "lost {f1} of them and gave {f2} of the rest to his sister", "", "sister", "marbles")]
+FRAMES16 = [
+    dict(t="A shop had {N} kites. On Monday it sold {f1} of them. On Tuesday it sold {f2} of the kites left.", l="How many kites were left?", s="How many kites were sold on Tuesday?", a="How many kites were sold in all?", unit=""),
+    dict(t="A baker made {N} buns. {f1} of them were sold in the morning and {f2} of the rest in the afternoon.", l="How many buns were left?", s="How many buns were sold in the afternoon?", a="How many buns were sold in all?", unit=""),
+    dict(t="A library bought {N} new books. It lent {f1} of them in the first week and {f2} of the rest in the second week.", l="How many books were left on the shelf?", s="How many books were lent in the second week?", a="How many books were lent in all?", unit=""),
+    dict(t="A club raised ${N}. It spent {f1} of the money on prizes and {f2} of the rest on food.", l="How much money was left?", s="How much money was spent on food?", a="How much money was spent in all?", unit=""),
+    dict(t="A gardener had {N} seeds. {f1} of them went into pots and {f2} of the rest into the ground.", l="How many seeds were left over?", s="How many seeds went into the ground?", a="How many seeds were planted in all?", unit=""),
+    dict(t="A drum held {N} ℓ of paint. {f1} of the paint was used on a fence and {f2} of the rest on a gate.", l="How many ℓ of paint were left?", s="How many ℓ of paint were used on the gate?", a="How many ℓ of paint were used in all?", unit="ℓ")]
 
 def story16(rng, frame, kind):
-    th, name, he, act, x, y, what = frame
     while True:
         b = rng.choice([3, 4, 5, 6, 8]); a = rng.randint(1, b - 1)
         d = rng.choice([3, 4, 5, 6]); c = rng.randint(1, d - 1)
@@ -109,23 +109,13 @@ def story16(rng, frame, kind):
         k = rng.randint(2, 6); N = b * k
         R1 = N - a * k
         if R1 % d: continue
-        N = N * (d // math.gcd(d, 1)) if False else N
         second = Fr(c, d) * R1; first = a * k
         if N > 200 or second.denominator != 1: continue
         break
-    unit = "$" if th == "$" else ""
-    nt = f"{unit}{N}" + ("" if th == "$" else (f" {th}" if th not in ("cm",) else " cm"))
-    s1 = f"{name} had {nt}." if th != "cm" else f"{name} had a ribbon {N} cm long."
-    s2 = f"{he} " + act.format(f1=FR(a, b), f2=FR(c, d)) + "."
-    thing = {"stickers": "stickers", "sweets": "sweets", "$": "money", "cm": "ribbon", "pages": "pages", "marbles": "marbles"}[th]
-    if kind == "left":
-        q = {"$": f"How much money was left?", "cm": "How many cm of ribbon were left?"}.get(th, f"How many {thing} were left?"); ans = N - first - int(second)
-    elif kind == "second":
-        q = {"$": "How much money did she spend on the pen?", "cm": "How many cm were cut off the second time?"}.get(th, f"How many {thing} were taken the second time?"); ans = int(second)
-    else:
-        q = {"$": "How much money did she spend in all?", "cm": "How many cm were cut off in all?"}.get(th, f"How many {thing} were taken in all?"); ans = first + int(second)
+    q = {"left": frame["l"], "second": frame["s"], "total": frame["a"]}[kind]
+    ans = {"left": N - first - int(second), "second": int(second), "total": first + int(second)}[kind]
     pool = [N - first, first, int(second), N - first - int(second), first + int(second), int(Fr(c, d) * N), N - int(Fr(c, d) * N)]
-    return f"{s1} {s2} {q}", ans, pool, (N, a, b, c, d)
+    return frame["t"].format(N=N, f1=FR(a, b), f2=FR(c, d)) + " " + q, ans, pool, (N, a, b, c, d), frame["unit"]
 
 def solve16(t):
     """independent reader of a story: the start amount, the two fractions and what is asked"""
@@ -142,7 +132,7 @@ def page16():
     rng = random.Random(5116)
     kinds = ["left", "second", "total", "left", "second", "total"]
     for _ in range(4000):
-        frames = rng.sample(FRAMES16, 6); ks = kinds[:]; rng.shuffle(ks)
+        frames = FRAMES16[:]; rng.shuffle(frames); ks = kinds[:]; rng.shuffle(ks)
         sts = [story16(rng, f, k) for f, k in zip(frames, ks)]
         ans = [s[1] for s in sts]
         if not distinct(ans) or max(ans) > 200 or min(ans) < 3: continue
@@ -152,17 +142,17 @@ def page16():
         res = code_table_for(16, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p16")
-    cards = [qc(i + 1, f'<p class="qt">{s[0]}</p>', abx("w4") + ('<span class="unit">cm</span>' if "cm" in s[0].split("?")[0][-30:] else ""), cls="inl") for i, s in enumerate(sts)]
+    cards = [qc(i + 1, f'<p class="qt">{s[0]}</p>', abx("w4") + (f'<span class="unit">{s[4]}</span>' if s[4] else ""), cls="inl") for i, s in enumerate(sts)]
     solved = []
     for c in cards:
         t = to_text(re.search(r'<div class="qt">(.*?)</div></div><div class="qa">', c, re.S).group(1))
         solved.append(solve16(t))
     P = code_page(16, 5116, "Remainder Stories", 2, "Fractions: a fraction of the remainder", STRAND_FR,
         "multiplying a fraction by a whole number: a fraction of a quantity, then a fraction of what is left", ["FR2.2", "FR2.3"], "Code-breaker (two-step fraction stories)",
-        ["Read each story.", "Take the fraction of the whole, then the fraction of the rest.", "Write the answer in the box. Use the code table."],
+        ["Read each story.", "Take the first fraction of the whole, then the second of the rest.", "Write the answer in the box. Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
         "Six two-step stories. The pupil takes a fraction of the starting amount, then a fraction of what is left, and answers one of three questions: what is left, what was taken the second time, or what was taken in all. The decoy letters stand for the usual slips: taking the second fraction of the whole instead of the rest, or answering a different one of the three questions. Every step divides exactly. A box left blank gives no letter and the check cannot see it.",
-        solved, cols=4, layout="c1", ps=True, checks=[("V7 starting amounts up to 200, every step a whole number", all(s[3][0] <= 200 for s in sts), "")])
+        solved, cols=4, layout="c1", cls="s16", ps=True, checks=[("V7 starting amounts up to 200, every step a whole number", all(s[3][0] <= 200 for s in sts), "")])
     return P
 
 # =============================================================================== P5-17 Point Shift (code word)

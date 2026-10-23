@@ -1943,25 +1943,25 @@
      "type": "price_tag",
      "item": "pen",
      "price": "$4",
-     "hw": 24
+     "hw": 29
     },
     {
      "type": "price_tag",
      "item": "book",
      "price": "$5",
-     "hw": 24
+     "hw": 29
     },
     {
      "type": "price_tag",
      "item": "bag",
      "price": "$7",
-     "hw": 24
+     "hw": 29
     },
     {
      "type": "price_tag",
      "item": "hat",
      "price": "$9",
-     "hw": 24
+     "hw": 29
     }
    ]
   },

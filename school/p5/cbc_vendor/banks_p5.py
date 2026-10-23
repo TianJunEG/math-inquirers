@@ -75,7 +75,7 @@ def _pct(tier):
 BANKS = {
     "ops": Bank("ops", "Order of Operations", "Whole numbers: order of operations and brackets", "Work out the answer. Find it in the key. Colour the part with that colour.",
                 {1: T([12, 18, 24, 30, 36], range(0, 301), _ops(1)), 2: T([14, 21, 28, 35, 42], range(0, 301), _ops(2))}),
-    "pct": Bank("pct", "Percentages", "Percentage: a part of a whole, a percentage of a quantity, discount and GST", "Work out the answer. Find it in the key. Colour the part with that colour.",
+    "pct": Bank("pct", "Percentages", "Percentage: a part of a whole, a percentage of a quantity, a price after a discount or a percentage added", "Work out the answer. Find it in the key. Colour the part with that colour.",
                 {1: T([12, 20, 25, 40, 60], range(0, 1001), _pct(1)), 2: T([15, 30, 45, 75, 90], range(0, 1001), _pct(2))}),
 }
 GALLERY = [dict(id="CBC-P5-01", picture="rocket", bank="ops", tier=1, seed=501), dict(id="CBC-P5-02", picture="house", bank="pct", tier=1, seed=502)]

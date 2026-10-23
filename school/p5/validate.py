@@ -201,7 +201,7 @@ rec("notation: no 'degrees' or 'deg' where the degree sign belongs", not re.sear
 for k in BK:
     fm_ = re.sub(r"\s+", " ", alltxt[f"P5_{k}_FrontMatter.pdf"])
     rec(f"{k}: teacher notes carry 'Pictures are not actual size.' and the not-covered note", "Pictures are not actual size." in fm_ and "Not covered" in fm_)
-    rec(f"{k}: the key says the outcome wording is our own summary, not the syllabus text", "our own summary" in re.sub(r"\s+", " ", alltxt[f"P5_{k}_Answer_Key.pdf"]))
+    rec(f"{k}: the key says the outcome lines are copied as printed in the syllabus and the rest is our own wording", "copied as printed there" in re.sub(r"\s+", " ", alltxt[f"P5_{k}_Answer_Key.pdf"]))
 rec("money is written 50¢, never 50c, in all printed text", not re.search(r"(?<![\w.])\d+c\b", joined), str(re.findall(r"(?<![\w.])\d+c\b", joined)[:5]))
 rec("dollar amounts with cents always have two decimal places ($3.50, never $3.5)", not re.search(r"\$\d+\.\d(?!\d)", joined), str(re.findall(r"\$\d+\.\d(?!\d)", joined)[:3]))
 for k in BK:

@@ -154,8 +154,8 @@ def page32():
 
 def page40():
     return cbc_page(40, dict(id="CBC-P6-03", picture="elephant", bank="mixed", tier=2, seed=4, level=6), "Colour the Elephant", CINSTR,
-        "Number and Algebra - mixed Primary 6", "Mixed: percentage of a number (revisits Primary 5), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
+        "Number and Algebra - mixed Primary 6", "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
         "Every part asks a mixed Primary 6 question with a whole-number answer: a percentage of a number, a whole number divided by a fraction, the value of an expression with a letter, an equation with a letter, a share in a ratio, or an average.",
-        oc=["RV5.PC", "FR1.2", "AL1.4", "AL1.5", "RA1.3", "ST1.1"])
+        oc=["PF.PC", "FR1.2", "AL1.4", "AL1.5", "RA1.3", "ST1.1"])
 
 PAGES = [page09, page32, page40]

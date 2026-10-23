@@ -1,4 +1,4 @@
-"""Part D: composite figures, perimeter, volume. P6-21 Shaded Shapes, P6-22 Perimeter Pick, P6-23 Cuboid Corners, P6-24 Roots and Edges, P6-25 Base and Height, P6-26 Tank Stories."""
+"""Part D: composite figures, perimeter, volume. P6-21 Shaded Shapes, P6-22 Perimeter Pick, P6-23 Cuboid Corners, P6-24 Root Maze, P6-25 Base and Height, P6-26 Tank Stories."""
 import random, re, math, itertools
 from fractions import Fraction as Fr
 from math import gcd
@@ -62,7 +62,7 @@ def page21():
         cards.append(qcard(i + 1, f'<div class="fig fcd">{f}</div>', f'{abx("w3")}{unit("cm²")}', cls="posb"))
     P = code_page(21, 8121, "Shaded Shapes", 1, "Area of composite figures", STRAND_AV,
         "1.3 (composite figures made of squares, rectangles, triangles, semicircles and quarter circles)", ["AV1.3"], "Code-breaker (composite areas)",
-        [f"Take {PIP} as 22/7. All lengths are in cm.", "Find the area of each figure. For a hatched figure, find the hatched part.", "Write the answer in the box. Use the code table."],
+        [f"Take {PIP} as 22/7; all lengths are in cm.", "Find the area of each figure (the hatched part, if there is hatching).", "Write the answer in the box. Use the code table."],
         cards, ans, table, word, 1, 1250, "; ".join(f"{i+1}) {a} cm²" for i, a in enumerate(ans)),
         "Six figures: a rectangle with a semicircle on one end, a square with a semicircle on one side, a square with a quarter circle cut away (hatched), a square with a semicircle cut out (hatched), and two rectangles with a triangle on top. Sizes are chosen so that every answer is a whole number with π as 22/7. The decoy numbers are what a pupil gets by using a full circle instead of a half, by forgetting the half in the triangle, or by adding instead of subtracting. A box left blank gives no letter and the check cannot see it.", ncols=3)
     solved = [int(fig_area(f)) for f in figs_]
@@ -107,7 +107,7 @@ def page22():
         return -1
     P = choice_page(22, 8222, "Perimeter Pick", 2, "Perimeter of figures with curved edges", STRAND_AV,
         "1.2, 1.3 (perimeter of a semicircle and a quarter circle; composite figures)", ["AV1.2", "AV1.3"], "Choice table (perimeters)",
-        [f"Take {PIP} as 22/7. All lengths are in cm.", "Find the perimeter. For the hatched figure, find the hatched part. Only the outside counts.", "Circle the letter beside the right answer. Write the letters in the boxes."],
+        [f"Take {PIP} as 22/7; all lengths are in cm.", "Find the perimeter, of the hatched part if there is hatching. Only the outside counts.", "Circle the letter beside the right answer. Write the letters in the boxes."],
         rng, rows, solve_row,
         "Six figures: a semicircle, a quarter circle, two rectangles with a semicircle on one end, a square with a semicircle on one side and a square with a quarter circle cut away (the hatched part). Each row has three answers. The wrong answers are what a pupil gets by leaving out the straight edges, by counting a dashed line that is inside the figure, or by using the whole circle. The perimeter of a semicircle includes its diameter. The letters of the right answers, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         key_rows=None, grid=True)
@@ -175,7 +175,7 @@ def page23():
     P.v("V7 every edge is a whole number from 3 to 15 and the three edges of a cuboid are different", all(len({it["l"], it["b"], it["h"]}) == 3 and max(it["l"], it["b"], it["h"]) <= 15 for it in its))
     return P
 
-# =============================================================================== P6-24 Roots and Edges  (VO2.2, VO2.5, route)
+# =============================================================================== P6-24 Root Maze  (VO2.2, VO2.5, route)
 def root_cells(T, rng):
     good, bad = [], []
     def add(v, h):
@@ -213,11 +213,11 @@ def page24():
     rng = random.Random(8424)
     T = Fr(6)
     good, bad = root_cells(T, rng)
-    return route_page(24, 8424, "Roots and Edges", 1, "Square roots, cube roots and the edge of a cube", STRAND_AV,
-        "2.5 (square-root and cube-root signs); 2.2 (the edge of a cube from its volume)", ["VO2.5", "VO2.2"], "Maze / path",
+    return route_page(24, 8424, "Root Maze", 1, "Square roots and cube roots", STRAND_AV,
+        "2.5 (use of the square-root and cube-root signs)", ["VO2.5"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on boxes where the answer is {T}.", "Do not step on a box twice."],
         rng, 4, 8, good, bad, ev_root, T, str(T),
-        f"A 4 by 4 grid of sixteen boxes: square roots, cube roots, a root with a number added, taken away or multiplied, the edge of a cube from its volume and the side of a square from its area. The route follows the boxes that equal {T}. The wrong boxes include answers close to {T}. Two extra boxes that equal {T} are dead ends. Counting the boxes shows a line that takes a shortcut.",
+        f"A 4 by 4 grid of sixteen boxes: square roots, cube roots, and a root with a number added, taken away or multiplied. The route follows the boxes that equal {T}. The wrong boxes include answers close to {T}. Two extra boxes that equal {T} are dead ends. Counting the boxes shows a line that takes a shortcut.",
         cls="maze xs tall")
 
 # =============================================================================== P6-25 Base and Height  (VO2.3, VO2.4, match)
@@ -289,7 +289,7 @@ def page25():
     items = [f'<p style="margin:0;font-size:12.5pt;font-family:Nunito Sans;font-weight:400">{it["t"]}</p>' for it in its]
     P = match_page(25, 8525, "Base and Height", 2, "Volume: base area, height and faces", STRAND_AV,
         "2.3, 2.4, 2.2 (height of a cuboid from volume and base area; area of a face from volume and one dimension; edge of a cube)", ["VO2.3", "VO2.4", "VO2.2"], "Matching (base area, height, face)",
-        ["Work out each answer.", "Find the card with that answer and its unit.", "Write the card letter in the box. Use each card once."],
+        ["Work out each answer.", "Find the card with that answer and its unit.", "Write the card letter in the box. Use each card once. Two cards are not used."],
         rng, items, card_html, right, bh_solve,
         "Six questions: the height from the volume and the base area, the base area from the volume and the height, the area of a face from the volume and one edge, the depth of water in a tank, the face of a cube from its volume, and the height from the volume and a base given by its two edges. Two cards are decoys. A card carries a number and a unit: lengths are in cm and areas in cm². The letters of the matching cards, read in the order of the items, spell the word. Every way of giving each item a different card, and every single changed letter, was tested against a very large word list: none spells another word. A box left blank gives no letter and the check cannot see it.",
         item_cols=1, card_cols=4, compact=True)
@@ -310,7 +310,7 @@ def tank_item(rng, kind):
         return dict(t=f"A tank has a base {l} cm by {b} cm. The water in it is {d} cm deep. How many {LITRE} of water are in the tank?", ans=l * b * d // 1000)
     if kind == "half":
         while True:
-            l, b, h = rng.choice([40, 50, 60, 80]), rng.choice([25, 30, 40, 50]), rng.choice([20, 30, 40])
+            l, b, h = rng.choice([40, 60, 90]), rng.choice([25, 30, 40, 50]), rng.choice([20, 30, 40])
             if (l * b * h) % 2000 == 0: break
         return dict(t=f"A tank {l} cm long, {b} cm wide and {h} cm high is half full of water. How many {LITRE} of water are in it?", ans=l * b * h // 2000)
     if kind == "pour":
@@ -362,7 +362,7 @@ def page26():
         if res: word, table = res; break
     cards = [qcard(i + 1, f'<p>{it["t"]}</p>', abx("w3")) for i, it in enumerate(its)]
     P = code_page(26, 8626, "Tank Stories", 2, "Volume of water in a tank: litres and cm³", STRAND_AV,
-        "2.3 (height from volume and base area); revisits Primary 5 Volume (litres and cm³)", ["VO2.3", "RV5.VO"], "Code-breaker (tanks)",
+        "2.3 (height from volume and base area); Primary 6 Foundation Area and Volume 2.2 and 2.3 (liquid in a tank; litres and cm³)", ["VO2.3", "PF.VO"], "Code-breaker (tanks)",
         ["1 ℓ = 1000 cm³.", "Work out each answer.", "Write it in the box. Use the code table."],
         cards, ans, table, word, 1, 130, "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
         "Six tank stories that need litres changed to cm³ or back: the depth of water, the litres in a tank, half a tank, the height reached by water poured in, the height of a tank that is part full, and a full cube-shaped tank. The decoy numbers are what a pupil gets by forgetting to change litres to cm³ (an answer ten times or a thousand times too big or small), by forgetting the fraction, or by using one edge instead of the base area. The relationship 1 litre = 1000 cm³ is printed on the page. A box left blank gives no letter and the check cannot see it.", ncols=2)

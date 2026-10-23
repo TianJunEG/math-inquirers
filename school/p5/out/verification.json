@@ -8,7 +8,7 @@
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "numbers to 10 million: reading and writing numbers in numerals and words, place value",
   "outcomes": [
-   "WN.NUM"
+   "WN1.1"
   ],
   "ptype": "Lettered choices (place value)",
   "mech": "K1 the letter of the right choice in each row spells a word (6 letters, one wrong letter per other choice)",
@@ -17,7 +17,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "FLIGHT"
+    "detail": "FRUITS"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -61,21 +61,21 @@
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "numbers to 10 million: place value, reading and writing numbers",
   "outcomes": [
-   "WN.NUM"
+   "WN1.1"
   ],
   "ptype": "Code-breaker (digit cards)",
   "mech": "K1 code word (6 letters)",
   "seed": 5102,
   "checks": [
    {
-    "name": "V2 code word spells FROZEN",
+    "name": "V2 code word spells PLACED",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "108/108"
+    "detail": "114/114"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -85,17 +85,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['frozen']"
+    "detail": "['placed']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['broken', 'bronze', 'frozen']"
+    "detail": "['jacked', 'lacked', 'packed', 'placed']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['2056789', '3045789', '9867410', '9865310', '1023457', '9765430']"
+    "detail": "['2056789', '9843210', '1028469', '7543210', '7695210', '1023467']"
    },
    {
     "name": "V7 every answer is a 7-digit number below 10 million",
@@ -110,17 +110,17 @@
   ],
   "generator_slip_test": [
    1.0,
-   108,
-   108
+   114,
+   114
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    108,
-    108
+    114,
+    114
    ],
    "all_other_values_rejected": [
-    108,
-    108
+    114,
+    114
    ],
    "wrong_arrangements_rejected": null
   }
@@ -134,7 +134,7 @@
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "multiplying and dividing whole numbers by 10, 100 and 1000",
   "outcomes": [
-   "WN.X10"
+   "WN2.1"
   ],
   "ptype": "Ordering (lettered cards)",
   "mech": "K1 letters in order spell a word (6 letters) + K4 each card used once",
@@ -143,7 +143,7 @@
    {
     "name": "V1 independent solver (reads each card, evaluates exactly, sorts) gets the word",
     "ok": true,
-    "detail": "BACKUP"
+    "detail": "TOWARD"
    },
    {
     "name": "V1b all card values are different",
@@ -153,7 +153,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['backup']"
+    "detail": "['toward']"
    },
    {
     "name": "V3 none of the 719 wrong orders of the letters spells a word",
@@ -195,7 +195,7 @@
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "multiplying and dividing whole numbers by 10, 100, 1000 and their multiples",
   "outcomes": [
-   "WN.X10"
+   "WN2.1"
   ],
   "ptype": "Maze / path",
   "mech": "K6 route closes at FINISH through the stated number of boxes",
@@ -352,7 +352,7 @@
    {
     "name": "V1 independent solver (evaluates every card and every tile, matches equal values) gets the word",
     "ok": true,
-    "detail": "CRAFTS"
+    "detail": "FAVOUR"
    },
    {
     "name": "V1b every card matches exactly one tile and every tile exactly one card",
@@ -362,7 +362,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['crafts']"
+    "detail": "['favour']"
    },
    {
     "name": "V3 none of the wrong matchings (every other arrangement of the letters) spells a word",
@@ -465,14 +465,14 @@
   "seed": 5108,
   "checks": [
    {
-    "name": "V2 code word spells DEVOUR",
+    "name": "V2 code word spells MODEST",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "132/132"
+    "detail": "108/108"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -482,17 +482,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['devour']"
+    "detail": "['modest']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['devour', 'poured', 'proved']"
+    "detail": "['modest', 'smoked', 'stoked']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['1/4', '1/5', '11/4', '11/6', '7/8', '9/5']"
+    "detail": "['7/8', '1/2', '16/9', '4/3', '2/5', '13/7']"
    },
    {
     "name": "V7 no quotient is a whole number; divisors at most 12",
@@ -502,17 +502,17 @@
   ],
   "generator_slip_test": [
    1.0,
-   132,
-   132
+   108,
+   108
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    132,
-    132
+    108,
+    108
    ],
    "all_other_values_rejected": [
-    132,
-    132
+    108,
+    108
    ],
    "wrong_arrangements_rejected": null
   }
@@ -535,7 +535,7 @@
    {
     "name": "V1 independent solver (evaluates every card and every tile, matches equal values) gets the word",
     "ok": true,
-    "detail": "BEHIND"
+    "detail": "FIRMLY"
    },
    {
     "name": "V1b every card matches exactly one tile and every tile exactly one card",
@@ -545,7 +545,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['behind']"
+    "detail": "['firmly']"
    },
    {
     "name": "V3 none of the wrong matchings (every other arrangement of the letters) spells a word",
@@ -753,7 +753,7 @@
   "seed": 5113,
   "checks": [
    {
-    "name": "V2 code word spells PEANUT",
+    "name": "V2 code word spells STRAND",
     "ok": true,
     "detail": ""
    },
@@ -770,12 +770,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['peanut']"
+    "detail": "['strand']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['peanut', 'planet', 'plaque']"
+    "detail": "['brands', 'brandt', 'strand']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
@@ -823,7 +823,7 @@
    {
     "name": "V1 independent solver (reads each card, evaluates exactly, sorts) gets the word",
     "ok": true,
-    "detail": "MELODY"
+    "detail": "PODIUM"
    },
    {
     "name": "V1b all card values are different",
@@ -833,7 +833,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['melody']"
+    "detail": "['podium']"
    },
    {
     "name": "V3 none of the 719 wrong orders of the letters spells a word",
@@ -881,7 +881,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "CREAMY"
+    "detail": "QUIRKY"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -933,14 +933,14 @@
   "seed": 5116,
   "checks": [
    {
-    "name": "V2 code word spells FAMILY",
+    "name": "V2 code word spells PERIOD",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "102/102"
+    "detail": "96/96"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -950,17 +950,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['family']"
+    "detail": "['period']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fairly', 'family', 'firmly']"
+    "detail": "['bodice', 'brodie', 'copied', 'copier', 'period', 'priced']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['4', '9', '18', '19', '8', '3']"
+    "detail": "['9', '3', '6', '5', '4', '15']"
    },
    {
     "name": "V7 starting amounts up to 200, every step a whole number",
@@ -970,17 +970,17 @@
   ],
   "generator_slip_test": [
    1.0,
-   102,
-   102
+   96,
+   96
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    102,
-    102
+    96,
+    96
    ],
    "all_other_values_rejected": [
-    102,
-    102
+    96,
+    96
    ],
    "wrong_arrangements_rejected": null
   }
@@ -1001,7 +1001,7 @@
   "seed": 5117,
   "checks": [
    {
-    "name": "V2 code word spells POLICE",
+    "name": "V2 code word spells FOURTH",
     "ok": true,
     "detail": ""
    },
@@ -1018,12 +1018,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['police']"
+    "detail": "['fourth']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['pickle', 'police', 'wilcox']"
+    "detail": "['fought', 'fourth', 'trough']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
@@ -1071,7 +1071,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "FIGURE"
+    "detail": "MOVIES"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -1124,7 +1124,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "HUNGRY"
+    "detail": "HARDLY"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -1175,7 +1175,7 @@
   "seed": 5120,
   "checks": [
    {
-    "name": "V2 code word spells FRUITS",
+    "name": "V2 code word spells ASPECT",
     "ok": true,
     "detail": ""
    },
@@ -1192,12 +1192,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['fruits']"
+    "detail": "['aspect']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fruits', 'jurist', 'squirt']"
+    "detail": "['aspect', 'casket', 'packet', 'spacex']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
@@ -1231,14 +1231,15 @@
   "strand": "Number and Algebra - Percentage",
   "syll": "expressing a part of a whole as a percentage; the sign %",
   "outcomes": [
-   "PC.PART"
+   "PC1.1",
+   "PC1.2"
   ],
   "ptype": "Code-breaker (percentages)",
   "mech": "K1 code word (6 letters)",
   "seed": 5121,
   "checks": [
    {
-    "name": "V2 code word spells FRIDGE",
+    "name": "V2 code word spells BRANDS",
     "ok": true,
     "detail": ""
    },
@@ -1255,12 +1256,12 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['fridge']"
+    "detail": "['brands']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['fridge', 'pfizer', 'prized']"
+    "detail": "['absurd', 'brands', 'dunbar', 'durban']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
@@ -1295,12 +1296,13 @@
   "code": "S2-02 (P5-22)",
   "title": "Colour the Butterfly",
   "tier": 1,
-  "topic": "Percentage: a part of a whole, a percentage of a quantity, discount and GST",
+  "topic": "Percentage: a part of a whole, a percentage of a quantity, a price after a discount or a percentage added",
   "strand": "Number and Algebra - Percentage",
   "syll": "a percentage part of a whole, a part of a whole as a percentage, discount and GST (percentage)",
   "outcomes": [
-   "PC.PART",
-   "PC.OF",
+   "PC1.1",
+   "PC1.2",
+   "PC1.3",
    "PC1.4"
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
@@ -1390,7 +1392,7 @@
   "syll": "finding discount and the price after discount",
   "outcomes": [
    "PC1.4",
-   "PC.OF"
+   "PC1.3"
   ],
   "ptype": "Ordering (lettered cards)",
   "mech": "K1 letters in order spell a word (6 letters) + K4 each card used once",
@@ -1399,7 +1401,7 @@
    {
     "name": "V1 independent solver (reads each card, evaluates exactly, sorts) gets the word",
     "ok": true,
-    "detail": "THIRDS"
+    "detail": "LAUGHS"
    },
    {
     "name": "V1b all card values are different",
@@ -1409,7 +1411,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['thirds']"
+    "detail": "['laughs']"
    },
    {
     "name": "V3 none of the 719 wrong orders of the letters spells a word",
@@ -1447,7 +1449,7 @@
   "syll": "finding GST and the price with GST",
   "outcomes": [
    "PC1.4",
-   "PC.OF"
+   "PC1.3"
   ],
   "ptype": "Matching (lettered cards)",
   "mech": "K1 letters of the matching cards spell a word (6 letters) + K4 each card used once",
@@ -1456,7 +1458,7 @@
    {
     "name": "V1 independent solver (evaluates every card and every tile, matches equal values) gets the word",
     "ok": true,
-    "detail": "WALRUS"
+    "detail": "FUSION"
    },
    {
     "name": "V1b every card matches exactly one tile and every tile exactly one card",
@@ -1466,7 +1468,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['walrus']"
+    "detail": "['fusion']"
    },
    {
     "name": "V3 none of the wrong matchings (every other arrangement of the letters) spells a word",
@@ -1504,21 +1506,21 @@
   "syll": "finding annual interest",
   "outcomes": [
    "PC1.4",
-   "PC.OF"
+   "PC1.3"
   ],
   "ptype": "Code-breaker (interest in money stories)",
   "mech": "K1 code word (6 letters)",
   "seed": 5125,
   "checks": [
    {
-    "name": "V2 code word spells STUDIO",
+    "name": "V2 code word spells TYPING",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "174/174"
+    "detail": "132/132"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1528,17 +1530,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['studio']"
+    "detail": "['typing']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['doubts', 'dubois', 'outbid', 'studio']"
+    "detail": "['plying', 'tingly', 'typing']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['150', '54', '1260', '8', '50', '530']"
+    "detail": "['1025', '24', '48', '520', '60', '404']"
    },
    {
     "name": "V7 every amount a whole number of dollars",
@@ -1548,17 +1550,17 @@
   ],
   "generator_slip_test": [
    1.0,
-   174,
-   174
+   132,
+   132
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    174,
-    174
+    132,
+    132
    ],
    "all_other_values_rejected": [
-    174,
-    174
+    132,
+    132
    ],
    "wrong_arrangements_rejected": null
   }
@@ -1572,7 +1574,8 @@
   "strand": "Number and Algebra - Rate",
   "syll": "rate as the amount of one quantity per unit of another quantity; finding the rate, the total or the number of units",
   "outcomes": [
-   "RA"
+   "RA1.1",
+   "RA1.2"
   ],
   "ptype": "Lettered choices (rate)",
   "mech": "K1 the letter of the right choice in each row spells a word (6 letters, one wrong letter per other choice)",
@@ -1581,7 +1584,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "STRONG"
+    "detail": "WARMTH"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -1625,21 +1628,22 @@
   "strand": "Number and Algebra - Rate",
   "syll": "rate: finding the rate, then the total or the number of units",
   "outcomes": [
-   "RA"
+   "RA1.1",
+   "RA1.2"
   ],
   "ptype": "Code-breaker (rate stories)",
   "mech": "K1 code word (6 letters)",
   "seed": 5127,
   "checks": [
    {
-    "name": "V2 code word spells WISDOM",
+    "name": "V2 code word spells DIGEST",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "138/138"
+    "detail": "144/144"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1649,32 +1653,32 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['wisdom']"
+    "detail": "['digest']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['podium', 'sodium', 'wisdom']"
+    "detail": "['digest', 'fidget', 'fisted', 'gifted', 'sifted']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['30', '45', '54', '72', '24', '70']"
+    "detail": "['154', '20', '55', '48', '18', '121']"
    }
   ],
   "generator_slip_test": [
    1.0,
-   138,
-   138
+   144,
+   144
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    138,
-    138
+    144,
+    144
    ],
    "all_other_values_rejected": [
-    138,
-    138
+    144,
+    144
    ],
    "wrong_arrangements_rejected": null
   }
@@ -1688,7 +1692,7 @@
   "strand": "Measurement and Geometry - Area and Volume",
   "syll": "area of a triangle: base and height (the height is at a right angle to the base)",
   "outcomes": [
-   "AR.TRI"
+   "AR1.1"
   ],
   "ptype": "Lettered choices (figures)",
   "mech": "K1 the letter of the right choice in each row spells a word (6 letters, one wrong letter per other choice)",
@@ -1697,7 +1701,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "COUSIN"
+    "detail": "HOURLY"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -1741,21 +1745,22 @@
   "strand": "Measurement and Geometry - Area and Volume",
   "syll": "area of a triangle from its base and height",
   "outcomes": [
-   "AR.TRI"
+   "AR1.1",
+   "AR1.2"
   ],
   "ptype": "Code-breaker (areas of triangles)",
   "mech": "K1 code word (6 letters)",
   "seed": 5129,
   "checks": [
    {
-    "name": "V2 code word spells SHRIMP",
+    "name": "V2 code word spells BIRTHS",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "156/156"
+    "detail": "162/162"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1765,17 +1770,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['shrimp']"
+    "detail": "['births']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['primus', 'shrimp', 'squirm']"
+    "detail": "['births', 'bricks', 'christ', 'shtick', 'tricks']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['20', '18', '21', '55', '72', '30']"
+    "detail": "['35', '27', '25', '18', '16', '77']"
    },
    {
     "name": "V7 every product base x height is even and every area is below 100 cm\u00b2",
@@ -1785,17 +1790,17 @@
   ],
   "generator_slip_test": [
    1.0,
-   156,
-   156
+   162,
+   162
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    156,
-    156
+    162,
+    162
    ],
    "all_other_values_rejected": [
-    156,
-    156
+    162,
+    162
    ],
    "wrong_arrangements_rejected": null
   }
@@ -1809,7 +1814,7 @@
   "strand": "Measurement and Geometry - Area and Volume",
   "syll": "area of a triangle from its base and height",
   "outcomes": [
-   "AR.TRI"
+   "AR1.2"
   ],
   "ptype": "Maze / path",
   "mech": "K6 route closes at FINISH through the stated number of boxes",
@@ -1862,15 +1867,15 @@
   "strand": "Measurement and Geometry - Area and Volume",
   "syll": "area of composite figures made of rectangles and triangles",
   "outcomes": [
-   "AR.COMP",
-   "AR.TRI"
+   "AR1.2",
+   "AR1.3"
   ],
   "ptype": "Code-breaker (composite areas)",
   "mech": "K1 code word (6 letters)",
   "seed": 5131,
   "checks": [
    {
-    "name": "V2 code word spells TEACUP",
+    "name": "V2 code word spells MELODY",
     "ok": true,
     "detail": ""
    },
@@ -1887,17 +1892,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['teacup']"
+    "detail": "['melody']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['packet', 'teacup', 'uptake']"
+    "detail": "['deploy', 'employ', 'melody']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['48', '20', '36', '32', '68', '27']"
+    "detail": "['36', '34', '10', '30', '27', '33']"
    }
   ],
   "generator_slip_test": [
@@ -1935,14 +1940,14 @@
   "seed": 5132,
   "checks": [
    {
-    "name": "V2 code word spells BANDIT",
+    "name": "V2 code word spells JOINED",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "84/84"
+    "detail": "96/96"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -1952,17 +1957,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['bandit']"
+    "detail": "['joined']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['bandit', 'dainty', 'vanity']"
+    "detail": "['dyeing', 'gideon', 'joined']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['16', '9', '8', '6', '4', '2']"
+    "detail": "['18', '8', '4', '6', '12', '16']"
    },
    {
     "name": "V7 every cuboid is at most 4 cubes long, 4 wide and 3 high, drawn within 40 mm",
@@ -1972,17 +1977,17 @@
   ],
   "generator_slip_test": [
    1.0,
-   84,
-   84
+   96,
+   96
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    84,
-    84
+    96,
+    96
    ],
    "all_other_values_rejected": [
-    84,
-    84
+    96,
+    96
    ],
    "wrong_arrangements_rejected": null
   }
@@ -1997,14 +2002,14 @@
   "syll": "volume of a cube or cuboid in cubic units (cm\u00b3 and m\u00b3)",
   "outcomes": [
    "VO2.4",
-   "VO.UNIT"
+   "VO2.2"
   ],
   "ptype": "Code-breaker (volumes)",
   "mech": "K1 code word (6 letters)",
   "seed": 5133,
   "checks": [
    {
-    "name": "V2 code word spells CURFEW",
+    "name": "V2 code word spells SURELY",
     "ok": true,
     "detail": ""
    },
@@ -2021,17 +2026,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['curfew']"
+    "detail": "['surely']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['curfew', 'fucker', 'pucker']"
+    "detail": "['burley', 'buyers', 'rubles', 'surely']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['240', '45', '144', '175', '343', '147']"
+    "detail": "['567', '126', '252', '616', '27', '196']"
    },
    {
     "name": "V7 every volume is below 1800 and in a single unit",
@@ -2075,7 +2080,7 @@
    {
     "name": "V1 independent solver (evaluates every card and every tile, matches equal values) gets the word",
     "ok": true,
-    "detail": "FATHOM"
+    "detail": "TALKED"
    },
    {
     "name": "V1b every card matches exactly one tile and every tile exactly one card",
@@ -2085,7 +2090,7 @@
    {
     "name": "V3d the word's letters have exactly ONE arrangement that is a word",
     "ok": true,
-    "detail": "['fathom']"
+    "detail": "['talked']"
    },
    {
     "name": "V3 none of the wrong matchings (every other arrangement of the letters) spells a word",
@@ -2131,7 +2136,7 @@
   "seed": 5135,
   "checks": [
    {
-    "name": "V2 code word spells CAMPUS",
+    "name": "V2 code word spells FORMAT",
     "ok": true,
     "detail": ""
    },
@@ -2148,17 +2153,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['campus']"
+    "detail": "['format']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['campus', 'clamps', 'clumps']"
+    "detail": "['format', 'margot', 'mozart']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['24', '62', '54', '69', '672', '8']"
+    "detail": "['125', '28', '30', '70', '36', '650']"
    }
   ],
   "generator_slip_test": [
@@ -2255,7 +2260,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "KNIGHT"
+    "detail": "BACKED"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -2299,8 +2304,9 @@
   "strand": "Measurement and Geometry - Geometry",
   "syll": "angle sum of a triangle; properties of isosceles, equilateral and right-angled triangles; finding unknown angles",
   "outcomes": [
-   "GE.SUM",
-   "GE.TRI",
+   "GE2.1",
+   "GE2.2",
+   "GE2.3",
    "GE1.4"
   ],
   "ptype": "Code-breaker (angles in triangles)",
@@ -2308,14 +2314,14 @@
   "seed": 5138,
   "checks": [
    {
-    "name": "V2 code word spells WIZARD",
+    "name": "V2 code word spells LIFTED",
     "ok": true,
     "detail": ""
    },
    {
     "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "162/162"
+    "detail": "198/198"
    },
    {
     "name": "V3c no swap of two answers spells a word",
@@ -2325,32 +2331,32 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['wizard']"
+    "detail": "['lifted']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['midway', 'myriad', 'wizard']"
+    "detail": "['dilute', 'fluted', 'futile', 'juliet', 'lifted']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['78', '60', '61', '98', '101', '30']"
+    "detail": "['56', '100', '48', '60', '91', '28']"
    }
   ],
   "generator_slip_test": [
    1.0,
-   162,
-   162
+   198,
+   198
   ],
   "enumeration": {
    "plausible_slips_rejected": [
-    162,
-    162
+    198,
+    198
    ],
    "all_other_values_rejected": [
-    162,
-    162
+    198,
+    198
    ],
    "wrong_arrangements_rejected": null
   }
@@ -2362,10 +2368,10 @@
   "tier": 2,
   "topic": "Geometry: parallelogram, rhombus and trapezium",
   "strand": "Measurement and Geometry - Geometry",
-  "syll": "properties of a parallelogram, rhombus and trapezium; their unknown angles",
+  "syll": "properties of a parallelogram, rhombus and trapezium; finding unknown angles",
   "outcomes": [
-   "GE.QUAD",
-   "GE1.4"
+   "GE3.1",
+   "GE3.2"
   ],
   "ptype": "True or false table (three choices)",
   "mech": "K1 the letter of the right choice in each row spells a word (6 letters, one wrong letter per other choice)",
@@ -2374,7 +2380,7 @@
    {
     "name": "V1 independent solver reads each printed row and picks the right choice: the letters equal the key word",
     "ok": true,
-    "detail": "CANOPY"
+    "detail": "MATRIX"
    },
    {
     "name": "V2 right choices read down the rows spell the word",
@@ -2419,17 +2425,18 @@
   "syll": "finding unknown angles in two steps: angle sum of a triangle with angles on a straight line or vertically opposite angles",
   "outcomes": [
    "GE1.4",
-   "GE.SUM",
+   "GE2.2",
+   "GE2.3",
    "GE1.1",
    "GE1.3",
-   "GE.TRI"
+   "GE2.1"
   ],
   "ptype": "Code-breaker (angle chains)",
   "mech": "K1 code word (6 letters)",
   "seed": 5140,
   "checks": [
    {
-    "name": "V2 code word spells BOTANY",
+    "name": "V2 code word spells COSTLY",
     "ok": true,
     "detail": ""
    },
@@ -2446,17 +2453,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['botany']"
+    "detail": "['costly']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['botany', 'paxton', 'payton']"
+    "detail": "['costly', 'justly', 'locust']"
    },
    {
     "name": "V1 independent solver (reads the printed items, evaluates exactly) equals the key",
     "ok": true,
-    "detail": "['114', '56', '73', '109', '147', '136']"
+    "detail": "['140', '79', '130', '92', '133', '110']"
    }
   ],
   "generator_slip_test": [

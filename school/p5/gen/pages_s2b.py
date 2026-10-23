@@ -75,10 +75,10 @@ def page28():
             if cosang < 0.02: perp.append(i)
         return perp[0] if len(perp) == 1 else -1
     P = mc_page(28, 5128, "Height Hunt", 1, "Area of a triangle: the base and its height", STRAND_AR,
-        "area of a triangle: base and height (the height is at a right angle to the base)", ["AR.TRI"], "Lettered choices (figures)",
-        ["The height is at a right angle to the base. Circle its letter.", "Write the six letters in the boxes."],
+        "area of a triangle: base and height (the height is at a right angle to the base)", ["AR1.1"], "Lettered choices (figures)",
+        ["The height is at a right angle to the base. Circle its letter.", "The figures are drawn to scale: check with a corner of paper.", "Write the six letters in the boxes."],
         rng, rows, 3, word, "; ".join(f"{i+1}) {k}" for i, k in enumerate(keys)),
-        "Six triangles, each with a named base. One dashed line from the opposite vertex meets the base line at a right angle (it is the height); a second dashed line and a side of the triangle do not. Some bases are tilted and some heights fall outside the triangle (the base is extended with a dotted line). The figures are drawn to scale, so a pupil can check a right angle with the corner of a sheet of paper or a set square. The wrong choices are the slanted line and a side. Each choice has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
+        "Six triangles, each with a named base. One dashed line from the opposite vertex meets the base line at a right angle (it is the height); a second dashed line and a side of the triangle do not. Some bases are tilted and some heights fall outside the triangle (the base is extended with a dotted line). The page says the figures are drawn to scale, so a pupil can check a right angle with the corner of a sheet of paper or a set square. This is the only page of the two booklets that relies on the drawing. The wrong choices are the slanted line and a side. Each choice has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
         solve_row, rows_cls="mcgrid", ps=False)
     return P
 
@@ -102,15 +102,15 @@ def page29():
         res = code_table_for(29, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p29")
-    cards = [qc(i + 1, f'<p class="qt">Area of the triangle</p>{tri_base_height(b, h, f, s, w=50, hh=38)}', abx("w4") + f'<span class="unit">cm{SQ}</span>') for i, (b, h, f, s) in enumerate(items)]
+    cards = [qc(i + 1, f'<p class="qt">Area of the triangle</p>{tri_base_height(b, h, f, s, w=50, hh=40)}', abx("w4") + f'<span class="unit">cm{SQ}</span>') for i, (b, h, f, s) in enumerate(items)]
     solved = []
     for c in cards:
         b, h, s = read_tri(c); solved.append(Fr(b * h, 2))
     P = code_page(29, 5129, "Triangle Areas", 1, "Area of a triangle: base, height and area", STRAND_AR,
-        "area of a triangle from its base and height", ["AR.TRI"], "Code-breaker (areas of triangles)",
-        ["Find the area of each triangle.", "The height is the dashed line. Write the area in the box.", "Use the code table."],
+        "area of a triangle from its base and height", ["AR1.1", "AR1.2"], "Code-breaker (areas of triangles)",
+        ["Find the area of each triangle.", "The height is the length at a right angle to the base. Write the area in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} cm² (base {b}, height {h})" for i, (a, (b, h, f, s)) in enumerate(zip(ans, items))),
-        "Six triangles with the base and the height (dashed, at a right angle to the base) labelled in cm; some figures have a length on a slanted side that is not needed, and some have the height outside the triangle. The decoy letters stand for the usual slips: forgetting to halve, adding the base and the height, or using the slanted side instead of the height. A box left blank gives no letter and the check cannot see it. Figures are not drawn to scale.",
+        "Six triangles with the base and the height (dashed, at a right angle to the base) labelled in cm; some figures have a length beside a slanted side that is not needed, and some have the height outside the triangle. The decoy letters stand for the usual slips: forgetting to halve, adding the base and the height, or using the slanted side instead of the height. A box left blank gives no letter and the check cannot see it. Figures are not drawn to scale (the page does not rely on the drawing).",
         solved, cols=4, layout="c3", checks=[("V7 every product base x height is even and every area is below 100 cm²", all((b * h) % 2 == 0 for b, h, _, _ in items) and max(ans) < 100, "")])
     return P
 
@@ -138,11 +138,11 @@ def page30():
         except RuntimeError: continue
     else: raise RuntimeError("p30")
     P = route_page(30, 5130, "Triangle Route", 2, "Area of a triangle: base, height and area", STRAND_AR,
-        "area of a triangle from its base and height", ["AR.TRI"], "Maze / path",
+        "area of a triangle from its base and height", ["AR1.2"], "Maze / path",
         ["Start at START. Move up, down, left or right.", f"Step only on triangles with area {T} cm{SQ}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
-        f"A 4 by 4 grid of sixteen triangles, each with its base and its height (dashed) labelled in cm. The boxes on the route have area {T} cm{SQ}; some have a length on a slanted side that is not needed. The boxes off the route have a product base x height that gives the area without halving, or an area a little more or less than {T} cm{SQ}; some extra boxes that do have area {T} cm{SQ} are dead ends. Counting the boxes shows a line that takes a shortcut. Figures are not drawn to scale.",
-        lambda c: "{} x {} / 2 = {}".format(*read_tri(c)[:2], read_tri(c)[0] * read_tri(c)[1] // 2) if True else "", f"Does your line reach FINISH? Count its boxes: are there {L}? Does every triangle have area {T} cm{SQ}?", extra_facts=str(T))
+        f"A 4 by 4 grid of sixteen triangles, each with its base and its height (dashed) labelled in cm. The boxes on the route have area {T} cm{SQ}; some have a length beside a slanted side that is not needed. The boxes off the route have a product base x height that gives the area without halving, or an area a little more or less than {T} cm{SQ}; some extra boxes that do have area {T} cm{SQ} are dead ends. Counting the boxes shows a line that takes a shortcut. Figures are not drawn to scale (the page does not rely on the drawing).",
+        lambda c: "{} x {} / 2 = {}".format(*read_tri(c)[:2], read_tri(c)[0] * read_tri(c)[1] // 2) if True else "", f"Does your line reach FINISH? Count its boxes: are there {L}? Does every triangle have area {T} cm{SQ}?", extra_facts=str(T), cls="maze tall tri")
     return P
 
 # =============================================================================== P5-31 Composite Figures (code word)
@@ -166,16 +166,16 @@ def page31():
         res = code_table_for(31, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p31")
-    cards = [qc(i + 1, f'<p class="qt">Area of the figure</p>{composite(kd, wd, ln, th, w=50, hh=42)}', abx("w4") + f'<span class="unit">cm{SQ}</span>') for i, (kd, wd, ln, th) in enumerate(items)]
+    cards = [qc(i + 1, f'<p class="qt">Area of the figure</p>{composite(kd, wd, ln, th, w=50, hh=44)}', abx("w4") + f'<span class="unit">cm{SQ}</span>') for i, (kd, wd, ln, th) in enumerate(items)]
     solved = []
     for c in cards:
         kd, wd, ln, th = read_composite(c)
         solved.append({"house": Fr(wd * ln) + Fr(wd * th, 2), "notch": Fr(wd * ln) - Fr(wd * th, 2), "side": Fr(wd * ln) + Fr(ln * th, 2)}[kd])
     P = code_page(31, 5131, "Composite Figures", 2, "Area of composite figures: rectangles and triangles", STRAND_AR,
-        "area of composite figures made of rectangles and triangles", ["AR.COMP", "AR.TRI"], "Code-breaker (composite areas)",
+        "area of composite figures made of rectangles and triangles", ["AR1.2", "AR1.3"], "Code-breaker (composite areas)",
         ["Find the area of each whole figure.", "Dashed lines are not edges. Write the area in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} cm² ({kd})" for i, (a, (kd, wd, ln, th)) in enumerate(zip(ans, items))),
-        "Six figures: a rectangle with a triangle on top (two figures), a rectangle with a triangular notch cut from its top edge (two figures) and a rectangle with a right-angled triangle joined to one side (two figures). The pupil finds the area of the rectangle and of the triangle and adds or subtracts. The decoy letters stand for the usual slips: forgetting to halve the triangle, or adding where the notch must be taken away. Dashed lines are not edges of the figure. Figures are not drawn to scale. A box left blank gives no letter and the check cannot see it.",
+        "Six figures: a rectangle with a triangle on top (two figures), a rectangle with a triangular notch cut from its top edge (two figures) and a rectangle with a right-angled triangle joined to one side (two figures). The pupil finds the area of the rectangle and of the triangle and adds or subtracts. The decoy letters stand for the usual slips: forgetting to halve the triangle, or adding where the notch must be taken away. Dashed lines are not edges of the figure. Figures are not drawn to scale (the page does not rely on the drawing). A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3")
     return P
 
@@ -237,10 +237,10 @@ def page33():
     for cc in cards:
         d = read_dims(cc); solved.append(Fr(Decimal_(d[0][0])) * Fr(Decimal_(d[1][0])) * Fr(Decimal_(d[2][0])))
     P = code_page(33, 5133, "Cuboid Volumes", 1, "Volume of a cube and a cuboid; cm³ and m³", STRAND_AR,
-        "volume of a cube or cuboid in cubic units (cm³ and m³)", ["VO2.4", "VO.UNIT"], "Code-breaker (volumes)",
+        "volume of a cube or cuboid in cubic units (cm³ and m³)", ["VO2.4", "VO2.2"], "Code-breaker (volumes)",
         ["Find the volume of each solid.", "Write the number in the box. The unit is printed.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {int(a)} {u}³" for i, (a, (_, _, _, u)) in enumerate(zip(ans, items))),
-        "Six solids with their edges labelled: four cuboids and one cube in cm (the cube has the same edge on all three labels) and, on two figures, in m. The pupil multiplies the three edges; the unit of the answer is cm³ or m³ (the page prints it; there is no conversion between them). The decoy letters stand for the usual slips: adding the edges, the area of a face, or leaving one edge out. Figures are not drawn to scale. A box left blank gives no letter and the check cannot see it.",
+        "Six solids with their edges labelled: four cuboids and one cube in cm (the cube has the same edge on all three labels) and, on two figures, in m. The pupil multiplies the three edges; the unit of the answer is cm³ or m³ (the page prints it; there is no conversion between them). The decoy letters stand for the usual slips: adding the edges, the area of a face, or leaving one edge out. Figures are not drawn to scale (the page does not rely on the drawing). A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3", checks=[("V7 every volume is below 1800 and in a single unit", max(ans) < 1800, "")])
     return P
 
@@ -271,7 +271,7 @@ def page34():
         "volume of a cuboid; the relationship between litres and cm³ (1 ℓ = 1000 cm³)", ["VO2.4", "VO2.6"], "Matching (lettered cards)",
         ["1 ℓ = 1000 cm³. Each tank is full.", "Find how many ℓ each tank holds.", "Write the card's letter in the box under the matching tile."],
         rng, pairs, word, "; ".join(f"{w}: {ds[k][0]} x {ds[k][1]} x {ds[k][2]} = {ds[k][3]} cm³ = {dec(Fr(ds[k][3], 1000))} ℓ" for w, k in zip(word, order)),
-        "Six tanks drawn with their length, width and height in cm, and six tiles with a capacity in litres, in order of size. The pupil multiplies the three edges to find the volume in cm³ and changes it to litres (1 ℓ = 1000 cm³). The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. Figures are not drawn to scale. A box left blank gives no letter and the check cannot see it.",
+        "Six tanks drawn with their length, width and height in cm, and six tiles with a capacity in litres, in order of size. The pupil multiplies the three edges to find the volume in cm³ and changes it to litres (1 ℓ = 1000 cm³). The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. Figures are not drawn to scale (the page does not rely on the drawing). A box left blank gives no letter and the check cannot see it.",
         None, None, left_title="Tanks", right_title="Capacities", raw_left=lambda h: (lambda d: Fr(Decimal_(d[0][0])) * Fr(Decimal_(d[1][0])) * Fr(Decimal_(d[2][0])) / 1000)(read_dims(h)), raw_right=lambda t: evaluate(t.replace(LIT, "").strip()))
     return P
 
@@ -282,19 +282,19 @@ def page35():
         items = []; ans = []
         l, w, h = rng.choice([40, 50, 60, 80]), rng.choice([25, 30, 40, 50]), rng.choice([20, 30, 40])
         if (l * w * h) % 1000: continue
-        items.append((f"A tank is {l} cm long, {w} cm wide and {h} cm high. It is full of water. How many {LIT} of water does it hold?", LIT)); ans.append(Fr(l * w * h, 1000))
+        items.append((f"The base of a tub measures {l} cm by {w} cm. The tub is {h} cm high and is filled to the brim. How many {LIT} of water are in the tub?", LIT)); ans.append(Fr(l * w * h, 1000))
         l2, w2, h2 = rng.choice([50, 60, 80, 100]), rng.choice([30, 40, 50]), rng.choice([30, 40, 50]); d = rng.choice([10, 15, 20, 25])
         if (l2 * w2 * d) % 1000: continue
-        items.append((f"A tank is {l2} cm by {w2} cm by {h2} cm. The water is {d} cm deep. How many {LIT} of water are in the tank?", LIT)); ans.append(Fr(l2 * w2 * d, 1000))
+        items.append((f"A pond has a base {l2} cm by {w2} cm and walls {h2} cm high. Water fills it to a height of {d} cm. How many {LIT} of water are in the pond?", LIT)); ans.append(Fr(l2 * w2 * d, 1000))
         a = rng.randint(30, 90); b = rng.randint(8, a - 12)
-        items.append((f"A fish tank holds {a} {LIT} when full. It has {b} {LIT} of water. How many more {LIT} are needed to fill it?", LIT)); ans.append(Fr(a - b))
+        items.append((f"A paddling pool holds {a} {LIT} when full. It has {b} {LIT} of water in it. How many more {LIT} are needed to fill it?", LIT)); ans.append(Fr(a - b))
         l4, w4, h4 = rng.randint(8, 15), rng.randint(5, 12), rng.randint(4, 10)
         items.append((f"A box is {l4} cm by {w4} cm by {h4} cm. How many m{LIT} of water does it hold when full?", f"m{LIT}")); ans.append(Fr(l4 * w4 * h4))
         e = rng.choice([20, 30, 40, 50])
-        items.append((f"A cube-shaped tank has edges of {e} cm. How many {LIT} of water does it hold when full?", LIT)); ans.append(Fr(e ** 3, 1000))
+        items.append((f"A storage bin is a cube with edges of {e} cm. How many {LIT} of water does it hold when full?", LIT)); ans.append(Fr(e ** 3, 1000))
         A_ = rng.randint(20, 60); l6, w6, h6 = rng.choice([50, 60, 80]), rng.choice([40, 50]), rng.choice([30, 40, 50])
         if (l6 * w6 * h6) % 1000 or l6 * w6 * h6 // 1000 <= A_: continue
-        items.append((f"Tank A holds {A_} {LIT}. Tank B is {l6} cm by {w6} cm by {h6} cm. How many more {LIT} does Tank B hold than Tank A?", LIT)); ans.append(Fr(l6 * w6 * h6, 1000) - A_)
+        items.append((f"A jug holds {A_} {LIT}. A sink measures {l6} cm by {w6} cm by {h6} cm. How many more {LIT} does the sink hold than the jug?", LIT)); ans.append(Fr(l6 * w6 * h6, 1000) - A_)
         if not distinct(ans) or any(a_.denominator != 1 or a_ > 999 for a_ in ans): continue
         order = list(range(6)); rng.shuffle(order)
         items = [items[k] for k in order]; ans = [ans[k] for k in order]
@@ -310,11 +310,11 @@ def page35():
     def solve(t):
         t = t.replace(NB, "")
         n = [int(x) for x in re.findall(r"\d+", t)]
-        if t.startswith("A tank is") and "wide" in t: return Fr(n[0] * n[1] * n[2], 1000)
-        if t.startswith("A tank is"): return Fr(n[0] * n[1] * n[3], 1000)
-        if t.startswith("A fish tank"): return Fr(n[0] - n[1])
+        if t.startswith("The base of a tub"): return Fr(n[0] * n[1] * n[2], 1000)
+        if t.startswith("A pond"): return Fr(n[0] * n[1] * n[3], 1000)
+        if t.startswith("A paddling"): return Fr(n[0] - n[1])
         if t.startswith("A box"): return Fr(n[0] * n[1] * n[2])
-        if t.startswith("A cube"): return Fr(n[0] ** 3, 1000)
+        if t.startswith("A storage bin"): return Fr(n[0] ** 3, 1000)
         return Fr(n[1] * n[2] * n[3], 1000) - n[0]
     solved = [solve(to_text(re.search(r'<div class="qt">(.*?)</div></div><div class="qa">', c, re.S).group(1))) for c in cards]
     P = code_page(35, 5135, "Tank Tales", 2, "Volume of liquid in a rectangular tank; litres and cm³", STRAND_AR,

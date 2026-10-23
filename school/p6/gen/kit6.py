@@ -26,7 +26,7 @@ STRAND_AL = "Number and Algebra - Algebra"
 STRAND_AV = "Measurement and Geometry - Area and Volume"
 STRAND_GE = "Measurement and Geometry - Geometry"
 STRAND_ST = "Statistics"
-STRAND_RV = "Revision of earlier years"
+STRAND_PF = "Primary 6 Foundation track (also used with the Standard pages)"
 
 # ------------------------------------------------------------------------------------------------ fractions and numbers in html
 def fh(n, d):

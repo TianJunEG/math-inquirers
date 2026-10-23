@@ -10,7 +10,7 @@ BIG.update({"siring", "jailor", "sonic"})      # words found by the P1 and P2 au
 # child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
 # making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
 SAFE5 = "build quick doubt count fruit bound vital glory juice pound climb blown swift blank graph cloth thumb clown blunt vault ivory swamp flown drift omega dwarf drown noisy woven humid juicy enjoy wound birch rhino query forum guild works audio chimp crazy crumb curve decoy fable flora fluid frank gleam gravy grind growl knife maize piano pivot prize round scowl shaft squid stamp trunk tulip uncle valet video voice wafer waltz width woman young".split()
-SAFE6 = "family police behind strong figure flight studio turkey campus hungry shadow cousin frozen wisdom knight backup trophy fabric fruits fridge shrimp wizard peanut canopy donkey walnut bricks melody bounty thirds crafts answer bounce bright buckle budgie clouds crafty creamy dainty guitar length magnet mighty monkey number safety sailor sponge square string subway teacup tongue walrus bandit botany bowman cherub cobalt cougar curfew devour fathom".split()
+SAFE6 = "knight crafts melody thirds trophy fruits bricks shrimp wizard canopy walnut walrus months period county groups placed fourth movies joined toward talked surely hardly facing fairly visual format drinks aspect thrown legacy column brands trends favour backed waited worlds habits albums import lifted laughs adjust chiefs matrix joking modest fusion firmly upload tricky doubts costly voyage forums timely typing warmth depths parody softly beacon fluids shrink unpaid digest hourly trench plaque thumbs strand hugely births podium meadow drafts jockey graphs quirky mounts".split()
 SAFE7 = "product formula journey courage uniform rainbow harvest blanket harmony crystal careful factory display victory balcony pyramid falcons dragons knights lengths graphic younger".split()
 _SAFE = {}
 
@@ -34,8 +34,11 @@ def swap_ok(w):
 def word_ok(w):
     return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON and inner_ok(w) and swap_ok(w)
 
+import json as _json, os as _os
+OTHER = set(_json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "other_levels_words.json"))))     # words already used by the Primary 1 to 4 and 6 booklets
+
 def safe_pool(n):
-    if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6, 7: SAFE7}[n] if word_ok(w)]
+    if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6, 7: SAFE7}[n] if word_ok(w) and w not in OTHER]
     return _SAFE[n]
 
 CLAIMED = {}      # page number -> code word, so that no two pages of one build share a word

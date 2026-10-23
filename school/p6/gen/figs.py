@@ -151,7 +151,7 @@ def pie_fig(sectors, tag="p", W=100.0, H=52.0, R=17.0):
         out.append(f'<text class="slab" data-n="{name}" x="{lx:.2f}" y="{ly + dy - 1.8:.2f}" text-anchor="{anchor}" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{name}</text>')
         out.append(f'<text class="spc" data-n="{name}" x="{lx:.2f}" y="{ly + dy + 2.3:.2f}" text-anchor="{anchor}" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{"?" if hidden else str(pct) + "%"}</text>')
         a = a1
-    return _svg(W, H, "".join(out), "fig-svg fig-pie")
+    return _svg(W, H + 5, "".join(out), "fig-svg fig-pie")
 
 def read_pie(s):
     """name -> (percentage measured from the sector's end points, printed percentage or None when it prints ?)"""

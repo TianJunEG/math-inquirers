@@ -148,7 +148,7 @@ table.tbl th,table.tbl td{border:0.4mm solid #000;padding:1.2mm 2mm;text-align:l
 table.tbl th{font-weight:800;border-bottom:0.8mm solid #000}
 table.tbl.cov{font-size:8.2pt}table.tbl.cov td:first-child{white-space:nowrap}table.tbl.cov td:last-child{white-space:nowrap}table.tbl.cov th,table.tbl.cov td{padding:0.35mm 1.4mm}
 table.tbl.cont{font-size:9pt}table.tbl.cont th,table.tbl.cont td{padding:0.5mm 1.6mm}
-.kentry{border:0.5mm solid #000;border-radius:2mm;padding:2.2mm 3.5mm;margin-bottom:3mm;font-size:10pt;line-height:1.25;break-inside:avoid}
+.kentry{border:0.5mm solid #000;border-radius:2mm;padding:2.2mm 3.5mm;margin-bottom:3mm;font-size:10.5pt;line-height:1.25;break-inside:avoid}
 .kentry h4{font-family:'Fredoka';font-weight:600;font-size:13pt;margin:0 0 1.5mm}
 .kentry .tags{font-weight:700;margin-bottom:1mm}
 .kentry .row{display:flex;gap:4mm}.kentry .row>div:first-child{flex:1}
@@ -311,7 +311,7 @@ def teacher_notes(pages, bk):
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
             '<li><b>Drawings.</b> Figures of triangles, cuboids, tanks and angles are original drawings. Lengths and angles are not drawn to scale unless a page says so, so a pupil should use the numbers on the figure, not a ruler or a protractor.</li>'
-            '<li><b>Not covered.</b> A printed page cannot check a pupil who draws (a cuboid on an isometric grid, a triangle of a given area) or who builds with real cubes. These verbs of the syllabus are practised only by reading drawings; the plan lists them. Ratio, average, pie charts, fraction division, finding the whole from a percentage, percentage change, circles and algebra are Primary 6 or Primary 4 content in the syllabus summary and are not used.</li></ul>'
+            '<li><b>Not covered.</b> A printed page cannot check a pupil who draws (a cuboid on an isometric grid, a triangle of a given area) or who builds with real cubes. These verbs of the syllabus are practised only by reading drawings; the plan lists them. Ratio, average, pie charts, fraction division, finding the whole from a percentage, percentage change, circles and algebra are not used in these booklets.</li></ul>'
             '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only. Pupils write on the page: the boxes are large enough for handwriting. Use A4 and print at 100% (actual size). The small figures in the route and colour pages need a clear copy: use normal toner, not a light setting.</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size.</p>'
             '</section>')
 
@@ -351,7 +351,7 @@ def key_pages(pages, school, packing, bk):
         pg[0] += 1; return key_footer(f"KEY page {pg[0]} of {total}")
     out = [f'<section class="page fm"><h2>Teacher answer key: Primary 5, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, using the outcome numbers of the Primary 5 (Standard) content in the Mathematics Syllabus, Primary (2021 edition, pages 41 and 42) where our summary prints them. The wording of each outcome line is our own summary, not the syllabus text. The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, using the outcome lines and numbers of the Primary 5 (Standard) content in the Mathematics Syllabus, Primary (2021 edition, updated October 2025, pages 41 and 42), copied as printed there. Everything else in each entry is our own wording. The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
            + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + key_footer(f"KEY page 1 of {total}") + '</section>']

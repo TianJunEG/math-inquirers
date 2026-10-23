@@ -39,7 +39,10 @@ def safe_pool(n):
 
 CLAIMED = {}      # page number -> code word, so that no two pages of one build share a word
 
+BANNED = {"SPONGE"}      # an audit found a slang word one slip away
+
 def word_candidates(no, n, avoid=()):
+    avoid = set(avoid) | BANNED
     pool = safe_pool(n); k = (no * 5) % len(pool)
     taken = {w for p, w in CLAIMED.items() if p != no}
     return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]

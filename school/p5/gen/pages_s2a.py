@@ -34,8 +34,8 @@ def read_bar(h):
 
 def page21():
     rng = random.Random(5121)
-    TX = ["{k} out of {n} pupils walk to school. What percentage of the pupils walk to school?",
-          "A box has {n} pens. {k} of them are blue. What percentage of the pens are blue?"]
+    TX = ["{k} out of {n} seeds in a tray grew. What percentage of the seeds grew?",
+          "A jar has {n} marbles. {k} of them are green. What percentage of the marbles are green?"]
     for _ in range(8000):
         items = []
         bar_ns = [10, 20, 10, 20]; rng.shuffle(bar_ns)
@@ -69,7 +69,7 @@ def page21():
             nums = [int(x) for x in re.findall(r"\d+", to_text(body))]; solved.append(Fr(nums[0] * 100, nums[1]) if "out of" in body else Fr(nums[1] * 100, nums[0]))
     # in the box-of-pens story the total comes first
     P = code_page(21, 5121, "How Many Percent?", 1, "Percentage: a part of a whole as a percentage", STRAND_PC,
-        "expressing a part of a whole as a percentage; the sign %", ["PC.PART"], "Code-breaker (percentages)",
+        "expressing a part of a whole as a percentage; the sign %", ["PC1.1", "PC1.2"], "Code-breaker (percentages)",
         ["Find the percentage in each question.", "Write it in the box.", "Use the code table."],
         cards, ans, word, table, dom, lambda k: pct(int(k)), "; ".join(f"{i+1}) {int(a)}%" for i, a in enumerate(ans)),
         "Six questions: four bars divided into equal parts with some parts shaded, and two stories with a part and a whole. The pupil writes the part of the whole as a percentage. The decoy letters stand for the usual slips: giving the number of shaded parts, giving the percentage not shaded, or giving the number of parts left over. A box left blank gives no letter and the check cannot see it.",
@@ -95,7 +95,7 @@ def page23():
         m = re.fullmatch(r"Price: \$(\d+) Discount: (\d+)%", t)
         return Fr(int(m.group(1))) - Fr(int(m.group(1)) * int(m.group(2)), 100)
     P = order_page(23, 5123, "Sale Prices", 2, "Percentage: finding the discount and the sale price", STRAND_PC,
-        "finding discount and the price after discount", ["PC1.4", "PC.OF"], "Ordering (lettered cards)",
+        "finding discount and the price after discount", ["PC1.4", "PC1.3"], "Ordering (lettered cards)",
         ["Work out the sale price of each item.", "Put the sale prices in order, smallest first.", "Write the card letters in the boxes below."],
         rng, cards, word, True, "Order (smallest sale price first): " + ", ".join(f"{c[0].replace('<br>', ' ')} -> {money(c[1])}" for c in sorted(cards, key=lambda c: c[1])),
         "Six price tags, each with an original price and a percentage discount. The pupil finds the discount, takes it off the price and puts the six sale prices in order from smallest to greatest. The cards are not in order of sale price. The letters, read in that order, spell a word with exactly one arrangement that is a word, so no wrong order spells a word. A box left blank gives no letter and the check cannot see it.",
@@ -117,8 +117,8 @@ def page24():
     def sr(t):
         m = re.fullmatch(r"With GST: \$([\d.]+)", t); return Fr(Decimal(m.group(1)))
     P = match_page(24, 5124, "GST Match", 2, "Percentage: GST", STRAND_PC,
-        "finding GST and the price with GST", ["PC1.4", "PC.OF"], "Matching (lettered cards)",
-        ["GST is 9% of the price before GST.", "Work out the price with GST for each card.", "Write the card's letter in the box under the matching tile."],
+        "finding GST and the price with GST", ["PC1.4", "PC1.3"], "Matching (lettered cards)",
+        ["The shop adds GST of 9% to each price.", "Work out the price with GST for each card.", "Write the card's letter in the box under the matching tile."],
         rng, pairs, word, "; ".join(f"{w}: {a} -> {b}" for w, (a, b) in zip(word, pairs)),
         "Six cards with a price before GST (multiples of $5) and six tiles with the price with 9% GST, in order of size. The pupil finds 9% of the price, adds it, and matches the card with the tile. The letters, read from tile 1 to tile 6, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word. GST is 9%; the page states the rate. A box left blank gives no letter and the check cannot see it.",
         sl, sr, left_title="Cards")
@@ -127,10 +127,10 @@ def page24():
 # =============================================================================== P5-25 Annual Interest (code word)
 def page25():
     rng = random.Random(5125)
-    T25 = "{nm} saves ${P} in a bank. The bank pays {r}% interest at the end of each year. {q}"
+    T25 = "{nm} saves ${P} in a bank. The bank pays {r}% interest at the end of the year. {q}"
     Q = {"I1": "How much interest does {he} get after 1 year?", "T1": "How much money is in the bank after 1 year?", "In": "How much interest does {he} get after {n} years?", "Tn": "How much money is in the bank after {n} years?"}
     for _ in range(8000):
-        kinds = ["I1", "T1", "In", "Tn", "I1", "In"]; rng.shuffle(kinds)
+        kinds = ["I1", "T1", "I1", "T1", "I1", "T1"]; rng.shuffle(kinds)
         names = rng.sample(PEOPLE, 6); items = []; ans = []
         for kd, (nm, he) in zip(kinds, names):
             P_ = rng.choice([200, 400, 500, 600, 800, 1000, 1200, 1500, 2000]); r = rng.choice([1, 2, 3, 4, 5, Fr(3, 2), Fr(5, 2)])
@@ -153,16 +153,16 @@ def page25():
     def solve(t):
         t = t.replace(NB, "")
         P_ = int(re.search(r"saves \$(\d+)", t).group(1)); r = Fr(Decimal(re.search(r"pays ([\d.]+)%", t).group(1)))
-        q = t.split("each year.")[1]
+        q = t.split("end of the year.")[1]
         n = int(re.search(r"after (\d+) years?", q).group(1))
         yr = P_ * r / 100
         return yr * n + (P_ if "money" in q else 0)
     solved = [solve(to_text(re.search(r'<div class="qt">(.*?)</div></div><div class="qa">', c, re.S).group(1))) for c in cards]
     P = code_page(25, 5125, "Annual Interest", 2, "Percentage: annual interest", STRAND_PC,
-        "finding annual interest", ["PC1.4", "PC.OF"], "Code-breaker (interest in money stories)",
-        ["Read each story.", "The interest is the same each year: the percentage of the money first saved.", "Write the answer in dollars. Use the code table."],
+        "finding annual interest", ["PC1.4", "PC1.3"], "Code-breaker (interest in money stories)",
+        ["Read each story.", "The interest is a percentage of the money first saved.", "Write the answer in dollars. Use the code table."],
         cards, ans, word, table, dom, lambda k: money(k), "; ".join(f"{i+1}) ${int(a)}" for i, a in enumerate(ans)),
-        "Six savings stories with a percentage interest paid at the end of each year, in whole dollars. The interest is a percentage of the first amount saved and is the same every year (the page says so); the pupil finds the interest for one year or several, or the money in the bank. The decoy letters stand for the usual slips: giving the interest when the total is asked, the total when the interest is asked, or the interest for one year too many or too few. Interest on interest (compound interest) is not used. A box left blank gives no letter and the check cannot see it.",
+        "Six savings stories with a percentage interest paid at the end of the year, in whole dollars. The interest is a percentage of the first amount saved (the page says so); the pupil finds the interest for one year or the money in the bank after one year (every story is one year, as in the school papers; the syllabus line says only annual interest). The decoy letters stand for the usual slips: giving the interest when the total is asked, the total when the interest is asked, or the interest for two years. Interest on interest (compound interest) is not used. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c1", ps=True, checks=[("V7 every amount a whole number of dollars", all(Fr(a).denominator == 1 for a in ans), "")])
     return P
 
@@ -176,22 +176,22 @@ def page26():
             var = seen[kd]; seen[kd] += 1
             if kd == "rate":
                 b = rng.choice([3, 4, 5, 6, 8]); a = b * rng.randint(3, 12)
-                tmpl = [("A tap fills {a} ℓ of water in {b} minutes. How many ℓ does it fill in 1 minute?", "ℓ"), ("A worker packs {a} boxes in {b} hours. How many boxes does the worker pack in 1 hour?", "boxes")][var]
+                tmpl = [("A sprinkler uses {a} ℓ of water in {b} minutes. How many ℓ does it use in 1 minute?", "ℓ"), ("A baker makes {a} buns in {b} hours. How many buns does the baker make in 1 hour?", "buns")][var]
                 q = tmpl[0].format(a=a, b=b); right = Fr(a, b); wrong = [Fr(b, a), Fr(a * b), Fr(a - b)]; u = tmpl[1]; fmt = lambda v: dec(v)
             elif kd == "total":
                 if var == 0:
                     p = Fr(rng.choice([120, 150, 180, 240, 250, 320, 450]), 100); n = rng.randint(4, 9)
-                    q = f"A pen costs ${dec(p, 2)}. How much do {n} pens cost?"; right = p * n; wrong = [p / n, p + n, right + 1]; u = ""; fmt = lambda v: "$" + dec(Fr(v), 2)
+                    q = f"A kite costs ${dec(p, 2)}. How much do {n} kites cost?"; right = p * n; wrong = [p / n, p + n, right + 1]; u = ""; fmt = lambda v: "$" + dec(Fr(v), 2)
                 else:
                     r = rng.randint(4, 9); m = rng.randint(6, 15)
-                    q = f"Water flows from a pipe at {r} ℓ a minute. How many ℓ flow in {m} minutes?"; right = Fr(r * m); wrong = [Fr(m, r) if m % r == 0 else Fr(r + m), Fr(r * m + r), Fr(r * m - m)]; u = "ℓ"; fmt = lambda v: dec(v)
+                    q = f"Sand falls from a hopper at {r} kg a minute. How many kg fall in {m} minutes?"; right = Fr(r * m); wrong = [Fr(m, r) if m % r == 0 else Fr(r + m), Fr(r * m + r), Fr(r * m - m)]; u = "kg"; fmt = lambda v: dec(v)
             else:
                 if var == 0:
                     a = rng.choice([6, 8, 9, 12, 15, 20]); n = rng.randint(3, 9)
-                    q = f"A machine makes {a} toys in 1 hour. How many hours does it take to make {a * n} toys?"; right = Fr(n); wrong = [Fr(a * a * n), Fr(a * n - a), Fr(n + a)]; u = "hours"; fmt = lambda v: dec(v)
+                    q = f"A cook makes {a} pancakes in 1 minute. How many minutes does the cook need to make {a * n} pancakes?"; right = Fr(n); wrong = [Fr(a * a * n), Fr(a * n - a), Fr(n + a)]; u = "minutes"; fmt = lambda v: dec(v)
                 else:
                     p = rng.choice([2, 3, 4, 5, 6]); n = rng.randint(3, 9)
-                    q = f"Rice costs ${p} for 1 kg. Mei has ${p * n}. How many kg can she buy?"; right = Fr(n); wrong = [Fr(p * p * n), Fr(p * n - p), Fr(n + p)]; u = "kg"; fmt = lambda v: dec(v)
+                    q = f"Cloth costs ${p} for 1 m. Hana has ${p * n}. How many metres can she buy?"; right = Fr(n); wrong = [Fr(p * p * n), Fr(p * n - p), Fr(n + p)]; u = "m"; fmt = lambda v: dec(v)
             wrong = [w for w in dict.fromkeys(wrong) if w != right and w > 0 and terminating(w)]
             if len(wrong) < 2: break
             wrong = rng.sample(wrong, 2)
@@ -201,16 +201,16 @@ def page26():
     else: raise RuntimeError("p26")
     def solve_row(q, opts, qh):
         n = [Fr(Decimal(x)) for x in re.findall(r"\d+(?:\.\d+)?", q.replace(NB, ""))]
-        if q.startswith("A tap") or q.startswith("A worker"): v = n[0] / n[1]
-        elif q.startswith("A pen"): v = n[0] * n[1]
-        elif q.startswith("Water"): v = n[0] * n[1]
-        elif q.startswith("A machine"): v = n[2] / n[0]
-        elif q.startswith("Rice"): v = n[2] / n[0]
+        if q.startswith("A sprinkler") or q.startswith("A baker"): v = n[0] / n[1]
+        elif q.startswith("A kite"): v = n[0] * n[1]
+        elif q.startswith("Sand"): v = n[0] * n[1]
+        elif q.startswith("A cook"): v = n[2] / n[0]
+        elif q.startswith("Cloth"): v = n[2] / n[0]
         else: raise ValueError(q)
         ov = [Fr(Decimal(re.search(r"[\d.]+", t.replace(NB, "")).group(0))) for t in opts]
         return ov.index(v)
     P = mc_page(26, 5126, "Rate Cards", 1, "Rate: finding the rate, the total or the number of units", STRAND_RA,
-        "rate as the amount of one quantity per unit of another quantity; finding the rate, the total or the number of units", ["RA"], "Lettered choices (rate)",
+        "rate as the amount of one quantity per unit of another quantity; finding the rate, the total or the number of units", ["RA1.1", "RA1.2"], "Lettered choices (rate)",
         ["Read each question.", "Circle the letter of the right answer in each row.", "Write the six letters in the boxes."],
         rng, rows, 3, word, "; ".join(f"{i+1}) {k}" for i, k in enumerate(keys)),
         "Six one-step rate questions: two ask for the rate (an amount for one unit), two for the total at a given rate and two for the number of units. The wrong choices are the usual slips (dividing the wrong way round, multiplying instead of dividing, adding or subtracting the two numbers). Each choice has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
@@ -220,19 +220,19 @@ def page26():
 # =============================================================================== P5-27 Rate Stories (code word)
 def page27():
     rng = random.Random(5127)
-    T27 = [("A tap fills {a} ℓ in {b} minutes. How many ℓ does it fill in {c} minutes?", "ℓ", lambda a, b, c: Fr(a, b) * c),
+    T27 = [("A bus uses {a} ℓ of fuel in {b} hours. How many ℓ does it use in {c} hours?", "ℓ", lambda a, b, c: Fr(a, b) * c),
            ("A printer prints {a} pages in {b} minutes. How many minutes does it take to print {c} pages?", "min", lambda a, b, c: Fr(b, a) * c),
-           ("{a} kg of rice cost ${b}. How much do {c} kg of rice cost?", "$", lambda a, b, c: Fr(b, a) * c),
-           ("A machine makes {a} bolts in {b} hours. How many bolts does it make in {c} hours?", "bolts", lambda a, b, c: Fr(a, b) * c),
-           ("A pump moves {a} ℓ of water in {b} minutes. How many minutes does it take to move {c} ℓ?", "min", lambda a, b, c: Fr(b, a) * c),
+           ("{a} pens cost ${b}. How much do {c} pens cost?", "$", lambda a, b, c: Fr(b, a) * c),
+           ("A farmer packs {a} eggs in {b} minutes. How many eggs does he pack in {c} minutes?", "eggs", lambda a, b, c: Fr(a, b) * c),
+           ("A cleaner washes {a} windows in {b} hours. How many hours does the cleaner need to wash {c} windows?", "hours", lambda a, b, c: Fr(b, a) * c),
            ("Ali earns ${a} for {b} hours of work. How much does he earn for {c} hours?", "$", lambda a, b, c: Fr(a, b) * c)]
     for _ in range(8000):
         items = []; ans = []
         for t, u, f in T27:
-            if t.startswith(("A printer", "A pump")):
+            if t.startswith(("A printer", "A cleaner")):
                 a = rng.randint(2, 9) * rng.choice([5, 6, 8, 10]); b = rng.randint(2, 9); c = a * rng.randint(2, 7)
                 # time for c units: b * c / a
-            elif t.startswith("{a} kg"):
+            elif t.startswith("{a} pens"):
                 a = rng.randint(2, 9); b = rng.choice([5, 6, 8, 9, 10, 12]) * a // math.gcd(a, 1) // 1; c = rng.randint(3, 15)
             else:
                 b = rng.randint(2, 9); a = b * rng.randint(3, 14); c = rng.randint(4, 15)
@@ -250,19 +250,19 @@ def page27():
             res = code_table_for(27, ans, rng, pool, n_decoy=2, tries=60)
             if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p27")
-    cards = [qc(i + 1, f'<p class="qt">{t}</p>', abx("w4") + (f'<span class="unit">{u}</span>' if u != "$" else ""), cls="inl") for i, (t, u) in enumerate(items)]
+    cards = [qc(i + 1, f'<p class="qt">{t}</p>', abx("w4") + f'<span class="unit">{"" if u == "$" else u}</span>', cls="inl") for i, (t, u) in enumerate(items)]
     def solve(t):
         n = [int(x) for x in re.findall(r"\d+", t)]; a, b, c = n
-        if t.startswith(("A printer", "A pump")): return Fr(b * c, a)
-        if "kg of rice" in t: return Fr(b * c, a)
+        if t.startswith(("A printer", "A cleaner")): return Fr(b * c, a)
+        if "pens cost" in t: return Fr(b * c, a)
         return Fr(a * c, b)
     solved = [solve(to_text(re.search(r'<div class="qt">(.*?)</div></div><div class="qa">', c, re.S).group(1))) for c in cards]
     P = code_page(27, 5127, "Rate Stories", 2, "Rate: two-step problems", STRAND_RA,
-        "rate: finding the rate, then the total or the number of units", ["RA"], "Code-breaker (rate stories)",
-        ["Read each story.", "Find the amount for 1 unit, then answer the question.", "Write the answer in the box. Use the code table."],
-        cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {num(int(a))}{u if u != '$' else ' dollars'}" for i, (a, (t, u)) in enumerate(zip(ans, items))),
-        "Six two-step rate stories: the pupil finds the rate for one unit (litres in one minute, price of one kilogram, pages in one minute) and then the total for a stated number of units, or the number of units for a stated total. All answers are whole numbers. The decoy letters stand for the usual slips: the rate turned upside down, or only the rate given. A box left blank gives no letter and the check cannot see it.",
-        solved, cols=4, layout="c1", ps=True)
+        "rate: finding the rate, then the total or the number of units", ["RA1.1", "RA1.2"], "Code-breaker (rate stories)",
+        ["Read each story.", "Work out the answer to each question.", "Write the answer in the box. Use the code table."],
+        cards, ans, word, table, dom, lambda k: num(int(k)), "; ".join(f"{i+1}) {num(int(a))}{' ' + u if u != '$' else ' dollars'}" for i, (a, (t, u)) in enumerate(zip(ans, items))),
+        "Six two-step rate stories: the pupil works out the answer from the rate in the story: a total for a stated number of units, or the number of units for a stated total. All answers are whole numbers. The decoy letters stand for the usual slips: the two numbers turned upside down, or only the rate given. A box left blank gives no letter and the check cannot see it.",
+        solved, cols=4, layout="c1", cls="s27", ps=True)
     return P
 
 PAGES = [page21, page23, page24, page25, page26, page27]

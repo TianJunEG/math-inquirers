@@ -103,4 +103,7 @@ CSS_P5 = """
 .qg.c3 .qc svg.fsvg,.qg.c2 .qc svg.fsvg{max-width:100%;height:auto}
 em.msum{font-style:normal;font-weight:800;font-family:'Fredoka';font-size:16pt}
 .unit{font-size:14pt;font-weight:700;margin-left:1mm}
+.qg.s16 .qc{padding:1.2mm 3mm;gap:0.5mm}.qg.s16 .qc .qt{font-size:12pt;line-height:1.1}.qg.s16 .qt .fr{font-size:12.5pt}
+.qg.s27 .unit{display:inline-block;width:16mm;margin-left:1.5mm}
+.maze.tri .mcell{align-items:flex-end}
 """

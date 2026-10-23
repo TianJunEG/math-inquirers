@@ -570,7 +570,7 @@ def page08():
         crows.append(dict(stem=r["stem"], opts=[fr_opt(opts[j]) for j in order], right=order.index(0)))
     rng.shuffle(crows)
     P = choice_page(8, 6808, "Fractions and Ratios", 2, "Ratio and fraction: how they are linked", STRAND_RA,
-        "1.7 (relationship between fraction and ratio); 1.5", ["RA1.7", "RA1.5"], "Choice table (ratio and fraction)",
+        "1.7 (relationship between fraction and ratio), 1.5 (finding the ratio of two or three given quantities)", ["RA1.7", "RA1.5"], "Choice table (ratio and fraction)",
         ["Read each question.", "Circle the letter beside the right answer.", "Write the six letters in the boxes."],
         rng, crows, fr_solve_row,
         "Six questions that link a fraction and a ratio: a fraction of a quantity to a ratio of the part to the rest, a ratio to the fraction one part makes of the whole, a fraction taken as a ratio of two quantities, and one part as a fraction of the other part. Each row has three answers. The wrong answers are what a pupil gets by using the whole instead of the rest, by writing the parts the wrong way round, or by writing a ratio as a fraction of the other part. The letters of the right answers, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.")

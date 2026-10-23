@@ -37,12 +37,12 @@ def RA(x, y, ux, uy, vx, vy, s=2.6):
 # =============================================================================== triangles with a base and a height
 def tri_base_height(b, h, foot=0.5, side=None, w=62, hh=40, name=None, pts_named=False):
     """triangle with base b cm and height h cm (labelled), the height drawn dashed with a right-angle mark; foot in [0,1] is where the height meets the base
-    (outside [0,1] the base is extended with a dotted line). `side` is a distractor length printed on one slanted side."""
-    sc = min((w - 14) / max(b + max(0, -foot * b) + max(0, (foot - 1) * b), 1e-6) * 1.0, (hh - 12) / h)
-    sc = min(sc, 4.2)
+    (outside [0,1] the base is extended with a dotted line). The height label sits above the apex, the base label under the base, so no label touches a side.
+    `side` is a distractor length printed beside the right-hand slanted side."""
+    left_ext = max(0.0, -foot * b); right_ext = max(0.0, (foot - 1) * b)
+    sc = min((w - 16) / (b + left_ext + right_ext), (hh - 15) / h, 4.4)
     bw, hgt = b * sc, h * sc
-    left = 7 + max(0, -foot * bw)
-    x0, y0 = left, hh - 8
+    x0, y0 = 8 + left_ext * sc, hh - 8
     A = (x0 + foot * bw, y0 - hgt); B = (x0, y0); C = (x0 + bw, y0)
     o = [PG([A, B, C], attrs='class="tri"')]
     fx = A[0]
@@ -50,10 +50,10 @@ def tri_base_height(b, h, foot=0.5, side=None, w=62, hh=40, name=None, pts_named
     if foot > 1: o.append(LN(C[0], y0, fx, y0, dash="1.2 1.2"))
     o.append(LN(fx, A[1], fx, y0, dash="1.8 1.2", attrs='data-r="hline"'))
     o.append(RA(fx, y0, -1 if foot > 0.5 else 1, 0, 0, -1))
-    o.append(T((B[0] + C[0]) / 2, y0 + 4.0, f"{b} cm", size=4.0, attrs='data-r="base"'))
-    o.append(TB(fx + (1.0 if foot <= 0.5 else -1.0), (A[1] + y0) / 2 + 2.0, f"{h} cm", anchor="start" if foot <= 0.5 else "end", size=3.9, attrs='data-r="height"'))
-    if side is not None:
-        if 0.2 < foot < 0.8 and b >= 9: o.append(T((A[0] + B[0]) / 2 - 1.8, (A[1] + B[1]) / 2 - 0.5, f"{side} cm", anchor="end", size=3.9, attrs='data-r="side"'))
+    o.append(T((B[0] + C[0]) / 2, y0 + 4.4, f"{b} cm", size=4.1, attrs='data-r="base"'))
+    o.append(T(fx, A[1] - 3.6, f"{h} cm", size=4.1, attrs='data-r="height"'))
+    if side is not None and 0.2 < foot < 0.8 and b >= 9:
+        o.append(T((A[0] + C[0]) / 2 + 1.8, (A[1] + C[1]) / 2 - 0.5, f"{side} cm", anchor="start", size=4.1, attrs='data-r="side"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="tri"')
 
 def read_tri(h):
@@ -70,29 +70,29 @@ def tri_named(P, base, apex, D, E, w=66, hh=46):
 # =============================================================================== composite figures
 def composite(kind, wd, ln, th, w=70, hh=48):
     """house: rectangle wd x ln with a triangle (base wd, height th) on top; notch: rectangle wd x ln with a triangular notch (base wd, depth th) cut from the top;
-    side: rectangle wd x ln with a right-angled triangle (one side ln, width th) joined on the right."""
+    side: rectangle wd x ln with a right-angled triangle (one side ln, width th) joined on the right. Labels never touch a side."""
     tot_w = wd + (th if kind == "side" else 0)
     tot_h = ln + (th if kind == "house" else 0)
-    sc = min((w - 22) / tot_w, (hh - 13) / tot_h, 5.0)
-    x0, y0 = 14, hh - 6
+    sc = min((w - 20) / tot_w, (hh - 17) / tot_h, 5.0)
+    x0, y0 = 14, hh - 8
     W, L_, Th = wd * sc, ln * sc, th * sc
     o = []
     if kind == "house":
         o.append(PG([(x0, y0), (x0 + W, y0), (x0 + W, y0 - L_), (x0 + W / 2, y0 - L_ - Th), (x0, y0 - L_)]))
         o.append(LN(x0, y0 - L_, x0 + W, y0 - L_, dash="1.4 1.2"))
         o.append(LN(x0 + W / 2, y0 - L_ - Th, x0 + W / 2, y0 - L_, dash="1.8 1.2"))
-        o.append(TB(x0 + W / 2 + 1.2, y0 - L_ - Th / 2, f"{th} cm", anchor="start", size=3.9, attrs='data-r="th"'))
+        o.append(T(x0 + W / 2, y0 - L_ - Th - 3.6, f"{th} cm", size=4.1, attrs='data-r="th"'))
     elif kind == "notch":
         o.append(PG([(x0, y0), (x0 + W, y0), (x0 + W, y0 - L_), (x0 + W / 2, y0 - L_ + Th), (x0, y0 - L_)]))
         o.append(LN(x0, y0 - L_, x0 + W, y0 - L_, dash="1.4 1.2"))
         o.append(LN(x0 + W / 2, y0 - L_ + Th, x0 + W / 2, y0 - L_, dash="1.8 1.2"))
-        o.append(TB(x0 + W / 2 + 1.2, y0 - L_ + Th / 2 - 1.0, f"{th} cm", anchor="start", size=3.9, attrs='data-r="th"'))
+        o.append(T(x0 + W / 2, y0 - L_ - 3.6, f"{th} cm", size=4.1, attrs='data-r="th"'))
     else:
         o.append(PG([(x0, y0), (x0 + W, y0), (x0 + W + Th, y0), (x0 + W, y0 - L_), (x0, y0 - L_)]))
         o.append(LN(x0 + W, y0, x0 + W, y0 - L_, dash="1.4 1.2"))
-        o.append(T(x0 + W + Th / 2 + 0.5, y0 + 4.0, f"{th} cm", size=3.9, attrs='data-r="th"'))
-    o.append(T(x0 + W / 2 - (0 if kind != "side" else 0), y0 + 3.6, f"{wd} cm", attrs='data-r="wd"'))
-    o.append(T(x0 - 1.5, y0 - L_ / 2, f"{ln} cm", anchor="end", size=3.9, attrs='data-r="ln"'))
+        o.append(T(x0 + W + Th / 2 + 0.5, y0 + 4.4, f"{th} cm", size=4.1, attrs='data-r="th"'))
+    o.append(T(x0 + W / 2, y0 + 4.4, f"{wd} cm", size=4.1, attrs='data-r="wd"'))
+    o.append(T(x0 - 1.5, y0 - L_ / 2, f"{ln} cm", anchor="end", size=4.1, attrs='data-r="ln"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra=f'data-fig="{kind}"')
 
 def read_composite(h):
@@ -135,7 +135,7 @@ def read_units(h):
 
 def iso_dims(A, B, C, labels, w=64, hh=48, cube=False):
     """cuboid drawn in isometric view (proportional, capped), with length labels on three edges. labels = (texts for the i-edge, j-edge, k-edge) e.g. '12 cm'"""
-    sc = min((w - 28) / ((A + B) * C30), (hh - 16) / ((A + B) * S30 + C), 6.0)
+    sc = min((w - 26) / ((A + B) * C30), (hh - 16) / ((A + B) * S30 + C), 6.0)
     ox, oy = 8 + B * C30 * sc, 6 + C * sc
     P = lambda i, j, k: iso_pt(i, j, k, sc, ox, oy)
     o = [PG([P(0, 0, C), P(A, 0, C), P(A, B, C), P(0, B, C)]),
@@ -143,11 +143,11 @@ def iso_dims(A, B, C, labels, w=64, hh=48, cube=False):
          PG([P(A, 0, 0), P(A, B, 0), P(A, B, C), P(A, 0, C)])]
     # labels: i-edge along the bottom of the left face, j-edge along the bottom of the right face, k-edge up the near vertical edge
     (x1, y1), (x2, y2) = P(0, B, 0), P(A, B, 0)
-    o.append(T((x1 + x2) / 2 - 3.5, (y1 + y2) / 2 + 3.2, labels[0], attrs='data-r="d1"'))
+    o.append(T((x1 + x2) / 2 - 3.5, (y1 + y2) / 2 + 3.6, labels[0], size=4.1, attrs='data-r="d1"'))
     (x1, y1), (x2, y2) = P(A, B, 0), P(A, 0, 0)
-    o.append(T((x1 + x2) / 2 + 3.5, (y1 + y2) / 2 + 3.2, labels[1], attrs='data-r="d2"'))
+    o.append(T((x1 + x2) / 2 + 3.5, (y1 + y2) / 2 + 3.6, labels[1], size=4.1, attrs='data-r="d2"'))
     (x1, y1), (x2, y2) = P(A, 0, 0), P(A, 0, C)
-    o.append(T(x1 + 2.2, (y1 + y2) / 2, labels[2], anchor="start", attrs='data-r="d3"'))
+    o.append(T(x1 + 2.2, (y1 + y2) / 2, labels[2], anchor="start", size=4.1, attrs='data-r="d3"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="isodims"')
 
 def read_dims(h):
@@ -272,7 +272,7 @@ def tri_angles(kind, g, w=62, hh=42):
         th = math.acos(max(-1, min(1, (u1[0] * u2[0] + u1[1] * u2[1]) / (l1 * l2))))
         d = min(5.2 / max(math.sin(th / 2), 0.2), 0.42 * min(l1, l2), 13.0)
         lx, ly = px + bx / bl * d, py + by / bl * d
-        o.append(T(lx, ly, "?" if v == "?" else f"{v}\u00b0", size=3.3, attrs=f'data-v="{v}" data-pos="{pos[k]}"'))
+        o.append(T(lx, ly, "?" if v == "?" else f"{v}\u00b0", size=4.2, attrs=f'data-v="{v}" data-pos="{pos[k]}"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra=f'data-fig="tri-{kind}"')
 
 def read_tri_angles(h):
@@ -283,12 +283,12 @@ def read_tri_angles(h):
     return kind, labs, ticks, ra
 
 # =============================================================================== two-step angle figures
-def _fit(P, w, hh, pad=5.0, cap=2.2):
+def _fit(P, w, hh, pad=8.0, cap=2.2):
     xs = [p[0] for p in P.values()]; ys = [p[1] for p in P.values()]
     sc = min((w - 2 * pad) / (max(xs) - min(xs)), (hh - 2 * pad) / (max(ys) - min(ys)), cap)
     return {k: (pad + (x - min(xs)) * sc, pad + (y - min(ys)) * sc) for k, (x, y) in P.items()}
 
-def _lab(P, k, centre, v, pos, d=8.0, size=3.5):
+def _lab(P, k, centre, v, pos, d=8.0, size=4.1):
     px, py = P[k]; dx, dy = centre[0] - px, centre[1] - py; l = math.hypot(dx, dy) or 1
     s = "?" if v == "?" else f"{v}°"
     return T(px + dx / l * d, py + dy / l * d, s, size=size, attrs=f'data-v="{v}" data-pos="{pos}"')
@@ -307,7 +307,7 @@ def ext_fig(a, b, w=64, hh=36):
     cx, cy = P["C"]; ang = math.degrees(math.atan2(-(P["A"][1] - cy), P["A"][0] - cx))
     if ang > 0: o.append(ARC(cx, cy, 5.0, 0, ang, sw=0.45))
     mid = ang / 2
-    o.append(T(cx + 10.5 * math.cos(math.radians(mid)), cy - 10.5 * math.sin(math.radians(mid)), "?", size=3.8, attrs='data-v="?" data-pos="ext"'))
+    o.append(T(cx + 10.5 * math.cos(math.radians(mid)), cy - 10.5 * math.sin(math.radians(mid)), "?", size=4.3, attrs='data-v="?" data-pos="ext"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="ext"')
 
 def isoext_fig(g, w=64, hh=36):
@@ -322,10 +322,10 @@ def isoext_fig(g, w=64, hh=36):
         mx, my = (p[0] + q[0]) / 2, (p[1] + q[1]) / 2; dx, dy = q[0] - p[0], q[1] - p[1]; l = math.hypot(dx, dy); nx, ny = -dy / l, dx / l
         return LN(mx - nx * 1.4, my - ny * 1.4, mx + nx * 1.4, my + ny * 1.4, attrs='class="tick"')
     o += [tick(P["A"], P["B"]), tick(P["A"], P["C"])]
-    o.append(T(P["A"][0], P["A"][1] - 4.2, f"{g}\u00b0", size=3.5, attrs=f'data-v="{g}" data-pos="apex"'))
+    o.append(T(P["A"][0], P["A"][1] - 4.2, f"{g}\u00b0", size=4.1, attrs=f'data-v="{g}" data-pos="apex"'))
     cx, cy = P["C"]; ang = math.degrees(math.atan2(-(P["A"][1] - cy), P["A"][0] - cx))
     o.append(ARC(cx, cy, 5.0, 0, ang, sw=0.45))
-    o.append(T(cx + 10.5 * math.cos(math.radians(ang / 2)), cy - 10.5 * math.sin(math.radians(ang / 2)), "?", size=3.8, attrs='data-v="?" data-pos="ext"'))
+    o.append(T(cx + 10.5 * math.cos(math.radians(ang / 2)), cy - 10.5 * math.sin(math.radians(ang / 2)), "?", size=4.3, attrs='data-v="?" data-pos="ext"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="isoext"')
 
 def bow_fig(a, b, c, w=60, hh=46):
@@ -369,8 +369,8 @@ def ext2_fig(e, f, w=64, hh=34):
     bx, by = P["B"]; cx, cy = P["C"]
     o.append(ARC(bx, by, 5.0, be, 180, sw=0.45)); o.append(ARC(cx, cy, 5.0, 0, f, sw=0.45))
     mb, mc = (be + 180) / 2, f / 2
-    o.append(T(bx + 10.5 * math.cos(math.radians(mb)), by - 10.5 * math.sin(math.radians(mb)), f"{e}\u00b0", size=3.4, attrs=f'data-v="{e}" data-pos="extB"'))
-    o.append(T(cx + 10.5 * math.cos(math.radians(mc)), cy - 10.5 * math.sin(math.radians(mc)), f"{f}\u00b0", size=3.4, attrs=f'data-v="{f}" data-pos="extC"'))
+    o.append(T(bx + 10.5 * math.cos(math.radians(mb)), by - 10.5 * math.sin(math.radians(mb)), f"{e}\u00b0", size=4.1, attrs=f'data-v="{e}" data-pos="extB"'))
+    o.append(T(cx + 10.5 * math.cos(math.radians(mc)), cy - 10.5 * math.sin(math.radians(mc)), f"{f}\u00b0", size=4.1, attrs=f'data-v="{f}" data-pos="extC"'))
     ax, ay = P["A"]
-    o.append(T(ax, ay + 7.0, "?", size=3.8, attrs='data-v="?" data-pos="apex"'))
+    o.append(T(ax, ay + 7.0, "?", size=4.3, attrs='data-v="?" data-pos="apex"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="ext2"')

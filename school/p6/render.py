@@ -232,7 +232,7 @@ def doc(pages_html, title):
             f'<style>{CSS.replace("FONT", FONT)}</style></head><body>{pages_html}</body></html>')
 
 # ------------------------------------------------------------------ front matter (one set per booklet)
-from gen.outcomes import OUTCOMES, PAGE_OC, BOOKLETS, oc_label
+from gen.outcomes import OUTCOMES, PAGE_OC, BOOKLETS, oc_label, SHORT
 
 DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
 CONTACT = "pypteltd@gmail.com (business email for now, to be changed later)"
@@ -309,10 +309,10 @@ def teacher_notes(pages, bk):
             + '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
-            '<li><b>Drawings.</b> Pictures of circles, solids, graphs and angle figures are original drawings. Circles, solids and graphs are drawn accurately; the angle figures (S2-07, S2-08, S2-09) are deliberately not drawn to scale and say so, so that measuring does not give the answer. Pupils should work out the answer, not measure it. Pictures are not actual size.</li>'
+            '<li><b>Drawings.</b> Pictures are original drawings. Angle figures are not drawn to scale and say so; pupils should work out the answer, not measure it. Pictures are not actual size.</li>'
             '<li><b>Notation.</b> Ratios are written 3 : 5 and answers in simplest form. Where a page uses \u03c0 it says whether to take 3.14 or 22/7 (22 over 7). Letters such as n, p and a stand for numbers; there are no brackets with letters. Money is written $12.50. Litres are written \u2113 and cube centimetres cm\u00b3.</li>'
             '<li><b>Rough paper and calculators.</b> Give the pupil rough paper for working. Every number is chosen so that the working can be done by hand; a pupil may use a calculator if your school allows it, but the check does not need one.</li>'
-            '<li><b>Revision pages.</b> Pages whose key tag begins with Revisits practise outcomes from Primary 4 or 5 that Primary 6 pupils meet again in revision. Primary 6 content only is practised on every other page.</li></ul>'
+            '<li><b>Revision pages.</b> Pages tagged Primary 6 Foundation practise lines of the Foundation track that Standard pupils also meet. Primary 6 content only is practised on every other page.</li></ul>'
             '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting. Each page is one side only. Pupils write on the page: the boxes are large. Use A4 and print at 100% (actual size).</p><p style="font-size:8.5pt;margin-top:1.5mm">Pictures are not actual size.</p>'
             '</section>')
 
@@ -321,7 +321,7 @@ def coverage_table(pages, bk):
     for p in pages:
         for o in PAGE_OC[p["no"]]:
             pos.setdefault(o, []).append(p["code"].split(" ")[0])
-    items = "".join(f'<div class="covi"><b>{html.escape(oc_label(o))}</b> {html.escape(OUTCOMES[o][1])} <span class="covp">{", ".join(pos[o])}</span></div>' for o in OUTCOMES if o in pos)
+    items = "".join(f'<div class="covi"><b>{html.escape(oc_label(o))}</b> {html.escape(SHORT[o])} <span class="covp">{", ".join(pos[o])}</span></div>' for o in OUTCOMES if o in pos)
     absent = [oc_label(o) for o in OUTCOMES if o not in pos]
     return ('<div class="cov2">' + items + '</div>'
             + '<p style="font-size:8pt;margin-top:1.5mm">Outcomes practised in the other booklet: ' + html.escape("; ".join(absent)) + '.</p>')
@@ -352,7 +352,7 @@ def key_pages(pages, school, packing, bk):
         pg[0] += 1; return key_footer(f"KEY page {pg[0]} of {total}")
     out = [f'<section class="page fm"><h2>Teacher answer key: Primary 6, {html.escape(bk["name"])}' + (" (DRAFT)" if DRAFT else "") + '</h2>' + draft_banner("this answer key is for owner review. Do not give it to pupils.") +
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 6 Standard content in the Mathematics Syllabus, Primary (2021 edition, pages 43 and 44). The outcome wording in this booklet is a summary in our own words, not the syllabus text; where the summary gave no outcome number the key gives none. The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the syllabus outcomes the puzzle practises, with the outcome numbers of the Primary 6 Standard content in the Mathematics Syllabus, Primary (2021 edition, updated October 2025, pages 43 and 44); Foundation-track lines carry the label Primary 6 Foundation. The outcome lines are quoted from the syllabus; the notes on each tag are our own words, not the syllabus text. The references are for your planning only and are not printed on the pupil pages. "Problem solving" marks a page whose questions come from the kinds found in school tests rather than from one numbered outcome.</p>'
            f'<h3>Pages in this booklet ({html.escape(bk["terms"])})</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join(v)}</td></tr>' for k, v in strand_map(pages).items())
            + f'</table><p style="font-size:10pt;margin-top:4mm">The page code in the footer, for example {code_ex}, gives the page in this booklet and, in brackets, its number in the full set of 40.</p>' + key_footer(f"KEY page 1 of {total}") + '</section>']

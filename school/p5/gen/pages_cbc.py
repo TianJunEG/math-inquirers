@@ -147,6 +147,6 @@ def page22():
     return cbc_page(22, dict(id="CBC-P5-02", picture="butterfly", bank="pct", tier=1, seed=502, level=5), "Colour the Butterfly",
         ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Percentage", "a percentage part of a whole, a part of a whole as a percentage, discount and GST (percentage)",
-        "Every part asks for a percentage of a quantity, a part of a whole written as a percentage, a price after a discount, or a price after adding a percentage such as GST.", oc=["PC.PART", "PC.OF", "PC1.4"])
+        "Every part asks for a percentage of a quantity, a part of a whole written as a percentage, a price after a discount, or a price after adding a percentage such as GST.", oc=["PC1.1", "PC1.2", "PC1.3", "PC1.4"])
 
 PAGES = [page05, page22]
