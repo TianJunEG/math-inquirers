@@ -244,7 +244,7 @@ PASS  S2-19 (P6-39) V3 none of the wrong orders after START spells a word  []
 PASS  S2-20 (P6-40) V1 every question has exactly one answer in the bank's domain  []
 PASS  S2-20 (P6-40) V1a the independent evaluator (textcheck) re-solves all 14 printed questions from their text and gets the coloured answer  []
 PASS  S2-20 (P6-40) V1b every answer is one of the five key values  
-PASS  S2-20 (P6-40) V1c all five colours used at least twice  {'yellow': 3, 'red': 2, 'blue': 3, 'green': 4, 'orange': 2}
+PASS  S2-20 (P6-40) V1c all five colours used at least twice  {'yellow': 4, 'red': 3, 'blue': 2, 'green': 3, 'orange': 2}
 PASS  S2-20 (P6-40) V2 the right answers pass every check (tally, matching parts)  
 PASS  S2-20 (P6-40) V2b questions are not repeated  0
 PASS  S2-20 (P6-40) V7 regions 12 to 18, every label found a box  14
@@ -728,8 +728,8 @@ PASS  S1: every question printed on a colour page is printed in the key too  []
 PASS  S2: every question printed on a colour page is printed in the key too  []
 PASS  S1_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
 PASS  S1_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
-FAIL  S2_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(12, 0, 14), (20, 1, 14)]
-FAIL  S2_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14), (10, 1, 14)]
+PASS  S2_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(12, 0, 14), (20, 0, 14)]
+PASS  S2_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14), (10, 0, 14)]
 PASS  P6_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.24% vs greyscale)  20 pages
 PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 223, budget 40 on average per page)  
 PASS  P6_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.23% vs greyscale)  5 pages
@@ -737,10 +737,10 @@ PASS  P6_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels coun
 PASS  P6_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.24% vs greyscale)  9 pages
 PASS  P6_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 724, budget 130 on average per page)  
 PASS  P6_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.34% vs greyscale)  20 pages
-PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 202, budget 40 on average per page)  
+PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 203, budget 40 on average per page)  
 PASS  P6_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.80% vs greyscale)  5 pages
 PASS  P6_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 137, budget 40 on average per page)  
 PASS  P6_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.54% vs greyscale)  10 pages
-PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 866, budget 130 on average per page)  
+PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 861, budget 130 on average per page)  
 
-TOTAL 744 checks, 2 failed
+TOTAL 744 checks, 0 failed
