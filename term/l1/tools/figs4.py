@@ -268,11 +268,25 @@ def shelf(items=None, title=None, size=64, per_row=6):
     return _svg(W, top + rows * (size + 12) + 18, ''.join(P), title or 'shelf')
 
 
+def combos(tops=4, bottoms=2, top_icon='shirt', bottom_icon='shorts', size=58):
+    """Tops and bottoms in one row ('4 tops' with '2 shorts'), so a child can pair every top with every pair of shorts."""
+    P = []; x = 10; cy = size / 2 + 8
+    for k in range(tops):
+        P.append(icon(top_icon, x + size / 2, cy, size)); x += size + 6
+    x += 14
+    P.append(f'<text x="{x + 20}" y="{cy + 14}" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">+</text>'); x += 54
+    for k in range(bottoms):
+        P.append(icon(bottom_icon, x + size / 2, cy, size)); x += size + 6
+    return _svg(x + 10, size + 16, ''.join(P), f'{tops} tops and {bottoms} pairs of shorts')
+
+
 def render(v):
     """Dispatch for the new figure types; None if v['type'] is not one of them (called first from figs2.render)."""
     t = v['type']
     if t == 'jump_lines':
         return jump_lines(v.get('start', 0), v.get('end', 100), v.get('step', 1), v.get('label_every', 10), v.get('rows'), v.get('room', True))
+    if t == 'combos':
+        return combos(v.get('tops', 4), v.get('bottoms', 2), v.get('top_icon', 'shirt'), v.get('bottom_icon', 'shorts'))
     if t == 'shelf':
         return shelf(v.get('items'), v.get('title'), v.get('size', 64), v.get('per_row', 6))
     if t == 'balance':

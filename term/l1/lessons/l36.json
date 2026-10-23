@@ -1974,7 +1974,7 @@
       "C",
       "D"
      ],
-     "size": 48
+     "size": 44
     }
    },
    {
@@ -2000,20 +2000,10 @@
     ],
     "mins": 4,
     "visual": {
-     "type": "objects",
-     "items": [
-      {
-       "icon": "shirt",
-       "n": 4
-      },
-      {
-       "icon": "shorts",
-       "n": 2
-      }
-     ],
-     "per_row": 4,
-     "cell": 40,
-     "size": 55
+     "type": "combos",
+     "tops": 4,
+     "bottoms": 2,
+     "size": 70
     }
    },
    {
@@ -2078,7 +2068,7 @@
        1
       ]
      ],
-     "size": 40
+     "size": 44
     }
    },
    {
