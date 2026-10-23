@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Build the two Primary 2 early-finisher booklets (Semester 1 and Semester 2).
   python3 build.py [--school "Name of School"] [--outdir out] [--booklet S1|S2|both] [--final]
-Outputs (in out/), for each booklet X in S1, S2: P2_X_Puzzles.pdf (20 pupil pages), P2_X_FrontMatter.pdf (5), P2_X_Complete_Pack.pdf (25),
-P2_X_Answer_Key.pdf, plus verification.json (all pages). Page order and the two page numbers (S1-07 and P2-17) come from gen/outcomes.py."""
+Outputs (in out/), for each booklet X in S1, S2: P5_X_Puzzles.pdf (20 pupil pages), P5_X_FrontMatter.pdf (5), P5_X_Complete_Pack.pdf (25),
+P5_X_Answer_Key.pdf, plus verification.json (all pages). Page order and the two page numbers (S1-07 and P5-17) come from gen/outcomes.py."""
 import argparse, json, os, sys, re, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from gen import outcomes
 import render
 
-# page modules (P2-01 to P2-40); a module not written yet is skipped, so a half-built tree still builds (validate.py --partial)
+# page modules (P5-01 to P5-40); a module not written yet is skipped, so a half-built tree still builds (validate.py --partial)
 MODULES = []
-for _m in ("pages_w1", "pages_w2", "pages_w3", "pages_w4", "pages_w5", "pages_cbc"):
+for _m in ("pages_s1a", "pages_s1b", "pages_s1c", "pages_s2a", "pages_s2b", "pages_s2c", "pages_cbc"):
     try:
         MODULES.append(__import__("gen." + _m, fromlist=["PAGES"]))
     except ModuleNotFoundError as e:
@@ -64,18 +64,18 @@ def build_booklet(key, pages, school, outdir):
     bk = outcomes.BOOKLETS[key]
     bp = booklet_pages(pages, key)
     W = lambda name, h: open(os.path.join(outdir, name), "w").write(h)
-    title = f"Early Finisher Puzzles P2 {bk['name']}"
+    title = f"Early Finisher Puzzles P5 {bk['name']}"
     W(f"{key}_pupil.html", render.doc("".join(render.pupil_page(p, school) for p in bp), title))
     W(f"{key}_front.html", render.doc(render.cover(school, bk) + render.licence(school, bk) + render.teacher_notes(bp, bk) + render.contents(bp, bk), title + " front matter"))
     W(f"{key}_key.html", render.doc(render.key_pages(bp, school, pack_key(bp, school, outdir), bk), title + " answer key"))
     names = {"pupil": "Puzzles", "front": "FrontMatter", "key": "Answer_Key"}
     for n in ("pupil", "front", "key"):
-        to_pdf(os.path.join(outdir, f"{key}_{n}.html"), os.path.join(outdir, f"P2_{key}_{names[n]}.pdf"))
+        to_pdf(os.path.join(outdir, f"{key}_{n}.html"), os.path.join(outdir, f"P5_{key}_{names[n]}.pdf"))
     from pypdf import PdfWriter, PdfReader
     w = PdfWriter()
-    for f in (f"P2_{key}_FrontMatter.pdf", f"P2_{key}_Puzzles.pdf"):
+    for f in (f"P5_{key}_FrontMatter.pdf", f"P5_{key}_Puzzles.pdf"):
         for pg in PdfReader(os.path.join(outdir, f)).pages: w.add_page(pg)
-    w.write(os.path.join(outdir, f"P2_{key}_Complete_Pack.pdf"))
+    w.write(os.path.join(outdir, f"P5_{key}_Complete_Pack.pdf"))
 
 def main():
     ap = argparse.ArgumentParser()

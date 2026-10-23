@@ -23,6 +23,11 @@ def N(n):
     if len(s) >= 5: return s[:-3] + GAP + s[-3:]
     return s
 
+def Nt(n):
+    """the same number for plain text that is printed (instructions, check strips): the gap is a thin space"""
+    s = str(n)
+    return s[:-3] + "\u2009" + s[-3:] if len(s) >= 5 else s
+
 def Ntxt(n):
     """the same number for plain text such as a teacher key: 45 280"""
     s = str(n)
@@ -131,7 +136,7 @@ def make_choice_letters(rng, word, n_opts):
 
 def choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rows_html, word, letters, truth_letters, key_answers, note,
                 mech=None, plain=None, ps=False, check="Write the letters in order. Do they spell a word?", body_pre="", mk=("code",)):
-    body = body_pre + '<div class="srows3">' + "".join(rows_html) + '</div>'
+    body = body_pre + '<div class="srows3 tallrows">' + "".join(rows_html) + '</div>'
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, mech or f"K1 the letter of the right choice in each row spells a word ({len(word)} letters)", instr,
                  body, key_answers, f"Word: {word}", note, check=check, check_boxes=len(word), ps=ps, mk=mk,
                  mech_plain=plain or f"Word from the letters of the right choices ({len(word)} letters)")
@@ -189,3 +194,40 @@ def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, n, 
     P["model"] = dict(truth=list(path), domains=[cells] * len(path), check=legal, numeric=False)
     P["mini"] = mini_route(n, path)
     return P
+
+
+def rows_of(body):
+    """independent reader of lettered-choice rows: [(content html, [(option html, letter)])]"""
+    out = []
+    for m in re.finditer(r'<div class="srow3[^"]*"><span class="no">\d+</span><div class="sq3">(.*?)</div><div class="sopts">(.*?)</div></div>(?=<div class="srow3|</div>\s*$|</div><|$)', body, re.S):
+        opts = [(a, b) for a, b in re.findall(r'<span class="tfo"><b>(.*?)</b><i class="cl">(\w)</i></span>', m[2], re.S)]
+        out.append((m[1], opts))
+    return out
+
+def induced_path(rng, n, length, min_dist, tries=3000):
+    """a self-avoiding route of `length` cells in an n x n grid in which no two cells that are not neighbours on the route touch (so a valid
+    cell next to the route can only be a dead end, never a shortcut)"""
+    for _ in range(tries):
+        path = [(rng.randrange(n), rng.randrange(n))]
+        def dfs():
+            if len(path) == length: return True
+            opts = [q for q in neighbours(*path[-1], n) if q not in path and all(nb == path[-1] or nb not in path for nb in neighbours(*q, n))]
+            rng.shuffle(opts)
+            for q in opts:
+                path.append(q)
+                if dfs(): return True
+                path.pop()
+            return False
+        if dfs() and abs(path[0][0] - path[-1][0]) + abs(path[0][1] - path[-1][1]) >= min_dist: return path
+    raise RuntimeError("induced path")
+
+def dead_ends(rng, n, path, k):
+    """k extra cells that follow the rule but are leaves: each touches exactly one valid cell, which is on the route (not its last cell)"""
+    chosen = []
+    for _ in range(50):
+        valid = set(path) | set(chosen)
+        cand = [q for q in [(r, c) for r in range(n) for c in range(n)] if q not in valid and sum(1 for nb in neighbours(*q, n) if nb in valid) == 1
+                and next(nb for nb in neighbours(*q, n) if nb in valid) in path[:-1]]
+        if not cand or len(chosen) == k: break
+        chosen.append(rng.choice(cand))
+    return chosen

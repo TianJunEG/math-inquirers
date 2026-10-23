@@ -208,7 +208,7 @@ def key_footer(code):
 
 def pupil_page(p, school):
     code = p.get("code") or f"P2-{p['no']:02d}"
-    instr = "".join(f"<p>{html.escape(s)}</p>" for s in p["instr"])
+    instr = "".join(f"<p>{s}</p>" for s in (p.get("instr_html") or [html.escape(x) for x in p["instr"]]))
     lb = ""
     if p.get("check_boxes"):
         lb = '<div class="lb">' + '<span class="ab"></span>' * p["check_boxes"] + "</div>"

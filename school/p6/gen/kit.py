@@ -90,7 +90,7 @@ def table_block(table, fmt=str, cols=None):
     """the code table: one row of up to 6 boxes, two rows when there are more (three-digit numbers need room)"""
     n = len(table); cols = cols or (n if n <= 6 else (n + 1) // 2)
     items = "".join(f'<div class="ct"><span class="n">{fmt(k)}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in table.items())
-    return f'<div class="blk ctc"><p class="lead">Code table</p><div class="codetable" style="grid-template-columns:repeat({cols},1fr)">{items}</div></div>'
+    return f'<div class="blk ctc{" dense" if cols >= 8 else ""}"><p class="lead">Code table</p><div class="codetable" style="grid-template-columns:repeat({cols},1fr)">{items}</div></div>'
 
 # vertical sums (algorithm layout): numbers right-aligned over a rule, answer box (or the result row) below
 def _digs(x):

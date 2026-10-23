@@ -66,3 +66,76 @@ def read_frac(s):
     return len(re.findall(r'class="part sh"', s)), len(parts)
 
 
+
+# ---------------------------------------------------------------------------------------------------- weighing dials (copied from P2)
+def dial_svg(value, vmax, major, minor, unit):
+    """a weighing dial: 270 degree sweep, numerals outside the ring, a needle; value read back by read_dial"""
+    cx = cy = 24.0; R = 16.5
+    ang = lambda v: math.radians(-135 + 270 * v / vmax)
+    p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
+    v = 0
+    while v <= vmax + 1e-9:
+        a = ang(v); L = 3.0 if v % major == 0 else 1.6
+        p.append(f'<line class="dt" x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.5 if v % major == 0 else 0.3}"/>')
+        if v % major == 0:
+            p.append(f'<text x="{cx+20.6*math.sin(a):.2f}" y="{cy-20.6*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{int(v)}</text>')
+        v += minor
+    a = ang(value)
+    p.append(f'<line class="needle" x1="24" y1="24" x2="{cx+14.2*math.sin(a):.3f}" y2="{cy-14.2*math.cos(a):.3f}" stroke="#000" stroke-width="1.0" stroke-linecap="round"/>')
+    p.append(f'<circle cx="{cx}" cy="{cy}" r="1.6" fill="#000"/>')
+    p.append(f'<text class="dunit" x="{cx}" y="{cy+9.5}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="4.4" fill="#000">{unit}</text>')
+    return svg(48, 48, "".join(p), extra=f'data-max="{vmax}"')
+
+def read_dial(s):
+    vmax = int(re.search(r'data-max="(\d+)"', s).group(1))
+    m = re.search(r'class="needle" x1="24" y1="24" x2="([-\d.]+)" y2="([-\d.]+)"', s)
+    a = math.degrees(math.atan2(float(m.group(1)) - 24, 24 - float(m.group(2))))
+    return round((a + 135) / 270 * vmax), re.search(r'class="dunit"[^>]*>([^<]+)<', s).group(1)
+
+
+# ---------------------------------------------------------------------------------------------------- beakers with a scale in millilitres
+def beaker_svg(level, vmax, step, label_step, unit="m\u2113"):
+    """a beaker with ticks every `step` and numbers every `label_step` (m\u2113) and a liquid level; read back by read_beaker"""
+    top, bot = 4.0, 48.0; x0, x1 = 15.0, 33.0
+    y = lambda v: bot - (bot - top) * v / vmax
+    p = [f'<rect class="tankbody" x="{x0}" y="{top}" width="{x1-x0}" height="{bot-top}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
+    yy = bot - 0.7
+    while yy > y(level):
+        p.append(f'<line x1="{x0+0.4}" y1="{yy:.2f}" x2="{x1-0.4}" y2="{yy:.2f}" stroke="#000" stroke-width="0.3"/>'); yy -= 1.5
+    p.append(f'<line class="level" x1="{x0}" y1="{y(level):.2f}" x2="{x1}" y2="{y(level):.2f}" stroke="#000" stroke-width="0.9"/>')
+    v = 0
+    while v <= vmax:
+        major = v % label_step == 0
+        p.append(f'<line class="lt" x1="{x0-(3.2 if major else 1.8):.1f}" y1="{y(v):.2f}" x2="{x0}" y2="{y(v):.2f}" stroke="#000" stroke-width="{0.45 if major else 0.3}"/>')
+        if major:
+            p.append(f'<text x="{x0-3.8}" y="{y(v)+0.1:.2f}" text-anchor="end" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.4" fill="#000">{v}</text>')
+        v += step
+    p.append(f'<text class="bunit" x="{(x0+x1)/2}" y="{bot+2.6}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.8" fill="#000">{unit}</text>')
+    return svg(38, 54, "".join(p), extra=f'data-max="{vmax}"')
+
+def read_beaker(s):
+    vmax = int(re.search(r'data-max="(\d+)"', s).group(1))
+    ys = [float(v) for v in re.findall(r'class="lt" x1="[\d.]+" y1="([\d.]+)"', s)]       # tick y positions, bottom (0) first
+    ly = float(re.search(r'class="level" x1="[\d.]+" y1="([\d.]+)"', s).group(1))
+    return round((ys[0] - ly) / (ys[0] - ys[-1]) * vmax)
+
+# ---------------------------------------------------------------------------------------------------- stopwatch (a seconds hand on a 0 to 60 face)
+def stopwatch_svg(sec):
+    cx = cy = 24.0; R = 16.5
+    p = [f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="#fff" stroke="#000" stroke-width="0.7"/>']
+    for k in range(60):
+        a = math.radians(k * 6); L = 3.0 if k % 5 == 0 else 1.5
+        p.append(f'<line x1="{cx+R*math.sin(a):.2f}" y1="{cy-R*math.cos(a):.2f}" x2="{cx+(R-L)*math.sin(a):.2f}" y2="{cy-(R-L)*math.cos(a):.2f}" stroke="#000" stroke-width="{0.5 if k % 5 == 0 else 0.3}"/>')
+    for k in range(5, 61, 5):
+        a = math.radians(k * 6)
+        p.append(f'<text x="{cx+20.6*math.sin(a):.2f}" y="{cy-20.6*math.cos(a)+0.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.9" fill="#000">{k}</text>')
+    a = math.radians(sec * 6)
+    p.append(f'<line class="needle" x1="24" y1="24" x2="{cx+14.2*math.sin(a):.3f}" y2="{cy-14.2*math.cos(a):.3f}" stroke="#000" stroke-width="1.0" stroke-linecap="round"/>')
+    p.append(f'<circle cx="{cx}" cy="{cy}" r="1.6" fill="#000"/>')
+    p.append(f'<text x="{cx}" y="{cy+9.5}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.6" fill="#000">seconds</text>')
+    return svg(48, 48, "".join(p))
+
+def read_stopwatch(s):
+    m = re.search(r'class="needle" x1="24" y1="24" x2="([-\d.]+)" y2="([-\d.]+)"', s)
+    a = math.degrees(math.atan2(float(m.group(1)) - 24, 24 - float(m.group(2)))) % 360
+    return round(a / 6) % 60

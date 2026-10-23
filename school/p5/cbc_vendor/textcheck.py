@@ -515,6 +515,16 @@ def _p1_shapes_bare(c):
     w = "both" if "corners and the straight sides" in ins else ("sides" if "straight sides" in ins and "corners" not in ins else "corners")
     return sum((CORNERS[k] + SIDES[k]) if w == "both" else (SIDES if w == "sides" else CORNERS)[k] for k in c["meta"]["kinds"])
 
+# ---- Primary 5: percentages
+@R(r"(\d+)% of (\d+) = " + B)
+def pct_of(m, c): return Fraction(I(m[1]) * I(m[2]), 100)
+@R(r"(\d+) out of (\d+) = " + B + "%")
+def out_of_pct(m, c): return Fraction(I(m[1]) * 100, I(m[2]))
+@R(r"(\d+) [\u2212-] (\d+)% of (\d+) = " + B)
+def n_minus_pct(m, c): return I(m[1]) - Fraction(I(m[2]) * I(m[3]), 100)
+@R(r"(\d+) \+ (\d+)% of (\d+) = " + B)
+def n_plus_pct(m, c): return I(m[1]) + Fraction(I(m[2]) * I(m[3]), 100)
+
 # ------------------------------------------------------------------ entry points
 def solve(lines, meta=None, instr="", kind=None):
     """-> (value, rule name). `kind` == "dollars" when a money answer is stored in whole dollars (cents otherwise)."""

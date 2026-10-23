@@ -14,7 +14,7 @@ CSS_P5 = """
 .qc .qt.big{font-size:17pt;font-family:'Fredoka';font-weight:500}
 .qc .qt .num{font-family:'Fredoka';font-weight:600}
 /* lettered choices */
-.mcrow{align-items:center;gap:3mm;padding:1.6mm 0;flex-wrap:nowrap}
+.mcrow{align-items:center;gap:3mm;padding:1.2mm 0;flex-wrap:nowrap}
 .mcrow .mq{flex:0 0 58mm;font-size:13pt;line-height:1.22}
 .mcrow .mq svg{max-width:none;display:block;margin-top:1mm}
 .mopts{display:flex;gap:2.5mm;flex:1;justify-content:flex-end;flex-wrap:nowrap}
@@ -22,8 +22,7 @@ CSS_P5 = """
 .mo{display:inline-flex;align-items:center;gap:1.5mm;border:0.4mm solid #000;border-radius:2mm;padding:1mm 2mm}
 .mo .ot{font-family:'Fredoka';font-weight:500;font-size:14pt;white-space:nowrap}
 .mopts.col .mo .ot{white-space:normal;font-family:'Nunito Sans';font-weight:700;font-size:12pt;line-height:1.2}
-.mcrow.wide .mq{flex:1 1 100%}
-.mcrow.wide{flex-wrap:wrap}.mcrow.wide .mopts{flex:1 1 100%;justify-content:flex-start}
+.mcrow.wide{flex-wrap:wrap;row-gap:1.6mm}.mcrow.wide .mq{flex:1 1 calc(100% - 12mm)}.mcrow.wide .mopts{flex:1 1 100%;justify-content:flex-start}
 .tfrows{gap:1.4mm}
 .tfrow2{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding:3.4mm 0}
 .tfrow2 .qt{flex:1;font-size:15pt;font-family:'Fredoka';font-weight:500}
@@ -31,6 +30,8 @@ CSS_P5 = """
 .ocards{display:grid;gap:5mm 4mm}.ocards.c3{grid-template-columns:repeat(3,minmax(0,1fr))}.ocards.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .ocard{position:relative;border:0.6mm solid #000;border-radius:2.5mm;min-height:36mm;display:flex;align-items:center;justify-content:center;padding:4mm 3mm 3mm 3mm}
 .ocard i.cl{position:absolute;left:2mm;top:2mm}
+.ocard{flex-direction:column;gap:3mm}
+.ocard .wk{font-family:'Fredoka';font-weight:600;font-size:17pt;display:flex;align-items:center;gap:2mm}
 .ocard .oc{font-family:'Fredoka';font-weight:500;font-size:17pt;text-align:center;line-height:1.3}
 /* matching */
 .mcards2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4mm}
@@ -42,13 +43,13 @@ CSS_P5 = """
 .tile .tv{font-family:'Fredoka';font-weight:600;font-size:15pt;text-align:center;min-height:15mm;display:flex;align-items:center;justify-content:center;line-height:1.2}
 .tile .ab.letter{width:14mm;height:13mm}
 /* routes */
-.maze.tall .mcell{height:36mm}
+.maze.tall .mcell{height:40mm}
 .rc{font-family:'Fredoka';font-weight:600;font-size:15pt;text-align:center;line-height:1.2;padding:0 1mm}
 .rc.sm{font-size:12.5pt}
 .maze .mcell .flag{font-size:8pt}
 /* digit cards */
-.dtiles{display:flex;gap:1.6mm;justify-content:center;margin:1mm 0 1.5mm}
-.dtile{width:9.5mm;height:14mm;border:0.6mm solid #000;border-radius:1.5mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:19pt}
+.dtiles{display:flex;gap:1.3mm;justify-content:center;margin:1mm 0 1.5mm}
+.dtile{width:8.6mm;height:13mm;border:0.6mm solid #000;border-radius:1.5mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:18pt}
 /* equations */
 .eqlist{display:flex;flex-direction:column;gap:3.5mm}
 .eqrow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
@@ -63,15 +64,15 @@ CSS_P5 = """
 .msq .mq3 .fans .ab.w2{width:13mm}
 /* number chain loop */
 .cloop{display:grid;grid-template-columns:repeat(5,auto);align-items:center;justify-content:center;gap:1mm 0;margin:0 auto}
-.cn{width:22mm;height:20mm;border:0.7mm solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:20pt}
+.cn{width:27mm;height:25mm;border:0.7mm solid #000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:24pt}
 .cn.blank{border-style:solid}
-.cn .ab{width:15mm;height:12mm;border-width:0.5mm}
-.car{display:flex;flex-direction:column;align-items:center;gap:0.3mm;font-family:'Fredoka';font-weight:600;font-size:15pt;min-width:26mm}
+.cn .ab{width:18mm;height:13mm;border-width:0.5mm}
+.car{display:flex;flex-direction:column;align-items:center;gap:0.3mm;font-family:'Fredoka';font-weight:600;font-size:15pt;min-width:40mm}
 .car .arrow{width:100%;border-top:0.7mm solid #000;position:relative;height:0}
 .car .arrow:after{content:'';position:absolute;right:-0.5mm;top:-2mm;border-left:4mm solid #000;border-top:2mm solid transparent;border-bottom:2mm solid transparent}
 .car.back .arrow:after{right:auto;left:-0.5mm;border-left:none;border-right:4mm solid #000}
 .vcon{display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:15pt;gap:0.5mm}
-.vcon .vline{height:12mm;border-left:0.7mm solid #000;position:relative}
+.vcon .vline{height:20mm;border-left:0.7mm solid #000;position:relative}
 .vcon.up .vline:before,.vcon.dn .vline:after{content:'';position:absolute;left:-2mm;border-left:2mm solid transparent;border-right:2mm solid transparent}
 .vcon.dn .vline:after{bottom:-0.5mm;border-top:4mm solid #000}
 .vcon.up .vline:before{top:-0.5mm;border-bottom:4mm solid #000}
@@ -88,4 +89,8 @@ CSS_P5 = """
 .gridnote{font-size:12pt;font-weight:700}
 .kcard{font-size:11pt}
 .stackq{display:flex;flex-direction:column;gap:1mm}
+.mq.big{font-size:17pt;font-family:'Fredoka';font-weight:500}
+.mq.big .fr{font-size:17pt}
+em.msum{font-style:normal;font-weight:800;font-family:'Fredoka';font-size:16pt}
+.unit{font-size:14pt;font-weight:700;margin-left:1mm}
 """

@@ -11,6 +11,7 @@ from .kit import *
 BIG.update({"siring", "jailor"})
 SY = lambda s: f'<span class="sy">{s}</span>'
 PI = SY("π")
+PIP = "π"
 LITRE = SY("ℓ")
 MLITRE = "m" + SY("ℓ")
 SQRT = SY("√")
@@ -61,6 +62,7 @@ def ptxt(h):
     """the plain text a reader sees: stacked fractions become a⁄b, mixed numbers w_a⁄b; tags removed"""
     h = re.sub(r'<span class="mx">(\d+)</span>\s*<span class="fr"><i>(\d+)</i><i>(\d+)</i></span>', rf' \1_\2{FSL}\3 ', h)
     h = re.sub(r'<span class="fr"><i>(\d+)</i><i>(\d+)</i></span>', rf' \1{FSL}\2 ', h)
+    h = re.sub(r'<span class="ab[^"]*"></span>', " ? ", h)           # an empty answer box reads as ?
     h = re.sub(r"<[^>]+>", " ", h)
     h = _html.unescape(h)
     return re.sub(r"\s+", " ", h).strip()
@@ -75,7 +77,7 @@ def pv(tok):
     return Fr(Decimal(tok.replace(",", "")))
 
 _NUM = rf"\d+_\d+{FSL}\d+|\d+{FSL}\d+|\d+\.\d+|\d+"
-_TOK = re.compile(rf"\s*({_NUM}|[A-Za-z]|[+\-−×÷()])")
+_TOK = re.compile(rf"\s*({_NUM}|[A-Za-z]|[+\-−×÷()√∛])")
 
 class CalcError(Exception): pass
 
@@ -101,6 +103,12 @@ def calc(s, env=None):
             v = expr(); assert take() == ")"; return v
         if isnum(t): return pv(t)
         if t == "−" or t == "-": return -factor()
+        if t in ("√", "∛"):
+            v = factor(); n = 2 if t == "√" else 3
+            if v < 0: raise CalcError("root of a negative number")
+            r = Fr(round(float(v) ** (1.0 / n))) if v.denominator == 1 else None
+            if r is None or r ** n != v: raise CalcError(f"{t}{v} is not exact")
+            return r
         if t.isalpha():
             if t not in env: raise CalcError("unknown letter " + t)
             return Fr(env[t])
@@ -204,7 +212,7 @@ def route_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
 
 # ------------------------------------------------------------------------------------------------ lettered choices
 def choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, rows, solve_row, note, word=None, n_opts=3, check=None, ps=False,
-                key_rows=None, wide=False):
+                key_rows=None, wide=False, grid=False):
     """rows: list of dict(stem=html, opts=[html,...], right=int). The letter beside the RIGHT option of row i is word[i]; wrong options carry decoy letters,
     chosen so that no other way of choosing one option in every row spells a word. solve_row(stem_html, [opt_html]) -> index reads the printed row."""
     if word is None:
@@ -222,7 +230,7 @@ def choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rn
     for i, (r, opts) in enumerate(zip(rows, layout)):
         o = "".join(f'<span class="chop"><i class="cl">{lab}</i><span class="cht">{h}</span></span>' for h, lab, _ in opts)
         cards.append(f'<div class="chrow"><span class="no">{i+1}</span><div class="chb"><div class="chs">{r["stem"]}</div><div class="cho{" wide" if wide else ""}">{o}</div></div></div>')
-    body = '<div class="chrows">' + "".join(cards) + '</div>'
+    body = f'<div class="chrows{" chgrid" if grid else ""}">' + "".join(cards) + '</div>'
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, f"K1 the letter of the right choice in each row spells a word ({len(word)} letters, decoy letters on the other choices)", instr, body,
                  key_rows or "; ".join(f"{i+1}) {ptxt(r['opts'][r['right']])}" for i, r in enumerate(rows)), f"Word: {word}", note,
                  check=check or f"Write the {len(word)} letters in order. Do they spell a word?", check_boxes=len(word), mk=("code",), ps=ps,
@@ -239,26 +247,29 @@ def choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rn
     return P
 
 # ------------------------------------------------------------------------------------------------ matching
+def match_other_words(word, letters):
+    """words of the large list that can be written by giving every item a DIFFERENT card (the rule 'use each card once'), or by changing one letter of the right word to any card letter"""
+    n = len(word); out = set()
+    for p in itertools.permutations(letters, n):
+        s = "".join(p)
+        if s != word and s.lower() in BIG: out.add(s)
+    for i in range(n):
+        for c in set(letters):
+            s = word[:i] + c + word[i + 1:]
+            if s != word and s.lower() in BIG: out.add(s)
+    return sorted(out)
+
 def match_letters(rng, word, n_cards, tries=400):
-    """letters for the cards: the six right cards carry the letters of `word`; the other cards carry decoy letters; no way of writing one card letter per item
-    (a card may be used twice) spells another word of the large list"""
-    n = len(word); extra = n_cards - n
+    """decoy letters for the cards that carry no letter of the word: no way of giving every item a different card, and no single changed letter, spells another word"""
+    extra = n_cards - len(word)
     avail = [c for c in ALPHA if c not in word]
     for _ in range(tries):
         dec = rng.sample(avail, extra)
-        letters = list(word) + dec
-        bad = False
-        for combo in itertools.product(letters, repeat=n):
-            s = "".join(combo)
-            if s != word and s.lower() in BIG: bad = True; break
-        if not bad: return dec
+        if not match_other_words(word, list(word) + dec): return dec
     raise RuntimeError("match letters")
 
-def match_other_words(word, letters):
-    return [w for w in ("".join(c) for c in itertools.product(letters, repeat=len(word))) if w != word and w.lower() in BIG]
-
 def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, items, cards, right, solve_item, note, word=None, check=None, ps=False,
-               item_cols=1, card_cols=4, lead_items="Items", lead_cards="Cards", key_text=None):
+               item_cols=1, card_cols=4, lead_items="Items", lead_cards="Cards", key_text=None, compact=False, vert=False):
     """items: list of html (one letter box each); cards: list of html (len = len(items) + 2); right[i] = index of the card that matches item i.
     Cards are labelled with letters: the right cards carry the letters of the code word in item order."""
     n = len(items)
@@ -271,9 +282,15 @@ def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     for ci in range(len(cards)):
         if lab[ci] is None: lab[ci] = dec[k]; k += 1
     crd = "".join(f'<div class="mcd"><i class="cl">{lab[j]}</i><div class="mct">{cards[j]}</div></div>' for j in range(len(cards)))
-    its = "".join(f'<div class="mit"><span class="no">{i+1}</span><div class="mtt">{items[i]}</div><span class="ab"></span></div>' for i in range(n))
-    body = (f'<div class="mgrid" style="grid-template-columns:repeat({item_cols},minmax(0,1fr))">{its}</div>'
-            f'<div class="mcards2" style="grid-template-columns:repeat({card_cols},minmax(0,1fr))">{crd}</div>')
+    def one(i):
+        h = items[i]
+        if vert and "<!--cap-->" in h:
+            top, cap = h.split("<!--cap-->", 1)
+            return f'<div class="mit"><span class="no">{i+1}</span><div class="mtt">{top}</div><div class="mrow"><div class="mcap">{cap}</div><span class="ab"></span></div></div>'
+        return f'<div class="mit"><span class="no">{i+1}</span><div class="mtt">{h}</div><span class="ab"></span></div>'
+    its = "".join(one(i) for i in range(n))
+    body = (f'<p class="lead">{lead_items}</p><div class="mgrid{" cmp" if compact else ""}{" vert" if vert else ""}" style="grid-template-columns:repeat({item_cols},minmax(0,1fr))">{its}</div>'
+            f'<p class="lead">{lead_cards}</p><div class="mcards2{" cmp" if compact else ""}" style="grid-template-columns:repeat({card_cols},minmax(0,1fr))">{crd}</div>')
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, f"K1 the letters of the matching cards, read in the item order, spell a word ({n} letters) + K4 each card used once", instr, body,
                  key_text or "; ".join(f"{i+1}) card {lab[right[i]]}" for i in range(n)), f"Word: {word}", note,
                  check=check or f"Read the {n} letters in order. Do they spell a word?", check_boxes=None, mk=("logic",), ps=ps,
@@ -282,7 +299,7 @@ def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     P.v("V1 independent solver matches every printed item with exactly one printed card, as the key does", solved == list(right), solved)
     P.v("V1b each item has exactly one matching card", all(sum(1 for c in cards if solve_item(items[i], [c]) == 0) == 1 for i in range(n)))
     other = match_other_words(word, list(word) + dec)
-    P.v(f"V3 no way of writing one card letter per item (a card may repeat) spells another word ({len(BIG)} words)", not other, other[:3])
+    P.v(f"V3 no way of giving every item a different card, and no single changed letter, spells another word ({len(BIG)} words)", not other, other[:3])
     P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()])
     P.v("V2 the letters of the right cards, in item order, spell the word", "".join(lab[right[i]] for i in range(n)) == word)
     P["cv"] = dict(rate=1.0, single_total=n * (len(cards) - 1), single_detected=n * (len(cards) - 1))
@@ -294,7 +311,7 @@ def match_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
 
 # ------------------------------------------------------------------------------------------------ ordering
 def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, cards, order_idx, read_card, note, word=None, check=None, ps=False,
-               ncols=3, lead="Write the letters in order.", key_text=None, direction="smallest first"):
+               ncols=3, lead="Write the letters in order.", key_text=None, direction="smallest first", card_text=None):
     """cards: list of html; order_idx = indices of the cards in the order asked. The card at order_idx[k] carries word[k]. read_card(card_html) -> sortable value."""
     n = len(cards)
     if word is None: word = word_candidates(no, n)[0]
@@ -307,7 +324,7 @@ def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     body = (f'<div class="ogrid" style="grid-template-columns:repeat({ncols},minmax(0,1fr))">{crd}</div>'
             f'<div class="blk"><p class="lead">{lead}</p><div class="ansgrid2" style="margin-top:2mm">' + "".join('<span class="ab"></span>' for _ in range(n)) + '</div></div>')
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, f"K1 letters in order spell a word ({n} letters) + K4 each card used once", instr, body,
-                 key_text or f"{direction}: " + ", ".join(f"{lab[ci]} = {ptxt(cards[ci])}" for ci in order_idx), f"Word: {word}", note,
+                 key_text or f"{direction}: " + ", ".join(f"{lab[ci]} = {card_text(ci) if card_text else ptxt(cards[ci])}" for ci in order_idx), f"Word: {word}", note,
                  check=check or f"Read the {n} letters in order. Do they spell a word?", check_boxes=None, mk=("logic",), ps=ps,
                  mech_plain=f"Letters of the cards in the order asked spell a word ({n} letters)")
     vals = [read_card(c) for c in cards]

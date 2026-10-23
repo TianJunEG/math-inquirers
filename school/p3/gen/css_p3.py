@@ -137,3 +137,10 @@ CSS_P3 += """
 .dl{font-family:'Fredoka';font-weight:600;font-size:18pt;margin-right:1mm}
 .maze.fm .mcell .fr{font-size:20pt}
 """
+CSS_P3 += """
+.bignum.m{font-size:15pt}
+.sign{display:inline-block;border:0.5mm solid #000;border-radius:1.5mm;padding:0.5mm 2mm;font-weight:800}
+"""
+CSS_P3 += """
+.maze.conv .mcell{font-size:13pt;padding:0 1.5mm;text-align:center;line-height:1.25}
+"""

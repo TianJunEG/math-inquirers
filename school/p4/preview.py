@@ -6,7 +6,7 @@ import build, render
 render.FONT = '/home/user/math-inquirers/fonts/node_modules/@fontsource'
 from gen import outcomes
 ap = argparse.ArgumentParser(); ap.add_argument("nos", nargs="*", type=int); ap.add_argument("--dpi", type=int, default=80); ap.add_argument("--bw", action="store_true")
-ap.add_argument("--out", default="/tmp/claude-0/-home-user-math-inquirers/6d6b173e-8eda-5fdf-9c4d-af677bceddc6/scratchpad/prev"); ap.add_argument("--all", action="store_true")
+ap.add_argument("--out", default="/tmp/claude-0/-home-user-math-inquirers/6d6b173e-8eda-5fdf-9c4d-af677bceddc6/scratchpad/p4prev"); ap.add_argument("--all", action="store_true")
 a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
 pages = build.all_pages()

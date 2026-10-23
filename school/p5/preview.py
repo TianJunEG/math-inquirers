@@ -6,14 +6,14 @@ import build, render
 render.FONT = '/home/user/math-inquirers/fonts/node_modules/@fontsource'
 from gen import outcomes
 ap = argparse.ArgumentParser(); ap.add_argument("nos", nargs="*", type=int); ap.add_argument("--dpi", type=int, default=80); ap.add_argument("--bw", action="store_true")
-ap.add_argument("--out", default="/tmp/claude-0/-home-user-math-inquirers/6d6b173e-8eda-5fdf-9c4d-af677bceddc6/scratchpad/prev"); ap.add_argument("--all", action="store_true")
+ap.add_argument("--out", default="/tmp/claude-0/-home-user-math-inquirers/6d6b173e-8eda-5fdf-9c4d-af677bceddc6/scratchpad/p5prev"); ap.add_argument("--all", action="store_true")
 a = ap.parse_args()
 os.makedirs(a.out, exist_ok=True)
 pages = build.all_pages()
 sel = [p for p in pages if (not a.nos or p["no"] in a.nos)]
 for p in sel:
     bad = [(n, d) for n, o, d in p["verify"] if not o]
-    print(f'P2-{p["no"]:02d} {p["title"]}: {len(p["verify"])} checks, {len(bad)} failed', bad[:3])
+    print(f'P5-{p["no"]:02d} {p["title"]}: {len(p["verify"])} checks, {len(bad)} failed', bad[:3])
 html = render.doc("".join(render.pupil_page(p, "") for p in sel), "preview")
 hp = os.path.join(a.out, "prev.html"); open(hp, "w").write(html)
 pdf = os.path.join(a.out, "prev.pdf"); build.to_pdf(hp, pdf)

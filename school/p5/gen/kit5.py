@@ -74,7 +74,7 @@ def to_text(h):
     h = re.sub(r'<span class="fr"><i>(\d+)</i><i>(\d+)</i></span>', r"⟨\1|\2⟩", h)
     h = re.sub(r"<sup>(\d)</sup>", r"^\1", h)
     h = re.sub(r"<[^>]+>", " ", h)
-    return re.sub(r"\s+", " ", _html.unescape(h)).strip()
+    return re.sub(r"[ \t\r\n]+", " ", _html.unescape(h)).strip(" \t\r\n")
 
 _TOK = re.compile(r"\s*(⟨[^⟩]*⟩|\d+(?:\.\d+)?|[()+−\-×*÷/%]|of\b)")
 
@@ -152,27 +152,31 @@ def code_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, card
 
 # --------------------------------------------------------------------------- lettered choices (K1): the letter of the right choice in each row
 def mc_rows(rng, word, n_opts, rows, tries=400):
-    """rows: list of dict(q=html, opts=[html right first, wrong...], fig='' ). returns (html rows, letters per row [(letter, right?)...], positions)"""
+    """rows: list of dict(q=html, opts=[html...], right=index of the right option (default 0), fixed=True keeps the printed order, fig='', wide, col).
+    Letters are given by role (the right choice carries the word's letter, every wrong choice a decoy letter). Returns (html rows, letters per row [right, wrong...], info)"""
     lets = choice_letters(rng, word, n_opts, tries=tries)
     out, spec = [], []
     for i, r in enumerate(rows):
-        order = list(range(n_opts)); rng.shuffle(order)
+        right = r.get("right", 0)
+        roles = {}; w = 1
+        for j in range(n_opts):
+            if j == right: roles[j] = lets[i][0]
+            else: roles[j] = lets[i][w]; w += 1
+        order = list(range(n_opts))
+        if not r.get("fixed"): rng.shuffle(order)
         opts = ""
-        info = []
         for pos in order:
-            L = lets[i][pos]
-            opts += f'<span class="mo"><i class="cl">{L}</i><span class="ot">{r["opts"][pos]}</span></span>'
-            info.append((L, pos == 0))
-        out.append(f'<div class="qrow mcrow"><span class="no">{i+1}</span><div class="mq">{r["q"]}{r.get("fig","")}</div><div class="mopts">{opts}</div></div>')
-        spec.append(info)
+            opts += f'<span class="mo"><i class="cl">{roles[pos]}</i><span class="ot">{r["opts"][pos]}</span></span>'
+        out.append(f'<div class="qrow mcrow{" wide" if r.get("wide") else ""}"><span class="no">{i+1}</span><div class="mq{" big" if r.get("big") else ""}">{r["q"]}{r.get("fig","")}</div><div class="mopts{" col" if r.get("col") else ""}">{opts}</div></div>')
+        spec.append(roles)
     return out, lets, spec
 
 def read_mc(body):
     """independent reader of the lettered-choice rows: [(question text, [(letter, option text)...]), ...]"""
     rows = []
-    for m in re.finditer(r'<div class="qrow mcrow">.*?<div class="mq">(.*?)</div><div class="mopts">(.*?)</div></div>(?=<div class="qrow|</div>|$)', body, re.S):
+    for m in re.finditer(r'<div class="qrow mcrow[^"]*"><span class="no">\d+</span><div class="mq[^"]*">(.*?)</div><div class="mopts[^"]*">(.*?)</div></div>(?=<div class="qrow|</div>|$)', body, re.S):
         q = to_text(m.group(1))
-        opts = re.findall(r'<i class="cl">(\w)</i><span class="ot">(.*?)</span></span>', m.group(2), re.S)
+        opts = re.findall(r'<i class="cl">(\w)</i><span class="ot">(.*?)</span></span>(?=<span class="mo">|$)', m.group(2), re.S)
         rows.append((q, [(L, to_text(t)) for L, t in opts], m.group(1)))
     return rows
 
@@ -199,7 +203,7 @@ def mc_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, r
     return P
 
 # --------------------------------------------------------------------------- ordering (K1 + K4): the letters of the cards in the order asked spell a word
-def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, cards, word, ascending, key_lines, note, solve_card, ps=False, checks=(), plain=None, cols=3):
+def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng, cards, word, ascending, key_lines, note, solve_card, ps=False, checks=(), plain=None, cols=3, work=False):
     """cards: list of html contents. Card with the k-th smallest (greatest, if not ascending) value carries letter word[k].
     values are computed by the caller's `values` list kept in cards as (html, value). solve_card(html text)->value is the independent reader."""
     n = len(cards); assert n == len(word)
@@ -208,11 +212,11 @@ def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, rng
     letter = {}
     for rank, k in enumerate(order): letter[k] = word[rank]
     disp = list(range(n)); rng.shuffle(disp)
-    items = "".join(f'<div class="ocard"><i class="cl">{letter[k]}</i><div class="oc">{cards[k][0]}</div></div>' for k in disp)
+    items = "".join(f'<div class="ocard"><i class="cl">{letter[k]}</i><div class="oc">{cards[k][0]}</div>{'<div class="wk">= <span class="ab w5"></span></div>' if work else ''}</div>' for k in disp)
     body = f'<div class="ocards c{cols}">{items}</div>'
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, f"K1 letters in order spell a word ({n} letters) + K4 each card used once", instr, body, key_lines, f"Word: {word}", note,
                  check_boxes=n, mk=("logic",), ps=ps, mech_plain=plain or f"Letters of the cards in the order asked spell a word ({n} letters)")
-    read = re.findall(r'<div class="ocard"><i class="cl">(\w)</i><div class="oc">(.*?)</div></div>', body, re.S)
+    read = re.findall(r'<div class="ocard"><i class="cl">(\w)</i><div class="oc">(.*?)</div>', body, re.S)
     vals = [(solve_card(to_text(h)), L) for L, h in read]
     P.v("V1 independent solver (reads each card, evaluates exactly, sorts) gets the word", "".join(L for _, L in sorted(vals, reverse=not ascending)) == word, "".join(L for _, L in sorted(vals, reverse=not ascending)))
     P.v("V1b all card values are different", len({v for v, _ in vals}) == n)
