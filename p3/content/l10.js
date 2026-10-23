@@ -11,7 +11,7 @@ const drinksGraph = () => {
   for (let v = 0; v <= 60; v += 10) {
     const y = y0 - v * k;
     s += `<line x1="${x0}" y1="${y}" x2="${x0 + 5 * slot + 10}" y2="${y}" stroke="${v ? '#9AA6C4' : NAVY}" stroke-width="${v ? 1.2 : 3}"/>`;
-    s += txt(x0 - 10, y + 6, String(v), { anchor: 'end', size: 18 });
+    s += txt(x0 - 10, y + 6, String(v), { anchor: 'end', size: 20 });
   }
   s += `<line x1="${x0}" y1="${y0}" x2="${x0}" y2="${y0 - 62 * k}" stroke="${NAVY}" stroke-width="3"/>`;
   data.forEach(([n, v, pat], i) => {
@@ -22,7 +22,7 @@ const drinksGraph = () => {
   });
   s += txt(26, y0 - 120, 'Number of cups', { size: 17, extra: ` transform="rotate(-90 26 ${y0 - 120})"` });
   s += txt(x0 + 255, y0 + 54, 'Drink', { size: 17 });
-  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 640 352" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:450px">${s}</svg>`;
+  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 640 352" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">${s}</svg>`;
 };
 // Matchstick squares: 1, 2 and 3 squares in a row
 const sticks = () => {

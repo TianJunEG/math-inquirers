@@ -96,7 +96,7 @@ const itemShape = (name, cx, cy, sz) => {
 const scaleF = (cx, left, right, o = {}) => {
   // beam at y, pans hang d below it so a second row of items sits under the beam, post base at y + d + 58
   const arm = o.arm || 130, y = o.y || 40, sz = o.sz || 34, d = o.drop || 70, pw = o.pw || 50; let s = '';
-  s += L(cx, y, cx, y + d + 58, { sw: 3 }) + P([[cx - 24, y + d + 58], [cx + 24, y + d + 58], [cx, y + 6]], '#fff', { sw: 2.4 }) + L(cx - arm, y, cx + arm, y, { sw: 4 });
+  s += L(cx, y, cx, y + d + 58, { sw: 3 }) + P([[cx - (o.post || 24), y + d + 58], [cx + (o.post || 24), y + d + 58], [cx, y + 6]], '#fff', { sw: 2.4 }) + L(cx - arm, y, cx + arm, y, { sw: 4 });
   [[cx - arm, left], [cx + arm, right]].forEach(([px, items]) => {
     s += L(px, y, px - pw + 4, y + d, { sw: 1.8 }) + L(px, y, px + pw - 4, y + d, { sw: 1.8 }) + `<path d="M${px - pw} ${y + d} Q${px} ${y + d + 18} ${px + pw} ${y + d}" fill="#fff" stroke="${NAVY}" stroke-width="2.6"/>`;
     const heavy = items.length && items[0].startsWith('w:'), pitch = sz * (heavy ? 1.5 : .95), per = heavy ? 2 : 3, n = items.length;
@@ -107,9 +107,9 @@ const scaleF = (cx, left, right, o = {}) => {
 const balances = (defs, label, h) => W(svg(600, h || 200, defs.map((d, i) => scaleF(150 + i * 300, d[0], d[1], { arm: 80, sz: 34, y: 40, drop: 70 })).join('') + defs.map((d, i) => T(150 + i * 300, 16, 'Scale ' + (i + 1), 17)).join(''), label), 2);
 // L9 No.1: three level scales, each item named under its pan
 const scalesQ1 = () => {
-  const defs = [[['melon'], ['apple', 'apple'], 'melon', '2 apples', 98], [['apple'], ['w:100 g', 'w:100 g'], 'apple', '2 × 100 g', 292], [['melon'], ['apple', 'lemon', 'lemon', 'lemon', 'lemon'], 'melon', 'apple, 4 lemons', 482]];
+  const defs = [[['melon'], ['apple', 'apple'], 'melon', '2 apples', 94], [['apple'], ['w:100 g', 'w:100 g'], 'apple', '2 × 100 g', 286], [['melon'], ['apple', 'lemon', 'lemon', 'lemon', 'lemon'], 'melon', 'apple, 4 lemons', 476]];
   let s = '';
-  defs.forEach((d, i) => { const cx = d[4]; s += scaleF(cx, d[0], d[1], { arm: 50, pw: 44, sz: 28, y: 40, drop: 70 }) + T(cx, 16, 'Scale ' + (i + 1), 17) + T(cx - 50, 158, d[2], 15, { w: 700 }) + T(cx + 54, 158, d[3], 15, { w: 700 }); });
+  defs.forEach((d, i) => { const cx = d[4]; s += scaleF(cx, d[0], d[1], { arm: 52, pw: 40, post: 12, sz: 27, y: 40, drop: 70 }) + T(cx, 16, 'Scale ' + (i + 1), 17) + T(cx - 52, 158, d[2], 15, { w: 700 }) + T(cx + 52, 158, d[3], 15, { w: 700 }); });
   return svg(600, 206, s, 'Three level scales. Scale 1: a melon and 2 apples. Scale 2: an apple and two 100 g weights. Scale 3: a melon and an apple with 4 lemons.');
 };
 const balT1 = () => balances([[['apple', 'apple', 'lemon'], ['pomelo']], [['pomelo'], ['lemon', 'lemon', 'lemon', 'lemon', 'lemon']]], 'Two level scales: 2 apples and a lemon balance a pomelo; a pomelo balances 5 lemons');

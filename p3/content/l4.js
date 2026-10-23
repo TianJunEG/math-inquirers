@@ -3,7 +3,7 @@
 
 // ---------- bar-model SVG helpers for the workbook (viewBox 600 wide) ----------
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF';
-const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 17}" font-weight="${o.w || 700}" text-anchor="${o.a || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${s}</text>`;
+const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 20}" font-weight="${o.w || 700}" text-anchor="${o.a || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${s}</text>`;
 const rect = (x, y, w, h, fill, label, o = {}) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" stroke="${NAVY}" stroke-width="2.5"${o.dash ? ' stroke-dasharray="7 5"' : ''}/>` + (label ? txt(x + w / 2, y + h / 2 + 6, label, o) : '');
 // horizontal curly brace from x0 to x1; ends sit on y; up=true points up
 const braceH = (x0, x1, y, up, label) => {
@@ -15,7 +15,7 @@ const braceV = (y0, y1, x, label) => {
   const h = 14, q = Math.min(10, (y1 - y0) / 4), m = (y0 + y1) / 2, xm = x + h / 2, xt = x + h;
   return `<path d="M${x} ${y0} Q${xm} ${y0} ${xm} ${y0 + q} L${xm} ${m - q} Q${xm} ${m} ${xt} ${m} Q${xm} ${m} ${xm} ${m + q} L${xm} ${y1 - q} Q${xm} ${y1} ${x} ${y1}" fill="none" stroke="${NAVY}" stroke-width="2.5"/>` + (label ? txt(xt + 8, m + 6, label, { a: 'start', fill: TEAL }) : '');
 };
-const svg = (label, h, inner, w = 520) => `<svg aria-label="${label}" viewBox="0 0 600 ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${w}px;max-width:100%">${inner}</svg>`;
+const svg = (label, h, inner, w = 470) => `<svg aria-label="${label}" viewBox="0 0 600 ${h}" xmlns="http://www.w3.org/2000/svg" style="width:${w}px;max-width:100%">${inner}</svg>`;
 const name = (y, s) => txt(10, y, s, { a: 'start' });
 
 const q1Fig = () => {
