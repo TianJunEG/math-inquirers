@@ -8,7 +8,7 @@ learn = {
     'intro': 'A rule for the nth term jumps straight to any term, such as the 100th. The difference tells you which times table to compare with. '
              'A loop in code adds the difference again and again, so you can test your rule.',
     'example': {
-        'problem': 'Find the rule for the nth term of 9, 14, 19, 24, ... Then find the 100th term.',
+        'problem': 'A sequence begins 9, 14, 19, 24, ... Find the rule that gives term n. Then find the 100th term.',
         'figure': grid([['n', '1', '2', '3', '4'], ['5 × n', '5', '10', '15', '20'], ['term', '9', '14', '19', '24']], [26, 18, 18, 18, 18], rowhead=True),
         'steps': ['The difference is 5, so compare each term with the 5 times table.',
                   'Each term is 4 more than the number above it. The rule is 5n + 4.',
@@ -21,7 +21,7 @@ learn = {
                         'Write that times table under n: 5, 10, 15, ...',
                         'Find how much to add or take away to reach each term.',
                         'Check the rule on 2 terms. Then use it for any term.']},
-    'try': IT(U, 'L', 1, 0, 'A sequence starts 3, 10, 17, 24, ... The rule for the nth term is {b} \u00d7 n \u2212 {b}. The 100th term is {b}.',
+    'try': IT(U, 'L', 1, 0, 'A sequence starts 3, 10, 17, 24, ...\nThe rule for the nth term is {b} \u00d7 n \u2212 {b}. The 100th term is {b}.',
               'The difference is 7, so compare with 7, 14, 21, 28. Each term is 4 less than the number under it. The rule is 7n \u2212 4. '
               'The 100th term is 7 \u00d7 100 \u2212 4 = 696.',
               answer=A([7, 4, 696], '7, 4, 696')),
@@ -29,7 +29,7 @@ learn = {
 
 # ---------------------------------------------------------------- Start here
 I.append(IT(U, 'S', 1, 1,
-            'Matchsticks make 2 rows of squares. Each new pattern adds one more column of 2 squares.',
+            'Matchsticks make 2 rows of squares. Pattern 2 has 2 columns and pattern 3 has 3 columns.',
             'Count: pattern 1 has 7 sticks, pattern 2 has 12, pattern 3 has 17. Each new column adds 5 sticks, so the rule is 5n + 2 (5 × 1 + 2 = 7). '
             'Pattern 40: 5 × 40 + 2 = 202. For 92 sticks: 5n + 2 = 92, so 5n = 90 and n = 18.',
             fig={'type': 'l6_sticks', 'shape': 'sq', 'rows': 2, 'ks': [1, 2, 3], 'side': 9},
@@ -39,12 +39,12 @@ I.append(IT(U, 'S', 1, 1,
                    P('d', 'Pattern {b} has 92 sticks.', [18])],
             figright=True, partsrow=True))
 I.append(IT(U, 'S', 2, 1,
-            'For each sequence, fill in the difference, the rule for the nth term and the 100th term.',
+            'Complete the table for each sequence.',
             '(a) The difference is 6. Compare with 6, 12, 18, 24: each term is 2 more, so 6n + 2 and 6 × 100 + 2 = 602. '
             '(b) The difference is 5. Each term is 2 less than 5, 10, 15, 20, so 5n − 2 and 5 × 100 − 2 = 498.',
             answer=A(['6', '6n + 2', '602', '5', '5n - 2', '498'], '(a) 6, 6n + 2, 602   (b) 5, 5n − 2, 498', list=True),
-            fig=grid([['(a) 8, 14, 20, 26, ...', '', '', ''], ['(b) 3, 8, 13, 18, ...', '', '', '']], [52, 25, 32, 28],
-                     head=['Sequence', 'Difference', 'nth term', '100th term'], ch=10)))
+            fig=grid([['(a) 8, 14, 20, 26, ...', '', '', ''], ['(b) 3, 8, 13, 18, ...', '', '', '']], [50, 25, 38, 24],
+                     head=['Sequence', 'Difference', 'Rule for term n', 'Term 100'], ch=10)))
 I.append(IT(U, 'S', 3, 1,
             'A sequence has the rule 5n + 2. Its first terms are 7, 12, 17, 22, ...',
             '(a) 157 − 2 = 155 = 5 × 31, so 157 is the 31st term. (b) 205 − 2 = 203 is not a multiple of 5. The terms end in 2 or 7, so 205 is not one. '
@@ -97,7 +97,7 @@ I.append(IT(U, 'S', 8, 2,
                    P('b', '10, 13, 16, 19, ...   {circ:3n + 10|10n + 3|3n + 7}', ['3n + 7']),
                    P('c', '3, 11, 19, 27, ...   {circ:8n + 3|8n - 5|3n + 8}', ['8n - 5'], '8n − 5')]))
 I.append(IT(U, 'S', 9, 3,
-            'A loop starts at the 1st term of a sequence. Each repeat moves on to the next term.',
+            'A program begins on the 1st term of a sequence. Each repeat moves it on to the next term.',
             'The 1st term needs 0 repeats and each repeat adds 1 to the term number. (a) 60 − 1 = 59 repeats. (b) 1 + 40 = the 41st term. '
             '(c) 25 − 8 = 17 repeats. The repeats count the jumps, not the terms.',
             parts=[P('a', 'To reach the 60th term, repeat {b} times.', [59]),
@@ -109,9 +109,9 @@ I.append(IT(U, 'S', 10, 3,
             '(a) n = 1, 2, 3 give 3 × 1 + 1 = 4, 7, 10. (b) The 8th number is 3 × 8 + 1 = 25. '
             '(c) 5, 9, 13 go up by 4, so use 4 × n + 1: 4 × 1 + 1 = 5.',
             fig=code([HAT, ['var', 'set n to (1)'], ['ctl', 'repeat (8)', [['look', 'say (3 × n + 1) for (1) seconds'], ['var', 'change n by (1)']]]]),
-            parts=[P('a', 'The first 3 numbers it says are {b}, {b}, {b}.', [4, 7, 10], '4, 7, 10'),
+            parts=[P('a', 'It starts: {l}', [4, 7, 10], '4, 7, 10', list=True),
                    P('b', 'The last number it says is {b}.', [25]),
-                   P('c', 'To say 5, 9, 13, 17, ... change the rule to {b} × n + {b}.', [4, 1], '4, 1')],
+                   P('c', 'To say 5, 9, 13, ... use {b} × n + {b}', [4, 1], '4, 1')],
             figside=True))
 I.append(IT(U, 'S', 11, 3,
             'Aisha looks at 2, 8, 14, 20, ... The difference is 6, so she says the rule is 6n.',
@@ -167,7 +167,7 @@ I.append(IT(U, 'G', 2, 5,
             parts=[P('a', 'Places 1, 3, 5, ... go up by {b}. Places 2, 4, 6, ... go up by {b}.', [4, 5], '4, 5'),
                    P('b', 'The number in place 15 is {b}.', [31]),
                    P('c', 'The number in place 20 is {b}.', [65])],
-            hint='Split it into two sequences. Which one is place 15 in?', partsrow=True))
+            hint='Split it into 2 sequences. Which one is place 15 in?', partsrow=True))
 I.append(IT(U, 'G', 3, 5,
             'What does this code say? Write t after each repeat.',
             't after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. The repeat stops the first time t is above 100, which is after repeat 14, '
@@ -196,5 +196,6 @@ I.append(IT(U, 'C', 4, 6,
             'The code changes n before it says it. 5 + 3 = 8, so the first number said is 8, not the 1st term 5. To say 5 first, say n before changing it.',
             answer=A([8], '8')))
 
+learn['tight'] = True
 write_unit(1, 'Code the pattern', 'Sequences and the nth term',
            'I can find the rule for the nth term of a pattern and use it for the 100th term. I can test my rule with a loop.', learn, I)

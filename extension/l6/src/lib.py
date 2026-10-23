@@ -91,17 +91,8 @@ def finalize(u, lo=0.87, hi=0.985):
     q = [i['id'] for i in u['items'] if i['tier'] == 'quiz']
     tot = (sum(hs[i] + measure.GAP for i in q) + bn['quiz'] + measure.QUIZ_FURN) / cap
     print(f'  Check yourself fill {tot:.3f}' + ('   <-- out of range' if not (lo <= tot <= hi) else ''))
-    # renumber ids: Start here by page then written order; other tiers in written order
-    start_sorted = sorted(start, key=lambda i: (i['page'], pos[i['id']]))
-    ren = {}
-    for k, it in enumerate(start_sorted, 1):
-        ren[it['id']] = f"{u['id']}-S{k:02d}"
-    for tier, ch in (('think', 'T'), ('go', 'G'), ('quiz', 'C')):
-        for k, it in enumerate([i for i in u['items'] if i['tier'] == tier], 1):
-            ren[it['id']] = f"{u['id']}-{ch}{k:02d}"
-    for it in u['items']:
-        it['id'] = ren[it['id']]
-    u['items'].sort(key=lambda i: ({'start': 0, 'think': 1, 'go': 2, 'quiz': 3}[i['tier']], i['id']))
+    # the ids stay as authored (they are internal: the printed numbers are the positions on the page); the list is ordered as it is printed
+    u['items'].sort(key=lambda i: ({'start': 0, 'think': 1, 'go': 2, 'quiz': 3}[i['tier']], i.get('page', 0), pos[i['id']]))
     return u
 
 
