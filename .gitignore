@@ -27,3 +27,7 @@ docs/audit/scratch_check_*/
 # generated black-and-white print PDFs (about 120 MB): rebuild with print/make_bw_print.py; not tracked (added 23 Oct 2026)
 outputs/print/bw/*.pdf
 outputs/print/bw/term/*.pdf
+
+# generated build outputs: not tracked (decision 23 Oct 2026, repo size 4.5 GB). Rebuild with the build scripts; approved FINAL books go in releases/
+term/l1/out/
+outputs/print/term/*.pdf

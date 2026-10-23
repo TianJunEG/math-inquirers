@@ -50,3 +50,6 @@ Needs Python 3 with Playwright 1.56.0 and Chromium (`/opt/pw-browsers`), `pypdf`
 ## Where Lesson 1 follows the project rules
 
 Tier principle (Start here = core, approachable, not yet taught at school; Think harder = a taught idea in a new setting, contest-style moves live here; Go further = mastery plus extension), neutral labels, no private chat, papers shown to the camera together, no claims such as MOE-aligned, GEP or SASMO preparation, a printed ruler only if the child has one at home (Lesson 1 needs none), materials found at home, short recording cues, 90 minutes with a standing buffer. Details and the checklist are in `AUTHORING.md`.
+
+## Build outputs are not tracked (23 Oct 2026)
+`term/l1/out/` is generated and git-ignored to keep the repository small. After a fresh checkout run `bash term/l1/build.sh NN` for each lesson you need (then print/make_term_books.py for the books). Approved final books are kept in `/releases/`.
