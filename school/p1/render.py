@@ -219,7 +219,7 @@ def doc(pages_html, title):
 
 # ------------------------------------------------------------------ front matter
 DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
-CONTACT = "pypteltd@gmail.com (business contact email for now; to be changed later)"
+CONTACT = "pypteltd@gmail.com (business email for now, to be changed later)"
 REG_OFFICE = "[registered office address: to be added by the owner]"
 
 def draft_banner(what):
