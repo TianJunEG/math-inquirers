@@ -62,7 +62,7 @@ def l4_table(spec, w=None):
 # ------------------------------------------------------------------------------------------------ bars
 def l4_bars(spec, w=None):
     U = spec.get('unit', 60)
-    RH = spec.get('row_h', 52)
+    RH = spec.get('row_h', 46)
     rows = spec['rows']
     lab_w = spec.get('label_w', max([len(r.get('label', '')) for r in rows] + [0]) * 15 + 26)
     fs = spec.get('font', 26)
@@ -75,7 +75,7 @@ def l4_bars(spec, w=None):
         note_w = max(note_w, 36 + len(vb['text']) * 15)
     W = lab_w + longest * U + note_w + 16
     top = 8
-    gap = spec.get('gap', 30)
+    gap = spec.get('gap', 20)
     braces_top = [bool(r.get('brace') and r['brace'].get('side', 'top') == 'top') for r in rows]
     y = top
     P = []

@@ -94,7 +94,7 @@
   },
   "try": {
    "id": "L4U03-L01",
-   "text": "A shop has 5 times as many pens as rulers. There are 114 pens and rulers. How many rulers are there? {b}",
+   "text": "A shop has 114 pens and rulers. The number of pens is 5 times the number of rulers. How many rulers are there? {b}",
    "answer": {
     "value": [
      "19"
@@ -365,7 +365,7 @@
    "id": "L4U03-S07",
    "tier": "start",
    "page": 2,
-   "text": "I think of a number. I multiply it by 6, take away 9, and then divide by 3. The answer is 31. Find my number.",
+   "text": "Mei picks a secret number. She multiplies it by 6, takes away 9, then divides by 3. She gets 31. What is her number? {b}",
    "figure": {
     "type": "l4_flow",
     "items": [
@@ -387,18 +387,13 @@
     ],
     "text": "17"
    },
-   "space": {
-    "rows": [
-     "My number is {b}"
-    ]
-   },
    "explanation": "Work backwards. 31 × 3 = 93. 93 + 9 = 102. 102 ÷ 6 = 17. Check: 17 × 6 = 102, 102 − 9 = 93, 93 ÷ 3 = 31."
   },
   {
    "id": "L4U03-S08",
    "tier": "start",
    "page": 2,
-   "text": "Try this number trick. Think of a number. Multiply it by 3. Add 12. Divide by 3. Take away the number you started with.",
+   "text": "A number trick. Start with a number. Multiply by 3, add 12, then divide by 3. Last, subtract the number you started with.",
    "parts": [
     {
      "label": "a",
@@ -431,12 +426,6 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Working:",
-     ""
-    ]
-   },
    "explanation": "6 × 3 = 18, 18 + 12 = 30, 30 ÷ 3 = 10, 10 − 6 = 4. 15 × 3 = 45, 45 + 12 = 57, 57 ÷ 3 = 19, 19 − 15 = 4. Multiplying by 3 and then dividing by 3 gives back the number. The 12 ÷ 3 adds 4, and taking away the number leaves 4."
   },
   {
@@ -492,7 +481,7 @@
    "id": "L4U03-S10",
    "tier": "start",
    "page": 3,
-   "text": "Mrs Lee buys 6 notebooks at $3 each and 4 pens at $2 each. She pays with a $50 note. How much change does she get? ${b}",
+   "text": "Mrs Lee buys 6 notebooks at $3 each and 4 pens at $2 each. She pays with $50. What is her change? ${b}",
    "answer": {
     "value": [
      "24"
@@ -511,7 +500,7 @@
    "id": "L4U03-S11",
    "tier": "start",
    "page": 3,
-   "text": "Each number after the first two is the sum of the 2 numbers before it. Fill in the missing numbers.",
+   "text": "In a chain, add the last 2 numbers to make the next number. Fill in the missing numbers.",
    "parts": [
     {
      "label": "a",
@@ -536,6 +525,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "(a) 4 + 9 = 13. Then 9 + 13 = 22 and 13 + 22 = 35. (b) 11 + 6 = 17 and 6 + 11 = 17. The first number is 11 − 6 = 5. Check: 5 + 6 = 11, 6 + 11 = 17 and 11 + 17 = 28."
   },
   {
@@ -556,41 +550,6 @@
     ]
    },
    "explanation": "Aisha has 1 unit and Kumar has 3 units: 4 units in all. 1 unit = 480 ÷ 4 = 120. Kumar has 360 and Aisha has 120. The difference is 2 units: 240."
-  },
-  {
-   "id": "L4U03-S13",
-   "tier": "start",
-   "page": 3,
-   "text": "Siti reads 24 pages a day for 15 days. Ali reads 18 pages a day for 21 days.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "Who reads more pages? {circ:Siti|Ali}",
-     "answer": {
-      "value": [
-       "Ali"
-      ],
-      "text": "Ali"
-     }
-    },
-    {
-     "label": "b",
-     "text": "How many more? {b} pages",
-     "answer": {
-      "value": [
-       "18"
-      ],
-      "text": "18"
-     }
-    }
-   ],
-   "space": {
-    "rows": [
-     "Working:",
-     ""
-    ]
-   },
-   "explanation": "Siti reads 24 × 15 = 360 pages. Ali reads 18 × 21 = 378 pages. Ali reads 378 − 360 = 18 more pages."
   },
   {
    "id": "L4U03-T01",
@@ -632,7 +591,7 @@
    "id": "L4U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "Each number after the first two is the sum of the 2 numbers before it. The 5th number is 41 and the 6th number is 66. What is the 1st number? {b}",
+   "text": "In a chain, add the last 2 numbers to make the next number. The 5th number is 41 and the 6th is 66. What is the 1st number? {b}",
    "answer": {
     "value": [
      "7"
@@ -653,11 +612,11 @@
    "id": "L4U03-T03",
    "tier": "think",
    "page": 4,
-   "text": "Mei has 5 times as many stickers as Lily. Mei gives 36 stickers to Lily. Then they have the same number of stickers.",
+   "text": "Mei has 5 times as many stickers as Lily. Mei gives 36 of hers to Lily. Then both girls have equal amounts.",
    "parts": [
     {
      "label": "a",
-     "text": "How many stickers does Lily have at first? {b}",
+     "text": "Lily at first: {b} stickers",
      "answer": {
       "value": [
        "18"
@@ -667,7 +626,7 @@
     },
     {
      "label": "b",
-     "text": "How many stickers does Mei have at first? {b}",
+     "text": "Mei at first: {b} stickers",
      "answer": {
       "value": [
        "90"
@@ -690,7 +649,7 @@
    "id": "L4U03-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 4: Signs and brackets\nBrackets and the order of operations are on the Think harder page.",
+   "text": "Beyond Level 4: Signs and brackets\nRule: brackets first, then × and ÷, then + and −.",
    "parts": [
     {
      "label": "a",
@@ -717,8 +676,7 @@
    ],
    "space": {
     "rows": [
-     "Try:",
-     ""
+     "Try:"
     ]
    },
    "hint": "For (a), estimate first. A big answer needs ×.",
@@ -726,26 +684,6 @@
   },
   {
    "id": "L4U03-G02",
-   "tier": "go",
-   "page": 5,
-   "text": "Beyond Level 4: Order of operations\nThe same number goes in all three boxes. What is the number?\n□ × □ + □ = 56\n{b}",
-   "answer": {
-    "value": [
-     "7"
-    ],
-    "text": "7"
-   },
-   "space": {
-    "rows": [
-     "Try:",
-     ""
-    ]
-   },
-   "hint": "Try 6, then 7, then 8. Is the answer too small or too big?",
-   "explanation": "Try 6: 6 × 6 + 6 = 42, too small. Try 8: 8 × 8 + 8 = 72, too big. Try 7: 7 × 7 + 7 = 49 + 7 = 56."
-  },
-  {
-   "id": "L4U03-G03",
    "tier": "go",
    "page": 5,
    "text": "Ben and Mei both save for a bike. Plan A: start with $15 and save $8 each week. Plan B: start with $0 and save $13 each week.",
@@ -785,10 +723,10 @@
      1,
      1
     ],
-    "cell_h": 56,
+    "cell_h": 50,
     "font": 26,
     "first_col_head": true,
-    "width_mm": 150
+    "width_mm": 140
    },
    "parts": [
     {
@@ -810,23 +748,13 @@
       ],
       "text": "39"
      }
-    },
-    {
-     "label": "c",
-     "text": "After 10 weeks, Plan B has ${b} more than Plan A.",
-     "answer": {
-      "value": [
-       "35"
-      ],
-      "text": "35"
-     }
     }
    ],
    "hint": "Fill in the table. Look at the gap between the plans each week.",
-   "explanation": "Plan A has $15, $23, $31, $39. Plan B has $0, $13, $26, $39. Both have $39 in week 3. Each week Plan B gains $5 on Plan A, and the start gap is $15, so 15 ÷ 5 = 3 weeks. After 10 weeks Plan A has 15 + 80 = $95 and Plan B has $130, so Plan B has $35 more."
+   "explanation": "Plan A has $15, $23, $31, $39. Plan B has $0, $13, $26, $39. Both have $39 in week 3. Each week Plan B gains $5 on Plan A, and the start gap is $15, so 15 ÷ 5 = 3 weeks."
   },
   {
-   "id": "L4U03-G04",
+   "id": "L4U03-G03",
    "tier": "go",
    "page": 5,
    "text": "Fill in the missing digits.\n3 □ 4 × 7 = 2 □ 3 8",
@@ -864,7 +792,7 @@
   {
    "id": "L4U03-C01",
    "tier": "quiz",
-   "text": "Work out.   4728 × 5 = {b}   9135 ÷ 7 = {b}",
+   "text": "Find the value.   4728 × 5 = {b}   9135 ÷ 7 = {b}",
    "answer": {
     "value": [
      "23640",
