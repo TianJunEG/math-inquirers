@@ -48,7 +48,7 @@ CSS_P5 = """
 .maze.tall .mcell{height:40mm}
 .rc{font-family:'Fredoka';font-weight:600;font-size:15pt;text-align:center;line-height:1.2;padding:0 1mm}
 .rc.sm{font-size:12.5pt}
-.maze .mcell .flag{font-size:8pt}
+.maze .mcell .flag{font-size:9.5pt;font-weight:900;padding:0.8mm 2.4mm;letter-spacing:.5mm}
 /* digit cards */
 .dtiles{display:flex;gap:1.3mm;justify-content:center;margin:1mm 0 1.5mm}
 .dtile{width:8.6mm;height:13mm;border:0.6mm solid #000;border-radius:1.5mm;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:18pt}
@@ -103,7 +103,7 @@ CSS_P5 = """
 .qg.c3 .qc svg.fsvg,.qg.c2 .qc svg.fsvg{max-width:100%;height:auto}
 em.msum{font-style:normal;font-weight:800;font-family:'Fredoka';font-size:16pt}
 .unit{font-size:14pt;font-weight:700;margin-left:1mm}
-.qg.s16 .qc{padding:1.2mm 3mm;gap:0.5mm}.qg.s16 .qc .qt{font-size:12pt;line-height:1.1}.qg.s16 .qt .fr{font-size:12.5pt}
+.qg.s16 .qc{padding:1.2mm 3mm;gap:0.5mm}.qg.s16 .qc .qt{font-size:12pt;line-height:1.1;padding-right:3mm}.qg.s16 .qt .fr{font-size:12.5pt}
 .qg.s27 .unit{display:inline-block;width:16mm;margin-left:1.5mm}
 .maze.tri .mcell{align-items:flex-end}
 .qg .qc.figc svg.fsvg{max-width:none;margin-left:-10mm;margin-top:2mm}

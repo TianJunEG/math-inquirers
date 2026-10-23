@@ -179,7 +179,9 @@ def line_fig(parts, w=64, hh=34, kind="line"):
         if 0 < a1 < 180: o.append(LN(cx, cy, cx + R * math.cos(math.radians(a1)), cy - R * math.sin(math.radians(a1))))
         r_arc = 5.5 + (k % 2) * 2.0
         o.append(ARC(cx, cy, r_arc, a, a1, sw=0.45))
-        o.append(_label(cx, cy, (a + a1) / 2, r_arc + 4.6, parts[k]))
+        d = r_arc + 4.6
+        if v < 50: d = max(d, min(R - 1.5, 4.8 / math.sin(math.radians(v / 2))))      # a narrow sector: the label sits far enough out for both rays to clear it
+        o.append(_label(cx, cy, (a + a1) / 2, d, parts[k], size=4.2))
         a = a1
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="line"')
 
@@ -195,7 +197,7 @@ def point_fig(parts, w=60, hh=46):
         a1 = a + v
         r_arc = 4.5 + (k % 2) * 1.8
         o.append(ARC(cx, cy, r_arc, a, a1, sw=0.45))
-        o.append(_label(cx, cy, (a + a1) / 2, r_arc + (5.2 if v > 40 else 6.5), parts[k], size=4.0))
+        o.append(_label(cx, cy, (a + a1) / 2, r_arc + (5.2 if v > 40 else 6.5), parts[k], size=4.2))
         a = a1
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="point"')
 
@@ -213,7 +215,7 @@ def opp_fig(alpha, given, ask, w=60, hh=46):
         o.append(ARC(cx, cy, r_arc, a0, a1, sw=0.45))
         if labs[k] is not None:
             rel = {0: "given", 1: "adjacent", 2: "opposite"}[k] if labs[k] == "?" or k == 0 else None
-            o.append(_label(cx, cy, (a0 + a1) / 2, r_arc + (5.5 if (a1 - a0) > 50 else 7.5), labs[k], rel="given" if k == 0 else ("opposite" if k == 2 else "adjacent"), size=4.0))
+            o.append(_label(cx, cy, (a0 + a1) / 2, r_arc + (5.5 if (a1 - a0) > 50 else 7.5), labs[k], rel="given" if k == 0 else ("opposite" if k == 2 else "adjacent"), size=4.2))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="opp"')
 
 def read_angle_fig(h):

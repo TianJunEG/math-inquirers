@@ -84,7 +84,7 @@ def page37():
         vs = rng.sample(range(35, 146, 5), 6)
         rows = []; keys = []
         for kd, V in zip(kinds, vs):
-            f = make_fig(rng, V, kd, w=58, hh=24)
+            f = make_fig(rng, V, kd, w=58, hh=28)
             if f is None: break
             cand = [180 - V, 360 - V if kd == "point" else V + 10, V + 10, V - 10, V + 20, 90 - V if V < 90 else V - 20]
             cand = [c for c in dict.fromkeys(cand) if 10 <= c <= 350 and c != V]

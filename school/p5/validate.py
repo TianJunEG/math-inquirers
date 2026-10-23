@@ -312,6 +312,12 @@ JS_CBC = """
   return res;
 }
 """
+# the colour pages: the questions printed on the pupil page are the questions printed in the key (a layout change, for example the answer-box size, can silently change the questions)
+for k in BK:
+    if any(p.get("cbc") for p in BK[k]):
+        _pu = open(os.path.join(O, f"{k}_pupil.html")).read(); _ke = open(os.path.join(O, f"{k}_key.html")).read()
+        _qs = set(re.findall(r'data-t="([^"]{6,})"', _pu))
+        rec(f"{k}: every question printed on a colour page is printed in the key too", bool(_qs) and all(q in _ke for q in _qs), str([q for q in _qs if q not in _ke][:3]))
 for k in BK:
   ncbc = sum(1 for p in BK[k] if p.get("cbc"))
   for f in (f"{k}_pupil.html", f"{k}_key.html"):

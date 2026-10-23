@@ -22,7 +22,7 @@ def page34():
         degs.append((deg, rot))
         right = {"small": 0, "right": 1, "great": 2}[c]
         specs.append(dict(q=f'<div class="angfig">{A3.angle_svg(deg, rot)}</div>', opts=['<b class="on">Smaller</b>', '<b class="on">Right angle</b>', '<b class="on">Greater</b>'], ri=right, fixed=True, deg=deg))
-    pre = '<div class="howto"><p>A square has four right angles. A smaller angle fits inside a square corner. A greater angle does not.</p></div>'
+    pre = '<div class="howto"><p>A square corner is a right angle. A smaller angle fits inside it. A greater angle does not.</p></div>'
     P = lettered_choice_page(34, 5434, "Right Angles", 1, "Angles: right angles, smaller and greater than a right angle", STRAND_GE,
         "1.1, 1.2 (concept of an angle; right angles; angles greater than or smaller than a right angle)", ["AN1.1", "AN1.2"], "Lettered choice (angles)",
         ["Compare each marked angle with a square corner.", "Circle the letter of the right choice.", "Write the five letters in the boxes."],
