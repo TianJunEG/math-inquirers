@@ -5,74 +5,92 @@
  "term": 3,
  "lesson": 21,
  "lesson_in_term": 1,
- "title": "STUB: Term 3 Template Check",
- "big_idea": "Template check for Term 2 figures",
- "child_idea": "This is a stub lesson used to prove the Term 2 template; it is not a lesson.",
- "skill": "Structure of numbers",
+ "title": "What Time Is It?",
+ "big_idea": "The clock counts in 5s: the short hand names the hour and the long hand counts the minutes",
+ "child_idea": "A clock has two hands. The short hand shows the hour. The long hand counts the minutes. Long hand on the 12: it is o'clock. Long hand on the 6: it is half past.",
+ "skill": "Reading a scale",
  "ages": "6-8",
  "moe": {
-  "strand": "Whole Numbers",
+  "strand": "Measurement: Time (Primary 1)",
   "topics": [
-   "Numbers to 100: counting a set",
-   "Tens and ones (place value)",
-   "Reading and writing numerals"
+   "Telling time to 5 minutes: o'clock and half past, written as 7:00 and 7:30 (Primary 1, Measurement, Time 2.1, p. 32)",
+   "Counting the minutes in 5s round the face, quarter past and quarter to as 15 and 45 minutes (a reading of Time 2.1; the quarter words are not used in the Primary 1 school papers we have seen)",
+   "A clock seen in a mirror: reflection (not a Primary 1 outcome; line symmetry is Primary 4, p. 39)"
   ],
-  "note": "STUB. Not a lesson: it exists only to exercise the Term 2 figure types, answer tokens, runner items and term-aware footers. Lesson 11 (Who Is Where?) replaces this file."
+  "note": "Strand label for the tutor only. Start here is school Primary 1 work: read and set o'clock and half past, say which hand names the hour, draw the hands, choose the right clock, put three clocks in order. Think harder reads the long hand by counting in 5s (quarter past is 15 minutes, quarter to is 45), checks a claim about the short hand at half past, and uses the quarter words, which the Primary 1 school papers we have seen do not use. BEYOND PRIMARY 1 ON PURPOSE: the Mirror Clock puzzle (Go further G1 to G3): what time is it really if a clock is seen in a mirror (a mirror swaps left and right; reflection is not a Primary 1 outcome and line symmetry is Primary 4). Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Do not describe the lesson as MOE-aligned or syllabus-aligned. Contest tag (tutor only): clock reading and a clock in a mirror (time and calendar). Wording of time questions follows Primary 1 papers: o'clock and half past, times written as digits, am and pm without full stops from Lesson 22."
  },
  "contest_moves": [
-  "split a number into tens and ones",
-  "digit-clue puzzle (find the number from two clues)"
+  "read a clock by counting the minutes in 5s",
+  "context: the hour-hand trap at half past (the short hand sits half way between two numbers)",
+  "context: a clock seen in a mirror (a mirror swaps left and right)",
+  "logic: which times look the same in a mirror"
  ],
+ "contest_where": "Think harder (quarter past and quarter to) and Go further (the Mirror Clock puzzle)",
  "objectives": [
-  "Exercise every Term 2 figure type once in the workbook.",
-  "Exercise the new answer tokens: [], [2], (), [ ], {eq}.",
-  "Exercise the runner: pictures, ordered boxes, list helpers, ordinals, templated choice."
+  "Say that the short hand names the hour and the long hand counts the minutes.",
+  "Read and set a clock for o'clock and half past, and write the time as digits (7:00, 7:30).",
+  "Count the minutes in 5s round the face: the long hand on the 3 is 15 minutes past the hour, on the 6 it is 30 minutes.",
+  "Think harder: read quarter past and quarter to as 15 and 45 minutes, and check a claim about the short hand at half past.",
+  "Go further (Mirror Clock): find the real time when a clock is seen in a mirror, for o'clock and half past."
  ],
  "joining_cold": {
   "remember": [
-   "Count in tens to 100",
-   "Fingers to make 10 (bonds to 10)",
-   "Ten and some more (11 to 19, then 20s and 30s)"
+   "Count in 5s to 60 (Term 1 Lesson 4 and the holiday course, taught again with claps)",
+   "The numbers 1 to 12 go round in a ring, and after 12 comes 1 again (taught again with the clock face)",
+   "Half is two equal parts: 6 counters shared between 2 plates (Term 1 Lesson 8 and Term 2 Lesson 7, taught again)"
   ],
-  "assumes": "Only counting to 20 and showing a number with fingers. Nothing from the holiday course is needed; if the child has done it, skip counting in 10s and bonds to 10 will feel familiar.",
+  "assumes": "Only counting to 12 and sharing a few things between two. Nothing from an earlier lesson is needed: the warm-up claps the count in 5s, goes round the clock face and shares counters. Telling the time is new for most children (the holiday course did not teach it), so every idea is taught from the start.",
   "holiday_topics_revisited": [
-   "Skip counting in 10s (Count with the Frog)",
-   "Number bonds to 10 (Number Bond Inquiry)"
+   "Skip counting in 2s, 5s and 10s (Count with the Frog)"
   ],
   "safe_to_miss": false,
-  "note": "Lesson 1 is one of the hardest to miss in Term 1 (plan, section 2). A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 2."
+  "note": "Not safe to miss: Term 3 Lessons 2 and 3 build on reading the clock, and Mi's Challenge Quest in Term 3 Lesson 10 has a clock gate. A child who misses this lesson watches the recording, cuts out the clock page and does workbook pages 1 and 2 before the next lesson. A child who joins at the start of Term 3 needs nothing from Term 2."
  },
  "materials": {
   "child": [
-   "About 50 small things of one kind: paper clips, dried pasta, buttons, lolly sticks or straws cut short",
-   "6 hair ties, small cups, paper rings or pieces of string (to hold a bundle), or draw rings on paper",
-   "The printed workbook (pages 1 to 5) and the kit page (tens bars and ones squares), already cut out by a grown-up",
-   "A pencil, a rubber and spare paper"
+   "The Term 3 book (given when you enrol), open at the first lesson: workbook pages 1 to 5 and the clock kit page (page 6), which a grown-up cuts out before the lesson: 2 clock faces and 6 loose hands (3 short, wide hour hands and 3 long, thin minute hands)",
+   "A real clock or watch with a face, if you have one (a help, not needed)",
+   "A ruler for drawing the hands (a straight card edge works too)",
+   "6 small things (counters, buttons or dry beans) for the warm-up",
+   "A pencil, a rubber and spare paper",
+   "No printer: draw a clock face on a paper plate or paper (write 1 to 12 round the edge) and cut two strips of card for hands, one short and one long"
   ],
   "tutor": [
-   "A slide deck and a tray of 30 lolly sticks or straws with three hair ties to show on camera if you wish",
-   "A timer slide or a visible clock"
+   "The slide deck",
+   "Your own cut-out clock page, to show the two hands and one face on camera if you wish",
+   "A visible clock or watch for yourself (not shown to the group)"
   ],
   "kit_pages": [
-   "Stub: every Term 3 and 4 kit page"
+   "Clock kit (page 6): 2 clock faces and 6 loose hands (3 short, wide hour hands and 3 long, thin minute hands), all cut out by a grown-up. Keep them in an envelope: we use the clock again in Term 3 Lessons 2, 3 and 10. No pin or fastener: the hands lie flat on the face."
   ],
-  "ruler": false,
-  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears.",
+  "ruler": true,
+  "notes": "Nothing needs to be bought: a real clock is a help, not a need. No pins, no fasteners and no sharp things: the clock hands are loose paper pieces. Nobody cuts during the lesson: a grown-up cuts the kit beforehand. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. A mirror, if used at home, is a small unbreakable one or a bathroom mirror that stays on the wall.",
   "kit_contract": [
    {
-    "piece": "clock hands",
-    "supplied": 6,
-    "max_used": 4,
+    "piece": "clock faces",
+    "supplied": 2,
+    "max_used": 2,
     "used_by": [
-     "S4"
+     "G1",
+     "G2"
     ]
    },
    {
-    "piece": "coins",
-    "supplied": 16,
-    "max_used": 5,
+    "piece": "hour hands (short, wide)",
+    "supplied": 3,
+    "max_used": 2,
     "used_by": [
-     "S2"
+     "G1",
+     "G2"
+    ]
+   },
+   {
+    "piece": "minute hands (long, thin)",
+    "supplied": 3,
+    "max_used": 2,
+    "used_by": [
+     "G1",
+     "G2"
     ]
    }
   ]
@@ -101,12 +119,12 @@
     "id": "explore",
     "title": "Explore",
     "start": 14,
-    "end": 28
+    "end": 27
    },
    {
     "id": "mini",
     "title": "Mini-lesson",
-    "start": 28,
+    "start": 27,
     "end": 38
    },
    {
@@ -147,44 +165,42 @@
    }
   ],
   "optional_slide": "s-opt",
-  "include_rules": true,
-  "notes": "Lesson 1 of the term has a 4-minute opening because it introduces the routine and the four inquirer rules. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
+  "include_rules": false,
+  "notes": "Lesson 1 of Term 3 has a 4-minute opening and a 13-minute Explore because it adds a one-minute routine card for children who are new this term (the four things to know) and because every child sets the clock with their own hands before any picture work. The mini-lesson has 11 minutes: it names the two hands, writes o'clock and half past as digits, counts the minutes in 5s and gives quarter past and quarter to. Start here (pages 1 and 2) takes a middle child about 16 minutes, so in class many children reach Think harder only after the choice slide; Think harder, Go further and the Investigation are for every child to choose, for home and for next time. Answers are asked, then shown (answer slides for Explore, the mini-lesson and the checks), so each reveal costs a slide change; the model counts it. The last 5 minutes are the standing buffer; the optional slide and the spare-time menu are used only if the lesson is on time. In the slow-class model (speech 10 percent slower, children and slide changes 20 percent slower) the buffer absorbs any overrun, so do not plan to use the menu in a slow class.",
+  "skip_order": [
+   "Start with: take the third Explore round (counting the minutes) into the mini-lesson slide on counting in 5s",
+   "Then: shorten choice time (pages 3 to 5 can go home)",
+   "Then: cut the Mirror Clock preview from Talk time (it is in Go further anyway)",
+   "Never shorten the exit ticket reading or the look-back"
+  ]
  },
  "sneak_peek": {
-  "q1": "Count the stars. Write how many. You may draw rings round groups to help.",
-  "q2": "Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number of sticks? Circle Yes or No. I know because ___.",
-  "a1": "24 stars",
-  "a2": "Yes. 3 bundles of ten is 30, and 4 more is 34.",
-  "val1": 24
+  "q1": "Look at the clock. Write the time.",
+  "q2": "Look at the second clock. Write the time.",
+  "a1": "9:00 (9 o'clock)",
+  "a2": "2:30 (half past 2)",
+  "val1": 9
  },
  "rec": {
   "opening": {
-   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your things to bundle. Pause or rewind any time.",
-   "action": "Gather your workbook, pencil, paper and things to bundle. Press play when ready."
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your clock pieces. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil, paper and kit. Press play when ready."
   },
   "remember": {
-   "say": "Recording: join in! Say the numbers out loud and show your fingers. Pause if you need longer.",
-   "action": "Play along. Say and show each answer before the video does."
+   "say": "Recording: join in! Say each answer out loud before I do. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
   },
   "sneak": {
    "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
    "action": "Pause. Try both puzzles on your own paper. A guess is fine."
   },
-  "explore": {
-   "say": "Recording: pause now. Grab a handful, make bundles of ten, then build the numbers I call. Press play when you have tried.",
-   "action": "Pause. Grab and bundle, then build each number with your kit. Write what you find."
-  },
   "mini": {
    "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
    "action": "Watch and copy the examples. Rewind any step you missed."
   },
-  "break": {
-   "say": "Recording: stand up and join in! Big jump for a ten, small hop for a one.",
-   "action": "Stand up and jump the tens and hop the ones."
-  },
   "work": {
-   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
-   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+   "say": "Recording: pause now and do workbook page 1. Press play to check it. Then page 2.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Pages 3 to 5 are for any time."
   },
   "talk": {
    "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
@@ -201,762 +217,34 @@
   "flex": {
    "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
    "action": "Show a grown-up your workbook and tell them one thing you found out."
+  },
+  "explore": {
+   "say": "Recording: pause now. Use your clock hands to follow each step. Press play when you have tried.",
+   "action": "Pause. Set your clock as each step says, then play to check."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Make clock hands with your arms.",
+   "action": "Stand up. Make clock hands with your arms as I call each time."
   }
- },
- "script": {
-  "segments": [
-   {
-    "part": "opening",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-title",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Pencil ready, and your things to bundle on the table."
-     },
-     {
-      "k": "SAY",
-      "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-routine",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Here is our plan. A warm-up, two puzzles, then we explore with real things. Then I teach you a trick, we move, and you work in your workbook."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rules",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Four inquirer rules. Notice it: look closely. Test it: try it with real things. Explain why: say how you know. Mistakes help us: a guess is fine and you can always pass."
-     },
-     {
-      "k": "SAY",
-      "text": "A shopkeeper has 47 pencils to count for a customer. Counting one by one is slow, and it is easy to lose count."
-     },
-     {
-      "k": "ASK",
-      "text": "What could the shopkeeper do to count faster? Tell your screen or your grown-up.",
-      "resp": 20
-     },
-     {
-      "k": "SAY",
-      "text": "Today we learn the shopkeeper's trick: bundles of ten."
-     },
-     {
-      "k": "DO",
-      "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
-      "s": 25
-     },
-     {
-      "k": "NOTE",
-      "text": "Lesson 1 only: show the routine slide for 20 seconds and name the phases; do not read the table. Say the recording notice in your own words: the recording has the tutor, the shared screen and any voice that is unmuted; children may mute and keep their camera off. Standing routine for every lesson: children are muted unless invited; for a group answer they say it quietly to their own room on a count of three."
-     }
-    ]
-   },
-   {
-    "part": "remember",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-rem1",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Stand up if you can. We clap on every number. Count in tens with me: ten, twenty, thirty, all the way to one hundred."
-     },
-     {
-      "k": "WORK",
-      "text": "Count in tens together, clapping, to 100. Then back from 100 to 0, whispering, with big hands on 50.",
-      "s": 45
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rem2",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Fingers to ten. I say a number. Show me how many more fingers make ten."
-     },
-     {
-      "k": "ASK",
-      "text": "Six. How many more to make ten?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Three?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Eight?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Five?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Nine?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-rem3",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Ten and some more. Look at the full ten-frame and the extra counters."
-     },
-     {
-      "k": "ASK",
-      "text": "Ten and three more makes?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Ten and six more?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Twenty and four more?",
-      "resp": 12
-     },
-     {
-      "k": "ASK",
-      "text": "Thirty and seven more?",
-      "resp": 12
-     },
-     {
-      "k": "STUCK",
-      "text": "If a child hesitates on 24 or 37, say the tens word slowly (twenty... four) and point to the tens and the ones in the picture. Do not move on until most children have answered; this idea is the lesson."
-     },
-     {
-      "k": "NOTE",
-      "text": "Answers: 4, 7, 2, 5, 1 then 13, 16, 24, 37. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20."
-     }
-    ]
-   },
-   {
-    "part": "sneak",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-sneak",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
-     },
-     {
-      "k": "READ",
-      "text": "Puzzle one. Count the stars. Write how many. You may draw rings round groups to help."
-     },
-     {
-      "k": "WORK",
-      "text": "Children count the stars and write the number on their own paper.",
-      "s": 55
-     },
-     {
-      "k": "READ",
-      "text": "Puzzle two. Mei has 3 bundles of ten sticks and 4 single sticks. Ben has 34 sticks. Could they have the same number? Circle Yes or No. I know because ___."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write or draw their answer.",
-      "s": 55
-     },
-     {
-      "k": "SAY",
-      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
-     },
-     {
-      "k": "SAY",
-      "text": "Thank you. We will come back to puzzle two in a few minutes."
-     },
-     {
-      "k": "NOTE",
-      "text": "Puzzle 1 answer: 24 stars. Puzzle 2 answer: yes, 3 tens and 4 ones is 34. Look for good ideas to praise later (a child who drew rings of ten, or who said 3 bundles is 30). Do not write scores or keep a list."
-     }
-    ]
-   },
-   {
-    "part": "explore",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-explore1",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Today your hands are the teachers. Grab a handful of your small things, not the whole pile. Make bundles of ten. Count the bundles, then count the singles left over."
-     },
-     {
-      "k": "SAY",
-      "text": "If you finish, try the what-if card: what if you open a bundle?"
-     },
-     {
-      "k": "WORK",
-      "text": "Round 1: each child grabs, bundles and counts. Tutor scans the cameras; a child who wants to may show their bundles to the camera. Nobody has to.",
-      "s": 200
-     },
-     {
-      "k": "ASK",
-      "text": "Tell me what you have. Say it like this: I have, how many tens, and how many ones.",
-      "resp": 50
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore2",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Round two: show me! Use your tens bars and ones squares from the kit page. I call a number. You build it. I will tell you what it should look like, so you can check your own build."
-     },
-     {
-      "k": "SAY",
-      "text": "Seventeen."
-     },
-     {
-      "k": "WORK",
-      "text": "Children build 17, then give a thumbs-up when ready.",
-      "s": 40
-     },
-     {
-      "k": "READ",
-      "text": "Check your own: one bar and seven squares.",
-      "s": 8
-     },
-     {
-      "k": "SAY",
-      "text": "Thirty."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 30.",
-      "s": 35
-     },
-     {
-      "k": "READ",
-      "text": "Check your own: three bars and no squares.",
-      "s": 8
-     },
-     {
-      "k": "SAY",
-      "text": "Fifty-eight."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 58.",
-      "s": 45
-     },
-     {
-      "k": "READ",
-      "text": "Check your own: five bars and eight squares.",
-      "s": 8
-     },
-     {
-      "k": "SAY",
-      "text": "One more. Ravi built thirty-five with 5 bars and 3 squares. Look at your kit. Is Ravi right?"
-     },
-     {
-      "k": "WORK",
-      "text": "Children check with their kit and answer by thumbs up or down, then say why. Answer: no, 5 bars and 3 squares is 53; thirty-five is 3 bars and 5 squares.",
-      "s": 55
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-explore3",
-      "text": ""
-     },
-     {
-      "k": "ASK",
-      "text": "What did you notice? How many singles can be left over? Could you have ten singles left over? Why not?",
-      "resp": 45
-     },
-     {
-      "k": "SAY",
-      "text": "If you have ten singles you can tie them into another bundle. So the singles left over are always nought to nine."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who counts bundles as ones (3 bundles and 4 singles is 7): hold up a real bundle and say, this one is worth ten. Count it: ten, twenty, thirty, then thirty-one, thirty-two."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child with too few things: use the kit bars and squares for round 1 as well."
-     },
-     {
-      "k": "NOTE",
-      "text": "Main room only: no breakout rooms in this lesson, so you can see every camera. Pairs are optional: a grown-up may check the building. Building with the kit is for every child; the what-if card is for any child who wants it, and nobody is named."
-     }
-    ]
-   },
-   {
-    "part": "mini",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-m1",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Look. Ten single sticks. When I tie them together I have one bundle. One bundle is worth ten."
-     },
-     {
-      "k": "ASK",
-      "text": "How many sticks are in one bundle?",
-      "resp": 12
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m2",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Here are 3 bundles and 4 singles. I count the bundles in tens: ten, twenty, thirty. Then I count the singles: thirty-one, thirty-two, thirty-three, thirty-four. Thirty-four sticks."
-     },
-     {
-      "k": "SAY",
-      "text": "I write it in two boxes. Tens: 3. Ones: 4. That makes 34. The left digit counts the tens. The right digit counts the ones."
-     },
-     {
-      "k": "ASK",
-      "text": "Which digit tells me how many bundles?",
-      "resp": 15
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Your turn. Write the number for each picture on your paper."
-     },
-     {
-      "k": "WORK",
-      "text": "Children write three numbers.",
-      "s": 50
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m3a",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Twenty-seven, forty, nineteen."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m4",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Look at forty. 4 bundles and no singles. We write a zero in the ones box. If we left it out, the 4 would look like 4 ones. The zero holds the place."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m5",
-      "text": ""
-     },
-     {
-      "k": "ASK",
-      "text": "Twenty-six and sixty-two use the same digits. Which has more sticks, 26 or 62? How do you know?",
-      "resp": 30
-     },
-     {
-      "k": "SAY",
-      "text": "The tens digit is worth more. 62 has 6 bundles. 26 has only 2 bundles. The order of the digits matters."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m5b",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Sometimes you have lots of singles. Here are 2 bundles and 13 singles. Ten of the singles can tie into a new bundle. Now there are 3 bundles and 3 singles. Same sticks, 33 of them."
-     },
-     {
-      "k": "ASK",
-      "text": "Why can we tie up ten singles? What is a bundle worth?",
-      "resp": 20
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-m6",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Quick-fire. I say a number. You tell me the tens and the ones. Forty-seven."
-     },
-     {
-      "k": "ASK",
-      "text": "Sixty?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "Nineteen?",
-      "resp": 15
-     },
-     {
-      "k": "ASK",
-      "text": "Eighty-two?",
-      "resp": 15
-     },
-     {
-      "k": "WORK",
-      "text": "Count together: tens, then ones: 10, 20, 30, 31, 32, 33, 34.",
-      "s": 20
-     },
-     {
-      "k": "NOTE",
-      "text": "Key words to use every time: bundle (ten), single (one), tens digit, ones digit. Do not teach 'place value' as a term yet. Do not teach carrying. Keep ten singles making a bundle for the Think harder page."
-     },
-     {
-      "k": "STUCK",
-      "text": "If a child reads 34 as 43: ask them to build it with the kit bars and squares and say the tens first."
-     }
-    ]
-   },
-   {
-    "part": "break",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-break",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Stand up and get a sip of water. A big jump for every ten, a small hop for every one. Thirty-four is three big jumps and four small hops."
-     },
-     {
-      "k": "WORK",
-      "text": "Call 12, 25, 40, 31. Children jump the tens and hop the ones. Count the jumps and hops aloud together.",
-      "s": 160
-     }
-    ]
-   },
-   {
-    "part": "work",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-ws1",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "READ",
-      "text": "Page 1, Start here. Question 1: count the sticks and fill in the bundles, the singles and the number. Question 2: draw 3 bundles and 5 singles. Question 3: write the numbers."
-     },
-     {
-      "k": "WORK",
-      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
-      "s": 540
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws1ans",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Twenty-six. Thirty-five. Forty-two, seventy, nineteen, eighty-five. Mark your own page in another colour."
-     },
-     {
-      "k": "SAY",
-      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Page 2. Question 4: fill in tens and ones. Question 5: Ali has 47 sticks. Question 6: Kumar wrote 43. Is he right? Question 7: draw Ali's 6 bundles and Mei's 6 singles, and write each number."
-     },
-     {
-      "k": "WORK",
-      "text": "Page 2, questions 4 to 7.",
-      "s": 540
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-ws2ans",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Five tens and eight ones. Four tens, no ones. Seven tens and one one. Four bundles, seven left over. Kumar should write thirty-four. Question 7: Ali has sixty, Mei has six."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-choice",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
-     },
-     {
-      "k": "WORK",
-      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
-      "s": 300
-     },
-     {
-      "k": "STUCK",
-      "text": "Q2 (drawing): draw a bundle of ten as one long line and a single stick as a short line. Q4 (zero): ask how many singles are left over in 40. Q6: build 3 bundles and 4 singles with the kit, say the tens first. Q7: ask how much one bundle is worth."
-     },
-     {
-      "k": "STUCK",
-      "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
-     },
-     {
-      "k": "NOTE",
-      "text": "Think harder is for ideas taught today in a new setting. Go further is for mastery and extension. Do not announce who is on which page. Pairs are never split unless both children agree. Slow class: the workbook part needs about 31:50 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
-     }
-    ]
-   },
-   {
-    "part": "talk",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-talk",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "READ",
-      "text": "Is 40 the same as 4? Circle Yes or No. Use bundles to explain: I know because ___."
-     },
-     {
-      "k": "WORK",
-      "text": "Build 40 and 4 with your kit bars and squares. Which one has more?",
-      "s": 50
-     },
-     {
-      "k": "WORK",
-      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
-      "s": 60
-     },
-     {
-      "k": "ASK",
-      "text": "Who would like to share? Volunteers first. A pass is always fine.",
-      "resp": 90
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-sneakans",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Remember puzzle two? Mei has 3 bundles and 4 singles. Ben has 34 sticks. Yes! They have the same number, thirty-four."
-     },
-     {
-      "k": "ASK",
-      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
-      "resp": 20
-     },
-     {
-      "k": "NOTE",
-      "text": "Model answer: No. 40 is 4 bundles of ten and no singles. 4 is only 4 singles. 40 has more sticks. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
-     }
-    ]
-   },
-   {
-    "part": "exit",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-exit",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
-     },
-     {
-      "k": "READ",
-      "text": "E1. Look at the bundles and singles. How many sticks are there? E2. Thirty-seven equals how many tens and how many ones? E3. Write the number: seven tens and no ones.",
-      "s": 22
-     },
-     {
-      "k": "WORK",
-      "text": "Children answer E1 to E3 on their own.",
-      "s": 150
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-exitans",
-      "text": ""
-     },
-     {
-      "k": "READ",
-      "text": "Forty-eight. Three tens and seven ones. Seventy, and the zero is needed to show there are no ones."
-     },
-     {
-      "k": "SAY",
-      "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
-     },
-     {
-      "k": "NOTE",
-      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
-     }
-    ]
-   },
-   {
-    "part": "look",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-look",
-      "text": ""
-     },
-     {
-      "k": "REC",
-      "text": "@rec"
-     },
-     {
-      "k": "SAY",
-      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick 'I am still stuck', ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
-     },
-     {
-      "k": "WORK",
-      "text": "Children fill in the look-back box on page 5.",
-      "s": 90
-     }
-    ]
-   },
-   {
-    "part": "flex",
-    "lines": [
-     {
-      "k": "SLIDE",
-      "slide": "s-end",
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Number Words and the Number Line. Please have the number cards cut out from the kit pages, a small toy or a coin, and a pencil and paper. Goodbye, and thank you to the grown-ups."
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-opt",
-      "optional": true,
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Optional, only if you are on time: what is the greatest number you can make with 9 bundles and 9 singles? And what happens if you add one more single?",
-      "optional": true
-     },
-     {
-      "k": "WORK",
-      "text": "Short think time, then take two answers.",
-      "s": 90,
-      "optional": true
-     },
-     {
-      "k": "SLIDE",
-      "slide": "s-menu",
-      "optional": true,
-      "text": ""
-     },
-     {
-      "k": "SAY",
-      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
-      "optional": true
-     },
-     {
-      "k": "NOTE",
-      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 99; one more is ten bundles, which is called a hundred (next lessons). If the whole class is ahead, use the Spare-time menu (guide section 3) instead of rushing on."
-     }
-    ]
-   }
-  ]
  },
  "slides": [
   {
    "id": "s-title",
    "part": "opening",
    "kind": "title",
-   "title": "Bundles and Singles",
-   "subtitle": "Whole numbers: tens and ones",
+   "title": "What Time Is It?",
    "blocks": [
     {
      "t": "card",
      "head": "TODAY WE WILL",
      "items": [
-      "Make bundles of ten, and use them to read and write numbers."
+      "Read a clock: o'clock and half past.",
+      "Count the minutes in 5s."
      ]
     }
    ],
-   "note": "Lesson 1 of Term 1, 90 minutes. Objective: read and write two-digit numbers as bundles of ten and single ones. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the shared screen and any unmuted voice) and that a child may keep the camera off.",
+   "note": "Lesson 1 of Term 3, 90 minutes. Objective: name the two hands, read and set o'clock and half past, write the time as digits, count the minutes in 5s, and (Think harder and Go further) read quarter past and quarter to and a clock seen in a mirror. Plain statement for families: o'clock and half past are school Primary 1 work; the Mirror Clock puzzle goes past Primary 1 on purpose. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 27, mini-lesson 27 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Tell the group the lesson is recorded (the tutor, the shared screen and any voice that is not muted) and that a child may keep the microphone and camera off. Think harder, Go further and the Investigation are for every child to choose.",
+   "subtitle": "The clock counts in 5s",
    "mascot": {
     "size": "l",
     "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -966,170 +254,86 @@
    "id": "s-routine",
    "part": "opening",
    "kind": "light",
-   "title": "Our lesson today",
-   "blocks": [
-    {
-     "t": "table",
-     "header": true,
-     "rows": [
-      [
-       "First",
-       "What we do"
-      ],
-      [
-       "Remember",
-       "Count in tens and show ten with fingers"
-      ],
-      [
-       "Sneak-peek",
-       "Two puzzles. A guess is fine."
-      ],
-      [
-       "Explore",
-       "Bundle real things"
-      ],
-      [
-       "Learn",
-       "Read and write numbers"
-      ],
-      [
-       "Move",
-       "Jump and hop"
-      ],
-      [
-       "Workbook",
-       "Start here, then you choose"
-      ],
-      [
-       "Talk",
-       "Explain your idea"
-      ],
-      [
-       "Exit and look-back",
-       "What did I learn?"
-      ]
-     ]
-    }
-   ],
-   "note": "Show this for about 20 seconds and name the phases only; do not read the table. Lesson 1 only: it introduces the routine every lesson follows."
-  },
-  {
-   "id": "s-rules",
-   "part": "opening",
-   "kind": "light",
-   "title": "Four inquirer rules",
+   "title": "How our lessons work",
    "blocks": [
     {
      "t": "list",
      "ordered": true,
      "items": [
-      "Notice it. Look closely.",
-      "Test it. Try it with real things.",
-      "Explain why. Say how you know.",
-      "Mistakes help us. A guess is fine. You can pass."
-     ]
-    },
-    {
-     "t": "card",
-     "head": "RECORDING",
-     "items": [
-      "We record the tutor, the screen and any voice that is unmuted. You may mute and keep your camera off."
+      "Listen first, then try. A guess is a good start.",
+      "Answer on three: say it quietly, show fingers or a thumbs up.",
+      "Tick your own work on the answer slide.",
+      "Still stuck? Tick the box on your look-back page and show your grown-up."
      ]
     }
    ],
-   "note": "Read the four rules together. Say the recording notice in your own words: the platform records the tutor, the shared screen and any voice that is unmuted; children's video is excluded; names are kept off the screen. A child or parent who does not wish to be heard can stay muted, and a camera can stay off. Then tell the shopkeeper story (47 pencils) and ask the group what a shopkeeper could do."
+   "note": "New-here card, about one minute. Read the four lines slowly. It is the same card in every opening of the term and it covers what a child who joined this term needs. Nobody holds paper to the camera: answers are said quietly on three (microphones stay off), shown with fingers or a thumbs up, or ticked on the child's own page. The still-stuck tick is private: a grown-up may photograph the look-back page after class and send it to the business WhatsApp."
   },
   {
    "id": "s-rem1",
    "part": "remember",
    "kind": "light",
-   "title": "Warm-up: count in tens",
+   "title": "Warm-up: count in 5s",
    "blocks": [
     {
      "t": "chip",
-     "text": "Clap on every number"
+     "text": "Clap and count with me. One clap for each 5."
     },
     {
-     "t": "numrow",
-     "items": [
-      10,
-      20,
-      30,
-      40,
-      50,
-      60,
-      70,
-      80,
-      90,
-      100
-     ]
-    },
-    {
-     "t": "p",
-     "text": "Now count back from 100. Whisper, and big hands on 50!"
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 60,
+     "step": 5,
+     "label_every": 5
     }
    ],
-   "note": "Count in tens to 100 with a clap on each number, then back to 0. This is a spiral review of skip counting in tens (holiday topic) and lets a new child join: they hear it before they say it.",
+   "note": "Children count in fives to 60 with one clap each, then answer three questions aloud: what comes after 35 (40), what comes after 45 (50), and how many claps get us to 30 (6 claps). This is the count in 5s from Term 1 Lesson 4 taught again; a child who has not met it follows the claps and the numbers on the line. A child who is unsure counts on the fingers of one hand, then the other. Fingers or whispers; no writing. Later the long hand of the clock counts in the same way.",
    "mascot": {
     "size": "s",
-    "say": "Clap along with me!"
+    "say": "Let's clap and count!"
    }
   },
   {
    "id": "s-rem2",
    "part": "remember",
    "kind": "light",
-   "title": "Fingers to ten",
+   "title": "Round the ring",
    "blocks": [
     {
+     "t": "chip",
+     "text": "Put your finger on the 12. Go round the ring."
+    },
+    {
      "t": "visual",
-     "type": "ten_frame",
-     "filled": 6,
-     "extra": 0
-    },
-    {
-     "t": "p",
-     "text": "I show 6. How many more fingers make 10?"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      6,
-      3,
-      8,
-      5,
-      9
-     ]
+     "type": "clock",
+     "h": 12,
+     "m": 0,
+     "hide_hands": true,
+     "size": 62
     }
    ],
-   "note": "Say each number; children show on their fingers how many more make ten. Answers: 6 needs 4, 3 needs 7, 8 needs 2, 5 needs 5, 9 needs 1. Hands up on camera is fine. No writing, no marks."
+   "note": "The picture is the face of the kit clock without hands. Children trace round the ring with a finger. Ask: what number comes after 11 (12); what comes after 12 when we go round again (1); what comes just before 1 (12); count round from 4 to 9 (4, 5, 6, 7, 8, 9). The point for later: 12 and 1 sit side by side on a clock, and the numbers go round and round. A child who is unsure touches the numbers on the kit face one at a time."
   },
   {
    "id": "s-rem3",
    "part": "remember",
    "kind": "light",
-   "title": "Ten and some more",
+   "title": "Half is two equal parts",
    "blocks": [
     {
+     "t": "chip",
+     "text": "Share 6 counters between 2 plates."
+    },
+    {
      "t": "visual",
-     "type": "ten_frame",
-     "filled": 10,
-     "extra": 3
-    },
-    {
-     "t": "p",
-     "text": "10 and 3 more is ___"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      "10 + 6",
-      "20 + 4",
-      "30 + 7"
-     ]
+     "type": "objects",
+     "icon": "counter_yellow",
+     "n": 6,
+     "per_row": 6
     }
    ],
-   "note": "Answers: 13, 16, 24, 37. Say the tens word slowly, then the ones: twenty... four. This is the bridge to bundles of ten and singles. Show 20 and 30 as two or three full ten-frames if a child is unsure."
+   "note": "Half means two equal parts. Share six counters between two plates, one at a time: three each. Ask: how many on each plate (3); half of 10 (5); half of 12 (6). Children use their own small things or fingers. This is the sharing in two from Term 1 Lesson 8 and Term 2 taught again, because half past means half way round the clock. Answers: 3, 5, 6."
   },
   {
    "id": "s-sneak",
@@ -1149,15 +353,16 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "Count the stars. Write how many.",
-         "You may draw rings round groups."
+         "Look at the clock.",
+         "Write the time."
         ]
        },
        {
         "t": "visual",
-        "type": "scatter",
-        "n": 24,
-        "seed": 7
+        "type": "clock",
+        "h": 9,
+        "m": 0,
+        "size": "s"
        }
       ],
       [
@@ -1165,136 +370,286 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "Mei has 3 bundles of ten sticks and 4 single sticks.",
-         "Ben has 34 sticks.",
-         "Could they have the same number? Circle Yes or No. I know because ___."
+         "Look at the second clock.",
+         "Write the time."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 2,
+        "m": 30,
+        "size": "s"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: the short hand points to the 9 and the long hand to the 12, so it is 9 o'clock, 9:00. Puzzle 2 is a thinking question on the lesson idea: the long hand points to the 6 and the short hand is halfway between the 2 and the 3, so it is half past 2, 2:30. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 9:00 and 2:30. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: two hands",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Take one clock face and two hands.",
+         "Find the short, wide hand and the long, thin hand.",
+         "Put the long hand on the 12.",
+         "Put the short hand on the 3. What time is it?"
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Puzzle 1 (24 stars) is an access question: any child can try it by counting or drawing rings. Puzzle 2 is a thinking question on the lesson's key idea. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 24; yes (3 tens and 4 ones is 34). Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
+   "note": "Round 1, about 5 minutes. Each child has the cut-out clock face and two hands from the kit page (or a real clock). Say: the short, wide hand is the hour hand; the long, thin hand is the minute hand. Children lay the long hand on the 12 and the short hand on the 3 and say the time: 3 o'clock, 3:00. Then the same with the short hand on the 10: 10 o'clock, 10:00. Ask what stays the same (the long hand stays on the 12). The picture with the hands appears on the next slide, after the children have answered. Answers: 3:00 and 10:00. If a family has no cut-out hands, a real clock or a paper plate with two card strips works."
   },
   {
-   "id": "s-explore1",
+   "id": "s-explore1-ans",
    "part": "explore",
    "kind": "light",
-   "title": "Explore: grab and bundle",
+   "title": "Explore: two hands",
    "blocks": [
     {
-     "t": "list",
-     "ordered": true,
-     "items": [
-      "Grab a handful of small things. Not the whole pile.",
-      "Make bundles of ten: a hair tie, a cup, or a ring on paper.",
-      "Count the bundles. Count the singles left over.",
-      "Say: I have ___ tens and ___ ones."
-     ]
-    },
-    {
-     "t": "card",
-     "head": "WHAT IF?",
-     "items": [
-      "What if you open a bundle? Can you show your number a different way?"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Take one clock face and two hands.",
+         "Find the short, wide hand and the long, thin hand.",
+         "Put the long hand on the 12.",
+         "Put the short hand on the 3. What time is it?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 3,
+        "m": 0,
+        "digital": "3:00",
+        "size": "m"
+       }
+      ]
      ]
     }
    ],
-   "note": "Round 1, about 4 minutes. Objects first, no writing yet. Children bundle in tens and count the singles. A child who wants to may show their bundles to the camera. The what-if card is available from the start so nobody waits: it previews the Think harder idea (opening a bundle), and no child is named for choosing it. A child with too few things can use the kit bars and squares."
+   "note": "Round 1, about 5 minutes. Each child has the cut-out clock face and two hands from the kit page (or a real clock). Say: the short, wide hand is the hour hand; the long, thin hand is the minute hand. Children lay the long hand on the 12 and the short hand on the 3 and say the time: 3 o'clock, 3:00. Then the same with the short hand on the 10: 10 o'clock, 10:00. Ask what stays the same (the long hand stays on the 12). (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-explore2",
    "part": "explore",
    "kind": "light",
-   "title": "Show me!",
+   "title": "Both hands start at 12",
    "blocks": [
     {
-     "t": "p",
-     "text": "Build each number with your tens bars and ones squares. Show a thumbs-up when it is built. Then check your own build."
-    },
-    {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 2,
-     "ones": 3,
-     "label": "example: 23 is 2 bars and 3 squares",
-     "style": "kit"
-    },
-    {
-     "t": "numrow",
-     "items": [
-      17,
-      30,
-      58
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Put both hands on the 12. It is 12 o'clock.",
+         "Move the long hand slowly round to the 6.",
+         "Watch the short hand. Where is it now?"
+        ]
+       }
+      ]
      ]
     }
    ],
-   "note": "Round 2, about 3 minutes, main room. Call each number aloud and show it on the slide. Children build with the kit bars (tens) and squares (ones) and give a thumbs-up. Read the check line aloud so every child can check their own build; nobody holds anything up to the camera. Keep the builds to three: 17, 30 (the zero case) and 58. Answers: 17 is 1 bar and 7 squares; 30 is 3 bars; 58 is 5 bars and 8 squares. The picture of 23 is only an example. Camera tip: a child may tilt the screen so the table can be seen, but this is not required."
+   "note": "Round 2, about 4 minutes. Both hands start together on the 12: 12 o'clock, 12:00. Children move the long hand slowly round to the 6, which is half way round the face, and watch the short hand creep: it ends up half way between the 12 and the 1. Ask: where is the short hand now (between the 12 and the 1); what time is it (half past 12, 12:30). Say: when the long hand has gone half way round, the short hand has gone half way to the next number. Answer: 12:30. The picture appears on the next slide. A child who loses the short hand while moving the long one holds the short hand still with a finger and then looks again."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Both hands start at 12",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Put both hands on the 12. It is 12 o'clock.",
+         "Move the long hand slowly round to the 6.",
+         "Watch the short hand. Where is it now?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 12,
+        "m": 30,
+        "digital": "12:30",
+        "size": "m"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Both hands start together on the 12: 12 o'clock, 12:00. Children move the long hand slowly round to the 6, which is half way round the face, and watch the short hand creep: it ends up half way between the 12 and the 1. Ask: where is the short hand now (between the 12 and the 1); what time is it (half past 12, 12:30). Say: when the long hand has gone half way round, the short hand has gone half way to the next number. Answer: 12:30. (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-explore3",
    "part": "explore",
    "kind": "light",
-   "title": "What did we notice?",
+   "title": "Count the minutes",
    "blocks": [
     {
-     "t": "list",
-     "items": [
-      "How many singles can be left over?",
-      "Could you have ten singles left over? Why not?",
-      "Is it quicker to count 40 singles, or 4 tens?"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Put the long hand on the 12.",
+         "Move it to the 1. That is 5 minutes.",
+         "Keep going and count in 5s.",
+         "How many minutes at the 3? At the 6? At the 9?"
+        ]
+       }
+      ]
      ]
     }
    ],
-   "note": "Take one or two answers from volunteers. Key idea: the singles left over are always 0 to 9, because ten singles tie into another bundle. Counting in tens is quicker and easier to keep track of. Repeat a child's answer in your own words so the recording picks it up."
+   "note": "Round 3, about 4 minutes. The long hand counts the minutes: each number it passes is 5 more minutes. Children move the long hand from the 12 one number at a time, counting 5, 10, 15, and say the minutes at the 3 (15), at the 6 (30), at the 9 (45), and all the way back to the 12 (60 minutes, one whole hour). Say: half way round is 30 minutes, which is half an hour: that is why we say half past. The table appears on the next slide, after the children have answered. Answers: 15, 30, 45 and 60."
+  },
+  {
+   "id": "s-explore3-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Count the minutes",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Put the long hand on the 12.",
+         "Move it to the 1. That is 5 minutes.",
+         "Keep going and count in 5s.",
+         "How many minutes at the 3? At the 6? At the 9?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "MINUTES PAST THE HOUR",
+        "items": [
+         "Long hand on the 12: 0 minutes",
+         "Long hand on the 3: 15 minutes",
+         "Long hand on the 6: 30 minutes",
+         "Long hand on the 9: 45 minutes"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 3, about 4 minutes. The long hand counts the minutes: each number it passes is 5 more minutes. Children move the long hand from the 12 one number at a time, counting 5, 10, 15, and say the minutes at the 3 (15), at the 6 (30), at the 9 (45), and all the way back to the 12 (60 minutes, one whole hour). Say: half way round is 30 minutes, which is half an hour: that is why we say half past. (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-m1",
    "part": "mini",
    "kind": "light",
-   "title": "Ten singles make a bundle",
+   "title": "Two hands, two jobs",
    "blocks": [
     {
-     "t": "visual",
-     "type": "ten_to_bundle"
-    },
-    {
-     "t": "say",
-     "text": "10 singles = 1 bundle of ten"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 11,
+        "m": 0,
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "TWO HANDS",
+        "items": [
+         "The short hand names the hour.",
+         "The long hand counts the minutes."
+        ]
+       }
+      ]
+     ]
     }
    ],
-   "note": "Show ten single sticks, then tie them into one bundle. A bundle is worth ten. Ask: how many sticks are in one bundle? Answer: ten."
+   "note": "Name the two jobs: the short hand names the hour; the long hand counts the minutes. Ask: which hand is short (the hour hand); what hour is the short hand pointing to (11); where is the long hand (on the 12); so what time is it (11 o'clock). Children answer aloud or with fingers. Do not teach the word clockwise as a rule; the hands move round, and that is enough. Say hour hand and minute hand once, then use short hand and long hand."
   },
   {
    "id": "s-m2",
    "part": "mini",
    "kind": "light",
-   "title": "Reading 34",
+   "title": "O'clock",
    "blocks": [
     {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 3,
-     "ones": 4,
-     "label": "3 tens and 4 ones",
-     "table": true
-    },
-    {
-     "t": "p",
-     "text": "30 and 4 more is 34. The left digit counts the tens. The right digit counts the ones."
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 11,
+        "m": 0,
+        "digital": "11:00",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "O'CLOCK",
+        "items": [
+         "The long hand is on the 12.",
+         "The short hand shows which hour.",
+         "We write the hour, a colon, and 00."
+        ]
+       }
+      ]
+     ]
     }
    ],
-   "note": "Think aloud: count the bundles in tens (10, 20, 30) then the singles (31, 32, 33, 34). Write 3 in the tens box and 4 in the ones box. Ask: which digit tells me how many bundles? Answer: the left one, 3."
+   "note": "O'clock: the long hand is on the 12 and the short hand tells which hour. We write it as digits: the hour, a colon, then two digits for the minutes: 11:00. Ask: how do we write 12 o'clock (12:00); what do the two zeros tell us (no minutes past the hour). Never write 11:0 or 11 o'clock 00. Children may write in the air."
   },
   {
    "id": "s-m3",
    "part": "mini",
    "kind": "light",
-   "title": "Your turn: write the number",
+   "title": "Half past",
    "blocks": [
     {
      "t": "chip",
-     "text": "Write on your paper. Timer: 1 minute"
+     "text": "The long hand is on the 6. Where is the short hand?"
     },
     {
      "t": "cols",
@@ -1302,247 +657,220 @@
       [
        {
         "t": "visual",
-        "type": "bundles",
-        "tens": 2,
-        "ones": 7,
-        "size": "s"
-       },
-       {
-        "t": "p",
-        "text": "___"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 4,
-        "ones": 0,
-        "size": "s"
-       },
-       {
-        "t": "p",
-        "text": "___"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 1,
-        "ones": 9,
-        "size": "s"
-       },
-       {
-        "t": "p",
-        "text": "___"
+        "type": "clock",
+        "h": 11,
+        "m": 30,
+        "size": 62
        }
       ]
      ]
     }
    ],
-   "note": "Each child writes on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group."
+   "note": "Half past: the long hand is on the 6, half way round, so 30 minutes have gone. The short hand has gone half way from the 11 to the 12, so the hour is still 11: half past 11, written 11:30. Ask: is it half past 11 or half past 12 (half past 11); why (the short hand has not reached the 12 yet). The card appears on the next slide, after the children have answered. The trap: reading the number the short hand is nearest to. Answer: 11:30."
   },
   {
-   "id": "s-m3a",
+   "id": "s-m3-ans",
    "part": "mini",
    "kind": "light",
-   "title": "Check: write the number",
+   "title": "Half past",
    "blocks": [
+    {
+     "t": "chip",
+     "text": "The long hand is on the 6. Where is the short hand?"
+    },
     {
      "t": "cols",
      "cols": [
       [
        {
         "t": "visual",
-        "type": "bundles",
-        "tens": 2,
-        "ones": 7,
-        "size": "s"
-       },
-       {
-        "t": "answer",
-        "text": "27"
+        "type": "clock",
+        "h": 11,
+        "m": 30,
+        "size": 62
        }
       ],
       [
        {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 4,
-        "ones": 0,
-        "size": "s"
-       },
-       {
-        "t": "answer",
-        "text": "40"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 1,
-        "ones": 9,
-        "size": "s"
-       },
-       {
-        "t": "answer",
-        "text": "19"
+        "t": "card",
+        "head": "HALF PAST",
+        "items": [
+         "The long hand is on the 6: half way round.",
+         "The short hand is half way between the 11 and the 12.",
+         "It is half past 11. We write 11:30."
+        ]
        }
       ]
      ]
     }
    ],
-   "note": "Answers: 27, 40, 19. Read each answer aloud so a child watching the recording can mark their own work."
+   "note": "Half past: the long hand is on the 6, half way round, so 30 minutes have gone. The short hand has gone half way from the 11 to the 12, so the hour is still 11: half past 11, written 11:30. Ask: is it half past 11 or half past 12 (half past 11); why (the short hand has not reached the 12 yet). (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-m4",
    "part": "mini",
    "kind": "light",
-   "title": "The zero holds the place",
+   "title": "Counting the minutes in 5s",
    "blocks": [
     {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 4,
-     "ones": 0,
-     "label": "4 tens and 0 ones",
-     "table": true
+     "t": "chip",
+     "text": "Count in 5s from the 12 to the long hand."
     },
     {
-     "t": "p",
-     "text": "No singles, so the ones box has a 0. Without the 0, 4 would look like 4 ones."
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 5,
+        "m": 15,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 5,
+        "m": 45,
+        "size": "s"
+       }
+      ]
+     ]
     }
    ],
-   "note": "Zero ones means no singles. The zero is needed so the 4 stays in the tens place. A common slip is to write 4 for 4 tens."
+   "note": "Count the minutes in 5s. First clock: the long hand is on the 3; count 5, 10, 15, so 15 minutes past 5, 5:15. Second clock: the long hand is on the 9; count 5, 10, ... 45, so 45 minutes past 5, 5:45. Ask: how many minutes at each (15 and 45). The card appears on the next slide, after the children have answered. Say: a quarter of an hour is 15 minutes, so 5:15 is quarter past 5; 5:45 is 15 minutes before 6, so it is quarter to 6. Quarter past and quarter to are for Think harder; the school papers we have seen use only o'clock and half past, so the digits are the main thing. Answers: 5:15 and 5:45."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Counting the minutes in 5s",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Count in 5s from the 12 to the long hand."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 5,
+        "m": 15,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 5,
+        "m": 45,
+        "size": "s"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "card",
+     "head": "SAME HOUR, TWO TIMES",
+     "items": [
+      "5:15 is 15 minutes past 5. We say quarter past 5.",
+      "5:45 is 45 minutes past 5. We say quarter to 6.",
+      "A quarter of an hour is 15 minutes."
+     ]
+    }
+   ],
+   "note": "Count the minutes in 5s. First clock: the long hand is on the 3; count 5, 10, 15, so 15 minutes past 5, 5:15. Second clock: the long hand is on the 9; count 5, 10, ... 45, so 45 minutes past 5, 5:45. Ask: how many minutes at each (15 and 45). (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-m5",
    "part": "mini",
    "kind": "light",
-   "title": "Same digits, different number",
+   "title": "Your turn",
    "blocks": [
     {
      "t": "cols",
      "cols": [
       [
        {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 2,
-        "ones": 6,
-        "size": "s",
-        "label": "26"
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 6,
-        "ones": 2,
-        "size": "s",
-        "label": "62"
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 10 o'clock.",
+         "Move the long hand to make half past 10.",
+         "Where is the short hand now? Write the time."
+        ]
        }
       ]
      ]
-    },
-    {
-     "t": "p",
-     "text": "Which has more sticks? How do you know?"
     }
    ],
-   "note": "26 is 2 bundles and 6 singles. 62 is 6 bundles and 2 singles. 62 has more because the tens digit is worth more. The order of the digits matters. The Talk time question uses the zero case instead, so this idea is not repeated."
+   "note": "Each child works with their own clock. Set 10 o'clock (long hand on the 12, short hand on the 10), then move the long hand to the 6. The short hand ends half way between the 10 and the 11. The time is half past 10, written 10:30. Walk the cameras; do not ask children to hold their clock up. Wait 10 seconds before helping. The picture and the answer appear on the next slide. Answer: 10:30. Children tick their own work."
   },
   {
-   "id": "s-m5b",
+   "id": "s-m5-ans",
    "part": "mini",
    "kind": "light",
-   "title": "Ten singles can tie up",
+   "title": "Your turn",
    "blocks": [
     {
      "t": "cols",
      "cols": [
       [
        {
-        "t": "visual",
-        "type": "bundles",
-        "tens": 2,
-        "ones": 13,
-        "size": "s",
-        "label": "2 tens and 13 ones"
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 10 o'clock.",
+         "Move the long hand to make half past 10.",
+         "Where is the short hand now? Write the time."
+        ]
        }
       ],
       [
        {
         "t": "visual",
-        "type": "bundles",
-        "tens": 3,
-        "ones": 3,
-        "size": "s",
-        "label": "3 tens and 3 ones"
+        "type": "clock",
+        "h": 10,
+        "m": 30,
+        "digital": "10:30",
+        "size": "m"
        }
       ]
      ]
-    },
-    {
-     "t": "say",
-     "text": "13 ones = 1 ten and 3 ones"
     }
    ],
-   "note": "Show 2 bundles and 13 singles, then tie ten of the singles into a third bundle: 3 bundles and 3 singles. Both pictures are 33 sticks. This is the idea Think harder uses (5 tens and 14 ones). Keep it to about a minute: it is a worked example, not a new skill to drill."
-  },
-  {
-   "id": "s-m6",
-   "part": "mini",
-   "kind": "light",
-   "title": "Count: tens, then ones",
-   "blocks": [
-    {
-     "t": "numrow",
-     "items": [
-      10,
-      20,
-      30,
-      31,
-      32,
-      33,
-      34
-     ]
-    },
-    {
-     "t": "chip",
-     "text": "Say it together"
-    }
-   ],
-   "note": "Count the 3 bundles then the 4 singles together. This is the same count as the explore. Keep it short."
+   "note": "Each child works with their own clock. Set 10 o'clock (long hand on the 12, short hand on the 10), then move the long hand to the 6. The short hand ends half way between the 10 and the 11. The time is half past 10, written 10:30. Walk the cameras; do not ask children to hold their clock up. Wait 10 seconds before helping. (answer slide: shown after the children have answered)"
   },
   {
    "id": "s-break",
    "part": "break",
    "kind": "dark",
-   "title": "Jump the tens, hop the ones",
+   "title": "Clock arms",
    "blocks": [
     {
      "t": "p",
-     "text": "A big jump for every ten. A small hop for every one."
-    },
-    {
-     "t": "numrow",
-     "items": [
-      12,
-      25,
-      40,
-      31
-     ]
+     "text": "Stand up. Make clock hands with your arms."
     },
     {
      "t": "p",
-     "text": "34 is 3 big jumps and 4 small hops. Sip some water."
+     "text": "Arms up: 12 o'clock."
+    },
+    {
+     "t": "p",
+     "text": "One arm out to the side: 3 o'clock."
+    },
+    {
+     "t": "p",
+     "text": "Arms down: 6 o'clock."
     }
    ],
-   "note": "Four minutes. Stand up on camera. Call each number and have children jump the tens and hop the ones; count the jumps and hops aloud. No equipment. Keep it gentle for small spaces."
+   "note": "Four minutes. Stand up on camera with a little clear space. Both arms straight up is 12 o'clock. One arm out to the right and the other down is 3 o'clock. Both arms down is 6 o'clock. One arm out to the left is 9 o'clock. Call a time, children show it, then call the next. Finish with a slow count in 5s with big arm circles. Then sip some water. No running, no equipment. A child may stay seated and use one arm. No prizes and no comparing."
   },
   {
    "id": "s-ws1",
@@ -1552,19 +880,38 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 1 to 3. Timer: 9 minutes"
+     "text": "Questions 1 and 2. Take your time."
     },
     {
      "t": "qs",
      "ids": [
       "S1",
-      "S2",
+      "S2"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own with their clock; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: four clocks to read and write as digits (two o'clock times and two half past). Question 2: draw the hands for 4 o'clock with a ruler. Question 3: the bus leaves at half past 7; circle the correct clock."
+  },
+  {
+   "id": "s-ws1b",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
       "S3"
      ],
      "short": true
     }
    ],
-   "note": "Read questions 1 and 2 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder."
+   "note": "Read question 3 aloud: the bus leaves at half past 7; circle the correct clock. The three clocks have the labels (1), (2) and (3) under them. Children work on their own with their clock; wait 10 seconds before helping."
   },
   {
    "id": "s-ws1ans",
@@ -1581,7 +928,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 1:00, 8:00, 3:30, 9:30; Q2 the short hand on the 4 and the long hand on the 12; Q3 clock (2)."
   },
   {
    "id": "s-ws2",
@@ -1591,7 +938,7 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "Questions 4 to 7. Timer: 9 minutes"
+     "text": "Questions 4 to 6. Take your time."
     },
     {
      "t": "qs",
@@ -1603,7 +950,7 @@
      "short": true
     }
    ],
-   "note": "Read question 6 aloud: it is a spot-the-mistake. Read question 7 aloud as well: draw Ali's and Mei's sticks. Children may draw bundles to decide."
+   "note": "Read questions 4 to 6 aloud with their options. Question 4: choose the correct answer for a clock and write its number in the bracket. Question 5: three children wake up; the clocks have names under them; who wakes up first and who wakes up last. Question 6: fill in the blanks with short or long."
   },
   {
    "id": "s-ws2ans",
@@ -1620,7 +967,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, Kumar should write 34, because 43 is 4 tens and 3 ones. Never ask a child to show a wrong answer to the group. Question 7 answer: Ali has 60 and Mei has 6, because 6 tens is much more than 6 ones."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 option (1), 2 o'clock; Q5 Mei first, Ben last; Q6 short, long."
   },
   {
    "id": "s-choice",
@@ -1638,15 +985,15 @@
       ],
       [
        "Think harder (page 3)",
-       "Our idea in a new setting"
+       "Quarter past and quarter to"
       ],
       [
        "Go further (page 4)",
-       "Bigger puzzles"
+       "The Mirror Clock"
       ],
       [
        "Investigation (page 5)",
-       "A pattern to find"
+       "Where is the short hand?"
       ],
       [
        "Check",
@@ -1659,7 +1006,7 @@
      "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
     }
    ],
-   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
   },
   {
    "id": "s-talk",
@@ -1669,21 +1016,22 @@
    "blocks": [
     {
      "t": "card",
-     "head": "TALK ABOUT IT",
+     "head": "A CHILD SAYS",
      "items": [
-      "Is 40 the same as 4?"
+      "The long hand is on the 12.",
+      "So it is always 12 o'clock."
      ]
     },
     {
      "t": "p",
-     "text": "Use bundles to explain."
+     "text": "Is the child right? How could we check with our clock?"
     },
     {
      "t": "chip",
      "text": "I think ... because ..."
     }
    ],
-   "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 40 is 4 bundles and no singles, and 4 is only 4 singles, so 40 has more. Repeat each child's answer in your own words for the recording."
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test the claim with their clock: long hand on the 12, short hand on the 3, then on the 10. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. The long hand on the 12 tells us it is an o'clock time, but the short hand says which one: it can be 3 o'clock, 10 o'clock or any other. Repeat each child answer in your own words for the recording."
   },
   {
    "id": "s-sneakans",
@@ -1692,19 +1040,36 @@
    "title": "Back to the sneak-peek",
    "blocks": [
     {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 3,
-     "ones": 4,
-     "label": "3 tens and 4 ones is 34",
-     "table": true
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 9,
+        "m": 0,
+        "digital": "9:00",
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 2,
+        "m": 30,
+        "digital": "2:30",
+        "size": "s"
+       }
+      ]
+     ]
     },
     {
      "t": "answer",
-     "text": "Yes! Mei and Ben can have the same number: 34."
+     "text": "9 o'clock is 9:00. Half past 2 is 2:30."
     }
    ],
-   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer."
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. Puzzle 1: the short hand is on the 9 and the long hand on the 12, so it is 9 o'clock, 9:00. Puzzle 2: the long hand is on the 6, so it is half past; the short hand is half way between the 2 and the 3, so it is half past 2, 2:30. It was the same idea: the short hand names the hour, the long hand counts the minutes."
   },
   {
    "id": "s-exit",
@@ -1714,7 +1079,7 @@
    "blocks": [
     {
      "t": "chip",
-     "text": "On your own. No looking back. Timer: 3 minutes"
+     "text": "On your own. No looking back."
     },
     {
      "t": "qs",
@@ -1726,7 +1091,7 @@
      "short": false
     }
    ],
-   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud. E1 has two clocks. The figures on the slide are small. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
   },
   {
    "id": "s-exitans",
@@ -1743,7 +1108,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children check their own ticket in a different colour."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 7:00 and 6:30; E2 the long hand on the 6 and the short hand half way between the 8 and the 9; E3 half past."
   },
   {
    "id": "s-look",
@@ -1755,7 +1120,7 @@
      "t": "lookback"
     }
    ],
-   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional; at the start of the next lesson you may say to the whole group: today you could try drawing it, using objects or checking your answer.",
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
    "mascot": {
     "size": "s",
     "say": "Take your time. You can pass."
@@ -1775,12 +1140,12 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Number Words and the Number Line",
-      "Have ready: number cards, a small toy, pencil and paper."
+      "Five Minutes at a Time",
+      "Have ready: your clock, the event cards page cut out by a grown-up (the mat is not cut), a pencil and paper."
      ]
     }
    ],
-   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families to keep the clock (2 faces and 6 hands) in an envelope: we use it in the next lessons. If the whole class is ahead, show the optional slide and use the Spare-time menu from the tutor guide.",
    "mascot": {
     "size": "l",
     "say": "Great thinking today!"
@@ -1790,32 +1155,41 @@
    "id": "s-opt",
    "part": "flex",
    "kind": "light",
-   "optional": true,
-   "title": "Go further: what if?",
+   "title": "Go further: half past 12",
    "blocks": [
     {
-     "t": "p",
-     "text": "What is the greatest number you can make with 9 bundles and 9 singles?"
-    },
-    {
-     "t": "p",
-     "text": "What happens if you add one more single?"
-    },
-    {
-     "t": "visual",
-     "type": "bundles",
-     "tens": 9,
-     "ones": 9,
-     "size": "s"
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "p",
+        "text": "It is half past 12. Where is the short hand?"
+       },
+       {
+        "t": "p",
+        "text": "Where is the long hand?"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 12,
+        "m": 30,
+        "size": "m",
+        "hide_hands": true
+       }
+      ]
+     ]
     }
    ],
-   "note": "Optional, only if you are on time. Answer: 99. One more single makes 10 singles, which tie into a tenth bundle: ten bundles. Ten tens have a name: a hundred (Lesson 2 onwards). Take two answers and move on."
+   "note": "Optional, only if you are on time. At half past 12 the long hand is on the 6 and the short hand is half way between the 12 and the 1, just past the 12. Children point with a finger or place their hands on their kit clock. Take two answers and move on. This links to the Investigation. Answer: long hand on the 6; short hand between the 12 and the 1.",
+   "optional": true
   },
   {
    "id": "s-menu",
    "part": "flex",
    "kind": "light",
-   "optional": true,
    "title": "If we have time: pick one",
    "blocks": [
     {
@@ -1827,16 +1201,16 @@
        "What we do"
       ],
       [
-       "Is it always true?",
-       "Add one more single. Does the ones digit always go up by one?"
+       "Clock hunt",
+       "Find a clock at home. Is it o'clock or half past?"
       ],
       [
        "Make a puzzle",
-       "Write a mystery number puzzle for your grown-up"
+       "Set your clock. Ask your grown-up for the time."
       ],
       [
        "Teach it back",
-       "Show how to read 52 with bundles and singles"
+       "Show a toy which hand names the hour."
       ]
      ]
     },
@@ -1845,112 +1219,929 @@
      "text": "Optional. Everyone may join."
     }
    ],
-   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum."
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
   }
  ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording. Welcome anyone who is new this term: every idea today is taught from the start, and nobody needs Term 2.",
+      "s": 25
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Welcome to Term 3. Pencil ready, and your clock on the table: the two faces and the six hands, cut out. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Microphones stay off. When I say on three, say the answer quietly to your own room and show it with fingers or a thumbs up. If I invite you to talk to everyone, switch your microphone on, then off again. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-routine",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four things to know. Listen first, then try: a guess is a good start. Answer on three. Tick your own work on the answer slide. If you are still stuck, tick the box on your look-back page and show your grown-up."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we read the clock. A clock has two hands."
+     },
+     {
+      "k": "ASK",
+      "text": "Look at a clock or watch at home if you can see one. What do we use a clock for?",
+      "resp": 15
+     },
+     {
+      "k": "WORK",
+      "text": "Children look round the room for a clock and say what it shows, quietly.",
+      "s": 20
+     },
+     {
+      "k": "SAY",
+      "text": "Let us warm up."
+     },
+     {
+      "k": "NOTE",
+      "text": "New this term? The routine slide takes about one minute and covers what a child who missed Terms 1 and 2 needs. Say the recording statement and the microphone routine in the same words every lesson. Do not read out a child's name with an answer. The gallery shows faces and fingers, not tables: ask for a finger answer when you need to see something. The still-stuck route is the tick on the look-back page: a grown-up may photograph that page and send it to the business WhatsApp after class (the number is in the grown-up note, never on a slide)."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: o'clock and half past are school Primary 1 work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s. The Mirror Clock puzzle goes beyond Primary 1 on purpose. The cut-out clock has loose hands: no pins, so nothing sharp."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Count in fives with me. Clap once for each count: five, ten, fifteen, and on to sixty."
+     },
+     {
+      "k": "WORK",
+      "text": "Count in fives together to 60 with one clap each; slow and clear.",
+      "s": 30
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after thirty-five?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after forty-five?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "We clap six times. What number do we reach? Count in fives to find out.",
+      "resp": 15
+     },
+     {
+      "k": "WORK",
+      "text": "Count back from 60 in fives, whispering, with a soft clap each time.",
+      "s": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The numbers on a clock go round in a ring. Put your finger on the twelve and go round."
+     },
+     {
+      "k": "WORK",
+      "text": "Children trace round the ring of numbers on their clock face with a finger, saying the numbers.",
+      "s": 20
+     },
+     {
+      "k": "ASK",
+      "text": "What number comes after eleven?",
+      "resp": 8
+     },
+     {
+      "k": "ASK",
+      "text": "We go round again. What number comes after twelve?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "What number comes just before one?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "Count round the ring from four to nine.",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Half means two equal parts. Share these six counters between two plates, one at a time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children share 6 small things between two pieces of paper, one at a time.",
+      "s": 30
+     },
+     {
+      "k": "ASK",
+      "text": "How many are on each plate?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "What is half of ten?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "What is half of twelve?",
+      "resp": 10
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about the count in fives, count on one hand, then the other. For the ring, touch the numbers on the kit face one at a time. For half, deal small things one at a time onto two pieces of paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 40, 50, 30; 12, 1, 12, 4 to 9; 3, 5, 6. Children answer with a whisper, fingers or hands. Nobody writes. Do not say minute hand yet. Joining cold: all you need is counting to 12 and sharing."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Look at the clock. Write the time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the time on their own paper.",
+      "s": 60
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Look at the second clock. Write the time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 90
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 9:00 (9 o'clock). Puzzle 2 answer: 2:30 (half past 2). Look for good ideas to praise later (a child who noticed the short hand sits between the 2 and the 3). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Take one clock face and two hands. The short, wide hand names the hour. The long, thin hand counts the minutes."
+     },
+     {
+      "k": "SAY",
+      "text": "Put the long hand on the twelve. Put the short hand on the three."
+     },
+     {
+      "k": "WORK",
+      "text": "Children lay the long hand on the 12 and the short hand on the 3 on their clock face.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it? Say it on three.",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "It is three o'clock, three colon zero zero. Now keep the long hand on the twelve and move the short hand to the ten."
+     },
+     {
+      "k": "WORK",
+      "text": "Children move the short hand to the 10.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it now?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "What stayed the same on your clock?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Put both hands on the twelve. It is twelve o'clock. Now move the long hand slowly round to the six, and watch the short hand."
+     },
+     {
+      "k": "WORK",
+      "text": "Children move the long hand slowly to the 6 and watch the short hand creep.",
+      "s": 90
+     },
+     {
+      "k": "ASK",
+      "text": "Where is the short hand now?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The long hand went half way round, so the short hand went half way to the next number. It is half past twelve, twelve thirty."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Put the long hand on the twelve. Move it to the one: that is five minutes. Keep going and count in fives."
+     },
+     {
+      "k": "WORK",
+      "text": "Children move the long hand one number at a time and count 5, 10, 15 and on.",
+      "s": 90
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes when the long hand is on the three?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes at the six?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes at the nine?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "The long hand goes all the way round to the twelve again. How many minutes is that?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Half way round is thirty minutes, half an hour. That is why we say half past."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who loses the short hand while moving the long one holds the short hand still with a finger. A child with no cut-out hands uses a real clock, or a paper plate with two strips of card. If hands slide, lay a finger on the middle."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say answers quietly on three and show fingers. You cannot see small clocks on tiles: ask for a thumb when a child has set the time. Answers: 3:00, 10:00; the long hand stays on the 12; short hand between the 12 and the 1, 12:30; 15, 30, 45, 60 minutes. Do not name a child with a wrong answer."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two hands, two jobs. The short hand names the hour. The long hand counts the minutes."
+     },
+     {
+      "k": "ASK",
+      "text": "What hour does the short hand point to?",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "The long hand is on the twelve. What time is it?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Eleven o'clock. We write it with digits: the hour, a colon, then two zeros. Eleven colon zero zero."
+     },
+     {
+      "k": "ASK",
+      "text": "How do we write twelve o'clock?",
+      "resp": 12
+     },
+     {
+      "k": "WORK",
+      "text": "Children set their clock to twelve o'clock and write it with digits on their own paper.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Now the long hand is on the six, half way round. Where is the short hand?"
+     },
+     {
+      "k": "ASK",
+      "text": "Is it half past eleven or half past twelve?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Half past eleven, eleven thirty. The short hand has not reached the twelve yet, so the hour is still eleven."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set their clock to half past eleven and look at the short hand.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Count the minutes in fives from the twelve to the long hand. Try the first clock."
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes past five is the first clock?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many minutes past five is the second clock?",
+      "resp": 15
+     },
+     {
+      "k": "WORK",
+      "text": "Children put the long hand on the 3, then on the 9, counting in fives aloud.",
+      "s": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Fifteen minutes is a quarter of an hour. Five fifteen is quarter past five. Five forty-five is quarter to six. We write the digits first."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Set your clock to ten o'clock. Move the long hand to make half past ten. Where is the short hand now? Write the time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set their clocks and write the time on their own paper. Wait 10 seconds before helping.",
+      "s": 90
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5-ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "The short hand is half way between the ten and the eleven. The time is ten thirty. Tick your own work with a tick."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: short hand, long hand, hour, minutes, o'clock, half past. Do not teach the word clockwise as a rule. Say hour hand and minute hand once only. Quarter past and quarter to are for Think harder: the digits matter most."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child reads the hour from the number the short hand is nearest to, ask: has the short hand reached the next number yet? If a child says the 6 means 6 minutes, move the long hand to the 6 and count in fives together."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We make clock hands with our arms. Both arms up is twelve o'clock."
+     },
+     {
+      "k": "WORK",
+      "text": "Call the times: 12 o'clock both arms up; 3 o'clock one arm out to the right; 6 o'clock both arms down; 9 o'clock one arm out to the left. Then count slowly in fives with big arm circles. Children may stay seated and use one arm.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: write the time for each clock. There are four clocks. Question 2: draw the hands to show four o'clock. Use a ruler."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1b",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 3: the bus leaves at half past seven. Circle the correct clock."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 1:00, 8:00, 3:30 and 9:30. Question 2: the short hand on the four and the long hand on the twelve. Question 3: clock 2. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: look at the clock. Choose the correct answer. Option 1: two o'clock. Option 2: half past two. Option 3: twelve o'clock. Option 4: half past twelve. Question 5: Ben, Mei and Ali wake up at different times. Who wakes up first? Who wakes up last? Question 6: fill in the blanks. Write short or long. The blank names the hour hand and the minute hand."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 520
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: option 1, two o'clock. Question 5: Mei wakes up first and Ben wakes up last. Question 6: short, then long."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 150
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: look at the long hand first; on the 12 it is an o'clock time, on the 6 it is half past. Q2: draw the long hand to the 12, then the short hand to the 4. Q3: find the clock with the long hand on the 6 and the short hand between the 7 and the 8. Q4: the short hand names the hour. Q5: read all three times first, then compare. Q6: touch the short hand on your clock."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder reads quarter past and quarter to by counting in 5s and checks a claim about the short hand at half past. Go further is the Mirror Clock (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 16 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child says: the long hand is on the twelve, so it is always twelve o'clock. Is the child right? How could we check with our clock?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test the claim with your clock: long hand on the 12, short hand on the 3, then on the 10.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? The first clock is nine o'clock, nine colon zero zero. The second is half past two: the long hand is on the six, and the short hand is half way between the two and the three."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no. The long hand on the 12 tells us it is an o'clock time, but the short hand says which one: it could be 3 o'clock, 10 o'clock or any other. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Write the time for each clock. There are two clocks. E2. Draw the hands to show half past eight. Use a ruler. E3. The long hand is on the six. Circle o'clock or half past."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 225
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: 7:00 and 6:30. E2: the long hand on the six and the short hand half way between the eight and the nine. E3: half past."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Five Minutes at a Time. Please have your clock ready, the event cards page cut out by a grown-up (the mat is not cut), a pencil and paper. Keep your clock pieces in an envelope. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: it is half past twelve. Where is the short hand? Where is the long hand?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the long hand on the 6 and the short hand just past the 12, half way to the 1. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
  "tiers": {
   "start": [
    {
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Write the place of each child.",
-    "answer": "1st, 2nd, 3rd, 4th, 5th",
-    "val": [
-     "1st",
-     "2nd",
-     "3rd",
-     "4th",
-     "5th"
-    ],
-    "hint": "Start at the door. The first child is 1st.",
-    "solution": "The child nearest the door is 1st, then 2nd, 3rd, 4th and 5th.",
-    "mistakes": [
-     "Counting from the wrong end."
-    ],
-    "mins": 1.5,
+    "text": "Write the time for each clock.",
     "parts": [],
-    "lines": 0,
-    "visual": {
-     "type": "clock",
-     "h": 4,
-     "m": 0,
-     "digital": "[]"
-    }
+    "answer": "1:00; 8:00; 3:30; 9:30",
+    "val": [
+     "1:00",
+     "8:00",
+     "3:30",
+     "9:30"
+    ],
+    "hint": "Look at the long hand first. On the 12 it is an o'clock time. On the 6 it is half past. The short hand tells which hour.",
+    "solution": "The first two clocks have the long hand on the 12, so they are o'clock times: the short hand points to the 1 and the 8, so 1:00 and 8:00. The last two have the long hand on the 6, so they are half past: the short hand is half way between the 3 and the 4 (3:30) and half way between the 9 and the 10 (9:30).",
+    "mistakes": [
+     "Writing 12:00 for the first two clocks (reading the long hand as the hour).",
+     "Writing 4:30 for the fourth clock (reading the number the short hand is going towards)."
+    ],
+    "mins": 4,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 1,
+      "m": 0,
+      "digital": "[]",
+      "size": 75
+     },
+     {
+      "type": "clock",
+      "h": 8,
+      "m": 0,
+      "digital": "[]",
+      "size": 75
+     },
+     {
+      "type": "clock",
+      "h": 3,
+      "m": 30,
+      "digital": "[]",
+      "size": 75
+     },
+     {
+      "type": "clock",
+      "h": 9,
+      "m": 30,
+      "digital": "[]",
+      "size": 75
+     }
+    ]
    },
    {
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Count the apples.",
-    "answer": "7",
-    "val": 7,
-    "hint": "Touch each apple once.",
-    "solution": "Count 1, 2, 3, 4, 5, 6, 7.",
-    "mistakes": [
-     "Counting one twice."
-    ],
-    "mins": 1.5,
+    "text": "Draw the hands to show 4 o'clock. Use a ruler.",
     "parts": [
      {
       "l": "",
-      "text": "There are [] apples.",
-      "ans": "7",
-      "val": 7
+      "text": "Draw the short hand and the long hand.",
+      "ans": "short hand on the 4, long hand on the 12",
+      "val": "draw"
      }
     ],
+    "answer": "The short hand on the 4 and the long hand on the 12",
+    "val": [
+     "draw"
+    ],
+    "hint": "At o'clock the long hand points to the 12. Draw it first. Then draw the short hand to the 4.",
+    "solution": "For 4 o'clock the long hand points straight up to the 12, and the short hand points to the 4. The long hand is longer than the short hand.",
+    "mistakes": [
+     "Drawing both hands the same length.",
+     "Drawing the long hand to the 4 and the short hand to the 12 (hands swapped)."
+    ],
+    "mins": 3,
     "visual": {
-     "type": "money",
-     "items": [
-      {
-       "v": "50¢",
-       "n": 2
-      },
-      {
-       "v": "$5"
-      }
-     ],
-     "size": "s"
+     "type": "clock",
+     "h": 4,
+     "m": 0,
+     "hide_hands": true,
+     "digital": "4:00"
     }
    },
    {
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Fill in the boxes.",
-    "answer": "4 groups of 3 = 12",
+    "text": "The bus leaves at half past 7. Circle the correct clock.",
+    "parts": [],
+    "choices": [
+     "Clock (1)",
+     "Clock (2)",
+     "Clock (3)"
+    ],
+    "answer": "Clock (2)",
     "val": [
-     4,
-     3,
-     12
+     "Clock (2)"
     ],
-    "hint": "Count the plates, then the cookies on one plate.",
-    "solution": "4 plates with 3 cookies each: 3 + 3 + 3 + 3 = 12.",
+    "hint": "Half past means the long hand is on the 6. Then look at the short hand.",
+    "solution": "Half past 7 is 7:30. The long hand is on the 6 and the short hand is half way between the 7 and the 8. That is clock (2). Clock (1) is 7 o'clock and clock (3) is half past 1.",
     "mistakes": [
-     "Counting plates as cookies."
+     "Choosing clock (1): 7 o'clock, not half past 7.",
+     "Choosing clock (3): the long hand is right but the short hand is near the 1."
     ],
-    "mins": 2.5,
-    "visual": {
-     "type": "calendar",
-     "start": "Wed",
-     "week": 1,
-     "hide": [
-      12
-     ],
-     "mark": [
-      10
-     ]
-    },
-    "parts": [
+    "mins": 3,
+    "visuals": [
      {
-      "l": "",
-      "text": "[] groups of [] = []",
-      "ans": "4, 3, 12",
-      "val": [
-       4,
-       3,
-       12
-      ]
+      "type": "clock",
+      "h": 7,
+      "m": 0,
+      "digital": "(1)",
+      "size": 62
+     },
+     {
+      "type": "clock",
+      "h": 7,
+      "m": 30,
+      "digital": "(2)",
+      "size": 62
+     },
+     {
+      "type": "clock",
+      "h": 1,
+      "m": 30,
+      "digital": "(3)",
+      "size": 62
      }
     ]
    },
@@ -1958,157 +2149,120 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Look at the dots. The balls show 2 rows of 3.",
-    "answer": "3 × 4 = 12; Yes",
+    "text": "Look at the clock. Choose the correct answer. Write its number in the bracket.",
+    "parts": [],
+    "answer": "(1) 2 o'clock",
     "val": [
-     3,
-     4,
-     12,
-     "Yes"
+     1
     ],
-    "hint": "Count the rows and the dots in one row.",
-    "solution": "3 rows of 4 dots make 12 dots. Turning the page gives 4 rows of 3: also 12.",
+    "hint": "Look at the long hand first. Is it on the 12 or on the 6?",
+    "solution": "The long hand is on the 12, so it is an o'clock time. The short hand points to the 2. The time is 2 o'clock, 2:00.",
     "mistakes": [
-     "Adding 3 + 4."
+     "Choosing (3) 12 o'clock: reading the long hand as the hour.",
+     "Choosing (2): half past needs the long hand on the 6."
     ],
-    "mins": 2.5,
-    "parts": [
-     {
-      "l": "a",
-      "text": "[] × [] = []",
-      "ans": "3, 4, 12",
-      "val": [
-       3,
-       4,
-       12
-      ]
-     },
-     {
-      "l": "b",
-      "text": "Is 3 × 4 = 4 × 3? Circle Yes or No.",
-      "ans": "Yes",
-      "val": "Yes"
-     }
-    ],
-    "visuals": [
-     {
-      "type": "clock",
-      "h": 2,
-      "m": 0,
-      "mirror": true
-     },
-     {
-      "type": "clock",
-      "h": 8,
-      "m": 30,
-      "sector": [
-       0,
-       30
-      ]
-     }
-    ]
+    "mins": 3,
+    "mcq": {
+     "options": [
+      "2 o'clock",
+      "half past 2",
+      "12 o'clock",
+      "half past 12"
+     ],
+     "bracket": true
+    },
+    "visual": {
+     "type": "clock",
+     "h": 2,
+     "m": 0
+    }
    },
    {
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Fill in the table.",
-    "answer": "4 groups of 3 is 12; 6 groups of 5 is 30",
+    "text": "Ben, Mei and Ali wake up at different times. Look at the clocks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "___ wakes up first.",
+      "ans": "Mei",
+      "val": "Mei"
+     },
+     {
+      "l": "b",
+      "text": "___ wakes up last.",
+      "ans": "Ben",
+      "val": "Ben"
+     }
+    ],
+    "answer": "Mei; Ben",
     "val": [
-     12,
-     6,
-     5
+     "Mei",
+     "Ben"
     ],
-    "hint": "Total = groups times in each.",
-    "solution": "4 groups of 3 = 12. 30 in 6 groups of 5.",
+    "hint": "Read the time on each clock first. Then find the earliest and the latest.",
+    "solution": "Ben wakes up at 7:00, Mei at 5:00 and Ali at 5:30. The earliest time is 5:00, so Mei wakes up first. The latest time is 7:00, so Ben wakes up last.",
     "mistakes": [
-     "Adding the two numbers."
+     "Choosing Ali for first because 5:30 has a bigger number than 5:00.",
+     "Comparing only the long hands."
     ],
-    "mins": 2.5,
-    "visual": {
-     "type": "picture_graph",
-     "rows": [
-      {
-       "label": "Cats",
-       "n": 5
-      },
-      {
-       "label": "Dogs",
-       "n": 2.5,
-       "hide": [
-        2
-       ]
-      },
-      {
-       "label": "Fish",
-       "n": 3
-      }
-     ],
-     "icon": "fish",
-     "each": 1,
-     "title": "Pets",
-     "size": "s"
-    },
-    "parts": []
+    "mins": 3.5,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 7,
+      "m": 0,
+      "digital": "Ben",
+      "size": 62
+     },
+     {
+      "type": "clock",
+      "h": 5,
+      "m": 0,
+      "digital": "Mei",
+      "size": 62
+     },
+     {
+      "type": "clock",
+      "h": 5,
+      "m": 30,
+      "digital": "Ali",
+      "size": 62
+     }
+    ]
    },
    {
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Siti has 36 beads. Dev has 19 more beads than Siti. Fill in the boxes.",
-    "answer": "Dev has 55 beads; 91 altogether",
-    "val": [
-     55,
-     91
-    ],
-    "hint": "Dev has the same as Siti and 19 more.",
-    "solution": "36 + 19 = 55. 36 + 55 = 91.",
-    "mistakes": [
-     "Subtracting 19."
-    ],
-    "mins": 3,
-    "visual": {
-     "type": "bar_model",
-     "bars": [
-      {
-       "name": "Siti",
-       "len": 36,
-       "text": "36"
-      },
-      {
-       "name": "Dev",
-       "len": 55,
-       "segments": [
-        {
-         "v": 36,
-         "text": "36"
-        },
-        {
-         "v": 19,
-         "text": "19"
-        }
-       ]
-      }
-     ],
-     "brace": {
-      "text": "[]",
-      "over": "all"
-     }
-    },
+    "text": "Fill in the blanks. Write short or long.",
     "parts": [
      {
       "l": "a",
-      "text": "Dev has [2] beads.",
-      "ans": "55",
-      "val": 55
+      "text": "The ___ hand names the hour.",
+      "ans": "short",
+      "val": "short"
      },
      {
       "l": "b",
-      "text": "They have [2] beads altogether.",
-      "ans": "91",
-      "val": 91
+      "text": "The ___ hand counts the minutes.",
+      "ans": "long",
+      "val": "long"
      }
-    ]
+    ],
+    "answer": "short; long",
+    "val": [
+     "short",
+     "long"
+    ],
+    "hint": "Look at your clock. Which hand is shorter? Which hand moves round to the 6 for half past?",
+    "solution": "The short hand names the hour. The long hand counts the minutes, 5 minutes for each number.",
+    "mistakes": [
+     "Swapping the two words.",
+     "Writing hour and minutes instead of short and long."
+    ],
+    "mins": 1.5
    }
   ],
   "think": [
@@ -2116,125 +2270,115 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Six children sit round a table. Kumar sits between Mei and Siti. Who sits in the empty seat?",
-    "answer": "Kumar",
+    "text": "Write the time for each clock.",
+    "parts": [],
+    "answer": "7:15; 2:45",
     "val": [
-     "Kumar"
+     "7:15",
+     "2:45"
     ],
-    "hint": "Look at the seat between Mei and Siti.",
-    "solution": "The empty seat is between Mei (3) and Siti (5), so it is Kumar.",
+    "hint": "Count in 5s from the 12 to where the long hand points.",
+    "solution": "First clock: the long hand is on the 3. Count 5, 10, 15, so it is 15 minutes past 7: 7:15. Second clock: the long hand is on the 9. Count 5, 10, 15, 20, 25, 30, 35, 40, 45, so it is 45 minutes past 2: 2:45.",
     "mistakes": [
-     "Choosing Ravi."
+     "Writing 7:3 and 2:9 (writing the number the long hand points to).",
+     "Writing 3:45 for the second clock (reading the number the short hand is near)."
     ],
-    "mins": 4,
-    "parts": [
+    "mins": 3.5,
+    "visuals": [
      {
-      "l": "",
-      "text": "The child in the empty seat is ______.",
-      "ans": "Kumar",
-      "val": "Kumar"
+      "type": "clock",
+      "h": 7,
+      "m": 15,
+      "digital": "[]",
+      "size": 75
+     },
+     {
+      "type": "clock",
+      "h": 2,
+      "m": 45,
+      "digital": "[]",
+      "size": 75
      }
-    ],
-    "visual": {
-     "type": "shapes2d",
-     "shape": "circle",
-     "parts": 4,
-     "shade": [
-      1
-     ]
-    }
+    ]
    },
    {
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Add the counters.",
-    "answer": "15; 14",
-    "val": [
-     15,
-     14
-    ],
-    "hint": "Fill the first frame to 10 with counters, then count on the rest.",
-    "solution": "7 + 8: take 3 from the 8 to make 10, then 10 + 5 = 15. A double is two of the same: 7 + 7 = 14.",
-    "mistakes": [
-     "Writing 78."
-    ],
-    "mins": 3,
+    "text": "A child says this clock shows 9:30.",
     "parts": [
      {
       "l": "a",
-      "text": "7 + 8 = [2]",
-      "ans": "15",
-      "val": 15
+      "text": "Is the child correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
      },
      {
       "l": "b",
-      "text": "7 + 7 = [2]",
-      "ans": "14",
-      "val": 14
+      "text": "The time is ___.",
+      "ans": "8:30",
+      "val": "8:30"
      }
     ],
+    "answer": "No; 8:30",
+    "val": [
+     "No",
+     "8:30"
+    ],
+    "hint": "Half past means 30 minutes after the hour. Which hour has the short hand passed?",
+    "solution": "The long hand is on the 6, so it is half past. The short hand is half way between the 8 and the 9. It has passed the 8 but not reached the 9, so the time is 8:30.",
+    "mistakes": [
+     "Saying Yes because the short hand is near the 9.",
+     "Writing 9:30 or 8:06."
+    ],
+    "mins": 3,
     "visual": {
-     "type": "cube_stack",
-     "heights": [
-      [
-       2,
-       1
-      ],
-      [
-       1,
-       0
-      ]
-     ],
-     "size": "s"
+     "type": "clock",
+     "h": 8,
+     "m": 30,
+     "size": 75
     }
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Each shape stands for a number. Find the numbers.",
-    "answer": "Circle is 5, triangle is 2",
+    "text": "Look at the clock. Decide if each statement is True or False.",
+    "parts": [],
+    "answer": "False; False; True",
     "val": [
-     5,
-     2
+     "F",
+     "F",
+     "T"
     ],
-    "hint": "Two circles make 10.",
-    "solution": "2 circles = 10, so a circle is 5. 5 + triangle = 7, so a triangle is 2.",
+    "hint": "Count in 5s for the long hand. Look at where the short hand is between two numbers.",
+    "solution": "The long hand is on the 3, so it is 15 minutes past. The short hand is just past the 4. The time is 4:15, quarter past 4. So: False (it is not 3:20); False (the short hand is a little past the 4); True.",
     "mistakes": [
-     "Guessing without checking."
+     "Saying the time is 3:20 because the long hand is on the 3.",
+     "Saying the short hand is exactly on the 4."
     ],
-    "mins": 5,
+    "mins": 3,
     "visual": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "circle",
-       "n": 2
-      },
-      {
-       "shape": "circle",
-       "n": 2
-      },
-      {
-       "shape": "square",
-       "n": 2,
-       "pattern": 1
-      },
-      {
-       "shape": "circle",
-       "n": 2
-      }
-     ],
-     "labels": [
-      "A",
-      "B",
-      "C",
-      "[]"
-     ],
-     "hide": [],
-     "size": "s"
-    }
+     "type": "clock",
+     "h": 4,
+     "m": 15,
+     "size": 62
+    },
+    "tf": [
+     {
+      "s": "The time is 3:20."
+     },
+     {
+      "s": "The short hand is exactly on the 4."
+     },
+     {
+      "s": "The time is quarter past 4."
+     }
+    ]
    }
   ],
   "go": [
@@ -2242,225 +2386,223 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Which is the same as 4 × 3?",
-    "answer": "(1) 3 + 3 + 3 + 3",
+    "text": "Lily sees a wall clock in the bathroom mirror. In the mirror it shows 4 o'clock. A mirror swaps left and right. What is the real time?",
+    "parts": [
+     {
+      "l": "",
+      "text": "The real time is [] o'clock.",
+      "ans": "8",
+      "val": 8
+     }
+    ],
+    "answer": "8",
     "val": [
-     1
+     8
     ],
-    "hint": "Work out each one.",
-    "solution": "4 × 3 = 12 and 3 + 3 + 3 + 3 = 12.",
+    "hint": "Use your two clock faces. Put the hands as they look in the mirror on one face. On the other face swap left and right.",
+    "solution": "In the mirror the short hand points to the 4, on the right of the 12. A mirror swaps left and right, so really the short hand is on the left, the same number of steps from the 12. That is the 8. The real time is 8 o'clock.",
     "mistakes": [
-     "Choosing 4 + 4 + 4 + 4."
+     "Writing 4 (the time in the mirror).",
+     "Writing 6 or 12 (counting the steps the wrong way)."
     ],
-    "mins": 4,
-    "mcq": {
-     "options": [
-      "3 + 3 + 3 + 3",
-      "4 + 4 + 4 + 4",
-      "3 + 4",
-      "4 + 3 + 3"
-     ],
-     "bracket": true
-    },
+    "mins": 5,
     "visual": {
-     "type": "stick_pattern",
-     "shape": "triangle",
-     "n": 3,
-     "hide_last": true,
-     "label_each": true,
-     "size": "s"
+     "type": "clock",
+     "h": 4,
+     "m": 0,
+     "labels": "none",
+     "digital": "mirror"
     }
    },
    {
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "20 pencils are put in 4 equal packs. How many are in each pack?",
-    "answer": "5",
-    "val": [
-     5
-    ],
-    "hint": "Split the strip into 4 equal cells and share 20.",
-    "solution": "20 shared into 4 equal packs is 5 in each pack, because 4 × 5 = 20.",
-    "mistakes": [
-     "Giving 16."
-    ],
-    "mins": 5,
-    "visual": {
-     "type": "grid",
-     "rows": 2,
-     "cols": 3,
-     "kind": "squares",
-     "counts": {
-      "0,0": "[]"
-     },
-     "squares": [
-      [
-       1,
-       2
-      ]
-     ],
-     "size": "s"
-    },
+    "text": "Later, the mirror shows half past 7. What is the real time?",
     "parts": [
      {
       "l": "",
-      "text": "20 ÷ 4 = []",
-      "ans": "5",
-      "val": 5
+      "text": "The real time is half past [].",
+      "ans": "4",
+      "val": 4
      }
     ],
-    "steps": [
-     "Step 1",
-     "Step 2"
-    ]
+    "answer": "4",
+    "val": [
+     4
+    ],
+    "hint": "The long hand stays on the 6 in a mirror. Swap the short hand left and right.",
+    "solution": "In the mirror the long hand is on the 6, so it is half past. The short hand is half way between the 7 and the 8. Swap left and right: it is half way between the 4 and the 5. The real time is half past 4, 4:30.",
+    "mistakes": [
+     "Writing 7 (the mirror time).",
+     "Writing 5 (the number the short hand is going towards)."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "clock",
+     "h": 7,
+     "m": 30,
+     "labels": "none",
+     "digital": "mirror"
+    }
    },
    {
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Ali has 30 stickers and Mei has 18. Ali gives Mei some so they have the same. How many does Ali give?",
-    "answer": "6",
-    "val": [
-     6
-    ],
-    "hint": "Together they have 48. Share equally.",
-    "solution": "48 shared between 2 is 24. 30 - 24 = 6.",
-    "mistakes": [
-     "Saying 12."
-    ],
-    "mins": 5,
+    "text": "Lily says: at 12 o'clock the clock in the mirror shows 12 o'clock too.",
     "parts": [
      {
-      "l": "",
-      "text": "Ali gives [] stickers.",
+      "l": "a",
+      "text": "Is Lily right? Circle Yes or No.",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "There is one more o'clock time that looks the same in a mirror. It is [] o'clock.",
       "ans": "6",
       "val": 6
      }
     ],
-    "visual": {
-     "type": "fold_punch",
-     "stage": "paper",
-     "fold": "v"
-    }
+    "answer": "Yes; 6",
+    "val": [
+     "Yes",
+     6
+    ],
+    "hint": "Where are the hands at 12 o'clock? Which other o'clock time has both hands in a straight line?",
+    "solution": "At 12 o'clock both hands point straight up. A mirror swaps left and right, but straight up stays straight up. So Lily is right. At 6 o'clock the short hand points straight down, and the long hand points straight up, so a mirror does not change the clock. The other time is 6 o'clock.",
+    "mistakes": [
+     "Saying No because the hands are on top of each other.",
+     "Writing 3 or 9 (a mirror swaps these two)."
+    ],
+    "mins": 5
    }
   ],
   "investigation": {
    "id": "I1",
    "page": 5,
    "tier": "investigation",
-   "title": "Swap the numbers",
-   "first": "Work out 2 × 5 and 5 × 2. Then try 3 × 4 and 4 × 3.",
-   "text": "Always, sometimes or never: swapping the two numbers in a multiplication gives the same answer. Try 6 × 2. Write what you notice.",
-   "lines": 4,
-   "answer": "Always (for the numbers tried): 10 and 10, 12 and 12, 12 and 12.",
+   "title": "Where is the short hand?",
+   "first": "At 4 o'clock the short hand is on the 4. At 5 o'clock it is on the 5. At half past 4, where is it? Write your answer.",
+   "text": "Why is the short hand half way between the 4 and the 5 at half past 4?",
+   "answer": "Between the 4 and the 5, half way. In one whole hour the short hand moves from the 4 to the 5. Half past 4 is half an hour after 4 o'clock, so the short hand has moved half of the way.",
    "val": [
-    "always"
+    "between"
    ],
-   "look_for": "Several examples tried and a sentence about what stays the same.",
+   "look_for": "A child who says between, and gives a reason such as it moves a bit when the long hand moves, or half an hour is half of the way. Credit any clear reason. Do not mark a child down for stopping at between.",
    "mistakes": [
-    "Trying only one pair."
+    "Saying the short hand is on the 4 or the 5.",
+    "Saying it stays still while the long hand moves."
    ],
-   "mins": 8,
-   "draw": 0
+   "mins": 8
   }
  },
  "talk": {
-  "question": "Is 40 the same as 4? Circle Yes or No. Use bundles to explain: I know because ___.",
+  "question": "A child says: the long hand is on the 12, so it is always 12 o'clock. Is the child right? How could we check with our clock?",
   "starter": "I think ... because ...",
-  "answer": "No. 40 is 4 bundles of ten and 0 singles. 4 is only 4 singles. 40 has more sticks, because the 4 in 40 counts bundles of ten.",
-  "look_for": "A reason that uses tens and ones (not just 'because 40 is bigger'). A child may say the zero holds the place."
+  "answer": "No. The long hand on the 12 tells us it is an o'clock time, but the short hand says which hour. We can check with the clock: long hand on the 12, short hand on the 3 is 3 o'clock; short hand on the 10 is 10 o'clock.",
+  "look_for": "A child who tries the clock, or who says the short hand tells the hour. Not just yes or no."
  },
  "exit": [
   {
    "id": "E1",
-   "text": "Fill in the boxes. 2 bags have 3 sweets in each bag.",
-   "parts": [
-    {
-     "l": "",
-     "text": "[] groups of [] = []",
-     "ans": "2, 3, 6",
-     "val": [
-      2,
-      3,
-      6
-     ]
-    }
-   ],
-   "answer": "2 groups of 3 = 6",
+   "text": "Write the time for each clock.",
+   "parts": [],
+   "answer": "7:00; 6:30",
    "val": [
-    2,
-    3,
-    6
+    "7:00",
+    "6:30"
    ],
-   "solution": "2 bags of 3 sweets: 3 + 3 = 6.",
+   "solution": "The first clock has the long hand on the 12, so it is an o'clock time, and the short hand points to the 7: 7:00. The second clock has the long hand on the 6, so it is half past, and the short hand is half way between the 6 and the 7: 6:30.",
    "mistakes": [
-    "Counting bags only."
+    "Writing 12:00 for the first clock (reading the long hand as the hour).",
+    "Writing 7:30 for the second clock (the number the short hand is going towards)."
    ],
-   "lines": 0
-  },
-  {
-   "id": "E2",
-   "text": "Put a tick in the correct box.",
-   "tf": [
+   "visuals": [
     {
-     "s": "2 groups of 5 is 10.",
-     "ans": "T"
+     "type": "clock",
+     "h": 7,
+     "m": 0,
+     "digital": "[]",
+     "size": 50
     },
     {
-     "s": "3 × 4 = 7.",
-     "ans": "F"
+     "type": "clock",
+     "h": 6,
+     "m": 30,
+     "digital": "[]",
+     "size": 50
     }
-   ],
-   "answer": "True; False",
-   "val": [
-    "T",
-    "F"
-   ],
-   "solution": "2 groups of 5 is 10 (True). 3 × 4 is 12, not 7 (False).",
-   "mistakes": [
-    "Ticking both boxes."
    ]
   },
   {
-   "id": "E3",
-   "text": "Write the answer.",
+   "id": "E2",
+   "text": "Draw the hands to show half past 8. Use a ruler.",
    "parts": [
     {
      "l": "",
-     "text": "3 groups of 2 = []",
-     "ans": "6",
-     "val": 6
+     "text": "Draw the short hand and the long hand.",
+     "ans": "long hand on the 6, short hand half way between the 8 and the 9",
+     "val": "draw"
     }
    ],
-   "answer": "6",
+   "answer": "Long hand on the 6; short hand half way between the 8 and the 9",
    "val": [
-    6
+    "draw"
    ],
-   "solution": "2 + 2 + 2 = 6.",
+   "solution": "Half past means the long hand points to the 6. The short hand is half way between the 8 and the 9.",
    "mistakes": [
-    "Counting all as pens."
+    "Drawing the short hand exactly on the 8 or the 9.",
+    "Drawing the long hand to the 8."
+   ],
+   "visual": {
+    "type": "clock",
+    "h": 8,
+    "m": 30,
+    "hide_hands": true,
+    "digital": "8:30",
+    "size": 44
+   }
+  },
+  {
+   "id": "E3",
+   "text": "The long hand is on the 6. Circle o'clock or half past.",
+   "parts": [],
+   "choices": [
+    "o'clock",
+    "half past"
+   ],
+   "answer": "half past",
+   "val": [
+    "half past"
+   ],
+   "solution": "When the long hand is on the 6, half an hour has gone. It is half past. The long hand is on the 12 for an o'clock time.",
+   "mistakes": [
+    "Circling o'clock because 6 sounds like an hour."
    ]
   }
  ],
  "look_back": {
   "hardest": [
-   "knowing which digit is the tens",
-   "making bundles of ten",
-   "the zero in 40 or 70",
-   "opening a bundle (Think harder)",
+   "knowing which hand is which",
+   "half past",
+   "counting in 5s",
    "something else"
   ],
   "helped": [
-   "bundles or objects",
+   "my clock and hands",
+   "counting in 5s",
    "drawing it",
-   "trying again",
-   "I asked for help",
    "I was not stuck"
   ],
   "next": [
-   "drawing it",
-   "using objects",
+   "using my clock",
+   "counting in 5s",
    "checking my answer",
    "asking a question"
   ]
@@ -2469,438 +2611,66 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "3 groups of 5 = [] .",
-   "answer": "15",
-   "val": 15,
-   "solution": "5 + 5 + 5 = 15."
+   "text": "A clock has a short hand and a long hand. Which hand names the hour? Circle short or long.",
+   "choices": [
+    "short",
+    "long"
+   ],
+   "answer": "short",
+   "val": "short",
+   "solution": "The short hand names the hour. The long hand counts the minutes."
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "6 ÷ 2 = [] .",
-   "answer": "3",
-   "val": 3,
-   "solution": "6 shared into 2 equal groups is 3 each."
+   "text": "The long hand is on the 12. The short hand is on the 5. Write the time in digits. ___",
+   "answer": "5:00",
+   "val": "5:00",
+   "solution": "The long hand on the 12 means an o'clock time. The short hand is on the 5, so it is 5 o'clock, 5:00."
   },
   {
    "id": "H3",
    "tier": "start",
-   "text": "Circle Yes or No. Is 2 × 5 = 5 × 2?",
-   "answer": "Yes",
-   "val": "Yes",
-   "solution": "Both are 10."
+   "text": "The long hand is on the 6. The short hand is half way between the 8 and the 9. Write the time in digits. ___",
+   "answer": "8:30",
+   "val": "8:30",
+   "solution": "The long hand on the 6 means half past. The short hand has passed the 8, so it is half past 8, 8:30."
   },
   {
    "id": "H4",
    "tier": "think",
-   "text": "{eq}  Write a multiplication sentence for 4 bags of 3 sweets.",
-   "answer": "4 × 3 = 12",
-   "val": 12,
-   "solution": "4 groups of 3 is 12."
+   "text": "The long hand is on the 9. Count in 5s. How many minutes past the hour is that? ___ minutes",
+   "answer": "45",
+   "val": 45,
+   "solution": "Count in 5s from the 12: 5, 10, 15, 20, 25, 30, 35, 40, 45. The 9 is 45 minutes past the hour."
   },
   {
    "id": "H5",
-   "tier": "go",
-   "text": "Make equal groups from 12 counters in two different ways. Draw both.",
-   "answer": "Any: 2 groups of 6, 3 groups of 4, 4 groups of 3, 6 groups of 2.",
-   "val": "open",
-   "solution": "Each way uses all 12 counters."
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 1",
+   "text": "Write the number: 9 ones and 2 tens.",
+   "answer": "29",
+   "val": 29,
+   "solution": "2 tens is 20, and 9 ones makes 29. The tens digit goes first."
   }
  ],
  "online_practice": {
   "key": "t3l21",
-  "title": "Template check (Terms 3 and 4)",
-  "topic": "Stub",
+  "title": "What Time Is It?",
+  "topic": "Reading o'clock and half past",
   "items": [
    {
     "id": "c1",
     "tier": "core",
-    "type": "number",
-    "q": "How many apples are there?",
-    "answer": 7,
-    "fig": {
-     "type": "objects",
-     "icon": "apple",
-     "n": "{n}",
-     "per_row": 5
-    },
-    "fig_base": {
-     "type": "objects",
-     "icon": "apple",
-     "n": 7,
-     "per_row": 5
-    },
-    "hint": "Touch each apple once.",
-    "steps": [
-     "Count the apples one by one.",
-     "There are 7."
-    ],
-    "slips": [],
-    "tpl": {
-     "vars": {
-      "n": [
-       3,
-       4,
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "q": "How many apples are there?",
-     "answer": "n",
-     "hint": "Touch each apple once.",
-     "steps": [
-      "Count the apples one by one.",
-      "There are {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c2",
-    "tier": "core",
-    "type": "fields",
-    "q": "Fill in the boxes.",
-    "frame": "{a} groups of {b} = {c}",
-    "fields": [
-     {
-      "id": "a",
-      "answer": 4
-     },
-     {
-      "id": "b",
-      "answer": 3
-     },
-     {
-      "id": "c",
-      "answer": 12
-     }
-    ],
-    "fig": {
-     "type": "groups",
-     "container": "plate",
-     "n": "{a}",
-     "each": "{b}",
-     "icon": "apple",
-     "per_row": 5
-    },
-    "fig_base": {
-     "type": "groups",
-     "container": "plate",
-     "n": 4,
-     "each": 3,
-     "icon": "apple",
-     "per_row": 5
-    },
-    "hint": "Count the plates, then the apples on one plate.",
-    "steps": [
-     "Count the plates.",
-     "Count the apples on one plate.",
-     "Total: {a} × {b} = {c}."
-    ],
-    "tpl": {
-     "vars": {
-      "a": [
-       2,
-       3,
-       4,
-       5
-      ],
-      "b": [
-       2,
-       3,
-       4,
-       5
-      ]
-     },
-     "q": "Fill in the boxes.",
-     "frame": "{a} groups of {b} = {c}",
-     "answers": {
-      "a": "a",
-      "b": "b",
-      "c": "a*b"
-     },
-     "derive": {
-      "c": "a*b"
-     },
-     "hint": "Count the plates, then the apples on one plate.",
-     "steps": [
-      "Count the plates.",
-      "Count the apples on one plate.",
-      "{a} × {b} = {c}."
-     ]
-    }
-   },
-   {
-    "id": "c3",
-    "tier": "core",
-    "type": "choice",
-    "q": "Is 7 odd or even?",
-    "options": [
-     "even",
-     "odd"
-    ],
-    "answer": "odd",
-    "hint": "Pair up 7 counters. Is one left over?",
-    "steps": [
-     "Pair up 7 counters.",
-     "One is left over, so 7 is odd."
-    ],
-    "slips": [],
-    "tpl": {
-     "vars": {
-      "n": [
-       7,
-       12,
-       15,
-       20,
-       23
-      ]
-     },
-     "q": "Is {n} odd or even?",
-     "options": [
-      "even",
-      "odd"
-     ],
-     "answer_index": "n % 2",
-     "hint": "Pair up {n} counters. Is one left over?",
-     "steps": [
-      "Pair up {n} counters.",
-      "The answer is {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c4",
-    "tier": "core",
-    "type": "set",
-    "ordered": true,
-    "q": "Count in 5s up to 20. Type the numbers with a comma between.",
-    "answer": [
-     5,
-     10,
-     15,
-     20
-    ],
-    "hint": "Add 5 each time.",
-    "steps": [
-     "5, 10, 15, 20."
-    ],
-    "slips": [],
-    "tpl": {
-     "vars": {
-      "k": [
-       2,
-       5,
-       10
-      ],
-      "lim": [
-       20,
-       30,
-       40
-      ]
-     },
-     "ordered": true,
-     "q": "Count in {k}s up to {lim}. Type the numbers with a comma between.",
-     "answer": "multiples(k,lim)",
-     "hint": "Add {k} each time.",
-     "steps": [
-      "The numbers are {ans}."
-     ]
-    }
-   },
-   {
-    "id": "c5",
-    "tier": "core",
-    "type": "number",
-    "q": "Mei is 5th in the queue. How many children are in front of her?",
-    "answer": 4,
-    "hint": "Count the children before 5th.",
-    "steps": [
-     "1st, 2nd, 3rd, 4th are in front.",
-     "4 children."
-    ],
-    "slips": [],
-    "tpl": {
-     "vars": {
-      "n": [
-       3,
-       4,
-       5,
-       6,
-       7,
-       8,
-       9
-      ]
-     },
-     "q": "Mei is {n|ord} in the queue. How many children are in front of her?",
-     "answer": "n-1",
-     "hint": "Count the children before {n|ord}.",
-     "steps": [
-      "{n|word} children stand at the front, and Mei makes it {n|ord}.",
-      "{ans} children are in front."
-     ]
-    }
-   },
-   {
-    "id": "c6",
-    "tier": "core",
-    "type": "choice",
-    "q": "Which is the same as 3 groups of 4?",
-    "options": [
-     "3 + 3 + 3 + 3",
-     "4 + 4 + 4",
-     "3 + 4",
-     "4 × 4"
-    ],
-    "answer": "4 + 4 + 4",
-    "hint": "Write 4 three times.",
-    "steps": [
-     "3 groups of 4 is 4 + 4 + 4."
-    ],
-    "slips": []
-   },
-   {
-    "id": "t1",
-    "tier": "stretch",
-    "type": "number",
-    "q": "Ben is 8th from the front and 8th from the back. How many children are in the line?",
-    "answer": 15,
-    "easier": "c5",
-    "hint": "Ben is counted twice.",
-    "steps": [
-     "7 children in front, 7 behind, and Ben.",
-     "7 + 7 + 1 = 15."
-    ],
-    "slips": []
-   },
-   {
-    "id": "t2",
-    "tier": "stretch",
-    "type": "fields",
-    "q": "Fill in the boxes.",
-    "frame": "{a} + {b} = {c}",
-    "fields": [
-     {
-      "id": "a",
-      "answer": 7
-     },
-     {
-      "id": "b",
-      "answer": 7
-     },
-     {
-      "id": "c",
-      "answer": 14
-     }
-    ],
-    "easier": "c2",
-    "hint": "A double is two of the same.",
-    "steps": [
-     "Double 7 is 7 + 7 = 14."
-    ]
-   },
-   {
-    "id": "t3",
-    "tier": "stretch",
-    "type": "set",
-    "q": "Which numbers are in both the 2s and the 5s? Count to 40. Type the numbers with a comma between.",
-    "answer": [
-     10,
-     20,
-     30,
-     40
-    ],
-    "easier": "c4",
-    "hint": "Write the 5s, then cross out the odd ones.",
-    "steps": [
-     "Numbers in both: 10, 20, 30, 40."
-    ],
-    "slips": [],
-    "tpl": {
-     "vars": {
-      "a": [
-       2
-      ],
-      "b": [
-       5
-      ],
-      "lim": [
-       30,
-       40,
-       50
-      ]
-     },
-     "q": "Which numbers are in both the {a}s and the {b}s? Count to {lim}. Type the numbers with a comma between.",
-     "answer": "common(a,b,lim)",
-     "hint": "Write the {b}s, then keep the ones in the {a}s.",
-     "steps": [
-      "Numbers in both: {ans}."
-     ]
-    }
-   },
-   {
-    "id": "g1",
-    "tier": "challenge",
-    "type": "number",
-    "q": "What is 2 x 6?",
-    "answer": 12,
-    "easier": "t1",
-    "hint": "Double 6.",
-    "steps": [
-     "6 + 6 = 12."
-    ],
-    "slips": [],
-    "tpl": {
-     "vars": {
-      "n": [
-       6,
-       8,
-       12,
-       18
-      ]
-     },
-     "q": "What is 2 x {n}? ",
-     "answer": "2*n",
-     "hint": "Double {n}.",
-     "steps": [
-      "{n} + {n} = {ans}."
-     ]
-    }
-   },
-   {
-    "id": "g2",
-    "tier": "challenge",
-    "type": "set",
-    "ordered": true,
-    "q": "Fill in both blanks: 4 + 4 + 4 = [] x [] . Type the two numbers with a comma between them.",
-    "answer": [
-     3,
-     4
-    ],
-    "easier": "t2",
-    "hint": "3 groups of 4.",
-    "steps": [
-     "3 groups of 4: 3 × 4."
-    ],
-    "slips": []
-   },
-   {
-    "id": "g3",
-    "tier": "challenge",
-    "type": "selfcheck",
-    "q": "Make up your own groups puzzle for a grown-up.",
-    "hint": "Pick the answer first.",
-    "steps": [
-     "Check that your puzzle has one answer."
-    ]
-   },
-   {
-    "id": "c7",
-    "tier": "core",
     "type": "fields",
     "q": "What time is it?",
+    "hint": "The short hand names the hour. The long hand is on the 12 or the 6.",
+    "steps": [
+     "Look at the long hand. On the 12 means o'clock. On the 6 means half past.",
+     "The short hand shows the hour.",
+     "The time is {h} : {mm}."
+    ],
+    "slips": [],
     "frame": "{h} : {mm}",
     "fields": [
      {
@@ -2909,7 +2679,7 @@
      },
      {
       "id": "mm",
-      "answer": 35,
+      "answer": 30,
       "pad": 2
      }
     ],
@@ -2921,23 +2691,23 @@
     "fig_base": {
      "type": "clock",
      "h": 4,
-     "m": 0
+     "m": 30
     },
-    "hint": "The short hand shows the hour. The long hand shows the minutes.",
-    "steps": [
-     "The short hand is just before the next hour.",
-     "The long hand points to the minutes.",
-     "The time is {h} : {mm}."
-    ],
     "tpl": {
      "vars": {
       "h": [
+       1,
        2,
        3,
        4,
        5,
        6,
-       7
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
       ],
       "m": [
        0,
@@ -2953,51 +2723,44 @@
      "pad": {
       "mm": 2
      },
-     "hint": "The short hand shows the hour. The long hand shows the minutes.",
+     "hint": "The short hand names the hour. The long hand is on the 12 or the 6.",
      "steps": [
-      "The short hand is near {h}.",
-      "The long hand shows {m|mm} minutes.",
+      "Look at the long hand. On the 12 means o'clock. On the 6 means half past.",
+      "The short hand shows the hour.",
       "The time is {h} : {m|mm}."
      ]
     }
    },
    {
-    "id": "c8",
+    "id": "c2",
     "tier": "core",
-    "type": "number",
-    "q": "A pen costs $4. You pay $10. How many dollars is your change?",
-    "answer": 6,
-    "hint": "Count up from 4 to 10.",
+    "type": "choice",
+    "q": "Is it o'clock or half past?",
+    "options": [
+     "o'clock",
+     "half past"
+    ],
+    "answer": "half past",
+    "hint": "Look at the long hand. Is it on the 12 or on the 6?",
     "steps": [
-     "10 - 4 = 6.",
-     "The change is $6."
+     "The long hand is on the 6.",
+     "The long hand on the 6 means half past."
     ],
     "slips": [],
     "fig": {
-     "type": "money",
-     "items": [
-      {
-       "v": "$5"
-      },
-      {
-       "v": "$5"
-      }
-     ]
+     "type": "clock",
+     "h": "{h}",
+     "m": "{m}"
     },
     "fig_base": {
-     "type": "money",
-     "items": [
-      {
-       "v": "$5"
-      },
-      {
-       "v": "$5"
-      }
-     ]
+     "type": "clock",
+     "h": 9,
+     "m": 30
     },
     "tpl": {
      "vars": {
-      "p": [
+      "h": [
+       1,
        2,
        3,
        4,
@@ -3005,549 +2768,663 @@
        6,
        7,
        8,
-       9
+       9,
+       10,
+       11,
+       12
+      ],
+      "k": [
+       0,
+       1
       ]
      },
-     "q": "A pen costs {p|usd}. You pay $10. How many dollars is your change?",
-     "answer": "10-p",
-     "hint": "Count up from {p} to 10.",
+     "derive": {
+      "m": "30*k"
+     },
+     "q": "Is it o'clock or half past?",
+     "options": [
+      "o'clock",
+      "half past"
+     ],
+     "answer_index": "k",
+     "hint": "Look at the long hand. Is it on the 12 or on the 6?",
      "steps": [
-      "10 - {p} = {ans}.",
-      "The change is {ans|usd}."
+      "The long hand is on the {m|min} mark.",
+      "The answer is {ans}."
      ]
     }
    },
    {
-    "id": "x1",
+    "id": "c3",
     "tier": "core",
     "type": "number",
-    "q": "Stub picture: price_tag. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
+    "q": "The long hand is on the 3. Count in 5s. How many minutes past the hour is that?",
+    "answer": 15,
+    "hint": "Count in 5s from the 12: one 5 for each number.",
     "steps": [
-     "Type 1."
+     "Count in 5s: 5, 10, 15.",
+     "The 3 is the third number after the 12.",
+     "It is 15 minutes past the hour."
     ],
-    "slips": [],
-    "fig": {
-     "type": "price_tag",
-     "item": "pencil",
-     "price": "50¢"
-    }
-   },
-   {
-    "id": "x2",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: calendar. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "calendar",
-     "start": "Wed",
-     "highlight": [
-      5
-     ],
-     "hide": [
-      12
-     ],
-     "mark": [
-      3
-     ]
-    }
-   },
-   {
-    "id": "x3",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: house. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "shapes2d",
-     "compose": "house"
-    }
-   },
-   {
-    "id": "x4",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: half. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "shapes2d",
-     "shape": "rectangle",
-     "parts": 2,
-     "fold": "h",
-     "label": "halves"
-    }
-   },
-   {
-    "id": "x5",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: cube_views. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "cube_stack",
-     "heights": [
-      [
-       2,
-       1
+    "slips": [
+     {
+      "a": [
+       3
       ],
-      [
+      "say": "The long hand points to the 3, but each number is 5 minutes. Count in 5s."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
        1,
-       0
-      ]
-     ],
-     "mode": "views"
-    }
-   },
-   {
-    "id": "x6",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: folded. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "fold_punch",
-     "stage": "folded",
-     "fold": "v",
-     "holes": [
-      [
-       0.5,
-       0.5
-      ]
-     ]
-    }
-   },
-   {
-    "id": "x7",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: unfolded. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "fold_punch",
-     "stage": "unfolded",
-     "fold": "quarter",
-     "holes": [
-      [
-       0.3,
-       0.4
-      ]
-     ]
-    }
-   },
-   {
-    "id": "x8",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: route. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "grid",
-     "rows": 2,
-     "cols": 3,
-     "route": [
-      [
-       0,
-       0
-      ],
-      [
        2,
-       0
-      ],
-      [
-       2,
-       2
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
       ]
-     ],
-     "start": [
-      0,
-      0
-     ],
-     "end": [
-      2,
-      2
+     },
+     "q": "The long hand is on the {n}. Count in 5s. How many minutes past the hour is that?",
+     "answer": "5*n",
+     "hint": "Count in 5s from the 12: one 5 for each number.",
+     "steps": [
+      "Count in 5s up to the {n}.",
+      "{n} fives make {ans}.",
+      "It is {ans} minutes past the hour."
      ]
     }
    },
    {
-    "id": "x9",
+    "id": "c4",
     "tier": "core",
-    "type": "number",
-    "q": "Stub picture: clock_mirror. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
+    "type": "choice",
+    "q": "Which hand names the hour?",
+    "options": [
+     "the short hand",
+     "the long hand"
+    ],
+    "answer": "the short hand",
+    "hint": "One hand names the hour and the other counts the minutes.",
     "steps": [
-     "Type 1."
+     "The short hand names the hour.",
+     "The long hand counts the minutes."
+    ],
+    "slips": [
+     {
+      "a": [
+       "the long hand"
+      ],
+      "say": "The long hand counts the minutes. The short hand names the hour."
+     }
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "fields",
+    "q": "Write the time in digits.",
+    "hint": "Half past means 30 minutes past the hour.",
+    "steps": [
+     "Half past 7 is 7 and 30 minutes.",
+     "We write 7 : 30."
     ],
     "slips": [],
+    "frame": "{h} : {mm}",
+    "fields": [
+     {
+      "id": "h",
+      "answer": 7
+     },
+     {
+      "id": "mm",
+      "answer": 30,
+      "pad": 2
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ]
+     },
+     "derive": {
+      "m": "30"
+     },
+     "q": "Half past {h}. Write the time in digits.",
+     "frame": "{h} : {mm}",
+     "answers": {
+      "h": "h",
+      "mm": "m"
+     },
+     "pad": {
+      "mm": 2
+     },
+     "hint": "Half past means 30 minutes past the hour.",
+     "steps": [
+      "Half past {h} is {h} and 30 minutes.",
+      "We write {h} : 30."
+     ]
+    }
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "choice",
+    "q": "Ben gets up at 6 o'clock. Mei gets up at half past 6. Who gets up first?",
+    "options": [
+     "Ben",
+     "Mei"
+    ],
+    "answer": "Ben",
+    "hint": "6 o'clock comes before half past 6.",
+    "steps": [
+     "6 o'clock is 6:00.",
+     "Half past 6 is 6:30, which is later.",
+     "Ben gets up first."
+    ],
+    "slips": [
+     {
+      "a": [
+       "Mei"
+      ],
+      "say": "6:30 is later than 6:00. Who has the earlier time?"
+     }
+    ]
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "choice",
+    "q": "Mei is 4th in the line. Which sentence is true?",
+    "options": [
+     "3 children are in front of Mei.",
+     "4 children are in front of Mei.",
+     "5 children are in front of Mei.",
+     "4 children are behind Mei."
+    ],
+    "answer": "3 children are in front of Mei.",
+    "hint": "Count the places before 4th: 1st, 2nd, 3rd.",
+    "steps": [
+     "The places before 4th are 1st, 2nd and 3rd.",
+     "So 3 children are in front of Mei.",
+     "The line may be longer, so we cannot say how many are behind."
+    ],
+    "slips": [
+     {
+      "a": [
+       "4 children are in front of Mei."
+      ],
+      "say": "4 is Mei's place. Count only the children in front of her."
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "set",
+    "ordered": true,
+    "q": "Ali is 3rd and Mei is 7th. List the places of the children between them, smallest first. Type the numbers with a comma between.",
+    "answer": [
+     4,
+     5,
+     6
+    ],
+    "hint": "Count on from 3rd, but stop before 7th.",
+    "steps": [
+     "After the 3rd comes the 4th.",
+     "Stop just before the 7th.",
+     "The places are 4, 5, 6."
+    ],
+    "slips": [
+     {
+      "a": [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "say": "3 and 7 are Ali and Mei. They are not between themselves."
+     }
+    ]
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "fields",
+    "q": "What time is it?",
+    "easier": "c1",
+    "hint": "Count in 5s from the 12 to the long hand.",
+    "steps": [
+     "The long hand is on the 3 or the 9. Count in 5s.",
+     "Find the hour the short hand has just passed.",
+     "The time is {h} : {mm}."
+    ],
+    "slips": [],
+    "frame": "{h} : {mm}",
+    "fields": [
+     {
+      "id": "h",
+      "answer": 7
+     },
+     {
+      "id": "mm",
+      "answer": 15,
+      "pad": 2
+     }
+    ],
     "fig": {
      "type": "clock",
-     "h": 2,
-     "m": 0,
-     "mirror": true
-    }
-   },
-   {
-    "id": "x10",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: cols_graph. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "picture_graph",
-     "rows": [
-      {
-       "label": "Cats",
-       "n": 6
-      },
-      {
-       "label": "Dogs",
-       "n": 3.5
-      }
-     ],
-     "orient": "cols",
-     "icon": "ball"
-    }
-   },
-   {
-    "id": "x11",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: tally. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "picture_graph",
-     "rows": [
-      {
-       "label": "Cats",
-       "n": 7
-      }
-     ],
-     "tally": true
-    }
-   },
-   {
-    "id": "x12",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: squares_stick. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "stick_pattern",
-     "shape": "square",
-     "n": 3
-    }
-   },
-   {
-    "id": "x13",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: panel_pair. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
-    ],
-    "slips": [],
-    "fig": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "star",
-       "n": 3,
-       "size": "s"
-      },
-      {
-       "shape": "star",
-       "n": 3,
-       "size": "s",
-       "turn": 45
-      }
-     ],
-     "labels": [
-      "A",
-      "B"
+     "h": "{h}",
+     "m": "{m}"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 7,
+     "m": 15
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ],
+      "m": [
+       15,
+       45
+      ]
+     },
+     "q": "What time is it?",
+     "frame": "{h} : {mm}",
+     "answers": {
+      "h": "h",
+      "mm": "m"
+     },
+     "pad": {
+      "mm": 2
+     },
+     "hint": "Count in 5s from the 12 to the long hand.",
+     "steps": [
+      "Count in 5s from the 12 to the long hand: {m} minutes.",
+      "The short hand has just passed the {h}.",
+      "The time is {h} : {m|mm}."
      ]
     }
    },
    {
-    "id": "x14",
-    "tier": "core",
-    "type": "number",
-    "q": "Stub picture: labelled number line. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
-    "steps": [
-     "Type 1."
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "A child says this clock shows 9:30. Is the child correct?",
+    "easier": "c2",
+    "options": [
+     "yes",
+     "no"
     ],
-    "slips": [],
+    "answer": "no",
+    "hint": "Look at where the short hand is. Has it reached the next number?",
+    "steps": [
+     "The long hand is on the 6, so it is half past.",
+     "The short hand has not reached the 9.",
+     "So the child is not correct."
+    ],
+    "slips": [
+     {
+      "a": [
+       "yes"
+      ],
+      "say": "Is the short hand past the 9, or only part of the way to the 9?"
+     }
+    ],
     "fig": {
-     "type": "number_line",
-     "start": 0,
-     "end": 4,
-     "labels": {
-      "0": "3:00",
-      "2": "4:00",
-      "4": "5:00"
-     },
-     "jumps": [
-      [
-       0,
+     "type": "clock",
+     "h": "{h}",
+     "m": 30
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 8,
+     "m": 30
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
        2,
-       "+1 hour"
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ],
+      "k": [
+       0,
+       1
       ]
+     },
+     "derive": {
+      "n": "h+k"
+     },
+     "q": "A child says this clock shows {n}:30. Is the child correct?",
+     "options": [
+      "yes",
+      "no"
      ],
-     "size": "s"
+     "answer_index": "k",
+     "hint": "Look at where the short hand is. Has it reached the next number?",
+     "steps": [
+      "The long hand is on the 6, so it is half past.",
+      "The short hand has passed the {h} and has not reached the next number.",
+      "The answer is {ans}."
+     ]
     }
    },
    {
-    "id": "x15",
-    "tier": "core",
+    "id": "t3",
+    "tier": "stretch",
     "type": "number",
-    "q": "Stub picture: network. Type 1.",
-    "answer": 1,
-    "hint": "Type 1.",
+    "q": "In a mirror a clock shows 4 o'clock. What is the real time? Type the hour.",
+    "easier": "c1",
+    "answer": 8,
+    "hint": "A mirror swaps left and right. Count the same number of steps from the 12 on the other side.",
     "steps": [
-     "Type 1."
+     "In the mirror the short hand is 4 steps right of the 12.",
+     "Really it is 4 steps left of the 12, on the 8.",
+     "The real time is 8 o'clock."
     ],
-    "slips": [],
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is the time in the mirror. What is the real time?"
+     }
+    ],
     "fig": {
-     "type": "network",
-     "n": 4,
-     "all": true,
-     "count": "[]"
+     "type": "clock",
+     "h": "{k}",
+     "m": 0,
+     "labels": "none",
+     "digital": "mirror"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 4,
+     "m": 0,
+     "labels": "none",
+     "digital": "mirror"
+    },
+    "tpl": {
+     "vars": {
+      "k": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "q": "In a mirror a clock shows {k} o'clock. What is the real time? Type the hour.",
+     "answer": "12-k",
+     "hint": "A mirror swaps left and right. Count the same number of steps from the 12 on the other side.",
+     "steps": [
+      "In the mirror the short hand is {k} steps from the 12 on one side.",
+      "Really it is {k} steps from the 12 on the other side.",
+      "The real time is {ans} o'clock."
+     ]
     }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "In a mirror a clock shows half past 9. What is the real time? Type the hour.",
+    "easier": "t3",
+    "answer": 2,
+    "hint": "The long hand stays on the 6. Swap the short hand left and right.",
+    "steps": [
+     "In the mirror the short hand is half way between the 9 and the 10.",
+     "Swap left and right: half way between the 2 and the 3.",
+     "The real time is half past 2."
+    ],
+    "slips": [
+     {
+      "a": [
+       9
+      ],
+      "say": "9 is the mirror time. What is the real time?"
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{k}",
+     "m": 30,
+     "labels": "none",
+     "digital": "mirror"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 9,
+     "m": 30,
+     "labels": "none",
+     "digital": "mirror"
+    },
+    "tpl": {
+     "vars": {
+      "k": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12
+      ]
+     },
+     "q": "In a mirror a clock shows half past {k}. What is the real time? Type the hour.",
+     "answer": "((10-k+12)%12)+1",
+     "hint": "The long hand stays on the 6. Swap the short hand left and right.",
+     "steps": [
+      "In the mirror the short hand is half way between the {k} and the next number.",
+      "Swap left and right.",
+      "The real time is half past {ans}."
+     ]
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "choice",
+    "q": "Which o'clock time looks the same in a mirror?",
+    "easier": "t3",
+    "options": [
+     "3 o'clock",
+     "6 o'clock",
+     "8 o'clock"
+    ],
+    "answer": "6 o'clock",
+    "hint": "Which time has both hands in a straight line, up and down?",
+    "steps": [
+     "At 6 o'clock the long hand points up and the short hand points down.",
+     "A mirror swaps left and right, but up and down stay the same.",
+     "So 6 o'clock looks the same."
+    ],
+    "slips": [
+     {
+      "a": [
+       "3 o'clock"
+      ],
+      "say": "At 3 o'clock the short hand points right. In a mirror it points left."
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make your own mirror clock puzzle. Choose an o'clock time. Ask a grown-up what time it is really. Many answers are right.",
+    "easier": "c1",
+    "hint": "Start with a real time, then swap left and right.",
+    "steps": [
+     "Choose an o'clock time for the real clock.",
+     "Swap left and right to see the mirror time.",
+     "Ask a grown-up to find the real time from the mirror time."
+    ],
+    "slips": []
    }
   ]
  },
- "parent": {
-  "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Tens and ones is familiar school work. Opening a bundle (5 tens and 14 ones is 6 tens and 4 ones) goes further, and is in Think harder and Go further.",
-  "words": [
-   "bundle or ten: ten single things tied together",
-   "single or one: a thing on its own",
-   "tens digit: the left digit, it counts the bundles",
-   "ones digit: the right digit, it counts the singles"
-  ],
-  "try_home": [
-   "Bundle it: grab a handful of pasta, clips or buttons. Tie bundles of ten with hair ties or cups. Ask: how many tens and how many ones? Write the number together. Small things stay on the table, away from mouths and little brothers and sisters.",
-   "Show me: say a number up to 60 and let your child build it with bundles and singles. Swap roles and make a mistake on purpose for them to find.",
-   "Spot it: look at page numbers, lift buttons or door numbers. Ask: how many tens is that? Which digit tells you?"
-  ],
-  "ask": [
-   "How do you know?",
-   "Which digit tells how many bundles?",
-   "What if you opened a bundle?"
-  ],
-  "when_stuck": "Please let your child use real things or draw bundles, and wait 10 seconds before helping. Please do not hurry or say it is easy. If the look-back page says 'I am still stuck', please photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept up to 90 days.",
-  "next": "Next lesson: the stub has no next lesson.",
-  "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: reading and writing two-digit numbers from bundles of ten and single ones.",
-  "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
-  "quote": "A number is tens and ones. Ten singles tie into one bundle.",
-  "next_materials": [
-   "A pencil and paper.",
-   "Twenty small things (pasta or buttons)."
-  ]
- },
- "safeguarding": [
-  "Small things stay on the table: nothing goes in the mouth or ears, and nothing is left where a younger brother or sister can reach it. No matches, toothpicks or anything sharp. Use hair ties, cups or paper rings. No rubber bands: they can flick.",
-  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
-  "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
-  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
-  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
-  "The look-back is never collected in front of the group or read out. A pass is always allowed."
- ],
- "tutor_prep": [
-  "Solve every workbook question yourself first.",
-  "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6), find about 50 small things and 6 hair ties or cups. Small things stay away from mouths and from younger children.",
-  "Have the slides open and check the timer slide and the kit page are visible on screen share.",
-  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Start the recording after the greeting, and avoid first names while it runs.",
-  "Tell parents plainly (it is on the parent page): Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is explored in class with bundles and the kit; Think harder and Go further are optional stretch."
- ],
  "spare_time": {
   "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
   "rules": [
-   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
-   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
-   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 42, use one menu activity then.",
+   "A few children ahead: a few children may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask \"How do you know?\" and let children explain, rather than rushing on."
   ],
   "menu": [
    {
     "id": "M1",
-    "title": "Is it always true?",
+    "title": "Clock hunt",
     "minutes": 4,
-    "tutor": "Mei says: if you add one more single stick, the ones digit goes up by one. Is that always true? Try 23, 47 and 39 with your sticks or kit.",
-    "rec": "Recording: pause. Try 23, 47 and 39 with one more single each. Is Mei always right?",
-    "answer": "Not always. 23 and 47 become 24 and 48. 39 plus one single makes ten singles, which tie into a new bundle: 40. It is true unless the ones digit is 9."
+    "tutor": "Find a clock or a watch at home. Say the time. Is it o'clock or half past? Which hand names the hour?",
+    "rec": "Recording: pause. Find a clock at home. Say the time and which hand names the hour.",
+    "answer": "Any clock will do. Check: if the long hand is on the 12 it is an o'clock time; if it is on the 6 it is half past; the short hand names the hour."
    },
    {
     "id": "M2",
     "title": "Make a puzzle for your grown-up",
     "minutes": 4,
-    "tutor": "Pick a secret number. Write two clues about its tens and its ones, like: it has 4 bundles and the ones digit is 7. Give it to your grown-up to solve.",
-    "rec": "Recording: pause. Write a mystery number puzzle with two clues for a grown-up to solve.",
-    "answer": "No single answer. Check that the clues fit the secret number and fit only one number."
+    "tutor": "Set your clock to an o'clock or half past time. Ask your grown-up what time it is. Then ask them to set a time for you to read.",
+    "rec": "Recording: pause. Set a time on your clock and ask a grown-up to read it. Then swap.",
+    "answer": "No single answer. Check the hands: the long hand on the 12 or the 6, and the short hand on or half way past a number."
    },
    {
     "id": "M3",
     "title": "Teach it back",
     "minutes": 3,
-    "tutor": "Pretend your grown-up or a toy has never seen bundles. Teach them how to read 52 using bundles and singles.",
-    "rec": "Recording: pause. Teach a grown-up how to read 52 with bundles and singles.",
-    "answer": "52 is 5 bundles of ten and 2 singles. The left digit counts the bundles, the right digit counts the singles."
+    "tutor": "Pretend a toy has never seen a clock. Show it which hand names the hour and which hand counts the minutes.",
+    "rec": "Recording: pause. Show a toy or a grown-up which hand names the hour and which counts the minutes.",
+    "answer": "The short hand names the hour. The long hand counts the minutes: each number is 5 more minutes."
    }
   ]
  },
+ "parent": {
+  "summary": "We learned to read a clock. The short hand names the hour and the long hand counts the minutes, five at a time. Your child read and set o'clock and half past, wrote times such as 7:00 and 7:30, and counted the minutes in 5s. Reading o'clock and half past is Primary 1 school work.",
+  "words": [
+   "short hand: it names the hour",
+   "long hand: it counts the minutes",
+   "o'clock: the long hand is on the 12",
+   "half past: the long hand is on the 6 (30 minutes)",
+   "quarter past, quarter to: 15 minutes past, 15 minutes before the next hour"
+  ],
+  "try_home": [
+   "Set the clock: put the clock hands on your child's cut-out face. Call a time such as 4 o'clock or half past 6 and let your child set it. Swap roles and make a mistake on purpose for them to find.",
+   "Real clock: when you pass a clock, ask: which hand names the hour? Where is the long hand? What time is it?",
+   "Count in 5s: point the long hand at each number and count 5, 10, 15 together. How many minutes is it at the 6?"
+  ],
+  "ask": [
+   "Which hand names the hour?",
+   "Where is the long hand? What does that tell us?",
+   "How do you know?"
+  ],
+  "when_stuck": "Let your child move the hands and watch, and wait 10 seconds before helping. Please do not teach a rule such as clockwise or hurry them: the clock hands are the teacher. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson, Term 3 Lesson 2: Five Minutes at a Time. Online practice: your tutor will share the link.",
+  "quote": "The short hand names the hour. The long hand counts the minutes.",
+  "report_line": "Your child is learning to read a clock to the half hour and to count minutes in 5s. This week: o'clock and half past.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your Term 3 book open at the next lesson: tear out its event cards page along the dashed line; a grown-up cuts out the 8 event cards (the mat is not cut)",
+   "Keep your clock from this lesson (2 faces and 6 hands) in an envelope",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The clock hands are loose paper pieces with no pin, so nothing is sharp. A grown-up cuts the kit beforehand: nobody cuts during the lesson. Small things (counters, buttons) stay on the table and never go near the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. A mirror, if a family uses one for the Go further page, is small and unbreakable or stays on the wall.",
+  "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
+  "Never read out a child’s name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child’s page on the recording.",
+  "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program’s business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room. Photos are kept for 90 days after the program ends.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed.",
+  "The gallery shows faces and fingers, not tables or papers. Ask for a finger answer when you need to see something. Answers on three are said quietly with the microphone off; a child who is invited to share switches the microphone on, then off again. The still-stuck photo is of the whole of workbook page 5 (Investigation, exit ticket and look-back)."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself with a real cut-out clock first. Check the hour hand: in the pictures the short hand sits where it really would (at half past 8 it is half way between the 8 and the 9). Check that no workbook time repeats a time shown in the sneak-peek, Explore, mini-lesson or Talk (9:00, 2:30, 3:00, 10:00, 12:00, 12:30, 11:00, 11:30, 5:15, 5:45, 10:30).",
+  "Tell families before Term 3 starts (Lesson 20's goodbye says the first Term 3 workbook is needed and a clock is optional; that is not enough): your Term 3 book is in the house; tear out the clock kit page and a grown-up cuts out the 2 clock faces and the 6 hands (3 short, wide, 3 long, thin); keep them in an envelope; a ruler for drawing the hands; a real clock helps. No printer: a paper plate with 1 to 12 written round the edge and two strips of card.",
+  "Have the slides open. Have your own cut-out clock to show on camera if you wish. Draw nothing under the webcam: the recording cannot show it.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. Say the recording statement and the microphone routine in the same words every lesson.",
+  "Be plain with families: reading o'clock and half past is Primary 1 school work. Quarter past and quarter to are taught as 15 and 45 minutes by counting in 5s; the Primary 1 school papers we have seen use only o'clock and half past, so every time is also shown as digits. The Mirror Clock puzzle (Go further) is beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",
+  "Slides s-explore1, s-explore2, s-explore3, s-m3, s-m4 and s-m5 keep the picture or the answer off the screen while you ask: it appears on the slide after. Read every question with its options aloud (S4): the clocks on the slides are small. Do not say clockwise as a rule."
+ ],
  "workbook": {
-  "header": "Template check: Terms 3 and 4 figures",
-  "hint_p1": "Use counters or a drawing. Say your answer out loud, then write it.",
-  "hint_p2": "Work in order. Read each box carefully.",
-  "hint_p3": "Use objects or draw a picture. Choose any question.",
+  "header": "Reading a scale: the clock",
+  "hint_p1": "Use your clock. Say the time out loud, then write it with digits.",
+  "hint_p2": "Look at both hands. Read the time on every clock before you compare.",
+  "hint_p3": "Count in 5s from the 12. Use your clock or draw. Choose any question.",
+  "hint_p4": "A mirror swaps left and right. Use your two clock faces. Choose any question.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use the cut-out clock or a real clock. Small things stay on the table, away from mouths and little brothers and sisters.",
   "kits": [
    {
     "type": "clock_kit",
-    "title": "Kit page: clock kit",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "play_money",
-    "title": "Kit page: play money",
-    "intro": "Stub kit page.",
-    "page": 1
-   },
-   {
-    "type": "play_money",
-    "page": 2,
-    "title": "Kit page: play money notes",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "price_tags",
-    "title": "Kit page: price tags",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "grid_tiles",
-    "title": "Kit page: grid tiles",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "mistake_cards",
-    "title": "Kit page: mistake cards",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "fold_shapes",
-    "title": "Kit page: fold shapes",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "shape_pieces",
-    "title": "Kit page: shape pieces",
-    "intro": "Stub kit page.",
-    "page": 1
-   },
-   {
-    "type": "shape_pieces",
-    "page": 2,
-    "title": "Kit page: shape pieces 2",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "pair_cards",
-    "title": "Kit page: pair cards",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "grid_mat",
-    "title": "Kit page: grid mat",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "graph_mat",
-    "title": "Kit page: graph mat",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "tool_cards",
-    "title": "Kit page: tool cards",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "event_cards",
-    "title": "Kit page: event cards",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "stick_strips",
-    "title": "Kit page: stick strips",
-    "intro": "Stub kit page."
-   },
-   {
-    "type": "calendar_cards",
-    "title": "Kit page: calendar cards",
-    "intro": "Stub kit page."
+    "title": "Kit page: clock",
+    "intro": "A grown-up cuts out the 2 clock faces and the 6 hands (3 short, wide hour hands and 3 long, thin minute hands) before the lesson. The hands lie flat on the face: no pin, nothing sharp. Keep all 8 pieces in an envelope; we use the clock again in Term 3 Lessons 2, 3 and 10."
    }
   ]
  },
- "stub": true,
  "beyond": {
-  "name": "Stub beyond item",
+  "name": "Mirror Clock",
   "where": [
-   "T3",
+   "G1",
+   "G2",
    "G3"
   ],
-  "text": "Stub: a tutor-only line that names what goes past Primary 1.",
-  "parent": "Stub: the Think harder and Go further pages go past school Primary 1 on purpose."
+  "text": "A clock is seen in a mirror: what is the real time (o'clock 4 shows 8; half past 7 shows half past 4), and which o'clock times look the same in a mirror (12 and 6). Level note: reflection is not a Primary 1 outcome; line symmetry is Primary 4 (p. 39). Level 2 returns to mirror clocks and digits (intended spiral).",
+  "parent": "The Go further page has a Mirror Clock puzzle (what time is it really, if the clock is seen in a mirror?). A mirror is not part of Primary 1; it is on the page for children who enjoy a puzzle."
  }
 }
