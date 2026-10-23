@@ -1826,25 +1826,25 @@
       "type": "price_tag",
       "item": "pencil",
       "price": "$3",
-      "size": 55
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "glue",
       "price": "$5",
-      "size": 55
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "ruler",
       "price": "$7",
-      "size": 55
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "cup",
       "price": "$8",
-      "size": 55
+      "size": 100
      }
     ]
    },
@@ -2393,31 +2393,31 @@
       "type": "price_tag",
       "item": "rubber",
       "price": "$2",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "pencil",
       "price": "$3",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "glue",
       "price": "$5",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "ruler",
       "price": "$7",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "cup",
       "price": "$8",
-      "size": 50
+      "size": 100
      }
     ]
    }

@@ -2231,19 +2231,19 @@
       "type": "price_tag",
       "item": "jar",
       "price": "$14",
-      "size": 55
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "pen",
       "price": "$4",
-      "size": 55
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "cup",
       "price": "$8",
-      "size": 55
+      "size": 100
      }
     ]
    },
@@ -2364,19 +2364,19 @@
       "type": "price_tag",
       "item": "car",
       "price": "$43",
-      "size": 70
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "shoe",
       "price": "$26",
-      "size": 70
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "fish",
       "price": "$15",
-      "size": 70
+      "size": 100
      }
     ]
    },
@@ -2534,31 +2534,31 @@
       "type": "price_tag",
       "item": "rubber",
       "price": "$2",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "pencil",
       "price": "$3",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "pen",
       "price": "$4",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "ruler",
       "price": "$7",
-      "size": 50
+      "size": 100
      },
      {
       "type": "price_tag",
       "item": "cup",
       "price": "$8",
-      "size": 50
+      "size": 100
      }
     ]
    }

@@ -2087,8 +2087,7 @@
        {
         "v": "$2"
        }
-      ],
-      "size": 60
+      ]
      },
      {
       "type": "money",
@@ -2096,10 +2095,10 @@
        {
         "v": "$1"
        }
-      ],
-      "size": 40
+      ]
      }
-    ]
+    ],
+    "stack": true
    },
    {
     "id": "S6",
@@ -2309,8 +2308,7 @@
         "v": "10c"
        }
       ],
-      "label": "Set A",
-      "size": 90
+      "label": "Set A"
      },
      {
       "type": "money",
@@ -2323,8 +2321,7 @@
         "v": "10c"
        }
       ],
-      "label": "Set B",
-      "size": 90
+      "label": "Set B"
      },
      {
       "type": "money",
@@ -2337,10 +2334,10 @@
         "n": 2
        }
       ],
-      "label": "Set C",
-      "size": 90
+      "label": "Set C"
      }
-    ]
+    ],
+    "stack": true
    }
   ],
   "go": [

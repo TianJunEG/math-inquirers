@@ -105,7 +105,8 @@ def qbox(q, label=None, draw=False):
     vis = _vis_html(q['visual']) if q.get('visual') else ''
     if q.get('visuals'):      # two or more pictures in one question, side by side
         k = len(q['visuals'])
-        vis += f'<div class="visrow" style="--n:{k}">' + ''.join(_vis_html(v) for v in q['visuals']) + '</div>'
+        if q.get('stack'): vis += ''.join(_vis_html(v) for v in q['visuals'])      # one figure under another, each full width
+        else: vis += f'<div class="visrow" style="--n:{k}">' + ''.join(_vis_html(v) for v in q['visuals']) + '</div>'
     parts = ''
     if q.get('parts'):
         for p in q['parts']:
