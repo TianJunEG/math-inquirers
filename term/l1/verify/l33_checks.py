@@ -109,6 +109,15 @@ def figs_in(blocks):
     return out
 
 
+def lists_in(blocks):
+    out = []
+    for b in blocks:
+        if b.get('t') == 'list': out.append(b['items'])
+        if b.get('t') == 'cols':
+            for c in b['cols']: out += lists_in(c)
+    return out
+
+
 # ---------------------------------------------------------------- class items: (kind, numbers). Nothing here may appear in the workbook, exit or home sheet.
 CLASS = {
     'rem1': [('array', 3, 5), ('array', 2, 4)],
@@ -253,11 +262,11 @@ def run(d):
     eq(len(walk([tuple(p) for p in F('s-m1-ans')['route']])), 3, 's-m1-ans arrows are 3 steps'); eq(len(dots_on_line((0, 0), (6, 0))), 7, 's-m1 your turn: 7 dots'); eq(len(dots_on_line((0, 0), (6, 0))) - 1, 6, 's-m1 your turn: 6 steps')
     f = F('s-m2'); poly = [tuple(p) for p in f['poly']]; A, B, C = poly
     eq((B[0] - A[0], A[1] - B[1]), (3, 0), 's-m2 corner B is 3 right of A'); eq((C[0] - A[0], A[1] - C[1]), (0, 2), 's-m2 corner C is 2 up from A'); eq(A, (0, 3), 's-m2 A is the bottom left dot of the grid')
-    eq(sl['s-m2-ans']['blocks'][0]['items'], ['A: the start.', 'B: 3 right.', 'C: 2 up.'], 's-m2-ans text')
+    eq(lists_in(sl['s-m2-ans']['blocks'])[0], ['A: the start.', 'B: 3 right.', 'C: 2 up.'], 's-m2-ans text')
     f = F('s-m3'); sx, sy = f['start']; ex, ey = f['end']; eq((ex - sx, sy - ey), (4, 2), 's-m3 S to E is 4 right 2 up'); eq(sl['s-m3-ans']['blocks'][0]['text'], '4 right, 2 up. To come back: 4 left, 2 down.', 's-m3-ans text')
     back = walk([(ex, ey), (sx, ey), (sx, sy)]); eq(totals(back)['L'], 4, 's-m3 way back: 4 left'); eq(totals(back)['D'], 2, 's-m3 way back: 2 down')
     f = F('s-m4-ans'); m = walk([tuple(p) for p in f['route']]); eq(''.join(m), 'RUURRRU', 's-m4 moves: 1 right, 2 up, 3 right, 1 up'); eq(net_right_up(m), (4, 3), 's-m4 totals'); eq(tuple(f['end']), (f['route'][-1][0], f['route'][-1][1]), 's-m4 ends on E')
-    eq(sl['s-m4']['blocks'][1]['items'], ['Go 1 right.', 'Go 2 up.', 'Go 3 right.', 'Go 1 up.'], 's-m4 directions'); eq(1 + 3, 4, 's-m4 rights add'); eq(2 + 1, 3, 's-m4 ups add')
+    eq(lists_in(sl['s-m4']['blocks'])[0], ['Go 1 right.', 'Go 2 up.', 'Go 3 right.', 'Go 1 up.'], 's-m4 directions'); eq(1 + 3, 4, 's-m4 rights add'); eq(2 + 1, 3, 's-m4 ups add')
     f = F('s-m5'); eq((f['rows'], f['cols']), (2, 1), 's-m5 grid is 1 across and 2 up'); r5 = monotone_routes(1, 2); eq(sorted(r5), ['RUU', 'URU', 'UUR'], 's-m5 all routes by search')
     eq(''.join('R' if a == 'R' else 'U' for a in ''.join('R' if (x2 > x1) else 'U' for (x1, y1), (x2, y2) in zip(f['route'], f['route'][1:]) for _ in range(abs(x2 - x1) + abs(y2 - y1)))), 'RUU', 's-m5 the route shown is R U U')
     shown = []

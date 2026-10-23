@@ -266,11 +266,7 @@
      "text": "Rows go across. Columns go down. How many rows? How many in each row?"
     }
    ],
-   "note": "Rows and columns (Term 2 Lesson 5, taught again). Rows go across, like lines of writing. Columns go down, like the legs of a table. Ask: how many rows (3), how many counters in each row (5). A child who is unsure points along each row with a finger. Your turn, no picture: 2 rows with 4 dots in each row; how many dots in all (8). Children answer aloud. No writing.",
-   "mascot": {
-    "size": "s",
-    "say": "Take your time!"
-   }
+   "note": "Rows and columns (Term 2 Lesson 5, taught again). Rows go across, like lines of writing. Columns go down, like the legs of a table. Ask: how many rows (3), how many counters in each row (5). A child who is unsure points along each row with a finger. Your turn, no picture: 2 rows with 4 dots in each row; how many dots in all (8). Children answer aloud. No writing."
   },
   {
    "id": "s-rem2",
@@ -311,7 +307,7 @@
        0
       ]
      ],
-     "size": "m"
+     "size": 55
     },
     {
      "t": "chip",
@@ -426,7 +422,7 @@
        3
       ]
      ],
-     "size": "m"
+     "size": 55
     },
     {
      "t": "chip",
@@ -473,7 +469,7 @@
           3
          ]
         ],
-        "size": "m"
+        "size": 70
        },
        {
         "t": "chip",
@@ -509,7 +505,7 @@
           3
          ]
         ],
-        "size": "m"
+        "size": 70
        },
        {
         "t": "chip",
@@ -590,7 +586,7 @@
       3,
       0
      ],
-     "size": "m"
+     "size": 55
     },
     {
      "t": "chip",
@@ -646,7 +642,7 @@
        0
       ]
      ],
-     "size": "m"
+     "size": 70
     },
     {
      "t": "chip",
@@ -738,7 +734,7 @@
        1
       ]
      ],
-     "size": "m"
+     "size": 55
     },
     {
      "t": "chip",
@@ -754,35 +750,44 @@
    "title": "A, B and C",
    "blocks": [
     {
-     "t": "list",
-     "ordered": false,
-     "items": [
-      "A: the start.",
-      "B: 3 right.",
-      "C: 2 up."
-     ]
-    },
-    {
-     "t": "visual",
-     "type": "grid",
-     "rows": 3,
-     "cols": 3,
-     "kind": "dots",
-     "poly": [
+     "t": "cols",
+     "cols": [
       [
-       0,
-       3
+       {
+        "t": "list",
+        "ordered": false,
+        "items": [
+         "A: the start.",
+         "B: 3 right.",
+         "C: 2 up."
+        ]
+       }
       ],
       [
-       3,
-       3
-      ],
-      [
-       0,
-       1
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 3,
+        "cols": 3,
+        "kind": "dots",
+        "poly": [
+         [
+          0,
+          3
+         ],
+         [
+          3,
+          3
+         ],
+         [
+          0,
+          1
+         ]
+        ],
+        "size": 55
+       }
       ]
-     ],
-     "size": "m"
+     ]
     }
    ],
    "note": "The answer for the example on the slide before. A is the start. B is 3 steps right of A. C is 2 steps up from A. Then join A to B, B to C and C to A. Read it aloud so that children can tick their own copy, and say what we counted. The line from C to B slants: it goes from dot to dot like the others."
@@ -870,26 +875,35 @@
      "text": "Start at S."
     },
     {
-     "t": "list",
-     "ordered": true,
-     "items": [
-      "Go 1 right.",
-      "Go 2 up.",
-      "Go 3 right.",
-      "Go 1 up."
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Go 1 right.",
+         "Go 2 up.",
+         "Go 3 right.",
+         "Go 1 up."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 3,
+        "cols": 4,
+        "kind": "dots",
+        "start": [
+         0,
+         3
+        ],
+        "size": 60
+       }
+      ]
      ]
-    },
-    {
-     "t": "visual",
-     "type": "grid",
-     "rows": 3,
-     "cols": 4,
-     "kind": "dots",
-     "start": [
-      0,
-      3
-     ],
-     "size": "m"
     }
    ],
    "note": "Worked example. Children use a route grid and draw as you read: go 1 right, go 2 up, go 3 right, go 1 up. Read one direction at a time and wait. Ask: where do you stop; how many right in all; how many up in all. The line and the answer are on the next slide: the path ends at the top right dot, 4 right and 3 up in all. Children tick their own work."
@@ -936,7 +950,7 @@
       4,
       0
      ],
-     "size": "m"
+     "size": 60
     },
     {
      "t": "answer",
@@ -2982,7 +2996,7 @@
      3,
      0
     ],
-    "size": 45
+    "size": 38
    },
    "lines": 4,
    "draw": 0,
@@ -3043,7 +3057,7 @@
      4,
      0
     ],
-    "size": 45
+    "size": 40
    }
   },
   {
@@ -3845,25 +3859,24 @@
   ]
  },
  "parent": {
-  "summary": "We used a grid of dots to copy figures exactly. Your child counted the steps between the dots (not the dots), said where to go as a number right and a number up, followed directions, and listed every route that goes only right or up.",
+  "summary": "We copied figures exactly on a grid of dots. Your child counted steps (not dots), said where to go as right and up, and listed every route that goes only right or up.",
   "words": [
    "step: the jump from one dot to the next",
-   "right and up: how we say where to go, for example 3 right, 2 up",
-   "route: one way to get from the start to the end",
-   "exact copy: the same shape and the same size",
-   "left and down: the opposites of right and up"
+   "3 right, 2 up: how we say where to go",
+   "route: one way from the start to the end",
+   "exact copy: the same shape and size"
   ],
   "try_home": [
-   "Draw dots, 4 across and 4 down. Join some dots to make a shape. Ask your child to copy it exactly, then check by counting steps.",
-   "Give directions for a button: 2 right, 1 up, 1 right. Ask where it stops. Change the order. Does it stop at the same dot?",
-   "Ask: a row of 6 dots. How many steps from the first dot to the last? (5)"
+   "Draw 4 by 4 dots. Join some to make a shape. Ask your child to copy it exactly.",
+   "Give a button directions: 2 right, 1 up, 1 right. Where does it stop? Change the order. Same dot?",
+   "A row of 6 dots: how many steps from the first dot to the last? (5)"
   ],
   "ask": [
    "How many steps, not dots?",
    "How many right, and how many up?",
    "Is there another route? How do you know you have them all?"
   ],
-  "when_stuck": "Let your child use the grid page and a button, and wait 10 seconds before helping. Asking 'Where does it start? Where does it stop?' works better than giving the answer. Please say 'count the jumps', not 'count the dots'. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "when_stuck": "Let your child use the grid page and a button, and wait 10 seconds before helping. Please say 'count the jumps', not 'count the dots'. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
   "next": "Next lesson: Cubes and Views. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
   "quote": "Count the jumps between the dots, not the dots.",
   "report_line": "Your child is learning to say where things are on a grid and to copy a figure exactly. This week: copying on a dot grid, saying right and up, and counting routes.",
@@ -3871,7 +3884,6 @@
   "next_materials": [
    "Your Term 4 book (Book 7): tear out the fold-squares page along the dashed line, then a grown-up cuts out the 4 paper squares",
    "12 small blocks of one size (building bricks or dice). No blocks? Tell your tutor: the lesson works with pictures",
-   "The grid page is not needed again: keep it for puzzles at home",
    "A pencil, a rubber and paper"
   ]
  },
@@ -3956,6 +3968,6 @@
    "G2"
   ],
   "text": "Counting how many different routes a counter can take from the bottom left to the top right of a grid when it moves only right or up (a grid 3 across and 1 up has 4, 2 across and 2 up has 6, 3 across and 2 up has 10), by listing every route in order and then by adding at the corners, and counting the routes that pass a given corner. Counting ways is not a Primary 1 outcome (the nearest idea is listing every case, a heuristic) and routes are not in the syllabus at any level. The other Think harder item (a repeating path) is a following-directions task. Named puzzle: Count the Routes.",
-  "parent": "Counting how many different routes a counter can take on a grid (listing them, then adding at the corners) goes past the Primary 1 syllabus on purpose. Copying a figure and saying right and up are Primary 1 work."
+  "parent": "Counting the different routes on a grid goes past the Primary 1 syllabus on purpose."
  }
 }
