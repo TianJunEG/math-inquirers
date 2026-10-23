@@ -89,7 +89,7 @@ items = [
  I('go', 5, 'A clock gains 3 minutes every hour. It is set right at 7:00 am.', parts=[
    P('a', 'At 11:00 am the clock shows {b} : {b} am.', ['11', '12']), P('b', 'It shows 12:15 pm. The right time is {b} : {b}.', ['12', '00'])],
    hint='How many hours have passed? 3 minutes each hour.',
-   why='(a) From 7 am to 11 am is 4 hours. 4 × 3 = 12 minutes fast: 11:12 am. (b) At the right time 12:00 pm, 5 hours have passed, and the clock is 5 × 3 = 15 minutes fast. So when the clock shows 12:15 pm the right time is 12:00 pm.'),
+   why='(a) 7 am to 11 am is 4 hours: 4 × 3 = 12 minutes fast, 11:12 am. (b) At the right time 12:00 pm the clock is 5 × 3 = 15 minutes fast, so it shows 12:15 pm.'),
  # Check yourself
  I('quiz', 0, 'A show begins at 6:50 pm and runs for 35 minutes. It finishes at {b} : {b} pm.', value=['7', '25'], atext='7:25 pm', why='6:50 to 7:00 is 10 minutes. 25 more minutes: 7:25 pm.'),
  I('quiz', 0, '2 kg 300 g = {b} g', value='2300', why='2 kg is 2000 g. 2000 + 300 = 2300 g.'),

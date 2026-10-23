@@ -743,7 +743,7 @@
      }
     }
    ],
-   "explanation": "All hens: 12 legs. Each swap of a hen for a pig adds 2, up to all pigs: 24 legs. So the totals are 12, 14, 16, 18, 20, 22, 24. (a) 18 yes: 3 hens and 3 pigs. (b) 25 is odd, no. (c) 26 is more than 24, no. (d) 12 yes: 6 hens.",
+   "explanation": "All hens: 12 legs. Each swap adds 2, up to all pigs: 24. Totals: 12, 14 ... 24. (a) 18: yes. (b) 25 is odd: no. (c) 26 is over 24: no. (d) 12: yes.",
    "hint": "All hens is 12 legs. Each swap adds 2 legs. All pigs is 24.",
    "space": {
     "rows": [

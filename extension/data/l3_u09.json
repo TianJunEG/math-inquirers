@@ -383,7 +383,7 @@
    "id": "L3U09-S07",
    "tier": "start",
    "page": 2,
-   "text": "Siti has $20 and buys the first 3 things on the price list.",
+   "text": "Siti has $20 and buys the first 3 things on the list.",
    "parts": [
     {
      "label": "a",
@@ -543,7 +543,7 @@
     },
     {
      "label": "c",
-     "text": "A show ends at 8:15 pm and lasts 1 h 45 min. It starts at {b}.",
+     "text": "A show ends at 8:15 pm. It is 1 h 45 min long. It starts at {b}.",
      "answer": {
       "value": [
        "6:30 pm"
@@ -622,10 +622,39 @@
    }
   },
   {
+   "id": "L3U09-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "A stamp costs 65¢. Kumar buys 8 stamps.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The stamps cost ${b}.",
+     "answer": {
+      "value": [
+       "5.20"
+      ],
+      "text": "5.20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "He pays with a $10 note. His change is ${b}.",
+     "answer": {
+      "value": [
+       "4.80"
+      ],
+      "text": "4.80"
+     }
+    }
+   ],
+   "explanation": "(a) 8 × 65¢ = 520¢ = $5.20. (b) 10.00 - 5.20 = 4.80."
+  },
+  {
    "id": "L3U09-T01",
    "tier": "think",
    "page": 4,
-   "text": "Buses leave the interchange every 20 minutes. The first bus leaves at 06:50. The ride takes 25 minutes. Mei must reach school by 08:15. When does the latest bus she can take leave? {b}",
+   "text": "The buses leave the interchange every 20 minutes, starting at 06:50. The ride takes 25 minutes. Mei must reach school by 08:15. When does the latest bus she can take leave? {b}",
    "answer": {
     "value": [
      "07:50"

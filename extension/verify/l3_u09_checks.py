@@ -131,6 +131,12 @@ def _():
     return {'a': [read(4, 2)], 'b': [read(7, 9)], 'c': [read(11, 5)]}
 
 
+@check('L3U09-S12')
+def _():
+    cost = 8 * 65
+    return {'a': [dollars(cost)], 'b': [dollars(1000 - cost)]}
+
+
 @check('L3U09-T01')
 def _():
     first, gap, ride, must = mins(6, 50), 20, 25, mins(8, 15)

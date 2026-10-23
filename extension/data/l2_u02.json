@@ -189,7 +189,7 @@
      }
     }
    ],
-   "explanation": "Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265.",
+   "explanation": "Turn each into an addition. (a) 568 + 267 = 835: 15, 13, 8 with carries. (b) 265 + 247 = 512: 12, 11, 5 with carries. So 835 - 267 = 568 and 512 - 247 = 265.",
    "partsrow": true
   },
   {
@@ -815,7 +815,7 @@
      }
     }
    ],
-   "explanation": "Add the 3 totals: 540 + 610 + 450 = 1600. Each child is counted twice, so all 3 together have 800. Ravi = 800 - 540 = 260. Ali = 800 - 610 = 190. Mei = 800 - 450 = 350. Check: 190 + 350 = 540, 350 + 260 = 610, 190 + 260 = 450.",
+   "explanation": "540 + 610 + 450 = 1600 counts each child twice, so all 3 have 800. Ravi 800 - 540 = 260. Ali 800 - 610 = 190. Mei 800 - 450 = 350.",
    "hint": "Add the 3 totals, then halve. That is all 3 children together.",
    "partsrow": true
   },
@@ -857,7 +857,7 @@
      }
     }
    ],
-   "explanation": "(a) 742 - 247 = 495. (b) 831 - 138 = 693. (c) Both answers have 9 in the middle. (d) The answer to a reverse-and-subtract is always a multiple of 99. 954 - 459 = 495. The hundreds digits 9 and 4 differ by 5, and 5 x 99 = 495.",
+   "explanation": "(a) 495. (b) 693. (c) Both have 9 in the middle. (d) The answer is always a multiple of 99: 954 - 459 = 495 (5 × 99, and 9 - 4 = 5).",
    "hint": "Look at the middle digit. Add the digits of each answer.",
    "beyond": "Patterns in subtraction"
   },

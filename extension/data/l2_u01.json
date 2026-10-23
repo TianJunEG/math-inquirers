@@ -765,7 +765,7 @@
     ],
     "text": "Open. Example: \"I am a 3-digit number. I am between 300 and 400. My digits add up to 12. My ones digit is 2.\" Check that no other number fits all 3 clues."
    },
-   "explanation": "A good riddle has exactly one answer. Example: between 300 and 400 leaves 100 numbers. Digits add up to 12 leaves 3 + 9 = 12 pairs of tens and ones: 309, 318, 327, ... Ones digit 2 leaves only 372. Always test your riddle with a friend.",
+   "explanation": "A good riddle has exactly one answer. Example: between 300 and 400 leaves 100 numbers. Digit sum 12 leaves 309, 318, 327 ... Ones digit 2 leaves only 372. Test yours with a friend.",
    "hint": "Say how many numbers still fit after each clue.",
    "space": {
     "rows": [

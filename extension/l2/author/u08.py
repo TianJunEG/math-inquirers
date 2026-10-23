@@ -80,7 +80,7 @@ items = [
  I('go', 5, 'Small cubes make a big cube that is 4 long, 4 wide and 4 high. The outside is painted. Count the small cubes with each number of painted faces.', partsrow=True, parts=[
    P('a', '3 faces painted: {b}', '8'), P('b', '2 faces painted: {b}', '24'), P('c', '1 face painted: {b}', '24'), P('d', 'No paint: {b}', '8')],
    hint='Corners, edges, faces, inside. Check they make 64.',
-   why='3 faces: the 8 corners. 2 faces: each of the 12 edges has 2 cubes between the corners, so 24. 1 face: each of the 6 faces has a 2 by 2 middle, so 6 × 4 = 24. No paint: the middle block is 2 by 2 by 2, so 8. Check: 8 + 24 + 24 + 8 = 64 = 4 × 4 × 4.'),
+   why='3 faces: the 8 corners. 2 faces: 12 edges with 2 cubes each: 24. 1 face: 6 faces with a 2 by 2 middle: 24. No paint: the 2 by 2 by 2 middle: 8. Check: 8 + 24 + 24 + 8 = 64.'),
  I('go', 5, 'Design a stack with exactly 24 cubes. Write the cubes in each layer. Many answers are right.', value='open',
    atext='Open. Examples: 4 long, 3 wide and 2 high is 12 + 12 = 24. Or layers of 12, 8 and 4 cubes: 12 + 8 + 4 = 24.', space={'rows': ['Stack 1:']},
    hint='Each layer needs a layer under it.',

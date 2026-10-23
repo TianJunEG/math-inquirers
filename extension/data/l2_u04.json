@@ -137,7 +137,7 @@
      }
     }
    ],
-   "explanation": "One group has 4 shapes, so groups end in the 4 times table. (a) 16 ends a group: the last shape is a circle. (b) 20 ends a group, so 21 is a star and 22 is a square. (c) 32 ends a group (4 × 8), so 33 starts again with a star.",
+   "explanation": "One group has 4 shapes. (a) 16 ends a group: a circle. (b) 20 ends a group, so 21 is a star and 22 is a square. (c) 32 ends a group, so 33 is a star.",
    "partsrow": true
   },
   {
@@ -193,7 +193,7 @@
      }
     }
    ],
-   "explanation": "One group has 5 letters: C, H, E, S, S. (a) 15 ends a group, so 16 is C and 17 is H. (b) E is the 3rd letter of a group: places 3, 8, 13, 18, 23, 28. The 6th E is in place 28. (c) 30 letters is 6 groups. Each group has 2 S, so 6 × 2 = 12.",
+   "explanation": "One group is C, H, E, S, S. (a) 15 ends a group, so 16 is C and 17 is H. (b) E is 3rd in a group: 3, 8, 13, 18, 23, 28. (c) 6 groups with 2 S each: 12.",
    "partsrow": true
   },
   {
@@ -684,7 +684,7 @@
      }
     }
    ],
-   "explanation": "One group has 5 shapes and the star is the 2nd one. Stars are in places 2, 7, 12, 17, 22 ... that is 2 more than the 5 times table. 17 = 15 + 2, yes. 22 = 20 + 2, yes. 35 is in the 5 times table, so it is the last shape: no. 47 = 45 + 2, yes.",
+   "explanation": "The star is the 2nd of 5 shapes: places 2, 7, 12, 17, 22 ... (2 more than the 5 times table). 17 and 22: yes. 35 is the last shape: no. 47 = 45 + 2: yes.",
    "hint": "Stars are 2 more than a number in the 5 times table.",
    "partsrow": true
   },

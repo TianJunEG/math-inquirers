@@ -60,7 +60,7 @@ items = [
    space={'table': {'cols': ['20¢', '10¢', '5¢'], 'rows': 6}},
    parts=[P('a', 'How many ways are there? {b}', '6'), P('b', 'The 5-coin way: {b} coins of 10¢ and {b} of 5¢.', ['2', '3'], '2 coins of 10¢ and 3 coins of 5¢')],
    hint='Try 1 coin of 20¢ first. Then none. Fill the rest with 10¢ and 5¢.',
-   why='With one 20¢: 15¢ is left, as 10 + 5 or 5 + 5 + 5. With no 20¢: 35¢ is 10+10+10+5, 10+10+5+5+5, 10+5+5+5+5+5 or seven 5¢. Ways (20, 10, 5): 1,1,1 / 1,0,3 / 0,3,1 / 0,2,3 / 0,1,5 / 0,0,7. That is 6 ways. Only 0, 2, 3 uses 5 coins.'),
+   why='With one 20¢: 15¢ is 10+5 or 5+5+5. With no 20¢: 35¢ is made of 10¢ and 5¢ coins. Ways (20, 10, 5): 1,1,1 / 1,0,3 / 0,3,1 / 0,2,3 / 0,1,5 / 0,0,7: 6 ways. Only 0, 2, 3 has 5 coins.'),
  I('think', 4, 'Lollipops cost 20¢ each. Cookies cost 50¢ each. Siti buys 7 things and spends exactly $2.60. How many lollipops and how many cookies?', parts=[
    P('a', 'Lollipops: {b}', '3'), P('b', 'Cookies: {b}', '4')],
    hint='Start with 7 lollipops. Swap one for a cookie each time.',

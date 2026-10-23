@@ -883,7 +883,7 @@
      }
     }
    ],
-   "explanation": "(a) From 7 am to 11 am is 4 hours. 4 × 3 = 12 minutes fast: 11:12 am. (b) At the right time 12:00 pm, 5 hours have passed, and the clock is 5 × 3 = 15 minutes fast. So when the clock shows 12:15 pm the right time is 12:00 pm.",
+   "explanation": "(a) 7 am to 11 am is 4 hours: 4 × 3 = 12 minutes fast, 11:12 am. (b) At the right time 12:00 pm the clock is 5 × 3 = 15 minutes fast, so it shows 12:15 pm.",
    "hint": "How many hours have passed? 3 minutes each hour."
   },
   {

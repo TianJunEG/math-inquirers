@@ -50,7 +50,7 @@ u.S(2, 'Read the water level in each jug.', parts=[
 u.S(2, 'A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.', parts=[
     P('a', 'They cost ${b} in all.', A('4.05')), P('b', 'Her change is ${b}.', A('0.95'))],
     why='(a) 2.65 + 1.40 = 4.05. (b) 5.00 - 4.05 = 0.95. Check: 4.05 + 0.95 = 5.00.')
-u.S(2, 'Siti has $20 and buys the first 3 things on the price list.', parts=[
+u.S(2, 'Siti has $20 and buys the first 3 things on the list.', parts=[
     P('a', 'They cost ${b} in all.', A('14.45')), P('b', 'Her change is ${b}.', A('5.55')),
     P('c', 'Can she buy all 4 things on the list?   {circ:Yes|No}', A('Yes'))],
     figure={'type': 'l3_grid', 'head_row': True, 'cw': 118, 'ch': 42, 'fs': 26, 'width_mm': 92, 'rows': [['Book', 'Puzzle', 'Bottle', 'Stickers'], ['$6.20', '$4.85', '$3.40', '$1.75']]},
@@ -65,7 +65,7 @@ u.S(3, 'Write the time in the other kind of time.', parts=[
 u.S(3, 'How long does each take? Use a time line to help.', parts=[
     P('a', 'Aisha’s class starts at 5:25 pm and ends at 6:40 pm. It lasts {b} h {b} min.', A(['1', '15'], '1 h 15 min', list=True)),
     P('b', 'Ben’s class starts at 3:40 pm and lasts 55 minutes. It ends at {b}.', A('4:35 pm')),
-    P('c', 'A show ends at 8:15 pm and lasts 1 h 45 min. It starts at {b}.', A('6:30 pm'))],
+    P('c', 'A show ends at 8:15 pm. It is 1 h 45 min long. It starts at {b}.', A('6:30 pm'))],
     space={'rows': ['Time line:']},
     why='(a) 5:25 to 6:00 is 35 min, then 6:00 to 6:40 is 40 min. 35 + 40 = 75 min = 1 h 15 min. (b) 3:40 + 20 min = 4:00, then 35 more min = 4:35 pm. (c) 8:15 pm - 1 h = 7:15 pm, then 45 min back = 6:30 pm.')
 u.S(3, 'Write the time shown on each clock.', parts=[
@@ -74,8 +74,12 @@ u.S(3, 'Write the time shown on each clock.', parts=[
     figure={'type': 'l3_clock', 'clocks': [{'h': 4, 'm': 10, 'label': 'A'}, {'h': 7, 'm': 45, 'label': 'B'}, {'h': 11, 'm': 25, 'label': 'C'}], 'cols': 3, 'width_mm': 134},
     why='The short hand shows the hour and the long hand shows the minutes. A: the long hand points at 2, which is 10 minutes, and the short hand is just past 4. B: the long hand points at 9, which is 45 minutes. C: the long hand points at 5, which is 25 minutes.')
 
+u.S(3, 'A stamp costs 65¢. Kumar buys 8 stamps.', parts=[
+    P('a', 'The stamps cost ${b}.', A('5.20')), P('b', 'He pays with a $10 note. His change is ${b}.', A('4.80'))],
+    why='(a) 8 × 65¢ = 520¢ = $5.20. (b) 10.00 - 5.20 = 4.80.')
+
 # ---------------- Think harder
-u.T('Buses leave the interchange every 20 minutes. The first bus leaves at 06:50. The ride takes 25 minutes. Mei must reach school by 08:15. When does the latest bus she can take leave? {b}', A('07:50'),
+u.T('The buses leave the interchange every 20 minutes, starting at 06:50. The ride takes 25 minutes. Mei must reach school by 08:15. When does the latest bus she can take leave? {b}', A('07:50'),
     hint='Find the latest leaving time first: 08:15 minus 25 minutes.',
     space={'rows': ['Bus times: 06:50,', '', '']},
     why='Mei must leave by 08:15 - 25 min = 07:50. The buses leave at 06:50, 07:10, 07:30, 07:50, 08:10. The latest bus that gets her to school in time is the 07:50 bus.')

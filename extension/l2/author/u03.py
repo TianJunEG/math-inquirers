@@ -62,7 +62,7 @@ items = [
  I('think', 4, 'A pen has 6 animals, hens (2 legs) and pigs (4 legs). Mei counts the legs. Could she count this number of legs?', partsrow=True, parts=[
    P('a', '18 legs   {circ:Yes|No}', 'Yes'), P('b', '25 legs   {circ:Yes|No}', 'No'), P('c', '26 legs   {circ:Yes|No}', 'No'), P('d', '12 legs   {circ:Yes|No}', 'Yes')],
    space={'rows': ['Why 25 is not possible:']}, hint='All hens is 12 legs. Each swap adds 2 legs. All pigs is 24.',
-   why='All hens: 12 legs. Each swap of a hen for a pig adds 2, up to all pigs: 24 legs. So the totals are 12, 14, 16, 18, 20, 22, 24. (a) 18 yes: 3 hens and 3 pigs. (b) 25 is odd, no. (c) 26 is more than 24, no. (d) 12 yes: 6 hens.'),
+   why='All hens: 12 legs. Each swap adds 2, up to all pigs: 24. Totals: 12, 14 ... 24. (a) 18: yes. (b) 25 is odd: no. (c) 26 is over 24: no. (d) 12: yes.'),
  I('think', 4, 'I am a number between 30 and 50. Put me in groups of 3 and nothing is left. Put me in groups of 4 and 1 is left. Put me in groups of 5 and 3 are left. What is my number? {b}', value='33',
    space={'rows': ['Working:']}, hint='List the numbers that go into groups of 3 first.',
    why='Groups of 3 with none left over: 30, 33, 36, 39, 42, 45, 48. Groups of 4 with 1 left: 33 and 45. Groups of 5 with 3 left: 33 has 3 left, 45 has none. So 33.'),

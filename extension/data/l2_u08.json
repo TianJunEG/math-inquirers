@@ -1007,7 +1007,7 @@
      }
     }
    ],
-   "explanation": "3 faces: the 8 corners. 2 faces: each of the 12 edges has 2 cubes between the corners, so 24. 1 face: each of the 6 faces has a 2 by 2 middle, so 6 × 4 = 24. No paint: the middle block is 2 by 2 by 2, so 8. Check: 8 + 24 + 24 + 8 = 64 = 4 × 4 × 4.",
+   "explanation": "3 faces: the 8 corners. 2 faces: 12 edges with 2 cubes each: 24. 1 face: 6 faces with a 2 by 2 middle: 24. No paint: the 2 by 2 by 2 middle: 8. Check: 8 + 24 + 24 + 8 = 64.",
    "hint": "Corners, edges, faces, inside. Check they make 64.",
    "partsrow": true
   },

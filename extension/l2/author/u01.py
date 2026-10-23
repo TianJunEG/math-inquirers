@@ -89,7 +89,7 @@ items = [
    why='The hundreds and ones digits add up to 12 - 5 = 7. Try 156: swapping gives 651, which is 495 more. Try 255: swapping gives 552, which is 297 more. So the number is 255.'),
  I('go', 5, 'Make your own riddle about the number 372. Write 3 clues so that only 372 fits. Many answers are right.', value='open', atext='Open. Example: "I am a 3-digit number. I am between 300 and 400. My digits add up to 12. My ones digit is 2." Check that no other number fits all 3 clues.',
    space={'rows': ['Clue 1:', 'Clue 2:', 'Clue 3:']}, hint='Say how many numbers still fit after each clue.',
-   why='A good riddle has exactly one answer. Example: between 300 and 400 leaves 100 numbers. Digits add up to 12 leaves 3 + 9 = 12 pairs of tens and ones: 309, 318, 327, ... Ones digit 2 leaves only 372. Always test your riddle with a friend.'),
+   why='A good riddle has exactly one answer. Example: between 300 and 400 leaves 100 numbers. Digit sum 12 leaves 309, 318, 327 ... Ones digit 2 leaves only 372. Test yours with a friend.'),
  # ---- Check yourself
  I('quiz', 0, '7 hundreds and 13 tens = {b}', value='830', why='13 tens is 130. 700 + 130 = 830.'),
  I('quiz', 0, 'Use the cards 5, 0 and 8 once each. Write the greatest even 3-digit number. {b}', value='850', why='An even number ends in 0 or 8. To be greatest, try 8 first: 850 ends in 0, so it is even. 850 is greater than 580 and 508.'),

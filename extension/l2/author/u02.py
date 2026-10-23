@@ -32,7 +32,7 @@ items = [
  I('start', 1, 'Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away. Write the digits top number first.',
    figure={'type': 'l2_vsum', 'sums': [vs('-', ['8?5', '26?', '568'], '(a)'), vs('-', ['5?2', '?47', '265'], '(b)')], 'width_mm': 110},
    partsrow=True, parts=[P('a', 'Sum (a):  {b}  {b}', ['3', '7'], '3 and 7'), P('b', 'Sum (b):  {b}  {b}', ['1', '2'], '1 and 2')],
-   why='Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265.'),
+   why='Turn each into an addition. (a) 568 + 267 = 835: 15, 13, 8 with carries. (b) 265 + 247 = 512: 12, 11, 5 with carries. So 835 - 267 = 568 and 512 - 247 = 265.'),
  I('start', 1, 'Both sides must have the same value. Fill in the boxes.', partsrow=True, parts=[
    P('a', '270 + 140 = 300 + {b}', '110'), P('b', '840 - 300 = {b} - 200', '740'), P('c', '360 + {b} = 400 + 150', '190'),
    P('d', '199 + 250 = 200 + 249   {circ:True|False}', 'True')],
@@ -84,11 +84,11 @@ items = [
  I('go', 5, 'Ali and Mei have 540 stickers together. Mei and Ravi have 610 together. Ali and Ravi have 450 together. How many stickers does each child have?', partsrow=True, parts=[
    P('a', 'Ali has {b}', '190'), P('b', 'Mei has {b}', '350'), P('c', 'Ravi has {b}', '260')],
    hint='Add the 3 totals, then halve. That is all 3 children together.',
-   why='Add the 3 totals: 540 + 610 + 450 = 1600. Each child is counted twice, so all 3 together have 800. Ravi = 800 - 540 = 260. Ali = 800 - 610 = 190. Mei = 800 - 450 = 350. Check: 190 + 350 = 540, 350 + 260 = 610, 190 + 260 = 450.'),
+   why='540 + 610 + 450 = 1600 counts each child twice, so all 3 have 800. Ravi 800 - 540 = 260. Ali 800 - 610 = 190. Mei 800 - 450 = 350.'),
  I('go', 5, 'Reverse a 3-digit number by swapping its first digit and last digit. Then take the smaller number from the greater.', beyond='Patterns in subtraction', parts=[
    P('a', '742 - 247 = {b}      831 - 138 = {b}', ['495', '693'], '495 and 693'), P('b', 'What is the middle digit of both answers? {b}', '9'), P('c', 'Use the pattern: 954 - 459 = {b}', '495')],
    hint='Look at the middle digit. Add the digits of each answer.',
-   why='(a) 742 - 247 = 495. (b) 831 - 138 = 693. (c) Both answers have 9 in the middle. (d) The answer to a reverse-and-subtract is always a multiple of 99. 954 - 459 = 495. The hundreds digits 9 and 4 differ by 5, and 5 x 99 = 495.'),
+   why='(a) 495. (b) 693. (c) Both have 9 in the middle. (d) The answer is always a multiple of 99: 954 - 459 = 495 (5 × 99, and 9 - 4 = 5).'),
  I('go', 5, 'Make your own missing-digit sum. Add two 3-digit numbers and hide 2 digits. Only ONE pair of digits may work. Many answers are right.', value='open',
    atext='Open. Example: 4?6 + 37? = 801 (426 + 375). Test every digit for each box: only 2 and 5 work.',
    space={'rows': ['My sum:']}, hint='Start with a full sum. Then hide a digit in each number.',

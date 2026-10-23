@@ -553,7 +553,7 @@
      }
     }
    ],
-   "explanation": "With one 20¢: 15¢ is left, as 10 + 5 or 5 + 5 + 5. With no 20¢: 35¢ is 10+10+10+5, 10+10+5+5+5, 10+5+5+5+5+5 or seven 5¢. Ways (20, 10, 5): 1,1,1 / 1,0,3 / 0,3,1 / 0,2,3 / 0,1,5 / 0,0,7. That is 6 ways. Only 0, 2, 3 uses 5 coins.",
+   "explanation": "With one 20¢: 15¢ is 10+5 or 5+5+5. With no 20¢: 35¢ is made of 10¢ and 5¢ coins. Ways (20, 10, 5): 1,1,1 / 1,0,3 / 0,3,1 / 0,2,3 / 0,1,5 / 0,0,7: 6 ways. Only 0, 2, 3 has 5 coins.",
    "hint": "Try 1 coin of 20¢ first. Then none. Fill the rest with 10¢ and 5¢.",
    "space": {
     "table": {

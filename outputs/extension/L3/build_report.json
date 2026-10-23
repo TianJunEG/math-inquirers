@@ -88,9 +88,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8099414263645726,
+   "fill": 0.9671086508753862,
    "over": false,
-   "excess_mm": -48.8,
+   "excess_mm": -8.5,
    "edition": "soft"
   },
   {
@@ -176,9 +176,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.12714019052523173,
+   "fill": 0.18051622039134912,
    "over": false,
-   "excess_mm": -224.2,
+   "excess_mm": -210.5,
    "edition": "soft"
   },
   {
@@ -265,9 +265,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8099414263645726,
+   "fill": 0.9671086508753862,
    "over": false,
-   "excess_mm": -48.8,
+   "excess_mm": -8.5,
    "edition": "print"
   },
   {
@@ -353,19 +353,17 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.12714019052523173,
+   "fill": 0.18051622039134912,
    "over": false,
-   "excess_mm": -224.2,
+   "excess_mm": -210.5,
    "edition": "print"
   }
  ],
  "problems": [
   "soft page 6 (Unit 9 \u00b7 Learn it): natural fill 0.80 < 0.85",
   "soft page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 15.4 mm)",
-  "soft page 9 (Unit 9 \u00b7 Start here 3): natural fill 0.81 < 0.85",
   "print page 6 (Unit 9 \u00b7 Learn it): natural fill 0.82 < 0.85",
-  "print page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 15.4 mm)",
-  "print page 9 (Unit 9 \u00b7 Start here 3): natural fill 0.81 < 0.85"
+  "print page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 15.4 mm)"
  ],
  "soft_pages": 18,
  "print_pages": 18
