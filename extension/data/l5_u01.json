@@ -1,0 +1,817 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 1,
+ "id": "L5U01",
+ "title": "Million puzzles",
+ "topic": "Numbers to 10 million",
+ "holiday_lesson": 1,
+ "goal": "I can read, compare and round numbers up to 10 million. I can test both sides of a target and check every clue.",
+ "learn": {
+  "intro": "Read a big number in groups of three from the right. The groups are millions, thousands and ones. To find the number closest to a target, test the best number just below it and the best number just above it.",
+  "example": {
+   "problem": "Use the cards to make a 7-digit number as close as you can to 3 000 000. Use every card once. A number cannot start with 0.",
+   "steps": [
+    "Just below the target: start with 2. Then put the cards in order from greatest to smallest: 2 985 310.",
+    "Just above the target: start with 3. Then put the rest in order from smallest to greatest: 3 012 589.",
+    "Find each gap. 3 000 000 - 2 985 310 = 14 690. And 3 012 589 - 3 000 000 = 12 589.",
+    "Compare the gaps. 12 589 is smaller than 14 690, so the number above is closer."
+   ],
+   "answer": "The closest number is 3 012 589.",
+   "figure": {
+    "type": "l5_cards",
+    "items": [
+     0,
+     1,
+     2,
+     3,
+     5,
+     8,
+     9
+    ],
+    "width_mm": 100,
+    "alt": "digit cards"
+   }
+  },
+  "howto": {
+   "title": "How to find the closest number",
+   "steps": [
+    "Write the best number just below the target.",
+    "Write the best number just above the target.",
+    "Find the gap for each. The smaller gap wins."
+   ]
+  },
+  "facts": {
+   "title": "Place-value chart",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "M",
+     "HTh",
+     "TTh",
+     "Th",
+     "H",
+     "T",
+     "O"
+    ],
+    "rows": [
+     [
+      4,
+      0,
+      5,
+      3,
+      2,
+      0,
+      1
+     ]
+    ],
+    "width_mm": 100,
+    "minw": 62,
+    "alt": "place-value chart"
+   },
+   "lines": [
+    "The number is 4 053 201.",
+    "M is millions. TTh is ten thousands."
+   ]
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U01-L01",
+   "text": "Use the cards to make a 7-digit number as close as you can to 8 000 000. Use every card once. Write your number. {ll}",
+   "answer": {
+    "value": [
+     "7964310"
+    ],
+    "text": "7 964 310"
+   },
+   "explanation": "Just below 8 000 000: start with 7, then the greatest order: 7 964 310 (35 690 away). Just above: start with 9, then the smallest order: 9 013 467 (1 013 467 away). 7 964 310 is closer.",
+   "figure": {
+    "type": "l5_cards",
+    "items": [
+     0,
+     1,
+     3,
+     4,
+     6,
+     7,
+     9
+    ],
+    "width_mm": 100,
+    "alt": "digit cards"
+   }
+  }
+ },
+ "items": [
+  {
+   "id": "L5U01-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the blanks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Six million, two hundred and five thousand and thirty is written {ll}",
+     "answer": {
+      "value": [
+       "6205030"
+      ],
+      "text": "6 205 030"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In 3 470 218, the digit 7 stands for {b}",
+     "answer": {
+      "value": [
+       "70000"
+      ],
+      "text": "70 000"
+     }
+    },
+    {
+     "label": "c",
+     "text": "How many thousands make 8 604 000? {b} thousands",
+     "answer": {
+      "value": [
+       "8604"
+      ],
+      "text": "8604"
+     }
+    }
+   ],
+   "explanation": "(a) Read the groups: 6 million, 205 thousand, 30. The hundreds place of the last group is empty, so write 6 205 030. (b) The 7 is in the ten thousands place, so it stands for 70 000. (c) 8 604 000 ÷ 1000 = 8604."
+  },
+  {
+   "id": "L5U01-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Arrange the numbers in order. Begin with the smallest.\n4 096 213, 940 621, 4 906 213, 4 096 231\n{ll}",
+   "answer": {
+    "value": [
+     "940621",
+     "4096213",
+     "4096231",
+     "4906213"
+    ],
+    "text": "940 621, 4 096 213, 4 096 231, 4 906 213",
+    "list": true
+   },
+   "explanation": "940 621 has only 6 digits, so it is the smallest. The other three start 4 million. Compare the next digits: 0 comes before 9, so 4 906 213 is last. Then 213 is less than 231."
+  },
+  {
+   "id": "L5U01-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Round 7 849 520 to the nearest:",
+   "parts": [
+    {
+     "label": "a",
+     "text": "thousand. {b}",
+     "answer": {
+      "value": [
+       "7850000"
+      ],
+      "text": "7 850 000"
+     }
+    },
+    {
+     "label": "b",
+     "text": "hundred thousand. {b}",
+     "answer": {
+      "value": [
+       "7800000"
+      ],
+      "text": "7 800 000"
+     }
+    },
+    {
+     "label": "c",
+     "text": "million. {b}",
+     "answer": {
+      "value": [
+       "8000000"
+      ],
+      "text": "8 000 000"
+     }
+    }
+   ],
+   "explanation": "Look at the digit just after the place you round to. (a) 849 520: the hundreds digit is 5, round up to 850 000. (b) 49 520 is less than 50 000, round down to 7 800 000. (c) 849 520 is more than 500 000, round up to 8 000 000."
+  },
+  {
+   "id": "L5U01-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the cards. Use all 7 cards once in each answer. A number cannot start with 0.",
+   "figure": {
+    "type": "l5_cards",
+    "items": [
+     0,
+     1,
+     4,
+     5,
+     7,
+     8,
+     9
+    ],
+    "width_mm": 100,
+    "alt": "digit cards"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The greatest multiple of 5 is {ll}",
+     "answer": {
+      "value": [
+       "9875410"
+      ],
+      "text": "9 875 410"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smallest number is {ll}",
+     "answer": {
+      "value": [
+       "1045789"
+      ],
+      "text": "1 045 789"
+     }
+    }
+   ],
+   "explanation": "(a) A multiple of 5 ends in 0 or 5. Ending in 0 gives 9 875 410. Ending in 5 gives only 9 874 105, which is less. (b) The first digit cannot be 0, so start with 1. Then 0, 4, 5, 7, 8, 9 in order: 1 045 789."
+  },
+  {
+   "id": "L5U01-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Ben has the number below. He adds 2 hundred thousands. Then he takes away 5 ten thousands. What is Ben's new number? {ll}",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "M",
+     "HTh",
+     "TTh",
+     "Th",
+     "H",
+     "T",
+     "O"
+    ],
+    "rows": [
+     [
+      6,
+      4,
+      8,
+      2,
+      3,
+      1,
+      5
+     ]
+    ],
+    "width_mm": 100,
+    "minw": 62,
+    "alt": "place-value chart"
+   },
+   "answer": {
+    "value": [
+     "6632315"
+    ],
+    "text": "6 632 315"
+   },
+   "explanation": "2 hundred thousands is 200 000, and 5 ten thousands is 50 000. 6 482 315 + 200 000 = 6 682 315. Then 6 682 315 - 50 000 = 6 632 315. Only the hundred thousands and ten thousands digits change."
+  },
+  {
+   "id": "L5U01-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Estimate each answer by rounding. Circle one choice for each.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 985 × 52 = 20 722  {circ:could be right|must be wrong}",
+     "answer": {
+      "value": [
+       "must be wrong"
+      ],
+      "text": "must be wrong"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 012 018 + 2 899 987 = 6 912 005  {circ:could be right|must be wrong}",
+     "answer": {
+      "value": [
+       "could be right"
+      ],
+      "text": "could be right"
+     }
+    },
+    {
+     "label": "c",
+     "text": "8 120 × 295 = 2 395 400  {circ:could be right|must be wrong}",
+     "answer": {
+      "value": [
+       "could be right"
+      ],
+      "text": "could be right"
+     }
+    },
+    {
+     "label": "d",
+     "text": "6 480 ÷ 16 = 4 050  {circ:could be right|must be wrong}",
+     "answer": {
+      "value": [
+       "must be wrong"
+      ],
+      "text": "must be wrong"
+     }
+    }
+   ],
+   "explanation": "(a) 4000 × 50 = 200 000, but the answer shown is only about 20 000. (b) 4 000 000 + 3 000 000 = 7 000 000, and 6 912 005 is close. (c) 8000 × 300 = 2 400 000, close to the answer. (d) 6000 ÷ 15 = 400, but 4050 is ten times too big."
+  },
+  {
+   "id": "L5U01-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Put ONE pair of brackets in each line to make it true. Write the new line.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "9 - 2 × 3 + 1 = 22   {ll}",
+     "answer": {
+      "value": [
+       "(9 - 2) × 3 + 1"
+      ],
+      "text": "(9 - 2) × 3 + 1 = 22"
+     }
+    },
+    {
+     "label": "b",
+     "text": "9 - 2 × 3 + 1 = 1   {ll}",
+     "answer": {
+      "value": [
+       "9 - 2 × (3 + 1)"
+      ],
+      "text": "9 - 2 × (3 + 1) = 1"
+     }
+    },
+    {
+     "label": "c",
+     "text": "2 400 000 ÷ 300 + 100 × 2 = 12 000   {ll}",
+     "answer": {
+      "value": [
+       "2400000 ÷ (300 + 100) × 2"
+      ],
+      "text": "2 400 000 ÷ (300 + 100) × 2 = 12 000"
+     }
+    }
+   ],
+   "explanation": "Brackets first. (a) (9 - 2) × 3 + 1 = 7 × 3 + 1 = 22. (b) 9 - 2 × (3 + 1) = 9 - 2 × 4 = 9 - 8 = 1. (c) 300 + 100 = 400. Then 2 400 000 ÷ 400 = 6000, and 6000 × 2 = 12 000."
+  },
+  {
+   "id": "L5U01-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "A factory makes 1 250 000 bolts. It packs 500 bolts in each box. Each carton holds 24 boxes. How many full cartons can it fill? {b} cartons",
+   "answer": {
+    "value": [
+     "104"
+    ],
+    "text": "104 cartons"
+   },
+   "explanation": "1 250 000 ÷ 500 = 2500 boxes. Then 2500 ÷ 24 = 104 remainder 4, since 24 × 104 = 2496. Only full cartons count, so 104."
+  },
+  {
+   "id": "L5U01-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "A number rounded to the nearest hundred is 8 700. Fill in the blanks.",
+   "figure": {
+    "type": "l5_numline",
+    "min": 8600,
+    "max": 8800,
+    "ticks": [
+     {
+      "v": 8600,
+      "lab": "8600"
+     },
+     {
+      "v": 8650,
+      "lab": "8650",
+      "minor": true
+     },
+     {
+      "v": 8700,
+      "lab": "8700"
+     },
+     {
+      "v": 8750,
+      "lab": "8750",
+      "minor": true
+     },
+     {
+      "v": 8800,
+      "lab": "8800"
+     }
+    ],
+    "width_mm": 130,
+    "alt": "number line from 8600 to 8800"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The smallest such number is {b}",
+     "answer": {
+      "value": [
+       "8650"
+      ],
+      "text": "8650"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The greatest such number is {b}",
+     "answer": {
+      "value": [
+       "8749"
+      ],
+      "text": "8749"
+     }
+    }
+   ],
+   "explanation": "A number rounds to 8700 when it is from halfway below to just before halfway above. Halfway marks are 8650 and 8750. 8650 rounds up to 8700, so it counts. 8750 rounds up to 8800, so the greatest is 8749."
+  },
+  {
+   "id": "L5U01-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "5 400 000 is 54 hundred thousands.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "1 000 000 - 1 = 99 999.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The greatest 6-digit number is 1 less than the smallest 7-digit number.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) 54 × 100 000 = 5 400 000, so it is true. (b) 1 000 000 - 1 = 999 999, which has 6 nines, so it is false. (c) The greatest 6-digit number is 999 999 and the smallest 7-digit number is 1 000 000, so it is true."
+  },
+  {
+   "id": "L5U01-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the table.",
+   "figure": {
+    "type": "l5_table",
+    "cols": [
+     "Town",
+     "People"
+    ],
+    "rows": [
+     [
+      "Alder",
+      "1 204 500"
+     ],
+     [
+      "Birch",
+      "1 240 500"
+     ],
+     [
+      "Cedar",
+      "1 024 500"
+     ],
+     [
+      "Dune",
+      "1 420 050"
+     ]
+    ],
+    "width_mm": 80,
+    "first_bold": true,
+    "alt": "table of town populations"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Which town has the most people? {b}",
+     "answer": {
+      "value": [
+       "Dune"
+      ],
+      "text": "Dune"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many more people live in the town with the most people than in the town with the fewest? {ll}",
+     "answer": {
+      "value": [
+       "395550"
+      ],
+      "text": "395 550"
+     }
+    }
+   ],
+   "explanation": "(a) All four numbers have 7 digits. Compare the hundred thousands: Dune has 4, the others 2 or 0. Dune is the greatest. (b) Cedar is smallest. 1 420 050 - 1 024 500 = 395 550."
+  },
+  {
+   "id": "L5U01-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Solve the riddle. Check every clue when you finish.\nClue 1: I am a 6-digit number. All my digits are different.\nClue 2: Rounded to the nearest ten thousand I am 470 000.\nClue 3: My thousands digit is 2.\nClue 4: My hundreds digit is twice my tens digit.\nClue 5: My ones digit is 0.\nI am {ll}",
+   "answer": {
+    "value": [
+     "472630"
+    ],
+    "text": "472 630"
+   },
+   "explanation": "Clue 2: the number is from 465 000 to 474 999. With Clue 3 the thousands digit is 2, so it starts 472 (465 and 474 do not fit). Clue 5: ones 0. Clue 4: the tens and hundreds digits are 3 and 6, or 1 and 2 (2 is already used), or 4 and 8 (4 is used). So 472 630. Check all digits differ: 4, 7, 2, 6, 3, 0."
+  },
+  {
+   "id": "L5U01-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "A stadium has 48 000 seats. On Monday 3 100 people came. On Tuesday twice as many came. On Wednesday 1 250 fewer people came than on Tuesday. How many people came on the three days? {b} people",
+   "answer": {
+    "value": [
+     "14250"
+    ],
+    "text": "14 250 people"
+   },
+   "explanation": "Monday: 3100. Tuesday: 2 × 3100 = 6200. Wednesday: 6200 - 1250 = 4950. Total: 3100 + 6200 + 4950 = 14 250. The 48 000 seats are not needed."
+  },
+  {
+   "id": "L5U01-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle every number that rounds to 5 000 000 when rounded to the nearest million.\n4 499 999    4 500 000    5 499 999    5 500 000",
+   "answer": {
+    "value": [
+     "4500000",
+     "5499999"
+    ],
+    "text": "4 500 000 and 5 499 999",
+    "list": true,
+    "unordered": true
+   },
+   "explanation": "Numbers from 4 500 000 up to 5 499 999 round to 5 000 000. 4 499 999 is just below, so it rounds to 4 000 000. 5 500 000 rounds up to 6 000 000."
+  },
+  {
+   "id": "L5U01-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Solve the riddle. Test the clues one at a time.\nClue 1: I am a 7-digit number. All my digits are different.\nClue 2: Rounded to the nearest hundred thousand I am 6 400 000.\nClue 3: My ten thousands digit is 1 less than my hundred thousands digit.\nClue 4: My hundreds digit is 2 more than my thousands digit.\nClue 5: My tens digit is 0.\nClue 6: My digits add up to 33.\nI am {ll}",
+   "answer": {
+    "value": [
+     "6435708"
+    ],
+    "text": "6 435 708"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Clue 2 and 3 fix the first three digits. Then use Clue 6.",
+   "explanation": "Clue 2: from 6 350 000 to 6 449 999, so it starts 6 3 5 or more, or 6 4. Clue 3: the ten thousands digit is 1 less than the hundred thousands digit. 6 3 5 does not fit (5 is not 2). So it starts 6 4 3. Digits so far: 6, 4, 3 and 0 (the tens). Clue 6: the other three digits add to 33 - 6 - 4 - 3 - 0 = 20. The thousands digit t and the hundreds digit t + 2: t + (t + 2) + ones = 20. Try t = 5: 5 + 7 = 12, ones = 8. All different: 6, 4, 3, 5, 7, 0, 8. So 6 435 708."
+  },
+  {
+   "id": "L5U01-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Every number from 195 000 to 204 999 rounds to 200 000 when rounded to the nearest ten thousand.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many of these numbers have digits that add up to 4? {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "A number from 195 000 to 199 999 already has a digit sum over 4.",
+   "explanation": "From 195 000 to 199 999 the digits 1 + 9 are already 10, too big. So the number is 20 _ _ _ _ with the other four digits adding to 2. The thousands digit is at most 4. The ways: 2 in one place (4 ways: 200 002, 200 020, 200 200, 202 000) or 1 and 1 in two places (6 ways: 200 011, 200 101, 200 110, 201 001, 201 010, 201 100). Total 10."
+  },
+  {
+   "id": "L5U01-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the two numbers. Make the product as great as you can. Write the product. {ll}",
+   "figure": {
+    "type": "l5_cards",
+    "items": [
+     2,
+     3,
+     5,
+     7,
+     9
+    ],
+    "width_mm": 80,
+    "alt": "digit cards"
+   },
+   "answer": {
+    "value": [
+     "69936"
+    ],
+    "text": "69 936"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "The two greatest digits should be the first digits. Try both ways.",
+   "explanation": "Put the greatest digits first: 9 and 7 lead the two numbers. Try 9__ × 7_ and 7__ × 9_ with the other digits 5, 3, 2 in order. 752 × 93 = 69 936 beats 953 × 72 = 68 616 and 732 × 95 = 69 540. The best is 752 × 93 = 69 936."
+  },
+  {
+   "id": "L5U01-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 5: Counting choices\nA 7-digit number cannot start with 0. How many 7-digit numbers have all their digits different? {ll}",
+   "answer": {
+    "value": [
+     "544320"
+    ],
+    "text": "544 320"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Count the choices for the first digit, then the second.",
+   "explanation": "The first digit has 9 choices (1 to 9). The second digit can be any digit except the first: 9 choices (0 is allowed now). The third has 8, then 7, 6, 5, 4. Multiply: 9 × 9 × 8 × 7 × 6 × 5 × 4 = 544 320."
+  },
+  {
+   "id": "L5U01-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali writes down every whole number from 1 to 999. He adds up all the digits he wrote. What is the total? {ll}",
+   "answer": {
+    "value": [
+     "13500"
+    ],
+    "text": "13 500"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Write 7 as 007. Each digit 0 to 9 appears equally often.",
+   "explanation": "Write every number with 3 digits, so 7 becomes 007. Adding extra zeros does not change the total. The numbers 000 to 999 are 1000 numbers. In each of the 3 places, every digit 0 to 9 appears 100 times. One place adds (0 + 1 + ... + 9) × 100 = 4500. Three places add 3 × 4500 = 13 500."
+  },
+  {
+   "id": "L5U01-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Use each of 3, 4, 7 and 9 once. You may use + - × ÷ and brackets. What is the number closest to 100 that you can make? {b}",
+   "answer": {
+    "value": [
+     "101"
+    ],
+    "text": "101 (3 × 4 × 9 - 7)"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "9 × 11 is 99, but 11 is hard to make. Try 3 × 4 × 9.",
+   "explanation": "3 × 4 × 9 = 108. Then 108 - 7 = 101, which is 1 away from 100. Trying every way, 99 and 100 cannot be made, and 102 is 2 away (9 × (4 + 7) + 3). So the closest is 101."
+  },
+  {
+   "id": "L5U01-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "A printing press prints 2 400 sheets in 1 hour. It runs for 8 hours each day. A shop needs 1 000 000 sheets. How many days does the press need? {b} days",
+   "answer": {
+    "value": [
+     "53"
+    ],
+    "text": "53 days"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Sheets in one day first. Then divide. Is the answer a whole number?",
+   "explanation": "In 1 day it prints 2400 × 8 = 19 200 sheets. 1 000 000 ÷ 19 200 = 52.08... days. After 52 days it has printed 998 400 sheets, which is not enough. So it needs 53 days."
+  },
+  {
+   "id": "L5U01-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "In 5 280 436, write (a) the value of the digit 2 and (b) the number rounded to the nearest hundred thousand.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b}",
+     "answer": {
+      "value": [
+       "200000"
+      ],
+      "text": "200 000"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b}",
+     "answer": {
+      "value": [
+       "5300000"
+      ],
+      "text": "5 300 000"
+     }
+    }
+   ],
+   "explanation": "(a) The 2 is in the hundred thousands place: 200 000. (b) 5 280 436: the ten thousands digit is 8, so round up to 5 300 000."
+  },
+  {
+   "id": "L5U01-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Use each card once to make a 7-digit number as close as you can to 4 000 000.",
+   "figure": {
+    "type": "l5_cards",
+    "items": [
+     0,
+     2,
+     3,
+     5,
+     6,
+     7,
+     9
+    ],
+    "width_mm": 100,
+    "alt": "digit cards"
+   },
+   "answer": {
+    "value": [
+     "3976520"
+    ],
+    "text": "3 976 520"
+   },
+   "explanation": "Just below: start with 3, then greatest order: 3 976 520 (23 480 away). Just above: start with 5, then smallest order: 5 023 679 (1 023 679 away). The number just below is much closer."
+  },
+  {
+   "id": "L5U01-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Put ONE pair of brackets to make the line true. Write the new line.\n8 + 12 ÷ 4 × 2 = 10\n{ll}",
+   "answer": {
+    "value": [
+     "(8 + 12) ÷ 4 × 2"
+    ],
+    "text": "(8 + 12) ÷ 4 × 2 = 10"
+   },
+   "explanation": "(8 + 12) ÷ 4 × 2 = 20 ÷ 4 × 2 = 5 × 2 = 10. Without brackets the line gives 8 + 3 × 2 = 14."
+  },
+  {
+   "id": "L5U01-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A bus company has 18 buses. Each bus carries 1 250 passengers in a week. How many passengers do the buses carry in 12 weeks? {b} passengers",
+   "answer": {
+    "value": [
+     "270000"
+    ],
+    "text": "270 000 passengers"
+   },
+   "explanation": "In 1 week: 18 × 1250 = 22 500. In 12 weeks: 22 500 × 12 = 270 000."
+  }
+ ]
+}

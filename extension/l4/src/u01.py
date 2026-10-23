@@ -43,7 +43,7 @@ S.append(item(U+'-S04', 'start', 1, 'Circle True or False.',
          P('c', '9 is a factor of 108. {circ:True|False}', A('True')),
          P('d', '65 is a multiple of 13. {circ:True|False}', A('True'))],
   why='(a) 7 × 13 = 91. (b) The multiples of 8 are 48, 56, so 54 is not one. (c) 9 × 12 = 108. (d) 13 × 5 = 65.'))
-S.append(item(U+'-S05', 'start', 1, 'Write the first six multiples of each number. Then find the least number that is a multiple of both 9 and 12.',
+S.append(item(U+'-S05', 'start', 1, 'Write the first 6 multiples of each number. Then find the least number that is a multiple of both 9 and 12.',
   parts=[P('a', 'Multiples of 9: {ll}', A(9, 18, 27, 36, 45, 54)),
          P('b', 'Multiples of 12: {ll}', A(12, 24, 36, 48, 60, 72)),
          P('c', 'Least common multiple: {b}', A(36))],
@@ -64,9 +64,9 @@ S.append(item(U+'-S08', 'start', 2, 'Bus A leaves a stop every 8 minutes. Bus B 
          P('b', 'How many more times do they leave together after 9:00 am and before 11:00 am? {b} times', A(4, text='4 times'))],
   why='The least common multiple of 8 and 12 is 24, so they meet at 9:24 am. They meet every 24 minutes: 9:24, 9:48, 10:12 and 10:36. The next, 11:00, is not before 11:00. That is 4 times.',
   space={'rows': ['Bus A: 9:00, 9:08, {l}', 'Bus B: 9:00, 9:12, {l}']}))
-S.append(item(U+'-S09', 'start', 2, 'I am a number between 40 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.',
+S.append(item(U+'-S09', 'start', 2, 'I am a number between 50 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.',
   ans=A(84),
-  why='A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 40 and 100.'))
+  why='A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 50 and 100.'))
 S.append(item(U+'-S10', 'start', 3, 'Count the factors of each number.',
   fig={'type': 'l4_table', 'head': ['Number', '8', '14', '18', '27', '32', '49'], 'rows': [['How many factors?', '', '', '', '', '', '']], 'widths': [3.4, 1, 1, 1, 1, 1, 1], 'cell_h': 64, 'font': 28, 'first_col_head': True, 'width_mm': 165},
   parts=[P('a', 'Write the number of factors under each number.', A(4, 4, 6, 4, 6, 3, text='8: 4, 14: 4, 18: 6, 27: 4, 32: 6, 49: 3')),
@@ -74,7 +74,8 @@ S.append(item(U+'-S10', 'start', 3, 'Count the factors of each number.',
   why='8: 1, 2, 4, 8. 14: 1, 2, 7, 14. 18: 1, 2, 3, 6, 9, 18. 27: 1, 3, 9, 27. 32: 1, 2, 4, 8, 16, 32. 49: 1, 7, 49. Only 49 has 3 factors.'))
 S.append(item(U+'-S11', 'start', 3, 'Mei buys pens in packs of 6 and rubbers in packs of 8. She wants the same number of pens and rubbers.',
   parts=[P('a', 'What is the fewest of each she can buy? {b} of each', A(24)),
-         P('b', 'How many packs of pens? {b} packs  How many packs of rubbers? {b} packs', A(4, 3, text='4 packs of pens and 3 packs of rubbers'))],
+         P('b', 'How many packs of pens is that? {b} packs', A(4)),
+         P('c', 'How many packs of rubbers is that? {b} packs', A(3))],
   why='The least common multiple of 6 and 8 is 24 (6, 12, 18, 24 and 8, 16, 24). 24 ÷ 6 = 4 packs of pens and 24 ÷ 8 = 3 packs of rubbers.',
   space={'rows': ['Multiples of 6: {l}', 'Multiples of 8: {l}']}))
 S.append(item(U+'-S12', 'start', 3, 'I am a factor of 60. I am a multiple of 5. I am greater than 10 and less than 30. Write every number that fits.\n{l} {l}',
@@ -87,7 +88,7 @@ S.append(item(U+'-S13', 'start', 3, 'Some numbers have an odd number of factors.
   why='64: 1, 2, 4, 8, 16, 32, 64 is 7 factors. 81: 1, 3, 9, 27, 81 is 5 factors. 49 = 7 × 7 pairs with itself, so it has 3 factors (odd). 72 has 12 factors.'))
 
 T.append(item(U+'-T01', 'think', 4, 'A 2-digit number is a multiple of 3 and a multiple of 8. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}',
-  ans=A(72), hint='List the multiples of 24. Then use the two digit clues.', space={'rows': ['Working:', '']},
+  ans=A(72), hint='List the multiples of 24. Then use the digit clues.', space={'rows': ['Working:', '']},
   why='A multiple of 3 and 8 is a multiple of 24: 24, 48, 72, 96. The digits add to 9 only for 72 (7 + 2). 7 is greater than 2.'))
 T.append(item(U+'-T02', 'think', 4, 'Ben has more than 50 stickers and fewer than 100. He packs them in 4s and 3 are left over. He packs them in 5s and 3 are left over. He packs them in 6s and 3 are left over. How many stickers does he have?\n{b}',
   ans=A(63), hint='Take 3 away. What number is in the 4, 5 and 6 times tables?', space={'rows': ['Working:', '', '']},
@@ -105,9 +106,9 @@ G.append(item(U+'-G01', 'go', 5, 'What is the least number that has exactly 10 f
 G.append(item(U+'-G02', 'go', 5, 'Beyond Level 4: Three common multiples\nThree lighthouses flash at 12:00:00. Lighthouse A flashes every 6 seconds, B every 8 seconds and C every 9 seconds.',
   parts=[P('a', 'They next flash together after {b} seconds.', A(72)),
          P('b', 'How many times do they flash together in the next 10 minutes? Do not count 12:00:00. {b} times', A(8, text='8 times'))],
-  hint='A common multiple of three numbers is in all three lists.',
+  hint='A common multiple of 3 numbers is in all 3 lists.',
   why='The least common multiple of 6, 8 and 9 is 72. 10 minutes is 600 seconds. 72 × 8 = 576 is less than 600 and 72 × 9 = 648 is more, so they flash together 8 times.'))
-G.append(item(U+'-G03', 'go', 5, 'Muffins are sold only in boxes of 4 and boxes of 7. Ali wants exactly 17 muffins. What is the greatest number of muffins that you cannot buy exactly? Then check that 17 cannot be made.\n{b}',
+G.append(item(U+'-G03', 'go', 5, 'Muffins are sold only in boxes of 4 and boxes of 7. Some numbers of muffins cannot be bought exactly. For example, you cannot buy exactly 5. What is the greatest number that cannot be bought exactly?\n{b}',
   ans=A(17), hint='Write the numbers 1 to 30 and cross out those you can make.',
   why='List the amounts you can make: 4, 7, 8, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23 and every larger number. 17 is not on the list, and 17 − 7 = 10 and 17 − 14 = 3 are not multiples of 4. Every number from 18 up can be made.',
   space={'rows': ['Boxes I can make: {l}']}))
@@ -121,8 +122,8 @@ C.append(item(U+'-C02', 'quiz', None, 'Siti swims every 6 days. Wei swims every 
   ans=A(18), why='Multiples of 6: 6, 12, 18. Multiples of 9: 9, 18. The first number in both lists is 18.'))
 C.append(item(U+'-C03', 'quiz', None, 'Kumar has 40 red pens and 64 blue pens. He makes identical sets with none left over. What is the greatest number of sets he can make? {b} sets',
   ans=A(8), why='The factors of 40 and 64 that are in both lists are 1, 2, 4, 8. The greatest is 8 (5 red and 8 blue in each set).'))
-C.append(item(U+'-C04', 'quiz', None, 'I am a multiple of 7. I am a factor of 84. I am even. I am greater than 10 and less than 30. Who am I? {b}',
-  ans=A(14), why='Factors of 84 that are multiples of 7 and between 10 and 30: 14 and 21. Only 14 is even.'))
+C.append(item(U+'-C04', 'quiz', None, 'I am a multiple of 7. I am a factor of 84. My digits add up to 5. Who am I? {b}',
+  ans=A(14), why='The factors of 84 that are multiples of 7 are 7, 14, 21, 28, 42 and 84. Only 14 has digits that add up to 5 (1 + 4).'))
 
 unit = {'schema_version': 1, 'level': 4, 'unit': 1, 'id': U, 'title': 'Factor Hunters', 'topic': 'Factors and multiples', 'holiday_lesson': 1,
         'goal': 'I can list every factor of a number in order. I can find common factors and common multiples and use them to solve sharing and timetable puzzles.',

@@ -264,3 +264,9 @@ Owner approved the cover publisher line "Preciouslyours Pte Ltd, trading as Math
 
 ## 23 Oct 2026 (night): RETROFIT-NOW
 Owner chose RETROFIT-NOW: retrofit the thin non-routine spots (work backwards, three-number equations, multiplication true/false) into Level 1 lessons 1-20 BEFORE the first release, together with any rewrites from the TERMCHECK. Sequenced after the term books integration finishes (same files).
+
+## 23 Oct 2026 (night): D9-CONFIRM, CERT-OK, INSTALMENTS-NO, PUZZLEDAY-YES
+- D9-CONFIRM: decision 9 (no hold-ups to the camera; private "I am still stuck" route via the parent to the business WhatsApp) covers the whole holiday program, including whiteboard hold-ups (now "say the answer together on three").
+- CERT-OK: in holiday Lesson 10 the tutor may show each certificate (child's name) on screen for about 12 seconds on the recorded call; the PDF certificate is also sent through the approved channel afterwards.
+- INSTALMENTS-NO: the S$250 beta fee has no instalments; remove any "instalments" wording.
+- PUZZLEDAY-YES: Levels 1-4 call the last holiday lesson "Puzzle Day" everywhere (website, sign-up pages, emails, deck link names where changeable). Level 5 keeps "Challenge Day" (earlier decision).

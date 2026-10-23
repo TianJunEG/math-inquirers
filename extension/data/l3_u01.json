@@ -21,7 +21,7 @@
     ]
    },
    "steps": [
-    "Greatest: put the biggest digit in the thousands place. Then the next biggest. This gives 9740.",
+    "Greatest: put the greatest digit in the thousands place. Then the next greatest. This gives 9740.",
     "Smallest: the first digit cannot be 0. Use the smallest digit that is not 0: the 4.",
     "Put the other digits in order after it, smallest first: 0, 7, 9. This gives 4079."
    ],
@@ -36,7 +36,7 @@
    ]
   },
   "try": {
-   "text": "Use the cards 3, 8, 1 and 4 once each. Make the greatest even number. {b}",
+   "text": "Make the greatest even number with the cards 3, 8, 1 and 4. Use each card once. {b}",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -273,7 +273,7 @@
      }
     }
    ],
-   "explanation": "(a) Biggest digits first: 8752. (b) Smallest digits first, no 0 here: 2578. (c) The ones digit must be 7 or 5. With 5 last, 8725 beats 8527. (d) With 7 last, 2587 beats 2785.",
+   "explanation": "(a) Greatest digits first: 8752. (b) Smallest digits first, no 0 here: 2578. (c) The ones digit must be 7 or 5. With 5 last, 8725 beats 8527. (d) With 7 last, 2587 beats 2785.",
    "figure": {
     "type": "l3_cards",
     "items": [
@@ -288,7 +288,7 @@
    "id": "L3U01-S07",
    "tier": "start",
    "page": 2,
-   "text": "Use the cards 3, 0, 0 and 5 once each. Write ALL the 4-digit numbers you can make. Begin with the smallest.",
+   "text": "List every 4-digit number that can be made with the cards 3, 0, 0 and 5. Begin with the smallest.",
    "answer": {
     "value": [
      "3005",
@@ -321,7 +321,7 @@
    "id": "L3U01-S08",
    "tier": "start",
    "page": 2,
-   "text": "Write the next two numbers in each pattern.",
+   "text": "Write the next 2 numbers in each pattern.",
    "parts": [
     {
      "label": "a",
@@ -457,7 +457,7 @@
    "id": "L3U01-S11",
    "tier": "start",
    "page": 3,
-   "text": "I am a 4-digit number. My thousands digit is 6. My hundreds digit is 3 less than my thousands digit. My tens digit is 0. My ones digit is the greatest odd digit. What number am I? {b}",
+   "text": "I am a 4-digit number. My thousands digit is 6, my hundreds digit is 3 less than that, and my tens digit is 0. My ones digit is the greatest odd digit. What number am I? {b}",
    "answer": {
     "value": [
      "6309"
@@ -544,53 +544,10 @@
    "explanation": "The first 7 is in the hundreds place: 700. The second 7 is in the ones place: 7. 700 - 7 = 693."
   },
   {
-   "id": "L3U01-S14",
-   "tier": "start",
-   "page": 3,
-   "text": "Write the missing digits so that each number is correct.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "4900 + 70 + 3 = 49{b}{b}",
-     "answer": {
-      "value": [
-       "7",
-       "3"
-      ],
-      "text": "4973",
-      "list": true
-     }
-    },
-    {
-     "label": "b",
-     "text": "5000 + 1300 = {b}{b}00",
-     "answer": {
-      "value": [
-       "6",
-       "3"
-      ],
-      "text": "6300",
-      "list": true
-     }
-    },
-    {
-     "label": "c",
-     "text": "7081 = 7000 + {b} + 1",
-     "answer": {
-      "value": [
-       "80"
-      ],
-      "text": "80"
-     }
-    }
-   ],
-   "explanation": "(a) 4900 + 70 + 3 = 4973, so the tens digit is 7 and the ones digit is 3. (b) 1300 + 5000 = 6300. (c) 7081 - 7000 - 1 = 80."
-  },
-  {
    "id": "L3U01-T01",
    "tier": "think",
    "page": 4,
-   "text": "A 4-digit number has all different digits. Its digits add up to 8. It is an even number.",
+   "text": "The digits of a 4-digit number are all different and add up to 8. The number is even.",
    "parts": [
     {
      "label": "a",
@@ -650,7 +607,7 @@
    "id": "L3U01-T03",
    "tier": "think",
    "page": 4,
-   "text": "Mei uses only the digits 1 and 2 to make 4-digit numbers. A digit can be used more than once. She lists all the numbers from smallest to greatest. What is the 10th number in her list? {b}",
+   "text": "Mei uses only the digits 1 and 2 to make 4-digit numbers. A digit can be used more than once. She writes them in a list, smallest first. Which number is 10th in her list? {b}",
    "answer": {
     "value": [
      "2112"
@@ -671,11 +628,11 @@
    "id": "L3U01-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Counting digit sums.\nHow many 3-digit numbers have digits that add up to 4? List them by first digit.",
+   "text": "Beyond Level 3: Counting digit sums.\nCount the 3-digit numbers with a digit sum of 4. List them by first digit.",
    "parts": [
     {
      "label": "a",
-     "text": "Digits add up to 4: {b} numbers.",
+     "text": "Digit sum 4: {b} numbers.",
      "answer": {
       "value": [
        "10"
@@ -685,7 +642,7 @@
     },
     {
      "label": "b",
-     "text": "Use the pattern. Digits add up to 5: {b} numbers.",
+     "text": "Use the pattern. Digit sum 5: {b} numbers.",
      "answer": {
       "value": [
        "15"
@@ -707,7 +664,7 @@
    "id": "L3U01-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Growing jumps.\nLook at the jumps between the numbers. Write the next two numbers.\n5, 8, 14, 23, 35, {b}, {b}",
+   "text": "Beyond Level 3: Growing jumps.\nLook at the jumps between the numbers. Write the next 2 numbers.\n5, 8, 14, 23, 35, {b}, {b}",
    "answer": {
     "value": [
      "50",
@@ -728,7 +685,7 @@
    "id": "L3U01-G03",
    "tier": "go",
    "page": 5,
-   "text": "Make up your own What number am I? puzzle. Choose a secret 4-digit number. Write 3 clues about its digits. Check that only ONE number fits all your clues. Swap with a grown-up.",
+   "text": "Make up your own number riddle. Choose a secret number with 4 digits, then write 3 clues. Test your clues: exactly ONE number must fit. Swap riddles with a grown-up.",
    "answer": {
     "value": [
      "7423"
@@ -749,7 +706,7 @@
    "id": "L3U01-G04",
    "tier": "go",
    "page": 5,
-   "text": "I am a 4-digit number between 3000 and 4000. All my digits are different. My tens digit is 0. My hundreds digit is double my ones digit. My digits add up to 15. What number am I? {b}",
+   "text": "Find the secret number. It is greater than 3000 and less than 4000. Its digits are all different and add up to 15. The tens digit is 0, and the hundreds digit is double the ones digit. {b}",
    "answer": {
     "value": [
      "3804"
@@ -776,7 +733,7 @@
    "id": "L3U01-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Write the next two numbers. 6500, 6000, 5500, {b}, {b}",
+   "text": "Write the next 2 numbers. 6500, 6000, 5500, {b}, {b}",
    "answer": {
     "value": [
      "5000",
@@ -791,7 +748,7 @@
    "id": "L3U01-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Use the cards 6, 1, 0 and 5 once each. Write the smallest 4-digit number. {b}",
+   "text": "Make the smallest 4-digit number from the cards 6, 1, 0 and 5. Use each card once. {b}",
    "answer": {
     "value": [
      "1056"

@@ -14,10 +14,14 @@ def A(*vals, text=None, **kw):
 
 
 def P(label, text, ans):
+    if '{ll}' in text:
+        ans = dict(ans, list=True)
     return {'label': label, 'text': text, 'answer': ans}
 
 
 def item(id_, tier, page, text, ans=None, parts=None, why='', fig=None, hint=None, space=None, **kw):
+    if ans is not None and '{ll}' in text:
+        ans = dict(ans, list=True)
     d = {'id': id_, 'tier': tier}
     if tier != 'quiz':
         d['page'] = page
@@ -38,7 +42,9 @@ def item(id_, tier, page, text, ans=None, parts=None, why='', fig=None, hint=Non
 
 
 def write(n, unit):
-    import re
+    tr = unit['learn']['try']
+    if '{ll}' in tr['text']:
+        tr['answer'] = dict(tr['answer'], list=True)
     last = {}
     for it in unit['items']:
         t = it['id'].split('-')[-1]

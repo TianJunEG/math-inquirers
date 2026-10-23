@@ -119,7 +119,8 @@
      "15",
      "45"
     ],
-    "text": "1, 3, 5, 9, 15, 45"
+    "text": "1, 3, 5, 9, 15, 45",
+    "list": true
    },
    "explanation": "1 × 45, 3 × 15 and 5 × 9 are the pairs. 2 and 4 do not go into 45. After 5 comes 9, which is already used, so stop."
   }
@@ -172,7 +173,8 @@
      "33",
      "66"
     ],
-    "text": "1, 2, 3, 6, 11, 22, 33, 66"
+    "text": "1, 2, 3, 6, 11, 22, 33, 66",
+    "list": true
    },
    "explanation": "1 × 66, 2 × 33, 3 × 22 and 6 × 11. Then 7, 8, 9 and 10 do not go into 66, and 11 is already used."
   },
@@ -188,7 +190,8 @@
      "8",
      "16"
     ],
-    "text": "2, 4, 8, 16"
+    "text": "2, 4, 8, 16",
+    "list": true
    },
    "space": {
     "rows": [
@@ -250,7 +253,7 @@
    "id": "L4U01-S05",
    "tier": "start",
    "page": 1,
-   "text": "Write the first six multiples of each number. Then find the least number that is a multiple of both 9 and 12.",
+   "text": "Write the first 6 multiples of each number. Then find the least number that is a multiple of both 9 and 12.",
    "parts": [
     {
      "label": "a",
@@ -264,7 +267,8 @@
        "45",
        "54"
       ],
-      "text": "9, 18, 27, 36, 45, 54"
+      "text": "9, 18, 27, 36, 45, 54",
+      "list": true
      }
     },
     {
@@ -279,7 +283,8 @@
        "60",
        "72"
       ],
-      "text": "12, 24, 36, 48, 60, 72"
+      "text": "12, 24, 36, 48, 60, 72",
+      "list": true
      }
     },
     {
@@ -313,7 +318,8 @@
        "14",
        "28"
       ],
-      "text": "1, 2, 4, 7, 14, 28"
+      "text": "1, 2, 4, 7, 14, 28",
+      "list": true
      }
     },
     {
@@ -330,7 +336,8 @@
        "21",
        "42"
       ],
-      "text": "1, 2, 3, 6, 7, 14, 21, 42"
+      "text": "1, 2, 3, 6, 7, 14, 21, 42",
+      "list": true
      }
     },
     {
@@ -343,7 +350,8 @@
        "7",
        "14"
       ],
-      "text": "1, 2, 7, 14"
+      "text": "1, 2, 7, 14",
+      "list": true
      }
     },
     {
@@ -435,14 +443,14 @@
    "id": "L4U01-S09",
    "tier": "start",
    "page": 2,
-   "text": "I am a number between 40 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.",
+   "text": "I am a number between 50 and 100. I am a multiple of 6 and a multiple of 7. Who am I?\nI am {b}.",
    "answer": {
     "value": [
      "84"
     ],
     "text": "84"
    },
-   "explanation": "A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 40 and 100."
+   "explanation": "A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 50 and 100."
   },
   {
    "id": "L4U01-S10",
@@ -532,13 +540,22 @@
     },
     {
      "label": "b",
-     "text": "How many packs of pens? {b} packs  How many packs of rubbers? {b} packs",
+     "text": "How many packs of pens is that? {b} packs",
      "answer": {
       "value": [
-       "4",
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "How many packs of rubbers is that? {b} packs",
+     "answer": {
+      "value": [
        "3"
       ],
-      "text": "4 packs of pens and 3 packs of rubbers"
+      "text": "3"
      }
     }
    ],
@@ -621,7 +638,7 @@
      ""
     ]
    },
-   "hint": "List the multiples of 24. Then use the two digit clues.",
+   "hint": "List the multiples of 24. Then use the digit clues.",
    "explanation": "A multiple of 3 and 8 is a multiple of 24: 24, 48, 72, 96. The digits add to 9 only for 72 (7 + 2). 7 is greater than 2."
   },
   {
@@ -729,14 +746,14 @@
      }
     }
    ],
-   "hint": "A common multiple of three numbers is in all three lists.",
+   "hint": "A common multiple of 3 numbers is in all 3 lists.",
    "explanation": "The least common multiple of 6, 8 and 9 is 72. 10 minutes is 600 seconds. 72 × 8 = 576 is less than 600 and 72 × 9 = 648 is more, so they flash together 8 times."
   },
   {
    "id": "L4U01-G03",
    "tier": "go",
    "page": 5,
-   "text": "Muffins are sold only in boxes of 4 and boxes of 7. Ali wants exactly 17 muffins. What is the greatest number of muffins that you cannot buy exactly? Then check that 17 cannot be made.\n{b}",
+   "text": "Muffins are sold only in boxes of 4 and boxes of 7. Some numbers of muffins cannot be bought exactly. For example, you cannot buy exactly 5. What is the greatest number that cannot be bought exactly?\n{b}",
    "answer": {
     "value": [
      "17"
@@ -779,7 +796,8 @@
      "26",
      "52"
     ],
-    "text": "1, 2, 4, 13, 26, 52"
+    "text": "1, 2, 4, 13, 26, 52",
+    "list": true
    },
    "explanation": "1 × 52, 2 × 26 and 4 × 13. Then 5 to 12 do not go into 52, and 13 is already used."
   },
@@ -810,14 +828,14 @@
   {
    "id": "L4U01-C04",
    "tier": "quiz",
-   "text": "I am a multiple of 7. I am a factor of 84. I am even. I am greater than 10 and less than 30. Who am I? {b}",
+   "text": "I am a multiple of 7. I am a factor of 84. My digits add up to 5. Who am I? {b}",
    "answer": {
     "value": [
      "14"
     ],
     "text": "14"
    },
-   "explanation": "Factors of 84 that are multiples of 7 and between 10 and 30: 14 and 21. Only 14 is even."
+   "explanation": "The factors of 84 that are multiples of 7 are 7, 14, 21, 28, 42 and 84. Only 14 has digits that add up to 5 (1 + 4)."
   }
  ]
 }

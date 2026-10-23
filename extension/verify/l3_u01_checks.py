@@ -116,15 +116,6 @@ def _():
     return {'a': s([v1]), 'b': s([v2]), 'c': s([v1 - v2])}
 
 
-@check('L3U01-S14')
-def _():
-    # which digits make the three equations true
-    a = [(t, o) for t in range(10) for o in range(10) if 4900 + 70 + 3 == 4900 + t * 10 + o]
-    h6 = [(th, h) for th in range(10) for h in range(10) if 5000 + 1300 == th * 1000 + h * 100]
-    t = [x for x in range(0, 100, 10) if 7000 + x + 1 == 7081]
-    return {'a': s(a[0]), 'b': s(h6[0]), 'c': s(t)}
-
-
 @check('L3U01-T01')
 def _():
     ok = [n for n in range(1000, 10000) if len(set(str(n))) == 4 and sum(map(int, str(n))) == 8 and n % 2 == 0]
