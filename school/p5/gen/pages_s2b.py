@@ -102,7 +102,7 @@ def page29():
         res = code_table_for(29, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p29")
-    cards = [qc(i + 1, f'<p class="qt">Area of the triangle</p>{tri_base_height(b, h, f, s, w=50, hh=40)}', abx("w4") + f'<span class="unit">cm{SQ}</span>') for i, (b, h, f, s) in enumerate(items)]
+    cards = [qc(i + 1, f'<p class="qt">Area of the triangle</p>{tri_base_height(b, h, f, s, w=50, hh=34)}', abx("w4") + f'<span class="unit">cm{SQ}</span>', cls="figc") for i, (b, h, f, s) in enumerate(items)]
     solved = []
     for c in cards:
         b, h, s = read_tri(c); solved.append(Fr(b * h, 2))
@@ -166,7 +166,7 @@ def page31():
         res = code_table_for(31, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p31")
-    cards = [qc(i + 1, f'<p class="qt">Area of the figure</p>{composite(kd, wd, ln, th, w=50, hh=44)}', abx("w4") + f'<span class="unit">cm{SQ}</span>') for i, (kd, wd, ln, th) in enumerate(items)]
+    cards = [qc(i + 1, f'<p class="qt">Area of the figure</p>{composite(kd, wd, ln, th, w=50, hh=38)}', abx("w4") + f'<span class="unit">cm{SQ}</span>', cls="figc") for i, (kd, wd, ln, th) in enumerate(items)]
     solved = []
     for c in cards:
         kd, wd, ln, th = read_composite(c)
@@ -231,8 +231,8 @@ def page33():
     cards = []
     for i, (a, b, c, u) in enumerate(items):
         cube = a == b == c
-        fig = iso_dims(a, b, c, (f"{a} {u}", f"{b} {u}", f"{c} {u}"), w=52, hh=38)
-        cards.append(qc(i + 1, f'<p class="qt">{"Cube volume" if cube else "Cuboid volume"}</p>{fig}', abx("w4") + f'<span class="unit">{u}{CU}</span>'))
+        fig = iso_dims(a, b, c, (f"{a} {u}", f"{b} {u}", f"{c} {u}"), w=50, hh=33)
+        cards.append(qc(i + 1, f'<p class="qt">{"Cube volume" if cube else "Cuboid volume"}</p>{fig}', abx("w4") + f'<span class="unit">{u}{CU}</span>', cls="figc"))
     solved = []
     for cc in cards:
         d = read_dims(cc); solved.append(Fr(Decimal_(d[0][0])) * Fr(Decimal_(d[1][0])) * Fr(Decimal_(d[2][0])))

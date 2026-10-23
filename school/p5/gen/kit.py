@@ -35,7 +35,9 @@ def word_ok(w):
     return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON and inner_ok(w) and swap_ok(w)
 
 import json as _json, os as _os
-OTHER = set(_json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "other_levels_words.json"))))     # words already used by the Primary 1 to 4 and 6 booklets
+_D = _os.path.dirname(_os.path.abspath(__file__))
+OTHER = set(_json.load(open(_os.path.join(_D, "other_levels_words_base.json"))))     # the list the pool was built from (keeps every page's candidate order stable)
+BLOCKED = set(_json.load(open(_os.path.join(_D, "other_levels_words.json")))) - OTHER   # words of other levels found since: skipped when a page chooses its word
 
 def safe_pool(n):
     if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6, 7: SAFE7}[n] if word_ok(w) and w not in OTHER]
@@ -46,7 +48,7 @@ CLAIMED = {}      # page number -> code word, so that no two pages of one build 
 def word_candidates(no, n, avoid=()):
     pool = safe_pool(n); k = (no * 5) % len(pool)
     taken = {w for p, w in CLAIMED.items() if p != no}
-    res = [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
+    res = [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken and pool[(k + o) % len(pool)] not in BLOCKED]
     if res and no not in CLAIMED: CLAIMED[no] = res[0]          # pages that take the first candidate (lettered choices, orderings, matchings) claim it here
     return res
 

@@ -195,7 +195,7 @@ def point_fig(parts, w=60, hh=46):
         a1 = a + v
         r_arc = 4.5 + (k % 2) * 1.8
         o.append(ARC(cx, cy, r_arc, a, a1, sw=0.45))
-        o.append(_label(cx, cy, (a + a1) / 2, r_arc + (5.2 if v > 40 else 6.5), parts[k], size=3.6))
+        o.append(_label(cx, cy, (a + a1) / 2, r_arc + (5.2 if v > 40 else 6.5), parts[k], size=4.0))
         a = a1
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="point"')
 
@@ -213,7 +213,7 @@ def opp_fig(alpha, given, ask, w=60, hh=46):
         o.append(ARC(cx, cy, r_arc, a0, a1, sw=0.45))
         if labs[k] is not None:
             rel = {0: "given", 1: "adjacent", 2: "opposite"}[k] if labs[k] == "?" or k == 0 else None
-            o.append(_label(cx, cy, (a0 + a1) / 2, r_arc + (5.5 if (a1 - a0) > 50 else 7.5), labs[k], rel="given" if k == 0 else ("opposite" if k == 2 else "adjacent"), size=3.6))
+            o.append(_label(cx, cy, (a0 + a1) / 2, r_arc + (5.5 if (a1 - a0) > 50 else 7.5), labs[k], rel="given" if k == 0 else ("opposite" if k == 2 else "adjacent"), size=4.0))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="opp"')
 
 def read_angle_fig(h):

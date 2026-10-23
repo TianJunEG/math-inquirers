@@ -82,7 +82,7 @@ def mirror_truth(pic):
 
 def cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     old = L.BOX_SIDE
-    L.BOX_SIDE = 11.7                       # larger answer boxes (audit M4 and round 2: three-digit answers)
+    L.BOX_SIDE = 11.0                       # larger answer boxes (audit M4 and round 2: three-digit answers)
     try: return _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc)
     finally: L.BOX_SIDE = old
 

@@ -106,4 +106,5 @@ em.msum{font-style:normal;font-weight:800;font-family:'Fredoka';font-size:16pt}
 .qg.s16 .qc{padding:1.2mm 3mm;gap:0.5mm}.qg.s16 .qc .qt{font-size:12pt;line-height:1.1}.qg.s16 .qt .fr{font-size:12.5pt}
 .qg.s27 .unit{display:inline-block;width:16mm;margin-left:1.5mm}
 .maze.tri .mcell{align-items:flex-end}
+.qg .qc.figc svg.fsvg{max-width:none;margin-left:-10mm}
 """

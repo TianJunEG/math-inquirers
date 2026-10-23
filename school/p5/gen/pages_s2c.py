@@ -129,7 +129,7 @@ def page38():
         res = code_table_for(38, ans, rng, pool, n_decoy=2, tries=60)
         if res[0]: (word, table), dom = res; break
     else: raise RuntimeError("p38")
-    cards = [qc(i + 1, tri_angles(kd, g, w=48, hh=42), abx("w3") + f'<span class="unit">{DEG}</span>') for i, (kd, g) in enumerate(items)]
+    cards = [qc(i + 1, '<p class="qt">Angle marked ?</p>' + tri_angles(kd, g, w=50, hh=38), abx("w3") + f'<span class="unit">{DEG}</span>', cls="figc") for i, (kd, g) in enumerate(items)]
     def solve(h):
         kind, labs, ticks, ra = read_tri_angles(h)
         d = {pos: v for v, pos in labs}
@@ -165,7 +165,7 @@ def statement39(rng, kind, names):
     elif kind == "rho_opp_false": (x, y), b = rng.choice(opp), 180 - a
     elif kind == "trap_leg_true": (x, y), b = rng.choice(leg), 180 - a
     elif kind == "trap_leg_false": (x, y), b = rng.choice(leg), a
-    elif kind == "trap_unsure": (x, y), b = rng.choice([(A, B), (D, C), (A, C), (B, D)]), a
+    elif kind == "trap_unsure": (x, y), b = rng.choice([(A, B), (D, C)]), a   # the two angles on one parallel side: unsure whether a trapezium has exactly one or at least one pair of parallel sides
     else: raise ValueError(kind)
     par = f" {A}{B} is parallel to {D}{C}. {A}{D} and {B}{C} are the other two sides." if shape == "trapezium" else ""
     return f"{names_s(names)} is a {shape}.{par} Given: \u2220{x} = {a}{DEG}. Claim: \u2220{y} = {b}{DEG}."
@@ -209,7 +209,7 @@ def page39():
         "properties of a parallelogram, rhombus and trapezium; finding unknown angles", ["GE3.1", "GE3.2"], "True or false table (three choices)",
         ["Use the shape and the given angle.", "Is the claim true (T), false (F) or not possible to tell (N)?", "Circle the letter. Write the six letters in the boxes."],
         rng, rows, 3, word, "; ".join(f"{i+1}) {t} ({s})" for i, (s, t) in enumerate(zip(sts, truth))),
-        f"Six rows, each with a shape, one given angle and a claim about a second angle. The pupil decides whether the claim must be true, must be false, or cannot be told from the given facts. In a parallelogram or rhombus opposite angles are equal and neighbouring angles make a straight angle; in a trapezium the two angles on the same non-parallel side make a straight angle (the page names the parallel sides and the other two sides), and two angles that are not on the same non-parallel side cannot be found from each other, so the answer is N. Each choice (T, F, N) has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
+        f"Six rows, each with a shape, one given angle and a claim about a second angle. A trapezium here has at least one pair of parallel sides; the rows marked N compare the two angles on the same parallel side, so the answer is the same if a trapezium is taken to have exactly one pair. The pupil decides whether the claim must be true, must be false, or cannot be told from the given facts. In a parallelogram or rhombus opposite angles are equal and neighbouring angles make a straight angle; in a trapezium the two angles on the same non-parallel side make a straight angle (the page names the parallel sides and the other two sides), and two angles that are not on the same non-parallel side cannot be found from each other, so the answer is N. Each choice (T, F, N) has a letter and the right choices spell the word. Every other way of choosing was tested against a very large word list. A box left blank gives no letter and the check cannot see it.",
         solve_row, ps=False, rows_cls="tfrows tight")
     return P
 
@@ -237,8 +237,8 @@ def page40():
     else: raise RuntimeError("p40")
     figs = []
     for kd, g, v in items:
-        figs.append(ext_fig(*g, w=48, hh=44) if kd == "ext" else isoext_fig(*g, w=48, hh=44) if kd == "isoext" else ext2_fig(*g, w=48, hh=44))
-    cards = [qc(i + 1, f, abx("w3") + f'<span class="unit">{DEG}</span>') for i, f in enumerate(figs)]
+        figs.append(ext_fig(*g, w=50, hh=40) if kd == "ext" else isoext_fig(*g, w=50, hh=40) if kd == "isoext" else ext2_fig(*g, w=50, hh=40))
+    cards = [qc(i + 1, '<p class="qt">Angle marked ?</p>' + f, abx("w3") + f'<span class="unit">{DEG}</span>', cls="figc") for i, f in enumerate(figs)]
     def solve(h):
         kind, d = read_labels(h)
         if kind == "ext": return Fr(180 - (180 - int(d["apex"]) - int(d["base1"])))

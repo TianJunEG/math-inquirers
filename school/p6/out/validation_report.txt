@@ -157,7 +157,7 @@ PASS  S2-07 (P6-27) V3 no single slip spells another word (large word list, 129 
 PASS  S2-07 (P6-27) V3c no swap of two answers spells a word  []
 PASS  S2-07 (P6-27) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['peanut']
 PASS  S2-07 (P6-27) V4 guess resistance: at least 3 common words fit the table letters  ['butane', 'peanut', 'upbeat']
-PASS  S2-07 (P6-27) V1 independent solver measures the named angle from the printed figure (vertex points): equals the key  [120.0, 85.0, 136.0, 22.0, 122.0, 80.0]
+PASS  S2-07 (P6-27) V1 independent solver measures the named angle from the printed figure (vertex points): equals the key  [100.0, 116.0, 137.0, 46.0, 95.0, 75.0]
 PASS  S2-07 (P6-27) V1b every given angle printed in an arc equals the drawn angle (within 0.6 degrees)  []
 PASS  S2-07 (P6-27) V1c the question-mark arc is at the vertex and between the rays named in the question  
 PASS  S2-07 (P6-27) V7 every angle is a whole number of degrees between 10 and 170  
@@ -166,7 +166,7 @@ PASS  S2-08 (P6-28) V3 no single slip spells another word (large word list, 129 
 PASS  S2-08 (P6-28) V3c no swap of two answers spells a word  []
 PASS  S2-08 (P6-28) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['wizard']
 PASS  S2-08 (P6-28) V4 guess resistance: at least 3 common words fit the table letters  ['midway', 'myriad', 'wizard']
-PASS  S2-08 (P6-28) V1 independent solver measures the named angle from the printed figure (vertex points): equals the key  [35.0, 78.0, 36.0, 15.0, 75.0, 29.0]
+PASS  S2-08 (P6-28) V1 independent solver measures the named angle from the printed figure (vertex points): equals the key  [37.0, 86.0, 38.0, 15.0, 75.0, 55.0]
 PASS  S2-08 (P6-28) V1b every given angle printed in an arc equals the drawn angle (within 0.6 degrees)  []
 PASS  S2-08 (P6-28) V1c the question-mark arc is at the vertex and between the rays named in the question  
 PASS  S2-08 (P6-28) V7 every angle is a whole number of degrees between 10 and 170  
@@ -438,7 +438,7 @@ PASS  V8 reading level (Primary 6): instruction and question sentences <= 18 wor
 PASS  check strip text <= 26 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every strip of a page with letters contains the plain question 'Do they spell a word?'  
-PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
+FAIL  every number of 11 or more quoted in a teacher note is found on the page or in its answers  [(27, ['20'])]
 PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p6_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a Primary 6 strand (or the revision strand)  
@@ -502,7 +502,7 @@ PASS  S1: school name printed on all 20 page footers
 PASS  S1: every pupil page shows its code in the footer, for example S1-07 (P6-17)  []
 PASS  P6_S2_Puzzles.pdf has 20 pages  20
 PASS  P6_S2_Puzzles.pdf fonts all embedded  19 fonts
-PASS  P6_S2_Puzzles.pdf size < 20 MB  0.72 MB
+PASS  P6_S2_Puzzles.pdf size < 20 MB  0.74 MB
 PASS  P6_S2_Puzzles.pdf A4 page size  
 PASS  P6_S2_FrontMatter.pdf has 5 pages  5
 PASS  P6_S2_FrontMatter.pdf fonts all embedded  6 fonts
@@ -510,7 +510,7 @@ PASS  P6_S2_FrontMatter.pdf size < 20 MB  0.07 MB
 PASS  P6_S2_FrontMatter.pdf A4 page size  
 PASS  P6_S2_Complete_Pack.pdf has 25 pages  25
 PASS  P6_S2_Complete_Pack.pdf fonts all embedded  25 fonts
-PASS  P6_S2_Complete_Pack.pdf size < 20 MB  0.79 MB
+PASS  P6_S2_Complete_Pack.pdf size < 20 MB  0.81 MB
 PASS  P6_S2_Complete_Pack.pdf A4 page size  
 PASS  P6_S2_Answer_Key.pdf has 10 pages  10
 PASS  P6_S2_Answer_Key.pdf fonts all embedded  7 fonts
@@ -523,7 +523,7 @@ PASS  dollar amounts with cents always have two decimal places ($3.50, never $3.
 PASS  S1: pupil pages, key and front matter name no price, quote or sale wording  
 PASS  S1: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)  
 PASS  S1: the 'Not affiliated with or endorsed by the Ministry of Education, Singapore.' sentence is on the COVER only (owner decision P2-NOTAFFIL-FRONT), the licence page has only the factual syllabus sentence  
-PASS  S1: teacher notes say 'Pictures are not actual size.', the key says the outcome lines are quoted from the syllabus and the notes on each tag are our own words  
+PASS  S1: teacher notes say 'Pictures are not actual size.', the key says the outcome numbers follow the syllabus and the notes on each tag are our own words  
 PASS  S1: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line  6 DRAFT stamps
 PASS  S1: front matter has the 'typical order, schools vary' sentence and the booklet's terms  
 PASS  S1: pupil pages carry no DRAFT stamp  
@@ -535,7 +535,7 @@ PASS  S1: the licence page no longer calls the entity or year unconfirmed, and p
 PASS  S2: pupil pages, key and front matter name no price, quote or sale wording  
 PASS  S2: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)  
 PASS  S2: the 'Not affiliated with or endorsed by the Ministry of Education, Singapore.' sentence is on the COVER only (owner decision P2-NOTAFFIL-FRONT), the licence page has only the factual syllabus sentence  
-PASS  S2: teacher notes say 'Pictures are not actual size.', the key says the outcome lines are quoted from the syllabus and the notes on each tag are our own words  
+PASS  S2: teacher notes say 'Pictures are not actual size.', the key says the outcome numbers follow the syllabus and the notes on each tag are our own words  
 PASS  S2: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line  6 DRAFT stamps
 PASS  S2: front matter has the 'typical order, schools vary' sentence and the booklet's terms  
 PASS  S2: pupil pages carry no DRAFT stamp  
@@ -726,19 +726,19 @@ PASS  S2 key page 10 layout (no overflow/clipping/margin breach)
 PASS  S2 key page 10 min text size >= 8 pt  8.0 pt
 PASS  S1_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
 PASS  S1_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
-PASS  S2_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(12, 0, 14), (20, 0, 14)]
-PASS  S2_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14), (10, 0, 14)]
+FAIL  S2_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(12, 0, 14), (20, 4, 14)]
+FAIL  S2_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14), (10, 2, 14)]
 PASS  P6_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.24% vs greyscale)  20 pages
-PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 223, budget 40 on average per page)  
-PASS  P6_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.32% vs greyscale)  5 pages
+PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 221, budget 40 on average per page)  
+PASS  P6_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.23% vs greyscale)  5 pages
 PASS  P6_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 141, budget 40 on average per page)  
 PASS  P6_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.24% vs greyscale)  9 pages
 PASS  P6_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 726, budget 130 on average per page)  
 PASS  P6_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.34% vs greyscale)  20 pages
-PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 198, budget 40 on average per page)  
-PASS  P6_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.87% vs greyscale)  5 pages
-PASS  P6_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 139, budget 40 on average per page)  
-PASS  P6_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.64% vs greyscale)  10 pages
-PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 855, budget 130 on average per page)  
+PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 199, budget 40 on average per page)  
+PASS  P6_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.80% vs greyscale)  5 pages
+PASS  P6_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 137, budget 40 on average per page)  
+PASS  P6_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.57% vs greyscale)  10 pages
+PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 866, budget 130 on average per page)  
 
-TOTAL 742 checks, 0 failed
+TOTAL 742 checks, 3 failed
