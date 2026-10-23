@@ -4022,27 +4022,27 @@
     "shapes": [
      {
       "kind": "circle",
-      "color": "#FFE08A",
+      "color": "#F6C9D0",
       "n": 3
      },
      {
       "kind": "square",
-      "color": "#BFE3F5",
+      "color": "#BFE3DC",
       "n": 3
      },
      {
       "kind": "triangle",
-      "color": "#C8E6B0",
+      "color": "#FFE59A",
       "n": 3
      },
      {
       "kind": "heart",
-      "color": "#F7B6C2",
+      "color": "#FF8FB1",
       "n": 3
      },
      {
       "kind": "star",
-      "color": "#FFD27A",
+      "color": "#C9B6F0",
       "n": 3
      }
     ],

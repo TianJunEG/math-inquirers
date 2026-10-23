@@ -1252,7 +1252,7 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "A bus leaves at 7:30. The trip takes 1 hour. Then look at the game.",
+    "text": "Look at the clock. A bus leaves at 7:30. The trip takes 1 hour.",
     "parts": [
      {
       "l": "a",

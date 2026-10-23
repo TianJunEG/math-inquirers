@@ -74,7 +74,7 @@ Outputs in `out/`: `P2_S1_Puzzles.pdf`, `P2_S2_Puzzles.pdf` (20 pages each, phot
 | S2-18 (P2-36) | Picture Graph Scales | 1 | K1 code word (6 letters) |
 | S2-19 (P2-37) | Graph Detective Two | 2 | K1 code word (6 letters) |
 | S1-02 (P2-38) | Colour the Rocket | 1 | K1 colour key + K3 tally of colours (+ matching parts) |
-| S1-17 (P2-39) | Colour the Dinosaur | 2 | K1 colour key + K3 tally of colours (+ matching parts) |
+| S1-17 (P2-39) | Colour the House | 2 | K1 colour key + K3 tally of colours (+ matching parts) |
 | S2-20 (P2-40) | Colour the Butterfly | 2 | K1 colour key + K3 tally of colours (+ matching parts) |
 
 ## Rules every page keeps

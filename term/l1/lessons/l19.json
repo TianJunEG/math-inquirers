@@ -2368,7 +2368,7 @@
      15,
      15
     ],
-    "hint": "Find 1 pen first, then 4 pens, then what is left from $20.",
+    "hint": "Find 1 pen first. Then find the cost of 5 pens. Then take that away from $30.",
     "solution": "$24 shared equally among 8 pens is $3 each. 5 pens cost $15. $30 - $15 = $15 is left.",
     "mistakes": [
      "Taking 24 away from 30.",
@@ -3343,7 +3343,7 @@
   "next_materials": [
    "Your Term 2 Lesson 10 workbook, with its tool cards page cut out (7 tool cards and 8 problem cards)",
    "Keep the $1 tokens from this lesson: they are needed again in Term 3 Lesson 4, Dollars and Change",
-   "The Quest Log (3 pages, printed at 100%), kept closed in its envelope; a quest partner"
+   "The Quest Log (4 pages, printed at 100%), kept closed in its envelope; a quest partner"
   ]
  },
  "safeguarding": [

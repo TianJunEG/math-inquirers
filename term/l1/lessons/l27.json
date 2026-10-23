@@ -50,7 +50,7 @@
    "Counting on within a cycle and on a month page (number patterns, Primary 1, p. 31)",
    "Choosing between counting on from tomorrow and the month page, and saying why (process skills, Primary 1)"
   ],
-  "note": "Strand label for the tutor only. This is an added lesson (gap: time and calendar). Days of the week and dates are not a listed Primary 1 outcome (Primary 1 Time items are clock items), so the lesson is flagged for tutor review; no Primary 1 school paper in the sample tests the calendar. Start here is approachable: the days in order, the day before and after, three days later (no wrap), the number of days in a week and a week after a date on a month page. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: 'two days after the day before yesterday', the 10th day from Monday, 3 weeks, a fortnight, the date of a day on a month page, every Wednesday of a month (the same weekday every 7 days), and 'Hundred Days Later' (100 days is 14 weeks and 2 days, so Monday plus 100 days is Wednesday; dividing by 7 with a left-over is a Primary 3 outcome, so the lesson says 14 weeks and 2 days over). Every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. This lesson moved here from Lesson 30 (owner decision X10-BEFORE, 23 Oct 2026); it replaces Fill the Grid, which is retired. Lesson 30 has a calendar gate in Mi's Challenge Quest that reuses the Start here idea (days later, and a week on the month page). Contest tag (tutor only): day-of-the-week cycles; counting on; a week as a unit. Non-routine types (tutor only): a context fact (a week, a fortnight), a pattern (the cycle of 7), a logic puzzle (two days after the day before yesterday)."
+  "note": "Strand label for the tutor only. This is an added lesson (gap: time and calendar). Days of the week and dates are not a listed Primary 1 outcome (Primary 1 Time items are clock items), so the lesson is flagged for tutor review; no Primary 1 school paper in the sample tests the calendar. Start here is approachable: the days in order, the day before and after, three days later (no wrap), the number of days in a week and a week after a date on a month page. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: 'two days after the day before yesterday', the 10th day from Monday, 3 weeks, a fortnight, the date of a day on a month page, every Wednesday of a month (the same weekday every 7 days), and 'Hundred Days Later' (100 days is 14 weeks and 2 days, so Monday plus 100 days is Wednesday; dividing by 7 with a left-over is a Primary 3 outcome, so the lesson says 14 weeks and 2 days over). Every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. This lesson moved here from Term 3 Lesson 10 (owner decision X10-BEFORE, 23 Oct 2026); it replaces Fill the Grid, which is retired. Term 3 Lesson 10 has a calendar gate in Mi's Challenge Quest that reuses the Start here idea (days later, and a week on the month page). Contest tag (tutor only): day-of-the-week cycles; counting on; a week as a unit. Non-routine types (tutor only): a context fact (a week, a fortnight), a pattern (the cycle of 7), a logic puzzle (two days after the day before yesterday)."
  },
  "contest_moves": [
   "day-of-the-week cycles: counting on round a cycle of 7, and a left-over after whole weeks",
@@ -77,7 +77,7 @@
    "Counting on in equal jumps (Count with the Frog)"
   ],
   "safe_to_miss": true,
-  "note": "Fairly safe to miss: no later lesson needs it, but Mi's Challenge Quest in Lesson 30 has a gate on counting on from tomorrow and a week on the month page. A child who misses it watches the recording and does workbook pages 1 and 2 before the Quest. A child who joins here cold can follow: the lesson needs only counting to 31, and the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order."
+  "note": "Fairly safe to miss: no later lesson needs it, but Mi's Challenge Quest in Term 3 Lesson 10 has a gate on counting on from tomorrow and a week on the month page. A child who misses it watches the recording and does workbook pages 1 and 2 before the Quest. A child who joins here cold can follow: the lesson needs only counting to 31, and the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order."
  },
  "materials": {
   "child": [
@@ -1783,13 +1783,10 @@
        "Monday",
        "Tuesday",
        "[]",
-       "Thursday"
-      ],
-      [
+       "Thursday",
        "Friday",
        "[]",
-       "Sunday",
-       ""
+       "Sunday"
       ]
      ]
     }

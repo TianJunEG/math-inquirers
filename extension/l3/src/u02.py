@@ -84,7 +84,7 @@ u.S(3, 'A school collects cans for 3 weeks: 1875, 2430 and 1790.', parts=[
 # ---------------- Think harder
 u.T('Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nAB + AC = BBD', parts=[
     P('a', 'A = {b}', A('5')), P('b', 'B = {b}', A('1')), P('c', 'C = {b}', A('9')), P('d', 'D = {b}', A('0'))],
-    hint='Two 2-digit numbers add up to less than 200. What is B?',
+    hint='Look at the left digit of the answer. Which digit can it be?',
     why='Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: B + C = 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C must be 10, so C = 9 and D = 0. Check: 51 + 59 = 110.',
     partsrow=True, space={'rows': ['My tries:', '']})
 u.T('Use the cards 1, 3, 5, 6 and 8 once each. Make a 3-digit number and a 2-digit number. What is the smallest sum you can make? {b}', A('194'),
@@ -92,7 +92,7 @@ u.T('Use the cards 1, 3, 5, 6 and 8 once each. Make a 3-digit number and a 2-dig
     hint='Which digits are worth the least? Which places are worth most?',
     why='The smallest digit, 1, goes in the hundreds place. The next smallest, 3 and 5, go in the two tens places. The others, 6 and 8, go in the ones places. For example 136 + 58 = 194, and every way of placing the digits like this gives 194.',
     space={'rows': ['My tries:', '', '']})
-u.T('Look at this magic square. Every row, column and diagonal has the same total.', parts=[
+u.T('Look at this magic square. Every row, column and diagonal has the same total.', beyond='Magic square total', parts=[
     P('a', 'The magic total is {b}.', A('630')),
     P('b', 'A = {b}', A('240')), P('c', 'E = {b}', A('300'))],
     hint='The middle number is in 4 lines. Add those 4 lines.',
@@ -108,7 +108,7 @@ u.G('Letters hide digits. The same letter is the same digit. Different letters n
     partsrow=True, space={'rows': ['My tries:']})
 u.G('Beyond Level 3: Pyramids with a hidden number.\nA brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}',
     A('440'),
-    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 60},
+    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 70},
     hint='Guess a number for X. Fill the pyramid. Is the top too big?',
     why='In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440. Check: the next row is 640, 880, 880; then 1520, 1760; then 3280.')
 u.G('Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the 2 numbers.', parts=[

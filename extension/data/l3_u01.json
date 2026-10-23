@@ -30,7 +30,7 @@
   "howto": {
    "title": "How to make a number from cards",
    "steps": [
-    "Decide the thousands digit first.",
+    "Th H T O: the place decides the worth. 1000 more changes the thousands digit.",
     "Odd or even? Choose the ones digit first.",
     "Making a list? Fix the first digit, then list the rest from smallest."
    ]
@@ -200,7 +200,7 @@
    "id": "L3U01-S04",
    "tier": "start",
    "page": 1,
-   "text": "Arrange the numbers in order. Begin with the smallest.\n5830, 5083, 5380, 5038\n{ll}",
+   "text": "Arrange the numbers in order. Begin with the smallest.\n5830, 5083, 5380, 5038",
    "answer": {
     "value": [
      "5038",
@@ -211,7 +211,12 @@
     "text": "5038, 5083, 5380, 5830",
     "list": true
    },
-   "explanation": "All four start with 5 thousands. Compare the hundreds next: 0, 0, 3, 8. Then compare the tens of 5038 and 5083: 3 is less than 8."
+   "explanation": "All four start with 5 thousands. Compare the hundreds next: 0, 0, 3, 8. Then compare the tens of 5038 and 5083: 3 is less than 8.",
+   "space": {
+    "rows": [
+     "My order:"
+    ]
+   }
   },
   {
    "id": "L3U01-S05",
@@ -313,7 +318,7 @@
    },
    "space": {
     "rows": [
-     "{ll}"
+     "My list:"
     ]
    }
   },
@@ -349,28 +354,28 @@
     },
     {
      "label": "c",
-     "text": "3, 4, 6, 9, 13, {b}, {b}",
+     "text": "6, 14, 22, 30, {b}, {b}",
      "answer": {
       "value": [
-       "18",
-       "24"
+       "38",
+       "46"
       ],
-      "text": "18, 24",
+      "text": "38, 46 (add 8)",
       "list": true
      }
     }
    ],
-   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) The jumps are 1, 2, 3, 4, so the next jumps are 5 and 6: 13 + 5 = 18 and 18 + 6 = 24."
+   "explanation": "(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8 each time: 30 + 8 = 38 and 38 + 8 = 46."
   },
   {
    "id": "L3U01-S09",
    "tier": "start",
    "page": 2,
-   "text": "A pattern starts at 4000 and goes up by 500 each time.",
+   "text": "A pattern starts at 3000 and goes down by 250 each time.",
    "parts": [
     {
      "label": "a",
-     "text": "Is 6800 in the pattern?   {circ:Yes|No}",
+     "text": "Is 1900 in the pattern?   {circ:Yes|No}",
      "answer": {
       "value": [
        "No"
@@ -380,16 +385,16 @@
     },
     {
      "label": "b",
-     "text": "The first number above 6800 in the pattern is {b}.",
+     "text": "The first number below 1900 in the pattern is {b}.",
      "answer": {
       "value": [
-       "7000"
+       "1750"
       ],
-      "text": "7000"
+      "text": "1750"
      }
     }
    ],
-   "explanation": "The pattern goes 4000, 4500, 5000, 5500, 6000, 6500, 7000. It jumps over 6800 and lands on 7000."
+   "explanation": "The pattern goes 3000, 2750, 2500, 2250, 2000, 1750. It jumps over 1900 and lands on 1750."
   },
   {
    "id": "L3U01-S10",
@@ -457,7 +462,7 @@
    "id": "L3U01-S11",
    "tier": "start",
    "page": 3,
-   "text": "I am a 4-digit number. My thousands digit is 6, my hundreds digit is 3 less than that, and my tens digit is 0. My ones digit is the greatest odd digit. What number am I? {b}",
+   "text": "I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than my thousands digit. My ones digit is the greatest odd digit. What number am I? {b}",
    "answer": {
     "value": [
      "6309"
@@ -585,20 +590,20 @@
    "id": "L3U01-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ali writes every number from 1 to 200. How many times does he write the digit 7? {b}",
+   "text": "Count the 3-digit numbers whose digits multiply to make 8. No digit is 0. {b}",
    "answer": {
     "value": [
-     "40"
+     "10"
     ],
-    "text": "40"
+    "text": "10"
    },
-   "explanation": "From 1 to 99: the digit 7 is in the ones place 10 times (7, 17, ... 97) and in the tens place 10 times (70 to 79). That is 20. From 100 to 200 it is 20 again. Total 40.",
-   "hint": "Count 1 to 99 first. Then count 100 to 200.",
+   "explanation": "The sets of 3 digits are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. The set 1, 1, 8 makes 118, 181, 811: 3 numbers. The set 1, 2, 4 makes 124, 142, 214, 241, 412, 421: 6 numbers. The set 2, 2, 2 makes 222: 1 number. 3 + 6 + 1 = 10.",
+   "hint": "List the sets of 3 digits first. Then arrange each set.",
    "space": {
     "rows": [
-     "1 to 99:",
-     "100 to 200:",
-     "Total:",
+     "Sets of digits:",
+     "Numbers:",
+     "",
      ""
     ]
    }
@@ -607,15 +612,31 @@
    "id": "L3U01-T03",
    "tier": "think",
    "page": 4,
-   "text": "Mei uses only the digits 1 and 2 to make 4-digit numbers. A digit can be used more than once. She writes them in a list, smallest first. Which number is 10th in her list? {b}",
-   "answer": {
-    "value": [
-     "2112"
-    ],
-    "text": "2112"
-   },
-   "explanation": "The list goes 1111, 1112, 1121, 1122, 1211, 1212, 1221, 1222. That is 8 numbers, all starting with 1. Next are 2111 (9th) and 2112 (10th).",
-   "hint": "Begin with 1111. Change the ones digit first. Keep a list.",
+   "text": "Mei makes 4-digit numbers with the cards 1, 2, 3 and 4. She uses each card once.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} of the numbers are greater than 2500.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 7th smallest number is {b}.",
+     "answer": {
+      "value": [
+       "2134"
+      ],
+      "text": "2134"
+     }
+    }
+   ],
+   "explanation": "Every number that starts with 1 or 2 is below 2500, because the second digit is at most 4. So only numbers that start with 3 or 4 are greater than 2500: 6 + 6 = 12. In order the list begins 1234, 1243, 1324, 1342, 1423, 1432, and the 7th is 2134.",
+   "hint": "List them from the smallest. Fix the first digit.",
    "space": {
     "rows": [
      "My list:",
@@ -628,7 +649,8 @@
    "id": "L3U01-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Counting digit sums.\nCount the 3-digit numbers with a digit sum of 4. List them by first digit.",
+   "beyond": "Counting digit sums",
+   "text": "Count the 3-digit numbers with a digit sum of 4. List them by first digit.",
    "parts": [
     {
      "label": "a",
@@ -664,7 +686,8 @@
    "id": "L3U01-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Growing jumps.\nLook at the jumps between the numbers. Write the next 2 numbers.\n5, 8, 14, 23, 35, {b}, {b}",
+   "beyond": "Growing jumps",
+   "text": "Look at the jumps between the numbers. Write the next 2 numbers.\n5, 8, 14, 23, 35, {b}, {b}",
    "answer": {
     "value": [
      "50",

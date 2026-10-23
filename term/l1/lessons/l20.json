@@ -1073,7 +1073,7 @@
      "head": "NEXT TERM",
      "items": [
       "Term 3: What Time Is It? (the first lesson)",
-      "Have ready: your Term 3 book. Tear out the clock page and a grown-up cuts out the 6 clock hands (the 2 clock faces can stay on the page). Keep your $1 tokens from Term 2 Lesson 9: we need them in Lesson 24. A real clock helps. Also a pencil and paper. Your tutor will tell you the start date."
+      "Have ready: your Term 3 book with the clock page torn out and the 6 clock hands cut out. Keep your $1 tokens from Term 2 Lesson 9: Term 3 Lesson 4 uses them. A real clock helps."
      ]
     }
    ],
@@ -1879,7 +1879,7 @@
      },
      {
       "k": "SAY",
-      "text": "Keep your dollar tokens from Term 2 Lesson 9, because we need them again in Lesson 24. A real clock helps too. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
+      "text": "Keep your dollar tokens from Term 2 Lesson 9, because Term 3 Lesson 4 uses them again. A real clock helps too. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
      },
      {
       "k": "SLIDE",
@@ -2281,7 +2281,8 @@
       1
      ]
     },
-    "draw": true
+    "draw": true,
+    "draw_strokes": 6
    },
    {
     "id": "T2",
@@ -2410,7 +2411,7 @@
      },
      {
       "l": "c",
-      "text": "Which shop sells 1 pen for less? Circle Shop A or Shop B.",
+      "text": "Where does 1 pen cost less? Circle one.",
       "ans": "Shop B",
       "val": "Shop B",
       "choices": [
@@ -2525,7 +2526,7 @@
    "page": 5,
    "tier": "investigation",
    "title": "Write a problem for a tool",
-   "first": "Mei adds 4 to her number and gets 10. Write 1 more puzzle like this.",
+   "first": "Mei adds 4 to her number and gets 10. Her number is 6. Write 1 more puzzle like this.",
    "text": "Write a number puzzle to solve by working backwards. Solve it.",
    "lines": 4,
    "answer": "Many answers are right. A good puzzle gives the steps and the end number, and has one answer. Check it by going forwards: put the answer back and follow the steps.",

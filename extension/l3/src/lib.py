@@ -42,6 +42,13 @@ class Unit:
             it['page'] = page
         else:
             it['page'] = 6
+        import re as _re
+        m = _re.match(r'Beyond Level 3: ([^\n]*?)\.\n', text)
+        if m:
+            it['beyond'] = m.group(1)
+            text = text[m.end():]
+        if kw.get('beyond'):
+            it['beyond'] = kw.pop('beyond')
         it['text'] = text
         if parts:
             it['parts'] = parts

@@ -13,7 +13,7 @@ u.learn(
                'Put the other digits in order after it, smallest first: 0, 7, 9. This gives 4079.'],
      'answer': 'Greatest 9740. Smallest 4079.'},
     {'title': 'How to make a number from cards',
-     'steps': ['Decide the thousands digit first.', 'Odd or even? Choose the ones digit first.',
+     'steps': ['Th H T O: the place decides the worth. 1000 more changes the thousands digit.', 'Odd or even? Choose the ones digit first.',
                'Making a list? Fix the first digit, then list the rest from smallest.']},
     {'text': 'Make the greatest even number with the cards 3, 8, 1 and 4. Use each card once. {b}', 'figure': cards(3, 8, 1, 4),
      'answer': A('8314'),
@@ -33,8 +33,9 @@ u.S(1, 'Fill in the blanks.', parts=[
     P('a', '1000 more than 6457 is {b}.', A('7457')), P('b', '100 less than 3050 is {b}.', A('2950')),
     P('c', '10 more than 8995 is {b}.', A('9005')), P('d', '1 less than 7000 is {b}.', A('6999'))],
     why='(a) Only the thousands digit changes: 7457. (b) 3050 - 100 = 2950. (c) 8995 + 10 = 9005, and the 9 hundreds carry. (d) 7000 - 1 = 6999.')
-u.S(1, 'Arrange the numbers in order. Begin with the smallest.\n5830, 5083, 5380, 5038\n{ll}',
+u.S(1, 'Arrange the numbers in order. Begin with the smallest.\n5830, 5083, 5380, 5038',
     A(['5038', '5083', '5380', '5830'], '5038, 5083, 5380, 5830', list=True),
+    space={'rows': ['My order:']},
     why='All four start with 5 thousands. Compare the hundreds next: 0, 0, 3, 8. Then compare the tens of 5038 and 5083: 3 is less than 8.')
 u.S(1, 'A shop has 3 boxes of 1000 pins, 14 packs of 100 pins and 6 loose pins. How many pins are there in all? {b}',
     A('4406'), why='3 boxes are 3000 pins. 14 packs are 1400 pins. 3000 + 1400 + 6 = 4406.')
@@ -48,16 +49,16 @@ u.S(2, 'Use the cards once each in every number.', parts=[
 u.S(2, 'List every 4-digit number that can be made with the cards 3, 0, 0 and 5. Begin with the smallest.',
     A(['3005', '3050', '3500', '5003', '5030', '5300'], '3005, 3050, 3500, 5003, 5030, 5300', list=True),
     why='The first digit is 3 or 5, never 0. After 3, the 5 can go in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same way: 5003, 5030, 5300. That is 6 numbers.',
-    figure=cards(3, 0, 0, 5), space={'rows': ['{ll}']})
+    figure=cards(3, 0, 0, 5), space={'rows': ['My list:']})
 u.S(2, 'Write the next 2 numbers in each pattern.', parts=[
     P('a', '2300, 2600, 2900, {b}, {b}', A(['3200', '3500'], '3200, 3500 (add 300)', list=True)),
     P('b', '9000, 8750, 8500, {b}, {b}', A(['8250', '8000'], '8250, 8000 (subtract 250)', list=True)),
-    P('c', '3, 4, 6, 9, 13, {b}, {b}', A(['18', '24'], '18, 24', list=True))],
-    why='(a) Add 300 each time. (b) Subtract 250 each time. (c) The jumps are 1, 2, 3, 4, so the next jumps are 5 and 6: 13 + 5 = 18 and 18 + 6 = 24.')
-u.S(2, 'A pattern starts at 4000 and goes up by 500 each time.', parts=[
-    P('a', 'Is 6800 in the pattern?   {circ:Yes|No}', A('No')),
-    P('b', 'The first number above 6800 in the pattern is {b}.', A('7000'))],
-    why='The pattern goes 4000, 4500, 5000, 5500, 6000, 6500, 7000. It jumps over 6800 and lands on 7000.')
+    P('c', '6, 14, 22, 30, {b}, {b}', A(['38', '46'], '38, 46 (add 8)', list=True))],
+    why='(a) Add 300 each time. (b) Subtract 250 each time. (c) Add 8 each time: 30 + 8 = 38 and 38 + 8 = 46.')
+u.S(2, 'A pattern starts at 3000 and goes down by 250 each time.', parts=[
+    P('a', 'Is 1900 in the pattern?   {circ:Yes|No}', A('No')),
+    P('b', 'The first number below 1900 in the pattern is {b}.', A('1750'))],
+    why='The pattern goes 3000, 2750, 2500, 2250, 2000, 1750. It jumps over 1900 and lands on 1750.')
 u.S(3, 'Look at the number line.', parts=[
     P('a', 'Arrow A points to {b}.', A('6150')), P('b', 'Arrow B points to {b}.', A('6450')), P('c', 'Arrow C points to {b}.', A('6350'))],
     why='Each small mark is 50. A is halfway from 6100 to 6200: 6150. B is halfway from 6400 to 6500: 6450. C is halfway from 6300 to 6400: 6350.',
@@ -65,7 +66,7 @@ u.S(3, 'Look at the number line.', parts=[
             'marks': [{'at': 6150, 'text': 'A'}, {'at': 6450, 'text': 'B'}, {'at': 6350, 'text': 'C'}]})
 
 # ---------------- page 3
-u.S(3, 'I am a 4-digit number. My thousands digit is 6, my hundreds digit is 3 less than that, and my tens digit is 0. My ones digit is the greatest odd digit. What number am I? {b}',
+u.S(3, 'I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than my thousands digit. My ones digit is the greatest odd digit. What number am I? {b}',
     A('6309'), why='The thousands digit is 6. The hundreds digit is 6 - 3 = 3. The tens digit is 0. The greatest odd digit is 9. The number is 6309.')
 u.S(3, 'Ravi says the greatest odd number from the cards 9, 4, 6 and 2 is 9642.', parts=[
     P('a', 'Is he right?   {circ:Yes|No}', A('No')),
@@ -83,14 +84,14 @@ u.T('The digits of a 4-digit number are all different and add up to 8. The numbe
     hint='Find the sets of 4 different digits that add up to 8 first.',
     why='Only two sets of 4 different digits add up to 8: 0, 1, 2, 5 and 0, 1, 3, 4. Even numbers need an even last digit. The greatest even number is 5210. The smallest is 1034.',
     space={'rows': ['Sets of digits:', 'Numbers I tried:', '', '']})
-u.T('Ali writes every number from 1 to 200. How many times does he write the digit 7? {b}', A('40'),
-    hint='Count 1 to 99 first. Then count 100 to 200.',
-    why='From 1 to 99: the digit 7 is in the ones place 10 times (7, 17, ... 97) and in the tens place 10 times (70 to 79). That is 20. From 100 to 200 it is 20 again. Total 40.',
-    space={'rows': ['1 to 99:', '100 to 200:', 'Total:', '']})
-u.T('Mei uses only the digits 1 and 2 to make 4-digit numbers. A digit can be used more than once. She writes them in a list, smallest first. Which number is 10th in her list? {b}',
-    A('2112'),
-    hint='Begin with 1111. Change the ones digit first. Keep a list.',
-    why='The list goes 1111, 1112, 1121, 1122, 1211, 1212, 1221, 1222. That is 8 numbers, all starting with 1. Next are 2111 (9th) and 2112 (10th).',
+u.T('Count the 3-digit numbers whose digits multiply to make 8. No digit is 0. {b}', A('10'),
+    hint='List the sets of 3 digits first. Then arrange each set.',
+    why='The sets of 3 digits are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. The set 1, 1, 8 makes 118, 181, 811: 3 numbers. The set 1, 2, 4 makes 124, 142, 214, 241, 412, 421: 6 numbers. The set 2, 2, 2 makes 222: 1 number. 3 + 6 + 1 = 10.',
+    space={'rows': ['Sets of digits:', 'Numbers:', '', '']})
+u.T('Mei makes 4-digit numbers with the cards 1, 2, 3 and 4. She uses each card once.', parts=[
+    P('a', '{b} of the numbers are greater than 2500.', A('12')), P('b', 'The 7th smallest number is {b}.', A('2134'))],
+    hint='List them from the smallest. Fix the first digit.',
+    why='Every number that starts with 1 or 2 is below 2500, because the second digit is at most 4. So only numbers that start with 3 or 4 are greater than 2500: 6 + 6 = 12. In order the list begins 1234, 1243, 1324, 1342, 1423, 1432, and the 7th is 2134.',
     space={'rows': ['My list:', '', '']})
 
 # ---------------- Go further

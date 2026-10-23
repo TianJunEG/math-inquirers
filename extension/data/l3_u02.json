@@ -673,7 +673,7 @@
     }
    ],
    "explanation": "Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: B + C = 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C must be 10, so C = 9 and D = 0. Check: 51 + 59 = 110.",
-   "hint": "Two 2-digit numbers add up to less than 200. What is B?",
+   "hint": "Look at the left digit of the answer. Which digit can it be?",
    "partsrow": true,
    "space": {
     "rows": [
@@ -718,6 +718,7 @@
    "id": "L3U02-T03",
    "tier": "think",
    "page": 4,
+   "beyond": "Magic square total",
    "text": "Look at this magic square. Every row, column and diagonal has the same total.",
    "parts": [
     {
@@ -848,7 +849,8 @@
    "id": "L3U02-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Pyramids with a hidden number.\nA brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}",
+   "beyond": "Pyramids with a hidden number",
+   "text": "A brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}",
    "answer": {
     "value": [
      "440"
@@ -878,7 +880,7 @@
       440
      ]
     ],
-    "width_mm": 60
+    "width_mm": 70
    },
    "hint": "Guess a number for X. Fill the pyramid. Is the top too big?"
   },
@@ -886,7 +888,8 @@
    "id": "L3U02-G03",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the 2 numbers.",
+   "beyond": "Reversing digits",
+   "text": "Reverse the digits of a 2-digit number and add the 2 numbers.",
    "parts": [
     {
      "label": "a",

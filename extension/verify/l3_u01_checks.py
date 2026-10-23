@@ -67,18 +67,14 @@ def _():
         return [seq[-1] + d * (i + 1) for i in range(k)]
     a = nxt_arith([2300, 2600, 2900])
     b = nxt_arith([9000, 8750, 8500])
-    seq, j = [3, 4, 6, 9, 13], 5
-    c = []
-    cur = seq[-1]
-    for _ in range(2):
-        cur += j; j += 1; c.append(cur)
+    c = [6 + 8 * k for k in (4, 5)]
     return {'a': s(a), 'b': s(b), 'c': s(c)}
 
 
 @check('L3U01-S09')
 def _():
-    seq = [4000 + 500 * i for i in range(0, 12)]
-    return {'a': ['Yes' if 6800 in seq else 'No'], 'b': s([min(x for x in seq if x > 6800)])}
+    seq = [3000 - 250 * i for i in range(0, 12)]
+    return {'a': ['Yes' if 1900 in seq else 'No'], 'b': s([max(x for x in seq if x < 1900)])}
 
 
 @check('L3U01-S10')
@@ -124,13 +120,13 @@ def _():
 
 @check('L3U01-T02')
 def _():
-    return s([sum(str(n).count('7') for n in range(1, 201))])
+    return s([sum(1 for n in range(100, 1000) if '0' not in str(n) and int(str(n)[0]) * int(str(n)[1]) * int(str(n)[2]) == 8)])
 
 
 @check('L3U01-T03')
 def _():
-    ns = sorted(int(''.join(p)) for p in itertools.product('12', repeat=4))
-    return s([ns[9]])
+    ns = sorted(int(''.join(p)) for p in itertools.permutations('1234'))
+    return {'a': s([sum(1 for n in ns if n > 2500)]), 'b': s([ns[6]])}
 
 
 @check('L3U01-G01')
