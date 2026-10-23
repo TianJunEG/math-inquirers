@@ -76,11 +76,11 @@ I.append(IT(U, 'S', 7, 2,
                    P('b', 'The median pay is {b} dollars.', [1700]),
                    P('c', 'Which describes what most staff earn better?   {circ:mean|median}', ['median'])]))
 I.append(IT(U, 'S', 8, 3,
-            'The bar chart shows the number of stickers 6 pupils have.',
+            'The bar chart shows the number of books 6 pupils read in a term.',
             f'Total: 14 + 9 + 17 + 12 + 8 + 12 = 72. Mean = 72 ÷ 6 = 12. Above 12: 14 and 17 is 2 pupils. (Two pupils have exactly 12.)',
             fig={'type': 'l6_bars', 'values': [14, 9, 17, 12, 8, 12], 'labels': ['Ali', 'Mei', 'Siti', 'Ben', 'Kumar', 'Aisha'], 'unit_mm': 2.6, 'ymax': 20, 'ytick': 5, 'show': True, 'bar_mm': 11, 'gap_mm': 3},
-            parts=[P('a', 'They have {b} stickers in all.', [72]),
-                   P('b', 'The mean is {b} stickers.', [12]),
+            parts=[P('a', 'They read {b} books in all.', [72]),
+                   P('b', 'The mean is {b} books.', [12]),
                    P('c', '{b} pupils have more than the mean.', [2])],
             figside=True))
 I.append(IT(U, 'S', 9, 3,
@@ -127,7 +127,7 @@ I.append(IT(U, 'T', 3, 4,
             f'The total time is 3 {X} 4.6 = 13.8 minutes. The known laps add to 3.9 + 5.4 = 9.3. The third lap took 13.8 {M} 9.3 = 4.5 minutes.',
             parts=[P('a', 'The 3 laps take {b} minutes in all.', [13.8]),
                    P('b', 'The third lap takes {b} minutes.', [4.5])],
-            hint='Total = mean × how many. Then take away what you know.', space={'rows': ['Working:', '', '']}))
+            hint='How many minutes do all 3 laps take together?', space={'rows': ['Working:', '', '']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
@@ -154,7 +154,7 @@ I.append(IT(U, 'G', 3, 5,
             parts=[P('a', 'The team scored {b} goals in all.', [13]),
                    P('b', 'The mean number of goals is {b}.', [1.3]),
                    P('c', 'The median number of goals is {b}.', [1])],
-            hint='In each column, multiply the goals by the matches.', partsrow=True, beyond='A frequency table'))
+            hint='How many goals came from the matches with 2 goals?', partsrow=True, beyond='A frequency table'))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,

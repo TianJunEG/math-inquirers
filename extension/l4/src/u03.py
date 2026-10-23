@@ -80,14 +80,16 @@ T.append(item(U+'-T01', 'think', 4, 'Beyond Level 4: Order of operations\nRule: 
   hint='In part (a), do 4 × 9 and 12 ÷ 3 before anything else.',
   why='(a) 4 × 9 = 36 and 12 ÷ 3 = 4. Then 60 − 36 + 4 = 24 + 4 = 28. (b) Brackets first: 13 + 7 = 20. Then 5 × 20 = 100 and 100 − 6 = 94.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'A number tower has 3 numbers at the bottom: 5, a missing number and 11. Each number above is the sum of the 2 numbers just below it. The top number is 52. What is the missing number? {b}',
-  ans=A(18), hint='Write the 2 numbers in the middle row. They add up to 52.',
+T.append(item(U+'-T02', 'think', 4, 'A number tower has 3 numbers at the bottom. Each number above is the sum of the 2 numbers just below it. The top number is 52. What is the missing number? {b}',
+  fig=BARS([{'offset': 1, 'segs': [{'u': 1, 't': '52'}]}, {'offset': 0.5, 'segs': [{'u': 1, 'k': 's'}, {'u': 1, 'k': 's'}]},
+            {'segs': [{'u': 1, 't': '5'}, {'u': 1, 'k': 'q'}, {'u': 1, 't': '11'}]}], width_mm=50, unit=44, row_h=40, gap=6),
+  ans=A(18), hint='Write the 2 numbers in the middle row. They add up to 52.', figright=True,
   why='The middle row is 5 + ? and ? + 11, and these add up to 52. So 5 + 11 + 2 × ? = 52, 2 × ? = 36 and ? = 18. The middle row is 23 and 29.',
   space={'rows': ['Working:', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'Kumar and Siti have 90 stickers altogether. Kumar has 5 times as many as Siti. Kumar gives some stickers to Siti. Then they have equal amounts.',
-  parts=[P('a', 'Siti at first: {b} stickers', A(15)), P('b', 'Kumar gives Siti {b} stickers', A(30))],
-  hint='Each of them ends with half of the 90 stickers.',
-  why='Siti is 1 unit and Kumar is 5 units. 6 units = 90, so 1 unit = 15. Siti has 15 and Kumar has 75. Equal shares are 45 each, so Kumar gives 75 − 45 = 30.',
+T.append(item(U+'-T03', 'think', 4, 'Two jars hold $84 together. The red jar has $30 more than the blue jar.',
+  parts=[P('a', 'The blue jar holds ${b}', A(27)), P('b', 'To make the jars equal, move ${b} from the red jar to the blue jar', A(15))],
+  hint='Take away the extra $30 first. Then share what is left.',
+  why='Take away the extra $30: $84 − $30 = $54, shared by 2 jars. Blue holds $27 and red holds $57. Equal jars hold $42 each, so move $57 − $42 = $15.',
   space={'rows': ['Draw a bar model here.', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Beyond Level 4: Signs and brackets\nRule: brackets first, then × and ÷, then + and −.',

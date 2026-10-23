@@ -13,8 +13,7 @@ learn = {
         'figure': {'type': 'l6_machine', 'chain': ['n', f'{X} 7', '', f'{M} 4', '45'], 'undo': [f'÷ 7', '+ 4']},
         'steps': [f'The rule is OUT = 7n {M} 4, so 7n {M} 4 = 45.',
                   'Undo the last step first. Undo take away 4 by adding 4: 45 + 4 = 49.',
-                  f'Then undo {X} 7 by dividing by 7: 49 ÷ 7 = 7.',
-                  f'Check forwards: 7 {X} 7 = 49, then 49 {M} 4 = 45.'],
+                  f'Then undo {X} 7 by dividing by 7: 49 ÷ 7 = 7. Check: 7 {X} 7 {M} 4 = 45.'],
         'answer': 'IN was 7.'},
     'howto': {'title': 'How to run a machine backwards',
               'steps': ['Write the steps in order, from IN to OUT.',
@@ -191,18 +190,18 @@ I.append(IT(U, 'C', 4, 6,
             answer=A([13], '13')))
 
 learn['facts'] = {'title': 'Reading the code blocks', 'lines': [
+    'green flag: the program starts',
     'set x to 5: put 5 in x',
     'change x by 2: add 2 to x',
-    'say x: show x',
     'ask ... and wait: gives answer',
     'repeat 5: do the inside 5 times',
     'repeat until <test>: stop if true',
-    'if <test> then / else: choose a part',
+    'if <test> then / else: if true, do the first part. If not, do the else part',
     'n mod d: remainder of n ÷ d',
     'pick random 1 to 6: like a die',
-    'item i of list: the i-th item',
-    'length of list: how many items',
-    '↻ turn: clockwise. Dashed box: blank']}
+    'item i of list: the i-th item. length of list: how many',
+    '> greater than, < less than',
+    '↻ clockwise. Dashed box: blank']}
 learn['tight'] = True
 write_unit(4, 'Algebra machines', 'Machines and equations',
            'I can write a machine rule with a letter and run a machine backwards.', learn, I)

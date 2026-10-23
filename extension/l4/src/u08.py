@@ -82,12 +82,14 @@ T.append(item(U+'-T01', 'think', 4, 'Mei paints each face of a cube red or blue.
   hint='Which faces share an edge with a given face?',
   why='(a) A face shares an edge with 4 faces and is opposite just 1. Two opposite red faces do not share an edge. A third red face would touch one of them. So the most is 2. (b) Take 3 faces that meet at one corner. They are not opposite each other, so 3 red faces work. A 4th red face would be opposite one of them. So the most is 3.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Ravi sees 3 faces of a dice at the same corner. The 3 numbers multiply to make 36.',
-  parts=[P('a', 'The numbers he can see, smallest first: {b} {b} {b}', A(2, 3, 6)), P('b', 'The numbers he cannot see, smallest first: {b} {b} {b}', A(1, 4, 5))],
-  hint='At a corner, the 3 faces are from 3 different opposite pairs.',
-  why='The pairs are 1 and 6, 2 and 5, 3 and 4. He sees one from each pair. Only 6 × 2 × 3 gives 36. The hidden faces are opposite: 1, 5 and 4.',
-  space={'rows': ['Working:', '']}))
-T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 4 squares. A fold along the dotted diagonal must make the halves match. How many patterns can you make? {b}',
+T.append(item(U+'-T02', 'think', 4, 'On every dice, the top face and the bottom face add up to 7.',
+  parts=[P('a', '2 dice stand on a table. The tops add up to 9. The bottoms add up to {b}', A(5)),
+         P('b', '3 dice stand on a table. The tops add up to 12. The bottoms add up to {b}', A(9)),
+         P('c', 'One dice stands on a table. The 4 side faces add up to {b}', A(14))],
+  hint='All 6 faces of a dice add up to 21.',
+  why='(a) 2 × 7 = 14, and 14 − 9 = 5. (b) 3 × 7 = 21, and 21 − 12 = 9. (c) All 6 faces add up to 21. The top and bottom make 7, so the sides make 14.',
+  space={'rows': ['Working:']}))
+T.append(item(U+'-T03', 'think', 4, 'On a 3 by 3 grid, shade exactly 4 squares. A fold along the dashed diagonal must make the halves match. How many patterns can you make? {b}',
   fig=GRID(3, 3, 44, axis={'kind': 'd', 'at': 0}, width_mm=42),
   ans=A(12), hint='Squares on the diagonal match themselves. The others come in pairs.',
   why='Squares on the diagonal: 3. The others make 3 pairs. 2 pairs: 3 ways. 2 diagonal squares (3 ways) and 1 pair (3 ways): 9 ways. 3 + 9 = 12.',

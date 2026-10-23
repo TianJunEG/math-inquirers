@@ -213,9 +213,9 @@ def _():
 
 @check('L6U01-C01')
 def _():
-    t = seq(9, 7, 6)
+    t = seq(9, 6, 6)
     a, b = fit_rule([(k + 1, v) for k, v in enumerate(t)])
-    return s([a, b, term(9, 7, 100)])
+    return s([a, b, term(9, 6, 100)])
 
 
 @check('L6U01-C02')

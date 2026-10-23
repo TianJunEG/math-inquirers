@@ -8,7 +8,7 @@
  "holiday_lesson": 3,
  "goal": "I can order negative numbers and add and subtract by jumping along a number line. I can follow a variable that goes below 0 in code.",
  "learn": {
-  "intro": "Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. When a jump crosses 0, split it at 0.",
+  "intro": "Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. When a jump crosses 0, split it at 0. If it does not cross 0, just count the steps.",
   "example": {
    "problem": "A freezer thermometer reads −8 °C. The door is opened and it rises 5 degrees. Then the door is shut and it falls 9 degrees. What does it read now?",
    "figure": {
@@ -50,7 +50,8 @@
    "steps": [
     "Mark the start on the number line.",
     "Adding moves right. Subtracting moves left.",
-    "If the jump crosses 0, split it at 0.",
+    "If the jump crosses 0, split it at 0. If not, count the steps.",
+    "Count the steps in the direction of the jump: never turn round.",
     "Check by jumping back to the start."
    ]
   },

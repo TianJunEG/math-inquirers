@@ -82,17 +82,16 @@ T.append(item(U+'-T01', 'think', 4, 'A rectangle has a perimeter of 42 cm. Its l
   ans=A(104), hint='Length + width is half of the perimeter.',
   why='Half of the perimeter is length + width = 21 cm. The length is 5 more than the width, so 21 − 5 = 16 cm is 2 widths. The width is 8 cm and the length is 13 cm: 13 × 8 = 104 cm².',
   space={'rows': ['Working:', '', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Rectangles have an area of 36 cm² and whole-cm sides. A 2 by 18 rectangle is the same as an 18 by 2 rectangle.',
-  parts=[P('a', 'How many different rectangles are there? {b}', A(5)),
-         P('b', 'The greatest perimeter of these rectangles: {b} cm', A(74))],
-  hint='List the pairs of numbers that multiply to make 36.',
-  why='The pairs are 1 × 36, 2 × 18, 3 × 12, 4 × 9 and 6 × 6: 5 rectangles. The thinnest, 1 by 36, has the greatest perimeter: 2 × 37 = 74 cm.',
-  space={'rows': ['List:', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'A tray is 15 cm long and 9 cm wide. A square of side 3 cm is cut off each of the 4 corners.',
-  parts=[P('a', 'The area of the shape that is left: {b} cm²', A(99)),
-         P('b', 'Perimeter of the new shape: {b} cm', A(48))],
-  hint='For (b), slide each cut edge back to the corner.',
-  why='(a) 15 × 9 = 135 cm². The 4 squares are 4 × 9 = 36 cm². 135 − 36 = 99 cm². (b) Each cut keeps the perimeter the same, so it is 2 × (15 + 9) = 48 cm.',
+T.append(item(U+'-T02', 'think', 4, 'Three squares have areas of 4 cm², 9 cm² and 16 cm². They stand side by side on one line, as shown. Find the perimeter of the whole shape. {b} cm',
+  fig=POLY([L_([[0, 0], [9, 0], [9, 4], [5, 4], [5, 3], [2, 3], [2, 2], [0, 2]])], cell=14, width_mm=56, padx=14, pady=14),
+  ans=A(26), hint='Find the side of each square first.', figright=True,
+  why='The sides are 2, 3 and 4 cm. Push the steps out: the shape fits in a 9 cm by 4 cm rectangle with the same perimeter, 2 × (9 + 4) = 26 cm.',
+  space={'rows': ['Working:', '', '']}))
+T.append(item(U+'-T03', 'think', 4, 'Two identical rectangles are each 8 cm long and 3 cm wide. They are joined along a whole side to make one bigger rectangle.',
+  parts=[P('a', 'Joined along an 8 cm side, the perimeter is {b} cm', A(28)),
+         P('b', 'Joined along a 3 cm side, the perimeter is {b} cm', A(38))],
+  hint='Draw both. Find the length and width of each big rectangle.',
+  why='(a) The big rectangle is 8 cm by 6 cm: 2 × 14 = 28 cm. (b) The big rectangle is 16 cm by 3 cm: 2 × 19 = 38 cm.',
   space={'rows': ['Working:', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Three identical squares are joined in an L shape. The perimeter of the L shape is 40 cm. Find its area.\n{b} cm²',

@@ -398,12 +398,12 @@
   {
    "id": "L6U09-S08",
    "tier": "start",
-   "text": "The bar chart shows the number of stickers 6 pupils have.",
+   "text": "The bar chart shows the number of books 6 pupils read in a term.",
    "page": 3,
    "parts": [
     {
      "label": "a",
-     "text": "They have {b} stickers in all.",
+     "text": "They read {b} books in all.",
      "answer": {
       "value": [
        "72"
@@ -413,7 +413,7 @@
     },
     {
      "label": "b",
-     "text": "The mean is {b} stickers.",
+     "text": "The mean is {b} books.",
      "answer": {
       "value": [
        "12"
@@ -696,7 +696,7 @@
      }
     }
    ],
-   "hint": "Total = mean × how many. Then take away what you know.",
+   "hint": "How many minutes do all 3 laps take together?",
    "space": {
     "rows": [
      "Working:",
@@ -885,7 +885,7 @@
     "rowhead": true,
     "ch": 9
    },
-   "hint": "In each column, multiply the goals by the matches.",
+   "hint": "How many goals came from the matches with 2 goals?",
    "explanation": "Total goals: 0 × 2 + 1 × 4 + 2 × 3 + 3 × 1 = 13. Mean = 13 ÷ 10 = 1.3. In order, the 5th and 6th of the 10 values are both 1, so the median is 1.",
    "partsrow": true,
    "beyond": "A frequency table"

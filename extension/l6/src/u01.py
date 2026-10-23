@@ -6,7 +6,7 @@ I = []
 
 learn = {
     'intro': 'A rule for the nth term jumps straight to any term, such as the 100th. The difference tells you which times table to compare with. '
-             'A loop in code adds the difference again and again, so you can test your rule.',
+             'A loop in code adds the difference again and again, so you can test your rule. Code blocks are explained on page 27.',
     'example': {
         'problem': 'A sequence begins 9, 14, 19, 24, ... Find the rule that gives term n. Then find the 100th term.',
         'figure': grid([['n', '1', '2', '3', '4'], ['5 × n', '5', '10', '15', '20'], ['term', '9', '14', '19', '24']], [26, 18, 18, 18, 18], rowhead=True),
@@ -180,9 +180,9 @@ I.append(IT(U, 'G', 3, 5,
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,
-            'Find the rule for 9, 16, 23, 30, ... The rule is {b} × n + {b}. The 100th term is {b}.',
-            'The difference is 7. Each term is 2 more than 7, 14, 21, 28, so the rule is 7n + 2. The 100th term is 7 × 100 + 2 = 702.',
-            answer=A([7, 2, 702], '7, 2, 702')))
+            'Find the rule for 9, 15, 21, 27, ... The rule is {b} × n + {b}. The 100th term is {b}.',
+            'The difference is 6. Each term is 3 more than 6, 12, 18, 24, so the rule is 6n + 3. The 100th term is 6 × 100 + 3 = 603.',
+            answer=A([6, 3, 603], '6, 3, 603')))
 I.append(IT(U, 'C', 2, 6,
             'Is 125 a term of 7, 12, 17, 22, ...?  {circ:Yes|No}',
             'The rule is 5n + 2. 125 − 2 = 123 is not a multiple of 5. The terms end in 2 or 7, so 125 is not a term.',

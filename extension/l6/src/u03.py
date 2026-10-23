@@ -7,7 +7,7 @@ M = '−'     # the minus sign
 
 learn = {
     'intro': 'Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. '
-             'When a jump crosses 0, split it at 0.',
+             'When a jump crosses 0, split it at 0. If it does not cross 0, just count the steps.',
     'example': {
         'problem': f'A freezer thermometer reads {M}8 \u00b0C. The door is opened and it rises 5 degrees. Then the door is shut and it falls 9 degrees. What does it read now?',
         'figure': {'type': 'l6_nline', 'lo': -14, 'hi': 2, 'mm': 8, 'every': 2, 'marks': [{'at': -8, 'lab': 'start'}],
@@ -20,7 +20,8 @@ learn = {
     'howto': {'title': 'How to add and subtract with negative numbers',
               'steps': ['Mark the start on the number line.',
                         'Adding moves right. Subtracting moves left.',
-                        'If the jump crosses 0, split it at 0.',
+                        'If the jump crosses 0, split it at 0. If not, count the steps.',
+                        'Count the steps in the direction of the jump: never turn round.',
                         'Check by jumping back to the start.']},
     'try': IT(U, 'L', 1, 0, f'It is {M}3 °C. It falls 8 degrees. What is the temperature now? {{b}} °C',
               f'Falling moves left. From {M}3 jump left 8 steps: {M}3 + ({M}8) = {M}11. Check: from {M}11 jump right 8 to reach {M}3.',

@@ -676,7 +676,7 @@
      ""
     ]
    },
-   "explanation": "(a) 16 has 1, 2, 4, 8, 16: 5 factors, and no smaller number has 5. (b) 36 has 1, 2, 3, 4, 6, 9, 12, 18, 36: 9 factors. (c) 48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Numbers below 48 have fewer.",
+   "explanation": "(a) 16 has 1, 2, 4, 8, 16: 5 factors, and counting the factors of each smaller number finds none with 5. (b) 36 has 1, 2, 3, 4, 6, 9, 12, 18, 36: 9 factors. (c) 48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Counting the factors of each smaller number finds none with 10.",
    "partsrow": true
   },
   {
@@ -823,7 +823,7 @@
      "Factors of 72:"
     ]
    },
-   "explanation": "(a) 72: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72 is 12 factors. In 2 × 2 × 2 × 3 × 3 a factor uses 0 to 3 twos (4 choices) and 0 to 2 threes (3 choices): 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5: 3 × 3 × 2 = 18 factors. (c) 60 = 2 × 2 × 3 × 5 has 3 × 2 × 2 = 12 factors. Smaller numbers have fewer.",
+   "explanation": "(a) 72: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72 is 12 factors. In 2 × 2 × 2 × 3 × 3 a factor uses 0 to 3 twos (4 choices) and 0 to 2 threes (3 choices): 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5: 3 × 3 × 2 = 18 factors. (c) 60 = 2 × 2 × 3 × 5 has 3 × 2 × 2 = 12 factors. Counting the factors of each smaller number finds none with 12.",
    "beyond": "Counting factors"
   },
   {

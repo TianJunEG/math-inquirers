@@ -38,7 +38,7 @@ WHY.update({
  'L6U02-T02': "p = 7, 11 or 13 gives 42, 66 and 78 (p = 17 gives 102, too big). 42 has the factors 1, 2, 3, 6, 7, 14, 21, 42: 8 factors, and so do 66 and 78.",
  'L6U02-S05': "26 − 3 = 23, 26 − 7 = 19 and 26 − 13 = 13 are all prime. 26 − 2, 26 − 5, 26 − 11 and 26 − 17 are 24, 21, 15, 9: not prime. 3 ways.",
  'L6U02-G02': "Cross out multiples of 2, 3, 5 and 7 (11 × 11 = 121 is above 60, so stop at 7). Left: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59: 17 primes. The 10th is 29.",
- 'L6U10-S02': "91, 93, 95, 99, 105 and 111 are not prime (7 × 13, 3 × 31, 5 × 19, 9 × 11, 5 × 21, 3 × 37). The primes are 97, 101, 103, 107, 109. 330 = 3 × 11 × 2 × 5.",
+ 'L6U10-S02': "91, 93, 95, 99 and 105 are not prime (7 × 13, 3 × 31, 5 × 19, 9 × 11, 5 × 21), and the even numbers are not prime. The primes are 97, 101, 103, 107, 109. 330 = 2 × 3 × 5 × 11.",
  'L6U05-S03': 'Each new player plays all the earlier players. 8 players: 1 + 2 + ... + 7 = 28. 11 players: 1 + 2 + ... + 10 = 55. 66 = 1 + 2 + ... + 11, so there are 12 players.',
  'L6U02-S06': "(a) 72 is in the 4 times table (4 × 18): Yes. (b) 2 + 4 + 5 + 7 = 18, a multiple of 3: Yes. (c) 6 + 8 + 3 + 5 = 22, not a multiple of 9: No.",
  'L6U09-S06': "5, 7, 7, 9, 12: median 7, mode 7, mean 40 ÷ 5 = 8. 2, 4, 6, 8: the middle two are 4 and 6, so the median is 5.",

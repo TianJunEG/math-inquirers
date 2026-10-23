@@ -8,7 +8,7 @@
  "holiday_lesson": 1,
  "goal": "I can find the rule for the nth term of a pattern and use it for the 100th term. I can test my rule with a loop.",
  "learn": {
-  "intro": "A rule for the nth term jumps straight to any term, such as the 100th. The difference tells you which times table to compare with. A loop in code adds the difference again and again, so you can test your rule.",
+  "intro": "A rule for the nth term jumps straight to any term, such as the 100th. The difference tells you which times table to compare with. A loop in code adds the difference again and again, so you can test your rule. Code blocks are explained on page 27.",
   "example": {
    "problem": "A sequence begins 9, 14, 19, 24, ... Find the rule that gives term n. Then find the 100th term.",
    "figure": {
@@ -1026,17 +1026,17 @@
   {
    "id": "L6U01-C01",
    "tier": "quiz",
-   "text": "Find the rule for 9, 16, 23, 30, ... The rule is {b} × n + {b}. The 100th term is {b}.",
+   "text": "Find the rule for 9, 15, 21, 27, ... The rule is {b} × n + {b}. The 100th term is {b}.",
    "page": 6,
    "answer": {
     "value": [
-     "7",
-     "2",
-     "702"
+     "6",
+     "3",
+     "603"
     ],
-    "text": "7, 2, 702"
+    "text": "6, 3, 603"
    },
-   "explanation": "The difference is 7. Each term is 2 more than 7, 14, 21, 28, so the rule is 7n + 2. The 100th term is 7 × 100 + 2 = 702."
+   "explanation": "The difference is 6. Each term is 3 more than 6, 12, 18, 24, so the rule is 6n + 3. The 100th term is 6 × 100 + 3 = 603."
   },
   {
    "id": "L6U01-C02",

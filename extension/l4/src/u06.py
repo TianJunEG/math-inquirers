@@ -92,11 +92,13 @@ G.append(item(U+'-G01', 'go', 5, 'Four rays leave a point O on a straight line. 
   parts=[P('a', 'The smallest angle is {b}°', A(30)), P('b', 'The greatest angle is {b}°', A(60))],
   hint='The 4 angles add up to 180°. Take away the extra degrees first.',
   why='The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.'))
-G.append(item(U+'-G02', 'go', 5, 'A dancer faces N. She turns 90° clockwise and then 45° anticlockwise. She does these 2 turns again and again.',
-  parts=[P('a', 'After how many pairs of turns does she face N again? {b}', A(8)), P('b', 'After 21 pairs she faces {b}', A('SW'))],
-  hint='One pair of turns is 1 step of 45°. Write the directions.',
-  why='Each pair is 90° − 45° = 45°, 1 step clockwise: NE, E, SE, S, SW, W, NW, N. After 8 pairs she faces N. 21 = 2 × 8 + 5, so she faces the same way as after 5 pairs: SW.',
-  space={'rows': ['List:']}))
+G.append(item(U+'-G02', 'go', 5, 'A Ferris wheel has 12 equal seats, numbered 1 to 12 clockwise. Seat 1 is at the top.',
+  parts=[P('a', 'The seat at the bottom is Seat {b}', A(7)),
+         P('b', 'The smaller angle at the centre between Seat 2 and Seat 9: {b}°', A(150)),
+         P('c', 'The wheel turns 270° clockwise. Seat 1 is now where Seat {b} was', A(10))],
+  hint='12 seats share 360°. What is the angle between neighbours?',
+  why='(a) Seat 1 is opposite Seat 7. (b) Seats 2 to 9 are 7 steps of 30°, which is 210°. The smaller way is 360° − 210° = 150°. (c) 270° ÷ 30° = 9 steps, and 1 + 9 = Seat 10.',
+  space={'rows': ['Working:']}))
 G.append(item(U+'-G03', 'go', 5, 'A round pizza is cut from the centre into 4 slices. The 2nd slice is 2 times the 1st. The 3rd and 4th slices are each 3 times the 1st.',
   parts=[P('a', 'The smallest slice has an angle of {b}°', A(40)), P('b', 'The 4th slice has an angle of {b}°', A(120))],
   hint='Count the equal parts: 1 + 2 + 3 + 3. All round is 360°.',

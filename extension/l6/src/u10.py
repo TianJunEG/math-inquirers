@@ -96,10 +96,10 @@ I.append(IT(U, 'S', 11, 3,
             space={'rows': ['The order is {ll}']}))
 
 I.append(IT(U, 'S', 12, 3,
-            'A program runs: set n to 11, then repeat 25 times: change n by 6. Then it says n.',
-            f'n goes 11, 17, 23, ... and after 25 jumps it is 11 + 25 {X} 6 = 161. From the 1st term to the 26th term is 25 jumps, so 161 is the 26th term. The rule is 6n + 5 (6 {X} 26 + 5 = 161).',
-            parts=[P('a', 'The program says {b}.', [161]),
-                   P('b', 'That is term number {b} of 11, 17, 23, ...', [26]),
+            'A jar holds 11 coins. Every week 6 more coins are added, for 25 weeks.',
+            f'The jar holds 11, 17, 23, ... coins, and after 25 weeks it holds 11 + 25 {X} 6 = 161. From the 1st term to the 26th term is 25 steps, so 161 is the 26th term. The rule is 6n + 5 (6 {X} 26 + 5 = 161).',
+            parts=[P('a', 'After 25 weeks the jar holds {b} coins.', [161]),
+                   P('b', 'That is term number {b} of 11, 17, 23, ... (week 0 is term 1).', [26]),
                    P('c', f'The rule for the sequence is {{b}} {X} n + {{b}}.', [6, 5], '6, 5')],
             partsrow=True))
 I.append(IT(U, 'S', 13, 3,

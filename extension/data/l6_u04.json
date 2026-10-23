@@ -28,8 +28,7 @@
    "steps": [
     "The rule is OUT = 7n − 4, so 7n − 4 = 45.",
     "Undo the last step first. Undo take away 4 by adding 4: 45 + 4 = 49.",
-    "Then undo × 7 by dividing by 7: 49 ÷ 7 = 7.",
-    "Check forwards: 7 × 7 = 49, then 49 − 4 = 45."
+    "Then undo × 7 by dividing by 7: 49 ÷ 7 = 7. Check: 7 × 7 − 4 = 45."
    ],
    "answer": "IN was 7."
   },
@@ -57,18 +56,18 @@
   "facts": {
    "title": "Reading the code blocks",
    "lines": [
+    "green flag: the program starts",
     "set x to 5: put 5 in x",
     "change x by 2: add 2 to x",
-    "say x: show x",
     "ask ... and wait: gives answer",
     "repeat 5: do the inside 5 times",
     "repeat until <test>: stop if true",
-    "if <test> then / else: choose a part",
+    "if <test> then / else: if true, do the first part. If not, do the else part",
     "n mod d: remainder of n ÷ d",
     "pick random 1 to 6: like a die",
-    "item i of list: the i-th item",
-    "length of list: how many items",
-    "↻ turn: clockwise. Dashed box: blank"
+    "item i of list: the i-th item. length of list: how many",
+    "> greater than, < less than",
+    "↻ clockwise. Dashed box: blank"
    ]
   },
   "tight": true

@@ -113,8 +113,8 @@ I.append(IT(U, 'S', 11, 3,
 # ---------------------------------------------------------------- Think harder
 I.append(IT(U, 'T', 1, 4,
             'Find the smallest number with exactly this many factors.',
-            '(a) 16 has 1, 2, 4, 8, 16: 5 factors, and no smaller number has 5. (b) 36 has 1, 2, 3, 4, 6, 9, 12, 18, 36: 9 factors. '
-            '(c) 48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Numbers below 48 have fewer.',
+            '(a) 16 has 1, 2, 4, 8, 16: 5 factors, and counting the factors of each smaller number finds none with 5. (b) 36 has 1, 2, 3, 4, 6, 9, 12, 18, 36: 9 factors. '
+            '(c) 48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Counting the factors of each smaller number finds none with 10.',
             parts=[P('a', '5 factors:  {b}', [16]),
                    P('b', '9 factors:  {b}', [36]),
                    P('c', '10 factors:  {b}', [48])],
@@ -141,7 +141,7 @@ I.append(IT(U, 'T', 3, 4,
 I.append(IT(U, 'G', 1, 5,
             'Break a number into primes, then count its factors. Each factor uses some of the primes.',
             '(a) 72: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72 is 12 factors. In 2 × 2 × 2 × 3 × 3 a factor uses 0 to 3 twos (4 choices) and 0 to 2 threes (3 choices): 4 × 3 = 12. '
-            '(b) 180 = 2 × 2 × 3 × 3 × 5: 3 × 3 × 2 = 18 factors. (c) 60 = 2 × 2 × 3 × 5 has 3 × 2 × 2 = 12 factors. Smaller numbers have fewer.',
+            '(b) 180 = 2 × 2 × 3 × 3 × 5: 3 × 3 × 2 = 18 factors. (c) 60 = 2 × 2 × 3 × 5 has 3 × 2 × 2 = 12 factors. Counting the factors of each smaller number finds none with 12.',
             parts=[P('a', 'List the factors of 72, then count them: {b}', [12]),
                    P('b', '180 = 2 × 2 × 3 × 3 × 5 has {b} factors.', [18]),
                    P('c', 'The smallest number with exactly 12 factors is {b}.', [60])],

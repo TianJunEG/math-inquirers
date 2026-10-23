@@ -83,14 +83,14 @@ S.append(item(U+'-S13', 'start', 3, 'How many?',
   parts=[P('a', 'quarters in 5 wholes: {b}', A(20)), P('b', 'sixths in 3 wholes: {b}', A(18)), P('c', 'halves in 2 1/2: {b}', A(5))],
   why='(a) 5 × 4 = 20. (b) 3 × 6 = 18. (c) 2 wholes make 4 halves, and 1/2 makes 1 more half: 5 halves.'))
 
-T.append(item(U+'-T01', 'think', 4, 'A fraction is equal to 2/3. Its top and bottom numbers add up to 35. Find the fraction.\n{b}/{b}',
-  ans=A(14, 21, text='14/21'), hint='Write 2/3, 4/6, 6/9 and so on. Add the top and bottom each time.',
-  why='The fractions equal to 2/3 are 4/6, 6/9, 8/12 and so on. Their top and bottom add up to 10, 15, 20 and so on, in fives. 35 = 7 × 5, so the fraction is 2 × 7 over 3 × 7 = 14/21.',
-  space={'rows': ['List:', '', '']}))
-T.append(item(U+'-T02', 'think', 4, 'A team scored some goals. Ali scored 2/5 of them and Ben scored 1/4 of them. Kumar scored the other 21 goals. How many goals did the team score? {b}',
-  ans=A(60), hint='Which number do 5 and 4 both go into?',
-  why='2/5 = 8/20 and 1/4 = 5/20, so Ali and Ben scored 13/20. Kumar scored 7/20. 7 units = 21, so 1 unit = 3 and 20 units = 60 goals.',
-  space={'rows': ['Draw a bar model here.', '', '', '']}))
+T.append(item(U+'-T01', 'think', 4, 'n is a whole number. It makes 1/2 < n/9 < 5/6 true. Find the least and the greatest value of n.\nLeast {b}   Greatest {b}',
+  ans=A(5, 7, text='Least 5, greatest 7'), hint='Make all 3 fractions have the same bottom number. Try 18.',
+  why='Use 18 on the bottom: 1/2 = 9/18, n/9 = 2n/18 and 5/6 = 15/18. So 9 < 2n < 15 and n is 5, 6 or 7. The least is 5 and the greatest is 7.',
+  space={'rows': ['Working:', '', '']}))
+T.append(item(U+'-T02', 'think', 4, 'In one day Ali sleeps 1/3 of the 24 hours and is at school for 1/4 of the 24 hours. He plays for half of the hours that are left. How many hours does he play? {b} hours',
+  ans=A(5), hint='How many hours are left after sleep and school?',
+  why='1/3 of 24 = 8 hours and 1/4 of 24 = 6 hours. 24 − 8 − 6 = 10 hours are left. Half of 10 is 5 hours.',
+  space={'rows': ['Working:', '', '']}))
 T.append(item(U+'-T03', 'think', 4, 'In a class, 1/3 of the children are boys. 3/4 of the girls wear glasses. 18 girls wear glasses. How many children are in the class? {b}',
   ans=A(36), hint='The girls are 2/3 of the class. Find 3/4 of 2/3.',
   why='The girls are 2/3 of the class. 3/4 of 2/3 is 6/12 = 1/2 of the class. 1/2 of the class is 18, so the class has 2 × 18 = 36 children.',

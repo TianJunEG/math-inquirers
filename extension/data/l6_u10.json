@@ -140,7 +140,7 @@
      }
     }
    ],
-   "explanation": "91, 93, 95, 99, 105 and 111 are not prime (7 × 13, 3 × 31, 5 × 19, 9 × 11, 5 × 21, 3 × 37). The primes are 97, 101, 103, 107, 109. 330 = 3 × 11 × 2 × 5."
+   "explanation": "91, 93, 95, 99 and 105 are not prime (7 × 13, 3 × 31, 5 × 19, 9 × 11, 5 × 21), and the even numbers are not prime. The primes are 97, 101, 103, 107, 109. 330 = 2 × 3 × 5 × 11."
   },
   {
    "id": "L6U10-S03",
@@ -370,12 +370,12 @@
   {
    "id": "L6U10-S12",
    "tier": "start",
-   "text": "A program runs: set n to 11, then repeat 25 times: change n by 6. Then it says n.",
+   "text": "A jar holds 11 coins. Every week 6 more coins are added, for 25 weeks.",
    "page": 2,
    "parts": [
     {
      "label": "a",
-     "text": "The program says {b}.",
+     "text": "After 25 weeks the jar holds {b} coins.",
      "answer": {
       "value": [
        "161"
@@ -385,7 +385,7 @@
     },
     {
      "label": "b",
-     "text": "That is term number {b} of 11, 17, 23, ...",
+     "text": "That is term number {b} of 11, 17, 23, ... (week 0 is term 1).",
      "answer": {
       "value": [
        "26"
@@ -405,7 +405,7 @@
      }
     }
    ],
-   "explanation": "n goes 11, 17, 23, ... and after 25 jumps it is 11 + 25 × 6 = 161. From the 1st term to the 26th term is 25 jumps, so 161 is the 26th term. The rule is 6n + 5 (6 × 26 + 5 = 161).",
+   "explanation": "The jar holds 11, 17, 23, ... coins, and after 25 weeks it holds 11 + 25 × 6 = 161. From the 1st term to the 26th term is 25 steps, so 161 is the 26th term. The rule is 6n + 5 (6 × 26 + 5 = 161).",
    "partsrow": true
   },
   {

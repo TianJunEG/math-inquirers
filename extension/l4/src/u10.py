@@ -30,10 +30,10 @@ S.append(item(U+'-S01', 'start', 1, 'Two next-door numbers multiply to make 506.
   ans=A(22, 23, text='22 and 23'), partsrow=False,
   why='20 × 21 = 420 is too small. 25 × 26 = 650 is too big. 22 × 23 = 506. Use each try to decide the next one: 21 × 22 = 462 is too small, so go up.',
   space={'rows': ['The numbers are {b} and {b}']}))
-S.append(item(U+'-S02', 'start', 1, 'A farmer fills a 50 litre tank with a 3 litre bucket and an 8 litre can. He uses at least 1 of each. The tank is filled exactly.',
-  parts=[P('a', 'How many different ways can he do it? {b}', A(2)), P('b', 'The way with the fewest trips: {b} buckets and {b} cans', A(6, 4, text='6 buckets and 4 cans'))],
-  why='Try the cans: 1 can leaves 42 L = 14 buckets. 4 cans leave 18 L = 6 buckets. 2, 3, 5 and 6 cans leave amounts that are not in 3s. 2 ways. Fewest trips: 6 + 4 = 10.',
-  space={'rows': ['Cans, litres left, buckets: {ll}', 'My answer: {l}']}))
+S.append(item(U+'-S02', 'start', 1, 'Mei has one 5¢ coin, one 10¢ coin and one 50¢ coin. She picks some of the coins. She picks at least 1.',
+  parts=[P('a', 'How many different totals can she make? {b}', A(7)), P('b', 'How many of the totals are more than 50¢? {b}', A(3))],
+  why='The totals are 5, 10, 50, 15, 55, 60 and 65: 7 totals. The totals above 50 are 55, 60 and 65: 3 totals.',
+  space={'rows': ['Totals: {ll}']}))
 S.append(item(U+'-S03', 'start', 1, 'A concert sold 17 tickets. Some cost $6 and some cost $10. The takings were $134.',
   parts=[P('a', 'Suppose all 17 cost $6. They cost ${b}.', A(102)), P('b', 'That is ${b} too little.', A(32)),
          P('c', 'Each swap to a $10 ticket adds $4. There are {b} tickets at $10.', A(8))],
@@ -46,8 +46,8 @@ S.append(item(U+'-S04', 'start', 2, 'A shop has 13 bags of rice. Some bags are 3
 S.append(item(U+'-S05', 'start', 2, 'A magic pot triples the coins put into it. Then 8 coins are taken out. Then the pot halves the coins that are left. Now there are 20 coins. How many coins were put in at the start? {b}',
   fig={'type': 'l4_flow', 'items': [None, None, None, 20], 'ops': ['× 3', '− 8', '÷ 2'], 'width_mm': 130},
   ans=A(16), why='Work backwards. Undo halving: 20 × 2 = 40. Undo taking out 8: 40 + 8 = 48. Undo tripling: 48 ÷ 3 = 16.'))
-S.append(item(U+'-S06', 'start', 2, 'Kumar thinks of a number. He doubles it, adds 14 and then divides by 4. His answer is 10. What is his number? {b}',
-  ans=A(13), why='Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13. Check: 13 × 2 = 26, 26 + 14 = 40, 40 ÷ 4 = 10.',
+S.append(item(U+'-S06', 'start', 2, 'A film session ends at 3:20 pm. The film lasts 1 hour 45 minutes. The adverts before it last 15 minutes. The session starts at {b} pm.',
+  ans=A('1:20'), why='Work backwards. 3:20 − 1 h 45 min = 1:35. Then 1:35 − 15 min = 1:20. The session starts at 1:20 pm.',
   space={'rows': ['Working:', '']}))
 S.append(item(U+'-S07', 'start', 2, 'Ali, Ben, Mei and Siti each have a different pet: a cat, a dog, a fish or a rabbit. Ali\'s pet barks. Ben\'s pet has no fur. Mei\'s pet does not hop. Use the grid. Write ✓ for yes and ✗ for no.',
   fig={'type': 'l4_table', 'head': ['', 'cat', 'dog', 'fish', 'rabbit'], 'rows': [['Ali', '', '', '', ''], ['Ben', '', '', '', ''], ['Mei', '', '', '', ''], ['Siti', '', '', '', '']], 'widths': [1.1, 1, 1, 1, 1.2], 'cell_h': 40, 'font': 26, 'first_col_head': True, 'width_mm': 100},
@@ -67,10 +67,10 @@ S.append(item(U+'-S10', 'start', 3, 'Ravi has 9 coins. They are 20¢ coins and 5
 S.append(item(U+'-S11', 'start', 3, 'Three next-door numbers add up to 87. What are they? {b}, {b}, {b}',
   ans=A(28, 29, 30, text='28, 29, 30'), why='The middle number is the one in the middle of the 3, so 87 ÷ 3 = 29. The numbers are 28, 29 and 30. Check: 28 + 29 + 30 = 87.',
   space={'rows': ['Working:']}))
-S.append(item(U+'-S12', 'start', 3, 'Who am I? My 2 digits differ by 4. I am a multiple of 7. {b}',
-  ans=A(84), hint='List the 2-digit multiples of 7. Check the digits.',
-  why='The 2-digit multiples of 7 are 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91 and 98. Only 84 has digits that differ by 4.',
-  space={'rows': ['List:']}))
+S.append(item(U+'-S12', 'start', 3, 'A lock code has 3 digits. The middle digit is 0. The first digit is twice the last digit. The digits add up to 9. What is the code? {b}',
+  ans=A(603), hint='Try a last digit of 1, then 2, then 3. Add the digits.',
+  why='The last digit and twice the last digit make 3 × last = 9, so the last digit is 3 and the first is 6. The code is 603.',
+  space={'rows': ['Try:']}))
 
 T.append(item(U+'-T01', 'think', 4, 'A shop sells pens in boxes of 2 and boxes of 5. Ali buys 12 boxes with 45 pens in all.',
   parts=[P('a', 'The number of boxes of 5 is {b}', A(7)), P('b', 'The number of boxes of 2 is {b}', A(5))], partsrow=True,
