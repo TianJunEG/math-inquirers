@@ -127,3 +127,6 @@ The November beta (holiday program) workbook and Inquirer Kit are printed and po
 
 ## 23 Oct 2026: holiday Lesson 10 name (owner)
 Keep "Puzzle Day" as the Lesson 10 name for holiday Levels 1 to 4. Levels 5 and 6 keep their own names (Level 5 "Challenge Day", Level 6 "Showcase Challenge"). Published deck link names for Levels 2 to 4 still read "Challenge Day" (cosmetic; slides inside say "Puzzle Day").
+
+## 23 Oct 2026: delivery address retention = 30 days after delivery (owner)
+Owner chose 30 days (assistant's recommendation) instead of 90 days after the program: delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later (or sooner on request once the parcel has arrived and no resend is needed). The printer and courier are asked not to keep the details after delivery. To be reflected in privacy.html (retention table and consent line), the sign-up consent wording (website/lp_build.py / mi_signup.html) and the dispatch list notes. Still open: who pays printing and postage (default: included in the S$250), the parcel policy (draft: report within 7 days, one free resend), the register-by date.
