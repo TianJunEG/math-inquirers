@@ -150,7 +150,7 @@ I.append(IT(U, 'G', 1, 5,
                    P('c', 'A fare of 49 dollars is a ride of {b} km.', [16])],
             hint='How many km apart are 2 km and 5 km? How much more is the fare?', figright=True, partsrow=True))
 I.append(IT(U, 'G', 2, 5,
-            'A program spins an 8-part spinner (1 to 8) 800 times and counts the numbers greater than 6.',
+            'A spinner has 8 parts numbered 1 to 8. A program spins it 800 times and counts the numbers greater than 6.',
             f'The numbers greater than 6 are 7 and 8, which is 2 results out of 8, so 1/4. 1/4 {X} 800 = 200. The numbers greater than 4 are 5, 6, 7 and 8, which is 4 out of 8, so the count would be 1/2 {X} 800 = 400. '
             f'A real run is near these numbers, not exactly equal.',
             fig=code([['var', 'set count to (0)'], ['ctl', 'repeat (800)', [['ctl', 'if <(pick random 1 to 8) {gt} (6)> then', [['var', 'change count by (1)']]]]], ['look', 'say (count)']], fs=15),
