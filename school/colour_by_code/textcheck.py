@@ -446,6 +446,12 @@ def tally_marks(m, c):
 def dots_each(m, c):
     if not meta_is(c, "groups"): return NOT_ME
     return c["meta"]["per"]
+@R(r"Share (\d+) by (\d+)\. Each: " + B)
+def share_short(m, c): return exact_div(I(m[1]), I(m[2]))
+@R(r"(\d+) in (\d+) equal groups\. Each: " + B)
+def equal_groups_short(m, c): return exact_div(I(m[1]), I(m[2]))
+@R(r"(\d+) pens, (\d+) in a box\. Boxes: " + B)
+def pens_boxes(m, c): return exact_div(I(m[1]), I(m[2]))
 ORD = r"(\d+)(?:st|nd|rd|th)"
 @R(r"From the (left|right), the black one is " + B + "th")
 def queue_pos(m, c):

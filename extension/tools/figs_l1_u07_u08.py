@@ -121,8 +121,10 @@ def loops(spec, w=None):
     ax, bx, cy = 190, 330, 175
     reg = spec.get('regions') or {}
     P = [f'<rect x="6" y="6" width="{W - 12}" height="{H - 12}" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="{SW}"/>']
-    P.append(f'<circle cx="{ax}" cy="{cy}" r="{r}" fill="{SKY}" fill-opacity="0.55" stroke="{NAVY}" stroke-width="{SW + 0.6}"/>')
-    P.append(f'<circle cx="{bx}" cy="{cy}" r="{r}" fill="{SOFT}" fill-opacity="0.55" stroke="{NAVY}" stroke-width="{SW + 0.6}" stroke-dasharray="14 7"/>')
+    P.append(f'<circle cx="{ax}" cy="{cy}" r="{r}" fill="{SKY}" fill-opacity="0.55" stroke="none"/>')
+    P.append(f'<circle cx="{bx}" cy="{cy}" r="{r}" fill="{SOFT}" fill-opacity="0.55" stroke="none"/>')
+    P.append(f'<circle cx="{ax}" cy="{cy}" r="{r}" fill="none" stroke="{NAVY}" stroke-width="{SW + 0.6}"/>')   # outlines on top of the fills (no grey line in print)
+    P.append(f'<circle cx="{bx}" cy="{cy}" r="{r}" fill="none" stroke="{NAVY}" stroke-width="{SW + 0.6}" stroke-dasharray="14 7"/>')
     P.append(_t(ax - 40, 36, spec['a'], 27))
     P.append(_t(bx + 40, 36, spec['b'], 27))
 

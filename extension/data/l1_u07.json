@@ -30,7 +30,7 @@
     "A shape with 4 corners has 4 straight sides.",
     "Check each shape. A square has 4 corners. A rectangle has 4 corners.",
     "There are 2 squares and 1 rectangle.",
-    "The triangles, the circle and the hexagon do not have 4 corners."
+    "The other shapes do not have 4 corners."
    ],
    "answer": "3 shapes."
   },
@@ -387,7 +387,7 @@
    "id": "L1U07-S07",
    "tier": "start",
    "page": 3,
-   "text": "A square of paper is cut along the dashed line.",
+   "text": "A square is cut along the dashed line.",
    "figure": {
     "type": "draw",
     "w": 170,
@@ -455,7 +455,7 @@
    "id": "L1U07-S08",
    "tier": "start",
    "page": 3,
-   "text": "Small squares are joined side to side to make Shape A and Shape B.",
+   "text": "Squares join to make Shape A and Shape B.",
    "figure": {
     "type": "draw",
     "w": 350,
@@ -799,7 +799,7 @@
      }
     }
    ],
-   "explanation": "(a) The line cuts the square into 2 triangles. (b) Each square is cut into 2 triangles. 3 squares make 3 x 2 = 6 triangles. The lines are side by side, so there are no bigger triangles."
+   "explanation": "(a) The line cuts the square into 2 triangles. (b) Each square is cut into 2 triangles. 3 squares make 3 x 2 = 6 triangles. The lines are side by side, so there are no larger triangles."
   },
   {
    "id": "L1U07-T01",
@@ -974,8 +974,8 @@
      }
     }
    ],
-   "hint": "Do 2 lines that meet make a bigger triangle?",
-   "explanation": "There are 6 small triangles. The first 2 lines meet at the bottom and make a bigger triangle with the top of the strip. The last 2 lines meet at the top and make another. 6 + 2 = 8 triangles."
+   "hint": "Do 2 lines that meet make a larger triangle?",
+   "explanation": "There are 6 small triangles. The first 2 lines meet at the bottom and make a larger triangle with the top of the strip. The last 2 lines meet at the top and make another. 6 + 2 = 8 triangles."
   },
   {
    "id": "L1U07-T03",
@@ -1208,7 +1208,7 @@
     }
    ],
    "hint": "Slide a 2 by 2 square along. How many places can it sit?",
-   "explanation": "There are 5 + 5 = 10 small squares. (a) A square made of 4 small squares can sit in 4 places along the grid. (b) 10 + 4 = 14. No bigger square fits, because the grid is only 2 high."
+   "explanation": "There are 5 + 5 = 10 small squares. (a) A square made of 4 small squares can sit in 4 places along the grid. (b) 10 + 4 = 14. No larger square fits, because the grid is only 2 high."
   },
   {
    "id": "L1U07-C01",
@@ -1314,7 +1314,7 @@
     ],
     "text": "4"
    },
-   "explanation": "Each square is cut into 2 triangles. 2 + 2 = 4. The 2 lines are side by side, so there is no bigger triangle."
+   "explanation": "Each square is cut into 2 triangles. 2 + 2 = 4. The 2 lines are side by side, so there is no larger triangle."
   },
   {
    "id": "L1U07-C04",

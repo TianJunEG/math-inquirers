@@ -48,7 +48,7 @@ def assign(names, things, ok):
 @check('L1U08-L01')
 def _():
     sol = only(assign(['Mei', 'Ben', 'Kumar'], ['ball', 'kite', 'drum'], lambda a: a['Ben'] == 'drum' and a['Mei'] != 'ball'))
-    return [n for n, v in sol.items() if v == 'ball']
+    return {'': [n for n, v in sol.items() if v == 'ball']}
 
 
 @check('L1U08-S01')
@@ -213,4 +213,4 @@ def _():
 @check('L1U08-C04')
 def _():
     o = only(orders(['Ali', 'Mei', 'Ravi'], lambda p: p['Ali'] < p['Mei'] < p['Ravi']))   # taller first
-    return ['True' if o.index('Ravi') < o.index('Ali') else 'False']
+    return ['Yes' if o.index('Ravi') < o.index('Ali') else 'No']

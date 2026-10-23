@@ -229,7 +229,7 @@ def placement_block(L):
         s += '<li>If it was too easy (9 or 10 out of 10), your child may also try the diagnostic one level up (<a href="%s">Ages %s</a>).</li>' % (nxt['path'], nxt['ages'])
     s += '</ul><p>You have the final say. You can change the level before lesson 1 at no cost, and the price is the same at every level.'
     if not prev:
-        s += ' Ages 6-8 is the lowest level: if your child is a weaker learner there, they start with the free taster and a tutor chat.'
+        s += ' Ages 6-8 is the lowest level: if your child finds it hard, they start with the free taster and a tutor chat.'
     s += '</p>'
     return s
 
@@ -249,6 +249,7 @@ def page(L, lessons, sch):
 <meta name="description" content="%(desc)s">
 <style>%(css)s</style>
 <div class="wrap">
+<a class="skip" href="#top">Skip to main content</a>
 <header class="bar"><a class="brand" href="/" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Site"><a class="tab" href="/#program" style="text-decoration:none">Program</a><a class="tab" href="/#classes" style="text-decoration:none">Classes</a><a class="tab" href="/#levels" style="text-decoration:none" aria-current="true">Levels</a><a class="tab" href="/#price" style="text-decoration:none">Price</a><a class="tab" href="/#faq" style="text-decoration:none">FAQ</a><a class="tab" href="/shop/" style="text-decoration:none" data-shoplink>Shop<span class="cartn" data-cartn hidden></span></a><a class="btn yel sm" href="/?level=%(n)d#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
 <main id="top">
 <p class="crumbs"><a href="/">Home</a> · <a href="/#levels">Levels</a> · Ages %(ages)s</p>

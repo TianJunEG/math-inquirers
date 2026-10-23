@@ -425,12 +425,15 @@ def _share1(tier):
         q = SEM(["How many dots", f"in each box? {BOX}"], lambda v, t_=a: v == t_, str(a), art=art, form="dots in each box")
         q.extra = lambda ans, art=art: art.meta["per"] == ans
         return q
-    return [share, group, into, sharer, most, gart]
+    def share_s(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"Share {n} by {d}.", f"Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="share, short"))
+    def into_s(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} in {d} equal", f"groups. Each: {BOX}"], lambda v, t_=q: v == t_, str(q), form="equal groups, short"))
+    def group_s(a, r): return mk(a, r, lambda q, d, n, r: SEM([f"{n} pens, {d} in", f"a box. Boxes: {BOX}"], lambda v, t_=q: v == t_, str(q), form="boxes, short"))
+    return [share, group, into, sharer, most, gart, share_s, into_s, group_s]
 
 # ------------------------------------------------------------------ picture graphs (one face is one child, pet or thing), read and compare
 P1_GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
 def _pgraph(tier):
-    PG = dict(pitch=3.9, font=3.6)
+    PG = dict(pitch=3.6, font=3.5)
     def pick(r, n):
         labs = list(_ch(r, P1_GRAPH_SETS)); r.shuffle(labs); return labs[:n]
     def G(rows): return A.picgraph(rows, 1, **PG)
@@ -526,7 +529,7 @@ def build_banks():
     B["share"] = Bank("share", "Sharing", "Sharing and grouping within 20", "Share or group equally. Find the answer in the key. Colour the part with that colour.",
         {1: T([2, 3, 4, 5, 6], range(0, 21), _share1(1)), 2: T([4, 5, 6, 7, 8], range(0, 21), _share1(2))})
     B["pgraph"] = Bank("pgraph", "Picture Graphs", "Picture graphs", "Read the picture graph. Find the answer in the key. Colour the part with that colour.",
-        {1: T([2, 3, 4, 5, 6], range(0, 21), _pgraph(1)), 2: T([3, 4, 5, 6, 7], range(0, 21), _pgraph(2))})
+        {1: T([1, 2, 3, 4, 5], range(0, 21), _pgraph(1)), 2: T([4, 5, 6, 7, 8], range(0, 21), _pgraph(2))})
     B["ordinal"] = Bank("ordinal", "Ordinal Numbers", "Ordinal numbers: first to tenth", "Write the missing number. Find it in the key. Colour the part with that colour.",
         {1: T([4, 5, 6, 7, 8], range(0, 11), _ord(1), lambda v: ordw(v)), 2: T([6, 7, 8, 9, 10], range(0, 11), _ord(2), lambda v: ordw(v))})
     return B

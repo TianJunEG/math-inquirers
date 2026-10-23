@@ -174,6 +174,7 @@ def render(products, warns=()):
 <meta name="description" content="%(desc)s">
 <style>%(css)s</style>
 <div class="wrap">
+<a class="skip" href="#top">Skip to main content</a>
 <header class="bar"><a class="brand" href="/" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Site">%(nav)s</nav></header>
 <main id="top">
 <p class="crumbs"><a href="/">Home</a> · Shop</p>

@@ -2130,7 +2130,7 @@
        1
       ],
       "label": "A",
-      "size": 110
+      "size": 80
      },
      {
       "type": "shapes2d",
@@ -2140,7 +2140,7 @@
        3
       ],
       "label": "B",
-      "size": 110
+      "size": 80
      },
      {
       "type": "shapes2d",
@@ -2150,7 +2150,7 @@
        2
       ],
       "label": "C",
-      "size": 110
+      "size": 80
      }
     ]
    },
@@ -2196,7 +2196,7 @@
      "shade": [
       2
      ],
-     "size": 120
+     "size": 80
     }
    },
    {
@@ -2236,14 +2236,14 @@
       "shape": "square",
       "parts": 2,
       "label": "square",
-      "size": 120
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "circle",
       "parts": 4,
       "label": "circle",
-      "size": 120
+      "size": 80
      }
     ]
    },
@@ -2284,14 +2284,14 @@
       "shape": "circle",
       "parts": 2,
       "label": "circle",
-      "size": 110
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "square",
       "parts": 4,
       "label": "square",
-      "size": 110
+      "size": 80
      }
     ]
    },
@@ -2332,28 +2332,28 @@
       "shape": "circle",
       "parts": 1,
       "label": "1",
-      "size": 88
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "half_circle",
       "parts": 1,
       "label": "2",
-      "size": 88
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "quarter_circle",
       "parts": 1,
       "label": "3",
-      "size": 88
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "square",
       "parts": 1,
       "label": "4",
-      "size": 88
+      "size": 80
      }
     ]
    },
@@ -2394,14 +2394,14 @@
       "shape": "square",
       "parts": 1,
       "label": "A",
-      "size": 105
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "square",
       "parts": 1,
       "label": "B",
-      "size": 105
+      "size": 80
      }
     ]
    }
@@ -2441,21 +2441,21 @@
       "shape": "square",
       "parts": 1,
       "label": "A",
-      "size": 105
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "square",
       "parts": 1,
       "label": "B",
-      "size": 105
+      "size": 80
      },
      {
       "type": "shapes2d",
       "shape": "square",
       "parts": 1,
       "label": "C",
-      "size": 105
+      "size": 80
      }
     ]
    },
@@ -2825,21 +2825,21 @@
      "shape": "square",
      "parts": 1,
      "label": "A",
-     "size": 95
+     "size": 80
     },
     {
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
      "label": "B",
-     "size": 95
+     "size": 80
     },
     {
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
      "label": "C",
-     "size": 95
+     "size": 80
     }
    ],
    "draw": false,

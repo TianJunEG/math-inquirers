@@ -257,3 +257,393 @@ Cold joining: yes. The Remember warm-ups carry place value to 10 000, the times 
 - **Needs.** Quest block (section 6), N3.
 - **Safe to miss?** Yes for the body (Quest sits here and is the part to protect).
 
+---
+
+## Term 2: Test it (lessons 11 to 20)
+
+Cold joining: yes. The Remember warm-ups carry a 3-digit by 1-digit product, a division with a remainder, equivalent fractions from strips, and decimals as tenths and hundredths. A child who missed Term 1 is caught by these. **Safest to skip or make up: lesson 19** (the added lesson; a stand-alone application of lesson 18); hardest to miss: 13 (bars carry lessons 15 and 20), 14, 15 and 17. Lesson 20 hosts the Quest.
+
+### Lesson 11. The Area Model of Multiplying (T2.1)
+
+- **Big idea.** Break a product into rectangles, and let a letter stand for a missing digit.
+- **Strand.** MOE P4 multiplication algorithm up to 3 digits by 2 digits (Four Operations 3.1, p. 37); 2 digits by 4 digits is beyond P4 and stays out. Contest tag (tutor only): letter-digit sums (SASMO Section B, 8 of the 10 Grade 2, 3 and 4 papers read), owner decision 7 (the plan holds them, the holiday course does not).
+- **Objective.** Multiply by an area model and by the column method with an estimate; find missing digits in sums; solve letter-digit sums by the ones column first. Think harder: spot an error in a worked product; a first letter sum; a unit total with a product. Go further: letter sums with two carries and with two answers; digit-swap and last-digit patterns.
+- **Remember (6 min).** (1) 6 x 70 and 40 x 30. (2) Split 47 into 40 and 7. (3) Add 3 numbers in a column with a carry. All re-taught on a grid.
+- **Start here (6).** (1) 47 x 36 on an area grid: 1 200 + 240 + 210 + 42 = 1 692 (W1.1). (2) 238 x 24 = 5 712 in a column. (3) Estimate 39 x 52 (about 2 000), exact 2 028 (W1.1). (4) Missing digit, no carry: 3 [ ] 4 + 2 5 3 = 5 8 7; the digit is 3 (W1.2). (5) Missing digits with carries: 4 [ ] 7 + [ ] 6 8 = 7 0 5; the digits are 3 and 2 (W1.3). (6) 24 boxes of 135 crayons: 3 240.
+- **Think harder (4).** (1) A child works 35 x 46 with partial products 1 200, 180, 200 and 36, and gets 1 616; which product is wrong and what is the answer? 5 x 6 = 30, so 1 610 (W1.4). (2) **Letter sum (new type, hint allowed).** Different letters stand for different digits and no number starts with 0. AB + BC = ADA. Work from the ones column. A = 1, B = 8, C = 3, D = 0 (18 + 83 = 101, unique, W1.6). (3) **EQ.** 15 adult tickets and 24 child tickets cost $822. A child ticket is $13. How much is an adult ticket? $34 (W1.5). (4) **LOG.** [ ] 8 x 3 [ ] = 1 728 with the missing digits 4 and 6 (48 x 36, W1.7).
+- **Go further (3).** G1 **Beyond (named): "Two Answers".** ABC + ACD = BEBA has exactly two answers, 619 + 697 = 1 316 and 719 + 798 = 1 517 (W1.8). Level note: contest-style; the column addition is Primary 3. G2 ABC + CBA = BBAB has one answer, 318 + 813 = 1 131, with two carries (W1.9). G3 (a) A 2-digit number plus the number with its digits swapped is always 11 times the digit sum (W1.10); (b) the product of 25 threes ends in 3, because the last digits cycle 3, 9, 7, 1 (W1.11).
+- **Non-routine.** EQ T, LOG T, EXP G (the swap claim). The plan's "EXP G, which step of a worked product is wrong" is moved to Think harder (1) because the error-spotting is the lesson's check.
+- **Holiday overlap: LOW.** The holiday course has no letter sum (owner decision 7) and no 3-digit by 2-digit work. H3 C5 and C6 (2 345 x 3, 4 236 / 6) are routine items not to reuse. Verdict: New. The Level 2 and 3 pre-flights use "AA + BB = CAC", "AB + AC = BCA" and the draft's BB + CB = CDA; Level 4 uses none of these.
+- **Numbers.** 3 digits by 2 digits (to 999 x 99); letter sums with 2 or 3 digits and at most two carries.
+- **Home materials.** Pencil, squared paper.
+- **Kit.** Reuse K1 (max used 6 as trial digits).
+- **Figures.** `area_model` (F2), `column` multiply and letter sums (F1).
+- **Misconceptions.** Dropping the zero in the second partial product (shifting); treating two letters as one digit; a leading zero.
+- **Needs.** F1, F2, N7 (digit-by-digit answers).
+- **Safe to miss?** The Think harder and Go further letter sums yes (the Quest cave in lesson 20 is optional); the area model is repeated in the Remember of lesson 18.
+
+### Lesson 12. Remainder Riddles (T2.2)
+
+- **Big idea.** What is left over tells you where you are in a cycle.
+- **Strand.** MOE P4 division with remainders (Four Operations 3.2, p. 37) and multiples (2.4). Cycles and days of the week are enrichment. Contest tag: remainders and cycles (19-19, 19-4).
+- **Objective.** Find the nth item of a repeating pattern by the remainder; find a day of the week after n days; find a number from two remainder conditions. Think harder: 100 days later; two conditions; the nth letter. Go further: remainders one short of the divisor; a calendar year; three conditions.
+- **Remember (6 min).** (1) 53 divided by 6 with counters. (2) The days of the week in order. (3) Skip-count in 5s to 50.
+- **Start here (6).** (1) A bead pattern red, blue, blue, green, yellow repeats. What colour is the 20th bead? Yellow (W2.1). (2) The 47th bead: blue (W2.1). (3) Today is Friday: what day is it 10 days later? Monday. (4) 53 / 6 = 8 remainder 5. (5) The 3rd day of the month is a Monday: what day is the 24th? (6) The remainder when 100 is divided by 7: 2.
+- **Think harder (4).** (1) **CTX.** It is Tuesday. What day will it be 100 days from now? Thursday (W2.2). (2) **LOG.** A number leaves remainder 2 when divided by 5 and remainder 3 when divided by 4. It is between 30 and 50. What is it? 47 (W2.3). (3) **PAT.** The letters of SINGAPORE are written again and again. Which letter is the 100th? S (W2.4). (4) The 1st of a month is a Wednesday: what day is the 29th? Wednesday.
+- **Go further (3).** G1 **Beyond (named): "One Short Every Time".** A number leaves remainder 3 when divided by 4, 4 when divided by 5 and 5 when divided by 6. The smallest is 59, then every 60 (W2.5). Level note: contest-style (a common multiple minus 1). G2 **CTX.** 1 January 2027 is a Friday. What day is 1 January 2028? Saturday, because 2027 has 365 days, which is 52 weeks and 1 day (W2.6). G3 **LOG.** A number under 100 leaves 1 when divided by 3, 2 when divided by 4 and 3 when divided by 5: 58 (W2.7).
+- **Non-routine.** PAT T, LOG T, CTX G.
+- **Holiday overlap: HIGH (H1, H6).** H1 had eggs with 1 left over in 4s and 5s (41), the number 61 with 1 left for 2 to 6, the lockers; H6 had a robot turning 45 degrees (8 turns, 30 turns). Do not reuse 41, 61, "4s and 5s with 1 over" or the 30th turn. Second visit with new numbers and the calendar context.
+- **Numbers.** Cycles of 3 to 9; days to 400; numbers under 200.
+- **Home materials.** Pencil; a calendar page (in the book).
+- **Kit.** None.
+- **Figures.** `calendar` (exists), `seq` / bead row (`objects`, exists).
+- **Misconceptions.** Counting the starting day as day 1 of the cycle; a remainder of 0 read as "the first item" rather than the last.
+- **Needs.** none beyond the calendar.
+- **Safe to miss?** Yes, fairly (lesson 30 and lesson 38 revisit cycles).
+
+### Lesson 13. Bar Model Builder I (T2.3)
+
+- **Big idea.** A picture of the story shows what is the same, what is more, and how many units there are.
+- **Strand.** MOE P4 whole numbers and the problem-solving process (representing, pp. 13 to 14); the bar model is not named in the syllabus (Singapore schools teach it). The papers' spine: 214 of 807 non-routine items are unit chains (`p4_school_paper_patterns.md` section 0).
+- **Objective.** Draw bars for "more than", "times as many", total and difference; find one unit; solve sum-and-difference. Think harder: unit chains with a total (twice as many, more than); sum and difference. Go further: make equal by transfers; a chain of three; "times as many" after a change.
+- **Remember (6 min).** (1) 38 + 45. (2) One bar and its half. (3) 4 x 15 as four equal bars.
+- **Start here (6).** (1) Ali has 38 stickers. Mei has 45 more than Ali. How many does Mei have, and how many altogether? 83 and 121 (W3.1). (2) The total is 154 and A has 28 more than B: B 63, A 91 (W3.1). (3) Ben has 3 times as many marbles as Kai. Together they have 248: Kai 62, Ben 186 (W3.1). (4) Mina has 52 and Ben 28: how many must Mina give for them to be equal? 12, and each then has 40. (5) A bar graph with no scale: 5 squares are 35 pupils; how many pupils is 1 square? 7. (6) Two prices and a difference.
+- **Think harder (4).** (1) **EQ.** 3 small jars and 2 big jars hold 322 sweets, and a big jar holds twice as many as a small jar. How many sweets in a big jar? 92 (W3.2). (2) **EQ.** A sofa and 3 cushions cost $480. The sofa costs $120 more than a cushion. Find the cost of a cushion: $90, so the sofa is $210 (W3.3). (3) **CMP.** The sum of two numbers is 190 and their difference is 46. Find them: 118 and 72 (W3.4). (4) One more unit chain with money.
+- **Go further (3).** G1 **Beyond (named): "Same in the End".** Three friends have $840 altogether. Ali spends $60, Bee earns $45 and Cy gives away $15, and then all three have the same. How much did each have at first? $330, $225, $285 (W3.5). Level note: unit equations are Primary 5 (p. 41); the bar picture is Primary 4. G2 **CMP.** 4A, 4B and 4C collected 1 245 cans. 4A collected 55 more than 4B and 4C collected 40 fewer than 4B: 465, 410, 370 (W3.6). G3 **EQ.** Mia has 4 times as many cards as Raj. After Mia gives Raj 36 cards, she has twice as many as he has. How many did each have at first? Raj 54 and Mia 216 (W3.7).
+- **Non-routine.** EQ T x2, CMP T, CMP G, EQ G. This is the plan's one dedicated model lesson; the papers need more (lessons 11, 15, 17, 18, 27 to 29, 37 carry EQ items).
+- **Holiday overlap: HIGH (H3, H5, H9, H10).** Do not reuse: 2 340 red and blue beads (4 times), 1 236 plates (3 times), Ali $56 more than Ben with $300, Ravi 3 times Siti gives 20, the pen $0.85 more than a pencil, Ali Ben Siti sharing $9.20, Class 4A and 4B boys and girls, four teams scoring 100, a cake $3 more than a drink with $40, Ben's uncle 4 times as old. Second visit: new contexts, one new structure (after a change).
+- **Numbers.** Totals to 1 500; multipliers 2 to 5; money to $900.
+- **Home materials.** Pencil, a ruler, squared paper.
+- **Kit.** None cut; the book has bar-drawing grids.
+- **Figures.** `bar_model` v2 (F4: up to 16 units, 4 bars, unknown labels, before and after).
+- **Misconceptions.** Unequal bars for equal quantities; taking the difference as the total; halving the total when the bars are in a 1 : 3 ratio; forgetting the extra part in "$120 more".
+- **Needs.** F4.
+- **Safe to miss?** No: lessons 15, 17, 18, 20, 27, 28, 29 and 37 lean on the bar.
+
+### Lesson 14. Fractions with Different Names (T2.4)
+
+- **Big idea.** Make the denominators match, then add or subtract the parts.
+- **Strand.** MOE P4 add and subtract fractions with denominators not above 12 and not more than two different denominators (Fractions 3.1, p. 37).
+- **Objective.** Add and subtract like and related fractions on strips; add and subtract thirds and quarters by a common denominator; fill gaps in sums. Think harder: unlike fractions; a missing fraction; which two add to 1; complete a model. Go further: three unit fractions that make 1; two fractions from their sum and difference; three fractions in a story.
+- **Remember (6 min).** (1) 1/2 and 2/4 on the wall. (2) 12 divided by 3 and by 4. (3) 3/5 + 1/5.
+- **Start here (6).** (1) 1/2 + 1/4 = 3/4 on strips (W4.1). (2) 2/3 + 1/6 = 5/6 (W4.1). (3) 5/6 - 1/3 = 1/2 (W4.1). (4) 7/8 - 3/4 = 1/8 (W4.1). (5) 5/12 + 1/3 = 3/4 (W4.1). (6) Aisha ate 1/3 of a cake and Ben ate 1/6. What fraction did they eat? 1/2. Related denominators only here.
+- **Think harder (4).** (1) 2/3 + 3/4 = 17/12 = 1 5/12 (W4.2). (2) **Fill the gap.** 5/6 - [ ] = 1/4: 7/12 (W4.2). (3) **LIST.** Which two of 1/3, 2/5, 3/4, 1/4, 3/5 and 7/12 add to 1? 3/4 and 1/4; 2/5 and 3/5 (W4.3). (4) **DIAG.** A half-drawn model for 3/4 - 1/6: complete and label it: 7/12 (W4.7).
+- **Go further (3).** G1 **Beyond (named): "One in Three Pieces".** Which three different unit fractions with denominators up to 12 make 1? 1/2 + 1/3 + 1/6, the only way (W4.4). Level note: unit-fraction sums are secondary school; the arithmetic is Primary 4. G2 Two fractions add to 7/12 and differ by 1/12: 1/3 and 1/4 (W4.5). G3 **MULTI.** Ben read 1/3 of a book on Monday, 1/4 on Tuesday and 1/6 on Wednesday. He has 15 pages left. How many pages are in the book? 60 (W4.6). Three denominators is beyond the Primary 4 limit of two.
+- **Non-routine.** LIST T, DIAG T, MULTI G.
+- **Holiday overlap: HIGH (H4).** H4 had the "two fractions taken, the rest is a number" structure three times (C2 $25, C5 10 marbles, C7 5 sweets, C9 45 pages), 3/4 as 12/16, the tank. Do not reuse $25, 10 green, 5 left, 45 pages. G3 is the same structure with three fractions and three denominators: second visit with a twist.
+- **Numbers.** Denominators to 12; answers to 1 7/12.
+- **Home materials.** The K2 wall strips.
+- **Kit.** Reuse K2 (max used 4 strips at once).
+- **Figures.** `fraction` (F3).
+- **Misconceptions.** Adding the denominators; keeping the old denominator after converting; subtracting the smaller from the larger part; forgetting to simplify.
+- **Needs.** F3, K2.
+- **Safe to miss?** No: lessons 15, 16 and 18 lean on adding fractions.
+
+### Lesson 15. What Is Left? (T2.5)
+
+- **Big idea.** A fraction of what remains is a fraction of a smaller whole, and a part tells you the whole.
+- **Strand.** MOE P4 fraction as part of a set (Fractions 2.1, p. 37); "whole from a part" and "of the rest" are word-problem types the syllabus does not name (on level).
+- **Objective.** Find a fraction of a set; find a whole from a part; find a fraction of the rest; work backwards through fraction steps. Think harder: tank problems; fraction of the rest then a difference; a backwards story. Go further: repeated fractions; a three-step chain.
+- **Remember (6 min).** (1) 1/4 of 20 with counters. (2) 3/5 of 20. (3) A bar split into 5 equal parts with 2 labelled.
+- **Start here (6).** (1) 3/8 of 72 = 27 (W5.1). (2) A shop sold 2/5 of 45 books; 27 are left (W5.1). (3) One bar: 3/4 of the class are 21 pupils; how many in the class? 28. (4) 1/3 of the ribbon is 8 m; the whole is 24 m. (5) A bar with the rest. (6) A story with a remainder as a fraction.
+- **Think harder (4).** (1) **BACK.** A tank is 3/7 full. 84 more litres fill it. What is the capacity? 147 l (W5.1). (2) **MULTI.** A shop had 480 books. It sold 3/8 on Monday and 2/5 of the rest on Tuesday. How many more were sold on Monday than on Tuesday? 60 (W5.2). (3) **BACK.** Aisha spent 1/3 of her money on a book and $8 on pens. She had $24 left. How much had she at first? $48 (W5.6). (4) A fraction story with a bar and a table.
+- **Go further (3).** G1 **Beyond (named): "Every Day a Third".** Each day Mei eats 1/3 of the cake that is left. After 3 days 40 pieces are left. How many pieces were there? 135 (W5.4). Level note: repeated fractions foreshadow powers (secondary). G2 **BACK.** A farmer sold 1/3 of his mangoes on Monday, 1/4 of the rest on Tuesday and 20 on Wednesday, leaving 40. How many mangoes at first? 120 (W5.3). G3 **BACK.** Wei gave 1/4 of his cards to Ali and 1/3 of the rest to Ben, and had 36 left. How many at first? 72 (W5.5).
+- **Non-routine.** BACK T, MULTI T, BACK G. SASMO 19-25 (the Lego pieces) is prepared by G2 and G3; those two are original contexts.
+- **Holiday overlap: HIGH (H4, H3, H10).** Do not reuse 40 beads with 3/8 blue, "2/5 of a number is 16", Siti's 150-page book (2/5 and half the rest, 45 left), a tank 3/8 to 3/4, half and $6 and half and $9 (48), half and 2 more stickers (32). Second visit.
+- **Numbers.** Denominators 2 to 12; totals to 500.
+- **Home materials.** Pencil, squared paper.
+- **Kit.** None cut (bar grids are printed).
+- **Figures.** `bar_model` (F4), `fraction` strip (F3).
+- **Misconceptions.** Taking the fraction of the whole instead of the rest; adding the fractions when one is "of the rest"; answering the wrong end of a backwards chain.
+- **Needs.** F3, F4.
+- **Safe to miss?** No: lesson 27 (4.6) leans on backwards chains.
+
+### Lesson 16. Mixed Numbers on the Line (T2.6)
+
+- **Big idea.** Count in pieces past the whole, and a number line shows where the wholes are.
+- **Strand.** MOE P4 mixed numbers and improper fractions and their relationship (Fractions 1.1, p. 37). Adding and subtracting mixed numbers is **Primary 5** (Fractions, Four Operations 2.1, p. 41) and is labelled a preview.
+- **Objective.** Write an improper fraction as a mixed number and back; place mixed numbers on a line; (preview) add and subtract mixed numbers with related denominators. Think harder: the preview with borrowing; steps along a line; find the start. Go further: a gap between two mixed numbers; a magic square of halves; counting mixed numbers.
+- **Remember (6 min).** (1) 7/4 as one whole and 3 quarters on a strip. (2) 3 wholes as thirds. (3) Count in quarters from 0 to 2.
+- **Start here (6).** (1) Place 2 3/4 on a line marked in quarters. (2) 17/5 = 3 2/5 (W6.1). (3) 4 1/3 = 13/3 (W6.1). (4) Jumps along a line: 1 3/4 + 1/2 (2 1/4). (5) Which is greater, 9/4 or 2 1/3? (6) Mixed numbers in a measurement story (2 1/2 m of ribbon).
+- **Think harder (4).** (1) **Preview.** 2 5/8 + 1 3/4 = 4 3/8 (W6.1). (2) 5 1/4 - 2 3/4 = 2 1/2, borrowing a whole (W6.1). (3) **PAT.** A number line starts at 1 1/2 and jumps 3/4 each time. The 5th number is 4 1/2 (W6.2). (4) **BACK.** After adding 2 3/4 and taking away 1 1/2, the answer is 6 1/4. What was the start? 5 (W6.5).
+- **Go further (3).** G1 **Beyond (named): "Half-Step Magic Square".** Fill the missing cells of a 3 by 3 square using 1/2, 1, 1 1/2 up to 4 1/2 so that every row, column and diagonal totals 7 1/2 (W6.3, W6.4). Level note: contest-style; mixed-number addition is Primary 5. G2 **CMP.** What is the gap between 7 1/6 and 3 2/3? 3 1/2 (W6.2). G3 How many mixed numbers with denominator 8 lie strictly between 2 3/8 and 3 1/4? 6 (W6.6).
+- **Non-routine.** PAT T, CMP G, BACK T.
+- **Holiday overlap: HIGH (H4).** H4 converted 11 slices into thirds (3 2/3), 11 quarters (2 3/4), 7/4 against 1 5/8, 4 3/4 m ribbon in quarters. Do not reuse 11 slices, 7/4, 4 3/4 m. Second visit; the addition and subtraction of mixed numbers is new.
+- **Numbers.** Denominators 2 to 8 and 12; sums to 8.
+- **Home materials.** The K2 wall strips; the number-line page.
+- **Kit.** Reuse K2 (max used 8).
+- **Figures.** `number_line` with mixed labels (F6), `fraction` (F3).
+- **Misconceptions.** Writing 3 2/5 as 3 + 2 + 5; borrowing 1 as 1/4 instead of 4/4; placing 2 3/4 at 2.3.
+- **Needs.** F3, F6, K2.
+- **Safe to miss?** Yes for the preview; the conversion is repeated in lesson 25.
+
+### Lesson 17. Decimals in Money and Measures (T2.7)
+
+- **Big idea.** The same decimal does two jobs, money and measure, and the cheapest buy is found by the cost of one.
+- **Strand.** MOE P4 add and subtract decimals to 2 places (Decimals 2.1, p. 38); money in dollars and cents; converting m, kg and l to cm, g and ml **in decimal form is Primary 5** (Decimals 1.2, p. 41) and is the beyond item.
+- **Objective.** Add and subtract money and measures; find the cost of one and compare packs; solve a decimal bar model; draw a mass diagram. Think harder: best buy; pack prices; a decimal total with a difference; a mass diagram with units. Go further: conversions; whole packs only; pay by the hour; litres from jugs and bottles.
+- **Remember (6 min).** (1) $3.45 as 345 cents. (2) 4.75 + 2.9 aligned on the decimal point. (3) 1 000 g in 1 kg.
+- **Start here (6).** (1) $3.45 + $2.80 = $6.25 (W7.1). (2) $10 - $6.35 = $3.65 (W7.1). (3) 4.75 kg + 2.9 kg = 7.65 kg (W7.1). (4) 5 l - 2.36 l = 2.64 l (W7.1). (5) Which is greater, $2.09 or $2.9? (6) A shopping story with three items and change.
+- **Think harder (4).** (1) **CTX best buy.** Juice is sold 6 for $4.80, 4 for $3.40 and 10 for $7.50. Which is the best buy? 10 for $7.50 at $0.75 each against $0.80 and $0.85 (W7.2). (2) **CTX pack prices.** Notebooks are 3 for $4.50 and rulers 4 for $3.20. Zoe buys the same number of each, as few as she can. How much? 12 of each, $27.60 (W7.3). (3) **EQ.** 2 books and a pen cost $23.30. A book costs $5.20 more than the pen. Find the price of the pen: $4.30, and the book is $9.50 (W7.5). (4) **DIAG.** A bag of rice and 3 identical tins weigh 4.2 kg. The rice is 3 times as heavy as one tin. How heavy is the rice? 2.1 kg (W7.4).
+- **Go further (3).** G1 **Beyond (named): "Unit Switch".** 2.35 m is 235 cm, 7.5 kg is 7 500 g, 3.04 l is 3 040 ml, and 4 kg 70 g is 4.07 kg (W7.6). Level note: Primary 5 (p. 41). G2 **CTX.** Cans are sold in packs of 6 for $5.40 and 8 for $6.80. Kai needs exactly 24 cans and buys whole packs only. The only ways are 4 packs of 6 or 3 packs of 8; the cheaper is $20.40 (W7.7, W7.8). G3 **CTX.** Lena works from 8:20 am to 5:05 pm at $12 for every hour, break time included. How much does she earn? 8.75 hours, $105 (W7.9). **DIAG** option: a 3.6 l jug fills 4 cups exactly; 6 cups and 2 jugs hold 12.6 l (W7.10).
+- **Non-routine.** CTX T x2, EQ T, DIAG T, CTX G x2.
+- **Holiday overlap: HIGH (H5).** Do not reuse $3.47, 3 pens at $1.25, 4 notebooks and $2.60 change, the pen $0.85 more than a pencil, $9.20 shared three ways, Mei 1.38 m and Ben 0.15 m taller, the jug 1.45 kg and 0.85 kg, 3 apples and a pear 0.95 kg. Second visit; best buy, conversion and hourly pay are new.
+- **Numbers.** Amounts to $30; masses to 10 kg; 2 decimal places.
+- **Home materials.** Pencil; no play money.
+- **Kit.** None cut.
+- **Figures.** `bar_model` with money labels (F4), `scale_dial` / mass diagram (F18).
+- **Misconceptions.** Aligning the right-hand digits; $0.75 recorded as 75; the cheapest pack taken as the one with the lowest price; hours and minutes subtracted as decimals.
+- **Needs.** F4, F18, N7.
+- **Safe to miss?** Not the first half; the beyond conversions are repeated in lesson 30.
+
+### Lesson 18. Decimals Times and Shares (T2.8)
+
+- **Big idea.** A decimal times a whole number is a product of tenths or hundredths, and a share of a decimal is a decimal.
+- **Strand.** MOE P4 multiply and divide decimals (to 2 places) by a 1-digit whole number (Decimals 2.2, p. 38). A decimal times a decimal is **Primary 5** (the beyond item).
+- **Objective.** Multiply and divide decimals by a whole number; check by estimating; solve a decimal unit chain. Think harder: share a decimal then a fraction. Go further: a decimal unit chain with a change; a missing digit.
+- **Remember (6 min).** (1) 3 x 245 = 735. (2) 72 divided by 4. (3) $9.60 as 960 cents.
+- **Start here (6).** (1) 3 x $2.45 = $7.35 (W8.1). (2) 4 x 0.75 = 3 (W8.1). (3) 7.2 / 4 = 1.8 (W8.1). (4) $9.60 shared by 4 is $2.40 (W8.1). (5) Estimate 6 x 3.9 (about 24), exact 23.4. (6) A story with a price per item.
+- **Think harder (4).** (1) **MULTI.** Mrs Tan has 6.4 kg of flour. She uses 1/4 of it and packs the rest into 3 equal bags. How much flour in a bag? 1.6 kg used, 4.8 kg left, 1.6 kg in each bag (W8.2). (2) A share of money with a fraction. (3) A decimal division with a zero in the quotient. (4) A unit chain with whole numbers.
+- **Go further (3).** G1 **Beyond (named): "A Tenth of a Tenth".** 0.3 x 0.4 = 0.12, shown on a hundred grid (W8.4). Level note: decimal by decimal is Primary 5. G2 **EQ.** Mr Ong has 3.6 l more paint than Mr Pang. He uses 5.4 l. Then Mr Pang has twice as much as Mr Ong has left. How much paint did Mr Ong have at first? 7.2 l (and Mr Pang 3.6 l, W8.3). G3 **LIST.** 3 . [ ] 6 x 7 = 2 [ ] . 1 2: the digits are 1 and 2 (3.16 x 7 = 22.12, W8.5).
+- **Non-routine.** MULTI T, EQ G, LIST G. The plan's EX-EQ-4 is replaced (the Term 4 version has different numbers).
+- **Holiday overlap: MED (H5).** Do not reuse the 4.8 m ribbon in 6 pieces, $9.20 shared, $1.25 each, 3.69 digit cards. Second visit.
+- **Numbers.** Decimals to 2 places times 2 to 9; shares by 2 to 9.
+- **Home materials.** Pencil, squared paper.
+- **Kit.** None cut; hundred grids printed.
+- **Figures.** `grid_100` (F20), `bar_model` (F4), `column` (F1).
+- **Misconceptions.** Dropping the decimal point; 4 x 0.75 = 0.300; carrying the point wrongly in a share; thinking "share" always divides by the larger number.
+- **Needs.** F1, F4, F20.
+- **Safe to miss?** No: lesson 19 leans on division of decimals.
+
+### Lesson 19. When Division Doesn't Come Out Even (T2.9, added)
+
+- **Big idea.** Keep dividing, then round sensibly for the purpose.
+- **Strand.** MOE P4 a whole number divided by a whole number with a decimal quotient (Decimals 3.2) and rounding answers to a stated accuracy (3.3), both p. 38.
+- **Objective.** Divide a whole number by a whole number to a decimal quotient; round to the nearest 10 cents, 1 decimal place or whole number; decide when to round up. Think harder: bounds of a rounded number; round up for buses and packs. Go further: a never-ending decimal; does the answer make sense?
+- **Remember (6 min).** (1) 7 divided by 4 with coins. (2) 0.5 as 50 cents. (3) Round 6.28 to 1 decimal place.
+- **Start here (6).** (1) 7 / 4 = 1.75 (W9.1). (2) 9 / 5 = 1.8 (W9.1). (3) 3 / 8 = 0.375 (W9.1). (4) Share $7 among 3 and round to the nearest cent: $2.33 (W9.1). (5) 2 / 3 to 2 decimal places: 0.67 (W9.1). (6) Round 9 / 8 = 1.125 to 1 decimal place: 1.1 (W9.6).
+- **Think harder (4).** (1) **LIST.** A number with 2 decimal places rounds to 6.3 to the nearest tenth. What are the smallest and the greatest? 6.25 and 6.34 (W9.2). (2) **CTX.** 1 000 pupils go on a trip in buses of 45. How many buses? 22.2 means 23 buses (W9.3). (3) Round $2.33 to the nearest 10 cents ($2.30) and to the nearest dollar ($2). (4) A pack story that needs rounding up.
+- **Go further (3).** G1 **Beyond (named): "Never-Ending Decimals".** 1/7 = 0.142857 142857 ...; the digits repeat in blocks of 6, so the 20th digit is 4 (W9.4). Level note: recurring decimals are secondary school. G2 Two different shares can round to the same price: $5 shared by 3 and $5.02 shared by 3 are both $1.67 to the nearest cent (W9.5). Why does 5 / 3 never come out exactly? G3 **POSE.** Rani says 100 / 8 = 12.5 buses so 12 buses are enough. Is she right? No: 13 buses.
+- **Non-routine.** LIST T, CTX T, POSE G. Verified: W9.1 to W9.5.
+- **Holiday overlap: LOW (H5 S2, S10, C4 round to the nearest whole number and 1 decimal place).** New topic (division with a decimal quotient). Do not reuse 9.50 and 10.49 or 7.35 and 7.44.
+- **Numbers.** Dividends to 1 000, divisors to 9 and 45; quotients to 3 decimal places.
+- **Home materials.** Pencil.
+- **Kit.** None.
+- **Figures.** `column` long division (F1).
+- **Misconceptions.** Stopping at the remainder; rounding 22.2 buses down; writing 1.75 as 1.7.
+- **Needs.** F1.
+- **Safe to miss?** Yes, the safest of Term 2 (the plan's added lesson).
+
+### Lesson 20. Challenge Day 2, with Mi's Challenge Quest (T2.10)
+
+- **Big idea.** Choose a model: a bar, a fraction strip or a riddle table.
+- **Strand.** Heuristics (p. 13). The Quest follows (section 6).
+- **Objective.** Solve a bar-model story, a fraction-of-the-rest chain and a decimal riddle. The Quest carries a gate for each of lessons 11 to 19.
+- **Remember (6 min).** (1) A bar with 3 units. (2) 1/4 of 120. (3) 1.55 and 1.64 to the nearest tenth.
+- **Start here (5).** (1) A scarf costs $13 more than a hat, and together they cost $59: hat $23, scarf $36 (W10.4). (2) A bar-model story with a total. (3) A one-step fraction of a quantity. (4) A decimal sum. (5) A division with a remainder.
+- **Think harder (3).** (1) **MULTI.** 180 sweets: 1/3 are eaten and 1/4 of the rest are given away. How many are left? 90 (Q2.5). (2) **EQ.** Dev has 5 times as many cards as Eva. After Dev gives Eva 24 cards they have the same number. How many did Dev have? 60 (and Eva 12, W10.5). (3) A fraction story with a table.
+- **Go further (3).** G1 **Beyond (named): "Two Clues, Two Answers".** I have 2 decimal places and I am between 1 and 2. I round to 1.6 to the nearest tenth and my digits add to 11. Find all the numbers: 1.55 and 1.64 (W10.6). G2 **CHAL.** Make up a decimal riddle that has exactly two answers. G3 **MULTI.** A mixed contest set.
+- **Non-routine.** MULTI T, EQ T, CHAL G. The plan's check is replaced by the Quest.
+- **Holiday overlap: HIGH (H10).** Same as lesson 10; a new context is the rule.
+- **Numbers.** Totals to 300; decimals to 2 places.
+- **Home materials.** Pencil; a quest partner; the Quest Log stays closed in Book 4.
+- **Kit.** None.
+- **Figures.** `bar_model` (F4).
+- **Needs.** Quest block (section 6), N3.
+- **Safe to miss?** The body yes; the Quest is the part to protect.
+
+---
+
+## Term 3: Explain why (lessons 21 to 30)
+
+Cold joining: yes. The Remember warm-ups carry naming a cube and a cuboid, the area of a rectangle by counting squares, and a line of symmetry on a folded page. Angles are met once (lesson 22), so lesson 22 does not assume an earlier angle lesson. A child who has done only the June holiday course (H1 to H10) arrives here at lesson 21 and has met every topic as a puzzle. **Safest to skip or make up: lesson 29** (the added lesson); then lessons 25 and 27; hardest to miss: 22, 23 and 24. Lesson 30 hosts the Quest. This is the term where the plan's lessons collide hardest with the holiday course (H6, H7, H8): section 13.
+
+### Lesson 21. Solids and Their Nets (T3.1)
+
+- **Big idea.** Build, then flatten: a net shows every face of a solid once.
+- **Strand.** MOE P4 nets of cube, cuboid, cone, cylinder, prism and pyramid; identify the solid a net makes; 2D drawings of solids (Geometry 4.1 to 4.4, p. 39).
+- **Objective.** Name faces, edges and vertices; match a solid to its net; decide which net folds; use faces, edges and vertices in a table. Think harder: take one square away to leave a cube net; a table for prisms and pyramids; which nets fold. Go further: Euler's check; opposite faces on a lettered net; a cuboid's net as a count of squares.
+- **Remember (6 min).** (1) A cube has 6 faces; count them on a real box. (2) A square, a rectangle and a triangle. (3) Fold a paper rectangle into a tube.
+- **Start here (6).** (1) Name the solid and count its faces, edges and vertices: a cuboid has 6, 12 and 8. (2) A triangular prism has 5, 9 and 6 (X1.4). (3) Match four solids to four nets. (4) Which solid has a net of 4 triangles and 1 square? A square pyramid. (5) The net of a cylinder has 2 circles and 1 rectangle. (6) How many unit squares does the net of a 4 by 2 by 1 cuboid cover? 28 (X1.6).
+- **Think harder (4).** (1) **EXP.** Seven squares are drawn in a cross-like shape. Cross out one square so that the rest folds into a cube. Find two different squares you could cross out (exactly two work, X1.3). (2) **TAB.** Complete a table of faces, edges and vertices for a triangular prism, a pentagonal prism, a square pyramid and a hexagonal pyramid: 5, 9, 6; 7, 15, 10; 5, 8, 5; 7, 12, 7 (X1.4, X1.5). (3) Which of four 6-square shapes is a net of a cube? (The 11 nets among the 35 six-square shapes were counted, X1.1; the author fixes the four shapes and checks them with the fold function.) (4) A net of a triangular prism: which drawing has 2 triangles and 3 rectangles in the right places?
+- **Go further (3).** G1 **Beyond (named): "Euler's Check".** For every solid in the table, faces + vertices - edges = 2 (X1.4). Level note: secondary school. G2 **DIAG.** A net of a cube has six squares lettered A to F in a staircase (A and B side by side, then C and D one row down, then E and F one more). Which letter is opposite A, B and C? D, E and F (X1.2). Letters are used so the answer is not "the faces add to 7". G3 The net of a 5 by 3 by 2 cuboid covers how many unit squares? 62 (X1.6).
+- **Non-routine.** EXP T, TAB T, DIAG G.
+- **Holiday overlap: HIGH (H8).** H8 did the 11 nets of a cube, "five in a row cannot fold", a 2 by 3 block, opposite faces on a dice (sum 7), glued and stacked dice, the open box (8 of 12), a 3 by 2 by 1 cuboid (22 squares). Do not reuse any, and the plan's T "which six-square shapes fold into a cube (find all)" and G "opposite faces on a dice net" are replaced. Verdict: Change.
+- **Numbers.** Solids up to 12 edges and 7 faces in the table.
+- **Home materials.** Pencil, glue stick or tape (grown-up), the cut nets.
+- **Kit (K4 nets).** 4 nets on 2 pages: cube (the lettered staircase), cuboid 4 by 2 by 1, triangular prism, square pyramid, each with tabs. Supplied 4; max used 4. Cut 4. Net edges scale with the page (94.3 percent), which does not matter for folding.
+- **Figures.** `solid` and `net` (F9).
+- **Misconceptions.** Counting tabs as faces; counting only visible edges; thinking any 6 squares fold; opposite faces taken as neighbours.
+- **Needs.** F9, K4.
+- **Safe to miss?** Fairly safe; lesson 27 uses the vocabulary.
+
+### Lesson 22. Angle Detectives (T3.2)
+
+- **Big idea.** An angle measures turning, and a protractor and a compass are two ways to read a turn.
+- **Strand.** MOE P4 angles: notation, measure in degrees, draw an angle of given size (Geometry 1.1 to 1.3, p. 39). Missing angles in a fan, on a line and around a point are **Primary 5** (Angles 1.1 to 1.4, p. 42) and are labelled previews. Compass turns are enrichment (the syllabus names no compass or turns outcome).
+- **Objective.** Name angles with ∠ABC; estimate, measure and draw angles to the nearest 5 degrees; find missing angles (preview); follow and reverse turns on an 8-point compass. Think harder: draw 125 degrees; missing angles; reverse a turn; three turns in a row. Go further: triangle total; a turn that ends facing a stated way; angles in a ratio.
+- **Remember (6 min).** (1) The corner of a page is a right angle, 90 degrees. (2) A half turn is 180 degrees. (3) The four main compass points (re-taught with a card).
+- **Start here (6).** (1) Write the name of an angle with three letters, ∠ABC. (2) Estimate, then measure, three angles (about 35, 110 and 65 degrees). (3) Draw ∠PQR = 65 degrees with a ruler and a protractor. (4) Circle the acute and the obtuse angles. (5) Ali faces east and turns a quarter turn clockwise: south. (6) How many degrees is 3 right angles? 270.
+- **Think harder (4).** (1) Draw an angle of 125 degrees with one ray pointing left. (2) **GEO (preview).** Missing angles: 90 - (35 + 28) = 27 in a right angle; 180 - (65 + 45) = 70 on a line; 360 - (130 + 95 + 60) = 75 around a point (X2.5). (3) **BACK.** After turning 225 degrees anticlockwise Ravi faces south-east. Which way did he face at first? North (X2.2). (4) **GEO.** Ben faces north-west, turns 135 degrees clockwise and then 90 degrees anticlockwise. Which way does he face? North (X2.1). A longer chain: starting north, turn 225 degrees clockwise, 90 degrees anticlockwise, 45 degrees clockwise: south (X2.8).
+- **Go further (3).** G1 **Beyond (named): "Triangle Total".** Measure the three angles of any drawn triangle and add them: about 180 degrees every time, for example 50 + 60 + 70 (X2.6). Level note: a Primary 5 and secondary idea. G2 **BACK/LOG.** Kai faces east and turns 135 degrees clockwise. Then he turns anticlockwise to face north. How many degrees is his second turn? 225 (X2.9). G3 Angle ABC is 48 degrees. Ray BD makes angle ABD three times angle DBC. Find both: 36 and 12 (X2.10).
+- **Non-routine.** BACK T, GEO T, LOG G (replaced by a turn chain). The plan's "two clock hands" (LOG G) is H6.
+- **Holiday overlap: HIGH, nearly total (H6).** H6 did robot turns, clock angles at o'clock, half past and ten past times, 6 degrees a minute, 30 degrees a gap, the compass with SE and 225, mirror times (2 and 10), fan angles (25, 40 and 25), a square corner cut (64 and 26, 4 times, 15 30 45), two squares overlapping (160). Do not reuse any. The plan's "turns of the minute hand" and "two clock hands" are H6 and are dropped. This lesson is built on the protractor skill (measure and draw), notation and new compass chains. Verdict: Change.
+- **Numbers.** Angles to 180 degrees in steps of 5; turns in multiples of 45 degrees.
+- **Home materials.** Protractor, ruler, pencil. No protractor? tell the tutor; the lesson then uses the compass card and the right-angle checker.
+- **Kit (K5 compass).** A compass rose card and a loose arrow: 2 pieces. Max used 2. Cut 2. Reuse K3 from lesson 6.
+- **Figures.** `angle`, `compass`, `fan` (F7). A drawn protractor is shown only in worked examples, never to be measured on paper.
+- **Misconceptions.** Reading the wrong scale of the protractor; a 5-degree error counted as wrong; turning clockwise when told anticlockwise.
+- **Needs.** F7, K5.
+- **Safe to miss?** No: this is the only angle lesson of the year.
+
+### Lesson 23. Rectangle Rules (T3.3)
+
+- **Big idea.** Fix one thing and vary another: the same area can have different perimeters.
+- **Strand.** MOE P4 find a missing side of a rectangle from its area or perimeter; the side of a square from its area or perimeter (Area and Perimeter, p. 39).
+- **Objective.** Find a missing side; list rectangles of a given area; compare perimeters; use identical squares in a row. Think harder: identical squares from a perimeter; all rectangles of an area; a table at fixed perimeter. Go further: area and perimeter given; an area with a length difference.
+- **Remember (6 min).** (1) Area of a 6 by 5 rectangle. (2) Perimeter of a 6 by 5 rectangle. (3) 8 x 8.
+- **Start here (6).** (1) Area 84 cm2 and width 7 cm: length 12 cm (X3.1). (2) Perimeter 54 cm and length 16 cm: width 11 cm (X3.1). (3) A square has area 64 cm2: side 8 cm (X3.1). (4) A square has perimeter 36 cm: side 9 cm (X3.1). (5) List the rectangles with whole-cm sides and area 18 cm2: 1 by 18, 2 by 9, 3 by 6. (6) Their perimeters: 38, 22, 18.
+- **Think harder (4).** (1) **GEO.** 7 identical squares in a row make a rectangle of perimeter 144 cm. Find its length and area. 63 cm and 567 cm2 (X3.2). (2) **LIST.** List all rectangles with whole-cm sides and area 72 cm2. Which has the smallest perimeter? 8 by 9, 34 cm (X3.3). (3) A table of the rectangles with perimeter 36 cm (1 by 17 to 9 by 9) and their areas: 17, 32, 45, 56, 65, 72, 77, 80, 81 (X3.5). (4) A rectangle is twice as long as it is wide and its perimeter is 54 cm: 9 cm by 18 cm (X3.8).
+- **Go further (3).** G1 **Beyond (named): "Squares Win".** For perimeter 36 cm the area is 81 minus a square number: 81, 80, 77, 72, ... (V: 81 - 0, 81 - 1, 81 - 4, 81 - 9), so the square is the largest (X3.5). Level note: an algebra identity, secondary school. G2 **GC.** A rectangle has area 135 cm2 and perimeter 48 cm. Find its sides: 9 cm and 15 cm (X3.4). G3 A rectangle is 4 cm longer than it is wide and has area 117 cm2. Find its perimeter: 44 cm (X3.6, X3.7).
+- **Non-routine.** GEO T, LIST T, GC G.
+- **Holiday overlap: HIGH, nearly total (H7).** H7 did 12 tiles, all rectangles of area 30, perimeter 20 (largest 25), area 40 and perimeter 26, area 36 (six rectangles, 24 smallest), 8 tiles (12 to 18), area 56 and length 8, 24 m of fencing with and without a wall. Do not reuse these numbers. The plan's S, T, G (area 24, smallest perimeter, perimeter 20) are H7's explore, S1 and S2. Verdict: Change.
+- **Numbers.** Sides 1 to 72 cm, areas to 600 cm2.
+- **Home materials.** Pencil, squared paper (in the book).
+- **Kit.** None (squared paper pages).
+- **Figures.** `shape2d` with side labels (F8).
+- **Misconceptions.** Adding length and width and calling it the area; halving the perimeter and forgetting to subtract the other side; a rectangle 9 by 8 counted different from 8 by 9.
+- **Needs.** F8.
+- **Safe to miss?** No: lessons 24 and 29 lean on it.
+
+### Lesson 24. Frames and Paths (T3.4)
+
+- **Big idea.** Subtract the hole: a frame is the big minus the small.
+- **Strand.** MOE P4 area and perimeter of composite figures made of rectangles and squares (Area and Perimeter, p. 39).
+- **Objective.** Find the area of an L-shape two ways; the perimeter by pushing the steps out; the area of a frame or a path; joined and folded identical pieces. Think harder: three identical rectangles; a border; a folded paper. Go further: border counts; a square folded twice.
+- **Remember (6 min).** (1) 12 x 9 and 5 x 4. (2) 108 - 20. (3) Perimeter of a 12 by 9 rectangle.
+- **Start here (6).** (1) An L-shape is a 12 cm by 9 cm rectangle with a 5 cm by 4 cm corner cut out. Its area is 88 cm2 (X4.1). (2) The same area by adding two rectangles. (3) Its perimeter is the same as the rectangle: 42 cm (X4.1). (4) A photo 20 cm by 15 cm has a frame 3 cm wide. The frame's area is 246 cm2 (X4.1). (5) A path 1 m wide goes round a lawn 12 m by 8 m: the path's area is 44 m2 (X4.7). (6) Find a missing length in a composite figure.
+- **Think harder (4).** (1) **GEO.** Three identical rectangles are placed side by side, long sides touching, to form a square. Each rectangle has perimeter 40 cm. Find the rectangle and the square's perimeter and area: 15 cm by 5 cm; 60 cm; 225 cm2 (X4.2, X4.3). (2) **CTX.** A pool 18 m by 10 m has a path 3 m wide all round. Find the area of the path: 204 m2 (X4.7). (3) **DIAG.** A rectangular sheet is folded in half so that its longer side, 30 cm, becomes 15 cm. The folded piece has perimeter 62 cm. Find the shorter side of the sheet: 16 cm (X4.4). (4) A composite figure with two missing lengths.
+- **Go further (3).** G1 **Beyond (named): "Border Count".** The border of an n by n square has 4n - 4 unit squares, and this equals n x n - (n - 2) x (n - 2) (X4.6). Level note: an algebra pattern, secondary school. G2 **DIAG.** A square paper of side 24 cm is folded in half and in half again. What are the area (144 cm2) and perimeter (48 cm) of the folded square, and what fraction of the original area is it? 1/4 (X4.5). G3 A frame problem with two different widths.
+- **Non-routine.** GEO T, CTX T, DIAG G.
+- **Holiday overlap: HIGH (H7).** H7 had squares 3 cm cut from the corners of a 12 by 8 rectangle, three squares side by side, a path 2 m round a 10 by 6 lawn, a 2 by 4 gap in a 10 by 6 rectangle, a plus shape, two crossing paths in a 10 by 8 garden. Do not reuse these figures. Verdict: Change (new figures; joined and folded pieces are the paper's pattern).
+- **Numbers.** Sides to 30 cm; areas to 700 cm2.
+- **Home materials.** Pencil, squared paper, a sheet of paper to fold.
+- **Kit.** None.
+- **Figures.** `shape2d` composite with dimension labels, `joined` pieces, `folded` (F8).
+- **Misconceptions.** Subtracting widths instead of areas; counting the inner perimeter of a frame; a fold treated as a cut.
+- **Needs.** F8.
+- **Safe to miss?** No: lesson 29 leans on joined pieces.
+
+### Lesson 25. Cut and Rebuild (T3.5)
+
+- **Big idea.** Area does not change when pieces move; perimeter can.
+- **Strand.** MOE P4 composite figures (p. 39); dissection and tangram are enrichment (Intl: HK P4).
+- **Objective.** Use the seven tangram pieces to build shapes; compare area and perimeter before and after a cut; decide true or false. Think harder: cut a rectangle and rebuild it; same area or same perimeter. Go further: a paradox of areas; two cuts, three pieces.
+- **Remember (6 min).** (1) Area of a 8 by 3 rectangle: 24. (2) Perimeter of the same: 22. (3) Name the tangram pieces by shape.
+- **Start here (6).** (1) The tangram pieces, in units where the small triangle is 1: two large triangles of 4, a medium triangle of 2, two small triangles of 1, a square of 2 and a parallelogram of 2, so 16 in all (X5.1). (2) Make the big square from all 7 pieces. (3) Make the same square from 5 pieces. (4) Which pieces have the same area? (5) Cover a rectangle of area 8. (6) Colour-free: hatch the pieces that make half the square.
+- **Think harder (4).** (1) **GEO.** An 8 cm by 3 cm rectangle is cut into two 4 by 3 pieces which are put together to make a 4 by 6 rectangle. The area stays 24 cm2; the perimeter goes from 22 cm to 20 cm (X5.3). (2) **EXP.** Same area means same perimeter: true, false or not possible to tell? False (X5.3). (3) Cut an L-shape into two identical pieces. (4) A shape made from the tangram with a given perimeter.
+- **Go further (3).** G1 **Beyond (named): "Where Did the Square Go?".** An 8 by 8 square (64) is cut into four pieces that seem to make a 5 by 13 rectangle (65). Explain why the extra square cannot exist: the pieces leave a thin gap along the diagonal (X5.2, X5.4 Fibonacci numbers). Level note: secondary school (Fibonacci). G2 **GEO.** Make two straight cuts in an 8 by 3 rectangle to get three pieces that rebuild a 6 by 4 rectangle (6 by 3 and two 1 by 3 strips, X5.5). G3 Pose a cut-and-rebuild puzzle for a partner.
+- **Non-routine.** GEO T, EXP T, GEO G.
+- **Holiday overlap: MED (H7 C9, S7).** H7 had a 9 by 4 rectangle cut into a 6 by 6 square, and a 6 by 4 rectangle restacked as 12 by 2 (8 cm more perimeter). Do not reuse these. Verdict: Change.
+- **Numbers.** Areas to 64.
+- **Home materials.** Scissors for the grown-up; pencil; the tangram.
+- **Kit (K6 tangram).** 7 pieces from one 10 cm square. Supplied 7; max used 7. Cut 7.
+- **Figures.** `tangram` and `dissection` (F17).
+- **Misconceptions.** Believing a longer perimeter means more area; counting the gap-free paradox as a trick of the eyes.
+- **Needs.** F17, K6.
+- **Safe to miss?** Yes (the plan's enrichment).
+
+### Lesson 26. Mirror Patterns (T3.6)
+
+- **Big idea.** A line of symmetry is a fold that makes two halves match.
+- **Strand.** MOE P4 line symmetry: identify symmetric figures, decide if a line is a line of symmetry, complete a symmetric figure on a square grid (Geometry 3.1 to 3.3, p. 39).
+- **Objective.** Find lines of symmetry of polygons and flags; complete a figure about a vertical, horizontal or diagonal line; count lines of symmetry. Think harder: how many lines, and why; a diagonal mirror; complete a pattern. Go further: a shape with a half-turn but no line; several lines.
+- **Remember (6 min).** (1) Fold a square in half. (2) A rectangle has 2 lines and a square has 4. (3) Reflect a point across a line.
+- **Start here (6).** (1) Is the dashed line a line of symmetry? (2) Complete a figure about a vertical line on a 6 by 6 grid. (3) Complete about a horizontal line. (4) Flags: which flag has exactly one line? (5) How many lines does an equilateral triangle have? 3. (6) A kite has 1; a parallelogram has none.
+- **Think harder (4).** (1) **EXP.** How many lines of symmetry has a regular pentagon, and why? 5, one through each corner and the middle of the opposite side. (2) Complete a figure about a diagonal line. (3) **PAT.** Complete the tile pattern on a 4 by 4 grid; a given pattern of 8 shaded squares has 4 lines (X6.3). (4) A figure with one line, completed to have two.
+- **Go further (3).** G1 **Beyond (named): "Turn It Half".** The S-shaped tetromino looks the same after a half turn but has no line of symmetry (X6.1, X6.2). Level note: rotational symmetry is secondary school. G2 **DIAG.** Design a 4 by 4 pattern with exactly 2 lines of symmetry. G3 How many lines of symmetry does a 3-square L-tromino on a grid have? 1, a diagonal (X6.4).
+- **Non-routine.** EXP T, PAT T, DIAG G.
+- **Holiday overlap: HIGH (H8).** H8 did capital letters A, B, F, H, L, T, the 5 four-square shapes (T has 1), 3 by 3 shading with 1 and 2 lines, 2 squares on the up-down line (6 ways), 5 squares with 4 lines (X and plus). Do not reuse. This lesson uses polygons, flags and 4 by 4 and 6 by 6 grids. Verdict: Second visit.
+- **Numbers.** Grids to 6 by 6.
+- **Home materials.** Pencil, tracing paper, a small mirror (optional).
+- **Kit.** None.
+- **Figures.** `grid` with a mirror line (exists, `mirror` option), `panel` (exists).
+- **Misconceptions.** A diagonal of a rectangle is a line of symmetry; counting 2 for the same line; reflecting the wrong distance.
+- **Needs.** none beyond M18 (hatch).
+- **Safe to miss?** Fairly safe.
+
+### Lesson 27. Cube Stacks and Views (T3.7)
+
+- **Big idea.** See it from every side: three views fix a stack, and sometimes only a range of stacks.
+- **Strand.** Enrichment: building with unit cubes is Primary 5 (Volume 2.1, p. 42) and views of stacks are not named in the syllabus. **No school-paper evidence.**
+- **Objective.** Count cubes in a stack; draw the front, side and top views; build a stack from views; say which cubes are hidden. Think harder: count by layer into a table; which view cannot be right. Go further: the most and the fewest cubes that fit two views.
+- **Remember (6 min).** (1) Count 12 blocks in 3 rows of 4. (2) A tower of 3. (3) Look at a box from the front, side and top.
+- **Start here (6).** (1) Count the cubes in a stack drawn on a 3 by 3 base (heights 2, 1, 0 / 3, 2, 1 / 1, 1, 0): 11 (Q3.3). (2) The top view with numbers on each square. (3) Draw the front view. (4) Count 14 cubes in a table of three layers (X7.3). (5) Which stack has more cubes? (6) Build the stack with blocks and check.
+- **Think harder (4).** (1) **TAB.** Count the cubes layer by layer into a table: layer 1, 2, 3 and the total 14 (X7.3). (2) **EXP.** A stack has a front view with a tallest column of 3 and a side view with a tallest column of 2. Can both be right? No: both views show the tallest column (X7.2). (3) The top view and the side view fix a stack: build it. (4) Which of three drawings is the front view of a given stack?
+- **Go further (3).** G1 **Beyond (named): "Most and Fewest".** On a 3 by 3 base, the front view has columns 3, 1, 2 and the right view has rows 2, 3, 1. What are the fewest and the most cubes the stack can have? 6 and 14, from 275 possible stacks (X7.1). Level note: contest-style. G2 **LOG.** Build a stack from three views; check it matches all three. G3 Draw a stack whose three views are all the same.
+- **Non-routine.** TAB T, EXP T, LOG G.
+- **Holiday overlap: MED (H8 dice and glued dice).** Different content. New.
+- **Numbers.** Bases to 3 by 3, heights to 4.
+- **Home materials.** 14 same-size blocks or small boxes. **Fallback (D13):** every task is also set as a drawn stack with numbers on the squares of the top view; the drawn path is a complete lesson, not a degraded one.
+- **Kit.** None cut. Isometric dot paper printed.
+- **Figures.** `cube_stack` heights to 4 (F9 extension).
+- **Misconceptions.** Hidden cubes forgotten; reading the front view as the top view; a view seen from the right drawn mirrored.
+- **Needs.** F9.
+- **Safe to miss?** Yes (the plan's enrichment).
+
+### Lesson 28. Time Travellers (T3.8)
+
+- **Big idea.** Time is a number line: add and subtract on the line, and use both 12-hour and 24-hour times.
+- **Strand.** MOE P4 has no time outcome; the 24-hour clock is **P3** (Time 2.3, p. 36). This lesson revises P3 time with the school-paper moves (duration across noon, start from the end, timetable). Contest tags: two-event timetables (19-13), weekdays (19-4).
+- **Objective.** Find an end time or a duration; read 24-hour times; find the start from the end; use a timetable with a break; try both orders of two events. Think harder: start from the end; a timetable with a break; two shows in either order. Go further: time zones; pay by the hour in 24-hour time; across midnight.
+- **Remember (6 min).** (1) 60 minutes in an hour. (2) 1850 is 6:50 pm. (3) Noon and midnight.
+- **Start here (6).** (1) 9:40 am + 2 h 35 min = 12:15 pm (X8.1). (2) 7:50 am to 11:20 am is 3 h 30 min (X8.1). (3) 1850 is 6:50 pm (X8.5). (4) Day after tomorrow and day before yesterday. (5) 0905 is 9:05 am. (6) A timeline story across noon.
+- **Think harder (4).** (1) **BACK.** A show that lasts 1 h 55 min ends at 12:10 pm. When did it start? 10:15 am (X8.2). (2) **TAB.** A workshop runs 13:20 to 16:05 with a 25-minute break. How long is it, and how long without the break? 2 h 45 min and 2 h 20 min (X8.2). (3) **Both orders.** A class arrives at 10:00. The Dolphin Show lasts 40 minutes (10:10, 11:00, 12:30, 14:00) and the Magic Show lasts 55 minutes (10:30, 11:45, 13:20, 14:30). They watch both with no walking time. Earliest finish? Dolphin then Magic ends 12:40; Magic then Dolphin ends 13:10, so 12:40 (X8.3). (4) A duration across noon.
+- **Go further (3).** G1 **Beyond (named): "Flight Time".** A flight leaves Singapore at 2340 and lasts 13 h 20 min. It lands at 1300 the next day Singapore time. London is 8 hours behind Singapore in winter, so the local time is 0500 (X8.4). Level note: time zones are not on the syllabus. G2 **CTX.** Dev works from 0845 to 1715 for $11 for every hour, break included. How much does he earn? 8.5 hours, $93.50 (X8.6). G3 **BACK.** A film of 2 h 50 min ends at 0015 the next day. When did it start? 2125 (X8.6).
+- **Non-routine.** BACK T, TAB T, CTX G. The plan's EX-BACK-2 is replaced.
+- **Holiday overlap: LOW (H1 buses only).** The holiday course has no duration, timetable or calendar item. New. This is the school-paper lesson the holiday course lacks (`g4_analysis.md` section 5, item 5).
+- **Numbers.** Times to the minute; durations to 14 hours.
+- **Home materials.** Pencil. A real clock if there is one.
+- **Kit.** None (timeline strips are printed).
+- **Figures.** `clock` with 24-hour readout, `number_line` as a time line (exist), `table` for timetables (F16 small).
+- **Misconceptions.** Subtracting 8:50 from 11:20 as 3.30 hours; crossing noon with 12 as 0; adding 55 minutes to 11:45 as 11:100.
+- **Needs.** F16, N7 (time formats).
+- **Safe to miss?** No for the first half; the Quest gate 7 asks a time item.
+
+### Lesson 29. Shape Studio: Hidden Lengths (T3.9, added)
+
+- **Big idea.** Label every piece, then compare.
+- **Strand.** MOE P4 area and perimeter (p. 39); a problem-solving studio (heuristic: label and compare, p. 13). Contest tag: frames of equal pieces (19-17).
+- **Objective.** Find a missing side from equal pieces; find the side of a pinwheel square; count posts at equal distances. Think harder: a pinwheel of four identical rectangles; posts round a rectangle. Go further: two arrangements, two unknowns; design a frame puzzle.
+- **Remember (6 min).** (1) Perimeter of a 12 by 8 rectangle. (2) Area of the same. (3) The difference of 12 and 8.
+- **Start here (6).** (1) A rectangle is made of 3 identical squares in a row, perimeter 32 cm: side 4 cm. (2) Two identical rectangles joined make an L: find one side. (3) A picture in which a small square sits in the corner of a rectangle: find its side. (4) Label each side of a figure of equal pieces. (5) Perimeter of the figure. (6) Area of the figure.
+- **Think harder (4).** (1) **GEO.** Four identical rectangles are placed round a small square to form a big square of side 20 cm. The small square has side 4 cm. Find the rectangle: 12 cm by 8 cm (area 96 cm2; the whole is 4 x 96 + 16 = 400, X9.1). (2) **CTX.** 36 posts stand at equal distances round a rectangular park, one at every corner. A longer side has 11 posts, counting both corners. How many posts are on a shorter side? 9 (X9.2). (3) The big square's area from the small square's side. (4) An L-shape of equal pieces: find a missing side and the perimeter.
+- **Go further (3).** G1 **Beyond (named): "Pinwheel Square".** The side of the big square times itself equals four rectangles plus the small square: (a + b) x (a + b) = 4 x a x b + (a - b) x (a - b) (X9.4). Level note: an algebra identity. G2 **GEO.** Four identical rectangles are put end to end in a row: perimeter 80 cm. The same four make a 2 by 2 block: perimeter 52 cm. Find the rectangle: 9 cm by 4 cm (X9.3). G3 **CHAL.** Design a frame puzzle with exactly one answer and give it to a partner.
+- **Non-routine.** GEO T, CTX T, CHAL G.
+- **Holiday overlap: MED (H7 C1).** H7 had a square cut into two identical rectangles each with perimeter 24 (area 64). Do not reuse. SASMO 19-17 (a frame of 8 equal rectangles) is not copied; the pinwheel of 4 and the row-versus-block pair are original. Verdict: Second visit.
+- **Numbers.** Sides to 30 cm; posts to 60.
+- **Home materials.** The kit rectangles; pencil.
+- **Kit (K7 identical rectangles).** 8 identical rectangles (3 by 2 units) and 1 small square (1 by 1): 9 pieces. Max used 8 rectangles (Explore tiles a 6 by 8 rectangle with 8 rectangles) and 1 square. Cut 9.
+- **Figures.** `shape2d` with dimension labels and `joined` pieces (F8).
+- **Misconceptions.** Using the outer perimeter as the rectangle's; counting corner posts twice; assuming the small square equals the rectangle's width.
+- **Needs.** F8, K7.
+- **Safe to miss?** Yes: the safest of Term 3.
+
+### Lesson 30. Challenge Day 3, with Mi's Challenge Quest (T3.10)
+
+- **Big idea.** A map can be traced once if you start and stop in the right places.
+- **Strand.** Heuristics (p. 13); routes and networks (Intl: HK P4 enrichment). The Quest follows (section 6).
+- **Objective.** Count shapes in a grid; find a route that uses every road once; decide why some maps cannot be traced. The Quest carries a gate for each of lessons 21 to 29.
+- **Remember (6 min).** (1) Trace a shape without lifting the pencil. (2) Count the lines at a corner. (3) Odd and even numbers.
+- **Start here (5).** (1) Count the squares in a 3 by 3 grid. (2) Count the roads at each town on a small map. (3) Trace a square with a diagonal. (4) Mark the towns with an odd number of roads. (5) Trace a simple map.
+- **Think harder (3).** (1) **LOG.** A map has five towns A to E and seven roads: AB, AC, BC, BD, CD, CE, DE. Find a route that uses every road once. It must start at B and end at D (or the reverse), the only two towns with an odd number of roads (X10.1). (2) Why can a map with four odd towns not be traced? (X10.2). (3) A table of towns against roads.
+- **Go further (3).** G1 **Beyond (named): "Seven Bridges".** Four places are joined by seven bridges: A to N twice, A to C twice, A to I once, N to I once and C to I once. Nobody can cross every bridge once (A has 5, and N, C and I have 3 each, X10.2). Add one bridge between two odd places and a route exists (X10.3). Level note: graph theory, secondary school. G2 **GEO.** Design a map of 6 towns that can be traced. G3 **CHAL.** A puzzle that cannot work: fix it with one extra road.
+- **Non-routine.** LOG T, GEO G, CHAL G.
+- **Holiday overlap: NONE.** New.
+- **Numbers.** Maps of up to 7 towns and 9 roads.
+- **Home materials.** Pencil; a quest partner; the Quest Log stays closed in Book 6.
+- **Kit.** None.
+- **Figures.** `network` (exists), with curved roads (F15).
+- **Needs.** Quest block (section 6), N3, F15.
+- **Safe to miss?** The body yes; the Quest is the part to protect.
+

@@ -41,19 +41,19 @@
     "Jenny does not pick milk. Cross out that box.",
     "Jenny's row has 1 empty box left: juice. Wei gets milk."
    ],
-   "answer": "Ravi picks tea, Jenny picks juice and Wei picks milk."
+   "answer": "Ravi: tea. Jenny: juice. Wei: milk."
   },
   "howto": {
    "title": "How to use a logic grid",
    "steps": [
     "Read one clue at a time. Tick or cross the boxes.",
-    "When a row or column has 1 empty box left, tick it.",
+    "If a row has 1 empty box, tick it.",
     "Check every clue at the end."
    ]
   },
   "try": {
    "id": "L1U08-L01",
-   "text": "Mei, Ben and Kumar each have a different toy. Ben has the drum. Mei does not have the ball. Who has the ball?   {circ:Mei|Ben|Kumar}",
+   "text": "Mei, Ben and Kumar each have 1 toy. The toys are a ball, a kite and a drum. Ben has the drum. Mei does not have the ball.",
    "figure": {
     "type": "logic_grid",
     "rows": [
@@ -66,14 +66,20 @@
      "kite",
      "drum"
     ],
-    "width_mm": 44
+    "width_mm": 38
    },
-   "answer": {
-    "value": [
-     "Kumar"
-    ],
-    "text": "Kumar"
-   },
+   "parts": [
+    {
+     "label": "",
+     "text": "Who has the ball?   {circ:Mei|Ben|Kumar}",
+     "answer": {
+      "value": [
+       "Kumar"
+      ],
+      "text": "Kumar"
+     }
+    }
+   ],
    "explanation": "Ben has the drum. Mei does not have the ball or the drum, so Mei has the kite. The ball is left for Kumar."
   }
  },
@@ -212,7 +218,7 @@
    "id": "L1U08-S05",
    "tier": "start",
    "page": 1,
-   "text": "Odd numbers end in 1, 3, 5, 7 or 9. Even numbers end in 0, 2, 4, 6 or 8. Sort these numbers: 4, 7, 10, 13, 16, 9.",
+   "text": "An even number has a last digit of 0, 2, 4, 6 or 8. An odd number has a last digit of 1, 3, 5, 7 or 9. Write each of these numbers in the right list: 4, 7, 10, 13, 16, 9.",
    "parts": [
     {
      "label": "a",
@@ -254,7 +260,7 @@
     "type": "loops",
     "a": "more than 8",
     "b": "odd",
-    "width_mm": 80
+    "width_mm": 96
    },
    "parts": [
     {
@@ -446,7 +452,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "I am between 10 and 20. I am odd. We say me counting in 5s. I am {b}.",
+     "text": "A number is between 10 and 20. It is odd. We say it counting in 5s. What is the number? {b}",
      "answer": {
       "value": [
        "15"
@@ -456,7 +462,7 @@
     },
     {
      "label": "b",
-     "text": "I am even and between 20 and 30. We say me counting in 3s and in 4s. I am {b}.",
+     "text": "A number is even and between 20 and 30. We say it counting in 3s and in 4s. What is the number? {b}",
      "answer": {
       "value": [
        "24"
@@ -583,7 +589,7 @@
     "type": "draw",
     "w": 430,
     "h": 210,
-    "scale": 0.17,
+    "scale": 0.15,
     "label": "what 3 children say",
     "elements": [
      {
@@ -717,7 +723,7 @@
       null
      ]
     ],
-    "width_mm": 50
+    "width_mm": 44
    },
    "answer": {
     "value": [
@@ -741,7 +747,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The number is from 1 to 4. After \"Is it more than 2?\" there are {b} numbers left.",
+     "text": "The number is from 1 to 4. After \"Is it more than 2?\" {b} are left.",
      "answer": {
       "value": [
        "2"
@@ -790,7 +796,7 @@
    "id": "L1U08-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "How many numbers from 1 to 10 are even and more than 5? {b}",
+   "text": "Use the numbers 1 to 10. How many are even and more than 5? {b}",
    "answer": {
     "value": [
      "3"
@@ -803,7 +809,7 @@
    "id": "L1U08-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "I am between 20 and 30. I am odd. We say me counting in 5s. I am {b}.",
+   "text": "A number is between 20 and 30. It is odd. We say it counting in 5s. What is the number? {b}",
    "answer": {
     "value": [
      "25"
@@ -816,12 +822,12 @@
    "id": "L1U08-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "Ali is taller than Mei. Mei is taller than Ravi. Ravi is taller than Ali.   {circ:True|False}",
+   "text": "Ali is taller than Mei. Mei is taller than Ravi. Is Ravi taller than Ali?   {circ:Yes|No}",
    "answer": {
     "value": [
-     "False"
+     "No"
     ],
-    "text": "False"
+    "text": "No"
    },
    "explanation": "The order from tallest is Ali, Mei, Ravi. Ravi is the shortest, so he is not taller than Ali."
   }
