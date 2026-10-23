@@ -227,11 +227,11 @@ PASS  20 pages, ids 1..20
 PASS  tier mix 10 one-star / 10 two-star  
 PASS  every page has a self-check strip text  
 PASS  every page names a self-check mechanism  
-FAIL  V8 reading level: instruction and clue sentences <= 8 words, <= 4 lines  [(20, 'Draw a face for each child (a circle is fine).')]
+PASS  V8 reading level: instruction and clue sentences <= 8 words, <= 4 lines  []
 PASS  check strip text <= 18 words (P1-20 has two checks: 30)  []
-FAIL  check strips carry no category hint (Is it ...?): the strip never says what the word is  [(20, 'Count all the faces. Is the total 27? Add the faces in your a) row to your b) answer. Is it 11?')]
+PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip is exactly the plain question 'Do they spell a word?'  
-FAIL  every number of 11 or more quoted in a teacher note is found on the page or in its answers  [(4, ['117', '119'])]
+PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
 PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  the P1-18 note does not claim half-hour additions cross the hour unless one does  
 PASS  syllabus numbers in every topic tag lie inside the P1 ranges of docs/moe/syllabus_by_level.md  []
@@ -262,7 +262,7 @@ PASS  audit 3 follow-up: every ruler strip on P1-17 has a start arrow and bold s
 PASS  audit 3 follow-up: P1-20 uses the smiley face symbol (printed faces and the key face)  
 PASS  P1_Puzzles.pdf has 20 pages  20
 PASS  P1_Puzzles.pdf fonts all embedded  7 fonts
-PASS  P1_Puzzles.pdf size < 20 MB  0.48 MB
+PASS  P1_Puzzles.pdf size < 20 MB  0.47 MB
 PASS  P1_Puzzles.pdf A4 page size  
 PASS  P1_FrontMatter.pdf has 5 pages  5
 PASS  P1_FrontMatter.pdf fonts all embedded  5 fonts
@@ -270,7 +270,7 @@ PASS  P1_FrontMatter.pdf size < 20 MB  0.05 MB
 PASS  P1_FrontMatter.pdf A4 page size  
 PASS  P1_Complete_Pack.pdf has 25 pages  25
 PASS  P1_Complete_Pack.pdf fonts all embedded  12 fonts
-PASS  P1_Complete_Pack.pdf size < 20 MB  0.53 MB
+PASS  P1_Complete_Pack.pdf size < 20 MB  0.52 MB
 PASS  P1_Complete_Pack.pdf A4 page size  
 PASS  P1_Answer_Key.pdf has 11 pages  11
 PASS  P1_Answer_Key.pdf fonts all embedded  6 fonts
@@ -294,8 +294,8 @@ PASS  pupil page 01 min text size >= 8 pt  8.0 pt
 PASS  pupil page 02 layout (no overflow/clipping/margin breach)  
 PASS  pupil page 02 page-fill: puzzle content 149 of 183 mm  0.82
 PASS  pupil page 02 min text size >= 8 pt  8.0 pt
-FAIL  pupil page 03 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
-PASS  pupil page 03 page-fill: puzzle content 184 of 183 mm  1.00
+PASS  pupil page 03 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 03 page-fill: puzzle content 176 of 183 mm  0.96
 PASS  pupil page 03 min text size >= 8 pt  8.0 pt
 PASS  pupil page 04 layout (no overflow/clipping/margin breach)  
 PASS  pupil page 04 page-fill: puzzle content 132 of 183 mm  0.72
@@ -325,19 +325,19 @@ PASS  pupil page 12 layout (no overflow/clipping/margin breach)
 PASS  pupil page 12 page-fill: puzzle content 192 of 193 mm  0.99
 PASS  pupil page 12 min text size >= 8 pt  8.0 pt
 PASS  pupil page 13 layout (no overflow/clipping/margin breach)  
-PASS  pupil page 13 page-fill: puzzle content 167 of 183 mm  0.91
+PASS  pupil page 13 page-fill: puzzle content 163 of 183 mm  0.89
 PASS  pupil page 13 min text size >= 8 pt  8.0 pt
 PASS  pupil page 14 layout (no overflow/clipping/margin breach)  
 PASS  pupil page 14 page-fill: puzzle content 197 of 198 mm  0.99
 PASS  pupil page 14 min text size >= 8 pt  8.0 pt
-FAIL  pupil page 15 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
-PASS  pupil page 15 page-fill: puzzle content 183 of 183 mm  1.00
+PASS  pupil page 15 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 15 page-fill: puzzle content 173 of 183 mm  0.94
 PASS  pupil page 15 min text size >= 8 pt  8.0 pt
 PASS  pupil page 16 layout (no overflow/clipping/margin breach)  
 PASS  pupil page 16 page-fill: puzzle content 174 of 183 mm  0.95
 PASS  pupil page 16 min text size >= 8 pt  8.0 pt
-FAIL  pupil page 17 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
-PASS  pupil page 17 page-fill: puzzle content 185 of 183 mm  1.01
+PASS  pupil page 17 layout (no overflow/clipping/margin breach)  
+PASS  pupil page 17 page-fill: puzzle content 181 of 183 mm  0.99
 PASS  pupil page 17 min text size >= 8 pt  8.0 pt
 PASS  pupil page 18 layout (no overflow/clipping/margin breach)  
 PASS  pupil page 18 page-fill: puzzle content 154 of 183 mm  0.84
@@ -383,10 +383,10 @@ PASS  key page 11 min text size >= 8 pt  8.0 pt
 PASS  pupil.html: colour-by-code pictures: 3 found; every label of every part lies inside its region and clear of outlines and decorations  [(1, 0, 15), (12, 0, 17), (14, 0, 13)]
 PASS  key.html: colour-by-code pictures: 3 found; every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 15), (10, 0, 17), (11, 0, 13)]
 PASS  P1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.73% vs greyscale)  20 pages
-PASS  P1_Puzzles.pdf: no flat grey tint areas (blocks counted 157, limit 40 per page)  
+PASS  P1_Puzzles.pdf: no flat grey tint areas (blocks counted 148, limit 40 per page)  
 PASS  P1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 24.17% vs greyscale)  5 pages
 PASS  P1_FrontMatter.pdf: no flat grey tint areas (blocks counted 71, limit 40 per page)  
 PASS  P1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.45% vs greyscale)  11 pages
-PASS  P1_Answer_Key.pdf: no flat grey tint areas (blocks counted 503, limit 75 per page)  
+PASS  P1_Answer_Key.pdf: no flat grey tint areas (blocks counted 506, limit 75 per page)  
 
-TOTAL 390 checks, 6 failed
+TOTAL 390 checks, 0 failed
