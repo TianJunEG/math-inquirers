@@ -163,10 +163,10 @@
   ]
  },
  "sneak_peek": {
-  "q1": "How many spoons are on the tray? Write the number.",
-  "q2": "Draw a picture that shows how many spoons, buttons and shells there are. Many answers are right.",
-  "a1": "4 spoons.",
-  "a2": "Any clear picture: for example a row of 4 spoons, a row of 3 buttons and a row of 2 shells, one small picture for each thing."
+  "q1": "How many cups are on the tray? Write the number.",
+  "q2": "Draw a picture that shows how many cups, buttons and socks there are. Many answers are right.",
+  "a1": "4 cups.",
+  "a2": "Any clear picture: for example a row of 4 cups, a row of 3 buttons and a row of 2 socks, one small picture for each thing."
  },
  "rec": {
   "opening": {
@@ -341,7 +341,7 @@
        }
       ]
      ],
-     "size": "m"
+     "size": "l"
     },
     {
      "t": "chip",
@@ -366,37 +366,37 @@
      "rows": [
       [
        {
-        "icon": "spoon"
+        "icon": "cup"
        },
        {
         "icon": "button"
        },
        {
-        "icon": "shell"
+        "icon": "sock"
        },
        {
         "icon": "button"
        },
        {
-        "icon": "spoon"
+        "icon": "cup"
        }
       ],
       [
        {
-        "icon": "spoon"
+        "icon": "cup"
        },
        {
-        "icon": "shell"
+        "icon": "sock"
        },
        {
-        "icon": "spoon"
+        "icon": "cup"
        },
        {
         "icon": "button"
        }
       ]
      ],
-     "size": "m"
+     "size": "l"
     },
     {
      "t": "cols",
@@ -406,7 +406,7 @@
         "t": "card",
         "head": "PUZZLE 1: anyone can try",
         "items": [
-         "How many spoons are on the tray?",
+         "How many cups are on the tray?",
          "Write the number."
         ]
        }
@@ -416,7 +416,7 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "Draw a picture that shows how many spoons, buttons and shells there are.",
+         "Draw a picture that shows how many cups, buttons and socks there are.",
          "Many answers are right."
         ]
        }
@@ -424,7 +424,7 @@
      ]
     }
    ],
-   "note": "Puzzle 1 is an access question: count the spoons on the mixed tray (4). Puzzle 2 is a thinking question on the lesson idea: draw a picture that shows how many of each kind there are. There are 4 spoons, 3 buttons and 2 shells. Any clear picture is good: a row of small pictures for each kind, or tally marks, or three groups. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 4 spoons; any clear picture. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 is an access question: count the cups on the mixed tray (4). Puzzle 2 is a thinking question on the lesson idea: draw a picture that shows how many of each kind there are. There are 4 cups, 3 buttons and 2 socks. Any clear picture is good: a row of small pictures for each kind, or tally marks, or three groups. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 4 cups; any clear picture. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
@@ -463,15 +463,15 @@
         "type": "picture_graph",
         "rows": [
          {
-          "label": "Pebbles",
+          "label": "Shell",
           "n": 4
          },
          {
-          "label": "Shells",
+          "label": "Crab",
           "n": 2
          },
          {
-          "label": "Feathers",
+          "label": "Fish",
           "n": 3
          }
         ],
@@ -570,7 +570,7 @@
        }
       ]
      ],
-     "size": "m"
+     "size": "l"
     },
     {
      "t": "chip",
@@ -746,6 +746,27 @@
    "title": "Read it: the answers",
    "blocks": [
     {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Balls",
+       "n": 5
+      },
+      {
+       "label": "Cars",
+       "n": 3
+      },
+      {
+       "label": "Bikes",
+       "n": 4
+      }
+     ],
+     "icon": "counter",
+     "title": "Toys in the box",
+     "size": "m"
+    },
+    {
      "t": "answer",
      "text": "2 more balls than cars. 12 toys in all. Cars have the fewest."
     }
@@ -777,7 +798,7 @@
      ],
      "icon": "counter",
      "title": "Toys in the box",
-     "size": "s"
+     "size": 62
     },
     {
      "t": "list",
@@ -943,7 +964,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 4 shells, 5 buttons, 3 spoons. Q2 6 pens and 8 rubbers. Q3 3 more cats than fish and 17 pets in all."
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 4 cups, 6 books, 2 rulers. Q2 6 pens and 8 rubbers. Q3 3 more cats than fish and 17 pets in all."
   },
   {
    "id": "s-ws2",
@@ -965,7 +986,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: draw one picture for each fruit. Question 5: which game the fewest children play, and how many children play two of the games. Question 6: tick True or False for four sentences about a graph. Wait 10 seconds before helping."
+   "note": "Read questions 4 to 6 aloud. Question 4: draw one picture for each fruit. Question 5: which game the fewest children play, and how many children play two of the games. Question 6: use the same graph and tick True or False for four sentences. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -982,7 +1003,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 apples 2 pictures, pears 5 pictures, plums 3 pictures. Q5 chess and 13 children. Q6 True, False, True, True."
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 apples 2 pictures, pears 5 pictures, plums 3 pictures. Q5 chess and 13 children. Q6 False, True, True, False."
   },
   {
    "id": "s-choice",
@@ -1057,10 +1078,10 @@
    "blocks": [
     {
      "t": "answer",
-     "text": "Puzzle 1: 4 spoons. Puzzle 2: a picture with one small picture for each thing, like 4 spoons, 3 buttons and 2 shells."
+     "text": "Puzzle 1: 4 cups. Puzzle 2: a picture with one small picture for each thing, like 4 cups, 3 buttons and 2 socks."
     }
    ],
-   "note": "Reveal both puzzles now. Say: many of you drew a good picture. Do not read out anyone earlier answer. Puzzle 1: 4 spoons. Puzzle 2: any clear picture; the best ones have one small picture for each thing and a row for each kind, which is a picture graph. It was the same idea as Explore and the mini-lesson: sort, count, then picture it."
+   "note": "Reveal both puzzles now. Say: many of you drew a good picture. Do not read out anyone earlier answer. Puzzle 1: 4 cups. Puzzle 2: any clear picture; the best ones have one small picture for each thing and a row for each kind, which is a picture graph. It was the same idea as Explore and the mini-lesson: sort, count, then picture it."
   },
   {
    "id": "s-exit",
@@ -1358,7 +1379,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle one. How many spoons are on the tray? Write the number."
+      "text": "Puzzle one. How many cups are on the tray? Write the number."
      },
      {
       "k": "WORK",
@@ -1367,7 +1388,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle two. Draw a picture that shows how many spoons, buttons and shells there are. Many answers are right."
+      "text": "Puzzle two. Draw a picture that shows how many cups, buttons and socks there are. Many answers are right."
      },
      {
       "k": "WORK",
@@ -1380,7 +1401,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: 4 spoons. Puzzle 2 answer: any clear picture (a row for each kind, one small picture for each thing). Look for good ideas to praise later (a child who made a row for each kind, or used tally marks). Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: 4 cups. Puzzle 2 answer: any clear picture (a row for each kind, one small picture for each thing). Look for good ideas to praise later (a child who made a row for each kind, or used tally marks). Do not write scores or keep a list."
      }
     ]
    },
@@ -1632,7 +1653,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: four shells, five buttons, three spoons. Question 2: six pens and eight rubbers. Question 3: three more cats than fish, and seventeen pets in all. Tick your own page with a tick."
+      "text": "Question 1: four cups, six books, two rulers. Question 2: six pens and eight rubbers. Question 3: three more cats than fish, and seventeen pets in all. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1645,7 +1666,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 2. Question 4: Ali ate 2 apples, 5 pears and 3 plums. Draw one picture in a box for each fruit. Question 5: which game do the fewest children play? How many children play ludo and cards altogether? Question 6: tick True or False for each sentence."
+      "text": "Page 2. Question 4: Ali ate 2 apples, 5 pears and 3 plums. Draw 1 picture in a box for each fruit. Question 5: study the graph. Which game do the fewest children play? How many children play ludo and cards altogether? Question 6: use the same graph. Tick True or False for each sentence."
      },
      {
       "k": "WORK",
@@ -1659,7 +1680,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 4: two pictures for apples, five for pears and three for plums. Question 5: chess, and thirteen children. Question 6: true, false, true, true. Tick your own page."
+      "text": "Question 4: two pictures for apples, five for pears and three for plums. Question 5: chess, and thirteen children. Question 6: false, true, true, false. Tick your own page."
      },
      {
       "k": "SLIDE",
@@ -1732,7 +1753,7 @@
      },
      {
       "k": "SAY",
-      "text": "Remember the sneak-peek? Puzzle one: four spoons. Puzzle two: one small picture for each thing, a row for each kind."
+      "text": "Remember the sneak-peek? Puzzle one: four cups. Puzzle two: one small picture for each thing, a row for each kind."
      },
      {
       "k": "ASK",
@@ -1763,7 +1784,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. Look at the tray. How many rubbers? E2. Look at the graph. How many more biscuits did Ali eat than Mei? E3. A child counts the toys in a box and draws a graph. Which question can the graph answer? One: how many cars are in the box? Two: which toy is the best? Write its number in the brackets."
+      "text": "E1. Look at the tray. How many rubbers? E2. Look at the graph. How many more biscuits did Ali eat than Mei? E3. Which question can a graph of the toys in a box answer? One: how many cars are in the box? Two: which toy is the best? Write its number in the brackets."
      },
      {
       "k": "WORK",
@@ -1867,14 +1888,14 @@
     "page": 1,
     "tier": "start",
     "text": "Look at the tray. Count and write how many of each kind.",
-    "answer": "4 shells; 5 buttons; 3 spoons",
+    "answer": "4 cups; 6 books; 2 rulers",
     "val": [
      4,
-     5,
-     3
+     6,
+     2
     ],
     "hint": "Cross out each thing as you count it.",
-    "solution": "Count one kind at a time and cross out each thing. 4 shells, 5 buttons and 3 spoons. 4 + 5 + 3 = 12, the same as the things on the tray, so no thing is missed.",
+    "solution": "Count one kind at a time and cross out each thing. 4 cups, 6 books and 2 rulers. 4 + 6 + 2 = 12, the same as the things on the tray, so no thing is missed.",
     "mistakes": [
      "Counting a thing twice.",
      "Missing a thing in the middle of the tray."
@@ -1883,21 +1904,21 @@
     "parts": [
      {
       "l": "a",
-      "text": "There are [] shells.",
+      "text": "There are [] cups.",
       "ans": "4",
       "val": 4
      },
      {
       "l": "b",
-      "text": "There are [] buttons.",
-      "ans": "5",
-      "val": 5
+      "text": "There are [] books.",
+      "ans": "6",
+      "val": 6
      },
      {
       "l": "c",
-      "text": "There are [] spoons.",
-      "ans": "3",
-      "val": 3
+      "text": "There are [] rulers.",
+      "ans": "2",
+      "val": 2
      }
     ],
     "visual": {
@@ -1905,42 +1926,42 @@
      "rows": [
       [
        {
-        "icon": "button"
+        "icon": "book"
        },
        {
-        "icon": "shell"
+        "icon": "cup"
        },
        {
-        "icon": "spoon"
+        "icon": "ruler"
        },
        {
-        "icon": "button"
+        "icon": "book"
        },
        {
-        "icon": "shell"
+        "icon": "cup"
        },
        {
-        "icon": "button"
+        "icon": "book"
        }
       ],
       [
        {
-        "icon": "spoon"
+        "icon": "book"
        },
        {
-        "icon": "button"
+        "icon": "cup"
        },
        {
-        "icon": "shell"
+        "icon": "book"
        },
        {
-        "icon": "shell"
+        "icon": "cup"
        },
        {
-        "icon": "button"
+        "icon": "ruler"
        },
        {
-        "icon": "spoon"
+        "icon": "book"
        }
       ]
      ],
@@ -1986,10 +2007,6 @@
        "n": 6
       },
       {
-       "label": "Rulers",
-       "n": 3
-      },
-      {
        "label": "Rubbers",
        "n": 8
       }
@@ -1997,7 +2014,7 @@
      "icon": "counter",
      "tally": true,
      "key": false,
-     "size": 50
+     "size": 62
     }
    },
    {
@@ -2049,14 +2066,15 @@
      ],
      "icon": "counter",
      "title": "Pets in a shop",
-     "size": 50
+     "key": false,
+     "size": 54
     }
    },
    {
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Ali ate 2 apples, 5 pears and 3 plums. Draw one picture in a box for each fruit.",
+    "text": "Ali ate 2 apples, 5 pears and 3 plums. Draw 1 picture in a box for each fruit.",
     "answer": "Apples 2 pictures; pears 5 pictures; plums 3 pictures",
     "val": [
      2,
@@ -2119,7 +2137,7 @@
     "id": "S5",
     "page": 2,
     "tier": "start",
-    "text": "Look at the graph. Each picture stands for 1 child.",
+    "text": "Study the graph. Each picture stands for 1 child. Answer questions 5 and 6.",
     "answer": "Chess; 13 children",
     "val": [
      "Chess",
@@ -2169,6 +2187,7 @@
      ],
      "icon": "counter",
      "title": "Games children play",
+     "key": false,
      "size": 50
     }
    },
@@ -2176,55 +2195,35 @@
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Look at the graph. Each picture stands for 1 stamp.",
-    "answer": "True, False, True, True",
+    "text": "Look at the graph in question 5.",
+    "answer": "False, True, True, False",
     "val": [
-     "True",
      "False",
      "True",
-     "True"
+     "True",
+     "False"
     ],
     "hint": "Count the pictures in each row first. Then read each sentence.",
-    "solution": "Ali 5, Mei 5 and Ben 2. Ali and Mei have the same number: true. Ben has the fewest, not the most: false. 5 take away 2 is 3, so Mei has 3 more than Ben: true. 5 + 5 + 2 = 12: true.",
+    "solution": "Chess 3, ludo 5 and cards 8. Cards has the most, not the fewest: the first sentence is false. 5 take away 3 is 2, so ludo has 2 more than chess: true. 3 + 5 = 8, the same as cards: true. 3 + 5 + 8 = 16, not 15: false.",
     "mistakes": [
-     "Saying Ben has the most because his name is last.",
-     "Forgetting to add all three rows."
+     "Saying cards has the fewest because it is the last row.",
+     "Adding only two rows to find the total."
     ],
     "mins": 3,
     "tf": [
      {
-      "s": "Ali and Mei have the same number of stamps."
+      "s": "Cards has the fewest children."
      },
      {
-      "s": "Ben has the most stamps."
+      "s": "Ludo has 2 more children than chess."
      },
      {
-      "s": "Mei has 3 more stamps than Ben."
+      "s": "Chess and ludo together are the same as cards."
      },
      {
-      "s": "There are 12 stamps in all."
+      "s": "There are 15 children in all."
      }
-    ],
-    "visual": {
-     "type": "picture_graph",
-     "rows": [
-      {
-       "label": "Ali",
-       "n": 5
-      },
-      {
-       "label": "Mei",
-       "n": 5
-      },
-      {
-       "label": "Ben",
-       "n": 2
-      }
-     ],
-     "icon": "counter",
-     "title": "Stamps",
-     "size": 46
-    }
+    ]
    }
   ],
   "think": [
@@ -2357,14 +2356,15 @@
      ],
      "icon": "counter",
      "title": "Mi's beach box",
-     "size": 44
+     "key": false,
+     "size": 40
     }
    },
    {
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "There are 16 books in all. Draw the art books in the empty boxes.",
+    "text": "Each picture stands for 1 book. There are 16 books in all. Draw the art books in the empty boxes.",
     "answer": "11 maths and story books; 5 art books",
     "val": [
      11,
@@ -2419,7 +2419,8 @@
      ],
      "icon": "counter",
      "title": "Books on a shelf",
-     "size": 56
+     "key": false,
+     "size": 50
     }
    }
   ],
@@ -2532,7 +2533,7 @@
      "Writing a question with no answer."
     ],
     "mins": 4,
-    "lines": 2,
+    "lines": 3,
     "visual": {
      "type": "picture_graph",
      "rows": [
@@ -2551,7 +2552,7 @@
      ],
      "icon": "counter",
      "title": "Flowers in a garden",
-     "size": 40
+     "size": 48
     }
    }
   ],
@@ -2560,8 +2561,8 @@
    "page": 5,
    "tier": "investigation",
    "title": "Sort, draw and ask",
-   "first": "Find 6 small things at home. Sort them into 2 kinds. How many of each? ____ and ____",
-   "text": "Now sort 12 things into 3 kinds. Draw your picture graph on paper. Write one question it can answer.",
+   "first": "Sort 6 small things into 2 kinds. How many of each? ____ and ____",
+   "text": "Sort 12 things into 3 kinds. Draw your graph on paper. Write one question it can answer.",
    "lines": 3,
    "draw": 0,
    "answer": "Many answers are right. A good graph has a title, the kinds named, one picture for each thing, all the pictures the same size, and a key. The numbers on the graph match the piles.",
@@ -2628,7 +2629,7 @@
       }
      ]
     ],
-    "size": 70
+    "size": 85
    }
   },
   {
@@ -2659,20 +2660,16 @@
      {
       "label": "Mei",
       "n": 2
-     },
-     {
-      "label": "Siti",
-      "n": 4
      }
     ],
     "icon": "cookie",
     "key": false,
-    "size": 36
+    "size": 42
    }
   },
   {
    "id": "E3",
-   "text": "A child counts the toys in a box and draws a graph. Which question can the graph answer? Write its number in the brackets.",
+   "text": "Which question can a graph of the toys in a box answer? Write its number in the brackets.",
    "answer": "(1)",
    "val": [
     1
@@ -2730,7 +2727,7 @@
   {
    "id": "H3",
    "tier": "start",
-   "text": "Ravi draws a tally for 8 sweets. He draws one group of 5 first. How many more strokes does he draw? He draws ___ more strokes.",
+   "text": "Ravi draws a tally for 8 sweets. He draws 1 group of 5 first. How many more strokes does he draw? He draws ___ more strokes.",
    "answer": "3",
    "val": 3,
    "solution": "5 and 3 more make 8. He draws 3 more strokes."
@@ -2979,7 +2976,7 @@
     "id": "c4",
     "tier": "core",
     "type": "number",
-    "q": "A tally has one group of 5 and 3 more strokes. How many is that in all?",
+    "q": "A tally has 1 group of 5 and 3 more strokes. How many is that in all?",
     "hint": "The group of 5 counts as 5. Then add the strokes.",
     "steps": [
      "The group of 5 is 5.",
@@ -3005,7 +3002,7 @@
       ]
      },
      "derive": {},
-     "q": "A tally has one group of 5 and {k} more strokes. How many is that in all?",
+     "q": "A tally has 1 group of 5 and {k} more strokes. How many is that in all?",
      "answer": "5+k",
      "hint": "The group of 5 counts as 5. Then add the strokes.",
      "steps": [
@@ -3461,7 +3458,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 4, 5 and 3; S2 6 and 8; S3 3 and 17; S4 2, 5 and 3 pictures; S5 chess and 13; S6 True, False, True, True; T1 9, 5, 6 and 20; T2 (2); T3 11 and 5; G1 3 and 7; G2 7 and 5; G3 any question the graph can answer; I1 open.",
+  "Solve every workbook question yourself first. Check the answers: S1 4, 6 and 2 (cups, books, rulers); S2 6 and 8; S3 3 and 17; S4 2, 5 and 3 pictures; S5 chess and 13; S6 False, True, True, False; T1 9, 5, 6 and 20; T2 (2); T3 11 and 5; G1 3 and 7; G2 7 and 5; G3 any question the graph can answer; I1 open.",
   "Tell parents a week before: the family finds 12 to 20 small things from the house in 3 or 4 kinds (spoons, socks, shoes, buttons; not food), no more than 8 of one kind. The graph mat is page 6 of Book 8 and needs no cutting. A family with nothing to sort draws 12 things on paper. The next lesson needs only a pencil and paper.",
   "Have the slides open. Have your own 12 small things in 3 kinds to show on camera if you wish. Practise the sort-and-move break. Say the fixed question forms every time: How many more ___ than ___? How many in all? Which has the fewest?",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
@@ -3504,8 +3501,8 @@
  },
  "workbook": {
   "header": "Graphs: ask, sort, draw",
-  "hint_p1": "Count one kind at a time and cross out each thing. Draw each picture the same size.",
-  "hint_p2": "Read the key first. Each picture stands for 1. Match the rows to see how many more.",
+  "hint_p1": "Cross out each thing as you count it.",
+  "hint_p2": "Draw each picture the same size. Match the rows to see how many more.",
   "hint_p3": "Use your things or draw a picture. Choose any question, in any order.",
   "hint_p4": "Read the key first. Choose any question. You do not have to finish them all.",
   "choice_after": 3,
