@@ -52,7 +52,7 @@
   "child": [
    "Your Term 4 book (Book 8), workbook pages 1 to 5, and the graph-mat page (page 6)",
    "12 small things from around the house, in 3 or 4 kinds (spoons, socks, shoes, buttons). Not food. Up to 20 things is fine, but no more than 8 of one kind",
-   "No small things to sort? Draw 12 things on scrap paper and sort the drawings. No printer? Rule 5 columns and 8 rows on a sheet of paper",
+   "No small things to sort? Draw 12 things on scrap paper and sort the drawings. No printer? Rule 5 rows of 8 squares on a sheet of paper",
    "Coloured pencils (optional), a pencil, a rubber and spare paper"
   ],
   "tutor": [
@@ -61,13 +61,13 @@
    "A visible clock"
   ],
   "kit_pages": [
-   "Graph mat (page 6): 5 columns by 8 rows and a key box. No cutting. Keep it flat. The children draw one picture in each square."
+   "Graph mat (page 6): 5 rows of 8 squares and a key box. No cutting. Keep it flat. The children draw one picture in each square."
   ],
   "ruler": false,
   "notes": "Nothing needs to be bought. Buttons, shells and other small things are small pieces: they stay on the table; nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No food, no matches, nothing sharp or breakable. Nobody cuts during the lesson: the graph mat is not cut. Things from the house go back where they came from after the lesson.",
   "kit_contract": [
    {
-    "piece": "graph mat page (5 columns by 8 rows)",
+    "piece": "graph mat page (5 rows of 8 squares)",
     "supplied": 1,
     "max_used": 1,
     "used_by": [
@@ -477,7 +477,7 @@
         ],
         "icon": "counter",
         "title": "Mi's finds",
-        "orient": "cols",
+        "orient": "rows",
         "size": "m"
        }
       ],
@@ -488,8 +488,8 @@
         "items": [
          "Find your graph mat.",
          "Draw one small picture for each thing.",
-         "Use one column for each kind.",
-         "Write the kind under the column."
+         "Use one row for each kind.",
+         "Write the kind at the start of the row."
         ]
        }
       ]
@@ -500,7 +500,7 @@
      "text": "Make the pictures the same size. No gaps."
     }
    ],
-   "note": "Round 2, about 5 minutes. The picture shows how Mi drew its own finds (a different set from yours): one column for each kind, one picture in each square, the same size, no gaps, the kind written at the bottom. Children draw their own graph on the graph mat from page 6, in pencil, one small picture in each square. If a child prefers, say: turn the mat on its side and the columns become rows. Same graph. Then ask: which kind has the most things; which has the fewest; how many more does the biggest pile have than the smallest. Children answer aloud from their own mat. Nobody holds the mat up to the camera. A child with no mat rules 5 columns and 8 rows on paper. Mi's example is kept off the screen for the questions: nobody copies its numbers."
+   "note": "Round 2, about 5 minutes. The picture shows how Mi drew its own finds (a different set from yours): one row for each kind, one picture in each square, the same size, no gaps, the kind written at the start of the row. Children draw their own graph on the graph mat from page 6, in pencil, one small picture in each square. Then ask: which kind has the most things; which has the fewest; how many more does the biggest pile have than the smallest. Children answer aloud from their own mat. Nobody holds the mat up to the camera. A child with no mat rules 5 rows of 8 squares on paper. Mi's example is kept off the screen for the questions: nobody copies its numbers."
   },
   {
    "id": "s-explore3",
@@ -517,7 +517,7 @@
      ]
     }
    ],
-   "note": "Take one or two answers from volunteers. Key ideas: the tallest column has the most things and we can see it without counting; the pictures are the same size so the columns can be compared; first we sort, then we count, then we draw. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact. Say: a graph is a picture of a count."
+   "note": "Take one or two answers from volunteers. Key ideas: the longest row has the most things and we can see it without counting; the pictures are the same size so the rows can be compared; first we sort, then we count, then we draw. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact. Say: a graph is a picture of a count."
   },
   {
    "id": "s-m1",
@@ -1438,7 +1438,7 @@
      },
      {
       "k": "SAY",
-      "text": "Now draw it. Find your graph mat. Draw one small picture for each thing, one column for each kind. Write the kind under the column. Make the pictures the same size, with no gaps."
+      "text": "Now draw it. Find your graph mat. Draw one small picture for each thing, one row for each kind. Write the kind at the start of the row. Make the pictures the same size, with no gaps."
      },
      {
       "k": "WORK",
@@ -1466,7 +1466,7 @@
      },
      {
       "k": "STUCK",
-      "text": "A child with a pile of 9 or more of one kind uses the first 8 and puts the rest away. A child whose pictures are different sizes redraws them as small squares or dots. A child with no mat rules 5 columns and 8 rows on paper. A child with nothing to sort draws 12 things on scrap paper."
+      "text": "A child with a pile of 9 or more of one kind uses the first 8 and puts the rest away. A child whose pictures are different sizes redraws them as small squares or dots. A child with no mat rules 5 rows of 8 squares on paper. A child with nothing to sort draws 12 things on scrap paper."
      },
      {
       "k": "NOTE",
@@ -3513,11 +3513,12 @@
   "kits": [
    {
     "type": "graph_mat",
-    "cols": 5,
-    "rows": 8,
+    "cols": 8,
+    "cell": 56,
+    "rows": 5,
     "width": 100,
     "title": "Kit page: graph mat",
-    "intro": "No cutting. Draw your graph here, one small picture in each square. No printer? Rule 5 columns and 8 rows on a sheet of paper."
+    "intro": "No cutting. Draw your graph here, one small picture in each square. No printer? Rule 5 rows of 8 squares on a sheet of paper."
    }
   ]
  },

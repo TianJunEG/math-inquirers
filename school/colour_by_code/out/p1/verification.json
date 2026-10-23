@@ -1,10 +1,7 @@
 {
- "passed": 760,
- "failed": 2,
- "failures": [
-  "CBC-07 pupil: outline width 0.9 mm and no line thinner than 0.3 mm",
-  "CBC-07 teacher: outline width 0.9 mm and no line thinner than 0.3 mm"
- ],
+ "passed": 762,
+ "failed": 0,
+ "failures": [],
  "worksheets": {
   "CBC-01": {
    "single_slip": {

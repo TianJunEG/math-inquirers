@@ -3301,7 +3301,7 @@
   "term_line": "Term 2 is done: places, strips, doubles, odd and even, groups, tables, sharing, stories, picture equations and prices.",
   "next_materials": [
    "Your Term 3 book is in the house: tear out the clock page, and a grown-up cuts out the 6 clock hands (the 2 clock faces can stay on the page or be cut out)",
-   "Keep the $1 tokens from this lesson: they are needed again in Term 3 Lesson 4 (the first money lesson)",
+   "Keep the $1 tokens from this lesson: they are needed again in Term 3 Lesson 4, Dollars and Change",
    "A real clock with a face helps (not needed to start)"
   ]
  },
@@ -3317,6 +3317,7 @@
  "tutor_prep": [
   "Solve every workbook question and every quest gate (and the secret cave item) yourself first, with the quest tutor notes (L20_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Money is whole dollars only; do not bring notes or coins into the lesson.",
   "A week before, send the families the grown-up note (L20_Quest_Parent_Note.pdf), the Quest Log (L20_Quest_Log.pdf, 3 pages, print at 100%) and the lesson materials: the workbook with the tokens kit page (a grown-up cuts out the 30 tokens), a few small shop items, and a closed envelope for the Quest Log. A family with no printer tells you: arrange the make-up slot. Build the quest files with: bash term/l1/build.sh 20 then python3 term/l1/assets/quest_build.py 20.",
+  "Hand-off to Term 3: remind families at the goodbye and in the parent summary that the Term 3 book is needed in the house, that a grown-up tears out the clock page and cuts out the 6 clock hands, and that the $1 tokens must be kept (Term 3 Lesson 4 uses them). The clock is part of the first lesson, not optional.",
   "Have the slides open. The quest is straight after the brain break, minutes 35 to 55, then the workbook. Have the quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the quest. Delete each child's notes sheet when the line is sent.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
   "Be plain with families: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the steps with different numbers, a dozen, such and how many can be bought go beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Use the words shared equally, not a division sign. The tokens and the strip are the method, not a rule to recite."

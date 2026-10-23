@@ -5,7 +5,7 @@ from .pages_numbers import grid_table, howto_grid
 
 # ---------------------------------------------------------------- P15
 COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7}        # real diameters in mm: only the RATIOS are used (a fact, not a design); the coins are drawn at 0.9 of these, bigger than real
-COIN_D = {v: d * 0.82 for v, d in COIN_REAL.items()}
+COIN_D = {v: d * 0.76 for v, d in COIN_REAL.items()}
 
 def _motif(v, cx, cy, u):
     """an ORIGINAL small picture per value (not any real coin design): leaf (5), star (10), flower (20), sailboat (50); u is the coin radius"""
@@ -533,17 +533,17 @@ def page20():
         cells = "".join(f'<span class="gc">{face_svg(10.5) if f in known and k < known[f] else ""}</span>' for k in range(9))
         rows += f'<div class="grow2"><b class="gl">{fruit_icon(f)}<span>{f}</span></b>{cells}</div>'
     clues = "".join(f"<li>{graph_text(c)}</li>" for c in cl)
-    body = (f'<div class="blk"><p class="lead">Children chose a fruit. {face_svg(6)} = 1 child.</p><div class="pgraph">{rows}</div></div>'
+    body = (f'<div class="blk"><p class="lead">Children chose a fruit. {face_svg(6)} = 1 child. Draw a face or a circle.</p><div class="pgraph">{rows}</div></div>'
             f'<ul class="clues">{clues}</ul>'
             f'<div class="ansline">a) Most children chose <span class="ab wide"></span>.</div>'
             f'<div class="ansline">b) <b>{xb}</b> has <span class="ab"></span> more than <b>{yb}</b>.</div>')
     chk_lines = [f"Count all the faces. Is the total {total}?",
-                 f"Add the faces in your a) row to your b) answer. Is it {comb}?"]
+                 f"Add the faces in your a) row to your b) answer. Is the sum {comb}?"]
     P = Page(no=20, title="Fruit Graph", tier=2, topic="Picture graphs: read, complete and answer",
              strand="Statistics - Data Analysis", syll="Picture graphs (read and interpret picture graphs)",
              ptype="Graph detective", mech="K3 the total of all faces, and a second sum that uses the answers to a) and b) (neither is a clue)",
              mech_plain="Two sums: the total of all the faces, and the row chosen in a) plus the answer to b) (neither is used to find any row)",
-             instr=["Two rows are done.", "Draw a face for each child (a circle is fine).", "Use the clues. Then answer a and b."],
+             instr=["Two rows are done.", "Draw one face for each child.", "Use the clues. Answer a and b."],
              body=body, check=" ".join(chk_lines), check_lines=chk_lines, check_boxes=None,
              key=dict(answers=", ".join(f"{f}: {cnt[f]}" for f in FRUIT) + f"; a) {most}; b) {bans}", check_result=f"Total {total} faces; second sum {cnt[most]} + {bans} = {comb}"),
              note=f"Each smiley face stands for one child (a scale of 1: one picture symbol for one child). A pupil who draws a plain circle instead of a face counts the same, so the checks do not change. The three clues fix the three missing rows one by one. The total of {total} is printed only in the check strip, so it is a separate test: a pupil who misreads a clue or draws one circle too many or too few gets a different total. The second sum tests a) and b): it is {comb} only when the right row is chosen and b) is right. The three clues start from Apple or Banana; a pupil who starts a clue from the wrong one of the two, or who reads more as fewer, also gets a wrong total or a wrong second sum (every such mix was tried). Question b) names two other fruits, so it does not give away the answer to a). More and fewer are not mirror images here (the Grape clue is {d2} and the Pear clue is {d3}), and the first two clues add different amounts ({d1} and {d2}), so a pupil who swaps the two words or swaps Apple and Banana gets a different total or a different second sum.",

@@ -6,7 +6,7 @@
 | CBC-04 | House | Place value: tens and ones | 1 | 1, 2, 3, 4, 5 | 17 | tally, small marks (parts with the same mark share a colour) | 170/170 = 100.0% | 99.9% / 97.4% | 4.9 mm | PASS |
 | CBC-05 | Ice Cream | Counting in 2s, 5s and 10s | 2 | 60, 65, 70, 75, 80 | 13 | tally, mirror pairs | 1300/1300 = 100.0% | 99.8% / 95.5% | 4.5 mm | PASS |
 | CBC-06 | Owl | Comparing and ordering numbers to 100 | 2 | 55, 60, 65, 70, 75 | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.9 mm | PASS |
-| CBC-07 | Sailboat | Money: coins and cents | 1 | 10¢, 20¢, 30¢, 40¢, 50¢ | 13 | tally, small marks (parts with the same mark share a colour) | 260/260 = 100.0% | 99.9% / 98.5% | 4.2 mm | FAIL |
+| CBC-07 | Sailboat | Money: coins and cents | 1 | 10¢, 20¢, 30¢, 40¢, 50¢ | 13 | tally, small marks (parts with the same mark share a colour) | 260/260 = 100.0% | 99.9% / 98.5% | 4.2 mm | PASS |
 | CBC-08 | Butterfly | Time: o'clock and half past | 1 | 2 o'clock, 4 o'clock, 6 o'clock, half past 3, half past 7 | 14 | tally, mirror pairs | 322/322 = 100.0% | 100.0% / 100.0% | 4.8 mm | PASS |
 | CBC-09 | Ice Cream | Length in centimetres | 1 | 2 cm, 3 cm, 4 cm, 5 cm, 6 cm | 13 | tally, mirror pairs | 260/260 = 100.0% | 99.8% / 95.5% | 4.7 mm | PASS |
 | CBC-10 | House | Shapes: corners | 1 | 3, 4, 6, 7, 8 | 17 | tally, small marks (parts with the same mark share a colour) | 204/204 = 100.0% | 99.9% / 97.4% | 4.4 mm | PASS |

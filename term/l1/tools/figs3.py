@@ -1029,7 +1029,7 @@ def render_kit(spec):
     if t == 'shape_pieces': return shape_pieces(spec.get('counts'), spec.get('unit_mm', 30), spec.get('page'), u)
     if t == 'pair_cards': return pair_cards(spec.get('labels'), spec.get('sets', 3), spec.get('per', 4), u)
     if t == 'grid_mat': return grid_mat(spec.get('routes', 3), spec.get('copies', 2), u=u)
-    if t == 'graph_mat': return graph_mat(spec.get('cols', 5), spec.get('rows', 8), u=u)
+    if t == 'graph_mat': return graph_mat(spec.get('cols', 5), spec.get('rows', 8), spec.get('cell', 62), u=u)
     if t == 'tool_cards': return tool_cards(spec.get('tools'), spec.get('problems'), u)
     if t == 'event_cards': return event_cards(spec.get('events'), u)
     if t == 'stick_strips': return stick_strips(spec.get('n', 14), spec.get('length_mm', 60), u)
