@@ -2154,33 +2154,33 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Mi's puzzle: Two numbers add up to 12. One number is 2 more than the other. Fill in the table of every pair that makes 12. Then answer (a) and (b).",
-        "answer": "5 and 7; 1 pair",
+        "text": "Mi's puzzle: Two jars hold 12 shells in all. The blue jar holds 4 more shells than the red jar. Fill in the table of every pair that makes 12. Then answer (a) and (b).",
+        "answer": "4 and 8; 1 pair",
         "val": [
-          5,
-          7,
+          4,
+          8,
           1
         ],
-        "hint": "Start at 0 and 12. Take 1 from the first number and give it to the second. Find the difference each time.",
-        "solution": "The pairs are 0 and 12, 1 and 11, 2 and 10, 3 and 9, 4 and 8, 5 and 7, 6 and 6. The differences are 12, 10, 8, 6, 4, 2 and 0. Only 5 and 7 differ by 2. So the numbers are 5 and 7, and no other pair works.",
+        "hint": "Start at 0 and 12. Take 1 from the blue jar and give it to the red jar. Find the difference each time.",
+        "solution": "The pairs are 0 and 12, 1 and 11, 2 and 10, 3 and 9, 4 and 8, 5 and 7, 6 and 6. The differences are 12, 10, 8, 6, 4, 2 and 0. Only 4 and 8 differ by 4. So the red jar holds 4 and the blue jar holds 8, and no other pair works.",
         "mistakes": [
-          "Stopping at 5 and 7 without listing every pair.",
+          "Stopping at 4 and 8 without listing every pair.",
           "Writing 6 and 6 (the difference is 0)."
         ],
         "mins": 7,
         "parts": [
           {
             "l": "a",
-            "text": "The numbers are [] and [] .",
-            "ans": "5 and 7",
+            "text": "The red jar holds [] shells and the blue jar holds [] shells.",
+            "ans": "4 and 8",
             "val": [
-              5,
-              7
+              4,
+              8
             ]
           },
           {
             "l": "b",
-            "text": "[] pair has a difference of 2.",
+            "text": "[] pair has a difference of 4.",
             "ans": "1",
             "val": 1
           }
@@ -2188,8 +2188,8 @@
         "visual": {
           "type": "table",
           "head": [
-            "First",
-            "Second",
+            "Red",
+            "Blue",
             "Difference"
           ],
           "rows": [
@@ -2534,20 +2534,20 @@
         "id": "c2",
         "tier": "core",
         "type": "number",
-        "q": "Two numbers add up to 12. One number is 2 more than the other. What is the smaller number?",
-        "hint": "List the pairs that make 12. Find the pair that is 2 apart.",
+        "q": "Two jars hold 16 shells in all. The blue jar holds 6 more shells than the red jar. How many shells does the red jar hold?",
+        "hint": "List the pairs that make 16. Find the pair that is 6 apart.",
         "steps": [
-          "The pairs are 5 and 7, 4 and 8, and so on.",
-          "5 and 7 make 12, and 7 is 2 more than 5.",
-          "The smaller number is 5."
+          "The pairs are 5 and 11, 4 and 12, and so on.",
+          "5 and 11 make 16, and 11 is 6 more than 5.",
+          "The red jar holds 5."
         ],
         "answer": 5,
         "slips": [
           {
             "a": [
-              7
+              11
             ],
-            "say": "That is the bigger number. Which number is smaller?"
+            "say": "That is the blue jar. Which jar is the red jar?"
           }
         ],
         "tpl": {
@@ -2560,14 +2560,14 @@
               7
             ],
             "d": [
-              2,
-              4
+              4,
+              6
             ]
           },
           "derive": {
             "t": "2*s+d"
           },
-          "q": "Two numbers add up to {t}. One number is {d} more than the other. What is the smaller number?",
+          "q": "Two jars hold {t} shells in all. The blue jar holds {d} more shells than the red jar. How many shells does the red jar hold?",
           "answer": "s",
           "hint": "List the pairs that make {t}. Find the pair that is {d} apart.",
           "steps": [
@@ -3085,7 +3085,7 @@
       "G1",
       "G3"
     ],
-    "text": "Two numbers add up to 12 and one is 2 more than the other: list every pair that makes 12 (0 and 12 up to 6 and 6), find the differences, and see that only 5 and 7 differ by 2. The proof is the list: every case was tried, so the answer is the only one. Writing a puzzle with a rule and a proof (G3), and checking a friend's puzzle clue by clue (G2), are the steps around it. This is beyond Primary 1 on purpose: the syllabus pages we hold name no list of heuristics, and no Primary 1 paper asks a child to write a puzzle. Named puzzle: Puzzle With a Proof.",
+    "text": "Two jars hold 12 shells and the blue jar holds 4 more than the red jar: list every pair that makes 12 (0 and 12 up to 6 and 6), find the differences, and see that only 4 and 8 differ by 4. The proof is the list: every case was tried, so the answer is the only one. Writing a puzzle with a rule and a proof (G3), and checking a friend's puzzle clue by clue (G2), are the steps around it. This is beyond Primary 1 on purpose: the syllabus pages we hold name no list of heuristics, and no Primary 1 paper asks a child to write a puzzle. Named puzzle: Puzzle With a Proof.",
     "parent": "Writing a puzzle with a rule and showing why its answer is the only one goes past the Primary 1 syllabus on purpose."
   },
   "challenge_quest": {
@@ -3534,32 +3534,32 @@
       "optional": true,
       "lesson": "beyond",
       "strand": "cave",
-      "skill": "Saving 5 cents more each day (money in cents and a growing pattern joined)",
-      "text": "Think harder (optional). Ali saves 5¢ on Monday, 10¢ on Tuesday and 15¢ on Wednesday. Each day he saves 5¢ more than the day before.",
+      "skill": "Bus fare going up 10 cents a day (money in cents and a growing pattern joined)",
+      "text": "Think harder (optional). Mi's bus ride costs 20¢ on Day 1, 30¢ on Day 2 and 40¢ on Day 3. Each day it costs 10¢ more than the day before.",
       "parts": [
         {
           "l": "a",
-          "text": "On Friday he saves ___ ¢.",
-          "ans": "25",
-          "val": 25
+          "text": "On Day 5 it costs ___ ¢.",
+          "ans": "60",
+          "val": 60
         },
         {
           "l": "b",
-          "text": "From Monday to Friday he saves ___ ¢ in all.",
-          "ans": "75",
-          "val": 75
+          "text": "It costs 80¢ on Day ___ .",
+          "ans": "7",
+          "val": 7
         }
       ],
-      "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all.",
-      "answer": "25¢; 75¢",
+      "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Mi's bus ride costs 20 cents on Day 1, 30 cents on Day 2 and 40 cents on Day 3. Each day it costs 10 cents more than the day before. Part a: on Day 5 it costs blank cents. Part b: it costs 80 cents on Day blank.",
+      "answer": "60¢; Day 7",
       "val": [
-        25,
-        75
+        60,
+        7
       ],
-      "solution": "Monday 5, Tuesday 10, Wednesday 15, Thursday 20, Friday 25. In all: 5 + 10 + 15 + 20 + 25 = 75 cents.",
+      "solution": "Day 1 20, Day 2 30, Day 3 40, Day 4 50, Day 5 60, Day 6 70, Day 7 80. So Day 5 costs 60 cents and 80 cents is Day 7.",
       "mistakes": [
-        "(a) 20 (Thursday).",
-        "(b) 25 (only Friday) or 65 (one day left out)."
+        "(a) 50 (Day 4).",
+        "(b) 8 (counting 80 as 8 tens)."
       ],
       "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing.",
       "because": true,

@@ -2485,10 +2485,10 @@
   {
    "id": "H4",
    "tier": "think",
-   "text": "Count every pair of numbers that make 12. Start with 1 + 11 and stop at 6 + 6. How many pairs are there? There are ___ pairs.",
-   "answer": "6",
-   "val": 6,
-   "solution": "1 and 11, 2 and 10, 3 and 9, 4 and 8, 5 and 7, 6 and 6. That is 6 pairs."
+   "text": "Lily puts 8 marbles into a red cup and a blue cup. Each cup has at least 1 marble. Start with 1 marble in the red cup. How many different ways are there? There are ___ ways.",
+   "answer": "7",
+   "val": 7,
+   "solution": "Red 1 and blue 7, red 2 and blue 6, red 3 and blue 5, red 4 and blue 4, red 5 and blue 3, red 6 and blue 2, red 7 and blue 1. That is 7 ways."
   },
   {
    "id": "H5",

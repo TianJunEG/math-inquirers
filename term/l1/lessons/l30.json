@@ -28,14 +28,14 @@
    "Revisiting the content of the term in fresh numbers: reading a clock and adding half an hour or an hour, coins, change and prices, the calendar, a growing pattern and checking a sum (Primary 1 time, money and number patterns; see Term 3 Lessons 1 to 9)",
    "Mi's Challenge Quest: 8 short gates (6 visit the lessons of the term and 2 are mixed gates with no lesson tag) and an optional secret cave (all at Start here level)"
   ],
-  "note": "Strand label for the tutor only. This is a consolidation lesson (owner decision X10-BEFORE, 23 Oct 2026): it teaches no new idea and spirals Term 3 in fresh numbers. The syllabus pages we hold name no list of heuristics, so the seven tool names are this program's own (the same names as the toolbox card; Try something simpler joins in Term 4). Start here names the tool only on the answer line (the child writes the tool used and ticks I checked) and never in the question. Think harder names the tools. Go further names none. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: switching tool when the first one gets stuck, a table of tries, elimination with a table, a pattern with a rule of 4 more each time, and a cycle of 3 days on a week of 7. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes, am or pm and half an hour later (Term 3 Lessons 1 to 3), 2 coins and change (24), 3 compare prices and exactly $10 (25 and 26), 4 days later and a week on the month page (27, moved here from the old Term 3 Lesson 10), 5 sticks (28), 6 a wrong sum (29), 7 and 8 mixed gates (work backwards with money, and coins by guess and check) with no lesson tag; the secret cave is an unseen puzzle joining money and listing. Fill the Grid is retired: its elimination idea survives as Think harder T3, solved with a table. Non-routine types (tutor only): a pattern (add the same each time), work backwards (stickers given away), guess and check (5-cent and 10-cent coins), logic by elimination with a table (pets), list every way (two tags that cost exactly an amount), a cycle (swims every 3 days)."
+  "note": "Strand label for the tutor only. This is a consolidation lesson (owner decision X10-BEFORE, 23 Oct 2026): it teaches no new idea and spirals Term 3 in fresh numbers. The syllabus pages we hold name no list of heuristics, so the seven tool names are this program's own (the same names as the toolbox card; Try something simpler joins in Term 4). Start here names the tool only on the answer line (the child writes the tool used and ticks I checked) and never in the question. Think harder names the tools. Go further names none. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: switching tool when the first one gets stuck, a table of tries, elimination with a table, a pattern with a rule of 4 more each time, and a cycle of 3 days on a week of 7. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes, am or pm and half an hour later (Term 3 Lessons 1 to 3), 2 coins and change (24), 3 compare prices and exactly $10 (25 and 26), 4 days later and a week on the month page (27, moved here from the old Term 3 Lesson 10), 5 sticks (28), 6 a wrong sum (29), 7 and 8 mixed gates (work backwards with money, and coins by guess and check) with no lesson tag; the secret cave is an unseen puzzle joining money and listing. Fill the Grid is retired: its elimination idea survives as Think harder T3, solved with a table. Non-routine types (tutor only): a pattern (add the same each time), work backwards (stickers given away), guess and check (5-cent and 10-cent coins), logic by elimination with a table (caps), list every way (two tags that cost exactly an amount), a cycle (swims every 3 days)."
  },
  "contest_moves": [
   "choose the tool that fits and say why, then check a second way",
   "switch tool when the first one is too slow (drawing the 8th picture, then a table)",
   "work backwards with the tool not named: stickers given away and some left",
   "guess and check with a table of tries: 5 coins worth 35 cents",
-  "logic by elimination with a table: three children, three pets, two clues",
+  "logic by elimination with a table: three children, three caps, three clues",
   "a cycle on a week of 7: swims every 3 days"
  ],
  "contest_where": "Think harder, Go further and the Investigation",
@@ -1629,56 +1629,56 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Mei, Ali and Ben each have one pet: a cat, a fish or a bird. Ali has the fish. Mei does not have the cat. Tick a box when it is true.",
+    "text": "Kumar, Lily and Wei each wear one cap: red, blue or green. Lily's cap is not red and not blue. Kumar's cap is not green. Wei's cap is not blue. Tick a box when it is true.",
     "parts": [
      {
       "l": "a",
-      "text": "Mei has the ______ .",
-      "ans": "bird",
-      "val": "bird"
+      "text": "Wei wears the ______ cap.",
+      "ans": "red",
+      "val": "red"
      },
      {
       "l": "b",
-      "text": "Ben has the ______ .",
-      "ans": "cat",
-      "val": "cat"
+      "text": "Kumar wears the ______ cap.",
+      "ans": "blue",
+      "val": "blue"
      }
     ],
-    "answer": "bird; cat",
+    "answer": "red; blue",
     "val": [
-     "bird",
-     "cat"
+     "red",
+     "blue"
     ],
-    "hint": "Tick Ali and fish. Then which pets are left for Mei and Ben?",
-    "solution": "Ali has the fish, so Mei and Ben do not. Mei does not have the cat, so Mei has the bird. Ben has the cat. Check: three different pets.",
+    "hint": "Tick Lily and green first. Then which caps are left for Kumar and Wei?",
+    "solution": "Lily's cap is not red and not blue, so Lily wears green. Wei's cap is not blue and not green, so Wei wears red. Kumar wears blue. Check: three different caps, and Kumar's cap is not green.",
     "mistakes": [
-     "Mei has the fish.",
-     "Ben has the bird."
+     "Wei wears the green cap.",
+     "Kumar wears the red cap."
     ],
     "mins": 5,
     "visual": {
      "type": "table",
      "head": [
       "",
-      "cat",
-      "fish",
-      "bird"
+      "red",
+      "blue",
+      "green"
      ],
      "rows": [
       [
-       "Mei",
+       "Kumar",
        "[ ]",
        "[ ]",
        "[ ]"
       ],
       [
-       "Ali",
+       "Lily",
        "[ ]",
        "[ ]",
        "[ ]"
       ],
       [
-       "Ben",
+       "Wei",
        "[ ]",
        "[ ]",
        "[ ]"

@@ -178,7 +178,7 @@ def run(d):
     q = H['H1']; eq(nums(q['text'])[:2], [4, 4], 'H1 text'); eq(len(small_squares(4, 4)), 16, 'H1'); eq(q['val'], 16, 'H1 val')
     q = H['H2']; eq(nums(q['text'])[:2], [3, 4], 'H2 text'); eq(len(ways(3, 4)), 12, 'H2'); eq(q['val'], 12, 'H2 val')
     q = H['H3']; eq([10 - 2, 10 - 3], [8, 7], 'H3'); eq(q['val'], [8, 7], 'H3 val')
-    q = H['H4']; eq(len(pairs_total(12)), 6, 'H4'); eq(pairs_total(12)[-1], (6, 6), 'H4 stops at 6 + 6'); eq(q['val'], 6, 'H4 val'); eq(nums(q['text']), [12, 1, 11, 6, 6], 'H4 text')
+    q = H['H4']; ways = [(r, 8 - r) for r in range(1, 8)]; eq(len(ways), 7, 'H4 red 1 to 7 (blue 7 to 1)'); eq(all(r >= 1 and b >= 1 and r + b == 8 for r, b in ways), True, 'H4 every way has at least 1 in each cup'); eq(q['val'], 7, 'H4 val'); eq(nums(q['text']), [8, 1, 1], 'H4 text')
     q = H['H5']; l16 = json.load(open(os.path.join(L1, 'lessons', 'l16.json')))['home_practice']; src = [h for h in l16 if h['id'] == 'H3'][0]
     eq((q['text'], q['answer'], q['val']), (src['text'], src['answer'], src['val']), 'H5 is the Term 2 Lesson 6 item H3, copied'); eq(q['rewind_of'], 'Term 2 Lesson 6', 'H5 tag'); eq([h['tier'] for h in d['home_practice']], ['start', 'start', 'start', 'think', 'start'], 'home tiers')
     # ---------------------------------------------------------------- online practice, authored numbers

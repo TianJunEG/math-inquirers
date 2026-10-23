@@ -79,10 +79,11 @@ def coin_splits(count, total, a=5, b=10):
 
 
 def pets():
+    # Kumar, Lily, Wei each wear red, blue or green: Lily is not red and not blue; Kumar is not green; Wei is not blue
     sols = []
-    for perm in itertools.permutations(['cat', 'fish', 'bird']):
-        mei, ali, ben = perm
-        if ali == 'fish' and mei != 'cat':
+    for perm in itertools.permutations(['red', 'blue', 'green']):
+        kumar, lily, wei = perm
+        if lily not in ('red', 'blue') and kumar != 'green' and wei != 'blue':
             sols.append(perm)
     return sols
 
@@ -186,7 +187,7 @@ def run(d):
     # ---------------------------------------------------------------- Think harder
     q = T['T1']; eq((plus(9, 7), minus(16, 7), plus(16, 0)), (16, 9, 16), 'T1 both tools and check'); eq(q['val'], [16, 16], 'T1 val')
     q = T['T2']; row = [linear(3, 4, k) for k in range(1, 9)]; eq(row, [3, 7, 11, 15, 19, 23, 27, 31], 'T2 steps'); eq(q['visual']['rows'][0], ['Blocks', '3', '7', '11', '[]', '[]', '23'], 'T2 table'); eq((row[3], row[4], row[5], row[7]), (15, 19, 23, 31), 'T2 values'); eq(q['val'], [15, 19, 31], 'T2 val')
-    q = T['T3']; eq(pets(), [('bird', 'fish', 'cat')], 'T3 exactly one assignment (Mei, Ali, Ben)'); eq(q['val'], ['bird', 'cat'], 'T3 val'); eq([r[0] for r in q['visual']['rows']], ['Mei', 'Ali', 'Ben'], 'T3 table rows'); eq(q['visual']['head'], ['', 'cat', 'fish', 'bird'], 'T3 columns')
+    q = T['T3']; eq(pets(), [('blue', 'green', 'red')], 'T3 exactly one assignment (Kumar, Lily, Wei)'); eq(q['val'], ['red', 'blue'], 'T3 val (Wei, Kumar)'); eq([r[0] for r in q['visual']['rows']], ['Kumar', 'Lily', 'Wei'], 'T3 table rows'); eq(q['visual']['head'], ['', 'red', 'blue', 'green'], 'T3 columns')
     q = T['T4']; eq(2 * 5 + 3 * 10, 40, 'T4a'); eq(coin_splits(5, 35), [(3, 2)], 'T4 exactly one split'); eq(q['val'], [40, 'Too high', 3, 2], 'T4 val')
     # ---------------------------------------------------------------- Go further
     q = T['G1']; eq((plus(6, 6), minus(minus(30, 12), 9)), (12, 9), 'G1'); eq(plus(plus(12, 9), 9), 30, 'G1 check'); eq(q['val'], [12, 9], 'G1 val')
