@@ -257,3 +257,7 @@ Owner approved the cover publisher line "Preciouslyours Pte Ltd, trading as Math
 - BALANCE-KEEP: P1 Semester 2 stays at 9 one-star / 11 two-star pages (P1-39 two stars).
 - EXT-ADDRESS-YES and EXT-COPYCHECK-YES: extension book Level 1 gets the registered office address and publisher line; the external duplicate gate is re-run with the private files and its review list read by hand (running).
 - Owner question (open): can the workbooks be printed with perforated, tear-out pages? See answer in the 23 Oct chat; to be asked of the printer (quote_request.md).
+
+## 23 Oct 2026 (night): TERMCHECK-YES, RETROFIT-YES
+- TERMCHECK-YES: run a similarity check of all 40 Level 1 term lessons against the private school-paper and SASMO files (report first, fixes after the term books integration finishes).
+- RETROFIT-YES: retrofit the thin non-routine spots (work backwards, three-number equations, multiplication true/false) into Level 1 lessons 1-20. Timing not stated by owner: default is version 2 after the first release unless owner says RETROFIT-NOW.
