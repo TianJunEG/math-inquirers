@@ -49,7 +49,7 @@
  },
  "materials": {
   "child": [
-   "Your Term 4 book (Book 7): the fold-shapes page (page 6), torn out along the dashed line, with the 10 paper shapes cut out by a grown-up beforehand: 4 circles, 4 squares and 2 long rectangles. Nobody cuts during the lesson; children only fold",
+   "Your Term 4 book (Book 7): the 3 fold-shapes pages (pages 6 to 8), torn out along the dashed line, with the 10 paper shapes cut out by a grown-up beforehand: 4 circles, 4 squares and 2 long rectangles. Nobody cuts during the lesson; children only fold",
    "No printer or no cutting? A grown-up cuts 4 circles (trace round a cup), 4 squares and 2 long strips from plain paper",
    "A ruler (the one you keep at home), a pencil, a rubber, a coloured pencil, and spare paper for the warm-up",
    "8 small things such as coins or buttons for the warm-up, or draw 8 dots on paper"
@@ -60,7 +60,7 @@
    "A visible clock"
   ],
   "kit_pages": [
-   "Fold-shapes page (page 6): 4 circles, 4 squares and 2 long rectangles (each with 3 faint lines), cut out by a grown-up. Children only fold. Keep the pieces in an envelope with your name"
+   "Fold-shapes pages (pages 6 to 8): 4 circles, 4 squares and 2 long rectangles (each marked with faint grid lines), cut out by a grown-up. Children only fold. Keep the pieces in an envelope with your name"
   ],
   "ruler": true,
   "notes": "A ruler is used to draw straight lines (Start here S6 and Think harder T1). Nothing needs to be bought. The paper shapes and the 8 small things stay on the table: nothing goes in the mouth or ears, and they are kept away from younger brothers and sisters. No scissors, matches, toothpicks or anything sharp in the lesson: a grown-up cuts the shapes beforehand. In class we use 2 circles (Explore), 1 long rectangle (Explore round 2) and up to 3 squares (Think harder and the Investigation at home); the rest are spares.",
@@ -83,7 +83,7 @@
     ]
    },
    {
-    "piece": "long rectangles with 3 faint lines",
+    "piece": "long rectangles marked with faint grid lines",
     "supplied": 2,
     "max_used": 1,
     "used_by": [
@@ -508,7 +508,7 @@
      "ordered": true
     }
    ],
-   "note": "Round 2, about 5 minutes. Fold the same circle in half again so the fold lands across the first one; open it: 4 parts that all match, so they are quarters. Ask a child to lay 2 quarters on 1 half: they cover it exactly, so 2 quarters make 1 half. Then the long rectangle from the kit: it has 3 faint lines. Fold it in half, then in half again so the folds land on the faint lines; open it. 4 equal strips, so each strip is a quarter of the rectangle. Answers: 4 parts; yes they match; a quarter; the folds land on the faint lines. A child with no rectangle folds a long strip of paper twice."
+   "note": "Round 2, about 5 minutes. Fold the same circle in half again so the fold lands across the first one; open it: 4 parts that all match, so they are quarters. Ask a child to lay 2 quarters on 1 half: they cover it exactly, so 2 quarters make 1 half. Then the long rectangle from the kit: it has faint grid lines. Fold it in half, then in half again so the folds land on the faint lines; open it. 4 equal strips, so each strip is a quarter of the rectangle. Answers: 4 parts; yes they match; a quarter; the folds land on the faint lines. A child with no rectangle folds a long strip of paper twice."
   },
   {
    "id": "s-explore2-ans",
@@ -1003,7 +1003,7 @@
     },
     {
      "t": "answer",
-     "text": "Item 1: a quarter. The rectangle has 4 equal parts. Item 2: a half. 2 parts are bigger than 4 parts of the same circle."
+     "text": "Item 1: a quarter. The rectangle has 4 equal parts. Item 2: a half. One of the 2 parts is bigger than one of the 4 parts of the same circle."
     }
    ],
    "note": "Answer slide for the previous slide. Read the answer aloud after the children have answered, then give the idea in your own words. The notes on the previous slide have the answers and the common slips."
@@ -1602,7 +1602,7 @@
      },
      {
       "k": "SAY",
-      "text": "Now take a long rectangle. It has three faint lines. Fold it in half, and in half again, so the folds land on the faint lines. Open it."
+      "text": "Now take a long rectangle. It has faint lines. Fold it in half, and in half again, so the folds land on the faint lines. Open it."
      },
      {
       "k": "WORK",
@@ -3506,7 +3506,7 @@
  ],
  "tutor_prep": [
   "Solve every workbook question yourself first, with your own paper shapes and a ruler. Check: S1 yes, no, yes; S2 4 equal parts, quarter; S3 any one part of the square and of the circle; S4 2 and 4; S5 shape 2 and shape 3; S6 one line and two lines through the middle; T1 three different cuts, Yes; T2 4 and 2; T3 true, false, true, false; G1 4, 4, 4, then No; G2 half circle, triangle; G3 12 and 6; I1 2, then at least two ways to make 4 equal parts; E1 quarter; E2 2; E3 No.",
-  "Tell families before Term 4 starts (the goodbye in Lesson 30 says so): your Term 4 book is in the house; tear out the fold-shapes page along the dashed line; a grown-up cuts out the 10 shapes (4 circles, 4 squares, 2 long rectangles) and keeps them in an envelope; a ruler and a coloured pencil. No printer: a grown-up cuts 4 circles (trace round a cup), 4 squares and 2 long strips from plain paper. Also tell them the start date of Term 4.",
+  "Tell families before Term 4 starts (the goodbye in Lesson 30 says so): your Term 4 book is in the house; tear out the 3 fold-shapes pages along the dashed line; a grown-up cuts out the 10 shapes (4 circles, 4 squares, 2 long rectangles) and keeps them in an envelope; a ruler and a coloured pencil. No printer: a grown-up cuts 4 circles (trace round a cup), 4 squares and 2 long strips from plain paper. Also tell them the start date of Term 4.",
   "Have the slides open. Have your own folded circle and square to show on camera if you wish. Say equal, half, quarter and whole the same way every time, and keep the sentence: there are two equal parts, so each part is a half. Do not write or say 1/2 or 1/4.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive. Say the recording notice, then start the recording; once it is running, avoid first names. Nobody holds paper or a folded shape up to the camera.",
   "Be plain with families: halves and quarters of a circle are school Primary 1 shapes work (2D Shapes 1.1). No Primary 1 school paper in the sample we studied has an equal-parts item, so the wording is marked unverified. Cutting the same half into different shapes (Same Half, Different Shape), finding a half or a quarter of a number of squares and finding the whole from a quarter go beyond Primary 1 on purpose, at Think harder and Go further only. Do not call the lesson MOE-aligned.",
@@ -3527,7 +3527,7 @@
    {
     "type": "fold_shapes",
     "title": "Kit page: shapes to fold",
-    "intro": "A grown-up cuts out all 10 shapes before the lesson: 4 circles, 4 squares and 2 long rectangles with 3 faint lines. Children only fold. No printer or no cutting? A grown-up cuts 4 circles (trace round a cup), 4 squares and 2 long strips from plain paper. Keep the shapes in an envelope."
+    "intro": "A grown-up cuts out all 10 shapes before the lesson: 4 circles, 4 squares and 2 long rectangles marked with faint grid lines. Children only fold. No printer or no cutting? A grown-up cuts 4 circles (trace round a cup), 4 squares and 2 long strips from plain paper. Keep the shapes in an envelope."
    }
   ]
  },
