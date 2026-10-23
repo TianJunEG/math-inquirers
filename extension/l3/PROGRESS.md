@@ -16,3 +16,5 @@ Resume: run `python3 extension/l3/src/uNN.py` for any unit to rewrite its json; 
 | 8 | Angle and line detectives | written, checked, gates ok, pages viewed |
 | 9 | Measure and money masters | written, checked, gates ok, pages viewed |
 | 10 | Puzzle day | written, checked, gates ok, pages viewed |
+
+All 10 units done. Full build: 102 pages (soft and print). Gates: run_checks, dup_check, wording_lint, build, bw_check, check_bw, fill_check all pass. Resume point: none; only the coordinator note about per-level Welcome / "Beyond Level N" keys in levels.json is pending (see TOOL_REQUESTS.md): after the shared tool change, set the Level 3 keys, rebuild and re-run gates.

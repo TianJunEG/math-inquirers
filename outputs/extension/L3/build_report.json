@@ -57,9 +57,9 @@
    "kind": "front",
    "label": "Pace plan",
    "exempt": true,
-   "fill": 0.7552619721936148,
+   "fill": 0.7410369464469619,
    "over": false,
-   "excess_mm": -62.9,
+   "excess_mm": -66.5,
    "edition": "soft"
   },
   {
@@ -707,9 +707,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.8625772399588053,
+   "fill": 0.8755632080329557,
    "over": false,
-   "excess_mm": -35.3,
+   "excess_mm": -32,
    "edition": "soft"
   },
   {
@@ -767,9 +767,9 @@
    "kind": "front",
    "label": "My progress",
    "exempt": true,
-   "fill": 0.8684185118434603,
+   "fill": 0.8541934860968075,
    "over": false,
-   "excess_mm": -33.8,
+   "excess_mm": -37.5,
    "edition": "soft"
   },
   {
@@ -1073,9 +1073,9 @@
    "kind": "front",
    "label": "Pace plan",
    "exempt": true,
-   "fill": 0.7573217044284243,
+   "fill": 0.7430966786817713,
    "over": false,
-   "excess_mm": -62.3,
+   "excess_mm": -66,
    "edition": "print"
   },
   {
@@ -1723,9 +1723,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.8625772399588053,
+   "fill": 0.8755632080329557,
    "over": false,
-   "excess_mm": -35.3,
+   "excess_mm": -32,
    "edition": "print"
   },
   {
@@ -1783,9 +1783,9 @@
    "kind": "front",
    "label": "My progress",
    "exempt": true,
-   "fill": 0.8704782440782698,
+   "fill": 0.8562532183316169,
    "over": false,
-   "excess_mm": -33.3,
+   "excess_mm": -36.9,
    "edition": "print"
   },
   {
@@ -2052,7 +2052,7 @@
  "bw_pipeline": {
   "pages": 102,
   "dpi": 600,
-  "mb": 13.34,
+  "mb": 13.33,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0036
  }
