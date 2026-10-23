@@ -286,7 +286,7 @@ How the tables were built. Title, big idea and skill come from section 2 of each
 | 11 | Graphs That Talk | A graph answers some questions and not others | Reading data critically | EXP T, TAB T, CHAL G | EXP T: true or false statements read from a graph with a key of 4 | "Graph From Clues" | MEDIUM (pre-flight) |
 | 12 | Odd, Even, Fair | Even means pairs, no leftover | Conjecture and test | EQ T, EXP T, LOG T | EXP T: always, sometimes, never about odd and even sums | "Odd Staircase" | LOW (pre-flight) |
 | 13 | Jumps, Gaps and Columns | Subtraction is a gap; columns are place value | Representing a process | BACK T, CMP T, EXP G | EXP G: which step of a column sum is wrong, and why | "The 495 Trick" | HIGH (pre-flight) |
-| 14 | Bar Model Stories | One bar can hold the whole story | Representing | CMP T, CMP G, DIAG T, EQ G | skill: Representing | "Doubling Bars" | HIGH (pre-flight) |
+| 14 | Bar Model Stories | One bar can hold the whole story | Representing | CMP T, CMP G, DIAG T, EQ G |  | "Doubling Bars" | HIGH (pre-flight) |
 | 15 | Clock Detectives | A day is cut into hours and minutes | Chunking time | BACK T, CTX T, CMP G |  | "Past Midnight" | HIGH (pre-flight) |
 | 16 | Table Tricks | Tables connect: 4 is double 2 | Using structure | TAB T, EXP T, PAT G | EXP T: is 8 x 3 the same as 3 x 8; is it the same as 8 + 3 | "Double Double Double" | MEDIUM (pre-flight) |
 | 17 | Find All the Ways | Organise so you miss none | Systematic listing, worst case | WAYS T, WAYS G, LIST T |  | "Be Sure" | MEDIUM (pre-flight) |
@@ -340,7 +340,7 @@ How the tables were built. Title, big idea and skill come from section 2 of each
 | 7 | Fractions on the Number Line | Every fraction has a place, and many names | Generalising | EQ T, EXP T, LOG G | EXP T: same point on the line (V7.1) | "Between Neighbours" | HIGH (pre-flight) |
 | 8 | Dollars and Cents | Cents are just hundredths of a dollar | Estimating, checking | CTX T, LIST T, GC T, WAYS G | skill: Estimating, checking | "Exactly the Total" | MEDIUM (pre-flight) |
 | 9 | Time Detectives | Time is a number line that loops | Modelling with a number line | CTX T, BACK T, BACK G, CMP G |  | "Wrong Watch" | HIGH (pre-flight) |
-| 10 | Price per Piece (added) (Quest lesson) | If you know the price of several, you can find the price of one | Representing, dividing | CMP T, CTX T, TAB T, BACK T, CTX G | skill: Representing, dividing | "Free Pen Price" | MEDIUM (pre-flight) |
+| 10 | Price per Piece (added) (Quest lesson) | If you know the price of several, you can find the price of one | Representing, dividing | CMP T, CTX T, TAB T, BACK T, CTX G |  | "Free Pen Price" | MEDIUM (pre-flight) |
 
 **Level 3, Term 2 (lessons 11-20)**
 
@@ -364,7 +364,7 @@ How the tables were built. Title, big idea and skill come from section 2 of each
 | 21 | Fold, Flip, Mirror | Some changes keep the shape and some do not | Visualising, predicting | LOG T, EXP T, PAT G | EXP T: statements about mirror images | "Fold Three Times" | NONE (pre-flight) |
 | 22 | Picture Patterns (added) | Every feature of a picture runs its own cycle | Pattern to rule, visualising | PAT T, LOG T, CHAL G | LOG T: combine-and-remove grid (V22.2) | "Hidden Rule Grid" | LOW (pre-flight) |
 | 23 | Turns and Corners | Angles measure turning | Reasoning from motion | LOG T, LIST T, CTX G | LOG T: sequence of turns (V23.1) | "Turning Robot" | HIGH (pre-flight) |
-| 24 | Model Makers: Times As Many | A group can be "3 units" | Representing | CMP T, DIAG T, MULTI T, CMP G | skill: Representing | "Three in a Chain" | HIGH (pre-flight) |
+| 24 | Model Makers: Times As Many | A group can be "3 units" | Representing | CMP T, DIAG T, MULTI T, CMP G |  | "Three in a Chain" | HIGH (pre-flight) |
 | 25 | Before and After | When something is added or removed, the model changes in a visible way | Working backwards | BACK T, EQ T, EQ G |  | "Gap After the Gift" | HIGH (pre-flight) |
 | 26 | Magic Totals | When a number belongs to several lines, it counts several times | Reasoning from constraints | LOG T, LOG G, CHAL G | LOG T: plus shape (V26.2), the 3 by 3 square (V26.3) | "Which Totals Are Impossible" | MEDIUM (pre-flight) |
 | 27 | Fractions Everywhere | Fractions belong to measures, not only pictures | Applying | CTX T, MULTI T, CMP G, EQ G |  | "Half of a Dozen" | MEDIUM (pre-flight) |
@@ -441,7 +441,7 @@ How the tables were built. Title, big idea and skill come from section 2 of each
 |---|---|---|---|---|---|---|---|
 | 31 | Data Detectives: Line Graphs | A graph can be read and misread | Read, then question | TAB T, EXP T, CHAL G | EXP T: spot a misleading scale | "Fill the Gap" | HIGH (pre-flight) |
 | 32 | Pie Charts (new; Sort It Out went to 1.7) | The whole circle is the whole | Fraction of the whole | CHAL T, CMP T, EXP G | EXP G: which statement is true, false or not possible to tell | "Angle of a Sector" | NONE (pre-flight) |
-| 33 | Patterns and Rules in Words | Find the rule | Look for a pattern | PAT T, TAB T, PAT G | skill: Look for a pattern | "Gauss's Trick" | MED (pre-flight) |
+| 33 | Patterns and Rules in Words | Find the rule | Look for a pattern | PAT T, TAB T, PAT G |  | "Gauss's Trick" | MED (pre-flight) |
 | 34 | Solve a Smaller Problem | Try 3 before 100 | Solve a smaller case | PAT T, LOG G, CTX G | LOG G: pages facing each other | "Handshake Triangle" | LOW (pre-flight) |
 | 35 | Make a Systematic List | Do not miss one | List in order | WAYS T, WAYS G, LIST T |  | "Fair Spinner Game" | LOW (pre-flight) |
 | 36 | Working Backwards | Undo the story | Reverse operations | BACK T, BACK G, EQ T |  | "Mirror Number" | HIGH (pre-flight) |
@@ -575,7 +575,6 @@ How the tables were built. Title, big idea and skill come from section 2 of each
 | 38 | Seeing Solids (added) | rotate it in your head | Seeing in 3D | DIAG T, DIAG G |  | plan label: not in primary | warm-up only (plan s3); items not checked |
 | 39 | Capstone 1 | Plan and Prototype | Planning | EXP T, CHAL G, LOG T | EXP T: explain why a test result fits your rule |  | warm-up only (plan s3); items not checked |
 | 40 | Capstone 2 (Quest lesson) | Test, Explain, Present | Explaining | EXP T, CHAL G, CMP T | EXP T: explain why it works in one sentence |  | warm-up only (plan s3); items not checked |
-
 
 ---
 
