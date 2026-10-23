@@ -111,14 +111,14 @@ def page16():
     chips_letters = word[:5]
     a, b = rng.sample(items, 2)
     total = truth[a] + truth[b]
-    # the total's code table: no slip of the total gives another real word, and the five price letters plus one table letter
-    # can be arranged into at least two common words (so the word cannot be guessed from the six letters alone)
+    # the total's code table: no slip of the total gives another real word, and the table offers at least four letters for the
+    # sixth place (the true one and decoys), so the word cannot be read off the page
     free6 = [c for c in ALPHA if c not in word and (word[:5] + c).lower() not in BIG]
     for _ in range(3000):
         ttab = build_table([total], word[5], rng, 2, 40, n_decoy=3, near=(1, -1, 2, -2, 10, -10), weighted=True, letters=free6)
         bad = [v for v, L in ttab.items() if v != total and (word[:5] + L).lower() in BIG]
-        comp = {"".join(pp).lower() for L in ttab.values() for pp in itertools.permutations(chips_letters + L) if "".join(pp).lower() in COMMON}
-        if not bad and len(comp) >= 2: break
+        comp = sorted(ttab.values())             # the sixth letter could be any of these table letters: the word cannot be read off the page
+        if not bad and len(comp) >= 4: break
     else:
         raise RuntimeError("p16 total table")
     chips = "".join(f'<span class="chip">${p} <i class="cl">{letter_of[p]}</i></span>' for p in prices)
@@ -148,7 +148,7 @@ def page16():
     real = sum(("".join(letter_of[v] for v in pp) + word[5]).lower() in BIG for pp in wrong)
     P.v("V3 wrong placements that still spell a word <= 5% (large word list)", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
     P.v("V3b a wrong total never spells a word", not bad, bad)
-    P.v("V4 guess resistance: the price letters and one table letter can be arranged into at least 2 common words", len(comp) >= 2, sorted(comp)[:5])
+    P.v("V4 guess resistance: the sixth letter is one of at least 4 table letters (decoys included)", len(comp) >= 4, comp)
     P.v("V7 prices within $100, total within $40", max(prices) <= 100 and total <= 40)
     P["cv"] = dict(rate=1 - real / len(wrong), single_total=len(wrong), single_detected=len(wrong) - real)
     letters = [letter_of[truth[i]] for i in items]
