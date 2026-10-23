@@ -50,7 +50,7 @@ def design_rules(q, tier, bank):
         import art as A
         h_, m_ = A.decode_clock(q.art.meta)
         if A.hand_gap(h_, m_) < 40.0 - 1e-6: out.append(("clock hands less than 40 degrees apart", (h_, m_)))
-    if q.art is not None and q.art.meta.get("kind") == "ruler" and q.art.meta["start"] != 0: out.append(("ruler strip does not start at 0", q.art.meta))
+    if q.art is not None and q.art.meta.get("kind") == "ruler" and not q.art.meta.get("arrow"): out.append(("ruler strip has no start arrow", q.art.meta))
     if LEVEL == 2:
         if re.search(r"\$\d+\.\d\d\s*[+\u2212-]|[+\u2212-]\s*\$\d+\.\d\d", text) or re.search(r"Change|Paid", text): out.append(("add or subtract with decimal money (Primary 3)", q.lines))
         if re.search(r"\b1 (kg|m) \u2212", text) or re.search(r"\d+ kg [+\u2212] \d+ g|\d+ g [+\u2212] \d+ kg", text): out.append(("kg to g or m to cm conversion (Primary 3)", q.lines))
@@ -98,7 +98,7 @@ for bid, bank in BANKS.items():
                         terms, blank = q.seq
                         if terms[blank] != ans: bad.append((f.__name__, "sequence", q.seq))
         rec(f"{tag}: {made} sample questions each have exactly one answer in the domain, equal to the intended one ({len(forms)} forms)", not bad and made > 200, str(bad[:2])[:150])
-        rec(f"{tag}: {len(rule_bad)} design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers from 0, no decimal-money sums or kg/g conversions at Primary 2)", not rule_bad, str(rule_bad[:2])[:200])
+        rec(f"{tag}: {len(rule_bad)} design-rule breaches in the sample questions (choose-one-of-three numbers all on the key, clocks with hands >= 40 degrees apart, rulers with a start arrow, no decimal-money sums or kg/g conversions at Primary 2)", not rule_bad, str(rule_bad[:2])[:200])
         report[tag] = dict(questions=made, forms=sorted(forms), bad=len(bad))
 
 # the evaluator must be able to fail: a wrong answer, and a wrong question text, must both be rejected
@@ -201,7 +201,7 @@ for sh in sheets:
         except TC.Unparsed: ev_bad.append((rid, q.lines, "unparsed"))
     rec(f"{wid}: independent evaluator re-solves all {len(items)} printed questions from their text and picture; each equals the answer coloured and that answer is a key value", not ev_bad, str(ev_bad[:2]))
     rb = [x for it in items.values() for x in design_rules(it["q"], tier, bank)]
-    rec(f"{wid}: design rules hold on every printed question (choose-one-of-three numbers all on the key, clocks >= 40 degrees, rulers from 0, no Primary 3 money or mass items)", not rb, str(rb[:2])[:200])
+    rec(f"{wid}: design rules hold on every printed question (choose-one-of-three numbers all on the key, clocks >= 40 degrees, rulers with a start arrow, no Primary 3 money or mass items)", not rb, str(rb[:2])[:200])
     # dedupe by what a question IS (sorted numbers, wording without line breaks, decoded picture), not by its text
     sigs = [S.canon(it["q"]) for it in items.values()]
     rec(f"{wid}: no two regions have the same question (compared by evaluated content: operands in any order, same clock, same coins, same picture)", len(set(sigs)) == len(sigs), f"{len(sigs) - len(set(sigs))} repeated")

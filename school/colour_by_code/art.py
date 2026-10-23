@@ -70,19 +70,23 @@ def notes(values):
     return Art("".join(s), x - 1.2, h, 0.85, dict(kind="notes", values=list(values)))
 
 def ruler(start, end, top=None):
-    """a strip lying on a ruler marked in cm; the strip runs from `start` to `end` (not to scale)"""
+    """a strip lying on a ruler marked in cm (not to scale). A bold arrow above the left end of the strip and a bold tick on the ruler show where it starts:
+    the length is the number of cm from the arrow to the other end, whether the strip starts at 0 or at another mark."""
     top = top or max(end + 1, 6)
-    u, pad = 3.7, 2.0
+    u, pad = 3.9, 2.0
     w = top * u + 2 * pad + 1.0
     s = []
-    s.append(f'<rect x="{0.5 + pad + start * u:.2f}" y="0.5" width="{(end - start) * u:.2f}" height="3.6" rx="0.6" fill="#fff" stroke="#000" stroke-width="0.5"/>')
-    y0 = 5.2
-    s.append(f'<rect x="0.5" y="{y0}" width="{top * u + 2 * pad:.2f}" height="6.6" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    xs = 0.5 + pad + start * u
+    s.append(f'<polygon points="{xs - 1.5:.2f},0.4 {xs + 1.5:.2f},0.4 {xs:.2f},3.2" fill="#000"/>')                 # start arrow
+    s.append(f'<rect x="{xs:.2f}" y="3.6" width="{(end - start) * u:.2f}" height="3.8" rx="0.6" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    y0 = 8.6
+    s.append(f'<rect x="0.5" y="{y0}" width="{top * u + 2 * pad:.2f}" height="7.0" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(0, top + 1):
         x = 0.5 + pad + k * u
-        s.append(f'<line x1="{x:.2f}" y1="{y0}" x2="{x:.2f}" y2="{y0 + 1.7}" stroke="#000" stroke-width="0.4"/>')
-        s.append(f'<text x="{x:.2f}" y="{y0 + 4.5}" style="font-size:2.7px;font-weight:600;text-anchor:middle;dominant-baseline:central">{k}</text>')
-    return Art("".join(s), w, 12.0, 0.9, dict(kind="ruler", start=start, end=end, top=top))
+        bold = k == start
+        s.append(f'<line x1="{x:.2f}" y1="{y0}" x2="{x:.2f}" y2="{y0 + (3.0 if bold else 1.7)}" stroke="#000" stroke-width="{1.0 if bold else 0.4}"/>')
+        s.append(f'<text x="{x:.2f}" y="{y0 + 5.0}" style="font-size:{3.0}px;font-weight:{700 if bold else 600};text-anchor:middle;dominant-baseline:central">{k}</text>')
+    return Art("".join(s), w, 16.2, 0.9, dict(kind="ruler", start=start, end=end, top=top, arrow=True))
 
 def _shape(kind):
     st = 'fill="#fff" stroke="#000" stroke-width="0.55" stroke-linejoin="round"'

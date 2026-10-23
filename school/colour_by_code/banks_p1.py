@@ -306,8 +306,9 @@ def _len(tier):
         art = A.ruler(start, end, top=end + 1)
         return SEM([f"{BOX} cm"], lambda v, t=a: v == t, str(a), art=art, form="ruler from %d" % start)
     def ruler0(a, r): return rl(a, r, 0)
+    def ruler_s(a, r): return rl(a, r, r.randint(1, 3 if tier == 1 else 4))        # starts at the arrow, away from 0 (a small offset)
     def ruler_cap(a, r):
-        q = rl(a, r, 0)
+        q = rl(a, r, r.choice([0, 1, 2]))
         if q: q.lines = ["How long?", f"{BOX} cm"]; q.sol = ["How long?", f"⟦{a}⟧ cm"]; q.form += ", caption"
         return q
     def sum_(a, r):
@@ -325,7 +326,7 @@ def _len(tier):
         x = r.randint(1, a - 1); return EQ([f"{x} + {a - x} = {BOX} cm"], a, form="add, compact")
     def sub_c(a, r):
         s = r.randint(2, 6); return EQ([f"{a + s} {MINUS} {s} = {BOX} cm"], a, form="subtract, compact")
-    return [ruler0, ruler_cap, sum_, longer, shorter, cut, sum_c, sub_c]
+    return [ruler0, ruler_s, ruler_cap, sum_, longer, shorter, cut, sum_c, sub_c]
 
 # ------------------------------------------------------------------ shapes: corners and straight sides (triangle, square, rectangle, circle)
 def _combos(k_range, total):
@@ -541,7 +542,7 @@ def build_banks():
     B["time"] = Bank("time", "Time", "Time: o'clock and half past", "Find the time. Find it in the key. Colour the part with that colour.",
         {1: T([(2, 0), (4, 0), (6, 0), (3, 30), (7, 30)], times(), _time(1), tword),
          2: T([(8, 30), (9, 0), (10, 30), (11, 0), (12, 30)], times(), _time(2), tword)})
-    B["length"] = Bank("length", "Length in cm", "Length in centimetres", "Find the length. Find it in the key. Colour the part with that colour.",
+    B["length"] = Bank("length", "Length in cm", "Length in centimetres", "Each strip starts at the arrow. Count the cm from the arrow to the end. Find it in the key. Colour the part with that colour.",
         {1: T([2, 3, 4, 5, 6], range(0, 21), _len(1), lambda v: f"{v} cm"), 2: T([7, 8, 9, 10, 11], range(0, 21), _len(2), lambda v: f"{v} cm")})
     B["shapes"] = Bank("shapes", "Shapes", "Shapes: corners", "Count the corners.",
         {1: T([3, 4, 6, 7, 8], range(0, 13), _shapes(1), instr="Count the corners of the shapes in each part. Find the answer in the key. Colour the part with that colour."),
