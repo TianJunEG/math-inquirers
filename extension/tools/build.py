@@ -84,7 +84,7 @@ def licence(book, theme, ctx):
             'and it makes no promise about any test result.</li>'
             '<li>We have checked the answers with care. If you find a mistake, please tell us so we can fix it.</li>'
             '<li>Printed copies are black and white. The soft copy has the same pages in colour.</li></ul></div>'
-            '<div class="box"><h3>Contact</h3><p>Math Inquirers, business WhatsApp +65 9880 5962. Email: pypteltd@gmail.com. Registered office: [address, owner to add].</p></div>'
+            '<div class="box"><h3>Contact</h3><p>Math Inquirers, business WhatsApp +65 9880 5962. Email: pypteltd@gmail.com. Registered office: 66 Tannery Ln, Singapore 347805.</p></div>'
             '<p class="note">Edition 1, 2026. First printing.</p>'
             '<p class="note"><b>DRAFT licence text, for owner and lawyer approval. Not final.</b></p></div>')
 
