@@ -101,7 +101,7 @@
     var keys = Array.prototype.map.call(form.querySelectorAll('input[name="nfitem"]:checked'), function (c) { return c.value; });
     return soonLines().filter(function (l) { return keys.indexOf(l.p.id + "|" + l.f) >= 0; });
   }
-  function fieldErr(id, text) { var el = $(id); el.setAttribute("aria-invalid", "true"); var p = el.parentNode, m = p.querySelector(".err"); if (!m) { m = document.createElement("span"); m.className = "err"; m.setAttribute("role", "alert"); p.appendChild(m); } m.textContent = text; }
+  function fieldErr(id, text) { var el = $(id); el.setAttribute("aria-invalid", "true"); var lab = el.type === "checkbox" ? el.closest("label") : null, p = lab ? lab.parentNode : el.parentNode, m = lab ? (lab.nextElementSibling && lab.nextElementSibling.className === "err" ? lab.nextElementSibling : null) : p.querySelector(".err"); if (!m) { m = document.createElement("span"); m.className = "err"; m.setAttribute("role", "alert"); if (lab) p.insertBefore(m, lab.nextSibling); else p.appendChild(m); } m.textContent = text; }
   function clearErrs() { each(form.querySelectorAll(".err"), function (n) { n.parentNode.removeChild(n); }); each(form.querySelectorAll("[aria-invalid]"), function (n) { n.removeAttribute("aria-invalid"); }); }
   function digits(s) { return String(s).replace(/\D/g, ""); }
   function normWa(s) { var d = digits(s); if (d.length === 10 && d.slice(0, 2) === "65") d = d.slice(2); return d; }

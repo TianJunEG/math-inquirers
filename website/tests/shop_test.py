@@ -153,7 +153,7 @@ with sync_playwright() as pw:
 
     # ---- WhatsApp fallback ----
     def wa():
-        p.goto(BASE + '/shop/'); add(p, 'ext-l1', 'soft'); add(p, 'ext-l3', 'physical'); p.locator('[data-line="ext-l3|physical"] [data-qty="1"]').click()
+        p.goto(BASE + '/shop/'); p.evaluate('localStorage.clear()'); p.reload(); add(p, 'ext-l1', 'soft'); add(p, 'ext-l3', 'physical'); p.locator('[data-line="ext-l3|physical"] [data-qty="1"]').click()
         p.click('#notifyBtn'); expect(p.locator('#nfModeNote')).to_contain_text('+65 9880 5962')
         fill_valid(p); p.fill('#nfNote', 'For my son'); p.click('#nfSubmit')
         href = p.locator('#nfWaLink').get_attribute('href'); assert href.startswith('https://wa.me/6598805962?text='), href
@@ -251,7 +251,7 @@ with sync_playwright() as pw:
 
     # ---- no-JS ----
     c = b.new_context(java_script_enabled=False, viewport={'width': 1280, 'height': 900}); q = c.new_page(); q.goto(BASE + '/shop/')
-    check('no-JS: cards still show, add buttons stay hidden, WhatsApp note shown', lambda: (expect(q.locator('.pcard2')).to_have_count(6), expect(q.locator('.addbtn:visible')).to_have_count(0), expect(q.locator('#yourlist')).to_contain_text('+65 9880 5962')))
+    check('no-JS: cards still show, add buttons stay hidden, WhatsApp note shown', lambda: (expect(q.locator('.pcard2')).to_have_count(6), expect(q.locator('.addbtn:visible')).to_have_count(0), (lambda s: None if '+65 9880 5962' in s else (_ for _ in ()).throw(AssertionError('noscript note missing: ' + s)))(q.locator('#yourlist').inner_text())))
     c.close()
 
     # ---- screenshots ----
