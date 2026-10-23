@@ -123,7 +123,7 @@ def qbox(q, label=None, draw=False):
     if q.get('steps'):        # labelled step lines
         ln += ''.join(f'<div class="stp"><b>{E(s)}</b><span class="ln" style="flex:1"></span></div>' for s in q['steps'])
     cq = choice_words(q['text'], q.get('choices'))
-    if cq and not any(choice_words(p['text'], p.get('choices')) for p in q.get('parts', [])): parts += f'<div class="sub">{choice_html(cq)}</div>'
+    if cq and not q.get('choices_on_figure') and not any(choice_words(p['text'], p.get('choices')) for p in q.get('parts', [])): parts += f'<div class="sub">{choice_html(cq)}</div>'
     return f'<div class="qbox"><div class="q"><span class="qn">{lab}</span><span class="qt">{blanks(q["text"])}</span></div>{vis}{parts}{ln}</div>'
 
 

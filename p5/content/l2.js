@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 2: Fraction Feats (four operations of fractions, fraction and division)
+const FG = require('../../levels/figs_l4_6.js');
 const { TKQ, TKP } = require('./take.js');
 // Heuristics: draw a model (bar or pizza); test in order (unit fractions: try 1/2, 1/3, 1/4 … and stop when the first part is too small);
 // find the remainder first, then take the fraction of the remainder; look for a pattern in the sums; test both ways.
@@ -162,9 +163,11 @@ module.exports = {
     W.push(H.sub('c', ['(optional) Predict:&nbsp; ' + fr(1, 2) + ' + ' + fr(1, 6) + ' + ' + fr(1, 12) + ' + … + ' + fr(1, 90) + ' = ________&nbsp;&nbsp; Explain how you know.'], { after: 40 }));
     W.push(...H.lines(1));
     // Q5 backwards
-    W.push(H.q(5, ['Ravi spent ' + fr(2, 5) + ' of his money on a game and ' + fr(1, 2) + ' of the remainder on a book. He had $36 left. Draw a model.'], { keepNext: true }));
+    W.push(H.q(5, ['Ravi spent ' + fr(2, 5) + ' of his money on a game and ' + fr(1, 2) + ' of the remainder on a book. He had $36 left. Use the model.'], { keepNext: true }));
     W.push(H.p(['<b style="color:' + TEAL + '">Start here:</b> draw 5 equal parts; the game takes 2. Cut the rest to find half of it.'], { after: 20 }));
-    W.push(H.tbl([9900], [H.row([H.cell('', 9900, { h: 520 })])]));
+    W.push(H.fig(FG.barModel({ left: 20, rowH: 40, rows: [{ segs: [{ u: 1, f: 'shade', t: 'game' }, { u: 1, f: 'shade', t: 'game' }, { u: 1.5, t: 'book' }, { u: 1.5, t: '$36 left' }] }],
+      ann: [{ k: 'brace', row: 0, from: 0, to: 5, t: '? at first' }, { k: 'brace', row: 0, from: 2, to: 5, side: 'bottom', t: 'the rest: the book is half of it' }],
+      label: 'A bar for all of Ravi’s money cut into 5 equal parts. The first 2 parts are shaded for the game. The other 3 parts are cut in half: the book and $36 left. A brace over the whole bar is marked with a question mark.' })));
     W.push(H.sub('a', 'How much money did Ravi have at first?   __________'));
     W.push(H.sub('b', 'How much did the book cost?   __________'));
     // Q6 digit cards

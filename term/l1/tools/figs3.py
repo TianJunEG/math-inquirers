@@ -894,7 +894,7 @@ def _sun_card(spec, x, y, cw, ch):
     global _SUN_N
     _, n, size, pat = spec.split(':'); n = int(n)
     _SUN_N += 1; pid = f'sunpat{_SUN_N}'
-    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.095}[size] * cw
+    R = {'big': 0.30, 'mid': 0.17, 'small': 0.10, 'few': 0.085}[size] * cw
     if n == 1: pos = [(0.5, 0.5)]
     elif n == 2: pos = [(0.3, 0.5), (0.7, 0.5)]
     elif n == 5: pos = [(0.17, 0.25), (0.5, 0.25), (0.83, 0.25), (0.33, 0.75), (0.67, 0.75)]

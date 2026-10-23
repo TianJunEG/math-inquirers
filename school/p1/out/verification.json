@@ -75,7 +75,18 @@
    1.0,
    150,
    150
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    118,
+    118
+   ],
+   "all_other_values_rejected": [
+    150,
+    150
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 2,
@@ -133,7 +144,18 @@
    1.0,
    495,
    495
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    60,
+    60
+   ],
+   "all_other_values_rejected": [
+    495,
+    495
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 3,
@@ -191,7 +213,18 @@
    1.0,
    114,
    114
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    56,
+    56
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 4,
@@ -253,7 +286,21 @@
    1.0,
    719,
    719
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 5,
@@ -312,7 +359,18 @@
    1.0,
    234,
    234
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    65,
+    65
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 6,
@@ -374,7 +432,18 @@
    1.0,
    138,
    138
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    138,
+    138
+   ],
+   "all_other_values_rejected": [
+    138,
+    138
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 7,
@@ -431,7 +500,21 @@
    1.0,
    719,
    719
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 8,
@@ -475,7 +558,18 @@
    1.0,
    2,
    2
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 9,
@@ -507,7 +601,18 @@
    1.0,
    48,
    48
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    42,
+    42
+   ],
+   "all_other_values_rejected": [
+    48,
+    48
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 10,
@@ -571,7 +676,18 @@
    1.0,
    114,
    114
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    63,
+    63
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 11,
@@ -629,7 +745,18 @@
    1.0,
    594,
    594
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 12,
@@ -706,7 +833,18 @@
    1.0,
    204,
    204
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    156,
+    156
+   ],
+   "all_other_values_rejected": [
+    204,
+    204
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 13,
@@ -765,7 +903,18 @@
    1.0,
    234,
    234
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 14,
@@ -842,7 +991,18 @@
    1.0,
    1300,
    1300
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    156,
+    156
+   ],
+   "all_other_values_rejected": [
+    1300,
+    1300
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 15,
@@ -899,7 +1059,18 @@
    1.0,
    475,
    475
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    59,
+    59
+   ],
+   "all_other_values_rejected": [
+    475,
+    475
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 16,
@@ -962,7 +1133,21 @@
    1.0,
    119,
    119
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    58,
+    58
+   ],
+   "all_other_values_rejected": [
+    58,
+    58
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 17,
@@ -1020,7 +1205,18 @@
    1.0,
    66,
    66
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    50,
+    50
+   ],
+   "all_other_values_rejected": [
+    66,
+    66
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 18,
@@ -1088,7 +1284,18 @@
    1.0,
    715,
    715
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    715,
+    715
+   ],
+   "all_other_values_rejected": [
+    715,
+    715
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 19,
@@ -1151,7 +1358,18 @@
    1.0,
    40,
    40
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    34,
+    34
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 20,
@@ -1228,6 +1446,178 @@
    1.0,
    12,
    12
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    40,
+    40
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 21,
+  "code": "S1-10 (P1-21)",
+  "title": "Story Sums",
+  "tier": 2,
+  "topic": "Add and take away stories within 20",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.1, 2.2, 2.7 (concepts of addition and subtraction, +, - and =, mental calculation within 20)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.7"
+  ],
+  "ptype": "Code-breaker (stories)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 2101,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed sentences back and equals the key",
+    "ok": true,
+    "detail": "[13, 2, 11, 7, 5, 10]"
+   },
+   {
+    "name": "V1b the picture shows the first group: objects counted in the drawing equal the first number in the text",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct and within 20",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 at most one picture shows more than 12 objects",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells MONKEY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "120/120"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['monkey']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['bygone', 'monkey', 'oxygen']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   120,
+   120
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    64,
+    64
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 22,
+  "code": "S2-20 (P1-22)",
+  "title": "Two-Step Stories",
+  "tier": 2,
+  "topic": "Two-step stories: add, take away, work backwards",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.1, 2.2, 2.5, 2.7 (two-step stories within 100: problem solving, work backwards, a printed fact)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.5",
+   "AS2.7"
+  ],
+  "ptype": "Code-breaker (two-step stories)",
+  "mech": "K1 code word (6 letters) + K7 put the answer back",
+  "seed": 2202,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed sentences back: step answers and end answers equal the key",
+    "ok": true,
+    "detail": "[(43, 35), (16, 14), (4, 7), (14, 13), (85, 83), (12, 9)]"
+   },
+   {
+    "name": "V1b end answers distinct, within 100",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c the stories within 100 use tens and ones with no renaming",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1d two stories ask 'at first' and one has a printed fact",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells GUITAR",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['guitar']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['guitar', 'quartz', 'rajput']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    70,
+    70
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
  }
 ]

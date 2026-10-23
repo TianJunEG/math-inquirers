@@ -2126,6 +2126,7 @@
      "Clock (2)",
      "Clock (3)"
     ],
+    "choices_on_figure": true,
     "answer": "Clock (2)",
     "val": [
      "Clock (2)"

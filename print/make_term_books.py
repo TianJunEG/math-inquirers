@@ -42,6 +42,7 @@ def text_of(path, p):
                           capture_output=True, text=True).stdout
 
 
+QUEST_TOC = {'Quest_Log': "Mi's Challenge Quest", 'Quest_Tutor_Notes': "Mi's Challenge Quest: tutor notes", 'Quest_Parent_Note': "Mi's Challenge Quest: note for grown-ups"}
 EXTRAS = {'workbook': ['Quest_Log'], 'key': ['Home_Answers', 'Quest_Tutor_Notes'], 'home': ['Quest_Parent_Note']}
 NONCUT = {'hundred', 'hundred_square', 'groups_mat', 'array_mat', 'number_line', 'plates', 'grid_mat', 'graph_mat'}
 
@@ -188,10 +189,10 @@ def build_book(level, term, bookno, lessons, kind, ages='', per_term=10):
             if not os.path.exists(xp): continue
             xr = PdfReader(xp)
             if recto and len(seq) % 2 == 1: seq.append(None)
+            if extra in QUEST_TOC:                      # the Quest pages are listed on the contents page
+                toc.append(('Quest', (QUEST_TOC[extra], f'{len(xr.pages)} pages'), len(seq) + 1))
             for j in range(len(xr.pages)):
                 seq.append(('src', xr, j, False, True, extra == 'Quest_Log'))
-            if kit:
-                seq.append(None)
     if len(seq) % 2:
         seq.append(None)
     s = (W - g) / W

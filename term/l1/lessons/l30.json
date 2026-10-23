@@ -1591,7 +1591,7 @@
      },
      {
       "k": "READ",
-      "text": "Gate 5. Every row and every column has a circle, a square and a triangle. What goes in the box with the question mark? Write the shape. Gate 6. Triangles in a row use 3, 5 and 7 sticks. Part a: the next picture uses blank sticks. Part b: 5 triangles use blank sticks. Gate 7. A child in another class writes 49 plus 38 equals 77. Part a: is the answer right? Circle Yes or No. Part b: the right answer is blank."
+      "text": "Gate 5. Every row and every column has a circle, a square and a triangle. What goes in the box with the question mark? Write the shape. Gate 6. 1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks. Gate 7. A child in another class writes 49 plus 38 equals 77. Part a: is the answer right? Circle Yes or No. Part b: the right answer is blank."
      },
      {
       "k": "WORK",
@@ -3288,11 +3288,11 @@
     "page": 3,
     "tier": "start",
     "skill": "A growing stick pattern (Lesson 28)",
-    "text": "Triangles in a row use 3, 5 and 7 sticks.",
+    "text": "1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks.",
     "parts": [
      {
       "l": "a",
-      "text": "The next picture uses ___ sticks.",
+      "text": "4 triangles use ___ sticks.",
       "ans": "9",
       "val": 9
      },
@@ -3303,13 +3303,13 @@
       "val": 11
      }
     ],
-    "say": "Gate 6. Triangles in a row use 3, 5 and 7 sticks. Part a: the next picture uses blank sticks. Part b: 5 triangles use blank sticks.",
+    "say": "Gate 6. 1 triangle uses 3 sticks. 2 triangles use 5 sticks. The picture shows 3 triangles: 7 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks.",
     "answer": "9; 11",
     "val": [
      9,
      11
     ],
-    "solution": "Each new triangle adds 2 sticks: 3, 5, 7, 9, 11. 5 triangles use 11 sticks.",
+    "solution": "Each new triangle adds 2 sticks: 3, 5, 7, 9, 11. A row of 4 triangles uses 9 sticks and a row of 5 triangles uses 11 sticks.",
     "right": "Both correct.",
     "partly": "One of the two correct.",
     "mistakes": [
@@ -3320,6 +3320,7 @@
      "type": "stick_pattern",
      "shape": "triangle",
      "n": 3,
+     "label_each": true,
      "size": 50
     }
    },

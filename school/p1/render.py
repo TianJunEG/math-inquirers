@@ -178,6 +178,8 @@ svg.pic .fb{stroke:#000;stroke-width:0.45}
 .page.cbc .check .ct2{font-size:10.5pt;line-height:1.25}.page.cbc .check .ct2 b{font-size:11.5pt}.page.cbc .check .ct2 div{margin-top:0.3mm}
 .page.cbc .check svg{width:9mm;height:9mm}
 """
+from gen.css_new import CSS_NEW
+CSS += CSS_NEW
 
 def stars_svg(n):
     one = ('<svg xmlns="http://www.w3.org/2000/svg" width="8mm" height="8mm" viewBox="-10 -10 20 20"><polygon fill="#000" stroke="#000" stroke-width="0.6" points="'

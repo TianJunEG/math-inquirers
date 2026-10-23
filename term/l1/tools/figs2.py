@@ -319,6 +319,14 @@ def round_table(seats=6, names=None, hide=(), cell=70):
 BAR_COL = {'yellow': YEL, 'sky': SKY, 'mint': MINT, 'soft': SOFT, 'white': '#FFFFFF', 'rose': '#F6C9D0'}
 
 
+def _bar_label(text, cx, cy, w, h, size):
+    """A number or word on a coloured bar sits on a white pill, so it stays readable on a dithered fill in black and white."""
+    t = str(text)
+    if t in ('[]', '()', '[ ]') or t.startswith('['): return token_svg(t, cx, cy, w, h, size)
+    bw = min(max(len(t), 1) * size * 0.62 + 22, max(w - 6, 24)); bh = min(h - 12, size + 14)
+    return f'<rect x="{cx - bw / 2:.1f}" y="{cy - bh / 2:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="{bh / 2:.1f}" fill="#fff" stroke="{NAVY}" stroke-width="2"/>' + token_svg(t, cx, cy, w, h, size)
+
+
 def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow=None, unit_px=None, name_w=120, bar_h=64, vgap=34):
     """Strips drawn to scale (length proportional to value). bars=[{name,len,segments:[{v,text,colour}],colour}].
     brace={'text':'[]','over':'all'|index}: a bracket over the bars with a label; gap={'between':[0,1],'text':'?'}: dashed guide and
@@ -340,7 +348,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
             col = BAR_COL.get(s.get('colour') or b.get('colour', 'yellow'), YEL)
             body.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{bar_h}" fill="{col}" stroke="{NAVY}" stroke-width="3.2"/>')
             if s.get('text') not in (None, ''):
-                body.append(token_svg(s['text'], x + w / 2, y + bar_h / 2, w, bar_h, 40))
+                body.append(_bar_label(s['text'], x + w / 2, y + bar_h / 2, w, bar_h, 40))
             x += w
         if units:
             pass
@@ -349,7 +357,7 @@ def bar_model(mode='compare', bars=None, brace=None, gap=None, units=None, arrow
         for k in range(1, n):
             body.append(f'<line x1="{name_w + k * w:.1f}" y1="{y}" x2="{name_w + k * w:.1f}" y2="{y + bar_h}" stroke="{NAVY}" stroke-width="3.2"/>')
         if units.get('text') not in (None, ''):
-            for k in range(n): body.append(token_svg(units['text'], name_w + k * w + w / 2, y + bar_h / 2, w, bar_h, 38))
+            for k in range(n): body.append(_bar_label(units['text'], name_w + k * w + w / 2, y + bar_h / 2, w, bar_h, 38))
     if gap:
         a, c = gap['between']
         xa = name_w + bars[a]['len'] * ux; xc = name_w + bars[c]['len'] * ux
@@ -560,6 +568,12 @@ def people_strip(n=10):
         x = 10 + c * cell; y = 10 + r * 150
         body.append(f'<rect x="{x}" y="{y}" width="{cell - 8}" height="138" fill="none" stroke="#777" stroke-width="1.6" stroke-dasharray="6 4"/>')
         body.append(icon(f'child{i % 5 + 1}', x + (cell - 8) / 2, y + 66, 108))
+        # white marks on the two dark shirts (blue, purple) so they stay different when printed in black and white
+        k = i % 5; ox = x + (cell - 8) / 2 - 54; oy = y + 66 - 54; sc = 108 / 64.0
+        if k == 1:
+            body.append(''.join(f'<rect x="{ox + 22 * sc:.1f}" y="{oy + yy * sc:.1f}" width="{20 * sc:.1f}" height="{2.6 * sc:.1f}" fill="#fff"/>' for yy in (37, 43, 49)))
+        if k == 4:
+            body.append(''.join(f'<circle cx="{ox + xx * sc:.1f}" cy="{oy + yy * sc:.1f}" r="{2.2 * sc:.1f}" fill="#fff"/>' for xx, yy in ((26, 38), (38, 38), (32, 44), (26, 50), (38, 50))))
     rows = (n + 4) // 5
     return _svg(5 * cell + 20, rows * 150 + 16, ''.join(body), 'cut-out people')
 
