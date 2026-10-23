@@ -646,7 +646,7 @@
    "id": "L2U08-T01",
    "tier": "think",
    "page": 4,
-   "text": "Beyond: a net is a flat shape that folds up into a solid. Which of these nets folds up into a cube? Fold each one in your head. Each square must land on a NEW face.",
+   "text": "Beyond: a net folds up into a solid. Which nets fold up into a cube? Each square must land on a NEW face.",
    "figure": {
     "type": "l2_nets",
     "nets": [
@@ -767,7 +767,7 @@
       ]
      }
     ],
-    "width_mm": 130
+    "width_mm": 150
    },
    "parts": [
     {
@@ -820,7 +820,7 @@
    "id": "L2U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Count the rectangles in a row of 4 squares joined side by side. A square is also a rectangle. Count every size.",
+   "text": "Count the rectangles in a row of 4 squares. A square is a rectangle too.",
    "figure": {
     "type": "l2_grid",
     "values": [
@@ -832,7 +832,7 @@
      ]
     ],
     "cell": 76,
-    "width_mm": 76
+    "width_mm": 66
    },
    "parts": [
     {
@@ -890,7 +890,7 @@
     "type": "l2_trilines",
     "apex": 2,
     "across": 1,
-    "width_mm": 66
+    "width_mm": 56
    },
    "parts": [
     {
@@ -1008,13 +1008,14 @@
     }
    ],
    "explanation": "3 faces: the 8 corners. 2 faces: each of the 12 edges has 2 cubes between the corners, so 24. 1 face: each of the 6 faces has a 2 by 2 middle, so 6 × 4 = 24. No paint: the middle block is 2 by 2 by 2, so 8. Check: 8 + 24 + 24 + 8 = 64 = 4 × 4 × 4.",
-   "hint": "Corners, edges, faces, inside. Check they make 64."
+   "hint": "Corners, edges, faces, inside. Check they make 64.",
+   "partsrow": true
   },
   {
    "id": "L2U08-G03",
    "tier": "go",
    "page": 5,
-   "text": "Design a cube stack that has exactly 24 cubes. Write how many cubes are in each layer. Then design a different stack with exactly 24 cubes. Many answers are right.",
+   "text": "Design a stack with exactly 24 cubes. Write the cubes in each layer. Many answers are right.",
    "answer": {
     "value": [
      "open"
@@ -1049,7 +1050,7 @@
      ]
     ],
     "cell": 66,
-    "width_mm": 56
+    "width_mm": 50
    },
    "answer": {
     "value": [

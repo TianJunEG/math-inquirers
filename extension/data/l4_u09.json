@@ -10,7 +10,7 @@
  "learn": {
   "intro": "On a line graph, read the title and the scale first. The change between 2 neighbouring points is the difference of their values. A table can have a missing number: use the totals to find it.",
   "example": {
-   "problem": "The graph shows the cups of barley water a stall sold. Each line is worth 10. How many cups were sold on Wednesday? When was the biggest drop?",
+   "problem": "The graph shows the cups of barley water a stall sold. Each line is worth 10. How many cups were sold on Wednesday? When was the greatest drop?",
    "figure": {
     "type": "l4_line",
     "panels": [
@@ -45,9 +45,9 @@
    },
    "steps": [
     "The Wednesday point is halfway between 50 and 60: 55 cups.",
-    "Find each change. Thu to Fri is 75 − 30 = 45 down. That is the biggest drop."
+    "Find each change. Thu to Fri is 75 − 30 = 45 down. That is the greatest drop."
    ],
-   "answer": "55 cups. The biggest drop was Thursday to Friday."
+   "answer": "55 cups. The greatest drop was Thursday to Friday."
   },
   "example2": {
    "problem": "Find the missing number. Each row and each column adds to its total.",
@@ -109,7 +109,7 @@
   "facts": {
    "title": "Good to know",
    "lines": [
-    "The steepest line is the biggest change.",
+    "The steepest line is the greatest change.",
     "Check where each scale starts."
    ]
   },
@@ -205,11 +205,11 @@
    "id": "L4U09-S02",
    "tier": "start",
    "page": 1,
-   "text": "Use the graph in Question 1. Find the biggest increase and the biggest decrease between 2 days.",
+   "text": "Use the graph in Question 1. Find the greatest increase and the greatest decrease between 2 days.",
    "parts": [
     {
      "label": "a",
-     "text": "Biggest increase: from {b} to {b}, up by {b}",
+     "text": "Greatest increase: from {b} to {b}, up by {b}",
      "answer": {
       "value": [
        "Fri",
@@ -221,7 +221,7 @@
     },
     {
      "label": "b",
-     "text": "Biggest decrease: from {b} to {b}, down by {b}",
+     "text": "Greatest decrease: from {b} to {b}, down by {b}",
      "answer": {
       "value": [
        "Tue",
@@ -237,7 +237,7 @@
      "Changes: {ll}"
     ]
    },
-   "explanation": "The changes are +15, −20, +35, −5 and +40. The biggest increase is Friday to Saturday: 95 − 55 = 40. The biggest decrease is Tuesday to Wednesday: 45 − 25 = 20. The steepest line going up and the steepest line going down show these."
+   "explanation": "The changes are +15, −20, +35, −5 and +40. The greatest increase is Friday to Saturday: 95 − 55 = 40. The greatest decrease is Tuesday to Wednesday: 45 − 25 = 20. The steepest line going up and the steepest line going down show these."
   },
   {
    "id": "L4U09-S03",
@@ -307,7 +307,7 @@
     },
     {
      "label": "b",
-     "text": "Which class borrowed more in Week 1 than in Week 2? {circ:4A|4B|4C}",
+     "text": "Which class borrowed more books in Week 1 than in Week 2? {circ:4A|4B|4C}",
      "answer": {
       "value": [
        "4B"
@@ -323,7 +323,7 @@
    "id": "L4U09-S04",
    "tier": "start",
    "page": 2,
-   "text": "The graph shows the money in Ali's and Mei's money boxes at the end of each week.",
+   "text": "The graph shows money in Ali's box and in Mei's box. The amounts are at the end of each week.",
    "figure": {
     "type": "l4_line",
     "panels": [
@@ -401,7 +401,7 @@
     },
     {
      "label": "c",
-     "text": "They have the same amount in Week {b}.",
+     "text": "Both have equal money in Week {b}.",
      "answer": {
       "value": [
        "7"
@@ -668,7 +668,7 @@
    "id": "L4U09-T01",
    "tier": "think",
    "page": 4,
-   "text": "A shop's sales go up by the same amount every week. In Week 3 it sold 52 toys. In Week 8 it sold 87 toys.",
+   "text": "Each week a shop sells the same number more toys than the week before. Week 3: 52 toys. Week 8: 87 toys.",
    "parts": [
     {
      "label": "a",
@@ -704,7 +704,7 @@
    "id": "L4U09-T02",
    "tier": "think",
    "page": 4,
-   "text": "A stall sold 200 plates in 4 days. On Day 2 it sold twice as many as on Day 1. On Day 3 it sold 15 more than on Day 2. On Day 4 it sold 25. How many plates did it sell on Day 1? {b}",
+   "text": "A stall sold 200 plates in 4 days. On Day 2 it sold twice as many as on Day 1. On Day 3 it sold 15 more than on Day 2. On Day 4 it sold 25. Find the number of plates sold on Day 1. {b}",
    "answer": {
     "value": [
      "32"
@@ -725,7 +725,7 @@
    "id": "L4U09-T03",
    "tier": "think",
    "page": 4,
-   "text": "Tank A has 100 litres of water and loses 4 litres every hour. Tank B has 15 litres and gains 13 litres every hour. On a line graph the 2 lines cross.",
+   "text": "Tank A has 100 litres of water and loses 4 litres every hour. Tank B has 15 litres and gains 13 litres every hour. The 2 lines on a graph cross.",
    "parts": [
     {
      "label": "a",
@@ -761,7 +761,7 @@
    "id": "L4U09-G01",
    "tier": "go",
    "page": 5,
-   "text": "Two graphs show the same shop's sales in January and February. On graph X the scale starts at 0 and each line is worth 20. On graph Y the scale starts at 60 and each line is worth 5. Graph X shows January 4 lines up and February 5 lines up.",
+   "text": "Two graphs show the same shop's sales in January and February. Graph X starts at 0 with 20 for each line. Graph Y starts at 60 with 5 for each line. Graph X shows January 4 lines up and February 5 lines up.",
    "parts": [
     {
      "label": "a",
@@ -786,7 +786,7 @@
     },
     {
      "label": "c",
-     "text": "Which graph makes the rise look bigger? {circ:X|Y}",
+     "text": "Which graph makes the rise look greater? {circ:X|Y}",
      "answer": {
       "value": [
        "Y"
@@ -801,13 +801,13 @@
     ]
    },
    "hint": "Find the sales in January and February first.",
-   "explanation": "On X, January is 4 × 20 = 80 and February is 5 × 20 = 100, so sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Graph Y's line goes up 4 lines and X's goes up 1 line, so Y makes the rise look bigger."
+   "explanation": "On X, January is 4 × 20 = 80 and February is 5 × 20 = 100, so sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Graph Y's line goes up 4 lines and X's goes up 1 line, so Y makes the rise look greater."
   },
   {
    "id": "L4U09-G02",
    "tier": "go",
    "page": 5,
-   "text": "A stall sold 340 plates from Monday to Friday. Each day it sold 8 more plates than the day before.",
+   "text": "A stall sold 340 plates in 5 days, Monday to Friday. Each day's sales beat the day before by 8 plates.",
    "parts": [
     {
      "label": "a",
@@ -952,7 +952,7 @@
     ],
     "text": "B"
    },
-   "explanation": "Graph B's scale starts at 50, so the same 10 more looks like a bigger rise. Sales rose by 10 on both graphs."
+   "explanation": "Graph B's scale starts at 50, so the same 10 more looks like a greater rise. Sales rose by 10 on both graphs."
   }
  ]
 }
