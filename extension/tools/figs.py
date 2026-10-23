@@ -144,6 +144,16 @@ def number_line(**kw):
     return legacy.number_line(**kw)
 
 
+def _plugin_figs():
+    """Figure types added by the unit authors: every tools/figs_*.py that defines FIGS = {type: fn(spec, width_mm) -> svg}."""
+    import glob, importlib
+    out = {}
+    for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'figs_*.py'))):
+        m = importlib.import_module(os.path.basename(f)[:-3])
+        out.update(getattr(m, 'FIGS', {}))
+    return out
+
+
 def render(spec, theme='colour'):
     t = spec['type']
     w = spec.get('width_mm')
@@ -162,6 +172,8 @@ def render(spec, theme='colour'):
         s = ten_frame(spec['filled'], spec.get('extra', 0), w)
     elif t == 'number_line':
         s = number_line(**{k: v for k, v in spec.items() if k != 'type'})
+    elif t in _plugin_figs():
+        s = _plugin_figs()[t](spec, w)
     else:
         raise ValueError('unknown figure type ' + t)
     if w and 'width:' not in s.split('style="', 1)[1].split('"')[0]:

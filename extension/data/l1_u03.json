@@ -1,0 +1,821 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 3,
+ "id": "L1U03",
+ "title": "Read and draw graphs",
+ "topic": "Picture graphs",
+ "holiday_lesson": 3,
+ "goal": "I can read a picture graph and use it to add and compare.",
+ "learn": {
+  "intro": "A picture graph uses pictures to show how many. The key tells us what 1 picture means. Count the pictures in a row.",
+  "example": {
+   "problem": "The graph shows books borrowed in 1 week. How many more books on Tuesday than on Thursday?",
+   "figure": {
+    "type": "picture_graph",
+    "title": "Books borrowed",
+    "icon": "book",
+    "key": "= 1 book",
+    "rows": [
+     {
+      "label": "Monday",
+      "n": 4
+     },
+     {
+      "label": "Tuesday",
+      "n": 7
+     },
+     {
+      "label": "Wednesday",
+      "n": 5
+     },
+     {
+      "label": "Thursday",
+      "n": 2
+     }
+    ]
+   },
+   "steps": [
+    "Read the key. 1 picture is 1 book.",
+    "Count the Tuesday row: 7 books. Count the Thursday row: 2 books.",
+    "\"How many more\" asks for the gap. Subtract: 7 - 2 = 5. Check: 2 + 5 = 7."
+   ],
+   "answer": "5 more books are borrowed on Tuesday. 7 - 2 = 5."
+  },
+  "howto": {
+   "title": "How to read a picture graph",
+   "steps": [
+    "Read the title and the key.",
+    "Count the pictures in each row you need.",
+    "Add for \"in all\". Subtract for \"how many more\"."
+   ]
+  },
+  "try": {
+   "id": "L1U03-L01",
+   "text": "Look at the graph. How many more shells does Ben have than Kumar? {b} shells",
+   "figure": {
+    "type": "picture_graph",
+    "icon": "star",
+    "key": "= 1 shell",
+    "rows": [
+     {
+      "label": "Ben",
+      "n": 5
+     },
+     {
+      "label": "Kumar",
+      "n": 2
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3 shells"
+   },
+   "explanation": "Ben has 5 shells. Kumar has 2 shells. 5 - 2 = 3. Check: 2 + 3 = 5."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U03-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the graph. Fill in the blanks.",
+   "figure": {
+    "type": "picture_graph",
+    "title": "Games at recess",
+    "icon": "face",
+    "key": "= 1 child",
+    "rows": [
+     {
+      "label": "Skipping",
+      "n": 7
+     },
+     {
+      "label": "Tag",
+      "n": 7
+     },
+     {
+      "label": "Catch",
+      "n": 5
+     },
+     {
+      "label": "Hopscotch",
+      "n": 4
+     },
+     {
+      "label": "Marbles",
+      "n": 3
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} children chose catch.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 children"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which game did the fewest children choose? {l}",
+     "answer": {
+      "value": [
+       "Marbles"
+      ],
+      "text": "Marbles"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which 2 games got the same number of votes? {l}",
+     "answer": {
+      "value": [
+       "Skipping",
+       "Tag"
+      ],
+      "text": "Skipping and tag",
+      "list": true,
+      "unordered": true
+     }
+    }
+   ],
+   "explanation": "Count the faces in each row. Catch has 5. Marbles has 3, the fewest. Skipping and tag both have 7."
+  },
+  {
+   "id": "L1U03-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the graph in Question 1.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many more children chose skipping than hopscotch? {b} children",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3 children"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many children are there altogether? {b} children",
+     "answer": {
+      "value": [
+       "26"
+      ],
+      "text": "26 children"
+     }
+    }
+   ],
+   "explanation": "(a) \"How many more\" means subtract: 7 - 4 = 3. (b) Every child chose 1 game, so add every row: 7 + 7 + 5 + 4 + 3 = 26."
+  },
+  {
+   "id": "L1U03-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the graph in Question 1. Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "More children chose catch than hopscotch. {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Marbles got 4 votes. {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "(a) Catch has 5 and hopscotch has 4, so it is true. (b) Marbles has 3 faces, not 4: false."
+  },
+  {
+   "id": "L1U03-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Siti asks 5 friends which game they like best. 4 friends choose tag. Is it true that most children in the school like tag best? {circ:Yes|No|We cannot tell}",
+   "answer": {
+    "value": [
+     "We cannot tell"
+    ],
+    "text": "We cannot tell"
+   },
+   "explanation": "Only 5 children were asked. Other children in the school may choose other games. So we cannot tell."
+  },
+  {
+   "id": "L1U03-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the graph. Fill in the blanks.",
+   "figure": {
+    "type": "picture_graph",
+    "title": "Stickers this week",
+    "icon": "star",
+    "key": "= 1 sticker",
+    "rows": [
+     {
+      "label": "Ali",
+      "n": 6
+     },
+     {
+      "label": "Mei",
+      "n": 9
+     },
+     {
+      "label": "Ben",
+      "n": 3
+     },
+     {
+      "label": "Siti",
+      "n": 5
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Who has the most stickers? {l}",
+     "answer": {
+      "value": [
+       "Mei"
+      ],
+      "text": "Mei"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has {b} stickers.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3 stickers"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Mei has {b} more stickers than Siti.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4 stickers"
+     }
+    }
+   ],
+   "explanation": "Mei has 9 stars, the most. Ben has 3. Mei and Siti: 9 - 5 = 4."
+  },
+  {
+   "id": "L1U03-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the graph in Question 5.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many stickers do Ali and Ben have in all? {b} stickers",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9 stickers"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali gives 2 stickers to Ben. How many stickers does Ben have now? {b} stickers",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 stickers"
+     }
+    }
+   ],
+   "explanation": "(a) 6 + 3 = 9. (b) Ben had 3 and gets 2 more: 3 + 2 = 5."
+  },
+  {
+   "id": "L1U03-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Draw 1 face for each child. 7 children chose water, 4 chose milk and 2 chose tea. How many faces did you draw in all? {b} faces",
+   "figure": {
+    "type": "picture_graph",
+    "scale": 0.17,
+    "title": "Drinks at the party",
+    "icon": "face",
+    "key": "= 1 child",
+    "rows": [
+     {
+      "label": "Water",
+      "n": 0,
+      "slots": 8
+     },
+     {
+      "label": "Milk",
+      "n": 0,
+      "slots": 8
+     },
+     {
+      "label": "Tea",
+      "n": 0,
+      "slots": 8
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 faces"
+   },
+   "explanation": "Draw 7 faces for water, 4 for milk and 2 for tea. Count them all: 7 + 4 + 2 = 13."
+  },
+  {
+   "id": "L1U03-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the graph. Fill in the blanks.",
+   "figure": {
+    "type": "picture_graph",
+    "title": "Cookies sold at the fair",
+    "icon": "cookie",
+    "key": "= 1 cookie",
+    "rows": [
+     {
+      "label": "Monday",
+      "n": 4
+     },
+     {
+      "label": "Tuesday",
+      "n": 6
+     },
+     {
+      "label": "Wednesday",
+      "n": 8
+     },
+     {
+      "label": "Thursday",
+      "n": 5
+     },
+     {
+      "label": "Friday",
+      "n": 7
+     }
+    ],
+    "scale": 0.13
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "On which day were the most cookies sold? {l}",
+     "answer": {
+      "value": [
+       "Wednesday"
+      ],
+      "text": "Wednesday"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} cookies were sold on Thursday.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 cookies"
+     }
+    },
+    {
+     "label": "c",
+     "text": "How many more cookies were sold on Friday than on Monday? {b} cookies",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3 cookies"
+     }
+    }
+   ],
+   "explanation": "Wednesday has 8 cookies, the most. Thursday has 5. Friday 7 and Monday 4: 7 - 4 = 3."
+  },
+  {
+   "id": "L1U03-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Ali has 5 books. Mei has 3 more books than Ali. Draw Mei's row. How many books does Mei have? {b} books",
+   "figure": {
+    "type": "picture_graph",
+    "scale": 0.155,
+    "icon": "book",
+    "key": "= 1 book",
+    "rows": [
+     {
+      "label": "Ali",
+      "n": 5
+     },
+     {
+      "label": "Mei",
+      "n": 0,
+      "slots": 8
+     },
+     {
+      "label": "Ben",
+      "n": 4
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 books"
+   },
+   "explanation": "\"3 more than Ali\" means add: 5 + 3 = 8. Draw 8 books in Mei's row."
+  },
+  {
+   "id": "L1U03-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Ravi makes 12 treats in all. 7 are cookies. The rest are cakes. Draw the cakes. How many cakes does Ravi make? {b} cakes",
+   "figure": {
+    "type": "picture_graph",
+    "scale": 0.155,
+    "icon": "cookie",
+    "key": "= 1 treat",
+    "rows": [
+     {
+      "label": "Cookies",
+      "n": 7
+     },
+     {
+      "label": "Cakes",
+      "n": 0,
+      "slots": 8
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5 cakes"
+   },
+   "explanation": "The rest is 12 - 7 = 5. Draw 5 pictures in the Cakes row. Check: 7 + 5 = 12."
+  },
+  {
+   "id": "L1U03-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Each face stands for 2 children. A half face stands for 1 child.",
+   "beyond": "Keys bigger than 1",
+   "figure": {
+    "type": "picture_graph",
+    "title": "Children in clubs",
+    "icon": "face",
+    "key": "= 2 children",
+    "half_key": "= 1 child",
+    "rows": [
+     {
+      "label": "Drawing",
+      "n": 4
+     },
+     {
+      "label": "Singing",
+      "n": 3
+     },
+     {
+      "label": "Chess",
+      "n": 5.5
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many children chose chess? {b} children",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11 children"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many more children chose chess than singing? {b} children",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 children"
+     }
+    }
+   ],
+   "hint": "Count in 2s along each row. A half face is 1 more child.",
+   "explanation": "Chess: 5 faces make 10 and the half face makes 11. Singing: 3 faces make 6. 11 - 6 = 5."
+  },
+  {
+   "id": "L1U03-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "30 children vote for a class trip. Zoo gets 9 votes, museum 6 and beach 8. The rest vote for the farm.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many children chose the farm? {b} children",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7 children"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which place got the most votes? {l}",
+     "answer": {
+      "value": [
+       "Zoo"
+      ],
+      "text": "Zoo"
+     }
+    }
+   ],
+   "hint": "Add the 3 numbers you know. Then count on to 30.",
+   "explanation": "9 + 6 + 8 = 23. From 23 to 30 is 7, so 7 children chose the farm. Zoo has 9 votes, the most."
+  },
+  {
+   "id": "L1U03-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Look at the 2 graphs. Their keys are not the same.",
+   "beyond": "Comparing two keys",
+   "figure": {
+    "type": "picture_graph",
+    "graphs": [
+     {
+      "icon": "face",
+      "key": "= 1 child",
+      "rows": [
+       {
+        "label": "Graph P",
+        "n": 6
+       }
+      ],
+      "min_slots": 6
+     },
+     {
+      "icon": "face",
+      "key": "= 5 children",
+      "rows": [
+       {
+        "label": "Graph Q",
+        "n": 2
+       }
+      ],
+      "min_slots": 6
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Graph P shows {b} children. Graph Q shows {b} children.",
+     "answer": {
+      "value": [
+       "6",
+       "10"
+      ],
+      "text": "6 children and 10 children"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which graph shows more children? {circ:Graph P|Graph Q}",
+     "answer": {
+      "value": [
+       "Graph Q"
+      ],
+      "text": "Graph Q"
+     }
+    }
+   ],
+   "hint": "Do not count the pictures only. Read the key first.",
+   "explanation": "Graph P has 6 faces and each is 1 child: 6 children. Graph Q has 2 faces and each is 5 children: 5 + 5 = 10. Graph Q has more children, even with fewer pictures."
+  },
+  {
+   "id": "L1U03-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Ravi, Lily, Jamie and Ray find 24 shells in all. Ravi finds 7. Lily finds 2 fewer than Ravi. Jamie and Ray find the same number.",
+   "beyond": "Build a graph from clues",
+   "figure": {
+    "type": "picture_graph",
+    "scale": 0.14,
+    "icon": "star",
+    "key": "= 1 shell",
+    "rows": [
+     {
+      "label": "Ravi",
+      "n": 7
+     },
+     {
+      "label": "Lily",
+      "n": 0,
+      "slots": 8
+     },
+     {
+      "label": "Jamie",
+      "n": 0,
+      "slots": 8
+     },
+     {
+      "label": "Ray",
+      "n": 0,
+      "slots": 8
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Lily finds {b} shells.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 shells"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Jamie finds {b} shells.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6 shells"
+     }
+    }
+   ],
+   "hint": "Find Lily first. Then share what is left.",
+   "explanation": "Lily: 7 - 2 = 5. Ravi and Lily have 7 + 5 = 12. The rest is 24 - 12 = 12. Jamie and Ray share it equally: 6 each. Check: 7 + 5 + 6 + 6 = 24."
+  },
+  {
+   "id": "L1U03-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "A graph has rows for kites, balls and ropes. There are 18 toys. There are 2 more balls than kites. There is 1 more rope than kites.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Kites: {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 kites"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Balls: {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7 balls"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ropes: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6 ropes"
+     }
+    }
+   ],
+   "hint": "Take away the extra balls and the extra rope. Share what is left between 3 rows.",
+   "explanation": "The extra toys are 2 + 1 = 3. 18 - 3 = 15. Shared equally among 3 rows: 5 each. Kites 5, balls 5 + 2 = 7, ropes 5 + 1 = 6. Check: 5 + 7 + 6 = 18."
+  },
+  {
+   "id": "L1U03-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "In Wei's graph, each picture stands for 2 stickers. Wei has 6 pictures. Siti has the same number of stickers as Wei. In Siti's graph, each picture stands for 3 stickers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many stickers does Wei have? {b} stickers",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12 stickers"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many pictures does Siti draw? {b} pictures",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4 pictures"
+     }
+    }
+   ],
+   "hint": "Count in 2s to find the stickers. Then count in 3s.",
+   "explanation": "(a) 6 pictures of 2: 2, 4, 6, 8, 10, 12. (b) Count in 3s: 3, 6, 9, 12. That is 4 pictures."
+  },
+  {
+   "id": "L1U03-C01",
+   "tier": "quiz",
+   "page": 5,
+   "text": "Use the graph for Questions 1 to 4. Kumar read {b} books.",
+   "figure": {
+    "type": "picture_graph",
+    "icon": "book",
+    "key": "= 1 book",
+    "rows": [
+     {
+      "label": "Kumar",
+      "n": 8
+     },
+     {
+      "label": "Aisha",
+      "n": 3
+     }
+    ],
+    "width_mm": 66
+   },
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 books"
+   },
+   "explanation": "Count the books in Kumar's row: 8."
+  },
+  {
+   "id": "L1U03-C02",
+   "tier": "quiz",
+   "page": 5,
+   "text": "How many more books did Kumar read than Aisha? {b} books",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5 books"
+   },
+   "explanation": "Kumar read 8 and Aisha read 3. 8 - 3 = 5."
+  },
+  {
+   "id": "L1U03-C03",
+   "tier": "quiz",
+   "page": 5,
+   "text": "How many books did the 2 children read in all? {b} books",
+   "answer": {
+    "value": [
+     "11"
+    ],
+    "text": "11 books"
+   },
+   "explanation": "8 + 3 = 11."
+  },
+  {
+   "id": "L1U03-C04",
+   "tier": "quiz",
+   "page": 5,
+   "text": "Who read the fewest books? {l}",
+   "answer": {
+    "value": [
+     "Aisha"
+    ],
+    "text": "Aisha"
+   },
+   "explanation": "Aisha read 3 books. Kumar read 8 books. 3 is fewer."
+  }
+ ]
+}

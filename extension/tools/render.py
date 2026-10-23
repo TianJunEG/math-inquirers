@@ -150,7 +150,7 @@ def unit_pages(unit, theme, cfg):
     qs = items_of(unit, 'quiz')
     body = [head(unit, cfg), '<div class="pbody practice">', tier_banner('quiz', 'No hints. Try each one on your own.')]
     for i, it in enumerate(qs, 1):
-        it2 = dict(it, space={'rows': ['Working:']})
+        it2 = it if it.get('figure') else dict(it, space={'rows': ['Working:']})   # a graph or picture item is answered in the box: no working line
         body.append(item_html(it2, i, theme, hint=False))
     body.append('<div class="score"><span>My score:</span><span class="abox"></span><span>out of 4. Check the answers at the back.</span></div>')
     body.append('<div class="box"><h3>What next?</h3><ul class="adv"><li><b>4 or 3:</b> well done! Go on to the next unit.</li>'
