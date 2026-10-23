@@ -163,25 +163,26 @@ def jump_lines(start=0, end=100, step=1, label_every=10, rows=None, room=True, w
             major = (v - start) % label_every == 0
             P.append(f'<line x1="{x(v):.1f}" y1="{base - (18 if major else 9)}" x2="{x(v):.1f}" y2="{base + (18 if major else 9)}" stroke="{NAVY}" stroke-width="{4 if major else 2.2}"/>')
             if major and v not in hide:
-                clash = any(abs(x(v) - x(p['v'])) < 54 for p in pts)
+                hw = 10 * len(str(v)) + 10
+                clash = any(abs(x(v) - x(p['v'])) < hw + 8 for p in pts)
                 if not clash:
                     P.append(f'<text x="{x(v):.1f}" y="{base + 56}" font-size="36" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>')
             v += step
         for p in pts:
             xv = x(p['v'])
-            P.append(f'<line x1="{xv:.1f}" y1="{base}" x2="{xv:.1f}" y2="{base + 28}" stroke="{NAVY}" stroke-width="3.6"/>')
+            P.append(f'<line x1="{xv:.1f}" y1="{base}" x2="{xv:.1f}" y2="{base + 72}" stroke="{NAVY}" stroke-width="3.6"/>')
             P.append(f'<circle cx="{xv:.1f}" cy="{base}" r="9" fill="{RED}" stroke="{NAVY}" stroke-width="2.6"/>')
             if p.get('box'):
-                P.append(f'<rect x="{xv - 30:.1f}" y="{base + 28}" width="60" height="56" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3.6"/>')
+                P.append(f'<rect x="{xv - 30:.1f}" y="{base + 72}" width="60" height="56" rx="10" fill="#fff" stroke="{NAVY}" stroke-width="3.6"/>')
             else:
-                P.append(f'<rect x="{xv - 33:.1f}" y="{base + 28}" width="66" height="56" rx="12" fill="{YEL}" stroke="{NAVY}" stroke-width="3.2"/>'
-                         f'<text x="{xv:.1f}" y="{base + 68}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{p.get("text", p["v"])}</text>')
+                P.append(f'<rect x="{xv - 33:.1f}" y="{base + 72}" width="66" height="56" rx="12" fill="{YEL}" stroke="{NAVY}" stroke-width="3.2"/>'
+                         f'<text x="{xv:.1f}" y="{base + 112}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{p.get("text", p["v"])}</text>')
         for (a, b, lab) in jumps:
             xa, xb = x(a), x(b); mid = (xa + xb) / 2; hg = min(70, 22 + abs(xb - xa) * 0.25)
             P.append(f'<path d="M{xa:.1f} {base - 16} Q{mid:.1f} {base - 16 - 2 * hg:.1f} {xb:.1f} {base - 40}" fill="none" stroke="{TEAL}" stroke-width="5" stroke-linecap="round"/>')
             P.append(f'<polygon points="{xb:.1f},{base - 14} {xb - 13:.1f},{base - 40} {xb + 13:.1f},{base - 40}" fill="{TEAL}"/>')
             P.append(f'<text x="{mid:.1f}" y="{base - 16 - hg - 12:.1f}" font-size="32" font-weight="800" text-anchor="middle" fill="{TEAL}" stroke="#fff" stroke-width="6" paint-order="stroke" font-family="{FONT}">{_esc(lab)}</text>')
-        y = base + 100
+        y = base + (150 if pts else 80)
     return (f'<svg viewBox="0 0 {width} {y}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="number line from {start} to {end}" style="width:100%;height:auto;display:block">{"".join(P)}</svg>')
 
 
