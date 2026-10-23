@@ -307,7 +307,7 @@
     },
     {
      "label": "b",
-     "text": "Which class borrowed more books in Week 1 than in Week 2? {circ:4A|4B|4C}",
+     "text": "Which class borrowed fewer books in Week 2 than in Week 1? {circ:4A|4B|4C}",
      "answer": {
       "value": [
        "4B"
@@ -316,7 +316,7 @@
      }
     }
    ],
-   "explanation": "4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and 29 in Week 2.",
+   "explanation": "4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and only 29 in Week 2.",
    "figside": true
   },
   {
@@ -374,7 +374,6 @@
     ],
     "width_mm": 120,
     "xlabel": "Week",
-    "ylabel": "Dollars",
     "plot_w": 440,
     "plot_h": 190
    },
@@ -391,7 +390,7 @@
     },
     {
      "label": "b",
-     "text": "Ali saves ${b} each week.",
+     "text": "Each week Ali adds ${b}.",
      "answer": {
       "value": [
        "10"
@@ -668,7 +667,7 @@
    "id": "L4U09-T01",
    "tier": "think",
    "page": 4,
-   "text": "Each week a shop sells the same number more toys than the week before. Week 3: 52 toys. Week 8: 87 toys.",
+   "text": "Sales grow by the same number of toys each week. Week 3: 52 toys. Week 8: 87 toys.",
    "parts": [
     {
      "label": "a",

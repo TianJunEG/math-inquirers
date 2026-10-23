@@ -39,12 +39,12 @@ S.append(item(U+'-S02', 'start', 1, 'Use the graph in Question 1. Find the great
 S.append(item(U+'-S03', 'start', 1, 'The table shows the library books 3 classes borrowed. Each row and each column adds up to its total. Write the missing numbers.',
   fig={'type': 'l4_table', 'head': ['', 'Week 1', 'Week 2', 'Total'], 'rows': [['4A', '38', '', '85'], ['4B', '', '29', '70'], ['4C', '33', '41', ''], ['Total', '', '', '']], 'widths': [1.1, 1.2, 1.2, 1.2], 'cell_h': 52, 'font': 28, 'first_col_head': True, 'width_mm': 100},
   parts=[P('a', 'Fill in the 6 empty boxes. Go row by row.', A(47, 41, 74, 112, 117, 229, text='47, 41, 74, 112, 117, 229')),
-         P('b', 'Which class borrowed more books in Week 1 than in Week 2? {circ:4A|4B|4C}', A('4B'))],
+         P('b', 'Which class borrowed fewer books in Week 2 than in Week 1? {circ:4A|4B|4C}', A('4B'))],
   figside=True,
-  why='4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and 29 in Week 2.'))
+  why='4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and only 29 in Week 2.'))
 S.append(item(U+'-S04', 'start', 2, 'The graph shows money in Ali\'s box and in Mei\'s box. The amounts are at the end of each week.',
-  fig=LINE([{'ymin': 0, 'ymax': 100, 'step': 10, 'label_every': 2, 'series': [{'name': 'Ali', 'values': [20, 30, 40, 50, 60, 70, 80, 90]}, {'name': 'Mei', 'values': [50, 55, 60, 65, 70, 75, 80, 85]}]}], ['1', '2', '3', '4', '5', '6', '7', '8'], xlabel='Week', ylabel='Dollars', width_mm=120, plot_w=440, plot_h=190),
-  parts=[P('a', 'Mei\'s money in Week 3: ${b}', A(60)), P('b', 'Ali saves ${b} each week.', A(10)),
+  fig=LINE([{'ymin': 0, 'ymax': 100, 'step': 10, 'label_every': 2, 'series': [{'name': 'Ali', 'values': [20, 30, 40, 50, 60, 70, 80, 90]}, {'name': 'Mei', 'values': [50, 55, 60, 65, 70, 75, 80, 85]}]}], ['1', '2', '3', '4', '5', '6', '7', '8'], xlabel='Week', width_mm=120, plot_w=440, plot_h=190),
+  parts=[P('a', 'Mei\'s money in Week 3: ${b}', A(60)), P('b', 'Each week Ali adds ${b}.', A(10)),
          P('c', 'Both have equal money in Week {b}.', A(7)), P('d', 'Ali first has more than Mei in Week {b}.', A(8))], partsrow=True,
   why='(a) The Mei line (dashed, square points) is on 60 in Week 3. (b) Ali\'s line goes up by 10 each week. (c) The lines meet in Week 7, where both have $80. (d) Ali has $90 in Week 8 and Mei has $85, so Week 8 is the first week Ali has more.'))
 S.append(item(U+'-S05', 'start', 2, 'Siti reads more pages each day. She reads the same number more each day. Fill in the table.',
@@ -68,7 +68,7 @@ S.append(item(U+'-S08', 'start', 3, 'At 7 am the temperature was 25 °C. It rose
   why='(a) From 7 am to noon is 5 hours: 25 + 5 × 2 = 35 °C. (b) From noon to 3 pm is 3 hours: 35 − 3 × 3 = 26 °C. (c) 29 − 25 = 4 °C more, and 4 ÷ 2 = 2 hours after 7 am, which is 9 am.',
   space={'rows': ['Working:']}))
 
-T.append(item(U+'-T01', 'think', 4, 'Each week a shop sells the same number more toys than the week before. Week 3: 52 toys. Week 8: 87 toys.',
+T.append(item(U+'-T01', 'think', 4, 'Sales grow by the same number of toys each week. Week 3: 52 toys. Week 8: 87 toys.',
   parts=[P('a', 'It sold {b} toys in Week 1.', A(38)), P('b', 'It first sold more than 100 toys in Week {b}.', A(10))],
   hint='From Week 3 to Week 8 is 5 weeks. How much is that each week?',
   why='87 − 52 = 35 over 5 weeks, so sales go up by 7 each week. Week 1 is 2 weeks before Week 3: 52 − 14 = 38. Week 9 is 94 and Week 10 is 101, so Week 10 is the first week above 100.',

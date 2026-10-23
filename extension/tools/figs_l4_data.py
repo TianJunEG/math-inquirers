@@ -38,7 +38,8 @@ def _panel(sp, xlabels, ox, oy, PW, PH, P):
     P.append(f'<line x1="{ox}" y1="{oy - 6}" x2="{ox}" y2="{oy + PH}" stroke="{NAVY}" stroke-width="4"/>')
     P.append(f'<line x1="{ox}" y1="{oy + PH}" x2="{ox + PW}" y2="{oy + PH}" stroke="{NAVY}" stroke-width="4"/>')
     if ymin > 0:      # zigzag: the scale does not start at 0
-        P.append(f'<path d="M{ox - 14},{oy + PH - 30} L{ox + 14},{oy + PH - 42} L{ox - 14},{oy + PH - 54} L{ox + 14},{oy + PH - 66}" fill="none" stroke="{NAVY}" stroke-width="4"/>')
+        y0 = oy + PH
+        P.append(f'<path d="M{ox},{y0 - 4} L{ox + 9},{y0 - 11} L{ox - 9},{y0 - 18} L{ox + 9},{y0 - 25} L{ox},{y0 - 32}" fill="none" stroke="{NAVY}" stroke-width="4"/>')
     for i, lab in enumerate(xlabels):
         P.append(_t(X(i), oy + PH + 32, _esc(lab), 24, weight=700))
         P.append(f'<line x1="{X(i):.1f}" y1="{oy + PH}" x2="{X(i):.1f}" y2="{oy + PH + 8}" stroke="{NAVY}" stroke-width="3"/>')
