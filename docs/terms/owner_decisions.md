@@ -70,3 +70,6 @@ Addendum 10 (same day): the school puzzle worksheets must work in BLACK AND WHIT
 
 ## 23 Oct 2026: beyond-syllabus rule (recorded from Term 3-4 pre-flight)
 Owner asked (22 Oct) that every lesson contains something beyond the syllabus for challenge. Rule: each lesson names at least one beyond-school-P1 item in moe.note, placed at Think harder or Go further only; Start here stays approachable and school-range-plus-scaffolding.
+
+## 23 Oct 2026: prices on hold
+Owner: hold the school puzzle book price points for now. The SGD bands in docs/school_books/pricing_research.md (S$89 per level licence, S$349 bundle, S$3.50 printed copy, S$15 physical / S$8 PDF home workbook) are inferred placeholders, NOT decisions. Do not put any price on a page, website or quote until the owner decides.
