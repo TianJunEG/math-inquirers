@@ -244,9 +244,8 @@ def draft_banner(what):
 
 def cover(school, bk):
     s = html.escape(school) if school.strip() else "&nbsp;"
-    pub = ('<p style="margin-top:14mm;font-size:12pt">[Publisher line: wording to be confirmed by the owner]</p>' if DRAFT
-           else '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd</p>')
-    return ('<section class="page cover fm"><div>' + (draft_banner("cover wording, title and publisher line are not final.") if DRAFT else "") +
+    pub = '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd, trading as Math Inquirers</p>'
+    return ('<section class="page cover fm"><div>' + (draft_banner("cover wording and title are not final.") if DRAFT else "") +
             '<p class="sub" style="margin-top:12mm">Maths puzzles for early finishers</p>'
             '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 1</div>'
             f'<div class="big" style="font-size:28pt;margin-top:5mm">{html.escape(bk["name"])}</div><p class="sub" style="margin-top:2mm">{html.escape(bk["terms"])}</p></div>'
@@ -257,7 +256,7 @@ def cover(school, bk):
 def licence(school, bk):
     s = html.escape(school) if school.strip() else "____________________________"
     return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the term of the licence must be filled in, before any school receives this booklet. The publisher line on the cover is also still to be confirmed.")
+            + draft_banner("the licence wording is a placeholder and is still open: it must be approved by a lawyer before any school receives this booklet.")
             + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
@@ -265,6 +264,7 @@ def licence(school, bk):
             '<h3>You may not</h3><ul><li>Sell, lend or give the pages or the file to another school, tuition centre or person.</li>'
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
+            '<h3>Term</h3><p>This is an annual licence: it covers one school year and is renewable. Licence wording to be approved by a lawyer before any school receives this booklet.</p>'
             '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + html.escape(("Contact: " + CONTACT + ". " if DRAFT else "") + "Registered office: " + REG_OFFICE) + '</p>'
             '<h3>Notes</h3><p>The licence is for the edition bought. The school name is written on the line marked School (write name) at the foot of each page, by hand or when the booklet is made. '
             f'This licence covers {html.escape(bk["name"])} only; the other semester booklet is licensed separately.</p>'
