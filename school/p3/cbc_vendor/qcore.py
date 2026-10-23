@@ -45,6 +45,7 @@ def _compile(line, money):
         t = re.sub(r"(\d+)¢", r"(\1)", t).replace("(v)¢", "(v)")
     else:
         t = t.replace("¢", "").replace("$", "").replace("cm", "")
+    t = t.replace("$(v)", "(v)")
     if not re.fullmatch(r"[0-9v+\-*/() =.]+", t): raise ValueError(line)
     l, r = t.split("=")
     _code[k] = (compile(l.strip(), "<eq>", "eval"), compile(r.strip(), "<eq>", "eval"))
@@ -54,7 +55,8 @@ def eq_eval(line, v, money=False):
     """does the printed equation hold when the blank holds v?"""
     l, r = _compile(line, money)
     g = {"v": v}
-    return eval(l, g) == eval(r, g)
+    try: return eval(l, g) == eval(r, g)
+    except ZeroDivisionError: return False
 
 def EQ(lines, a, a_text=None, money=False, **kw):
     """question whose answer is found by solving the equation line(s) that contain a blank"""

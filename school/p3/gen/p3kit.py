@@ -94,9 +94,13 @@ def lettered_choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, 
     CLAIMED[no] = word
     out = []; pos = []
     for i, spec in enumerate(rows_spec):
-        order = list(range(n_opts)); rng.shuffle(order)
-        pos.append(order.index(0))
-        opts = "".join(f'<span class="opt">{spec["opts"][j]}<i class="cl">{rows[i][j]}</i></span>' for j in order)
+        right = spec.get("right", 0)
+        order = list(range(n_opts))
+        if not spec.get("fixed"): rng.shuffle(order)
+        wl = iter(rows[i][1:])
+        lets = {j: (rows[i][0] if j == right else next(wl)) for j in range(n_opts)}
+        pos.append(order.index(right))
+        opts = "".join(f'<span class="opt">{spec["opts"][j]}<i class="cl">{lets[j]}</i></span>' for j in order)
         out.append(f'<div class="crow2 {row_cls}"><span class="no">{i+1}</span><div class="cq2">{spec["q"]}</div><div class="copts">{opts}</div></div>')
     body = pre_html + '<div class="crows2">' + "".join(out) + '</div>'
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, f"K1 the letter of the right choice in each row spells a word ({word_len} letters, {n_opts - 1} decoy letters in each row)",
@@ -128,8 +132,3 @@ def solve_letters(word_rows_solver, body):
         j = word_rows_solver(q, [o[0] for o in opts]); out += opts[j][1]
     return out
 
-# ---------------------------------------------------------------------------------------------------- ordering cards
-def order_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, setA, setB, labelA, labelB, keyA, keyB, key_answers, note, rng=None, mk=("logic",)):
-    """two sets of three cards, each card a letter; the pupil writes the letters in the order asked, set A then set B, six boxes.
-    setA / setB: lists of (card_html, value) already in the RIGHT order (value is only used for the key); words = letters."""
-    raise NotImplementedError

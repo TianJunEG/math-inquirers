@@ -28,3 +28,41 @@ def pv4_chart(th, h, t, o, per_row=2):
 
 def read_pv4(s):
     return tuple(len(re.findall(r'class="disc %s"' % k, s)) for k in ("th", "h", "t", "o"))
+
+# ---------------------------------------------------------------------------------------------------- fraction figures (copied from the P2 pages)
+from .common import svg
+def frac_fig(kind, n, shaded, rng):
+    """a figure cut into n EQUAL parts with the parts in `shaded` black (white separators inside black areas); kind: bar, circle, grid (rows x cols)"""
+    def part(tag, geom, i):
+        sh = i in shaded
+        return f'<{tag} class="part{" sh" if sh else ""}" {geom} fill="{"#000" if sh else "#fff"}" stroke="{"none" if sh else "#000"}" stroke-width="0.6" stroke-linejoin="round"/>'
+    def gap(tag, geom, i):
+        return f'<{tag} class="ol" {geom} fill="none" stroke="#fff" stroke-width="1.1" stroke-linejoin="round"/>' if i in shaded else ""
+    items = []; outline = ""
+    if kind == "bar":
+        w = 48.0; h = 13.0; u = w / n
+        for i in range(n): items.append((i, part("rect", f'x="{1+i*u:.2f}" y="1" width="{u:.2f}" height="{h}"', i), gap("rect", f'x="{1+i*u:.2f}" y="1" width="{u:.2f}" height="{h}"', i)))
+        outline = f'<rect x="1" y="1" width="{w}" height="{h}" fill="none" stroke="#000" stroke-width="0.8"/>'; W, H = w + 2, h + 2
+    elif kind == "circle":
+        r = 12.5; cx = cy = r + 1
+        for i in range(n):
+            a0 = -math.pi / 2 + 2 * math.pi * i / n; a1 = -math.pi / 2 + 2 * math.pi * (i + 1) / n
+            x0, y0 = cx + r * math.cos(a0), cy + r * math.sin(a0); x1, y1 = cx + r * math.cos(a1), cy + r * math.sin(a1)
+            items.append((i, part("path", f'd="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 0 1 {x1:.2f},{y1:.2f} Z"', i), gap("path", f'd="M{cx},{cy} L{x0:.2f},{y0:.2f} A{r},{r} 0 0 1 {x1:.2f},{y1:.2f} Z"', i)))
+        outline = f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#000" stroke-width="0.8"/>'; W = H = 2 * r + 2
+    else:
+        rows, cols = {4: (2, 2), 6: (2, 3), 8: (2, 4), 9: (3, 3), 10: (2, 5), 12: (3, 4)}[n]
+        u = 9.5
+        for i in range(n):
+            rr, cc = divmod(i, cols)
+            items.append((i, part("rect", f'x="{1+cc*u:.2f}" y="{1+rr*u:.2f}" width="{u}" height="{u}"', i), gap("rect", f'x="{1+cc*u:.2f}" y="{1+rr*u:.2f}" width="{u}" height="{u}"', i)))
+        outline = f'<rect x="1" y="1" width="{cols*u}" height="{rows*u}" fill="none" stroke="#000" stroke-width="0.8"/>'; W, H = cols * u + 2, rows * u + 2
+    # black fills first, then a white line (1.1 mm wide, centred on each shaded part's edge), then the white parts with black outlines, then the outer outline
+    ordered = [x[1] for x in items if x[0] in shaded] + [x[2] for x in items] + [x[1] for x in items if x[0] not in shaded]
+    return svg(round(W, 1), round(H, 1), "".join(ordered) + outline)
+
+def read_frac(s):
+    parts = re.findall(r'class="part( sh)?"', s)
+    return len(re.findall(r'class="part sh"', s)), len(parts)
+
+

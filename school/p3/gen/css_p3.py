@@ -126,3 +126,14 @@ CSS_P3 += """
 .opt b.on{font-family:'Fredoka';font-weight:600;font-size:16pt}
 .opt i.cl{margin-left:0.5mm}
 """
+CSS_P3 += """
+.tf{font-family:'Fredoka';font-weight:600;font-size:15pt}
+.tfrow2{padding:5mm 0}.tfrow2 .cq2{font-size:16pt}
+.vcard.dv{justify-content:center;gap:3mm;min-height:40mm}.vcard.dv .dvt{font-size:15pt;text-align:center}
+"""
+CSS_P3 += """
+.ffig2{display:flex;align-items:center}.ffig2 svg{max-width:none}
+.crow2.fr2 .opt .fr{font-size:15pt}.crow2.fr2{padding:2mm 0 3mm}
+.dl{font-family:'Fredoka';font-weight:600;font-size:18pt;margin-right:1mm}
+.maze.fm .mcell .fr{font-size:20pt}
+"""

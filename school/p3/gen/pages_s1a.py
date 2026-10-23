@@ -333,11 +333,11 @@ def page05():
         wrongs = sorted(w for w in wrongs if 1000 <= w <= 9999 and w != right and w not in r["seq"])
         w2 = rng.sample(wrongs, 2)
         cells = [None if i == r["gap"] else v for i, v in enumerate(r["seq"])]
-        specs_rows.append(dict(q=seq_text(cells), opts=[f'<b class="on">{N(right)}</b>'] + [f'<b class="on">{N(w)}</b>' for w in w2], right=right))
+        specs_rows.append(dict(q=seq_text(cells), opts=[f'<b class="on">{N(right)}</b>'] + [f'<b class="on">{N(w)}</b>' for w in w2], val=right))
     P = lettered_choice_page(5, 3505, "Number Patterns", 2, "Number patterns: counting in hundreds and thousands, two-step patterns", STRAND_WN,
         "1.1, 1.5 (counting in hundreds and thousands; patterns in number sequences)", ["WN1.1", "WN1.5"], "Lettered choice (patterns)",
         ["Find the rule. Find the missing number.", "Circle the letter beside the missing number.", "Write the six letters in the boxes."],
-        specs_rows, 3, "; ".join(f"{i+1}) {r['right']}" for i, r in enumerate(specs_rows)),
+        specs_rows, 3, "; ".join(f"{i+1}) {r['val']}" for i, r in enumerate(specs_rows)),
         "Six number patterns with one missing number: counting on and back in 100s and 1000s, and two patterns whose two steps take turns. Each row offers three numbers; the wrong ones are the usual slips (the wrong place changed, or the wrong step). The letters of the right numbers, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         rng=rng)
     def solver(q, opts):
@@ -346,7 +346,7 @@ def page05():
     got = solve_letters(solver, P["body"])
     P.v("V1 independent solver (the printed pattern read back, its rule found, each option tried) gets the word", got == P["word"], got)
     P.v("V1b exactly one option of every row continues the pattern", all(sum(1 for o in opts if int(re.search(r">([^<]*)<", o[0]).group(1)) == missing_of(read_seq(q))) == 1 for q, opts in read_choice_rows(P["body"])))
-    P.v("V7 numbers are 4-digit and below 10 000", all(1000 <= r["right"] <= 9999 for r in specs_rows))
+    P.v("V7 numbers are 4-digit and below 10 000", all(1000 <= r["val"] <= 9999 for r in specs_rows))
     return P
 
 PAGES = [page01, page02, page03, page04, page05]

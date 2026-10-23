@@ -57,9 +57,9 @@ CURVED = {"cube": 0, "cuboid": 0, "cylinder": 1, "cone": 1, "sphere": 1}
 def plural(w): return w[:-1] if w.endswith("s") else w
 
 # ------------------------------------------------------------------ equations with a blank (numbers, money, units)
-UNITS = "cm|m|kg|g|l|min"
+UNITS = "km|cm|m\u2113|ml|\u2113|m|kg|g|l|min"
 def _factor(unit):
-    return {"cm": 1, "m": 100, "g": 1, "kg": 1000, "l": 1, "min": 1}[unit]
+    return {"cm": 1, "m": 100, "km": 100000, "g": 1, "kg": 1000, "l": 1000, "ml": 1, "\u2113": 1000, "m\u2113": 1, "min": 1}[unit]
 
 def solve_equation(text):
     """'35c + $1.20 = BOX', '1 m - 95 cm = BOX cm', '4 x BOX = 20' ... -> (value, unit); unit is None, a measure unit,
@@ -81,7 +81,7 @@ def solve_equation(text):
         if s.endswith(CENT): return 'F("%s")' % s[:-1]
         um = re.fullmatch(r"(\d+(?:\.\d+)?)\s?(" + UNITS + ")", s)
         if um: return 'F("%s")' % (Fraction(um.group(1)) * _factor(um.group(2)))
-        if bunit in ("cm", "m", "g", "kg", "l", "min") and "*" not in t and "/" not in t: return 'F("%s")' % (Fraction(s) * bfac)     # bare numbers are in the blank's unit
+        if bunit in ("cm", "m", "km", "g", "kg", "l", "ml", "\u2113", "m\u2113", "min") and "*" not in t and "/" not in t: return 'F("%s")' % (Fraction(s) * bfac)     # bare numbers are in the blank's unit
         return 'F("%s")' % s
     expr = re.sub(r"\$" + B + r"|" + B + r"(?:" + CENT + r"| ?(?:" + UNITS + r")\b)?|\$\d+(?:\.\d+)?|\d+(?:\.\d+)?\s?(?:" + UNITS + r")\b|\d+" + CENT + r"|\d+(?:\.\d+)?", conv, t)
     if not re.fullmatch(r'[V0-9F"+\-*/()=. ]*', expr): raise Unparsed(text)
@@ -283,6 +283,8 @@ def tom_fewer(m, c): return I(m[1]) - I(m[2])
 def change(m, c): return 100 * I(m[2]) - cents(m[1])
 @R(r"Pen " + MONEY + r", ruler " + MONEY + r"\. Both: \$?" + B + CENT + "?")
 def pen_ruler(m, c): return cents(m[1]) + cents(m[2])
+@R(r"Has " + MONEY + r"\. Spends " + MONEY + r"\. Left: \$?" + B + CENT + "?")
+def has_spends(m, c): return cents(m[1]) - cents(m[2])
 @R(r"Ann has " + MONEY + r"\. Ben has " + MONEY + r" more\. Ben has \$?" + B + CENT + "?")
 def ben_more(m, c): return cents(m[1]) + cents(m[2])
 @R(r"(\d+)" + CENT + r" and " + B + CENT + r" make \$1")
