@@ -22,6 +22,10 @@ function card(level, n, compact) {
     const cs = DATA.tools.map(t => `<span style="display:inline-flex;align-items:center;gap:0.6mm">${icon(t.id, 7)}${tick(3.2)}</span>`).join('');
     return `<div class="p spcard spchoose" data-spine="card" style="${box}width:104mm;padding:1mm 2mm 1.2mm;display:flex;flex-direction:column;gap:0.8mm;flex:none"><span style="font-size:9pt;font-weight:800;letter-spacing:.05em">${L.tool_of_day}: ${L.choose_one}</span><span style="display:flex;justify-content:space-between">${cs}</span></div>`;
   }
+  if (row.main === 'choose' && compact) {   // slim version of the Lesson 10 row (one line of icons, label inside the row) for first pages with no slack
+    const cells = DATA.tools.map(t => `<div style="display:flex;align-items:center;gap:0.8mm">${icon(t.id, 8)}${tick(3.4)}</div>`).join('');
+    return `<div class="p spcard spchoose" data-spine="card" style="${box}padding:1mm 2.5mm;margin:1mm 0 2mm;display:flex;align-items:center;justify-content:space-between;gap:2mm"><span style="font-size:9pt;font-weight:800;letter-spacing:.05em;line-height:1.15">${L.tool_of_day}:<br>${L.choose_one}. Tick one.</span>${cells}</div>`;
+  }
   if (row.main === 'choose') {
     const cells = DATA.tools.map(t => `<div style="display:flex;flex-direction:column;align-items:center;gap:0.8mm;width:21mm">${icon(t.id, 10)}<div style="display:flex;align-items:center;gap:1mm">${tick(3.6)}<span style="font-size:9pt;font-weight:700">${L.chose}</span></div></div>`).join('');
     return `<div class="p spcard spchoose" data-spine="card" style="${box}padding:1.5mm 2.5mm 1.8mm;margin:1mm 0 3mm"><div style="font-size:9pt;font-weight:800;letter-spacing:.06em;margin-bottom:1mm">${L.tool_of_day}: ${L.choose_one}. Choose one tool and tick it.</div><div style="display:flex;justify-content:space-between">${cells}</div></div>`;

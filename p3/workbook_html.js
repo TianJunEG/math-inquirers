@@ -6,11 +6,21 @@ const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
-const hdr = (n, topic, title, pb = true) => [
-  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span></div>`,
-  `<div class="p ltitle">${title}</div>`,
-  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
-];
+const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
+const LEVEL = 3;
+const COMPACT = new Set([3, 5, 7, 10]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const hdr = (n, topic, title, pb = true, first = false) => {   // first = the lesson's "Start here" page: it carries the strategy card
+  const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';
+  const compact = first && COMPACT.has(n) && !choose;
+  const card = first && !compact ? SP.card(LEVEL, n, choose && COMPACT.has(n)) : '';
+  const chip = compact ? SP.card(LEVEL, n, true) : '';
+  return [
+  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge" style="white-space:nowrap">Lesson ${n}</span><span class="ltopic">${topic}</span>${chip}</div>`,
+  choose || !card ? `<div class="p ltitle">${title}</div>` : `<div class="p ltrow" style="display:flex;align-items:center;justify-content:space-between;gap:4mm;margin:4px 0 6px"><div class="ltitle" style="flex:1;min-width:0;margin:0 0 8px;${title.length > 15 ? 'font-size:29px;line-height:1.12' : ''}">${title}</div>${card}</div>`,
+  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`,
+  ...(choose ? [card] : [])
+  ];
+};
 
 // ---- gifted-style additions: fast track note, investigation, look-back reflection (data in p3/gifted.json) ----
 const NAVY = '#1B2A49';
@@ -46,17 +56,7 @@ const investigation = (n) => {
   out.push(...lines(g.table ? g.lines : g.lines + 3));
   return out;
 };
-const lookBack = (n) => {
-  const g = GF[String(n)], out = [];
-  const box = (label, items, extra) => `<div style="text-align:left;font-size:14px;line-height:2.0"><b>${label}</b> ${items.map(o => tick + esc2(o)).join('')}${extra || ''}</div>`;
-  const r1 = box('Something I did well:', g.didwell, tick + 'something else: ______________');
-  const r2 = box('The hardest part was:', g.reflect, tick + 'something else: ______________');
-  const r3 = box('What helped me:', ['drawing a picture', 'making a list', 'trying a number and checking', 'I asked for help', 'I am still stuck (I can ask a grown-up)']);
-  const r4 = `<div style="text-align:left;font-size:12.5px;line-height:1.5;color:#444"><i>Two minutes. Tick or write. You may pass on any line. This page is yours: your tutor does not read it out or collect it.</i></div>`;
-  out.push(banner('Look back'));
-  out.push(C.tbl([9900], [C.row([C.cell([r1, r2, r3, r4], 9900, { align: 'left', fill: 'EDEDED', h: 50 })])]));
-  return out;
-};
+const lookBack = (n) => [SP.lookback(LEVEL)];   // common look-back (three prompts, tool ticks, still stuck / pass); replaces the old reflection box
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
@@ -85,7 +85,7 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
-  W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
+  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, true));
   W.push(startHere());
   W.push(...c.workbook(H));
   W.push(coreEnd(l.n));

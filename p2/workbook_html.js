@@ -5,11 +5,21 @@ const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
-const hdr = (n, topic, title, pb = true, note = '') => [
-  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span>${note}</div>`,
-  `<div class="p ltitle">${title}</div>`,
-  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
-];
+const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
+const LEVEL = 2;
+const COMPACT = new Set([4]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const hdr = (n, topic, title, pb = true, note = '', first = false) => {   // first = the lesson's "Start here" page: it carries the strategy card
+  const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';
+  const compact = first && COMPACT.has(n) && !choose;
+  const card = first && !compact ? SP.card(LEVEL, n, choose && COMPACT.has(n)) : '';
+  const chip = compact ? SP.card(LEVEL, n, true) : '';
+  return [
+  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge" style="white-space:nowrap">Lesson ${n}</span><span class="ltopic">${topic}</span>${chip}${note}</div>`,
+  choose || !card ? `<div class="p ltitle">${title}</div>` : `<div class="p ltrow" style="display:flex;align-items:center;justify-content:space-between;gap:4mm;margin:4px 0 6px"><div class="ltitle" style="flex:1;min-width:0;margin:0 0 8px;${title.length > 15 ? 'font-size:29px;line-height:1.12' : ''}">${title}</div>${card}</div>`,
+  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`,
+  ...(choose ? [card] : [])
+  ];
+};
 
 // ---- close-the-gaps pieces: fast-track note, open investigation grid, reflection ----
 const faceSvg = m => `<svg width="26" height="26" viewBox="0 0 30 30" style="vertical-align:middle"><circle cx="15" cy="15" r="13" fill="#FFC93C" stroke="#1B2A49" stroke-width="2"/><circle cx="10" cy="12" r="1.8" fill="#1B2A49"/><circle cx="20" cy="12" r="1.8" fill="#1B2A49"/><path d="${m}" fill="none" stroke="#1B2A49" stroke-width="2" stroke-linecap="round"/></svg>`;
@@ -18,10 +28,7 @@ const gridSvg = () => { let g = '<svg aria-label="Square grid for drawing shapes
 const fastNote = () => `<span style="flex:1;margin:0 0 3px 14px;border:1.5px solid #8A94AD;background:#F4F6FA;border-radius:5px;padding:2px 8px;font-size:11px;font-weight:700;line-height:1.25;min-width:150px;color:#1B2A49"><b style="color:#1F7A6F">START HERE.</b> ${esc0(L.gaps.common.neutral)}</span>`;
 function esc0(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
 const line = w => `<span style="display:inline-block;border-bottom:2px dotted #8A94AD;width:${w}%">&nbsp;</span>`;
-const reflect = g => `<div class="p" style="border:2.5px solid #1B2A49;border-radius:6px;background:#FFFBEA;padding:3px 12px 2px;margin:6px 4px 0;font-size:12.5px;line-height:1.4;break-inside:avoid"><b style="font-size:14.5px;color:#1F7A6F">Looking back</b> <span style="font-size:11.5px">(2 minutes. You may pass on any line.)</span>`
-  + `<div>Something I did well: ${line(66)}</div>`
-  + `<div>The hardest part was ... ${line(63)}</div>`
-  + `<div style="margin-bottom:2px">What helped me:${g.unstuck.map(u => tick + esc0(u)).join('')}${tick}I asked for help${tick}I am still stuck (my tutor will check in during the session)</div></div>`;
+const reflect = g => SP.lookback(LEVEL);   // common look-back (three prompts, tool ticks, still stuck / pass); replaces the old Looking back box
 const invest = (g, n) => `<div class="p" style="border:2.5px dashed #1F7A6F;border-radius:6px;background:#F4FAF8;padding:6px 14px 8px;margin:10px 4px 0;font-size:14px;line-height:1.45;break-inside:avoid"><b style="font-size:17px;color:#1F7A6F">Investigation</b> <span style="font-size:12.5px">(a puzzle with more than one good answer. Try it any time you like, or at home.)</span><div style="margin-top:3px"><b>${esc0(g.invest.title)}.</b> ${esc0(g.invest.text)}${g.invest.need ? ' <i>' + esc0(g.invest.need) + '</i>' : ''}</div><div style="color:#1F7A6F;margin:3px 0 4px"><b>${esc0(g.invest.first)}</b></div>`
   + (g.fig === 'grid' ? gridSvg() + '<br>' + line(96) : [1, 2, 3, 4, 5, 6].map(() => line(96)).join('<br>')) + '</div>';
 const coreEnd = n => { const g = L.gaps[String(n)]; const ls = L.lessons[n - 1];
@@ -58,7 +65,7 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
-  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, fastNote()));
+  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, fastNote(), true));
   W.push(...c.workbook(H));
   W.push(...coreEnd(l.n));
   W.push(...extra(l.n));
