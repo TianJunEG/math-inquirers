@@ -37,12 +37,13 @@ def _numbers(tier):
     def wrds(a, r):
         ls = words_lines(a); ls[-1] = ls[-1] + f" = {BOX}"
         return SEM(ls, lambda v, t_=a: v == t_, str(a), form="words to number")
+    KEY = (120, 250, 340, 470, 560) if one else (105, 218, 346, 407, 639)       # the colour key of this tier
     def extreme(kind):
         def f(a, r):
-            if kind == "greatest": lo, hi = 101, a - 4
-            else: lo, hi = a + 4, 999
-            if hi - lo < 3: return None
-            o = r.sample(range(lo, hi + 1), 2); ns = o + [a]; r.shuffle(ns)
+            # every number offered is a key value, so the key alone does not answer the question
+            pool = [k for k in KEY if (k < a if kind == "greatest" else k > a)]
+            if len(pool) < 2: return None
+            ns = r.sample(pool, 2) + [a]; r.shuffle(ns)
             p = max if kind == "greatest" else min
             return SEM([kind.capitalize() + ":", "  ".join(map(str, ns))], lambda v, ns=tuple(ns), p=p: v == p(ns), str(a), form=kind)
         f.__name__ = kind; return f
@@ -71,8 +72,9 @@ def _numbers(tier):
             if h < 2: return None
             return SEM([f"{h - 1} hundreds {t + 10} tens", f"{o} ones = {BOX}"], lambda v, t_=a: v == t_, str(a), form="regrouped")
         def middle(a, r):
-            ns = [a - r.randint(8, 90), a, a + r.randint(8, 90)]
-            if ns[0] < 100 or ns[2] > 999: return None
+            lo, hi = [k for k in KEY if k < a], [k for k in KEY if k > a]
+            if not lo or not hi: return None
+            ns = [r.choice(lo), a, r.choice(hi)]
             r.shuffle(ns)
             return SEM(["Middle number:", "  ".join(map(str, ns))], lambda v, ns=tuple(ns): v == sorted(ns)[1], str(a), form="middle")
         forms += [regroup, middle, plus(1, "more", 1), plus(1, "less", -1), blocks_row]
@@ -145,18 +147,19 @@ def _oddeven(tier):
     def prv(a, r): return SEM([f"The {kind(a)} number", f"just before {a + 1} is {BOX}"], lambda v, t_=a: v == t_, str(a), form="just before")
     def small(a, r): return SEM([f"Smallest {kind(a)} number", f"greater than {a - 2}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="smallest greater")
     def great(a, r): return SEM([f"Greatest {kind(a)} number", f"less than {a + 2}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="greatest less")
+    KEY = (9, 12, 15, 18, 21) if tier == 1 else (200, 301, 402, 503, 604)
     def which(a, r):
-        d = 2 if tier == 1 else 20
-        o = [a + 2 * r.randint(1, d) + 1, a - 2 * r.randint(1, d) - 1]
-        if min(o) < lo or len(set(o)) < 2: return None
-        ns = o + [a]; r.shuffle(ns)
+        # two key values of the other kind and the answer: all three are on the key, so only the odd or even test picks one
+        o = [k for k in KEY if k % 2 != a % 2]
+        if len(o) < 2: return None
+        ns = r.sample(o, 2) + [a]; r.shuffle(ns)
         return SEM([f"Which is {kind(a)}?", "  ".join(map(str, ns))], lambda v, ns=tuple(ns), p=a % 2: v in ns and v % 2 == p, str(a), form="which is")
     def between(a, r): return SEM([f"The {kind(a)} number between", f"{a - 1} and {a + 1}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="between")
     def seq(a, r):
         if a - 6 < 0: return None
         return SEM([f"{kind(a).capitalize()} numbers:", f"{a - 6}, {a - 4}, {a - 2}, {BOX}"], lambda v, t_=a: v == t_, str(a), form="odd/even pattern")
-    def nxt1(a, r): return SEM([f"{kind(a).capitalize()} after {a - 1}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="after, one line")
-    def prv1(a, r): return SEM([f"{kind(a).capitalize()} before {a + 1}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="before, one line")
+    def nxt1(a, r): return SEM([f"Next {kind(a)} after {a - 1}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="after, one line")
+    def prv1(a, r): return SEM([f"{kind(a).capitalize()} just before {a + 1}: {BOX}"], lambda v, t_=a: v == t_, str(a), form="before, one line")
     def which1(a, r):
         q = which(a, r)
         if q: q.lines = [q.lines[0].replace("Which is ", "").replace("?", ":")] + q.lines[1:] if False else q.lines
@@ -396,38 +399,37 @@ def _money(tier):
     def cash_short(a, r): return cashq(a, r, True)
     def at(a): return str(a) if cents_key else dec(a)
     def blank(): return f"{BOX}¢" if cents_key else f"${BOX}"
+    # Primary 2 money is dollars and cents, decimal notation, compare, and convert between decimal notation and cents: no sums or differences of
+    # decimal amounts (that is Primary 3), so the sums below are whole cents only
     def add(a, r):
-        x = r.randrange(5, a - 4, 5) if a > 10 else None
-        if not x: return None
-        return EQ([f"{fm(x, r)} + {fm(a - x, r)} = {BOX}"] if not cents_key else [f"{fm(x, r)} + {fm(a - x, r)} = {blank()}"], a, at(a), money=True, form="add amounts")
-    def change(a, r):
-        pay = ch(r, [500, 1000, 2000, 5000]) if a < 1000 else None
-        if not pay or pay - a < 5: return None
-        cost = pay - a
-        return SEM([f"Cost {fm(cost, r, False)}. Paid ${pay // 100}.", f"Change: {blank()}"], lambda v, t_=a: v == t_, at(a), form="change")
+        if not cents_key or a <= 10: return None
+        x = r.randrange(5, a - 4, 5)
+        return EQ([f"{x}¢ + {a - x}¢ = {BOX}¢"], a, at(a), money=True, form="add cents")
     def two(a, r):
-        x = r.randrange(5, a - 4, 5) if a > 10 else None
-        if not x: return None
-        return SEM([f"Pen {fm(x, r, False)}, ruler {fm(a - x, r, False)}.", f"Both: {blank()}"], lambda v, t_=a: v == t_, at(a), form="two items")
+        if not cents_key or a <= 10: return None
+        x = r.randrange(5, a - 4, 5)
+        return SEM([f"Pen {x}¢, ruler {a - x}¢.", f"Both: {BOX}¢"], lambda v, t_=a: v == t_, at(a), form="two items")
     def more(a, r):
-        x = r.randrange(5, a - 4, 5) if a > 10 else None
-        if not x: return None
-        return SEM([f"Ann has {fm(x, r, False)}.", f"Ben has {fm(a - x, r, False)} more.", f"Ben has {blank()}"], lambda v, t_=a: v == t_, at(a), form="more than")
+        if not cents_key or a <= 10: return None
+        x = r.randrange(5, a - 4, 5)
+        return SEM([f"Ann has {x}¢.", f"Ben has {a - x}¢ more.", f"Ben has {BOX}¢"], lambda v, t_=a: v == t_, at(a), form="more than")
     def convert(a, r):
         if cents_key:
             q = SEM([f"{fm(a, r, False)} = {BOX}¢"], lambda v, t_=a: v == t_, str(a), form="dollars to cents")
             q.extra = lambda ans, a=a: ans == a; return q
         return SEM([f"{a}¢ = ${BOX}"], lambda v, t_=a: v == t_, dec(a), form="cents to dollars")
+    KEY = (35, 65, 135, 185, 250) if cents_key else (120, 235, 305, 450, 680)
     def great(a, r):
-        o = [a - 5 * r.randint(1, 12), a - 5 * r.randint(13, 18)] if a > 120 else None
-        if not o or min(o) < 5: return None
-        ns = o + [a]; r.shuffle(ns)
+        pool = [k for k in KEY if k < a]                 # every amount offered is a key value: the key alone does not answer the question
+        if len(pool) < 2: return None
+        ns = r.sample(pool, 2) + [a]; r.shuffle(ns)
         return SEM(["Greatest:", "  ".join(fm(n, None, False) for n in ns)], lambda v, ns=tuple(ns): v == max(ns), at(a), form="greatest of three")
     def great_min(a, r):
-        o = [a + 5 * r.randint(1, 15), a + 5 * r.randint(16, 40)]
-        ns = o + [a]; r.shuffle(ns)
+        pool = [k for k in KEY if k > a]
+        if len(pool) < 2: return None
+        ns = r.sample(pool, 2) + [a]; r.shuffle(ns)
         return SEM(["Smallest:", "  ".join(fm(n, None, False) for n in ns)], lambda v, ns=tuple(ns): v == min(ns), at(a), form="smallest of three")
-    forms = [cashq, cash_short, add, change, two, more, convert, great, great_min]
+    forms = [cashq, cash_short, add, two, more, convert, great, great_min]
     if cents_key:
         def comp(a, r):
             if a >= 100 or a % 5: return None
@@ -443,18 +445,22 @@ def addm(t, d):
     return (h, tot % 60)
 def _time(tier):
     if tier == 1:
-        def clock_stack(a, r): return SEM(["What time is it?"], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), form="clock face, stacked")
-        def clock_row(a, r): return SEM(["What", "time", "is it?"], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), layout="row", form="clock face, beside")
-        def clock_short(a, r): return SEM([f"{BOX}"], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), form="clock face, answer only")
+        def clock_stack(a, r): return None if A.hand_gap(*a) < A.CLOCK_MIN_GAP else SEM(["What time is it?"], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), form="clock face, stacked")
+        def clock_row(a, r): return None if A.hand_gap(*a) < A.CLOCK_MIN_GAP else SEM(["What", "time", "is it?"], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), layout="row", form="clock face, beside")
+        def clock_short(a, r): return None if A.hand_gap(*a) < A.CLOCK_MIN_GAP else SEM([f"{BOX}"], lambda v, t_=a: v == t_, hm(a), art=A.clock(*a), form="clock face, answer only")
         def wrap(f):
             def g(a, r):
-                q = f(a, r); q.extra = lambda ans: __import__("art").decode_clock(q.art.meta) == ans; return q
+                q = f(a, r)
+                if q is None: return None
+                q.extra = lambda ans: __import__("art").decode_clock(q.art.meta) == ans; return q
             g.__name__ = f.__name__; return g
         def pastto(a, r):
             h, m = a
             if m == 0: return None
-            t = f"{m} minutes past {h}" if m <= 30 else f"{60 - m} minutes to {h % 12 + 1}"
-            return SEM([t, f"is {BOX}"], lambda v, t_=a: v == t_, hm(a), form="past/to")
+            if m <= 30: k, w, hh = m, "after", h                       # the hour is always written as H:00, so "to" and "past" cannot be mixed up
+            else: k, w, hh = 60 - m, "before", h % 12 + 1
+            lines = r.choice([[f"{k} minutes {w} {hh}:00", f"is {BOX}"], ["Which time is", f"{k} minutes {w} {hh}:00? {BOX}"]])
+            return SEM(lines, lambda v, t_=a: v == t_, hm(a), form="minutes after or before")
         def later(a, r):
             d = ch(r, [5, 10, 15, 20, 25, 30]); s = addm(a, -d)
             return SEM([f"It is {hm(s)}.", f"{d} minutes later: {BOX}"], lambda v, t_=a: v == t_, hm(a), form="minutes later")
@@ -464,9 +470,7 @@ def _time(tier):
         def hour(a, r):
             k = ch(r, [1, 2]); s = addm(a, -60 * k)
             return SEM([f"It is {hm(s)}.", f"{k} hour{'s' if k > 1 else ''} later: {BOX}"], lambda v, t_=a: v == t_, hm(a), form="hours later")
-        def digital(a, r):
-            return SEM([f"Which time is", f"{a[1]} minutes past {a[0]}?"], lambda v, t_=a: v == t_, hm(a), form="written to digital") if 0 < a[1] <= 30 else None
-        return [wrap(clock_stack), wrap(clock_row), wrap(clock_short), pastto, later, before, hour, digital]
+        return [wrap(clock_stack), wrap(clock_row), wrap(clock_short), pastto, later, before, hour]
     def conv(a, r):
         h, m = divmod(a, 60)
         if h == 0: return None
@@ -500,7 +504,8 @@ def _measure(tier):
     def ruler(a, r):
         n, u = a
         if u != "cm" or not one: return None
-        st = r.choice([0, 0, 1, 2]); end = st + n
+        st = 0; end = n                                             # a strip on a ruler always starts at 0
+        
         if end > 14: return None
         q = SEM([f"{BOX} cm"], lambda v, t_=a: v == t_, str(n), art=A.ruler(st, end, top=end + 1), form="ruler")
         q.extra = lambda ans, st=st, end=end: ans == (end - st, "cm"); return q
@@ -514,10 +519,6 @@ def _measure(tier):
         if u != "cm" or n < 3: return None
         x = r.randint(1, n - 1)
         return SEM([f"{x} cm + {n - x} cm = {BOX} cm"], lambda v, t_=a: v == t_, str(n), form="add cm")
-    def m_cm(a, r):
-        n, u = a
-        if u != "cm" or one or n >= 100: return None
-        return SEM([f"1 m {MINUS} {100 - n} cm", f"= {BOX} cm"], lambda v, t_=a: v == t_, str(n), form="m to cm")
     def kg_add(a, r):
         n, u = a
         if u != "kg": return None
@@ -542,10 +543,6 @@ def _measure(tier):
         if u != "g": return None
         x = r.randrange(50, n, 50) if n > 100 else None
         return SEM([f"{x} g + {n - x} g = {BOX} g"], lambda v, t_=a: v == t_, str(n), form="g add") if x else None
-    def kg_g(a, r):
-        n, u = a
-        if u != "g" or n >= 1000: return None
-        return SEM([f"1 kg {MINUS} {1000 - n} g", f"= {BOX} g"], lambda v, t_=a: v == t_, str(n), form="kg to g")
     def l_left(a, r):
         n, u = a
         if u != "l": return None
@@ -577,8 +574,8 @@ def _measure(tier):
         if u == "m": return None
         s_ = r.randint(2, 9) if u != "g" else r.choice([50, 100])
         return SEM([f"{n + s_} {MINUS} {s_} = {BOX} {u}"], lambda v, t_=a: v == t_, str(n), form="subtract, one line")
-    for f_ in (ruler, cm_cut, m_cm, kg_heavier, bal, g_add, kg_g, l_left, l_share): f_.pref = 1      # real units (ruler, balance, m to cm, kg to g, word problems) before bare sums with a unit label
-    return [ruler, cm_cut, cm_add, m_cm, kg_add, kg_heavier, bal, g_add, kg_g, l_left, l_add, l_share, short, less, one]
+    for f_ in (ruler, cm_cut, kg_heavier, bal, g_add, l_left, l_share): f_.pref = 1      # real units (ruler, balance, word problems) before bare sums with a unit label; no m to cm or kg to g conversions (Primary 3)
+    return [ruler, cm_cut, cm_add, kg_add, kg_heavier, bal, g_add, l_left, l_add, l_share, short, less, one]
 
 # ------------------------------------------------------------------ picture graphs and tally
 GRAPH_SETS = [["Cats", "Dogs", "Fish", "Hens"], ["Pies", "Buns", "Cakes", "Tarts"], ["Cars", "Dolls", "Balls", "Kites"], ["Pens", "Cups", "Hats", "Bags"]]
@@ -781,16 +778,16 @@ def build_banks():
                ("add and subtract like fractions", lambda f, a: f in ("add", "sub")), ("compare", lambda f, a: f in ("cmp_unit", "cmp_like"))], prefix="Fractions: ")
     B["money"] = Bank("money", "Money", "Money: dollars, cents, decimal notation", "Find how much. Find it in the key. Colour the part with that colour.",
         {1: T([120, 235, 305, 450, 680], range(0, 2001), _money(1), lambda v: f"${dec(v)}"), 2: T([35, 65, 135, 185, 250], range(0, 2001), _money(2), lambda v: f"{v}¢")},
-        {1: "Money in dollars and cents (decimal notation)", 2: "Money: cents, dollars and change"})
+        {1: "Money in dollars and cents (decimal notation)", 2: "Money: cents and dollars, decimal notation"})
     tm = [(h, m) for h in range(1, 13) for m in range(60)]
     B["time"] = Bank("time", "Time", "Time to the minute; hours and minutes", "Find the time. Find it in the key. Colour the part with that colour.",
-        {1: T([(2, 10), (4, 25), (6, 45), (8, 35), (10, 50)], tm, _time(1), hm), 2: T([45, 75, 90, 105, 135], range(0, 601), _time(2), lambda v: f"{v} min",
+        {1: T([(2, 40), (4, 55), (6, 45), (8, 35), (10, 15)], tm, _time(1), hm), 2: T([45, 75, 90, 105, 135], range(0, 601), _time(2), lambda v: f"{v} min",
             instr="Find how many minutes. Find the answer in the key. Colour the part with that colour.")},
         {1: "Time: hours and minutes", 2: "Time: hours, minutes and how long"})
     md = [(n, u) for u in ("cm", "m", "g", "kg", "l") for n in range(0, 1001)]
     B["measure"] = Bank("measure", "Measures", "Length, mass and volume", "Find the measure. Find it in the key. Colour the part with that colour.",
         {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}"), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")},
-        parts=[("cm", lambda f, a: a[1] == "cm" and f != "m_cm"), ("m", lambda f, a: f == "m_cm"), ("g", lambda f, a: a[1] == "g" and f != "kg_g"), ("kg", lambda f, a: a[1] == "kg" or f == "kg_g"), ("l", lambda f, a: a[1] == "l")],
+        parts=[("cm", lambda f, a: a[1] == "cm"), ("g", lambda f, a: a[1] == "g"), ("kg", lambda f, a: a[1] == "kg"), ("l", lambda f, a: a[1] == "l")],
         prefix="Length, mass and volume: ")
     B["graph"] = Bank("graph", "Graphs", "Picture graphs and tally marks", "Read the graph. Find the answer in the key. Colour the part with that colour.",
         {1: T([4, 6, 8, 10, 12], range(0, 101), _graph(1)), 2: T([6, 8, 10, 12, 15], range(0, 101), _graph(2))})

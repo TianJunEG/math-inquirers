@@ -161,11 +161,12 @@ def _count(tier):
 
 # ------------------------------------------------------------------ comparing and ordering numbers to 100
 def _cmp(tier):
+    KEY = (20, 30, 40, 50, 60) if tier == 1 else (55, 60, 65, 70, 75)         # the colour key of this tier
     def three(a, r, greatest):
-        lo, hi = (5, a - 4) if greatest else (a + 4, 99)
-        if hi - lo < 3: return None
-        o = r.sample(range(lo, hi + 1), 2)
-        nums = o + [a]; r.shuffle(nums)
+        # every number offered is a key value, so finding the number on the key does not answer the question: the pupil has to compare
+        pool = [k for k in KEY if (k < a if greatest else k > a)]
+        if len(pool) < 2: return None
+        nums = r.sample(pool, 2) + [a]; r.shuffle(nums)
         pick = max if greatest else min
         return SEM(["Greatest:" if greatest else "Smallest:", "  ".join(map(str, nums))], lambda v, ns=tuple(nums), p=pick: v == p(ns), str(a), form="greatest" if greatest else "smallest")
     def greatest(a, r): return three(a, r, True)
@@ -178,8 +179,9 @@ def _cmp(tier):
     forms = [greatest, smallest, more1, less1, more10, less10]
     if tier == 2:
         def middle(a, r):
-            nums = [a - r.randint(5, 20), a, a + r.randint(5, 20)]
-            if nums[2] > 100: return None
+            lo, hi = [k for k in KEY if k < a], [k for k in KEY if k > a]
+            if not lo or not hi: return None
+            nums = [r.choice(lo), a, r.choice(hi)]                       # all three are key values
             r.shuffle(nums)
             return SEM(["Middle number:", "  ".join(map(str, nums))], lambda v, ns=tuple(nums): v == sorted(ns)[1], str(a), form="middle number")
         def two(a, r):
@@ -251,13 +253,14 @@ def cyc(x): return (x - 1) % 12 + 1
 def tword(t): return f"{t[0]} o'clock" if t[1] == 0 else f"half past {t[0]}"
 def _time(tier):
     def clock_stack(a, r):
+        if A.hand_gap(*a) < A.CLOCK_MIN_GAP: return None
         return SEM(["What time is it?"], lambda v, t=a: v == t, tword(a), art=A.clock(*a), form="clock face, stacked")
     def clock_row(a, r):
+        if A.hand_gap(*a) < A.CLOCK_MIN_GAP: return None
         return SEM(["What", "time", "is it?"], lambda v, t=a: v == t, tword(a), art=A.clock(*a), layout="row", form="clock face, beside text")
     def digital(a, r):
         h, m = a
-        lines = r.choice([["Which time", f"is {h}:{m:02d}?"], [f"{h}:{m:02d} is", f"which time? {BOX}"], [f"Say the time:", f"{h}:{m:02d}"],
-                          [f"Match the time:", f"{h}:{m:02d}"], [f"Time: {h}:{m:02d}", "Which key time?"], [f"{h}:{m:02d} is the same as", f"which time?"]])
+        lines = r.choice([["Which time is", f"{h}:{m:02d}? {BOX}"], [f"{h}:{m:02d} is", f"which time? {BOX}"], [f"{h}:{m:02d} is the same as", f"which time? {BOX}"]])      # always a blank, so the teacher page shows the time as well as the colour
         return SEM(lines, lambda v, t=a: v == t, tword(a), form="digital time")
     def later(a, r):
         h, m = a
@@ -268,10 +271,12 @@ def _time(tier):
         if m == 0: return SEM([f"It is half past {cyc(h - 1)}.", f"Half an hour later: {BOX}"], lambda v, t=a: v == t, tword(a), form="half an hour after half past")
         return SEM([f"It is {cyc(h + 1)} o'clock.", f"Half an hour before: {BOX}"], lambda v, t=a: v == t, tword(a), form="half an hour before")
     def clock_alone(a, r):
+        if A.hand_gap(*a) < A.CLOCK_MIN_GAP: return None
         q = SEM([], lambda v, t=a: v == t, tword(a), art=A.clock(*a), form="clock face alone")
         q.sol = ["\u27e6" + tword(a) + "\u27e7"]
         return q
     def clock_short(a, r):
+        if A.hand_gap(*a) < A.CLOCK_MIN_GAP: return None
         return SEM([f"{BOX}"], lambda v, t=a: v == t, tword(a), art=A.clock(*a), form="clock face, answer only")
     forms = [clock_stack, clock_row, clock_alone, clock_short, digital, later, later1]
     if tier == 2:
@@ -295,9 +300,8 @@ def _len(tier):
         art = A.ruler(start, end, top=end + 1)
         return SEM([f"{BOX} cm"], lambda v, t=a: v == t, str(a), art=art, form="ruler from %d" % start)
     def ruler0(a, r): return rl(a, r, 0)
-    def ruler_s(a, r): return rl(a, r, r.randint(1, 3 if tier == 1 else 4))
     def ruler_cap(a, r):
-        q = rl(a, r, r.choice([0, 1, 2])); 
+        q = rl(a, r, 0)
         if q: q.lines = ["How long?", f"{BOX} cm"]; q.sol = ["How long?", f"⟦{a}⟧ cm"]; q.form += ", caption"
         return q
     def sum_(a, r):
@@ -315,7 +319,7 @@ def _len(tier):
         x = r.randint(1, a - 1); return EQ([f"{x} + {a - x} = {BOX} cm"], a, form="add, compact")
     def sub_c(a, r):
         s = r.randint(2, 6); return EQ([f"{a + s} {MINUS} {s} = {BOX} cm"], a, form="subtract, compact")
-    return [ruler0, ruler_s, ruler_cap, sum_, longer, shorter, cut, sum_c, sub_c]
+    return [ruler0, ruler_cap, sum_, longer, shorter, cut, sum_c, sub_c]
 
 # ------------------------------------------------------------------ shapes: corners and straight sides (triangle, square, rectangle, circle)
 def _combos(k_range, total):

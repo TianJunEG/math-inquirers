@@ -207,7 +207,7 @@
           {
             "k": "DO",
             "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
-            "s": 12
+            "s": 1
           },
           {
             "k": "SAY",
@@ -220,7 +220,7 @@
           {
             "k": "DO",
             "text": "Start the recording now. Do not use children's first names on the recording.",
-            "s": 5
+            "s": 3
           },
           {
             "k": "REC",
@@ -1771,7 +1771,7 @@
       "id": "s-quest1",
       "part": "exit",
       "kind": "light",
-      "title": "Mi's Chal\u00adlenge Quest",
+      "title": "Mi's Chal­lenge Quest",
       "blocks": [
         {
           "t": "chip",
@@ -3244,7 +3244,7 @@
     ]
   },
   "parent": {
-    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal\u00adlenge Quest, our end-of-term game with Mi, is played on private paper and is optional; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
+    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal­lenge Quest, our end-of-term game with Mi, is played on private paper and is optional; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "step: one thing that happens",
       "read it twice: story, then numbers",
@@ -3262,8 +3262,8 @@
       "Did we count everyone?"
     ],
     "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962.",
-    "next": "Term 2 starts with its Lesson 1: Who Is Where? If your child played Mi's Chal\u00adlenge Quest, send one photo of each Quest Log page to the business WhatsApp the same day, as in the grown-up note. Photos are kept 90 days after the program ends, then deleted. The recording has the tutor, the shared screen and any voice that is not muted. The recording link is private to your family: please do not share it.",
-    "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and Mi's Chal\u00adlenge Quest.",
+    "next": "Term 2 starts with its Lesson 1: Who Is Where? If your child played Mi's Chal­lenge Quest, send one photo of each Quest Log page to the business WhatsApp the same day, as in the grown-up note. Photos are kept 90 days after the program ends, then deleted. The recording has the tutor, the shared screen and any voice that is not muted. The recording link is private to your family: please do not share it.",
+    "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and Mi's Chal­lenge Quest.",
     "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
     "quote": "One step at a time. Read it twice, then write one number sentence for each step.",
     "next_materials": [

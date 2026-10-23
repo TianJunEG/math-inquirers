@@ -46,10 +46,14 @@ Printing is triggered by payment. Each paid term, the child receives that term's
 |---|---|---|---|
 | L1_T1_Book1_Lessons01-05_Workbook | 46 | 23 | child, Term 1 |
 | L1_T1_Book2_Lessons06-10_Workbook | 46 | 23 | child, Term 1 |
-| L1_T2_Book3_Lessons11-15_Workbook | 44 | 22 | child, Term 2 |
-| L1_T2_Book4_Lessons16-20_Workbook | 48 | 24 | child, Term 2 |
+| L1_T2_Book3_Lessons01-05_Workbook | 44 | 22 | child, Term 2 |
+| L1_T2_Book4_Lessons06-10_Workbook | 48 | 24 | child, Term 2 |
 | Book1-4 AnswerKey_TUTOR | 22 / 30 / 22 / 28 | 11 / 15 / 11 / 14 | tutor only |
 | Book1-4 HomePack (optional) | 12 / 14 / 12 / 14 | 6 / 7 / 6 / 7 | loose, stapled |
+
+**Numbering.** Lessons are numbered within the term everywhere in the books: covers, contents, page headers, answer keys and home packs all say "Term 2, Lessons 1 to 5" (Book 3) and "Term 2, Lessons 6 to 10" (Book 4). File names follow the same numbers (Book3_Lessons01-05 is Term 2 Lessons 1 to 5; internally lessons 11 to 15 of Level 1).
+
+**Quest Log.** The Quest Log is printed inside the workbook books: 4 pages at the end of Book 2 (after Term 1 Lesson 10) and 3 pages at the end of Book 4 (after Term 2 Lesson 10), already counted in the page numbers above. Tutors also send each family a loose copy (L10_Quest_Log.pdf, L20_Quest_Log.pdf) a week before the quest lesson, with the grown-up note, for families who prefer to print their own or who need it earlier.
 
 Page counts follow the current lesson builds; re-run the script (and re-check `term_books_spec.json`) after any rebuild before sending a quote.
 

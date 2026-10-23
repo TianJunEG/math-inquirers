@@ -197,7 +197,7 @@
           {
             "k": "DO",
             "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
-            "s": 12
+            "s": 1
           },
           {
             "k": "SAY",
@@ -210,7 +210,7 @@
           {
             "k": "DO",
             "text": "Start the recording now. Do not use children's first names on the recording.",
-            "s": 5
+            "s": 3
           },
           {
             "k": "REC",

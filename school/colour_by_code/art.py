@@ -14,19 +14,29 @@ class Art:
 
 K = 'fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"'
 
+CLOCK_MIN_GAP = 40.0                # degrees: a clock a pupil must read keeps its two hands at least this far apart (audit 3, M5)
+def hand_gap(h, m):
+    """angle in degrees between the hour hand and the minute hand of h:m"""
+    d = abs(((h % 12) + m / 60.0) * 30.0 - m * 6.0) % 360.0
+    return min(d, 360.0 - d)
+
 def clock(h, m):
-    r = 9.0; cx = cy = r + 0.5
-    s = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.55"/>']
+    """a clock face 25 mm across: numerals 3.4 mm, a short thick hour hand and a long thin minute hand"""
+    r = 12.0; cx = cy = r + 0.5
+    s = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.6"/>']
+    for k in range(60):                                  # minute ticks: long every five minutes (the numerals sit inside them)
+        a = math.radians(k * 6); l = 1.6 if k % 5 == 0 else 0.8
+        s.append(f'<line x1="{cx + (r - l) * math.sin(a):.2f}" y1="{cy - (r - l) * math.cos(a):.2f}" x2="{cx + r * math.sin(a):.2f}" y2="{cy - r * math.cos(a):.2f}" stroke="#000" stroke-width="{0.5 if k % 5 == 0 else 0.3}"/>')
     for k in range(1, 13):
         a = math.radians(k * 30)
-        s.append(f'<text x="{cx + 6.75 * math.sin(a):.2f}" y="{cy - 6.75 * math.cos(a):.2f}" style="font-size:2.5px;font-weight:600;text-anchor:middle;dominant-baseline:central">{k}</text>')
+        s.append(f'<text x="{cx + 7.9 * math.sin(a):.2f}" y="{cy - 7.9 * math.cos(a):.2f}" style="font-size:3.5px;font-weight:700;text-anchor:middle;dominant-baseline:central">{k}</text>')
     ha = ((h % 12) + m / 60.0) * 30.0
     ma = m * 6.0
     def hand(ang, ln, wd):
         a = math.radians(ang)
         return f'<line x1="{cx}" y1="{cy}" x2="{cx + ln * math.sin(a):.2f}" y2="{cy - ln * math.cos(a):.2f}" stroke="#000" stroke-width="{wd}" stroke-linecap="round"/>'
-    s.append(hand(ha, 3.3, 1.25)); s.append(hand(ma, 5.0, 0.75))
-    s.append(f'<circle cx="{cx}" cy="{cy}" r="0.9" fill="#000"/>')
+    s.append(hand(ma, 9.6, 0.7)); s.append(hand(ha, 5.0, 1.5))
+    s.append(f'<circle cx="{cx}" cy="{cy}" r="1.0" fill="#000"/>')
     return Art("".join(s), 2 * r + 1, 2 * r + 1, 0.9, dict(kind="clock", hour_angle=ha, minute_angle=ma))
 
 def decode_clock(meta):

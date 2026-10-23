@@ -218,9 +218,9 @@ def before(kind, n): p = 1 if kind == "odd" else 0; return n - 1 if (n - 1) % 2 
 def oe_after(m, c): return after(m[1], I(m[2]))
 @R(r"The (odd|even) number just before (\d+) is " + B)
 def oe_before(m, c): return before(m[1], I(m[2]))
-@R(r"(Odd|Even) after (\d+): " + B)
-def oe_after1(m, c): return after(m[1].lower(), I(m[2]))
-@R(r"(Odd|Even) before (\d+): " + B)
+@R(r"Next (odd|even) after (\d+): " + B)
+def oe_after1(m, c): return after(m[1], I(m[2]))
+@R(r"(Odd|Even) just before (\d+): " + B)
 def oe_before1(m, c): return before(m[1].lower(), I(m[2]))
 @R(r"Smallest (odd|even) number greater than (\d+): " + B)
 def oe_small(m, c): return after(m[1], I(m[2]))
@@ -293,7 +293,7 @@ def to_cents(m, c): return cents(m[1])
 def to_dollars(m, c): return I(m[1])                          # cents; the blank is written in dollars (0.65) and compared as cents
 
 # ---- time
-@R(r"(?:Which time is |Say the time: |Match the time: |Time: )?(\d{1,2}):(\d\d)(?: is which time\? " + B + r"| is the same as which time\?| Which key time\?|\?)?")
+@R(r"(?:Which time is |Say the time: |Match the time: |Time: )?(\d{1,2}):(\d\d)(?: is which time\? " + B + r"| is the same as which time\?(?: " + B + r")?| Which key time\?|\?(?: " + B + r")?)?")
 def digital_time(m, c): return hmin(I(m[1]), I(m[2]))
 @R(r"It is (\d+) o'clock\. (1 hour|Half an hour) (later|before): " + B)
 def shift_oclock(m, c): return add_minutes((I(m[1]), 0), (60 if m[2] == "1 hour" else 30) * (1 if m[3] == "later" else -1))

@@ -809,7 +809,7 @@ def check_foreign(d):
                 ctx = t1[max(0, h - 40):h + 30]
                 tm = re.search(r'Term (\d) \u2022 Lesson 1', t1[max(0, h - 12):h + 9])
                 if tm and int(tm.group(1)) != d['term']: continue          # a pointer to the first lesson of another term
-                if not re.search(r'previous|earlier|Lesson 1 to|Lessons? 1,|from Lesson 1|in Lesson 1', ctx, re.I): bad.append(f"{os.path.basename(f)} contains 'Lesson 1' ({ctx.strip()})")
+                if not re.search(r'previous|earlier|Lesson 1 to|Lessons? 1,|from Lesson 1|in Lesson 1|Term \d,? (its )?Lesson 1|its Lesson 1', ctx, re.I): bad.append(f"{os.path.basename(f)} contains 'Lesson 1' ({ctx.strip()})")
         if d['term'] != 1 and re.search(r'Math Inquirers Term 1\b|\bTERM 1 (CHECK|\u2022)', t1): bad.append(f"{os.path.basename(f)} still says Term 1 (this is Term {d['term']})")
     if bad: fail('template leak: ' + '; '.join(sorted(set(bad))[:6]))
     else: ok('template leak: no other lesson title or stray Lesson 1 text in the built files')
