@@ -108,10 +108,10 @@ const balT3 = () => balances([[['apple', 'apple', 'apple'], ['pomelo']], [['pome
 const balC6 = () => balances([[['cube', 'cube', 'ball'], ['ball', 'ball']], [['ball', 'cube'], ['w:300 g']]], 'Two level scales: 2 cubes and a ball balance 2 balls; a ball and a cube balance 300 g', 150);
 
 // ---- towers (C6 Lesson 4): tower k has 3k - 1 cubes ----
-const towers = () => { let s = '', x = 30; const c = 30;
-  [2, 5, 8].forEach((n, i) => { for (let k = 0; k < n; k++) s += R(x, 250 - (k + 1) * c, c, c, Y, { sw: 2.4 }); s += T(x + c / 2, 272, 'Tower ' + (i + 1), 15); x += c + 70; });
-  s += T(x + 10, 150, '… keeps growing the same way', 15, { a: 'start', w: 600, i: true, c: '#44506F' });
-  return W(svg(600, 282, s, 'Towers of cubes with 2, 5 and 8 cubes'), 2); };
+const towers = () => { let s = '', x = 30; const c = 24;
+  [2, 5, 8].forEach((n, i) => { for (let k = 0; k < n; k++) s += R(x, 212 - (k + 1) * c, c, c, Y, { sw: 2.2 }); s += T(x + c / 2, 232, 'Tower ' + (i + 1), 15); x += c + 70; });
+  s += T(x + 10, 120, '… keeps growing the same way', 15, { a: 'start', w: 600, i: true, c: '#44506F' });
+  return W(svg(600, 240, s, 'Towers of cubes with 2, 5 and 8 cubes'), 2); };
 const frogs = () => {
   const mk = (start, jump, name) => numberLineF({ min: 0, max: 30, W: 600, labelEvery: 2, size: 15, hops: [{ from: start, to: start + jump, label: '' + jump, h: 26 }], frog: start }, 72);
   return W(svg(600, 106, T(8, 14, 'Frog A: starts at 0, jumps 4', 15, { a: 'start', w: 600 }) + mk(0, 4), 'Number line 0 to 30 with frog A on 0 and its first jump of 4'), 0) + W(svg(600, 106, T(8, 14, 'Frog B: starts at 2, jumps 3', 15, { a: 'start', w: 600 }) + mk(2, 3), 'Number line 0 to 30 with frog B on 2 and its first jump of 3'), 0);
