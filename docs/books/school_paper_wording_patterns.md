@@ -246,3 +246,9 @@ Remember: the two papers are one P1 quiz on multiplication/division and one P2 r
 - Names Ali, Mei, Siti, Ben, Ravi are plausible; add Jenny, Lily, Jamie, Ray, Amelia for variety.
 - Short imperative sentences ("Count the sticks.", "Fill in the tens and ones.") are the same shape as the papers' section instructions.
 - Units written after the blank (cm) match P2.
+
+---
+
+## Appendix. Primary 1 evidence on time, money, shapes and graphs (added 23 Oct 2026)
+
+The two papers above are a P1 multiplication quiz and a P2 review, so they say little about P1 time, money, shapes or graphs. `docs/books/p1_school_paper_patterns.md` covers those topics from 32 further P1 papers (about 17 schools, 2018 to 2024). It extends this file and does not replace it. Two points there qualify statements above: P1 papers write cents with the cent sign (50¢), so "dollars only" in the P2 syllabus line does not hold at P1; and P1 time wording is "o'clock" and "half past" with digits for 5-minute times, am and pm without full stops.
