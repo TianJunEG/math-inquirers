@@ -89,7 +89,7 @@ def page16():
         ["Start at START. Move up, down, left or right.", "Step only on fractions in simplest form.", "Do not step on a box twice."],
         body, "Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[(r, c)][0]}/{grid[(r, c)][1]}" for r, c in path),
         f"Route reaches FINISH through {L} boxes; every fraction on it is in simplest form.",
-        f"A 4 by 4 grid of sixteen fractions. A fraction is in simplest form when the top and bottom numbers have no common factor other than 1 (so 4/6 is not, 3/5 is). The pupil steps only on those. The boxes off the route are fractions that can still be made simpler (such as 6/8 or 4/12). {dead} extra boxes in simplest form are dead ends. Counting the boxes shows a line that takes a shortcut. Denominators are at most 12.",
+        f"A 4 by 4 grid of sixteen fractions. A fraction is in simplest form when no whole number except 1 divides both the top and the bottom number (so 4/6 is not, 3/5 is). The pupil steps only on those. The boxes off the route are fractions that can still be made simpler (such as 6/8 or 4/12). {dead} extra boxes in simplest form are dead ends. Counting the boxes shows a line that takes a shortcut. Denominators are at most 12.",
         check=f"Does your line reach FINISH? Count its boxes: are there {L}? Is every fraction in simplest form?", mk=("route",),
         mech_plain=f"Route: the line must reach FINISH through the right number of boxes, every fraction being in simplest form")
     g2 = {(r, c): fracs_in(texts[r][c])[0] for r in range(n) for c in range(n)}
@@ -247,7 +247,7 @@ def page19():
         ["Add or subtract the fractions.", "The answer's bottom number is printed. Write the top number in the box.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 0, 12,
         "; ".join(f"{i+1}) {x}/{it['D']}" for i, (it, x) in enumerate(zip(items, ans))),
-        "Six items with two related fractions, that is, one bottom number is a multiple of the other (for example halves and quarters, thirds and ninths). Two additions, two subtractions, one whole minus a fraction and a story. Every answer is less than one whole. The bottom number of the answer is printed (the larger one); the pupil changes the other fraction to equal parts and writes the top number. The decoy letters stand for adding or subtracting the top numbers without changing parts, or for the part left over. A box left blank gives no letter and the check cannot see it.")
+        "Six items with two related fractions, that is, one bottom number is made from the other by multiplying (for example halves and quarters, thirds and ninths). Two additions, two subtractions, one whole minus a fraction and a story. Every answer is smaller than one whole. The bottom number of the answer is printed (the larger one); the pupil changes the other fraction to equal parts and writes the top number. The decoy letters stand for adding or subtracting the top numbers without changing parts, or for the part left over. A box left blank gives no letter and the check cannot see it.")
     solved = []
     for t in texts:
         fs = re.findall(r'<span class="fr"><i>(\d+)</i><i>(\d+)</i></span>', t)
@@ -314,7 +314,7 @@ def page20():
         ["Work out each amount. Write it like this: $3.45.", INSTR_CODE],
         '<div class="qg c2">' + "".join(cards) + "</div>", ans, table, word, 0, 9999,
         "; ".join(f"{i+1}) {money(a)}" for i, a in enumerate(ans)),
-        "Six money items in decimal notation: an addition, a subtraction (money left), change from a note, 'how much more', a total of three prices and a count of the notes and coins drawn. Prices are in dollars and cents ($4.35); every answer is written with a dollar sign, a point and two cents digits. The decoy letters stand for adding where the item subtracts, or for a dollar too many or too few. Pictures are not actual size. A box left blank gives no letter and the check cannot see it.",
+        "Six money items in decimal notation: an addition, a subtraction (money left), change from a note, 'how much more', a total of three prices and a count of the notes and coins drawn. Prices are in dollars and cents ($3.45); every answer is written with a dollar sign, a point and two cents digits. The decoy letters stand for adding where the item subtracts, or for a dollar too many or too few. Pictures are not actual size. A box left blank gives no letter and the check cannot see it.",
         domain=None, fmt=money)
     P["facts"] = " ".join(re.findall(r"\d+", " ".join(texts))) + " " + " ".join(str(a) for a in ans) + " " + " ".join(re.findall(r"\d+", " ".join(money(k) for k in table)))
     solved = []

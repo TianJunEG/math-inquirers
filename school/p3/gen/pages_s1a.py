@@ -49,12 +49,12 @@ def page01():
             elif it["k"] == "zero": t = f"{it['th']} thousands and {it['t']} tens make which number?"
             else: t = f"How many hundreds are in {it['n']}?"
             texts.append(t); cards.append(qcard(i + 1, f"<p>{t}</p>", '<span class="ab w4"></span>'))
-    P = code_items_page(1, 3101, "Thousands, Hundreds, Tens, Ones", 1, "Place value: numbers to 10 000", STRAND_WN,
+    P = code_items_page(1, 3101, "Place Value", 1, "Place value: thousands, hundreds, tens and ones, numbers to 10 000", STRAND_WN,
         "1.1, 1.2 (counting in hundreds; number notation, representations and place values)", ["WN1.1", "WN1.2"], "Code-breaker (place value)",
         ["Write the number in the box.", INSTR_CODE],
         '<div class="qg c1">' + "".join(cards[:2]) + '</div><div class="qg c2" style="margin-top:3.5mm">' + "".join(cards[2:]) + "</div>", ans, table, word, 0, 9999,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "Two place-value charts (discs marked 1000, 100, 10 and 1; one chart has a column with no discs), the value of a digit, a regrouped number (more than 9 hundreds), a number with a zero hundreds place and the number of hundreds in a number. The wrong numbers a pupil gets by writing the digits in a different order, or the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
+        "Two place-value charts (discs marked 1000, 100, 10 and 1; one chart has a column with no discs), the value of a digit, a regrouped number (ten or more hundreds), a number with a zero hundreds place and the number of hundreds in a number. The wrong numbers a pupil gets by writing the digits in a different order, or the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
     solved = []; ci = 0; ti = 0
     for it in items:
         if it["k"] == "chart":
@@ -338,7 +338,7 @@ def page05():
         "1.1, 1.5 (counting in hundreds and thousands; patterns in number sequences)", ["WN1.1", "WN1.5"], "Lettered choice (patterns)",
         ["Find the rule. Find the missing number.", "Circle the letter beside the missing number.", "Write the six letters in the boxes."],
         specs_rows, 3, "; ".join(f"{i+1}) {r['val']}" for i, r in enumerate(specs_rows)),
-        "Six number patterns with one missing number: counting on and back in 100s and 1000s, and two patterns whose two steps take turns. Each row offers three numbers; the wrong ones are the usual slips (the wrong place changed, or the wrong step). The letters of the right numbers, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
+        "Six number patterns with one missing number: counting on and back in hundreds and thousands, and two patterns whose two steps take turns. Each row offers three numbers; the wrong ones are the usual slips (the wrong place changed, or the wrong step). The letters of the right numbers, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         rng=rng)
     def solver(q, opts):
         v = missing_of(read_seq(q))

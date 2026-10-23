@@ -108,7 +108,7 @@ def page22():
         ["Start at START. Move up, down, left or right.", f"Step only on boxes where the missing number is {T}.", "Do not step on a box twice."],
         body, "Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[(r, c)]}" for r, c in path),
         f"Route reaches FINISH through {L} boxes; the missing number in every box on it is {T}.",
-        f"A 4 by 4 grid of sixteen conversions with a missing number: km to m, kg to g, ℓ to mℓ, m to cm, and sums of a larger and a smaller unit that must be written in the smaller unit. The route follows the boxes whose missing number is {T}. The other boxes have missing numbers that are 1000 or 100 times a neighbouring number, or a number a thousand more or less. {dead} extra boxes that do make {T} are dead ends. Counting the boxes shows a line that takes a shortcut. Pictures of rulers, scales and jugs are not used: the page tests the conversions.",
+        f"A 4 by 4 grid of sixteen conversions with a missing number: km to m, kg to g, ℓ to mℓ, m to cm, and sums of a larger and a smaller unit that must be written in the smaller unit. The route follows the boxes whose missing number is {T}. The other boxes have missing numbers that are a thousand more or less, or ten or a hundred times as big or as small. {dead} extra boxes that do make {T} are dead ends. Counting the boxes shows a line that takes a shortcut. Pictures of rulers, scales and jugs are not used: the page tests the conversions.",
         check=f"Does your line reach FINISH? Count its boxes: are there {L}? Is every missing number {T}?", mk=("route",),
         mech_plain=f"Route: the line must reach FINISH through the right number of boxes, every missing number being {T}")
     g2 = {(r, c): texts[r][c].replace("□", "?") for r in range(n) for c in range(n)}
@@ -151,7 +151,7 @@ def page23():
         ["Read each scale.", "Write the mass in grams.", INSTR_CODE],
         qgrid(cards, 3, "dials"), ans, table, word, 0, 10000,
         "; ".join(f"{i+1}) {v} {u} = {a} g" for i, ((u, v), a) in enumerate(zip(items, ans))),
-        "Six weighing scales with a needle: three read in grams (0 to 1000 g, a mark every 50 g, the readings are on a mark with no number) and three read in kilograms (0 to 10 kg) that the pupil changes to grams. Every answer is written in grams. The decoy letters stand for the next mark read by mistake, or for the number of kilograms written as grams without the zeros. Drawings are not to scale. A box left blank gives no letter and the check cannot see it.",
+        "Six weighing scales with a needle: three read in grams (0 to 1000 g, a mark halfway between the numbers, the readings are on such a mark) and three read in kilograms (0 to 10 kg) that the pupil changes to grams. Every answer is written in grams. The decoy letters stand for the next mark read by mistake, or for the number of kilograms written as grams without the zeros. Drawings are not to scale. A box left blank gives no letter and the check cannot see it.",
         fmt=lambda v: f"{v} g")
     solved = []
     for s in svgs:
@@ -266,7 +266,7 @@ def page25():
         "1.2, 1.3 (compound units; converting km and m, kg and g, ℓ and mℓ)", ["ME1.2", "ME1.3"], "Ordering (lettered cards)", "K1 letters in order spell a word (6 letters) + K4 each card used once",
         ["Put each set of measures in order.", "Write the letter of each card in its place.", "Set A: shortest first. Set B: greatest first."],
         body, "Set A (shortest first): " + ", ".join(f"{lab[('A', v)]} = {v}" for v in A_s) + "; Set B (greatest first): " + ", ".join(f"{lab[('B', v)]} = {v}" for v in B_s), f"Word: {word}",
-        "Each set has three measures of the same kind written in different ways (a mixed unit such as 3 km 5 m, or only the smaller unit such as 3500 m). To compare them the pupil changes them all to the smaller unit. The traps are the zeros in the middle (50 m, 5 m) and the number of thousands. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (every wrong order was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
+        "Each set has three measures of the same kind written in different ways (a mixed unit such as km and m, or only the smaller unit). To compare them the pupil changes them all to the smaller unit. The traps are the zeros in the middle (50 m, 5 m) and the number of thousands. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (every wrong order was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=None, mk=("logic",),
         mech_plain="Letters of the cards in the order asked spell a word (6 letters)")
     P["check_boxes"] = None

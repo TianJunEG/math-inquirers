@@ -4,11 +4,11 @@ the PRINTED text or drawing, and hands validate.py a `model` for the independent
 import random, itertools, re, html as _html
 from .common import *
 
-BIG.update({"siring", "jailor"})      # words found by the P1 and P3 audits that the 129 000-word list lacked
+BIG.update({"siring", "jailor"})      # words found by the P1 and P3 audits that the earlier word list lacked
 
 # --------------------------------------------------------------------------- code words
 # child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
-# making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
+# making another word (tested against the 262 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
 SAFE5 = "birch biome saucy vault topaz motif wharf audio blank blimp blown blunt bound chimp climb cloth clown count cramp crazy crumb curve decoy depth doubt drank drift drown dwarf enjoy fable fault flank flask flora flown fluid force forum frank fruit gleam glory graph gravy grind growl grunt guild hound humid image ivory jumpy juice juicy knife logic maize mixed moved noisy omega opera piano picky pivot plank pound print prize quick round scowl shaft shove skimp sling smack snuck spicy squid stamp swamp swift swung thief think thumb trunk tulip uncle valet video vital voice wafer waltz width woman works wound woven yield young".split()
 SAFE6 = "gopher junior knight meadow melody public quiver scribe spruce swivel thrive tricky tuxedo update volume voyage wisdom answer backup bounce bright buckle budgie campus canopy clouds cousin crafty creamy donkey dainty family figure flight fridge frozen fruity guitar hungry length magnet mighty monkey number peanut police safety sailor shadow shrimp sponge square string strong studio subway sunday teacup tongue turkey walnut walrus wizard wombat bandit behind botany bowman cherub cobalt cougar curfew devour fabric fathom".split()
 _SAFE = {}

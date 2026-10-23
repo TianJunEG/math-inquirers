@@ -81,7 +81,7 @@ def mirror_truth(pic):
 
 def cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     old = L.BOX_SIDE
-    L.BOX_SIDE = 9.0                       # larger answer boxes (audit M4 and round 2: three-digit answers)
+    L.BOX_SIDE = 12.0                      # answer boxes 12 mm (the P2 audits asked for larger boxes; four-digit and money answers)
     try: return _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc)
     finally: L.BOX_SIDE = old
 
@@ -141,10 +141,10 @@ def page14():
     return cbc_page(14, dict(id="CBC-P3-01", picture="fish", bank="mult3", tier=2, seed=3401, level=3), "Colour the Fish",
         ["Work out the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Number and Algebra - Multiplication and Division", "3.1, 3.2, 3.5 (tables of 6, 7, 8 and 9; multiplying and dividing within the tables; mental calculation)",
-        "Every part asks a multiplication or division fact from the tables of 6, 7, 8 and 9: a product, a missing factor, a division or a missing divisor.", oc=["MD3.1", "MD3.2", "MD3.5"])
+        "Every part asks a multiplication or division fact from the tables of 6, 7, 8 and 9: a product, a missing number, a division or a missing divisor.", oc=["MD3.1", "MD3.2", "MD3.5"])
 
 def page39():
-    return cbc_page(39, dict(id="CBC-P3-02", picture="sailboat", bank="conv3", tier=2, seed=3404, level=3), "Colour the Sailboat",
+    return cbc_page(39, dict(id="CBC-P3-02", picture="house", bank="conv3", tier=2, seed=3416, level=3), "Colour the House",
         ["Change the units in each part.", "Find the answer in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
         "Measurement and Geometry - Measurement", "1.2, 1.3 (compound units; converting km and m, m and cm, kg and g, \u2113 and m\u2113)",
         "Every part changes units: km to m, m to cm, kg to g, \u2113 to m\u2113, or adds or takes away a part in the smaller unit.", oc=["ME1.2", "ME1.3"])

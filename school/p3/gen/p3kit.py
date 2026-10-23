@@ -94,7 +94,7 @@ def lettered_choice_page(no, seed, title, tier, topic, strand, syll, oc, ptype, 
     CLAIMED[no] = word
     out = []; pos = []
     for i, spec in enumerate(rows_spec):
-        right = spec.get("right", 0)
+        right = spec.get("ri", 0)
         order = list(range(n_opts))
         if not spec.get("fixed"): rng.shuffle(order)
         wl = iter(rows[i][1:])

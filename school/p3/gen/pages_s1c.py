@@ -59,7 +59,7 @@ def page10():
     specs = []
     for txt, tr in rows:
         T_, F_ = '<b class="tf">True</b>', '<b class="tf">False</b>'
-        specs.append(dict(q=f"<p>{esc(txt)}</p>", opts=[T_, F_], right=0 if tr else 1, fixed=True))
+        specs.append(dict(q=f"<p>{esc(txt)}</p>", opts=[T_, F_], ri=0 if tr else 1, fixed=True))
     P = lettered_choice_page(10, 3010, "True or False Tables", 1, "Multiplication and division facts: tables of 6, 7, 8 and 9", STRAND_MD,
         "3.1, 3.2, 3.5 (tables of 6, 7, 8 and 9; multiplying and dividing within the tables; mental calculation)", ["MD3.1", "MD3.2", "MD3.5"], "True or false table",
         ["Is each statement true or false?", "Circle the letter of the right choice.", "Write the six letters in the boxes."],
@@ -180,11 +180,11 @@ def page12():
             f'<div class="blk"><p class="lead">Write the numbers for the empty circles, tile 1 to tile 6.</p><div class="ansgrid2" style="margin-top:4mm">'
             + "".join(f'<span class="lbx"><span class="ab"></span><small>tile {k+1}</small></span>' for k in range(6)) + '</div></div>')
     P = new_page(12, 3212, "Fact Families", 2, "Multiplication and division: finding the missing number, the loop that closes", STRAND_MD,
-        "3.1, 3.2, 3.3 (tables of 6, 7, 8 and 9; multiplying and dividing within the tables)", ["MD3.1", "MD3.2"], "Chain loop (multiplication tiles)", "K8 the loop closes: every number joined by = matches",
+        "3.1, 3.2 (tables of 6, 7, 8 and 9; multiplying and dividing within the tables)", ["MD3.1", "MD3.2"], "Chain loop (multiplication tiles)", "K8 the loop closes: every number joined by = matches",
         ["Find the number in each empty circle.", "Touching circles joined by = match.", "Go round the loop."],
         body, "Empty circles: " + ", ".join(f"tile {k+1} {'left' if blank[k] == 'l' else 'right'} = {ans[k]}" for k in range(6)) + ". Tiles (top = left × right): " + ", ".join(f"{t[0]} = {t[1]} × {t[2]}" for t in tiles),
         "Every touching pair matches, all the way round.",
-        "Six tiles, each a product at the top and its two factors below. One factor of every tile is empty; the pupil finds it by dividing the top by the other factor and may check by multiplying back. The right factor of a tile is the same number as the left factor of the next tile, and the right factor of the last tile is the first tile's left factor. So every number the pupil writes is tested against a matching circle: a wrong number breaks the loop. At most one link has an empty circle on both sides. In every tile at least one factor is from the tables of 6 to 9; all products are within 81.",
+        "Six tiles, each a product at the top and its two numbers below. One number below every tile is empty; the pupil finds it by dividing the top by the other number and may check by multiplying back. The right number of a tile is the same as the left number of the next tile, and the right number of the last tile is the first tile's left number. So every number the pupil writes is tested against a matching circle: a wrong number breaks the loop. At most one link has an empty circle on both sides. In every tile at least one number is from the tables of 6 to 9; all products are within 81.",
         check="Go round the loop. Do the numbers joined by = match?", mk=("loop",),
         mech_plain="Loop: the number in an empty circle must match the circle it is joined to by =, all the way round and back to tile 1")
     vals = read_mchain(chain)

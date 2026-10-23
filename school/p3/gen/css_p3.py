@@ -144,3 +144,36 @@ CSS_P3 += """
 CSS_P3 += """
 .maze.conv .mcell{font-size:13pt;padding:0 1.5mm;text-align:center;line-height:1.25}
 """
+CSS_P3 += """
+.qg.sw .dial svg{width:40mm;height:40mm}.qg.sw .qc.pos{padding-top:3mm}.qc .cap{font-size:11.5pt;line-height:1.2;margin:0;text-align:center}
+"""
+CSS_P3 += """
+.qc.sqfig{align-items:center;gap:1mm}.sqf svg{max-width:none;display:block}.sqa{display:flex;align-items:center;gap:1.5mm;font-size:12.5pt}.sqa b{font-size:12.5pt}
+.vcard.fig{align-items:center;gap:1.5mm;justify-content:space-between}.vcard.fig .fsvg svg{max-width:none;display:block}.fa{display:flex;align-items:center;gap:1.5mm;font-size:13pt}.ftxt{font-size:13pt;line-height:1.25;margin:0}
+.ab2{display:flex;gap:4mm;align-items:center}.ab2 svg{max-width:none;display:block}.qs2{margin:0;font-size:13pt}
+.crow2.cmp{padding:1.5mm 0 2mm}.crow2.cmp .cq2{display:flex;align-items:center;gap:3mm}
+"""
+CSS_P3 += """
+.fgs{display:inline-flex;align-items:center;gap:1.5mm}.fgs b{font-family:'Fredoka';font-size:15pt}.sqa{font-size:11.5pt;gap:1mm}
+"""
+CSS_P3 += """
+.crow2.cmp .opt{padding:0.5mm 1mm 0.5mm 2mm;border-width:0.3mm}.crow2.cmp .copts{gap:2mm}.crow2.cmp .opt b.on{font-size:14pt}.crow2.cmp .qs2{font-size:12pt;line-height:1.15}.ab2{flex:none}.crow2.cmp .cq2{min-width:26mm}
+"""
+CSS_P3 += """
+.angfig svg,.lnfig svg{max-width:none;display:block}.angfig svg{width:30mm;height:30mm}.crow2.angrow,.crow2.lnrow{padding:1mm 0 2mm}.crow2.lnrow .cq2{display:flex;align-items:center;gap:3mm}.crow2.lnrow .qs2{font-size:11.5pt;max-width:42mm}
+.crow2.lnrow .opt b.on{font-size:15pt}.crow2.angrow .opt b.on{font-size:12pt}.crow2.angrow .opt{padding:1mm 1mm 1mm 2mm}
+.qg.dl{gap:3mm 5mm}.qc.dlr{flex-direction:row;align-items:center;gap:2mm;padding:1.5mm 2mm;position:relative}.qc.dlr .no2{position:absolute;left:1.5mm;top:1.5mm}.dlf svg{max-width:none;display:block;width:50mm;height:48mm}.dlt{font-size:11pt;line-height:1.2;margin:0}
+.gwrap{display:flex;justify-content:center}.gwrap svg,.gtwo svg{max-width:none;display:block}.gtwo{display:flex;gap:4mm;justify-content:center}
+"""
+CSS_P3 += """
+.angfig svg{width:27mm;height:27mm}.qc.dlr{flex-direction:row}.dlt{display:flex;flex-direction:column;gap:2mm;align-items:flex-start}.dlt p{margin:0;font-size:11.5pt;line-height:1.25}
+"""
+CSS_P3 += """
+.fcards{gap:7mm}.fcard{min-width:44mm;padding:5mm 6mm;gap:3.5mm}.bignum{font-size:28pt}.bignum.m{font-size:17pt}.fcard .fnum .fr{font-size:24pt}.fcard i.cl{width:10mm;height:10mm;font-size:16pt}
+"""
+CSS_P3 += """
+.qg.fig2 .vcard.fig{flex-direction:row;align-items:center;position:relative;padding:1.5mm 3mm;gap:2mm}.qg.fig2 .vcard.fig .no{position:absolute;left:2mm;top:2mm}.qg.fig2 .fsvg{flex:1;display:flex;justify-content:center}.qg.fig2 .fa{flex:none;flex-direction:column;align-items:center;gap:1mm}.qg.fig2 .ftxt{padding-left:8mm}
+"""
+CSS_P3 += """
+.crow2.clockrow .clk30 svg{width:33mm;height:33mm;max-width:none}.crow2.clockrow{padding:0.5mm 0 1.5mm}
+"""

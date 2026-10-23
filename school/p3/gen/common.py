@@ -27,7 +27,7 @@ house train jacket basket
 """.split())
 
 # ---- large word lists (written by the audit-2 pass): BIG = every English word of 2 to 8 letters from two public word lists plus the
-# 80 000 most frequent words (about 129 000 words); a wrong answer that spells ANY of them is counted as a wrong answer that the
+# 80 000 most frequent words (about 262 000 words, see kit.py); a wrong answer that spells ANY of them is counted as a wrong answer that the
 # pupil's "do the letters spell a word?" check would accept. COMMON = the 20 000 most frequent of them (words a P1 teacher
 # might know): used for the guess-resistance test (V4).
 import gzip, os
@@ -164,7 +164,7 @@ def make_code_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-
 def code_checks(P, cv, word):
     """the four code-word checks every code page records"""
     P.v("V2 code word spells " + word, cv["spelled_ok"])
-    P.v("V3 no single slip spells another word (large word list, 129 000 words)", not cv["undetected"], f'{cv["single_detected"]}/{cv["single_total"]}')
+    P.v("V3 no single slip spells another word (large word list, 262 000 words)", not cv["undetected"], f'{cv["single_detected"]}/{cv["single_total"]}')
     P.v("V3c no swap of two answers spells a word", not cv["swap_words"], cv["swap_words"][:3])
     P.v("V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)", cv["anagrams"] == [word.lower()], cv["anagrams"])
     P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])

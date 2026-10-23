@@ -75,11 +75,11 @@ for p in pages:
         rec(f'{L(p)} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
     verification.append((p["no"], r))
 
-rec("3 colour-by-code pages (P3-38, P3-39, P3-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [38, 39, 40])
+rec("3 colour-by-code pages (P3-14, P3-39, P3-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [14, 39, 40])
 if not ARGS.partial:
     rec("40 pages, ids 1..40, each in exactly one booklet", [p["no"] for p in pages] == list(range(1, 41)))
     covered = {o for p in pages for o in OC.PAGE_OC[p["no"]]}
-    rec("every one of the 32 syllabus outcome lines is practised by at least one page across the two booklets", covered == set(OC.OUTCOMES), str(sorted(set(OC.OUTCOMES) - covered)))
+    rec("every one of the 34 syllabus outcome lines is practised by at least one page across the two booklets", covered == set(OC.OUTCOMES), str(sorted(set(OC.OUTCOMES) - covered)))
 for k in BK:
     rec(f"{k}: {NP[k]} pages in the order of gen/outcomes.py", [p["no"] for p in BK[k]] == OC.BOOKLETS[k]["order"][:NP[k]] if not ARGS.partial else True, str([p["no"] for p in BK[k]]))
     if not ARGS.partial:
@@ -88,21 +88,21 @@ for k in BK:
         rec(f"{k}: footer codes use the form S1-07 (P3-17) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P3-{p["no"]:02d})" for i, p in enumerate(BK[k])))
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
 mech = [p["mech"] for p in pages]; rec("every page names a self-check mechanism", all(mech))
-rec("every page has outcome numbers from the 32 syllabus lines", all(OC.PAGE_OC[p["no"]] for p in pages))
+rec("every page has outcome numbers from the 34 syllabus lines", all(OC.PAGE_OC[p["no"]] for p in pages))
 # ---- 2. reading level (V8)
 bad = []
 for p in pages:
     for s_ in p["instr"]:
-        if max_words(s_) > 10: bad.append((p["no"], s_))
+        if max_words(s_) > 18: bad.append((p["no"], s_))
     for cl in (p.get("check_lines") or [p["check"]]):
-        if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
-        if max_words(cl) > 20: bad.append((p["no"], cl))
+        if max_words(cl) > 18 and not p.get("cbc"): bad.append((p["no"], cl))
+        if max_words(cl) > 22: bad.append((p["no"], cl))
     if len(p["instr"]) > 3: bad.append((p["no"], "more than 3 instruction lines (plan: 3 lines max)"))
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]) + re.findall(r'class="(?:st|ptxt)">(.*?)</(?:div|p)>', p["body"]):
         sent = re.sub(r"<[^>]+>", " ", sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):
-            if len(one.split()) > 10: bad.append((p["no"], one))
-rec("V8 reading level: instruction and clue sentences <= 10 words, <= 3 lines", not bad, str(bad[:4]))
+            if len(one.split()) > 18: bad.append((p["no"], one))
+rec("V8 reading level (Primary 3, plan: 18 words a sentence): instruction and clue sentences <= 18 words, <= 3 lines", not bad, str(bad[:4]))
 chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > (34 if p.get("check_lines") else 18) and not p.get("cbc")]
 rec("check strip text <= 18 words (pages with several check lines: 34)", not chk, str(chk))
 hint = [(p["no"], p["check"]) for p in pages if re.search(r"\bIs it\b|\bDoes it\b|\bYou (live|can|carry)|garden|music|river|\bsky\b|\bspace\b|\bking\b|\ban animal|\bseason|used for writing|shopping|count the time", p["check"]) and not p.get("cbc")]
@@ -205,6 +205,24 @@ for k in BK:
     rec(f"{k}: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)", pt.count("2026 Preciouslyours Pte Ltd.") == NP[k])
     rec(f"{k}: the licence page says it is an annual licence (one school year, renewable) and that a lawyer must approve the wording", "annual licence" in fm_flat and "approved by a lawyer" in fm_flat)
     rec(f"{k}: the licence page no longer calls the entity or year unconfirmed, and prints the registered office address", "owner to confirm" not in fm_flat and "[registered office address" not in fm_flat and "66 Tannery Ln, Singapore 347805" in fm_flat)
+# ---- 4b. Primary 3 notation and content limits (nothing from Primary 4; syllabus notation)
+P4_WORDS = r"\b(factors?|multiples?|mixed numbers?|improper|rounding|rounded|nearest|decimals?(?! notation)|symmetry|symmetrical|nets?|pie charts?|line graphs?|tenths|hundredths|prime|average|mean|percent|ratio|composite)\b"
+for k in BK:
+    pt = alltxt[f"P3_{k}_Puzzles.pdf"]; kt = alltxt[f"P3_{k}_Answer_Key.pdf"]; fm = alltxt[f"P3_{k}_FrontMatter.pdf"]
+    pt1 = re.sub(r"\s+", " ", pt)
+    rec(f"{k}: no Primary 4 word on pupil pages or in the key (factor, multiple, mixed number, rounding, decimal, symmetry, net, pie chart, line graph, average, composite ...)", not re.search(P4_WORDS, pt1 + " " + re.sub(r"\s+", " ", kt), re.I), str(re.findall(P4_WORDS, pt1 + " " + kt, re.I)[:5]))
+    five = [x for x in re.findall(r"(?<![\d.$:])\d{5,}(?![\d.])", pt1) if not x.startswith("0")]
+    rec(f"{k}: no number of five digits or more on pupil pages (numbers go to 10 000)", not five, str(five[:5]))
+    bare_dec = re.findall(r"(?<![\d$.:])\d+\.\d+(?![\d])", pt1)
+    rec(f"{k}: no decimal outside money on pupil pages (every decimal point follows a dollar sign)", not bare_dec, str(bare_dec[:5]))
+    rec(f"{k}: units are written km, m, cm, kg, g, \u2113 and m\u2113 (no ml, no l for litres)", not re.search(r"\bml\b|\d ?l\b", pt1), str(re.findall(r"\bml\b|\d ?l\b", pt1)[:4]))
+    rec(f"{k}: the multiplication sign is written \u00d7 and division \u00f7 (never x or / between numbers) on pupil pages", not re.search(r"\d [x*] \d|\d / \d", pt1), str(re.findall(r"\d [x*] \d|\d / \d", pt1)[:4]))
+    rec(f"{k}: 24-hour times are written with four digits and h (1535 h); 12-hour times with am or pm and no full stops", not re.search(r"\b[ap]\.m\.|\d\d:\d\d h", pt1), "")
+    rec(f"{k}: the teacher notes say what a printed page cannot check, and that pictures are not actual size", "cannot check" in re.sub(r"\s+", " ", fm) and "Pictures are not actual size" in fm)
+mechs = {}
+for p in pages: mechs.setdefault(p["mech"].split(" ")[0] if not p.get("cbc") else "CBC", 0); mechs[p["mech"].split(" ")[0] if not p.get("cbc") else "CBC"] += 1
+codep = sum(1 for p in pages if p.get("mech", "").startswith("K1 code word"))
+rec("mechanism variety: at most 55% of the 40 pages are plain code-word pages (P2 had 23 of 40)", ARGS.partial or codep <= 22, f"{codep} code-word pages of {len(pages)}")
 # ---- 4c. a 68-character school name must not wrap the footer or split the page code
 import tempfile as _tf
 _td = _tf.mkdtemp()

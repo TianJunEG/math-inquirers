@@ -44,7 +44,7 @@ def page26():
         n6 = rng.randint(3, 6) * 60
         items = [dict(k="dial", s=s1, ans=s1), dict(k="dial1", s=s2, ans=60 + s2), dict(k="conv", m=a3[0], s=a3[1], ans=a3[0] * 60 + a3[1]),
                  dict(k="inmin", n=n4, ans=n4 * 60), dict(k="song", m=a5[0], s=a5[1], ans=a5[0] * 60 + a5[1], nm=rng.choice(PEOPLE)), dict(k="mins", n=n6, ans=n6 // 60)]
-        rng.shuffle(items); ans = [it["ans"] for it in items]
+        rng.shuffle(items); items.sort(key=lambda it: not it["k"].startswith("dial")); ans = [it["ans"] for it in items]
         if not distinct(ans) or max(ans) > 600: continue
         pool = set()
         for it in items:
@@ -65,25 +65,25 @@ def page26():
             cards.append(qcard(i + 1, '<div class="dial">' + s + f'</div><p class="cap">{t}</p>', '<span class="ab w3"></span> <b>s</b>', cls="pos"))
         else:
             svgs.append(None)
-            if k == "conv": t = f"{it['m']} min {it['s']} s = ? s"
+            if k == "conv": t = f"How many seconds are in {it['m']} min {it['s']} s?"
             elif k == "inmin": t = f"How many seconds are in {it['n']} minutes?"
             elif k == "song": t = f"{it['nm']}'s song lasts {it['m']} min {it['s']} s. How many seconds is that?"
             else: t = f"How many minutes are {it['n']} seconds?"
             texts.append(t)
             unit = "min" if k == "mins" else "s"
-            cards.append(qcard(i + 1, f"<p>{t.replace('= ?', '=')}</p>", f'<span class="ab w3"></span> <b>{unit}</b>'))
+            cards.append(qcard(i + 1, f"<p>{t}</p>", f'<span class="ab w3"></span> <b>{unit}</b>'))
     unitfmt = {a: ("min" if it["k"] == "mins" else "s") for it, a in zip(items, ans)}
     P = code_items_page(26, 4626, "Seconds", 1, "Time: seconds, minutes and seconds", STRAND_ME,
         "2.1 (measuring time in seconds)", ["TI2.1"], "Code-breaker (stopwatch)",
         ["Read the stopwatch or work out each answer.", "Write the answer in the box.", INSTR_CODE],
-        qgrid(cards, 2, "sw"), ans, table, word, 0, 600,
+        qgrid(cards[:2], 2, "sw") + '<div style="height:3mm"></div>' + qgrid(cards[2:], 2), ans, table, word, 0, 600,
         "; ".join(f"{i+1}) {a} {unitfmt[a]}" for i, a in enumerate(ans)),
-        "Two stopwatch faces (a seconds hand, a mark every second and a number every 5 seconds; the second also says that one minute has passed), a minutes-and-seconds measure changed to seconds, the number of seconds in some minutes, a story, and seconds changed to minutes. The decoy letters stand for reading the wrong mark, writing 1 minute as 100 seconds, or adding the minutes to the seconds. A real stopwatch is not possible on paper. A box left blank gives no letter and the check cannot see it.")
+        "Two stopwatch faces (a seconds hand, a mark every second and a number every 5 seconds; the second also says that one minute has passed), a minutes-and-seconds measure changed to seconds, the number of seconds in some minutes, a story, and seconds changed to minutes. The decoy letters stand for reading the wrong mark, writing a minute as a hundred seconds, or adding the minutes to the seconds. A real stopwatch is not possible on paper. A box left blank gives no letter and the check cannot see it.")
     solved = []; si = 0
     for it, t in zip(items, texts):
         k = it["k"]
         if k in ("dial", "dial1"): v = A3.read_stopwatch(svgs[items.index(it)]); solved.append(v if k == "dial" else 60 + v)
-        elif k == "conv": m_, s_ = re.match(r"(\d+) min (\d+) s", t).groups(); solved.append(int(m_) * 60 + int(s_))
+        elif k == "conv": m_, s_ = re.search(r"in (\d+) min (\d+) s", t).groups(); solved.append(int(m_) * 60 + int(s_))
         elif k == "inmin": solved.append(int(re.search(r"in (\d+) minutes", t).group(1)) * 60)
         elif k == "song": m_, s_ = re.search(r"lasts (\d+) min (\d+) s", t).groups(); solved.append(int(m_) * 60 + int(s_))
         else: solved.append(int(re.search(r"are (\d+) seconds", t).group(1)) // 60)
@@ -121,7 +121,7 @@ def page27():
         "2.3 (24-hour clock)", ["TI2.3"], "Lettered choice (24-hour clock)",
         ["Match each time to the same time written another way.", "Circle the letter of the right choice.", "Write the five letters in the boxes."],
         specs, 3, "; ".join(f"{i+1}) {ampm(s['t'])} = {h24(s['t'])}" for i, s in enumerate(specs)),
-        "Five rows: two analogue clocks (with the part of the day written beside them), two times in the 12-hour clock to write in the 24-hour clock and one 24-hour time to write in the 12-hour clock. In the 24-hour clock the hours go from 00 to 23 and are written with four digits (1535 h is 3:35 pm). The wrong choices are the same time in the other half of the day, the hour and the minutes swapped, or a time ten minutes or two hours away. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
+        "Five rows: two analogue clocks (with the part of the day written beside them), two times in the 12-hour clock to write in the 24-hour clock and one 24-hour time to write in the 12-hour clock. In the 24-hour clock the day is counted from midnight and every time is written with four digits and the letter h. The wrong choices are the same time in the other half of the day, the hour and the minutes swapped, or a time ten minutes or two hours away. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         word_len=5, rng=rng, row_cls="clockrow")
     P["check_boxes"] = 5
     def solver(q, opts):
@@ -170,11 +170,11 @@ def page28():
             cand = hm_text(r["d"] + k) if r["k"] == "dur" else ampm((r["t2"] if r["k"] == "finish" else r["t1"]) + k)
             if cand != right and cand not in wrongs: wrongs.append(cand)
         specs.append(dict(q=q, opts=[f'<b class="on">{right}</b>'] + [f'<b class="on">{w}</b>' for w in wrongs[:2]], row=r, right=right))
-    P = lettered_choice_page(28, 4828, "Start, Finish, How Long", 2, "Time: finding the starting time, the finishing time or how long it takes", STRAND_ME,
+    P = lettered_choice_page(28, 4828, "Start and Finish", 2, "Time: finding the starting time, the finishing time or how long it takes", STRAND_ME,
         "2.2 (finding the starting time, finishing time or duration given the other two quantities)", ["TI2.2"], "Lettered choice (start, finish, duration)",
         ["Find the time or how long.", "Circle the letter of the right choice.", "Write the six letters in the boxes."],
         specs, 3, "; ".join(f"{i+1}) {s['right']}" for i, s in enumerate(specs)),
-        "Six stories: two ask when something ends (start and how long), two ask when it started (end and how long) and two ask how long it took (start and end). Times are in the 12-hour clock with am and pm; some cross the hour, some cross noon. The wrong choices are the usual slips: counting 100 minutes in an hour, adding where the story takes away, and a time one hour or forty minutes out. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
+        "Six stories: two ask when something ends (start and how long), two ask when it started (end and how long) and two ask how long it took (start and end). Times are written with am and pm; some go past the hour, some go past noon. The wrong choices are the usual slips: counting a hundred minutes in an hour, adding where the story takes away, and a time out by an hour or by forty minutes. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         rng=rng, row_cls="sfrow")
     def solver(q, opts):
         o = [re.search(r">([^<]*)<", x).group(1) for x in opts]
@@ -228,7 +228,7 @@ def page29():
         ["Use the timetable and the questions.", "Write each answer in the box.", INSTR_CODE],
         qgrid(cards, 2), ans, table, word, 0, 2359,
         "; ".join(f"{i+1}) {fmtv(a)}" for i, a in enumerate(ans)),
-        "A timetable of buses in the 24-hour clock (four digits, with h). Questions: how long three journeys take (one crosses midnight), when a journey that leaves at a given time and takes a given time arrives, when a journey that arrives at a given time and takes a given time left, and the wait between two buses. Answers that are times are written with four digits (0645); answers that are lengths are in minutes. The decoy letters stand for counting 100 minutes in an hour, or for an hour out. A box left blank gives no letter and the check cannot see it.",
+        "A timetable of buses in the 24-hour clock (four digits, with h). Questions: how long three journeys take (one crosses midnight), when a journey that leaves at a given time and takes a given time arrives, when a journey that arrives at a given time and takes a given time left, and the wait between two buses. Answers that are times are written with four digits (a leading zero for the early hours); answers that are lengths are in minutes. The decoy letters stand for counting a hundred minutes in an hour, or for an hour out. A box left blank gives no letter and the check cannot see it.",
         pre_body=pre, fmt=fmtv, domain=None)
     P["instr"] = ["Use the timetable and the questions.", "Write each answer in the box. A time has four digits.", INSTR_CODE]
     tt = {}
