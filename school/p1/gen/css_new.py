@@ -87,3 +87,5 @@ CSS_NEW += """
 .tfo{display:flex;align-items:center;gap:2mm;font-size:15pt;font-weight:800;margin-left:4mm}.tfo i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;font-weight:700}
 """
 CSS_NEW += """.ansgrid2{display:flex;gap:6mm;justify-content:center;margin-top:1mm}"""
+CSS_NEW += """.sumrows.arrs{gap:3mm 6mm}.sumcell{display:flex;flex-direction:column;gap:1mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}.sumcell .arr{display:flex;justify-content:center}.sumcell .arr svg{max-width:none}"""
+CSS_NEW += """.ctc .codetable{gap:2mm;flex-wrap:nowrap}.ctc .ct{min-width:0;flex:1;padding:0.6mm 1.5mm;font-size:14pt}.ctc .ct b{font-size:16pt}.sumrows.arrs .sumrow{font-size:21pt}"""

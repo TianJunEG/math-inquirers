@@ -391,38 +391,49 @@ def solve_times(text):
     if m: return int(m[2]) // int(m[1])
     raise ValueError(text)
 
+def array_svg(kind, rows, cols, size=5.6, pitch=6.2):
+    """rows x cols objects as an array (rows = groups, cols = the number in each group)"""
+    inner = "".join(obj_g(kind, 0.6 + c * pitch, 0.6 + r * pitch, size) for r in range(rows) for c in range(cols))
+    return svg(round(cols * pitch + 1.2, 1), round(rows * pitch + 1.2, 1), inner)
+
 def page05():
     rng = random.Random(505)
     word = "SQUARE"
     kinds = ["x", "x", "groups", "groups", "missA", "missB"]
+    okinds = ["apple", "star", "fish", "balloon"]
     while True:
         rng.shuffle(kinds)
         items = []
         for k in kinds:
-            a = rng.choice([2, 3, 4, 5, 10]); b = rng.choice([2, 3, 4, 5])
-            if a * b > 40: continue
-            if k == "x": items.append((f"{a} &times; {b} = {BOX}", a * b))
-            elif k == "groups": items.append((f"{a} groups of {b} = {BOX}", a * b))
-            elif k == "missA": items.append((f"{BOX} &times; {b} = {a * b}", a))
-            else: items.append((f"{a} &times; {BOX} = {a * b}", b))
-        if len(items) != 6: continue
-        ans = [x for _, x in items]
-        if len(set(ans)) != 6 or len({t for t, _ in items}) != 6 or max(ans) > 40 or min(ans) < 4: continue
-        table = make_code_table(ans, word, rng, 1, 40, n_decoy=5, near=(1, -1, 2, -2, 5, -5, 10, -10), tries=60)
+            a = rng.choice([2, 3, 4, 5]); b = rng.choice([2, 3, 4, 5])
+            if k == "x": items.append((f"{a} &times; {b} = {BOX}", a * b, a, b))
+            elif k == "groups": items.append((f"{a} groups of {b} = {BOX}", a * b, a, b))
+            elif k == "missA": items.append((f"{BOX} &times; {b} = {a * b}", a, a, b))
+            else: items.append((f"{a} &times; {BOX} = {a * b}", b, a, b))
+        ans = [x for _, x, _, _ in items]
+        if len(set(ans)) != 6 or len({t for t, _, _, _ in items}) != 6 or len({(a_, b_) for _, _, a_, b_ in items}) != 6 or max(ans) > 25 or min(ans) < 4: continue
+        table = make_code_table(ans, word, rng, 1, 40, n_decoy=2, near=(1, -1, 2, -2, 5, -5, 10, -10), tries=200)
         if table: break
-    rows = "".join(f'<div class="sumrow"><span class="no">{i+1}</span>{t.replace(BOX, ABOX)}</div>' for i, (t, _) in enumerate(items))
-    body = f'<div class="sumrows two tall">{rows}</div>{code_block(table)}'
+    okind = [okinds[i % 4] for i in range(6)]; rng.shuffle(okind)
+    pics = [array_svg(okind[i], a_, b_) for i, (_, _, a_, b_) in enumerate(items)]
+    rows = "".join(f'<div class="sumcell"><div class="sumrow" style="height:16mm;border-bottom:none"><span class="no">{i+1}</span>{t.replace(BOX, ABOX)}</div><div class="arr">{pics[i]}</div></div>' for i, (t, _, _, _) in enumerate(items))
+    body = f'<div class="sumrows two arrs">{rows}</div><div class="ctc">{code_block(table)}</div>'
     P = Page(no=5, title="Times Code", tier=2, topic="Multiplication within 40: groups of, and the missing number",
              strand="Number and Algebra - Multiplication and Division", syll="3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
              ptype="Code-breaker", mech="K1 code word (6 letters) + K7 put the number back",
              instr=["3 \u00d7 4 means 3 groups of 4.", "Find the missing numbers.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Second multiplication page (the equal groups page uses pictures). Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4, 5 and 10 and every product is within 40.",
+             note="Second multiplication page (the equal groups page uses bags). Every item has an array of objects: the rows are the groups and the objects in a row are the number in each group, so a pupil can count. Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4 and 5 and every product is within 25 (the syllabus limit is 40).",
              seed=505)
-    sol = [solve_times(t) for t, _ in items]
+    sol = [solve_times(t) for t, _, _, _ in items]
     P.v("V1 solver reads the printed items back and equals the key", sol == ans, sol)
     P.v("V1b answers distinct, every product within 40", len(set(ans)) == 6 and max(ans) <= 40)
+    cnt = [s_.count('class="obj"') for s_ in pics]
+    tot_text = []
+    for (t, _, a_, b_) in items:
+        m = re.search(r"= (\d+)$", t.replace("&times;", "x")); tot_text.append(int(m.group(1)) if m else None)
+    P.v("V1c the array objects counted in each drawing equal the product of the two numbers in the sentence (the total printed for a missing-number item)", all(c == (tt if tt else a_ * b_) for c, tt, (_, _, a_, b_) in zip(cnt, tot_text, items)), cnt)
     cv = code_verify(ans, table, word, 1, 40)
     code_checks(P, cv, word)
     P["cv"] = cv
