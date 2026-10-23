@@ -192,7 +192,7 @@
    "id": "L5U08-S01",
    "tier": "start",
    "page": 1,
-   "text": "Lines AB and CD cross at O. Angle AOC = 64°. Find each angle.",
+   "text": "Straight lines AB and CD meet at point O. Angle AOC = 64°. Find each angle.",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -238,7 +238,8 @@
       "b": "C",
       "text": "64°",
       "r": 22,
-      "tr": 50
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "O",
@@ -246,7 +247,8 @@
       "b": "B",
       "text": "(a)",
       "r": 22,
-      "tr": 50
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "O",
@@ -254,7 +256,8 @@
       "b": "D",
       "text": "(b)",
       "r": 22,
-      "tr": 50
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "O",
@@ -262,7 +265,8 @@
       "b": "A",
       "text": "(c)",
       "r": 22,
-      "tr": 50
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -405,7 +409,8 @@
       "b": "U1",
       "text": "47°",
       "r": 24,
-      "tr": 40
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "P",
@@ -413,7 +418,8 @@
       "b": "U2",
       "text": "85°",
       "r": 24,
-      "tr": 40
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "P",
@@ -421,7 +427,8 @@
       "b": "L",
       "text": "?",
       "r": 24,
-      "tr": 40
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "Q",
@@ -429,7 +436,8 @@
       "b": "Q1",
       "text": "125°",
       "r": 22,
-      "tr": 44
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "Q",
@@ -437,7 +445,8 @@
       "b": "Q2",
       "text": "90°",
       "r": 22,
-      "tr": 44
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "Q",
@@ -445,7 +454,8 @@
       "b": "Q3",
       "text": "105°",
       "r": 22,
-      "tr": 44
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "Q",
@@ -453,8 +463,9 @@
       "b": "Q0",
       "text": "?",
       "r": 22,
-      "tr": 44,
-      "reflex": false
+      "tr": 40,
+      "reflex": false,
+      "size": 18
      }
     ],
     "vlab": false,
@@ -544,38 +555,43 @@
       "a": "B",
       "b": "C",
       "text": "58°",
-      "r": 30,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "B",
       "a": "C",
       "b": "A",
       "text": "67°",
-      "r": 30,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "C",
       "a": "A",
       "b": "B",
       "text": "?",
-      "r": 24
+      "r": 24,
+      "size": 18
      },
      {
       "at": "R",
       "a": "P",
       "b": "Q",
       "text": "38°",
-      "r": 30,
-      "tr": 48
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "Q",
       "a": "P",
       "b": "R",
       "text": "?",
-      "r": 22
+      "r": 22,
+      "size": 18
      }
     ],
     "rights": [
@@ -665,24 +681,27 @@
       "a": "P",
       "b": "R",
       "text": "72°",
-      "r": 30,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "R",
       "a": "P",
       "b": "Q",
       "text": "(a)",
-      "r": 30,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "P",
       "a": "Q",
       "b": "R",
       "text": "(b)",
-      "r": 26,
-      "tr": 48
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -761,32 +780,27 @@
       "a": "B",
       "b": "D",
       "text": "70°",
-      "r": 26,
-      "tr": 44
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "B",
       "a": "A",
       "b": "C",
       "text": "(a)",
-      "r": 26,
-      "tr": 44
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "C",
       "a": "B",
       "b": "D",
       "text": "(b)",
-      "r": 26,
-      "tr": 44
-     },
-     {
-      "at": "D",
-      "a": "C",
-      "b": "A",
-      "text": "(c)",
-      "r": 26,
-      "tr": 44
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "par": [
@@ -818,7 +832,7 @@
      "D": "tl"
     },
     "alt": "parallelogram ABCD",
-    "mm": 4.79
+    "mm": 4.26
    },
    "parts": [
     {
@@ -840,19 +854,9 @@
       ],
       "text": "70"
      }
-    },
-    {
-     "label": "c",
-     "text": "Angle D (c) = {b}°",
-     "answer": {
-      "value": [
-       "110"
-      ],
-      "text": "110"
-     }
     }
    ],
-   "explanation": "(a) Neighbouring angles of a parallelogram add up to 180°. B = 180° - 70° = 110°. (b) Opposite angles are equal. C = A = 70°. (c) D = B = 110° (opposite angles).",
+   "explanation": "(a) Neighbouring angles of a parallelogram add up to 180°. B = 180° - 70° = 110°. (b) Opposite angles are equal. C = A = 70°.",
    "figside": true
   },
   {
@@ -927,24 +931,27 @@
       "a": "C",
       "b": "A",
       "text": "124°",
-      "r": 26,
-      "tr": 50
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "A",
       "a": "B",
       "b": "C",
       "text": "(a)",
-      "r": 26,
-      "tr": 48
+      "r": 24,
+      "tr": 44,
+      "size": 18
      },
      {
       "at": "A",
       "a": "D",
       "b": "B",
       "text": "(b)",
-      "r": 20,
-      "tr": 40
+      "r": 34,
+      "tr": 70,
+      "size": 18
      }
     ],
     "vlab": {
@@ -954,7 +961,7 @@
      "D": "tr"
     },
     "alt": "rhombus ABCD with diagonal AC",
-    "mm": 4.07
+    "mm": 3.62
    },
    "parts": [
     {
@@ -1024,32 +1031,36 @@
       "a": "B",
       "b": "D",
       "text": "75°",
-      "r": 26,
-      "tr": 44
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "B",
       "a": "A",
       "b": "C",
       "text": "110°",
-      "r": 26,
-      "tr": 50
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "C",
       "a": "B",
       "b": "D",
       "text": "(a)",
-      "r": 26,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "D",
       "a": "C",
       "b": "A",
       "text": "(b)",
-      "r": 26,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "par": [
@@ -1159,16 +1170,18 @@
       "a": "D",
       "b": "A",
       "text": "55°",
-      "r": 30,
-      "tr": 48
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "A",
       "a": "B",
       "b": "D",
       "text": "(b)",
-      "r": 26,
-      "tr": 44
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "D",
@@ -1176,7 +1189,8 @@
       "b": "B",
       "text": "(a)",
       "r": 22,
-      "tr": 34
+      "tr": 34,
+      "size": 18
      },
      {
       "at": "D",
@@ -1184,7 +1198,8 @@
       "b": "A",
       "text": "(c)",
       "r": 22,
-      "tr": 36
+      "tr": 36,
+      "size": 18
      },
      {
       "at": "A",
@@ -1192,15 +1207,17 @@
       "b": "C",
       "text": "30°",
       "r": 24,
-      "tr": 46
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "C",
       "a": "D",
       "b": "A",
       "text": "(d)",
-      "r": 26,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -1323,8 +1340,9 @@
       "a": "B",
       "b": "A",
       "text": "(a)",
-      "r": 28,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "C",
@@ -1332,7 +1350,8 @@
       "b": "D",
       "text": "(b)",
       "r": 24,
-      "tr": 44
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -1455,7 +1474,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Angle R = 50° because the   {circ:angles on a straight line|angles of a triangle|angles at a point}   add up to 180°. (P = 55°, Q = 75°)",
+     "text": "Angle R = 50° because the   {circ:angles on a straight line|angles of a triangle|angles at a point}   make 180°. (P = 55°, Q = 75°)",
      "answer": {
       "value": [
        "angles of a triangle"
@@ -1465,7 +1484,7 @@
     },
     {
      "label": "b",
-     "text": "112° = 180° - 68° because   {circ:angles on a straight line|vertically opposite angles|angles at a point}   add up to 180°.",
+     "text": "112° = 180° - 68° because   {circ:angles on a straight line|vertically opposite angles|angles at a point}   make 180°.",
      "answer": {
       "value": [
        "angles on a straight line"
@@ -1475,7 +1494,7 @@
     },
     {
      "label": "c",
-     "text": "In a parallelogram A = 70° and B = 110° because   {circ:opposite angles|neighbouring angles}   add up to 180°.",
+     "text": "In a parallelogram A = 70° and B = 110° because   {circ:opposite angles|neighbouring angles}   make 180°.",
      "answer": {
       "value": [
        "neighbouring angles"
@@ -1485,45 +1504,6 @@
     }
    ],
    "explanation": "(a) P, Q and R are the 3 angles of a triangle: 55° + 75° + 50° = 180°. (b) The angles on a straight line add up to 180°. (c) A and B are neighbours, not opposite, and neighbouring angles of a parallelogram add up to 180°."
-  },
-  {
-   "id": "L5U08-S13",
-   "tier": "start",
-   "page": 3,
-   "text": "Circle True or False.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "Angles on a straight line add up to 360°.   {circ:True|False}",
-     "answer": {
-      "value": [
-       "False"
-      ],
-      "text": "False"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Vertically opposite angles are equal.   {circ:True|False}",
-     "answer": {
-      "value": [
-       "True"
-      ],
-      "text": "True"
-     }
-    },
-    {
-     "label": "c",
-     "text": "A triangle can have 2 right angles.   {circ:True|False}",
-     "answer": {
-      "value": [
-       "False"
-      ],
-      "text": "False"
-     }
-    }
-   ],
-   "explanation": "(a) False: they add up to 180°. Angles at a point add up to 360°. (b) True. (c) False: 2 right angles are already 180°, and then the third angle would be 0°."
   },
   {
    "id": "L5U08-T01",
@@ -1587,16 +1567,18 @@
       "a": "B",
       "b": "D",
       "text": "70°",
-      "r": 30,
-      "tr": 48
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "B",
       "a": "A",
       "b": "C",
       "text": "80°",
-      "r": 26,
-      "tr": 46
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "par": [
@@ -1654,8 +1636,7 @@
    ],
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "hint": "Find D first. Then use the isosceles triangle ADC.",
@@ -1692,7 +1673,6 @@
    "space": {
     "rows": [
      "Working:",
-     "",
      ""
     ]
    },
@@ -1786,8 +1766,9 @@
       "a": "B",
       "b": "D",
       "text": "80°",
-      "r": 26,
-      "tr": 44
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "lines": [
@@ -1815,8 +1796,7 @@
    },
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "hint": "AD = AB = AE. What kind of triangle is ADE?",
@@ -1922,7 +1902,7 @@
    "id": "L5U08-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Clock angles\nThe minute hand turns 6° each minute. The hour hand turns 0.5° each minute. At 4 o'clock the angle between the hands is 120°. What is the smaller angle between the hands at 4:20? {b}°",
+   "text": "Beyond Level 5: Clock angles\nThe minute hand turns 6° each minute. The hour hand turns 0.5° each minute. At 4 o'clock the angle between the hands is 120°. Find the smaller angle between the hands at 4:20. {b}°",
    "answer": {
     "value": [
      "10"
@@ -1932,7 +1912,6 @@
    "space": {
     "rows": [
      "Working:",
-     "",
      ""
     ]
    },
@@ -2015,8 +1994,9 @@
       "a": "B",
       "b": "C",
       "text": "?",
-      "r": 40,
-      "tr": 64
+      "r": 24,
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -2037,7 +2017,6 @@
    "space": {
     "rows": [
      "Working:",
-     "",
      ""
     ]
    },
@@ -2049,7 +2028,7 @@
    "id": "L5U08-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "Lines AB and CD cross at O. Angle AOC = 133°. Find angle COB. {b}°",
+   "text": "Straight lines AB and CD meet at point O. Angle AOC = 133°. Find angle COB. {b}°",
    "figure": {
     "type": "l5_poly",
     "width_mm": 100,
@@ -2095,7 +2074,8 @@
       "b": "C",
       "text": "133°",
       "r": 22,
-      "tr": 52
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "O",
@@ -2103,7 +2083,8 @@
       "b": "B",
       "text": "?",
       "r": 22,
-      "tr": 46
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
@@ -2113,7 +2094,7 @@
      "D": "b"
     },
     "alt": "two lines crossing at O",
-    "mm": 3.46
+    "mm": 2.83
    },
    "answer": {
     "value": [
@@ -2129,174 +2110,26 @@
    "tier": "quiz",
    "page": 6,
    "text": "In triangle PQR, PQ = PR and angle P = 100°. Find angle Q. {b}°",
-   "figure": {
-    "type": "l5_poly",
-    "width_mm": 100,
-    "pts": {
-     "P": [
-      4,
-      5
-     ],
-     "Q": [
-      0,
-      0
-     ],
-     "R": [
-      8,
-      0
-     ]
-    },
-    "polys": [
-     {
-      "v": [
-       "P",
-       "Q",
-       "R"
-      ],
-      "fill": "light"
-     }
-    ],
-    "ticks": [
-     [
-      "P",
-      "Q",
-      1
-     ],
-     [
-      "P",
-      "R",
-      1
-     ]
-    ],
-    "angles": [
-     {
-      "at": "P",
-      "a": "Q",
-      "b": "R",
-      "text": "100°",
-      "r": 26,
-      "tr": 46
-     },
-     {
-      "at": "Q",
-      "a": "P",
-      "b": "R",
-      "text": "?",
-      "r": 28,
-      "tr": 46
-     }
-    ],
-    "vlab": {
-     "P": "t",
-     "Q": "bl",
-     "R": "br"
-    },
-    "alt": "isosceles triangle",
-    "mm": 4.4
-   },
    "answer": {
     "value": [
      "40"
     ],
     "text": "40°"
    },
-   "explanation": "The angles of a triangle add up to 180°. Q and R are equal. 180° - 100° = 80°, and 80° ÷ 2 = 40°.",
-   "figright": true
+   "explanation": "The angles of a triangle add up to 180°. Q and R are equal. 180° - 100° = 80°, and 80° ÷ 2 = 40°."
   },
   {
    "id": "L5U08-C03",
    "tier": "quiz",
    "page": 6,
    "text": "ABCD is a parallelogram. Angle B = 115°. Find angle D. {b}°",
-   "figure": {
-    "type": "l5_poly",
-    "width_mm": 100,
-    "pts": {
-     "A": [
-      0,
-      0
-     ],
-     "B": [
-      10,
-      0
-     ],
-     "C": [
-      12.536,
-      5.438
-     ],
-     "D": [
-      2.536,
-      5.438
-     ]
-    },
-    "polys": [
-     {
-      "v": [
-       "A",
-       "B",
-       "C",
-       "D"
-      ],
-      "fill": "light"
-     }
-    ],
-    "angles": [
-     {
-      "at": "B",
-      "a": "A",
-      "b": "C",
-      "text": "115°",
-      "r": 26,
-      "tr": 50
-     },
-     {
-      "at": "D",
-      "a": "C",
-      "b": "A",
-      "text": "?",
-      "r": 26,
-      "tr": 44
-     }
-    ],
-    "par": [
-     [
-      "A",
-      "B",
-      1
-     ],
-     [
-      "D",
-      "C",
-      1
-     ],
-     [
-      "A",
-      "D",
-      2
-     ],
-     [
-      "B",
-      "C",
-      2
-     ]
-    ],
-    "vlab": {
-     "A": "bl",
-     "B": "br",
-     "C": "tr",
-     "D": "tl"
-    },
-    "alt": "parallelogram ABCD",
-    "mm": 3.99
-   },
    "answer": {
     "value": [
      "115"
     ],
     "text": "115°"
    },
-   "explanation": "Opposite angles of a parallelogram are equal. D is opposite B, so D = 115°. (Neighbouring angles add up to 180°: A = 65°, and D = 180° - 65° = 115°.)",
-   "figright": true
+   "explanation": "Opposite angles of a parallelogram are equal. D is opposite B, so D = 115°. (Neighbouring angles add up to 180°: A = 65°, and D = 180° - 65° = 115°.)"
   },
   {
    "id": "L5U08-C04",
@@ -2359,16 +2192,18 @@
       "a": "D",
       "b": "A",
       "text": "62°",
-      "r": 30,
-      "tr": 48
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "A",
       "a": "D",
       "b": "C",
       "text": "40°",
-      "r": 26,
-      "tr": 48
+      "r": 24,
+      "tr": 40,
+      "size": 18
      },
      {
       "at": "C",
@@ -2376,7 +2211,8 @@
       "b": "A",
       "text": "?",
       "r": 24,
-      "tr": 44
+      "tr": 40,
+      "size": 18
      }
     ],
     "vlab": {
