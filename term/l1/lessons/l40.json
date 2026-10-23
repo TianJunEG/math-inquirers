@@ -2931,7 +2931,7 @@
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
-    "Solve every workbook question and every Quest gate (and the secret cave item) yourself first, with the Quest tutor notes (L40_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Workbook answers: S1 and S2 many answers are right; S3 (2); S4 Wrong and 13; S5 1, 6 and 16; S6 4 and 20; T1 and T2 many answers are right; T3 B and 4; G1 5 and 7, and 1 pair; G2 No, 2, and 3 and 7; G3 many answers are right; I1 open. Exit ticket: E1 14; E2 (2); E3 Wrong.",
+    "Solve every workbook question and every Quest gate (and the secret cave item) yourself first, with the Quest tutor notes (L40_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Secret cave: Friday 25¢ and 75¢ in all. Workbook answers: S1 and S2 many answers are right; S3 (2); S4 Wrong and 13; S5 1, 6 and 16; S6 4 and 20; T1 and T2 many answers are right; T3 B and 4; G1 5 and 7, and 1 pair; G2 No, 2, and 3 and 7; G3 many answers are right; I1 open. Exit ticket: E1 14; E2 (2); E3 Wrong.",
     "A week before, tell the families to have ready: the Quest Log (4 pages, in Book 8), kept closed in an envelope; a quest partner (a grown-up or a brother or sister); one favourite page from the year books (or a drawing of a favourite puzzle) and plain paper. Send them the grown-up note (L40_Quest_Parent_Note.pdf). A family whose Quest Log is missing or damaged tells you: arrange the make-up slot, and send the PDF straight away (printing and postage are included in the program fee, owner decision of 23 Oct 2026; draft parcel policy, owner to confirm: report a missing or damaged book, the pages go out as a PDF straight away, one free resend, a second loss is discussed; delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later).",
     "Have the slides open. The Quest is straight after the brain break, minutes 35 to 55, then the workbook, then the Showcase. Have the Quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the Quest. Delete each child's notes sheet when the line is sent.",
     "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded, so say before the Showcase that a child may teach a grown-up with the microphone muted. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs. PAUSE the recording for the whole Quest (minutes 35 to 55) and restart it for the workbook. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
@@ -3062,24 +3062,15 @@
           "(b) half.",
           "(c) 5 (adding 2 and 3)."
         ],
-        "visuals": [
-          {
-            "type": "shapes2d",
-            "shape": "circle",
-            "parts": 4,
-            "shade": [
-              1
-            ],
-            "size": 28
-          },
-          {
-            "type": "grid",
-            "rows": 2,
-            "cols": 3,
-            "kind": "squares",
-            "size": 32
-          }
-        ]
+        "visual": {
+          "type": "shapes2d",
+          "shape": "circle",
+          "parts": 4,
+          "shade": [
+            1
+          ],
+          "size": 30
+        }
       },
       {
         "id": "C2",
@@ -3129,7 +3120,7 @@
             2,
             0
           ],
-          "size": 62
+          "size": 45
         }
       },
       {

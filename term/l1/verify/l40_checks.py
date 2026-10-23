@@ -201,12 +201,12 @@ def run(d):
     covered = []
     for g in cq['questions']: covered += g['lesson'] if isinstance(g['lesson'], list) else [g['lesson']]
     eq(sorted(covered), list(range(31, 41)), 'every lesson of Term 4 (31 to 40) is visited by exactly one gate'); eq(cave['lesson'], 'beyond', 'the cave is the unseen puzzle')
-    g = C['C1']; circle, rect = vis(g, 0), vis(g, 1); eq(circle['parts'], 4, 'C1 the circle has 4 equal parts'); eq(circle['shape'], 'circle', 'C1 circle')
+    g = C['C1']; circle = vis(g); rect = dict(rows=nums(g['text'])[0], cols=nums(g['text'])[1]); eq(circle['parts'], 4, 'C1 the circle has 4 equal parts'); eq(circle['shape'], 'circle', 'C1 circle')
     parts = 1
     for _ in range(2): parts *= 2
     eq(parts, 4, 'C1 half and half again'); eq(g['val'], [4, 'quarter', 6], 'C1 val'); total = 0
     for _ in range(rect['rows']): total += rect['cols']
-    eq((rect['rows'], rect['cols'], total), (2, 3, 6), 'C1 rectangle 2 rows of 3 squares'); eq(nums(g['text']), [2, 3], 'C1 text')
+    eq((rect['rows'], rect['cols'], total), (2, 3, 6), 'C1 rectangle 2 rows of 3 squares (from the text)'); eq(nums(g['text']), [2, 3], 'C1 text')
     g = C['C2']; f = vis(g); dx = f['end'][0] - f['start'][0]; dy = f['start'][1] - f['end'][1]; eq((dx, dy), (2, 1), 'C2 2 right and 1 up'); rt = routes(dx, dy); eq(rt, ['RRU', 'RUR', 'URR'], 'C2 every route'); eq((dx + dy, len(rt)), (3, 3), 'C2 steps and routes'); eq(g['val'], [3, 3], 'C2 val')
     g = C['C3']; st, fp = vis(g, 0), vis(g, 1); cubes = 0
     for r in st['heights']:
