@@ -1977,12 +1977,5 @@
   "print page 69 (Unit 10 \u00b7 Learn it): content overflows the page (natural height minus body 4.4 mm)"
  ],
  "soft_pages": 98,
- "print_pages": 98,
- "bw_pipeline": {
-  "pages": 98,
-  "dpi": 600,
-  "mb": 12.22,
-  "check_bw_failures": 0,
-  "pale_tint_dropped_max": 0.0036
- }
+ "print_pages": 98
 }
