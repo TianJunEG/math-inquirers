@@ -256,3 +256,60 @@ def bag(spec, w=None):
 
 FIGS['l6_spinner'] = spinner
 FIGS['l6_bag'] = bag
+
+
+# ================================================================================================ turtle path
+def turtle(spec, w=None):
+    """The path a turtle draws.  spec: cmds = list of ['move', n] / ['turn', deg] / ['repeat', k, [cmds]]; heading 90 = right, 0 = up (as in Scratch), turn = clockwise;
+    step_mm = mm per step; dots (corners as dots, default true); labels {corner_index: text} written outside the corner (0 = the start); arrow (a start arrow)."""
+    import math
+    step = spec.get('step_mm', 0.3) * U
+    x, y, h = 0.0, 0.0, spec.get('heading', 90)
+    pts = [(x, y)]
+
+    def run_(cmds):
+        nonlocal x, y, h
+        for c in cmds:
+            if c[0] == 'move':
+                x += c[1] * step * math.sin(math.radians(h))
+                y -= c[1] * step * math.cos(math.radians(h))
+                pts.append((x, y))
+            elif c[0] == 'turn':
+                h += c[1]
+            elif c[0] == 'repeat':
+                for _ in range(c[1]):
+                    run_(c[2])
+    run_(spec['cmds'])
+    xs = [p[0] for p in pts]; ys = [p[1] for p in pts]
+    pad = 34
+    x0, y0 = min(xs) - pad, min(ys) - pad
+    W = max(xs) - min(xs) + 2 * pad
+    H = max(ys) - min(ys) + 2 * pad
+    P = []
+    sh = lambda p_: (p_[0] - x0, p_[1] - y0)
+    P.append('<polyline fill="none" stroke="' + NAVY + '" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round" points="' + ' '.join(f'{sh(p_)[0]:.1f},{sh(p_)[1]:.1f}' for p_ in pts) + '"/>')
+    if spec.get('dots', True):
+        seen = set()
+        for p_ in pts:
+            key = (round(p_[0]), round(p_[1]))
+            if key in seen:
+                continue
+            seen.add(key)
+            P.append(f'<circle cx="{sh(p_)[0]:.1f}" cy="{sh(p_)[1]:.1f}" r="6" fill="{NAVY}"/>')
+    sx, sy = sh(pts[0])
+    a0 = math.radians(spec.get('heading', 90))
+    ax, ay = sx + 16 * math.sin(a0), sy - 16 * math.cos(a0)
+    if spec.get('arrow', True):
+        P.append(f'<circle cx="{sx:.1f}" cy="{sy:.1f}" r="12" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
+        P.append(T(sx, sy + 6, 'S', 17, weight=800))
+    cx = sum(xs) / len(xs) - x0
+    cy = sum(ys) / len(ys) - y0
+    for k, txt in (spec.get('labels') or {}).items():
+        px, py = sh(pts[int(k)])
+        dx, dy = px - cx, py - cy
+        d = math.hypot(dx, dy) or 1
+        P.append(T(px + dx / d * 26, py + dy / d * 26 + 6, txt, 17, weight=800))
+    return wrap(''.join(P), W, H, 'path of a turtle', w)
+
+
+FIGS['l6_turtle'] = turtle

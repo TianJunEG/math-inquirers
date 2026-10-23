@@ -1,0 +1,888 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 7,
+ "id": "L5U07",
+ "title": "Percentage puzzles",
+ "topic": "Percentage",
+ "holiday_lesson": 7,
+ "goal": "I can find a percentage of an amount from 10%, 5% and 1%. I can find a discount and GST, and avoid percentage traps.",
+ "learn": {
+  "intro": "Percent means out of 100. Build other percentages from 10%, 5% and 1%. A discount comes off the first cost. GST is charged on the cost after the discount.",
+  "example": {
+   "problem": "A bag costs $60. It has 30% off. GST of 9% is charged on the cost after the discount. How much does Ali pay?",
+   "steps": [
+    "10% of $60 = $6. So 30% = 3 × $6 = $18 off.",
+    "The cost after the discount is $60 - $18 = $42.",
+    "1% of $42 = $0.42. So 9% = 9 × $0.42 = $3.78 GST.",
+    "Ali pays $42 + $3.78 = $45.78."
+   ],
+   "answer": "Ali pays $45.78.",
+   "figure": {
+    "type": "l5_bars",
+    "rows": [
+     {
+      "label": "$60",
+      "cells": [
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "10%",
+        "shade": false
+       }
+      ],
+      "brace": {
+       "a": 0,
+       "b": 3,
+       "text": "30% off"
+      }
+     }
+    ],
+    "width_mm": 125,
+    "bh": 34,
+    "alt": "bar cut into 10 parts of 10%"
+   }
+  },
+  "howto": {
+   "title": "How to",
+   "steps": [
+    "Find 10%. Build the percentage you need.",
+    "Take off the discount first.",
+    "Find the GST on the new amount."
+   ]
+  },
+  "example2": {
+   "problem": "Find 35% of $160.",
+   "steps": [
+    "10% of $160 = $16.",
+    "5% is half of 10%, so 5% = $8.",
+    "35% = 10% + 10% + 10% + 5% = $16 + $16 + $16 + $8 = $56."
+   ],
+   "answer": "35% of $160 is $56."
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U07-L01",
+   "text": "A jacket costs $75. It has 20% off. GST of 9% is charged on the reduced cost. How much does Mei pay? $ {b}",
+   "answer": {
+    "value": [
+     "65.40"
+    ],
+    "text": "$65.40"
+   },
+   "explanation": "10% of $75 = $7.50, so 20% = $15 off. The cost after the discount is $60. 1% of $60 = $0.60, so 9% = $5.40. Mei pays $60 + $5.40 = $65.40."
+  }
+ },
+ "items": [
+  {
+   "id": "L5U07-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "The grid has 100 small squares. Some squares are shaded.",
+   "figure": {
+    "type": "l5_grid100",
+    "shaded": 38,
+    "width_mm": 80,
+    "alt": "hundred grid with 38 squares shaded"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The percentage shaded is {b}%.",
+     "answer": {
+      "value": [
+       "38"
+      ],
+      "text": "38"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The percentage not shaded is {b}%.",
+     "answer": {
+      "value": [
+       "62"
+      ],
+      "text": "62"
+     }
+    }
+   ],
+   "explanation": "(a) 38 of the 100 squares are shaded, so 38%. (b) 100 - 38 = 62 squares are not shaded, so 62%.",
+   "figside": true
+  },
+  {
+   "id": "L5U07-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Find each amount. Use 10%, 5% and 1%.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "10% of $340 = $ {b}",
+     "answer": {
+      "value": [
+       "34"
+      ],
+      "text": "34"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5% of $340 = $ {b}",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "c",
+     "text": "15% of $340 = $ {b}",
+     "answer": {
+      "value": [
+       "51"
+      ],
+      "text": "51"
+     }
+    }
+   ],
+   "explanation": "10% is $340 ÷ 10 = $34. 5% is half of that: $17. 15% = 10% + 5% = $34 + $17 = $51."
+  },
+  {
+   "id": "L5U07-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Write each as a percentage.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "18 out of 25 pupils wear glasses. That is {b}%.",
+     "answer": {
+      "value": [
+       "72"
+      ],
+      "text": "72"
+     }
+    },
+    {
+     "label": "b",
+     "text": "7 out of 20 pupils cycle. That is {b}%.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    },
+    {
+     "label": "c",
+     "text": "3 out of 8 pupils walk. That is {b}%.",
+     "answer": {
+      "value": [
+       "37.5"
+      ],
+      "text": "37.5"
+     }
+    }
+   ],
+   "explanation": "(a) 18 ÷ 25 = 72 ÷ 100, so 72%. (b) 7 out of 20 = 35 out of 100 = 35%. (c) 1 out of 8 is 12.5%, so 3 out of 8 is 37.5%."
+  },
+  {
+   "id": "L5U07-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "A bag costs $120. It has 15% off.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "10% of $120 = $ {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The discount is $ {b}",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The bag now costs $ {b}",
+     "answer": {
+      "value": [
+       "102"
+      ],
+      "text": "102"
+     }
+    }
+   ],
+   "explanation": "(a) $120 ÷ 10 = $12. (b) 5% = $6, so 15% = $12 + $6 = $18. (c) $120 - $18 = $102."
+  },
+  {
+   "id": "L5U07-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "A watch costs $64 before GST. GST is 9% of the cost before GST.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The GST is $ {b}",
+     "answer": {
+      "value": [
+       "5.76"
+      ],
+      "text": "5.76"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The watch costs $ {b} with GST.",
+     "answer": {
+      "value": [
+       "69.76"
+      ],
+      "text": "69.76"
+     }
+    }
+   ],
+   "explanation": "(a) 1% of $64 = $0.64. 9% = 9 × $0.64 = $5.76. (b) $64 + $5.76 = $69.76."
+  },
+  {
+   "id": "L5U07-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Ravi has $150. He spends 20% of his money on a game. Then he spends 40% of the money that is left on a book. How much money does Ravi have now? $ {b}",
+   "answer": {
+    "value": [
+     "72"
+    ],
+    "text": "$72"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "20% of $150 = $30, so $120 is left. 40% of $120 = $48 for the book. $120 - $48 = $72. (Not 40% of $150!)"
+  },
+  {
+   "id": "L5U07-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "There are 40 children in a class. 35% walk to school. 25% cycle. The rest take the bus.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} children walk.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} children cycle.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "{b} children take the bus.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "explanation": "(a) 10% of 40 = 4, 5% = 2, so 35% = 12 + 2 = 14. (b) 25% = 10 (a quarter of 40). (c) 40 - 14 - 10 = 16. (Check: 100% - 35% - 25% = 40%, and 40% of 40 = 16.)"
+  },
+  {
+   "id": "L5U07-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Mei scored 21 out of 30 in Quiz 1 and 34 out of 50 in Quiz 2.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Quiz 1 is {b}%.",
+     "answer": {
+      "value": [
+       "70"
+      ],
+      "text": "70"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Quiz 2 is {b}%.",
+     "answer": {
+      "value": [
+       "68"
+      ],
+      "text": "68"
+     }
+    },
+    {
+     "label": "c",
+     "text": "She did better in   {circ:Quiz 1|Quiz 2}",
+     "answer": {
+      "value": [
+       "Quiz 1"
+      ],
+      "text": "Quiz 1"
+     }
+    }
+   ],
+   "explanation": "(a) 21 ÷ 30 = 7 ÷ 10 = 70%. (b) 34 out of 50 = 68 out of 100 = 68%. (c) 70% is more than 68%, so Quiz 1."
+  },
+  {
+   "id": "L5U07-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "T-shirts cost $20 each. Shop P says buy 2 and get 1 free. Shop Q says 30% off each T-shirt. Siti needs 3 T-shirts.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "At Shop P she pays $ {b}",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At Shop Q she pays $ {b}",
+     "answer": {
+      "value": [
+       "42"
+      ],
+      "text": "42"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The cheaper shop is   {circ:Shop P|Shop Q}",
+     "answer": {
+      "value": [
+       "Shop P"
+      ],
+      "text": "Shop P"
+     }
+    }
+   ],
+   "explanation": "(a) She pays for 2 T-shirts: 2 × $20 = $40. (b) 30% of $20 = $6 off each, so $14 each. 3 × $14 = $42. (c) $40 is less than $42, so Shop P."
+  },
+  {
+   "id": "L5U07-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "A shirt costs $50. The cost goes up by 20%. Then the new cost goes down by 20%.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "After going up, the shirt costs $ {b}",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After going down, it costs $ {b}",
+     "answer": {
+      "value": [
+       "48"
+      ],
+      "text": "48"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Is the cost back to $50?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "(a) 20% of $50 = $10, so $60. (b) 20% of $60 = $12, so $60 - $12 = $48. (c) No. The second 20% is taken from $60, not from $50, so the cost does not come back to $50."
+  },
+  {
+   "id": "L5U07-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Each bar is cut into equal parts. Write the percentage that is shaded.",
+   "figure": {
+    "type": "l5_bars",
+    "rows": [
+     {
+      "label": "Bar 1",
+      "cells": [
+       {
+        "n": 1,
+        "text": "",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       }
+      ]
+     },
+     {
+      "label": "Bar 2",
+      "cells": [
+       {
+        "n": 1,
+        "text": "",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": true
+       },
+       {
+        "n": 1,
+        "text": "",
+        "shade": false
+       }
+      ]
+     }
+    ],
+    "width_mm": 100,
+    "bh": 34,
+    "alt": "two bars"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Bar 1: {b}%",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Bar 2: {b}%",
+     "answer": {
+      "value": [
+       "75"
+      ],
+      "text": "75"
+     }
+    }
+   ],
+   "explanation": "(a) 2 out of 5 equal parts: 2/5 = 40/100 = 40%. (b) 3 out of 4 equal parts: 3/4 = 75%.",
+   "figside": true
+  },
+  {
+   "id": "L5U07-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "50% of 80 is 40.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "10% of 90 is 9.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A 20% discount and then a 10% discount is the same as a 30% discount.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "(a) 50% is a half: 40. (b) 90 ÷ 10 = 9. (c) False. Test with $100: 20% off gives $80. Then 10% of $80 is $8 off, so $72. A 30% discount gives $70."
+  },
+  {
+   "id": "L5U07-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha has $200. She spends 40% of it on shoes. She spends 25% of the rest on a gift. How much money does she have left? $ {b}",
+   "answer": {
+    "value": [
+     "90"
+    ],
+    "text": "$90"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "40% of $200 = $80 for shoes, so $120 is left. 25% of $120 = $30 for the gift. $120 - $30 = $90."
+  },
+  {
+   "id": "L5U07-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Ali pays 9% GST on a $250 sofa. Then he pays $20 to have it delivered. The delivery has no GST. How much does he pay in all? $ {b}",
+   "answer": {
+    "value": [
+     "292.50"
+    ],
+    "text": "$292.50"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "1% of $250 = $2.50, so 9% = $22.50. The sofa costs $250 + $22.50 = $272.50. Add the delivery: $272.50 + $20 = $292.50."
+  },
+  {
+   "id": "L5U07-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A $200 coat has 10% off. Then there is a further 20% off the new cost.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The coat finally costs $ {b}",
+     "answer": {
+      "value": [
+       "144"
+      ],
+      "text": "144"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 2 discounts together are {b}% of $200.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Take the 20% off the new cost, not off $200.",
+   "explanation": "(a) 10% of $200 = $20, so the new cost is $180. 20% of $180 = $36, so the coat costs $180 - $36 = $144. (b) The total discount is $200 - $144 = $56. $56 out of $200 = 28 out of 100 = 28%. It is not 30%."
+  },
+  {
+   "id": "L5U07-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Beyond Level 5: Working back from a percentage\nAfter a 20% discount, a bag costs $60. What was the cost before the discount? $ {b}",
+   "answer": {
+    "value": [
+     "75"
+    ],
+    "text": "$75"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "$60 is 80% of the old cost. What is 10% of the old cost?",
+   "explanation": "The bag now costs 80% of the old cost. 80% is $60, so 10% is $60 ÷ 8 = $7.50. The old cost is 100% = 10 × $7.50 = $75. Check: 20% of $75 = $15 and $75 - $15 = $60. (Adding 20% of $60 would give $72, which is wrong.)"
+  },
+  {
+   "id": "L5U07-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Beyond Level 5: GST in the cost\nA table costs $218 with GST. GST is 9% of the cost before GST. How much GST is in $218? $ {b}",
+   "answer": {
+    "value": [
+     "18"
+    ],
+    "text": "$18"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "$218 is 109% of the cost before GST. What is 1%?",
+   "explanation": "The cost before GST is 100%. With GST it is 109%. 109% is $218, so 1% is $218 ÷ 109 = $2. The GST is 9 × $2 = $18. (9% of $218 would be $19.62, which is wrong because GST is 9% of the cost BEFORE GST.)"
+  },
+  {
+   "id": "L5U07-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 5: Percentage change\nA cost goes up from $20 to $50, and then it goes back down from $50 to $20. The change is always compared with the amount you start from.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The percentage increase from $20 to $50 is {b}%.",
+     "answer": {
+      "value": [
+       "150"
+      ],
+      "text": "150"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The percentage decrease from $50 to $20 is {b}%.",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Increase = change out of the starting amount. Which is the start?",
+   "explanation": "(a) The change is $30. Out of the starting amount $20: 30/20 = 150/100 = 150%. (b) The change is $30 again. Out of the starting amount $50: 30/50 = 60/100 = 60%. The same $30 change gives different percentages because the starting amounts are different."
+  },
+  {
+   "id": "L5U07-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "In a class of 40 children, 40% are boys. 25% of the boys and 50% of the girls wear glasses. What percentage of the whole class wears glasses? {b}%",
+   "answer": {
+    "value": [
+     "40"
+    ],
+    "text": "40%"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Find the number of boys and girls first. Then count glasses.",
+   "explanation": "Boys: 40% of 40 = 16. Girls: 24. Glasses: 25% of 16 = 4 boys and 50% of 24 = 12 girls. That is 16 children out of 40. 16/40 = 40/100 = 40%."
+  },
+  {
+   "id": "L5U07-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A jar has 50 beads. 60% of the beads are blue. The rest are red. Blue beads are added to the jar, and no red beads are taken out. Now 80% of the beads are blue. How many blue beads were added? {b}",
+   "answer": {
+    "value": [
+     "50"
+    ],
+    "text": "50 blue beads"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "The red beads stay the same. Find their share of the new total.",
+   "explanation": "Red beads: 40% of 50 = 20, and they do not change. After adding blue beads, red is 20% of all the beads. So 20 beads are 20%, and 100% is 100 beads. Blue now: 80. Blue at first: 30. Added: 80 - 30 = 50."
+  },
+  {
+   "id": "L5U07-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Find the amounts.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "10% of $180 = $ {b}",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5% of $180 = $ {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "15% of $180 = $ {b}",
+     "answer": {
+      "value": [
+       "27"
+      ],
+      "text": "27"
+     }
+    }
+   ],
+   "explanation": "10% = $180 ÷ 10 = $18. 5% = half of $18 = $9. 15% = $18 + $9 = $27.",
+   "partsrow": true
+  },
+  {
+   "id": "L5U07-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A book costs $40. It has 25% off. GST of 9% is charged on the reduced cost. Find the total cost. $ {b}",
+   "answer": {
+    "value": [
+     "32.70"
+    ],
+    "text": "$32.70"
+   },
+   "explanation": "25% of $40 = $10, so the new cost is $30. 1% of $30 = $0.30, so 9% = $2.70. $30 + $2.70 = $32.70."
+  },
+  {
+   "id": "L5U07-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Kumar has $80. He spends 25% of it on lunch. He spends 50% of the rest on a gift. How much does he have left? $ {b}",
+   "answer": {
+    "value": [
+     "30"
+    ],
+    "text": "$30"
+   },
+   "explanation": "25% of $80 = $20, so $60 is left. 50% of $60 = $30 for the gift. $60 - $30 = $30 is left."
+  },
+  {
+   "id": "L5U07-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Test 1: 33 out of 50. Test 2: 16 out of 25. Circle the test with the higher percentage.   {circ:Test 1|Test 2}",
+   "answer": {
+    "value": [
+     "Test 1"
+    ],
+    "text": "Test 1"
+   },
+   "explanation": "33 out of 50 = 66 out of 100 = 66%. 16 out of 25 = 64 out of 100 = 64%. 66% is higher, so Test 1."
+  }
+ ]
+}

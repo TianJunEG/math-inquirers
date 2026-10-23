@@ -1,0 +1,958 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 9,
+ "id": "L4U09",
+ "title": "Data Detectives",
+ "topic": "Tables and line graphs",
+ "holiday_lesson": 9,
+ "goal": "I can read values and changes on line graphs. I can find missing numbers in tables and spot graphs with scales that mislead.",
+ "learn": {
+  "intro": "On a line graph, read the title and the scale first. The change between 2 neighbouring points is the difference of their values. A table can have a missing number: use the totals to find it.",
+  "example": {
+   "problem": "The graph shows the cups of barley water a stall sold. Each line is worth 10. How many cups were sold on Wednesday? When was the biggest drop?",
+   "figure": {
+    "type": "l4_line",
+    "panels": [
+     {
+      "ymin": 0,
+      "ymax": 80,
+      "step": 10,
+      "label_every": 2,
+      "series": [
+       {
+        "values": [
+         40,
+         65,
+         55,
+         75,
+         30
+        ]
+       }
+      ]
+     }
+    ],
+    "xlabels": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "width_mm": 74,
+    "plot_w": 340,
+    "plot_h": 160
+   },
+   "steps": [
+    "The Wednesday point is halfway between 50 and 60: 55 cups.",
+    "Find each change. Thu to Fri is 75 − 30 = 45 down. That is the biggest drop."
+   ],
+   "answer": "55 cups. The biggest drop was Thursday to Friday."
+  },
+  "example2": {
+   "problem": "Find the missing number. Each row and each column adds to its total.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "",
+     "Week 1",
+     "Week 2",
+     "Total"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "14",
+      "?",
+      "31"
+     ],
+     [
+      "Mei",
+      "20",
+      "18",
+      "38"
+     ],
+     [
+      "Total",
+      "34",
+      "35",
+      "69"
+     ]
+    ],
+    "widths": [
+     1.2,
+     1.2,
+     1.2,
+     1.2
+    ],
+    "cell_h": 46,
+    "font": 26,
+    "first_col_head": true,
+    "width_mm": 82
+   },
+   "steps": [
+    "Use Ali's row: 14 + ? = 31, so ? = 31 − 14 = 17.",
+    "Check the Week 2 column: 17 + 18 = 35."
+   ],
+   "answer": "The missing number is 17."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to read data",
+   "steps": [
+    "Read the title and the scale. What is one line worth?",
+    "Change = the difference between 2 neighbours.",
+    "Missing numbers: use the row or column total."
+   ]
+  },
+  "facts": {
+   "title": "Good to know",
+   "lines": [
+    "The steepest line is the biggest change.",
+    "Check where each scale starts."
+   ]
+  },
+  "try": {
+   "id": "L4U09-L01",
+   "text": "A stall sold 35 cups on Monday and 60 cups on Tuesday. By how many cups did sales go up? {b}",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25"
+   },
+   "explanation": "60 − 35 = 25, so sales went up by 25 cups."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U09-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "The graph shows how many people visited a library each day. Each line is worth 10.",
+   "figure": {
+    "type": "l4_line",
+    "panels": [
+     {
+      "ymin": 0,
+      "ymax": 100,
+      "step": 10,
+      "label_every": 2,
+      "series": [
+       {
+        "values": [
+         30,
+         45,
+         25,
+         60,
+         55,
+         95
+        ]
+       }
+      ]
+     }
+    ],
+    "xlabels": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri",
+     "Sat"
+    ],
+    "width_mm": 112,
+    "plot_w": 400,
+    "plot_h": 200,
+    "ylabel": "Visitors"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Visitors on Thursday: {b}",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Visitors on Tuesday: {b}",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Visitors on Monday and Tuesday together: {b}",
+     "answer": {
+      "value": [
+       "75"
+      ],
+      "text": "75"
+     }
+    }
+   ],
+   "explanation": "(a) The Thursday point is on the 60 line. (b) The Tuesday point is halfway between 40 and 50: 45. (c) 30 + 45 = 75.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U09-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Use the graph in Question 1. Find the biggest increase and the biggest decrease between 2 days.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Biggest increase: from {b} to {b}, up by {b}",
+     "answer": {
+      "value": [
+       "Fri",
+       "Sat",
+       "40"
+      ],
+      "text": "Friday to Saturday, up by 40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Biggest decrease: from {b} to {b}, down by {b}",
+     "answer": {
+      "value": [
+       "Tue",
+       "Wed",
+       "20"
+      ],
+      "text": "Tuesday to Wednesday, down by 20"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Changes: {ll}"
+    ]
+   },
+   "explanation": "The changes are +15, −20, +35, −5 and +40. The biggest increase is Friday to Saturday: 95 − 55 = 40. The biggest decrease is Tuesday to Wednesday: 45 − 25 = 20. The steepest line going up and the steepest line going down show these."
+  },
+  {
+   "id": "L4U09-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "The table shows the library books 3 classes borrowed. Each row and each column adds up to its total. Write the missing numbers.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "",
+     "Week 1",
+     "Week 2",
+     "Total"
+    ],
+    "rows": [
+     [
+      "4A",
+      "38",
+      "",
+      "85"
+     ],
+     [
+      "4B",
+      "",
+      "29",
+      "70"
+     ],
+     [
+      "4C",
+      "33",
+      "41",
+      ""
+     ],
+     [
+      "Total",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "widths": [
+     1.1,
+     1.2,
+     1.2,
+     1.2
+    ],
+    "cell_h": 52,
+    "font": 28,
+    "first_col_head": true,
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Fill in the 6 empty boxes. Go row by row.",
+     "answer": {
+      "value": [
+       "47",
+       "41",
+       "74",
+       "112",
+       "117",
+       "229"
+      ],
+      "text": "47, 41, 74, 112, 117, 229"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which class borrowed more in Week 1 than in Week 2? {circ:4A|4B|4C}",
+     "answer": {
+      "value": [
+       "4B"
+      ],
+      "text": "4B"
+     }
+    }
+   ],
+   "explanation": "4A: 85 − 38 = 47. 4B: 70 − 29 = 41. 4C: 33 + 41 = 74. Week 1: 38 + 41 + 33 = 112. Week 2: 47 + 29 + 41 = 117. Total: 112 + 117 = 229, and 85 + 70 + 74 = 229 too. 4B borrowed 41 in Week 1 and 29 in Week 2.",
+   "figside": true
+  },
+  {
+   "id": "L4U09-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "The graph shows the money in Ali's and Mei's money boxes at the end of each week.",
+   "figure": {
+    "type": "l4_line",
+    "panels": [
+     {
+      "ymin": 0,
+      "ymax": 100,
+      "step": 10,
+      "label_every": 2,
+      "series": [
+       {
+        "name": "Ali",
+        "values": [
+         20,
+         30,
+         40,
+         50,
+         60,
+         70,
+         80,
+         90
+        ]
+       },
+       {
+        "name": "Mei",
+        "values": [
+         50,
+         55,
+         60,
+         65,
+         70,
+         75,
+         80,
+         85
+        ]
+       }
+      ]
+     }
+    ],
+    "xlabels": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "width_mm": 120,
+    "xlabel": "Week",
+    "ylabel": "Dollars",
+    "plot_w": 440,
+    "plot_h": 190
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Mei's money in Week 3: ${b}",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali saves ${b} each week.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "They have the same amount in Week {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Ali first has more than Mei in Week {b}.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) The Mei line (dashed, square points) is on 60 in Week 3. (b) Ali's line goes up by 10 each week. (c) The lines meet in Week 7, where both have $80. (d) Ali has $90 in Week 8 and Mei has $85, so Week 8 is the first week Ali has more.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U09-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Siti reads more pages each day. She reads the same number more each day. Fill in the table.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Day",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "rows": [
+     [
+      "Pages",
+      "12",
+      "",
+      "",
+      "27",
+      ""
+     ]
+    ],
+    "widths": [
+     1.4,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "cell_h": 58,
+    "font": 28,
+    "first_col_head": true,
+    "width_mm": 120
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "She reads {b} more pages each day.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In the 5 days she reads {b} pages.",
+     "answer": {
+      "value": [
+       "110"
+      ],
+      "text": "110"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Day 1 to Day 4 is 3 days, and 27 − 12 = 15, so she reads 15 ÷ 3 = 5 more each day. The days are 12, 17, 22, 27 and 32. The total is 12 + 17 + 22 + 27 + 32 = 110 pages."
+  },
+  {
+   "id": "L4U09-S06",
+   "tier": "start",
+   "page": 3,
+   "text": "Two bakeries show the cakes they sold. Look at each scale. Bakery Q's scale starts at 40.",
+   "figure": {
+    "type": "l4_line",
+    "panels": [
+     {
+      "title": "Bakery P",
+      "ymin": 0,
+      "ymax": 100,
+      "step": 20,
+      "series": [
+       {
+        "values": [
+         40,
+         52,
+         64,
+         88
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Bakery Q",
+      "ymin": 40,
+      "ymax": 52,
+      "step": 2,
+      "label_every": 1,
+      "series": [
+       {
+        "values": [
+         42,
+         45,
+         48,
+         52
+        ]
+       }
+      ]
+     }
+    ],
+    "xlabels": [
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr"
+    ],
+    "width_mm": 150,
+    "plot_w": 300,
+    "plot_h": 160
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "From January to April, Bakery P went up by {b} cakes.",
+     "answer": {
+      "value": [
+       "48"
+      ],
+      "text": "48"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Bakery Q went up by {b} cakes.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which bakery sold more extra cakes? {circ:P|Q}",
+     "answer": {
+      "value": [
+       "P"
+      ],
+      "text": "P"
+     }
+    }
+   ],
+   "explanation": "(a) P: 88 − 40 = 48. (b) Q: 52 − 42 = 10. (c) P went up by 48 and Q by 10. Bakery Q's line looks steeper only because its scale starts at 40 and each line is worth 2."
+  },
+  {
+   "id": "L4U09-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "A graph's scale starts at 50. Each line is worth 20. Ali's point is 4 lines above the start. Mei's point is 9 lines above the start.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali's number is {b}",
+     "answer": {
+      "value": [
+       "130"
+      ],
+      "text": "130"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei's number is {b}",
+     "answer": {
+      "value": [
+       "230"
+      ],
+      "text": "230"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Mei says: \"9 is more than double 4, so my number is more than double Ali's.\" Is she right? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) 50 + 4 × 20 = 130. (b) 50 + 9 × 20 = 230. (c) Double Ali's number is 260, and Mei's 230 is less. The lines were counted from 50, not from 0, so counting lines gives the wrong comparison."
+  },
+  {
+   "id": "L4U09-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "At 7 am the temperature was 25 °C. It rose by 2 °C every hour until noon. Then it fell by 3 °C every hour.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The temperature at noon was {b} °C",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The temperature at 3 pm was {b} °C",
+     "answer": {
+      "value": [
+       "26"
+      ],
+      "text": "26"
+     }
+    },
+    {
+     "label": "c",
+     "text": "At what time was it 29 °C? {b} am",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) From 7 am to noon is 5 hours: 25 + 5 × 2 = 35 °C. (b) From noon to 3 pm is 3 hours: 35 − 3 × 3 = 26 °C. (c) 29 − 25 = 4 °C more, and 4 ÷ 2 = 2 hours after 7 am, which is 9 am."
+  },
+  {
+   "id": "L4U09-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A shop's sales go up by the same amount every week. In Week 3 it sold 52 toys. In Week 8 it sold 87 toys.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "It sold {b} toys in Week 1.",
+     "answer": {
+      "value": [
+       "38"
+      ],
+      "text": "38"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It first sold more than 100 toys in Week {b}.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "From Week 3 to Week 8 is 5 weeks. How much is that each week?",
+   "explanation": "87 − 52 = 35 over 5 weeks, so sales go up by 7 each week. Week 1 is 2 weeks before Week 3: 52 − 14 = 38. Week 9 is 94 and Week 10 is 101, so Week 10 is the first week above 100."
+  },
+  {
+   "id": "L4U09-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A stall sold 200 plates in 4 days. On Day 2 it sold twice as many as on Day 1. On Day 3 it sold 15 more than on Day 2. On Day 4 it sold 25. How many plates did it sell on Day 1? {b}",
+   "answer": {
+    "value": [
+     "32"
+    ],
+    "text": "32"
+   },
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     "",
+     ""
+    ]
+   },
+   "hint": "Day 1 is 1 unit. Day 2 is 2 units. Day 3 is 2 units and 15 more.",
+   "explanation": "Take away Day 4 and the extra 15: 200 − 25 − 15 = 160. Day 1 is 1 unit, Day 2 is 2 units and Day 3 is 2 units: 5 units = 160. 1 unit = 32. Check: 32 + 64 + 79 + 25 = 200."
+  },
+  {
+   "id": "L4U09-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Tank A has 100 litres of water and loses 4 litres every hour. Tank B has 15 litres and gains 13 litres every hour. On a line graph the 2 lines cross.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "After {b} hours the tanks hold the same amount.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each tank then holds {b} litres.",
+     "answer": {
+      "value": [
+       "80"
+      ],
+      "text": "80"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "How big is the gap at the start? How much does it close each hour?",
+   "explanation": "At the start the gap is 100 − 15 = 85 litres. Each hour it closes by 4 + 13 = 17 litres. 85 ÷ 17 = 5 hours. Tank A: 100 − 5 × 4 = 80 litres. Tank B: 15 + 5 × 13 = 80 litres."
+  },
+  {
+   "id": "L4U09-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Two graphs show the same shop's sales in January and February. On graph X the scale starts at 0 and each line is worth 20. On graph Y the scale starts at 60 and each line is worth 5. Graph X shows January 4 lines up and February 5 lines up.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The sales rose by {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "On graph Y, January is {b} lines up and February is {b} lines up.",
+     "answer": {
+      "value": [
+       "4",
+       "8"
+      ],
+      "text": "4 lines and 8 lines"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Which graph makes the rise look bigger? {circ:X|Y}",
+     "answer": {
+      "value": [
+       "Y"
+      ],
+      "text": "Y"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Find the sales in January and February first.",
+   "explanation": "On X, January is 4 × 20 = 80 and February is 5 × 20 = 100, so sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Graph Y's line goes up 4 lines and X's goes up 1 line, so Y makes the rise look bigger."
+  },
+  {
+   "id": "L4U09-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "A stall sold 340 plates from Monday to Friday. Each day it sold 8 more plates than the day before.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "On Monday it sold {b} plates.",
+     "answer": {
+      "value": [
+       "52"
+      ],
+      "text": "52"
+     }
+    },
+    {
+     "label": "b",
+     "text": "On Friday it sold {b} plates.",
+     "answer": {
+      "value": [
+       "84"
+      ],
+      "text": "84"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Take away the extras: 0, 8, 16, 24 and 32.",
+   "explanation": "The extras over Monday are 0 + 8 + 16 + 24 + 32 = 80. Without them, 5 equal days make 340 − 80 = 260, so Monday is 260 ÷ 5 = 52. Friday is 52 + 32 = 84. The days are 52, 60, 68, 76 and 84."
+  },
+  {
+   "id": "L4U09-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond Level 4: Average\nThe average of some numbers is their total divided by how many numbers there are.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The average of 3, 6 and 9 is {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A stall's average over 4 days is 45 plates. Three days were 40, 50 and 38 plates. The fourth day was {b} plates.",
+     "answer": {
+      "value": [
+       "52"
+      ],
+      "text": "52"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Total = average × the number of days.",
+   "explanation": "(a) 3 + 6 + 9 = 18, and 18 ÷ 3 = 6. (b) The total for 4 days is 4 × 45 = 180. The 3 known days make 40 + 50 + 38 = 128. The fourth day is 180 − 128 = 52 plates."
+  },
+  {
+   "id": "L4U09-C01",
+   "tier": "quiz",
+   "text": "The graph shows the cakes a shop sold. Each line is worth 10. How many cakes were sold on Wednesday? {b}",
+   "figure": {
+    "type": "l4_line",
+    "panels": [
+     {
+      "ymin": 0,
+      "ymax": 80,
+      "step": 10,
+      "label_every": 2,
+      "series": [
+       {
+        "values": [
+         30,
+         50,
+         65,
+         40
+        ]
+       }
+      ]
+     }
+    ],
+    "xlabels": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu"
+    ],
+    "width_mm": 62,
+    "plot_w": 320,
+    "plot_h": 190
+   },
+   "answer": {
+    "value": [
+     "65"
+    ],
+    "text": "65"
+   },
+   "explanation": "The Wednesday point is halfway between the 60 line and the 70 line: 65 cakes.",
+   "figright": true
+  },
+  {
+   "id": "L4U09-C02",
+   "tier": "quiz",
+   "text": "A shop sold 28 pens on Monday and 35 on Tuesday. The 3-day total was 99. Wednesday: {b} pens",
+   "answer": {
+    "value": [
+     "36"
+    ],
+    "text": "36"
+   },
+   "explanation": "28 + 35 = 63 pens on Monday and Tuesday. 99 − 63 = 36 pens on Wednesday."
+  },
+  {
+   "id": "L4U09-C03",
+   "tier": "quiz",
+   "text": "Sales rise by the same amount each day. Day 1: 14. Day 4: 32. Day 6: {b}",
+   "answer": {
+    "value": [
+     "44"
+    ],
+    "text": "44"
+   },
+   "explanation": "From Day 1 to Day 4 is 3 days, and 32 − 14 = 18, so sales go up by 6 each day. Day 6 is 32 + 2 × 6 = 44."
+  },
+  {
+   "id": "L4U09-C04",
+   "tier": "quiz",
+   "text": "Both graphs show sales of 60 in May and 70 in June. A starts at 0 and B starts at 50. Which looks steeper? {circ:A|B}",
+   "answer": {
+    "value": [
+     "B"
+    ],
+    "text": "B"
+   },
+   "explanation": "Graph B's scale starts at 50, so the same 10 more looks like a bigger rise. Sales rose by 10 on both graphs."
+  }
+ ]
+}
