@@ -66,34 +66,43 @@ def _esc(s):
 
 
 # ------------------------------------------------------------------------------------------------ protractor
+def _halo(x, y, txt, size, weight=700, anchor='middle'):
+    """Text with a white outline so that a line passing behind it does not strike the digits through."""
+    return (f'<text x="{round(x, 1)}" y="{round(y, 1)}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}" fill="{NAVY}" '
+            f'stroke="#fff" stroke-width="7" paint-order="stroke" stroke-linejoin="round" font-family="{F.FONT}">{txt}</text>')
+
+
 def l4_proto(spec, w=None):
     R = 250
-    cx, cy = 290, 290
+    pad = 62
+    cx, cy = R + pad + 20, R + 40
     ang = spec['angle']
     flip = spec.get('flip', False)
-    W, H = 580, 330
+    step = spec.get('label_step', 20)
+    W, H = 2 * (R + pad + 20), R + 40 + 70
     P = []
-    P.append(f'<path d="M{cx - R - 20},{cy} A{R + 20},{R + 20} 0 0 1 {cx + R + 20},{cy} Z" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
-    P.append(f'<path d="M{cx - 70},{cy} A70,70 0 0 1 {cx + 70},{cy}" fill="none" stroke="{NAVY}" stroke-width="2.4"/>')
-    for d in range(0, 181):
-        long_ = 18 if d % 10 == 0 else 12 if d % 5 == 0 else 7
-        x1, y1 = _pt(cx, cy, R, d)
-        x2, y2 = _pt(cx, cy, R - long_, d)
-        P.append(_line(x1, y1, x2, y2, 2.4 if d % 10 == 0 else 1.6))
-        if d % spec.get('label_step', 10) == 0:
-            xo, yo = _pt(cx, cy, R - 40, d)         # outer scale: 0 on the right
-            xi, yi = _pt(cx, cy, R - 74, d)         # inner scale: 0 on the left
-            P.append(_t(xo, yo + 6, str(d), 17, weight=700))
-            P.append(_t(xi, yi + 6, str(180 - d), 17, weight=600))
-    P.append(f'<line x1="{cx - R - 20}" y1="{cy}" x2="{cx + R + 20}" y2="{cy}" stroke="{NAVY}" stroke-width="3.4"/>')
-    P.append(f'<circle cx="{cx}" cy="{cy}" r="7" fill="{NAVY}"/>')
-    # arms: baseline arm along the 0 side, second arm at the angle
+    P.append(f'<path d="M{cx - R - 18},{cy} A{R + 18},{R + 18} 0 0 1 {cx + R + 18},{cy} Z" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
     base_deg = 180 if flip else 0
     arm_deg = 180 - ang if flip else ang
+    # the two arms first (the numbers are drawn on top with a white outline)
     bx, by = _pt(cx, cy, R + 70, base_deg)
     ax, ay = _pt(cx, cy, R + 70, arm_deg)
     P.append(_line(cx, cy, bx, by, 5))
     P.append(_line(cx, cy, ax, ay, 5))
+    for d in range(0, 181):
+        long_ = 22 if d % 10 == 0 else 15 if d % 5 == 0 else 8
+        x1, y1 = _pt(cx, cy, R, d)
+        x2, y2 = _pt(cx, cy, R - long_, d)
+        P.append(_line(x1, y1, x2, y2, 2.6 if d % 10 == 0 else 1.6))
+        if d % step == 0:
+            xo, yo = _pt(cx, cy, R + 34, d)          # outer scale, 0 on the right (printed outside the rim)
+            xi, yi = _pt(cx, cy, R - 52, d)          # inner scale, 0 on the left
+            P.append(_halo(xo, yo + 8, str(d), 24, 800))
+            P.append(_halo(xi, yi + 8, str(180 - d), 22, 600))
+    P.append(f'<circle cx="{cx}" cy="{cy}" r="8" fill="{NAVY}"/>')
+    # the angle: an arc between the two arms
+    lo, hi = sorted((base_deg, arm_deg))
+    P.append(_arc(cx, cy, 100, lo, hi, 5))
     return F._wrap(''.join(P), W, H, spec.get('label', 'protractor'), w or spec.get('width_mm', 120))
 
 
@@ -117,11 +126,10 @@ def l4_fan(spec, w=None):
     P.append(_t(ox - 22, oy + 36, 'O', 30, weight=800))
     for k, a in enumerate(spec.get('arcs', [])):
         d1, d2 = rays[a['i']]['d'], rays[a['j']]['d']
-        r = 70 + 34 * k if spec.get('stack', True) else 90
+        r = 90 + 44 * k if spec.get('stack', True) else 110
         P.append(_arc(ox, oy, r, min(d1, d2), max(d1, d2), 3))
         mx, my = _pt(ox, oy, r + 4, (d1 + d2) / 2)
-        P.append(f'<rect x="{mx - 28:.1f}" y="{my - 16:.1f}" width="56" height="32" rx="8" fill="#fff"/>')
-        P.append(_t(mx, my + 9, _esc(a['text']), 26, weight=800))
+        P.append(_halo(mx, my + 10, _esc(a['text']), 30, 800))
     return F._wrap(''.join(P), W, H, spec.get('label', 'rays from a point'), w or spec.get('width_mm', 100))
 
 
@@ -214,11 +222,9 @@ def l4_corner(spec, w=None):
             P.append(_line(ox, oy, x, y, 3.6))
         for k, p in enumerate(f['parts']):
             mid = (cum[k] + cum[k + 1]) / 2
-            r = L * (0.55 + 0.12 * (k % 2))
+            r = L * (0.50 + 0.2 * (k % 2))
             tx, ty = _pt(ox, oy, r, mid)
-            wd = 22 * len(str(p['text'])) + 18
-            P.append(f'<rect x="{tx - wd / 2:.1f}" y="{ty - 20:.1f}" width="{wd}" height="40" rx="8" fill="#fff"/>')
-            P.append(_t(tx, ty + 10, _esc(p['text']), 28, weight=800))
+            P.append(_halo(tx, ty + 10, _esc(p['text']), 28, 800))
     return F._wrap(''.join(P), W, H, spec.get('label', 'corners'), w or spec.get('width_mm', 140))
 
 

@@ -549,7 +549,7 @@
    "id": "L3U10-S08",
    "tier": "start",
    "page": 3,
-   "text": "Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is greater than the ones digit.\n{ll}",
+   "text": "Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is more than the ones digit.\n{ll}",
    "answer": {
     "value": [
      "162",
@@ -868,9 +868,9 @@
     ],
     "max": 40,
     "step": 5,
-    "width_mm": 56,
+    "width_mm": 50,
     "unit_label": "pencils",
-    "h": 170
+    "h": 150
    },
    "figright": true
   },
@@ -878,7 +878,7 @@
    "id": "L3U10-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Ben is 3rd from the front and 6th from the back of a line. The line has {b} children.",
+   "text": "Ben stands 3rd from the front and 6th from the back. The line has {b} children.",
    "answer": {
     "value": [
      "8"

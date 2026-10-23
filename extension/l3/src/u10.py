@@ -72,7 +72,7 @@ u.S(3, 'Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 he
     figure={'type': 'l3_segs', 'segs': hexes(3), 'k': 46, 'pad': 14, 'width_mm': 50},
     space={'table': {'cols': ['hexagons', 'sticks'], 'rows': 4}},
     why='Each new hexagon adds 5 sticks. The table goes 1: 6, 2: 11, 3: 16, 4: 21, 5: 26, 6: 31. For 41 sticks, count on: 7 hexagons need 36 and 8 hexagons need 41.')
-u.S(3, 'Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit beats the ones digit.\n{ll}',
+u.S(3, 'Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is more than the ones digit.\n{ll}',
     A(['162', '252', '342'], '162, 252 and 342', list=True),
     space={'rows': ['My list:']},
     why='The hundreds digit is 1, 2 or 3. The ones digit is even and not 0, so it is 2, 4 or 6, and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: tens + ones = 7, so 5 and 2. With 3: tens + ones = 6, so 4 and 2. The numbers are 162, 252 and 342.')

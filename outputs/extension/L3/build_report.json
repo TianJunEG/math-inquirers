@@ -118,9 +118,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 1.0111997940267765,
-   "over": true,
-   "excess_mm": 2.9,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
    "edition": "soft"
   },
   {
@@ -295,9 +295,9 @@
    "kind": "practice",
    "label": "Unit 10 \u00b7 Check yourself",
    "exempt": false,
-   "fill": 1.0111997940267765,
-   "over": true,
-   "excess_mm": 2.9,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
    "edition": "print"
   },
   {
@@ -362,10 +362,8 @@
  "problems": [
   "soft page 8 (Unit 10 \u00b7 Start here 2): content overflows the page (natural height minus body 7.3 mm)",
   "soft page 11 (Unit 10 \u00b7 Go further): content overflows the page (natural height minus body 2.6 mm)",
-  "soft page 12 (Unit 10 \u00b7 Check yourself): content overflows the page (natural height minus body 2.9 mm)",
   "print page 8 (Unit 10 \u00b7 Start here 2): content overflows the page (natural height minus body 7.3 mm)",
-  "print page 11 (Unit 10 \u00b7 Go further): content overflows the page (natural height minus body 2.6 mm)",
-  "print page 12 (Unit 10 \u00b7 Check yourself): content overflows the page (natural height minus body 2.9 mm)"
+  "print page 11 (Unit 10 \u00b7 Go further): content overflows the page (natural height minus body 2.6 mm)"
  ],
  "soft_pages": 18,
  "print_pages": 18
