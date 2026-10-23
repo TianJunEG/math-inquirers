@@ -2469,7 +2469,8 @@
           }
         ],
         "room": false,
-        "hw": 79
+        "hw": 120,
+        "below": true
       }
     },
     {

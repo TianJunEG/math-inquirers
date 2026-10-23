@@ -82,7 +82,7 @@ def mirror_truth(pic):
 
 def cbc_page(no, spec, title, instr, strand, syll, topic_note, oc=()):
     old = L.BOX_SIDE
-    L.BOX_SIDE = 10.0                       # larger answer boxes (audit M4 and round 2: three-digit answers)
+    L.BOX_SIDE = 11.0                       # larger answer boxes (audit M4 and round 2: three-digit answers)
     try: return _cbc_page(no, spec, title, instr, strand, syll, topic_note, oc)
     finally: L.BOX_SIDE = old
 
@@ -153,7 +153,7 @@ def page32():
         oc=["VO2.1", "VO2.2", "VO2.3", "ST1.1", "ST1.2"])
 
 def page40():
-    return cbc_page(40, dict(id="CBC-P6-03", picture="elephant", bank="mixed", tier=2, seed=4, level=6), "Colour the Elephant", CINSTR,
+    return cbc_page(40, dict(id="CBC-P6-03", picture="elephant", bank="mixed", tier=2, seed=2, level=6), "Colour the Elephant", CINSTR,
         "Number and Algebra - mixed Primary 6", "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
         "Every part asks a mixed Primary 6 question with a whole-number answer: a percentage of a number, a whole number divided by a fraction, the value of an expression with a letter, an equation with a letter, a share in a ratio, or an average.",
         oc=["PF.PC", "FR1.2", "AL1.4", "AL1.5", "RA1.3", "ST1.1"])

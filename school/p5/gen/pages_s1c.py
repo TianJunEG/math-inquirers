@@ -95,7 +95,7 @@ def page15():
 # =============================================================================== P5-16 Remainder Stories (code word)
 FRAMES16 = [
     dict(t="A shop had {N} kites. On Monday it sold {f1} of them. On Tuesday it sold {f2} of the kites left.", l="How many kites were left?", s="How many kites were sold on Tuesday?", a="How many kites were sold in all?", unit=""),
-    dict(t="A baker made {N} buns. {f1} of them were sold in the morning and {f2} of the rest in the afternoon.", l="How many buns were left?", s="How many buns were sold in the afternoon?", a="How many buns were sold in all?", unit=""),
+    dict(t="A florist had {N} roses. {f1} of them went into bouquets and {f2} of the rest into a wedding display.", l="How many roses were left?", s="How many roses went into the display?", a="How many roses were used in all?", unit=""),
     dict(t="A library bought {N} new books. It lent {f1} of them in week 1 and {f2} of the rest in week 2.", l="How many books were left on the shelf?", s="How many books were lent in the second week?", a="How many books were lent in all?", unit=""),
     dict(t="A club raised ${N}. It spent {f1} of the money on prizes and {f2} of the rest on food.", l="How much money was left?", s="How much money was spent on food?", a="How much money was spent in all?", unit=""),
     dict(t="A gardener had {N} seeds. {f1} of them went into pots and {f2} of the rest into the ground.", l="How many seeds were left over?", s="How many seeds went into the ground?", a="How many seeds were planted in all?", unit=""),

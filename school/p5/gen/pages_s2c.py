@@ -69,7 +69,7 @@ def page36():
     else: raise RuntimeError("p36")
     P = route_page(36, 5136, "Angle Route", 1, "Geometry: angles on a straight line, at a point and vertically opposite angles", STRAND_GE,
         "angles on a straight line, angles at a point, vertically opposite angles, finding unknown angles", ["GE1.1", "GE1.2", "GE1.3", "GE1.4"], "Maze / path",
-        ["Start at START. Move up, down, left or right.", f"Step only on figures where the angle marked ? is {T}{DEG}.", "Do not step on a box twice."],
+        ["Start at START and move up, down, left or right.", f"Step only on figures where the angle marked ? is {T}{DEG}.", "Do not step on a box twice."],
         grid, path, dead, "", rule,
         f"A 4 by 4 grid of sixteen angle figures: angles on a straight line (they make a straight angle), angles at a point (a full turn) and two straight lines crossing (vertically opposite angles are equal; neighbouring angles make a straight angle). The angle marked ? is {T}{DEG} on the route. The boxes off the route give an answer a little more or less than {T}{DEG}, or the angle next to it; some extra boxes that do give {T}{DEG} are dead ends. Counting the boxes shows a line that takes a shortcut. Figures are not drawn to scale.",
         lambda c: f"? = {unknown_angle(c)}{DEG}", f"Does your line reach FINISH? Count its boxes: are there 8? Is every angle marked ? equal to {T}{DEG}?", extra_facts=str(T), cls="maze tall")
@@ -143,7 +143,7 @@ def page38():
     solved = [Fr(solve(c)) for c in cards]
     P = code_page(38, 5138, "Triangle Angles", 1, "Geometry: angle sum of a triangle; isosceles, equilateral and right-angled triangles", STRAND_GE,
         "angle sum of a triangle; properties of isosceles, equilateral and right-angled triangles; finding unknown angles", ["GE2.1", "GE2.2", "GE2.3", "GE1.4"], "Code-breaker (angles in triangles)",
-        ["Find the angle marked ? in each triangle.", "Ticks show sides of equal length. A square shows a right angle.", "Write the angle in the box. Use the code table."],
+        ["Find the angle marked ? in each triangle.", "Ticks mark equal sides; a square marks a right angle.", "Write each angle in the box, then use the code table."],
         cards, ans, word, table, dom, lambda k: f"{int(k)}{DEG}", "; ".join(f"{i+1}) {int(a)}{DEG} ({kd})" for i, (a, (kd, g)) in enumerate(zip(ans, items))),
         f"Six triangles: two with two angles given (the three angles of a triangle make a straight angle), an isosceles triangle with the angle at the top given, an isosceles triangle with a base angle given, an equilateral triangle and a right-angled triangle with one other angle given. Equal sides carry tick marks. The decoy letters stand for the usual slips: giving a straight angle minus one angle only, adding the angles, or not halving the base angles. The page does not rely on the drawing: the pupil should use the angle facts, not a protractor. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3")
@@ -219,8 +219,11 @@ def page40():
     for _ in range(8000):
         items = []
         for kd in ["ext", "ext", "isoext", "isoext", "ext2", "ext2"]:
-            if kd == "ext": a, b = rng.randint(30, 80), rng.randint(30, 80); items.append((kd, (a, b), a + b))
-            elif kd == "isoext": g = rng.choice(range(30, 130, 2)); items.append((kd, (g,), 180 - (180 - g) // 2))
+            if kd == "ext":
+                a, b = rng.randint(45, 80), rng.randint(45, 80)
+                if a + b > 135: continue
+                items.append((kd, (a, b), a + b))
+            elif kd == "isoext": g = rng.choice(range(30, 92, 2)); items.append((kd, (g,), 180 - (180 - g) // 2))
             else:
                 e, f = rng.randint(105, 150), rng.randint(105, 150)
                 if not 35 <= e + f - 180 <= 110: continue
@@ -248,7 +251,7 @@ def page40():
     solved = [solve(c) for c in cards]
     P = code_page(40, 5140, "Angle Chains", 2, "Geometry: unknown angles in two steps", STRAND_GE,
         "finding unknown angles in two steps: angle sum of a triangle with angles on a straight line or vertically opposite angles", ["GE1.4", "GE2.2", "GE2.3", "GE1.1", "GE1.3", "GE2.1"], "Code-breaker (angle chains)",
-        ["Find the angle marked ? in each figure.", "Use two steps. Ticks show sides of equal length.", "Write the angle in the box. Use the code table."],
+        ["Find the angle marked ? in each figure, in two steps.", "Ticks mark equal sides.", "Write each angle in the box, then use the code table."],
         cards, ans, word, table, dom, lambda k: f"{int(k)}{DEG}", "; ".join(f"{i+1}) {int(a)}{DEG} ({kd})" for i, (a, (kd, g, v)) in enumerate(zip(ans, items))),
         f"Six two-step figures, two of each kind: a triangle with two angles given and one side extended (find the third angle, then the angle on the straight line); an isosceles triangle with the top angle given and the base extended (find the base angle, then the angle on the straight line); and a triangle on a straight line with the two outside angles given (find the two inside angles on the line, then the third angle of the triangle). The decoy letters stand for the usual slips: the angle inside the triangle instead of the angle on the line, or stopping after the first step. Figures are not drawn to scale. A box left blank gives no letter and the check cannot see it.",
         solved, cols=4, layout="c3", ps=True)

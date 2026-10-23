@@ -2793,7 +2793,8 @@
           "wins|10 more",
           "gives|5 away"
         ],
-        "hw": 80
+        "hw": 110,
+        "below": true
       }
     },
     {

@@ -97,7 +97,8 @@ for p in pages:
         if max_words(s_) > 16: bad.append((p["no"], s_))
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 24: bad.append((p["no"], cl))
-    if len(p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction sentences (plan: Primary 5 = 4)"))
+    n_sent = sum(len([x for x in re.split(r"(?<=[.?!])\s+", s_.strip()) if x]) for s_ in p["instr"])
+    if n_sent > 4: bad.append((p["no"], f"{n_sent} instruction sentences (plan: Primary 5 = 4)"))
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]) + re.findall(r'class="(?:st|ptxt|qs)">(.*?)</(?:div|p|span)>', p["body"]) + re.findall(r'<p class="qt[^"]*">(.*?)</p>', p["body"]):
         sent = to_text(sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):

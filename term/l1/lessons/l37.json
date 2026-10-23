@@ -2818,7 +2818,8 @@
     ],
     "icon": "counter",
     "key": false,
-    "hw": 74
+    "hw": 100,
+    "below": true
    }
   },
   {

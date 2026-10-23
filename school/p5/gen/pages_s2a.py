@@ -187,7 +187,7 @@ def page26():
                     q = f"Sand falls from a hopper at {r} kg a minute. How many kg fall in {m} minutes?"; right = Fr(r * m); wrong = [Fr(m, r) if m % r == 0 else Fr(r + m), Fr(r * m + r), Fr(r * m - m)]; u = "kg"; fmt = lambda v: dec(v)
             else:
                 if var == 0:
-                    a = rng.choice([6, 8, 9, 12, 15, 20]); n = rng.randint(3, 9)
+                    a = rng.choice([6, 8, 9, 12, 14, 16, 18]); n = rng.choice([x for x in range(3, 10) if a * x != 90])
                     q = f"A cook makes {a} pancakes in 1 minute. How many minutes does the cook need to make {a * n} pancakes?"; right = Fr(n); wrong = [Fr(a * a * n), Fr(a * n - a), Fr(n + a)]; u = "minutes"; fmt = lambda v: dec(v)
                 else:
                     p = rng.choice([2, 3, 4, 5, 6]); n = rng.randint(3, 9)
@@ -223,7 +223,7 @@ def page27():
     T27 = [("A bus uses {a} ℓ of fuel in {b} hours. How many ℓ does it use in {c} hours?", "ℓ", lambda a, b, c: Fr(a, b) * c),
            ("A tailor sews {a} shirts in {b} hours. How many hours does the tailor need to sew {c} shirts?", "hours", lambda a, b, c: Fr(b, a) * c),
            ("{a} pens cost ${b}. How much do {c} pens cost?", "$", lambda a, b, c: Fr(b, a) * c),
-           ("A farmer packs {a} eggs in {b} minutes. How many eggs does he pack in {c} minutes?", "eggs", lambda a, b, c: Fr(a, b) * c),
+           ("A mechanic fixes {a} bikes in {b} days. How many bikes does he fix in {c} days?", "bikes", lambda a, b, c: Fr(a, b) * c),
            ("A cleaner washes {a} windows in {b} hours. How many hours does the cleaner need to wash {c} windows?", "hours", lambda a, b, c: Fr(b, a) * c),
            ("Ali earns ${a} for {b} hours of work. How much does he earn for {c} hours?", "$", lambda a, b, c: Fr(a, b) * c)]
     for _ in range(8000):

@@ -242,7 +242,7 @@ def balance(left=None, right=None, tilt='level', width=1000, icon_size=44):
                 if t == '?':
                     P.append(f'<rect x="{x:.1f}" y="{y1:.1f}" width="{wc:.1f}" height="{hc:.1f}" rx="12" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/><text x="{x + wc / 2:.1f}" y="{y1 + hc * 0.72:.1f}" font-size="{44 * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">?</text>')
                 else:
-                    P.append(f'<rect x="{x:.1f}" y="{y1:.1f}" width="{wc:.1f}" height="{hc:.1f}" rx="12" {_o(YEL)}/><text x="{x + wc / 2:.1f}" y="{y1 + hc * 0.7:.1f}" font-size="{(40 if len(t) <= 2 else 28) * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(t)}</text>')
+                    P.append(f'<rect x="{x:.1f}" y="{y1:.1f}" width="{wc:.1f}" height="{hc:.1f}" rx="12" {_o("#FFF0B3")}/><text x="{x + wc / 2:.1f}" y="{y1 + hc * 0.7:.1f}" font-size="{(40 if len(t) <= 2 else 28) * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(t)}</text>')
             x += wc + gap * sc
             if kind == 'text' and plus_after.get(id(it)):
                 P.append(f'<text x="{x - gap * sc / 2:.1f}" y="{y1 + hc * 0.68:.1f}" font-size="{40 * sc:.0f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">+</text>')

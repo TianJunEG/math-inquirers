@@ -240,7 +240,7 @@ def tri_angles(kind, g, w=62, hh=42):
     elif kind == "apex": A_ = B_ = (180 - g[0]) / 2
     elif kind == "base": A_ = B_ = g[0]
     elif kind == "equi": A_ = B_ = 60
-    else: A_, B_ = 90, g[0]
+    else: A_, B_ = (90, g[0]) if g[0] < 45 else (90, 90 - g[0])      # the given acute angle is always the wider of the two, so its label has room
     pts, C_ = build(A_, B_)
     sc = min((w - 12) / max(p[0] for p in pts), (hh - 12) / max(p[1] for p in pts), 1.4)
     ox, oy = 6, hh - 6
@@ -259,7 +259,7 @@ def tri_angles(kind, g, w=62, hh=42):
     if kind == "equi": given = ["?", None, None]
     if kind == "apex": given = ["?", None, g[0]]
     if kind == "base": given = [g[0], None, "?"]
-    if kind == "right": given = [None, g[0], "?"]
+    if kind == "right": given = [None, g[0], "?"] if g[0] < 45 else [None, "?", g[0]]
     pos = ["base1", "base2", "apex"]
     for k in range(3):
         v = given[k]
@@ -270,7 +270,7 @@ def tri_angles(kind, g, w=62, hh=42):
         l1, l2 = math.hypot(*u1), math.hypot(*u2)
         bx, by = u1[0] / l1 + u2[0] / l2, u1[1] / l1 + u2[1] / l2; bl = math.hypot(bx, by)
         th = math.acos(max(-1, min(1, (u1[0] * u2[0] + u1[1] * u2[1]) / (l1 * l2))))
-        d = min(8.0 / max(math.sin(th / 2), 0.25), 0.55 * min(l1, l2), 17.0)
+        d = min(6.4 / max(math.sin(th / 2), 0.22), 0.42 * min(l1, l2), 14.0)
         lx, ly = px + bx / bl * d, py + by / bl * d
         o.append(T(lx, ly, "?" if v == "?" else f"{v}\u00b0", size=4.2, attrs=f'data-v="{v}" data-pos="{pos[k]}"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra=f'data-fig="tri-{kind}"')
@@ -299,7 +299,7 @@ def _inlab(P, k, n1, n2, v, pos, size=4.1):
     l1, l2 = math.hypot(*u1), math.hypot(*u2)
     bx, by = u1[0] / l1 + u2[0] / l2, u1[1] / l1 + u2[1] / l2; bl = math.hypot(bx, by)
     th = math.acos(max(-1, min(1, (u1[0] * u2[0] + u1[1] * u2[1]) / (l1 * l2))))
-    d = min(8.0 / max(math.sin(th / 2), 0.25), 0.55 * min(l1, l2), 17.0)
+    d = min(6.4 / max(math.sin(th / 2), 0.22), 0.42 * min(l1, l2), 14.0)
     s_ = "?" if v == "?" else f"{v}\u00b0"
     return T(px + bx / bl * d, py + by / bl * d, s_, size=size, attrs=f'data-v="{v}" data-pos="{pos}"')
 
@@ -309,8 +309,8 @@ def ext_fig(a, b, w=64, hh=36):
     Bp, Cp = (0.0, 0.0), (40.0, 0.0)
     ab = math.sin(math.radians(Cc)) / math.sin(math.radians(a)) * 40.0           # |BA|
     Ap = (ab * math.cos(math.radians(b)), -ab * math.sin(math.radians(b)))
-    Dp = (40.0 + 16.0, 0.0)
-    P = _fit({"B": Bp, "C": Cp, "A": Ap, "D": Dp}, w, hh)
+    Dp = (40.0 + 11.0, 0.0)
+    P = _fit({"B": Bp, "C": Cp, "A": Ap, "D": Dp}, w, hh, pad=6.0, cap=3.0)
     o = [PG([P["A"], P["B"], P["C"]]), LN(*P["C"], *P["D"])]
     o.append(_inlab(P, "A", "B", "C", a, "apex")); o.append(_inlab(P, "B", "A", "C", b, "base1"))
     cx, cy = P["C"]; ang = math.degrees(math.atan2(-(P["A"][1] - cy), P["A"][0] - cx))
