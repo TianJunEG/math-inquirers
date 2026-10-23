@@ -70,7 +70,18 @@
    1.0,
    150,
    150
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    118,
+    118
+   ],
+   "all_other_values_rejected": [
+    150,
+    150
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 2,
@@ -123,7 +134,18 @@
    1.0,
    495,
    495
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    60,
+    60
+   ],
+   "all_other_values_rejected": [
+    495,
+    495
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 3,
@@ -176,7 +198,18 @@
    1.0,
    114,
    114
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    56,
+    56
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 4,
@@ -234,7 +267,21 @@
    1.0,
    719,
    719
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 5,
@@ -287,7 +334,18 @@
    1.0,
    234,
    234
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    65,
+    65
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 6,
@@ -345,7 +403,18 @@
    1.0,
    138,
    138
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    138,
+    138
+   ],
+   "all_other_values_rejected": [
+    138,
+    138
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 7,
@@ -398,7 +467,21 @@
    1.0,
    719,
    719
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 8,
@@ -436,7 +519,18 @@
    1.0,
    2,
    2
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 9,
@@ -464,7 +558,18 @@
    1.0,
    48,
    48
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    42,
+    42
+   ],
+   "all_other_values_rejected": [
+    48,
+    48
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 10,
@@ -522,7 +627,18 @@
    1.0,
    114,
    114
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    63,
+    63
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 11,
@@ -575,7 +691,18 @@
    1.0,
    594,
    594
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 12,
@@ -648,7 +775,18 @@
    1.0,
    204,
    204
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    156,
+    156
+   ],
+   "all_other_values_rejected": [
+    204,
+    204
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 13,
@@ -701,7 +839,18 @@
    1.0,
    234,
    234
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 14,
@@ -774,7 +923,18 @@
    1.0,
    1300,
    1300
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    156,
+    156
+   ],
+   "all_other_values_rejected": [
+    1300,
+    1300
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 15,
@@ -827,7 +987,18 @@
    1.0,
    475,
    475
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    59,
+    59
+   ],
+   "all_other_values_rejected": [
+    475,
+    475
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 16,
@@ -885,7 +1056,21 @@
    1.0,
    119,
    119
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    58,
+    58
+   ],
+   "all_other_values_rejected": [
+    58,
+    58
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
  },
  {
   "no": 17,
@@ -938,7 +1123,18 @@
    1.0,
    66,
    66
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    50,
+    50
+   ],
+   "all_other_values_rejected": [
+    66,
+    66
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 18,
@@ -1001,7 +1197,18 @@
    1.0,
    715,
    715
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    715,
+    715
+   ],
+   "all_other_values_rejected": [
+    715,
+    715
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 19,
@@ -1059,7 +1266,18 @@
    1.0,
    40,
    40
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    34,
+    34
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
  },
  {
   "no": 20,
@@ -1132,6 +1350,17 @@
    1.0,
    12,
    12
-  ]
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    40,
+    40
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
  }
 ]
