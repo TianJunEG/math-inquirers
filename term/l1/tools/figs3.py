@@ -762,7 +762,7 @@ def price_tags(prices=None, items=None, blank=3, u=None):
         else:
             b.append(f'<line x1="{x + 30}" y1="{y + ch * 0.7:.1f}" x2="{x + cw - 30}" y2="{y + ch * 0.7:.1f}" stroke="{NAVY}" stroke-width="2.4"/><text x="{x + cw / 2:.1f}" y="{y + ch * 0.45:.1f}" font-size="20" text-anchor="middle" fill="#5B6785" font-family="Nunito Sans, Arial">write here</text>')
     rows = (len(prices) + blank + 2) // 3
-    return _kit(700, 34 + rows * (ch + gap), b, 'price tags')
+    return _kit(700, 34 + rows * (ch + gap) - gap + 2, b, 'price tags')
 
 
 def grid_tiles(symbols=('circle', 'square', 'triangle', 'star'), per=4, digits=True, u=None):
