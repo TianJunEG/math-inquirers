@@ -270,7 +270,7 @@ def tri_angles(kind, g, w=62, hh=42):
         l1, l2 = math.hypot(*u1), math.hypot(*u2)
         bx, by = u1[0] / l1 + u2[0] / l2, u1[1] / l1 + u2[1] / l2; bl = math.hypot(bx, by)
         th = math.acos(max(-1, min(1, (u1[0] * u2[0] + u1[1] * u2[1]) / (l1 * l2))))
-        d = min(5.2 / max(math.sin(th / 2), 0.2), 0.42 * min(l1, l2), 13.0)
+        d = min(8.0 / max(math.sin(th / 2), 0.25), 0.55 * min(l1, l2), 17.0)
         lx, ly = px + bx / bl * d, py + by / bl * d
         o.append(T(lx, ly, "?" if v == "?" else f"{v}\u00b0", size=4.2, attrs=f'data-v="{v}" data-pos="{pos[k]}"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra=f'data-fig="tri-{kind}"')
@@ -293,6 +293,16 @@ def _lab(P, k, centre, v, pos, d=8.0, size=4.1):
     s = "?" if v == "?" else f"{v}°"
     return T(px + dx / l * d, py + dy / l * d, s, size=size, attrs=f'data-v="{v}" data-pos="{pos}"')
 
+def _inlab(P, k, n1, n2, v, pos, size=4.1):
+    """an interior angle label on the bisector at vertex k (neighbours n1 and n2), far enough in for the label to clear both sides"""
+    px, py = P[k]; u1 = (P[n1][0] - px, P[n1][1] - py); u2 = (P[n2][0] - px, P[n2][1] - py)
+    l1, l2 = math.hypot(*u1), math.hypot(*u2)
+    bx, by = u1[0] / l1 + u2[0] / l2, u1[1] / l1 + u2[1] / l2; bl = math.hypot(bx, by)
+    th = math.acos(max(-1, min(1, (u1[0] * u2[0] + u1[1] * u2[1]) / (l1 * l2))))
+    d = min(8.0 / max(math.sin(th / 2), 0.25), 0.55 * min(l1, l2), 17.0)
+    s_ = "?" if v == "?" else f"{v}\u00b0"
+    return T(px + bx / bl * d, py + by / bl * d, s_, size=size, attrs=f'data-v="{v}" data-pos="{pos}"')
+
 def ext_fig(a, b, w=64, hh=36):
     """triangle ABC (angle b at B, angle a at A, the rest at C) with BC extended beyond C to D; the angle between CA and CD is asked"""
     Cc = 180 - a - b
@@ -302,8 +312,7 @@ def ext_fig(a, b, w=64, hh=36):
     Dp = (40.0 + 16.0, 0.0)
     P = _fit({"B": Bp, "C": Cp, "A": Ap, "D": Dp}, w, hh)
     o = [PG([P["A"], P["B"], P["C"]]), LN(*P["C"], *P["D"])]
-    cen = ((P["A"][0] + P["B"][0] + P["C"][0]) / 3, (P["A"][1] + P["B"][1] + P["C"][1]) / 3)
-    o.append(_lab(P, "A", cen, a, "apex", 7.5)); o.append(_lab(P, "B", cen, b, "base1", 8.5))
+    o.append(_inlab(P, "A", "B", "C", a, "apex")); o.append(_inlab(P, "B", "A", "C", b, "base1"))
     cx, cy = P["C"]; ang = math.degrees(math.atan2(-(P["A"][1] - cy), P["A"][0] - cx))
     if ang > 0: o.append(ARC(cx, cy, 5.0, 0, ang, sw=0.45))
     mid = ang / 2
@@ -372,5 +381,7 @@ def ext2_fig(e, f, w=64, hh=34):
     o.append(T(bx + 10.5 * math.cos(math.radians(mb)), by - 10.5 * math.sin(math.radians(mb)), f"{e}\u00b0", size=4.1, attrs=f'data-v="{e}" data-pos="extB"'))
     o.append(T(cx + 10.5 * math.cos(math.radians(mc)), cy - 10.5 * math.sin(math.radians(mc)), f"{f}\u00b0", size=4.1, attrs=f'data-v="{f}" data-pos="extC"'))
     ax, ay = P["A"]
-    o.append(T(ax, ay + 7.0, "?", size=4.3, attrs='data-v="?" data-pos="apex"'))
+    d1 = math.degrees(math.atan2(-(by - ay), bx - ax)); d2 = math.degrees(math.atan2(-(cy - ay), cx - ax))
+    o.append(ARC(ax, ay, 5.0, min(d1, d2), max(d1, d2), sw=0.45))
+    o.append(T(ax, ay + 9.0, "?", size=4.3, attrs='data-v="?" data-pos="apex"'))
     return svg(w, hh, "".join(o), cls="fsvg", extra='data-fig="ext2"')

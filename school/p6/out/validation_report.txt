@@ -729,16 +729,16 @@ PASS  S1_key.html: colour-by-code pictures: 1 found (expected 1); every label of
 FAIL  S2_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(12, 0, 14), (20, 1, 14)]
 FAIL  S2_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14), (10, 1, 14)]
 PASS  P6_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.24% vs greyscale)  20 pages
-PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 223, budget 40 on average per page)  
+PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 225, budget 40 on average per page)  
 PASS  P6_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.23% vs greyscale)  5 pages
 PASS  P6_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 141, budget 40 on average per page)  
 PASS  P6_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.24% vs greyscale)  9 pages
-PASS  P6_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 724, budget 130 on average per page)  
+PASS  P6_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 725, budget 130 on average per page)  
 PASS  P6_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.34% vs greyscale)  20 pages
-PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 202, budget 40 on average per page)  
+PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 207, budget 40 on average per page)  
 PASS  P6_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.80% vs greyscale)  5 pages
 PASS  P6_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 137, budget 40 on average per page)  
 PASS  P6_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.54% vs greyscale)  10 pages
-PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 866, budget 130 on average per page)  
+PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 868, budget 130 on average per page)  
 
 TOTAL 742 checks, 2 failed
