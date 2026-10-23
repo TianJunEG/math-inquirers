@@ -567,9 +567,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 1.012503218331617,
-   "over": true,
-   "excess_mm": 3.2,
+   "fill": 0.9907633882595263,
+   "over": false,
+   "excess_mm": -2.4,
    "edition": "soft"
   },
   {
@@ -1553,9 +1553,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 1.012503218331617,
-   "over": true,
-   "excess_mm": 3.2,
+   "fill": 0.9907633882595263,
+   "over": false,
+   "excess_mm": -2.4,
    "edition": "print"
   },
   {
@@ -1995,10 +1995,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 56 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 3.2 mm)",
-  "print page 56 (Unit 8 \u00b7 Start here 1): content overflows the page (natural height minus body 3.2 mm)"
- ],
+ "problems": [],
  "soft_pages": 99,
  "print_pages": 100,
  "bw_pipeline": {
@@ -2006,6 +2003,6 @@
   "dpi": 600,
   "mb": 13.34,
   "check_bw_failures": 0,
-  "pale_tint_dropped_max": 0.0036
+  "pale_tint_dropped_max": 0.0037
  }
 }
