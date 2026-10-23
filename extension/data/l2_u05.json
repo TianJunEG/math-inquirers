@@ -808,7 +808,7 @@
      }
     }
    ],
-   "explanation": "OUT numbers: IN 1 gives 5, IN 2 gives 9, IN 3 gives 13, IN 4 gives 17. They are always 1 more than a number in the 4 times table. 29 = 28 + 1 (IN 7): yes. 30: 29 is 1 more than 28 and 33 is 1 more than 32, so 30 is skipped: no. 33 = 32 + 1 (IN 8): yes. 42: 41 and 45 are in the pattern, so no.",
+   "explanation": "IN 1, 2, 3, 4 give 5, 9, 13, 17: always 1 more than the 4 times table. 29 = 28 + 1: yes. 30 is skipped (29, 33): no. 33 = 32 + 1: yes. 42 is skipped (41, 45): no.",
    "hint": "Write the first OUT numbers. What do you see?",
    "partsrow": true
   },
@@ -882,7 +882,7 @@
      }
     }
    ],
-   "explanation": "(a) 36 ÷ 3 = 12 each. (b) Undo the move B to C: jar C gives back 6, so jar C had 12 - 6 = 6, and jar B had 12 + 6 = 18 before that move. Undo the move A to B: jar B gives back 4, so jar B had 18 - 4 = 14, and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.",
+   "explanation": "(a) 36 ÷ 3 = 12. (b) Undo B to C: jar C had 12 - 6 = 6 and jar B had 12 + 6 = 18. Undo A to B: jar B had 18 - 4 = 14 and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.",
    "hint": "Undo the last move first. Jar C gave nothing, it got 6."
   },
   {

@@ -76,7 +76,7 @@ items = [
    P('a', 'Up to 30, they both land on {b}, {b} and {b}.', ['4', '16', '28'], '4, 16 and 28', lst=True), P('b', 'The next number they both land on is {b}', '40'),
    P('c', 'Frog C starts at 2 and jumps 4. Do A and C ever land on the same number? {circ:Yes|No}', 'No')],
    hint='They land together every 12. Why 12?',
-   why='Frog A: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. Frog B: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40. Both: 4, 16, 28 and then 40. They meet every 12 because 12 is in both the 3 and 4 times tables. Frog C lands on 2, 6, 10 ... always 2 more than a 4 times table number, and Frog A lands only on the 4 times table: never together.'),
+   why='Frog A: 4, 8, 12 ... 40. Frog B: 1, 4, 7 ... 40. Both: 4, 16, 28, then 40: every 12, because 12 is in the 3 and 4 times tables. Frog C lands 2 more than the 4 times table, so it never meets Frog A.'),
  I('go', 5, 'The pattern star, circle, circle, square, square repeats again and again. Ravi says place 40 is a star. Siti says place 40 is a square.', parts=[
    P('a', 'Who is right? {circ:Ravi|Siti}', 'Siti'), P('b', 'Place 43 is a   {circ:star|circle|square}', 'circle')],
    hint='Place 40 is in the 5 times table. It is the last shape.',

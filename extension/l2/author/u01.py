@@ -41,7 +41,7 @@ items = [
    P('a', 'The greatest number is {b} and the smallest is {b}.', ['851', '158'], '851 and 158'),
    P('b', 'Which number is closest to 600? {b}', '581'),
    P('c', 'How many of your numbers are odd? {b}', '4')],
-   why='(a) The greatest digit goes first for the greatest number: 851. The smallest digit goes first for the smallest: 158. (b) 581 is only 19 away from 600; 518 is 82 away. (c) A number is odd if it ends in 1, 3, 5, 7 or 9: 185, 581, 815 and 851 are odd.'),
+   why='(a) The greatest digit first gives 851; the smallest first gives 158. (b) 581 is 19 from 600. (c) Odd numbers end in 1, 3, 5, 7 or 9: 185, 581, 815, 851.'),
  I('start', 2, 'Use the cards 6, 0 and 4 once each.', figure={'type': 'l2_cards', 'items': [6, 0, 4], 'width_mm': 46},
    parts=[P('a', 'List all the 3-digit numbers the cards can make.  {ll}', ['406', '460', '604', '640'], '406, 460, 604, 640', lst=True), P('b', 'How many numbers did you write? {b}', '4')],
    why='0 cannot be the hundreds digit, so only 6 or 4 can start. Start with 4: 406 and 460. Start with 6: 604 and 640. That is 4 numbers.'),
@@ -58,7 +58,7 @@ items = [
    parts=[P('a', 'Piece A: write the 4 missing numbers in the empty squares.', ['573', '581', '592', '593'], '573, 581, 592, 593 (left to right, top to bottom)', lst=True),
           P('b', 'Piece B: write the 4 missing numbers in the empty squares.', ['635', '644', '646', '655'], '635, 644, 646, 655 (top, left, right, bottom)', lst=True),
           P('c', 'On the chart, the square 3 below 612 holds {b}', '642')],
-   why='One square right is 1 more. One square down is 10 more. (a) 573 is 1 more than 572. 581 is 1 less than 582. 592 is 10 more than 582. 593 is 10 more than 583. (b) Above 645 is 635, left is 644, right is 646, below is 655. (c) 3 squares down is 30 more: 612 + 30 = 642.'),
+   why='Right is 1 more, down is 10 more. (a) 573, 581, 592, 593. (b) Above 645 is 635, left is 644, right is 646, below is 655. (c) 3 squares down is 30 more: 612 + 30 = 642.'),
  I('start', 3, 'Circle True or False.', partsrow=True, parts=[
    P('a', '5 tens and 12 ones is the same as 62.   {circ:True|False}', 'True'), P('b', '7 hundreds is the same as 700 tens.   {circ:True|False}', 'False'),
    P('c', 'In 909, the two 9s are worth the same.   {circ:True|False}', 'False'), P('d', '10 hundreds is the same as 1000.   {circ:True|False}', 'True')],

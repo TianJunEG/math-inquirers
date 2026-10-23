@@ -58,9 +58,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.1449536560247169,
-   "over": true,
-   "excess_mm": 37.2,
+   "fill": 0.7954589340885685,
+   "over": false,
+   "excess_mm": -52.5,
    "edition": "soft"
   },
   {
@@ -68,9 +68,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 1.100492404737384,
-   "over": true,
-   "excess_mm": 25.8,
+   "fill": 0.9202175592173018,
+   "over": false,
+   "excess_mm": -20.5,
    "edition": "soft"
   },
   {
@@ -78,9 +78,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 1.270532955715757,
+   "fill": 1.059957518022657,
    "over": true,
-   "excess_mm": 69.5,
+   "excess_mm": 15.4,
    "edition": "soft"
   },
   {
@@ -88,9 +88,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8330490473738414,
+   "fill": 0.8099414263645726,
    "over": false,
-   "excess_mm": -42.9,
+   "excess_mm": -48.8,
    "edition": "soft"
   },
   {
@@ -98,9 +98,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.7612480690010298,
+   "fill": 0.8605014160659115,
    "over": false,
-   "excess_mm": -61.3,
+   "excess_mm": -35.8,
    "edition": "soft"
   },
   {
@@ -156,9 +156,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9537525746652935,
+   "fill": 0.920764675592173,
    "over": false,
-   "excess_mm": -11.9,
+   "excess_mm": -20.4,
    "edition": "soft"
   },
   {
@@ -166,9 +166,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9310633367662204,
+   "fill": 0.9746234552008239,
    "over": false,
-   "excess_mm": -17.7,
+   "excess_mm": -6.5,
    "edition": "soft"
   },
   {
@@ -176,9 +176,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.26485260041194647,
+   "fill": 0.12714019052523173,
    "over": false,
-   "excess_mm": -188.9,
+   "excess_mm": -224.2,
    "edition": "soft"
   },
   {
@@ -235,9 +235,9 @@
    "kind": "learn",
    "label": "Unit 9 \u00b7 Learn it",
    "exempt": false,
-   "fill": 1.1531925849639546,
-   "over": true,
-   "excess_mm": 39.4,
+   "fill": 0.8199504376930999,
+   "over": false,
+   "excess_mm": -46.3,
    "edition": "print"
   },
   {
@@ -245,9 +245,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 1.100492404737384,
-   "over": true,
-   "excess_mm": 25.8,
+   "fill": 0.9202175592173018,
+   "over": false,
+   "excess_mm": -20.5,
    "edition": "print"
   },
   {
@@ -255,9 +255,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 1.270532955715757,
+   "fill": 1.059957518022657,
    "over": true,
-   "excess_mm": 69.5,
+   "excess_mm": 15.4,
    "edition": "print"
   },
   {
@@ -265,9 +265,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8330490473738414,
+   "fill": 0.8099414263645726,
    "over": false,
-   "excess_mm": -42.9,
+   "excess_mm": -48.8,
    "edition": "print"
   },
   {
@@ -275,9 +275,9 @@
    "kind": "practice",
    "label": "Unit 9 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.7674272657054583,
+   "fill": 0.8666806127703398,
    "over": false,
-   "excess_mm": -59.8,
+   "excess_mm": -34.3,
    "edition": "print"
   },
   {
@@ -333,9 +333,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9537525746652935,
+   "fill": 0.920764675592173,
    "over": false,
-   "excess_mm": -11.9,
+   "excess_mm": -20.4,
    "edition": "print"
   },
   {
@@ -343,9 +343,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9310633367662204,
+   "fill": 0.9746234552008239,
    "over": false,
-   "excess_mm": -17.7,
+   "excess_mm": -6.5,
    "edition": "print"
   },
   {
@@ -353,23 +353,19 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.26485260041194647,
+   "fill": 0.12714019052523173,
    "over": false,
-   "excess_mm": -188.9,
+   "excess_mm": -224.2,
    "edition": "print"
   }
  ],
  "problems": [
-  "soft page 6 (Unit 9 \u00b7 Learn it): content overflows the page (natural height minus body 37.2 mm)",
-  "soft page 7 (Unit 9 \u00b7 Start here 1): content overflows the page (natural height minus body 25.8 mm)",
-  "soft page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 69.5 mm)",
-  "soft page 9 (Unit 9 \u00b7 Start here 3): natural fill 0.83 < 0.85",
-  "soft page 10 (Unit 9 \u00b7 Think harder): natural fill 0.76 < 0.85",
-  "print page 6 (Unit 9 \u00b7 Learn it): content overflows the page (natural height minus body 39.4 mm)",
-  "print page 7 (Unit 9 \u00b7 Start here 1): content overflows the page (natural height minus body 25.8 mm)",
-  "print page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 69.5 mm)",
-  "print page 9 (Unit 9 \u00b7 Start here 3): natural fill 0.83 < 0.85",
-  "print page 10 (Unit 9 \u00b7 Think harder): natural fill 0.77 < 0.85"
+  "soft page 6 (Unit 9 \u00b7 Learn it): natural fill 0.80 < 0.85",
+  "soft page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 15.4 mm)",
+  "soft page 9 (Unit 9 \u00b7 Start here 3): natural fill 0.81 < 0.85",
+  "print page 6 (Unit 9 \u00b7 Learn it): natural fill 0.82 < 0.85",
+  "print page 8 (Unit 9 \u00b7 Start here 2): content overflows the page (natural height minus body 15.4 mm)",
+  "print page 9 (Unit 9 \u00b7 Start here 3): natural fill 0.81 < 0.85"
  ],
  "soft_pages": 18,
  "print_pages": 18

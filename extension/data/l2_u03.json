@@ -693,7 +693,7 @@
      }
     }
    ],
-   "explanation": "Tricycles: 1 leaves 18 wheels = 9 bicycles. 2 leaves 15, which is odd. 3 leaves 12 = 6 bicycles. 4 leaves 9, odd. 5 leaves 6 = 3 bicycles. 6 leaves 3, odd. 7 tricycles use all 21 wheels and leave no bicycle. So 3 ways: (9, 1), (6, 3), (3, 5). Vehicles: 10, 9 and 8. The fewest is 8.",
+   "explanation": "Tricycles have 3 wheels. 1 tricycle leaves 18 wheels: 9 bicycles. 3 leave 12: 6 bicycles. 5 leave 6: 3 bicycles. 2, 4 and 6 leave an odd number and 7 leaves none. So 3 ways, with 10, 9 and 8 vehicles. The fewest is 8.",
    "hint": "Bicycles use 2 wheels each. So wheels left must be even."
   },
   {

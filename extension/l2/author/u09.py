@@ -22,7 +22,7 @@ learn = {
 items = [
  I('start', 1, 'Read the clocks. Write each time.', figure={'type': 'l2_clock', 'clocks': [{'h': 4, 'm': 35, 'label': 'A'}, {'h': 8, 'm': 50, 'label': 'B'}, {'h': 11, 'm': 15, 'label': 'C'}], 'width_mm': 135},
    partsrow=True, parts=[P('a', 'A: {b} : {b}', ['4', '35']), P('b', 'B: {b} : {b}', ['8', '50']), P('c', 'C: {b} : {b}', ['11', '15'])],
-   why='The short hand shows the hour and the long hand shows the minutes. Count in 5s round the clock. A: the long hand is on 7, which is 35 minutes, and the short hand is past 4: 4:35. B: the long hand is on 10, which is 50 minutes: 8:50. C: the long hand is on 3, which is 15 minutes: 11:15.'),
+   why='The long hand shows the minutes: count in 5s. A: long hand on 7 is 35 minutes, short hand past 4: 4:35. B: long hand on 10 is 50 minutes: 8:50. C: long hand on 3 is 15 minutes: 11:15.'),
  I('start', 1, 'Write am or pm.', partsrow=True, parts=[
    P('a', 'Mei eats breakfast at 7:30   {circ:am|pm}', 'am'), P('b', 'School ends at 1:30   {circ:am|pm}', 'pm'), P('c', 'Ali goes to bed at 9:15   {circ:am|pm}', 'pm'), P('d', 'The sun rises at 6:40   {circ:am|pm}', 'am')],
    why='am is from midnight to noon. pm is from noon to midnight. (a) Breakfast is in the morning: am. (b) 1:30 after lunch: pm. (c) Bedtime at night: pm. (d) Sunrise is in the morning: am.'),

@@ -63,7 +63,7 @@ items = [
                                        {'label': 'C', 'cells': [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [1, 2]]}, {'label': 'D', 'cells': [[0, 0], [0, 1], [1, 0], [1, 1], [2, 0], [2, 1]]}], 'width_mm': 150},
    partsrow=True, parts=[P('a', 'A   {circ:Yes|No}', 'Yes'), P('b', 'B   {circ:Yes|No}', 'Yes'), P('c', 'C   {circ:Yes|No}', 'No'), P('d', 'D   {circ:Yes|No}', 'No')],
    hint='A line of 5 squares cannot fold into a cube.',
-   why='A is a cross: a row of 4 squares folds into the 4 sides, one square is the top and one is the bottom. B is a staircase of 3 pairs and folds into a cube. C has a row of 5 squares. The 5th would land on the 1st face, so it does not fold. D has a 2 by 2 block of squares: those 4 squares cannot all be different faces, so it does not fold.'),
+   why='A is a cross and B is a staircase of 3 pairs: both fold into a cube. C has a row of 5 squares: the 5th lands on the 1st face. D has a 2 by 2 block: 4 squares cannot all be different faces. So C and D do not fold.'),
  I('think', 4, 'Count the rectangles in a row of 4 squares. A square is a rectangle too.', figure={'type': 'l2_grid', 'values': [['', '', '', '']], 'cell': 76, 'width_mm': 52},
    partsrow=True, parts=[P('a', '1 square long: {b}', '4'), P('b', '2 squares long: {b}', '3'), P('c', '3 squares long: {b}', '2'), P('d', '4 squares long: {b}   All: {b}', ['1', '10'], '1 and 10 in all')],
    hint='A rectangle 2 squares long can start in 3 places.',
@@ -71,7 +71,7 @@ items = [
  I('think', 4, 'A big triangle has 1 line across. It has 2 lines from its top corner.', figure={'type': 'l2_trilines', 'apex': 2, 'across': 1, 'width_mm': 50}, figside=True,
    partsrow=False, parts=[P('a', 'Sitting on the base: {b}', '6'), P('b', 'Sitting on the middle line: {b}', '6'), P('c', 'All the triangles: {b}', '12')],
    hint='Count the triangles that sit on each line separately.',
-   why='The 2 lines from the top and the 2 sloping sides make 4 lines from the top. Choosing 2 of them gives 6 triangles on each line that runs across: 3 small ones, 2 made of 2 parts and 1 made of 3 parts. There are 2 lines across (the base and the middle line): 6 + 6 = 12 triangles.'),
+   why='The 2 lines from the top and the 2 sloping sides make 4 lines. Any 2 of them make a triangle on each line across: 6. There are 2 lines across, the base and the middle: 6 + 6 = 12 triangles.'),
  # Go further
  I('go', 5, 'Beyond: a pyramid of cubes has 5 layers. The top layer is 1 by 1, then 2 by 2, then 3 by 3, then 4 by 4. The bottom layer is 5 by 5.', beyond='Square numbers in a pyramid', parts=[
    P('a', 'The bottom layer has {b} cubes.', '25'), P('b', 'The pyramid has {b} cubes.', '55')],

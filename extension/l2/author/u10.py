@@ -57,7 +57,7 @@ items = [
    figure={'type': 'l2_lgrid', 'rows': ['Ali', 'Mei', 'Siti', 'Ben'], 'cols': ['swim', 'chess', 'art', 'tennis'], 'cell': 82, 'width_mm': 62}, figside=True,
    parts=[P('a', 'Ali: {b}', 'tennis'), P('b', 'Mei: {b}', 'chess'), P('c', 'Siti: {b}', 'art'), P('d', 'Ben: {b}', 'swimming')],
    hint='Tick Mei and chess. Cross out the rest of its row and column.',
-   why='Mei likes chess. Siti does not like swimming or tennis, and chess is taken, so Siti likes art. Ali does not like chess or art, so Ali likes swimming or tennis. Ben does not like tennis, and chess and art are taken, so Ben likes swimming. Then Ali likes tennis.'),
+   why='Siti is not swimming or tennis, and chess is taken, so Siti has art. Ali is not chess or art, so Ali has swimming or tennis. Ben is not tennis, so Ben has swimming. Ali has tennis.'),
  I('think', 4, 'The key was lost. Apples have 7 pictures and pears have 3. 20 more children chose apples.', figure=pg([('Apples', 7), ('Pears', 3)], None, width_mm=88),
    partsrow=True, parts=[P('a', 'Each picture stands for {b} children.', '5'), P('b', 'Apples: {b} children', '35'), P('c', 'Pears: {b} children', '15')],
    hint='4 more pictures is 20 children. How many in 1 picture?',
@@ -83,7 +83,7 @@ items = [
  I('go', 5, 'Ali buys 8 stickers. Small stickers cost 30¢. Large stickers cost 50¢. He pays $3.40 altogether.', parts=[
    P('a', 'He buys {b} small stickers and {b} large stickers.', ['3', '5'], '3 small and 5 large'), P('b', 'Could 8 stickers cost $3.30? {circ:Yes|No}', 'No')],
    hint='Start with 8 small stickers. Each swap adds 20¢.',
-   why='8 small stickers cost 8 × 30¢ = $2.40. Each swap of a small for a large adds 20¢: $2.60, $2.80, $3.00, $3.20, $3.40. That is 5 swaps, so 5 large and 3 small. Check: 90¢ + $2.50 = $3.40. The totals go up in 20¢ steps from $2.40, so $3.30 is never a total.'),
+   why='8 small stickers cost $2.40. Each swap to a large adds 20¢: $2.60, $2.80, $3.00, $3.20, $3.40. That is 5 swaps: 5 large, 3 small. Totals rise in 20¢ steps, so $3.30 never happens.'),
  # Check yourself
  I('quiz', 0, 'Each picture stands for 10 children. How many children chose Tuesday? {b}', figure=pg([('Monday', 3), ('Tuesday', 5)], {'value': 10}, width_mm=84), figright=True, value='50', why='Tuesday has 5 pictures. Each picture is 10 children. 5 × 10 = 50 children.'),
  I('quiz', 0, 'Use the digit cards 1, 0 and 4 once each. How many 3-digit numbers can you make? {b}', value='4', why='0 cannot be first. Start with 1: 104, 140. Start with 4: 401, 410. That is 4 numbers.'),

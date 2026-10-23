@@ -58,7 +58,7 @@ items = [
    P('a', 'How many different ways are there? {b}', '3'), P('b', 'What is the fewest number of vehicles you can have? {b}', '8')],
    figure={'type': 'l2_table', 'cols': ['Tricycles', '1', '2', '3', '4', '5', '6'], 'rows': [['Their wheels', '3', '6', '9', '12', '15', '18'], ['Wheels left', None, None, None, None, None, None]], 'first_bold': True, 'widths': [2.2, 1, 1, 1, 1, 1, 1], 'width_mm': 150},
    hint='Bicycles use 2 wheels each. So wheels left must be even.',
-   why='Tricycles: 1 leaves 18 wheels = 9 bicycles. 2 leaves 15, which is odd. 3 leaves 12 = 6 bicycles. 4 leaves 9, odd. 5 leaves 6 = 3 bicycles. 6 leaves 3, odd. 7 tricycles use all 21 wheels and leave no bicycle. So 3 ways: (9, 1), (6, 3), (3, 5). Vehicles: 10, 9 and 8. The fewest is 8.'),
+   why='Tricycles have 3 wheels. 1 tricycle leaves 18 wheels: 9 bicycles. 3 leave 12: 6 bicycles. 5 leave 6: 3 bicycles. 2, 4 and 6 leave an odd number and 7 leaves none. So 3 ways, with 10, 9 and 8 vehicles. The fewest is 8.'),
  I('think', 4, 'A pen has 6 animals, hens (2 legs) and pigs (4 legs). Mei counts the legs. Could she count this number of legs?', partsrow=True, parts=[
    P('a', '18 legs   {circ:Yes|No}', 'Yes'), P('b', '25 legs   {circ:Yes|No}', 'No'), P('c', '26 legs   {circ:Yes|No}', 'No'), P('d', '12 legs   {circ:Yes|No}', 'Yes')],
    space={'rows': ['Why 25 is not possible:']}, hint='All hens is 12 legs. Each swap adds 2 legs. All pigs is 24.',

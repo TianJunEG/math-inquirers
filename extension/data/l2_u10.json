@@ -627,7 +627,7 @@
      }
     }
    ],
-   "explanation": "Mei likes chess. Siti does not like swimming or tennis, and chess is taken, so Siti likes art. Ali does not like chess or art, so Ali likes swimming or tennis. Ben does not like tennis, and chess and art are taken, so Ben likes swimming. Then Ali likes tennis.",
+   "explanation": "Siti is not swimming or tennis, and chess is taken, so Siti has art. Ali is not chess or art, so Ali has swimming or tennis. Ben is not tennis, so Ben has swimming. Ali has tennis.",
    "hint": "Tick Mei and chess. Cross out the rest of its row and column.",
    "figside": true
   },
@@ -854,7 +854,7 @@
      }
     }
    ],
-   "explanation": "8 small stickers cost 8 × 30¢ = $2.40. Each swap of a small for a large adds 20¢: $2.60, $2.80, $3.00, $3.20, $3.40. That is 5 swaps, so 5 large and 3 small. Check: 90¢ + $2.50 = $3.40. The totals go up in 20¢ steps from $2.40, so $3.30 is never a total.",
+   "explanation": "8 small stickers cost $2.40. Each swap to a large adds 20¢: $2.60, $2.80, $3.00, $3.20, $3.40. That is 5 swaps: 5 large, 3 small. Totals rise in 20¢ steps, so $3.30 never happens.",
    "hint": "Start with 8 small stickers. Each swap adds 20¢."
   },
   {

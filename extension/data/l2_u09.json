@@ -127,7 +127,7 @@
      }
     }
    ],
-   "explanation": "The short hand shows the hour and the long hand shows the minutes. Count in 5s round the clock. A: the long hand is on 7, which is 35 minutes, and the short hand is past 4: 4:35. B: the long hand is on 10, which is 50 minutes: 8:50. C: the long hand is on 3, which is 15 minutes: 11:15.",
+   "explanation": "The long hand shows the minutes: count in 5s. A: long hand on 7 is 35 minutes, short hand past 4: 4:35. B: long hand on 10 is 50 minutes: 8:50. C: long hand on 3 is 15 minutes: 11:15.",
    "partsrow": true
   },
   {

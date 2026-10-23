@@ -811,7 +811,7 @@
      }
     }
    ],
-   "explanation": "A is a cross: a row of 4 squares folds into the 4 sides, one square is the top and one is the bottom. B is a staircase of 3 pairs and folds into a cube. C has a row of 5 squares. The 5th would land on the 1st face, so it does not fold. D has a 2 by 2 block of squares: those 4 squares cannot all be different faces, so it does not fold.",
+   "explanation": "A is a cross and B is a staircase of 3 pairs: both fold into a cube. C has a row of 5 squares: the 5th lands on the 1st face. D has a 2 by 2 block: 4 squares cannot all be different faces. So C and D do not fold.",
    "hint": "A line of 5 squares cannot fold into a cube.",
    "beyond": "Cube nets",
    "partsrow": true
@@ -924,7 +924,7 @@
      }
     }
    ],
-   "explanation": "The 2 lines from the top and the 2 sloping sides make 4 lines from the top. Choosing 2 of them gives 6 triangles on each line that runs across: 3 small ones, 2 made of 2 parts and 1 made of 3 parts. There are 2 lines across (the base and the middle line): 6 + 6 = 12 triangles.",
+   "explanation": "The 2 lines from the top and the 2 sloping sides make 4 lines. Any 2 of them make a triangle on each line across: 6. There are 2 lines across, the base and the middle: 6 + 6 = 12 triangles.",
    "hint": "Count the triangles that sit on each line separately.",
    "figside": true,
    "partsrow": false

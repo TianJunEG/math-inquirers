@@ -73,7 +73,7 @@ items = [
  I('think', 4, 'A machine does × 4, then + 1. Could it give this OUT? Try IN 1, 2, 3 ... first.', partsrow=True, parts=[
    P('a', '29   {circ:Yes|No}', 'Yes'), P('b', '30   {circ:Yes|No}', 'No'), P('c', '33   {circ:Yes|No}', 'Yes'), P('d', '42   {circ:Yes|No}', 'No')],
    hint='Write the first OUT numbers. What do you see?',
-   why='OUT numbers: IN 1 gives 5, IN 2 gives 9, IN 3 gives 13, IN 4 gives 17. They are always 1 more than a number in the 4 times table. 29 = 28 + 1 (IN 7): yes. 30: 29 is 1 more than 28 and 33 is 1 more than 32, so 30 is skipped: no. 33 = 32 + 1 (IN 8): yes. 42: 41 and 45 are in the pattern, so no.'),
+   why='IN 1, 2, 3, 4 give 5, 9, 13, 17: always 1 more than the 4 times table. 29 = 28 + 1: yes. 30 is skipped (29, 33): no. 33 = 32 + 1: yes. 42 is skipped (41, 45): no.'),
  # Go further
  I('go', 5, 'Beyond: a letter can stand for a mystery number. Let n be the mystery number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.', beyond='Letters for numbers', parts=[
    P('a', '3 × n + 4 = 25. n = {b}', '7'), P('b', '5 × n - 3 = 27. n = {b}', '6'), P('c', 'n ÷ 2 + 8 = 13. n = {b}', '10')],
@@ -82,7 +82,7 @@ items = [
  I('go', 5, 'Three jars have 36 beans altogether. 4 beans move from jar A to jar B. Then 6 beans move from jar B to jar C. Now every jar has the same number.', parts=[
    P('a', 'Now each jar has {b} beans.', '12'), P('b', 'At first: jar A {b}, jar B {b}, jar C {b}', ['16', '14', '6'], '16, 14 and 6')],
    hint='Undo the last move first. Jar C gave nothing, it got 6.',
-   why='(a) 36 ÷ 3 = 12 each. (b) Undo the move B to C: jar C gives back 6, so jar C had 12 - 6 = 6, and jar B had 12 + 6 = 18 before that move. Undo the move A to B: jar B gives back 4, so jar B had 18 - 4 = 14, and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.'),
+   why='(a) 36 ÷ 3 = 12. (b) Undo B to C: jar C had 12 - 6 = 6 and jar B had 12 + 6 = 18. Undo A to B: jar B had 18 - 4 = 14 and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.'),
  I('go', 5, 'Make your own riddle. "I think of a number. I ... then I ... I get ..." The mystery number must be 12. Many answers are right.', value='open',
    atext='Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)',
    space={'rows': ['My riddle:', 'Check going forwards:']}, hint='Start at 12. Do 2 steps forwards. Then write the riddle.',

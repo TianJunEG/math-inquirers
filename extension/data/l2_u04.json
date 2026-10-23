@@ -820,7 +820,7 @@
      }
     }
    ],
-   "explanation": "Frog A: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40. Frog B: 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40. Both: 4, 16, 28 and then 40. They meet every 12 because 12 is in both the 3 and 4 times tables. Frog C lands on 2, 6, 10 ... always 2 more than a 4 times table number, and Frog A lands only on the 4 times table: never together.",
+   "explanation": "Frog A: 4, 8, 12 ... 40. Frog B: 1, 4, 7 ... 40. Both: 4, 16, 28, then 40: every 12, because 12 is in the 3 and 4 times tables. Frog C lands 2 more than the 4 times table, so it never meets Frog A.",
    "hint": "They land together every 12. Why 12?"
   },
   {

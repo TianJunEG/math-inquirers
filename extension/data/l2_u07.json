@@ -279,7 +279,7 @@
      }
     }
    ],
-   "explanation": "The bottom number is how many equal parts there are. (a) A has 5 parts and 2 are shaded: 2/5 shaded, 3/5 not shaded. (b) B has 8 parts, 6 shaded: 6/8 and 2/8. (c) C has 12 parts, 5 shaded: 5/12 and 7/12. (d) 8/12 means 8 parts shaded. 5 are shaded, so 8 - 5 = 3 more."
+   "explanation": "The bottom number is the number of equal parts. (a) 2/5 and 3/5. (b) 6/8 and 2/8. (c) 5/12 and 7/12. (d) 8/12 needs 8 shaded parts. 5 are shaded, so 3 more."
   },
   {
    "id": "L2U07-S03",

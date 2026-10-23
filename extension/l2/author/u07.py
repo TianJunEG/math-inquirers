@@ -29,7 +29,7 @@ items = [
  I('start', 1, 'Write the shaded fraction. Write the fraction not shaded.',
    figure=fr({'kind': 'circle', 'n': 5, 'shaded': 2, 'label': 'A', 'r': 62}, {'kind': 'bar', 'n': 8, 'shaded': 6, 'w': 250, 'label': 'B'}, {'kind': 'bar', 'n': 12, 'shaded': 5, 'w': 300, 'label': 'C'}, max_w=860, width_mm=150),
    parts=[P('a', 'A: shaded {b}   not shaded {b}', ['2/5', '3/5'], '2/5 and 3/5'), P('b', 'B: shaded {b}   not shaded {b}', ['6/8', '2/8'], '6/8 and 2/8'), P('c', 'C: shaded {b}   not shaded {b}', ['5/12', '7/12'], '5/12 and 7/12'), P('d', 'To make 8/12 shaded in C, shade {b} more parts.', '3')],
-   why='The bottom number is how many equal parts there are. (a) A has 5 parts and 2 are shaded: 2/5 shaded, 3/5 not shaded. (b) B has 8 parts, 6 shaded: 6/8 and 2/8. (c) C has 12 parts, 5 shaded: 5/12 and 7/12. (d) 8/12 means 8 parts shaded. 5 are shaded, so 8 - 5 = 3 more.'),
+   why='The bottom number is the number of equal parts. (a) 2/5 and 3/5. (b) 6/8 and 2/8. (c) 5/12 and 7/12. (d) 8/12 needs 8 shaded parts. 5 are shaded, so 3 more.'),
  I('start', 1, 'The whole is 1. Fill in the missing number.', partsrow=True, parts=[
    P('a', '6/6 = {b} whole', '1'), P('b', '1 whole = 9/{b}', '9'), P('c', '4/8 + {b}/8 = 1', '4')],
    why='(a) 6 sixths make 1 whole. (b) 1 whole cut into 9 equal parts is 9/9. (c) 1 whole is 8/8, and 8 - 4 = 4, so 4/8 + 4/8 = 1.'),

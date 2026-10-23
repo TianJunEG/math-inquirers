@@ -1,0 +1,490 @@
+{
+ "1": {
+  "skills": [
+   {
+    "id": "L6-RATE",
+    "slot": "slide",
+    "skill": "Meeting and catching up",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "(a) Town A and town B are 60 km apart. Ali cycles from A towards B at 15 km/h. At the same time Ben cycles from B towards A at 25 km/h. After how many hours do they meet? (b) Siti leaves a station at 9:00 and travels at 40 km/h. Kumar leaves the same station at 9:30 on the same road at 60 km/h. At what time does Kumar catch Siti?",
+    "a": "(a) 1.5 hours. (b) 10:30.",
+    "say": "Draw the road as a line. In (a) both children close the gap, so add their speeds. In (b) Kumar closes the gap, so take the speeds away from each other.",
+    "ask": "How far apart are they at the start, and by how many km does the gap change each hour?",
+    "listen": "(a) Closing speed 15 + 25 = 40 km/h, so 60 ÷ 40 = 1.5 hours. (b) Siti has a 20 km start, closing speed 60 − 40 = 20 km/h, so 1 hour after 9:30. Listen for \"the gap\" and \"closing speed\"."
+   },
+   {
+    "id": "L6-RATE-V",
+    "slot": "bank",
+    "skill": "Meeting and catching up",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Two towns are 90 km apart. Mei cycles at 20 km/h and Ravi at 25 km/h towards each other. After how long do they meet?",
+    "a": "2 hours.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Meeting and catching up).",
+    "ask": "How far apart are they at the start, and by how many km does the gap change each hour?",
+    "listen": "(a) Closing speed 15 + 25 = 40 km/h, so 60 ÷ 40 = 1.5 hours. (b) Siti has a 20 km start, closing speed 60 − 40 = 20 km/h, so 1 hour after 9:30. Listen for \"the gap\" and \"closing speed\"."
+   },
+   {
+    "id": "L6-TELE",
+    "slot": "slide",
+    "skill": "Sums that cancel",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "(a) Work out 1/3 − 1/4. Compare it with 1/(3 × 4). (b) Find 1/(3 × 4) + 1/(4 × 5) + 1/(5 × 6) + ... + 1/(9 × 10).",
+    "a": "(a) 1/12. It is the same as 1/(3 × 4). (b) 7/30.",
+    "say": "Write each fraction in (b) as a difference, like the one you found in (a). Then write the whole sum out in a line and look at what is left.",
+    "ask": "Which terms cancel? Which two terms are left at the end?",
+    "listen": "Each term 1/(n x (n + 1)) = 1/n - 1/(n + 1). The sum is 1/3 − 1/4 + 1/4 − 1/5 + ... + 1/9 − 1/10, so only 1/3 − 1/10 is left. Listen for \"the middle cancels\". This is Try something simpler: start with two terms."
+   },
+   {
+    "id": "L6-TELE-V",
+    "slot": "bank",
+    "skill": "Sums that cancel",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Find 1/(2 × 3) + 1/(3 × 4) + ... + 1/(7 × 8).",
+    "a": "3/8 (this is 1/2 − 1/8).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Sums that cancel).",
+    "ask": "Which terms cancel? Which two terms are left at the end?",
+    "listen": "Each term 1/(n x (n + 1)) = 1/n - 1/(n + 1). The sum is 1/3 − 1/4 + 1/4 − 1/5 + ... + 1/9 − 1/10, so only 1/3 − 1/10 is left. Listen for \"the middle cancels\". This is Try something simpler: start with two terms."
+   }
+  ]
+ },
+ "2": {
+  "skills": [
+   {
+    "id": "L6-D9",
+    "slot": "slide",
+    "skill": "Digit sums for 3 and 9",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "(a) Use digit sums. Which of 6 372, 5 481 and 7 296 are multiples of 9? (b) Which of the three numbers are multiples of 3 but not of 9?",
+    "a": "(a) 6 372 and 5 481. (b) 7 296.",
+    "say": "Add the digits of each number. If the digit sum is in the 9 times table the number is too. What about the 3 times table?",
+    "ask": "Why does a multiple of 9 always have a digit sum that is a multiple of 9? Is 7 296 in the 3 table?",
+    "listen": "6 + 3 + 7 + 2 = 18, 5 + 4 + 8 + 1 = 18, 7 + 2 + 9 + 6 = 24. 24 is in the 3 table but not the 9 table. Listen for the reason: 10, 100, 1 000 are each 1 more than a multiple of 9."
+   },
+   {
+    "id": "L6-D9-V",
+    "slot": "bank",
+    "skill": "Digit sums for 3 and 9",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Which of 4 536, 8 127 and 3 705 are multiples of 9?",
+    "a": "4 536 and 8 127 (digit sums 18 and 18; 3 705 has digit sum 15).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Digit sums for 3 and 9).",
+    "ask": "Why does a multiple of 9 always have a digit sum that is a multiple of 9? Is 7 296 in the 3 table?",
+    "listen": "6 + 3 + 7 + 2 = 18, 5 + 4 + 8 + 1 = 18, 7 + 2 + 9 + 6 = 24. 24 is in the 3 table but not the 9 table. Listen for the reason: 10, 100, 1 000 are each 1 more than a multiple of 9."
+   },
+   {
+    "id": "L6-D45",
+    "slot": "slide",
+    "skill": "Tests for 5 and 9 together",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "The 4-digit number 6[ ]3[ ] has two empty boxes. Each box holds one digit. The number is a multiple of 45. Find every number that fits.",
+    "a": "6 030, 6 930 and 6 435.",
+    "say": "A multiple of 45 is in the 5 table and in the 9 table. What does the 5 table tell you about the last digit? What does the 9 table tell you about the digit sum?",
+    "ask": "How many choices are there for the last digit? For each choice, what must the second digit be?",
+    "listen": "Last digit 0 or 5. Digit sum 6 + a + 3 + b = 9 + a + b must be in the 9 table, so a + b is 0, 9 or 18. With b = 0: a = 0 or 9. With b = 5: a = 4. Listen for an organised list of the cases."
+   },
+   {
+    "id": "L6-D45-V",
+    "slot": "bank",
+    "skill": "Tests for 5 and 9 together",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "The 4-digit number 7[ ]2[ ] is a multiple of 45. Find every number that fits.",
+    "a": "7 020, 7 920 and 7 425.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Tests for 5 and 9 together).",
+    "ask": "How many choices are there for the last digit? For each choice, what must the second digit be?",
+    "listen": "Last digit 0 or 5. Digit sum 6 + a + 3 + b = 9 + a + b must be in the 9 table, so a + b is 0, 9 or 18. With b = 0: a = 0 or 9. With b = 5: a = 4. Listen for an organised list of the cases."
+   },
+   {
+    "id": "L6-ZERO",
+    "slot": "slide",
+    "skill": "Zeros at the end",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "How many zeros are at the end of the product 12 × 15 × 20 × 25 × 35? Do not multiply it all out.",
+    "a": "4 zeros.",
+    "say": "A zero at the end comes from one 2 and one 5 multiplied together, because 2 × 5 = 10. Break each number into 2s and 5s.",
+    "ask": "How many 2s are there in all? How many 5s? Which one limits the number of zeros?",
+    "listen": "2s: 12 has two, 20 has two, so 4. 5s: 15, 20, 25 (two), 35, so 5. There are 4 pairs of 2 and 5, so 4 zeros; the extra 5 does not make a zero without another 2. Check by multiplying: 3 150 000."
+   },
+   {
+    "id": "L6-ZERO-V",
+    "slot": "bank",
+    "skill": "Zeros at the end",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "How many zeros are at the end of 16 × 25 × 35 × 40?",
+    "a": "4 zeros (seven 2s and four 5s).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Zeros at the end).",
+    "ask": "How many 2s are there in all? How many 5s? Which one limits the number of zeros?",
+    "listen": "2s: 12 has two, 20 has two, so 4. 5s: 15, 20, 25 (two), 35, so 5. There are 4 pairs of 2 and 5, so 4 zeros; the extra 5 does not make a zero without another 2. Check by multiplying: 3 150 000."
+   }
+  ]
+ },
+ "4": {
+  "skills": [
+   {
+    "id": "L6-PCT",
+    "slot": "slide",
+    "skill": "Percentage change, with units",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "(a) Ravi spends 25% of his money and $60 is left. Find the amount he began with. (b) Mei has 50 stickers. Ali has 20% more stickers than Mei. Ben has 20% fewer stickers than Mei. Find the difference between Ali's and Ben's stickers.",
+    "a": "(a) $80. (b) 20 more stickers.",
+    "say": "Draw a bar for the money Ravi had at first. The part he spent is 25%, so 4 units make the whole and 1 unit is spent.",
+    "ask": "What percentage is left, and how many units is that? How many dollars is one unit? For (b), what are Ali's and Ben's stickers as percentages of Mei's?",
+    "listen": "(a) 75% is left, 3 units = $60, 1 unit = $20, whole = 4 x $20 = $80. (b) Ali has 120% of 50 = 60 and Ben has 80% of 50 = 40, so 20 more; the gap is 40% of 50. Listen for \"percent of what?\": the 100% is Mei's stickers."
+   },
+   {
+    "id": "L6-PCT-V",
+    "slot": "bank",
+    "skill": "Percentage change, with units",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Siti uses up 40% of her savings and $90 remains. How much were her savings at the start?",
+    "a": "$150.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Percentage change, with units).",
+    "ask": "What percentage is left, and how many units is that? How many dollars is one unit? For (b), what are Ali's and Ben's stickers as percentages of Mei's?",
+    "listen": "(a) 75% is left, 3 units = $60, 1 unit = $20, whole = 4 x $20 = $80. (b) Ali has 120% of 50 = 60 and Ben has 80% of 50 = 40, so 20 more; the gap is 40% of 50. Listen for \"percent of what?\": the 100% is Mei's stickers."
+   },
+   {
+    "id": "L6-PIPE",
+    "slot": "slide",
+    "skill": "A rate as an equation",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A tank holds 360 litres. A tap fills it at 24 litres each minute. A drain at the bottom lets out 4 litres each minute. The tank starts empty and both are open. (a) How many litres does the tank gain each minute? (b) Find the time, in minutes, until the tank is full. (c) The tap is then closed and the drain stays open. Find the time in minutes until the tank is empty.",
+    "a": "(a) 20 litres each minute. (b) 18 minutes. (c) 90 minutes.",
+    "say": "Make a table of minutes and litres in the tank. Then write the rule as an equation: litres = rate x time.",
+    "ask": "What is the rate of the tank filling when both are open? What equation can you write, and what operation undoes it?",
+    "listen": "Net rate 24 − 4 = 20 litres per minute. 20 x t = 360, so t = 18. For (c) 4 x t = 360, so t = 90. Listen for \"rate x time = amount\" and for undoing it by dividing."
+   },
+   {
+    "id": "L6-PIPE-V",
+    "slot": "bank",
+    "skill": "A rate as an equation",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A tank holds 500 litres. A tap fills 30 litres each minute and a drain lets out 5 litres each minute. Find the time in minutes until the empty tank is full, with both open.",
+    "a": "20 minutes.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (A rate as an equation).",
+    "ask": "What is the rate of the tank filling when both are open? What equation can you write, and what operation undoes it?",
+    "listen": "Net rate 24 − 4 = 20 litres per minute. 20 x t = 360, so t = 18. For (c) 4 x t = 360, so t = 90. Listen for \"rate x time = amount\" and for undoing it by dividing."
+   },
+   {
+    "id": "L6-SHORT",
+    "slot": "slide",
+    "skill": "Shortcuts before calculating",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Find each answer without a long calculation. Say what you noticed. (a) 83 × 83 − 82 × 84 (b) 0.65 × 27 + 0.65 × 73",
+    "a": "(a) 1. (b) 65.",
+    "say": "Try something simpler first: work out 5 × 5 − 4 × 6 and 6 × 6 − 5 × 7. What do you notice? For (b), look for a number that appears twice.",
+    "ask": "Why does the answer to (a) always come out the same? What can you take out of both parts in (b)?",
+    "listen": "(a) n x n - (n - 1) × (n + 1) = 1 for every n. (b) Take out 0.65: 0.65 × (27 + 73) = 0.65 × 100 = 65. Listen for the small cases and the shared factor."
+   },
+   {
+    "id": "L6-SHORT-V",
+    "slot": "bank",
+    "skill": "Shortcuts before calculating",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Find 46 × 46 − 45 × 47 and 2.4 × 35 + 2.4 × 65.",
+    "a": "1 and 240.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Shortcuts before calculating).",
+    "ask": "Why does the answer to (a) always come out the same? What can you take out of both parts in (b)?",
+    "listen": "(a) n x n - (n - 1) × (n + 1) = 1 for every n. (b) Take out 0.65: 0.65 × (27 + 73) = 0.65 × 100 = 65. Listen for the small cases and the shared factor."
+   }
+  ]
+ },
+ "5": {
+  "skills": [
+   {
+    "id": "L6-VOTES",
+    "slot": "slide",
+    "skill": "Worst case, the runner-up",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Ali, Mei and Ravi stand for class captain. The child with the most votes wins. There are 31 votes in all. After 20 votes are counted, Ali has 9, Mei has 7 and Ravi has 4. How many more of the remaining 11 votes must Ali get to be sure of winning, whatever happens to the other votes?",
+    "a": "5 more votes.",
+    "say": "Act it out as the worst case: the votes Ali does not get all go to Mei. Try Ali getting 3 more, then 4 more, then 5 more.",
+    "ask": "In the worst case who is Ali's rival? How do you know that 4 is not enough?",
+    "listen": "If Ali gets x more, Mei could get all the other 11 - x. Ali needs 9 + x to be more than 7 + (11 - x). With x = 4: Ali 13 and Mei 14. With x = 5: Ali 14 and Mei 13. Listen for \"give the worst case to the runner-up\"."
+   },
+   {
+    "id": "L6-VOTES-V",
+    "slot": "bank",
+    "skill": "Worst case, the runner-up",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Ali 12, Mei 9 and Ravi 5 after 26 votes out of 40. How many more of the 14 remaining votes must Ali get to be sure of winning?",
+    "a": "6 more votes (Ali 18 against Mei at most 17).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Worst case, the runner-up).",
+    "ask": "In the worst case who is Ali's rival? How do you know that 4 is not enough?",
+    "listen": "If Ali gets x more, Mei could get all the other 11 - x. Ali needs 9 + x to be more than 7 + (11 - x). With x = 4: Ali 13 and Mei 14. With x = 5: Ali 14 and Mei 13. Listen for \"give the worst case to the runner-up\"."
+   },
+   {
+    "id": "L6-SOCKS",
+    "slot": "slide",
+    "skill": "Worst case, how many to be sure",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "A drawer has 8 red socks, 6 blue socks and 5 green socks. Aisha takes socks out without looking. (a) How many socks must she take to be sure of a pair of the same colour? (b) How many socks must she take to be sure of 3 socks of the same colour? (c) How many socks must she take to be sure of 2 blue socks?",
+    "a": "(a) 4 socks. (b) 7 socks. (c) 15 socks.",
+    "say": "Act it out as bad luck: how many can she take with no pair? Then one more must make a pair. Use counters of three colours.",
+    "ask": "What is the worst that can happen in (c)? How many socks is that before the first blue sock arrives, and what then?",
+    "listen": "(a) 1 of each colour is 3, so 4. (b) 2 of each is 6, so 7. (c) Worst case: all 8 red and all 5 green first (13), then 1 blue is not enough, so 2 blue: she needs 13 + 2 = 15. Listen for \"one fewer than the target, in every colour\"."
+   },
+   {
+    "id": "L6-SOCKS-V",
+    "slot": "bank",
+    "skill": "Worst case, how many to be sure",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "A box has 7 black pens, 5 blue pens and 4 red pens. How many must you take out to be sure of 2 pens of the same colour?",
+    "a": "4 pens.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Worst case, how many to be sure).",
+    "ask": "What is the worst that can happen in (c)? How many socks is that before the first blue sock arrives, and what then?",
+    "listen": "(a) 1 of each colour is 3, so 4. (b) 2 of each is 6, so 7. (c) Worst case: all 8 red and all 5 green first (13), then 1 blue is not enough, so 2 blue: she needs 13 + 2 = 15. Listen for \"one fewer than the target, in every colour\"."
+   },
+   {
+    "id": "L6-SIZE",
+    "slot": "slide",
+    "skill": "Squares and rectangles by size",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "The grid has 5 columns and 3 rows of small squares. (a) How many square shapes, of all sizes, are in the grid? (b) How many rectangles of any size are in the grid? A square counts as a rectangle.",
+    "a": "(a) 26 squares. (b) 90 rectangles.",
+    "say": "Try something simpler first: a 1 by 3 strip, then a 2 by 3 grid. Count by size in a table.",
+    "ask": "How many 1 by 1 squares? 2 by 2? 3 by 3? For rectangles, how many ways can you choose the left and right edges? The top and bottom edges?",
+    "listen": "Squares: 15 + 8 + 3 = 26. Rectangles: choose 2 of the 6 vertical lines (15 ways) and 2 of the 4 horizontal lines (6 ways): 15 × 6 = 90. Accept a size-by-size table for rectangles too."
+   },
+   {
+    "id": "L6-SIZE-V",
+    "slot": "bank",
+    "skill": "Squares and rectangles by size",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "In a grid with 4 columns and 3 rows, how many square shapes of all sizes can be found?",
+    "a": "20 (12 + 6 + 2).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Squares and rectangles by size).",
+    "ask": "How many 1 by 1 squares? 2 by 2? 3 by 3? For rectangles, how many ways can you choose the left and right edges? The top and bottom edges?",
+    "listen": "Squares: 15 + 8 + 3 = 26. Rectangles: choose 2 of the 6 vertical lines (15 ways) and 2 of the 4 horizontal lines (6 ways): 15 × 6 = 90. Accept a size-by-size table for rectangles too."
+   },
+   {
+    "id": "L6-DERANGE",
+    "slot": "slide",
+    "skill": "Nobody in their own place",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Four friends each hang a coat on one of 4 hooks, 1 coat on each hook. Each coat first hangs on its own hook. The coats are shuffled so that no coat is on its own hook. In how many ways can the coats be hung?",
+    "a": "9 ways.",
+    "say": "Name the coats 1, 2, 3, 4 and the hooks the same. List the ways in order, starting with coat 1 on hook 2.",
+    "ask": "How many ways start with coat 1 on hook 2? Does the same number work for coat 1 on hook 3 and on hook 4?",
+    "listen": "Coat 1 on hook 2 gives 3 ways, and the same is true for hook 3 and hook 4. The ordered list is 2143, 2341, 2413, 3142, 3412, 3421, 4123, 4312, 4321. Listen for a systematic list, not guessing."
+   },
+   {
+    "id": "L6-DERANGE-V",
+    "slot": "bank",
+    "skill": "Nobody in their own place",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "Three friends hang 3 coats on 3 hooks so that nobody has their own hook. How many ways?",
+    "a": "2 ways (231 and 312).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Nobody in their own place).",
+    "ask": "How many ways start with coat 1 on hook 2? Does the same number work for coat 1 on hook 3 and on hook 4?",
+    "listen": "Coat 1 on hook 2 gives 3 ways, and the same is true for hook 3 and hook 4. The ordered list is 2143, 2341, 2413, 3142, 3412, 3421, 4123, 4312, 4321. Listen for a systematic list, not guessing."
+   }
+  ]
+ },
+ "7": {
+  "skills": [
+   {
+    "id": "L6-PERIM",
+    "slot": "slide",
+    "skill": "Perimeter of a staircase",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "The figure is a staircase with 4 steps. Every step is 3 cm high and 3 cm wide. All the corners are right angles. (a) Find the perimeter of the figure. (b) A staircase has 10 steps. Every step is 2 cm high and 2 cm wide. Find its perimeter.",
+    "a": "(a) 48 cm. (b) 80 cm.",
+    "say": "Try something simpler: a staircase with 1 step, then 2 steps. Can you slide the steps to the edges to make a rectangle?",
+    "ask": "What is the width of the whole figure, and the height? What stays the same when you slide a step sideways?",
+    "listen": "Sliding the horizontal pieces to the bottom and the vertical pieces to the left makes a rectangle: the perimeter is the same as the rectangle around the whole figure. (a) 12 + 12 + 12 + 12 = 48. (b) 20 + 20 + 20 + 20 = 80."
+   },
+   {
+    "id": "L6-PERIM-V",
+    "slot": "bank",
+    "skill": "Perimeter of a staircase",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "A staircase has 6 steps, each 5 cm high and 5 cm wide. Find the perimeter.",
+    "a": "120 cm.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Perimeter of a staircase).",
+    "ask": "What is the width of the whole figure, and the height? What stays the same when you slide a step sideways?",
+    "listen": "Sliding the horizontal pieces to the bottom and the vertical pieces to the left makes a rectangle: the perimeter is the same as the rectangle around the whole figure. (a) 12 + 12 + 12 + 12 = 48. (b) 20 + 20 + 20 + 20 = 80."
+   },
+   {
+    "id": "L6-QUARTER",
+    "slot": "slide",
+    "skill": "A quarter circle in a square",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "A square has sides of 10 cm. A quarter circle of radius 10 cm is drawn from one corner of the square, as in the picture. Use 3.14 for the number pi. Find the area of the blue part of the square, outside the quarter circle.",
+    "a": "21.5 cm².",
+    "say": "Find two areas you know: the whole square and the quarter circle. How are they related to the blue part?",
+    "ask": "What fraction of a full circle with radius 10 cm is the quarter circle? What is the area of the full circle?",
+    "listen": "Area of the full circle 3.14 × 10 × 10 = 314, the quarter is 314 ÷ 4 = 78.5. Blue = 100 − 78.5 = 21.5. Listen for \"subtract the quarter circle from the square\"."
+   },
+   {
+    "id": "L6-QUARTER-V",
+    "slot": "bank",
+    "skill": "A quarter circle in a square",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "A square has sides of 20 cm. A quarter circle of radius 20 cm is drawn from one corner. Use 3.14. Find the area of the part outside the quarter circle.",
+    "a": "86 cm².",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (A quarter circle in a square).",
+    "ask": "What fraction of a full circle with radius 10 cm is the quarter circle? What is the area of the full circle?",
+    "listen": "Area of the full circle 3.14 × 10 × 10 = 314, the quarter is 314 ÷ 4 = 78.5. Blue = 100 − 78.5 = 21.5. Listen for \"subtract the quarter circle from the square\"."
+   },
+   {
+    "id": "L6-CLOCK",
+    "slot": "slide",
+    "skill": "Angle between the clock hands",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "In one minute the minute hand sweeps 6° and the hour hand sweeps 0.5°. (a) At 3:20, how many degrees apart are the two hands? (b) At 4:10, how many degrees apart are the two hands?",
+    "a": "(a) 20°. (b) 65°.",
+    "say": "Measure both hands from 12 as angles. Draw a clock and mark where each hand points at the time.",
+    "ask": "How far has the hour hand moved from the 3 by 3:20? How far from 12 is the minute hand?",
+    "listen": "At 3:20 the hour hand is at 3 × 30 + 20 × 0.5 = 100 degrees from 12. The minute hand is 20 × 6 = 120 degrees from 12. The difference is 20. At 4:10: 125 and 60, difference 65."
+   },
+   {
+    "id": "L6-CLOCK-V",
+    "slot": "bank",
+    "skill": "Angle between the clock hands",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "At 2:40, how many degrees apart are the two hands?",
+    "a": "160° (hour hand at 80°, minute hand at 240°).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Angle between the clock hands).",
+    "ask": "How far has the hour hand moved from the 3 by 3:20? How far from 12 is the minute hand?",
+    "listen": "At 3:20 the hour hand is at 3 × 30 + 20 × 0.5 = 100 degrees from 12. The minute hand is 20 × 6 = 120 degrees from 12. The difference is 20. At 4:10: 125 and 60, difference 65."
+   }
+  ]
+ },
+ "8": {
+  "skills": [
+   {
+    "id": "L6-CR1",
+    "slot": "slide",
+    "skill": "Letters stand for digits",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each letter stands for one digit. Different letters stand for different digits. A letter at the start of a number is not 0. Find D, E, C, A and B.",
+    "a": "D = 5, E = 7, C = 3, A = 1, B = 4.  Check: 573 + 771 = 1344.",
+    "say": "A cipher replaces letters with other symbols, and so does this puzzle. Start with the column that cannot be wrong: the answer has 4 digits.",
+    "ask": "What is the first letter of the answer? Which column do you do next, and what do you try?",
+    "listen": "A = 1. The ones and tens digits of the answer are the same letter, B, which gives two equations to test. Make a table of tries for C and E. This is Guess and check, not Spot the pattern, even though it sits in the Secret Codes lesson."
+   },
+   {
+    "id": "L6-CR2",
+    "slot": "slide",
+    "skill": "Letters stand for digits, a longer one",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each letter stands for one digit. Different letters stand for different digits. A letter at the start of a number is not 0. Find B, D, E, A and C.",
+    "a": "B = 9, D = 5, E = 6, A = 1, C = 0.  Check: 956 + 105 = 1061.",
+    "say": "What is the first letter of the answer? Then look for a column where a letter added to itself or to a known digit has only a few possible answers.",
+    "ask": "Which letter must be 0? Why? How do you check your answer against every column?",
+    "listen": "A = 1 from the size of the sum. Ones: E + D = 11. Tens: D + C + 1 = E. Combine them: 2 x D + C = 10. Children use a table of tries for C and D. Accept any organised method that checks all four columns."
+   },
+   {
+    "id": "L6-LAST",
+    "slot": "slide",
+    "skill": "Last digit of a power",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "(a) Find the last digit of 2⁴⁵ (45 twos multiplied together). (b) Find the last digit of 13³⁰ (30 thirteens multiplied together).",
+    "a": "(a) 2. (b) 9.",
+    "say": "Only the last digit matters. Write the last digit of 2, 2 × 2, 2 × 2 × 2, ... and look for the repeat. Then use the clock arithmetic idea: what is 45 on a clock of the cycle length?",
+    "ask": "How long is the cycle for 2? For 3 (the last digit of 13)? How does a remainder tell you where you land?",
+    "listen": "2: 2, 4, 8, 6, cycle of 4. 45 = 11 × 4 + 1, so the 1st in the cycle: 2. 3: 3, 9, 7, 1, cycle of 4. 30 = 7 × 4 + 2, so 9. Listen for \"remainder after dividing by the cycle length\"."
+   },
+   {
+    "id": "L6-LAST-V",
+    "slot": "bank",
+    "skill": "Last digit of a power",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Find the last digit of 7²⁰²⁶.",
+    "a": "9 (the cycle is 7, 9, 3, 1 and 2 026 mod 4 = 2).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Last digit of a power).",
+    "ask": "How long is the cycle for 2? For 3 (the last digit of 13)? How does a remainder tell you where you land?",
+    "listen": "2: 2, 4, 8, 6, cycle of 4. 45 = 11 × 4 + 1, so the 1st in the cycle: 2. 3: 3, 9, 7, 1, cycle of 4. 30 = 7 × 4 + 2, so 9. Listen for \"remainder after dividing by the cycle length\"."
+   }
+  ]
+ },
+ "9": {
+  "skills": [
+   {
+    "id": "L6-PCT2",
+    "slot": "slide",
+    "skill": "Percentages from a table",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "80 children each choose one favourite fruit. 36 choose apple, 20 choose banana, 16 choose mango and the rest choose orange. (a) How many children choose orange? (b) What percentage of the children choose apple? (c) What percentage of the children choose banana or orange?",
+    "a": "(a) 8 children. (b) 45%. (c) 35%.",
+    "say": "Make a table of fruit, number of children and percentage. The total of the number column is 80.",
+    "ask": "How can you find the percentage for each row? What should the percentage column add up to?",
+    "listen": "Percentage = children / 80 × 100, or 1 child is 1.25%. Apple 36 ÷ 80 = 45%. Banana 25% and orange 10% add to 35%. Listen for a check that the percentages add to 100%."
+   },
+   {
+    "id": "L6-PCT2-V",
+    "slot": "bank",
+    "skill": "Percentages from a table",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "60 children choose a sport. 27 choose swimming, 15 choose football, 12 choose running and the rest choose tennis. What percentage choose tennis?",
+    "a": "10%.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Percentages from a table).",
+    "ask": "How can you find the percentage for each row? What should the percentage column add up to?",
+    "listen": "Percentage = children / 80 × 100, or 1 child is 1.25%. Apple 36 ÷ 80 = 45%. Banana 25% and orange 10% add to 35%. Listen for a check that the percentages add to 100%."
+   }
+  ]
+ },
+ "10": {
+  "skills": [
+   {
+    "id": "L6-PACK",
+    "slot": "slide",
+    "skill": "The greatest total you cannot make",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Stickers are sold in sheets of 4 and sheets of 9. Mei buys some sheets of each kind, or none of one kind. What is the greatest number of stickers that she cannot buy exactly?",
+    "a": "23 stickers.",
+    "say": "Write the numbers 1 to 40 in rows of 4. Mark every total you can make. Look for the first row where every number is marked.",
+    "ask": "Once you have 4 totals in a row, what happens next? How do you know 23 is the last one?",
+    "listen": "Four in a row is enough because adding 4 reaches everything after. 24 to 27 are all buyable (24 = 4 × 6, 25 = 16 + 9, 26 = 8 + 18, 27 = 3 × 9), so nothing above 23 is missing, and 23 cannot be made. Listen for the argument."
+   },
+   {
+    "id": "L6-PACK-V",
+    "slot": "bank",
+    "skill": "The greatest total you cannot make",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Sheets come in 5s and 6s. What is the greatest total you cannot make?",
+    "a": "19.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (The greatest total you cannot make).",
+    "ask": "Once you have 4 totals in a row, what happens next? How do you know 23 is the last one?",
+    "listen": "Four in a row is enough because adding 4 reaches everything after. 24 to 27 are all buyable (24 = 4 × 6, 25 = 16 + 9, 26 = 8 + 18, 27 = 3 × 9), so nothing above 23 is missing, and 23 cannot be made. Listen for the argument."
+   }
+  ]
+ }
+}
