@@ -45,3 +45,7 @@ Source: audit/DIAGRAM_AUDIT.md. Owner approved ("DIAGRAMS: go"). Only term/l1 fi
 - All touched lessons (01, 04, 06-10, 13, 15-17, 20-40) were rebuilt after the last tool change: validate 0 FAIL. L17 T1 (larger sweets) was rebuilt after the books ran.
 - Books were rebuilt once (Books 1-8, 24 PDFs, page counts unchanged, B&W check 0 non-grey) from the lesson PDFs of that moment. The Book 4 workbook still holds the old L17 T1 sweets: rebuild books with print/make_term_books.py then print/make_bw_print.py --check. The tracked specs (term_books_spec.json, bw_spec.json) were restored with git checkout.
 - Not started: everything in the "Not done" list above.
+
+
+## Update 23 Oct 2026 (combined fix pass): status
+Closed now: L39 bracket, L9 snail, L4 G3, L6 G1 labels, L35 fills and 5-sun card, exit and home clocks (L21, L22) and the enlargements listed in RETROFIT_REPORT.md section 9. NOT closed: L31 to L34 size pass (pages are full), L33 dot grids, L34 top views, L11 line-ups, L35 T3 tiles, L10 and L39 story-step piles, L3 digit cards, figure-less home sheets, online figures for L2, L3, L5, L10, L21 to L23. WAIT-DIAGRAMS stays open.
