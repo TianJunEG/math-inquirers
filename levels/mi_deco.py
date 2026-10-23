@@ -38,10 +38,12 @@ IMG=re.compile(r'<img data-mi="[^>]*>\n?')
 def put(html,pose,lv,url,sid=''):
     html=IMG.sub('',html)
     h=H[lv]
-    if lv=='3' and sid.endswith('reflect'): h=120   # P3 look-back cards run to the bottom-right corner: keep Mi clear of the text
-    if lv in '456' and sid.endswith('reflect'): h=120   # look-back cards reach y=893: keep the older-level Mi below them
-    if lv in '456' and sid.endswith('-title') and 'margin-right:150px' not in html:   # keep the 'Today we will' card clear of Mi
-        html=html.replace('background:#26385F;border-radius:24px;','background:#26385F;margin-right:150px;border-radius:24px;',1)
+    if sid.endswith('reflect'): h=120   # look-back cards/rows run to the bottom-right corner: small Mi keeps clear of the text (all levels)
+    if sid.endswith('reflect') and lv in '456':   # L5 yellow 'tutor may read this' notice reached x=1844: narrow it so Mi (x>=1783) never touches it
+        html=html.replace('top:860px;width:1664px;background:#FFF0C2','top:860px;width:1520px;background:#FFF0C2')
+    if sid.endswith('-title'):   # keep the 'Today we will' card clear of Mi (L1-3 Mi is wider than L4-6)
+        mr=150 if lv in '456' else 250
+        html=re.sub(r'background:#26385F;(?:margin-right:\d+px;)?border-radius:24px;',f'background:#26385F;margin-right:{mr}px;border-radius:24px;',html,count=1)
     w=round(h*ASPECT[pose])
     op='' if OP[lv]==1 else f';opacity:{OP[lv]}'
     tag=(f'<img data-mi="{pose}" src="{url}" alt="{ALT[pose]}" style="position:absolute;right:44px;bottom:{18 if h<150 else 30}px;'

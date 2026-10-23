@@ -519,18 +519,18 @@ def build_banks():
         {1: T([10, 15, 20, 25, 30], range(0, 101), _count(1)), 2: T([60, 65, 70, 75, 80], range(0, 101), _count(2))})
     B["compare"] = Bank("compare", "Compare Numbers", "Comparing and ordering numbers to 100", "Find the number. Find it in the key. Colour the part with that colour.",
         {1: T([20, 30, 40, 50, 60], range(0, 101), _cmp(1)), 2: T([55, 60, 65, 70, 75], range(0, 101), _cmp(2))})
-    B["money"] = Bank("money", "Money", "Money: coins and notes, ¢ and $", "Find how much. Find it in the key. Colour the part with that colour.",
+    B["money"] = Bank("money", "Money", "Money: coins and cents", "Find how much. Find it in the key. Colour the part with that colour.",
         {1: T([10, 20, 30, 40, 50], range(0, 101, 5), _money1(), lambda v: f"{v}¢"),
-         2: T([12, 14, 16, 18, 20], range(0, 31), _money2(), lambda v: f"${v}", kind="dollars")})
+         2: T([12, 14, 16, 18, 20], range(0, 31), _money2(), lambda v: f"${v}", kind="dollars")}, {1: "Money: coins and cents", 2: "Money: notes and dollars"})
     times = lambda: [(h, m) for h in range(1, 13) for m in (0, 30)]
     B["time"] = Bank("time", "Time", "Time: o'clock and half past", "Find the time. Find it in the key. Colour the part with that colour.",
         {1: T([(2, 0), (4, 0), (6, 0), (3, 30), (7, 30)], times(), _time(1), tword),
          2: T([(8, 30), (9, 0), (10, 30), (11, 0), (12, 30)], times(), _time(2), tword)})
     B["length"] = Bank("length", "Length in cm", "Length in centimetres", "Find the length. Find it in the key. Colour the part with that colour.",
         {1: T([2, 3, 4, 5, 6], range(0, 21), _len(1), lambda v: f"{v} cm"), 2: T([7, 8, 9, 10, 11], range(0, 21), _len(2), lambda v: f"{v} cm")})
-    B["shapes"] = Bank("shapes", "Shapes", "Shapes: corners and straight sides", "Count the corners.",
+    B["shapes"] = Bank("shapes", "Shapes", "Shapes: corners", "Count the corners.",
         {1: T([3, 4, 6, 7, 8], range(0, 13), _shapes(1), instr="Count the corners of the shapes in each part. Find the answer in the key. Colour the part with that colour."),
-         2: T([6, 8, 12, 14, 16], range(0, 21), _shapes(2), instr="Count the corners and the straight sides of the shapes in each part. Add them. Find the answer in the key. Colour the part with that colour.")})
+         2: T([6, 8, 12, 14, 16], range(0, 21), _shapes(2), instr="Count the corners and the straight sides of the shapes in each part. Add them. Find the answer in the key. Colour the part with that colour.")}, {1: "Shapes: corners", 2: "Shapes: corners and straight sides"})
     B["mult"] = Bank("mult", "Multiplication", "Multiplication within 40", "Multiply. Find the answer in the key. Colour the part with that colour.",
         {1: T([4, 6, 8, 10, 12], range(0, 41), _mult1(1)), 2: T([12, 15, 20, 30, 40], range(0, 41), _mult1(2))}, {1: "Multiplication within 40: equal groups", 2: "Multiplication within 40"})
     B["share"] = Bank("share", "Sharing", "Sharing and grouping within 20", "Share or group equally. Find the answer in the key. Colour the part with that colour.",

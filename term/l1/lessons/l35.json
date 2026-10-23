@@ -2293,11 +2293,11 @@
     "id": "S1",
     "page": 1,
     "tier": "start",
-    "text": "Look at Picture 1 and Picture 2. Compare tile by tile.",
+    "text": "Look at Picture 1 and Picture 2. What is different in each tile? Circle one word.",
     "parts": [
      {
       "l": "a",
-      "text": "Tile 1: circle what is different.",
+      "text": "Tile 1:",
       "ans": "size",
       "val": "size",
       "choices": [
@@ -2309,7 +2309,7 @@
      },
      {
       "l": "b",
-      "text": "Tile 2: circle what is different.",
+      "text": "Tile 2:",
       "ans": "number",
       "val": "number",
       "choices": [
@@ -2321,7 +2321,7 @@
      },
      {
       "l": "c",
-      "text": "Tile 3: circle what is different.",
+      "text": "Tile 3:",
       "ans": "turn",
       "val": "turn",
       "choices": [
@@ -2531,7 +2531,7 @@
      },
      {
       "l": "b",
-      "text": "It is different in its: circle shape, number, size, pattern or turn.",
+      "text": "It is different in its:",
       "ans": "pattern",
       "val": "pattern",
       "choices": [
@@ -2597,7 +2597,7 @@
     "id": "S4",
     "page": 2,
     "tier": "start",
-    "text": "Look at the two shelves.",
+    "text": "Shelf 1 is on the left. Shelf 2 is on the right.",
     "parts": [
      {
       "l": "",
@@ -2629,8 +2629,7 @@
        }
       ],
       "per_row": 3,
-      "size": "s",
-      "label": "Shelf 1"
+      "size": "s"
      },
      {
       "type": "objects",
@@ -2645,8 +2644,7 @@
        }
       ],
       "per_row": 3,
-      "size": "s",
-      "label": "Shelf 2"
+      "size": "s"
      }
     ]
    },
@@ -2817,7 +2815,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "Circle the odd one out: A, B, C, D or E.",
+      "text": "Circle the odd one out.",
       "ans": "C",
       "val": "C",
       "choices": [
@@ -2830,7 +2828,7 @@
      },
      {
       "l": "b",
-      "text": "Circle what makes it the odd one out: shape, number, size or pattern.",
+      "text": "What makes it the odd one out?",
       "ans": "number",
       "val": "number",
       "choices": [
@@ -2904,7 +2902,7 @@
     "parts": [
      {
       "l": "",
-      "text": "Circle the missing piece: A, B, C or D.",
+      "text": "Circle the missing piece.",
       "ans": "C",
       "val": "C",
       "choices": [
@@ -2951,7 +2949,7 @@
         "size": "m"
        }
       ],
-      "cell": 100,
+      "cell": 70,
       "cols": 2,
       "hide": [
        3
@@ -2981,7 +2979,7 @@
         "size": "s"
        }
       ],
-      "cell": 100,
+      "cell": 80,
       "cols": 4,
       "labels": [
        "A",
@@ -3065,7 +3063,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "Tile 11 is a circle or a square? Circle the shape.",
+      "text": "Tile 11 is a:",
       "ans": "circle",
       "val": "circle",
       "choices": [
@@ -3443,7 +3441,7 @@
     "id": "G3",
     "page": 4,
     "tier": "go",
-    "text": "Make your own odd one out for a partner. Draw 4 tiles in a row. Three tiles are alike. One is different in just one thing. Many answers are right.",
+    "text": "Draw 4 tiles in a row. Three are alike. One is different in just one thing. Many answers are right.",
     "parts": [
      {
       "l": "",
@@ -3463,7 +3461,7 @@
      "Making the three tiles different from each other."
     ],
     "mins": 6,
-    "draw": 2
+    "draw": 1
    }
   ],
   "investigation": {
@@ -3474,7 +3472,7 @@
    "first": "Draw a small circle with stripes. Next to it, draw the same circle, but bigger. What is different? ____",
    "text": "Now draw a tile that is different from your first circle in two things. Write the two things.",
    "lines": 4,
-   "draw": 2,
+   "draw": 1,
    "answer": "The bigger circle is different in size only. A tile with two things different, for example a big circle with dots, is different in size and pattern. Many answers are right.",
    "val": [
     "size"
@@ -3500,7 +3498,7 @@
    "parts": [
     {
      "l": "",
-     "text": "What is different? Circle shape, number, size, pattern or turn.",
+     "text": "What is different?",
      "ans": "pattern",
      "val": "pattern",
      "choices": [
@@ -3547,7 +3545,7 @@
    "parts": [
     {
      "l": "",
-     "text": "Circle the odd one out: A, B, C or D.",
+     "text": "Circle the odd one out.",
      "ans": "C",
      "val": "C",
      "choices": [
@@ -3644,7 +3642,7 @@
        "pattern": 1
       }
      ],
-     "cell": 80,
+     "cell": 70,
      "cols": 3
     },
     {
@@ -3668,7 +3666,7 @@
        "pattern": 1
       }
      ],
-     "cell": 80,
+     "cell": 70,
      "cols": 3
     }
    ]
@@ -4341,7 +4339,7 @@
   ],
   "try_home": [
    "Line up 4 spoons, cups or toys with one odd one out. Ask: what is different?",
-   "Make two pictures that are different in 3 ways. Ask your child to find them, one thing at a time.",
+   "Make two pictures that differ in 3 ways. Ask your child to find them.",
    "Make a pattern with coins or socks that repeats (for example, big, small, small). Ask: what is the 10th?"
   ],
   "ask": [
@@ -4355,7 +4353,7 @@
   "report_line": "Your child is learning to look closely and say exactly what is different, one feature at a time. This week: pictures that differ in shape, number, size, pattern or turn, the odd one out, and a repeating pattern.",
   "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
   "next_materials": [
-   "Your Term 4 second book (Book 8, the last five lessons of the year): tear out the paper-people page along the dashed line, then a grown-up cuts out the 8 paper people. If Book 8 has not reached you, tell us on the business WhatsApp and we will send the pages as a PDF straight away",
+   "Book 8 (the last five lessons): tear out the paper-people page along the dashed line, then a grown-up cuts out the 8 paper people. Book 8 not here? Tell us on the business WhatsApp and we will send a PDF straight away",
    "The pair cards are not needed again: keep them for puzzles at home",
    "A pencil, a rubber and paper"
   ]

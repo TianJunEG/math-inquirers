@@ -50,8 +50,8 @@ def contact_sheet(out, level, sheets):
         pages.append(f'<div class="sheet"><h1>Colour by Code, Primary {level}: gallery, {"pupil pages" if kind == "pupil" else "teacher answer pages"}</h1><div class="grid">{"".join(cells)}</div></div>')
     doc = ("<!doctype html><meta charset=utf-8><style>@page{size:A4 landscape;margin:0}*{box-sizing:border-box}html,body{margin:0;background:#fff;font-family:Arial,sans-serif;color:#000}"
            ".sheet{width:297mm;height:210mm;padding:8mm 10mm;page-break-after:always;overflow:hidden}h1{font-size:13pt;margin:0 0 3mm}"
-           f".grid{{display:grid;grid-template-columns:repeat({6 if len(sheets) > 10 else 5},1fr);gap:3mm 4mm}}figure{{margin:0}}img{{width:100%;border:0.3mm solid #000;display:block}}"
-           "figcaption{font-size:7pt;line-height:1.25;padding-top:0.8mm}</style>" + "".join(pages))
+           f".grid{{display:grid;grid-template-columns:repeat({8 if len(sheets) > 12 else 6 if len(sheets) > 10 else 5},1fr);gap:3mm 4mm}}figure{{margin:0}}img{{width:100%;border:0.3mm solid #000;display:block}}"
+           "figcaption{font-size:6.5pt;line-height:1.25;padding-top:0.8mm}</style>" + "".join(pages))
     hp = os.path.join(out, "html", "contact_sheet.html"); open(hp, "w").write(doc)
     with sync_playwright() as pw:
         br = pw.chromium.launch(); to_pdf(br, hp, os.path.join(out, "contact_sheet.pdf")); br.close()

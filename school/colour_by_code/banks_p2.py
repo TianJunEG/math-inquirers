@@ -786,7 +786,7 @@ def build_banks():
     B["time"] = Bank("time", "Time", "Time to the minute; hours and minutes", "Find the time. Find it in the key. Colour the part with that colour.",
         {1: T([(2, 10), (4, 25), (6, 45), (8, 35), (10, 50)], tm, _time(1), hm), 2: T([45, 75, 90, 105, 135], range(0, 601), _time(2), lambda v: f"{v} min",
             instr="Find how many minutes. Find the answer in the key. Colour the part with that colour.")},
-        {1: "Time to the minute", 2: "Time: hours, minutes and how long"})
+        {1: "Time: hours and minutes", 2: "Time: hours, minutes and how long"})
     md = [(n, u) for u in ("cm", "m", "g", "kg", "l") for n in range(0, 1001)]
     B["measure"] = Bank("measure", "Measures", "Length, mass and volume", "Find the measure. Find it in the key. Colour the part with that colour.",
         {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}"), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")},
