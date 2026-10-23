@@ -774,7 +774,7 @@
    "id": "L5U05-T03",
    "tier": "think",
    "page": 4,
-   "text": "A tank floor is 60 cm × 40 cm. A thin wall splits the tank into 2 parts, 20 cm and 40 cm long. The 20 cm part holds water 24 cm deep. The other part is empty. The wall is lifted out. Find the new depth. {b} cm",
+   "text": "A tank floor is 60 cm × 40 cm. A thin wall splits the tank into 2 parts, 20 cm and 40 cm long. The 20 cm part holds water 18 cm deep. The other part is empty. The wall is lifted out. Find the new depth. {b} cm",
    "figure": {
     "type": "l5_solid",
     "mm": 1.0,
@@ -785,7 +785,7 @@
       "z": 0,
       "l": 20,
       "w": 40,
-      "h": 24,
+      "h": 18,
       "kind": "water"
      },
      {
@@ -822,9 +822,9 @@
       "at": [
        0,
        0,
-       24
+       18
       ],
-      "t": "24 cm",
+      "t": "18 cm",
       "dx": -28
      }
     ],
@@ -832,9 +832,9 @@
    },
    "answer": {
     "value": [
-     "8"
+     "6"
     ],
-    "text": "8 cm"
+    "text": "6 cm"
    },
    "space": {
     "rows": [
@@ -842,7 +842,7 @@
     ]
    },
    "hint": "The water spreads out. How much water is there?",
-   "explanation": "Water 20 × 40 × 24 = 19 200 cm³. It now covers 60 × 40 = 2400 cm². 19 200 ÷ 2400 = 8 cm.",
+   "explanation": "Water 20 × 40 × 18 = 14 400 cm³. It now covers 60 × 40 = 2400 cm². 14 400 ÷ 2400 = 6 cm.",
    "figright": true
   },
   {

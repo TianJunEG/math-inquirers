@@ -212,15 +212,15 @@
       0
      ],
      "Q": [
-      46,
+      57,
       0
      ],
      "R": [
-      30,
-      12
+      36,
+      20
      ],
      "H": [
-      30,
+      36,
       0
      ]
     },
@@ -290,20 +290,20 @@
      {
       "a": "P",
       "b": "Q",
-      "text": "25 cm",
+      "text": "36 cm",
       "ref": "R"
      },
      {
       "a": "P",
       "b": "R",
-      "text": "15 cm",
+      "text": "25 cm",
       "ref": "Q",
       "dist": 26
      },
      {
       "a": "Q",
       "b": "R",
-      "text": "20 cm",
+      "text": "29 cm",
       "ref": "P",
       "dist": 26
      }
@@ -318,10 +318,10 @@
       "size": 18
      },
      {
-      "t": "12 cm",
+      "t": "20 cm",
       "at": [
-       34.6,
-       5
+       40.3,
+       7
       ],
       "size": 18
      },
@@ -335,14 +335,14 @@
      {
       "t": "(b)",
       "at": [
-       30,
-       14.2
+       36,
+       22.2
       ]
      }
     ],
     "vlab": false,
     "alt": "two triangles with their heights",
-    "mm": 2.5
+    "mm": 2.05
    },
    "parts": [
     {
@@ -360,13 +360,13 @@
      "text": "Area (b): {b} cm²",
      "answer": {
       "value": [
-       "150"
+       "360"
       ],
-      "text": "150"
+      "text": "360"
      }
     }
    ],
-   "explanation": "(a) 1/2 × 18 × 12 = 108. (b) 1/2 × 25 × 12 = 150. Slanting sides are not used.",
+   "explanation": "(a) 1/2 × 18 × 12 = 108. (b) 1/2 × 36 × 20 = 360. Slanting sides are not used.",
    "partsrow": true,
    "figside": true
   },

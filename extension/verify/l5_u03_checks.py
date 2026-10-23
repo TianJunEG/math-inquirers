@@ -103,8 +103,8 @@ def _():
 
 @check('L5U03-S12')
 def _():
-    for m in range(10, 2000, 10):
-        if m - Fr(1, 5) * m - 36 == Fr(1, 2) * m:
+    for m in range(20, 2000, 20):
+        if m - Fr(3, 10) * m - 27 == Fr(1, 4) * m:
             return [str(m)]
 
 

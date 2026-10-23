@@ -165,10 +165,10 @@ def _():
 
 @check('L5U07-G01')
 def _():
-    cost = Fr(200)
-    cost2 = cost + percent_of(10, cost)
-    cost3 = cost2 + percent_of(10, cost2)
-    return {'a': [m(cost3)], 'b': [pc(as_percent(cost3 - cost, cost))]}
+    n = Fr(40)
+    n2 = n + percent_of(25, n)
+    n3 = n2 + percent_of(20, n2)
+    return {'a': [pc(n3)], 'b': [pc(as_percent(n3 - n, n))]}
 
 
 @check('L5U07-G02')

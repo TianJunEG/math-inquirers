@@ -730,26 +730,26 @@
    "id": "L5U07-G01",
    "tier": "go",
    "page": 5,
-   "text": "A bike costs $200. The cost goes up by 10%. A month later the new cost goes up by another 10%.",
+   "text": "A school choir has 40 singers. The number of singers goes up by 25%. A year later the new number goes up by another 20%.",
    "parts": [
     {
      "label": "a",
-     "text": "The bike now costs $ {b}",
+     "text": "The choir now has {b} singers.",
      "answer": {
       "value": [
-       "242"
+       "60"
       ],
-      "text": "242"
+      "text": "60"
      }
     },
     {
      "label": "b",
-     "text": "The total rise is {b}% of $200.",
+     "text": "The total rise is {b}% of 40.",
      "answer": {
       "value": [
-       "21"
+       "50"
       ],
-      "text": "21"
+      "text": "50"
      }
     }
    ],
@@ -760,8 +760,8 @@
      ""
     ]
    },
-   "hint": "Take the second 10% from the new cost.",
-   "explanation": "(a) $200 + $20 = $220, then $220 + $22 = $242. (b) $42 out of $200 = 21%.",
+   "hint": "Take the second rise from the new number.",
+   "explanation": "(a) 40 + 10 = 50, then 50 + 10 = 60. (b) 20 out of 40 = 50%.",
    "beyond": "Two rises in a row"
   },
   {

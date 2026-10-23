@@ -65,8 +65,8 @@ def _():
 def _():
     import math
     A, B, C = (0, 0), (18, 0), (9, 12)
-    P, Q, R = (21, 0), (46, 0), (30, 12)
-    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [15, 15, 15, 20]   # the labelled slanting sides
+    P, Q, R = (21, 0), (57, 0), (36, 20)
+    assert [math.dist(A, C), math.dist(B, C), math.dist(P, R), math.dist(Q, R)] == [15, 15, 25, 29]   # the labelled slanting sides
     return {'a': [fmt(area([A, B, C]))], 'b': [fmt(area([P, Q, R]))]}
 
 

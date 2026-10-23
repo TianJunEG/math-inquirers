@@ -329,3 +329,7 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 
 ## 2026-10-23 (owner reply)
 - QUEST-LOG-4: Book 4 Quest parent note and tutor notes say 4 pages (the printed Quest Log is 4 pages). Applied in the combined Level 1 fix pass (term/l1/lessons/l20.json strings; Book 4 key and home pack rebuilt).
+
+## 2026-10-23 (owner replies, own-material similarity and note colours)
+- L1-OWN-REPLACE: Level 1 term lessons must not reuse items from our own holiday and extension materials. Replace: Book 8 Quest secret cave (= Extension item 12), L40 G1 (holiday 'add to 12, one is 2 more' same numbers), L30 T3 (= Extension 3x3 logic puzzle), L28 stick sequences (holiday 3,5,7 and 4,7,10), L36 home item on pairs making 12. This overrides the earlier deferral for these specific items; the rest of the deferred rewrite (10, 21, 23, 24, 28, 36 against private sources, TERMCHECK) still waits until after 6 Nov.
+- NOTE-COLOURS-ADD: add "Real $2 notes are purple, $5 green, $10 red." to the Primary 2 teacher notes (S1 and S2 front matter, Photocopying/money paragraph).

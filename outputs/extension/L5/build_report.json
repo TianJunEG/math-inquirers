@@ -287,9 +287,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.943196446961895,
+   "fill": 0.9821221678681772,
    "over": false,
-   "excess_mm": -14.6,
+   "excess_mm": -4.6,
    "edition": "soft"
   },
   {
@@ -934,9 +934,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8879537847579815,
+   "fill": 0.9722901647785788,
    "over": false,
-   "excess_mm": -28.8,
+   "excess_mm": -7.1,
    "edition": "soft"
   },
   {
@@ -944,9 +944,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9215209835221421,
+   "fill": 0.9643247940267765,
    "over": false,
-   "excess_mm": -20.2,
+   "excess_mm": -9.2,
    "edition": "soft"
   },
   {
@@ -954,9 +954,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9575984809474768,
+   "fill": 0.9681707003089598,
    "over": false,
-   "excess_mm": -10.9,
+   "excess_mm": -8.2,
    "edition": "soft"
   },
   {
@@ -964,9 +964,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9874967816683831,
+   "fill": 0.9565364315139032,
    "over": false,
-   "excess_mm": -3.2,
+   "excess_mm": -11.2,
    "edition": "soft"
   },
   {
@@ -974,9 +974,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9063143666323378,
+   "fill": 0.9372747167868177,
    "over": false,
-   "excess_mm": -24.1,
+   "excess_mm": -16.1,
    "edition": "soft"
   },
   {
@@ -984,9 +984,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9769245623069001,
+   "fill": 0.9459642121524202,
    "over": false,
-   "excess_mm": -5.9,
+   "excess_mm": -13.9,
    "edition": "soft"
   },
   {
@@ -997,16 +997,6 @@
    "fill": 0.9576628475798146,
    "over": false,
    "excess_mm": -10.9,
-   "edition": "soft"
-  },
-  {
-   "no": 100,
-   "kind": "answers",
-   "label": "Answers",
-   "exempt": true,
-   "fill": 0.12714019052523173,
-   "over": false,
-   "excess_mm": -224.2,
    "edition": "soft"
   },
   {
@@ -1283,9 +1273,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.943196446961895,
+   "fill": 0.9821221678681772,
    "over": false,
-   "excess_mm": -14.6,
+   "excess_mm": -4.6,
    "edition": "print"
   },
   {
@@ -1930,9 +1920,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.8879537847579815,
+   "fill": 0.9722901647785788,
    "over": false,
-   "excess_mm": -28.8,
+   "excess_mm": -7.1,
    "edition": "print"
   },
   {
@@ -1940,9 +1930,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9215209835221421,
+   "fill": 0.9643247940267765,
    "over": false,
-   "excess_mm": -20.2,
+   "excess_mm": -9.2,
    "edition": "print"
   },
   {
@@ -1950,9 +1940,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9575984809474768,
+   "fill": 0.9681707003089598,
    "over": false,
-   "excess_mm": -10.9,
+   "excess_mm": -8.2,
    "edition": "print"
   },
   {
@@ -1960,9 +1950,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9874967816683831,
+   "fill": 0.9565364315139032,
    "over": false,
-   "excess_mm": -3.2,
+   "excess_mm": -11.2,
    "edition": "print"
   },
   {
@@ -1970,9 +1960,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9063143666323378,
+   "fill": 0.9372747167868177,
    "over": false,
-   "excess_mm": -24.1,
+   "excess_mm": -16.1,
    "edition": "print"
   },
   {
@@ -1980,9 +1970,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.9769245623069001,
+   "fill": 0.9459642121524202,
    "over": false,
-   "excess_mm": -5.9,
+   "excess_mm": -13.9,
    "edition": "print"
   },
   {
@@ -1997,22 +1987,21 @@
   },
   {
    "no": 100,
-   "kind": "answers",
-   "label": "Answers",
+   "kind": "blank",
+   "label": null,
    "exempt": true,
-   "fill": 0.12714019052523173,
+   "fill": null,
    "over": false,
-   "excess_mm": -224.2,
    "edition": "print"
   }
  ],
  "problems": [],
- "soft_pages": 100,
+ "soft_pages": 99,
  "print_pages": 100,
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 13.39,
+  "mb": 13.33,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0037
  }

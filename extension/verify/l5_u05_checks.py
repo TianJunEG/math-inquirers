@@ -139,9 +139,9 @@ def _():
 
 @check('L5U05-T03')
 def _():
-    water = 20 * 40 * 24
+    water = 20 * 40 * 18
     depth = Fr(water, 60 * 40)
-    assert depth < 30                      # the water stays below the top of the tank
+    assert depth < 18                      # the depth falls: the water spreads over the whole floor
     return [fmt(depth)]
 
 

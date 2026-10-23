@@ -477,19 +477,19 @@
    "id": "L5U03-S12",
    "tier": "start",
    "page": 3,
-   "text": "Hana spends 1/5 of her money on a shirt. She spends $36 on shoes. Then she has 1/2 of her money left. How much money did Hana start with? $ {b}",
+   "text": "Mei spends 3/10 of her money on a toy and $27 on stickers. Then she has 1/4 of her money left. How much money did Mei start with? $ {b}",
    "answer": {
     "value": [
-     "120"
+     "60"
     ],
-    "text": "$120"
+    "text": "$60"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "Shirt 1/5 and left 1/2 make 7/10. So the $36 shoes are 3/10. 1/10 = $12, so $120."
+   "explanation": "Toy 3/10 and left 1/4 make 11/20. So the $27 stickers are 9/20. 1/20 = $3, so $60."
   },
   {
    "id": "L5U03-S13",
