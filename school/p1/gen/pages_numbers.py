@@ -213,11 +213,13 @@ def queue_text(c):
     k = c[0]; c = tuple(c) + (1,)
     return {"pos": f"{c[1]} is {ordinal(c[2])} in the queue.", "behind": f"{c[1]} is behind {c[2]}.",
             "front": f"{c[1]} is in front of {c[2]}.", "next": f"{c[1]} is next to {c[2]}.",
-            "last": f"{c[1]} is last.", "first": f"{c[1]} is first."}[k]
+            "last": f"{c[1]} is last.", "first": f"{c[1]} is first.", "out": f"{c[1]} is not in the queue."}[k]
 
 def queue_ok(order, c):
     pos = {n: i + 1 for i, n in enumerate(order)}
     k = c[0]
+    if k == "out": return c[1] not in pos
+    if any(isinstance(x, str) and x not in pos for x in c[1:3]): return False        # a clue about a child who is not in this queue cannot hold
     if k == "pos": return pos[c[1]] == c[2]
     if k == "behind": return pos[c[1]] > pos[c[2]]
     if k == "front": return pos[c[1]] < pos[c[2]]
@@ -225,8 +227,9 @@ def queue_ok(order, c):
     if k == "last": return pos[c[1]] == len(order)
     if k == "first": return pos[c[1]] == 1
 
-def solve_queue(names, clues):
-    return [o for o in itertools.permutations(names) if all(queue_ok(o, c) for c in clues)]
+def solve_queue(names, clues, size=5):
+    """every queue of `size` children chosen from the children shown that satisfies all the clues"""
+    return [o for o in itertools.permutations(names, size) if all(queue_ok(o, c) for c in clues)]
 
 def child_svg(letter):
     return svg(24, 40,
@@ -237,57 +240,63 @@ def child_svg(letter):
 
 def page07():
     rng = random.Random(707)
-    word = "SNAKE"
-    names = rng.sample(NAMES, 5)
-    order = names[:]; rng.shuffle(order)       # true queue, front first
-    letter = dict(zip(order, word))
+    word = "ENJOY"
+    assert anagrams(word) == [word.lower()]
+    names = rng.sample(NAMES, 6)                  # six children are shown; one of them is not in the queue
+    order = names[:5]; rng.shuffle(order)       # true queue, front first
+    out = names[5]
+    decoys = decoy_options(word)
+    decoy = max(decoys, key=lambda d: (len(small_words(word + d)), rng.random()))
+    letter = dict(zip(order, word)); letter[out] = decoy
     while True:
-        cl = []
+        cl = [("out", out)]
         for _ in range(8):
-            a, b = rng.sample(names, 2)
+            a, b = rng.sample(order, 2)
             k = rng.choice(["pos", "behind", "front", "next", "last", "first", "pos"])
             if k == "pos": c = ("pos", a, order.index(a) + 1)
             elif k in ("last", "first"): c = (k, a)
             else: c = (k, a, b)
             if queue_ok(order, c) and c not in cl: cl.append(c)
         if len(solve_queue(names, cl)) == 1:
-            for c in cl[:]:
+            for c in cl[1:]:                       # drop redundant clues (the clue naming the child who is not in the queue stays)
                 rest = [x for x in cl if x != c]
                 if len(solve_queue(names, rest)) == 1: cl = rest
-            rel = sum(c[0] in ("behind", "front", "next") for c in cl)
-            if 4 <= len(cl) <= 6 and rel >= 2 and sum(c[0] in ("pos", "first", "last") for c in cl) >= 1: break
+            body_cl = cl[1:]
+            rel = sum(c[0] in ("behind", "front", "next") for c in body_cl)
+            if 4 <= len(body_cl) <= 6 and rel >= 2 and sum(c[0] in ("pos", "first", "last") for c in body_cl) >= 1: break
     shown = names[:]; rng.shuffle(shown)
     kids = "".join(f'<div class="kid">{child_svg(letter[n])}<b>{n}</b></div>' for n in shown)
     clues = "".join(f"<li>{queue_text(c)}</li>" for c in cl)
     slots = "".join(f'<div class="qslot"><span class="qn">{ordinal(i+1)}</span><span class="ab wide"></span></div>' for i in range(5))
     body = (f'<div class="kids">{kids}</div>'
-            f'<div class="twocol"><div class="blk"><p class="lead">The queue. The front is 1st.</p><div class="qslots">{slots}</div></div><ul class="clues">{clues}</ul></div>')
-    kinds_ = {c[0] for c in cl}
+            f'<div class="twocol"><div class="blk"><p class="lead">The queue has 5 places. The front is 1st.</p><div class="qslots">{slots}</div></div><ul class="clues">{clues}</ul></div>')
+    kinds_ = {c[0] for c in body_cl}
     rel_words = [w for k, w in (("front", "in front of"), ("behind", "behind"), ("next", "next to")) if k in kinds_]
-    ord_used = sorted({c[2] for c in cl if c[0] == "pos"})
+    ord_used = sorted({c[2] for c in body_cl if c[0] == "pos"})
+    # every queue of 5 chosen from the 6 children: the shirt letters read 1st to 5th may spell a word only for the true queue
+    real = sorted({"".join(letter[n] for n in o) for o in itertools.permutations(names, 5) if list(o) != order and "".join(letter[n] for n in o).lower() in BIG})
+    n_wrong = len(list(itertools.permutations(names, 5))) - 1
     P = Page(no=7, title="The Queue", tier=2, topic="Ordinal numbers: 1st to 5th, " + (" and ".join(rel_words) if rel_words else "positions"),
              strand="Number and Algebra - Whole Numbers", syll="1.7 (ordinal numbers first to tenth)",
-             ptype="Logic (queue)", mech="K1 shirt letters read 1st to 5th spell a word + K4 each child used once",
-             instr=["The children stand in a queue.", "Read the clues.", "Write each name in its place."],
-             mech_plain="Shirt letters read from 1st to 5th spell a word (5 letters)",
+             ptype="Logic (queue)", mech="K1 shirt letters read 1st to 5th spell a word + K4 each child used once (one decoy letter)",
+             instr=["Six children. Five join the queue.", "Read the clues.", "Write each name in its place."],
+             mech_plain="Shirt letters read from 1st to 5th spell a word (5 letters; one child is not in the queue)",
              body=body, check="Read the shirt letters from 1st to 5th. Do they spell a word?", check_boxes=5,
-             key=dict(answers=", ".join(f"{ordinal(i+1)} {n}" for i, n in enumerate(order)), check_result=f"Word: {word}"),
-             note="The children in the top row are not in queue order. Clues on this page: " + ", ".join(w for k, w in (("pos", "ordinal numbers (" + ", ".join(ordinal(n) for n in ord_used) + ")"), ("first", "first"), ("last", "last"), ("front", "in front of"), ("behind", "behind"), ("next", "next to")) if any(c[0] == k for c in cl)) + ". Two or more clues compare two children, so the pupil must combine them. Syllabus ordinals go to 10th; this page uses 1st to 5th.",
+             key=dict(answers=", ".join(f"{ordinal(i+1)} {n}" for i, n in enumerate(order)) + f"; {out} is not in the queue (letter {decoy} is the decoy)", check_result=f"Word: {word}"),
+             note=f"Six children are shown but the queue has five places: a clue says who is not in the queue, and that child's shirt letter ({decoy}) is a decoy that is not part of the word. "
+                  f"The top row is not in queue order. The five letters of the word have exactly one arrangement that is a word, so no wrong queue spells a word: all {n_wrong} wrong queues of five of the six children were tested (checked against a list of about 129 000 words). "
+                  "Clues on this page: " + ", ".join(w for k, w in (("pos", "ordinal numbers (" + ", ".join(ordinal(n) for n in ord_used) + ")"), ("first", "first"), ("last", "last"), ("front", "in front of"), ("behind", "behind"), ("next", "next to")) if any(c[0] == k for c in body_cl)) + ". Two or more clues compare two children, so the pupil must combine them. Syllabus ordinals go to 10th; this page uses 1st to 5th.",
              seed=707)
     sol = solve_queue(names, cl)
     P.v("V1 exactly one queue order satisfies the clues", len(sol) == 1 and list(sol[0]) == order, len(sol))
+    P.v("V1b every clue needed", all(len(solve_queue(names, [x for x in cl if x != c])) > 1 for c in cl))
     P.v("V2 shirt letters in queue order spell " + word, "".join(letter[n] for n in sol[0]) == word)
-    # V3: any other order gives a different, non-word letter sequence
-    bad = 0; tot = 0
-    for o in itertools.permutations(names):
-        if list(o) == order: continue
-        tot += 1
-        w = "".join(letter[n] for n in o)
-        if w.lower() not in BIG: bad += 1
-    P.v("V3 other queue orders that spell a word <= 5% (large word list)", bad / tot >= .95, f"{bad}/{tot}")
-    P.v("V4 guess resistance: the five letters can be arranged into at least 2 common words", any(("".join(letter[n] for n in o)).lower() in COMMON for o in itertools.permutations(names) if list(o) != order), "")
-    P["cv"] = dict(rate=bad / tot, single_total=tot, single_detected=bad)
-    P["model"] = dict(truth=list(word), domains=[list(word)] * 5, check=letters_check(), perm=list(range(5)))
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()], anagrams(word))
+    P.v(f"V3 none of the {n_wrong} wrong queues (5 of the 6 children) spells a word (large word list)", not real, real[:3])
+    P.v("V3c the teacher note says no wrong queue spells a word", not real and "no wrong queue" in P["note"])
+    P.v("V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them", len(small_words(word + decoy)) >= 3, small_words(word + decoy)[:6])
+    P["cv"] = dict(rate=1.0, single_total=n_wrong, single_detected=n_wrong)
+    P["model"] = dict(truth=list(word), domains=[sorted(set(letter.values()))] * 5, check=letters_check(), perm=list(range(5)))
     return P
 
 PAGES = [page02, page04, page07]

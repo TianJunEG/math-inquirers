@@ -147,6 +147,7 @@ def page16():
     wrong = [pp for pp in itertools.permutations(prices) if list(pp) != perm]
     real = sum(("".join(letter_of[v] for v in pp) + word[5]).lower() in BIG for pp in wrong)
     P.v("V3 wrong placements that still spell a word <= 5% (large word list)", real / len(wrong) <= .05, f"{real}/{len(wrong)}")
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()], anagrams(word))
     P.v("V3b a wrong total never spells a word", not bad, bad)
     P.v("V4 guess resistance: the sixth letter is one of at least 4 table letters (decoys included)", len(comp) >= 4, comp)
     P.v("V7 prices within $100, total within $40", max(prices) <= 100 and total <= 40)

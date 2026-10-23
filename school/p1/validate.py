@@ -195,7 +195,7 @@ rec("pupil pages name no part a pupil cannot find (no window, wall or scale word
 rec("pupil pages avoid column/diagonal/divide (words not taught at P1)", not re.search(r"\b(column|columns|diagonal|divide|divided)\b", pt, re.I))
 rec("pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording", not re.search(r"\bMi\b|MOE|Ministry|aligned|affiliat|endorse", pt + alltxt["P1_FrontMatter.pdf"], re.I))
 fm = alltxt["P1_FrontMatter.pdf"]
-rec("cover, licence and teacher notes are marked DRAFT with a contact placeholder (until built with --final)", fm.count("DRAFT") >= 4 and fm.count("[contact email or phone") >= 3 and "to be confirmed by the owner" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
+rec("cover, licence and teacher notes are marked DRAFT with the owner's business contact email and a registered-office placeholder (until built with --final)", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "[contact email or phone" not in fm and "[registered office address" in fm and "to be confirmed by the owner" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
 rec("pupil pages carry no DRAFT stamp", "DRAFT" not in alltxt["P1_Puzzles.pdf"])
 rec("no price, quote amount or sale wording in printed text", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", joined, re.I))
 rec("o'clock and half past used for clock times in the key (P1-18)", "o'clock" in alltxt["P1_Answer_Key.pdf"] and "half past" in alltxt["P1_Answer_Key.pdf"])

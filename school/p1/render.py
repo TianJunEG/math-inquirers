@@ -218,7 +218,8 @@ def doc(pages_html, title):
 
 # ------------------------------------------------------------------ front matter
 DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
-CONTACT = "[contact email or phone: to be added by the owner]"
+CONTACT = "pypteltd@gmail.com (business contact email for now; to be changed later)"
+REG_OFFICE = "[registered office address: to be added by the owner]"
 
 def draft_banner(what):
     if not DRAFT: return ""
@@ -238,7 +239,7 @@ def cover(school):
 def licence(school):
     s = html.escape(school) if school.strip() else "____________________________"
     return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the contact below must be filled in, before any school receives this pack.")
+            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the registered office address below must be filled in (the contact email is the business email for now and will change), before any school receives this pack.")
             + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
@@ -246,7 +247,7 @@ def licence(school):
             '<h3>You may not</h3><ul><li>Sell, lend or give the pages or the file to another school, tuition centre or person.</li>'
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
-            '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ".") if DRAFT else "") + '</p>'
+            '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ". Registered office: " + REG_OFFICE) if DRAFT else "") + '</p>'
             '<h3>Notes</h3><p>The licence is for the edition bought. The school name shown on each page is set when the pack is made.</p>'
             '<p style="margin-top:12mm">&copy; 2026 Preciouslyours Pte Ltd.' + (" [entity name and year: owner to confirm]" if DRAFT else " All rights reserved.") + '</p></section>')
 
@@ -262,8 +263,8 @@ def teacher_notes(pages):
             + '<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
             f'<h3>Stars</h3><p>One star pages practise a topic as it is usually taught ({n1} pages). Two star pages use the same topics with two steps or two clues to combine ({n2} pages). Pages can be used in any order.</p>'
             '<h3>Every page checks itself</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer.</p>'
-            '<ul><li><b>Code word.</b> The answers give letters that spell a word. The strip does not say what the word is; there is no clue to guess it from.</li><li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'
-            '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes.</li><li><b>Logic grid.</b> Each number or price has a letter; the letters, read down the list, must spell a word.</li><li><b>Total.</b> The whole count must make the stated total (P1-20 adds a second sum for the two questions).</li></ul>'
+            '<ul><li><b>Code word.</b> The answers give letters that spell a word. The strip does not say what the word is; there is no clue to guess it from. The letters of every code word can be arranged into a word in one way only, so answers written in the wrong boxes never spell another word.</li><li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'
+            '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes.</li><li><b>Logic grid and queue.</b> Each number, price or child has a letter; the letters, read down the list, must spell a word. On P1-04 and P1-07 one more number or child is listed than there are places: a clue says which one is left out, and its letter is a decoy that is not in the word.</li><li><b>Total.</b> The whole count must make the stated total (P1-20 adds a second sum for the two questions).</li></ul>'
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
             '<h3>How the checks were tested</h3><p>For every page, a script tried each single wrong answer (one answer changed by 1, 2, 3, 4, 5 or 10, or any other value in the page\'s range) and every wrong arrangement of the logic pages. The check rejected at least 95% of them on every page. A wrong answer that happens to spell any English word from a list of about 129 000 words counts as not rejected.</p>'
             '</section>'
