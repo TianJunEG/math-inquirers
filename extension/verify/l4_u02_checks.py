@@ -176,13 +176,13 @@ def _():
 
 @check('L4U02-C01')
 def _():
-    return {'a': s([rnd(25962, 10)]), 'b': s([rnd(25962, 100)]), 'c': s([rnd(25962, 1000)])}
+    return s([rnd(25962, 10), rnd(25962, 100), rnd(25962, 1000)])
 
 
 @check('L4U02-C02')
 def _():
     r = having(100, 8300)
-    return {'a': s([min(r)]), 'b': s([max(r)])}
+    return s([min(r), max(r)])
 
 
 @check('L4U02-C03')

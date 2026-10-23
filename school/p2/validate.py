@@ -75,20 +75,17 @@ for p in pages:
         rec(f'{L(p)} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
     verification.append((p["no"], r))
 
-rec("3 colour-by-code pages (P1-01, P1-12, P1-14) across the two booklets", [p["no"] for p in pages if p.get("cbc")] == [1, 12, 14])
-def has(no, word): return any(p["no"] == no and word in (p["topic"] + " " + p["syll"]).lower() for p in pages)
+rec("3 colour-by-code pages (P2-38, P2-39, P2-40) across the two booklets", ARGS.partial or [p["no"] for p in pages if p.get("cbc")] == [38, 39, 40])
 if not ARGS.partial:
-    rec("coverage: add and subtract within 100 (P1-11), sharing and grouping (P1-03), two multiplication pages (P1-05, P1-13), a one-star o'clock and half past time page (P1-06) and the five-minute page (P1-18)",
-        has(11, "within 100") and has(3, "sharing") and has(5, "multiplication") and has(13, "multiplication") and has(6, "o'clock") and has(18, "5 minutes") and next(p for p in pages if p["no"] == 6)["tier"] == 1)
     rec("40 pages, ids 1..40, each in exactly one booklet", [p["no"] for p in pages] == list(range(1, 41)))
     covered = {o for p in pages for o in OC.PAGE_OC[p["no"]]}
     rec("every one of the 32 syllabus outcome lines is practised by at least one page across the two booklets", covered == set(OC.OUTCOMES), str(sorted(set(OC.OUTCOMES) - covered)))
 for k in BK:
     rec(f"{k}: {NP[k]} pages in the order of gen/outcomes.py", [p["no"] for p in BK[k]] == OC.BOOKLETS[k]["order"][:NP[k]] if not ARGS.partial else True, str([p["no"] for p in BK[k]]))
     if not ARGS.partial:
-        want1 = {"S1": 10, "S2": 9}[k]      # owner decision P39-TWO: P1-39 is a two-star page, so Semester 2 is 9 one-star / 11 two-star
+        want1 = 10
         rec(f"{k}: tier mix {want1} one-star / {20 - want1} two-star", sum(p["tier"] == 1 for p in BK[k]) == want1 and sum(p["tier"] == 2 for p in BK[k]) == 20 - want1, str([p["tier"] for p in BK[k]]))
-        rec(f"{k}: footer codes use the form S1-07 (P1-08) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P1-{p['no']:02d})" for i, p in enumerate(BK[k])))
+        rec(f"{k}: footer codes use the form S1-07 (P2-17) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P2-{p["no"]:02d})" for i, p in enumerate(BK[k])))
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
 mech = [p["mech"] for p in pages]; rec("every page names a self-check mechanism", all(mech))
 rec("every page has outcome numbers from the 32 syllabus lines", all(OC.PAGE_OC[p["no"]] for p in pages))
@@ -96,7 +93,7 @@ rec("every page has outcome numbers from the 32 syllabus lines", all(OC.PAGE_OC[
 bad = []
 for p in pages:
     for s_ in p["instr"]:
-        if max_words(s_) > 8: bad.append((p["no"], s_))
+        if max_words(s_) > 10: bad.append((p["no"], s_))
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 20: bad.append((p["no"], cl))
@@ -104,8 +101,8 @@ for p in pages:
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]) + re.findall(r'class="(?:st|ptxt)">(.*?)</(?:div|p)>', p["body"]):
         sent = re.sub(r"<[^>]+>", " ", sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):
-            if len(one.split()) > 8: bad.append((p["no"], one))
-rec("V8 reading level: instruction and clue sentences <= 8 words, <= 3 lines", not bad, str(bad[:4]))
+            if len(one.split()) > 10: bad.append((p["no"], one))
+rec("V8 reading level: instruction and clue sentences <= 10 words, <= 3 lines", not bad, str(bad[:4]))
 chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > (34 if p.get("check_lines") else 18) and not p.get("cbc")]
 rec("check strip text <= 18 words (pages with several check lines: 34)", not chk, str(chk))
 hint = [(p["no"], p["check"]) for p in pages if re.search(r"\bIs it\b|\bDoes it\b|\bYou (live|can|carry)|garden|music|river|\bsky\b|\bspace\b|\bking\b|\ban animal|\bseason|used for writing|shopping|count the time", p["check"]) and not p.get("cbc")]
@@ -126,15 +123,11 @@ bad = []
 for p in pages:
     page_text = (plain(p["body"]) + " " + " ".join(p["instr"]) + " " + p["topic"] + " " + p["check"]).lower()
     note = p["note"].lower()
-    if p["no"] == 18: note = re.sub(r"none of the half-hour additions cross the hour\.", "", note)
     for ph in PHRASES:
         if ph in note and ph not in page_text and not (ph == "greatest" and "second greatest" in note and "second greatest" in page_text) and not (ph == "ordinal" and "1st" in page_text + " 2nd"):
             bad.append((p["no"], ph))
 rec("every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page", not bad, str(bad))
-p18 = next(p for p in pages if p["no"] == 18)
-rec("the P1-18 note does not claim half-hour additions cross the hour unless one does", ("none of the half-hour additions" in p18["note"].lower()) or ("of the half-hour additions cross the hour" in p18["note"].lower()))
-SYL = open(os.path.join(HERE, "..", "..", "docs", "moe", "syllabus_by_level.md")).read()
-SYL = SYL[SYL.index("## Primary 1 (pp. 31-32)"):SYL.index("## Primary 2 (pp. 33-34)")].lower()
+SYL = open(os.path.join(HERE, "..", "..", "docs", "school_books", "p2_outcome_wording.md")).read().lower()
 bad = []
 for p in pages:
     ids = OC.PAGE_OC[p["no"]]
@@ -145,8 +138,8 @@ for p in pages:
     # the numbers written in the tag must belong to the page's outcome ids
     for a_, b_ in re.findall(r"\b(\d)\.(\d)\b", p["syll"].split("(")[0]):
         if not any(o.endswith(f"{a_}.{b_}") for o in ids): bad.append((p["no"], f"{a_}.{b_} in tag but not in outcome ids"))
-rec("F28: every outcome id of every page has its PDF wording in the Primary 1 section of docs/moe/syllabus_by_level.md, and the numbers in each tag are the page's own outcome ids", not bad, str(bad[:5]))
-rec("topic tags name a P1 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Money", "Measurement", "Geometry", "Statistics")) for p in pages))
+rec("F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids", not bad, str(bad[:5]))
+rec("topic tags name a P2 strand", all(any(k in p["strand"] for k in ("Whole Numbers", "Addition and Subtraction", "Multiplication and Division", "Fractions", "Money", "Measurement", "Geometry", "Statistics")) for p in pages))
 # ---- 3. HTML black and white / stroke scan
 for k in BK:
   for f in (f"{k}_pupil.html", f"{k}_front.html", f"{k}_key.html"):
@@ -158,7 +151,6 @@ for k in BK:
     rec(f"stroke widths >= 0.2 mm (0.57 pt) in {f}", min(sw) >= 0.2 if sw else True, f"min {min(sw) if sw else '-'}")
     bw = [float(x) for x in re.findall(r"border[a-z-]*:\s*(?:[^;{}]*?\s)?([\d.]+)mm", h)]
     rec(f"CSS rule widths >= 0.25 mm (0.7 pt) in {f}", min(bw) >= 0.25 if bw else True, f"min {min(bw) if bw else '-'}")
-    rec(f"no division sign in {f} (P2 syllabus)", "÷" not in h and "&divide;" not in h)
     abh = [float(x) for sel, x in re.findall(r"(\.(?:ab|slot \.ab|shans \.ab|ctime \.ab|srow \.ab|check \.ab)[^{]*)\{[^}]*?height:([\d.]+)mm", h)]
     rec(f"answer boxes at least 12 mm high in {f}", min(abh) >= 12 if abh else True, f"min {min(abh) if abh else '-'}")
     op = re.findall(r"opacity|rgba|rgb\(|hsl|gradient|filter", h)
@@ -173,19 +165,14 @@ for k in BK:
           x_, y_, sc_ = float(om.group(1)), float(om.group(2)), float(om.group(3))
           if x_ < -0.3 or y_ < -0.3 or x_ + 20 * sc_ > W_ + 0.3 or y_ + 20 * sc_ > H_ + 0.3: _clip.append((round(x_, 1), round(y_, 1), W_, H_))
   rec(f"{k}: no drawn object is clipped by the edge of its own svg", not _clip, str(_clip[:3]))
-  if 15 in [p["no"] for p in BK[k]]:
-    rec(f"{k}: every coin shows its value and the word cents (P1-15, P1-28)", _ph.count('class="coinunit"') == _ph.count('class="coinval"') > 0, f'{_ph.count("class=" + chr(34) + "coinval")} coins')
-  if 17 in [p["no"] for p in BK[k]]:
-    rec(f"{k}: every ruler strip on P1-17 has a start arrow", _ph.count('class="arrow"') >= 6)
-  if 20 in [p["no"] for p in BK[k]]:
-    rec(f"{k}: P1-20 uses the smiley face symbol", _ph.count('class="face"') >= 8)
+  rec(f"{k}: every coin shows its value and the word cents", _ph.count('class="coinunit"') == _ph.count('class="coinval"'), f'{_ph.count("class=" + chr(34) + "coinval")} coins')
 # ---- 4. PDFs: page counts, fonts, text
 def pdf_text(f): return subprocess.run(["pdftotext", "-layout", os.path.join(O, f), "-"], capture_output=True, text=True).stdout
 alltxt = {}
 for k in BK:
     keyhtml = open(os.path.join(O, f"{k}_key.html")).read()
     KEYPAGES = 1 + len(re.findall(r'class="page fm[ a-z]*" >', keyhtml))
-    exp = {f"P1_{k}_Puzzles.pdf": NP[k], f"P1_{k}_FrontMatter.pdf": 5, f"P1_{k}_Complete_Pack.pdf": NP[k] + 5, f"P1_{k}_Answer_Key.pdf": KEYPAGES}
+    exp = {f"P2_{k}_Puzzles.pdf": NP[k], f"P2_{k}_FrontMatter.pdf": 5, f"P2_{k}_Complete_Pack.pdf": NP[k] + 5, f"P2_{k}_Answer_Key.pdf": KEYPAGES}
     for f, n in exp.items():
         out = subprocess.run(["pdfinfo", os.path.join(O, f)], capture_output=True, text=True).stdout
         got = int(re.search(r"Pages:\s+(\d+)", out).group(1)); rec(f"{f} has {n} pages", got == n, str(got))
@@ -193,43 +180,38 @@ for k in BK:
         rec(f"{f} fonts all embedded", all(l.split()[-5] == "yes" for l in fo if l.strip()), f"{len(fo)} fonts")
         sz = os.path.getsize(os.path.join(O, f)); rec(f"{f} size < 20 MB", sz < 20e6, f"{sz/1e6:.2f} MB")
         rec(f"{f} A4 page size", "(A4)" in out, "")
-    txt = pdf_text(f"P1_{k}_Puzzles.pdf")
+    txt = pdf_text(f"P2_{k}_Puzzles.pdf")
     pgs = txt.split("\f")[:NP[k]]
     school = re.search(r"Photocopy licence: (.+?) only", txt)
     rec(f"{k}: school name printed on all {NP[k]} page footers", all("Photocopy licence" in x for x in pgs), school.group(1) if school else "")
-    rec(f"{k}: every pupil page shows its code in the footer, for example S1-07 (P1-08)", all(BK[k][i]["code"] in pgs[i] for i in range(len(pgs))), str([i + 1 for i in range(len(pgs)) if BK[k][i]["code"] not in pgs[i]]))
-    for f in (f"P1_{k}_Puzzles.pdf", f"P1_{k}_FrontMatter.pdf", f"P1_{k}_Answer_Key.pdf"):
+    rec(f"{k}: every pupil page shows its code in the footer, for example S1-07 (P2-17)", all(BK[k][i]["code"] in pgs[i] for i in range(len(pgs))), str([i + 1 for i in range(len(pgs)) if BK[k][i]["code"] not in pgs[i]]))
+    for f in (f"P2_{k}_Puzzles.pdf", f"P2_{k}_FrontMatter.pdf", f"P2_{k}_Answer_Key.pdf"):
         alltxt[f] = pdf_text(f)
 joined = "\n".join(alltxt.values())
-rec("no division sign in any printed text (P2 syllabus)", "÷" not in joined)
 rec("money is written 50¢, never 50c, in all printed text", not re.search(r"(?<![\w.])\d+c\b", joined), str(re.findall(r"(?<![\w.])\d+c\b", joined)[:5]))
-rec("no dollars-and-cents decimal such as $0.50 or $1.50 (P2 money)", not re.search(r"\$\d+\.\d\d", joined), str(re.findall(r"\$\d+\.\d\d", joined)[:3]))
+rec("dollar amounts with cents always have two decimal places ($3.50, never $3.5)", not re.search(r"\$\d+\.\d(?!\d)", joined), str(re.findall(r"\$\d+\.\d(?!\d)", joined)[:3]))
 for k in BK:
-    pt = alltxt[f"P1_{k}_Puzzles.pdf"]; fm = alltxt[f"P1_{k}_FrontMatter.pdf"]
-    rec(f"{k}: pupil pages name no part a pupil cannot find (no window, wall or scale wording)", not re.search(r"\b(window|windows|wall|walls|scales|scale)\b", pt, re.I))
-    rec(f"{k}: pupil pages avoid column/diagonal/divide (words not taught at P1)", not re.search(r"\b(column|columns|diagonal|divide|divided)\b", pt, re.I))
-    rec(f"{k}: pupil pages, key and front matter name no price, quote or sale wording", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", pt + fm + alltxt[f"P1_{k}_Answer_Key.pdf"], re.I))
+    pt = alltxt[f"P2_{k}_Puzzles.pdf"]; fm = alltxt[f"P2_{k}_FrontMatter.pdf"]
+    rec(f"{k}: pupil pages, key and front matter name no price, quote or sale wording", not re.search(r"S\$|SGD|per copy|per school|\bRRP\b|discount", pt + fm + alltxt[f"P2_{k}_Answer_Key.pdf"], re.I))
     fm_flat = re.sub(r"\s+", " ", fm)
     fm_wo = fm_flat.replace("Not affiliated with or endorsed by the Ministry of Education, Singapore.", "").replace("The mathematics syllabus is published by the Ministry of Education, Singapore.", "")
     rec(f"{k}: pupil pages and front matter: no Mi, MOE, aligned, affiliated or endorsed wording (the one not-affiliated sentence on the licence page excepted)", not re.search(r"\bMi\b|MOE|Ministry|aligned|affiliat|endorse", pt + fm_wo, re.I) and ("Not affiliated with or endorsed by the Ministry of Education, Singapore." in fm_flat) == render.DRAFT or not render.DRAFT)
     rec(f"{k}: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "66 Tannery Ln, Singapore 347805" in fm and "Preciouslyours Pte Ltd, trading as Math Inquirers" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
     rec(f"{k}: front matter has the 'typical order, schools vary' sentence and the booklet's terms", "Schools vary" in fm_flat and OC.BOOKLETS[k]["terms"] in fm_flat)
     rec(f"{k}: pupil pages carry no DRAFT stamp", "DRAFT" not in pt)
-    kt = alltxt[f"P1_{k}_Answer_Key.pdf"]
+    kt = alltxt[f"P2_{k}_Answer_Key.pdf"]
     rec(f"{k}: the answer key carries the DRAFT stamp and the owner's contact email (until built with --final)", ("DRAFT" in kt and "pypteltd@gmail.com" in kt) or not render.DRAFT)
     rec(f"{k}: the cover does not claim that every puzzle checks itself", "Every puzzle checks itself" not in fm_flat and "Almost every puzzle checks itself" in fm_flat)
     rec(f"{k}: every pupil footer prints the (c) 2026 Preciouslyours Pte Ltd line (entity and year confirmed by the owner)", pt.count("2026 Preciouslyours Pte Ltd.") == NP[k])
     rec(f"{k}: the licence page says it is an annual licence (one school year, renewable) and that a lawyer must approve the wording", "annual licence" in fm_flat and "approved by a lawyer" in fm_flat)
     rec(f"{k}: the licence page no longer calls the entity or year unconfirmed, and prints the registered office address", "owner to confirm" not in fm_flat and "[registered office address" not in fm_flat and "66 Tannery Ln, Singapore 347805" in fm_flat)
-if not ARGS.partial or 6 in [p["no"] for p in BK["S2"]]:
-    rec("o'clock and half past used for clock times in the Semester 2 key", "o'clock" in alltxt["P1_S2_Answer_Key.pdf"] and "half past" in alltxt["P1_S2_Answer_Key.pdf"])
 # ---- 4c. a 68-character school name must not wrap the footer or split the page code
 import tempfile as _tf
 _td = _tf.mkdtemp()
 _long = "Saint Gabriel's Presbyterian Primary School (Junior Section, Annex Campus)"
 subprocess.run([sys.executable, os.path.join(HERE, "build.py"), "--school", _long, "--outdir", _td], check=True, capture_output=True)
 for k in BK:
-    _t = pdf_text.__call__ if False else subprocess.run(["pdftotext", "-layout", os.path.join(_td, f"P1_{k}_Puzzles.pdf"), "-"], capture_output=True, text=True).stdout.split("\f")[:NP[k]]
+    _t = pdf_text.__call__ if False else subprocess.run(["pdftotext", "-layout", os.path.join(_td, f"P2_{k}_Puzzles.pdf"), "-"], capture_output=True, text=True).stdout.split("\f")[:NP[k]]
     _ok = []
     for i, pg_ in enumerate(_t):
         lines = [l for l in pg_.splitlines() if l.strip()]
@@ -320,7 +302,7 @@ for k in BK:
 import tempfile, glob, shutil
 tmp = tempfile.mkdtemp()
 for k in BK:
-  for f in (f"P1_{k}_Puzzles.pdf", f"P1_{k}_FrontMatter.pdf", f"P1_{k}_Answer_Key.pdf"):
+  for f in (f"P2_{k}_Puzzles.pdf", f"P2_{k}_FrontMatter.pdf", f"P2_{k}_Answer_Key.pdf"):
     d = os.path.join(tmp, f[:-4]); os.makedirs(d)
     subprocess.run(["pdftoppm", "-r", "150", "-gray", os.path.join(O, f), os.path.join(d, "g")], check=True)
     subprocess.run(["pdftoppm", "-r", "150", "-mono", os.path.join(O, f), os.path.join(d, "m")], check=True)

@@ -148,7 +148,7 @@ def l4_numline(spec, w=None):
     if jumps:
         top += 90
     if any(m.get('kind') in ('arrow', 'box') for m in marks):
-        top += 78
+        top += 50
     base = top + 30
     fs = spec.get('font', 28)
     P = []
@@ -182,13 +182,13 @@ def l4_numline(spec, w=None):
             if m.get('text'):
                 P.append(_t(f'{x:.1f}', base - 24, _esc(m['text']), fs, weight=800))
         else:   # arrow or box: label above with an arrow pointing down at the place
-            yb = top - 30
+            yb = base - 112
             if kind == 'box':
-                P.append(f'<rect x="{x - 46:.1f}" y="{yb - 6}" width="92" height="50" rx="6" fill="#fff" stroke="{NAVY}" stroke-width="3.2"/>')
+                P.append(f'<rect x="{x - 46:.1f}" y="{yb}" width="92" height="50" rx="6" fill="#fff" stroke="{NAVY}" stroke-width="3.2"/>')
             else:
-                P.append(_t(f'{x:.1f}', yb + 34, _esc(m.get('text', '')), fs, weight=800))
-            P.append(f'<line x1="{x:.1f}" y1="{yb + 48}" x2="{x:.1f}" y2="{base - 16}" stroke="{NAVY}" stroke-width="3.4"/>')
-            P.append(f'<polygon points="{x:.1f},{base - 12} {x - 9:.1f},{base - 28} {x + 9:.1f},{base - 28}" fill="{NAVY}"/>')
+                P.append(_t(f'{x:.1f}', yb + 40, _esc(m.get('text', '')), fs + 4, weight=800))
+            P.append(f'<line x1="{x:.1f}" y1="{yb + 54}" x2="{x:.1f}" y2="{base - 16}" stroke="{NAVY}" stroke-width="3.4"/>')
+            P.append(f'<polygon points="{x:.1f},{base - 10} {x - 9:.1f},{base - 28} {x + 9:.1f},{base - 28}" fill="{NAVY}"/>')
     for a, b, text in jumps:
         xa, xb = X(a), X(b)
         mid = (xa + xb) / 2

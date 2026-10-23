@@ -468,7 +468,7 @@
   {
    "id": "L4U02-S09",
    "tier": "start",
-   "page": 2,
+   "page": 3,
    "text": "A ferry carries 4018 people on each trip. It makes 5 trips.",
    "parts": [
     {
@@ -519,11 +519,6 @@
      "51752"
     ],
     "text": "51 752"
-   },
-   "space": {
-    "rows": [
-     "Working:"
-    ]
    },
    "explanation": "Numbers that round to 52 000 are from 51 500 to 52 499. With 7 hundreds the number must be 51 7__, because 52 7__ is too big. Then the tens and ones give 51 752."
   },
@@ -873,70 +868,29 @@
   {
    "id": "L4U02-C01",
    "tier": "quiz",
-   "text": "Round 25 962.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "To the nearest 10: {b}",
-     "answer": {
-      "value": [
-       "25960"
-      ],
-      "text": "25 960"
-     }
-    },
-    {
-     "label": "b",
-     "text": "To the nearest 100: {b}",
-     "answer": {
-      "value": [
-       "26000"
-      ],
-      "text": "26 000"
-     }
-    },
-    {
-     "label": "c",
-     "text": "To the nearest 1000: {b}",
-     "answer": {
-      "value": [
-       "26000"
-      ],
-      "text": "26 000"
-     }
-    }
-   ],
-   "explanation": "25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000.",
-   "partsrow": true
+   "text": "Round 25 962.   To the nearest 10: {b}   100: {b}   1000: {b}",
+   "answer": {
+    "value": [
+     "25960",
+     "26000",
+     "26000"
+    ],
+    "text": "25 960, 26 000, 26 000"
+   },
+   "explanation": "25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000."
   },
   {
    "id": "L4U02-C02",
    "tier": "quiz",
-   "text": "To the nearest 100, 8300 people came to a show.",
-   "parts": [
-    {
-     "label": "a",
-     "text": "The smallest number that could have come: {b}",
-     "answer": {
-      "value": [
-       "8250"
-      ],
-      "text": "8250"
-     }
-    },
-    {
-     "label": "b",
-     "text": "The largest: {b}",
-     "answer": {
-      "value": [
-       "8349"
-      ],
-      "text": "8349"
-     }
-    }
-   ],
-   "explanation": "8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the largest is 8349.",
-   "partsrow": true
+   "text": "To the nearest 100, 8300 people came to a show. The least could be {b} and the greatest could be {b}.",
+   "answer": {
+    "value": [
+     "8250",
+     "8349"
+    ],
+    "text": "Least 8250, greatest 8349"
+   },
+   "explanation": "8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the greatest is 8349."
   },
   {
    "id": "L4U02-C03",

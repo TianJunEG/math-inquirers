@@ -60,7 +60,7 @@ S.append(item(U+'-S08', 'start', 2, 'A number rounds to 4700 to the nearest 100.
          P('c', 'How many whole numbers could it be? {b}', A(100))],
   partsrow=True,
   why='4650 is halfway between 4600 and 4700, so it rounds up. 4750 would round to 4800, so the largest is 4749. From 4650 to 4749 there are 100 numbers.'))
-S.append(item(U+'-S09', 'start', 2, 'A ferry carries 4018 people on each trip. It makes 5 trips.',
+S.append(item(U+'-S09', 'start', 3, 'A ferry carries 4018 people on each trip. It makes 5 trips.',
   parts=[P('a', 'Round 4018 to the nearest 1000. Estimate the total: {b}', A(20000)),
          P('b', 'Find the exact total: {b}', A(20090)),
          P('c', 'The exact total is {circ:more|less} than the estimate.', A('more'))],
@@ -68,8 +68,7 @@ S.append(item(U+'-S09', 'start', 2, 'A ferry carries 4018 people on each trip. I
   space={'rows': ['Working:']}))
 S.append(item(U+'-S10', 'start', 3, 'I have 5 digits. Round me to the nearest 1000 and you get 52 000. My hundreds digit is 7. My tens digit is 5 and my ones digit is 2. Who am I?\nI am {b}.',
   ans=A(51752),
-  why='Numbers that round to 52 000 are from 51 500 to 52 499. With 7 hundreds the number must be 51 7__, because 52 7__ is too big. Then the tens and ones give 51 752.',
-  space={'rows': ['Working:']}))
+  why='Numbers that round to 52 000 are from 51 500 to 52 499. With 7 hundreds the number must be 51 7__, because 52 7__ is too big. Then the tens and ones give 51 752.'))
 S.append(item(U+'-S11', 'start', 3, 'Use the digit cards 2, 4, 0, 7 and 9. Use each card once.',
   parts=[P('a', 'The greatest number: {b}', A(97420)), P('b', 'The least number: {b}', A(20479)),
          P('c', 'The greatest odd number: {b}', A(94207))],
@@ -120,14 +119,12 @@ G.append(item(U+'-G04', 'go', 5, 'Some numbers round to 7000 to the nearest 1000
   hint='Find the first and last numbers for each rounding.',
   why='To the nearest 1000, the numbers are 6500 to 7499. To the nearest 100, they are 6950 to 7049. For example, 7400 is in the first list but rounds to 7400 to the nearest 100. The numbers in both lists are 6950 to 7049: 100 numbers.'))
 
-C.append(item(U+'-C01', 'quiz', None, 'Round 25 962.',
-  parts=[P('a', 'To the nearest 10: {b}', A(25960)), P('b', 'To the nearest 100: {b}', A(26000)), P('c', 'To the nearest 1000: {b}', A(26000))],
-  partsrow=True,
+C.append(item(U+'-C01', 'quiz', None, 'Round 25 962.   To the nearest 10: {b}   100: {b}   1000: {b}',
+  ans=A(25960, 26000, 26000, text='25 960, 26 000, 26 000'),
   why='25 962: the 2 ones round down to 25 960. The last two digits, 62, are over 50, so 26 000. The last three digits, 962, are over 500, so 26 000.'))
-C.append(item(U+'-C02', 'quiz', None, 'To the nearest 100, 8300 people came to a show.',
-  parts=[P('a', 'The smallest number that could have come: {b}', A(8250)), P('b', 'The largest: {b}', A(8349))],
-  partsrow=True,
-  why='8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the largest is 8349.'))
+C.append(item(U+'-C02', 'quiz', None, 'To the nearest 100, 8300 people came to a show. The least could be {b} and the greatest could be {b}.',
+  ans=A(8250, 8349, text='Least 8250, greatest 8349'),
+  why='8250 is halfway between 8200 and 8300 and rounds up to 8300. 8350 would round up to 8400, so the greatest is 8349.'))
 C.append(item(U+'-C03', 'quiz', None, 'Cards: 4, 0, 7, 1, 8. Use each card once. Make the least odd 5-digit number. {b}',
   ans=A(10487), why='The ones digit must be 7 or 1. Ending in 7 lets 1 go first: 10 487. Ending in 1 needs 4 first: 40 781. 10 487 is less.'))
 C.append(item(U+'-C04', 'quiz', None, 'Find the rule. Write the next 2 numbers. 53 200, 51 700, 50 200, {b}, {b}',
