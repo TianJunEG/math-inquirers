@@ -56,7 +56,7 @@ def rect(l, w):
 
 @check('L3U07-L01')
 def _():
-    a, p = rect(8, 3)
+    a, p = rect(9, 4)
     return s([a, p])
 
 
@@ -180,7 +180,7 @@ def _():
 
 @check('L3U07-C02')
 def _():
-    return s([4 * 6])
+    return s([only(x for x in range(1, 50) if 4 * x == 20)])
 
 
 @check('L3U07-C03')

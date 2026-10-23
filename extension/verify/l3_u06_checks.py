@@ -117,8 +117,8 @@ def _():
 
 @check('L3U06-T02')
 def _():
-    sols = [(t, b) for b in range(1, 100) for t in range(1, b) if Fr(t, b) == Fr(2, 5) and b - t == 9]
-    return s(only(sols))
+    lo, hi = Fr(1, 3), Fr(1, 2)
+    return {'a': s([only(t for t in range(1, 12) if lo < Fr(t, 12) < hi)]), 'b': s([sum(1 for t in range(1, 24) if lo < Fr(t, 24) < hi)])}
 
 
 @check('L3U06-T03')

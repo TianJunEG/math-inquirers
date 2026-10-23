@@ -64,14 +64,15 @@ def _():
     # (a) positions: Ravi 3rd, 5 between, Mei last
     a = 3 + 5 + 1
     # (b) 8th from the front and 2nd from the back: build the line and search its length
-    b = only(n for n in range(1, 40) if n - 2 + 1 == 8)
+    b = only(n for n in range(1, 40) if n - 3 + 1 == 8)
     return {'a': s([a]), 'b': s([b])}
 
 
 @check('L3U10-S06')
 def _():
-    nums = sorted({int(''.join(p)) for p in itertools.permutations('369')})
-    return {'a': s(nums), 'b': s([sum(1 for n in nums if n % 2 == 0)]), 'c': s([min(nums, key=lambda n: abs(n - 700))])}
+    meals = [d + ' ' + k for d in ('milk', 'tea') for k in ('bun', 'pie', 'fruit')]
+    return {'a': s(meals), 'b': s([sum(1 for m in meals if m.startswith('milk'))]),
+            'c': s([sum(1 for m in meals if m.endswith('bun') or m.endswith('pie'))])}
 
 
 @check('L3U10-S07')
@@ -203,13 +204,18 @@ def _():
 
 @check('L3U10-C02')
 def _():
-    return s([4 + 5 - 1])
+    return s([2 + 1 + 6])
 
 
 @check('L3U10-C03')
 def _():
-    nums = {int(''.join(p)) for p in itertools.permutations('256')}
-    return s([sum(1 for n in nums if n % 2 == 1)])
+    best = None
+    for order in itertools.permutations(['Lily', 'Mei', 'Ben', 'Aisha']):
+        # order runs from shortest to tallest; check every clue
+        h = {n: i for i, n in enumerate(order)}
+        if h['Lily'] < h['Mei'] < h['Ben'] < h['Aisha']:
+            best = order
+    return s([best[-2]])
 
 
 @check('L3U10-C04')

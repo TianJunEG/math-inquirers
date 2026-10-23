@@ -37,14 +37,14 @@
    ]
   },
   "try": {
-   "text": "Lily is 2nd from the front and 7th from the back of a line. The line has {b} children.",
+   "text": "Lily is 3rd from the front and 9th from the back of a line. The line has {b} children.",
    "answer": {
     "value": [
-     "8"
+     "11"
     ],
-    "text": "8"
+    "text": "11"
    },
-   "explanation": "1 child is in front of Lily and 6 are behind her. 1 + 1 + 6 = 8. Check: 2 + 7 - 1 = 8.",
+   "explanation": "2 children are in front of Lily and 8 are behind her. 2 + 1 + 8 = 11. Check: 3 + 9 - 1 = 11.",
    "id": "L3U10-L01"
   },
   "tight": true
@@ -346,16 +346,16 @@
     },
     {
      "label": "b",
-     "text": "Aisha is 8th from the front and 2nd from the back. The line has {b} children.",
+     "text": "Aisha is 8th from the front and 3rd from the back. The line has {b} children.",
      "answer": {
       "value": [
-       "9"
+       "10"
       ],
-      "text": "9"
+      "text": "10"
      }
     }
    ],
-   "explanation": "(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 7 children are in front of Aisha and 1 is behind her: 7 + 1 + 1 = 9.",
+   "explanation": "(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 7 children are in front of Aisha and 2 are behind her: 7 + 1 + 2 = 10.",
    "space": {
     "rows": [
      "Draw it:"
@@ -366,46 +366,46 @@
    "id": "L3U10-S06",
    "tier": "start",
    "page": 2,
-   "text": "Make every 3-digit number from the cards 3, 6 and 9. Use each card once in a number. List them from the smallest.",
+   "text": "A café meal is 1 drink and 1 snack. The drinks are milk and tea. The snacks are a bun, a pie and fruit. List every different meal.",
    "parts": [
     {
      "label": "a",
      "text": "Write the list below.",
      "answer": {
       "value": [
-       "369",
-       "396",
-       "639",
-       "693",
-       "936",
-       "963"
+       "milk bun",
+       "milk pie",
+       "milk fruit",
+       "tea bun",
+       "tea pie",
+       "tea fruit"
       ],
-      "text": "369, 396, 639, 693, 936, 963",
+      "text": "milk bun, milk pie, milk fruit, tea bun, tea pie, tea fruit",
       "list": true
      }
     },
     {
      "label": "b",
-     "text": "There are {b} even numbers in your list.",
+     "text": "There are {b} meals with milk.",
      "answer": {
       "value": [
-       "2"
+       "3"
       ],
-      "text": "2"
+      "text": "3"
      }
     },
     {
      "label": "c",
-     "text": "The number closest to 700 is {b}.",
+     "text": "There are {b} meals with a bun or a pie.",
      "answer": {
       "value": [
-       "693"
+       "4"
       ],
-      "text": "693"
+      "text": "4"
      }
     }
    ],
-   "explanation": "Fix the first digit and list the rest in order: 369, 396, then 639, 693, then 936, 963. The even numbers end in 6: 396 and 936. 693 is only 7 from 700; the others are much farther.",
+   "explanation": "Fix the drink and list the snacks in order: milk bun, milk pie, milk fruit, then tea bun, tea pie, tea fruit. 3 meals have milk. A bun or a pie: milk bun, milk pie, tea bun, tea pie, so 4.",
    "space": {
     "rows": [
      "My list:"
@@ -612,7 +612,7 @@
     ],
     "text": "18"
    },
-   "explanation": "1 by 1: 6. 1 by 2 (2 wide, 1 tall): 2 in each row, so 4. 1 by 3: 2. 2 by 1 (1 wide, 2 tall): 3. 2 by 2: 2. 2 by 3: 1. In all: 6 + 4 + 2 + 3 + 2 + 1 = 18.",
+   "explanation": "Height 1: width 1 gives 6, width 2 gives 4 (2 in each row), width 3 gives 2. Height 2: width 1 gives 3, width 2 gives 2, width 3 gives 1. In all: 6 + 4 + 2 + 3 + 2 + 1 = 18.",
    "figure": {
     "type": "l3_grid",
     "rows": [
@@ -632,11 +632,11 @@
     "width_mm": 46
    },
    "figside": true,
-   "hint": "Count 1 by 1 first. Then 1 by 2. Make a table.",
+   "hint": "Count the small squares first. Then the wider ones.",
    "space": {
     "rows": [
-     "1 by 1:  1 by 2:  1 by 3:",
-     "2 by 1:  2 by 2:  2 by 3:"
+     "Height 1, width 1, 2, 3:",
+     "Height 2, width 1, 2, 3:"
     ]
    }
   },
@@ -865,7 +865,7 @@
    "id": "L3U10-C01",
    "tier": "quiz",
    "page": 6,
-   "text": "The graph shows pencils sold. Tuesday sold {b} more than Monday.",
+   "text": "Each dashed line is 10. Tuesday sold {b} more than Monday.",
    "answer": {
     "value": [
      "30"
@@ -898,27 +898,27 @@
    "id": "L3U10-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "In a line, 3 children stand in front of Ben and 4 children stand behind him. The line has {b} children.",
+   "text": "In a line, 2 children stand in front of Ben and 6 children stand behind him. The line has {b} children.",
    "answer": {
     "value": [
-     "8"
+     "9"
     ],
-    "text": "8"
+    "text": "9"
    },
-   "explanation": "3 + 1 + 4 = 8. Do not forget Ben."
+   "explanation": "2 + 1 + 6 = 9. Do not forget Ben."
   },
   {
    "id": "L3U10-C03",
    "tier": "quiz",
    "page": 6,
-   "text": "Use the cards 2, 5 and 6 once each to make 3-digit numbers. {b} of the numbers are odd.",
+   "text": "Lily is shorter than Mei. Mei is shorter than Ben. Ben is shorter than Aisha. Who is the 2nd tallest?   {circ:Lily|Mei|Ben|Aisha}",
    "answer": {
     "value": [
-     "2"
+     "Ben"
     ],
-    "text": "2"
+    "text": "Ben"
    },
-   "explanation": "The numbers are 256, 265, 526, 562, 625 and 652. The odd ones end in 5: 265 and 625."
+   "explanation": "From the shortest: Lily, Mei, Ben, Aisha. The tallest is Aisha, so the 2nd tallest is Ben."
   },
   {
    "id": "L3U10-C04",

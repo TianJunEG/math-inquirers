@@ -752,7 +752,7 @@
      }
     }
    ],
-   "explanation": "The middle number is in 4 lines (the middle row and column and both diagonals). Adding those 4 lines counts the middle 4 times and every other number once, which is 3 totals + 3 × the middle. So the total is 3 × 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
+   "explanation": "The middle number is in 4 lines (middle row, middle column, 2 diagonals). Add these 4 lines: every number counts once and the middle counts 3 more times. All the numbers make 3 totals (3 rows). So 4 totals = 3 totals + 3 × the middle, and 1 total = 3 × 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
    "hint": "The middle number is in 4 lines. Add those 4 lines.",
    "figure": {
     "type": "l3_grid",

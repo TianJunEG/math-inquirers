@@ -150,4 +150,10 @@ SHORT = {
  'L3U10-T03': 'Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.',
  'L3U04-G03': 'In the example, take away the 12: 60 - 12 = 48, 48 ÷ 2 = 24. Ali has 24 and Ben has 36.',
  'L3U05-S12': 'A number leaves remainder 3 when it is 3 more than a number in the 5 times table: 18 = 15 + 3, 23 = 20 + 3, 33 = 30 + 3, 48 = 45 + 3. 41 = 40 + 1 leaves 1.',
+ 'L3U10-S06': 'Fix the drink and list the snacks in order: milk bun, milk pie, milk fruit, then tea bun, tea pie, tea fruit. 3 meals have milk. A bun or a pie: milk bun, milk pie, tea bun, tea pie, so 4.',
+ 'L3U09-S04': '3 ℓ 200 ml = 3200 ml. 3200 ÷ 500 = 6 remainder 200. She fills 6 pots, with 200 ml left.',
+ 'L3U08-T02': 'AB goes 2 across for every 1 up. A perpendicular line goes 1 across and 2 down. From C, keep going 1 across and 2 down until you reach the bottom row: R.',
+ 'L3U02-T03': 'The middle number is in 4 lines (middle row, middle column, 2 diagonals). Add these 4 lines: every number counts once and the middle counts 3 more times. All the numbers make 3 totals (3 rows). So 4 totals = 3 totals + 3 × the middle, and 1 total = 3 × 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.',
+ 'L3U07-C01': 'Area is length × width: 9 × 5 = 45 cm².',
+ 'L3U10-S03': '(a) 3rd to 24th is 21 days = 3 weeks. So the 24th is a Tuesday again. (b) 3rd to 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.',
 }

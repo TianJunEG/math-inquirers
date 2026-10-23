@@ -173,7 +173,7 @@ def _():
 
 @check('L3U03-C02')
 def _():
-    return s([times(10, 8) - 8])
+    return s([only(k for k in range(0, 9) if times(7, 4) + times(7, k) == times(7, 8))])
 
 
 @check('L3U03-C03')

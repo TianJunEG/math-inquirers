@@ -69,10 +69,10 @@ def _():
 
 @check('L3U09-S04')
 def _():
-    total = 2 * 1000 + 500
+    total = 3 * 1000 + 200
     cups, left = 0, total
-    while left >= 400:
-        left -= 400
+    while left >= 500:
+        left -= 500
         cups += 1
     return {'a': s([cups]), 'b': s([left])}
 

@@ -73,9 +73,9 @@
   "facts": {
    "title": "More models",
    "lines": [
-    "Times as many: draw 1 box, then 3 boxes. Count the boxes.",
-    "Total and difference: take away the extra, then share the rest.",
-    "Same after giving: half the gap moves."
+    "Times as many: Ben has 3 times as many as Ali, 48 in all. 4 equal boxes: 48 ÷ 4 = 12 each.",
+    "Total and difference: 50 in all and Mei has 10 more. Take away the 10: 40. Share it: 20 and 30.",
+    "Same after giving: 70 and 50. The gap is 20. The child with more gives half the gap, 10. Both have 60."
    ]
   }
  },
@@ -390,11 +390,11 @@
    "id": "L3U04-S10",
    "tier": "start",
    "page": 3,
-   "text": "Wei has 3 times as many marbles as Aisha. Wei has 48 marbles.",
+   "text": "A zoo has 3 times as many monkeys as parrots. There are 48 monkeys.",
    "parts": [
     {
      "label": "a",
-     "text": "Aisha has {b} marbles.",
+     "text": "There are {b} parrots.",
      "answer": {
       "value": [
        "16"
@@ -404,7 +404,7 @@
     },
     {
      "label": "b",
-     "text": "They have {b} marbles in all.",
+     "text": "There are {b} monkeys and parrots in all.",
      "answer": {
       "value": [
        "64"
@@ -413,7 +413,7 @@
      }
     }
    ],
-   "explanation": "Wei has 3 boxes and Aisha has 1 box. 3 boxes are 48 marbles, so 1 box is 48 ÷ 3 = 16. Together they have 4 boxes: 4 × 16 = 64.",
+   "explanation": "Monkeys are 3 boxes and parrots are 1 box. 3 boxes are 48, so 1 box is 48 ÷ 3 = 16. Together they are 4 boxes: 4 × 16 = 64.",
    "space": {
     "rows": [
      "Draw your model:"
@@ -428,7 +428,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Is Ravi right?   {circ:Yes|No}",
+     "text": "Is Kumar right?   {circ:Yes|No}",
      "answer": {
       "value": [
        "No"
@@ -472,15 +472,15 @@
    "tier": "think",
    "page": 4,
    "beyond": "Giving to make them equal",
-   "text": "Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. After that, each boy has the same number of marbles. How many marbles does Kumar give away? {b}",
+   "text": "A library has 84 books on 2 shelves. The top shelf has 3 times as many books as the bottom shelf. The librarian moves some books from the top shelf to the bottom shelf. Now both shelves have the same number of books. How many books does she move? {b}",
    "answer": {
     "value": [
      "21"
     ],
     "text": "21"
    },
-   "explanation": "At first there are 4 equal boxes: 84 ÷ 4 = 21, so Wei has 21 and Kumar has 63. At the end each has 84 ÷ 2 = 42. Kumar gives 63 - 42 = 21 marbles.",
-   "hint": "Find how many each has at first. Then how many each has later.",
+   "explanation": "At first there are 4 equal boxes: 84 ÷ 4 = 21, so the bottom shelf has 21 and the top shelf has 63. At the end each has 84 ÷ 2 = 42. She moves 63 - 42 = 21 books.",
+   "hint": "Find how many each shelf has at first. Then how many later.",
    "space": {
     "rows": [
      "Draw your model:",

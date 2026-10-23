@@ -45,7 +45,8 @@
    "steps": [
     "Perpendicular lines meet at a right angle.",
     "Parallel lines never meet. They stay the same distance apart.",
-    "Count angles in order: the small ones first."
+    "Count angles in order: the small ones first.",
+    "A corner that points into a shape is a dent. A dent is greater than a right angle."
    ]
   },
   "try": {
@@ -999,7 +1000,7 @@
      }
     }
    ],
-   "explanation": "AB goes 2 across for every 1 up. A perpendicular line goes 1 across and 2 down. From C, that reaches the dot at 3 across, 4 up, then (4, 2), then the bottom row at R.",
+   "explanation": "AB goes 2 across for every 1 up. A perpendicular line goes 1 across and 2 down. From C, keep going 1 across and 2 down until you reach the bottom row: R.",
    "figure": {
     "type": "l3_segs",
     "k": 44,
@@ -1035,7 +1036,7 @@
       "x": 2,
       "y": 6,
       "t": "C",
-      "dx": -26
+      "dy": -34
      },
      {
       "x": 2,
@@ -1398,7 +1399,7 @@
    "id": "L3U08-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Circle each letter with 2 parallel lines.   {circ:E|H|V|T}",
+   "text": "Circle each letter that has parallel lines.   {circ:E|H|V|T}",
    "answer": {
     "value": [
      "E",

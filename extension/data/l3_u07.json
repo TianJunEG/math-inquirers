@@ -39,7 +39,7 @@
   },
   "try": {
    "id": "L3U07-L01",
-   "text": "A rectangle is 8 cm long and 3 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.",
+   "text": "A rectangle is 9 cm long and 4 cm wide.\nIts area is {b} cm². Its perimeter is {b} cm.",
    "figure": {
     "type": "l3_poly",
     "pts": [
@@ -48,39 +48,39 @@
       0
      ],
      [
-      8,
+      9,
       0
      ],
      [
-      8,
-      3
+      9,
+      4
      ],
      [
       0,
-      3
+      4
      ]
     ],
     "labels": [
      {
       "side": 0,
-      "text": "8 cm"
+      "text": "9 cm"
      },
      {
       "side": 1,
-      "text": "3 cm"
+      "text": "4 cm"
      }
     ],
     "width_mm": 84
    },
    "answer": {
     "value": [
-     "24",
-     "22"
+     "36",
+     "26"
     ],
-    "text": "Area 24 cm². Perimeter 22 cm.",
+    "text": "Area 36 cm². Perimeter 26 cm.",
     "list": true
    },
-   "explanation": "Area: 8 × 3 = 24 cm². Perimeter: 8 + 3 + 8 + 3 = 22 cm, or 2 × (8 + 3) = 22 cm."
+   "explanation": "Area: 9 × 4 = 36 cm². Perimeter: 9 + 4 + 9 + 4 = 26 cm, or 2 × (9 + 4) = 26 cm."
   }
  },
  "items": [
@@ -972,20 +972,20 @@
     ],
     "text": "45"
    },
-   "explanation": "9 × 5 = 45 cm²."
+   "explanation": "Area is length × width: 9 × 5 = 45 cm²."
   },
   {
    "id": "L3U07-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "A square has sides of 6 cm. Its perimeter is {b} cm.",
+   "text": "A square tile has a perimeter of 20 cm. Each side is {b} cm.",
    "answer": {
     "value": [
-     "24"
+     "5"
     ],
-    "text": "24"
+    "text": "5"
    },
-   "explanation": "4 × 6 = 24 cm."
+   "explanation": "A square has 4 equal sides: 20 ÷ 4 = 5 cm."
   },
   {
    "id": "L3U07-C03",

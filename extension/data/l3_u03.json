@@ -498,7 +498,7 @@
      }
     }
    ],
-   "explanation": "That is 6 ways.",
+   "explanation": "Try the number of rows from 2 upwards: 2 rows of 15, 3 rows of 10, 5 rows of 6, 6 rows of 5, 10 rows of 3 and 15 rows of 2. 4 rows does not work because 30 is not in the 4 times table. That is 6 ways.",
    "space": {
     "table": {
      "cols": [
@@ -853,14 +853,14 @@
    "id": "L3U03-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "You know that 10 × 8 = 80. Use it to find 9 × 8. {b}",
+   "text": "Fill in the blank: 7 × 8 = 7 × 4 + 7 × {b}",
    "answer": {
     "value": [
-     "72"
+     "4"
     ],
-    "text": "72"
+    "text": "4"
    },
-   "explanation": "9 × 8 is one less 8 than 10 × 8: 80 - 8 = 72."
+   "explanation": "8 = 4 + 4, so 7 × 8 = 7 × 4 + 7 × 4. That is 28 + 28 = 56."
   },
   {
    "id": "L3U03-C03",

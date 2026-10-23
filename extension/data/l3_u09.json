@@ -10,7 +10,7 @@
  "learn": {
   "intro": "Use one unit before you add or take away. 1 m = 100 cm, 1 kg = 1000 g, 1 ℓ = 1000 ml and $1 = 100¢.",
   "example": {
-   "problem": "A ribbon is 2 m 35 cm long. Mei cuts off 80 cm. How long is the ribbon now?",
+   "problem": "A ribbon is 3 m 40 cm long. Mei cuts off 85 cm. How long is the ribbon now?",
    "figure": {
     "type": "l3_bars",
     "rows": [
@@ -23,7 +23,7 @@
        },
        {
         "w": 1.5,
-        "t": "80 cm",
+        "t": "85 cm",
         "style": "ghost"
        }
       ],
@@ -31,7 +31,7 @@
        {
         "a": 0,
         "b": 1,
-        "t": "2 m 35 cm"
+        "t": "3 m 40 cm"
        }
       ]
      }
@@ -41,10 +41,10 @@
     "lab": 20
    },
    "steps": [
-    "Change to cm: 2 m 35 cm = 235 cm.",
-    "Take away: 235 - 80 = 155 cm = 1 m 55 cm."
+    "Change to cm: 3 m 40 cm = 340 cm.",
+    "Take away: 340 - 85 = 255 cm = 2 m 55 cm."
    ],
-   "answer": "The ribbon is 1 m 55 cm long."
+   "answer": "The ribbon is 2 m 55 cm long."
   },
   "howto": {
    "title": "Tips",
@@ -67,28 +67,28 @@
    "id": "L3U09-L01"
   },
   "example2": {
-   "problem": "A film starts at 2:50 pm and ends at 4:20 pm. How long is the film?",
+   "problem": "A film starts at 1:40 pm and ends at 3:15 pm. How long is the film?",
    "figure": {
     "type": "l3_timeline",
     "points": [
      {
-      "t": "2:50"
+      "t": "1:40"
+     },
+     {
+      "t": "2:00"
      },
      {
       "t": "3:00"
      },
      {
-      "t": "4:00"
-     },
-     {
-      "t": "4:20"
+      "t": "3:15"
      }
     ],
     "arcs": [
      {
       "a": 0,
       "b": 1,
-      "text": "10 min"
+      "text": "20 min"
      },
      {
       "a": 1,
@@ -98,16 +98,16 @@
      {
       "a": 2,
       "b": 3,
-      "text": "20 min"
+      "text": "15 min"
      }
     ],
     "width_mm": 100
    },
    "steps": [
-    "Jump to the next o’clock, then to 4:00, then to 4:20.",
-    "Add the jumps: 10 min + 1 h + 20 min = 1 h 30 min."
+    "Jump to the next o’clock, then to 3:00, then to 3:15.",
+    "Add the jumps: 20 min + 1 h + 15 min = 1 h 35 min."
    ],
-   "answer": "The film is 1 h 30 min long."
+   "answer": "The film is 1 h 35 min long."
   },
   "tight": true
  },
@@ -252,11 +252,11 @@
    "id": "L3U09-S04",
    "tier": "start",
    "page": 1,
-   "text": "A jug has 2 ℓ 500 ml of juice. Ali pours it into cups of 400 ml.",
+   "text": "A can has 3 ℓ 200 ml of paint. Siti pours the paint into pots. Each pot holds 500 ml.",
    "parts": [
     {
      "label": "a",
-     "text": "He fills {b} cups.",
+     "text": "She fills {b} pots.",
      "answer": {
       "value": [
        "6"
@@ -266,16 +266,16 @@
     },
     {
      "label": "b",
-     "text": "{b} ml of juice are left over.",
+     "text": "{b} ml of paint are left.",
      "answer": {
       "value": [
-       "100"
+       "200"
       ],
-      "text": "100"
+      "text": "200"
      }
     }
    ],
-   "explanation": "2 ℓ 500 ml = 2500 ml. 2500 ÷ 400 = 6 remainder 100. He fills 6 cups, with 100 ml left."
+   "explanation": "3 ℓ 200 ml = 3200 ml. 3200 ÷ 500 = 6 remainder 200. She fills 6 pots, with 200 ml left."
   },
   {
    "id": "L3U09-S05",
