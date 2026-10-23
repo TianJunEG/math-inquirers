@@ -6,9 +6,9 @@
   "lesson": 10,
   "lesson_in_term": 10,
   "title": "Story Steps: Read It Twice",
-  "big_idea": "One operation per step",
-  "child_idea": "Read a story twice. Then write one number sentence for each step: add, or take away.",
-  "skill": "Reading and planning",
+  "big_idea": "Read it twice, choose a tool, check",
+  "child_idea": "Read a story twice. Choose a tool. Write one number sentence for each step: add, or take away. Then check.",
+  "skill": "Choosing a tool and checking",
   "ages": "6-8",
   "moe": {
     "strand": "Addition and Subtraction",
@@ -17,7 +17,7 @@
       "Two-step stories: one operation per step",
       "Comparing: more than, fewer than"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (a game, not a test). Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim. Beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Think harder T4 is an impossible story (12 stickers, give 7, then give 8): the child must check each step against what is left, a reasoning step beyond the P1 two-step story. Original item."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (a game, not a test). Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim. Beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Think harder T4 is an impossible story (12 stickers, give 7, then give 8): the child must check each step against what is left, a reasoning step beyond the P1 two-step story. Original item. Reframed 23 Oct 2026 (owner decision T1-REFRAME-NOW, plan section 5 option B): Story Steps stays in lesson 10 and is now the choose-the-tool consolidation lesson of Term 1. The content did not move. Remember shows the four tools met in Term 1, Explore asks which tool was used, the mini-lesson models the stuck moment, and the Quest has a tool row and an I checked tick under every gate (Quest v2)."
   },
   "contest_moves": [
     "two-step story, one operation per step",
@@ -29,20 +29,22 @@
     "Read a short story twice: first to say what it is about, then to pick out the numbers and the question.",
     "Write one number sentence for each step of a two-step story (add or take away within 100) and answer in a sentence.",
     "Choose add or take away from the words of the story (gets, gives away, more than, fewer than), not from the order of the numbers.",
-    "Play Mi's Challenge Quest, a game with Mi on private paper: 8 short gates that visit the lessons of the term."
+    "Choose a tool for a story (Draw it, Act it out, Spot the pattern or List every way), say why, and check the answer.",
+    "Play Mi's Challenge Quest, a game with Mi on private paper: 8 short gates that visit the lessons of the term. Under each gate, circle the tool you used and tick I checked."
   ],
   "joining_cold": {
     "remember": [
       "'I think of a number' (add or take away a small number to find it)",
       "Story words: which words mean add and which mean take away",
-      "Adding and taking away tens and ones: 40 + 20, 37 + 10, 56 - 20, 24 + 5"
+      "Adding and taking away tens and ones: 40 + 20, 37 + 10, 56 - 20, 24 + 5",
+      "Our four tools: Draw it, Act it out, Spot the pattern, List every way (each has a card name and a small picture on the slide)"
     ],
     "assumes": "Counting in tens to 100, adding and taking away small numbers within 10, and knowing 10 more or 10 fewer than a tens number. Every number used in Start here stays within 100 and no Start here take away needs renaming. A child who has done Lessons 1 to 9 will find the tens and ones work familiar; a new child gets every idea in the warm-up.",
     "holiday_topics_revisited": [
       "'I think of a number'"
     ],
     "safe_to_miss": false,
-    "note": "Lesson 10 is the last lesson of the term and holds Mi's Challenge Quest, so it is hard to miss: the lesson is recorded, but the quest is not on the recording. A child who missed it plays at the make-up slot, before watching the recording (same private procedure, see the quest tutor notes). A child who joins late is not lost: the warm-up gives what the stories need, the quest is optional for the child, and the line for the grown-up covers only what the child met. Lessons 6 and 7 (jumps of ten, take away) help most for the Start here sums."
+    "note": "Lesson 10 is the last lesson of the term. It is the choose-the-tool lesson that holds Mi's Challenge Quest, so it is hard to miss: the lesson is recorded, but the quest is not on the recording. A child who missed it plays at the make-up slot, before watching the recording (same private procedure, see the quest tutor notes). A child who joins late is not lost: the warm-up gives what the stories need, the quest is optional for the child, and the line for the grown-up covers only what the child met. Lessons 6 and 7 (jumps of ten, take away) help most for the Start here sums."
   },
   "materials": {
     "child": [
@@ -100,46 +102,46 @@
         "end": 35
       },
       {
+        "id": "exit",
+        "title": "Mi's Challenge Quest",
+        "start": 35,
+        "end": 55
+      },
+      {
         "id": "work",
         "title": "Workbook",
-        "start": 35,
-        "end": 59
+        "start": 55,
+        "end": 79
       },
       {
         "id": "talk",
         "title": "Talk time",
-        "start": 59,
-        "end": 63
-      },
-      {
-        "id": "exit",
-        "title": "Mi's Challenge Quest",
-        "start": 63,
-        "end": 83
+        "start": 79,
+        "end": 84
       },
       {
         "id": "look",
         "title": "Look-back",
-        "start": 83,
-        "end": 85
+        "start": 84,
+        "end": 86
       },
       {
         "id": "flex",
         "title": "Flex time and goodbye",
-        "start": 85,
+        "start": 86,
         "end": 90
       }
     ],
     "optional_slide": "s-opt",
     "include_rules": false,
     "skip_order": [
-      "In a slow class the workbook runs over: take it from the 5-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
+      "In a slow class the workbook runs over: take it from the 4-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
       "the optional slide",
       "the second explore story",
       "the quick-fire in the mini-lesson",
       "never shorten Mi's Challenge Quest"
     ],
-    "notes": "Lesson 10 is the last lesson of the term, so it holds Mi's Challenge Quest: the part Mi's Challenge Quest (minutes 63 to 83, after the break and the workbook) is the quest only. The exit ticket (E1 to E3) is not done live: the quest ends with the same kind of two-step story, so the 4 minutes go to the workbook (24 minutes, so Start here is finished in class). The quest has 8 short gates and one optional secret cave item; a middle child needs about 16 minutes of reading aloud and quiet work, a slower child may use the 5 flex minutes at the end. The last 5 minutes are the standing buffer; nothing new is started in it."
+    "notes": "Lesson 10 is the last lesson of the term and the choose-the-tool lesson of Term 1, so it holds Mi's Challenge Quest: the part Mi's Challenge Quest (minutes 35 to 55, straight after the break) is the quest only. The exit ticket (E1 to E3) is not done live: the quest ends with the same kind of two-step story, so the minutes go to the workbook (24 minutes, so Start here is finished in class). The quest has 8 short gates and one optional secret cave item; under each gate the child circles the tool they used and ticks I checked. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use the 4 flex minutes at the end. The last 4 minutes are the standing buffer; nothing new is started in it."
   },
   "sneak_peek": {
     "q1": "Ali has 4 marbles. Ben has 3 more marbles than Ali. How many marbles does Ben have? You may draw them.",
@@ -211,7 +213,7 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Last lesson of the term. Pencil, paper, counters and your workbook on the table, please. Today we read stories twice, and after our break and our workbook we play Mi's Challenge Quest."
+            "text": "Hello, inquirers! Last lesson of the term. Pencil, paper, counters and your workbook on the table, please. Today we read stories twice and choose a tool for each one. After our break we play Mi's Challenge Quest."
           },
           {
             "k": "SAY",
@@ -237,7 +239,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Lesson 10 only: say once that Mi's Challenge Quest is a game on private paper, with a quest partner beside you, and not a race. The routine and the four inquirer rules were taught in Lesson 1; for a new child one sentence is enough: notice it, test it, explain why, mistakes help us. Say the recording statement and the microphone routine in the same words every lesson."
+            "text": "Lesson 10 only: say once that today is a choose-the-tool lesson (we pick a tool and say why), and that Mi's Challenge Quest is a game on private paper, with a quest partner beside you, and not a race. The routine and the four inquirer rules were taught in Lesson 1; for a new child one sentence is enough: notice it, test it, explain why, mistakes help us. Say the recording statement and the microphone routine in the same words every lesson."
           }
         ]
       },
@@ -262,11 +264,6 @@
             "resp": 12
           },
           {
-            "k": "ASK",
-            "text": "I add 10, and I get thirty-five. What was my number?",
-            "resp": 12
-          },
-          {
             "k": "SLIDE",
             "slide": "s-rem2"
           },
@@ -282,16 +279,6 @@
           {
             "k": "ASK",
             "text": "Ali finds 5 more shells. Add or take away?",
-            "resp": 6
-          },
-          {
-            "k": "ASK",
-            "text": "Mei gives away 2 stickers. Add or take away?",
-            "resp": 6
-          },
-          {
-            "k": "ASK",
-            "text": "4 more children join the line. Add or take away?",
             "resp": 6
           },
           {
@@ -318,11 +305,6 @@
             "resp": 8
           },
           {
-            "k": "ASK",
-            "text": "Twenty-four plus five?",
-            "resp": 8
-          },
-          {
             "k": "SLIDE",
             "slide": "s-rem4"
           },
@@ -341,9 +323,17 @@
             "resp": 14
           },
           {
+            "k": "SLIDE",
+            "slide": "s-rem5"
+          },
+          {
+            "k": "SAY",
+            "text": "Four tools from this term. Draw it. Act it out. Spot the pattern. List every way. The slide says what each one does."
+          },
+          {
             "k": "ASK",
-            "text": "Ali has 12 marbles and wins 5. Which sentence, and the answer?",
-            "resp": 14
+            "text": "Siti has 9 beads and loses 3. Which tool would you start with? There is no wrong tool.",
+            "resp": 15
           },
           {
             "k": "STUCK",
@@ -351,7 +341,7 @@
           },
           {
             "k": "NOTE",
-            "text": "Answers: 5, 8, 25; take away, add, take away, add; 60, 47, 36, 29; then 6 + 4 = 10, 9 - 3 = 6, 12 + 5 = 17. Children answer with fingers, thumbs or a whispered number. Nobody writes. A child new to tens and ones sees the bundles on the slide first."
+            "text": "Answers: 5, 8, 25; take away, add; 60, 47, 36; then 6 + 4 = 10, 9 - 3 = 6, 12 + 5 = 17. Children answer with fingers, thumbs or a whispered number. Nobody writes. A child new to tens and ones sees the bundles on the slide first."
           }
         ]
       },
@@ -485,8 +475,8 @@
           },
           {
             "k": "ASK",
-            "text": "What did you notice? How many steps did each story have? Did each step add or take away?",
-            "resp": 35
+            "text": "What did you notice? How many steps did each story have? Did each step add or take away? Which tool did you use, and why?",
+            "resp": 20
           },
           {
             "k": "SAY",
@@ -529,11 +519,6 @@
           {
             "k": "SAY",
             "text": "Mei has 26 stickers. Ali gives her 10 more stickers. Then she gives 5 stickers to Ben. Step 1: she gets more, so add. Twenty-six plus ten is thirty-six. Step 2: she gives away, so take away. Thirty-six take away five is thirty-one."
-          },
-          {
-            "k": "ASK",
-            "text": "Where did the thirty-six come from?",
-            "resp": 10
           },
           {
             "k": "SLIDE",
@@ -614,6 +599,10 @@
             "resp": 12
           },
           {
+            "k": "SAY",
+            "text": "If a tool gets stuck, wait. Try another tool. Try smaller numbers. Or ask. "
+          },
+          {
             "k": "STUCK",
             "text": "If a child reads fewer than as add: ask who has more, and who has the greater number. If a child leaves Ravi out: put counters in a line on the shared slide or whiteboard and touch each one."
           },
@@ -642,6 +631,114 @@
             "k": "WORK",
             "text": "Call the four moves. Children lean forward and back in their chair or standing, in the space they have. Say each count clearly; children count quietly along. Everyone ends back upright: 3, 1, 5, 0.",
             "s": 100
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-quest1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming to the Pearl Cave, and eight gates are in the way, and you choose your tool at each one. At each gate there is a puzzle for you. You work on your own paper with your quest partner beside you."
+          },
+          {
+            "k": "SAY",
+            "text": "It is a game, not a race, and nobody gets a score. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
+          },
+          {
+            "k": "DO",
+            "text": "Pause the recording. Children take out the closed Quest Log, a pencil and a ruler. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1.",
+            "s": 30
+          },
+          {
+            "k": "SAY",
+            "text": "Under every gate is a row of tools. Circle the tool you used, then tick I checked. There is no wrong tool."
+          },
+          {
+            "k": "READ",
+            "text": "Page 1. Gate 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Gate 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
+            "s": 108
+          },
+          {
+            "k": "SAY",
+            "text": "Gates one and two are open! Mi swims on. Turn to page 2."
+          },
+          {
+            "k": "READ",
+            "text": "Gate 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it. Gate 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. Gate 5. Part a: write 52 plus 30. Part b: write 74 take away 31."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 2 (gates 3 to 5).",
+            "s": 158
+          },
+          {
+            "k": "SAY",
+            "text": "Gates three, four and five are open!"
+          },
+          {
+            "k": "MOVE",
+            "text": "One-minute stretch: stand, shake out your hands, sip some water. Paper stays on the table.",
+            "s": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Turn to page 3. You need your ruler for gate 7."
+          },
+          {
+            "k": "READ",
+            "text": "Gate 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box. Gate 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 3 (gates 6 and 7).",
+            "s": 178
+          },
+          {
+            "k": "SAY",
+            "text": "Gates six and seven are open! The Pearl Cave is just ahead. Turn to page 4."
+          },
+          {
+            "k": "READ",
+            "text": "Gate 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now. The secret cave has one more puzzle, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line? Circle the tool you used, and write why you chose it."
+          },
+          {
+            "k": "WORK",
+            "text": "Children work quietly on page 4: gate 8, then the optional secret cave item if they wish.",
+            "s": 178
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-quest2"
+          },
+          {
+            "k": "SAY",
+            "text": "You reached the Pearl Cave! Make sure your name is on page 1 and close your Quest Log. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. Mi's tutor will send you one line about what we saw, never a mark."
+          },
+          {
+            "k": "DO",
+            "text": "Say nothing about answers. Remind the group that nothing is added up and no answer is read out. Restart the recording. Children who did not finish may use the flex time at the end. Then the workbook.",
+            "s": 25
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who says they cannot do a gate: say to the whole group that skipping is fine, Mi swims round it, and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer."
+          },
+          {
+            "k": "NOTE",
+            "text": "The answers, your private notes sheet for each child, the group advice sheet and the one-line templates for the grown-up are in L10_Quest_Tutor_Notes.pdf. Do not collect or look at any paper during the lesson. Photos arrive only on the program's business WhatsApp and the line goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the quest takes its place in class."
           }
         ]
       },
@@ -756,6 +853,11 @@
             "resp": 35
           },
           {
+            "k": "ASK",
+            "text": "Which tool did you pick first today, and why? Draw it, Act it out, Spot the pattern, or List every way? Volunteers first.",
+            "resp": 20
+          },
+          {
             "k": "SLIDE",
             "slide": "s-sneakans"
           },
@@ -764,117 +866,8 @@
             "text": "Remember puzzle two? Ben has 3 more than Ali, and Ali has 4. Ben has seven. Together they have eleven."
           },
           {
-            "k": "ASK",
-            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
-            "resp": 12
-          },
-          {
             "k": "NOTE",
             "text": "Model answer: No. Fewer means less. Ali has 20 - 5 = 15. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
-          }
-        ]
-      },
-      {
-        "part": "exit",
-        "lines": [
-          {
-            "k": "SLIDE",
-            "slide": "s-quest1"
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
-          },
-          {
-            "k": "SAY",
-            "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming to the Pearl Cave, and eight gates are in the way. At each gate there is a puzzle for you. You work on your own paper with your quest partner beside you."
-          },
-          {
-            "k": "SAY",
-            "text": "It is a game, not a race, and nobody gets a score. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
-          },
-          {
-            "k": "DO",
-            "text": "Pause the recording. Children take out the closed Quest Log, a pencil and a ruler. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1.",
-            "s": 30
-          },
-          {
-            "k": "READ",
-            "text": "Page 1. Gate 1. Look at the sticks. How many bundles of ten, and how many single sticks? Write them. Then write how many sticks there are altogether. Gate 2. Fill in the blanks. Part a: look at the number line. Which number is the arrow pointing to? Part b: count on in tens and write the next number: 14, 24, 34."
-          },
-          {
-            "k": "WORK",
-            "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
-            "s": 100
-          },
-          {
-            "k": "SAY",
-            "text": "Gates one and two are open! Mi swims on. Turn to page 2."
-          },
-          {
-            "k": "READ",
-            "text": "Gate 3. You have two cards, 3 and 8. Use both cards to make the greatest number you can. Write it. Gate 4. Look at the ten frames: 7 and 5. Write 7 plus 5. Then write 37 plus 5. Gate 5. Part a: write 52 plus 30. Part b: write 74 take away 31."
-          },
-          {
-            "k": "WORK",
-            "text": "Children work quietly on page 2 (gates 3 to 5).",
-            "s": 150
-          },
-          {
-            "k": "SAY",
-            "text": "Gates three, four and five are open!"
-          },
-          {
-            "k": "MOVE",
-            "text": "One-minute stretch: stand, shake out your hands, sip some water. Paper stays on the table.",
-            "s": 40
-          },
-          {
-            "k": "SAY",
-            "text": "Turn to page 3. You need your ruler for gate 7."
-          },
-          {
-            "k": "READ",
-            "text": "Gate 6. Fill in the missing number in each box. Part a: 8 plus 4 equals 6 plus box. Part b: 60 plus 10 equals 50 plus box. Gate 7. Use your ruler. Part a: draw a line 6 centimetres long, starting at the dot. Part b: write how long a line 4 centimetres longer than your line is."
-          },
-          {
-            "k": "WORK",
-            "text": "Children work quietly on page 3 (gates 6 and 7).",
-            "s": 170
-          },
-          {
-            "k": "SAY",
-            "text": "Gates six and seven are open! The Pearl Cave is just ahead. Turn to page 4."
-          },
-          {
-            "k": "READ",
-            "text": "Gate 8. Read it twice. Mei has 35 stickers. Ali gives her 10 more stickers. Then she gives 3 stickers to Ben. Write a number sentence for Step 1 and for Step 2. The last number you write is how many stickers Mei has now. The secret cave has one more puzzle, and it is optional. You may skip it. Ali is in a line. There are 5 children in front of him and 3 children behind him. How many children are in the line?"
-          },
-          {
-            "k": "WORK",
-            "text": "Children work quietly on page 4: gate 8, then the optional secret cave item if they wish.",
-            "s": 170
-          },
-          {
-            "k": "SLIDE",
-            "slide": "s-quest2"
-          },
-          {
-            "k": "SAY",
-            "text": "You reached the Pearl Cave! Make sure your name is on page 1 and close your Quest Log. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. Mi's tutor will send you one line about what we saw, never a mark."
-          },
-          {
-            "k": "DO",
-            "text": "Say nothing about answers. Remind the group that nothing is added up and no answer is read out. Restart the recording. Children who did not finish may use the flex time at the end.",
-            "s": 25
-          },
-          {
-            "k": "STUCK",
-            "text": "A child who says they cannot do a gate: say to the whole group that skipping is fine, Mi swims round it, and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer."
-          },
-          {
-            "k": "NOTE",
-            "text": "The answers, your private notes sheet for each child, the group advice sheet and the one-line templates for the grown-up are in L10_Quest_Tutor_Notes.pdf. Do not collect or look at any paper during the lesson. Photos arrive only on the program's business WhatsApp and the line goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the quest takes its place in class."
           }
         ]
       },
@@ -891,7 +884,7 @@
           },
           {
             "k": "SAY",
-            "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you still need help, tick I am still stuck and show your grown-up. You can pass. Nobody reads it out."
+            "text": "Look-back. Tick the tool you used, and tick I checked. Tick what helped you. Write or draw one thing you did well. Still stuck? Tick that box. You can pass. Nobody reads it out."
           },
           {
             "k": "WORK",
@@ -994,13 +987,13 @@
           "t": "card",
           "head": "TODAY WE WILL",
           "items": [
-            "Read stories twice and write one step at a time.",
-            "Then we show what we learned this term."
+            "Read stories twice. Choose a tool for each one.",
+            "Then we play Mi's Challenge Quest."
           ]
         }
       ],
-      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 32, brain break 32 to 35, workbook 35 to 59, talk 59 to 63, Mi's Challenge Quest 63 to 83, look-back 83 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off. Say that Mi's Challenge Quest, after the break, is a game on private paper with a quest partner and is not a race.",
-      "subtitle": "Read it twice: addition and subtraction in stories",
+      "note": "Lesson 10 of Term 1, the last lesson of the term. 90 minutes. Objective: read a short story twice and write one number sentence for each step. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 32, brain break 32 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 79, talk 79 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off. Say that today we choose a tool for each story, and that Mi's Challenge Quest, straight after the break, is a game on private paper with a quest partner and is not a race.",
+      "subtitle": "Read it twice, choose a tool, check",
       "mascot": {
         "size": "l",
         "say": "Hi, I'm Mi. Let's notice, test and explain why!"
@@ -1083,7 +1076,7 @@
           "text": "Add or take away? Say it."
         }
       ],
-      "note": "Read the two rows aloud, then ask: Siti eats 3 sweets (take away). Ali finds 5 more shells (add). Mei gives away 2 stickers (take away). 4 more children join (add). Children answer aloud or with a thumb up for add and down for take away. Say that today we also meet the words more than and fewer than."
+      "note": "Read the two rows aloud, then ask: Siti eats 3 sweets (take away). Ali finds 5 more shells (add). Mei gives away 2 stickers (take away). Children answer aloud or with a thumb up for add and down for take away. Say that today we also meet the words more than and fewer than."
     },
     {
       "id": "s-rem3",
@@ -1104,8 +1097,7 @@
           "items": [
             "40 + 20",
             "37 + 10",
-            "56 - 20",
-            "24 + 5"
+            "56 - 20"
           ]
         },
         {
@@ -1113,7 +1105,7 @@
           "text": "Say the answers. Think of tens and ones."
         }
       ],
-      "note": "Answers: 60, 47, 36, 29. Show 37 as 3 bundles and 7 singles: 37 + 10 is one more bundle, 47. 56 - 20 takes 2 bundles, 36. 24 + 5 adds 5 singles, 29. This is spiral review of adding and taking away tens and ones, so a child who joins cold can do the lesson. Say the tens word slowly: forty-seven."
+      "note": "Answers: 60, 47, 36. Show 37 as 3 bundles and 7 singles: 37 + 10 is one more bundle, 47. 56 - 20 takes 2 bundles, 36. This is spiral review of adding and taking away tens and ones, so a child who joins cold can do the lesson. Say the tens word slowly: forty-seven."
     },
     {
       "id": "s-rem4",
@@ -1138,6 +1130,45 @@
         }
       ],
       "note": "Read each short story twice and ask which number sentence fits, then the answer. Ben has 6 cards and gets 4 more: 6 + 4 = 10. Siti has 9 beads and loses 3: 9 - 3 = 6. Ali has 12 marbles and wins 5: 12 + 5 = 17. Children answer aloud or show a thumb up for the first sentence and down for the second. No writing yet."
+    },
+    {
+      "id": "s-rem5",
+      "part": "remember",
+      "kind": "light",
+      "title": "Our four tools",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Tool",
+              "What it does"
+            ],
+            [
+              "Draw it",
+              "Draw a picture or a bar of what the story says."
+            ],
+            [
+              "Act it out",
+              "Use counters, paper or people to show it."
+            ],
+            [
+              "Spot the pattern",
+              "Look for what repeats or grows."
+            ],
+            [
+              "List every way",
+              "Write each way down, in order, so none is missed."
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Which tool would you start with?"
+        }
+      ],
+      "note": "Four tools met in Term 1: Draw it, Act it out, Spot the pattern, List every way. Read the card names and the one-line meanings aloud. Then ask which tool a child would start with for Siti has 9 beads and loses 3 (Act it out with counters, or Draw it, both are good). There is no wrong tool. A child who joins cold gets the tools from this slide. Answers are by pointing, thumb or one word."
     },
     {
       "id": "s-sneak",
@@ -1273,7 +1304,7 @@
       "id": "s-explore3",
       "part": "explore",
       "kind": "light",
-      "title": "What did we notice?",
+      "title": "What did we notice? Which tool?",
       "blocks": [
         {
           "t": "list",
@@ -1281,11 +1312,11 @@
           "items": [
             "How many steps did each story have?",
             "Did each step add, or take away?",
-            "Where did Step 2 start?"
+            "Which tool did you use? Why?"
           ]
         }
       ],
-      "note": "Take one or two answers from volunteers. Key ideas: each story had two steps; each step was one add or one take away; Step 2 starts from the answer to Step 1. Repeat a child's answer in your own words so the recording picks it up. This sets up the mini-lesson."
+      "note": "Take one or two answers from volunteers. Key ideas: each story had two steps; each step was one add or one take away; Step 2 starts from the answer to Step 1. Then ask which tool a child used (counters is Act it out; a picture is Draw it) and why. Any tool that got the answer is a good tool, and two children may have used different ones. Repeat a child's answer in your own words so the recording picks it up. This sets up the mini-lesson."
     },
     {
       "id": "s-m1",
@@ -1522,9 +1553,13 @@
         {
           "t": "p",
           "text": "5 + 2 + 1 = 8"
+        },
+        {
+          "t": "chip",
+          "text": "Stuck? Wait. Try another tool. Try smaller numbers. Ask."
         }
       ],
-      "note": "A reading trap. Show the line on a shared whiteboard, a blank slide or with counters: 5 children, then Ravi, then 2 children. 5 + 2 = 7 leaves Ravi out, so add 1 more: 8 children. Ask: who is in the group? Always check you counted everyone, including the person in the story. This is the taught idea for the Think harder page."
+      "note": "A reading trap. Show the line on a shared whiteboard, a blank slide or with counters: 5 children, then Ravi, then 2 children. 5 + 2 = 7 leaves Ravi out, so add 1 more: 8 children. Ask: who is in the group? Always check you counted everyone, including the person in the story. This is the taught idea for the Think harder page. Then say the stuck routine once: if a tool gets stuck, wait, try another tool, try smaller numbers, or ask. For this story a child who counts 7 and stops can switch to counters in a line."
     },
     {
       "id": "s-break",
@@ -1551,6 +1586,71 @@
         }
       ],
       "note": "Three minutes. Stand up on camera. Call each move; children lean forward and back in the space they have (no stepping backwards): add 3, take away 2, add 4, take away 5. Say each count clearly; children count quietly along. After the four moves, everyone is back at the chair: 3, 1, 5, 0. No equipment; keep it gentle for small spaces."
+    },
+    {
+      "id": "s-quest1",
+      "part": "exit",
+      "kind": "light",
+      "title": "Mi's Chal­lenge Quest",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Your own paper. Mi swims with you."
+        },
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Open your Quest Log. Name on page 1.",
+            "Pencil and ruler ready.",
+            "Your quest partner sits beside you.",
+            "I read each gate. Then you write.",
+            "Circle your tool under each gate. Tick I checked.",
+            "You may skip a gate. It is not a race."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "AFTER",
+          "items": [
+            "A grown-up takes a photo of each page and sends it to the program's business WhatsApp.",
+            "Nothing is shown to the group."
+          ]
+        }
+      ],
+      "note": "Introduce the quest for about a minute: Mi the dolphin swims to the Pearl Cave through 8 gates and an optional secret cave (about 20 minutes, minutes 35 to 55, straight after the break), on your own private paper with a quest partner beside you; a game, not a race; under each gate the child circles the tool they used (or In my head) and ticks I checked, and no tool is wrong; you may skip any gate; no answers are said aloud; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the quest tutor notes (L10_Quest_Tutor_Notes.pdf).",
+      "no_record": true,
+      "mascot": {
+        "size": "s",
+        "say": "Let's swim to the Pearl Cave!"
+      }
+    },
+    {
+      "id": "s-quest2",
+      "part": "exit",
+      "kind": "light",
+      "title": "The Pearl Cave",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Make sure your name is on page 1.",
+            "Close the Quest Log. Put your pencil down.",
+            "A grown-up takes one photo of each page, flat and from above.",
+            "A grown-up sends the photos to the program's business WhatsApp number in the grown-up note, and nowhere else."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "WELL DONE",
+          "items": [
+            "You reached the Pearl Cave! Mi will tell your grown-up one thing we saw."
+          ]
+        }
+      ],
+      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use the flex time at the end. Restart the recording for the look-back. The number is in the grown-up note, never on a slide.",
+      "no_record": true
     },
     {
       "id": "s-ws1",
@@ -1691,9 +1791,13 @@
         {
           "t": "chip",
           "text": "I think ... because ..."
+        },
+        {
+          "t": "chip",
+          "text": "Which tool did you pick first, and why?"
         }
       ],
-      "note": "One minute of talk to the grown-up next to you or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Fewer means less, so Ali has 20 - 5 = 15. Repeat each child's answer in your own words for the recording."
+      "note": "One minute of talk to the grown-up next to you or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Fewer means less, so Ali has 20 - 5 = 15. Repeat each child's answer in your own words for the recording. Then ask the second talk question: which tool did you pick first today, and why? Listen for a tool being named and a reason in the child's own words (I could see it in a picture). Any tool is fine."
     },
     {
       "id": "s-sneakans",
@@ -1768,70 +1872,6 @@
       "optional": true
     },
     {
-      "id": "s-quest1",
-      "part": "exit",
-      "kind": "light",
-      "title": "Mi's Chal­lenge Quest",
-      "blocks": [
-        {
-          "t": "chip",
-          "text": "Your own paper. Mi swims with you."
-        },
-        {
-          "t": "list",
-          "ordered": true,
-          "items": [
-            "Open your Quest Log. Name on page 1.",
-            "Pencil and ruler ready.",
-            "Your quest partner sits beside you.",
-            "I read each gate. Then you write.",
-            "You may skip a gate. It is not a race."
-          ]
-        },
-        {
-          "t": "card",
-          "head": "AFTER",
-          "items": [
-            "A grown-up takes a photo of each page and sends it to the program's business WhatsApp.",
-            "Nothing is shown to the group."
-          ]
-        }
-      ],
-      "note": "Introduce the quest for about a minute: Mi the dolphin swims to the Pearl Cave through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; no answers are said aloud; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the quest tutor notes (L10_Quest_Tutor_Notes.pdf).",
-      "no_record": true,
-      "mascot": {
-        "size": "s",
-        "say": "Let's swim to the Pearl Cave!"
-      }
-    },
-    {
-      "id": "s-quest2",
-      "part": "exit",
-      "kind": "light",
-      "title": "The Pearl Cave",
-      "blocks": [
-        {
-          "t": "list",
-          "ordered": true,
-          "items": [
-            "Make sure your name is on page 1.",
-            "Close the Quest Log. Put your pencil down.",
-            "A grown-up takes one photo of each page, flat and from above.",
-            "A grown-up sends the photos to the program's business WhatsApp number in the grown-up note, and nowhere else."
-          ]
-        },
-        {
-          "t": "card",
-          "head": "WELL DONE",
-          "items": [
-            "You reached the Pearl Cave! Mi will tell your grown-up one thing we saw."
-          ]
-        }
-      ],
-      "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use the flex time at the end. Restart the recording for the look-back. The number is in the grown-up note, never on a slide.",
-      "no_record": true
-    },
-    {
       "id": "s-look",
       "part": "look",
       "kind": "lookback",
@@ -1841,7 +1881,7 @@
           "t": "lookback"
         }
       ],
-      "note": "Two minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next term with one catch-up question for the whole group; never a direct message.",
+      "note": "Two minutes. Children tick or write the look-back box on page 5, including the tool they used and I checked. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next term with one catch-up question for the whole group; never a direct message.",
       "mascot": {
         "size": "s",
         "say": "Take your time. You can pass."
@@ -2511,7 +2551,7 @@
     "question": "Siti has 20 stickers. Ali has 5 fewer stickers than Siti. Ravi says Ali has 25 stickers. Do you agree? Use counters to explain.",
     "starter": "I think ... because ...",
     "answer": "No. Fewer means less. Ali has 5 fewer than 20, so Ali has 20 - 5 = 15 stickers. Siti has more than Ali, so 25 cannot be right.",
-    "look_for": "A reason that uses the word fewer or less and shows 20 with 5 taken away (not just because 25 is too big)."
+    "look_for": "A reason that uses the word fewer or less and shows 20 with 5 taken away (not just because 25 is too big). Then ask: which tool did you pick first, and why? Listen for a tool being named and any reason in the child's own words."
   },
   "exit": [
     {
@@ -2587,11 +2627,12 @@
       "something else"
     ],
     "helped": [
-      "counters",
-      "drawing it",
-      "reading twice",
-      "I asked for help",
-      "I was not stuck"
+      "Draw it",
+      "Act it out",
+      "Spot the pattern",
+      "List every way",
+      "I checked",
+      "I asked for help"
     ],
     "next": [
       "drawing it",
@@ -3499,7 +3540,7 @@
     ]
   },
   "parent": {
-    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal­lenge Quest, our end-of-term game with Mi, is played on private paper and is optional; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
+    "summary": "We read stories twice, chose a tool (Draw it, Act it out, Spot the pattern or List every way) and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal­lenge Quest, our end-of-term game with Mi, is played on private paper and is optional; under each gate your child circles the tool they used; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "step: one thing that happens",
       "read it twice: story, then numbers",
@@ -3514,11 +3555,12 @@
     "ask": [
       "What happens first? What happens next?",
       "Do we add or take away? How do you know?",
-      "Did we count everyone?"
+      "Did we count everyone?",
+      "Which tool did you pick first, and why?"
     ],
     "when_stuck": "Let your child use counters or draw the story, and wait 10 seconds before helping. Skipping a hard question is fine. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962.",
     "next": "Term 2 starts with its Lesson 1: Who Is Where? If your child played Mi's Chal­lenge Quest, send one photo of each Quest Log page to the business WhatsApp the same day, as in the grown-up note. Photos are kept 90 days after the program ends, then deleted. The recording has the tutor, the shared screen and any voice that is not muted. The recording link is private to your family: please do not share it.",
-    "report_line": "Your child is learning to read a story twice and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', and Mi's Chal­lenge Quest.",
+    "report_line": "Your child is learning to read a story twice, choose a tool and write one step at a time. This week: two-step stories within 100, 'more than' and 'fewer than', choosing a tool, and Mi's Chal­lenge Quest.",
     "term_line": "Your child is learning to see numbers as tens and ones and to solve problems one step at a time.",
     "quote": "One step at a time. Read it twice, then write one number sentence for each step.",
     "next_materials": [
@@ -3542,12 +3584,13 @@
     "Have the slides open and your own watch where only you can see it (the deck has no timer slide). Never show a clock, countdown or timer on the shared screen during the quest. Pause the recording for the whole quest and restart it for the look-back.",
     "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes.",
     "Quest photos arrive only on the program's business WhatsApp, +65 9880 5962; open them there, never on a personal phone. Write your private notes from the photos and what you saw on camera, then save the photos to the program's private file store and delete them from the chat. The program keeps them for 90 days after the program ends, then deletes them. Delete each child's notes sheet once the line is sent; keep the group advice sheet for next term's tutor.",
-    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."
+    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder.",
+    "Lesson 10 is the choose-the-tool lesson of Term 1: the tools are Draw it, Act it out, Spot the pattern and List every way (names exactly as on the toolbox card). Say a tool name when you see a child use it, never to hint an answer, and never mark a choice. The three-word scale (with help, with a prompt, on their own) is for your private notes sheet only: see section 5 of the quest tutor notes."
   ],
   "spare_time": {
     "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide. In this lesson the buffer may first be needed by children finishing the quest.",
     "rules": [
-      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 59, use one menu activity then.",
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 79, use one menu activity then.",
       "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
       "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
     ],
@@ -3594,8 +3637,8 @@
   "challenge_quest": {
     "title": "Mi's Challenge Quest",
     "minutes": 20,
-    "where": "Lesson 10 (the last lesson of the term), minutes 63 to 83, after the break and the workbook; or at the make-up slot",
-    "plan_note": "The last slot of the term is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 2 and 4 share gate 2 and Lessons 6 and 7 share gate 5, so every lesson of the term is still visited. A middle child needs about 16 minutes of reading aloud and quiet work; a slower child may use the 5 flex minutes at the end.",
+    "where": "Lesson 10 (the last lesson of the term and its choose-the-tool lesson), minutes 35 to 55, straight after the break; or at the make-up slot",
+    "plan_note": "The last slot of the term is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 2 and 4 share gate 2 and Lessons 6 and 7 share gate 5, so every lesson of the term is still visited. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use the 4 flex minutes at the end. Quest v2: under every gate the child circles the tool they used and ticks I checked; gate 8 is a mixed gate with no single lesson tag; the secret cave asks for a tool and a because line.",
     "sheet_pages": 4,
     "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
     "child_rules": [
@@ -3913,7 +3956,7 @@
       },
       {
         "id": "C8",
-        "lesson": 10,
+        "lesson": "mixed",
         "strand": "lengthstories",
         "page": 4,
         "tier": "start",
@@ -3946,6 +3989,10 @@
           "32 (taking the 10 away from 35 and adding 3 or similar).",
           "48 (adding both numbers).",
           "Using 35 again in Step 2."
+        ],
+        "tools": [
+          "draw",
+          "actout"
         ]
       }
     ],
@@ -3974,7 +4021,12 @@
       "mistakes": [
         "8 (leaving Ali out)."
       ],
-      "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing."
+      "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing.",
+      "because": true,
+      "tools": [
+        "draw",
+        "actout"
+      ]
     },
     "strands": [
       {
@@ -4056,10 +4108,10 @@
     "give": [
       "A week before: send the grown-up note (L10_Quest_Parent_Note.pdf) and the Quest Log (L10_Quest_Log.pdf) with the lesson materials. Families print the Quest Log at 100%, keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family with no printer tells you: arrange another way (for example the make-up slot).",
       "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. It is not a race, a gate may be skipped, and nothing is shown to the group.",
-      "Start at minute 63 (after the break and the workbook) and finish by minute 83. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
-      "Read each page aloud, one gate at a time, then leave quiet working time: about 2 minutes for page 1, 3 for page 2, 4 for page 3 and 3.5 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 16 minutes in all; a slower child may use the 5 flex minutes.",
+      "Start at minute 35 (straight after the break, before the workbook) and finish by minute 55. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
+      "Read each page aloud, one gate at a time, then leave quiet working time: about 2 minutes for page 1, 3 for page 2, 4 for page 3 and 3.5 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may use the 4 flex minutes.",
       "Allowed: fingers, counters, the kit squares, the ruler for gate 7, and talk with the quest partner. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the Quest Log over and draws quietly. Colouring a stone on the quest map means I had a go, never I got it right.",
-      "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. A child still writing may use the flex minutes; nothing new is started there. While children work, notice (do not write on the shared screen) how they start: counters, drawing, number line, talking to the partner."
+      "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. A child still writing may use the flex minutes; nothing new is started there. While children work, notice (do not write on the shared screen) how they start: counters, drawing, number line, talking to the partner, and which tool they circle."
     ],
     "after": [
       "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view including the 10 cm bar on page 4, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
@@ -4081,13 +4133,14 @@
       "No answer is said aloud during or after the quest. Gates open for everyone, whatever the answers.",
       "No clock, countdown or timer is shown; nobody is told who finished first or last.",
       "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the line goes to the parent only; no private message to any child.",
-      "No score, no x out of 10, no ranking, no tally, no comparison between children, not even in your own notes.",
+      "No score, no x out of 10, no ranking, no comparison between children, and no tally or count of any kind on a child's page or anywhere a family can see. In your own notes: words only. You may circle one of the three words (with help / with a prompt / on their own) for each habit in the private notes sheet (section 5); never add the circles up, never compare children, and never say or show the words to a child or a grown-up.",
       "The recording captures the tutor, the shared screen and any voice that is not muted: pause it for the whole quest. The WhatsApp number is never on a slide."
     ],
     "notes_sheet": {
-      "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look.",
+      "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look. Under the gates table you will find the four habits and the three-word scale: private, words only, never counted.",
       "prompts": [
         "Something the child did well (a named strength, for example: explained why 62 is greater than 26 using bundles of ten)",
+        "Which tool they circled (a word), and a reason in their own words (the because line in the secret cave, or what they said)",
         "How they started: counters, drawing, number line, or in their head",
         "Where they paused or turned to their partner, and what helped",
         "One next step for home (small and concrete)",
@@ -4145,7 +4198,9 @@
       },
       "stretch_seconds": 40,
       "slow_child_factor": 1.7
-    }
+    },
+    "tool_row": "term",
+    "quest_map": false
   },
   "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the look-back."
 }

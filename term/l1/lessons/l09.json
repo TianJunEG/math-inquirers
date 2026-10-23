@@ -814,7 +814,7 @@
      },
      {
       "k": "SAY",
-      "text": "Well done, inquirers. Next lesson is Story Steps, the last lesson of the term, with Mi's Challenge Quest, a game with Mi. You need about 20 counters, such as buttons or coins, your ruler, a pencil and paper, and the Quest Log in its envelope, kept closed. You also need a quest partner: a grown-up, or a brother or sister. Your grown-up will get a note about the Quest Log to print."
+      "text": "Well done, inquirers. Next lesson is Story Steps, the last of the term. We choose a tool for each story, then play Mi's Challenge Quest. You need about 20 counters, such as buttons or coins, your ruler, a pencil and paper, and the Quest Log in its envelope, kept closed. You also need a quest partner: a grown-up, or a brother or sister. Your grown-up will get a note about the Quest Log to print."
      },
      {
       "k": "SLIDE",
@@ -1614,7 +1614,7 @@
      "t": "card",
      "head": "NEXT LESSON",
      "items": [
-      "Story Steps and Mi's Challenge Quest. Have ready: about 20 counters, your ruler, a pencil and paper, the Quest Log in its envelope (keep it closed) and a quest partner (a grown-up, or a brother or sister)."
+      "Story Steps (choosing a tool) and Mi's Challenge Quest. Have ready: about 20 counters, your ruler, a pencil and paper, the Quest Log in its envelope (keep it closed) and a quest partner (a grown-up, or a brother or sister)."
      ]
     }
    ],
@@ -3009,7 +3009,7 @@
    "Does the line start at the 0 mark?"
   ],
   "when_stuck": "Let your child slide a finger along the ruler and count the jumps aloud. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
-  "next": "Lesson 10: Story Steps: Read It Twice, with Mi's Challenge Quest (a game with Mi). Your tutor will send the Quest Log and a note. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+  "next": "Lesson 10: Story Steps: Read It Twice. We choose a tool for each story, then play Mi's Challenge Quest (a game with Mi). Your tutor will send the Quest Log and a note. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
   "report_line": "Your child is learning to measure and draw lines in centimetres with a ruler and to say how they know. This week: starting at 0, reading the end mark, and comparing lengths.",
   "term_line": "Your child is learning to see numbers as tens and ones, to measure length in centimetres with a ruler and to say why.",
   "next_materials": [

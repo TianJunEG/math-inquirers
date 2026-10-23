@@ -299,7 +299,7 @@ def check_block(d, eq):
     ex = load_extras()
     import svg, validate
     qs = c['questions']
-    lessons_of = lambda q: q.get('lessons') or [q['lesson']]
+    lessons_of = lambda q: q.get('lessons') or [10 if q['lesson'] == 'mixed' else q['lesson']]   # Quest v2: gate 8 is a mixed gate (no lesson tag); its content is the lesson 10 story idea
     eq([q['id'] for q in qs], [f'C{i}' for i in range(1, 9)], 'eight questions C1 to C8')
     eq(sorted(l for q in qs for l in lessons_of(q)), list(range(1, 11)) if False else [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'every lesson 1 to 10 is covered once (Q2 covers lessons 2 and 4, Q5 covers lessons 6 and 7)')
     eq(all(q['tier'] == 'start' for q in qs), True, 'all eight are Start here')
@@ -386,8 +386,8 @@ def check_block(d, eq):
     mid = child + read
     slow = child * c['timing_model']['slow_child_factor'] + read * 1.1
     eq(mid <= 17 * 60, True, 'a middle child needs at most 17 minutes of work and reading')
-    eq(slow <= 25 * 60, True, 'a slower child needs at most 25 minutes (20 plus the 5 flex minutes)')
-    eq(pm['exit']['start'], 63, 'the quest starts at minute 63 (after the break)'); eq(pm['exit']['end'], 83, 'the quest ends at minute 83')
+    eq(slow <= 24 * 60, True, 'a slower child needs at most 24 minutes (20 plus the 4 flex minutes)')
+    eq(pm['exit']['start'], 35, 'the quest starts at minute 35 (straight after the break, Quest v2 skeleton)'); eq(pm['exit']['end'], 55, 'the quest ends at minute 55')
     eq(sum(p_['end'] - p_['start'] for p_ in d['timing']['parts']), 90, 'parts still sum to 90')
     eq(sum(len(p_['parts']) for p_ in qs), 15, 'the quest has 15 answer parts in all (cut from 22 to fit 20 minutes)')
     eq(all(s_.get('optional') and s_['part'] == 'flex' for s_ in d['slides'] if s_['id'] in ('s-exit', 's-exitans')), True, 'the exit ticket slides are optional flex slides: the quest takes its place')

@@ -916,7 +916,7 @@ Verdicts are proposals for the owner. "Cut" means drop the lesson and spend the 
 **What it cannot show.**
 1. **Tool choice.** Each gate is tagged to a lesson ("Lesson 29" on the answer sheet), so recalling the lesson's method is enough. Nothing asks "which tool did you choose, and why?". The sheet does not carry the tool names, because the tools are not named in Blocks 1 to 3.
 2. **Persistence.** Two and a half minutes a gate, a recording paused during the Quest, and a photo of the finished page. A tutor sees the end product, not the struggle.
-3. **Growth.** One snapshot per block, no start-of-block baseline, and the privacy checklist forbids any "tally, not even in your own notes".
+3. **Growth.** One snapshot per block, no start-of-block baseline, and the privacy checklist forbade any "tally, not even in your own notes" (reworded 23 Oct 2026 night, PRIVACY-REWORD: the checklist now bans any tally or count on a child's page or anywhere a family can see, and allows one of three words per habit in the tutor's own private notes).
 4. **Reasoning in the child's words.** Most gates have numeric answers; the reasoning rung is visible in two gates per Quest at most.
 5. **At Levels 2 to 6 the plans still describe a different thing**: a 10-question, 25 to 30 minute check (`level_2_year_plan.md` section 5, `level_6_year_plan.md` section 5), with a final "Explain" question. That text is superseded by the Quest (`l3_preflight.md` finding 4, `l4_preflight.md` finding 5, `l5_preflight.md` finding 2) and should be rewritten before Level 2 is built.
 
@@ -964,7 +964,7 @@ This is observation, not assessment. It respects the owner's rules: no test, no 
 
 A three-word scale is optional and is **an owner decision** because the Quest privacy checklist rules out scores and tallies: *with help, with a prompt, on their own*. Used per habit across the year for one child, it shows direction without ranking children. If the owner prefers, use words only.
 
-**Status, 23 Oct 2026 (night): accepted by the owner (TERM-ALL-RECOMMENDED, decision 3), as an optional item in PRIVATE tutor notes only.** The three words (*with help, with a prompt, on their own*) are written per habit, per child, per block, in the tutor's own notes; never shown to children or parents, never counted or tabulated, never compared between children. No code or lesson file has been changed. When Quest v2 is built (`docs/pedagogy/lesson_x10_consolidation_plan.md`, section 1), the line in every Quest's `challenge_quest.privacy_checklist` that says "no tally ... not even in your own notes" must be reworded to allow a word per habit while still banning counts and tallies, and the `b_quest.py` tutor-note check (which bans "record sheet") must not be tripped by the wording.
+**Status, 23 Oct 2026 (night): accepted by the owner (TERM-ALL-RECOMMENDED, decision 3), as an optional item in PRIVATE tutor notes only.** The three words (*with help, with a prompt, on their own*) are written per habit, per child, per block, in the tutor's own notes; never shown to children or parents, never counted or tabulated, never compared between children. **Built 23 Oct 2026 (night): `term/l1/tools/b_quest.py` (Quest v2) prints the habits and the three-word scale in the Quest Tutor Notes only, bans the scale phrase on child and parent pages, and replaces the old checklist line (see `term/l1/audit/X10_QUEST_HANDOFF.md`).** Original note: no code or lesson file had been changed. When Quest v2 is built (`docs/pedagogy/lesson_x10_consolidation_plan.md`, section 1), the line in every Quest's `challenge_quest.privacy_checklist` that says "no tally ... not even in your own notes" must be reworded to allow a word per habit while still banning counts and tallies, and the `b_quest.py` tutor-note check (which bans "record sheet") must not be tripped by the wording.
 
 ### 11.3 Parent report lines (replacing the generic `term_line`)
 
@@ -1000,7 +1000,7 @@ The data fixes listed after the decisions were applied on 23 Oct 2026 as plan hy
 **Decisions**
 1. Adopt the toolbox spine (section 2) and the tool schedule (2.2): yes or no. This needs a one-page card and a look-back change, not new lessons, plus about four replacement lessons per level (section 8).
 2. Should lesson x.0 become a choose-the-tool consolidation lesson that hosts the Quest (section 8), moving the new ideas of Level 1 Lessons 10, 20, 30 into earlier slots?
-3. Is a three-word independence scale allowed in private tutor notes (11.2), given the "no tally" rule?
+3. Is a three-word independence scale allowed in private tutor notes (11.2), given the "no tally" rule? (Answered YES, PRIVACY-REWORD: private tutor notes only; the rule now bans tallies and counts on children's pages and anything families see.)
 4. Level 1 Term 1: keep the stronger-arithmetic decision, or move some of Lessons 7, 14, 16, 17 to Think harder only (research note criterion 12)?
 5. Level 6 intake and Terms 3 and 4 around the PSLE (plan open question 1), and whether Term 3 is a bridge or an acceleration block.
 6. The holiday course: confirm that the toolbox stays out of it (section 1.2) and that the "Try it" job is acceptable.
