@@ -56,7 +56,7 @@ u.S(2, 'Every row, column and diagonal has the same total.', parts=[
 u.S(2, 'A brick is made by adding the 2 bricks below it.', parts=[
     P('a', 'P = {b}', A('750')), P('b', 'Q = {b}', A('480'))],
     why='P and 830 make the top brick: 830 + P = 1580, so P = 750. Q and 270 make P: Q + 270 = 750, so Q = 480. Check: 350 + 480 = 830.',
-    figure={'type': 'l3_pyramid', 'rows': [[1580], [830, '@P'], [350, '@Q', 270]], 'width_mm': 66}, figside=True)
+    figure={'type': 'l3_pyramid', 'rows': [[1580], [830, '@P'], [350, '@Q', 270]], 'width_mm': 60}, figside=True)
 u.S(2, 'Find the 2 missing digits.', parts=[
     P('a', 'The digit in the hundreds place of the top number is {b}.', A('6')),
     P('b', 'The digit in the tens place of the number being added is {b}.', A('9'))],
@@ -77,9 +77,9 @@ u.S(3, 'Use the cards once each to make two 3-digit numbers.', parts=[
     P('a', 'The greatest sum is {b}.', A('1595')), P('b', 'The smallest sum is {b}.', A('605'))],
     why='For the greatest sum, put the 2 greatest digits in the hundreds places. Then the next 2 in the tens places, and the last 2 in the ones places: 800 + 700 + 50 + 40 + 3 + 2 = 1595. For the smallest sum, do the same with the smallest digits first: 200 + 300 + 40 + 50 + 7 + 8 = 605.',
     figure={'type': 'l3_cards', 'items': [2, 3, 4, 5, 7, 8]})
-u.S(3, 'A school collects 1875 cans in Week 1, 2430 cans in Week 2 and 1790 cans in Week 3.', parts=[
-    P('a', 'It collects {b} cans in all.', A('6095')), P('b', 'It collects {b} more cans in Week 2 than in Week 3.', A('640'))],
-    why='(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640. Check: 1790 + 640 = 2430.')
+u.S(3, 'A school collects cans for 3 weeks: 1875, 2430 and 1790.', parts=[
+    P('a', 'In all, the school collects {b} cans.', A('6095')), P('b', 'Week 2 has {b} more cans than Week 3.', A('640'))],
+    why='(a) 1875 + 2430 = 4305, and 4305 + 1790 = 6095. (b) 2430 - 1790 = 640. Check: 1790 + 640 = 2430.', space={'rows': ['Working:']})
 
 # ---------------- Think harder
 u.T('Letters hide digits. The same letter is the same digit. Different letters are different digits.\nAB + AC = BBD', parts=[
@@ -108,7 +108,7 @@ u.G('Letters hide digits. The same letter is the same digit. Different letters a
     partsrow=True, space={'rows': ['My tries:']})
 u.G('Beyond Level 3: Pyramids with a hidden number.\nA brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}',
     A('440'),
-    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 66},
+    figure={'type': 'l3_pyramid', 'rows': [[3280], [None, None], [None, None, None], [200, '@X', '@X', 440]], 'width_mm': 60},
     hint='Guess a number for X. Fill the pyramid. Is the top too big?',
     why='In this pyramid the end bricks of the bottom row count once in the top brick and the 2 middle bricks count 3 times each. So 200 + 3 X + 3 X + 440 = 3280. That is 640 + 6 X = 3280, so 6 X = 2640 and X = 440. Check: the next row is 640, 880, 880; then 1520, 1760; then 3280.')
 u.G('Beyond Level 3: Reversing digits.\nReverse the digits of a 2-digit number and add the 2 numbers.', parts=[

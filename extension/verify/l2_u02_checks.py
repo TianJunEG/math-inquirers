@@ -87,17 +87,17 @@ def _():
     return {'a': s([460 - 80]), 'b': s([b]), 'c': s([a])}
 
 
-@check('S06')
+@check('08')
 def _():
     return s([x for x in range(0, 501) if x + 135 + 210 == 500])
 
 
-@check('S07')
+@check('06')
 def _():
     return {'a': s([346 + 278]), 'b': ['Yes' if 614 - 278 == 346 else 'No'], 'c': s([614 - 278])}
 
 
-@check('S08')
+@check('07')
 def _():
     taken = [x for x in range(0, 345) if 345 - x == 128][0]     # the story: 345 start, some taken away, 128 left
     opts = {'(1)': 345 + taken == 128, '(2)': 345 - taken == 128, '(3)': taken - 345 == 128, '(4)': 128 - taken == 345}
@@ -169,7 +169,7 @@ def _():
     assert len(mid) == 1
     # the pattern holds for every 3-digit number with different end digits
     assert all(str(d(n)).zfill(3)[1] == '9' for n in range(100, 1000) if n % 10 != n // 100)
-    return {'a': s([d(742)]), 'b': s([d(831)]), 'c': list(mid), 'd': s([d(954)])}
+    return {'a': s([d(742), d(831)]), 'b': list(mid), 'c': s([d(954)])}
 
 
 @check('G03')

@@ -248,7 +248,7 @@ def vsum(spec, w=None):
 def pyramid(spec, w=None):
     """rows from the top brick down; each row is a list of values (None = empty brick; "@P" = empty brick with the letter P)."""
     rows = spec['rows']
-    bw, bh = spec.get('bw', 132), 62
+    bw, bh = spec.get('bw', 132), spec.get('bh', 68)
     n = len(rows[-1])
     W = n * bw + 20
     P = []

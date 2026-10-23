@@ -78,9 +78,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.8894664006179197,
+   "fill": 0.8882434346035015,
    "over": false,
-   "excess_mm": -28.4,
+   "excess_mm": -28.7,
    "edition": "soft"
   },
   {
@@ -88,9 +88,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8658438465499485,
+   "fill": 0.8820481462409887,
    "over": false,
-   "excess_mm": -34.5,
+   "excess_mm": -30.3,
    "edition": "soft"
   },
   {
@@ -108,9 +108,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9975862512873327,
+   "fill": 0.9965724768280123,
    "over": false,
-   "excess_mm": -0.6,
+   "excess_mm": -0.9,
    "edition": "soft"
   },
   {
@@ -255,9 +255,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 0.8894664006179197,
+   "fill": 0.8882434346035015,
    "over": false,
-   "excess_mm": -28.4,
+   "excess_mm": -28.7,
    "edition": "print"
   },
   {
@@ -265,9 +265,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Start here 3",
    "exempt": false,
-   "fill": 0.8658438465499485,
+   "fill": 0.8820481462409887,
    "over": false,
-   "excess_mm": -34.5,
+   "excess_mm": -30.3,
    "edition": "print"
   },
   {
@@ -285,9 +285,9 @@
    "kind": "practice",
    "label": "Unit 2 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.9975862512873327,
+   "fill": 0.9965724768280123,
    "over": false,
-   "excess_mm": -0.6,
+   "excess_mm": -0.9,
    "edition": "print"
   },
   {

@@ -147,96 +147,6 @@
   {
    "id": "L6U01-S02",
    "tier": "start",
-   "text": "For each sequence, fill in the difference, the rule for the nth term and the 100th term.",
-   "page": 1,
-   "answer": {
-    "value": [
-     "6",
-     "6n + 2",
-     "602",
-     "5",
-     "5n - 2",
-     "498"
-    ],
-    "text": "(a) 6, 6n + 2, 602   (b) 5, 5n − 2, 498",
-    "list": true
-   },
-   "figure": {
-    "type": "l6_grid",
-    "rows": [
-     [
-      "(a) 8, 14, 20, 26, ...",
-      "",
-      "",
-      ""
-     ],
-     [
-      "(b) 3, 8, 13, 18, ...",
-      "",
-      "",
-      ""
-     ]
-    ],
-    "cw": [
-     52,
-     25,
-     32,
-     28
-    ],
-    "rowhead": false,
-    "ch": 10,
-    "head": [
-     "Sequence",
-     "Difference",
-     "nth term",
-     "100th term"
-    ]
-   },
-   "explanation": "(a) The difference is 6. Compare with 6, 12, 18, 24: each term is 2 more, so 6n + 2 and 6 × 100 + 2 = 602. (b) The difference is 5. Each term is 2 less than 5, 10, 15, 20, so 5n − 2 and 5 × 100 − 2 = 498."
-  },
-  {
-   "id": "L6U01-S03",
-   "tier": "start",
-   "text": "A sequence has the rule 5n + 2. Its first terms are 7, 12, 17, 22, ...",
-   "page": 1,
-   "parts": [
-    {
-     "label": "a",
-     "text": "Is 157 a term?  {circ:Yes|No}   If yes, it is term number {b}.",
-     "answer": {
-      "value": [
-       "Yes",
-       "31"
-      ],
-      "text": "Yes, term 31"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Is 205 a term?  {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "No"
-      ],
-      "text": "No"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The 60th term is {b}.",
-     "answer": {
-      "value": [
-       "302"
-      ],
-      "text": "302"
-     }
-    }
-   ],
-   "explanation": "(a) 157 − 2 = 155 = 5 × 31, so 157 is the 31st term. (b) 205 − 2 = 203 is not a multiple of 5. The terms end in 2 or 7, so 205 is not one. (c) 5 × 60 + 2 = 302."
-  },
-  {
-   "id": "L6U01-S04",
-   "tier": "start",
    "text": "Trace the code. The sprite says x first, then changes it. Fill in the trace table.",
    "page": 1,
    "parts": [
@@ -307,10 +217,10 @@
    "partsrow": true
   },
   {
-   "id": "L6U01-S05",
+   "id": "L6U01-S03",
    "tier": "start",
    "text": "Complete the code so that the sprite says the first 15 terms of 11, 18, 25, 32, ...",
-   "page": 2,
+   "page": 1,
    "parts": [
     {
      "label": "a",
@@ -382,6 +292,96 @@
    },
    "explanation": "The 1st term is 11, so set n to 11. Each jump adds 7. The sprite says a term, then changes n, and 15 terms need 15 says: repeat 15. The last number said is the 15th term: 7 × 15 + 4 = 109.",
    "figside": true
+  },
+  {
+   "id": "L6U01-S04",
+   "tier": "start",
+   "text": "For each sequence, fill in the difference, the rule for the nth term and the 100th term.",
+   "page": 2,
+   "answer": {
+    "value": [
+     "6",
+     "6n + 2",
+     "602",
+     "5",
+     "5n - 2",
+     "498"
+    ],
+    "text": "(a) 6, 6n + 2, 602   (b) 5, 5n − 2, 498",
+    "list": true
+   },
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "(a) 8, 14, 20, 26, ...",
+      "",
+      "",
+      ""
+     ],
+     [
+      "(b) 3, 8, 13, 18, ...",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cw": [
+     52,
+     25,
+     32,
+     28
+    ],
+    "rowhead": false,
+    "ch": 10,
+    "head": [
+     "Sequence",
+     "Difference",
+     "nth term",
+     "100th term"
+    ]
+   },
+   "explanation": "(a) The difference is 6. Compare with 6, 12, 18, 24: each term is 2 more, so 6n + 2 and 6 × 100 + 2 = 602. (b) The difference is 5. Each term is 2 less than 5, 10, 15, 20, so 5n − 2 and 5 × 100 − 2 = 498."
+  },
+  {
+   "id": "L6U01-S05",
+   "tier": "start",
+   "text": "A sequence has the rule 5n + 2. Its first terms are 7, 12, 17, 22, ...",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Is 157 a term?  {circ:Yes|No}   If yes, it is term number {b}.",
+     "answer": {
+      "value": [
+       "Yes",
+       "31"
+      ],
+      "text": "Yes, term 31"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is 205 a term?  {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 60th term is {b}.",
+     "answer": {
+      "value": [
+       "302"
+      ],
+      "text": "302"
+     }
+    }
+   ],
+   "explanation": "(a) 157 − 2 = 155 = 5 × 31, so 157 is the 31st term. (b) 205 − 2 = 203 is not a multiple of 5. The terms end in 2 or 7, so 205 is not one. (c) 5 × 60 + 2 = 302."
   },
   {
    "id": "L6U01-S06",
@@ -505,7 +505,7 @@
    "id": "L6U01-S08",
    "tier": "start",
    "text": "Circle the rule that gives each sequence. Test n = 1 and n = 2.",
-   "page": 2,
+   "page": 3,
    "parts": [
     {
      "label": "a",
@@ -988,10 +988,6 @@
     "type": "l6_code",
     "prog": [
      [
-      "hat",
-      "when green flag clicked"
-     ],
-     [
       "var",
       "set t to (0)"
      ],
@@ -1054,30 +1050,15 @@
   {
    "id": "L6U01-C03",
    "tier": "quiz",
-   "text": "The code is: set n to 8, then repeat 20 times: change n by 6.",
+   "text": "The code is: set n to 8, then repeat 20 times: change n by 6. At the end n = {b}, which is term number {b} of 8, 14, 20, ...",
    "page": 6,
-   "parts": [
-    {
-     "label": "a",
-     "text": "The sprite ends with n = {b}.",
-     "answer": {
-      "value": [
-       "128"
-      ],
-      "text": "128"
-     }
-    },
-    {
-     "label": "b",
-     "text": "That is term number {b} of 8, 14, 20, ...",
-     "answer": {
-      "value": [
-       "21"
-      ],
-      "text": "21"
-     }
-    }
-   ],
+   "answer": {
+    "value": [
+     "128",
+     "21"
+    ],
+    "text": "128, term 21"
+   },
    "explanation": "8 + 20 × 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 × 21 + 2 = 128."
   },
   {

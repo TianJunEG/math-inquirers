@@ -172,7 +172,7 @@ I.append(IT(U, 'G', 3, 5,
             'What does this code say? Write t after each repeat.',
             't after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. The repeat stops the first time t is above 100, which is after repeat 14, '
             'so k is 14 and t is 105. (These are the triangle numbers 1, 3, 6, 10, ...: the amount added is 1 more each time.)',
-            fig=code([HAT, ['var', 'set t to (0)'], ['var', 'set k to (0)'], ['ctl', 'repeat until <(t) {gt} (100)>', [['var', 'change k by (1)'], ['var', 'change t by (k)']]], ['look', 'say (k)']]),
+            fig=code([['var', 'set t to (0)'], ['var', 'set k to (0)'], ['ctl', 'repeat until <(t) {gt} (100)>', [['var', 'change k by (1)'], ['var', 'change t by (k)']]], ['look', 'say (k)']]),
             parts=[P('a', 'The code says {b}.', [14]),
                    P('b', 'When it stops, t is {b}.', [105])],
             hint='Write t after every repeat: 1, 3, 6, ... Where does it pass 100?',
@@ -188,10 +188,9 @@ I.append(IT(U, 'C', 2, 6,
             'The rule is 5n + 2. 125 − 2 = 123 is not a multiple of 5. The terms end in 2 or 7, so 125 is not a term.',
             answer=A(['No'], 'No')))
 I.append(IT(U, 'C', 3, 6,
-            'The code is: set n to 8, then repeat 20 times: change n by 6.',
+            'The code is: set n to 8, then repeat 20 times: change n by 6. At the end n = {b}, which is term number {b} of 8, 14, 20, ...',
             '8 + 20 \u00d7 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 \u00d7 21 + 2 = 128.',
-            parts=[P('a', 'The sprite ends with n = {b}.', [128]),
-                   P('b', 'That is term number {b} of 8, 14, 20, ...', [21])]))
+            answer=A([128, 21], '128, term 21')))
 I.append(IT(U, 'C', 4, 6,
             'Mei starts at n = 5. She repeats 4 times: change n by 3, then say n. What is the first number it says?  {b}',
             'The code changes n before it says it. 5 + 3 = 8, so the first number said is 8, not the 1st term 5. To say 5 first, say n before changing it.',

@@ -96,12 +96,12 @@
       "label": "(c)"
      }
     ],
-    "width_mm": 150
+    "width_mm": 140
    },
    "parts": [
     {
      "label": "a",
-     "text": "Sum (a): the missing digits are {b} and {b}.",
+     "text": "Sum (a):  {b}  {b}",
      "answer": {
       "value": [
        "4",
@@ -112,7 +112,7 @@
     },
     {
      "label": "b",
-     "text": "Sum (b): the missing digits are {b} and {b}.",
+     "text": "Sum (b):  {b}  {b}",
      "answer": {
       "value": [
        "4",
@@ -123,7 +123,7 @@
     },
     {
      "label": "c",
-     "text": "Sum (c): the missing digits are {b} and {b}.",
+     "text": "Sum (c):  {b}  {b}",
      "answer": {
       "value": [
        "4",
@@ -168,7 +168,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Sum (a): the missing digits are {b} and {b}.",
+     "text": "Sum (a):  {b}  {b}",
      "answer": {
       "value": [
        "3",
@@ -179,7 +179,7 @@
     },
     {
      "label": "b",
-     "text": "Sum (b): the missing digits are {b} and {b}.",
+     "text": "Sum (b):  {b}  {b}",
      "answer": {
       "value": [
        "1",
@@ -605,7 +605,7 @@
      null,
      null
     ],
-    "width_mm": 70
+    "width_mm": 62
    },
    "parts": [
     {
@@ -740,7 +740,7 @@
      ]
     },
     "width_units": 400,
-    "width_mm": 100
+    "width_mm": 86
    },
    "parts": [
     {
@@ -951,7 +951,7 @@
   {
    "id": "L2U02-C03",
    "tier": "quiz",
-   "text": "Ravi had 800 stickers. He gave 175 to Mei and some to Ben. He had 350 left. How many stickers did he give to Ben? {b}",
+   "text": "Ravi had 800 stickers. He gave 175 to Mei and some to Ben. 350 were left. How many did Ben get? {b}",
    "answer": {
     "value": [
      "275"
@@ -963,7 +963,7 @@
   {
    "id": "L2U02-C04",
    "tier": "quiz",
-   "text": "Two numbers add up to 420. One is 60 more than the other. What is the smaller number? {b}",
+   "text": "Two numbers add up to 420. One is 60 more. What is the smaller number? {b}",
    "answer": {
     "value": [
      "180"

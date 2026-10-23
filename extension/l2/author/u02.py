@@ -24,14 +24,14 @@ def vs(op, rows, label=None):
 
 items = [
  I('start', 1, 'Find the missing digits. Each sum has 2. Write them in the answer boxes, top number first.',
-   figure={'type': 'l2_vsum', 'sums': [vs('+', ['2?4', '35?', '603'], '(a)'), vs('+', ['4?8', '?26', '874'], '(b)'), vs('+', ['?65', '2?8', '703'], '(c)')], 'width_mm': 150},
-   partsrow=True, parts=[P('a', 'Sum (a): the missing digits are {b} and {b}.', ['4', '9'], '4 and 9'),
-          P('b', 'Sum (b): the missing digits are {b} and {b}.', ['4', '4'], '4 and 4'),
-          P('c', 'Sum (c): the missing digits are {b} and {b}.', ['4', '3'], '4 and 3')],
+   figure={'type': 'l2_vsum', 'sums': [vs('+', ['2?4', '35?', '603'], '(a)'), vs('+', ['4?8', '?26', '874'], '(b)'), vs('+', ['?65', '2?8', '703'], '(c)')], 'width_mm': 140},
+   partsrow=True, parts=[P('a', 'Sum (a):  {b}  {b}', ['4', '9'], '4 and 9'),
+          P('b', 'Sum (b):  {b}  {b}', ['4', '4'], '4 and 4'),
+          P('c', 'Sum (c):  {b}  {b}', ['4', '3'], '4 and 3')],
    why='(a) Ones: 4 + 9 = 13, carry 1. Tens: 4 + 5 + 1 = 10, carry 1. Hundreds: 2 + 3 + 1 = 6. So 244 + 359 = 603. (b) Ones: 8 + 6 = 14, carry 1. Tens: 4 + 2 + 1 = 7. Hundreds: 4 + 4 = 8. So 448 + 426 = 874. (c) Ones: 5 + 8 = 13, carry 1. Tens: 6 + 3 + 1 = 10, carry 1. Hundreds: 4 + 2 + 1 = 7. So 465 + 238 = 703.'),
  I('start', 1, 'Find the missing digits in these subtractions. Check each one by adding the answer to the number taken away. Write the digits top number first.',
    figure={'type': 'l2_vsum', 'sums': [vs('-', ['8?5', '26?', '568'], '(a)'), vs('-', ['5?2', '?47', '265'], '(b)')], 'width_mm': 110},
-   partsrow=True, parts=[P('a', 'Sum (a): the missing digits are {b} and {b}.', ['3', '7'], '3 and 7'), P('b', 'Sum (b): the missing digits are {b} and {b}.', ['1', '2'], '1 and 2')],
+   partsrow=True, parts=[P('a', 'Sum (a):  {b}  {b}', ['3', '7'], '3 and 7'), P('b', 'Sum (b):  {b}  {b}', ['1', '2'], '1 and 2')],
    why='Turn each one into an addition. (a) 568 + 267 = 835: ones 8 + 7 = 15, tens 6 + 6 + 1 = 13, hundreds 5 + 2 + 1 = 8. So 835 - 267 = 568. (b) 265 + 247 = 512: ones 5 + 7 = 12, tens 6 + 4 + 1 = 11, hundreds 2 + 2 + 1 = 5. So 512 - 247 = 265.'),
  I('start', 1, 'Both sides must have the same value. Fill in the boxes.', partsrow=True, parts=[
    P('a', '270 + 140 = 300 + {b}', '110'), P('b', '840 - 300 = {b} - 200', '740'), P('c', '360 + {b} = 400 + 150', '190'),
@@ -65,7 +65,7 @@ items = [
    why='(a) 500 - 287 = 213. (b) 213 - 120 = 93.'),
  # Think harder
  I('think', 4, 'Put the numbers 120, 135, 150, 165, 180 and 195 in the circles, once each, so that every side adds up to 450.',
-   figure={'type': 'l2_triangle', 'values': [None] * 6, 'width_mm': 70}, figright=True,
+   figure={'type': 'l2_triangle', 'values': [None] * 6, 'width_mm': 62}, figright=True,
    partsrow=True, parts=[P('a', 'Corners: {b}, {b}, {b}.', ['120', '135', '150'], '120, 135, 150'),
           P('b', 'Sides add up to 495. Corners: {b}, {b}, {b}.', ['165', '180', '195'], '165, 180, 195')],
    hint='Corner numbers are used in 2 sides. Try the 3 smallest corners.',
@@ -76,7 +76,7 @@ items = [
    hint='Move the same amount from one number to the other.',
    why='(a) 468 is 1 more than 467 and 199 is 1 less than 200: true. (b) 350 is 10 more than 340, but 240 is 20 less than 260, so the sides are 590 and 600: false. (c) 502 is 2 more than 500 and 99 is 2 less than 101: true. (d) 275 + 275 = 550 and 250 + 310 = 560: false.'),
  I('think', 4, 'Ali, Ben and Siti have 530 stickers altogether. Ali has 60 more than Ben. Siti has 40 fewer than Ben.',
-   figure={'type': 'l2_bar', 'rows': [{'label': 'Ali', 'segs': [{'w': 5, 'unknown': True, 't': '?'}, {'w': 2, 't': '60'}]}, {'label': 'Ben', 'segs': [{'w': 5, 'unknown': True, 't': '?'}]}, {'label': 'Siti', 'segs': [{'w': 3, 'unknown': True, 't': '?'}]}], 'brace': {'text': '530', 'rows': [0, 2]}, 'width_units': 400, 'width_mm': 100},
+   figure={'type': 'l2_bar', 'rows': [{'label': 'Ali', 'segs': [{'w': 5, 'unknown': True, 't': '?'}, {'w': 2, 't': '60'}]}, {'label': 'Ben', 'segs': [{'w': 5, 'unknown': True, 't': '?'}]}, {'label': 'Siti', 'segs': [{'w': 3, 'unknown': True, 't': '?'}]}], 'brace': {'text': '530', 'rows': [0, 2]}, 'width_units': 400, 'width_mm': 86},
    partsrow=True, parts=[P('a', 'Ben has {b} stickers.', '170'), P('b', 'Ali has {b} stickers.', '230'), P('c', 'Siti has {b} stickers.', '130')],
    hint='Make all 3 bars the same length as Ben\'s bar.',
    why='Ali has 60 more than Ben and Siti has 40 fewer, so the 3 children have 60 - 40 = 20 more than 3 Bens. 530 - 20 = 510 is 3 Bens. 510 shared into 3 is 170, so Ben has 170. Ali has 170 + 60 = 230. Siti has 170 - 40 = 130. Check: 230 + 170 + 130 = 530.'),
@@ -101,7 +101,7 @@ items = [
  I('quiz', 0, 'Write the 2 missing digits.', figure={'type': 'l2_vsum', 'op': '+', 'rows': ['2?6', '43?', '689'], 'width_mm': 36}, figright=True, value=['5', '3'], atext='5 and 3', lst=True,
    why='Ones: 6 + 3 = 9, so the bottom box is 3. Tens: 5 + 3 = 8, so the top box is 5. Check: 256 + 433 = 689.'),
  I('quiz', 0, '530 + 160 = 600 + {b}', value='90', why='530 + 160 = 690, and 690 - 600 = 90.'),
- I('quiz', 0, 'Ravi had 800 stickers. He gave 175 to Mei and some to Ben. He had 350 left. How many stickers did he give to Ben? {b}', value='275', why='800 - 175 = 625. 625 - 350 = 275. Check: 175 + 275 + 350 = 800.'),
- I('quiz', 0, 'Two numbers add up to 420. One is 60 more than the other. What is the smaller number? {b}', value='180', why='Take away the extra 60: 420 - 60 = 360. Half of 360 is 180. The numbers are 180 and 240.'),
+ I('quiz', 0, 'Ravi had 800 stickers. He gave 175 to Mei and some to Ben. 350 were left. How many did Ben get? {b}', value='275', why='800 - 175 = 625. 625 - 350 = 275. Check: 175 + 275 + 350 = 800.'),
+ I('quiz', 0, 'Two numbers add up to 420. One is 60 more. What is the smaller number? {b}', value='180', why='Take away the extra 60: 420 - 60 = 360. Half of 360 is 180. The numbers are 180 and 240.'),
 ]
 build(2, 'Missing digit mysteries', 'Adding and subtracting to 1000', 'I can find missing digits in 3-digit sums. I can balance number sentences and solve magic squares and triangles.', learn, items, snug=['start1', 'start2', 'start3'])

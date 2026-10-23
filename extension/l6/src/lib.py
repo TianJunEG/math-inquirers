@@ -63,15 +63,56 @@ def code(prog, **kw):
 HAT = ['hat', 'when green flag clicked']
 
 
+def finalize(u, lo=0.87, hi=0.985):
+    """Measure the items, put the Start here items on pages 1-3 (best fit, keeping the written order where possible), renumber the ids by page order,
+    and print the fill of every page.  Returns the unit."""
+    import sys
+    tools = os.path.join(os.path.dirname(HERE), 'tools')
+    sys.path.insert(0, tools)
+    import measure
+    cap, hs, bn = measure.measure(u)
+    start = [i for i in u['items'] if i['tier'] == 'start']
+    segs, fills, how = measure.suggest(start, hs, bn['start'], cap, lo, hi)
+    if not segs:
+        tot = sum(hs[i['id']] + measure.GAP for i in start) + 3 * bn['start']
+        print(f'  !! Start here does not fit 3 pages: total {tot:.0f} mm, wanted {lo * 3 * cap:.0f}..{hi * 3 * cap:.0f} mm')
+        segs, fills, how = measure.suggest(start, hs, bn['start'], cap, 0.5, 1.0)
+        if not segs:
+            return u
+    order = {iid: k for k, s_ in enumerate(segs) for iid in s_}
+    pos = {i['id']: n for n, i in enumerate(u['items'])}
+    for it in start:
+        it['page'] = order[it['id']] + 1
+    print('  Start here pages (' + how + '): ' + '   '.join(f'p{k + 1} {f:.3f}' for k, f in enumerate(fills)))
+    for tier, label in (('think', 'Think harder'), ('go', 'Go further')):
+        ids = [i['id'] for i in u['items'] if i['tier'] == tier]
+        f = measure.page_fill(ids, hs, bn[tier], cap)
+        print(f'  {label} fill {f:.3f}' + ('   <-- out of range' if not (lo <= f <= hi) else ''))
+    q = [i['id'] for i in u['items'] if i['tier'] == 'quiz']
+    tot = (sum(hs[i] + measure.GAP for i in q) + bn['quiz'] + measure.QUIZ_FURN) / cap
+    print(f'  Check yourself fill {tot:.3f}' + ('   <-- out of range' if not (lo <= tot <= hi) else ''))
+    # renumber ids: Start here by page then written order; other tiers in written order
+    start_sorted = sorted(start, key=lambda i: (i['page'], pos[i['id']]))
+    ren = {}
+    for k, it in enumerate(start_sorted, 1):
+        ren[it['id']] = f"{u['id']}-S{k:02d}"
+    for tier, ch in (('think', 'T'), ('go', 'G'), ('quiz', 'C')):
+        for k, it in enumerate([i for i in u['items'] if i['tier'] == tier], 1):
+            ren[it['id']] = f"{u['id']}-{ch}{k:02d}"
+    for it in u['items']:
+        it['id'] = ren[it['id']]
+    u['items'].sort(key=lambda i: ({'start': 0, 'think': 1, 'go': 2, 'quiz': 3}[i['tier']], i['id']))
+    return u
+
+
 def write_unit(n, title, topic, goal, learn, items, **extra):
     u = {'schema_version': 1, 'level': 6, 'unit': n, 'id': f'L6U{n:02d}', 'title': title, 'topic': topic, 'holiday_lesson': n, 'goal': m(goal),
          'learn': learn, 'items': items}
     u.update(extra)
-    # light checks
     uid = u['id']
     for it in items:
         assert it['id'].startswith(uid + '-')
-    s = [i for i in items if i['tier'] == 'start']
-    print(uid, 'start', len(s), 'think', sum(i['tier'] == 'think' for i in items), 'go', sum(i['tier'] == 'go' for i in items), 'quiz', sum(i['tier'] == 'quiz' for i in items))
+    print(uid, 'start', sum(i['tier'] == 'start' for i in items), 'think', sum(i['tier'] == 'think' for i in items), 'go', sum(i['tier'] == 'go' for i in items), 'quiz', sum(i['tier'] == 'quiz' for i in items))
+    finalize(u)
     json.dump(u, open(os.path.join(DATA, f'l6_u{n:02d}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     return u
