@@ -36,7 +36,7 @@
       "Bonds to 20 (how many more make 20, from 11 to 19)",
       "What = means: the same amount on both sides"
     ],
-    "assumes": "Only counting to 20 and showing numbers with fingers. Nothing from the earlier Term 1 lessons is needed: the warm-up re-teaches bonds to 10 and 20 and the meaning of =, and the sums that follow use two plates and small things first. No carrying is ever needed.",
+    "assumes": "Counting in tens to 100, pairs that make 10, and adding and taking away small numbers within 10 with fingers or objects. Nothing from the earlier Term 1 lessons is needed: the warm-up re-teaches bonds to 10 and 20 and the meaning of =, and the sums that follow use two plates and small things first. No carrying is ever needed.",
     "holiday_topics_revisited": [
       "Number bonds to 10 and 20 (Number Bond Inquiry)"
     ],
@@ -957,7 +957,7 @@
           ]
         }
       ],
-      "note": "Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 6 needs 4, 2 needs 8. This is a spiral review of the bonds to 10 (holiday topic) and lets a new child join: they hear it before they say it. Hands up on camera is fine. No writing, no marks.",
+      "note": "Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 6 needs 4, 2 needs 8. This is a spiral review of the bonds to 10 (holiday topic) and lets a new child join: they hear it before they say it. No writing, no marks.",
       "mascot": {
         "size": "s",
         "say": "Show me your fingers!"
@@ -1745,7 +1745,7 @@
           3,
           2
         ],
-        "hint": "Work out the left side first. Then find what the right side needs. You can use your two plates.",
+        "hint": "Find the left side first. Then find what the right side needs. You can use your two plates.",
         "solution": "(a) 5 + 3 is 8 and 4 + 4 is 8. (b) 6 + 4 is 10 and 5 + 5 is 10. (c) 7 + 3 is 10 and 3 + 7 is 10. (d) 2 + 8 is 10 and 8 + 2 is 10.",
         "mistakes": [
           "Writing the total of the left side in the blank (8 in part a).",
@@ -1958,7 +1958,7 @@
         "id": "T1",
         "page": 3,
         "tier": "think",
-        "text": "Mei says 47 + 18 and 45 + 20 have the same total. Ali says 45 + 20 has the greater total. Do not add.",
+        "text": "Mei says 56 + 17 and 54 + 19 have the same total. Ali says 54 + 19 has the greater total. Do not add.",
         "parts": [
           {
             "l": "a",
@@ -1973,15 +1973,15 @@
             "val": "open"
           }
         ],
-        "answer": "Mei. 47 went down by 2 to 45 and 18 went up by 2 to 20. The 2 moved across, so both totals are 65.",
+        "answer": "Mei. 56 went down by 2 to 54 and 17 went up by 2 to 19. The 2 moved across, so both totals are 73.",
         "val": [
           "Mei",
-          65
+          73
         ],
-        "hint": "Look at the first numbers: 47 and 45. Did it go up or down? By how much? What happened to 18 and 20?",
-        "solution": "47 to 45 is 2 less. 18 to 20 is 2 more. The 2 moved from one number to the other, so the total stays the same. Both sums make 65.",
+        "hint": "Look at the first numbers: 56 and 54. Did it go up or down? By how much? What happened to 17 and 19?",
+        "solution": "56 to 54 is 2 less. 17 to 19 is 2 more. The 2 moved from one number to the other, so the total stays the same. Both sums make 73.",
         "mistakes": [
-          "Saying 45 + 20 is bigger because 20 is a bigger number than 18.",
+          "Saying 54 + 19 is greater because 19 is a greater number than 17.",
           "Adding both sums and not saying how the numbers moved (correct, but check the reason)."
         ],
         "mins": 5,
@@ -2890,7 +2890,7 @@
         "tier": "challenge",
         "type": "selfcheck",
         "q": "Make up your own puzzle like 27 + 14 = 30 + ___. Check it by adding both sides.",
-        "hint": "Pick a sum first. Change one number, then work out the blank.",
+        "hint": "Pick a sum first. Change one number, then find the blank.",
         "steps": [
           "Pick two numbers to add, for example 27 and 14.",
           "Change the first number, for example to 30. It went up by 3.",
@@ -2900,7 +2900,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned that the equals sign means 'the same amount as', like a balanced see-saw. Your child balanced two plates of small things and found missing numbers like 6 + 3 = 5 + ___. Give and take: when one number goes up, the other goes down by the same amount. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some sums have tens; we explore them with objects first.",
+    "summary": "We learned that the equals sign means 'the same amount as', like a balanced see-saw. Your child balanced two plates of small things and found missing numbers like 6 + 3 = 5 + ___. Give and take: when one number goes up, the other goes down by the same amount. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some sums have tens; we explore them with objects first. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "equals (=): the two sides are the same amount",
       "balance: both sides hold the same",
@@ -2923,7 +2923,7 @@
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "quote": "Adjust one side, adjust the other. When one number goes up, the other goes down by the same amount.",
     "next_materials": [
-      "A ruler marked in centimetres, starting at 0 (a pencil-case ruler is fine; no ruler? tell your tutor)",
+      "A ruler marked in cm, starting at 0. No ruler? Tell your tutor now; we will help",
       "10 paper clips (or small same-size things) and 3 or 4 things to measure",
       "The printed Lesson 9 workbook (print at 100%, actual size), a pencil and spare paper"
     ]

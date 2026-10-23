@@ -54,7 +54,7 @@
       "A timer slide or a visible clock"
     ],
     "kit_pages": [
-      "Tens bars (9) and ones squares (20), printed on the first kit page (page 6); cut out before the lesson.",
+      "Tens bars (9) and ones squares (20), printed on the first kit page (page 6); the same cut-outs as Lesson 1, so keep your bars and squares all term and cut a new set only if you lost some.",
       "Digit cards: two sets of 0 to 9 (20 cards), printed on the last page of the workbook; cut out before the lesson. A second set lets a child use two matching cards, like 4 and 4."
     ],
     "ruler": false,
@@ -245,11 +245,15 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Your digit cards are out."
+            "text": "Hello, inquirers! Your digit cards are out. Cameras can be on or off, as you like."
           },
           {
             "k": "SAY",
-            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "SLIDE",
@@ -261,7 +265,7 @@
           },
           {
             "k": "DO",
-            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. A child whose digit cards are not cut out can still join the warm-up, which needs no cards; a grown-up helps them write 0 to 9 twice on 20 scraps.",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. A child whose digit cards are not cut out can still join the warm-up, which needs no cards; a grown-up helps them write 0 to 9 twice on 20 scraps.",
             "s": 25
           },
           {
@@ -427,7 +431,7 @@
           },
           {
             "k": "WORK",
-            "text": "Round 1: each child makes and swaps three pairs of cards and says the numbers aloud. Tutor scans the cameras; a child who wants to may show a pair to the camera. Nobody has to.",
+            "text": "Round 1: each child makes and swaps three pairs of cards and says the numbers aloud. Tutor scans the cameras. Children keep their cards on the table and say both numbers aloud when asked; nobody holds anything up to the camera.",
             "s": 150
           },
           {
@@ -1207,7 +1211,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 4 minutes. Objects first, no writing. Children make three pairs, swap, and say both numbers aloud, tens first. A child who wants to may show a pair to the camera. The what-if card is open from the start so nobody waits; it previews the zero rule and nobody is named for choosing it. Expect some children to read 47 as seven-four: ask them to say the tens first."
+      "note": "Round 1, about 4 minutes. Objects first, no writing. Children make three pairs, swap, and say both numbers aloud, tens first. Children keep their cards on the table and say both numbers aloud; nobody holds anything up to the camera. The what-if card is open from the start so nobody waits; it previews the zero rule and nobody is named for choosing it. Expect some children to read 47 as seven-four: ask them to say the tens first."
     },
     {
       "id": "s-explore2",
@@ -1684,7 +1688,7 @@
             ],
             [
               "Go further (page 4)",
-              "Bigger puzzles"
+              "Harder puzzles"
             ],
             [
               "Investigation (page 5)",
@@ -3216,7 +3220,7 @@
     ]
   },
   "parent": {
-    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card. Comparing two-digit numbers is Primary 1 work. Using three cards, and listing every number, goes further and is in Think harder and Go further.",
+    "summary": "The order of the digits changes a number: the cards 3 and 5 make 35 and 53. Your child compared numbers tens first and made the greatest and smallest numbers from two cards, even with a 0 card. Comparing two-digit numbers is Primary 1 work. Using three cards, and listing every number, goes further and is in Think harder and Go further. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "digit: one of the symbols 0 to 9",
       "tens digit: the left digit, it counts the tens",
@@ -3234,7 +3238,7 @@
       "Can the 0 go on the left? Why not?"
     ],
     "when_stuck": "Please let your child build both numbers with the tens bars and ones squares, or draw them, and wait 10 seconds before helping. Asking 'what could you try?' works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
-    "next": "Lesson 4: The 100 Square Explorer. Online practice: your tutor will share the practice link.",
+    "next": "Lesson 4: The 100 Square Explorer. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: making two-digit numbers from digit cards and comparing them, tens first.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "quote": "The order of the digits changes the number. The left digit counts the tens, so we look at it first.",

@@ -255,11 +255,15 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Your number cards and your small toy are beside you."
+            "text": "Hello, inquirers! Your number cards and your small toy are beside you. Cameras can be on or off, as you like."
           },
           {
             "k": "SAY",
-            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "SAY",
@@ -267,7 +271,7 @@
           },
           {
             "k": "DO",
-            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page, cards and hands can be seen, or ask the grown-up.",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. Check, in the first minute, that every child has the cards and a pencil: ask the group, do not name a child.",
             "s": 25
           },
           {
@@ -1731,7 +1735,7 @@
             ],
             [
               "Go further (page 4)",
-              "Bigger puzzles"
+              "Harder puzzles"
             ],
             [
               "Investigation (page 5)",
@@ -3312,7 +3316,7 @@
     ]
   },
   "parent": {
-    "summary": "Every number has a spot on a number line and a name. Your child built a number line from cut-out cards, hopped a toy along it, read number names such as fourteen and forty, and found which two tens a number sits between. Reading numbers and the number line is Primary 1 work. Deciding which ten a number is nearer to goes beyond school, and is in Think harder.",
+    "summary": "Every number has a spot on a number line and a name. Your child built a number line from cut-out cards, hopped a toy along it, read number names such as fourteen and forty, and found which two tens a number sits between. Reading numbers and the number line is Primary 1 work. Deciding which ten a number is nearer to goes beyond school, and is in Think harder. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "number line: numbers in order along a path, each with its own spot",
       "teen: ten and some more (fourteen is 14)",
@@ -3331,7 +3335,7 @@
       "How do you know?"
     ],
     "when_stuck": "Please let your child hop a toy along a paper line or draw one, and wait 10 seconds before helping. Teen and ty sound alike: say them slowly together. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
-    "next": "Lesson 3: Digit Cards. Online practice: your tutor will share the practice link.",
+    "next": "Lesson 3: Digit Cards. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: finding numbers on a number line and reading number words.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "quote": "Every number has a place and a name. The tens marks help us find it.",

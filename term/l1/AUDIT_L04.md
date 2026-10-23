@@ -61,3 +61,7 @@ Still open (all template or tool, not edited here): answer-part labels print "a"
 ## Update (second fix pass, 22 Oct 2026)
 
 Machine state: validate 04 = 18 pass, 1 WARN (page 5 estimate 105%; the real PDF is 6 pages, fills 98, 91, 96, 90, 91, 84%), 0 FAIL; 789 answer checks, 88 practice variants; leak check clean. Script 74:03, slow class 87:46. Home 2 pages, parent 1. All pages, key, home, parent and changed slides viewed. Details in `audit/FIXES2_L04.md`.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording.

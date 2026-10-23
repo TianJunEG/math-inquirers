@@ -64,3 +64,7 @@ Independent audit scored Instrument A 17/24 and tier compliance 12/14 (86%). Aft
 ## Second fix pass, 22 Oct 2026
 
 Changes are listed in `audit/FIXES2_L07.md`. Re-checked: validator 0 FAIL; 113 answer checks; 512 practice variants; slow-class script 88:11 (the workbook runs about 3 minutes over in a slow class, covered by the flex buffer and stated in the guide); workbook fill 90, 94, 96, 95, 97%; parent page one page. All workbook and exit questions are now shown and read aloud with their numbers; no paper is held up to the camera; recording and still-stuck wording follow the owner's Term 2 defaults. No child has used the lesson; times are modelled.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording.

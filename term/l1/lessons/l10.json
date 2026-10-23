@@ -17,7 +17,7 @@
       "Two-step stories: one operation per step",
       "Comparing: more than, fewer than"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (owner decision, 22 Oct 2026: a game, not a test), built as the block challenge_quest by assets/quest_build.py. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim. Beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Think harder T4 is an impossible story (12 stickers, give 7, then give 8): the child must check each step against what is left, a reasoning step beyond the P1 two-step story. Original item."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (a game, not a test). Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim. Beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Think harder T4 is an impossible story (12 stickers, give 7, then give 8): the child must check each step against what is left, a reasoning step beyond the P1 two-step story. Original item."
   },
   "contest_moves": [
     "two-step story, one operation per step",
@@ -37,7 +37,7 @@
       "Story words: which words mean add and which mean take away",
       "Adding and taking away tens and ones: 40 + 20, 37 + 10, 56 - 20, 24 + 5"
     ],
-    "assumes": "Only counting to 20, showing a number with fingers or counters, and knowing 10 more or 10 fewer than a tens number. Every number used in Start here stays within 100 and no Start here take away needs renaming. A child who has done Lessons 1 to 9 will find the tens and ones work familiar; a new child gets every idea in the warm-up.",
+    "assumes": "Counting in tens to 100, adding and taking away small numbers within 10, and knowing 10 more or 10 fewer than a tens number. Every number used in Start here stays within 100 and no Start here take away needs renaming. A child who has done Lessons 1 to 9 will find the tens and ones work familiar; a new child gets every idea in the warm-up.",
     "holiday_topics_revisited": [
       "'I think of a number'"
     ],
@@ -56,7 +56,7 @@
       "Your own watch or clock, out of sight of the camera. No timer or clock is shown during the quest"
     ],
     "kit_pages": [
-      "Page 6 of the workbook (tens bars and ones squares): the squares make good counters; cut out before the lesson"
+      "Page 6 of the workbook (tens bars and ones squares): the same cut-outs as Lesson 1, so keep your bars and squares and cut a new set only if you lost some; the squares make good counters"
     ],
     "ruler": true,
     "notes": "A ruler with centimetres is needed for gate 7 of the quest only; families keep one at home, and there is no printed ruler on the kit page. Nothing needs to be bought: counters can be buttons, coins or pasta. No matches, toothpicks or anything sharp. Print the Quest Log at actual size (100%): the bar at the foot of page 4 must measure 10 cm."
@@ -1167,7 +1167,7 @@
           ]
         }
       ],
-      "note": "Puzzle 1 is an access question: any child can draw 4 marbles and 3 more, and count. Puzzle 2 is the thinking question on the key idea (two steps). Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper and everyone holds the paper to the camera once, at the same moment, after puzzle 2. Do not read answers aloud. Puzzle 1 answer 7; puzzle 2 answer 11, first Ben has 4 + 3 = 7."
+      "note": "Puzzle 1 is an access question: any child can draw 4 marbles and 3 more, and count. Puzzle 2 is the thinking question on the key idea (two steps). Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper and nobody holds paper up to the camera: children keep their own answer and check it at Talk time. Do not read answers aloud. Puzzle 1 answer 7; puzzle 2 answer 11, first Ben has 4 + 3 = 7."
     },
     {
       "id": "s-explore1",
@@ -2093,7 +2093,7 @@
           },
           {
             "l": "d",
-            "text": "There are 12 children in a line. 6 more children join the line. 12 [] 6 = 18",
+            "text": "12 children stand in a line. 6 more join. 12 [] 6 = 18",
             "ans": "+",
             "val": "+"
           }
@@ -3234,7 +3234,7 @@
     ]
   },
   "parent": {
-    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal\u00adlenge Quest, our end-of-term game with Mi, is played on private paper and is optional; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new.",
+    "summary": "We read stories twice and wrote one number sentence for each step. Your child acted stories out with counters, used 'more than' and 'fewer than', and counted everyone in a group. Mi's Chal\u00adlenge Quest, our end-of-term game with Mi, is played on private paper and is optional; your tutor then sends one line about what we saw. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions may be new. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "step: one thing that happens",
       "read it twice: story, then numbers",
@@ -3273,7 +3273,7 @@
   ],
   "tutor_prep": [
     "Solve every workbook question and every quest gate yourself first. Read the quest tutor notes (L10_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet.",
-    "A week before: send the grown-up note (L10_Quest_Parent_Note.pdf) and the Quest Log (L10_Quest_Log.pdf). Families print the Quest Log at 100%, cut out the kit page, find counters, a pencil, a ruler and a quest partner. A family with no printer tells you; arrange another way. The Quest Log stays closed until you say. Build the quest files with: bash term/l1/build.sh 10 then python3 term/l1/assets/quest_build.py 10.",
+    "A week before: send the grown-up note (L10_Quest_Parent_Note.pdf) and the Quest Log (L10_Quest_Log.pdf). Families print the Quest Log at 100%, cut out the kit page, find counters, a pencil, a ruler and a quest partner. A family with no printer tells you; arrange another way. The Quest Log stays closed until you say.",
     "Have the slides open and your own watch where only you can see it (the deck has no timer slide). Never show a clock, countdown or timer on the shared screen during the quest. Pause the recording for the whole quest and restart it for the look-back.",
     "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes.",
     "Quest photos arrive only on the program's business WhatsApp, +65 9880 5962; open them there, never on a personal phone. Write your private notes from the photos and what you saw on camera, then save the photos to the program's private file store and delete them from the chat. The program keeps them for 90 days after the program ends, then deletes them. Delete each child's notes sheet once the line is sent; keep the group advice sheet for next term's tutor.",
@@ -3330,13 +3330,13 @@
     "title": "Mi's Challenge Quest",
     "minutes": 20,
     "where": "Lesson 10 (the last lesson of the term), minutes 63 to 83, after the break and the workbook; or at the make-up slot",
-    "plan_note": "Owner decisions of 22 Oct 2026: the end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 2 and 4 share gate 2 and Lessons 6 and 7 share gate 5, so every lesson of the term is still visited. A middle child needs about 16 minutes of reading aloud and quiet work; a slower child may use the 5 flex minutes at the end.",
+    "plan_note": "The last slot of the term is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break and the question quality: 8 short gates and one optional secret cave item, all at Start here level. Lessons 2 and 4 share gate 2 and Lessons 6 and 7 share gate 5, so every lesson of the term is still visited. A middle child needs about 16 minutes of reading aloud and quiet work; a slower child may use the 5 flex minutes at the end.",
     "sheet_pages": 4,
     "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
     "child_rules": [
       "Mi is swimming to the Pearl Cave and needs your help at 8 gates.",
       "Work on your own paper. Your quest partner sits beside you: talk about how, then write your own answer.",
-      "It is not a race and nobody sees your answers. You may skip a gate: Mi swims round it.",
+      "Not a race. Skip a gate if you like. Only your grown-up and tutor see your answers.",
       "Gate 7 needs your ruler.",
       "The secret cave at the end is optional, just for fun."
     ],

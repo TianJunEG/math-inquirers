@@ -206,11 +206,15 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too."
+            "text": "Hello, inquirers! Cameras can be on or off, as you like."
           },
           {
             "k": "SAY",
-            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "SLIDE",
@@ -227,7 +231,7 @@
           },
           {
             "k": "DO",
-            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. If a child has no counters, suggest buttons, coins, dried beans or small pieces of paper.",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. If a child has no counters, suggest buttons, coins, dried beans or small pieces of paper.",
             "s": 30
           },
           {
@@ -1063,7 +1067,7 @@
           "text": "Say the next number. Show it on your fingers if you like."
         }
       ],
-      "note": "Answers: 40, 20, 8, 30, 40. The last two questions show that after a 9 the next ten begins (29 then 30): a new ten, in the same row of the 100 square. Say the tens word slowly. If a child hesitates, count up from 20 together. Hands up on camera is fine; no marks."
+      "note": "Answers: 40, 20, 8, 30, 40. The last two questions show that after a 9 the next ten begins (29 then 30): a new ten, in the same row of the 100 square. Say the tens word slowly. If a child hesitates, count up from 20 together. Fingers or a thumbs up are fine; no marks."
     },
     {
       "id": "s-sneak",
@@ -1871,7 +1875,7 @@
             ],
             [
               "Go further (page 4)",
-              "Bigger puzzles"
+              "Harder puzzles"
             ],
             [
               "Investigation (page 5)",
@@ -3484,7 +3488,7 @@
     ]
   },
   "parent": {
-    "summary": "We explored the 100 square. Your child counted in 10s, 5s and 2s with counters and saw the patterns: counting in tens makes one column, fives make two columns, twos make stripes. We also found that going right adds 1 and going down one row adds 10. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions are harder than school work. Your child chooses how far to go, and can use the square and counters.",
+    "summary": "We explored the 100 square. Your child counted in 10s, 5s and 2s with counters and saw the patterns: counting in tens makes one column, fives make two columns, twos make stripes. We also found that going right adds 1 and going down one row adds 10. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions are harder than school work. Your child chooses how far to go, and can use the square and counters. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "row: a line of 10 numbers going across",
       "column: a line of numbers going down",
@@ -3502,7 +3506,7 @@
       "What would the next number be, and why?"
     ],
     "when_stuck": "Please let your child use the printed square and counters, and wait 10 seconds before helping. Asking what could you try? works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
-    "next": "Lesson 5: Make-a-Ten Adding. Online practice: your tutor will share the practice link.",
+    "next": "Lesson 5: Make-a-Ten Adding. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to notice patterns in numbers and to say why. This week: counting in 10s, 5s and 2s on the 100 square, and moving by rows and squares.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "quote": "Going across a row adds 1. Going down a row adds 10.",
@@ -3536,6 +3540,7 @@
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
+    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is reached with the 100 square and counters; the growing-gap and sum-of-two sequences sit at Think harder or later. Do not call it MOE-aligned.",
     "Solve every workbook question yourself first, including the colouring.",
     "Tell parents a week before: print workbook pages 1 to 6 (page 6 is the 100 square, no cutting needed), find about 12 counters and two or three colours. Counters stay away from mouths and younger children.",
     "Have the slides open and check the 100 square on screen share. Keep a visible clock: the deck has no timer slide.",

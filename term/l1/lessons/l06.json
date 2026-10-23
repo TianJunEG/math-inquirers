@@ -17,7 +17,7 @@
       "A 2-digit number plus or minus ones, without renaming",
       "Number line jumps as a picture of adding and taking away"
     ],
-    "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose; it is not MOE-aligned and must not be called that on child or parent pages. In this lesson Start here stays inside P1 mental calculation of a 2-digit number plus or minus tens or ones without renaming (syllabus 2.7), explored first with bundles, bars and number lines. Think harder (a two-digit step split into a jump and a hop) and Go further (two jump sizes, a chain of jumps) go beyond P1 by splitting a 2-digit step into a jump and a hop. The owner or a tutor should check the placement against the syllabus before the first live class."
+    "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose; it is not MOE-aligned and must not be called that on child or parent pages. In this lesson Start here stays inside P1 mental calculation of a 2-digit number plus or minus tens or ones without renaming (syllabus 2.7), explored first with bundles, bars and number lines. Think harder (a two-digit step split into a jump and a hop) and Go further (two jump sizes, a chain of jumps) go beyond P1 by splitting a 2-digit step into a jump and a hop."
   },
   "contest_moves": [
     "split the second number into tens and ones (jump, then hop)",
@@ -1931,7 +1931,7 @@
             ],
             [
               "Teach it back",
-              "Show how to work out 52 + 31 with a jump and a hop"
+              "Show how to find 52 + 31 with a jump and a hop"
             ]
           ]
         },
@@ -2330,7 +2330,7 @@
           "same",
           46
         ],
-        "hint": "Work out where Frog A lands. Then Frog B. Compare.",
+        "hint": "Find where Frog A lands. Then Frog B. Compare.",
         "solution": "Frog A: 12 + 30 = 42, then 42 + 4 = 46. Frog B: 12 + 4 = 16, then 16 + 30 = 46. They land on the same number: adding the same jumps and hops in a different order gives the same total.",
         "mistakes": [
           "Saying Frog B lands on 16 because the hops came first.",
@@ -3141,7 +3141,7 @@
         ],
         "answer": "They land on the same number",
         "easier": "c3",
-        "hint": "Work out where each frog lands.",
+        "hint": "Find where each frog lands.",
         "steps": [
           "Frog A: 12 + 30 = 42, then 42 + 4 = 46.",
           "Frog B: 12 + 4 = 16, then 16 + 30 = 46.",
@@ -3404,18 +3404,18 @@
         "id": "g4",
         "tier": "challenge",
         "type": "selfcheck",
-        "q": "Make up your own jump and hop puzzle with a start number, a jump and a hop. Work out where you land, then ask a grown-up to check.",
+        "q": "Make up your own jump and hop puzzle with a start number, a jump and a hop. Find where you land, then ask a grown-up to check.",
         "hint": "Pick a start number first. Choose a jump of tens and a hop of ones that does not pass a ten.",
         "steps": [
           "Write the start number, the jump and the hop.",
-          "Work out where you land with your kit or a number line.",
+          "Find where you land with your kit or a number line.",
           "Swap with a grown-up. Do you land on the same number? Example: start at 23, jump 3 tens, hop 4 ones: 23 + 30 = 53, then 57."
         ]
       }
     ]
   },
   "parent": {
-    "summary": "We added and took away tens and ones in our heads. A jump of ten changes only the tens digit. A hop of one changes only the ones digit. For 34 + 25, jump the tens, then hop the ones. Term 1 goes beyond the school Primary 1 syllabus on purpose: we start every idea with bars and number lines, and your child chooses how far to go.",
+    "summary": "We added and took away tens and ones in our heads. A jump of ten changes only the tens digit. A hop of one changes only the ones digit. For 34 + 25, jump the tens, then hop the ones. Term 1 goes beyond the school Primary 1 syllabus on purpose: we start every idea with bars and number lines, and your child chooses how far to go. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "jump: add or take away tens (10, 20, 30 ...)",
       "hop: add or take away ones (1, 2, 3 ...)",
@@ -3486,8 +3486,8 @@
         "id": "M3",
         "title": "Teach it back",
         "minutes": 3,
-        "tutor": "Pretend your grown-up or a toy has never seen jumps and hops. Teach them how to work out 52 + 31.",
-        "rec": "Recording: pause. Teach a grown-up how to work out 52 + 31 with a jump and a hop.",
+        "tutor": "Pretend your grown-up or a toy has never seen jumps and hops. Teach them how to find 52 + 31.",
+        "rec": "Recording: pause. Teach a grown-up how to find 52 + 31 with a jump and a hop.",
         "answer": "31 is 3 tens and 1 one. Jump 3 tens: 52 to 82. Hop 1: 83."
       }
     ]

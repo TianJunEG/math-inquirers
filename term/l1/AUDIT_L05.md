@@ -30,3 +30,7 @@ Open items: never trialled with children; 28 + 6, 35 + 7 and 47 + 6 cross a ten 
 ## Update (second fix pass, 22 Oct 2026)
 
 Machine state: validate 05 = 18 pass, 3 WARN (opening and exit loose; page 5 estimate 108%, the real PDF is 6 pages and fills 96, 97, 95, 92, 94, 91%), 0 FAIL; 422 answer checks, 533 practice variants; leak check clean. Script 72:48, slow class 86:17. Home 2 pages, parent 1. All pages, key, home, parent and changed slides viewed. Details in `audit/FIXES2_L05.md`.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording.

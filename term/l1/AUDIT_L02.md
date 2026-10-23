@@ -66,3 +66,7 @@ Open: (1) syllabus check for the new-topic lesson (number-line scale, nearer ten
 ## Update (second fix pass, 22 Oct 2026)
 
 Machine state: validate 02 = 18 pass, 2 WARN (opening 1:58 of 3:00 and exit 4:04 of 6:00 are loose, explained), 0 FAIL; 448 answer checks, 221 practice variants; leak check clean. Script 74:40, slow 88:27. Workbook 7 pages (88, 96, 87, 86, 90, 82, 83%), home 2, parent 1. All pages, key, home, parent and changed slides viewed. Changes in `audit/FIXES2_L02.md`. Opening now 3 minutes, Explore 15, to fit the recording, muting and camera statement.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording.

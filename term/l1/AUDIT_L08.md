@@ -63,3 +63,7 @@ Total: 17 / 24 (independent auditor, before fixes) -> 18 / 24 (author re-score; 
 ## Second fix pass, 22 Oct 2026
 
 Changes are listed in `audit/FIXES2_L08.md`. Re-checked: validator 0 FAIL; 2612 answer checks; 324 practice variants; ordered marking on online item g1 tested in a browser (right order accepted, swapped order refused with a clear message); slow-class script 87:50 (workbook overrun covered by the flex buffer and stated in the guide); workbook fill 92, 90, 84, 86, 94%; parent page one page. Start here S5 now stays with whole tens; compensation is only at Think harder. No paper is held up to the camera. No child has used the lesson; times are modelled.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording; Think harder T1 changed to 56 + 17 and 54 + 19.

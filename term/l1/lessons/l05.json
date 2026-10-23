@@ -54,7 +54,7 @@
       "A visible clock"
     ],
     "kit_pages": [
-      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; cut out before the lesson. This lesson uses up to 5 bars and 14 squares at a time"
+      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook: the same cut-outs as Lesson 1, so keep them all term and cut a new set only if you lost some. This lesson uses up to 5 bars and 14 squares at a time"
     ],
     "ruler": false,
     "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
@@ -200,11 +200,15 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Pencil ready, a few small things and your kit pieces on the table."
+            "text": "Hello, inquirers! Pencil ready, a few small things and your kit pieces on the table. Cameras can be on or off, as you like."
           },
           {
             "k": "SAY",
-            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "SAY",
@@ -212,7 +216,7 @@
           },
           {
             "k": "DO",
-            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. Check that the page and hands can be seen, or ask the grown-up.",
             "s": 25
           },
           {
@@ -966,7 +970,7 @@
           ]
         }
       ],
-      "note": "A ten-frame has ten spaces. Count the empty spaces to see how many more make ten. Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 5 needs 5, 2 needs 8. Hands up on camera is fine. No writing, no marks. A child who is new can count the empty spaces in the picture.",
+      "note": "A ten-frame has ten spaces. Count the empty spaces to see how many more make ten. Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 5 needs 5, 2 needs 8. Fingers or a thumbs up are fine. No writing, no marks. A child who is new can count the empty spaces in the picture.",
       "mascot": {
         "size": "s",
         "say": "Fingers ready? Let's go!"
@@ -3034,7 +3038,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned to add by making a ten first: fill a ten-frame, then add what is left. We used it for 8 + 6, for 28 + 6, and for longer sums with pairs that make 10. Making a ten to add (8 + 6, 28 + 6) is school work. Adding four or six numbers by finding pairs that make ten goes beyond, in Think harder and Go further.",
+    "summary": "We learned to add by making a ten first: fill a ten-frame, then add what is left. We used it for 8 + 6, for 28 + 6, and for longer sums with pairs that make 10. Making a ten to add (8 + 6, 28 + 6) is school work. Adding four or six numbers by finding pairs that make ten goes beyond, in Think harder and Go further. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "ten-frame: a box of ten spaces, two rows of five",
       "make a ten: move some counters so that one group is full",
@@ -3052,7 +3056,7 @@
       "How do you know the total did not change?"
     ],
     "when_stuck": "Please let your child use counters or draw a ten-frame, and wait 10 seconds before helping. Asking 'how many empty spaces are there?' works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
-    "next": "Lesson 6: Tens Jump, Ones Hop. Online practice: your tutor will share the practice link.",
+    "next": "Lesson 6: Tens Jump, Ones Hop. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "quote": "Make tens first: fill up a ten, then add what is left.",
     "report_line": "Your child is learning to add by making a ten first and to say why. This week: adding within 100 by filling up a ten, using ten-frames and kit pieces.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",

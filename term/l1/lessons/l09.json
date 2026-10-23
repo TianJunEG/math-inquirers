@@ -38,7 +38,7 @@
       "Find 0 on a ruler and count along the marks to 12",
       "A centimetre (cm) is the gap from one mark to the next"
     ],
-    "assumes": "Only counting to 20. A child who has never used a ruler is shown 0, the marks and the gaps with their own ruler in the warm-up. Nothing from earlier Term 1 lessons is needed.",
+    "assumes": "Counting to 20 and comparing two numbers. A child who has never used a ruler is shown 0, the marks and the gaps with their own ruler in the warm-up. Nothing from earlier Term 1 lessons is needed.",
     "holiday_topics_revisited": [
       "Measuring with cubes and a ruler (Measure It!)"
     ],
@@ -47,7 +47,7 @@
   },
   "materials": {
     "child": [
-      "A ruler with cm marks, starting at 0 (15 or 30 cm). No ruler? Tell your tutor before the lesson.",
+      "A ruler with cm marks, starting at 0 (15 or 30 cm). No ruler? Tell your tutor before the lesson: we will help you make a paper strip ruler, or a grown-up can measure your lines for you.",
       "3 or 4 things to measure; 10 paper clips (or small same-size things)",
       "Workbook pages 1 to 5 (A4, printed at 100%), a pencil, a rubber, spare paper"
     ],
@@ -57,12 +57,12 @@
     ],
     "kit_pages": [],
     "ruler": true,
-    "notes": "Families keep a ruler at home, so no ruler is printed in the workbook. If a child has none, a grown-up can look for any straight-edged ruler or strip marked in centimetres, or tell the tutor before the lesson. Plastic or wooden rulers only, no metal edges. Nothing needs to be bought. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Print the workbook at 100% (actual size, not 'fit to page'): the ruler pictures are real size, so a child can lay their own ruler beside them."
+    "notes": "Families keep a ruler at home, so no ruler is printed in the workbook. If a child has none, a grown-up can look for any straight-edged ruler or strip marked in centimetres, or tell the tutor before the lesson. Plastic or wooden rulers only, no metal edges. Nothing needs to be bought. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Print the workbook at 100% if you can. The ruler pictures are for reading the numbers on the marks; do not measure the picture itself, because a printed or bound copy may be a little smaller than life."
   },
   "workbook": {
     "kits": [],
     "choice_after": 3,
-    "home_hint": "Use your ruler and spare paper. No ruler? Tell your tutor before the lesson.",
+    "home_hint": "Use your ruler and spare paper. No ruler? Ask your tutor in the next lesson, or a grown-up can measure your lines.",
     "header": "Length: draw and measure",
     "hint_p1": "Use your ruler and a pencil. Say your answer out loud, then write it.",
     "hint_p3": "Use your ruler and drawings to help. Choose any question, in any order."
@@ -550,7 +550,7 @@
           },
           {
             "k": "WORK",
-            "text": "Children draw 5 cm and work out the second line. Wait until most have stopped writing.",
+            "text": "Children draw 5 cm and find the length of the second line. Wait until most have stopped writing.",
             "s": 75
           },
           {
@@ -661,7 +661,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q1, Q2 and Q5 (drawing): put a finger on the 0 mark, slide the ruler to the dot. Q3: guess first, then measure; a guess that is far off is fine. Q4 and Q6: the ruler picture is printed at real size, so children may lay their own ruler beside it. Q6: ask where her line ends on the ruler."
+            "text": "Q1, Q2 and Q5 (drawing): put a finger on the 0 mark, slide the ruler to the dot. Q3: guess first, then measure; a guess that is far off is fine. Q4 and Q6: children read the numbers on the ruler picture; they do not lay a ruler on it, because the picture may print a little smaller than life. Q6: ask where her line ends on the ruler."
           },
           {
             "k": "STUCK",
@@ -990,7 +990,7 @@
           ]
         }
       ],
-      "note": "Puzzle 1 (a 3 cm line) is an access question: any child with a ruler can try it. Puzzle 2 is a thinking question on the lesson idea: where the pencil starts matters. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Everyone holds the paper to the camera once, at the same moment, after puzzle 2; there is no private chat and no board in front of the group. Answers: a line 3 cm long; no, 8 cm (the pencil starts at the 1 mark). Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
+      "note": "Puzzle 1 (a 3 cm line) is an access question: any child with a ruler can try it. Puzzle 2 is a thinking question on the lesson idea: where the pencil starts matters. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper up to the camera: children keep their own answer and check it at Talk time; there is no private chat and no board in front of the group. Answers: a line 3 cm long; no, 8 cm (the pencil starts at the 1 mark). Do not reveal Puzzle 2 until Talk time. Do not write scores or keep a list of who found it easy."
     },
     {
       "id": "s-explore1",
@@ -1291,7 +1291,7 @@
             [
               {
                 "t": "card",
-                "head": "WORK OUT",
+                "head": "FIND IT",
                 "items": [
                   "A line goes from the 2 mark to the 9 mark.",
                   "How long is it?"
@@ -1324,7 +1324,7 @@
             [
               {
                 "t": "card",
-                "head": "WORK OUT",
+                "head": "FIND IT",
                 "items": [
                   "9 take away 2 is 7."
                 ]
@@ -1424,7 +1424,7 @@
           "short": false
         }
       ],
-      "note": "Read question 4 aloud and show where the ruler picture is. Read question 6 aloud: it is a spot-the-mistake with a ruler picture. Children may check any answer by laying their own ruler next to the picture (it is printed at real size)."
+      "note": "Read question 4 aloud and show where the ruler picture is. Read question 6 aloud: it is a spot-the-mistake with a ruler picture. Children read the marks on the picture and say the number; they do not lay a ruler on the picture (it may print a little smaller than life)."
     },
     {
       "id": "s-ws2ans",
@@ -2887,7 +2887,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned to use a ruler properly. Your child measured things from home, drew lines of different lengths and compared lengths. The big idea: start at the 0 mark and read the mark at the other end. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions, such as a line that starts at another mark, are harder than school ones.",
+    "summary": "We learned to use a ruler properly. Your child measured things from home, drew lines of different lengths and compared lengths. The big idea: start at the 0 mark and read the mark at the other end. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions, such as a line that starts at another mark, are harder than school ones. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "quote": "Start at the 0 mark. Read the mark at the other end.",
     "words": [
       "centimetre (cm): the gap between two marks",
@@ -2908,7 +2908,7 @@
     "when_stuck": "Let your child slide a finger along the ruler and count the jumps aloud. Wait 10 seconds before helping, and please do not hurry. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
     "next": "Lesson 10: Story Steps: Read It Twice, with Mi's Challenge Quest (a game with Mi). Your tutor will send the Quest Log and a note. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to measure and draw lines in centimetres with a ruler and to say how they know. This week: starting at 0, reading the end mark, and comparing lengths.",
-    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to measure length in centimetres with a ruler and to say why.",
     "next_materials": [
       "Lesson 10 workbook with its kit page (page 6) cut out; about 20 counters (buttons, coins)",
       "Quest Log (4 pages, printed at 100%), kept closed in an envelope; a quest partner (grown-up or sibling)",
@@ -2926,7 +2926,7 @@
   ],
   "tutor_prep": [
     "Solve every workbook question yourself with a real ruler first. Use something short, such as a crayon, for question 3.",
-    "Tell parents a week before: a ruler marked in centimetres starting at 0, workbook pages 1 to 5 printed on A4 (there is no cut-out page this lesson), about 4 things to measure, 10 paper clips or small same-size things, a pencil and spare paper. Ask them to print the workbook at 100% (actual size), because the ruler pictures are real size.",
+    "Tell parents a week before: a ruler marked in centimetres starting at 0, workbook pages 1 to 5 printed on A4 (there is no cut-out page this lesson), about 4 things to measure, 10 paper clips or small same-size things, a pencil and spare paper. Ask them to print the workbook at 100% (actual size) if they can; the ruler pictures are for reading marks, not for measuring.",
     "Have your own ruler, a pencil and a strip of paper ready. Draw on a shared whiteboard or a blank slide (not on paper under the webcam, which the recording cannot show). Have the slides open.",
     "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes. If a family has no ruler, ask them before the lesson so a grown-up can find one; do not ask the child in front of the group.",
     "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."

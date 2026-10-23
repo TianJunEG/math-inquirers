@@ -35,7 +35,7 @@
       "Fingers to make 10: how many more to reach the next ten",
       "Count on in tens from any number (34, 44, 54)"
     ],
-    "assumes": "Counting to 20 and showing a number with fingers or a picture. The warm-up teaches the bars and squares again. Taking away small numbers within 10 is done with fingers or objects.",
+    "assumes": "Counting in tens to 100, pairs that make 10, and adding and taking away small numbers within 10 with fingers or objects. The warm-up teaches the bars and squares again. Taking away small numbers within 10 is done with fingers or objects.",
     "holiday_topics_revisited": [
       "Skip counting in 10s (Count with the Frog)",
       "Number bonds to 10 (Number Bond Inquiry)"
@@ -55,7 +55,7 @@
       "Your own set of tens bars and ones squares to show on camera if you wish"
     ],
     "kit_pages": [
-      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook; cut out before the lesson"
+      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook: the same cut-outs as Lesson 1, so keep them all term and cut a new set only if you lost some"
     ],
     "ruler": false,
     "notes": "No ruler is needed. Nothing needs to be bought: the kit page is cut from the workbook. A grown-up does the cutting before the lesson; children never use scissors in the session. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
@@ -993,7 +993,7 @@
           ]
         }
       ],
-      "note": "Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 2 needs 8. Hands up on camera is fine. No writing, no marks. This is the number-bond idea you will use to hop to the next ten."
+      "note": "Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 2 needs 8. Fingers or a thumbs up are fine. No writing, no marks. This is the number-bond idea you will use to hop to the next ten."
     },
     {
       "id": "s-rem3",
@@ -2000,7 +2000,7 @@
           "start": 30,
           "end": 70,
           "step": 2,
-          "label_every": 10,
+          "label_every": 20,
           "marks": [
             38,
             62
@@ -2055,7 +2055,7 @@
         "val": [
           7
         ],
-        "hint": "Work out how many stickers each child has now. Or draw two towers and add the same 10 to both.",
+        "hint": "Find how many stickers each child has now. Or draw two towers and add the same 10 to both.",
         "solution": "Ali now has 34 and Ben has 41. The gap from 34 to 41 is 7. It was 7 before too (24 to 31), because both children got the same 10 more.",
         "mistakes": [
           "Writing 17 (7 + 10).",
@@ -3022,7 +3022,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned two ways to find the answer to a subtraction. To find how many are left, we take away the tens, then the ones. To find how far apart two numbers are (the difference), we count up the gap. This term goes beyond the school Primary 1 syllabus on purpose, with bars and squares to help.",
+    "summary": "We learned two ways to find the answer to a subtraction. To find how many are left, we take away the tens, then the ones. To find how far apart two numbers are (the difference), we count up the gap. This term goes beyond the school Primary 1 syllabus on purpose, with bars and squares to help. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "take away: find what is left (57 - 24 = 33)",
       "count up: find the gap from the smaller number to the greater number",
@@ -3045,7 +3045,7 @@
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "quote": "The difference is a gap. Take away to see what is left. Count up to see the gap.",
     "next_materials": [
-      "About 30 small things of one kind (buttons, pasta, paper clips)",
+      "About 30 small things of one kind (buttons, pasta, paper clips); keep your bars and squares from the first lesson",
       "Two plates or bowls, marked LEFT and RIGHT",
       "The printed Lesson 8 workbook, a pencil and spare paper"
     ]

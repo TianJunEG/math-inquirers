@@ -103,7 +103,7 @@ def run(d):
     eq(T['S7']['val'], [first_blank(2, (35, 12))], 'S7'); eq(T['S7']['val'], [45], 'S7 value'); eq(pile(35, 12), 47, 'S7 total')
 
     # Think harder
-    eq(pile(47, 18) == pile(45, 20), True, 'T1 same'); eq(T['T1']['val'], ['Mei', pile(47, 18)], 'T1'); eq(pile(47, 18), 65, 'T1 total')
+    eq(pile(56, 17) == pile(54, 19), True, 'T1 same'); eq(T['T1']['val'], ['Mei', pile(56, 17)], 'T1'); eq(pile(56, 17), 73, 'T1 total')
 
     def cmp(l, r):
         a, b = pile(*l), pile(*r)

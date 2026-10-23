@@ -2,7 +2,7 @@
 
 Term 1 of the Level 1 term-time program: 10 lessons of 90 minutes, all new content (the holiday course is a separate foundation course and is not copied). Plan: `docs/terms/level_1_year_plan.md`. Owner decisions: `docs/terms/owner_decisions.md`.
 
-Status: **Lesson 1 (Bundles and Singles) is complete and is the pilot.** Lessons 2 to 10 are to be written by following `AUTHORING.md`.
+Status: **Term 1 (Lessons 1 to 10) is written, audited and fixed** (see `audit/FINAL_AUDIT_T1.md` and `audit/FINAL_FIXES_T1.md`). Later terms follow `AUTHORING.md`.
 
 ## Structure
 

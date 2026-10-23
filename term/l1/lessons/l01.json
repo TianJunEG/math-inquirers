@@ -202,11 +202,15 @@
           },
           {
             "k": "SAY",
-            "text": "Hello, inquirers! Please stay muted unless I invite you to speak; give me a thumbs-up if you want to talk. Cameras on if you can, so I can see your page and hands. Cameras off is fine too. Pencil ready, and your things to bundle on the table."
+            "text": "Hello, inquirers! Pencil ready, and your things to bundle on the table. Cameras can be on or off, as you like."
           },
           {
             "k": "SAY",
-            "text": "This lesson is recorded so that a friend who is away can catch up. The recording has me, the shared screen and anyone's voice that is unmuted. You may mute and keep your camera off."
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
           },
           {
             "k": "SLIDE",
@@ -241,7 +245,7 @@
           },
           {
             "k": "DO",
-            "text": "If you can, greet each child by first name before you start the recording. While it runs, avoid names. Check that the page and hands can be seen, or ask the grown-up.",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. Check, in the first minute, that every child has the kit and a pencil: ask the group, do not name a child.",
             "s": 25
           },
           {
@@ -414,7 +418,7 @@
           },
           {
             "k": "WORK",
-            "text": "Round 1: each child grabs, bundles and counts. Tutor scans the cameras; a child who wants to may show their bundles to the camera. Nobody has to.",
+            "text": "Round 1: each child grabs, bundles and counts. Tutor scans the cameras. Children keep their bundles on the table and say the number aloud when asked; nobody holds anything up to the camera.",
             "s": 200
           },
           {
@@ -1085,7 +1089,7 @@
           ]
         }
       ],
-      "note": "Say each number; children show on their fingers how many more make ten. Answers: 6 needs 4, 3 needs 7, 8 needs 2, 5 needs 5, 9 needs 1. Hands up on camera is fine. No writing, no marks."
+      "note": "Say each number; children show on their fingers how many more make ten. Answers: 6 needs 4, 3 needs 7, 8 needs 2, 5 needs 5, 9 needs 1. Fingers or a thumbs up are fine. No writing, no marks."
     },
     {
       "id": "s-rem3",
@@ -1183,7 +1187,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 4 minutes. Objects first, no writing yet. Children bundle in tens and count the singles. A child who wants to may show their bundles to the camera. The what-if card is available from the start so nobody waits: it previews the Think harder idea (opening a bundle), and no child is named for choosing it. A child with too few things can use the kit bars and squares."
+      "note": "Round 1, about 4 minutes. Objects first, no writing yet. Children bundle in tens and count the singles. Children keep their bundles on the table and check the number against the next slide; nobody holds anything up to the camera. The what-if card is available from the start so nobody waits: it previews the Think harder idea (opening a bundle), and no child is named for choosing it. A child with too few things can use the kit bars and squares."
     },
     {
       "id": "s-explore2",
@@ -1627,7 +1631,7 @@
             ],
             [
               "Go further (page 4)",
-              "Bigger puzzles"
+              "Harder puzzles"
             ],
             [
               "Investigation (page 5)",
@@ -2244,7 +2248,7 @@
           79,
           5
         ],
-        "hint": "Work out each child's number first. Open a bundle when there are 10 or more loose sticks.",
+        "hint": "Find each child's number first. Open a bundle when there are 10 or more loose sticks.",
         "solution": "Ben: 6 tens and 14 ones is 7 tens and 4 ones, so 74. Siti: 5 tens and 29 ones is 7 tens and 9 ones, so 79. 79 is 5 more than 74.",
         "mistakes": [
           "Comparing only the bundles (6 and 5) and saying Ben has more.",
@@ -2960,7 +2964,7 @@
             "a": [
               14
             ],
-            "say": "14 is Ben's loose sticks. Work out Ben's whole number (74) first."
+            "say": "14 is Ben's loose sticks. Find Ben's whole number (74) first."
           },
           {
             "a": [
@@ -3002,7 +3006,7 @@
         "q": "A shop sells pencils in boxes of ten. Mei needs 60 pencils. She has 4 full boxes and 18 loose pencils. How many more pencils does she need?",
         "answer": 2,
         "easier": "t1",
-        "hint": "Work out how many pencils she has now. Then see how far it is from 60.",
+        "hint": "Find how many pencils she has now. Then see how far it is from 60.",
         "steps": [
           "4 full boxes is 40 pencils.",
           "40 + 18 = 58 pencils.",
@@ -3041,7 +3045,7 @@
           },
           "q": "A shop sells pencils in boxes of ten. Mei needs {N} pencils. She has {b} full boxes and {l} loose pencils. How many more pencils does she need?",
           "answer": "N-(b*10+l)",
-          "hint": "Work out how many pencils she has now, then see how far that is from {N}.",
+          "hint": "Find how many pencils she has now, then see how far that is from {N}.",
           "steps": [
             "{b} full boxes, counted in tens.",
             "Add the {l} loose pencils.",
@@ -3114,7 +3118,7 @@
     ]
   },
   "parent": {
-    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Tens and ones is familiar school work. Opening a bundle (5 tens and 14 ones is 6 tens and 4 ones) goes further, and is in Think harder and Go further.",
+    "summary": "We learned that a two-digit number is made of bundles of ten and single ones. Your child made bundles from real things, built numbers up to 58, and practised reading and writing numbers like 34 (3 tens and 4 ones) and 70 (7 tens and 0 ones). Tens and ones is familiar school work. Opening a bundle (5 tens and 14 ones is 6 tens and 4 ones) goes further, and is in Think harder and Go further. Term 1 at a glance (10 lessons): tens and ones, number lines and the 100 square, adding and taking away, balance, then length, and last Mi's Challenge Quest, a game with no marks. By Lesson 10 we hope your child can explain how they found an answer in their own words. Term 1 goes beyond school Primary 1 on purpose; if Start here feels hard, tick I am still stuck on the look-back page and see the note below. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
     "words": [
       "bundle or ten: ten single things tied together",
       "single or one: a thing on its own",
@@ -3132,7 +3136,7 @@
       "What if you opened a bundle?"
     ],
     "when_stuck": "Please let your child use real things or draw bundles, and wait 10 seconds before helping. Please do not hurry or say it is easy. If the look-back page says 'I am still stuck', please photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept up to 90 days.",
-    "next": "Lesson 2: Number Words and the Number Line. Online practice: your tutor will share the practice link.",
+    "next": "Lesson 2: Number Words and the Number Line. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
     "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: reading and writing two-digit numbers from bundles of ten and single ones.",
     "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
     "quote": "A number is tens and ones. Ten singles tie into one bundle.",

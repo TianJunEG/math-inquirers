@@ -64,3 +64,7 @@ Changes are listed in `audit/FIXES2_L09.md`. Re-checked: validator 0 FAIL; 178 a
 ## Update (fourth fix pass, 23 Oct 2026): hand-off to Lesson 10
 
 Parent `next` and `next_materials`, the goodbye script line and the `s-end` slide now name Mi's Challenge Quest (not the old 4-page check sheet): Lesson 10 workbook with its kit page 6 cut out, about 20 counters, the Quest Log (4 pages, 100%) closed in an envelope, a quest partner, ruler, pencil, rubber, paper. The stale "page 6 is not used" in materials and tutor prep is removed (this lesson's workbook has 5 pages and no kit page). Validator 0 FAIL; parent page 1 page (96%).
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording; ruler pictures no longer claimed as real size, no-ruler help named.

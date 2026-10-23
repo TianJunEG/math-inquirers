@@ -68,3 +68,7 @@ See `audit/FIXES3_L10.md`. The end-of-term check is now Mi's Challenge Quest (ow
 ## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
 
 Added Think harder T4 (page 3): an impossible story (Ali has 12 stickers, gives 7 to Mei, then 8 to Ben; how many left after step 1, then circle Yes or No for step 2). The child checks each step against what is left. Original; answers verified in `verify/l10_checks.py` by simulating the pile. `moe.note` names it. Mi's Challenge Quest block untouched. Real PDF workbook fill 96, 91, 90, 97, 99, 94%; parts still sum to 90; validator 0 FAIL.
+
+## Update (final fix pass, 23 Oct 2026)
+
+Fixes from `audit/FINAL_AUDIT_T1.md` are listed in `audit/FINAL_FIXES_T1.md`. Rebuilt; validator 0 FAIL. This lesson: opening recording and camera script identical to Lessons 1 to 10 (no paper held to the camera), parent summary workload line, "Harder puzzles" and "Find" wording; Quest Log privacy line now says only the grown-up and tutor see the answers; internal build notes removed from the guide.
