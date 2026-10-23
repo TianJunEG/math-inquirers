@@ -110,6 +110,52 @@ PASS  S2-02 (P2-16) V3d the code word's letters have exactly ONE arrangement tha
 PASS  S2-02 (P2-16) V4 guess resistance: at least 3 common words fit the table letters  ['eating', 'enigma', 'inmate', 'magnet', 'mating', 'taxing']
 PASS  S2-02 (P2-16) V1 independent solver reads the printed text and equals the key  [49, 937, 706, 604, 224, 341]
 PASS  S2-02 (P2-16) V7 amounts under $10  
+PASS  S1-07 (P2-17) V2 code word spells VALET  
+PASS  S1-07 (P2-17) V3 no single slip spells another word (large word list, 129 000 words)  4495/4495
+PASS  S1-07 (P2-17) V3c no swap of two answers spells a word  []
+PASS  S1-07 (P2-17) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['valet']
+PASS  S1-07 (P2-17) V4 guess resistance: at least 3 common words fit the table letters  ['exalt', 'fetal', 'latex', 'valet']
+PASS  S1-07 (P2-17) V1 independent solver (printed clues parsed back, every number 100 to 999 tested) finds exactly the key  [[498], [988], [202], [918], [773]]
+PASS  S1-07 (P2-17) V1b every clue is necessary  
+PASS  S1-07 (P2-17) V7 every number is 3-digit  
+PASS  S1-11 (P2-18) V2 code word spells SPONGE  
+PASS  S1-11 (P2-18) V3 no single slip spells another word (large word list, 129 000 words)  5394/5394
+PASS  S1-11 (P2-18) V3c no swap of two answers spells a word  []
+PASS  S1-11 (P2-18) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['sponge']
+PASS  S1-11 (P2-18) V4 guess resistance: at least 3 common words fit the table letters  ['skopje', 'spoken', 'sponge']
+PASS  S1-11 (P2-18) V1 independent solver reads the printed sentences back and equals the key  [180, 427, 755, 521, 520, 569]
+PASS  S1-11 (P2-18) V7 every number is within 1000 and every answer is 3-digit  
+PASS  S1-11 (P2-18) V8 every sentence has at most 10 words  ['Siti gets 182 more. How many more does Jenny have now?']
+PASS  S1-15 (P2-19) V1 independent reader: every empty circle is found by dividing the top by the other factor and the loop closes with those numbers  [6, 6, 3, 2, 7, 2]
+PASS  S1-15 (P2-19) V1b every tile has exactly one empty factor  
+PASS  S1-15 (P2-19) V1c at most one link has an empty circle on both sides  
+PASS  S1-15 (P2-19) V7 products within 60, a table factor in every tile  
+PASS  S1-15 (P2-19) V3 every single wrong value in one empty circle (0 to 60) breaks the loop  
+PASS  S1-16 (P2-20) V1 independent evaluator reads each printed statement and agrees with the key  [True, True, False, False, True, False]
+PASS  S1-16 (P2-20) V2 right choices read down the rows spell the word  
+PASS  S1-16 (P2-20) V3 none of the other 63 ways to choose spells a word (large word list)  []
+PASS  S1-16 (P2-20) V3d the word's letters have exactly ONE arrangement that is a word  
+PASS  S1-16 (P2-20) V4 between 2 and 4 statements are true  
+PASS  S1-16 (P2-20) V8 every statement has at most 10 words (numbers and signs not counted)  
+PASS  S1-19 (P2-21) V1 independent solver (fractions read back and sorted by value) gets the word  BANDIT
+PASS  S1-19 (P2-21) V1b Set A are like fractions and Set B unit fractions, all denominators within 12  
+PASS  S1-19 (P2-21) V3d the code word's letters have exactly ONE arrangement that is a word  ['bandit']
+PASS  S1-19 (P2-21) V3 none of the 719 wrong orders of the six letters spells a word  []
+PASS  S1-20 (P2-22) V2 code word spells ANSWER  
+PASS  S1-20 (P2-22) V3 no single slip spells another word (large word list, 129 000 words)  72/72
+PASS  S1-20 (P2-22) V3c no swap of two answers spells a word  []
+PASS  S1-20 (P2-22) V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)  ['answer']
+PASS  S1-20 (P2-22) V4 guess resistance: at least 3 common words fit the table letters  ['angers', 'answer', 'sanger']
+PASS  S1-20 (P2-22) V1 independent solver reads the printed fractions back and equals the key  [1, 4, 11, 9, 3, 7]
+PASS  S1-20 (P2-22) V7 denominators are the same in every sum and at most 12; no answer reaches a whole  
+PASS  S2-03 (P2-23) V1 independent solver (prices read back and sorted) gets the word  BOUNCE
+PASS  S2-03 (P2-23) V3d the code word's letters have exactly ONE arrangement that is a word  
+PASS  S2-03 (P2-23) V3 none of the 719 wrong orders of the six letters spells a word  []
+PASS  S2-03 (P2-23) V7 amounts are dollars and cents under $10, written with two decimal places, no two amounts equal  
+PASS  S2-04 (P2-24) V1 independent solver (coins and notes added from the drawings, each amount matched to its purse) gets the word  BUCKLE
+PASS  S2-04 (P2-24) V1b every amount matches exactly one purse  
+PASS  S2-04 (P2-24) V3d the code word's letters have exactly ONE arrangement that is a word  
+PASS  S2-04 (P2-24) V3 none of the 719 wrong matchings spells a word  []
 PASS  S1-01 (P2-01) has a self-check model for the enumeration  
 PASS  S1-01 (P2-01) check passes the right answers  
 PASS  S1-01 (P2-01) enumeration: plausible single slips rejected 72/72 = 100.0% (needs >= 95%)  
@@ -174,9 +220,44 @@ PASS  S2-02 (P2-16) has a self-check model for the enumeration
 PASS  S2-02 (P2-16) check passes the right answers  
 PASS  S2-02 (P2-16) enumeration: plausible single slips rejected 5988/5988 = 100.0% (needs >= 95%)  
 PASS  S2-02 (P2-16) enumeration: every other value of one answer rejected 5988/5988 = 100.0% (needs >= 95%)  
+PASS  S1-07 (P2-17) has a self-check model for the enumeration  
+PASS  S1-07 (P2-17) check passes the right answers  
+PASS  S1-07 (P2-17) enumeration: plausible single slips rejected 60/60 = 100.0% (needs >= 95%)  
+PASS  S1-07 (P2-17) enumeration: every other value of one answer rejected 4495/4495 = 100.0% (needs >= 95%)  
+PASS  S1-11 (P2-18) has a self-check model for the enumeration  
+PASS  S1-11 (P2-18) check passes the right answers  
+PASS  S1-11 (P2-18) enumeration: plausible single slips rejected 72/72 = 100.0% (needs >= 95%)  
+PASS  S1-11 (P2-18) enumeration: every other value of one answer rejected 5394/5394 = 100.0% (needs >= 95%)  
+PASS  S1-15 (P2-19) has a self-check model for the enumeration  
+PASS  S1-15 (P2-19) check passes the right answers  
+PASS  S1-15 (P2-19) enumeration: plausible single slips rejected 58/58 = 100.0% (needs >= 95%)  
+PASS  S1-15 (P2-19) enumeration: every other value of one answer rejected 360/360 = 100.0% (needs >= 95%)  
+PASS  S1-16 (P2-20) has a self-check model for the enumeration  
+PASS  S1-16 (P2-20) check passes the right answers  
+PASS  S1-16 (P2-20) enumeration: plausible single slips rejected 6/6 = 100.0% (needs >= 95%)  
+PASS  S1-16 (P2-20) enumeration: every other value of one answer rejected 6/6 = 100.0% (needs >= 95%)  
+PASS  S1-19 (P2-21) has a self-check model for the enumeration  
+PASS  S1-19 (P2-21) check passes the right answers  
+PASS  S1-19 (P2-21) enumeration: plausible single slips rejected 30/30 = 100.0% (needs >= 95%)  
+PASS  S1-19 (P2-21) enumeration: every other value of one answer rejected 30/30 = 100.0% (needs >= 95%)  
+PASS  S1-19 (P2-21) enumeration: wrong arrangements rejected 719/719 = 100.0% (needs >= 95%)  
+PASS  S1-20 (P2-22) has a self-check model for the enumeration  
+PASS  S1-20 (P2-22) check passes the right answers  
+PASS  S1-20 (P2-22) enumeration: plausible single slips rejected 49/49 = 100.0% (needs >= 95%)  
+PASS  S1-20 (P2-22) enumeration: every other value of one answer rejected 72/72 = 100.0% (needs >= 95%)  
+PASS  S2-03 (P2-23) has a self-check model for the enumeration  
+PASS  S2-03 (P2-23) check passes the right answers  
+PASS  S2-03 (P2-23) enumeration: plausible single slips rejected 30/30 = 100.0% (needs >= 95%)  
+PASS  S2-03 (P2-23) enumeration: every other value of one answer rejected 30/30 = 100.0% (needs >= 95%)  
+PASS  S2-03 (P2-23) enumeration: wrong arrangements rejected 719/719 = 100.0% (needs >= 95%)  
+PASS  S2-04 (P2-24) has a self-check model for the enumeration  
+PASS  S2-04 (P2-24) check passes the right answers  
+PASS  S2-04 (P2-24) enumeration: plausible single slips rejected 30/30 = 100.0% (needs >= 95%)  
+PASS  S2-04 (P2-24) enumeration: every other value of one answer rejected 30/30 = 100.0% (needs >= 95%)  
+PASS  S2-04 (P2-24) enumeration: wrong arrangements rejected 719/719 = 100.0% (needs >= 95%)  
 PASS  3 colour-by-code pages (P2-38, P2-39, P2-40) across the two booklets  
-PASS  S1: 12 pages in the order of gen/outcomes.py  [1, 9, 12, 10, 11, 2, 3, 13, 4, 5, 14, 15]
-PASS  S2: 4 pages in the order of gen/outcomes.py  [6, 16, 8, 7]
+PASS  S1: 18 pages in the order of gen/outcomes.py  [1, 9, 12, 10, 11, 17, 2, 3, 13, 18, 4, 5, 14, 19, 20, 15, 21, 22]
+PASS  S2: 6 pages in the order of gen/outcomes.py  [6, 16, 23, 24, 8, 7]
 PASS  every page has a self-check strip text  
 PASS  every page names a self-check mechanism  
 PASS  every page has outcome numbers from the 32 syllabus lines  
@@ -184,9 +265,9 @@ PASS  V8 reading level: instruction and clue sentences <= 10 words, <= 3 lines  
 PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
-PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
-PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
-PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
+FAIL  every number of 11 or more quoted in a teacher note is found on the page or in its answers  [(20, ['63']), (21, ['720']), (23, ['720']), (24, ['720'])]
+FAIL  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  [(23, 'more than')]
+FAIL  F28: every outcome id of every page has its PDF wording in docs/school_books/p2_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  [(18, 'problem solving')]
 PASS  topic tags name a P2 strand  
 PASS  B/W colours only in S1_pupil.html  ['#000', '#fff']
 PASS  stroke widths >= 0.2 mm (0.57 pt) in S1_pupil.html  min 0.4
@@ -223,42 +304,42 @@ PASS  answer boxes at least 12 mm high in S2_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_key.html  []
 PASS  S2: no bare black dot is drawn as a countable thing  
 PASS  S2: no drawn object is clipped by the edge of its own svg  []
-PASS  S2: every coin shows its value and the word cents  24 coins
-PASS  P2_S1_Puzzles.pdf has 12 pages  12
+PASS  S2: every coin shows its value and the word cents  43 coins
+PASS  P2_S1_Puzzles.pdf has 18 pages  18
 PASS  P2_S1_Puzzles.pdf fonts all embedded  6 fonts
-PASS  P2_S1_Puzzles.pdf size < 20 MB  0.24 MB
+PASS  P2_S1_Puzzles.pdf size < 20 MB  0.34 MB
 PASS  P2_S1_Puzzles.pdf A4 page size  
 PASS  P2_S1_FrontMatter.pdf has 5 pages  5
 PASS  P2_S1_FrontMatter.pdf fonts all embedded  5 fonts
 PASS  P2_S1_FrontMatter.pdf size < 20 MB  0.06 MB
 PASS  P2_S1_FrontMatter.pdf A4 page size  
-PASS  P2_S1_Complete_Pack.pdf has 17 pages  17
+PASS  P2_S1_Complete_Pack.pdf has 23 pages  23
 PASS  P2_S1_Complete_Pack.pdf fonts all embedded  11 fonts
-PASS  P2_S1_Complete_Pack.pdf size < 20 MB  0.29 MB
+PASS  P2_S1_Complete_Pack.pdf size < 20 MB  0.39 MB
 PASS  P2_S1_Complete_Pack.pdf A4 page size  
-PASS  P2_S1_Answer_Key.pdf has 5 pages  5
+PASS  P2_S1_Answer_Key.pdf has 7 pages  7
 PASS  P2_S1_Answer_Key.pdf fonts all embedded  5 fonts
-PASS  P2_S1_Answer_Key.pdf size < 20 MB  0.07 MB
+PASS  P2_S1_Answer_Key.pdf size < 20 MB  0.09 MB
 PASS  P2_S1_Answer_Key.pdf A4 page size  
-PASS  S1: school name printed on all 12 page footers  
+PASS  S1: school name printed on all 18 page footers  
 PASS  S1: every pupil page shows its code in the footer, for example S1-07 (P2-17)  []
-PASS  P2_S2_Puzzles.pdf has 4 pages  4
+PASS  P2_S2_Puzzles.pdf has 6 pages  6
 PASS  P2_S2_Puzzles.pdf fonts all embedded  5 fonts
-PASS  P2_S2_Puzzles.pdf size < 20 MB  0.20 MB
+PASS  P2_S2_Puzzles.pdf size < 20 MB  0.32 MB
 PASS  P2_S2_Puzzles.pdf A4 page size  
 PASS  P2_S2_FrontMatter.pdf has 5 pages  5
 PASS  P2_S2_FrontMatter.pdf fonts all embedded  6 fonts
 PASS  P2_S2_FrontMatter.pdf size < 20 MB  0.06 MB
 PASS  P2_S2_FrontMatter.pdf A4 page size  
-PASS  P2_S2_Complete_Pack.pdf has 9 pages  9
+PASS  P2_S2_Complete_Pack.pdf has 11 pages  11
 PASS  P2_S2_Complete_Pack.pdf fonts all embedded  11 fonts
-PASS  P2_S2_Complete_Pack.pdf size < 20 MB  0.26 MB
+PASS  P2_S2_Complete_Pack.pdf size < 20 MB  0.38 MB
 PASS  P2_S2_Complete_Pack.pdf A4 page size  
-PASS  P2_S2_Answer_Key.pdf has 2 pages  2
+PASS  P2_S2_Answer_Key.pdf has 3 pages  3
 PASS  P2_S2_Answer_Key.pdf fonts all embedded  4 fonts
-PASS  P2_S2_Answer_Key.pdf size < 20 MB  0.04 MB
+PASS  P2_S2_Answer_Key.pdf size < 20 MB  0.05 MB
 PASS  P2_S2_Answer_Key.pdf A4 page size  
-PASS  S2: school name printed on all 4 page footers  
+PASS  S2: school name printed on all 6 page footers  
 PASS  S2: every pupil page shows its code in the footer, for example S1-07 (P2-17)  []
 PASS  money is written 50¢, never 50c, in all printed text  []
 PASS  dollar amounts with cents always have two decimal places ($3.50, never $3.5)  []
@@ -300,26 +381,44 @@ PASS  S1 pupil page 05 layout (no overflow/clipping/margin breach)
 PASS  S1 pupil page 05 page-fill: puzzle content 145 of 183 mm  0.79
 PASS  S1 pupil page 05 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 06 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 06 page-fill: puzzle content 152 of 183 mm  0.83
+PASS  S1 pupil page 06 page-fill: puzzle content 180 of 183 mm  0.99
 PASS  S1 pupil page 06 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 07 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 07 page-fill: puzzle content 154 of 183 mm  0.84
+PASS  S1 pupil page 07 page-fill: puzzle content 152 of 183 mm  0.83
 PASS  S1 pupil page 07 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 08 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 08 page-fill: puzzle content 149 of 183 mm  0.81
+PASS  S1 pupil page 08 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S1 pupil page 08 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 09 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 09 page-fill: puzzle content 173 of 183 mm  0.94
+PASS  S1 pupil page 09 page-fill: puzzle content 149 of 183 mm  0.81
 PASS  S1 pupil page 09 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 10 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 10 page-fill: puzzle content 142 of 183 mm  0.78
+PASS  S1 pupil page 10 page-fill: puzzle content 164 of 183 mm  0.89
 PASS  S1 pupil page 10 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 11 layout (no overflow/clipping/margin breach)  
-PASS  S1 pupil page 11 page-fill: puzzle content 154 of 183 mm  0.84
+PASS  S1 pupil page 11 page-fill: puzzle content 173 of 183 mm  0.94
 PASS  S1 pupil page 11 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 12 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 12 page-fill: puzzle content 142 of 183 mm  0.78
 PASS  S1 pupil page 12 min text size >= 8 pt  8.0 pt
+PASS  S1 pupil page 13 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 13 page-fill: puzzle content 154 of 183 mm  0.84
+PASS  S1 pupil page 13 min text size >= 8 pt  8.0 pt
+PASS  S1 pupil page 14 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 14 page-fill: puzzle content 105 of 183 mm  0.58
+PASS  S1 pupil page 14 min text size >= 8 pt  8.0 pt
+PASS  S1 pupil page 15 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 15 page-fill: puzzle content 141 of 183 mm  0.77
+PASS  S1 pupil page 15 min text size >= 8 pt  8.0 pt
+PASS  S1 pupil page 16 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 16 page-fill: puzzle content 142 of 183 mm  0.78
+PASS  S1 pupil page 16 min text size >= 8 pt  8.0 pt
+PASS  S1 pupil page 17 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 17 page-fill: puzzle content 104 of 183 mm  0.57
+PASS  S1 pupil page 17 min text size >= 8 pt  8.0 pt
+PASS  S1 pupil page 18 layout (no overflow/clipping/margin breach)  
+PASS  S1 pupil page 18 page-fill: puzzle content 144 of 183 mm  0.79
+PASS  S1 pupil page 18 min text size >= 8 pt  8.0 pt
 PASS  S1 front page 01 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 01 min text size >= 8 pt  12.0 pt
 PASS  S1 front page 02 layout (no overflow/clipping/margin breach)  
@@ -340,6 +439,10 @@ PASS  S1 key page 04 layout (no overflow/clipping/margin breach)
 PASS  S1 key page 04 min text size >= 8 pt  8.0 pt
 PASS  S1 key page 05 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 05 min text size >= 8 pt  8.0 pt
+PASS  S1 key page 06 layout (no overflow/clipping/margin breach)  
+PASS  S1 key page 06 min text size >= 8 pt  8.0 pt
+PASS  S1 key page 07 layout (no overflow/clipping/margin breach)  
+PASS  S1 key page 07 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 01 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 01 page-fill: puzzle content 177 of 183 mm  0.96
 PASS  S2 pupil page 01 min text size >= 8 pt  8.0 pt
@@ -347,11 +450,17 @@ PASS  S2 pupil page 02 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 02 page-fill: puzzle content 122 of 183 mm  0.67
 PASS  S2 pupil page 02 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 03 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 03 page-fill: puzzle content 143 of 183 mm  0.78
+PASS  S2 pupil page 03 page-fill: puzzle content 110 of 183 mm  0.60
 PASS  S2 pupil page 03 min text size >= 8 pt  8.0 pt
 PASS  S2 pupil page 04 layout (no overflow/clipping/margin breach)  
-PASS  S2 pupil page 04 page-fill: puzzle content 172 of 183 mm  0.94
+PASS  S2 pupil page 04 page-fill: puzzle content 117 of 183 mm  0.64
 PASS  S2 pupil page 04 min text size >= 8 pt  8.0 pt
+PASS  S2 pupil page 05 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 05 page-fill: puzzle content 143 of 183 mm  0.78
+PASS  S2 pupil page 05 min text size >= 8 pt  8.0 pt
+PASS  S2 pupil page 06 layout (no overflow/clipping/margin breach)  
+PASS  S2 pupil page 06 page-fill: puzzle content 172 of 183 mm  0.94
+PASS  S2 pupil page 06 min text size >= 8 pt  8.0 pt
 PASS  S2 front page 01 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 01 min text size >= 8 pt  12.0 pt
 PASS  S2 front page 02 layout (no overflow/clipping/margin breach)  
@@ -366,21 +475,23 @@ PASS  S2 key page 01 layout (no overflow/clipping/margin breach)
 PASS  S2 key page 01 min text size >= 8 pt  8.0 pt
 PASS  S2 key page 02 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 02 min text size >= 8 pt  8.0 pt
+PASS  S2 key page 03 layout (no overflow/clipping/margin breach)  
+PASS  S2 key page 03 min text size >= 8 pt  8.0 pt
 PASS  S1_pupil.html: colour-by-code pictures: 0 found (expected 0); every label of every part lies inside its region and clear of outlines and decorations  []
 PASS  S1_key.html: colour-by-code pictures: 0 found (expected 0); every label of every part lies inside its region and clear of outlines and decorations  []
 PASS  S2_pupil.html: colour-by-code pictures: 0 found (expected 0); every label of every part lies inside its region and clear of outlines and decorations  []
 PASS  S2_key.html: colour-by-code pictures: 0 found (expected 0); every label of every part lies inside its region and clear of outlines and decorations  []
-PASS  P2_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.02% vs greyscale)  12 pages
-PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 92, limit 40 per page)  
-PASS  P2_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.33% vs greyscale)  5 pages
-PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 94, limit 40 per page)  
-PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.83% vs greyscale)  5 pages
-PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 552, limit 130 per page)  
-PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 8.79% vs greyscale)  4 pages
-PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 36, limit 40 per page)  
-PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.00% vs greyscale)  5 pages
-PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 92, limit 40 per page)  
-PASS  P2_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.81% vs greyscale)  2 pages
-FAIL  P2_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 273, limit 130 per page)  
+PASS  P2_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 14.23% vs greyscale)  18 pages
+PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 155, limit 40 per page)  
+PASS  P2_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.99% vs greyscale)  5 pages
+PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 126, limit 40 per page)  
+PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.89% vs greyscale)  7 pages
+PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 688, limit 130 per page)  
+PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.57% vs greyscale)  6 pages
+PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 54, limit 40 per page)  
+PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 28.53% vs greyscale)  5 pages
+PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 83, limit 40 per page)  
+PASS  P2_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 32.83% vs greyscale)  3 pages
+PASS  P2_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 324, limit 130 per page)  
 
-TOTAL 384 checks, 1 failed
+TOTAL 495 checks, 3 failed

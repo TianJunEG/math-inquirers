@@ -94,7 +94,7 @@ G.append(item(U+'-G01', 'go', 5, 'Beyond Level 4: Signs and brackets\nRule: brac
   parts=[P('a', 'Write + − × or ÷ in each circle: 9 ○ 4 ○ 6 = 30', A('×', '−', text='9 × 4 − 6')),
          P('b', 'Put ONE pair of brackets in 7 + 3 × 8 − 4 to make 76. Write the numbers inside the brackets: {b} + {b}', A(7, 3, text='(7 + 3) × 8 − 4'))],
   hint='For (a), estimate first. A big answer needs ×.',
-  why='(a) 9 × 4 = 36 and 36 − 6 = 30. The other signs do not give 30. (b) (7 + 3) × 8 − 4 = 10 × 8 − 4 = 76. Brackets round 3 × 8 give 31, and brackets round 8 − 4 give 19.',
+  why='(a) 9 × 4 = 36 and 36 − 6 = 30. The other signs do not give 30. (b) (7 + 3) × 8 − 4 = 10 × 8 − 4 = 76. Brackets round 3 × 8 give 7 + 24 − 4 = 27, and brackets round 8 − 4 give 7 + 3 × 4 = 19.',
   space={'rows': ['Try:']}))
 G.append(item(U+'-G02', 'go', 5, 'Ben and Mei both save for a bike. Plan A: start with $15 and save $8 each week. Plan B: start with $0 and save $13 each week.',
   fig={'type': 'l4_table', 'head': ['Week', '0', '1', '2', '3', '4'], 'rows': [['Plan A', '$15', '', '', '', ''], ['Plan B', '$0', '', '', '', '']], 'widths': [1.6, 1, 1, 1, 1, 1], 'cell_h': 50, 'font': 26, 'first_col_head': True, 'width_mm': 140},

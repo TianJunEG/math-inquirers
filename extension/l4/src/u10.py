@@ -82,9 +82,9 @@ T.append(item(U+'-T02', 'think', 4, 'Five children sit in a row of 5 seats, numb
   why='Ben cannot sit next to Aisha in seat 3, so Ben is not in seat 2, 3 or 4. Ben is in seat 1 or seat 5. Kumar is also at an end, so Ben and Kumar take seats 1 and 5. Ravi and Mei take seats 2 and 4. Mei is to the right of Ravi, so Ravi is in seat 2 and Mei is in seat 4. Kumar is not next to Ravi, so Kumar is not in seat 1. Kumar is in seat 5 and Ben is in seat 1.',
   space={'rows': ['Try:', '']}))
 T.append(item(U+'-T03', 'think', 4, 'A grandfather is 7 times as old as his grandson. In 12 years, he will be 3 times as old. How old is the grandson now? {b}',
-  ans=A(6), hint='The age gap stays the same. Draw bars for now and 12 years on.',
-  why='The gap between their ages never changes. Now the grandfather is 7 units and the grandson is 1 unit, so the gap is 6 units. In 12 years the grandfather is 3 parts and the grandson is 1 part, so the gap is 2 parts. 6 units = 2 parts, so 1 part = 3 units. In 12 years the grandson is 3 units. He was 1 unit now, so he grows 2 units in 12 years. 1 unit = 6. The grandson is 6 now. Check: 42 and 6 now, 54 and 18 in 12 years, and 54 = 3 × 18.',
-  space={'rows': ['Draw a bar model here.', '', '']}))
+  ans=A(6), hint='Guess the grandson\'s age, then check both times.',
+  why='Try the grandson\'s age and check both times. Age 5: the grandfather is 35 now, and 17 and 47 in 12 years. 47 is not 3 times 17. Age 6: the grandfather is 42 now, and 18 and 54 in 12 years. 54 = 3 × 18, so it works. The grandson is 6.',
+  space={'rows': ['Ages now / in 12 years:', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'How many whole numbers from 1 to 200 have digits that add up to 5? {b}',
   ans=A(11), hint='List them in order: 1-digit, 2-digit, then the 100s.',

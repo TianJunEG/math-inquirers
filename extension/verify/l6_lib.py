@@ -6,7 +6,9 @@ MINUS = '−'
 
 
 def _py(expr):
-    e = expr.replace('×', '*').replace('÷', '/').replace(MINUS, '-').replace('{gt}', '>').replace('{lt}', '<')
+    e = re.sub(r'item\s+(\w+)\s+of\s+(\w+)', r'\2[\1-1]', expr)          # Scratch list blocks: item i of scores, length of scores
+    e = re.sub(r'length\s+of\s+(\w+)', r'len(\1)', e)
+    e = e.replace('×', '*').replace('÷', '/').replace(MINUS, '-').replace('{gt}', '>').replace('{lt}', '<')
     e = re.sub(r'\bmod\b', '%', e)
     e = re.sub(r'(?<![<>=!])=(?!=)', '==', e)
     e = e.replace('{ge}', '>=').replace('{le}', '<=').replace(' and ', ' and ').replace(' or ', ' or ')

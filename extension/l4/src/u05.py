@@ -104,7 +104,7 @@ G.append(item(U+'-G03', 'go', 5, 'Four children share $20.40. Each child gets $0
   hint='Take away the extras first: 0.60, 1.20 and 1.80.',
   why='The extras are $0 + $0.60 + $1.20 + $1.80 = $3.60. Without them the 4 children share $20.40 − $3.60 = $16.80, so the youngest gets $16.80 ÷ 4 = $4.20. The oldest gets $4.20 + $1.80 = $6.00. The amounts are $4.20, $4.80, $5.40 and $6.00.',
   space={'rows': ['Working:']}))
-G.append(item(U+'-G04', 'go', 5, 'Beyond Level 4: Number patterns with decimals\n0.35, 0.40, 0.45, 0.50, and so on.',
+G.append(item(U+'-G04', 'go', 5, 'A pattern starts 0.35, 0.40, 0.45, 0.50 and goes on in the same way.',
   parts=[P('a', 'The 20th number is {b}', A('1.3')), P('b', 'Which place in the pattern is 2.05? Place {b}', A(35))],
   hint='Each place adds 0.05. How many steps after the 1st?',
   why='The pattern adds 0.05 each time. The 20th number is 0.35 + 19 × 0.05 = 0.35 + 0.95 = 1.30. For 2.05, the number of steps from 0.35 is (2.05 − 0.35) ÷ 0.05 = 34, so it is the 35th number.',

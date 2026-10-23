@@ -58,9 +58,9 @@
    "kind": "learn",
    "label": "Unit 7 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.903240859938208,
+   "fill": 0.9466078784757982,
    "over": false,
-   "excess_mm": -24.9,
+   "excess_mm": -13.7,
    "edition": "soft"
   },
   {
@@ -78,9 +78,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 1.0110549691040165,
-   "over": true,
-   "excess_mm": 2.8,
+   "fill": 0.9913426879505665,
+   "over": false,
+   "excess_mm": -2.2,
    "edition": "soft"
   },
   {
@@ -98,9 +98,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9858393408856848,
+   "fill": 0.9396240988671473,
    "over": false,
-   "excess_mm": -3.6,
+   "excess_mm": -15.5,
    "edition": "soft"
   },
   {
@@ -108,9 +108,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.914601570545829,
+   "fill": 0.9344586766220392,
    "over": false,
-   "excess_mm": -21.9,
+   "excess_mm": -16.8,
    "edition": "soft"
   },
   {
@@ -235,9 +235,9 @@
    "kind": "learn",
    "label": "Unit 7 \u00b7 Learn it",
    "exempt": false,
-   "fill": 0.907360324407827,
+   "fill": 0.950727342945417,
    "over": false,
-   "excess_mm": -23.8,
+   "excess_mm": -12.7,
    "edition": "print"
   },
   {
@@ -255,9 +255,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Start here 2",
    "exempt": false,
-   "fill": 1.0110549691040165,
-   "over": true,
-   "excess_mm": 2.8,
+   "fill": 0.9913426879505665,
+   "over": false,
+   "excess_mm": -2.2,
    "edition": "print"
   },
   {
@@ -275,9 +275,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9920185375901133,
+   "fill": 0.9458032955715757,
    "over": false,
-   "excess_mm": -2.1,
+   "excess_mm": -13.9,
    "edition": "print"
   },
   {
@@ -285,9 +285,9 @@
    "kind": "practice",
    "label": "Unit 7 \u00b7 Go further",
    "exempt": false,
-   "fill": 0.914601570545829,
+   "fill": 0.9344586766220392,
    "over": false,
-   "excess_mm": -21.9,
+   "excess_mm": -16.8,
    "edition": "print"
   },
   {
@@ -359,10 +359,7 @@
    "edition": "print"
   }
  ],
- "problems": [
-  "soft page 8 (Unit 7 \u00b7 Start here 2): content overflows the page (natural height minus body 2.8 mm)",
-  "print page 8 (Unit 7 \u00b7 Start here 2): content overflows the page (natural height minus body 2.8 mm)"
- ],
+ "problems": [],
  "soft_pages": 18,
  "print_pages": 18
 }

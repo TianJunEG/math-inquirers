@@ -1097,5 +1097,519 @@
    ],
    "wrong_arrangements_rejected": null
   }
+ },
+ {
+  "no": 17,
+  "code": "S1-07 (P2-17)",
+  "title": "Mystery Numbers",
+  "tier": 2,
+  "topic": "3-digit numbers: digits, odd and even, more and less",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.2, 1.4, 1.6 (place values; comparing and ordering numbers; odd and even numbers)",
+  "outcomes": [
+   "WN1.2",
+   "WN1.4",
+   "WN1.6"
+  ],
+  "ptype": "Number riddles",
+  "mech": "K1 code word (5 letters)",
+  "seed": 7117,
+  "checks": [
+   {
+    "name": "V2 code word spells VALET",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "4495/4495"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['valet']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['exalt', 'fetal', 'latex', 'valet']"
+   },
+   {
+    "name": "V1 independent solver (printed clues parsed back, every number 100 to 999 tested) finds exactly the key",
+    "ok": true,
+    "detail": "[[498], [988], [202], [918], [773]]"
+   },
+   {
+    "name": "V1b every clue is necessary",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every number is 3-digit",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   4495,
+   4495
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    60,
+    60
+   ],
+   "all_other_values_rejected": [
+    4495,
+    4495
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 18,
+  "code": "S1-11 (P2-18)",
+  "title": "Story Sums to 1000",
+  "tier": 2,
+  "topic": "Two-step stories with numbers to 1000",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.1, 2.2 (addition and subtraction algorithms up to 3 digits; mental calculation)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2"
+  ],
+  "ptype": "Code-breaker (two-step stories)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 7218,
+  "checks": [
+   {
+    "name": "V2 code word spells SPONGE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "5394/5394"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['sponge']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['skopje', 'spoken', 'sponge']"
+   },
+   {
+    "name": "V1 independent solver reads the printed sentences back and equals the key",
+    "ok": true,
+    "detail": "[180, 427, 755, 521, 520, 569]"
+   },
+   {
+    "name": "V7 every number is within 1000 and every answer is 3-digit",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V8 every sentence has at most 10 words",
+    "ok": true,
+    "detail": "['Siti gets 182 more. How many more does Jenny have now?']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   5394,
+   5394
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    72,
+    72
+   ],
+   "all_other_values_rejected": [
+    5394,
+    5394
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 19,
+  "code": "S1-15 (P2-19)",
+  "title": "Fact Families",
+  "tier": 2,
+  "topic": "Multiplication and division: finding the missing number, the loop that closes",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.2, 3.3 (use of \u00f7; relationship between multiplication and division); 3.4",
+  "outcomes": [
+   "MD3.2",
+   "MD3.3",
+   "MD3.4"
+  ],
+  "ptype": "Chain loop (multiplication tiles)",
+  "mech": "K8 the loop closes: every number joined by = matches",
+  "seed": 7319,
+  "checks": [
+   {
+    "name": "V1 independent reader: every empty circle is found by dividing the top by the other factor and the loop closes with those numbers",
+    "ok": true,
+    "detail": "[6, 6, 3, 2, 7, 2]"
+   },
+   {
+    "name": "V1b every tile has exactly one empty factor",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at most one link has an empty circle on both sides",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 products within 60, a table factor in every tile",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 every single wrong value in one empty circle (0 to 60) breaks the loop",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   360,
+   360
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    58,
+    58
+   ],
+   "all_other_values_rejected": [
+    360,
+    360
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 20,
+  "code": "S1-16 (P2-20)",
+  "title": "True or False Tables",
+  "tier": 2,
+  "topic": "Multiplication and division facts: true or false",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.4, 3.5 (tables of 2, 3, 4, 5 and 10; multiplying and dividing within the tables; mental calculation)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.3",
+   "MD3.4",
+   "MD3.5"
+  ],
+  "ptype": "True or false table",
+  "mech": "K1 the letter of the right choice in each row spells a word (6 letters, one decoy letter in each row)",
+  "seed": 7420,
+  "checks": [
+   {
+    "name": "V1 independent evaluator reads each printed statement and agrees with the key",
+    "ok": true,
+    "detail": "[True, True, False, False, True, False]"
+   },
+   {
+    "name": "V2 right choices read down the rows spell the word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the other 63 ways to choose spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V4 between 2 and 4 statements are true",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V8 every statement has at most 10 words (numbers and signs not counted)",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   6,
+   6
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    6,
+    6
+   ],
+   "all_other_values_rejected": [
+    6,
+    6
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 21,
+  "code": "S1-19 (P2-21)",
+  "title": "Fraction Order",
+  "tier": 2,
+  "topic": "Fractions: comparing and ordering like fractions and unit fractions",
+  "strand": "Number and Algebra - Fractions",
+  "syll": "1.2, 1.3 (notation of fractions; comparing and ordering unit fractions and like fractions)",
+  "outcomes": [
+   "FR1.2",
+   "FR1.3"
+  ],
+  "ptype": "Ordering (lettered cards)",
+  "mech": "K1 letters in order spell a word (6 letters) + K4 each card used once",
+  "seed": 7521,
+  "checks": [
+   {
+    "name": "V1 independent solver (fractions read back and sorted by value) gets the word",
+    "ok": true,
+    "detail": "BANDIT"
+   },
+   {
+    "name": "V1b Set A are like fractions and Set B unit fractions, all denominators within 12",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['bandit']"
+   },
+   {
+    "name": "V3 none of the 719 wrong orders of the six letters spells a word",
+    "ok": true,
+    "detail": "[]"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    30,
+    30
+   ],
+   "all_other_values_rejected": [
+    30,
+    30
+   ],
+   "wrong_arrangements_rejected": [
+    719,
+    719
+   ]
+  }
+ },
+ {
+  "no": 22,
+  "code": "S1-20 (P2-22)",
+  "title": "Fraction Sums",
+  "tier": 2,
+  "topic": "Fractions: adding and subtracting like fractions within one whole",
+  "strand": "Number and Algebra - Fractions",
+  "syll": "2.1 (adding and subtracting like fractions within one whole)",
+  "outcomes": [
+   "FR2.1"
+  ],
+  "ptype": "Code-breaker (fractions)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 7622,
+  "checks": [
+   {
+    "name": "V2 code word spells ANSWER",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "72/72"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['answer']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['angers', 'answer', 'sanger']"
+   },
+   {
+    "name": "V1 independent solver reads the printed fractions back and equals the key",
+    "ok": true,
+    "detail": "[1, 4, 11, 9, 3, 7]"
+   },
+   {
+    "name": "V7 denominators are the same in every sum and at most 12; no answer reaches a whole",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   72,
+   72
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    49,
+    49
+   ],
+   "all_other_values_rejected": [
+    72,
+    72
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 23,
+  "code": "S2-03 (P2-23)",
+  "title": "Which Costs More?",
+  "tier": 2,
+  "topic": "Money: comparing and ordering amounts",
+  "strand": "Number and Algebra - Money",
+  "syll": "1.3 (comparing two or three amounts of money); 1.2 decimal notation",
+  "outcomes": [
+   "MO1.2",
+   "MO1.3"
+  ],
+  "ptype": "Ordering (lettered price cards)",
+  "mech": "K1 letters in order spell a word (6 letters) + K4 each card used once",
+  "seed": 7723,
+  "checks": [
+   {
+    "name": "V1 independent solver (prices read back and sorted) gets the word",
+    "ok": true,
+    "detail": "BOUNCE"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 719 wrong orders of the six letters spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V7 amounts are dollars and cents under $10, written with two decimal places, no two amounts equal",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    30,
+    30
+   ],
+   "all_other_values_rejected": [
+    30,
+    30
+   ],
+   "wrong_arrangements_rejected": [
+    719,
+    719
+   ]
+  }
+ },
+ {
+  "no": 24,
+  "code": "S2-04 (P2-24)",
+  "title": "Purse Match",
+  "tier": 2,
+  "topic": "Money: counting coins and notes, matching amounts",
+  "strand": "Number and Algebra - Money",
+  "syll": "1.1, 1.2 (counting money in dollars and cents; decimal notation)",
+  "outcomes": [
+   "MO1.1",
+   "MO1.2"
+  ],
+  "ptype": "Matching (lettered purses)",
+  "mech": "K1 letters of the matching purses spell a word (6 letters) + K4 each purse used once",
+  "seed": 7824,
+  "checks": [
+   {
+    "name": "V1 independent solver (coins and notes added from the drawings, each amount matched to its purse) gets the word",
+    "ok": true,
+    "detail": "BUCKLE"
+   },
+   {
+    "name": "V1b every amount matches exactly one purse",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 719 wrong matchings spells a word",
+    "ok": true,
+    "detail": "[]"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    30,
+    30
+   ],
+   "all_other_values_rejected": [
+    30,
+    30
+   ],
+   "wrong_arrangements_rejected": [
+    719,
+    719
+   ]
+  }
  }
 ]

@@ -172,3 +172,27 @@ def route_model(path, n):
 
 def mini_route_key(n, path):
     return mini_route(n, path)
+
+# --------------------------------------------------------------------------- rows of lettered choices (the right choice of each row carries a letter of the word)
+def choice_letters(rng, word, n_opts, tries=600):
+    """rows[i] = [right letter, wrong letter, ...]: no other way of choosing one option in every row spells a word of the large list"""
+    avail = [c for c in ALPHA if c not in word]
+    for _ in range(tries):
+        rows = []
+        for i in range(len(word)):
+            rows.append([word[i]] + rng.sample(avail, n_opts - 1))
+        ok = True
+        for combo in itertools.product(range(n_opts), repeat=len(word)):
+            if not any(combo): continue
+            w2 = "".join(rows[i][c] for i, c in enumerate(combo))
+            if w2.lower() in BIG: ok = False; break
+        if ok: return rows
+    raise RuntimeError("choice letters")
+
+def choice_other_words(word, rows):
+    n = len(rows[0]); out = []
+    for combo in itertools.product(range(n), repeat=len(word)):
+        if not any(combo): continue
+        w2 = "".join(rows[i][c] for i, c in enumerate(combo))
+        if w2.lower() in BIG: out.append(w2)
+    return out

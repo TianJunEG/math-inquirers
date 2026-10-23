@@ -325,10 +325,10 @@ def clock(spec, w=None):
     for h in range(1, 13):
         a = math.radians(h * 30)
         P.append(L(cx + (r - 8) * math.sin(a), cy - (r - 8) * math.cos(a), cx + r * math.sin(a), cy - r * math.cos(a), 3))
-        tx, ty = cx + (r - 26) * math.sin(a), cy - (r - 26) * math.cos(a)
+        tx, ty = cx + (r - 25) * math.sin(a), cy - (r - 25) * math.cos(a)
         if h in spec.get('ring', []):
             P.append(f'<circle cx="{tx:.1f}" cy="{ty:.1f}" r="15" fill="none" stroke="{NAVY}" stroke-width="3.4"/>')
-        P.append(T(tx, ty + 7, h, 19, weight=800))
+        P.append(T(tx, ty + 6, h, 17, weight=800))
     if spec.get('hand'):
         a = math.radians(spec['hand'] * 30)
         P.append(L(cx, cy, cx + (r - 40) * math.sin(a), cy - (r - 40) * math.cos(a), 5.5))
@@ -339,3 +339,44 @@ def clock(spec, w=None):
 
 
 FIGS['l6_clock'] = clock
+
+
+# ================================================================================================ bar chart / towers
+def bars(spec, w=None):
+    """A bar chart.  spec: values [numbers], labels [text under each bar], unit_mm (mm per 1 of value), ymax, ytick, bar_mm (bar width), gap_mm,
+    mean (draw a dashed level line at this value), show (write the value above each bar), blank [indexes] (an empty dashed bar for the child to draw)."""
+    vals = spec['values']
+    labs = spec.get('labels') or [''] * len(vals)
+    um = spec.get('unit_mm', 3.5) * U
+    ymax = spec.get('ymax', max(v for v in vals if v is not None))
+    ytick = spec.get('ytick', 5)
+    bw = spec.get('bar_mm', 11) * U
+    gap = spec.get('gap_mm', 5) * U
+    X0, Y0 = 60, 20
+    H = Y0 + ymax * um + 52
+    W = X0 + len(vals) * (bw + gap) + 16
+    base = Y0 + ymax * um
+    P = [L(X0, Y0 - 6, X0, base, 3), L(X0, base, W - 10, base, 3)]
+    t = 0
+    while t <= ymax:
+        y = base - t * um
+        P.append(L(X0 - 9, y, X0, y, 2.6))
+        P.append(T(X0 - 14, y + 6, t, 16, 'end', 700))
+        t += ytick
+    for i, v in enumerate(vals):
+        x = X0 + gap / 2 + i * (bw + gap)
+        if v is None:
+            P.append(R(x, Y0, bw, ymax * um, '#fff', 2.4, 3, dash='7 5'))
+        else:
+            P.append(R(x, base - v * um, bw, v * um, SKY, 3, 3))
+            if spec.get('show'):
+                P.append(T(x + bw / 2, base - v * um - 8, v, 17, weight=800))
+        P.append(T(x + bw / 2, base + 24, labs[i], 17, weight=700))
+    if spec.get('mean') is not None:
+        y = base - spec['mean'] * um
+        P.append(L(X0, y, W - 10, y, 3, dash='10 6'))
+        P.append(T(W - 12, y - 8, 'mean', 16, 'end', 800))
+    return wrap(''.join(P), W, H, 'bar chart', w)
+
+
+FIGS['l6_bars'] = bars

@@ -680,7 +680,7 @@
     ]
    },
    "hint": "For (a), estimate first. A big answer needs ×.",
-   "explanation": "(a) 9 × 4 = 36 and 36 − 6 = 30. The other signs do not give 30. (b) (7 + 3) × 8 − 4 = 10 × 8 − 4 = 76. Brackets round 3 × 8 give 31, and brackets round 8 − 4 give 19."
+   "explanation": "(a) 9 × 4 = 36 and 36 − 6 = 30. The other signs do not give 30. (b) (7 + 3) × 8 − 4 = 10 × 8 − 4 = 76. Brackets round 3 × 8 give 7 + 24 − 4 = 27, and brackets round 8 − 4 give 7 + 3 × 4 = 19."
   },
   {
    "id": "L4U03-G02",

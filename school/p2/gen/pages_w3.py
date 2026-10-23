@@ -311,7 +311,7 @@ def page20():
         "K1 the letter of the right choice in each row spells a word (6 letters, one decoy letter in each row)",
         ["Is each statement true or false?", "Circle the letter of the right choice.", "Write the six letters in the boxes."],
         body, "; ".join(f"{i+1}) {'T' if tr else 'F'} ({txt})" for i, (txt, tr) in enumerate(rows)), f"Word: {word}",
-        "Six statements from the tables of 2, 3, 4, 5 and 10, including one about a times table and one that links a multiplication to a division. Each row has a T choice and an F choice, each with a letter. The letters of the right choices, read down the rows, spell the word. All 63 other ways to choose were tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
+        "Six statements from the tables of 2, 3, 4, 5 and 10, including one about a times table and one that links a multiplication to a division. Each row has a T choice and an F choice, each with a letter. The letters of the right choices, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         check="Write the six letters in order. Do they spell a word?", check_boxes=6, mk=("code",),
         mech_plain="Word from the letters of the right choices (6 letters)")
     P["instr"] = ["Is each statement true or false?", "Circle the letter of the right choice.", "Write the six letters in the boxes."]
@@ -322,7 +322,7 @@ def page20():
     P.v("V3 none of the other 63 ways to choose spells a word (large word list)", not any(x.lower() in BIG for x in other), [x for x in other if x.lower() in BIG][:3])
     P.v("V3d the word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()])
     P.v("V4 between 2 and 4 statements are true", 2 <= sum(truths) <= 4)
-    P.v("V8 every statement is at most 10 words", all(len(t.split()) <= 10 for t, _ in rows))
+    P.v("V8 every statement has at most 10 words (numbers and signs not counted)", all(len([x for x in t.split() if re.search(r"[A-Za-z]", x)]) <= 10 for t, _ in rows))
     domains = [[word[i], dec[i]] for i in range(6)]
     P["model"] = dict(truth=list(word), domains=domains, check=letters_check(), numeric=False)
     P["cv"] = dict(rate=1.0, single_total=6, single_detected=6)
@@ -356,7 +356,7 @@ def page21():
         "K1 letters in order spell a word (6 letters) + K4 each card used once",
         ["Put each set of fractions in order.", "Write the letter of each card in its place.", "Set A: like fractions. Set B: unit fractions."],
         body, f"Set A (smallest first): " + ", ".join(f"{lab[c]} = {c[1][0]}/{c[1][1]}" for c in cards[:3]) + "; Set B (greatest first): " + ", ".join(f"{lab[c]} = 1/{c[1][1]}" for c in cards[3:]), f"Word: {word}",
-        "Set A has three like fractions (same denominator): the larger the top number, the greater the fraction. Set B has three unit fractions (tops all 1): the larger the bottom number, the smaller the fraction, so greatest first means the smallest bottom number first. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (all 720 orders were tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
+        "Set A has three like fractions (same denominator): the larger the top number, the greater the fraction. Set B has three unit fractions (tops all 1): the larger the bottom number, the smaller the fraction, so greatest first means the smallest bottom number first. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (every wrong order was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=None, mk=("logic",),
         mech_plain="Letters of the cards in the order asked spell a word (6 letters)")
     P["check_boxes"] = None
@@ -467,11 +467,11 @@ def page23():
         "K1 letters in order spell a word (6 letters) + K4 each card used once",
         ["Put the prices in order.", "Write the letter of each card in its place.", "Set A: lowest first. Set B: highest first."],
         body, "Set A (lowest first): " + ", ".join(f"{lab[c]} {c[0]} {A.dollars(c[1])}" for c in orderA) + "; Set B (highest first): " + ", ".join(f"{lab[c]} {c[0]} {A.dollars(c[1])}" for c in orderB), f"Word: {word}",
-        "Two sets of three prices in dollars and cents. Prices in a set have the same or nearly the same dollars, so the pupil must compare the cents ($4.50 is more than $4.05). Set A is read lowest price first and Set B highest price first. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (all 720 orders were tested against a very large word list). Prices are not added or subtracted. A box left blank gives no letter and the check cannot see it.",
+        "Two sets of three prices in dollars and cents. Prices in a set have the same or nearly the same dollars, so the pupil must compare the cents ($4.50 against $4.05). Set A is read lowest price first and Set B highest price first. The letters, read in the order asked, spell a word with exactly one arrangement that is a word, so no wrong order of the six cards spells a word (every wrong order was tested against a very large word list). Prices are not added or subtracted. A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=None, mk=("logic",),
         mech_plain="Letters of the price cards in the order asked spell a word (6 letters)")
     P["instr"] = ["Put the prices in order.", "Write the letter of each card in its place.", "Set A: lowest first. Set B: highest first."]
-    section = body.split("Set B: highest first.")
+    section = body.split("Set B: the highest price first.")
     def cards_of(h): return [(m[0], float(m[1])) for m in re.findall(r'<i class="cl">(\w)</i><div class="pname">[^<]*</div><div class="pprice">\$([\d.]+)</div>', h)]
     a_s = sorted(cards_of(section[0]), key=lambda c: c[1]); b_s = sorted(cards_of(section[1]), key=lambda c: -c[1])
     solved = "".join(c[0] for c in a_s + b_s)
@@ -509,7 +509,7 @@ def page24():
         "K1 letters of the matching purses spell a word (6 letters) + K4 each purse used once",
         ["Count the money in each purse.", "Match each amount to its purse.", "Write the letter of the purse."],
         body, "; ".join(f"{k+1}) {A.dollars(tot[j])} is purse {letter_of[j]}" for k, j in enumerate(amounts_order)), f"Word: {word}",
-        "Six purses of coins and notes (original line drawings, inspired by Singapore money but not copies; larger than real) and six amounts. Each purse holds exactly one of the amounts; the amounts are close to each other, so every purse must be counted. The letters of the purses, written in the order of the amounts, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (all 720 matchings were tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
+        "Six purses of coins and notes (original line drawings, inspired by Singapore money but not copies; larger than real) and six amounts. Each purse holds exactly one of the amounts; the amounts are close to each other, so every purse must be counted. The letters of the purses, written in the order of the amounts, spell a word with exactly one arrangement that is a word, so no wrong matching spells a word (every wrong matching was tested against a very large word list). A box left blank gives no letter and the check cannot see it.",
         check="Read the six letters in order. Do they spell a word?", check_boxes=6, mk=("logic",),
         mech_plain="Letters of the purses matched to the amounts, in order, spell a word (6 letters)")
     P["check"] = "Write the six letters in the boxes. Do they spell a word?"

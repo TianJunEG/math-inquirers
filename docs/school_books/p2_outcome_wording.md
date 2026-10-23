@@ -64,3 +64,7 @@ This file is only a record of the syllabus wording. It makes no claim about any 
 ## Picture Graphs with Scales
 
 - Picture Graphs with Scales 1.1: reading and interpreting data from picture graphs with scales
+
+## Problem solving (not an outcome number)
+
+The syllabus PDF (page 13) names mathematical problem solving as the central focus of the curriculum. Pages tagged "problem solving" in the keys practise the kinds of question found in school tests (stories with more than one step, timetables) rather than one numbered outcome line above.
