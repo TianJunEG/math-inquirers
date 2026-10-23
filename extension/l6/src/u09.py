@@ -163,9 +163,9 @@ I.append(IT(U, 'C', 2, 6,
             'In order: 4, 4, 6, 9, 11. The middle value is 6, and 4 appears most often.',
             answer=A([6, 4], '6, 4')))
 I.append(IT(U, 'C', 3, 6,
-            'The mean of 3 numbers is 14. Two of them are 10 and 18. The third is {b}.',
-            f'Total = 3 {X} 14 = 42. 42 {M} 10 {M} 18 = 14.',
-            answer=A([14], '14')))
+            '5 numbers have a mean of 6. Four of them are 3, 7, 4 and 9. The fifth is {b}.',
+            f'Total = 5 {X} 6 = 30. 30 {M} 3 {M} 7 {M} 4 {M} 9 = 7.',
+            answer=A([7], '7')))
 I.append(IT(U, 'C', 4, 6,
             'The mean of 4 tests is 70. A 5th test score is 80. The new mean is {b}.',
             f'The 4 tests total 4 {X} 70 = 280. With the 5th: 280 + 80 = 360, and 360 ÷ 5 = 72.',

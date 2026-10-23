@@ -193,7 +193,8 @@ def _():
 
 @check('L6U06-C01')
 def _():
-    f = Fraction(3, 10)
+    bag = ['R'] * 9 + ['B'] * 6
+    f = P(bag, lambda c: c == 'B')
     return s([f.numerator, f.denominator])
 
 

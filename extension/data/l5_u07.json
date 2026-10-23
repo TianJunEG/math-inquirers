@@ -3,7 +3,7 @@
  "level": 5,
  "unit": 7,
  "id": "L5U07",
- "title": "Percentage puzzles",
+ "title": "Out of 100",
  "topic": "Percentage",
  "holiday_lesson": 7,
  "goal": "I can find a percentage of an amount from 10%, 5% and 1%. I can find a discount and GST, and avoid percentage traps.",
@@ -312,7 +312,7 @@
    "id": "L5U07-S07",
    "tier": "start",
    "page": 2,
-   "text": "There are 40 children in a class. 35% walk to school. 25% cycle. The rest take the bus.",
+   "text": "There are 40 children in a group. 35% walk to school. 25% cycle. The rest take the bus.",
    "parts": [
     {
      "label": "a",
@@ -755,7 +755,7 @@
    "id": "L5U07-G02",
    "tier": "go",
    "page": 5,
-   "text": "In a class of 40 children, 40% are boys. 25% of the boys and 50% of the girls wear glasses. What percentage of the whole class wears glasses? {b}%",
+   "text": "In a group of 40 children, 40% are boys. 25% of the boys and 50% of the girls wear glasses. What percentage of the whole group wears glasses? {b}%",
    "answer": {
     "value": [
      "40"

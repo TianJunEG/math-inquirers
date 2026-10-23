@@ -179,9 +179,9 @@ I.append(IT(U, 'C', 1, 6,
             f'OUT goes up 5 for each 1 of IN, so {X} 5. 5 {X} 1 = 5, and OUT is 6, so add 1: OUT = 5n + 1.',
             answer=A([5, 1], '5, 1')))
 I.append(IT(U, 'C', 2, 6,
-            f'A machine does {X} 6, then {M} 7. OUT is 41. IN = {{b}}',
-            f'Undo {M} 7: 41 + 7 = 48. Undo {X} 6: 48 ÷ 6 = 8. Check: 8 {X} 6 {M} 7 = 41.',
-            answer=A([8], '8')))
+            f'A machine does {X} 9, then {M} 5. OUT is 49. IN = {{b}}',
+            f'Undo {M} 5: 49 + 5 = 54. Undo {X} 9: 54 ÷ 9 = 6. Check: 6 {X} 9 {M} 5 = 49.',
+            answer=A([6], '6')))
 I.append(IT(U, 'C', 3, 6,
             f'4n + 9 = 57.  n = {{b}}',
             f'57 {M} 9 = 48. 48 ÷ 4 = 12. Check: 4 {X} 12 + 9 = 57.',

@@ -176,9 +176,9 @@ I.append(IT(U, 'G', 3, 5,
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,
-            'A bag has 7 red and 3 blue counters. P(blue) = {b}/{b}.',
-            '10 counters in all and 3 are blue: 3/10. It cannot be simplified.',
-            answer=A([3, 10], '3/10')))
+            'A bag has 9 red and 6 blue counters. P(blue) = {b}/{b} in simplest form.',
+            '15 counters in all and 6 are blue: 6/15. Divide the top and bottom by 3: 2/5.',
+            answer=A([2, 5], '2/5')))
 I.append(IT(U, 'C', 2, 6,
             'A dice is rolled 240 times. About {b} of the rolls are even numbers.',
             f'Even numbers are 2, 4 and 6, so the probability is 3/6 = 1/2. 1/2 {X} 240 = 120.',

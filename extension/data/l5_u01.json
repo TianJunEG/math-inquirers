@@ -3,7 +3,7 @@
  "level": 5,
  "unit": 1,
  "id": "L5U01",
- "title": "Million puzzles",
+ "title": "Big number puzzles",
  "topic": "Numbers to 10 million",
  "holiday_lesson": 1,
  "goal": "I can read, compare and round numbers up to 10 million. I can test both sides of a target and check every clue.",
@@ -780,12 +780,12 @@
    "id": "L5U01-G04",
    "tier": "go",
    "page": 5,
-   "text": "A printing press prints 2 400 sheets in 1 hour. It runs for 8 hours each day. A shop needs 1 000 000 sheets. How many days does the press need? {b} days",
+   "text": "A printing press prints 2 400 sheets in 1 hour. It runs for 8 hours each day. A shop needs 1 000 000 sheets. How many days does the press need? {b} days",
    "answer": {
     "value": [
      "53"
     ],
-    "text": "53 days"
+    "text": "53 days"
    },
    "space": {
     "rows": [
@@ -795,7 +795,7 @@
     ]
    },
    "hint": "Sheets in one day first. Then divide. Is the answer a whole number?",
-   "explanation": "In 1 day it prints 2400 × 8 = 19 200 sheets. 1 000 000 ÷ 19 200 = 52.08... days. After 52 days it has printed 998 400 sheets, which is not enough. So it needs 53 days."
+   "explanation": "In 1 day it prints 2400 × 8 = 19 200 sheets. 1 000 000 ÷ 19 200 = 52.08... days. After 52 days it has printed 998 400 sheets, which is not enough. So it needs 53 days."
   },
   {
    "id": "L5U01-C01",
@@ -876,14 +876,14 @@
    "id": "L5U01-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "18 buses each carry 1 250 passengers in a week. How many passengers is that in 12 weeks? {l}",
+   "text": "18 buses each carry 1 250 passengers in a week. How many passengers is that in 12 weeks? {l}",
    "answer": {
     "value": [
      "270000"
     ],
     "text": "270 000 passengers"
    },
-   "explanation": "In 1 week: 18 × 1250 = 22 500. In 12 weeks: 22 500 × 12 = 270 000."
+   "explanation": "In 1 week: 18 × 1250 = 22 500. In 12 weeks: 22 500 × 12 = 270 000."
   }
  ]
 }

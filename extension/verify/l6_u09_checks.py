@@ -207,7 +207,7 @@ def _():
 
 @check('L6U09-C03')
 def _():
-    return s([[x for x in range(0, 100) if mean([10, 18, x]) == 14][0]])
+    return s([[x for x in range(0, 100) if mean([3, 7, 4, 9, x]) == 6][0]])
 
 
 @check('L6U09-C04')

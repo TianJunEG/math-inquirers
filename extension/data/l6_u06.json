@@ -1023,16 +1023,16 @@
   {
    "id": "L6U06-C01",
    "tier": "quiz",
-   "text": "A bag has 7 red and 3 blue counters. P(blue) = {b}/{b}.",
+   "text": "A bag has 9 red and 6 blue counters. P(blue) = {b}/{b} in simplest form.",
    "page": 6,
    "answer": {
     "value": [
-     "3",
-     "10"
+     "2",
+     "5"
     ],
-    "text": "3/10"
+    "text": "2/5"
    },
-   "explanation": "10 counters in all and 3 are blue: 3/10. It cannot be simplified."
+   "explanation": "15 counters in all and 6 are blue: 6/15. Divide the top and bottom by 3: 2/5."
   },
   {
    "id": "L6U06-C02",

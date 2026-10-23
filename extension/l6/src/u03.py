@@ -9,22 +9,22 @@ learn = {
     'intro': 'Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. '
              'When a jump crosses 0, split it at 0.',
     'example': {
-        'problem': f'It is {M}5 °C at 6 a.m. By noon it rises 9 degrees. By night it falls 12 degrees. What is the temperature at night?',
-        'figure': {'type': 'l6_nline', 'lo': -10, 'hi': 6, 'mm': 8, 'every': 2, 'marks': [{'at': -5, 'lab': '6 a.m.'}],
-                   'jumps': [{'a': -5, 'b': 4, 'lab': '+9'}, {'a': 4, 'b': -8, 'lab': f'{M}12', 'below': True}], 'unit': '°C'},
-        'steps': [f'Start at {M}5. Rising moves right. 5 steps reach 0, then 4 more steps: 4 °C at noon.',
-                  'Falling moves left. From 4, 4 steps reach 0, then 8 more steps.',
+        'problem': f'It is {M}6 °C at 6 a.m. By noon it rises 11 degrees. By night it falls 13 degrees. What is the temperature at night?',
+        'figure': {'type': 'l6_nline', 'lo': -10, 'hi': 6, 'mm': 8, 'every': 2, 'marks': [{'at': -6, 'lab': '6 a.m.'}],
+                   'jumps': [{'a': -6, 'b': 5, 'lab': '+11'}, {'a': 5, 'b': -8, 'lab': f'{M}13', 'below': True}], 'unit': '°C'},
+        'steps': [f'Start at {M}6. Rising moves right. 6 steps reach 0, then 5 more steps: 5 °C at noon.',
+                  'Falling moves left. From 5, 5 steps reach 0, then 8 more steps.',
                   f'The night temperature is {M}8 °C.',
-                  f'Check by adding: {M}5 + 9 {M} 12 = {M}8.'],
+                  f'Check by adding: {M}6 + 11 {M} 13 = {M}8.'],
         'answer': f'The temperature at night is {M}8 °C.'},
     'howto': {'title': 'How to add and subtract with negative numbers',
               'steps': ['Mark the start on the number line.',
                         'Adding moves right. Subtracting moves left.',
                         'If the jump crosses 0, split it at 0.',
                         'Check by jumping back to the start.']},
-    'try': IT(U, 'L', 1, 0, f'It is {M}2 °C. It falls 7 degrees. What is the temperature now? {{b}} °C',
-              f'Falling moves left. From {M}2 jump left 7 steps: {M}2 + ({M}7) = {M}9. Check: from {M}9 jump right 7 to reach {M}2.',
-              answer=A([-9], f'{M}9')),
+    'try': IT(U, 'L', 1, 0, f'It is {M}3 °C. It falls 8 degrees. What is the temperature now? {{b}} °C',
+              f'Falling moves left. From {M}3 jump left 8 steps: {M}3 + ({M}8) = {M}11. Check: from {M}11 jump right 8 to reach {M}3.',
+              answer=A([-11], f'{M}11')),
 }
 
 # ---------------------------------------------------------------- Start here

@@ -144,9 +144,9 @@ def page39():
         "Every part asks a multiplication or division fact from the tables of 2, 3, 4, 5 and 10; some parts use the sign \u00f7, a missing number or a story.", oc=["MD3.1", "MD3.2", "MD3.3", "MD3.4", "MD3.5"])
 
 def page40():
-    return cbc_page(40, dict(id="CBC-P2-11", picture="butterfly", bank="shape", tier=2, seed=316, level=2), "Colour the Butterfly",
+    return cbc_page(40, dict(id="CBC-P2-08", picture="butterfly", bank="time", tier=2, seed=308, level=2), "Colour the Butterfly",
         ["Find the answer in each part.", "Find it in the key.", "Colour the part. No crayon? Write Y, R, B, G or O."],
-        "Measurement and Geometry - Geometry", "1.1, 2.1 (patterns with 2D shapes; identifying, naming and describing 3D shapes)",
-        "Every part asks a question about 2D shapes and shape patterns or about 3D shapes (cube, cuboid, cone, cylinder, sphere), read from a small drawing.", oc=["GE1.1", "GE2.1"])
+        "Measurement and Geometry - Measurement", "2.2, 2.3 (measuring time in hours and minutes; converting hours and minutes to minutes only)",
+        "Every part changes hours and minutes to minutes, or finds how many minutes there are from one time to another (including across the hour).", oc=["TI2.1", "TI2.2", "TI2.3"])
 
 PAGES = [page38, page39, page40]

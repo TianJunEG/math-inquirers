@@ -10,7 +10,7 @@
  "learn": {
   "intro": "Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. When a jump crosses 0, split it at 0.",
   "example": {
-   "problem": "It is −5 °C at 6 a.m. By noon it rises 9 degrees. By night it falls 12 degrees. What is the temperature at night?",
+   "problem": "It is −6 °C at 6 a.m. By noon it rises 11 degrees. By night it falls 13 degrees. What is the temperature at night?",
    "figure": {
     "type": "l6_nline",
     "lo": -10,
@@ -19,30 +19,30 @@
     "every": 2,
     "marks": [
      {
-      "at": -5,
+      "at": -6,
       "lab": "6 a.m."
      }
     ],
     "jumps": [
      {
-      "a": -5,
-      "b": 4,
-      "lab": "+9"
+      "a": -6,
+      "b": 5,
+      "lab": "+11"
      },
      {
-      "a": 4,
+      "a": 5,
       "b": -8,
-      "lab": "−12",
+      "lab": "−13",
       "below": true
      }
     ],
     "unit": "°C"
    },
    "steps": [
-    "Start at −5. Rising moves right. 5 steps reach 0, then 4 more steps: 4 °C at noon.",
-    "Falling moves left. From 4, 4 steps reach 0, then 8 more steps.",
+    "Start at −6. Rising moves right. 6 steps reach 0, then 5 more steps: 5 °C at noon.",
+    "Falling moves left. From 5, 5 steps reach 0, then 8 more steps.",
     "The night temperature is −8 °C.",
-    "Check by adding: −5 + 9 − 12 = −8."
+    "Check by adding: −6 + 11 − 13 = −8."
    ],
    "answer": "The temperature at night is −8 °C."
   },
@@ -58,14 +58,14 @@
   "try": {
    "id": "L6U03-L01",
    "tier": "start",
-   "text": "It is −2 °C. It falls 7 degrees. What is the temperature now? {b} °C",
+   "text": "It is −3 °C. It falls 8 degrees. What is the temperature now? {b} °C",
    "answer": {
     "value": [
-     "-9"
+     "-11"
     ],
-    "text": "−9"
+    "text": "−11"
    },
-   "explanation": "Falling moves left. From −2 jump left 7 steps: −2 + (−7) = −9. Check: from −9 jump right 7 to reach −2."
+   "explanation": "Falling moves left. From −3 jump left 8 steps: −3 + (−8) = −11. Check: from −11 jump right 8 to reach −3."
   },
   "tight": true
  },

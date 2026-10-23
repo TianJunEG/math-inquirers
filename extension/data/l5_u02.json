@@ -3,7 +3,7 @@
  "level": 5,
  "unit": 2,
  "id": "L5U02",
- "title": "Fraction feats",
+ "title": "Fractions at work",
  "topic": "Fractions: four operations",
  "holiday_lesson": 2,
  "goal": "I can link fractions and division. I can find a fraction of a remainder, and work backwards with a bar model.",
@@ -590,7 +590,7 @@
    "id": "L5U02-S13",
    "tier": "start",
    "page": 3,
-   "text": "In a class of 40 children, 3/8 walk to school and 1/4 take the bus. The rest cycle. How many children cycle? {b}",
+   "text": "In a group of 40 children, 3/8 walk to school and 1/4 take the bus. The rest cycle. How many children cycle? {b}",
    "answer": {
     "value": [
      "15"

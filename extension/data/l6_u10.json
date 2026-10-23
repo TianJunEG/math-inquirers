@@ -743,7 +743,7 @@
     ]
    },
    "hint": "Check with n = 1 and n = 20 by hand first.",
-   "explanation": "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. If the player sees 48, then 5n = 50 and n = 10. (For your twist, any rule that can be undone is fine. Find a test answer by hand first, for example n = 4 shows 18, then check the program gives it.)",
+   "explanation": "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. For 48: 5n = 50, so n = 10. (For your twist, test by hand first: n = 4 shows 18.)",
    "figright": true,
    "partsrow": true
   },
@@ -862,7 +862,7 @@
     ]
    },
    "hint": "Stop when d × d is more than n. Count the values of d.",
-   "explanation": "The loop tests d = 2, 3, 4, ... until d × d is more than n. n = 53: 7 × 7 = 49 is not more than 53, 8 × 8 = 64 is, so d = 2 to 7 are tested: 6 values. None divides 53, so found stays 0. n = 49: d = 2 to 7 are tested, and only 7 divides 49, so found = 1. found = 0 means n is prime.",
+   "explanation": "The loop tests d = 2, 3, ... until d × d is more than n. For n = 53, d = 2 to 7 are tested (8 × 8 = 64 is more than 53): 6 values. None divides 53, so found stays 0. For n = 49 only d = 7 divides it: found = 1.",
    "figside": true
   },
   {

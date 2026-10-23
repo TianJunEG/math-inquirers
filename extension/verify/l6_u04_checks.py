@@ -205,7 +205,7 @@ def _():
 
 @check('L6U04-C02')
 def _():
-    return s([inverse(lambda n: n * 6 - 7, 41)])
+    return s([inverse(lambda n: n * 9 - 5, 49)])
 
 
 @check('L6U04-C03')

@@ -2197,16 +2197,17 @@
   "code": "S2-20 (P2-40)",
   "title": "Colour the Butterfly",
   "tier": 2,
-  "topic": "2D and 3D shapes and shape patterns",
-  "strand": "Measurement and Geometry - Geometry",
-  "syll": "1.1, 2.1 (patterns with 2D shapes; identifying, naming and describing 3D shapes)",
+  "topic": "Time: hours, minutes and how long",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "2.2, 2.3 (measuring time in hours and minutes; converting hours and minutes to minutes only)",
   "outcomes": [
-   "GE1.1",
-   "GE2.1"
+   "TI2.1",
+   "TI2.2",
+   "TI2.3"
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
-  "seed": 316,
+  "seed": 308,
   "checks": [
    {
     "name": "V1 every question has exactly one answer in the bank's domain",
@@ -2226,7 +2227,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 4, 'red': 4, 'blue': 2, 'green': 2, 'orange': 2}"
+    "detail": "{'yellow': 2, 'red': 4, 'blue': 4, 'green': 2, 'orange': 2}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -2251,7 +2252,7 @@
    {
     "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
-    "detail": "280/280"
+    "detail": "8400/8400"
    },
    {
     "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
@@ -2266,8 +2267,8 @@
   ],
   "generator_slip_test": [
    1.0,
-   280,
-   280
+   8400,
+   8400
   ]
  }
 ]

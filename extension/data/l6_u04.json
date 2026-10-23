@@ -1028,15 +1028,15 @@
   {
    "id": "L6U04-C02",
    "tier": "quiz",
-   "text": "A machine does × 6, then − 7. OUT is 41. IN = {b}",
+   "text": "A machine does × 9, then − 5. OUT is 49. IN = {b}",
    "page": 6,
    "answer": {
     "value": [
-     "8"
+     "6"
     ],
-    "text": "8"
+    "text": "6"
    },
-   "explanation": "Undo − 7: 41 + 7 = 48. Undo × 6: 48 ÷ 6 = 8. Check: 8 × 6 − 7 = 41."
+   "explanation": "Undo − 5: 49 + 5 = 54. Undo × 9: 54 ÷ 9 = 6. Check: 6 × 9 − 5 = 49."
   },
   {
    "id": "L6U04-C03",

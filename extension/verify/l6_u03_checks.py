@@ -42,7 +42,7 @@ def mark(id_, label):
 
 @check('L6U03-L01')
 def _():
-    return s([move(-2, -7)])
+    return s([move(-3, -8)])
 
 
 @check('L6U03-S01')

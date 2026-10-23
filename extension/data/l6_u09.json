@@ -897,15 +897,15 @@
   {
    "id": "L6U09-C03",
    "tier": "quiz",
-   "text": "The mean of 3 numbers is 14. Two of them are 10 and 18. The third is {b}.",
+   "text": "5 numbers have a mean of 6. Four of them are 3, 7, 4 and 9. The fifth is {b}.",
    "page": 6,
    "answer": {
     "value": [
-     "14"
+     "7"
     ],
-    "text": "14"
+    "text": "7"
    },
-   "explanation": "Total = 3 × 14 = 42. 42 − 10 − 18 = 14."
+   "explanation": "Total = 5 × 6 = 30. 30 − 3 − 7 − 4 − 9 = 7."
   },
   {
    "id": "L6U09-C04",
