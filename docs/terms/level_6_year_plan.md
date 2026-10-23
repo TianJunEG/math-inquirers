@@ -298,7 +298,7 @@ Answered by the 22 Oct 2026 decisions and dropped: cohort and start term (places
 
 ## Non-routine assignments (owner decision, 23 Oct 2026)
 
-The owner asked that the non-routine question types found in school papers sit inside every term plan. Source: `docs/books/p6_non_routine_catalogue.md` (text-free summary of 2757 non-routine questions in 120 Primary 6 preliminary and weighted-assessment papers from schools, 2020 to 2026; the questions themselves are in a private, gitignored file) and `docs/books/p6_school_paper_patterns.md` (wording, ranges, pictures and the fit/gap table). **Every one of the 40 lessons now names its non-routine work: a heuristic or reasoning type, the tier where it sits (Think harder or Go further, never Start here) and, where one exists, original examples with scripted answers.** Lesson authors write their own items; school and contest questions are never copied.
+The owner asked that the non-routine question types found in school papers sit inside every term plan. Source: `docs/books/p6_non_routine_catalogue.md` (text-free summary of 2778 non-routine questions in 122 Primary 6 preliminary and weighted-assessment papers from schools, 2020 to 2026; the questions themselves are in a private, gitignored file) and `docs/books/p6_school_paper_patterns.md` (wording, ranges, pictures and the fit/gap table). **Every one of the 40 lessons now names its non-routine work: a heuristic or reasoning type, the tier where it sits (Think harder or Go further, never Start here) and, where one exists, original examples with scripted answers.** Lesson authors write their own items; school and contest questions are never copied.
 
 How to read this section.
 
@@ -377,22 +377,22 @@ GEO           ........N. ....NNN..N .......... ..........
 
 Count of lessons per type (all new; no Level 6 lesson is written):
 
-| Type | Lessons | Terms with it | School items (2757) |
+| Type | Lessons | Terms with it | School items (2778) |
 |---|---|---|---|
 | LOG | 17 | T1, T2, T3, T4 | 158 |
 | CMP | 9 | T1, T2, T3, T4 | 128 |
-| BACK | 5 | T1, T2, T3, T4 | 227 |
+| BACK | 5 | T1, T2, T3, T4 | 229 |
 | CTX | 5 | T1, T2, T3 | 269 |
-| LIST | 8 | T1, T3, T4 | 104 |
-| EXP | 11 | T1, T2, T3, T4 | 118 |
+| LIST | 8 | T1, T3, T4 | 106 |
+| EXP | 11 | T1, T2, T3, T4 | 122 |
 | GC | 5 | T1, T3, T4 | 50 |
-| PAT | 5 | T1, T2, T3, T4 | 106 |
+| PAT | 5 | T1, T2, T3, T4 | 107 |
 | DIAG | 3 | T2, T4 | 131 |
 | TAB | 7 | T1, T2, T3, T4 | 238 |
-| EQ | 9 | T1, T2, T3 | 577 |
-| WAYS | 5 | T2, T3, T4 | 61 |
+| EQ | 9 | T1, T2, T3 | 586 |
+| WAYS | 5 | T2, T3, T4 | 62 |
 | CHAL | 9 | T1, T2, T3, T4 | 110 |
-| GEO | 5 | T1, T2 | 480 |
+| GEO | 5 | T1, T2 | 482 |
 
 Every type appears in at least 2 terms. Types not in all four terms: CTX, LIST, GC, DIAG, EQ, WAYS, GEO. They are rare in the papers, and owner decision 6 asks only for contest-style items at Think harder. The four types the papers use most (EQ, GEO, CTX, TAB) are in 9, 5, 5, 7 lessons.
 
@@ -402,15 +402,15 @@ GEO (geometry chains, the second largest group in the papers) is only in lessons
 
 Evidence is in `docs/books/p6_school_paper_patterns.md` (sections 1, 5 and 6). These are plan changes for the lesson authors; the lesson tables above are not edited here, so the wording below overrides them where they differ.
 
-- **Average comes earlier (lesson 31, lessons 4 and 8).** Average is set in every paper and every year (about 170 recorded items). Lesson 31 teaches it in Term 4. Add one Think harder average item to lesson 4 (EX-CMP-1) so that a child who joins in Term 1 has met "total = average x number", and keep lesson 31 as the full lesson (EX-CMP-4, EX-CMP-2).
-- **Lesson 17: parallel lines and a reason.** The plan says angles between parallel lines are not in primary. The papers set them from 2022 (parallelogram, trapezium and rhombus chains, and "AD is parallel to BC"), and the 2026 papers ask for a reason in words ("parallel because the angles add to 180", "isosceles because equal angles"). Teach co-interior and alternate angles at Think harder and the one-line reason at Go further (EX-GEO-4).
+- **Average comes earlier (lesson 31, lessons 4 and 8).** Average is set in nearly every preliminary paper (80 of 87) and in every year (about 170 recorded items). Lesson 31 teaches it in Term 4. Add one Think harder average item to lesson 4 (EX-CMP-1) so that a child who joins in Term 1 has met "total = average x number", and keep lesson 31 as the full lesson (EX-CMP-4, EX-CMP-2).
+- **Lesson 17: parallel lines and a reason.** The plan says angles between parallel lines are not in primary. The papers set them in every year from 2021 (parallelogram, trapezium and rhombus chains, and "AD is parallel to BC"), and the 2026 papers ask for a reason in words ("parallel because the angles add to 180", "isosceles because equal angles"). Teach co-interior and alternate angles at Think harder and the one-line reason at Go further (EX-GEO-4).
 - **Lesson 14: lead with taps and tanks, keep speed as the preview.** km/h and m/min items run 2022 to 2025 (12 to 19 recorded a year); none was recorded in the 2026 papers. Tap and tank rates (litres or cm per minute, pouring until the heights match) stay in 2026. The preview label stands; the opening items are taps (EX-CTX-4, EX-EQ-5).
 - **Lesson 11: ratio after a change, two boxes, ratio from a chart.** Ratio is in 33 recorded 2026 items. Typical: "5 : 4, then 56 women joined, now 3 : 4", two boxes in different ratios with a times-as-many link, ratio of areas. Add these at Think harder (EX-EQ-1, EX-EQ-3).
 - **True, false or not possible to tell (about 60 items; every year).** Add a three-statement tick table, as a five-minute item, to lessons 2, 11, 17, 31 and 33 (EX-LOG-4). Name the third choice in the stem.
 - **Draw-on-a-grid items (about 110).** Add a draw item to lessons 7, 9, 18 and 20: same area, same perimeter, a rhombus from two sides, a triangle with a quarter of a rectangle's area and an obtuse angle (EX-CHAL-1 to EX-CHAL-3). Say how the drawing is marked.
 - **Ratio and percent in Term 1 at school.** The Term 1 weighted assessment (WA1, March) sets ratio, fractions and percentage; the Term 2 one (WA2, May) sets circles, GST, interest, algebra and angles. Our plan teaches ratio (lesson 11) and percent (lesson 13) in Term 2. This is acceptable for an "alongside school" program. Optional: a six-minute ratio warm-up in lesson 8 or 9 (share in a ratio of two, ratio of three) so a Term 1 child has met the idea. Lesson 11 stays the full treatment.
 - **Lesson 18: trim rotation and tessellation.** The papers set line symmetry ("shade to complete a figure", "how many have a line of symmetry") and nothing else; rotation, translation and tessellation are enrichment.
-- **Lesson 15: pi 3.14 first.** "Take pi as 3.14" is about 2.4 times as common as 22/7, and "in terms of pi" occurs. Use 22/7 only where a diameter is a multiple of 7. Semicircles and quarter circles on a grid of equal squares are the standard figure.
+- **Lesson 15: pi 3.14 first.** "Take pi as 3.14" is about 2.5 times as common as 22/7, and "in terms of pi" occurs. Use 22/7 only where a diameter is a multiple of 7. Semicircles and quarter circles on a grid of equal squares are the standard figure.
 - **Lesson 13: GST at 9 percent** (7 percent in 2021 and earlier; none recorded in 2026), two shops at equal price, and a further $ off after a percent discount (EX-EQ-4, EX-CTX-5).
 - **Charges in steps and best buys (lessons 19, 25).** "Every additional half hour or part of it", a buy-n-get-1-free deal and "10 for $28" appear every year (EX-CTX-1, EX-WAYS-2, EX-WAYS-4).
 - **Compass and turns (lesson 24).** About 60 items 2021 to 2025, none in 2026. Keep it as a six-minute warm-up and say it is optional (EX-LOG-2).
