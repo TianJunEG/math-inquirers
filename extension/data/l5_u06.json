@@ -126,11 +126,11 @@
    "id": "L5U06-S02",
    "tier": "start",
    "page": 1,
-   "text": "Six pens cost $4.20.",
+   "text": "6 pens cost $4.20.",
    "parts": [
     {
      "label": "a",
-     "text": "One pen costs $ {b}",
+     "text": "1 pen costs $ {b}",
      "answer": {
       "value": [
        "0.70"
@@ -140,7 +140,7 @@
     },
     {
      "label": "b",
-     "text": "Nine pens cost $ {b}",
+     "text": "9 pens cost $ {b}",
      "answer": {
       "value": [
        "6.30"

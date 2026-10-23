@@ -12,10 +12,10 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 3 | Before and after | yes | yes | yes | yes |
 | 4 | Triangle areas | yes | yes | yes | yes |
 | 5 | Volume vault | yes | yes | yes | yes |
-| 6 | Rate racers | | | | |
+| 6 | Rate racers | yes | yes | yes | yes |
 | 7 | Percentage puzzles | | | | |
 | 8 | Angle chasers | | | | |
 | 9 | Pattern generalisers | | | | |
 | 10 | Challenge day | | | | |
 
-Resume: next unit is 6.
+Resume: next unit is 7.
