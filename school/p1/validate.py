@@ -86,7 +86,8 @@ if not ARGS.partial:
 for k in BK:
     rec(f"{k}: {NP[k]} pages in the order of gen/outcomes.py", [p["no"] for p in BK[k]] == OC.BOOKLETS[k]["order"][:NP[k]] if not ARGS.partial else True, str([p["no"] for p in BK[k]]))
     if not ARGS.partial:
-        rec(f"{k}: tier mix 10 one-star / 10 two-star", sum(p["tier"] == 1 for p in BK[k]) == 10 and sum(p["tier"] == 2 for p in BK[k]) == 10, str([p["tier"] for p in BK[k]]))
+        want1 = {"S1": 10, "S2": 9}[k]      # owner decision P39-TWO: P1-39 is a two-star page, so Semester 2 is 9 one-star / 11 two-star
+        rec(f"{k}: tier mix {want1} one-star / {20 - want1} two-star", sum(p["tier"] == 1 for p in BK[k]) == want1 and sum(p["tier"] == 2 for p in BK[k]) == 20 - want1, str([p["tier"] for p in BK[k]]))
         rec(f"{k}: footer codes use the form S1-07 (P1-08) with the right pair of numbers", all(p["code"] == f"{k}-{i+1:02d} (P1-{p['no']:02d})" for i, p in enumerate(BK[k])))
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
 mech = [p["mech"] for p in pages]; rec("every page names a self-check mechanism", all(mech))

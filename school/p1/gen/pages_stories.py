@@ -256,7 +256,7 @@ def page39():
         else: pics = [row_svg(it["obj"], it["n"], size=osz(it["obj"]), pitch=opitch(it["obj"]), per_row=6)[0]]
         cards.append(story_card(i + 1, lines, pics, '<span class="ab"></span>'))
     body = f'<div class="stories">{"".join(cards)}</div><div class="ctc">{code_block(table)}</div>'
-    P = Page(no=39, title="Share and Group", tier=1, topic="Sharing and grouping stories within 20, and printed facts",
+    P = Page(no=39, title="Share and Group", tier=2, topic="Sharing and grouping stories within 20, and printed facts",
              strand="Number and Algebra - Multiplication and Division", syll="3.1, 3.4 (concepts of multiplication and division, dividing within 20; sharing stories, hidden facts: problem solving)",
              ptype="Code-breaker (stories)", mech="K1 code word (6 letters)",
              instr=["Read each story.", "The sharer gets a share too.", "Write how many. Use the code table."],
