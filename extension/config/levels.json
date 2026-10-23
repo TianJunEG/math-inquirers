@@ -196,13 +196,13 @@
     9,
     10
    ],
-   "welcome_equipment": "a pencil, a rubber, a ruler and a 180 degree protractor (Unit 6)",
+   "welcome_equipment": "a pencil, a rubber, a ruler and a protractor",
    "welcome_notes": [
     "Beyond Level 4 is ahead of school. You may skip it."
    ],
    "welcome_print_note": {
-    "colour": "Printing this soft copy? Print at 100 percent so the angles in Unit 6 are the right size.",
-    "bw": "The angles in Unit 6 are printed at real size."
+    "colour": "Print at 100 percent so the angles in Unit 6 are true size.",
+    "bw": ""
    },
    "session_minutes": "25 to 30"
   },
