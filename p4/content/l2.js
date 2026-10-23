@@ -1,5 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 2: Big Number Puzzles (Numbers to 100 000)
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -131,6 +132,8 @@ module.exports = {
       H.row(['Number', 'to the nearest 10', 'to the nearest 100', 'to the nearest 1000'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED', h: 30 }))),
       ...['47 285', '63 950'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
     ]));
+    W.push(H.fig(FG.numberLine({ min: 47000, max: 48000, major: 500, minor: 100, fmt: v => String(v).replace(/(\d)(\d{3})$/, '$1 $2'), size: 18, label: 'A number line from 47 000 to 48 000 with ticks every 100 and 47 500 labelled, for marking 47 285.' })));
+    W.push(H.sub('', 'Mark 47 285 on the line with an X. Which thousand is it closer to?  ________'));
     W.push(H.gap(40));
     W.push(H.sub('', 'Try next, if you have time:   9049  →  ________  ________  ________        80 503  →  ________  ________  ________'));
     W.push(H.q(2, 'Work backwards.', { keepNext: true }));

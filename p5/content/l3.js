@@ -21,7 +21,9 @@ const afterModel = () => {
   for (let i = 0; i < 3; i++) s += box(90 + i * 64, 34, 64, 32, YEL);
   s += T(78, 99, 'Mei', { anchor: 'end' });
   for (let i = 0; i < 4; i++) s += box(90 + i * 64, 78, 64, 32, SKY);
-  s += T(470, 78, 'Draw the Before model', { size: 14, weight: 400 }) + T(470, 96, 'on the right of this.', { size: 14, weight: 400 });
+  s += T(372, 20, 'Before: draw the two bars', { anchor: 'start', fill: TEAL });
+  s += `<rect x="372" y="34" width="200" height="32" fill="#fff" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="7 5"/><rect x="372" y="78" width="200" height="32" fill="#fff" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="7 5"/>`;
+  s += T(378, 56, 'Siti  (gives 12)', { anchor: 'start', size: 15, weight: 700 }) + T(378, 100, 'Mei  (gets 12)', { anchor: 'start', size: 15, weight: 700 });
   return svg(600, 120, 'After model: Siti has 3 equal units and Mei has 4 equal units', s);
 };
 

@@ -1,5 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 1: Factor Hunters (Factors and multiples)
 const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -121,23 +122,22 @@ module.exports = {
     W.push(H.tbl([1650, 1650, 1650, 1650, 1650, 1650], [
       H.row(['1 × 48', '__ × __', '__ × __', '__ × __', '__ × __', '__ × __'].map(s => H.cell(s, 1650, { h: 70 })))
     ]));
-    W.push(H.gap(60));
     W.push(H.sub('b', 'List all the factors of 48 in order.'));
     W.push(H.ans('Factors:'));
     W.push(H.sub('c', 'How many factors does 48 have? ______   How did you know when to stop looking?'));
     W.push(...H.lines(1));
     W.push(H.q(2, 'A gardener plants 40 trees in equal rows. There are at least 2 rows, and at least 2 trees in each row. (2 rows of 20 trees and 20 rows of 2 trees are different ways to plant.)', { keepNext: true }));
     W.push(H.sub('a', 'Find every way. One way is 4 rows of 10 trees. Fill in the table. You may not need every column.', { keepNext: true }));
+    W.push(H.fig((() => { let g = ''; for (let r = 0; r < 4; r++) for (let c = 0; c < 10; c++) g += FG.C(30 + c * 26, 16 + r * 24, 9, { fill: FG.SKY, w: 2.5 }); g += FG.T(420, 62, 'the example: 4 rows of 10 trees', { size: 18, fill: FG.TEAL, anchor: 'start' }); return FG.svg(680, 106, g, 'An array of 40 trees: 4 rows with 10 trees in each row.', 400); })()));
     W.push(H.tbl([2298, 1086, 1086, 1086, 1086, 1086, 1086, 1086], [
       H.row([H.cell('Rows', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['4', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))]),
       H.row([H.cell('Trees in each row', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['10', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))])
     ]));
-    W.push(H.gap(60));
     W.push(H.ans('How many ways?'));
     W.push(H.q(3, 'Mei has 18 red beads and 24 blue beads. She puts them into identical packs. Every pack has the same number of red beads and the same number of blue beads. No beads are left over.', { keepNext: true }));
-    W.push(H.sub('a', 'Factors of 18:  _______________     Factors of 24:  ____________________'));
+    W.push(H.sub('a', 'Factors of 18:  ____________     Factors of 24:  ________________'));
     W.push(H.sub('b', 'Common factors of 18 and 24:  ________________________'));
-    W.push(H.sub('c', 'Greatest number of packs:  ______    Each pack has  ______ red and  ______ blue.'));
+    W.push(H.sub('c', 'Most packs:  ____    Each pack has  ____ red and  ____ blue.'));
 
     W.push(H.q(4, 'At an interchange, Bus 33 leaves every 10 minutes and Bus 51 leaves every 15 minutes. Both buses leave at 6:00 am.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(busSvg()));

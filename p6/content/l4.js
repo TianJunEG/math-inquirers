@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 4: Algebra Machines (expressions and simple equations; input, rule, output)
 // Every answer below was worked out, checked forwards, and every program was traced by hand and run in Python.
 
@@ -180,7 +181,7 @@ module.exports = {
     stretch: [
       { q: 'IN 1, 2, 3, 4 gives OUT 1, 7, 13, 19. Find the rule. What is OUT when IN is 20?', a: 'OUT = 6n − 5; IN 20 gives 115.' },
       { q: 'Solve 9n − 7 = 65.', a: 'n = 8 (65 + 7 = 72, 72 ÷ 9 = 8)' },
-      { q: 'Machine A does × 2, then + 10. Machine B does + 5, then × 2. Put 7 into both. What do you notice? Explain with n.', a: 'Both give 24. (n + 5) × 2 = 2n + 10, so they always give the same OUT.' },
+      { q: 'Machine A does × 2, then + 10. Machine B does + 5, then × 2. Put 7 into both. What do you notice? Explain with n.', fig: (() => { const { T, R, L, SKY, Y, N } = FG; let g = ''; const strip = (y, ops, tag) => { let x = 20; g += T(x, y + 30, tag, { size: 18, anchor: 'start', fill: FG.TEAL }); x = 110; g += R(x, y + 8, 56, 40, { fill: Y, w: 3, rx: 6 }) + T(x + 28, y + 35, 'IN', { size: 19 }); x += 56; ops.forEach(o => { g += L(x, y + 28, x + 26, y + 28, { w: 3 }) + `<polygon points="${x + 34},${y + 28} ${x + 24},${y + 22} ${x + 24},${y + 34}" fill="${N}"/>`; x += 34; g += R(x, y + 8, 76, 40, { fill: SKY, w: 3, rx: 6 }) + T(x + 38, y + 35, o, { size: 20 }); x += 76; }); g += L(x, y + 28, x + 26, y + 28, { w: 3 }) + `<polygon points="${x + 34},${y + 28} ${x + 24},${y + 22} ${x + 24},${y + 34}" fill="${N}"/>`; x += 34; g += R(x, y + 8, 64, 40, { fill: '#fff', w: 3, rx: 6 }) + T(x + 32, y + 35, 'OUT', { size: 19 }); }; strip(0, ['× 2', '+ 10'], 'Machine A'); strip(64, ['+ 5', '× 2'], 'Machine B'); return FG.svg(600, 124, g, 'Two number machines. Machine A: IN, times 2, then plus 10, OUT. Machine B: IN, plus 5, then times 2, OUT.'); })(), a: 'Both give 24. (n + 5) × 2 = 2n + 10, so they always give the same OUT.' },
       { q: 'I think of a number, divide it by 4, then add 6. I get 15. What is my number?', a: '36 (15 − 6 = 9, 9 × 4 = 36)' },
       { q: 'IN 3 gives OUT 11. IN 7 gives OUT 23. The rule is “× a number, then + a number”. Find it.', a: 'OUT = 3n + 2 (IN up 4, OUT up 12, so × 3; 9 + 2 = 11)' },
       { q: 'set n to 2, then repeat 3 times: set n to (n × 2) + 1. Then say n. What does it say?', a: '23 (2 → 5 → 11 → 23)' },
@@ -195,7 +196,7 @@ module.exports = {
       { q: 'Machine M does × 5, then − 3. Machine N does × 2, then + 15. Which IN gives the same OUT on both machines? What is that OUT?', a: 'IN 6, OUT 27 (5n − 3 = 2n + 15, so 3n = 18)' },
       { q: 'Which is bigger, 3n + 5 or 3(n + 2)? Does it depend on n?', a: '3(n + 2) = 3n + 6 is always 1 bigger; it does not depend on n.' },
       { q: 'Find two different machines of the form “× a number, then + or − a number” that both turn IN 5 into OUT 18. Then find the machine of this form that ALSO turns IN 2 into OUT 6. Is there only one?', a: 'Many machines turn 5 into 18: × 3 then + 3, × 2 then + 8, × 1 then + 13, × 4 then − 2, … Only × 4 then − 2 also turns 2 into 6 (4 × 2 − 2 = 6). Two pairs of IN and OUT fix the rule: 5a + b = 18 and 2a + b = 6 give 3a = 12, so a = 4 and b = −2.' },
-      { q: 'Mei is n years old. Her mother is 3 times as old. In 12 years, her mother will be twice as old as Mei. How old is Mei now?', a: '12 (3n + 12 = 2(n + 12), so n = 12; mother 36; in 12 years 24 and 48)' },
+      { q: 'Mei is n years old. Her mother is 3 times as old. In 12 years, her mother will be twice as old as Mei. How old is Mei now?', fig: FG.barModel({ left: 150, right: 20, rowH: 34, rows: [{ name: 'Mei now', segs: [{ u: 1 }] }, { name: 'Mother now', segs: [{ u: 1 }, { u: 1 }, { u: 1 }] }, { name: 'Mei in 12 years', segs: [{ u: 1 }, { u: 1.5, f: 'shade', t: '+ 12' }] }, { name: 'Mother in 12 years', segs: [{ u: 1 }, { u: 1 }, { u: 1 }, { u: 1.5, f: 'shade', t: '+ 12' }] }], label: 'Not to scale. Bars for the ages now (Mei 1 part, her mother 3 parts) and in 12 years (each bar has a shaded extra part for 12 years).' }), a: '12 (3n + 12 = 2(n + 12), so n = 12; mother 36; in 12 years 24 and 48)' },
       { q: 'Ali’s secret machine does × a number, then + or − a number. IN 4 gives OUT 9. IN 9 gives OUT 24. What does IN 20 give? Which IN gives OUT 99?', a: 'The rule is 3n − 3. IN 20 gives 57. OUT 99 comes from IN 34.' }
     ]
   },

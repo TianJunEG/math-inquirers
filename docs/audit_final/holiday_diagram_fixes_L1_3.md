@@ -116,4 +116,12 @@ Not rebuilt (nothing in them changed): tutor guides, question banks, parent pack
 
 ## B&W check result
 
-(see below)
+`print/check_bw.py` on the rebuilt B&W print PDFs (all three: OK):
+
+| Level | B&W pages | blank | max non-grey share | max light-tint cells |
+|---|---|---|---|---|
+| 1 | 66 | 6 | 0.00000 | 0.123 |
+| 2 | 74 | 8 | 0.00000 | 0.140 |
+| 3 | 68 | 6 | 0.00000 | 0.153 |
+
+I looked at B&W pages of each level (Level 1: picture graphs, pattern rows, coins; Level 3: bar models, time lines, drinks graph): the hatched parts, dotted parts and the letter-tiled counters stay readable. `bw_spec.json` rows for Levels 1-3 were updated (66 / 74 / 68 pages, 33 / 37 / 34 sheets).

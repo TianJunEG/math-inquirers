@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 5: Every Possible Way (counting / combinatorics; nested loops that list every case)
 // Every counting answer below was enumerated by a program and checked by hand.
 
@@ -67,11 +68,11 @@ const cards = ds => {
 };
 // 3 by 3 grid of streets, A bottom left, B top right, puddle at P (1 along, 1 up). Small circles at the corners to write in.
 const grid = () => {
-  const c = 44, x0 = 34, y0 = 26; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right, with a puddle at point P" viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg" style="width:220px;max-width:100%">`;
+  const c = 52, x0 = 36, y0 = 30; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right. A puddle at point P is a hatched circle." viewBox="0 0 250 220" xmlns="http://www.w3.org/2000/svg" style="width:250px;max-width:100%">${FG.DEFS}`;
   for (let i = 0; i <= 3; i++) s += `<line x1="${x0}" y1="${y0 + i * c}" x2="${x0 + 3 * c}" y2="${y0 + i * c}" stroke="${NAVY}" stroke-width="4"/><line x1="${x0 + i * c}" y1="${y0}" x2="${x0 + i * c}" y2="${y0 + 3 * c}" stroke="${NAVY}" stroke-width="4"/>`;
-  for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="15" fill="${isP ? SKY : WHITE}" stroke="${NAVY}" stroke-width="2.5"/>`; }
-  s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 30}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 12}" y="${y0 - 8}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
-  s += `<text x="${x0 + c + 18}" y="${y0 + 2 * c + 32}" font-size="18" font-weight="700" fill="${NAVY}" font-family="Arial">P</text>`;
+  for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="${isP ? 19 : 17}" fill="${isP ? 'url(#mi-hatch)' : WHITE}" stroke="${NAVY}" stroke-width="${isP ? 4 : 2.5}"/>`; }
+  s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 34}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 14}" y="${y0 - 8}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
+  s += `<text x="${x0 + c + 24}" y="${y0 + 2 * c + 40}" font-size="20" font-weight="700" fill="${NAVY}" font-family="Arial">P (puddle)</text>`;
   return s + '</svg>';
 };
 
@@ -182,7 +183,7 @@ module.exports = {
     const planAndPy = H.tbl([4200, 5700], [H.row([
       H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set count to 0, set a to 1, repeat a gap: set b to 1, repeat a gap: if a gap then change count by 1; change b by 1; change a by 1; say count', 14) + '</div>', 4200, { h: 30 }),
       H.cell('<div>' + tx(L('(a)') + 'What will the program say? ' + blank(50) + '<br>Does it agree with Q4(a)? ' + blank(50) + '<br>' + L('(b)') + 'If the test is changed to <b>a = b</b>, what will it say? What is it counting now?<br>' + blank(330) + '<br>') + py + '</div>', 5700, { h: 30 })])]);
-    const routes = H.tbl([3600, 6300], [H.row([H.cell('<div>' + grid() + '</div>', 3600, { h: 20 }), H.cell(tx('Write in each circle the number of routes from A to it. A gets 1. Each other circle = the number on its left + the number below it.<br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br>' + L('(b)') + 'A puddle covers the blue point P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6300, { h: 40 })])]);
+    const routes = H.tbl([3900, 6000], [H.row([H.cell('<div>' + grid() + '</div>', 3900, { h: 20 }), H.cell(tx('Write in each circle the number of routes from A to it. A gets 1. Each other circle = the number on its left + the number below it.<br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br>' + L('(b)') + 'A puddle covers the hatched point P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6000, { h: 40 })])]);
     return [
       H.q(1, 'Mei packs 4 T-shirts, 3 pairs of shorts and 2 caps for camp.', { before: 20, keepNext: true }),
       H.sub('a', 'Outfits of 1 T-shirt and 1 pair of shorts: how many?  _____    (b)  With a cap too?  _____'),
