@@ -4,68 +4,68 @@ Status: analysis written 23 Oct 2026 from the owner's Drive folder "P6 Math" (in
 
 ## 1. What was read, and what was not
 
-- The folder holds **138 distinct PDFs** (127 in the main folder and 11 in "2026 Prelims Math"). **93 were read.** All are scans with no text layer: the Drive text view returned only a watermark, so every file was downloaded and read as OCR text (pdftoppm and RapidOCR on a CPU). Pictures were not seen: OCR drops figures, stacked fractions and handwriting, so many questions are recorded as a short summary and marked "(lost)" or "(verify)".
-- Papers read by year (paper labels): 2020 2, 2021 15, 2022 14, 2023 17, 2024 14, 2025 20, 2026 11. Kinds: Prelim 87, SA1 1, WA1 3, WA2 2 (Prelim = preliminary examination, the full PSLE-style paper, about 100 marks).
-- Schools read (paper labels): CatholicHigh 7, Nanyang 7, Raffles 7, ACSJ 7, MGS 6, NanHua 6, RedSwastika 6, StNicholas 6, TaoNan 6, HenryPark 5, Rosyth 5, SCGS 5, AiTong 4, ACS 2, NanChiau 2, PeiHwa 2, PLMGS 2, ACSP 2, MarisStella 2, PeiChun 2, MahaBodhi 1, Temasek 1.
-- **Not read: 45 PDFs.** They were downloaded but the OCR could not be finished and read in the time available. They are the 2020 to 2021 papers, the 2022 papers that came last in the queue and the weighted assessments (WA1 to WA3) and mid-year papers. **No file was over the 10 MB download limit and no file failed to open.** The patterns in the later years repeat across schools, so the unread papers are unlikely to add a new type, but the 2020 and 2021 counts below are thin.
+- The folder holds **138 distinct PDFs** (127 in the main folder and 11 in "2026 Prelims Math"). **120 were read.** All are scans with no text layer: the Drive text view returned only a watermark, so every file was downloaded and read as OCR text (pdftoppm and RapidOCR on a CPU). Pictures were not seen: OCR drops figures, stacked fractions and handwriting, so many questions are recorded as a short summary and marked "(lost)" or "(verify)".
+- Papers read by year (paper labels): 2020 3, 2021 18, 2022 15, 2023 27, 2024 20, 2025 26, 2026 11. Kinds: BA1 1, CA1 1, Prelim 87, SA1 4, WA1 12, WA2 14, WA3 1 (Prelim = preliminary examination, the full PSLE-style paper, about 100 marks).
+- Schools read (paper labels): Raffles 12, ACSJ 10, NanHua 10, StNicholas 10, Rosyth 9, MGS 8, TaoNan 8, CatholicHigh 7, Nanyang 7, RedSwastika 7, SCGS 6, HenryPark 5, AiTong 4, ACS 3, NanChiau 2, PeiHwa 2, PLMGS 2, ACSP 2, MarisStella 2, PeiChun 2, MahaBodhi 1, Temasek 1.
+- **Not read: 18 PDFs.** They were downloaded but the OCR could not be finished and read in the time available. They are the 2020 to 2021 papers, the 2022 papers that came last in the queue and the weighted assessments (WA1 to WA3) and mid-year papers. **No file was over the 10 MB download limit and no file failed to open.** The patterns in the later years repeat across schools, so the unread papers are unlikely to add a new type, but the 2020 and 2021 counts below are thin.
 - Answers come from the printed or handwritten answer keys where legible, otherwise from my own working; both need a check before any reuse. Marks are those printed in the question.
 
 ## 2. What counts as non-routine here
 
 Beyond a one-step computation or a routine exercise on a taught method: multi-step stories, a heuristic (bar model with units, supposition, work backwards, pattern, list every case, table, make equal), reasoning (true, false or not possible to tell), an unfamiliar context (a tariff, a tap, a net) or a drawing the child must produce. Plain computation (3.707 + 1.373, order of operations, bare conversions) and one-step area or angle items are left out. The 14 type codes below are those of Primary 5 minus MULTI and POSE: at Primary 6 almost every item is a multi-step item, so MULTI would hold everything, and each item is filed under its most specific type.
 
-**2504 non-routine questions were recorded** from 93 papers.
+**2757 non-routine questions were recorded** from 120 papers.
 
 | Code | Type | Questions | Papers | Difficulty 1 / 2 / 3 | Marks printed |
 |---|---|---|---|---|---|
-| EQ | Unit, ratio and equal-share models | 479 | 93 | 2 / 29 / 448 | 17 at 1; 241 at 2; 41 at 3; 107 at 4; 73 at 5 |
-| GEO | Geometry chain: angles, area, perimeter, volume | 443 | 89 | 3 / 22 / 418 | 19 at 1; 247 at 2; 43 at 3; 76 at 4; 58 at 5 |
-| CTX | Unfamiliar context or hidden fact | 251 | 89 | 3 / 48 / 200 | 24 at 1; 155 at 2; 21 at 3; 44 at 4; 7 at 5 |
-| TAB | Table, chart or graph reading | 232 | 83 | 0 / 27 / 205 | 31 at 1; 83 at 2; 9 at 3; 76 at 4; 33 at 5 |
-| BACK | Work backwards, fraction of the remainder | 209 | 85 | 0 / 14 / 195 | 9 at 1; 116 at 2; 17 at 3; 47 at 4; 20 at 5 |
-| LOG | Logic: true, false or not possible to tell; compass and turns | 147 | 80 | 1 / 31 / 115 | 22 at 1; 91 at 2; 14 at 3; 14 at 4; 6 at 5 |
-| DIAG | Draw or read a diagram, graph, view or solid | 130 | 73 | 0 / 18 / 112 | 14 at 1; 80 at 2; 6 at 3; 19 at 4; 11 at 5 |
-| CMP | Comparison and average | 116 | 69 | 1 / 30 / 85 | 19 at 1; 75 at 2; 5 at 3; 15 at 4; 2 at 5 |
-| EXP | Algebra, expressions, explain | 110 | 76 | 2 / 19 / 89 | 8 at 1; 71 at 2; 19 at 3; 12 at 4 |
-| CHAL | Build or complete from data: draw on a grid | 104 | 76 | 1 / 15 / 88 | 8 at 1; 60 at 2; 12 at 3; 19 at 4; 5 at 5 |
-| PAT | Pattern and sequence | 96 | 68 | 0 / 5 / 91 | 1 at 1; 52 at 2; 5 at 3; 13 at 4; 25 at 5 |
-| LIST | Systematic list, greatest and least, packing | 90 | 63 | 1 / 20 / 69 | 10 at 1; 72 at 2; 3 at 3; 4 at 4; 1 at 5 |
-| WAYS | Optimisation: most, least, best buy | 54 | 44 | 0 / 0 / 54 | 30 at 2; 6 at 3; 10 at 4; 8 at 5 |
-| GC | Guess and check, supposition | 43 | 35 | 0 / 0 / 43 | 20 at 2; 1 at 3; 15 at 4; 7 at 5 |
-| | **All** | **2504** | **93** | **14 / 278 / 2212** | 182 at 1; 1393 at 2; 202 at 3; 471 at 4; 256 at 5 |
+| EQ | Unit, ratio and equal-share models | 577 | 120 | 8 / 46 / 523 | 33 at 1; 293 at 2; 46 at 3; 127 at 4; 78 at 5 |
+| GEO | Geometry chain: angles, area, perimeter, volume | 480 | 108 | 3 / 24 / 453 | 24 at 1; 266 at 2; 47 at 3; 83 at 4; 59 at 5; 1 at 6 |
+| CTX | Unfamiliar context or hidden fact | 269 | 101 | 3 / 54 / 212 | 29 at 1; 164 at 2; 23 at 3; 46 at 4; 7 at 5 |
+| TAB | Table, chart or graph reading | 238 | 89 | 0 / 28 / 210 | 32 at 1; 83 at 2; 9 at 3; 80 at 4; 34 at 5 |
+| BACK | Work backwards, fraction of the remainder | 227 | 99 | 0 / 14 / 213 | 11 at 1; 125 at 2; 18 at 3; 51 at 4; 22 at 5 |
+| LOG | Logic: true, false or not possible to tell; compass and turns | 158 | 89 | 1 / 34 / 123 | 25 at 1; 94 at 2; 15 at 3; 17 at 4; 7 at 5 |
+| DIAG | Draw or read a diagram, graph, view or solid | 131 | 74 | 0 / 18 / 113 | 14 at 1; 80 at 2; 7 at 3; 19 at 4; 11 at 5 |
+| CMP | Comparison and average | 128 | 80 | 3 / 35 / 90 | 20 at 1; 83 at 2; 7 at 3; 16 at 4; 2 at 5 |
+| EXP | Algebra, expressions, explain | 118 | 83 | 4 / 21 / 93 | 10 at 1; 74 at 2; 20 at 3; 14 at 4 |
+| CHAL | Build or complete from data: draw on a grid | 110 | 82 | 1 / 19 / 90 | 9 at 1; 62 at 2; 15 at 3; 19 at 4; 5 at 5 |
+| PAT | Pattern and sequence | 106 | 77 | 0 / 6 / 100 | 3 at 1; 54 at 2; 6 at 3; 16 at 4; 27 at 5 |
+| LIST | Systematic list, greatest and least, packing | 104 | 71 | 2 / 21 / 81 | 15 at 1; 79 at 2; 3 at 3; 6 at 4; 1 at 5 |
+| WAYS | Optimisation: most, least, best buy | 61 | 51 | 0 / 1 / 60 | 1 at 1; 31 at 2; 6 at 3; 13 at 4; 10 at 5 |
+| GC | Guess and check, supposition | 50 | 41 | 0 / 0 / 50 | 25 at 2; 1 at 3; 16 at 4; 8 at 5 |
+| | **All** | **2757** | **120** | **25 / 321 / 2411** | 226 at 1; 1513 at 2; 223 at 3; 523 at 4; 271 at 5; 1 at 6 |
 
 Notes on the table.
 
-- Difficulty is my own 1 to 3 judgement for a twelve-year-old (1 one extra idea, 2 a trap or two steps, 3 hard for the age). **2212 of 2504 are difficulty 3** (88 percent): a recorded item is a stretch for the age because I recorded only the non-routine questions and skipped the routine ones, so the share says nothing about the whole paper.
+- Difficulty is my own 1 to 3 judgement for a twelve-year-old (1 one extra idea, 2 a trap or two steps, 3 hard for the age). **2411 of 2757 are difficulty 3** (87 percent): a recorded item is a stretch for the age because I recorded only the non-routine questions and skipped the routine ones, so the share says nothing about the whole paper.
 - Marks: 2-mark items are Paper 1 Booklet B (Q21 to Q30) and Paper 2 Q1 to Q5; 3, 4 and 5-mark items are Paper 2 Q6 to Q17 with parts (a) and (b). Paper 1 Booklet A (multiple choice) items are 1 or 2 marks.
-- Items by paper year: 2020: 62; 2021: 371; 2022: 300; 2023: 448; 2024: 421; 2025: 537; 2026: 365. 2023 to 2026 carry most of the weight because those were read first.
-- **Two syllabus eras sit in the folder.** The 2020 to 2025 papers set speed (km/h and m/min, 2022 to 2025: 7 to 15 recorded items a year), GST (9 percent; 7 percent in older papers; none recorded in 2026), compass turns and the old PSLE shape of Booklet A, Booklet B and Paper 2 (20 + 25 + 55 marks). The **2026 papers follow the new syllabus: 26 + 24 + 50 marks, no km/h speed item recorded, no GST item and no compass item recorded**; ratio, average, percentage, algebra, pie charts, circles, nets and views, tap and tank rates (cm per minute) all stay. See the patterns file for the evidence.
-- **1224 of 2504 recorded items (49 percent) needed a picture**; the true share is higher because OCR dropped figures silently. Digital and printed pages must carry the same kinds of drawing: angle diagrams, composite figures, grids for drawing, pie charts and bar graphs, block views and nets.
+- Items by paper year: 2020: 73; 2021: 419; 2022: 310; 2023: 533; 2024: 466; 2025: 591; 2026: 365. 2023 to 2026 carry most of the weight because those were read first.
+- **Two syllabus eras sit in the folder.** The 2020 to 2025 papers set speed (km/h and m/min, 2022 to 2025: 12 to 19 recorded items a year), GST (9 percent; 7 percent in older papers; none recorded in 2026), compass turns and the old PSLE shape of Booklet A, Booklet B and Paper 2 (20 + 25 + 55 marks). The **2026 papers follow the new syllabus: 26 + 24 + 50 marks, no km/h speed item recorded, no GST item and no compass item recorded**; ratio, average, percentage, algebra, pie charts, circles, nets and views, tap and tank rates (cm per minute) all stay. See the patterns file for the evidence.
+- **1297 of 2757 recorded items (47 percent) needed a picture**; the true share is higher because OCR dropped figures silently. Digital and printed pages must carry the same kinds of drawing: angle diagrams, composite figures, grids for drawing, pie charts and bar graphs, block views and nets.
 - There is no named challenge section. The last question of Paper 2 (5 marks) is the hardest. Some stems name the tool ("Draw a rectangle with the same area", "Express your answer in terms of n"), but not the heuristic.
 
 ## 3. The types, with original examples
 
 Tier names: **Think harder** (T) and **Go further** (G). Never Start here. Each example has a scripted answer.
 
-### EQ: Unit, ratio and equal-share models (479 questions)
+### EQ: Unit, ratio and equal-share models (577 questions)
 
 The core P6 problem sum: a ratio or a pair of fractions with a change that makes the quantities equal or fixes a new ratio ("after giving 10 ... three times as many"), percentage and fraction of a part with a given count ("60 percent roses, half of the roses red, 24 red"), unit price chains (4 for $17, 3 for $8), equal numbers of two items, and ratio with a change in each part. Most are 4 or 5 marks with parts (a) and (b).
 
-Frequent contexts in the papers (keyword counts, approximate): ratio (169), fractions and remainder (94), percentage, discount, GST (60), volume, tanks, cubes (36).
+Frequent contexts in the papers (keyword counts, approximate): ratio (214), fractions and remainder (104), percentage, discount, GST (87), volume, tanks, cubes (37).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
-| EX-EQ-1 | Think harder | The ratio of Ali's money to Ben's money is 3 : 5. After Ben gives Ali $20, they have the same amount. How much money do they have altogether? | 160 |
+| EX-EQ-1 | Think harder | The ratio of Ali's money to Ben's money is 3 : 5. After Ben gives Ali $20, they have the same amount. How much money do they have altogether? | $160 |
 | EX-EQ-2 | Go further | 2/5 of the red beads equal 1/3 of the blue beads. There are 144 more blue beads than red beads. How many beads are there altogether? | 1584 |
-| EX-EQ-3 | Go further | Sam and Tara had money in the ratio 4 : 7. Sam spent 1/4 of his money and Tara spent $60. They were then left with money in the ratio 3 : 4. How much did they have at first? | 220 |
-| EX-EQ-4 | Think harder | Shop A sells a lamp with usual price $640 at 25% off. Shop B sells the same lamp at 40% off and charges the same amount. What is the usual price at Shop B? | 800 |
+| EX-EQ-3 | Go further | Sam and Tara had money in the ratio 4 : 7. Sam spent 1/4 of his money and Tara spent $60. They were then left with money in the ratio 3 : 4. How much did they have at first? | $220 |
+| EX-EQ-4 | Think harder | Shop A sells a lamp with usual price $640 at 25% off. Shop B sells the same lamp at 40% off and charges the same amount. What is the usual price at Shop B? | $800 |
 | EX-EQ-5 | Go further | Tank X has a base 20 cm by 20 cm and water 30 cm deep. Tank Y, base 20 cm by 10 cm, is empty. Water is poured from X into Y until the water is at the same height in both. How deep is the water now? | 20 cm |
 
-### GEO: Geometry chain: angles, area, perimeter, volume (443 questions)
+### GEO: Geometry chain: angles, area, perimeter, volume (480 questions)
 
 Angle chasing (isosceles, equilateral, parallelogram, rhombus, trapezium, a folded corner, a straight line) and area or perimeter chains: composites of squares, rectangles, triangles, semicircles and quarter circles (pi as 22/7 or 3.14), overlaps with a ratio of areas, rectangles joined (perimeter given, find one rectangle), cuboid volume and a net. Parts (a) and (b) often use the same figure.
 
-Frequent contexts in the papers (keyword counts, approximate): area, perimeter, circles (201), angles (198), volume, tanks, cubes (25), ratio (7).
+Frequent contexts in the papers (keyword counts, approximate): area, perimeter, circles (221), angles (212), volume, tanks, cubes (28), ratio (7).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -74,11 +74,11 @@ Frequent contexts in the papers (keyword counts, approximate): area, perimeter, 
 | EX-GEO-3 | Go further | ABCD is a square of side 12 cm. E is the midpoint of BC and F is the midpoint of CD. Find the area of triangle AEF. | 54 |
 | EX-GEO-4 | Think harder | PQ is parallel to RS. A straight line crosses PQ at T and RS at U. Angle PTU = 112 degrees, with S and Q on the same side of the line. Find angle TUS. | 68 degrees |
 
-### CTX: Unfamiliar context or hidden fact (251 questions)
+### CTX: Unfamiliar context or hidden fact (269 questions)
 
 Rate and hidden-fact contexts: two cars meeting or passing (65 and 85 km/h), average speed of a journey, a tap filling one tank and emptying into another, water poured between containers until the heights match, charges in steps ("or part thereof"), tiered water tariffs, postage, payments split among people, time in 24-hour form. The hidden fact is a rounding rule, a unit or a starting condition.
 
-Frequent contexts in the papers (keyword counts, approximate): rate, speed, taps (84), money and prices (21), charges in steps, tariffs (21), average (21).
+Frequent contexts in the papers (keyword counts, approximate): rate, speed, taps (93), charges in steps, tariffs (26), money and prices (21), average (21).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -88,11 +88,11 @@ Frequent contexts in the papers (keyword counts, approximate): rate, speed, taps
 | EX-CTX-4 | Think harder | A tank has a base 50 cm by 40 cm and water 6 cm deep. A tap fills it at 4 litres per minute. How many minutes until the water is 30 cm deep? (1 litre = 1000 cubic cm) | 12 min |
 | EX-CTX-5 | Think harder | GST is 9%. (a) A fan costs $85 before GST. How much is it with GST? (b) A heater costs $109 with GST. What is its price before GST? | 92.65; 100.00 |
 
-### TAB: Table, chart or graph reading (232 questions)
+### TAB: Table, chart or graph reading (238 questions)
 
 Read, complete or use a chart: line graphs of water in a tank, bar graphs with a missing bar, pie charts (a sector in degrees or percent gives a count), a table with a total, a tariff graph (charge against volume). Often the picture must be matched to a description ("which bar graph matches this pie chart").
 
-Frequent contexts in the papers (keyword counts, approximate): graphs, charts, tables (96), percentage, discount, GST (66), average (25), rate, speed, taps (20), ratio (15).
+Frequent contexts in the papers (keyword counts, approximate): graphs, charts, tables (97), percentage, discount, GST (68), average (25), rate, speed, taps (20), ratio (17).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -100,11 +100,11 @@ Frequent contexts in the papers (keyword counts, approximate): graphs, charts, t
 | EX-TAB-2 | Think harder | In a pie chart, the sector for walking is 90 degrees and stands for 70 students. The sector for bus is 144 degrees. How many students take the bus? | 112 |
 | EX-TAB-3 | Go further | Postage is $2.40 for the first 500 g and $0.80 for every additional 250 g or part of it. How much is the postage for a 1.3 kg parcel? | 5.60 |
 
-### BACK: Work backwards, fraction of the remainder (209 questions)
+### BACK: Work backwards, fraction of the remainder (227 questions)
 
 Work backwards and fraction or percentage of the remainder: spend a fraction, then a fraction of the rest, find the start; percent discount to the original price; apples and pears each reduced until equal; a total after two successive changes. Three to four stages; the answer is the first quantity.
 
-Frequent contexts in the papers (keyword counts, approximate): percentage, discount, GST (81), fractions and remainder (80), ratio (12), money and prices (10).
+Frequent contexts in the papers (keyword counts, approximate): fractions and remainder (92), percentage, discount, GST (86), ratio (12), money and prices (10).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -113,11 +113,11 @@ Frequent contexts in the papers (keyword counts, approximate): percentage, disco
 | EX-BACK-3 | Go further | A fruit stall had apples and pears in the ratio 5 : 6. After 2/5 of the apples and 171 pears were sold, the same number of each was left. How many apples were there at first? | 285 |
 | EX-BACK-4 | Think harder | A shop sold 35% of its phones on Monday and 30% of the phones that were left on Tuesday. 91 phones were left. How many phones did the shop have at first? | 200 |
 
-### LOG: Logic: true, false or not possible to tell; compass and turns (147 questions)
+### LOG: Logic: true, false or not possible to tell; compass and turns (158 questions)
 
 True, false or not possible to tell tables (graph, table, rhombus or trapezium facts, ratio statements) and compass work: directions from a grid, a turn of 45, 90, 135 or 225 degrees clockwise or anti-clockwise, "south-east of the house and north of the school". Also number riddles and coin amounts that could not be donated.
 
-Frequent contexts in the papers (keyword counts, approximate): compass and turns (57), true/false/not possible to tell (56), angles (12), area, perimeter, circles (4).
+Frequent contexts in the papers (keyword counts, approximate): compass and turns (62), true/false/not possible to tell (61), angles (13), area, perimeter, circles (4).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -126,11 +126,11 @@ Frequent contexts in the papers (keyword counts, approximate): compass and turns
 | EX-LOG-3 | Go further | Ann, Ben, Cara and Dev ran a race with no ties. Ann was not first or last. Dev finished directly behind Ann. Ben finished ahead of Cara. Cara was not last. Give the order, first to last. | BCAD |
 | EX-LOG-4 | Think harder | A bar graph shows books read: Ann 12, Ben 18, Cara 30. True, false or not possible to tell? (a) The ratio of Ann's books to Cara's is 2 : 5. (b) The average is 22. (c) Dev read more books than Cara. | T; F; NPT |
 
-### DIAG: Draw or read a diagram, graph, view or solid (130 questions)
+### DIAG: Draw or read a diagram, graph, view or solid (131 questions)
 
 Draw or choose a picture: top, front and side views of a block stack, "least cubes to add or remove to match these views", net of a cuboid (which face does not fit), pie chart with a bar graph, a clock or bar graph to complete. The answer is a drawing or a choice among drawings, so marking needs a rule.
 
-Frequent contexts in the papers (keyword counts, approximate): volume, tanks, cubes (100), area, perimeter, circles (11), views and nets (4), graphs, charts, tables (4).
+Frequent contexts in the papers (keyword counts, approximate): volume, tanks, cubes (101), area, perimeter, circles (11), views and nets (4), graphs, charts, tables (4).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -138,11 +138,11 @@ Frequent contexts in the papers (keyword counts, approximate): volume, tanks, cu
 | EX-DIAG-2 | Go further | For the same solid, front view heights are 3 2 3 and side view heights (one per row) are 3 2 3. What is the greatest number of cubes you can add without changing either view? | 6 |
 | EX-DIAG-3 | Think harder | A 3 by 3 by 3 cube is painted on all faces and cut into 27 small cubes. How many small cubes have exactly 2 painted faces? | 12 |
 
-### CMP: Comparison and average (116 questions)
+### CMP: Comparison and average (128 questions)
 
 Average problems: an average with one value hidden by an ink blot, the average after one value is added or removed, the greatest possible difference between two marks given the average, a wrongly keyed value changing the average, and sum and difference of two quantities.
 
-Frequent contexts in the papers (keyword counts, approximate): average (87), fractions and remainder (4), graphs, charts, tables (4), volume, tanks, cubes (4).
+Frequent contexts in the papers (keyword counts, approximate): average (96), volume, tanks, cubes (6), fractions and remainder (4), graphs, charts, tables (4).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -152,11 +152,11 @@ Frequent contexts in the papers (keyword counts, approximate): average (87), fra
 | EX-CMP-4 | Go further | The average of 20 test marks was 64. One mark was typed as 38 but it should have been 83. What is the correct average? | 66.25 |
 | EX-CMP-5 | Think harder | Numbers 1 to 64 fill a table with 8 columns, row by row. A 3 by 3 frame covers 9 squares. Show that the average of the 8 numbers around the centre equals the centre number, and find it when the centre is 27. | 27 (difference always 0) |
 
-### EXP: Algebra, expressions, explain (110 questions)
+### EXP: Algebra, expressions, explain (118 questions)
 
 Algebra: write an expression in a letter (pen costs p, notebook $2 more), substitute a value, express an answer in terms of n or w ("beads in each box at first in terms of n"), evaluate 9c - 3 + 2c for c = 7. Whole-number coefficients; no brackets or two unknowns.
 
-Frequent contexts in the papers (keyword counts, approximate): algebra and expressions (31), money and prices (23), area, perimeter, circles (12), fractions and remainder (11).
+Frequent contexts in the papers (keyword counts, approximate): algebra and expressions (33), money and prices (24), area, perimeter, circles (13), fractions and remainder (11).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -165,11 +165,11 @@ Frequent contexts in the papers (keyword counts, approximate): algebra and expre
 | EX-EXP-3 | Go further | Is the sum of any three consecutive whole numbers always a multiple of 3? Write the sum using n for the smallest number and explain. | always a multiple of 3 |
 | EX-EXP-4 | Think harder | Chandra buys 7 stamps at n cents each and pays with a $5 note. Write his change in cents in terms of n. Find it when n = 45. | 500 - 7n; 185 cents |
 
-### CHAL: Build or complete from data: draw on a grid (104 questions)
+### CHAL: Build or complete from data: draw on a grid (110 questions)
 
 Draw on a grid: a rhombus or trapezium from two sides, a triangle with area one quarter of a rectangle and an obtuse angle, a rectangle with the same area as a figure, a parallelogram with the same perimeter, shade squares to complete a figure with a line of symmetry.
 
-Frequent contexts in the papers (keyword counts, approximate): angles (59), area, perimeter, circles (24), symmetry, grid drawing (8), ratio (8), graphs, charts, tables (2).
+Frequent contexts in the papers (keyword counts, approximate): angles (62), area, perimeter, circles (25), symmetry, grid drawing (10), ratio (8), graphs, charts, tables (2).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -177,11 +177,11 @@ Frequent contexts in the papers (keyword counts, approximate): angles (59), area
 | EX-CHAL-2 | Go further | On a square grid draw right-angled triangles whose two shorter sides are whole numbers and whose area is 6 square units. Give the lengths of the two shorter sides for every possible triangle (unordered). | [(1, 12), (2, 6), (3, 4)] |
 | EX-CHAL-3 | Go further | A rectangle on a grid is 8 squares by 6 squares. Draw a triangle on the 8-square side AB with area one quarter of the rectangle and an obtuse angle at A. How tall is the triangle? | height 3 squares, apex outside the rectangle beyond A |
 
-### PAT: Pattern and sequence (96 questions)
+### PAT: Pattern and sequence (106 questions)
 
 Patterns: a repeating block and the sum of the first 99 terms, a table of four columns ("in which column is 923"), a pattern of beads along a chain of given length, a perimeter of a figure made from n identical triangles, a number pattern that interleaves two rules (4, 16, 8, 32, 16, 64, 32).
 
-Frequent contexts in the papers (keyword counts, approximate): area, perimeter, circles (29), patterns and sequences (26), graphs, charts, tables (12), digits, factors, multiples (7).
+Frequent contexts in the papers (keyword counts, approximate): area, perimeter, circles (31), patterns and sequences (30), graphs, charts, tables (15), digits, factors, multiples (7).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -190,11 +190,11 @@ Frequent contexts in the papers (keyword counts, approximate): area, perimeter, 
 | EX-PAT-3 | Go further | One paper cup is 10 cm tall. Each cup added to the stack raises the stack by only 1.5 cm. A stack is 31 cm tall. How many cups are in it? | 15 |
 | EX-PAT-4 | Think harder | Whole numbers are written in a table with columns A, B, C, D. Row 1 reads 1 2 3 4 from A to D. Row 2 reads right to left: 5 under D, 6 under C, 7 under B, 8 under A. The rows keep zigzagging. In which column is 923? | C |
 
-### LIST: Systematic list, greatest and least, packing (90 questions)
+### LIST: Systematic list, greatest and least, packing (104 questions)
 
 Greatest or least with divisibility and packing: packs of 1 big and 6 small items, packs of 30 and 22 from a total, digit cards for the greatest multiple of 5 or the smallest odd number, the most pieces of a given length, the least common time for lights that blink together.
 
-Frequent contexts in the papers (keyword counts, approximate): digits, factors, multiples (47), average (10), fractions and remainder (9), ratio (4).
+Frequent contexts in the papers (keyword counts, approximate): digits, factors, multiples (51), fractions and remainder (13), average (10), volume, tanks, cubes (4).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -205,11 +205,11 @@ Frequent contexts in the papers (keyword counts, approximate): digits, factors, 
 | EX-LIST-5 | Go further | How many whole numbers from 1 to 100 have an odd number of factors? Say what they have in common. | 10 (the square numbers) |
 | EX-LIST-6 | Think harder | A red light blinks every 4 seconds, an amber light every 6 seconds and a green light every 9 seconds. All three blink together now. How many seconds later do they blink together again? | 36 |
 
-### WAYS: Optimisation: most, least, best buy (54 questions)
+### WAYS: Optimisation: most, least, best buy (61 questions)
 
 Optimisation: the most whole batches, the fewest boxes, the cheapest way to buy, buy-more-get-free, least cost of two deals. The 2023 to 2026 papers set these as "most" and "least" questions, not as counts of ways.
 
-Frequent contexts in the papers (keyword counts, approximate): money and prices (29), fractions and remainder (6), percentage, discount, GST (6), charges in steps, tariffs (3), digits, factors, multiples (3).
+Frequent contexts in the papers (keyword counts, approximate): money and prices (32), percentage, discount, GST (10), fractions and remainder (6), charges in steps, tariffs (3), digits, factors, multiples (3).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -218,11 +218,11 @@ Frequent contexts in the papers (keyword counts, approximate): money and prices 
 | EX-WAYS-3 | Go further | One batch needs 2 cups of flour and 3 cups of sugar. There are 17 cups of flour and 25 cups of sugar. What is the most number of whole batches? | 8 |
 | EX-WAYS-4 | Think harder | Tarts cost $3.20 each, or 10 for $28. Mia needs 27 tarts. What is the least she pays? | 78.40 |
 
-### GC: Guess and check, supposition (43 questions)
+### GC: Guess and check, supposition (50 questions)
 
 Guess and check or supposition: 12 more ten-dollar notes than two-dollar notes, tickets at two prices for a total, coins of two kinds for an amount, boxes with two pack sizes for a total.
 
-Frequent contexts in the papers (keyword counts, approximate): money and prices (13), fractions and remainder (12), percentage, discount, GST (2), graphs, charts, tables (2).
+Frequent contexts in the papers (keyword counts, approximate): money and prices (15), fractions and remainder (14), ratio (3), percentage, discount, GST (2).
 
 | ID | Tier | Original question | Answer |
 |---|---|---|---|
@@ -246,22 +246,22 @@ Frequent contexts in the papers (keyword counts, approximate): money and prices 
 
 | Gap | Evidence | Status in plan |
 |---|---|---|
-| Unit and ratio chains (EQ) with a change in each part | 479 EQ items; ratio appears in every year 2020 to 2026 | Lesson 11 covers ratio; lesson 8 covers fraction of the remainder. Add "after a change the ratio is" and "same amount from both" to 11 at Think harder |
-| Percentage change chains: discount to original price, successive changes, GST | 209 BACK items, most percent or fraction chains; discount in every year | Lesson 13. Add "price after discount and a further $ off" and GST at 9 percent |
-| Average with a hidden or changed value | 116 CMP items, mostly average; every year 2020 to 2026 | Lesson 31 teaches average from scratch in Term 4; school sets it in the first term. Add average chains to lesson 4 or 8 as a Think harder item |
-| Speed, meeting and average speed (2022 to 2025) | about 40 recorded; none recorded in 2026 | Lesson 14 keeps speed as a labelled secondary preview; the 2026 papers confirm the new syllabus has dropped it |
-| Tap and tank rates (cm or litres per minute), pouring between containers | tap items every year, 6 in 2026 | Lesson 14 (Rates, Work) and lesson 16; add "two taps fill two tanks of different base" and "pour until the same height" |
-| Angle chains with parallelogram, trapezium, rhombus, folded paper | 443 GEO items (angles the largest group) | Lesson 17. Add folded-corner and word-circling (parallelogram or trapezium) items |
+| Unit and ratio chains (EQ) with a change in each part | 577 EQ items; ratio appears in every year 2020 to 2026 | Lesson 11 covers ratio; lesson 8 covers fraction of the remainder. Add "after a change the ratio is" and "same amount from both" to 11 at Think harder |
+| Percentage change chains: discount to original price, successive changes, GST | 227 BACK items, most percent or fraction chains; discount in every year | Lesson 13. Add "price after discount and a further $ off" and GST at 9 percent |
+| Average with a hidden or changed value | 128 CMP items, mostly average; every year 2020 to 2026 | Lesson 31 teaches average from scratch in Term 4; school sets it in the first term. Add average chains to lesson 4 or 8 as a Think harder item |
+| Speed, meeting and average speed (2022 to 2025) | about 65 recorded in 2022 to 2025; none recorded in 2026 | Lesson 14 keeps speed as a labelled secondary preview; the 2026 papers confirm the new syllabus has dropped it |
+| Tap and tank rates (cm or litres per minute), pouring between containers | tap items every year, 5 in 2026 | Lesson 14 (Rates, Work) and lesson 16; add "two taps fill two tanks of different base" and "pour until the same height" |
+| Angle chains with parallelogram, trapezium, rhombus, folded paper | 480 GEO items (angles the largest group) | Lesson 17. Add folded-corner and word-circling (parallelogram or trapezium) items |
 | Composite area with semicircles and quarter circles | circle items every year 2023 to 2026 (pi 22/7 and 3.14) | Lesson 15; add shaded-area composites with both values of pi |
-| Views of cubes: draw top, front, side; least cubes to add or remove | about 35 view items, plus nets | Lesson 16 (light) and 38; add "least cubes to remove to match this front view" |
-| True, false or not possible to tell | about 40 items, every year | Not in the plan. Add to lessons 11, 13, 31 and 36 as a statement table |
-| Compass and turns (2020 to 2025 only) | about 40 items; none in 2026 | Not in the plan. A 6-minute warm-up in lesson 24 (Maps) and 18 (Symmetry); low priority because the 2026 papers drop it |
-| Draw on a grid: same area, same perimeter, rhombus from two sides, obtuse triangle of given area | 104 CHAL items | Lessons 7 and 9 (area and perimeter); add a draw-it Think harder item |
-| Charges in steps and tiered tariffs; postage | about 20 items | Not in the plan. Add to lesson 14 and 19 (best buys) |
-| Algebra: expression in a letter, "in terms of n" | 110 EXP items; every year, more in 2025 and 2026 | Lessons 21 and 22; note that the papers use one letter and whole-number coefficients, no brackets |
-| Pie chart with a bar graph; pie sector gives a count | about 75 items; every year | Lesson 31; add "which bar graph matches the pie chart" and a sector in degrees |
-| Patterns: repeating block, table of columns, sum of the first n | 96 PAT items | Lesson 6 and 35; add "which column holds 923" |
-| Packing and "most" or "least" (LIST, WAYS) | 90 LIST and 54 WAYS items | Lessons 5 and 27 (factors, LCM) and 19 (best buys); add digit-card greatest multiple of 5 |
+| Views of cubes: draw top, front, side; least cubes to add or remove | about 95 view and net items | Lesson 16 (light) and 38; add "least cubes to remove to match this front view" |
+| True, false or not possible to tell | about 60 items, every year | Not in the plan. Add to lessons 11, 13, 31 and 36 as a statement table |
+| Compass and turns (2020 to 2025 only) | about 60 items 2021 to 2025; none in 2026 | Not in the plan. A 6-minute warm-up in lesson 24 (Maps) and 18 (Symmetry); low priority because the 2026 papers drop it |
+| Draw on a grid: same area, same perimeter, rhombus from two sides, obtuse triangle of given area | 110 CHAL items | Lessons 7 and 9 (area and perimeter); add a draw-it Think harder item |
+| Charges in steps and tiered tariffs; postage | about 65 items | Not in the plan. Add to lesson 14 and 19 (best buys) |
+| Algebra: expression in a letter, "in terms of n" | 118 EXP items; every year, more in 2025 and 2026 | Lessons 21 and 22; note that the papers use one letter and whole-number coefficients, no brackets |
+| Pie chart with a bar graph; pie sector gives a count | about 80 items; every year | Lesson 31; add "which bar graph matches the pie chart" and a sector in degrees |
+| Patterns: repeating block, table of columns, sum of the first n | 106 PAT items | Lesson 6 and 35; add "which column holds 923" |
+| Packing and "most" or "least" (LIST, WAYS) | 104 LIST and 61 WAYS items | Lessons 5 and 27 (factors, LCM) and 19 (best buys); add digit-card greatest multiple of 5 |
 | Probability, rotation, tessellation, coordinates, inequalities, binary, negative numbers | **none** in the papers read | Lessons 18, 23, 24, 28, 33 are beyond school; they stay enrichment |
 
 ## 6. How the examples were made and checked

@@ -55,9 +55,7 @@ def page02():
     P.v("V1 each riddle has exactly 1 solution in 1..100", all(solve_riddle(c) == [t] for c, t in zip(riddles, targets)), targets)
     P.v("V1b every clue is necessary", True, "checked in generator, re-run here: " + str(all(all(solve_riddle(c[:i]+c[i+1:]) != [t] for i in range(len(c))) for c, t in zip(riddles, targets))))
     cv = code_verify(targets, table, word, 1, 100)
-    P.v("V2 code word spells CLOUD", cv["spelled_ok"])
-    P.v("V3 single-slip detection 100% against the large word list", not cv["undetected"], f'{cv["rate"]:.3f}')
-    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
+    code_checks(P, cv, word)
     P["cv"] = cv
     P["model"] = code_model(targets, table, 1, 100)
     P["mech_plain"] = "Code word (5 letters) and testing each clue"
@@ -102,7 +100,7 @@ def howto_grid():
 def page04():
     rng = random.Random(404)
     names = ["Ali", "Mei", "Siti", "Ben", "Kumar"]
-    word = "BAKER"
+    word = "BELOW"
     while True:
         nums = sorted(rng.sample(range(12, 100), 5))
         if nums[4] - nums[0] > 30: break
@@ -230,7 +228,7 @@ def child_svg(letter):
 
 def page07():
     rng = random.Random(707)
-    word = "SPACE"
+    word = "SNAKE"
     names = rng.sample(NAMES, 5)
     order = names[:]; rng.shuffle(order)       # true queue, front first
     letter = dict(zip(order, word))
@@ -253,8 +251,8 @@ def page07():
     kids = "".join(f'<div class="kid">{child_svg(letter[n])}<b>{n}</b></div>' for n in shown)
     clues = "".join(f"<li>{queue_text(c)}</li>" for c in cl)
     slots = "".join(f'<div class="qslot"><span class="qn">{ordinal(i+1)}</span><span class="ab wide"></span></div>' for i in range(5))
-    body = (f'<div class="kids">{kids}</div><ul class="clues">{clues}</ul>'
-            f'<div class="blk"><p class="lead">The queue. The front is 1st.</p><div class="qslots">{slots}</div></div>')
+    body = (f'<div class="kids">{kids}</div>'
+            f'<div class="twocol"><div class="blk"><p class="lead">The queue. The front is 1st.</p><div class="qslots">{slots}</div></div><ul class="clues">{clues}</ul></div>')
     P = Page(no=7, title="The Queue", tier=2, topic="Ordinal numbers: 1st to 5th, in front of and behind",
              strand="Number and Algebra - Whole Numbers", syll="1.7 (ordinal numbers first to tenth)",
              ptype="Logic (queue)", mech="K1 shirt letters read 1st to 5th spell a word + K4 each child used once",

@@ -44,7 +44,7 @@ def ordinal(n):
 JUNK = "QXZJVKWYBFGHMDUC"
 ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def build_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), letters=None, weighted=False):
+def build_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), letters=None, weighted=False, pool=None):
     """code table: the answers (in order) get the letters of `word`; n_decoy near-miss values get decoy letters."""
     assert len(answers) == len(word), (answers, word)
     assert len(set(answers)) == len(answers), "answers must be distinct"
@@ -55,11 +55,14 @@ def build_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), 
     rng.shuffle(junk)
     if weighted: junk = weighted_letters(word, len(junk), rng, junk)
     cands = []
-    for a in answers:
-        for d in near:
-            v = a + d
-            if lo <= v <= hi and v not in table and v not in cands:
-                cands.append(v)
+    if pool is not None:                                  # explicit decoy values (e.g. wrong readings of a clock)
+        cands = [v for v in pool if v not in table]
+    else:
+        for a in answers:
+            for d in near:
+                v = a + d
+                if lo <= v <= hi and v not in table and v not in cands:
+                    cands.append(v)
     rng.shuffle(cands)
     for v in cands[:n_decoy]:
         table[v] = junk.pop()
@@ -94,7 +97,7 @@ def weighted_letters(word, k, rng, pool=None):
         c = rng.choices(pool, w)[0]; pool.remove(c); out.append(c)
     return out
 
-def code_verify(answers, table, word, lo, hi):
+def code_verify(answers, table, word, lo, hi, domain=None):
     """V2 the right answers spell the word; V3 single-slip detection over every value lo..hi against the LARGE word list
     (a slip that makes another real word counts as not detected); V4 guess resistance: how many common words fit the table letters."""
     spelled = "".join(table[a] for a in answers)
@@ -102,7 +105,7 @@ def code_verify(answers, table, word, lo, hi):
     tot = det = 0
     undetected = []
     for i in range(len(answers)):
-        for v in range(lo, hi + 1):
+        for v in (domain if domain is not None else range(lo, hi + 1)):
             if v == answers[i]:
                 continue
             tot += 1
@@ -116,18 +119,30 @@ def code_verify(answers, table, word, lo, hi):
                 undetected.append((i, v, m))
     n = len(word)
     cand = candidates(table.values(), n)
+    swaps = []                                   # two answers written in each other's boxes
+    for i in range(n):
+        for j in range(i + 1, n):
+            l = list(word); l[i], l[j] = l[j], l[i]; x = "".join(l)
+            if x != word and x.lower() in BIG: swaps.append(x)
     return dict(spelled_ok=ok2, single_total=tot, single_detected=det,
-                rate=det / tot, undetected=undetected, candidates=cand, n_candidates=len(cand))
+                rate=det / tot, undetected=undetected, candidates=cand, n_candidates=len(cand), swap_words=swaps)
 
-def make_code_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), tries=1500, min_cand=3):
+def make_code_table(answers, word, rng, lo, hi, n_decoy=4, near=(1,-1,10,-10,2,-2), tries=1500, min_cand=3, pool=None, domain=None):
     """a code table with NO undetected single slip (large word list) and at least `min_cand` common words that fit its letters
     (so the word cannot be guessed from the letter count). Returns None when no table is found (the caller picks other answers)."""
     for _ in range(tries):
-        t = build_table(answers, word, rng, lo, hi, n_decoy, near, weighted=True)
-        cv = code_verify(answers, t, word, lo, hi)
-        if cv["spelled_ok"] and not cv["undetected"] and cv["n_candidates"] >= min_cand:
+        t = build_table(answers, word, rng, lo, hi, n_decoy, near, weighted=True, pool=pool)
+        cv = code_verify(answers, t, word, lo, hi, domain)
+        if cv["spelled_ok"] and not cv["undetected"] and not cv["swap_words"] and cv["n_candidates"] >= min_cand:
             return t
     return None
+
+def code_checks(P, cv, word):
+    """the four code-word checks every code page records"""
+    P.v("V2 code word spells " + word, cv["spelled_ok"])
+    P.v("V3 no single slip spells another word (large word list, 129 000 words)", not cv["undetected"], f'{cv["single_detected"]}/{cv["single_total"]}')
+    P.v("V3c no swap of two answers spells a word", not cv["swap_words"], cv["swap_words"][:3])
+    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
 
 def code_table_html(table, cols=None):
     items = "".join(f'<div class="ct"><span class="n">{k}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in table.items())
@@ -204,8 +219,8 @@ def code_check(table):
         return "".join(table[a] for a in ans).lower() in BIG
     return chk
 
-def code_model(answers, table, lo, hi):
-    return dict(truth=list(answers), domains=[list(range(lo, hi + 1))] * len(answers), check=code_check(table), numeric=True)
+def code_model(answers, table, lo, hi, domain=None):
+    return dict(truth=list(answers), domains=[list(domain if domain is not None else range(lo, hi + 1))] * len(answers), check=code_check(table), numeric=domain is None)
 
 def letters_check():
     def chk(ans):

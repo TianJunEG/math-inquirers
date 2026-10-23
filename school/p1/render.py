@@ -29,8 +29,9 @@ h1{font-family:'Fredoka';font-weight:600;font-size:25pt;margin:0;line-height:1.0
 .check .ct2 b{font-family:'Fredoka';font-weight:600;font-size:15pt}
 .check .lb{display:flex;gap:1.5mm;align-items:center;flex-wrap:nowrap}
 .check .ab{width:11mm;height:12mm}
-footer.pf{display:flex;justify-content:space-between;font-size:8pt;padding-top:2mm;line-height:1.2}
+footer.pf{display:flex;justify-content:space-between;gap:6mm;font-size:8pt;padding-top:2mm;line-height:1.2}
 footer.pf b{font-weight:800}
+footer.pf .fl{display:flex;gap:1.2mm;flex:1;min-width:0}footer.pf .fx{white-space:nowrap;flex:none}footer.pf .sn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:800}footer.pf .pc{flex:none}
 p.lead{margin:0 0 2mm;font-size:13pt;font-weight:700}
 .blk{display:block}
 svg{max-width:100%;height:auto}
@@ -70,13 +71,13 @@ ul.clues li{margin:1mm 0}
 table.lgrid{border-collapse:collapse}table.lgrid th,table.lgrid td{border:0.5mm solid #000;font-size:12.5pt;padding:0 2mm}
 table.lgrid td{width:15mm;height:13mm}table.lgrid th{font-weight:800}table.lgrid th.rh{text-align:left;width:22mm}
 .twocol{display:flex;gap:8mm;align-items:flex-start}.twocol>div:last-child{flex:1}
-.ansgrid{display:grid;grid-template-columns:auto 20mm 20mm;gap:2.5mm 3mm;align-items:center;justify-content:start}
+.ansgrid{display:grid;grid-template-columns:auto 20mm 20mm;gap:1.5mm 3mm;align-items:center;justify-content:start}
 .ansgrid b{font-size:11pt;text-align:center}.ansgrid .nm{font-size:15pt;font-weight:700}.ansgrid .ab{width:20mm}
 .howto{border:0.5mm solid #000;border-radius:2mm;padding:2mm 3mm;font-size:11pt;line-height:1.25}.howto b{font-size:11.5pt}
 .howto .hw{display:flex;gap:3mm;align-items:center;margin-top:1.5mm}.howto p{margin:0.6mm 0}
 table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid.mini th{font-size:10pt;padding:0 1.5mm}table.lgrid.mini th.rh{width:auto}
 .twocol>ul.clues{flex:1;min-width:0}
-.ansline{font-size:15pt;margin:3mm 0;line-height:2.1;white-space:nowrap}
+.ansline{font-size:15pt;margin:1.5mm 0;line-height:2.1;white-space:nowrap}
 .seqs{display:flex;flex-direction:column;gap:5mm}
 .seq{display:flex;gap:2.5mm;align-items:center}
 .sq{width:21mm;height:13mm;border:0.5mm solid #000;display:inline-flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:19pt}
@@ -97,6 +98,12 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .ccell .ln{display:inline-block;width:17mm;border-bottom:0.5mm solid #000;height:7mm}
 .sumrows{display:grid;gap:5mm 6mm}.sumrows.two{grid-template-columns:1fr 1fr}
 .sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.3mm solid #000}
+.sumrows.tall .sumrow{height:31mm}
+.shrows{display:flex;flex-direction:column;gap:3mm}
+.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.shsvg{width:62mm;flex:none}.shtxt{flex:1;font-size:13pt;line-height:1.25}.shtxt p{margin:0.5mm 0}
+.maze.tall .mcell{height:38mm}
+.dicon{vertical-align:middle}
 .shblock{display:flex;gap:8mm;align-items:center;border:0.4mm solid #000;border-radius:2mm;padding:3mm 5mm}
 .eqs{flex:1;display:flex;flex-direction:column;gap:3mm}
 .eq{display:flex;align-items:center;gap:2mm;font-family:'Fredoka';font-weight:600;font-size:20pt;height:12mm}
@@ -122,7 +129,7 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .dotc{display:inline-block;width:10.5mm;height:10.5mm;border-radius:50%;background:#000}
 .dotc.inl{width:4.5mm;height:4.5mm;vertical-align:middle}
 .kids{display:flex;justify-content:space-between}.kid{display:flex;flex-direction:column;align-items:center;font-size:14pt}
-.qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:100mm;height:12.5mm}
+.qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:68mm;height:12.5mm}
 /* front matter and key */
 .fm{font-size:13pt;line-height:1.4}
 .fm h2{font-family:'Fredoka';font-weight:600;font-size:22pt;margin:0 0 4mm;border-bottom:0.8mm solid #000;padding-bottom:2mm}
@@ -156,6 +163,10 @@ svg.pic text{font-family:'Fredoka';font-weight:600;dominant-baseline:central;fil
 svg.pic text.a{font-weight:700}
 svg.pic .bx{fill:#fff;stroke:#000;stroke-width:0.45}
 svg.pic .ul{stroke:#000;stroke-width:0.4}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.05;font-size:11.5pt}.fr i{font-style:normal;display:block;padding:0 1mm}.fr i:first-child{border-bottom:0.35mm solid #000}
+svg.mk{vertical-align:-0.9mm;margin:0 0.6mm}
+svg.pic .fb{stroke:#000;stroke-width:0.45}
+.draft{border:0.8mm solid #000;border-radius:2mm;padding:2mm 4mm;font-weight:800;font-size:12pt;text-align:center;margin:0 0 4mm}
 .page.cbc header.ph{height:15mm}.page.cbc h1{font-size:22pt}
 .page.cbc .topic{padding:1.2mm 0 0;font-size:11pt}.page.cbc .instr{font-size:13pt;line-height:1.25;padding:0.5mm 0 1.5mm}
 .page.cbc .area{justify-content:flex-start;padding:0}
@@ -175,9 +186,10 @@ def tick_svg():
             '<polyline points="5,10.5 8.8,14.2 15,6" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 def footer(code, school):
-    lic = (f"Photocopy licence: <b>{html.escape(school)}</b> only." if school.strip()
-           else "Photocopy licence: <b>________________________</b> (school name) only.")
-    return (f'<footer class="pf"><span>&copy; 2026 Preciouslyours Pte Ltd. {lic} Not for resale.</span><span><b>{code}</b></span></footer>')
+    name = html.escape(school) if school.strip() else "________________________"
+    tail = "only. Not for resale." if school.strip() else "(school name) only. Not for resale."
+    return (f'<footer class="pf"><span class="fl"><span class="fx">&copy; 2026 Preciouslyours Pte Ltd. Photocopy licence:</span> <span class="sn">{name}</span> <span class="fx">{tail}</span></span>'
+            f'<span class="pc"><b>{code}</b></span></footer>')
 
 def pupil_page(p, school):
     code = f"P1-{p['no']:02d}"
@@ -187,7 +199,9 @@ def pupil_page(p, school):
         lb = '<div class="lb">' + '<span class="ab"></span>' * p["check_boxes"] + "</div>"
     cls = "page cbc" if p.get("cbc") else "page"
     chk_html = html.escape(p["check"])
-    if p.get("check_lines"):
+    if p.get("check_html_lines"):
+        chk_html = "<b>Check it.</b>" + "".join(f"<div>{c}</div>" for c in p["check_html_lines"])
+    elif p.get("check_lines"):
         chk_html = "<b>Check it.</b>" + "".join(f"<div>{html.escape(c.replace('..', '.'))}</div>" for c in p["check_lines"])
     else:
         chk_html = "<b>Check it.</b> " + chk_html
@@ -203,43 +217,60 @@ def doc(pages_html, title):
             f'<style>{CSS.replace("FONT", FONT)}</style></head><body>{pages_html}</body></html>')
 
 # ------------------------------------------------------------------ front matter
+DRAFT = True                      # front matter carries DRAFT stamps until the owner (and a lawyer) approve the wording: build.py --final turns them off
+CONTACT = "[contact email or phone: to be added by the owner]"
+
+def draft_banner(what):
+    if not DRAFT: return ""
+    return f'<div class="draft">DRAFT: {html.escape(what)} Contact: {html.escape(CONTACT)}</div>'
+
 def cover(school):
     s = html.escape(school) if school.strip() else "&nbsp;"
-    return ('<section class="page cover fm"><div><p class="sub" style="margin-top:14mm">Maths puzzles for early finishers</p>'
+    pub = ('<p style="margin-top:14mm;font-size:12pt">[Publisher line: wording to be confirmed by the owner]</p>' if DRAFT
+           else '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd</p>')
+    return ('<section class="page cover fm"><div>' + (draft_banner("cover wording, title and publisher line are not final.") if DRAFT else "") +
+            '<p class="sub" style="margin-top:12mm">Maths puzzles for early finishers</p>'
             '<div class="big" style="margin-top:6mm">Early Finisher Puzzles</div><div class="big" style="font-size:36pt;margin-top:3mm">Primary 1</div></div>'
             '<div class="box">20 single-page puzzles<br>Every puzzle checks itself<br>One star and two star pages<br>Teacher answer key included</div>'
             f'<div><p style="font-size:13pt;margin:0 0 2mm">This pack belongs to</p><span class="school">{s}</span>'
-            '<p style="margin-top:14mm;font-size:12pt">Preciouslyours Pte Ltd</p></div></section>')
+            + pub + '</div></section>')
 
 def licence(school):
     s = html.escape(school) if school.strip() else "____________________________"
-    return ('<section class="page fm"><h2>Photocopy licence</h2>'
-            f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
+    return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
+            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the contact below must be filled in, before any school receives this pack.")
+            + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
             '<li>Hand a single page to a pupil, or keep a tray of pages in the classroom.</li></ul>'
             '<h3>You may not</h3><ul><li>Sell, lend or give the pages or the file to another school, tuition centre or person.</li>'
             '<li>Post the file or pages on a public website or a shared platform outside the school.</li>'
             '<li>Edit the pages, or remove the licence line at the foot of each page.</li></ul>'
-            '<h3>Printed copies</h3><p>Bound or loose-leaf printed sets can be ordered in bulk. Ask the publisher for a quote.</p>'
+            '<h3>Printed copies</h3><p>Printed sets: details to follow. ' + (html.escape("Contact: " + CONTACT + ".") if DRAFT else "") + '</p>'
             '<h3>Notes</h3><p>The licence is for the edition bought. The school name shown on each page is set when the pack is made.</p>'
-            '<p style="margin-top:12mm">&copy; 2026 Preciouslyours Pte Ltd. All rights reserved.</p></section>')
+            '<p style="margin-top:12mm">&copy; 2026 Preciouslyours Pte Ltd.' + (" [entity name and year: owner to confirm]" if DRAFT else " All rights reserved.") + '</p></section>')
+
+def _plist(pages, pred):
+    return ", ".join("P1-%02d" % p["no"] for p in pages if pred(p))
 
 def teacher_notes(pages):
     n1 = sum(1 for p in pages if p["tier"] == 1); n2 = len(pages) - n1
-    return ('<section class="page fm"><h2>Teacher notes</h2>'
-            '<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
+    cbc = _plist(pages, lambda p: p.get("cbc"))
+    later = _plist(pages, lambda p: p.get("later"))
+    return ('<section class="page fm"><h2>Teacher notes' + (" (DRAFT)" if DRAFT else "") + '</h2>'
+            + draft_banner("teacher notes are for owner review.")
+            + '<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 1 pupils who finish their work early. Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
             f'<h3>Stars</h3><p>One star pages practise a topic as it is usually taught ({n1} pages). Two star pages use the same topics with two steps or two clues to combine ({n2} pages). Pages can be used in any order.</p>'
             '<h3>Every page checks itself</h3><p>The boxed strip at the foot of each page tells the pupil how to check. The check shows that something is wrong. It does not give the answer.</p>'
-            '<ul><li><b>Code word.</b> The answers give letters that spell a word.</li><li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'
-            '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes.</li><li><b>Logic grid.</b> Each number or price has a letter; the letters, read down the list, must spell a word.</li><li><b>Total.</b> The whole count must make the stated total.</li></ul>'
+            '<ul><li><b>Code word.</b> The answers give letters that spell a word. The strip does not say what the word is; there is no clue to guess it from.</li><li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'
+            '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes.</li><li><b>Logic grid.</b> Each number or price has a letter; the letters, read down the list, must spell a word.</li><li><b>Total.</b> The whole count must make the stated total (P1-20 adds a second sum for the two questions).</li></ul>'
             '<p>Marking is not needed. To spot-check, look only at the check strip.</p>'
-            '<h3>How the checks were tested</h3><p>For every page, a script tried each single wrong answer (one answer changed by 1, 2, 3, 4, 5 or 10, or any other value in the page\'s range) and every wrong arrangement of the logic pages. The check rejected at least 95% of them on every page.</p>'
+            '<h3>How the checks were tested</h3><p>For every page, a script tried each single wrong answer (one answer changed by 1, 2, 3, 4, 5 or 10, or any other value in the page\'s range) and every wrong arrangement of the logic pages. The check rejected at least 95% of them on every page. A wrong answer that happens to spell any English word from a list of about 129 000 words counts as not rejected.</p>'
             '</section>'
-            '<section class="page fm"><h2>Teacher notes: using the pages</h2>'
-            '<h3>Using the pages</h3><ul><li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (P1-01, P1-12, P1-14) take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). The outline is printed black and white; the colour words in the key are what the pupil follows.</li>'
+            '<section class="page fm"><h2>Teacher notes: using the pages' + (" (DRAFT)" if DRAFT else "") + '</h2>'
+            '<h3>Using the pages</h3><ul><li><b>Time.</b> Most pages take 5 to 15 minutes; the colour-by-code pages (' + cbc + ') take longer because pupils colour a picture. Pupils need their own crayons (five colours: yellow, red, blue, green, orange). The outline is printed black and white; the colour words in the key are what the pupil follows.</li>'
             '<li><b>If the check fails.</b> The pupil goes back, looks for the slip, and asks a friend or you if still stuck.</li>'
-            '<li><b>When to use.</b> Money, time, length, shapes and picture graphs are usually taught later in the year. Check your scheme of work before giving out P1-06 and P1-15 to P1-20.</li>'
+            '<li><b>When to use.</b> Some topics are usually taught later in the year: ' + later + '. P1-06 uses o\'clock and half past; P1-18 reads times to 5 minutes and is usually used late in the year. Check your scheme of work before giving out these pages.</li>'
             '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li></ul>'
             '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only; the back of a copy stays blank. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size); on P1-17 a real ruler matches the drawn ruler only at 100%.</p>'
             '<h3>What is in this pack</h3><table class="tbl"><tr><th>Part</th><th>Pages</th><th>Photocopy for pupils?</th></tr>'
@@ -267,10 +298,10 @@ def key_entry(p):
 def key_pages(pages, school, packing=None):
     out = ['<section class="page fm"><h2>Teacher answer key: Primary 1</h2>'
            '<p>This key lists the answers and the result of the check on every page. You do not need it for routine marking: a pupil who has a working check has the right answers. To spot-check, compare the check strip with the line "Check result" below.</p>'
-           '<h3>How the topic tags work</h3><p>Each entry names the Primary 1 topic the puzzle practises, with a reference to the Primary 1 topics in the Mathematics Syllabus, Primary (2021 edition, pages 31 and 32). The references are for your planning only and are not printed on the pupil pages.</p>'
+           '<h3>How the topic tags work</h3><p>Each entry names the Primary 1 topic the puzzle practises, with a reference to the Primary 1 topics in the Mathematics Syllabus, Primary (2021 edition, pages 31 and 32). Where the syllabus lists several outcomes under one topic, the range of outcome numbers is given. The references are for your planning only and are not printed on the pupil pages.</p>'
            '<h3>Topic coverage</h3><table class="tbl"><tr><th>Strand</th><th>Pages</th></tr>'
            + "".join(f'<tr><td>{html.escape(k)}</td><td>{", ".join("P1-%02d" % x for x in v)}</td></tr>' for k, v in strand_map(pages).items())
-           + '</table><p style="font-size:10pt;margin-top:4mm">Syllabus items not covered by a puzzle: reading and writing numbers in words, number-sentence signs in isolation, measuring and drawing a line to the nearest cm, am and pm, copying figures on a grid, forming figures from shapes.</p></section>']
+           + '</table><p style="font-size:10pt;margin-top:4mm">Syllabus items not covered by a puzzle: reading and writing numbers in words, number-sentence signs in isolation, measuring and drawing a line to the nearest cm, am and pm, copying figures on a grid, forming figures from shapes, ordinals beyond 5th, naming a shape from a description.</p></section>']
     groups = packing or [pages[i:i + 3] for i in range(0, len(pages), 3)]
     for g in groups:
         out.append('<section class="page fm" >' + "".join(key_entry(p) for p in g) + footer("KEY", school).replace("Photocopy licence", "Teacher key. Photocopy licence") + "</section>")

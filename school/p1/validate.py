@@ -69,6 +69,12 @@ for p in pages:
         rec(f'P1-{p["no"]:02d} enumeration: wrong arrangements rejected {a3}/{b3} = {a3 / b3:.1%} (needs >= 95%)', a3 / b3 >= THRESH - 1e-9)
     verification.append((p["no"], r))
 rec("3 colour-by-code pages (P1-01, P1-12, P1-14), 3 or 4 wanted of 20", [p["no"] for p in pages if p.get("cbc")] == [1, 12, 14])
+# coverage within the 20-page budget (audit 2, F-new 12 and F-new 7)
+def has(no, word): return any(p["no"] == no and word in (p["topic"] + " " + p["syll"]).lower() for p in pages)
+rec("coverage: add and subtract within 100 (P1-11), sharing and grouping (P1-03), two multiplication pages (P1-05, P1-13), a one-star o'clock and half past time page (P1-06) and the five-minute page (P1-18)",
+    has(11, "within 100") and has(3, "sharing") and has(5, "multiplication") and has(13, "multiplication") and has(6, "o'clock") and has(18, "5 minutes") and next(p for p in pages if p["no"] == 6)["tier"] == 1)
+rec("strand balance: whole numbers at most 6 pages, add/subtract 4, multiplication and sharing 3, money 2, time 2, shapes 2, length 1, graph 1",
+    {k: len(v) for k, v in __import__("render").strand_map(pages).items()}.get("Number and Algebra - Whole Numbers", 0) <= 6, str({k: len(v) for k, v in __import__("render").strand_map(pages).items()}))
 rec("20 pages, ids 1..20", [p["no"] for p in pages] == list(range(1, 21)))
 rec("tier mix 10 one-star / 10 two-star", sum(p["tier"] == 1 for p in pages) == 10 and sum(p["tier"] == 2 for p in pages) == 10)
 rec("every page has a self-check strip text", all(p["check"] for p in pages))
@@ -82,14 +88,18 @@ for p in pages:
     for cl in (p.get("check_lines") or [p["check"]]):
         if max_words(cl) > 16 and not p.get("cbc"): bad.append((p["no"], cl))
         if max_words(cl) > 20: bad.append((p["no"], cl))
-    if len(p["instr"]) > 4: bad.append((p["no"], "more than 4 instruction lines"))
+    if len(p["instr"]) > 4 or (len(p["instr"]) > 3 and p["no"] != 20): bad.append((p["no"], "more than 3 instruction lines (plan: 3 lines max; P1-20 has 4)"))
     for sent in re.findall(r"<li>(.*?)</li>", p["body"]) + re.findall(r'class="rtext">(.*?)</div>', p["body"]):
         sent = re.sub(r"<[^>]+>", " ", sent)
         for one in re.split(r"(?<=\.)\s+", sent.strip()):
             if len(one.split()) > 8: bad.append((p["no"], one))
 rec("V8 reading level: instruction and clue sentences <= 8 words, <= 4 lines", not bad, str(bad[:4]))
-chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > 18 and not p.get("cbc")]
-rec("check strip text <= 18 words", not chk, str(chk))
+chk = [(p["no"], len(p["check"].split())) for p in pages if len(p["check"].split()) > (34 if p["no"] == 20 else 18) and not p.get("cbc")]
+rec("check strip text <= 18 words (P1-20 has two checks: 30)", not chk, str(chk))
+# F-new 1: the check strip must not name or describe the code word (hints confirm, they do not reveal)
+hint = [(p["no"], p["check"]) for p in pages if re.search(r"\bIs it\b|\bDoes it\b|\bYou (live|can|carry)|garden|music|river|\bsky\b|\bspace\b|\bking\b|\ban animal|\bseason|used for writing|shopping|count the time", p["check"]) and not p.get("cbc")]
+rec("check strips carry no category hint (Is it ...?): the strip never says what the word is", not hint, str(hint[:3]))
+rec("every code-word strip is exactly the plain question 'Do they spell a word?'", all("Do they spell a word?" in p["check"] for p in pages if p.get("check_boxes")))
 
 # ---- 2b. notes and tags
 def plain(h): return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h))
@@ -101,6 +111,17 @@ for p in pages:
     miss = sorted({n for n in re.findall(r"\d+", note) if int(n) >= 11 and n not in have})
     if miss: bad.append((p["no"], miss))
 rec("every number of 11 or more quoted in a teacher note is found on the page or in its answers", not bad, str(bad))
+PHRASES = ["more than", "fewer than", "less than", "greatest", "smallest", "second greatest", "ordinal", "in front of", "behind", "next to", "ones digit", "tens digit", "cross the hour", "half-hour"]
+bad = []
+for p in pages:
+    page_text = (plain(p["body"]) + " " + " ".join(p["instr"]) + " " + p["topic"] + " " + p["check"]).lower()
+    note = p["note"].lower()
+    if p["no"] == 18: note = re.sub(r"none of the half-hour additions cross the hour\.", "", note)
+    for ph in PHRASES:
+        if ph in note and ph not in page_text and not (ph == "greatest" and "second greatest" in note and "second greatest" in page_text) and not (ph == "ordinal" and "1st" in page_text + " 2nd"):
+            bad.append((p["no"], ph))
+rec("every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page", not bad, str(bad))
+rec("the P1-18 note does not claim half-hour additions cross the hour unless one does", ("none of the half-hour additions" in next(p for p in pages if p["no"] == 18)["note"].lower()) or ("of the half-hour additions cross the hour" in next(p for p in pages if p["no"] == 18)["note"].lower()))
 RANGES = {"Whole Numbers": (1, 7, 1), "Addition and Subtraction": (2, 7, 2), "Multiplication and Division": (3, 4, 3)}
 bad = []
 for p in pages:

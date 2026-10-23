@@ -43,7 +43,7 @@ def page08():
              mech_plain="Route: the line must reach FINISH through the right number of boxes, every box making 12",
              body=body, check=f"Does your line reach FINISH? Count its boxes: are there {len(path)}? Does every box make 12?", check_boxes=None,
              key=dict(answers="Route (row, column from top-left): " + " -> ".join(f"({r+1},{c+1}) {grid[r][c][0]}+{grid[r][c][1]}" for r, c in path), check_result=f"Route reaches FINISH through {len(path)} boxes; every box on it adds to 12."),
-             note=f"A 4 by 4 grid: 16 sums, all within 20. Boxes off the route make {', '.join(str(x) for x in decoy_sums)} and a slip in adding sends the pupil there. {dead} extra boxes that do make 12 are dead ends. Counting the boxes shows a line that takes a shortcut.",
+             note=f"A 4 by 4 grid: sixteen sums, all within 20. Boxes off the route make {', '.join(str(x) for x in decoy_sums)} and a slip in adding sends the pupil there. {dead} extra boxes that do make 12 are dead ends. Counting the boxes shows a line that takes a shortcut.",
              seed=808)
     cnt = count_routes(lambda c: sum(grid[c[0]][c[1]]) == T, n, start, finish)
     P.v("V1 exactly one route start->finish (exhaustive DFS)", cnt == 1, cnt)
@@ -135,7 +135,7 @@ def page09():
 # ---------------------------------------------------------------- P10
 def page10():
     rng = random.Random(1010)
-    word = "CASTLE"
+    word = "STREAM"
     while True:
         while True:
             items = []
@@ -143,7 +143,7 @@ def page10():
                 big = rng.randint(8, 20); b = rng.randint(2, big - 2)
                 items.append((big, b, big - b, k >= 4))   # last two: number taken away is missing
             answers = [a if not m else b for big, b, a, m in items]
-            if len(set(answers)) == 6 and min(answers) >= 2 and len(set((i[0], i[1]) for i in items)) == 6:
+            if len(set(answers)) == 6 and min(answers) >= 2 and len(set((i[0], i[1]) for i in items)) == 6 and len({i[0] for i in items}) >= 5:
                 break
         table = make_code_table(answers, word, rng, 0, 19, n_decoy=5, tries=60)
         if table: break
@@ -168,9 +168,7 @@ def page10():
     P.v("V1 each blank has exactly one value in 0..20", True, sol)
     P.v("V1b solver answers equal key", sol == answers, sol)
     cv = code_verify(answers, table, word, 0, 19)
-    P.v("V2 code word spells " + word, cv["spelled_ok"])
-    P.v("V3 single-slip detection 100% against the large word list", not cv["undetected"], f'{cv["rate"]:.3f}')
-    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
+    code_checks(P, cv, word)
     P.v("V7 all numbers within 20", all(big <= 20 for big, *_ in items))
     P["cv"] = cv
     P["model"] = code_model(answers, table, 0, 19)
@@ -213,7 +211,7 @@ def solve_w100(text):
 
 def page11():
     rng = random.Random(1131)
-    word = "ORANGE"
+    word = "FAMILY"
     kinds = ["add1", "addT", "sub1", "subT", "miss+", "miss-"]
     while True:
         rng.shuffle(kinds)
@@ -236,9 +234,7 @@ def page11():
     P.v("V1 solver reads the printed items back and equals the key", sol == answers, sol)
     P.v("V1b answers are distinct and within 10..99", len(set(answers)) == 6 and 10 <= min(answers) and max(answers) <= 99)
     cv = code_verify(answers, table, word, 1, 100)
-    P.v("V2 code word spells " + word, cv["spelled_ok"])
-    P.v("V3 single-slip detection 100% against the large word list", not cv["undetected"], f'{cv["rate"]:.3f}')
-    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
+    code_checks(P, cv, word)
     P["cv"] = cv
     P["model"] = code_model(answers, table, 1, 100)
     P["mech_plain"] = "Code word (6 letters) and putting the number back"
@@ -260,7 +256,7 @@ def groups_svg(g, m):
 
 def page13():
     rng = random.Random(1313)
-    word = "PLANET"
+    word = "NUMBER"
     while True:
         items = [(rng.randint(2, 5), rng.randint(2, 8)) for _ in range(6)]
         tot = [g * m for g, m in items]
@@ -287,9 +283,7 @@ def page13():
         ok &= bags == g and dots == g * m
     P.v("V1 counted bags x dots equals the key (from drawn SVG)", ok)
     cv = code_verify(tot, table, word, 1, 40)
-    P.v("V2 code word spells PLANET", cv["spelled_ok"])
-    P.v("V3 single-slip detection 100% against the large word list", not cv["undetected"], f'{cv["rate"]:.3f}')
-    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
+    code_checks(P, cv, word)
     P.v("V7 totals within 40", max(tot) <= 40)
     P["cv"] = cv
     P["model"] = code_model(tot, table, 1, 40)
@@ -308,7 +302,7 @@ def dots_svg(n, per_row=10):
 
 def page03():
     rng = random.Random(303)
-    word = "GARDEN"
+    word = "FRIEND"
     while True:
         items = []
         for k in range(6):
@@ -350,9 +344,7 @@ def page03():
              seed=303)
     P.v("V1 dots counted in the drawing divide exactly and the quotient equals the key", solved == ans, solved)
     cv = code_verify(ans, table, word, 1, 20)
-    P.v("V2 code word spells " + word, cv["spelled_ok"])
-    P.v("V3 single-slip detection 100% against the large word list", not cv["undetected"], f'{cv["rate"]:.3f}')
-    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
+    code_checks(P, cv, word)
     P.v("V7 every number of dots is within 20", all(n <= 20 for _, n, _, _ in items))
     P["cv"] = cv
     P["model"] = code_model(ans, table, 1, 20)
@@ -374,7 +366,7 @@ def solve_times(text):
 
 def page05():
     rng = random.Random(505)
-    word = "MARKET"
+    word = "SQUARE"
     kinds = ["x", "x", "groups", "groups", "missA", "missB"]
     while True:
         rng.shuffle(kinds)
@@ -399,15 +391,13 @@ def page05():
              instr=["3 \u00d7 4 means 3 groups of 4.", "Find the missing numbers.", "Use the code table."],
              body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {a}" for i, a in enumerate(ans)), check_result=f"Code word: {word}"),
-             note="Second multiplication page (P1-13 is the picture page). Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4, 5 and 10 and every product is within 40.",
+             note="Second multiplication page (the equal groups page uses pictures). Two items give the product with the sign, two use the words groups of, and two have a missing number in a multiplication sentence, which is the two-star step: the pupil must undo the sum. Factors are 2, 3, 4, 5 and 10 and every product is within 40.",
              seed=505)
     sol = [solve_times(t) for t, _ in items]
     P.v("V1 solver reads the printed items back and equals the key", sol == ans, sol)
     P.v("V1b answers distinct, every product within 40", len(set(ans)) == 6 and max(ans) <= 40)
     cv = code_verify(ans, table, word, 1, 40)
-    P.v("V2 code word spells " + word, cv["spelled_ok"])
-    P.v("V3 single-slip detection 100% against the large word list", not cv["undetected"], f'{cv["rate"]:.3f}')
-    P.v("V4 guess resistance: at least 3 common words fit the table letters", cv["n_candidates"] >= 3, cv["candidates"][:6])
+    code_checks(P, cv, word)
     P["cv"] = cv
     P["model"] = code_model(ans, table, 1, 40)
     P["mech_plain"] = "Code word (6 letters) and putting the number back"

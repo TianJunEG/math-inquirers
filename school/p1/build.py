@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """Build the Primary 1 early-finisher pack.
   python3 build.py [--school "Name of School"] [--outdir out] [--seed-check]
-Outputs (in out/): P1_Puzzles.pdf (20 pupil pages), P1_FrontMatter.pdf (4), P1_Complete_Pack.pdf (24),
+Outputs (in out/): P1_Puzzles.pdf (20 pupil pages), P1_FrontMatter.pdf (5), P1_Complete_Pack.pdf (25),
 P1_Answer_Key.pdf, verification.json."""
 import argparse, json, os, sys, re, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 from gen import pages_numbers, pages_arith, pages_measure, pages_cbc
 import render
 
+LATER = {3, 5, 6, 12, 13, 15, 16, 17, 18, 19, 20}      # topics usually taught after number work (named in the teacher notes)
+
 def all_pages():
     ps = []
     for m in (pages_numbers, pages_arith, pages_measure, pages_cbc):
         ps += [f() for f in m.PAGES]
     ps.sort(key=lambda p: p["no"])
+    for p in ps: p["later"] = p["no"] in LATER
     return ps
 
 def pack_key(pages, school, outdir, capacity_mm=257):
@@ -46,7 +49,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--school", default="", help="school name printed in every page footer")
     ap.add_argument("--outdir", default=os.path.join(HERE, "out"))
+    ap.add_argument("--final", action="store_true", help="leave out the DRAFT stamps on the cover, licence and teacher notes (only after the owner and a lawyer approve the wording)")
     a = ap.parse_args()
+    render.DRAFT = not a.final
     os.makedirs(a.outdir, exist_ok=True)
     pages = all_pages()
     assert [p["no"] for p in pages] == list(range(1, 21))

@@ -16,6 +16,11 @@
     "detail": "[]"
    },
    {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 15 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
     "name": "V1b every answer is one of the five key values",
     "ok": true,
     "detail": ""
@@ -23,7 +28,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 2, 'red': 2, 'blue': 3, 'green': 4, 'orange': 4}"
+    "detail": "{'yellow': 3, 'red': 4, 'blue': 2, 'green': 4, 'orange': 2}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -41,9 +46,24 @@
     "detail": "15"
    },
    {
-    "name": "V3 wrong answers rejected by the page's checks (>=95%)",
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
     "detail": "150/150"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1678/1680"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "86/88"
    }
   ],
   "generator_slip_test": [
@@ -79,9 +99,19 @@
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "495/495"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['cloud', 'could', 'would']"
    }
   ],
   "generator_slip_test": [
@@ -92,40 +122,50 @@
  },
  {
   "no": 3,
-  "title": "Number Cards",
+  "title": "Fair Shares",
   "tier": 1,
-  "topic": "Ordering numbers to 100 (smallest to greatest)",
-  "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.4, 1.5 (compare and order numbers)",
-  "ptype": "Ordering cards",
-  "mech": "K1 letters read in order spell a word (6 letters)",
+  "topic": "Sharing equally and making equal groups (within 20)",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.4 (dividing within 20: sharing and grouping, no division sign)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
   "seed": 303,
   "checks": [
    {
-    "name": "V1 sorting gives the intended word",
+    "name": "V1 dots counted in the drawing divide exactly and the quotient equals the key",
     "ok": true,
-    "detail": "BRIDGE"
+    "detail": "[6, 3, 8, 5, 4, 2]"
    },
    {
-    "name": "V1b numbers all different",
+    "name": "V2 code word spells FRIEND",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 every neighbour swap breaks the word",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "[True, True, True, True, True]"
+    "detail": "114/114"
    },
    {
-    "name": "V5 word on safe list",
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['finder', 'friend', 'rewind', 'winder']"
+   },
+   {
+    "name": "V7 every number of dots is within 20",
     "ok": true,
     "detail": ""
    }
   ],
   "generator_slip_test": [
    1.0,
-   5,
-   5
+   114,
+   114
   ]
  },
  {
@@ -150,108 +190,133 @@
     "detail": ""
    },
    {
-    "name": "V2 letters beside the numbers, read in name order, spell HOUSE",
+    "name": "V2 letters beside the numbers, read in name order, spell BELOW",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 wrong placements that still spell a word <= 5%",
+    "name": "V3 wrong placements that still spell a word <= 5% (large word list)",
     "ok": true,
-    "detail": "0/119"
+    "detail": "2/119"
+   },
+   {
+    "name": "V4 guess resistance: the five letters can be arranged into at least 2 common words",
+    "ok": true,
+    "detail": "2 other words"
    }
   ],
   "generator_slip_test": [
-   1.0,
-   119,
+   0.9832,
+   117,
    119
   ]
  },
  {
   "no": 5,
-  "title": "Missing Numbers",
-  "tier": 1,
-  "topic": "Number patterns: count on and count back",
-  "strand": "Number and Algebra - Whole Numbers",
-  "syll": "1.6 (number patterns)",
-  "ptype": "Pattern chain + code",
-  "mech": "K1 code word (6 letters)",
+  "title": "Times Code",
+  "tier": 2,
+  "topic": "Multiplication within 40: groups of, and the missing number",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
   "seed": 505,
   "checks": [
    {
-    "name": "V1 each row has exactly 1 completion (arithmetic rule, 0..100)",
+    "name": "V1 solver reads the printed items back and equals the key",
+    "ok": true,
+    "detail": "[20, 4, 5, 30, 6, 10]"
+   },
+   {
+    "name": "V1b answers distinct, every product within 40",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V1b answers match solver",
+    "name": "V2 code word spells SQUARE",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V2 code word spells FLOWER",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": ""
+    "detail": "234/234"
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3c no swap of two answers spells a word",
     "ok": true,
-    "detail": "1.000"
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['jasper', 'nursed', 'pander', 'panzer', 'sander', 'spread']"
    }
   ],
   "generator_slip_test": [
    1.0,
-   600,
-   600
+   234,
+   234
   ]
  },
  {
   "no": 6,
-  "title": "Shape Riddles",
-  "tier": 2,
-  "topic": "2D shapes: name and describe (straight and curved sides)",
-  "strand": "Measurement and Geometry - Geometry",
-  "syll": "Geometry 1.1 (identify, name, describe and classify 2D shapes)",
-  "ptype": "Riddles + code-breaker",
-  "mech": "K1 shape letters in riddle order spell a word (6 letters)",
+  "title": "What Time Is It?",
+  "tier": 1,
+  "topic": "Time: o'clock and half past",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1 (tell time: o'clock and half past)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
   "seed": 606,
   "checks": [
    {
-    "name": "V1 every riddle names exactly one shape",
+    "name": "V1 clock hands read back from the drawing equal the intended times",
+    "ok": true,
+    "detail": "[(8, 0), (4, 0), (9, 0), (1, 30), (11, 30), (2, 30)]"
+   },
+   {
+    "name": "V1b only o'clock and half past, no hands closer than 25 degrees",
+    "ok": true,
+    "detail": "90"
+   },
+   {
+    "name": "V2 code word spells SECOND",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V1b the first part of every riddle alone fits more than one shape",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": ""
+    "detail": "138/138"
    },
    {
-    "name": "V2 letters in riddle order spell JACKET",
+    "name": "V3c no swap of two answers spells a word",
     "ok": true,
-    "detail": ""
+    "detail": "[]"
    },
    {
-    "name": "V3 wrong orders that still spell a word <= 5%",
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "0/719"
+    "detail": "['censor', 'scored', 'second']"
    },
    {
-    "name": "V5 word on safe list",
+    "name": "V1c the table spells the word from the times read off the drawing",
     "ok": true,
     "detail": ""
    }
   ],
   "generator_slip_test": [
    1.0,
-   719,
-   719
+   138,
+   138
   ]
  },
  {
   "no": 7,
   "title": "The Queue",
   "tier": 2,
-  "topic": "Ordinal numbers: 1st to 5th, before and behind",
+  "topic": "Ordinal numbers: 1st to 5th, in front of and behind",
   "strand": "Number and Algebra - Whole Numbers",
   "syll": "1.7 (ordinal numbers first to tenth)",
   "ptype": "Logic (queue)",
@@ -264,19 +329,24 @@
     "detail": "1"
    },
    {
-    "name": "V2 shirt letters in queue order spell TIGER",
+    "name": "V2 shirt letters in queue order spell SNAKE",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 other queue orders do not spell a real word (>=98%)",
+    "name": "V3 other queue orders that spell a word <= 5% (large word list)",
     "ok": true,
-    "detail": "119/119"
+    "detail": "117/119"
+   },
+   {
+    "name": "V4 guess resistance: the five letters can be arranged into at least 2 common words",
+    "ok": true,
+    "detail": ""
    }
   ],
   "generator_slip_test": [
-   1.0,
-   119,
+   0.9832,
+   117,
    119
   ]
  },
@@ -299,7 +369,12 @@
    {
     "name": "V3 dead-end boxes that also make 12 exist",
     "ok": true,
-    "detail": "3"
+    "detail": "2"
+   },
+   {
+    "name": "V3b a shortcut that ignores the rule is shorter than the route, so the box count rejects it",
+    "ok": true,
+    "detail": ""
    },
    {
     "name": "V7 all sums within 20",
@@ -309,8 +384,8 @@
   ],
   "generator_slip_test": [
    1.0,
-   3,
-   3
+   2,
+   2
   ]
  },
  {
@@ -355,22 +430,32 @@
    {
     "name": "V1 each blank has exactly one value in 0..20",
     "ok": true,
-    "detail": "[8, 5, 11, 6, 4, 3]"
+    "detail": "[9, 7, 4, 8, 5, 16]"
    },
    {
     "name": "V1b solver answers equal key",
     "ok": true,
-    "detail": "[8, 5, 11, 6, 4, 3]"
+    "detail": "[9, 7, 4, 8, 5, 16]"
    },
    {
-    "name": "V2 code word spells CASTLE",
+    "name": "V2 code word spells STREAM",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "114/114"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['abuser', 'baxter', 'breast', 'buster', 'master', 'mature']"
    },
    {
     "name": "V7 all numbers within 20",
@@ -386,47 +471,57 @@
  },
  {
   "no": 11,
-  "title": "Shape Sums",
+  "title": "Big Number Sums",
   "tier": 2,
-  "topic": "Add and subtract within 20: find the missing number",
+  "topic": "Add and subtract within 100",
   "strand": "Number and Algebra - Addition and Subtraction",
-  "syll": "2.1 to 2.7 (add, subtract, inverse relationship)",
-  "ptype": "Balance / picture equations",
-  "mech": "K7 put the numbers back + K1 code word (6 letters)",
-  "seed": 1111,
+  "syll": "2.1 to 2.7 (add and subtract within 100: 2-digit and ones, 2-digit and tens, missing number)",
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 1131,
   "checks": [
    {
-    "name": "V1 each set has exactly one solution (all 729 triples tested)",
+    "name": "V1 solver reads the printed items back and equals the key",
+    "ok": true,
+    "detail": "[21, 81, 94, 34, 27, 23]"
+   },
+   {
+    "name": "V1b answers are distinct and within 10..99",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V2 code word spells SPRING",
+    "name": "V2 code word spells FAMILY",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "594/594"
    },
    {
-    "name": "V7 all sums within 20",
+    "name": "V3c no swap of two answers spells a word",
     "ok": true,
-    "detail": ""
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['family', 'infamy', 'mainly']"
    }
   ],
   "generator_slip_test": [
    1.0,
-   48,
-   48
+   594,
+   594
   ]
  },
  {
   "no": 12,
   "title": "Colour the House",
   "tier": 1,
-  "topic": "Shapes: corners and straight sides",
+  "topic": "Shapes: corners",
   "strand": "Measurement and Geometry - Geometry",
   "syll": "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
   "ptype": "Colour by code (pupils colour with their own crayons)",
@@ -439,6 +534,11 @@
     "detail": "[]"
    },
    {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 17 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
     "name": "V1b every answer is one of the five key values",
     "ok": true,
     "detail": ""
@@ -446,7 +546,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 3, 'red': 4, 'blue': 4, 'green': 3, 'orange': 3}"
+    "detail": "{'yellow': 4, 'red': 2, 'blue': 4, 'green': 3, 'orange': 4}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -464,9 +564,24 @@
     "detail": "17"
    },
    {
-    "name": "V3 wrong answers rejected by the page's checks (>=95%)",
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[('grass_1', 'grass_3')]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
     "detail": "204/204"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "2174/2176"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "112/114"
    }
   ],
   "generator_slip_test": [
@@ -492,14 +607,24 @@
     "detail": ""
    },
    {
-    "name": "V2 code word spells PLANET",
+    "name": "V2 code word spells NUMBER",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "234/234"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['bumper', 'jumper', 'number']"
    },
    {
     "name": "V7 totals within 40",
@@ -530,6 +655,11 @@
     "detail": "[]"
    },
    {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 12 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
     "name": "V1b every answer is one of the five key values",
     "ok": true,
     "detail": ""
@@ -537,7 +667,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 2, 'red': 2, 'blue': 4, 'green': 2, 'orange': 2}"
+    "detail": "{'yellow': 2, 'red': 2, 'blue': 3, 'green': 3, 'orange': 2}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -555,9 +685,24 @@
     "detail": "12"
    },
    {
-    "name": "V3 wrong answers rejected by the page's checks (>=95%)",
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
     "detail": "1200/1200"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1055/1056"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "56/57"
    }
   ],
   "generator_slip_test": [
@@ -588,9 +733,19 @@
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "475/475"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['cowan', 'panic', 'piano']"
    },
    {
     "name": "V7 totals below $1",
@@ -626,14 +781,24 @@
     "detail": ""
    },
    {
-    "name": "V2 letters beside the prices (item order) plus total letter spell BASKET",
+    "name": "V2 letters beside the prices (item order) plus total letter spell MONDAY",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 wrong placements that still spell a word <= 5%",
+    "name": "V3 wrong placements that still spell a word <= 5% (large word list)",
     "ok": true,
     "detail": "0/119"
+   },
+   {
+    "name": "V3b a wrong total never spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: the price letters and one table letter can be arranged into at least 2 common words",
+    "ok": true,
+    "detail": "['dynamo', 'monday']"
    },
    {
     "name": "V7 prices within $100, total within $40",
@@ -664,14 +829,24 @@
     "detail": "[4, 5, 10, 2, 8, 6]"
    },
    {
-    "name": "V2 code word spells PENCIL",
+    "name": "V2 code word spells LENGTH",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "66/66"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['gluten', 'length', 'nutmeg']"
    }
   ],
   "generator_slip_test": [
@@ -684,9 +859,9 @@
   "no": 18,
   "title": "Clock Time",
   "tier": 2,
-  "topic": "Time: tell time to 5 minutes; 1 hour and half an hour later",
+  "topic": "Time to 5 minutes: 1 hour and half an hour later",
   "strand": "Measurement and Geometry - Measurement",
-  "syll": "Time 2.1 to 2.4 (tell time to 5 minutes, durations of 1 hour or half an hour)",
+  "syll": "Time 2.1 and 2.4 (tell time to 5 minutes; durations of 1 hour or half an hour)",
   "ptype": "Code-breaker",
   "mech": "K1 code word (5 letters)",
   "seed": 1818,
@@ -702,14 +877,34 @@
     "detail": "['9:10', '1:55', '2:30', '11:55', '12:00']"
    },
    {
-    "name": "V2 code word spells TIMER",
+    "name": "V2 code word spells OCEAN",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
     "detail": "715/715"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['canoe', 'coney', 'covey', 'envoy', 'ocean', 'vance']"
+   },
+   {
+    "name": "V1c the table spells the word from the later times",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1d at least three of the five clocks show a time that is not o'clock or half past (what the page is for)",
+    "ok": true,
+    "detail": ""
    }
   ],
   "generator_slip_test": [
@@ -732,7 +927,7 @@
    {
     "name": "V1 shapes counted in the drawn picture equal the key",
     "ok": true,
-    "detail": "[5, 4, 2, 1, 3]"
+    "detail": "[1, 2, 5, 3, 4]"
    },
    {
     "name": "V1b counts are all different and total 15",
@@ -740,14 +935,29 @@
     "detail": ""
    },
    {
-    "name": "V2 code word spells SHAPE",
+    "name": "V2 code word spells ADULT",
     "ok": true,
     "detail": ""
    },
    {
-    "name": "V3 single-slip detection >=98%",
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
     "ok": true,
-    "detail": "1.000"
+    "detail": "40/40"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['adult', 'tubal', 'vault']"
+   },
+   {
+    "name": "V3d the total 15 alone does not accept a swap of two counts, and the letters then spell no word",
+    "ok": true,
+    "detail": ""
    }
   ],
   "generator_slip_test": [
@@ -764,7 +974,7 @@
   "strand": "Statistics - Data Analysis",
   "syll": "Picture graphs (read and interpret picture graphs)",
   "ptype": "Graph detective",
-  "mech": "K3 total circles equals the stated total (the total is not a clue)",
+  "mech": "K3 the total of all circles, and a second sum that uses the answers to a) and b) (neither is a clue)",
   "seed": 2020,
   "checks": [
    {
@@ -788,6 +998,16 @@
     "detail": ""
    },
    {
+    "name": "V2c the second sum is right for the right answers",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2d question b) does not name the fruit that answers a)",
+    "ok": true,
+    "detail": ""
+   },
+   {
     "name": "V7 every row fits in 9 boxes",
     "ok": true,
     "detail": ""
@@ -796,6 +1016,11 @@
     "name": "V3 one wrong row breaks the total",
     "ok": true,
     "detail": "12/12"
+   },
+   {
+    "name": "V3e reading more as fewer (or fewer as more) on any set of clues never passes the total",
+    "ok": true,
+    "detail": "[True, True, True, True, True, True, True]"
    }
   ],
   "generator_slip_test": [
