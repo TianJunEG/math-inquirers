@@ -131,3 +131,13 @@ validate.py: 783 checks, 0 failed. Page counts unchanged (20 / 5 / 25; keys 10 a
 | Owner: registered office | `render.py` REG_OFFICE = 66 Tannery Ln, Singapore 347805 on the licence page; the DRAFT banner now lists only the licence term and the cover publisher line as still open. validate.py asserts the address. |
 
 Still open (owner): publisher line on the cover, licence wording and term (lawyer), pupil trial, coin-art comparison, the star level of P1-39, and the CBC gallery diagram fixes.
+
+## Round 3 (after `docs/audit_final/p1_semester_booklets_audit_round3.md`, no High)
+
+validate.py: 783 checks, 0 failed; page counts unchanged. Changed pages viewed in colour and as 1-bit copies and re-solved by hand (P1-03, 05, 13, 21, 25, 39).
+
+- **S2-01 nine-box code table:** digits and letters made smaller and the boxes respaced; all nine boxes now clear (viewed on P1-03, 13, 21, 25, 39, 05).
+- **Grouping rings (P1-03):** the dashed ring now ends 0.6 mm before the next picture.
+- **Blank box:** the teacher notes now say that a box left blank gives no letter and the check cannot see it (MONEY from MONKEY on S1-10 and CLOT from CLOTH on S1-01 are only reachable that way); the P1-21 note no longer claims the wrong operation never spells the word without that condition. The pages themselves were not changed.
+- **Object margin:** counted pictures sized about 4% larger (apple 11.5, flower 10.9, star 9.6, ball 9.4, cat 10.2, drum 10.6, boat 10.9 mm cells), so every glyph is now about 8.3 mm or more rather than 8.0 to 8.1. P1-13 was regenerated (bag pitch 11.0 mm, totals from 6 to 16, new code table and key) to fit.
+- **S1-04 marks:** NOT changed. Marks of 2.0 mm half-size (about 25% larger) were tried; every seed tried then produced a repeated question in the colour library (V2b), and 1.9 is the size at which the page is unique and clear. The marks in the check strip are larger, as before.
