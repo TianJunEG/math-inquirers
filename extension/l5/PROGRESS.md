@@ -13,9 +13,9 @@ Figure plug-ins: extension/tools/figs_l5_*.py (type names start with l5_).
 | 4 | Triangle areas | yes | yes | yes | yes |
 | 5 | Volume vault | yes | yes | yes | yes |
 | 6 | Rate racers | yes | yes | yes | yes |
-| 7 | Percentage puzzles | | | | |
+| 7 | Percentage puzzles | yes | yes | yes | yes |
 | 8 | Angle chasers | | | | |
 | 9 | Pattern generalisers | | | | |
 | 10 | Challenge day | | | | |
 
-Resume: next unit is 7.
+Resume: next unit is 8.
