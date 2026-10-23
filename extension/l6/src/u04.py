@@ -192,13 +192,13 @@ I.append(IT(U, 'C', 4, 6,
             answer=A([13], '13')))
 
 learn['facts'] = {'title': 'Reading the code blocks', 'lines': [
-    'repeat 5: do the blocks inside 5 times.',
-    'repeat until <test>: keep going until the test is true.',
-    'if <test> then ... else ...: do the first part if the test is true. If not, do the else part.',
-    'n mod d: the remainder when n is divided by d.',
-    'pick random 1 to 6: a random whole number from 1 to 6.',
-    'item i of list: the i-th number in the list. The first is item 1.',
-    'answer: what the user just typed after ask.',
-    '↻ turn: turn clockwise.']}
+    'repeat 5: do the inside 5 times',
+    'repeat until <test>: stop when true',
+    'if <test> then / else: choose a part',
+    'n mod d: remainder of n ÷ d',
+    'pick random 1 to 6: a random number',
+    'item i of list: the i-th item',
+    'answer: what the user typed in',
+    '↻ turn: turn clockwise']}
 write_unit(4, 'Algebra machines', 'Machines and equations',
            'I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.', learn, I)
