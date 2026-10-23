@@ -1,0 +1,9 @@
+# Level 3 Extension Workbook: progress
+
+Pipeline: `extension/l3/src/uNN.py` (generator, writes `extension/data/l3_uNN.json`) + `extension/verify/l3_uNN_checks.py` (independent answer checks)
++ figure plug-ins `extension/tools/figs_l3_*.py` (types `l3_*`).  Quick view: `python3 extension/tools/build.py --level 3 --units N --no-bw`.
+Resume: run `python3 extension/l3/src/uNN.py` for any unit to rewrite its json; units are independent.
+
+| Unit | Title | Status |
+|---|---|---|
+| 1 | Number sleuths | written, checked, gates ok, pages viewed |
