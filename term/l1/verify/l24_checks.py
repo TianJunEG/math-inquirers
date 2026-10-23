@@ -127,7 +127,7 @@ def run(d):
     m1 = M(sl['s-m1']['blocks']); eq([sorted(set(pieces(f))) for f in m1], [[5, 10, 20, 50, 100], [200, 500, 1000, 5000]], 's-m1 coins and notes')
     m2 = M(sl['s-m2']['blocks'])[0]; eq((cat(m2), total(m2)), (CLASS_SETS['mini worked'], 75), 's-m2 worked example'); run_ = list(itertools.accumulate(sorted(pieces(m2), reverse=True)))
     eq([f'{x}¢' for x in run_], [b for b in sl['s-m2']['blocks'] if b.get('t') == 'numrow'][0]['items'], 's-m2 counts biggest first: 50, 60, 70, 75')
-    m3 = M(sl['s-m3']['blocks']); eq([total(f) for f in m3], [100, 100, 100], 's-m3: $1, two 50c and ten 10c are all 100c'); eq([len(pieces(f)) for f in m3], [1, 2, 10], 's-m3 pieces')
+    m3 = M((sl.get('s-m3-ans') or sl['s-m3'])['blocks']); eq([total(f) for f in m3], [100, 100, 100], 's-m3: $1, two 50c and ten 10c are all 100c'); eq([len(pieces(f)) for f in m3], [1, 2, 10], 's-m3 pieces')
     tg = tags(sl['s-m4']['blocks']); eq(tg[0]['price'], '$8', 's-m4 price'); eq(total(M(sl['s-m4']['blocks'])[0]), 1000, 's-m4 pays $10'); eq((1000 - 800) // 100, 2, 's-m4 change $2')
     nl4 = [b for b in sl['s-m4']['blocks'] if b.get('type') == 'number_line'][0]; eq((nl4['start'], nl4['end'], nl4['prefix']), (8, 10, '$'), 's-m4 line from $8 to $10'); eq('jumps' in nl4, False, 's-m4 line carries no answer jump')
     eq(50 - 35, 15, 'mini cents change'); eq(CLASS_CHANGE['mini pencil'], (35, 50), 'registry')

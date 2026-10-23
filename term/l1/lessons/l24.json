@@ -17,13 +17,14 @@
    "Making an amount in different ways, and change (Primary 1, p. 31)",
    "Money written with a decimal point, such as $1.50, is Primary 2 (p. 33): not used"
   ],
-  "note": "Strand label for the tutor only. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only. Start here is Primary 1 work (school papers set it in the last term of the year): count mixed coins to 100 cents and notes within $30, swap a coin for coins of the same value, circle coins that make an amount, compare a note with a coin, and find change from $5 by counting up. Think harder is Primary 1 level with larger amounts: two things and change from $10, a one-dollar coin and change in cents ($1 is 100 cents, a Primary 1 story), and comparing sets of coins. Go further is beyond Primary 1: the fewest notes and coins for $73 and for a change of $13 (school papers set the fewest-pieces question for smaller amounts; the notes $10 and $50 and the amount $73 are the stretch), how many different amounts three pieces can make (listing every case is not a syllabus item), and a shop with several things bought for one dollar. Think harder T2 (all the ways to make 50 cents with 10 cent and 20 cent coins, 3 ways) is a listing puzzle, also beyond the syllabus. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Money notation follows the Primary 1 papers (23 Oct): cents as 50¢ (never 50c), dollars as $5, never $1.50, and no amount that mixes dollars and cents; the only mix is a $1 = 100 cent conversion with the answer in cents. Coins: 5, 10, 20, 50 cents and $1; notes: $2, $5, $10, $50. There is no $20 note, so the fewest notes and coins for $73 is 5 ($50, $10, $10, $2, $1). The play money is stylised and marked PLAY MONEY; it does not copy any real note or coin (decision D1; the rules on reproducing notes and coins have not been checked). Contest tag (tutor only): all the ways, fewest pieces, how many different amounts."
+  "note": "Strand label for the tutor only. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only. Start here is Primary 1 work (school papers set it in the last term of the year): count mixed coins to 100 cents and notes within $30, swap a coin for coins of the same value, circle coins that make an amount, compare a note with a coin, and find change from $5 by counting up. Think harder is Primary 1 level with larger amounts: two things and change from $10, the price found from the money paid and the change given (working backwards), a one-dollar coin and change in cents ($1 is 100 cents, a Primary 1 story), and comparing sets of coins. Go further is beyond Primary 1: the fewest notes and coins for $73 and for a change of $13 (school papers set the fewest-pieces question for smaller amounts; the notes $10 and $50 and the amount $73 are the stretch), how many different amounts three pieces can make (listing every case is not a syllabus item), and a shop with several things bought for one dollar. Think harder T2 (all the ways to make 50 cents with 10 cent and 20 cent coins, 3 ways) is a listing puzzle, also beyond the syllabus. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Money notation follows the Primary 1 papers (23 Oct): cents as 50¢ (never 50c), dollars as $5, never $1.50, and no amount that mixes dollars and cents; the only mix is a $1 = 100 cent conversion with the answer in cents. Coins: 5, 10, 20, 50 cents and $1; notes: $2, $5, $10, $50. There is no $20 note, so the fewest notes and coins for $73 is 5 ($50, $10, $10, $2, $1). The play money is stylised and marked PLAY MONEY; it does not copy any real note or coin. Owner decision D1 (the rules on notes and coins) is open before the first printing. Contest tag (tutor only): all the ways, fewest pieces, how many different amounts."
  },
  "contest_moves": [
   "count the biggest first",
   "all the ways to make an amount",
   "fewest notes and coins",
-  "how many different amounts"
+  "how many different amounts",
+  "work backwards: paid and change given, find the price"
  ],
  "contest_where": "Think harder, Go further and the Investigation",
  "objectives": [
@@ -674,44 +675,35 @@
      ]
     },
     {
-     "t": "cols",
-     "cols": [
-      [
-       {
-        "t": "visual",
-        "type": "money",
-        "items": [
-         {
-          "v": "50c",
-          "n": 2
-         }
-        ]
-       }
-      ],
-      [
-       {
-        "t": "visual",
-        "type": "money",
-        "items": [
-         {
-          "v": "10c",
-          "n": 10
-         }
-        ]
-       }
-      ]
+     "t": "visual",
+     "type": "money",
+     "items": [
+      {
+       "v": "50c",
+       "n": 2
+      }
      ],
-     "weights": [
-      1,
-      2
-     ]
+     "size": "m"
+    },
+    {
+     "t": "visual",
+     "type": "money",
+     "items": [
+      {
+       "v": "10c",
+       "n": 10
+      }
+     ],
+     "size": "m",
+     "reveal": true
     },
     {
      "t": "chip",
-     "text": "Two 50¢ coins make $1. Ten 10¢ coins make $1."
+     "text": "Two 50¢ coins make $1. Ten 10¢ coins make $1.",
+     "reveal": true
     }
    ],
-   "note": "One dollar is the same as 100 cents. Two 50-cent coins make 100 cents. Ten 10-cent coins make 100 cents. So a one-dollar coin is worth the same as two fifty-cent coins or ten ten-cent coins. Children check on the table with their own coins: put two 50¢ coins next to a $1 token. A 50-cent coin is worth less than a one-dollar coin even though 50 is more than 1: the dollar sign and the cent sign are different units. Do not write $1.00 or 1.50 anywhere: we never use a decimal point for money in this lesson."
+   "note": "One dollar is the same as 100 cents. Two 50-cent coins make 100 cents. Ten 10-cent coins make 100 cents: count in tens to 100 with the children on their fingers (the kit has six 10-cent coins, so nobody needs ten); the ten coins and the sentence appear on the answer slide after the children have counted. So a one-dollar coin is worth the same as two fifty-cent coins or ten ten-cent coins. Children check on the table with their own coins: put two 50¢ coins next to a $1 token. A 50-cent coin is worth less than a one-dollar coin even though 50 is more than 1: the dollar sign and the cent sign are different units. Do not write $1.00 or 1.50 anywhere: we never use a decimal point for money in this lesson."
   },
   {
    "id": "s-m4",
@@ -863,13 +855,59 @@
      "text": "Questions 1 to 3. Take your time."
     },
     {
-     "t": "qs",
-     "ids": [
-      "S1",
-      "S2",
-      "S3"
-     ],
-     "short": true
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "p",
+        "text": "Question 1. Count the money. How many cents?"
+       },
+       {
+        "t": "visual",
+        "type": "money",
+        "items": [
+         {
+          "v": "50c"
+         },
+         {
+          "v": "20c"
+         },
+         {
+          "v": "5c",
+          "n": 2
+         }
+        ],
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "Question 2. Count the notes. How many dollars?"
+       },
+       {
+        "t": "visual",
+        "type": "money",
+        "items": [
+         {
+          "v": "$10"
+         },
+         {
+          "v": "$5"
+         },
+         {
+          "v": "$2",
+          "n": 2
+         }
+        ],
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Question 3. Look at the fifty-cent coin. Count in 10s, then in 5s."
     }
    ],
    "note": "Read questions 1 to 3 aloud. Children work on their own with their play money; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count the coins, biggest first. Question 2: count the notes. Question 3: a fifty-cent coin is worth the same as how many ten-cent coins, and how many five-cent coins."
@@ -902,13 +940,37 @@
      "text": "Questions 4 to 6. Take your time."
     },
     {
-     "t": "qs",
-     "ids": [
-      "S4",
-      "S5",
-      "S6"
+     "t": "p",
+     "text": "Question 4. Circle the coins that make 55¢."
+    },
+    {
+     "t": "visual",
+     "type": "money",
+     "items": [
+      {
+       "v": "50c"
+      },
+      {
+       "v": "20c"
+      },
+      {
+       "v": "10c",
+       "n": 2
+      },
+      {
+       "v": "5c",
+       "n": 2
+      }
      ],
-     "short": true
+     "size": "l"
+    },
+    {
+     "t": "p",
+     "text": "Question 5. Which is worth more: the $2 note or the $1 coin?"
+    },
+    {
+     "t": "p",
+     "text": "Question 6. Ravi buys a toy car for $3. He pays with a five-dollar note. How much change?"
     }
    ],
    "note": "Read questions 4 to 6 aloud. Question 4: circle the coins that make 55 cents. Question 5: look at a two-dollar note and a one-dollar coin; which is worth more? Question 6: Ravi buys a toy car for $3 and pays with a five-dollar note; how much change? Children may use their play money to check. Wait 10 seconds before helping."
@@ -946,7 +1008,7 @@
       ],
       [
        "Think harder (page 3)",
-       "Two things, a dollar in cents, every way, sets of coins"
+       "Two things, find the price, every way, sets of coins"
       ],
       [
        "Go further (page 4)",
@@ -1101,22 +1163,26 @@
      "type": "money",
      "items": [
       {
-       "v": "5c"
+       "v": "5c",
+       "n": 3
       },
       {
-       "v": "10c"
+       "v": "10c",
+       "n": 3
       },
       {
-       "v": "20c"
+       "v": "20c",
+       "n": 3
       },
       {
-       "v": "50c"
+       "v": "50c",
+       "n": 2
       }
      ],
-     "size": "s"
+     "size": "m"
     }
    ],
-   "note": "Optional, only if you are on time. 85 cents with the fewest coins: 50, 20, 10 and 5, which is 4 coins. Many children will try 20 and 20 and 20 and 20 and 5 (5 coins) first. Ask: can anyone beat 5 coins? The biggest coin that fits goes first, then the next biggest that fits. Take two answers and move on. This links to Go further and the Investigation.",
+   "note": "Optional, only if you are on time. The tray shows several of each coin, so the picture does not give the answer. 85 cents with the fewest coins: 50, 20, 10 and 5, which is 4 coins. Many children will try 20 and 20 and 20 and 20 and 5 (5 coins) first. Ask: can anyone beat 5 coins? The biggest coin that fits goes first, then the next biggest that fits. Take two answers and move on. This links to Go further and the Investigation.",
    "optional": true
   },
   {
@@ -1171,25 +1237,29 @@
       "text": "@rec"
      },
      {
-      "k": "DO",
-      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
-      "s": 12
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your play money on the table. Cameras can be on or off, as you like."
      },
      {
       "k": "SAY",
-      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your play money on the table."
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
      },
      {
       "k": "SAY",
-      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
      },
      {
       "k": "SAY",
       "text": "Today we count coins and notes, and we learn what change is. The money is play money. It is not real, and it stays on the table."
      },
      {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
       "k": "NOTE",
-      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
      },
      {
       "k": "NOTE",
@@ -1473,7 +1543,7 @@
      {
       "k": "WORK",
       "text": "Children put down 20¢, 20¢ and 10¢ and count them.",
-      "s": 35
+      "s": 30
      },
      {
       "k": "ASK",
@@ -1486,17 +1556,17 @@
      },
      {
       "k": "SAY",
-      "text": "One dollar is the same as one hundred cents. Two fifty-cent coins make a dollar. Ten ten-cent coins make a dollar. Check it on your table."
+      "text": "One dollar is one hundred cents. Two fifty-cent coins make a dollar. Count in tens to a hundred on your fingers. You do not need ten coins."
      },
      {
       "k": "WORK",
-      "text": "Children put two 50¢ coins next to a $1 token and see they match.",
-      "s": 25
+      "text": "Children put two 50¢ coins next to a $1 token, then count in tens to 100 on their fingers.",
+      "s": 20
      },
      {
       "k": "ASK",
       "text": "How many ten-cent coins make one dollar?",
-      "resp": 15
+      "resp": 10
      },
      {
       "k": "SLIDE",
@@ -1911,7 +1981,7 @@
     "id": "S3",
     "page": 1,
     "tier": "start",
-    "text": "Look at the fifty-cent coin.",
+    "text": "Look at the fifty-cent coin. Count in 10s, then in 5s.",
     "parts": [
      {
       "l": "a",
@@ -1945,7 +2015,7 @@
        "v": "50c"
       }
      ],
-     "size": 22
+     "size": 30
     }
    },
    {
@@ -1956,17 +2026,21 @@
     "parts": [
      {
       "l": "",
-      "text": "The coins I circled are worth ____¢.",
-      "ans": "55¢",
-      "val": 55
+      "text": "I circled the ____¢ coin and the ____¢ coin.",
+      "ans": "50¢; 5¢",
+      "val": [
+       50,
+       5
+      ]
      }
     ],
     "answer": "50¢ and 5¢",
     "val": [
-     55
+     50,
+     5
     ],
     "hint": "Start with the biggest coin that fits. What is left to make 55?",
-    "solution": "The 50¢ coin and one 5¢ coin make 55¢. 50 and 5 make 55. Either 5¢ coin may be circled.",
+    "solution": "The 50¢ coin and one 5¢ coin make 55¢. 50 and 5 make 55. Either 5¢ coin may be circled. The two blanks may be filled in either order.",
     "mistakes": [
      "Circling the 20¢ coin first (it leaves 35¢ and the coins that are left cannot make it).",
      "Circling every coin."
@@ -2016,7 +2090,7 @@
     "hint": "2 dollars and 1 dollar. Which number is greater?",
     "solution": "A two-dollar note is worth $2. A one-dollar coin is worth $1. 2 is greater than 1, so the $2 note is worth more.",
     "mistakes": [
-     "Circling the $1 coin because it is bigger (the value is the number, not the size).",
+     "Circling the $1 coin because it is a coin (the value is the number on the piece, not its shape).",
      "Thinking they are worth the same."
     ],
     "mins": 2,
@@ -2171,7 +2245,7 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "Siti buys a pencil for 60¢. She pays with a one-dollar coin.",
+    "text": "Siti buys a pencil. She pays with a one-dollar coin and gets 40¢ change.",
     "parts": [
      {
       "l": "a",
@@ -2181,21 +2255,21 @@
      },
      {
       "l": "b",
-      "text": "Siti gets ____¢ change.",
-      "ans": "40¢",
-      "val": 40
+      "text": "The pencil costs ____¢.",
+      "ans": "60¢",
+      "val": 60
      }
     ],
-    "answer": "100¢; 40¢",
+    "answer": "100¢; 60¢",
     "val": [
      100,
-     40
+     60
     ],
-    "hint": "A one-dollar coin is worth 100¢. Count up from 60¢ to 100¢.",
-    "solution": "A one-dollar coin is worth 100¢. Count up from 60 to 100 in 10s: 70, 80, 90, 100. That is 40. The change is 40¢. Check: 60 and 40 make 100.",
+    "hint": "A one-dollar coin is worth 100¢. The price and the change make 100¢. Count back 40 from 100.",
+    "solution": "A one-dollar coin is worth 100¢. The price and the change together make the 100¢ she paid. Count back 40 from 100 in 10s: 90, 80, 70, 60. The pencil costs 60¢. Check: count up from 60¢ to 100¢ and you get 40¢ change.",
     "mistakes": [
-     "Writing $1 or 1¢ for the coin.",
-     "Writing 60¢ or 160¢ for the change."
+     "Writing 40¢ (the change) for the price.",
+     "Writing 140¢ (adding the change to the coin)."
     ],
     "mins": 4
    },
@@ -2249,7 +2323,8 @@
         "v": "10c"
        }
       ],
-      "label": "Set A"
+      "label": "Set A",
+      "size": 55
      },
      {
       "type": "money",
@@ -2262,7 +2337,8 @@
         "v": "10c"
        }
       ],
-      "label": "Set B"
+      "label": "Set B",
+      "size": 55
      },
      {
       "type": "money",
@@ -2275,7 +2351,8 @@
         "n": 2
        }
       ],
-      "label": "Set C"
+      "label": "Set C",
+      "size": 55
      }
     ]
    }
@@ -2308,7 +2385,7 @@
     "hint": "Take the biggest note that fits first. Then the next biggest.",
     "solution": "$73: $50 leaves $23; $10 and $10 leave $3; $2 and $1 leave nothing. That is $50, $10, $10, $2 and $1, which is 5 pieces. $50 minus $37 is $13: $10, $2 and $1, which is 3 pieces.",
     "mistakes": [
-     "Writing 12 (using $5 and $1 pieces only).",
+     "Writing 9 (seven $10 notes, a $2 note and a $1 coin, without the $50 note).",
      "Using a $20 note (there is no $20 note)."
     ],
     "mins": 6,
@@ -2583,7 +2660,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Ali has two 20¢ coins, one 10¢ coin and one 5¢ coin. How much money does he have? ____¢",
+   "text": "Ali has two 20¢ coins, a 10¢ coin and a 5¢ coin. How much does he have in all? ____¢",
    "answer": "55",
    "val": 55,
    "solution": "Start with the biggest: 20 and 20 make 40. 40 and 10 make 50. 50 and 5 make 55. He has 55¢."
@@ -2801,7 +2878,7 @@
     "id": "c3",
     "tier": "core",
     "type": "number",
-    "q": "A toy costs $3. You pay with a $5 note. How many dollars is your change?",
+    "q": "A ball costs $3. You pay with a $5 note. How many dollars is your change?",
     "hint": "Count up from the price to the money you paid.",
     "steps": [
      "Count up from $3 to $5: $4, $5.",
@@ -2846,7 +2923,7 @@
      "derive": {
       "t": "5-p"
      },
-     "q": "A toy costs ${p}. You pay with a $5 note. How many dollars is your change?",
+     "q": "A ball costs ${p}. You pay with a $5 note. How many dollars is your change?",
      "answer": "t",
      "hint": "Count up from the price to the money you paid.",
      "steps": [
@@ -3068,21 +3145,30 @@
    {
     "id": "t3",
     "tier": "stretch",
-    "type": "set",
-    "q": "Make 50¢ with one 20¢ coin and some 10¢ coins. Type the number of 10¢ coins, then the number of 20¢ coins.",
+    "type": "number",
+    "q": "Make 50¢ with one 20¢ coin and some 10¢ coins. How many 10¢ coins do you need?",
     "hint": "One 20¢ coin leaves 30¢ to make with ten-cent coins.",
     "steps": [
      "One 20¢ coin is 20¢.",
      "50 minus 20 is 30, which is three 10¢ coins.",
-     "The answer is 3 and 1."
+     "The answer is 3."
     ],
-    "answer": [
-     3,
-     1
-    ],
-    "ordered": true,
+    "answer": 3,
     "easier": "c1",
-    "slips": []
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "One 20¢ coin and two 10¢ coins make only 40¢. Count up to 50¢."
+     },
+     {
+      "a": [
+       5
+      ],
+      "say": "Five 10¢ coins make 50¢ on their own. This way there is a 20¢ coin too."
+     }
+    ]
    },
    {
     "id": "g1",
@@ -3226,7 +3312,7 @@
    "cents (¢) and dollars ($): $1 is 100¢"
   ],
   "try_home": [
-   "Purse game: put some coins on the table. Count them together, biggest first. Ask: how do you know?",
+   "Purse game: put some play money on the table (real coins only with a grown-up beside you; small coins stay on the table, away from little ones). Count them together, biggest first. Ask: how do you know?",
    "Shop game: pick a price and pay with a note. Count up together for the change.",
    "Two ways: ask your child to show 50¢ in two different ways with coins."
   ],
@@ -3236,7 +3322,7 @@
    "How did you find the change?"
   ],
   "when_stuck": "Let your child use the play money and wait 10 seconds before helping. Asking 'what do we count up to?' works better than giving the answer. Please do not teach decimal money such as $1.50: we write cents and dollars apart. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
-  "next": "Next lesson: Price Tags: Compare and Choose. Online practice: your tutor will share the link.",
+  "next": "Next lesson: Price Tags: Compare and Choose. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
   "quote": "Count the biggest first. Change is what we count up from the price to the money we paid.",
   "report_line": "Your child is learning to count coins and notes, to make an amount in different ways and to find change by counting up. This week: counting money, and change from $5 and $10.",
   "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
@@ -3256,19 +3342,19 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, with your own play money. Check: S1 80¢; S2 $19; S3 5 and 10; S4 50¢ and 5¢; S5 the $2 note; S6 $2; T1 $9 and $1; T2 3 and 1, 1 and 2; T3 100¢ and 40¢; T4 Set A and 20¢; G1 5 and 3; G2 7 amounts; G3 3 stickers and 10¢.",
+  "Solve every workbook question yourself first, with your own play money. Check: S1 80¢; S2 $19; S3 5 and 10; S4 50¢ and 5¢ (the 50¢ coin and one 5¢ coin); S5 the $2 note; S6 $2; T1 $9 and $1; T2 3 and 1, 1 and 2; T3 100¢ and 60¢; T4 Set A and 20¢; G1 5 and 3; G2 7 amounts; G3 3 stickers and 10¢.",
   "Tell parents a week before: this is the heaviest cutting of the term. Tear out the two play-money pages (pages 6 and 7) along the dashed line; a grown-up cuts out all 29 pieces (16 coins and 13 notes) and keeps them in an envelope. The $1 coins are the tokens from Term 2 Lesson 10; with no tokens use 5 counters or buttons. Print on card if you can; paper scraps with a value written on them also work.",
   "Have the slides open. Have your own play money to show on camera if you wish. Say each amount both ways, never 50c: fifty-cent coin or 50¢; five-dollar note or $5. Never write or say $1.50.",
-  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
   "Be plain with families: counting coins and notes and change from $5 or $10 is Primary 1 work; listing every way, the fewest notes and coins for $73 and how many different amounts three pieces can make are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. The money is PLAY MONEY, stylised and not a copy of any real note or coin.",
-  "Slides s-m4 and s-m5 keep the answers off the screen while you ask: the answer slide follows. Read every question with its amounts, and the four options of E2, aloud: the figures on the slides are small."
+  "Slides s-m3, s-m4 and s-m5 keep the answers off the screen while you ask: the answer slide follows. The money on the workbook slides is shown large, but say each amount aloud too, and read the four options of E2 aloud. Children say what they have made and may tilt the camera to the table, not the room."
  ],
  "workbook": {
   "header": "Money: dollars and change",
   "hint_p1": "Use your play money. Start with the biggest coin or note.",
   "hint_p2": "Use your play money to check your answer.",
-  "hint_p3": "Use your play money or draw. Choose any question, in any order.",
-  "hint_p4": "There is no $20 note. Choose any question. You do not have to finish them all.",
+  "hint_p3": "Use your play money or draw. Choose any question, in any order. Not finished? These pages are for home too.",
+  "hint_p4": "There is no $20 note. Choose any question. You do not have to finish them all. Not finished? These pages are for home too.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",
