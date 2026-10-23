@@ -130,7 +130,7 @@ def sq_minus_semi_fig(s, tag, unit="cm", box=(36, 36)):
     shaded = f"M{x0},{y0} A{a/2},{a/2} 0 0 0 {x0+a},{y0} L{x0+a},{y0+a} L{x0},{y0+a} Z"
     inner = (f'<rect x="{x0}" y="{y0}" width="{a}" height="{a}" fill="#fff" stroke="#000" stroke-width="{SW}"/>'
              f'<path class="sqs" d="{shaded}" fill="url(#{_hatch_id(tag)})" stroke="#000" stroke-width="{SW}" stroke-linejoin="round"/>'
-             + _t(x0 + a / 2, y0 + a + 3.0, f"{s} {unit}", cls="lab top", size=3.6))
+             + _t(x0 + a / 2, y0 + a + 3.0, f"square {s} {unit}", cls="lab top", size=3.6))
     return _svg(bw, bh + 2, inner, "fig-svg fig-sqs", defs=hatch_def(tag))
 
 # ------------------------------------------------------------------ pie chart

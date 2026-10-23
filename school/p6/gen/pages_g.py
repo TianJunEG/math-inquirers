@@ -10,7 +10,7 @@ from .pages_a import ftup, fdomain
 def ans_text(x):
     x = Fr(x)
     if x.denominator == 1: return str(x.numerator)
-    return ptxt(mxx(x)) if x > 1 else ptxt(frx(x))
+    return ptxt(mxx(x)).replace("_", " ") if x > 1 else ptxt(frx(x))
 
 # =============================================================================== P6-34 Fraction Order  (FR1.1, FR1.2, ordering)
 def fo_item(rng, kind):

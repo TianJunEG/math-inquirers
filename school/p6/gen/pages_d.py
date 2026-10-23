@@ -107,7 +107,7 @@ def page22():
         return -1
     P = choice_page(22, 8222, "Perimeter Pick", 2, "Perimeter of figures with curved edges", STRAND_AV,
         "1.2, 1.3 (perimeter of a semicircle and a quarter circle; composite figures)", ["AV1.2", "AV1.3"], "Choice table (perimeters)",
-        [f"Take {PIP} as 22/7; all lengths are in cm.", "Find the perimeter, of the hatched part if there is hatching. Only the outside counts.", "Circle the letter beside the right answer. Write the letters in the boxes."],
+        [f"Take {PIP} as 22/7; all lengths are in cm.", "Find the perimeter (of the hatched part, if there is hatching). Only the outside counts.", "Circle the letter beside the right answer. Write the letters in the boxes."],
         rng, rows, solve_row,
         "Six figures: a semicircle, a quarter circle, two rectangles with a semicircle on one end, a square with a semicircle on one side and a square with a quarter circle cut away (the hatched part). Each row has three answers. The wrong answers are what a pupil gets by leaving out the straight edges, by counting a dashed line that is inside the figure, or by using the whole circle. The perimeter of a semicircle includes its diameter. The letters of the right answers, read down the rows, spell the word. Every other way of choosing was tested against a very large word list: none spells a word. A box left blank gives no letter and the check cannot see it.",
         key_rows=None, grid=True)

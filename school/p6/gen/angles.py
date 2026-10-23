@@ -49,8 +49,9 @@ def distort_points(fig, pts, salt=0):
         w1, h1 = bb(q)
         if abs((w1 / h1) / (w0 / h0) - 1) > 0.25: continue
         t0 = _true_angle(pts, unk["at"], unk["p"], unk["q"]); t1 = _true_angle(q, unk["at"], unk["p"], unk["q"])
-        if (t1 < t0 + 7) if t0 < 30 else abs(t0 - t1) < 9: continue
+        if (t1 < t0 + 9) if t0 < 30 else abs(t0 - t1) < 9: continue
         if t1 > 170 or any(_true_angle(q, a["at"], a["p"], a["q"]) < 20 for a in fig.arcs): continue
+        if any((_true_angle(pts, a["at"], a["p"], a["q"]) < 88 and _true_angle(q, a["at"], a["p"], a["q"]) > 88) or (_true_angle(pts, a["at"], a["p"], a["q"]) > 92 and _true_angle(q, a["at"], a["p"], a["q"]) < 92) for a in fig.arcs): continue   # an acute angle stays acute, an obtuse one obtuse
         ratios = [math.dist(q[a], q[b]) / math.dist(pts[a], pts[b]) for a, b in fig.segs]; mr = sum(ratios) / len(ratios)
         if min(ratios) < 0.65 * mr or max(ratios) > 1.5 * mr: continue
         if all(abs(_true_angle(pts, a["at"], a["p"], a["q"]) - _true_angle(q, a["at"], a["p"], a["q"])) >= 4 for a in fig.arcs if not a["unk"]):
@@ -147,12 +148,20 @@ def render(fig, W=50.0, H=36.0, mirror=False, scale=False, keepout=False):
         sweep = 1 if delta > 0 else 0
         bis = a1 + delta / 2
         hw = 1.15 * len(str(a["label"])) + 0.3; best = None
-        for rr in (r + 2.4, r + 3.4, r + 4.6, r + 6.0, r + 8.0):
-            for f in (0, -0.25, 0.25, -0.4, 0.4, -0.7, 0.7):
+        def mid_of(b):
+            vb = S[b["at"]]; pb = S[b["p"]]; qb = S[b["q"]]
+            b1 = math.atan2(pb[1] - vb[1], pb[0] - vb[0]); b2 = math.atan2(qb[1] - vb[1], qb[0] - vb[0]); dl = (b2 - b1 + math.pi) % (2 * math.pi) - math.pi
+            rb = 5.2 if not b["unk"] else 6.2
+            return (vb[0] + rb * math.cos(b1 + dl / 2), vb[1] + rb * math.sin(b1 + dl / 2))
+        mids = [mid_of(b) for b in fig.arcs]; own = mids[fig.arcs.index(a)]
+        for rr in (r + 2.4, r + 3.4, r + 4.6, r + 6.0):
+            for f in (0, -0.25, 0.25, -0.4, 0.4):
                 ang = bis + f * delta
                 lx, ly = v[0] + rr * math.cos(ang), v[1] + rr * math.sin(ang)
                 c = clearance((lx, ly), hw, 1.4, boxes)
-                sc = min(c, 1.6) * 10 - 6 * abs(f) - 2.2 * (rr - r - 2.4) - (0 if 0 <= lx - hw and lx + hw <= W and 0 <= ly - 1.4 and ly + 1.4 <= H else 30)
+                d_own = math.hypot(lx - own[0], ly - own[1]); d_oth = min([math.hypot(lx - m[0], ly - m[1]) for m in mids if m is not own] or [99])
+                assoc = 0 if d_own + 1.0 < d_oth else 40           # the nearest arc must be its own
+                sc = min(c, 1.6) * 10 - 6 * abs(f) - 2.2 * (rr - r - 2.4) - assoc - (0 if 0 <= lx - hw and lx + hw <= W and 0 <= ly - 1.4 and ly + 1.4 <= H else 30)
                 if best is None or sc > best[0]: best = (sc, lx, ly)
         lx, ly = best[1], best[2]; boxes.append((lx, ly, hw, 1.4))
         cls = "unk" if a["unk"] else "ang"

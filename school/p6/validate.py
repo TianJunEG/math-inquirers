@@ -233,7 +233,7 @@ for k in BK:
     _c, _l = re.sub(r"\s+", " ", _pg(1)), re.sub(r"\s+", " ", _pg(2))
     rec(f"{k}: the 'Not affiliated with or endorsed by the Ministry of Education, Singapore.' sentence is on the COVER only (owner decision P2-NOTAFFIL-FRONT), the licence page has only the factual syllabus sentence", "Not affiliated with or endorsed by the Ministry of Education, Singapore." in _c and "affiliat" not in _l and "The mathematics syllabus is published by the Ministry of Education, Singapore." in _l)
     _all_fm = re.sub(r"\s+", " ", fm)
-    rec(f"{k}: teacher notes say 'Pictures are not actual size.', the key says the outcome lines are quoted from the syllabus and the notes on each tag are our own words", "Pictures are not actual size." in _all_fm and "quoted from the syllabus" in re.sub(r"\s+", " ", alltxt[f"P6_{k}_Answer_Key.pdf"]))
+    rec(f"{k}: teacher notes say 'Pictures are not actual size.', the key says the outcome numbers follow the syllabus and the notes on each tag are our own words", "Pictures are not actual size." in _all_fm and "numbers follow the syllabus" in re.sub(r"\s+", " ", alltxt[f"P6_{k}_Answer_Key.pdf"]))
     rec(f"{k}: cover, licence and teacher notes are marked DRAFT with the owner's business contact email and the registered office address and publisher line", fm.count("DRAFT") >= 4 and fm.count("pypteltd@gmail.com") >= 3 and "66 Tannery Ln, Singapore 347805" in fm and "Preciouslyours Pte Ltd, trading as Math Inquirers" in fm, f"{fm.count('DRAFT')} DRAFT stamps")
     rec(f"{k}: front matter has the 'typical order, schools vary' sentence and the booklet's terms", "Schools vary" in fm_flat and OC.BOOKLETS[k]["terms"] in fm_flat)
     rec(f"{k}: pupil pages carry no DRAFT stamp", "DRAFT" not in pt)
