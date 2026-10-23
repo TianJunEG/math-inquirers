@@ -610,7 +610,7 @@ PASS  S1 pupil page 20 layout (no overflow/clipping/margin breach)
 PASS  S1 pupil page 20 page-fill: puzzle content 144 of 183 mm  0.79
 PASS  S1 pupil page 20 min text size >= 8 pt  8.0 pt
 PASS  S1 front page 01 layout (no overflow/clipping/margin breach)  
-PASS  S1 front page 01 min text size >= 8 pt  12.0 pt
+PASS  S1 front page 01 min text size >= 8 pt  9.0 pt
 PASS  S1 front page 02 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 02 min text size >= 8 pt  12.0 pt
 PASS  S1 front page 03 layout (no overflow/clipping/margin breach)  
@@ -702,7 +702,7 @@ PASS  S2 pupil page 20 layout (no overflow/clipping/margin breach)
 PASS  S2 pupil page 20 page-fill: puzzle content 197 of 198 mm  0.99
 PASS  S2 pupil page 20 min text size >= 8 pt  8.0 pt
 PASS  S2 front page 01 layout (no overflow/clipping/margin breach)  
-PASS  S2 front page 01 min text size >= 8 pt  12.0 pt
+PASS  S2 front page 01 min text size >= 8 pt  9.0 pt
 PASS  S2 front page 02 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 02 min text size >= 8 pt  12.0 pt
 PASS  S2 front page 03 layout (no overflow/clipping/margin breach)  
@@ -736,13 +736,13 @@ PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of
 PASS  P2_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 14.23% vs greyscale)  20 pages
 PASS  P2_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 184, budget 40 on average per page)  
 PASS  P2_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.39% vs greyscale)  5 pages
-PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 111, budget 40 on average per page)  
+PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 114, budget 40 on average per page)  
 PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.49% vs greyscale)  11 pages
 PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 812, budget 130 on average per page)  
 PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.58% vs greyscale)  20 pages
 PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 198, budget 40 on average per page)  
 PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.33% vs greyscale)  5 pages
-PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 122, budget 40 on average per page)  
+PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 125, budget 40 on average per page)  
 PASS  P2_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.66% vs greyscale)  9 pages
 PASS  P2_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 717, budget 130 on average per page)  
 
