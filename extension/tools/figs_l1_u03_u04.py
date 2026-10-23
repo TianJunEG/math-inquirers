@@ -11,7 +11,7 @@ import figs as F
 NAVY, SKY, YEL, GREY = F.NAVY, F.SKY, F.YEL, F.GREY
 _uid = itertools.count(1)
 SC = 0.14  # mm per viewBox unit when a spec gives no width_mm (keeps every figure the same scale)
-GROW = 1.4  # picture graphs are drawn 1.4 times larger than first built (icons were too small for ages 6-8)
+GROW = 1.25  # picture graphs are drawn 1.4 times larger than first built (icons were too small for ages 6-8)
 SW = 3.0   # stroke width in viewBox units (>= 0.5 pt when the figure is 100 to 170 mm wide)
 
 
