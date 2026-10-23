@@ -135,7 +135,7 @@ def page04():
     clues = "".join(f'<li>{compare_text(c)}</li>' for c in cl)
     ans = ('<div class="ansgrid"><span></span><b>number</b><b>letter</b>' +
            "".join(f'<span class="nm">{n}</span><span class="ab"></span><span class="ab"></span>' for n in names) + '</div>')
-    body = (f'<div class="blk"><p class="lead">Six numbers of stickers. Five children.</p><div class="chips">{chips}</div></div>'
+    body = (f'<div class="blk"><p class="lead">Six numbers of stickers. Five children.</p><div class="chips six">{chips}</div></div>'
             f'<div class="twocol"><ul class="clues">{clues}</ul>{howto_grid()}</div>'
             f'<div class="twocol"><div>{grid_table(names, nums)}</div><div>{ans}</div></div>')
     # every way the five children can get five of the six numbers: the letters they give must spell a word only for the right way

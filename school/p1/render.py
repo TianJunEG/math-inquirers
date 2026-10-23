@@ -65,6 +65,7 @@ svg{max-width:100%;height:auto}
 .slots .rl{justify-self:start;font-size:12pt;font-weight:700}
 .slots .ab{width:22mm;height:24mm}.slots .ab.letter{height:22mm}
 .chips{display:flex;gap:4mm;flex-wrap:wrap}.chip{border:0.6mm solid #000;border-radius:6mm;padding:1mm 4mm 1mm 5mm;font-family:'Fredoka';font-weight:600;font-size:20pt;display:inline-flex;align-items:center}
+.chips.six{gap:2.5mm}.chips.six .chip{padding:1mm 2.5mm 1mm 3.5mm;font-size:18pt}.chips.six .chip i.cl{margin-left:1.5mm}
 .chip i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:8.5mm;height:8.5mm;border:0.5mm solid #000;border-radius:50%;font-size:14pt;margin-left:2.5mm;font-weight:700}
 ul.clues{margin:0;padding-left:7mm;font-size:15pt;line-height:1.5}
 ul.clues li{margin:1mm 0}
@@ -239,7 +240,7 @@ def cover(school):
 def licence(school):
     s = html.escape(school) if school.strip() else "____________________________"
     return ('<section class="page fm"><h2>Photocopy licence' + (" (DRAFT)" if DRAFT else "") + '</h2>'
-            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the registered office address below must be filled in (the contact email is the business email for now and will change), before any school receives this pack.")
+            + draft_banner("this licence wording is a placeholder. The owner and a lawyer must approve it, and the entity, year, term of the licence and the registered office address below must be filled in, before any school receives this pack.")
             + f'<p><b>Licensed to:</b> {s} (one school, one campus)</p>'
             '<h3>You may</h3><ul><li>Print this PDF and photocopy any page for the pupils and staff of the school named above.</li>'
             '<li>Keep the file on the school network and share it with the school\'s teachers.</li>'
