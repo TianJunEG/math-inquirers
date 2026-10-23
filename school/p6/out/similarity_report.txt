@@ -1,2 +1,2 @@
-Similarity check of 40 pupil pages (342 items) against 11848 private entries.
+Similarity check of 40 pupil pages (343 items) against 11848 private entries.
 Flags: 0
