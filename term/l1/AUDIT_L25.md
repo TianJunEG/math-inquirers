@@ -56,3 +56,8 @@ Total: 18 / 24
 - Depends on Lesson 24's play money (one example only) and on the 12 price tags being cut; if the tags are missing the lesson still runs from prices written on paper but Explore is weaker.
 - Page 3 is dense (four questions with three pictures); T3 has no picture because the prices are in the sentence.
 - The Quest gate for this lesson (pen $6, ruler $9; $4 and $6 for $10) is kept out of every class and workbook item.
+
+
+## Fix pass (Term 3 fix agent)
+
+Independent audits (workbook, guide and deck, home and parent) answered in `audit/FIXES_T3_L25.md`: kit and tags now match, jar replaces the globe-like ball, each-tag-once in T4, class numbers not repeated, final recording wording, Mi without calculator, work-back item at home and online. Validator 0 FAIL, 0 WARN.

@@ -2294,7 +2294,7 @@
     "id": "S6",
     "page": 2,
     "tier": "start",
-    "text": "Mei wants a toy fish that costs $17. She has $12. How much more money does she need?",
+    "text": "Mei wants a toy fish that costs $17. She has $12. How much more money does Mei need?",
     "parts": [
      {
       "l": "",
@@ -2455,7 +2455,7 @@
      },
      {
       "l": "c",
-      "text": "Ali has $40. Is that enough for both the robot and the drum? Circle Yes or No.",
+      "text": "Ali has $40. Is that enough for both? Circle Yes or No.",
       "ans": "No",
       "val": "No",
       "choices": [
@@ -2482,7 +2482,7 @@
     "id": "T4",
     "page": 3,
     "tier": "think",
-    "text": "Look at the five price tags. Ben spends all his money each time and uses each tag only once. There are two ways each time.",
+    "text": "Look at the five price tags. Ben spends all his money each time and uses each tag once. There are two ways each time.",
     "parts": [
      {
       "l": "a",
@@ -2523,7 +2523,7 @@
      7
     ],
     "hint": "Start with the tag that costs the least. What partner does it need?",
-    "solution": "For $11, start with the tag that costs the least: $2 needs 9 (no tag), $3 needs 8 (the cup, yes), $4 needs 7 (the ruler, yes). For $14 with three different tags, start with $2: $2 and $3 need 9 (no tag); $2 and $4 need 8 (the cup, yes); $2 and $7 need 5 (no tag). Then $3: $3 and $4 need 7 (the ruler, yes); $3 and $7 need 4 (the pen, but $4 and $7 with $3 is the same way again). So the two ways are $2, $4 and $8, and $3, $4 and $7. Any order is fine.",
+    "solution": "For $11, start with the tag that costs the least: $2 needs 9 (no tag), $3 needs 8 (the cup, yes), $4 needs 7 (the ruler, yes). For $14 with three different tags, start with $2: $2 and $3 need 9 (no tag); $2 and $4 need 8 (the cup, yes); $2 and $7 need 5 (no tag). Then start with $3 (without $2): $3 and $4 need 7 (the ruler, yes); $3 and $7 need 4 (the pen, the same way again). So the two ways are $2, $4 and $8, and $3, $4 and $7. Any order is fine.",
     "mistakes": [
      "Stopping after the first way.",
      "Using the same tag twice."
@@ -2756,8 +2756,8 @@
    ],
    "solution": "Count up from 9 to 17: 9 up to 10 is 1, and 10 up to 17 is 7. 1 and 7 make 8.",
    "mistakes": [
-    "Adding 14 and 5 to get 19.",
-    "Writing 14, the price of the hat."
+    "Adding 17 and 9 to get 26.",
+    "Writing 17, the price of the hat."
    ]
   },
   {
@@ -2798,7 +2798,7 @@
    "val": [
     7
    ],
-   "solution": "Count up from the price to the money paid: 14 up to 20 is 6. Ben gets $6 change.",
+   "solution": "Count up from the price to the money paid: 13 up to 20 is 7. Ben gets $7 change.",
    "mistakes": [
     "Adding 13 and 20.",
     "Writing 13, the price of the toy."
@@ -2829,7 +2829,7 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "Siti has $12. A toy costs $18. How much more money does she need? She needs $____ more.",
+   "text": "Siti has $12. A toy costs $18. How much more money does Siti need? She needs $____ more.",
    "answer": "6",
    "val": 6,
    "solution": "Count up from 12 to 18. That is 6 steps, so Siti needs $6 more."
@@ -2953,8 +2953,8 @@
   "header": "Money: price tags",
   "hint_p1": "Use a number line, your fingers or your price tags. Count up from the smaller price.",
   "hint_p2": "Read the prices first. Count up to find the gap or the change.",
-  "hint_p3": "Use a number line, your price tags or a drawing. Choose any question, in any order. Not finished? This page is for home too.",
-  "hint_p4": "Try a price and check it. Choose any question. You do not have to finish them all. Not finished? This page is for home too.",
+  "hint_p3": "Use a number line, price tags or a drawing. This page is for home too.",
+  "hint_p4": "Try a price and check it. Choose any question. This page is for home too.",
   "choice_after": 3,
   "inv_intro": "",
   "inv_first_label": "First:",
@@ -3283,7 +3283,7 @@
     "id": "c5",
     "tier": "core",
     "type": "number",
-    "q": "Aisha has $9. A book costs $16. How much more money does she need?",
+    "q": "Aisha has $9. A book costs $16. How much more money does Aisha need?",
     "hint": "Count up from what she has to the price.",
     "steps": [
      "Count up from 9 to 16.",
@@ -3320,7 +3320,7 @@
       ]
      },
      "derive": {},
-     "q": "Aisha has {a|usd}. A book costs {b|usd}. How much more money does she need?",
+     "q": "Aisha has {a|usd}. A book costs {b|usd}. How much more money does Aisha need?",
      "answer": "b-a",
      "hint": "Count up from {a} to {b}.",
      "steps": [
