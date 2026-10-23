@@ -59,7 +59,7 @@ S.append(item(U+'-S08', 'start', 2, 'Ali buys a ruler for $1.85 and a notebook f
   ans=A('0.75'), why='$1.85 + $2.40 = $4.25. $5.00 − $4.25 = $0.75, which is 75¢.',
   space={'rows': ['Working:', '']}))
 S.append(item(U+'-S09', 'start', 3, 'Ravi and Kumar have $12.60 altogether. Ravi has $2.40 more than Kumar.',
-  fig=BARS([{'label': 'Kumar', 'segs': [{'u': 2}]}, {'label': 'Ravi', 'segs': [{'u': 2}, {'u': 0.8, 'k': 'q', 't': '$2.40'}]}], vbrace={'text': '$12.60'}, width_mm=105, unit=48, row_h=38, gap=14),
+  fig=BARS([{'label': 'Kumar', 'segs': [{'u': 2}]}, {'label': 'Ravi', 'segs': [{'u': 2}, {'u': 1.5, 'k': 'q', 't': '$2.40'}]}], vbrace={'text': '$12.60'}, width_mm=120, unit=52, row_h=38, gap=14),
   parts=[P('a', 'Kumar has ${b}', A('5.10')), P('b', 'Ravi has ${b}', A('7.50'))], partsrow=True,
   why='Take away the extra $2.40: $12.60 − $2.40 = $10.20. Two equal parts are $10.20, so Kumar has $10.20 ÷ 2 = $5.10. Ravi has $5.10 + $2.40 = $7.50.'))
 S.append(item(U+'-S10', 'start', 3, 'A box holds 4 packs of rice. All the packs have the same mass. The box and packs together have a mass of 4.1 kg. The empty box has a mass of 0.5 kg.',
