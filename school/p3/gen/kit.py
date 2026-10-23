@@ -52,7 +52,8 @@ ORIG_WORD = {13: 'FIGURE', 6: 'TEACUP', 8: 'FATHOM', 21: 'DONKEY', 23: 'FRUITY',
 USED_FIRST_BUILD = set("BANDIT BIRCH BLUNT CAMPUS CANOPY COUSIN DEVOUR DONKEY FATHOM FIGURE FRUITY GOPHER JUNIOR PEANUT POLICE PUBLIC QUIVER SAUCY SCRIBE SHRIMP SPRUCE SWIVEL TEACUP THRIVE TUXEDO UPDATE VOLUME WALNUT WISDOM WOMBAT WORKS".split())
 
 # round 2 (audit): COUGAR, FLIGHT and MELODY collide with P6-23, P4-38 and P5-31; these three pages take a word that no level uses
-PREFER = {4: ["TUXEDO", "WISDOM", "SWIVEL"], 6: ["WISDOM", "SWIVEL", "TUXEDO"], 30: ["SWIVEL", "TUXEDO", "WISDOM"]}
+PREFER = {4: ["WISDOM", "SWIVEL", "TUXEDO"], 6: ["SWIVEL"], 30: ["TUXEDO"]}
+PREFER_ONLY = {6, 30}      # this page keeps drawing new answers until its own preferred word gives a code table
 GHOST = {4: "FLIGHT", 6: "MELODY", 30: "COUGAR"}
 
 def word_candidates(no, n, avoid=()):
@@ -65,7 +66,7 @@ def word_candidates(no, n, avoid=()):
     base = [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
     if no in PREFER:
         first = [w for w in PREFER[no] if w not in taken and w in {x.upper() for x in pool}]
-        return first + [w for w in base if w not in first]
+        return first if no in PREFER_ONLY else first + [w for w in base if w not in first]
     return base
 
 def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
@@ -74,7 +75,7 @@ def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
     for w in word_candidates(no, n, avoid)[:max_words]:
         t = make_code_table(answers, w, rng, lo, hi, **kw)
         if t: CLAIMED[no] = w; return w, t
-    if no in ORIG_WORD:                      # no unused word gives a table for this page: it keeps the word it had
+    if no in ORIG_WORD and no not in PREFER_ONLY:                      # no unused word gives a table for this page: it keeps the word it had
         t = make_code_table(answers, ORIG_WORD[no], rng, lo, hi, **kw)
         if t: CLAIMED[no] = ORIG_WORD[no]; return ORIG_WORD[no], t
     return None

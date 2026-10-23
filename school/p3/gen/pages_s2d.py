@@ -136,7 +136,7 @@ def page36():
             d = rng.choice([(1, 1), (1, -1), (2, 1), (1, 2), (2, -1), (1, -2), (1, 0), (0, 1)])
             t = perp(d) if mode == "perpendicular" else d
             if t[1] == 0: continue
-            P_ = (rng.randint(1, 5), rng.randint(2, 6))
+            P_ = (rng.randint(1, 5), rng.randint(2, 5))
             ex = exit_x(P_, t if t[1] < 0 else (-t[0], -t[1]))
             if ex is None or ex in (0, 6): continue       # the line leaves through the top edge, never at a corner (audit R2-2)
             k = rng.randint(2, 3)
@@ -179,8 +179,8 @@ def page36():
                 return cx_, cy_
             raise RuntimeError("P3-36 label")
         la = lab_pos(pa, -1); lb = lab_pos(pb, 1)
-        g.append(f'<text x="{la[0]:.1f}" y="{la[1] + 1.5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">A</text><text x="{lb[0]:.1f}" y="{lb[1] + 1.5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">B</text>')
-        g.append(f'<circle class="pt" cx="{ox + P_[0] * u:.1f}" cy="{oy + P_[1] * u:.1f}" r="1.5" fill="#000"/><text x="{ox + P_[0] * u + 1.6:.1f}" y="{oy + P_[1] * u + 4.6:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" fill="#000">P</text>')
+        g.append(f'<text x="{la[0]:.1f}" y="{la[1] + 1.5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.2" stroke="#fff" stroke-width="1.3" paint-order="stroke" fill="#000">A</text><text x="{lb[0]:.1f}" y="{lb[1] + 1.5:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="600" font-size="4.2" stroke="#fff" stroke-width="1.3" paint-order="stroke" fill="#000">B</text>')
+        g.append(f'<circle class="pt" cx="{ox + P_[0] * u:.1f}" cy="{oy + P_[1] * u:.1f}" r="1.5" fill="#000"/><text x="{ox + P_[0] * u + 1.6:.1f}" y="{oy + P_[1] * u + 4.6:.1f}" font-family="Fredoka" font-weight="600" font-size="4.2" stroke="#fff" stroke-width="1.3" paint-order="stroke" fill="#000">P</text>')
         for x, l in lmap.items():
             g.append(f'<text class="tl" data-x="{x}" x="{ox + x * u:.1f}" y="{oy - 2.3:.1f}" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="5.0" fill="#000">{l}</text>')
         fig = svg(54, 52, "".join(g))

@@ -222,7 +222,7 @@ def page29():
           f"Bus D arrives at {t24(d_a)} h. The journey takes {hm_text(d_dur)}. At what time did it leave?",
           f"How many minutes does Bus E take?", f"Bus B leaves after Bus A arrives. How many minutes is the wait?"]
     cards = [qcard(i + 1, f"<p>{q}</p>", f'<span class="ab w4"></span> <b>{"h" if i in (2, 3) else "min"}</b>') for i, q in enumerate(qs)]
-    pre = f'<div class="blk" style="margin-bottom:3.5mm"><p class="lead">The 24-hour clock timetable. Times are four digits, for example 0915 h.</p>{table_html}</div>'
+    pre = f'<div class="blk" style="margin-bottom:2mm"><p class="lead">The 24-hour clock timetable. Times are four digits, for example 0915 h.</p>{table_html}</div>'
     P = code_items_page(29, 4929, "Time Detective", 2, "Time: the 24-hour clock, start, finish and how long", STRAND_ME,
         "2.2, 2.3 (starting time, finishing time or duration; 24-hour clock)", ["TI2.2", "TI2.3"], "Code-breaker (timetable)",
         ["Use the timetable and the questions.", "Write each answer in the box.", INSTR_CODE],
@@ -230,7 +230,7 @@ def page29():
         "; ".join(f"{i+1}) {fmtv(a)}" for i, a in enumerate(ans)),
         "A timetable of buses in the 24-hour clock (four digits, with h). Questions: how long three journeys take, when a journey that leaves at a given time and takes a given time arrives, when a journey that arrives at a given time and takes a given time left, and the wait between two buses. Answers that are times are written with four digits (a leading zero for the early hours); answers that are lengths are in minutes. The decoy letters stand for counting a hundred minutes in an hour, or for an hour out. A box left blank gives no letter and the check cannot see it.",
         pre_body=pre, fmt=fmtv, domain=None)
-    P["instr"] = ["Use the timetable and the questions.", "Write each answer in the box. A time has four digits.", INSTR_CODE]
+    P["instr"] = ["Use the timetable and the questions.", "Write each answer in the box. " + INSTR_CODE]
     tt = {}
     for row in re.findall(r"<tr><td>(\w)</td><td>(\d{4}) h</td><td>(\d{4}) h", P["body"]): tt[row[0]] = (int(row[1][:2]) * 60 + int(row[1][2:]), int(row[2][:2]) * 60 + int(row[2][2:]))
     solved = []

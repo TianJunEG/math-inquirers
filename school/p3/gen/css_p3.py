@@ -160,7 +160,7 @@ CSS_P3 += """
 .crow2.cmp .opt{padding:0.5mm 1mm 0.5mm 2mm;border-width:0.6mm}.crow2.cmp .copts{gap:2mm}.crow2.cmp .opt b.on{font-size:14pt}.crow2.cmp .qs2{font-size:12pt;line-height:1.15}.ab2{flex:none}.crow2.cmp .cq2{min-width:26mm}
 """
 CSS_P3 += """
-.angfig svg,.lnfig svg{max-width:none;display:block}.angfig svg{width:30mm;height:30mm}.crow2.angrow,.crow2.lnrow{padding:1mm 0 2mm}.crow2.lnrow .cq2{display:flex;align-items:center;gap:3mm}.crow2.lnrow .qs2{font-size:11.5pt;max-width:42mm}
+.angfig svg,.lnfig svg{max-width:none;display:block}.angfig svg{width:30mm;height:30mm}.crow2.angrow,.crow2.lnrow{padding:1mm 0 2mm}.crow2.lnrow .cq2{display:flex;align-items:center;gap:3mm}.crow2.lnrow .qs2{font-size:11.5pt;max-width:52mm}
 .crow2.lnrow .opt b.on{font-size:15pt}.crow2.angrow .opt b.on{font-size:12pt}.crow2.angrow .opt{padding:1mm 1mm 1mm 2mm}
 .qg.dl{gap:3mm 5mm}.qc.dlr{flex-direction:row;align-items:center;gap:2mm;padding:1.5mm 2mm;position:relative}.qc.dlr .no2{position:absolute;left:1.5mm;top:1.5mm}.dlf svg{max-width:none;display:block;width:50mm;height:48mm}.dlt{font-size:11pt;line-height:1.2;margin:0}
 .gwrap{display:flex;justify-content:center}.gwrap svg,.gtwo svg{max-width:none;display:block}.gtwo{display:flex;gap:4mm;justify-content:center}

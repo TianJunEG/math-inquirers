@@ -312,7 +312,7 @@ for p in pages:
         for ln in _lines:
             m = _wsq(ln)
             if not m: continue
-            if _kind == "pupil": ok = m in _T
+            if _kind == "pupil": ok = m.replace("\u25a1", "") in _T
             else: ok = re.search(".{0,14}?".join(re.escape(x) for x in m.split("\u25a1")), _T, re.S) is not None
             if not ok: _miss.append(ln)
         rec(f"{p['code']}: all {len(_lines)} question lines of the colour page's sheet are printed in {_f} ({_kind} page)", bool(_T) and not _miss, str(_miss[:3]))
