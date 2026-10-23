@@ -88,8 +88,8 @@ def page29():
     for _ in range(8000):
         items = []
         for k in range(6):
-            b = rng.randint(5, 16); h = rng.randint(4, 12)
-            if (b * h) % 2 or not 0.6 <= b / h <= 3.2: continue
+            b = rng.randint(6, 16); h = rng.randint(4, 11)
+            if (b * h) % 2 or not 0.9 <= b / h <= 3.0: continue
             foot = rng.choice([0.3, 0.45, 0.6, 0.75, -0.2, 1.2, 0.001]) if k != 1 else 0.001
             side = rng.randint(max(b, h) + 1, max(b, h) + 6) if (rng.random() < .55 and b >= 8) else None
             items.append((b, h, foot, side))
@@ -118,7 +118,7 @@ def page29():
 def page30():
     rng = random.Random(5130)
     T = 30
-    pairs = [(b, 2 * T // b) for b in range(4, 2 * T) if (2 * T) % b == 0 and 4 <= 2 * T // b <= 30 and b <= 30 and 0.25 <= b / (2 * T // b) <= 4]
+    pairs = [(b, 2 * T // b) for b in range(4, 2 * T) if (2 * T) % b == 0 and 4 <= 2 * T // b <= 30 and b <= 30 and 0.4 <= b / (2 * T // b) <= 2.6]
     def cell(b, h):
         return tri_base_height(b, h, rng.choice([0.2, 0.4, 0.5, 0.6, 0.8, -0.2, 1.2]), None, w=40, hh=31)
     def make_on(i):
@@ -126,7 +126,7 @@ def page30():
     def make_off():
         while True:
             prod = rng.choice([T, 4 * T, 2 * T + 6, 2 * T - 8, 3 * T, 2 * T + 12, T + 6, 2 * T - 4])
-            ps = [(b, prod // b) for b in range(4, 31) if prod % b == 0 and 4 <= prod // b <= 30 and 0.25 <= b / (prod // b) <= 4]
+            ps = [(b, prod // b) for b in range(4, 31) if prod % b == 0 and 4 <= prod // b <= 30 and 0.4 <= b / (prod // b) <= 2.6]
             if ps:
                 b, h = rng.choice(ps); return cell(b, h)
     n = 4; L = 8

@@ -112,7 +112,9 @@ def angle_fig_svg(vertex, rays, marks, size=(60, 40), R=24):
         xa, ya = pol(cx, cy, rad, a1); xb, yb = pol(cx, cy, rad, a2)
         p.append(f'<path class="arc" data-a="{small}" data-from="{r1}" data-to="{r2}" d="M{xa:.2f},{ya:.2f} A{rad},{rad} 0 0 0 {xb:.2f},{yb:.2f}" fill="none" stroke="#000" stroke-width="0.6"/>')
         if small:
-            tx, ty = pol(cx, cy, rad + 3.4, (a1 + a2) / 2)
+            cands = [(a1 + a2) / 2, a1 + 0.22 * (a2 - a1), a1 + 0.78 * (a2 - a1)]
+            best = max(cands, key=lambda c: min(abs(c - d) for d in rays.values()))        # keep the small letter clear of any ray inside the arc
+            tx, ty = pol(cx, cy, rad + 3.4, best)
             p.append(f'<text class="small" data-a="{small}" x="{tx:.2f}" y="{ty:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="4.4" fill="#000">{small}</text>')
     p.append(f'<text class="vtx" x="{cx - 3.3:.2f}" y="{cy + 3.2:.2f}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="600" font-size="4.6" fill="#000">{vertex}</text>')
     return svg(W, H, "".join(p))
@@ -140,7 +142,7 @@ def read_angle_fig(s):
 def protractor_svg(angle, base="right", R=28.0, size=72):
     """a protractor (outer scale 0 to 180 from the right, inner scale 0 to 180 from the left, a tick every 5 degrees, numbers every 20 degrees on both scales, all printed along the radius) with an angle drawn from its centre.
     base='right': the arm along the base points to the right and the other arm is `angle` degrees above it; base='left': the base arm points to the left."""
-    W = size; H = R + 4.5 + 13.5; cx = W / 2; cy = R + 4.5
+    W = size; H = R + 4.5 + 15.0; cx = W / 2; cy = R + 4.5
     Ri = R - 12.5
     p = [f'<path d="M{cx - R:.2f},{cy:.2f} A{R},{R} 0 0 1 {cx + R:.2f},{cy:.2f} Z" fill="#fff" stroke="#000" stroke-width="0.55"/>']
     p.append(f'<path d="M{cx - Ri:.2f},{cy:.2f} A{Ri},{Ri} 0 0 1 {cx + Ri:.2f},{cy:.2f}" fill="none" stroke="#000" stroke-width="0.35"/>')

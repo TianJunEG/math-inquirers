@@ -20,7 +20,7 @@ def money_val(t):
     return Fr(Decimal(t.replace("$", "").replace(NB, "").replace(",", "")))
 
 # =============================================================================== P5-21 How Many Percent? (code word)
-def bar_svg(parts, shaded, w=70, hh=11):
+def bar_svg(parts, shaded, w=72, hh=11):
     pw = (w - 2) / parts; o = []
     for k in range(parts):
         x = 1 + k * pw

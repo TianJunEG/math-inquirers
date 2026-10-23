@@ -396,7 +396,7 @@ def page18():
 def page19():
     rng = random.Random(5719)
     for _ in range(8000):
-        angs = rng.sample(range(25, 166, 5), 6)
+        angs = rng.sample([x for x in range(25, 166, 5) if x % 20], 6)
         bases = ["right", "left", "right", "left", "left", "right"]; rng.shuffle(bases)
         if sum(1 for a in angs if a > 90) < 2 or sum(1 for a in angs if a < 90) < 2: continue
         if any(180 - a in angs for a in angs): continue
@@ -412,11 +412,11 @@ def page19():
         "1.2 (measuring angles in degrees)", ["AN1.2"], "Code-breaker (protractor)",
         ["Read each angle on the protractor.", "Start at 0 on the arm along the base. Use the code table."], qgrid(cards, 2), angs, table, word, 0, 180,
         "; ".join(f"{i+1}) {a} degrees (base arm to the {b})" for i, (a, b) in enumerate(zip(angs, bases))),
-        "Six angles drawn on a protractor with a scale from each side, one arm along the base line, pointing to the right on three drawings and to the left on three. The pupil starts counting from 0 on the arm along the base, so a drawing with the base arm on the left must be read on the other scale. The decoy letters stand for 180 minus the angle (the wrong scale) and for a reading that is 5 or 10 degrees out. All sizes are multiples of 5. The page measures reading a protractor; drawing an angle with a protractor cannot be checked on a printed page. A box left blank gives no letter and the check cannot see it.",
+        "Six angles drawn on a protractor with a scale from each side, one arm along the base line, pointing to the right on three drawings and to the left on three. The pupil starts counting from 0 on the arm along the base, so a drawing with the base arm on the left must be read on the other scale. The decoy letters stand for 180 minus the angle (the wrong scale) and for a reading that is 5 or 10 degrees out. All sizes are multiples of 5 and none is a multiple of 20, so an arm never lies over a printed number. The page measures reading a protractor; drawing an angle with a protractor cannot be checked on a printed page. A box left blank gives no letter and the check cannot see it.",
         domain=dom, cols=8)
     solved = [A4.read_protractor(p) for p in re.findall(r"<svg.*?</svg>", P["body"], re.S)]
     P.v("V1 independent solver (the two arms read from the drawing: the angle between them) equals the key", solved == angs, solved)
-    P.v("V7 angles are multiples of 5 between 25 and 165; arms point both to the right and to the left", all(a % 5 == 0 and 25 <= a <= 165 for a in angs) and set(bases) == {"right", "left"})
+    P.v("V7 angles are multiples of 5 (not of 20) between 25 and 165; arms point both to the right and to the left", all(a % 5 == 0 and a % 20 and 25 <= a <= 165 for a in angs) and set(bases) == {"right", "left"})
     P.v("V7b no angle is 180 minus another, so a wrong-scale reading is never another answer", not any(180 - a in angs for a in angs))
     return P
 
