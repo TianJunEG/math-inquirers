@@ -449,7 +449,7 @@ PASS  CBC-P2-08 pupil: layout: no page overflow, picture above the check box, ch
 PASS  CBC-P2-08 teacher: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
 PASS  CBC-P2-08 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
 PASS  CBC-P2-09 pupil: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
-PASS  CBC-P2-09 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 252.8, 'chkTop': 253.8, 'chkBottom': 273.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
+PASS  CBC-P2-09 pupil: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 247.7, 'chkTop': 248.7, 'chkBottom': 268.4, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
 PASS  CBC-P2-09 teacher: real browser text of all 13 labels lies inside its region, clear of outlines and decorations  []
 PASS  CBC-P2-09 teacher: layout: no page overflow, picture above the check box, check box above the footer, 14.4 to 195.6 mm sides  {'pageOverflow': False, 'svgBottom': 248.2, 'chkTop': 249.2, 'chkBottom': 268.8, 'footerTop': 284.0, 'footerBottom': 289.0, 'headerTop': 9.0, 'minLeft': 14.5, 'maxRight': 195.5}
 PASS  CBC-P2-10 pupil: real browser text of all 14 labels lies inside its region, clear of outlines and decorations  []
@@ -651,10 +651,10 @@ PASS  CBC-P2-09 pupil: footer has a school-name field and the worksheet code
 PASS  CBC-P2-09 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-P2-09 pupil: every blank box a pupil writes in is at least 6 mm wide (13 boxes, smallest 6.0 mm)  
 PASS  CBC-P2-09 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
-PASS  CBC-P2-09 pupil: 1-bit render at 150 dpi keeps the ink (loss 7.2%, needs <= 25%)  
+PASS  CBC-P2-09 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.9%, needs <= 25%)  
 PASS  CBC-P2-09 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-09 pupil: all 13 regions stay separate white areas in the 1-bit render (33 large white areas incl. background and boxes)  
-PASS  CBC-P2-09 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, cloud_2; needs <= 40%)  
+PASS  CBC-P2-09 pupil: every label keeps its ink in the 1-bit render (worst 17% lost, sail_b; needs <= 40%)  
 PASS  CBC-P2-09 teacher: one A4 page  
 PASS  CBC-P2-09 teacher: fonts embedded  3 fonts
 PASS  CBC-P2-09 teacher: wording rules (no price, Mi, alignment claim, division sign; cents written 50¢ not 50c)  []
