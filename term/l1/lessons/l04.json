@@ -2846,7 +2846,26 @@
       "text": "On the 100 square a counter is on 58. It moves down 1 row. Which number is it on?",
       "answer": "68",
       "val": 68,
-      "solution": "Down one row is 10 more. 58 and 10 more is 68."
+      "solution": "Down one row is 10 more. 58 and 10 more is 68.",
+      "visual": {
+        "type": "hundred",
+        "rows": [
+          5,
+          7
+        ],
+        "cols": [
+          7,
+          9
+        ],
+        "mark": [
+          58
+        ],
+        "hide": [
+          68
+        ],
+        "qmarks": true,
+        "cell": 46
+      }
     },
     {
       "id": "H3",

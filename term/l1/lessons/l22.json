@@ -2680,18 +2680,28 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "The long hand is on the 4. Count in 5s. How many minutes past the hour is that? ___ minutes",
+   "text": "Look at the clock. The long hand is on the 4. Count in 5s. How many minutes past the hour is that? ___ minutes",
    "answer": "20",
    "val": 20,
-   "solution": "Count in 5s from the 12: 5, 10, 15, 20. The 4 is 20 minutes past the hour."
+   "solution": "Count in 5s from the 12: 5, 10, 15, 20. The 4 is 20 minutes past the hour.",
+   "visual": {
+    "type": "clock",
+    "h": 6,
+    "m": 20
+   }
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "The long hand is on the 7. The short hand has passed the 8. Write the time in digits. ___",
+   "text": "Look at the clock. The long hand is on the 7. The short hand has passed the 8. Write the time in digits. ___",
    "answer": "8:35",
    "val": "8:35",
-   "solution": "The long hand on the 7 is 35 minutes. The short hand has passed the 8, so the time is 8:35."
+   "solution": "The long hand on the 7 is 35 minutes. The short hand has passed the 8, so the time is 8:35.",
+   "visual": {
+    "type": "clock",
+    "h": 8,
+    "m": 35
+   }
   },
   {
    "id": "H3",

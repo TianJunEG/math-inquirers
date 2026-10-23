@@ -40,7 +40,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
 .stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
-.keybox .a{font-weight:800;color:#1F7A6F}\n.hvis{display:flex;gap:10px;align-items:flex-end;margin:2px 0 2px 24px}.hvis .hv{width:calc(100%/var(--n));max-width:var(--hw,34mm)}.hm.t1 .hv,.hm.t2 .hv{max-width:30mm}
+.keybox .a{font-weight:800;color:#1F7A6F}\n.qbox:has(.hvis){position:relative}.hvis{position:absolute;right:10px;top:2px;display:flex;gap:6px}.hvis .hv{width:25mm}.qbox:has(.hvis) .qt{display:block;margin-right:27mm}.hm.t2 .hv,.hm.t3 .hv{width:22mm}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:16px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}
 """
 
 
@@ -297,7 +297,7 @@ def build_print(d, pw):
         head = kp[:kp.index('<body>') + 6]
         render('kit', head + ''.join(kit_pages(d)) + '</body></html>', f + f' \u2022 Lesson {d["lesson_in_term"]} \u2022 Kit (print one side only)', f'L{n}_Kit_Pages.pdf')
     render('workbook_key', key_html(d), f + ' \u2022 Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
-    for lvl in (0, 1, 2):
+    for lvl in (0, 1, 2, 3):
         d['_home_tight'] = lvl
         path = render('home', home_html(d), f + ' \u2022 Home practice', f'L{n}_Home_Practice.pdf')
         if pdfcheck.pdf_pages(path) == 1: break

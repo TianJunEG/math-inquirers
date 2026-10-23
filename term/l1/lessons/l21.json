@@ -2629,38 +2629,58 @@
   {
    "id": "H1",
    "tier": "start",
-   "text": "The long hand is on the 6. Is it o'clock or half past? Circle one.",
+   "text": "Look at the clock. The long hand is on the 6. Is it o'clock or half past? Circle one.",
    "choices": [
     "o'clock",
     "half past"
    ],
    "answer": "half past",
    "val": "half past",
-   "solution": "The long hand on the 6 means half past. The long hand on the 12 means an o'clock time."
+   "solution": "The long hand on the 6 means half past. The long hand on the 12 means an o'clock time.",
+   "visual": {
+    "type": "clock",
+    "h": 4,
+    "m": 30
+   }
   },
   {
    "id": "H2",
    "tier": "start",
-   "text": "The long hand is on the 12. The short hand is on the 5. Write the time in digits. ___",
+   "text": "Look at the clock. The long hand is on the 12. The short hand is on the 5. Write the time in digits. ___",
    "answer": "5:00",
    "val": "5:00",
-   "solution": "The long hand on the 12 means an o'clock time. The short hand is on the 5, so it is 5 o'clock, 5:00."
+   "solution": "The long hand on the 12 means an o'clock time. The short hand is on the 5, so it is 5 o'clock, 5:00.",
+   "visual": {
+    "type": "clock",
+    "h": 5,
+    "m": 0
+   }
   },
   {
    "id": "H3",
    "tier": "start",
-   "text": "The long hand is on the 6. The short hand is half way between the 8 and the 9. Write the time in digits. ___",
+   "text": "Look at the clock. The long hand is on the 6. The short hand is half way between the 8 and the 9. Write the time in digits. ___",
    "answer": "8:30",
    "val": "8:30",
-   "solution": "The long hand on the 6 means half past. The short hand has passed the 8, so it is half past 8, 8:30."
+   "solution": "The long hand on the 6 means half past. The short hand has passed the 8, so it is half past 8, 8:30.",
+   "visual": {
+    "type": "clock",
+    "h": 8,
+    "m": 30
+   }
   },
   {
    "id": "H4",
    "tier": "think",
-   "text": "The long hand is on the 9. Count in 5s. How many minutes past the hour is that? ___ minutes",
+   "text": "Look at the clock. The long hand is on the 9. Count in 5s. How many minutes past the hour is that? ___ minutes",
    "answer": "45",
    "val": 45,
-   "solution": "Count in 5s from the 12: 5, 10, 15, 20, 25, 30, 35, 40, 45. The 9 is 45 minutes past the hour."
+   "solution": "Count in 5s from the 12: 5, 10, 15, 20, 25, 30, 35, 40, 45. The 9 is 45 minutes past the hour.",
+   "visual": {
+    "type": "clock",
+    "h": 3,
+    "m": 45
+   }
   },
   {
    "id": "H5",
