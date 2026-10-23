@@ -194,7 +194,7 @@ def run(d):
     q = H['H3']; eq(find(lambda x: x + 8 == 20), [12], 'H3 20 take away 8'); eq(12 == 13, False, 'H3 the child is wrong'); eq(q['val'], ['Wrong', 12], 'H3 val')
     q = H['H4']; fits = [x for x in range(0, 40) if 7 < x < 12]; eq(fits, [8, 9, 10, 11], 'H4 four numbers fit'); eq(q['val'], 4, 'H4 val')
     l20 = json.load(open(os.path.join(L1, 'lessons', 'l20.json')))['home_practice']; src = [h for h in l20 if h['id'] == 'H1'][0]; q = H['H5']
-    eq((q['answer'], q['val']), ('$2', 2), 'H5 answer (the Term 2 Lesson 10 home item H1 was reworded by the Term 2 rebuild, so only the arithmetic is checked here; the text is a copy made before that rebuild)'); eq(q['rewind_of'], 'Term 2 Lesson 10', 'H5 tag'); eq([u for u in range(1, 30) if times(u, 5) == 10], [2], 'H5 1 pen costs $2')
+    src19 = [h for h in json.load(open(os.path.join(L1, 'lessons', 'l19.json')))['home_practice'] if h['id'] == 'H1'][0]; eq((q['text'], q['answer'], q['val']), (src19['text'], src19['answer'], src19['val']), 'H5 is the Term 2 Lesson 9 (Find One First, Lesson 19) item H1, copied'); eq(q['rewind_of'], 'Term 2 Lesson 9', 'H5 tag'); eq([u for u in range(1, 30) if times(u, 5) == 10], [2], 'H5 1 pen costs $2')
     eq([h['tier'] for h in d['home_practice']], ['start', 'start', 'start', 'think', 'start'], 'home tiers')
     # ---------------------------------------------------------------- the Quest: every gate recomputed from its picture
     cq = d['challenge_quest']; eq(cq['scope'], 'year', 'Quest scope is the year'); eq(len(cq['questions']), 8, '8 gates'); eq(cq['sheet_pages'], 4, '4 pages')

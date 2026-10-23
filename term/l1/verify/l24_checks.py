@@ -2,7 +2,7 @@
 
 All money is held in whole cents here ($1 = 100 cents), so nothing depends on how the lesson writes an amount. Every count of coins and notes is recomputed from the pieces drawn in the figures,
 every 'ways' and 'fewest' answer is found by brute force or by dynamic programming (not by the greedy method that the lesson teaches), and the printed kit pages are read back from the kit builder
-(the pieces on each page are counted in its SVG) and compared with the kit contract and with the most any task uses. The Term 2 Lesson 10 token page (30 tokens) is read from l20.json.
+(the pieces on each page are counted in its SVG) and compared with the kit contract and with the most any task uses. The Term 2 Lesson 9 token page (30 tokens) is read from l19.json.
 The class and workbook coin sets and (price, paid) pairs are listed here and checked to be disjoint, and clear of the Quest gate (50, 20, 20, 5 cents; $7 paid with $10).
 """
 import itertools
@@ -214,8 +214,8 @@ def run(d):
     for r in d['materials']['kit_contract']:
         if r['piece'] in names: eq(r['supplied'], printed[names[r['piece']]], r['piece'] + ' supplied matches the printed page')
         eq(r['supplied'] >= r['max_used'], True, r['piece'] + ' supplied covers the most used')
-    l20 = json.load(open(os.path.join(os.path.dirname(HERE), 'lessons', 'l20.json')))
-    eq(len([x for x in l20['workbook']['kits'][0]['labels'] if x == '$1']), 30, 'Term 2 Lesson 10 prints 30 $1 tokens')
+    l20 = json.load(open(os.path.join(os.path.dirname(HERE), 'lessons', 'l19.json')))
+    eq(len([x for x in l20['workbook']['kits'][0]['labels'] if x == '$1']), 30, 'Term 2 Lesson 9 prints 30 $1 tokens')
     tok = [r for r in d['materials']['kit_contract'] if 'one-dollar' in r['piece']][0]; eq((tok['supplied'], tok['max_used'] <= tok['supplied']), (30, True), 'tokens supplied')
     eq((1000 - 600) // 100 <= 5, True, 'explore ruler change uses at most four $1 tokens (the contract maximum is 5)')
     # ---------------------------------------------------------------- hand-off to the next lesson (price tags: 12 tags)
