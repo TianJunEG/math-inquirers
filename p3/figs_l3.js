@@ -48,7 +48,7 @@ const tline = (o) => {
 };
 const l9q5a = () => tline({ t0: 938, t1: 1037, ticks: [{ t: 945, label: '3:45 pm' }, { t: 960, label: '4:00' }, { t: 1020, label: '5:00' }, { t: 1030, label: '5:10 pm' }], hops: [[945, 960, '? min'], [960, 1020, '? h'], [1020, 1030, '? min']], label: 'Time line from 3:45 pm to 5:10 pm with the o’clock times 4:00 and 5:00' });
 const l9q5b = () => tline({ t0: 988, t1: 1090, ticks: [{ t: 995, label: '4:35 pm' }, { t: 1020, label: '5:00' }, { t: 1080, label: '6:00' }], hops: [[995, 1020, '? min'], [1020, 1080, '? min']], label: 'Time line starting at 4:35 pm with 5:00 and 6:00 marked' });
-const l9q5c = () => tline({ t0: 1190, t1: 1285, ticks: [{ t: 1200, label: '8:00' }, { t: 1260, label: '9:00' }, { t: 1275, label: '9:15 pm' }], hops: [[1260, 1275, '? min']], label: 'Time line ending at 9:15 pm with 7:00, 8:00 and 9:00 marked' });
+const l9q5c = () => tline({ t0: 1190, t1: 1285, ticks: [{ t: 1200, label: '8:00' }, { t: 1260, label: '9:00' }, { t: 1275, label: '9:15 pm' }], hops: [[1260, 1275, '? min']], label: 'Time line ending at 9:15 pm with 8:00 and 9:00 marked' });
 const l9q6 = () => { // buses every 25 minutes from 06:40; Ravi arrives 08:15
   const t0 = 395, ticks = []; for (let k = 0; k < 6; k++) ticks.push({ t: 400 + k * 25, label: k === 0 ? '06:40' : '' });
   ticks.push({ t: 495, label: '08:15', big: true });

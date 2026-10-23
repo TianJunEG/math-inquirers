@@ -57,7 +57,7 @@ const cornerFig = () => {
   const A = [20, B[1]], C = [B[0] + 95 * Math.cos(t * r), B[1] + 95 * Math.sin(t * r)];
   const pt = (rad, a) => [(B[0] + rad * Math.cos(a * r)).toFixed(1), (B[1] + rad * Math.sin(a * r)).toFixed(1)];
   const arc = (rad, a1, a2, col) => `<path d="M${pt(rad, a1).join(' ')} A${rad} ${rad} 0 0 1 ${pt(rad, a2).join(' ')}" fill="none" stroke="${col}" stroke-width="3.5"/>`;
-  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" style="width:240px;max-width:100%">`;
+  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 8 300 116" xmlns="http://www.w3.org/2000/svg" style="width:220px;max-width:100%">`;
   s += `<line x1="${B[0]}" y1="${B[1]}" x2="${B[0] + 110}" y2="${B[1]}" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="7 5"/>`;
   s += `<polyline points="${A.join(',')} ${B.join(',')} ${C.map(v => v.toFixed(1)).join(',')}" fill="none" stroke="${NAVY}" stroke-width="4" stroke-linejoin="round"/>`;
   s += `<polygon points="60,${B[1] - 8} 80,${B[1]} 60,${B[1] + 8}" fill="${TEAL}"/>`;

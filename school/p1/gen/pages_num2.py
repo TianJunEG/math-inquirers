@@ -293,4 +293,81 @@ def page25():
     finish_code(P, ans, table, word, 0, 20, plain="Code word (5 letters)")
     return P
 
-PAGES = [page23, page24, page25]
+
+# ---------------------------------------------------------------- N06 Hundred Chart Patterns (P1-26)
+def chart_html(base, blanks):
+    cells = ""
+    for r in range(5):
+        for c in range(10):
+            v = base + 10 * r + c
+            cells += '<div class="hc ab"></div>' if (r, c) in blanks else f'<div class="hc">{v}</div>'
+    return f'<div class="hchart">{cells}</div>'
+
+def read_chart(h):
+    """independent reader: the 50 cells as ints (None for a box)"""
+    toks = re.findall(r'<div class="hc( ab)?">(\d*)</div>', h)
+    return [None if a else int(v) for a, v in toks]
+
+def table_html(vals, blanks):
+    th = "".join(f"<th>Day {i+1}</th>" for i in range(len(vals)))
+    td = "".join('<td><span class="ab"></span></td>' if i in blanks else f"<td>{v}</td>" for i, v in enumerate(vals))
+    return f'<table class="dtable"><tr>{th}</tr><tr>{td}</tr></table>'
+
+def page26():
+    rng = random.Random(2606)
+    word = "PEANUT"
+    while True:
+        base = rng.choice([1, 11, 21, 31, 41, 51])
+        pos = rng.sample([(r, c) for r in range(1, 5) for c in range(1, 9)], 2)
+        if abs(pos[0][0] - pos[1][0]) + abs(pos[0][1] - pos[1][1]) < 3: continue
+        pos.sort()
+        ans_chart = [base + 10 * r + c for r, c in pos]
+        up_r, up_c = rng.randint(0, 3), rng.randint(0, 9); dn_r, dn_c = rng.randint(1, 4), rng.randint(0, 9)
+        x = base + 10 * up_r + up_c; y = base + 10 * dn_r + dn_c
+        if (up_r, up_c) in pos or (up_r + 1, up_c) in pos or (dn_r, dn_c) in pos or (dn_r - 1, dn_c) in pos: continue
+        step = rng.choice([2, 3, 4, 5]); days = [step * (i + 1) for i in range(6)]
+        tb = rng.sample([2, 3, 4, 5], 2); tb = sorted(tb)
+        ans = ans_chart + [x + 10, y - 10] + [days[i] for i in tb]
+        if len(set(ans)) != 6 or max(ans) > 100: continue
+        table = make_code_table(ans, word, rng, 1, 100, n_decoy=5, near=(1, -1, 10, -10, 2, -2), tries=60)
+        if table: break
+    ch = chart_html(base, set(pos)); tb_html = table_html(days, set(tb))
+    mq = (f'<div class="mq"><span class="mqi"><span class="no">3</span>10 more than {x} is <span class="ab"></span></span>'
+          f'<span class="mqi"><span class="no">4</span>10 less than {y} is <span class="ab"></span></span></div>')
+    body = (f'<div class="blk"><p class="lead">1 and 2: fill the empty boxes, reading order.</p>{ch}</div>{mq}'
+            f'<div class="blk"><p class="lead">5 and 6: Mei gets sweets each day. Write the missing numbers.</p>{tb_html}</div>{code_block(table)}')
+    P = Page(no=26, title="Chart Patterns", tier=2, topic="Number patterns on a chart: 10 more, 10 less, and a growing table",
+             strand="Number and Algebra - Whole Numbers", syll="1.6, 1.2, 1.5 (patterns in number sequences; tens and ones; comparing and ordering numbers)",
+             ptype="Code-breaker (chart and pattern)", mech="K1 code word (6 letters)",
+             instr=["Use the chart and the table.", "Write the missing numbers.", "Use the code table."],
+             body=body, check="Write the letters in order. Do they spell a word?", check_boxes=6,
+             key=dict(answers=f"1) {ans[0]}, 2) {ans[1]}, 3) {ans[2]}, 4) {ans[3]}, 5) {ans[4]}, 6) {ans[5]}", check_result=f"Code word: {word}"),
+             note=("A piece of a 100 chart with two boxes, two questions about 10 more and 10 less (one box down or up the chart), and a growing table: the sweets go up by "
+                   f"{step} each day. The two table answers continue the pattern. The syllabus asks for patterns in number sequences; the chart makes the 10 more, 10 less pattern visible. "
+                   "The plan drew this page as a hidden picture; a hidden picture can reject only about two thirds of wrong numbers, so it is a code word page to meet the 95% rule."),
+             seed=2606)
+    cells = read_chart(ch)
+    def deduce(i):
+        r, c = divmod(i, 10)
+        cand = set()
+        if c > 0 and cells[i - 1] is not None: cand.add(cells[i - 1] + 1)
+        if r > 0 and cells[i - 10] is not None: cand.add(cells[i - 10] + 10)
+        if c < 9 and cells[i + 1] is not None: cand.add(cells[i + 1] - 1)
+        if r < 4 and cells[i + 10] is not None: cand.add(cells[i + 10] - 10)
+        return cand
+    blanks_i = [i for i, v in enumerate(cells) if v is None]
+    got = [deduce(i) for i in blanks_i]
+    solved = [next(iter(g)) for g in got]
+    m = re.findall(r"10 more than (\d+) is.*?10 less than (\d+) is", plain_text(mq).replace("  ", " ") if False else mq, re.S)
+    xm, ym = (int(v) for v in re.search(r"more than (\d+) is.*?less than (\d+) is", mq, re.S).groups())
+    solved += [cells[cells.index(xm) + 10], cells[cells.index(ym) - 10]]
+    vals = [int(v) if v else None for v in re.findall(r"<td>(\d*)", tb_html)]
+    known = [v for v in vals if v is not None]; d_ = known[1] - known[0]
+    solved += [vals[i - 1] if False else known[0] + d_ * i for i in tb]
+    P.v("V1 independent reader: each box in the chart is deduced from its printed neighbours (all agree), 10 more and 10 less are read from the chart, the table continues its pattern; all equal the key", solved == ans and all(len(g) == 1 for g in got), solved)
+    P.v("V1b the 10 more and 10 less answers are printed cells (not boxes), answers distinct and within 100", cells[cells.index(xm) + 10] is not None and cells[cells.index(ym) - 10] is not None and len(set(ans)) == 6 and max(ans) <= 100)
+    finish_code(P, ans, table, word, 1, 100)
+    P["facts"] = "100 " + " ".join(map(str, range(1, 101)))
+    return P
+
+PAGES = [page23, page24, page25, page26]
