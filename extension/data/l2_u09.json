@@ -1,0 +1,944 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 9,
+ "id": "L2U09",
+ "title": "Measure masters",
+ "topic": "Length, mass, volume and time",
+ "holiday_lesson": 9,
+ "goal": "I can solve balance puzzles and pouring puzzles. I can change units. I can tell the time to 5 minutes and find how long.",
+ "learn": {
+  "intro": "A balance that is level has the same mass on both sides. So you can swap a thing for whatever balances it. For time, count on in 5s on the clock. Count to the next hour first.",
+  "example": {
+   "problem": "The scale is level. 1 melon balances 3 plums. 1 plum has a mass of 50 g. Find the mass of the melon.",
+   "figure": {
+    "type": "l2_scale",
+    "scales": [
+     {
+      "left": [
+       "melon"
+      ],
+      "right": [
+       "plum",
+       "plum",
+       "plum"
+      ]
+     }
+    ],
+    "width_mm": 66
+   },
+   "side": true,
+   "steps": [
+    "Level scale: the melon is as heavy as 3 plums.",
+    "1 plum is 50 g. 3 plums are 3 × 50 g = 150 g.",
+    "So the melon is 150 g.",
+    "Check: 50 g + 50 g + 50 g = 150 g."
+   ],
+   "answer": "The melon has a mass of 150 g."
+  },
+  "howto": {
+   "title": "How to use a balance",
+   "steps": [
+    "A level balance means both sides are equal.",
+    "Swap a thing for what balances it.",
+    "Write the mass of each thing.",
+    "Check both sides."
+   ]
+  },
+  "facts": {
+   "title": "Units",
+   "lines": [
+    "1 kg = 1000 g.   1 m = 100 cm.",
+    "60 minutes = 1 hour.",
+    "Count on in 5s to the next hour first."
+   ]
+  },
+  "try": {
+   "id": "L2U09-L01",
+   "text": "One tin balances 4 pens. One pen has a mass of 25 g. Find the mass of the tin. {b} g",
+   "answer": {
+    "value": [
+     "100"
+    ],
+    "text": "100"
+   },
+   "explanation": "The tin is as heavy as 4 pens. 4 × 25 g = 100 g. Check: 25 + 25 + 25 + 25 = 100."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U09-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Read the clocks. Write each time.",
+   "figure": {
+    "type": "l2_clock",
+    "clocks": [
+     {
+      "h": 4,
+      "m": 35,
+      "label": "A"
+     },
+     {
+      "h": 8,
+      "m": 50,
+      "label": "B"
+     },
+     {
+      "h": 11,
+      "m": 15,
+      "label": "C"
+     }
+    ],
+    "width_mm": 135
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A: {b} : {b}",
+     "answer": {
+      "value": [
+       "4",
+       "35"
+      ],
+      "text": "4, 35"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B: {b} : {b}",
+     "answer": {
+      "value": [
+       "8",
+       "50"
+      ],
+      "text": "8, 50"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C: {b} : {b}",
+     "answer": {
+      "value": [
+       "11",
+       "15"
+      ],
+      "text": "11, 15"
+     }
+    }
+   ],
+   "explanation": "The short hand shows the hour and the long hand shows the minutes. Count in 5s round the clock. A: the long hand is on 7, which is 35 minutes, and the short hand is past 4: 4:35. B: the long hand is on 10, which is 50 minutes: 8:50. C: the long hand is on 3, which is 15 minutes: 11:15.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Write am or pm.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Mei eats breakfast at 7:30   {circ:am|pm}",
+     "answer": {
+      "value": [
+       "am"
+      ],
+      "text": "am"
+     }
+    },
+    {
+     "label": "b",
+     "text": "School ends at 1:30   {circ:am|pm}",
+     "answer": {
+      "value": [
+       "pm"
+      ],
+      "text": "pm"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ali goes to bed at 9:15   {circ:am|pm}",
+     "answer": {
+      "value": [
+       "pm"
+      ],
+      "text": "pm"
+     }
+    },
+    {
+     "label": "d",
+     "text": "The sun rises at 6:40   {circ:am|pm}",
+     "answer": {
+      "value": [
+       "am"
+      ],
+      "text": "am"
+     }
+    }
+   ],
+   "explanation": "am is from midnight to noon. pm is from noon to midnight. (a) Breakfast is in the morning: am. (b) 1:30 after lunch: pm. (c) Bedtime at night: pm. (d) Sunrise is in the morning: am.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the end or start time.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A film begins at 3:40 pm and runs for 35 minutes. It finishes at {b} : {b} pm.",
+     "answer": {
+      "value": [
+       "4",
+       "15"
+      ],
+      "text": "4, 15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A class starts at 9:50 am and ends at 10:30 am. It lasts {b} minutes.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A game ends at 5:05 pm. It lasted 25 minutes. It started at {b} : {b} pm.",
+     "answer": {
+      "value": [
+       "4",
+       "40"
+      ],
+      "text": "4, 40"
+     }
+    }
+   ],
+   "explanation": "(a) 3:40 to 4:00 is 20 minutes. 15 more minutes: 4:15. (b) 9:50 to 10:00 is 10 minutes, and 10:00 to 10:30 is 30 minutes: 40 minutes. (c) Count back 5 minutes to 5:00, then 20 more minutes: 4:40."
+  },
+  {
+   "id": "L2U09-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "A trip starts at 9:35 am and ends at 11:05 am. How long is the trip? Hint: draw a timeline.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The trip is {b} hour and {b} minutes long.",
+     "answer": {
+      "value": [
+       "1",
+       "30"
+      ],
+      "text": "1 hour 30 minutes"
+     }
+    }
+   ],
+   "explanation": "9:35 to 10:00 is 25 minutes. 10:00 to 11:00 is 1 hour. 11:00 to 11:05 is 5 minutes. 25 + 5 = 30 minutes. The trip is 1 hour 30 minutes.",
+   "space": {
+    "rows": [
+     "Draw a timeline:"
+    ]
+   }
+  },
+  {
+   "id": "L2U09-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "All the scales are level.",
+   "figure": {
+    "type": "l2_scale",
+    "scales": [
+     {
+      "left": [
+       "apple"
+      ],
+      "right": [
+       "lemon",
+       "lemon",
+       "lemon"
+      ],
+      "label": "Scale 1"
+     },
+     {
+      "left": [
+       "lemon"
+      ],
+      "right": [
+       "50 g"
+      ],
+      "label": "Scale 2"
+     }
+    ],
+    "width_mm": 120
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "1 lemon is {b} g",
+     "answer": {
+      "value": [
+       "50"
+      ],
+      "text": "50"
+     }
+    },
+    {
+     "label": "b",
+     "text": "1 apple is {b} g",
+     "answer": {
+      "value": [
+       "150"
+      ],
+      "text": "150"
+     }
+    }
+   ],
+   "explanation": "Scale 2: 1 lemon is 50 g. Scale 1: 1 apple is as heavy as 3 lemons: 3 × 50 = 150 g.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "You have a 5 ℓ jug and an 8 ℓ jug with no marks. Both jugs are empty.",
+   "figure": {
+    "type": "l2_jugs",
+    "jugs": [
+     {
+      "cap": 5
+     },
+     {
+      "cap": 8
+     }
+    ],
+    "width_mm": 40
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Fill the 8 ℓ jug. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug now holds {b} ℓ.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Empty the 5 ℓ jug. Pour the 3 ℓ in. Fill the 8 ℓ jug again. Pour into the 5 ℓ jug until it is full. The 8 ℓ jug now holds {b} ℓ.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "(a) 8 - 5 = 3 ℓ is left in the 8 ℓ jug. (b) The 5 ℓ jug holds 3 ℓ, so it needs 2 ℓ more. The 8 ℓ jug gives 2 ℓ: 8 - 2 = 6 ℓ is left.",
+   "figside": true
+  },
+  {
+   "id": "L2U09-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Circle the better unit.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The mass of an egg   {circ:g|kg}",
+     "answer": {
+      "value": [
+       "g"
+      ],
+      "text": "g"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The length of a pencil   {circ:cm|m}",
+     "answer": {
+      "value": [
+       "cm"
+      ],
+      "text": "cm"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The mass of a school bag   {circ:g|kg}",
+     "answer": {
+      "value": [
+       "kg"
+      ],
+      "text": "kg"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Water in a jug   {circ:ℓ|cm}",
+     "answer": {
+      "value": [
+       "ℓ"
+      ],
+      "text": "ℓ"
+     }
+    }
+   ],
+   "explanation": "An egg is light: grams. A pencil is short: centimetres. A school bag is heavy: kilograms. Water in a jug is measured in litres.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Lily has a green ribbon 85 cm long. Her yellow ribbon is 27 cm shorter.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Green",
+      "segs": [
+       {
+        "w": 8.5,
+        "t": "85 cm"
+       }
+      ]
+     },
+     {
+      "label": "Yellow",
+      "segs": [
+       {
+        "w": 5.8,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 2.7,
+        "hatch": true,
+        "t": "27"
+       }
+      ]
+     }
+    ],
+    "width_units": 400,
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The yellow ribbon is {b} cm long.",
+     "answer": {
+      "value": [
+       "58"
+      ],
+      "text": "58"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Lily joins them end to end with an overlap of 4 cm. The long ribbon is {b} cm.",
+     "answer": {
+      "value": [
+       "139"
+      ],
+      "text": "139"
+     }
+    },
+    {
+     "label": "c",
+     "text": "She cuts 3 pieces of 20 cm from the green ribbon. Green ribbon left: {b} cm",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    }
+   ],
+   "explanation": "(a) 85 - 27 = 58 cm. (b) Together 85 + 58 = 143 cm. The overlap is counted twice, so take away 4 cm: 139 cm. (c) 3 × 20 = 60 cm cut off. 85 - 60 = 25 cm left."
+  },
+  {
+   "id": "L2U09-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Change the units.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 kg = {b} g",
+     "answer": {
+      "value": [
+       "3000"
+      ],
+      "text": "3000"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2500 g = {b} kg {b} g",
+     "answer": {
+      "value": [
+       "2",
+       "500"
+      ],
+      "text": "2, 500"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A bag has 2 kg of rice. Mei uses 750 g. Rice left: {b} g",
+     "answer": {
+      "value": [
+       "1250"
+      ],
+      "text": "1250"
+     }
+    }
+   ],
+   "explanation": "1 kg is 1000 g. (a) 3 × 1000 = 3000 g. (b) 2500 g is 2000 g and 500 g: 2 kg 500 g. (c) 2 kg is 2000 g. 2000 - 750 = 1250 g.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Change the units.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2 m 35 cm = {b} cm",
+     "answer": {
+      "value": [
+       "235"
+      ],
+      "text": "235"
+     }
+    },
+    {
+     "label": "b",
+     "text": "180 cm = {b} m {b} cm",
+     "answer": {
+      "value": [
+       "1",
+       "80"
+      ],
+      "text": "1, 80"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A rope is 5 m. Ali cuts off 130 cm. Rope left: {b} cm",
+     "answer": {
+      "value": [
+       "370"
+      ],
+      "text": "370"
+     }
+    }
+   ],
+   "explanation": "1 m is 100 cm. (a) 200 + 35 = 235 cm. (b) 180 cm is 100 cm and 80 cm: 1 m 80 cm. (c) 5 m is 500 cm. 500 - 130 = 370 cm.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "A bucket holds 12 ℓ. It has 4 ℓ in it. Mei pours in 2 ℓ each time.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many pours fill the bucket? {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After 3 pours the bucket holds {b} ℓ.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "(a) The bucket needs 12 - 4 = 8 ℓ more. 8 ÷ 2 = 4 pours. (b) 3 pours add 6 ℓ. 4 + 6 = 10 ℓ."
+  },
+  {
+   "id": "L2U09-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "4 plums balance 1 pear. A pear and 2 plums balance 600 g.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "One plum is {b} g.",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The pear is {b} g.",
+     "answer": {
+      "value": [
+       "400"
+      ],
+      "text": "400"
+     }
+    }
+   ],
+   "explanation": "Swap the pear for 4 plums. Then 4 plums and 2 plums, which is 6 plums, balance 600 g. 600 ÷ 6 = 100, so 1 plum is 100 g. The pear is 4 plums: 400 g. Check: 400 + 100 + 100 = 600.",
+   "hint": "Swap the pear for 4 plums. How many plums are on that side?"
+  },
+  {
+   "id": "L2U09-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A 5 ℓ jug and a 7 ℓ jug have no marks. Get exactly 4 ℓ. Three steps are done.",
+   "figure": {
+    "type": "l2_table",
+    "cols": [
+     "Step",
+     "What I do",
+     "5 ℓ jug",
+     "7 ℓ jug"
+    ],
+    "rows": [
+     [
+      "Start",
+      "Both jugs empty",
+      "0",
+      "0"
+     ],
+     [
+      "1",
+      "Fill the 7 ℓ jug",
+      "0",
+      "7"
+     ],
+     [
+      "2",
+      "Pour into the 5 ℓ jug",
+      "5",
+      "2"
+     ],
+     [
+      "3",
+      "Empty the 5 ℓ jug",
+      "0",
+      "2"
+     ],
+     [
+      "4",
+      null,
+      null,
+      null
+     ],
+     [
+      "5",
+      null,
+      null,
+      null
+     ],
+     [
+      "6",
+      null,
+      null,
+      null
+     ]
+    ],
+    "widths": [
+     1.1,
+     4,
+     1.4,
+     1.4
+    ],
+    "row_h": 46,
+    "head_h": 50,
+    "size": 28,
+    "first_bold": true,
+    "width_mm": 130
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "After step 5 the jugs hold {b} ℓ and {b} ℓ.",
+     "answer": {
+      "value": [
+       "2",
+       "7"
+      ],
+      "text": "2, 7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At the end the 7 ℓ jug holds {b} ℓ.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "Step 4: pour the 2 ℓ into the 5 ℓ jug (2, 0). Step 5: fill the 7 ℓ jug (2, 7). Step 6: pour from the 7 ℓ jug into the 5 ℓ jug until it is full. It needs 3 ℓ more, so 7 - 3 = 4 ℓ is left (5, 4). The 7 ℓ jug holds 4 ℓ.",
+   "hint": "Pour the 2 ℓ into the 5 ℓ jug. Then fill the 7 ℓ jug.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A museum tour has 4 stops. Each stop takes 20 minutes. There is a 5-minute walk between stops. The tour starts at 9:15 am.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The tour takes {b} minutes.",
+     "answer": {
+      "value": [
+       "95"
+      ],
+      "text": "95"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It ends at {b} : {b} am.",
+     "answer": {
+      "value": [
+       "10",
+       "50"
+      ],
+      "text": "10, 50"
+     }
+    }
+   ],
+   "explanation": "4 stops of 20 minutes is 80 minutes. There are only 3 walks between 4 stops: 3 × 5 = 15 minutes. 80 + 15 = 95 minutes. 9:15 plus 95 minutes: 9:15 to 10:15 is 60 minutes, then 35 more: 10:50 am.",
+   "hint": "4 stops, but how many walks?"
+  },
+  {
+   "id": "L2U09-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Beyond: the 24-hour clock. After noon add 12 to the hour: 1:30 pm is 13:30.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3:45 pm = {b} : 45",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "18:10 = {b} : 10 pm",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "20:05 = {b} : 05 pm",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) 3 + 12 = 15, so 15:45. (b) 18 - 12 = 6, so 6:10 pm. (c) 20 - 12 = 8, so 8:05 pm.",
+   "hint": "After noon: add 12 to the hour. Going back: take 12 away.",
+   "beyond": "24-hour clock",
+   "partsrow": true
+  },
+  {
+   "id": "L2U09-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Scale 1: 1 box and 2 cups balance 4 cups. Scale 2: 1 box and 1 cup balance 600 g.",
+   "figure": {
+    "type": "l2_scale",
+    "scales": [
+     {
+      "left": [
+       "box",
+       "cup",
+       "cup"
+      ],
+      "right": [
+       "cup",
+       "cup",
+       "cup",
+       "cup"
+      ],
+      "label": "Scale 1"
+     },
+     {
+      "left": [
+       "box",
+       "cup"
+      ],
+      "right": [
+       "600 g"
+      ],
+      "label": "Scale 2"
+     }
+    ],
+    "width_mm": 112
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "One cup is {b} g.",
+     "answer": {
+      "value": [
+       "200"
+      ],
+      "text": "200"
+     }
+    },
+    {
+     "label": "b",
+     "text": "One box is {b} g.",
+     "answer": {
+      "value": [
+       "400"
+      ],
+      "text": "400"
+     }
+    }
+   ],
+   "explanation": "Scale 1: take 2 cups off both sides. 1 box balances 2 cups. Scale 2: swap the box for 2 cups: 3 cups balance 600 g, so a cup is 200 g. The box is 2 cups: 400 g. Check scale 1: 400 + 200 + 200 = 800 = 4 × 200.",
+   "hint": "Take 2 cups off both sides of scale 1.",
+   "figside": true
+  },
+  {
+   "id": "L2U09-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own balance puzzle with apples and lemons. One apple must be 200 g. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: Scale 1: 1 apple balances 4 lemons. Scale 2: 1 lemon balances a 50 g weight. Then 1 apple is 4 × 50 = 200 g."
+   },
+   "explanation": "Example: a lemon is 50 g and an apple is 4 lemons, so the apple is 200 g. Another way: 1 apple balances a 200 g weight, with a second scale for a lemon.",
+   "hint": "Start from 200 g. What balances it?",
+   "space": {
+    "rows": [
+     "My scales:"
+    ]
+   }
+  },
+  {
+   "id": "L2U09-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "A clock gains 3 minutes every hour. It is set right at 7:00 am.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "At 11:00 am the clock shows {b} : {b} am.",
+     "answer": {
+      "value": [
+       "11",
+       "12"
+      ],
+      "text": "11, 12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It shows 12:15 pm. The right time is {b} : {b}.",
+     "answer": {
+      "value": [
+       "12",
+       "00"
+      ],
+      "text": "12, 00"
+     }
+    }
+   ],
+   "explanation": "(a) From 7 am to 11 am is 4 hours. 4 × 3 = 12 minutes fast: 11:12 am. (b) At the right time 12:00 pm, 5 hours have passed, and the clock is 5 × 3 = 15 minutes fast. So when the clock shows 12:15 pm the right time is 12:00 pm.",
+   "hint": "How many hours have passed? 3 minutes each hour."
+  },
+  {
+   "id": "L2U09-C01",
+   "tier": "quiz",
+   "text": "A show begins at 6:50 pm and runs for 35 minutes. It finishes at {b} : {b} pm.",
+   "answer": {
+    "value": [
+     "7",
+     "25"
+    ],
+    "text": "7:25 pm"
+   },
+   "explanation": "6:50 to 7:00 is 10 minutes. 25 more minutes: 7:25 pm."
+  },
+  {
+   "id": "L2U09-C02",
+   "tier": "quiz",
+   "text": "2 kg 300 g = {b} g",
+   "answer": {
+    "value": [
+     "2300"
+    ],
+    "text": "2300"
+   },
+   "explanation": "2 kg is 2000 g. 2000 + 300 = 2300 g."
+  },
+  {
+   "id": "L2U09-C03",
+   "tier": "quiz",
+   "text": "1 melon balances 3 pears. 1 pear is 200 g. The melon is {b} g.",
+   "answer": {
+    "value": [
+     "600"
+    ],
+    "text": "600"
+   },
+   "explanation": "3 pears: 3 × 200 = 600 g. The melon is 600 g."
+  },
+  {
+   "id": "L2U09-C04",
+   "tier": "quiz",
+   "text": "A rope is 3 m long. Ali cuts off 140 cm. Rope left: {b} cm",
+   "answer": {
+    "value": [
+     "160"
+    ],
+    "text": "160"
+   },
+   "explanation": "3 m is 300 cm. 300 - 140 = 160 cm."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}
