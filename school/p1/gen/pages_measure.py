@@ -4,8 +4,9 @@ from .common import *
 from .pages_numbers import grid_table, howto_grid
 
 # ---------------------------------------------------------------- P15
-COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7}        # real diameters in mm: only the RATIOS are used (a fact, not a design); the coins are drawn at 0.9 of these, bigger than real
-COIN_D = {v: d * 0.76 for v, d in COIN_REAL.items()}
+COIN_REAL = {5: 16.75, 10: 18.5, 20: 21.0, 50: 23.0}        # real diameters in mm (MAS, current coins; see docs/school_books/coin_note_specs.md): only the RATIOS are used (a fact, not a design)
+COIN_D = {v: d * 0.80 for v, d in COIN_REAL.items()}      # drawn at 0.80 of real size, so every diameter stays in the real proportion; the word cents is 2.8 mm type (cap height about 2.0 mm)
+UNIT_FONT = 2.8
 
 def _motif(v, cx, cy, u):
     """an ORIGINAL small picture per value (not any real coin design): leaf (5), star (10), flower (20), sailboat (50); u is the coin radius"""
@@ -25,10 +26,9 @@ def coins_svg(coins, scale=1.0):
     for v in coins:
         d = COIN_D[v] * scale; r = d / 2; cx = x + r
         p.append(f'<circle class="coin" cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
-                 f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
                  + _motif(v, cx, cy - r * 0.60, r) +
-                 f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.22:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{v}</text>'
-                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.68:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.34:.1f}" fill="#000">cents</text>')
+                 f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.16:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{v}</text>'
+                 f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.66:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="{UNIT_FONT}" fill="#000">cents</text>')
         x += d + 2.0
     return svg(x + 1, H + 1, "".join(p))
 

@@ -33,9 +33,12 @@ def read_pv_chart(s):
     return tuple(len(re.findall(r'class="disc %s"' % k, s)) for k in "hto")
 
 # ---------------------------------------------------------------- coins and notes (original line art, inspired by Singapore money; much larger than real)
-COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7, 100: 24.65}          # real diameters (mm): only the RATIOS are used (a fact, not a design)
-COIN_D = {v: d * 0.78 for v, d in COIN_REAL.items()}
-NOTE_W, NOTE_H = 27.0, 13.5
+COIN_REAL = {5: 16.75, 10: 18.5, 20: 21.0, 50: 23.0, 100: 24.65}        # real diameters (mm, MAS, current coins; see docs/school_books/coin_note_specs.md): only the RATIOS are used (a fact, not a design)
+COIN_D = {v: d * 0.80 for v, d in COIN_REAL.items()}                      # drawn at 0.80 of real size
+NOTE_REAL = {2: (126, 63), 5: (133, 66), 10: (141, 69)}                   # real notes (mm, MAS Portrait series): width x height; every note is 2:1 and a higher value is bigger
+NOTE_K = 0.215                                                            # notes drawn at 0.215 of real size (a $2 note is 27.1 x 13.5 mm, a $10 note 30.3 x 14.8 mm)
+NOTE_WH = {v: (w * NOTE_K, h * NOTE_K) for v, (w, h) in NOTE_REAL.items()}
+NOTE_W, NOTE_H = NOTE_WH[10]                                              # the largest note (a row is as high as its tallest item)
 
 def _motif(v, cx, cy, u):
     k = u * 0.15; st = 'fill="none" stroke="#000" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"'
@@ -62,32 +65,32 @@ def coin_g(v, x, cy):
 
 def note_g(v, x, y):
     """an original note design: a frame, the value in two corners, a simple bird in the middle; not a copy of any real note"""
-    W, H = NOTE_W, NOTE_H
+    W, H = NOTE_WH[v]
     bird = ('<path d="M-4.5,1.2 C-2.5,-3.5 2.5,-3.5 4.5,-0.5 L7,-1.5 L5.8,1.2 C3,3.8 -2,3.8 -4.5,1.2 Z M-4.5,1.2 L-7.5,3.2 L-4,3" fill="none" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/>')
-    return (f'<g class="note" data-v="{v}"><rect x="{x:.1f}" y="{y:.1f}" width="{W}" height="{H}" rx="1.2" fill="#fff" stroke="#000" stroke-width="0.7"/>'
-            f'<rect x="{x+1.4:.1f}" y="{y+1.4:.1f}" width="{W-2.8}" height="{H-2.8}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
-            f'<g transform="translate({x+W/2:.1f},{y+H/2:.1f}) scale(0.8)">{bird}</g>'
+    return (f'<g class="note" data-v="{v}"><rect x="{x:.1f}" y="{y:.1f}" width="{W:.1f}" height="{H:.1f}" rx="1.2" fill="#fff" stroke="#000" stroke-width="0.7"/>'
+            f'<rect x="{x+1.4:.1f}" y="{y+1.4:.1f}" width="{W-2.8:.1f}" height="{H-2.8:.1f}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
+            f'<g transform="translate({x+W/2:.1f},{y+H/2:.1f}) scale({W/33.75:.3f})">{bird}</g>'
             f'<text class="noteval" x="{x+2.8:.1f}" y="{y+5.6:.1f}" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text>'
             f'<text class="noteval2" x="{x+W-2.8:.1f}" y="{y+H-2.8:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text></g>')
 
 def money_width(items, gap=2.0):
-    return sum((COIN_D[i[1]] if i[0] == "c" else NOTE_W) + gap for i in items)
+    return sum((COIN_D[i[1]] if i[0] == "c" else NOTE_WH[i[1]][0]) + gap for i in items)
 
 def money_svg(items, per_row=None, gap=2.0):
     """items: list of ('c', cents) coins and ('n', dollars) notes, drawn in reading order; wraps into rows of width <= 78 mm unless per_row"""
     maxw = 118.0
     rows = [[]]; w = 0
     for it in items:
-        iw = (COIN_D[it[1]] if it[0] == "c" else NOTE_W) + gap
+        iw = (COIN_D[it[1]] if it[0] == "c" else NOTE_WH[it[1]][0]) + gap
         if rows[-1] and (w + iw > maxw or (per_row and len(rows[-1]) >= per_row)): rows.append([]); w = 0
         rows[-1].append(it); w += iw
     p = []; y = 0; W = 0
     for row in rows:
-        rh = max((COIN_D[i[1]] if i[0] == "c" else NOTE_H) for i in row)
+        rh = max((COIN_D[i[1]] if i[0] == "c" else NOTE_WH[i[1]][1]) for i in row)
         x = 0.8
         for it in row:
             if it[0] == "c": p.append(coin_g(it[1], x, y + rh / 2 + 0.8)); x += COIN_D[it[1]] + gap
-            else: p.append(note_g(it[1], x, y + (rh - NOTE_H) / 2 + 0.8)); x += NOTE_W + gap
+            else: p.append(note_g(it[1], x, y + (rh - NOTE_WH[it[1]][1]) / 2 + 0.8)); x += NOTE_WH[it[1]][0] + gap
         W = max(W, x); y += rh + 1.6
     return svg(round(W + 0.8, 1), round(y + 0.4, 1), "".join(p))
 

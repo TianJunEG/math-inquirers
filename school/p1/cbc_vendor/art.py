@@ -45,11 +45,13 @@ def decode_clock(meta):
     hh = int(round(meta["hour_angle"] - mm * 0.5) / 30) % 12 or 12
     return hh, mm
 
-COIN_R = {5: 4.2, 10: 4.8, 20: 5.6, 50: 6.4, 100: 6.4}      # radii in the real ratio of the diameters (5c 16.2, 10c 18.5, 20c 21.4, 50c 24.7, $1 24.65 mm), drawn much larger than real size
+COIN_R = {5: 4.35, 10: 4.8, 20: 5.45, 50: 5.98, 100: 6.4}      # radii in the real ratio of the diameters (MAS, current coins: 5c 16.75, 10c 18.5, 20c 21.0, 50c 23.0, $1 24.65 mm), drawn larger than real size
+NOTE_REAL = {2: (126, 63), 5: (133, 66), 10: (141, 69)}   # real notes in mm (MAS): every note is 2:1 and a higher value is bigger
+NOTE_K = 0.118
+NOTE_WH = {v: (w * NOTE_K, h * NOTE_K) for v, (w, h) in NOTE_REAL.items()}
 def _coin(cx, cy, v, r):
-    """an ORIGINAL coin (not a copy of any real coin): a ring, a dashed ridge ring as an edge hint, the value large and a small cents sign under it ($1 has no cents sign)"""
-    s = [f'<circle cx="{cx:.2f}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>',
-         f'<circle cx="{cx:.2f}" cy="{cy}" r="{r - 0.75:.2f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.7 0.5"/>']
+    """an ORIGINAL coin (not a copy of any real coin): a ring, the value large and a small cents sign under it ($1 has no cents sign)"""
+    s = [f'<circle cx="{cx:.2f}" cy="{cy}" r="{r}" fill="#fff" stroke="#000" stroke-width="0.5"/>',]
     if v < 100:
         s.append(f'<text x="{cx:.2f}" y="{cy - 0.7:.2f}" style="font-size:3.4px;font-weight:700;text-anchor:middle;dominant-baseline:central">{v}</text>')
         s.append(f'<text x="{cx:.2f}" y="{cy + r * 0.52:.2f}" style="font-size:2.3px;font-weight:700;text-anchor:middle;dominant-baseline:central">¢</text>')
@@ -72,9 +74,10 @@ def notes(values):
             s.append(_coin(x + 6.4, 6.4, 100, 6.4))
             x += 12.8 + 1.2
         else:
-            s.append(f'<rect x="{x:.2f}" y="2.9" width="13" height="7" rx="0.8" fill="#fff" stroke="#000" stroke-width="0.5"/>'
-                     f'<text x="{x + 6.5:.2f}" y="6.4" style="font-size:3.6px;font-weight:700;text-anchor:middle;dominant-baseline:central">${v}</text>')
-            x += 13 + 1.2
+            nw, nh = NOTE_WH[v]; ny = (h - nh) / 2
+            s.append(f'<rect x="{x:.2f}" y="{ny:.2f}" width="{nw:.2f}" height="{nh:.2f}" rx="0.8" fill="#fff" stroke="#000" stroke-width="0.5"/>'
+                     f'<text x="{x + nw / 2:.2f}" y="{ny + nh / 2:.2f}" style="font-size:3.6px;font-weight:700;text-anchor:middle;dominant-baseline:central">${v}</text>')
+            x += nw + 1.2
     return Art("".join(s), x - 1.2, h, 0.85, dict(kind="notes", values=list(values)))
 
 def ruler(start, end, top=None):
@@ -310,7 +313,8 @@ def cash(values):
     x = 0.0; s = []; hh = 13.8
     for v in sorted(values, reverse=True):
         if v >= 200:
-            s.append(f'<rect x="{x + 0.5:.2f}" y="3.4" width="13" height="7" rx="0.8" fill="#fff" {_ST}/>' + _text(x + 7, 6.9, f"${v // 100}", 3.6)); x += 14.2
+            nw, nh = NOTE_WH[v // 100]; ny = (hh - nh) / 2
+            s.append(f'<rect x="{x + 0.5:.2f}" y="{ny:.2f}" width="{nw:.2f}" height="{nh:.2f}" rx="0.8" fill="#fff" {_ST}/>' + _text(x + 0.5 + nw / 2, ny + nh / 2, f"${v // 100}", 3.6)); x += nw + 1.2
         else:
             r = COIN_R[v]; x += r
             s.append(_coin(x, hh / 2, v, r)); x += r + 1.2

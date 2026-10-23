@@ -56,3 +56,6 @@ Found, not changed (judgement calls):
 
 ## 6. Books
 All 8 books rebuilt (colour): workbook pages 46/44/46/46/42/44/48/42, keys 22/32/22/30/22/32/22/32, home 12/14/12/14/12/14/12/14, all even, unchanged. B&W: see section 7.
+
+## 7. Validation and B&W
+`validate.py` on all 40 lessons after the final builds: 0 FAIL. All 24 colour term PDFs have even page counts (listed in section 6). B&W: `print/make_bw_print.py --only BookN_ --resume` run per book (the all-at-once run stalls), then `print/check_bw.py`: all 24 term PDFs ok, max non-grey 0.00000, page counts equal the colour books.
