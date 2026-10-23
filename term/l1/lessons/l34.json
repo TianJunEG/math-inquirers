@@ -297,7 +297,7 @@
       ]
      ],
      "mode": "iso",
-     "size": 50
+     "size": 32
     },
     {
      "t": "chip",
@@ -342,7 +342,7 @@
          ]
         ],
         "mode": "iso",
-        "size": 45
+        "size": 30
        }
       ],
       [
@@ -369,7 +369,7 @@
          ]
         ],
         "mode": "iso",
-        "size": 45
+        "size": 30
        }
       ]
      ]
@@ -401,7 +401,7 @@
          ]
         ],
         "mode": "iso",
-        "size": 50
+        "size": 32
        }
       ],
       [
@@ -419,7 +419,7 @@
          ]
         ],
         "mode": "top",
-        "size": 60
+        "size": 40
        }
       ]
      ]
@@ -451,7 +451,7 @@
       ]
      ],
      "mode": "iso",
-     "size": 50
+     "size": 32
     },
     {
      "t": "answer",
@@ -495,7 +495,7 @@
        0.3
       ]
      ],
-     "size": 150
+     "size": 38
     },
     {
      "t": "chip",
@@ -545,7 +545,7 @@
          ]
         ],
         "mode": "iso",
-        "size": 50
+        "size": 32
        }
       ],
       [
@@ -563,7 +563,7 @@
          ]
         ],
         "mode": "top",
-        "size": 60
+        "size": 40
        }
       ]
      ]
@@ -595,7 +595,7 @@
       ]
      ],
      "mode": "iso",
-     "size": 50
+     "size": 32
     },
     {
      "t": "answer",
@@ -624,7 +624,7 @@
       ]
      ],
      "mode": "iso",
-     "size": 50
+     "size": 32
     },
     {
      "t": "chip",
@@ -657,7 +657,7 @@
          ]
         ],
         "mode": "iso",
-        "size": 50
+        "size": 32
        }
       ],
       [
@@ -675,7 +675,7 @@
          ]
         ],
         "mode": "top",
-        "size": 70
+        "size": 45
        }
       ]
      ]
@@ -707,7 +707,7 @@
       ]
      ],
      "mode": "top",
-     "size": 70
+     "size": 45
     },
     {
      "t": "chip",
@@ -736,7 +736,7 @@
       ]
      ],
      "mode": "iso",
-     "size": 45
+     "size": 30
     },
     {
      "t": "answer",
@@ -762,7 +762,7 @@
        0.7
       ]
      ],
-     "size": 150
+     "size": 38
     },
     {
      "t": "chip",
@@ -788,7 +788,7 @@
        0.7
       ]
      ],
-     "size": 150
+     "size": 38
     },
     {
      "t": "answer",
@@ -1071,7 +1071,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 4 cubes; E2 6 cubes; E3 a line down the middle, from the top edge to the bottom edge."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 4 cubes; E2 6 cubes; E3 down the middle."
   },
   {
    "id": "s-look",
@@ -1131,7 +1131,7 @@
        0.6
       ]
      ],
-     "size": 120
+     "size": 35
     },
     {
      "t": "chip",
@@ -1770,7 +1770,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. How many cubes are in the picture? E2. The top view shows how many cubes are in each stack. How many cubes are there in all? E3. Fold a paper square in half so that the left edge meets the right edge. Draw the fold line."
+      "text": "E1. How many cubes are in the picture? E2. The top view shows how many cubes are in each stack. How many cubes are there in all? E3. A square is folded so the left edge meets the right edge. Where is the fold line? Circle down the middle or across the middle."
      },
      {
       "k": "WORK",
@@ -1784,7 +1784,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: four cubes. E2: six cubes. E3: a line down the middle, from the top edge to the bottom edge."
+      "text": "E1: four cubes. E2: six cubes. E3: down the middle."
      },
      {
       "k": "SAY",
@@ -1959,7 +1959,7 @@
     "parts": [
      {
       "l": "",
-      "text": "Circle A, B or C.",
+      "text": "The top views are A, B and C from left to right. Circle A, B or C.",
       "ans": "B",
       "val": "B",
       "choices": [
@@ -1997,70 +1997,49 @@
       "size": 55
      },
      {
-      "type": "table",
-      "head": [
-       "A",
-       ""
-      ],
-      "rows": [
+      "type": "cube_stack",
+      "heights": [
        [
-        "2",
-        "1"
+        2,
+        1
        ],
        [
-        "1",
-        "1"
+        1,
+        1
        ]
       ],
-      "col_w": [
-       1,
-       1
-      ],
-      "size": 50
+      "mode": "top",
+      "size": 40
      },
      {
-      "type": "table",
-      "head": [
-       "B",
-       ""
-      ],
-      "rows": [
+      "type": "cube_stack",
+      "heights": [
        [
-        "1",
-        "1"
+        1,
+        1
        ],
        [
-        "2",
-        "1"
+        2,
+        1
        ]
       ],
-      "col_w": [
-       1,
-       1
-      ],
-      "size": 50
+      "mode": "top",
+      "size": 40
      },
      {
-      "type": "table",
-      "head": [
-       "C",
-       ""
-      ],
-      "rows": [
+      "type": "cube_stack",
+      "heights": [
        [
-        "1",
-        "2"
+        1,
+        2
        ],
        [
-        "1",
-        "1"
+        1,
+        1
        ]
       ],
-      "col_w": [
-       1,
-       1
-      ],
-      "size": 50
+      "mode": "top",
+      "size": 40
      }
     ]
    },
@@ -2144,7 +2123,7 @@
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
-     "size": 42
+     "size": 55
     }
    },
    {
@@ -2684,26 +2663,24 @@
    "parts": [
     {
      "l": "",
-     "text": "Draw the fold line on the square.",
-     "ans": "A line down the middle, from the top edge to the bottom edge",
-     "val": "drawn"
+     "text": "Where is the fold line? Circle one.",
+     "ans": "down the middle",
+     "val": "down the middle",
+     "choices": [
+      "down the middle",
+      "across the middle"
+     ]
     }
    ],
-   "answer": "A line down the middle, from the top edge to the bottom edge",
+   "answer": "down the middle",
    "val": [
-    "drawn"
+    "down the middle"
    ],
    "solution": "When the left edge meets the right edge, the paper bends halfway across. The fold line goes down the middle of the square, from the top edge to the bottom edge.",
    "mistakes": [
-    "Drawing the line across the middle.",
-    "Drawing the line on one side."
-   ],
-   "visual": {
-    "type": "shapes2d",
-    "shape": "square",
-    "parts": 1,
-    "size": 20
-   }
+    "Choosing across the middle (that is where the top and bottom edges meet).",
+    "Thinking the fold is at one side."
+   ]
   }
  ],
  "look_back": {
