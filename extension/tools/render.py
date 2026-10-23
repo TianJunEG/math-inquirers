@@ -20,11 +20,14 @@ def esc(s):
     return html.escape(str(s), quote=False)
 
 
+LEVEL = 1   # set by build.build() so the 'beyond' label names the book's level
+
+
 def mk(text):
-    """Inline markup: {b} answer box, {l} answer line, {circ:a|b|c} choices to circle, newline = line break."""
+    """Inline markup: {b} answer box, {bw} wide answer box, {l} answer line, {circ:a|b|c} choices to circle, newline = line break."""
     t = esc(text)
     t = re.sub(r'\{circ:([^}]*)\}', lambda m: '<span class="circ">' + ''.join(f'<i>{o}</i>' for o in m.group(1).split('|')) + '</span>', t)
-    t = t.replace('{b}', '<span class="abox"></span>').replace('{ll}', '<span class="aline long"></span>').replace('{l}', '<span class="aline"></span>')
+    t = t.replace('{bw}', '<span class="abox wide"></span>').replace('{b}', '<span class="abox"></span>').replace('{ll}', '<span class="aline long"></span>').replace('{l}', '<span class="aline"></span>')
     return t.replace('\n', '<br>')
 
 
@@ -77,7 +80,7 @@ def item_html(it, n, theme, hint=True, extra_cls=''):
     tier = it['tier']
     out = [f'<div class="item {extra_cls}" id="{it["id"]}">', badge(tier, n, theme)]
     if it.get('beyond'):
-        out.append(f'<div class="beyond">&#9733; Beyond Level 1: {esc(it["beyond"])}</div>')
+        out.append(f'<div class="beyond">&#9733; Beyond Level {LEVEL}: {esc(it["beyond"])}</div>')
     stem_html = f'<div class="stem">{mk(it["text"])}</div>'
     if it.get('figure') and it.get('figright'):      # figure to the right of the question text (saves height, audit 3)
         out.append(f'<div class="figright"><div class="frt">{stem_html}</div>{fig_html(it["figure"], theme)}</div>')

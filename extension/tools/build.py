@@ -90,6 +90,14 @@ def licence(book, theme, ctx):
 
 
 def welcome(book, theme, ctx):
+    lv = CFG['levels'][str(book['level'])]
+    equip = lv.get('welcome_equipment')
+    mins = lv.get('session_minutes', '20 to 25')
+    pn = lv.get('welcome_print_note') or {'colour': 'Printing this soft copy? Print at 100 percent so the rulers are true size.',
+                                          'bw': 'The rulers in Unit 9 are printed at real size.'}
+    extra = ''.join(f'<li>{n}</li>' for n in lv.get('welcome_notes', []))
+    if equip:
+        extra = f'<li>You will need: {equip}.</li>' + extra
     steps = ['Read the <b>Learn it</b> page first. It shows how the idea works.',
              'Do the <b>Start here</b> pages. Use a pencil. Mistakes help you learn.',
              'Stuck? Find the hint. It is printed upside down.',
@@ -102,12 +110,12 @@ def welcome(book, theme, ctx):
             '<div class="box"><h3>For the grown-up</h3><ul>'
             '<li>Practice for the same ideas as the Holiday Program (our school-holiday course), with new numbers and stories. '
             'You do not need to have joined it: every unit starts with an example.</li>'
-            '<li>3 short sessions a week, 20 to 25 minutes each, plus the weekend page <b>Go further</b> (see the pace plan).</li>'
+            f'<li>3 short sessions a week, {mins} minutes each, plus the weekend page <b>Go further</b> (see the pace plan).</li>'
             '<li>This is a self-study book. Your child marks their own work: each answer at the back says the answer first, then a short reason (Why) in plain words, '
             'and the page of the question. A child who reads slowly may like a helper to read the Why with them. '
             f'The answers start on page {ctx["divider_pg"]}: please ask your child to try first.</li>'
             '<li>Check yourself score 2 or less? Read the Learn it page again and redo one Start here page.</li>'
-            + ('<li>Printing this soft copy? Print at 100 percent so the rulers are true size.</li>' if theme == 'colour' else '<li>The rulers in Unit 9 are printed at real size.</li>') + '</ul></div>'
+            + extra + (f'<li>{pn["colour"]}</li>' if theme == 'colour' else f'<li>{pn["bw"]}</li>') + '</ul></div>'
             '<div class="box"><h3>The four page names</h3>' + legend() + '</div>'
             '</div>')
 
@@ -143,7 +151,7 @@ def pace(book, theme, ctx):
         else:
             rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td colspan="4">Not in this proof edition</td><td><span class="tick"></span></td></tr>')
     return ('<div class="pbody"><div class="h1">My pace plan</div>'
-            '<div class="lead">Numbers in the table are page numbers. One unit a week for 10 weeks. Three short sessions a week, about 20 to 25 minutes each. '
+            f'<div class="lead">Numbers in the table are page numbers. One unit a week for 10 weeks. Three short sessions a week, about {CFG["levels"][str(book["level"])].get("session_minutes", "20 to 25")} minutes each. '
             '<b>Go further</b> is a weekend page: do it on a weekend, when there is time to think. Tick the box when the week is done.</div>'
             '<table class="grid pace"><tr><th>Week</th><th>Unit</th><th>Session 1<br><small>Learn it, Start here</small></th><th>Session 2<br><small>Start here</small></th><th>Session 3<br><small>Think harder, Check yourself</small></th><th>Weekend page<br><small>Go further</small></th><th>Done</th></tr>' + ''.join(rows) +
             '<tr><td><b>11</b></td><td class="l"><b>Catch-up week</b></td><td colspan="4">Repeat any Check yourself where your score was 2 or less.</td><td><span class="tick"></span></td></tr></table>'
@@ -216,6 +224,7 @@ def section(kind, body, no, edition, gutter_note=False, blank=False, exempt=Fals
 
 def build(level, unit_ids, outdir, bw=True):
     lv = CFG['levels'][str(level)]
+    render.LEVEL = level
     units = [json.load(open(os.path.join(EXT, 'data', f'l{level}_u{u:02d}.json'), encoding='utf-8')) for u in unit_ids]
     book = {'level': level, 'unit_titles': lv['units'], 'proof': len(units) < 10,
             'titles': {u['unit']: u['title'] for u in units}, 'lessons': {u['unit']: u.get('holiday_lesson') for u in units}}
