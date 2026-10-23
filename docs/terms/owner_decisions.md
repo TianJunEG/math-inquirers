@@ -339,3 +339,4 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 
 ## 2026-10-24 (owner, deferred rewrite now)
 - REWRITE-NOW: the owner pasted the status table row "The rewrite of lessons 10, 21, 23, 24, 28 and 36 against private sources ..." and wrote "do now" (message cut off). Understood as: do the Level 1 term lesson rewrite (TERMCHECK "too close" items) NOW, not after 6 Nov. Overrides Rewrite-after-6nov. To be confirmed with the owner if the intent was different.
+- REWRITE-NOW confirmed by the owner (24 Oct): "u can start with this because it is alot of work". The rewrite of Level 1 term lessons 10, 21, 23, 24, 28, 36 is prioritised first.
