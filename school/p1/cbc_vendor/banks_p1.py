@@ -378,11 +378,11 @@ def _shapes(tier):
     def bothq(a): return ["Corners + sides?"], [f"Corners + sides: \u27e6{a}\u27e7"]
     def both_short(a): return ["Corners and sides:", f"{BOX}"], ["Corners and sides:", f"\u27e6{a}\u27e7"]
     def blank(a): return [f"{BOX}"], [f"\u27e6{a}\u27e7"]
-    plan = ((corners2, "stack"), (corners1, "stack"), (corners1, "row"), (cornersq, "stack"), (corners_short, "row"), (blank, "row"), (blank, "stack")) if tier == 1 else \
+    plan = ((corners_short, "stack"), (corners_short, "row"), (blank, "row"), (blank, "stack")) if tier == 1 else \
            ((both2, "stack"), (both1, "stack"), (both1, "row"), (bothq, "stack"), (both_short, "row"), (blank, "row"), (blank, "stack"))
     forms = []
     for words, layout in plan:
-        f = mk(words, layout); f.__name__ = f"{words.__name__}_{layout}"; forms.append(f)
+        f = mk(words, layout); f.__name__ = f"{words.__name__}_{layout}"; f.attempts = 40; forms.append(f)
     return forms
 
 # ------------------------------------------------------------------ multiplication within 40 (equal groups, repeated addition, tables of 2, 3, 4, 5, 10)

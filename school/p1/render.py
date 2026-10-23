@@ -167,6 +167,7 @@ svg.pic .r{fill:#fff;stroke:#000;stroke-width:0.9;stroke-linejoin:round;fill-rul
 svg.pic text{font-family:'Fredoka';font-weight:600;dominant-baseline:central;fill:#000;text-anchor:start}
 svg.pic text.a{font-weight:700}
 svg.pic .bx{fill:#fff;stroke:#000;stroke-width:0.45}
+svg.pic .bx.big{stroke-width:1.1}
 svg.pic .ul{stroke:#000;stroke-width:0.4}
 .fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.05;font-size:11.5pt}.fr i{font-style:normal;display:block;padding:0 1mm}.fr i:first-child{border-bottom:0.35mm solid #000}
 svg.mk{vertical-align:-0.9mm;margin:0 0.6mm}

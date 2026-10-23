@@ -32,19 +32,22 @@ class Picture:
 # A twin set is two to four regions that carry the same small solid-black mark and must be coloured alike. It is the second
 # self-check of a picture that is not symmetric (and of the loose parts of a symmetric one): a pupil who swaps the colours of
 # two parts breaks the match of both marks. Marks are placed by the library (never by hand) away from the label.
-SYMBOLS = ["triangle", "square", "diamond", "star", "cross", "hexagon"]
+SYMBOLS = ["triangle", "square", "star", "cross", "circle", "moon"]      # P1 shape names only (no diamond or hexagon: not on the Primary 1 shape list)
 def symbol_points(name, cx=0.0, cy=0.0, s=1.0):
     """polygon points of a mark of half-size s centred on (cx, cy)"""
     if name == "triangle": pts = [(0, -1.15), (-1.05, 0.8), (1.05, 0.8)]
     elif name == "square": pts = [(-0.85, -0.85), (0.85, -0.85), (0.85, 0.85), (-0.85, 0.85)]
-    elif name == "diamond": pts = [(0, -1.25), (1.0, 0), (0, 1.25), (-1.0, 0)]
+    elif name == "circle":
+        import math
+        pts = [(1.05 * math.cos(i * math.pi / 8), 1.05 * math.sin(i * math.pi / 8)) for i in range(16)]
+    elif name == "moon":
+        from shapely.geometry import Point
+        m = Point(0, 0).buffer(1.15, 24).difference(Point(0.6, 0).buffer(0.95, 24))
+        pts = [(x - 0.2, y) for x, y in list(m.exterior.coords)[:-1]]
     elif name == "star":
         import math
         pts = [((1.2 if i % 2 == 0 else 0.5) * math.cos(-math.pi / 2 + i * math.pi / 5), (1.2 if i % 2 == 0 else 0.5) * math.sin(-math.pi / 2 + i * math.pi / 5)) for i in range(10)]
     elif name == "cross": pts = [(-0.38, -1.1), (0.38, -1.1), (0.38, -0.38), (1.1, -0.38), (1.1, 0.38), (0.38, 0.38), (0.38, 1.1), (-0.38, 1.1), (-0.38, 0.38), (-1.1, 0.38), (-1.1, -0.38), (-0.38, -0.38)]
-    elif name == "hexagon":
-        import math
-        pts = [(1.1 * math.cos(i * math.pi / 3), 1.1 * math.sin(i * math.pi / 3)) for i in range(6)]
     else: raise KeyError(name)
     return [(cx + x * s, cy + y * s) for x, y in pts]
 def symbol_svg(name, cx, cy, s=1.9):

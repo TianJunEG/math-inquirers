@@ -207,3 +207,11 @@ Owner chose to keep all the added holiday workbook pages. Print pages: Level 1 6
 
 ## 23 Oct 2026 (night): WAIT-DIAGRAMS
 Owner chose to wait for the Level 1 term workbook diagram work before releasing the term books. Release plan: Books 1-8 are released together once (a) the Level 1 diagram fixes (term/l1/audit/DIAGRAM_FIXES.md) are done and independently re-checked, (b) lessons 20-40 and all eight books are rebuilt (colour and B&W, check_bw.py ok, even page counts), and (c) the owner says RELEASE. Books 1-4 stay on hold until then.
+
+## 23 Oct 2026 (night): TERM-ALL-RECOMMENDED (term review section 12)
+Owner replied "Term-all" = accept all recommendations:
+- Decision 2: YES. The block-ending lesson (x.10, i.e. lessons 10, 20, 30, 40 of each level) becomes a choose-the-tool consolidation lesson that hosts the Challenge Quest; new ideas currently in Level 1 lessons 10, 20 and 30 move to earlier slots. Scope: Terms 2 to 4 first (lessons 20, 30, 40); Term 1 (lesson 10) later. NOTE: this changes built Level 1 lessons, so it is NOT applied yet; a change plan comes first (impact on Books 3-8 and the release plan).
+- Decision 3: YES. Three-word independence scale (with help / with a prompt / on their own) in PRIVATE tutor notes only; no tally shown to children or parents, no ranking.
+- Decision 4: KEEP Level 1 Term 1 stronger-arithmetic decision (22 Oct) as is.
+- Decision 5: Level 6 Terms 3 and 4 around the PSLE: treat Term 3 as a BRIDGE block (not acceleration).
+- Quest placement: lesson 10 of each term (10, 20, 30, 40) for ALL levels (resolves the disagreement between Level 5, Level 6 and Level 3 pre-flight notes).

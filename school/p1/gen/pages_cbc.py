@@ -138,8 +138,14 @@ def page01():
         "Every part asks a tens-and-ones question: how many ones or tens a number has, or the missing part of a number made of tens and ones. The answers are 1 to 5.")
 
 def page12():
+    old = L.BOX_SIDE
+    L.BOX_SIDE = 8.0                      # one large answer box in every part (audit H1)
+    try: return _page12()
+    finally: L.BOX_SIDE = old
+
+def _page12():
     return cbc_page(12, dict(id="CBC-10", picture="house", bank="shapes", tier=1, seed=128), "Colour the House",
-        ["Count the corners in each part.", "Find the number in the key.", "Colour the part with that colour."],
+        ["Count the corners. Write it in the thick box.", "Find the number in the key.", "Colour the part with that colour."],
         "Measurement and Geometry - Geometry", "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
         "Shapes are triangle, square, rectangle and circle only. A circle has no corners.")
 

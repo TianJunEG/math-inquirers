@@ -119,7 +119,7 @@ def render(content, place, colour_line=None):
             w = tok_width(tk, f)
             if kind == "box":
                 side = BOX_SIDE
-                out.append(f'<rect class="bx" data-l="{i}" data-t="{BOX}" x="{x + (w - side) / 2:.2f}" y="{yc - side / 2 - 0.05:.2f}" width="{side:.2f}" height="{side:.2f}" rx="0.5"/>')
+                out.append(f'<rect class="bx{" big" if BOX_SIDE > 7 else ""}" data-l="{i}" data-t="{BOX}" x="{x + (w - side) / 2:.2f}" y="{yc - side / 2 - 0.05:.2f}" width="{side:.2f}" height="{side:.2f}" rx="0.5"/>')
             elif kind == "frac":
                 ff = f * FRAC_SCALE; mid = x + w / 2; gap = 0.62 * ff
                 out.append(f'<g data-l="{i}" data-t="{html.escape(src, quote=True)}">')

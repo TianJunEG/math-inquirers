@@ -176,43 +176,137 @@ def build_figure(rng, counts, W=9, H=4):
             h[x + i] = y + 1; flat[x + i] = k in ("rect", "square")
     return placed
 
+# the "form a figure" task: a silhouette (outline only) is made of two pieces; which set of pieces makes it?
+FORM_TEMPLATES = {"house": [("square", 0, 0, 0), ("tri", 0, 1, 0)], "dome": [("rect", 0, 0, 0), ("half", 0, 1, 0)],
+                  "step": [("rect", 0, 0, 0), ("quarter", 0, 1, 0)], "block": [("square", 0, 0, 0), ("quarter", 0, 1, 0)]}
+PIECE_AREA = {"square": 1.0, "rect": 2.0, "tri": 0.5, "half": math.pi / 2, "quarter": math.pi / 4}
+
+def piece_poly(kind, x, y, rot=0):
+    """polygon (unit coordinates, y up) of a piece whose bottom left corner is (x, y)"""
+    if kind == "square": return [(x, y), (x + 1, y), (x + 1, y + 1), (x, y + 1)]
+    if kind == "rect": return [(x, y), (x + 2, y), (x + 2, y + 1), (x, y + 1)]
+    if kind == "tri": return [(x, y), (x + 1, y), (x + 0.5, y + 1)]
+    if kind == "half": return [(x + 1 + math.cos(math.pi * i / 16), y + math.sin(math.pi * i / 16)) for i in range(17)]
+    return [(x, y), (x + 1, y)] + [(x + math.cos(math.pi / 2 * (1 - i / 12)), y + math.sin(math.pi / 2 * (1 - i / 12))) for i in range(13)]
+
+def silhouette_svg(tpl, u=13.0):
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+    polys = [Polygon(piece_poly(k, x, y)) for k, x, y, r in FORM_TEMPLATES[tpl]]
+    un = unary_union([p.buffer(0.001) for p in polys]).buffer(-0.001)
+    pts = list(un.exterior.coords)
+    h = 2 * u
+    d = "M" + " L".join(f"{px * u + 1:.2f},{h - py * u + 1:.2f}" for px, py in pts) + " Z"
+    return svg(round(2 * u + 2, 1), round(h + 2, 1), f'<path class="silh" d="{d}" fill="#fff" stroke="#000" stroke-width="0.9" stroke-linejoin="round"/>')
+
+def silhouette_area(svg_text):
+    pts = [tuple(float(v) for v in m.split(",")) for m in re.findall(r"[ML]?([\d.]+,[\d.]+)", re.search(r'class="silh" d="([^"]+)"', svg_text).group(1))]
+    a = 0.0
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:] + pts[:1]): a += x1 * y2 - x2 * y1
+    return abs(a) / 2
+
+def option_pieces_svg(kinds, u=9.0):
+    parts = []; x = 0.5
+    for k in kinds:
+        w = 2 * u if k in ("rect", "half") else u
+        parts.append(piece_svg(k, x / u, 0.0, u, 0).replace("4 * u", "")) if False else None
+        parts.append(piece_svg_flat(k, x, u)); x += w + 3
+    return svg(round(x, 1), round(u + 2, 1), "".join(parts))
+
+def piece_svg_flat(kind, x, u):
+    a = 'fill="#fff" stroke="#000" stroke-width="0.6" stroke-linejoin="round"'; c = f'class="opiece" data-t="{kind}"'
+    Y = u + 1
+    if kind == "square": return f'<rect {c} x="{x:.2f}" y="1" width="{u}" height="{u}" {a}/>'
+    if kind == "rect": return f'<rect {c} x="{x:.2f}" y="{1 + u / 2:.2f}" width="{2*u}" height="{u}" {a} transform="translate(0,{-u / 2:.2f})"/>'
+    if kind == "tri": return f'<polygon {c} points="{x:.2f},{Y} {x+u:.2f},{Y} {x+u/2:.2f},1" {a}/>'
+    if kind == "half": return f'<path {c} d="M{x:.2f},{Y} L{x+2*u:.2f},{Y} A{u},{u} 0 0 0 {x:.2f},{Y} Z" {a}/>'
+    return f'<path {c} d="M{x:.2f},{Y} L{x+u:.2f},{Y} A{u},{u} 0 0 0 {x:.2f},{Y-u} Z" {a}/>'
+
 def page33():
     rng = random.Random(3333)
-    word = "TRUNK"
-    u = 15.0; W = 9
+    word = "BUDGIE"
+    assert anagrams(word) == [word.lower()]
+    pre = word[:5]
+    u = 12.0; W = 9
     while True:
         vals = rng.sample(range(1, 7), 5); counts = dict(zip(KINDS, vals)); T = sum(vals)
         if T == 15 or T > 20: continue
         fig = build_figure(rng, counts)
         if not fig: continue
-        xs = {x for k, x, y, r in fig}
-        if len({x for k, x, y, r in fig if True}) < 6: continue
-        table = make_code_table(vals, word, rng, 1, 9, n_decoy=4, near=(1, -1, 2, -2, 3, -3), tries=80)
-        if table: break
+        if len({x for k, x, y, r in fig}) < 6: continue
+        t = build_table(vals, pre, rng, 1, 9, 3, (1, -1, 2, -2, 3, -3), weighted=True)
+        bad_l = bad_letters(word)
+        if any(L in bad_l for v, L in t.items() if v not in vals): continue
+        # no single slip and no swap of the five answers spells a word of the large list (tested on the whole six-letter word)
+        okk = True
+        for i in range(5):
+            for v in range(1, 10):
+                if v != vals[i]:
+                    L = t.get(v)
+                    if L is not None and (word[:i] + L + word[i + 1:]).lower() in BIG: okk = False
+        if not okk: continue
+        if len(candidates(list(t.values()) + [word[5]], 6)) < 3: continue
+        table = t; break
+    tpls = list(FORM_TEMPLATES); rng.shuffle(tpls)
+    target = tpls[0]; wrongs = tpls[1:3]
+    sets = [target] + wrongs
+    slot = rng.randrange(3); order = wrongs[:]; order.insert(slot, target)
+    last = [c for c in ALPHA if c != word[5] and (pre + c).lower() not in BIG and c not in pre]
+    for _ in range(200):
+        decs = rng.sample(last, 2)
+        if len(candidates(list(table.values()) + decs + [word[5]], 6)) >= 3: break
+    opt_letters = []; di = iter(decs)
+    for s_ in range(3): opt_letters.append(word[5] if s_ == slot else next(di))
     inner = ['<line x1="0" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#000" stroke-width="0.8"/>' % (4 * u, W * u, 4 * u)] + [piece_svg(k, x, y, u, r) for k, x, y, r in fig]
     figsvg = svg(W * u, 4 * u + 1, "".join(inner))
-    srows = "".join(f'<div class="srow">{svg(14, 14, shape_svg({"rect": "rect", "square": "square", "tri": "tri", "half": "half", "quarter": "quarter"}[k], 7, 7, 12, fill="#fff", sw=0.5))}<span class="sn"><b>{KNAME[k]}</b><br>{KEDGE[k]}</span><span class="ab"></span></div>' for k in KINDS)
-    body = f'<div class="figwrap">{figsvg}</div><div class="srows s5">{srows}</div>{code_block(table)}'
+    srows = "".join(f'<div class="srow">{svg(14, 14, shape_svg(k, 7, 7, 12, fill="#fff", sw=0.5))}<span class="sn"><b>{KNAME[k]}</b><br>{KEDGE[k]}</span><span class="ab"></span></div>' for k in KINDS)
+    silh = silhouette_svg(target, 10.0)
+    opts = "".join(f'<div class="fopt"><i class="cl">{opt_letters[s_]}</i>{option_pieces_svg([k for k, x, y, r in FORM_TEMPLATES[order[s_]]])}</div>' for s_ in range(3))
+    form = (f'<div class="formtask"><div class="fg"><small>make this figure</small>{silh}</div><div class="fo"><p class="ptxt">Which pieces make this figure? Write that letter last.</p><div class="fopts">{opts}</div></div></div>')
+    body = f'<div class="figwrap">{figsvg}</div><div class="srows s5">{srows}</div><div class="ctc">{code_block(table)}</div>{form}'
     chk_code = code_check(table)
-    P = Page(no=33, title="Shape Builder", tier=2, topic="2D shapes: form figures, count the pieces, curved and straight sides",
-             strand="Measurement and Geometry - Geometry", syll="Geometry 1.1, 1.2, 1.3 (naming and classifying 2D shapes; figures made from rectangle, square, triangle, half circle, quarter circle; the shapes in a figure)",
-             ptype="Count + code-breaker", mech=f"K3 the five counts add to {T} + K1 code word (5 letters)",
-             instr=["This figure is made of shapes.", "Count each kind of shape.", "Use the code table."],
-             body=body, check=f"Do your five numbers add to {T}? Write the letters. Do they spell a word?", check_boxes=5,
-             key=dict(answers=", ".join(f"{KNAME[k]}: {counts[k]}" for k in KINDS) + f" (total {T})", check_result=f"Total {T}; code word: {word}"),
-             note=("The figure is built from the five shapes of the syllabus list: squares and rectangles (straight sides only) and triangles, half circles and quarter circles (the half and quarter circles have a curved side). "
-                   "Pieces touch edge to edge and some are turned. The five counts are all different, so each count has one letter. The table says which shapes have straight sides and which have a curved side."),
+    P = Page(no=33, title="Shape Builder", tier=2, topic="2D shapes: count the shapes in a figure and form a figure",
+             strand="Measurement and Geometry - Geometry", syll="Geometry 1.1, 1.2, 1.3 (naming and classifying 2D shapes; forming a figure from rectangle, square, triangle, half circle, quarter circle; the shapes in a figure)",
+             ptype="Count + form a figure + code-breaker", mech=f"K3 the five counts add to {T} + K1 code word (6 letters: five counts and the letter of the pieces that form the figure)",
+             instr=["Count each kind of shape.", "Which pieces form the small figure?", "Use the code table."],
+             body=body, check=f"Do the five numbers add to {T}? Write six letters. Do they spell a word?", check_boxes=6,
+             key=dict(answers=", ".join(f"{KNAME[k]}: {counts[k]}" for k in KINDS) + f" (total {T}); the small figure is made of " + " and ".join(KNAME[k] for k, x, y, r in FORM_TEMPLATES[target]) + f" (letter {word[5]})", check_result=f"Total {T}; code word: {word}"),
+             note=("The big figure is built from the five shapes of the syllabus list: squares and rectangles (straight sides only) and triangles, half circles and quarter circles (the half and quarter circles have a curved side). "
+                   "Pieces touch edge to edge and some are turned. The five counts are all different, so each count has one letter. The table says which shapes have straight sides and which have a curved side. "
+                   "The small figure task is forming a figure: the pupil sees an outline and picks which two pieces fit together to make it; the three sets have different total areas, so only one set can form the outline. Its letter is the sixth letter of the word."),
              seed=3333)
     got = [figsvg.count(f'data-t="{k}"') for k in KINDS]
     P.v("V1 shapes counted in the drawn figure equal the key", got == vals, got)
     P.v("V1b counts all different, total is not 15 (the other shape page) and is within 20", len(set(got)) == 5 and sum(got) == T and T != 15 and T <= 20)
-    P.v("V1c every piece is inside the 9 by 4 grid and no two pieces overlap (bounding boxes)", True)
-    cv = code_verify(vals, table, word, 1, 9)
-    code_checks(P, cv, word)
-    P["cv"] = cv
-    P["model"] = dict(truth=list(vals), domains=[list(range(1, 10))] * 5, check=lambda ans: sum(ans) == T and chk_code(ans), numeric=True)
-    P.v("V3d a swap of two counts keeps the total but spells no word", all(not chk_code([vals[b_] if k == a_ else vals[a_] if k == b_ else vals[k] for k in range(5)]) for a_, b_ in itertools.combinations(range(5), 2)))
-    P["mech_plain"] = f"The five counts add to {T}, and a code word (5 letters)"
+    # independent check of the forming task: area of the silhouette (from the drawn outline) against the area of each option's pieces (from the drawn pieces)
+    sa = silhouette_area(silh) / (10.0 ** 2)
+    oareas = []
+    for s_ in range(3):
+        ks = re.findall(r'data-t="(\w+)"', option_pieces_svg([k for k, x, y, r in FORM_TEMPLATES[order[s_]]]))
+        oareas.append(sum(PIECE_AREA[k] for k in ks))
+    fits = [abs(a_ - sa) < 0.03 for a_ in oareas]
+    P.v("V1c forming task: exactly one option's pieces have the same total area as the drawn outline, and its letter is the sixth letter of the word", sum(fits) == 1 and opt_letters[fits.index(True)] == word[5], str([round(a_, 2) for a_ in oareas]) + " vs " + str(round(sa, 2)))
+    P.v("V1d the two wrong sets differ from the right one in kinds of pieces and in area (by at least 0.2)", all(abs(a_ - sa) > 0.2 for a_, f_ in zip(oareas, fits) if not f_))
+    letters5 = [table[v] for v in vals]
+    P.v("V2 the five count letters then the form letter spell " + word, "".join(letters5) + word[5] == word)
+    nsl = 0; ndet = 0
+    for i in range(5):
+        for v in range(1, 10):
+            if v == vals[i]: continue
+            nsl += 1; L = table.get(v); w_ = word[:i] + (L or "?") + word[i + 1:]
+            ndet += not (L is not None and w_.lower() in BIG)
+    swaps = [x for i, j in itertools.combinations(range(5), 2) for x in ["".join(word[k] if k not in (i, j) else word[j if k == i else i] for k in range(6))] if x != word and x.lower() in BIG]
+    P.v("V3 no single slip of a count spells another word (large word list)", ndet == nsl, f"{ndet}/{nsl}")
+    P.v("V3c no swap of two counts spells a word", not swaps, swaps[:3])
+    P.v("V3d the code word's letters have exactly ONE arrangement that is a word", anagrams(word) == [word.lower()], anagrams(word))
+    P.v("V4 guess resistance: at least 3 common words fit the table letters and the three option letters", len(candidates(list(table.values()) + opt_letters, 6)) >= 3)
+    P["cv"] = dict(rate=ndet / nsl, single_total=nsl, single_detected=ndet)
+    def chk(ans):
+        nums, last_ = ans[:5], ans[5]
+        if sum(nums) != T or any(a_ not in table for a_ in nums): return False
+        return ("".join(table[a_] for a_ in nums) + last_).lower() in BIG
+    P["model"] = dict(truth=list(vals) + [word[5]], domains=[list(range(1, 10))] * 5 + [list(opt_letters)], check=chk, numeric=False)
+    P["mech_plain"] = f"The five counts add to {T}; their letters and the letter of the pieces that form the small figure spell a word (6 letters)"
     return P
 
 
