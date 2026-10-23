@@ -34,7 +34,7 @@
     "width_mm": 134
    },
    "steps": [
-    "Put the corner of the paper on the point where the 2 lines meet.",
+    "Put the paper corner on the point where the lines meet.",
     "Line up one side of the paper with one line.",
     "Look at the other line. If it is inside the corner, the angle is smaller. If it is outside, the angle is greater."
    ],
@@ -153,15 +153,15 @@
      }
     ],
     "cols": 3,
-    "ch": 175,
-    "width_mm": 134
+    "ch": 176,
+    "width_mm": 100
    }
   },
   {
    "id": "L3U08-S02",
    "tier": "start",
    "page": 1,
-   "text": "How many right angles are INSIDE each shape? Check each corner. A dent is greater than a right angle: do not count it.",
+   "text": "Count the right angles INSIDE each shape. Check each corner. A dent is greater than a right angle, so leave it out.",
    "parts": [
     {
      "label": "a",
@@ -199,8 +199,8 @@
    "figure": {
     "type": "l3_segs",
     "k": 30,
-    "pad": 20,
-    "width_mm": 134,
+    "pad": 44,
+    "width_mm": 90,
     "segs": [
      [
       0,
@@ -338,7 +338,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Circle the letters that have a pair of PARALLEL lines.   {circ:F|V|N|L}",
+     "text": "Circle each letter with 2 PARALLEL lines.   {circ:F|V|N|L}",
      "answer": {
       "value": [
        "F",
@@ -350,7 +350,7 @@
     },
     {
      "label": "b",
-     "text": "Circle the letters that have a pair of PERPENDICULAR lines.   {circ:F|V|N|L}",
+     "text": "Circle each letter with 2 PERPENDICULAR lines.   {circ:F|V|N|L}",
      "answer": {
       "value": [
        "F",
@@ -365,69 +365,99 @@
    "figure": {
     "type": "l3_segs",
     "segs": [
-     [
-      0.0,
-      0,
-      0.0,
-      4
-     ],
-     [
-      0.0,
-      4,
-      3.0,
-      4
-     ],
-     [
-      0.0,
-      2,
-      2.0,
-      2
-     ],
-     [
-      4.6,
-      4,
-      6.1,
-      0
-     ],
-     [
-      6.1,
-      0,
-      7.6,
-      4
-     ],
-     [
-      9.2,
-      0,
-      9.2,
-      4
-     ],
-     [
-      9.2,
-      4,
-      12.2,
-      0
-     ],
-     [
-      12.2,
-      0,
-      12.2,
-      4
-     ],
-     [
-      13.799999999999999,
-      4,
-      13.799999999999999,
-      0
-     ],
-     [
-      13.799999999999999,
-      0,
-      16.799999999999997,
-      0
-     ]
+     {
+      "p": [
+       0.0,
+       0,
+       0.0,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       0.0,
+       4,
+       3.0,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       0.0,
+       2,
+       2.0,
+       2
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       4.6,
+       4,
+       6.1,
+       0
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       6.1,
+       0,
+       7.6,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       9.2,
+       0,
+       9.2,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       9.2,
+       4,
+       12.2,
+       0
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       12.2,
+       0,
+       12.2,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       13.799999999999999,
+       4,
+       13.799999999999999,
+       0
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       13.799999999999999,
+       0,
+       16.799999999999997,
+       0
+      ],
+      "w": 11
+     }
     ],
     "k": 36,
-    "width_mm": 112,
+    "width_mm": 72,
     "pad": 24
    }
   },
@@ -483,7 +513,7 @@
     "type": "l3_segs",
     "k": 44,
     "pad": 30,
-    "width_mm": 70,
+    "width_mm": 58,
     "segs": [
      [
       0,
@@ -552,12 +582,12 @@
    "explanation": "Line AB goes 4 across and 2 up. R goes 4 across and 2 up too, so it never meets AB: parallel. P goes 2 across and 4 down, which turns AB through a right angle: perpendicular. Q and S slope in other ways.",
    "figure": {
     "type": "l3_segs",
-    "k": 40,
+    "k": 44,
     "pad": 36,
-    "width_mm": 96,
+    "width_mm": 62,
     "dots": [
-     8,
-     8
+     7,
+     7
     ],
     "segs": [
      [
@@ -568,27 +598,27 @@
      ],
      [
       2,
+      5,
+      4,
+      1
+     ],
+     [
+      0,
+      4,
+      4,
+      2
+     ],
+     [
+      2,
+      0,
       6,
-      4,
       2
      ],
      [
-      0,
-      5,
       4,
-      3
-     ],
-     [
-      3,
-      0,
-      7,
-      2
-     ],
-     [
-      5,
-      5,
-      7,
-      7
+      4,
+      6,
+      6
      ]
     ],
     "labels": [
@@ -596,39 +626,39 @@
       "x": 1,
       "y": 1,
       "t": "A",
-      "dx": -22,
-      "dy": 20
+      "dx": -24,
+      "dy": 22
      },
      {
       "x": 5,
       "y": 3,
       "t": "B",
-      "dx": 24
+      "dx": 26
      },
      {
       "x": 2,
-      "y": 6,
+      "y": 5,
       "t": "P",
-      "dx": -24,
-      "dy": -6
+      "dx": -4,
+      "dy": -26
      },
      {
       "x": 0,
-      "y": 5,
+      "y": 4,
       "t": "Q",
-      "dx": -22
+      "dx": -26
      },
      {
-      "x": 7,
+      "x": 6,
       "y": 2,
       "t": "R",
-      "dx": 24
+      "dx": 26
      },
      {
-      "x": 7,
-      "y": 7,
+      "x": 6,
+      "y": 6,
       "t": "S",
-      "dx": 24
+      "dx": 26
      }
     ]
    }
@@ -665,37 +695,37 @@
     "type": "l3_segs",
     "k": 40,
     "pad": 24,
-    "width_mm": 50,
+    "width_mm": 40,
     "segs": [
      [
       0,
       0,
       0,
-      6
+      4
      ],
      [
       3,
       0,
       3,
-      6
+      4
      ],
      [
       0,
-      1.5,
+      1,
       3,
-      1.5
+      1
+     ],
+     [
+      0,
+      2,
+      3,
+      2
      ],
      [
       0,
       3,
       3,
       3
-     ],
-     [
-      0,
-      4.5,
-      3,
-      4.5
      ]
     ]
    },
@@ -797,7 +827,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Perpendicular lines meet at a right angle.   {circ:True|False}",
+     "text": "Lines that are perpendicular cross at a right angle.   {circ:True|False}",
      "answer": {
       "value": [
        "True"
@@ -842,7 +872,7 @@
    "id": "L3U08-S10",
    "tier": "start",
    "page": 3,
-   "text": "Siti says that angle X in this shape is a right angle.",
+   "text": "Siti says angle X is a right angle.",
    "parts": [
     {
      "label": "a",
@@ -912,11 +942,11 @@
    "id": "L3U08-T01",
    "tier": "think",
    "page": 4,
-   "text": "2 lines from a point O make 1 angle. 3 lines make 3 angles. 4 lines make 6 angles. Look for a pattern.",
+   "text": "Lines from a point O make angles. 2 lines give 1 angle, 3 lines give 3 angles and 4 lines give 6 angles.",
    "parts": [
     {
      "label": "a",
-     "text": "5 lines make {b} angles.",
+     "text": "With 5 lines there are {b} angles.",
      "answer": {
       "value": [
        "10"
@@ -926,7 +956,7 @@
     },
     {
      "label": "b",
-     "text": "7 lines make {b} angles.",
+     "text": "With 7 lines there are {b} angles.",
      "answer": {
       "value": [
        "21"
@@ -965,8 +995,8 @@
    "figure": {
     "type": "l3_segs",
     "k": 40,
-    "pad": 36,
-    "width_mm": 96,
+    "pad": 30,
+    "width_mm": 60,
     "dots": [
      8,
      8
@@ -1139,12 +1169,7 @@
     ]
    },
    "figside": true,
-   "hint": "Count the dents first. Each new step adds 1 right angle.",
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   }
+   "hint": "Count the dents first. Each new step adds 1 right angle."
   },
   {
    "id": "L3U08-G01",
@@ -1194,167 +1219,11 @@
     }
    ],
    "explanation": "(a) 90 + 90 = 180. (b) 4 × 90 = 360. (c) 90 ÷ 2 = 45. (d) 3 × 90 = 270.",
+   "partsrow": true,
    "hint": "Add the right angles: 90 + 90 + ..."
   },
   {
    "id": "L3U08-G02",
-   "tier": "go",
-   "page": 5,
-   "text": "Which shape has EXACTLY 3 right angles? Check every corner.   {circ:A|B|C|D}",
-   "answer": {
-    "value": [
-     "C"
-    ],
-    "text": "C"
-   },
-   "explanation": "A (rectangle) has 4 right angles. B (the house) has 2, at the bottom corners. C has 3: at the bottom left, the bottom right and the top left. D (a slanted shape) has none.",
-   "figure": {
-    "type": "l3_segs",
-    "k": 30,
-    "pad": 20,
-    "width_mm": 134,
-    "segs": [
-     [
-      0,
-      0,
-      4,
-      0
-     ],
-     [
-      4,
-      0,
-      4,
-      3
-     ],
-     [
-      4,
-      3,
-      0,
-      3
-     ],
-     [
-      0,
-      3,
-      0,
-      0
-     ],
-     [
-      6,
-      0,
-      10,
-      0
-     ],
-     [
-      10,
-      0,
-      10,
-      3
-     ],
-     [
-      10,
-      3,
-      8,
-      4.5
-     ],
-     [
-      8,
-      4.5,
-      6,
-      3
-     ],
-     [
-      6,
-      3,
-      6,
-      0
-     ],
-     [
-      12,
-      0,
-      16,
-      0
-     ],
-     [
-      16,
-      0,
-      16,
-      2
-     ],
-     [
-      16,
-      2,
-      14,
-      4
-     ],
-     [
-      14,
-      4,
-      12,
-      4
-     ],
-     [
-      12,
-      4,
-      12,
-      0
-     ],
-     [
-      18,
-      0,
-      22,
-      0
-     ],
-     [
-      22,
-      0,
-      23,
-      3
-     ],
-     [
-      23,
-      3,
-      19,
-      3
-     ],
-     [
-      19,
-      3,
-      18,
-      0
-     ]
-    ],
-    "labels": [
-     {
-      "x": 2,
-      "y": -0.9,
-      "t": "A"
-     },
-     {
-      "x": 8,
-      "y": -0.9,
-      "t": "B"
-     },
-     {
-      "x": 14,
-      "y": -0.9,
-      "t": "C"
-     },
-     {
-      "x": 20,
-      "y": -0.9,
-      "t": "D"
-     }
-    ]
-   },
-   "hint": "Check each corner of each shape with the checker.",
-   "space": {
-    "rows": [
-     "Right angles: A {b}   B {b}   C {b}   D {b}"
-    ]
-   }
-  },
-  {
-   "id": "L3U08-G03",
    "tier": "go",
    "page": 5,
    "text": "Beyond Level 3: Lines and a third line.\nTwo upright lines both cross the long line at right angles.",
@@ -1380,12 +1249,12 @@
      }
     }
    ],
-   "explanation": "(a) Two lines that are perpendicular to the same line stay the same distance apart and never meet: they are parallel. (b) A line across a pair of parallel lines makes the same angle with both, so if it makes a right angle with one it makes a right angle with the other.",
+   "explanation": "(a) Two lines that are perpendicular to the same line stay the same distance apart and never meet: they are parallel. (b) A line that crosses 2 parallel lines makes the same angle with both. So a right angle with one means a right angle with the other.",
    "figure": {
     "type": "l3_segs",
     "k": 44,
     "pad": 24,
-    "width_mm": 96,
+    "width_mm": 62,
     "segs": [
      [
       0,
@@ -1410,10 +1279,10 @@
    "hint": "Do the 2 upright lines ever meet?"
   },
   {
-   "id": "L3U08-G04",
+   "id": "L3U08-G03",
    "tier": "go",
    "page": 5,
-   "text": "A board is made of lines. 2 lines go across and 2 lines go up, like a noughts-and-crosses board.",
+   "text": "A board has 2 lines across and 2 lines up.",
    "parts": [
     {
      "label": "a",
@@ -1451,7 +1320,7 @@
     "type": "l3_segs",
     "k": 40,
     "pad": 20,
-    "width_mm": 46,
+    "width_mm": 38,
     "segs": [
      [
       0,
@@ -1511,7 +1380,7 @@
    "id": "L3U08-C02",
    "tier": "quiz",
    "page": 6,
-   "text": "Circle the letters that have a pair of parallel lines.   {circ:E|H|V|T}",
+   "text": "Circle each letter with 2 parallel lines.   {circ:E|H|V|T}",
    "answer": {
     "value": [
      "E",
@@ -1524,75 +1393,108 @@
    "figure": {
     "type": "l3_segs",
     "segs": [
-     [
-      0.0,
-      0,
-      0.0,
-      4
-     ],
-     [
-      0.0,
-      4,
-      3.0,
-      4
-     ],
-     [
-      0.0,
-      2,
-      2.5,
-      2
-     ],
-     [
-      0.0,
-      0,
-      3.0,
-      0
-     ],
-     [
-      4.6,
-      0,
-      4.6,
-      4
-     ],
-     [
-      7.6,
-      0,
-      7.6,
-      4
-     ],
-     [
-      4.6,
-      2,
-      7.6,
-      2
-     ],
-     [
-      9.2,
-      4,
-      10.7,
-      0
-     ],
-     [
-      10.7,
-      0,
-      12.2,
-      4
-     ],
-     [
-      13.799999999999999,
-      4,
-      16.799999999999997,
-      4
-     ],
-     [
-      15.299999999999999,
-      4,
-      15.299999999999999,
-      0
-     ]
+     {
+      "p": [
+       0.0,
+       0,
+       0.0,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       0.0,
+       4,
+       3.0,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       0.0,
+       2,
+       2.5,
+       2
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       0.0,
+       0,
+       3.0,
+       0
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       4.6,
+       0,
+       4.6,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       7.6,
+       0,
+       7.6,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       4.6,
+       2,
+       7.6,
+       2
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       9.2,
+       4,
+       10.7,
+       0
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       10.7,
+       0,
+       12.2,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       13.799999999999999,
+       4,
+       16.799999999999997,
+       4
+      ],
+      "w": 11
+     },
+     {
+      "p": [
+       15.299999999999999,
+       4,
+       15.299999999999999,
+       0
+      ],
+      "w": 11
+     }
     ],
     "k": 36,
-    "width_mm": 96,
+    "width_mm": 58,
     "pad": 24
    }
   },

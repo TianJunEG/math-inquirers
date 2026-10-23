@@ -64,18 +64,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -137,18 +126,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -195,18 +173,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -269,18 +236,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    69,
-    69
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 5,
@@ -338,18 +294,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    61,
-    61
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -407,18 +352,7 @@
    1.0,
    2994,
    2994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2994,
-    2994
-   ],
-   "all_other_values_rejected": [
-    2994,
-    2994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -480,18 +414,7 @@
    1.0,
    4314,
    4314
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    4314,
-    4314
-   ],
-   "all_other_values_rejected": [
-    4314,
-    4314
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -549,18 +472,7 @@
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    52,
-    52
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -607,18 +519,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -682,18 +583,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -761,18 +651,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -814,18 +693,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -882,18 +750,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    44,
-    44
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -942,18 +799,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    105,
-    105
-   ],
-   "all_other_values_rejected": [
-    105,
-    105
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1016,18 +862,7 @@
    1.0,
    390,
    390
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    390,
-    390
-   ],
-   "all_other_values_rejected": [
-    390,
-    390
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1085,18 +920,7 @@
    1.0,
    5988,
    5988
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    5988,
-    5988
-   ],
-   "all_other_values_rejected": [
-    5988,
-    5988
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
@@ -1160,18 +984,7 @@
    1.0,
    4495,
    4495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    4495,
-    4495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1234,18 +1047,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1294,18 +1096,7 @@
    1.0,
    360,
    360
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    360,
-    360
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1360,18 +1151,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1414,21 +1194,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 22,
@@ -1485,18 +1251,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    49,
-    49
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1539,21 +1294,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 24,
@@ -1596,20 +1337,428 @@
    1.0,
    719,
    719
+  ]
+ },
+ {
+  "no": 25,
+  "code": "S2-06 (P2-25)",
+  "title": "Kilograms and Grams",
+  "tier": 1,
+  "topic": "Mass: reading scales in kilograms (kg) and grams (g)",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "1.1, 1.2 (measuring mass in kilograms and grams; the abbreviations kg and g)",
+  "outcomes": [
+   "ME1.1",
+   "ME1.2"
   ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  "ptype": "Code-breaker (weighing scales)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 8125,
+  "checks": [
+   {
+    "name": "V2 code word spells CRAFTY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "6000/6000"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['crafty']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['artful', 'crafty', 'faulty']"
+   },
+   {
+    "name": "V1 independent solver reads the needle angle of each dial and equals the key",
+    "ok": true,
+    "detail": "[9, 8, 250, 150, 1, 950]"
+   },
+   {
+    "name": "V1b the unit printed on each dial is the one of the key",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 masses within the tables: kg 1 to 9, g up to 1000 in steps of 50",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   6000,
+   6000
+  ]
+ },
+ {
+  "no": 26,
+  "code": "S2-07 (P2-26)",
+  "title": "Litres",
+  "tier": 1,
+  "topic": "Volume of liquid: reading containers in litres (\u2113)",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "1.1, 1.2 (measuring volume of liquid in litres; the abbreviation \u2113)",
+  "outcomes": [
+   "ME1.1",
+   "ME1.2"
+  ],
+  "ptype": "Code-breaker (containers)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 8226,
+  "checks": [
+   {
+    "name": "V2 code word spells FRUITY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "72/72"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['fruity']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['fruity', 'purify', 'purity']"
+   },
+   {
+    "name": "V1 independent solver reads the tick marks and the level line of each container and equals the key",
+    "ok": true,
+    "detail": "[1, 4, 3, 6, 7, 8]"
+   },
+   {
+    "name": "V7 whole litres, scales to 5 or 10",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   72,
+   72
+  ]
+ },
+ {
+  "no": 27,
+  "code": "S2-08 (P2-27)",
+  "title": "Which Unit?",
+  "tier": 1,
+  "topic": "Units of measurement: m, g, kg and \u2113",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "1.2 (using appropriate units of measurement and their abbreviations m, g, kg, \u2113)",
+  "outcomes": [
+   "ME1.2"
+  ],
+  "ptype": "Choice table (units)",
+  "mech": "K1 the letter of the right unit in each row spells a word (6 letters, two decoy letters in each row)",
+  "seed": 8327,
+  "checks": [
+   {
+    "name": "V1 the right unit of every sentence is the key's (checked against the printed sentence and units)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no other way of choosing spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every unit is m, g, kg or \u2113 and the six sentences are different",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ]
+ },
+ {
+  "no": 28,
+  "code": "S2-09 (P2-28)",
+  "title": "Order the Measures",
+  "tier": 2,
+  "topic": "Mass and volume: comparing and ordering",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "1.1, 1.3 (measuring mass and volume; comparing and ordering masses and volumes)",
+  "outcomes": [
+   "ME1.1",
+   "ME1.3"
+  ],
+  "ptype": "Ordering (lettered scales and containers)",
+  "mech": "K1 letters in order spell a word (6 letters) + K4 each card used once",
+  "seed": 8428,
+  "checks": [
+   {
+    "name": "V1 independent solver (dial needles and container levels read from the drawings, then sorted) gets the word",
+    "ok": true,
+    "detail": "MIGHTY"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 719 wrong orders spells a word",
+    "ok": true,
+    "detail": "[]"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ]
+ },
+ {
+  "no": 29,
+  "code": "S2-12 (P2-29)",
+  "title": "Time Taken",
+  "tier": 2,
+  "topic": "Time: finding how long in hours and minutes",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "2.1, 2.2 (telling time to the minute; measuring time in hours and minutes)",
+  "outcomes": [
+   "TI2.1",
+   "TI2.2"
+  ],
+  "ptype": "Code-breaker (start and end times)",
+  "mech": "K1 code word (5 letters)",
+  "seed": 8529,
+  "checks": [
+   {
+    "name": "V2 code word spells MAIZE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "2095/2095"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['maize']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['jaime', 'jamie', 'maize']"
+   },
+   {
+    "name": "V1 independent solver (clock hands read from the drawings, digital times parsed) equals the key",
+    "ok": true,
+    "detail": "[(1, 25), (0, 42), (3, 7), (4, 9), (0, 45)]"
+   },
+   {
+    "name": "V7 every time taken is under 5 hours",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2095,
+   2095
+  ]
+ },
+ {
+  "no": 30,
+  "code": "S2-11 (P2-30)",
+  "title": "Hours and Minutes",
+  "tier": 1,
+  "topic": "Time: changing hours and minutes to minutes, and back",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "2.3 (converting time in hours and minutes to minutes only, and vice versa)",
+  "outcomes": [
+   "TI2.3"
+  ],
+  "ptype": "Code-breaker (time conversions)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 8630,
+  "checks": [
+   {
+    "name": "V2 code word spells SQUARE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "1800/1800"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['square']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['abuser', 'basque', 'square']"
+   },
+   {
+    "name": "V1 independent solver reads the printed text and equals the key",
+    "ok": true,
+    "detail": "[180, 5, 3, 220, 65, 55]"
+   },
+   {
+    "name": "V7 times under 5 hours, minutes in multiples of 5",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   1800,
+   1800
+  ]
+ },
+ {
+  "no": 31,
+  "code": "S2-13 (P2-31)",
+  "title": "Time Detective",
+  "tier": 2,
+  "topic": "Time: a timetable, minutes and hours",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "2.1, 2.2, 2.3 (telling time to the minute; measuring time in hours and minutes; converting to minutes)",
+  "outcomes": [
+   "TI2.1",
+   "TI2.2",
+   "TI2.3"
+  ],
+  "ptype": "Code-breaker (timetable)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 8731,
+  "checks": [
+   {
+    "name": "V2 code word spells TEACUP",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "1800/1800"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['teacup']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['packet', 'teacup', 'uptake']"
+   },
+   {
+    "name": "V1 independent solver (timetable and questions read back from the printed page) equals the key",
+    "ok": true,
+    "detail": "[25, 30, 15, 100, 165, 50]"
+   },
+   {
+    "name": "V7 six different lessons, all lessons start after 8 am and end before 2 pm",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   1800,
+   1800
+  ]
+ },
+ {
+  "no": 32,
+  "code": "S2-14 (P2-32)",
+  "title": "Shape Patterns",
+  "tier": 1,
+  "topic": "2D shape patterns: what comes next?",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "1.1 (making/completing patterns with 2D shapes by size, shape, colour or orientation)",
+  "outcomes": [
+   "GE1.1"
+  ],
+  "ptype": "Choice table (shape patterns)",
+  "mech": "K1 the letter of the shape that comes next spells a word (6 letters, two decoy letters in each row)",
+  "seed": 8932,
+  "checks": [
+   {
+    "name": "V1 independent solver (shapes read back from the drawing, the repeat found, the next shape matched to exactly one option) gets the letters",
+    "ok": true,
+    "detail": "[['W'], ['A'], ['L'], ['R'], ['U'], ['S']]"
+   },
+   {
+    "name": "V3 no other way of choosing spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every row shows at least two full turns of the repeat (six shapes, repeat of 2 or 3)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V8 shapes are at least 8 mm across",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ]
  }
 ]

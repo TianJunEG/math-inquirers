@@ -16,8 +16,8 @@ STRAND_ME = "Measurement and Geometry - Measurement"
 INSTR_CODE = "Use the code table."
 
 def code_items_page(no, seed, title, tier, topic, strand, syll, oc, ptype, instr, items_html, answers, table, word, lo, hi, key_answers, note,
-                    domain=None, fmt=str, ps=False, pre_body="", mech=None, plain=None):
-    body = pre_body + items_html + table_block(table, fmt)
+                    domain=None, fmt=str, ps=False, pre_body="", mech=None, plain=None, cols=None):
+    body = pre_body + items_html + table_block(table, fmt, cols)
     P = new_page(no, seed, title, tier, topic, strand, syll, oc, ptype, mech or f"K1 code word ({len(word)} letters)", instr, body, key_answers,
                  f"Code word: {word}", note, check_boxes=len(word), ps=ps)
     finish_code(P, answers, table, word, lo, hi, domain, plain)

@@ -14,8 +14,8 @@ SHAPES_ABCD = ([[0, 0, 4, 0], [4, 0, 4, 3], [4, 3, 0, 3], [0, 3, 0, 0]] +
 import math as _m
 _ang = [10, 55, 100, 145]
 FAN4 = [[0, 0, round(3.4 * _m.cos(_m.radians(a)), 2), round(3.4 * _m.sin(_m.radians(a)), 2)] for a in _ang]
-GRID1 = [[1, 1, 5, 3], [2, 6, 4, 2], [0, 5, 4, 3], [3, 0, 7, 2], [5, 5, 7, 7]]
-LADDER = [[0, 0, 0, 6], [3, 0, 3, 6], [0, 1.5, 3, 1.5], [0, 3, 3, 3], [0, 4.5, 3, 4.5]]
+GRID1 = [[1, 1, 5, 3], [2, 5, 4, 1], [0, 4, 4, 2], [2, 0, 6, 2], [4, 4, 6, 6]]
+LADDER = [[0, 0, 0, 4], [3, 0, 3, 4], [0, 1, 3, 1], [0, 2, 3, 2], [0, 3, 3, 3]]
 STAIRS = [[0, 0, 4, 0], [4, 0, 4, 1], [4, 1, 3, 1], [3, 1, 3, 2], [3, 2, 2, 2], [2, 2, 2, 3], [2, 3, 1, 3], [1, 3, 1, 4], [1, 4, 0, 4], [0, 4, 0, 0]]
 
 # letters as line segments (x right, y up), 3 wide and 4 high
@@ -29,7 +29,7 @@ def letters(names, wm, gap=1.6):
     sg = []
     for i, n in enumerate(names):
         ox = i * (3 + gap)
-        sg += [[x1 + ox, y1, x2 + ox, y2] for x1, y1, x2, y2 in LET[n]]
+        sg += [{'p': [x1 + ox, y1, x2 + ox, y2], 'w': 11} for x1, y1, x2, y2 in LET[n]]
     return {'type': 'l3_segs', 'segs': sg, 'k': 36, 'width_mm': wm, 'pad': 24}
 
 
@@ -43,7 +43,7 @@ u.learn(
     'An angle is made where 2 lines meet. A right angle is a square corner, like the corner of a page. Use the corner of a piece of paper as a right angle checker.',
     {'problem': 'Use a right angle checker. Is each angle smaller than, equal to, or greater than a right angle?',
      'figure': {'type': 'l3_angles', 'items': [{'deg': 50, 'rot': 15, 'label': 'P'}, {'deg': 90, 'rot': 5, 'label': 'Q'}, {'deg': 130, 'rot': 0, 'label': 'R'}], 'cols': 3, 'width_mm': 134},
-     'steps': ['Put the corner of the paper on the point where the 2 lines meet.', 'Line up one side of the paper with one line.',
+     'steps': ['Put the paper corner on the point where the lines meet.', 'Line up one side of the paper with one line.',
                'Look at the other line. If it is inside the corner, the angle is smaller. If it is outside, the angle is greater.'],
      'answer': 'P is smaller than a right angle. Q is a right angle. R is greater than a right angle.'},
     {'title': 'Lines to remember',
@@ -60,34 +60,34 @@ u.S(1, 'Use a right angle checker on each angle. Write the letters.', parts=[
     P('b', 'A right angle: {l}', A(['A', 'F'], 'A and F', list=True)),
     P('c', 'Greater than a right angle: {l}', A(['C', 'D'], 'C and D', list=True))],
     figure={'type': 'l3_angles', 'items': [{'deg': 90, 'rot': 20, 'label': 'A'}, {'deg': 55, 'rot': 0, 'label': 'B'}, {'deg': 125, 'rot': 40, 'label': 'C'},
-                                           {'deg': 150, 'rot': 10, 'label': 'D'}, {'deg': 40, 'rot': 60, 'label': 'E'}, {'deg': 90, 'rot': 100, 'label': 'F'}], 'cols': 3, 'ch': 175, 'width_mm': 134},
+                                           {'deg': 150, 'rot': 10, 'label': 'D'}, {'deg': 40, 'rot': 60, 'label': 'E'}, {'deg': 90, 'rot': 100, 'label': 'F'}], 'cols': 3, 'ch': 176, 'width_mm': 100},
     why='A and F fit the checker exactly, so they are right angles. B and E are inside the corner of the checker, so they are smaller. C and D stick out past the corner of the checker, so they are greater.')
-u.S(1, 'How many right angles are INSIDE each shape? Check each corner. A dent is greater than a right angle: do not count it.', parts=[
+u.S(1, 'Count the right angles INSIDE each shape. Check each corner. A dent is greater than a right angle, so leave it out.', parts=[
     P('a', 'Shape A has {b} right angles.', A('5')), P('b', 'Shape B has {b} right angles.', A('6')), P('c', 'Shape C has {b} right angles.', A('2'))],
     partsrow=True,
-    figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 134, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
+    figure={'type': 'l3_segs', 'k': 30, 'pad': 44, 'width_mm': 90, 'segs': SHAPES_ABC, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}]},
     why='Shape A is an L. It has 5 right angles, and its dent is greater than a right angle. Shape B has 6 right angles and 2 dents. Shape C has right angles only at its 2 left corners. Its 2 sloping corners do not fit the checker.')
 u.S(1, 'Look at the letters.', parts=[
-    P('a', 'Circle the letters that have a pair of PARALLEL lines.   {circ:F|V|N|L}', A(['F', 'N'], 'F and N', list=True)),
-    P('b', 'Circle the letters that have a pair of PERPENDICULAR lines.   {circ:F|V|N|L}', A(['F', 'L'], 'F and L', list=True))],
-    figure=letters(['F', 'V', 'N', 'L'], 112),
+    P('a', 'Circle each letter with 2 PARALLEL lines.   {circ:F|V|N|L}', A(['F', 'N'], 'F and N', list=True)),
+    P('b', 'Circle each letter with 2 PERPENDICULAR lines.   {circ:F|V|N|L}', A(['F', 'L'], 'F and L', list=True))],
+    figure=letters(['F', 'V', 'N', 'L'], 72),
     why='F has 2 parallel arms and a stem that meets them at right angles. V has 2 sloping lines that are neither parallel nor perpendicular. N has 2 parallel upright lines, but its sloping line is not perpendicular to them. L has 2 lines that meet at a right angle.')
 
 u.S(2, 'These 4 lines all start at point O. Count the angles. Count the small ones first.', parts=[
     P('a', 'Angles made of 1 small angle: {b}', A('3')), P('b', 'Made of 2 small angles: {b}', A('2')),
     P('c', 'Made of 3 small angles: {b}', A('1')), P('d', 'Angles in all: {b}', A('6'))],
-    figure={'type': 'l3_segs', 'k': 44, 'pad': 30, 'width_mm': 70, 'segs': FAN4, 'labels': [{'x': 0, 'y': 0, 't': 'O', 'dx': -22, 'dy': 24}]}, figside=True,
+    figure={'type': 'l3_segs', 'k': 44, 'pad': 30, 'width_mm': 58, 'segs': FAN4, 'labels': [{'x': 0, 'y': 0, 't': 'O', 'dx': -22, 'dy': 24}]}, figside=True,
     why='There are 3 small angles. The next size is made of 2 small angles side by side: 2 of those. Then 1 angle made of all 3 small ones. 3 + 2 + 1 = 6 angles.')
 u.S(2, 'Look at the lines on the dot grid.', parts=[
     P('a', 'Which line is PARALLEL to line AB?   {circ:P|Q|R|S}', A('R')),
     P('b', 'Which line is PERPENDICULAR to line AB?   {circ:P|Q|R|S}', A('P'))],
-    figure={'type': 'l3_segs', 'k': 40, 'pad': 36, 'width_mm': 96, 'dots': [8, 8], 'segs': GRID1,
-            'labels': [{'x': 1, 'y': 1, 't': 'A', 'dx': -22, 'dy': 20}, {'x': 5, 'y': 3, 't': 'B', 'dx': 24}, {'x': 2, 'y': 6, 't': 'P', 'dx': -24, 'dy': -6}, {'x': 0, 'y': 5, 't': 'Q', 'dx': -22},
-                       {'x': 7, 'y': 2, 't': 'R', 'dx': 24}, {'x': 7, 'y': 7, 't': 'S', 'dx': 24}]},
+    figure={'type': 'l3_segs', 'k': 44, 'pad': 36, 'width_mm': 62, 'dots': [7, 7], 'segs': GRID1,
+            'labels': [{'x': 1, 'y': 1, 't': 'A', 'dx': -24, 'dy': 22}, {'x': 5, 'y': 3, 't': 'B', 'dx': 26}, {'x': 2, 'y': 5, 't': 'P', 'dx': -4, 'dy': -26}, {'x': 0, 'y': 4, 't': 'Q', 'dx': -26},
+                       {'x': 6, 'y': 2, 't': 'R', 'dx': 26}, {'x': 6, 'y': 6, 't': 'S', 'dx': 26}]},
     why='Line AB goes 4 across and 2 up. R goes 4 across and 2 up too, so it never meets AB: parallel. P goes 2 across and 4 down, which turns AB through a right angle: perpendicular. Q and S slope in other ways.')
 u.S(2, 'A ladder has 2 upright rails and 3 rungs. Each rung meets a rail at right angles.', parts=[
     P('a', 'Where one rung meets the 2 rails there are {b} right angles.', A('4')), P('b', 'The ladder has {b} right angles in all.', A('12'))],
-    figure={'type': 'l3_segs', 'k': 40, 'pad': 24, 'width_mm': 50, 'segs': LADDER}, figside=True,
+    figure={'type': 'l3_segs', 'k': 40, 'pad': 24, 'width_mm': 40, 'segs': LADDER}, figside=True,
     why='At each end of a rung, the rung and the rail make 2 right angles (one above the rung and one below it). A rung has 2 ends, so 4 right angles. 3 rungs make 3 × 4 = 12 right angles.')
 
 u.S(3, 'Mei faces north. She makes turns of a right angle.', parts=[
@@ -101,26 +101,26 @@ u.S(3, 'Fill in the blanks.', parts=[
     P('d', 'Two sides that meet at a corner of a square are   {circ:parallel|perpendicular}', A('perpendicular'))],
     why='(a) Each corner of a rectangle is a right angle: 4. (b) The 2 long sides are parallel and the 2 short sides are parallel: 2 pairs. (c) If a triangle had 2 right angles, those sides would be parallel and never meet to make a triangle. (d) The sides of a square meet at right angles.')
 u.S(3, 'Circle True or False.', parts=[
-    P('a', 'Perpendicular lines meet at a right angle.   {circ:True|False}', A('True')),
+    P('a', 'Lines that are perpendicular cross at a right angle.   {circ:True|False}', A('True')),
     P('b', 'Parallel lines meet if you make them long enough.   {circ:True|False}', A('False')),
     P('c', 'One line can be perpendicular to 2 parallel lines.   {circ:True|False}', A('True')),
     P('d', 'Two lines that cross are always perpendicular.   {circ:True|False}', A('False'))],
     why='(a) That is what perpendicular means. (b) Parallel lines never meet. (c) A line across 2 rails of a ladder is perpendicular to both. (d) Lines can cross at any angle. Only some crossings make right angles.')
-u.S(3, 'Siti says that angle X in this shape is a right angle.', parts=[
+u.S(3, 'Siti says angle X is a right angle.', parts=[
     P('a', 'Is she right?   {circ:Yes|No}', A('No')),
     P('b', 'Angle X is   {circ:smaller than|equal to|greater than}   a right angle.', A('greater than'))],
     figure=poly([[0, 0], [4, 0], [4, 2], [2, 2], [2, 4], [0, 4]], 62, 36, texts=[{'x': 1.4, 'y': 1.4, 'text': 'X', 'size': 36}]), figside=True,
     why='Angle X is a dent. It points into the shape. A checker does not fit inside it: the angle is greater than a right angle.')
 
 # ---------------- Think harder
-u.T('2 lines from a point O make 1 angle. 3 lines make 3 angles. 4 lines make 6 angles. Look for a pattern.', parts=[
-    P('a', '5 lines make {b} angles.', A('10')), P('b', '7 lines make {b} angles.', A('21'))],
+u.T('Lines from a point O make angles. 2 lines give 1 angle, 3 lines give 3 angles and 4 lines give 6 angles.', parts=[
+    P('a', 'With 5 lines there are {b} angles.', A('10')), P('b', 'With 7 lines there are {b} angles.', A('21'))],
     hint='Small angles first: 4. Then angles made of 2 small ones: 3.',
     space={'rows': ['5 lines:', '7 lines:']},
     why='With 5 lines there are 4 small angles. Then 3 angles made of 2 small angles, 2 made of 3, and 1 made of 4. 4 + 3 + 2 + 1 = 10. With 7 lines the small angles are 6: 6 + 5 + 4 + 3 + 2 + 1 = 21.')
 u.T('Draw a line from C that is PERPENDICULAR to line AB. Use a ruler.', parts=[
     P('a', 'Your line passes through dot   {circ:P|Q|R|S}', A('Q'))],
-    figure={'type': 'l3_segs', 'k': 40, 'pad': 36, 'width_mm': 96, 'dots': [8, 8], 'segs': [[0, 2, 4, 4]],
+    figure={'type': 'l3_segs', 'k': 40, 'pad': 30, 'width_mm': 60, 'dots': [8, 8], 'segs': [[0, 2, 4, 4]],
             'labels': [{'x': 0, 'y': 2, 't': 'A', 'dx': -22, 'dy': 20}, {'x': 4, 'y': 4, 't': 'B', 'dx': 24}, {'x': 2, 'y': 6, 't': 'C', 'dx': -22},
                        {'x': 4, 'y': 3, 't': 'P', 'dx': 20, 'dy': -14}, {'x': 4, 'y': 2, 't': 'Q', 'dx': 22, 'dy': 20}, {'x': 5, 'y': 2, 't': 'R', 'dx': 22, 'dy': 20}, {'x': 3, 'y': 3, 't': 'S', 'dx': -22, 'dy': 20}]},
     figside=True,
@@ -131,30 +131,25 @@ u.T('A staircase has 4 steps.', parts=[
     P('c', 'A staircase with 8 steps has {b} right angles inside.', A('11'))],
     figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 50, 'segs': STAIRS}, figside=True,
     hint='Count the dents first. Each new step adds 1 right angle.',
-    space={'rows': ['Working:']},
     why='Count the corners that fit a checker: 7. The 3 corners that dent into the shape are greater than a right angle. A staircase with n steps has n - 1 dents and n + 3 right angles. For 8 steps: 8 + 3 = 11 right angles.')
 
 # ---------------- Go further
 u.G('Beyond Level 3: Degrees.\nA right angle is 90 degrees.', parts=[
     P('a', '2 right angles make a straight line: {b} degrees.', A('180')), P('b', '4 right angles make a full turn: {b} degrees.', A('360')),
     P('c', 'Half of a right angle is {b} degrees.', A('45')), P('d', '3 right angles make {b} degrees.', A('270'))],
+    partsrow=True,
     hint='Add the right angles: 90 + 90 + ...',
     why='(a) 90 + 90 = 180. (b) 4 × 90 = 360. (c) 90 ÷ 2 = 45. (d) 3 × 90 = 270.')
-u.G('Which shape has EXACTLY 3 right angles? Check every corner.   {circ:A|B|C|D}', A('C'),
-    figure={'type': 'l3_segs', 'k': 30, 'pad': 20, 'width_mm': 134, 'segs': SHAPES_ABCD, 'labels': [{'x': 2, 'y': -0.9, 't': 'A'}, {'x': 8, 'y': -0.9, 't': 'B'}, {'x': 14, 'y': -0.9, 't': 'C'}, {'x': 20, 'y': -0.9, 't': 'D'}]},
-    hint='Check each corner of each shape with the checker.',
-    space={'rows': ['Right angles: A {b}   B {b}   C {b}   D {b}']},
-    why='A (rectangle) has 4 right angles. B (the house) has 2, at the bottom corners. C has 3: at the bottom left, the bottom right and the top left. D (a slanted shape) has none.')
 u.G('Beyond Level 3: Lines and a third line.\nTwo upright lines both cross the long line at right angles.', parts=[
     P('a', 'The 2 upright lines are   {circ:parallel|perpendicular}', A('parallel')),
     P('b', 'A line is perpendicular to one of 2 parallel lines. Is it also perpendicular to the other?   {circ:Yes|No}', A('Yes'))],
-    figure={'type': 'l3_segs', 'k': 44, 'pad': 24, 'width_mm': 96, 'segs': [[0, 0, 6, 0], [1.5, -1.2, 1.5, 1.8], [4.5, -1.2, 4.5, 1.8]]},
+    figure={'type': 'l3_segs', 'k': 44, 'pad': 24, 'width_mm': 62, 'segs': [[0, 0, 6, 0], [1.5, -1.2, 1.5, 1.8], [4.5, -1.2, 4.5, 1.8]]},
     hint='Do the 2 upright lines ever meet?',
-    why='(a) Two lines that are perpendicular to the same line stay the same distance apart and never meet: they are parallel. (b) A line across a pair of parallel lines makes the same angle with both, so if it makes a right angle with one it makes a right angle with the other.')
-u.G('A board is made of lines. 2 lines go across and 2 lines go up, like a noughts-and-crosses board.', parts=[
+    why='(a) Two lines that are perpendicular to the same line stay the same distance apart and never meet: they are parallel. (b) A line that crosses 2 parallel lines makes the same angle with both. So a right angle with one means a right angle with the other.')
+u.G('A board has 2 lines across and 2 lines up.', parts=[
     P('a', 'There are {b} pairs of parallel lines.', A('2')), P('b', 'The lines make {b} right angles where they cross.', A('16')),
     P('c', 'A board with 3 lines across and 3 lines up makes {b} right angles.', A('36'))],
-    figure={'type': 'l3_segs', 'k': 40, 'pad': 20, 'width_mm': 46, 'segs': [[0, 1, 3, 1], [0, 2, 3, 2], [1, 0, 1, 3], [2, 0, 2, 3]]}, figside=True,
+    figure={'type': 'l3_segs', 'k': 40, 'pad': 20, 'width_mm': 38, 'segs': [[0, 1, 3, 1], [0, 2, 3, 2], [1, 0, 1, 3], [2, 0, 2, 3]]}, figside=True,
     hint='Each place where 2 lines cross makes 4 right angles.',
     why='(a) The 2 lines across are parallel and the 2 lines up are parallel: 2 pairs. (b) The lines cross in 2 × 2 = 4 places, and each crossing has 4 right angles: 16. (c) 3 × 3 = 9 crossings, 9 × 4 = 36 right angles.')
 
@@ -162,8 +157,8 @@ u.G('A board is made of lines. 2 lines go across and 2 lines go up, like a nough
 u.C('Use a right angle checker. This angle is   {circ:smaller than|equal to|greater than}   a right angle.', A('greater than'),
     figure={'type': 'l3_angles', 'items': [{'deg': 120, 'rot': 15}], 'cols': 1, 'width_mm': 44}, figright=True,
     why='The second line sticks out past the corner of the checker, so the angle is greater than a right angle.')
-u.C('Circle the letters that have a pair of parallel lines.   {circ:E|H|V|T}', A(['E', 'H'], 'E and H', list=True),
-    figure=letters(['E', 'H', 'V', 'T'], 96),
+u.C('Circle each letter with 2 parallel lines.   {circ:E|H|V|T}', A(['E', 'H'], 'E and H', list=True),
+    figure=letters(['E', 'H', 'V', 'T'], 58),
     why='E has 3 parallel arms. H has 2 parallel upright lines. V has 2 sloping lines that are not parallel. T has no pair of parallel lines.')
 u.C('A rectangle has {b} pairs of parallel sides.', A('2'), why='The 2 long sides are parallel and the 2 short sides are parallel.')
 u.C('Ben faces east. He turns 1 right angle to the left. He faces   {circ:N|E|S|W}', A('N'), why='Turning left from east, the next direction is north.')

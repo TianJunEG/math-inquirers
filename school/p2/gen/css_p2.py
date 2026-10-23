@@ -70,4 +70,23 @@ i.cl{font-style:normal;display:inline-flex;align-items:center;justify-content:ce
 .ab.w2{width:15mm}
 .riddles{display:flex;flex-direction:column;gap:1mm}
 .howto{margin-bottom:2mm}
+/* wave 4 */
+.dial svg,.tank svg{width:44mm;height:44mm;display:block}.tank svg{width:30mm;height:44mm}
+.dial,.tank{display:flex;justify-content:center}
+.qg.dials .qa,.qg.tanks .qa{justify-content:center;font-size:14pt}
+.mcards{display:flex;gap:6mm;justify-content:center}.mcard{position:relative;border:0.5mm solid #000;border-radius:2mm;padding:2mm 3mm;display:flex;align-items:center;gap:2mm}
+.mcard svg{max-width:none;width:34mm;height:34mm}.mcard i.cl{position:absolute;left:1.5mm;top:1.5mm}
+.hrows{display:flex;flex-direction:column;gap:2.5mm}
+.hrow{display:flex;align-items:center;gap:3mm;border-bottom:0.3mm solid #000;padding-bottom:2mm}
+.ckp{display:flex;align-items:center;gap:3mm;flex:1}.clk30 svg{width:30mm;height:30mm;max-width:none}.arr{font-size:20pt;font-weight:800}
+.dgt{flex:1;font-size:15pt;font-weight:700;line-height:1.3}
+.hans{display:flex;align-items:center;gap:1.5mm;font-size:13pt;font-weight:700;flex:none}
+table.tt{border-collapse:collapse;margin:0 auto}.tt th,.tt td{border:0.5mm solid #000;height:9mm;font-size:13pt;text-align:center;padding:0 5mm}.tt th{font-weight:800;font-size:11pt}.tt td:first-child{text-align:left;font-weight:700}
+.prows{display:flex;flex-direction:column;gap:3.5mm}
+.prow{display:flex;align-items:center;gap:2.5mm;border-bottom:0.3mm solid #000;padding-bottom:2.5mm}
+.pcells{display:flex;gap:0.5mm;align-items:center}.pcell{width:13mm;height:13mm;display:flex;align-items:center;justify-content:center}.pcell svg{width:13mm;height:13mm;max-width:none}
+.pcell.q{border:0.5mm dashed #000;border-radius:1.5mm;font-family:'Fredoka';font-weight:700;font-size:16pt}
+.popts{display:flex;gap:3mm;margin-left:auto}.popt{display:flex;flex-direction:column;align-items:center;gap:0.5mm}.popt svg{width:13mm;height:13mm;max-width:none}
+.mcard{padding:2mm 3mm 2mm 11mm}.clk30 svg{width:26mm;height:26mm}
+.tt th,.tt td{height:7.4mm;font-size:12pt}.qc.tq .qt{font-size:12pt}.qc.tq{padding:1.2mm 2.5mm}.qc.tq .ab{height:12.5mm;width:20mm}
 """

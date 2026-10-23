@@ -1,0 +1,924 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 10,
+ "id": "L6U10",
+ "title": "Showcase challenge",
+ "topic": "Mixed maths and code",
+ "holiday_lesson": 10,
+ "goal": "I can use ideas from all the units in a mixed challenge, and plan a small puzzle program: maths first, then blocks, then tests.",
+ "learn": {
+  "intro": "A good puzzle program starts with maths. Work out the answer by hand first, then turn the rule into blocks, then test it with a number you already know the answer for.",
+  "example": {
+   "problem": "Plan a program that asks for a number n of days and says the day of the week n days after Monday. The list days holds Monday, Tuesday, ..., Sunday.",
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "look",
+      "ask (n?) and wait"
+     ],
+     [
+      "var",
+      "set pos to (answer mod 7 + 1)"
+     ],
+     [
+      "look",
+      "say (item pos of days)"
+     ]
+    ]
+   },
+   "steps": [
+    "Idea: a week is a clock with 7 days, so we need n mod 7.",
+    "By hand: 10 days after Monday. 10 mod 7 = 3, so the day is Thursday.",
+    "Blocks: a list starts at item 1, so use item (n mod 7 + 1) of days.",
+    "Test with known values: n = 10 gives Thursday, n = 0 and n = 7 give Monday."
+   ],
+   "answer": "The program says item 4 of days, Thursday, when n = 10."
+  },
+  "howto": {
+   "title": "How to plan a puzzle program",
+   "steps": [
+    "Pick a maths idea and work out an answer by hand.",
+    "Turn the rule into blocks: input, rule, output.",
+    "Test with a value you know. Also try 0 or 1.",
+    "Add a twist, then explain why it works."
+   ]
+  },
+  "try": {
+   "id": "L6U10-L01",
+   "tier": "start",
+   "text": "The user types 19. What does the program above say? {l}",
+   "answer": {
+    "value": [
+     "Saturday"
+    ],
+    "text": "Saturday"
+   },
+   "explanation": "19 mod 7 = 5, because 19 = 2 × 7 + 5. pos = 5 + 1 = 6, and item 6 of days is Saturday."
+  },
+  "tight": true
+ },
+ "items": [
+  {
+   "id": "L6U10-S01",
+   "tier": "start",
+   "text": "A pattern uses 10, 17, 24, 31, ... tiles.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The rule is {b} × n + {b}.",
+     "answer": {
+      "value": [
+       "7",
+       "3"
+      ],
+      "text": "7, 3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 50th term is {b}.",
+     "answer": {
+      "value": [
+       "353"
+      ],
+      "text": "353"
+     }
+    },
+    {
+     "label": "c",
+     "text": "164 is term number {b}.",
+     "answer": {
+      "value": [
+       "23"
+      ],
+      "text": "23"
+     }
+    }
+   ],
+   "explanation": "The difference is 7. Each term is 3 more than 7, 14, 21, 28, so the rule is 7n + 3. The 50th term is 7 × 50 + 3 = 353. 7n + 3 = 164 gives 7n = 161, so n = 23.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-S02",
+   "tier": "start",
+   "text": "Test numbers for factors. Remember: stop when d × d is more than the number.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The primes between 90 and 110 are {ll}",
+     "answer": {
+      "value": [
+       "97",
+       "101",
+       "103",
+       "107",
+       "109"
+      ],
+      "text": "97, 101, 103, 107, 109",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Write 330 as a product of primes: {ll}",
+     "answer": {
+      "value": [
+       "2",
+       "3",
+       "5",
+       "11"
+      ],
+      "text": "2 × 3 × 5 × 11",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "91 = 7 × 13, 93 = 3 × 31, 95 = 5 × 19, 99 = 9 × 11, 105 = 5 × 21 and 111 = 3 × 37 are not prime. So the primes are 97, 101, 103, 107 and 109. 330 = 33 × 10 = 3 × 11 × 2 × 5."
+  },
+  {
+   "id": "L6U10-S03",
+   "tier": "start",
+   "text": "A diver is at −18 m. She rises 7 m and then dives 12 m.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "She is now at {b} m.",
+     "answer": {
+      "value": [
+       "-23"
+      ],
+      "text": "−23"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The distance from −6 to 9 is {b}.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "explanation": "−18 + 7 = −11. Then −11 − 12 = −23. From −6 to 9 is 6 steps to 0 and 9 more: 15."
+  },
+  {
+   "id": "L6U10-S04",
+   "tier": "start",
+   "text": "Run the machines backwards.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "A machine does × 5, then − 7. OUT is 43. IN = {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "OUT = 6n + 1 and OUT is 79. IN = {b}",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    }
+   ],
+   "explanation": "(a) OUT 43: 43 + 7 = 50, and 50 ÷ 5 = 10. (b) 6n + 1 = 79 gives 6n = 78 and n = 13."
+  },
+  {
+   "id": "L6U10-S05",
+   "tier": "start",
+   "text": "Count every possible way.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "A menu has 3 starters, 5 mains and 2 drinks. A meal is one of each: {b} meals.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "9 friends: every pair shakes hands once: {b} handshakes.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Cards 2, 4, 6 and 8: {b} different 3-digit numbers, using no card twice.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    }
+   ],
+   "explanation": "(a) 3 × 5 × 2 = 30. (b) 9 friends: 9 × 8 ÷ 2 = 36. (c) 4 choices, then 3, then 2: 4 × 3 × 2 = 24."
+  },
+  {
+   "id": "L6U10-S06",
+   "tier": "start",
+   "text": "Think about fair and likely.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "A bag has 5 red and 3 blue counters. P(red) = {b}/{b}.",
+     "answer": {
+      "value": [
+       "5",
+       "8"
+      ],
+      "text": "5/8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A dice is rolled 1200 times. About {b} of the rolls are 4s.",
+     "answer": {
+      "value": [
+       "200"
+      ],
+      "text": "200"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ali wins on an even number. Ben wins on 1, 3 or 5. Is it fair?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    }
+   ],
+   "explanation": "(a) 8 counters, 5 red: 5/8. (b) 1/6 × 1200 = 200. (c) An even number is 2, 4 or 6, and 1, 3 or 5 is the other 3 numbers: 3 out of 6 each, so the game is fair."
+  },
+  {
+   "id": "L6U10-S07",
+   "tier": "start",
+   "text": "A turtle turns 4° at every corner of a regular polygon.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The polygon has {b} sides.",
+     "answer": {
+      "value": [
+       "90"
+      ],
+      "text": "90"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each inside angle is {b}°.",
+     "answer": {
+      "value": [
+       "176"
+      ],
+      "text": "176"
+     }
+    }
+   ],
+   "explanation": "360 ÷ 4 = 90 sides. The inside angle is 180 − 4 = 176°.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-S08",
+   "tier": "start",
+   "text": "Clocks and codes.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It is 4 o'clock. In 75 hours it is {b} o'clock.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Code MATH with a shift of 9: {l}",
+     "answer": {
+      "value": [
+       "VJCQ"
+      ],
+      "text": "VJCQ"
+     }
+    }
+   ],
+   "explanation": "(a) 4 + 75 = 79. 79 mod 12 = 7, because 6 × 12 = 72. (b) M = 12, A = 0, T = 19, H = 7. Add 9: 21, 9, 28, 16. 28 − 26 = 2. The letters are V, J, C, Q."
+  },
+  {
+   "id": "L6U10-S09",
+   "tier": "start",
+   "text": "Averages.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The mean of 5 numbers is 14. Four of them are 10, 12, 18 and 20. The 5th is {b}.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The median of 3, 11, 7, 9 is {b}.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "(a) The total of 5 numbers is 5 × 14 = 70. 10 + 12 + 18 + 20 = 60, so the 5th is 10. (b) In order: 3, 7, 9, 11. The middle two are 7 and 9, so the median is 8."
+  },
+  {
+   "id": "L6U10-S12",
+   "tier": "start",
+   "text": "A program runs: set n to 11, then repeat 25 times: change n by 6. Then it says n.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The program says {b}.",
+     "answer": {
+      "value": [
+       "161"
+      ],
+      "text": "161"
+     }
+    },
+    {
+     "label": "b",
+     "text": "That is term number {b} of 11, 17, 23, ...",
+     "answer": {
+      "value": [
+       "26"
+      ],
+      "text": "26"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The rule for the sequence is {b} × n + {b}.",
+     "answer": {
+      "value": [
+       "6",
+       "5"
+      ],
+      "text": "6, 5"
+     }
+    }
+   ],
+   "explanation": "n goes 11, 17, 23, ... and after 25 jumps it is 11 + 25 × 6 = 161. From the 1st term to the 26th term is 25 jumps, so 161 is the 26th term. The rule is 6n + 5 (6 × 26 + 5 = 161).",
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-S10",
+   "tier": "start",
+   "text": "The program picks a secret n from 1 to 20 and shows a number. Read the code.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It shows 31. The secret n was {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smallest number it can show is {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The largest number it can show is {b}.",
+     "answer": {
+      "value": [
+       "83"
+      ],
+      "text": "83"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set n to (pick random 1 to 20)"
+     ],
+     [
+      "look",
+      "say (n × 4 + 3)"
+     ]
+    ]
+   },
+   "explanation": "The program shows 4n + 3. If it shows 31, then 4n = 28 and n = 7. The smallest output is 4 × 1 + 3 = 7. The largest is 4 × 20 + 3 = 83.",
+   "figside": true
+  },
+  {
+   "id": "L6U10-S11",
+   "tier": "start",
+   "text": "The steps of planning a program are mixed up. A: Test with a value you know. B: Work out the maths by hand. C: Build the blocks. D: Pick a maths idea. E: Add a twist.",
+   "page": 3,
+   "answer": {
+    "value": [
+     "D",
+     "B",
+     "C",
+     "A",
+     "E"
+    ],
+    "text": "D, B, C, A, E",
+    "list": true
+   },
+   "space": {
+    "rows": [
+     "The order is {ll}"
+    ]
+   },
+   "explanation": "You need an idea (D) before you can work out the maths (B). You build the blocks (C) after the maths, test them (A) once they exist, and add a twist (E) when the basic version works."
+  },
+  {
+   "id": "L6U10-S13",
+   "tier": "start",
+   "text": "Two dice are rolled and the numbers are multiplied. There are 36 equally likely results.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} of the 36 products are 12.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(product is odd) = {b}/{b} in simplest form.",
+     "answer": {
+      "value": [
+       "1",
+       "4"
+      ],
+      "text": "1/4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The dice are rolled 360 times. About {b} products are odd.",
+     "answer": {
+      "value": [
+       "90"
+      ],
+      "text": "90"
+     }
+    }
+   ],
+   "explanation": "A product of 12 comes from 2 and 6, 3 and 4, 4 and 3, 6 and 2: 4 results. The product is odd only when both numbers are odd: 3 × 3 = 9 results, 9/36 = 1/4. 1/4 × 360 = 90."
+  },
+  {
+   "id": "L6U10-S14",
+   "tier": "start",
+   "text": "A sprite starts at x = 15. It repeats 7 times: change x by −4.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "After the 7 repeats, x = {b}.",
+     "answer": {
+      "value": [
+       "-13"
+      ],
+      "text": "−13"
+     }
+    },
+    {
+     "label": "b",
+     "text": "x is below 0 for the first time after repeat {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "7 moves of −4 make −28. 15 − 28 = −13. After 4 repeats x = 15 − 16 = −1, which is the first time below 0 (after 3 repeats x = 3).",
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-T01",
+   "tier": "think",
+   "text": "The nth term of a sequence is 6n − 1. Look at its first 10 terms.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} of the first 10 terms are prime.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The one that is not prime is {b}.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Is every term odd?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    }
+   ],
+   "hint": "Write out the 10 terms. Test each for factors.",
+   "space": {
+    "rows": [
+     "Terms:",
+     ""
+    ]
+   },
+   "explanation": "5, 11, 17, 23, 29, 35, 41, 47, 53, 59. 35 = 5 × 7 is the only one that is not prime, so 9 of the 10 are prime. 6n is even and an even number take away 1 is odd, so every term is odd.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-T02",
+   "tier": "think",
+   "text": "Ali has taken 5 tests. His mean score is 74. After the 6th test his mean is 76.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 5 scores add up to {b}.",
+     "answer": {
+      "value": [
+       "370"
+      ],
+      "text": "370"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After the 6th test the total is {b}.",
+     "answer": {
+      "value": [
+       "456"
+      ],
+      "text": "456"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 6th score is {b}.",
+     "answer": {
+      "value": [
+       "86"
+      ],
+      "text": "86"
+     }
+    }
+   ],
+   "hint": "Total = mean × how many. Do it for 5 tests and for 6.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "The 5 tests total 5 × 74 = 370. The 6 tests total 6 × 76 = 456. The 6th score is 456 − 370 = 86.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-T03",
+   "tier": "think",
+   "text": "A 2-digit number has digits that add to 10. Reversing its digits gives another 2-digit number.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The primes with digits that add to 10 are {l}",
+     "answer": {
+      "value": [
+       "19",
+       "37",
+       "73"
+      ],
+      "text": "19, 37, 73",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "The two whose reversed number is also prime are {b} and {b}.",
+     "answer": {
+      "value": [
+       "37",
+       "73"
+      ],
+      "text": "37 and 73"
+     }
+    }
+   ],
+   "hint": "List all numbers with digit sum 10. Cross out the non-primes.",
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "explanation": "19, 28, 37, 46, 55, 64, 73, 82, 91 have digits adding to 10. The primes are 19, 37 and 73 (the others are even, or 55 and 91 = 7 × 13). Reversed: 19 gives 91, which is not prime. 37 gives 73 and 73 gives 37, both prime."
+  },
+  {
+   "id": "L6U10-G01",
+   "tier": "go",
+   "text": "Plan a Mystery Machine. The computer picks n from 1 to 20 and shows 5n − 2. Fill in the rule.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "say (n × {b} − {b})",
+     "answer": {
+      "value": [
+       "5",
+       "2"
+      ],
+      "text": "5, 2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smallest and largest numbers it shows are {b} and {b}.",
+     "answer": {
+      "value": [
+       "3",
+       "98"
+      ],
+      "text": "3 and 98"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The player sees 48. The secret n is {b}.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set n to (pick random 1 to 20)"
+     ],
+     [
+      "look",
+      "say (n × ? − ?)"
+     ]
+    ]
+   },
+   "hint": "Check with n = 1 and n = 20 by hand first.",
+   "explanation": "The rule is n × 5 − 2. The smallest output is 5 × 1 − 2 = 3 and the largest is 5 × 20 − 2 = 98. If the player sees 48, then 5n = 50 and n = 10. (For your twist, any rule that can be undone is fine. Work out a test by hand first, for example n = 4 shows 18, then check the program gives it.)",
+   "figright": true,
+   "partsrow": true
+  },
+  {
+   "id": "L6U10-G02",
+   "tier": "go",
+   "text": "Plan a Lucky Number program: repeat 1000 times: roll 2 dice and add them. If the total is 11, add 1 to count. At the end, say count.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The program repeats {b} times.",
+     "answer": {
+      "value": [
+       "1000"
+      ],
+      "text": "1000"
+     }
+    },
+    {
+     "label": "b",
+     "text": "P(total is 11) = {b}/36",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The program says about {b}.",
+     "answer": {
+      "value": [
+       "56"
+      ],
+      "text": "56"
+     }
+    }
+   ],
+   "hint": "Which 2 results of the 2 dice make 11?",
+   "explanation": "Two dice have 36 equally likely results. A total of 11 is 5 + 6 or 6 + 5, which is 2 results out of 36. 2/36 × 1000 = 55.6, so about 56. Each run of the program gives a slightly different count, near 56."
+  },
+  {
+   "id": "L6U10-G03",
+   "tier": "go",
+   "text": "This code tests whether n is prime. A final found of 0 means prime. Run it.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "With n = 53 it tests {b} values of d.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With n = 49 it says {b}.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "c",
+     "text": "With n = 53 it says {b}.",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set d to (2)"
+     ],
+     [
+      "var",
+      "set found to (0)"
+     ],
+     [
+      "ctl",
+      "repeat until <(d × d) {gt} (n)>",
+      [
+       [
+        "ctl",
+        "if <(n mod d) = (0)> then",
+        [
+         [
+          "var",
+          "change found by (1)"
+         ]
+        ]
+       ],
+       [
+        "var",
+        "change d by (1)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (found)"
+     ]
+    ]
+   },
+   "hint": "Stop when d × d is more than n. Count the values of d.",
+   "explanation": "The loop tests d = 2, 3, 4, ... until d × d is more than n. n = 53: 7 × 7 = 49 is not more than 53, 8 × 8 = 64 is, so d = 2 to 7 are tested: 6 values. None divides 53, so found stays 0. n = 49: d = 2 to 7 are tested, and only 7 divides 49, so found = 1. found = 0 means n is prime.",
+   "figside": true
+  },
+  {
+   "id": "L6U10-C01",
+   "tier": "quiz",
+   "text": "3, 8, 13, 18, ... The rule is {b} × n − {b}.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "5",
+     "2"
+    ],
+    "text": "5, 2"
+   },
+   "explanation": "The difference is 5. Each term is 2 less than 5, 10, 15, 20, so the rule is 5n − 2."
+  },
+  {
+   "id": "L6U10-C02",
+   "tier": "quiz",
+   "text": "−7 + 12 − 9 = {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "-4"
+    ],
+    "text": "−4"
+   },
+   "explanation": "−7 + 12 = 5. Then 5 − 9 = −4."
+  },
+  {
+   "id": "L6U10-C03",
+   "tier": "quiz",
+   "text": "A bag has 4 red and 6 blue counters. P(red) = {b}/{b} in simplest form.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "2",
+     "5"
+    ],
+    "text": "2/5"
+   },
+   "explanation": "4 red out of 10 counters is 4/10 = 2/5."
+  },
+  {
+   "id": "L6U10-C04",
+   "tier": "quiz",
+   "text": "It is 3 o'clock. In 100 hours it will be {b} o'clock.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "7"
+    ],
+    "text": "7"
+   },
+   "explanation": "3 + 100 = 103. 103 mod 12 = 7, because 8 × 12 = 96. It will be 7 o'clock."
+  }
+ ]
+}

@@ -190,14 +190,14 @@ def page29():
     rng = random.Random(8529)
     while True:
         items = []
-        for k in range(6):
-            sh = rng.randint(1, 12); sm = rng.choice(range(0, 60, 5)) if k < 3 else rng.randint(1, 55)
-            dur = rng.choice(range(20, 300, 5)) if k < 3 else rng.randint(20, 280)
+        for k in range(5):
+            sh = rng.randint(1, 12); sm = rng.choice(range(0, 60, 5)) if k < 2 else rng.randint(1, 55)
+            dur = rng.choice(range(20, 300, 5)) if k < 2 else rng.randint(20, 280)
             tot = mins(sh, sm) + dur
             eh = (tot // 60) % 12 or 12; em = tot % 60
-            if k < 3 and (em % 5): continue
-            items.append(dict(k="clock" if k < 3 else "digital", sh=sh, sm=sm, eh=eh, em=em, dur=dur, ampm=rng.choice(["am", "pm"])))
-        if len(items) < 6: continue
+            if k < 2 and (em % 5): continue
+            items.append(dict(k="clock" if k < 2 else "digital", sh=sh, sm=sm, eh=eh, em=em, dur=dur, ampm=rng.choice(["am", "pm"])))
+        if len(items) < 5: continue
         rng.shuffle(items)
         if any(it["k"] == "clock" and A.hands_apart(it["sh"], it["sm"]) < 40 or A.hands_apart(it["eh"], it["em"]) < 40 for it in items if it["k"] == "clock"): continue
         ans = [(it["dur"] // 60, it["dur"] % 60) for it in items]
@@ -207,7 +207,7 @@ def page29():
             pool |= {(h, (m + 10) % 60), (h, (m - 10) % 60), (h + 1, m), (h - 1, m) if h > 0 else (h + 1, m), (h, m + 5 if m < 55 else m - 5), (m // 5 if m % 5 == 0 and m // 5 < 7 else h, h * 5 if h * 5 < 60 else 0)}
         pool = sorted(x for x in pool if x not in ans and 0 <= x[0] <= 6 and 0 <= x[1] < 60)
         domain = [(h, m) for h in range(0, 7) for m in range(60)]
-        res = code_table_any(29, 6, ans, rng, 0, 0, n_decoy=3, tries=60, pool=pool, domain=domain)
+        res = code_table_any(29, 5, ans, rng, 0, 0, n_decoy=2, tries=60, pool=pool, domain=domain)
         if res: word, table = res; break
     rows = []; texts = []
     for i, it in enumerate(items):
@@ -218,13 +218,13 @@ def page29():
             t = f'Start {A.tstr(it["sh"], it["sm"])} {it["ampm"]}. End {A.tstr(it["eh"], it["em"])} {it["ampm"] if (mins(it["sh"], it["sm"]) + it["dur"]) < 720 else ("pm" if it["ampm"] == "am" else "am")}.'
             texts.append(t); mid = f'<div class="dgt">{t}</div>'
         rows.append(f'<div class="hrow"><span class="no">{i+1}</span>{mid}<div class="hans"><span class="ab w2"></span> h <span class="ab w2"></span> min</div></div>')
-    P = code_items_page(29, 8529, "How Long Did It Take?", 2, "Time: finding how long in hours and minutes", "Measurement and Geometry - Measurement",
+    P = code_items_page(29, 8529, "Time Taken", 2, "Time: finding how long in hours and minutes", "Measurement and Geometry - Measurement",
         "2.1, 2.2 (telling time to the minute; measuring time in hours and minutes)", ["TI2.1", "TI2.2"], "Code-breaker (start and end times)",
         ["Find how long it took.", "Write the hours and the minutes.", INSTR_CODE],
         '<div class="hrows">' + "".join(rows) + '</div>', ans, table, word, 0, 0,
         "; ".join(f"{i+1}) {A.tstr(it['sh'], it['sm'])} to {A.tstr(it['eh'], it['em'])}: {a[0]} h {a[1]} min" for i, (it, a) in enumerate(zip(items, ans))),
-        "Three clock pairs (start and end on clock faces, on or near a five-minute mark) and three pairs of digital times. The time taken is 20 minutes to under 5 hours; the pupil writes hours and minutes, which may cross an hour. The decoy letters stand for a wrong number of minutes or hours. Times use am and pm. A box left blank gives no letter and the check cannot see it.",
-        domain=domain, fmt=lambda t: (f"{t[0]} h " if t[0] else "") + (f"{t[1]} min" if t[1] or not t[0] else ""))
+        "Two clock pairs (start and end on clock faces, on a five-minute mark) and three pairs of digital times. The time taken is 20 minutes to under 5 hours; the pupil writes hours and minutes, which may cross an hour. The decoy letters stand for a wrong number of minutes or hours. Times use am and pm. A box left blank gives no letter and the check cannot see it.",
+        domain=domain, fmt=lambda t: (f"{t[0]} h " if t[0] else "") + (f"{t[1]} min" if t[1] or not t[0] else ""), cols=4)
     def solve(t):
         if isinstance(t, tuple):
             (h1, m1), (h2, m2) = A.read_clock(t[0]), A.read_clock(t[1])
@@ -281,11 +281,11 @@ def page30():
         "; ".join(f"{i+1}) {t} {a}" for i, (t, a) in enumerate(zip(texts, ans))),
         "Three conversions from hours and minutes to minutes (one with whole hours) and three from minutes to hours and minutes (two ask for the minutes left over, one for the hours). The fact 1 h = 60 min is printed. The decoy letters stand for the usual slips (100 minutes in an hour, or hours and minutes added). A box left blank gives no letter and the check cannot see it.")
     def solve(t):
-        n = [int(x) for x in re.findall(r"\d+", t)]
-        if t.endswith("= ? min") and "min =" not in t.split("=")[0] and " h " in t.split("=")[0]: return n[0] * 60 + n[1]
-        if t.endswith("= ? min"): return n[0] * 60
-        if "? h" in t: return n[0] // 60
-        return n[0] - 60 * n[1]
+        left, right = t.split(" = ")
+        n = [int(x) for x in re.findall(r"\d+", left)]
+        if right == "? min": return n[0] * 60 + (n[1] if len(n) > 1 else 0)
+        if right.startswith("? h"): return n[0] // 60
+        return n[0] - 60 * int(re.match(r"(\d+) h", right).group(1))
     solved = [solve(t) for t in texts]
     P.v("V1 independent solver reads the printed text and equals the key", solved == ans, solved)
     P.v("V7 times under 5 hours, minutes in multiples of 5", all(a_ <= 300 for a_ in ans))
@@ -306,53 +306,53 @@ def page31():
         qs.append(("dur", a_[0])); qs.append(("dur", a_[1]))
         i = rng.randrange(0, 5); qs.append(("gap", tab[i], tab[i + 1]))
         qs.append(("sum", a_[2], a_[3] if a_[3] != a_[2] else a_[4]))
-        qs.append(("hm", a_[4]))
+        j = rng.randrange(0, 4); qs.append(("span", tab[j], tab[j + rng.randint(1, 5 - j)]))
         qs.append(("diff", a_[5], a_[0] if a_[0] != a_[5] else a_[1]))
         def val(q):
             k = q[0]
             if k == "dur": return q[1][2] - q[1][1]
             if k == "gap": return q[2][1] - q[1][2]
             if k == "sum": return (q[1][2] - q[1][1]) + (q[2][2] - q[2][1])
-            if k == "hm": return q[1][2] - q[1][1]
+            if k == "span": return q[2][2] - q[1][1]
             if k == "diff": return abs((q[1][2] - q[1][1]) - (q[2][2] - q[2][1]))
         ans = [val(q) for q in qs]
-        if not distinct(ans) or min(ans) <= 0 or max(ans) > 160 or len({q[0] for q in qs}) < 5: continue
+        if not distinct(ans) or min(ans) <= 0 or max(ans) > 300 or len({q[0] for q in qs}) < 5: continue
         if qs[2][0] == "gap" and val(qs[2]) == 0: continue
         pool = set()
         for q, a in zip(qs, ans): pool |= {a + 5, a - 5, a + 10, a - 10, a + 60 if a < 100 else a - 60}
-        pool = sorted(x for x in pool if x not in ans and 0 < x <= 160)
-        res = code_table_any(31, 6, ans, rng, 0, 160, n_decoy=3, tries=60, pool=pool)
+        pool = sorted(x for x in pool if x not in ans and 0 < x <= 300)
+        res = code_table_any(31, 6, ans, rng, 0, 300, n_decoy=2, tries=60, pool=pool)
         if res: word, table = res; break
-    f = lambda m: f"{m // 60}:{m % 60:02d}"
-    tbl = '<table class="tt"><tr><th>Lesson</th><th>Start</th><th>End</th></tr>' + "".join(f'<tr><td>{a}</td><td>{f(s)} am</td><td>{f(e) if e < 720 else f(e - 720 if e >= 780 else e)} {"am" if e < 720 else "pm"}</td></tr>' for a, s, e in tab) + '</table>'
+    f12 = lambda m: f"{(m // 60) % 12 or 12}:{m % 60:02d} {'am' if m < 720 else 'pm'}"
+    tbl = '<table class="tt"><tr><th>Lesson</th><th>Start</th><th>End</th></tr>' + "".join(f'<tr><td>{a}</td><td>{f12(s)}</td><td>{f12(e)}</td></tr>' for a, s, e in tab) + '</table>'
     def qtext(q):
         k = q[0]
         if k == "dur": return f"How many minutes is {q[1][0]}?"
         if k == "gap": return f"How many minutes from the end of {q[1][0]} to the start of {q[2][0]}?"
         if k == "sum": return f"How many minutes are {q[1][0]} and {q[2][0]} together?"
-        if k == "hm": return f"{q[1][0]} lasts {q[1][2]-q[1][1]} min. Is that more than 1 h?" if False else f"How many minutes is {q[1][0]}, in all?"
+        if k == "span": return f"How many minutes from the start of {q[1][0]} to the end of {q[2][0]}?"
         if k == "diff": return f"How many more minutes is {q[1][0]} than {q[2][0]}?" if val(q) == q[1][2] - q[1][1] - (q[2][2] - q[2][1]) else f"How many fewer minutes is {q[1][0]} than {q[2][0]}?"
     qtxts = [qtext(q) for q in qs]
-    cards = [qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span> min', cls="inl") for i, t in enumerate(qtxts)]
+    cards = [qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span> min', cls="inl tq") for i, t in enumerate(qtxts)]
     P = code_items_page(31, 8731, "Time Detective", 2, "Time: a timetable, minutes and hours", "Measurement and Geometry - Measurement",
         "2.1, 2.2, 2.3 (telling time to the minute; measuring time in hours and minutes; converting to minutes)", ["TI2.1", "TI2.2", "TI2.3"], "Code-breaker (timetable)",
         ["Read the timetable.", "Answer each question in minutes.", INSTR_CODE],
-        '<div class="blk">' + tbl + '</div>' + qgrid(cards, 1), ans, table, word, 0, 160,
+        '<div class="blk">' + tbl + '</div>' + qgrid(cards, 2), ans, table, word, 0, 300,
         "; ".join(f"{i+1}) {t} {a} min" for i, (t, a) in enumerate(zip(qtxts, ans))),
-        "A timetable of six lessons (start and end times, am and pm) and six questions: how long a lesson lasts (twice), the wait between two lessons, two lessons together, a lesson in minutes, and how much longer one lesson is than another. Lessons last between 25 and 80 minutes. The decoy letters stand for being 5 or 10 minutes out, or an hour out. A box left blank gives no letter and the check cannot see it.", ps=True)
+        "A timetable of six lessons (start and end times, am and pm) and six questions: how long a lesson lasts (twice), the wait between two lessons, two lessons together, the time from the start of one lesson to the end of a later one, and how much longer one lesson is than another. Lessons last between 25 and 80 minutes; one question asks from the start of one lesson to the end of a later one. The decoy letters stand for being 5 or 10 minutes out, or an hour out. A box left blank gives no letter and the check cannot see it.", ps=True)
     # independent solver: read the table back from the printed HTML
-    rows_ = re.findall(r"<tr><td>([^<]+)</td><td>(\d+):(\d\d) am</td><td>(\d+):(\d\d) (am|pm)</td></tr>", tbl)
-    tb = {r[0]: (int(r[1]) * 60 + int(r[2]), (int(r[3]) % 12) * 60 + int(r[4]) + (720 if r[5] == "pm" else 0)) for r in rows_}
+    rows_ = re.findall(r"<tr><td>([^<]+)</td><td>(\d+):(\d\d) (am|pm)</td><td>(\d+):(\d\d) (am|pm)</td></tr>", tbl)
+    tb = {r[0]: ((int(r[1]) % 12) * 60 + int(r[2]) + (720 if r[3] == "pm" else 0), (int(r[4]) % 12) * 60 + int(r[5]) + (720 if r[6] == "pm" else 0)) for r in rows_}
     solved = []
     for t in qtxts:
+        m = re.fullmatch(r"How many minutes from the start of (.+?) to the end of (.+?)\?", t)
+        if m: solved.append(tb[m.group(2)][1] - tb[m.group(1)][0]); continue
         m = re.fullmatch(r"How many minutes is (.+?)\?", t)
         if m: s, e = tb[m.group(1)]; solved.append(e - s); continue
         m = re.fullmatch(r"How many minutes from the end of (.+?) to the start of (.+?)\?", t)
         if m: solved.append(tb[m.group(2)][0] - tb[m.group(1)][1]); continue
         m = re.fullmatch(r"How many minutes are (.+?) and (.+?) together\?", t)
         if m: solved.append(sum(tb[x][1] - tb[x][0] for x in m.groups())); continue
-        m = re.fullmatch(r"How many minutes is (.+?), in all\?", t)
-        if m: s, e = tb[m.group(1)]; solved.append(e - s); continue
         m = re.fullmatch(r"How many (more|fewer) minutes is (.+?) than (.+?)\?", t)
         d1 = tb[m.group(2)][1] - tb[m.group(2)][0]; d2 = tb[m.group(3)][1] - tb[m.group(3)][0]
         solved.append(d1 - d2 if m.group(1) == "more" else d2 - d1)
@@ -365,8 +365,14 @@ KINDS = ["circle", "square", "tri", "rect", "half"]
 
 def shape_cell(el, size=None):
     kind, big, fill, rot = el
-    s = 12.5 if big else 8.5
-    return f'<g class="el" data-k="{kind}" data-b="{int(big)}" data-f="{fill}" data-r="{rot}">' + shape_svg(kind, 8.5, 8.5, s, rot, "#000" if fill == "b" else "#fff", sw=0.6) + '</g>'
+    s = 12.5 if big else 9.0
+    fl = "#000" if fill == "b" else "#fff"
+    if kind == "rect":
+        w, h = (14.0, 8.5) if big else (10.0, 6.0)
+        inner = f'<rect x="{8.5-w/2:.2f}" y="{8.5-h/2:.2f}" width="{w}" height="{h}" fill="{fl}" stroke="#000" stroke-width="0.6" stroke-linejoin="round"/>'
+    else:
+        inner = shape_svg(kind, 8.5, 8.5, s, rot, fl, sw=0.6)
+    return f'<g class="el" data-k="{kind}" data-b="{int(big)}" data-f="{fill}" data-r="{rot}">' + inner + '</g>'
 
 def cell_svg(el):
     return svg(17, 17, shape_cell(el))
@@ -392,7 +398,7 @@ def make_pattern(rng, attrs):
         while len(set(cyc)) == 1: cyc = [rng.choice(["w", "b"]) for _ in range(period)]
         seq = [el(kd, True, cyc[i % period]) for i in range(7)]
     elif attrs == "size":
-        kd = kinds[0]; cyc = [rng.choice([True, False]) for _ in range(period)]
+        kd = rng.choice(["circle", "square", "tri"]); cyc = [rng.choice([True, False]) for _ in range(period)]
         while len(set(cyc)) == 1: cyc = [rng.choice([True, False]) for _ in range(period)]
         seq = [el(kd, cyc[i % period]) for i in range(7)]
     elif attrs == "turn":
