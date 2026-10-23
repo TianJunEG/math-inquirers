@@ -442,7 +442,7 @@ PASS  V8 reading level: instruction and clue sentences <= 14 words, <= 4 sentenc
 PASS  check strip text <= 18 words (pages with several check lines: 34)  []
 PASS  check strips carry no category hint (Is it ...?): the strip never says what the word is  []
 PASS  every code-word strip contains the plain question 'Do they spell a word?'  
-FAIL  every number of 11 or more quoted in a teacher note is found on the page or in its answers  [(29, ['12'])]
+PASS  every number of 11 or more quoted in a teacher note is found on the page or in its answers  []
 PASS  every clue word named in a teacher note (more than, fewer than, greatest, in front of, behind, ones digit ...) occurs on its page  []
 PASS  F28: every outcome id of every page has its PDF wording in docs/school_books/p4_outcome_wording.md, and the numbers in each tag are the page's own outcome ids  []
 PASS  topic tags name a P4 strand  
@@ -733,6 +733,6 @@ PASS  P4_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 
 PASS  P4_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.04% vs greyscale)  5 pages
 PASS  P4_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 171, budget 40 on average per page)  
 PASS  P4_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 35.14% vs greyscale)  9 pages
-PASS  P4_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 1038, budget 130 on average per page)  
+PASS  P4_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 1039, budget 130 on average per page)  
 
-TOTAL 736 checks, 1 failed
+TOTAL 736 checks, 0 failed
