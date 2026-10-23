@@ -103,3 +103,12 @@ Re-solved by hand from the final render: P2-29 SHADOW (9:32 S, 10:26 H, 4:06 A, 
 ## Audit round 3: Lows fixed
 
 validate.py: 747 checks, 0 failed. Teacher notes: "durations" in the problem-solving sentence is now "lengths of lessons given in hours and minutes" (L-G); the code-word line now says answers in the wrong boxes never make another word and "one or two wrong answers very rarely do" (L-I); the photocopying note says to use normal toner, not a light setting, on the coin pages. The words "cents" and "dollar" on the coins are 2.9 mm font (was 2.7); viewed at 110 dpi on Dollars and Cents: clear of the rim and the numeral. No page content changed.
+
+## Coin and note art: real proportions (owner decision COINS-FIX-SIZE, 23 Oct 2026)
+
+- Specifications and sources: `docs/school_books/coin_note_specs.md` (MAS: 5c 16.75, 10c 18.50, 20c 21.00, 50c 23.00, $1 24.65 mm; notes $2 126 x 63, $5 133 x 66, $10 141 x 69 mm). The earlier art used older-series diameters (16.2 / 18.5 / 21.4 / 24.7 / 24.65 mm), so the 20c and 50c were wrong; now corrected.
+- P2 pages (`gen/art2.py`): coin diameter = real x 0.80 (5c 13.4, 10c 14.8, 20c 16.8, 50c 18.4, $1 19.7 mm). Notes are 2:1 and grow with value, real size x 0.215 ($2 27.1 x 13.5, $5 28.6 x 14.2, $10 30.3 x 14.8 mm); the bird and corner numerals scale with the note. "cents" and "dollar" stay at 2.9 mm type (cap height about 2.0 mm). No dashed ring on any coin.
+- Purse selection uses the earlier coin widths (`money_width`, kept only for choosing seeded purses), so every seeded puzzle and every answer is unchanged (answer-key text identical to before). The drawn widths (`real_money_width`) were checked by viewing S2-01 and S2-04: nothing overflows.
+- Teacher notes (S1 and S2 front matter, Photocopying paragraph): "Pictures are not actual size."
+- validate.py: 747 checks, 0 failed.
+- Pages that show coin or note pictures (checked by opening each page, colour and 1-bit copy): S2-01 Dollars and Cents (P2-06: notes $2, $5, $10 and coins), S2-04 Purse Match (P2-24: coins, including $1). S2-02 Writing Money, S2-03 Which Costs More? and S2-20 Colour the Butterfly (P2-40) show amounts as text only (no coin or note pictures). The colour-by-code library sheet CBC-P2-07 Dinosaur Money shows small coin and note pictures (library, outside the booklets).

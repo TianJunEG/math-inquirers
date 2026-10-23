@@ -149,3 +149,12 @@ validate.py: 783 checks, 0 failed; page counts unchanged. Changed pages viewed i
 - **LICENCE-ANNUAL:** the licence page has a Term section: an annual licence covering one school year, renewable; wording to be approved by a lawyer before any school receives the booklet. The DRAFT banner on the licence page now lists only the licence wording (lawyer approval) as open; the cover banner lists only that the cover wording and title are not final. validate.py asserts the publisher line, the annual licence sentence and the lawyer sentence (785 checks, 0 failed).
 
 Items for the owner now still open: licence wording (lawyer approval), the final cover title wording, pupil trial, coin-art comparison, CBC gallery diagram fixes, and the one not-affiliated sentence (kept on the licence page only).
+
+## Coin and note art: real proportions (owner decision COINS-FIX-SIZE, 23 Oct 2026)
+
+- Specifications and sources: `docs/school_books/coin_note_specs.md` (MAS: 5c 16.75, 10c 18.50, 20c 21.00, 50c 23.00, $1 24.65 mm; notes $2 126 x 63, $5 133 x 66, $10 141 x 69 mm). The earlier art used older-series diameters (16.2 / 18.5 / 21.4 / 24.7 mm), so the 20c and 50c were wrong by a few percent; now corrected.
+- P1 pages (`gen/pages_measure.py`): coin diameter = real diameter x 0.80 (5c 13.4, 10c 14.8, 20c 16.8, 50c 18.4 mm). The dashed inner ring is gone. "cents" is 2.8 mm type (cap height about 2.0 mm, above the 1.9 mm minimum) and fits inside the 5c coin.
+- Colour-by-code library (`school/colour_by_code/art.py` and the vendored copy `cbc_vendor/art.py`): coin radii in the real ratio, dashed ring removed, notes drawn 2:1 and growing with value ($2 14.9 x 7.4, $5 15.7 x 7.8, $10 16.6 x 8.1 mm). Library rebuilt and verified: 762 / 797 checks, 0 failed (P1 / P2 sheets).
+- Teacher notes (S1 and S2 front matter, second teacher-notes page, Photocopying paragraph): "Pictures are not actual size."
+- validate.py: 785 checks, 0 failed. All 40 seeded puzzles and all answer keys are unchanged (answer-key text identical to the version before this change).
+- Pages that show coin pictures (checked by opening each page, colour and 1-bit copy): S2-10 Coin Purses (P1-15) and S2-11 Fewest Coins (P1-28). No P1 page shows banknote pictures. S2-12 and S2-13 (shop prices) show amounts only. No P1 booklet colour-by-code page shows a coin picture (the library sheet CBC-07 Sailboat Money does; it is outside the booklets).

@@ -488,7 +488,7 @@ PASS  answer boxes at least 12 mm high in S2_key.html  min 12.0
 PASS  no opacity/alpha/gradient in S2_key.html  []
 PASS  S2: no bare black dot is drawn as a countable thing  
 PASS  S2: no drawn object is clipped by the edge of its own svg  []
-PASS  S2: every coin shows its value and the word cents  43 coins
+PASS  S2: every coin shows its value and the word cents  45 coins
 PASS  P2_S1_Puzzles.pdf has 20 pages  20
 PASS  P2_S1_Puzzles.pdf fonts all embedded  6 fonts
 PASS  P2_S1_Puzzles.pdf size < 20 MB  0.37 MB
@@ -740,7 +740,7 @@ PASS  P2_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels coun
 PASS  P2_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.49% vs greyscale)  11 pages
 PASS  P2_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 812, budget 130 on average per page)  
 PASS  P2_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.58% vs greyscale)  20 pages
-PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 184, budget 40 on average per page)  
+PASS  P2_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 186, budget 40 on average per page)  
 PASS  P2_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.90% vs greyscale)  5 pages
 PASS  P2_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 134, budget 40 on average per page)  
 PASS  P2_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.66% vs greyscale)  9 pages
