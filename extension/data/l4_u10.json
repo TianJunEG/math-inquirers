@@ -13,13 +13,9 @@
    "problem": "A shop has stools (3 legs) and chairs (4 legs). There are 11 of them with 38 legs in all. How many chairs are there?",
    "figure": {
     "type": "l4_table",
-    "head": [
-     "Suppose all 11 are stools",
-     ""
-    ],
     "rows": [
      [
-      "Legs",
+      "11 stools",
       "11 × 3 = 33"
      ],
      [
@@ -35,8 +31,8 @@
      1.1,
      1.5
     ],
-    "cell_h": 44,
-    "font": 24,
+    "cell_h": 46,
+    "font": 26,
     "first_col_head": true,
     "width_mm": 82
    },
@@ -94,14 +90,16 @@
    "steps": [
     "Guess and check: keep a table of tries.",
     "Suppose all are the same. Count swaps.",
-    "Work backwards: undo the last step first."
+    "Work backwards: undo the last step first.",
+    "Check your answer against every fact."
    ]
   },
   "facts": {
    "title": "Good to know",
    "lines": [
     "Draw a queue or a bar model.",
-    "Check the answer against every clue."
+    "Check the answer against every clue.",
+    "A swap changes the total by a fixed amount."
    ]
   },
   "try": {
@@ -211,7 +209,8 @@
    ],
    "space": {
     "rows": [
-     "Notebooks, money left, pens: {ll}"
+     "Notebooks, money left, pens: {ll}",
+     "My answer: {l}"
     ]
    },
    "explanation": "Try the number of notebooks: 1 notebook leaves $36, which is 12 pens. 2 leaves $31 (no). 3 leaves $26 (no). 4 leaves $21, which is 7 pens. 5 leaves $16 (no). 6 leaves $11 (no). 7 leaves $6, which is 2 pens. 8 notebooks cost $40 and leave $1 (no). So the ways are 12 pens and 1 notebook, 7 pens and 4 notebooks, and 2 pens and 7 notebooks."
@@ -253,6 +252,11 @@
      }
     }
    ],
+   "space": {
+    "rows": [
+     "Check:"
+    ]
+   },
    "explanation": "(a) 17 × 2 = 34. (b) 50 − 34 = 16. (c) 16 ÷ 2 = 8 swaps, so 8 cows and 9 hens. Check: 8 × 4 + 9 × 2 = 32 + 18 = 50."
   },
   {
@@ -294,7 +298,7 @@
    "id": "L4U10-S05",
    "tier": "start",
    "page": 2,
-   "text": "Mei had some stickers. She gave half of them to Ali. Then she bought 12 more. Then she lost 7. Now she has 25 stickers. How many did she have at first? {b}",
+   "text": "Mei had some stickers. She gave half of them to Ali. Then she bought 12 more. Then she lost 7. Now she has 25 stickers. Find how many she had at the start. {b}",
    "figure": {
     "type": "l4_flow",
     "items": [
@@ -341,7 +345,7 @@
    "id": "L4U10-S07",
    "tier": "start",
    "page": 2,
-   "text": "Ali, Ben, Mei and Siti each have a different pet: a cat, a dog, a fish or a rabbit. Use the grid. Write ✓ for yes and ✗ for no.",
+   "text": "Ali, Ben, Mei and Siti each have a different pet: a cat, a dog, a fish or a rabbit. Ali's pet barks. Ben's pet has no fur. Mei's pet does not hop. Use the grid. Write ✓ for yes and ✗ for no.",
    "figure": {
     "type": "l4_table",
     "head": [
@@ -388,37 +392,65 @@
      1,
      1.2
     ],
-    "cell_h": 46,
+    "cell_h": 40,
     "font": 26,
     "first_col_head": true,
-    "width_mm": 110
+    "width_mm": 100
    },
    "parts": [
     {
      "label": "a",
-     "text": "Clues: Ali's pet barks. Ben's pet has no fur. Mei's pet does not hop. Pets: Ali {b}, Ben {b}, Mei {b}, Siti {b}",
+     "text": "Ali: {b}",
      "answer": {
       "value": [
-       "dog",
-       "fish",
-       "cat",
+       "dog"
+      ],
+      "text": "dog"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben: {b}",
+     "answer": {
+      "value": [
+       "fish"
+      ],
+      "text": "fish"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Mei: {b}",
+     "answer": {
+      "value": [
+       "cat"
+      ],
+      "text": "cat"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Siti: {b}",
+     "answer": {
+      "value": [
        "rabbit"
       ],
-      "text": "Ali dog, Ben fish, Mei cat, Siti rabbit"
+      "text": "rabbit"
      }
     }
    ],
-   "explanation": "Ali's pet barks, so it is the dog. The fish is the only pet with no fur, so Ben has the fish. A rabbit hops, so Mei does not have the rabbit. The cat and the rabbit are left. Mei has the cat and Siti has the rabbit."
+   "explanation": "Ali's pet barks, so it is the dog. The fish is the only pet with no fur, so Ben has the fish. A rabbit hops, so Mei does not have the rabbit. The cat and the rabbit are left. Mei has the cat and Siti has the rabbit.",
+   "partsrow": true
   },
   {
    "id": "L4U10-S08",
    "tier": "start",
    "page": 3,
-   "text": "Aisha is 9th from the front and 5th from the back of a queue.",
+   "text": "Aisha stands in a queue. She is 9th from the front and 5th from the back.",
    "parts": [
     {
      "label": "a",
-     "text": "How many people are in the queue? {b}",
+     "text": "The queue has {b} people.",
      "answer": {
       "value": [
        "13"
@@ -449,7 +481,7 @@
    "id": "L4U10-S09",
    "tier": "start",
    "page": 3,
-   "text": "Siti and her mother are 44 years old altogether. In 6 years her mother will be 3 times as old as Siti. How old is Siti now? {b}",
+   "text": "The ages of Siti and her mother add up to 44. In 6 years, her mother's age will be 3 times Siti's age. Find Siti's age now. {b}",
    "answer": {
     "value": [
      "8"
@@ -469,7 +501,7 @@
    "id": "L4U10-S10",
    "tier": "start",
    "page": 3,
-   "text": "Ravi has 9 coins. They are 20¢ coins and 50¢ coins. They are worth $3.00 altogether. How many 50¢ coins does he have? {b}",
+   "text": "Ravi has 9 coins. They are 20¢ coins and 50¢ coins. They are worth $3.00 altogether. Find the number of 50¢ coins. {b}",
    "answer": {
     "value": [
      "4"
@@ -507,7 +539,7 @@
    "id": "L4U10-S12",
    "tier": "start",
    "page": 3,
-   "text": "I am a 2-digit number. My digits add up to 12. If you swap my digits, the new number is 18 more than me. Who am I? {b}",
+   "text": "Who am I? My 2 digits add up to 12. Swapping them gives a number 18 greater than me. {b}",
    "answer": {
     "value": [
      "57"
@@ -516,8 +548,7 @@
    },
    "space": {
     "rows": [
-     "Try:",
-     ""
+     "Try:"
     ]
    },
    "explanation": "Try pairs of digits that add up to 12: 39, 48, 57, 66, 75, 84, 93. The swapped numbers are 93, 84, 75, 66, 57, 48, 39. The swapped number is 18 more only for 57 and 75: 75 − 57 = 18. The number must be the smaller one, 57."
@@ -526,7 +557,7 @@
    "id": "L4U10-T01",
    "tier": "think",
    "page": 4,
-   "text": "A hawker centre has 14 tables. Some seat 4 people and some seat 6 people. Together they seat 68 people.",
+   "text": "A hawker centre has 14 tables. Each table seats either 4 or 6 people. Together they seat 68 people.",
    "parts": [
     {
      "label": "a",
@@ -607,7 +638,7 @@
      ""
     ]
    },
-   "hint": "The age gap stays the same. Make a bar model for now and for 12 years later.",
+   "hint": "The age gap stays the same. Draw bars for now and 12 years on.",
    "explanation": "The gap between their ages never changes. Now the grandfather is 7 units and the grandson is 1 unit, so the gap is 6 units. In 12 years the grandfather is 3 parts and the grandson is 1 part, so the gap is 2 parts. 6 units = 2 parts, so 1 part = 3 units. In 12 years the grandson is 3 units. He was 1 unit now, so he grows 2 units in 12 years. 1 unit = 6. The grandson is 6 now. Check: 42 and 6 now, 54 and 18 in 12 years, and 54 = 3 × 18."
   },
   {
@@ -646,7 +677,7 @@
      ""
     ]
    },
-   "hint": "Make groups: 3 twenty-cent coins and 1 fifty-cent coin. What is a group worth?",
+   "hint": "Make groups of 3 twenty-cent coins and 1 fifty-cent coin.",
    "explanation": "A group of 3 coins of 20¢ and 1 coin of 50¢ is worth 60¢ + 50¢ = 110¢. $4.40 = 440¢ and 440 ÷ 110 = 4 groups. Each group has 4 coins, so he has 16 coins: 12 coins of 20¢ and 4 coins of 50¢."
   },
   {
@@ -668,7 +699,7 @@
      ""
     ]
    },
-   "hint": "Mei can be on the right of Ben or on the left of Ben.",
+   "hint": "Mei may be left or right of Ben.",
    "explanation": "If Mei is to the right of Ben, she is 6 places after him: 11 + 6 = 17th from the left. She is 8th from the right, so there are 17 + 7 = 24 children. If Mei is to the left of Ben, she is 11 − 6 = 5th from the left, so there are 5 + 7 = 12 children. Both fit: the 5 children in between are places 6 to 10 in the line of 12, or places 12 to 16 in the line of 24."
   },
   {
@@ -733,7 +764,7 @@
   {
    "id": "L4U10-C03",
    "tier": "quiz",
-   "text": "Siti is 6th from the front and 9th from the back of a queue. How many people are in the queue? {b}",
+   "text": "Siti is 6th from the front and 9th from the back of a line. The line has {b} people.",
    "answer": {
     "value": [
      "14"

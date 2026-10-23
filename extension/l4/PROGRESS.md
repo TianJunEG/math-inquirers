@@ -13,6 +13,6 @@ Pipeline: unit sources are `extension/l4/src/uNN.py` (helpers in `lib.py`); `pyt
 | 7 Area Architects II | written, checked, gates ok, viewed |
 | 8 Symmetry and Nets | written, checked, gates ok, viewed |
 | 9 Data Detectives | written, checked, gates ok, viewed |
-| 10 | not started |
+| 10 Puzzle Day | written, checked, gates ok, viewed |
 
-Resume: next unit is 10 (Puzzle Day).
+Resume: next unit is 11 (none (all units written): run the full build and gates).
