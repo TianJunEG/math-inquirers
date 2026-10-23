@@ -2,11 +2,9 @@
 
 Do these in order. Nothing is secret in this file. **Never paste a key into chat, the repo or any page**: secrets go only into Cloudflare (step 6). Design and limits are in `delivery_plan.md`. Prices stay on hold; this setup does not need any.
 
-## 0. Check how the site is deployed (5 minutes, important)
-The site was set up as a Cloudflare Workers project with static assets (`wrangler.jsonc`, deploy command `npx wrangler deploy`). The delivery code (and the Stripe functions) are **Pages Functions** in `/functions`, which that setup does not run. Choose one:
-- **A. Move to Cloudflare Pages** (simplest for the functions): Workers & Pages > Create > Pages > Connect to Git, same repository and branch; Root directory `/`, Build command `cd website && python3 lp_build.py && python3 build_site.py --with-portal`, Build output directory `website/dist`. Add your domain to the Pages project. Steps 3 and 6 below then use the **Pages** screens.
-- **B. Stay on Workers**: ask for a small follow-up change (a Worker entry file that routes `/api/*` to these handlers, and an `r2_buckets` entry in `wrangler.jsonc`). Until then the links cannot be served.
-Test after deploying: open `https://YOUR-DOMAIN/api/order-links?session_id=nope` -> it must answer `{"error":"bad session"}` (400). A normal 404 page means functions are not running.
+## 0. Hosting: done (Worker entry)
+The site stays on Cloudflare Workers with static assets. `worker/index.js` (set as `main` in `wrangler.jsonc`) now serves `/api/download/<token>`, `/api/order-links`, `/api/admin/delivery`, `/api/stripe-webhook` and `/api/stripe-create-checkout`; every other path is the static site. Nothing to do here except the test below after the next deploy.
+Test: open `https://YOUR-DOMAIN/api/order-links?session_id=nope`. Before secrets are set it answers `{"error":"not configured"}` (503); after step 7 it answers `{"error":"bad session"}` (400). A normal 404 page means the Worker entry is not deployed.
 
 ## 1. Apply the database changes
 1. Read `portal/supabase/delivery.sql` (or ask someone to). It adds two private tables and some functions; it changes nothing that exists.
@@ -20,7 +18,7 @@ Test after deploying: open `https://YOUR-DOMAIN/api/order-links?session_id=nope`
 
 ## 3. Bind the bucket to the site as DELIVERY_BUCKET
 - Pages project: Workers & Pages > your project > **Settings** > **Bindings** (Functions) > Add > **R2 bucket** > Variable name `DELIVERY_BUCKET` > Bucket `mi-delivery` > Save, for both Production and Preview. Then redeploy.
-- (Option B only: the `r2_buckets` entry in `wrangler.jsonc`, done in the follow-up change.)
+- Workers deploy (our setup): once the bucket exists, open `wrangler.jsonc`, remove the `//` from the `r2_buckets` line (or ask me to) and push. Do not add it before the bucket exists, because the deploy would fail. In the Cloudflare dashboard (Workers & Pages > math-inquirers > Settings > Variables and Secrets) is where step 7's values go.
 
 ## 4. Upload the PDFs
 On a computer with Node installed, in the repo folder:
@@ -48,7 +46,7 @@ Use this for late registrants who need the PDF, and any time email is not ready.
 6. Until the domain is bought and verified: Resend's test sender (`onboarding@resend.dev`) only delivers to **your own** Resend account email. Use it to test (set `EMAIL_FROM` to `Math Inquirers <onboarding@resend.dev>`), then switch `EMAIL_FROM` to `Math Inquirers <downloads@YOUR-DOMAIN>` once verified. Real buyers cannot get email before the domain is verified: use step 5's WhatsApp route or the success page (it always shows the links).
 
 ## 7. Secrets and settings in Cloudflare (never in chat)
-Pages project > Settings > **Variables and Secrets** (Production and Preview) > Add:
+Workers project `math-inquirers` > Settings > **Variables and Secrets** (Production and Preview) > Add:
 | Name | Type | Value |
 |---|---|---|
 | `RESEND_API_KEY` | Secret | from step 6.5 |
