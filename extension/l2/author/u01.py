@@ -26,7 +26,7 @@ items = [
  I('start', 1, 'What number do the place-value blocks show? {b}', figure={'type': 'l2_blocks', 'groups': [{'flats': 3, 'rods': 12, 'ones': 4}], 'rods_per_row': 6, 'ones_per_row': 2, 'width_mm': 138},
    value='424',
    why='3 flats are 300, 12 rods are 120 and 4 ones are 4. 300 + 120 + 4 = 424. 10 of the rods make another flat, so this is also 4 flats, 2 rods and 4 ones.'),
- I('start', 1, 'Write <, = or > in each circle.', partsrow=True, parts=[
+ I('start', 1, 'Circle the correct sign: <, = or >.', partsrow=True, parts=[
    P('a', '745   {circ:<|=|>}   754', '<'), P('b', '306   {circ:<|=|>}   296', '>'),
    P('c', '5 hundreds 2 tens   {circ:<|=|>}   502', '>'), P('d', '88 tens   {circ:<|=|>}   880', '=')],
    why='(a) The hundreds are the same; 4 tens is less than 5 tens, so 745 < 754. (b) 3 hundreds is more than 2 hundreds, so 306 > 296. (c) 5 hundreds 2 tens is 520, and 520 > 502. (d) 88 tens is 880, so they are equal.'),
@@ -53,7 +53,7 @@ items = [
  I('start', 3, 'Look at the number line. It goes from 300 to 400.', figure={'type': 'l2_nline', 'lo': 300, 'hi': 400, 'step': 10, 'labels': [300, 350, 400], 'arrows': [{'at': 340, 'label': 'A'}, {'at': 370, 'label': 'B'}], 'width_mm': 150},
    partsrow=True, parts=[P('a', 'Arrow A shows {b}', '340'), P('b', 'Arrow B shows {b}', '370'), P('c', 'B is {b} more than A.', '30')],
    why='Each mark is 10 more. (a) A is 4 marks after 300: 340. (b) B is 7 marks after 300: 370. (c) 370 - 340 = 30.'),
- I('start', 3, 'These are pieces cut from a 1000 chart. A row is 10 numbers long. Write the missing numbers.',
+ I('start', 3, 'Each piece below was cut out of a 1000 chart. A row is 10 numbers long. Write the missing numbers.',
    figure={'type': 'l2_chart', 'pieces': [{'label': 'Piece A', 'rows': [[571, 572, None], [None, 582, 583], [591, None, None]]}, {'label': 'Piece B', 'rows': [['', None, ''], [None, 645, None], ['', None, '']]}], 'width_mm': 132},
    parts=[P('a', 'Piece A: write the 4 missing numbers in the empty squares.', ['573', '581', '592', '593'], '573, 581, 592, 593 (left to right, top to bottom)', lst=True),
           P('b', 'Piece B: write the 4 missing numbers in the empty squares.', ['635', '644', '646', '655'], '635, 644, 646, 655 (top, left, right, bottom)', lst=True),

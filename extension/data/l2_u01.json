@@ -139,7 +139,7 @@
    "id": "L2U01-S03",
    "tier": "start",
    "page": 1,
-   "text": "Write <, = or > in each circle.",
+   "text": "Circle the correct sign: <, = or >.",
    "parts": [
     {
      "label": "a",
@@ -422,7 +422,7 @@
    "id": "L2U01-S10",
    "tier": "start",
    "page": 3,
-   "text": "These are pieces cut from a 1000 chart. A row is 10 numbers long. Write the missing numbers.",
+   "text": "Each piece below was cut out of a 1000 chart. A row is 10 numbers long. Write the missing numbers.",
    "figure": {
     "type": "l2_chart",
     "pieces": [

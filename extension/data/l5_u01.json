@@ -244,7 +244,7 @@
    "id": "L5U01-S05",
    "tier": "start",
    "page": 1,
-   "text": "Ben has the number below. He adds 2 hundred thousands. Then he takes away 5 ten thousands. What is Ben's new number? {l}",
+   "text": "Ben has the number below. He adds 2 hundred thousands. Then he takes away 5 ten thousands. What is Ben's new number?",
    "figure": {
     "type": "l5_table",
     "cols": [
@@ -271,12 +271,18 @@
     "minw": 62,
     "alt": "place-value chart"
    },
-   "answer": {
-    "value": [
-     "6632315"
-    ],
-    "text": "6 632 315"
-   },
+   "parts": [
+    {
+     "label": "",
+     "text": "{l}",
+     "answer": {
+      "value": [
+       "6632315"
+      ],
+      "text": "6 632 315"
+     }
+    }
+   ],
    "explanation": "2 hundred thousands is 200 000, and 5 ten thousands is 50 000. 6 482 315 + 200 000 = 6 682 315. Then 6 682 315 - 50 000 = 6 632 315. Only the hundred thousands and ten thousands digits change."
   },
   {
@@ -396,7 +402,6 @@
      },
      {
       "v": 8650,
-      "lab": "8650",
       "minor": true
      },
      {
@@ -405,7 +410,6 @@
      },
      {
       "v": 8750,
-      "lab": "8750",
       "minor": true
      },
      {
@@ -568,7 +572,7 @@
    "id": "L5U01-S14",
    "tier": "start",
    "page": 3,
-   "text": "Circle every number that rounds to 5 000 000 when rounded to the nearest million.\n4 499 999    4 500 000    5 499 999    5 500 000",
+   "text": "Circle every number that rounds to 5 000 000 when rounded to the nearest million.\n{circ:4 499 999|4 500 000|5 499 999|5 500 000}",
    "answer": {
     "value": [
      "4500000",
@@ -629,7 +633,7 @@
    "id": "L5U01-T03",
    "tier": "think",
    "page": 4,
-   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the two numbers. Make the product as great as you can. Write the product. {l}",
+   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the two numbers. Make the product as great as you can. Write the product.",
    "figure": {
     "type": "l5_cards",
     "items": [
@@ -642,12 +646,18 @@
     "width_mm": 80,
     "alt": "digit cards"
    },
-   "answer": {
-    "value": [
-     "69936"
-    ],
-    "text": "69 936"
-   },
+   "parts": [
+    {
+     "label": "",
+     "text": "The product is {l}",
+     "answer": {
+      "value": [
+       "69936"
+      ],
+      "text": "69 936"
+     }
+    }
+   ],
    "space": {
     "rows": [
      "Working:",
@@ -790,12 +800,18 @@
     "width_mm": 100,
     "alt": "digit cards"
    },
-   "answer": {
-    "value": [
-     "3976520"
-    ],
-    "text": "3 976 520"
-   },
+   "parts": [
+    {
+     "label": "",
+     "text": "My number is {l}",
+     "answer": {
+      "value": [
+       "3976520"
+      ],
+      "text": "3 976 520"
+     }
+    }
+   ],
    "explanation": "Just below: start with 3, then greatest order: 3 976 520 (23 480 away). Just above: start with 5, then smallest order: 5 023 679 (1 023 679 away). The number just below is much closer."
   },
   {

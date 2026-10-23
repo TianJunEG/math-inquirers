@@ -95,7 +95,7 @@ def _():
 @check('L5U01-S05')
 def _():
     n = 6482315 + 2 * 100000 - 5 * 10000
-    return s([n])
+    return {'': s([n])}
 
 
 @check('L5U01-S06')
@@ -201,7 +201,7 @@ def _():
         a = int(''.join(map(str, p[:3])))
         b = int(''.join(map(str, p[3:])))
         best = max(best, a * b)
-    return s([best])
+    return {'': s([best])}
 
 
 @check('L5U01-G01')
@@ -262,7 +262,7 @@ def _():
 
 @check('L5U01-C02')
 def _():
-    return s([closest([0, 2, 3, 5, 6, 7, 9], 4000000)])
+    return {'': s([closest([0, 2, 3, 5, 6, 7, 9], 4000000)])}
 
 
 @check('L5U01-C03')
