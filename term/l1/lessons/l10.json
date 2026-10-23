@@ -17,7 +17,7 @@
       "Two-step stories: one operation per step",
       "Comparing: more than, fewer than"
     ],
-    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (owner decision, 22 Oct 2026: a game, not a test), built as the block challenge_quest by assets/quest_build.py. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim."
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as 'MOE-aligned'. Lesson 10 is the added tenth lesson of the term (plan, section 2): multi-step stories and reading traps fill a gap found in docs/books/word_problems_g1_g2_analysis.md; the owner or a tutor should check the placement of reversed wording and the who-is-in-the-group trap. Bar strips come in Lesson 12. This lesson also carries the Term 1 end-of-term slot, which is Mi's Challenge Quest (owner decision, 22 Oct 2026: a game, not a test), built as the block challenge_quest by assets/quest_build.py. Term 1 goes beyond the school Primary 1 syllabus on purpose (owner decision, 22 Oct 2026); the stories here use two-digit numbers and two steps with counters and a worked partner step; say so plainly to parents and make no syllabus-match claim. Beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Think harder T4 is an impossible story (12 stickers, give 7, then give 8): the child must check each step against what is left, a reasoning step beyond the P1 two-step story. Original item."
   },
   "contest_moves": [
     "two-step story, one operation per step",
@@ -703,7 +703,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Think harder T1: Ravi has more, so Mei has fewer; draw two groups. T2: draw the line and touch each child, Mei too. T3: find Mei first, then Siti. Go further: write one step at a time."
+            "text": "Think harder T1: Ravi has more, so Mei has fewer; draw two groups. T2: draw the line and touch each child, Mei too. T3: find Mei first, then Siti. T4: do step 1, then ask if there is enough for step 2. Go further: write one step at a time."
           },
           {
             "k": "STUCK",
@@ -2262,6 +2262,39 @@
         ],
         "mins": 4,
         "lines": 3
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "Ali has 12 stickers. He gives 7 stickers to Mei. Then he gives 8 stickers to Ben.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "After giving 7 to Mei, Ali has ___ stickers left.",
+            "ans": "5",
+            "val": 5
+          },
+          {
+            "l": "b",
+            "text": "Can Ali give 8 stickers to Ben? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          }
+        ],
+        "answer": "5 stickers left; No, the story cannot happen.",
+        "val": [
+          5,
+          "no"
+        ],
+        "hint": "Do the first step. How many stickers are left? Is that enough for the second step?",
+        "solution": "Step 1: 12 - 7 = 5, so Ali has 5 stickers left. Step 2 needs 8 stickers, but 5 is less than 8. Ali cannot give Ben 8, so this story can not be true. A story step can be impossible, so check each step.",
+        "mistakes": [
+          "Writing 12 - 7 - 8 and getting an answer without noticing 5 is less than 8.",
+          "Circling Yes without checking step 2."
+        ],
+        "mins": 4,
+        "lines": 1
       }
     ],
     "go": [

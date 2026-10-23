@@ -187,6 +187,11 @@ def run(d):
     mei3 = len(add(pile(12), 5)); siti3 = len(take(pile(mei3), 3))
     eq(T['T3']['val'], [mei3, siti3], 'T3'); eq(siti3, 14, 'T3 value'); eq(12 - 3, 9, 'T3 trap value 9 is wrong'); eq(9 == siti3, False, 'T3 trap')
 
+    left4 = len(take(pile(12), 7))
+    eq(T['T4']['val'], [left4, 'no'], 'T4'); eq(left4, 5, 'T4 left after step 1')
+    eq(left4 >= 8, False, 'T4 step 2 is impossible: 5 stickers, 8 asked'); eq(12 - 7 - 8 < 0, True, 'T4 the chain goes below zero')
+    eq(T['T4']['parts'][1]['val'], 'yes' if left4 >= 8 else 'no', 'T4 part b')
+
     # ---- Go further
     g1 = story(60, [('-', 24), ('-', 15), ('+', 30)])
     eq(T['G1']['val'], g1, 'G1'); eq(g1, [36, 21, 51], 'G1 steps')

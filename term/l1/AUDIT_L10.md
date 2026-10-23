@@ -64,3 +64,7 @@ See `audit/FIXES2_L10.md`. The end-of-term check is now 8 questions, 15 answer p
 ## Third fix pass, 23 Oct 2026 (Mi's Challenge Quest, cut-out hand-off)
 
 See `audit/FIXES3_L10.md`. The end-of-term check is now Mi's Challenge Quest (owner decision, 22 Oct 2026, late): a game with Mi in pairs or as a group, private paper, no score or mark shown, no ranking, no visible timer, no test/exam/check-sheet wording on any child or parent page. Same 20-minute slot at minutes 63 to 83 (after the break), same 8 gates and optional secret cave. Files: `L10_Quest_Log.pdf`, `L10_Quest_Tutor_Notes.pdf`, `L10_Quest_Parent_Note.pdf` (built by `assets/quest_build.py`). The L10 to L11 hand-off now lists the cards page, ten small things, a coin and FRONT paper. Validator 0 FAIL (945 answer checks).
+
+## Update (fourth fix pass, 23 Oct 2026): beyond-syllabus challenge item
+
+Added Think harder T4 (page 3): an impossible story (Ali has 12 stickers, gives 7 to Mei, then 8 to Ben; how many left after step 1, then circle Yes or No for step 2). The child checks each step against what is left. Original; answers verified in `verify/l10_checks.py` by simulating the pile. `moe.note` names it. Mi's Challenge Quest block untouched. Real PDF workbook fill 96, 91, 90, 97, 99, 94%; parts still sum to 90; validator 0 FAIL.
