@@ -113,7 +113,7 @@ def _():
 
 @check('L3U03-T01')
 def _():
-    return s([sum(1 for k in range(1, 31) if times(k, 7) % 10 == 4)])
+    return s([sum(1 for n in table(8, 12) if n < 100 and (n // 10) % 2 == 1)])
 
 
 @check('L3U03-T02')
@@ -162,9 +162,8 @@ def _():
 
 @check('L3U03-G04')
 def _():
-    ends6 = [d for d in range(10) if times(8, d) % 10 == 6]
-    ends5 = [d for d in range(10) if times(8, d) % 10 == 5]
-    return {'a': s(ends6), 'b': ['none' if not ends5 else str(ends5)]}
+    ends = {times(n, n) % 10 for n in range(1, 40)}
+    return [d for d in (2, 3, 4, 6, 7, 8) if d not in ends]
 
 
 @check('L3U03-C01')
@@ -174,12 +173,12 @@ def _():
 
 @check('L3U03-C02')
 def _():
-    return s([times(5, 7) + 7])
+    return s([times(10, 8) - 8])
 
 
 @check('L3U03-C03')
 def _():
-    return s([times(7, 6) % 10])
+    return ['Yes' if 63 in table(6, 30) else 'No']
 
 
 @check('L3U03-C04')

@@ -25,8 +25,8 @@ u.learn(
     {'title': 'How to draw a bar model',
      'steps': ['Draw one bar for each amount.', 'Write what you know on the bars. Put a ? on what you want to find.',
                'Look at the bars. Then add, subtract or divide.']},
-    {'text': 'Ali has 480 stamps. Ben has 215 fewer stamps than Ali. How many stamps does Ben have? {b}', 'answer': A('265'),
-     'explanation': 'Ben has fewer, so subtract: 480 - 215 = 265. Check: 265 + 215 = 480.'})
+    {'text': 'Ravi’s plant is 480 mm tall. Mei’s plant is 215 mm shorter. How tall is Mei’s plant? {b} mm', 'answer': A('265'),
+     'explanation': 'Mei’s plant is shorter, so subtract: 480 - 215 = 265 mm. Check: 265 + 215 = 480.'})
 
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'A farm has 2400 eggs. 875 of them are brown. The rest are white. How many eggs are white? {b}', A('1525'),
@@ -44,8 +44,7 @@ u.S(1, 'Siti has 64 beads. Wei has 29 beads. Each child gets 12 more beads.', pa
     why='Before: 64 - 29 = 35. After: Siti has 76 and Wei has 41, and 76 - 41 = 35. The gap stays the same because both children get the same number of beads.')
 u.S(2, 'Ravi and Aisha have 140 coins in all. Ravi has 3 times as many coins as Aisha.', parts=[
     P('a', 'Aisha has {b} coins.', A('35')), P('b', 'Ravi has {b} coins.', A('105'))],
-    figure=bar([{'segs': [seg(1, 'Aisha'), seg(1, 'Ravi'), seg(1, 'Ravi'), seg(1, 'Ravi')], 'braces': [{'a': 0, 'b': 3, 't': '140'}]}], w=96, u_=88),
-    space={'rows': ['Working:']},
+    space={'rows': ['Draw your model:', 'Working:']},
     why='There are 4 equal boxes in all. 140 ÷ 4 = 35, so 1 box is 35. Aisha has 1 box: 35 coins. Ravi has 3 boxes: 3 × 35 = 105 coins.')
 u.S(2, 'Kumar and Wei have 90 stickers in all. Kumar has 18 more stickers than Wei.', parts=[
     P('a', 'Wei has {b} stickers.', A('36')), P('b', 'Kumar has {b} stickers.', A('54'))],
@@ -64,24 +63,24 @@ u.S(3, 'Wei has 3 times as many marbles as Aisha. Wei has 48 marbles.', parts=[
     P('a', 'Aisha has {b} marbles.', A('16')), P('b', 'They have {b} marbles in all.', A('64'))],
     space={'rows': ['Draw your model:']},
     why='Wei has 3 boxes and Aisha has 1 box. 3 boxes are 48 marbles, so 1 box is 48 ÷ 3 = 16. Together they have 4 boxes: 4 × 16 = 64.')
-u.S(3, 'Ali has 54 stickers. Ben has 18 fewer stickers than Ali. Ravi says Ben has 54 + 18 = 72 stickers.', parts=[
-    P('a', 'Is Ravi right?   {circ:Yes|No}', A('No')), P('b', 'Ben has {b} stickers.', A('36'))],
-    why='Ben has fewer stickers than Ali, so Ben has less than 54. Ravi added instead of subtracting. The right answer is 54 - 18 = 36.')
+u.S(3, 'A shop has 54 red pens. It has 18 fewer blue pens than red pens. Kumar says the shop has 54 + 18 = 72 blue pens.', parts=[
+    P('a', 'Is Ravi right?   {circ:Yes|No}', A('No')), P('b', 'The shop has {b} blue pens.', A('36'))],
+    why='There are fewer blue pens than red pens, so fewer than 54. Kumar added instead of subtracting. The right answer is 54 - 18 = 36.')
 u.S(3, 'Siti saves $12 each week for 7 weeks. Then she spends $35. How much money does she have left? ${b}', A('49'),
     space={'rows': ['Working:']},
     why='In 7 weeks she saves 7 × $12 = $84. Then 84 - 35 = 49. She has $49 left.')
 
 # ---------------- Think harder
-u.T('Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. After that, each boy has the same number of marbles. How many marbles does Kumar give away? {b}', A('21'),
+u.T('Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. After that, each boy has the same number of marbles. How many marbles does Kumar give away? {b}', A('21'), beyond='Giving to make them equal',
     hint='Find how many each has at first. Then how many each has later.',
     space={'rows': ['Draw your model:', 'Working:']},
     why='At first there are 4 equal boxes: 84 ÷ 4 = 21, so Wei has 21 and Kumar has 63. At the end each has 84 ÷ 2 = 42. Kumar gives 63 - 42 = 21 marbles. Check: 21 + 21 = 42.')
 u.T('Ali buys a pencil box and 2 pens for $14. Mei buys the same box and 5 pens for $23.', parts=[
     P('a', '1 pen costs ${b}.', A('3')), P('b', 'The pencil box costs ${b}.', A('8'))],
-    hint='Compare the 2 bills. What do the 3 extra pens cost?',
+    hint='What is different between the 2 bills?',
     space={'rows': ['Draw your model:', 'Working:', '']},
     why='The second bill has 3 more pens and costs $23 - $14 = $9 more. So 3 pens cost $9 and 1 pen costs $3. The box costs $14 - 2 × $3 = $8. Check: 8 + 15 = 23.')
-u.T('Ravi is 7 years old. His father is 35 years old. In how many years will his father be twice as old as Ravi? {b} years', A('21'),
+u.T('Ravi is 7 years old. His father is 35 years old. In how many years will his father be twice as old as Ravi? {b} years', A('21'), beyond='Ages and gaps',
     hint='The age gap never changes. Draw a bar for each age.',
     space={'rows': ['Draw your model:', 'Working:']},
     why='The gap is 35 - 7 = 28 years and it never changes. When the father is twice as old, Ravi is 1 box and his father is 2 boxes, so 1 box = the gap = 28. Ravi is 28, which is 21 years from now. Check: 28 and 56.')

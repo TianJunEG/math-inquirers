@@ -290,3 +290,10 @@ Owner chose to start the Primary 3 school puzzle booklets (Semester 1 and 2) in 
 
 ## 23 Oct 2026 (night): ratio in Level 5 holiday
 Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Level 5 holiday gets a ratio ("a : b") strand as a beyond-syllabus preview (equivalent ratios, simplest form, share in a ratio, link to bar models). Now: slides and tutor bank (printed workbooks frozen for the 6 Nov order). Printed workbook version: open question (swap before Mon 2 Nov at risk, or v2).
+
+## 2026-10-23 (owner replies)
+- P2-REMOVE-P3: replace Primary 3 content in P2 booklets (duration from start/finish times on P2-29, 31, 40 / S2-12, 13, 20; division by 9 on S1-16) with Primary 2 content.
+- P2-LOWS-FIX: clear the four Lows from the P2 round-2 audit (5 cent coin text vs ring, S2-15 key labels and teacher note, 3-digit colour-page boxes, P2-40 'min' unit).
+- L3-REPLACE-ALL: replace all ~15 Level 3 extension items flagged as holiday clones.
+- L3-TRIM: Level 3 extension workbook to 100 pages.
+- L5-TRIM: Level 5 extension workbook to 100 pages (trim Answers section, not practice items).
