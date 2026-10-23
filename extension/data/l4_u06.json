@@ -733,36 +733,46 @@
    "id": "L4U06-G02",
    "tier": "go",
    "page": 5,
-   "text": "A dancer faces N. She turns 90° clockwise and then 45° anticlockwise. She does these 2 turns again and again.",
+   "text": "A Ferris wheel has 12 equal seats, numbered 1 to 12 clockwise. Seat 1 is at the top.",
    "parts": [
     {
      "label": "a",
-     "text": "After how many pairs of turns does she face N again? {b}",
+     "text": "The seat at the bottom is Seat {b}",
      "answer": {
       "value": [
-       "8"
+       "7"
       ],
-      "text": "8"
+      "text": "7"
      }
     },
     {
      "label": "b",
-     "text": "After 21 pairs she faces {b}",
+     "text": "The smaller angle at the centre between Seat 2 and Seat 9: {b}°",
      "answer": {
       "value": [
-       "SW"
+       "150"
       ],
-      "text": "SW"
+      "text": "150"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The wheel turns 270° clockwise. Seat 1 is now where Seat {b} was",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
      }
     }
    ],
    "space": {
     "rows": [
-     "List:"
+     "Working:"
     ]
    },
-   "hint": "One pair of turns is 1 step of 45°. Write the directions.",
-   "explanation": "Each pair is 90° − 45° = 45°, 1 step clockwise: NE, E, SE, S, SW, W, NW, N. After 8 pairs she faces N. 21 = 2 × 8 + 5, so she faces the same way as after 5 pairs: SW."
+   "hint": "12 seats share 360°. What is the angle between neighbours?",
+   "explanation": "(a) Seat 1 is opposite Seat 7. (b) Seats 2 to 9 are 7 steps of 30°, which is 210°. The smaller way is 360° − 210° = 150°. (c) 270° ÷ 30° = 9 steps, and 1 + 9 = Seat 10."
   },
   {
    "id": "L4U06-G03",

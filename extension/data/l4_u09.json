@@ -323,7 +323,7 @@
    "id": "L4U09-S04",
    "tier": "start",
    "page": 2,
-   "text": "The graph shows the stickers in Kumar's album and in Aisha's album. The numbers are at the end of each week.",
+   "text": "The graph shows how far Ravi has cycled from home. Each line is worth 10 km.",
    "figure": {
     "type": "l4_line",
     "panels": [
@@ -334,63 +334,55 @@
       "label_every": 2,
       "series": [
        {
-        "name": "Kumar",
         "values": [
+         0,
          20,
-         30,
          40,
-         50,
+         40,
          60,
-         70,
-         80,
          90
-        ]
-       },
-       {
-        "name": "Aisha",
-        "values": [
-         50,
-         55,
-         60,
-         65,
-         70,
-         75,
-         80,
-         85
         ]
        }
       ]
      }
     ],
     "xlabels": [
+     "0",
      "1",
      "2",
      "3",
      "4",
-     "5",
-     "6",
-     "7",
-     "8"
+     "5"
     ],
-    "width_mm": 120,
-    "xlabel": "Week",
-    "plot_w": 440,
+    "width_mm": 110,
+    "xlabel": "Hours",
+    "plot_w": 400,
     "plot_h": 190
    },
    "parts": [
     {
      "label": "a",
-     "text": "Aisha's stickers in Week 1: {b}",
+     "text": "After 2 hours he is {b} km from home.",
      "answer": {
       "value": [
-       "50"
+       "40"
       ],
-      "text": "50"
+      "text": "40"
      }
     },
     {
      "label": "b",
-     "text": "Each week Aisha adds {b} stickers.",
+     "text": "He rests for {b} hour.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "c",
+     "text": "He cycles the farthest in the hour that ends at hour {b}.",
      "answer": {
       "value": [
        "5"
@@ -399,38 +391,28 @@
      }
     },
     {
-     "label": "c",
-     "text": "In Week 5 Kumar has {b} fewer stickers than Aisha.",
-     "answer": {
-      "value": [
-       "10"
-      ],
-      "text": "10"
-     }
-    },
-    {
      "label": "d",
-     "text": "The 2 lines meet at {b} stickers.",
+     "text": "In that hour he cycles {b} km.",
      "answer": {
       "value": [
-       "80"
+       "30"
       ],
-      "text": "80"
+      "text": "30"
      }
     }
    ],
-   "explanation": "(a) The Aisha line (dashed, square points) starts on 50. (b) It goes up by 5 each week. (c) In Week 5 Kumar has 60 and Aisha has 70. (d) The lines meet in Week 7 at 80.",
+   "explanation": "(a) At hour 2 the line is on 40. (b) The line is flat from hour 2 to hour 3: 1 hour. (c) The steepest part is from hour 4 to hour 5. (d) 90 − 60 = 30 km.",
    "partsrow": true
   },
   {
    "id": "L4U09-S05",
    "tier": "start",
    "page": 2,
-   "text": "A tank fills at a steady rate. The table shows the litres of water at some minutes. Fill in the table.",
+   "text": "A hall has rows of seats. Each row has 3 more seats than the row in front. Fill in the table.",
    "figure": {
     "type": "l4_table",
     "head": [
-     "Minute",
+     "Row",
      "1",
      "2",
      "3",
@@ -439,12 +421,12 @@
     ],
     "rows": [
      [
-      "Litres",
+      "Seats",
+      "8",
       "",
-      "31",
       "",
       "",
-      "55"
+      ""
      ]
     ],
     "widths": [
@@ -463,22 +445,22 @@
    "parts": [
     {
      "label": "a",
-     "text": "The tank gains {b} litres each minute.",
+     "text": "Row 10 has {b} seats.",
      "answer": {
       "value": [
-       "8"
+       "35"
       ],
-      "text": "8"
+      "text": "35"
      }
     },
     {
      "label": "b",
-     "text": "At minute 9 the tank holds {b} litres.",
+     "text": "Rows 1 to 5 have {b} seats in all.",
      "answer": {
       "value": [
-       "87"
+       "70"
       ],
-      "text": "87"
+      "text": "70"
      }
     }
    ],
@@ -487,7 +469,7 @@
      "Working:"
     ]
    },
-   "explanation": "Minute 2 to minute 5 is 3 minutes, and 55 − 31 = 24, so the tank gains 24 ÷ 3 = 8 litres a minute. Minute 1 is 23. Minute 9 is 8 minutes later: 23 + 8 × 8 = 87."
+   "explanation": "The rows have 8, 11, 14, 17 and 20 seats. Row 10 is 9 rows after Row 1: 8 + 9 × 3 = 35. Rows 1 to 5: 8 + 11 + 14 + 17 + 20 = 70."
   },
   {
    "id": "L4U09-S06",

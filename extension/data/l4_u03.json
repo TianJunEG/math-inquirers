@@ -592,7 +592,54 @@
    "id": "L4U03-T02",
    "tier": "think",
    "page": 4,
-   "text": "A number tower has 3 numbers at the bottom: 5, a missing number and 11. Each number above is the sum of the 2 numbers just below it. The top number is 52. What is the missing number? {b}",
+   "text": "A number tower has 3 numbers at the bottom. Each number above is the sum of the 2 numbers just below it. The top number is 52. What is the missing number? {b}",
+   "figure": {
+    "type": "l4_bars",
+    "rows": [
+     {
+      "offset": 1,
+      "segs": [
+       {
+        "u": 1,
+        "t": "52"
+       }
+      ]
+     },
+     {
+      "offset": 0.5,
+      "segs": [
+       {
+        "u": 1,
+        "k": "s"
+       },
+       {
+        "u": 1,
+        "k": "s"
+       }
+      ]
+     },
+     {
+      "segs": [
+       {
+        "u": 1,
+        "t": "5"
+       },
+       {
+        "u": 1,
+        "k": "q"
+       },
+       {
+        "u": 1,
+        "t": "11"
+       }
+      ]
+     }
+    ],
+    "width_mm": 50,
+    "unit": 44,
+    "row_h": 40,
+    "gap": 6
+   },
    "answer": {
     "value": [
      "18"
@@ -607,32 +654,33 @@
     ]
    },
    "hint": "Write the 2 numbers in the middle row. They add up to 52.",
-   "explanation": "The middle row is 5 + ? and ? + 11, and these add up to 52. So 5 + 11 + 2 × ? = 52, 2 × ? = 36 and ? = 18. The middle row is 23 and 29."
+   "explanation": "The middle row is 5 + ? and ? + 11, and these add up to 52. So 5 + 11 + 2 × ? = 52, 2 × ? = 36 and ? = 18. The middle row is 23 and 29.",
+   "figright": true
   },
   {
    "id": "L4U03-T03",
    "tier": "think",
    "page": 4,
-   "text": "Kumar and Siti have 90 stickers altogether. Kumar has 5 times as many as Siti. Kumar gives some stickers to Siti. Then they have equal amounts.",
+   "text": "Two jars hold $84 together. The red jar has $30 more than the blue jar.",
    "parts": [
     {
      "label": "a",
-     "text": "Siti at first: {b} stickers",
+     "text": "The blue jar holds ${b}",
+     "answer": {
+      "value": [
+       "27"
+      ],
+      "text": "27"
+     }
+    },
+    {
+     "label": "b",
+     "text": "To make the jars equal, move ${b} from the red jar to the blue jar",
      "answer": {
       "value": [
        "15"
       ],
       "text": "15"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Kumar gives Siti {b} stickers",
-     "answer": {
-      "value": [
-       "30"
-      ],
-      "text": "30"
      }
     }
    ],
@@ -643,8 +691,8 @@
      ""
     ]
    },
-   "hint": "Each of them ends with half of the 90 stickers.",
-   "explanation": "Siti is 1 unit and Kumar is 5 units. 6 units = 90, so 1 unit = 15. Siti has 15 and Kumar has 75. Equal shares are 45 each, so Kumar gives 75 − 45 = 30."
+   "hint": "Take away the extra $30 first. Then share what is left.",
+   "explanation": "Take away the extra $30: $84 − $30 = $54, shared by 2 jars. Blue holds $27 and red holds $57. Equal jars hold $42 each, so move $57 − $42 = $15."
   },
   {
    "id": "L4U03-G01",

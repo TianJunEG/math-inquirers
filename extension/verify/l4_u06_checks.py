@@ -148,16 +148,15 @@ def _():
 
 @check('L4U06-G02')
 def _():
-    d, n = 'N', 0
-    while True:
-        d = turn(turn(d, 90, True), 45, False)
-        n += 1
-        if d == 'N':
-            break
-    d21 = 'N'
-    for _ in range(21):
-        d21 = turn(turn(d21, 90, True), 45, False)
-    return {'a': s([n]), 'b': [d21]}
+    seats = 12
+    angle = {k: (k - 1) * 30 for k in range(1, seats + 1)}          # clockwise from the top
+    bottom = [k for k in angle if angle[k] == 180]
+    d = abs(angle[9] - angle[2])
+    smaller = min(d, 360 - d)
+    new_pos = (angle[1] + 270) % 360
+    where = [k for k in angle if angle[k] == new_pos]
+    assert len(bottom) == 1 and len(where) == 1
+    return {'a': s(bottom), 'b': s([smaller]), 'c': s(where)}
 
 
 @check('L4U06-G03')

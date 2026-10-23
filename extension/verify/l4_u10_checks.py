@@ -39,9 +39,10 @@ def _():
 
 @check('L4U10-S02')
 def _():
-    ways = [(b, c) for b in range(1, 20) for c in range(1, 10) if 3 * b + 8 * c == 50]
-    fewest = min(ways, key=lambda w: w[0] + w[1])
-    return {'a': s([len(ways)]), 'b': s(fewest)}
+    from itertools import combinations
+    coins = [5, 10, 50]
+    totals = {sum(c) for r in range(1, 4) for c in combinations(coins, r)}
+    return {'a': s([len(totals)]), 'b': s([sum(1 for t in totals if t > 50)])}
 
 
 @check('L4U10-S03')
@@ -69,9 +70,9 @@ def _():
 
 @check('L4U10-S06')
 def _():
-    sol = [x for x in range(1, 500) if (x * 2 + 14) / 4 == 10]
-    assert len(sol) == 1
-    return s(sol)
+    m = 15 * 60 + 20 - (60 + 45) - 15
+    h = m // 60 - 12
+    return ['%d:%02d' % (h, m % 60)]
 
 
 @check('L4U10-S07')
@@ -118,7 +119,7 @@ def _():
 
 @check('L4U10-S12')
 def _():
-    sol = [n for n in range(10, 100) if abs(n // 10 - n % 10) == 4 and n % 7 == 0]
+    sol = [n for n in range(100, 1000) if n // 10 % 10 == 0 and n // 100 == 2 * (n % 10) and sum(map(int, str(n))) == 9]
     assert len(sol) == 1
     return s(sol)
 

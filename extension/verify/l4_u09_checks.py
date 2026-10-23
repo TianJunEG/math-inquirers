@@ -97,24 +97,22 @@ def _():
 
 @check('L4U09-S04')
 def _():
-    f = ITEM['L4U09-S04']['figure']['panels'][0]['series']
-    kum, ais = f[0]['values'], f[1]['values']
-    steps = {ais[i + 1] - ais[i] for i in range(len(ais) - 1)}
-    assert len(steps) == 1
-    meet = [kum[i] for i in range(len(kum)) if kum[i] == ais[i]]
-    assert len(meet) == 1
-    return {'a': s([ais[0]]), 'b': s(steps), 'c': s([ais[4] - kum[4]]), 'd': s(meet)}
+    p = ITEM['L4U09-S04']['figure']['panels'][0]
+    assert p['step'] == 10 and len(p['series']) == 1
+    v = p['series'][0]['values']
+    diffs = [v[i + 1] - v[i] for i in range(len(v) - 1)]
+    flat = [i for i, d in enumerate(diffs) if d == 0]
+    assert len(flat) == 1 and diffs.count(max(diffs)) == 1
+    best = diffs.index(max(diffs))
+    return {'a': s([v[2]]), 'b': s([1]), 'c': s([best + 1]), 'd': s([max(diffs)])}
 
 
 @check('L4U09-S05')
 def _():
-    row = ITEM['L4U09-S05']['figure']['rows'][0]
-    known = {i: int(x) for i, x in enumerate(row[1:]) if x != ''}
-    (i0, v0), (i1, v1) = sorted(known.items())[0], sorted(known.items())[-1]
-    d = (v1 - v0) / (i1 - i0)
-    assert d == int(d)
-    first = v0 - int(d) * i0
-    return {'a': s([int(d)]), 'b': s([first + int(d) * 8])}
+    it = ITEM['L4U09-S05']
+    assert 'Each row has 3 more seats' in it['text'] and it['figure']['rows'][0][1] == '8'
+    rows = [8 + 3 * i for i in range(10)]
+    return {'a': s([rows[9]]), 'b': s([sum(rows[:5])])}
 
 
 @check('L4U09-S06')

@@ -161,19 +161,24 @@ def _():
 
 @check('L4U07-T02')
 def _():
-    rects = [(l, w) for l in range(1, 37) for w in range(1, l + 1) if l * w == 36]
-    return {'a': s([len(rects)]), 'b': s([max(2 * (l + w) for l, w in rects)])}
+    f = ITEM['L4U07-T02']['figure']['shapes'][0]
+    sides = [int(a ** 0.5) for a in (4, 9, 16)]
+    assert [x * x for x in sides] == [4, 9, 16]
+    cells, x0 = set(), 0
+    for sd in sides:
+        cells |= {(x, y) for x in range(x0, x0 + sd) for y in range(sd)}
+        x0 += sd
+    edges = sum(1 for (x, y) in cells for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + dx, y + dy) not in cells)
+    assert area(f['pts']) == len(cells) and perim(f['pts']) == edges
+    return s([edges])
 
 
 @check('L4U07-T03')
 def _():
-    L, W, k = 15, 9, 3
-    cells = {(x, y) for x in range(L) for y in range(W)}
-    corners = {(x, y) for x in range(L) for y in range(W) if (x < k or x >= L - k) and (y < k or y >= W - k)}
-    left = cells - corners
-    # perimeter by counting the edges of cells that border a cell outside the shape
-    edges = sum(1 for (x, y) in left for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + dx, y + dy) not in left)
-    return {'a': s([len(left)]), 'b': s([edges])}
+    def per(w, h):
+        cells = {(x, y) for x in range(w) for y in range(h)}
+        return sum(1 for (x, y) in cells for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + dx, y + dy) not in cells)
+    return {'a': s([per(8, 3 + 3)]), 'b': s([per(8 + 8, 3)])}
 
 
 @check('L4U07-G01')

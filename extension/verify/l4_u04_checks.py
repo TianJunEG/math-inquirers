@@ -124,16 +124,18 @@ def _():
 
 @check('L4U04-T01')
 def _():
-    c = [(a, b) for b in range(1, 100) for a in range(1, 100) if Fr(a, b) == Fr(2, 3) and a + b == 35]
-    assert len(c) == 1
-    return s(c[0])
+    ns = [n for n in range(1, 40) if Fr(1, 2) < Fr(n, 9) < Fr(5, 6)]
+    assert ns == list(range(ns[0], ns[-1] + 1))
+    return s([ns[0], ns[-1]])
 
 
 @check('L4U04-T02')
 def _():
-    c = [g for g in range(1, 1000) if g - g * Fr(2, 5) - g * Fr(1, 4) == 21 and (g * Fr(2, 5)).denominator == 1 and (g * Fr(1, 4)).denominator == 1]
-    assert len(c) == 1
-    return s(c)
+    sleep, school = Fr(1, 3) * 24, Fr(1, 4) * 24
+    left = 24 - sleep - school
+    play = left / 2
+    assert play.denominator == 1
+    return s([play.numerator])
 
 
 @check('L4U04-T03')

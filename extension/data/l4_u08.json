@@ -904,47 +904,52 @@
    "id": "L4U08-T02",
    "tier": "think",
    "page": 4,
-   "text": "Ravi sees 3 faces of a dice at the same corner. The 3 numbers multiply to make 36.",
+   "text": "On every dice, the top face and the bottom face add up to 7.",
    "parts": [
     {
      "label": "a",
-     "text": "The numbers he can see, smallest first: {b} {b} {b}",
+     "text": "2 dice stand on a table. The tops add up to 9. The bottoms add up to {b}",
      "answer": {
       "value": [
-       "2",
-       "3",
-       "6"
+       "5"
       ],
-      "text": "2, 3, 6"
+      "text": "5"
      }
     },
     {
      "label": "b",
-     "text": "The numbers he cannot see, smallest first: {b} {b} {b}",
+     "text": "3 dice stand on a table. The tops add up to 12. The bottoms add up to {b}",
      "answer": {
       "value": [
-       "1",
-       "4",
-       "5"
+       "9"
       ],
-      "text": "1, 4, 5"
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "One dice stands on a table. The 4 side faces add up to {b}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
      }
     }
    ],
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
-   "hint": "At a corner, the 3 faces are from 3 different opposite pairs.",
-   "explanation": "The pairs are 1 and 6, 2 and 5, 3 and 4. He sees one from each pair. Only 6 × 2 × 3 gives 36. The hidden faces are opposite: 1, 5 and 4."
+   "hint": "All 6 faces of a dice add up to 21.",
+   "explanation": "(a) 2 × 7 = 14, and 14 − 9 = 5. (b) 3 × 7 = 21, and 21 − 12 = 9. (c) All 6 faces add up to 21. The top and bottom make 7, so the sides make 14."
   },
   {
    "id": "L4U08-T03",
    "tier": "think",
    "page": 4,
-   "text": "On a 3 by 3 grid, shade exactly 4 squares. A fold along the dotted diagonal must make the halves match. How many patterns can you make? {b}",
+   "text": "On a 3 by 3 grid, shade exactly 4 squares. A fold along the dashed diagonal must make the halves match. How many patterns can you make? {b}",
    "figure": {
     "type": "l4_grid",
     "rows": 3,

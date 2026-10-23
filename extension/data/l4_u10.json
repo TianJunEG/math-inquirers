@@ -184,37 +184,35 @@
    "id": "L4U10-S02",
    "tier": "start",
    "page": 1,
-   "text": "A farmer fills a 50 litre tank with a 3 litre bucket and an 8 litre can. He uses at least 1 of each. The tank is filled exactly.",
+   "text": "Mei has one 5¢ coin, one 10¢ coin and one 50¢ coin. She picks some of the coins. She picks at least 1.",
    "parts": [
     {
      "label": "a",
-     "text": "How many different ways can he do it? {b}",
+     "text": "How many different totals can she make? {b}",
      "answer": {
       "value": [
-       "2"
+       "7"
       ],
-      "text": "2"
+      "text": "7"
      }
     },
     {
      "label": "b",
-     "text": "The way with the fewest trips: {b} buckets and {b} cans",
+     "text": "How many of the totals are more than 50¢? {b}",
      "answer": {
       "value": [
-       "6",
-       "4"
+       "3"
       ],
-      "text": "6 buckets and 4 cans"
+      "text": "3"
      }
     }
    ],
    "space": {
     "rows": [
-     "Cans, litres left, buckets: {ll}",
-     "My answer: {l}"
+     "Totals: {ll}"
     ]
    },
-   "explanation": "Try the cans: 1 can leaves 42 L = 14 buckets. 4 cans leave 18 L = 6 buckets. 2, 3, 5 and 6 cans leave amounts that are not in 3s. 2 ways. Fewest trips: 6 + 4 = 10."
+   "explanation": "The totals are 5, 10, 50, 15, 55, 60 and 65: 7 totals. The totals above 50 are 55, 60 and 65: 3 totals."
   },
   {
    "id": "L4U10-S03",
@@ -327,12 +325,12 @@
    "id": "L4U10-S06",
    "tier": "start",
    "page": 2,
-   "text": "Kumar thinks of a number. He doubles it, adds 14 and then divides by 4. His answer is 10. What is his number? {b}",
+   "text": "A film session ends at 3:20 pm. The film lasts 1 hour 45 minutes. The adverts before it last 15 minutes. The session starts at {b} pm.",
    "answer": {
     "value": [
-     "13"
+     "1:20"
     ],
-    "text": "13"
+    "text": "1:20"
    },
    "space": {
     "rows": [
@@ -340,7 +338,7 @@
      ""
     ]
    },
-   "explanation": "Work backwards. 10 × 4 = 40. 40 − 14 = 26. 26 ÷ 2 = 13."
+   "explanation": "Work backwards. 3:20 − 1 h 45 min = 1:35. Then 1:35 − 15 min = 1:20. The session starts at 1:20 pm."
   },
   {
    "id": "L4U10-S07",
@@ -539,20 +537,20 @@
    "id": "L4U10-S12",
    "tier": "start",
    "page": 3,
-   "text": "Who am I? My 2 digits differ by 4. I am a multiple of 7. {b}",
+   "text": "A lock code has 3 digits. The middle digit is 0. The first digit is twice the last digit. The digits add up to 9. What is the code? {b}",
    "answer": {
     "value": [
-     "84"
+     "603"
     ],
-    "text": "84"
+    "text": "603"
    },
    "space": {
     "rows": [
-     "List:"
+     "Try:"
     ]
    },
-   "hint": "List the 2-digit multiples of 7. Check the digits.",
-   "explanation": "The 2-digit multiples of 7 are 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91 and 98. Only 84 has digits that differ by 4."
+   "hint": "Try a last digit of 1, then 2, then 3. Add the digits.",
+   "explanation": "The last digit and twice the last digit make 3 × last = 9, so the last digit is 3 and the first is 6. The code is 603."
   },
   {
    "id": "L4U10-T01",

@@ -134,6 +134,8 @@ def _():
 
 @check('L4U03-T02')
 def _():
+    f = ITEM['L4U03-T02']['figure']['rows']
+    assert f[0]['segs'][0]['t'] == '52' and [x.get('t') for x in f[2]['segs']] == ['5', None, '11']
     found = []
     for m in range(1, 200):
         mid = (5 + m, m + 11)
@@ -145,11 +147,11 @@ def _():
 
 @check('L4U03-T03')
 def _():
-    c = [(sit, 90 - sit) for sit in range(1, 90) if 90 - sit == 5 * sit]
+    c = [(b, b + 30) for b in range(1, 84) if b + (b + 30) == 84]
     assert len(c) == 1
-    g = [k for k in range(0, c[0][1] + 1) if c[0][1] - k == c[0][0] + k]
-    assert len(g) == 1
-    return {'a': s([c[0][0]]), 'b': s(g)}
+    mv = [m for m in range(0, 60) if c[0][1] - m == c[0][0] + m]
+    assert len(mv) == 1
+    return {'a': s([c[0][0]]), 'b': s(mv)}
 
 
 @check('L4U03-G01')

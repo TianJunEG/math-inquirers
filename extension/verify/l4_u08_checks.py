@@ -208,12 +208,12 @@ def _():
 
 @check('L4U08-T02')
 def _():
-    pairs = [(1, 6), (2, 5), (3, 4)]
-    sols = [c for c in itertools.product(*pairs) if c[0] * c[1] * c[2] == 36]
-    assert len(sols) == 1
-    seen = sorted(sols[0])
-    hidden = sorted(7 - x for x in seen)
-    return {'a': s(seen), 'b': s(hidden)}
+    faces = range(1, 7)
+    two = {(7 - a) + (7 - b) for a in faces for b in faces if a + b == 9}
+    three = {(7 - a) + (7 - b) + (7 - c) for a in faces for b in faces for c in faces if a + b + c == 12}
+    sides = {sum(f for f in faces if f not in (t, 7 - t)) for t in faces}
+    assert len(two) == len(three) == len(sides) == 1
+    return {'a': s(two), 'b': s(three), 'c': s(sides)}
 
 
 @check('L4U08-T03')
