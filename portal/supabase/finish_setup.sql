@@ -295,8 +295,8 @@ insert into public.groups (id, level, name, ages, seats, sessions, first_label, 
   ('L2A', 2, 'Level 2 · Group A', '7 to 9', 8, '[{"day": "Tue", "start": "10:45", "end": "12:15"}, {"day": "Fri", "start": "10:45", "end": "12:15"}]'::jsonb, 'Tue 24 Nov', 'Thu 24 Dec', '2026-11-24', 25000),
   ('L3A', 3, 'Level 3 · Group A', '8 to 10', 8, '[{"day": "Tue", "start": "13:15", "end": "14:45"}, {"day": "Fri", "start": "13:15", "end": "14:45"}]'::jsonb, 'Tue 24 Nov', 'Thu 24 Dec', '2026-11-24', 25000),
   ('L4A', 4, 'Level 4 · Group A', '9 to 11', 8, '[{"day": "Tue", "start": "15:00", "end": "16:30"}, {"day": "Fri", "start": "15:00", "end": "16:30"}]'::jsonb, 'Tue 24 Nov', 'Thu 24 Dec', '2026-11-24', 25000),
-  ('L5A', 5, 'Level 5 · Group A', '10 to 12', 8, '[{"day": "Fri", "start": "16:45", "end": "18:15"}, {"day": "Sun", "start": "11:15", "end": "12:45"}]'::jsonb, 'Fri 27 Nov', 'Sun 27 Dec', '2026-11-27', 25000),
-  ('L6A', 6, 'Level 6 · Group A', '11 to 13', 8, '[{"day": "Thu", "start": "18:15", "end": "19:45"}, {"day": "Sat", "start": "17:45", "end": "19:15"}]'::jsonb, 'Thu 26 Nov', 'Sat 26 Dec', '2026-11-26', 25000)
+  ('L5A', 5, 'Level 5 · Group A', '10 to 12', 8, '[{"day": "Fri", "start": "16:45", "end": "18:15"}, {"day": "Sun", "start": "16:15", "end": "17:45"}]'::jsonb, 'Fri 27 Nov', 'Sun 27 Dec', '2026-11-27', 25000),
+  ('L6A', 6, 'Level 6 · Group A', '11 to 13', 8, '[{"day": "Thu", "start": "18:15", "end": "19:45"}, {"day": "Sat", "start": "18:45", "end": "20:15"}]'::jsonb, 'Thu 26 Nov', 'Sat 26 Dec', '2026-11-26', 25000)
 on conflict (id) do update set level = excluded.level, name = excluded.name, ages = excluded.ages, seats = excluded.seats,
   sessions = excluded.sessions, first_label = excluded.first_label, last_label = excluded.last_label,
   start_date = excluded.start_date, fee_cents = excluded.fee_cents;
