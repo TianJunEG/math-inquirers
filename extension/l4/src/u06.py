@@ -102,7 +102,7 @@ G.append(item(U+'-G03', 'go', 5, 'A corner of a rectangle is 90°. It is split i
   parts=[P('a', 'The smallest angle is {b}°', A(10)), P('b', 'The greatest angle is {b}°', A(60))],
   hint='Count the equal parts. 1 + 2 + 6 = 9.',
   why='The 3 angles are 1, 2 and 6 equal parts. That is 9 parts in all, and 9 parts = 90°, so 1 part = 10°. The smallest is 10°, the middle is 20° and the greatest is 60°.',
-  space={'rows': ['Working:', '']}))
+  space={'rows': ['Working:']}))
 G.append(item(U+'-G04', 'go', 5, 'At which o\'clock times (from 1 o\'clock to 12 o\'clock) is the smaller angle between the clock hands more than 100° and less than 160°?',
   parts=[P('a', 'How many times are there? {b}', A(4)), P('b', 'Write the times: {b} {b} {b} {b}', A(4, 5, 7, 8, text='4, 5, 7 and 8 o\'clock'))],
   hint='Write the angle for every o\'clock time first.',

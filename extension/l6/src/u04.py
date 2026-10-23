@@ -36,7 +36,7 @@ I.append(IT(U, 'S', 1, 1,
             parts=[P('a', f'OUT = {{b}} {X} n + {{b}}', [3, 2], '3, 2'),
                    P('b', 'IN 10 gives OUT {b}.', [32]),
                    P('c', 'OUT 50 comes from IN {b}.', [16])],
-            partsrow=True))
+            partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'S', 2, 1,
             'Guess my rule. This time the machine takes a number away.',
             f'IN goes up by 2 and OUT goes up by 6, so the rule has {X} 3. 3 {X} 2 = 6, but OUT is 1, so take away 5: OUT = 3n {M} 5. '
@@ -45,7 +45,7 @@ I.append(IT(U, 'S', 2, 1,
             parts=[P('a', f'OUT = {{b}} {X} n {M} {{b}}', [3, 5], '3, 5'),
                    P('b', 'IN 20 gives OUT {b}.', [55]),
                    P('c', 'OUT 100 comes from IN {b}.', [35])],
-            partsrow=True))
+            partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'S', 3, 1,
             f'Machine P does {X} 2, then + 6. Machine Q does + 6, then {X} 2. Use the same IN for both.',
             f'IN 7: P gives 7 {X} 2 = 14, then 20. Q gives 7 + 6 = 13, then 26. IN 10: P gives 26 and Q gives 32. '
@@ -69,7 +69,7 @@ I.append(IT(U, 'S', 5, 2,
                    P('b', f'9n {M} 7 = 74      n = {{b}}', [9]),
                    P('c', f'(n + 4) {X} 6 = 66      n = {{b}}', [7]),
                    P('d', f'n ÷ 5 + 3 = 11      n = {{b}}', [40])],
-            partsrow=True))
+            partsrow=True, space={'rows': ['Check:']}))
 I.append(IT(U, 'S', 6, 2,
             f'The block "answer" holds the number you type. In code, {X} means times. Predict what the sprite says.',
             f'out = answer {X} 4 {M} 3. Type 9: 36 {M} 3 = 33. Type 25: 100 {M} 3 = 97. For 61, run it backwards: 61 + 3 = 64, then 64 ÷ 4 = 16.',
@@ -126,14 +126,14 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', 'IN 5 gives OUT {b}.', [35]),
                    P('b', 'OUT 77 comes from IN {b}.', [12]),
                    P('c', f'Joined, the rule is OUT = {{b}} {X} n + {{b}}.', [6, 5], '6, 5')],
-            hint='For OUT 77, undo Y first, then undo X.', partsrow=True, space={'rows': ['Working:', '']}))
+            hint='For OUT 77, undo Y first, then undo X.', partsrow=True, space={'rows': ['Working:']}))
 I.append(IT(U, 'T', 2, 4,
             'Ali is n years old. His brother is 4 years older. Their mother is 3 times as old as Ali. Together the 3 of them are 64 years old.',
             f'Ali n, brother n + 4, mother 3n. Together: n + (n + 4) + 3n = 5n + 4 = 64. So 5n = 60 and n = 12. Ali is 12, his brother is 16 and their mother is 36. Check: 12 + 16 + 36 = 64.',
-            fig={'type': 'l6_model', 'rows': [{'label': 'Ali', 'segs': [{'w': 18, 't': 'n'}]},
-                                              {'label': 'Brother', 'segs': [{'w': 18, 't': 'n'}, {'w': 10, 't': '4', 'dash': True}]},
-                                              {'label': 'Mother', 'segs': [{'w': 18, 't': 'n'}, {'w': 18, 't': 'n'}, {'w': 18, 't': 'n'}]}],
-                 'brace': {'t': '64 in all'}},
+            fig={'type': 'l6_model', 'lab': 22, 'rows': [{'label': 'Ali', 'segs': [{'w': 13, 't': 'n'}]},
+                                              {'label': 'Brother', 'segs': [{'w': 13, 't': 'n'}, {'w': 8, 't': '4', 'dash': True}]},
+                                              {'label': 'Mother', 'segs': [{'w': 13, 't': 'n'}, {'w': 13, 't': 'n'}, {'w': 13, 't': 'n'}]}],
+                 'brace': {'t': '64'}},
             parts=[P('a', f'Together: {{b}} {X} n + {{b}} = 64', [5, 4], '5, 4'),
                    P('b', 'Ali is {b} years old.', [12]),
                    P('c', 'Their mother is {b} years old.', [36])],
@@ -145,17 +145,17 @@ I.append(IT(U, 'T', 3, 4,
             parts=[P('a', 'When IN goes up by 5, OUT goes up by {b}.', [25]),
                    P('b', f'The rule is OUT = {{b}} {X} n {M} {{b}}.', [5, 2], '5, 2'),
                    P('c', 'OUT 98 comes from IN {b}.', [20])],
-            hint='How much does OUT go up for each 1 that IN goes up?', partsrow=True, space={'rows': ['Working:', '']}))
+            hint='How much does OUT go up for each 1 that IN goes up?', partsrow=True, space={'rows': ['Working:']}))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
-            f'Beyond Level 6: n on both sides.\nMachine A does {X} 4, then + 1. Machine B does {X} 2, then + 13. Is there an IN that gives the same OUT on both?',
+            f'Beyond Level 6: n on both sides.\nMachine A does {X} 4, then + 1. Machine B does {X} 2, then + 13.',
             f'IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 on B for every 1 that IN goes up (4 {M} 2 = 2). B\'s lead of 8 is gone after 4 more steps, at IN 6. '
             f'Both give 25: 4 {X} 6 + 1 = 25 and 2 {X} 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12.',
             parts=[P('a', 'IN 2: A gives {b} and B gives {b}.', [9, 17], '9, 17'),
                    P('b', 'The OUT numbers are the same when IN is {b}.', [6]),
                    P('c', 'That OUT is {b}.', [25])],
-            hint='Make a table of IN, A and B. Look at how the gap changes.', space={'table': {'cols': ['IN', 'A', 'B'], 'rows': 5}}))
+            hint='Make a table of IN, A and B. Look at how the gap changes.', space={'table': {'cols': ['IN', 'A', 'B'], 'rows': 3}}))
 I.append(IT(U, 'G', 2, 5,
             'Call the smallest number n.',
             f'(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so 4n = 124 and n = 31 (31, 32, 33, 34). '

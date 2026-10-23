@@ -122,6 +122,11 @@
     "rowhead": true,
     "ch": 10
    },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "IN goes up by 2 each time and OUT goes up by 6, so each 1 of IN adds 3: the rule has × 3. 3 × 1 = 3, but OUT is 5, so add 2: OUT = 3n + 2. Check IN 7: 3 × 7 + 2 = 23. IN 10 gives 32. For OUT 50: 3n = 48 and n = 16.",
    "partsrow": true
   },
@@ -191,55 +196,19 @@
     "rowhead": true,
     "ch": 10
    },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
    "explanation": "IN goes up by 2 and OUT goes up by 6, so the rule has × 3. 3 × 2 = 6, but OUT is 1, so take away 5: OUT = 3n − 5. IN 20 gives 3 × 20 − 5 = 55. For OUT 100: 3n − 5 = 100, so 3n = 105 and n = 35.",
    "partsrow": true
-  },
-  {
-   "id": "L6U04-S03",
-   "tier": "start",
-   "text": "Machine P does × 2, then + 6. Machine Q does + 6, then × 2. Use the same IN for both.",
-   "page": 1,
-   "parts": [
-    {
-     "label": "a",
-     "text": "IN 7:  P gives {b}  and Q gives {b}.",
-     "answer": {
-      "value": [
-       "20",
-       "26"
-      ],
-      "text": "20, 26"
-     }
-    },
-    {
-     "label": "b",
-     "text": "IN 10:  P gives {b}  and Q gives {b}.",
-     "answer": {
-      "value": [
-       "26",
-       "32"
-      ],
-      "text": "26, 32"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Do P and Q give the same OUT?   {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "No"
-      ],
-      "text": "No"
-     }
-    }
-   ],
-   "explanation": "IN 7: P gives 7 × 2 = 14, then 20. Q gives 7 + 6 = 13, then 26. IN 10: P gives 26 and Q gives 32. The order of the steps matters, so P and Q do not give the same OUT."
   },
   {
    "id": "L6U04-S04",
    "tier": "start",
    "text": "A machine does two steps. Look at the first IN and OUT.",
-   "page": 2,
+   "page": 1,
    "parts": [
     {
      "label": "a",
@@ -286,54 +255,45 @@
    "partsrow": true
   },
   {
-   "id": "L6U04-S05",
+   "id": "L6U04-S03",
    "tier": "start",
-   "text": "Run each machine backwards to find n. Check by going forwards.",
+   "text": "Machine P does × 2, then + 6. Machine Q does + 6, then × 2. Use the same IN for both.",
    "page": 2,
    "parts": [
     {
      "label": "a",
-     "text": "5n + 8 = 63      n = {b}",
+     "text": "IN 7:  P gives {b}  and Q gives {b}.",
      "answer": {
       "value": [
-       "11"
+       "20",
+       "26"
       ],
-      "text": "11"
+      "text": "20, 26"
      }
     },
     {
      "label": "b",
-     "text": "9n − 7 = 74      n = {b}",
+     "text": "IN 10:  P gives {b}  and Q gives {b}.",
      "answer": {
       "value": [
-       "9"
+       "26",
+       "32"
       ],
-      "text": "9"
+      "text": "26, 32"
      }
     },
     {
      "label": "c",
-     "text": "(n + 4) × 6 = 66      n = {b}",
+     "text": "Do P and Q give the same OUT?   {circ:Yes|No}",
      "answer": {
       "value": [
-       "7"
+       "No"
       ],
-      "text": "7"
-     }
-    },
-    {
-     "label": "d",
-     "text": "n ÷ 5 + 3 = 11      n = {b}",
-     "answer": {
-      "value": [
-       "40"
-      ],
-      "text": "40"
+      "text": "No"
      }
     }
    ],
-   "explanation": "(a) 5n + 8 = 63: 63 − 8 = 55, 55 ÷ 5 = 11. (b) 9n − 7 = 74: 74 + 7 = 81, 81 ÷ 9 = 9. (c) (n + 4) × 6 = 66: 66 ÷ 6 = 11, 11 − 4 = 7. (d) n ÷ 5 + 3 = 11: 11 − 3 = 8, 8 × 5 = 40.",
-   "partsrow": true
+   "explanation": "IN 7: P gives 7 × 2 = 14, then 20. Q gives 7 + 6 = 13, then 26. IN 10: P gives 26 and Q gives 32. The order of the steps matters, so P and Q do not give the same OUT."
   },
   {
    "id": "L6U04-S06",
@@ -473,7 +433,7 @@
    "id": "L6U04-S08",
    "tier": "start",
    "text": "Ali has n stickers. Mei has 5 more than Ali. Wei has 3 times as many as Ali.",
-   "page": 3,
+   "page": 2,
    "parts": [
     {
      "label": "a",
@@ -509,6 +469,61 @@
     }
    ],
    "explanation": "Mei has n + 5 and Wei has 3 × n. When n = 8: Mei has 13, Wei has 24, and all 3 together have 8 + 13 + 24 = 45. In general n + (n + 5) + 3n = 5n + 5."
+  },
+  {
+   "id": "L6U04-S05",
+   "tier": "start",
+   "text": "Run each machine backwards to find n. Check by going forwards.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "5n + 8 = 63      n = {b}",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "9n − 7 = 74      n = {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "(n + 4) × 6 = 66      n = {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "d",
+     "text": "n ÷ 5 + 3 = 11      n = {b}",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Check:"
+    ]
+   },
+   "explanation": "(a) 5n + 8 = 63: 63 − 8 = 55, 55 ÷ 5 = 11. (b) 9n − 7 = 74: 74 + 7 = 81, 81 ÷ 9 = 9. (c) (n + 4) × 6 = 66: 66 ÷ 6 = 11, 11 − 4 = 7. (d) n ÷ 5 + 3 = 11: 11 − 3 = 8, 8 × 5 = 40.",
+   "partsrow": true
   },
   {
    "id": "L6U04-S09",
@@ -700,8 +715,7 @@
    "hint": "For OUT 77, undo Y first, then undo X.",
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "explanation": "IN 5: X gives 13, Y gives 39 − 4 = 35. For OUT 77, undo Y: 77 + 4 = 81, 81 ÷ 3 = 27. Undo X: 27 − 3 = 24, 24 ÷ 2 = 12. The joined rule is 3(2n + 3) − 4 = 6n + 5. Check: 6 × 5 + 5 = 35 and 6 × 12 + 5 = 77.",
@@ -747,12 +761,13 @@
    ],
    "figure": {
     "type": "l6_model",
+    "lab": 22,
     "rows": [
      {
       "label": "Ali",
       "segs": [
        {
-        "w": 18,
+        "w": 13,
         "t": "n"
        }
       ]
@@ -761,11 +776,11 @@
       "label": "Brother",
       "segs": [
        {
-        "w": 18,
+        "w": 13,
         "t": "n"
        },
        {
-        "w": 10,
+        "w": 8,
         "t": "4",
         "dash": true
        }
@@ -775,22 +790,22 @@
       "label": "Mother",
       "segs": [
        {
-        "w": 18,
+        "w": 13,
         "t": "n"
        },
        {
-        "w": 18,
+        "w": 13,
         "t": "n"
        },
        {
-        "w": 18,
+        "w": 13,
         "t": "n"
        }
       ]
      }
     ],
     "brace": {
-     "t": "64 in all"
+     "t": "64"
     }
    },
    "hint": "Add up the n boxes first. Then add the extra 4.",
@@ -838,8 +853,7 @@
    "hint": "How much does OUT go up for each 1 that IN goes up?",
    "space": {
     "rows": [
-     "Working:",
-     ""
+     "Working:"
     ]
    },
    "explanation": "IN goes up 5 (3 to 8) and OUT goes up 25 (13 to 38), so the × part is 25 ÷ 5 = 5. 5 × 3 = 15, but OUT is 13, so take away 2: OUT = 5n − 2. For OUT 98: 5n = 100 and n = 20.",
@@ -848,7 +862,7 @@
   {
    "id": "L6U04-G01",
    "tier": "go",
-   "text": "Beyond Level 6: n on both sides.\nMachine A does × 4, then + 1. Machine B does × 2, then + 13. Is there an IN that gives the same OUT on both?",
+   "text": "Beyond Level 6: n on both sides.\nMachine A does × 4, then + 1. Machine B does × 2, then + 13.",
    "page": 5,
    "parts": [
     {
@@ -891,7 +905,7 @@
       "A",
       "B"
      ],
-     "rows": 5
+     "rows": 3
     }
    },
    "explanation": "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 on B for every 1 that IN goes up (4 − 2 = 2). B's lead of 8 is gone after 4 more steps, at IN 6. Both give 25: 4 × 6 + 1 = 25 and 2 × 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12."

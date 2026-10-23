@@ -69,7 +69,7 @@ def page01():
         ["Look at each item.", "Write the number in the box.", INSTR_CODE],
         body, ans, table, word, 0, 999,
         "; ".join(f"{i+1}) {a}" for i, a in enumerate(ans)),
-        "Three place-value charts (discs marked 100, 10 and 1), then the value of a digit, a regrouped number (more than 10 tens) and a number with a zero tens place. The wrong numbers a pupil gets by writing the digits in a different order, or by giving the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
+        "Three place-value charts (discs marked 100, 10 and 1), then the value of a digit, a regrouped number (with 11 to 15 tens) and a number with a zero tens place. The wrong numbers a pupil gets by writing the digits in a different order, or by giving the digit instead of its value, have decoy letters in the table or no letter. A box left blank gives no letter and the check cannot see it.")
     # independent solver: read the discs and the printed words back
     solved = []
     ci = 0
@@ -251,14 +251,14 @@ def page04():
     for i, it in enumerate(items):
         if it["k"] == "array":
             s = A.array_svg(it["kind"], it["r"], it["c"]); svgs.append(s)
-            cards.append(qcard(i + 1, f'<p>How many {OBJN[it["kind"]][1]} in all?</p>' + s, '<span class="ab w3"></span>'))
+            cards.append(qcard(i + 1, f'<p>How many {OBJN[it["kind"]][1]} in all?</p>' + s, '<span class="ab w3"></span>', cls="inl"))
             texts.append(None)
         else:
             if it["k"] == "times": t = f"{it['a']} \u00d7 {it['b']} = ?"
             elif it["k"] == "groups": t = f"{it['N']} has {it['g']} groups of {it['m']} {it['thing']}. How many {it['thing']} in all?"
             elif it["k"] == "missing": t = f"{it['t']} \u00d7 ? = {it['t'] * it['q']}"
             else: t = f"There are {it['t']} tables. {it['u']} children sit at each table. How many children?"
-            texts.append(t); svgs.append(None); cards.append(qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span>'))
+            texts.append(t); svgs.append(None); cards.append(qcard(i + 1, f"<p>{t}</p>", '<span class="ab w3"></span>', cls="inl"))
     P = code_items_page(4, 5404, "Equal Groups", 1, "Multiplication: tables of 2, 3, 4, 5 and 10", STRAND_MD,
         "3.1, 3.4 (multiplication tables of 2, 3, 4, 5 and 10; multiplying within the tables)", ["MD3.1", "MD3.4"], "Code-breaker (equal groups)",
         ["Find how many in all.", "Write the answer in the box.", INSTR_CODE],

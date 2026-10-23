@@ -10,9 +10,9 @@ CSS_P2 = """
 .ctc .codetable{display:grid;gap:1.6mm 2mm}.ctc .ct{min-width:0;padding:0.6mm 1mm;font-size:13pt;gap:1.5mm;justify-content:center}.ctc .ct b{font-size:16pt;padding-left:1.6mm;min-width:5mm;text-align:center}
 .qc.inl{flex-direction:row;align-items:center;justify-content:space-between;gap:3mm}.qc.inl .qh{flex:1}.qc.inl .qa{flex:none}
 .vsum{display:grid;grid-template-columns:7mm repeat(3,9mm);gap:0;align-items:center;font-family:'Fredoka';font-weight:600;font-size:25pt;line-height:1.05}
-.vsum .vr{grid-column:1 / 5;display:grid;grid-template-columns:7mm repeat(3,9mm);align-items:center;justify-items:center;height:10.5mm}
+.vsum .vr{grid-column:1 / 5;display:grid;grid-template-columns:7mm repeat(3,9mm);align-items:center;justify-items:center;height:12.5mm}
 .vsum .vr em{font-style:normal;font-size:22pt}.vsum .vr i{font-style:normal}
-.vsum .vr i.ab{width:8.5mm;height:9.5mm;border-width:0.5mm;border-radius:1mm}
+.vsum .vr i.ab{width:8.5mm;height:12mm;border-width:0.5mm;border-radius:1mm}
 .vsum .vrule{grid-column:1 / 5;border-top:0.8mm solid #000;height:0;margin:0.8mm 0}
 .vsum .vans{height:14mm;grid-template-columns:7mm 1fr}.vsum .vans .ab{width:27mm;height:13mm;justify-self:start}
 .vcards{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm 5mm}

@@ -65,8 +65,8 @@ items = [
    hint='Take off the extra bits. Then share the rest equally.',
    why='Take away the extra 6 and 9: 51 - 6 - 9 = 36. Now 3 equal bars share 36, so each is 36 ÷ 3 = 12. Mei has 12, Lily 12 + 6 = 18 and Aisha 12 + 9 = 21. Check: 12 + 18 + 21 = 51.'),
  I('think', 4, 'Aisha had some stickers. She used 8 on a card. Then she got as many stickers as she had left. Now she has 30.',
-   figure={'type': 'l2_bar', 'rows': [{'label': 'At first', 'segs': [{'w': 6, 'unknown': True, 't': '?'}]}, {'label': 'After the card', 'segs': [{'w': 4, 'unknown': True, 't': '?'}, {'w': 2, 't': '8'}]}, {'label': 'Now', 'segs': [{'w': 4, 'unknown': True, 't': '?'}, {'w': 4, 'unknown': True, 't': '?'}]}],
-           'brace': {'text': '30', 'rows': [2, 2]}, 'width_units': 400, 'width_mm': 100},
+   figure={'type': 'l2_bar', 'rows': [{'label': 'Start', 'segs': [{'w': 6, 'unknown': True, 't': '?'}]}, {'label': 'Then', 'segs': [{'w': 4, 'unknown': True, 't': '?'}, {'w': 2, 't': '8'}]}, {'label': 'Now', 'segs': [{'w': 4, 'unknown': True, 't': '?'}, {'w': 4, 'unknown': True, 't': '?'}]}],
+           'brace': {'text': '30', 'rows': [2, 2]}, 'width_units': 400, 'width_mm': 92},
    partsrow=True, parts=[P('a', 'After the card, Aisha had {b} stickers.', '15'), P('b', 'At first she had {b} stickers.', '23')],
    hint='Now she has 2 equal parts. Find one part first.',
    why='Now she has twice the number she had after the card, so 30 is 2 equal parts: 30 ÷ 2 = 15. After the card she had 15. At first she had 15 + 8 = 23. Check: 23 - 8 = 15, then 15 + 15 = 30.'),
@@ -91,8 +91,8 @@ items = [
    hint='Work backwards twice. Undo × 2 first each time.', space={'rows': ['Working:']},
    why='Undo the second run: 70 ÷ 2 = 35, 35 - 5 = 30. So the first OUT was 30. Undo the first run: 30 ÷ 2 = 15, 15 - 5 = 10. Check: 10 + 5 = 15, × 2 = 30; 30 + 5 = 35, × 2 = 70.'),
  # Check yourself
- I('quiz', 0, 'I think of a number. I multiply it by 4, then add 6. I get 38. What is my number? {b}', value='8', why='38 - 6 = 32, then 32 ÷ 4 = 8. Check: 8 × 4 = 32, 32 + 6 = 38.'),
- I('quiz', 0, 'Kumar gave away 14 stickers and bought 9 more. Now he has 31. How many did he have at first? {b}', value='36', why='Undo buying 9: 31 - 9 = 22. Undo giving away 14: 22 + 14 = 36. Check: 36 - 14 = 22, 22 + 9 = 31.'),
+ I('quiz', 0, 'I think of a number. I multiply by 4, then add 6. I get 38. What is it? {b}', value='8', why='38 - 6 = 32, then 32 ÷ 4 = 8. Check: 8 × 4 = 32, 32 + 6 = 38.'),
+ I('quiz', 0, 'Kumar gave away 14 stickers and bought 9. Now he has 31. At first he had {b}', value='36', why='Undo buying 9: 31 - 9 = 22. Undo giving away 14: 22 + 14 = 36. Check: 36 - 14 = 22, 22 + 9 = 31.'),
  I('quiz', 0, 'A machine does × 5, then - 3. The OUT is 32. What went IN? {b}', value='7', why='32 + 3 = 35, then 35 ÷ 5 = 7. Check: 7 × 5 = 35, 35 - 3 = 32.'),
  I('quiz', 0, '5 bags hold the same number of pens. 6 pens are taken out of bag 5, which leaves 4. How many pens were there? {b}', value='50', why='Bag 5 had 4 + 6 = 10 pens before. Every bag had 10, so 5 × 10 = 50 pens.'),
 ]

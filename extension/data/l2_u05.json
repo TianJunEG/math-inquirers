@@ -686,7 +686,7 @@
     "type": "l2_bar",
     "rows": [
      {
-      "label": "At first",
+      "label": "Start",
       "segs": [
        {
         "w": 6,
@@ -696,7 +696,7 @@
       ]
      },
      {
-      "label": "After the card",
+      "label": "Then",
       "segs": [
        {
         "w": 4,
@@ -733,7 +733,7 @@
      ]
     },
     "width_units": 400,
-    "width_mm": 100
+    "width_mm": 92
    },
    "parts": [
     {
@@ -927,7 +927,7 @@
   {
    "id": "L2U05-C01",
    "tier": "quiz",
-   "text": "I think of a number. I multiply it by 4, then add 6. I get 38. What is my number? {b}",
+   "text": "I think of a number. I multiply by 4, then add 6. I get 38. What is it? {b}",
    "answer": {
     "value": [
      "8"
@@ -939,7 +939,7 @@
   {
    "id": "L2U05-C02",
    "tier": "quiz",
-   "text": "Kumar gave away 14 stickers and bought 9 more. Now he has 31. How many did he have at first? {b}",
+   "text": "Kumar gave away 14 stickers and bought 9. Now he has 31. At first he had {b}",
    "answer": {
     "value": [
      "36"

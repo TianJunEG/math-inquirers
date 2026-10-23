@@ -63,7 +63,7 @@ def code(prog, **kw):
 HAT = ['hat', 'when green flag clicked']
 
 
-def finalize(u, lo=0.87, hi=0.985):
+def finalize(u, lo=0.86, hi=0.985):
     """Measure the items, put the Start here items on pages 1-3 (best fit, keeping the written order where possible), renumber the ids by page order,
     and print the fill of every page.  Returns the unit."""
     import sys
