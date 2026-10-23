@@ -10,14 +10,14 @@
  "learn": {
   "intro": "A fraction of a remainder is taken from what is left, not from the whole. First find what is left. Then take the fraction of that. A bar model with equal parts shows every step.",
   "example": {
-   "problem": "A ribbon is 180 cm long. Mei uses 1/3 of it for a gift. Then she uses 1/4 of the ribbon that is left for a bow. How long is the ribbon that is left now?",
+   "problem": "A ribbon is 180 cm long. Mei uses 1/3 of it for a gift. Then she uses 1/4 of the ribbon that is left for a bow. How long is the ribbon that is left now?",
    "steps": [
-    "Cut the bar into 6 equal parts. Each part is 180 ÷ 6 = 30 cm. The gift uses 1/3, which is 2 parts.",
+    "Cut the bar into 6 equal parts. Each part is 180 ÷ 6 = 30 cm. The gift uses 1/3, which is 2 parts.",
     "The part left is 4 parts. The bow uses 1/4 of those 4 parts, which is 1 part.",
     "The ribbon that is left is 6 - 2 - 1 = 3 parts.",
-    "3 parts × 30 cm = 90 cm."
+    "3 parts × 30 cm = 90 cm."
    ],
-   "answer": "The ribbon that is left is 90 cm long.",
+   "answer": "The ribbon that is left is 90 cm long.",
    "figure": {
     "type": "l5_bars",
     "rows": [
@@ -57,7 +57,7 @@
       "brace": {
        "a": 0,
        "b": 6,
-       "text": "180 cm"
+       "text": "180 cm"
       }
      }
     ],
@@ -113,7 +113,7 @@
     },
     {
      "label": "b",
-     "text": "A 3 m rope is cut into 8 equal pieces. Each piece is {b} m long.",
+     "text": "A 3 m rope is cut into 8 equal pieces. Each piece is {b} m long.",
      "answer": {
       "value": [
        "3/8"
@@ -177,7 +177,7 @@
    "id": "L5U02-S03",
    "tier": "start",
    "page": 1,
-   "text": "A bar of 8 equal parts is 64 cm long. Find the fractions of the bar.",
+   "text": "A bar of 8 equal parts is 64 cm long. Find the fractions of the bar.",
    "figure": {
     "type": "l5_bars",
     "rows": [
@@ -227,7 +227,7 @@
       "brace": {
        "a": 0,
        "b": 8,
-       "text": "64 cm"
+       "text": "64 cm"
       }
      }
     ],
@@ -237,7 +237,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "3/8 of 64 cm is {b} cm.",
+     "text": "3/8 of 64 cm is {b} cm.",
      "answer": {
       "value": [
        "24"
@@ -247,7 +247,7 @@
     },
     {
      "label": "b",
-     "text": "5/8 of 64 cm is {b} cm.",
+     "text": "5/8 of 64 cm is {b} cm.",
      "answer": {
       "value": [
        "40"
@@ -257,7 +257,7 @@
     },
     {
      "label": "c",
-     "text": "1/4 of 64 cm is {b} cm.",
+     "text": "1/4 of 64 cm is {b} cm.",
      "answer": {
       "value": [
        "16"
@@ -266,7 +266,7 @@
      }
     }
    ],
-   "explanation": "One part is 64 ÷ 8 = 8 cm. (a) 3 parts = 24 cm. (b) 5 parts = 40 cm. (c) 1/4 is 2 parts of the 8, which is 16 cm."
+   "explanation": "1 part is 64 ÷ 8 = 8 cm. (a) 3 parts = 24 cm. (b) 5 parts = 40 cm. (c) 1/4 is 2 parts of the 8, which is 16 cm."
   },
   {
    "id": "L5U02-S04",
@@ -311,12 +311,12 @@
    "id": "L5U02-S05",
    "tier": "start",
    "page": 2,
-   "text": "Ravi walks 3/4 km each day. He does this for 6 days. How far does he walk in all? Write a mixed number. {b} km",
+   "text": "Ravi walks 3/4 km each day. He does this for 6 days. How far does he walk in all? Write a mixed number. {b} km",
    "answer": {
     "value": [
      "4 1/2"
     ],
-    "text": "4 1/2 km"
+    "text": "4 1/2 km"
    },
    "explanation": "6 × 3/4 = 18/4. Divide 18 by 4: 4 with 2 left over, so 4 and 2/4, which is 4 1/2. Or: 3/4 of 6 is 4 1/2."
   },
@@ -784,7 +784,7 @@
    "id": "L5U02-G03",
    "tier": "go",
    "page": 5,
-   "text": "A ball falls from a height. Each time it bounces up to 3/4 of the height it fell from. After the 3rd bounce it reaches 27 cm.",
+   "text": "A ball falls from a height. Each time it bounces up to 3/4 of the height it fell from. After the 3rd bounce it reaches 27 cm.",
    "parts": [
     {
      "label": "a",
@@ -813,7 +813,7 @@
     ]
    },
    "hint": "After 3 bounces the height is 3/4 of 3/4 of 3/4 of the start.",
-   "explanation": "Work backwards. Before the 3rd bounce it was 27 ÷ 3/4 = 36 cm. Before that 36 ÷ 3/4 = 48 cm. Before that 48 ÷ 3/4 = 64 cm. Heights: 64, 48, 36, 27. Half of 64 is 32. 36 is more than 32, and 27 is less, so it is bounce 3."
+   "explanation": "Work backwards. Before the 3rd bounce it was 27 ÷ 3/4 = 36 cm. Before that 36 ÷ 3/4 = 48 cm. Before that 48 ÷ 3/4 = 64 cm. Heights: 64, 48, 36, 27. Half of 64 is 32. 36 is more than 32, and 27 is less, so it is bounce 3."
   },
   {
    "id": "L5U02-G04",

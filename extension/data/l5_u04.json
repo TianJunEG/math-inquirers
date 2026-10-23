@@ -1847,7 +1847,7 @@
    "id": "L5U04-C04",
    "tier": "quiz",
    "page": 6,
-   "text": "A garden is a triangle with a base of 18 m and a height of 10 m. One bag of seed covers 6 m². How many bags are needed to cover the whole garden? {b}",
+   "text": "A garden is a triangle with a base of 18 m and a height of 10 m. 1 bag of seed covers 6 m². How many bags are needed to cover the whole garden? {b}",
    "answer": {
     "value": [
      "15"

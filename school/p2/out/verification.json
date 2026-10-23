@@ -192,7 +192,7 @@
   "seed": 5404,
   "checks": [
    {
-    "name": "V2 code word spells MAGNET",
+    "name": "V2 code word spells LENGTH",
     "ok": true,
     "detail": ""
    },
@@ -209,17 +209,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['magnet']"
+    "detail": "['length']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['lament', 'magnet', 'mantel', 'mantle', 'mental', 'tangle']"
+    "detail": "['gluten', 'jungle', 'length']"
    },
    {
     "name": "V1 independent solver (objects counted in the drawing, printed text read back) equals the key",
     "ok": true,
-    "detail": "[25, 15, 40, 12, 8, 27]"
+    "detail": "[7, 20, 9, 10, 18, 16]"
    },
    {
     "name": "V7 every product within 50, each from a table of 2, 3, 4, 5 or 10",
@@ -881,7 +881,7 @@
   "seed": 6616,
   "checks": [
    {
-    "name": "V2 code word spells PEANUT",
+    "name": "V2 code word spells MAGNET",
     "ok": true,
     "detail": ""
    },
@@ -898,17 +898,17 @@
    {
     "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
     "ok": true,
-    "detail": "['peanut']"
+    "detail": "['magnet']"
    },
    {
     "name": "V4 guess resistance: at least 3 common words fit the table letters",
     "ok": true,
-    "detail": "['butane', 'peanut', 'upbeat']"
+    "detail": "['eating', 'enigma', 'inmate', 'magnet', 'mating', 'taxing']"
    },
    {
     "name": "V1 independent solver reads the printed text and equals the key",
     "ok": true,
-    "detail": "[402, 666, 51, 814, 504, 571]"
+    "detail": "[49, 937, 706, 604, 224, 341]"
    },
    {
     "name": "V7 amounts under $10",

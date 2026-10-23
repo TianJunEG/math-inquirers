@@ -98,9 +98,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.9597064881565397,
+   "fill": 0.937966658084449,
    "over": false,
-   "excess_mm": -10.4,
+   "excess_mm": -15.9,
    "edition": "soft"
   },
   {
@@ -156,9 +156,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.989717430484037,
+   "fill": 0.9693292996910402,
    "over": false,
-   "excess_mm": -2.6,
+   "excess_mm": -7.9,
    "edition": "soft"
   },
   {
@@ -275,9 +275,9 @@
    "kind": "practice",
    "label": "Unit 8 \u00b7 Think harder",
    "exempt": false,
-   "fill": 0.965885684860968,
+   "fill": 0.9441458547888775,
    "over": false,
-   "excess_mm": -8.8,
+   "excess_mm": -14.3,
    "edition": "print"
   },
   {
@@ -333,9 +333,9 @@
    "kind": "answers",
    "label": "Answers",
    "exempt": true,
-   "fill": 0.989717430484037,
+   "fill": 0.9693292996910402,
    "over": false,
-   "excess_mm": -2.6,
+   "excess_mm": -7.9,
    "edition": "print"
   },
   {

@@ -196,11 +196,11 @@
    "id": "L5U03-S03",
    "tier": "start",
    "page": 1,
-   "text": "Ben is 12 years old. His aunt is 41 years old.",
+   "text": "Ben is 12 years old. His aunt is 41 years old.",
    "parts": [
     {
      "label": "a",
-     "text": "In 6 years Ben will be {b} and his aunt will be {b}.",
+     "text": "In 6 years Ben will be {b} and his aunt will be {b}.",
      "answer": {
       "value": [
        "18",
@@ -211,7 +211,7 @@
     },
     {
      "label": "b",
-     "text": "Now the aunt is {b} years older than Ben. In 6 years she is {b} years older.",
+     "text": "Now the aunt is {b} years older than Ben. In 6 years she is {b} years older.",
      "answer": {
       "value": [
        "29",
@@ -337,7 +337,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "One part is $ {b}",
+     "text": "1 part is $ {b}",
      "answer": {
       "value": [
        "15"
@@ -516,19 +516,19 @@
    "id": "L5U03-S13",
    "tier": "start",
    "page": 3,
-   "text": "A jug was 5/6 full of juice. After 250 ml was poured out, it was 1/2 full. How much juice does the jug hold when it is full? {b} ml",
+   "text": "A jug was 5/6 full of juice. After 250 ml was poured out, it was 1/2 full. How much juice does the jug hold when it is full? {b} ml",
    "answer": {
     "value": [
      "750"
     ],
-    "text": "750 ml"
+    "text": "750 ml"
    },
    "space": {
     "rows": [
      "Working:"
     ]
    },
-   "explanation": "5/6 - 1/2 = 5/6 - 3/6 = 2/6 = 1/3 of the jug was poured out. 1/3 is 250 ml, so a full jug is 3 × 250 = 750 ml."
+   "explanation": "5/6 - 1/2 = 5/6 - 3/6 = 2/6 = 1/3 of the jug was poured out. 1/3 is 250 ml, so a full jug is 3 × 250 = 750 ml."
   },
   {
    "id": "L5U03-S14",
@@ -619,12 +619,12 @@
    "id": "L5U03-T03",
    "tier": "think",
    "page": 4,
-   "text": "Ravi is 38 years old. His son is 10 years old. In how many years will the son be 1/3 of his father's age? {b} years",
+   "text": "Ravi is 38 years old. His son is 10 years old. In how many years will the son be 1/3 of his father's age? {b} years",
    "answer": {
     "value": [
      "4"
     ],
-    "text": "4 years"
+    "text": "4 years"
    },
    "space": {
     "rows": [
@@ -636,7 +636,7 @@
     ]
    },
    "hint": "The difference in their ages never changes. How many units is it?",
-   "explanation": "The difference is 38 - 10 = 28 years, and it stays 28. When the son is 1 unit the father is 3 units, so the difference is 2 units. 2 units = 28, so 1 unit = 14. The son is 14, which is 4 years from now. Check: father 42 = 3 × 14."
+   "explanation": "The difference is 38 - 10 = 28 years, and it stays 28. When the son is 1 unit the father is 3 units, so the difference is 2 units. 2 units = 28, so 1 unit = 14. The son is 14, which is 4 years from now. Check: father 42 = 3 × 14."
   },
   {
    "id": "L5U03-G01",

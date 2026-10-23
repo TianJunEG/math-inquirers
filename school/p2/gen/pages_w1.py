@@ -227,8 +227,8 @@ def page04():
     kinds = rng.sample(COUNT_KINDS, 2)
     while True:
         items = []
-        f1 = rng.choice([2, 3, 4, 5]); f2 = rng.choice([2, 3, 4, 5]); items.append(dict(k="array", kind=kinds[0], r=f1, c=f2))
-        f1 = rng.choice([2, 3, 4, 5]); f2 = rng.choice([3, 4, 5]); items.append(dict(k="array", kind=kinds[1], r=f1, c=f2))
+        f1 = rng.choice([2, 3]); f2 = rng.choice([2, 3, 4, 5]); items.append(dict(k="array", kind=kinds[0], r=f1, c=f2))
+        f1 = rng.choice([2, 3]); f2 = rng.choice([3, 4, 5]); items.append(dict(k="array", kind=kinds[1], r=f1, c=f2))
         a, b = rng.choice([2, 3, 4, 5, 10]), rng.choice([2, 3, 4, 5, 6, 7, 8, 9]); items.append(dict(k="times", a=a, b=b))
         g, m = rng.choice([2, 3, 4, 5, 10]), rng.choice([4, 5, 6, 7, 8, 9]); items.append(dict(k="groups", g=g, m=m, N=rng.choice(PEOPLE), thing=rng.choice(["pencils", "stickers", "sweets", "marbles"])))
         t = rng.choice([2, 3, 4, 5, 10]); q = rng.choice([3, 4, 6, 7, 8, 9]); items.append(dict(k="missing", t=t, q=q))
@@ -262,7 +262,7 @@ def page04():
     P = code_items_page(4, 5404, "Equal Groups", 1, "Multiplication: tables of 2, 3, 4, 5 and 10", STRAND_MD,
         "3.1, 3.4 (multiplication tables of 2, 3, 4, 5 and 10; multiplying within the tables)", ["MD3.1", "MD3.4"], "Code-breaker (equal groups)",
         ["Find how many in all.", "Write the answer in the box.", INSTR_CODE],
-        qgrid(cards, 2), ans, table, word, 1, 50,
+        qgrid(cards, 1), ans, table, word, 1, 50,
         "; ".join(f"{i+1}) {x}" for i, x in enumerate(ans)),
         "Two arrays of objects (count rows and columns or count all), a bare multiplication, a groups-of story, a missing factor and a table-top story. Every product uses a table of 2, 3, 4, 5 or 10 and stays within 50. The decoy letters stand for adding the two numbers instead of multiplying. A box left blank gives no letter and the check cannot see it.")
     def solve(i, it):

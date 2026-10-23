@@ -496,7 +496,7 @@ def page16():
         ["Write each amount a different way.", "Cents: write a number. Dollars: write like $2.50.", INSTR_CODE],
         qgrid(cards, 2), vals, table, word, 1, 999,
         "; ".join(f"{i+1}) {t.replace(' ?', '')} {fmt(v)}" for i, (t, v) in enumerate(zip(texts, vals))),
-        "Three amounts in dollars and cents are changed to cents (one has a zero in the cents, as in $4.05) and three amounts in cents or in words are written in decimal notation (one is under 100 cents, as in 85¢ = $0.85). The decoy letters stand for slips with a zero or the point in the wrong place. The table shows each answer in the form the pupil writes. A box left blank gives no letter and the check cannot see it.",
+        "Two amounts in dollars and cents are changed to cents (one has a zero in the cents, as in $4.05) and four amounts in cents or in words are written in decimal notation (one is under a dollar). The decoy letters stand for slips with a zero or the point in the wrong place. The table shows each answer in the form the pupil writes. A box left blank gives no letter and the check cannot see it.",
         domain=list(range(1, 1000)), fmt=fmt)
     def solve(t):
         m = re.fullmatch(r"\$(\d+)\.(\d\d) = \? ¢", t)
