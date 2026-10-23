@@ -56,7 +56,8 @@ def _panel(sp, xlabels, ox, oy, PW, PH, P):
             P.append(_t(leg_x + 82, ly + 8, _esc(s['name']), 26, anchor='start', weight=800))
             leg_x += 82 + 16 * len(s['name']) + 60
     for si, s in enumerate(sp['series']):
-        pts = [(X(i), Y(v)) for i, v in enumerate(s['values']) if v is not None]
+        off = (-11 if si == 0 else 11) if len(sp['series']) == 2 else 0     # two lines: shift the markers so that they do not sit on each other
+        pts = [(X(i) + off, Y(v)) for i, v in enumerate(s['values']) if v is not None]
         dash = ' stroke-dasharray="14 9"' if s.get('style', 'solid' if si == 0 else 'dash') == 'dash' else ''
         P.append(f'<polyline points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" fill="none" stroke="{NAVY}" stroke-width="4.4"{dash} stroke-linejoin="round"/>')
         for (x, y) in pts:

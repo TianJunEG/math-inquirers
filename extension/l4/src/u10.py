@@ -19,7 +19,7 @@ learn = {
                      'Suppose all are the same. Count swaps.',
                      'Work backwards: undo the last step first.',
                      'Check your answer against every fact.']},
- 'facts': {'title': 'Good to know', 'lines': ['Draw a queue or a bar model.', 'Check the answer against every clue.', 'A swap changes the total by a fixed amount.']},
+ 'facts': {'title': 'Good to know', 'lines': ['Draw a queue or a bar model.', 'Check the answer against every clue.', 'A swap changes the total by a fixed amount.', 'Logic grid: ✓ for yes, ✗ for no. One ✓ in each row and column.']},
  'try': {'id': U + '-L01', 'text': 'A box has bees (6 legs) and spiders (8 legs). There are 10 animals with 66 legs. How many spiders are there? {b}',
          'answer': A(3),
          'explanation': 'Suppose all 10 are bees: 60 legs. That is 6 short. Each swap to a spider adds 2 legs, so 3 swaps. There are 3 spiders and 7 bees. Check: 3 × 8 + 7 × 6 = 66.'}}
@@ -53,13 +53,13 @@ S.append(item(U+'-S07', 'start', 2, 'Ali, Ben, Mei and Siti each have a differen
   fig={'type': 'l4_table', 'head': ['', 'cat', 'dog', 'fish', 'rabbit'], 'rows': [['Ali', '', '', '', ''], ['Ben', '', '', '', ''], ['Mei', '', '', '', ''], ['Siti', '', '', '', '']], 'widths': [1.1, 1, 1, 1, 1.2], 'cell_h': 40, 'font': 26, 'first_col_head': True, 'width_mm': 100},
   parts=[P('a', 'Ali: {b}', A('dog')), P('b', 'Ben: {b}', A('fish')), P('c', 'Mei: {b}', A('cat')), P('d', 'Siti: {b}', A('rabbit'))], partsrow=True,
   why='Ali\'s pet barks, so it is the dog. The fish is the only pet with no fur, so Ben has the fish. A rabbit hops, so Mei does not have the rabbit. The cat and the rabbit are left. Mei has the cat and Siti has the rabbit.'))
-S.append(item(U+'-S08', 'start', 3, 'Aisha stands in a queue. She is 9th from the front and 5th from the back.',
-  parts=[P('a', 'The queue has {b} people.', A(13)), P('b', 'In another queue there are 25 people. Kumar is 8th from the front. He is {b}th from the back.', A(18))],
-  why='(a) There are 8 people in front of Aisha and 4 behind her, and Aisha: 8 + 1 + 4 = 13. (b) There are 7 people in front of Kumar, so 25 − 8 = 17 behind him. He is 17 + 1 = 18th from the back.',
+S.append(item(U+'-S08', 'start', 3, 'Aisha stands in a queue. There are 8 people in front of her and 4 behind her.',
+  parts=[P('a', 'The queue has {b} people.', A(13)), P('b', 'Ben is in another queue. He has 4 people behind him and he is 6th in line. That queue has {b} people.', A(10))],
+  why='(a) 8 people in front, Aisha herself and 4 behind: 8 + 1 + 4 = 13. (b) Ben is 6th, so 5 people are in front of him. 5 + 1 + 4 = 10.',
   space={'rows': ['Draw the queue here.', '']}))
-S.append(item(U+'-S09', 'start', 3, 'The ages of Siti and her mother add up to 44. In 6 years, her mother\'s age will be 3 times Siti\'s age. Find Siti\'s age now. {b}',
-  ans=A(8), why='In 6 years, each is 6 years older, so the total is 44 + 6 + 6 = 56. Siti is 1 unit and her mother is 3 units: 4 units = 56, so 1 unit = 14. In 6 years Siti is 14, so she is 8 now. Her mother is 36 now. Check: 36 + 6 = 42 = 3 × 14.',
-  space={'rows': ['Draw a bar model here.', '', '']}))
+S.append(item(U+'-S09', 'start', 3, 'Kumar is 4 times as old as his sister. Their ages add up to 45. How old is his sister? {b}',
+  ans=A(9), why='The sister is 1 unit and Kumar is 4 units: 5 units = 45, so 1 unit = 9. The sister is 9 and Kumar is 36. Check: 9 + 36 = 45 and 36 = 4 × 9.',
+  space={'rows': ['Draw a bar model here.', '']}))
 S.append(item(U+'-S10', 'start', 3, 'Ravi has 9 coins. They are 20¢ coins and 50¢ coins. They are worth $3.00 altogether. Find the number of 50¢ coins. {b}',
   ans=A(4), why='Suppose all 9 are 20¢: 180¢. That is 120¢ short. Each swap to a 50¢ coin adds 30¢. 120 ÷ 30 = 4 swaps. So 4 coins of 50¢ and 5 coins of 20¢. Check: 200¢ + 100¢ = 300¢.',
   space={'rows': ['Working:']}))
@@ -71,27 +71,28 @@ S.append(item(U+'-S12', 'start', 3, 'Who am I? My 2 digits add up to 12. Swappin
   ans=A(57), why='Try pairs of digits that add up to 12: 39, 48, 57, 66, 75, 84, 93. The swapped numbers are 93, 84, 75, 66, 57, 48, 39. The swapped number is 18 more only for 57 and 75: 75 − 57 = 18. The number must be the smaller one, 57.',
   space={'rows': ['Try:']}))
 
-T.append(item(U+'-T01', 'think', 4, 'A hawker centre has 14 tables. Each table seats either 4 or 6 people. Together they seat 68 people.',
-  parts=[P('a', 'The number of tables that seat 6 is {b}', A(6)), P('b', 'The fewest and the most people that the 14 tables could seat: {b} and {b}', A(56, 84, text='56 and 84'))],
-  hint='Suppose all 14 tables seat 4 people. How many seats are missing?',
-  why='(a) If all 14 tables seated 4, that would be 56 seats. 68 − 56 = 12 short. Each table that seats 6 adds 2, so 6 tables seat 6 and 8 tables seat 4. Check: 36 + 32 = 68. (b) The fewest is 14 × 4 = 56 and the most is 14 × 6 = 84.',
+T.append(item(U+'-T01', 'think', 4, 'A shop sells pens in boxes of 2 and boxes of 5. Ali buys 12 boxes with 45 pens in all.',
+  parts=[P('a', 'The number of boxes of 5 is {b}', A(7)), P('b', 'The number of boxes of 2 is {b}', A(5))], partsrow=True,
+  hint='Suppose all 12 boxes hold 2 pens. How many pens are missing?',
+  why='If all 12 boxes held 2 pens, there would be 24 pens. 45 − 24 = 21 pens are missing. Each box of 5 instead of 2 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 12 − 7 = 5 boxes hold 2. Check: 35 + 10 = 45.',
   space={'rows': ['Working:', '']}))
-T.append(item(U+'-T02', 'think', 4, 'Five children sit in a row of 5 seats, numbered 1 to 5 from the left. Aisha is in seat 3. Kumar is at one end, not next to Ravi. Mei is to the right of Ravi. Ben is not next to Aisha.',
-  parts=[P('a', 'Seats 1 to 5, in order: {b} {b} {b} {b} {b}', A('Ben', 'Ravi', 'Aisha', 'Mei', 'Kumar', text='Ben, Ravi, Aisha, Mei, Kumar'))],
-  hint='Where can Kumar sit? Try each end and check every clue.',
-  why='Ben cannot sit next to Aisha in seat 3, so Ben is not in seat 2, 3 or 4. Ben is in seat 1 or seat 5. Kumar is also at an end, so Ben and Kumar take seats 1 and 5. Ravi and Mei take seats 2 and 4. Mei is to the right of Ravi, so Ravi is in seat 2 and Mei is in seat 4. Kumar is not next to Ravi, so Kumar is not in seat 1. Kumar is in seat 5 and Ben is in seat 1.',
+T.append(item(U+'-T02', 'think', 4, 'Ali, Ben, Kumar, Mei and Siti run a race. Nobody ties. Ali finishes before Mei. Mei finishes before Ben. Kumar finishes just after Siti. Ben does not finish last.',
+  parts=[P('a', 'Places 1 to 5, in order: {b} {b} {b} {b} {b}', A('Ali', 'Mei', 'Ben', 'Siti', 'Kumar', text='Ali, Mei, Ben, Siti, Kumar'))],
+  hint='Write what you know in 3 groups. Which group can go last?',
+  why='Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so the pair Siti, Kumar cannot come before Ben and leave Ben last. The pair must be last: Ali, Mei, Ben, Siti, Kumar. Check each clue.',
   space={'rows': ['Try:', '']}))
-T.append(item(U+'-T03', 'think', 4, 'A grandfather is 7 times as old as his grandson. In 12 years, he will be 3 times as old. How old is the grandson now? {b}',
-  ans=A(6), hint='Guess the grandson\'s age, then check both times.',
-  why='Try the grandson\'s age and check both times. Age 5: the grandfather is 35 now, and 17 and 47 in 12 years. 47 is not 3 times 17. Age 6: the grandfather is 42 now, and 18 and 54 in 12 years. 54 = 3 × 18, so it works. The grandson is 6.',
-  space={'rows': ['Ages now / in 12 years:', '', '']}))
+T.append(item(U+'-T03', 'think', 4, 'Ravi saves $2 on Day 1, $4 on Day 2, $6 on Day 3 and so on. He saves $2 more each day.',
+  parts=[P('a', 'His total first goes above $100 on Day {b}', A(10)), P('b', 'The total on that day is ${b}', A(110))],
+  hint='Make a table: day, saved that day, total so far.',
+  why='The totals are $2, $6, $12, $20, $30, $42, $56, $72, $90 and $110 for Days 1 to 10. On Day 9 the total is $90, which is not above $100. On Day 10 it is $110.',
+  space={'rows': ['Day, saved, total: {ll}', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'How many whole numbers from 1 to 200 have digits that add up to 5? {b}',
-  ans=A(11), hint='List them in order: 1-digit, 2-digit, then the 100s.',
+  ans=A(11), hint='Be systematic. How many 1-digit numbers fit?',
   why='1-digit: 5. 2-digit: 14, 23, 32, 41, 50. 3-digit, starting with 1: the other 2 digits add to 4: 104, 113, 122, 131, 140. 200 has a digit sum of 2. In all 1 + 5 + 5 = 11.',
   space={'rows': ['List: {ll}']}))
 G.append(item(U+'-G02', 'go', 5, 'Ali has 3 times as many 20¢ coins as 50¢ coins. His coins are worth $4.40 altogether. How many coins does he have in all? {b}',
-  ans=A(16), hint='Make groups of 3 twenty-cent coins and 1 fifty-cent coin.',
+  ans=A(16), hint='Try a small number of 50¢ coins first.',
   why='A group of 3 coins of 20¢ and 1 coin of 50¢ is worth 60¢ + 50¢ = 110¢. $4.40 = 440¢ and 440 ÷ 110 = 4 groups. Each group has 4 coins, so he has 16 coins: 12 coins of 20¢ and 4 coins of 50¢.',
   space={'rows': ['Working:', '']}))
 G.append(item(U+'-G03', 'go', 5, 'In a line of children, Ben is 11th from the left. Mei is 8th from the right. There are 5 children between Ben and Mei. How many children could be in the line? Find both answers.\n{b} or {b}',
@@ -108,8 +109,8 @@ C.append(item(U+'-C01', 'quiz', None, 'A garage has cars (4 wheels) and bikes (2
   why='Suppose all 10 are bikes: 20 wheels, 8 short. Each swap to a car adds 2 wheels, so 4 cars and 6 bikes. Check: 16 + 12 = 28.'))
 C.append(item(U+'-C02', 'quiz', None, 'Ali thinks of a number. He adds 8, doubles it and takes away 6. His answer is 30. What is his number? {b}', ans=A(10),
   why='Work backwards. 30 + 6 = 36. 36 ÷ 2 = 18. 18 − 8 = 10. Check: 10 + 8 = 18, 18 × 2 = 36, 36 − 6 = 30.'))
-C.append(item(U+'-C03', 'quiz', None, 'Siti is 6th from the front and 9th from the back of a line. The line has {b} people.', ans=A(14),
-  why='There are 5 people in front of Siti and 8 behind her. 5 + 1 + 8 = 14.'))
+C.append(item(U+'-C03', 'quiz', None, 'There are 9 people in front of Siti in a line and 6 behind her. The line has {b} people.', ans=A(16),
+  why='9 in front, Siti herself and 6 behind: 9 + 1 + 6 = 16.'))
 C.append(item(U+'-C04', 'quiz', None, 'Two next-door numbers multiply to make 272. What are they? {b} and {b}', ans=A(16, 17, text='16 and 17'),
   why='15 × 16 = 240 is too small and 17 × 18 = 306 is too big. 16 × 17 = 272.'))
 

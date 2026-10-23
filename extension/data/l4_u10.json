@@ -34,7 +34,7 @@
     "cell_h": 46,
     "font": 26,
     "first_col_head": true,
-    "width_mm": 82
+    "width_mm": 70
    },
    "steps": [
     "Each swap from a stool to a chair adds 1 leg.",
@@ -75,7 +75,7 @@
     ],
     "cell_h": 44,
     "font": 24,
-    "width_mm": 82
+    "width_mm": 70
    },
    "steps": [
     "Try a pair. Is the product too big or too small?",
@@ -99,7 +99,8 @@
    "lines": [
     "Draw a queue or a bar model.",
     "Check the answer against every clue.",
-    "A swap changes the total by a fixed amount."
+    "A swap changes the total by a fixed amount.",
+    "Logic grid: ✓ for yes, ✗ for no. One ✓ in each row and column."
    ]
   },
   "try": {
@@ -446,7 +447,7 @@
    "id": "L4U10-S08",
    "tier": "start",
    "page": 3,
-   "text": "Aisha stands in a queue. She is 9th from the front and 5th from the back.",
+   "text": "Aisha stands in a queue. There are 8 people in front of her and 4 behind her.",
    "parts": [
     {
      "label": "a",
@@ -460,12 +461,12 @@
     },
     {
      "label": "b",
-     "text": "In another queue there are 25 people. Kumar is 8th from the front. He is {b}th from the back.",
+     "text": "Ben is in another queue. He has 4 people behind him and he is 6th in line. That queue has {b} people.",
      "answer": {
       "value": [
-       "18"
+       "10"
       ],
-      "text": "18"
+      "text": "10"
      }
     }
    ],
@@ -475,27 +476,26 @@
      ""
     ]
    },
-   "explanation": "(a) There are 8 people in front of Aisha and 4 behind her, and Aisha: 8 + 1 + 4 = 13. (b) There are 7 people in front of Kumar, so 25 − 8 = 17 behind him. He is 17 + 1 = 18th from the back."
+   "explanation": "(a) 8 people in front, Aisha herself and 4 behind: 8 + 1 + 4 = 13. (b) Ben is 6th, so 5 people are in front of him. 5 + 1 + 4 = 10."
   },
   {
    "id": "L4U10-S09",
    "tier": "start",
    "page": 3,
-   "text": "The ages of Siti and her mother add up to 44. In 6 years, her mother's age will be 3 times Siti's age. Find Siti's age now. {b}",
+   "text": "Kumar is 4 times as old as his sister. Their ages add up to 45. How old is his sister? {b}",
    "answer": {
     "value": [
-     "8"
+     "9"
     ],
-    "text": "8"
+    "text": "9"
    },
    "space": {
     "rows": [
      "Draw a bar model here.",
-     "",
      ""
     ]
    },
-   "explanation": "In 6 years, each is 6 years older, so the total is 44 + 6 + 6 = 56. Siti is 1 unit and her mother is 3 units: 4 units = 56, so 1 unit = 14. In 6 years Siti is 14, so she is 8 now. Her mother is 36 now. Check: 36 + 6 = 42 = 3 × 14."
+   "explanation": "The sister is 1 unit and Kumar is 4 units: 5 units = 45, so 1 unit = 9. The sister is 9 and Kumar is 36. Check: 9 + 36 = 45 and 36 = 4 × 9."
   },
   {
    "id": "L4U10-S10",
@@ -557,27 +557,26 @@
    "id": "L4U10-T01",
    "tier": "think",
    "page": 4,
-   "text": "A hawker centre has 14 tables. Each table seats either 4 or 6 people. Together they seat 68 people.",
+   "text": "A shop sells pens in boxes of 2 and boxes of 5. Ali buys 12 boxes with 45 pens in all.",
    "parts": [
     {
      "label": "a",
-     "text": "The number of tables that seat 6 is {b}",
+     "text": "The number of boxes of 5 is {b}",
      "answer": {
       "value": [
-       "6"
+       "7"
       ],
-      "text": "6"
+      "text": "7"
      }
     },
     {
      "label": "b",
-     "text": "The fewest and the most people that the 14 tables could seat: {b} and {b}",
+     "text": "The number of boxes of 2 is {b}",
      "answer": {
       "value": [
-       "56",
-       "84"
+       "5"
       ],
-      "text": "56 and 84"
+      "text": "5"
      }
     }
    ],
@@ -587,27 +586,28 @@
      ""
     ]
    },
-   "hint": "Suppose all 14 tables seat 4 people. How many seats are missing?",
-   "explanation": "(a) If all 14 tables seated 4, that would be 56 seats. 68 − 56 = 12 short. Each table that seats 6 adds 2, so 6 tables seat 6 and 8 tables seat 4. Check: 36 + 32 = 68. (b) The fewest is 14 × 4 = 56 and the most is 14 × 6 = 84."
+   "hint": "Suppose all 12 boxes hold 2 pens. How many pens are missing?",
+   "explanation": "If all 12 boxes held 2 pens, there would be 24 pens. 45 − 24 = 21 pens are missing. Each box of 5 instead of 2 adds 3 pens, so 21 ÷ 3 = 7 boxes of 5. The other 12 − 7 = 5 boxes hold 2. Check: 35 + 10 = 45.",
+   "partsrow": true
   },
   {
    "id": "L4U10-T02",
    "tier": "think",
    "page": 4,
-   "text": "Five children sit in a row of 5 seats, numbered 1 to 5 from the left. Aisha is in seat 3. Kumar is at one end, not next to Ravi. Mei is to the right of Ravi. Ben is not next to Aisha.",
+   "text": "Ali, Ben, Kumar, Mei and Siti run a race. Nobody ties. Ali finishes before Mei. Mei finishes before Ben. Kumar finishes just after Siti. Ben does not finish last.",
    "parts": [
     {
      "label": "a",
-     "text": "Seats 1 to 5, in order: {b} {b} {b} {b} {b}",
+     "text": "Places 1 to 5, in order: {b} {b} {b} {b} {b}",
      "answer": {
       "value": [
-       "Ben",
-       "Ravi",
-       "Aisha",
+       "Ali",
        "Mei",
+       "Ben",
+       "Siti",
        "Kumar"
       ],
-      "text": "Ben, Ravi, Aisha, Mei, Kumar"
+      "text": "Ali, Mei, Ben, Siti, Kumar"
      }
     }
    ],
@@ -617,29 +617,45 @@
      ""
     ]
    },
-   "hint": "Where can Kumar sit? Try each end and check every clue.",
-   "explanation": "Ben cannot sit next to Aisha in seat 3, so Ben is not in seat 2, 3 or 4. Ben is in seat 1 or seat 5. Kumar is also at an end, so Ben and Kumar take seats 1 and 5. Ravi and Mei take seats 2 and 4. Mei is to the right of Ravi, so Ravi is in seat 2 and Mei is in seat 4. Kumar is not next to Ravi, so Kumar is not in seat 1. Kumar is in seat 5 and Ben is in seat 1."
+   "hint": "Write what you know in 3 groups. Which group can go last?",
+   "explanation": "Ali, Mei and Ben finish in that order. Siti and Kumar finish side by side, Siti first. Ben is not last, so the pair Siti, Kumar cannot come before Ben and leave Ben last. The pair must be last: Ali, Mei, Ben, Siti, Kumar. Check each clue."
   },
   {
    "id": "L4U10-T03",
    "tier": "think",
    "page": 4,
-   "text": "A grandfather is 7 times as old as his grandson. In 12 years, he will be 3 times as old. How old is the grandson now? {b}",
-   "answer": {
-    "value": [
-     "6"
-    ],
-    "text": "6"
-   },
+   "text": "Ravi saves $2 on Day 1, $4 on Day 2, $6 on Day 3 and so on. He saves $2 more each day.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "His total first goes above $100 on Day {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The total on that day is ${b}",
+     "answer": {
+      "value": [
+       "110"
+      ],
+      "text": "110"
+     }
+    }
+   ],
    "space": {
     "rows": [
-     "Ages now / in 12 years:",
+     "Day, saved, total: {ll}",
      "",
      ""
     ]
    },
-   "hint": "Guess the grandson's age, then check both times.",
-   "explanation": "Try the grandson's age and check both times. Age 5: the grandfather is 35 now, and 17 and 47 in 12 years. 47 is not 3 times 17. Age 6: the grandfather is 42 now, and 18 and 54 in 12 years. 54 = 3 × 18, so it works. The grandson is 6."
+   "hint": "Make a table: day, saved that day, total so far.",
+   "explanation": "The totals are $2, $6, $12, $20, $30, $42, $56, $72, $90 and $110 for Days 1 to 10. On Day 9 the total is $90, which is not above $100. On Day 10 it is $110."
   },
   {
    "id": "L4U10-G01",
@@ -657,7 +673,7 @@
      "List: {ll}"
     ]
    },
-   "hint": "List them in order: 1-digit, 2-digit, then the 100s.",
+   "hint": "Be systematic. How many 1-digit numbers fit?",
    "explanation": "1-digit: 5. 2-digit: 14, 23, 32, 41, 50. 3-digit, starting with 1: the other 2 digits add to 4: 104, 113, 122, 131, 140. 200 has a digit sum of 2. In all 1 + 5 + 5 = 11."
   },
   {
@@ -677,7 +693,7 @@
      ""
     ]
    },
-   "hint": "Make groups of 3 twenty-cent coins and 1 fifty-cent coin.",
+   "hint": "Try a small number of 50¢ coins first.",
    "explanation": "A group of 3 coins of 20¢ and 1 coin of 50¢ is worth 60¢ + 50¢ = 110¢. $4.40 = 440¢ and 440 ÷ 110 = 4 groups. Each group has 4 coins, so he has 16 coins: 12 coins of 20¢ and 4 coins of 50¢."
   },
   {
@@ -764,14 +780,14 @@
   {
    "id": "L4U10-C03",
    "tier": "quiz",
-   "text": "Siti is 6th from the front and 9th from the back of a line. The line has {b} people.",
+   "text": "There are 9 people in front of Siti in a line and 6 behind her. The line has {b} people.",
    "answer": {
     "value": [
-     "14"
+     "16"
     ],
-    "text": "14"
+    "text": "16"
    },
-   "explanation": "There are 5 people in front of Siti and 8 behind her. 5 + 1 + 8 = 14."
+   "explanation": "9 in front, Siti herself and 6 behind: 9 + 1 + 6 = 16."
   },
   {
    "id": "L4U10-C04",

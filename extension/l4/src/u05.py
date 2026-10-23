@@ -67,7 +67,7 @@ S.append(item(U+'-S10', 'start', 3, 'A box holds 4 packs of rice. All the packs 
          P('c', 'Kumar takes out 1 pack. The box and packs now have a mass of {b} kg', A('3.2'))],
   why='4.1 − 0.5 = 3.6 kg for the 4 packs. 3.6 ÷ 4 = 0.9 kg for 1 pack. After 1 pack is taken out, the mass is 4.1 − 0.9 = 3.2 kg.',
   space={'rows': ['Working:']}))
-S.append(item(U+'-S11', 'start', 3, 'Work these out.',
+S.append(item(U+'-S11', 'start', 3, 'Find the value of each.',
   parts=[P('a', '4.7 + 2.35 = {b}', A('7.05')), P('b', '9.2 − 3.64 = {b}', A('5.56')),
          P('c', '2.5 × 4 = {b}', A(10)), P('d', '7.2 ÷ 6 = {b}', A('1.2'))],
   why='(a) 4.70 + 2.35 = 7.05. (b) 9.20 − 3.64 = 5.56. (c) 2.5 × 4 = 10. (d) 7.2 ÷ 6 = 1.2, because 6 × 1.2 = 7.2.',

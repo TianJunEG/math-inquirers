@@ -125,7 +125,8 @@
    "title": "Good to know",
    "lines": [
     "Dice: opposite faces add up to 7.",
-    "A rectangle has 2 lines of symmetry. A square has 4."
+    "A rectangle has 2 lines of symmetry. A square has 4.",
+    "No fold: 4 squares at one corner, or 5 in a row."
    ]
   },
   "try": {
@@ -758,19 +759,14 @@
    "id": "L4U08-S08",
    "tier": "start",
    "page": 3,
-   "text": "A box is 4 cm long, 3 cm wide and 2 cm high. Its net is cut from card. Find the area of the card. {b} cm²",
+   "text": "A dice net is made of 6 squares. Each square is 3 cm by 3 cm. Find the area of the card. {b} cm²",
    "answer": {
     "value": [
-     "52"
+     "54"
     ],
-    "text": "52"
+    "text": "54"
    },
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
-   "explanation": "The 6 faces are 2 of 4 by 3 (12 each), 2 of 4 by 2 (8 each) and 2 of 3 by 2 (6 each). 24 + 16 + 12 = 52 cm²."
+   "explanation": "Each square has an area of 3 × 3 = 9 cm². The net has 6 squares: 6 × 9 = 54 cm²."
   },
   {
    "id": "L4U08-S09",
@@ -872,46 +868,37 @@
    "id": "L4U08-T01",
    "tier": "think",
    "page": 4,
-   "text": "The faces of a cube are numbered 1 to 6. Face 1 touches 2, 3, 5 and 6. Face 2 touches 1, 3, 4 and 5.",
+   "text": "Mei paints each face of a cube red or blue.",
    "parts": [
     {
      "label": "a",
-     "text": "Opposite 1 is {b}",
+     "text": "No 2 red faces may share an edge. The most red faces is {b}",
      "answer": {
       "value": [
-       "4"
+       "2"
       ],
-      "text": "4"
+      "text": "2"
      }
     },
     {
      "label": "b",
-     "text": "Opposite 2 is {b}",
+     "text": "Now red faces may share an edge, but no 2 red faces may be opposite. The most red faces is {b}",
      "answer": {
       "value": [
-       "6"
+       "3"
       ],
-      "text": "6"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Opposite 3 is {b}",
-     "answer": {
-      "value": [
-       "5"
-      ],
-      "text": "5"
+      "text": "3"
      }
     }
    ],
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     ""
     ]
    },
-   "hint": "A face touches 4 faces. It is opposite the 1 it does not touch.",
-   "explanation": "Face 1 does not touch 4, so 4 is opposite 1. Face 2 does not touch 6, so 6 is opposite 2. The faces left over are 3 and 5, so they are opposite."
+   "hint": "Which faces share an edge with a given face?",
+   "explanation": "(a) A face shares an edge with 4 faces and is opposite just 1. Two opposite red faces do not share an edge. A third red face would touch one of them. So the most is 2. (b) Take 3 faces that meet at one corner. They are not opposite each other, so 3 red faces work. A 4th red face would be opposite one of them. So the most is 3."
   },
   {
    "id": "L4U08-T02",
@@ -1040,7 +1027,7 @@
    "id": "L4U08-G02",
    "tier": "go",
    "page": 5,
-   "text": "Shade exactly 5 squares of a 5 by 5 grid. The pattern must have 4 lines of symmetry. How many different patterns are there? {b}",
+   "text": "Shade just 1 square of a 5 by 5 grid. Some squares give a picture with a line of symmetry. The line can go up-down, across or along a diagonal.",
    "figure": {
     "type": "l4_grid",
     "rows": 5,
@@ -1058,14 +1045,30 @@
      }
     ]
    },
-   "answer": {
-    "value": [
-     "4"
-    ],
-    "text": "4"
-   },
-   "hint": "The middle square is always shaded. The other 4 squares go together.",
-   "explanation": "With 4 lines of symmetry, the squares come in groups. The middle square is 1 group. The other groups have 4 squares each. They are the 4 corners, the 4 squares next to the corners on the diagonals, the 4 middle squares of the sides and the 4 squares touching the centre. One of these groups and the middle square make 5 squares: 4 patterns.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number of squares that give at least 1 line of symmetry: {b}",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number that give exactly 1 line: {b}",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "hint": "Try a corner square, then an edge square, then the middle.",
+   "explanation": "A single square has a line of symmetry when it lies on the middle row, the middle column or a diagonal. Middle row: 5 squares. Middle column: 5 squares, with 1 shared. That is 9. Each diagonal has 5 squares, and the middle is shared again, so the diagonals add 8 more squares. In all 9 + 8 = 17. The middle square has 4 lines. Every other one has exactly 1: 17 − 1 = 16.",
    "figright": true
   },
   {
@@ -1095,13 +1098,6 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Top, north, east:",
-     "",
-     ""
-    ]
-   },
    "hint": "Write the top, north and east faces after each roll.",
    "explanation": "Start: top 1, bottom 6, north 2, south 5, east 3, west 4. Roll north: the north face 2 lands on the table, so the top is 5, the bottom is 2, the north face is 1 and the south face is 6. Roll east: the east face 3 lands on the table, so the top is 4, the bottom is 3, the east face is 5 and the west face is 2. Roll north: the north face 1 lands on the table, so the bottom is 1 and the top is the old south face, 6."
   },
@@ -1116,11 +1112,7 @@
       "cells": [
        [
         0,
-        0
-       ],
-       [
-        1,
-        0
+        1
        ],
        [
         1,
@@ -1129,14 +1121,18 @@
        [
         2,
         1
-       ],
-       [
-        2,
-        2
        ],
        [
         3,
-        2
+        1
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
        ]
       ],
       "shade": false
@@ -1147,11 +1143,11 @@
    },
    "answer": {
     "value": [
-     "Yes"
+     "No"
     ],
-    "text": "Yes"
+    "text": "No"
    },
-   "explanation": "The staircase of 2, 2, 2 squares folds into a cube. Each step wraps round to make the base, walls and lid with no overlaps.",
+   "explanation": "Both extra squares are above the row of 4, on the same side. When the row wraps round, they land on the same face. So the net does not fold.",
    "figright": true
   },
   {

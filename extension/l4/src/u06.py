@@ -19,7 +19,7 @@ learn = {
            'steps': ['Estimate first. Is it less than 90° or more?',
                      'Centre on the corner. 0 line on one arm.',
                      'Read from the 0 on that arm. Check with your estimate.']},
- 'facts': {'title': 'Good to know', 'lines': ['Compass: 1 step = 45°.', 'Clock: 1 space = 30°.', 'Minute hand: 1 minute = 6°.']},
+ 'facts': {'title': 'Good to know', 'lines': ['Compass: 1 step = 45°.', 'Clock: 1 space = 30°.', 'Minute hand: 1 minute = 6°.', '∠AOC is the angle at O between OA and OC.']},
  'try': {'id': U + '-L01', 'text': 'Ali faces NE. He turns 135° clockwise. Which way does he face now? {circ:E|SE|S|SW}',
          'answer': A('S'),
          'explanation': '135° is 3 steps of 45°. Clockwise from NE: E, SE, S. He faces S.'}}
@@ -30,13 +30,13 @@ S.append(item(U+'-S01', 'start', 1, 'Estimate each angle. Then measure it with y
   parts=[P('a', 'a = {b}°', A(25)), P('b', 'b = {b}°', A(65)), P('c', 'c = {b}°', A(130))], partsrow=True,
   why='Each angle starts at 0 on the horizontal arm. a = 25°, b = 65° and c = 130°. Answers within 2° are fine. Angle c is greater than a right angle, so a good estimate is more than 90°.'))
 S.append(item(U+'-S02', 'start', 1, 'Read the angle from the protractor.',
-  fig={'type': 'l4_proto', 'angle': 52, 'flip': True, 'width_mm': 88},
+  fig={'type': 'l4_proto', 'angle': 52, 'flip': True, 'width_mm': 92},
   parts=[P('a', 'The angle is {b}°', A(52)), P('b', 'Is it smaller or greater than a right angle? {circ:smaller|greater}', A('smaller'))],
   figside=True,
   why='One arm lies along the baseline at 0 on the left. Read the scale that starts at 0 on the left arm: 52°. A right angle is 90°, and 52° is smaller. The other scale says 128°, which is the angle measured from the other arm.'))
 S.append(item(U+'-S03', 'start', 1, 'Rays OA, OB, OC and OD leave O. The 3 small angles lie side by side. Find the angles.',
   fig={'type': 'l4_fan', 'rays': [{'d': 20, 'label': 'A'}, {'d': 45, 'label': 'B'}, {'d': 80, 'label': 'C'}, {'d': 120, 'label': 'D'}],
-       'arcs': [{'i': 0, 'j': 1, 'text': '25°'}, {'i': 1, 'j': 2, 'text': '35°'}, {'i': 2, 'j': 3, 'text': '40°'}], 'width_mm': 70, 'len': 320},
+       'arcs': [{'i': 0, 'j': 1, 'text': '25°'}, {'i': 1, 'j': 2, 'text': '35°'}, {'i': 2, 'j': 3, 'text': '40°'}], 'width_mm': 78, 'len': 320},
   parts=[P('a', '∠AOC = {b}°', A(60)), P('b', '∠BOD = {b}°', A(75)), P('c', '∠AOD = {b}°', A(100)),
          P('d', 'How many angles are there in all? {b}', A(6))], partsrow=True,
   figside=True,
@@ -61,7 +61,7 @@ S.append(item(U+'-S07', 'start', 3, 'Each rectangle corner is 90°. Lines split 
   parts=[P('a', 'a = {b}°', A(53)), P('b', 'b = {b}°', A(43))], partsrow=True,
   why='(a) a + 37° = 90°, so a = 90° − 37° = 53°. (b) The three angles add to 90°: b = 90° − 19° − 28° = 43°.'))
 S.append(item(U+'-S08', 'start', 3, 'A robot faces E. It turns 135° anticlockwise. Then it turns 90° clockwise. Then it turns 45° clockwise.',
-  parts=[P('a', 'It now faces {b}', A('E')), P('b', 'In all it turned {b}°', A(270))],
+  parts=[P('a', 'It now faces {b}', A('E')), P('b', 'The turns add up to {b}°', A(270))],
   why='135° anticlockwise from E: NE, N, NW. 90° clockwise from NW: N, NE. 45° clockwise from NE: E. It faces E. The turns add to 135° + 90° + 45° = 270°.'))
 S.append(item(U+'-S09', 'start', 3, 'A corner of a rectangle is split into 2 angles. One angle is 5 times the other.',
   parts=[P('a', 'The smaller angle is {b}°', A(15)), P('b', 'The greater angle is {b}°', A(75))],
@@ -83,7 +83,7 @@ T.append(item(U+'-T02', 'think', 4, 'Find the smaller angle between the clock ha
   why='At 7:30 the minute hand is on the 6. The hour hand is halfway between 7 and 8, which is 1 and a half spaces from the 6: 45°. At 1:30 the hour hand is halfway between 1 and 2, which is 4 and a half spaces from the 6: 4 × 30° + 15° = 135°.',
   space={'rows': ['Working:', '', '']}))
 T.append(item(U+'-T03', 'think', 4, 'A robot faces N. It turns 90° clockwise, then 135° anticlockwise, then 225° clockwise, then 45° anticlockwise.',
-  parts=[P('a', 'It now faces {b}', A('SE')), P('b', 'In all it turned {b}°', A(495))],
+  parts=[P('a', 'It now faces {b}', A('SE')), P('b', 'The turns add up to {b}°', A(495))],
   hint='Count the steps of 45°. Clockwise is plus, anticlockwise is minus.',
   why='In steps of 45°: +2, −3, +5, −1. From N: 2 steps is E, then 3 steps back is NW, then 5 steps forward is S, then 1 step back is SE. The turns add to 90° + 135° + 225° + 45° = 495°.',
   space={'rows': ['Working:', '']}))

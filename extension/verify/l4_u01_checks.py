@@ -76,13 +76,11 @@ def _():
 
 @check('L4U01-S08')
 def _():
-    t = next(m for m in range(1, 200) if m % 8 == 0 and m % 12 == 0)
-    h, mi = divmod(9 * 60 + t, 60)
-    meets = [m for m in range(1, 121) if m % 8 == 0 and m % 12 == 0 and m < 120]
-    return {'a': s([h, f'{mi:02d}']), 'b': s([len(meets)])}
+    t = next(d for d in range(1, 200) if d % 10 == 0 and d % 15 == 0)
+    return {'a': s([t]), 'b': s([sum(1 for d in range(1, 101) if d % t == 0)])}
 
 
-# S09 is the riddle (multiple of 6 and 7 between 40 and 100); S10 is the factor-count table
+
 @check('L4U01-S09')
 def _():
     c = [n for n in range(51, 100) if n % 6 == 0 and n % 7 == 0]

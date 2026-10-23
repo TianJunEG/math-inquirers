@@ -21,7 +21,7 @@ learn = {
            'steps': ['Improper to mixed: divide the top by the bottom.',
                      'Mixed to improper: whole × bottom + top, over the bottom.',
                      'Fraction of a set: 1 unit is the total ÷ the bottom number.']},
- 'facts': {'title': 'Comparing', 'lines': ['Same bottom: the greater top is more.', 'Same top: the smaller bottom is more.', 'Or compare with 1/2.']},
+ 'facts': {'title': 'Comparing', 'lines': ['Same bottom: the greater top is more.', 'Same top: the smaller bottom is more.', 'Or compare with 1/2.', 'Equivalent: multiply or divide top and bottom by the same number.', 'Whole from a part: 3 units = 36, so 1 unit = 12.']},
  'try': {'id': U + '-L01', 'text': 'Write 3 4/5 as an improper fraction. {b} / {b}',
          'answer': A(19, 5, text='19/5'),
          'explanation': '3 wholes are 3 × 5 = 15 fifths. 15 fifths and 4 more fifths make 19 fifths: 19/5.'}}
@@ -87,8 +87,8 @@ T.append(item(U+'-T01', 'think', 4, 'Find the fraction. It has 7 on the bottom. 
   ans=A(26, 7, text='26/7'), hint='List the fractions between 3 and 4. Cross out those that do not fit.',
   why='Between 3 and 4 with denominator 7: 22/7, 23/7, 24/7, 25/7, 26/7, 27/7. Even numerators: 22, 24, 26. 3 1/2 is 24.5/7, so closer to 4 means 25/7 or more. Only 26/7 fits.',
   space={'rows': ['List:', '', '']}))
-T.append(item(U+'-T02', 'think', 4, 'A book took 2/5 of Mei\'s money and a toy took 1/3 of it. She has $24 left. How much money did Mei start with? ${b}',
-  ans=A(90), hint='Use 15 units. Book and toy are fractions of the same whole.',
+T.append(item(U+'-T02', 'think', 4, 'A book took 2/5 of Mei\'s money. A toy took 1/3 of her money. She has $24 left. How much money did Mei start with? ${b}',
+  ans=A(90), hint='Which number do 5 and 3 both go into?',
   why='2/5 = 6/15 and 1/3 = 5/15, so she spent 11/15. 4/15 is left. 4 units = $24, so 1 unit = $6 and 15 units = $90.',
   space={'rows': ['Draw a bar model here.', '', '', '']}))
 T.append(item(U+'-T03', 'think', 4, 'Siti reads 1/3 of a book on Monday, then 3/4 of the pages that remain on Tuesday. 20 pages are still unread. How long is the book? {b} pages',
@@ -106,7 +106,7 @@ G.append(item(U+'-G02', 'go', 5, 'Beyond Level 4: Unit fractions\nWrite each fra
   hint='Try 1/2 first. What is left?',
   why='(a) 5/6 − 1/2 = 5/6 − 3/6 = 2/6 = 1/3. (b) 3/4 − 1/2 = 1/4. (c) 7/10 − 1/2 = 7/10 − 5/10 = 2/10 = 1/5.'))
 G.append(item(U+'-G03', 'go', 5, 'In a class, 2/5 of the children are girls. 1/3 of the girls wear glasses. 6 girls wear glasses. How many children are in the class? {b}',
-  ans=A(45), hint='6 girls is 1 unit of the girls. How many girls are there?',
+  ans=A(45), hint='Find the number of girls first.',
   why='6 girls are 1/3 of the girls, so there are 18 girls. 18 girls are 2/5 of the class, so 1/5 is 9 children and the class has 5 × 9 = 45 children.',
   space={'rows': ['Draw a bar model here.', '']}))
 G.append(item(U+'-G04', 'go', 5, 'Compare each pair. Circle the correct sign.',

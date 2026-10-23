@@ -26,7 +26,7 @@ learn = {
          'explanation': 'Rulers are 1 unit and pens are 5 units: 6 units in all. 6 units = 114, so 1 unit = 114 ÷ 6 = 19 rulers.'}}
 
 S, T, G, C = [], [], [], []
-S.append(item(U+'-S01', 'start', 1, 'Work these out.',
+S.append(item(U+'-S01', 'start', 1, 'Find the value of each.',
   parts=[P('a', '3706 × 4 = {b}', A(14824)), P('b', '85 × 47 = {b}', A(3995)),
          P('c', '7524 ÷ 6 = {b}', A(1254)), P('d', '8150 ÷ 5 = {b}', A(1630))],
   why='(a) 3706 × 4 = 12 000 + 2800 + 24 = 14 824. (b) 85 × 47 = 85 × 40 + 85 × 7 = 3400 + 595 = 3995. (c) 6 × 1254 = 7524. (d) 5 × 1630 = 8150.',
@@ -86,7 +86,7 @@ T.append(item(U+'-T02', 'think', 4, 'In a chain, add the last 2 numbers to make 
   space={'rows': ['Working:', '', '']}))
 T.append(item(U+'-T03', 'think', 4, 'Mei has 5 times as many stickers as Lily. Mei gives 36 of hers to Lily. Then both girls have equal amounts.',
   parts=[P('a', 'Lily at first: {b} stickers', A(18)), P('b', 'Mei at first: {b} stickers', A(90))],
-  hint='After the gift, Mei has 36 + 36 more than 1 unit.',
+  hint='Before the gift, how many more does Mei have than Lily?',
   why='Mei is 5 units and Lily is 1 unit. After the gift they are equal, so Mei had 4 units more than Lily, and 4 units is 36 + 36 = 72. 1 unit = 18. Lily had 18 and Mei had 90. Check: 90 − 36 = 54 and 18 + 36 = 54.',
   space={'rows': ['Draw a bar model here.', '', '']}))
 
@@ -104,7 +104,7 @@ G.append(item(U+'-G02', 'go', 5, 'Ben and Mei both save for a bike. Plan A: star
   why='Plan A has $15, $23, $31, $39. Plan B has $0, $13, $26, $39. Both have $39 in week 3. Each week Plan B gains $5 on Plan A, and the start gap is $15, so 15 ÷ 5 = 3 weeks.'))
 G.append(item(U+'-G03', 'go', 5, 'Fill in the missing digits.\n3 □ 4 × 7 = 2 □ 3 8',
   parts=[P('a', 'The missing digit in 3 □ 4 is {b}', A(3)), P('b', 'The missing digit in 2 □ 3 8 is {b}', A(3))],
-  hint='Multiply 334-style numbers by 7. Start with the ones: 4 × 7.',
+  hint='Start with the ones: what is 4 × 7?',
   why='4 × 7 = 28, which ends in 8, as needed. 3□4 × 7 = 2128 + 70 × □ must be 2□38. Trying 3 gives 2128 + 210 = 2338. Check: 334 × 7 = 2338. So both missing digits are 3.',
   space={'rows': ['Try:', '']}))
 

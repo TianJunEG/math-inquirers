@@ -88,16 +88,18 @@ def _():
 
 @check('L4U10-S08')
 def _():
-    total = next(n for n in range(1, 200) if 9 <= n and n - 5 + 1 == 9)       # 9th from the front and 5th from the back
-    back = 25 - 8 + 1
-    return {'a': s([total]), 'b': s([back])}
+    a = 8 + 1 + 4
+    b = next(n for n in range(1, 100) if n - 6 == 4)      # 6th in line with 4 behind: n - place people are behind
+    return {'a': s([a]), 'b': s([b])}
+
 
 
 @check('L4U10-S09')
 def _():
-    sol = [sit for sit in range(1, 44) if (44 - sit) + 6 == 3 * (sit + 6)]
+    sol = [k for k in range(1, 45) if k + 4 * k == 45]
     assert len(sol) == 1
     return s(sol)
+
 
 
 @check('L4U10-S10')
@@ -123,30 +125,33 @@ def _():
 
 @check('L4U10-T01')
 def _():
-    sol = [(t6, 14 - t6) for t6 in range(15) if 6 * t6 + 4 * (14 - t6) == 68]
+    sol = [(five, 12 - five) for five in range(13) if 5 * five + 2 * (12 - five) == 45]
     assert len(sol) == 1
-    totals = [6 * k + 4 * (14 - k) for k in range(15)]
-    return {'a': s([sol[0][0]]), 'b': s([min(totals), max(totals)])}
+    return {'a': s([sol[0][0]]), 'b': s([sol[0][1]])}
+
 
 
 @check('L4U10-T02')
 def _():
-    names = ['Aisha', 'Ben', 'Kumar', 'Mei', 'Ravi']
+    names = ['Ali', 'Ben', 'Kumar', 'Mei', 'Siti']
     sols = []
     for perm in itertools.permutations(range(1, 6)):
         p = dict(zip(names, perm))
-        if (p['Aisha'] == 3 and p['Kumar'] in (1, 5) and abs(p['Kumar'] - p['Ravi']) != 1 and p['Mei'] > p['Ravi'] and abs(p['Ben'] - p['Aisha']) != 1):
+        if p['Ali'] < p['Mei'] < p['Ben'] and p['Kumar'] == p['Siti'] + 1 and p['Ben'] != 5:
             sols.append(p)
     assert len(sols) == 1
-    p = sols[0]
-    return {'a': [n for _, n in sorted((seat, n) for n, seat in p.items())]}
+    return {'a': [n for _, n in sorted((place, n) for n, place in sols[0].items())]}
+
 
 
 @check('L4U10-T03')
 def _():
-    sol = [g for g in range(1, 100) if 7 * g + 12 == 3 * (g + 12)]
-    assert len(sol) == 1
-    return s(sol)
+    total, day = 0, 0
+    while total <= 100:
+        day += 1
+        total += 2 * day
+    return {'a': s([day]), 'b': s([total])}
+
 
 
 @check('L4U10-G01')
@@ -192,7 +197,8 @@ def _():
 
 @check('L4U10-C03')
 def _():
-    return s([6 - 1 + 1 + 9 - 1])
+    return s([9 + 1 + 6])
+
 
 
 @check('L4U10-C04')

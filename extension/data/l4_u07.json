@@ -63,7 +63,7 @@
      }
     ],
     "cell": 22,
-    "width_mm": 82
+    "width_mm": 70
    },
    "steps": [
     "Big rectangle: 10 × 6 = 60. The missing corner is 4 × 2 = 8. Area = 60 − 8 = 52.",
@@ -99,7 +99,7 @@
     ],
     "cell_h": 44,
     "font": 26,
-    "width_mm": 78
+    "width_mm": 70
    },
    "steps": [
     "List the pairs that multiply to 18 in order: 1 × 18, 2 × 9, 3 × 6.",
@@ -965,7 +965,7 @@
      }
     ],
     "cell": 14,
-    "width_mm": 30,
+    "width_mm": 36,
     "padx": 14,
     "pady": 14
    },
@@ -1279,7 +1279,7 @@
      }
     ],
     "cell": 18,
-    "width_mm": 50,
+    "width_mm": 47,
     "pady": 50
    },
    "answer": {

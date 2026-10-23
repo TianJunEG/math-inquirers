@@ -174,9 +174,8 @@ def _():
 
 @check('L4U08-S08')
 def _():
-    l, w, h = 4, 3, 2
-    faces = [l * w, l * w, l * h, l * h, w * h, w * h]
-    return s([sum(faces)])
+    return s([6 * 3 * 3])
+
 
 
 @check('L4U08-S09')
@@ -193,15 +192,18 @@ def _():
 
 @check('L4U08-T01')
 def _():
-    touches = {1: {2, 3, 5, 6}, 2: {1, 3, 4, 5}}
-    opp = {}
-    for f in (1, 2):
-        rest = set(range(1, 7)) - {f} - touches[f]
-        assert len(rest) == 1
-        opp[f] = rest.pop()
-    left = sorted(set(range(1, 7)) - {1, 2, opp[1], opp[2]})
-    assert len(left) == 2
-    return {'a': s([opp[1]]), 'b': s([opp[2]]), 'c': s([left[1]])}   # 3 is opposite 5 (the other left-over face)
+    opp = {0: 1, 1: 0, 2: 3, 3: 2, 4: 5, 5: 4}          # six faces; face f is opposite opp[f], every other pair shares an edge
+    best_a = best_b = 0
+    for mask in range(64):
+        red = [f for f in range(6) if mask >> f & 1]
+        no_edge = all(opp[a] == b for a in red for b in red if a != b)
+        no_opp = all(opp[a] != b for a in red for b in red if a != b)
+        if no_edge:
+            best_a = max(best_a, len(red))
+        if no_opp:
+            best_b = max(best_b, len(red))
+    return {'a': s([best_a]), 'b': s([best_b])}
+
 
 
 @check('L4U08-T02')
@@ -236,12 +238,9 @@ def _():
 def _():
     cells = [(r, c) for r in range(5) for c in range(5)]
     maps = [lambda r, c: (r, 4 - c), lambda r, c: (4 - r, c), lambda r, c: (c, r), lambda r, c: (4 - c, 4 - r)]
-    n = 0
-    for sub in itertools.combinations(cells, 5):
-        S = set(sub)
-        if all({m(r, c) for r, c in S} == S for m in maps):
-            n += 1
-    return s([n])
+    lines = [sum(1 for m in maps if m(r, c) == (r, c)) for r, c in cells]
+    return {'a': s([sum(1 for n in lines if n >= 1)]), 'b': s([sum(1 for n in lines if n == 1)])}
+
 
 
 @check('L4U08-G03')

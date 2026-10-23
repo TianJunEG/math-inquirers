@@ -29,7 +29,8 @@ def tf(b, yes, no):
 
 @check('L4U09-L01')
 def _():
-    return s([60 - 35])
+    return s([70 + 2 * 5])
+
 
 
 @check('L4U09-S01')
@@ -127,8 +128,11 @@ def _():
 
 @check('L4U09-S07')
 def _():
-    ali, mei = 50 + 4 * 20, 50 + 9 * 20
-    return {'a': s([ali]), 'b': s([mei]), 'c': tf(mei > 2 * ali, 'Yes', 'No')}
+    v = series('L4U09-S07')
+    p = ITEM['L4U09-S07']['figure']['panels'][0]
+    assert p['ymin'] == 40
+    return {'a': s([v[0]]), 'b': s([v[1]]), 'c': tf(v[1] > 2 * v[0], 'Yes', 'No')}
+
 
 
 @check('L4U09-S08')
@@ -161,8 +165,10 @@ def _():
 
 @check('L4U09-T03')
 def _():
-    h = next(h for h in range(0, 100) if 100 - 4 * h == 15 + 13 * h)
-    return {'a': s([h]), 'b': s([100 - 4 * h])}
+    km = [k for k in range(0, 100) if 4 + 2 * k == 10 + 1 * k]
+    assert len(km) == 1
+    return {'a': s(km), 'b': s([4 + 2 * km[0]])}
+
 
 
 @check('L4U09-G01')

@@ -37,7 +37,7 @@
       ]
      }
     ],
-    "width_mm": 82,
+    "width_mm": 70,
     "unit": 48,
     "vbrace": {
      "text": "156"
@@ -66,7 +66,7 @@
      "÷ 4",
      "− 9"
     ],
-    "width_mm": 82
+    "width_mm": 70
    },
    "steps": [
     "Undo the steps in the opposite order.",
@@ -109,7 +109,7 @@
    "id": "L4U03-S01",
    "tier": "start",
    "page": 1,
-   "text": "Work these out.",
+   "text": "Find the value of each.",
    "parts": [
     {
      "label": "a",
@@ -642,7 +642,7 @@
      ""
     ]
    },
-   "hint": "After the gift, Mei has 36 + 36 more than 1 unit.",
+   "hint": "Before the gift, how many more does Mei have than Lily?",
    "explanation": "Mei is 5 units and Lily is 1 unit. After the gift they are equal, so Mei had 4 units more than Lily, and 4 units is 36 + 36 = 72. 1 unit = 18. Lily had 18 and Mei had 90. Check: 90 − 36 = 54 and 18 + 36 = 54."
   },
   {
@@ -786,7 +786,7 @@
      ""
     ]
    },
-   "hint": "Multiply 334-style numbers by 7. Start with the ones: 4 × 7.",
+   "hint": "Start with the ones: what is 4 × 7?",
    "explanation": "4 × 7 = 28, which ends in 8, as needed. 3□4 × 7 = 2128 + 70 × □ must be 2□38. Trying 3 gives 2128 + 210 = 2338. Check: 334 × 7 = 2338. So both missing digits are 3."
   },
   {

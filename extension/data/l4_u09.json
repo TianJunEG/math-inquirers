@@ -39,7 +39,7 @@
      "Thu",
      "Fri"
     ],
-    "width_mm": 74,
+    "width_mm": 70,
     "plot_w": 340,
     "plot_h": 160
    },
@@ -88,7 +88,7 @@
     "cell_h": 46,
     "font": 26,
     "first_col_head": true,
-    "width_mm": 82
+    "width_mm": 70
    },
    "steps": [
     "Use Ali's row: 14 + ? = 31, so ? = 31 − 14 = 17.",
@@ -115,14 +115,14 @@
   },
   "try": {
    "id": "L4U09-L01",
-   "text": "A stall sold 35 cups on Monday and 60 cups on Tuesday. By how many cups did sales go up? {b}",
+   "text": "Each line on a graph is worth 5. Monday's point is at 70 books. Tuesday's point is 2 lines higher. How many books does Tuesday show? {b}",
    "answer": {
     "value": [
-     "25"
+     "80"
     ],
-    "text": "25"
+    "text": "80"
    },
-   "explanation": "60 − 35 = 25, so sales went up by 25 cups."
+   "explanation": "2 lines are worth 2 × 5 = 10. 70 + 10 = 80 books."
   }
  },
  "items": [
@@ -579,31 +579,57 @@
    "id": "L4U09-S07",
    "tier": "start",
    "page": 3,
-   "text": "A graph's scale starts at 50. Each line is worth 20. Ali's point is 4 lines above the start. Mei's point is 9 lines above the start.",
+   "text": "The graph shows the pencils a shop sold. Look at the scale.",
+   "figure": {
+    "type": "l4_line",
+    "panels": [
+     {
+      "ymin": 40,
+      "ymax": 100,
+      "step": 10,
+      "label_every": 1,
+      "series": [
+       {
+        "values": [
+         60,
+         90
+        ]
+       }
+      ]
+     }
+    ],
+    "xlabels": [
+     "Mon",
+     "Tue"
+    ],
+    "width_mm": 60,
+    "plot_w": 200,
+    "plot_h": 150
+   },
    "parts": [
     {
      "label": "a",
-     "text": "Ali's number is {b}",
+     "text": "Monday: {b} pencils",
      "answer": {
       "value": [
-       "130"
+       "60"
       ],
-      "text": "130"
+      "text": "60"
      }
     },
     {
      "label": "b",
-     "text": "Mei's number is {b}",
+     "text": "Tuesday: {b} pencils",
      "answer": {
       "value": [
-       "230"
+       "90"
       ],
-      "text": "230"
+      "text": "90"
      }
     },
     {
      "label": "c",
-     "text": "Mei says: \"9 is more than double 4, so my number is more than double Ali's.\" Is she right? {circ:Yes|No}",
+     "text": "Tuesday's point is more than twice as high as Monday's. Is Tuesday's number more than double Monday's? {circ:Yes|No}",
      "answer": {
       "value": [
        "No"
@@ -612,12 +638,8 @@
      }
     }
    ],
-   "space": {
-    "rows": [
-     "Working:"
-    ]
-   },
-   "explanation": "(a) 50 + 4 × 20 = 130. (b) 50 + 9 × 20 = 230. (c) Double Ali's number is 260, and Mei's 230 is less. The lines were counted from 50, not from 0, so counting lines gives the wrong comparison."
+   "explanation": "(a) Monday is on the 60 line. (b) Tuesday is on the 90 line. (c) Double 60 is 120, and 90 is less. The point looks more than twice as high because the scale starts at 40, not at 0.",
+   "figside": true
   },
   {
    "id": "L4U09-S08",
@@ -647,7 +669,7 @@
     },
     {
      "label": "c",
-     "text": "At what time was it 29 °C? {b} am",
+     "text": "At what time before noon was it 29 °C? {b} am",
      "answer": {
       "value": [
        "9"
@@ -717,44 +739,45 @@
      ""
     ]
    },
-   "hint": "Day 1 is 1 unit. Day 2 is 2 units. Day 3 is 2 units and 15 more.",
+   "hint": "Start with a bar for Day 1. Compare the other days with it.",
    "explanation": "Take away Day 4 and the extra 15: 200 − 25 − 15 = 160. Day 1 is 1 unit, Day 2 is 2 units and Day 3 is 2 units: 5 units = 160. 1 unit = 32. Check: 32 + 64 + 79 + 25 = 200."
   },
   {
    "id": "L4U09-T03",
    "tier": "think",
    "page": 4,
-   "text": "Tank A has 100 litres of water and loses 4 litres every hour. Tank B has 15 litres and gains 13 litres every hour. The 2 lines on a graph cross.",
+   "text": "Taxi A charges $4 to start and then $2 for every km. Taxi B charges $10 to start and then $1 for every km.",
    "parts": [
     {
      "label": "a",
-     "text": "After {b} hours the tanks hold the same amount.",
+     "text": "For {b} km the 2 taxis cost the same.",
      "answer": {
       "value": [
-       "5"
+       "6"
       ],
-      "text": "5"
+      "text": "6"
      }
     },
     {
      "label": "b",
-     "text": "Each tank then holds {b} litres.",
+     "text": "Then each fare is ${b}",
      "answer": {
       "value": [
-       "80"
+       "16"
       ],
-      "text": "80"
+      "text": "16"
      }
     }
    ],
    "space": {
     "rows": [
      "Working:",
+     "",
      ""
     ]
    },
-   "hint": "How big is the gap at the start? How much does it close each hour?",
-   "explanation": "At the start the gap is 100 − 15 = 85 litres. Each hour it closes by 4 + 13 = 17 litres. 85 ÷ 17 = 5 hours. Tank A: 100 − 5 × 4 = 80 litres. Tank B: 15 + 5 × 13 = 80 litres."
+   "hint": "Make a table of both fares for 1 km, 2 km, 3 km.",
+   "explanation": "Taxi A: $6, $8, $10, $12, $14, $16 for 1 to 6 km. Taxi B: $11, $12, $13, $14, $15, $16 for 1 to 6 km. The fares are equal at 6 km: $4 + 6 × $2 = $16 and $10 + 6 × $1 = $16. Taxi B costs $6 more to start, and Taxi A gains $1 on B for each km, so 6 km."
   },
   {
    "id": "L4U09-G01",
@@ -904,7 +927,7 @@
      "Wed",
      "Thu"
     ],
-    "width_mm": 62,
+    "width_mm": 64,
     "plot_w": 320,
     "plot_h": 190
    },

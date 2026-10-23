@@ -128,3 +128,14 @@ Fix: change story and structure of at least U9 Try, U9 T3, U10 T1, U10 T2, U10 T
 
 ## What a child trial still has to answer
 Reading load of the Learn it pages; whether Unit 6 is too hard without help; whether 20-25 minutes works for session 1 and 3; whether the protractor and ruler are to hand; whether the 5-digit boxes are used or ignored.
+
+
+## Fixes (23 Oct 2026, Level 4 author)
+
+Done in Level 4 files (data, checks, figure plug-ins), all answers re-solved and `l4_uNN_checks.py` updated (423 answers, 0 mismatches), dup_check and wording_lint clean, rebuilt:
+- **H2 repeats.** New context and structure, same skill: U9 Try (reading a graph one scale step), U9 T3 (two taxi fares, a table), U9 S7 (a two-point graph whose scale starts at 40), U10 T1 (boxes of 2 and 5 pens), U10 T2 (race finishing order), U10 T3 (savings that grow by $2 a day), U10 S8 and C3 (people in front and behind, no "nth from"), U10 S9 (times as old, no future ages), U8 T1 (painting cube faces red or blue), U8 G2 (one shaded square on a 5 by 5 grid), U1 S8 (jogging every 10 and 15 days, answer 30).
+- **H3.** U1 G1 label "My factor lists:" and hint "Count the factors of some numbers between 20 and 60."; U3 G3 hint "Start with the ones: what is 4 x 7?".
+- **H4.** Protractor redrawn: numerals every 20 degrees with white outlines (no strike-through), outer scale outside the rim, a marked arc for the angle, longer arms, larger figure; learn-it figure no longer clipped; fan arc labels larger; corner labels placed beside the rays instead of on plates over them.
+- **M1** U9 S8(c) "before noon". **M2** U4 T2 "1/3 of her money". **M3** U3 T3 hint. **M4** hints shortened to nudges (U1 T1, U1 G1, U4 T2, U4 G3, U9 T2, U10 G1, G2). **M5** facts boxes now teach: equivalent fractions and whole from a part (U4), "angle AOC" (U6), when a net does not fold (U8), the logic grid (U10); U8 S8 (surface area of a cuboid, beyond P4) replaced by the area of a dice net; U8 Check yourself 1 now a different net (answer No). **M7** Learn-it figures capped at 70 mm so their text prints at 10 pt or more; U9 S4 markers of the two lines offset; U9 S6 and C1 and U7 T1 enlarged as far as the page allows. Low: U1 G4 "The length is the greater side", U6 S8(b) and T3(b) "The turns add up to", "Find the value of each" (U3 S1, U5 S11), U5 G4 no longer labelled beyond.
+
+Not done, because they need the shared tools (see TOOL_REQUESTS.md; the edit was blocked by the permission system): **H1** (Welcome page stale ruler line, equipment line, "Beyond Level 4" explanation), **H5** (wide answer boxes for 5-digit answers), M6 (pace plan minutes), M8 (beyond label as a badge), Low 1 (contents prints titles twice). Also not done: M9/M10 item swaps and extra Start here items (page budget), the certificate image, the U9 G1 graphs.

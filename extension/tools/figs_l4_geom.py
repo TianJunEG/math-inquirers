@@ -75,11 +75,11 @@ def _halo(x, y, txt, size, weight=700, anchor='middle'):
 def l4_proto(spec, w=None):
     R = 250
     pad = 62
-    cx, cy = R + pad + 20, R + 40
+    cx, cy = R + pad + 20, R + 78
     ang = spec['angle']
     flip = spec.get('flip', False)
     step = spec.get('label_step', 20)
-    W, H = 2 * (R + pad + 20), R + 40 + 70
+    W, H = 2 * (R + pad + 20), R + 78 + 70
     P = []
     P.append(f'<path d="M{cx - R - 18},{cy} A{R + 18},{R + 18} 0 0 1 {cx + R + 18},{cy} Z" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
     base_deg = 180 if flip else 0
@@ -222,7 +222,7 @@ def l4_corner(spec, w=None):
             P.append(_line(ox, oy, x, y, 3.6))
         for k, p in enumerate(f['parts']):
             mid = (cum[k] + cum[k + 1]) / 2
-            r = L * (0.50 + 0.2 * (k % 2))
+            r = L * (0.82 if k % 2 == 0 else 0.62)
             tx, ty = _pt(ox, oy, r, mid)
             P.append(_halo(tx, ty + 10, _esc(p['text']), 28, 800))
     return F._wrap(''.join(P), W, H, spec.get('label', 'corners'), w or spec.get('width_mm', 140))

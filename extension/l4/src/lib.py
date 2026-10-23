@@ -67,6 +67,10 @@ def _fmt(o, key=None):
 
 def write(n, unit):
     unit = _fmt(unit)
+    for k in ('example', 'example2', 'facts'):       # Learn it figures sit in a column about 73 mm wide: keep their text at 10 pt or more
+        f = unit['learn'].get(k, {}).get('figure')
+        if f and f.get('width_mm', 0) > 70:
+            f['width_mm'] = 70
     tr = unit['learn']['try']
     if '{ll}' in tr['text']:
         tr['answer'] = dict(tr['answer'], list=True)

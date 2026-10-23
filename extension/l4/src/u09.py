@@ -21,9 +21,9 @@ learn = {
                      'Change = the difference between 2 neighbours.',
                      'Missing numbers: use the row or column total.']},
  'facts': {'title': 'Good to know', 'lines': ['The steepest line is the greatest change.', 'Check where each scale starts.']},
- 'try': {'id': U + '-L01', 'text': 'A stall sold 35 cups on Monday and 60 cups on Tuesday. By how many cups did sales go up? {b}',
-         'answer': A(25),
-         'explanation': '60 − 35 = 25, so sales went up by 25 cups.'}}
+ 'try': {'id': U + '-L01', 'text': 'Each line on a graph is worth 5. Monday\'s point is at 70 books. Tuesday\'s point is 2 lines higher. How many books does Tuesday show? {b}',
+         'answer': A(80),
+         'explanation': '2 lines are worth 2 × 5 = 10. 70 + 10 = 80 books.'}}
 
 S, T, G, C = [], [], [], []
 S.append(item(U+'-S01', 'start', 1, 'The graph shows how many people visited a library each day. Each line is worth 10.',
@@ -57,14 +57,15 @@ S.append(item(U+'-S06', 'start', 3, 'Two bakeries show the cakes they sold. Look
   parts=[P('a', 'From January to April, Bakery P went up by {b} cakes.', A(48)), P('b', 'Bakery Q went up by {b} cakes.', A(10)),
          P('c', 'Which bakery sold more extra cakes? {circ:P|Q}', A('P'))],
   why='(a) P: 88 − 40 = 48. (b) Q: 52 − 42 = 10. (c) P went up by 48 and Q by 10. Bakery Q\'s line looks steeper only because its scale starts at 40 and each line is worth 2.'))
-S.append(item(U+'-S07', 'start', 3, 'A graph\'s scale starts at 50. Each line is worth 20. Ali\'s point is 4 lines above the start. Mei\'s point is 9 lines above the start.',
-  parts=[P('a', 'Ali\'s number is {b}', A(130)), P('b', 'Mei\'s number is {b}', A(230)),
-         P('c', 'Mei says: "9 is more than double 4, so my number is more than double Ali\'s." Is she right? {circ:Yes|No}', A('No'))],
-  why='(a) 50 + 4 × 20 = 130. (b) 50 + 9 × 20 = 230. (c) Double Ali\'s number is 260, and Mei\'s 230 is less. The lines were counted from 50, not from 0, so counting lines gives the wrong comparison.',
-  space={'rows': ['Working:']}))
+S.append(item(U+'-S07', 'start', 3, 'The graph shows the pencils a shop sold. Look at the scale.',
+  fig=LINE([{'ymin': 40, 'ymax': 100, 'step': 10, 'label_every': 1, 'series': [{'values': [60, 90]}]}], ['Mon', 'Tue'], width_mm=60, plot_w=200, plot_h=150),
+  parts=[P('a', 'Monday: {b} pencils', A(60)), P('b', 'Tuesday: {b} pencils', A(90)),
+         P('c', 'Tuesday\'s point is more than twice as high as Monday\'s. Is Tuesday\'s number more than double Monday\'s? {circ:Yes|No}', A('No'))],
+  figside=True,
+  why='(a) Monday is on the 60 line. (b) Tuesday is on the 90 line. (c) Double 60 is 120, and 90 is less. The point looks more than twice as high because the scale starts at 40, not at 0.'))
 S.append(item(U+'-S08', 'start', 3, 'At 7 am the temperature was 25 °C. It rose by 2 °C every hour until noon. Then it fell by 3 °C every hour.',
   parts=[P('a', 'The temperature at noon was {b} °C', A(35)), P('b', 'The temperature at 3 pm was {b} °C', A(26)),
-         P('c', 'At what time was it 29 °C? {b} am', A(9))],
+         P('c', 'At what time before noon was it 29 °C? {b} am', A(9))],
   why='(a) From 7 am to noon is 5 hours: 25 + 5 × 2 = 35 °C. (b) From noon to 3 pm is 3 hours: 35 − 3 × 3 = 26 °C. (c) 29 − 25 = 4 °C more, and 4 ÷ 2 = 2 hours after 7 am, which is 9 am.',
   space={'rows': ['Working:']}))
 
@@ -74,14 +75,14 @@ T.append(item(U+'-T01', 'think', 4, 'Sales grow by the same number of toys each 
   why='87 − 52 = 35 over 5 weeks, so sales go up by 7 each week. Week 1 is 2 weeks before Week 3: 52 − 14 = 38. Week 9 is 94 and Week 10 is 101, so Week 10 is the first week above 100.',
   space={'rows': ['Working:', '']}))
 T.append(item(U+'-T02', 'think', 4, 'A stall sold 200 plates in 4 days. On Day 2 it sold twice as many as on Day 1. On Day 3 it sold 15 more than on Day 2. On Day 4 it sold 25. Find the number of plates sold on Day 1. {b}',
-  ans=A(32), hint='Day 1 is 1 unit. Day 2 is 2 units. Day 3 is 2 units and 15 more.',
+  ans=A(32), hint='Start with a bar for Day 1. Compare the other days with it.',
   why='Take away Day 4 and the extra 15: 200 − 25 − 15 = 160. Day 1 is 1 unit, Day 2 is 2 units and Day 3 is 2 units: 5 units = 160. 1 unit = 32. Check: 32 + 64 + 79 + 25 = 200.',
   space={'rows': ['Draw a bar model here.', '', '']}))
-T.append(item(U+'-T03', 'think', 4, 'Tank A has 100 litres of water and loses 4 litres every hour. Tank B has 15 litres and gains 13 litres every hour. The 2 lines on a graph cross.',
-  parts=[P('a', 'After {b} hours the tanks hold the same amount.', A(5)), P('b', 'Each tank then holds {b} litres.', A(80))],
-  hint='How big is the gap at the start? How much does it close each hour?',
-  why='At the start the gap is 100 − 15 = 85 litres. Each hour it closes by 4 + 13 = 17 litres. 85 ÷ 17 = 5 hours. Tank A: 100 − 5 × 4 = 80 litres. Tank B: 15 + 5 × 13 = 80 litres.',
-  space={'rows': ['Working:', '']}))
+T.append(item(U+'-T03', 'think', 4, 'Taxi A charges $4 to start and then $2 for every km. Taxi B charges $10 to start and then $1 for every km.',
+  parts=[P('a', 'For {b} km the 2 taxis cost the same.', A(6)), P('b', 'Then each fare is ${b}', A(16))],
+  hint='Make a table of both fares for 1 km, 2 km, 3 km.',
+  why='Taxi A: $6, $8, $10, $12, $14, $16 for 1 to 6 km. Taxi B: $11, $12, $13, $14, $15, $16 for 1 to 6 km. The fares are equal at 6 km: $4 + 6 × $2 = $16 and $10 + 6 × $1 = $16. Taxi B costs $6 more to start, and Taxi A gains $1 on B for each km, so 6 km.',
+  space={'rows': ['Working:', '', '']}))
 
 G.append(item(U+'-G01', 'go', 5, 'Two graphs show the same shop\'s sales in January and February. Graph X starts at 0 with 20 for each line. Graph Y starts at 60 with 5 for each line. Graph X shows January 4 lines up and February 5 lines up.',
   parts=[P('a', 'The sales rose by {b}', A(20)), P('b', 'On graph Y, January is {b} lines up and February is {b} lines up.', A(4, 8, text='4 lines and 8 lines')),
@@ -102,7 +103,7 @@ G.append(item(U+'-G03', 'go', 5, 'Beyond Level 4: Average\nThe average of some n
   space={'rows': ['Working:', '']}))
 
 C.append(item(U+'-C01', 'quiz', None, 'The graph shows the cakes a shop sold. Each line is worth 10. How many cakes were sold on Wednesday? {b}',
-  fig=LINE([{'ymin': 0, 'ymax': 80, 'step': 10, 'label_every': 2, 'series': [{'values': [30, 50, 65, 40]}]}], ['Mon', 'Tue', 'Wed', 'Thu'], width_mm=62, plot_w=320, plot_h=190),
+  fig=LINE([{'ymin': 0, 'ymax': 80, 'step': 10, 'label_every': 2, 'series': [{'values': [30, 50, 65, 40]}]}], ['Mon', 'Tue', 'Wed', 'Thu'], width_mm=64, plot_w=320, plot_h=190),
   ans=A(65), figright=True, why='The Wednesday point is halfway between the 60 line and the 70 line: 65 cakes.'))
 C.append(item(U+'-C02', 'quiz', None, 'A shop sold 28 pens on Monday and 35 on Tuesday. The 3-day total was 99. Wednesday: {b} pens', ans=A(36),
   why='28 + 35 = 63 pens on Monday and Tuesday. 99 − 63 = 36 pens on Wednesday.'))

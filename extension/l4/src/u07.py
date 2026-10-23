@@ -78,7 +78,7 @@ S.append(item(U+'-S09', 'start', 3, 'A hall floor is 12 m long and 8 m wide. It 
   space={'rows': ['Working:', '']}))
 
 T.append(item(U+'-T01', 'think', 4, 'A square is cut into 2 identical rectangles, as shown. Each rectangle has a perimeter of 30 cm. The area of the square is {b} cm².',
-  fig=POLY([L_([[0, 0], [8, 0], [8, 8], [0, 8]], dashed=[[[4, 0], [4, 8]]])], cell=14, width_mm=30, padx=14, pady=14),
+  fig=POLY([L_([[0, 0], [8, 0], [8, 8], [0, 8]], dashed=[[[4, 0], [4, 8]]])], cell=14, width_mm=36, padx=14, pady=14),
   ans=A(100), hint='Each rectangle has 3 sides that equal the side of the square.', figright=True,
   why='Each rectangle is 1 whole side and 1 half side, twice round: 2 × (s + s/2) = 3 × s. So 3 sides of the square make 30 cm, and each side is 10 cm. The area of the square is 10 × 10 = 100 cm².',
   space={'rows': ['Working:', '']}))
@@ -117,7 +117,7 @@ G.append(item(U+'-G04', 'go', 5, 'A square floor is covered with square tiles. T
   why='(a) The light tiles make a 6 by 6 block: 36. The floor has 64 tiles, so 64 − 36 = 28 dark tiles. (b) A floor n tiles long has 4 × n − 4 dark tiles. 4 × n − 4 = 60 gives n = 16. Check: 16 × 16 = 256 and 14 × 14 = 196, and 256 − 196 = 60.',))
 
 C.append(item(U+'-C01', 'quiz', None, 'Find the area of the shape. {b} cm²',
-  fig=POLY([L_([[0, 0], [9, 0], [9, 3], [4, 3], [4, 7], [0, 7]], [{'seg': 0, 'text': '9 cm'}, {'seg': 1, 'text': '3 cm'}, {'seg': 4, 'text': '4 cm'}, {'seg': 5, 'text': '7 cm'}])], cell=18, width_mm=50, pady=50),
+  fig=POLY([L_([[0, 0], [9, 0], [9, 3], [4, 3], [4, 7], [0, 7]], [{'seg': 0, 'text': '9 cm'}, {'seg': 1, 'text': '3 cm'}, {'seg': 4, 'text': '4 cm'}, {'seg': 5, 'text': '7 cm'}])], cell=18, width_mm=47, pady=50),
   ans=A(43), figright=True,
   why='Split into 9 × 3 = 27 and 4 × 4 = 16: 27 + 16 = 43 cm². Or 9 × 7 − 5 × 4 = 63 − 20 = 43 cm².'))
 C.append(item(U+'-C02', 'quiz', None, 'A rectangle has an area of 60 cm² and a length of 12 cm. Find its perimeter. {b} cm',

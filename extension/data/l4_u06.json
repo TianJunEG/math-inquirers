@@ -16,7 +16,7 @@
     "angle": 55,
     "flip": false,
     "label_step": 30,
-    "width_mm": 78
+    "width_mm": 70
    },
    "steps": [
     "Put the centre of the protractor on the corner. Put the 0 line on one arm.",
@@ -58,7 +58,8 @@
    "lines": [
     "Compass: 1 step = 45°.",
     "Clock: 1 space = 30°.",
-    "Minute hand: 1 minute = 6°."
+    "Minute hand: 1 minute = 6°.",
+    "∠AOC is the angle at O between OA and OC."
    ]
   },
   "try": {
@@ -146,7 +147,7 @@
     "type": "l4_proto",
     "angle": 52,
     "flip": true,
-    "width_mm": 88
+    "width_mm": 92
    },
    "parts": [
     {
@@ -215,7 +216,7 @@
       "text": "40°"
      }
     ],
-    "width_mm": 70,
+    "width_mm": 78,
     "len": 320
    },
    "parts": [
@@ -492,7 +493,7 @@
     },
     {
      "label": "b",
-     "text": "In all it turned {b}°",
+     "text": "The turns add up to {b}°",
      "answer": {
       "value": [
        "270"
@@ -679,7 +680,7 @@
     },
     {
      "label": "b",
-     "text": "In all it turned {b}°",
+     "text": "The turns add up to {b}°",
      "answer": {
       "value": [
        "495"

@@ -59,11 +59,11 @@ S.append(item(U+'-S07', 'start', 2, 'Ravi has 30 red marbles and 45 blue marbles
          P('b', 'Then each bag has {b} red and {b} blue.', A(2, 3, text='2 red and 3 blue'))],
   why='The number of bags is a common factor of 30 and 45. The common factors are 1, 3, 5 and 15, so the greatest is 15. Each bag has 30 ÷ 15 = 2 red and 45 ÷ 15 = 3 blue.',
   space={'rows': ['Factors of 30: {ll}', 'Factors of 45: {ll}']}))
-S.append(item(U+'-S08', 'start', 2, 'Bus A leaves a stop every 8 minutes. Bus B leaves every 12 minutes. Both leave at 9:00 am.',
-  parts=[P('a', 'They next leave together at {b} : {b} am.', A('9', '24', text='9:24 am')),
-         P('b', 'How many more times do they leave together after 9:00 am and before 11:00 am? {b} times', A(4, text='4 times'))],
-  why='The least common multiple of 8 and 12 is 24, so they meet at 9:24 am. They meet every 24 minutes: 9:24, 9:48, 10:12 and 10:36. The next, 11:00, is not before 11:00. That is 4 times.',
-  space={'rows': ['Bus A: 9:00, 9:08, {l}', 'Bus B: 9:00, 9:12, {l}']}))
+S.append(item(U+'-S08', 'start', 2, 'Kumar jogs every 10 days. Aisha jogs every 15 days. They both jog today.',
+  parts=[P('a', 'They next jog together after {b} days.', A(30)),
+         P('b', 'How many more times do they jog together in the next 100 days? {b} times', A(3))],
+  why='The least common multiple of 10 and 15 is 30 (10, 20, 30 and 15, 30). They jog together after 30, 60 and 90 days. The next, 120 days, is after the 100 days. That is 3 times.',
+  space={'rows': ['Kumar: 10, 20, {l}', 'Aisha: 15, 30, {l}']}))
 S.append(item(U+'-S09', 'start', 2, 'Who am I? I am between 50 and 100. Both 6 and 7 go into me exactly.\nI am {b}.',
   ans=A(84),
   why='A number in both the 6 and 7 times tables: 42, 84. Only 84 is between 50 and 100.'))
@@ -88,7 +88,7 @@ S.append(item(U+'-S13', 'start', 3, 'Find out which numbers have an odd count of
   why='64: 1, 2, 4, 8, 16, 32, 64 is 7 factors. 81: 1, 3, 9, 27, 81 is 5 factors. 49 = 7 × 7 pairs with itself, so it has 3 factors (odd). 72 has 12 factors.'))
 
 T.append(item(U+'-T01', 'think', 4, 'A number between 10 and 100 is in the 3 times table and in the 8 times table. Its tens digit is greater than its ones digit. Its digits add up to 9. What is the number?\n{b}',
-  ans=A(72), hint='List the multiples of 24. Then use the digit clues.', space={'rows': ['Working:', '']},
+  ans=A(72), hint='Which numbers are in both the 3 and 8 times tables?', space={'rows': ['Working:', '']},
   why='A multiple of 3 and 8 is a multiple of 24: 24, 48, 72, 96. The digits add to 9 only for 72 (7 + 2). 7 is greater than 2.'))
 T.append(item(U+'-T02', 'think', 4, 'Ben has more than 50 stickers and fewer than 100. He packs them in 4s and 3 are left over. He packs them in 5s and 3 are left over. He packs them in 6s and 3 are left over. How many stickers does he have?\n{b}',
   ans=A(63), hint='Take 3 away. What number is in the 4, 5 and 6 times tables?', space={'rows': ['Working:', '', '']},
@@ -100,9 +100,9 @@ T.append(item(U+'-T03', 'think', 4, 'Two gears have marks that touch at the star
   why='The least common multiple of 12 and 18 is 36. Gear A: 36 ÷ 12 = 3 turns. Gear B: 36 ÷ 18 = 2 turns.'))
 
 G.append(item(U+'-G01', 'go', 5, 'What is the least number that has exactly 10 factors? Show the factors you found.\n{b}',
-  ans=A(48), hint='Count factors of numbers that are 24, 30, 36, 40 and 48.',
+  ans=A(48), hint='Count the factors of some numbers between 20 and 60.',
   why='48 has 1, 2, 3, 4, 6, 8, 12, 16, 24, 48: 10 factors. Numbers below 48 have fewer: for example 36 has 9, 40 has 8 and 42 has 8.',
-  space={'rows': ['Factors of 48: {ll}']}))
+  space={'rows': ['My factor lists: {ll}']}))
 G.append(item(U+'-G02', 'go', 5, 'Beyond Level 4: Three common multiples\nThree lighthouses flash at 12:00:00. Lighthouse A flashes every 6 seconds, B every 8 seconds and C every 9 seconds.',
   parts=[P('a', 'They next flash together after {b} seconds.', A(72)),
          P('b', 'How many times do they flash together in the next 10 minutes? Do not count 12:00:00. {b} times', A(8, text='8 times'))],
@@ -112,7 +112,7 @@ G.append(item(U+'-G03', 'go', 5, 'Muffins are sold only in boxes of 4 and boxes 
   ans=A(17), hint='Write the numbers 1 to 30 and cross out those you can make.',
   why='List the amounts you can make: 4, 7, 8, 11, 12, 14, 15, 16, 18, 19, 20, 21, 22, 23 and every larger number. 17 is not on the list, and 17 − 7 = 10 and 17 − 14 = 3 are not multiples of 4. Every number from 18 up can be made.',
   space={'rows': ['Boxes I can make: {l}']}))
-G.append(item(U+'-G04', 'go', 5, 'A rectangle has an area of 84 cm². Its length and width are whole numbers of centimetres. Its perimeter is 38 cm. Find its length and its width.\nLength {b} cm   Width {b} cm',
+G.append(item(U+'-G04', 'go', 5, 'A rectangle has an area of 84 cm². Its length and width are whole numbers of centimetres. Its perimeter is 38 cm. Find its length and its width.\nThe length is the greater side. Length {b} cm   Width {b} cm',
   ans=A(12, 7, text='Length 12 cm, width 7 cm'), hint='Write the factor pairs of 84. Find the pair that adds to 19.',
   why='Half the perimeter is 19, so length + width = 19. The factor pairs of 84 are 1 and 84, 2 and 42, 3 and 28, 4 and 21, 6 and 14, 7 and 12. Only 7 and 12 add to 19.'))
 
