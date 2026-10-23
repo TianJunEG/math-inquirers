@@ -587,64 +587,64 @@ PASS  S2: the licence page no longer calls the entity or year unconfirmed, and s
 PASS  o'clock and half past used for clock times in the Semester 2 key  
 PASS  S1: a 74-character school name keeps the footer on one line with the page code on every pupil page  []
 PASS  S2: a 74-character school name keeps the footer on one line with the page code on every pupil page  []
-FAIL  S1 pupil page 01 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 01 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 01 page-fill: puzzle content 142 of 183 mm  0.77
 PASS  S1 pupil page 01 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 02 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 02 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 02 page-fill: puzzle content 197 of 198 mm  0.99
 PASS  S1 pupil page 02 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 03 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 03 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 03 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S1 pupil page 03 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 04 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 04 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 04 page-fill: puzzle content 192 of 193 mm  0.99
 PASS  S1 pupil page 04 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 05 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 05 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 05 page-fill: puzzle content 154 of 181 mm  0.85
 PASS  S1 pupil page 05 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 06 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 06 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 06 page-fill: puzzle content 134 of 183 mm  0.73
 PASS  S1 pupil page 06 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 07 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 07 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 07 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S1 pupil page 07 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 08 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 08 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 08 page-fill: puzzle content 105 of 183 mm  0.58
 PASS  S1 pupil page 08 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 09 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 09 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 09 page-fill: puzzle content 141 of 190 mm  0.74
 PASS  S1 pupil page 09 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 10 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 10 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 10 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S1 pupil page 10 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 11 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 11 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 11 page-fill: puzzle content 149 of 183 mm  0.82
 PASS  S1 pupil page 11 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 12 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 12 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 12 page-fill: puzzle content 148 of 183 mm  0.81
 PASS  S1 pupil page 12 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 13 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 13 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 13 page-fill: puzzle content 149 of 183 mm  0.82
 PASS  S1 pupil page 13 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 14 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 14 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 14 page-fill: puzzle content 149 of 183 mm  0.81
 PASS  S1 pupil page 14 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 15 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 15 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 15 page-fill: puzzle content 150 of 183 mm  0.82
 PASS  S1 pupil page 15 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 16 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 16 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 16 page-fill: puzzle content 166 of 181 mm  0.91
 PASS  S1 pupil page 16 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 17 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 17 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 17 page-fill: puzzle content 179 of 183 mm  0.98
 PASS  S1 pupil page 17 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 18 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 18 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 18 page-fill: puzzle content 142 of 183 mm  0.78
 PASS  S1 pupil page 18 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 19 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 19 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 19 page-fill: puzzle content 181 of 183 mm  0.99
 PASS  S1 pupil page 19 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 20 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 pupil page 20 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 20 page-fill: puzzle content 181 of 183 mm  0.99
 PASS  S1 pupil page 20 min text size >= 8 pt  8.0 pt
 PASS  S1 front page 01 layout (no overflow/clipping/margin breach)  
@@ -657,84 +657,84 @@ PASS  S1 front page 04 layout (no overflow/clipping/margin breach)
 PASS  S1 front page 04 min text size >= 8 pt  11.0 pt
 PASS  S1 front page 05 layout (no overflow/clipping/margin breach)  
 PASS  S1 front page 05 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 01 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 01 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 01 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 02 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 02 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 02 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 03 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 03 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 03 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 04 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 04 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 04 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 05 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 05 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 05 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 06 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 06 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 06 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 07 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 07 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 07 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 08 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 08 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 08 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 09 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 09 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 09 min text size >= 8 pt  8.0 pt
-FAIL  S1 key page 10 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S1 key page 10 layout (no overflow/clipping/margin breach)  
 PASS  S1 key page 10 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 01 layout (no overflow/clipping/margin breach)  outside print-safe margin: SPAN.ab ; text clipped: ________________________
+FAIL  S2 pupil page 01 layout (no overflow/clipping/margin breach)  outside print-safe margin: SPAN.ab 
 PASS  S2 pupil page 01 page-fill: puzzle content 179 of 183 mm  0.98
 PASS  S2 pupil page 01 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 02 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows; text clipped: ________________________
+FAIL  S2 pupil page 02 layout (no overflow/clipping/margin breach)  content leaves puzzle area; area scrolls/overflows
 PASS  S2 pupil page 02 page-fill: puzzle content 182 of 183 mm  0.99
 PASS  S2 pupil page 02 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 03 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 03 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 03 page-fill: puzzle content 197 of 198 mm  0.99
 PASS  S2 pupil page 03 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 04 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 04 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 04 page-fill: puzzle content 175 of 183 mm  0.95
 PASS  S2 pupil page 04 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 05 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 05 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 05 page-fill: puzzle content 165 of 183 mm  0.90
 PASS  S2 pupil page 05 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 06 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 06 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 06 page-fill: puzzle content 141 of 190 mm  0.74
 PASS  S2 pupil page 06 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 07 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 07 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 07 page-fill: puzzle content 166 of 183 mm  0.91
 PASS  S2 pupil page 07 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 08 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 08 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 08 page-fill: puzzle content 153 of 183 mm  0.84
 PASS  S2 pupil page 08 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 09 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 09 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 09 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S2 pupil page 09 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 10 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 10 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 10 page-fill: puzzle content 173 of 183 mm  0.94
 PASS  S2 pupil page 10 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 11 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 11 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 11 page-fill: puzzle content 158 of 183 mm  0.86
 PASS  S2 pupil page 11 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 12 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 12 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 12 page-fill: puzzle content 174 of 183 mm  0.95
 PASS  S2 pupil page 12 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 13 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 13 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 13 page-fill: puzzle content 127 of 183 mm  0.69
 PASS  S2 pupil page 13 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 14 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 14 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 14 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S2 pupil page 14 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 15 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 15 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 15 page-fill: puzzle content 154 of 183 mm  0.84
 PASS  S2 pupil page 15 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 16 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 16 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 16 page-fill: puzzle content 169 of 183 mm  0.92
 PASS  S2 pupil page 16 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 17 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 17 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 17 page-fill: puzzle content 155 of 183 mm  0.84
 PASS  S2 pupil page 17 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 18 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 18 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 18 page-fill: puzzle content 155 of 181 mm  0.85
 PASS  S2 pupil page 18 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 19 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 19 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 19 page-fill: puzzle content 156 of 181 mm  0.86
 PASS  S2 pupil page 19 min text size >= 8 pt  8.0 pt
-FAIL  S2 pupil page 20 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 pupil page 20 layout (no overflow/clipping/margin breach)  
 PASS  S2 pupil page 20 page-fill: puzzle content 171 of 183 mm  0.94
 PASS  S2 pupil page 20 min text size >= 8 pt  8.0 pt
 PASS  S2 front page 01 layout (no overflow/clipping/margin breach)  
@@ -747,39 +747,39 @@ PASS  S2 front page 04 layout (no overflow/clipping/margin breach)
 PASS  S2 front page 04 min text size >= 8 pt  11.0 pt
 PASS  S2 front page 05 layout (no overflow/clipping/margin breach)  
 PASS  S2 front page 05 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 01 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 01 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 01 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 02 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 02 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 02 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 03 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 03 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 03 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 04 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 04 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 04 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 05 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 05 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 05 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 06 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 06 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 06 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 07 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 07 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 07 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 08 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 08 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 08 min text size >= 8 pt  8.0 pt
-FAIL  S2 key page 09 layout (no overflow/clipping/margin breach)  text clipped: ________________________
+PASS  S2 key page 09 layout (no overflow/clipping/margin breach)  
 PASS  S2 key page 09 min text size >= 8 pt  8.0 pt
 PASS  S1_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(2, 0, 15), (4, 0, 17)]
 PASS  S1_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 15), (10, 0, 17)]
 PASS  S2_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(3, 0, 13)]
 PASS  S2_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
-PASS  P1_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.87% vs greyscale)  20 pages
+PASS  P1_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.81% vs greyscale)  20 pages
 PASS  P1_S1_Puzzles.pdf: no flat grey tint areas (blocks counted 170, limit 40 per page)  
 PASS  P1_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 29.63% vs greyscale)  5 pages
 PASS  P1_S1_FrontMatter.pdf: no flat grey tint areas (blocks counted 128, limit 40 per page)  
-PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.93% vs greyscale)  10 pages
-PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 611, limit 90 per page)  
-PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.71% vs greyscale)  20 pages
+PASS  P1_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.92% vs greyscale)  10 pages
+PASS  P1_S1_Answer_Key.pdf: no flat grey tint areas (blocks counted 609, limit 90 per page)  
+PASS  P1_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 11.66% vs greyscale)  20 pages
 PASS  P1_S2_Puzzles.pdf: no flat grey tint areas (blocks counted 177, limit 40 per page)  
 PASS  P1_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 30.03% vs greyscale)  5 pages
 PASS  P1_S2_FrontMatter.pdf: no flat grey tint areas (blocks counted 132, limit 40 per page)  
-PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.71% vs greyscale)  9 pages
-PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 712, limit 90 per page)  
+PASS  P1_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.67% vs greyscale)  9 pages
+PASS  P1_S2_Answer_Key.pdf: no flat grey tint areas (blocks counted 708, limit 90 per page)  
 
-TOTAL 783 checks, 59 failed
+TOTAL 783 checks, 2 failed
