@@ -80,7 +80,9 @@ ICONS3 = ['sun', 'moon', 'bed', 'bus', 'house', 'school', 'shop', 'bath', 'rubbe
 def clock(h=12, m=0, hide_hands=False, labels='all', digital=None, sector=None, mirror=False, ampm=None, ticks=True):
     """Analog clock. The hour hand sits at h + m/60 of the way round (the picture does not lie). Hour hand short and wide, minute hand long and thin.
     labels: 'all' (1-12) | 'quarters' (12, 3, 6, 9) | 'none'. sector=[from_min, to_min] shades that part of the face. mirror reflects the face left-right.
-    digital: True or text under the clock; ampm adds 'a.m.' or 'p.m.' to a digital readout."""
+    digital: True or text under the clock ('[]' = an answer box 130 x 60 units: about 25 x 11 mm at the usual clock size); ampm adds 'a.m.' or 'p.m.'.
+    Numerals are drawn after the hands with a white halo, and when numerals are printed the minute hand stops just inside the numeral ring, so the
+    numeral a hand points at is never covered."""
     cx = cy = 110; R = 98
     body = []
     flip = -1 if mirror else 1
@@ -94,30 +96,36 @@ def clock(h=12, m=0, hide_hands=False, labels='all', digital=None, sector=None, 
         body.append(f'<path d="M{cx} {cy} L{X(R - 4, a0):.1f} {Y(R - 4, a0):.1f} A{R - 4} {R - 4} 0 {large} {1 if not mirror else 0} {X(R - 4, a1):.1f} {Y(R - 4, a1):.1f} Z" fill="{YEL}" fill-opacity="0.65" stroke="{NAVY}" stroke-width="2"/>')
     if ticks:
         for k in range(60):
-            L = 12 if k % 5 == 0 else 5
+            L = 9 if k % 5 == 0 else 4
             body.append(f'<line x1="{X(R - 4, k * 6):.1f}" y1="{Y(R - 4, k * 6):.1f}" x2="{X(R - 4 - L, k * 6):.1f}" y2="{Y(R - 4 - L, k * 6):.1f}" stroke="{NAVY}" stroke-width="{3.2 if k % 5 == 0 else 1.4}"/>')
-    if labels != 'none':
-        for k in range(1, 13):
-            if labels == 'quarters' and k % 3: continue
-            body.append(f'<text x="{X(72, k * 30):.1f}" y="{Y(72, k * 30) + 9:.1f}" font-size="26" font-weight="700" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{k}</text>')
+    numerals = labels != 'none'
     if not hide_hands:
         ha = ((h % 12) + m / 60.0) * 30; ma = m * 6
-        body.append(f'<line x1="{cx}" y1="{cy}" x2="{X(48, ha):.1f}" y2="{Y(48, ha):.1f}" stroke="{NAVY}" stroke-width="10" stroke-linecap="round"/>')
-        body.append(f'<line x1="{cx}" y1="{cy}" x2="{X(78, ma):.1f}" y2="{Y(78, ma):.1f}" stroke="{NAVY}" stroke-width="4.4" stroke-linecap="round"/>')
+        hl, ml = (36, 54) if numerals else (46, 78)       # with numerals the minute hand tip stops inside the numeral ring
+        body.append(f'<line x1="{cx}" y1="{cy}" x2="{X(hl, ha):.1f}" y2="{Y(hl, ha):.1f}" stroke="{NAVY}" stroke-width="10" stroke-linecap="round"/>')
+        body.append(f'<line x1="{cx}" y1="{cy}" x2="{X(ml, ma):.1f}" y2="{Y(ml, ma):.1f}" stroke="{NAVY}" stroke-width="4.4" stroke-linecap="round"/>')
+    if numerals:
+        for k in range(1, 13):
+            if labels == 'quarters' and k % 3: continue
+            body.append(f'<text x="{X(71, k * 30):.1f}" y="{Y(71, k * 30) + 8:.1f}" font-size="23" font-weight="700" text-anchor="middle" fill="{NAVY}" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round" font-family="{FONT}">{k}</text>')
     body.append(f'<circle cx="{cx}" cy="{cy}" r="7" fill="{NAVY}"/>')
     H = 220
     if digital:
         txt = digital if isinstance(digital, str) else f'{h}:{m:02d}'
         if ampm: txt += f' {ampm}'
-        H = 270
-        body.append(token_svg(txt, cx, 246, 200, 44, 38) if txt in ('[]',) else f'<text x="{cx}" y="256" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(txt)}</text>')
+        H = 292
+        if txt == '[]':
+            body.append(f'<rect x="{cx - 65}" y="228" width="130" height="60" rx="9" fill="#fff" stroke="{NAVY}" stroke-width="3.4"/>')
+        else:
+            body.append(f'<text x="{cx}" y="270" font-size="40" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(txt)}</text>')
     return _svg(220, H, ''.join(body), 'clock' if hide_hands else f'clock showing {h}:{m:02d}')
 
 
 # ------------------------------------------------------------------ money
 
-COIN_SIZE = {'5c': 42, '10c': 47, '20c': 52, '50c': 57, '$1': 64}
-NOTE_SIZE = {'$2': (92, 50), '$5': (104, 54), '$10': (116, 58), '$50': (128, 62), '$100': (138, 66)}
+COIN_SIZE = {'5c': 64, '10c': 70, '20c': 76, '50c': 82, '$1': 90}                         # one coin scale for every picture (viewBox is a fixed 620 wide)
+NOTE_SIZE = {'$2': (128, 68), '$5': (140, 72), '$10': (152, 76), '$50': (164, 80), '$100': (176, 84)}
+MONEY_W = 620                                                                              # same width for every money picture, so a coin is the same size in all of them
 
 
 def _canon(v):
@@ -129,44 +137,51 @@ def _show(v):
     return str(v).replace('c', '\u00a2') if str(v).endswith('c') else str(v)
 
 
-def _coin(v, x, y):
-    v = _canon(v); s = COIN_SIZE[v]
-    return (f'<rect x="{x - s / 2:.1f}" y="{y - s / 2:.1f}" width="{s}" height="{s}" rx="{s * 0.28:.1f}" fill="#F3E6B0" stroke="{NAVY}" stroke-width="2.6"/>'
-            f'<rect x="{x - s / 2 + 4:.1f}" y="{y - s / 2 + 4:.1f}" width="{s - 8}" height="{s - 8}" rx="{s * 0.22:.1f}" fill="none" stroke="{NAVY}" stroke-width="1.2"/>'
-            f'<text x="{x:.1f}" y="{y + 7:.1f}" font-size="{19 if len(v) < 4 else 17}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_show(v)}</text>')
+def _coin(v, x, y, s=None):
+    v = _canon(v); s = s or COIN_SIZE[v]
+    fs = s * (0.40 if len(v) < 4 else 0.34)
+    return (f'<rect x="{x - s / 2:.1f}" y="{y - s / 2:.1f}" width="{s:.1f}" height="{s:.1f}" rx="{s * 0.28:.1f}" fill="#F3E6B0" stroke="{NAVY}" stroke-width="2.6"/>'
+            f'<rect x="{x - s / 2 + 4:.1f}" y="{y - s / 2 + 4:.1f}" width="{s - 8:.1f}" height="{s - 8:.1f}" rx="{s * 0.22:.1f}" fill="none" stroke="{NAVY}" stroke-width="1.2"/>'
+            f'<text x="{x:.1f}" y="{y + fs * 0.36:.1f}" font-size="{fs:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_show(v)}</text>')
 
 
-def _note(v, x, y):
-    w, h = NOTE_SIZE[v]
-    return (f'<rect x="{x - w / 2:.1f}" y="{y - h / 2:.1f}" width="{w}" height="{h}" rx="4" fill="#E4F1E8" stroke="{NAVY}" stroke-width="2.6"/>'
-            f'<rect x="{x - w / 2 + 5:.1f}" y="{y - h / 2 + 5:.1f}" width="{w - 10}" height="{h - 10}" rx="3" fill="none" stroke="{NAVY}" stroke-width="1.2" stroke-dasharray="4 3"/>'
-            f'<text x="{x:.1f}" y="{y + 8:.1f}" font-size="26" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>'
-            f'<text x="{x:.1f}" y="{y + h / 2 - 7:.1f}" font-size="8" font-weight="700" text-anchor="middle" fill="#5B6785" font-family="{FONT}">PLAY MONEY</text>')
+def _note(v, x, y, wh=None):
+    w, h = wh or NOTE_SIZE[v]
+    return (f'<rect x="{x - w / 2:.1f}" y="{y - h / 2:.1f}" width="{w:.1f}" height="{h:.1f}" rx="4" fill="#E4F1E8" stroke="{NAVY}" stroke-width="2.6"/>'
+            f'<rect x="{x - w / 2 + 5:.1f}" y="{y - h / 2 + 5:.1f}" width="{w - 10:.1f}" height="{h - 10:.1f}" rx="3" fill="none" stroke="{NAVY}" stroke-width="1.2" stroke-dasharray="4 3"/>'
+            f'<text x="{x:.1f}" y="{y + h * 0.12:.1f}" font-size="{h * 0.46:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{v}</text>'
+            f'<text x="{x:.1f}" y="{y + h / 2 - 7:.1f}" font-size="{max(8, h * 0.13):.1f}" font-weight="700" text-anchor="middle" fill="#3B4A6B" font-family="{FONT}">PLAY MONEY</text>')
 
 
 def money(items=None, per_row=6, total=None, label=None):
     """Stylised play money. items=[{'v':'50c','n':2},{'v':'$5'}] (or plain strings). Coins are rounded squares of growing size, notes are
-    rectangles of growing size, each with its amount printed, so nothing depends on colour. total: text under the money ('[]' box)."""
+    rectangles of growing size, each with its amount printed (coins print the cent sign), so nothing depends on colour.
+    Every picture is MONEY_W wide, so a coin has the same size in every picture; rows wrap when full (per_row caps the pieces in a row).
+    total: text under the money ('[]' box)."""
     items = [(({'v': it} if isinstance(it, str) else it)) for it in (items or [])]
     flat = []
     for it in items: flat += [_canon(it['v'])] * int(it.get('n', 1))
-    cw = 128; rh = 74
-    rows = [flat[i:i + per_row] for i in range(0, len(flat), per_row)] or [[]]
-    W = 20 + min(per_row, max(1, len(flat))) * cw * 0.62 + 40
+    rows = [[]]; x = 20
+    for v in flat:
+        wv = (NOTE_SIZE[v][0] if v in NOTE_SIZE else COIN_SIZE[v])
+        if rows[-1] and (len(rows[-1]) >= per_row or x + wv > MONEY_W - 20):
+            rows.append([]); x = 20
+        rows[-1].append(v); x += wv + 14
+    rh = 100 if any(v in NOTE_SIZE for v in flat) else 96
     body = []
     for r, row in enumerate(rows):
         x = 20
         for v in row:
             wv = (NOTE_SIZE[v][0] if v in NOTE_SIZE else COIN_SIZE[v])
             x += wv / 2
-            body.append(_note(v, x, 40 + r * rh) if v in NOTE_SIZE else _coin(v, x, 40 + r * rh))
+            body.append(_note(v, x, 52 + r * rh) if v in NOTE_SIZE else _coin(v, x, 52 + r * rh))
             x += wv / 2 + 14
-        W = max(W, x + 10)
-    H = 40 + len(rows) * rh
-    if label: body.append(f'<text x="{W / 2:.0f}" y="{H + 18}" font-size="26" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(label)}</text>'); H += 30
+    W = MONEY_W
+    H = 52 + (len(rows) - 1) * rh + 54
+    if label: body.append(f'<text x="{W / 2:.0f}" y="{H + 18}" font-size="30" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(label)}</text>'); H += 34
     if total is not None:
-        H += 56
-        body.append(token_svg(total, W / 2, H - 30, 150, 50, 36) if total in ('[]',) else f'<text x="{W / 2:.0f}" y="{H - 22}" font-size="38" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(total)}</text>')
+        H += 66
+        body.append(token_svg(total, W / 2, H - 34, 170, 60, 40) if total in ('[]',) else f'<text x="{W / 2:.0f}" y="{H - 26}" font-size="44" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(total)}</text>')
     return _svg(W, H, ''.join(body), 'play money ' + ', '.join(_show(x) for x in flat))
 
 
@@ -212,14 +227,21 @@ def calendar(start='Wed', days=31, highlight=(), hide=(), mark=(), week=None, la
 
 # ------------------------------------------------------------------ stick patterns
 
-def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side=64, show_count=False):
+def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side=80, show_count=False):
     """Triangles (3, 5, 7 sticks) or squares (4, 7, 10 sticks) in a row, drawn with sticks (lines). hide_last draws the next pattern as a dashed ghost with '?'."""
     body = []; k = n + (1 if hide_last else 0)
     def stick(x1, y1, x2, y2, ghost=False):
+        # each stick is its own bar: pulled in by GAP at both ends so neighbouring sticks never merge into one line
+        L = math.hypot(x2 - x1, y2 - y1) or 1.0
+        ux, uy = (x2 - x1) / L, (y2 - y1) / L
+        g = 5.5
+        x1, y1, x2, y2 = x1 + ux * g, y1 + uy * g, x2 - ux * g, y2 - uy * g
         dash = ' stroke-dasharray="7 6"' if ghost else ''
         col = '#8A94AD' if ghost else NAVY
-        body.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{col}" stroke-width="7" stroke-linecap="round"{dash}/>')
-    x0 = 24; yb = 120
+        body.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{col}" stroke-width="8" stroke-linecap="butt"{dash}/>')
+        if not ghost:
+            body.append(f'<circle cx="{x1:.1f}" cy="{y1:.1f}" r="4" fill="{YEL}" stroke="{NAVY}" stroke-width="1.6"/><circle cx="{x2:.1f}" cy="{y2:.1f}" r="4" fill="{YEL}" stroke="{NAVY}" stroke-width="1.6"/>')
+    x0 = 24; yb = 20 + side * 0.9 + 6
     if shape == 'triangle':
         h = side * 0.866; half = side / 2
         # zigzag row: points alternate bottom (y=yb) and top (y=yb-h) every half side; triangle j uses points j, j+1, j+2
@@ -241,7 +263,7 @@ def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side
                 stick(x1, y1, x2, y2, g)
         W = x0 * 2 + k * s_
         if hide_last: body.append(f'<text x="{x0 + (k - 0.5) * s_:.0f}" y="{yb - s_ / 2 + 12:.0f}" font-size="34" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">?</text>')
-    H = 170
+    H = yb + 50
     if label_each:
         for j in range(n):
             xx = (x0 + j * (side / 2 * 2 if shape == 'triangle' else side * 0.9) + (side / 2 if shape == 'triangle' else side * 0.45)) if shape != 'triangle' else x0 + j * side / 2 + side / 2
@@ -251,7 +273,7 @@ def stick_pattern(shape='triangle', n=3, hide_last=False, label_each=False, side
 
 # ------------------------------------------------------------------ 2D shapes
 
-def shapes2d(shape='circle', parts=1, shade=(), fold=None, compose=None, size=150, equal_marks=False, label=None):
+def shapes2d(shape='circle', parts=1, shade=(), fold=None, compose=None, size=150, equal_marks=False, label=None):    # size = drawing size in units; the page percentage is the figure's own 'size' (svg.render_visual)
     """shape: circle | half_circle | quarter_circle | square | rectangle | triangle. parts: 1, 2 (halves) or 4 (quarters) equal parts drawn as lines;
     shade = part numbers (1-based) shaded; fold = 'v' | 'h' draws a dashed fold line; compose='house'|'boat' draws a figure made from shapes."""
     S = size; cx = cy = S / 2 + 12; W = S + 24
@@ -343,6 +365,23 @@ def grid(rows=3, cols=3, kind='dots', poly=None, route=None, start=None, end=Non
     return _svg(W, H, ''.join(body), f'{kind} grid {cols} by {rows}')
 
 
+def _badge(letter, x=26, y=26, r=21):
+    """A round letter tag (A, B, C ...) for pictures that are chosen between: cube stacks, folded papers, networks."""
+    return (f'<circle cx="{x}" cy="{y}" r="{r}" fill="#fff" stroke="{NAVY}" stroke-width="3"/>'
+            f'<text x="{x}" y="{y + r * 0.38:.1f}" font-size="{r * 1.15:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(letter)}</text>')
+
+
+def _tagged(svgtxt, letter):
+    """Add a letter badge at the top-left of an already built figure (the viewBox grows 50 units to the left so the badge never covers the picture)."""
+    if not letter: return svgtxt
+    import re as _re
+    m = _re.search(r'viewBox="0 0 (\d+) (\d+)"', svgtxt)
+    w, h = int(m.group(1)), int(m.group(2))
+    inner = svgtxt[svgtxt.index('>') + 1:svgtxt.rindex('</svg>')]
+    head = svgtxt[:svgtxt.index('>') + 1].replace(m.group(0), f'viewBox="0 0 {w + 52} {max(h, 56)}"')
+    return head + _badge(letter, 26, 26) + f'<g transform="translate(52,0)">{inner}</g></svg>'
+
+
 # ------------------------------------------------------------------ cube stack
 
 def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False):
@@ -371,7 +410,8 @@ def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False):
         body.append(f'<text x="{(x1 + w) / 2:.0f}" y="146" font-size="19" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">TOP</text>')
         return _svg(w + 10, 160, ''.join(body), 'front and top views of a stack')
     w3, h3 = s * 0.866, s * 0.5
-    ox = 20 + R * w3; oy = 20 + 3 * s
+    mh = max([h for r_ in heights for h in r_] + [1])
+    ox = 20 + R * w3; oy = 20 + mh * s
     cells = [(r + c, r, c) for r in range(R) for c in range(len(heights[r]))]
     for _, r, c in sorted(cells):
         for z in range(heights[r][c]):
@@ -380,7 +420,7 @@ def cube_stack(heights=((1,),), mode='iso', s=46, hide_count=False):
             left = f'M{x - w3:.1f} {y - s + h3:.1f} l{w3:.1f} {h3:.1f} v{s:.1f} l{-w3:.1f} {-h3:.1f} Z'
             right = f'M{x + w3:.1f} {y - s + h3:.1f} l{-w3:.1f} {h3:.1f} v{s:.1f} l{w3:.1f} {-h3:.1f} Z'
             body.append(f'<path d="{left}" fill="#9FB6DE" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="{right}" fill="#C8D6EF" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/><path d="{top}" fill="#EEF3FB" stroke="{NAVY}" stroke-width="2.4" stroke-linejoin="round"/>')
-    W = 40 + (R + C) * w3; H = 40 + 3 * s + (R + C) * h3 + s
+    W = 40 + (R + C) * w3; H = oy + (R + C) * h3 + 20        # tight to the stack: a low stack is drawn larger
     return _svg(W, H, ''.join(body), 'a stack of cubes')
 
 
@@ -416,8 +456,8 @@ def fold_punch(stage='paper', fold='v', holes=(), size=150):
 FILLS = ['#F6C9D0', '#BFE3DC', '#FFE59A', '#C9B6F0']
 
 
-def _tile_shape(shape, x, y, r, fillc, pat, turn, pid):
-    f = f'url(#{pid}{pat})' if pat else fillc
+def _tile_shape(shape, x, y, r, fillc, pat, turn, pid, shadow=False):
+    f = '#2B3552' if shadow else (f'url(#{pid}{pat})' if pat else fillc)       # shadow: a solid dark silhouette (shadow match)
     st = f'stroke="{NAVY}" stroke-width="3" stroke-linejoin="round"'
     t = f'transform="rotate({turn} {x:.1f} {y:.1f})"'
     if shape == 'circle': return f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{f}" {st}/>'
@@ -432,7 +472,8 @@ def _tile_shape(shape, x, y, r, fillc, pat, turn, pid):
 def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
     """A row or grid of tiles. tile = {shape: circle|square|triangle|star, n: 1-4, size: s|m|l, colour: 0-3, pattern: 0-3, turn: degrees}.
     colour and pattern together show a feature in grey print (pattern 0 plain, 1 stripes, 2 dots, 3 cross-hatch). hide=[index] draws a '?' tile.
-    labels=['A','B',...] prints a letter under each tile (or a '[]' answer box)."""
+    labels=['A','B',...] prints a letter under each tile (or a '[]' answer box). tile 'shadow': true draws that tile as a dark silhouette (shadow match);
+    a tile may also set 'turn'. Every tile with shadow keeps its shape, size, number and turn, so only the inside is hidden."""
     tiles = tiles or []
     cols = cols or len(tiles)
     rows = (len(tiles) + cols - 1) // cols
@@ -455,7 +496,7 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
             elif n == 3: pos = [(0.5, 0.28), (0.28, 0.7), (0.72, 0.7)]
             else: pos = [(0.3, 0.3), (0.7, 0.3), (0.3, 0.7), (0.7, 0.7)]
             for (px, py) in pos:
-                body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid))
+                body.append(_tile_shape(t.get('shape', 'circle'), x0 + px * cell, y0 + py * cell, rad, FILLS[int(t.get('colour', 0)) % 4], int(t.get('pattern', 0)), t.get('turn', 0), pid, bool(t.get('shadow'))))
         if labels:
             lt = labels[i] if i < len(labels) else ''
             body.append(token_svg(lt, x0 + cell / 2, y0 + cell + 24, 60, 40, 28) if lt == '[]' else f'<text x="{x0 + cell / 2}" y="{y0 + cell + 30}" font-size="28" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(lt)}</text>')
@@ -465,17 +506,18 @@ def panel(tiles=None, cols=None, hide=(), labels=None, cell=130, tag='p'):
 
 # ------------------------------------------------------------------ network (handshakes)
 
-def network(n=4, lines=None, all_lines=False, labels=None, r=95, count=None):
+def network(n=4, lines=None, all_lines=False, labels=None, r=95, count=None, tag=None):
     """n dots on a ring; lines=[[a,b],...] (0-based) or all_lines=True for every pair. count='[]' writes an answer box in the middle."""
+    nr = 24 if labels else 17                   # node radius: big enough for a letter or a name that a child can read
     cx = cy = r + 40; body = []
     pts = [(cx + r * math.cos(-math.pi / 2 + 2 * math.pi * k / n), cy + r * math.sin(-math.pi / 2 + 2 * math.pi * k / n)) for k in range(n)]
     ls = [(a, b) for a in range(n) for b in range(a + 1, n)] if all_lines else [tuple(x) for x in (lines or [])]
     for a, b in ls: body.append(f'<line x1="{pts[a][0]:.1f}" y1="{pts[a][1]:.1f}" x2="{pts[b][0]:.1f}" y2="{pts[b][1]:.1f}" stroke="{TEAL}" stroke-width="4"/>')
     for k, (x, y) in enumerate(pts):
-        body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="15" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>')
-        if labels: body.append(f'<text x="{x:.1f}" y="{y + 6:.1f}" font-size="17" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(labels[k])}</text>')
+        body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{nr}" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>')
+        if labels: body.append(f'<text x="{x:.1f}" y="{y + nr * 0.38:.1f}" font-size="{nr * 1.15:.1f}" font-weight="800" text-anchor="middle" fill="{NAVY}" font-family="{FONT}">{_esc(labels[k])}</text>')
     if count is not None: body.append(token_svg(count, cx, cy, 70, 52, 34))
-    return _svg(2 * cx, 2 * cy, ''.join(body), f'{n} dots joined by lines')
+    return _tagged(_svg(2 * cx, 2 * cy, ''.join(body), f'{n} dots joined by lines'), tag)
 
 
 # ------------------------------------------------------------------ picture graph
@@ -528,6 +570,14 @@ def picture_graph(rows=None, icon_name='apple', each=1, title=None, orient='rows
 
 # ------------------------------------------------------------------ dispatch
 
+def _draw_size(v):
+    """Drawing size of a shapes2d / fold_punch figure. 'draw' is the drawing size; 'size' is only the share of the page column
+    (svg.render_visual). Old lessons that gave a number in 'size' and no 'draw' keep drawing at that size."""
+    if v.get('draw') is not None: return v['draw']
+    sz = v.get('size')
+    return sz if isinstance(sz, (int, float)) and not isinstance(sz, bool) and sz >= 60 else 150
+
+
 def render(v):
     t = v['type']
     if t == 'clock': return clock(v.get('h', 12), v.get('m', 0), v.get('hide_hands', False), v.get('labels', 'all'), v.get('digital'), v.get('sector'), v.get('mirror', False), v.get('ampm'))
@@ -535,12 +585,12 @@ def render(v):
     if t == 'price_tag': return price_tag(v.get('item', 'pencil'), v.get('price', '$5'), v.get('hide_price', False))
     if t == 'calendar': return calendar(v.get('start', 'Wed'), v.get('days', 31), v.get('highlight', ()), v.get('hide', ()), v.get('mark', ()), v.get('week'))
     if t == 'stick_pattern': return stick_pattern(v.get('shape', 'triangle'), v.get('n', 3), v.get('hide_last', False), v.get('label_each', False))
-    if t == 'shapes2d': return shapes2d(v.get('shape', 'circle'), v.get('parts', 1), v.get('shade', ()), v.get('fold'), v.get('compose'), v.get('size', 150), label=v.get('label'))
+    if t == 'shapes2d': return _tagged(shapes2d(v.get('shape', 'circle'), v.get('parts', 1), v.get('shade', ()), v.get('fold'), v.get('compose'), _draw_size(v), label=v.get('label')), v.get('tag'))
     if t == 'grid': return grid(v.get('rows', 3), v.get('cols', 3), v.get('kind', 'dots'), v.get('poly'), v.get('route'), v.get('start'), v.get('end'), v.get('squares', ()), v.get('counts'), v.get('mirror'), v.get('mark', ()), v.get('cell', 64))
-    if t == 'cube_stack': return cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso'))
-    if t == 'fold_punch': return fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())])
-    if t == 'panel': return panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130))
-    if t == 'network': return network(v.get('n', 4), v.get('lines'), v.get('all', False), v.get('labels'), count=v.get('count'))
+    if t == 'cube_stack': return _tagged(cube_stack([tuple(r) for r in v.get('heights', [[1]])], v.get('mode', 'iso')), v.get('tag'))
+    if t == 'fold_punch': return _tagged(fold_punch(v.get('stage', 'paper'), v.get('fold', 'v'), [tuple(h) for h in v.get('holes', ())], _draw_size(v)), v.get('tag'))
+    if t == 'panel': return _tagged(panel(v.get('tiles'), v.get('cols'), tuple(v.get('hide', ())), v.get('labels'), v.get('cell', 130)), v.get('tag'))
+    if t == 'network': return network(v.get('n', 4), v.get('lines'), v.get('all', False), v.get('labels'), count=v.get('count'), tag=v.get('tag'))
     if t == 'picture_graph': return picture_graph(v.get('rows'), v.get('icon', 'apple'), v.get('each', 1), v.get('title'), v.get('orient', 'rows'), v.get('key', True), v.get('tally', False))
     return None
 

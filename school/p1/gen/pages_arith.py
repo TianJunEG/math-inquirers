@@ -292,14 +292,14 @@ def page13():
 # ---------------------------------------------------------------- P03 (sharing and grouping within 20)
 def share_svg(kind, n, g, per, mode):
     """objects in rows of 10 on the left; for sharing, g empty containers on the right; for grouping, a dashed loop round the first `per` objects as an example"""
-    pitch = 7.4; rows = (n + 9) // 10; H = rows * 8.6 + 2
+    pitch = 6.6; prow = 14 if n <= 14 else 10; rows = (n + prow - 1) // prow; H = rows * 8.6 + 2
     inner = []
     for i in range(n):
-        inner.append(obj_g(kind, 1 + (i % 10) * pitch, 1.5 + (i // 10) * 8.6))
-    W = 1 + min(n, 10) * pitch + 1
+        inner.append(obj_g(kind, 1 + (i % prow) * pitch, 1.5 + (i // prow) * 8.6))
+    W = 1 + min(n, prow) * pitch + 1
     if mode == "share":
         x0 = W + 6; cw, chh = 15, 10.5
-        per_line = 3 if g <= 3 else (2 if g == 4 else 3); lines = (g + per_line - 1) // per_line
+        per_line = 2 if (n > 8 or g == 4) else 3; lines = (g + per_line - 1) // per_line
         for j in range(g):
             inner.append(container_g(kind, x0 + (j % per_line) * (cw + 3), 1 + (j // per_line) * (chh + 2), cw, chh))
         W = x0 + per_line * (cw + 3)
@@ -329,8 +329,8 @@ def page03():
         items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
-            lim = 20 if k == big else 10
-            g = rng.randint(2, 5 if kind == "group" else 4); per = rng.randint(2, 9 if kind == "group" else 10)
+            lim = 20 if k == big else 14
+            g = rng.randint(2, 7 if kind == "group" else 4); per = rng.randint(2, 9 if kind == "group" else 10)
             if g * per > lim: continue
             items.append((kind, g * per, g, per))
         if len(items) != 6: continue
