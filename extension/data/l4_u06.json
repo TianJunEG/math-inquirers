@@ -767,7 +767,7 @@
     ]
    },
    "hint": "135° is 3 steps of 45°. Write the directions after each turn.",
-   "explanation": "Each turn is 3 steps. The directions are SE, W, NE, S, NW, E, SW, N. It faces N again after 8 turns. 50 turns is 6 lots of 8, which is 48 turns, and 2 more turns. After 48 turns it faces N. 2 more turns take it to SE and then W."
+   "explanation": "Each turn is 3 steps: SE, W, NE, S, NW, E, SW, N. It faces N again after 8 turns. 50 = 6 × 8 + 2, so after 48 turns it faces N, and 2 more turns take it to SE and then W."
   },
   {
    "id": "L4U06-G03",

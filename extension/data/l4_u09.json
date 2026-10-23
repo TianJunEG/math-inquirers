@@ -823,7 +823,7 @@
     ]
    },
    "hint": "Find the sales in January and February first.",
-   "explanation": "On X, January is 4 × 20 = 80 and February is 5 × 20 = 100, so sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Graph Y's line goes up 4 lines and X's goes up 1 line, so Y makes the rise look greater."
+   "explanation": "On X, January is 80 and February is 100: sales rose by 20. On Y: (80 − 60) ÷ 5 = 4 lines and (100 − 60) ÷ 5 = 8 lines. Y's line climbs 4 lines and X's climbs 1, so Y makes the rise look greater."
   },
   {
    "id": "L4U09-G02",

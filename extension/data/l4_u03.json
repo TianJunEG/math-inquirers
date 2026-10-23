@@ -426,7 +426,7 @@
      }
     }
    ],
-   "explanation": "6 × 3 = 18, 18 + 12 = 30, 30 ÷ 3 = 10, 10 − 6 = 4. 15 × 3 = 45, 45 + 12 = 57, 57 ÷ 3 = 19, 19 − 15 = 4. Multiplying by 3 and then dividing by 3 gives back the number. The 12 ÷ 3 adds 4, and taking away the number leaves 4."
+   "explanation": "6 × 3 = 18, 18 + 12 = 30, 30 ÷ 3 = 10, 10 − 6 = 4. 15 gives 45, 57, 19, 4. × 3 then ÷ 3 gives back the number, the 12 ÷ 3 adds 4, and taking away the number leaves 4."
   },
   {
    "id": "L4U03-S09",

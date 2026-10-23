@@ -214,7 +214,7 @@
      "My answer: {l}"
     ]
    },
-   "explanation": "Try the number of notebooks. 1 leaves $36 = 12 pens. 4 leaves $21 = 7 pens. 7 leaves $6 = 2 pens. The other numbers (0, 2, 3, 5, 6, 8) leave amounts that are not multiples of $3. So there are 3 ways, and the fewest pens is 2 with 7 notebooks."
+   "explanation": "1 notebook leaves $36 = 12 pens. 4 leave $21 = 7 pens. 7 leave $6 = 2 pens. Other numbers of notebooks leave amounts that are not multiples of $3. So there are 3 ways, and the fewest pens is 2."
   },
   {
    "id": "L4U10-S03",
@@ -551,7 +551,7 @@
      "Try:"
     ]
    },
-   "explanation": "Try pairs of digits that add up to 12: 39, 48, 57, 66, 75, 84, 93. The swapped numbers are 93, 84, 75, 66, 57, 48, 39. The swapped number is 18 more only for 57 and 75: 75 − 57 = 18. The number must be the smaller one, 57."
+   "explanation": "Digit pairs that add to 12 give 39, 48, 57, 66, 75, 84, 93. The swap is 18 more only for 57, which swaps to 75."
   },
   {
    "id": "L4U10-T01",

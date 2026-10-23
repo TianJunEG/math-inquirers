@@ -283,7 +283,7 @@ def teacher_notes(pages, bk):
     other = "Semester 2 (Terms 3 and 4)" if bk["n"] == 1 else "Semester 1 (Terms 1 and 2)"
     mks = {m for p in pages for m in p.get("mk", ())}
     bullets = [
-        ("code", '<li><b>Code word.</b> The answers give letters that spell a word. The strip gives no hint of the word. Each word can be spelt from its letters in one way only, so answers in the wrong boxes never make another word. A box left empty gives no letter and is not seen by the check.</li>'),
+        ("code", '<li><b>Code word.</b> The answers give letters that spell a word. The strip gives no hint of the word. Each word can be spelt from its letters in one way only, so answers in the wrong boxes never make another word, and one or two wrong answers very rarely do. A box left empty gives no letter and is not seen by the check.</li>'),
         ("cbc", '<li><b>Colour by code.</b> Each answer is found in a key of five numbers and the part is coloured with that crayon. The pupil counts the parts of each colour and compares with the box on the page; matching parts must share a colour.</li>'),
         ("route", '<li><b>Route.</b> The line must reach FINISH through the stated number of boxes, and every box on it must follow the rule on the page.</li>'),
         ("logic", '<li><b>Letters in an order, a grid or a choice.</b> Each number, card, picture or choice carries a letter; the letters, read in the order asked, must spell a word. Where one item is left out, its letter is a decoy that is not part of the word.</li>'),
@@ -291,7 +291,7 @@ def teacher_notes(pages, bk):
         ("loop", '<li><b>Loop.</b> The numbers on touching tiles must match all the way round the loop.</li>'),
     ]
     blt = "".join(t for need, t in bullets if need in mks)
-    ps_ex = {1: 'stories with more than one step and families of multiplication and division facts', 2: 'comparing amounts of money, durations and printed facts'}[bk["n"]]
+    ps_ex = {1: 'stories with more than one step and families of multiplication and division facts', 2: 'comparing amounts of money, lengths of lessons given in hours and minutes and printed facts'}[bk["n"]]
     return ('<section class="page fm notes"><h2>Teacher notes' + (" (DRAFT)"if DRAFT else "") + '</h2>'
             + draft_banner("teacher notes are for owner review.")
             + f'<h3>What this is</h3><p>Twenty single-page maths puzzles for Primary 2 pupils who finish their work early. This is {html.escape(bk["name"])} of two booklets ({html.escape(bk["terms"])}). Each page stands alone, so you can hand out one page or keep a tray of pages. The pupil needs no help to start.</p>'
@@ -309,7 +309,7 @@ def teacher_notes(pages, bk):
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as ' + ps_ex + ', rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li>'
             '<li><b>Drawings.</b> Pictures of rulers, scales, clocks, coins and notes are original drawings, not to scale unless a page says so. Coins and notes are inspired by Singapore money, drawn larger than real and in black and white.</li></ul>'
-            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p>'
+            '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Use normal toner, not a light setting: on the coin pages (Dollars and Cents, Purse Match) a light setting can fill in the small word cents on the coins. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size).</p>'
             '</section>')
 
 def coverage_table(pages, bk):

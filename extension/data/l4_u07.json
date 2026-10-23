@@ -640,7 +640,7 @@
      }
     }
    ],
-   "explanation": "(a) Push the steps out. The staircase fits in a rectangle that is 12 cm by 8 cm, so the perimeter is 2 × (12 + 8) = 40 cm. (b) The rows are 12, 9, 6 and 3 cm long and each is 2 cm high: 2 × (12 + 9 + 6 + 3) = 2 × 30 = 60 cm².",
+   "explanation": "(a) Push the steps out to a 12 cm by 8 cm rectangle: 2 × (12 + 8) = 40 cm. (b) The rows are 12, 9, 6 and 3 cm long and 2 cm high: 2 × 30 = 60 cm².",
    "figside": true
   },
   {

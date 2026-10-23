@@ -898,7 +898,7 @@
     ]
    },
    "hint": "Which faces share an edge with a given face?",
-   "explanation": "(a) A face shares an edge with 4 faces. Two opposite red faces do not share an edge, but a third red face would touch one of them. So the most is 2. (b) 3 faces at one corner are not opposite each other, but a 4th face would be opposite one of them. So the most is 3."
+   "explanation": "(a) A face shares an edge with 4 faces, and a third red face would touch one of 2 opposite red faces. So the most is 2. (b) 3 faces at one corner are not opposite each other, but a 4th would be opposite one. So the most is 3."
   },
   {
    "id": "L4U08-T02",
