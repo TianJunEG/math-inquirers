@@ -60,15 +60,23 @@
    ]
   },
   "try": {
-   "text": "Ali has 480 stamps. Ben has 215 fewer stamps than Ali. How many stamps does Ben have? {b}",
+   "text": "Ravi’s plant is 480 mm tall. Mei’s plant is 215 mm shorter. How tall is Mei’s plant? {b} mm",
    "answer": {
     "value": [
      "265"
     ],
     "text": "265"
    },
-   "explanation": "Ben has fewer, so subtract: 480 - 215 = 265. Check: 265 + 215 = 480.",
+   "explanation": "Mei’s plant is shorter, so subtract: 480 - 215 = 265 mm. Check: 265 + 215 = 480.",
    "id": "L3U04-L01"
+  },
+  "facts": {
+   "title": "More models",
+   "lines": [
+    "Times as many: draw 1 box, then 3 boxes. Count the boxes.",
+    "Total and difference: take away the extra, then share the rest.",
+    "Same after giving: the gap is shared, so half the gap moves."
+   ]
   }
  },
  "items": [
@@ -263,47 +271,9 @@
     }
    ],
    "explanation": "There are 4 equal boxes in all. 140 ÷ 4 = 35, so 1 box is 35. Aisha has 1 box: 35 coins. Ravi has 3 boxes: 3 × 35 = 105 coins.",
-   "figure": {
-    "type": "l3_bars",
-    "rows": [
-     {
-      "segs": [
-       {
-        "w": 1,
-        "t": "Aisha",
-        "style": "plain"
-       },
-       {
-        "w": 1,
-        "t": "Ravi",
-        "style": "plain"
-       },
-       {
-        "w": 1,
-        "t": "Ravi",
-        "style": "plain"
-       },
-       {
-        "w": 1,
-        "t": "Ravi",
-        "style": "plain"
-       }
-      ],
-      "braces": [
-       {
-        "a": 0,
-        "b": 3,
-        "t": "140"
-       }
-      ]
-     }
-    ],
-    "width_mm": 96,
-    "u": 88,
-    "lab": 20
-   },
    "space": {
     "rows": [
+     "Draw your model:",
      "Working:"
     ]
    }
@@ -452,7 +422,7 @@
    "id": "L3U04-S11",
    "tier": "start",
    "page": 3,
-   "text": "Ali has 54 stickers. Ben has 18 fewer stickers than Ali. Ravi says Ben has 54 + 18 = 72 stickers.",
+   "text": "A shop has 54 red pens. It has 18 fewer blue pens than red pens. Kumar says the shop has 54 + 18 = 72 blue pens.",
    "parts": [
     {
      "label": "a",
@@ -466,7 +436,7 @@
     },
     {
      "label": "b",
-     "text": "Ben has {b} stickers.",
+     "text": "The shop has {b} blue pens.",
      "answer": {
       "value": [
        "36"
@@ -475,7 +445,7 @@
      }
     }
    ],
-   "explanation": "Ben has fewer stickers than Ali, so Ben has less than 54. Ravi added instead of subtracting. The right answer is 54 - 18 = 36."
+   "explanation": "There are fewer blue pens than red pens, so fewer than 54. Kumar added instead of subtracting. The right answer is 54 - 18 = 36."
   },
   {
    "id": "L3U04-S12",
@@ -499,6 +469,7 @@
    "id": "L3U04-T01",
    "tier": "think",
    "page": 4,
+   "beyond": "Giving to make them equal",
    "text": "Kumar and Wei have 84 marbles in all. Kumar has 3 times as many marbles as Wei. Kumar gives some marbles to Wei. After that, each boy has the same number of marbles. How many marbles does Kumar give away? {b}",
    "answer": {
     "value": [
@@ -543,7 +514,7 @@
     }
    ],
    "explanation": "The second bill has 3 more pens and costs $23 - $14 = $9 more. So 3 pens cost $9 and 1 pen costs $3. The box costs $14 - 2 × $3 = $8. Check: 8 + 15 = 23.",
-   "hint": "Compare the 2 bills. What do the 3 extra pens cost?",
+   "hint": "What is different between the 2 bills?",
    "space": {
     "rows": [
      "Draw your model:",
@@ -556,6 +527,7 @@
    "id": "L3U04-T03",
    "tier": "think",
    "page": 4,
+   "beyond": "Ages and gaps",
    "text": "Ravi is 7 years old. His father is 35 years old. In how many years will his father be twice as old as Ravi? {b} years",
    "answer": {
     "value": [
@@ -622,7 +594,8 @@
    "id": "L3U04-G02",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 3: One amount changes.\nA shop has 4 times as many red balloons as blue balloons. It sells 18 red balloons. Now the shop has the same number of red and blue balloons. How many balloons did the shop have at first? {b}",
+   "beyond": "One amount changes",
+   "text": "A shop has 4 times as many red balloons as blue balloons. It sells 18 red balloons. Now the shop has the same number of red and blue balloons. How many balloons did the shop have at first? {b}",
    "answer": {
     "value": [
      "30"
