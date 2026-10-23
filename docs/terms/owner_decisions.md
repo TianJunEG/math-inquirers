@@ -198,3 +198,6 @@ Owner replied TERM-YES to the term-plan review (docs/pedagogy/term_review.md). A
 
 ## 23 Oct 2026 (night): KEEP-PAGES
 Owner chose to keep all the added holiday workbook pages. Print pages: Level 1 68, Level 2 74, Level 3 68, Level 4 76, Level 5 62, Level 6 62 (see docs/audit_final/holiday_diagram_fixes_L1_3.md and _L4_6.md; counts in outputs/print/print_spec.json and docs/printing/quote_request.md).
+
+## 23 Oct 2026 (night): WAIT-DIAGRAMS
+Owner chose to wait for the Level 1 term workbook diagram work before releasing the term books. Release plan: Books 1-8 are released together once (a) the Level 1 diagram fixes (term/l1/audit/DIAGRAM_FIXES.md) are done and independently re-checked, (b) lessons 20-40 and all eight books are rebuilt (colour and B&W, check_bw.py ok, even page counts), and (c) the owner says RELEASE. Books 1-4 stay on hold until then.
