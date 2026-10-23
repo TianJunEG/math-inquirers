@@ -3,14 +3,16 @@
 (function () {
   var M = window.MI, h = M.h, app = document.getElementById('app');
   document.getElementById('top').appendChild(M.header('Owner admin'));
+  function mount() { M.mount.apply(M, arguments); M.stack(app); }
+  function msgBox(m) { return m ? (typeof m === 'object' ? h('p', { class: 'msg err', role: 'alert', text: m.err }) : h('p', { class: 'msg ok', role: 'status', text: m })) : null; }
   var filter = 'pending', view = 'enrol', slotLabels = null, productNames = null;
   var WINDOWS = { 'wkday-am': 'Weekday mornings', 'wkday-pm': 'Weekday afternoons', 'wkday-eve': 'Weekday evenings', sat: 'Saturday', sun: 'Sunday' };
   var BANDS = { 'under-6': 'Under 6', '6-7': '6 to 7', '8-9': '8 to 9', '10-11': '10 to 11', '12-13': '12 to 13', '14-plus': '14 or older' };
-  if (!M.configured()) { M.mount(app, h('section', { class: 'card' }, h('p', { text: 'Set SUPABASE_URL and ANON_KEY in portal/config.js first.' }))); return; }
+  if (!M.configured()) { mount(app, h('section', { class: 'card' }, h('p', { text: 'Set SUPABASE_URL and ANON_KEY in portal/config.js first.' }))); return; }
 
   async function login() {
     var box = h('div'), em = h('input', { type: 'email', id: 'email' }), pw = h('input', { type: 'password', id: 'password' });
-    M.mount(app, h('section', { class: 'card pop' }, h('h1', { text: 'Owner log in' }),
+    mount(app, h('section', { class: 'card pop' }, h('h1', { text: 'Owner log in' }),
       h('form', { novalidate: true, onsubmit: async function (ev) { ev.preventDefault();
         var r = await M.sb().auth.signInWithPassword({ email: em.value.trim(), password: pw.value });
         if (r.error) return M.notice(box, 'err', M.errText(r.error)); load(); } },
@@ -21,13 +23,14 @@
   async function load(msg) {
     var sb = M.sb(), s = await sb.auth.getSession();
     if (!s.data.session) return login();
+    if (document.getElementById('viewtabs')) mount(app, viewTabs(), h('p', { class: 'muted', role: 'status', text: 'Loading...' }));
     if (view === 'interest') return loadInterest(msg);
     if (view === 'products') return loadProducts(msg);
     var res = await Promise.all([sb.rpc('admin_list_enrolments'), sb.rpc('group_fill'), sb.from('groups').select('id,name,seats').order('id')]);
     if (res[0].error) {
       var forbidden = /forbidden|42501/.test(res[0].error.message + (res[0].error.code || ''));
-      return M.mount(app, h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Error' }),
-        h('p', { text: forbidden ? 'This login is not in the admins table. See portal/README.md.' : M.errText(res[0].error) }),
+      return mount(app, h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Could not load enrolments' }),
+        h('p', { text: forbidden ? 'You are logged in, but this login is not set up as an owner. See portal/README.md. You can log out and try another account.' : M.errText(res[0].error) }),
         h('button', { class: 'btn alt', type: 'button', text: 'Log out', onclick: async function () { await sb.auth.signOut(); login(); } })));
     }
     draw(res[0].data || [], res[1].data || [], res[2].data || [], msg);
@@ -46,7 +49,7 @@
     var tabs = h('div', { class: 'tabs' }, ['pending', 'paid', 'all'].map(function (f) {
       return h('button', { type: 'button', 'aria-pressed': String(filter === f), text: f === 'pending' ? 'Awaiting payment' : f === 'paid' ? 'Paid' : 'All', onclick: function () { filter = f; draw(rows, fill, groups); } });
     }));
-    var table = h('div', { class: 'scroll' }, h('table', { id: 'enrolments' },
+    var table = !shown.length ? h('p', { class: 'empty muted', id: 'noEnrolments', text: filter === 'pending' ? 'Nothing is waiting for payment.' : 'Nothing to show here yet.' }) : h('div', { class: 'scroll' }, h('table', { id: 'enrolments' },
       h('thead', null, h('tr', null, ['Reference', 'Child', 'Parent', 'Group', 'Method', 'Amount', 'Status', ''].map(function (x) { return h('th', { text: x }); }))),
       h('tbody', null, shown.map(function (r) {
         return h('tr', { 'data-enrolment': r.enrolment_id },
@@ -57,11 +60,11 @@
           h('td', null, r.payment_status === 'pending' && r.enrolment_status !== 'cancelled' ? h('button', { class: 'btn sm', type: 'button', 'data-mark-paid': r.payment_reference, text: 'Mark paid', onclick: async function () {
             if (!confirm('Mark ' + r.payment_reference + ' (' + M.money(r.amount_cents) + ') as paid? Check your bank first.')) return;
             var x = await M.sb().rpc('admin_mark_paid', { p_payment: r.payment_id, p_note: 'PayNow ticked by owner' });
-            load(x.error ? M.errText(x.error) : 'Marked ' + r.payment_reference + ' paid.'); } }) : null));
+            load(x.error ? { err: M.errText(x.error) } : 'Marked ' + r.payment_reference + ' paid.'); } }) : null));
       }))));
-    M.mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Enrolments' }),
+    mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Enrolments' }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); login(); } })),
-      msg ? h('p', { class: 'msg info', text: msg }) : null, fillCard,
+      msgBox(msg), fillCard,
       h('section', { class: 'card' }, h('h2', { text: shown.length + ' shown' }), tabs, table));
   }
   function viewTabs() {
@@ -83,8 +86,8 @@
     if (bad) {
       var forbidden = /forbidden|42501/.test(bad.message + (bad.code || ''));
       var missing = /admin_interest|PGRST202|42883|does not exist|schema cache/.test(bad.message + (bad.code || ''));
-      return M.mount(app, viewTabs(), h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Interest requests unavailable' }),
-        h('p', { text: forbidden ? 'This login is not in the admins table. See portal/README.md.' : missing ? 'Run portal/supabase/interest_requests.sql in the Supabase SQL editor first.' : M.errText(bad) })));
+      return mount(app, viewTabs(), h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Interest requests unavailable' }),
+        h('p', { text: forbidden ? 'You are logged in, but this login is not set up as an owner. See portal/README.md. You can log out and try another account.' : missing ? 'Run portal/supabase/interest_requests.sql in the Supabase SQL editor first.' : M.errText(bad) })));
     }
     drawInterest(res[0].data || [], res[1].data || [], msg);
   }
@@ -105,7 +108,7 @@
       tallyRows.length ? h('div', { class: 'scroll' }, h('table', { id: 'tally' }, h('thead', null, h('tr', null, ['Level', 'Time', 'Requests'].map(function (x) { return h('th', { text: x }); }))), h('tbody', null, tallyRows)))
                        : h('p', { id: 'noInterest', class: 'muted', text: 'No requests yet.' }));
     function times(r) { return (r.slots || []).map(slotName).concat((r.windows || []).map(function (w) { return WINDOWS[w] || w; })).concat(r.other_time ? ['Other: ' + r.other_time] : []).join('; '); }
-    function act(fn, ok) { return async function () { var x = await fn(); loadInterest(x.error ? M.errText(x.error) : ok); }; }
+    function act(fn, ok) { return async function () { var x = await fn(); loadInterest(x.error ? { err: M.errText(x.error) } : ok); }; }
     var list = h('div', { class: 'scroll' }, h('table', { id: 'requests' },
       h('thead', null, h('tr', null, ['Received', 'Level', 'Age', 'Times', 'Parent', 'Contact', 'Note', 'Status', ''].map(function (x) { return h('th', { text: x }); }))),
       h('tbody', null, rows.map(function (r) {
@@ -120,14 +123,14 @@
               if (!confirm('Delete this request for good? Do this when the parent asks, or once it is dealt with.')) return;
               act(function () { return sb.rpc('admin_delete_interest_request', { p_id: r.id }); }, 'Deleted.')(); } })));
       }))));
-    M.mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Interest in other times' }),
+    mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Interest in other times' }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await sb.auth.signOut(); login(); } })),
-      msg ? h('p', { class: 'msg info', text: msg }) : null, tallyCard,
+      msgBox(msg), tallyCard,
       h('section', { class: 'card' }, h('h2', { text: rows.length + ' requests' }),
         h('p', { class: 'small muted', text: 'Placeholder times only: nothing here is a booking. Contact only about timing. Requests are deleted after 12 months (default).' }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'purge', text: 'Delete expired requests', onclick: async function () {
           if (!confirm('Delete every request older than its retention date?')) return;
-          var x = await sb.rpc('admin_purge_expired_interest_requests'); loadInterest(x.error ? M.errText(x.error) : 'Deleted ' + x.data + ' expired request(s).'); } }),
+          var x = await sb.rpc('admin_purge_expired_interest_requests'); loadInterest(x.error ? { err: M.errText(x.error) } : 'Deleted ' + x.data + ' expired request(s).'); } }),
         rows.length ? list : h('p', { class: 'muted', text: 'No requests yet.' })));
   }
 
@@ -143,8 +146,8 @@
     if (bad) {
       var forbidden = /forbidden|42501/.test(bad.message + (bad.code || ''));
       var missing = /admin_product_interest|PGRST202|42883|does not exist|schema cache/.test(bad.message + (bad.code || ''));
-      return M.mount(app, viewTabs(), h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Shop interest unavailable' }),
-        h('p', { text: forbidden ? 'This login is not in the admins table. See portal/README.md.' : missing ? 'Run portal/supabase/product_interest.sql in the Supabase SQL editor first (after reviewing it).' : M.errText(bad) })));
+      return mount(app, viewTabs(), h('section', { class: 'card' }, h('h1', { text: forbidden ? 'Not an admin' : 'Shop interest unavailable' }),
+        h('p', { text: forbidden ? 'You are logged in, but this login is not set up as an owner. See portal/README.md. You can log out and try another account.' : missing ? 'Run portal/supabase/product_interest.sql in the Supabase SQL editor first (after reviewing it).' : M.errText(bad) })));
     }
     drawProducts(res[0].data || [], res[1].data || [], msg);
   }
@@ -152,7 +155,7 @@
     var sb = M.sb(), FMT = { soft: 'Soft copy', physical: 'Physical copy' };
     function pname(id) { return productNames && productNames[id] ? productNames[id] + ' (' + id + ')' : id; }
     function itemsText(items) { return (items || []).map(function (i) { return pname(i.product) + ', ' + (FMT[i.format] || i.format) + (i.format === 'physical' && i.qty > 1 ? ' x' + i.qty : ''); }).join('; '); }
-    function act(fn, ok) { return async function () { var x = await fn(); loadProducts(x.error ? M.errText(x.error) : ok); }; }
+    function act(fn, ok) { return async function () { var x = await fn(); loadProducts(x.error ? { err: M.errText(x.error) } : ok); }; }
     var total = tally.filter(function (r) { return r.product === '*'; })[0];
     var trs = tally.filter(function (r) { return r.product !== '*'; }).map(function (r) {
       return h('tr', { 'data-product': r.product, 'data-format': r.format }, h('td', { text: pname(r.product) }), h('td', { text: FMT[r.format] || r.format }), h('td', { text: String(r.requests) }), h('td', { text: String(r.copies) }));
@@ -174,14 +177,14 @@
               if (!confirm('Delete this request for good? Do this when the parent asks, or once they have been told the product is ready.')) return;
               act(function () { return sb.rpc('admin_delete_product_interest', { p_id: r.id }); }, 'Deleted.')(); } })));
       }))));
-    M.mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Shop interest' }),
+    mount(app, viewTabs(), h('div', { class: 'row' }, h('h1', { text: 'Shop interest' }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await sb.auth.signOut(); login(); } })),
-      msg ? h('p', { class: 'msg info', text: msg }) : null, tallyCard,
+      msgBox(msg), tallyCard,
       h('section', { class: 'card' }, h('h2', { text: rows.length + ' requests' }),
         h('p', { class: 'small muted', text: 'Not orders: nothing is paid or reserved. Contact only to say a product is ready. Requests are deleted after 12 months (default).' }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'ppurge', text: 'Delete expired requests', onclick: async function () {
           if (!confirm('Delete every request older than its retention date?')) return;
-          var x = await sb.rpc('admin_purge_expired_product_interest'); loadProducts(x.error ? M.errText(x.error) : 'Deleted ' + x.data + ' expired request(s).'); } }),
+          var x = await sb.rpc('admin_purge_expired_product_interest'); loadProducts(x.error ? { err: M.errText(x.error) } : 'Deleted ' + x.data + ' expired request(s).'); } }),
         rows.length ? list : h('p', { class: 'muted', text: 'No requests yet.' })));
   }
   load();

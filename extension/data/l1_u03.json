@@ -8,9 +8,9 @@
  "holiday_lesson": 3,
  "goal": "I can read a picture graph and use it to add and compare.",
  "learn": {
-  "intro": "A picture graph uses pictures to show how many. The key tells us what 1 picture means. Count the pictures in a row.",
+  "intro": "A picture graph uses pictures to show how many. The key tells what 1 picture means.",
   "example": {
-   "problem": "The graph shows books borrowed in 1 week. How many more books on Tuesday than on Thursday?",
+   "problem": "The graph shows books borrowed in 1 week. How many more on Tuesday than on Thursday?",
    "figure": {
     "type": "picture_graph",
     "title": "Books borrowed",
@@ -37,7 +37,7 @@
    },
    "steps": [
     "Read the key. 1 picture is 1 book.",
-    "Count the Tuesday row: 7 books. Count the Thursday row: 2 books.",
+    "Tuesday has 7 books. Thursday has 2 books.",
     "\"How many more\" asks for the gap. Subtract: 7 - 2 = 5. Check: 2 + 5 = 7."
    ],
    "answer": "5 more books are borrowed on Tuesday. 7 - 2 = 5."
@@ -52,7 +52,7 @@
   },
   "try": {
    "id": "L1U03-L01",
-   "text": "Look at the graph. How many more shells does Ben have than Kumar? {b} shells",
+   "text": "How many more shells does Ben have than Kumar? {b} shells",
    "figure": {
     "type": "picture_graph",
     "icon": "star",

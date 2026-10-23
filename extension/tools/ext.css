@@ -167,3 +167,5 @@ body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-s
 
 .item{position:relative}
 .beyond{position:absolute;top:-2.4mm;right:5mm;background:#fff;padding:0 2mm;font:800 9pt/1.2 'Nunito Sans',sans-serif;letter-spacing:.02em}
+.lic p{margin:0 0 2mm;font:500 11pt/1.35 'Nunito Sans',sans-serif}.lic .box p:last-child{margin-bottom:0}.lic .box ul{font:500 11pt/1.35 'Nunito Sans',sans-serif}
+.grid.pace td{padding:1mm 1.4mm}

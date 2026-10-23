@@ -80,9 +80,18 @@
   themeInit();
   function header(subtitle) {
     return h('header', { class: 'top' },
+      h('a', { class: 'skip', href: '#app', text: 'Skip to content' }),
       h('a', { class: 'brand', href: '/' }, h('i', { text: '?' }), h('span', { text: CFG.SITE_NAME || 'Math Inquirers' })),
       h('span', { class: 'sub', text: subtitle || '' }));
   }
-  window.MI = { say: say, h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
+  // Mobile: tables become one card per row. Copies each header label onto its cells (the CSS shows them).
+  function stack(root) {
+    [].forEach.call((root || document).querySelectorAll('table'), function (t) {
+      var heads = [].map.call(t.querySelectorAll('thead th'), function (th) { return th.textContent; });
+      t.classList.add('stack');
+      [].forEach.call(t.querySelectorAll('tbody tr'), function (tr) { [].forEach.call(tr.children, function (td, i) { td.setAttribute('data-label', heads[i] || ''); }); });
+    });
+  }
+  window.MI = { stack: stack, say: say, h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
                 fmtDate: fmtDate, notice: notice, header: header, CFG: CFG, VERSIONS: VERSIONS };
 })();

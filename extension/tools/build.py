@@ -69,6 +69,25 @@ def legend():
             f'<div>{ICON["quiz"].replace("<svg", "<svg fill=\"none\" stroke=\"currentColor\"")}<span><b>Check yourself.</b> Four quick questions at the end.</span></div></div>')
 
 
+def licence(book, theme, ctx):
+    # DRAFT wording for the owner; to be reviewed by the lawyer (docs/legal/review.md, item L4). No price, no syllabus claim.
+    return ('<div class="pbody lic"><div class="h1">About this book</div>'
+            f'<p><b>Math Inquirers Extension Workbook, Level {book["level"]}</b><br>Self-study practice with answers.</p>'
+            '<div class="box"><h3>Copyright</h3><p>&copy; 2026 Preciouslyours Pte Ltd (UEN 201507566K), trading as Math Inquirers. All rights reserved. '
+            'Text, questions, drawings and the Mi the dolphin character are our own work.</p></div>'
+            '<div class="box"><h3>Licence for personal use</h3><p>You may use this book for the learning of one child or one family. '
+            'You may make copies of single pages for that child only, for example to redo a page.</p>'
+            '<p>Please do not share, post, sell, lend out in bulk, upload or copy the book (print or PDF) for other people, other families, '
+            'classes, tuition centres or schools. If you would like to use it with a group, please contact us first.</p>'
+            '<p>This soft copy is licensed to the buyer. It is not a transfer of ownership.</p></div>'
+            '<div class="box"><h3>Good to know</h3><ul><li>This is a private-enrichment book. It is not an official school or examination book, '
+            'and it makes no promise about any test result.</li>'
+            '<li>We have checked the answers with care. If you find a mistake, please tell us so we can fix it.</li>'
+            '<li>Printed copies are black and white. The soft copy has the same pages in colour.</li></ul></div>'
+            '<div class="box"><h3>Contact</h3><p>Math Inquirers, business WhatsApp +65 9880 5962. Email: [business email, owner to add]. Registered office: [address, owner to add].</p></div>'
+            '<p class="note">Edition 1, 2026. First printing.</p></div>')
+
+
 def welcome(book, theme, ctx):
     return (f'<div class="pbody"><div style="display:flex;align-items:flex-end"><div><div class="h1">Welcome!</div>'
             f'<div class="lead">This book is for you to explore at your own pace. Every unit has 7 pages. You do not need a teacher.</div></div>'
@@ -99,7 +118,8 @@ def contents(book, theme, ctx):
     extra = (f'<tr><td class="n"></td><td class="t"><b>My progress</b></td><td class="p">page {ctx["progress_pg"]}</td></tr>'
              f'<tr><td class="n"></td><td class="t"><b>My certificate</b></td><td class="p">page {ctx["progress_pg"] + 1}</td></tr>'
              f'<tr><td class="n"></td><td class="t"><b>Answers</b><small>For grown-ups, with short reasons</small></td><td class="p">page {ctx["divider_pg"]}</td></tr>')
-    return f'<div class="pbody"><div class="h1">Contents</div><table class="toc">{"".join(rows)}{extra}</table></div>'
+    front = '<tr><td class="n"></td><td class="t"><b>About this book</b><small>Copyright and licence</small></td><td class="p">page 2</td></tr>'
+    return f'<div class="pbody"><div class="h1">Contents</div><table class="toc">{front}{"".join(rows)}{extra}</table></div>'
 
 
 def pace(book, theme, ctx):
@@ -107,17 +127,16 @@ def pace(book, theme, ctx):
     for n, title in enumerate(book['unit_titles'], 1):
         if n in ctx['unit_start']:
             s = ctx['unit_start'][n]
-            rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td>Pages {s}-{s + 1}<br>Learn it, Start here</td><td>Pages {s + 2}-{s + 3}<br>Start here</td><td>Pages {s + 4}-{s + 6}<br>Think harder, Go further, Check yourself</td>'
+            rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td>{s}-{s + 1}</td><td>{s + 2}-{s + 3}</td><td>{s + 4}-{s + 6}</td>'
                         '<td><span class="tick"></span></td></tr>')
         else:
             rows.append(f'<tr><td><b>{n}</b></td><td class="l"><b>{esc(title)}</b></td><td colspan="3">Not in this proof edition</td><td><span class="tick"></span></td></tr>')
     return ('<div class="pbody"><div class="h1">My pace plan</div>'
-            '<div class="lead">One unit a week for 10 weeks. Three short sessions a week, about 20 to 25 minutes each. Tick the box when the week is done.</div>'
-            '<table class="grid"><tr><th>Week</th><th>Unit</th><th>Session 1</th><th>Session 2</th><th>Session 3</th><th>Done</th></tr>' + ''.join(rows) +
+            '<div class="lead">Numbers in the table are page numbers. One unit a week for 10 weeks. Three short sessions a week, about 20 to 25 minutes each. Tick the box when the week is done.</div>'
+            '<table class="grid pace"><tr><th>Week</th><th>Unit</th><th>Session 1<br><small>Learn it, Start here</small></th><th>Session 2<br><small>Start here</small></th><th>Session 3<br><small>Think harder, Go further, Check yourself</small></th><th>Done</th></tr>' + ''.join(rows) +
             '<tr><td><b>11</b></td><td class="l"><b>Catch-up week</b></td><td colspan="3">Repeat any Check yourself where your score was 2 or less.</td><td><span class="tick"></span></td></tr></table>'
-            '<div class="box"><h3>Tips for the grown-up</h3><ul><li>Short and often works better than one long session. Stop while your child still wants more.</li>'
-            '<li>Sessions 1 and 2 are the main path. Session 3 has the harder pages: it is fine to do only some of them.</li>'
-            '<li>Missed a week? Just carry on. There is no deadline.</li></ul></div></div>')
+            '<div class="box"><h3>Tips for the grown-up</h3><ul><li>Short and often beats one long session. Stop while your child still wants more.</li>'
+            '<li>Session 3 has the harder pages: it is fine to do only some of them. Missed a week? Carry on.</li></ul></div></div>')
 
 
 def progress(book, theme, ctx):
@@ -199,7 +218,7 @@ def build(level, unit_ids, outdir):
             blocks += bl; block_unit += [u['unit']] * len(bl)
         apages = paginate_answers(page, blocks, css, cfg_vars)
         U = len(units)
-        F = 4
+        F = 5
         PPU = PG['pages_per_unit']
         unit_start = {u['unit']: F + 1 + PPU * i for i, u in enumerate(units)}
         progress_pg = F + PPU * U + 1
@@ -219,6 +238,7 @@ def build(level, unit_ids, outdir):
                 nonlocal no
                 secs.append(section(kind, body, no, edition, **kw)); no += 1
             add('cover', cover(book, theme), exempt=True, label='Cover')
+            add('front', head_front('About this book', book) + licence(book, theme, ctx), label='About this book', exempt=True)
             add('front', head_front('Welcome', book) + welcome(book, theme, ctx), label='Welcome', exempt=True)
             add('front', head_front('Contents', book) + contents(book, theme, ctx), label='Contents', exempt=True)
             add('front', head_front('Pace plan', book) + pace(book, theme, ctx), label='Pace plan', exempt=True)
@@ -287,7 +307,7 @@ def finalise(built, units, ctx, level, lv):
         w.add_metadata({'/Title': f'Math Inquirers Extension Workbook Level {level} ({"soft copy, colour" if ed == "soft" else "print, black and white"})',
                         '/Author': 'Math Inquirers', '/Subject': 'Self-study extension workbook with answers'})
         if ed == 'soft':
-            w.add_outline_item('Contents', 2)
+            w.add_outline_item('Contents', 3)
             for u in units:
                 w.add_outline_item(f'Unit {u["unit"]}: {u["title"]}', ctx['unit_start'][u['unit']] - 1)
             w.add_outline_item('My progress', ctx['progress_pg'] - 1)

@@ -71,7 +71,8 @@
     } },
       S.tab === 'signup' ? h('p', null, h('label', { for: 'fullname', text: 'Your name (parent or guardian)' }), name) : null,
       h('p', null, h('label', { for: 'email', text: 'Email' }), email),
-      S.tab !== 'magic' ? h('p', null, h('label', { for: 'password', text: 'Password' }), pw) : null,
+      S.tab !== 'magic' ? h('p', null, h('label', { for: 'password', text: 'Password' }), pw, h('span', { class: 'small muted', text: S.tab === 'signup' ? 'At least 8 characters.' : 'Forgot it? Use the "Magic link" tab to get a log-in link by email.' })) : null,
+      S.tab === 'magic' ? h('p', { class: 'small muted', text: 'We email you a link. Click it on this device to log in, with no password.' }) : null,
       h('p', null, h('button', { class: 'btn', type: 'submit', text: { login: 'Log in', signup: 'Create parent account', magic: 'Email me a link' }[S.tab] })));
     var tabs = h('div', { class: 'tabs', role: 'group', 'aria-label': 'Account' }, ['login', 'signup', 'magic'].map(function (t) {
       return h('button', { type: 'button', 'aria-pressed': String(S.tab === t), text: { login: 'Log in', signup: 'Sign up', magic: 'Magic link' }[t],
@@ -84,7 +85,7 @@
   }
 
   // ---------------- signed in ----------------
-  function section(title, intro) { return h('section', { class: 'card' }, h('h2', { text: title }), intro ? h('p', { class: 'muted small', text: intro }) : null); }
+  function section(title, intro, id) { return h('section', { class: 'card', id: id },  h('h2', { text: title }), intro ? h('p', { class: 'muted small', text: intro }) : null); }
   function levelOptions(sel) {
     var ages = {}; S.groups.forEach(function (g) { ages[g.level] = g.ages; });
     return [1, 2, 3, 4, 5, 6].map(function (n) {
@@ -95,7 +96,8 @@
   function requiredOk() { return CONSENT_TEXT.every(function (c) { return !c[1] || (S.consents[c[0]] && S.consents[c[0]].granted); }); }
 
   function childrenCard() {
-    var c = section('My children', 'Use a first name or nickname. We do not collect photos, school or NRIC.');
+    var c = section('My children', 'Use a first name or nickname. We do not collect photos, school or NRIC.', 'my-children');
+    if (!S.children.length) c.appendChild(h('p', { class: 'empty muted', text: 'No children added yet. Add one below to get started.' }));
     S.children.forEach(function (ch) {
       var row = h('div', { class: 'child', 'data-child': ch.id });
       var show = function () {
@@ -146,7 +148,7 @@
 
   function consentCard() {
     var boxes = {}; var done = requiredOk();
-    var c = section('Agreements', 'Read the ' + '' + 'terms and the privacy and recording notice first. The first four are needed to join a live recorded group; the last is optional. You can change your mind at any time.');
+    var c = section('Agreements', 'Read the ' + '' + 'terms and the privacy and recording notice first. The first four are needed to join a live recorded group; the last is optional. You can change your mind at any time.', 'agreements');
     c.appendChild(h('p', { class: 'small' }, h('a', { href: '/terms/', target: '_blank', rel: 'noopener', text: 'Terms and refund policy' }), ' | ',
       h('a', { href: '/privacy/', target: '_blank', rel: 'noopener', text: 'Privacy and recording notice' })));
     CONSENT_TEXT.forEach(function (t) {
@@ -168,7 +170,7 @@
   }
 
   function enrolCard() {
-    var c = section('Choose a group', 'Beta: 5 weeks, 10 lessons of 90 minutes (Singapore time), groups of up to 8.');
+    var c = section('Choose a group', 'Beta: 5 weeks, 10 lessons of 90 minutes (Singapore time), groups of up to 8.', 'choose-group');
     if (!S.children.length) { c.appendChild(h('p', { text: 'Add a child above first.' })); return c; }
     var any = false;
     S.children.forEach(function (ch) {
@@ -196,7 +198,7 @@
   }
 
   function paymentCard() {
-    var c = section('Places and payments');
+    var c = section('Places and payments', null, 'payments');
     if (!S.enrols.length) { c.appendChild(h('p', { class: 'muted', text: 'Nothing reserved yet.' })); return c; }
     S.enrols.forEach(function (e) {
       var g = S.groups.filter(function (x) { return x.id === e.group_id; })[0];
@@ -235,7 +237,7 @@
   }
 
   function accountCard() {
-    var c = section('Your details and data');
+    var c = section('Your details and data', null, 'details');
     var nm = h('input', { type: 'text', id: 'pname', value: S.parent.full_name || '', maxlength: 100 });
     var ph = h('input', { type: 'tel', id: 'pphone', value: S.parent.phone || '', maxlength: 30, autocomplete: 'tel' });
     c.appendChild(h('form', { novalidate: true, onsubmit: function (ev) { ev.preventDefault();
@@ -255,13 +257,28 @@
     return c;
   }
 
+  function nextStep() {
+    var live = S.enrols.filter(function (e) { return e.enrolment_status !== 'cancelled'; });
+    var pend = live.filter(function (e) { return e.payment_status === 'pending'; });
+    var t, href;
+    if (pend.length) { t = 'Next step: pay for the reserved place to confirm it.'; href = '#payments'; }
+    else if (!S.children.length) { t = 'Next step: add your child.'; href = '#my-children'; }
+    else if (!requiredOk()) { t = 'Next step: save the four needed agreements.'; href = '#agreements'; }
+    else if (S.children.some(function (c) { return !hasActiveEnrol(c.id); })) { t = 'Next step: choose a group and reserve a place.'; href = '#choose-group'; }
+    else { t = 'You are all set for now.'; }
+    return h('p', { class: 'msg info next', id: 'next-step' }, t, href ? ' ' : null, href ? h('a', { href: href, text: 'Go there' }) : null);
+  }
   function draw() {
     if (!M.configured()) return render(h('section', { class: 'card pop' }, h('h1', { text: 'Portal not set up yet' }), h('p', { text: 'The owner still needs to put the Supabase URL and anon key in portal/config.js (see portal/README.md).' })));
-    if (!S.session || !S.parent) return drawAuth();
+    if (S.session && !S.parent) return render([flashBox(), h('section', { class: 'card pop' }, h('h1', { text: 'We could not load your account' }),
+      h('p', { text: 'This is usually a weak connection. Your details are safe. Try again, or log out and log back in.' }),
+      h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', id: 'retry', text: 'Try again', onclick: function () { flash(null); refresh(); } }),
+        h('button', { class: 'btn alt', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); flash(null); await refresh(); } })))]);
+    if (!S.session) return drawAuth();
     var q = new URLSearchParams(location.search);
     var back = q.get('paid') ? h('div', { class: 'msg info', 'data-return': 'paid', text: 'Thanks. We confirm your place when Stripe tells us the payment has gone through. For a card this takes a few seconds; PayNow can take a little longer. Refresh this page in a minute if it still says pending.' })
       : q.get('cancelled') ? h('div', { class: 'msg info', 'data-return': 'cancelled', text: 'Payment cancelled, nothing was charged. Your place is still held while payment is pending; use the Pay button below to try again.' }) : null;
-    render([flashBox(), back,
+    render([flashBox(), back, nextStep(),
       h('div', { class: 'row' }, h('h1', { text: 'Hello' + (S.parent.full_name ? ', ' + S.parent.full_name : '') }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); flash(null); await refresh(); } })),
       paymentCard(), childrenCard(), consentCard(), enrolCard(), familyCard(), accountCard()]);

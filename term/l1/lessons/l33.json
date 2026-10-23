@@ -1,0 +1,4076 @@
+{
+ "schema_version": 1,
+ "id": "l1-t4-03",
+ "level": 1,
+ "term": 4,
+ "lesson": 33,
+ "lesson_in_term": 3,
+ "title": "Copy on the Grid",
+ "big_idea": "A grid lets us say exactly where things are and copy them exactly",
+ "child_idea": "On a grid of dots we count the steps between the dots. Then we can say exactly where to go and copy a figure exactly.",
+ "skill": "Describing position and copying exactly",
+ "ages": "6-8",
+ "moe": {
+  "strand": "Geometry: 2D shapes, copy figures on a dot or square grid (Primary 1, p. 32)",
+  "topics": [
+   "Copy figures on a dot or square grid (Primary 1, Geometry, 1.4, p. 32)",
+   "Position words: left, right, up and down, and counting steps between dots (Primary 1 process skills)",
+   "Listing every case without missing one (Primary 1 heuristics, pp. 13 to 14)"
+  ],
+  "note": "Strand label for the tutor only. Copying figures on a dot or square grid is a listed Primary 1 outcome (Geometry, 1.4). Coordinates are not in the syllabus anywhere, so the lesson says only '3 right, 2 up' from a start dot, never a pair of numbers. Start here is Primary 1 work with scaffolding: copy a figure by counting the steps between the dots, say a move as right and up, follow directions with right and up, pick the exact copy, finish a rectangle and read a path. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: counting how many different routes there are on a grid when a counter moves only right or up (how many ways, a listing and counting move), a path that repeats (continue a pattern), the left move, adding at the corners to count the routes on a bigger grid, and a route that must pass a given corner. Named puzzle: Count the Routes. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. There is no school-paper evidence for grid copying (P1 paper patterns, section 6), so the wording is unverified. Non-routine types (tutor only): how many ways (routes in a small grid), continue a path from its directions."
+ },
+ "contest_moves": [
+  "count the routes: right or up only, listing every route in order so none is missed (how many ways)",
+  "continue a path from its directions (a repeating pattern)",
+  "a route that must pass a given corner (join two counts)",
+  "add at the corners to count the routes on a bigger grid"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Copy a figure exactly on a dot grid by counting the steps between the dots, not the dots.",
+  "Say a move from a start dot as how many right and how many up, and follow directions with right and up.",
+  "Pick the exact copy of a figure and finish a rectangle from three corners.",
+  "Think harder: list every route that goes only right or up on a small grid, continue a repeating path, and follow a path with a left move.",
+  "Go further: add the corner numbers to count the routes on a bigger grid, count the routes that pass a given corner, and describe a figure for a friend to copy."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Rows and columns of counters (Term 2 Lesson 5, taught again with a picture)",
+   "Steps between dots in a row (Term 1 Lesson 6, jumps, taught again with a picture)",
+   "Right and up on a grid of squares (Term 1 Lesson 11, position words, taught again with a picture)"
+  ],
+  "assumes": "Only counting to 10 and knowing which way is right and which way is up. Nothing from the lessons before is needed: the warm-up re-teaches rows and columns, steps between dots, and right and up on a grid. The words step, route and exact copy are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Counting in ones to 20"
+  ],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: the next lesson does not need it, but Mi's Challenge Quest in the last lesson of the year has a gate on grids and routes. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here cold can follow: the warm-up re-teaches rows, steps and right and up, and Start here keeps to grids up to 5 steps across."
+ },
+ "materials": {
+  "child": [
+   "Your Term 4 book (Book 7), workbook pages 1 to 5, and the grid page (page 6). The grid page is not cut: it has 3 route grids and 2 copy grids to draw on",
+   "A counter to walk along the grid: a button or a small coin. A button is best",
+   "A ruler for straight lines (the edge of a card works too)",
+   "No printer? Draw rows of dots on paper: 4 dots across and 4 dots down for each route grid",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own grid page and a button to show on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Grid page (page 6): 3 route grids (4 by 4 dots) and 2 copy grids (7 by 4 dots) with a dashed line. No cutting: the page is for drawing on. The counter is a button from home."
+  ],
+  "ruler": true,
+  "notes": "Nothing needs to be bought. A button or small coin is a small piece: it stays on the table; nothing goes in the mouth or ears; keep it away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: the grid page is not cut. Children draw with a pencil; they draw straight lines on dots, with a ruler or the edge of a card if they like.",
+  "kit_contract": [
+   {
+    "piece": "route grid (4 by 4 dots, not cut)",
+    "supplied": 3,
+    "max_used": 3,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "copy grid (7 by 4 dots, not cut)",
+    "supplied": 2,
+    "max_used": 2,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "counter (a button from home)",
+    "supplied": 1,
+    "max_used": 1,
+    "used_by": [
+     "explore"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 11 minutes: copy a house exactly on a copy grid, then walk a button along four directions and draw the line. The Mini-lesson has 11: count steps not dots, copy corner by corner, say where to go, follow directions and find every route on a small grid. The workbook has 32 minutes: Start here takes a middle child about 17 minutes (page 1 about 9, page 2 about 8), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the your-turn in the corner-by-corner example (s-m2)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "The counter is on S. It must reach E. Write how far it moves: ___ right, ___ up.",
+  "q2": "The counter goes from S to E. It moves only right or up. How many different routes can it take? I know because ___.",
+  "a1": "3 right, 1 up.",
+  "a2": "2 routes: right then up, or up then right."
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your grid page and a button. Pause or rewind any time.",
+   "action": "Gather your workbook, grid page, button, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Copy the house on your copy grid, then walk your button as the directions say. Press play when you have tried.",
+   "action": "Pause. Copy the house on a copy grid. Walk your button along the directions and draw the line."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples on your grid page. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Follow the directions with your body: small steps right, reach up.",
+   "action": "Stand up. Move as the directions say, then sit down."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up whether two different routes can stop at the same dot, and why.",
+   "action": "Pause. Explain your answer to someone at home and show how you know."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up how to walk from S to E on your grid page.",
+   "action": "Show a grown-up your grid page and walk the button for them."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Copy on the Grid",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Copy a figure exactly.",
+      "Say where to go on a grid.",
+      "Count the different routes."
+     ]
+    }
+   ],
+   "note": "Lesson 3 of Term 4, 90 minutes. Objective: copy a figure on a dot grid by counting steps (not dots), say a move as 'right and up', follow directions, and list every route that only goes right or up. Plain statement for families: copying a figure on a dot or square grid and following 'right' and 'up' directions are Primary 1 work; counting routes (how many different ways), adding at the corners and a route that must pass a corner go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+   "subtitle": "A grid helps us say exactly where things are",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: rows and columns",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "array",
+     "rows": 3,
+     "cols": 5,
+     "icon": "counter",
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Rows go across. Columns go down. How many rows? How many in each row?"
+    }
+   ],
+   "note": "Rows and columns (Term 2 Lesson 5, taught again). Rows go across, like lines of writing. Columns go down, like the legs of a table. Ask: how many rows (3), how many counters in each row (5). A child who is unsure points along each row with a finger. Your turn, no picture: 2 rows with 4 dots in each row; how many dots in all (8). Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Steps between dots",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 0,
+     "cols": 5,
+     "kind": "dots",
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "A step is the jump from one dot to the next. How many steps from the first dot to the last dot?"
+    }
+   ],
+   "note": "Steps between dots (Term 1 Lesson 6, jumps, taught again). The picture shows a row of 6 dots. A step is the jump from one dot to the next, so from the first dot to the last dot there are 5 steps: one fewer than the number of dots. Ask: how many dots (6), how many steps (5). A child who is unsure touches each dot, then each jump, with a finger. Your turn, no picture: a row of 3 dots; how many steps from the first dot to the last (2). Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Right and up",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "squares",
+     "squares": [
+      [
+       2,
+       0
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "The counter is in the yellow square. Move it 1 right, then 1 up. Which square?"
+    }
+   ],
+   "note": "Right and up on a grid of squares (Term 1 Lesson 11, position words, taught again). The counter is in the bottom left square (yellow). Right is along the row, up is up the column. Move 1 right and then 1 up: the counter is in the middle square. Ask: which square is it in (the middle square). A child who is unsure moves a finger along the picture. Your turn: from the middle square move 1 more right; which square (the middle square of the right-hand column). Children answer aloud by pointing or saying. No writing."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "The counter is on S.",
+         "It must reach E.",
+         "Write: ___ right, ___ up."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 3,
+        "kind": "dots",
+        "start": [
+         0,
+         2
+        ],
+        "end": [
+         3,
+         1
+        ],
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "The counter goes from S to E.",
+         "It moves only right or up.",
+         "How many different routes? I know because ___."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 1,
+        "cols": 1,
+        "kind": "dots",
+        "start": [
+         0,
+         1
+        ],
+        "end": [
+         1,
+         0
+        ],
+        "size": "s"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: S is at the bottom left, E is 3 dots to the right and 1 up, so the answer is 3 right, 1 up. Puzzle 2 is a thinking question on the lesson idea: on a grid 1 step across and 1 step up the counter can go right then up, or up then right: 2 routes. A child who writes 'right then up' and 'up then right' has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 3 right, 1 up; 2 routes. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: copy it exactly",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       3
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Copy the house on your copy grid. Make it exactly the same."
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Each child has the grid page (page 6 of the book) and a pencil. The slide shows a house on a dot grid, 2 steps across and 3 steps up. Children copy it on the right-hand side of a copy grid (the grid with the dashed line); they may use a ruler or the edge of a card for straight lines. Walk the cameras. The picture is not shown with its copy until the next slide. Ask: how did you copy it exactly; what did you count. Listen for counting the dots (a copy that is a step too wide) and for counting the steps. Do not give the rule yet. A child with no printed grid draws rows of dots on paper: 4 dots across, 4 dots down. Nobody holds a drawing up to the camera: children check their own copy on the next slide."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "A copy and the figure",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 3,
+        "cols": 3,
+        "kind": "dots",
+        "poly": [
+         [
+          0,
+          3
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          3
+         ]
+        ],
+        "size": "m"
+       },
+       {
+        "t": "chip",
+        "text": "The figure"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 3,
+        "cols": 3,
+        "kind": "dots",
+        "poly": [
+         [
+          0,
+          3
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          3
+         ]
+        ],
+        "size": "m"
+       },
+       {
+        "t": "chip",
+        "text": "An exact copy"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Children check their own copy against the picture. Both pictures are 2 steps across and 3 steps up, with the point of the roof on the middle dot of the top row. Say: put your finger on the bottom left corner of the house and count the steps along the bottom, then up the side. Children who were one step too wide counted the dots, not the steps: say that is what we will look at in the mini-lesson. Do not name any child. Ticks only, no marks."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: walk your button",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Put your button on the bottom left dot of a route grid."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Go 2 right.",
+      "Go 2 up.",
+      "Go 1 right.",
+      "Go 1 up."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Walk the button and draw the line as you go."
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Each child has a route grid on the grid page and a button (or small coin) as the counter. Read the four directions one at a time, slowly, and wait for children to move and draw before the next: go 2 right, go 2 up, go 1 right, go 1 up. Then ask where the button is now. The button ends on the top right dot (3 right and 3 up in all). Walk the cameras: you can see the counters on the table. The line is drawn on the next slide. Nobody holds a drawing up to the camera. A child without a button puts a finger on the dot, or makes a small cross with a pencil."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "The line your button walked",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       0
+      ]
+     ],
+     "start": [
+      0,
+      3
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Right, up, right, up. The button is on the top right dot."
+    }
+   ],
+   "note": "Children check their own line. The path goes 2 right, then 2 up, then 1 right, then 1 up and ends on the top right dot E. In all that is 3 right and 3 up. Say: we said the moves in order, and the order matters for the line, but look at where the button stopped. Do not ask about other routes yet. Ticks only."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "What did you count when you copied the house?",
+      "What did you count when you walked the button?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: we counted steps between the dots (not the dots); the dots are the places and the steps are the jumps; the directions are right and up. If a child says we counted dots, ask: how many dots are in the bottom row of the house, and how many steps long is it (3 dots, 2 steps). Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Steps, not dots",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "How many dots are on the bottom edge? How many steps long is it?"
+    }
+   ],
+   "note": "Worked example. The rectangle's bottom edge touches 4 dots, but it is 3 steps long. Ask: how many dots on the bottom edge (4), how many steps long is the edge (3). The answer is on the next slide. Say: a step is the gap between two dots, so we count the gaps. The edge has one more dot than steps. Then the your-turn question: a row of 7 dots, how many steps long is it (6). Children write on their own paper."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "4 dots, 3 steps",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "route": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "answer",
+     "text": "The bottom edge touches 4 dots. It is 3 steps long. We count steps, not dots."
+    }
+   ],
+   "note": "The answer for the example on the slide before. The arrows are the steps along the bottom edge: 3 steps, 4 dots. Read it aloud so that children can tick their own work, and say what the picture showed. Your-turn answer: a row of 7 dots is 6 steps long."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Copy corner by corner",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Corner A is the start, at the bottom left. How far right is corner B? How far up is corner C?"
+    }
+   ],
+   "note": "Worked example. A triangle with three corners. Start at the bottom left corner A. Corner B is on the same row, 3 steps to the right. Corner C is straight above A, 2 steps up. Ask: how many steps right is B (3); how many steps up is C (2). The answer is on the next slide. Say: to copy a figure, mark each corner by counting steps from the start, then join the corners. Then the your-turn: copy the triangle on your copy grid: mark A, mark B, mark C, join."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "A, B and C",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "A: the start.",
+      "B: 3 right.",
+      "C: 2 up."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "size": "m"
+    }
+   ],
+   "note": "The answer for the example on the slide before. A is the start. B is 3 steps right of A. C is 2 steps up from A. Then join A to B, B to C and C to A. Read it aloud so that children can tick their own copy, and say what we counted. The line from C to B slants: it goes from dot to dot like the others."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Say where to go",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 4,
+     "kind": "dots",
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      4,
+      0
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "How do we get from S to E? ___ right, ___ up."
+    }
+   ],
+   "note": "Worked example. S is at the bottom left and E is at the top right of a grid 4 steps across and 2 steps up. We say a move as how many right and how many up: 4 right, 2 up. Ask: how do we get from S to E (4 right, 2 up). The answer is on the next slide. Say: right, then up. Accept 2 up then 4 right as well. Then the your-turn: how do we get from E back to S: 4 left and 2 down."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "4 right, 2 up",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "4 right, 2 up. To come back: 4 left, 2 down."
+    },
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 4,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       0
+      ]
+     ],
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      4,
+      0
+     ],
+     "size": "m"
+    }
+   ],
+   "note": "The answer for the example on the slide before. 4 right, 2 up. Left and right are opposites and up and down are opposites, so the way back is 4 left and 2 down. Read it aloud so that children can tick their own work. A child who says 6 steps has counted every step: that is the total length of the way, and it is also right; the move is said in two parts, right and up."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Follow the directions",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Start at S."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Go 1 right.",
+      "Go 2 up.",
+      "Go 3 right.",
+      "Go 1 up."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "start": [
+      0,
+      3
+     ],
+     "size": "m"
+    }
+   ],
+   "note": "Worked example. Children use a route grid and draw as you read: go 1 right, go 2 up, go 3 right, go 1 up. Read one direction at a time and wait. Ask: where do you stop; how many right in all; how many up in all. The line and the answer are on the next slide: the path ends at the top right dot, 4 right and 3 up in all. Children tick their own work."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Where did we stop?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       4,
+       1
+      ],
+      [
+       4,
+       0
+      ]
+     ],
+     "start": [
+      0,
+      3
+     ],
+     "end": [
+      4,
+      0
+     ],
+     "size": "m"
+    },
+    {
+     "t": "answer",
+     "text": "We stop at the top right dot. In all: 4 right and 3 up."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 1 + 3 = 4 right in all, 2 + 1 = 3 up in all. The path ends at E. Read it aloud so that children can tick their own work. Say: we can add the rights and add the ups to see where we stop."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Different routes",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 1,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       0
+      ]
+     ],
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      1,
+      0
+     ],
+     "size": "s"
+    },
+    {
+     "t": "chip",
+     "text": "A route goes only right or up. This route is R, U, U. Find another route."
+    }
+   ],
+   "note": "Worked example. The counter goes from S to E and may only move right (R) or up (U). The grid is 1 step across and 2 steps up, so every route has one R and two U. The picture shows R U U. Ask: is there another route; how can we be sure we have found them all. Give time, then show the three routes on the next slide. The way to be sure: the single R can be first, second or third. Children draw the routes on route grids; they may rub out and use the same grid again. A child may write the letters instead of drawing."
+  },
+  {
+   "id": "s-m5-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Three routes, no more",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 1,
+        "kind": "dots",
+        "route": [
+         [
+          0,
+          2
+         ],
+         [
+          1,
+          2
+         ],
+         [
+          1,
+          0
+         ]
+        ],
+        "start": [
+         0,
+         2
+        ],
+        "end": [
+         1,
+         0
+        ],
+        "size": "s"
+       },
+       {
+        "t": "chip",
+        "text": "R U U"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 1,
+        "kind": "dots",
+        "route": [
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          0
+         ]
+        ],
+        "start": [
+         0,
+         2
+        ],
+        "end": [
+         1,
+         0
+        ],
+        "size": "s"
+       },
+       {
+        "t": "chip",
+        "text": "U R U"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 1,
+        "kind": "dots",
+        "route": [
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          0
+         ]
+        ],
+        "start": [
+         0,
+         2
+        ],
+        "end": [
+         1,
+         0
+        ],
+        "size": "s"
+       },
+       {
+        "t": "chip",
+        "text": "U U R"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "The R can go first, second or third. That makes 3 routes."
+    }
+   ],
+   "note": "The answer for the example on the slide before. R U U, U R U and U U R. Say: where does the one R go: first, second or third. That gives 3 routes and no more, and listing them in order means none is missed. Read it aloud so that children can tick their own work. Do not give the pattern for bigger grids: that is Think harder. If a class is quick, one volunteer may say how many routes there would be if the grid were 1 across and 3 up (4: the R can be in 4 places)."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Counter break",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Follow my directions with your body."
+    },
+    {
+     "t": "p",
+     "text": "Take small steps right. Reach up high."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Call directions for the body: two small steps to the right, one big reach up, one small step to the left, crouch down, and so on. Then call a short route with the body: right, right, up, up and ask children to say where they are on an imaginary grid. Say right and up clearly, and use the screen as the front so left and right match what children see on camera. No equipment, no running. A child may stay seated and move one arm. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: copy the L shape on the empty grid, then say how many steps across and up. Question 2: from S to E, how many right and how many up, and draw a path. Question 3: follow the directions and ring where you stop."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: a copy of the L, 3 and 3. Q2: 2 right, 3 up, and any path that only goes right or up. Q3: a line 4 right then 1 up, ringed at the end."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: which picture is an exact copy of the T; circle first, second or third. Question 5: three corners of a rectangle are ringed; draw the missing corner and say how far it is from S. Question 6: tick True or False for four sentences about the path. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 second. Q5 the corner is 3 right and 2 up from S. Q6 True, False, True, False."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Count the routes, and a path that repeats"
+      ],
+      [
+       "Go further (page 4)",
+       "Add at the corners, a corner the route must pass, your own figure"
+      ],
+      [
+       "Investigation (page 5)",
+       "Same steps, different routes"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TWO CHILDREN WALK FROM S",
+     "items": [
+      "Ali goes 3 right, then 2 up.",
+      "Mei goes 2 up, then 3 right."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Do they stop at the same dot? Do they walk the same number of steps?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes, they stop at the same dot, and both walk 5 steps. Both go 3 right and 2 up; only the order is different. The routes are different but the start and the end are the same. Link to Explore and the Investigation: different routes, the same number of steps. Repeat each child answer in your own words for the recording. The names in the story are for the story only: nobody in the group is a mover."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 3 right, 1 up. Puzzle 2: 2 routes. Right then up, or up then right."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: S to E is 3 right and 1 up. Puzzle 2: on a grid 1 across and 1 up there are 2 routes: right then up, and up then right. It was the same idea as the mini-lesson: say where to go, and list every route so none is missed."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers (the figure on the slide is small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 2 right, 2 up; E2 5 right, 4 up; E3 No, then 5 steps across."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children tick or write the look-back box on page 5. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child. The Next time I will try row is optional.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up how to walk from S to E on your grid page."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Cubes and Views",
+      "Have ready: 12 small blocks of one size (bricks or dice). The 4 paper squares from your book, cut out by a grown-up."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs 12 small blocks of one size (building bricks or dice; no blocks at home is fine, the lesson works with pictures) and the 4 paper squares from the fold-squares page of Book 7, torn out along the dashed line and cut out by a grown-up beforehand. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: add at the corners",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 2,
+     "kind": "squares",
+     "counts": {
+      "0,0": "1",
+      "0,1": "[]",
+      "1,0": "1",
+      "1,1": "2",
+      "2,0": "1",
+      "2,1": "1"
+     },
+     "size": "s"
+    },
+    {
+     "t": "p",
+     "text": "Each box says how many routes reach that corner. The empty box is the box on its left plus the box below it."
+    }
+   ],
+   "note": "Optional, only if you are on time. The boxes stand for the corners of a grid 1 step across and 2 steps up, with S in the bottom left box. Each box says how many routes reach that corner. The bottom row and the left column are 1 (only one way to get there). The empty top right box is the box on its left plus the box below it: 1 + 2 = 3 routes, the same 3 routes as in the mini-lesson. Ask: what goes in the empty box (3). Take two answers and move on. This links to counting the routes: adding the two corners before it gives the number of routes to a corner.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Does the order of the moves change where we stop?"
+      ],
+      [
+       "Make a puzzle",
+       "Draw a grid puzzle for your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to count steps, not dots."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 10
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your grid page and your button on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today a grid helps us say exactly where things are. We copy a figure exactly, we say where to go, and we count different routes."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: copying a figure on a dot grid and saying a move as right and up are Primary 1 work; counting how many different routes there are, adding at the corners and a route that must pass a corner go beyond Primary 1 on purpose. There is no school-paper evidence for grid copying, so the wording is unverified."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without the grid page draws rows of dots on paper: 4 dots across and 4 dots down."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Counters in a grid. Rows go across. Columns go down."
+     },
+     {
+      "k": "ASK",
+      "text": "How many rows are there? How many counters are in each row?",
+      "resp": 25
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Two rows with four dots in each row. How many dots in all? Say it with me.",
+      "s": 22
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Dots in a row. A step is the jump from one dot to the next."
+     },
+     {
+      "k": "ASK",
+      "text": "How many dots are there? How many steps from the first dot to the last dot?",
+      "resp": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. A row of three dots. How many steps from the first dot to the last? Show with your fingers.",
+      "s": 22
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "A grid of squares. The counter is in the yellow square, at the bottom left."
+     },
+     {
+      "k": "ASK",
+      "text": "Move the counter one right, then one up. Which square is it in? Point to it.",
+      "resp": 28
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. From the middle square, move one more right. Which square? Point.",
+      "s": 20
+     },
+     {
+      "k": "WORK",
+      "text": "Say each answer with me: three rows, five in each row; five steps; the middle square. Now the your-turn answers: eight dots, two steps, the middle square in the right-hand column. Then stretch your fingers.",
+      "s": 22
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to count steps, touch each dot, then each jump between the dots, with a finger. For right and up, point along the row first, then up the column. For rows and columns, run a finger along a row."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 3 rows, 5 in each row; 5 steps; the middle square. Your turns: 8; 2 steps; the middle square of the right-hand column. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 10 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. The counter is on S. It must reach E. Write how far it moves: blank right, blank up."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. The counter goes from S to E. It moves only right or up. How many different routes can it take? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 85
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 3 right, 1 up. Puzzle 2 answer: 2 routes (right then up, up then right). Look for good ideas to praise later (a child who drew both routes, or who said right then up and up then right). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today the grid page is our tool. Look at the house on the screen. Copy it on the right-hand side of a copy grid, so that it is exactly the same. A ruler or the edge of a card helps with straight lines."
+     },
+     {
+      "k": "WORK",
+      "text": "Children copy the house on a copy grid. Tutor scans the cameras.",
+      "s": 160
+     },
+     {
+      "k": "ASK",
+      "text": "How did you copy it exactly? What did you count?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Here is the figure and an exact copy. Check yours with your finger: is it exactly the same?"
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Put your button on the bottom left dot of a route grid. Walk your button as I say, and draw the line as you go."
+     },
+     {
+      "k": "READ",
+      "text": "Go two right. Go two up. Go one right. Go one up."
+     },
+     {
+      "k": "WORK",
+      "text": "Children walk the button and draw the line. Wait after each direction.",
+      "s": 90
+     },
+     {
+      "k": "ASK",
+      "text": "Where is your button now?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Right, up, right, up. The button is on the top right dot. Check your line."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What did you count when you copied the house? What did you count when you walked your button?",
+      "resp": 45
+     },
+     {
+      "k": "SAY",
+      "text": "We count the steps between the dots. Next we say it with numbers."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot start the copy: find the bottom left corner of the house, then count the steps across and the steps up. A child who puts the button on the wrong dot: it starts on the bottom left dot. A child with no button puts a finger on the dot."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small drawings, so ask children to say what they counted and to show fingers for the steps. Answers: the house is 2 steps across and 3 steps up; the button ends on the top right dot (3 right, 3 up in all). Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "A rectangle on dots. Look at the bottom edge."
+     },
+     {
+      "k": "ASK",
+      "text": "How many dots are on the bottom edge? How many steps long is it?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four dots, but three steps. We count steps, not dots. A step is the gap between two dots."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A row of seven dots. How many steps long is it? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 25
+     },
+     {
+      "k": "SAY",
+      "text": "Seven dots make six steps. One more dot than steps."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Copy a figure corner by corner. We start at the bottom left corner, A. We say how far each corner is from the start."
+     },
+     {
+      "k": "ASK",
+      "text": "How many steps right is corner B? How many steps up is corner C?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "B is three right. C is two up. Mark each corner by counting steps from the start. Then join the corners."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Copy the triangle on your copy grid. Mark A, then B, then C. Then join them."
+     },
+     {
+      "k": "WORK",
+      "text": "Children copy the triangle. Tutor scans the cameras.",
+      "s": 60
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Now we say where to go. We say how many right, then how many up."
+     },
+     {
+      "k": "ASK",
+      "text": "How do we get from S to E? Say right and up.",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four right, two up. Right and left are opposites. Up and down are opposites."
+     },
+     {
+      "k": "ASK",
+      "text": "Your turn. How do we go from E back to S?",
+      "resp": 25
+     },
+     {
+      "k": "SAY",
+      "text": "Four left and two down."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Follow the directions on a route grid. Start at S, the bottom left dot. Draw as I say."
+     },
+     {
+      "k": "READ",
+      "text": "Go one right. Go two up. Go three right. Go one up."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw the line on a route grid. Wait after each direction.",
+      "s": 55
+     },
+     {
+      "k": "ASK",
+      "text": "Where do you stop? How many right in all? How many up in all?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "We stop at the top right dot. One and three make four right. Two and one make three up."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A route goes only right or up. This route is right, up, up. Let us find another route."
+     },
+     {
+      "k": "ASK",
+      "text": "Is there another route? How can we be sure we have found them all?",
+      "resp": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw the routes on route grids. They may rub out and use a grid again.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Where does the one right go? First, second or third. That makes three routes and no more. We list them in order so none is missed."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child counts dots instead of steps, put a finger on a dot and jump to the next dot: one step. If a child mixes left and right, hold up the right hand: right is this way on the screen. If a child cannot find a second route, ask: can the right come first? Can it come last? If a child finds 4 routes, check two are the same."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: step, right, up, route. Fixed question forms: how many steps? ___ right, ___ up. How many different routes? The slides keep the answers off the screen while you ask: read every question with its numbers aloud. Class numbers are not used in the workbook."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I give directions for your body. Small steps right. Reach up high."
+     },
+     {
+      "k": "WORK",
+      "text": "Call directions for the body: two small steps right, one big reach up, one small step left, crouch down. Then call right, right, up, up, and ask where they are on an imaginary grid. Seated children move one arm.",
+      "s": 170
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: Mei draws an L shape on a grid. Part a: copy the L shape on the empty grid. Part b: the L shape is blank steps across and blank steps up. Question 2: a counter starts at S. It moves only right and up to reach E. Part a: the counter moves blank right and blank up. Part b: draw the counter's path from S to E. Question 3: start at S. Go four steps right. Then go one step up. Part a: draw the path. Part b: draw a ring round the dot where you stop."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: a copy of the L shape. Three steps across and three steps up. Question 2: two right, three up, and any path that only goes right or up. Question 3: a line four right then one up, with a ring at the end. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: which picture is an exact copy of the T shape? Circle first, second or third. Question 5: three corners of a rectangle are ringed. Part a: draw a ring round the missing corner and join the dots. Part b: the missing corner is blank right and blank up from S. Question 6: tick True or False for each sentence about the path."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: the second picture. Question 5: three right, two up. Question 6: True, False, True, False. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count the steps across the bottom of the L, then the steps up the side. Q2: count the steps right along the bottom, then the steps up. Q3: put your pencil on S and count four jumps right. Q4: count the steps across the top bar and down the stem in each picture. Q5: the missing corner is above or below one corner and level with another. Q6: check each sentence on the picture."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has counting the routes on two small grids, a path that repeats and a path with a left move. Go further has adding at the corners (beyond Primary 1 on purpose), a corner the route must pass and drawing a figure for a friend to copy. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Ali goes three right, then two up. Mei goes two up, then three right. Do they stop at the same dot? Do they walk the same number of steps? How do you know?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it. You may use your grid page and your button.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: three right, one up. Puzzle two: two routes. Right then up, or up then right."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: yes, they stop at the same dot, and they both walk 5 steps. Both go 3 right and 2 up. Only the order is different. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. The names in the story are not children in the group."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. A counter starts at S and moves only right and up to reach E. Part a: the counter moves blank right and blank up. E2. A counter moves two right and three up. Then it moves three right and one up. In all it moves blank right and blank up. E3. A figure is five steps across and two steps up. A child draws a copy that is six steps across and two steps up. Part a: is it an exact copy? Circle Yes or No. Part b: an exact copy is blank steps across."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 190
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: two right, two up. E2: five right, four up. E3: No. Five steps across."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look-back. Tick what was hard and what helped you. Write or draw one thing you did well. If you like, tick one thing to try next time. You can pass. Nobody reads it out. If you tick I am still stuck, ask your grown-up to take a photo of this page after class and send it to our business WhatsApp. Then we will help you."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5.",
+      "s": 80
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Cubes and Views. Please have 12 small blocks of one size, like building bricks or dice. If you have no blocks, tell us: the lesson works with pictures. Also have the 4 paper squares from your book, cut out by a grown-up. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time. The boxes show how many routes reach each corner. The bottom row and the left column are all one. What goes in the empty box? It is the box on its left plus the box below it.",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the empty box is 1 + 2 = 3. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Mei draws an L shape on a grid.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Copy the L shape on the empty grid.",
+      "ans": "A copy of the L shape, the same size",
+      "val": "drawn"
+     },
+     {
+      "l": "b",
+      "text": "The L shape is [] steps across and [] steps up.",
+      "ans": "3; 3",
+      "val": [
+       3,
+       3
+      ]
+     }
+    ],
+    "answer": "A copy of the L shape; 3; 3",
+    "val": [
+     3,
+     3
+    ],
+    "hint": "Count the jumps between the dots along the bottom. Then count up the side.",
+    "solution": "The L shape is 3 steps across and 3 steps up. To copy it, start at the top left dot of the empty grid and draw: 1 right, 2 down, 2 right, 1 down, 3 left and 3 up. The copy has the same six corners in the same places on its own grid.",
+    "mistakes": [
+     "Counting dots, not steps (4 and 4).",
+     "Making the bottom bar too short or too long by one step."
+    ],
+    "mins": 3.5,
+    "visuals": [
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 3,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "size": "m"
+     },
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 3,
+      "kind": "dots",
+      "size": "m"
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "A counter starts at S. It moves only right and up to reach E.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The counter moves [] right and [] up.",
+      "ans": "2; 3",
+      "val": [
+       2,
+       3
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Draw the counter's path from S to E.",
+      "ans": "Any path that goes only right and up",
+      "val": "drawn"
+     }
+    ],
+    "answer": "2 right, 3 up; any path that goes only right and up",
+    "val": [
+     2,
+     3
+    ],
+    "hint": "Count the steps along the bottom, then the steps up.",
+    "solution": "E is 2 steps to the right of S and 3 steps up. One path is 2 right and then 3 up. Any path with 2 right steps and 3 up steps works, in any order.",
+    "mistakes": [
+     "Counting dots, not steps (3 right).",
+     "Swapping right and up (3 right, 2 up)."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      3
+     ],
+     "end": [
+      2,
+      0
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Start at S. Go 4 steps right. Then go 1 step up.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw the path.",
+      "ans": "A line 4 steps right and then 1 step up",
+      "val": "drawn"
+     },
+     {
+      "l": "b",
+      "text": "Draw a ring round the dot where you stop.",
+      "ans": "The ring is on the dot 4 right and 1 up from S",
+      "val": "drawn"
+     }
+    ],
+    "answer": "A line 4 right and then 1 up; ring on the dot where it stops",
+    "val": [
+     "drawn"
+    ],
+    "hint": "Put your pencil on S. Jump to the next dot 4 times.",
+    "solution": "Start on S. 4 steps right: count 1, 2, 3, 4 jumps along the bottom row. Then 1 step up. The ring goes on the dot 4 right and 1 up from S.",
+    "mistakes": [
+     "Counting S as the first step.",
+     "Going 4 up and 1 right (swapped)."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "start": [
+      0,
+      3
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Which picture is an exact copy of the T shape?",
+    "parts": [
+     {
+      "l": "",
+      "text": "Circle A, B or C.",
+      "ans": "B",
+      "val": "B",
+      "choices": [
+       "A",
+       "B",
+       "C"
+      ]
+     }
+    ],
+    "answer": "B",
+    "val": [
+     "B"
+    ],
+    "hint": "Count the steps across the top bar and down the stem in the T shape. Then count in each picture.",
+    "solution": "The T shape has a top bar 3 steps across and a stem that makes it 3 steps tall. Picture A has a stem 1 step too short. Picture C has a top bar 1 step too wide. Picture B is the same T shape moved 1 step to the right, so B is the exact copy.",
+    "mistakes": [
+     "Choosing the picture that sits in the same place as the T (a copy can be in a different place).",
+     "Counting dots instead of steps."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "poly": [
+      [
+       0,
+       0
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       1
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "size": "m"
+    },
+    "visuals": [
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 4,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "size": "m",
+      "counts": {
+       "2,0": "A"
+      }
+     },
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 4,
+      "kind": "dots",
+      "poly": [
+       [
+        1,
+        0
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "size": "m",
+      "counts": {
+       "2,0": "B"
+      }
+     },
+     {
+      "type": "grid",
+      "rows": 3,
+      "cols": 4,
+      "kind": "dots",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "size": "m",
+      "counts": {
+       "2,0": "C"
+      }
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Three corners of a rectangle are ringed. Join the dots to finish the rectangle.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw a ring round the missing corner.",
+      "ans": "The corner 3 right and 2 up from S",
+      "val": "drawn"
+     },
+     {
+      "l": "b",
+      "text": "The missing corner is [] right and [] up from S.",
+      "ans": "3; 2",
+      "val": [
+       3,
+       2
+      ]
+     }
+    ],
+    "answer": "3 right, 2 up",
+    "val": [
+     3,
+     2
+    ],
+    "hint": "The missing corner is level with one ringed corner and above another.",
+    "solution": "One ringed corner is 3 steps right of S. The other is 2 steps up from S. The missing corner has both moves: 3 right and 2 up. Join the four corners to make the rectangle.",
+    "mistakes": [
+     "Putting the corner in the same row or column as S.",
+     "Swapping right and up (2 right, 3 up)."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      3
+     ],
+     "mark": [
+      [
+       3,
+       3
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the path from S to E. Tick True or False for each sentence.",
+    "parts": [],
+    "answer": "True; False; False; True",
+    "val": [
+     "True",
+     "False",
+     "False",
+     "True"
+    ],
+    "hint": "Count the jumps along the path. Do not count the dots.",
+    "solution": "The path goes 5 steps right and 1 step up. The bottom line touches 6 dots, because a line of 5 steps has 6 dots. So: 5 steps right is true; 2 steps up is false (1); 5 dots is false (6); E is 5 right and 1 up is true.",
+    "mistakes": [
+     "Ticking True for the number of dots.",
+     "Counting the starting dot as a step."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 5,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       2
+      ],
+      [
+       5,
+       2
+      ],
+      [
+       5,
+       1
+      ]
+     ],
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      5,
+      1
+     ],
+     "size": "m"
+    },
+    "tf": [
+     {
+      "s": "The path goes 5 steps right."
+     },
+     {
+      "s": "The path goes 2 steps up."
+     },
+     {
+      "s": "The bottom line touches 5 dots."
+     },
+     {
+      "s": "E is 5 right and 1 up from S."
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "A counter goes from S to E. It moves only right or up. The grid is 3 steps across and 1 step up.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "One route is R R R U. R means right and U means up. Write the other routes: ____ ____ ____",
+      "ans": "U R R R; R U R R; R R U R",
+      "val": [
+       "URRR",
+       "RURR",
+       "RRUR"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "There are [] routes in all.",
+      "ans": "4",
+      "val": 4
+     }
+    ],
+    "answer": "U R R R, R U R R and R R U R (any order); 4 routes",
+    "val": [
+     [
+      "URRR",
+      "RURR",
+      "RRUR"
+     ],
+     4
+    ],
+    "hint": "Every route has 3 R and 1 U. Where can the U go?",
+    "solution": "Every route has 3 right steps and 1 up step. The U can be first, second, third or last: U R R R, R U R R, R R U R and R R R U. That is 4 routes.",
+    "mistakes": [
+     "Writing the same route twice.",
+     "Stopping at 3 routes and missing one."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 1,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      1
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "A counter goes from S to E. It moves only right or up. The grid is 2 steps across and 2 steps up.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Three routes start with U: U U R R, U R U R and U R R U. Write the routes that start with R: ____ ____ ____",
+      "ans": "R R U U; R U R U; R U U R",
+      "val": [
+       "RRUU",
+       "RURU",
+       "RUUR"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "There are [] routes in all.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "R R U U, R U R U and R U U R (any order); 6 routes",
+    "val": [
+     [
+      "RRUU",
+      "RURU",
+      "RUUR"
+     ],
+     6
+    ],
+    "hint": "Each route has 2 R and 2 U. Start with R, then find where the other R goes.",
+    "solution": "Routes that start with R: R R U U, R U R U and R U U R. Routes that start with U are U U R R, U R U R and U R R U. 3 and 3 make 6 routes. Each route has 2 R and 2 U; the two R can sit in 6 pairs of places.",
+    "mistakes": [
+     "Writing a route that starts with U again.",
+     "Counting 4 routes."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 2,
+     "kind": "dots",
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      2,
+      0
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Ravi's counter walks 3 right and 1 up, again and again. The picture shows 2 sets.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "After 3 sets, the counter is [] right and [] up from S.",
+      "ans": "9; 3",
+      "val": [
+       9,
+       3
+      ]
+     },
+     {
+      "l": "b",
+      "text": "After 5 sets, the counter is [2] right and [] up from S.",
+      "ans": "15; 5",
+      "val": [
+       15,
+       5
+      ]
+     }
+    ],
+    "answer": "9 right, 3 up; 15 right, 5 up",
+    "val": [
+     9,
+     3,
+     15,
+     5
+    ],
+    "hint": "Each set adds 3 right and 1 up. Count in threes.",
+    "solution": "One set is 3 right and 1 up. 2 sets: 6 right and 2 up. 3 sets: 9 right and 3 up. 5 sets: 3, 6, 9, 12, 15 right and 5 up.",
+    "mistakes": [
+     "Adding 3 right only once.",
+     "Forgetting the steps up."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 6,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       2
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       1
+      ],
+      [
+       6,
+       1
+      ],
+      [
+       6,
+       0
+      ]
+     ],
+     "start": [
+      0,
+      2
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Start at S. Go 3 steps right. Go 2 steps up. Then go 1 step left.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw the path.",
+      "ans": "A line 3 right, 2 up, then 1 left",
+      "val": "drawn"
+     },
+     {
+      "l": "b",
+      "text": "You stop [] right and [] up from S.",
+      "ans": "2; 2",
+      "val": [
+       2,
+       2
+      ]
+     }
+    ],
+    "answer": "2 right, 2 up",
+    "val": [
+     2,
+     2
+    ],
+    "hint": "Left is the opposite of right. One step left undoes one step right.",
+    "solution": "3 right then 1 left leaves 2 right of S. The 2 up stay. You stop 2 right and 2 up from S.",
+    "mistakes": [
+     "Writing 3 right (forgetting the left step).",
+     "Moving 1 step right instead of left."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "start": [
+      0,
+      3
+     ],
+     "size": "m"
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "The boxes show how many routes reach each corner. S is the bottom left box. E is the top right box.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Fill in the empty boxes.",
+      "ans": "4; 3; 6; 10",
+      "val": [
+       4,
+       3,
+       6,
+       10
+      ]
+     },
+     {
+      "l": "b",
+      "text": "There are [2] routes from S to E.",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "4 (middle row); 3, 6 and 10 (top row); 10 routes",
+    "val": [
+     4,
+     3,
+     6,
+     10,
+     10
+    ],
+    "hint": "Look at the filled boxes. How is each one made from the box on its left and the box below it?",
+    "solution": "Each box is the box on its left plus the box below it. Middle row: 3 + 1 = 4. Top row: 1 + 2 = 3, then 3 + 3 = 6, then 6 + 4 = 10. So 10 routes reach E on a grid 3 across and 2 up.",
+    "mistakes": [
+     "Writing 1 in every empty box.",
+     "Adding the box above instead of the box below."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "squares",
+     "counts": {
+      "0,0": "1",
+      "0,1": "[]",
+      "0,2": "[]",
+      "0,3": "[]",
+      "1,0": "1",
+      "1,1": "2",
+      "1,2": "3",
+      "1,3": "[]",
+      "2,0": "1",
+      "2,1": "1",
+      "2,2": "1",
+      "2,3": "1"
+     },
+     "cell": 70,
+     "size": "m"
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A counter goes from S to E, moving only right or up. The grid is 3 steps across and 2 steps up. The route must pass the ringed corner.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Routes from S to the ringed corner: []",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "Routes from the ringed corner to E: []",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "c",
+      "text": "Routes from S to E that pass the ringed corner: []",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "3; 2; 6",
+    "val": [
+     3,
+     2,
+     6
+    ],
+    "hint": "Each way to the ringed corner can be followed by each way on to E.",
+    "solution": "To the ringed corner: 2 right and 1 up gives 3 routes (R R U, R U R, U R R). From it to E: 1 right and 1 up gives 2 routes (R U, U R). Each of the 3 first parts can be followed by either of the 2 second parts: 3 groups of 2 is 6 routes.",
+    "mistakes": [
+     "Adding 3 and 2 to get 5.",
+     "Counting all 10 routes on the grid."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "mark": [
+      [
+       2,
+       1
+      ]
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Draw a shape with 4 corners on the grid. A is its bottom left corner. Many answers are right.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "B is [] right and [] up from A.",
+      "ans": "any moves right and up",
+      "val": "open"
+     },
+     {
+      "l": "b",
+      "text": "C is [] right and [] up from A.",
+      "ans": "any moves right and up",
+      "val": "open"
+     },
+     {
+      "l": "c",
+      "text": "D is [] right and [] up from A.",
+      "ans": "any moves right and up",
+      "val": "open"
+     }
+    ],
+    "answer": "Many answers are right: three more corners, each said as moves right and up from A, that join A to make a shape",
+    "val": [
+     "open"
+    ],
+    "hint": "Mark A first. Then pick a dot, count the steps right and the steps up, and write them.",
+    "solution": "For example, a rectangle: B is 3 right and 0 up, C is 3 right and 2 up, D is 0 right and 2 up. A friend can copy the shape by marking each corner from A and joining the corners.",
+    "mistakes": [
+     "Counting dots, not steps.",
+     "Giving a corner that is left of A."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "size": "m"
+    }
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Same steps, different routes",
+   "first": "Draw two different routes from S to E, one on each grid. Count the steps in each route: ____ steps and ____ steps.",
+   "text": "Do all the routes from S to E have the same number of steps? Write why.",
+   "visuals": [
+    {
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "size": "m"
+    },
+    {
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "size": "m"
+    }
+   ],
+   "lines": 4,
+   "answer": "Both routes have 5 steps. Every route from S to E needs 3 steps right and 2 steps up, so every route has 5 steps. Only the order of the steps changes. (There are 10 routes on this grid.)",
+   "val": [
+    5,
+    5
+   ],
+   "look_for": "A child who says every route needs the same moves: 3 right and 2 up, only in a different order. Credit any clear reason. A child who draws two routes and counts 5 and 5 has the first step.",
+   "mistakes": [
+    "Counting dots (6) instead of steps.",
+    "Saying a route with more turns is longer."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Ali goes 3 right, then 2 up. Mei goes 2 up, then 3 right. Do they stop at the same dot? Do they walk the same number of steps? How do you know?",
+  "starter": "I think ... because ...",
+  "answer": "Yes, they stop at the same dot, and they both walk 5 steps. Both go 3 right and 2 up. Only the order is different, so the lines are different but the start and the end are the same.",
+  "look_for": "A child who says the moves are the same, only in a different order. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "A counter starts at S and moves only right and up to reach E.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "The counter moves [] right and [] up.",
+     "ans": "2; 2",
+     "val": [
+      2,
+      2
+     ]
+    }
+   ],
+   "answer": "2 right, 2 up",
+   "val": [
+    2,
+    2
+   ],
+   "solution": "E is 2 steps right of S and 2 steps up. Count the jumps, not the dots.",
+   "mistakes": [
+    "Counting dots (3 and 3).",
+    "Swapping right and up."
+   ],
+   "visual": {
+    "type": "grid",
+    "rows": 2,
+    "cols": 2,
+    "kind": "dots",
+    "start": [
+     0,
+     2
+    ],
+    "end": [
+     2,
+     0
+    ],
+    "size": "s"
+   }
+  },
+  {
+   "id": "E2",
+   "text": "A counter moves 2 right and 3 up. Then it moves 3 right and 1 up.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "In all it moves [] right and [] up.",
+     "ans": "5; 4",
+     "val": [
+      5,
+      4
+     ]
+    }
+   ],
+   "answer": "5 right, 4 up",
+   "val": [
+    5,
+    4
+   ],
+   "solution": "2 and 3 make 5 right. 3 and 1 make 4 up.",
+   "mistakes": [
+    "Adding the rights and the ups together (9).",
+    "Writing 3 right and 1 up (the last move only)."
+   ]
+  },
+  {
+   "id": "E3",
+   "text": "A figure is 5 steps across and 2 steps up. A child draws a copy that is 6 steps across and 2 steps up.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Is it an exact copy? Circle Yes or No.",
+     "ans": "No",
+     "val": "No",
+     "choices": [
+      "Yes",
+      "No"
+     ]
+    },
+    {
+     "l": "b",
+     "text": "An exact copy is [] steps across.",
+     "ans": "5",
+     "val": 5
+    }
+   ],
+   "answer": "No; 5",
+   "val": [
+    "No",
+    5
+   ],
+   "solution": "An exact copy is the same size. 6 steps across is 1 step too wide, so it is not an exact copy. The copy should be 5 steps across.",
+   "mistakes": [
+    "Saying Yes because the height is the same.",
+    "Writing 6 for part b."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "counting steps, not dots",
+   "copying exactly",
+   "counting the routes",
+   "something else"
+  ],
+  "helped": [
+   "the grid page",
+   "my button",
+   "drawing the routes",
+   "I was not stuck"
+  ],
+  "next": [
+   "counting steps",
+   "saying where to go",
+   "finding every route",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Ben's counter moves 4 right and 1 up. Then it moves 2 right and 3 up. In all it moves ___ right and ___ up.",
+   "answer": "6 right, 4 up",
+   "val": [
+    6,
+    4
+   ],
+   "solution": "4 and 2 make 6 right. 1 and 3 make 4 up."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "A row has 8 dots. How many steps is it from the first dot to the last dot? It is ___ steps.",
+   "answer": "7",
+   "val": 7,
+   "solution": "There is one fewer step than dots. Count the jumps between the dots: 7."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "A line goes from the 1st dot to the 5th dot in a row. Is it 5 steps long? Circle Yes or No. It is ___ steps long.",
+   "answer": "No. 4 steps.",
+   "val": [
+    "No",
+    4
+   ],
+   "solution": "The 5th dot is 4 jumps after the 1st dot, so the line is 4 steps long."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "A grid is 1 step across and 4 steps up. A counter goes from the bottom left to the top right. It moves only right or up. How many different routes are there? There are ___ routes.",
+   "answer": "5",
+   "val": 5,
+   "solution": "Every route has 1 right step and 4 up steps. The right step can be first, second, third, fourth or last: 5 places, so 5 routes."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 2 Lesson 3",
+   "text": "Mei has 7 red marbles and 7 blue marbles. How many marbles does she have altogether? She has ___ marbles.",
+   "answer": "14",
+   "val": 14,
+   "solution": "7 + 7 = 14. Two of the same number is a double."
+  }
+ ],
+ "online_practice": {
+  "key": "t4l33",
+  "title": "Copy on the Grid",
+  "topic": "Count steps on a grid, copy a figure exactly and count routes",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "fields",
+    "q": "Look at the grid. Where is E from S?",
+    "hint": "Count the steps along the bottom, then the steps up.",
+    "steps": [
+     "Count the steps right from S: 3.",
+     "Count the steps up to E: 2.",
+     "E is 3 right and 2 up from S."
+    ],
+    "slips": [],
+    "frame": "E is {r} right and {u} up from S.",
+    "fields": [
+     {
+      "id": "r",
+      "answer": 3
+     },
+     {
+      "id": "u",
+      "answer": 2
+     }
+    ],
+    "fig": {
+     "type": "grid",
+     "rows": "{b}",
+     "cols": "{a}",
+     "kind": "dots",
+     "start": [
+      0,
+      "{b}"
+     ],
+     "end": [
+      "{a}",
+      0
+     ],
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "Look at the grid. Where is E from S?",
+     "frame": "E is {r} right and {u} up from S.",
+     "answers": {
+      "r": "a",
+      "u": "b"
+     },
+     "hint": "Count the steps along the bottom, then the steps up.",
+     "steps": [
+      "Count the steps right from S: {a}.",
+      "Count the steps up to E: {b}.",
+      "E is {a} right and {b} up from S."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "A row has 6 dots. How many steps is it from the first dot to the last dot?",
+    "hint": "A step is the jump from one dot to the next.",
+    "steps": [
+     "Touch the first dot.",
+     "Jump to the next dot, again and again.",
+     "There is one more dot than there are steps."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "6 is the number of dots. Count the jumps between the dots."
+     }
+    ],
+    "fig": {
+     "type": "grid",
+     "rows": 0,
+     "cols": "{=n-1}",
+     "kind": "dots",
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "grid",
+     "rows": 0,
+     "cols": 5,
+     "kind": "dots",
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "A row has {n} dots. How many steps is it from the first dot to the last dot?",
+     "answer": "n-1",
+     "hint": "A step is the jump from one dot to the next.",
+     "steps": [
+      "Touch the first dot.",
+      "Jump to the next dot, again and again.",
+      "There is one more dot than there are steps."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "A counter goes 3 right, 2 up, then 4 right. How many steps right in all?",
+    "hint": "Only add the steps right.",
+    "steps": [
+     "The steps right are 3 and 4.",
+     "3 and 4 make 7.",
+     "The counter goes 7 steps right in all."
+    ],
+    "answer": 7,
+    "slips": [
+     {
+      "a": [
+       9
+      ],
+      "say": "9 adds the steps up as well. Only add the steps right."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "b": [
+       1,
+       2,
+       3
+      ],
+      "c": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "A counter goes {a} right, {b} up, then {c} right. How many steps right in all?",
+     "answer": "a+c",
+     "hint": "Only add the steps right.",
+     "steps": [
+      "The steps right are {a} and {c}.",
+      "{a} and {c} make {ans}.",
+      "The counter goes {ans} steps right in all."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "A figure is 4 steps across. A child draws a copy that is 5 steps across. Is it an exact copy?",
+    "hint": "An exact copy is the same size.",
+    "steps": [
+     "The figure is 4 steps across.",
+     "The copy is 5 steps across.",
+     "4 and 5 are not the same, so it is not an exact copy."
+    ],
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "answer": "No",
+    "slips": [
+     {
+      "a": [
+       "Yes"
+      ],
+      "say": "An exact copy has the same number of steps across. 4 and 5 are not the same."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "w": [
+       3,
+       4,
+       5,
+       6
+      ],
+      "k": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "v": "w+k"
+     },
+     "q": "A figure is {w} steps across. A child draws a copy that is {v} steps across. Is it an exact copy?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_index": "k",
+     "hint": "An exact copy is the same size.",
+     "steps": [
+      "The figure is {w} steps across.",
+      "The copy is {v} steps across.",
+      "Are {w} and {v} the same?"
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "A counter goes from S to E. It moves right and then up. How many steps does it move in all?",
+    "hint": "Count the steps right, then the steps up. Add them.",
+    "steps": [
+     "Count the steps right: 4.",
+     "Count the steps up: 2.",
+     "4 and 2 make 6 steps."
+    ],
+    "answer": 6,
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 is the number of dots on the path. Count the jumps between the dots."
+     }
+    ],
+    "fig": {
+     "type": "grid",
+     "rows": "{b}",
+     "cols": "{a}",
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       "{b}"
+      ],
+      [
+       "{a}",
+       "{b}"
+      ],
+      [
+       "{a}",
+       0
+      ]
+     ],
+     "start": [
+      0,
+      "{b}"
+     ],
+     "end": [
+      "{a}",
+      0
+     ],
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 4,
+     "kind": "dots",
+     "route": [
+      [
+       0,
+       2
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       0
+      ]
+     ],
+     "start": [
+      0,
+      2
+     ],
+     "end": [
+      4,
+      0
+     ],
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "A counter goes from S to E. It moves right and then up. How many steps does it move in all?",
+     "answer": "a+b",
+     "hint": "Count the steps right, then the steps up. Add them.",
+     "steps": [
+      "Count the steps right: {a}.",
+      "Count the steps up: {b}.",
+      "{a} and {b} make {ans} steps."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A grid is 3 steps across and 1 step up. A counter goes from S to E. It moves only right or up. How many different routes can it take?",
+    "hint": "Every route has one up step. Where can it go?",
+    "steps": [
+     "Every route has 3 right steps and 1 up step.",
+     "The up step can be first, second, third or last.",
+     "That makes 4 routes."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "The up step can go in 4 places: first, second, third or last."
+     }
+    ],
+    "fig": {
+     "type": "grid",
+     "rows": 1,
+     "cols": "{a}",
+     "kind": "dots",
+     "start": [
+      0,
+      1
+     ],
+     "end": [
+      "{a}",
+      0
+     ],
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "grid",
+     "rows": 1,
+     "cols": 3,
+     "kind": "dots",
+     "start": [
+      0,
+      1
+     ],
+     "end": [
+      3,
+      0
+     ],
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "A grid is {a} steps across and 1 step up. A counter goes from S to E. It moves only right or up. How many different routes can it take?",
+     "answer": "a+1",
+     "hint": "Every route has one up step. Where can it go?",
+     "steps": [
+      "Every route has {a} right steps and 1 up step.",
+      "The up step can go in one place more than the right steps.",
+      "That makes {ans} routes."
+     ]
+    },
+    "easier": "c2"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A path goes 4 right and 1 up, again and again. After 3 sets, how many steps right in all?",
+    "hint": "Count in fours, three times.",
+    "steps": [
+     "1 set is 4 right.",
+     "3 sets: 4, 8, 12.",
+     "The path goes 12 steps right in all."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is one set. The path goes 3 sets."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "A path goes {a} right and 1 up, again and again. After 3 sets, how many steps right in all?",
+     "answer": "3*a",
+     "hint": "Count in {a}s, three times.",
+     "steps": [
+      "1 set is {a} right.",
+      "3 sets are 3 groups of {a}.",
+      "The path goes {ans} steps right in all."
+     ]
+    },
+    "easier": "c3"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A counter goes 5 right, 2 up and 2 left. How many steps right of S does it stop?",
+    "hint": "Left undoes some of the steps right.",
+    "steps": [
+     "5 right.",
+     "2 left takes back 2 of them.",
+     "5 take away 2 is 3 steps right of S."
+    ],
+    "answer": 3,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 adds the left steps. Left takes steps away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       4,
+       5,
+       6
+      ],
+      "b": [
+       1,
+       2
+      ],
+      "c": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "A counter goes {a} right, {b} up and {c} left. How many steps right of S does it stop?",
+     "answer": "a-c",
+     "hint": "Left undoes some of the steps right.",
+     "steps": [
+      "{a} right.",
+      "{c} left takes back {c} of them.",
+      "{a} take away {c} is {ans} steps right of S."
+     ]
+    },
+    "easier": "c3"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A grid is 3 steps across and 2 steps up. A counter goes from S to E, moving only right or up. How many different routes are there?",
+    "hint": "Write how many ways to reach each corner.",
+    "steps": [
+     "Write 1 along the bottom and up the left side.",
+     "Each other corner is the corner on its left plus the corner below it.",
+     "The top right corner is 10."
+    ],
+    "answer": 10,
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "6 is the number of routes on a grid 2 across and 2 up. This grid is 3 across."
+     }
+    ],
+    "easier": "t1"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A grid is 3 steps across and 3 steps up. A counter goes from S to E, moving only right or up. How many different routes are there?",
+    "hint": "Write how many ways to reach each corner.",
+    "steps": [
+     "Write 1 along the bottom and up the left side.",
+     "Each other corner is the corner on its left plus the corner below it.",
+     "The top right corner is 20."
+    ],
+    "answer": 20,
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "10 is the number of routes on a grid 3 across and 2 up. This grid is 3 across and 3 up."
+     }
+    ],
+    "easier": "t1"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Draw a figure with 4 corners on a dot grid. Write how to get from its bottom left corner to each of the other corners, so a friend can copy it.",
+    "hint": "Mark the bottom left corner first. Then count the steps right and the steps up to each corner.",
+    "steps": [
+     "Draw the figure on dots.",
+     "For each corner, write how many right and how many up.",
+     "Ask a friend to copy it, then check the copy."
+    ],
+    "easier": "c1"
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "fields",
+    "q": "The film starts at 3 o'clock and lasts 1 hour. What time does it end?",
+    "hint": "The short hand moves on one number. The long hand stays on the 12.",
+    "steps": [
+     "The film starts at 3 o'clock.",
+     "One hour later, the short hand is on 4.",
+     "The film ends at 4 : 00."
+    ],
+    "slips": [],
+    "frame": "The film ends at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 4
+     },
+     {
+      "id": "b",
+      "answer": 0,
+      "pad": 2
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 0,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 0,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {
+      "e": "h+1"
+     },
+     "q": "The film starts at {h} o'clock and lasts 1 hour. What time does it end?",
+     "frame": "The film ends at {a} : {b}.",
+     "answers": {
+      "a": "e",
+      "b": "0"
+     },
+     "pad": {
+      "b": 2
+     },
+     "hint": "The short hand moves on one number. The long hand stays on the 12.",
+     "steps": [
+      "The film starts at {h} o'clock.",
+      "One hour later, the short hand is on {e}.",
+      "The film ends at {e} : 00."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 3"
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "number",
+    "q": "A film lasts half an hour. How many minutes is that?",
+    "hint": "An hour is 60 minutes. Half of 60 is?",
+    "steps": [
+     "1 hour is 60 minutes.",
+     "Half of 60 is 30.",
+     "Half an hour is 30 minutes."
+    ],
+    "answer": 30,
+    "slips": [
+     {
+      "a": [
+       60
+      ],
+      "say": "60 minutes is a whole hour. Half an hour is half of that."
+     },
+     {
+      "a": [
+       15
+      ],
+      "say": "15 minutes is half of half an hour. Half an hour is 30 minutes."
+     }
+    ],
+    "rewind_of": "Term 3 Lesson 3"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We used a grid of dots to copy figures exactly. Your child counted the steps between the dots (not the dots), said where to go as a number right and a number up, followed directions, and listed every route that goes only right or up.",
+  "words": [
+   "step: the jump from one dot to the next",
+   "right and up: how we say where to go, for example 3 right, 2 up",
+   "route: one way to get from the start to the end",
+   "exact copy: the same shape and the same size",
+   "left and down: the opposites of right and up"
+  ],
+  "try_home": [
+   "Draw dots, 4 across and 4 down. Join some dots to make a shape. Ask your child to copy it exactly, then check by counting steps.",
+   "Give directions for a button: 2 right, 1 up, 1 right. Ask where it stops. Change the order. Does it stop at the same dot?",
+   "Ask: a row of 6 dots. How many steps from the first dot to the last? (5)"
+  ],
+  "ask": [
+   "How many steps, not dots?",
+   "How many right, and how many up?",
+   "Is there another route? How do you know you have them all?"
+  ],
+  "when_stuck": "Let your child use the grid page and a button, and wait 10 seconds before helping. Asking 'Where does it start? Where does it stop?' works better than giving the answer. Please say 'count the jumps', not 'count the dots'. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Cubes and Views. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "Count the jumps between the dots, not the dots.",
+  "report_line": "Your child is learning to say where things are on a grid and to copy a figure exactly. This week: copying on a dot grid, saying right and up, and counting routes.",
+  "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+  "next_materials": [
+   "Your Term 4 book (Book 7): tear out the fold-squares page along the dashed line, then a grown-up cuts out the 4 paper squares",
+   "12 small blocks of one size (building bricks or dice). No blocks? Tell your tutor: the lesson works with pictures",
+   "The grid page is not needed again: keep it for puzzles at home",
+   "A pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "A button or small coin is a small piece. It stays on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; the grid page is not cut.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. The names in the stories (Ali, Mei, Ravi, Ben) are for the story only. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Moves are gentle; a child may stay seated and move one arm.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 a copy, 3 and 3; S2 2 right, 3 up; S3 a line 4 right then 1 up; S4 B; S5 3 right, 2 up; S6 True, False, False, True; T1 U R R R, R U R R, R R U R and 4; T2 R R U U, R U R U, R U U R and 6; T3 9 and 3, 15 and 5; T4 2 right, 2 up; G1 4; 3, 6, 10 and 10; G2 3, 2 and 6; G3 any three corners; I1 5 and 5, every route is 3 right and 2 up.",
+  "Tell parents a week before: the grid page (page 6 of the book) is not cut and needs a button from home. For the lesson after this one, the 4 paper squares on the fold-squares page of Book 7 are torn out and cut by a grown-up, and the family finds 12 small blocks of one size (building bricks or dice); a family with no blocks is fine, the lesson works with pictures.",
+  "Have the slides open. Have your own grid page and a button to show on camera if you wish. Practise the body directions for the break so that right and left match what children see on the screen.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
+  "Be plain with families: copying a figure on a dot grid, saying a move as right and up and following directions are Primary 1 work; counting how many different routes there are, adding at the corners and a route that must pass a corner go beyond Primary 1 on purpose. Coordinates are not in the syllabus: say '3 right, 2 up', never a pair of numbers. Do not call the lesson MOE-aligned.",
+  "Wording rule: say step and jump for the gap between two dots; never count the dots. Wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. Slides keep the answers off the screen while you ask: read every question with its numbers aloud."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Does the order of the moves matter?",
+    "minutes": 4,
+    "tutor": "A child says: if we do the same moves in a different order, we stop at the same dot. Is that always true? Test it with 2 right and 1 up, in two orders. Draw both lines on a route grid.",
+    "rec": "Recording: pause. Test whether the same moves in a different order stop at the same dot.",
+    "answer": "Yes. The total moves right and up are the same, so we stop at the same dot. The two lines are different."
+   },
+   {
+    "id": "M2",
+    "title": "Make a route puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Draw a small grid on paper. Ask your grown-up how many routes there are from the bottom left to the top right, moving only right or up. Then check by listing the routes in order.",
+    "rec": "Recording: pause. Draw a small grid and ask a grown-up to count the routes. Check by listing.",
+    "answer": "No single answer. Check by listing every route with R and U in order, so none is missed."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend a toy counts the dots in a row and says that is the number of steps. Show the toy how to count the jumps between the dots instead.",
+    "rec": "Recording: pause. Show a grown-up how to count the steps in a row of dots.",
+    "answer": "A row of 5 dots has 4 steps. A step is a jump from one dot to the next, so there is one more dot than steps."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Grids: copy and describe",
+  "hint_p1": "Count the steps between the dots, not the dots. Say it out loud, then draw or write it.",
+  "hint_p2": "Use your grid page and a button. A ruler or the edge of a card helps with straight lines.",
+  "hint_p3": "Think about every route. List them in order so none is missed. Choose any question, in any order.",
+  "hint_p4": "Look at the boxes that are filled in and see how they are made. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use your grid page and a button, or draw dots on paper. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "grid_mat",
+    "routes": 3,
+    "copies": 2,
+    "title": "Kit page: grid page",
+    "intro": "No cutting: this page is for drawing on. The three small grids are route grids for walking a button. The two wide grids are copy grids: the dashed line splits each one, so copy the figure from the screen into the right-hand half. No printer? Draw rows of dots on paper."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Count the Routes",
+  "where": [
+   "T1",
+   "T2",
+   "G1",
+   "G2"
+  ],
+  "text": "Counting how many different routes a counter can take from the bottom left to the top right of a grid when it moves only right or up (a grid 3 across and 1 up has 4, 2 across and 2 up has 6, 3 across and 2 up has 10), by listing every route in order and then by adding at the corners, and counting the routes that pass a given corner. Counting ways is not a Primary 1 outcome (the nearest idea is listing every case, a heuristic) and routes are not in the syllabus at any level. The other items (a repeating path and a left move) are following-directions tasks. Named puzzle: Count the Routes.",
+  "parent": "Counting how many different routes a counter can take on a grid (listing them, then adding at the corners) goes past the Primary 1 syllabus on purpose. Copying a figure and saying right and up are Primary 1 work."
+ }
+}

@@ -376,13 +376,13 @@
    "id": "L1U10-S14",
    "tier": "start",
    "page": 3,
-   "text": "Look at the ruler. How long is the pencil? {b} cm",
+   "text": "The ruler shows a crayon. What is the crayon's length? {b} cm",
    "figure": {
     "type": "ruler",
     "max": 12,
     "objects": [
      {
-      "label": "pencil",
+      "label": "crayon",
       "start": 2,
       "end": 11
      }
@@ -394,7 +394,7 @@
     ],
     "text": "9 cm"
    },
-   "explanation": "The pencil starts at 2 and ends at 11. 11 - 2 = 9. Check: count 9 spaces."
+   "explanation": "The crayon starts at 2 and ends at 11. 11 - 2 = 9. Check: count 9 spaces."
   },
   {
    "id": "L1U10-T01",

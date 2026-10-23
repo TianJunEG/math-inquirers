@@ -2739,21 +2739,19 @@
    "page": 5,
    "tier": "investigation",
    "title": "Fold twice",
-   "first": "Fold a paper square in half so the edges meet. Open it. How many parts has the fold made? Write the number.",
-   "text": "Fold a paper square in half, and in half again, so there are 4 equal parts. Draw the fold lines on square A. Do it again a different way on square B. Many answers are right.",
+   "first": "Fold a paper square in half. Open it. How many parts? Write the number.",
+   "text": "Fold it in half again to make 4 equal parts. Draw the fold lines on the first square. Make 4 equal parts a different way on the second square.",
    "visuals": [
     {
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
-     "label": "A",
      "size": 64
     },
     {
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
-     "label": "B",
      "size": 64
     }
    ],
@@ -3442,13 +3440,13 @@
   ]
  },
  "parent": {
-  "summary": "We folded paper shapes into equal parts. Your child folded a circle into 2 equal parts (halves) and then 4 equal parts (quarters), checked that parts match by laying one on top of the other, and named a half circle and a quarter circle. These are Primary 1 shapes ideas. The Think harder and Go further pages go further on purpose: cutting a square into halves in different ways, finding a half and a quarter of a number of squares, and the puzzle Same Half, Different Shape.",
+  "summary": "We folded paper shapes into equal parts. Your child folded a circle into 2 equal parts (halves) and then 4 equal parts (quarters), checked that parts match by laying one on top of the other, and named a half circle and a quarter circle. These are Primary 1 shapes ideas.",
   "words": [
-   "equal parts: parts that are the same size; they match when one is laid on the other",
-   "half: one of 2 equal parts; 2 halves make 1 whole",
-   "quarter: one of 4 equal parts; 4 quarters make 1 whole",
+   "equal parts: the same size; they match when laid on top of each other",
+   "half: 1 of 2 equal parts",
+   "quarter: 1 of 4 equal parts",
    "whole: the full shape, with no cut or fold",
-   "half circle, quarter circle: half of a circle, a quarter of a circle"
+   "half circle, quarter circle: half or a quarter of a circle"
   ],
   "try_home": [
    "Fold a piece of paper so the edges meet. Open it. Ask: how many parts? Do they match? Fold it again. How many parts now?",
@@ -3466,9 +3464,9 @@
   "report_line": "Your child is learning that a whole can be cut into equal parts. This week: halves and quarters of a circle and a square.",
   "term_line": "Your child is learning to choose a way to solve a problem, and to make problems of their own.",
   "next_materials": [
-   "Your Term 4 book (Book 7): tear out the shape-pieces pages along the dashed line, then a grown-up cuts out the 20 pieces (6 squares, 3 rectangles, 6 triangles, 2 half circles, 2 quarter circles and 1 circle) and keeps them in an envelope",
-   "Keep the spare paper shapes from this lesson in their envelope too",
-   "A pencil, a rubber and paper"
+   "Your Term 4 book (Book 7): tear out the shape pieces pages; a grown-up cuts out the 20 pieces and keeps them in an envelope",
+   "Keep the paper shapes from this lesson too",
+   "Pencil, rubber and paper"
   ]
  },
  "safeguarding": [
