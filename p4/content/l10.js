@@ -1,10 +1,10 @@
-// Math Inquirers P4 Holiday Program — Lesson 10: Challenge Day (mixed heuristics)
+// Math Inquirers P4 Holiday Program — Lesson 10: Puzzle Day (mixed heuristics)
 // Every answer below was worked out and checked with a script; each logic puzzle was checked by trying every
 // arrangement, and has exactly one answer. "Find all" questions list every case.
 const tip = require('../tip.js');
 module.exports = {
   lesson: {
-    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed heuristics',
+    n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed heuristics',
     objective: 'Choose a way into a non-routine problem (guess and check with a table, suppose they are all the same, work backwards, a logic grid, draw it) and use it on competition-style puzzles, checking every answer against every fact.',
     skills: 'Choosing a strategy, guess and check, supposition, working backwards, logical deduction, checking and explaining',
     materials: 'Four puzzle cards (A to D) for the explore stations (cards A and B live; C and D take-home), mini whiteboards, counters or cubes, certificates, stamps.',
@@ -31,7 +31,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome to Challenge Day! Today there is no new topic. Instead, you get the puzzles that mathematicians love, the ones where you do not know how to start.', 'Good problem solvers are not people who know every answer. They know how to START. Notice it. Test it. Explain why.'],
+    hook: ['Welcome to Puzzle Day! Today there is no new topic. Instead, you get the puzzles that mathematicians love, the ones where you do not know how to start.', 'Good problem solvers are not people who know every answer. They know how to START. Notice it. Test it. Explain why.'],
     warmIntro: ['I am thinking of a number from 1 to 100. I will give you one clue at a time. After each clue, cross out every number it cannot be.', 'Clue 1: I am a 2-digit number. Which numbers can you cross out straight away?'],
     predict: ['Look at the four puzzle cards. Which one do you think will be hardest? Write the letter in the corner of your whiteboard. We will check at the end.'],
     exploreHints: ['Stuck on card A: try 10 × 11, then a bigger pair. Is the answer too big or too small?', 'Stuck on card B: what if all 10 bugs were beetles? How many legs would that be?', 'Stuck on card C: start at 43 and undo the last thing first.', 'Finished early: make up a new card for one of the stations.'],

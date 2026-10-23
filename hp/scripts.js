@@ -110,7 +110,7 @@ module.exports = {
     close: ['“You measured fairly today and you can say why equal units matter.”']
   },
   10: {
-    hook: ['Welcome to challenge day! There are four puzzle cards: coins, patterns, logic and measuring. With every card we use the four inquirer rules: notice, test, check, explain.'],
+    hook: ['Welcome to puzzle day! There are four puzzle cards: coins, patterns, logic and measuring. With every card we use the four inquirer rules: notice, test, check, explain.'],
     warmIntro: ['Whiteboard round: I ask a quick question from one of our lessons. Everybody writes the answer at the same time and keeps the board low. Nobody is put on the spot. “I am not sure” is fine.'],
     predict: ['Look at the four puzzle cards. Which do you think will be hardest? Write your guess. Each pair chooses ONE card for 6 minutes, then you swap. Reporting back is optional.'],
     exploreHints: ['Stuck: say the inquirer rule that might help.', 'Rushing: “Check your answer a different way before you move on.”', 'For pairs who want more: make a puzzle for the other pair, then swap.'],

@@ -102,7 +102,7 @@ module.exports = {
     hints: ['Hint 1: “Find the thing you know first. Which scale has a number on it?”', 'Hint 2: “Swap: put what balances it on the scale instead.”', 'Hint 3: “For jugs, write the two amounts after every pour.”'],
     talk: ['“How did swapping help you with the balance puzzles?”'],
     talkAns: 'A level balance means the two sides weigh the same, so the melon can be swapped for 2 apples (or 400 g) and the scale stays level. (If a pair finishes early: a table shows how much is in each jug after every pour, so we can check every step and find our way back.)',
-    close: ['“You were real Measure Masters today. You swapped things on a balance, you found exact amounts with no marks on the jugs, and you counted time across the hour.”', 'Next lesson is Challenge Day: bring your best thinking!']
+    close: ['“You were real Measure Masters today. You swapped things on a balance, you found exact amounts with no marks on the jugs, and you counted time across the hour.”', 'Next lesson is Puzzle Day: bring your best thinking!']
   },
 
   deck: {

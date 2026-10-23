@@ -4,6 +4,9 @@ body=open('workbook_body.html').read()
 import re as _re
 out=[];openb=False
 INBOX=('class="p sub','class="p ans','class="ln"','<table class="tb"','class="p img','<div style="height:')
+import re as _re2
+# an indented plain paragraph (hint, tip, clue, 'Rule:' line) belongs to the question box above it
+INDENT=_re2.compile(r'^<div class="p" style="margin-top:[^"]*padding-left:[0-9.]+px;">')
 for line in body.split('\n'):
     core=line
     pre=''
@@ -12,7 +15,7 @@ for line in body.split('\n'):
     if core.startswith('<div class="p q'):
         if openb: out.append('</div></div>')
         out.append(pre+'<div class="qwrap"><div class="qbox">'+core);openb=True;continue
-    if openb and not pre and any(core.startswith(x) or x in core[:40] for x in INBOX):
+    if openb and not pre and (INDENT.match(core) or any(core.startswith(x) or x in core[:40] for x in INBOX)):
         out.append(core);continue
     if openb: out.append('</div></div>');openb=False
     out.append(line)

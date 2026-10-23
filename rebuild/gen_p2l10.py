@@ -1,4 +1,4 @@
-"""Math Inquirers P2, Lesson 10: Challenge Day. Writes split/p2l10/project (deck.json + slides/*.html)."""
+"""Math Inquirers P2, Lesson 10: Puzzle Day. Writes split/p2l10/project (deck.json + slides/*.html)."""
 import json,os,sys,math,shutil,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -55,7 +55,7 @@ def digit_cards(ds,w=100,gap=24,aria='Digit cards'):
     return svg(len(ds)*(w+gap)+12-gap,int(w*1.2)+12,b,aria)
 
 # ---------- 1. title ----------
-put('p2l10-title',title_slide('p2l10-title',10,'Challenge Day','Mixed puzzles: how to start a puzzle','Learn three ways to start a puzzle, then use them on mixed challenges.',
+put('p2l10-title',title_slide('p2l10-title',10,'Puzzle Day','Mixed puzzles: how to start a puzzle','Learn three ways to start a puzzle, then use them on mixed challenges.',
  'Objective: Choose a way to start a puzzle (draw it, list it in order, make a table) and use it on mixed puzzles: picture graphs with a key of 5 or 10, a logic grid with exactly one answer, numbers to 1000, money, fractions, and × and ÷ with the 2, 3, 4, 5 and 10 tables. Check the answer and explain it. '
  'Materials: Four station cards (all on ONE slide in the deck, printed in the tutor guide), play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps. '
  'Online: Each breakout pair takes two station cards (the tutor pastes their text into the breakout room chat), about 2 minutes a card, then everyone reports back to the group. Each child needs digit cards (cut from paper), a pencil and a mini whiteboard. '
@@ -275,4 +275,4 @@ put('p2l10-end',(f'<section id="p2l10-end" data-transition="fade" style="backgro
 p2gaps.add(S,10)
 order=['p2l10-title','p2l10-warm1','p2l10-warm2','p2l10-explore1','p2l10-cards','p2l10-explore2','p2l10-we1','p2l10-we2','p2l10-try2','p2l10-we3','p2l10-key','p2l10-break','p2l10-teachgraph','p2l10-ws1','p2l10-ws1ans','p2l10-teachlogic','p2l10-teachgrow','p2l10-ws2','p2l10-ws2ans','p2l10-stretch','p2l10-challenge','p2l10-chdiag','p2l10-chwalk','p2l10-talk','p2l10-exit','p2l10-end']
 order=p2gaps.order(order,10)
-write_deck('Math Inquirers P2: Lesson 10 – Challenge Day',order,{'s1':{'description':'Warm-up and explore','start':'p2l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'p2l10-we1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l10-break'},'s4':{'description':'Think harder, go further, talk, exit and certificates','start':'p2l10-stretch'}})
+write_deck('Math Inquirers P2: Lesson 10 – Puzzle Day',order,{'s1':{'description':'Warm-up and explore','start':'p2l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, list it, make a table)','start':'p2l10-we1'},'s3':{'description':'Worksheet with teaching before each page','start':'p2l10-break'},'s4':{'description':'Think harder, go further, talk, exit and certificates','start':'p2l10-stretch'}})

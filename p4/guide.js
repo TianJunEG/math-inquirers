@@ -25,8 +25,9 @@ G.push(p(t(SLOGAN, { italics: true, size: 30, color: '1F3864' }), { after: 120 }
 G.push(tx('Program guide for tutors: schedule, lesson routine, ten minute-by-minute lesson scripts with answer keys, a progress tracker and a parent summary. Math Inquirers is online first: every lesson runs live on video; the face-to-face notes are kept for partner centres.'));
 G.push(h2('The program at a glance'));
 G.push(tbl([2300, 7600], [
-  ['Level', 'Children finishing Primary 4 (ages 10 to 11), going into P5, who enjoy thinking about maths. Every child gets the same pages and chooses how far to go'],
+  ['Level', 'Ages 9 to 11 (builds on Primary 4 maths). Every child gets the same pages and chooses how far to go'],
   ['Length', '10 lessons of 90 minutes, two a week over the 5 weeks of the holidays'],
+  ['Syllabus', 'This level builds on Primary 4 maths and goes beyond it on purpose. Do not describe it as P4-aligned or as covering the MOE syllabus. Lesson 3 (order of operations and brackets) and the unknown-angle items in Lesson 6 are labelled “stretch beyond P4”: they are Primary 5 topics. The compass turns in Lesson 6 are enrichment that the primary syllabus does not list.'],
   ['Group size', 'Up to 8 children per tutor, live online. Pilot with 6. Add a second tutor or helper above 8.'],
   ['Focus', 'Thinking skills: making a list in order, guess and check, drawing a model, working backwards, finding patterns, reasoning and explaining. Not speed drills.'],
   ['The arc of every lesson', 'Start concrete with objects, record in a table, spot the pattern, state the rule, use it (often backwards), then explain why.'],
@@ -117,6 +118,10 @@ G.push(tx('These are suggested working rules. Make sure the parent consent wordi
 G.push(h2('After the lesson'));
 REC.RULES.upload.forEach(x => G.push(bu(x)));
 
+const SYLL = {
+  3: 'Stretch beyond P4. Order of operations and brackets are in the MOE Primary 5 syllabus, not Primary 4, so this lesson is a Primary 5 preview. Never describe it as P4-aligned. The four-operation practice and the “times as many” bar-model problems are on the P4 level; say so if a parent asks.',
+  6: 'Measuring and estimating angles with a protractor is a P4 topic. Finding unknown angles (angles in squares and rectangles, angles side by side) is stretch beyond P4: it is Primary 5 in the MOE syllabus. Clock-hand angles and the 8-point compass turns are enrichment: the primary syllabus does not list them. Never describe this lesson as P4-aligned.'
+};
 L.lessons.forEach(l => {
   CURL = l; SEGS.length = 0;
   const Bn = BUD[l.n], P = (t) => bp(l.n, t), SW = Bn.slide_windows, WB = Bn.worksheet_blocks, BUF = Bn.buffer;
@@ -126,7 +131,7 @@ L.lessons.forEach(l => {
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
   G.push(tbl([1900, 8000], [
-    ['Objective', l.objective], ['Thinking skills', l.skills], ['Materials', l.materials], ['Online set-up', l.online],
+    ['Objective', l.objective], ...(SYLL[l.n] ? [['Syllabus note', SYLL[l.n]]] : []), ['Thinking skills', l.skills], ['Materials', l.materials], ['Online set-up', l.online],
     ['Prepare', 'Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.'],
     ['Watching the recording', 'A child who missed the live lesson watches the recording. They need: ' + l.materials + ' The REC lines tell them when to pause; the chapter list at the end of this lesson shows each part.']
   ].map(r => row([cell(r[0], 1900, { bold: true, fill: 'F2F2F2', size: 20, align: AlignmentType.LEFT, h: 60 }), c2(r[1], 8000, { h: 60 })]))));
@@ -234,7 +239,7 @@ G.push(h2('After the lesson'));
 /* ---------- Parent summary ---------- */
 G.push(p(t(PROG, { bold: true, size: 44 }), { pb: true, after: 40 }));
 G.push(p(t(SLOGAN, { italics: true, size: 28, color: '1F3864' }), { after: 100 }));
-G.push(p(t('A 10-lesson holiday maths program for children finishing Primary 4', { bold: true, size: 26 }), { after: 100 }));
+G.push(p(t('A 10-lesson holiday maths program for ages 9 to 11 (builds on Primary 4 maths)', { bold: true, size: 26 }), { after: 100 }));
 G.push(tx('Your child will spend the holidays as a young mathematician: noticing patterns, testing ideas with real objects and explaining their thinking. Lessons are live online in small groups, hands-on, and built around thinking, not speed.'));
 G.push(h2('What your child will do'));
 L.lessons.forEach(l => G.push(bu('Lesson ' + l.n + ', ' + l.title + ': ' + l.topic.toLowerCase())));

@@ -17,7 +17,7 @@ Syllabus source: Tampines North Primary 2026 P3 scheme of work (numbers to 10 00
 | 7 | 4A | Area Architects | Area and perimeter | same perimeter different area, figures made of squares and rectangles, square-grid puzzles |
 | 8 | 4B | Angle and Line Detectives | Angles, perpendicular and parallel lines | counting angles, right angles in shapes, finding parallel and perpendicular lines in figures |
 | 9 | 5A | Measure and Money Masters | Length, mass, volume, money, time | compound units, budgets, durations and the 24-hour clock |
-| 10 | 5B | Challenge Day | Mixed (incl. bar graphs, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; reading a bar graph |
+| 10 | 5B | Puzzle Day | Mixed (incl. bar graphs, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; reading a bar graph |
 
 ## P3 level rules
 - Children know: numbers to 10 000; + and − within 10 000; all multiplication tables to 10 × 10; multiplying up to 3 digits by 1 digit and dividing up to 3 digits by 1 digit (with remainders); fractions: equivalent fractions, comparing and ordering, adding and subtracting like and related fractions within one whole; money in dollars and cents; m, cm, km, kg, g, ℓ, ml (compound units like 2 m 35 cm); area and perimeter of squares, rectangles and figures made of them (cm², m²); right angles and comparing angles (no protractor yet); perpendicular and parallel lines; bar graphs; time in hours and minutes, durations, the 24-hour clock.

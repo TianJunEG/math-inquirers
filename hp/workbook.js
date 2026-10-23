@@ -62,7 +62,7 @@ W.push(p(t('Tutor: ______________________    Program dates: ____________________
 
 /* ---------- LESSON 1 ---------- */
 W.push(...hdr(1, 'Whole Numbers: Number Patterns', 'COUNT WITH THE FROG!')); W.push(fast());
-W.push(p('Look for the pattern. Fill in the missing numbers. Your number strip is in the kit at the back.', { italics: true, after: 80 }));
+W.push(p('Fill in the missing numbers. Your number strip is in the kit at the back.', { italics: true, after: 80 }));
 W.push(q(1, 'Skip counting. Fill in the blanks.'));
 W.push(sub('a', 'Counting in 2s:   2,  4,  6,  ____,  ____,  12,  ____,  16'));
 W.push(sub('b', 'Counting in 5s:   5,  10,  ____,  20,  ____,  30,  ____'));
@@ -113,7 +113,7 @@ W.push(sub('c', '3 + 8 = ____ + 5            (d)  6 + 6 = 10 + ____'));
 W.push(sub('e', 'Mei says “4 + 4 = 8 + 1 is true.” Is she right? Explain.'));
 W.push(...lines(2));
 W.push(q(5, 'Magic triangle. Put 1, 2, 3, 4, 5 and 6 in the circles so that each side adds up to 9. Start with 1, 2 and 3 in the corners.', { keepNext: true }));
-W.push(p([t('Hint: use counters or number cards. Find the number that goes between each pair of corners.', { italics: true })], { indent: { left: 560 }, after: 60 }));
+W.push(p([t('Hint: use counters. Find the number between each pair of corners.', { italics: true })], { indent: { left: 560 }, after: 60 }));
 W.push(img('magic.png', 300, 267));
 W.push(sub('a', 'Which numbers go between the corners?   ______________'));
 W.push(sub('b', 'If you have time: now make each side add up to 10. Which numbers are in the corners this time?   ______________'));
@@ -318,7 +318,7 @@ W.push(sub('a', 'Which ribbon is the longest?   ____       (b)  Which is the sho
 W.push(sub('c', 'How many squares longer is ribbon A than ribbon B?   ____'));
 W.push(sub('d', 'Ribbon A and ribbon B are put end to end. How many squares long is that?   ____'));
 W.push(sub('e', 'Ribbon C is cut shorter by 2 squares. Which ribbon is it now the same length as?   ____'));
-W.push(q(2, 'Use what you measured in Explore. Write your guess, what you measured, and how far off your guess was. Only the last row is new: guess first, then measure it with the paper cube strip from the back of the workbook (or real cubes).', { keepNext: true }));
+W.push(q(2, 'Write what you guessed, what you measured, and how far off your guess was. In the last row, guess first, then measure it with the cube strip from the back of the workbook.', { keepNext: true }));
 W.push(tbl([2900, 1900, 1900, 3200], [row(['Object', 'My guess', 'Measured', 'How far off my guess was'].map((s, i) => cell(s, [2900, 1900, 1900, 3200][i], { bold: true, fill: 'EDEDED' }))), ...['A pencil', 'A book', 'A shoe', 'My choice: ____________'].map(n => row([cell(n, 2900, { h: 110, align: AlignmentType.LEFT }), cell('', 1900), cell('', 1900), cell('', 3200)]))]));
 W.push(sub('a', 'Why must every cube be the same size?'));
 W.push(...lines(1));
@@ -389,7 +389,7 @@ W.push(img('kit_tiles.png', 600, 391));
 
 /* ---------- LESSON 10 PUZZLE CARDS ---------- */
 W.push(p(t('Puzzle cards', { bold: true, size: 40 }), { pb: true, after: 80, align: AlignmentType.CENTER }));
-W.push(p(t('For Lesson 10 (Challenge Day). Cut out the four cards. Choose a card to start with. You may swap with another pair later. Show how you know on a whiteboard or on paper.', { size: 24 }), { after: 160, align: AlignmentType.CENTER }));
+W.push(p(t('For Lesson 10 (Puzzle Day). Cut out the four cards. Choose a card to start with. You may swap with another pair later. Show how you know on a whiteboard or on paper.', { size: 24 }), { after: 160, align: AlignmentType.CENTER }));
 {
   const cards = L.lessons[9].cards; const w = CW / 2;
   const mk = (c, i) => cell([t((i + 1) + '.  ' + c.title.toUpperCase(), { bold: true, size: 30 }), p('', { after: 120 }), t(c.text, { size: 28 })], w, { h: 380, align: AlignmentType.LEFT });

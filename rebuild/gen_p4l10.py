@@ -1,4 +1,4 @@
-"""Math Inquirers P4, Lesson 10: Challenge Day (mixed heuristics). Writes split/p4l10/project (deck.json + slides/*.html).
+"""Math Inquirers P4, Lesson 10: Puzzle Day (mixed heuristics). Writes split/p4l10/project (deck.json + slides/*.html).
 Every answer was checked with a script; each logic puzzle was checked against every arrangement (exactly one answer)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
@@ -42,7 +42,7 @@ def tick(cx,cy,col=TEAL): return f'<path d="M{cx-18} {cy} L{cx-5} {cy+14} L{cx+2
 def cross(cx,cy,col=RED): return f'<path d="M{cx-15} {cy-15} L{cx+15} {cy+15} M{cx+15} {cy-15} L{cx-15} {cy+15}" stroke="{col}" stroke-width="7" stroke-linecap="round"/>'
 
 # ---------- 1. title ----------
-put('p4l10-title',title_slide('p4l10-title','LESSON 10  •  WEEK 5','Challenge Day','Mixed heuristics',
+put('p4l10-title',title_slide('p4l10-title','LESSON 10  •  WEEK 5','Puzzle Day','Mixed heuristics',
  'Choose a way into tricky puzzles: guess and check, suppose, work backwards, and logic. Then check every fact.',
  'Objective: Choose a way into a non-routine problem (guess and check with a table, suppose they are all the same, work backwards, a logic grid, draw it) and use it on competition-style puzzles, checking every answer against every fact. '
  'Thinking strategies today: GUESS AND CHECK WITH A TABLE, SUPPOSE (heads and legs), WORK BACKWARDS, LOGIC GRID, DRAW IT. '
@@ -283,7 +283,7 @@ for f in os.listdir(sd):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(sd,f))
 for i,h in S.items(): open(os.path.join(sd,i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
- 'title':'Math Inquirers P4: Lesson 10 – Challenge Day','order':order,'cover':'p4l10-title',
+ 'title':'Math Inquirers P4: Lesson 10 – Puzzle Day','order':order,'cover':'p4l10-title',
  'sections':{'s1':{'description':'Warm-up and explore','start':'p4l10-title'},'s2':{'description':'Teach: four ways in (guess and check, suppose, work backwards)','start':'p4l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p4l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and close','start':'p4l10-stretch'}},
  'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
  'designSystems':[]}

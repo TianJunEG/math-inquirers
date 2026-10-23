@@ -103,16 +103,16 @@ SLIDES = {
 
 # optional slides: no clock time, label OPT (early finishers / choice) or OPT_REMIND
 OPTIONAL = {
-    1: ['l1-stretch', 'l1-challenge', 'l1-chwalk'],
-    2: ['l2-stretch', 'l2-challenge', 'l2-chwalk'],
-    3: ['l3-stretch', 'l3-challenge', 'l3-chwalk'],
-    4: ['l4-stretch', 'l4-challenge', 'l4-chwalk'],
-    5: ['l5-stretch', 'l5-challenge', 'l5-chwalk'],
-    6: ['l6-teachnotes', 'l6-trynotes', 'l6-stretch', 'l6-teachexact', 'l6-teachswap', 'l6-challenge', 'l6-chwalk'],
-    7: ['l7-stretch', 'l7-we2', 'l7-try2', 'l7-we3', 'l7-challenge', 'l7-chwalk'],
-    8: ['l8-stretch', 'l8-challenge', 'l8-chwalk'],
-    9: ['l9-stretch', 'l9-challenge', 'l9-chwalk'],
-    10: ['l10-teachgraph', 'l10-teachtri', 'l10-teachlen', 'l10-stretch', 'l10-challenge', 'l10-chwalk'],
+    1: ['l1-stretch', 'l1-challenge', 'l1-chdiag', 'l1-chwalk'],
+    2: ['l2-stretch', 'l2-challenge', 'l2-chdiag', 'l2-chwalk'],
+    3: ['l3-stretch', 'l3-challenge', 'l3-chdiag', 'l3-chwalk'],
+    4: ['l4-stretch', 'l4-challenge', 'l4-chdiag', 'l4-chwalk'],
+    5: ['l5-stretch', 'l5-challenge', 'l5-chdiag', 'l5-chwalk'],
+    6: ['l6-teachnotes', 'l6-trynotes', 'l6-stretch', 'l6-teachexact', 'l6-teachswap', 'l6-challenge', 'l6-chdiag', 'l6-chwalk'],
+    7: ['l7-stretch', 'l7-we2', 'l7-try2', 'l7-we3', 'l7-challenge', 'l7-chdiag', 'l7-chwalk'],
+    8: ['l8-stretch', 'l8-challenge', 'l8-chdiag', 'l8-chwalk'],
+    9: ['l9-stretch', 'l9-challenge', 'l9-chdiag', 'l9-chwalk'],
+    10: ['l10-teachgraph', 'l10-teachtri', 'l10-teachlen', 'l10-stretch', 'l10-challenge', 'l10-chdiag', 'l10-chwalk'],
 }
 REMIND = {'l10-teachgraph', 'l10-teachtri', 'l10-teachlen'}
 
@@ -230,7 +230,7 @@ def time_plan(n, old=''):
         b['op'], b['op'], b['wu'], b['op'], b['op'] + 4, b['op'] + 4, b['wu'], b['wu'], b['sn']) if n != 10 else \
         'Time plan: opening 0 to 2, warm-up game and whiteboard round 2 to 6 (five questions), sneak-peek puzzles 6 to 10, '
     s += 'explore %d to %d, %s %d to %d%s, brain break %d to %d, ' % (b['sn'], b['ex'], mini, b['ex'], b['mi'], mnote, b['mi'], b['br'])
-    s += 'worksheet %d to %d%s (the last %d minutes check page 2, after a 1-minute stand-up stretch), ' % (b['br'], b['ws'], wnote, chk)
+    s += 'worksheet %d to %d%s (a 30-second stand-and-stretch reset after the page-1 check, taken from that slot; the last %d minutes check page 2, after a 1-minute stand-up stretch), ' % (b['br'], b['ws'], wnote, chk)
     s += 'talk time %d to %d, exit ticket %d to %d, look-back %d to %d' % (b['ws'], b['ta'], b['ta'], b['xt'], b['xt'], b['lb'])
     s += (', then flex time and goodbye %d to 90 (this is the buffer: if you are behind, use it; do not start anything new).' % b['lb']) if b['fl'] else \
         ' (this lesson has no spare minutes: follow the shortened plan, see the guide).'
@@ -252,6 +252,29 @@ def title_notes(D, n):
 
 
 # ------------------------------------------------------------------------------------------------ main entry
+RESET_MARK = 'Reset: stand, stretch, sit'
+
+
+def micro_reset(D, n):
+    """A 30-second stand-stretch-sit reset after the page-1 check (final_fixes_levels_1_4.md).
+    Level 1 has one 4-minute break at about minute 38 to 42 and one 1-minute stretch before the page-2 check; children aged 6 to 8
+    were otherwise seated for about 26 minutes in the worksheet block. The reset is taken from the 2-minute page-1 check slot, so no
+    clock boundary moves and the lesson still sums to 90. It is optional: skip it if the clock is more than a minute behind."""
+    sid = 'l%d-ws1ans' % n
+    s = _read(D, sid)
+    if s is None or RESET_MARK in s:
+        return
+    chip = ('<p style="position:absolute;right:128px;bottom:52px;font-size:26px;font-weight:800;color:#1B2A49;background:#FFC93C;'
+            'border-radius:999px;padding:8px 24px">' + RESET_MARK + ' (30 s)</p>\n')
+    mark = '<p style="position:absolute;left:128px;bottom:64px'
+    if mark in s:
+        s = s.replace(mark, chip + mark, 1)
+    note = (' Reset (about 30 seconds, taken from this slot): when the answers are checked, everyone stands, reaches up high, shakes out their hands, takes one slow breath and sits down again, then page 2. '
+            'Skip it if you are more than a minute behind.')
+    s = s.replace('</aside>', note + '</aside>', 1)
+    open(_path(D, sid), 'w').write(s)
+
+
 def apply(D, n):
     p_ = 'l%d-' % n
     # 1. dropped slides (generators write them; they are removed here, from the order and from disk)
@@ -280,6 +303,7 @@ def apply(D, n):
                                  'Ask questions 1 to 3. Ask 4 and 5 only if the clock at minute %d is on time. The 4-minute sneak-peek puzzles follow on the next slide.' % (warm_end - 2)),
                                 (r'(Ask questions 1 to 3\. Ask 4 and 5 only if the clock at minute )\d+', r'\g<1>%d' % (warm_end - 2), True)])
     marks_if_on_time(D, n)
+    micro_reset(D, n)
     sub_slide(D, p_ + 'exit', [('after the exit ticket)', 'after the exit ticket)')])
     # 5. lesson-specific cuts and wording
     fn = globals().get('lesson_%d' % n)

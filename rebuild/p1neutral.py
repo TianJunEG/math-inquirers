@@ -280,7 +280,7 @@ def fix_l9(D):
 
 
 def fix_l10(D):
-    body = h2('Warm-up: Challenge Day') + chip('Whiteboard round: everybody writes at the same time. No passing round.', TEAL, CREAM, 28)
+    body = h2('Warm-up: Puzzle Day') + chip('Whiteboard round: everybody writes at the same time. No passing round.', TEAL, CREAM, 28)
     body += card(p('Quick questions from our nine lessons.', 44, 700) + p('Write your answer on a whiteboard or paper. Not sure? Guess or draw it.', 36, 600, MUTED), WHITE, CARD_X)
     qs = [('Count in 5s: 5, 10, 15, __', '20'), ('10 = 4 + __', '6'), ('Pay 15¢ with two coins', '10¢ + 5¢'), ('What shape has 3 sides?', 'Triangle'), ('I think of a number, add 2 and get 9. My number?', '7')]
     inner = ''.join(f'<div style="display:flex;gap:20px;align-items:center"><p style="font-size:36px;font-weight:600;flex:1">{E(a)}</p><div data-build-in="pop" style="background:{YEL};border-radius:16px;padding:8px 22px"><p style="font-size:34px;font-weight:800">{E(b)}</p></div></div>' for a, b in qs)

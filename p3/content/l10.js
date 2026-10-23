@@ -1,4 +1,4 @@
-// Math Inquirers P3, Lesson 10: Challenge Day (mixed, incl. bar graphs and logic)
+// Math Inquirers P3, Lesson 10: Puzzle Day (mixed, incl. bar graphs and logic)
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';
 const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 16}" font-weight="${o.weight || 700}" text-anchor="${o.anchor || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial, sans-serif"${o.extra || ''}>${s}</text>`;
 
@@ -43,7 +43,7 @@ const digitCards = () => {
 
 module.exports = {
   lesson: {
-    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed puzzles: bar graphs and logic',
+    n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed puzzles: bar graphs and logic',
     objective: 'Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking.',
     skills: 'Choosing a strategy, logical reasoning, reading scales, listing systematically, perseverance, explaining',
     materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
@@ -69,7 +69,7 @@ module.exports = {
     ]
   },
   script: {
-    hook: ['Welcome to Challenge Day! Today there is no new topic: there are puzzles from every lesson. Clever inquirers do not always know the answer straight away. They know how to START: draw it, list it, or make a table.'],
+    hook: ['Welcome to Puzzle Day! Today there is no new topic: there are puzzles from every lesson. Clever inquirers do not always know the answer straight away. They know how to START: draw it, list it, or make a table.'],
     warmIntro: ['Relay chain: I ask the first question. The answer is the start of the next question, so listen carefully and pass it on. If someone is stuck, the group can help with a hint, not the answer.'],
     predict: ['Look at the two stations. Which one do you think will be harder? Write your guess, and we will see at the end.'],
     exploreHints: ['Stuck: “How could you start? Draw it, list it, or make a table?”', 'List station: “Start with the smallest digit in the hundreds place. How many numbers does each digit give?”', 'Measure station: “Draw the three pieces. What if all three were the same? What is extra?”', 'Ready for more: make a puzzle card for the next pair.'],

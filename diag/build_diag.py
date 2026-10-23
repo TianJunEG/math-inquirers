@@ -2,7 +2,7 @@
 Child sheet (3 pages: warm-up, main+stretch, parent result) plus a separate tutor key PDF.
 Placement rule printed here = docs/levels_and_placement.md: score = warm-up + main questions, out of 10 (Brain stretchers are a bonus, not counted).
 70% or more (7-10) enrol; 40-69% (4-6) enrol with a support note or one level down; under 40% (0-3) one level down; 90%+ (9-10) may try the check one level up.
-Level 1 (no level below): the under-40% advice is the free taster and a tutor chat. Content json holds only level, ageName, minutes, foundation, core, stretch, topics (and optional childNote)."""
+Level 1 (no level below): the under-40% advice is the free taster and a tutor chat. Content json holds level, ageName, minutes, foundation, core, stretch, topics and the optional text fields childNote (printed on the child sheet) and tutorKey (printed on the Tutor Key)."""
 import json,sys,os,html
 from playwright.sync_api import sync_playwright
 E=html.escape
@@ -64,9 +64,11 @@ P.append(f'''<div class="pg">{BAR}<div class="kick">Math Inquirers Placement Che
 P.append(f'''<div class="pg">{BAR}<span class="sec" style="margin-top:2mm">Main questions</span>{qhtml(d["core"])}<span class="sec">Brain stretchers</span><p class="tip" style="margin:0 0 3mm">Optional. These are meant to be tricky, and most children will not finish them. Have a go at any that look fun.</p>{qhtml(d["stretch"])}{FOOT("Page 2")}</div>''')
 def rows(L): return ''.join(f'<tr><td>{it["_n"]}</td><td>{E(it["q"])}</td><td><b>{E(it["a"])}</b></td><td>{E(it["work"])}</td></tr>' for it in L)
 T=lambda t,L:f'<span class="sec">{t}</span><table><tr><th>#</th><th>Question</th><th>Answer</th><th>Watch for</th></tr>{rows(L)}</table>'
-KEY=f'''<div class="pg" style="height:auto;min-height:297mm">{BAR}<div class="kick">For the tutor or parent</div><h1 style="margin-top:2mm">Answer key: {AGE}</h1><p class="sub">Accept equivalent forms (for example 70 cents and 70c, or 3/4 and three quarters). One mark per question. Add the warm-up and main marks to get a score out of 10; the Brain stretchers are a bonus and are not counted. Keep this key away from the child until they have finished.</p>
+EQ='for example 70 cents and 70c' if NUM==1 else 'for example 70 cents and 70c, or 3/4 and three quarters'
+TK=f'<p class="tip"><b>Tutor note.</b> {E(d["tutorKey"])}</p>' if d.get('tutorKey') else ''
+KEY=f'''<div class="pg" style="height:auto;min-height:297mm;padding-top:9mm;padding-bottom:6mm">{BAR}<div class="kick">For the tutor or parent</div><h1 style="margin-top:2mm">Answer key: {AGE}</h1><p class="sub">Accept equivalent forms ({EQ}). One mark per question. Add the warm-up and main marks to get a score out of 10; the Brain stretchers are a bonus and are not counted. Keep this key away from the child until they have finished.</p>
 {T("Warm-up (4 marks)",d["foundation"])}{T("Main questions (6 marks)",d["core"])}{T("Brain stretchers (bonus, not counted)",d["stretch"])}
-<p class="tip">Questions the child ticked "not learnt yet" score 0 but tell you what to teach first. They do not count against the child.</p></div>'''
+{TK}<p class="tip">Questions the child ticked "not learnt yet" score 0 but tell you what to teach first. They do not count against the child.</p></div>'''
 down=f'{DOWN[1]} ({DOWN[0]})' if DOWN else None
 up=f'{UP[1]} ({UP[0]})' if UP else None
 mid=(f'Join <b>{AGE} (Level {NUM})</b> and we will note that your child may need some support, or choose <b>{down}</b>.' if down else

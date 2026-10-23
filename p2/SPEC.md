@@ -1,6 +1,6 @@
 # Math Inquirers P2 Holiday Program — content spec
 
-**Who:** children finishing Primary 2 (going into P3 in 2027), age 8. Online-first, live video, groups of up to 8.
+**Who:** ages 7 to 9 (builds on Primary 2 maths). Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
 **Approach:** enrichment, non-routine puzzles, on topics chosen to complement the P2 school year. Slogan: "Notice it. Test it. Explain why."
 
@@ -16,7 +16,7 @@
 | 7 | 4A | Fair Shares | Fractions | halves, thirds, quarters; compare; add like fractions within one whole; fair sharing |
 | 8 | 4B | Shape Builders | 2D and 3D shapes | semicircles/quarter circles, composing shapes, counting cubes in stacks, nets, hidden shapes |
 | 9 | 5A | Measure Masters | Length, mass, volume, time | balance-scale puzzles, pouring (jug) puzzles, ribbons end to end, time to 5 minutes and durations |
-| 10 | 5B | Challenge Day | Mixed (incl. picture graphs with scales, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; picture graph with a key |
+| 10 | 5B | Puzzle Day | Mixed (incl. picture graphs with scales, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; picture graph with a key |
 
 ## P2 level rules
 - Children know: numbers to 1000; + and − within 1000; × and ÷ facts of the 2, 3, 4, 5 and 10 tables (so × and ÷ ARE allowed, within those tables); fractions with denominators up to 12, comparing unit and like fractions, adding/subtracting like fractions within one whole; money in dollars and cents ($2.35); m, cm, kg, g, ℓ; time to 5 minutes, a.m./p.m.; picture graphs with a key; semicircle, quarter circle; cube, cuboid, cone, cylinder.

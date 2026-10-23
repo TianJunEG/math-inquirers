@@ -1,4 +1,4 @@
-// Math Inquirers P2, Lesson 10: Challenge Day (mixed puzzles: how to start a puzzle)
+// Math Inquirers P2, Lesson 10: Puzzle Day (mixed puzzles: how to start a puzzle)
 // Every answer below was worked out and checked; the logic grids were checked by a short program for exactly one solution.
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', W = '#FFFFFF';
 const F = 'font-family="Arial, sans-serif"';
@@ -36,7 +36,7 @@ const W5 = [2300, 1900, 1900, 1900, 1900];
 /* ---------- module ---------- */
 module.exports = {
   lesson: {
-    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Puzzles',
+    n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed Puzzles',
     objective: 'Choose a way to start a puzzle (draw it, list it in order, make a table) and use it on mixed puzzles: picture graphs with a key of 5 or 10, a logic grid with exactly one answer, numbers to 1000, money, fractions, and × and ÷ with the 2, 3, 4, 5 and 10 tables. Check the answer and explain it.',
     skills: 'Choosing a strategy, drawing models, listing in order, making tables, logical elimination, checking, explaining',
     materials: 'Four station cards (all on one slide in the deck, and printed in the tutor guide), play coins, digit cards 0 to 9, paper strips for fractions, mini whiteboards, certificates, stamps.',
@@ -60,7 +60,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome to Challenge Day, inquirers! Today’s puzzles mix everything from our ten lessons.', 'Clever inquirers do not know every answer straight away. They know how to START: draw it, list it, or make a table.'],
+    hook: ['Welcome to Puzzle Day, inquirers! Today’s puzzles mix everything from our ten lessons.', 'Clever inquirers do not know every answer straight away. They know how to START: draw it, list it, or make a table.'],
     warmIntro: ['Relay time! I show a card and ask for a volunteer. That person answers, then chooses a friend who has not had a turn. You can always say pass. A different answer gets “let us test that”, never a groan.'],
     predict: ['Look at the four station cards. Which one will be hardest? Which way will you start it: draw, list or table? Write your guess.'],
     exploreHints: ['Stuck: “Can you draw it? Can you list the ways in order?”', 'Graph card: “Look at the key first. What is one picture worth?”', 'Finished early: “Is there another answer? How do you know there is not?”'],

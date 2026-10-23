@@ -178,6 +178,7 @@ module.exports = {
     W.push(H.q(5, [TH(), H.t('Magic triangle. Put the numbers 110, 120, 130, 140, 150 and 160 in the circles, once each, so every side has the same total.')], { keepNext: true }));
     W.push(H.fig(triSvg()));
     W.push(H.sub('a', 'Each side adds up to 390. The numbers 110 and 120 are already in two corners. First: what goes between them? Then fill in all the circles. Which numbers are in the corners?  __________'));
+    W.push(H.sub('b', 'Each side adds up to 420. Fill in the second triangle. Which numbers are in the corners?  __________'));
     W.push(H.q(6, 'Mei thinks of two numbers. They add up to 700. One number is 200 more than the other. What are the two numbers? Draw a model: two bars, and the long bar is 200 longer.', { keepNext: true }));
     W.push(...H.lines(4));
     W.push(H.p([H.t('Answer:   ____________   and   ____________', { bold: true })], { indent: { left: 560 }, before: 60 }));

@@ -211,7 +211,7 @@ module.exports = {
       ]
     },
     {
-      n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Puzzles',
+      n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed Puzzles',
       objective: 'Use patterns, bonds, graphs, money, shapes, logic, working backwards and measuring in new puzzles, and explain the thinking.',
       skills: 'Applying and connecting ideas, perseverance, explaining',
       materials: 'Four puzzle cards (coins, patterns, logic, measuring; printed in the workbook and shown on the Lesson 10 slide), play coins, cubes, certificates, stamps, mini whiteboards.',

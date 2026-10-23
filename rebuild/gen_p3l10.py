@@ -1,4 +1,4 @@
-"""Math Inquirers P3, Lesson 10: Challenge Day. Writes split/p3l10/project (deck.json + slides/*.html)."""
+"""Math Inquirers P3, Lesson 10: Puzzle Day. Writes split/p3l10/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -75,7 +75,7 @@ def bar_graph(data,top,stepv,k,bw=110,slot=170,aria='Bar graph',title='',ylab=''
     return svg(W,Hh,b,aria)
 
 # ---------- 1. title ----------
-put('p3l10-title',title_slide('p3l10-title',10,5,'Challenge Day','Mixed puzzles: bar graphs and logic',
+put('p3l10-title',title_slide('p3l10-title',10,5,'Puzzle Day','Mixed puzzles: bar graphs and logic',
  'Choose how to start a puzzle, solve a logic grid, read a bar graph with a scale, and explain our thinking.',
  'Objective: Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking. Heuristics taught: (1) draw it, list it or make a table to start; (2) a logic grid: a tick means crosses in the rest of its row and column. '
  'Materials: Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. '
@@ -224,7 +224,7 @@ import p3_gifted; order[:]=p3_gifted.add(S,order,10)  # close-the-gaps: warm-up 
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
-      'title':'Math Inquirers P3: Lesson 10 – Challenge Day','order':order,'cover':'p3l10-title',
+      'title':'Math Inquirers P3: Lesson 10 – Puzzle Day','order':order,'cover':'p3l10-title',
       'sections':{'s1':{'description':'Warm-up and explore','start':'p3l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, make a table, read the scale)','start':'p3l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and close','start':'p3l10-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
       'designSystems':[]}

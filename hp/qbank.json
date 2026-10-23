@@ -64,12 +64,12 @@
     "a": "Add 4: from the 3rd to the 5th number is two equal jumps that make 8, and 4 + 4 = 8. The 2nd number is 11 − 4 = 7 and the 1st is 7 − 4 = 3. Check: 3, 7, 11, 15, 19."
    },
    {
-    "q": "A pattern starts at 3 and adds 5 each time. What is the 8th number?",
-    "a": "38"
+    "q": "Mei says: \"If a pattern adds 5 each time, every number in it ends in 0 or 5.\" Is she right? Try a pattern that starts at 2 and one that starts at 3.",
+    "a": "No. It only works when the pattern starts at 0 or at a number that ends in 0 or 5. Starting at 2: 2, 7, 12, 17 … the numbers end in 2 or 7. Starting at 3: 3, 8, 13, 18 … they end in 3 or 8."
    },
    {
-    "q": "A pattern starts at 60 and takes away 5 each time. What is the 9th number?",
-    "a": "20"
+    "q": "A pattern goes 50, 44, 38, 32 … Will the pattern ever say 0? How do you know?",
+    "a": "No. Keep taking away 6: 50, 44, 38, 32, 26, 20, 14, 8, 2. The next step would go below 0, so it jumps over 0."
    },
    {
     "q": "Frog A jumps in 3s from 0. Frog B jumps in 4s from 0. Which numbers up to 40 do both frogs land on? (Do not count 0.)",
@@ -152,16 +152,16 @@
   ],
   "stretch": [
    {
-    "q": "5 + 4 = 6 + __",
-    "a": "3"
+    "q": "Mei says 7 + 5 = 8 + 4. Ben says 7 + 5 = 8 + 5. Who is right? Show how you know without adding both sides.",
+    "a": "Mei. 8 is 1 more than 7 and 4 is 1 less than 5, so the total stays the same (both sides make 12). Ben made the first number 1 bigger but did not make the second number smaller, so his right side is 1 too big (13)."
    },
    {
-    "q": "9 + 6 = __ + 10",
-    "a": "5"
+    "q": "Siti puts 10 stickers into two pockets. The left pocket must have MORE stickers than the right pocket, and each pocket has at least 1 sticker. How many ways can she do it? List them in order.",
+    "a": "4 ways: 6 and 4, 7 and 3, 8 and 2, 9 and 1. Going down one at a time from 6 and 4 shows none are missed (5 and 5 is a tie, and 10 and 0 leaves a pocket empty)."
    },
    {
-    "q": "6 + 4 = 10, so 16 + 4 = __ and 26 + 4 = __",
-    "a": "20 and 30"
+    "q": "7 + 3 = 10. What is 8 + 4? What is 8 + 2? What happened to the total each time, and why?",
+    "a": "12 and 10. 8 + 4: both numbers went up by 1, so the total went up by 2. 8 + 2: one number went up by 1 and the other went down by 1, so the total stayed the same."
    },
    {
     "q": "Find all the pairs of numbers from 1 to 11 that make 12. (3 + 9 and 9 + 3 count as the same pair.) How many pairs are there?",
@@ -180,24 +180,24 @@
     "a": "6 pairs: 5 + 15, 6 + 14, 7 + 13, 8 + 12, 9 + 11, 10 + 10."
    },
    {
-    "q": "8 + 2 = 7 + __",
-    "a": "3"
+    "q": "Which one does NOT belong: 6 + 4, 7 + 3, 8 + 3, 5 + 5? How do you know?",
+    "a": "8 + 3. It makes 11 and the others all make 10."
    },
    {
-    "q": "12 + 3 = 10 + __",
-    "a": "5"
+    "q": "True or false? Do not add everything: (a) 9 + 4 = 4 + 9  (b) 6 + 5 = 5 + 6 + 1  (c) 8 + 3 = 3 + 8",
+    "a": "(a) True (b) False: the right side is 1 more (c) True. Turning a sum round does not change the total."
    },
    {
-    "q": "4 + __ + 3 = 10",
-    "a": "3"
+    "q": "The same number goes in both boxes: [ ] + [ ] = 18. What is the number? Then the same number goes in all three boxes: [ ] + [ ] + [ ] = 18. What is the number now?",
+    "a": "9 (9 + 9 = 18), and 6 (6 + 6 + 6 = 18)."
    },
    {
-    "q": "__ + 6 + 6 = 20",
-    "a": "8"
+    "q": "8 + 2 = 10. Use it to help you fill in the gaps: 28 + __ = 30, 38 + __ = 40, 98 + __ = 100.",
+    "a": "2 each time. The ones stay the same (8 + 2 = 10), so each answer is 2 away from the next ten."
    },
    {
-    "q": "Write three different ways to make 12 with two numbers.",
-    "a": "For example 6 + 6, 7 + 5, 9 + 3, 10 + 2, 8 + 4."
+    "q": "Two numbers add up to 9. Can they be the SAME number? How do you know? Then find two numbers that add up to 9 where one is 3 more than the other.",
+    "a": "No. 4 + 4 = 8 and 5 + 5 = 10, so no whole number added to itself makes 9. The numbers are 3 and 6 (3 + 6 = 9 and 6 is 3 more than 3)."
    }
   ],
   "challenge": [
@@ -218,8 +218,8 @@
     "a": "No. The biggest side total is 12: put the biggest numbers 4, 5 and 6 in the corners (each corner is counted in two sides) and the sides are 4 + 3 + 5, 5 + 1 + 6 and 6 + 2 + 4, all 12. Any other corners give less, so 13 is not possible. (Possible totals: 9, 10, 11, 12.)"
    },
    {
-    "q": "Put 1 to 6 in the magic triangle so each side adds to 11. What goes in the corners and middles?",
-    "a": "Corners 2, 4, 6. Between 2 and 4: 5. Between 4 and 6: 1. Between 6 and 2: 3. (It is the only set of corners that works.)"
+    "q": "Two circles and one square add up to 12. One circle and two squares add up to 9. What number is each shape? Explain how you found it.",
+    "a": "Circle 5, square 2 (2 × 5 + 2 = 12 and 5 + 2 × 2 = 9). One way to see it: the two totals differ by 3, and the only change is one circle swapped for one square, so a circle is 3 more than a square. Then 3 squares and 6 more make 12, so each square is 2."
    },
    {
     "q": "Ali has 20 stickers. He keeps 9 and shares the rest between Ben and Mei. Ben gets 3 more than Mei. How many does each get?",
@@ -292,14 +292,14 @@
     "a": "9. Count in 3s: 3, 6, 9, 12 is 4 pictures, so 1 picture = 3 children. Banana: 3, 6, 9."
    },
    {
-    "q": "1 picture = 2 children. Red has 3 pictures and blue has 5. How many more children chose blue than red?",
-    "a": "4 (2 more pictures, each worth 2: 2, 4)"
+    "q": "Ali says: \"Blue has 2 more pictures than red, so blue got 2 more votes.\" Is he right if 1 picture = 2 children? What if 1 picture = 5 children?",
+    "a": "No. Each extra picture is worth 2 children, so blue got 4 more votes (2 pictures, each worth 2). If 1 picture = 5 children, blue got 10 more votes."
    }
   ],
   "challenge": [
    {
-    "q": "Votes: A 8, B 5, C 6. Then 4 more children join and all choose B. Which fruit wins now, and by how many votes?",
-    "a": "B wins with 9, which is 1 more than A."
+    "q": "A picture graph has 12 pictures for three fruits (1 picture = 2 children). Apple has the most pictures and no two fruits have the same number. How many pictures could apple have? List every graph you can find.",
+    "a": "Apple could have 5, 6, 7, 8 or 9 pictures. There are 7 graphs (apple, second, third): 9, 2, 1;  8, 3, 1;  7, 4, 1;  6, 5, 1;  7, 3, 2;  6, 4, 2;  5, 4, 3."
    },
    {
     "q": "1 picture = 3 children. Apple has 4 pictures, banana 2 and orange 5. Then 7 more children join and all choose banana. Which fruit wins now, and by how many votes?",
@@ -500,16 +500,16 @@
     "a": "11 (undo in reverse order: 14 − 8 = 6, 6 + 5 = 11)."
    },
    {
-    "q": "I think of a number. I add 5, then I take away 3. I get 9. What is my number?",
-    "a": "7"
+    "q": "A machine adds 6, then takes away 2. IN 5 gives OUT 9. Can you make a one-step machine that does the same job? Check it with IN 10.",
+    "a": "Yes: add 4. 5 + 4 = 9 and 10 + 4 = 14 (10 + 6 − 2 = 14 too)."
    },
    {
-    "q": "I think of a number. I add 6, then I take away 2. I get 10. What is my number?",
-    "a": "6"
+    "q": "I think of a number. I take away 4, then add 9, then take away 2. I get 20. What is my number?",
+    "a": "17. Work backwards: 20 + 2 = 22, then 22 − 9 = 13, then 13 + 4 = 17. Check: 17 − 4 = 13, 13 + 9 = 22, 22 − 2 = 20."
    },
    {
-    "q": "I think of a number. I add 9, then I take away 4. I get 12. What is my number?",
-    "a": "7"
+    "q": "A machine gives OUT 7 for IN 3, OUT 9 for IN 4 and OUT 11 for IN 5. Is the machine \"add 4\"? How do you know? What does OUT do when IN goes up by 1?",
+    "a": "No. 4 + 4 is 8, not 9. When IN goes up by 1, OUT goes up by 2 (7, 9, 11), so the machine is not adding the same number each time."
    }
   ],
   "challenge": [
@@ -604,8 +604,8 @@
     "a": "4 coins: 50 + 20 + 20 + 5. Three coins cannot work: with a 50¢ coin you need 45¢ from two coins (no pair makes 45¢), and without it three coins make at most 60¢."
    },
    {
-    "q": "What is the fewest number of coins to make 65¢ from 5¢, 10¢, 20¢ and 50¢?",
-    "a": "3 coins (50¢ + 10¢ + 5¢)"
+    "q": "Ali pays 65¢ with the fewest coins he can (coins: 5¢, 10¢, 20¢, 50¢). Ben pays 65¢ with exactly 5 coins. How many more coins does Ben use than Ali?",
+    "a": "Ali uses 3 coins (50¢ + 10¢ + 5¢). Ben uses 20¢ + 20¢ + 10¢ + 10¢ + 5¢, which is the only way with 5 coins. Ben uses 2 more coins."
    },
    {
     "q": "Ali buys a ruler for 35¢. He pays with a 50¢ coin. Which coins could he get back as change?",
@@ -914,8 +914,8 @@
     "a": "15 cubes"
    },
    {
-    "q": "1 clip = 3 cubes. A ruler is 5 clips long. How many cubes long is the ruler?",
-    "a": "15 cubes"
+    "q": "A rope is 8 cubes long. A string is 3 clips long. 1 clip is as long as 3 cubes. Which is longer, and by how many cubes?",
+    "a": "The string. 3 clips = 3 × 3 = 9 cubes, which is 1 cube longer than the rope."
    }
   ],
   "challenge": [
@@ -924,8 +924,8 @@
     "a": "5 pieces and 4 cuts. Yes: the last piece needs no cut, so cuts are always 1 fewer than pieces."
    },
    {
-    "q": "A stick is 12 cubes long. Ali measures a desk by laying the stick end to end 4 times and then 5 more cubes. How long is the desk in cubes?",
-    "a": "53 cubes (12 + 12 + 12 + 12 + 5)."
+    "q": "Ben lays a 12-cube stick end to end 3 times and has 5 cubes left over to reach the end of a desk. Mei measures the same desk with a 9-cube stick. How many sticks does she lay, and how many cubes are left over?",
+    "a": "The desk is 12 + 12 + 12 + 5 = 41 cubes long. Mei lays her 9-cube stick 4 times (36 cubes) and has 5 cubes left over."
    },
    {
     "q": "A train has 3 carriages. Each is 6 cubes long. There is a gap of 1 cube between carriages. How long is the whole train? What if there are 5 carriages?",
@@ -1002,8 +1002,8 @@
     "a": "49 (list it: 24, 29, 34, 39, 44, 49, 54; 49 is 1 away, 54 is 4 away)."
    },
    {
-    "q": "Ali has 12 stickers. He gives 5 to Mei and then gets 3 more. How many does he have now?",
-    "a": "10"
+    "q": "Mei gets 2 stickers from Ali, then gives 3 stickers back to Ali. Now Mei has 4 stickers. How many stickers did Mei have at first?",
+    "a": "5. Work backwards: 4 + 3 = 7, then 7 − 2 = 5. Check: 5 + 2 = 7, 7 − 3 = 4."
    }
   ],
   "challenge": [

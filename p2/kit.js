@@ -91,7 +91,7 @@ const kit = () => [
   H('Cut-outs', 'For the P2 program. Cut along the dashed lines and keep the pieces in one envelope.'),
   lab2('Place-value cards (Lessons 1, 2 and 10)'), placeValue(),
   '<div class="brk"></div>', H('Digit cards', 'Two sets of 0 to 9 (Lessons 1 and 10).'), digits(),
-  lab2('Fraction strips (Lesson 7)'), fractions(),
+  '<div class="brk"></div>', lab2('Fraction strips (Lesson 7)'), fractions(),
   '<div class="brk"></div>', H('Paper clock', 'For Lesson 9 (time).'), clock(),
   lab2('Paper strips of numbered squares (Lesson 9: ribbons and lengths)'), P.cubes(),
   '<div class="brk"></div>', H('Cube nets', 'For Lesson 8 (Shape Builders). Cut out each net and try folding it. Which ones make a cube?'), nets(),
