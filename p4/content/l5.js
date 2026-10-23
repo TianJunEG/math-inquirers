@@ -64,6 +64,18 @@ const canBar = () => {
   return sv + '</svg>';
 };
 
+const jugFig = () => {
+  const { T, R, L, N, TEAL } = FG; let g = '';
+  [[150, 'full', 'jug full of water', '1.45 kg', 0], [450, 'half', 'jug half full', '0.85 kg', 1]].forEach(([cx, _k, cap, kg, half]) => {
+    const top = 20, h = 130, w = 90;
+    g += R(cx - w / 2, top, w, h, { w: 4 });
+    const lvl = half ? h / 2 : h - 6;
+    g += `<rect x="${cx - w / 2 + 2}" y="${top + h - lvl}" width="${w - 4}" height="${lvl - 2}" fill="url(#mi-dots)"/>`;
+    g += L(cx - w / 2 - 6, top + h / 2, cx - w / 2 + 12, top + h / 2, { w: 3 });
+    g += T(cx, top + h + 26, cap, { size: 18 }) + T(cx, top + h + 52, 'scale reads ' + kg, { size: 19, fill: TEAL });
+  });
+  return FG.svg(600, 230, g, 'Two jugs. The first is full of water and the scale reads 1.45 kilograms. The second is half full and the scale reads 0.85 kilograms.');
+};
 module.exports = {
   lesson: {
     n: 5, week: 3, session: 'A', title: 'Decimal Detectives', topic: 'Decimals',
@@ -151,8 +163,8 @@ module.exports = {
       { q: 'A pen costs $0.85 more than a pencil. 2 pens and 1 pencil cost $4.70 altogether. How much does a pencil cost?', a: '$1.00 (3 pencils + $1.70 = $4.70, so 3 pencils cost $3.00; a pen costs $1.85)' },
       { q: 'How many numbers with exactly 2 decimal places are between 3.9 and 4.1? (Do not count 3.9 and 4.1.)', a: '19 (3.91 to 3.99 is 9, 4.00 to 4.09 is 10)' },
       { q: 'Make up your own "closest to" puzzle. Choose four digit cards and a decimal point (the point goes between two digits). Pick a target number and find the number with 2 decimal places that is closest to it. Then ask: what if the target changes? Swap puzzles with a partner and check each other’s answers.', a: 'Puzzles will vary: check by listing every number that can be made. Model: cards 3, 5, 6, 9 and target 40: the closest is 39.65 (0.35 away); the next is 39.56 (0.44 away). What if the target is 50? Then the closest is 53.69 (3.69 away); the closest below 50 is 39.65, which is 10.35 away.' },
-      { q: 'Ali, Ben and Siti share $9.20. Ben gets $0.50 more than Ali. Siti gets $1.30 more than Ben. How much does each child get?', a: 'Ali $2.30, Ben $2.80, Siti $4.10 (take away $0.50 + $1.80 = $2.30, then $6.90 ÷ 3 = $2.30)' },
-      { q: 'A jug full of water weighs 1.45 kg. When it is half full, it weighs 0.85 kg. What is the mass of the empty jug?', a: '0.25 kg (half the water is 1.45 − 0.85 = 0.6 kg, all the water is 1.2 kg, jug = 1.45 − 1.2)' }
+      { q: 'Ali, Ben and Siti share $9.20. Ben gets $0.50 more than Ali. Siti gets $1.30 more than Ben. How much does each child get?', fig: FG.barModel({ left: 70, right: 150, rows: [{ name: 'Ali', segs: [{ u: 3 }] }, { name: 'Ben', segs: [{ u: 3 }, { u: 0.8, f: 'shade', t: '$0.50', size: 15 }] }, { name: 'Siti', segs: [{ u: 3 }, { u: 0.8, f: 'shade', t: '$0.50', size: 15 }, { u: 1.8, f: 'dots', t: '$1.30 more', size: 15 }] }], ann: [{ k: 'rbrace', r1: 0, r2: 2, at: 5.6, t: '$9.20' }], label: 'Three bars. Ali has a bar of 3 equal parts. Ben has the same bar and a shaded extra part of 50 cents. Siti has Ben’s bar and a dotted extra part of $1.30. A brace marks $9.20 altogether.' }), a: 'Ali $2.30, Ben $2.80, Siti $4.10 (take away $0.50 + $1.80 = $2.30, then $6.90 ÷ 3 = $2.30)' },
+      { q: 'A jug full of water weighs 1.45 kg. When it is half full, it weighs 0.85 kg. What is the mass of the empty jug?', fig: jugFig(), a: '0.25 kg (half the water is 1.45 − 0.85 = 0.6 kg, all the water is 1.2 kg, jug = 1.45 − 1.2)' }
     ]
   },
 
