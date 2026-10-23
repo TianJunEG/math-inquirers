@@ -133,7 +133,8 @@ svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle
 .qslots{display:flex;flex-direction:column;gap:2.5mm}.qslot{display:flex;align-items:center;gap:4mm;font-size:16pt;font-weight:800}.qslot .qn{width:14mm}.qslot .ab.wide{width:68mm;height:12.5mm}
 /* front matter and key */
 .fm{font-size:13pt;line-height:1.4}
-.fm.notes{font-size:11.5pt;line-height:1.32}.fm.notes h3{margin:3.5mm 0 1mm}.fm.notes .draft{margin-bottom:2mm}
+.cov2{column-count:2;column-gap:5mm;font-size:8pt;line-height:1.2}.covi{break-inside:avoid;margin:0 0 1.2mm;border-bottom:0.2mm solid #000;padding-bottom:0.6mm}.covp{font-weight:800;white-space:nowrap}
+.fm.notes{font-size:11pt;line-height:1.28}.fm.notes h3{margin:3.5mm 0 1mm}.fm.notes .draft{margin-bottom:2mm}
 .fm h2{font-family:'Fredoka';font-weight:600;font-size:22pt;margin:0 0 4mm;border-bottom:0.8mm solid #000;padding-bottom:2mm}
 .fm h3{font-family:'Fredoka';font-weight:600;font-size:14pt;margin:5mm 0 1.5mm}
 .fm p{margin:1.5mm 0}.fm ul{margin:1mm 0 1mm 6mm;padding:0}
@@ -145,8 +146,8 @@ svg.face{display:block}.lead svg.face{display:inline-block;vertical-align:middle
 table.tbl{border-collapse:collapse;width:100%;font-size:10.5pt}
 table.tbl th,table.tbl td{border:0.4mm solid #000;padding:1.2mm 2mm;text-align:left;vertical-align:top}
 table.tbl th{font-weight:800;border-bottom:0.8mm solid #000}
-table.tbl.cov{font-size:8.6pt}table.tbl.cov td:first-child{white-space:nowrap}table.tbl.cov td:last-child{white-space:nowrap}table.tbl.cov th,table.tbl.cov td{padding:0.7mm 1.6mm}
-table.tbl.cont{font-size:9.6pt}table.tbl.cont th,table.tbl.cont td{padding:1mm 1.6mm}
+table.tbl.cov{font-size:8.2pt}table.tbl.cov td:first-child{white-space:nowrap}table.tbl.cov td:last-child{white-space:nowrap}table.tbl.cov th,table.tbl.cov td{padding:0.35mm 1.4mm}
+table.tbl.cont{font-size:9pt}table.tbl.cont th,table.tbl.cont td{padding:0.5mm 1.6mm}
 .kentry{border:0.5mm solid #000;border-radius:2mm;padding:2.2mm 3.5mm;margin-bottom:3mm;font-size:10pt;line-height:1.25;break-inside:avoid}
 .kentry h4{font-family:'Fredoka';font-weight:600;font-size:13pt;margin:0 0 1.5mm}
 .kentry .tags{font-weight:700;margin-bottom:1mm}
@@ -299,7 +300,6 @@ def teacher_notes(pages, bk):
             + ('<li><b>Problem solving.</b> Some pages (' + ps + ') practise the kinds of question that appear in school tests, such as stories with more than one step or fewest coins, rather than one numbered syllabus outcome. The key tags them problem solving.</li>' if ps else '')
             + '<li><b>Stars.</b> One star: one skill, as usually taught. Two stars: the same topics with two steps or two clues to combine.</li></ul>'
             '<h3>Photocopying</h3><p>All pages are black and white with solid lines, so they copy cleanly. Each page is one side only. Pupils write on the page: the boxes are large for young hands. Use A4 and print at 100% (actual size); on the ruler pages a real ruler matches the drawn ruler only at 100%.</p>'
-            '<h3>What the booklet covers</h3>' + coverage_table(pages, bk) +
             '</section>')
 
 def coverage_table(pages, bk):
@@ -307,15 +307,16 @@ def coverage_table(pages, bk):
     for p in pages:
         for o in PAGE_OC[p["no"]]:
             pos.setdefault(o, []).append(p["code"].split(" ")[0])
-    rows = "".join(f'<tr><td>{html.escape(oc_label(o))}</td><td>{html.escape(OUTCOMES[o][1])}</td><td>{", ".join(pos[o])}</td></tr>' for o in OUTCOMES if o in pos)
+    items = "".join(f'<div class="covi"><b>{html.escape(oc_label(o))}</b> {html.escape(OUTCOMES[o][1])} <span class="covp">{", ".join(pos[o])}</span></div>' for o in OUTCOMES if o in pos)
     absent = [oc_label(o) for o in OUTCOMES if o not in pos]
-    return ('<table class="tbl cov"><tr><th>Syllabus outcome</th><th>Wording in the syllabus</th><th>Pages</th></tr>' + rows + '</table>'
-            + '<p style="font-size:8.5pt;margin-top:1.5mm">Outcomes practised in the other booklet: ' + html.escape("; ".join(absent)) + '.</p>')
+    return ('<div class="cov2">' + items + '</div>'
+            + '<p style="font-size:8pt;margin-top:1.5mm">Outcomes practised in the other booklet: ' + html.escape("; ".join(absent)) + '.</p>')
 
 def contents(pages, bk):
-    rows = "".join(f'<tr><td>{p["code"].split(" ")[0]}</td><td>{p["code"].split("(")[1].rstrip(")")}</td><td>{html.escape(p["title"])}</td><td>{html.escape(p["topic"])}</td><td>{"1 star" if p["tier"]==1 else "2 stars"}</td></tr>' for p in pages)
-    return (f'<section class="page fm"><h2>Contents: {html.escape(bk["name"])}</h2><table class="tbl cont"><tr><th>Page</th><th>Code</th><th>Puzzle</th><th>Topic</th><th>Tier</th></tr>'
-            + rows + '</table><p style="margin-top:4mm;font-size:11pt">Pages are independent. Pick any page. The code in the footer shows the page in this booklet and, in brackets, its number in the full set of 40 pages (P1-01 to P1-40).</p></section>')
+    rows = "".join(f'<tr><td>{p["code"].split(" ")[0]}</td><td>{p["code"].split("(")[1].rstrip(")")}</td><td>{html.escape(p["title"])}</td><td>{"1 star" if p["tier"]==1 else "2 stars"}</td></tr>' for p in pages)
+    return (f'<section class="page fm"><h2>Contents: {html.escape(bk["name"])}</h2><table class="tbl cont"><tr><th>Page</th><th>Code</th><th>Puzzle</th><th>Tier</th></tr>'
+            + rows + '</table><p style="margin:2mm 0 0;font-size:9pt">Pages are independent. The footer code shows the page in this booklet and, in brackets, its number in the full set of 40 (P1-01 to P1-40).</p>'
+            '<h3 style="margin:3mm 0 1mm;font-size:12pt">What the booklet covers</h3>' + coverage_table(pages, bk) + '</section>')
 
 # ------------------------------------------------------------------ teacher key
 def key_entry(p):

@@ -74,7 +74,7 @@ def choice_html(words):
 
 def _vis_html(v):
     if v.get('type') == 'ruler':   # true 1:1 scale on paper
-        return f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True)}</div>'
+        return f'<div class="vis" style="width:auto!important;margin:6px 0 6px 4px">{svg.ruler(v.get("start", 0), v.get("end", 15), v.get("objects"), v.get("mark"), true_scale=True, broken=v.get("broken"))}</div>'
     wide = v.get('type') in ('table', 'bar_model', 'line_up', 'picture_graph', 'money', 'balance')
     xw = v.get('type') in ('number_line', 'seq', 'jump_lines')
     arr = v.get('type') == 'array'

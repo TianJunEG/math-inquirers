@@ -417,8 +417,9 @@ def page37():
         ans = [tiles[k][1] if blank[k] == "l" else tiles[k][2] for k in range(6)]
         break
     chain = bond_chain_svg(tiles, blank)
-    body = (f'<div class="blk"><p class="lead">Each tile: the top number is the whole. The two below are its parts.</p>{chain}</div>'
-            f'<div class="blk"><p class="lead">Write the numbers for the empty circles, tile 1 to tile 6.</p><div class="ansgrid2">'
+    ex = ('<div class="howto"><b>Example</b><p class="ptxt">Whole 9. Left part 4. Right part?</p><p class="ptxt">9 &minus; 4 = 5. Check: 4 + 5 = 9.</p></div>')
+    body = (f'{ex}<div class="blk"><p class="lead">Each tile: the top number is the whole. The two below are its parts.</p>{chain}</div>'
+            f'<div class="blk"><p class="lead">Write the numbers for the empty circles, tile 1 to tile 6.</p><div class="ansgrid2" style="margin-top:4mm">'
             + "".join(f'<span class="lbx"><span class="ab"></span><small>tile {k+1}</small></span>' for k in range(6)) + '</div></div>')
     chk = ["Go round the loop. Do the numbers joined by = match?", "Do the six numbers you wrote fill the six empty circles?"]
     P = Page(no=37, title="Bonds and Families", tier=2, topic="Number bonds to 20: parts, wholes and the loop that closes",

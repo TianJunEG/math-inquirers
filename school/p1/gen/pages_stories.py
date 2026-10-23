@@ -335,7 +335,7 @@ def page40():
              body=body, check="Write the ticked letters in order. Do they spell a word?", check_boxes=6,
              key=dict(answers=", ".join(f"{i+1}) {'T' if truth[i] else 'F'} ({letters[i]['T' if truth[i] else 'F']})" for i in range(6)), check_result=f"Letters in order: {word}"),
              note=("Six statements about groups, the sign x and sharing, three true and three false, within 40 (sharing within 20). A false statement is a common slip: adding instead of multiplying, or one group too many or too few. "
-                   "Each choice has a letter. The right choices spell the word; every other way of ticking (63 ways) was tested against a very large word list and none spells a word. No division sign is used."),
+                   "Each choice has a letter. The right choices spell the word; every other way of ticking was tested against a very large word list and none spells a word. No division sign is used."),
              seed=4040)
     P.v("V1 independent evaluator reads each printed statement: three true and three false, equal to the key", [tf_eval(s_) for s_ in st] == truth and sum(truth) == 3, [tf_eval(s_) for s_ in st])
     P.v("V2 the letters of the right ticks spell " + word, "".join(letters[i]["T" if truth[i] else "F"] for i in range(6)) == word)

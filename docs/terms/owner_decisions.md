@@ -192,3 +192,6 @@ Every item gives (a) the file, (b) my recommendation, (c) a one-word reply the o
 
 ## 23 Oct 2026 (night): printer order date
 Owner chose FRIDAY: place the holiday-workbook print order on Fri 6 Nov 2026 (not Mon 9 Nov). Proof print of the toolbox card to be requested before then. Working freeze for holiday workbook changes: Mon 2 Nov, leaving 3 working days for final checks and B&W print files before the order.
+
+## 23 Oct 2026 (night): TERM-YES
+Owner replied TERM-YES to the term-plan review (docs/pedagogy/term_review.md). Applied: the section 12 data fixes (plan hygiene) and the status of Decision 1 (toolbox spine adopted, built) and Decision 6 (superseded). Decisions 2 to 5 of section 12 were NOT individually answered and stay open until the owner answers them.
