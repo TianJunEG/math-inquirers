@@ -2806,12 +2806,12 @@
         },
         "fig_base": {
           "type": "number_line",
-          "start": 16,
-          "end": 22,
+          "start": 36,
+          "end": 42,
           "step": 1,
           "label_every": 1,
           "hide": [
-            19
+            40
           ],
           "width": 460
         }
@@ -2878,12 +2878,12 @@
         },
         "fig_base": {
           "type": "number_line",
-          "start": 17,
-          "end": 23,
+          "start": 57,
+          "end": 63,
           "step": 1,
           "label_every": 1,
           "hide": [
-            19
+            59
           ],
           "width": 460
         }
@@ -3117,14 +3117,14 @@
         },
         "fig_base": {
           "type": "jump_lines",
-          "start": 30,
-          "end": 40,
+          "start": 40,
+          "end": 50,
           "step": 1,
           "label_every": 10,
           "rows": [
             {
               "points": [
-                36
+                47
               ]
             }
           ],
@@ -3206,14 +3206,14 @@
         },
         "fig_base": {
           "type": "jump_lines",
-          "start": 30,
-          "end": 40,
+          "start": 60,
+          "end": 70,
           "step": 1,
           "label_every": 10,
           "rows": [
             {
               "points": [
-                36
+                62
               ]
             }
           ],

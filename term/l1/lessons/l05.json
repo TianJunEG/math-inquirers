@@ -2503,7 +2503,7 @@
         "fig_base": {
           "type": "ten_frame",
           "filled": 8,
-          "extra": 5
+          "extra": 6
         }
       },
       {

@@ -2982,8 +2982,8 @@
         "fig_base": {
           "type": "digit_cards",
           "cards": [
-            "3",
-            "5"
+            "7",
+            "2"
           ]
         }
       },
@@ -3050,8 +3050,8 @@
         "fig_base": {
           "type": "digit_cards",
           "cards": [
-            "3",
-            "5"
+            "7",
+            "2"
           ]
         }
       },
@@ -3176,7 +3176,7 @@
           "type": "digit_cards",
           "cards": [
             "0",
-            "4"
+            "6"
           ]
         }
       },
@@ -3253,9 +3253,9 @@
         "fig_base": {
           "type": "digit_cards",
           "cards": [
-            "1",
-            "4",
-            "7"
+            "2",
+            "5",
+            "8"
           ]
         }
       },
@@ -3330,9 +3330,9 @@
         "fig_base": {
           "type": "digit_cards",
           "cards": [
-            "1",
             "0",
-            "6"
+            "4",
+            "9"
           ]
         }
       },

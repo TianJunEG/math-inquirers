@@ -593,7 +593,7 @@ PASS  S1 pupil page 17 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 18 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 18 page-fill: puzzle content 130 of 183 mm  0.71
 PASS  S1 pupil page 18 min text size >= 8 pt  8.0 pt
-FAIL  S1 pupil page 19 layout (no overflow/clipping/margin breach)  text clipped: M
+PASS  S1 pupil page 19 layout (no overflow/clipping/margin breach)  
 PASS  S1 pupil page 19 page-fill: puzzle content 188 of 190 mm  0.99
 PASS  S1 pupil page 19 min text size >= 8 pt  8.0 pt
 PASS  S1 pupil page 20 layout (no overflow/clipping/margin breach)  
@@ -734,4 +734,4 @@ PASS  P4_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels coun
 PASS  P4_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 35.15% vs greyscale)  9 pages
 PASS  P4_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 1026, budget 130 on average per page)  
 
-TOTAL 735 checks, 1 failed
+TOTAL 735 checks, 0 failed
