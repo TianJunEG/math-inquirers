@@ -256,10 +256,8 @@ def run(d):
     q = T['T2']; g, o = q['visuals']; gt = tiles(g); ot = tiles(o); TL, TR, BL = gt[0], gt[1], gt[2]
     eq(TL[0] == TR[0] and BL[0] != TL[0], True, 'T2 down changes the shape'); eq(TL[1] == BL[1] and TR[1] != TL[1], True, 'T2 across changes the number'); want = (BL[0], TR[1], BL[2], BL[3], BL[4])
     eq([x == want for x in ot], [False, False, True, False], 'T2 only C is the missing piece'); eq([diffs(x, want) for x in ot], [['n'], ['shape'], [], ['size']], 'T2 each wrong option is wrong in one thing'); eq(q['val'], ['C'], 'T2 val')
-    q = T['T3']; ts = tiles(q['visual']); eq([(i, j) for i, j in itertools.combinations(range(4), 2) if same_picture(ts[i], ts[j], True)], [(0, 2)], 'T3 only A and C are the same picture turned')
-    eq([i for i in range(4) if diffs(ts[0], ts[i]) == ['turn']], [2], 'T3 C is A turned'); eq(diffs(ts[0], ts[1]), ['pattern'], 'T3 B has another pattern'); eq(diffs(ts[0], ts[3]), ['size', 'turn'], 'T3 D is smaller (and turned)'); eq(q['val'], ['A', 'C'], 'T3 val')
-    q = T['T4']; shown = [t[0] for t in tiles(q['visual'])]; eq(shown, cycle_list(['square', 'circle', 'circle'], 6), 'T4 the shown tiles follow the repeat'); full = cycle_list(['square', 'circle', 'circle'], 12)
-    eq(full[10], 'circle', 'T4 tile 11'); sq = [i + 1 for i, s in enumerate(full) if s == 'square']; eq(sq[:4], [1, 4, 7, 10], 'T4 squares'); eq(sq[3], 10, 'T4 the 4th square'); eq(q['val'], ['circle', 10], 'T4 val')
+    q = T['T3']; shown = [t[0] for t in tiles(q['visual'])]; eq(shown, cycle_list(['square', 'circle', 'circle'], 6), 'T3 the shown tiles follow the repeat'); full = cycle_list(['square', 'circle', 'circle'], 12)
+    eq(full[10], 'circle', 'T3 tile 11'); sq = [i + 1 for i, s in enumerate(full) if s == 'square']; eq(sq[:4], [1, 4, 7, 10], 'T3 squares'); eq(sq[3], 10, 'T3 the 4th square'); eq(q['val'], ['circle', 10], 'T3 val')
     # ---------------------------------------------------------------- Go further
     q = T['G1']; base = cells_of(q['visual']['poly']); opts = [cells_of(v['poly']) for v in q['visuals']]
     eq(len(base), 4, 'G1 the shape has 4 squares'); eq([len(c) for c in opts], [4, 4, 5, 4], 'G1 the options have 4, 4, 5 and 4 squares')

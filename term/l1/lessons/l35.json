@@ -31,7 +31,7 @@
   "Say what is different between two pictures one feature at a time: shape, number, size, pattern or turn.",
   "Say whether two pictures are the same, and count the differences.",
   "Find the odd one out in a row and say which feature makes it odd.",
-  "Think harder: find the odd one out when four tiles share one hidden feature, find the missing piece of a 2 by 2 tile pattern, find the two tiles that are the same picture turned, and say which tile is the 11th in a repeating pattern.",
+  "Think harder: find the odd one out when four tiles share one hidden feature, find the missing piece of a 2 by 2 tile pattern, and say which tile is the 11th in a repeating pattern.",
   "Go further: Shadow Match (a shape turned, not flipped), find the odd one out for pattern and then for size in the same row, and make your own odd one out."
  ],
  "joining_cold": {
@@ -1373,7 +1373,7 @@
       ],
       [
        "Think harder (page 3)",
-       "The odd one out, a missing piece, a turn, a repeating pattern"
+       "The odd one out, a missing piece, a repeating pattern"
       ],
       [
        "Go further (page 4)",
@@ -2117,7 +2117,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder has the odd one out with a hidden feature, the missing piece, two tiles that are the same turned, and a repeating pattern. Go further has Shadow Match (beyond Primary 1 on purpose), the odd one out for pattern and then for size, and making your own. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+      "text": "Think harder has the odd one out with a hidden feature, the missing piece, and a repeating pattern. Go further has Shadow Match (beyond Primary 1 on purpose), the odd one out for pattern and then for size, and making your own. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
      }
     ]
    },
@@ -2531,7 +2531,7 @@
      },
      {
       "l": "b",
-      "text": "It is different in its:",
+      "text": "Different in:",
       "ans": "pattern",
       "val": "pattern",
       "choices": [
@@ -2811,7 +2811,7 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Four of the five tiles have one thing the same. One tile is the odd one out.",
+    "text": "Four of the five tiles are alike in one thing. One is the odd one out.",
     "parts": [
      {
       "l": "a",
@@ -2828,7 +2828,7 @@
      },
      {
       "l": "b",
-      "text": "What makes it the odd one out?",
+      "text": "Odd because of:",
       "ans": "number",
       "val": "number",
       "choices": [
@@ -2949,11 +2949,12 @@
         "size": "m"
        }
       ],
-      "cell": 70,
+      "cell": 56,
       "cols": 2,
       "hide": [
        3
-      ]
+      ],
+      "size": 60
      },
      {
       "type": "panel",
@@ -2979,7 +2980,7 @@
         "size": "s"
        }
       ],
-      "cell": 80,
+      "cell": 70,
       "cols": 4,
       "labels": [
        "A",
@@ -2992,71 +2993,6 @@
    },
    {
     "id": "T3",
-    "page": 3,
-    "tier": "think",
-    "text": "Two of the four tiles are the same picture, turned. Do not choose a tile that is bigger or has another pattern.",
-    "parts": [
-     {
-      "l": "",
-      "text": "Tile [] and tile [] are the same, turned.",
-      "ans": "A; C",
-      "val": [
-       "A",
-       "C"
-      ]
-     }
-    ],
-    "answer": "A and C",
-    "val": [
-     "A",
-     "C"
-    ],
-    "hint": "Turn your page, or tilt your head. Which two have the same size and pattern?",
-    "solution": "A and C are big triangles with no pattern. C is A turned upside down. B has dots, so the pattern is different. D is small, so the size is different. So the answer is A and C.",
-    "mistakes": [
-     "Choosing A and B because both are big.",
-     "Choosing A and D because both look plain."
-    ],
-    "mins": 5,
-    "visual": {
-     "type": "panel",
-     "tiles": [
-      {
-       "shape": "triangle",
-       "n": 1,
-       "size": "l"
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "size": "l",
-       "pattern": 2
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "size": "l",
-       "turn": 180
-      },
-      {
-       "shape": "triangle",
-       "n": 1,
-       "size": "s",
-       "turn": 90
-      }
-     ],
-     "cell": 100,
-     "cols": 4,
-     "labels": [
-      "A",
-      "B",
-      "C",
-      "D"
-     ]
-    }
-   },
-   {
-    "id": "T4",
     "page": 3,
     "tier": "think",
     "text": "A pattern of tiles repeats again and again.",
@@ -3469,8 +3405,8 @@
    "page": 5,
    "tier": "investigation",
    "title": "Change just one thing",
-   "first": "Draw a small circle with stripes. Next to it, draw the same circle, but bigger. What is different? ____",
-   "text": "Now draw a tile that is different from your first circle in two things. Write the two things.",
+   "first": "Draw a small striped circle. Next to it, draw the same circle, but bigger. What is different? ____",
+   "text": "Draw a third tile that differs from the first in two things. Write them.",
    "lines": 4,
    "draw": 1,
    "answer": "The bigger circle is different in size only. A tile with two things different, for example a big circle with dots, is different in size and pattern. Many answers are right.",
@@ -3498,7 +3434,7 @@
    "parts": [
     {
      "l": "",
-     "text": "What is different?",
+     "text": "Different in:",
      "ans": "pattern",
      "val": "pattern",
      "choices": [
@@ -3535,8 +3471,9 @@
       "pattern": 1
      }
     ],
-    "cell": 100,
-    "cols": 2
+    "cell": 80,
+    "cols": 2,
+    "size": 45
    }
   },
   {
@@ -3643,7 +3580,8 @@
       }
      ],
      "cell": 70,
-     "cols": 3
+     "cols": 3,
+     "size": 75
     },
     {
      "type": "panel",
@@ -3667,7 +3605,8 @@
       }
      ],
      "cell": 70,
-     "cols": 3
+     "cols": 3,
+     "size": 75
     }
    ]
   }
@@ -4368,7 +4307,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 size, number, turn; S2 Yes and No; S3 C and pattern; S4 1; S5 3 and 1; S6 A and D; T1 C and number; T2 C; T3 A and C; T4 circle and 10; G1 second; G2 D and B; G3 any row of three alike and one different in just one thing; I1 size, then any tile that differs in two things.",
+  "Solve every workbook question yourself first. Check the answers: S1 size, number, turn; S2 Yes and No; S3 C and pattern; S4 1; S5 3 and 1; S6 A and D; T1 C and number; T2 C; T3 circle and 10; G1 second; G2 D and B; G3 any row of three alike and one different in just one thing; I1 size, then any tile that differs in two things.",
   "Tell parents a week before: the pair-cards page (page 6 of Book 7) needs 12 cards cut out by a grown-up, with the three rows kept as three piles. The next lesson needs Book 8 (lessons 36 to 40) in the house, with its paper-people page torn out and the 8 people cut out. Check that every family has Book 8 before the next lesson. Printing and postage are included in the program fee (owner decision, 23 Oct 2026). Parcel policy (draft, owner to confirm): a missing or damaged book is reported, the pages go out as a PDF straight away and there is one free resend; a second loss is discussed. Delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later.",
   "Have the slides open. Have your own set of pair cards to look at if you wish. Practise the copy-and-change break. When you read a pair of pictures, say the five things in the same order every time: shape, how many, how big, which pattern, which way.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",

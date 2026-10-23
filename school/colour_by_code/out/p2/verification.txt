@@ -581,7 +581,7 @@ PASS  CBC-P2-08 pupil: wording rules (no price, Mi, alignment claim, division si
 PASS  CBC-P2-08 pupil: footer has a school-name field and the worksheet code  
 PASS  CBC-P2-08 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-P2-08 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
-PASS  CBC-P2-08 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.4%, needs <= 25%)  
+PASS  CBC-P2-08 pupil: 1-bit render at 150 dpi keeps the ink (loss 6.5%, needs <= 25%)  
 PASS  CBC-P2-08 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-P2-08 pupil: all 14 regions stay separate white areas in the 1-bit render (25 large white areas incl. background and boxes)  
 PASS  CBC-P2-08 pupil: every label keeps its ink in the 1-bit render (worst 19% lost, up_in_r; needs <= 40%)  

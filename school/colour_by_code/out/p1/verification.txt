@@ -606,7 +606,7 @@ PASS  CBC-10 pupil: wording rules (no price, Mi, alignment claim, division sign;
 PASS  CBC-10 pupil: footer has a school-name field and the worksheet code  
 PASS  CBC-10 pupil: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-10 pupil: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
-PASS  CBC-10 pupil: 1-bit render at 150 dpi keeps the ink (loss 4.1%, needs <= 25%)  
+PASS  CBC-10 pupil: 1-bit render at 150 dpi keeps the ink (loss 4.0%, needs <= 25%)  
 PASS  CBC-10 pupil: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-10 pupil: all 17 regions stay separate white areas in the 1-bit render (59 large white areas incl. background and boxes)  
 PASS  CBC-10 pupil: every label keeps its ink in the 1-bit render (worst 8% lost, door; needs <= 40%)  
@@ -616,7 +616,7 @@ PASS  CBC-10 teacher: wording rules (no price, Mi, alignment claim, division sig
 PASS  CBC-10 teacher: footer has a school-name field and the worksheet code  
 PASS  CBC-10 teacher: html uses only black and white (#000, #fff)  ['#000', '#fff']
 PASS  CBC-10 teacher: outline width 0.9 mm and no line thinner than 0.3 mm  min 0.4
-PASS  CBC-10 teacher: 1-bit render at 150 dpi keeps the ink (loss 6.0%, needs <= 25%)  
+PASS  CBC-10 teacher: 1-bit render at 150 dpi keeps the ink (loss 5.9%, needs <= 25%)  
 PASS  CBC-10 teacher: no flat grey tint areas in the greyscale render (0 blocks, limit 60)  
 PASS  CBC-10 teacher: all 17 regions stay separate white areas in the 1-bit render (59 large white areas incl. background and boxes)  
 PASS  CBC-10 teacher: every label keeps its ink in the 1-bit render (worst 13% lost, roof_l; needs <= 40%)  

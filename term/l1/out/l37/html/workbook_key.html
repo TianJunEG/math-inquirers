@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:14mm 14mm 16mm 14mm}
+*{box-sizing:border-box}
+html{background:#fff}
+body{margin:0;font-family:'Fredoka','Inter',Arial,sans-serif;color:#1B2A49;font-size:17.5px;line-height:1.38;background-color:#fff;background-image:linear-gradient(#E3ECF6 1px,transparent 1px),linear-gradient(90deg,#E3ECF6 1px,transparent 1px);background-size:22px 22px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.p{break-inside:avoid}
+.pb{break-before:page}
+.kn{break-after:avoid}
+.lh{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.lbadge{background:#1F7A6F;color:#FFF9EC;border-radius:999px;padding:6px 18px;font-weight:700;font-size:17px}
+.ltopic{font-weight:600;color:#1F7A6F;font-size:16px;letter-spacing:.3px}
+.ltitle{font-size:38px;font-weight:700;line-height:1.05;margin:2px 0 10px;color:#1B2A49}
+.namer{display:flex;align-items:flex-end;gap:8px;font-size:14px;color:#3B4A6B;margin-bottom:14px}
+.namer span{flex:1;border-bottom:2px dotted #8A94AD;height:18px}
+.q{display:flex;align-items:flex-start;gap:10px;font-weight:600}
+.qn{flex:none;width:30px;height:30px;border-radius:50%;background:#FFC93C;color:#1B2A49;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;position:relative;top:-1px}
+.qt{flex:1}
+.sub{display:flex;gap:8px;padding-left:40px;align-items:baseline}
+.sl{flex:none;width:24px;height:24px;border-radius:7px;background:#FFF0C2;color:#1B2A49;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;transform:translateY(-1px)}
+.ans{display:flex;gap:8px;align-items:flex-end}
+.al{flex:1;max-width:300px;border-bottom:2px dotted #8A94AD;height:20px}
+.ln{border-bottom:2px dotted #8A94AD;height:28px;margin:4px 0 0 40px;break-inside:avoid}
+.banner{background:#1F7A6F;color:#FFF9EC;border-radius:14px;padding:7px 18px;font-weight:700;font-size:19px;margin:8px 0 6px}
+table.tb{width:100%;border-collapse:separate;border-spacing:0;border:2px solid #1B2A49;border-radius:14px;overflow:hidden;margin:6px 0;break-inside:avoid}
+table.tb td{border:1px solid #C9D4EC;vertical-align:middle;font-size:16px}
+.img{margin:6px 0}
+.img img{height:auto}
+.badge{display:inline-block;background:#FFC93C;color:#1B2A49;border-radius:999px;padding:8px 22px;font-weight:700;font-size:16px;letter-spacing:.5px}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:28px;height:262mm;padding:44px 40px;position:relative;break-inside:avoid}
+.ctitle{font-size:96px;font-weight:700;line-height:.95;margin-top:40px}
+.ctitle span{color:#FFC93C}
+.cslogan{font-size:28px;font-weight:600;color:#FFC93C;margin-top:26px}
+.cname{margin-top:34px;font-size:18px;display:flex;gap:8px;align-items:flex-end;color:#C9D4EC}
+.cname i{flex:1;border-bottom:2px dotted #C9D4EC;height:20px}
+.rules{position:absolute;left:40px;right:40px;bottom:44px;background:#fff;color:#1B2A49;border-radius:22px;padding:20px 26px}
+.rt{font-size:24px;font-weight:700;color:#1F7A6F;margin-bottom:10px}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:17px;font-weight:600}
+.rg b{display:inline-flex;width:28px;height:28px;border-radius:50%;background:#FFC93C;align-items:center;justify-content:center;margin-right:8px}
+.jt{font-size:40px;font-weight:700}
+.jsub{color:#3B4A6B;margin-bottom:16px;font-size:17px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stamp{background:#fff;border-radius:18px;border:2px solid #1B2A49;padding:12px 16px;height:128px;position:relative}
+.sn{font-weight:700;color:#1F7A6F;font-size:15px}
+.st{font-weight:600;font-size:17px;margin-top:2px}
+.sc{position:absolute;right:14px;bottom:12px;width:58px;height:58px;border:3px dashed #8A94AD;border-radius:50%}
+.cert{height:262mm;display:flex;align-items:center;justify-content:center}
+.ci{border:6px double #1B2A49;border-radius:24px;padding:48px 40px;text-align:center;background:#fff;width:100%}
+.ct{font-size:40px;font-weight:700;color:#1B2A49;margin-bottom:24px}
+.cp{font-size:30px;font-weight:700;color:#1F7A6F}
+.cs{font-size:20px;margin-bottom:28px}
+.cl{font-size:19px;margin:12px 0}
+.cn{border-bottom:3px dotted #1B2A49;height:44px;max-width:420px;margin:12px auto}
+.cq{font-size:30px;font-weight:700;color:#1F7A6F;margin:26px 0 36px}
+
+.brk{break-before:page;height:0;margin:0;padding:0}
+
+.kt{font-family:Fredoka,sans-serif;font-size:34px;font-weight:600;color:#1B2A49;text-align:center}.ks{text-align:center;font-size:16px;margin:4px 0 10px}.kl{font-weight:800;font-size:18px;color:#1B2A49;margin:12px 0 4px}
+
+/* ===== A + D combined style ===== */
+.lh{gap:0;margin:0 0 4px;border-bottom:3px solid #1F7A6F}
+.lbadge{border-radius:0;background:#1F7A6F;color:#fff;padding:8px 18px;font-weight:600}
+.ltopic{background:#fff;padding:8px 14px;flex:1;text-transform:uppercase;font-size:13px;letter-spacing:.08em;font-family:'Nunito Sans',sans-serif;font-weight:800}
+.ltitle{text-decoration:underline wavy #FFC93C 4px;text-underline-offset:10px;margin:10px 0 16px}
+.namer{background:#fff;border:2px dashed #1B2A49;border-radius:8px;padding:8px 12px}
+.namer span{border-bottom:1.5px solid #1B2A49}
+.qbox{background:#fff;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49;padding:24px 14px 10px;margin:22px 4px 16px 4px;position:relative;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.qbox .q{margin-top:0!important}
+.qbox .qn{position:absolute;left:-9px;top:-15px;width:auto;height:auto;border-radius:2px;background:#FFC93C;border:2px solid #1B2A49;padding:1px 11px;font-size:16px;transform:rotate(-4deg);top:-15px}
+.qbox .qn:before{content:"No. "}
+.qn{border-radius:3px}
+.sub{padding-left:2px}
+.sl{width:auto;height:auto;background:none;border-radius:0;color:#1F7A6F;font-weight:800;font-size:16px;font-family:'Nunito Sans',sans-serif}
+.ln{margin-left:4px}
+.ans{padding-left:4px!important}
+.al{border-bottom:2px dashed #1B2A49}
+.banner{border-radius:3px;display:inline-block;padding:5px 16px;transform:rotate(-1deg);border:2px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49}
+table.tb{border-radius:4px}
+.cover{background:none;color:#1B2A49;border-radius:0;padding:10px 0 0}
+.ccard{background:#fff;border:3px solid #1B2A49;box-shadow:6px 6px 0 #1B2A49;padding:26px 30px;margin-top:6px}
+.cover .badge{background:#1F7A6F;color:#fff;border-radius:0;font-family:'Nunito Sans',sans-serif;font-weight:800;letter-spacing:.1em;font-size:14px;padding:6px 12px}
+.ctitle{color:#1B2A49;margin-top:14px;font-weight:600}
+.ctitle span{color:#1B2A49;background:linear-gradient(transparent 55%,#FFC93C 55%)}
+.cslogan{color:#1F7A6F;margin-top:16px}
+.cover .cname{color:#1B2A49;background:#fff;border:2px dashed #1B2A49;border-radius:10px;padding:14px 18px;margin-top:30px}
+.cover .cname i{border-bottom:1.5px solid #1B2A49}
+.cover .rules{position:static;margin-top:24px;border:2.5px solid #1B2A49;border-radius:4px;box-shadow:4px 4px 0 #1B2A49}
+.rg b{border-radius:3px;border:2px solid #1B2A49;transform:rotate(-4deg)}
+.sc{border-radius:6px}
+.stamp{border-radius:4px;box-shadow:3px 3px 0 #1B2A49}
+body{font-size:16.5px}
+.qbox{padding:20px 12px 8px;margin:18px 4px 12px 4px}
+.ln{height:25px;margin-top:2px}
+.ltitle{margin:8px 0 12px}
+.namer{margin-bottom:8px}
+.qbox{break-inside:avoid}
+.qwrap{padding-top:16px;break-inside:avoid}.qwrap>.qbox{margin-top:2px}
+
+body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26px 4px 18px 4px!important}.ln{height:31px!important;margin-top:2px!important}.sub{margin-top:7px;font-size:19px}.sl{font-size:18px!important}.al{height:22px!important}.pv td{height:36px!important;font-size:22px!important}.qbox .qn{font-size:18px!important}
+
+.pv{border-collapse:collapse;font-family:Fredoka;margin:4px 0}.pv th{background:#FFC93C;border:2px solid #1B2A49;padding:1px 16px;font-size:13px}.pv td{border:2px solid #1B2A49;padding:2px 16px;min-width:60px;height:26px;background:#fff;font-size:18px;text-align:center}
+.draw{border:2.5px dashed #1B2A49;border-radius:10px;height:105px;background:#fff;margin:6px 0 6px 4px}
+.vis{width:310px;margin:6px 0 6px 4px}
+.al{display:inline-block;min-width:17mm;border-bottom:2px dashed #1B2A49;height:18px;vertical-align:baseline}
+.choice{border:2px dashed #1F7A6F;border-radius:12px;background:#E8F5F2;padding:5px 12px;font-size:15px;margin:2px 0 8px}
+.p1 .draw{height:84px!important}.p1 .qbox{margin:22px 4px 8px 4px!important;padding:22px 16px 8px!important}.p1 .vis{width:270px!important}.hm{padding-left:3mm}.hm .qbox{margin:20px 4px 8px 4px!important;padding:20px 14px 6px!important}.hm .boxb{width:26px;height:26px;margin:0 3px}.hm .ln{height:29px!important}.p5 .qbox{margin:20px 4px 8px 4px!important;padding:22px 16px 6px!important}.p5 .ln{height:26px!important}.p5 .vis{width:230px!important;margin:2px 0 0 4px!important}.p5 .lbk{margin-top:4px;padding:4px 10px 5px}.p5 .lbk .r{margin-top:3px!important;font-size:15.5px!important}.p5 .qbox .qt{font-size:17px}.p5 .banner{margin:4px 0!important}.p5 p{margin:2px 0!important}.page{break-after:page}.page:last-child{break-after:auto}
+.lbk{border:2px solid #1B2A49;border-radius:14px;background:#FFFDF5;padding:5px 12px 6px;margin-top:6px}.lbk .r{margin-top:3px!important;font-size:13.5px!important}
+.lbk .r{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:6px;font-size:16.5px;align-items:center}.lbk .r b{flex:none;width:165px}
+.bx{display:inline-block;width:15px;height:15px;border:2px solid #1B2A49;border-radius:4px;background:#fff;vertical-align:-2px;margin:0 3px 0 6px}
+.wl{border-bottom:2px dotted #8A94AD;height:24px}
+.boxb{display:inline-block;width:36px;height:36px;border:2.5px solid #1B2A49;border-radius:9px;background:#fff;vertical-align:middle;margin:0 5px}
+.qbox:has(svg.h100){display:grid;grid-template-columns:1fr 310px;column-gap:8px;align-items:start}
+.qbox:has(svg.h100)>.q{grid-column:1 / span 2}
+.qbox:has(svg.h100)>.vis{grid-column:2;grid-row:2 / span 8;width:310px!important;margin:0!important}
+.qbox:has(svg.h100)>.sub,.qbox:has(svg.h100)>.ln,.qbox:has(svg.h100)>.draw{grid-column:1}
+.qbox:has(svg.h100.wide){display:block}
+.qbox:has(svg.h100.wide)>.vis{width:100%!important;margin:4px 0!important}
+.p1 .qbox:has(svg.h100)>.vis{width:296px!important}
+.tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
+.tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight2.p5 .qt{font-size:15.5px}
+.tight3 .qbox{margin:8px 4px 2px 4px!important;padding:14px 10px 2px!important}.tight3 .ln{height:19px!important}.tight3 .qt,.tight3 .sub{font-size:15px!important}.tight3 .lbk .r{font-size:13px!important}.tight3 .banner{font-size:15px!important}
+.hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
+.yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
+.banner{break-after:avoid;display:block;width:fit-content}
+.vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
+.visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
+.tf{border-collapse:collapse;margin:6px 4px;font-size:16px}.tf th{background:#FFC93C;border:2px solid #1B2A49;padding:3px 12px}.tf td{border:2px solid #1B2A49;padding:6px 10px;background:#fff}.tf td.tk{text-align:center;width:70px}.tf .bx{width:22px;height:22px}
+.mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
+.stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:14px;color:#3B4A6B;margin:0 6px 4px}
+.keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
+.keybox .a{font-weight:800;color:#1F7A6F}
+body{background-image:none}</style></head><body><h1 style="font-family:Fredoka;margin:0;color:#1B2A49">Answer key: Lesson 7, Make Your Own Graph</h1><p style="font-size:13px;margin:2px 0 8px"><b>For the tutor and grown-ups.</b> Keep this page away from the child until they have finished and checked their own work. Ask <i>how do you know?</i> before saying right or wrong.</p><div class="banner">Start here (pages 1 and 2)</div><div class="keybox"><b>S1.</b> Look at the tray. Count and write how many of each kind.<div class="a">Answer: 4 shells; 5 buttons; 3 spoons</div><div style="font-size:12.5px">Count one kind at a time and cross out each thing. 4 shells, 5 buttons and 3 spoons. 4 + 5 + 3 = 12, the same as the things on the tray, so no thing is missed.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Counting a thing twice.; Missing a thing in the middle of the tray.</div></div><div class="keybox"><b>S2.</b> The tally shows how many things Ali counted.<div class="a">Answer: 6 pens; 8 rubbers</div><div style="font-size:12.5px">The first group is 5. Pens: 5 and 1 more is 6. Rubbers: 5 and 3 more is 8.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Counting a group of 5 as 4.; Counting each group as 1.</div></div><div class="keybox"><b>S3.</b> Ali ate 4 apples, 6 pears and 3 plums. Draw one picture in a box for each fruit.<div class="a">Answer: Apples 4 pictures; pears 6 pictures; plums 3 pictures</div><div style="font-size:12.5px">Draw 4 pictures in the apples row, 6 in the pears row and 3 in the plums row. Some boxes are left empty. The three rows have 4 + 6 + 3 = 13 pictures, one for each fruit.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Filling every box in a row.; Drawing the pictures in different sizes.</div></div><div class="keybox"><b>S4.</b> Look at the graph. Each picture stands for 1 pet.<div class="a">Answer: 3 more cats than fish; 17 pets in all</div><div style="font-size:12.5px">Cats 7 and fish 4. 7 take away 4 is 3 more cats. All three rows: 7 + 4 + 6 = 17 pets.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding 7 and 4 to find how many more.; Leaving out a row when finding the total.</div></div><div class="keybox"><b>S5.</b> Look at the graph. Each picture stands for 1 child.<div class="a">Answer: Chess; 13 children</div><div style="font-size:12.5px">Chess has 3 pictures. That is the shortest row, so the fewest children play chess. Ludo 5 and cards 8: 5 + 8 = 13 children.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Choosing the longest row.; Adding the chess row as well.</div></div><div class="keybox"><b>S6.</b> Look at the graph. Each picture stands for 1 stamp.<div class="a">Answer: True, False, True, True</div><div style="font-size:12.5px">Ali 5, Mei 5 and Ben 2. Ali and Mei have the same number: true. Ben has the fewest, not the most: false. 5 take away 2 is 3, so Mei has 3 more than Ben: true. 5 + 5 + 2 = 12: true.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Saying Ben has the most because his name is last.; Forgetting to add all three rows.</div></div><div class="banner">Think harder (page 3)</div><div class="keybox"><b>T1.</b> The tally shows the things in a box. Fill in the table.<div class="a">Answer: 9, 5, 6; 20</div><div style="font-size:12.5px">Hats: 5 and 4 more is 9. Bags: 5. Shoes: 5 and 1 more is 6. 9 + 5 + 6 = 20 things in all.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Counting a group of 5 as 4.; Adding only two of the kinds.</div></div><div class="keybox"><b>T2.</b> Study the graph. Each picture stands for 1 thing. Which question can the graph answer? Write its number in the brackets.<div class="a">Answer: (2)</div><div style="font-size:12.5px">The graph shows how many of each kind are in the box. Question (2) asks about the number of shells and stones: 6 take away 2 is 4 more shells. The other questions are about likes, places or looks, and the graph does not show them.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Choosing (1) because it sounds like a graph question.; Choosing a question about the prettiest.</div></div><div class="keybox"><b>T3.</b> There are 16 books in all. Draw the art books in the empty boxes.<div class="a">Answer: 11 maths and story books; 5 art books</div><div style="font-size:12.5px">Maths 4 and story 7 make 11. 16 take away 11 is 5. Draw 5 pictures in the art row. Check: 4 + 7 + 5 = 16.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 16 or 7 for the art books.; Drawing a picture in every empty box.</div></div><div class="keybox"><b>T4.</b> A child in another class made a graph from the tally. One row is wrong.<div class="a">Answer: Vans; 3</div><div style="font-size:12.5px">Cars 6 matches 6. Buses 7 matches 7. Vans have 3 strokes in the tally but 4 pictures in the graph. The vans row is wrong and should have 3 pictures.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Choosing the longest row.; Counting the tally group as 4.</div></div><div class="banner">Go further (page 4)</div><div class="keybox"><b>G1.</b> Mei&#x27;s graph uses a key. Each picture stands for 2 sweets. Draw the pictures in the empty boxes.<div class="a">Answer: 3 pictures; 2 pictures; 7 gums</div><div style="font-size:12.5px">6 toffees: 2, 4, 6 is 3 pictures. 4 lollies: 2, 4 is 2 pictures. The gums row has 3 whole pictures, 6 sweets, and half a picture, 1 more: 7 gums.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Drawing 6 pictures for 6 toffees.; Counting half a picture as 2 or as 0.</div></div><div class="keybox"><b>G2.</b> Four children have 21 stickers in all. Ben has 4 stickers. Lily has 3 more than Ben. Jamie has 2 fewer than Lily. Ravi has the rest.<div class="a">Answer: Lily 7; Jamie 5; Ravi 5</div><div style="font-size:12.5px">Lily: 4 and 3 more is 7. Jamie: 7 take away 2 is 5. Ben, Lily and Jamie have 4 + 7 + 5 = 16. 21 take away 16 is 5, so Ravi has 5. Check: 4 + 7 + 5 + 5 = 21.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing 3 for Lily (the number more, not the total).; Forgetting to take Ben away when finding the rest.</div></div><div class="keybox"><b>G3.</b> Study the graph. Write a question that the graph can answer. Then write the answer. Many answers are right.<div class="a">Answer: Many answers are right</div><div style="font-size:12.5px">Any question about the numbers on the graph is good, with the right answer. For example: How many more tulips than daisies? 6 more. How many flowers are there in all? 17. Which flowers have the fewest? Daisies. A question about which flower a child likes cannot be answered.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Writing a question the graph cannot answer, such as which flower is nicest.; Writing a question with no answer.</div></div><div class="banner">Investigation (page 5): Sort, draw and ask</div><div class="keybox"><div class="a">Many answers are right. A good graph has a title, the kinds named, one picture for each thing, all the pictures the same size, and a key. The numbers on the graph match the piles.</div><div style="font-size:12px"><b>Look for:</b> A child who sorts by one feature, draws one picture for each thing and writes a question the graph can answer (how many, how many more, which has the fewest). Credit a clear tally. A child who writes a question about likes has not yet met the idea: ask what the graph shows. A child who draws a graph with a key of 2 has gone further.</div></div><div class="banner">Exit ticket (page 5)</div><div class="keybox"><b>E1.</b> Look at the tray.<div class="a">Answer: 4 pencils; 3 rubbers</div><div style="font-size:12.5px">Cross out each thing as you count it: 4 pencils and 3 rubbers. 4 + 3 = 7, the same as the things on the tray.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Counting a thing twice.; Missing a thing.</div></div><div class="keybox"><b>E2.</b> Look at the graph. Each picture stands for 1 biscuit.<div class="a">Answer: 5 more biscuits</div><div style="font-size:12.5px">Ali 7 and Mei 2. 7 take away 2 is 5 more biscuits.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Adding 7 and 2.; Writing 7.</div></div><div class="keybox"><b>E3.</b> The graph shows the biscuits eaten. Which question can the graph answer? Write its number in the brackets.<div class="a">Answer: (1)</div><div style="font-size:12.5px">The graph shows how many biscuits each child ate, so question (1) can be answered: Siti ate 4. The graph does not say which biscuit tastes best.</div><div style="font-size:12px;color:#3B4A6B"><b>Watch for:</b> Choosing (2): the graph does not show likes.</div></div><div class="banner">Sneak-peek puzzles (not in the workbook)</div><div class="keybox">1. 4 spoons.<br>2. Any clear picture: for example a row of 4 spoons, a row of 3 buttons and a row of 2 shells, one small picture for each thing.</div></body></html>
