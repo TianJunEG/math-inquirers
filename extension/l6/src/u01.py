@@ -27,16 +27,17 @@ learn = {
               answer=A([7, 4, 696], '7, 4, 696')),
 }
 
-# ---------------------------------------------------------------- Start here, page 1
+# ---------------------------------------------------------------- Start here
 I.append(IT(U, 'S', 1, 1,
             'Matchsticks make 2 rows of squares. Each new pattern adds one more column of 2 squares.',
             'Count: pattern 1 has 7 sticks, pattern 2 has 12, pattern 3 has 17. Each new column adds 5 sticks, so the rule is 5n + 2 (5 × 1 + 2 = 7). '
             'Pattern 40: 5 × 40 + 2 = 202. For 92 sticks: 5n + 2 = 92, so 5n = 90 and n = 18.',
-            fig={'type': 'l6_sticks', 'shape': 'sq', 'rows': 2, 'ks': [1, 2, 3], 'side': 10},
+            fig={'type': 'l6_sticks', 'shape': 'sq', 'rows': 2, 'ks': [1, 2, 3], 'side': 9},
             parts=[P('a', 'Pattern 3 has {b} sticks. Each new column adds {b} sticks.', [17, 5], '17, 5'),
                    P('b', 'The rule: sticks = {b} × n + {b}', [5, 2], '5, 2'),
                    P('c', 'Pattern 40 has {b} sticks.', [202]),
-                   P('d', 'Pattern {b} has 92 sticks.', [18])]))
+                   P('d', 'Pattern {b} has 92 sticks.', [18])],
+            figright=True, partsrow=True))
 I.append(IT(U, 'S', 2, 1,
             'For each sequence, fill in the difference, the rule for the nth term and the 100th term.',
             '(a) The difference is 6. Compare with 6, 12, 18, 24: each term is 2 more, so 6n + 2 and 6 × 100 + 2 = 602. '
@@ -55,11 +56,11 @@ I.append(IT(U, 'S', 4, 1,
             'Trace the code. The sprite says x first, then changes it. Fill in the trace table.',
             'Loop 1: it says 3, then x becomes 9. Loop 2: says 9, x becomes 15. Loop 3: says 15, x becomes 21. Loop 4: says 21, x becomes 27. '
             'The last number said is 21 but x ends as 27. With repeat 50 it says the 1st term, then 49 jumps later it says 3 + 49 × 6 = 297.',
-            fig=code([HAT, ['var', 'set x to (3)'], ['ctl', 'repeat (4)', [['look', 'say (x) for (1) seconds'], ['var', 'change x by (6)']]]]),
+            fig=code([HAT, ['var', 'set x to (3)'], ['ctl', 'repeat (4)', [['look', 'say (x) for (1) seconds'], ['var', 'change x by (6)']]]],
+                     trace={'cols': ['Loop', 'x said', 'x after'], 'rows': 4, 'first': [1, 2, 3, 4], 'cw': 21}),
             parts=[P('a', 'The last number it says is {b}.', [21]),
-                   P('b', 'When the program ends, x is {b}.', [27]),
-                   P('c', 'With repeat 50, the last number it says is {b}.', [297])],
-            space={'table': {'cols': ['Loop', 'x said', 'x after change'], 'rows': 4}}))
+                   P('b', 'With repeat 50, the last number it says is {b}.', [297])],
+            partsrow=True))
 I.append(IT(U, 'S', 5, 2,
             'Complete the code so that the sprite says the first 15 terms of 11, 18, 25, 32, ...',
             'The 1st term is 11, so set n to 11. Each jump adds 7. The sprite says a term, then changes n, and 15 terms need 15 says: repeat 15. '
@@ -68,7 +69,8 @@ I.append(IT(U, 'S', 5, 2,
             parts=[P('a', 'set n to {b}', [11]),
                    P('b', 'repeat {b}', [15]),
                    P('c', 'change n by {b}', [7]),
-                   P('d', 'The last number it says is {b}.', [109])]))
+                   P('d', 'The last number it says is {b}.', [109])],
+            figside=True))
 I.append(IT(U, 'S', 6, 2,
             "Siti's code should say the 30th term of 4, 9, 14, 19, ...",
             'The loop adds 5 thirty times: 4 + 5 × 30 = 154. That is the 31st term. The 30th term is 5 × 30 − 1 = 149. '
@@ -76,7 +78,8 @@ I.append(IT(U, 'S', 6, 2,
             fig=code([HAT, ['var', 'set n to (4)'], ['ctl', 'repeat (30)', [['var', 'change n by (5)']]], ['look', 'say (n)']]),
             parts=[P('a', 'Her code says {b}.', [154]),
                    P('b', 'The 30th term really is {b}.', [149]),
-                   P('c', 'To fix it, change repeat 30 to repeat {b}.', [29])]))
+                   P('c', 'To fix it, change repeat 30 to repeat {b}.', [29])],
+            figside=True))
 I.append(IT(U, 'S', 7, 2,
             'Ali has $15 on Day 1. Every day after that he adds $7. So on Day 2 he has $22.',
             'Each day adds $7, so the rule is 7n + 8 (7 × 1 + 8 = 15). (a) Day 4: 7 × 4 + 8 = 36. (c) Day 30: 7 × 30 + 8 = 218. '
@@ -84,7 +87,8 @@ I.append(IT(U, 'S', 7, 2,
             parts=[P('a', 'On Day 4 he has ${b}.', [36]),
                    P('b', 'Money on Day n = {b} × n + {b} dollars.', [7, 8], '7, 8'),
                    P('c', 'On Day 30 he has ${b}.', [218]),
-                   P('d', 'He first has more than $200 on Day {b}.', [28])]))
+                   P('d', 'He first has more than $200 on Day {b}.', [28])],
+            partsrow=True))
 I.append(IT(U, 'S', 8, 2,
             'Circle the rule that gives each sequence. Test n = 1 and n = 2.',
             'Put n = 1 and n = 2 into each rule. (a) 5 × 1 − 1 = 4 and 5 × 2 − 1 = 9. (b) 3 × 1 + 7 = 10 and 3 × 2 + 7 = 13. '
@@ -92,15 +96,14 @@ I.append(IT(U, 'S', 8, 2,
             parts=[P('a', '4, 9, 14, 19, ...   {circ:4n + 1|5n - 1|5n + 4}', ['5n - 1'], '5n − 1'),
                    P('b', '10, 13, 16, 19, ...   {circ:3n + 10|10n + 3|3n + 7}', ['3n + 7']),
                    P('c', '3, 11, 19, 27, ...   {circ:8n + 3|8n - 5|3n + 8}', ['8n - 5'], '8n − 5')]))
-
-# ---------------------------------------------------------------- Start here, page 3
 I.append(IT(U, 'S', 9, 3,
             'A loop starts at the 1st term of a sequence. Each repeat moves on to the next term.',
             'The 1st term needs 0 repeats and each repeat adds 1 to the term number. (a) 60 − 1 = 59 repeats. (b) 1 + 40 = the 41st term. '
             '(c) 25 − 8 = 17 repeats. The repeats count the jumps, not the terms.',
             parts=[P('a', 'To reach the 60th term, repeat {b} times.', [59]),
                    P('b', 'After repeat 40, the sprite is at term number {b}.', [41]),
-                   P('c', 'To go from the 8th term to the 25th term, repeat {b} times.', [17])]))
+                   P('c', 'To go from the 8th term to the 25th term, repeat {b} times.', [17])],
+            partsrow=True))
 I.append(IT(U, 'S', 10, 3,
             'This code uses n as a counter and says a rule. Predict what it says.',
             '(a) n = 1, 2, 3 give 3 × 1 + 1 = 4, 7, 10. (b) The 8th number is 3 × 8 + 1 = 25. '
@@ -108,23 +111,9 @@ I.append(IT(U, 'S', 10, 3,
             fig=code([HAT, ['var', 'set n to (1)'], ['ctl', 'repeat (8)', [['look', 'say (3 × n + 1) for (1) seconds'], ['var', 'change n by (1)']]]]),
             parts=[P('a', 'The first 3 numbers it says are {b}, {b}, {b}.', [4, 7, 10], '4, 7, 10'),
                    P('b', 'The last number it says is {b}.', [25]),
-                   P('c', 'To say 5, 9, 13, 17, ... change the rule to {b} × n + {b}.', [4, 1], '4, 1')]))
+                   P('c', 'To say 5, 9, 13, 17, ... change the rule to {b} × n + {b}.', [4, 1], '4, 1')],
+            figside=True))
 I.append(IT(U, 'S', 11, 3,
-            'Use the rules to find terms.',
-            '(a) 6 × 20 + 1 = 121. (b) 9 × 30 − 4 = 266. (c) 6n + 1 = 61 gives 6n = 60, so n = 10. (d) 9n − 4 = 158 gives 9n = 162, so n = 18.',
-            parts=[P('a', 'The 20th term of 6n + 1 is {b}.', [121]),
-                   P('b', 'The 30th term of 9n − 4 is {b}.', [266]),
-                   P('c', 'In 6n + 1, the number 61 is term number {b}.', [10]),
-                   P('d', 'In 9n − 4, the number 158 is term number {b}.', [18])]))
-I.append(IT(U, 'S', 12, 3,
-            'A sequence goes up by the same amount each time. Its 4th term is 23 and its 9th term is 53.',
-            'From the 4th to the 9th term is 9 − 4 = 5 jumps. The terms rose by 30, so each jump is 30 ÷ 5 = 6. '
-            'Going back 3 jumps from the 4th term: 23 − 18 = 5. The rule is 6n − 1 (6 × 4 − 1 = 23).',
-            parts=[P('a', 'From the 4th term to the 9th term is {b} jumps.', [5]),
-                   P('b', 'Each jump is {b}.', [6]),
-                   P('c', 'The 1st term is {b}.', [5]),
-                   P('d', 'The rule is {b} × n − {b}.', [6, 1], '6, 1')]))
-I.append(IT(U, 'S', 13, 3,
             'Aisha looks at 2, 8, 14, 20, ... The difference is 6, so she says the rule is 6n.',
             'The rule 6n gives 6 for the 1st term, but the 1st term is 2. Each term is 4 less than 6n: 6 − 4 = 2, 12 − 4 = 8. '
             'The difference only tells you the times table. You must still compare with the terms.',
@@ -140,7 +129,7 @@ I.append(IT(U, 'T', 1, 4,
             parts=[P('a', 'The rule for the nth term is {b} − 5n.', [63]),
                    P('b', 'The 10th term is {b}.', [13]),
                    P('c', 'The last term above 0 is term number {b}.', [12])],
-            hint='The terms go down by 5. Take 5 × n away from a start number.'))
+            hint='The terms go down by 5. Take 5 × n away from a start number.', partsrow=True))
 I.append(IT(U, 'T', 2, 4,
             'Program P starts at the 1st term of 6, 10, 14, 18, ... Program Q starts at the 5th term of the same sequence. Both change by 4 each repeat.',
             'The 5th term is 4 × 5 + 2 = 22. Q adds 4 sixteen times: 22 + 64 = 86. Q has moved 16 terms on, so it ends at term 5 + 16 = 21. '
@@ -149,27 +138,28 @@ I.append(IT(U, 'T', 2, 4,
             parts=[P('a', 'Q ends at term number {b}.', [21]),
                    P('b', 'To end at the same term, P must repeat {b} times.', [20]),
                    P('c', 'Both programs say {b}.', [86])],
-            hint='Count how many terms Q moves on. P starts 4 terms earlier.'))
+            hint='Count how many terms Q moves on. P starts 4 terms earlier.', figside=True))
 I.append(IT(U, 'T', 3, 4,
-            'The nth term of a sequence is 9n + 4.',
-            '(a) 9n + 4 is near 500 when n is near 55: 9 × 55 + 4 = 499 and 9 × 56 + 4 = 508. 499 is only 1 away from 500. (b) It is the 55th term. '
-            '(c) 9n + 4 is less than 300 while 9n is less than 296. 9 × 32 = 288 works and 9 × 33 = 297 does not, so 32 terms.',
-            parts=[P('a', 'The term closest to 500 is {b}.', [499]),
-                   P('b', 'It is term number {b}.', [55]),
-                   P('c', 'The number of terms that are less than 300 is {b}.', [32])],
-            hint='Try n = 50 first. Then move up or down until you are close.'))
+            'A sequence goes up by the same amount each time. Its 4th term is 23 and its 9th term is 53.',
+            'From the 4th to the 9th term is 9 − 4 = 5 jumps. The terms rose by 30, so each jump is 30 ÷ 5 = 6. '
+            'Going back 3 jumps from the 4th term: 23 − 18 = 5. The rule is 6n − 1 (6 × 4 − 1 = 23).',
+            parts=[P('a', 'From the 4th term to the 9th term is {b} jumps.', [5]),
+                   P('b', 'Each jump is {b}.', [6]),
+                   P('c', 'The 1st term is {b}.', [5]),
+                   P('d', 'The rule is {b} × n − {b}.', [6, 1], '6, 1')],
+            hint='Count the jumps between the 2 terms. Share the rise equally.', partsrow=True))
 
 # ---------------------------------------------------------------- Go further
 I.append(IT(U, 'G', 1, 5,
             'Matchsticks make staircases. Staircase 1 has 1 square, staircase 2 has 3 squares and staircase 3 has 6 squares.',
             'The extra sticks each time are 6 (4 to 10), then 8 (10 to 18). They go up by 2 each time, so the next extras are 10 and 12: 18 + 10 = 28 and 28 + 12 = 40. '
-            'For staircase 10 add the extras 6, 8, ..., 22 to 4: 4 + 126 = 130. (The rule is n × n + 3n, a rule that is not a times table plus a number.)',
-            fig={'type': 'l6_sticks', 'shape': 'stairs', 'ks': [1, 2, 3], 'side': 9},
+            'For staircase 10 add the extras 6, 8, ..., 22 to 4: 4 + 126 = 130. (The rule is n × n + 3n, which is not a times table plus a number.)',
+            fig={'type': 'l6_sticks', 'shape': 'stairs', 'ks': [1, 2, 3], 'side': 8},
             parts=[P('a', 'Count the sticks. Staircase 2 has {b} and staircase 3 has {b}.', [10, 18], '10, 18'),
                    P('b', 'The extra sticks go up by the same amount each time. Staircase 4 has {b} sticks and staircase 5 has {b}.', [28, 40], '28, 40'),
                    P('c', 'Staircase 10 has {b} sticks.', [130])],
             hint='Find how many extra sticks each staircase adds. Look for a pattern.',
-            beyond='Second differences'))
+            beyond='Second differences', figright=True))
 I.append(IT(U, 'G', 2, 5,
             'A sprite says these numbers in order: 3, 20, 7, 25, 11, 30, 15, 35, ...',
             'Places 1, 3, 5, ... say 3, 7, 11, 15: they go up by 4. Places 2, 4, 6, ... say 20, 25, 30, 35: they go up by 5. '
@@ -179,25 +169,17 @@ I.append(IT(U, 'G', 2, 5,
                    P('b', 'The number in place 15 is {b}.', [31]),
                    P('c', 'The number in place 20 is {b}.', [65]),
                    P('d', 'The number 60 is in place {b}.', [18])],
-            hint='Split it into two sequences. Which one is place 15 in?'))
+            hint='Split it into two sequences. Which one is place 15 in?', partsrow=True))
 I.append(IT(U, 'G', 3, 5,
-            'A sequence has the rule 6n − 2. Plan a program that starts at the 1st term and says the 40th term.',
-            'n = 1, 2, 3, 4 give 4, 10, 16, 22. The 40th term is 6 × 40 − 2 = 238. The program starts at the 1st term, 4, and jumps 6 each time. '
-            'From the 1st to the 40th term there are 39 jumps, so: set n to 4, repeat 39 [change n by 6], say n.',
-            parts=[P('a', 'The first 4 terms are {b}, {b}, {b}, {b}.', [4, 10, 16, 22], '4, 10, 16, 22'),
-                   P('b', 'The 40th term is {b}.', [238]),
-                   P('c', 'set n to {b}, then repeat {b} [change n by {b}], then say n.', [4, 39, 6], '4, 39, 6')],
-            hint='How many jumps are there from the 1st term to the 40th term?'))
-I.append(IT(U, 'G', 4, 5,
             'What does this code say? Write t after each repeat.',
             't after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. The repeat stops the first time t is above 100, which is after repeat 14, '
-            'so k is 14 and t is 105. (These are the triangle numbers 1, 3, 6, 10, ... : the extra amount is 1 more each time.)',
+            'so k is 14 and t is 105. (These are the triangle numbers 1, 3, 6, 10, ...: the amount added is 1 more each time.)',
             fig=code([HAT, ['var', 'set t to (0)'], ['var', 'set k to (0)'], ['ctl', 'repeat until <(t) {gt} (100)>', [['var', 'change k by (1)'], ['var', 'change t by (k)']]], ['look', 'say (k)']]),
             parts=[P('a', 'The code says {b}.', [14]),
                    P('b', 'When it stops, t is {b}.', [105])],
             space={'rows': ['t after each repeat:']},
             hint='Write t after every repeat: 1, 3, 6, ... Where does it pass 100?',
-            beyond='Triangle numbers'))
+            beyond='Triangle numbers', figside=True))
 
 # ---------------------------------------------------------------- Check yourself
 I.append(IT(U, 'C', 1, 6,
@@ -211,16 +193,14 @@ I.append(IT(U, 'C', 2, 6,
 I.append(IT(U, 'C', 3, 6,
             'Predict what the code says.',
             '8 + 20 × 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 × 21 + 2 = 128.',
-            fig=code([HAT, ['var', 'set n to (8)'], ['ctl', 'repeat (20)', [['var', 'change n by (6)']]], ['look', 'say (n)']]),
-            parts=[P('a', 'It says {b}.', [128]),
-                   P('b', 'That is term number {b} of 8, 14, 20, ...', [21])]))
+            fig=code([HAT, ['var', 'set n to (8)'], ['ctl', 'repeat (20)', [['var', 'change n by (6)']]]]),
+            parts=[P('a', 'The sprite ends with n = {b}.', [128]),
+                   P('b', 'That is term number {b} of 8, 14, 20, ...', [21])],
+            figside=True))
 I.append(IT(U, 'C', 4, 6,
-            'Mei wants the first 4 terms of 5, 8, 11, 14. What does her code say?',
-            'Each loop changes n first, so it says 8, 11, 14, 17. The 1st term 5 is never said, and 17 is one term too far. '
-            'To fix it, swap the 2 blocks inside the repeat.',
-            fig=code([HAT, ['var', 'set n to (5)'], ['ctl', 'repeat (4)', [['var', 'change n by (3)'], ['look', 'say (n) for (1) seconds']]]]),
-            parts=[P('a', 'It says {b}, {b}, {b}, {b}.', [8, 11, 14, 17], '8, 11, 14, 17'),
-                   P('b', 'The number it never says is {b}.', [5])]))
+            'Mei starts at n = 5. She repeats 4 times: change n by 3, then say n. What is the first number it says?  {b}',
+            'The code changes n before it says it. 5 + 3 = 8, so the first number said is 8, not the 1st term 5. To say 5 first, say n before changing it.',
+            answer=A([8], '8')))
 
 write_unit(1, 'Code the pattern', 'Sequences and the nth term',
            'I can find the rule for the nth term of a pattern and use it for the 100th term. I can test my rule with a loop.', learn, I)

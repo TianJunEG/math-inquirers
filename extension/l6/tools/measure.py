@@ -22,7 +22,8 @@ def measure(unit, theme='colour'):
     cnt = {}
     for it in items:
         cnt[it['tier']] = cnt.get(it['tier'], 0) + 1
-        parts.append(f'<div class="meas" data-id="{it["id"]}">' + render.item_html(it, cnt[it['tier']], theme, hint=it['tier'] != 'quiz') + '</div>')
+        it2 = dict(it, space={'rows': ['Working:']}) if (it['tier'] == 'quiz' and not it.get('figure')) else it   # as build.py / render.unit_pages
+        parts.append(f'<div class="meas" data-id="{it["id"]}">' + render.item_html(it2, cnt[it['tier']], theme, hint=it['tier'] != 'quiz') + '</div>')
     banners = ''.join(f'<div class="bn" data-t="{t}">{render.tier_banner(t, "Hints are upside down. Try first!")}</div>' for t in ('start', 'think', 'go', 'quiz'))
     html = (f'<html><head><meta charset="utf-8"><style>{css}</style></head><body class="{theme} print" style="{cfg_vars}">'
             f'<section class="page recto"><div class="pg"><div class="ph"><span class="lv">x</span></div><div class="pbody practice" id="pb"></div></div></section>'
@@ -41,6 +42,7 @@ def measure(unit, theme='colour'):
 
 
 GAP = 3.0   # .pbody gap, mm
+QUIZ_FURN = 97.0   # score line, What next? box and Look back box (measured on the first Level 6 build)
 
 
 def page_fill(ids, hs, bn_h, cap, extra=0.0):
@@ -100,7 +102,8 @@ def main():
         its = [i['id'] for i in unit['items'] if i['tier'] == tier]
         print(f'{label}: fill {page_fill(its, hs, bn[tier], cap):.3f}')
     q = [i['id'] for i in unit['items'] if i['tier'] == 'quiz']
-    print(f'Check yourself items: {sum(hs[i] + GAP for i in q):.0f} mm (page body {cap:.0f} mm; score box, advice and look-back need about 95 mm)')
+    tot = sum(hs[i] + GAP for i in q) + bn['quiz'] + QUIZ_FURN
+    print(f'Check yourself: natural fill {tot / cap:.3f} (items {sum(hs[i] + GAP for i in q):.0f} mm + furniture {QUIZ_FURN} mm)')
     if a.apply and segs:
         for k, s in enumerate(segs, 1):
             for it in unit['items']:
