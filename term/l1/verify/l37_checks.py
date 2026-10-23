@@ -137,7 +137,7 @@ def _r2(e):
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c4': _c4, 'c5': _c5, 't1': _t1, 't3': _t3, 'r1': _r1, 'r2': _r2}
-BASE_ENV = {'c1': dict(a=7, b=4), 'c2': dict(a=3, b=2, c=4), 'c4': dict(k=3), 'c5': dict(t=10, a=4), 't1': dict(a=6, b=5, c=4), 't3': dict(n=3), 'r1': dict(n=3), 'r2': dict(n=3)}
+BASE_ENV = {'c1': dict(a=7, b=4), 'c2': dict(a=3, b=2, c=4), 'c4': dict(k=3), 'c5': dict(t=10, a=4), 't1': dict(a=6, b=5, c=4), 't3': dict(n=3), 'r1': dict(w=2), 'r2': dict(s=3)}
 
 
 def run(d):

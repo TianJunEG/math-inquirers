@@ -270,3 +270,6 @@ Owner chose RETROFIT-NOW: retrofit the thin non-routine spots (work backwards, t
 - CERT-OK: in holiday Lesson 10 the tutor may show each certificate (child's name) on screen for about 12 seconds on the recorded call; the PDF certificate is also sent through the approved channel afterwards.
 - INSTALMENTS-NO: the S$250 beta fee has no instalments; remove any "instalments" wording.
 - PUZZLEDAY-YES: Levels 1-4 call the last holiday lesson "Puzzle Day" everywhere (website, sign-up pages, emails, deck link names where changeable). Level 5 keeps "Challenge Day" (earlier decision).
+
+## 23 Oct 2026 (night): SCHOOLBOOKS-P3-NEXT
+Owner chose to start the Primary 3 school puzzle booklets (Semester 1 and 2) in parallel with Primary 2, instead of waiting for the Primary 2 audit or school interest. (Plan gate "2 interested schools" waived by owner.) Owner also asked to see the list of syllabus topics NOT covered by the school puzzle booklets: Primary 1 list given in chat; Primary 2 and 3 lists come from their gap analyses (docs/school_books/p2_semester_booklets_plan.md, p3_semester_booklets_plan.md).

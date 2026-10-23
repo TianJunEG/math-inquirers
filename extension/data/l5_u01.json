@@ -34,7 +34,7 @@
    }
   },
   "howto": {
-   "title": "How to find the closest number",
+   "title": "Closest number",
    "steps": [
     "Write the best number just below the target.",
     "Write the best number just above the target.",
@@ -77,7 +77,7 @@
   "tight": true,
   "try": {
    "id": "L5U01-L01",
-   "text": "Use the cards to make a 7-digit number as close as you can to 8 000 000. Use every card once. Write your number. {ll}",
+   "text": "Use the cards to make a 7-digit number as close as you can to 8 000 000. Use every card once. Write your number. {l}",
    "answer": {
     "value": [
      "7964310"
@@ -110,7 +110,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "Six million, two hundred and five thousand and thirty is written {ll}",
+     "text": "Six million, two hundred and five thousand and thirty is written {l}",
      "answer": {
       "value": [
        "6205030"
@@ -120,7 +120,7 @@
     },
     {
      "label": "b",
-     "text": "In 3 470 218, the digit 7 stands for {b}",
+     "text": "In 3 470 218, the digit 7 stands for {l}",
      "answer": {
       "value": [
        "70000"
@@ -166,7 +166,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "thousand. {b}",
+     "text": "thousand. {l}",
      "answer": {
       "value": [
        "7850000"
@@ -176,7 +176,7 @@
     },
     {
      "label": "b",
-     "text": "hundred thousand. {b}",
+     "text": "hundred thousand. {l}",
      "answer": {
       "value": [
        "7800000"
@@ -186,7 +186,7 @@
     },
     {
      "label": "c",
-     "text": "million. {b}",
+     "text": "million. {l}",
      "answer": {
       "value": [
        "8000000"
@@ -219,7 +219,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "The greatest multiple of 5 is {ll}",
+     "text": "The greatest multiple of 5 is {l}",
      "answer": {
       "value": [
        "9875410"
@@ -229,7 +229,7 @@
     },
     {
      "label": "b",
-     "text": "The smallest number is {ll}",
+     "text": "The smallest number is {l}",
      "answer": {
       "value": [
        "1045789"
@@ -244,7 +244,7 @@
    "id": "L5U01-S05",
    "tier": "start",
    "page": 1,
-   "text": "Ben has the number below. He adds 2 hundred thousands. Then he takes away 5 ten thousands. What is Ben's new number? {ll}",
+   "text": "Ben has the number below. He adds 2 hundred thousands. Then he takes away 5 ten thousands. What is Ben's new number? {l}",
    "figure": {
     "type": "l5_table",
     "cols": [
@@ -443,7 +443,7 @@
   {
    "id": "L5U01-S10",
    "tier": "start",
-   "page": 3,
+   "page": 2,
    "text": "Circle True or False.",
    "parts": [
     {
@@ -508,8 +508,10 @@
       "1 420 050"
      ]
     ],
-    "width_mm": 80,
+    "width_mm": 62,
     "first_bold": true,
+    "rowh": 38,
+    "size": 20,
     "alt": "table of town populations"
    },
    "parts": [
@@ -525,7 +527,7 @@
     },
     {
      "label": "b",
-     "text": "How many more people live in the town with the most people than in the town with the fewest? {ll}",
+     "text": "How many more people live in the town with the most people than in the town with the fewest? {l}",
      "answer": {
       "value": [
        "395550"
@@ -540,7 +542,7 @@
    "id": "L5U01-S12",
    "tier": "start",
    "page": 3,
-   "text": "Solve the riddle. Check every clue when you finish.\nClue 1: I am a 6-digit number. All my digits are different.\nClue 2: Rounded to the nearest ten thousand I am 470 000.\nClue 3: My thousands digit is 2.\nClue 4: My hundreds digit is twice my tens digit.\nClue 5: My ones digit is 0.\nI am {ll}",
+   "text": "Solve the riddle. Check every clue when you finish.\nClue 1: I am a 6-digit number. All my digits are different.\nClue 2: Rounded to the nearest ten thousand I am 470 000.\nClue 3: My thousands digit is 2.\nClue 4: My hundreds digit is twice my tens digit.\nClue 5: My ones digit is 0.\nI am {l}",
    "answer": {
     "value": [
      "472630"
@@ -582,7 +584,7 @@
    "id": "L5U01-T01",
    "tier": "think",
    "page": 4,
-   "text": "Solve the riddle. Test the clues one at a time.\nClue 1: I am a 7-digit number. All my digits are different.\nClue 2: Rounded to the nearest hundred thousand I am 6 400 000.\nClue 3: My ten thousands digit is 1 less than my hundred thousands digit.\nClue 4: My hundreds digit is 2 more than my thousands digit.\nClue 5: My tens digit is 0.\nClue 6: My digits add up to 33.\nI am {ll}",
+   "text": "Solve the riddle. Test the clues one at a time.\nClue 1: I am a 7-digit number. All my digits are different.\nClue 2: Rounded to the nearest hundred thousand I am 6 400 000.\nClue 3: My ten thousands digit is 1 less than my hundred thousands digit.\nClue 4: My hundreds digit is 2 more than my thousands digit.\nClue 5: My tens digit is 0.\nClue 6: My digits add up to 33.\nI am {l}",
    "answer": {
     "value": [
      "6435708"
@@ -627,7 +629,7 @@
    "id": "L5U01-T03",
    "tier": "think",
    "page": 4,
-   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the two numbers. Make the product as great as you can. Write the product. {ll}",
+   "text": "Use each card once to make a 3-digit number and a 2-digit number. Multiply the two numbers. Make the product as great as you can. Write the product. {l}",
    "figure": {
     "type": "l5_cards",
     "items": [
@@ -659,7 +661,7 @@
    "id": "L5U01-G01",
    "tier": "go",
    "page": 5,
-   "text": "Beyond Level 5: Counting choices\nA 7-digit number cannot start with 0. How many 7-digit numbers have all their digits different? {ll}",
+   "text": "Beyond Level 5: Counting choices\nA 7-digit number cannot start with 0. How many 7-digit numbers have all their digits different? {l}",
    "answer": {
     "value": [
      "544320"
@@ -668,7 +670,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "hint": "Count the choices for the first digit, then the second.",
@@ -678,7 +682,7 @@
    "id": "L5U01-G02",
    "tier": "go",
    "page": 5,
-   "text": "Ali writes down every whole number from 1 to 999. He adds up all the digits he wrote. What is the total? {ll}",
+   "text": "Ali writes down every whole number from 1 to 999. He adds up all the digits he wrote. What is the total? {l}",
    "answer": {
     "value": [
      "13500"
@@ -687,7 +691,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "hint": "Write 7 as 007. Each digit 0 to 9 appears equally often.",
@@ -706,7 +712,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "hint": "9 × 11 is 99, but 11 is hard to make. Try 3 × 4 × 9.",
@@ -725,7 +733,9 @@
    },
    "space": {
     "rows": [
-     "Working:"
+     "Working:",
+     "",
+     ""
     ]
    },
    "hint": "Sheets in one day first. Then divide. Is the answer a whole number?",
@@ -739,7 +749,7 @@
    "parts": [
     {
      "label": "a",
-     "text": "{b}",
+     "text": "{l}",
      "answer": {
       "value": [
        "200000"
@@ -749,7 +759,7 @@
     },
     {
      "label": "b",
-     "text": "{b}",
+     "text": "{l}",
      "answer": {
       "value": [
        "5300000"
@@ -758,7 +768,8 @@
      }
     }
    ],
-   "explanation": "(a) The 2 is in the hundred thousands place: 200 000. (b) 5 280 436: the ten thousands digit is 8, so round up to 5 300 000."
+   "explanation": "(a) The 2 is in the hundred thousands place: 200 000. (b) 5 280 436: the ten thousands digit is 8, so round up to 5 300 000.",
+   "partsrow": true
   },
   {
    "id": "L5U01-C02",
