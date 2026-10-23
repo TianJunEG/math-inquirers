@@ -58,19 +58,18 @@ def coin_g(v, x, cy):
     return (f'<g class="coin" data-v="{v}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
             f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
             + _motif(v, cx, cy - r * 0.62, r) +
-            f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.16:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{lab}</text>'
-            f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.66:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.46:.1f}" fill="#000">{unit}</text></g>')
+            f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.0:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.60:.1f}" fill="#000">{lab}</text>'
+            f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.54:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*(0.36 if v < 100 else 0.32):.1f}" fill="#000">{unit}</text></g>')
 
 def note_g(v, x, y):
-    """an original note design: a frame, the value large in two corners, a simple bird in the middle; not a copy of any real note"""
+    """an original note design: a frame, the value in two corners, a simple bird in the middle; not a copy of any real note"""
     W, H = NOTE_W, NOTE_H
     bird = ('<path d="M-4.5,1.2 C-2.5,-3.5 2.5,-3.5 4.5,-0.5 L7,-1.5 L5.8,1.2 C3,3.8 -2,3.8 -4.5,1.2 Z M-4.5,1.2 L-7.5,3.2 L-4,3" fill="none" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/>')
     return (f'<g class="note" data-v="{v}"><rect x="{x:.1f}" y="{y:.1f}" width="{W}" height="{H}" rx="1.2" fill="#fff" stroke="#000" stroke-width="0.7"/>'
-            f'<rect x="{x+1.6:.1f}" y="{y+1.6:.1f}" width="{W-3.2}" height="{H-3.2}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
-            f'<g transform="translate({x+W/2:.1f},{y+H/2-1.0:.1f}) scale(0.9)">{bird}</g>'
-            f'<text class="noteval" x="{x+3.4:.1f}" y="{y+6.0:.1f}" font-family="Nunito Sans" font-weight="800" font-size="5.0" fill="#000">${v}</text>'
-            f'<text class="noteval2" x="{x+W-4:.1f}" y="{y+H-3.6:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="5.0" fill="#000">${v}</text>'
-            f'<text x="{x+W/2:.1f}" y="{y+H-3.0:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="2.6" fill="#000">dollars</text></g>')
+            f'<rect x="{x+1.4:.1f}" y="{y+1.4:.1f}" width="{W-2.8}" height="{H-2.8}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
+            f'<g transform="translate({x+W/2:.1f},{y+H/2:.1f}) scale(0.8)">{bird}</g>'
+            f'<text class="noteval" x="{x+2.8:.1f}" y="{y+5.6:.1f}" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text>'
+            f'<text class="noteval2" x="{x+W-2.8:.1f}" y="{y+H-2.8:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="4.6" fill="#000">${v}</text></g>')
 
 def money_width(items, gap=2.0):
     return sum((COIN_D[i[1]] if i[0] == "c" else NOTE_W) + gap for i in items)

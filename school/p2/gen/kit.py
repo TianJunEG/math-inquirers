@@ -19,22 +19,34 @@ def inner_ok(w):
             if c != w[i] and (w[:i] + c + w[i + 1:]) in BIG: return False
     return True
 
+def swap_ok(w):
+    """no two letters of the word swapped make another word"""
+    w = w.lower()
+    for i in range(len(w)):
+        for j in range(i + 1, len(w)):
+            l = list(w); l[i], l[j] = l[j], l[i]
+            if "".join(l) in BIG: return False
+    return True
+
 def word_ok(w):
-    return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON and inner_ok(w)
+    return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON and inner_ok(w) and swap_ok(w)
 
 def safe_pool(n):
     if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6}[n] if word_ok(w)]
     return _SAFE[n]
 
+CLAIMED = {}      # page number -> code word, so that no two pages of one build share a word
+
 def word_candidates(no, n, avoid=()):
-    pool = safe_pool(n); k = no % len(pool)
-    return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid]
+    pool = safe_pool(n); k = (no * 5) % len(pool)
+    taken = {w for p, w in CLAIMED.items() if p != no}
+    return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid and pool[(k + o) % len(pool)].upper() not in taken]
 
 def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
     """(word, table): the first word of this page's sequence for which a code table with no undetected slip exists"""
     for w in word_candidates(no, n, avoid)[:max_words]:
         t = make_code_table(answers, w, rng, lo, hi, **kw)
-        if t: return w, t
+        if t: CLAIMED[no] = w; return w, t
     return None
 
 def finish_code(P, answers, table, word, lo, hi, domain=None, plain=None):

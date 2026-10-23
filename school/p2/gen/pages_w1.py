@@ -89,7 +89,7 @@ def page01():
     P.v("V1b the digit asked about appears once in its number", all(str(it["n"]).count(str(it["d"])) == 1 for it in items if it["k"] == "digit"))
     P.v("V1c at most 8 discs in a chart column", all(max(it["h"], it["t"], it["o"]) <= 8 for it in items if it["k"] == "chart"))
     P["key"]["answers"] = "; ".join(
-        (f"{i+1}) {it['h']} hundreds {it['t']} tens {it['o']} ones = {a}" if it["k"] == "chart" else f"{i+1}) {a}") for i, (it, a) in enumerate(zip(items, ans)))
+        (f"{i+1}) {it['h']} hundreds {it["t"]} ten{"s" if it["t"] != 1 else ""} {it["o"]} one{"s" if it["o"] != 1 else ""} = {a}" if it["k"] == "chart" else f"{i+1}) {a}") for i, (it, a) in enumerate(zip(items, ans)))
     return P
 
 # =============================================================================== P2-02 Column Sums
@@ -400,11 +400,11 @@ def page07():
 # =============================================================================== P2-08 Metres
 def tape_row(label, start, end, scale_max=12, w=104.0):
     """one row: a word label, a bar from start to end (metres) drawn above a tape of 0..scale_max m"""
-    u = w / scale_max; x0 = 3.0; H = 17.0
+    u = w / scale_max; x0 = 5.0; H = 17.0
     p = [f'<rect class="bar" x="{x0+start*u:.2f}" y="1.2" width="{(end-start)*u:.2f}" height="4.6" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     if start > 0:
         p.append(f'<polygon class="st" points="{x0+start*u-2.2:.2f},0.2 {x0+start*u+2.2:.2f},0.2 {x0+start*u:.2f},2.6" fill="#000"/>')
-    p.append(f'<rect x="{x0:.2f}" y="7.2" width="{scale_max*u:.2f}" height="7.2" fill="#fff" stroke="#000" stroke-width="0.5"/>')
+    p.append(f'<rect x="{x0-4:.2f}" y="7.2" width="{scale_max*u+8:.2f}" height="7.2" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(scale_max + 1):
         p.append(f'<line class="tk" x1="{x0+k*u:.2f}" y1="7.2" x2="{x0+k*u:.2f}" y2="{10.4:.2f}" stroke="#000" stroke-width="0.5"/>'
                  f'<text x="{x0+k*u:.2f}" y="12.6" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="3.8" fill="#000">{k}</text>')
