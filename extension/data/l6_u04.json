@@ -1,0 +1,1063 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 4,
+ "id": "L6U04",
+ "title": "Algebra machines",
+ "topic": "Rules with a letter and simple equations",
+ "holiday_lesson": 4,
+ "goal": "I can find the rule of a number machine from a table and write it with a letter. I can run a machine backwards to solve an equation.",
+ "learn": {
+  "intro": "A number machine follows a rule: IN goes in and OUT comes out. We write the rule with a letter, such as OUT = 4n + 3. To find the IN for a given OUT, run the machine backwards and undo the last step first.",
+  "example": {
+   "problem": "A machine does × 7, then − 4. OUT is 45. What was IN?",
+   "figure": {
+    "type": "l6_machine",
+    "chain": [
+     "n",
+     "× 7",
+     "",
+     "− 4",
+     "45"
+    ],
+    "undo": [
+     "÷ 7",
+     "+ 4"
+    ]
+   },
+   "steps": [
+    "The rule is OUT = 7n − 4, so 7n − 4 = 45.",
+    "Undo the last step first. Undo take away 4 by adding 4: 45 + 4 = 49.",
+    "Then undo × 7 by dividing by 7: 49 ÷ 7 = 7.",
+    "Check forwards: 7 × 7 = 49, then 49 − 4 = 45."
+   ],
+   "answer": "IN was 7."
+  },
+  "howto": {
+   "title": "How to run a machine backwards",
+   "steps": [
+    "Write the steps in order, from IN to OUT.",
+    "Start at OUT. Undo the last step first.",
+    "Use the opposite step: + undoes −, and × undoes ÷.",
+    "Check by running the machine forwards."
+   ]
+  },
+  "try": {
+   "id": "L6U04-L01",
+   "tier": "start",
+   "text": "A machine does × 4, then + 9. OUT is 41. What was IN? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Undo the last step first: 41 − 9 = 32. Then undo × 4: 32 ÷ 4 = 8. Check: 8 × 4 + 9 = 41."
+  }
+ },
+ "items": [
+  {
+   "id": "L6U04-S01",
+   "tier": "start",
+   "text": "Guess my rule. The rule is: multiply n by a number, then add a number.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "OUT = {b} × n + {b}",
+     "answer": {
+      "value": [
+       "3",
+       "2"
+      ],
+      "text": "3, 2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "IN 10 gives OUT {b}.",
+     "answer": {
+      "value": [
+       "32"
+      ],
+      "text": "32"
+     }
+    },
+    {
+     "label": "c",
+     "text": "OUT 50 comes from IN {b}.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "IN",
+      "1",
+      "3",
+      "5",
+      "7"
+     ],
+     [
+      "OUT",
+      "5",
+      "11",
+      "17",
+      "23"
+     ]
+    ],
+    "cw": [
+     22,
+     18,
+     18,
+     18,
+     18
+    ],
+    "rowhead": true,
+    "ch": 10
+   },
+   "explanation": "IN goes up by 2 each time and OUT goes up by 6, so each 1 of IN adds 3: the rule has × 3. 3 × 1 = 3, but OUT is 5, so add 2: OUT = 3n + 2. Check IN 7: 3 × 7 + 2 = 23. IN 10 gives 32. For OUT 50: 3n = 48 and n = 16.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-S02",
+   "tier": "start",
+   "text": "Guess my rule. This time the machine takes a number away.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "OUT = {b} × n − {b}",
+     "answer": {
+      "value": [
+       "3",
+       "5"
+      ],
+      "text": "3, 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "IN 20 gives OUT {b}.",
+     "answer": {
+      "value": [
+       "55"
+      ],
+      "text": "55"
+     }
+    },
+    {
+     "label": "c",
+     "text": "OUT 100 comes from IN {b}.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "IN",
+      "2",
+      "4",
+      "6",
+      "8"
+     ],
+     [
+      "OUT",
+      "1",
+      "7",
+      "13",
+      "19"
+     ]
+    ],
+    "cw": [
+     22,
+     18,
+     18,
+     18,
+     18
+    ],
+    "rowhead": true,
+    "ch": 10
+   },
+   "explanation": "IN goes up by 2 and OUT goes up by 6, so the rule has × 3. 3 × 2 = 6, but OUT is 1, so take away 5: OUT = 3n − 5. IN 20 gives 3 × 20 − 5 = 55. For OUT 100: 3n − 5 = 100, so 3n = 105 and n = 35.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-S03",
+   "tier": "start",
+   "text": "Machine P does × 2, then + 6. Machine Q does + 6, then × 2. Use the same IN for both.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "IN 7:  P gives {b}  and Q gives {b}.",
+     "answer": {
+      "value": [
+       "20",
+       "26"
+      ],
+      "text": "20, 26"
+     }
+    },
+    {
+     "label": "b",
+     "text": "IN 10:  P gives {b}  and Q gives {b}.",
+     "answer": {
+      "value": [
+       "26",
+       "32"
+      ],
+      "text": "26, 32"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Do P and Q give the same OUT?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "IN 7: P gives 7 × 2 = 14, then 20. Q gives 7 + 6 = 13, then 26. IN 10: P gives 26 and Q gives 32. The order of the steps matters, so P and Q do not give the same OUT."
+  },
+  {
+   "id": "L6U04-S04",
+   "tier": "start",
+   "text": "A machine does two steps. Look at the first IN and OUT.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The middle box is {b}.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The last step is add {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "IN 9 gives OUT {b}.",
+     "answer": {
+      "value": [
+       "31"
+      ],
+      "text": "31"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_machine",
+    "chain": [
+     "5",
+     "× 3",
+     "",
+     "+ ?",
+     "19"
+    ]
+   },
+   "explanation": "IN 5 times 3 is 15, so the middle box is 15. 15 + 4 = 19, so the last step is add 4. IN 9: 9 × 3 = 27, then 27 + 4 = 31.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-S05",
+   "tier": "start",
+   "text": "Run each machine backwards to find n. Check by going forwards.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "5n + 8 = 63      n = {b}",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "9n − 7 = 74      n = {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "(n + 4) × 6 = 66      n = {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "d",
+     "text": "n ÷ 5 + 3 = 11      n = {b}",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "explanation": "(a) 5n + 8 = 63: 63 − 8 = 55, 55 ÷ 5 = 11. (b) 9n − 7 = 74: 74 + 7 = 81, 81 ÷ 9 = 9. (c) (n + 4) × 6 = 66: 66 ÷ 6 = 11, 11 − 4 = 7. (d) n ÷ 5 + 3 = 11: 11 − 3 = 8, 8 × 5 = 40.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-S06",
+   "tier": "start",
+   "text": "The block \"answer\" holds the number you type. In code, × means times. Predict what the sprite says.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "You type 9. It says {b}.",
+     "answer": {
+      "value": [
+       "33"
+      ],
+      "text": "33"
+     }
+    },
+    {
+     "label": "b",
+     "text": "You type 25. It says {b}.",
+     "answer": {
+      "value": [
+       "97"
+      ],
+      "text": "97"
+     }
+    },
+    {
+     "label": "c",
+     "text": "It says 61. You typed {b}.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "look",
+      "ask (IN?) and wait"
+     ],
+     [
+      "var",
+      "set out to (answer × 4 − 3)"
+     ],
+     [
+      "look",
+      "say (out)"
+     ]
+    ]
+   },
+   "explanation": "out = answer × 4 − 3. Type 9: 36 − 3 = 33. Type 25: 100 − 3 = 97. For 61, run it backwards: 61 + 3 = 64, then 64 ÷ 4 = 16.",
+   "figside": true
+  },
+  {
+   "id": "L6U04-S07",
+   "tier": "start",
+   "text": "Plan a search. Find n when 7n − 4 = 73 by trying n = 0, 1, 2, ... Fill in the blanks.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "set n to {b}",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    },
+    {
+     "label": "b",
+     "text": "repeat until it is {b}",
+     "answer": {
+      "value": [
+       "73"
+      ],
+      "text": "73"
+     }
+    },
+    {
+     "label": "c",
+     "text": "change n by {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "d",
+     "text": "It says {b}.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set n to ( )"
+     ],
+     [
+      "ctl",
+      "repeat until <(n × 7 − 4) = ( )>",
+      [
+       [
+        "var",
+        "change n by ( )"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (n)"
+     ]
+    ]
+   },
+   "explanation": "The search starts at 0 and adds 1 each time, until 7 × n − 4 is 73. 7 × 10 − 4 = 66 is too small and 7 × 11 − 4 = 73. It says 11. Check backwards: 73 + 4 = 77 and 77 ÷ 7 = 11.",
+   "figside": true
+  },
+  {
+   "id": "L6U04-S08",
+   "tier": "start",
+   "text": "Ali has n stickers. Mei has 5 more than Ali. Wei has 3 times as many as Ali.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "When n = 8, Mei has {b} and Wei has {b}.",
+     "answer": {
+      "value": [
+       "13",
+       "24"
+      ],
+      "text": "13, 24"
+     }
+    },
+    {
+     "label": "b",
+     "text": "When n = 8, all 3 together have {b} stickers.",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    },
+    {
+     "label": "c",
+     "text": "All 3 together have {b} × n + {b} stickers.",
+     "answer": {
+      "value": [
+       "5",
+       "5"
+      ],
+      "text": "5, 5"
+     }
+    }
+   ],
+   "explanation": "Mei has n + 5 and Wei has 3 × n. When n = 8: Mei has 13, Wei has 24, and all 3 together have 8 + 13 + 24 = 45. In general n + (n + 5) + 3n = 5n + 5."
+  },
+  {
+   "id": "L6U04-S09",
+   "tier": "start",
+   "text": "A phone plan costs 12 dollars a month, plus 3 dollars for each extra GB. n is the number of extra GB.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "5 extra GB cost {b} dollars.",
+     "answer": {
+      "value": [
+       "27"
+      ],
+      "text": "27"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The cost is {b} × n + {b} dollars.",
+     "answer": {
+      "value": [
+       "3",
+       "12"
+      ],
+      "text": "3, 12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "With 60 dollars you can buy {b} extra GB.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "explanation": "Cost = 3 × n + 12. 5 extra GB cost 3 × 5 + 12 = 27 dollars. For 60 dollars: 3n + 12 = 60, so 3n = 48 and n = 16."
+  },
+  {
+   "id": "L6U04-S10",
+   "tier": "start",
+   "text": "Think of a number. Add 4. Multiply by 3. Take away 9. Divide by 3. Take away the number you first thought of.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Start with 7. You get {b}.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Start with 12. You get {b}.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Start with n. The steps give n + 4, 3n + 12, 3n + 3, n + 1, then {b}.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "explanation": "Start with 7: 11, 33, 24, 8, then 8 − 7 = 1. Start with 12: 16, 48, 39, 13, then 13 − 12 = 1. With n the steps give n + 4, 3n + 12, 3n + 3, n + 1, and n + 1 − n = 1. The answer is always 1."
+  },
+  {
+   "id": "L6U04-S11",
+   "tier": "start",
+   "text": "Predict what the sprite says.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "You type 6. It says {b}.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "You type 15. It says {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Two different numbers make it say 8. They are {b} and {b}.",
+     "answer": {
+      "value": [
+       "4",
+       "18"
+      ],
+      "text": "4 and 18"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "look",
+      "ask (IN?) and wait"
+     ],
+     [
+      "ctl",
+      "if <(answer) {gt} (10)> then",
+      [
+       [
+        "look",
+        "say (answer − 10)"
+       ]
+      ],
+      [
+       [
+        "look",
+        "say (answer × 2)"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "6 is not more than 10, so it says 6 × 2 = 12. 15 is more than 10, so it says 15 − 10 = 5. For 8: the first branch gives answer − 10 = 8 when answer = 18, and the second gives answer × 2 = 8 when answer = 4. Two numbers work.",
+   "figside": true
+  },
+  {
+   "id": "L6U04-T01",
+   "tier": "think",
+   "text": "Machine X does × 2, then + 3. Its OUT goes straight into Machine Y, which does × 3, then − 4.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "IN 5 gives OUT {b}.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    },
+    {
+     "label": "b",
+     "text": "OUT 77 comes from IN {b}.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Joined, the rule is OUT = {b} × n + {b}.",
+     "answer": {
+      "value": [
+       "6",
+       "5"
+      ],
+      "text": "6, 5"
+     }
+    }
+   ],
+   "hint": "For OUT 77, undo Y first, then undo X.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "IN 5: X gives 13, Y gives 39 − 4 = 35. For OUT 77, undo Y: 77 + 4 = 81, 81 ÷ 3 = 27. Undo X: 27 − 3 = 24, 24 ÷ 2 = 12. The joined rule is 3(2n + 3) − 4 = 6n + 5. Check: 6 × 5 + 5 = 35 and 6 × 12 + 5 = 77.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-T02",
+   "tier": "think",
+   "text": "Ali is n years old. His brother is 4 years older. Their mother is 3 times as old as Ali. Together the 3 of them are 64 years old.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Together: {b} × n + {b} = 64",
+     "answer": {
+      "value": [
+       "5",
+       "4"
+      ],
+      "text": "5, 4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali is {b} years old.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Their mother is {b} years old.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_model",
+    "rows": [
+     {
+      "label": "Ali",
+      "segs": [
+       {
+        "w": 18,
+        "t": "n"
+       }
+      ]
+     },
+     {
+      "label": "Brother",
+      "segs": [
+       {
+        "w": 18,
+        "t": "n"
+       },
+       {
+        "w": 10,
+        "t": "4",
+        "dash": true
+       }
+      ]
+     },
+     {
+      "label": "Mother",
+      "segs": [
+       {
+        "w": 18,
+        "t": "n"
+       },
+       {
+        "w": 18,
+        "t": "n"
+       },
+       {
+        "w": 18,
+        "t": "n"
+       }
+      ]
+     }
+    ],
+    "brace": {
+     "t": "64 in all"
+    }
+   },
+   "hint": "Add up the n boxes first. Then add the extra 4.",
+   "explanation": "Ali n, brother n + 4, mother 3n. Together: n + (n + 4) + 3n = 5n + 4 = 64. So 5n = 60 and n = 12. Ali is 12, his brother is 16 and their mother is 36. Check: 12 + 16 + 36 = 64.",
+   "figside": true
+  },
+  {
+   "id": "L6U04-T03",
+   "tier": "think",
+   "text": "A machine does × a number, then + or − a number. IN 3 gives OUT 13. IN 8 gives OUT 38.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "When IN goes up by 5, OUT goes up by {b}.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule is OUT = {b} × n − {b}.",
+     "answer": {
+      "value": [
+       "5",
+       "2"
+      ],
+      "text": "5, 2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "OUT 98 comes from IN {b}.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    }
+   ],
+   "hint": "How much does OUT go up for each 1 that IN goes up?",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "IN goes up 5 (3 to 8) and OUT goes up 25 (13 to 38), so the × part is 25 ÷ 5 = 5. 5 × 3 = 15, but OUT is 13, so take away 2: OUT = 5n − 2. For OUT 98: 5n = 100 and n = 20.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U04-G01",
+   "tier": "go",
+   "text": "Beyond Level 6: n on both sides.\nMachine A does × 4, then + 1. Machine B does × 2, then + 13. Is there an IN that gives the same OUT on both?",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "IN 2: A gives {b} and B gives {b}.",
+     "answer": {
+      "value": [
+       "9",
+       "17"
+      ],
+      "text": "9, 17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The OUT numbers are the same when IN is {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "That OUT is {b}.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    }
+   ],
+   "hint": "Make a table of IN, A and B. Look at how the gap changes.",
+   "space": {
+    "table": {
+     "cols": [
+      "IN",
+      "A",
+      "B"
+     ],
+     "rows": 5
+    }
+   },
+   "explanation": "IN 2: A gives 9 and B gives 17, so B is ahead by 8. A gains 2 on B for every 1 that IN goes up (4 − 2 = 2). B's lead of 8 is gone after 4 more steps, at IN 6. Both give 25: 4 × 6 + 1 = 25 and 2 × 6 + 13 = 25. As an equation, 4n + 1 = 2n + 13 gives 2n = 12."
+  },
+  {
+   "id": "L6U04-G02",
+   "tier": "go",
+   "text": "Call the smallest number n.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "4 whole numbers in a row add up to 130. The smallest is {b}.",
+     "answer": {
+      "value": [
+       "31"
+      ],
+      "text": "31"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 odd numbers in a row add up to 125. The smallest is {b}.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Can 4 whole numbers in a row add up to 100?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "hint": "Write each number with n. Add them up.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "(a) n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 130, so 4n = 124 and n = 31 (31, 32, 33, 34). (b) Odd numbers go up by 2: n + (n + 2) + (n + 4) + (n + 6) + (n + 8) = 5n + 20 = 125, so n = 21. (c) 4n + 6 = 100 gives 4n = 94 and n = 23.5, which is not a whole number: No."
+  },
+  {
+   "id": "L6U04-G03",
+   "tier": "go",
+   "text": "A search program tries n = 0, 1, 2, ... It stops when 7n − 3 is greater than 120.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It says {b}.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "When it stops, 7n − 3 is {b}.",
+     "answer": {
+      "value": [
+       "123"
+      ],
+      "text": "123"
+     }
+    },
+    {
+     "label": "c",
+     "text": "If 120 changes to 123, it says {b}.",
+     "answer": {
+      "value": [
+       "19"
+      ],
+      "text": "19"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set n to (0)"
+     ],
+     [
+      "ctl",
+      "repeat until <(n × 7 − 3) {gt} (120)>",
+      [
+       [
+        "var",
+        "change n by (1)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (n)"
+     ]
+    ]
+   },
+   "hint": "Is 7n − 3 greater than 120? Careful with equal.",
+   "explanation": "7n − 3 > 120 needs 7n > 123, so n > 17.57: n = 18 gives 123. It says 18, and OUT is 123. If 120 changes to 123, then 123 is not greater than 123, so it keeps going to n = 19.",
+   "figside": true
+  },
+  {
+   "id": "L6U04-C01",
+   "tier": "quiz",
+   "text": "IN 1, 2, 3, 4 give OUT 6, 11, 16, 21. The rule is OUT = {b} × n + {b}.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "5",
+     "1"
+    ],
+    "text": "5, 1"
+   },
+   "explanation": "OUT goes up 5 for each 1 of IN, so × 5. 5 × 1 = 5, and OUT is 6, so add 1: OUT = 5n + 1."
+  },
+  {
+   "id": "L6U04-C02",
+   "tier": "quiz",
+   "text": "A machine does × 6, then − 7. OUT is 41. IN = {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Undo − 7: 41 + 7 = 48. Undo × 6: 48 ÷ 6 = 8. Check: 8 × 6 − 7 = 41."
+  },
+  {
+   "id": "L6U04-C03",
+   "tier": "quiz",
+   "text": "4n + 9 = 57.  n = {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "12"
+    ],
+    "text": "12"
+   },
+   "explanation": "57 − 9 = 48. 48 ÷ 4 = 12. Check: 4 × 12 + 9 = 57."
+  },
+  {
+   "id": "L6U04-C04",
+   "tier": "quiz",
+   "text": "Ali has n sweets. Mei has 4 more. Together they have 30. n = {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13"
+   },
+   "explanation": "n + (n + 4) = 2n + 4 = 30. So 2n = 26 and n = 13. Check: 13 + 17 = 30."
+  }
+ ]
+}

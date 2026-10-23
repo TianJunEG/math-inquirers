@@ -200,7 +200,8 @@ def table(spec, w=None):
     x0, y0 = 6, 6
     for j, c in enumerate(cols):
         P.append(f'<rect x="{x0 + xs[j]}" y="{y0}" width="{xs[j + 1] - xs[j]}" height="{hh}" fill="{SOFT}" stroke="{NAVY}" stroke-width="3"/>')
-        P.append(T(x0 + (xs[j] + xs[j + 1]) / 2, y0 + hh / 2 + fs * 0.35, c, fs, weight=800))
+        if c:
+            P.append(T(x0 + (xs[j] + xs[j + 1]) / 2, y0 + hh / 2 + fs * 0.35, c, fs, weight=800))
     for i, r in enumerate(rows):
         y = y0 + hh + i * rh
         for j, v in enumerate(r):

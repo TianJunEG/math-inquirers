@@ -5,18 +5,37 @@ import random, itertools, re, html as _html
 from .common import *
 
 # --------------------------------------------------------------------------- code words
-# child-friendly words with distinct letters and exactly ONE arrangement that is a word (tested against the 129 000-word list)
-SAFE5 = "black brick bunch chalk child climb cloth clown crown drink flute fruit glory house juice lunch month mouth piano plant quilt ranch scarf shark snack stamp thumb truck tulip uncle watch world young light".split()
-SAFE6 = "bucket budget cymbal garlic hunter jacket jumper locket market pencil pigeon piglet pocket rocket salmon shovel spring studio sundae tongue tumble turtle family jungle pastry safety".split()
-SAFE4 = "band cake camp card comb desk dish drum duck fish flag fork frog gold jump milk mint pink pond sock swim wave wind wing worm".split()
+# child-friendly words with distinct letters, exactly ONE arrangement that is a word, and no single letter of the word put in another slot
+# making another word (tested against the 129 000-word list). The word of page `no` is the (no mod pool size)-th of its length.
+SAFE5 = "audio blank blimp blown blunt bound chimp climb cloth clown count cramp crazy crumb curve decoy depth doubt drank drift drown dwarf enjoy fable fault flank flask flora flown fluid force forum frank fruit gleam glory graph gravy grind growl grunt guild hound humid image ivory jumpy juice juicy knife logic maize mixed moved noisy omega opera piano picky pivot plank pound print prize quick round scowl shaft shove skimp sling smack snuck spicy squid stamp swamp swift swung thief think thumb trunk tulip uncle valet video vital voice wafer waltz width woman works wound woven yield young".split()
+SAFE6 = "answer backup bounce bright buckle budgie campus canopy clouds cousin crafty creamy donkey dainty family figure flight fridge frozen fruity guitar hungry length magnet mighty monkey number peanut police safety sailor shadow shrimp sponge square string strong studio subway sunday teacup tongue turkey walnut walrus wizard wombat bandit behind botany bowman cherub cobalt cougar curfew devour fabric fathom".split()
+_SAFE = {}
+
+def inner_ok(w):
+    """no letter of the word, written in another slot, makes another word"""
+    w = w.lower()
+    for i in range(len(w)):
+        for c in set(w):
+            if c != w[i] and (w[:i] + c + w[i + 1:]) in BIG: return False
+    return True
 
 def word_ok(w):
-    return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON
+    return len(set(w)) == len(w) and anagrams(w) == [w.lower()] and w.lower() in COMMON and inner_ok(w)
 
-def pick_word(rng, n, avoid=()):
-    pool = {4: SAFE4, 5: SAFE5, 6: SAFE6}[n]
-    c = [w for w in pool if w not in avoid and word_ok(w)]
-    return rng.choice(c).upper()
+def safe_pool(n):
+    if n not in _SAFE: _SAFE[n] = [w for w in {5: SAFE5, 6: SAFE6}[n] if word_ok(w)]
+    return _SAFE[n]
+
+def word_candidates(no, n, avoid=()):
+    pool = safe_pool(n); k = no % len(pool)
+    return [pool[(k + o) % len(pool)].upper() for o in range(len(pool)) if pool[(k + o) % len(pool)].upper() not in avoid]
+
+def code_table_any(no, n, answers, rng, lo, hi, avoid=(), max_words=6, **kw):
+    """(word, table): the first word of this page's sequence for which a code table with no undetected slip exists"""
+    for w in word_candidates(no, n, avoid)[:max_words]:
+        t = make_code_table(answers, w, rng, lo, hi, **kw)
+        if t: return w, t
+    return None
 
 def finish_code(P, answers, table, word, lo, hi, domain=None, plain=None):
     """the standard record every code-word page keeps: V2/V3/V3c/V3d/V4 and the model for validate.py's enumeration"""
@@ -53,9 +72,11 @@ def qcard(no, content, ans="", cls=""):
 def qgrid(cards, cols=2, cls=""):
     return f'<div class="qg c{cols} {cls}">' + "".join(cards) + '</div>'
 
-def table_block(table, fmt=str):
+def table_block(table, fmt=str, cols=None):
+    """the code table: one row of up to 6 boxes, two rows when there are more (three-digit numbers need room)"""
+    n = len(table); cols = cols or (n if n <= 6 else (n + 1) // 2)
     items = "".join(f'<div class="ct"><span class="n">{fmt(k)}</span><span class="eq">=</span><b>{v}</b></div>' for k, v in table.items())
-    return f'<div class="blk ctc"><p class="lead">Code table</p><div class="codetable">{items}</div></div>'
+    return f'<div class="blk ctc"><p class="lead">Code table</p><div class="codetable" style="grid-template-columns:repeat({cols},1fr)">{items}</div></div>'
 
 # vertical sums (algorithm layout): numbers right-aligned over a rule, answer box below
 def vsum_html(top, bot, op, miss=None, ans_box=True):

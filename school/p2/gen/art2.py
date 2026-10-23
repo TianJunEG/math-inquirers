@@ -34,8 +34,8 @@ def read_pv_chart(s):
 
 # ---------------------------------------------------------------- coins and notes (original line art, inspired by Singapore money; much larger than real)
 COIN_REAL = {5: 16.2, 10: 18.5, 20: 21.4, 50: 24.7, 100: 24.65}          # real diameters (mm): only the RATIOS are used (a fact, not a design)
-COIN_D = {v: d * 0.84 for v, d in COIN_REAL.items()}
-NOTE_W, NOTE_H = 36.0, 18.0
+COIN_D = {v: d * 0.70 for v, d in COIN_REAL.items()}
+NOTE_W, NOTE_H = 27.0, 13.5
 
 def _motif(v, cx, cy, u):
     k = u * 0.15; st = 'fill="none" stroke="#000" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"'
@@ -58,8 +58,8 @@ def coin_g(v, x, cy):
     return (f'<g class="coin" data-v="{v}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="#fff" stroke="#000" stroke-width="0.6"/>'
             f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r-1.0:.1f}" fill="none" stroke="#000" stroke-width="0.3" stroke-dasharray="0.9 0.6"/>'
             + _motif(v, cx, cy - r * 0.62, r) +
-            f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.16:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.66:.1f}" fill="#000">{lab}</text>'
-            f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.66:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.40:.1f}" fill="#000">{unit}</text></g>')
+            f'<text class="coinval" x="{cx:.1f}" y="{cy+r*0.16:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.62:.1f}" fill="#000">{lab}</text>'
+            f'<text class="coinunit" x="{cx:.1f}" y="{cy+r*0.66:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Nunito Sans" font-weight="800" font-size="{r*0.46:.1f}" fill="#000">{unit}</text></g>')
 
 def note_g(v, x, y):
     """an original note design: a frame, the value large in two corners, a simple bird in the middle; not a copy of any real note"""
@@ -67,14 +67,17 @@ def note_g(v, x, y):
     bird = ('<path d="M-4.5,1.2 C-2.5,-3.5 2.5,-3.5 4.5,-0.5 L7,-1.5 L5.8,1.2 C3,3.8 -2,3.8 -4.5,1.2 Z M-4.5,1.2 L-7.5,3.2 L-4,3" fill="none" stroke="#000" stroke-width="0.45" stroke-linejoin="round"/>')
     return (f'<g class="note" data-v="{v}"><rect x="{x:.1f}" y="{y:.1f}" width="{W}" height="{H}" rx="1.2" fill="#fff" stroke="#000" stroke-width="0.7"/>'
             f'<rect x="{x+1.6:.1f}" y="{y+1.6:.1f}" width="{W-3.2}" height="{H-3.2}" rx="0.8" fill="none" stroke="#000" stroke-width="0.3"/>'
-            f'<g transform="translate({x+W/2:.1f},{y+H/2-1.2:.1f})">{bird}</g>'
-            f'<text class="noteval" x="{x+4:.1f}" y="{y+6.6:.1f}" font-family="Nunito Sans" font-weight="800" font-size="5.6" fill="#000">${v}</text>'
-            f'<text class="noteval2" x="{x+W-4:.1f}" y="{y+H-4.2:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="5.6" fill="#000">${v}</text>'
-            f'<text x="{x+W/2:.1f}" y="{y+H-3.4:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="2.7" fill="#000">dollars</text></g>')
+            f'<g transform="translate({x+W/2:.1f},{y+H/2-1.0:.1f}) scale(0.9)">{bird}</g>'
+            f'<text class="noteval" x="{x+3.4:.1f}" y="{y+6.0:.1f}" font-family="Nunito Sans" font-weight="800" font-size="5.0" fill="#000">${v}</text>'
+            f'<text class="noteval2" x="{x+W-4:.1f}" y="{y+H-3.6:.1f}" text-anchor="end" font-family="Nunito Sans" font-weight="800" font-size="5.0" fill="#000">${v}</text>'
+            f'<text x="{x+W/2:.1f}" y="{y+H-3.0:.1f}" text-anchor="middle" font-family="Nunito Sans" font-weight="800" font-size="2.6" fill="#000">dollars</text></g>')
+
+def money_width(items, gap=2.0):
+    return sum((COIN_D[i[1]] if i[0] == "c" else NOTE_W) + gap for i in items)
 
 def money_svg(items, per_row=None, gap=2.0):
     """items: list of ('c', cents) coins and ('n', dollars) notes, drawn in reading order; wraps into rows of width <= 78 mm unless per_row"""
-    maxw = 80.0
+    maxw = 118.0
     rows = [[]]; w = 0
     for it in items:
         iw = (COIN_D[it[1]] if it[0] == "c" else NOTE_W) + gap
@@ -102,7 +105,7 @@ def dollars(c):
     return f"${c // 100}.{c % 100:02d}"
 
 # ---------------------------------------------------------------- clock to the minute (numerals outside the ring so hands never cross them)
-CK = 27.0     # centre of a 54 x 54 drawing
+CK = 27
 
 def clock_svg(h, m, size=54):
     cx = cy = CK; R = 19.0

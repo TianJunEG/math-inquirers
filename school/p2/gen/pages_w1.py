@@ -29,7 +29,6 @@ def distinct(xs): return len(set(xs)) == len(xs)
 # =============================================================================== P2-01 Hundreds, Tens, Ones
 def page01():
     rng = random.Random(5101)
-    word = pick_word(rng, 6)
     for _ in range(3000):
         items = []
         for _k in range(3):
@@ -53,12 +52,12 @@ def page01():
             if it["k"] == "zero": pool |= {it["h"] * 10 + it["o"], int(f"{it['h']}{it['o']}0")}
             if it["k"] == "regroup": pool |= {it["h"] * 100 + it["t"] + it["o"], int(f"{it['h']}{it['t']}{it['o']}") % 1000}
         pool = sorted(p for p in pool if p not in ans and 0 <= p <= 999)
-        table = make_code_table(ans, word, rng, 0, 999, n_decoy=3, tries=60, pool=pool)
-        if table: break
+        res = code_table_any(1, 6, ans, rng, 0, 999, n_decoy=3, tries=60, pool=pool)
+        if res: word, table = res; break
     cards = []; texts = []
     for i, it in enumerate(items):
         if it["k"] == "chart":
-            cards.append(qcard(i + 1, A.pv_chart(it["h"], it["t"], it["o"], per_row=4), '<span class="ab w3"></span>', cls="chartcard"))
+            cards.append(qcard(i + 1, A.pv_chart(it["h"], it["t"], it["o"], per_row=4), '<span class="ab w3"></span>', cls="inl"))
         else:
             if it["k"] == "digit": t = f"In {it['n']}, what is the value of the digit {it['d']}?"
             elif it["k"] == "regroup": t = f"{it['h']} hundreds, {it['t']} tens and {it['o']} ones make which number?"
@@ -86,7 +85,7 @@ def page01():
             a_, b_, c_ = map(int, re.findall(r"\d+", tx)); solved.append(100 * a_ + 10 * b_ + c_)
         ci += 1
     P.v("V1 independent solver (discs counted in the drawing, words read back) equals the key", solved == ans, solved)
-    P.v("V7 every number is 3-digit and below 1000", all(100 <= a <= 999 for a in ans))
+    P.v("V7 every chart, regrouped and zero-place answer is 3-digit and below 1000", all(100 <= a <= 999 for a, it in zip(ans, items) if it["k"] != "digit") and all(a <= 999 for a in ans))
     P.v("V1b the digit asked about appears once in its number", all(str(it["n"]).count(str(it["d"])) == 1 for it in items if it["k"] == "digit"))
     P.v("V1c at most 8 discs in a chart column", all(max(it["h"], it["t"], it["o"]) <= 8 for it in items if it["k"] == "chart"))
     P["key"]["answers"] = "; ".join(
@@ -130,15 +129,14 @@ def wrong_column(op, a, b):
 
 def page02():
     rng = random.Random(5202)
-    word = pick_word(rng, 6, avoid=("pencil",))
     while True:
         sums = column_pairs(rng); rng.shuffle(sums)
         ans = [a + b if op == "+" else a - b for op, a, b in sums]
         if not distinct(ans) or max(ans) > 999: continue
         pool = sorted({wrong_column(*s) for s in sums} | {a + 10 for a in ans} | {a - 100 for a in ans if a > 100} | {a + 100 for a in ans if a < 900})
         pool = [p for p in pool if p not in ans and p > 0]
-        table = make_code_table(ans, word, rng, 0, 999, n_decoy=3, tries=60, pool=pool)
-        if table: break
+        res = code_table_any(2, 6, ans, rng, 0, 999, n_decoy=3, tries=60, pool=pool)
+        if res: word, table = res; break
     hs = [vsum_html(a, b, "+" if op == "+" else "−") for op, a, b in sums]
     cards = "".join(f'<div class="vcard"><span class="no">{i+1}</span>{h}</div>' for i, h in enumerate(hs))
     P = code_items_page(2, 5202, "Column Sums", 1, "Add and subtract in columns, 3-digit numbers", STRAND_AS,
@@ -226,7 +224,6 @@ def page03():
 # =============================================================================== P2-04 Equal Groups
 def page04():
     rng = random.Random(5404)
-    word = pick_word(rng, 6, avoid=("rocket",))
     kinds = rng.sample(COUNT_KINDS, 2)
     while True:
         items = []
@@ -248,8 +245,8 @@ def page04():
             if it["k"] == "story": pool |= {it["t"] + it["u"]}
         pool |= {a + 1 for a in ans} | {a - 1 for a in ans} | {a + 2 for a in ans}
         pool = sorted(p for p in pool if p not in ans and 1 <= p <= 50)
-        table = make_code_table(ans, word, rng, 1, 50, n_decoy=3, tries=60, pool=pool)
-        if table: break
+        res = code_table_any(4, 6, ans, rng, 1, 50, n_decoy=3, tries=60, pool=pool)
+        if res: word, table = res; break
     cards = []; texts = []; svgs = []
     for i, it in enumerate(items):
         if it["k"] == "array":
@@ -284,7 +281,6 @@ def page04():
 # =============================================================================== P2-05 Share It Out
 def page05():
     rng = random.Random(5505)
-    word = pick_word(rng, 6, avoid=("rocket", "pencil"))
     while True:
         items = []
         for _k in range(2):
@@ -302,8 +298,8 @@ def page05():
             if it["k"] == "friends": pool |= {it["n"] // it["fr"]}
         pool |= {a + 1 for a in ans} | {a - 1 for a in ans if a > 2}
         pool = sorted(p for p in pool if p not in ans and 1 <= p <= 50)
-        table = make_code_table(ans, word, rng, 1, 50, n_decoy=4, tries=60, pool=pool)
-        if table: break
+        res = code_table_any(5, 6, ans, rng, 1, 50, n_decoy=4, tries=60, pool=pool)
+        if res: word, table = res; break
     texts = []; cards = []
     for i, it in enumerate(items):
         k = it["k"]
@@ -334,31 +330,30 @@ def page05():
 # =============================================================================== P2-06 Dollars and Cents
 def page06():
     rng = random.Random(5606)
-    word = pick_word(rng, 6, avoid=("bucket", "rocket", "pencil"))
     COINS = [5, 10, 20, 50, 100]
     while True:
         purses = []
         for i in range(6):
-            n_notes = rng.choice([0, 0, 1, 1, 2]); n_coins = rng.randint(3, 6)
+            n_notes = rng.choice([0, 0, 1, 1, 2]); n_coins = rng.randint(3, 5)
             notes = [("n", rng.choice([2, 5, 10])) for _ in range(n_notes)]
             coins = [("c", rng.choice(COINS)) for _ in range(n_coins)]
             items = sorted(notes, key=lambda x: -x[1]) + sorted(coins, key=lambda x: -x[1])
             purses.append(items)
         tot = [sum(100 * v if t == "n" else v for t, v in p) for p in purses]
-        if distinct(tot) and 150 <= min(tot) and max(tot) <= 2500 and all(len({v for t, v in p if t == "c"}) >= 2 for p in purses):
+        if all(A.money_width(p) <= 104 for p in purses) and distinct(tot) and 150 <= min(tot) and max(tot) <= 2500 and all(len({v for t, v in p if t == "c"}) >= 2 for p in purses):
             pool = set()
             for p, t in zip(purses, tot):
                 pool |= {t + 5, t - 5, t + 10, t - 10, t + 50, t - 50, t + 100, t - 100}
             pool = sorted(x for x in pool if x not in tot and 5 <= x <= 2500 and x % 5 == 0)
             domain = list(range(5, 2501, 5))
-            table = make_code_table(tot, word, rng, 5, 2500, n_decoy=4, tries=80, pool=pool, domain=domain)
-            if table: break
+            res = code_table_any(6, 6, tot, rng, 5, 2500, n_decoy=4, tries=80, pool=pool, domain=domain)
+            if res: word, table = res; break
     svgs = [A.money_svg(p) for p in purses]
-    cards = [qcard(i + 1, s, '<span class="dl">$</span><span class="ab w4"></span>') for i, s in enumerate(svgs)]
+    cards = [qcard(i + 1, s, '<span class="dl">$</span><span class="ab w4"></span>', cls="inl") for i, s in enumerate(svgs)]
     P = code_items_page(6, 5606, "Dollars and Cents", 1, "Money: counting coins and notes, decimal notation", STRAND_MO,
         "1.1, 1.2 (counting money in dollars and cents; reading and writing money in decimal notation)", ["MO1.1", "MO1.2"], "Code-breaker (money)",
         ["Count the money in each purse.", "Write the total, like $3.45.", INSTR_CODE],
-        qgrid(cards, 2), tot, table, word, 5, 2500,
+        qgrid(cards, 1), tot, table, word, 5, 2500,
         "; ".join(f"{i+1}) {A.dollars(t)}" for i, t in enumerate(tot)),
         "Coins (5¢, 10¢, 20¢, 50¢, $1) and notes ($2, $5, $10) are original line drawings, inspired by Singapore money but not copies of any coin or note, drawn larger than real and in black and white. Each coin shows its value and the word cents; each note shows its value twice. Totals are written in dollars and cents ($3.45). The decoy letters stand for a coin missed or counted twice. A box left blank gives no letter and the check cannot see it.",
         domain=domain, fmt=lambda c: A.dollars(c))
@@ -371,7 +366,6 @@ def page06():
 # =============================================================================== P2-07 Time to the Minute
 def page07():
     rng = random.Random(5707)
-    word = pick_word(rng, 6, avoid=("jacket",))
     while True:
         times = []
         while len(times) < 6:
@@ -386,10 +380,10 @@ def page07():
             pool |= {(h, (m + 1) % 60), (h, (m - 1) % 60), ((h % 12) + 1, m), (((h - 2) % 12) + 1, m), (m // 5 or 12, (h % 12) * 5), (h, (m + 5) % 60), (h, (m - 5) % 60)}
         pool = sorted(x for x in pool if x not in times)
         domain = [(h, m) for h in range(1, 13) for m in range(60)]
-        table = make_code_table(times, word, rng, 0, 0, n_decoy=4, tries=80, pool=pool, domain=domain)
-        if table: break
+        res = code_table_any(7, 6, times, rng, 0, 0, n_decoy=4, tries=80, pool=pool, domain=domain)
+        if res: word, table = res; break
     svgs = [A.clock_svg(h, m) for h, m in times]
-    cards = [qcard(i + 1, '<div class="clk">' + s + '</div>', '<span class="ab w3"></span>') for i, s in enumerate(svgs)]
+    cards = [qcard(i + 1, '<div class="clk">' + s + '</div>', '<span class="ab w3"></span>', cls="pos") for i, s in enumerate(svgs)]
     P = code_items_page(7, 5707, "Time to the Minute", 1, "Time: telling time to the minute", "Measurement and Geometry - Measurement",
         "2.1 (telling time to the minute)", ["TI2.1"], "Code-breaker (clocks)",
         ["Read each clock.", "Write the time, like 3:47.", INSTR_CODE],
@@ -404,12 +398,12 @@ def page07():
     return P
 
 # =============================================================================== P2-08 Metres
-def tape_row(label, start, end, scale_max=12, w=150.0):
+def tape_row(label, start, end, scale_max=12, w=104.0):
     """one row: a word label, a bar from start to end (metres) drawn above a tape of 0..scale_max m"""
     u = w / scale_max; x0 = 3.0; H = 17.0
     p = [f'<rect class="bar" x="{x0+start*u:.2f}" y="1.2" width="{(end-start)*u:.2f}" height="4.6" fill="#fff" stroke="#000" stroke-width="0.7"/>']
     if start > 0:
-        p.append(f'<polygon class="st" points="{x0+start*u-1.6:.2f},0.2 {x0+start*u+1.6:.2f},0.2 {x0+start*u:.2f},2.0" fill="#000"/>')
+        p.append(f'<polygon class="st" points="{x0+start*u-2.2:.2f},0.2 {x0+start*u+2.2:.2f},0.2 {x0+start*u:.2f},2.6" fill="#000"/>')
     p.append(f'<rect x="{x0:.2f}" y="7.2" width="{scale_max*u:.2f}" height="7.2" fill="#fff" stroke="#000" stroke-width="0.5"/>')
     for k in range(scale_max + 1):
         p.append(f'<line class="tk" x1="{x0+k*u:.2f}" y1="7.2" x2="{x0+k*u:.2f}" y2="{10.4:.2f}" stroke="#000" stroke-width="0.5"/>'
@@ -425,7 +419,6 @@ def read_tape(s):
 
 def page08():
     rng = random.Random(5808)
-    word = pick_word(rng, 5, avoid=("cloth", "stamp", "mouth"))
     things = ["rope", "ribbon", "path", "fence", "hedge", "slide", "ladder", "bench", "snake", "bridge", "net", "wall"]
     while True:
         rows = []; used = []
@@ -439,8 +432,8 @@ def page08():
         pool = set()
         for s, l in rows: pool |= {l + 1, l - 1, s + l, l + s + 1}
         pool = sorted(x for x in pool if x not in lens and 1 <= x <= 12)
-        table = make_code_table(lens, word, rng, 0, 20, n_decoy=4, tries=80, pool=pool)
-        if table: break
+        res = code_table_any(8, 5, lens, rng, 0, 20, n_decoy=4, tries=80, pool=pool)
+        if res: word, table = res; break
     labels = rng.sample(things, 5)
     svgs = [tape_row(labels[i], s, s + l) for i, (s, l) in enumerate(rows)]
     cards = [f'<div class="trow"><span class="no">{i+1}</span><div class="tl">{labels[i]}</div><div class="ts">{s}</div><div class="ta"><span class="ab w3"></span> m</div></div>' for i, s in enumerate(svgs)]

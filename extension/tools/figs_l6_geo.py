@@ -80,3 +80,39 @@ def sticks(spec, w=None):
 
 
 FIGS['l6_sticks'] = sticks
+
+
+# ================================================================================================ bar model
+def model(spec, w=None):
+    """Bar model.  spec: rows [{label, segs:[{w (mm), t (text), dash (bool)}]}], brace {t} draws a bracket at the right of all rows with a text,
+    unit_h (mm, row height), lab (mm, label column width)."""
+    rows = spec['rows']
+    rh = spec.get('unit_h', 9) * U
+    gap = 3 * U
+    lab = spec.get('lab', 26) * U
+    P = []
+    maxw = 0
+    for i, r in enumerate(rows):
+        y = 6 + i * (rh + gap)
+        P.append(T(lab - 10, y + rh / 2 + 6, r['label'], 17, 'end', 800))
+        x = lab
+        for sg in r['segs']:
+            ww = sg['w'] * U
+            P.append(R(x, y, ww, rh, SKY if not sg.get('dash') else '#fff', 2.8, 3, dash='7 5' if sg.get('dash') else None))
+            if sg.get('t'):
+                P.append(T(x + ww / 2, y + rh / 2 + 6.5, sg['t'], 19, weight=800))
+            x += ww
+        maxw = max(maxw, x - lab)
+    H = 6 + len(rows) * (rh + gap) - gap + 6
+    W = lab + maxw + 8
+    if spec.get('brace'):
+        bx = lab + maxw + 12
+        y0, y1 = 6, H - 6
+        P.append(f'<path d="M{bx} {y0} q14 0 14 14 v{(y1 - y0) / 2 - 28:.1f} q0 14 14 14 q-14 0 -14 14 v{(y1 - y0) / 2 - 28:.1f} q0 14 -14 14" fill="none" stroke="{NAVY}" stroke-width="3"/>')
+        tx = bx + 40
+        P.append(T(tx, (y0 + y1) / 2 + 6, spec['brace']['t'], 18, 'start', 800))
+        W = tx + len(spec['brace']['t']) * 11 + 10
+    return wrap(''.join(P), W, H, 'bar model', w)
+
+
+FIGS['l6_model'] = model

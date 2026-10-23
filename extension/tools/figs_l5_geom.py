@@ -12,6 +12,8 @@ spec = {
   rights:[{at, a, b}]                              right-angle square mark
   ticks: [[A, B, n]]                               n small equal-length marks on side AB
   par:   [[A, B, n]]                               n arrowheads on side AB (parallel lines)
+  mm: 3.5                                          scale: mm on paper per coordinate unit (the width is then set by the figure)
+  max_h_mm: 45                                     (alternative) shrink width_mm until at most this tall; labels do not shrink
   grid:  {x0, y0, x1, y1, step: 1}                 light square grid behind the figure (1 unit = one square)
   dots:  [{at: 'A' or [x, y], r: 6, fill: 'shade'}]
 }
@@ -25,12 +27,22 @@ U = 4.0
 FILL = {'shade': YEL, 'light': SOFT, 'sky': SKY, None: 'none'}
 
 
-def _t(x, y, txt, size=22, fill=NAVY, anchor='middle', weight=800):
+def _t(x, y, txt, size=20, fill=NAVY, anchor='middle', weight=800):
     return F._t(round(x, 1), round(y, 1), txt, size, fill, anchor, weight)
 
 
 def poly(spec, w=None):
+    """Draw at width_mm, or at the greatest width not above it for which the figure is at most spec['max_h_mm'] tall."""
     wmm = w or spec.get('width_mm') or 120
+    mh = spec.get('max_h_mm')
+    while True:
+        svg, H = _poly(spec, wmm)
+        if not mh or H / U <= mh or wmm <= 34:
+            return svg
+        wmm -= 2
+
+
+def _poly(spec, wmm):
     pts = {k: tuple(map(float, v)) for k, v in spec['pts'].items()}
     allp = list(pts.values())
     g = spec.get('grid')
@@ -40,13 +52,18 @@ def poly(spec, w=None):
         allp.append(tuple(t['at']))
     xs, ys = [p[0] for p in allp], [p[1] for p in allp]
     xmin, xmax, ymin, ymax = min(xs), max(xs), min(ys), max(ys)
-    padx = spec.get('padx', 56)
-    pady = spec.get('pady', 46)
-    padb = spec.get('padb', 66)
+    padx = spec.get('padx', 44)
+    pady = spec.get('pady', 30)
+    padb = spec.get('padb', 44)
     Wd = wmm * U
-    s = spec.get('scale') or (Wd - 2 * padx) / max(xmax - xmin, 1e-9)
-    if spec.get('scale'):
+    if spec.get('mm'):                       # fixed scale: mm on paper per coordinate unit
+        s = spec['mm'] * U
         Wd = (xmax - xmin) * s + 2 * padx
+        wmm = Wd / U
+    else:
+        s = spec.get('scale') or (Wd - 2 * padx) / max(xmax - xmin, 1e-9)
+        if spec.get('scale'):
+            Wd = (xmax - xmin) * s + 2 * padx
     H = (ymax - ymin) * s + pady + padb
     X = lambda x: padx + (x - xmin) * s
     Y = lambda y: pady + (ymax - y) * s
@@ -118,16 +135,17 @@ def poly(spec, w=None):
         if a.get('text') is not None:
             mid = s0 + d / 2
             rr = a.get('tr', r + 24)
-            out.append(_t(ax + rr * math.cos(mid), ay - rr * math.sin(mid) + 8, a['text'], a.get('size', 22)))
+            out.append(_t(ax + rr * math.cos(mid), ay - rr * math.sin(mid) + 8, a['text'], a.get('size', 20)))
     for dm in spec.get('dims', []):
         (x1, y1), (x2, y2) = P(dm['a']), P(dm['b'])
         mx, my = (x1 + x2) / 2, (y1 + y2) / 2
         d = _unit(x2 - x1, y2 - y1)
         nrm = (-d[1], d[0])
-        if (mx - cx) * nrm[0] + (my - cy) * nrm[1] < 0:
+        rx, ry = P(dm['ref']) if dm.get('ref') else (cx, cy)
+        if (mx - rx) * nrm[0] + (my - ry) * nrm[1] < 0:
             nrm = (-nrm[0], -nrm[1])
         nrm = (nrm[0] * dm.get('off', 1), nrm[1] * dm.get('off', 1))
-        off = dm.get('dist', 26 if not dm.get('line') else 22)
+        off = dm.get('dist', 22 if not dm.get('line') else 22)
         if dm.get('line'):
             ox, oy = nrm[0] * 16, nrm[1] * 16
             out.append(f'<line x1="{x1 + ox:.1f}" y1="{y1 + oy:.1f}" x2="{x2 + ox:.1f}" y2="{y2 + oy:.1f}" stroke="{NAVY}" stroke-width="2"/>')
@@ -135,9 +153,9 @@ def poly(spec, w=None):
                 out.append(f'<line x1="{px + ox - nrm[0] * 7:.1f}" y1="{py + oy - nrm[1] * 7:.1f}" x2="{px + ox + nrm[0] * 7:.1f}" y2="{py + oy + nrm[1] * 7:.1f}" stroke="{NAVY}" stroke-width="2"/>')
             off = 38
         tx, ty = mx + nrm[0] * off, my + nrm[1] * off
-        out.append(_t(tx, ty + 8, dm['text'], dm.get('size', 22)))
+        out.append(_t(tx, ty + 8, dm['text'], dm.get('size', 20)))
     for t in spec.get('texts', []):
-        out.append(_t(X(t['at'][0]), Y(t['at'][1]) + 8, t['t'], t.get('size', 22), weight=800))
+        out.append(_t(X(t['at'][0]), Y(t['at'][1]) + 8, t['t'], t.get('size', 20), weight=800))
     vl = spec.get('vlab', True)
     if vl:
         place = vl if isinstance(vl, dict) else {}
@@ -148,18 +166,18 @@ def poly(spec, w=None):
             pos = place.get(name)
             if pos is None:
                 d = _unit(x - cx, y - cy)
-                dx, dy = d[0] * 26, d[1] * 26 + 8
+                dx, dy = d[0] * 22, d[1] * 22 + 7
                 anchor = 'middle'
             else:
-                dxm = {'l': -26, 'r': 26, 't': 0, 'b': 0, 'tl': -22, 'tr': 22, 'bl': -22, 'br': 22}
-                dym = {'l': 8, 'r': 8, 't': -22, 'b': 34, 'tl': -18, 'tr': -18, 'bl': 30, 'br': 30}
+                dxm = {'l': -22, 'r': 22, 't': 0, 'b': 0, 'tl': -18, 'tr': 18, 'bl': -18, 'br': 18}
+                dym = {'l': 7, 'r': 7, 't': -16, 'b': 28, 'tl': -14, 'tr': -14, 'bl': 26, 'br': 26}
                 dx, dy = dxm[pos], dym[pos]
                 anchor = 'middle'
-            out.append(_t(x + dx, y + dy, name, 24, TEAL if spec.get('tealv') else NAVY))
+            out.append(_t(x + dx, y + dy, name, 22, TEAL if spec.get('tealv') else NAVY))
     for d in spec.get('dots', []):
         x, y = (P(d['at']) if isinstance(d['at'], str) else (X(d['at'][0]), Y(d['at'][1])))
         out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{d.get("r", 6)}" fill="{FILL[d.get("fill", "shade")]}" stroke="{NAVY}" stroke-width="2"/>')
-    return F._wrap(''.join(out), round(Wd, 1), round(H, 1), spec.get('alt', 'geometry figure'), wmm)
+    return F._wrap(''.join(out), round(Wd, 1), round(H, 1), spec.get('alt', 'geometry figure'), wmm), H
 
 
 def _unit(dx, dy):
