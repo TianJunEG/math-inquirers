@@ -110,18 +110,18 @@ Practical notes for these levels: the key display for fractions, ratios and perc
 
 | id | picture | topic | stars | key (answers, in colour order yellow, red, blue, green, orange) | regions | checks printed on the page | single-slip detection | double-slip / swap detection | min text | verification |
 |---|---|---|---|---|---|---|---|---|---|---|
-| CBC-P2-01 | Rocket | Numbers to 1000: place value, order | 1 | 120, 250, 340, 470, 560 | 15 | tally, mirror pairs | 15000/15000 = 100.0% | 99.9% / 97.7% | 4.4 mm | PASS |
+| CBC-P2-01 | Rocket | Numbers to 1000: place value, order | 1 | 120, 250, 340, 470, 560 | 15 | tally, mirror pairs | 15000/15000 = 100.0% | 99.9% / 97.7% | 4.3 mm | PASS |
 | CBC-P2-02 | Car | Addition within 1000, with renaming | 2 | 412, 536, 653, 724, 841 | 13 | tally, small marks (parts with the same mark share a colour) | 13000/13000 = 100.0% | 99.9% / 98.5% | 4.9 mm | PASS |
 | CBC-P2-03 | Owl | Subtraction within 1000, with renaming | 2 | 158, 247, 364, 475, 586 | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 14000/14000 = 100.0% | 99.9% / 98.7% | 4.9 mm | PASS |
-| CBC-P2-04 | House | Multiplication: tables of 2, 3, 4, 5 and 10 | 1 | 6, 12, 15, 20, 30 | 17 | tally, small marks (parts with the same mark share a colour) | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.8 mm | PASS |
+| CBC-P2-04 | House | Multiplication: tables of 2, 3, 4, 5 and 10 | 1 | 12, 15, 18, 20, 30 | 17 | tally, small marks (parts with the same mark share a colour) | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.9 mm | PASS |
 | CBC-P2-05 | Castle | Division: sharing and grouping | 1 | 2, 3, 4, 5, 6 | 17 | tally, mirror pairs | 1700/1700 = 100.0% | 99.9% / 97.4% | 4.8 mm | PASS |
 | CBC-P2-06 | Owl | Fractions: parts, compare, add and subtract like fractions | 1 | ⟨1|2⟩, ⟨1|3⟩, ⟨1|4⟩, ⟨2|3⟩, ⟨3|4⟩ | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 910/910 = 100.0% | 99.9% / 98.7% | 4.6 mm | PASS |
-| CBC-P2-07 | Dinosaur | Money: cents, dollars and change | 2 | 35¢, 65¢, 135¢, 185¢, 250¢ | 15 | tally, small marks (parts with the same mark share a colour) | 30000/30000 = 100.0% | 99.9% / 98.9% | 4.3 mm | PASS |
-| CBC-P2-08 | Butterfly | Time: hours and minutes | 1 | 2:10, 4:25, 6:45, 8:35, 10:50 | 14 | tally, mirror pairs | 10066/10066 = 100.0% | 100.0% / 100.0% | 4.5 mm | PASS |
-| CBC-P2-09 | Sailboat | Length, mass and volume | 2 | 35 cm, 60 cm, 250 g, 450 g, 12 l | 13 | tally, small marks (parts with the same mark share a colour) | 65052/65052 = 100.0% | 99.9% / 98.5% | 4.5 mm | PASS |
-| CBC-P2-10 | Butterfly | Picture graphs and tally marks | 2 | 6, 8, 10, 12, 15 | 14 | tally, mirror pairs | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.5 mm | PASS |
-| CBC-P2-11 | Butterfly | 2D and 3D shapes and shape patterns | 1 | 1, 2, 3, 4, 6 | 14 | tally, mirror pairs | 280/280 = 100.0% | 100.0% / 100.0% | 4.4 mm | PASS |
-| CBC-P2-12 | Ice Cream | Odd and even numbers | 2 | 200, 301, 402, 503, 604 | 12 | tally, mirror pairs | 12000/12000 = 100.0% | 99.9% / 98.2% | 4.5 mm | PASS |
+| CBC-P2-07 | Dinosaur | Money: cents and dollars, decimal notation | 2 | 35¢, 65¢, 135¢, 185¢, 250¢ | 15 | tally, small marks (parts with the same mark share a colour) | 30000/30000 = 100.0% | 99.9% / 98.9% | 4.6 mm | PASS |
+| CBC-P2-08 | Butterfly | Time: hours and minutes | 1 | 2:40, 4:55, 6:45, 8:35, 10:15 | 14 | tally, mirror pairs | 10066/10066 = 100.0% | 100.0% / 100.0% | 4.8 mm | PASS |
+| CBC-P2-09 | Sailboat | Length, mass and volume | 2 | 35 cm, 60 cm, 250 g, 450 g, 12 l | 13 | tally, small marks (parts with the same mark share a colour) | 65052/65052 = 100.0% | 99.9% / 98.5% | 4.2 mm | PASS |
+| CBC-P2-10 | Butterfly | Picture graphs and tally marks | 2 | 6, 8, 10, 12, 15 | 14 | tally, mirror pairs | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.9 mm | PASS |
+| CBC-P2-11 | Butterfly | 2D and 3D shapes and shape patterns | 1 | 1, 2, 3, 4, 6 | 14 | tally, mirror pairs | 280/280 = 100.0% | 100.0% / 100.0% | 4.2 mm | PASS |
+| CBC-P2-12 | Ice Cream | Odd and even numbers | 2 | 200, 301, 402, 503, 604 | 13 | tally, mirror pairs | 13000/13000 = 100.0% | 99.8% / 95.5% | 4.2 mm | PASS |
 | CBC-P2-13 | Fish | Number patterns: counting in steps up to 100 | 1 | 210, 300, 350, 420, 500 | 16 | tally, small marks (parts with the same mark share a colour) | 16000/16000 = 100.0% | 100.0% / 99.0% | 4.9 mm | PASS |
 | CBC-P2-14 | Dinosaur | Multiplication: tables of 2, 3, 4, 5 and 10 | 2 | 24, 28, 35, 40, 45 | 15 | tally, small marks (parts with the same mark share a colour) | 1500/1500 = 100.0% | 99.9% / 98.9% | 4.9 mm | PASS |
 | CBC-P2-15 | House | Fractions: parts, compare, add and subtract like fractions | 2 | ⟨1|6⟩, ⟨3|8⟩, ⟨5|8⟩, ⟨7|10⟩, ⟨5|12⟩ | 17 | tally, small marks (parts with the same mark share a colour) | 1105/1105 = 100.0% | 99.9% / 97.4% | 4.6 mm | PASS |
@@ -136,15 +136,15 @@ Primary 2 sheets: 15. Castle, car, elephant and dinosaur are Primary 2 pictures;
 | CBC-02 | Fish | Addition within 20 | 2 | 13, 14, 15, 16, 17 | 16 | tally, small marks (parts with the same mark share a colour) | 320/320 = 100.0% | 100.0% / 99.0% | 4.9 mm | PASS |
 | CBC-03 | Butterfly | Subtraction within 20 | 2 | 7, 8, 9, 10, 11 | 14 | tally, mirror pairs | 280/280 = 100.0% | 100.0% / 100.0% | 4.9 mm | PASS |
 | CBC-04 | House | Place value: tens and ones | 1 | 1, 2, 3, 4, 5 | 17 | tally, small marks (parts with the same mark share a colour) | 170/170 = 100.0% | 99.9% / 97.4% | 4.9 mm | PASS |
-| CBC-05 | Ice Cream | Counting in 2s, 5s and 10s | 2 | 60, 65, 70, 75, 80 | 12 | tally, mirror pairs | 1200/1200 = 100.0% | 99.9% / 98.2% | 4.9 mm | PASS |
-| CBC-06 | Owl | Comparing and ordering numbers to 100 | 2 | 55, 60, 65, 70, 75 | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.8 mm | PASS |
-| CBC-07 | Sailboat | Money: coins and cents | 1 | 10¢, 20¢, 30¢, 40¢, 50¢ | 13 | tally, small marks (parts with the same mark share a colour) | 260/260 = 100.0% | 99.9% / 98.5% | 4.5 mm | PASS |
-| CBC-08 | Butterfly | Time: o'clock and half past | 1 | 2 o'clock, 4 o'clock, 6 o'clock, half past 3, half past 7 | 14 | tally, mirror pairs | 322/322 = 100.0% | 100.0% / 100.0% | 4.7 mm | PASS |
-| CBC-09 | Ice Cream | Length in centimetres | 1 | 2 cm, 3 cm, 4 cm, 5 cm, 6 cm | 12 | tally, mirror pairs | 240/240 = 100.0% | 99.9% / 98.2% | 4.9 mm | PASS |
-| CBC-10 | House | Shapes: corners | 1 | 3, 4, 6, 7, 8 | 17 | tally, small marks (parts with the same mark share a colour) | 204/204 = 100.0% | 99.9% / 98.2% | 4.3 mm | PASS |
+| CBC-05 | Ice Cream | Counting in 2s, 5s and 10s | 2 | 60, 65, 70, 75, 80 | 13 | tally, mirror pairs | 1300/1300 = 100.0% | 99.8% / 95.5% | 4.5 mm | PASS |
+| CBC-06 | Owl | Comparing and ordering numbers to 100 | 2 | 55, 60, 65, 70, 75 | 14 | tally, mirror pairs, small marks (parts with the same mark share a colour) | 1400/1400 = 100.0% | 100.0% / 100.0% | 4.9 mm | PASS |
+| CBC-07 | Sailboat | Money: coins and cents | 1 | 10¢, 20¢, 30¢, 40¢, 50¢ | 13 | tally, small marks (parts with the same mark share a colour) | 260/260 = 100.0% | 99.9% / 98.5% | 4.2 mm | PASS |
+| CBC-08 | Butterfly | Time: o'clock and half past | 1 | 2 o'clock, 4 o'clock, 6 o'clock, half past 3, half past 7 | 14 | tally, mirror pairs | 322/322 = 100.0% | 100.0% / 100.0% | 4.8 mm | PASS |
+| CBC-09 | Ice Cream | Length in centimetres | 1 | 2 cm, 3 cm, 4 cm, 5 cm, 6 cm | 13 | tally, mirror pairs | 260/260 = 100.0% | 99.8% / 95.5% | 4.7 mm | PASS |
+| CBC-10 | House | Shapes: corners | 1 | 3, 4, 6, 7, 8 | 17 | tally, small marks (parts with the same mark share a colour) | 204/204 = 100.0% | 99.9% / 97.4% | 4.4 mm | PASS |
 | CBC-11 | Car | Multiplication within 40 | 2 | 12, 15, 20, 30, 40 | 13 | tally, small marks (parts with the same mark share a colour) | 520/520 = 100.0% | 99.9% / 98.5% | 4.9 mm | PASS |
-| CBC-12 | Castle | Sharing and grouping within 20 | 1 | 2, 3, 4, 5, 6 | 17 | tally, mirror pairs | 340/340 = 100.0% | 99.9% / 97.4% | 4.2 mm | PASS |
-| CBC-13 | Ice Cream | Picture graphs | 1 | 1, 2, 3, 4, 5 | 12 | tally, mirror pairs | 240/240 = 100.0% | 99.9% / 98.2% | 4.3 mm | PASS |
+| CBC-12 | Castle | Sharing and grouping within 20 | 1 | 2, 3, 4, 5, 6 | 17 | tally, mirror pairs | 340/340 = 100.0% | 99.9% / 98.2% | 4.2 mm | PASS |
+| CBC-13 | Rocket | Picture graphs | 1 | 1, 2, 3, 4, 5 | 15 | tally, mirror pairs | 300/300 = 100.0% | 99.9% / 97.7% | 4.9 mm | PASS |
 | CBC-14 | Sailboat | Ordinal numbers: first to tenth | 1 | 4th, 5th, 6th, 7th, 8th | 13 | tally, small marks (parts with the same mark share a colour) | 130/130 = 100.0% | 99.9% / 98.5% | 4.9 mm | PASS |
 
 Primary 1 sheets: 14. New since the audit: CBC-11 multiplication within 40 (two stars), CBC-12 sharing and grouping within 20, CBC-13 picture graphs, CBC-14 ordinal numbers. Contact sheet: `out/p1/contact_sheet.pdf`. Verification report: `out/p1/verification.txt` and `out/p1/verification.json`. Changes to every sheet and the open items are in `AUDIT_FIXES.md`.
@@ -157,7 +157,7 @@ Primary 1 sheets: 14. New since the audit: CBC-11 multiplication within 40 (two 
 | fish | 16 | 6 sets of matching parts, each marked with a small symbol |
 | house | 17 | 6 sets of matching parts, each marked with a small symbol |
 | butterfly | 14 | 7 mirror pairs |
-| icecream | 12 | 5 mirror pairs |
+| icecream | 13 | 5 mirror pairs (a cone about 38% of the height under two round scoops with a drip edge, and four pairs of circles) |
 | owl | 14 | 5 mirror pairs and 1 marked set |
 | sailboat | 13 | 5 sets of matching parts, each marked with a small symbol |
 | castle | 17 | 7 mirror pairs (clouds, tower roofs and walls, keep, doors) |
@@ -174,12 +174,12 @@ Primary 1 sheets: 14. New since the audit: CBC-11 multiplication within 40 (two 
 | oddeven | 9, 12, 15, 18, 21 | 200, 301, 402, 503, 604 | odd or even number just after, just before, smallest greater, greatest less, which is odd or even, between, short pattern |
 | add | 135, 252, 341, 428, 563 | 412, 536, 653, 724, 841 | sum, reversed, missing addend, "add to", "the sum of", "more than", sold then sold, at first; 2 star: three addends |
 | sub | 125, 237, 346, 458, 569 | 158, 247, 364, 475, 586 | difference, missing number, "subtract from", "difference between", "fewer than", story, reversal ("46 more than Jane"); 2 star: two steps |
-| mult | 6, 12, 15, 20, 30 | 24, 28, 35, 40, 45 | times, groups of, repeated addition, "multiply by", dot array, boxes of dots, bags; 2 star: times plus, times as many |
+| mult | 12, 15, 18, 20, 30 | 24, 28, 35, 40, 45 | times, groups of, repeated addition, "multiply by", star array, boxes of stars, bags; 2 star: times plus, times as many |
 | div | 2 to 6 | 6 to 10 | divide, share equally, boxes needed, divide into groups, missing factor, sharer counted ("with her 3 friends"), related facts; 2 star: most friends |
 | frac | 1/2, 1/3, 1/4, 2/3, 3/4 | 1/6, 3/8, 5/8, 7/10, 5/12 | shaded bar or circle, not shaded, "n of m equal parts", make 1 whole, add and subtract like fractions, compare unit fractions, compare like fractions (written 1/2) |
-| money | $1.20, $2.35, $3.05, $4.50, $6.80 | 35¢, 65¢, 135¢, 185¢, 250¢ | notes and coins pictured, add amounts, change from $5 to $50, two items, more than, cents to dollars, greatest and smallest of three amounts; 2 star: dollars to cents, make $1 |
-| time | 2:10, 4:25, 6:45, 8:35, 10:50 | 45, 75, 90, 105, 135 minutes | clock face (hands decoded), minutes past and to, minutes later and before, hours later; 2 star: hours and minutes to minutes, from a time to a time, a film, am times |
-| measure | 5 cm, 9 cm, 4 kg, 8 kg, 6 l | 35 cm, 60 cm, 250 g, 450 g, 12 l | real units first (ruler strip, cut off, balance with identical objects, 1 m minus cm, 1 kg minus g, lighter than, litres left, share litres), then bare sums with a unit; the footer names only the units a sheet has |
+| money | $1.20, $2.35, $3.05, $4.50, $6.80 | 35¢, 65¢, 135¢, 185¢, 250¢ | notes and coins pictured, whole-cent sums (no decimal-dollar sums: Primary 3), two items, more than, cents to dollars, greatest and smallest of three amounts that are all on the key; 2 star: dollars to cents, make $1 |
+| time | 2:10, 4:25, 6:45, 8:35, 10:50 | 45, 75, 90, 105, 135 minutes | clock face (hands decoded, at least 40 degrees apart), minutes after or before an H:00 time, minutes later and before, hours and hours-and-minutes later, a time plus or minus minutes; 2 star: hours and minutes to minutes, from a time to a time, a film, am times |
+| measure | 5 cm, 9 cm, 4 kg, 8 kg, 6 l | 35 cm, 60 cm, 250 g, 450 g, 12 l | real units first (ruler strip with a start arrow, cut off, balance with identical objects, lighter than, litres left, share litres; no m to cm or kg to g conversions: Primary 3), then bare sums with a unit; the footer names only the units a sheet has |
 | graph | 4, 6, 8, 10, 12 | 6, 8, 10, 12, 15 | picture graph of two to four rows with face icons, key 2 to 5 and labels at 3.8 mm (read a row, how many more, two rows, total); multi-row graphs are preferred wherever one fits; one-row and tally marks in the small regions |
 | shape | 1, 2, 3, 4, 6 | 5, 7, 8, 9, 12 | flat and curved surfaces of solids (pictured and in words), count a shape in a row, straight sides, pattern count in 8 to 12 shapes; 2 star: surfaces of two or three solids, straight sides in all |
 
@@ -195,8 +195,8 @@ Primary 1 sheets: 14. New since the audit: CBC-11 multiplication within 40 (two 
 | compare | 20, 30, 40, 50, 60 | 55, 60, 65, 70, 75 | greatest, smallest, 1 more or less, 10 more or less, between; 2 star: middle number, two-step |
 | money | 10¢ to 50¢ | $12, $14, $16, $18, $20 | coins or notes pictured, sums, missing amount, change, "more than", "fewer than" |
 | time | 2, 4, 6 o'clock; half past 3, 7 | half past 8, 9 o'clock, half past 10, 11 o'clock, half past 12 | clock face (hands decoded and verified), written time, 1 hour or half an hour later or before |
-| length | 2 to 6 cm | 7 to 11 cm | strip on a ruler (from 0 or from another mark), sums and differences in cm, "longer", "shorter", cut off |
-| mult | 4, 6, 8, 10, 12 | 12, 15, 20, 30, 40 | times (x), groups of, repeated addition, bags, dot array, boxes of dots (tables of 2, 3, 4, 5, 10 within 40) |
+| length | 2 to 6 cm | 7 to 11 cm | strip on a ruler (a bold arrow shows where it starts: at 0 or at a small offset; the length is counted from the arrow), sums and differences in cm, "longer", "shorter", cut off |
+| mult | 4, 6, 8, 10, 12 | 12, 15, 20, 30, 40 | times (x), groups of, repeated addition, bags, star array, boxes of stars (tables of 2, 3, 4, 5, 10 within 40) |
 | share | 2 to 6 | 4 to 8 | share equally, boxes needed, divide into groups, sharer counted, most friends, dots in each box (within 20, no division sign) |
 | pgraph | 1 to 5 | 4 to 8 | picture graph, one face is one thing: read a row, how many more, two rows, one row |
 | ordinal | 4th to 8th | 6th to 10th | from the left or right in a row of children, in front of, places after or before, ordinal sequence, gap, just after or before |
@@ -221,6 +221,8 @@ Primary 2 gaps: clock questions need a region about 18 mm high, picture graphs w
 
 * Primary 2 picture graphs and tally are used (the papers show keys 2 to 10 and tally; no bar graph appears in the Primary 2 papers, bar graphs start at Primary 3 in the syllabus).
 * Primary 2 time answers at one star are clock readings to 5 minutes; the two-star key is a duration in minutes. Minute-by-minute clock faces (3:07) are not drawn because the small face cannot show single minutes clearly.
-* Primary 2 money: one star writes answers as $1.20 and two stars as cents (35¢); amounts under a dollar appear as 55¢ or $0.55; notes and coins are plain labelled shapes, not copies of real notes.
+* Primary 2 money: one star writes answers as $1.20 and two stars as cents (35¢); amounts under a dollar appear as 55¢ or $0.55; coins are ORIGINAL drawings (a ring, a dashed edge hint, the value large and a small cents sign; radii in the true ratio of the real diameters, drawn larger than life) and notes are plain labelled rectangles; no real Singapore coin or note design is copied (see `docs/school_books/coin_reproduction_check.md` and owner decision D1).
 * Primary 2 fractions are printed stacked (numerator over denominator, with a bar); shaded parts are hatched and the equal parts are separated by white lines, never solid black. Answers are compared as written (2/4 is not 1/2). Unit fractions up to twelfths appear at two stars.
+* Equal groups and dot arrays are drawn with small outline stars (not bare black dots); picture graphs use a face for one thing. The question wording says stars.
+* Blank boxes a pupil writes in are 6 mm square (`layout.BOX_SIDE`); blanks inside a stacked fraction stay about 3 mm (the two-line fraction has no room for more).
 * The Primary 1 teacher pages no longer print a doubled unit (a fix in the money bank: 40¢ not 40¢¢).

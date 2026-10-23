@@ -204,9 +204,9 @@ def run(d):
     g = C['C1']; circle = vis(g); rect = dict(rows=nums(g['text'])[0], cols=nums(g['text'])[1]); eq(circle['parts'], 4, 'C1 the circle has 4 equal parts'); eq(circle['shape'], 'circle', 'C1 circle')
     parts = 1
     for _ in range(2): parts *= 2
-    eq(parts, 4, 'C1 half and half again'); eq(g['val'], [4, 'quarter', 6], 'C1 val'); total = 0
+    eq(parts, 4, 'C1 half and half again'); eq(g['val'], [4, 'quarter', 9], 'C1 val'); total = 0
     for _ in range(rect['rows']): total += rect['cols']
-    eq((rect['rows'], rect['cols'], total), (2, 3, 6), 'C1 rectangle 2 rows of 3 squares (from the text)'); eq(nums(g['text']), [2, 3], 'C1 text')
+    eq((rect['rows'], rect['cols'], total), (3, 3, 9), 'C1 rectangle 3 rows of 3 squares (from the text)'); eq(nums(g['text']), [3, 3], 'C1 text')
     g = C['C2']; f = vis(g); dx = f['end'][0] - f['start'][0]; dy = f['start'][1] - f['end'][1]; eq((dx, dy), (2, 1), 'C2 2 right and 1 up'); rt = routes(dx, dy); eq(rt, ['RRU', 'RUR', 'URR'], 'C2 every route'); eq((dx + dy, len(rt)), (3, 3), 'C2 steps and routes'); eq(g['val'], [3, 3], 'C2 val')
     g = C['C3']; st, fp = vis(g, 0), vis(g, 1); cubes = 0
     for r in st['heights']:
@@ -215,10 +215,10 @@ def run(d):
     for _ in range(layers): holes += len(fp['holes'])
     eq(holes, 2, 'C3 one hole through 2 layers makes 2 holes'); eq(g['val'], [6, 2], 'C3 val')
     g = C['C4']; f = vis(g); tiles = f['tiles']; odd = [i for i, t in enumerate(tiles) if sum(1 for u in tiles if u == t) == 1]; eq(odd, [2], 'C4 tile C is the only tile with no twin'); eq(f['labels'][odd[0]], 'C', 'C4 label')
-    differ = [k for k in tiles[2] if tiles[2][k] != tiles[0][k]]; eq(differ, ['n'], 'C4 only the number differs'); eq(g['val'], ['C', 'number'], 'C4 val'); eq(sum(1 for t in tiles if t == tiles[0]), 3, 'C4 three tiles alike')
-    g = C['C5']; f = vis(g); lines = {tuple(sorted(l)) for l in f['lines']}; eq(len(f['lines']), len(lines), 'C5 no line drawn twice'); eq(len(lines), 6, 'C5 6 lines'); eq(len(list(itertools.combinations(range(f['n']), 2))), 6, 'C5 every pair of 4 dots is joined'); eq(times(3, 4), 12, 'C5 4 bags of 3'); eq(g['val'], [6, 12], 'C5 val')
-    g = C['C6']; f = vis(g); k = f['each']; ali, mei = [times(k, r['n']) for r in f['rows']]; eq((k, ali, mei, mei - ali), (2, 6, 10, 4), 'C6 stickers in the key of 2'); eq(g['val'], [6, 4], 'C6 val'); eq(f['rows'][1]['n'] - f['rows'][0]['n'], 2, 'C6 2 more pictures')
-    g = C['C7']; row = seq(5, 3, 5); eq(row, [5, 8, 11, 14, 17], 'C7 the tower'); eq(row[4], 17, 'C7 row 5'); eq(g['val'], ['Table', 17], 'C7 val'); eq(nums(g['text']), [5, 1, 8, 2, 11, 3, 3], 'C7 text'); eq(find(lambda x: x == 17 and x == 5 + 3 * 4), [17], 'C7 4 steps of 3 from 5')
+    differ = [k for k in tiles[2] if tiles[2][k] != tiles[0][k]]; eq(differ, ['shape'], 'C4 only the shape differs (same number, size and pattern)'); eq(g['val'], ['C', 'shape'], 'C4 val'); eq(sum(1 for t in tiles if t == tiles[0]), 3, 'C4 three tiles alike')
+    g = C['C5']; f = vis(g); lines = {tuple(sorted(l)) for l in f['lines']}; eq(len(f['lines']), len(lines), 'C5 no line drawn twice'); eq(len(lines), 7, 'C5 7 lines'); eq(f['n'], 5, 'C5 5 dots'); eq(len(list(itertools.combinations(range(f['n']), 2))), 10, 'C5 not every pair of 5 dots is joined (a drawn picture, not the full handshake figure)'); eq(times(5, 3), 15, 'C5 3 boxes of 5'); eq(g['val'], [7, 15], 'C5 val')
+    g = C['C6']; f = vis(g); k = f['each']; ali, mei = [times(k, r['n']) for r in f['rows']]; eq((k, ali, mei, mei - ali), (2, 8, 14, 6), 'C6 flowers in the key of 2'); eq(g['val'], [8, 6], 'C6 val'); eq(f['rows'][1]['n'] - f['rows'][0]['n'], 3, 'C6 3 more pictures')
+    g = C['C7']; row = seq(6, 4, 5); eq(row, [6, 10, 14, 18, 22], 'C7 the tower'); eq(row[4], 22, 'C7 row 5'); eq(g['val'], ['Table', 22], 'C7 val'); eq(nums(g['text']), [6, 1, 10, 2, 14, 3, 4], 'C7 text'); eq(find(lambda x: x == 22 and x == 6 + 4 * 4), [22], 'C7 4 steps of 4 from 6')
     g = C['C8']; eq(7 + 5 == 13, False, 'C8 the puzzle is wrong'); eq(find(lambda x: x + 5 == 13), [8], 'C8 the right number is 8'); eq(g['val'], ['No', 8], 'C8 val'); eq(nums(g['text']), [5, 13, 7], 'C8 text')
     days = seq(5, 5, 5); eq(days, [5, 10, 15, 20, 25], 'cave: cents saved day by day'); tot = 0
     for x in days: tot += x

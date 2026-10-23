@@ -1352,13 +1352,18 @@
         "part": "exit",
         "lines": [
           {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "DO",
+            "text": "Pause the recording now, before the Quest starts. Nothing of the Quest is recorded. Then show the Quest slide.",
+            "s": 5
+          },
+          {
             "k": "SLIDE",
             "slide": "s-quest1",
             "s": 8
-          },
-          {
-            "k": "REC",
-            "text": "@rec"
           },
           {
             "k": "SAY",
@@ -1369,17 +1374,13 @@
             "text": "It is a game, not a race, and nobody gets a score. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
           },
           {
-            "k": "SAY",
-            "text": "The recording pauses now for Mi's Challenge Quest, and starts again for the workbook."
-          },
-          {
             "k": "DO",
-            "text": "Pause the recording now. Children open the closed Quest Log, with a pencil. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
+            "text": "Children open the closed Quest Log, with a pencil. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
             "s": 25
           },
           {
             "k": "READ",
-            "text": "Page 1. Gate 1. Look at the circle. It is folded in half and in half again. Part a: the circle has blank equal parts. Part b: each part is called a blank. Look at the rectangle made of squares. Part c: the rectangle has 2 rows of 3 squares, so blank squares in all. Gate 2. A counter starts at S. It moves only right or up to reach E. Part a: it moves blank steps in all. Part b: there are blank different routes from S to E."
+            "text": "Page 1. Gate 1. Look at the circle. It is folded in half and in half again. Part a: the circle has blank equal parts. Part b: each part is called a blank. Look at the rectangle made of squares. Part c: the rectangle has 3 rows of 3 squares, so blank squares in all. Gate 2. A counter starts at S. It moves only right or up to reach E. Part a: it moves blank steps in all. Part b: there are blank different routes from S to E."
           },
           {
             "k": "WORK",
@@ -1414,7 +1415,7 @@
           },
           {
             "k": "READ",
-            "text": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 4 bags have 3 sweets in each bag, so blank sweets in all. Gate 6. Look at the graph. Each picture stands for 2 stickers. Part a: Ali has blank stickers. Part b: Mei has blank more stickers than Ali."
+            "text": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 3 boxes have 5 pencils in each box, so blank pencils in all. Gate 6. Look at the graph. Each picture stands for 2 flowers. Part a: Ali has blank flowers. Part b: Mei has blank more flowers than Ali."
           },
           {
             "k": "WORK",
@@ -1427,7 +1428,7 @@
           },
           {
             "k": "READ",
-            "text": "Gate 7. A tower has 5 blocks in row 1, 8 blocks in row 2 and 11 blocks in row 3. Each row has 3 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks. Gate 8. A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7. Part a: is the puzzle right? Circle Yes or No. Part b: the right number is blank. The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all."
+            "text": "Gate 7. A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks. Gate 8. A child in another class wrote a puzzle: I think of a number. I add 5. I get 13. My number is 7. Part a: is the puzzle right? Circle Yes or No. Part b: the right number is blank. The secret cave has one more puzzle, and it is optional. You may skip it. Ali saves 5 cents on Monday, 10 cents on Tuesday and 15 cents on Wednesday. Each day he saves 5 cents more than the day before. Part a: on Friday he saves blank cents. Part b: from Monday to Friday he saves blank cents in all."
           },
           {
             "k": "WORK",
@@ -1467,12 +1468,16 @@
             "s": 8
           },
           {
+            "k": "SAY",
+            "text": "The recording has started again, for the workbook. It has me, the shared screen and any voice that is not muted. A child may keep the camera off."
+          },
+          {
             "k": "REC",
             "text": "@rec"
           },
           {
             "k": "READ",
-            "text": "Page 1, Start here. Question 1: look back at your year books. Choose a favourite page, picture or puzzle. Part a: my favourite is blank. Part b: I like it because blank. Many answers are right. Question 2: tick one idea in each row, I know it well or I am learning it. Nobody sees your ticks but your grown-up and your tutor. Question 3: which one is a clear puzzle? Write its number in the brackets."
+            "text": "Page 1, Start here. Question 1: look back at your year books. Choose a favourite page, picture or puzzle. Part a: my favourite is blank. Part b: I like it because blank. Many answers are right. Question 2: circle one in each row, I know it well or I am learning it. This is for you and your grown-up. Your tutor only sees it if you choose to share it. Question 3: which one is a clear puzzle? Write its number in the brackets."
           },
           {
             "k": "WORK",
@@ -1495,7 +1500,7 @@
           },
           {
             "k": "READ",
-            "text": "Page 2. Question 4. A child in another class wrote a puzzle and an answer. Siti has nine stickers. Ravi has four more stickers than Siti. How many stickers does Ravi have? The child says five. Part a: is the answer right? Circle Right or Wrong. Part b: the right answer is blank. Question 5. Mi makes a ten first to add nine and seven. Part a: nine and blank make ten. Part b: seven take away that is blank. Part c: ten and that make blank. Question 6. Count by rows. Part a: there are blank rows of dots. Part b: there are blank dots in all."
+            "text": "Page 2. Question 4. A child in another class wrote a puzzle and an answer. Siti has nine stickers. Ravi has four more stickers than Siti. How many stickers does Ravi have? The child says five. Part a: is the answer right? Circle Right or Wrong. Part b: the right answer is blank. Question 5. Mi makes a ten first to add nine and seven. Part a: nine and blank make ten. Part b: seven take away your answer to part a is blank. Part c: ten and your answer to part b make blank. Question 6. Count by rows. Part a: there are blank rows of dots. Part b: there are blank dots in all."
           },
           {
             "k": "WORK",
@@ -1522,7 +1527,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Q1: flip through your year books and stop at a page you liked. Q2: tick the first box that feels true. Q3: a clear puzzle has a story, numbers and one question. Q4: add, because more means the numbers are joined. Q5: nine needs one more to make ten. Q6: count the dots in one row, then count on by rows."
+            "text": "Q1: flip through your year books and stop at a page you liked. Q2: circle the first one that feels true. Q3: a clear puzzle has a story, numbers and one question. Q4: add, because more means the numbers are joined. Q5: nine needs one more to make ten. Q6: count the dots in one row, then count on by rows."
           },
           {
             "k": "STUCK",
@@ -1760,13 +1765,13 @@
         "id": "S2",
         "page": 1,
         "tier": "start",
-        "text": "Tick one idea in each row. Nobody sees your ticks except your grown-up and your tutor.",
+        "text": "Circle one in each row. This is for you and your grown-up. Your tutor only sees it if you choose to share it.",
         "answer": "Many answers are right",
         "val": [
           "open"
         ],
-        "hint": "Tick the first one that feels true. You can change it later.",
-        "solution": "Many answers are right. The ticks show what to practise: an idea you are learning is a good idea to teach a toy.",
+        "hint": "Circle the first one that feels true. You can change it later.",
+        "solution": "Many answers are right. The circles show what to practise: an idea you are learning is a good idea to teach a toy.",
         "mistakes": [
           "Ticking one box for every idea without thinking.",
           "Feeling that one box is better: neither box is better."
@@ -1904,13 +1909,13 @@
           },
           {
             "l": "b",
-            "text": "7 take away that is [] .",
+            "text": "7 take away your answer to part a is [] .",
             "ans": "6",
             "val": 6
           },
           {
             "l": "c",
-            "text": "10 and that make [] .",
+            "text": "10 and your answer to part b make [] .",
             "ans": "16",
             "val": 16
           }
@@ -3026,7 +3031,7 @@
         "page": 1,
         "tier": "start",
         "skill": "Halves and quarters of a circle, and a rectangle made of squares (Lessons 31 and 32)",
-        "text": "A circle is folded in half and in half again. A rectangle is made of 2 rows of 3 squares.",
+        "text": "A circle is folded in half and in half again. A rectangle is made of 3 rows of 3 squares.",
         "parts": [
           {
             "l": "a",
@@ -3043,24 +3048,24 @@
           {
             "l": "c",
             "text": "The rectangle has ___ squares in all.",
-            "ans": "6",
-            "val": 6
+            "ans": "9",
+            "val": 9
           }
         ],
-        "say": "Gate 1. Look at the circle. It is folded in half and in half again. Part a: the circle has blank equal parts. Part b: each part is called a blank. Look at the rectangle made of squares. Part c: the rectangle has 2 rows of 3 squares, so blank squares in all.",
-        "answer": "4; quarter; 6",
+        "say": "Gate 1. Look at the circle. It is folded in half and in half again. Part a: the circle has blank equal parts. Part b: each part is called a blank. Look at the rectangle made of squares. Part c: the rectangle has 3 rows of 3 squares, so blank squares in all.",
+        "answer": "4; quarter; 9",
         "val": [
           4,
           "quarter",
-          6
+          9
         ],
-        "solution": "Half and half again makes 4 equal parts, and each part is a quarter. 2 rows of 3 squares: 3 and 3 make 6 squares.",
+        "solution": "Half and half again makes 4 equal parts, and each part is a quarter. 3 rows of 3 squares: 3, 6, 9 squares.",
         "right": "All three correct.",
         "partly": "Two of the three correct.",
         "mistakes": [
           "(a) 2 (only one fold counted).",
           "(b) half.",
-          "(c) 5 (adding 2 and 3)."
+          "(c) 6 (counting only 2 rows) or 3 (counting one row)."
         ],
         "visual": {
           "type": "shapes2d",
@@ -3206,22 +3211,22 @@
           {
             "l": "b",
             "text": "Circle what is different: shape, number, size or pattern.",
-            "ans": "number",
-            "val": "number"
+            "ans": "shape",
+            "val": "shape"
           }
         ],
         "say": "Gate 4. Look at the four tiles. Three tiles are alike and one is the odd one out. Part a: circle the odd one out: A, B, C or D. Part b: circle what is different: shape, number, size or pattern.",
-        "answer": "C; number",
+        "answer": "C; shape",
         "val": [
           "C",
-          "number"
+          "shape"
         ],
-        "solution": "Tiles A, B and D each have 2 triangles. Tile C has 3 triangles, so it is the odd one out, and the number is different.",
+        "solution": "Tiles A, B and D each have 2 triangles. Tile C has 2 squares, so it is the odd one out, and the shape is different.",
         "right": "Both correct.",
         "partly": "One of the two correct.",
         "mistakes": [
           "(a) A, B or D (one of the alike tiles).",
-          "(b) shape or size (looking at the wrong feature)."
+          "(b) number or size (looking at the wrong feature)."
         ],
         "visual": {
           "type": "panel",
@@ -3239,8 +3244,8 @@
               "pattern": 2
             },
             {
-              "shape": "triangle",
-              "n": 3,
+              "shape": "square",
+              "n": 2,
               "size": "m",
               "pattern": 2
             },
@@ -3269,60 +3274,64 @@
         "page": 3,
         "tier": "start",
         "skill": "Counting lines and equal groups (Lesson 36)",
-        "text": "Each line joins two dots. 4 bags have 3 sweets in each bag.",
+        "text": "Each line joins two dots. 3 boxes have 5 pencils in each box.",
         "parts": [
           {
             "l": "a",
             "text": "There are ___ lines.",
-            "ans": "6",
-            "val": 6
+            "ans": "7",
+            "val": 7
           },
           {
             "l": "b",
-            "text": "The 4 bags have ___ sweets in all.",
-            "ans": "12",
-            "val": 12
+            "text": "The 3 boxes have ___ pencils in all.",
+            "ans": "15",
+            "val": 15
           }
         ],
-        "say": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 4 bags have 3 sweets in each bag, so blank sweets in all.",
-        "answer": "6; 12",
+        "say": "Gate 5. Each line joins two dots. Part a: there are blank lines. Part b: 3 boxes have 5 pencils in each box, so blank pencils in all.",
+        "answer": "7; 15",
         "val": [
-          6,
-          12
+          7,
+          15
         ],
-        "solution": "Count each line once: 6 lines. 4 bags of 3 sweets: 3, 6, 9, 12 sweets.",
+        "solution": "Count each line once: 5 lines round the edge and 2 lines inside make 7 lines. 3 boxes of 5 pencils: 5, 10, 15 pencils.",
         "right": "Both correct.",
         "partly": "One of the two correct.",
         "mistakes": [
-          "(a) 5 or 7 (a line missed or counted twice).",
-          "(b) 7 (adding 4 and 3)."
+          "(a) 5 (the lines inside missed) or 8 (a line counted twice).",
+          "(b) 8 (adding 3 and 5)."
         ],
         "visual": {
           "type": "network",
-          "n": 4,
+          "n": 5,
           "lines": [
             [
               0,
               1
             ],
             [
-              0,
-              2
-            ],
-            [
-              0,
-              3
-            ],
-            [
               1,
               2
-            ],
-            [
-              1,
-              3
             ],
             [
               2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
               3
             ]
           ],
@@ -3330,7 +3339,8 @@
             "A",
             "B",
             "C",
-            "D"
+            "D",
+            "E"
           ],
           "size": 48
         }
@@ -3345,48 +3355,48 @@
         "page": 3,
         "tier": "start",
         "skill": "Reading a picture graph with each picture standing for 2 (Lessons 37 and 38)",
-        "text": "Look at the graph. Each picture stands for 2 stickers.",
+        "text": "Look at the graph. Each picture stands for 2 flowers.",
         "parts": [
           {
             "l": "a",
-            "text": "Ali has ___ stickers.",
-            "ans": "6",
-            "val": 6
+            "text": "Ali has ___ flowers.",
+            "ans": "8",
+            "val": 8
           },
           {
             "l": "b",
-            "text": "Mei has ___ more stickers than Ali.",
-            "ans": "4",
-            "val": 4
+            "text": "Mei has ___ more flowers than Ali.",
+            "ans": "6",
+            "val": 6
           }
         ],
-        "say": "Gate 6. Look at the graph. Each picture stands for 2 stickers. Part a: Ali has blank stickers. Part b: Mei has blank more stickers than Ali.",
-        "answer": "6; 4",
+        "say": "Gate 6. Look at the graph. Each picture stands for 2 flowers. Part a: Ali has blank flowers. Part b: Mei has blank more flowers than Ali.",
+        "answer": "8; 6",
         "val": [
-          6,
-          4
+          8,
+          6
         ],
-        "solution": "Ali has 3 pictures: 2, 4, 6 stickers. Mei has 5 pictures, which is 2 more pictures than Ali, and 2 pictures of 2 are 4 more stickers.",
+        "solution": "Ali has 4 pictures: 2, 4, 6, 8 flowers. Mei has 7 pictures, which is 3 more pictures than Ali, and 3 pictures of 2 are 6 more flowers.",
         "right": "Both correct.",
         "partly": "One of the two correct.",
         "mistakes": [
-          "(a) 3 (counting pictures, not stickers).",
-          "(b) 2 (2 more pictures, not 4 more stickers)."
+          "(a) 4 (counting pictures, not flowers).",
+          "(b) 3 (3 more pictures, not 6 more flowers)."
         ],
         "visual": {
           "type": "picture_graph",
           "rows": [
             {
               "label": "Ali",
-              "n": 3
+              "n": 4
             },
             {
               "label": "Mei",
-              "n": 5
+              "n": 7
             }
           ],
-          "icon": "sticker",
-          "title": "Stickers",
+          "icon": "flower",
+          "title": "Flowers",
           "each": 2,
           "size": 55
         }
@@ -3398,7 +3408,7 @@
         "page": 4,
         "tier": "start",
         "skill": "Choose a tool: a growing pattern in a table (Lesson 39)",
-        "text": "A tower has 5 blocks in row 1, 8 blocks in row 2 and 11 blocks in row 3. Each row has 3 more blocks than the row before.",
+        "text": "A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before.",
         "parts": [
           {
             "l": "a",
@@ -3409,22 +3419,22 @@
           {
             "l": "b",
             "text": "Row 5 has ___ blocks.",
-            "ans": "17",
-            "val": 17
+            "ans": "22",
+            "val": 22
           }
         ],
-        "say": "Gate 7. A tower has 5 blocks in row 1, 8 blocks in row 2 and 11 blocks in row 3. Each row has 3 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks.",
-        "answer": "Table; 17",
+        "say": "Gate 7. A tower has 6 blocks in row 1, 10 blocks in row 2 and 14 blocks in row 3. Each row has 4 more blocks than the row before. Part a: circle the tool that fits best: Strip, Table or Work backwards. Part b: row 5 has blank blocks.",
+        "answer": "Table; 22",
         "val": [
           "Table",
-          17
+          22
         ],
-        "solution": "The numbers grow by 3 each time, so a table fits: 5, 8, 11, 14, 17. Row 5 has 17 blocks.",
+        "solution": "The numbers grow by 4 each time, so a table fits: 6, 10, 14, 18, 22. Row 5 has 22 blocks.",
         "right": "Both correct (a strip is a sensible second choice for part a).",
         "partly": "One of the two correct.",
         "mistakes": [
           "(a) Work backwards.",
-          "(b) 14 (row 4) or 20 (row 6)."
+          "(b) 18 (row 4) or 26 (row 6)."
         ]
       },
       {

@@ -805,8 +805,8 @@ def build_banks():
             instr="Find how many minutes. Find the answer in the key. Colour the part with that colour.")},
         {1: "Time: hours and minutes", 2: "Time: hours, minutes and how long"})
     md = [(n, u) for u in ("cm", "m", "g", "kg", "l") for n in range(0, 1001)]
-    B["measure"] = Bank("measure", "Measures", "Length, mass and volume", "Find the measure (a ruler strip starts at its arrow). Find it in the key. Colour the part with that colour.",
-        {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}"), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")},
+    B["measure"] = Bank("measure", "Measures", "Length, mass and volume", "Find the measure. Find it in the key. Colour the part with that colour.",
+        {1: T([(5, "cm"), (9, "cm"), (4, "kg"), (8, "kg"), (6, "l")], md, _measure(1), lambda v: f"{v[0]} {v[1]}", instr="Find the measure (a ruler strip starts at its arrow). Find it in the key. Colour the part with that colour."), 2: T([(35, "cm"), (60, "cm"), (250, "g"), (450, "g"), (12, "l")], md, _measure(2), lambda v: f"{v[0]} {v[1]}")},
         parts=[("cm", lambda f, a: a[1] == "cm"), ("g", lambda f, a: a[1] == "g"), ("kg", lambda f, a: a[1] == "kg"), ("l", lambda f, a: a[1] == "l")],
         prefix="Length, mass and volume: ")
     B["graph"] = Bank("graph", "Graphs", "Picture graphs and tally marks", "Read the graph. Find the answer in the key. Colour the part with that colour.",
