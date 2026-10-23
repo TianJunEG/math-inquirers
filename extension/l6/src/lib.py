@@ -103,6 +103,13 @@ def write_unit(n, title, topic, goal, learn, items, **extra):
     uid = u['id']
     for it in items:
         assert it['id'].startswith(uid + '-')
+    try:
+        from whys import WHY
+    except ImportError:
+        WHY = {}
+    for it in [u['learn']['try']] + items:
+        if it['id'] in WHY:
+            it['explanation'] = m(WHY[it['id']])
     print(uid, 'start', sum(i['tier'] == 'start' for i in items), 'think', sum(i['tier'] == 'think' for i in items), 'go', sum(i['tier'] == 'go' for i in items), 'quiz', sum(i['tier'] == 'quiz' for i in items))
     finalize(u)
     json.dump(u, open(os.path.join(DATA, f'l6_u{n:02d}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

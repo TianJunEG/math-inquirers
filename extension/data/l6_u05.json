@@ -544,7 +544,7 @@
     ],
     "card": 11
    },
-   "explanation": "First digit: 3 choices (not 0). Second digit: 3 choices (0 is allowed, but not the card already used). Third digit: 2 choices. 3 × 3 × 2 = 18. Odd numbers end in 1 or 3. For each ending, the first digit has 2 choices (not 0 and not the ending) and the middle digit has 2: 2 × 2 × 2 = 8.",
+   "explanation": "First digit: 3 choices (not 0), second: 3 (0 is allowed), third: 2. 3 × 3 × 2 = 18. Odd numbers end in 1 or 3; then the first digit has 2 choices and the middle digit 2: 2 × 2 × 2 = 8.",
    "figside": true
   },
   {
@@ -728,7 +728,7 @@
     }
    ],
    "hint": "Which two-digit endings are in the 4 times table?",
-   "explanation": "First digit 4 choices, then 3, then 2, then 1: 24 numbers. Even numbers end in 2 or 4: 2 choices for the last digit and 3 × 2 × 1 for the rest, 12. Multiples of 4 need the last 2 digits to be 12, 24 or 32. Each leaves 2 numbers (for example 3412 and 4312): 3 × 2 = 6.",
+   "explanation": "4 × 3 × 2 × 1 = 24 numbers. Even numbers end in 2 or 4: 2 × 3 × 2 × 1 = 12. Multiples of 4 end in 12, 24 or 32, and each leaves 2 numbers: 3 × 2 = 6.",
    "partsrow": true
   },
   {
@@ -979,7 +979,7 @@
     ]
    },
    "hint": "When is a × b odd? Count those pairs first.",
-   "explanation": "The outer and inner repeats each run 4 times, so 4 × 4 = 16 pairs are checked. a × b is odd only when both a and b are odd: 2 × 2 = 4 pairs (1 and 3 with 1 and 3). So 16 − 4 = 12 pairs have an even product. With 6 and 6: 36 pairs, 3 × 3 = 9 odd, 27 even.",
+   "explanation": "Each repeat runs 4 times: 4 × 4 = 16 pairs. a × b is odd only when both are odd: 2 × 2 = 4 pairs. So 16 − 4 = 12 even products. With 6 and 6: 36 pairs, 9 odd, 27 even.",
    "figside": true
   },
   {
@@ -1030,7 +1030,7 @@
     }
    ],
    "hint": "Look at the last move. It was 1 step or 2 steps.",
-   "explanation": "3 steps: 1+1+1, 1+2, 2+1 is 3 ways. The last move onto step n is 1 step from step n − 1 or 2 steps from step n − 2, so ways(n) = ways(n − 1) + ways(n − 2). Ways for 1, 2, 3, 4, 5, 6, 7, 8 steps: 1, 2, 3, 5, 8, 13, 21, 34. So 4 steps: 5, 6 steps: 13, 8 steps: 34.",
+   "explanation": "The last move onto step n is 1 step from step n − 1 or 2 steps from step n − 2, so ways(n) = ways(n − 1) + ways(n − 2). For 1 to 8 steps: 1, 2, 3, 5, 8, 13, 21, 34.",
    "partsrow": true
   },
   {

@@ -6,9 +6,9 @@
  "title": "Measure and money masters",
  "topic": "Length, mass, volume, money and time",
  "holiday_lesson": 9,
- "goal": "I can change units to add and take away. I can solve money problems. I can find how long something lasts.",
+ "goal": "I can change units, solve money problems and find how long things last.",
  "learn": {
-  "intro": "Change to one unit before you add or take away. 1 m = 100 cm. 1 kg = 1000 g. 1 ℓ = 1000 ml. $1 = 100¢. For time, jump on a time line.",
+  "intro": "Use one unit before you add or take away. 1 m = 100 cm, 1 kg = 1000 g, 1 ℓ = 1000 ml and $1 = 100¢.",
   "example": {
    "problem": "A ribbon is 2 m 35 cm long. Mei cuts off 80 cm. How long is the ribbon now?",
    "figure": {
@@ -36,14 +36,13 @@
       ]
      }
     ],
-    "width_mm": 100,
+    "width_mm": 76,
     "u": 60,
     "lab": 20
    },
    "steps": [
-    "Change to one unit: 2 m 35 cm = 235 cm.",
-    "Take away: 235 - 80 = 155 cm.",
-    "Change back: 155 cm = 1 m 55 cm."
+    "Change to cm: 2 m 35 cm = 235 cm.",
+    "Take away: 235 - 80 = 155 cm = 1 m 55 cm."
    ],
    "answer": "The ribbon is 1 m 55 cm long."
   },
@@ -51,8 +50,7 @@
    "title": "Tips",
    "steps": [
     "Write both amounts in the small unit first.",
-    "On a time line, jump to the next o’clock.",
-    "Check money with an add: change + cost = money paid."
+    "On a time line, jump to the next o’clock."
    ]
   },
   "try": {
@@ -103,17 +101,15 @@
       "text": "20 min"
      }
     ],
-    "width_mm": 110
+    "width_mm": 112
    },
    "steps": [
-    "Jump to the next o’clock: 2:50 to 3:00 is 10 min.",
-    "Jump to 4:00: 1 h.",
-    "Jump to 4:20: 20 min. Add: 10 min + 1 h + 20 min = 1 h 30 min."
+    "Jump to the next o’clock, then to 4:00, then to 4:20.",
+    "Add the jumps: 10 min + 1 h + 20 min = 1 h 30 min."
    ],
    "answer": "The film is 1 h 30 min long."
   },
-  "tight": true,
-  "pair": true
+  "tight": true
  },
  "items": [
   {
@@ -347,7 +343,7 @@
     ],
     "major": 200,
     "minor": 50,
-    "width_mm": 106
+    "width_mm": 90
    }
   },
   {
@@ -423,7 +419,7 @@
     "cw": 118,
     "ch": 42,
     "fs": 26,
-    "width_mm": 92,
+    "width_mm": 84,
     "rows": [
      [
       "Book",

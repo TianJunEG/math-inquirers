@@ -1,7 +1,7 @@
 from lib import *
 
 u = Unit(9, 'Measure and money masters', 'Length, mass, volume, money and time',
-         'I can change units to add and take away. I can solve money problems. I can find how long something lasts.')
+         'I can change units, solve money problems and find how long things last.')
 
 
 def seg(w, t='', style='plain'):
@@ -9,21 +9,20 @@ def seg(w, t='', style='plain'):
 
 
 u.learn(
-    'Change to one unit before you add or take away. 1 m = 100 cm. 1 kg = 1000 g. 1 ℓ = 1000 ml. $1 = 100¢. For time, jump on a time line.',
+    'Use one unit before you add or take away. 1 m = 100 cm, 1 kg = 1000 g, 1 ℓ = 1000 ml and $1 = 100¢.',
     {'problem': 'A ribbon is 2 m 35 cm long. Mei cuts off 80 cm. How long is the ribbon now?',
-     'figure': {'type': 'l3_bars', 'rows': [{'segs': [seg(3.5, '?', 'q'), seg(1.5, '80 cm', 'ghost')], 'braces': [{'a': 0, 'b': 1, 't': '2 m 35 cm'}]}], 'width_mm': 100, 'u': 60, 'lab': 20},
-     'steps': ['Change to one unit: 2 m 35 cm = 235 cm.', 'Take away: 235 - 80 = 155 cm.', 'Change back: 155 cm = 1 m 55 cm.'],
+     'figure': {'type': 'l3_bars', 'rows': [{'segs': [seg(3.5, '?', 'q'), seg(1.5, '80 cm', 'ghost')], 'braces': [{'a': 0, 'b': 1, 't': '2 m 35 cm'}]}], 'width_mm': 76, 'u': 60, 'lab': 20},
+     'steps': ['Change to cm: 2 m 35 cm = 235 cm.', 'Take away: 235 - 80 = 155 cm = 1 m 55 cm.'],
      'answer': 'The ribbon is 1 m 55 cm long.'},
     {'title': 'Tips',
-     'steps': ['Write both amounts in the small unit first.', 'On a time line, jump to the next o’clock.', 'Check money with an add: change + cost = money paid.']},
+     'steps': ['Write both amounts in the small unit first.', 'On a time line, jump to the next o’clock.']},
     {'text': 'A jug holds 2 ℓ 350 ml. Ali pours out 800 ml. The jug now holds {b} ℓ {b} ml.', 'answer': A(['1', '550'], '1 ℓ 550 ml', list=True),
      'explanation': '2 ℓ 350 ml = 2350 ml. Then 2350 - 800 = 1550 ml = 1 ℓ 550 ml. Check: 1550 + 800 = 2350.'},
     example2={'problem': 'A film starts at 2:50 pm and ends at 4:20 pm. How long is the film?',
-              'figure': {'type': 'l3_timeline', 'points': [{'t': '2:50'}, {'t': '3:00'}, {'t': '4:00'}, {'t': '4:20'}], 'arcs': [{'a': 0, 'b': 1, 'text': '10 min'}, {'a': 1, 'b': 2, 'text': '1 h'}, {'a': 2, 'b': 3, 'text': '20 min'}], 'width_mm': 110},
-              'steps': ['Jump to the next o’clock: 2:50 to 3:00 is 10 min.', 'Jump to 4:00: 1 h.', 'Jump to 4:20: 20 min. Add: 10 min + 1 h + 20 min = 1 h 30 min.'],
+              'figure': {'type': 'l3_timeline', 'points': [{'t': '2:50'}, {'t': '3:00'}, {'t': '4:00'}, {'t': '4:20'}], 'arcs': [{'a': 0, 'b': 1, 'text': '10 min'}, {'a': 1, 'b': 2, 'text': '1 h'}, {'a': 2, 'b': 3, 'text': '20 min'}], 'width_mm': 112},
+              'steps': ['Jump to the next o’clock, then to 4:00, then to 4:20.', 'Add the jumps: 10 min + 1 h + 20 min = 1 h 30 min.'],
               'answer': 'The film is 1 h 30 min long.'})
 u.u['learn']['tight'] = True
-u.u['learn']['pair'] = True
 
 # ---------------- Start here (pages 1 to 3)
 u.S(1, 'Change the units.', parts=[
@@ -45,7 +44,7 @@ u.S(1, 'A jug has 2 ℓ 500 ml of juice. Ali pours it into cups of 400 ml.', par
 u.S(2, 'Read the water level in each jug.', parts=[
     P('a', 'Jug A holds {b} ml.', A('350')), P('b', 'Jug B holds {b} ml.', A('600')), P('c', 'Jug C holds {b} ml.', A('850')),
     P('d', 'Jug C holds {b} ml more than jug A.', A('500'))],
-    figure={'type': 'l3_jug', 'jugs': [{'level': 350, 'label': 'A'}, {'level': 600, 'label': 'B'}, {'level': 850, 'label': 'C'}], 'major': 200, 'minor': 50, 'width_mm': 106},
+    figure={'type': 'l3_jug', 'jugs': [{'level': 350, 'label': 'A'}, {'level': 600, 'label': 'B'}, {'level': 850, 'label': 'C'}], 'major': 200, 'minor': 50, 'width_mm': 90},
     why='Each small mark is 50 ml. A is 1 mark above 300: 350 ml. B is at 600 ml. C is 1 mark above 800: 850 ml. 850 - 350 = 500 ml.')
 u.S(2, 'A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.', parts=[
     P('a', 'They cost ${b} in all.', A('4.05')), P('b', 'Her change is ${b}.', A('0.95'))],
@@ -53,7 +52,7 @@ u.S(2, 'A notebook costs $2.65 and a ruler costs $1.40. Mei pays with a $5 note.
 u.S(2, 'Siti has $20 and buys the first 3 things on the list.', parts=[
     P('a', 'They cost ${b} in all.', A('14.45')), P('b', 'Her change is ${b}.', A('5.55')),
     P('c', 'Can she buy all 4 things on the list?   {circ:Yes|No}', A('Yes'))],
-    figure={'type': 'l3_grid', 'head_row': True, 'cw': 118, 'ch': 42, 'fs': 26, 'width_mm': 92, 'rows': [['Book', 'Puzzle', 'Bottle', 'Stickers'], ['$6.20', '$4.85', '$3.40', '$1.75']]},
+    figure={'type': 'l3_grid', 'head_row': True, 'cw': 118, 'ch': 42, 'fs': 26, 'width_mm': 84, 'rows': [['Book', 'Puzzle', 'Bottle', 'Stickers'], ['$6.20', '$4.85', '$3.40', '$1.75']]},
     why='(a) 6.20 + 4.85 = 11.05, and 11.05 + 3.40 = 14.45. (b) 20.00 - 14.45 = 5.55. (c) All 4 things cost 14.45 + 1.75 = 16.20, which is less than $20. So she can.')
 u.S(2, 'A box with 6 books weighs 2 kg 250 g. The empty box weighs 450 g. All the books have the same mass. One book weighs {b} g.', A('300'),
     why='2 kg 250 g = 2250 g. The books weigh 2250 - 450 = 1800 g. One book: 1800 ÷ 6 = 300 g.')

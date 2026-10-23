@@ -64,18 +64,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 2,
@@ -137,18 +126,7 @@
    1.0,
    5994,
    5994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5994,
-    5994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 3,
@@ -195,18 +173,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 4,
@@ -269,18 +236,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    69,
-    69
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 5,
@@ -338,18 +294,7 @@
    1.0,
    294,
    294
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    61,
-    61
-   ],
-   "all_other_values_rejected": [
-    294,
-    294
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 6,
@@ -407,18 +352,7 @@
    1.0,
    2994,
    2994
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2994,
-    2994
-   ],
-   "all_other_values_rejected": [
-    2994,
-    2994
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 7,
@@ -480,18 +414,7 @@
    1.0,
    4314,
    4314
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    4314,
-    4314
-   ],
-   "all_other_values_rejected": [
-    4314,
-    4314
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 8,
@@ -549,18 +472,7 @@
    1.0,
    100,
    100
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    52,
-    52
-   ],
-   "all_other_values_rejected": [
-    100,
-    100
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 9,
@@ -607,18 +519,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 10,
@@ -682,18 +583,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 11,
@@ -761,18 +651,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 12,
@@ -814,18 +693,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    120,
-    120
-   ],
-   "all_other_values_rejected": [
-    120,
-    120
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 13,
@@ -882,18 +750,7 @@
    1.0,
    54,
    54
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    44,
-    44
-   ],
-   "all_other_values_rejected": [
-    54,
-    54
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 14,
@@ -942,18 +799,7 @@
    1.0,
    2,
    2
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    105,
-    105
-   ],
-   "all_other_values_rejected": [
-    105,
-    105
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 15,
@@ -1016,18 +862,7 @@
    1.0,
    390,
    390
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    390,
-    390
-   ],
-   "all_other_values_rejected": [
-    390,
-    390
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 16,
@@ -1085,18 +920,7 @@
    1.0,
    5988,
    5988
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    5988,
-    5988
-   ],
-   "all_other_values_rejected": [
-    5988,
-    5988
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 17,
@@ -1160,18 +984,7 @@
    1.0,
    4495,
    4495
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    60,
-    60
-   ],
-   "all_other_values_rejected": [
-    4495,
-    4495
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 18,
@@ -1234,18 +1047,7 @@
    1.0,
    5394,
    5394
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    5394,
-    5394
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 19,
@@ -1294,18 +1096,7 @@
    1.0,
    360,
    360
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    58,
-    58
-   ],
-   "all_other_values_rejected": [
-    360,
-    360
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 20,
@@ -1360,18 +1151,7 @@
    1.0,
    6,
    6
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6,
-    6
-   ],
-   "all_other_values_rejected": [
-    6,
-    6
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 21,
@@ -1414,21 +1194,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 22,
@@ -1485,18 +1251,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    49,
-    49
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 23,
@@ -1539,21 +1294,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 24,
@@ -1596,21 +1337,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 25,
@@ -1673,18 +1400,7 @@
    1.0,
    6000,
    6000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    6000,
-    6000
-   ],
-   "all_other_values_rejected": [
-    6000,
-    6000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 26,
@@ -1742,18 +1458,7 @@
    1.0,
    72,
    72
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    53,
-    53
-   ],
-   "all_other_values_rejected": [
-    72,
-    72
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 27,
@@ -1795,18 +1500,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 28,
@@ -1844,21 +1538,7 @@
    1.0,
    719,
    719
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    30,
-    30
-   ],
-   "all_other_values_rejected": [
-    30,
-    30
-   ],
-   "wrong_arrangements_rejected": [
-    719,
-    719
-   ]
-  }
+  ]
  },
  {
   "no": 29,
@@ -1916,18 +1596,7 @@
    1.0,
    2095,
    2095
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    2095,
-    2095
-   ],
-   "all_other_values_rejected": [
-    2095,
-    2095
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 30,
@@ -1984,18 +1653,7 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    68,
-    68
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 31,
@@ -2054,18 +1712,7 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    72,
-    72
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 32,
@@ -2112,18 +1759,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 33,
@@ -2170,18 +1806,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 34,
@@ -2223,18 +1848,7 @@
    1.0,
    12,
    12
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    12,
-    12
-   ],
-   "all_other_values_rejected": [
-    12,
-    12
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 35,
@@ -2291,18 +1905,7 @@
    1.0,
    75,
    75
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    45,
-    45
-   ],
-   "all_other_values_rejected": [
-    75,
-    75
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 36,
@@ -2364,18 +1967,7 @@
    1.0,
    1200,
    1200
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    1200,
-    1200
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 37,
@@ -2437,18 +2029,7 @@
    1.0,
    1800,
    1800
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    70,
-    70
-   ],
-   "all_other_values_rejected": [
-    1800,
-    1800
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 38,
@@ -2528,18 +2109,7 @@
    1.0,
    15000,
    15000
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    180,
-    180
-   ],
-   "all_other_values_rejected": [
-    15000,
-    15000
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 39,
@@ -2620,35 +2190,23 @@
    1.0,
    1500,
    1500
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    180,
-    180
-   ],
-   "all_other_values_rejected": [
-    1500,
-    1500
-   ],
-   "wrong_arrangements_rejected": null
-  }
+  ]
  },
  {
   "no": 40,
   "code": "S2-20 (P2-40)",
-  "title": "Colour the Sailboat",
+  "title": "Colour the Butterfly",
   "tier": 2,
-  "topic": "Length, mass and volume",
-  "strand": "Measurement and Geometry - Measurement",
-  "syll": "1.1, 1.2, 1.3 (measuring and comparing length in m, mass in kg and g, volume in \u2113)",
+  "topic": "2D and 3D shapes and shape patterns",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "1.1, 2.1 (patterns with 2D shapes; identifying, naming and describing 3D shapes)",
   "outcomes": [
-   "ME1.1",
-   "ME1.2",
-   "ME1.3"
+   "GE1.1",
+   "GE2.1"
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",
   "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
-  "seed": 309,
+  "seed": 316,
   "checks": [
    {
     "name": "V1 every question has exactly one answer in the bank's domain",
@@ -2656,7 +2214,7 @@
     "detail": "[]"
    },
    {
-    "name": "V1a the independent evaluator (textcheck) re-solves all 13 printed questions from their text and picture and gets the coloured answer",
+    "name": "V1a the independent evaluator (textcheck) re-solves all 14 printed questions from their text and picture and gets the coloured answer",
     "ok": true,
     "detail": "[]"
    },
@@ -2668,7 +2226,7 @@
    {
     "name": "V1c all five colours used at least twice",
     "ok": true,
-    "detail": "{'yellow': 3, 'red': 2, 'blue': 2, 'green': 3, 'orange': 3}"
+    "detail": "{'yellow': 4, 'red': 4, 'blue': 2, 'green': 2, 'orange': 2}"
    },
    {
     "name": "V2 the right answers pass every check (tally, matching parts)",
@@ -2683,44 +2241,33 @@
    {
     "name": "V7 regions 12 to 18, every label found a box",
     "ok": true,
-    "detail": "13"
+    "detail": "14"
    },
    {
     "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
     "ok": true,
-    "detail": "[('hull_1', 'hull_3'), ('wave_1', 'wave_3')]"
+    "detail": "[]"
    },
    {
     "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
     "ok": true,
-    "detail": "65052/65052"
+    "detail": "280/280"
    },
    {
     "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
     "ok": true,
-    "detail": "1247/1248"
+    "detail": "1456/1456"
    },
    {
     "name": "V3c swaps of two parts' colours rejected (>=95%)",
     "ok": true,
-    "detail": "66/67"
+    "detail": "76/76"
    }
   ],
   "generator_slip_test": [
    1.0,
-   65052,
-   65052
-  ],
-  "enumeration": {
-   "plausible_slips_rejected": [
-    154,
-    154
-   ],
-   "all_other_values_rejected": [
-    280,
-    280
-   ],
-   "wrong_arrangements_rejected": null
-  }
+   280,
+   280
+  ]
  }
 ]

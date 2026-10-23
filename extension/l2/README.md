@@ -34,16 +34,22 @@ python3 extension/verify/fill_check.py --level 2
 - Lint note: the shared lint forbids the word "price" (book price rule), so shop items say "cost" and "tag". It also forbids "biggest/bigger": use greatest/larger.
 - The 7-word duplicate gate also looks at the holiday workbook text, so a holiday sentence frame ("pay exactly. Use the fewest notes and coins", "How many ... of all sizes", "no tutor") was reworded in every unit; the REVIEW list (same skeleton, other numbers) is expected and was read (see AUDIT_NOTES.md).
 
-## Inventory (items per tier = Start here / Think harder / Go further / Check yourself)
+## Inventory (items per tier = Start here / Think harder / Go further / Check yourself; plus one Try item per unit)
 | Unit | Title | Items | Beyond items |
 |---|---|---|---|
-| 1 | Digit detectives (numbers to 1000) | 11 / 3 / 4 / 4 | Thousands |
-| 2 | Missing digit mysteries | 11 / 3 / 4 / 4 | Patterns in subtraction (reverse and subtract) |
+| 1 | Digit detectives | 11 / 3 / 4 / 4 | Thousands |
+| 2 | Missing digit mysteries | 11 / 3 / 4 / 4 | Patterns in subtraction |
 | 3 | Legs, wheels and arrays | 10 / 3 / 4 / 4 | The 6 times table |
 | 4 | Pattern machines | 10 / 3 / 4 / 4 | Square numbers |
 | 5 | Mystery number machines | 10 / 3 / 4 / 4 | Letters for numbers |
-| 6 | Market day (money) | 10 / 3 / 4 / 4 | Halving money |
-| 7 | Fair shares (fractions) | 10 / 3 / 4 / 4 | Equal fractions |
-| 8 | Shape builders | 10 / 3 / 4 / 4 | Cube nets (Think harder), square numbers in a pyramid |
+| 6 | Market day | 10 / 3 / 4 / 4 | Halving money |
+| 7 | Fair shares | 9 / 3 / 4 / 4 | Equal fractions |
+| 8 | Shape builders | 10 / 3 / 4 / 4 | Cube nets; Square numbers in a pyramid |
 | 9 | Measure masters | 11 / 3 / 4 / 4 | 24-hour clock |
-| 10 | Puzzle day (mixed) | 10 / 3 / 4 / 4 | Half pictures |
+| 10 | Puzzle day | 10 / 3 / 4 / 4 | Half pictures |
+
+Total 212 items plus 10 Try items; 493 answer values independently checked.
+
+## Result of the last full run
+- Both PDFs have 100 pages (even): cover, About, Welcome, Contents, Pace plan, 10 units x 7 pages (pages 6 to 75), My progress (76), Certificate (77), blank (78), Answers divider (79, a right-hand page), answers 80 to 100.
+- Gates: answers 0 mismatches; duplicates 0 shared 7-word runs; wording lint 0 errors; B&W 0 colour pixels, flat grey under 0.0005; every unit page 82 to 100 percent full, no overflow.

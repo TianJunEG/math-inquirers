@@ -230,7 +230,7 @@
      ]
     }
    },
-   "explanation": "84 = 4 × 21, 4 = 2 × 2 and 21 = 3 × 7. The ends of the tree are 2, 2, 3 and 7, so 84 = 2 × 2 × 3 × 7. 90 = 9 × 10 = 3 × 3 × 2 × 5, so 90 = 2 × 3 × 3 × 5.",
+   "explanation": "84 = 4 × 21 = 2 × 2 × 3 × 7. 90 = 9 × 10 = 3 × 3 × 2 × 5, so 90 = 2 × 3 × 3 × 5.",
    "figright": true
   },
   {
@@ -287,191 +287,10 @@
    "explanation": "Try each prime and see if 26 take away that prime is also prime: 26 − 3 = 23, 26 − 7 = 19 and 26 − 13 = 13 all work. 26 − 2, 26 − 5, 26 − 11, 26 − 17 are 24, 21, 15 and 9, which are not prime. There are 3 ways."
   },
   {
-   "id": "L6U02-S06",
-   "tier": "start",
-   "text": "Use the divisibility tests. Circle Yes or No.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "Is 372 a multiple of 4?   {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "Yes"
-      ],
-      "text": "Yes"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Is 2457 a multiple of 3?   {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "Yes"
-      ],
-      "text": "Yes"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Is 6835 a multiple of 9?   {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "No"
-      ],
-      "text": "No"
-     }
-    }
-   ],
-   "explanation": "(a) 372: the last 2 digits, 72, are in the 4 times table (72 = 4 × 18), so Yes. (b) 2457: the digits add to 2 + 4 + 5 + 7 = 18, a multiple of 3, so Yes. (c) 6835: the digits add to 22, which is not a multiple of 9, so No."
-  },
-  {
-   "id": "L6U02-S07",
-   "tier": "start",
-   "text": "Test whether 113 is prime. You only need to test 2, 3, 5 and 7.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "113 mod 2 = {b}, mod 3 = {b}, mod 5 = {b}, mod 7 = {b}",
-     "answer": {
-      "value": [
-       "1",
-       "2",
-       "3",
-       "1"
-      ],
-      "text": "1, 2, 3, 1"
-     }
-    },
-    {
-     "label": "b",
-     "text": "Is 113 prime?   {circ:Yes|No}",
-     "answer": {
-      "value": [
-       "Yes"
-      ],
-      "text": "Yes"
-     }
-    },
-    {
-     "label": "c",
-     "text": "Is 119 prime?   {circ:Yes|No}   If not, 119 = {b} × {b}.",
-     "answer": {
-      "value": [
-       "No",
-       "7",
-       "17"
-      ],
-      "text": "No, 7 × 17"
-     }
-    }
-   ],
-   "explanation": "113 = 56 × 2 + 1, 113 = 37 × 3 + 2, 113 = 22 × 5 + 3 and 113 = 16 × 7 + 1. No remainder is 0, and the next prime 11 is too big (11 × 11 = 121), so 113 is prime. 119 = 7 × 17, so 119 is not prime."
-  },
-  {
-   "id": "L6U02-S08",
-   "tier": "start",
-   "text": "Who am I? Each riddle has only one answer.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "I am a prime number between 40 and 60. My digits add to 8. I am {b}.",
-     "answer": {
-      "value": [
-       "53"
-      ],
-      "text": "53"
-     }
-    },
-    {
-     "label": "b",
-     "text": "I am a prime number between 60 and 80. If you add 2 to me, you get another prime. I am {b}.",
-     "answer": {
-      "value": [
-       "71"
-      ],
-      "text": "71"
-     }
-    }
-   ],
-   "explanation": "(a) The primes between 40 and 60 are 41, 43, 47, 53 and 59. Only 53 has digits that add to 8. (b) The primes between 60 and 80 are 61, 67, 71, 73 and 79. Adding 2 gives 63, 69, 73, 75, 81, and only 73 is prime, so I am 71."
-  },
-  {
-   "id": "L6U02-S10",
-   "tier": "start",
-   "text": "Predict what this code says.",
-   "page": 2,
-   "parts": [
-    {
-     "label": "a",
-     "text": "The first number it says is {b}.",
-     "answer": {
-      "value": [
-       "14"
-      ],
-      "text": "14"
-     }
-    },
-    {
-     "label": "b",
-     "text": "It says {b} numbers.",
-     "answer": {
-      "value": [
-       "5"
-      ],
-      "text": "5"
-     }
-    },
-    {
-     "label": "c",
-     "text": "The last number it says is {b}.",
-     "answer": {
-      "value": [
-       "70"
-      ],
-      "text": "70"
-     }
-    }
-   ],
-   "figure": {
-    "type": "l6_code",
-    "prog": [
-     [
-      "var",
-      "set x to (0)"
-     ],
-     [
-      "ctl",
-      "repeat (10)",
-      [
-       [
-        "var",
-        "change x by (7)"
-       ],
-       [
-        "ctl",
-        "if <(x) mod (2) = (0)> then",
-        [
-         [
-          "look",
-          "say (x) for (1) seconds"
-         ]
-        ]
-       ]
-      ]
-     ]
-    ]
-   },
-   "explanation": "x goes 7, 14, 21, 28, 35, 42, 49, 56, 63, 70. The code says x only when x mod 2 = 0, that is when x is even. It says 14, 28, 42, 56 and 70. The first is 14, there are 5 numbers, and the last is 70.",
-   "figside": true
-  },
-  {
    "id": "L6U02-S04",
    "tier": "start",
    "text": "This code counts the factors of n. Fill in the trace table.",
-   "page": 3,
+   "page": 2,
    "parts": [
     {
      "label": "a",
@@ -553,13 +372,42 @@
      "ch": 8
     }
    },
-   "explanation": "n mod d for d = 1 to 6: 0, 0, 2, 0, 0, 2, so the count goes 1, 2, 2, 3, 4, 4. The code says 4. But 20 has 6 factors: 1, 2, 4, 5, 10 and 20. The loop stops at d = 6 and misses 10 and 20. To count every factor, repeat 20 times."
+   "explanation": "n mod d for d = 1 to 6 is 0, 0, 2, 0, 0, 2, so count goes 1, 2, 2, 3, 4, 4: it says 4. But 20 has 6 factors (1, 2, 4, 5, 10, 20): the loop stops at d = 6 and misses 10 and 20. Repeat 20 times to count all."
+  },
+  {
+   "id": "L6U02-S08",
+   "tier": "start",
+   "text": "Who am I? Each riddle has only one answer.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "I am a prime number between 40 and 60. My digits add to 8. I am {b}.",
+     "answer": {
+      "value": [
+       "53"
+      ],
+      "text": "53"
+     }
+    },
+    {
+     "label": "b",
+     "text": "I am a prime number between 60 and 80. If you add 2 to me, you get another prime. I am {b}.",
+     "answer": {
+      "value": [
+       "71"
+      ],
+      "text": "71"
+     }
+    }
+   ],
+   "explanation": "(a) The primes between 40 and 60 are 41, 43, 47, 53 and 59. Only 53 has digits that add to 8. (b) The primes between 60 and 80 are 61, 67, 71, 73 and 79. Adding 2 gives 63, 69, 73, 75, 81, and only 73 is prime, so I am 71."
   },
   {
    "id": "L6U02-S09",
    "tier": "start",
    "text": "Most numbers have an even number of factors. Some do not.",
-   "page": 3,
+   "page": 2,
    "parts": [
     {
      "label": "a",
@@ -593,6 +441,158 @@
     }
    ],
    "explanation": "(a) 81: 1 × 81, 3 × 27 and 9 × 9 give 1, 3, 9, 27, 81. (b) 9 is paired with itself. (c) 64 = 8 × 8 is a square, so it has an odd number (7). 50 has 6 factors and 72 has 12."
+  },
+  {
+   "id": "L6U02-S06",
+   "tier": "start",
+   "text": "Use the divisibility tests. Circle Yes or No.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Is 372 a multiple of 4?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is 2457 a multiple of 3?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Is 6835 a multiple of 9?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "(a) 372: the last 2 digits, 72, are in the 4 times table (72 = 4 × 18), so Yes. (b) 2457: the digits add to 2 + 4 + 5 + 7 = 18, a multiple of 3, so Yes. (c) 6835: the digits add to 22, which is not a multiple of 9, so No."
+  },
+  {
+   "id": "L6U02-S07",
+   "tier": "start",
+   "text": "Test whether 113 is prime. You only need to test 2, 3, 5 and 7.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "113 mod 2 = {b}, mod 3 = {b}, mod 5 = {b}, mod 7 = {b}",
+     "answer": {
+      "value": [
+       "1",
+       "2",
+       "3",
+       "1"
+      ],
+      "text": "1, 2, 3, 1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is 113 prime?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Is 119 prime?   {circ:Yes|No}   If not, 119 = {b} × {b}.",
+     "answer": {
+      "value": [
+       "No",
+       "7",
+       "17"
+      ],
+      "text": "No, 7 × 17"
+     }
+    }
+   ],
+   "explanation": "113 leaves remainders 1, 2, 3 and 1 when divided by 2, 3, 5 and 7. None is 0, and 11 × 11 = 121 is too big to need testing, so 113 is prime. 119 = 7 × 17 is not prime."
+  },
+  {
+   "id": "L6U02-S10",
+   "tier": "start",
+   "text": "Predict what this code says.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The first number it says is {b}.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It says {b} numbers.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The last number it says is {b}.",
+     "answer": {
+      "value": [
+       "70"
+      ],
+      "text": "70"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set x to (0)"
+     ],
+     [
+      "ctl",
+      "repeat (10)",
+      [
+       [
+        "var",
+        "change x by (7)"
+       ],
+       [
+        "ctl",
+        "if <(x) mod (2) = (0)> then",
+        [
+         [
+          "look",
+          "say (x) for (1) seconds"
+         ]
+        ]
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "x goes 7, 14, 21, 28, 35, 42, 49, 56, 63, 70. The code says x only when x mod 2 = 0, that is when x is even. It says 14, 28, 42, 56 and 70. The first is 14, there are 5 numbers, and the last is 70.",
+   "figside": true
   },
   {
    "id": "L6U02-S11",
@@ -776,7 +776,7 @@
      ""
     ]
    },
-   "explanation": "Test 2, 3, 5 and 7 only, because 11 × 11 = 121 is above 120. 101, 103, 107, 109 and 113 have no factor from the list. The odd non-primes are 105 (5), 111 (3), 115 (5), 117 (3) and 119 (7). Pairs that differ by 2: 101 and 103, 107 and 109. (c) The odd multiples of 7 are 105 = 7 × 15 and 119 = 7 × 17."
+   "explanation": "Test 2, 3, 5 and 7 only: 11 × 11 = 121 is above 120. 101, 103, 107, 109 and 113 have no such factor. The odd non-primes are 105, 111, 115, 117 and 119. Differ by 2: 101 and 103, 107 and 109. (c) 105 = 7 × 15 and 119 = 7 × 17."
   },
   {
    "id": "L6U02-G01",
@@ -821,7 +821,7 @@
      "Factors of 72:"
     ]
    },
-   "explanation": "(a) 72: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72 is 12 factors. In 2 × 2 × 2 × 3 × 3 a factor uses 0 to 3 twos (4 choices) and 0 to 2 threes (3 choices): 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5: 3 × 3 × 2 = 18 factors. (c) 60 = 2 × 2 × 3 × 5 has 3 × 2 × 2 = 12 factors. Smaller numbers have fewer."
+   "explanation": "(a) 72 has 12 factors: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. A factor uses 0 to 3 twos and 0 to 2 threes: 4 × 3 = 12. (b) 180 = 2 × 2 × 3 × 3 × 5 gives 3 × 3 × 2 = 18. (c) 60 = 2 × 2 × 3 × 5 gives 3 × 2 × 2 = 12, and no smaller number has 12."
   },
   {
    "id": "L6U02-G02",
