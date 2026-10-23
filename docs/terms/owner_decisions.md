@@ -261,3 +261,6 @@ Owner approved the cover publisher line "Preciouslyours Pte Ltd, trading as Math
 ## 23 Oct 2026 (night): TERMCHECK-YES, RETROFIT-YES
 - TERMCHECK-YES: run a similarity check of all 40 Level 1 term lessons against the private school-paper and SASMO files (report first, fixes after the term books integration finishes).
 - RETROFIT-YES: retrofit the thin non-routine spots (work backwards, three-number equations, multiplication true/false) into Level 1 lessons 1-20. Timing not stated by owner: default is version 2 after the first release unless owner says RETROFIT-NOW.
+
+## 23 Oct 2026 (night): RETROFIT-NOW
+Owner chose RETROFIT-NOW: retrofit the thin non-routine spots (work backwards, three-number equations, multiplication true/false) into Level 1 lessons 1-20 BEFORE the first release, together with any rewrites from the TERMCHECK. Sequenced after the term books integration finishes (same files).
