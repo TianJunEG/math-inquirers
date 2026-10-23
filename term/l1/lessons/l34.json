@@ -2588,7 +2588,7 @@
    "tier": "investigation",
    "title": "Fold, mark and open",
    "first": "Fold a paper square in half. Mark one dot on it, away from the fold. How many dots when you open it? ____",
-   "text": "Open it. Write one thing that is the same about the two dots.",
+   "text": "Open it. Write one thing that is the same about the dots.",
    "lines": 4,
    "draw": 0,
    "answer": "There will be 2 dots. The two dots are the same distance from the fold line, one on each side. The paper had two layers, so one dot made two.",
@@ -2680,7 +2680,7 @@
   },
   {
    "id": "E3",
-   "text": "A paper square is folded so that the left edge meets the right edge.",
+   "text": "A square is folded so the left edge meets the right edge.",
    "parts": [
     {
      "l": "",

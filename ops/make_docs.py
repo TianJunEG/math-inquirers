@@ -214,18 +214,18 @@ def tutor_notes():
     hdr = [P(x, CELLB) for x in ("Lesson", "Live / recording", "Strength seen (specific)", "Stuck on / needed help with", "Engagement and how they worked with others", "Idea for next time")]
     rows = [hdr]
     for n in range(1, 11):
-        name = "Lesson %d" % n + ("\n(Challenge Quest / Puzzle Day)" if n == 10 else "")
+        name = "Lesson %d" % n + ("\n(last lesson)" if n == 10 else "")
         rows.append([P(name.replace("\n", "<br/>"), CELL), P("Live ____<br/>Rec. ____", CELL), "", "", "", ""])
     ws = [24 * mm, 22 * mm, 56 * mm, 56 * mm, 56 * mm, W - 214 * mm]
     t = grid(rows, ws, pad=3)
-    t._argH[1:] = [13 * mm] * 10
+    t._argH[1:] = [10.5 * mm] * 10
     s += [t, Spacer(1, 5)]
     s.append(P("End of program (fills the parent report)", H2))
     rows = [[P("<b>What we did, in my words</b>", CELL), P("<b>Strengths to name (2 or 3)</b>", CELL), P("<b>One next step</b>", CELL),
              P("<b>Recommended level</b><br/>%s same level  %s up  %s talk first" % (BOX, BOX, BOX), CELL), P("<b>Practice ideas (2 or 3)</b>", CELL)],
             ["", "", "", "", ""]]
     t2 = grid(rows, [W / 5] * 5)
-    t2._argH[1] = 30 * mm
+    t2._argH[1] = 26 * mm
     s += [t2, Spacer(1, 3),
           P("Safeguarding or wellbeing concern? Do not write details here: tell the owner the same day by phone or in person.", BS)]
     build(OUT / "tutor_notes_sheet.pdf", s, size=pg, footer="PRIVATE: tutor notes", title="Tutor notes sheet")
