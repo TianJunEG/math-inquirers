@@ -17,14 +17,13 @@
    "Fractions as numbers, with notation such as 1/2 and 1/4, are Primary 2 (p. 33): this lesson uses the words half and quarter and pictures only, no fraction notation",
    "Equal area in different shapes (the same half cut in different ways) and a fraction of a number of squares are Primary 2 and Primary 3 ideas (pp. 33 and 36)"
   ],
-  "note": "Strand label for the tutor only. Start here is school Primary 1 work: fold a circle into halves and quarters, say whether a coloured part is a half or a quarter, count the equal parts, name a half circle and a quarter circle, and draw a line that cuts a square into 2 or 4 equal parts. No Primary 1 school paper in the sample we studied has an equal-parts item, so the wording is marked unverified; the Primary 1 papers do name and count shapes, which is what the warm-up uses. Think harder cuts a square into halves in several ways (DIAG), counts the small squares in a half and a quarter of a rectangle, tests four statements, and meets the doubling of parts with each fold (TAB). BEYOND PRIMARY 1 ON PURPOSE, at Think harder and Go further only: Same Half, Different Shape (three halves of a 2 by 4 rectangle with different shapes and the same 4 squares), guessing a shape from clues (LOG), and finding the whole from a quarter (BACK). Do not call this lesson MOE-aligned. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type. Contest tag (tutor only): equal parts and fold lines; equal area in different shapes."
+  "note": "Strand label for the tutor only. Start here is school Primary 1 work: fold a circle into halves and quarters, say whether a coloured part is a half or a quarter, count the equal parts, name a half circle and a quarter circle, and draw a line that cuts a square into 2 or 4 equal parts. No Primary 1 school paper in the sample we studied has an equal-parts item, so the wording is marked unverified; the Primary 1 papers do name and count shapes, which is what the warm-up uses. Think harder cuts a square into halves in several ways (DIAG), counts the small squares in a half and a quarter of a rectangle, tests four statements, and tests four statements. BEYOND PRIMARY 1 ON PURPOSE, at Think harder and Go further only: Same Half, Different Shape (three halves of a 2 by 4 rectangle with different shapes and the same 4 squares), guessing a shape from clues (LOG), and finding the whole from a quarter (BACK). Do not call this lesson MOE-aligned. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item and a non-routine type. Contest tag (tutor only): equal parts and fold lines; equal area in different shapes."
  },
  "contest_moves": [
   "draw it: cut a square into 2 equal parts in several different ways (DIAG)",
   "logic: guess the shape from its clues (LOG)",
   "same half, different shape: equal area is not equal shape",
-  "work backwards: from a quarter find the whole (BACK)",
-  "make a table: the number of parts doubles with each fold (TAB)"
+  "work backwards: from a quarter find the whole (BACK)"
  ],
  "contest_where": "Think harder, Go further and the Investigation",
  "objectives": [
@@ -1021,7 +1020,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 1 to 3 aloud. Children work on their own with their paper shapes; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: is half coloured, for three shapes. Question 2: a circle cut into equal parts, how many and what are they called. Question 3: colour one half and one quarter."
+   "note": "Read questions 1 to 3 aloud. Children work on their own with their paper shapes; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: is half coloured, for three shapes. Question 2: shape B again, how many equal parts and what is each part called. Question 3: colour one half and one quarter."
   },
   {
    "id": "s-ws1ans",
@@ -1060,7 +1059,7 @@
      "short": true
     }
    ],
-   "note": "Read questions 4 to 6 aloud. Question 4: how many halves make a whole, how many quarters make a whole. Question 5: find the half circle and the quarter circle among four shapes. Question 6: use a ruler to draw lines that cut a square into 2 equal parts and another into 4 equal parts. Children may fold a paper square to check. Wait 10 seconds before helping."
+   "note": "Read questions 4 to 6 aloud. Question 4: how many halves make a whole circle, how many quarters make a whole square. Question 5: find the half circle and the quarter circle among four shapes. Question 6: use a ruler to draw lines that cut a square into 2 equal parts and another into 4 equal parts. Children may fold a paper square to check. Wait 10 seconds before helping."
   },
   {
    "id": "s-ws2ans",
@@ -1832,7 +1831,7 @@
      },
      {
       "k": "READ",
-      "text": "Page 1, Start here. Question 1: look at the three shapes. Is half of each shape coloured? Circle Yes or No for each. Question 2: the circle is cut into equal parts. Fill in how many parts, then circle half or quarter. Question 3: colour one half of the square, then colour one quarter of the circle."
+      "text": "Page 1, Start here. Question 1: look at the three shapes. Is half of each shape coloured? Circle Yes or No for each. Question 2: look at shape B in question 1. Fill in how many equal parts, then circle half or quarter. Question 3: colour one half of the square, then colour one quarter of the circle."
      },
      {
       "k": "WORK",
@@ -1846,7 +1845,7 @@
      },
      {
       "k": "READ",
-      "text": "Question 1: shape A yes, shape B no, shape C yes. Question 2: 4 equal parts; quarter. Question 3: any one part of the square and any one part of the circle. Tick your own page with a tick."
+      "text": "Question 1: shape A yes, shape B no, shape C yes. Question 2: 4 equal parts; a quarter. Question 3: any one part of the square and any one part of the circle. Tick your own page with a tick."
      },
      {
       "k": "SAY",
@@ -1896,7 +1895,7 @@
      },
      {
       "k": "STUCK",
-      "text": "Q1: count the parts, then check the coloured part and the white part match. Q2: touch each part and count. Q3: the shape is already cut into parts: colour one part. Q4: count the parts of the whole circle. Q5: the half circle is half of a circle, the quarter circle is a quarter of a circle. Q6: fold a paper square to find where the line goes."
+      "text": "Q1: count the parts, then check the coloured part and the white part match. Q2: look back at shape B and count its parts. Q3: the shape is already cut into parts: colour one part. Q4: think of the circle cut into halves and the square cut into quarters. Q5: the half circle is half of a circle, the quarter circle is a quarter of a circle. Q6: fold a paper square to find where the line goes."
      },
      {
       "k": "STUCK",
@@ -1904,7 +1903,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Think harder cuts a square into halves in different ways, counts squares in a half and a quarter, tests four statements and fills a fold table. Go further has Same Half, Different Shape, two shape riddles and a quarter that gives the whole (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+      "text": "Think harder cuts a square into halves in different ways, counts squares in a half and a quarter, and tests four statements. Go further has Same Half, Different Shape, two shape riddles and a quarter that gives the whole (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
      }
     ]
    },
@@ -1974,7 +1973,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. The square is cut into equal parts. One part is coloured. Is the coloured part a half or a quarter? Circle one. E2. How many halves make 1 whole? Write the number in the box. E3. A square is cut into 2 parts that are not the same size. Are they halves? Circle Yes or No."
+      "text": "E1. A circle is cut into 4 equal parts. Is each part a half or a quarter? Circle one. E2. Fill in the blank: blank halves make 1 whole. E3. A square is cut into 2 parts that are not the same size. Are they halves? Circle Yes or No."
      },
      {
       "k": "WORK",
@@ -2158,11 +2157,11 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "The circle is cut into equal parts. Fill in the blanks.",
+    "text": "Look at shape B in question 1. Fill in the blanks.",
     "parts": [
      {
       "l": "a",
-      "text": "The circle has [] equal parts.",
+      "text": "Shape B has [] equal parts.",
       "ans": "4",
       "val": 4
      },
@@ -2182,22 +2181,13 @@
      4,
      "quarter"
     ],
-    "hint": "Touch each part and count. Then think: is a part one of 2 equal parts or one of 4 equal parts?",
-    "solution": "The circle has 4 equal parts. One of 4 equal parts is a quarter.",
+    "hint": "Touch each part of shape B and count. Then think: is a part one of 2 equal parts or one of 4 equal parts?",
+    "solution": "Shape B has 4 equal parts. One of 4 equal parts is a quarter.",
     "mistakes": [
      "Counting the coloured part only and writing 1.",
      "Writing half: a half is one of 2 equal parts."
     ],
-    "mins": 2.5,
-    "visual": {
-     "type": "shapes2d",
-     "shape": "circle",
-     "parts": 4,
-     "shade": [
-      2
-     ],
-     "size": 80
-    }
+    "mins": 2
    },
    {
     "id": "S3",
@@ -2271,29 +2261,13 @@
      2,
      4
     ],
-    "hint": "Count the equal parts in each picture. All the parts together make 1 whole.",
-    "solution": "The circle has 2 halves, and 2 halves make 1 whole. The square has 4 quarters, and 4 quarters make 1 whole.",
+    "hint": "Think of a circle cut into halves and a square cut into quarters. All the parts together make 1 whole.",
+    "solution": "A circle cut into 2 equal parts has 2 halves, and 2 halves make 1 whole. A square cut into 4 equal parts has 4 quarters, and 4 quarters make 1 whole.",
     "mistakes": [
      "Writing 1, the number of wholes.",
-     "Mixing up the two pictures."
+     "Mixing up halves and quarters."
     ],
-    "mins": 2.5,
-    "visuals": [
-     {
-      "type": "shapes2d",
-      "shape": "circle",
-      "parts": 2,
-      "label": "circle",
-      "size": 80
-     },
-     {
-      "type": "shapes2d",
-      "shape": "square",
-      "parts": 4,
-      "label": "square",
-      "size": 80
-     }
-    ]
+    "mins": 2
    },
    {
     "id": "S5",
@@ -2533,47 +2507,6 @@
       "s": "A half circle is the same size as a quarter circle."
      }
     ]
-   },
-   {
-    "id": "T4",
-    "page": 3,
-    "tier": "think",
-    "text": "Mei folds a paper circle in half again and again. Fill in the table.",
-    "parts": [],
-    "answer": "2, 4, 8",
-    "val": [
-     8
-    ],
-    "hint": "After each fold, every part is cut into 2 equal parts. Double the parts each time.",
-    "solution": "1 fold makes 2 equal parts. A 2nd fold cuts each part in 2: 4 parts. A 3rd fold cuts each of the 4 parts in 2: 8 parts. The parts double with each fold.",
-    "mistakes": [
-     "Adding 1 part for each fold (writing 3 or 5).",
-     "Writing 6 for 3 folds."
-    ],
-    "mins": 3.5,
-    "visual": {
-     "type": "table",
-     "head": [
-      "Folds",
-      "1",
-      "2",
-      "3"
-     ],
-     "rows": [
-      [
-       "Equal parts",
-       "2",
-       "4",
-       "[]"
-      ]
-     ],
-     "col_w": [
-      3,
-      1,
-      1,
-      1
-     ]
-    }
    }
   ],
   "go": [
@@ -2595,16 +2528,6 @@
      },
      {
       "l": "b",
-      "text": "Is half of each rectangle coloured? Circle Yes or No.",
-      "ans": "Yes",
-      "val": "Yes",
-      "choices": [
-       "Yes",
-       "No"
-      ]
-     },
-     {
-      "l": "c",
       "text": "Do the three coloured parts have the same shape? Circle Yes or No.",
       "ans": "No",
       "val": "No",
@@ -2614,12 +2537,11 @@
       ]
      }
     ],
-    "answer": "4, 4, 4; Yes; No",
+    "answer": "4, 4, 4; No",
     "val": [
      4,
      4,
      4,
-     "Yes",
      "No"
     ],
     "hint": "Count the coloured squares in each rectangle. Then look at the shape of the coloured part: is it a long bar, a block or a bent shape?",
@@ -2720,11 +2642,11 @@
     "id": "G2",
     "page": 4,
     "tier": "go",
-    "text": "Guess the shape. Read the clues and circle the shape.",
+    "text": "Guess the shape. Circle my name.",
     "parts": [
      {
       "l": "a",
-      "text": "I have 1 straight side and 1 curved side. 2 of me make a circle. Circle my name.",
+      "text": "I have 1 straight side and 1 curved side. 2 of me make a circle.",
       "ans": "half circle",
       "val": "half circle",
       "choices": [
@@ -2735,7 +2657,7 @@
      },
      {
       "l": "b",
-      "text": "I am cut from a square. I have 3 corners. 2 of me make the square. Circle my name.",
+      "text": "I am cut from a square. I have 3 corners. 2 of me make the square.",
       "ans": "triangle",
       "val": "triangle",
       "choices": [
@@ -2817,29 +2739,22 @@
    "page": 5,
    "tier": "investigation",
    "title": "Fold twice",
-   "first": "Fold a paper square in half so the edges meet. Open it and draw the fold on square A below. How many parts are there? Write the number.",
-   "text": "Fold a paper square in half, and in half again, so there are 4 equal parts. Draw the fold lines on squares B and C. Make the 4 parts in a different way each time. Many answers are right.",
+   "first": "Fold a paper square in half so the edges meet. Open it. How many parts has the fold made? Write the number.",
+   "text": "Fold a paper square in half, and in half again, so there are 4 equal parts. Draw the fold lines on square A. Do it again a different way on square B. Many answers are right.",
    "visuals": [
     {
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
      "label": "A",
-     "size": 80
+     "size": 64
     },
     {
      "type": "shapes2d",
      "shape": "square",
      "parts": 1,
      "label": "B",
-     "size": 80
-    },
-    {
-     "type": "shapes2d",
-     "shape": "square",
-     "parts": 1,
-     "label": "C",
-     "size": 80
+     "size": 64
     }
    ],
    "draw": false,
@@ -2850,7 +2765,7 @@
    "look_for": "A child who folds a paper square to test a way, who says 4 equal parts can look different (squares, triangles, strips), and who checks by laying the parts on top of each other. Credit any clear reason. Do not mark a child down for stopping at one way.",
    "mistakes": [
     "Drawing 3 lines that make parts that are not the same size.",
-    "Drawing the same way on all three squares."
+    "Drawing the same way on both squares."
    ],
    "mins": 8
   }
@@ -2864,34 +2779,25 @@
  "exit": [
   {
    "id": "E1",
-   "text": "The square is cut into equal parts. One part is coloured. Is the coloured part a half or a quarter? Circle one.",
+   "text": "A circle is cut into 4 equal parts. Is each part a half or a quarter? Circle one.",
    "parts": [],
    "answer": "quarter",
    "val": [
     "quarter"
    ],
-   "solution": "The square has 4 equal parts, so one part is a quarter.",
+   "solution": "The circle has 4 equal parts, so each part is a quarter.",
    "mistakes": [
-    "Saying half for any coloured part.",
+    "Saying half for any part.",
     "Not counting the parts."
    ],
    "choices": [
     "half",
     "quarter"
-   ],
-   "visual": {
-    "type": "shapes2d",
-    "shape": "square",
-    "parts": 4,
-    "shade": [
-     3
-    ],
-    "size": 100
-   }
+   ]
   },
   {
    "id": "E2",
-   "text": "How many halves make 1 whole? Write the number.",
+   "text": "Fill in the blank.",
    "parts": [
     {
      "l": "",
@@ -3576,7 +3482,7 @@
   "The gallery shows faces and fingers, not tables or papers. Ask for a finger answer when you need to see something. Answers on three are said quietly with the microphone off; a child who is invited to share switches the microphone on, then off again. The still-stuck photo is of the whole of workbook page 5 (Investigation, exit ticket and look-back)."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first, with your own paper shapes and a ruler. Check: S1 yes, no, yes; S2 4 equal parts, quarter; S3 any one part of the square and of the circle; S4 2 and 4; S5 shape 2 and shape 3; S6 one line and two lines through the middle; T1 three different cuts, Yes; T2 4 and 2; T3 true, false, true, false; T4 8; G1 4, 4, 4, Yes, No; G2 half circle, triangle; G3 12 and 6; I1 2, then at least two ways to make 4 equal parts; E1 quarter; E2 2; E3 No.",
+  "Solve every workbook question yourself first, with your own paper shapes and a ruler. Check: S1 yes, no, yes; S2 4 equal parts, quarter; S3 any one part of the square and of the circle; S4 2 and 4; S5 shape 2 and shape 3; S6 one line and two lines through the middle; T1 three different cuts, Yes; T2 4 and 2; T3 true, false, true, false; G1 4, 4, 4, then No; G2 half circle, triangle; G3 12 and 6; I1 2, then at least two ways to make 4 equal parts; E1 quarter; E2 2; E3 No.",
   "Tell families before Term 4 starts (the goodbye in Lesson 30 says so): your Term 4 book is in the house; tear out the fold-shapes page along the dashed line; a grown-up cuts out the 10 shapes (4 circles, 4 squares, 2 long rectangles) and keeps them in an envelope; a ruler and a coloured pencil. No printer: a grown-up cuts 4 circles (trace round a cup), 4 squares and 2 long strips from plain paper. Also tell them the start date of Term 4.",
   "Have the slides open. Have your own folded circle and square to show on camera if you wish. Say equal, half, quarter and whole the same way every time, and keep the sentence: there are two equal parts, so each part is a half. Do not write or say 1/2 or 1/4.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive. Say the recording notice, then start the recording; once it is running, avoid first names. Nobody holds paper or a folded shape up to the camera.",

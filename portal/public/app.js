@@ -124,8 +124,8 @@
     var p = h('input', { type: 'password', id: 'cpin', inputmode: 'numeric', pattern: '[0-9]*', maxlength: 6, autocomplete: 'off', required: true });
     c.appendChild(h('form', { novalidate: true, onsubmit: function (ev) {
       ev.preventDefault();
-      if (!n.value.trim()) return run(async function () { throw new Error('Please enter a display name.'); });
-      if (!/^[0-9]{4,6}$/.test(p.value)) return run(async function () { throw new Error('pin_format'); });
+      if (!n.value.trim()) return run(async function () { throw M.say('Please enter a display name.'); });
+      if (!/^[0-9]{4,6}$/.test(p.value)) return run(async function () { throw M.say('The PIN must be 4 to 6 digits.'); });
       run(function () { return rpc('add_child', { p_name: n.value, p_level: Number(l.value), p_pin: p.value }); }, 'Child added. Their PIN is saved securely (we cannot show it again).');
     } }, h('h3', { text: 'Add a child' }),
       h('div', { class: 'grid2' },
@@ -229,7 +229,7 @@
       var tok = S.session.access_token;
       var r = await fetch('/api/stripe-create-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok }, body: JSON.stringify({ enrolment_id: enrolmentId }) });
       var j = await r.json().catch(function () { return {}; });
-      if (!r.ok || !j.url) throw new Error(j.error || 'Could not start the payment. Please try again.');
+      if (!r.ok || !j.url) throw M.say('Could not start the payment. Nothing was charged. Please try again.');
       location.href = j.url;   // top-level redirect to Stripe Checkout; card details never touch our pages
     } catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Try again'; } M.notice(box.appendChild(h('div')), 'err', M.errText(e)); }
   }
@@ -247,7 +247,7 @@
     var t = h('input', { type: 'text', id: 'del-confirm', placeholder: 'Type DELETE', autocomplete: 'off', 'aria-label': 'Type DELETE to confirm' });
     d.appendChild(t);
     d.appendChild(h('p', null, h('button', { class: 'btn danger', type: 'button', id: 'del-btn', text: 'Delete everything', onclick: async function () {
-      if (t.value.trim() !== 'DELETE') return run(async function () { throw new Error('Type DELETE to confirm.'); });
+      if (t.value.trim() !== 'DELETE') return run(async function () { throw M.say('Type the word DELETE in the box to confirm.'); });
       try { await rpc('delete_my_data', {}); await M.sb().auth.signOut(); flash('ok', 'Your data has been deleted.'); } catch (e) { flash('err', M.errText(e)); }
       await refresh();
     } })));

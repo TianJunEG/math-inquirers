@@ -227,7 +227,7 @@ Cold joining: yes. The Remember warm-ups carry place value to 10 000, the times 
 - **Remember (6 min).** (1) Count the squares in a 3 by 4 grid: 12. (2) Name a triangle and a rectangle. (3) 1 + 4 + 9 (the squares of 1, 2, 3, re-taught).
 - **Start here (6).** (1) A 2 by 2 grid: 4 small squares and 1 large, 5 in all (V9.1). (2) A 3 by 3 grid: 9 + 4 + 1 = 14 (V9.1). (3) Count the small triangles in a figure. (4) A grid of 3 by 4 unit squares: how many in all? (5) Count 2 by 2 squares in a 3 by 3 grid: 4. (6) A story with a chessboard row.
 - **Think harder (4).** (1) **PAT.** A triangle has 3 lines drawn from its top corner to its base, so the base is cut into 4 parts. How many triangles of every size? 10 (V9.3). (2) How many rectangles in a 2 by 3 grid? 18 (V9.2, T). (3) **TAB.** Complete a table of grid size (1 by 1 to 4 by 4) against the number of squares: 1, 5, 14, 30 (V9.1, V9.6). (4) A figure of two overlapping squares: count the squares.
-- **Go further (3).** G1 **Beyond (named): "Triangles Everywhere".** A triangular grid of side 4 holds 27 triangles of all sizes; sides 1 to 5 give 1, 5, 13, 27, 48 (V9.4). Level note: contest-style counting; the counting is Primary 4 arithmetic. G2 **GEO.** Squares in a 5 by 5 grid: 55 (V9.1). G3 Rectangles in a 4 by 4 grid: 100 (V9.2). Also pages: how many digits to number pages 1 to 250? 642 (V9.5), used in lesson 34.
+- **Go further (3).** G1 **Beyond (named): "Triangles Everywhere".** A triangular grid of side 4 holds 27 triangles of all sizes; sides 1 to 5 give 1, 5, 13, 27, 48 (V9.4). Level note: contest-style counting; the counting is Primary 4 arithmetic. G2 **GEO.** Squares in a 5 by 5 grid: 55 (V9.1). G3 Rectangles in a 4 by 4 grid: 100 (V9.2).
 - **Non-routine.** PAT T, TAB T, GEO G.
 - **Holiday overlap: LOW (H6 counted angles in a fan, H7 S6 tile perimeters).** Do not reuse the fan of 25, 40 and 25 degrees or 10 angles. New.
 - **Numbers.** Grids to 5 by 5.
@@ -504,7 +504,7 @@ Cold joining: yes. The Remember warm-ups carry naming a cube and a cuboid, the a
 - **Remember (6 min).** (1) Area of a 6 by 5 rectangle. (2) Perimeter of a 6 by 5 rectangle. (3) 8 x 8.
 - **Start here (6).** (1) Area 84 cm2 and width 7 cm: length 12 cm (X3.1). (2) Perimeter 54 cm and length 16 cm: width 11 cm (X3.1). (3) A square has area 64 cm2: side 8 cm (X3.1). (4) A square has perimeter 36 cm: side 9 cm (X3.1). (5) List the rectangles with whole-cm sides and area 18 cm2: 1 by 18, 2 by 9, 3 by 6. (6) Their perimeters: 38, 22, 18.
 - **Think harder (4).** (1) **GEO.** 7 identical squares in a row make a rectangle of perimeter 144 cm. Find its length and area. 63 cm and 567 cm2 (X3.2). (2) **LIST.** List all rectangles with whole-cm sides and area 72 cm2. Which has the smallest perimeter? 8 by 9, 34 cm (X3.3). (3) A table of the rectangles with perimeter 36 cm (1 by 17 to 9 by 9) and their areas: 17, 32, 45, 56, 65, 72, 77, 80, 81 (X3.5). (4) A rectangle is twice as long as it is wide and its perimeter is 54 cm: 9 cm by 18 cm (X3.8).
-- **Go further (3).** G1 **Beyond (named): "Squares Win".** For perimeter 36 cm the area is 81 minus a square number: 81, 80, 77, 72, ... (V: 81 - 0, 81 - 1, 81 - 4, 81 - 9), so the square is the largest (X3.5). Level note: an algebra identity, secondary school. G2 **GC.** A rectangle has area 135 cm2 and perimeter 48 cm. Find its sides: 9 cm and 15 cm (X3.4). G3 A rectangle is 4 cm longer than it is wide and has area 117 cm2. Find its perimeter: 44 cm (X3.6, X3.7).
+- **Go further (3).** G1 **Beyond (named): "Squares Win".** For perimeter 36 cm the area is 81 minus a square number: 81, 80, 77, 72, ... (81 - 0, 81 - 1, 81 - 4, 81 - 9, ...), so the square is the largest (X3.5). Level note: an algebra identity, secondary school. G2 **GC.** A rectangle has area 135 cm2 and perimeter 48 cm. Find its sides: 9 cm and 15 cm (X3.4). G3 A rectangle is 4 cm longer than it is wide and has area 117 cm2. Find its perimeter: 44 cm (X3.6, X3.7).
 - **Non-routine.** GEO T, LIST T, GC G.
 - **Holiday overlap: HIGH, nearly total (H7).** H7 did 12 tiles, all rectangles of area 30, perimeter 20 (largest 25), area 40 and perimeter 26, area 36 (six rectangles, 24 smallest), 8 tiles (12 to 18), area 56 and length 8, 24 m of fencing with and without a wall. Do not reuse these numbers. The plan's S, T, G (area 24, smallest perimeter, perimeter 20) are H7's explore, S1 and S2. Verdict: Change.
 - **Numbers.** Sides 1 to 72 cm, areas to 600 cm2.
@@ -646,4 +646,200 @@ Cold joining: yes. The Remember warm-ups carry naming a cube and a cuboid, the a
 - **Figures.** `network` (exists), with curved roads (F15).
 - **Needs.** Quest block (section 6), N3, F15.
 - **Safe to miss?** The body yes; the Quest is the part to protect.
+
+---
+
+## Term 4: Create and connect (lessons 31 to 40)
+
+Cold joining: yes. The Remember warm-ups carry a fraction of a quantity, reading a bar chart, and finding the rule in a short list; every move taught in lessons 33 to 37 is taught from scratch. A December joiner of Term 1 and a school-only child both enter here on equal terms. **Safest to skip or make up: lesson 39** (the added lesson); then lessons 34, 35 and 38 (no school-paper evidence); hardest to miss: 31, 32 and 36. Lesson 40 hosts the Year Quest and the showcase.
+
+### Lesson 31. Data Detectives: Line Graphs (T4.1)
+
+- **Big idea.** A graph can be read, and a graph can be misread.
+- **Strand.** MOE P4 tables, line graphs and pie charts: read and interpret (Statistics, p. 40). Contest tag: reading a graph (19-20).
+- **Objective.** Read values, periods and rises from a line graph; compare two lines; judge a scale; estimate a missing reading from the trend. Think harder: the greatest rise; a misleading scale; two lines. Go further: fill a gap from the trend; build a graph from clues; the steepest climb.
+- **Remember (6 min).** (1) Read a bar chart with a scale of 5. (2) 35 - 28. (3) Mark 4.5 halfway between 4 and 5 on a line.
+- **Start here (6).** (1) Read the value at a point on a graph with a scale of 2 per line. (2) At which hour was the value highest? (3) How much did it rise between 2 pm and 4 pm? (4) Complete a table from the graph. (5) Read a value halfway between two lines. (6) How many more at hour 5 than at hour 2?
+- **Think harder (4).** (1) **TAB.** The temperatures at hours 1 to 6 are 21, 24, 26, 33, 31 and 35 degrees. Between which two hours was the greatest rise? Hours 3 and 4, a rise of 7 (Y1.1). (2) Two lines on one graph: at which hour do they meet? (3) **EXP.** The sales 120, 126, 132 and 138 are drawn twice: once with a scale starting at 110 and each line worth 2, once starting at 0 with each line worth 50. Which graph makes the rise look larger, and which is fairer? (4) A scale that does not start at 0: a point at 220 is not twice a point at 160.
+- **Go further (3).** G1 **Beyond (named): "Fill the Gap".** The reading at hour 2 is 12 and at hour 6 is 24, and the line is steady. What is the reading at hour 4? 18 (Y1.2). Level note: estimating between readings is not named in the syllabus. G2 **CHAL.** Build a line graph from four clues. G3 Which interval has the steepest climb, and how much per hour?
+- **Non-routine.** TAB T, EXP T, CHAL G. The plan's EX-CHAL-2 is used with new data.
+- **Holiday overlap: HIGH (H9).** H9 did a chicken-rice queue (4, 9, 18, 22, 15, 7, 3), matching four stories to four graphs, 45 to 60 bowls, steady rises (40, 55, 70), a scale starting at 40 or 100, Shops A and B (cakes), two tanks crossing at 4 hours, swimmers (50), nasi lemak 400, 52 54 56 58 on two scales. Do not reuse any, and the plan's "spot a misleading scale" is H9's C9; this lesson uses a different pair of scales and starts from a given misleading graph rather than asking the child to choose a scale. Verdict: Change.
+- **Numbers.** Values to 500; scales of 1, 2, 5, 10, 20, 50.
+- **Home materials.** Pencil, ruler, graph paper (in the book).
+- **Kit.** None.
+- **Figures.** `line_graph` (F10): scale, broken axis, one or two lines, a shaded period, hatch patterns for two lines.
+- **Misconceptions.** Reading the grid line instead of the point; the height of a point read as the rise; a line graph read as a bar graph.
+- **Needs.** F10, M18.
+- **Safe to miss?** No (lesson 32 and the Quest use graphs).
+
+### Lesson 32. Pie Charts (T4.2)
+
+- **Big idea.** The whole circle is the whole, and each sector is a fraction of it.
+- **Strand.** MOE P4 read and interpret pie charts (Statistics, p. 40); a sector as a fraction of the whole. Angle-based construction is beyond P4.
+- **Objective.** Read a pie chart as fractions of a total; find the amount for a sector; find a missing sector; compare a pie chart and a bar graph without a scale. Think harder: build from fractions and one count. Go further: true, false or not possible to tell; angles of sectors.
+- **Remember (6 min).** (1) 1/4 of 120. (2) Add 1/3 and 1/6. (3) A bar split into 8 equal parts.
+- **Start here (6).** (1) A pie chart of 80 pupils is half bus, a quarter MRT and a quarter walking: 20 walk. (2) How many take the bus? 40. (3) Which sector is the greatest? (4) Total 240: a sector of 1/3 is 80 pupils (Y2.1). (5) A sector of 1/4 is 60 (Y2.1). (6) What fraction does the remaining sector show?
+- **Think harder (4).** (1) Total 240: sectors 1/3, 1/4 and 5/12 are 80, 60 and 100 pupils, adding to 240 (Y2.1). (2) **CHAL.** A is 3/8 of the pupils. A and B together are 5/8. C is as many as B. D is the rest. 30 pupils chose C. How many pupils are there, and how many chose D? 120 and 15 (Y2.2). (3) **CMP.** A bar graph has no scale. The red bar is 9 squares tall and the blue bar is 5 squares tall, and there are 28 more in red. How many pupils in all? 98 (Y2.3). (4) The missing sector of a chart.
+- **Go further (3).** G1 **Beyond (named): "Angle of a Sector".** A sector of 1/3 turns 120 degrees, 1/4 is 90, 5/12 is 150 and 1/8 is 45; they add to 360 for the whole circle (Y2.4). Level note: pie-chart angles are Primary 6. G2 **EXP.** Each statement about a pie chart is true, false or not possible to tell. G3 Build a pie chart from data with a protractor and check the angles add to 360.
+- **Non-routine.** CHAL T, CMP T, EXP G.
+- **Holiday overlap: NONE.** New. The P4 papers carry the missing-sector item (`p4_school_paper_patterns.md` section 4).
+- **Numbers.** Totals to 360; fractions with denominators 2 to 12.
+- **Home materials.** Protractor, ruler, pencil. The circle template with 12 marks is printed.
+- **Kit.** None cut; the pie circle is a printed page.
+- **Figures.** `pie_chart` (F10) with hatch patterns; sectors may be hidden.
+- **Misconceptions.** Reading a sector as a count rather than a fraction; adding fractions with different denominators without converting; treating bar heights as values.
+- **Needs.** F10, M18, F3.
+- **Safe to miss?** No.
+
+### Lesson 33. Patterns and Rules in Words (T4.3)
+
+- **Big idea.** Find the rule, test it on every case, and say it in words.
+- **Strand.** MOE P1 to P4 number sequences and patterns (p. 31 to 37). Pairing sums and mixed numbers that pair into wholes are beyond P4 (the second is Primary 5). Contest tags: gaps that grow (19-1), pairing (19-16, 19-11), rule from diagrams (19-10).
+- **Objective.** Continue a pattern; write the gaps; find the nth figure of a dot pattern; sum a list by pairing. Think harder: the nth figure and its inverse; two interleaved lists; gaps that grow; pairing. Go further: a rule found from four diagrams; mixed numbers that pair.
+- **Remember (6 min).** (1) Continue 4, 7, 10, 13. (2) 3 + 4 + 5 as 3 x 4. (3) The difference between neighbours.
+- **Start here (6).** (1) Continue 5, 9, 13, 17 and write the gaps. (2) Write the gaps of 2, 3, 5, 8, 12 and continue. (3) Add 1 + 2 + 3 + 4 + 5 by adding in order: 15. (4) Draw Figure 4 of a dot pattern. (5) Which figure comes after Figure 3? (6) Is 41 in the list 5, 9, 13, ...?
+- **Think harder (4).** (1) **PAT/TAB.** Figure 1 has 4 dots, Figure 2 has 7, Figure 3 has 10, Figure 4 has 13. How many in Figure 25, and which figure has 100? 76 and Figure 33 (Y3.1). Complete the table. (2) Two lists are shared: 3, 50, 6, 46, 9, 42, ... What is the 10th number? 34 (Y3.6). (3) The numbers 3, 4, 6, 9, 13, ... have gaps 1, 2, 3, 4. What is the 20th? 193 (Y3.2). (4) Pair 1 to 10 to get 55, then sum 47 to 59 by pairing the first and last: 689 (Y3.3). The plan's 31 to 41 is SASMO 19-16 and is not used.
+- **Go further (3).** G1 **Beyond (named): "Gauss's Trick".** 1 + 2 + ... + 100 is 50 pairs of 101, 5 050 (Y3.3). Level note: arithmetic series are secondary school. G2 **PAT.** Four boxes show a left number, a right number and a top number: (3, 2, 10), (4, 1, 9), (5, 4, 26), (2, 3, 13). One rule works for all four. Find the top number for 6 and 5: 37, the rule being twice the left plus the right times itself (Y3.5). G3 **Preview.** 3 1/4 + 2 2/5 + 1 3/4 + 4 3/5 = 12, because the fractions pair into 2 wholes (Y3.4). Level note: Primary 5.
+- **Non-routine.** PAT T, TAB T, PAT G. The plan's second PAT G (EX-PAT-3, alternating decimals) stays in lesson 5.
+- **Holiday overlap: MED (H9, H3).** H9 had steady rises (35, 45, 60, 85 toys, 60 plates a day) and H3 had the sum chain 3, 7, 10, 17, 27 and the chain with the 5th number 30. Do not reuse. Verdict: Second visit.
+- **Numbers.** Terms to the 25th; sums to 5 050.
+- **Home materials.** Pencil, squared paper.
+- **Kit.** None.
+- **Figures.** `figure_sequence` (dot or square patterns with Figure labels, F12), `table` (exists).
+- **Misconceptions.** The rule from the first gap only; the nth figure given as n + 3 when the gap is 3; pairing an odd list without the middle number.
+- **Needs.** F12.
+- **Safe to miss?** Fairly safe.
+
+### Lesson 34. Solve a Smaller Problem (T4.4)
+
+- **Big idea.** Try 3 before 100: solve small cases, spot the pattern, then use it.
+- **Strand.** Heuristics (p. 13); counting. **No school-paper evidence.** Contest tag: simplify and look for a pattern.
+- **Objective.** Solve a problem for small numbers, record them in a table, find the rule and use it for a large case. Think harder: handshakes; digits in page numbers; pages facing each other. Go further: a large handshake case; posts round a pond.
+- **Remember (6 min).** (1) 1 + 2 + 3. (2) Count the digits of 99 and 100. (3) The gap between 7 and 12.
+- **Start here (6).** (1) 3 people shake hands once with each other: 3 handshakes. (2) 4 people: 6 (Y4.1). (3) 5 people: 10 (Y4.1). (4) Record the numbers in a table. (5) Do you see a pattern? (6) How many digits to number pages 1 to 9?
+- **Think harder (4).** (1) **PAT.** 6 people: 15 handshakes (Y4.1); find the rule from the table. (2) How many digits are needed to number pages 1 to 250? 9 + 180 + 453 = 642 (V9.5). (3) A table for the pages, 1 to 99 and 100 to 250. (4) A smaller case first for a line of 20 trees with a post between each.
+- **Go further (3).** G1 **Beyond (named): "Handshake Triangle".** 30 people shake hands once each with everyone: 435 (Y4.1). Level note: triangular numbers, secondary school. G2 **LOG.** The two pages facing you in a book have numbers that add to 509. What is the smaller page number? 254 (Y4.2). G3 **CTX.** A square pond has perimeter 80 m. A post is put every 4 m round it, one at each corner. How many posts? 20 (Y4.3).
+- **Non-routine.** PAT T, LOG G, CTX G.
+- **Holiday overlap: LOW (H10 C4, S5: 6th from front and back).** Do not reuse the queue items. New.
+- **Numbers.** Up to 30 people, pages to 250.
+- **Home materials.** Counters or coins (12) for acting out; pencil.
+- **Kit.** None.
+- **Figures.** `network` (complete graph of 4, 5, 6 points, exists), `table`.
+- **Misconceptions.** Counting each handshake twice; counting the first digit only; posts counted as gaps.
+- **Needs.** F15 (small).
+- **Safe to miss?** Yes (no paper evidence).
+
+### Lesson 35. Make a Systematic List (T4.5)
+
+- **Big idea.** Do not miss one: list in order, remove repeats, or multiply the choices.
+- **Strand.** Heuristics (p. 13); counting. **Chance is not on the MOE primary syllabus** (probability appears nowhere, `syllabus_by_level.md` p. 16) and is a labelled extension. No school-paper evidence for chance (WAYS has 2 items).
+- **Objective.** List ways in order; remove repeats in pairs; multiply the choices for two or three stages with one pairing not allowed; order events on a spinner by chance; find the smallest and largest total of dice. Think harder: outfits; pairs with a total; chance. Go further: a fair game; coin ways; count without listing.
+- **Remember (6 min).** (1) 2 x 3 x 4. (2) Ways to make 6 with two numbers. (3) A coin has two sides.
+- **Start here (6).** (1) List all the ways to pay 60 cents with 10-cent and 20-cent coins: 0 twenties and 6 tens, 1 and 4, 2 and 2, 3 and 0 in the form (tens, twenties): (6, 0), (4, 1), (2, 2), (0, 3) (Y5.8). (2) 3 shirts and 2 hats: 6 outfits. (3) List the pairs of 1 to 5 that add to 6. (4) How many 2-digit numbers can be made from the cards 2, 4, 7 if digits may repeat? 9. (5) A tree diagram for 2 coins. (6) Draw a table for 3 by 4 choices.
+- **Think harder (4).** (1) **WAYS.** Ravi has 3 tops, 5 pairs of trousers and 2 hats. He never wears the yellow top with the blue trousers. How many outfits? 30 - 2 = 28 (Y5.1). (2) **LIST.** How many different pairs of numbers from 1 to 9 add to 12? 3: 3 and 9, 4 and 8, 5 and 7 (Y5.3). (3) **Chance (extension).** A fair spinner has the numbers 1 to 10. Put these in order from least to most likely: a multiple of 4 (2), a number less than 4 (3), an even number (5), a number that is not 10 (9) (Y5.6). With three dice, which total is impossible: 2, 3, 18 or 19? 2 and 19 (Y5.4b). (4) Remove repeats from a list of pairs.
+- **Go further (3).** G1 **Beyond (named): "Fair Spinner Game".** Two spinners, one with 1 to 4 and one with 1 to 6, are spun and added. 4 of the 24 results make 7 (Y5.5). Design a game that is fair for two players. Level note: probability is secondary school. G2 **WAYS.** Pay $2.40 with 20-cent and 50-cent coins, at least one of each. How many ways? 2, which are 7 twenties with 2 fifties and 2 twenties with 4 fifties (Y5.2). G3 Count without listing: 4 shirts, 3 shorts, 2 caps and 3 pairs of socks make 72 outfits (Y5.7).
+- **Non-routine.** WAYS T, LIST T, WAYS G. The plan's EX-WAYS examples are replaced.
+- **Holiday overlap: LOW (H8 C8, C9 ways to shade; H10 C6 coins).** Do not reuse the 10-cent and 50-cent coin item. New.
+- **Numbers.** Up to 72 outcomes.
+- **Home materials.** Pencil; the K8 cards; two dice or a coin if available (the cards replace dice); a paper clip and pencil for the spinner.
+- **Kit (K8).** A set of cards 1 to 6 (6 cards, drawn with replacement in place of a die) and 2 printed spinner discs (not cut). Max used 6 cards and 2 spinners. Cut 6.
+- **Figures.** `spinner` and `dice` (F13), `table` (exists).
+- **Misconceptions.** Counting (3, 9) and (9, 3) as two pairs when the order does not matter; treating every outcome as equally likely when the spinner sectors are unequal; subtracting the forbidden outfit once instead of once per hat.
+- **Needs.** F13, K8.
+- **Safe to miss?** Yes.
+
+### Lesson 36. Working Backwards (T4.6)
+
+- **Big idea.** Undo the story: start from the end and reverse every step.
+- **Strand.** Heuristics (p. 13). Contest tag: work backwards with fractions (19-25).
+- **Objective.** Reverse a chain of operations; undo a money story with a fraction; make equal and find the start. Think harder: money chains; make equal, then find the start. Go further: a tank chain with fractions; a number that reverses to four times itself.
+- **Remember (6 min).** (1) What undoes + 8? (2) What undoes x 3? (3) 3/5 of 45.
+- **Start here (6).** (1) Ravi had some stickers. He gave away 15, got 8 more, and now has 30. How many at first? 37 (Y6.1). (2) A number is multiplied by 4 and 6 is taken away, giving 30: 9 (Q4.1). (3) Reverse one step in each of four stories. (4) A table with the steps and the reverse steps. (5) Check forwards. (6) A story with the answer at the end of the chain.
+- **Think harder (4).** (1) **BACK.** Wei spent $18 on a gift and then 2/5 of what was left on lunch. He had $27 left. How much had he at first? $63 (Y6.2). (2) **EQ.** Ali gives Ben $9 and then both have $50. How much had each at first? Ali $59 and Ben $41 (Y6.3). (3) A money chain with a half. (4) An age story reversed.
+- **Go further (3).** G1 **Beyond (named): "Mirror Number".** Find a 4-digit number that becomes four times itself when its digits are reversed: 2 178 (2 178 x 4 = 8 712, the only one, Y6.4); and 1 089 x 9 = 9 801 (Y6.5). Level note: contest-style digit puzzle. G2 **BACK.** A tank of water loses 1/5 on Monday, 1/2 of what is left on Tuesday and 30 litres on Wednesday, leaving 90 litres. How much was there at first? 300 litres (Y6.6, Y6.7). G3 **CHAL.** Make up a backwards puzzle with a unique answer.
+- **Non-routine.** BACK T, EQ T, BACK G.
+- **Holiday overlap: HIGH (H3, H10).** H3 had x 8 - 15 = 425, half of the money on a book then $6 then half (48), 5 x then + 35; H10 had double and add 7 (43), half and 2 more twice (32), $15 on a book then half (51), the swap machine (47 and 74). Do not reuse. Verdict: Change.
+- **Numbers.** Totals to 500; fractions with denominators 2 to 6.
+- **Home materials.** Pencil, squared paper.
+- **Kit.** None.
+- **Figures.** `bar_model` before-and-after (F4), `table`.
+- **Misconceptions.** Undoing the steps in the same order; reversing "2/5 of the rest" as "2/5 of the total"; stopping at the first reversed step.
+- **Needs.** F4.
+- **Safe to miss?** No: the Year Quest gate 5.
+
+### Lesson 37. Suppose and Compare (T4.7)
+
+- **Big idea.** Make them all the same, then see what is left.
+- **Strand.** Heuristics (p. 13): supposition, guess and check done well, balance chains. Contest tag: balance scales (19-15).
+- **Objective.** Solve two-kind problems by a table and by supposing; solve three-kind and two-scenario problems; chain balance scales. Think harder: tickets; three kinds; a balance chain; left over and short. Go further: a fruit order; coins; a decimal unit chain.
+- **Remember (6 min).** (1) 6 x 30 and 9 x 80. (2) The difference between 80 and 30. (3) A balance with 2 cubes on each side.
+- **Start here (6).** (1) Ali buys 15 stamps, some at 30 cents and some at 80 cents, and pays $7.50. How many 80-cent stamps? 6 (Y7.1). (2) Make a table of guesses. (3) Check the answer. (4) Two more table items. (5) A picture of the supposition: all 30-cent stamps. (6) A story with a table.
+- **Think harder (4).** (1) **GC.** Adult tickets cost $9 and child tickets $5. 18 tickets cost $122. How many adult tickets? 8 (Y7.2). (2) **GC three kinds.** Zoe buys 12 books at $3, $5 or $8. She buys the same number of $5 and $8 books and pays $64. How many of each? 4, 4 and 4 (Y7.3). (3) **Balance chain.** A pear balances 3 plums, a melon balances 2 pears and a pumpkin balances 3 melons. How many plums balance a pumpkin? 18 (Y7.4). (4) **GC two scenarios.** Chairs are put in rows. 9 in a row leaves 4 chairs over; 11 in a row is 6 chairs short. How many rows and chairs? 5 rows, 49 chairs (Y7.5).
+- **Go further (3).** G1 **Beyond (named): "Balance Chain Order".** A mango balances 3 plums, a papaya balances a mango and 2 plums, and a melon balances a papaya and a mango. Put the four fruits in order from heaviest to lightest and say how many plums balance the melon: melon, papaya, mango, plum; 8 plums (Y7.8). G2 **GC.** 21 coins, all 5-cent and 20-cent, make $2.70. How many 20-cent coins? 11 (Y7.6). G3 **EQ.** Mr Chen has 4.8 kg more rice than Mr Dass. Mr Chen uses 6.4 kg, and then Mr Dass has 3 times as much as Mr Chen has left. How much rice did Mr Dass have at first? 2.4 kg, and Mr Chen 7.2 kg (Y7.7).
+- **Non-routine.** GC T x3, GC G, EQ G. The plan's EX-GC and EX-EQ examples are replaced; the two-scenario sharing in lesson 8 uses different numbers.
+- **Holiday overlap: HIGH (H10, H5).** H10 had bicycles and tricycles (47 wheels), spiders and ants (82 legs), farm legs, tables of 4 and 6 (76 seats), cake and drink ($40), a coin puzzle (6 coins, 10 and 50 cents); H5 had 10 coins of 20 and 50 cents ($3.80). Do not reuse legs, wheels, seats or those coin pairs. Verdict: Second visit.
+- **Numbers.** Totals to $200; decimals to 1 place.
+- **Home materials.** Pencil, squared paper.
+- **Kit.** None.
+- **Figures.** `balance` (F14), `table`, `bar_model` (F4).
+- **Misconceptions.** Stopping at the first guess that fits one fact; supposing all one kind and not adjusting by the difference; reading "balances" as "equals".
+- **Needs.** F14, F4.
+- **Safe to miss?** No: the Year Quest gate 6.
+
+### Lesson 38. Looking Ahead to Primary 5 (T4.8)
+
+- **Big idea.** A taste of next year: a fraction is a division, and a box holds layers of cubes.
+- **Strand.** Preview, labelled Primary 5 (fraction as division of whole numbers, Fractions, p. 41; volume of cuboids, Volume 2.1, p. 42). **No school-paper evidence.**
+- **Objective.** Write a division of whole numbers as a fraction or mixed number; count the cubes of a cuboid layer by layer; compare which of two boxes holds more. Think harder: a box layer by layer; which box holds more. Go further: the formula; why a claim is wrong.
+- **Remember (6 min).** (1) 3/4 of a pizza. (2) 4 x 3 x 2. (3) Share 6 sweets among 3.
+- **Start here (6).** (1) Share 3 pizzas equally among 4 children: each gets 3/4 of a pizza (Y8.1). (2) 5 divided by 8 is 5/8 (Y8.1). (3) A 2 m ribbon cut into 5 equal pieces: 2/5 m each (Y8.1). (4) A box 4 by 3 by 2 has 24 cubes (Y8.1). (5) Count the cubes in the first layer. (6) How many layers?
+- **Think harder (4).** (1) **DIAG.** A box is 5 cubes long, 4 wide and 3 high. How many cubes? 20 in a layer, 3 layers, 60 (Y8.1). (2) **CMP.** Box A is 5 by 4 by 3, box B is 6 by 3 by 3 and box C is 7 by 2 by 4. Which holds the most cubes? A, 60 against 54 and 56 (Y8.1). (3) 7 divided by 4 as a mixed number, 1 3/4. (4) A box with a missing height.
+- **Go further (3).** G1 **Beyond (named): "Cubes in a Box".** The number of cubes is length times width times height. Level note: Primary 5. G2 **POSE.** Kai says a box 5 by 4 by 3 holds 45 cubes. Why cannot that be right? A layer has 20, so three layers are 60 (Y8.1). G3 **CMP.** Which holds more, a box 6 by 3 by 3 or a box 7 by 2 by 4, and by how much? The second by 2.
+- **Non-routine.** DIAG T, POSE G, CMP G. The plan's EX-POSE-1 is replaced.
+- **Holiday overlap: LOW (H8 S1 counted squares in a net).** New.
+- **Numbers.** Boxes to 8 by 8 by 8; fractions with denominators to 12.
+- **Home materials.** 24 same-size blocks (optional; fallback drawn layers, D13).
+- **Kit.** None cut: printed layer mats.
+- **Figures.** `cube_stack` layers (F9).
+- **Misconceptions.** Multiplying only two sides; confusing area with volume; reading 3/4 as 3 and 4.
+- **Needs.** F9.
+- **Safe to miss?** Yes.
+
+### Lesson 39. Count Place by Place (T4.9, added)
+
+- **Big idea.** Count each place on its own, then add or multiply.
+- **Strand.** Heuristics (p. 13); counting. **No school-paper evidence.** Contest tags: dates containing a digit (19-22), factorials (19-7).
+- **Objective.** Count the numbers in a range that contain a digit, by listing and by place; count dates written dd/mm; use factorial notation for arrangements. Think harder: dates of a year with a given digit. Go further: other digits; factorials grow quickly.
+- **Remember (6 min).** (1) Numbers from 1 to 20 with a 1. (2) Days in each month. (3) 3 x 2 x 1.
+- **Start here (6).** (1) How many of the days of a 30-day month contain the digit 2? 12 (Y9.1). (2) List them: 2, 12 and 20 to 29. (3) Which month has all of its days with a 5? (4) A table of tens and ones for 1 to 40. (5) Count the 3s in 1 to 40: 13 (Q4.2 gate). (6) How many days in the month have no 2?
+- **Think harder (4).** (1) **LIST.** In 2027 a date is written dd/mm, for example 05/09. How many dates have a 5 anywhere? The days 05, 15 and 25 occur in each of 11 months (33) and every day of May counts (31), so 64 (Y9.2, Y9.3). (2) Fill a table of month, days with a 5 and total. (3) **WAYS.** 5 children stand in a line: 5 x 4 x 3 x 2 x 1 = 120 ways, written 5! (Y9.4). (4) 4 children: 24.
+- **Go further (3).** G1 **Beyond (named): "How Fast Factorials Grow".** 6! = 720, 10! = 3 628 800 and 10! ends in 2 zeros; 20! is the first to end in four zeros (Y9.4, Y9.5). Level note: factorials are secondary school. G2 **LIST.** In 2027 how many dates dd/mm contain a 3? 80, which is all of March plus the days 3, 13, 23, 30 and 31 of the other months (Y9.6). The draft's "no digit 1" version (142) is not used. G3 **LOG.** Number clues with place value (a 3-digit number whose tens digit is double its ones digit).
+- **Non-routine.** LIST T, WAYS G, LOG G.
+- **Holiday overlap: MED (H10 C1, H2 C7).** H10 counted the numbers from 1 to 100 with a 7 (19); H2 counted 5-digit numbers with a digit sum of 3. Do not reuse. Second visit.
+- **Numbers.** Ranges to 365.
+- **Home materials.** A calendar page (in the book), pencil.
+- **Kit.** None.
+- **Figures.** `calendar` (exists), `table`.
+- **Misconceptions.** Counting 55 and 25 twice; treating May as 5 only for the month digit; computing 5! as 5 x 4.
+- **Needs.** none.
+- **Safe to miss?** Yes: the safest of Term 4.
+
+### Lesson 40. Year-End Challenge, with Mi's Year Quest and the Showcase (T4.10)
+
+- **Big idea.** Show what you can do: choose a move, solve, and pose.
+- **Strand.** Heuristics (p. 13). The Year Quest (`scope: "year"`) follows, with the showcase.
+- **Objective.** Solve a mixed set in which the child chooses the move; pose a puzzle. The Year Quest carries a gate for each of lessons 31 to 39 and a year-mix gate.
+- **Remember (6 min).** (1) Pick the move: table, model, list or backwards. (2) 3/8 of 64. (3) A puzzle you liked this year.
+- **Start here (5).** (1) A table or a model for a two-kind story. (2) A one-fraction question. (3) A counting question. (4) A backwards question. (5) A graph reading.
+- **Think harder (3).** (1) **MULTI.** A two-move problem. (2) **GC.** Tickets or coins with a table. (3) A pie chart or a line graph to use.
+- **Go further (3).** G1 **Beyond (named): "Pose a Puzzle".** Write a puzzle with exactly one answer and check it by listing every case. G2 **CHAL.** An open contest-style problem the child must set up alone. G3 **EQ.** A unit chain with a change.
+- **Non-routine.** MULTI T, GC T, CHAL G, EQ G. The plan's Term 4 check is replaced by the Year Quest.
+- **Holiday overlap: HIGH (H10, mixed).** Same rule as lesson 10.
+- **Numbers.** As the year.
+- **Home materials.** Pencil; a quest partner; plain paper for the showcase puzzle; a favourite page from the year. The Quest Log stays closed in Book 8.
+- **Kit.** None.
+- **Figures.** As needed.
+- **Safeguarding.** The showcase is voluntary, a pass is always allowed, no ranking, no votes, no "best", nothing leaves the group without a grown-up's agreement, presentations are recorded under the existing recording statement (D9 at Level 1).
+- **Needs.** Quest block (section 6), N3.
+- **Safe to miss?** The body yes; the Year Quest is the part to protect.
 

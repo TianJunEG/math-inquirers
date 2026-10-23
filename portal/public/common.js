@@ -45,13 +45,24 @@
     forbidden: 'This page is for the owner only.',
     not_signed_in: 'Please log in again.'
   };
+  var GENERIC = 'Something went wrong on our side. Please try again in a moment. If it keeps happening, message us on WhatsApp.';
+  // Only text we wrote ourselves (say()) or that maps to a known code is shown. Anything else (database, network or
+  // library messages) becomes the generic line so internals never reach the screen.
+  function say(text) { var e = new Error(text); e.friendly = true; return e; }
   function errText(err) {
-    var m = (err && (err.message || err.error_description)) || String(err || 'Something went wrong');
+    if (err && err.friendly) return err.message;
+    var m = String((err && (err.message || err.error_description)) || '');
     if (/consents_missing/.test(m)) return 'Please tick and save the four needed agreements first.';
     if (/duplicate key|children_parent_name_uq/.test(m)) return 'You already have a child with that name. Use a different display name.';
     for (var k in MESSAGES) if (m.indexOf(k) !== -1) return MESSAGES[k];
-    if (/Invalid login/i.test(m)) return 'Email or password is not right.';
-    return m.length > 160 ? 'Something went wrong. Please try again.' : m;
+    if (/Invalid login/i.test(m)) return 'Email or password is not right. Check them and try again, or use "Magic link" to get a log-in link by email.';
+    if (/already registered|already been registered/i.test(m)) return 'There is already an account with that email. Try the Log in tab.';
+    if (/not confirmed/i.test(m)) return 'Please click the link in the confirmation email first, then log in.';
+    if (/rate limit|too many/i.test(m)) return 'Too many tries just now. Please wait a few minutes and try again.';
+    if (/password/i.test(m) && /(at least|weak|short)/i.test(m)) return 'Please choose a longer password (at least 8 characters).';
+    if (/failed to fetch|network|load failed/i.test(m)) return 'We could not reach the server. Check your internet connection and try again.';
+    if (/jwt|expired|not authenticated/i.test(m)) return 'Please log in again.';
+    return GENERIC;
   }
   function money(cents) { return 'S$' + (cents / 100).toFixed(2); }
   function sessionsText(sessions) {
@@ -72,6 +83,6 @@
       h('a', { class: 'brand', href: '/' }, h('i', { text: '?' }), h('span', { text: CFG.SITE_NAME || 'Math Inquirers' })),
       h('span', { class: 'sub', text: subtitle || '' }));
   }
-  window.MI = { h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
+  window.MI = { say: say, h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
                 fmtDate: fmtDate, notice: notice, header: header, CFG: CFG, VERSIONS: VERSIONS };
 })();

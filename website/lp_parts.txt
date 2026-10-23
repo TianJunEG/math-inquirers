@@ -196,3 +196,6 @@ input,select,textarea{border-color:color-mix(in srgb,var(--fg) 58%,var(--bg))}
 ::placeholder{color:var(--muted);opacity:1}
 .sec>p,.sec>ul,.shead>p{max-width:68ch}
 .nav{row-gap:0}
+[aria-invalid="true"]{border-color:var(--red)!important;outline:2px solid var(--red)}
+.brand{min-height:44px}
+.othertimes a{display:inline-block;padding:12px 0}

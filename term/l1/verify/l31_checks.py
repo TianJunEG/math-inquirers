@@ -202,10 +202,12 @@ def run(d):
     S1 = [f for f in sh(T['S1'])]
     eq([F(len(f.get('shade', []) or []), f['parts']) == F(1, 2) for f in S1], [True, False, True], 'S1 half coloured? (by share of the whole)')
     eq(T['S1']['val'], ['Yes', 'No', 'Yes'], 'S1 val'); eq([p['val'] for p in T['S1']['parts']], T['S1']['val'], 'S1 part vals')
-    s2 = sh(T['S2'])[0]; eq((s2['parts'], name_of_part(s2['parts'])), (4, 'quarter'), 'S2'); eq(T['S2']['val'], [4, 'quarter'], 'S2 val')
+    s2 = S1[1]; eq((s2['shape'], s2['parts'], name_of_part(s2['parts'])), ('circle', 4, 'quarter'), 'S2 refers to shape B of S1, a circle in 4 equal parts'); eq(T['S2']['val'], [4, 'quarter'], 'S2 val')
+    eq('shape B' in T['S2']['text'] and T['S1']['visuals'][1]['label'] == 'B', True, 'S2 names shape B and S1 labels it B')
     s3 = sh(T['S3']); eq([(f['parts'], name_of_part(f['parts'])) for f in s3], [(2, 'half'), (4, 'quarter')], 'S3 colour a half of the square and a quarter of the circle')
     eq([f['shape'] for f in s3], ['square', 'circle'], 'S3 shapes')
-    s4 = sh(T['S4']); eq([f['parts'] for f in s4], T['S4']['val'], 'S4 parts = the number that make the whole'); eq([name_of_part(f['parts']) for f in s4], ['half', 'quarter'], 'S4 names')
+    eq([int(1 / F(1, 2)), int(1 / F(1, 4))], T['S4']['val'], 'S4 the number of halves and of quarters that make 1 whole'); eq([name_of_part(2), name_of_part(4)], ['half', 'quarter'], 'S4 names')
+    eq(sh(T['S4']), [], 'S4 has no picture (the page is full)')
     s5 = {f['label']: f['shape'] for f in sh(T['S5'])}; eq((s5[str(T['S5']['val'][0])], s5[str(T['S5']['val'][1])]), ('half_circle', 'quarter_circle'), 'S5 shape numbers')
     eq(sorted(s5.values()), sorted(['circle', 'half_circle', 'quarter_circle', 'square']), 'S5 four different shapes')
     eq([f['shape'] for f in sh(T['S6'])], ['square', 'square'], 'S6 two blank squares'); eq([f['parts'] for f in sh(T['S6'])], [1, 1], 'S6 blank')
@@ -223,9 +225,7 @@ def run(d):
     eq(F(1, 4) + F(1, 4) == F(1, 2), st[2], 'T3 two quarters make a half')
     eq(F(1, 2) == F(1, 4), st[3], 'T3 a half circle is the same size as a quarter circle')
     eq(['True' if x else 'False' for x in st], T['T3']['val'], 'T3 val'); eq(len(T['T3']['tf']), 4, 'T3 four statements')
-    tb = [f for f in [T['T4']['visual']]][0]; head = [int(x) for x in tb['head'][1:]]; row = tb['rows'][0][1:]
-    eq([fold_parts(k) for k in head[:2]], [int(x) for x in row[:2]], 'T4 table: the given cells are right'); eq((row[2], fold_parts(head[2])), ('[]', 8), 'T4 the box is 8'); eq(T['T4']['val'], [8], 'T4 val')
-    eq(len(d['tiers']['think']), 4, 'four Think harder questions')
+    eq(len(d['tiers']['think']), 3, 'three Think harder questions')
 
     # ---------------- Go further: Same Half, Different Shape
     cells = []
@@ -235,7 +235,7 @@ def run(d):
         eq((1, 3) in cs, False, 'G1 the label square is white')
     eq(T['G1']['val'][:3], [len(c) for c in cells], 'G1 counts')
     eq(len({canon(c) for c in cells}), 3, 'G1 the three coloured halves have three different shapes')
-    eq(T['G1']['val'][3:], ['Yes', 'No'], 'G1 val: halves yes, same shape no')
+    eq(T['G1']['val'][3:], ['No'], 'G1 val: same shape no'); eq('A half of each is coloured' in T['G1']['text'], True, 'G1 says half of each is coloured (true: 4 of 8)')
     for c in cells:                                                    # each coloured half is joined up (edge to edge), so it is one piece
         seen = {c[0]}; todo = [c[0]]
         while todo:
@@ -262,10 +262,10 @@ def run(d):
     eq(len({F(1, 4)}), 1, 'I1 all three ways give quarters of the same area')
     eq([c for c in (area(cross), area(diag), area(strip))], [F(1, 4)] * 3, 'I1 cross, corners, strips')
     eq([corners(cross), corners(diag), corners(strip)], [4, 3, 4], 'I1 the parts of the cross are 4-cornered, of the corner lines 3-cornered')
-    eq(len(sh(inv)), 3, 'I1 three squares to draw on')
+    eq(len(sh(inv)), 2, 'I1 two squares to draw on')
 
     # ---------------- exit ticket and home sheet
-    e1x = sh(X['E1'])[0]; eq((e1x['parts'], name_of_part(e1x['parts']), X['E1']['val']), (4, 'quarter', ['quarter']), 'E1')
+    eq((name_of_part(4), X['E1']['val'], '4 equal parts' in X['E1']['text']), ('quarter', ['quarter'], True), 'E1')
     eq((len([1 for _ in range(2)]), X['E2']['val']), (2, [2]), 'E2'); eq(X['E3']['val'], ['No'], 'E3 val'); pa, pb = cut_square(*CUTS['a third of the way across']); eq(area(pa) == area(pb), False, 'E3 unequal parts')
     eq((H['H1']['val'], name_of_part(4)), ('quarter', 'quarter'), 'H1'); eq((H['H2']['val'], 4), (4, 4), 'H2')
     eq(share_round_robin(12, 2), H['H3']['val'], 'H3'); eq([share_round_robin(16, 4), share_round_robin(16, 2)], H['H4']['val'], 'H4')
