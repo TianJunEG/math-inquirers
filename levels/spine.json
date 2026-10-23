@@ -128,7 +128,8 @@
    "C": 75
   },
   "timer_by_level": {
-   "2": 90
+   "2": 90,
+   "5": 90
   },
   "footer_tools": "Tool I used",
   "stuck": "I am still stuck (my tutor will come)",
