@@ -183,9 +183,10 @@ def groups(container='plate', n=3, each=3, icon_name='apple', counts=None, empty
     gap = 18
     body = []
     rows = (n + per_row - 1) // per_row
+    lab = 56 if label_each else 6
     for g, cnt in enumerate(cnts):
         r, c = divmod(g, per_row)
-        x = 10 + c * (cw + gap); y = 10 + r * (ch + 56 + gap)
+        x = 10 + c * (cw + gap); y = 10 + r * (ch + lab + gap)
         body.append(_container(container, x, y, cw, ch))
         if not empty:
             isz = 52 if cnt <= 6 else 36
@@ -200,7 +201,7 @@ def groups(container='plate', n=3, each=3, icon_name='apple', counts=None, empty
         if label_each:
             body.append(token_svg(label_each, x + cw / 2, y + ch + 26, cw, 44, 30))
     W = 20 + min(n, per_row) * (cw + gap) - gap
-    H = 20 + rows * (ch + 56 + gap) - gap + (62 if total else 0)
+    H = 20 + rows * (ch + lab + gap) - gap + (62 if total else 0)
     if total is not None:
         body.append(f'<text x="14" y="{H - 14:.0f}" font-size="30" font-weight="800" fill="{NAVY}" font-family="{FONT}">Total: </text>')
         body.append(token_svg(total, 150, H - 24, 80, 50, 38))
