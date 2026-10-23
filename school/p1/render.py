@@ -100,7 +100,7 @@ table.lgrid.mini td{width:9mm;height:9mm;text-align:center;padding:0}table.lgrid
 .sumrow{display:flex;align-items:center;gap:3mm;font-family:'Fredoka';font-weight:500;font-size:24pt;height:27mm;border-bottom:0.3mm solid #000}
 .sumrows.tall .sumrow{height:31mm}
 .shrows{display:flex;flex-direction:column;gap:2mm}
-.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding:1.5mm 0 3mm}
+.shrow{display:flex;align-items:center;gap:4mm;border-bottom:0.3mm solid #000;padding:1mm 0 2.5mm}
 .shmid{flex:1}.shtxt{font-size:12pt;line-height:1.25;margin:0 0 1.5mm}.shsvg svg{display:block}
 .shrow .ab{width:19mm;height:14mm;margin-left:2mm;flex:none}
 .maze.tall .mcell{height:38mm}

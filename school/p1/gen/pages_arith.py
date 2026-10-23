@@ -326,13 +326,14 @@ def page03():
     word = "FRIEND"
     kinds_ = ["apple", "star", "fish", "balloon"]
     while True:
-        items = []
+        items = []; big = rng.randrange(6)                      # only one item may have more than 10 objects (two rows), so the page can be spaced out
         for k in range(6):
             kind = "share" if k % 2 == 0 else "group"
+            lim = 20 if k == big else 10
             g = rng.randint(2, 5 if kind == "group" else 4); per = rng.randint(2, 9 if kind == "group" else 10)
-            if g * per > 20: continue
+            if g * per > lim: continue
             items.append((kind, g * per, g, per))
-        if len(items) != 6 or sum(1 for it in items if it[1] > 10) > 1: continue          # at most one item has two rows of objects, so the page can be spaced out
+        if len(items) != 6: continue
         ans = [per if kind == "share" else g for kind, n, g, per in items]
         if len(set(ans)) != 6 or len({(n, g if kind == "share" else per) for kind, n, g, per in items}) != 6: continue
         table = make_code_table(ans, word, rng, 1, 20, n_decoy=5, near=(1, -1, 2, -2, 3, -3), tries=60)
