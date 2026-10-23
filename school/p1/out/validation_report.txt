@@ -400,8 +400,8 @@ PASS  pupil.html: colour-by-code pictures: 3 found; every label of every part li
 PASS  key.html: colour-by-code pictures: 3 found; every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 15), (10, 0, 17), (11, 0, 13)]
 PASS  P1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 12.71% vs greyscale)  20 pages
 PASS  P1_Puzzles.pdf: no flat grey tint areas (blocks counted 153, limit 40 per page)  
-PASS  P1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 24.52% vs greyscale)  5 pages
-PASS  P1_FrontMatter.pdf: no flat grey tint areas (blocks counted 73, limit 40 per page)  
+PASS  P1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 24.44% vs greyscale)  5 pages
+PASS  P1_FrontMatter.pdf: no flat grey tint areas (blocks counted 75, limit 40 per page)  
 PASS  P1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 33.18% vs greyscale)  11 pages
 PASS  P1_Answer_Key.pdf: no flat grey tint areas (blocks counted 535, limit 75 per page)  
 
