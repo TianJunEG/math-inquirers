@@ -69,7 +69,7 @@ Every item and every part has a function that recomputes the answer without read
 | wording | 0 errors |
 | black and white | print PDF: 0 colour pixels, no flat grey (the soft copy is colour) |
 | fill and overflow | every unit page between 0.85 and 1.00 of the body, no overflow |
-| pages | print 100 pages (even), soft copy 100; contents and answer page numbers come from the build |
+| pages | print 100 pages (even), soft copy 99; contents and answer page numbers come from the build |
 
 ## Choices and workarounds (shared tools not edited)
 

@@ -287,9 +287,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9821221678681772,
+   "fill": 0.9605271627188465,
    "over": false,
-   "excess_mm": -4.6,
+   "excess_mm": -10.1,
    "edition": "soft"
   },
   {
@@ -1273,9 +1273,9 @@
    "kind": "practice",
    "label": "Unit 4 \u00b7 Start here 1",
    "exempt": false,
-   "fill": 0.9821221678681772,
+   "fill": 0.9605271627188465,
    "over": false,
-   "excess_mm": -4.6,
+   "excess_mm": -10.1,
    "edition": "print"
   },
   {
@@ -2001,7 +2001,7 @@
  "bw_pipeline": {
   "pages": 100,
   "dpi": 600,
-  "mb": 13.33,
+  "mb": 13.35,
   "check_bw_failures": 0,
   "pale_tint_dropped_max": 0.0037
  }
