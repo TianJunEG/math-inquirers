@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 7: Percentage Puzzles (percentage of a quantity, discount, GST, increase and decrease, percentage of a remainder)
+const FG = require('../../levels/figs_l4_6.js');
 const { TKQ, TKP, LATER } = require('./take.js');
 // Every answer below was worked out and checked with exact fractions in Python. GST in Singapore is 9%.
 
@@ -134,6 +135,8 @@ module.exports = {
     H.sub('c', 'Shop A: the price Mei pays.      ____________'),
     H.sub('d', 'Which shop is cheaper? By how much?      ________________________'),
     H.q(3, 'A T-shirt cost $80. The shop raised its price by 25%. A month later, it cut the new price by 20%.', { keepNext: true }),
+    H.fig(FG.barModel({ left: 130, rowH: 36, rows: [{ name: 'At first', segs: [{ u: 4, t: '$80 = 100%' }] }, { name: 'After the rise', segs: [{ u: 4 }, { u: 1, f: 'shade', t: '+25%' }] }, { name: 'The 20% cut', segs: [{ u: 5, f: 'blank', t: 'cut 20% of THIS price' }] }],
+      label: 'A bar for the $80 price. Under it a longer bar with a shaded extra part for the 25% rise. Under that a dashed empty bar as long as the new price for the child to work out the 20% cut.' })),
     H.sub('a', 'The price after the 25% rise:   ____________          (b)  The price after the 20% cut:   ____________'),
     H.sub('c', 'Siti says, "Up 25% and then down 20% is the same as up 5%, so the final price is $84." Is she right? Explain.', { after: 40 }),
     ...H.lines(1),

@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 6: Rate Racers (rate per unit, better buys, taps and printers, charges, comparing plans)
+const FG = require('../../levels/figs_l4_6.js');
 const { TKQ, TKP } = require('./take.js');
 // Every answer below was worked out with exact fractions; the "fewest cost" answers were checked against every possible mix of packs.
 
@@ -158,12 +159,17 @@ module.exports = {
       H.sub('a', 'Price of 1 can:   A ________   B ________   C ________'),
       H.sub('b', 'Which shop is the best buy?   ________'),
       H.q(3, 'An empty tank holds 240 ℓ.', { keepNext: true }),
-      H.tbl([3600, 6300], [H.row([H.cell('<div>' + figTaps() + '</div>', 3600, { h: 20 }),
-        H.cell(t(L('(a)') + 'Only tap A is turned on. How long does it take to fill the tank?   ________<br>' + L('(b)') + TKP + 'Both taps are turned on. How long does it take now?   ________<br>' + L('(c)') + TKP + 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________'), 6300, { h: 40 })])]),
+      H.fig(figTaps()),
+      H.sub('a', 'Only tap A is turned on. How long does it take to fill the tank?   ________'),
+      H.sub('b', [TKP, 'Both taps are turned on. How long does it take now?   ________']),
+      H.sub('c', [TKP, 'Both taps are on, and the crack lets out 6 ℓ a minute. How long to fill the tank?   ________']),
 
       H.q(4, 'Printer P prints 30 pages a minute. Printer Q prints 20 pages a minute. A job has 900 pages.', { pb: true, before: 0, keepNext: true }),
       H.sub('a', 'Both printers start together. How long do they take to print the job?   ________'),
       H.sub('b', 'Instead, P starts alone. After 5 minutes, Q joins in. How long does the whole job take from the start?', { keepNext: true }),
+      H.fig(FG.barModel({ left: 20, rowH: 40, rows: [{ segs: [{ u: 1.5, f: 'shade', t: 'P alone, 5 min' }, { u: 4.5, t: 'P and Q together' }] }],
+        ann: [{ k: 'brace', row: 0, from: 0, to: 6, t: '900 pages' }, { k: 'brace', row: 0, from: 1.5, to: 6, side: 'bottom', t: '? minutes' }],
+        label: 'Not to scale. A bar for the whole 900-page job. The first part is printed by P alone in 5 minutes. The rest is printed by P and Q together, for an unknown number of minutes.' })),
       ...H.lines(1),
       H.q(5, [TKQ, 'Look at the car park sign.'], { keepNext: true }),
       H.fig(figPark()),
