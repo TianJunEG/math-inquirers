@@ -159,8 +159,8 @@ DEFS = [
       "Week 1 is {start}, then doubling each week: {chain}. Week 5 is {ans}.",
       p=dict(start=3, times=4), unit='m²', sub='growing_pattern.doubling'),
     P('lessonend', 'clock_hand', 'Time',
-      "Mia's piano lesson starts at 11:40 and lasts 45 minutes. At which hour does the lesson end? Give the hour only, like 9 for 9:20.",
-      "Add the minutes first. How many minutes past 11:40 is the end of the lesson? Remember that 60 minutes make 1 hour.",
-      "11:40 and 20 more minutes is 12:00. There are 25 minutes left to add, so the lesson ends at 12:25. The hour is {ans}.",
-      p=dict(h=11, m=40, add=45, ask='hour'), sub='clock_reading.minute_hand'),
+      "A cooking class starts at 7:55 and lasts 50 minutes. At which hour does the class end? Give the hour only, like 9 for 9:20.",
+      "Add the minutes first. How many minutes past 7:55 is the end of the class? Remember that 60 minutes make 1 hour.",
+      "7:55 and 5 more minutes is 8:00. There are 45 minutes left to add, so the class ends at 8:45. The hour is {ans}.",
+      p=dict(h=7, m=55, add=50, ask='hour'), sub='clock_reading.minute_hand'),
 ]

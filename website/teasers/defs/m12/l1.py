@@ -95,7 +95,7 @@ DEFS = [
       "Mei makes a paper chain by sticking {n} strips in a line. Each strip is {length} cm long. Where two strips meet, {overlap} cm of one strip lies on top of the other. How long is the finished chain?",
       "Add up the lengths of all the strips. Then take away the part that is hidden at each join.",
       "{n} strips are {n} × {length} = {all} cm. There are {joins} joins and each hides {overlap} cm, so {lost} cm is hidden. {all} − {lost} = {ans}.",
-      p=dict(ask='total', n=4, length=7, overlap=1), unit='cm', sub='measurement.overlapping_chain'),
+      p=dict(ask='total', n=6, length=5, overlap=1), unit='cm', sub='measurement.overlapping_chain'),
     P('eggtrays', 'regroup', 'Tens and ones',
       'Aunty sells eggs in trays of 10. She has {tens} full trays and {ones} extra eggs in a bag. How many eggs is that altogether?',
       'Each full tray holds 10 eggs. Count the eggs on the trays first.',

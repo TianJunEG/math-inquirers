@@ -52,6 +52,10 @@ def compact(e):
         d['x'] = e['accept']
     if e['exact']:
         d['e'] = 1
+    if e.get('choices'):
+        d['ch'] = [str(c).lower() for c in e['choices']]
+        if e.get('labels'):
+            d['l'] = 1                                         # the wording marks the options (A), (B), (C) ... in order: the letter is accepted too
     if e['type'] == 's' and e.get('wrong'):
         d['o'] = [str(w).lower() for w in e['wrong']]        # the other options, so that "Farid plays cricket" is accepted and "Siti plays cricket" is not
     if e['kind'] == 'calendar_nth':

@@ -91,7 +91,7 @@ DEFS = [
       '{inside} children are in at least one club. {a} + {b} = {sum}, and {sum} is 28 more than {inside}. Those 28 were counted twice, so 28 children are in both.',
       p=dict(total=53, a=40, b=38, neither=3), unit='children', sub='sorting.overlap_both'),
     P('squarepicture', 'rect', 'Perimeter',
-      "The area of a square picture is {A} square centimetres. Hui Min wants to glue a ribbon along its edge, once round. What length of ribbon does she need?",
+      "A square poster has an area of {A} square centimetres. Hui Min wants to glue a ribbon along its edge, once round. What length of ribbon does she need?",
       "A square has 4 equal sides. Which number multiplied by itself makes {A}?",
       "{side} × {side} = {A}, so each side is {side} cm. The ribbon goes round 4 sides: 4 × {side} = {ans}.",
       p=dict(ask='square_perimeter_from_area', A=144), unit='cm', sub='perimeter_area.perimeter_basic'),

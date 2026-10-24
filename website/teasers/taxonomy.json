@@ -2299,7 +2299,6 @@
   "number_properties.odd_even_rule": {
    "name": "will a sum be odd or even",
    "levels": [
-    1,
     2,
     3,
     4,
@@ -2308,7 +2307,16 @@
    ],
    "kinds": [
     "parity"
-   ]
+   ],
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "note": "round 5 (C4): odd and even numbers are Primary 2 (MOE NA Whole Numbers 1.6); removed from Level 1 (L1-fourodds replaced)"
   },
   "order_ops.evaluate": {
    "name": "work out an expression with brackets and mixed operations in the right order",

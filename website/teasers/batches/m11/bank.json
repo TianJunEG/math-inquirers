@@ -1472,7 +1472,7 @@
      "4",
      "140"
     ],
-    "q": "Each picture is worth a whole number, and the same picture is always worth the same number. Two birds and one fish are worth 36 together. One bird and one fish are worth 25 together. What is one fish worth?",
+    "q": "Each drawing is worth a whole number, and the same drawing is always worth the same number. Two birds and one fish are worth 36 together. One bird and one fish are worth 25 together. What is one fish worth?",
     "hint": "Compare the two lines. What is the difference between them?",
     "why": "The first line has one more bird than the second line, and it is worth 36 − 25 = 11 more. So one bird is worth 11. In the second line, 11 + fish = 25, so a fish is worth 14.",
     "date": "11-04"
@@ -1572,8 +1572,8 @@
      "5530"
     ],
     "q": "A locker has a 3-digit number. The three digits make a total of 13. The middle digit is 5. The first digit is 2 bigger than the last digit. What is the locker number?",
-    "hint": "The middle digit is 5. What must the first digit and the last digit add up to?",
-    "why": "The first and the last digit must add up to 13 − 5 = 8. The first digit is 2 bigger than the last digit, and 5 + 3 = 8 fits: the last digit is 3 and the first digit is 5. The number is 553.",
+    "hint": "The middle digit is 5. How much do the two outer digits add up to?",
+    "why": "The two outer digits must add up to 13 − 5 = 8. The first digit is 2 bigger than the last digit, and 5 + 3 = 8 fits: the last digit is 3 and the first digit is 5. The number is 553.",
     "date": "11-06"
    },
    {
@@ -1652,7 +1652,7 @@
      "90",
      "1000"
     ],
-    "q": "A picture graph uses one book symbol for every 20 books. The row for Class A has 9 symbols and the row for Class B has 4 symbols. How many more books were counted for Class A than for Class B?",
+    "q": "A pictograph uses one book symbol for every 20 books. The row for Class A has 9 symbols and the row for Class B has 4 symbols. How many more books were counted for Class A than for Class B?",
     "hint": "First find how many more signs Class A has. Then think about what each sign is worth.",
     "why": "Class A has 5 more signs. Each sign is worth 20 books, so 5 × 20 = 100 books.",
     "date": "11-08"
@@ -2418,7 +2418,7 @@
     "exact": false,
     "wrong": [],
     "q": "Ravi has four boxes of marbles. Three of the boxes hold an odd number of marbles and one box holds an even number. When he counts all the marbles, will the total be odd or even?",
-    "hint": "Try small numbers first, for example 3, 5, 7 and 4 marbles. Add two of the odd boxes first.",
+    "hint": "Try some small numbers, for example 3, 5, 7 and 4 marbles. Add them in pairs and see what happens.",
     "why": "Two odd numbers add to an even number, so two of the odd boxes make an even number. The third odd box makes the total odd again, and an even box does not change that. The total is odd.",
     "date": "11-25"
    },
@@ -2552,29 +2552,29 @@
     "sub": "missing_number.missing_digit",
     "family": "missing_number",
     "p": {
-     "eq": "8?3-275=558"
+     "eq": "275+5?8=833"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "3",
-    "shown": "3",
+    "ans": "5",
+    "shown": "5",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "4",
-     "2",
-     "5",
-     "1",
      "6",
-     "13",
-     "30"
+     "4",
+     "7",
+     "3",
+     "10",
+     "15",
+     "50"
     ],
-    "q": "An ink blot hides one digit in this subtraction: 8?3 − 275 = 558. Which digit is under the blot?",
-    "hint": "Look at the tens column. What must the tens digit of 8?3 be so that the answer has a 5 in the tens place?",
-    "why": "Add the answer and the number taken away: 558 + 275 = 833. So the hidden digit is 3. Check: 833 − 275 = 558.",
+    "q": "An ink blot hides one digit in this addition: 275 + 5?8 = 833. Which digit is under the blot?",
+    "hint": "Look at the tens column first. Remember what is carried over from the ones column.",
+    "why": "Take 275 away from 833: 833 − 275 = 558. So the hidden digit is 5. Check: 275 + 558 = 833.",
     "date": "11-29"
    },
    {

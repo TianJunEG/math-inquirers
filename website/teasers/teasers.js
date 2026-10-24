@@ -124,6 +124,15 @@
     var s = norm(input || '');
     if (!s) return 'empty';
     if (p.t === 's') {
+      /* lettered options, (A) north (B) east ...: the letter alone, "B", "b.", "(b)", "option B" */
+      if (p.l && p.ch) {
+        var lm = /^(?:option |choice |answer )?\(?([a-f])\)?[.)]?$/.exec(s);
+        if (lm) {
+          var idx = lm[1].charCodeAt(0) - 97;
+          if (idx < p.ch.length) return p.ch[idx].toLowerCase() === p.a.toLowerCase() ? 'ok' : 'no';
+          return 'no';
+        }
+      }
       var t = squash(s).replace(/^((the answer is|the answer was|answer is|it is|it was|it's|is|on|in|the|a|an) )+/, '').trim();
       var ok = [p.a].concat(p.x || []);
       for (var i = 0; i < ok.length; i++) {

@@ -492,8 +492,8 @@
     "family": "measurement",
     "p": {
      "ask": "total",
-     "n": 4,
-     "length": 7,
+     "n": 6,
+     "length": 5,
      "overlap": 1
     },
     "t": {},
@@ -521,9 +521,9 @@
      "15",
      "250"
     ],
-    "q": "Mei makes a paper chain by sticking 4 strips in a line. Each strip is 7 cm long. Where two strips meet, 1 cm of one strip lies on top of the other. How long is the finished chain?",
+    "q": "Mei makes a paper chain by sticking 6 strips in a line. Each strip is 5 cm long. Where two strips meet, 1 cm of one strip lies on top of the other. How long is the finished chain?",
     "hint": "Add up the lengths of all the strips. Then take away the part that is hidden at each join.",
-    "why": "4 strips are 4 × 7 = 28 cm. There are 3 joins and each hides 1 cm, so 3 cm is hidden. 28 − 3 = 25 cm.",
+    "why": "6 strips are 6 × 5 = 30 cm. There are 5 joins and each hides 1 cm, so 5 cm is hidden. 30 − 5 = 25 cm.",
     "date": "12-12"
    },
    {
@@ -1821,34 +1821,33 @@
     "sub": "clock_reading.minute_hand",
     "family": "clock_reading",
     "p": {
-     "h": 11,
-     "m": 40,
-     "add": 45,
+     "h": 7,
+     "m": 55,
+     "add": 50,
      "ask": "hour"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "12",
-    "shown": "12",
+    "ans": "8",
+    "shown": "8",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "13",
-     "11",
-     "14",
+     "9",
+     "7",
      "10",
-     "24",
      "6",
-     "22",
-     "2",
-     "120"
+     "16",
+     "4",
+     "18",
+     "80"
     ],
-    "q": "Mia's piano lesson starts at 11:40 and lasts 45 minutes. At which hour does the lesson end? Give the hour only, like 9 for 9:20.",
-    "hint": "Add the minutes first. How many minutes past 11:40 is the end of the lesson? Remember that 60 minutes make 1 hour.",
-    "why": "11:40 and 20 more minutes is 12:00. There are 25 minutes left to add, so the lesson ends at 12:25. The hour is 12.",
+    "q": "A cooking class starts at 7:55 and lasts 50 minutes. At which hour does the class end? Give the hour only, like 9 for 9:20.",
+    "hint": "Add the minutes first. How many minutes past 7:55 is the end of the class? Remember that 60 minutes make 1 hour.",
+    "why": "7:55 and 5 more minutes is 8:00. There are 45 minutes left to add, so the class ends at 8:45. The hour is 8.",
     "date": "12-10"
    },
    {
@@ -3129,7 +3128,7 @@
      "38",
      "480"
     ],
-    "q": "The area of a square picture is 144 square centimetres. Hui Min wants to glue a ribbon along its edge, once round. What length of ribbon does she need?",
+    "q": "A square poster has an area of 144 square centimetres. Hui Min wants to glue a ribbon along its edge, once round. What length of ribbon does she need?",
     "hint": "A square has 4 equal sides. Which number multiplied by itself makes 144?",
     "why": "12 × 12 = 144, so each side is 12 cm. The ribbon goes round 4 sides: 4 × 12 = 48 cm.",
     "date": "12-06"
@@ -7623,7 +7622,7 @@
      "0",
      "100"
     ],
-    "q": "In the 4-digit number 4_7_, the same digit is hidden in both gaps. The number can be divided by 6 with nothing left over. Add up all the digits that could be hidden.",
+    "q": "The 4-digit number 4_7_ has the same digit hidden in both blanks. It divides exactly by 6. Add together every digit that could be hidden.",
     "hint": "A number divides by 6 exactly when it is even and its digits add up to a multiple of 3. Try each digit from 0 to 9.",
     "why": "The number is even, so the hidden digit is even. The digits of 4_7_ add up to 4 + 7 + 2 × (hidden digit) = 11 + 2 × (hidden digit), which must be a multiple of 3. The digits that work are 2, 8. 2 + 8 = 10.",
     "date": "12-09"

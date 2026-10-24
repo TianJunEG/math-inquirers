@@ -80,6 +80,8 @@ def finish(d, ans):
 
 def wrongs(d, ans, fin):
     if fin['type'] == 's':
+        if d.get('choices'):
+            return [str(c).lower() for c in d['choices'] if str(c).lower() != str(ans).lower()] + [x for x in d['w'] if x not in d['choices']]
         return list(d['w'])
     a = Fr(ans)
     cand = [a + 1, a - 1, a + 2, a - 2, a * 2, a / 2, a + 10, a - 10, a + Fr(1, 2), a * 10]
@@ -176,6 +178,11 @@ def build_month(mm):
                      p=d['p'], t=d['t'], fmt=d['fmt'], type=fin['type'], ans=fin['canon'], shown=fin['shown'],
                      units=fin['units'], prefix=fin['prefix'], accept=fin['accept'], exact=fin['exact'],
                      wrong=wrongs(d, ans, fin), **r)
+            if d.get('choices'):
+                assert fin['type'] == 's' and str(ans).lower() in [str(c).lower() for c in d['choices']], 'the answer must be one of the choices: %s' % d['frame']
+                e['choices'] = list(d['choices'])
+                if d.get('labels'):
+                    e['labels'] = True
             items.append(e)
         want = DAYS_IN[mm]
         if len(items) != want:

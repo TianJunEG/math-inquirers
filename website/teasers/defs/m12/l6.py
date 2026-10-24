@@ -92,7 +92,7 @@ DEFS = [
       p=dict(order=['Farid', 'Emily', 'Dina', 'Chen', 'Ali'], facts=[['Emily', 'Dina'], ['Farid', 'Emily'], ['Dina', 'Chen'], ['Chen', 'Ali']], idx=1, rel='taller than'),
       w=['Farid', 'Dina', 'Chen', 'Ali'], sub='logic_order.rank'),
     P('hiddenpair', 'divisible_digit', 'Multiples',
-      "In the 4-digit number {template}, the same digit is hidden in both gaps. The number can be divided by 6 with nothing left over. Add up all the digits that could be hidden.",
+      "The 4-digit number {template} has the same digit hidden in both blanks. It divides exactly by 6. Add together every digit that could be hidden.",
       'A number divides by 6 exactly when it is even and its digits add up to a multiple of 3. Try each digit from 0 to 9.',
       'The number is even, so the hidden digit is even. The digits of 4_7_ add up to 4 + 7 + 2 × (hidden digit) = 11 + 2 × (hidden digit), which must be a multiple of 3. The digits that work are {digits}. 2 + 8 = {ans}.',
       p=dict(template='4_7_', by=6, ask='sum'), sub='factors.divisibility_digit'),

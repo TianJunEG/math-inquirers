@@ -1181,6 +1181,12 @@ def selftest():
     newq = 'Hana swims on every Saturday. Her first lesson of the month is on the 6th. What is the date of her lesson in week 4 of that month?'
     cases.append(('cross-level frame rule: a new sentence for the same maths is not a FAIL', not any('same sentence frame' in x for x in two_levels(wk3, newq)), two_levels(wk3, newq)[:1]))
     cases.append(('cross-level frame rule: the real bank has no repeated sentence frame', not any('same sentence frame' in x for x in clean), [x for x in clean if 'same sentence frame' in x][:2]))
+    # text answers with options (C6): the options must be in the question, the answer one of them
+    good = dict(q='Which way does she face now: (A) north (B) east (C) south or (D) west?', ans='south', type='s', choices=['north', 'east', 'south', 'west'], labels=True)
+    cases.append(('choice answers: a complete question with lettered options has no problem', not choice_problems(good), choice_problems(good)))
+    cases.append(('choice answers: an option missing from the question is caught', bool(choice_problems(dict(good, q='Which way does she face now: (A) north (B) east (C) south?'))), ''))
+    cases.append(('choice answers: an answer that is not an option is caught', bool(choice_problems(dict(good, ans='up'))), ''))
+    cases.append(('choice answers: a missing letter is caught', bool(choice_problems(dict(good, q='Which way does she face now: (A) north (B) east (C) south or west?'))), ''))
     # the source lock: 99% of the counts and the near-copy folders must stay complete
     lk = json.load(open(LOCK_FILE, encoding='utf-8'))
     _, _, _, per_now = source_digest()
@@ -1456,6 +1462,27 @@ def load_stock_sentences():
                 STOCK_SENT.add(re.sub(r'\d+', '#', line.rstrip('.?!')))
 
 
+def choice_problems(e):
+    """Text answers with options (round 5, TEXT_ANSWER_PLAN.md): every option is written in the question, the answer is one of them, and lettered options (A), (B) ... are all in the question."""
+    out = []
+    ch = e.get('choices')
+    if not ch:
+        return out
+    ql = e['q'].lower()
+    if len(ch) < 3:
+        out.append('fewer than 3 choices')
+    missing = [c for c in ch if str(c).lower() not in ql]
+    if missing:
+        out.append('the choices %s are not written in the question' % missing)
+    if e['type'] != 's' or str(e['ans']).lower() not in [str(c).lower() for c in ch]:
+        out.append('the answer %r is not one of the choices' % e['ans'])
+    if e.get('labels'):
+        lost = [chr(65 + i) for i in range(len(ch)) if '(%s)' % chr(65 + i) not in e['q']]
+        if lost:
+            out.append('the options are lettered but (%s) is missing from the question' % ', '.join(lost))
+    return out
+
+
 def main():
     if '--update-lock' in sys.argv:
         update_lock()
@@ -1607,6 +1634,8 @@ def main():
                         fails.append('%s: doubled word "%s" in %s' % (tag, d.group(0), fld))
                     for b in check_arith(e[fld]):
                         fails.append('%s: arithmetic in %s is wrong: %s' % (tag, fld, b))
+                for prob in choice_problems(e):
+                    fails.append('%s: %s' % (tag, prob))
                 qnums = numbers_in(e['q'] + ' ' + (e.get('code') or ''))
                 if e['type'] == 's':
                     if re.search(r'\b' + re.escape(e['ans'].lower()) + r'\b', e['hint'].lower()):

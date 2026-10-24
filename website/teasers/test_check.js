@@ -48,6 +48,12 @@ var QC = { a: 'quarter circle', t: 's', x: ['quarter-circle'], o: ['half circle'
 t(QC, 'a quarter circle', 'ok'); t(QC, 'quarter-circle', 'ok'); t(QC, 'It is a quarter circle', 'ok'); t(QC, 'a circle', 'no'); t(QC, 'half circle', 'no'); t(QC, 'the shape is a quarter circle', 'ok'); t(QC, 'triangle', 'no');
 var SU = { a: 'sunday', t: 's', o: ['monday', 'friday'] };
 t(SU, 'Sunday', 'ok'); t(SU, 'on Sunday', 'ok'); t(SU, 'It is on Sunday', 'ok'); t(SU, 'monday', 'no'); t(SU, 'Sunday or Monday', 'no'); t(SU, 'sun', 'no');
+/* lettered choices: (A) north (B) east (C) south (D) west */
+var L = { a: 'south', t: 's', ch: ['north', 'east', 'south', 'west'], l: 1, o: ['north', 'east', 'west'] };
+t(L, 'C', 'ok'); t(L, 'c', 'ok'); t(L, '(c)', 'ok'); t(L, 'c.', 'ok'); t(L, 'option C', 'ok'); t(L, 'south', 'ok'); t(L, 'South.', 'ok'); t(L, 'It is south', 'ok');
+t(L, 'B', 'no'); t(L, 'D', 'no'); t(L, '(a)', 'no'); t(L, 'east', 'no'); t(L, 'e', 'no'); t(L, 'f', 'no');
+var L2 = { a: 'south', t: 's', ch: ['north', 'east', 'south', 'west'], o: ['north', 'east', 'west'] };      /* options not lettered: a letter is not an answer */
+t(L2, 'C', 'no'); t(L2, 'south', 'ok');
 console.log(n + ' answer-matcher checks, ' + bad.length + ' failed');
 bad.forEach(function (b) { console.log('  FAIL ' + b); });
 process.exit(bad.length ? 1 : 0);

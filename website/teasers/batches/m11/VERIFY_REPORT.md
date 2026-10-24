@@ -11,17 +11,12 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 24 | 3 | 20 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6746 files, 1361.5 MB, sha256 76a0b20a9cb5866ebf5afe20.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 371, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6747 files, 1361.5 MB, sha256 d98d2db5236865f051c03189.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 372, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 5. REVIEW items: 119.
+FAIL count: 0. REVIEW items: 119.
 
-- FAIL L2-birdfish [11-04]: forbidden word in q: picture
-- FAIL L2-lockernumber [11-06]: shares a 7-word run with external: "the first digit and the last digit"
-- FAIL L2-signsscale [11-08]: forbidden word in q: picture
-- FAIL L2-oddboxes [11-25]: hint gives the answer away
-- FAIL L2-inkblot [11-29]: arithmetic in q is wrong: 3 - 275 = 558.
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
 - REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
@@ -49,8 +44,8 @@ FAIL count: 5. REVIEW items: 119.
 - REVIEW L1-twobags [11-27]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-openingtimes [11-28]: rule B: 3 of the same numbers ['11', '4', '6'] as "| 4 | Pattern Machines | Far places in a repeating pattern come from the groups  ..." (docs/pedagogy/holiday_review.md)
 - REVIEW L1-drinksmachine [11-29]: story words 3 of 5 like "**LIST-051** | 2025 | Raffles Girls | EOY | Q8 | 2 marks | MONEY | difficulty 3 | picture  ..." (docs/books/private_p3_papers/non_routine_questions.md)
-- REVIEW L2-signsscale [11-08]: rule B: 3 of the same numbers ['20', '4', '9'] as "| 17 to 18 | Ruler; the graph grids are in the book | - | | | 18 to 19 | Up to 1 ..." (docs/terms/l5_preflight.md)
-- REVIEW L2-signsscale [11-08]: rule S: sentence "A picture graph uses one book symbol for every 20 books." shares 4 content words with "- Picture graphs use picture symbols, one picture = one, 4 to 6 rows, " (docs/school_books/p1_coverage_gap.md)
+- REVIEW L2-birdfish [11-04]: story words 3 of 5 like "P3 L10 3(a) picture shows both counts in two rows (printed). - **L4 Statements that are lo ..." (practice/holiday/AUDIT_WEEK5_L1_3.md)
+- REVIEW L2-signsscale [11-08]: story words 3 of 4 like "EOY|2023|Rosyth|34|2|GRAPH|PAT|3|Y|Pictograph: total 360 beads for four children. How many ..." (docs/books/private_p3_papers/records.txt)
 - REVIEW L2-jarcoins [11-09]: rule S3: the sentence "A school library has 500 books on its shelves." is like "A library has 84 books on 2 shelves." (extension/l3/build_extras/Math_Inquirers_L3_Extension_Workbook_Print_BW_vector.pdf)
 - REVIEW L2-cakeparts [11-11]: rule C: two four-word runs shared with "How many glasses can be filled? M 2 S 1 18 Z 1 2 2 8 9 of the garden is split in ..." (school/p6/out/S1_pupil.html): of the whole garden / the whole garden is
 - REVIEW L2-hallseats [11-12]: number 2 in the question is not a parameter (written in the wording; check)

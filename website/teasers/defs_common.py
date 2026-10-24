@@ -89,10 +89,13 @@ def show_frac(v, mixed):
 
 
 def P(frame, kind, topic, q, hint, why, p, t=None, unit=None, fmt='int', big=None, code=None,
-      units=None, prefix=None, accept=None, exact=False, w=None, xq=None, sub=None):
+      units=None, prefix=None, accept=None, exact=False, w=None, xq=None, sub=None, choices=None, labels=False):
     """One puzzle definition.  p = parameters handed to the solver and to the independent checker;
     t = text-only values (names, nouns) that appear in the wording; w = extra typical wrong answers;
-    sub = the maths sub-structure id in taxonomy.json ('family.sub'); verify_bank.py enforces the per-quarter caps on it."""
+    sub = the maths sub-structure id in taxonomy.json ('family.sub'); verify_bank.py enforces the per-quarter caps on it.
+    Text answers (round 5, TEXT_ANSWER_PLAN.md): choices = the options the question lists (every option must be written in the wording and the answer must be
+    one of them; the other options become the listed wrong answers); labels = True when the wording marks the options (A), (B), (C) ... in order, so that the
+    page also accepts the letter.  accept = other spellings of the answer that count as right."""
     return dict(frame=frame, kind=kind, topic=topic, q=q, hint=hint, why=why, p=p, t=t or {}, unit=unit,
                 fmt=fmt, big=big, code=code, units=units, prefix=prefix, accept=accept, exact=exact,
-                w=w or [], sub=sub)
+                w=w or [], sub=sub, choices=choices, labels=bool(labels))
