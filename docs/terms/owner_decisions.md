@@ -370,3 +370,6 @@ Owner: "SUBMIT-TO-TUTOR - it should be submitted to us so we can generate report
 
 ## 2026-10-24 — D8 (amended): PAPER-ONLY QUESTIONS STAY, SELF-CHECKED
 Owner: paper-only holiday questions (kit, ruler, drawing) are NOT left out. The question is still shown online; for drawing questions a note tells the student to check their drawing against the answer shown on screen. Such items are "self-checked" (child compares with the on-screen answer/solution), recorded as self-marked, not auto-marked, and excluded from auto-marked percentages in reports. Also in force: ONLINE-SKIP-SELECT-SUBMIT, SUBMIT-TO-TUTOR, answers auto-marked (server re-marks).
+
+## 2026-10-24 — D1-MAINSITE
+Owner: "D1-MAINSITE". Online practice is hosted on the main site under /practice/ (URL patterns /practice/ext/lNuNN/, /practice/term/lN/NN/, /practice/holiday/pN/NN/). Real domain still needed before QR codes are printed (D9). Also: identification uses the existing portal parent accounts and child profiles (owner correction), not new family links.
