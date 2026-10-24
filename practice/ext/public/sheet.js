@@ -7,7 +7,7 @@
 // See docs/online_submission_design.md.
 (function () {
   var key = window.MI_LESSON, $ = function (id) { return document.getElementById(id); };
-  var TIERS = [['core', 'Start here'], ['stretch', 'Think harder'], ['challenge', 'Go further'], ['check', 'Check yourself']];
+  var TIERS = [['core', 'Start here'], ['invest', 'Investigation'], ['stretch', 'Think harder'], ['challenge', 'Go further'], ['check', 'Check yourself']];
   var L, cur = 0, S = { a: {}, sub: false, sid: '', rev: 0, sent: 0, self: {} }, ask = false, sim = {};
   var CFG = (typeof window.MI_SUBMIT === 'object' && window.MI_SUBMIT) || null, SY = { msg: '', busy: false, tries: 0, timer: 0, selfTimer: 0 }, VER = '';
   function load() { try { var o = JSON.parse(localStorage.getItem('mi-sheet-' + key) || '{}'); if (o && o.a) S = { a: o.a, sub: !!o.sub, sid: String(o.sid || ''), rev: o.rev | 0, sent: o.sent | 0, self: o.self || {} }; } catch (e) {} }
@@ -22,6 +22,9 @@
   function toNum(s) { s = String(s == null ? '' : s).replace(/\s/g, '').replace(/(\d),(?=\d{3}(\D|$))/g, '$1'); return /^-?\d+$/.test(s) ? +s : null; }
   function nums(s) { return (String(s || '').replace(/(\d),(?=\d{3}(\D|$))/g, '$1').replace(/,/g, ' ').match(/-?\d+/g) || []).map(Number); }
   function sameSet(a, b) { var x = a.slice().sort(function (p, r) { return p - r; }), y = b.slice().sort(function (p, r) { return p - r; }); return x.length === y.length && x.every(function (v, i) { return v === y[i]; }); }
+  // text answers: same rule as practice/submit/mark.js (case, spacing, hyphens and a final full stop do not matter)
+  function normText(s) { return String(s == null ? '' : s).normalize('NFKC').toLowerCase().replace(/[.!]+$/, '').replace(/[\s\-]+/g, ' ').trim(); }
+  function squash(s) { return normText(s).replace(/ /g, ''); }
   function answered(it, v) {
     if (v == null) return false;
     if (it.type === 'fields') return v.some(function (x) { return String(x).trim() !== ''; });
@@ -31,12 +34,14 @@
     if (it.type === 'selfcheck') return 'self';
     if (!answered(it, v)) return 'blank';
     if (it.type === 'choice') return v === it.answer ? 'right' : 'wrong';
+    if (it.type === 'text') return it.answer.some(function (x) { return normText(x) === normText(v) || squash(x) === squash(v); }) ? 'right' : 'wrong';
     if (it.type === 'number') return toNum(v) === it.answer ? 'right' : 'wrong';
     if (it.type === 'fields') return it.fields.every(function (f, i) { return toNum(v[i]) === f.answer; }) ? 'right' : 'wrong';
     var a = nums(v), ok = it.ordered ? (a.length === it.answer.length && a.every(function (x, i) { return x === it.answer[i]; })) : sameSet(a, it.answer);
     return ok ? 'right' : 'wrong';
   }
   function show(it) {
+    if (it.shown) return it.shown;
     if (it.type === 'fields') return it.fields.map(function (f) { return f.answer; }).join(', ');
     return Array.isArray(it.answer) ? it.answer.join(', ') : String(it.answer);
   }
@@ -92,12 +97,15 @@
         if (idx > -1) { var inp = h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', 'data-f': m[1], 'aria-label': 'Box ' + (idx + 1), style: 'width:5rem;text-align:center' }); inp.value = cur_[idx] || ''; if (locked) inp.disabled = true; inp.addEventListener('input', function () { var a = it.fields.map(function (f, i) { return i === idx ? inp.value : (cur_[i] || ''); }); cur_ = a; set(a); }); box.appendChild(inp); }
         else if (part) box.appendChild(h('span', { class: 'fr', text: part }));
       });
+    } else if (it.type === 'text') {
+      var inp4 = h('input', { type: 'text', autocomplete: 'off', autocapitalize: 'none', spellcheck: 'false', 'aria-label': 'Your answer' }); inp4.value = v || ''; if (locked) inp4.disabled = true; inp4.addEventListener('input', function () { set(inp4.value); }); box.appendChild(inp4);
     } else if (it.type === 'set' || it.type === 'number') {
       var inp2 = h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', 'aria-label': it.type === 'set' ? 'Your answers, separated by commas' : 'Your answer' }); inp2.value = v || ''; if (locked) inp2.disabled = true; inp2.addEventListener('input', function () { set(inp2.value); }); box.appendChild(inp2);
     } else if (it.type === 'choice') {
       it.options.forEach(function (o) { var r = h('input', { type: 'radio', name: 'c', value: o }); if (v === o) r.checked = true; if (locked) r.disabled = true; r.addEventListener('change', function () { set(o); }); box.appendChild(h('label', { class: 'opt' }, [r, o])); });
     } else if (it.type === 'selfcheck') {
-      var ta = h('textarea', { 'aria-label': 'Your answer', placeholder: 'Write here...' }); ta.value = v || ''; if (locked) ta.disabled = true; ta.addEventListener('input', function () { set(ta.value); }); box = h('div', { id: 'ans' }, [ta]);
+      if (it.paper) box = h('div', { id: 'ans' });
+      else { var ta = h('textarea', { 'aria-label': 'Your answer', placeholder: 'Write here...' }); ta.value = v || ''; if (locked) ta.disabled = true; ta.addEventListener('input', function () { set(ta.value); }); box = h('div', { id: 'ans' }, [ta]); }
     }
     return box;
   }
@@ -107,6 +115,7 @@
     var d = h('div', { class: 'fb ' + cls, id: 'sol' }, [h('h2', { text: head })]);
     if (it.type !== 'selfcheck') d.appendChild(h('p', { text: 'The answer is ' + show(it) + '.' }));
     var tk = selfTick(it); if (tk) d.appendChild(tk);
+    if (it.sol_svg) { var sf = fig({ svg: it.sol_svg }); if (sf) { sf.id = 'solfig'; d.appendChild(sf); } }
     d.appendChild(h('h2', { text: 'Solution' })); d.appendChild(h('ol', {}, it.steps.map(function (s) { return h('li', { text: s }); })));
     if (it.tpl) d.appendChild(similar(it));
     return d;
@@ -135,13 +144,14 @@
     var locked = S.sub;
     card.appendChild(h('p', { class: 'q', text: it.q }));
     var f = fig(it); if (f) card.appendChild(f);
+    if (it.type === 'selfcheck' && it.paper) card.appendChild(h('p', { class: 'fb plain', id: 'paper', text: 'Do this on paper, then check your drawing against the answer shown on screen.' }));
     if (it.type === 'set') card.appendChild(h('p', { class: 'sub', style: 'margin:0 0 .5rem', text: 'Type every answer, with a comma between.' }));
     card.appendChild(control(it, locked));
     if (!S.sub) {
       var hb = h('div', { class: 'row', style: 'margin-top:.8rem' }, [h('button', { type: 'button', class: 'act quiet', text: hintOpen[it.id] ? 'Hide the hint' : 'Give me a hint', 'aria-expanded': String(!!hintOpen[it.id]), on: { click: function () { hintOpen[it.id] = !hintOpen[it.id]; render(); } } })]);
       card.appendChild(hb);
       if (hintOpen[it.id]) card.appendChild(h('div', { class: 'fb plain' }, [h('p', { text: 'Hint: ' + it.hint })]));
-      if (it.type === 'selfcheck') card.appendChild(h('p', { class: 'sub', text: 'You can write an answer here, or just do it on paper. The example comes with the solutions after you submit.' }));
+      if (it.type === 'selfcheck' && !it.paper) card.appendChild(h('p', { class: 'sub', text: 'You can write an answer here, or just do it on paper. The example comes with the solutions after you submit.' }));
     } else {
       card.appendChild(solution(it));
     }
