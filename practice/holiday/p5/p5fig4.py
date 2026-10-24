@@ -242,7 +242,7 @@ def cross_fig(x=68, sol=False):
         s += arc(O, A, C, 26, f'{x}°', WARM, 50, 16) + arc(O, B, C, 40, f'{180 - x}°', TEAL, 66, 16) + arc(O, B, D, 26, f'{x}°', WARM, 50, 16) + arc(O, A, D, 40, f'{180 - x}°', TEAL, 66, 16)
     else:
         s += arc(O, A, C, 30, f'{x}°', WARM, 58)
-    s += pl(A, 'A', -14, 6) + pl(B, 'B', 14, 6) + pl(C, 'C', -4, -10) + pl(D, 'D', 6, 22) + pl(O, 'O', 15, 22)
+    s += pl(A, 'A', -14, 6) + pl(B, 'B', 14, 6) + pl(C, 'C', -4, -10) + pl(D, 'D', 6, 22) + pl(O, 'O', 22, 8)
     lab = f'Two straight lines AB and CD cross at O. Angle AOC is {x} degrees.'
     if sol:
         lab = f'Two straight lines AB and CD cross at O. Angle AOC is {x} degrees, BOC is {180 - x}, BOD is {x} and AOD is {180 - x} degrees.'
