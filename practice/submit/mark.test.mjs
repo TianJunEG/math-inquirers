@@ -146,4 +146,6 @@ assert.throws(() => mark({ marking_mode: 'auto', type: 'bogus', key: 1 }, 'x'));
 for (const v of ['35¢', '35 ¢', '35 cents', '35 cent']) t('cent form ' + v, N(35), v, 'right');
 for (const v of ['35 c', '35c', '3 5¢', '36¢', '$0.35']) t('cent wrong ' + v, N(35), v, 'wrong');
 t('cent unit:false', N(35, { unit: false }), '35¢', 'wrong'); t('cents unit:false', N(35, { unit: false }), '35 cents', 'wrong');
+for (const v of ['27 ℓ', '27ℓ', '27 l', '27 L', '27 litres', '27 litre', '27 liters', '27 liter']) t('litre form ' + v, N(27), v, 'right');
+for (const v of ['2 7 ℓ', '28 ℓ']) t('litre wrong ' + v, N(27), v, 'wrong'); t('litre unit:false', N(27, { unit: false }), '27 ℓ', 'wrong');
 assert.deepEqual(bad, [], bad.join('\n')); console.log('mark.test.mjs: ' + n + ' checks passed');
