@@ -95,3 +95,32 @@ Not mirrored, or mirrored differently:
 Open questions:
 - Decimals need the text keyboard; check on a real phone.
 - Investigation (a) accepts at most 5 decimal places.
+
+# Week 4 (lessons 7 and 8): Area Architects II and Symmetry and Nets
+
+Week 4 = lessons 7 and 8 (Tue 15 Dec and Fri 18 Dec, `website/data/beta_schedule.json`, Level 4 group L4A, confirmed).
+Build: `python3 practice/holiday/build_holiday.py p4 7` (and `p4 8`); test: `python3 practice/holiday/test_holiday.py p4 7` (and `8`). Both RESULT: OK. Sources: `p4/content/l7.js`, `l8.js` (`workbook()`, `gaps.invest`, `qbank.stretch[0:4]`, `qbank.challenge[-3:]`). Only `p4lib.py` (own level) gained helpers; no shared file edited. practice/ext test_ext.py still passes.
+
+| | Lesson 7 Area Architects II | Lesson 8 Symmetry and Nets |
+|---|---|---|
+| Items | 46 | 32 |
+| Auto-marked | 40 | 23 |
+| Self-check with a model answer | 4 (1 open) | 6 (2 open) |
+| Paper-only (drawing, correct drawing shown after submit) | 2 (3(b) tile shapes, 5(a) square from pieces) | 3 (4(a) rocket, 4(b) fish, G7 both patterns) |
+| Variant families (all combinations run against an oracle) | 8 (118) | 4 (26) |
+| Question text as printed / reworded | 12 / 34 | 14 / 18 |
+
+Independent checkers: shoelace area and ray-cast cell count, edge-counting perimeters, search over every one-cut split of the L-shape, every whole-number rectangle for an area/perimeter, all 216 six-tile shapes (perimeters 10, 12, 14), garden cell count (L7); a cube rolled over each net (folds, opposite faces, every dice labelling must be unique), every mirror line tried on every shape, every grid shading tested, all 5-square patterns with 4 lines (L8). The printed keys agree with every checker.
+
+Audit rules applied from the start: no card shows another card's answer in stem, hint or example (examples such as "like 5 by 7", "like A1" are never answers); hints nudge only; explanations are self-checks; the 'always?' cards (Ali L7, Mei L8) have neutral explain cards; L7 Q2 and Investigation (b) list-finding asks lengths/areas as sets, not the printed riddle again; explicit unique labels of at most 12 characters; variant pictures drawn to scale.
+
+Not mirrored, or mirrored differently:
+- "Looking back" box (generic reflection).
+- L7 Q1(b) "area in TWO ways": two typed number sentences (every one-cut split and the big-rectangle-take-away form accepted, with or without "= 48"). Q2 table: lengths, breadths and perimeters as three set cards, then largest/smallest perimeter as "a by b". Q3(b) "draw" is paper-only; the smallest and largest perimeters are also two auto cards. Q6(c) "what did she forget" is a self-check. Investigation (b) asks for the areas of all six rectangles (not the rectangles written out).
+- L7 G5 (make up a fencing puzzle) open self-check with a model. G7 (cut 9 by 4 into a square) is two cards: side and up/down.
+- L8 Q1 "tick the shapes": one text card (letters), one "pick a shape that does not fold" card (B, D or F) and a self-check explanation. Q3 net squares: one card per net (three missing numbers each). Q4 completing figures is paper-only (no on-screen drawing tool). Q5 "draw all the lines" is mirrored as counts only. Q6 "new grid for each" is one grid with a typed list (A2, D3) plus a count; 6(b) is a self-check. Investigation (a) "draw 4 nets" shows four nets and asks if they all fold. G5 "design your own dice" open self-check; G7 "find both" is one auto card (type one way) plus a paper card showing both.
+- L8 Q1/Q2 nets and the cuboid are redrawn as SVG at phone size.
+
+Open questions:
+- Typed number sentences need "x" or the times sign; very unusual bracketing is not accepted. Rectangle answers ("5 by 6", "5x6", "5 cm by 6 cm", either order) are accepted; lists of rectangles in a single text box were avoided.
+- Squares are typed as A2 (column letter, then row number).
