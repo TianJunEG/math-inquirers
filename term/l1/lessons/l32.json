@@ -2986,7 +2986,8 @@
      "Not counting the shapes at the end."
     ],
     "mins": 5,
-    "draw": true
+    "draw": true,
+    "draw_h": 135
    }
   ],
   "investigation": {

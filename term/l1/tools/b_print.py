@@ -130,7 +130,8 @@ def qbox(q, label=None, draw=False):
             parts += f'<div class="sub"><span class="sl">{E("(" + p["l"] + ")") if p["l"] else ""}</span><span>{blanks(p["text"])}</span>{choice_html(cw) if cw else ""}</div>'
     if q.get('draw'):
         nd = q['draw'] if isinstance(q['draw'], int) and not isinstance(q['draw'], bool) else 1
-        vis += ''.join('<div class="draw" style="height:%dpx"></div>' % (105 if nd == 1 else 70) for _ in range(nd))
+        dh = q.get('draw_h')       # a drawing box that keeps this height (px) on every tightening level
+        vis += ''.join(('<div class="draw" style="height:%dpx!important"></div>' % dh) if dh else ('<div class="draw" style="height:%dpx"></div>' % (105 if nd == 1 else 70)) for _ in range(nd))
     if q.get('tf'):           # statement / True / False with tick boxes
         rows = ''.join(f'<tr><td>{blanks(r["s"])}</td><td class="tk"><i class="bx"></i></td><td class="tk"><i class="bx"></i></td></tr>' for r in q['tf'])
         parts += f'<table class="tf"><tr><th>Statement</th><th>True</th><th>False</th></tr>{rows}</table><div class="pins2">Put a tick (\u2713) in the correct box.</div>'

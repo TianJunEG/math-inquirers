@@ -2671,7 +2671,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "One route is R R R U. R means right and U means up. Write the other routes: ____ ____ ____",
+      "text": "One route is R R R U. R means right and U means up. Write the other routes: ______ ______ ______",
       "ans": "U R R R; R U R R; R R U R",
       "val": [
        "URRR",
@@ -2726,7 +2726,7 @@
     "parts": [
      {
       "l": "a",
-      "text": "Three routes start with U: U U R R, U R U R and U R R U. Write the routes that start with R: ____ ____ ____",
+      "text": "Three routes start with U: U U R R, U R U R and U R R U. Write the routes that start with R: ______ ______ ______",
       "ans": "R R U U; R U R U; R U U R",
       "val": [
        "RRUU",

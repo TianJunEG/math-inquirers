@@ -3463,7 +3463,8 @@
      "Making the three tiles different from each other."
     ],
     "mins": 6,
-    "draw": 1
+    "draw": 1,
+    "draw_h": 95
    }
   ],
   "investigation": {
