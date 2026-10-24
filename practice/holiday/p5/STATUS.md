@@ -39,3 +39,6 @@ Item types: number, fields (boxes), set (typed list), choice, text (typed fracti
 - Typed bracket answers on a phone keyboard (× and ÷ are awkward; x, * and / are accepted). If this is a problem, a native "choose where the brackets go" item type could be added.
 - Fractions are typed as text and marked against a generated list of equivalent forms (mark.js already has a native `fraction` type with lowest-terms checking; the holiday build does not use it yet). "Simplest form" questions (Q4(b)) accept only the lowest terms.
 - Nothing here has been seen by a child. All timing and difficulty is untested.
+
+## Audit fixes (week 1)
+L1 3(a) to 3(c): the six-clue riddle is now one card figure shown above each question. L1 6(a) example changed. L2 5(b) and 6(a) hints are kinder; the 6(a) example is 3 1/4. L2 B2 asks "How can the pizzas be cut?" again as a typed sum of two unit fractions (either of the two ways is marked right; the count is not told).

@@ -59,17 +59,17 @@ CLUES = ('Clue 1. I am a 7-digit number. My digits are all different.\n'
 def riddle_card():
     """The six clues once, as a card (shown above each of 3(a), 3(b) and 3(c))."""
     lines = [('Clue 1.', ['I am a 7-digit number.', 'My digits are all different.']),
-             ('Clue 2.', ['Rounded to the nearest hundred thousand,', 'I am 7 300 000.']),
-             ('Clue 3.', ['My ten thousands digit is 3 more than', 'my hundred thousands digit.']),
-             ('Clue 4.', ['My thousands digit = my ten thousands', 'digit - my hundred thousands digit.']),
-             ('Clue 5.', ['My hundreds digit is twice my thousands', 'digit. My tens digit is 0.']),
+             ('Clue 2.', ['Rounded to the nearest', 'hundred thousand, I am 7 300 000.']),
+             ('Clue 3.', ['My ten thousands digit is 3 more', 'than my hundred thousands digit.']),
+             ('Clue 4.', ['My thousands digit = my ten', 'thousands digit \u2212 my hundred', 'thousands digit.']),
+             ('Clue 5.', ['My hundreds digit is twice my', 'thousands digit. My tens digit is 0.']),
              ('Clue 6.', ['My digits add up to 32.'])]
     y = 30
     body = ''
     for h, ls in lines:
-        body += T(14, y, h, 15, 'start', 800, TEAL)
+        body += T(14, y, h, 14, 'start', 800, TEAL)
         for l in ls:
-            body += T(78, y, l.replace('digit - my', 'digit \u2212 my'), 15, 'start', 700)
+            body += T(74, y, l, 14, 'start', 700)
             y += 21
         y += 7
     H = y

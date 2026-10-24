@@ -29,3 +29,6 @@ Shared-file changes (backward compatible; Level 1 and ext/submit tests re-run an
 Open questions:
 - Typed answers are plain numbers or space-grouped numbers; commas inside one number (47,290) work too, but as a list separator they split numbers.
 - Lesson 1 Go further are printed as Q5 to Q7 in the workbook; ids are G5 to G7 (lesson 1) and G5 to G7 (lesson 2) to match.
+
+## Audit fixes (week 1)
+Hints rewritten so they nudge and never give the answer (L1 3(a), L2 4(b)); paper words removed from the screen text (box, circle, cross out, draw); L1 6(a) steps no longer print earlier answers; number-line figure labels no longer clipped.

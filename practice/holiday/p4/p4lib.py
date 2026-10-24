@@ -120,7 +120,7 @@ def time_line(start_h=6, minutes=60, label_every=15, tick_every=5, suffix='am'):
 
 def number_line_k(lo, hi, major, minor, cross=None, dots=(), caption='', label_fmt=g, extra_labels=()):
     """A number line lo..hi, ticks every `minor`, labelled every `major`. cross: a value marked with an X above the line. dots: values marked with a filled dot."""
-    x0, x1 = 28, 332
+    x0, x1 = 40, 332
     W = x1 + x0
     px = lambda v: x0 + (v - lo) * (x1 - x0) / (hi - lo)
     y = 58
@@ -136,7 +136,7 @@ def number_line_k(lo, hi, major, minor, cross=None, dots=(), caption='', label_f
         b += T(px(cross), y - 16, '×', 30, 'middle', 800, WARM) + T(px(cross), y - 40, label_fmt(cross), 14, 'middle', 800, WARM)
     for d in dots:
         b += Ci(px(d), y, 6, YEL, NAVY, 2)
-    return svg(W, 96, b, caption or f'A number line from {g(lo)} to {g(hi)} with a tick every {g(minor)} and a label every {g(major)}.')
+    return svg(W, 104, b, caption or f'A number line from {g(lo)} to {g(hi)} with a tick every {g(minor)} and a label every {g(major)}.')
 
 
 def digit_cards(digits):

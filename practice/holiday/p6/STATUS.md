@@ -24,3 +24,6 @@ Shared files touched (backward compatible): `test_holiday.py` now accepts text i
 Open questions
 - Should "explain" items be marked by a tutor once submit-to-tutor is live (they are self-check only now)?
 - Palette figures (planning code) are drawn from the workbook blocks; the sb3 starter files are not linked from the page.
+
+## Audit fixes (week 1)
+L1 3(b2) no longer says that 101 is a term; "Take-home" removed from the screen text; the examples in T4(b) no longer equal the answers. L2 3(b) why no longer prints the answer; T1(a) and T1(b) hints no longer list the factor pairs.
