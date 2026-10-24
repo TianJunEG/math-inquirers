@@ -166,6 +166,8 @@ def make_item(src):
             raise Fail(f'{i}: independent check {got} differs from the printed answer')
     else:
         raise Fail(f'{i}: unknown type {t}')
+    if it.get('sol_fig'):
+        out['sol_svg'] = it['sol_fig'](got)
     return out, None
 
 
