@@ -117,3 +117,39 @@ L5 3(c) "6 more" is the 6 of "6 fewer"; L5 1(a) prints 12 which is the answer of
 
 ## Week 3 L1-3 audit follow-up (item level)
 M1 answer leaks reworded, M2 explicit short nav labels, remainder-0 variants excluded (P3 L5 3(b)), long stems shortened, doubled "Make up your own"/"Take-home" lead-ins removed. Print-inherent chains kept as printed (P1 L5 Go further 1(a)/(b), 3(c); P1 L6 Q4/Q5, T3/Q6; P3 L6 5(b), T3). P1 L6 Q5/Q6 keep cents only (printed answers are in cents).
+
+---
+
+# Week 4 (lessons 7 and 8)
+
+Not deployed. No website, Supabase, server or shared-file change (`sheet.js`, `practice/submit/*`, `build_holiday.py`, `hlib.py`, `test_holiday.py` untouched). Build and test: `python3 practice/holiday/build_holiday.py p1 N` then `python3 practice/holiday/test_holiday.py p1 N` (N = 7, 8); both give RESULT: OK. Proof screenshots in `practice/holiday/p1/0N/proof/`. New figure helpers appended to `p1/p1lib.py` (house picture parts, shape gallery, segment figures, grids, Venn loops, pet grid, line boxes, tiles, polygon rows, joined-square shapes). No coin or note pictures.
+
+Week 4 = lessons 7 and 8 (`website/data/beta_schedule.json`, group L1A, 5 weeks of 2 lessons: lesson 7 Tue 15 Dec, lesson 8 Fri 18 Dec). Sources: `hp/workbook_html.js` (Start here), `hp/qbank.json` (Think harder = stretch[0:4], Go further = challenge[-3:]), `hp/gaps.json` (Investigation; lesson 8 also the printed extra Think harder T5). Hand-written code, so items were extracted by hand with independent checkers; the build refuses to write unless every `src` string is in those sources. Printed answers agree with the Tutor Guide key.
+
+| | Lesson 7 Shape Safari | Lesson 8 Logic Lab |
+|---|---|---|
+| Items (cards) | 27 | 38 |
+| Auto-marked | 18 | 30 |
+| Self-check with a model answer | 2 | 5 |
+| Open (make up your own / any valid answer) | 0 | 3 |
+| Paper-only (drawing, correct drawing shown) | 7 | 1 |
+| Unavailable online | 0 | 0 |
+| Variant families (every combination run) | 3 (19 combos: 2(b), T2, C1) | 2 (11 combos: Q5, T5(b)) |
+
+Checkers work from the drawn geometry or by trying everything: shapes are named from corner coordinates; sides and corners counted from boundary points; triangles counted from every triple of mutually joined points of the figure; squares from drawn unit edges; two same-size triangles joined along a whole side in every way and named; shapes of joined squares enumerated (2 and 5, turned/flipped merged). Lesson 8 lists all orders / all ways to hand out pets and keeps those that obey every clue (exactly one), and tests every number against each loop's rule.
+
+## Not mirrored from the print, and why
+- Look-back box, Tool card, Name line, "After question 3" banner: paper routine, not questions. Check-yourself questions of gaps.json are not in the print and not included.
+- L7 Q1: the printed Tutor Guide counts each shape once (a square goes in Square only); this is added to the stem, otherwise squares could also be counted as rectangles. Table is one card (4 boxes), plus "which most" and "how many altogether".
+- L7 Q2: circle and triangle rows are given in the stem (as printed); the other four shapes are one card of 8 boxes. Q3 (who am I) is a choice from the six shapes (typed shape names are not matched). Q5 (draw and name) is paper-only. T1 is split into Yes/No and an exploratory "draw the shapes you can make" card (so the draw card does not reveal the Yes). T4 (draw a 4-sided non-square) is paper-only with two correct examples. G3 is paper-only (make up your own).
+- L7 Investigation (gaps): split into draw one (paper), how many with 3 squares (2), how many with 4 squares (5, printed key says the 4-square part is an extension and accepts 3 or 4 with praise for method; the card is auto-marked 5), draw all (two paper cards), how do you know (self-check).
+- L8 Q1(a) and (b) are two cards each (tallest/shortest, heaviest/lightest); 1(c) "write the order" is a choice of four whole orders. Q2 "write 1 to 10 in the loops" is four number-list cards (left only, right only, outside both, both) plus the printed (a) and (b) why; the "outside both loops" region is in the printed key (6, 8, 10). Q3 and Q4 give one card per person / place (Q4 1st = Mei is given). Q3 shows the clue grid with Ali's crosses as printed.
+- L8 Q6 is self-check, not auto-marked, because the Tutor Guide accepts any reasoned answer (11, or 6 as the only even number); the model answer says so. G2 is three cards (2s and 3s counts, 2s and 4s counts, "what is different and why" self-check). Investigation: write one order (open), how many orders (6), write all (paper, six orders drawn), how do you know, "Ali is not first" (4), make up your own clue (open).
+- Variants only where a template with an oracle exists.
+
+## Audited mistakes avoided from the start
+No stem, hint or example gives another card's answer (T1 draw card does not say bigger triangles are possible; 2(b) why does not state the rule; G2(c) does not say the 4s loop sits inside the 2s loop); hints nudge; positions kept (who stands 2nd, 3rd, 4th; which pet each child has; which regions of the Venn); explanations are self-check; short labels, all unique; long stems kept at about 45 words or fewer; solution claims were computed (for example "the other two short sides make a straight line" for the triangle join).
+
+## Open questions
+1. L7 I3 "4 squares: 5 shapes" is auto-marked 5 although the printed key accepts 3 or 4 as an extension. Say if it should be self-check.
+2. L8 Q2 has four typed-list cards instead of one writing task; say if you prefer a single self-check.
